@@ -1,0 +1,201 @@
+Palettes:
+	cursor: temperat.pal
+    newcursor: Medieval_Civ_palette.pal
+    newcursorsell: Medieval_Civ_palette.pal
+
+Cursors:
+    newcursor.shp: newcursor
+		scroll-t:
+			Start: 2
+		scroll-tr:
+			Start: 3
+		scroll-r:
+			Start: 4
+		scroll-br:
+			Start: 5
+		scroll-b:
+			Start: 6
+		scroll-bl:
+			Start: 7
+		scroll-l:
+			Start: 8
+		scroll-tl:
+			Start: 9
+    mouse2.shp: cursor
+		scroll-t-blocked:
+			Start: 130
+		scroll-tr-blocked:
+			Start: 131
+		scroll-r-blocked:
+			Start: 132
+		scroll-br-blocked:
+			Start: 133
+		scroll-b-blocked:
+			Start: 134
+		scroll-bl-blocked:
+			Start: 135
+		scroll-l-blocked:
+			Start: 136
+		scroll-tl-blocked:
+			Start: 137
+		select:
+			Start: 12
+			Length: 6
+    newcursor.shp: newcursor
+		default-minimap:
+			Start: 10
+			Length: 1
+			X: -16
+			Y: 12
+		generic-blocked:
+			Start: 1
+		generic-blocked-minimap:
+			Start: 95
+		attack:
+			Start: 19
+			Length: 7
+		attack-minimap:
+			Start: 113
+			Length: 1
+		harvest-minimap:
+			Start: 123
+			Length: 1
+		enter:
+			Start: 26
+            Length: 1
+		enter-minimap:
+			Start: 106
+			Length: 1
+    mouse2.shp: cursor
+		c4:
+			Start: 122
+			Length: 3
+		c4-minimap:
+			Start: 127
+			Length: 3
+		joystick-t-blocked:
+			Start: 130
+		joystick-tr-blocked:
+			Start: 131
+		joystick-r-blocked:
+			Start: 132
+		joystick-br-blocked:
+			Start: 133
+		joystick-b-blocked:
+			Start: 134
+		joystick-bl-blocked:
+			Start: 135
+		joystick-l-blocked:
+			Start: 136
+		joystick-tl-blocked:
+			Start: 137
+# Cursors that need minimap variants
+    newcursor.shp: newcursor
+		deploy:
+			Start: 11
+			Length: 7
+		repair:
+			Start: 32
+			Length: 12
+		repair-blocked:
+			Start: 124
+			Length: 1
+    newcursorsell.shp: newcursorsell
+		sell:
+			Start: 0
+			Length: 10
+		sell-blocked:
+			Start: 10
+			Length: 1
+    newcursor.shp: newcursor        
+		ability:
+			Start: 44
+			Length: 18
+		nuke:
+			Start: 62
+			Length: 12
+		ioncannon:
+			Start: 62
+			Length: 12
+    mouse2.shp: cursor
+		sell-vehicle:
+			Start: 154
+			Length: 24
+    newcursor.shp: newcursor	
+		default:
+			Start: 0
+			X: -16
+			Y: 12
+		joystick-all:
+			Start: 0
+			X: -16
+			Y: 12
+		deploy-blocked:
+			Start: 18
+			Length: 1
+		move:
+			Start: 87
+			Length: 8
+		move-minimap:
+			Start: 85
+			Length: 1
+		move-rough:
+			Start: 0
+			Length: 8
+		attackmove:
+			Start: 19
+			Length: 6
+        harvest:
+			Start: 117
+			Length: 7
+		attackmove-minimap:
+			Start: 113
+			Length: 1
+		move-blocked:
+			Start: 86
+			Length: 1
+		move-blocked-minimap:
+			Start: 115
+			Length: 1
+		guard:
+			Start: 97
+			Length: 9
+		guard-minimap:
+			Start: 114
+			Length: 1
+		goldwrench:
+			Start: 28
+			Length: 1
+		goldwrench-minimap:
+			Start: 108
+			Length: 1
+		goldwrench-blocked:
+			Start: 29
+			Length: 1
+		goldwrench-blocked-minimap:
+			Start: 110
+			Length: 1
+		capture:
+			Start: 30
+			Length: 1
+		capture-minimap:
+			Start: 107
+			Length: 1
+		capture-blocked:
+			Start: 31
+			Length: 1
+		capture-blocked-minimap:
+			Start: 111
+			Length: 1
+		enter-blocked:
+			Start: 27
+			Length: 1
+		enter-blocked-minimap:
+			Start: 109
+			Length: 1
+		attackoutsiderange:
+			Start: 96
+			Length: 1
+		attackoutsiderange-minimap:
+			Start: 112
+            Length: 1

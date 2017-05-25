@@ -1,0 +1,1704 @@
+^ExistsInWorld:
+	AppearsOnRadar:
+	UpdatesPlayerStatistics:
+	CombatDebugOverlay:
+	GivesExperience:
+		PlayerExperienceModifier: 1
+	ScriptTriggers:
+	ConditionManager:
+	RenderDebugState:
+
+^SpriteActor:
+	BodyOrientation:
+	QuantizeFacingsFromSequence:
+	AutoSelectionSize:
+	RenderSprites:
+
+^GainsExperience:
+	GainsExperience:
+		Conditions:
+			200: rank-veteran
+			400: rank-veteran
+			800: rank-veteran
+			1600: rank-veteran
+	GrantCondition@RANK-ELITE:
+		RequiresCondition: rank-veteran >= 4
+		Condition: rank-elite
+	DamageMultiplier@RANK-1:
+		RequiresCondition: rank-veteran == 1
+		Modifier: 95
+	DamageMultiplier@RANK-2:
+		RequiresCondition: rank-veteran == 2
+		Modifier: 90
+	DamageMultiplier@RANK-3:
+		RequiresCondition: rank-veteran == 3
+		Modifier: 85
+	DamageMultiplier@RANK-ELITE:
+		RequiresCondition: rank-elite
+		Modifier: 75
+	FirepowerMultiplier@RANK-1:
+		RequiresCondition: rank-veteran == 1
+		Modifier: 105
+	FirepowerMultiplier@RANK-2:
+		RequiresCondition: rank-veteran == 2
+		Modifier: 110
+	FirepowerMultiplier@RANK-3:
+		RequiresCondition: rank-veteran == 3
+		Modifier: 120
+	FirepowerMultiplier@RANK-ELITE:
+		RequiresCondition: rank-elite
+		Modifier: 130
+	SpeedMultiplier@RANK-1:
+		RequiresCondition: rank-veteran == 1
+		Modifier: 105
+	SpeedMultiplier@RANK-2:
+		RequiresCondition: rank-veteran == 2
+		Modifier: 110
+	SpeedMultiplier@RANK-3:
+		RequiresCondition: rank-veteran == 3
+		Modifier: 120
+	SpeedMultiplier@RANK-ELITE:
+		RequiresCondition: rank-elite
+		Modifier: 140
+	ReloadDelayMultiplier@RANK-1:
+		RequiresCondition: rank-veteran == 1
+		Modifier: 95
+	ReloadDelayMultiplier@RANK-2:
+		RequiresCondition: rank-veteran == 2
+		Modifier: 90
+	ReloadDelayMultiplier@RANK-3:
+		RequiresCondition: rank-veteran == 3
+		Modifier: 85
+	ReloadDelayMultiplier@RANK-ELITE:
+		RequiresCondition: rank-elite
+		Modifier: 75
+	InaccuracyMultiplier@RANK-1:
+		RequiresCondition: rank-veteran == 1
+		Modifier: 90
+	InaccuracyMultiplier@RANK-2:
+		RequiresCondition: rank-veteran == 2
+		Modifier: 80
+	InaccuracyMultiplier@RANK-3:
+		RequiresCondition: rank-veteran == 3
+		Modifier: 70
+	InaccuracyMultiplier@RANK-ELITE:
+		RequiresCondition: rank-elite
+		Modifier: 50
+	SelfHealing@ELITE:
+		Step: 2
+		Delay: 100
+		HealIfBelow: 100
+		DamageCooldown: 125
+		RequiresCondition: rank-elite
+	WithDecoration@RANK-1:
+		Image: rank
+		Sequence: rank-veteran-1
+		Palette: effect
+		ReferencePoint: Bottom, Right
+		RequiresCondition: rank-veteran == 1
+		ZOffset: 256
+	WithDecoration@RANK-2:
+		Image: rank
+		Sequence: rank-veteran-2
+		Palette: effect
+		ReferencePoint: Bottom, Right
+		RequiresCondition: rank-veteran == 2
+		ZOffset: 256
+	WithDecoration@RANK-3:
+		Image: rank
+		Sequence: rank-veteran-3
+		Palette: effect
+		ReferencePoint: Bottom, Right
+		RequiresCondition: rank-veteran == 3
+		ZOffset: 256
+	WithDecoration@RANK-ELITE:
+		Image: rank
+		Sequence: rank-elite
+		Palette: effect
+		ReferencePoint: Bottom, Right
+		RequiresCondition: rank-elite
+		ZOffset: 256
+
+^AcceptsCloakCrate:
+	Cloak:
+		InitialDelay: 15
+		CloakDelay: 90
+		CloakSound: trans1.aud
+		UncloakSound: trans1.aud
+		RequiresCondition: cloak-crate-collected && !cloak-force-disabled
+	ExternalCondition@CLOAK:
+		Condition: cloak-crate-collected
+	GrantConditionOnDamageState@UNCLOAK:
+		Condition: cloak-force-disabled
+		ValidDamageStates: Critical
+
+^Vehicle:
+	Inherits@1: ^ExistsInWorld
+	Inherits@3: ^SpriteActor
+	Huntable:
+	Mobile:
+		Crushes: crate
+		TerrainSpeeds:
+			Clear: 80
+			Rough: 50
+			Road: 100
+			Tiberium: 60
+			BlueTiberium: 60
+            Crops: 75
+			Wood: 75
+			Loot: 75
+			Beach: 50
+		TurnSpeed: 5
+	SelectionDecorations:
+	WithSpriteControlGroupDecoration:
+	Selectable:
+		Bounds: 24,24
+	Targetable:
+		TargetTypes: Ground, Vehicle
+	Repairable:
+	Passenger:
+		CargoType: Vehicle
+	ActorLostNotification:
+	HiddenUnderFog:
+	AttackMove:
+	DrawLineToTarget:
+	WithDamageOverlay:
+	WithFacingSpriteBody:
+	Explodes:
+		Weapon: UnitExplodeSmall
+		EmptyWeapon: UnitExplodeSmall
+	Guard:
+	Guardable:
+	Tooltip:
+		GenericName: Vehicle
+	MustBeDestroyed:
+	Voiced:
+		VoiceSet: VehicleVoice
+	BodyOrientation:
+		UseClassicFacingFudge: True
+
+^Tank:
+	Inherits: ^Vehicle
+	Mobile:
+		Crushes: wall, crate, infantry
+		TerrainSpeeds:
+			Clear: 80
+			Rough: 70
+			Road: 100
+			Tiberium: 60
+			BlueTiberium: 60
+            Crops: 75
+			Wood: 75
+			Loot: 75
+			Beach: 70
+		TurnSpeed: 5
+	Tooltip:
+		GenericName: Tank
+
+^Helicopter:
+	Inherits@1: ^ExistsInWorld
+	Inherits@3: ^SpriteActor
+	Huntable:
+	AppearsOnRadar:
+		UseLocation: yes
+	Targetable@GROUND:
+		TargetTypes: Ground, Vehicle
+		RequiresCondition: !airborne
+	Targetable@AIRBORNE:
+		TargetTypes: Air
+		RequiresCondition: airborne
+	SelectionDecorations:
+	WithSpriteControlGroupDecoration:
+	Selectable:
+		Bounds: 24,24
+	Aircraft:
+		RepairBuildings: hpad
+		LandWhenIdle: false
+		AirborneCondition: airborne
+		CruisingCondition: cruising
+		CanHover: True
+	HiddenUnderFog:
+		Type: GroundPosition
+	ActorLostNotification:
+	Explodes:
+		Weapon: HeliExplode
+		EmptyWeapon: HeliExplode
+	AttackMove:
+	DrawLineToTarget:
+	Guard:
+	Guardable:
+	Tooltip:
+		GenericName: Helicopter
+	WithFacingSpriteBody:
+	WithShadow:
+		Offset: 43, 128, 0
+		ZOffset: -129
+	Hovers@CRUISING:
+		RequiresCondition: cruising
+	MustBeDestroyed:
+	Voiced:
+		VoiceSet: VehicleVoice
+	BodyOrientation:
+		UseClassicFacingFudge: True
+
+^Infantry:
+	Inherits@1: ^ExistsInWorld
+	Inherits@3: ^SpriteActor
+	Huntable:
+	Health:
+		Shape: Circle
+			Radius: 128
+	Armor:
+		Type: None
+	RevealsShroud:
+		Range: 5c0
+	Mobile:
+		Crushes: crate
+		SharesCell: true
+		TerrainSpeeds:
+			Clear: 90
+			Rough: 80
+			Road: 100
+            Tiberium: 60
+                PathingCost: 350
+			BlueTiberium: 60
+                PathingCost: 350
+            Crops: 75
+                PathingCost: 300
+			Wood: 75
+                PathingCost: 300
+			Loot: 75
+                PathingCost: 300
+			Beach: 80
+	SelectionDecorations:
+	WithSpriteControlGroupDecoration:
+	Selectable:
+		Bounds: 12,17,0,-6
+	Targetable:
+		TargetTypes: Ground, Infantry
+	QuantizeFacingsFromSequence:
+		Sequence: stand
+	WithInfantryBody:
+	WithDeathAnimation:
+		DeathTypes:
+			DefaultDeath: 1
+			BulletDeath: 1
+			RippedApartDeath: 1
+			SmallExplosionDeath: 1
+			ExplosionDeath: 1
+			FireDeath: 1
+			TiberiumDeath: 1
+		CrushedSequence: die-crushed
+	AttackMove:
+	DrawLineToTarget:
+	Passenger:
+		CargoType: Infantry
+	HiddenUnderFog:
+	DamagedByTerrain:
+		Terrain: Tiberium, BlueTiberium
+		Damage: 2
+		DamageInterval: 16
+		DamageTypes: TiberiumDeath
+		RequiresCondition: !hazmatsuits
+	GrantConditionOnPrerequisite@BIO:
+		Condition: hazmatsuits
+		Prerequisites: bio
+	WithDecoration@HAZMAT:
+		Image: pips
+		Sequence: pip-hazmat
+		ReferencePoint: Bottom, Right
+		RequiresCondition: hazmatsuits
+	ActorLostNotification:
+	SpawnActorOnDeath:
+		Probability: 5
+		Actor: vice
+		OwnerType: InternalName
+		InternalOwner: Creeps
+		DeathType: TiberiumDeath
+		RequiresLobbyCreeps: true
+	Crushable:
+		WarnProbability: 40
+		CrushSound: squish2.aud
+	Guardable:
+	SelfHealing@HOSPITAL:
+		Step: 5
+		Delay: 100
+		HealIfBelow: 100
+		DamageCooldown: 125
+		RequiresCondition: hospitalheal
+	GrantConditionOnPrerequisite@HOSPITAL:
+		Condition: hospitalheal
+		Prerequisites: hosp
+	WithDecoration@REDCROSS:
+		Image: pips
+		Sequence: pip-heal
+		ReferencePoint: Bottom, Right
+		RequiresCondition: hospitalheal
+	DetectCloaked:
+		Range: 2c0
+	DeathSounds@NORMAL:
+		DeathTypes: DefaultDeath, BulletDeath, SmallExplosionDeath, ExplosionDeath
+	DeathSounds@BURNED:
+		Voice: Burned
+		DeathTypes: FireDeath
+	DeathSounds@POISONED:
+		Voice: Poisoned
+		DeathTypes: TiberiumDeath
+	Voiced:
+		VoiceSet: GenericVoice
+
+^Soldier:
+	Inherits: ^Infantry
+	MustBeDestroyed:
+	Tooltip:
+		GenericName: Soldier
+	Guard:
+	AutoTarget:
+		ScanRadius: 4
+	TakeCover:
+		SpeedModifier: 60
+		DamageModifiers:
+			Prone50Percent: 50
+		DamageTriggers: TriggerProne
+		ProneOffset: 400,0,0
+	WithInfantryBody:
+		IdleSequences: idle1, idle2
+		StandSequences: stand, stand2
+
+^CivInfantry:
+	Inherits: ^Infantry
+	Valued:
+		Cost: 70
+	Tooltip:
+		Name: Civilian
+		GenericVisibility: None
+	Mobile:
+		Speed: 56
+	Health:
+		HP: 25
+	RevealsShroud:
+		Range: 2c0
+	ActorLostNotification:
+		Notification: CivilianKilled
+		NotifyAll: true
+	ScaredyCat:
+	Crushable:
+		CrushSound: squish2.aud
+	Voiced:
+		VoiceSet: CivilianMaleVoice
+	Wanders:
+		MinMoveDelay: 150
+		MaxMoveDelay: 750
+
+^ArmedCivilian:
+	Armament:
+		Weapon: Pistol
+	AttackFrontal:
+	WithInfantryBody:
+		DefaultAttackSequence: shoot
+
+^DINO:
+	Inherits@1: ^ExistsInWorld
+	Inherits@2: ^SpriteActor
+	Huntable:
+	Health:
+		HP: 1000
+		Shape: Circle
+			Radius: 128
+	Armor:
+		Type: Wood
+	Buildable:
+		Queue: Biolab
+		BuildPaletteOrder: 50
+		Prerequisites: ~disabled
+	Valued:
+		Cost: 1000
+	Tooltip:
+		Name: Dinosaur
+	RevealsShroud:
+		Range: 6c0
+	Mobile:
+		Crushes: crate
+		Speed: 113
+		TerrainSpeeds:
+			Clear: 90
+			Rough: 80
+			Road: 100
+			Tiberium: 70
+			BlueTiberium: 70
+            Crops: 75
+			Wood: 75
+			Loot: 75
+			Beach: 80
+		Voice: Move
+	SelectionDecorations:
+	WithSpriteControlGroupDecoration:
+	Selectable:
+		Bounds: 24,24
+	Targetable:
+		TargetTypes: Ground, Creep
+	HiddenUnderFog:
+	RenderSprites:
+		Palette: terrain
+	QuantizeFacingsFromSequence:
+		Sequence: stand
+	WithInfantryBody:
+		DefaultAttackSequence: attack
+	WithDeathAnimation:
+		UseDeathTypeSuffix: false
+	AutoTarget:
+		ScanRadius: 4
+	AttackMove:
+		Voice: Attack
+	AttackFrontal:
+		Voice: Attack
+	DrawLineToTarget:
+	DeathSounds:
+	Voiced:
+		VoiceSet: DinoVoice
+
+^Viceroid:
+	Inherits@1: ^ExistsInWorld
+	Inherits@2: ^SpriteActor
+	Huntable:
+	Health:
+		HP: 300
+		Shape: Circle
+			Radius: 427
+	Armor:
+		Type: Wood
+	RevealsShroud:
+		Range: 6c0
+	Mobile:
+		Voice: Move
+		Speed: 71
+		TerrainSpeeds:
+			Clear: 70
+			Rough: 60
+			Road: 70
+			Tiberium: 60
+                PathingCost: 350
+			BlueTiberium: 60
+                PathingCost: 350
+            Crops: 75
+                PathingCost: 300
+			Wood: 75
+                PathingCost: 300
+			Loot: 75
+                PathingCost: 300
+			Beach: 60
+	SelectionDecorations:
+	WithSpriteControlGroupDecoration:
+	Selectable:
+		Bounds: 24,24
+	Targetable:
+		TargetTypes: Ground, Creep
+	AutoTarget:
+		ScanRadius: 5
+	AttackMove:
+		Voice: Attack
+	DrawLineToTarget:
+	HiddenUnderFog:
+	Valued:
+		Cost: 1000
+	Tooltip:
+		Name: Visceroid
+	Armament:
+		Weapon: Chemspray
+		LocalOffset: 384,0,0
+		MuzzleSequence: muzzle
+	AttackFrontal:
+		Voice: Attack
+	BodyOrientation:
+		QuantizedFacings: 8
+	WithSpriteBody:
+	WithMuzzleOverlay:
+	Guard:
+		Voice: Move
+	Guardable:
+	DamagedByTerrain:
+		Damage: -1
+		DamageInterval: 4
+		DamageTypes: TiberiumDeath
+		Terrain: Tiberium, BlueTiberium
+	Voiced:
+		VoiceSet: DinoVoice
+
+^Plane:
+	Inherits@1: ^ExistsInWorld
+	Inherits@2: ^SpriteActor
+	Huntable:
+	AppearsOnRadar:
+		UseLocation: yes
+	HiddenUnderFog:
+		Type: GroundPosition
+		AlwaysVisibleStances: None
+	ActorLostNotification:
+	AttackMove:
+	WithShadow:
+		Offset: 43, 128, 0
+		ZOffset: -129
+	WithFacingSpriteBody:
+	FlyAwayOnIdle:
+	RejectsOrders:
+	Aircraft:
+		CruiseAltitude: 2560
+
+^Ship:
+	Inherits@1: ^ExistsInWorld
+	Inherits@3: ^SpriteActor
+	Huntable:
+	Mobile:
+		Crushes: crate
+		TerrainSpeeds:
+			Water: 100
+	SelectionDecorations:
+	WithSpriteControlGroupDecoration:
+	Selectable:
+	Targetable:
+		TargetTypes: Ground, Water
+	HiddenUnderFog:
+	ActorLostNotification:
+	AttackMove:
+	DrawLineToTarget:
+	WithDamageOverlay:
+	Explodes:
+		Weapon: UnitExplodeShip
+		EmptyWeapon: UnitExplodeShip
+	Guard:
+	Guardable:
+	Tooltip:
+		GenericName: Ship
+	Voiced:
+		VoiceSet: VehicleVoice
+
+^Building:
+	Inherits@1: ^ExistsInWorld
+	Inherits@2: ^SpriteActor
+	Huntable:
+	SelectionDecorations:
+	WithSpriteControlGroupDecoration:
+	Selectable:
+		Priority: 3
+	Targetable:
+		TargetTypes: Ground, C4, Structure
+	Armor:
+		Type: Wood
+	Building:
+		Dimensions: 1,1
+		Footprint: x
+	SoundOnDamageTransition:
+		DamagedSounds: xplos.aud
+		DestroyedSounds: crumble.aud
+	WithSpriteBody:
+	Explodes:
+		Type: Footprint
+		Weapon: BuildingExplode
+		EmptyWeapon: BuildingExplode
+	CaptureNotification:
+		Notification: BuildingCaptured
+		NewOwnerVoice: no
+	ActorLostNotification:
+		Notification: BuildingLost
+	ShakeOnDeath:
+	Guardable:
+		Range: 3c0
+	Tooltip:
+		GenericName: Structure
+	FrozenUnderFog:
+	Demolishable:
+
+^BaseBuilding:
+	Inherits: ^Building
+	Building:
+		Adjacent: 4
+		RequiresBaseProvider: true
+		BuildSounds: constru2.aud, hvydoor1.aud
+		TerrainTypes: Clear,Road
+	MustBeDestroyed:
+		RequiredForShortGame: true
+	RepairableBuilding:
+		RepairPercent: 40
+		RepairStep: 14
+		PlayerExperience: 15
+	WithDeathAnimation:
+		DeathSequence: dead
+		UseDeathTypeSuffix: false
+	GivesBuildableArea:
+	EmitInfantryOnSell:
+		ActorTypes: e6,e1,e1,e1
+	EngineerRepairable:
+	Sellable:
+		SellSounds: cashturn.aud
+	Capturable:
+	WithMakeAnimation:
+
+^CivBuilding:
+	Inherits: ^Building
+	-ConditionManager:
+	Health:
+		HP: 40000
+	Tooltip:
+		GenericName: Civilian Building
+		GenericStancePrefix: false
+		ShowOwnerRow: false
+	FrozenUnderFog:
+
+^CivBuildingHusk:
+	Inherits@1: ^SpriteActor
+	AppearsOnRadar:
+	Building:
+		Dimensions: 1,1
+		Footprint: x
+	WithSpriteBody:
+	Tooltip:
+		GenericName: Civilian Building (Destroyed)
+		GenericStancePrefix: false
+		ShowOwnerRow: false
+	FrozenUnderFog:
+	ScriptTriggers:
+
+^TechBuilding:
+	Inherits: ^CivBuilding
+	Capturable:
+	CaptureNotification:
+		Notification: CivilianBuildingCaptured
+	RepairableBuilding:
+		RepairPercent: 40
+		RepairStep: 14
+		PlayerExperience: 15
+	EngineerRepairable:
+	RevealsShroud:
+		Range: 3c0
+	Tooltip:
+		ShowOwnerRow: True
+
+^CivField:
+	Inherits: ^CivBuilding
+	-Selectable:
+	-SelectionDecorations:
+	Tooltip:
+		GenericName: Field
+	-Explodes:
+	-Targetable:
+	-Demolishable:
+	RenderSprites:
+		Palette: terrain
+
+^CivFieldHusk:
+	Inherits@1: ^SpriteActor
+	AppearsOnRadar:
+	Building:
+		Dimensions: 1,1
+		Footprint: _
+	Tooltip:
+		Name: Field (Destroyed)
+		GenericVisibility: None
+		ShowOwnerRow: false
+	RenderSprites:
+		Palette: terrain
+	WithSpriteBody:
+	FrozenUnderFog:
+	ScriptTriggers:
+
+^Wall:
+	Inherits@1: ^SpriteActor
+	CombatDebugOverlay:
+	AppearsOnRadar:
+	Building:
+		Dimensions: 1,1
+		Footprint: x
+		BuildSounds: hvydoor1.aud
+		Adjacent: 7
+		TerrainTypes: Clear,Road
+	Targetable:
+		TargetTypes: Ground, Wall
+	Crushable:
+		CrushClasses: wall
+		CrushSound: sandbag2.aud
+	LineBuild:
+		Range: 8
+		NodeTypes: wall
+	LineBuildNode:
+		Types: wall
+	RenderSprites:
+		Palette: staticterrain
+	WithWallSpriteBody:
+	GivesExperience:
+	AutoTargetIgnore:
+	Sellable:
+		SellSounds: cashturn.aud
+	Guardable:
+	FrozenUnderFog:
+	ScriptTriggers:
+	Health:
+		HP: 10000
+		Shape: Rectangle
+			TopLeft: -512, -512
+			BottomRight: 512, 512
+
+^Tree:
+	Inherits@1: ^SpriteActor
+	Tooltip:
+		Name: Tree
+		ShowOwnerRow: false
+	RenderSprites:
+		Palette: staticterrain
+	WithSpriteBody:
+	Building:
+		Footprint: __ x_
+		Dimensions: 2,2
+	AppearsOnRadar:
+	RadarColorFromTerrain:
+		Terrain: Tree
+	Armor:
+		Type: Wood
+	Targetable:
+		TargetTypes: Trees
+	AutoTargetIgnore:
+	HiddenUnderShroud:
+	ScriptTriggers:
+    Health:
+		HP: 40000
+    Explodes@Tib:
+		Weapon: LeaveWoodM
+        EmptyWeapon: LeaveWoodM
+    ThrowsShrapnel@SMALL:
+		Weapons: SmallWood1, SmallWood2, SmallWood3
+		Pieces: 1, 3
+		Range: 0c512, 3c0
+
+^TreeHusk:
+	Inherits@1: ^SpriteActor
+	AppearsOnRadar:
+	Building:
+		Footprint: __ x_
+		Dimensions: 2,2
+	WithSpriteBody:
+	Tooltip:
+		Name: Tree (Burnt)
+		ShowOwnerRow: false
+	FrozenUnderFog:
+	ScriptTriggers:
+
+^TibTree:
+	Inherits@1: ^SpriteActor
+	Tooltip:
+		Name: Blossom Tree
+		ShowOwnerRow: false
+	RenderSprites:
+		Palette: staticterrain
+	WithSpriteBody:
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+	AppearsOnRadar:
+	RadarColorFromTerrain:
+		Terrain: Tiberium
+	HiddenUnderShroud:
+	WithMakeAnimation:
+
+^Rock:
+	Inherits@1: ^SpriteActor
+	Tooltip:
+		Name: Rock
+		ShowOwnerRow: false
+	RenderSprites:
+		Palette: staticterrain
+	WithSpriteBody:
+	Building:
+		Footprint: __ x_
+		Dimensions: 2,2
+	AppearsOnRadar:
+	RadarColorFromTerrain:
+		Terrain: Tree
+	HiddenUnderShroud:
+	ScriptTriggers:
+	EditorTilesetFilter:
+		RequireTilesets: DESERT
+
+^CommonHuskDefaults:
+	Inherits@1: ^SpriteActor
+	Health:
+		HP: 140
+	Armor:
+		Type: Light
+	HiddenUnderFog:
+		Type: CenterPosition
+	AutoTargetIgnore:
+	WithFacingSpriteBody:
+
+^Husk:
+	Inherits: ^CommonHuskDefaults
+	Husk:
+		AllowedTerrain: Clear, Rough, Road, Tiberium, BlueTiberium, Beach
+	Burns:
+		Interval: 6
+	Targetable:
+		RequiresForceFire: yes
+		TargetTypes: Ground, Husk
+	Capturable:
+		Type: husk
+		AllowAllies: yes
+		CaptureThreshold: 100
+	TransformOnCapture:
+		ForceHealthPercentage: 25
+	Tooltip:
+		GenericName: Destroyed Vehicle
+	DisabledOverlay:
+	ScriptTriggers:
+	Explodes:
+		Weapon: UnitExplodeSmall
+		EmptyWeapon: UnitExplodeSmall
+	BodyOrientation:
+		UseClassicFacingFudge: True
+
+^HelicopterHusk:
+	Inherits: ^CommonHuskDefaults
+	WithShadow:
+		Offset: 43, 128, 0
+		ZOffset: -129
+	Aircraft:
+		CanHover: True
+	FallsToEarth:
+		Spins: True
+		Moves: False
+		Explosion: HeliCrash
+	Tooltip:
+		GenericName: Destroyed Helicopter
+	BodyOrientation:
+		UseClassicFacingFudge: True
+
+^Bridge:
+	AlwaysVisible:
+	Tooltip:
+		Name: Bridge
+		ShowOwnerRow: false
+	Targetable:
+		RequiresForceFire: yes
+		TargetTypes: Ground, Water
+	Health:
+		HP: 500
+	SoundOnDamageTransition:
+		DamagedSounds: xplos.aud
+		DestroyedSounds: xplobig4.aud
+	ScriptTriggers:
+
+^Crate:
+	Inherits@1: ^SpriteActor
+	HiddenUnderFog:
+	Tooltip:
+		Name: Crate
+		GenericName: Crate
+		ShowOwnerRow: false
+	Crate:
+		TerrainTypes: Clear, Rough, Road, Tiberium, BlueTiberium, Beach
+	RenderSprites:
+		Palette: effect
+		Image: crate
+	WithCrateBody:
+		XmasImages: xcratea, xcrateb, xcratec, xcrated
+
+^Defense:
+	Inherits: ^BaseBuilding
+	AutoTarget:
+	RenderRangeCircle:
+	RenderDetectionCircle:
+	-GivesBuildableArea:
+	MustBeDestroyed:
+		RequiredForShortGame: false
+        
+^MWGate:
+	Inherits@1: ^ExistsInWorld
+	Inherits@2: ^SpriteActor
+	Huntable:
+    Sellable:
+    RepairableBuilding:
+		RepairPercent: 40
+		RepairStep: 350
+		PlayerExperience: 15
+    SelectionDecorations:
+	WithSpriteControlGroupDecoration:
+	Selectable:
+		Priority: 3
+	Targetable:
+		TargetTypes: Ground, C4, Structure
+    SoundOnDamageTransition:
+		DamagedSounds: xplos.aud
+		DestroyedSounds: crumble.aud
+    Explodes:
+		Type: Footprint
+		Weapon: BuildingExplode
+		EmptyWeapon: BuildingExplode
+    ActorLostNotification:
+		Notification: BuildingLost
+    ShakeOnDeath:
+    Guardable:
+		Range: 3c0
+    FrozenUnderFog:
+	Demolishable:
+	Valued:
+		Cost: 250
+	Health:
+		HP: 35000
+	Armor:
+		Type: Heavy
+	LineBuildNode:
+		Types: wall, gate
+	WithGateSpriteBody:
+		OpenSequence: open
+	Gate:
+		Adjacent: 7
+		TerrainTypes: Clear, Rough, Road
+		BlocksProjectilesHeight: 640
+
+^MedievalHusk:
+	Inherits@1: ^SpriteActor
+	Health:
+		HP: 5000
+	Armor:
+		Type: Light
+	HiddenUnderFog:
+		Type: CenterPosition
+	AutoTargetIgnore:
+	WithFacingSpriteBody:
+	Husk:
+		AllowedTerrain: Clear, Rough, Road, Tiberium, BlueTiberium, Beach
+	SelfHealing@KILLSELF:
+		PercentageStep: -3
+		Delay: 12
+		HealIfBelow: 101
+		DamageCooldown: 0
+        DamageTypes: DefaultDeath
+	Targetable:
+		RequiresForceFire: yes
+		TargetTypes: Ground, Husk
+	Tooltip:
+		GenericName: Destroyed Vehicle
+	ScriptTriggers:
+	Explodes:
+		Weapon: HuskExplosion
+		EmptyWeapon: HuskExplosion
+	BodyOrientation:
+		UseClassicFacingFudge: True
+
+^AttackPlane:
+	Inherits@1: ^ExistsInWorld
+	Inherits@EXPERIENCE: ^GainsExperience
+	Inherits@4: ^SpriteActor
+	Huntable:
+	DrawLineToTarget:
+	UpdatesPlayerStatistics:
+	AppearsOnRadar:
+		UseLocation: true
+	SelectionDecorations:
+	WithSpriteControlGroupDecoration:
+	Selectable:
+		Bounds: 24,24
+	Aircraft:
+		RepairBuildings: fix
+		RearmBuildings: afld
+		AirborneCondition: airborne
+		CruisingCondition: cruising
+	Targetable@GROUND:
+		TargetTypes: Ground, Repair, Vehicle
+		RequiresCondition: !airborne
+	Targetable@AIRBORNE:
+		TargetTypes: Air
+		RequiresCondition: airborne
+	HiddenUnderFog:
+		Type: CenterPosition
+	AttackMove:
+	Guard:
+	Guardable:
+	ActorLostNotification:
+	ProximityCaptor:
+		Types: Plane
+	Tooltip:
+		GenericName: Plane
+	WithShadow:
+		Offset: 43, 128, 0
+		ZOffset: -129
+	WithFacingSpriteBody:
+	MustBeDestroyed:
+	Voiced:
+		VoiceSet: GenericVoice
+
+^MWBaseBuilding:
+    Inherits@1: ^BaseBuilding
+	EmitInfantryOnSell:
+		ActorTypes: engeneer,e1new
+    RepairableBuilding:
+		RepairPercent: 40
+		RepairStep: 350
+		PlayerExperience: 15
+    ThrowsShrapnel@SMALL:
+		Weapons: SmallWood1, SmallWood2, SmallWood3, SmallStone1, SmallStone2
+		Pieces: 2, 4
+		Range: 0c512, 3c0
+    Targetable:
+		TargetTypes: Ground, C4, Structure, Wanderer
+    ProximityExternalCondition@WANDERER:
+        Range: 6c0
+        ValidStances: Ally
+        Condition: Wander
+        
+^MWDefense:
+    Inherits@1: ^Defense
+    EmitInfantryOnSell:
+		ActorTypes: engeneer,e1new
+    RepairableBuilding:
+		RepairPercent: 40
+		RepairStep: 350
+		PlayerExperience: 15
+    ThrowsShrapnel@SMALL:
+		Weapons: SmallWood1, SmallWood2, SmallWood3, SmallStone1, SmallStone2
+		Pieces: 2, 4
+		Range: 0c512, 3c0
+
+^MedievalInfantry:
+	Inherits@1: ^ExistsInWorld
+	Inherits@3: ^SpriteActor
+	Huntable:
+	Health:
+		Shape: Circle
+			Radius: 128
+	Armor:
+		Type: None
+	RevealsShroud:
+		Range: 5c0
+	Mobile:
+		Crushes: crate
+		SharesCell: true
+		TerrainSpeeds:
+			Clear: 90
+			Rough: 80
+			Road: 100
+			Tiberium: 60
+                PathingCost: 350
+			BlueTiberium: 60
+                PathingCost: 350
+            Crops: 75
+                PathingCost: 300
+			Wood: 75
+                PathingCost: 300
+			Loot: 75
+                PathingCost: 3000
+			Beach: 80
+	SelectionDecorations:
+	WithSpriteControlGroupDecoration:
+	Selectable:
+		Bounds: 12,17,0,-6
+	QuantizeFacingsFromSequence:
+		Sequence: stand
+	WithInfantryBody:
+    ExternalCondition@ROTTEN:
+        Condition: RottenKadaver
+    ExternalCondition@DDler:
+        Condition: DDler
+    ExternalCondition@ROYAL:
+        Condition: KingIsNear
+    ExternalCondition@HOSPITAL:
+        Condition: hospitalheal
+    SelfHealing@HOSPITAL:
+		Step: 400
+		Delay: 35
+		HealIfBelow: 100
+		DamageCooldown: 125
+		RequiresCondition: hospitalheal
+	WithDecoration@REDCROSS:
+		Image: pips
+		Sequence: pip-heal
+		ReferencePoint: Bottom, Right
+		RequiresCondition: hospitalheal
+	AttackMove:
+	DrawLineToTarget:
+	HiddenUnderFog:
+	Crushable:
+		WarnProbability: 40
+		CrushSound: squish2.aud
+	Guardable:
+	DeathSounds@NORMAL:
+		DeathTypes: DefaultDeath
+	DeathSounds@HEAVY:
+		Voice: Zapped
+		DeathTypes: RippedApartDeath, BallistaDeath
+	DeathSounds@POISONED:
+		Voice: Poisoned
+		DeathTypes: PoisonDeath
+    DeathSounds@BURNED:
+		Voice: Burned
+		DeathTypes: BurnToDeath
+    WithDecoration@Crown:
+		Image: pips
+		Sequence: pip-crown
+		ReferencePoint: Top, Left
+		RequiresCondition: KingIsNear
+    DamageMultiplier@Crown:
+        RequiresCondition: KingIsNear
+        Modifier: 120
+    FirepowerMultiplier@Crown:
+        RequiresCondition: KingIsNear
+        Modifier: 120
+    ReloadDelayMultiplier:
+        RequiresCondition: KingIsNear
+        Modifier: 120
+        
+^Knight:  
+	Inherits: ^MedievalInfantry
+    Inherits@2: ^GainsExperience
+    WithDeathAnimation:
+        DeathSequencePalette: raplayer
+        DeathTypes:
+			DefaultDeath: 1
+			RippedApartDeath: 2
+			PoisonDeath: 3
+			BallistaDeath: 4
+            BurnToDeath: 5
+		CrushedSequence: die-crushed
+    Targetable:
+		TargetTypes: Ground, Infantry
+	MustBeDestroyed:
+	Tooltip:
+		GenericName: Soldier
+	Guard:
+	AutoTarget:
+		ScanRadius: 4
+	WithInfantryBody:
+		IdleSequences: idle1, idle2
+		StandSequences: stand
+    Power:
+		Amount: -1
+    Passenger:
+		CargoType: Infantry
+        GrantUpgrades: batteringupgrade
+    SelfHealing@Rotaway:
+        PercentageStep: -2
+        Step: -0
+        HealIfBelow: 110
+        Delay: 10
+        RequiresCondition: RottenKadaver
+        DamageTypes: PoisonDeath
+    SelfHealing@DDler:
+        PercentageStep: -2
+        Step: -0
+        HealIfBelow: 110
+        Delay: 10
+        RequiresCondition: DDler
+        DamageTypes: PoisonDeath
+    SelfHealing@HOSPITAL:
+		PercentageStep: 1
+		Delay: 25
+		HealIfBelow: 100
+		DamageCooldown: 125
+		RequiresCondition: hospitalheal || hospitalhealbarr
+	WithDecoration@REDCROSS:
+		Image: pips
+		Sequence: pip-heal
+		ReferencePoint: Bottom, Right
+		RequiresCondition: hospitalheal || hospitalhealbarr
+    Voiced:
+		VoiceSet: GenericVoice
+    ExternalCondition@BARRACKS:
+        Condition: hospitalhealbarr
+    Explodes@Tib:
+		Weapon: LeaveStuff
+        EmptyWeapon: LeaveStuff
+        Chance: 25
+
+        
+^Cavalry:
+	Inherits: ^MedievalInfantry
+    Inherits@2: ^GainsExperience
+    Voiced:
+		VoiceSet: GenericHorseVoice
+    Targetable:
+		TargetTypes: Ground, Cavalry
+    WithDeathAnimation:
+        DeathSequencePalette: raplayer
+        DeathTypes:
+			DefaultDeath: 1
+			RippedApartDeath: 1
+			PoisonDeath: 1
+			BallistaDeath: 1
+            BurnToDeath: 2
+	MustBeDestroyed:
+	Health:
+        Shape: Capsule
+            Radius: 226
+            PointA: 0, -312
+            PointB: 0, 312
+    Tooltip:
+		GenericName: Cavalry
+	Guard:
+	AutoTarget:
+		ScanRadius: 7
+	WithInfantryBody:
+		IdleSequences: idle1, idle2
+		StandSequences: stand
+    Power:
+		Amount: -2
+    -Crushable:
+    SelfHealing@Rotaway:
+        PercentageStep: -2
+        Step: -0
+        HealIfBelow: 110
+        Delay: 10
+        RequiresCondition: RottenKadaver
+        DamageTypes: PoisonDeath
+    SelfHealing@DDler:
+        PercentageStep: -2
+        Step: -0
+        HealIfBelow: 110
+        Delay: 10
+        RequiresCondition: DDler
+        DamageTypes: PoisonDeath
+    Selectable:
+		Bounds: 26,34,0,-6
+    SelectionDecorations:
+		VisualBounds: 26,34,0,-6
+    SpawnActorOnDeath@1:
+        DeathType: DefaultDeath
+        Probability: 10
+        Actor: emptyross
+		OwnerType: InternalName
+		InternalOwner: Neutral
+    SpawnActorOnDeath@2:
+        DeathType: RippedApartDeath
+        Probability: 10
+        Actor: emptyross
+		OwnerType: InternalName
+		InternalOwner: Neutral
+    SpawnActorOnDeath@3:
+        DeathType: PoisonDeath
+        Probability: 10
+        Actor: emptyross
+		OwnerType: InternalName
+		InternalOwner: Neutral
+    SpawnActorOnDeath@4:
+        DeathType: BallistaDeath
+        Probability: 33
+        Actor: emptyross
+		OwnerType: InternalName
+		InternalOwner: Neutral
+    SpawnActorOnDeath@5:
+        DeathType: BurnToDeath
+        Probability: 100
+        Actor: burninghorse
+		OwnerType: InternalName
+		InternalOwner: Neutral
+    DeathSounds@NORMAL:
+		DeathTypes: DefaultDeath, RippedApartDeath, BallistaDeath, PoisonDeath, BurnToDeath
+	-DeathSounds@HEAVY:
+	-DeathSounds@POISONED:
+    -DeathSounds@BURNED:
+    SelfHealing@HOSPITAL:
+		PercentageStep: 1
+		Delay: 25
+		HealIfBelow: 100
+		DamageCooldown: 125
+		RequiresCondition: hospitalheal || hospitalhealbarr
+	WithDecoration@REDCROSS:
+		Image: pips
+		Sequence: pip-heal
+		ReferencePoint: Bottom, Right
+		RequiresCondition: hospitalheal || hospitalhealbarr
+    ExternalCondition@BARRACKS:
+        Condition: hospitalhealbarr
+    Explodes@Tib:
+		Weapon: LeaveStuff
+        EmptyWeapon: LeaveStuff
+        Chance: 25
+       
+^Siege:
+	Inherits: ^MedievalInfantry
+    Mobile:
+		SharesCell: false
+    Targetable:
+		TargetTypes: Ground, Siege
+    MustBeDestroyed:
+	Tooltip:
+		GenericName: Cavalry
+	Guard:
+	AutoTarget:
+		ScanRadius: 7
+	WithInfantryBody:
+		IdleSequences: stand
+		StandSequences: stand
+    Power:
+		Amount: -4
+    -Crushable:
+    SelfHealing@Rotaway:
+        PercentageStep: -2
+        Step: -0
+        Delay: 10
+        HealIfBelow: 110
+        RequiresCondition: RottenKadaver
+        DamageTypes: DefaultDeath
+    SelfHealing@DDler:
+        PercentageStep: -2
+        Step: -0
+        Delay: 10
+        HealIfBelow: 110
+        RequiresCondition: DDler
+        DamageTypes: PoisonDeath
+    Selectable:
+		Bounds: 35,35,0,-6 
+    Voiced:
+		VoiceSet: SiegeVoice
+    ThrowsShrapnel@SMALL:
+		Weapons: SmallWood1, SmallWood2, SmallWood3
+		Pieces: 0, 2
+		Range: 0c512, 3c0
+    Explodes@Tib:
+		Weapon: LeaveStuff
+        EmptyWeapon: LeaveStuff
+        Chance: 25
+        
+^MWCiv:
+	Inherits: ^Infantry
+	Valued:
+		Cost: 70
+	Tooltip:
+		Name: Civilian
+		GenericVisibility: None
+	Mobile:
+		Speed: 56
+	Health:
+		HP: 2500
+	RevealsShroud:
+		Range: 2c0
+	ActorLostNotification:
+		Notification: CivilianKilled
+		NotifyAll: true
+	ScaredyCat:
+	Crushable:
+		CrushSound: squish2.aud
+	WithDeathAnimation:
+        DeathTypes:
+			DefaultDeath: 1
+			RippedApartDeath: 2
+			PoisonDeath: 3
+			BallistaDeath: 4
+            BurnToDeath: 5
+		CrushedSequence: die-crushed
+        DeathSequencePalette: raplayer
+    Voiced:
+		VoiceSet: CivilianMaleVoice
+	Wanders:
+		MinMoveDelay: 150
+		MaxMoveDelay: 750
+    WithInfantryBody:
+		StandSequences: stand
+ 
+^MWAnimal:
+	Inherits: ^MedievalInfantry
+	SelfHealing@Rotaway:
+        PercentageStep: -2
+        Step: -0
+        HealIfBelow: 110
+        Delay: 10
+        RequiresCondition: RottenKadaver
+        DamageTypes: PoisonDeath
+    SelfHealing@HOSPITAL:
+		PercentageStep: 1
+		Delay: 25
+		HealIfBelow: 100
+		DamageCooldown: 125
+		RequiresCondition: hospitalheal || hospitalhealbarr
+    Valued:
+		Cost: 50
+	Tooltip:
+		Name: Animal
+		GenericVisibility: None
+	ScaredyCat:
+    Mobile:
+		Speed: 56
+	Health:
+		HP: 2500
+	RevealsShroud:
+		Range: 1c0
+    -Selectable:
+    Targetable:
+        TargetTypes: Ground, Infantry
+	Crushable:
+		CrushSound: squish2.aud
+	WithDeathAnimation:
+        DeathTypes:
+			DefaultDeath: 1
+			RippedApartDeath: 1
+			PoisonDeath: 1
+			BallistaDeath: 1
+            BurnToDeath: 1
+		CrushedSequence: die1
+        DeathSequencePalette: raplayer
+	Wanders:
+        WanderMoveRadius: 2
+        ReduceMoveRadiusDelay: 5
+		MinMoveDelay: 150
+		MaxMoveDelay: 750
+        RequiresCondition: Wander
+    WithInfantryBody:
+        MaxIdleDelay: 60
+		StandSequences: stand
+    ExternalCondition@Wander:
+        Condition: Wander
+ 
+^MWWanderer:
+	Inherits: ^MedievalInfantry
+	SelfHealing@Rotaway:
+        PercentageStep: -2
+        Step: -0
+        HealIfBelow: 110
+        Delay: 10
+        RequiresCondition: RottenKadaver
+        DamageTypes: PoisonDeath
+    SelfHealing@HOSPITAL:
+		PercentageStep: 1
+		Delay: 25
+		HealIfBelow: 100
+		DamageCooldown: 125
+		RequiresCondition: hospitalheal || hospitalhealbarr
+    Voiced:
+		VoiceSet: CivilianNew
+    Valued:
+		Cost: 200
+	Tooltip:
+		Name: Peasant
+		GenericVisibility: None
+        ShowOwnerRow: false
+	Mobile:
+		Speed: 56
+	Health:
+		HP: 7000
+	RevealsShroud:
+		Range: 2c0
+    -Selectable:
+    Targetable:
+        TargetTypes: Ground, Infantry
+	Crushable:
+		CrushSound: squish2.aud
+	WithDeathAnimation:
+        DeathTypes:
+			DefaultDeath: 1
+			RippedApartDeath: 2
+			PoisonDeath: 3
+			BallistaDeath: 4
+            BurnToDeath: 5
+		CrushedSequence: die-crushed
+        DeathSequencePalette: raplayer
+	Wanders:
+        WanderMoveRadius: 2
+        ReduceMoveRadiusDelay: 5
+		MinMoveDelay: 150
+		MaxMoveDelay: 750
+        RequiresCondition: Wander
+    AttackWander: 
+        WanderMoveRadius: 1
+        ReduceMoveRadiusDelay: 5
+		MinMoveDelay: 0
+		MaxMoveDelay: 25
+        RequiresCondition: !Wander
+    WithInfantryBody:
+		StandSequences: stand
+    AutoTarget:
+		ScanRadius: 20
+        InitialStance: AttackAnything
+        RequiresCondition: !Wander
+    AttackFrontal:
+        RequiresCondition: !Wander
+    AttackMove:
+        RequiresCondition: !Wander
+    ExternalCondition@Wander:
+        Condition: Wander
+    Armament:
+		Weapon: WanderAttack
+		TargetStances: Ally
+        RequiresCondition: !Wander
+    ExternalCondition@Tax:
+        Condition: Tax
+    CashTrickler@PayTax:
+        Interval: 25
+        Amount: 2
+        RequiresCondition: Tax
+        
+^MWTalker:
+	Inherits: ^MWWanderer
+    Targetable@TALKBACK:
+        TargetTypes: Talkbacks
+        RequiresCondition: Wander
+    Targetable@TALKABLE:
+        TargetTypes: Talkable
+        RequiresCondition: Wander && !Talking
+    ExternalCondition@Talker:
+        Condition: Talking
+    ExternalCondition@Backtalker:
+        Condition: Talkback
+    AttackFrontal:
+        RequiresCondition: !Wander || Talking || Talkback
+        AttackRequiresEnteringCell: True
+    AttackMove:
+        RequiresCondition: !Wander || Talking || Talkback
+    AutoTarget:
+		ScanRadius: 20
+        InitialStance: AttackAnything
+        RequiresCondition: !Wander || Talking || Talkback
+    Armament@Talking:
+		Weapon: WanderTalk
+		TargetStances: Ally
+        RequiresCondition: Talking && Wander
+    Armament@Talkback:
+		Weapon: WanderTalkback
+		TargetStances: Ally
+        RequiresCondition: Talkback && Wander
+    Wanders:
+        WanderMoveRadius: 2
+        ReduceMoveRadiusDelay: 5
+		MinMoveDelay: 150
+		MaxMoveDelay: 750
+        RequiresCondition: Wander && !Talking && !Talkback
+    AttackWander@Talking: 
+        WanderMoveRadius: 2
+        ReduceMoveRadiusDelay: 5
+		MinMoveDelay: 150
+		MaxMoveDelay: 750
+        RequiresCondition: Wander && (Talking || Talkback)
+        
+^MWConstructor:
+	Inherits: ^MedievalInfantry
+	Valued:
+		Cost: 120
+    RenderSprites:
+        PlayerPalette: 
+        Palette: mwcivilian
+    Tooltip:
+		Name: Labourer
+		GenericVisibility: None
+        ShowOwnerRow: false
+	-Selectable:
+    Targetable:
+        TargetTypes: Ground, Infantry
+    Mobile:
+		Speed: 46
+	Health:
+		HP: 5000
+	RevealsShroud:
+		Range: 4c0
+	Crushable:
+		CrushSound: squish2.aud
+	WithDeathAnimation:
+        DeathTypes:
+			DefaultDeath: 1
+			RippedApartDeath: 2
+			PoisonDeath: 3
+			BallistaDeath: 4
+            BurnToDeath: 5
+		CrushedSequence: die-crushed
+        DeathSequencePalette: raplayer
+    Voiced:
+		VoiceSet: CivilianMaleVoice
+    WithInfantryBody:
+		StandSequences: stand
+
+
+^Props:
+    Inherits@1: ^ExistsInWorld
+	Inherits@2: ^SpriteActor
+	RevealsShroud:
+		Range: 3c0
+		Type: CenterPosition
+	RenderSprites:
+		Palette: mwcivilian
+	Building:
+		Dimensions: 2,2
+		Footprint: __ __
+    WithSpriteBody:
+	FrozenUnderFog:
+	BodyOrientation:
+		QuantizedFacings: 1
+	AutoSelectionSize:
+    Health:
+		HP: 6000
+    Targetable:
+        TargetTypes: Ground, Prop
+    WithMakeAnimation:
+    ThrowsShrapnel@SMALL:
+		Weapons: SmallWood1, SmallWood2, SmallWood3
+		Pieces: 0, 2
+		Range: 0c512, 3c0
+    Transforms:
+		IntoActor: mwconst1back
+		Offset: 0,0
+		Facing: 76
+        
+        
+^GrowableTree:
+	Inherits@1: ^SpriteActor
+	EditorTilesetFilter:
+		RequireTilesets: TEMPERAT
+    Tooltip:
+		Name: Tree
+		ShowOwnerRow: false
+	RenderSprites:
+		Palette: staticterrain
+	WithSpriteBody:
+	Building:
+		Footprint: x 
+		Dimensions: 1,1
+	AppearsOnRadar:
+	RadarColorFromTerrain:
+		Terrain: Tree
+	Health:
+		HP: 10000
+	Armor:
+		Type: Heavy
+	Targetable:
+		TargetTypes: Trees
+	HiddenUnderShroud:
+	ScriptTriggers:
+    
+^Lv5GrowableTree:
+	Inherits@1: ^SpriteActor
+    ConditionManager:
+	EditorTilesetFilter:
+		RequireTilesets: TEMPERAT
+    Tooltip:
+		Name: Tree
+		ShowOwnerRow: false
+	WithSpriteBody:
+	Building:
+		Footprint: x 
+		Dimensions: 1,1
+	AppearsOnRadar:
+	RadarColorFromTerrain:
+		Terrain: Tree
+	Health:
+		HP: 10000
+	Armor:
+		Type: Heavy
+	Targetable:
+		TargetTypes: Trees
+	HiddenUnderShroud:
+	ScriptTriggers:
+    RenderSprites:
+		Palette: staticterrain
+    GrantConditionOnDamageState@1:
+        Condition: Heavy
+        ValidDamageStates: Heavy
+        GrantPermanently: true
+    GrantConditionOnDamageState@2:
+        Condition: Critical
+        ValidDamageStates: Critical
+        GrantPermanently: true
+    WithIdleOverlay@Lv0:
+        Sequence: tree
+        RequiresCondition: !Heavy && !Critical
+    WithIdleOverlay@Lv1:
+        Sequence: treedown
+        RequiresCondition: Heavy && !Critical
+    WithIdleOverlay@Lv3:
+        Sequence: treehalf
+        RequiresCondition: Heavy && Critical
+    SoundOnDamageTransition:
+		DamagedSounds: treefell.wav
+    

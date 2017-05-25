@@ -1,0 +1,422 @@
+PROP1:
+    Inherits: ^Props
+	RenderSprites:
+		Image: prop1
+		Palette: mwcivilian
+    WithIdleOverlay:
+        Sequence: burnloop
+        Palette: terrain
+        
+PROP2:
+    Inherits: ^Props
+	RenderSprites:
+		Image: prop2
+		Palette: mwcivilian
+    ThrowsShrapnel@SMALL:
+		Weapons: SmallWood1, SmallWood2, SmallWood3, SmallStone1, SmallStone2
+		Pieces: 0, 2
+		Range: 0c512, 3c0
+        
+PROP3:
+    Inherits: ^Props
+	RenderSprites:
+		Image: prop3
+		Palette: mwcivilian
+        
+PROP4:
+    Inherits: ^Props
+	RenderSprites:
+		Image: prop4
+		Palette: mwcivilian
+        
+PROP5:
+    Inherits: ^Props
+	RenderSprites:
+		Image: prop5
+		Palette: mwcivilian
+        
+PROP6:
+    Inherits: ^Props
+	RenderSprites:
+		Image: prop6
+		Palette: mwcivilian
+        
+PROP7:
+    Inherits: ^Props
+	RenderSprites:
+		Image: prop7
+		Palette: mwcivilian
+        
+SIEGE4.Husk:
+	Inherits: ^MedievalHusk
+	Tooltip:
+		Name: Battering Ram (Destroyed)
+	RenderSprites:
+        PlayerPalette: raplayer
+		Image: siege5.husk
+    ThrowsShrapnel@SMALL:
+		Weapons: SmallWood1, SmallWood2, SmallWood3, LargeWood1
+		Pieces: 2, 4
+		Range: 0c512, 3c0
+    WithFacingSpriteBody:
+        StartSequence: start
+        Sequence: idle
+        
+SIEGE3.Husk:
+	Inherits: ^MedievalHusk
+	Tooltip:
+		Name: Siege Tower (Destroyed)
+	RenderSprites:
+        PlayerPalette: raplayer
+		Image: siege3.husk
+    ThrowsShrapnel@SMALL:
+		Weapons: SmallWood1, SmallWood2, SmallWood3, LargeWood1
+		Pieces: 2, 4
+		Range: 0c512, 3c0
+    WithFacingSpriteBody:
+        StartSequence: start
+        Sequence: idle
+        
+SIEGE2.Husk:
+	Inherits: ^MedievalHusk
+	Tooltip:
+		Name: Catapult (Destroyed)
+	RenderSprites:
+        PlayerPalette: raplayer
+		Image: siege2.husk
+    ThrowsShrapnel@SMALL:
+		Weapons: SmallWood1, SmallWood2, SmallWood3, LargeWood1
+		Pieces: 1, 3
+		Range: 0c512, 3c0
+    WithFacingSpriteBody:
+        StartSequence: start
+        Sequence: idle
+        
+SIEGE1.Husk:
+	Inherits: ^MedievalHusk
+	Tooltip:
+		Name: Siege Ballista (Destroyed)
+	RenderSprites:
+        PlayerPalette: raplayer
+		Image: siege1.husk
+    ThrowsShrapnel@SMALL:
+		Weapons: SmallWood1, SmallWood2, SmallWood3, LargeWood1
+		Pieces: 1, 3
+		Range: 0c512, 3c0
+    WithFacingSpriteBody:
+        StartSequence: start
+        Sequence: idle
+
+MCVNEW.Husk:
+	Inherits: ^Husk
+	Tooltip:
+		Name: Supply wagon (Destroyed)
+	TransformOnCapture:
+		IntoActor: mcvnew
+	RenderSprites:
+		Image: mcvnew.destroyed
+        PlayerPalette: raplayer
+    Burns:
+        Interval: 8
+        
+ORNI.Husk:
+    Inherits@1: ^SpriteActor
+	ThrowsShrapnel@Small:
+		Weapons: SmallWood2, SmallWood3
+		Pieces: 1, 3
+		Range: 1c512, 3c0
+    Health:
+		HP: 280
+    Armor:
+		Type: Heavy
+	HiddenUnderFog:
+		Type: GroundPosition
+	AutoTargetIgnore:
+	ScriptTriggers:
+	WithFacingSpriteBody:
+	WithShadow:
+		Offset: 43, 128, 0
+		ZOffset: -129
+	Aircraft:
+		AirborneCondition: airborne
+		CruisingCondition: cruising
+        TurnSpeed: 5
+		Speed: 149
+	FallsToEarth:
+		Spins: False
+		Moves: True
+		Velocity: 86
+        Explosion: GroundHit
+	Tooltip:
+		Name: Ornithopter
+	SmokeTrailWhenDamaged:
+		Offset: -853,0,0
+		Interval: 2
+		MinDamage: Undamaged
+	RevealsShroud:
+		Range: 10c0
+		Type: CenterPosition
+	RenderSprites:
+        Image: ornito
+        PlayerPalette: raplayer
+    KillsSelf:
+        Delay: 25
+    SpawnActorOnDeath:
+		Actor: ORNICRASH.Husk
+    Explodes:
+		Weapon: GroundHit
+		EmptyWeapon: GroundHit
+        
+ORNICRASH.Husk:
+	Inherits: ^MedievalHusk
+	Tooltip:
+		Name: Ornithopter (Destroyed)
+	TransformOnCapture:
+		IntoActor: orni
+	RenderSprites:
+        PlayerPalette: raplayer
+		Image: ornicrash
+    ThrowsParticle@Wing1:
+		Anim: wing
+        MinThrowRange: 0c512
+        MaxThrowRange: 2c512
+        MaxThrowAngle: 360
+        TurnSpeed: 35
+    ThrowsParticle@Wing2:
+		Anim: wing
+        MinThrowRange: 0c512
+        MaxThrowRange: 2c512
+        MaxThrowAngle: 360
+        urnSpeed: 35
+        
+WARKITEMAN.Husk:
+	Inherits: ^HelicopterHusk
+	ConditionManager:
+    Tooltip:
+		Name: Dude
+	WithFacingSpriteBody:
+        Sequence: man
+    Aircraft:
+		TurnSpeed: 4
+		Speed: 156
+	RevealsShroud:
+		Range: 10c0
+		Type: CenterPosition
+	RenderSprites:
+		Image: warkitehusk  
+        PlayerPalette: raplayer
+    FallsToEarth:
+		Spins: True
+		Moves: False
+		Explosion: GroundHit
+    ProximityExternalCondition@Prime:
+        Range: 1c0
+        ValidStances: Ally, Neutral
+        Condition: DragonPrime
+    
+WARKITEKITE.Husk:
+    Inherits@1: ^SpriteActor
+	ThrowsShrapnel@Small:
+		Weapons: SmallWood2, SmallWood3
+		Pieces: 1, 3
+		Range: 1c512, 3c0
+    Health:
+		HP: 280
+    Armor:
+		Type: Heavy
+	HiddenUnderFog:
+		Type: GroundPosition
+	AutoTargetIgnore:
+	ScriptTriggers:
+	WithFacingSpriteBody:
+        Sequence: kite
+	WithShadow:
+		Offset: 43, 128, 0
+		ZOffset: -129
+	Aircraft:
+		AirborneCondition: airborne
+		CruisingCondition: cruising
+        TurnSpeed: 1
+		Speed: 380
+	FallsToEarth:
+		Spins: True
+		Moves: True
+		Velocity: 26
+        Explosion: GroundHit
+	Tooltip:
+		Name: Kite out of controle
+	RevealsShroud:
+		Range: 1c0
+		Type: CenterPosition
+	RenderSprites:
+        Image: warkitehusk
+        PlayerPalette: raplayer
+    KillsSelf:
+        Delay: 40
+    SpawnActorOnDeath:
+		Actor: WARKITECRASH.Husk
+    Explodes:
+		Weapon: GroundHit
+		EmptyWeapon: GroundHit
+        
+WARKITECRASH.Husk:
+	Inherits: ^MedievalHusk
+	Tooltip:
+		Name: Warkite (Destroyed)
+	RenderSprites:
+        PlayerPalette: raplayer
+		Image: warkitehusk
+    WithFacingSpriteBody:
+        Sequence: crash
+        
+DRAGONDEADPLACEHOLDER:
+    Immobile:
+		OccupiesSpace: false
+	HiddenUnderFog:
+		Type: CenterPosition
+    ConditionManager:
+    KillsSelf:
+        Delay: 5
+    ProximityExternalCondition@INSTANT:
+        Range: 1c0
+        ValidStances: Ally, Neutral
+        Condition: DragonGroundDead
+        
+DRAGON.Husk:
+	Inherits: ^HelicopterHusk
+	ConditionManager:
+    Tooltip:
+		Name: Dragon Rider (Falling)
+	Aircraft:
+		TurnSpeed: 4
+		Speed: 186
+	RevealsShroud:
+		Range: 10c0
+		Type: CenterPosition
+	RenderSprites:
+		Image: drgnrdr.husk   
+        PlayerPalette: raplayer
+    FallsToEarth:
+		Spins: True
+		Moves: False
+		Explosion: DragonDecay
+    ExternalCondition@Prime:
+        Condition: DragonPrime
+    KillsSelf@1:
+        RemoveInstead: true
+        RequiresCondition: DragonPrime
+    KillsSelf@2:
+        Delay: 25
+    SpawnActorOnDeath@Dragon:
+		Actor: DRAGONWALK
+        Probability: 100
+        OwnerType: InternalName
+        InternalOwner: Creeps
+    SpawnActorOnDeath@chance:
+		Actor: DRAGONDEADPLACEHOLDER
+        Probability: 75
+        OwnerType: InternalName
+        InternalOwner: Creeps
+    
+DRGNEMPTY:
+	Inherits: ^Helicopter
+	Valued:
+		Cost: 1000
+	Tooltip:
+		Name: Dragon
+	Aircraft:
+		RearmBuildings: hpad
+		InitialFacing: 224
+		TurnSpeed: 10
+		Speed: 100
+	Health:
+		HP: 10000
+	Armor:
+		Type: LightCavalry
+	RevealsShroud:
+		Range: 2c0
+		Type: CenterPosition
+    RenderSprites:
+        Image: drgnempty
+        PlayerPalette: raplayer
+	SelectionDecorations:
+		VisualBounds: 48,32
+    Explodes:
+		Weapon: DragonFlame
+		EmptyWeapon: DragonFlame
+    FlyAwayOnIdle:
+    FreeActor@Falling:
+		Actor: WARKITEMAN.Husk
+		Facing: 64
+        
+DAVINCI.Husk:
+	Inherits: ^HelicopterHusk
+	ThrowsShrapnel:
+		Weapons: SmallWood1, SmallWood2, SmallWood3, LargeWood1
+		Pieces: 2, 5
+		Range: 1c512, 3c0
+    Tooltip:
+		Name: Orca
+	Aircraft:
+		TurnSpeed: 4
+		Speed: 186
+	RevealsShroud:
+		Range: 8
+		Type: CenterPosition
+	RenderSprites:
+		Image: davinci   
+        PlayerPalette: raplayer
+    FallsToEarth:
+		Spins: True
+		Moves: False
+		Explosion: GroundHit
+    KillsSelf:
+        Delay: 25
+    SpawnActorOnDeath:
+		Actor: DAVINCICRASH.Husk
+        
+DAVINCICRASH.Husk:
+	Inherits: ^MedievalHusk
+	RenderSprites:
+        PlayerPalette: raplayer
+		Image: davincihusk
+    Tooltip:
+		Name: Strange Aircraft (Destroyed)   
+        
+WRBLN.Crash:
+	Inherits: ^MedievalHusk
+	RenderSprites:
+        PlayerPalette: raplayer
+		Image: wrblln.crash
+    Tooltip:
+		Name: War Balloon (Destroyed)  
+    ThrowsShrapnel:
+		Weapons: SmallWood2, SmallWood3, SmallWood3, LargeWood1
+		Pieces: 1, 3
+		Range: 1c512, 3c0
+    
+WRBLN.Husk:
+	Inherits: ^HelicopterHusk
+	ThrowsShrapnel:
+		Weapons: SmallWood2, SmallWood3
+		Pieces: 2, 5
+		Range: 1c512, 3c0
+    Tooltip:
+		Name: Orca
+	Aircraft:
+		TurnSpeed: 4
+		Speed: 186
+	RevealsShroud:
+		Range: 10c0
+		Type: CenterPosition
+	RenderSprites:
+		Image: wrblln.husk   
+        PlayerPalette: raplayer
+    FallsToEarth:
+		Spins: True
+		Moves: False
+		Explosion: GroundHit
+    KillsSelf:
+        Delay: 25
+    SpawnActorOnDeath:
+		Actor: WRBLN.Crash

@@ -1,0 +1,257 @@
+SiegeVoice:
+	Voices:
+		Select: guyyeah1
+		Action: guyokay1
+		Die: WoodExplMed,WoodExplsmall2,WoodExplMed,WoodExplMed2
+        Burned: WoodExplMed,WoodExplsmall2,WoodExplMed,WoodExplMed2
+		Zapped: WoodExplMed,WoodExplsmall2,WoodExplMed,WoodExplMed2
+		Poisoned: WoodExplMed,WoodExplsmall2,WoodExplMed,WoodExplMed2
+
+CivilianNew:
+    DefaultVariant: .aud
+	Variants:
+		nod: .aud
+		gdi: .aud
+	Voices:
+		Select: guyyeah1
+		Action: guyokay1
+        Die: nuyell1,nuyell4,nuyell5,nuyell6
+		Burned: yell1
+		Zapped: nuyell3
+		Poisoned: nuyell12
+        
+GDIArcherVoice:
+    DefaultVariant: .aud
+	Variants:
+		nod: .aud
+		gdi: .aud
+	Voices:
+		Select: gdi_archer_select1,gdi_archer_select2,gdi_archer_select3,gdi_archer_select5
+		Action: gdi_archer_order1,gdi_archer_order2,gdi_archer_order3,gdi_archer_order4
+		Die: nuyell1,nuyell4,nuyell5,nuyell6
+		Burned: yell1
+		Zapped: nuyell3
+		Poisoned: nuyell12
+
+NodArcherVoice:
+    DefaultVariant: .aud
+	Variants:
+		nod: .aud
+		gdi: .aud
+	Voices:
+		Select: nod_archer_select1,nod_archer_select2,nod_archer_select3,nod_archer_select4
+		Action: nod_archer_order1,nod_archer_order2,nod_archer_order3,nod_archer_order4
+		Die: nuyell1,nuyell4,nuyell5,nuyell6
+		Burned: yell1
+		Zapped: nuyell3
+		Poisoned: nuyell12
+ 
+GDIKnightVoice:
+    DefaultVariant: .aud
+	Variants:
+		nod: .aud
+		gdi: .aud
+	Voices:
+		Select: gdi_knight_select1,gdi_knight_select2,gdi_knight_select3,gdi_knight_select4
+		Action: gdi_knight_order1,gdi_knight_order2,gdi_knight_order3,gdi_knight_order4
+		Die: nuyell1,nuyell4,nuyell5,nuyell6
+		Burned: yell1
+		Zapped: nuyell3
+		Poisoned: nuyell12
+ 
+NodKnightVoice:
+    DefaultVariant: .aud
+	Variants:
+		nod: .aud
+		gdi: .aud
+	Voices:
+		Select: nod_knight_select1,nod_knight_select2,nod_knight_select3,nod_knight_select4
+		Action: nod_knight_order1,nod_knight_order2,nod_knight_order3,nod_knight_order4
+		Die: nuyell1,nuyell4,nuyell5,nuyell6
+		Burned: yell1
+		Zapped: nuyell3
+		Poisoned: nuyell12
+
+GDIPikeVoice:
+    DefaultVariant: .aud
+	Variants:
+		nod: .aud
+		gdi: .aud
+	Voices:
+		Select: gdi_pike_select1,gdi_pike_select2,gdi_pike_select3,gdi_pike_select4
+		Action: gdi_pike_order1,gdi_pike_order2,gdi_pike_order3,gdi_pike_order4
+		Die: nuyell1,nuyell4,nuyell5,nuyell6
+		Burned: yell1
+		Zapped: nuyell3
+		Poisoned: nuyell12
+        
+NodPikeVoice:
+    DefaultVariant: .aud
+	Variants:
+		nod: .aud
+		gdi: .aud
+	Voices:
+		Select: nod_pike_select1,nod_pike_select2,nod_pike_select3,nod_pike_select4
+		Action: nod_pike_order1,nod_pike_order2,nod_pike_order3,nod_pike_order4
+		Die: nuyell1,nuyell4,nuyell5,nuyell6
+		Burned: yell1
+		Zapped: nuyell3
+		Poisoned: nuyell12
+        
+NodMageVoice:
+    DefaultVariant: .aud
+	Variants:
+		nod: .aud
+		gdi: .aud
+	Voices:
+		Select: nod_mage_select1,nod_mage_select2,nod_mage_select3,nod_mage_select4
+		Action: nod_mage_order1,nod_mage_order2,nod_mage_order3,nod_mage_order4
+		Die: nuyell1,nuyell4,nuyell5,nuyell6
+		Burned: yell1
+		Zapped: nuyell3
+		Poisoned: nuyell12
+        
+NodCrossVoice:
+    DefaultVariant: .aud
+	Variants:
+		nod: .aud
+		gdi: .aud
+	Voices:
+		Select: nod_crossbow_select1,nod_crossbow_select2,nod_crossbow_select3,nod_crossbow_select4
+		Action: nod_crossbow_order1,nod_crossbow_order2,nod_crossbow_order3,nod_crossbow_order4
+		Die: nuyell1,nuyell4,nuyell5,nuyell6
+		Burned: yell1
+		Zapped: nuyell3
+		Poisoned: nuyell12
+        
+        
+GenericHorseVoice:
+    DefaultVariant: .aud
+    Variants:
+		nod: .aud
+		gdi: .aud
+	Voices:
+		Select: 25-i000,25-i002,25-i004,25-i006,25-i012
+		Action: 25-i0016,25-i018,25-i022,25-i024,25-i026,25-i014
+		Die: horsedead03,horsedead02
+		Burned: horsedead03,horsedead02
+		Zapped: horsedead03,horsedead02
+		Poisoned: horsedead03,horsedead02
+    
+GenericHorseOnly:
+    DefaultVariant: .aud
+	Variants:
+		nod: .v01,.v03,.aud
+		gdi: .v01,.v03,.aud
+	Voices:
+		Select: await1,ready,report1,yessir1
+		Action: ackno,affirm1,noprob,ritaway,roger,ugotit
+		Die: horsedead01
+		Burned: horsedead01
+		Zapped: horsedead01
+		Poisoned: horsedead01
+        
+AssasinVoice:
+    DefaultVariant: .aud
+	Variants:
+		nod: .aud
+		gdi: .aud
+	Voices:
+		Select: syeah1,swhat1
+		Action: sokay1,smout1,saffirm1
+		Die: nuyell1,nuyell4,nuyell5,nuyell6
+		Burned: yell1
+		Zapped: nuyell3
+		Poisoned: nuyell12
+        
+DeathdealerVoice:
+    DefaultVariant: .aud
+	Variants:
+		nod: .aud
+		gdi: .aud
+	Voices:
+		Select: 13-i000,13-i002,13-i004
+		Action: 13-i006,13-i012,13-i014,13-i016
+		Die: nuyell1,nuyell4,nuyell5,nuyell6
+		Burned: yell1
+		Zapped: nuyell3
+		Poisoned: nuyell12
+        Build: 13-i010
+        
+EngineerVoice:
+    DefaultVariant: .aud
+	Variants:
+		nod: .aud
+		gdi: .aud
+	Voices:
+		Select: engineer_select1,engineer_select2,engineer_select3
+		Action: engineer_order1,engineer_order2,engineer_order3,engineer_order4
+		Die: nuyell1,nuyell4,nuyell5,nuyell6
+		Burned: yell1
+		Zapped: nuyell3
+		Poisoned: nuyell12
+        
+HeavyCavalVoice:
+    DefaultVariant: .aud
+	Variants:
+		nod: .aud
+		gdi: .aud
+	Voices:
+		Select: 14-i000,14-i002,14-i004
+		Action: 14-i008,14-i010,14-i012,14-i016
+		Die: horsedead02, horsedead03
+		Burned: horsedead02, horsedead03
+		Zapped: horsedead02, horsedead03
+		Poisoned: horsedead02, horsedead03
+        
+PaladinVoice:
+    DefaultVariant: .aud
+	Variants:
+		nod: .aud
+		gdi: .aud
+	Voices:
+		Select: gdi_paladin_select1,gdi_paladin_select2,gdi_paladin_select3,gdi_paladin_select4
+		Action: gdi_paladin_order1,gdi_paladin_order2,gdi_paladin_order3,gdi_paladin_order4
+		Die: nuyell1,nuyell4,nuyell5,nuyell6
+		Burned: yell1
+		Zapped: nuyell3
+		Poisoned: nuyell12
+        
+JuggernautVoice:
+    DefaultVariant: .aud
+	Variants:
+		nod: .aud
+		gdi: .aud
+	Voices:
+		Select: jugg-i005,jugg-i006,jugg-i007
+		Action: jugg-i000,jugg-i001,jugg-i002
+		Die: jugg-i020
+		Burned: jugg-i020
+		Zapped: jugg-i020
+		Poisoned: jugg-i020
+        Build: jugg-i021
+        Kill: jugg-i010,jugg-i011,jugg-i012,jugg-i013
+        
+DragonVoice:
+    DefaultVariant: .aud
+	Variants:
+		nod: .aud
+		gdi: .aud
+	Voices:
+		Select: DragonSpeech02,DragonSpeech03
+		Action: DragonSpeech01
+		Die: dinoyes
+		Burned: dinodie1
+		Zapped: dinoatk1
+		Poisoned: dinodie1
+        
+BalloonVoice:
+    DefaultVariant: .aud
+	Variants:
+		nod: .aud
+		gdi: .aud
+	Voices:
+		Select: 30-i030,30-i000,30-i014
+		Action: 30-i016,30-i022,30-i036
+        
+        

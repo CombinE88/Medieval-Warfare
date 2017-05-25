@@ -1,0 +1,37 @@
+Version: 173501 Alpha
+
+    Scout (Flail) & Hussar Spread reduced by 250 -> 100
+    Scout (Flail) & Hussar Spread reduced damage agains Leather: 300% -> 250%
+    Scout (Flail) & Hussar Spread reduced damage agains Light: 250% -> 200%
+    Scout (Flail) & Hussar Spread reduced damage agains Heavy: 200% -> 150%
+    Harvester armor LightCavalry - > Medium Cavalry
+    Harvester HO 35000 -> 30000
+    Farmer Armor Leather -> Heavy
+    Farmer Armor HP 20000 -> 25000
+    Warkite HP 10000 -> 13500
+    Warkite Reload Delay 30 -> 20
+    Warkite Cost 1200 -> 1000
+    Fire Mage Cost 300 -> 350
+    Fire Mage Hp 9000 -> 8000
+    Castles prerequisites now armories (moved to T4)
+    Supplywagons prerequisites now armories instead of Stables (moved to t3)
+    Heavy Cavalry prerequisites now armories instead of castles (moved to t3)
+    Square towers prerequisites now armories instead of smiths (moved to t3)
+    Tower with Ballista prerequisites now armories instead of castles (moved to t3) 
+    Marksman prerequisites now armories instead of castle (moved to t3)
+    Infantry WarnProbability on Crushing: 50% -> 40%
+    GDI Knight HP 9500 -> 10000
+
+    Fixed Spectator/ Observer Radar
+    Fixed Power and Money indicators not shown
+
+    Switched Eva logo to Medieval Logo
+    Changed Loadingscreen
+    Added Medieval font (Vinque)
+
+    New Map added: When Two People Quarrel
+
+Version: 173518 Alpha (fix)
+
+    Unbuildable Marksman now buildable
+    Longer vision on corpsepower

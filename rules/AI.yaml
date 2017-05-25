@@ -1,0 +1,185 @@
+Player:
+	HackyAI@Olaf:
+		Name: Olaf the Barbar
+		MinimumExcessPower: 10
+		BuildingCommonNames:
+			ConstructionYard: factnew
+			Refinery: procnew, zeroproc, bummler
+			Power: nukenew,nuk2new
+			Barracks: barrnew,handnew
+			VehiclesFactory: stall,nodstall
+			Production: barrnew,handnew,stall,nodstall
+		UnitsCommonNames:
+			Mcv: mcvnew
+            ExcludeFromSquads: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, mwwand7, mwwand8, mwwand8, mwcivcom, noble1, noble2, noble3, noble4, noble5, mwconst1, mwconst2, mwconst3, mwconst4, mwconst5, mwconst6, mwconst7, mwchick1
+		BuildingQueues: MBuilding.Nod, MBuilding.GDI
+		DefenseQueues: MDefenses.GDI, MDefenses.Nod
+		UnitQueues: MVehicle.Nod, MVehicle.GDI, MInfantry.Nod, MInfantry.GDI, MSiege.Nod, MSiege.GDI, MInfantry.Horse
+		BuildingLimits:
+            zeroproc: 2
+			procnew: 3
+			barrnew: 3
+			handnew: 3
+			hqnewnod: 1
+            armorygdi: 1
+            armorynod: 1
+			stall: 3
+			nodstall: 3
+			castle: 1
+			castle2: 1
+			workshopgdi: 1
+            workshopnod: 1
+            wtw: 2
+            wtw2: 2
+		BuildingFractions:
+            wtw: 20%
+            wtw2: 20%
+			procnew: 40%
+            zeroproc: 40%
+			nukenew: 9%
+			barrnew: 5%
+			handnew: 5%
+			hqnewnod: 4%
+            armorygdi: 4%
+            armorynod: 4%
+			nuk2new: 9%
+			stall: 9%
+			nodstall: 9%
+			gtwnew: 5%
+			tribu: 9%
+			bato: 7%
+			castle2: 1%
+			castle: 1%
+			workshopgdi: 9%
+            workshopnod: 9%
+		UnitsToBuild:
+			e1new: 65%
+            e3newv2: 40%
+            e2newv2: 65%
+			e2new: 25%
+			e3new: 40%
+			e4new: 35%
+            e4newv2: 35%
+            e9new: 35%
+			e5new: 45%
+			eharvxl: 10%
+			ross4: 5%
+			ross3: 40%
+			ross1: 25%
+			siege2: 60%
+			assassin: 40%
+			ross2: 20%
+			siege1: 40%
+			ross5: 50%
+			siege3: 15%
+            ross4c: 35%
+            ross4b: 35%
+            orni: 10%
+            warkite: 10%
+            drgnrdr: 25%
+            wrbln: 10%
+            newcomm: 50%
+            rmbonew: 50%
+            e8farmer: 80%
+		UnitLimits:
+			eharvxl: 6
+            e8farmer: 6
+		SquadSize: 15
+		SupportPowerDecision@Airstrike:
+			OrderName: CorpsePowerInfoOrder
+			MinimumAttractiveness: 2000
+			Consideration@1:
+				Against: Enemy
+				Types: Vehicle, Infantry
+				Attractiveness: 1
+				TargetMetric: Value
+				CheckRadius: 2c0
+			Consideration@2:
+				Against: Ally
+				Types: Ground, Water
+				Attractiveness: -10
+				TargetMetric: Value
+				CheckRadius: 2c0
+        SupportPowerDecision@FireArrows:
+			OrderName: ArrowsPowerInfoOrder
+			MinimumAttractiveness: 2000
+			Consideration@1:
+				Against: Enemy
+				Types: Vehicle, Infantry
+				Attractiveness: 1
+				TargetMetric: Value
+				CheckRadius: 2c0
+			Consideration@2:
+				Against: Ally
+				Types: Ground, Water
+				Attractiveness: -10
+				TargetMetric: Value
+				CheckRadius: 2c0
+        SupportPowerDecision@Thopter:
+			OrderName: StrangePowerInfoOrder
+			MinimumAttractiveness: 100
+			Consideration@1:
+				Against: Enemy
+				Types: Structure
+				Attractiveness: 1
+				TargetMetric: Value
+				CheckRadius: 2c0
+			Consideration@2:
+				Against: Ally
+				Types: Ground, Water
+				Attractiveness: -10
+				TargetMetric: Value
+				CheckRadius: 2c0
+        SupportPowerDecision@WoodHorse:
+			OrderName: TrojanPowerInfoOrder
+			MinimumAttractiveness: 100
+			Consideration@1:
+				Against: Enemy
+				Types: Structure
+				Attractiveness: 1
+				TargetMetric: Value
+				CheckRadius: 10c0
+			Consideration@2:
+				Against: Ally
+				Types: Ground, Water
+				Attractiveness: -10
+				TargetMetric: Value
+				CheckRadius: 2c0
+		SupportPowerDecision@IonCannonPower:
+			OrderName: LightningPowerInfoOrder
+			MinimumAttractiveness: 1000
+			FineScanRadius: 2
+			Consideration@1:
+				Against: Enemy
+				Types: Air, Tank, Vehicle, Infantry, Water
+				Attractiveness: 2
+				TargetMetric: Value
+				CheckRadius: 2c0
+			Consideration@2:
+				Against: Enemy
+				Types: Structure
+				Attractiveness: 1
+				TargetMetric: Value
+				CheckRadius: 2c0
+			Consideration@3:
+				Against: Ally
+				Types: Ground, Water
+				Attractiveness: -10
+				TargetMetric: Value
+				CheckRadius: 3c0
+		SupportPowerDecision@NukePower:
+			OrderName: CannonPowerInfoOrder
+			MinimumAttractiveness: 3000
+			Consideration@1:
+				Against: Enemy
+				Types: Structure
+				Attractiveness: 1
+				TargetMetric: Value
+				CheckRadius: 5c0
+			Consideration@2:
+				Against: Ally
+				Types: Air, Ground, Water
+				Attractiveness: -10
+				TargetMetric: Value
+				CheckRadius: 7c0
+                
