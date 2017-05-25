@@ -99,6 +99,21 @@
         Filename: newMWPalette.pal
         ShadowIndex: 1
         AllowModifiers: False
+    PaletteFromFile@RAWALL:
+        Name: raWall
+        Filename: temperatRAWall.pal
+        ShadowIndex: 1
+        AllowModifiers: False
+    PaletteFromFile@SUL:
+        Name: sultan
+        Filename: sulMWPalette.pal
+        ShadowIndex: 1
+        AllowModifiers: False
+    PaletteFromFile@SULWALL:
+        Name: sulwall
+        Filename: sulWallPalette.pal
+        ShadowIndex: 1
+        AllowModifiers: False
     PaletteFromFile@RAICON:
         Name: raicon
         Filename: temperatRA.pal
@@ -113,7 +128,17 @@
         BaseName: raplayer
         RemapIndex: 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 3
         AllowModifiers: False
+    PlayerColorPalette@SUL:
+        BasePalette: sultan
+        BaseName: sultanplayer
+        RemapIndex: 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 3
+        AllowModifiers: False
+    PlayerColorPalette@SULWALL:
+        BasePalette: sulwall
+        BaseName: sulwallplayer
+        RemapIndex: 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 3
+        AllowModifiers: False
     RotationPaletteEffect@water:
-		ExcludePalettes: effect, chrome, raplayer, ra, raicon, grain, mwcivilian, mwnobles
+		ExcludePalettes: effect, chrome, raplayer, ra, raicon, grain, mwcivilian, mwnobles, sul, sultanplayer
 		RotationBase: 32
 	FlashPaletteEffect:

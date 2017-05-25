@@ -91,7 +91,7 @@ WTW:
 	Tooltip:
 		Name: Square Tower
 	Buildable:
-		Description: Square Towers are often used to fit in defensive walls of fortifications.\n Very strong vs Infantry and Light Cavalry\n  Weak vs Heavy Cavalry and Siege weapons\n  Can target Aircraft\n  Fits with Castle Walls\n  Can shoot over Castle Walls\n\n\n
+		Description: Square Towers are often used to fit in defensive walls of fortifications.\n Very strong vs Infantry and Light Cavalry\n  Weak vs Heavy Cavalry and Siege weapons\n  Can target Aircraft\n  Fits with Castle Walls\n  Can shoot over Castle Walls\n  Detects cloaked units\n\n
 		BuildPaletteOrder: 60
 		Prerequisites: barracks, anyworkshop, anyarmory
 		Queue: MDefenses.Nod
@@ -332,7 +332,7 @@ GUNNEW:
 		Description: The early Cannon uses gunpowder to throw a large boulder. \nIt's most effectively used against large targets.\n  Strong vs Cavalry\n  Weak vs Infantry\n\n\n
 		BuildPaletteOrder: 30
 		Prerequisites: barracks
-		Queue: MDefenses.GDI, MDefenses.Nod
+		Queue: MDefenses.GDI, MDefenses.Nod, MDefenses.SUL
         IconPalette: raicon
 		BuildDuration: 1440
 		BuildDurationModifier: 40
@@ -543,7 +543,7 @@ WDWLL:
 	Buildable:
 		Description: Palisades. Nothing else.\n\n\n
 		BuildPaletteOrder: 10
-		Queue: MDefenses.GDI, MDefenses.Nod
+		Queue: MDefenses.GDI, MDefenses.Nod, MDefenses.SUL
 		BuildDurationModifier: 40
         IconPalette: raicon
 	Health:

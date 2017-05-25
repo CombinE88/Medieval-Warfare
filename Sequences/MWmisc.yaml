@@ -135,6 +135,10 @@ explosion:
         Offset: 0,-24,0
         Tick: 20
 		ZOffset: 1023
+    burninglarge: burn-m
+        idle:
+            Length: *
+            ZOffset: 512
         
 trmr1: 
     idle: trmrwood
@@ -313,3 +317,12 @@ selectioncircle:
         ZOffset: 1
     idle: selectioncircle
         Start: 1
+
+litning:
+	bright:
+		Length: 4
+		ZOffset: 1023
+	dim:
+		Start: 4
+		Length: 4
+		ZOffset: 1023

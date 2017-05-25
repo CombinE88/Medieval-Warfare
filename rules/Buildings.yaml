@@ -58,7 +58,7 @@ FACTNEW:
 		Range: 10c0
 	Bib:
 	Production:
-		Produces: MBuilding.GDI, MBuilding.Nod, MDefenses.GDI, MDefenses.Nod
+		Produces: MBuilding.GDI, MBuilding.Nod, MDefenses.GDI, MDefenses.Nod, MBuilding.SUL, MDefenses.SUL
 	Transforms:
 		IntoActor: mcvnew
 		Offset: 1,1
@@ -91,6 +91,20 @@ FACTNEW:
 		LowPowerSlowdown: 2
 		QueuedAudio: Building
 		ReadyAudio: ConstructionComplete
+    ProductionQueue@SULBuilding:
+		Type: MBuilding.SUL
+		Factions: sul
+		Group: Building
+		LowPowerSlowdown: 2
+		QueuedAudio: Building
+		ReadyAudio: ConstructionComplete
+	ProductionQueue@SULDefense:
+		Type: MDefenses.SUL
+		Factions: sul
+		Group: Defence
+		LowPowerSlowdown: 2
+		QueuedAudio: Building
+		ReadyAudio: ConstructionComplete
 	BaseBuilding:
 	ProductionBar@BuildingGDI:
 		ProductionType: MBuilding.GDI
@@ -100,6 +114,10 @@ FACTNEW:
 		ProductionType: MDefenses.GDI
 	ProductionBar@DefNod:
 		ProductionType: MDefenses.Nod
+    ProductionBar@BuildingSUL:
+		ProductionType: MBuilding.SUL
+	ProductionBar@DefSUL:
+		ProductionType: MDefenses.SUL
 	BaseProvider:
 		Cooldown: 150
 		Range: 14c0
@@ -807,7 +825,7 @@ PROCNEW:
 		BuildPaletteOrder: 75
 		Prerequisites: anyhq
 		Description: Processes raw ore and Gold into useable metal.\nGenerates ore money than the windmill.\n\n\n\n
-		Queue: MBuilding.GDI, MBuilding.Nod
+		Queue: MBuilding.GDI, MBuilding.Nod, MBuilding.SUL
 	Building:
 		Footprint: _x_ xxx xx=
 		Dimensions: 3,3
@@ -860,7 +878,7 @@ SILONEW:
 	Buildable:
 		BuildPaletteOrder: 40
 		Prerequisites: proc
-		Queue: MDefenses.GDI, MDefenses.Nod
+		Queue: MDefenses.GDI, MDefenses.Nod, MDefenses.SUL
 		Description: Stores additional Ore\n\n\n\n
         IconPalette: raicon
 	Building:
@@ -1930,8 +1948,8 @@ BACAMP.Husk:
 ANYARMORY:
 	AlwaysVisible:
 	Tooltip:
-		Name: Armory
-		Description: Armory
+		Name: Armory or Tower of Progress
+		Description: Armory or Tower of Progress
         
 BARRACKS:
 	AlwaysVisible:
@@ -1948,8 +1966,8 @@ ANYWORKSHOP:
 VEHICLEPRODUCTION:
 	AlwaysVisible:
 	Tooltip:
-		Name: Stables
-		Description: Stables
+		Name: Stables or Shool
+		Description: Stables or Shool
         
 ANYPOWER:
 	AlwaysVisible:
@@ -1960,8 +1978,8 @@ ANYPOWER:
 ANYHQ:
 	AlwaysVisible:
 	Tooltip:
-		Name: Smith or Castle
-		Description: Smith or Castle
+		Name: Smith, Castle or Palace
+		Description: Smith, Castle or Palace
         
 ANYCASTLE:
 	AlwaysVisible:

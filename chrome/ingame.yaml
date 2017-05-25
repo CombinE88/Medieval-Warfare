@@ -35,7 +35,7 @@ Container@INGAME_ROOT:
 				Container@GAME_TIMER_BLOCK:
 					Logic: GameTimerLogic
 					X: WINDOW_RIGHT - 400
-                    Y: WINDOW_BOTTOM - 190
+                    Y: WINDOW_BOTTOM - 240
 					Width: 100
 					Height: 55
 					Children:

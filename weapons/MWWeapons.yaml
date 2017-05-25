@@ -28,6 +28,7 @@ OrniSpearThrow:
             MediumCavalry: 85
             HeavyCavalry: 75
             HeavyBuilding: 100
+            Spectral: 15
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath  
         
 WarkiteCrossbow:
@@ -62,6 +63,7 @@ WarkiteCrossbow:
             HeavyCavalry: 25
             HeavyBuilding: 50
             Concrete: 35   
+            Spectral: 15
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath 
 
 none:
@@ -84,6 +86,7 @@ none:
             LightCavalry: 0
             MediumCavalry: 0
             HeavyCavalry: 0
+            Spectral: 15
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
         
 WanderAttack:
@@ -105,6 +108,7 @@ WanderAttack:
             LightCavalry: 100
             MediumCavalry: 100
             HeavyCavalry: 100
+            Spectral: 25
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
         
 WanderTalk:
@@ -356,6 +360,7 @@ Fork:
             LightCavalry: 60
             MediumCavalry: 50
             HeavyCavalry: 40
+            Spectral: 15
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
 Pike:
 	ReloadDelay: 50
@@ -380,6 +385,7 @@ Pike:
             LightCavalry: 135
             MediumCavalry: 125
             HeavyCavalry: 120
+            Spectral: 15
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
         
 PikeSpread:
@@ -405,6 +411,7 @@ PikeSpread:
             LightCavalry: 135
             MediumCavalry: 125
             HeavyCavalry: 120
+            Spectral: 15
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
         
 PikeCavalry:
@@ -430,6 +437,7 @@ PikeCavalry:
             LightCavalry: 175
             MediumCavalry: 150
             HeavyCavalry: 100
+            Spectral: 15
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
         
 PikeAxe:
@@ -455,6 +463,7 @@ PikeAxe:
             LightCavalry: 125
             MediumCavalry: 125
             HeavyCavalry: 125
+            Spectral: 15
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath        
 
 MammothPike:
@@ -482,6 +491,7 @@ MammothPike:
             LightCavalry: 100
             MediumCavalry: 100
             HeavyCavalry: 100
+            Spectral: 65
 		DamageTypes: Prone50Percent, TriggerProne, RippedApartDeath
         
 MammothDagger:
@@ -516,6 +526,7 @@ MammothDagger:
             LightCavalry: 100
             MediumCavalry: 90
             HeavyCavalry: 50
+            Spectral: 15
 		DamageTypes: Prone50Percent, TriggerProne, PoisonDeath 
         
 BroadSword:
@@ -541,6 +552,7 @@ BroadSword:
             LightCavalry: 25
             MediumCavalry: 10
             HeavyCavalry: 10
+            Spectral: 15
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
         
 BroadSwordMongol:
@@ -568,6 +580,7 @@ BroadSwordMongol:
             LightCavalry: 75
             MediumCavalry: 50
             HeavyCavalry: 25
+            Spectral: 15
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
   
 DaggerMongol:
@@ -602,6 +615,7 @@ DaggerMongol:
             LightCavalry: 100
             MediumCavalry: 90
             HeavyCavalry: 50
+            Spectral: 15
 		DamageTypes: Prone50Percent, TriggerProne, PoisonDeath 
   
 KingsSword:
@@ -621,6 +635,7 @@ KingsSword:
 			Leather: 100
 			Light: 100
 			Heavy: 100
+            Spectral: 100
             HeavyBuilding: 10
             Concrete: 25
             Knight: 50
@@ -648,6 +663,7 @@ Claymore:
 			Light: 90
 			Heavy: 80
             Concrete: 75
+            Spectral: 100
             HeavyBuilding: 100
             Knight: 75
             LightCavalry: 55
@@ -688,6 +704,7 @@ Sledgehammer:
             LightCavalry: 55
             MediumCavalry: 45
             HeavyCavalry: 35
+            Spectral: 200
 		DamageTypes: Prone50Percent, TriggerProne, RippedApartDeath       
         ValidStances: Enemy, Neutral       
     Warhead@2Dam: SpreadDamage
@@ -706,6 +723,7 @@ Sledgehammer:
             LightCavalry: 55
             MediumCavalry: 45
             HeavyCavalry: 35
+            Spectral: 200
 		DamageTypes: Prone50Percent, TriggerProne, RippedApartDeath  
         ValidStances: Enemy, Neutral  
     Warhead@3Dam: SpreadDamage
@@ -724,6 +742,7 @@ Sledgehammer:
             LightCavalry: 55
             MediumCavalry: 45
             HeavyCavalry: 35
+            Spectral: 200
 		DamageTypes: Prone50Percent, TriggerProne, RippedApartDeath  
         ValidStances: Enemy, Neutral 
 
@@ -759,6 +778,7 @@ Dagger:
             LightCavalry: 100
             MediumCavalry: 90
             HeavyCavalry: 75
+            Spectral: 250
 		DamageTypes: Prone50Percent, TriggerProne, PoisonDeath 
     Warhead@rotten: GrantExternalCondition
         Range: 0c124
@@ -799,6 +819,7 @@ DaggerAir:
             LightCavalry: 100
             MediumCavalry: 90
             HeavyCavalry: 75
+            Spectral: 250
 		DamageTypes: Prone50Percent, TriggerProne, PoisonDeath 
         
 DaggerSiegeTower:
@@ -931,6 +952,7 @@ BowNArrow:
             MediumCavalry: 35
             HeavyCavalry: 15
             HeavyBuilding: 45
+            Spectral: 15
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
         
 BowNArrowAir:
@@ -1000,6 +1022,7 @@ MageFire:
             MediumCavalry: 45
             HeavyCavalry: 35
             HeavyBuilding: 125
+            Spectral: 90
 		DamageTypes: Prone50Percent, TriggerProne, BurnToDeath
     Warhead@2Smu: LeaveSmudge
 		SmudgeType: Scorch
@@ -1160,6 +1183,7 @@ SpearThrow:
             MediumCavalry: 100
             HeavyCavalry: 100
             HeavyBuilding: 100
+            Spectral: 15
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath     
 
 SpearThrowAir:
@@ -1223,6 +1247,7 @@ Mace:
             MediumCavalry: 10
             HeavyCavalry: 10
             HeavyBuilding: 10
+            Spectral: 15
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
  
 LongBowNArrow:
@@ -1258,6 +1283,7 @@ LongBowNArrow:
             MediumCavalry: 25
             HeavyCavalry: 25
             HeavyBuilding: 125
+            Spectral: 55
 		DamageTypes: Prone50Percent, TriggerProne, BurnToDeath
     Warhead@2Dam: SpreadDamage
 		Spread: 90
@@ -1277,6 +1303,7 @@ LongBowNArrow:
             MediumCavalry: 25
             HeavyCavalry: 25
             HeavyBuilding: 125
+            Spectral: 55
 		DamageTypes: Prone50Percent, TriggerProne, BurnToDeath
     Warhead@3Dam: SpreadDamage
 		Spread: 90
@@ -1296,6 +1323,7 @@ LongBowNArrow:
             MediumCavalry: 25
             HeavyCavalry: 25
             HeavyBuilding: 125
+            Spectral: 55
 		DamageTypes: Prone50Percent, TriggerProne, BurnToDeath
     Warhead@1Eff: CreateEffect
 		Explosions: fire2    
@@ -1375,6 +1403,7 @@ DragonFire:
             MediumCavalry: 100
             HeavyCavalry: 75
             HeavyBuilding: 75
+            Spectral: 200
 		DamageTypes: Prone50Percent, TriggerProne, BurnToDeath
     Warhead@3Dam: SpreadDamage
 		Spread: 210
@@ -1393,6 +1422,7 @@ DragonFire:
             MediumCavalry: 100
             HeavyCavalry: 75
             HeavyBuilding: 75
+            Spectral: 200
 		DamageTypes: Prone50Percent, TriggerProne, BurnToDeath
     Warhead@1Eff: CreateEffect
 		Explosions: fire2    
@@ -1480,6 +1510,7 @@ ThopterBomb:
             MediumCavalry: 100
             HeavyCavalry: 75
             HeavyBuilding: 75
+            Spectral: 200
 		DamageTypes: Prone50Percent, TriggerProne, BurnToDeath
     Warhead@2Smu: LeaveSmudge
 		SmudgeType: Scorch
@@ -1520,6 +1551,7 @@ BowNArrowTower:
             MediumCavalry: 30
             HeavyCavalry: 20
             HeavyBuilding: 40
+            Spectral: 15
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath  
         
 BowNArrowTowerUnblock:
@@ -1555,6 +1587,7 @@ BowNArrowTowerUnblock:
             MediumCavalry: 30
             HeavyCavalry: 20
             HeavyBuilding: 40
+            Spectral: 15
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath  
 
 
@@ -1586,6 +1619,7 @@ CannonBoulder:
             MediumCavalry: 100
             HeavyCavalry: 100
             HeavyBuilding: 45
+            Spectral: 15
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
 	Warhead@2Smu: LeaveSmudge
 		SmudgeType: Crater
@@ -1624,6 +1658,7 @@ SiegeBalista:
             MediumCavalry: 90
             HeavyCavalry: 85
             HeavyBuilding: 100
+            Spectral: 35
 		DamageTypes: Prone50Percent, TriggerProne, BallistaDeath
     Warhead@2Eff: CreateEffect
 		Explosions: smokey
@@ -1663,6 +1698,7 @@ SiegeBoulder:
             MediumCavalry: 80
             HeavyCavalry: 75
             HeavyBuilding: 100
+            Spectral: 35
 		DamageTypes: Prone50Percent, TriggerProne, BallistaDeath
     Warhead@2Eff: CreateEffect
 		Explosions: smokey
@@ -1703,6 +1739,7 @@ TribuchetBoulder:
             MediumCavalry: 100
             HeavyCavalry: 100
             HeavyBuilding: 75
+            Spectral: 35
 		DamageTypes: Prone50Percent, TriggerProne, BallistaDeath
     Warhead@2Eff: CreateEffect
 		Explosions: smokey
@@ -1741,6 +1778,7 @@ StationBalistaAG:
             MediumCavalry: 100
             HeavyCavalry: 100
             HeavyBuilding: 100
+            Spectral: 35
 		DamageTypes: Prone50Percent, TriggerProne, BallistaDeath
     Warhead@2Eff: CreateEffect
 		Explosions: smokey
@@ -1865,6 +1903,7 @@ KingCrossbow:
             HeavyCavalry: 75
             HeavyBuilding: 50
             Concrete: 35   
+            Spectral: 100
 		DamageTypes: Prone50Percent, TriggerProne, RippedApartDeath  
         
 KingCrossbowAir:
@@ -1924,6 +1963,7 @@ KingsSwordMounted:
             LightCavalry: 95
             MediumCavalry: 75
             HeavyCavalry: 65
+            Spectral: 100
 		DamageTypes: Prone50Percent, TriggerProne, RippedApartDeath
         
 Crossbow:
@@ -1958,6 +1998,7 @@ Crossbow:
             HeavyCavalry: 50
             HeavyBuilding: 40
             Concrete: 25   
+            Spectral: 20
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath   
         
 CrossbowAir:
@@ -2064,6 +2105,7 @@ BallonCrossbow:
             HeavyCavalry: 25
             HeavyBuilding: 75
             Concrete: 50   
+            Spectral: 20
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath          
  
 FireArrowBarrage:
@@ -2096,6 +2138,7 @@ FireArrowBarrage:
             MediumCavalry: 100
             HeavyCavalry: 100
             HeavyBuilding: 150
+            Spectral: 100
 		DamageTypes: Prone50Percent, TriggerProne, BurnToDeath
     Warhead@2Dam: SpreadDamage
 		Spread: 712
@@ -2114,6 +2157,7 @@ FireArrowBarrage:
             MediumCavalry: 100
             HeavyCavalry: 100
             HeavyBuilding: 150
+            Spectral: 100
 		DamageTypes: Prone50Percent, TriggerProne, BurnToDeath
     Warhead@3Dam: SpreadDamage
 		Spread: 450
@@ -2132,6 +2176,7 @@ FireArrowBarrage:
             MediumCavalry: 100
             HeavyCavalry: 100
             HeavyBuilding: 150
+            Spectral: 100
 		DamageTypes: Prone50Percent, TriggerProne, BurnToDeath
     Warhead@1Eff: CreateEffect
 		Explosions: fire2    
@@ -2178,6 +2223,7 @@ FireBarrage:
             MediumCavalry: 100
             HeavyCavalry: 100
             HeavyBuilding: 150
+            Spectral: 100
 		DamageTypes: Prone50Percent, TriggerProne, BurnToDeath
     Warhead@2Dam: SpreadDamage
 		Spread: 712
@@ -2214,6 +2260,7 @@ FireBarrage:
             MediumCavalry: 100
             HeavyCavalry: 100
             HeavyBuilding: 150
+            Spectral: 100
 		DamageTypes: Prone50Percent, TriggerProne, BurnToDeath
     Warhead@1Eff: CreateEffect
 		Explosions: fire2    
@@ -2323,6 +2370,7 @@ RottenKadaver:
             LightCavalry: 150
             MediumCavalry: 200
             HeavyCavalry: 250
+            Spectral: 300
 		DamageTypes: Prone50Percent, RippedApartDeath                   
     Warhead@1Eff: CreateEffect
 		Explosions: deadk1,deadk2,deadk3
@@ -2360,6 +2408,7 @@ CannonStrike:
             LightCavalry: 100
             MediumCavalry: 100
             HeavyCavalry: 100
+            Spectral: 250
 		DamageTypes: Prone50Percent, RippedApartDeath
 	Warhead@2Eff_impact: CreateEffect
 		Explosions: cannonsboulder
@@ -2403,6 +2452,7 @@ CannonStrike:
             LightCavalry: 100
             MediumCavalry: 100
             HeavyCavalry: 100
+            Spectral: 250
 		DamageTypes: TriggerProne, RippedApartDeath
 	Warhead@4Res_areanukea: DestroyResource
 		Size: 2
@@ -2428,6 +2478,7 @@ CannonStrike:
             LightCavalry: 100
             MediumCavalry: 100
             HeavyCavalry: 100
+            Spectral: 250
 		DamageTypes: TriggerProne, RippedApartDeath
 	Warhead@10Dam_areanukec: SpreadDamage
 		Spread: 5c0
@@ -2445,6 +2496,7 @@ CannonStrike:
             LightCavalry: 100
             MediumCavalry: 100
             HeavyCavalry: 100
+            Spectral: 250
 		DamageTypes: TriggerProne, RippedApartDeath
         
         
@@ -2566,6 +2618,7 @@ HuskExplosion:
             LightCavalry: 60
             MediumCavalry: 40
             HeavyCavalry: 25
+            Spectral: 15
 		DamageTypes: Prone100Percent, TriggerProne, DefaultDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: smokey
@@ -2678,6 +2731,7 @@ Dragonbite:
 			Leather: 100
 			Light: 100
 			Heavy: 100
+            Spectral: 60
             Knight: 100
             Concrete: 100
             LightCavalry: 90
@@ -2718,14 +2772,15 @@ KilledPike:
 		Damage: 15000
         ValidTargets: Cavalry
 		Versus:
-            None: 100
-			Leather: 100
-			Light: 100
-			Heavy: 100
-            Knight: 100
-            Concrete: 100
+            None: 0
+			Leather: 0
+			Light: 0
+			Heavy: 0
+            Knight: 0
+            Concrete: 0
             LightCavalry: 100
             MediumCavalry: 100
             HeavyCavalry: 133
+            Spectral: 0
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
  

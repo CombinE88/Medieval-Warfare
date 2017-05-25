@@ -79,8 +79,28 @@ Terrain:
 		IsWater: True
 		Color: 5C74A4
 		RestrictPlayerColor: true
+    TerrainType@Palace:
+		Type: Palace
+		TargetTypes: Ground
+		AcceptsSmudgeType: Crater, Scorch
+		RestrictPlayerColor: true
 
 Templates:
+    Template@5555:
+		Id: 5555
+		Images: clear1.sno
+		Size: 3,3
+		Category: Terrain
+		Tiles:
+			0: Palace
+			1: Clear
+			2: Palace
+			3: Clear
+			4: Clear
+			5: Clear
+			6: Palace
+			7: Clear
+			8: Palace
 	Template@255:
 		Id: 255
 		Images: clear1.sno

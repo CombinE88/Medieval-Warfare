@@ -6,6 +6,15 @@ SiegeVoice:
         Burned: WoodExplMed,WoodExplsmall2,WoodExplMed,WoodExplMed2
 		Zapped: WoodExplMed,WoodExplsmall2,WoodExplMed,WoodExplMed2
 		Poisoned: WoodExplMed,WoodExplsmall2,WoodExplMed,WoodExplMed2
+        
+ElephantVoice:
+	Voices:
+		Select: guyyeah1
+		Action: guyokay1
+		Die: elephantdead
+        Burned: elephantdead
+		Zapped: elephantdead
+		Poisoned: elephantdead
 
 CivilianNew:
     DefaultVariant: .aud

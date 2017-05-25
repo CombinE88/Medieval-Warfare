@@ -206,7 +206,7 @@ ENGENEER:
 		Description: Can quick repair buildings and siege weapons.\n  Captures and damages buildings.\n  Unarmed\n\n\n
         IconPalette: raicon
 		BuildPaletteOrder: 50
-		Queue: MInfantry.GDI, MInfantry.Nod
+		Queue: MInfantry.GDI, MInfantry.Nod, MInfantry.SUL
 	Mobile:
 		Speed: 56
 	Captures:
@@ -457,7 +457,7 @@ E9NEW:
 	Tooltip:
 		Name: Fire Mage
 	Buildable:
-		Description: Advanced Anti-infantry unit.\n  Strong vs Infantry, Buildings\n  Weak vs Cavalry\n  Detects cloaked units\n  Can attack Aircrafts\n\n\n
+		Description: Advanced Anti-infantry unit.\n  Strong vs Infantry, Buildings and Spectral Units\n  Weak vs Cavalry\n  Detects cloaked units\n  Can attack Aircrafts\n\n\n
         IconPalette: raicon
 		BuildPaletteOrder: 70
 		Prerequisites: anyhq
@@ -637,7 +637,7 @@ RMBONEW:
 	Tooltip:
 		Name: Paladin
 	Buildable:
-        Description: Elite Infantry\n Strong vs Infantry, Buildings\n  Arrow proofed.\n\n\n
+        Description: Elite Infantry\n Strong vs Infantry, Buildings and Spectral Units\n  Arrow proofed.\n\n\n
         IconPalette: raicon
         BuildPaletteOrder: 70
         Prerequisites: anyhq, ~techlevel.high
@@ -673,7 +673,7 @@ NEWCOMM:
 	Tooltip:
 		Name: Juggernaut
 	Buildable:
-		Description: Juggernaut Infantry \n Very Strong vs Infantry, Buildings\n  Can only slightly be harmed by Arrows. \nCan cut down trees.\n\n\n
+		Description: Juggernaut Infantry \n Very Strong vs Infantry, Buildings and Spectral Units\n  Can only slightly be harmed by Arrows. \nCan cut down trees.\n\n\n
         IconPalette: raicon
 		BuildPaletteOrder: 80
 		Prerequisites: anycastle, anyhq, ~techlevel.high
@@ -724,7 +724,7 @@ ASSASSIN:
 	Tooltip:
 		Name: Assaassin
 	Buildable:
-		Description: Mid/Long-range knifthrowing infantry that can cloak.\nHas weak armor. Can be spotted by some infantry and defense structures.\n  Strong vs Cavalry, Infantry.\n  Sets buildings on fire.\n  Detects cloaked units\n  Can attack Aircrafts\n\n\n
+		Description: Mid/Long-range knifthrowing infantry that can cloak.\nHas weak armor. Can be spotted by some infantry and defense structures.\n  Strong vs Cavalry, Infantry. Moderate vs Spectral Units\n  Sets buildings on fire.\n  Detects cloaked units\n  Can attack Aircrafts\n\n\n
         IconPalette: raicon
 		BuildPaletteOrder: 90
 		Queue: MInfantry.Nod, MInfantry.Horse
@@ -805,7 +805,7 @@ E8FARMER:
     Selectable:
 		Priority: 7
     Harvester:
-        DeliveryBuildings: zeroproc, ghostproc
+        DeliveryBuildings: zeroproc, ghostproc, sulmill
 		Resources: Copper, Grains, Wood, Goods, Lumber, Corn
 		PipCount: 2
 		Capacity: 10
@@ -829,7 +829,7 @@ BUMMLER:
 		Description: Collects leftovers of the battlefield.\nDelivers to barracks, stables and workshops.\n\n\n
         IconPalette: raicon
 		BuildPaletteOrder: 60
-		Queue: MInfantry.GDI, MInfantry.Nod, ~disabled
+		Queue: MInfantry.GDI, MInfantry.Nod, ~disabled, MInfantry.SUL
     WithFacingSpriteBody:
         Sequence: idle
         RequiresCondition: !MoveAnim
@@ -859,7 +859,7 @@ BUMMLER:
     Selectable:
 		Priority: 7
     Harvester:
-        DeliveryBuildings: barrnew, handnew, stall, nodstall, workshopnod, workshopgdi
+        DeliveryBuildings: barrnew, handnew, stall, nodstall, workshopnod, workshopgdi, sulmystic, sulfix, sulbarr
 		Resources: Guns
 		PipCount: 1
 		Capacity: 3

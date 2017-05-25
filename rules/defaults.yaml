@@ -240,6 +240,14 @@
 		VoiceSet: VehicleVoice
 	BodyOrientation:
 		UseClassicFacingFudge: True
+    ExternalCondition@TORNADO:
+        Condition: Tornadodeath
+    SelfHealing@TORNADO:
+        Step: -5000
+        HealIfBelow: 110
+        Delay: 25
+        RequiresCondition: Tornadodeath
+        DamageTypes: DefaultDeath
 
 ^Infantry:
 	Inherits@1: ^ExistsInWorld
@@ -268,7 +276,6 @@
 			Wood: 75
                 PathingCost: 300
 			Loot: 75
-                PathingCost: 300
 			Beach: 80
 	SelectionDecorations:
 	WithSpriteControlGroupDecoration:
@@ -389,6 +396,15 @@
 	Wanders:
 		MinMoveDelay: 150
 		MaxMoveDelay: 750
+    ConditionManager:
+    ExternalCondition@TORNADO:
+        Condition: Tornadodeath
+    SelfHealing@TORNADO:
+        Step: -5000
+        HealIfBelow: 110
+        Delay: 25
+        RequiresCondition: Tornadodeath
+        DamageTypes: DefaultDeath
 
 ^ArmedCivilian:
 	Armament:
@@ -485,7 +501,6 @@
 			Wood: 75
                 PathingCost: 300
 			Loot: 75
-                PathingCost: 300
 			Beach: 60
 	SelectionDecorations:
 	WithSpriteControlGroupDecoration:
@@ -632,10 +647,18 @@
 		SellSounds: cashturn.aud
 	Capturable:
 	WithMakeAnimation:
+    ExternalCondition@TORNADO:
+        Condition: Tornadodeath
+    SelfHealing@TORNADO:
+        Step: -5000
+        HealIfBelow: 110
+        Delay: 25
+        RequiresCondition: Tornadodeath
+        DamageTypes: DefaultDeath
 
 ^CivBuilding:
 	Inherits: ^Building
-	-ConditionManager:
+	ConditionManager:
 	Health:
 		HP: 40000
 	Tooltip:
@@ -643,6 +666,14 @@
 		GenericStancePrefix: false
 		ShowOwnerRow: false
 	FrozenUnderFog:
+    ExternalCondition@TORNADO:
+        Condition: Tornadodeath
+    SelfHealing@TORNADO:
+        Step: -5000
+        HealIfBelow: 110
+        Delay: 25
+        RequiresCondition: Tornadodeath
+        DamageTypes: DefaultDeath
 
 ^CivBuildingHusk:
 	Inherits@1: ^SpriteActor
@@ -1023,6 +1054,14 @@
 	MustBeDestroyed:
 	Voiced:
 		VoiceSet: GenericVoice
+    ExternalCondition@TORNADO:
+        Condition: Tornadodeath
+    SelfHealing@TORNADO:
+        Step: -5000
+        HealIfBelow: 110
+        Delay: 25
+        RequiresCondition: Tornadodeath
+        DamageTypes: DefaultDeath
 
 ^MWBaseBuilding:
     Inherits@1: ^BaseBuilding
@@ -1083,7 +1122,6 @@
 			Wood: 75
                 PathingCost: 300
 			Loot: 75
-                PathingCost: 3000
 			Beach: 80
 	SelectionDecorations:
 	WithSpriteControlGroupDecoration:
@@ -1143,6 +1181,14 @@
     ReloadDelayMultiplier:
         RequiresCondition: KingIsNear
         Modifier: 120
+    ExternalCondition@TORNADO:
+        Condition: Tornadodeath
+    SelfHealing@TORNADO:
+        Step: -5000
+        HealIfBelow: 110
+        Delay: 25
+        RequiresCondition: Tornadodeath
+        DamageTypes: DefaultDeath
         
 ^Knight:  
 	Inherits: ^MedievalInfantry
@@ -1155,6 +1201,7 @@
 			PoisonDeath: 3
 			BallistaDeath: 4
             BurnToDeath: 5
+            SkeletonDeath: 2
 		CrushedSequence: die-crushed
     Targetable:
 		TargetTypes: Ground, Infantry
@@ -1205,6 +1252,11 @@
 		Weapon: LeaveStuff
         EmptyWeapon: LeaveStuff
         Chance: 25
+    SpawnActorOnDeath@SCELET:
+        DeathType: SkeletonDeath
+        Probability: 66
+        Actor: SULM1SKELET
+        OwnerType: Killer
 
         
 ^Cavalry:
@@ -1390,6 +1442,15 @@
 		MaxMoveDelay: 750
     WithInfantryBody:
 		StandSequences: stand
+    ConditionManager:
+    ExternalCondition@TORNADO:
+        Condition: Tornadodeath
+    SelfHealing@TORNADO:
+        Step: -5000
+        HealIfBelow: 110
+        Delay: 25
+        RequiresCondition: Tornadodeath
+        DamageTypes: DefaultDeath
  
 ^MWAnimal:
 	Inherits: ^MedievalInfantry
@@ -1485,6 +1546,7 @@
 			PoisonDeath: 3
 			BallistaDeath: 4
             BurnToDeath: 5
+            SkeletonDeath: 2
 		CrushedSequence: die-crushed
         DeathSequencePalette: raplayer
 	Wanders:
@@ -1521,6 +1583,11 @@
         Interval: 25
         Amount: 2
         RequiresCondition: Tax
+    SpawnActorOnDeath@SCELET:
+        DeathType: SkeletonDeath
+        Probability: 66
+        Actor: SULM1SKELET
+        OwnerType: Killer
         
 ^MWTalker:
 	Inherits: ^MWWanderer
@@ -1630,6 +1697,14 @@
 		IntoActor: mwconst1back
 		Offset: 0,0
 		Facing: 76
+    ExternalCondition@TORNADO:
+        Condition: Tornadodeath
+    SelfHealing@TORNADO:
+        Step: -5000
+        HealIfBelow: 110
+        Delay: 25
+        RequiresCondition: Tornadodeath
+        DamageTypes: DefaultDeath
         
         
 ^GrowableTree:
@@ -1701,4 +1776,5 @@
         RequiresCondition: Heavy && Critical
     SoundOnDamageTransition:
 		DamagedSounds: treefell.wav
-    
+        
+   

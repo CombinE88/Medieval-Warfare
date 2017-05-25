@@ -17,7 +17,7 @@ MCVNEW:
 		BuildPaletteOrder: 100
 		Prerequisites: anyhq, ~techlevel.medium, anyarmory
 		Description: Deploys into another Keep.\n  Unarmed
-		Queue: MSiege.GDI, MSiege.Nod
+		Queue: MSiege.GDI, MSiege.Nod, MSiege.SUL
 	Selectable:
 		Priority: 4
 	AttackFrontal:
@@ -93,7 +93,7 @@ SIEGE1:
             PointB: 0, 212
 	Armament:
 		Weapon: siegebalista
-        LocalOffset: 0,-712,100
+        LocalOffset: 712,0,100
 	AttackFrontal:
     AutoTarget:
 		ScanRadius: 11
@@ -301,7 +301,7 @@ SIEGE4:
         SharesCell: false
         TurnSpeed: 2
     Health:
-		HP: 50000
+		HP: 35000
         Shape: Rectangle
             TopLeft: -412, -412
             BottomRight: 412, 712
@@ -424,7 +424,7 @@ EHARVXL:
         IconPalette: raicon
 		BuildPaletteOrder: 0
 		Description: Collects iron- and goldore.\n  Unarmed
-		Queue: MSiege.GDI, MSiege.Nod
+		Queue: MSiege.GDI, MSiege.Nod, MSiege.SUL
         Prerequisites: procnew, ~techlevel.medium
     Mobile:
         TurnSpeed: 5

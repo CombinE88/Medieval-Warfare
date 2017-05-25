@@ -15,7 +15,7 @@
 	Faction@Random:
 		Name: Any
 		InternalName: Random
-		RandomFactionMembers: gdi, nod
+		RandomFactionMembers: gdi, nod, sul
 		Description: Select a random faction.
 	Faction@gdi:
 		Name: King
@@ -25,6 +25,10 @@
 		Name: Baron
 		InternalName: nod
 		Description: Baron Hodsworth Noddingen (Nod)
+    Faction@sul:
+		Name: Sultan
+		InternalName: sul
+		Description: Sultan Cem Rashid il-Nuredin (Scrin)
 	ResourceType@green-tib:
 		Sequences: iron1,iron2,iron3,iron4,iron5,iron6,iron7,iron8,iron9,iron10,iron11,iron12
         Palette: ra
@@ -167,28 +171,17 @@ World:
 	CreateMPPlayers:
     LuaScript:
         Scripts: Peasants.lua
-	MPStartUnits@MEDIGDI:
+	MPStartUnits@MEDUNI:
 		Class: medieval
 		ClassName: Supply wagon only
-		Factions: gdi
+		Factions: gdi, nod, sul
 		BaseActor: mcvnew
-	MPStartUnits@MEDINOD:
-		Class: medieval
-		ClassName: Supply wagon only
-		Factions: nod
-		BaseActor: mcvnew
-    MPStartUnits@MEDIGDI2:
+    MPStartUnits@MEDIUNI2:
 		Class: royal
 		ClassName: Highness
-		Factions: gdi
+		Factions: gdi, nod, sul
 		BaseActor: mcvnew
-        SupportActors: Husk2.KING, e3new, e3new, e3new, e2new,
-	MPStartUnits@MEDINOD2:
-		Class: royal
-		ClassName: Highness
-		Factions: nod
-		BaseActor: mcvnew
-        SupportActors: Husk2.KING, e3new, e3new, e3new, e2new,
+        SupportActors: Husk2.KING, e3new, e3new, e3new, e2new
 	SpawnMPUnits:
 		StartingUnitsClass: medieval
 	CrateSpawner:

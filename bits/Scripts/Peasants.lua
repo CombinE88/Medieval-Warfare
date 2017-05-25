@@ -150,18 +150,18 @@ SpawnSettlers = function(Player)
 	end)
 	
 	huts = Map.ActorsInBox(Map.TopLeft, Map.BottomRight, function(C)
-		return (C.Type == "nukenew") and C.Owner == who
+		return (C.Type == "nukenew" or C.Type == "sulnuke" ) and C.Owner == who
 	end)
 	
 	largehuts = Map.ActorsInBox(Map.TopLeft, Map.BottomRight, function(C)
-		return (C.Type == "nuk2new") and C.Owner == who
+		return (C.Type == "nuk2new" or C.Type == "sulnuk2") and C.Owner == who
 	end)
 	
 	Facts = Map.ActorsInBox(Map.TopLeft, Map.BottomRight, function(C)
 		return C.Type == "factnew" and C.Owner == who
 	end)
 	
-	if #peasantss < (#huts*3 + #largehuts*5) then
+	if #peasantss < (#huts*2 + #largehuts*3) then
 	
 		if #largehuts ~= 0 and #huts ~= 0 then
 		
@@ -195,7 +195,7 @@ SpawnSettlers = function(Player)
 			end)
 		
 		
-			if (#peasantss + #nobles) > #Chicken*3 and hut and (not hut.IsDead) then
+			if (#peasantss + #nobles) > #Chicken*5 and hut and (not hut.IsDead) then
 				Trigger.AfterDelay(DateTime.Seconds(Utils.RandomInteger(25,100)),function()
 					if hut and (not hut.IsDead) then
 						--print("Line 439, Chicken: " .. tostring(hut.Location))
@@ -213,7 +213,7 @@ SpawnSettlers = function(Player)
 	end)
 	
 	castles = Map.ActorsInBox(Map.TopLeft, Map.BottomRight, function(C)
-		return (C.Type == "castle" or C.Type == "castle2") and C.Owner == who
+		return (C.Type == "castle" or C.Type == "castle2" or C.Type == "sulcastle") and C.Owner == who
 	end)
 	
 	
@@ -277,7 +277,7 @@ SpawnSettlers = function(Player)
 	local Factor = nil
 	
 	here = Map.ActorsInBox(Map.TopLeft, Map.BottomRight, function(C)
-		return (C.Type == "nukenew" or C.Type == "nuk4new" or C.Type == "nuk5new" or C.Type == "nuk2new" or C.Type == "nuk3new") and C.Owner == who
+		return (C.Type == "nukenew" or C.Type == "sulnuke" or C.Type == "sulnuk2" or C.Type == "nuk2new" or C.Type == "nuk3new") and C.Owner == who
 	end)
 	
 	Stuff = Map.ActorsInBox(Map.TopLeft, Map.BottomRight, function(C)

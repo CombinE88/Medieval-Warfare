@@ -1,7 +1,7 @@
 Metadata:
 	Title: Medieval Warfare
 	Description: Siege under Gabriel Dardanus the first or \nbetray with Baron Hodsworth of Noddingen in a \ntotalconversion of the classic game that started it all.\n\nMedieval Warfare demodernizes the original Command & Conquer \nTiberian Dawn gameplay\nby shifting the gme into the dark ages, including siegeweapons \ncavalry, high infantry verietiy, and buildable fortresses.
-	Version: 173518 Alpha (fix)
+	Version: 173525
 	Author: the Medieval Warfare Team
 
 RequiresMods:
@@ -41,6 +41,7 @@ Packages:
     mw|bits/Icons
     mw|bits/Resources
     mw|bits/Buildings
+    mw|bits/Sultan
 	mw|uibits
 
 MapFolders:
@@ -65,6 +66,7 @@ Rules:
 	mw|rules/Siegeweapons.yaml
 	mw|rules/trees.yaml
     mw|rules/world.yaml
+    mw|rules/Sultan.yaml
 
 Sequences:
 	cnc|sequences/structures.yaml
@@ -85,6 +87,7 @@ Sequences:
     mw|Sequences/MWProps.yaml
     mw|Sequences/MWResources.yaml
     mw|Sequences/MWSiegeweapons.yaml
+    mw|Sequences/MWSultan.yaml
 
 TileSets:
 	mw|tilesets/desert.yaml
@@ -95,6 +98,7 @@ TileSets:
 
 Weapons:
     mw|weapons/MWWeapons.yaml
+    mw|weapons/MWSultanW.yaml
 	cnc|weapons/explosions.yaml
 	cnc|weapons/ballistics.yaml
 	cnc|weapons/missiles.yaml
