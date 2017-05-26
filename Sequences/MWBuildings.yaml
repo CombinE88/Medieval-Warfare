@@ -643,6 +643,27 @@ nodfix:
 		Length: *
 	icon: workshopicon.shp
 		AddExtension: False  
+        
+gdifix:
+	idle: 
+        Start: 31
+        Length: 7
+        Tick: 300
+	damaged-idle: 
+        Start: 38
+        Length: 7
+        Tick: 300
+	dead: 
+		Tick: 800
+        Start: 45
+	make: 
+		Length: 32
+		Tick: 80
+	bib: bib2
+		UseTilesetExtension: true
+		Length: *
+	icon: workshopicon.shp
+		AddExtension: False  
 
         
 cstlwll:
