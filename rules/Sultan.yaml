@@ -80,6 +80,15 @@ SULGTW:
 		LocalOffset: 0,0,427
         Turret: secondary
         FireDelay: 12
+    Armament@1DUMMY:
+		Weapon: BowNArrowTowerDUMMY
+		LocalOffset: 0,0,427
+        Turret: primary
+    Armament@2DUMMY:
+		Weapon: BowNArrowTowerDUMMY
+		LocalOffset: 0,0,427
+        Turret: secondary
+        FireDelay: 12
 	AttackTurreted:
 	BodyOrientation:
 		QuantizedFacings: 8
@@ -893,12 +902,18 @@ SULE3:
 	Armament:
 		Weapon: bownarrow
         LocalOffset: 341,20,356
+    Armament@DUMMY:
+		Weapon: BowNArrowDUMMY
+        LocalOffset: 341,20,356
     Armament@Air:
 		Weapon: bownarrowair
         LocalOffset: 341,20,356
     Armament@GARRISONED:
 		Name: garrisoned
 		Weapon: BowNArrowTowerUnblock
+    Armament@GARRISONEDDUMMY:
+		Name: garrisoned
+		Weapon: BowNArrowTowerUnblockDUMMY
 	AttackFrontal:
     AutoTarget:
 		ScanRadius: 5
@@ -1221,6 +1236,15 @@ SULB0:
 		LocalOffset: 0,0,427
         Turret: secondary
         FireDelay: 12
+    Armament@1DUMMY:
+		Weapon: BowNArrowTowerDUMMY
+		LocalOffset: 0,0,427
+        Turret: primary
+    Armament@2DUMMY:
+		Weapon: BowNArrowTowerDUMMY
+		LocalOffset: 0,0,427
+        Turret: secondary
+        FireDelay: 12
 	AttackTurreted:
     -ThrowsShrapnel@SMALL:
     WithDeathAnimation:
@@ -1251,6 +1275,15 @@ SULB0:
 		LocalOffset: 0,0,427
         Turret: secondary
         FireDelay: 10
+    Armament@1DUMMY:
+		Weapon: BowNArrowSiegeTowerDUMMY
+		LocalOffset: 0,0,427
+        Turret: primary
+    Armament@2DUMMY:
+		Weapon: BowNArrowSiegeTowerDUMMY
+		LocalOffset: 0,0,427
+        Turret: secondary
+        FireDelay: 10    
     Voiced:
 		VoiceSet: ElephantVoice
         

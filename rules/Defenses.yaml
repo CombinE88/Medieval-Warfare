@@ -38,6 +38,15 @@ GTWNEW:
 		LocalOffset: 0,0,427
         Turret: secondary
         FireDelay: 12
+    Armament@1DUMMY:
+		Weapon: BowNArrowTowerDUMMY
+		LocalOffset: 0,0,427
+        Turret: primary
+    Armament@2DUMMY:
+		Weapon: BowNArrowTowerDUMMY
+		LocalOffset: 0,0,427
+        Turret: secondary
+        FireDelay: 12
 	AttackTurreted:
 	BodyOrientation:
 		QuantizedFacings: 8

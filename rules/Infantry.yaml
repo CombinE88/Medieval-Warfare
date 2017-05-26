@@ -513,12 +513,18 @@ E4NEW:
 	Armament:
 		Weapon: bownarrow
         LocalOffset: 341,20,356
+    Armament@DUMMY:
+		Weapon: BowNArrowDUMMY
+        LocalOffset: 341,20,356
     Armament@Air:
 		Weapon: bownarrowair
         LocalOffset: 341,20,356
     Armament@GARRISONED:
 		Name: garrisoned
 		Weapon: BowNArrowTowerUnblock
+    Armament@GARRISONEDDUMMY:
+		Name: garrisoned
+		Weapon: BowNArrowTowerUnblockDUMMY
 	AttackFrontal:
     AutoTarget:
 		ScanRadius: 5
@@ -561,9 +567,15 @@ E4NEWV2:
     Armament@Air:
 		Weapon: bownarrowair
         LocalOffset: 341,20,356
+    Armament@DUMMY:
+		Weapon: BowNArrowDUMMY
+        LocalOffset: 341,20,356
     Armament@GARRISONED:
 		Name: garrisoned
 		Weapon: BowNArrowTowerUnblock
+    Armament@GARRISONEDDUMMY:
+		Name: garrisoned
+		Weapon: BowNArrowTowerUnblockDUMMY
 	AttackFrontal:
     AutoTarget:
 		ScanRadius: 5

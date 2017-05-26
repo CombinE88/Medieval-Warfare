@@ -94,7 +94,6 @@ TileSets:
 	mw|tilesets/winter.yaml
 	mw|tilesets/snow.yaml
 	mw|tilesets/temperat.yaml
-	mw|tilesets/jungle.yaml
 
 Weapons:
     mw|weapons/MWWeapons.yaml

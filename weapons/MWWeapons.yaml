@@ -11,7 +11,10 @@ OrniSpearThrow:
 		Speed: 350
 		LaunchAngle: 46
 		Inaccuracy: 0c0
-		ContrailLength: 4
+		ContrailLength: 10
+        ContrailWidth: 15
+        ContrailDelay: 0
+        ContrailUsePlayerColor : true
 		Image: spear
         Palette: ra
 	Warhead@1Dam: SpreadDamage
@@ -45,7 +48,10 @@ WarkiteCrossbow:
 		Speed: 350
 		LaunchAngle: 46
 		Inaccuracy: 0c0
-		ContrailLength: 4
+		ContrailLength: 20
+        ContrailWidth: 10
+        ContrailDelay: 0
+        ContrailUsePlayerColor : true
 		Image: e4arrow
         Palette: ra
 	Warhead@1Dam: SpreadDamage
@@ -508,7 +514,10 @@ MammothDagger:
 		Speed: 350
 		LaunchAngle: 46
 		Inaccuracy: 0c0
-		ContrailLength: 4
+		ContrailLength: 5
+        ContrailWidth: 20
+        ContrailDelay: 0
+        ContrailUsePlayerColor : true
 		Image: assassarrow
         Palette: ra
 	Warhead@1Dam: SpreadDamage
@@ -597,7 +606,10 @@ DaggerMongol:
 		Speed: 350
 		LaunchAngle: 46
 		Inaccuracy: 0c0
-		ContrailLength: 4
+		ContrailLength: 5
+        ContrailWidth: 20
+        ContrailDelay: 0
+        ContrailUsePlayerColor : true
 		Image: assassarrow
         Palette: ra
 	Warhead@1Dam: SpreadDamage
@@ -760,7 +772,10 @@ Dagger:
 		Speed: 250
 		LaunchAngle: 46
 		Inaccuracy: 0c0
-		ContrailLength: 4
+		ContrailLength: 5
+        ContrailWidth: 20
+        ContrailDelay: 0
+        ContrailUsePlayerColor : true
 		Image: assassarrow
         Palette: ra
 	Warhead@1Dam: SpreadDamage
@@ -801,7 +816,10 @@ DaggerAir:
 		Speed: 350
 		LaunchAngle: 46
 		Inaccuracy: 0c0
-		ContrailLength: 4
+		ContrailLength: 5
+        ContrailWidth: 20
+        ContrailDelay: 0
+        ContrailUsePlayerColor : true
 		Image: assassarrow
         Palette: ra
 	Warhead@1Dam: SpreadDamage
@@ -836,7 +854,10 @@ DaggerSiegeTower:
 		Speed: 350
 		LaunchAngle: 46
 		Inaccuracy: 0c0
-		ContrailLength: 4
+		ContrailLength: 5
+        ContrailWidth: 20
+        ContrailDelay: 0
+        ContrailUsePlayerColor : true
 		Image: assassarrow
         Palette: ra
 	Warhead@1Dam: SpreadDamage
@@ -931,11 +952,8 @@ BowNArrow:
         HorizontalRateOfTurn: 60
         RangeLimit: 8c204
         Arm: 0
-		Speed: 250
+		Speed: 200
 		LaunchAngle: 46
-		Inaccuracy: 0c0
-		ContrailLength: 4
-		Image: e4arrow
         Palette: ra
 	Warhead@1Dam: SpreadDamage
 		Spread: 25
@@ -954,6 +972,40 @@ BowNArrow:
             HeavyBuilding: 45
             Spectral: 15
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+BowNArrowDUMMY:
+	ReloadDelay: 45
+	Range: 4c0
+	MinRange: 0c512
+    InvalidTargets: Wall, Air
+    ValidTargets: Ground
+	Projectile: Bullet
+        RangeLimit: 9c204
+        LaunchAngle: 130
+		Speed: 250
+		Inaccuracy: 0c0
+		ContrailLength: 20
+        ContrailWidth: 10
+        ContrailDelay: 0
+        ContrailUsePlayerColor : true
+		Image: e4arrow
+        Palette: ra
+	Warhead@1Dam: SpreadDamage
+		Spread: 25
+        InvalidTargets: Wall, Air
+        ValidTargets: Ground
+		Damage: 0
+		Versus:
+			Leather: 0
+			Light: 0
+			Heavy: 0
+            Concrete: 0
+            Knight: 0
+            LightCavalry: 0
+            MediumCavalry: 0
+            HeavyCavalry: 0
+            HeavyBuilding: 0
+            Spectral: 0
+		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
         
 BowNArrowAir:
 	ReloadDelay: 45
@@ -969,7 +1021,10 @@ BowNArrowAir:
 		Speed: 350
 		LaunchAngle: 46
 		Inaccuracy: 0c0
-		ContrailLength: 4
+		ContrailLength: 20
+        ContrailWidth: 10
+        ContrailDelay: 0
+        ContrailUsePlayerColor : true
 		Image: e4arrow
         Palette: ra
 	Warhead@1Dam: SpreadDamage
@@ -1126,12 +1181,9 @@ BowNArrowSiegeTower:
         HorizontalRateOfTurn: 60
         RangeLimit: 8c204
         Arm: 0
-		Speed: 350
+		Speed: 200
 		LaunchAngle: 46
 		Inaccuracy: 0c0
-		ContrailLength: 4
-		Image: e4arrow
-        Palette: ra
 	Warhead@1Dam: SpreadDamage
 		Spread: 141
         InvalidTargets: Wall
@@ -1147,7 +1199,41 @@ BowNArrowSiegeTower:
             MediumCavalry: 55
             HeavyCavalry: 35
             HeavyBuilding: 25
-		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath        
+		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath  
+BowNArrowSiegeTowerDUMMY:
+	ReloadDelay: 45
+	Range: 6c0
+	MinRange: 0c0
+    InvalidTargets: Wall, Air
+    ValidTargets: Ground
+	Projectile: Bullet
+        RangeLimit: 9c204
+        LaunchAngle: 130
+		Speed: 250
+		Inaccuracy: 0c0
+		ContrailLength: 20
+        ContrailWidth: 10
+        ContrailDelay: 0
+        ContrailUsePlayerColor : true
+		Image: e4arrow
+        Palette: ra
+	Warhead@1Dam: SpreadDamage
+		Spread: 25
+        InvalidTargets: Wall, Air
+        ValidTargets: Ground
+		Damage: 0
+		Versus:
+			Leather: 0
+			Light: 0
+			Heavy: 0
+            Concrete: 0
+            Knight: 0
+            LightCavalry: 0
+            MediumCavalry: 0
+            HeavyCavalry: 0
+            HeavyBuilding: 0
+            Spectral: 0
+		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
         
 SpearThrow:
 	ReloadDelay: 50
@@ -1165,7 +1251,10 @@ SpearThrow:
 		Speed: 200
 		LaunchAngle: 46
 		Inaccuracy: 0c0
-		ContrailLength: 4
+		ContrailLength: 10
+        ContrailWidth: 15
+        ContrailDelay: 0
+        ContrailUsePlayerColor : true
 		Image: spear
         Palette: ra
 	Warhead@1Dam: SpreadDamage
@@ -1202,7 +1291,10 @@ SpearThrowAir:
 		Speed: 300
 		LaunchAngle: 46
 		Inaccuracy: 0c0
-		ContrailLength: 4
+		ContrailLength: 10
+        ContrailWidth: 15
+        ContrailDelay: 0
+        ContrailUsePlayerColor : true
 		Image: spear
         Palette: ra
 	Warhead@1Dam: SpreadDamage
@@ -1266,6 +1358,10 @@ LongBowNArrow:
 		Inaccuracy: 1c0
 		Image: firearrow
         Palette: ra
+        ContrailLength: 20
+        ContrailWidth: 10
+        ContrailDelay: 0
+        ContrailUsePlayerColor : true
 	Warhead@1Dam: SpreadDamage
 		Spread: 90
         InvalidTargets: Wall, Air
@@ -1350,7 +1446,10 @@ LongBowNArrowAir:
 		Speed: 350
 		LaunchAngle: 46
 		Inaccuracy: 0c0
-		ContrailLength: 4
+		ContrailLength: 20
+        ContrailWidth: 10
+        ContrailDelay: 0
+        ContrailUsePlayerColor : true
 		Image: firearrow
         Palette: ra
 	Warhead@1Dam: SpreadDamage
@@ -1533,9 +1632,6 @@ BowNArrowTower:
 		Speed: 200
 		LaunchAngle: 46
 		Inaccuracy: 0c0
-		ContrailLength: 4
-		Image: e4arrow
-        Palette: ra
 	Warhead@1Dam: SpreadDamage
 		Spread: 205
 		Damage: 2000
@@ -1553,6 +1649,40 @@ BowNArrowTower:
             HeavyBuilding: 40
             Spectral: 15
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath  
+BowNArrowTowerDUMMY:
+	ReloadDelay: 25
+	Range: 5c0
+	MinRange: 0c0
+    InvalidTargets: Wall, Air
+    ValidTargets: Ground
+	Projectile: Bullet
+        RangeLimit: 9c204
+        LaunchAngle: 130
+		Speed: 250
+		Inaccuracy: 0c0
+		ContrailLength: 20
+        ContrailWidth: 10
+        ContrailDelay: 0
+        ContrailUsePlayerColor : true
+		Image: e4arrow
+        Palette: ra
+	Warhead@1Dam: SpreadDamage
+		Spread: 25
+        InvalidTargets: Wall, Air
+        ValidTargets: Ground
+		Damage: 0
+		Versus:
+			Leather: 0
+			Light: 0
+			Heavy: 0
+            Concrete: 0
+            Knight: 0
+            LightCavalry: 0
+            MediumCavalry: 0
+            HeavyCavalry: 0
+            HeavyBuilding: 0
+            Spectral: 0
+		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
         
 BowNArrowTowerUnblock:
 	ReloadDelay: 25
@@ -1569,9 +1699,6 @@ BowNArrowTowerUnblock:
 		Speed: 200
 		LaunchAngle: 46
 		Inaccuracy: 0c0
-		ContrailLength: 4
-		Image: e4arrow
-        Palette: ra
 	Warhead@1Dam: SpreadDamage
 		Spread: 302
 		Damage: 1000
@@ -1589,7 +1716,41 @@ BowNArrowTowerUnblock:
             HeavyBuilding: 40
             Spectral: 15
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath  
-
+BowNArrowTowerUnblockDUMMY:
+	ReloadDelay: 25
+	Range: 7c0
+	MinRange: 0c512
+    InvalidTargets: Wall, Air
+    ValidTargets: Ground
+	Projectile: Bullet
+        RangeLimit: 9c204
+        LaunchAngle: 130
+		Blockable: false
+        Speed: 250
+		Inaccuracy: 0c0
+		ContrailLength: 20
+        ContrailWidth: 10
+        ContrailDelay: 0
+        ContrailUsePlayerColor : true
+		Image: e4arrow
+        Palette: ra
+	Warhead@1Dam: SpreadDamage
+		Spread: 25
+        InvalidTargets: Wall, Air
+        ValidTargets: Ground
+		Damage: 0
+		Versus:
+			Leather: 0
+			Light: 0
+			Heavy: 0
+            Concrete: 0
+            Knight: 0
+            LightCavalry: 0
+            MediumCavalry: 0
+            HeavyCavalry: 0
+            HeavyBuilding: 0
+            Spectral: 0
+		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath 
 
    
 CannonBoulder:
@@ -1885,7 +2046,10 @@ KingCrossbow:
 		Speed: 250
 		LaunchAngle: 46
 		Inaccuracy: 0c0
-		ContrailLength: 4
+		ContrailLength: 20
+        ContrailWidth: 10
+        ContrailDelay: 0
+        ContrailUsePlayerColor : true
 		Image: e4arrow
         Palette: ra
 	Warhead@1Dam: SpreadDamage
@@ -1920,7 +2084,10 @@ KingCrossbowAir:
 		Speed: 350
 		LaunchAngle: 46
 		Inaccuracy: 0c0
-		ContrailLength: 4
+		ContrailLength: 20
+        ContrailWidth: 10
+        ContrailDelay: 0
+        ContrailUsePlayerColor : true
 		Image: e4arrow
         Palette: ra
 	Warhead@1Dam: SpreadDamage
@@ -1980,7 +2147,10 @@ Crossbow:
 		Speed: 350
 		LaunchAngle: 46
 		Inaccuracy: 0c0
-		ContrailLength: 4
+		ContrailLength: 20
+        ContrailWidth: 10
+        ContrailDelay: 0
+        ContrailUsePlayerColor : true
 		Image: e4arrow
         Palette: ra
 	Warhead@1Dam: SpreadDamage
@@ -2015,7 +2185,10 @@ CrossbowAir:
 		Speed: 350
 		LaunchAngle: 46
 		Inaccuracy: 0c0
-		ContrailLength: 4
+		ContrailLength: 20
+        ContrailWidth: 10
+        ContrailDelay: 0
+        ContrailUsePlayerColor : true
 		Image: e4arrow
         Palette: ra
 	Warhead@1Dam: SpreadDamage
@@ -2051,7 +2224,10 @@ CrossbowSiegeTower:
 		Speed: 350
 		LaunchAngle: 46
 		Inaccuracy: 0c0
-		ContrailLength: 4
+		ContrailLength: 20
+        ContrailWidth: 10
+        ContrailDelay: 0
+        ContrailUsePlayerColor : true
 		Image: e4arrow
         Palette: ra
 	Warhead@1Dam: SpreadDamage
@@ -2087,7 +2263,10 @@ BallonCrossbow:
 		Speed: 350
 		LaunchAngle: 46
 		Inaccuracy: 0c0
-		ContrailLength: 4
+		ContrailLength: 20
+        ContrailWidth: 10
+        ContrailDelay: 0
+        ContrailUsePlayerColor : true
 		Image: e4arrow
         Palette: ra
 	Warhead@1Dam: SpreadDamage

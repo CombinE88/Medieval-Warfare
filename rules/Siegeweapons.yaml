@@ -272,6 +272,20 @@ SIEGE3:
 		LocalOffset: 0,0,427
         Turret: tritiary
         FireDelay: 30
+    Armament@1DUMMY:
+		Weapon: BowNArrowTowerDUMMY
+		LocalOffset: 0,0,427
+        Turret: primary
+    Armament@2DUMMY:
+		Weapon: BowNArrowTowerDUMMY
+		LocalOffset: 0,0,427
+        Turret: secondary
+        FireDelay: 15
+    Armament@3DUMMY:
+		Weapon: BowNArrowTowerDUMMY
+		LocalOffset: 0,0,427
+        Turret: tritiary
+        FireDelay: 30
         
 
 
