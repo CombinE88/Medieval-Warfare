@@ -618,6 +618,31 @@ workshop:
 		Length: *
 	icon: workshopicon.shp
 		AddExtension: False  
+        
+nodfix:
+	idle: 
+        Start: 21
+	damaged-idle: 
+        Start: 22
+    active: 
+        Length: 20
+        Tick: 100
+        Start: 23
+    damaged-active: 
+        Length: *
+        Tick: 100
+        Start: 43
+	dead: 
+		Tick: 800
+        Start: 63
+	make: 
+		Length: 21
+		Tick: 80
+	bib: bib2
+		UseTilesetExtension: true
+		Length: *
+	icon: workshopicon.shp
+		AddExtension: False  
 
         
 cstlwll:

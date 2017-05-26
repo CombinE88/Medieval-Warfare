@@ -1433,7 +1433,7 @@ WORKSHOPNOD:
     Armor:
 		Type: HeavyBuilding
     RenderSprites:
-        Image: workshop
+        Image: nodfix
         PlayerPalette: raplayer
 	Valued:
 		Cost: 1400
