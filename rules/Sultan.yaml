@@ -938,7 +938,7 @@ SULE4:
 	Tooltip:
 		Name: Palace Guard
     Buildable:
-		Description: Heavy Anti-Cavalry infantry.\n  Superb vs Cavalry.\n  Moderate vs Infantry\n  Cannot be trampled by Cavalry\n  Can cut down trees.\n\n\n
+		Description: Heavy Anti-Cavalry infantry that are able to regenerate thier health if not in combat.\n  Superb vs Cavalry.\n  Moderate vs Infantry\n  Cannot be trampled by Cavalry\n  Can cut down trees.\n\n\n
         IconPalette: raicon
 		BuildPaletteOrder: 30
 		Queue: MInfantry.SUL
@@ -962,6 +962,11 @@ SULE4:
     Power:
 		Amount: -2
     -Crushable:
+    SelfHealing@HealsConst:
+        Step: 250
+        HealIfBelow: 100
+        Delay: 25
+        DamageCooldown: 25
         
 SULE5:
     RevealsShroud:
@@ -972,15 +977,15 @@ SULE5:
 	Tooltip:
 		Name: Scimitar 
 	Buildable:
-        Description: Elite Infantry\n  Strong vs Infantry, Cavalry\n  Moderate vs Buildings\n  Detects cloaked units\n\n\n
+        Description: Elite Infantry that is hard to hit when its moving.\n  Strong vs Infantry, Cavalry\n  Moderate vs Buildings\n  Detects cloaked units\n\n\n
         IconPalette: raicon
         BuildPaletteOrder: 40
         Prerequisites: sultow4, anyhq, ~techlevel.high
         Queue: MInfantry.SUL
     Mobile:
-		Speed: 100
+		Speed: 120
 	Health:
-		HP: 18500
+		HP: 21500
 	Armament:
 		Weapon: ScimitarDuals
         Name: primary
@@ -998,6 +1003,12 @@ SULE5:
 		Amount: -4
     DetectCloaked:
 		Range: 2c0
+    GrantConditionOnMovement@Runfast:
+        Condition: Runfast
+    DamageMultiplier@Runfast:
+        Modifier: 50
+        RequiresCondition: Runfast
+        
         
 SULE6:
 	Inherits: ^Knight

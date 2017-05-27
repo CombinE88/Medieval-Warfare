@@ -77,7 +77,7 @@ BroadSwordAE:
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
         
 ScimitarDuals:
-	ReloadDelay: 17
+	ReloadDelay: 22
 	Range: 1c512
 	Report: Sword02.aud, Sword03.aud, Sword04.aud, Sword06.aud, Sword07.aud
     ValidTargets: Ground, Trees
@@ -86,7 +86,7 @@ ScimitarDuals:
 		Speed: 1c382
 	Warhead@1Dam: SpreadDamage
 		Spread: 25
-		Damage: 4250
+		Damage: 5500
         ValidTargets: Ground, Trees
         InvalidTargets: Air
 		Versus:
@@ -132,7 +132,7 @@ ApprenticeFire:
 	ReloadDelay: 75
 	Range: 5c0
     ValidTargets: Ground
-    InvalidTargets: Air, Structure
+    InvalidTargets: Air, Structure, Skeleton
     Projectile: Bullet
 		Speed: 1c382
 	Warhead@1Dam: SpreadDamage
@@ -152,7 +152,7 @@ ApprenticeFire:
             MediumCavalry: 25
             HeavyCavalry: 15
             HeavyBuilding: 5
-		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath, SkeletonDeath
+		DamageTypes: Prone50Percent, TriggerProne, BurnToDeath, SkeletonDeath
         Delay: 6
     Warhead@2Dam: SpreadDamage
 		Spread: 50
@@ -171,7 +171,7 @@ ApprenticeFire:
             MediumCavalry: 25
             HeavyCavalry: 15
             HeavyBuilding: 5
-		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath, SkeletonDeath
+		DamageTypes: Prone50Percent, TriggerProne, BurnToDeath, SkeletonDeath
         Delay: 12
     Warhead@3Dam: SpreadDamage
 		Spread: 50
@@ -190,7 +190,7 @@ ApprenticeFire:
             MediumCavalry: 25
             HeavyCavalry: 15
             HeavyBuilding: 5
-		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath, SkeletonDeath
+		DamageTypes: Prone50Percent, TriggerProne, BurnToDeath, SkeletonDeath
         Delay: 18
     Warhead@4Dam: SpreadDamage
 		Spread: 50
@@ -209,7 +209,7 @@ ApprenticeFire:
             MediumCavalry: 25
             HeavyCavalry: 15
             HeavyBuilding: 5
-		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath, SkeletonDeath
+		DamageTypes: Prone50Percent, TriggerProne, BurnToDeath, SkeletonDeath
         Delay: 24
     Warhead@5Dam: SpreadDamage
 		Spread: 50
@@ -228,7 +228,7 @@ ApprenticeFire:
             MediumCavalry: 25
             HeavyCavalry: 15
             HeavyBuilding: 5
-		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath, SkeletonDeath
+		DamageTypes: Prone50Percent, TriggerProne, BurnToDeath, SkeletonDeath
         Delay: 30
     Warhead@6Dam: SpreadDamage
 		Spread: 50
@@ -247,7 +247,7 @@ ApprenticeFire:
             MediumCavalry: 25
             HeavyCavalry: 15
             HeavyBuilding: 5
-		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath, SkeletonDeath
+		DamageTypes: Prone50Percent, TriggerProne, BurnToDeath, SkeletonDeath
         Delay: 36
     Warhead@2Smu: LeaveSmudge
 		SmudgeType: Scorch

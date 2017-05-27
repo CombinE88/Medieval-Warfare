@@ -1201,7 +1201,7 @@
 			PoisonDeath: 3
 			BallistaDeath: 4
             BurnToDeath: 5
-            SkeletonDeath: 2
+            SkeletonDeath: 5
 		CrushedSequence: die-crushed
     Targetable:
 		TargetTypes: Ground, Infantry
@@ -1546,7 +1546,7 @@
 			PoisonDeath: 3
 			BallistaDeath: 4
             BurnToDeath: 5
-            SkeletonDeath: 2
+            SkeletonDeath: 5
 		CrushedSequence: die-crushed
         DeathSequencePalette: raplayer
 	Wanders:
