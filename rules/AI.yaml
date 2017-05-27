@@ -5,7 +5,7 @@ Player:
 		BuildingCommonNames:
 			ConstructionYard: factnew
 			Refinery: procnew, zeroproc, bummler, sulmill
-			Power: nukenew,nuk2new, sulnuke,sulnuk2
+			Power: nukenew,nuk2new, sulnuke,sulnuk2,nodnuke,nodnuk2
 			Barracks: barrnew,handnew,sulbarr
 			VehiclesFactory: stall,nodstall,sulmystic
 			Production: barrnew,handnew,stall,nodstall,sulmystic,sulbarr
@@ -50,6 +50,7 @@ Player:
             sulmill: 40%
 			nukenew: 9%
             sulnuke: 9%
+            nodnuke: 9%
 			barrnew: 5%
             sulbarr: 5%
 			handnew: 5%
@@ -62,6 +63,7 @@ Player:
             sultow4: 10%
 			nuk2new: 9%
             sulnuk2: 9%
+            nodnuk2: 9%
 			stall: 9%
             sulmystic: 9%
 			nodstall: 9%

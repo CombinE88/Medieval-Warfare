@@ -643,7 +643,7 @@ NODNUKE:
 	Power:
 		Amount: 3
     Selectable:
-		Bounds: 40,20,0,0
+		Bounds: 40,26,0,0
 	SelectionDecorations:
 		VisualBounds: 40,26,0,0
     SpawnActorOnDeath@Farmer1:
