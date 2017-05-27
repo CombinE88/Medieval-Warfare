@@ -27,10 +27,12 @@ newfact:
         Start: 5
 	damaged-idle3: newfact
 		Start: 9
-    idle4: newfact
-        Start: 10
-	damaged-idle4: newfact
-		Start: 11
+    idle4: newfact2
+        Start: 0
+        Offset: 0, -12
+	damaged-idle4: newfact2
+		Start: 1
+        Offset: 0, -12
 	dead: newfact
 		Start: 2
 		Tick: 800
@@ -173,37 +175,49 @@ nuk2new:
 	icon: nuk2newicon.shp
 		AddExtension: False
         
-nuk3new:
-	idle: nukskin2
-        Start: 18
-	damaged-idle: nukskin2
-		Start: 19
-	dead: nukskin2
-		Start: 20
+nodnuke:
+	idle: 
+        Start: 12
+        Offset: 0,-12
+	damaged-idle: 
+		Start: 13
+        Offset: 0,-12
+	dead: 
+		Start: 14
 		Tick: 800
-	make: nukskin2
-		Length: 15
-        Start: 1
+        Offset: 0,-12
+	make: 
+		Length: 12
+        Start: 0
 		Tick: 80
+        Offset: 0,-12
 	bib: bib3
 		UseTilesetExtension: true
 		Length: *
+    icon: nodnukeicon.shp
+		AddExtension: False
         
-nuk4new:
-	idle: nukskin3
-        Start: 14
-	damaged-idle: nukskin3
-		Start: 15
-	dead: nukskin3
-		Start: 16
+nodnuk2:
+	idle: 
+        Start: 21
+        Offset: 0,-2
+	damaged-idle: 
+		Start: 22
+        Offset: 0,-2
+	dead: 
+		Start: 23
 		Tick: 800
-	make: nukskin3
-		Length: 14
-        Start: 1
+        Offset: 0,-2
+	make: 
+		Length: 21
+        Start: 0
 		Tick: 80
+        Offset: 0,-2
 	bib: bib3
 		UseTilesetExtension: true
 		Length: *
+    icon: nodnuk2icon.shp
+		AddExtension: False
         
 nuk5new:
 	idle: nukskin5

@@ -150,11 +150,11 @@ SpawnSettlers = function(Player)
 	end)
 	
 	huts = Map.ActorsInBox(Map.TopLeft, Map.BottomRight, function(C)
-		return (C.Type == "nukenew" or C.Type == "sulnuke" ) and C.Owner == who
+		return (C.Type == "nukenew" or C.Type == "sulnuke" or C.Type == "nodnuke" ) and C.Owner == who
 	end)
 	
 	largehuts = Map.ActorsInBox(Map.TopLeft, Map.BottomRight, function(C)
-		return (C.Type == "nuk2new" or C.Type == "sulnuk2") and C.Owner == who
+		return (C.Type == "nuk2new" or C.Type == "sulnuk2" or C.Type == "nodnuk2") and C.Owner == who
 	end)
 	
 	Facts = Map.ActorsInBox(Map.TopLeft, Map.BottomRight, function(C)
@@ -277,7 +277,7 @@ SpawnSettlers = function(Player)
 	local Factor = nil
 	
 	here = Map.ActorsInBox(Map.TopLeft, Map.BottomRight, function(C)
-		return (C.Type == "nukenew" or C.Type == "sulnuke" or C.Type == "sulnuk2" or C.Type == "nuk2new" or C.Type == "nuk3new") and C.Owner == who
+		return (C.Type == "nukenew" or C.Type == "sulnuke" or C.Type == "sulnuk2" or C.Type == "nuk2new" or C.Type == "nodnuke" or C.Type == "nodnuk2") and C.Owner == who
 	end)
 	
 	Stuff = Map.ActorsInBox(Map.TopLeft, Map.BottomRight, function(C)

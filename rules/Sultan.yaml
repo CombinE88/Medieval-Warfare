@@ -621,6 +621,8 @@ SULTOW4:
 	Tooltip:
 		Name: Tower of Annihilation
     ProvidesPrerequisite@buildingname:
+    ProvidesPrerequisite@3:
+		Prerequisite: Level4
 	Buildable:
         IconPalette: raicon
 		BuildPaletteOrder: 110

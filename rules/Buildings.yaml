@@ -38,7 +38,10 @@ FACTNEW:
 		SpawnOffset: -426,85,0
 		ExitCell: 0,1
     RenderSprites:
-        Image: newfact
+        FactionImages:
+            nod: newfact
+            gdi: newfact
+            sul: sulfact
         PlayerPalette: raplayer
 	Valued:
 		Cost: 4000
@@ -425,8 +428,8 @@ NUK2NEW:
         IconPalette: raicon
 		BuildPaletteOrder: 80
 		Prerequisites: anyhq, ~techlevel.medium
-		Queue: MBuilding.GDI, MBuilding.Nod
-        Description: Provides more livingspace. Livingspace increases over time by generating peasants.\nCan hold up to 5 peasents, spawntime depends on number of shacks and large huts. \ncheaper than the standard Shack.\n\n\n\n
+		Queue: MBuilding.GDI
+        Description: Provides more livingspace. Livingspace increases over time by generating peasants.\nCan hold up to 3 peasents, spawntime depends on number of shacks and large huts. \ncheaper than the standard Shack.\n\n\n\n
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
@@ -489,15 +492,15 @@ NUKENEW:
     CustomSellValue:
 		Value: 250
 	Tooltip:
-		Name: Shack
+		Name: Small Hut
 	ProvidesPrerequisite:
 		Prerequisite: anypower
 	Buildable:
         IconPalette: raicon
 		BuildPaletteOrder: 10
 		Prerequisites: factnew
-		Description: Generates livingspace. Livingspace increases over time by generating peasants.\nCan hold up to 3 peasents, spawntime depends on number of shacks and large huts.\n\n\n\n
-		Queue: MBuilding.GDI, MBuilding.Nod
+		Description: Generates livingspace. Livingspace increases over time by generating peasants.\nCan hold up to 2 peasents, spawntime depends on number of shacks and large huts.\n\n\n\n
+		Queue: MBuilding.GDI
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
@@ -535,7 +538,7 @@ NUKENEW:
 		Pieces: 2, 3
 		Range: 1c0, 5c0
         
-NUK3NEW:
+NODNUK2:
 	Inherits: ^MWBaseBuilding
     Armor:
 		Type: Concrete
@@ -546,9 +549,15 @@ NUK3NEW:
 	Valued:
 		Cost: 800
 	Tooltip:
-		Name: Large Hut
+		Name: Large Shack
 	ProvidesPrerequisite:
 		Prerequisite: anypower
+	Buildable:
+        IconPalette: raicon
+		BuildPaletteOrder: 80
+		Prerequisites: anyhq, ~techlevel.medium
+		Queue: MBuilding.Nod
+        Description: Provides more livingspace. Livingspace increases over time by generating peasants.\nCan hold up to 3 peasents, spawntime depends on number of shacks and large huts. \ncheaper than the standard Shack.\n\n\n\n
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
@@ -597,8 +606,8 @@ NUK3NEW:
 		Weapons: DebrFurniture1, DebrFurniture2, DebrFurniture3, DebrFurniture4
 		Pieces: 1, 2
 		Range: 1c0, 5c0
-        
-NUK4NEW:
+ 
+NODNUKE:
 	Inherits: ^MWBaseBuilding
     Armor:
 		Type: Concrete
@@ -607,18 +616,24 @@ NUK4NEW:
     RenderSprites:
         PlayerPalette: raplayer
 	Valued:
-		Cost: 500
+		Cost: 350
     CustomSellValue:
-		Value: 250
+		Value: 125
 	Tooltip:
-		Name: Shack
+		Name: Tent
 	ProvidesPrerequisite:
 		Prerequisite: anypower
+	Buildable:
+        IconPalette: raicon
+		BuildPaletteOrder: 10
+		Prerequisites: factnew
+		Description: Generates livingspace. Livingspace increases over time by generating peasants.\nCan hold up to 2 peasents, spawntime depends on number of shacks and large huts.\n\n\n\n
+		Queue: MBuilding.Nod
 	Building:
-		Footprint: xx xx
-		Dimensions: 2,2
+		Footprint: xx
+		Dimensions: 2,1
 	Health:
-		HP: 50000
+		HP: 35000
         Shape: Rectangle
             TopLeft: -924,-825
             BottomRight: 924, 924
@@ -626,64 +641,11 @@ NUK4NEW:
 		Range: 4c0
 	Bib:
 	Power:
-		Amount: 4
+		Amount: 3
     Selectable:
-		Bounds: 48,40,0,9
+		Bounds: 48,20,0,9
 	SelectionDecorations:
-		VisualBounds: 48,53,0,-4
-    SpawnActorOnDeath@Farmer1:
-        Actor: e1new
-        Probability: 33
-        OwnerType: InternalName
-        InternalOwner: Creeps
-    SpawnActorOnDeath@Farmer2:
-        Actor: e1new
-        Probability: 33
-        OwnerType: InternalName
-        InternalOwner: Creeps
-    SpawnActorOnDeath@Farmer3:
-        Actor: e1new
-        Probability: 33
-        OwnerType: InternalName
-        InternalOwner: Creeps
-    ThrowsShrapnel@LARGE:
-		Weapons: DebrFurniture1, DebrFurniture2, DebrFurniture3, DebrFurniture4
-		Pieces: 2, 3
-		Range: 1c0, 5c0
-        
-NUK5NEW:
-	Inherits: ^MWBaseBuilding
-    Armor:
-		Type: Concrete
-    WithDeathAnimation:
-        DeathSequencePalette: raplayer
-    RenderSprites:
-        PlayerPalette: raplayer
-	Valued:
-		Cost: 500
-    CustomSellValue:
-		Value: 250
-	Tooltip:
-		Name: Shack
-	ProvidesPrerequisite:
-		Prerequisite: anypower
-	Building:
-		Footprint: xx xx
-		Dimensions: 2,2
-	Health:
-		HP: 50000
-        Shape: Rectangle
-            TopLeft: -924,-825
-            BottomRight: 924, 924
-	RevealsShroud:
-		Range: 4c0
-	Bib:
-	Power:
-		Amount: 4
-    Selectable:
-		Bounds: 48,40,0,9
-	SelectionDecorations:
-		VisualBounds: 48,53,0,-4
+		VisualBounds: 48,26,0,-4
     SpawnActorOnDeath@Farmer1:
         Actor: e1new
         Probability: 33
