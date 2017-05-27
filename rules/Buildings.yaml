@@ -643,9 +643,9 @@ NODNUKE:
 	Power:
 		Amount: 3
     Selectable:
-		Bounds: 48,20,0,9
+		Bounds: 40,20,0,0
 	SelectionDecorations:
-		VisualBounds: 48,26,0,-4
+		VisualBounds: 40,26,0,0
     SpawnActorOnDeath@Farmer1:
         Actor: e1new
         Probability: 33
