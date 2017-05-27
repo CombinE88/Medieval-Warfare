@@ -1363,9 +1363,9 @@ SULB2:
 		Name: Siege Mortar
 	Mobile:
 		TurnSpeed: 2
-		Speed: 60
+		Speed: 45
 	Health:
-		HP: 16000
+		HP: 11000
         Shape: Capsule
             Radius: 526
             PointA: 0, -412

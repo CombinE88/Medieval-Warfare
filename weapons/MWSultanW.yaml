@@ -283,7 +283,7 @@ DjinElectro:
 		DamageTypes: Prone50Percent, TriggerProne, RippedApartDeath
         
 DualSiegeBalista:
-	ReloadDelay: 75
+	ReloadDelay: 85
 	Range: 11c0
 	MinRange: 2c896
      Burst: 2
@@ -362,9 +362,9 @@ SuperSiegeBallista:
         ImpactSounds: tnkfire2.aud, tnkfire3.aud, tnkfire4.aud, tnkfire6.aud
         
 MortarBoulder:
-	ReloadDelay: 120
-	Range: 14c0
-    MinRange: 4c0
+	ReloadDelay: 140
+	Range: 13c0
+    MinRange: 5c0
 	Report: tnkfire2.aud, tnkfire3.aud, tnkfire4.aud, tnkfire6.aud
     ValidTargets: Ground
     InvalidTargets: Air
@@ -374,7 +374,7 @@ MortarBoulder:
 		Blockable: false
 		LaunchAngle: 126
         Palette: ra
-        Inaccuracy: 3c012
+        Inaccuracy: 4c012
 	Warhead@1Dam: SpreadDamage
 		Spread: 412
 		Damage: 9500
