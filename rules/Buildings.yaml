@@ -39,7 +39,7 @@ FACTNEW:
 		ExitCell: 0,1
     RenderSprites:
         FactionImages:
-            nod: newfact
+            nod: nodfact
             gdi: newfact
             sul: sulfact
         PlayerPalette: raplayer
@@ -1427,8 +1427,8 @@ WORKSHOPNOD:
 	ProvidesPrerequisite@buildingname: 
     RallyPoint:
 	Exit@1:
-		SpawnOffset: -200,200,0
-		ExitCell: 0,2
+		SpawnOffset: 325,512,0
+		ExitCell: 1,2
 	Production:
 		Produces: MSiege.Nod
     ProductionQueue@2:

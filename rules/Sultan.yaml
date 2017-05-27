@@ -826,7 +826,7 @@ SULE1:
 		Queue: MInfantry.SUL
         BuildDuration: 100
     Mobile:
-		Speed: 75
+		Speed: 85
 	Health:
 		HP: 5500
 	Armament:
@@ -930,6 +930,8 @@ SULE3:
 		Range: 2c0
     Passenger:
 		CargoType: Archer
+    Crushable:
+		WarnProbability: 55
         
 SULE4:
 	Inherits: ^Knight
@@ -963,7 +965,7 @@ SULE4:
 		Amount: -2
     -Crushable:
     SelfHealing@HealsConst:
-        Step: 250
+        Step: 900
         HealIfBelow: 100
         Delay: 25
         DamageCooldown: 25
@@ -983,7 +985,7 @@ SULE5:
         Prerequisites: sultow4, anyhq, ~techlevel.high
         Queue: MInfantry.SUL
     Mobile:
-		Speed: 120
+		Speed: 175
 	Health:
 		HP: 21500
 	Armament:
@@ -1008,6 +1010,8 @@ SULE5:
     DamageMultiplier@Runfast:
         Modifier: 50
         RequiresCondition: Runfast
+    Crushable:
+		WarnProbability: 75
         
         
 SULE6:
@@ -1097,6 +1101,8 @@ SULM1:
 		Type: Leather
     DetectCloaked:
 		Range: 2c0
+    Crushable:
+		WarnProbability: 95
         
 SULM1SKELET:
 	Inherits: ^Knight

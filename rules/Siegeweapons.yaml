@@ -9,7 +9,7 @@ MCVNEW:
 		TransformSounds: constru2.aud, hvydoor1.aud
 		NoTransformNotification: BuildingCannotPlaceAudio
 	Valued:
-		Cost: 4000
+		Cost: 3000
 	Tooltip:
 		Name: Supply wagon
 	Buildable:

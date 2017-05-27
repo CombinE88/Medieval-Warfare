@@ -130,7 +130,7 @@ SuperioirPike:
         
 ApprenticeFire:
 	ReloadDelay: 75
-	Range: 5c0
+	Range: 6c0
     ValidTargets: Ground
     InvalidTargets: Air, Structure, Skeleton
     Projectile: Bullet

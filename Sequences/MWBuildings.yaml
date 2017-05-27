@@ -55,6 +55,52 @@ newfact:
 	icon: keepicon.shp
 		AddExtension: False
         
+nodfact:
+	idle: ironore4
+        Start: 9
+    idle0: newfact
+	damaged-idle: newfact
+		Start: 1
+    idle1: newfact
+        Start: 3
+	damaged-idle1: newfact
+		Start: 7
+    idle2: newfact
+        Start: 4
+	damaged-idle2: newfact
+		Start: 8
+    idle3: newfact
+        Start: 5
+	damaged-idle3: newfact
+		Start: 9
+    idle4: nodfact
+        Start: 0
+        Offset: 0, -12
+	damaged-idle4: nodfact
+		Start: 1
+        Offset: 0, -12
+	dead: newfact
+		Start: 2
+		Tick: 800
+    flag1start: newflag
+        Start: 0
+        Length: 9
+        Tick: 120
+        ZOffset: -1024
+    flag1: newflag
+        Start: 9
+        Length: 4
+        Tick: 120
+        ZOffset: -1024
+	make: newfactmake
+		Length: *
+		Tick: 120
+	bib: bib2
+		UseTilesetExtension: true
+		Length: *
+	icon: keepicon.shp
+		AddExtension: False
+        
 missnew:
 	idle: techcenternew
 		Offset: 0,-1
