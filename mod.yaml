@@ -43,6 +43,8 @@ Packages:
     mw|bits/Buildings
     mw|bits/Sultan
 	mw|uibits
+    mw|bits/terrain
+    mw|bits/terrain/Desert
 
 MapFolders:
 	mw|maps: System
