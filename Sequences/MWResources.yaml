@@ -42,61 +42,94 @@ resources:
     wood7: reswoodall
         Length: 5
         Start: 30
-    crop1: rescrop1
+    crop1: rescrop
     	TilesetOverrides:
 			WINTER: TEMPERAT
 			JUNGLE: TEMPERAT
 			SNOW: TEMPERAT
-    crop2: rescrop2
+            DESERT: DESERT
+        Length: 12
+        Start: 0
+    crop2: rescrop
     	TilesetOverrides:
 			WINTER: TEMPERAT
 			JUNGLE: TEMPERAT
 			SNOW: TEMPERAT
-    crop3: rescrop3
+            DESERT: DESERT
+        Length: 12
+        Start: 12    
+    crop3: rescrop
     	TilesetOverrides:
 			WINTER: TEMPERAT
 			JUNGLE: TEMPERAT
 			SNOW: TEMPERAT
-    crop4: rescrop4
+            DESERT: DESERT
+        Length: 12
+        Start: 24
+    crop4: rescrop
     	TilesetOverrides:
 			WINTER: TEMPERAT
 			JUNGLE: TEMPERAT
 			SNOW: TEMPERAT
-    crop5: rescrop5
+            DESERT: DESERT
+        Length: 12
+        Start: 36
+    crop5: rescrop
     	TilesetOverrides:
 			WINTER: TEMPERAT
 			JUNGLE: TEMPERAT
 			SNOW: TEMPERAT
-    crop6: rescrop6
+            DESERT: DESERT
+        Length: 12
+        Start: 48
+    crop6: rescrop
     	TilesetOverrides:
 			WINTER: TEMPERAT
 			JUNGLE: TEMPERAT
 			SNOW: TEMPERAT
-    crop7: rescrop7
+            DESERT: DESERT
+        Length: 12
+        Start: 60
+    crop7: rescrop
     	TilesetOverrides:
 			WINTER: TEMPERAT
 			JUNGLE: TEMPERAT
 			SNOW: TEMPERAT
-    crop8: rescrop8
+            DESERT: DESERT
+        Length: 12
+        Start: 72
+    crop8: rescrop
     	TilesetOverrides:
 			WINTER: TEMPERAT
 			JUNGLE: TEMPERAT
 			SNOW: TEMPERAT
-    crop9: rescrop9
+            DESERT: DESERT
+        Length: 12
+        Start: 84
+    crop9: rescrop
     	TilesetOverrides:
 			WINTER: TEMPERAT
 			JUNGLE: TEMPERAT
 			SNOW: TEMPERAT
-    crop10: rescrop10
+            DESERT: DESERT
+        Length: 12
+        Start: 96
+    crop10: rescrop
     	TilesetOverrides:
 			WINTER: TEMPERAT
 			JUNGLE: TEMPERAT
 			SNOW: TEMPERAT
-    crop11: rescrop11
+            DESERT: DESERT
+        Length: 12
+        Start: 108
+    crop11: rescrop
     	TilesetOverrides:
 			WINTER: TEMPERAT
 			JUNGLE: TEMPERAT
 			SNOW: TEMPERAT
+            DESERT: DESERT
+        Length: 12
+        Start: 120
     gold1: resgol1
     	TilesetOverrides:
 			WINTER: TEMPERAT
@@ -264,46 +297,68 @@ resources:
 			JUNGLE: TEMPERAT
 			SNOW: TEMPERAT
     corn1: rescorn
+        TilesetOverrides:
+            DESERT: DESERT
         Start: 0
         Length: 12
         Offset: 0, -12, 0
     corn2: rescorn
+        TilesetOverrides:
+            DESERT: DESERT
         Start: 12
         Length: 12
         Offset: 0, -12, 0
     corn3: rescorn
+        TilesetOverrides:
+            DESERT: DESERT
         Start: 24
         Length: 12
         Offset: 0, -12, 0
     corn4: rescorn
+        TilesetOverrides:
+            DESERT: DESERT
         Start: 36
         Length: 12
         Offset: 0, -12, 0
     corn5: rescorn
+        TilesetOverrides:
+            DESERT: DESERT
         Start: 48
         Length: 12
         Offset: 0, -12, 0
     corn6: rescorn
+        TilesetOverrides:
+            DESERT: DESERT
         Start: 60
         Length: 12
         Offset: 0, -12, 0
     corn7: rescorn
+        TilesetOverrides:
+            DESERT: DESERT
         Start: 72
         Length: 12
         Offset: 0, -12, 0
     corn8: rescorn
+        TilesetOverrides:
+            DESERT: DESERT
         Start: 84
         Length: 12
         Offset: 0, -12, 0
     corn9: rescorn
+        TilesetOverrides:
+            DESERT: DESERT
         Start: 96
         Length: 12
         Offset: 0, -12, 0
     corn10: rescorn
+        TilesetOverrides:
+            DESERT: DESERT
         Start: 108
         Length: 12
         Offset: 0, -12, 0
     corn11: rescorn
+        TilesetOverrides:
+            DESERT: DESERT
         Start: 120
         Length: 12
         Offset: 0, -12, 0

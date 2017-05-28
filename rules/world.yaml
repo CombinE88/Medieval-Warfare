@@ -55,7 +55,7 @@
         Type: BlueTiberium
     ResourceType@copper-tib:
 		ResourceType: 3
-		Palette: ra
+		Palette: grain
 		TerrainType: Crops
 		Sequences: crop1,crop2,crop3,crop4,crop5,crop6,crop7,crop8,crop9,crop10,crop11
 		MaxDensity: 12
