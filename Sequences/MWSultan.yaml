@@ -1129,24 +1129,24 @@ sulb3feathersmall:
         Facings: 32
         
 sulturnxl:
-    make: 
+    make: sulturn
         Start: 0
         Length: 40
         Tick: 100
-        Offset: -10, -50
-        ZOffset: 1024
-    idle:
+        Offset: 30, -52
+        ZOffset: 2024
+    idle: sulturn
         Start: 40
-        Length: 150
+        Length: 130
         Tick: 100
-        Offset: -10, -50
-        ZOffset: 1024
-    die:
-        Start: 190
+        Offset: 30, -52
+        ZOffset: 2024
+    die: sulturn
+        Start: 180
         Length: 30
         Tick: 100
-        Offset: -10, -50
-        ZOffset: 1024
+        Offset: 30, -52
+        ZOffset: 2024
         
 beacon:
     sulspballiconstiny: sulspballiconstiny

@@ -516,9 +516,9 @@ SULCASTLE:
     SpawnActorPower@Tornado:
 		Prerequisites: ~techlevel.superweapons
 		Icon: sulturnxlicon
-		ChargeTime: 320
+		ChargeTime: 230
         Actor: sulturnxl
-        LifeTime: 1850
+        LifeTime: 2000
 		Description: Tornado\n\n\n\n
 		LongDesc: Devastating!
 		SelectTargetSpeechNotification: SelectTarget
@@ -855,7 +855,7 @@ SULE2:
 		Queue: MInfantry.SUL
         Prerequisites: anyhq
     Mobile:
-		Speed: 50
+		Speed: 56
 	Health:
 		HP: 12000
     Armament@Primary:
@@ -946,9 +946,9 @@ SULE4:
 		Queue: MInfantry.SUL
         Prerequisites: sultow1
     Mobile:
-		Speed: 45
+		Speed: 55
 	Health:
-		HP: 37000
+		HP: 32000
     Armament@Primary:
 		Weapon: SuperioirPike
     AttackFrontal:  
@@ -1713,7 +1713,7 @@ SULTURNXL:
         PlayerPalette: raplayer
     SelfHealing@KILLSELF:
 		PercentageStep: -4
-		Delay: 25
+		Delay: 30
 		HealIfBelow: 101
 		DamageCooldown: 0
         DamageTypes: DefaultDeath
@@ -1730,7 +1730,7 @@ SULTURNXL:
     WithSpriteBody:
         StartSequence: make
     ProximityExternalCondition@KILLEVETRYTHING:
-        Range: 3c512
+        Range: 2c512
         ValidStances: Ally, Enemy, Neutral
         Condition: Tornadodeath
     AmbientSound:

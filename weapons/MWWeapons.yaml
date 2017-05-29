@@ -689,8 +689,7 @@ Sledgehammer:
     ValidTargets: Ground, Trees
     InvalidTargets: Air
     Report: Sounds/jugg-attack.aud
-	Projectile: Bullet
-		Speed: 1c382
+	Projectile: GravityBomb
     Warhead@1Eff: CreateEffect
 		ImpactSounds: Sword02.aud, Sword03.aud, Sword04.aud, Sword06.aud, Sword07.aud
         Delay: 10
@@ -704,7 +703,7 @@ Sledgehammer:
         Delay: 10
         ValidTargets: Ground, Trees
         InvalidTargets: Air
-		Spread: 725
+		Spread: 512
 		Damage: 3000
 		Versus:
 			Leather: 150

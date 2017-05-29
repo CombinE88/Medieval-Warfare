@@ -89,8 +89,8 @@ Terrain:
 		RestrictPlayerColor: true
 
 Templates:
-	Template@2550:
-		Id: 2550
+	Template@255:
+		Id: 255
 		Images: clear1.tem
 		Size: 1,1
 		PickAny: True
