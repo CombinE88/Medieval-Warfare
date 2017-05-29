@@ -1257,7 +1257,23 @@
         Probability: 66
         Actor: SULM1SKELET
         OwnerType: Killer
-
+    ExternalCondition@SNAKES:
+        Condition: snaketrap
+    SelfHealing@SNAKES:
+        Step: -1000
+        HealIfBelow: 110
+        Delay: 25
+        RequiresCondition: snaketrap
+        DamageTypes: PoisonDeath
+    SpeedMultiplier@SNAKES:
+        Modifier: 0
+        RequiresCondition: snaketrap
+    WithIdleOverlay@SNAKES:
+        Sequence: stunned
+        RequiresCondition: snaketrap
+    RangeMultiplier:
+        Modifier: 0
+        RequiresCondition: snaketrap
         
 ^Cavalry:
 	Inherits: ^MedievalInfantry
@@ -1361,6 +1377,18 @@
 		Weapon: LeaveStuff
         EmptyWeapon: LeaveStuff
         Chance: 25
+    ExternalCondition@SNAKES:
+        Condition: snaketrap
+    SelfHealing@SNAKES:
+        PercentageStep: -10
+        Step: -0
+        HealIfBelow: 110
+        Delay: 25
+        RequiresCondition: snaketrap
+        DamageTypes: PoisonDeath
+    SpeedMultiplier@SNAKES:
+        Modifier: 66
+        RequiresCondition: snaketrap
        
 ^Siege:
 	Inherits: ^MedievalInfantry
@@ -1451,6 +1479,21 @@
         Delay: 25
         RequiresCondition: Tornadodeath
         DamageTypes: DefaultDeath
+    ExternalCondition@SNAKES:
+        Condition: snaketrap
+    SelfHealing@SNAKES:
+        PercentageStep: -10
+        Step: -0
+        HealIfBelow: 110
+        Delay: 25
+        RequiresCondition: snaketrap
+        DamageTypes: PoisonDeath
+    SpeedMultiplier@SNAKES:
+        Modifier: 0
+        RequiresCondition: snaketrap
+    WithIdleOverlay@SNAKES:
+        Sequence: stunned
+        RequiresCondition: snaketrap
  
 ^MWAnimal:
 	Inherits: ^MedievalInfantry
@@ -1588,6 +1631,21 @@
         Probability: 66
         Actor: SULM1SKELET
         OwnerType: Killer
+    ExternalCondition@SNAKES:
+        Condition: snaketrap
+    SelfHealing@SNAKES:
+        PercentageStep: -10
+        Step: -0
+        HealIfBelow: 110
+        Delay: 25
+        RequiresCondition: snaketrap
+        DamageTypes: PoisonDeath
+    SpeedMultiplier@SNAKES:
+        Modifier: 0
+        RequiresCondition: snaketrap
+    WithIdleOverlay@SNAKES:
+        Sequence: stunned
+        RequiresCondition: snaketrap
         
 ^MWTalker:
 	Inherits: ^MWWanderer
@@ -1630,6 +1688,21 @@
 		MinMoveDelay: 150
 		MaxMoveDelay: 750
         RequiresCondition: Wander && (Talking || Talkback)
+    ExternalCondition@SNAKES:
+        Condition: snaketrap
+    SelfHealing@SNAKES:
+        PercentageStep: -10
+        Step: -0
+        HealIfBelow: 110
+        Delay: 25
+        RequiresCondition: snaketrap
+        DamageTypes: PoisonDeath
+    SpeedMultiplier@SNAKES:
+        Modifier: 0
+        RequiresCondition: snaketrap
+    WithIdleOverlay@SNAKES:
+        Sequence: stunned
+        RequiresCondition: snaketrap
         
 ^MWConstructor:
 	Inherits: ^MedievalInfantry
@@ -1666,6 +1739,20 @@
 		VoiceSet: CivilianMaleVoice
     WithInfantryBody:
 		StandSequences: stand
+    ExternalCondition@SNAKES:
+        Condition: snaketrap
+    SelfHealing@SNAKES:
+        Step: -1000
+        HealIfBelow: 110
+        Delay: 25
+        RequiresCondition: snaketrap
+        DamageTypes: PoisonDeath
+    SpeedMultiplier@SNAKES:
+        Modifier: 0
+        RequiresCondition: snaketrap
+    WithIdleOverlay@SNAKES:
+        Sequence: stunned
+        RequiresCondition: snaketrap
 
 
 ^Props:

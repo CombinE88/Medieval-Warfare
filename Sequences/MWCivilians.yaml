@@ -26,6 +26,10 @@ mwchick:
 		Tick: 100
 
 mwcivll:
+    stunned: sulm4
+        Start: 312
+        Length: 2
+        Tick: 200
 	stand: mwcivll
         Start: 146
 		Facings: 8
@@ -80,6 +84,10 @@ mwcivll:
         Facings: 8
         
 mwciv1:
+    stunned: sulm4
+        Start: 312
+        Length: 2
+        Tick: 200
 	stand: mwciv1
         Start: 146
 		Facings: 8
@@ -163,6 +171,10 @@ mwciv1:
         Facings: 8
         
 mwciv2:
+    stunned: sulm4
+        Start: 312
+        Length: 2
+        Tick: 200
 	stand: mwciv2
         Start: 146
 		Facings: 8
@@ -246,6 +258,10 @@ mwciv2:
         Facings: 8
         
 mwciv3:
+    stunned: sulm4
+        Start: 312
+        Length: 2
+        Tick: 200
 	stand: mwciv3
         Start: 146
 		Facings: 8
@@ -330,6 +346,10 @@ mwciv3:
         
         
 mwciv4:
+    stunned: sulm4
+        Start: 312
+        Length: 2
+        Tick: 200
 	stand: mwciv4
         Start: 146
 		Facings: 8
@@ -413,6 +433,10 @@ mwciv4:
         Facings: 8
         
 mwciv5:
+    stunned: sulm4
+        Start: 312
+        Length: 2
+        Tick: 200
 	stand: mwciv5
         Start: 146
 		Facings: 8
@@ -495,8 +519,11 @@ mwciv5:
 		Tick: 100
         Facings: 8
         
-        
 mwciv6:
+    stunned: sulm4
+        Start: 312
+        Length: 2
+        Tick: 200
 	stand: mwciv6
         Start: 146
 		Facings: 8
@@ -580,6 +607,10 @@ mwciv6:
         Facings: 8
         
 nobl1:
+    stunned: sulm4
+        Start: 312
+        Length: 2
+        Tick: 200
 	stand: 
         Start: 146
 		Facings: 8
@@ -661,6 +692,10 @@ nobl1:
         Facings: 8
         
 nobl2:
+    stunned: sulm4
+        Start: 312
+        Length: 2
+        Tick: 200
 	stand: 
         Start: 146
 		Facings: 8
@@ -742,6 +777,10 @@ nobl2:
         Facings: 8
         
 nobl3:
+    stunned: sulm4
+        Start: 312
+        Length: 2
+        Tick: 200
 	stand: 
         Start: 146
 		Facings: 8
@@ -823,6 +862,10 @@ nobl3:
         Facings: 8
         
 nobl4:
+    stunned: sulm4
+        Start: 312
+        Length: 2
+        Tick: 200
 	stand: 
         Start: 146
 		Facings: 8
@@ -904,6 +947,10 @@ nobl4:
         Facings: 8
         
 mwciv7:
+    stunned: sulm4
+        Start: 312
+        Length: 2
+        Tick: 200
 	stand: mwciv7
         Start: 146
 		Facings: 8
@@ -963,6 +1010,10 @@ mwciv7:
 		Tick: 100
         
 mwciv8:
+    stunned: sulm4
+        Start: 312
+        Length: 2
+        Tick: 200
 	stand: mwciv8
         Start: 146
 		Facings: 8
@@ -1022,6 +1073,10 @@ mwciv8:
 		Tick: 100
         
 mwciv9:
+    stunned: sulm4
+        Start: 312
+        Length: 2
+        Tick: 200
 	stand: mwciv9
         Start: 146
 		Facings: 8
@@ -1092,6 +1147,10 @@ mwciv9:
 		Tick: 60
         
 mwciv10:
+    stunned: sulm4
+        Start: 312
+        Length: 2
+        Tick: 200
 	stand: 
         Start: 146
 		Facings: 8
@@ -1173,6 +1232,10 @@ mwciv10:
         Facings: 8
         
 mwciv11:
+    stunned: sulm4
+        Start: 312
+        Length: 2
+        Tick: 200
 	stand: 
         Start: 146
 		Facings: 8
@@ -1254,6 +1317,10 @@ mwciv11:
         Facings: 8
         
 mwciv12:
+    stunned: sulm4
+        Start: 312
+        Length: 2
+        Tick: 200
 	stand: 
         Start: 146
 		Facings: 8

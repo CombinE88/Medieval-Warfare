@@ -1203,6 +1203,45 @@ SULM2:
     DetectCloaked:
 		Range: 4c0
     -SpawnActorOnDeath@SCELET:
+    -ExternalCondition@SNAKES:
+    -SelfHealing@SNAKES:
+    -SpeedMultiplier@SNAKES:
+    -WithIdleOverlay@SNAKES:
+    
+SULM4:
+    RevealsShroud:
+		Range: 7c0
+	Inherits: ^Knight
+	Valued:
+		Cost: 600
+	Tooltip:
+		Name: Rattlemystic
+	Buildable:
+		Description: Advanced Anti-infantry unit.\n  Strong vs Infantry\n  Cannot attack Buildings\n  Detects cloaked units\n  Can stun Infantry with summoned snakes\n  Can slow down Cavalry with summoned snakes\n\n
+        IconPalette: raicon
+		BuildPaletteOrder: 80
+		Queue: MVehicle.SUL
+        Prerequisites: sultow4, anyhq
+	Mobile:
+		Speed: 66
+	Health:
+		HP: 10000
+	Armament@Ground:
+		Weapon: Snakes
+	AttackFrontal:
+    AutoTarget:
+		ScanRadius: 7
+        InitialStance: AttackAnything
+    RenderSprites:
+        PlayerPalette: raplayer
+	WithInfantryBody:
+		DefaultAttackSequence: shoot
+    Armor:
+		Type: Leather
+    DetectCloaked:
+		Range: 2c0
+    Crushable:
+		WarnProbability: 95
 
 # Siegeweapons
 

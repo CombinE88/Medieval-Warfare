@@ -48,6 +48,11 @@ sulfact:
 
 
 sule1:
+    stunned: sulm4
+        ZOffset: 125
+        Start: 312
+        Length: 2
+        Tick: 200
 	stand: 
         Start: 122
 		Facings: 8
@@ -107,6 +112,11 @@ sule1:
 		AddExtension: False
         
 sule2:
+    stunned: sulm4
+        ZOffset: 125
+        Start: 312
+        Length: 2
+        Tick: 200
 	stand: 
         Start: 122
 		Facings: 8
@@ -163,6 +173,11 @@ sule2:
 		AddExtension: False
         
 sule3:
+    stunned: sulm4
+        ZOffset: 125
+        Start: 312
+        Length: 2
+        Tick: 200
 	stand: 
         Start: 122
 		Facings: 8
@@ -214,6 +229,11 @@ sule3:
 		AddExtension: False
         
 sule4:
+    stunned: sulm4
+        ZOffset: 125
+        Start: 312
+        Length: 2
+        Tick: 200
 	stand: 
         Start: 122
 		Facings: 8
@@ -262,6 +282,11 @@ sule4:
 		AddExtension: False
         
 sule5:
+    stunned: sulm4
+        ZOffset: 125
+        Start: 312
+        Length: 2
+        Tick: 200
 	stand: 
         Start: 122
 		Facings: 8
@@ -305,6 +330,11 @@ sule5:
 		AddExtension: False
         
 sule6:
+    stunned: sulm4
+        ZOffset: 125
+        Start: 312
+        Length: 2
+        Tick: 200
 	idle: 
         Start: 122
 		Facings: 8
@@ -384,6 +414,11 @@ sule6:
 		AddExtension: False
         
 sulm1:
+    stunned: sulm4
+        ZOffset: 125
+        Start: 312
+        Length: 2
+        Tick: 200
 	stand: 
         Start: 122
 		Facings: 8
@@ -432,6 +467,11 @@ sulm1:
 		AddExtension: False
         
 sulm1skelet:
+    stunned: sulm4
+        ZOffset: 125
+        Start: 312
+        Length: 2
+        Tick: 200
 	stand: 
         Start: 122
 		Facings: 8
@@ -481,6 +521,11 @@ sulm1skelet:
         Tick: 80
         
 sulm2:
+    stunned: sulm4
+        ZOffset: 125
+        Start: 312
+        Length: 2
+        Tick: 200
 	stand: 
         Start: 219
 		Facings: 8
@@ -531,6 +576,11 @@ sulm2:
 		AddExtension: False
         
 sulm3:
+    stunned: sulm4
+        ZOffset: 125
+        Start: 312
+        Length: 2
+        Tick: 200
 	idle: 
         Start: 257
 		Facings: 32
@@ -543,6 +593,62 @@ sulm3:
 		Length: 7
 		Facings: 32
 	icon: sulm3icon.shp
+		AddExtension: False
+        
+sulm4:
+    stunned: sulm4
+        ZOffset: 125
+        Start: 312
+        Length: 2
+        Tick: 200
+	stand: 
+        Start: 122
+		Facings: 8
+	run: 
+		Start: 0
+		Length: 8
+		Facings: 8
+		Tick: 100
+	shoot: 
+        Tick: 100
+		Start: 66
+		Length: 7
+		Facings: 8
+    idle1: 
+        Tick: 80
+		Start: 190
+		Length: 21
+    idle2: 
+        Tick: 80
+		Start: 211
+		Length: 21
+	die1: 
+		Start: 131
+		Length: 16
+		Tick: 80
+	# large hit
+	die2: splatterdead
+		Length: *
+        Tick: 80
+	# poision
+	die3: 
+		Start: 163
+		Length: 14
+		Tick: 80
+	# ballista
+	die4: 
+		Start: 179
+		Length: 11
+		Tick: 80
+	die-crushed: e1rot
+		Start: 16
+		Length: 4
+		Tick: 1600
+		ZOffset: -511
+    die5: burningman
+        Length: *
+        Tick: 80
+	icon: sulm4icon.shp
 		AddExtension: False
         
 sulm3.husk:
@@ -1119,6 +1225,13 @@ sulspball:
 smbllboltdown:     
     idle: smallaaballarrow
 		Start: 16
+        
+snakemissil:     
+    idle: sulm4
+		Start: 288
+        Tick: 80
+        Facings: 8
+        Length: 3
         
 sulb3feather:     
     idle: 

@@ -543,3 +543,42 @@ SonicRaptorSoundLess:
     Warhead@5Eff: CreateEffect
 		ImpactSounds: Sword02.aud, Sword03.aud, Sword04.aud, Sword06.aud, Sword07.aud
         
+        
+Snakes:
+	ReloadDelay: 85
+	Range: 5c512
+	MinRange: 0
+    InvalidTargets: Wall, Air, Structure
+    ValidTargets: Ground
+	Projectile: Missile
+     Projectile: Missile
+        HorizontalRateOfTurn: 60
+        RangeLimit: 8c204
+        Arm: 0
+		Speed: 100
+		LaunchAngle: 46
+		Inaccuracy: 0c0
+		Image: snakemissil
+        Palette: ra
+	Warhead@1Snakes: GrantExternalCondition
+        Range: 0c204
+        Duration: 100
+        Condition: snaketrap
+        ValidStances: Enemy, Neutral, Ally
+    Warhead@2Dam: SpreadDamage
+		Spread: 20
+        InvalidTargets: Wall, Air, Structure
+        ValidTargets: Ground
+		Damage: 500
+		Versus:
+			Leather: 100
+			Light: 100
+			Heavy: 100
+            Concrete: 100
+            Knight: 100
+            LightCavalry: 100
+            MediumCavalry: 100
+            HeavyCavalry: 100
+            HeavyBuilding: 100
+            Spectral: 50
+		DamageTypes: Prone50Percent, TriggerProne, PoisonDeath

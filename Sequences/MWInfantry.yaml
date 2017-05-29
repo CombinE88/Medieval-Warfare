@@ -99,6 +99,11 @@ deathdealer:
 		AddExtension: False
  
 e1new:
+    stunned: sulm4
+        ZOffset: 125
+        Start: 312
+        Length: 2
+        Tick: 200
 	stand: newe1
         Start: 122
 		Facings: 8
@@ -150,6 +155,11 @@ e1new:
 		AddExtension: False
         
 engeneer:
+    stunned: sulm4
+        ZOffset: 125
+        Start: 312
+        Length: 2
+        Tick: 200
 	stand: baumei
         Start: 122
 		Facings: 8
@@ -206,6 +216,11 @@ engeneer:
 		AddExtension: False        
         
 e2new:
+    stunned: sulm4
+        ZOffset: 125
+        Start: 312
+        Length: 2
+        Tick: 200
 	stand: e2new
         Start: 122
 		Facings: 8
@@ -258,6 +273,11 @@ e2new:
 		AddExtension: False
         
 newcomm:
+    stunned: sulm4
+        ZOffset: 125
+        Start: 312
+        Length: 2
+        Tick: 200
 	stand: newcomm
         Start: 122
 		Facings: 8
@@ -307,6 +327,11 @@ newcomm:
         Start: 9 
         
 e2newv2:
+    stunned: sulm4
+        ZOffset: 125
+        Start: 312
+        Length: 2
+        Tick: 200
 	stand: e2newv2
         Start: 122
 		Facings: 8
@@ -367,6 +392,11 @@ e2newv2:
 		AddExtension: False
         
 firmag:
+    stunned: sulm4
+        ZOffset: 125
+        Start: 312
+        Length: 2
+        Tick: 200
 	stand: frmge
         Start: 122
 		Facings: 8
@@ -419,7 +449,11 @@ firmag:
 		AddExtension: False
 
 thief:
-    Defaults:
+    stunned: sulm4
+        ZOffset: 125
+        Start: 312
+        Length: 2
+        Tick: 200
 	stand: thief
         Start: 122
 		Facings: 8
@@ -481,6 +515,11 @@ thief:
 		AddExtension: False
         
 e3new:
+    stunned: sulm4
+        ZOffset: 125
+        Start: 312
+        Length: 2
+        Tick: 200
 	stand: e3new
         Start: 122
 		Facings: 8
@@ -532,6 +571,11 @@ e3new:
 		AddExtension: False
         
 e3newv2:
+    stunned: sulm4
+        ZOffset: 125
+        Start: 312
+        Length: 2
+        Tick: 200
 	stand: e3newv2
         Start: 122
 		Facings: 8
@@ -583,6 +627,11 @@ e3newv2:
 		AddExtension: False
         
 mongolknife:
+    stunned: sulm4
+        ZOffset: 125
+        Start: 312
+        Length: 2
+        Tick: 200
 	stand: mongolknife
         Start: 122
 		Facings: 8
@@ -634,6 +683,11 @@ mongolknife:
 		AddExtension: False
         
 mongol:
+    stunned: sulm4
+        ZOffset: 125
+        Start: 312
+        Length: 2
+        Tick: 200
 	stand: mongol
         Start: 122
 		Facings: 8
@@ -685,6 +739,11 @@ mongol:
 		AddExtension: False 
         
 e4new:
+    stunned: sulm4
+        ZOffset: 125
+        Start: 312
+        Length: 2
+        Tick: 200
 	stand: e4new
         Start: 122
 		Facings: 8
@@ -735,6 +794,11 @@ e4new:
 		AddExtension: False
         
 e4newv2:
+    stunned: sulm4
+        ZOffset: 125
+        Start: 312
+        Length: 2
+        Tick: 200
 	stand: e4newv2
         Start: 122
 		Facings: 8
@@ -785,6 +849,11 @@ e4newv2:
 		AddExtension: False
 
 rmbonew:
+    stunned: sulm4
+        ZOffset: 125
+        Start: 312
+        Length: 2
+        Tick: 200
 	stand: rmbonew
         Start: 122
 		Facings: 8
@@ -836,6 +905,11 @@ rmbonew:
 		AddExtension: False  
         
 e5new:
+    stunned: sulm4
+        ZOffset: 125
+        Start: 312
+        Length: 2
+        Tick: 200
 	stand: e5new
         Start: 149
 		Facings: 8
@@ -887,6 +961,11 @@ e5new:
 		AddExtension: False
         
 e8farmer:
+    stunned: sulm4
+        ZOffset: 125
+        Start: 312
+        Length: 2
+        Tick: 200
 	idle: e8farmer
         Start: 122
 		Facings: 8
@@ -966,6 +1045,11 @@ e8farmer:
 		AddExtension: False
         
 bummler:
+    stunned: sulm4
+        ZOffset: 125
+        Start: 312
+        Length: 2
+        Tick: 200
 	idle: bummler
         Start: 122
 		Facings: 8
@@ -1019,6 +1103,11 @@ bummler:
 		AddExtension: False
         
 mwcivconst:
+    stunned: sulm4
+        ZOffset: 125
+        Start: 312
+        Length: 2
+        Tick: 200
 	stand: mwcivconst
         Start: 146
 		Facings: 8
@@ -1067,6 +1156,11 @@ mwcivconst:
 		Tick: 60
         
 mwlumber:
+    stunned: sulm4
+        ZOffset: 125
+        Start: 312
+        Length: 2
+        Tick: 200
 	stand: 
         Start: 146
 		Facings: 8
