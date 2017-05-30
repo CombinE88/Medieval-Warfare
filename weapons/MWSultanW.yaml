@@ -266,7 +266,7 @@ DjinElectro:
 	Projectile: TeslaZap
 	Warhead@1Dam: SpreadDamage
 		Spread: 42
-		Damage: 4100
+		Damage: 5200
         ValidTargets: Ground, Air
 		Versus:
 			None: 100
@@ -451,20 +451,20 @@ CarpetBomber:
         Palette: ra
 	Warhead@1Dam: SpreadDamage
 		Spread: 375
-		Damage: 2750
+		Damage: 3750
         ValidTargets: Ground
         InvalidTargets: Air
 		Versus:
-            Leather: 100
-			Light: 90
-			Heavy: 80
+            Leather: 200
+			Light: 170
+			Heavy: 140
             Concrete: 65
-            Knight: 35
+            Knight: 65
             LightCavalry: 90
             MediumCavalry: 75
             HeavyCavalry: 55
             HeavyBuilding: 75
-            Spectral: 55
+            Spectral: 75
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
 	Warhead@2Smu: LeaveSmudge
 		SmudgeType: Scorch
@@ -543,17 +543,37 @@ SonicRaptorSoundLess:
     Warhead@5Eff: CreateEffect
 		ImpactSounds: Sword02.aud, Sword03.aud, Sword04.aud, Sword06.aud, Sword07.aud
         
-        
+
 Snakes:
-	ReloadDelay: 85
+    ReloadDelay: 85
 	Range: 5c512
 	MinRange: 0
     InvalidTargets: Wall, Air, Structure
     ValidTargets: Ground
+    Projectile: InstantExplode
+    Warhead@1Snakes: FireShrapnel
+        Weapon: SnakesSmall
+        InvalidTargets: Wall, Air, Structure
+        ValidTargets: Ground
+        AimChance: 100
+        AllowDirectHit: true
+        AimTargetStances: Enemy, Neutral
+    Warhead@2Dam: SpreadDamage
+		Spread: 20
+        InvalidTargets: Wall, Air, Structure
+        ValidTargets: Ground
+		Damage: 0
+		DamageTypes: Prone50Percent, TriggerProne, PoisonDeath
+        
+SnakesSmall:
+	ReloadDelay: 85
+	Range: 7c0
+	MinRange: 0
+    InvalidTargets: Wall, Air, Structure
+    ValidTargets: Ground
 	Projectile: Missile
-     Projectile: Missile
         HorizontalRateOfTurn: 60
-        RangeLimit: 8c204
+        RangeLimit: 8c0
         Arm: 0
 		Speed: 100
 		LaunchAngle: 46
@@ -564,7 +584,7 @@ Snakes:
         Range: 0c204
         Duration: 100
         Condition: snaketrap
-        ValidStances: Enemy, Neutral, Ally
+        ValidStances: Enemy, Neutral
     Warhead@2Dam: SpreadDamage
 		Spread: 20
         InvalidTargets: Wall, Air, Structure

@@ -438,7 +438,7 @@ SULCASTLE:
     WithIdleOverlay@Tower2:
         StartSequence: tower2make
         Sequence: tower2
-        Offset: -1024, 1024, 0
+        Offset: -1124, 1024, 0
         RequiresCondition: Tower2build
     GrantConditionOnPrerequisite@Tower3:
         Condition: Tower3build
@@ -446,7 +446,7 @@ SULCASTLE:
     WithIdleOverlay@Tower3:
         StartSequence: tower3make
         Sequence: tower3
-        Offset: -1024, -1024, 0
+        Offset: -1124, -1024, 0
         RequiresCondition: Tower3build
     GrantConditionOnPrerequisite@Tower4:
         Condition: Tower4build
@@ -1169,20 +1169,20 @@ SULM2:
 		Range: 6c0
 	Inherits: ^Knight
 	Valued:
-		Cost: 777
+		Cost: 850
 	Tooltip:
 		Name: Djinn
 	Buildable:
 		Description: Advanced Multi-Role unit.\n  Can only badly hurt by magical or fire weapons.\n  Moderate vs Everything\n  Weak vs Buildings\n  Detects cloaked units at a very large area\n  Can attack Aircrafts\n\n
         IconPalette: raicon
-        Prerequisites: sultow2, anyhq
+        Prerequisites: sultow4, anyhq
 		BuildPaletteOrder: 70
 		Queue: MVehicle.SUL
 	Mobile:
 		Speed: 66
 	-Crushable:
     Health:
-		HP: 10000
+		HP: 20000
 	Armament@Ground:
 		Weapon: DjinElectro
         LocalOffset: 141,75,352
@@ -1219,9 +1219,9 @@ SULM4:
 	Buildable:
 		Description: Advanced Anti-infantry unit.\n  Strong vs Infantry\n  Cannot attack Buildings\n  Detects cloaked units\n  Can stun Infantry with summoned snakes\n  Can slow down Cavalry with summoned snakes\n\n
         IconPalette: raicon
-		BuildPaletteOrder: 80
+		BuildPaletteOrder: 60
 		Queue: MVehicle.SUL
-        Prerequisites: sultow4, anyhq
+        Prerequisites: sultow2, anyhq
 	Mobile:
 		Speed: 66
 	Health:

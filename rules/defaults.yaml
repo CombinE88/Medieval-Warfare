@@ -1434,6 +1434,14 @@
 		Weapon: LeaveStuff
         EmptyWeapon: LeaveStuff
         Chance: 25
+    ExternalCondition@SNAKES:
+        Condition: snaketrap
+    SelfHealing@SNAKES:
+        Step: -500
+        HealIfBelow: 110
+        Delay: 25
+        RequiresCondition: snaketrap
+        DamageTypes: PoisonDeath
         
 ^MWCiv:
 	Inherits: ^Infantry

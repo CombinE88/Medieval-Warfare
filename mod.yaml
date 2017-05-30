@@ -116,6 +116,7 @@ Chrome:
 Assemblies:
 	common|OpenRA.Mods.Common.dll
 	common|OpenRA.Mods.Cnc.dll
+    mw|OpenRA.Mods.AS.dll
 
 ChromeLayout:
 	mw|chrome/mainmenu.yaml
