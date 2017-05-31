@@ -4,17 +4,17 @@ ORNI:
 		Cost: 1200
 	Tooltip:
 		Name: Ornithopter
-    ThrowsShrapnel:
+	ThrowsShrapnel:
 		Weapons: SmallWood2, SmallWood3
 		Pieces: 1, 3
 		Range: 1c512, 4c0
-    Buildable:
+	Buildable:
 		Description: The Ornithopter is an aircraft that flies by flapping its wings.\n  Strong vs Buildings, Cavalry\n  Weak vs Infantry\n  Moderate vs Aircrafts\n  Can attack Aircrafts\n\n\n
 		BuildPaletteOrder: 40
 		Prerequisites: anyhq
 		Queue: MSiege.GDI
 		BuildDurationModifier: 40
-        IconPalette: raicon
+		IconPalette: raicon
 	Aircraft:
 		CruiseAltitude: 2560
 		InitialFacing: 192
@@ -34,9 +34,9 @@ ORNI:
 		LocalOffset: 1024,0,-213
 	AttackPlane:
 		FacingTolerance: 20
-    RenderSprites:
-        Image: ornito
-        PlayerPalette: raplayer
+	RenderSprites:
+		Image: ornito
+		PlayerPalette: raplayer
 	AmmoPool:
 		Ammo: 6
 		PipCount: 6
@@ -45,7 +45,7 @@ ORNI:
 		SelfReloadDelay: 125
 	WithMoveAnimation:
 		MoveSequence: move
-    SpawnActorOnDeath:
+	SpawnActorOnDeath:
 		Actor: ORNI.Husk
 	AutoTarget:
 		TargetWhenIdle: false
@@ -54,28 +54,28 @@ ORNI:
 	ReturnOnIdle:
 	SelectionDecorations:
 		VisualBounds: 48,32
-    Power:
+	Power:
 		Amount: -2
-    Voiced:
+	Voiced:
 		VoiceSet: VehicleVoice
-    SmokeTrailWhenDamaged:
+	SmokeTrailWhenDamaged:
 		Offset: -853,0,0
 		Interval: 2
-    
+	
 WARKITE:
 	Inherits: ^Helicopter
-    Inherits@EXPERIENCE: ^GainsExperience
+	Inherits@EXPERIENCE: ^GainsExperience
 	Valued:
 		Cost: 1000
 	Tooltip:
 		Name: WarKite
-    Buildable:
+	Buildable:
 		Description: The Warkite is a manned heavier-than-air craft with wing surfaces \nthat react against the air to create lift and drag.\n  Strong vs Infantry\n  Weak vs Cavalry and Buildings\n  Moderate vs Aircrafts\n  Can attack Aircrafts\n\n\n
 		BuildPaletteOrder: 40
 		Prerequisites: anyhq
 		Queue: MSiege.Nod
 		BuildDurationModifier: 40
-        IconPalette: raicon
+		IconPalette: raicon
 	Aircraft:
 		RearmBuildings: hpad
 		InitialFacing: 224
@@ -93,9 +93,9 @@ WARKITE:
 		LocalOffset: 341,0,456
 	AttackHeli:
 		FacingTolerance: 20
-    RenderSprites:
-        Image: warkite
-        PlayerPalette: raplayer
+	RenderSprites:
+		Image: warkite
+		PlayerPalette: raplayer
 	AmmoPool:
 		Ammo: 10
 		PipCount: 5
@@ -107,29 +107,29 @@ WARKITE:
 		AttackSequence: attack
 	SelectionDecorations:
 		VisualBounds: 48,32
-    Power:
+	Power:
 		Amount: -2
-    Voiced:
+	Voiced:
 		VoiceSet: VehicleVoice
-    SpawnActorOnDeath@1:
+	SpawnActorOnDeath@1:
 		Actor: WARKITEMAN.Husk
-    SpawnActorOnDeath@2:
+	SpawnActorOnDeath@2:
 		Actor: WARKITEKITE.Husk
-      
+	  
 DRGNRDR:
 	Inherits: ^Helicopter
-    Inherits@EXPERIENCE: ^GainsExperience
+	Inherits@EXPERIENCE: ^GainsExperience
 	Valued:
 		Cost: 2000
 	Tooltip:
 		Name: Dragon Rider
-    Buildable:
+	Buildable:
 		Description: The Dragon Rider is a legendary creature, \ntypically scaled or fire-spewing and with serpentine, \nreptilian or avian traits mounted and controlled by a Tamer.\n  Strong vs Infantry, Buildings and Aircrafts\n  Moderate vs Cavalry\n  Can attack Aircrafts\n\n\n
 		BuildPaletteOrder: 100
 		Prerequisites: anycastle
 		Queue: MSiege.GDI
 		BuildDurationModifier: 40
-        IconPalette: raicon
+		IconPalette: raicon
 	Aircraft:
 		RearmBuildings: hpad
 		InitialFacing: 224
@@ -145,14 +145,14 @@ DRGNRDR:
 	Armament@Ground:
 		Weapon: dragonfire
 		LocalOffset: 1024,0,-213
-    Armament@Air:
+	Armament@Air:
 		Weapon: dragonfireair
 		LocalOffset: 1024,0,-213
 	AttackHeli:
 		FacingTolerance: 20
-    RenderSprites:
-        Image: drgnrdr
-        PlayerPalette: raplayer
+	RenderSprites:
+		Image: drgnrdr
+		PlayerPalette: raplayer
 	AmmoPool:
 		Ammo: 15
 		PipCount: 5
@@ -164,23 +164,23 @@ DRGNRDR:
 	AutoTarget:
 	SelectionDecorations:
 		VisualBounds: 48,32
-    Explodes:
+	Explodes:
 		Weapon: DragonFlame
 		EmptyWeapon: DragonFlame
-    Power:
+	Power:
 		Amount: -5
-    Voiced:
+	Voiced:
 		VoiceSet: DragonVoice
-    SpawnActorOnDeath@Prime:
-        Actor: DRGNEMPTY
-        Probability: 33
-        OwnerType: InternalName
-        InternalOwner: Neutral
+	SpawnActorOnDeath@Prime:
+		Actor: DRGNEMPTY
+		Probability: 33
+		OwnerType: InternalName
+		InternalOwner: Neutral
 
-        
+		
 DRAGONWALK:
 	Inherits: ^Siege
-    -Explodes@Tib:
+	-Explodes@Tib:
 	Valued:
 		Cost: 2500
 	Tooltip:
@@ -193,69 +193,69 @@ DRAGONWALK:
 	Armament:
 		Weapon: Dragonbite
 	AttackFrontal:
-    AutoTarget:
+	AutoTarget:
 		ScanRadius: 11
-    RenderSprites:
-        Image: drgngrnd
-        PlayerPalette: raplayer
+	RenderSprites:
+		Image: drgngrnd
+		PlayerPalette: raplayer
 	WithInfantryBody:
 		IdleSequences: stand
 		DefaultAttackSequence: shoot
-    Armor:
+	Armor:
 		Type: HeavyCavalry
-    Selectable:
+	Selectable:
 		Bounds: 35,35,0,-6
-    Targetable:
+	Targetable:
 		TargetTypes: Ground, Siege
-    SelfHealing@Rotaway:
-        PercentageStep: -100
-        Step: -0
-        HealIfBelow: 110
-        Delay: 1
-        RequiresCondition: DragonGroundDead
-        DamageTypes: DefaultDeath
-    -ThrowsShrapnel@SMALL:
-    WithDeathAnimation:
-        DeathSequencePalette: raplayer
-        DeathTypes:
+	SelfHealing@Rotaway:
+		PercentageStep: -100
+		Step: -0
+		HealIfBelow: 110
+		Delay: 1
+		RequiresCondition: DragonGroundDead
+		DamageTypes: DefaultDeath
+	-ThrowsShrapnel@SMALL:
+	WithDeathAnimation:
+		DeathSequencePalette: raplayer
+		DeathTypes:
 			DefaultDeath: 1
 			RippedApartDeath: 1
 			PoisonDeath: 1
 			BallistaDeath: 1
-            BurnToDeath: 1
-    Power:
+			BurnToDeath: 1
+	Power:
 		Amount: 0
-    Voiced:
+	Voiced:
 		VoiceSet: DragonVoice
-    ExternalCondition@INSTANT:
-        Condition: DragonGroundDead
-    AttackWander: 
-        WanderMoveRadius: 3
+	ExternalCondition@INSTANT:
+		Condition: DragonGroundDead
+	AttackWander: 
+		WanderMoveRadius: 3
 		MinMoveDelay: 50
 		MaxMoveDelay: 750
-    
+	
 DAVINCI:
 	Inherits: ^Helicopter
-    Inherits@EXPERIENCE: ^GainsExperience
+	Inherits@EXPERIENCE: ^GainsExperience
 	Valued:
 		Cost: 2500
 	ThrowsShrapnel:
 		Weapons: SmallWood2, SmallWood3
 		Pieces: 2, 5
 		Range: 1c512, 3c0
-    Tooltip:
+	Tooltip:
 		Name: Strange Aircraft
 	Aircraft:
 		RearmBuildings: hpad
 		InitialFacing: 224
 		TurnSpeed: 100
 		Speed: 55
-    Buildable:
+	Buildable:
 		BuildPaletteOrder: 100
 		Prerequisites: anycastle, ~disabled
 		Queue: MSiege.GDI, MSiege.Nod
 		BuildDurationModifier: 40
-        IconPalette: raicon
+		IconPalette: raicon
 	Health:
 		HP: 30000
 	Armor:
@@ -268,38 +268,38 @@ DAVINCI:
 		LocalOffset: 1024,0,-213
 	AttackHeli:
 		FacingTolerance: 20
-    RenderSprites:
-        Image: davinci
-        PlayerPalette: raplayer
+	RenderSprites:
+		Image: davinci
+		PlayerPalette: raplayer
 	SpawnActorOnDeath:
 		Actor: DAVINCI.Husk
 	AutoTarget:
 		ScanRadius: 5
-        InitialStance: AttackAnything
+		InitialStance: AttackAnything
 	SelectionDecorations:
 		VisualBounds: 36,36
-    Explodes:
+	Explodes:
 		Weapon: HeliExplode
 		EmptyWeapon: HeliExplode
-    Power:
+	Power:
 		Amount: 0
-    Voiced:
+	Voiced:
 		VoiceSet: VehicleVoice
-       
+	   
 WRBLN:
 	Inherits: ^Helicopter
-    Inherits@EXPERIENCE: ^GainsExperience
+	Inherits@EXPERIENCE: ^GainsExperience
 	Valued:
 		Cost: 1700
 	Tooltip:
 		Name: War Balloon
-    Buildable:
+	Buildable:
 		Description: The War Balloon is a lighter than air aircraft consisting\n of a bag, called an envelope, which contains heated air. An Soldier with a double barreled crossbow stands at the front.\n  Strong vs Infantry and Aircrafts\n  Moderate vs Cavalry and Buildings\n  Can attack Aircrafts\n\n\n
 		BuildPaletteOrder: 100
 		Prerequisites: anycastle
 		Queue: MSiege.Nod
 		BuildDurationModifier: 40
-        IconPalette: raicon
+		IconPalette: raicon
 	Aircraft:
 		RearmBuildings: hpad
 		InitialFacing: 224
@@ -317,9 +317,9 @@ WRBLN:
 		LocalOffset: 404,100,513, 404,-100,513
 	AttackHeli:
 		FacingTolerance: 20
-    RenderSprites:
-        Image: wrblln
-        PlayerPalette: raplayer
+	RenderSprites:
+		Image: wrblln
+		PlayerPalette: raplayer
 	AmmoPool:
 		Ammo: 14
 		PipCount: 5
@@ -329,24 +329,24 @@ WRBLN:
 	SpawnActorOnDeath:
 		Actor: WRBLN.Husk
 	AutoTarget:
-    Explodes:
+	Explodes:
 		Weapon: Balloonpop
 		EmptyWeapon: Balloonpop
-    Power:
+	Power:
 		Amount: -5
-    WithAttackAnimation:
-        AttackSequence: attack
-    SelectionDecorations:
+	WithAttackAnimation:
+		AttackSequence: attack
+	SelectionDecorations:
 		VisualBounds: 48,48,0,-24
-    Voiced:
+	Voiced:
 		VoiceSet: BalloonVoice
-              
+			  
 PLACEHOLDERPLANE:
 	Inherits: ^Plane
-    -AppearsOnRadar:
-    RenderSprites:
-        Image: placeholder
-        Palette: empty
+	-AppearsOnRadar:
+	RenderSprites:
+		Image: placeholder
+		Palette: empty
 	Tooltip:
 		Name:
 	Valued:
@@ -371,13 +371,13 @@ PLACEHOLDERPLANE:
 	Armament@BOMBS:
 		Name: bombs
 		Weapon: none
-        
+		
 PLACEHOLDERFLAMESTRIKE:
 	Inherits: ^Plane
-    -AppearsOnRadar:
-    RenderSprites:
-        Image: placeholder
-        Palette: empty
+	-AppearsOnRadar:
+	RenderSprites:
+		Image: placeholder
+		Palette: empty
 	Tooltip:
 		Name:
 	Valued:
@@ -387,8 +387,8 @@ PLACEHOLDERFLAMESTRIKE:
 		Speed: 303
 		Repulsable: False
 		AirborneCondition: airborne
-        CruiseAltitude: 3c0
-        IdealSeparation: 0c512
+		CruiseAltitude: 3c0
+		IdealSeparation: 0c512
 	Health:
 		HP: 15000
 	Armor:
@@ -400,13 +400,13 @@ PLACEHOLDERFLAMESTRIKE:
 	Armament@GUNS:
 		Name: gun
 		Weapon: firebarrage
-        LocalOffset: 0,0,-43, 0,100,-43, 0,100,-43
+		LocalOffset: 0,0,-43, 0,100,-43, 0,100,-43
 	WithMuzzleOverlay:
 	Armament@BOMBS:
 		Name: bombs
 		Weapon: firebarrage
-        LocalOffset: 0,0,-43, 0,100,-43, 0,100,-43
-    
+		LocalOffset: 0,0,-43, 0,100,-43, 0,100,-43
+	
 DELBIR:
 	Inherits: ^Plane
 	Tooltip:
@@ -419,8 +419,8 @@ DELBIR:
 		Repulsable: False
 		AirborneCondition: airborne
 		MaximumPitch: 36
-    RenderSprites:
-        PlayerPalette: raplayer
+	RenderSprites:
+		PlayerPalette: raplayer
 	Health:
 		HP: 2500
 	Armor:
@@ -436,11 +436,11 @@ DELBIR:
 	Contrail@2:
 		Offset: -85,-384,150
 		TrailLength: 16
-        TrailWidth:0c32
+		TrailWidth:0c32
 	Contrail@3:
 		Offset: -85,384,150
 		TrailLength: 16
-        TrailWidth:0c32
-    WithIdleAnimation:
-        Sequences: active
-        Interval: 25
+		TrailWidth:0c32
+	WithIdleAnimation:
+		Sequences: active
+		Interval: 25

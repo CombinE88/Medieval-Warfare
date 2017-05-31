@@ -1,51 +1,51 @@
 FACTNEW:
-    Inherits: ^MWBaseBuilding
-    GrantConditionOnPrerequisite@4:
-        Prerequisites: vehicleproduction
-        Condition: visibility
-    GrantConditionOnPrerequisite@1:
-        Prerequisites: barracks
-        Condition: visibility
-    GrantConditionOnPrerequisite@2:
-        Prerequisites: Level3
-        Condition: visibility
-    GrantConditionOnPrerequisite@3:
-        Prerequisites: Level4
-        Condition: visibility
-    WithSpriteBody:     
-    WithIdleOverlay@Lv0:
-        Sequence: idle0
-        RequiresCondition: !visibility
-    WithIdleOverlay@Lv1:
-        Sequence: idle1
-        RequiresCondition: visibility == 1
-    WithIdleOverlay@Lv2:
-        Sequence: idle2
-        RequiresCondition: visibility == 2
-    WithIdleOverlay@Lv3:
-        Sequence: idle3
-        RequiresCondition: visibility == 3
-    WithIdleOverlay@Lv4:
-        Sequence: idle4
-        RequiresCondition: visibility == 4
+	Inherits: ^MWBaseBuilding
+	GrantConditionOnPrerequisite@4:
+		Prerequisites: vehicleproduction
+		Condition: visibility
+	GrantConditionOnPrerequisite@1:
+		Prerequisites: barracks
+		Condition: visibility
+	GrantConditionOnPrerequisite@2:
+		Prerequisites: Level3
+		Condition: visibility
+	GrantConditionOnPrerequisite@3:
+		Prerequisites: Level4
+		Condition: visibility
+	WithSpriteBody:	 
+	WithIdleOverlay@Lv0:
+		Sequence: idle0
+		RequiresCondition: !visibility
+	WithIdleOverlay@Lv1:
+		Sequence: idle1
+		RequiresCondition: visibility == 1
+	WithIdleOverlay@Lv2:
+		Sequence: idle2
+		RequiresCondition: visibility == 2
+	WithIdleOverlay@Lv3:
+		Sequence: idle3
+		RequiresCondition: visibility == 3
+	WithIdleOverlay@Lv4:
+		Sequence: idle4
+		RequiresCondition: visibility == 4
 	BodyOrientation:
 		QuantizedFacings: 8
-    Selectable:
+	Selectable:
 		Bounds:72,48,0,9
 	SelectionDecorations:
 		VisualBounds: 72,53,0,-4
-    Exit@1:
+	Exit@1:
 		SpawnOffset: -426,85,0
 		ExitCell: 0,1
-    RenderSprites:
-        FactionImages:
-            nod: nodfact
-            gdi: newfact
-            sul: sulfact
-        PlayerPalette: raplayer
+	RenderSprites:
+		FactionImages:
+			nod: nodfact
+			gdi: newfact
+			sul: sulfact
+		PlayerPalette: raplayer
 	Valued:
 		Cost: 3000
-    CustomSellValue:
+	CustomSellValue:
 		Value: 1500
 	Tooltip:
 		Name: Keep
@@ -54,9 +54,9 @@ FACTNEW:
 		Dimensions: 3,2
 	Health:
 		HP: 200000
-        Shape: Rectangle
-            TopLeft: -1436,-924
-            BottomRight: 1436, 924
+		Shape: Rectangle
+			TopLeft: -1436,-924
+			BottomRight: 1436, 924
 	Armor:
 		Type: Concrete
 	RevealsShroud:
@@ -96,7 +96,7 @@ FACTNEW:
 		LowPowerSlowdown: 2
 		QueuedAudio: Building
 		ReadyAudio: ConstructionComplete
-    ProductionQueue@SULBuilding:
+	ProductionQueue@SULBuilding:
 		Type: MBuilding.SUL
 		Factions: sul
 		Group: Building
@@ -119,7 +119,7 @@ FACTNEW:
 		ProductionType: MDefenses.GDI
 	ProductionBar@DefNod:
 		ProductionType: MDefenses.Nod
-    ProductionBar@BuildingSUL:
+	ProductionBar@BuildingSUL:
 		ProductionType: MBuilding.SUL
 	ProductionBar@DefSUL:
 		ProductionType: MDefenses.SUL
@@ -128,24 +128,24 @@ FACTNEW:
 		Range: 14c0
 	Power:
 		Amount: 10
-	ProvidesPrerequisite@buildingname:        
-    WithDeathAnimation:
-        DeathSequencePalette: raplayer
-    ThrowsShrapnel@LARGE:
+	ProvidesPrerequisite@buildingname:		
+	WithDeathAnimation:
+		DeathSequencePalette: raplayer
+	ThrowsShrapnel@LARGE:
 		Weapons: LargeWood1, LargeStone1, DebrUtility1, DebrUtility2, DebrUtility3
 		Pieces: 1, 2
 		Range: 1c0, 5c0
-    ProximityExternalCondition@LABORER:
-        Range: 3c0
-        ValidStances: Ally
-        Condition: Labor
-    Targetable:
+	ProximityExternalCondition@LABORER:
+		Range: 3c0
+		ValidStances: Ally
+		Condition: Labor
+	Targetable:
 		TargetTypes: Ground, C4, Structure, Wanderer, Laborer
-    ProvidesRadar:
-        
+	ProvidesRadar:
+		
 
-    
-        
+	
+		
  
 FACTNEW.GDI:
 	Inherits: FACTNEW
@@ -156,11 +156,11 @@ FACTNEW.GDI:
 		BuildPaletteOrder: 1000
 		Prerequisites: ~disabled
 		ForceFaction: gdi
-        IconPalette: raicon
-        Description: Constructs your village
+		IconPalette: raicon
+		Description: Constructs your village
 	Tooltip:
 		Name: Construction Yard (GDI)
-    ThrowsShrapnel@LARGE:
+	ThrowsShrapnel@LARGE:
 		Weapons: LargeWood1, LargeStone1, DebrUtility1, DebrUtility2, DebrUtility3
 		Pieces: 1, 2
 		Range: 1c0, 5c0
@@ -174,41 +174,41 @@ FACTNEW.NOD:
 		BuildPaletteOrder: 1000
 		Prerequisites: ~disabled
 		ForceFaction: nod
-        IconPalette: raicon
-        Description: Constructs your village
+		IconPalette: raicon
+		Description: Constructs your village
 	Tooltip:
 		Name: Construction Yard (Nod)
-    ThrowsShrapnel@LARGE:
+	ThrowsShrapnel@LARGE:
 		Weapons: LargeWood1, LargeStone1, DebrUtility1, DebrUtility2, DebrUtility3
 		Pieces: 1, 2
 		Range: 1c0, 5c0
-        
+		
 HQNEWNOD:
 	Inherits: ^MWBaseBuilding
-    Armor:
+	Armor:
 		Type: Concrete
-    WithDeathAnimation:
-        DeathSequencePalette: raplayer
+	WithDeathAnimation:
+		DeathSequencePalette: raplayer
 	Valued:
 		Cost: 1200
-    CustomSellValue:
+	CustomSellValue:
 		Value: 500
 	Tooltip:
 		Name: Smith
 	ProvidesPrerequisite@buildingname:
-    ProvidesPrerequisite:
+	ProvidesPrerequisite:
 		Prerequisite: anyhq
-    ProvidesPrerequisite@3:
+	ProvidesPrerequisite@3:
 		Prerequisite: Level3
 	RenderSprites:
-        Image: hqnew
-        PlayerPalette: raplayer
-    Buildable:
-        IconPalette: raicon
+		Image: hqnew
+		PlayerPalette: raplayer
+	Buildable:
+		IconPalette: raicon
 		BuildPaletteOrder: 70
 		Prerequisites: proc, ~techlevel.medium
 		Queue: MBuilding.Nod, MBuilding.GDI
-        Description: Unlocks higher-tech units and buildings.\n\n\n\n
+		Description: Unlocks higher-tech units and buildings.\n\n\n\n
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
@@ -218,47 +218,47 @@ HQNEWNOD:
 		VisualBounds: 48,53,0,-4
 	Health:
 		HP: 70000
-        Shape: Rectangle
-            TopLeft: -924,-825
-            BottomRight: 924, 924
+		Shape: Rectangle
+			TopLeft: -924,-825
+			BottomRight: 924, 924
 	RevealsShroud:
 		Range: 10c0
 	Bib:
 	Power:
 		Amount: -2 
-    ThrowsShrapnel@LARGE:
+	ThrowsShrapnel@LARGE:
 		Weapons: DebrAnvil1, DebrUtility1, DebrUtility2, DebrUtility3
 		Pieces: 1, 2
 		Range: 1c0, 5c0
-    FreeActor@1:
+	FreeActor@1:
 		Actor: mwwand7
 		SpawnOffset: 1,2
 		Facing: 64
-        
+		
 ARMORYNOD:
 	Inherits: ^MWBaseBuilding
-    ProvidesPrerequisite:
+	ProvidesPrerequisite:
 		Prerequisite: anyarmory
-    Armor:
+	Armor:
 		Type: Concrete
-    WithDeathAnimation:
-        DeathSequencePalette: raplayer
+	WithDeathAnimation:
+		DeathSequencePalette: raplayer
 	Valued:
 		Cost: 1750
-    CustomSellValue:
+	CustomSellValue:
 		Value: 875
 	Tooltip:
 		Name: Armory
 	ProvidesPrerequisite@buildingname:
 	RenderSprites:
-        Image: armory
-        PlayerPalette: raplayer
-    Buildable:
-        IconPalette: raicon
+		Image: armory
+		PlayerPalette: raplayer
+	Buildable:
+		IconPalette: raicon
 		BuildPaletteOrder: 75
 		Prerequisites: anyhq, ~techlevel.medium
 		Queue: MBuilding.Nod
-        Description: Unlocks Support Powers and Raiding Squad.\nHeals Cavalry and Infantry.\n\n\n\n
+		Description: Unlocks Support Powers and Raiding Squad.\nHeals Cavalry and Infantry.\n\n\n\n
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
@@ -275,9 +275,9 @@ ARMORYNOD:
 		PauseAnimationWhenDisabled: true
 	Health:
 		HP: 90000
-        Shape: Rectangle
-            TopLeft: -924,-825
-            BottomRight: 924, 924
+		Shape: Rectangle
+			TopLeft: -924,-825
+			BottomRight: 924, 924
 	RevealsShroud:
 		Range: 5c0
 	Bib:
@@ -286,11 +286,11 @@ ARMORYNOD:
 		Range: 5c0
 	Power:
 		Amount: -4
-    AirstrikePower:
+	AirstrikePower:
 		Prerequisites: ~techlevel.superweapons
 		Icon: cadaver
 		ChargeTime: 210
-        SquadOffset	-206,206,0
+		SquadOffset	-206,206,0
 		SquadSize: 2
 		QuantizedFacings: 8
 		Description: Throw plague cropse
@@ -304,53 +304,53 @@ ARMORYNOD:
 		BeaconPoster: cadaver
 		BeaconPosterPalette: beaconposter
 		DisplayRadarPing: True
-        CameraActor: camera
-        ArrowSequence: arrow
-        ClockSequence: clock
-        CircleSequence: circles
-        OrderName: CorpsePowerInfoOrder
-        CameraRemoveDelay: 75
-    SupportPowerChargeBar:  
-    ThrowsShrapnel@LARGE:
+		CameraActor: camera
+		ArrowSequence: arrow
+		ClockSequence: clock
+		CircleSequence: circles
+		OrderName: CorpsePowerInfoOrder
+		CameraRemoveDelay: 75
+	SupportPowerChargeBar:  
+	ThrowsShrapnel@LARGE:
 		Weapons: LargeWood1, LargeWood1, LargeStone1, LargeStone1
 		Pieces: 1, 2
 		Range: 1c0, 5c0
-    FreeActor@1:
+	FreeActor@1:
 		Actor: mwcivcom
 		SpawnOffset: 1,2
 		Facing: 64
-    ProximityExternalCondition@HEAL:
-        Range: 5c0
-        ValidStances: Ally
-        Condition: hospitalhealbarr
-    WithRangeCircle: 
-        ValidStances: Ally, Neutral
-        Range: 5c0
-        
+	ProximityExternalCondition@HEAL:
+		Range: 5c0
+		ValidStances: Ally
+		Condition: hospitalhealbarr
+	WithRangeCircle: 
+		ValidStances: Ally, Neutral
+		Range: 5c0
+		
 ARMORYGDI:
 	Inherits: ^MWBaseBuilding
-    ProvidesPrerequisite:
+	ProvidesPrerequisite:
 		Prerequisite: anyarmory
-    Armor:
+	Armor:
 		Type: Concrete
-    WithDeathAnimation:
-        DeathSequencePalette: raplayer
+	WithDeathAnimation:
+		DeathSequencePalette: raplayer
 	Valued:
 		Cost: 1750
-    CustomSellValue:
+	CustomSellValue:
 		Value: 875
 	Tooltip:
 		Name: Armory
 	ProvidesPrerequisite@buildingname:
 	RenderSprites:
-        Image: armorygdi
-        PlayerPalette: raplayer
-    Buildable:
-        IconPalette: raicon
+		Image: armorygdi
+		PlayerPalette: raplayer
+	Buildable:
+		IconPalette: raicon
 		BuildPaletteOrder: 75
 		Prerequisites: anyhq, ~techlevel.medium
 		Queue: MBuilding.GDI
-        Description: Unlocks Support Powers.\nHeals Cavalry and Infantry.\n\n\n\n
+		Description: Unlocks Support Powers.\nHeals Cavalry and Infantry.\n\n\n\n
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
@@ -367,9 +367,9 @@ ARMORYGDI:
 		PauseAnimationWhenDisabled: true
 	Health:
 		HP: 90000
-        Shape: Rectangle
-            TopLeft: -924,-825
-            BottomRight: 924, 924
+		Shape: Rectangle
+			TopLeft: -924,-825
+			BottomRight: 924, 924
 	RevealsShroud:
 		Range: 5c0
 	Bib:
@@ -378,11 +378,11 @@ ARMORYGDI:
 		Range: 5c0
 	Power:
 		Amount: -4
-    AirstrikePower:
+	AirstrikePower:
 		Prerequisites: ~techlevel.superweapons
 		Icon: firestorm
 		ChargeTime: 210
-        SquadOffset	-236,236,0
+		SquadOffset	-236,236,0
 		SquadSize: 3
 		QuantizedFacings: 8
 		Description: Pulverising Fire Storm
@@ -396,117 +396,117 @@ ARMORYGDI:
 		BeaconPoster: firestormbeacon
 		BeaconPosterPalette: beaconposter
 		DisplayRadarPing: True
-        CameraActor: camera
-        ArrowSequence: arrow
-        ClockSequence: clock
-        CircleSequence: circles
-        OrderName: ArrowsPowerInfoOrder
-    SupportPowerChargeBar:  
-    ThrowsShrapnel@LARGE:
+		CameraActor: camera
+		ArrowSequence: arrow
+		ClockSequence: clock
+		CircleSequence: circles
+		OrderName: ArrowsPowerInfoOrder
+	SupportPowerChargeBar:  
+	ThrowsShrapnel@LARGE:
 		Weapons: LargeWood1, LargeWood1, LargeStone1, LargeStone1
 		Pieces: 1, 2
 		Range: 1c0, 5c0
-    FreeActor@1:
+	FreeActor@1:
 		Actor: mwcivcom
 		SpawnOffset: 1,2
 		Facing: 64
-    ProximityExternalCondition@HEAL:
-        Range: 5c0
-        ValidStances: Ally
-        Condition: hospitalhealbarr
-    WithRangeCircle: 
-        ValidStances: Ally, Neutral
-        Range: 5c0
-        
+	ProximityExternalCondition@HEAL:
+		Range: 5c0
+		ValidStances: Ally
+		Condition: hospitalhealbarr
+	WithRangeCircle: 
+		ValidStances: Ally, Neutral
+		Range: 5c0
+		
 NUK2NEW:
 	Inherits: ^MWBaseBuilding
-    Armor:
+	Armor:
 		Type: Concrete
-    WithDeathAnimation:
-        DeathSequencePalette: raplayer
-    RenderSprites:
-        PlayerPalette: raplayer
+	WithDeathAnimation:
+		DeathSequencePalette: raplayer
+	RenderSprites:
+		PlayerPalette: raplayer
 	Valued:
 		Cost: 800
-    CustomSellValue:
+	CustomSellValue:
 		Value: 400
 	Tooltip:
 		Name: Large Hut
 	ProvidesPrerequisite:
 		Prerequisite: anypower
 	Buildable:
-        IconPalette: raicon
+		IconPalette: raicon
 		BuildPaletteOrder: 80
 		Prerequisites: anyhq, ~techlevel.medium
 		Queue: MBuilding.GDI
-        Description: Provides more livingspace. Livingspace increases over time by generating peasants.\nCan hold up to 3 peasents, spawntime depends on number of shacks and large huts. \ncheaper than the standard Shack.\n\n\n\n
+		Description: Provides more livingspace. Livingspace increases over time by generating peasants.\nCan hold up to 3 peasents, spawntime depends on number of shacks and large huts. \ncheaper than the standard Shack.\n\n\n\n
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
 	CustomSellValue:
 		Value: 400
-    Health:
+	Health:
 		HP: 70000
-        Shape: Rectangle
-            TopLeft: -924,-825
-            BottomRight: 924, 924
+		Shape: Rectangle
+			TopLeft: -924,-825
+			BottomRight: 924, 924
 	RevealsShroud:
 		Range: 4c0
 	Bib:
 	Power:
 		Amount: 12
-    Selectable:
+	Selectable:
 		Bounds: 48,40,0,9
 	SelectionDecorations:
 		VisualBounds: 48,53,0,-4
-    SpawnActorOnDeath@Farmer1:
-        Actor: e1new
-        Probability: 33
-        OwnerType: InternalName
-        InternalOwner: Creeps
-    SpawnActorOnDeath@Farmer2:
-        Actor: e1new
-        Probability: 33
-        OwnerType: InternalName
-        InternalOwner: Creeps
-    SpawnActorOnDeath@Farmer3:
-        Actor: e1new
-        Probability: 33
-        OwnerType: InternalName
-        InternalOwner: Creeps
-    SpawnActorOnDeath@Farmer4:
-        Actor: e1new
-        Probability: 33
-        OwnerType: InternalName
-        InternalOwner: Creeps
-    SpawnActorOnDeath@Farmer5:
-        Actor: e1new
-        Probability: 33
-        OwnerType: InternalName
-        InternalOwner: Creeps
-    ThrowsShrapnel@LARGE:
+	SpawnActorOnDeath@Farmer1:
+		Actor: e1new
+		Probability: 33
+		OwnerType: InternalName
+		InternalOwner: Creeps
+	SpawnActorOnDeath@Farmer2:
+		Actor: e1new
+		Probability: 33
+		OwnerType: InternalName
+		InternalOwner: Creeps
+	SpawnActorOnDeath@Farmer3:
+		Actor: e1new
+		Probability: 33
+		OwnerType: InternalName
+		InternalOwner: Creeps
+	SpawnActorOnDeath@Farmer4:
+		Actor: e1new
+		Probability: 33
+		OwnerType: InternalName
+		InternalOwner: Creeps
+	SpawnActorOnDeath@Farmer5:
+		Actor: e1new
+		Probability: 33
+		OwnerType: InternalName
+		InternalOwner: Creeps
+	ThrowsShrapnel@LARGE:
 		Weapons: DebrFurniture1, DebrFurniture2, DebrFurniture3, DebrFurniture4
 		Pieces: 1, 2
 		Range: 1c0, 5c0
  
 NUKENEW:
 	Inherits: ^MWBaseBuilding
-    Armor:
+	Armor:
 		Type: Concrete
-    WithDeathAnimation:
-        DeathSequencePalette: raplayer
-    RenderSprites:
-        PlayerPalette: raplayer
+	WithDeathAnimation:
+		DeathSequencePalette: raplayer
+	RenderSprites:
+		PlayerPalette: raplayer
 	Valued:
 		Cost: 500
-    CustomSellValue:
+	CustomSellValue:
 		Value: 250
 	Tooltip:
 		Name: Small Hut
 	ProvidesPrerequisite:
 		Prerequisite: anypower
 	Buildable:
-        IconPalette: raicon
+		IconPalette: raicon
 		BuildPaletteOrder: 10
 		Prerequisites: factnew
 		Description: Generates livingspace. Livingspace increases over time by generating peasants.\nCan hold up to 2 peasents, spawntime depends on number of shacks and large huts.\n\n\n\n
@@ -516,127 +516,127 @@ NUKENEW:
 		Dimensions: 2,2
 	Health:
 		HP: 50000
-        Shape: Rectangle
-            TopLeft: -924,-825
-            BottomRight: 924, 924
+		Shape: Rectangle
+			TopLeft: -924,-825
+			BottomRight: 924, 924
 	RevealsShroud:
 		Range: 4c0
 	Bib:
 	Power:
 		Amount: 4
-    Selectable:
+	Selectable:
 		Bounds: 48,40,0,9
 	SelectionDecorations:
 		VisualBounds: 48,53,0,-4
-    SpawnActorOnDeath@Farmer1:
-        Actor: e1new
-        Probability: 33
-        OwnerType: InternalName
-        InternalOwner: Creeps
-    SpawnActorOnDeath@Farmer2:
-        Actor: e1new
-        Probability: 33
-        OwnerType: InternalName
-        InternalOwner: Creeps
-    SpawnActorOnDeath@Farmer3:
-        Actor: e1new
-        Probability: 33
-        OwnerType: InternalName
-        InternalOwner: Creeps
-    ThrowsShrapnel@LARGE:
+	SpawnActorOnDeath@Farmer1:
+		Actor: e1new
+		Probability: 33
+		OwnerType: InternalName
+		InternalOwner: Creeps
+	SpawnActorOnDeath@Farmer2:
+		Actor: e1new
+		Probability: 33
+		OwnerType: InternalName
+		InternalOwner: Creeps
+	SpawnActorOnDeath@Farmer3:
+		Actor: e1new
+		Probability: 33
+		OwnerType: InternalName
+		InternalOwner: Creeps
+	ThrowsShrapnel@LARGE:
 		Weapons: DebrFurniture1, DebrFurniture2, DebrFurniture3, DebrFurniture4
 		Pieces: 2, 3
 		Range: 1c0, 5c0
-        
+		
 NODNUK2:
 	Inherits: ^MWBaseBuilding
-    Armor:
+	Armor:
 		Type: Concrete
-    WithDeathAnimation:
-        DeathSequencePalette: raplayer
-    RenderSprites:
-        PlayerPalette: raplayer
+	WithDeathAnimation:
+		DeathSequencePalette: raplayer
+	RenderSprites:
+		PlayerPalette: raplayer
 	Valued:
 		Cost: 800
-    CustomSellValue:
+	CustomSellValue:
 		Value: 400
 	Tooltip:
 		Name: Large Shack
 	ProvidesPrerequisite:
 		Prerequisite: anypower
 	Buildable:
-        IconPalette: raicon
+		IconPalette: raicon
 		BuildPaletteOrder: 80
 		Prerequisites: anyhq, ~techlevel.medium
 		Queue: MBuilding.Nod
-        Description: Provides more livingspace. Livingspace increases over time by generating peasants.\nCan hold up to 3 peasents, spawntime depends on number of shacks and large huts. \ncheaper than the standard Shack.\n\n\n\n
+		Description: Provides more livingspace. Livingspace increases over time by generating peasants.\nCan hold up to 3 peasents, spawntime depends on number of shacks and large huts. \ncheaper than the standard Shack.\n\n\n\n
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
 	CustomSellValue:
 		Value: 400
-    Health:
+	Health:
 		HP: 70000
-        Shape: Rectangle
-            TopLeft: -924,-825
-            BottomRight: 924, 924
+		Shape: Rectangle
+			TopLeft: -924,-825
+			BottomRight: 924, 924
 	RevealsShroud:
 		Range: 4c0
 	Bib:
 	Power:
 		Amount: 12
-    Selectable:
+	Selectable:
 		Bounds: 48,40,0,9
 	SelectionDecorations:
 		VisualBounds: 48,53,0,-4
-    SpawnActorOnDeath@Farmer1:
-        Actor: e1new
-        Probability: 33
-        OwnerType: InternalName
-        InternalOwner: Creeps
-    SpawnActorOnDeath@Farmer2:
-        Actor: e1new
-        Probability: 33
-        OwnerType: InternalName
-        InternalOwner: Creeps
-    SpawnActorOnDeath@Farmer3:
-        Actor: e1new
-        Probability: 33
-        OwnerType: InternalName
-        InternalOwner: Creeps
-    SpawnActorOnDeath@Farmer4:
-        Actor: e1new
-        Probability: 33
-        OwnerType: InternalName
-        InternalOwner: Creeps
-    SpawnActorOnDeath@Farmer5:
-        Actor: e1new
-        Probability: 33
-        OwnerType: InternalName
-        InternalOwner: Creeps
-    ThrowsShrapnel@LARGE:
+	SpawnActorOnDeath@Farmer1:
+		Actor: e1new
+		Probability: 33
+		OwnerType: InternalName
+		InternalOwner: Creeps
+	SpawnActorOnDeath@Farmer2:
+		Actor: e1new
+		Probability: 33
+		OwnerType: InternalName
+		InternalOwner: Creeps
+	SpawnActorOnDeath@Farmer3:
+		Actor: e1new
+		Probability: 33
+		OwnerType: InternalName
+		InternalOwner: Creeps
+	SpawnActorOnDeath@Farmer4:
+		Actor: e1new
+		Probability: 33
+		OwnerType: InternalName
+		InternalOwner: Creeps
+	SpawnActorOnDeath@Farmer5:
+		Actor: e1new
+		Probability: 33
+		OwnerType: InternalName
+		InternalOwner: Creeps
+	ThrowsShrapnel@LARGE:
 		Weapons: DebrFurniture1, DebrFurniture2, DebrFurniture3, DebrFurniture4
 		Pieces: 1, 2
 		Range: 1c0, 5c0
  
 NODNUKE:
 	Inherits: ^MWBaseBuilding
-    Armor:
+	Armor:
 		Type: Concrete
-    WithDeathAnimation:
-        DeathSequencePalette: raplayer
-    RenderSprites:
-        PlayerPalette: raplayer
+	WithDeathAnimation:
+		DeathSequencePalette: raplayer
+	RenderSprites:
+		PlayerPalette: raplayer
 	Valued:
 		Cost: 350
-    CustomSellValue:
+	CustomSellValue:
 		Value: 125
 	Tooltip:
 		Name: Tent
 	ProvidesPrerequisite:
 		Prerequisite: anypower
 	Buildable:
-        IconPalette: raicon
+		IconPalette: raicon
 		BuildPaletteOrder: 10
 		Prerequisites: factnew
 		Description: Generates livingspace. Livingspace increases over time by generating peasants.\nCan hold up to 2 peasents, spawntime depends on number of shacks and large huts.\n\n\n\n
@@ -646,47 +646,47 @@ NODNUKE:
 		Dimensions: 2,1
 	Health:
 		HP: 35000
-        Shape: Rectangle
-            TopLeft: -924,-825
-            BottomRight: 924, 924
+		Shape: Rectangle
+			TopLeft: -924,-825
+			BottomRight: 924, 924
 	RevealsShroud:
 		Range: 4c0
 	Bib:
 	Power:
 		Amount: 3
-    Selectable:
+	Selectable:
 		Bounds: 40,26,0,0
 	SelectionDecorations:
 		VisualBounds: 40,26,0,0
-    SpawnActorOnDeath@Farmer1:
-        Actor: e1new
-        Probability: 33
-        OwnerType: InternalName
-        InternalOwner: Creeps
-    SpawnActorOnDeath@Farmer2:
-        Actor: e1new
-        Probability: 33
-        OwnerType: InternalName
-        InternalOwner: Creeps
-    SpawnActorOnDeath@Farmer3:
-        Actor: e1new
-        Probability: 33
-        OwnerType: InternalName
-        InternalOwner: Creeps
-    ThrowsShrapnel@LARGE:
+	SpawnActorOnDeath@Farmer1:
+		Actor: e1new
+		Probability: 33
+		OwnerType: InternalName
+		InternalOwner: Creeps
+	SpawnActorOnDeath@Farmer2:
+		Actor: e1new
+		Probability: 33
+		OwnerType: InternalName
+		InternalOwner: Creeps
+	SpawnActorOnDeath@Farmer3:
+		Actor: e1new
+		Probability: 33
+		OwnerType: InternalName
+		InternalOwner: Creeps
+	ThrowsShrapnel@LARGE:
 		Weapons: DebrFurniture1, DebrFurniture2, DebrFurniture3, DebrFurniture4
 		Pieces: 2, 3
 		Range: 1c0, 5c0
  
 ZEROPROC:
 	Inherits: ^MWBaseBuilding
-    Armor:
+	Armor:
 		Type: Concrete
-    WithDeathAnimation:
-        DeathSequencePalette: raplayer
-    RenderSprites:
-        Image: windmill
-        PlayerPalette: raplayer
+	WithDeathAnimation:
+		DeathSequencePalette: raplayer
+	RenderSprites:
+		Image: windmill
+		PlayerPalette: raplayer
 	Valued:
 		Cost: 1300
 	Tooltip:
@@ -694,7 +694,7 @@ ZEROPROC:
 	ProvidesPrerequisite:
 		Prerequisite: proc
 	Buildable:
-        IconPalette: raicon
+		IconPalette: raicon
 		BuildPaletteOrder: 30
 		Prerequisites: anypower
 		Description: Provides basic resource gathering for Crops and Grain.\n Comes with 2 farmers.\n Can only operate up to 6 farmers at once.\n\n\n\n
@@ -704,98 +704,98 @@ ZEROPROC:
 		Dimensions: 2,3
 	Health:
 		HP: 80000
-        Shape: Rectangle
-            TopLeft: -824,-754
-            BottomRight: 824, 924
+		Shape: Rectangle
+			TopLeft: -824,-754
+			BottomRight: 824, 924
 	RevealsShroud:
 		Range: 3c0
 	Bib:
-    CustomSellValue:
+	CustomSellValue:
 		Value: 200
 	Power:
 		Amount: -2
 	ProvidesPrerequisite@buildingname:
 	Selectable:
 		Bounds: 48,70,0,5
-    SelectionDecorations:
+	SelectionDecorations:
 		VisualBounds: 48,70,0,5
-    ThrowsShrapnel@LARGE:
+	ThrowsShrapnel@LARGE:
 		Weapons: DebrUtility1, DebrUtility2, DebrUtility3
 		Pieces: 1, 2
 		Range: 1c0, 5c0
-    Refinery:
+	Refinery:
 		DockAngle: 72
 		DockOffset: 1,3
-        TickRate: 5
+		TickRate: 5
 	StoresResources:
 		PipColor: Yellow
 		PipCount: 5
 		Capacity: 1000
-    CustomSellValue:
+	CustomSellValue:
 		Value: 500
 	FreeActor@1:
 		Actor: e8farmer
 		SpawnOffset: 1,2
 		Facing: 64
-    FreeActor@2:
+	FreeActor@2:
 		Actor: e8farmer
 		SpawnOffset: 1,2
 		Facing: 64
-    FreeActor@3:
+	FreeActor@3:
 		Actor: GHOSTPROC
 		SpawnOffset: 0,0
 		Facing: 64
-    ProximityExternalCondition@KILL:
-        Range: 1c0
-        ValidStances: Ally
-        Condition: KillRef
-        
+	ProximityExternalCondition@KILL:
+		Range: 1c0
+		ValidStances: Ally
+		Condition: KillRef
+		
 PROC:
 	Tooltip:
 		Name: Ore Refinery or Farm
-        
+		
  
 GHOSTPROC:
 	Inherits@1: ^ExistsInWorld
 	Inherits@2: ^SpriteActor
-    ExternalCondition@Killself:
-        Condition: KillRef
-    KillsSelf:
-        Delay: 25
-        RequiresCondition: !KillRef
+	ExternalCondition@Killself:
+		Condition: KillRef
+	KillsSelf:
+		Delay: 25
+		RequiresCondition: !KillRef
 	FrozenUnderFog:
-    RenderSprites:
-        Image: ghostmill
-        PlayerPalette: raplayer
-    Building:
+	RenderSprites:
+		Image: ghostmill
+		PlayerPalette: raplayer
+	Building:
 		Footprint: __ == ==
 		Dimensions: 2,3
-        Adjacent: 4
+		Adjacent: 4
 		RequiresBaseProvider: true
 		BuildSounds: constru2.aud, hvydoor1.aud
 		TerrainTypes: Clear,Road
-    WithSpriteBody:
-        Sequence: idle
-    Refinery:
+	WithSpriteBody:
+		Sequence: idle
+	Refinery:
 		DockAngle: 72
 		DockOffset: 0,3
-        TickRate: 5
+		TickRate: 5
  
-    
+	
 PROCNEW:
 	Inherits: ^MWBaseBuilding
-    Armor:
+	Armor:
 		Type: Concrete
-    WithDeathAnimation:
-        DeathSequencePalette: raplayer
-    RenderSprites:
-        PlayerPalette: raplayer
+	WithDeathAnimation:
+		DeathSequencePalette: raplayer
+	RenderSprites:
+		PlayerPalette: raplayer
 	Valued:
 		Cost: 1500
 	Tooltip:
 		Name: Ore Refinery
 	Buildable:
-        IconPalette: raicon
+		IconPalette: raicon
 		BuildPaletteOrder: 75
 		Prerequisites: anyhq
 		Description: Processes raw ore and Gold into useable metal.\nGenerates ore money than the windmill.\n\n\n\n
@@ -805,16 +805,16 @@ PROCNEW:
 		Dimensions: 3,3
 	Health:
 		HP: 120000
-        Shape: Rectangle
-            TopLeft: -1436,-756
-            BottomRight: 1436, 924
+		Shape: Rectangle
+			TopLeft: -1436,-756
+			BottomRight: 1436, 924
 	RevealsShroud:
 		Range: 6c0
 	Bib:
 	Refinery:
 		DockAngle: 72
 		DockOffset: 2,2
-        TickRate: 4
+		TickRate: 4
 	StoresResources:
 		PipColor: Yellow
 		PipCount: 10
@@ -830,24 +830,24 @@ PROCNEW:
 	Power:
 		Amount: -5
 	ProvidesPrerequisite:
-        Prerequisite: proc
+		Prerequisite: proc
 	SelectionDecorations:
 		VisualBounds: 73,72
-    ProvidesPrerequisite@buildingname:
-    ThrowsShrapnel@LARGE:
+	ProvidesPrerequisite@buildingname:
+	ThrowsShrapnel@LARGE:
 		Weapons: LargeWood1, LargeStone1, DebrUtility1, DebrUtility2, DebrUtility3
 		Pieces: 1, 2
 		Range: 1c0, 5c0
-        
-        
+		
+		
  
 SILONEW:
 	Inherits: ^MWBaseBuilding
 	Armor:
 		Type: HeavyBuilding
-    Valued:
+	Valued:
 		Cost: 300
-    CustomSellValue:
+	CustomSellValue:
 		Value: 150
 	Tooltip:
 		Name: Smelter
@@ -856,25 +856,25 @@ SILONEW:
 		Prerequisites: proc
 		Queue: MDefenses.GDI, MDefenses.Nod, MDefenses.SUL
 		Description: Stores additional Ore\n\n\n\n
-        IconPalette: raicon
+		IconPalette: raicon
 	Building:
 		Footprint: _x xx
 		Dimensions: 2,2
 	-GivesBuildableArea:
 	Health:
 		HP: 40000
-        Shape: Rectangle
-            TopLeft: -724, -424
-            BottomRight: 924, 924
+		Shape: Rectangle
+			TopLeft: -724, -424
+			BottomRight: 924, 924
 	RevealsShroud:
 		Range: 4c0
 	Bib:
 		HasMinibib: Yes
 	WithDeathAnimation:
-        DeathSequencePalette: raplayer
-    RenderSprites:
-        Image: silonew
-        PlayerPalette: raplayer
+		DeathSequencePalette: raplayer
+	RenderSprites:
+		Image: silonew
+		PlayerPalette: raplayer
 	WithSpriteBody:
 	AutoSelectionSize:
 	WithSiloAnimation:
@@ -889,20 +889,20 @@ SILONEW:
 		RequiredForShortGame: false
 	SelectionDecorations:
 		VisualBounds: 50,50
-    Selectable:
+	Selectable:
 		Bounds: 50,50,0,3
  
 TROJAN:
 	Inherits: ^MWBaseBuilding
-    Armor:
+	Armor:
 		Type: Knight
-    WithDeathAnimation:
-        DeathSequencePalette: raplayer
-    RenderSprites:
-        Image: trojanhorse
-        PlayerPalette: raplayer
+	WithDeathAnimation:
+		DeathSequencePalette: raplayer
+	RenderSprites:
+		Image: trojanhorse
+		PlayerPalette: raplayer
 	-Sellable:
-    Valued:
+	Valued:
 		Cost: 4000
 	Tooltip:
 		Name: Wooden Horse
@@ -911,22 +911,22 @@ TROJAN:
 		Dimensions: 3,3
 	Health:
 		HP: 75000
-        Shape: Rectangle
-            TopLeft: -265,-265
-            BottomRight: 265, 265
-    RevealsShroud:
+		Shape: Rectangle
+			TopLeft: -265,-265
+			BottomRight: 265, 265
+	RevealsShroud:
 		Range: 5c0
 	RallyPoint:
 	Exit@1:
 		SpawnOffset: 0,225,0
 		ExitCell: 1,0
-    Exit@2:
+	Exit@2:
 		SpawnOffset: 0,-225,0
 		ExitCell: 1,-2 
-    Exit@3:
+	Exit@3:
 		SpawnOffset: 225,0,0
 		ExitCell: 1,-1 
-    Exit@4:
+	Exit@4:
 		SpawnOffset: -225,0,0
 		ExitCell: 2,-1 
 	Production:
@@ -935,37 +935,37 @@ TROJAN:
 		Type: MInfantry.Horse
 		Group: Infantry
 		LowPowerSlowdown: 1
-        BuildDurationModifier: 30
+		BuildDurationModifier: 30
 	ProductionBar:
 	Power:
 		Amount: 0
 	Selectable:
 		Bounds: 32,32,0,0
-    ProvidesPrerequisite@buildingname:
-    -Capturable:
-    ThrowsShrapnel@SMALL:
+	ProvidesPrerequisite@buildingname:
+	-Capturable:
+	ThrowsShrapnel@SMALL:
 		Weapons: SmallWood1, SmallWood2, SmallWood3, LargeWood1
 		Pieces: 3, 4
 		Range: 0c512, 3c0
  
 BARRNEW:
 	Inherits: ^MWBaseBuilding
-    Armor:
+	Armor:
 		Type: Concrete
-    WithDeathAnimation:
-        DeathSequencePalette: raplayer
-    RenderSprites:
-        PlayerPalette: raplayer
+	WithDeathAnimation:
+		DeathSequencePalette: raplayer
+	RenderSprites:
+		PlayerPalette: raplayer
 	Valued:
 		Cost: 750
-    CustomSellValue:
+	CustomSellValue:
 		Value: 375
 	Tooltip:
 		Name: Barracks
 	ProvidesPrerequisite:
 		Prerequisite: barracks
 	Buildable:
-        IconPalette: raicon
+		IconPalette: raicon
 		BuildPaletteOrder: 30
 		Prerequisites: anypower
 		Description: Trains Infantry only\n\n\n\n
@@ -975,9 +975,9 @@ BARRNEW:
 		Dimensions: 2,2
 	Health:
 		HP: 50000
-        Shape: Rectangle
-            TopLeft: -924,-824
-            BottomRight: 924, 924
+		Shape: Rectangle
+			TopLeft: -924,-824
+			BottomRight: 924, 924
 	RevealsShroud:
 		Range: 5c0
 	Bib:
@@ -985,7 +985,7 @@ BARRNEW:
 	Exit@1:
 		SpawnOffset: -259,640,0
 		ExitCell: 0,2
-    Exit@2:
+	Exit@2:
 		SpawnOffset: 0,640,0
 		ExitCell: 1,2
 	Production:
@@ -995,41 +995,41 @@ BARRNEW:
 		Group: Infantry
 		RequireOwner: false
 		LowPowerSlowdown: 3
-        Factions: gdi
+		Factions: gdi
 	ProductionBar:
 	Power:
 		Amount: -2
 	ProvidesPrerequisite@buildingname:
 	Selectable:
 		Bounds: 48,42,0,-5
-    ThrowsShrapnel@LARGE:
+	ThrowsShrapnel@LARGE:
 		Weapons: SDebrWeapon1, SDebrWeapon2, SDebrWeapon3
 		Pieces: 1, 2
 		Range: 1c0, 5c0
-    Refinery:
+	Refinery:
 		DockAngle: 72
 		DockOffset: 0,2
-        TickRate: 15
-        
+		TickRate: 15
+		
 HANDNEW:
 	Inherits: ^MWBaseBuilding
-    Armor:
+	Armor:
 		Type: Concrete
-    WithDeathAnimation:
-        DeathSequencePalette: raplayer
-    RenderSprites:
-        Image: handew
-        PlayerPalette: raplayer
+	WithDeathAnimation:
+		DeathSequencePalette: raplayer
+	RenderSprites:
+		Image: handew
+		PlayerPalette: raplayer
 	Valued:
 		Cost: 900
-    CustomSellValue:
+	CustomSellValue:
 		Value: 450
 	Tooltip:
 		Name: Barracks
 	ProvidesPrerequisite:
 		Prerequisite: barracks
-    Buildable:
-        IconPalette: raicon
+	Buildable:
+		IconPalette: raicon
 		BuildPaletteOrder: 30
 		Prerequisites: anypower
 		Description: Trains Infantry only\n\n\n\n
@@ -1039,9 +1039,9 @@ HANDNEW:
 		Dimensions: 2,3
 	Health:
 		HP: 65000
-        Shape: Rectangle
-            TopLeft: -924,-824
-            BottomRight: 924, 924
+		Shape: Rectangle
+			TopLeft: -924,-824
+			BottomRight: 924, 924
 	RevealsShroud:
 		Range: 5c0
 	Bib:
@@ -1051,44 +1051,44 @@ HANDNEW:
 		ExitCell: 1,2
 	Production:
 		Produces:  MInfantry.Nod
-    ProductionQueue@2:
+	ProductionQueue@2:
 		Type: MInfantry.Nod
 		Group: Infantry
 		RequireOwner: false
 		LowPowerSlowdown: 3
-        Factions: nod
+		Factions: nod
 	ProductionBar:
 	Power:
 		Amount: -2
 	ProvidesPrerequisite@buildingname:
 	Selectable:
 		Bounds: 48,72,0,-5
-    ThrowsShrapnel@LARGE:
+	ThrowsShrapnel@LARGE:
 		Weapons: SDebrWeapon1, SDebrWeapon2, SDebrWeapon3
 		Pieces: 1, 2
 		Range: 1c0, 5c0
-    Refinery:
+	Refinery:
 		DockAngle: 72
 		DockOffset: 0,3
-        TickRate: 15
+		TickRate: 15
 
 STALL:
 	Inherits: ^MWBaseBuilding
-    Armor:
+	Armor:
 		Type: Concrete
-    WithDeathAnimation:
-        DeathSequencePalette: raplayer
-    RenderSprites:
-        Image: stall
-        PlayerPalette: raplayer
+	WithDeathAnimation:
+		DeathSequencePalette: raplayer
+	RenderSprites:
+		Image: stall
+		PlayerPalette: raplayer
 	Valued:
 		Cost: 2000
-    CustomSellValue:
+	CustomSellValue:
 		Value: 1000
 	Tooltip:
 		Name: Stables
 	Buildable:
-        IconPalette: raicon
+		IconPalette: raicon
 		BuildPaletteOrder: 40
 		Prerequisites: proc
 		Description: Trains cavalry\n\n\n\n
@@ -1098,83 +1098,83 @@ STALL:
 		Dimensions: 3,2
 	Health:
 		HP: 100000
-        Shape: Rectangle
-            TopLeft: -1424,-924
-            BottomRight: 1424, 924
+		Shape: Rectangle
+			TopLeft: -1424,-924
+			BottomRight: 1424, 924
 	RevealsShroud:
 		Range: 4c0
-    WithProductionDoorOverlay:
+	WithProductionDoorOverlay:
 		Sequence: build-top
 	Bib:
 	RallyPoint:
 	Exit@1:
 		SpawnOffset: 554,682,0
 		ExitCell: 2,2
-        ExitDelay: 10
+		ExitDelay: 10
 	Production:
 		Produces: MVehicle.GDI
 	ProductionQueue@1:
 		Type: MVehicle.GDI
-        Factions: gdi
+		Factions: gdi
 		Group: Vehicle
 		RequireOwner: false
 		LowPowerSlowdown: 3
 	ProductionBar:
 	Power:
 		Amount: -3
-    ProvidesPrerequisite@buildingname:
-    ProvidesPrerequisite:
+	ProvidesPrerequisite@buildingname:
+	ProvidesPrerequisite:
 		Prerequisite: vehicleproduction
 	Selectable:
 		Bounds: 72,48
 	SelectionDecorations:
 		VisualBounds: 72,64,0,-16
-    SpawnActorOnDeath@Ross1:
-        Actor: emptyross
-        Probability: 33
-        OwnerType: InternalName
-        InternalOwner: Neutral
-    SpawnActorOnDeath@Ross2:
-        Actor: emptyross
-        Probability: 33
-        OwnerType: InternalName
-        InternalOwner: Neutral
-    SpawnActorOnDeath@Ross3:
-        Actor: emptyross
-        Probability: 33
-        OwnerType: InternalName
-        InternalOwner: Neutral
-    SpawnActorOnDeath@Ross4:
-        Actor: emptyross
-        Probability: 33
-        OwnerType: InternalName
-        InternalOwner: Neutral
-    ThrowsShrapnel@LARGE:
+	SpawnActorOnDeath@Ross1:
+		Actor: emptyross
+		Probability: 33
+		OwnerType: InternalName
+		InternalOwner: Neutral
+	SpawnActorOnDeath@Ross2:
+		Actor: emptyross
+		Probability: 33
+		OwnerType: InternalName
+		InternalOwner: Neutral
+	SpawnActorOnDeath@Ross3:
+		Actor: emptyross
+		Probability: 33
+		OwnerType: InternalName
+		InternalOwner: Neutral
+	SpawnActorOnDeath@Ross4:
+		Actor: emptyross
+		Probability: 33
+		OwnerType: InternalName
+		InternalOwner: Neutral
+	ThrowsShrapnel@LARGE:
 		Weapons: LargeWood1, LargeWood1, LargeStone1, LargeStone1
 		Pieces: 1, 2
 		Range: 1c0, 5c0
-    Refinery:
+	Refinery:
 		DockAngle: 72
 		DockOffset: 1,2
-        TickRate: 15
-        
+		TickRate: 15
+		
 NODSTALL:
 	Inherits: ^MWBaseBuilding
-    Armor:
+	Armor:
 		Type: Concrete
-    WithDeathAnimation:
-        DeathSequencePalette: raplayer
-    RenderSprites:
-        Image: nodstall
-        PlayerPalette: raplayer
+	WithDeathAnimation:
+		DeathSequencePalette: raplayer
+	RenderSprites:
+		Image: nodstall
+		PlayerPalette: raplayer
 	Valued:
 		Cost: 1750
-    CustomSellValue:
+	CustomSellValue:
 		Value: 875
 	Tooltip:
 		Name: Stables
 	Buildable:
-        IconPalette: raicon
+		IconPalette: raicon
 		BuildPaletteOrder: 40
 		Prerequisites: proc
 		Description: Trains cavalry\n\n\n\n
@@ -1184,9 +1184,9 @@ NODSTALL:
 		Dimensions: 4,2
 	Health:
 		HP: 86000
-        Shape: Rectangle
-            TopLeft: -1948,-924
-            BottomRight: 1948, 924
+		Shape: Rectangle
+			TopLeft: -1948,-924
+			BottomRight: 1948, 924
 	RevealsShroud:
 		Range: 4c0
 	Bib:
@@ -1195,74 +1195,74 @@ NODSTALL:
 		SpawnOffset: 540,540,0
 		ExitCell: 2,2
 	ProductionAirdrop:
-        ActorType: delbir
-        Produces: MVehicle.Nod
-    ProductionQueue@2:
+		ActorType: delbir
+		Produces: MVehicle.Nod
+	ProductionQueue@2:
 		Type: MVehicle.Nod
 		Group: Vehicle
-        Factions: nod
+		Factions: nod
 		RequireOwner: false
 		LowPowerSlowdown: 3
 	ProductionBar:
 	Power:
 		Amount: -3
-    ProvidesPrerequisite@buildingname:
-    ProvidesPrerequisite:
+	ProvidesPrerequisite@buildingname:
+	ProvidesPrerequisite:
 		Prerequisite: vehicleproduction
 	Selectable:
 		Bounds: 96,48
 	SelectionDecorations:
 		VisualBounds: 86,64,0,-4 
-    WithIdleOverlay@1:
-        StartSequence: flag1start
-        Sequence: flag1
-        Offset: 256,2506,0
-    SpawnActorOnDeath@Ross1:
-        Actor: emptyross
-        Probability: 33
-        OwnerType: InternalName
-        InternalOwner: Neutral
-    SpawnActorOnDeath@Ross2:
-        Actor: emptyross
-        Probability: 33
-        OwnerType: InternalName
-        InternalOwner: Neutral
-    SpawnActorOnDeath@Ross3:
-        Actor: emptyross
-        Probability: 33
-        OwnerType: InternalName
-        InternalOwner: Neutral
-    SpawnActorOnDeath@Ross4:
-        Actor: emptyross
-        Probability: 33
-        OwnerType: InternalName
-        InternalOwner: Neutral
-    ThrowsShrapnel@LARGE:
+	WithIdleOverlay@1:
+		StartSequence: flag1start
+		Sequence: flag1
+		Offset: 256,2506,0
+	SpawnActorOnDeath@Ross1:
+		Actor: emptyross
+		Probability: 33
+		OwnerType: InternalName
+		InternalOwner: Neutral
+	SpawnActorOnDeath@Ross2:
+		Actor: emptyross
+		Probability: 33
+		OwnerType: InternalName
+		InternalOwner: Neutral
+	SpawnActorOnDeath@Ross3:
+		Actor: emptyross
+		Probability: 33
+		OwnerType: InternalName
+		InternalOwner: Neutral
+	SpawnActorOnDeath@Ross4:
+		Actor: emptyross
+		Probability: 33
+		OwnerType: InternalName
+		InternalOwner: Neutral
+	ThrowsShrapnel@LARGE:
 		Weapons: LargeWood1, LargeWood1, LargeStone1, LargeStone1
 		Pieces: 1, 2
 		Range: 1c0, 5c0
-    Refinery:
+	Refinery:
 		DockAngle: 72
 		DockOffset: 1,2
-        TickRate: 15
-        
+		TickRate: 15
+		
 CASTLE:
 	Inherits: ^MWBaseBuilding
-    Armor:
+	Armor:
 		Type: Concrete
-    WithDeathAnimation:
-        DeathSequencePalette: raplayer
-    RenderSprites:
-        Image: castle
-        PlayerPalette: raplayer
+	WithDeathAnimation:
+		DeathSequencePalette: raplayer
+	RenderSprites:
+		Image: castle
+		PlayerPalette: raplayer
 	Valued:
 		Cost: 2500
-    CustomSellValue:
+	CustomSellValue:
 		Value: 1250
 	Tooltip:
 		Name: Castle
 	Buildable:
-        IconPalette: raicon
+		IconPalette: raicon
 		BuildPaletteOrder: 100
 		Prerequisites: anyhq, anyarmory
 		Description: Unlocks Superweapon.\n Unlocks Heavy Cavalry, Knight's and Tribuchet.\nRequires power to operate.\nCan hold up to 4 nobles.\n\n\n\n
@@ -1272,35 +1272,35 @@ CASTLE:
 		Dimensions: 3,3
 	Health:
 		HP: 200000
-        Shape: Rectangle
-            TopLeft: -1424,-1020
-            BottomRight: 1424, 1524
+		Shape: Rectangle
+			TopLeft: -1424,-1020
+			BottomRight: 1424, 1524
 	RevealsShroud:
 		Range: 6c0
 	Bib:
 	Power:
 		Amount: -15
-    ProvidesPrerequisite:
+	ProvidesPrerequisite:
 		Prerequisite: anyhq
-    ProvidesPrerequisite@2:
+	ProvidesPrerequisite@2:
 		Prerequisite: anycastle
-    ProvidesPrerequisite@3:
+	ProvidesPrerequisite@3:
 		Prerequisite: Level4
-    ProvidesPrerequisite@buildingname:
+	ProvidesPrerequisite@buildingname:
 	Selectable:
 		Bounds: 72,48,0,12
 	SelectionDecorations:
 		VisualBounds: 72,68,0,0
-    RequiresPower:
+	RequiresPower:
 	CanPowerDown:
 		PowerupSound: EnablePower
 		PowerdownSound: DisablePower
 	DisabledOverlay:
-    ProvidesRadar:
+	ProvidesRadar:
 		RequiresCondition: !disabled
-    GrantConditionOnDisabled@IDISABLE:
+	GrantConditionOnDisabled@IDISABLE:
 		Condition: disabled
-    NukePower:
+	NukePower:
 		Prerequisites: ~techlevel.superweapons
 		Icon: cannonstrike
 		Cursor: nuke
@@ -1312,40 +1312,40 @@ CASTLE:
 		InsufficientPowerSpeechNotification: InsufficientPower
 		LaunchSpeechNotification: 
 		IncomingSpeechNotification: NodcannonApproach
-        BeginChargeSpeechNotification: 
+		BeginChargeSpeechNotification: 
 		MissileWeapon: cannonstrike
 		DisplayBeacon: True
 		BeaconPoster: cannonbeacon
 		BeaconPosterPalette: beaconposter
 		DisplayRadarPing: True
-        CameraRange: 10c0
-        ArrowSequence: arrow
-        ClockSequence: clock
-        CircleSequence: circles
-        OrderName: CannonPowerInfoOrder
-    SupportPowerChargeBar:
-    ThrowsShrapnel@LARGE:
+		CameraRange: 10c0
+		ArrowSequence: arrow
+		ClockSequence: clock
+		CircleSequence: circles
+		OrderName: CannonPowerInfoOrder
+	SupportPowerChargeBar:
+	ThrowsShrapnel@LARGE:
 		Weapons: LargeWood1, LargeWood1, LargeStone1, LargeStone1
 		Pieces: 1, 2
 		Range: 1c0, 5c0
 
 CASTLE2:
 	Inherits: ^MWBaseBuilding
-    Armor:
+	Armor:
 		Type: Concrete
-    WithDeathAnimation:
-        DeathSequencePalette: raplayer
-    RenderSprites:
-        Image: castle2
-        PlayerPalette: raplayer
+	WithDeathAnimation:
+		DeathSequencePalette: raplayer
+	RenderSprites:
+		Image: castle2
+		PlayerPalette: raplayer
 	Valued:
 		Cost: 2000
-    CustomSellValue:
+	CustomSellValue:
 		Value: 1000
 	Tooltip:
 		Name: Castle
 	Buildable:
-        IconPalette: raicon
+		IconPalette: raicon
 		BuildPaletteOrder: 100
 		Prerequisites: anyhq, anyarmory
 		Description: Unlocks Superweapon.\n Unlocks Assasines, Crossbows and Ballista Towers.\nRequires power to operate.\nCan hold up to 4 nobles.\n\n\n\n
@@ -1355,36 +1355,36 @@ CASTLE2:
 		Dimensions: 3,3
 	Health:
 		HP: 180000
-        Shape: Rectangle
-            TopLeft: -1424,-1020
-            BottomRight: 1424, 1524
+		Shape: Rectangle
+			TopLeft: -1424,-1020
+			BottomRight: 1424, 1524
 	RevealsShroud:
 		Range: 6c0
 	Bib:
 	Power:
 		Amount: -20
-    ProvidesPrerequisite:
+	ProvidesPrerequisite:
 		Prerequisite: anyhq
-    ProvidesPrerequisite@buildingname:
-    ProvidesPrerequisite@2:
+	ProvidesPrerequisite@buildingname:
+	ProvidesPrerequisite@2:
 		Prerequisite: anycastle
-    ProvidesPrerequisite@3:
+	ProvidesPrerequisite@3:
 		Prerequisite: Level4
 	Selectable:
 		Bounds: 72,48,0,12
 	SelectionDecorations:
 		VisualBounds: 72,68,0,0
-    RequiresPower:
-    ProvidesRadar:
+	RequiresPower:
+	ProvidesRadar:
 		RequiresCondition: !disabled
-    GrantConditionOnDisabled@IDISABLE:
+	GrantConditionOnDisabled@IDISABLE:
 		Condition: disabled
 	CanPowerDown:
 		PowerupSound: EnablePower
 		PowerdownSound: DisablePower
 	DisabledOverlay:
-    SupportPowerChargeBar:
-    NukePower:
+	SupportPowerChargeBar:
+	NukePower:
 		Prerequisites: ~techlevel.superweapons
 		Icon: lightning
 		Cursor: ioncannon
@@ -1394,43 +1394,43 @@ CASTLE2:
 		EndChargeSpeechNotification: LightningReady
 		SelectTargetSpeechNotification: SelectTarget
 		InsufficientPowerSpeechNotification: InsufficientPower
-        BeginChargeSpeechNotification: 
+		BeginChargeSpeechNotification: 
 		MissileWeapon: lightningstrike
 		DisplayBeacon: True
 		BeaconPoster: lightbeacon
 		BeaconPosterPalette: beaconposter
 		DisplayRadarPing: True
-        CameraSpawnAdvance: 5
-        CameraRemoveDelay: 25
-        BeaconRemoveAdvance: 0
-        CameraRange: 5c0
-        ArrowSequence: arrow
-        ClockSequence: clock
-        CircleSequence: circles
-        OrderName: LightningPowerInfoOrder
-        FlightDelay: 10
-    ThrowsShrapnel@LARGE:
+		CameraSpawnAdvance: 5
+		CameraRemoveDelay: 25
+		BeaconRemoveAdvance: 0
+		CameraRange: 5c0
+		ArrowSequence: arrow
+		ClockSequence: clock
+		CircleSequence: circles
+		OrderName: LightningPowerInfoOrder
+		FlightDelay: 10
+	ThrowsShrapnel@LARGE:
 		Weapons: LargeWood1, LargeWood1, LargeStone1, LargeStone1
 		Pieces: 1, 2
 		Range: 1c0, 5c0
-        
+		
 WORKSHOPNOD:
 	Inherits: ^MWBaseBuilding
-    WithDeathAnimation:
-        DeathSequencePalette: raplayer
-    Armor:
+	WithDeathAnimation:
+		DeathSequencePalette: raplayer
+	Armor:
 		Type: HeavyBuilding
-    RenderSprites:
-        Image: nodfix
-        PlayerPalette: raplayer
+	RenderSprites:
+		Image: nodfix
+		PlayerPalette: raplayer
 	Valued:
 		Cost: 1400
-    CustomSellValue:
+	CustomSellValue:
 		Value: 700
 	Tooltip:
 		Name: Siege Workshop
 	Buildable:
-        IconPalette: raicon
+		IconPalette: raicon
 		BuildPaletteOrder: 60
 		Prerequisites: proc
 		Description: Provides Siege weapons construction.\nEnables Supportpowers in combination with an Armory.\n\n\n
@@ -1444,34 +1444,34 @@ WORKSHOPNOD:
 		VisualBounds: 72,48
 	Health:
 		HP: 60000
-        Shape: Rectangle
-            TopLeft: -1424,-720
-            BottomRight: 1424, 824
+		Shape: Rectangle
+			TopLeft: -1424,-720
+			BottomRight: 1424, 824
 	RevealsShroud:
 		Range: 5c0
 	Bib:
 	Power:
 		Amount: -3
 	ProvidesPrerequisite@buildingname: 
-    RallyPoint:
+	RallyPoint:
 	Exit@1:
 		SpawnOffset: 325,512,0
 		ExitCell: 1,2
 	Production:
 		Produces: MSiege.Nod
-    ProductionQueue@2:
+	ProductionQueue@2:
 		Type: MSiege.Nod
 		Group: Aircraft
-        Factions: nod
+		Factions: nod
 		RequireOwner: false
 		LowPowerSlowdown: 3
 	ProductionBar:
-    SpawnActorPower:
+	SpawnActorPower:
 		Prerequisites: ~techlevel.superweapons
 		Icon: trojan
 		ChargeTime: 280
-        Actor: trojan
-        LifeTime: 1850
+		Actor: trojan
+		LifeTime: 1850
 		Description: Wooden Horse \n\n\n\n
 		LongDesc: Wooden horse constructed to provide large bundles of infantry, seemingly never ending.\n  - Flamewh33l
 		SelectTargetSpeechNotification: SelectTarget
@@ -1480,63 +1480,63 @@ WORKSHOPNOD:
 		BeaconPoster: trojanbeacon
 		BeaconPosterPalette: beaconposter
 		DisplayRadarPing: True
-        CameraActor: camera
-        ArrowSequence: arrow
-        ClockSequence: clock
-        CircleSequence: circles
-        OrderName: TrojanPowerInfoOrder
-        EndChargeSpeechNotification: ReadyHorse
-        IncomingSpeechNotification: 
-        IncomingSound: 
-        RequiresCondition: Enabled
-    SupportPowerChargeBar:
-    GrantConditionOnPrerequisite:
-        Condition: Enabled
-        Prerequisites: anyarmory
-    WithIdleAnimation:
-        Interval: 360
-    ProvidesPrerequisite@2:
+		CameraActor: camera
+		ArrowSequence: arrow
+		ClockSequence: clock
+		CircleSequence: circles
+		OrderName: TrojanPowerInfoOrder
+		EndChargeSpeechNotification: ReadyHorse
+		IncomingSpeechNotification: 
+		IncomingSound: 
+		RequiresCondition: Enabled
+	SupportPowerChargeBar:
+	GrantConditionOnPrerequisite:
+		Condition: Enabled
+		Prerequisites: anyarmory
+	WithIdleAnimation:
+		Interval: 360
+	ProvidesPrerequisite@2:
 		Prerequisite: anyworkshop
-    ThrowsShrapnel@LARGE:
+	ThrowsShrapnel@LARGE:
 		Weapons: LargeWood1, SmallWood1, LargeStone1, SmallWood2
 		Pieces: 1, 2
 		Range: 1c0, 5c0
-    ProximityExternalCondition@LABORER:
-        Range: 3c0
-        ValidStances: Ally
-        Condition: Labor
-    Targetable:
+	ProximityExternalCondition@LABORER:
+		Range: 3c0
+		ValidStances: Ally
+		Condition: Labor
+	Targetable:
 		TargetTypes: Ground, C4, Structure, Wanderer, Laborer
-    Refinery:
+	Refinery:
 		DockAngle: 72
 		DockOffset: 1,2
-        TickRate: 15
-    FreeActor@1:
+		TickRate: 15
+	FreeActor@1:
 		Actor: mwwand9
 		SpawnOffset: 1,-1
 		Facing: 64
-    FreeActor@2:
+	FreeActor@2:
 		Actor: mwwand9
 		SpawnOffset: 1,-1
 		Facing: 64
 
 WORKSHOPGDI:
 	Inherits: ^MWBaseBuilding
-    Armor:
+	Armor:
 		Type: HeavyBuilding
-    WithDeathAnimation:
-        DeathSequencePalette: raplayer
-    RenderSprites:
-        Image: gdifix
-        PlayerPalette: raplayer
+	WithDeathAnimation:
+		DeathSequencePalette: raplayer
+	RenderSprites:
+		Image: gdifix
+		PlayerPalette: raplayer
 	Valued:
 		Cost: 1600
-    CustomSellValue:
+	CustomSellValue:
 		Value: 800
 	Tooltip:
 		Name: Siege Workshop
 	Buildable:
-        IconPalette: raicon
+		IconPalette: raicon
 		BuildPaletteOrder: 60
 		Prerequisites: proc
 		Description: Provides Siege weapons construction.\nEnables Supportpowers in combination with an Armory.\n\n\n
@@ -1550,16 +1550,16 @@ WORKSHOPGDI:
 		VisualBounds: 72,48
 	Health:
 		HP: 75000
-        Shape: Rectangle
-            TopLeft: -1424,-720
-            BottomRight: 1424, 824
+		Shape: Rectangle
+			TopLeft: -1424,-720
+			BottomRight: 1424, 824
 	RevealsShroud:
 		Range: 5c0
 	Bib:
 	Power:
 		Amount: -3
 	ProvidesPrerequisite@buildingname: 
-    RallyPoint:
+	RallyPoint:
 	Exit@1:
 		SpawnOffset: -200,200,0
 		ExitCell: 0,2
@@ -1568,322 +1568,322 @@ WORKSHOPGDI:
 	ProductionQueue@1:
 		Type: MSiege.GDI
 		Group: Aircraft
-        Factions: gdi
+		Factions: gdi
 		RequireOwner: false
 		LowPowerSlowdown: 3
 	ProductionBar:
-    ProduceActorPower:
+	ProduceActorPower:
 		Prerequisites: ~techlevel.superweapons
 		Icon: strangedavinci
 		ChargeTime: 280
-        Actors: davinci
-        Type: MSiege.GDI
+		Actors: davinci
+		Type: MSiege.GDI
 		Description: Strange Aircraft
 		LongDesc: The Engineers have developed some verey strange prototype for battletest.
 		SelectTargetSpeechNotification: SelectTarget
 		InsufficientPowerSpeechNotification: InsufficientPower
 		DisplayBeacon: False
 		DisplayRadarPing: False
-        ArrowSequence: arrow
-        ClockSequence: clock
-        CircleSequence: circles
-        OrderName: StrangePowerInfoOrder
-        EndChargeSpeechNotification: StrangeReady
-        RequiresCondition: Enabled
-    SupportPowerChargeBar: 
-    GrantConditionOnPrerequisite:
-        Condition: Enabled
-        Prerequisites: anyarmory
-    ProvidesPrerequisite@2:
+		ArrowSequence: arrow
+		ClockSequence: clock
+		CircleSequence: circles
+		OrderName: StrangePowerInfoOrder
+		EndChargeSpeechNotification: StrangeReady
+		RequiresCondition: Enabled
+	SupportPowerChargeBar: 
+	GrantConditionOnPrerequisite:
+		Condition: Enabled
+		Prerequisites: anyarmory
+	ProvidesPrerequisite@2:
 		Prerequisite: anyworkshop
-    ThrowsShrapnel@LARGE:
+	ThrowsShrapnel@LARGE:
 		Weapons: LargeWood1, SmallWood1, LargeStone1, SmallWood2
 		Pieces: 1, 2
 		Range: 1c0, 5c0
-    ProximityExternalCondition@LABORER:
-        Range: 3c0
-        ValidStances: Ally
-        Condition: Labor
-    Targetable:
+	ProximityExternalCondition@LABORER:
+		Range: 3c0
+		ValidStances: Ally
+		Condition: Labor
+	Targetable:
 		TargetTypes: Ground, C4, Structure, Wanderer, Laborer
-    Refinery:
+	Refinery:
 		DockAngle: 72
 		DockOffset: 1,2
-        TickRate: 15
-    FreeActor@1:
+		TickRate: 15
+	FreeActor@1:
 		Actor: mwwand9
 		SpawnOffset: 1,-1
 		Facing: 64
-    FreeActor@2:
+	FreeActor@2:
 		Actor: mwwand9
 		SpawnOffset: 1,-1
 		Facing: 64
 
-    
+	
 HOSP: 
-    Inherits: ^TechBuilding
+	Inherits: ^TechBuilding
 	Selectable:
 		Priority: 0
-    SpawnActorOnDeath:
+	SpawnActorOnDeath:
 		Actor: HOSP.Husk
-        OwnerType: InternalName
+		OwnerType: InternalName
 		InternalOwner: Neutral
-    RenderSprites:
-        Image: hospnew
-        PlayerPalette: raplayer
-    ProximityExternalCondition@HEAL:
-        Range: 10c0
-        ValidStances: Ally
-        Condition: hospitalheal
-    WithRangeCircle: 
-        ValidStances: Ally, Neutral
-        Range: 10c0
-    Health:
+	RenderSprites:
+		Image: hospnew
+		PlayerPalette: raplayer
+	ProximityExternalCondition@HEAL:
+		Range: 10c0
+		ValidStances: Ally
+		Condition: hospitalheal
+	WithRangeCircle: 
+		ValidStances: Ally, Neutral
+		Range: 10c0
+	Health:
 		HP: 250000
-        Shape: Rectangle
-            TopLeft: -924,-924
-            BottomRight: 924, 924
-    Production:
+		Shape: Rectangle
+			TopLeft: -924,-924
+			BottomRight: 924, 924
+	Production:
 		Produces: MHosp.Medi
 	ProductionQueue:
 		Type: MHosp.Medi
 		Group: none
 		RequireOwner: false
 		LowPowerSlowdown: 3
-    ProduceActorPower:
+	ProduceActorPower:
 		Prerequisites: ~techlevel.superweapons
 		Icon: ddicon
 		ChargeTime: 250
-        Actors: ddler
-        Type: MHosp.Medi
+		Actors: ddler
+		Type: MHosp.Medi
 		Description: Deathdealer
 		LongDesc: Send a Deathdealer to the battlefield, infecting all nearby enemy ground troops.
 		SelectTargetSpeechNotification: 
 		InsufficientPowerSpeechNotification: InsufficientPower
 		DisplayBeacon: False
 		DisplayRadarPing: False
-        ArrowSequence: arrow
-        ClockSequence: clock
-        CircleSequence: circles
-        OrderName: DeathdealerPowerInfoOrder
-        EndChargeSpeechNotification: 
-        IncomingSpeechNotification: 
-    Exit@1:
+		ArrowSequence: arrow
+		ClockSequence: clock
+		CircleSequence: circles
+		OrderName: DeathdealerPowerInfoOrder
+		EndChargeSpeechNotification: 
+		IncomingSpeechNotification: 
+	Exit@1:
 		SpawnOffset: -213,-426,0
 		ExitCell: 1,2
-    Exit@2:
+	Exit@2:
 		SpawnOffset: -213,-426,0
 		ExitCell: 0,2
-    Exit@3:
+	Exit@3:
 		SpawnOffset: -213,-426,0
 		ExitCell: 2,1
-    Exit@4:
+	Exit@4:
 		SpawnOffset: -213,-426,0
 		ExitCell: -1,1
-    Exit@5:
+	Exit@5:
 		SpawnOffset: -213,-426,0
 		ExitCell: 1,-1
-        
+		
 LARGECASTLE: 
-    Inherits: ^TechBuilding	
-    -Capturable:
-    Tooltip:
-        Name: Large Castle
-    Building:
+	Inherits: ^TechBuilding	
+	-Capturable:
+	Tooltip:
+		Name: Large Castle
+	Building:
 		Footprint: __x__ xxxxx xxxxx xxxxx xxxxx
-		Dimensions: 5,5    
-    SpawnActorOnDeath:
+		Dimensions: 5,5	
+	SpawnActorOnDeath:
 		Actor: LARGECASTLE.Husk
-        OwnerType: InternalName
+		OwnerType: InternalName
 		InternalOwner: Neutral
-    RenderSprites:
-        Image: largecastle
-        PlayerPalette: raplayer
-    Health:
+	RenderSprites:
+		Image: largecastle
+		PlayerPalette: raplayer
+	Health:
 		HP: 1000000
-    ThrowsShrapnel@LARGE:
+	ThrowsShrapnel@LARGE:
 		Weapons: LargeWood1, LargeWood1, LargeStone1, LargeStone1
 		Pieces: 1, 2
 		Range: 1c0, 5c0
 
 LARGECASTLE.Husk:
-    Inherits: ^TechBuilding	
-    Targetable:
+	Inherits: ^TechBuilding	
+	Targetable:
 		RequiresForceFire: yes
-    -Selectable:
-    RenderSprites:
-        Image: largecastle.husk
-        PlayerPalette: raplayer
-    Health:
+	-Selectable:
+	RenderSprites:
+		Image: largecastle.husk
+		PlayerPalette: raplayer
+	Health:
 		HP: 500000
-    Tooltip:
-        Name: Large Castle (Ruins)
-    Building:
+	Tooltip:
+		Name: Large Castle (Ruins)
+	Building:
 		Footprint: __x__ xxxxx xxxxx xxxxx xxxxx
 		Dimensions: 5,5 
-        
+		
 LARGECASTLECAPTURE: 
-    Inherits: ^TechBuilding	
-    Tooltip:
-        Name: Large Castle (Capturable)
-    Building:
+	Inherits: ^TechBuilding	
+	Tooltip:
+		Name: Large Castle (Capturable)
+	Building:
 		Footprint: __x__ xxxxx xxxxx xxxxx xxxx=
-		Dimensions: 5,5    
-    SpawnActorOnDeath:
+		Dimensions: 5,5	
+	SpawnActorOnDeath:
 		Actor: LARGECASTLECAPTURE.Husk
-        OwnerType: InternalName
+		OwnerType: InternalName
 		InternalOwner: Neutral
-    RenderSprites:
-        Image: largecastlecolor
-        PlayerPalette: raplayer
-    Health:
+	RenderSprites:
+		Image: largecastlecolor
+		PlayerPalette: raplayer
+	Health:
 		HP: 1000000
-    Production:
+	Production:
 		Produces: MInfantry.Castle
 	ProductionQueue:
 		Type: MInfantry.Castle
 		Group: Infantry
 		RequireOwner: false
 		LowPowerSlowdown: 3
-    Exit@1:
+	Exit@1:
 		SpawnOffset: 0,1365,0
 		ExitCell: 4,4
-    ProductionBar:
-    ThrowsShrapnel@LARGE:
+	ProductionBar:
+	ThrowsShrapnel@LARGE:
 		Weapons: LargeWood1, LargeWood1, LargeStone1, LargeStone1
 		Pieces: 1, 2
 		Range: 1c0, 5c0
 
 LARGECASTLECAPTURE.Husk:
-    Inherits: ^TechBuilding	
-    Targetable:
+	Inherits: ^TechBuilding	
+	Targetable:
 		RequiresForceFire: yes
-    -Selectable:
-    RenderSprites:
-        Image: largecastlecolor.husk
-        PlayerPalette: raplayer
-    Health:
+	-Selectable:
+	RenderSprites:
+		Image: largecastlecolor.husk
+		PlayerPalette: raplayer
+	Health:
 		HP: 500000
-    Tooltip:
-        Name: Large Castle (Ruins)
-    Building:
+	Tooltip:
+		Name: Large Castle (Ruins)
+	Building:
 		Footprint: __x__ xxxxx xxxxx xxxxx xxxx=
 		Dimensions: 5,5
-    TransformOnCapture:
-        ForceHealthPercentage: 25
+	TransformOnCapture:
+		ForceHealthPercentage: 25
 		IntoActor: largecastlecapture
-    Capturable:
-        AllowAllies: True
-        CaptureThreshold: 101
+	Capturable:
+		AllowAllies: True
+		CaptureThreshold: 101
 	CaptureNotification:
 		Notification: CivilianBuildingCaptured
 
 HOSP.Husk:
-    Inherits:^TechBuilding
-    Targetable:
+	Inherits:^TechBuilding
+	Targetable:
 		RequiresForceFire: yes
-    -Selectable:
-    RenderSprites:
-        Image: hospnew.husk
-        PlayerPalette: raplayer
-    TransformOnCapture:
-        ForceHealthPercentage: 25
+	-Selectable:
+	RenderSprites:
+		Image: hospnew.husk
+		PlayerPalette: raplayer
+	TransformOnCapture:
+		ForceHealthPercentage: 25
 		IntoActor: hosp
-    Capturable:
-        AllowAllies: True
-        CaptureThreshold: 101
+	Capturable:
+		AllowAllies: True
+		CaptureThreshold: 101
 	CaptureNotification:
 		Notification: CivilianBuildingCaptured
-    Health:
+	Health:
 		HP: 125000
-        Shape: Rectangle
-            TopLeft: -924,-924
-            BottomRight: 924, 924
+		Shape: Rectangle
+			TopLeft: -924,-924
+			BottomRight: 924, 924
 		
 
 V19:
-    Inherits: ^TechBuilding
+	Inherits: ^TechBuilding
 	CashTrickler:
 	RenderSprites:
-        Image: V19new
-        PlayerPalette: raplayer
-    Tooltip:
+		Image: V19new
+		PlayerPalette: raplayer
+	Tooltip:
 		Name: Gold Deposit
-    Health:
+	Health:
 		HP: 100000
-    SpawnActorOnDeath:
+	SpawnActorOnDeath:
 		Actor: V19.Husk
-        OwnerType: InternalName
+		OwnerType: InternalName
 		InternalOwner: Neutral
 
 V19.Husk:
-    Inherits:^TechBuilding
-    Targetable:
+	Inherits:^TechBuilding
+	Targetable:
 		RequiresForceFire: yes
-    -Selectable:
+	-Selectable:
 	Capturable:
-        AllowAllies: True
+		AllowAllies: True
 	CaptureNotification:
 		Notification: CivilianBuildingCaptured
-    TransformOnCapture:
-        IntoActor: v19
-        CaptureThreshold: 101
+	TransformOnCapture:
+		IntoActor: v19
+		CaptureThreshold: 101
 		ForceHealthPercentage: 25
-    RenderSprites:
-        Image: V19new.husk
-        PlayerPalette: raplayer
-    Tooltip:
+	RenderSprites:
+		Image: V19new.husk
+		PlayerPalette: raplayer
+	Tooltip:
 		Name: Gold Deposit (worn out)
-    Health:
+	Health:
 		HP: 50000
-        
+		
 MISS:
-    Inherits: ^TechBuilding	
-    Building:
+	Inherits: ^TechBuilding	
+	Building:
 		Footprint: xxx xxx
 		Dimensions: 3,2	
-    RenderSprites:
-        Image: missnew
-        PlayerPalette: raplayer
-    Capturable:
-    Tooltip:
-        Name: Observation Post
-    RevealsShroud:
-        Range: 29c0
-    Health:
-        HP: 250000
-        Shape: Rectangle
-            TopLeft: -1436,-724
-            BottomRight: 1436, 924
-    RepairableBuilding:
-    EngineerRepairable:
-    CaptureNotification:
-        Notification: CivilianBuildingCaptured
-    ThrowsShrapnel@LARGE:
+	RenderSprites:
+		Image: missnew
+		PlayerPalette: raplayer
+	Capturable:
+	Tooltip:
+		Name: Observation Post
+	RevealsShroud:
+		Range: 29c0
+	Health:
+		HP: 250000
+		Shape: Rectangle
+			TopLeft: -1436,-724
+			BottomRight: 1436, 924
+	RepairableBuilding:
+	EngineerRepairable:
+	CaptureNotification:
+		Notification: CivilianBuildingCaptured
+	ThrowsShrapnel@LARGE:
 		Weapons: LargeWood1, LargeWood1, LargeStone1, LargeStone1
 		Pieces: 1, 2
 		Range: 1c0, 5c0
-        
+		
 BACAMP:
-    Inherits: ^TechBuilding		
-    RenderSprites:
-        Image: bacamp
-        PlayerPalette: raplayer
-    Capturable:
-    Tooltip:
-        Name: Bandit Camp
-    RevealsShroud:
-        Range: 4c0
-    Health:
-        HP: 300000
-        Shape: Rectangle
-            TopLeft: -1436,-724
-            BottomRight: 1436, 924
-    RepairableBuilding:
-    EngineerRepairable:
-    CaptureNotification:
-        Notification: CivilianBuildingCaptured 
-    Exit@1:
+	Inherits: ^TechBuilding		
+	RenderSprites:
+		Image: bacamp
+		PlayerPalette: raplayer
+	Capturable:
+	Tooltip:
+		Name: Bandit Camp
+	RevealsShroud:
+		Range: 4c0
+	Health:
+		HP: 300000
+		Shape: Rectangle
+			TopLeft: -1436,-724
+			BottomRight: 1436, 924
+	RepairableBuilding:
+	EngineerRepairable:
+	CaptureNotification:
+		Notification: CivilianBuildingCaptured 
+	Exit@1:
 		SpawnOffset: 0,0,0
 		ExitCell: 0,1
 	Production:
@@ -1898,41 +1898,41 @@ BACAMP:
 		Offset: 0,-1
 	SpawnActorOnDeath:
 		Actor: BACAMP.Husk
-        OwnerType: InternalName
+		OwnerType: InternalName
 		InternalOwner: Neutral
-    Building:
+	Building:
 		Footprint: _xx =xx xxx
 		Dimensions: 3,3
-    Bib:
+	Bib:
 		HasMinibib: Yes
 
-        
+		
 BACAMP.Husk:
 	Inherits:^TechBuilding
-    RenderSprites:
-        PlayerPalette: raplayer
-    Targetable:
+	RenderSprites:
+		PlayerPalette: raplayer
+	Targetable:
 		RequiresForceFire: yes
-    -Selectable:
+	-Selectable:
 	Building:
 		Footprint: _xx =xx xxx
 		Dimensions: 3,3
 	Tooltip:
 		Name: Bandit Camp (Destroyed)
-    Health:
-        HP: 200000
-        TopLeft: -1436,-724
-            BottomRight: 1436, 924
-    Capturable:
-        AllowAllies: True
-        CaptureThreshold: 101
+	Health:
+		HP: 200000
+		TopLeft: -1436,-724
+			BottomRight: 1436, 924
+	Capturable:
+		AllowAllies: True
+		CaptureThreshold: 101
 	CaptureNotification:
 		Notification: CivilianBuildingCaptured
-    TransformOnCapture:
-        IntoActor: bacamp
-        CaptureThreshold: 101
+	TransformOnCapture:
+		IntoActor: bacamp
+		CaptureThreshold: 101
 		ForceHealthPercentage: 25
-    Bib:
+	Bib:
 		HasMinibib: Yes
 
 ANYARMORY:
@@ -1940,13 +1940,13 @@ ANYARMORY:
 	Tooltip:
 		Name: Armory or Tower of Progress
 		Description: Armory or Tower of Progress
-        
+		
 BARRACKS:
 	AlwaysVisible:
 	Tooltip:
 		Name: Infantry Production
 		Description: Infantry Production
-        
+		
 ANYWORKSHOP:
 	AlwaysVisible:
 	Tooltip:
@@ -1958,7 +1958,7 @@ VEHICLEPRODUCTION:
 	Tooltip:
 		Name: Stables or Shool
 		Description: Stables or Shool
-        
+		
 ANYPOWER:
 	AlwaysVisible:
 	Tooltip:
@@ -1970,7 +1970,7 @@ ANYHQ:
 	Tooltip:
 		Name: Smith, Castle or Palace
 		Description: Smith, Castle or Palace
-        
+		
 ANYCASTLE:
 	AlwaysVisible:
 	Tooltip:
@@ -1984,12 +1984,12 @@ DECOR1:
 		Dimensions: 1,1
 	Tooltip:
 		Name: Barrel
-    RenderSprites:
-        Image: decor1
-        Palette: ra
-    Health:
+	RenderSprites:
+		Image: decor1
+		Palette: ra
+	Health:
 		HP: 5000
-        
+		
 DECOR2:
  	Inherits: ^CivBuilding
 	Building:
@@ -1997,12 +1997,12 @@ DECOR2:
 		Dimensions: 1,1
 	Tooltip:
 		Name: Barrels   
-    RenderSprites:
-        Image: decor2
-        Palette: ra
-    Health:
+	RenderSprites:
+		Image: decor2
+		Palette: ra
+	Health:
 		HP: 5000
-        
+		
 DECOR3:
  	Inherits: ^CivBuilding
 	Building:
@@ -2010,51 +2010,51 @@ DECOR3:
 		Dimensions: 1,1
 	Tooltip:
 		Name: Anvil   
-    RenderSprites:
-        Image: decor3
-        Palette: ra
-    Health:
+	RenderSprites:
+		Image: decor3
+		Palette: ra
+	Health:
 		HP: 20000
-        
+		
 DECOR4:
  	Inherits: ^CivBuilding
 	Building:
 		Footprint: x
 		Dimensions: 1,1
 	Tooltip:
-		Name: Kart    
-    RenderSprites:
-        Image: decor4
-        Palette: ra
-    Health:
+		Name: Kart	
+	RenderSprites:
+		Image: decor4
+		Palette: ra
+	Health:
 		HP: 5000
-        
+		
 DECOR5:
  	Inherits: ^CivBuilding
 	Building:
 		Footprint: x
 		Dimensions: 1,1
 	Tooltip:
-		Name: Karts    
-    RenderSprites:
-        Image: decor5
-        Palette: ra
-    Health:
+		Name: Karts	
+	RenderSprites:
+		Image: decor5
+		Palette: ra
+	Health:
 		HP: 10000
-        
+		
 DECOR6:
  	Inherits: ^CivBuilding
 	Building:
 		Footprint: x
 		Dimensions: 1,1
 	Tooltip:
-		Name: Target    
-    RenderSprites:
-        Image: decor6
-        Palette: ra
-    Health:
+		Name: Target	
+	RenderSprites:
+		Image: decor6
+		Palette: ra
+	Health:
 		HP: 5000
-        
+		
 DECOR7:
  	Inherits: ^CivBuilding
 	Building:
@@ -2062,25 +2062,25 @@ DECOR7:
 		Dimensions: 1,1
 	Tooltip:
 		Name: Target   
-    RenderSprites:
-        Image: decor7
-        Palette: ra
-    Health:
+	RenderSprites:
+		Image: decor7
+		Palette: ra
+	Health:
 		HP: 5000
-        
+		
 DECOR8:
  	Inherits: ^CivBuilding
 	Building:
 		Footprint: x
 		Dimensions: 1,1
 	Tooltip:
-		Name: Smelter    
-    RenderSprites:
-        Image: decor8
-        Palette: ra
-    Health:
+		Name: Smelter	
+	RenderSprites:
+		Image: decor8
+		Palette: ra
+	Health:
 		HP: 13000
-        
+		
 DECOR9:
  	Inherits: ^CivBuilding
 	Building:
@@ -2088,8 +2088,8 @@ DECOR9:
 		Dimensions: 2,2
 	Tooltip:
 		Name: Stand   
-    RenderSprites:
-        Image: decor9
-        Palette: ra
-    Health:
+	RenderSprites:
+		Image: decor9
+		Palette: ra
+	Health:
 		HP: 10000

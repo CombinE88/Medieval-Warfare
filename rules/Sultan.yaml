@@ -2,53 +2,53 @@
 
 CSTLWLLSUL:
 	Inherits: CSTLWLL
-    RenderSprites:
-        PlayerPalette: sulwallplayer
-        Image: cstlwll
-    Buildable:
-		Queue: MDefenses.SUL
-        IconPalette: raWall
-        
-        
-CSTLGTEWSUL:
-	Inherits: CSTLGTEW
-    RenderSprites:
-        PlayerPalette: sulwallplayer
-        Image: cstlgtew
-    Buildable:
-		Queue: MDefenses.SUL
-        IconPalette: raWall
-
-        
-CSTLGTNSSUL: 
-    Inherits: CSTLGTNS
-    RenderSprites:
-        Image: cstlgtns
-        PlayerPalette: sulwallplayer
-    Buildable:
-		Queue: MDefenses.SUL
-        IconPalette: raWall
-
-WTW3:
-    Inherits: WTW
-    Cargo:
-        InitialUnits: sule3, sule3, sule3, sule3
+	RenderSprites:
+		PlayerPalette: sulwallplayer
+		Image: cstlwll
 	Buildable:
 		Queue: MDefenses.SUL
-    RenderSprites:
-        Image: wtw
-        PlayerPalette: raplayer
-        IconPalette: raWall
+		IconPalette: raWall
+		
+		
+CSTLGTEWSUL:
+	Inherits: CSTLGTEW
+	RenderSprites:
+		PlayerPalette: sulwallplayer
+		Image: cstlgtew
+	Buildable:
+		Queue: MDefenses.SUL
+		IconPalette: raWall
+
+		
+CSTLGTNSSUL: 
+	Inherits: CSTLGTNS
+	RenderSprites:
+		Image: cstlgtns
+		PlayerPalette: sulwallplayer
+	Buildable:
+		Queue: MDefenses.SUL
+		IconPalette: raWall
+
+WTW3:
+	Inherits: WTW
+	Cargo:
+		InitialUnits: sule3, sule3, sule3, sule3
+	Buildable:
+		Queue: MDefenses.SUL
+	RenderSprites:
+		Image: wtw
+		PlayerPalette: raplayer
+		IconPalette: raWall
 
 SULGTW:
 	Inherits: ^MWDefense
-    WithDeathAnimation:
-        DeathSequencePalette: sultanplayer
-    RenderSprites:
-        PlayerPalette: sultanplayer
+	WithDeathAnimation:
+		DeathSequencePalette: sultanplayer
+	RenderSprites:
+		PlayerPalette: sultanplayer
 	Valued:
 		Cost: 1000
-    CustomSellValue:
+	CustomSellValue:
 		Value: 500
 	Tooltip:
 		Name: Mosaic Guard Tower
@@ -59,163 +59,163 @@ SULGTW:
 		Queue: MDefenses.SUL
 		BuildDuration: 1600
 		BuildDurationModifier: 40
-        IconPalette: raicon
+		IconPalette: raicon
 	Building:
-        Footprint: x
+		Footprint: x
 		Dimensions: 1,1
 	Health:
 		HP: 55000
-        Shape: Rectangle
-            TopLeft: -456, -456
-            BottomRight: 456, 456
+		Shape: Rectangle
+			TopLeft: -456, -456
+			BottomRight: 456, 456
 	RevealsShroud:
 		Range: 7c0
 	Bib:
 		HasMinibib: Yes
-    WithIdleOverlay:
-    Armament@1:
+	WithIdleOverlay:
+	Armament@1:
 		Weapon: bownarrowtower
 		LocalOffset: 0,0,427
-        Turret: primary
-    Armament@2:
+		Turret: primary
+	Armament@2:
 		Weapon: bownarrowtower
 		LocalOffset: 0,0,427
-        Turret: secondary
-        FireDelay: 12
-    Armament@1DUMMY:
+		Turret: secondary
+		FireDelay: 12
+	Armament@1DUMMY:
 		Weapon: BowNArrowTowerDUMMY
 		LocalOffset: 0,0,427
-        Turret: primary
-    Armament@2DUMMY:
+		Turret: primary
+	Armament@2DUMMY:
 		Weapon: BowNArrowTowerDUMMY
 		LocalOffset: 0,0,427
-        Turret: secondary
-        FireDelay: 12
+		Turret: secondary
+		FireDelay: 12
 	AttackTurreted:
 	BodyOrientation:
 		QuantizedFacings: 8
 	DetectCloaked:
 		Range: 3c0
-    WithSpriteTurret@1: 
-        Sequence: turretidle
-        AimSequence: turretanim
-        Turret: primary
-    WithSpriteTurret@2: 
-        Sequence: turretidle
-        AimSequence: turretanim
-        Turret: secondary
+	WithSpriteTurret@1: 
+		Sequence: turretidle
+		AimSequence: turretanim
+		Turret: primary
+	WithSpriteTurret@2: 
+		Sequence: turretidle
+		AimSequence: turretanim
+		Turret: secondary
 	Turreted@1:
-        Turret: primary
+		Turret: primary
 		TurnSpeed: 100
-        Offset: -170,-170,500
-    Turreted@2:
-        Turret: secondary
+		Offset: -170,-170,500
+	Turreted@2:
+		Turret: secondary
 		TurnSpeed: 100
-        Offset: 170,170,500
+		Offset: 170,170,500
 	Power:
-		Amount: -3    
-    Armor:
+		Amount: -3	
+	Armor:
 		Type: HeavyBuilding 
-    Selectable:
+	Selectable:
 		Bounds: 24,48,0,-10
 	SelectionDecorations
 		VisualBounds: 22,48,0,-10
-    ThrowsShrapnel@SMALL:
+	ThrowsShrapnel@SMALL:
 		Weapons: SmallStone1, SmallStone2, LargeStone1
 		Pieces: 2, 3
 		Range: 0c512, 3c0
-    
-#Buildings        
-        
+	
+#Buildings		
+		
 SULNUK2:
 	Inherits: ^MWBaseBuilding
-    Armor:
+	Armor:
 		Type: Concrete
-    WithDeathAnimation:
-        DeathSequencePalette: sultanplayer
-    RenderSprites:
-        PlayerPalette: sultanplayer
+	WithDeathAnimation:
+		DeathSequencePalette: sultanplayer
+	RenderSprites:
+		PlayerPalette: sultanplayer
 	Valued:
 		Cost: 800
-    CustomSellValue:
+	CustomSellValue:
 		Value: 400
 	Tooltip:
 		Name: Large Hut
 	ProvidesPrerequisite:
 		Prerequisite: anypower
 	Buildable:
-        IconPalette: raicon
+		IconPalette: raicon
 		BuildPaletteOrder: 60
 		Prerequisites: anyhq, ~techlevel.medium
 		Queue: MBuilding.SUL
-        Description: Provides more livingspace. Livingspace increases over time by generating peasants.\nCan hold up to 5 peasents, spawntime depends on number of shacks and large huts. \ncheaper than the standard Shack.\n\n\n\n
+		Description: Provides more livingspace. Livingspace increases over time by generating peasants.\nCan hold up to 5 peasents, spawntime depends on number of shacks and large huts. \ncheaper than the standard Shack.\n\n\n\n
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
 	CustomSellValue:
 		Value: 400
-    Health:
+	Health:
 		HP: 70000
-        Shape: Rectangle
-            TopLeft: -924,-825
-            BottomRight: 924, 924
+		Shape: Rectangle
+			TopLeft: -924,-825
+			BottomRight: 924, 924
 	RevealsShroud:
 		Range: 4c0
 	Bib:
 	Power:
 		Amount: 12
-    Selectable:
+	Selectable:
 		Bounds: 48,40,0,9
 	SelectionDecorations:
 		VisualBounds: 48,53,0,-4
-    SpawnActorOnDeath@Farmer1:
-        Actor: e1new
-        Probability: 33
-        OwnerType: InternalName
-        InternalOwner: Creeps
-    SpawnActorOnDeath@Farmer2:
-        Actor: e1new
-        Probability: 33
-        OwnerType: InternalName
-        InternalOwner: Creeps
-    SpawnActorOnDeath@Farmer3:
-        Actor: e1new
-        Probability: 33
-        OwnerType: InternalName
-        InternalOwner: Creeps
-    SpawnActorOnDeath@Farmer4:
-        Actor: e1new
-        Probability: 33
-        OwnerType: InternalName
-        InternalOwner: Creeps
-    SpawnActorOnDeath@Farmer5:
-        Actor: e1new
-        Probability: 33
-        OwnerType: InternalName
-        InternalOwner: Creeps
-    ThrowsShrapnel@LARGE:
+	SpawnActorOnDeath@Farmer1:
+		Actor: e1new
+		Probability: 33
+		OwnerType: InternalName
+		InternalOwner: Creeps
+	SpawnActorOnDeath@Farmer2:
+		Actor: e1new
+		Probability: 33
+		OwnerType: InternalName
+		InternalOwner: Creeps
+	SpawnActorOnDeath@Farmer3:
+		Actor: e1new
+		Probability: 33
+		OwnerType: InternalName
+		InternalOwner: Creeps
+	SpawnActorOnDeath@Farmer4:
+		Actor: e1new
+		Probability: 33
+		OwnerType: InternalName
+		InternalOwner: Creeps
+	SpawnActorOnDeath@Farmer5:
+		Actor: e1new
+		Probability: 33
+		OwnerType: InternalName
+		InternalOwner: Creeps
+	ThrowsShrapnel@LARGE:
 		Weapons: DebrFurniture1, DebrFurniture2, DebrFurniture3, DebrFurniture4
 		Pieces: 1, 2
 		Range: 1c0, 5c0
  
 SULNUKE:
 	Inherits: ^MWBaseBuilding
-    Armor:
+	Armor:
 		Type: Concrete
-    WithDeathAnimation:
-        DeathSequencePalette: sultanplayer
-    RenderSprites:
-        PlayerPalette: sultanplayer
+	WithDeathAnimation:
+		DeathSequencePalette: sultanplayer
+	RenderSprites:
+		PlayerPalette: sultanplayer
 	Valued:
 		Cost: 500
-    CustomSellValue:
+	CustomSellValue:
 		Value: 250
 	Tooltip:
 		Name: Shack
 	ProvidesPrerequisite:
 		Prerequisite: anypower
 	Buildable:
-        IconPalette: raicon
+		IconPalette: raicon
 		BuildPaletteOrder: 10
 		Prerequisites: factnew
 		Description: Generates livingspace. Livingspace increases over time by generating peasants.\nCan hold up to 3 peasents, spawntime depends on number of shacks and large huts.\n\n\n\n
@@ -225,56 +225,56 @@ SULNUKE:
 		Dimensions: 2,2
 	Health:
 		HP: 50000
-        Shape: Rectangle
-            TopLeft: -924,-825
-            BottomRight: 924, 924
+		Shape: Rectangle
+			TopLeft: -924,-825
+			BottomRight: 924, 924
 	RevealsShroud:
 		Range: 4c0
 	Bib:
 	Power:
 		Amount: 4
-    Selectable:
+	Selectable:
 		Bounds: 48,40,0,9
 	SelectionDecorations:
 		VisualBounds: 48,53,0,-4
-    SpawnActorOnDeath@Farmer1:
-        Actor: e1new
-        Probability: 33
-        OwnerType: InternalName
-        InternalOwner: Creeps
-    SpawnActorOnDeath@Farmer2:
-        Actor: e1new
-        Probability: 33
-        OwnerType: InternalName
-        InternalOwner: Creeps
-    SpawnActorOnDeath@Farmer3:
-        Actor: e1new
-        Probability: 33
-        OwnerType: InternalName
-        InternalOwner: Creeps
-    ThrowsShrapnel@LARGE:
+	SpawnActorOnDeath@Farmer1:
+		Actor: e1new
+		Probability: 33
+		OwnerType: InternalName
+		InternalOwner: Creeps
+	SpawnActorOnDeath@Farmer2:
+		Actor: e1new
+		Probability: 33
+		OwnerType: InternalName
+		InternalOwner: Creeps
+	SpawnActorOnDeath@Farmer3:
+		Actor: e1new
+		Probability: 33
+		OwnerType: InternalName
+		InternalOwner: Creeps
+	ThrowsShrapnel@LARGE:
 		Weapons: DebrFurniture1, DebrFurniture2, DebrFurniture3, DebrFurniture4
 		Pieces: 2, 3
 		Range: 1c0, 5c0
-        
+		
 SULBARR:
 	Inherits: ^MWBaseBuilding
-    Armor:
+	Armor:
 		Type: Concrete
-    WithDeathAnimation:
-        DeathSequencePalette: sultanplayer
-    RenderSprites:
-        PlayerPalette: sultanplayer
+	WithDeathAnimation:
+		DeathSequencePalette: sultanplayer
+	RenderSprites:
+		PlayerPalette: sultanplayer
 	Valued:
 		Cost: 900
-    CustomSellValue:
+	CustomSellValue:
 		Value: 450
 	Tooltip:
 		Name: Barracks
 	ProvidesPrerequisite:
 		Prerequisite: barracks
 	Buildable:
-        IconPalette: raicon
+		IconPalette: raicon
 		BuildPaletteOrder: 30
 		Prerequisites: anypower
 		Description: Trains Infantry only\n\n\n\n
@@ -284,9 +284,9 @@ SULBARR:
 		Dimensions: 3,2
 	Health:
 		HP: 60000
-        Shape: Rectangle
-            TopLeft: -1424,-924
-            BottomRight: 1424, 924
+		Shape: Rectangle
+			TopLeft: -1424,-924
+			BottomRight: 1424, 924
 	RevealsShroud:
 		Range: 5c0
 	Bib:
@@ -294,10 +294,10 @@ SULBARR:
 	Exit@1:
 		SpawnOffset: 981,426,0
 		ExitCell: 2,2
-    Exit@2:
+	Exit@2:
 		SpawnOffset: 341,682,0
 		ExitCell: 1,2
-    Exit@3:
+	Exit@3:
 		SpawnOffset: -213,896,0
 		ExitCell: 0,2
 	Production:
@@ -307,7 +307,7 @@ SULBARR:
 		Group: Infantry
 		RequireOwner: false
 		LowPowerSlowdown: 3
-        Factions: sul
+		Factions: sul
 	ProductionBar:
 	Power:
 		Amount: -2
@@ -316,34 +316,34 @@ SULBARR:
 		Bounds:72,48,0,9
 	SelectionDecorations:
 		VisualBounds: 72,53,0,-4
-    ThrowsShrapnel@LARGE:
+	ThrowsShrapnel@LARGE:
 		Weapons: SDebrWeapon1, SDebrWeapon2, SDebrWeapon3
 		Pieces: 1, 2
 		Range: 1c0, 5c0
-    Refinery:
+	Refinery:
 		DockAngle: 72
 		DockOffset: 0,2
-        TickRate: 15
-        
+		TickRate: 15
+		
 SULMYSTIC:
 	Inherits: ^MWBaseBuilding
-    Armor:
+	Armor:
 		Type: Concrete
-    WithDeathAnimation:
-        DeathSequencePalette: sultanplayer
-    RenderSprites:
-        PlayerPalette: sultanplayer
+	WithDeathAnimation:
+		DeathSequencePalette: sultanplayer
+	RenderSprites:
+		PlayerPalette: sultanplayer
 	Valued:
 		Cost: 1500
-    CustomSellValue:
+	CustomSellValue:
 		Value: 750
 	Tooltip:
 		Name: School of Mystic Teachings
 	ProvidesPrerequisite@buildingname:
-    ProvidesPrerequisite:
+	ProvidesPrerequisite:
 		Prerequisite: vehicleproduction
 	Buildable:
-        IconPalette: raicon
+		IconPalette: raicon
 		BuildPaletteOrder: 40
 		Prerequisites: proc
 		Description: Trains Magical and Mystical Units\n\n\n\n
@@ -353,9 +353,9 @@ SULMYSTIC:
 		Dimensions: 3,2
 	Health:
 		HP: 85000
-        Shape: Rectangle
-            TopLeft: -1424,-924
-            BottomRight: 1424, 924
+		Shape: Rectangle
+			TopLeft: -1424,-924
+			BottomRight: 1424, 924
 	RevealsShroud:
 		Range: 5c0
 	Bib:
@@ -370,7 +370,7 @@ SULMYSTIC:
 		Group: Vehicle
 		RequireOwner: false
 		LowPowerSlowdown: 3
-        Factions: sul
+		Factions: sul
 	ProductionBar:
 	Power:
 		Amount: -3
@@ -379,36 +379,36 @@ SULMYSTIC:
 		Bounds:72,48,0,9
 	SelectionDecorations:
 		VisualBounds: 72,53,0,-4
-    ThrowsShrapnel@LARGE:
+	ThrowsShrapnel@LARGE:
 		Weapons: SDebrWeapon1, SDebrWeapon2, SDebrWeapon3
 		Pieces: 1, 2
 		Range: 1c0, 5c0
-    Refinery:
+	Refinery:
 		DockAngle: 72
 		DockOffset: 0,2
-        TickRate: 15
-        
+		TickRate: 15
+		
 SULCASTLE:
 	Inherits: ^MWBaseBuilding
-    Armor:
+	Armor:
 		Type: Concrete
-    WithDeathAnimation:
-        DeathSequencePalette: sultanplayer
-    RenderSprites:
-        PlayerPalette: sultanplayer
+	WithDeathAnimation:
+		DeathSequencePalette: sultanplayer
+	RenderSprites:
+		PlayerPalette: sultanplayer
 	Valued:
 		Cost: 1500
-    CustomSellValue:
+	CustomSellValue:
 		Value: 750
-    Tooltip:
+	Tooltip:
 		Name: Palace
 	ProvidesPrerequisite:
 		Prerequisite: anyhq
-    ProvidesPrerequisite@3:
+	ProvidesPrerequisite@3:
 		Prerequisite: Level3
-    ProvidesPrerequisite@buildingname:
+	ProvidesPrerequisite@buildingname:
 	Buildable:
-        IconPalette: raicon
+		IconPalette: raicon
 		BuildPaletteOrder: 50
 		Prerequisites: proc
 		Description: Can unlock Superweapons.\n Can unlock advanced tech.\nCan hold up to 4 nobles.\n\n\n\n
@@ -418,9 +418,9 @@ SULCASTLE:
 		Dimensions: 3,3
 	Health:
 		HP: 85000
-        Shape: Rectangle
-            TopLeft: -1424,-1020
-            BottomRight: 1424, 1524
+		Shape: Rectangle
+			TopLeft: -1424,-1020
+			BottomRight: 1424, 1524
 	RevealsShroud:
 		Range: 5c0
 	Bib:
@@ -430,72 +430,72 @@ SULCASTLE:
 		Bounds: 72,48,0,12
 	SelectionDecorations:
 		VisualBounds: 72,68,0,0
-    ThrowsShrapnel@LARGE:
+	ThrowsShrapnel@LARGE:
 		Weapons: LargeWood1, LargeWood1, LargeStone1, LargeStone1
 		Pieces: 1, 2
 		Range: 1c0, 5c0
-    GrantConditionOnPrerequisite@Tower1:
-        Condition: Tower1build
-        Prerequisites: sultow1
-    WithIdleOverlay@Tower1:
-        StartSequence: tower1make
-        Sequence: tower1
-        Offset: 1024, 1024, 0
-        RequiresCondition: Tower1build
-    GrantConditionOnPrerequisite@Tower2:
-        Condition: Tower2build
-        Prerequisites: sultow2
-    WithIdleOverlay@Tower2:
-        StartSequence: tower2make
-        Sequence: tower2
-        Offset: -1124, 1024, 0
-        RequiresCondition: Tower2build
-    GrantConditionOnPrerequisite@Tower3:
-        Condition: Tower3build
-        Prerequisites: sultow3
-    WithIdleOverlay@Tower3:
-        StartSequence: tower3make
-        Sequence: tower3
-        Offset: -1124, -1024, 0
-        RequiresCondition: Tower3build
-    GrantConditionOnPrerequisite@Tower4:
-        Condition: Tower4build
-        Prerequisites: sultow4
-    WithIdleOverlay@Tower4:
-        StartSequence: tower4make
-        Sequence: tower4
-        Offset: 1024, -1024, 0
-        RequiresCondition: Tower4build
-    PowerMultiplier@1:
-        Modifier: 200
-        RequiresCondition: (Tower1build + Tower2build + Tower3build + Tower4build) == 1
-    PowerMultiplier@2:
-        Modifier: 300
-        RequiresCondition: (Tower1build + Tower2build + Tower3build + Tower4build) == 2
-    PowerMultiplier@3:
-        Modifier: 400
-        RequiresCondition: (Tower1build + Tower2build + Tower3build + Tower4build) == 3
-    PowerMultiplier@4:
-        Modifier: 500
-        RequiresCondition: (Tower1build + Tower2build + Tower3build + Tower4build) == 4
-    DamageMultiplier@1:
-        Modifier: 80
-        RequiresCondition: (Tower1build + Tower2build + Tower3build + Tower4build) == 1
-    DamageMultiplier@2:
-        Modifier: 65
-        RequiresCondition: (Tower1build + Tower2build + Tower3build + Tower4build) == 2
-    DamageMultiplier@3:
-        Modifier: 55
-        RequiresCondition: (Tower1build + Tower2build + Tower3build + Tower4build) == 3
-    DamageMultiplier@4:
-        Modifier: 33
-        RequiresCondition: (Tower1build + Tower2build + Tower3build + Tower4build) == 4
-    AirstrikePower:
+	GrantConditionOnPrerequisite@Tower1:
+		Condition: Tower1build
+		Prerequisites: sultow1
+	WithIdleOverlay@Tower1:
+		StartSequence: tower1make
+		Sequence: tower1
+		Offset: 1024, 1024, 0
+		RequiresCondition: Tower1build
+	GrantConditionOnPrerequisite@Tower2:
+		Condition: Tower2build
+		Prerequisites: sultow2
+	WithIdleOverlay@Tower2:
+		StartSequence: tower2make
+		Sequence: tower2
+		Offset: -1124, 1024, 0
+		RequiresCondition: Tower2build
+	GrantConditionOnPrerequisite@Tower3:
+		Condition: Tower3build
+		Prerequisites: sultow3
+	WithIdleOverlay@Tower3:
+		StartSequence: tower3make
+		Sequence: tower3
+		Offset: -1124, -1024, 0
+		RequiresCondition: Tower3build
+	GrantConditionOnPrerequisite@Tower4:
+		Condition: Tower4build
+		Prerequisites: sultow4
+	WithIdleOverlay@Tower4:
+		StartSequence: tower4make
+		Sequence: tower4
+		Offset: 1024, -1024, 0
+		RequiresCondition: Tower4build
+	PowerMultiplier@1:
+		Modifier: 200
+		RequiresCondition: (Tower1build + Tower2build + Tower3build + Tower4build) == 1
+	PowerMultiplier@2:
+		Modifier: 300
+		RequiresCondition: (Tower1build + Tower2build + Tower3build + Tower4build) == 2
+	PowerMultiplier@3:
+		Modifier: 400
+		RequiresCondition: (Tower1build + Tower2build + Tower3build + Tower4build) == 3
+	PowerMultiplier@4:
+		Modifier: 500
+		RequiresCondition: (Tower1build + Tower2build + Tower3build + Tower4build) == 4
+	DamageMultiplier@1:
+		Modifier: 80
+		RequiresCondition: (Tower1build + Tower2build + Tower3build + Tower4build) == 1
+	DamageMultiplier@2:
+		Modifier: 65
+		RequiresCondition: (Tower1build + Tower2build + Tower3build + Tower4build) == 2
+	DamageMultiplier@3:
+		Modifier: 55
+		RequiresCondition: (Tower1build + Tower2build + Tower3build + Tower4build) == 3
+	DamageMultiplier@4:
+		Modifier: 33
+		RequiresCondition: (Tower1build + Tower2build + Tower3build + Tower4build) == 4
+	AirstrikePower:
 		Prerequisites: ~techlevel.superweapons, sultow1
-        RequiresCondition: Tower1build
+		RequiresCondition: Tower1build
 		Icon: sulspballiconsmall
 		ChargeTime: 210
-        SquadOffset	-236,236,0
+		SquadOffset	-236,236,0
 		SquadSize: 3
 		QuantizedFacings: 8
 		Description: Pulverising Spear Storm (placeholder)
@@ -509,26 +509,26 @@ SULCASTLE:
 		BeaconPoster: sulspballiconstiny
 		BeaconPosterPalette: beaconposter
 		DisplayRadarPing: True
-        CameraActor: camera
-        ArrowSequence: arrow
-        ClockSequence: clock
-        CircleSequence: circles
-        CameraRemoveDelay: 90
-        OrderName: SpearsPowerInfoOrder
-    SupportPowerChargeBar:
-    ProximityExternalCondition@HEAL:
-        Range: 5c0
-        ValidStances: Ally
-        Condition: hospitalhealbarr
-    WithRangeCircle: 
-        ValidStances: Ally, Neutral
-        Range: 5c0
-    SpawnActorPower@Tornado:
+		CameraActor: camera
+		ArrowSequence: arrow
+		ClockSequence: clock
+		CircleSequence: circles
+		CameraRemoveDelay: 90
+		OrderName: SpearsPowerInfoOrder
+	SupportPowerChargeBar:
+	ProximityExternalCondition@HEAL:
+		Range: 5c0
+		ValidStances: Ally
+		Condition: hospitalhealbarr
+	WithRangeCircle: 
+		ValidStances: Ally, Neutral
+		Range: 5c0
+	SpawnActorPower@Tornado:
 		Prerequisites: ~techlevel.superweapons
 		Icon: sulturnxlicon
 		ChargeTime: 230
-        Actor: sulturnxl
-        LifeTime: 2000
+		Actor: sulturnxl
+		LifeTime: 2000
 		Description: Tornado\n\n\n\n
 		LongDesc: Devastating!
 		SelectTargetSpeechNotification: SelectTarget
@@ -537,135 +537,135 @@ SULCASTLE:
 		BeaconPoster: trojanbeacon
 		BeaconPosterPalette: beaconposter
 		DisplayRadarPing: True
-        CameraActor: camera
-        ArrowSequence: arrow
-        ClockSequence: clock
-        CircleSequence: circles
-        OrderName: TornadoPowerInfoOrder
-        EndChargeSpeechNotification: ReadyHorse
-        IncomingSpeechNotification: 
-        IncomingSound: 
-        RequiresCondition: Tower4build
-       
+		CameraActor: camera
+		ArrowSequence: arrow
+		ClockSequence: clock
+		CircleSequence: circles
+		OrderName: TornadoPowerInfoOrder
+		EndChargeSpeechNotification: ReadyHorse
+		IncomingSpeechNotification: 
+		IncomingSound: 
+		RequiresCondition: Tower4build
+	   
 SULTOW1:
-    AlwaysVisible:
-    RenderSprites:
-        PlayerPalette: sultanplayer
+	AlwaysVisible:
+	RenderSprites:
+		PlayerPalette: sultanplayer
 	Valued:
 		Cost: 1000
 	Tooltip:
 		Name: Tower of Knowledge
-    ProvidesPrerequisite@buildingname:
+	ProvidesPrerequisite@buildingname:
 	Buildable:
-        IconPalette: raicon
+		IconPalette: raicon
 		BuildPaletteOrder: 80
 		Prerequisites: anyhq
 		Description: Grands acess to advanced tech at the barracks.\n Allows Supportpower I \n Heals surrounding units.\n\n
 		Queue: MBuilding.SUL#
-        BuildLimit: 1
-    GrantConditionOnPrerequisite@Palace:
-        Condition: Palace
-        Prerequisites: sulcastle
-    KillsSelf:
-        RemoveInstead: true
-        RequiresCondition: !sulcastle
-        Delay: 10
-    
-        
+		BuildLimit: 1
+	GrantConditionOnPrerequisite@Palace:
+		Condition: Palace
+		Prerequisites: sulcastle
+	KillsSelf:
+		RemoveInstead: true
+		RequiresCondition: !sulcastle
+		Delay: 10
+	
+		
 SULTOW2:
 	AlwaysVisible:
-    RenderSprites:
-        PlayerPalette: sultanplayer
+	RenderSprites:
+		PlayerPalette: sultanplayer
 	Valued:
 		Cost: 1000
 	Tooltip:
 		Name: Tower of Mystical Teachings
-    ProvidesPrerequisite@buildingname:
+	ProvidesPrerequisite@buildingname:
 	Buildable:
-        IconPalette: raicon
+		IconPalette: raicon
 		BuildPaletteOrder: 90
 		Prerequisites: anyhq
 		Description: Grands acess to advanced tech at the School of Mystic Teachings.\n\n\n\n
 		Queue: MBuilding.SUL
-        BuildLimit: 1
-    GrantConditionOnPrerequisite@Palace:
-        Condition: Palace
-        Prerequisites: sulcastle
-    KillsSelf:
-        RemoveInstead: true
-        RequiresCondition: !sulcastle
-        Delay: 10
-        
+		BuildLimit: 1
+	GrantConditionOnPrerequisite@Palace:
+		Condition: Palace
+		Prerequisites: sulcastle
+	KillsSelf:
+		RemoveInstead: true
+		RequiresCondition: !sulcastle
+		Delay: 10
+		
 SULTOW3:
 	AlwaysVisible:
-    RenderSprites:
-        PlayerPalette: sultanplayer
+	RenderSprites:
+		PlayerPalette: sultanplayer
 	Valued:
 		Cost: 1000
 	Tooltip:
 		Name: Tower of Progress
-    ProvidesPrerequisite@buildingname:
+	ProvidesPrerequisite@buildingname:
 	ProvidesPrerequisite:
 		Prerequisite: anyarmory
-    Buildable:
-        IconPalette: raicon
+	Buildable:
+		IconPalette: raicon
 		BuildPaletteOrder: 100
 		Prerequisites: anyhq
 		Description: Grands acess to advanced tech and support powers at the Siege Workshop.\n\n\n\n
 		Queue: MDefenses.SUL
-        BuildLimit: 1
-    GrantConditionOnPrerequisite@Palace:
-        Condition: Palace
-        Prerequisites: sulcastle
-    KillsSelf:
-        RemoveInstead: true
-        RequiresCondition: !sulcastle
-        Delay: 10
-        
+		BuildLimit: 1
+	GrantConditionOnPrerequisite@Palace:
+		Condition: Palace
+		Prerequisites: sulcastle
+	KillsSelf:
+		RemoveInstead: true
+		RequiresCondition: !sulcastle
+		Delay: 10
+		
 SULTOW4:
 	AlwaysVisible:
-    RenderSprites:
-        PlayerPalette: sultanplayer
+	RenderSprites:
+		PlayerPalette: sultanplayer
 	Valued:
 		Cost: 2000
 	Tooltip:
 		Name: Tower of Annihilation
-    ProvidesPrerequisite@buildingname:
-    ProvidesPrerequisite@3:
+	ProvidesPrerequisite@buildingname:
+	ProvidesPrerequisite@3:
 		Prerequisite: Level4
 	Buildable:
-        IconPalette: raicon
+		IconPalette: raicon
 		BuildPaletteOrder: 110
 		Prerequisites: anyhq, sultow1, sultow2, sultow3
 		Description: Grands acess to superb tech and super weapons.\n\n\n\n
 		Queue: MDefenses.SUL
-        BuildLimit: 1
-    GrantConditionOnPrerequisite@Palace:
-        Condition: Palace
-        Prerequisites: sulcastle
-    KillsSelf:
-        RemoveInstead: true
-        RequiresCondition: !sulcastle
-        Delay: 10
-        
+		BuildLimit: 1
+	GrantConditionOnPrerequisite@Palace:
+		Condition: Palace
+		Prerequisites: sulcastle
+	KillsSelf:
+		RemoveInstead: true
+		RequiresCondition: !sulcastle
+		Delay: 10
+		
 SULMILL:
 	Inherits: ^MWBaseBuilding
-    Armor:
+	Armor:
 		Type: Concrete
-    WithDeathAnimation:
-        DeathSequencePalette: sultanplayer
-    RenderSprites:
-        PlayerPalette: sultanplayer
+	WithDeathAnimation:
+		DeathSequencePalette: sultanplayer
+	RenderSprites:
+		PlayerPalette: sultanplayer
 	Valued:
 		Cost: 1400
-    CustomSellValue:
+	CustomSellValue:
 		Value: 400
 	Tooltip:
 		Name: Windmill
 	ProvidesPrerequisite:
 		Prerequisite: proc
 	Buildable:
-        IconPalette: raicon
+		IconPalette: raicon
 		BuildPaletteOrder: 20
 		Prerequisites: anypower
 		Description: Provides basic resource gathering for Crops and Grain.\n Comes with 2 farmers.\n Can only operate up to 6 farmers at once.\n\n\n\n
@@ -675,29 +675,29 @@ SULMILL:
 		Dimensions: 2,3
 	Health:
 		HP: 80000
-        Shape: Rectangle
-            TopLeft: -824,-754
-            BottomRight: 824, 924
+		Shape: Rectangle
+			TopLeft: -824,-754
+			BottomRight: 824, 924
 	RevealsShroud:
 		Range: 3c0
 	Bib:
-    CustomSellValue:
+	CustomSellValue:
 		Value: 200
 	Power:
 		Amount: -2
 	ProvidesPrerequisite@buildingname:
 	Selectable:
 		Bounds: 48,70,0,5
-    SelectionDecorations:
+	SelectionDecorations:
 		VisualBounds: 48,70,0,5
-    ThrowsShrapnel@LARGE:
+	ThrowsShrapnel@LARGE:
 		Weapons: DebrUtility1, DebrUtility2, DebrUtility3
 		Pieces: 1, 2
 		Range: 1c0, 5c0
-    Refinery:
+	Refinery:
 		DockAngle: 72
 		DockOffset: 1,3
-        TickRate: 5
+		TickRate: 5
 	StoresResources:
 		PipColor: Yellow
 		PipCount: 5
@@ -706,39 +706,39 @@ SULMILL:
 		Actor: SULE6
 		SpawnOffset: 1,3
 		Facing: 64
-    FreeActor@2:
+	FreeActor@2:
 		Actor: SULE6
 		SpawnOffset: 1,3
 		Facing: 64
-    FreeActor@3:
+	FreeActor@3:
 		Actor: GHOSTPROC
 		SpawnOffset: 0,0
 		Facing: 64
-    FreeActor@4:
+	FreeActor@4:
 		Actor: SULE6
 		SpawnOffset: 1,3
 		Facing: 64
-    ProximityExternalCondition@KILL:
-        Range: 1c0
-        ValidStances: Ally
-        Condition: KillRef
+	ProximityExternalCondition@KILL:
+		Range: 1c0
+		ValidStances: Ally
+		Condition: KillRef
 
 SULFIX:
 	Inherits: ^MWBaseBuilding
-    WithDeathAnimation:
-        DeathSequencePalette: sultanplayer
-    Armor:
+	WithDeathAnimation:
+		DeathSequencePalette: sultanplayer
+	Armor:
 		Type: HeavyBuilding
-    RenderSprites:
-        PlayerPalette: sultanplayer
+	RenderSprites:
+		PlayerPalette: sultanplayer
 	Valued:
 		Cost: 1200
-    CustomSellValue:
+	CustomSellValue:
 		Value: 600
 	Tooltip:
 		Name: Siege Workshop
 	Buildable:
-        IconPalette: raicon
+		IconPalette: raicon
 		BuildPaletteOrder: 60
 		Prerequisites: proc
 		Description: Provides Siege weapons construction.\n\n\n\n
@@ -752,77 +752,77 @@ SULFIX:
 		VisualBounds: 72,48
 	Health:
 		HP: 70000
-        Shape: Rectangle
-            TopLeft: -1424,-720
-            BottomRight: 1424, 824
+		Shape: Rectangle
+			TopLeft: -1424,-720
+			BottomRight: 1424, 824
 	RevealsShroud:
 		Range: 4c0
 	Bib:
 	Power:
 		Amount: -4
 	ProvidesPrerequisite@buildingname: 
-    RallyPoint:
+	RallyPoint:
 	Exit@1:
 		SpawnOffset: -200,200,0
 		ExitCell: 0,2
 	Production:
 		Produces: MSiege.SUL
-    ProductionQueue@2:
+	ProductionQueue@2:
 		Type: MSiege.SUL
 		Group: Aircraft
-        Factions: sul
+		Factions: sul
 		RequireOwner: false
 		LowPowerSlowdown: 3
 	ProductionBar:
-    WithIdleAnimation:
-        Interval: 360
-    ProvidesPrerequisite@2:
+	WithIdleAnimation:
+		Interval: 360
+	ProvidesPrerequisite@2:
 		Prerequisite: anyworkshop
-    ThrowsShrapnel@LARGE:
+	ThrowsShrapnel@LARGE:
 		Weapons: LargeWood1, SmallWood1, LargeStone1, SmallWood2
 		Pieces: 1, 2
 		Range: 1c0, 5c0
-    ProximityExternalCondition@LABORER:
-        Range: 3c0
-        ValidStances: Ally
-        Condition: Labor
-    Targetable:
+	ProximityExternalCondition@LABORER:
+		Range: 3c0
+		ValidStances: Ally
+		Condition: Labor
+	Targetable:
 		TargetTypes: Ground, C4, Structure, Wanderer, Laborer
-    Refinery:
+	Refinery:
 		DockAngle: 72
 		DockOffset: 1,2
-        TickRate: 15
-    FreeActor@1:
+		TickRate: 15
+	FreeActor@1:
 		Actor: mwwand9
 		SpawnOffset: 1,-1
 		Facing: 64
-    FreeActor@2:
+	FreeActor@2:
 		Actor: mwwand9
 		SpawnOffset: 1,-1
 		Facing: 64
-    ProduceActorPower:
+	ProduceActorPower:
 		Prerequisites: ~techlevel.superweapons
 		Icon: sulb2iconsmall
 		ChargeTime: 230
-        Actors: sulb2
-        Type: MSiege.SUL
+		Actors: sulb2
+		Type: MSiege.SUL
 		Description: Siege Mortar
 		LongDesc: Our final siege weapon is ready for combat.
 		SelectTargetSpeechNotification: SelectTarget
 		InsufficientPowerSpeechNotification: InsufficientPower
 		DisplayBeacon: False
 		DisplayRadarPing: False
-        ArrowSequence: arrow
-        ClockSequence: clock
-        CircleSequence: circles
-        OrderName: MortarInfoOrder
-        EndChargeSpeechNotification: StrangeReady
-        RequiresCondition: Enabled
-    SupportPowerChargeBar: 
-    GrantConditionOnPrerequisite:
-        Condition: Enabled
-        Prerequisites: sultow3, anyhq
-        
+		ArrowSequence: arrow
+		ClockSequence: clock
+		CircleSequence: circles
+		OrderName: MortarInfoOrder
+		EndChargeSpeechNotification: StrangeReady
+		RequiresCondition: Enabled
+	SupportPowerChargeBar: 
+	GrantConditionOnPrerequisite:
+		Condition: Enabled
+		Prerequisites: sultow3, anyhq
+		
 #Infantry
 
 SULE1:
@@ -833,27 +833,27 @@ SULE1:
 		Name: Mubarizun
 	Buildable:
 		Description: General-purpose infantry.\n  Strong vs Infantry\n  Weak vs Everything\n  Can cut down trees.\n\n\n
-        IconPalette: raicon
+		IconPalette: raicon
 		BuildPaletteOrder: 10
 		Queue: MInfantry.SUL
-        BuildDuration: 100
-    Mobile:
+		BuildDuration: 100
+	Mobile:
 		Speed: 85
 	Health:
 		HP: 8000
 	Armament:
 		Weapon: SulSword
 	AttackFrontal:
-    AutoTarget:
+	AutoTarget:
 		ScanRadius: 4
-        InitialStance: AttackAnything
-    RenderSprites:
-        PlayerPalette: raplayer
+		InitialStance: AttackAnything
+	RenderSprites:
+		PlayerPalette: raplayer
 	WithInfantryBody:
 		DefaultAttackSequence: shoot
-    Armor:
+	Armor:
 		Type: Leather
-        
+		
 SULE2:
 	Inherits: ^Knight
 	Valued:
@@ -862,42 +862,42 @@ SULE2:
 		Name: Rashidun Champion
 	Buildable:
 		Description: Anti-Cavalry infantry.\n  Strong vs Cavalry.\n  Moderate vs Infantry\n  Deals damage when trampled by Cavalry\n  Can cut down trees.\n\n\n
-        IconPalette: raicon
+		IconPalette: raicon
 		BuildPaletteOrder: 30
 		Queue: MInfantry.SUL
-        Prerequisites: anyhq
-    Mobile:
+		Prerequisites: anyhq
+	Mobile:
 		Speed: 56
 	Health:
 		HP: 12000
-    Armament@Primary:
-        Name: Primary
+	Armament@Primary:
+		Name: Primary
 		Weapon: PikeAC
-    Armament@Secondary:
-        Name: Secondary
+	Armament@Secondary:
+		Name: Secondary
 		Weapon: BroadSwordAE
-    AttackFrontal:
-        Armaments: Primary, Secondary    
-    AutoTarget:
+	AttackFrontal:
+		Armaments: Primary, Secondary	
+	AutoTarget:
 		ScanRadius: 4
-        InitialStance: AttackAnything
-    RenderSprites:
-        PlayerPalette: raplayer
+		InitialStance: AttackAnything
+	RenderSprites:
+		PlayerPalette: raplayer
 	WithInfantryBody:
 		DefaultAttackSequence: shoot
-        AttackSequences:
-            Secondary: shootae
-            Primary: shoot
-    Armor:
+		AttackSequences:
+			Secondary: shootae
+			Primary: shoot
+	Armor:
 		Type: Heavy
-    Explodes:
-        Weapon: KilledPike
-        EmptyWeapon: KilledPike
-    Power:
+	Explodes:
+		Weapon: KilledPike
+		EmptyWeapon: KilledPike
+	Power:
 		Amount: -2
-        
+		
 SULE3:
-    RevealsShroud:
+	RevealsShroud:
 		Range: 6c0
 	Inherits: ^Knight
 	Valued:
@@ -906,7 +906,7 @@ SULE3:
 		Name: Bedouin
 	Buildable:
 		Description: Advanced Anti-infantry unit.\n  Strong vs Light Infantry\n  Weak vs Cavalry and heavy Infantry\n  Detects cloaked units\n  Can attack Aircrafts\n\n\n
-        IconPalette: raicon
+		IconPalette: raicon
 		BuildPaletteOrder: 20
 		Queue: MInfantry.SUL
 	Mobile:
@@ -915,75 +915,75 @@ SULE3:
 		HP: 7000
 	Armament:
 		Weapon: BedouinBow
-        LocalOffset: 341,20,356
-    Armament@DUMMY:
+		LocalOffset: 341,20,356
+	Armament@DUMMY:
 		Weapon: BedouinBowDUMMY
-        LocalOffset: 341,20,356
-    Armament@Air:
+		LocalOffset: 341,20,356
+	Armament@Air:
 		Weapon: BedouinBowAir
-        LocalOffset: 341,20,356
-    Armament@GARRISONED:
+		LocalOffset: 341,20,356
+	Armament@GARRISONED:
 		Name: garrisoned
 		Weapon: BedouinBowTowerUnblock
-    Armament@GARRISONEDDUMMY:
+	Armament@GARRISONEDDUMMY:
 		Name: garrisoned
 		Weapon: BedouinBowTowerUnblockDUMMY
 	AttackFrontal:
-    AutoTarget:
+	AutoTarget:
 		ScanRadius: 5
-        InitialStance: AttackAnything
-    RenderSprites:
-        PlayerPalette: raplayer
+		InitialStance: AttackAnything
+	RenderSprites:
+		PlayerPalette: raplayer
 	WithInfantryBody:
 		DefaultAttackSequence: shoot
-    Armor:
+	Armor:
 		Type: Leather
-    DetectCloaked:
+	DetectCloaked:
 		Range: 2c0
-    Passenger:
+	Passenger:
 		CargoType: Archer
-    Crushable:
+	Crushable:
 		WarnProbability: 55
-        
+		
 SULE4:
 	Inherits: ^Knight
 	Valued:
 		Cost: 450
 	Tooltip:
 		Name: Palace Guard
-    Buildable:
+	Buildable:
 		Description: Heavy Anti-Cavalry infantry that are able to regenerate thier health if not in combat.\n  Superb vs Cavalry.\n  Moderate vs Infantry\n  Cannot be trampled by Cavalry\n  Can cut down trees.\n\n\n
-        IconPalette: raicon
+		IconPalette: raicon
 		BuildPaletteOrder: 30
 		Queue: MInfantry.SUL
-        Prerequisites: sultow1
-    Mobile:
+		Prerequisites: sultow1
+	Mobile:
 		Speed: 55
 	Health:
 		HP: 32000
-    Armament@Primary:
+	Armament@Primary:
 		Weapon: SuperioirPike
-    AttackFrontal:  
-    AutoTarget:
+	AttackFrontal:  
+	AutoTarget:
 		ScanRadius: 4
-        InitialStance: AttackAnything
-    RenderSprites:
-        PlayerPalette: raplayer
+		InitialStance: AttackAnything
+	RenderSprites:
+		PlayerPalette: raplayer
 	WithInfantryBody:
 		DefaultAttackSequence: shoot
-    Armor:
+	Armor:
 		Type: Heavy
-    Power:
+	Power:
 		Amount: -2
-    -Crushable:
-    SelfHealing@HealsConst:
-        Step: 900
-        HealIfBelow: 100
-        Delay: 25
-        DamageCooldown: 25
-        
+	-Crushable:
+	SelfHealing@HealsConst:
+		Step: 900
+		HealIfBelow: 100
+		Delay: 25
+		DamageCooldown: 25
+		
 SULE5:
-    RevealsShroud:
+	RevealsShroud:
 		Range: 9c0
 	Inherits: ^Knight
 	Valued:
@@ -991,65 +991,65 @@ SULE5:
 	Tooltip:
 		Name: Scimitar 
 	Buildable:
-        Description: Elite Infantry that is hard to hit when its moving.\n  Strong vs Infantry, Cavalry\n  Moderate vs Buildings\n  Detects cloaked units\n\n\n
-        IconPalette: raicon
-        BuildPaletteOrder: 40
-        Prerequisites: sultow4, anyhq, ~techlevel.high
-        Queue: MInfantry.SUL
-    Mobile:
+		Description: Elite Infantry that is hard to hit when its moving.\n  Strong vs Infantry, Cavalry\n  Moderate vs Buildings\n  Detects cloaked units\n\n\n
+		IconPalette: raicon
+		BuildPaletteOrder: 40
+		Prerequisites: sultow4, anyhq, ~techlevel.high
+		Queue: MInfantry.SUL
+	Mobile:
 		Speed: 175
 	Health:
 		HP: 21500
 	Armament:
 		Weapon: ScimitarDuals
-        Name: primary
+		Name: primary
 	AttackFrontal:
-    AutoTarget:
+	AutoTarget:
 		ScanRadius: 4
-        InitialStance: AttackAnything
-    RenderSprites:
-        PlayerPalette: raplayer
+		InitialStance: AttackAnything
+	RenderSprites:
+		PlayerPalette: raplayer
 	WithInfantryBody:
 		DefaultAttackSequence: shoot
-    Armor:
+	Armor:
 		Type: Heavy
-    Power:
+	Power:
 		Amount: -4
-    DetectCloaked:
+	DetectCloaked:
 		Range: 2c0
-    GrantConditionOnMovement@Runfast:
-        Condition: Runfast
-    DamageMultiplier@Runfast:
-        Modifier: 50
-        RequiresCondition: Runfast
-    Crushable:
+	GrantConditionOnMovement@Runfast:
+		Condition: Runfast
+	DamageMultiplier@Runfast:
+		Modifier: 50
+		RequiresCondition: Runfast
+	Crushable:
 		WarnProbability: 75
-        
-        
+		
+		
 SULE6:
 	Inherits: ^Knight
-    BodyOrientation:
-        QuantizedFacings: 8
-    QuantizeFacingsFromSequence:
+	BodyOrientation:
+		QuantizedFacings: 8
+	QuantizeFacingsFromSequence:
 		Sequence: stand
-    Buildable:
+	Buildable:
 		Description: Gathers grains and Crops and Corn.\nDelivers to a windmill.\nCan collect chopped wood, lumber and goods\n\n
-        IconPalette: raicon
+		IconPalette: raicon
 		BuildPaletteOrder: 40
 		Queue: MInfantry.SUL
-    WithFacingSpriteBody:
-        Sequence: idle
-        RequiresCondition: !MoveAnim
-    WithHarvestAnimation:
-        HarvestSequence: harvest
-        PrefixByFullness: empty-, full-
-    WithDockingAnimation:
-    GrantConditionOnMovement:
-        Condition: MoveAnim
-    WithInfantryBody:
-        MoveSequence: move
-        StandSequences: idle
-        RequiresCondition: MoveAnim
+	WithFacingSpriteBody:
+		Sequence: idle
+		RequiresCondition: !MoveAnim
+	WithHarvestAnimation:
+		HarvestSequence: harvest
+		PrefixByFullness: empty-, full-
+	WithDockingAnimation:
+	GrantConditionOnMovement:
+		Condition: MoveAnim
+	WithInfantryBody:
+		MoveSequence: move
+		StandSequences: idle
+		RequiresCondition: MoveAnim
 	Valued:
 		Cost: 325
 	Tooltip:
@@ -1058,15 +1058,15 @@ SULE6:
 		Speed: 70
 	Health:
 		HP: 17000
-    RenderSprites:
-        PlayerPalette: raplayer
-    AttackFrontal:
-    Armor:
-		Type: Heavy       
-    Selectable:
+	RenderSprites:
+		PlayerPalette: raplayer
+	AttackFrontal:
+	Armor:
+		Type: Heavy	   
+	Selectable:
 		Priority: 7
-    Harvester:
-        DeliveryBuildings: zeroproc, ghostproc, sulmill
+	Harvester:
+		DeliveryBuildings: zeroproc, ghostproc, sulmill
 		Resources: Copper, Grains, Wood, Goods, Lumber, Corn
 		PipCount: 2
 		Capacity: 8
@@ -1074,16 +1074,16 @@ SULE6:
 		BaleUnloadDelay: 5
 		SearchFromProcRadius: 25
 		SearchFromOrderRadius: 15
-    Selectable:
+	Selectable:
 		Bounds: 14,26,0,-6
 	SelectionDecorations:
 		VisualBounds: 14,26,0,-6 
-    -Crushable:
+	-Crushable:
 
 # Mystics
 
 SULM1:
-    RevealsShroud:
+	RevealsShroud:
 		Range: 6c0
 	Inherits: ^Knight
 	Valued:
@@ -1092,7 +1092,7 @@ SULM1:
 		Name: Apprentice
 	Buildable:
 		Description: Anti-infantry unit.\n  Strong vs Infantry\n  Weak vs Cavalry, Buildings\n  Detects cloaked units\n  Can spawn sceletons upon death infantry\n\n\n
-        IconPalette: raicon
+		IconPalette: raicon
 		BuildPaletteOrder: 10
 		Queue: MVehicle.SUL
 	Mobile:
@@ -1102,82 +1102,82 @@ SULM1:
 	Armament@Ground:
 		Weapon: ApprenticeFire
 	AttackFrontal:
-    AutoTarget:
+	AutoTarget:
 		ScanRadius: 5
-        InitialStance: AttackAnything
-    RenderSprites:
-        PlayerPalette: raplayer
+		InitialStance: AttackAnything
+	RenderSprites:
+		PlayerPalette: raplayer
 	WithInfantryBody:
 		DefaultAttackSequence: shoot
-    Armor:
+	Armor:
 		Type: Leather
-    DetectCloaked:
+	DetectCloaked:
 		Range: 2c0
-    Crushable:
+	Crushable:
 		WarnProbability: 95
-        
+		
 SULM1SKELET:
 	Inherits: ^Knight
 	Valued:
 		Cost: 25
 	RevealsShroud:
 		Range: 2c0
-    Tooltip:
+	Tooltip:
 		Name: Sceleton
-    Mobile:
+	Mobile:
 		Speed: 75
 	Health:
 		HP: 8000
 	Armament:
 		Weapon: broadsword
 	AttackFrontal:
-    AutoTarget:
+	AutoTarget:
 		ScanRadius: 4
-        InitialStance: AttackAnything
-    RenderSprites:
-        PlayerPalette: raplayer
+		InitialStance: AttackAnything
+	RenderSprites:
+		PlayerPalette: raplayer
 	-WithInfantryBody:
-    WithFacingSpriteBody:
-        StartSequence: make
-        Sequence: idle
-    WithMoveAnimation: 
-        MoveSequence: move
-    WithAttackAnimation:
-        AttackSequence: shoot
-    -Selectable:
-    SelfHealing@Killsslef:
-        PercentageStep: -2
-        Step: -0
-        HealIfBelow: 110
-        Delay: 25
-        DamageTypes: DefaultDeath
-    Armor:
+	WithFacingSpriteBody:
+		StartSequence: make
+		Sequence: idle
+	WithMoveAnimation: 
+		MoveSequence: move
+	WithAttackAnimation:
+		AttackSequence: shoot
+	-Selectable:
+	SelfHealing@Killsslef:
+		PercentageStep: -2
+		Step: -0
+		HealIfBelow: 110
+		Delay: 25
+		DamageTypes: DefaultDeath
+	Armor:
 		Type: Heavy
-    -SelfHealing@Rotaway:
-    -SelfHealing@DDler:
-    WithDeathAnimation:
-        DeathTypes:
+	-SelfHealing@Rotaway:
+	-SelfHealing@DDler:
+	WithDeathAnimation:
+		DeathTypes:
 			DefaultDeath: 1
 			RippedApartDeath: 1
 			PoisonDeath: 1
 			BallistaDeath: 1
-            BurnToDeath: 1
-            SkeletonDeath: 1
+			BurnToDeath: 1
+			SkeletonDeath: 1
 		CrushedSequence: die1
-    -SelfHealing@HOSPITAL:
+	-SelfHealing@HOSPITAL:
 	-WithDecoration@REDCROSS:
-    -Explodes@Tib:
-    -SpawnActorOnDeath@SCELET:
-    AttackWander: 
-        WanderMoveRadius: 3
-        ReduceMoveRadiusDelay: 5
+	-Explodes@Tib:
+	-SpawnActorOnDeath@SCELET:
+	AttackWander: 
+		WanderMoveRadius: 3
+		ReduceMoveRadiusDelay: 5
 		MinMoveDelay: 0
 		MaxMoveDelay: 50
-    Targetable:
+	Targetable:
 		TargetTypes: Ground, Infantry, Skeleton
-        
+		
 SULM2:
-    RevealsShroud:
+	RevealsShroud:
 		Range: 6c0
 	Inherits: ^Knight
 	Valued:
@@ -1186,42 +1186,42 @@ SULM2:
 		Name: Djinn
 	Buildable:
 		Description: Advanced Multi-Role unit.\n  Can only badly hurt by magical or fire weapons.\n  Moderate vs Everything\n  Weak vs Buildings\n  Detects cloaked units at a very large area\n  Can attack Aircrafts\n\n
-        IconPalette: raicon
-        Prerequisites: sultow4, anyhq
+		IconPalette: raicon
+		Prerequisites: sultow4, anyhq
 		BuildPaletteOrder: 70
 		Queue: MVehicle.SUL
 	Mobile:
 		Speed: 66
 	-Crushable:
-    Health:
+	Health:
 		HP: 25000
 	Armament@Ground:
 		Weapon: DjinElectro
-        LocalOffset: 141,75,352
-        FireDelay: 17
+		LocalOffset: 141,75,352
+		FireDelay: 17
 	AttackFrontal:
-    AutoTarget:
+	AutoTarget:
 		ScanRadius: 5
-        InitialStance: AttackAnything
-    RenderSprites:
-        PlayerPalette: raplayer
+		InitialStance: AttackAnything
+	RenderSprites:
+		PlayerPalette: raplayer
 	WithInfantryBody:
 		DefaultAttackSequence: shoot
-        IdleSequences: idle
-        MinIdleDelay: 0
-        MaxIdleDelay: 0
-    Armor:
+		IdleSequences: idle
+		MinIdleDelay: 0
+		MaxIdleDelay: 0
+	Armor:
 		Type: Spectral
-    DetectCloaked:
+	DetectCloaked:
 		Range: 4c0
-    -SpawnActorOnDeath@SCELET:
-    -ExternalCondition@SNAKES:
-    -SelfHealing@SNAKES:
-    -SpeedMultiplier@SNAKES:
-    -WithIdleOverlay@SNAKES:
-    
+	-SpawnActorOnDeath@SCELET:
+	-ExternalCondition@SNAKES:
+	-SelfHealing@SNAKES:
+	-SpeedMultiplier@SNAKES:
+	-WithIdleOverlay@SNAKES:
+	
 SULM4:
-    RevealsShroud:
+	RevealsShroud:
 		Range: 7c0
 	Inherits: ^Knight
 	Valued:
@@ -1230,10 +1230,10 @@ SULM4:
 		Name: Rattlemystic
 	Buildable:
 		Description: Advanced Anti-infantry unit.\n  Strong vs Infantry\n  Cannot attack Buildings\n  Detects cloaked units\n  Can stun Infantry with summoned snakes\n  Can slow down Cavalry with summoned snakes\n\n
-        IconPalette: raicon
+		IconPalette: raicon
 		BuildPaletteOrder: 60
 		Queue: MVehicle.SUL
-        Prerequisites: sultow2, anyhq
+		Prerequisites: sultow2, anyhq
 	Mobile:
 		Speed: 66
 	Health:
@@ -1241,133 +1241,133 @@ SULM4:
 	Armament@Ground:
 		Weapon: Snakes
 	AttackFrontal:
-    AutoTarget:
+	AutoTarget:
 		ScanRadius: 7
-        InitialStance: AttackAnything
-    RenderSprites:
-        PlayerPalette: raplayer
+		InitialStance: AttackAnything
+	RenderSprites:
+		PlayerPalette: raplayer
 	WithInfantryBody:
 		DefaultAttackSequence: shoot
-    Armor:
+	Armor:
 		Type: Leather
-    DetectCloaked:
+	DetectCloaked:
 		Range: 2c0
-    Crushable:
+	Crushable:
 		WarnProbability: 95
 
 # Siegeweapons
 
 SULB0:
 	Inherits: ^Siege
-    Inherits@2: ^GainsExperience
+	Inherits@2: ^GainsExperience
 	Valued:
 		Cost: 725
 	Tooltip:
 		Name: War Elephant
 	Buildable:
-        IconPalette: raicon
+		IconPalette: raicon
 		BuildPaletteOrder: 15
-        Prerequisites: ~techlevel.medium
+		Prerequisites: ~techlevel.medium
 		Description: Equipped with 2 Archers.\n  Very strong vs Light Infantry and Aircrafts \n  Moderate vs Cavalry\n  Weak vs Buildings\n\n\n
 		Queue: MSiege.SUL
 	Mobile:
 		TurnSpeed: 2
 		Speed: 45
-        Crushes: crate, infantry
+		Crushes: crate, infantry
 	Health:
 		HP: 30000
-        Shape: Capsule
-            Radius: 526
-            PointA: 0, -412
-            PointB: 0, 212
-    AutoTarget:
+		Shape: Capsule
+			Radius: 526
+			PointA: 0, -412
+			PointB: 0, 212
+	AutoTarget:
 		ScanRadius: 7
-    RenderSprites:
-        PlayerPalette: raplayer
+	RenderSprites:
+		PlayerPalette: raplayer
 	WithInfantryBody:
 		IdleSequences: stand
 		DefaultAttackSequence: shoot
-    Armor:
+	Armor:
 		Type: HeavyCavalry
-    Selectable:
+	Selectable:
 		Bounds: 26,26,0,-13
-    SelectionDecorations:
+	SelectionDecorations:
 		VisualBounds: 26,26,0,-13
-    Power:
+	Power:
 		Amount: -4
-    Targetable:
+	Targetable:
 		TargetTypes: Ground, Siege
-    Armament@1:
+	Armament@1:
 		Weapon: bownarrowtower
 		LocalOffset: 0,0,427
-        Turret: primary
-    Armament@2:
+		Turret: primary
+	Armament@2:
 		Weapon: bownarrowtower
 		LocalOffset: 0,0,427
-        Turret: secondary
-        FireDelay: 12
-    Armament@1DUMMY:
+		Turret: secondary
+		FireDelay: 12
+	Armament@1DUMMY:
 		Weapon: BowNArrowTowerDUMMY
 		LocalOffset: 0,0,427
-        Turret: primary
-    Armament@2DUMMY:
+		Turret: primary
+	Armament@2DUMMY:
 		Weapon: BowNArrowTowerDUMMY
 		LocalOffset: 0,0,427
-        Turret: secondary
-        FireDelay: 12
+		Turret: secondary
+		FireDelay: 12
 	AttackTurreted:
-    -ThrowsShrapnel@SMALL:
-    WithDeathAnimation:
-        DeathSequencePalette: raplayer
-        UseDeathTypeSuffix: False
-    WithSpriteTurret@1: 
-        Sequence: turretidle
-        AimSequence: turretanim
-        Turret: primary
-    WithSpriteTurret@2: 
-        Sequence: turretidle
-        AimSequence: turretanim
-        Turret: secondary
+	-ThrowsShrapnel@SMALL:
+	WithDeathAnimation:
+		DeathSequencePalette: raplayer
+		UseDeathTypeSuffix: False
+	WithSpriteTurret@1: 
+		Sequence: turretidle
+		AimSequence: turretanim
+		Turret: primary
+	WithSpriteTurret@2: 
+		Sequence: turretidle
+		AimSequence: turretanim
+		Turret: secondary
 	Turreted@1:
-        Turret: primary
+		Turret: primary
 		TurnSpeed: 100
-        Offset: 70,-0,800
-    Turreted@2:
-        Turret: secondary
+		Offset: 70,-0,800
+	Turreted@2:
+		Turret: secondary
 		TurnSpeed: 100
-        Offset: -170,0,800
-    Armament@1:
+		Offset: -170,0,800
+	Armament@1:
 		Weapon: BowNArrowSiegeTower
 		LocalOffset: 0,0,427
-        Turret: primary
-    Armament@2:
+		Turret: primary
+	Armament@2:
 		Weapon: BowNArrowSiegeTower
 		LocalOffset: 0,0,427
-        Turret: secondary
-        FireDelay: 10
-    Armament@1DUMMY:
+		Turret: secondary
+		FireDelay: 10
+	Armament@1DUMMY:
 		Weapon: BowNArrowSiegeTowerDUMMY
 		LocalOffset: 0,0,427
-        Turret: primary
-    Armament@2DUMMY:
+		Turret: primary
+	Armament@2DUMMY:
 		Weapon: BowNArrowSiegeTowerDUMMY
 		LocalOffset: 0,0,427
-        Turret: secondary
-        FireDelay: 10    
-    Voiced:
+		Turret: secondary
+		FireDelay: 10	
+	Voiced:
 		VoiceSet: ElephantVoice
-        
+		
 SULB1:
 	Inherits: ^Siege
-    Inherits@2: ^GainsExperience
+	Inherits@2: ^GainsExperience
 	Valued:
 		Cost: 1300
 	Tooltip:
 		Name: Dual Siege Ballista
 	Buildable:
-        IconPalette: raicon
+		IconPalette: raicon
 		BuildPaletteOrder: 20
-        Prerequisites: sultow3, ~techlevel.medium, anyhq
+		Prerequisites: sultow3, ~techlevel.medium, anyhq
 		Description: The Siege Ballista is a missile weapon that launches two large projectile \nat a distant target.\n  Very strong vs Cavalry and Buildings \n  Moderate vs Infantry\n  Weak vs Aircrafts
 		Queue: MSiege.SUL
 	Mobile:
@@ -1375,56 +1375,56 @@ SULB1:
 		Speed: 60
 	Health:
 		HP: 9000
-        Shape: Capsule
-            Radius: 526
-            PointA: 0, -412
-            PointB: 0, 212
+		Shape: Capsule
+			Radius: 526
+			PointA: 0, -412
+			PointB: 0, 212
 	Armament:
 		Weapon: DualSiegeBalista
-        LocalOffset: 712,0,100
+		LocalOffset: 712,0,100
 	AttackFrontal:
-    AutoTarget:
+	AutoTarget:
 		ScanRadius: 11
-    RenderSprites:
-        PlayerPalette: raplayer
+	RenderSprites:
+		PlayerPalette: raplayer
 	WithInfantryBody:
 		IdleSequences: stand
 		DefaultAttackSequence: shoot
-    Armor:
+	Armor:
 		Type: LightCavalry
-    Selectable:
+	Selectable:
 		Bounds: 35,35,0,-6
-    Power:
+	Power:
 		Amount: -4
-    Targetable:
+	Targetable:
 		TargetTypes: Ground, Siege
-    SpawnActorOnDeath:
+	SpawnActorOnDeath:
 		Actor: SULB1.Husk
-    SpawnActorOnDeath@1:
+	SpawnActorOnDeath@1:
 		Actor: SIEGERUNNER
-        Probability: 50
-    SpawnActorOnDeath@2:
+		Probability: 50
+	SpawnActorOnDeath@2:
 		Actor: SIEGERUNNER
-        Probability: 50
-        
+		Probability: 50
+		
 SULB1.Husk:
 	Inherits: ^MedievalHusk
 	Tooltip:
 		Name: Dual Siege Ballista (Destroyed)
 	RenderSprites:
-        PlayerPalette: raplayer
+		PlayerPalette: raplayer
 		Image: sulb1.husk
-    ThrowsShrapnel@SMALL:
+	ThrowsShrapnel@SMALL:
 		Weapons: SmallWood1, SmallWood2, SmallWood3, LargeWood1
 		Pieces: 1, 3
 		Range: 0c512, 3c0
-    WithFacingSpriteBody:
-        StartSequence: start
-        Sequence: idle
-        
+	WithFacingSpriteBody:
+		StartSequence: start
+		Sequence: idle
+		
 SULB2:
 	Inherits: ^Siege
-    Inherits@2: ^GainsExperience
+	Inherits@2: ^GainsExperience
 	Valued:
 		Cost: 2500
 	Tooltip:
@@ -1434,79 +1434,79 @@ SULB2:
 		Speed: 45
 	Health:
 		HP: 11000
-        Shape: Capsule
-            Radius: 526
-            PointA: 0, -412
-            PointB: 0, 212
+		Shape: Capsule
+			Radius: 526
+			PointA: 0, -412
+			PointB: 0, 212
 	Armament@1:
 		Weapon: MortarBoulder
-        LocalOffset: 612,0,600
-    Armament@2:
+		LocalOffset: 612,0,600
+	Armament@2:
 		Weapon: MortarBoulder
-        LocalOffset: 612,0,600
-    Armament@3:
+		LocalOffset: 612,0,600
+	Armament@3:
 		Weapon: MortarBoulder
-        LocalOffset: 612,0,600
-    Armament@4:
+		LocalOffset: 612,0,600
+	Armament@4:
 		Weapon: MortarBoulder
-        LocalOffset: 612,0,600
-    Armament@5:
+		LocalOffset: 612,0,600
+	Armament@5:
 		Weapon: MortarBoulder
-        LocalOffset: 612,0,600
-    Armament@6:
+		LocalOffset: 612,0,600
+	Armament@6:
 		Weapon: MortarBoulder
-        LocalOffset: 612,0,600
+		LocalOffset: 612,0,600
 	AttackFrontal:
-    AutoTarget:
+	AutoTarget:
 		ScanRadius: 14
-    RenderSprites:
-        PlayerPalette: raplayer
+	RenderSprites:
+		PlayerPalette: raplayer
 	WithInfantryBody:
 		IdleSequences: stand
 		DefaultAttackSequence: shoot
-    Armor:
+	Armor:
 		Type: MediumCavalry
-    Selectable:
+	Selectable:
 		Bounds: 35,35,0,-6
-    Power:
+	Power:
 		Amount: -5
-    Targetable:
+	Targetable:
 		TargetTypes: Ground, Siege
-    SpawnActorOnDeath:
+	SpawnActorOnDeath:
 		Actor: SULB2.Husk
-    SpawnActorOnDeath@1:
+	SpawnActorOnDeath@1:
 		Actor: SIEGERUNNER
-        Probability: 50
-    SpawnActorOnDeath@2:
+		Probability: 50
+	SpawnActorOnDeath@2:
 		Actor: SIEGERUNNER
-        Probability: 50
-    SpawnActorOnDeath@3:
+		Probability: 50
+	SpawnActorOnDeath@3:
 		Actor: SIEGERUNNER
-        Probability: 50
-        
+		Probability: 50
+		
 SULB2.Husk:
 	Inherits: ^MedievalHusk
 	Tooltip:
 		Name: Siege Mortar (Destroyed)
 	RenderSprites:
-        PlayerPalette: raplayer
+		PlayerPalette: raplayer
 		Image: sulb2.husk
-    ThrowsShrapnel@SMALL:
+	ThrowsShrapnel@SMALL:
 		Weapons: SmallWood1, SmallWood2, SmallWood3, LargeWood1
 		Pieces: 1, 3
 		Range: 0c512, 3c0
-    WithFacingSpriteBody:
-        StartSequence: start
-        Sequence: idle
+	WithFacingSpriteBody:
+		StartSequence: start
+		Sequence: idle
 
 #Aircraft
 
 PLACEHOLDERBOLTS:
 	Inherits: ^Plane
-    -AppearsOnRadar:
-    RenderSprites:
-        Image: placeholder
-        Palette: empty
+	-AppearsOnRadar:
+	RenderSprites:
+		Image: placeholder
+		Palette: empty
 	Tooltip:
 		Name:
 	Valued:
@@ -1516,8 +1516,8 @@ PLACEHOLDERBOLTS:
 		Speed: 303
 		Repulsable: False
 		AirborneCondition: airborne
-        CruiseAltitude: 15c0
-        IdealSeparation: 0c512
+		CruiseAltitude: 15c0
+		IdealSeparation: 0c512
 	Health:
 		HP: 15000
 	Armor:
@@ -1529,33 +1529,33 @@ PLACEHOLDERBOLTS:
 	Armament@GUNS:
 		Name: gun
 		Weapon: SpearBarrage
-        LocalOffset: 0,0,-43, 0,100,-43, 0,100,-43
+		LocalOffset: 0,0,-43, 0,100,-43, 0,100,-43
 	WithMuzzleOverlay:
 	Armament@BOMBS:
 		Name: bombs
 		Weapon: SpearBarrage
-        LocalOffset: 0,0,-43, 0,100,-43, 0,100,-43
-        
+		LocalOffset: 0,0,-43, 0,100,-43, 0,100,-43
+		
 SULM3:
 	Inherits: ^Helicopter
-    Inherits@EXPERIENCE: ^GainsExperience
+	Inherits@EXPERIENCE: ^GainsExperience
 	Valued:
 		Cost: 1000
 	Tooltip:
 		Name: Flying Carpet
-    Buildable:
+	Buildable:
 		Description: Man on a flying carpet.\n  Strong vs Ground Units\n  Weak vs Aircrafts\n  Cannot attack Aircrafts!!\n\n\n
 		BuildPaletteOrder: 40
 		Prerequisites: anyhq
 		Queue: MVehicle.SUL
 		BuildDurationModifier: 40
-        IconPalette: raicon
+		IconPalette: raicon
 	Aircraft:
 		RearmBuildings: hpad
 		InitialFacing: 224
 		TurnSpeed: 10
 		Speed: 138
-        IdealSeparation: 0c612
+		IdealSeparation: 0c612
 	Health:
 		HP: 10000
 	Armor:
@@ -1568,30 +1568,30 @@ SULM3:
 		LocalOffset: 341,0,456
 	AttackHeli:
 		FacingTolerance: 20
-    RenderSprites:
-        PlayerPalette: raplayer
+	RenderSprites:
+		PlayerPalette: raplayer
 	AutoTarget:
 	WithAttackAnimation:
 		AttackSequence: attack
-    WithMoveAnimation: 
-        MoveSequence: run
+	WithMoveAnimation: 
+		MoveSequence: run
 	SelectionDecorations:
 		VisualBounds: 24,24
-    Power:
+	Power:
 		Amount: -2
-    SpawnActorOnDeath@1:
+	SpawnActorOnDeath@1:
 		Actor: SULM3.Husk
-    SpawnActorOnDeath@2:
+	SpawnActorOnDeath@2:
 		Actor: SULM3.ManHusk
-        
+		
 SULM3.Husk:
 	Inherits: ^HelicopterHusk
 	ConditionManager:
-    Tooltip:
+	Tooltip:
 		Name: Dude
 	WithFacingSpriteBody:
-        Sequence: idle   
-    Aircraft:
+		Sequence: idle   
+	Aircraft:
 		TurnSpeed: 4
 		Speed: 156
 	RevealsShroud:
@@ -1599,71 +1599,71 @@ SULM3.Husk:
 		Type: CenterPosition
 	RenderSprites:
 		Image: sulm3.manhusk  
-        PlayerPalette: raplayer
-    FallsToEarth:
+		PlayerPalette: raplayer
+	FallsToEarth:
 		Spins: True
 		Moves: False
 		Explosion: GroundHit
-    
+	
 SULM3.ManHusk:
-    Inherits@1: ^SpriteActor
-    Health:
+	Inherits@1: ^SpriteActor
+	Health:
 		HP: 280
-    Armor:
+	Armor:
 		Type: Heavy
 	HiddenUnderFog:
 		Type: GroundPosition
 	AutoTargetIgnore:
 	ScriptTriggers:
 	WithFacingSpriteBody:
-        Sequence: idle
+		Sequence: idle
 	WithShadow:
 		Offset: 43, 128, 0
 		ZOffset: -129
 	Aircraft:
 		AirborneCondition: airborne
 		CruisingCondition: cruising
-        TurnSpeed: 1
+		TurnSpeed: 1
 		Speed: 380
 	FallsToEarth:
 		Spins: True
 		Moves: True
 		Velocity: 26
-        Explosion: GroundHit
+		Explosion: GroundHit
 	Tooltip:
 		Name: Kite out of controle
 	RevealsShroud:
 		Range: 1c0
 		Type: CenterPosition
 	RenderSprites:
-        Image: sulm3.husk
-        PlayerPalette: raplayer
-    KillsSelf:
-        Delay: 40
-    Explodes:
+		Image: sulm3.husk
+		PlayerPalette: raplayer
+	KillsSelf:
+		Delay: 40
+	Explodes:
 		Weapon: GroundHit
 		EmptyWeapon: GroundHit
-        
+		
 SULB3:
 	Inherits: ^Helicopter
-    Inherits@EXPERIENCE: ^GainsExperience
+	Inherits@EXPERIENCE: ^GainsExperience
 	Valued:
 		Cost: 2300
 	Tooltip:
 		Name: Giant Roc
-    Buildable:
+	Buildable:
 		Description: Giant Roc wich throws razor sharp faethers at the enemy.\n  Strong vs Ground Units and Aircrafts\n\n\n\n
 		BuildPaletteOrder: 100
 		Prerequisites: sultow4, anyhq
 		Queue: MSiege.SUL
 		BuildDurationModifier: 40
-        IconPalette: raicon
+		IconPalette: raicon
 	Aircraft:
 		RearmBuildings: hpad
 		InitialFacing: 224
 		TurnSpeed: 10
 		Speed: 100
-        IdealSeparation: 1c125
+		IdealSeparation: 1c125
 	Health:
 		HP: 15500
 	Armor:
@@ -1674,56 +1674,56 @@ SULB3:
 	Armament@1:
 		Weapon: SonicRaptor
 		LocalOffset: 341,625,456
-        FireDelay: 3
-    Armament@2:
+		FireDelay: 3
+	Armament@2:
 		Weapon: SonicRaptorSoundLess
 		LocalOffset: 341,424,356
-        FireDelay: 3
-        Name: secondary
-    Armament@3:
+		FireDelay: 3
+		Name: secondary
+	Armament@3:
 		Weapon: SonicRaptorSoundLess
 		LocalOffset: 341,234,256
-        FireDelay: 3
-        Name: secondary
-    Armament@4:
+		FireDelay: 3
+		Name: secondary
+	Armament@4:
 		Weapon: SonicRaptorSoundLess
 		LocalOffset: 341,-625,456
-        FireDelay: 3
-        Name: secondary
-    Armament@5:
+		FireDelay: 3
+		Name: secondary
+	Armament@5:
 		Weapon: SonicRaptorSoundLess
 		LocalOffset: 341,-424,356
-        FireDelay: 3
-        Name: secondary
-    Armament@6:
+		FireDelay: 3
+		Name: secondary
+	Armament@6:
 		Weapon: SonicRaptorSoundLess
 		LocalOffset: 341,-234,256
-        FireDelay: 3
-        Name: secondary
+		FireDelay: 3
+		Name: secondary
 	AttackHeli:
 		FacingTolerance: 20
-    RenderSprites:
-        PlayerPalette: raplayer
+	RenderSprites:
+		PlayerPalette: raplayer
 	AutoTarget:
 	WithAttackAnimation:
 		AttackSequence: attack
-    WithMoveAnimation: 
-        MoveSequence: move
+	WithMoveAnimation: 
+		MoveSequence: move
 	SelectionDecorations:
 		VisualBounds: 48,48
-    Power:
+	Power:
 		Amount: -4
-    SpawnActorOnDeath@1:
+	SpawnActorOnDeath@1:
 		Actor: SULB3.Husk
-        
+		
 SULB3.Husk:
 	Inherits: ^HelicopterHusk
 	ConditionManager:
-    Tooltip:
+	Tooltip:
 		Name: Dude
 	WithFacingSpriteBody:
-        Sequence: idle   
-    Aircraft:
+		Sequence: idle   
+	Aircraft:
 		TurnSpeed: 4
 		Speed: 156
 	RevealsShroud:
@@ -1731,15 +1731,15 @@ SULB3.Husk:
 		Type: CenterPosition
 	RenderSprites:
 		Image: sulb3.husk  
-        PlayerPalette: raplayer
-    FallsToEarth:
+		PlayerPalette: raplayer
+	FallsToEarth:
 		Spins: True
 		Moves: False
 		Explosion: GroundHit
-        
+		
 SULTURNXL:
-    Inherits: ^AttackPlane
-    -GainsExperience:
+	Inherits: ^AttackPlane
+	-GainsExperience:
 	Aircraft:
 		CruiseAltitude: 0
 		InitialFacing: 192
@@ -1753,40 +1753,40 @@ SULTURNXL:
 		FacingTolerance: 20
 	Tooltip:
 		Name: Turnado
-    ConditionManager:
+	ConditionManager:
 	-Targetable@GROUND:
 	-Targetable@AIRBORNE:
-    Selectable:
+	Selectable:
 	RevealsShroud:
 		Range: 5c0
 		Type: CenterPosition
-    RenderSprites:
-        PlayerPalette: raplayer
-    SelfHealing@KILLSELF:
+	RenderSprites:
+		PlayerPalette: raplayer
+	SelfHealing@KILLSELF:
 		PercentageStep: -4
 		Delay: 30
 		HealIfBelow: 101
 		DamageCooldown: 0
-        DamageTypes: DefaultDeath
-    Selectable:
+		DamageTypes: DefaultDeath
+	Selectable:
 		Bounds: 72,96,0,-48
 	SelectionDecorations:
 		VisualBounds: 72,96,0,-48
-    WithDeathAnimation:
-        DeathSequencePalette: raplayer
-        UseDeathTypeSuffix: False
-    -WithFacingSpriteBody:
-    BodyOrientation:
-        QuantizedFacings: 32
-    WithSpriteBody:
-        StartSequence: make
-    ProximityExternalCondition@KILLEVETRYTHING:
-        Range: 2c512
-        ValidStances: Ally, Enemy, Neutral
-        Condition: Tornadodeath
-    AmbientSound:
-        SoundFile: tornado.aud
-        Delay: 10
-    -WithShadow:
-    -ExternalCondition@TORNADO:
-    -SelfHealing@TORNADO:
+	WithDeathAnimation:
+		DeathSequencePalette: raplayer
+		UseDeathTypeSuffix: False
+	-WithFacingSpriteBody:
+	BodyOrientation:
+		QuantizedFacings: 32
+	WithSpriteBody:
+		StartSequence: make
+	ProximityExternalCondition@KILLEVETRYTHING:
+		Range: 2c512
+		ValidStances: Ally, Enemy, Neutral
+		Condition: Tornadodeath
+	AmbientSound:
+		SoundFile: tornado.aud
+		Delay: 10
+	-WithShadow:
+	-ExternalCondition@TORNADO:
+	-SelfHealing@TORNADO:

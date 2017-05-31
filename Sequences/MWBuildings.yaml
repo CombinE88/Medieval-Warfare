@@ -8,44 +8,44 @@ bacamp.husk:
 			JUNGLE: TEMPERAT
 			SNOW: TEMPERAT
 		Length: *
-        
+		
 newfact:
 	idle: ironore4
-        Start: 9
-    idle0: newfact
+		Start: 9
+	idle0: newfact
 	damaged-idle: newfact
 		Start: 1
-    idle1: newfact
-        Start: 3
+	idle1: newfact
+		Start: 3
 	damaged-idle1: newfact
 		Start: 7
-    idle2: newfact
-        Start: 4
+	idle2: newfact
+		Start: 4
 	damaged-idle2: newfact
 		Start: 8
-    idle3: newfact
-        Start: 5
+	idle3: newfact
+		Start: 5
 	damaged-idle3: newfact
 		Start: 9
-    idle4: newfact2
-        Start: 0
-        Offset: 0, -12
+	idle4: newfact2
+		Start: 0
+		Offset: 0, -12
 	damaged-idle4: newfact2
 		Start: 1
-        Offset: 0, -12
+		Offset: 0, -12
 	dead: newfact
 		Start: 2
 		Tick: 800
-    flag1start: newflag
-        Start: 0
-        Length: 9
-        Tick: 120
-        ZOffset: -1024
-    flag1: newflag
-        Start: 9
-        Length: 4
-        Tick: 120
-        ZOffset: -1024
+	flag1start: newflag
+		Start: 0
+		Length: 9
+		Tick: 120
+		ZOffset: -1024
+	flag1: newflag
+		Start: 9
+		Length: 4
+		Tick: 120
+		ZOffset: -1024
 	make: newfactmake
 		Length: *
 		Tick: 120
@@ -54,44 +54,44 @@ newfact:
 		Length: *
 	icon: keepicon.shp
 		AddExtension: False
-        
+		
 nodfact:
 	idle: ironore4
-        Start: 9
-    idle0: newfact
+		Start: 9
+	idle0: newfact
 	damaged-idle: newfact
 		Start: 1
-    idle1: newfact
-        Start: 3
+	idle1: newfact
+		Start: 3
 	damaged-idle1: newfact
 		Start: 7
-    idle2: newfact
-        Start: 4
+	idle2: newfact
+		Start: 4
 	damaged-idle2: newfact
 		Start: 8
-    idle3: newfact
-        Start: 5
+	idle3: newfact
+		Start: 5
 	damaged-idle3: newfact
 		Start: 9
-    idle4: nodfact
-        Start: 0
-        Offset: 0, -12
+	idle4: nodfact
+		Start: 0
+		Offset: 0, -12
 	damaged-idle4: nodfact
 		Start: 1
-        Offset: 0, -12
+		Offset: 0, -12
 	dead: newfact
 		Start: 2
 		Tick: 800
-    flag1start: newflag
-        Start: 0
-        Length: 9
-        Tick: 120
-        ZOffset: -1024
-    flag1: newflag
-        Start: 9
-        Length: 4
-        Tick: 120
-        ZOffset: -1024
+	flag1start: newflag
+		Start: 0
+		Length: 9
+		Tick: 120
+		ZOffset: -1024
+	flag1: newflag
+		Start: 9
+		Length: 4
+		Tick: 120
+		ZOffset: -1024
 	make: newfactmake
 		Length: *
 		Tick: 120
@@ -100,7 +100,7 @@ nodfact:
 		Length: *
 	icon: keepicon.shp
 		AddExtension: False
-        
+		
 missnew:
 	idle: techcenternew
 		Offset: 0,-1
@@ -119,7 +119,7 @@ missnew:
 			SNOW: TEMPERAT
 		Length: *
 		Offset: 0,1
-	icon: missicnh        
+	icon: missicnh		
 bacamp:
 	idle: bacamp
 	damaged-idle: bacamp
@@ -134,18 +134,18 @@ bacamp:
 			WINTER: TEMPERAT
 			JUNGLE: TEMPERAT
 			SNOW: TEMPERAT
-		Length: *       
-    flag1start: newflag
-        Start: 0
-        Length: 9
-        Tick: 120
-        ZOffset: -1024
-    flag1: newflag
-        Start: 9
-        Length: 4
-        Tick: 120
-        ZOffset: -1024
-        
+		Length: *	   
+	flag1start: newflag
+		Start: 0
+		Length: 9
+		Tick: 120
+		ZOffset: -1024
+	flag1: newflag
+		Start: 9
+		Length: 4
+		Tick: 120
+		ZOffset: -1024
+		
 hqnew:
 	idle: radarnew
 		Length: 10
@@ -163,50 +163,50 @@ hqnew:
 		Length: *
 	icon: smitticon.shp
 		AddExtension: False
-        
+		
 armory:
 	idle: armory
-        Offset: 0,-12
+		Offset: 0,-12
 	damaged-idle: armory
 		Start: 1
-        Offset: 0,-12
+		Offset: 0,-12
 	dead: armory
-        Start: 2
+		Start: 2
 		Tick: 800
-        Offset: 0,-12
+		Offset: 0,-12
 	make: armorymake
 		Length: *
 		Tick: 80
-        Offset: 0,-12
+		Offset: 0,-12
 	bib: bib3
 		UseTilesetExtension: true
 		Length: *
 	icon: armoryicon.shp
 		AddExtension: False
-        
+		
 armorygdi:
 	idle: armorygdi
-        Offset: -2,-12
+		Offset: -2,-12
 	damaged-idle: armorygdi
 		Start: 1
-        Offset: -2,-12
+		Offset: -2,-12
 	dead: armorygdi
-        Start: 2
+		Start: 2
 		Tick: 800
-        Offset: -2,-12
+		Offset: -2,-12
 	make: armorygdimake
 		Length: *
 		Tick: 80
-        Offset: -2,-12
+		Offset: -2,-12
 	bib: bib3
 		UseTilesetExtension: true
 		Length: *
 	icon: armorygdiicon.shp
 		AddExtension: False
-        
+		
 nuk2new:
 	idle:
-        Start: 0
+		Start: 0
 	damaged-idle:
 		Start: 1
 	dead:
@@ -220,54 +220,54 @@ nuk2new:
 		Length: *
 	icon: nuk2newicon.shp
 		AddExtension: False
-        
+		
 nodnuke:
 	idle: 
-        Start: 12
-        Offset: 0,-12
+		Start: 12
+		Offset: 0,-12
 	damaged-idle: 
 		Start: 13
-        Offset: 0,-12
+		Offset: 0,-12
 	dead: 
 		Start: 14
 		Tick: 800
-        Offset: 0,-12
+		Offset: 0,-12
 	make: 
 		Length: 12
-        Start: 0
+		Start: 0
 		Tick: 80
-        Offset: 0,-12
+		Offset: 0,-12
 	bib: bib3
 		UseTilesetExtension: true
 		Length: *
-    icon: nodnukeicon.shp
+	icon: nodnukeicon.shp
 		AddExtension: False
-        
+		
 nodnuk2:
 	idle: 
-        Start: 21
-        Offset: 0,-2
+		Start: 21
+		Offset: 0,-2
 	damaged-idle: 
 		Start: 22
-        Offset: 0,-2
+		Offset: 0,-2
 	dead: 
 		Start: 23
 		Tick: 800
-        Offset: 0,-2
+		Offset: 0,-2
 	make: 
 		Length: 21
-        Start: 0
+		Start: 0
 		Tick: 80
-        Offset: 0,-2
+		Offset: 0,-2
 	bib: bib3
 		UseTilesetExtension: true
 		Length: *
-    icon: nodnuk2icon.shp
+	icon: nodnuk2icon.shp
 		AddExtension: False
-        
+		
 nuk5new:
 	idle: nukskin5
-        Start: 14
+		Start: 14
 	damaged-idle: nukskin5
 		Start: 15
 	dead: nukskin5
@@ -275,15 +275,15 @@ nuk5new:
 		Tick: 800
 	make: nukskin5
 		Length: 14
-        Start: 1
+		Start: 1
 		Tick: 80
 	bib: bib3
 		UseTilesetExtension: true
 		Length: *
-        
+		
 nukenew:
 	idle: 
-        Start: 0
+		Start: 0
 	damaged-idle: 
 		Start: 1
 	dead: 
@@ -297,43 +297,43 @@ nukenew:
 		Length: *
 	icon: nukenewicon.shp
 		AddExtension: False
-       
-        
+	   
+		
 trojanhorse:
 	idle: trojanhorse
-        Start: 0
-        Offset: 0,-14
-    damaged-idle: trojanhorse
-        Start: 1
-        Offset: 0,-14
-    dead: trojanhorse
-        Start: 2
-        Offset: 0,-14
-    make: trojanhorsemake
+		Start: 0
+		Offset: 0,-14
+	damaged-idle: trojanhorse
+		Start: 1
+		Offset: 0,-14
+	dead: trojanhorse
+		Start: 2
+		Offset: 0,-14
+	make: trojanhorsemake
 		Length: *
 		Tick: 80
-        Offset: 0,-14
+		Offset: 0,-14
 
 
 tribu:
-    turretanim: tribu
-        Facings: 32
-        Length: 9
-        Start: 32
-        Tick: 80
-        Offset: 0,-18,0
+	turretanim: tribu
+		Facings: 32
+		Length: 9
+		Start: 32
+		Tick: 80
+		Offset: 0,-18,0
 	damaged-idle: tribu
-        Facings: 32
-        Offset: 0,-18,0
-    idle: tribu
-        Facings: 32
-        Offset: 0,-18,0
+		Facings: 32
+		Offset: 0,-18,0
+	idle: tribu
+		Facings: 32
+		Offset: 0,-18,0
 	dead: tribudead
 		Tick: 800
 	make: tribumake
 		Length: *
 		Tick: 80
-        Offset: 0,-18,0
+		Offset: 0,-18,0
 	bib: mbGTWR
 		UseTilesetExtension: true
 		TilesetOverrides:
@@ -344,7 +344,7 @@ tribu:
 		Offset: 0,-2
 	icon: tribuicon.shp
 		AddExtension: False
-        
+		
 procnew:
 	idle: procnew
 		Offset: 2,4
@@ -363,7 +363,7 @@ procnew:
 		Length: *
 	icon: refnewicon.shp
 		AddExtension: False
-        
+		
 silonew:
 	idle: silonew
 	damaged-idle: silonew
@@ -389,18 +389,18 @@ silonew:
 
 gtwnew:
 	idle: gtwnew
-        Start: 11
-        Offset: 0,-12
+		Start: 11
+		Offset: 0,-12
 	damaged-idle: gtwnew
 		Start: 12
-        Offset: 0,-12
+		Offset: 0,-12
 	dead: gtwnew
 		Start: 15
-        Offset: 0,-12
+		Offset: 0,-12
 	make: gtwnew
 		Length: 10
 		Tick: 80
-        Offset: 0,-12
+		Offset: 0,-12
 	bib: mbGTWR
 		UseTilesetExtension: true
 		TilesetOverrides:
@@ -411,37 +411,37 @@ gtwnew:
 		Offset: 0,-2
 	icon: gtwnewicon.shp
 		AddExtension: False
-    turretidle: e4new
-        Start: 122
+	turretidle: e4new
+		Start: 122
 		Facings: 8
 	turretanim: e4new
-        Tick: 100
+		Tick: 100
 		Start: 66
 		Length: 7
 		Facings: 8 
-    idle-overlay: gtwnew
+	idle-overlay: gtwnew
 		ZOffset: 1024
-        Start: 13
-        Offset: 0,-12
+		Start: 13
+		Offset: 0,-12
 	damaged-idle-overlay: gtwnew
 		ZOffset: 1024
-        Start: 14
-        Offset: 0,-12
-        
+		Start: 14
+		Offset: 0,-12
+		
 wtw:
 	idle: 
-        Start: 0
-        Offset: 0,-10,0
+		Start: 0
+		Offset: 0,-10,0
 	damaged-idle: 
 		Start: 1
-        Offset: 0,-10,0
+		Offset: 0,-10,0
 	dead: 
 		Start: 2
-        Offset: 0,-10,0
+		Offset: 0,-10,0
 	make: wtwmake
 		Length: *
 		Tick: 80
-        Offset: 0,-10,0
+		Offset: 0,-10,0
 	bib: mbGTWR
 		UseTilesetExtension: true
 		TilesetOverrides:
@@ -452,7 +452,7 @@ wtw:
 		Offset: 0,-2
 	icon: wtwicon.shp
 		AddExtension: False
-        
+		
 gunnew:
 	idle: cannontower
 		Facings: 32
@@ -474,21 +474,21 @@ gunnew:
 		Offset: -1,-1
 	icon: cannontowericon.shp
 		AddExtension: False
-        
+		
 samnew:
 	idle: gtairwnew
-        Start: 23
-        Offset: 0,-12,0
+		Start: 23
+		Offset: 0,-12,0
 	damaged-idle: gtairwnew
 		Start: 24
-         Offset: 0,-12,0
+		 Offset: 0,-12,0
 	dead: gtairwnew
 		Start: 25
-         Offset: 0,-12,0
+		 Offset: 0,-12,0
 	make: gtairwnew
 		Length: 23
 		Tick: 80
-         Offset: 0,-12,0
+		 Offset: 0,-12,0
 	bib: mbSILO
 		UseTilesetExtension: true
 		TilesetOverrides:
@@ -498,14 +498,14 @@ samnew:
 		Length: *
 	icon: aaballicon.shp
 		AddExtension: False
-    turretidle: smallaaball
-        Start: 0
+	turretidle: smallaaball
+		Start: 0
 		Facings: 32
-        
+		
 barrnew:
 	idle: barrnew
-        Length: 30
-        Tick: 100
+		Length: 30
+		Tick: 100
 	damaged-idle: barrnew
 		Start: 30
 	dead: barrnew
@@ -519,17 +519,17 @@ barrnew:
 		Length: *
 	icon: barracksicon.shp
 		AddExtension: False
-        
+		
 windmill:
 	idle: windmill
-        Length: 20
-        Tick: 100
+		Length: 20
+		Tick: 100
 	damaged-idle: windmilld
 		Length: 20
-        Tick: 100
+		Tick: 100
 	dead: windmill
 		Tick: 800
-        Start: 21
+		Start: 21
 	make: windmillmake
 		Length: *
 		Tick: 80
@@ -538,17 +538,17 @@ windmill:
 		Length: *
 	icon: winmillicon.shp
 		AddExtension: False
-        
+		
 ghostmill:
 	idle: ironore4
-        Start: 9 
+		Start: 9 
 	damaged-idle: ironore4
-        Start: 9 
+		Start: 9 
 	dead: ironore4
-        Start: 9 
+		Start: 9 
 	make: ironore4
-        Start: 9 
-        
+		Start: 9 
+		
 handew:
 	idle: handnew
 	damaged-idle: handnew
@@ -575,7 +575,7 @@ stall:
 	make: stallmake
 		Length: *
 		Tick: 80
-    build-top: stalldoor
+	build-top: stalldoor
 		Length: 9
 		ZOffset: -1024
 	damaged-build-top: stalldoor
@@ -586,7 +586,7 @@ stall:
 		UseTilesetExtension: true
 		Length: *
 	icon: stallicon.shp
-		AddExtension: False        
+		AddExtension: False		
 
 nodstall:
 	idle: nodstable
@@ -603,18 +603,18 @@ nodstall:
 		Length: *
 	icon: stallnodicon.shp
 		AddExtension: False
-    flag1start: newflag
-        Start: 0
-        Length: 9
-        Tick: 120
-        ZOffset: -1024
-    flag1: newflag
-        Start: 9
-        Length: 4
-        Tick: 120
-        ZOffset: -1024
-        
-        
+	flag1start: newflag
+		Start: 0
+		Length: 9
+		Tick: 120
+		ZOffset: -1024
+	flag1: newflag
+		Start: 9
+		Length: 4
+		Tick: 120
+		ZOffset: -1024
+		
+		
 castle:
 	idle: castle
 	damaged-idle: castle
@@ -630,12 +630,12 @@ castle:
 		Length: *
 	icon: castleicon.shp
 		AddExtension: False   
-    active: castleanim
+	active: castleanim
 		Length: *
-        Tick: 80
+		Tick: 80
 	damaged-active: castleanimdamaged
 		Length: *
-        Tick: 80
+		Tick: 80
 
 castle2:
 	idle: castle2
@@ -652,22 +652,22 @@ castle2:
 		Length: *
 	icon: castle2icon.shp
 		AddExtension: False 
-    active: castle2anim
+	active: castle2anim
 		Length: *
-        Tick: 80
+		Tick: 80
 	damaged-active: castle2animdamaged
 		Length: *
-        Tick: 80
+		Tick: 80
 
 workshop:
 	idle: workshop
 	damaged-idle: workshopdamaged
-    active: workshop
-        Length: *
-        Tick: 100
-    damaged-active: workshopdamaged
-        Length: *
-        Tick: 100
+	active: workshop
+		Length: *
+		Tick: 100
+	damaged-active: workshopdamaged
+		Length: *
+		Tick: 100
 	dead: workshopdead
 		Tick: 800
 	make: workshopmake
@@ -678,23 +678,23 @@ workshop:
 		Length: *
 	icon: workshopicon.shp
 		AddExtension: False  
-        
+		
 nodfix:
 	idle: 
-        Start: 21
+		Start: 21
 	damaged-idle: 
-        Start: 22
-    active: 
-        Length: 20
-        Tick: 100
-        Start: 23
-    damaged-active: 
-        Length: *
-        Tick: 100
-        Start: 43
+		Start: 22
+	active: 
+		Length: 20
+		Tick: 100
+		Start: 23
+	damaged-active: 
+		Length: *
+		Tick: 100
+		Start: 43
 	dead: 
 		Tick: 800
-        Start: 63
+		Start: 63
 	make: 
 		Length: 21
 		Tick: 80
@@ -703,19 +703,19 @@ nodfix:
 		Length: *
 	icon: workshopicon.shp
 		AddExtension: False  
-        
+		
 gdifix:
 	idle: 
-        Start: 31
-        Length: 7
-        Tick: 300
+		Start: 31
+		Length: 7
+		Tick: 300
 	damaged-idle: 
-        Start: 38
-        Length: 7
-        Tick: 300
+		Start: 38
+		Length: 7
+		Tick: 300
 	dead: 
 		Tick: 800
-        Start: 45
+		Start: 45
 	make: 
 		Length: 32
 		Tick: 80
@@ -725,99 +725,99 @@ gdifix:
 	icon: workshopicon.shp
 		AddExtension: False  
 
-        
+		
 cstlwll:
 	idle: cstlwll
 		Length: 16
-        Offset: 0,-12,0
+		Offset: 0,-12,0
 	scratched-idle: cstlwll
 		Start: 17
 		Length: 16
-        Offset: 0,-12,0
+		Offset: 0,-12,0
 	damaged-idle: cstlwll
 		Start: 34
 		Length: 16
-        Offset: 0,-12,0
+		Offset: 0,-12,0
 	icon: cstlwllicon.shp
 		AddExtension: False
-        
+		
  
 cstlgtew:
 	idle: cstlgtew
-        Offset: 0,-14,0
-        Start: 0
-        Length: 8
-        Tick: 80
-        ZOffset: 512
-    open: cstlgtew
-        Offset: 0,-14,0
-        Start: 8
-        ZOffset: 512
+		Offset: 0,-14,0
+		Start: 0
+		Length: 8
+		Tick: 80
+		ZOffset: 512
+	open: cstlgtew
+		Offset: 0,-14,0
+		Start: 8
+		ZOffset: 512
 	damaged-idle: cstlgtewd
-        Offset: 0,-14,0
-        Start: 0
-        Length: 8
-        Tick: 80
-        ZOffset: 512
-    damaged-open: cstlgtewd
-        Start: 8
-        Offset: 0,-14,0
-        ZOffset: 512
+		Offset: 0,-14,0
+		Start: 0
+		Length: 8
+		Tick: 80
+		ZOffset: 512
+	damaged-open: cstlgtewd
+		Start: 8
+		Offset: 0,-14,0
+		ZOffset: 512
 	dead: cstlgtewd
 		Start: 9
 		Tick: 800
-        Offset: 0,-14,0
-        ZOffset: 512
+		Offset: 0,-14,0
+		ZOffset: 512
 	make: cstlgtewmake
 		Length: *
 		Tick: 80
-        Offset: 0,-14,0
-        ZOffset: 512
+		Offset: 0,-14,0
+		ZOffset: 512
 	bib: bib2
 		UseTilesetExtension: true
 		Length: *
-        Offset: 0,-4,0
+		Offset: 0,-4,0
 	icon: cstlgtweicon.shp
 		AddExtension: False
-        
+		
 cstlgtns:
 	idle: cstlgtnstop
-        Offset: 9,-14,0
-        Start: 0
-        Length: 8
-        Tick: 80
-        ZOffset: 1024
-    open: cstlgtnstop
-        Offset: 9,-14,0
-        Start: 8
-        ZOffset: 1024
+		Offset: 9,-14,0
+		Start: 0
+		Length: 8
+		Tick: 80
+		ZOffset: 1024
+	open: cstlgtnstop
+		Offset: 9,-14,0
+		Start: 8
+		ZOffset: 1024
 	damaged-idle: cstlgtnstopd
-        Offset: 9,-14,0
-        Start: 0
-        Length: 8
-        Tick: 80
-        ZOffset: 1024
-    damaged-open: cstlgtnstopd
-        Start: 8
-        Offset: 9,-14,0
-        ZOffset: 1024
+		Offset: 9,-14,0
+		Start: 0
+		Length: 8
+		Tick: 80
+		ZOffset: 1024
+	damaged-open: cstlgtnstopd
+		Start: 8
+		Offset: 9,-14,0
+		ZOffset: 1024
 	dead: cstlgtnstop
 		Start: 9
 		Tick: 800
-        Offset: 9,-14,0
-        ZOffset: 1024
-    top: cstlgtns
-        Offset: 9,-14,0
-    damaged-top: cstlgtns
-        Offset: 9,-14,0
-        Start: 1
+		Offset: 9,-14,0
+		ZOffset: 1024
+	top: cstlgtns
+		Offset: 9,-14,0
+	damaged-top: cstlgtns
+		Offset: 9,-14,0
+		Start: 1
 	make: cstlgtnsmake
 		Length: *
 		Tick: 80
-        Offset: 9,-14,0
+		Offset: 9,-14,0
 	icon: cstlgtnsicon.shp
 		AddExtension: False
-        
+		
 wdwll:
 	idle: wdwll
 		Length: 16
@@ -829,5 +829,5 @@ wdwll:
 		Length: 16
 	icon: wdwllicon.shp
 		AddExtension: False
-        
-        
+		
+		

@@ -1,6 +1,6 @@
 mwchick:
 	panic-stand:
-        Start: 146
+		Start: 146
 		Facings: 8
 	run: 
 		Start: 0
@@ -8,7 +8,7 @@ mwchick:
 		Facings: 8
 		Tick: 100
 	stand:
-        Start: 135
+		Start: 135
 		Facings: 8
 	panic-run: 
 		Start: 65
@@ -19,19 +19,19 @@ mwchick:
 		Start: 155
 		Length: 27
 		Tick: 80
-    idle1: 
-        Start: 183
+	idle1: 
+		Start: 183
 		Length: 35
-        Facings: 8
+		Facings: 8
 		Tick: 100
 
 mwcivll:
-    stunned: sulm4
-        Start: 312
-        Length: 2
-        Tick: 200
+	stunned: sulm4
+		Start: 312
+		Length: 2
+		Tick: 200
 	stand: mwcivll
-        Start: 146
+		Start: 146
 		Facings: 8
 	run: mwcivll
 		Start: 0
@@ -39,7 +39,7 @@ mwcivll:
 		Facings: 8
 		Tick: 100
 	panic-stand: mwcivll
-        Start: 135
+		Start: 135
 		Facings: 8
 	panic-run: mwcivll
 		Start: 65
@@ -53,7 +53,7 @@ mwcivll:
 	# large hit
 	die2: splatterdead
 		Length: *
-        Tick: 80
+		Tick: 80
 	# poision
 	die3: mwcivll
 		Start: 187
@@ -69,27 +69,27 @@ mwcivll:
 		Length: 4
 		Tick: 1600
 		ZOffset: -511
-    die5: burningman
-        Length: *
-        Tick: 80
-    idle1: 
-        Start: 219
+	die5: burningman
+		Length: *
+		Tick: 80
+	idle1: 
+		Start: 219
 		Length: 17
 		Tick: 100
-        Facings: 8
-    talking:
-        Start: 374
+		Facings: 8
+	talking:
+		Start: 374
 		Length: 34
 		Tick: 100
-        Facings: 8
-        
+		Facings: 8
+		
 mwciv1:
-    stunned: sulm4
-        Start: 312
-        Length: 2
-        Tick: 200
+	stunned: sulm4
+		Start: 312
+		Length: 2
+		Tick: 200
 	stand: mwciv1
-        Start: 146
+		Start: 146
 		Facings: 8
 	run: mwciv1
 		Start: 0
@@ -97,7 +97,7 @@ mwciv1:
 		Facings: 8
 		Tick: 100
 	panic-stand: mwciv1
-        Start: 135
+		Start: 135
 		Facings: 8
 	panic-run: mwciv1
 		Start: 65
@@ -111,7 +111,7 @@ mwciv1:
 	# large hit
 	die2: splatterdead
 		Length: *
-        Tick: 80
+		Tick: 80
 	# poision
 	die3: mwciv1
 		Start: 187
@@ -127,56 +127,56 @@ mwciv1:
 		Length: 4
 		Tick: 1600
 		ZOffset: -511
-    die5: burningman
-        Length: *
-        Tick: 80
+	die5: burningman
+		Length: *
+		Tick: 80
 	icon: ne1icon.shp
 		AddExtension: False
-    idle1: 
-        Start: 219
+	idle1: 
+		Start: 219
 		Length: 17
 		Tick: 100
-    idle2: 
-        Start: 237
+	idle2: 
+		Start: 237
 		Length: 16
 		Tick: 100
-    idle3: 
-        Start: 254
+	idle3: 
+		Start: 254
 		Length: 16
 		Tick: 100
-    idle4: 
-        Start: 271
+	idle4: 
+		Start: 271
 		Length: 16
 		Tick: 100
-    idle5: 
-        Start: 288
+	idle5: 
+		Start: 288
 		Length: 26
 		Tick: 100
-    idle6: 
-        Start: 315
+	idle6: 
+		Start: 315
 		Length: 26
 		Tick: 100
-    idle7: 
-        Start: 315
+	idle7: 
+		Start: 315
 		Length: 15
 		Tick: 100
-    idle8: 
-        Start: 258
+	idle8: 
+		Start: 258
 		Length: 15
 		Tick: 100
-    talking:
-        Start: 374
+	talking:
+		Start: 374
 		Length: 34
 		Tick: 100
-        Facings: 8
-        
+		Facings: 8
+		
 mwciv2:
-    stunned: sulm4
-        Start: 312
-        Length: 2
-        Tick: 200
+	stunned: sulm4
+		Start: 312
+		Length: 2
+		Tick: 200
 	stand: mwciv2
-        Start: 146
+		Start: 146
 		Facings: 8
 	run: mwciv2
 		Start: 0
@@ -184,7 +184,7 @@ mwciv2:
 		Facings: 8
 		Tick: 100
 	panic-stand: mwciv2
-        Start: 135
+		Start: 135
 		Facings: 8
 	panic-run: mwciv2
 		Start: 65
@@ -198,7 +198,7 @@ mwciv2:
 	# large hit
 	die2: splatterdead
 		Length: *
-        Tick: 80
+		Tick: 80
 	# poision
 	die3: mwciv2
 		Start: 187
@@ -214,56 +214,56 @@ mwciv2:
 		Length: 4
 		Tick: 1600
 		ZOffset: -511
-    die5: burningman
-        Length: *
-        Tick: 80
+	die5: burningman
+		Length: *
+		Tick: 80
 	icon: ne1icon.shp
 		AddExtension: False
-    idle1: 
-        Start: 219
+	idle1: 
+		Start: 219
 		Length: 17
 		Tick: 100
-    idle2: 
-        Start: 237
+	idle2: 
+		Start: 237
 		Length: 16
 		Tick: 100
-    idle3: 
-        Start: 254
+	idle3: 
+		Start: 254
 		Length: 16
 		Tick: 100
-    idle4: 
-        Start: 271
+	idle4: 
+		Start: 271
 		Length: 16
 		Tick: 100
-    idle5: 
-        Start: 288
+	idle5: 
+		Start: 288
 		Length: 26
 		Tick: 100
-    idle6: 
-        Start: 315
+	idle6: 
+		Start: 315
 		Length: 26
 		Tick: 100
-    idle7: 
-        Start: 315
+	idle7: 
+		Start: 315
 		Length: 15
 		Tick: 100
-    idle8: 
-        Start: 258
+	idle8: 
+		Start: 258
 		Length: 15
 		Tick: 100
-    talking:
-        Start: 374
+	talking:
+		Start: 374
 		Length: 34
 		Tick: 100
-        Facings: 8
-        
+		Facings: 8
+		
 mwciv3:
-    stunned: sulm4
-        Start: 312
-        Length: 2
-        Tick: 200
+	stunned: sulm4
+		Start: 312
+		Length: 2
+		Tick: 200
 	stand: mwciv3
-        Start: 146
+		Start: 146
 		Facings: 8
 	run: mwciv3
 		Start: 0
@@ -271,7 +271,7 @@ mwciv3:
 		Facings: 8
 		Tick: 100
 	panic-stand: mwciv3
-        Start: 135
+		Start: 135
 		Facings: 8
 	panic-run: mwciv3
 		Start: 65
@@ -285,7 +285,7 @@ mwciv3:
 	# large hit
 	die2: splatterdead
 		Length: *
-        Tick: 80
+		Tick: 80
 	# poision
 	die3: mwciv3
 		Start: 187
@@ -301,57 +301,57 @@ mwciv3:
 		Length: 4
 		Tick: 1600
 		ZOffset: -511
-    die5: burningman
-        Length: *
-        Tick: 80
+	die5: burningman
+		Length: *
+		Tick: 80
 	icon: ne1icon.shp
 		AddExtension: False
-    idle1: 
-        Start: 219
+	idle1: 
+		Start: 219
 		Length: 17
 		Tick: 100
-    idle2: 
-        Start: 237
+	idle2: 
+		Start: 237
 		Length: 16
 		Tick: 100
-    idle3: 
-        Start: 254
+	idle3: 
+		Start: 254
 		Length: 16
 		Tick: 100
-    idle4: 
-        Start: 271
+	idle4: 
+		Start: 271
 		Length: 16
 		Tick: 100
-    idle5: 
-        Start: 288
+	idle5: 
+		Start: 288
 		Length: 26
 		Tick: 100
-    idle6: 
-        Start: 315
+	idle6: 
+		Start: 315
 		Length: 26
 		Tick: 100
-    idle7: 
-        Start: 315
+	idle7: 
+		Start: 315
 		Length: 15
 		Tick: 100
-    idle8: 
-        Start: 258
+	idle8: 
+		Start: 258
 		Length: 15
 		Tick: 100
-    talking:
-        Start: 374
+	talking:
+		Start: 374
 		Length: 34
 		Tick: 100
-        Facings: 8
-        
-        
+		Facings: 8
+		
+		
 mwciv4:
-    stunned: sulm4
-        Start: 312
-        Length: 2
-        Tick: 200
+	stunned: sulm4
+		Start: 312
+		Length: 2
+		Tick: 200
 	stand: mwciv4
-        Start: 146
+		Start: 146
 		Facings: 8
 	run: mwciv4
 		Start: 0
@@ -359,7 +359,7 @@ mwciv4:
 		Facings: 8
 		Tick: 100
 	panic-stand: mwciv4
-        Start: 135
+		Start: 135
 		Facings: 8
 	panic-run: mwciv4
 		Start: 65
@@ -373,7 +373,7 @@ mwciv4:
 	# large hit
 	die2: splatterdead
 		Length: *
-        Tick: 80
+		Tick: 80
 	# poision
 	die3: mwciv4
 		Start: 187
@@ -389,56 +389,56 @@ mwciv4:
 		Length: 4
 		Tick: 1600
 		ZOffset: -511
-    die5: burningman
-        Length: *
-        Tick: 80
+	die5: burningman
+		Length: *
+		Tick: 80
 	icon: ne1icon.shp
 		AddExtension: False
-    idle1: 
-        Start: 219
+	idle1: 
+		Start: 219
 		Length: 17
 		Tick: 100
-    idle2: 
-        Start: 237
+	idle2: 
+		Start: 237
 		Length: 16
 		Tick: 100
-    idle3: 
-        Start: 254
+	idle3: 
+		Start: 254
 		Length: 16
 		Tick: 100
-    idle4: 
-        Start: 271
+	idle4: 
+		Start: 271
 		Length: 16
 		Tick: 100
-    idle5: 
-        Start: 288
+	idle5: 
+		Start: 288
 		Length: 26
 		Tick: 100
-    idle6: 
-        Start: 315
+	idle6: 
+		Start: 315
 		Length: 26
 		Tick: 100
-    idle7: 
-        Start: 315
+	idle7: 
+		Start: 315
 		Length: 15
 		Tick: 100
-    idle8: 
-        Start: 258
+	idle8: 
+		Start: 258
 		Length: 15
 		Tick: 100
-    talking:
-        Start: 374
+	talking:
+		Start: 374
 		Length: 34
 		Tick: 100
-        Facings: 8
-        
+		Facings: 8
+		
 mwciv5:
-    stunned: sulm4
-        Start: 312
-        Length: 2
-        Tick: 200
+	stunned: sulm4
+		Start: 312
+		Length: 2
+		Tick: 200
 	stand: mwciv5
-        Start: 146
+		Start: 146
 		Facings: 8
 	run: mwciv5
 		Start: 0
@@ -446,7 +446,7 @@ mwciv5:
 		Facings: 8
 		Tick: 100
 	panic-stand: mwciv5
-        Start: 135
+		Start: 135
 		Facings: 8
 	panic-run: mwciv5
 		Start: 65
@@ -460,7 +460,7 @@ mwciv5:
 	# large hit
 	die2: splatterdead
 		Length: *
-        Tick: 80
+		Tick: 80
 	# poision
 	die3: mwciv5
 		Start: 187
@@ -476,56 +476,56 @@ mwciv5:
 		Length: 4
 		Tick: 1600
 		ZOffset: -511
-    die5: burningman
-        Length: *
-        Tick: 80
+	die5: burningman
+		Length: *
+		Tick: 80
 	icon: ne1icon.shp
 		AddExtension: False
-    idle1: 
-        Start: 219
+	idle1: 
+		Start: 219
 		Length: 17
 		Tick: 100
-    idle2: 
-        Start: 237
+	idle2: 
+		Start: 237
 		Length: 16
 		Tick: 100
-    idle3: 
-        Start: 254
+	idle3: 
+		Start: 254
 		Length: 16
 		Tick: 100
-    idle4: 
-        Start: 271
+	idle4: 
+		Start: 271
 		Length: 16
 		Tick: 100
-    idle5: 
-        Start: 288
+	idle5: 
+		Start: 288
 		Length: 26
 		Tick: 100
-    idle6: 
-        Start: 315
+	idle6: 
+		Start: 315
 		Length: 26
 		Tick: 100
-    idle7: 
-        Start: 315
+	idle7: 
+		Start: 315
 		Length: 15
 		Tick: 100
-    idle8: 
-        Start: 258
+	idle8: 
+		Start: 258
 		Length: 15
 		Tick: 100
-    talking:
-        Start: 374
+	talking:
+		Start: 374
 		Length: 34
 		Tick: 100
-        Facings: 8
-        
+		Facings: 8
+		
 mwciv6:
-    stunned: sulm4
-        Start: 312
-        Length: 2
-        Tick: 200
+	stunned: sulm4
+		Start: 312
+		Length: 2
+		Tick: 200
 	stand: mwciv6
-        Start: 146
+		Start: 146
 		Facings: 8
 	run: mwciv6
 		Start: 0
@@ -533,7 +533,7 @@ mwciv6:
 		Facings: 8
 		Tick: 100
 	panic-stand: mwciv6
-        Start: 135
+		Start: 135
 		Facings: 8
 	panic-run: mwciv6
 		Start: 65
@@ -547,7 +547,7 @@ mwciv6:
 	# large hit
 	die2: splatterdead
 		Length: *
-        Tick: 80
+		Tick: 80
 	# poision
 	die3: mwciv6
 		Start: 187
@@ -563,56 +563,56 @@ mwciv6:
 		Length: 4
 		Tick: 1600
 		ZOffset: -511
-    die5: burningman
-        Length: *
-        Tick: 80
+	die5: burningman
+		Length: *
+		Tick: 80
 	icon: ne1icon.shp
 		AddExtension: False
-    idle1: 
-        Start: 219
+	idle1: 
+		Start: 219
 		Length: 17
 		Tick: 100
-    idle2: 
-        Start: 237
+	idle2: 
+		Start: 237
 		Length: 16
 		Tick: 100
-    idle3: 
-        Start: 254
+	idle3: 
+		Start: 254
 		Length: 16
 		Tick: 100
-    idle4: 
-        Start: 271
+	idle4: 
+		Start: 271
 		Length: 16
 		Tick: 100
-    idle5: 
-        Start: 288
+	idle5: 
+		Start: 288
 		Length: 26
 		Tick: 100
-    idle6: 
-        Start: 315
+	idle6: 
+		Start: 315
 		Length: 26
 		Tick: 100
-    idle7: 
-        Start: 315
+	idle7: 
+		Start: 315
 		Length: 15
 		Tick: 100
-    idle8: 
-        Start: 258
+	idle8: 
+		Start: 258
 		Length: 15
 		Tick: 100
-    talking:
-        Start: 374
+	talking:
+		Start: 374
 		Length: 34
 		Tick: 100
-        Facings: 8
-        
+		Facings: 8
+		
 nobl1:
-    stunned: sulm4
-        Start: 312
-        Length: 2
-        Tick: 200
+	stunned: sulm4
+		Start: 312
+		Length: 2
+		Tick: 200
 	stand: 
-        Start: 146
+		Start: 146
 		Facings: 8
 	run: 
 		Start: 0
@@ -620,7 +620,7 @@ nobl1:
 		Facings: 8
 		Tick: 100
 	panic-stand: 
-        Start: 135
+		Start: 135
 		Facings: 8
 	panic-run: 
 		Start: 65
@@ -634,7 +634,7 @@ nobl1:
 	# large hit
 	die2: splatterdead
 		Length: *
-        Tick: 80
+		Tick: 80
 	# poision
 	die3: 
 		Start: 187
@@ -650,54 +650,54 @@ nobl1:
 		Length: 4
 		Tick: 1600
 		ZOffset: -511
-    die5: burningman
-        Length: *
-        Tick: 80
-    idle1: 
-        Start: 219
+	die5: burningman
+		Length: *
+		Tick: 80
+	idle1: 
+		Start: 219
 		Length: 17
 		Tick: 100
-    idle2: 
-        Start: 237
+	idle2: 
+		Start: 237
 		Length: 16
 		Tick: 100
-    idle3: 
-        Start: 254
+	idle3: 
+		Start: 254
 		Length: 16
 		Tick: 100
-    idle4: 
-        Start: 271
+	idle4: 
+		Start: 271
 		Length: 16
 		Tick: 100
-    idle5: 
-        Start: 288
+	idle5: 
+		Start: 288
 		Length: 26
 		Tick: 100
-    idle6: 
-        Start: 315
+	idle6: 
+		Start: 315
 		Length: 26
 		Tick: 100
-    idle7: 
-        Start: 315
+	idle7: 
+		Start: 315
 		Length: 15
 		Tick: 100
-    idle8: 
-        Start: 258
+	idle8: 
+		Start: 258
 		Length: 15
 		Tick: 100
-    talking:
-        Start: 374
+	talking:
+		Start: 374
 		Length: 34
 		Tick: 100
-        Facings: 8
-        
+		Facings: 8
+		
 nobl2:
-    stunned: sulm4
-        Start: 312
-        Length: 2
-        Tick: 200
+	stunned: sulm4
+		Start: 312
+		Length: 2
+		Tick: 200
 	stand: 
-        Start: 146
+		Start: 146
 		Facings: 8
 	run: 
 		Start: 0
@@ -705,7 +705,7 @@ nobl2:
 		Facings: 8
 		Tick: 100
 	panic-stand: 
-        Start: 135
+		Start: 135
 		Facings: 8
 	panic-run: 
 		Start: 65
@@ -719,7 +719,7 @@ nobl2:
 	# large hit
 	die2: splatterdead
 		Length: *
-        Tick: 80
+		Tick: 80
 	# poision
 	die3: 
 		Start: 187
@@ -735,54 +735,54 @@ nobl2:
 		Length: 4
 		Tick: 1600
 		ZOffset: -511
-    die5: burningman
-        Length: *
-        Tick: 80
-    idle1: 
-        Start: 219
+	die5: burningman
+		Length: *
+		Tick: 80
+	idle1: 
+		Start: 219
 		Length: 17
 		Tick: 100
-    idle2: 
-        Start: 237
+	idle2: 
+		Start: 237
 		Length: 16
 		Tick: 100
-    idle3: 
-        Start: 254
+	idle3: 
+		Start: 254
 		Length: 16
 		Tick: 100
-    idle4: 
-        Start: 271
+	idle4: 
+		Start: 271
 		Length: 16
 		Tick: 100
-    idle5: 
-        Start: 288
+	idle5: 
+		Start: 288
 		Length: 26
 		Tick: 100
-    idle6: 
-        Start: 315
+	idle6: 
+		Start: 315
 		Length: 26
 		Tick: 100
-    idle7: 
-        Start: 315
+	idle7: 
+		Start: 315
 		Length: 15
 		Tick: 100
-    idle8: 
-        Start: 258
+	idle8: 
+		Start: 258
 		Length: 15
 		Tick: 100
-    talking:
-        Start: 374
+	talking:
+		Start: 374
 		Length: 34
 		Tick: 100
-        Facings: 8
-        
+		Facings: 8
+		
 nobl3:
-    stunned: sulm4
-        Start: 312
-        Length: 2
-        Tick: 200
+	stunned: sulm4
+		Start: 312
+		Length: 2
+		Tick: 200
 	stand: 
-        Start: 146
+		Start: 146
 		Facings: 8
 	run: 
 		Start: 0
@@ -790,7 +790,7 @@ nobl3:
 		Facings: 8
 		Tick: 100
 	panic-stand: 
-        Start: 135
+		Start: 135
 		Facings: 8
 	panic-run: 
 		Start: 65
@@ -804,7 +804,7 @@ nobl3:
 	# large hit
 	die2: splatterdead
 		Length: *
-        Tick: 80
+		Tick: 80
 	# poision
 	die3: 
 		Start: 187
@@ -820,54 +820,54 @@ nobl3:
 		Length: 4
 		Tick: 1600
 		ZOffset: -511
-    die5: burningman
-        Length: *
-        Tick: 80
-    idle1: 
-        Start: 219
+	die5: burningman
+		Length: *
+		Tick: 80
+	idle1: 
+		Start: 219
 		Length: 17
 		Tick: 100
-    idle2: 
-        Start: 237
+	idle2: 
+		Start: 237
 		Length: 16
 		Tick: 100
-    idle3: 
-        Start: 254
+	idle3: 
+		Start: 254
 		Length: 16
 		Tick: 100
-    idle4: 
-        Start: 271
+	idle4: 
+		Start: 271
 		Length: 16
 		Tick: 100
-    idle5: 
-        Start: 288
+	idle5: 
+		Start: 288
 		Length: 26
 		Tick: 100
-    idle6: 
-        Start: 315
+	idle6: 
+		Start: 315
 		Length: 26
 		Tick: 100
-    idle7: 
-        Start: 315
+	idle7: 
+		Start: 315
 		Length: 15
 		Tick: 100
-    idle8: 
-        Start: 258
+	idle8: 
+		Start: 258
 		Length: 15
 		Tick: 100
-    talking:
-        Start: 374
+	talking:
+		Start: 374
 		Length: 34
 		Tick: 100
-        Facings: 8
-        
+		Facings: 8
+		
 nobl4:
-    stunned: sulm4
-        Start: 312
-        Length: 2
-        Tick: 200
+	stunned: sulm4
+		Start: 312
+		Length: 2
+		Tick: 200
 	stand: 
-        Start: 146
+		Start: 146
 		Facings: 8
 	run: 
 		Start: 0
@@ -875,7 +875,7 @@ nobl4:
 		Facings: 8
 		Tick: 100
 	panic-stand: 
-        Start: 135
+		Start: 135
 		Facings: 8
 	panic-run: 
 		Start: 65
@@ -889,7 +889,7 @@ nobl4:
 	# large hit
 	die2: splatterdead
 		Length: *
-        Tick: 80
+		Tick: 80
 	# poision
 	die3: 
 		Start: 187
@@ -905,54 +905,54 @@ nobl4:
 		Length: 4
 		Tick: 1600
 		ZOffset: -511
-    die5: burningman
-        Length: *
-        Tick: 80
-    idle1: 
-        Start: 219
+	die5: burningman
+		Length: *
+		Tick: 80
+	idle1: 
+		Start: 219
 		Length: 17
 		Tick: 100
-    idle2: 
-        Start: 237
+	idle2: 
+		Start: 237
 		Length: 16
 		Tick: 100
-    idle3: 
-        Start: 254
+	idle3: 
+		Start: 254
 		Length: 16
 		Tick: 100
-    idle4: 
-        Start: 271
+	idle4: 
+		Start: 271
 		Length: 16
 		Tick: 100
-    idle5: 
-        Start: 288
+	idle5: 
+		Start: 288
 		Length: 26
 		Tick: 100
-    idle6: 
-        Start: 315
+	idle6: 
+		Start: 315
 		Length: 26
 		Tick: 100
-    idle7: 
-        Start: 315
+	idle7: 
+		Start: 315
 		Length: 15
 		Tick: 100
-    idle8: 
-        Start: 258
+	idle8: 
+		Start: 258
 		Length: 15
 		Tick: 100
-    talking:
-        Start: 374
+	talking:
+		Start: 374
 		Length: 34
 		Tick: 100
-        Facings: 8
-        
+		Facings: 8
+		
 mwciv7:
-    stunned: sulm4
-        Start: 312
-        Length: 2
-        Tick: 200
+	stunned: sulm4
+		Start: 312
+		Length: 2
+		Tick: 200
 	stand: mwciv7
-        Start: 146
+		Start: 146
 		Facings: 8
 	run: mwciv7
 		Start: 0
@@ -960,7 +960,7 @@ mwciv7:
 		Facings: 8
 		Tick: 100
 	panic-stand: mwciv7
-        Start: 135
+		Start: 135
 		Facings: 8
 	panic-run: mwciv7
 		Start: 65
@@ -974,7 +974,7 @@ mwciv7:
 	# large hit
 	die2: splatterdead
 		Length: *
-        Tick: 80
+		Tick: 80
 	# poision
 	die3: mwciv7
 		Start: 187
@@ -990,32 +990,32 @@ mwciv7:
 		Length: 4
 		Tick: 1600
 		ZOffset: -511
-    die5: burningman
-        Length: *
-        Tick: 80
+	die5: burningman
+		Length: *
+		Tick: 80
 	icon: ne1icon.shp
 		AddExtension: False
-    idle1: 
-        Start: 220
+	idle1: 
+		Start: 220
 		Length: 31
 		Tick: 100
-    idle2: 
-        Start: 252
+	idle2: 
+		Start: 252
 		Length: 31
 		Tick: 100
-    idle3: 
-        Start: 284
+	idle3: 
+		Start: 284
 		Length: 16
-        Facings: 8
+		Facings: 8
 		Tick: 100
-        
+		
 mwciv8:
-    stunned: sulm4
-        Start: 312
-        Length: 2
-        Tick: 200
+	stunned: sulm4
+		Start: 312
+		Length: 2
+		Tick: 200
 	stand: mwciv8
-        Start: 146
+		Start: 146
 		Facings: 8
 	run: mwciv8
 		Start: 0
@@ -1023,7 +1023,7 @@ mwciv8:
 		Facings: 8
 		Tick: 100
 	panic-stand: mwciv8
-        Start: 135
+		Start: 135
 		Facings: 8
 	panic-run: mwciv8
 		Start: 65
@@ -1037,7 +1037,7 @@ mwciv8:
 	# large hit
 	die2: splatterdead
 		Length: *
-        Tick: 80
+		Tick: 80
 	# poision
 	die3: mwciv8
 		Start: 187
@@ -1053,32 +1053,32 @@ mwciv8:
 		Length: 4
 		Tick: 1600
 		ZOffset: -511
-    die5: burningman
-        Length: *
-        Tick: 80
+	die5: burningman
+		Length: *
+		Tick: 80
 	icon: ne1icon.shp
 		AddExtension: False
-    idlestand: 
-        Start: 219
+	idlestand: 
+		Start: 219
 		Facings: 8
-        Length: 14
-        Tick: 100
-    idle1: 
-        Start: 332
+		Length: 14
+		Tick: 100
+	idle1: 
+		Start: 332
 		Length: 17
 		Tick: 100
-    idle2: 
-        Start: 349
+	idle2: 
+		Start: 349
 		Length: 15
 		Tick: 100
-        
+		
 mwciv9:
-    stunned: sulm4
-        Start: 312
-        Length: 2
-        Tick: 200
+	stunned: sulm4
+		Start: 312
+		Length: 2
+		Tick: 200
 	stand: mwciv9
-        Start: 146
+		Start: 146
 		Facings: 8
 	run: mwciv9
 		Start: 0
@@ -1086,7 +1086,7 @@ mwciv9:
 		Facings: 8
 		Tick: 100
 	panic-stand: mwciv9
-        Start: 135
+		Start: 135
 		Facings: 8
 	panic-run: mwciv9
 		Start: 65
@@ -1100,7 +1100,7 @@ mwciv9:
 	# large hit
 	die2: splatterdead
 		Length: *
-        Tick: 80
+		Tick: 80
 	# poision
 	die3: mwciv9
 		Start: 187
@@ -1116,43 +1116,43 @@ mwciv9:
 		Length: 4
 		Tick: 1600
 		ZOffset: -511
-    die5: burningman
-        Length: *
-        Tick: 80
+	die5: burningman
+		Length: *
+		Tick: 80
 	icon: ne1icon.shp
 		AddExtension: False
-    idle1: 
-        Start: 219
+	idle1: 
+		Start: 219
 		Length: 58
 		Tick: 60
-    idle2: 
-        Start: 278
+	idle2: 
+		Start: 278
 		Length: 58
 		Tick: 60
-    idle3: 
-        Start: 337
+	idle3: 
+		Start: 337
 		Length: 58
 		Tick: 60
-    idle4: 
-        Start: 396
+	idle4: 
+		Start: 396
 		Length: 58
 		Tick: 60
-    idle5: 
-        Start: 455
+	idle5: 
+		Start: 455
 		Length: 58
 		Tick: 60
-    idle6: 
-        Start: 514
+	idle6: 
+		Start: 514
 		Length: 58
 		Tick: 60
-        
+		
 mwciv10:
-    stunned: sulm4
-        Start: 312
-        Length: 2
-        Tick: 200
+	stunned: sulm4
+		Start: 312
+		Length: 2
+		Tick: 200
 	stand: 
-        Start: 146
+		Start: 146
 		Facings: 8
 	run: 
 		Start: 0
@@ -1160,7 +1160,7 @@ mwciv10:
 		Facings: 8
 		Tick: 100
 	panic-stand: 
-        Start: 135
+		Start: 135
 		Facings: 8
 	panic-run: 
 		Start: 65
@@ -1174,7 +1174,7 @@ mwciv10:
 	# large hit
 	die2: splatterdead
 		Length: *
-        Tick: 80
+		Tick: 80
 	# poision
 	die3: 
 		Start: 187
@@ -1190,54 +1190,54 @@ mwciv10:
 		Length: 4
 		Tick: 1600
 		ZOffset: -511
-    die5: burningman
-        Length: *
-        Tick: 80
-    idle1: 
-        Start: 219
+	die5: burningman
+		Length: *
+		Tick: 80
+	idle1: 
+		Start: 219
 		Length: 17
 		Tick: 100
-    idle2: 
-        Start: 237
+	idle2: 
+		Start: 237
 		Length: 16
 		Tick: 100
-    idle3: 
-        Start: 254
+	idle3: 
+		Start: 254
 		Length: 16
 		Tick: 100
-    idle4: 
-        Start: 271
+	idle4: 
+		Start: 271
 		Length: 16
 		Tick: 100
-    idle5: 
-        Start: 288
+	idle5: 
+		Start: 288
 		Length: 26
 		Tick: 100
-    idle6: 
-        Start: 315
+	idle6: 
+		Start: 315
 		Length: 26
 		Tick: 100
-    idle7: 
-        Start: 315
+	idle7: 
+		Start: 315
 		Length: 15
 		Tick: 100
-    idle8: 
-        Start: 258
+	idle8: 
+		Start: 258
 		Length: 15
 		Tick: 100
-    talking:
-        Start: 374
+	talking:
+		Start: 374
 		Length: 34
 		Tick: 100
-        Facings: 8
-        
+		Facings: 8
+		
 mwciv11:
-    stunned: sulm4
-        Start: 312
-        Length: 2
-        Tick: 200
+	stunned: sulm4
+		Start: 312
+		Length: 2
+		Tick: 200
 	stand: 
-        Start: 146
+		Start: 146
 		Facings: 8
 	run: 
 		Start: 0
@@ -1245,7 +1245,7 @@ mwciv11:
 		Facings: 8
 		Tick: 100
 	panic-stand: 
-        Start: 135
+		Start: 135
 		Facings: 8
 	panic-run: 
 		Start: 65
@@ -1259,7 +1259,7 @@ mwciv11:
 	# large hit
 	die2: splatterdead
 		Length: *
-        Tick: 80
+		Tick: 80
 	# poision
 	die3: 
 		Start: 187
@@ -1275,54 +1275,54 @@ mwciv11:
 		Length: 4
 		Tick: 1600
 		ZOffset: -511
-    die5: burningman
-        Length: *
-        Tick: 80
-    idle1: 
-        Start: 219
+	die5: burningman
+		Length: *
+		Tick: 80
+	idle1: 
+		Start: 219
 		Length: 17
 		Tick: 100
-    idle2: 
-        Start: 237
+	idle2: 
+		Start: 237
 		Length: 16
 		Tick: 100
-    idle3: 
-        Start: 254
+	idle3: 
+		Start: 254
 		Length: 16
 		Tick: 100
-    idle4: 
-        Start: 271
+	idle4: 
+		Start: 271
 		Length: 16
 		Tick: 100
-    idle5: 
-        Start: 288
+	idle5: 
+		Start: 288
 		Length: 26
 		Tick: 100
-    idle6: 
-        Start: 315
+	idle6: 
+		Start: 315
 		Length: 26
 		Tick: 100
-    idle7: 
-        Start: 315
+	idle7: 
+		Start: 315
 		Length: 15
 		Tick: 100
-    idle8: 
-        Start: 258
+	idle8: 
+		Start: 258
 		Length: 15
 		Tick: 100
-    talking:
-        Start: 374
+	talking:
+		Start: 374
 		Length: 34
 		Tick: 100
-        Facings: 8
-        
+		Facings: 8
+		
 mwciv12:
-    stunned: sulm4
-        Start: 312
-        Length: 2
-        Tick: 200
+	stunned: sulm4
+		Start: 312
+		Length: 2
+		Tick: 200
 	stand: 
-        Start: 146
+		Start: 146
 		Facings: 8
 	run: 
 		Start: 0
@@ -1330,7 +1330,7 @@ mwciv12:
 		Facings: 8
 		Tick: 100
 	panic-stand: 
-        Start: 135
+		Start: 135
 		Facings: 8
 	panic-run: 
 		Start: 65
@@ -1344,7 +1344,7 @@ mwciv12:
 	# large hit
 	die2: splatterdead
 		Length: *
-        Tick: 80
+		Tick: 80
 	# poision
 	die3: 
 		Start: 187
@@ -1360,43 +1360,43 @@ mwciv12:
 		Length: 4
 		Tick: 1600
 		ZOffset: -511
-    die5: burningman
-        Length: *
-        Tick: 80
-    idle1: 
-        Start: 219
+	die5: burningman
+		Length: *
+		Tick: 80
+	idle1: 
+		Start: 219
 		Length: 17
 		Tick: 100
-    idle2: 
-        Start: 237
+	idle2: 
+		Start: 237
 		Length: 16
 		Tick: 100
-    idle3: 
-        Start: 254
+	idle3: 
+		Start: 254
 		Length: 16
 		Tick: 100
-    idle4: 
-        Start: 271
+	idle4: 
+		Start: 271
 		Length: 16
 		Tick: 100
-    idle5: 
-        Start: 288
+	idle5: 
+		Start: 288
 		Length: 26
 		Tick: 100
-    idle6: 
-        Start: 315
+	idle6: 
+		Start: 315
 		Length: 26
 		Tick: 100
-    idle7: 
-        Start: 315
+	idle7: 
+		Start: 315
 		Length: 15
 		Tick: 100
-    idle8: 
-        Start: 258
+	idle8: 
+		Start: 258
 		Length: 15
 		Tick: 100
-    talking:
-        Start: 374
+	talking:
+		Start: 374
 		Length: 34
 		Tick: 100
-        Facings: 8
+		Facings: 8

@@ -1,14 +1,14 @@
 burhors:
 	stand: burninghorse
-        Start: 66
+		Start: 66
 		Facings: 8
 	run: burninghorse
 		Start: 0
 		Length: 8
 		Facings: 8
 		Tick: 100 
-    panic-stand: burninghorse
-        Start: 66
+	panic-stand: burninghorse
+		Start: 66
 		Facings: 8
 	panic-run: burninghorse
 		Start: 0
@@ -25,11 +25,11 @@ burhors:
 		Length: 14
 		Tick: 80
 	icon: Camelross1icon.shp
-		AddExtension: False       
-        
+		AddExtension: False	   
+		
 rossneutral:
 	stand: Camelross1
-        Start: 122
+		Start: 122
 		Facings: 8
 	run: Camelross1
 		Start: 0
@@ -37,7 +37,7 @@ rossneutral:
 		Facings: 8
 		Tick: 100
 	shoot: Camelross1
-        Tick: 100
+		Tick: 100
 		Start: 66
 		Length: 7
 		Facings: 8
@@ -51,10 +51,10 @@ rossneutral:
 		Tick: 80
 	icon: Camelross1icon.shp
 		AddExtension: False
-        
+		
 ross1:
 	stand: ross1
-        Start: 122
+		Start: 122
 		Facings: 8
 	run: ross1
 		Start: 0
@@ -62,21 +62,21 @@ ross1:
 		Facings: 8
 		Tick: 100
 	shoot: ross1
-        Tick: 100
+		Tick: 100
 		Start: 66
 		Length: 7
 		Facings: 8
 	idle1: ross1
-        Tick: 100
+		Tick: 100
 		Start: 150
 		Length: 7
-        Facings: 8
-    idle2: ross1
-        Tick: 100
+		Facings: 8
+	idle2: ross1
+		Tick: 100
 		Start: 206
 		Length: 7
-        Facings: 8
-    die1: ross1
+		Facings: 8
+	die1: ross1
 		Start: 132
 		Length: 18
 		Tick: 80
@@ -86,10 +86,10 @@ ross1:
 		Tick: 80
 	icon: nlcavicon.shp
 		AddExtension: False
-        
+		
 ross2:
 	stand: ross2
-        Start: 122
+		Start: 122
 		Facings: 8
 	run: ross2
 		Start: 0
@@ -97,21 +97,21 @@ ross2:
 		Facings: 8
 		Tick: 100
 	shoot: ross2
-        Tick: 100
+		Tick: 100
 		Start: 66
 		Length: 7
 		Facings: 8
 	idle1: ross2
-        Tick: 100
+		Tick: 100
 		Start: 150
 		Length: 7
-        Facings: 8
-    idle2: ross2
-        Tick: 100
+		Facings: 8
+	idle2: ross2
+		Tick: 100
 		Start: 206
 		Length: 7
-        Facings: 8
-    die1: ross2
+		Facings: 8
+	die1: ross2
 		Start: 132
 		Length: 18
 		Tick: 80
@@ -121,10 +121,10 @@ ross2:
 		Tick: 80
 	icon: nmcavicon.shp
 		AddExtension: False
-        
+		
 kingross:
 	stand: kingross
-        Start: 122
+		Start: 122
 		Facings: 8
 	run: kingross
 		Start: 0
@@ -132,26 +132,26 @@ kingross:
 		Facings: 8
 		Tick: 100
 	shoot: kingross
-        Tick: 100
+		Tick: 100
 		Start: 66
 		Length: 7
 		Facings: 8
-    shoot2: kingross
-        Tick: 100
+	shoot2: kingross
+		Tick: 100
 		Start: 262
 		Length: 7
 		Facings: 8
 	idle1: kingross
-        Tick: 100
+		Tick: 100
 		Start: 150
 		Length: 7
-        Facings: 8
-    idle2: kingross
-        Tick: 100
+		Facings: 8
+	idle2: kingross
+		Tick: 100
 		Start: 206
 		Length: 7
-        Facings: 8
-    die1: kingross
+		Facings: 8
+	die1: kingross
 		Start: 132
 		Length: 18
 		Tick: 80
@@ -164,7 +164,7 @@ kingross:
 
 ross3:
 	stand: ross3
-        Start: 122
+		Start: 122
 		Facings: 8
 	run: ross3
 		Start: 0
@@ -172,21 +172,21 @@ ross3:
 		Facings: 8
 		Tick: 100
 	shoot: ross3
-        Tick: 100
+		Tick: 100
 		Start: 66
 		Length: 7
 		Facings: 8
 	idle1: ross3
-        Tick: 100
+		Tick: 100
 		Start: 150
 		Length: 7
-        Facings: 8
-    idle2: ross3
-        Tick: 100
+		Facings: 8
+	idle2: ross3
+		Tick: 100
 		Start: 206
 		Length: 7
-        Facings: 8
-    die1: ross3
+		Facings: 8
+	die1: ross3
 		Start: 132
 		Length: 18
 		Tick: 80
@@ -198,39 +198,39 @@ ross3:
 		AddExtension: False
 
 ross4:
-    idle1: ross4
-        Tick: 100
+	idle1: ross4
+		Tick: 100
 		Start: 182
 		Length: 7
-        Facings: 8
-        Offset: 0,4,0
-    idle1: ross4
+		Facings: 8
+		Offset: 0,4,0
+	idle1: ross4
 		Tick: 100
 		Start: 238
 		Length: 7
-        Facings: 8
-        Offset: 0,4,0
-	stand: ross4
-        Start: 122
 		Facings: 8
-        Offset: 0,4,0
+		Offset: 0,4,0
+	stand: ross4
+		Start: 122
+		Facings: 8
+		Offset: 0,4,0
 	run: ross4
 		Start: 0
 		Length: 8
 		Facings: 8
 		Tick: 100
-        Offset: 0,4,0
+		Offset: 0,4,0
 	shoot: ross4
-        Tick: 100
+		Tick: 100
 		Start: 66
 		Length: 7
 		Facings: 8
-        Offset: 0,4,0
+		Offset: 0,4,0
 	die1: ross4
 		Start: 132
 		Length: 18
 		Tick: 80
-        Offset: 0,4,0
+		Offset: 0,4,0
 	# Burn
 	die2: burninghorserider
 		Length: *
@@ -240,7 +240,7 @@ ross4:
 
 ross4b:
 	stand: ross4b
-        Start: 122
+		Start: 122
 		Facings: 8
 	run: ross4b
 		Start: 0
@@ -248,21 +248,21 @@ ross4b:
 		Facings: 8
 		Tick: 100
 	shoot: ross4b
-        Tick: 100
+		Tick: 100
 		Start: 66
 		Length: 7
 		Facings: 8
 	idle1: ross4b
-        Tick: 100
+		Tick: 100
 		Start: 149
 		Length: 7
-        Facings: 8
-    idle1: ross4b
+		Facings: 8
+	idle1: ross4b
 		Tick: 100
 		Start: 205
 		Length: 7
-        Facings: 8
-    die1: ross4b
+		Facings: 8
+	die1: ross4b
 		Start: 132
 		Length: 18
 		Tick: 80
@@ -272,10 +272,10 @@ ross4b:
 		Tick: 80
 	icon: nflailicon.shp
 		AddExtension: False
-        
+		
 ross4c:
 	stand: ross4c
-        Start: 122
+		Start: 122
 		Facings: 8
 	run: ross4c
 		Start: 0
@@ -283,21 +283,21 @@ ross4c:
 		Facings: 8
 		Tick: 100
 	shoot: ross4c
-        Tick: 100
+		Tick: 100
 		Start: 66
 		Length: 7
 		Facings: 8
 	idle1: ross4c
-        Tick: 100
+		Tick: 100
 		Start: 150
 		Length: 7
-        Facings: 8
-    idle2: ross4c
-        Tick: 100
+		Facings: 8
+	idle2: ross4c
+		Tick: 100
 		Start: 206
 		Length: 7
-        Facings: 8
-    die1: ross4c
+		Facings: 8
+	die1: ross4c
 		Start: 132
 		Length: 18
 		Tick: 80
@@ -310,27 +310,27 @@ ross4c:
 
 rossempty:
 	stand: emptyhorse
-        Start: 122
+		Start: 122
 		Facings: 8
 	run: emptyhorse
 		Start: 0
 		Length: 8
 		Facings: 8
 		Tick: 100
-    panic-run: emptyhorse
+	panic-run: emptyhorse
 		Start: 0
 		Length: 8
 		Facings: 8
 		Tick: 100
-    panic-stand: emptyhorse
-        Start: 122
+	panic-stand: emptyhorse
+		Start: 122
 		Facings: 8
 	shoot: emptyhorse
-        Tick: 100
+		Tick: 100
 		Start: 66
 		Length: 7
 		Facings: 8
-    die1: emptyhorse
+	die1: emptyhorse
 		Start: 132
 		Length: 18
 		Tick: 80
@@ -341,13 +341,13 @@ rossempty:
 		Tick: 80
 	icon: nsabericon.shp
 		AddExtension: False
-        
-        
+		
+		
 ross5:
-    Default:
-        Offset: 0,10,0
+	Default:
+		Offset: 0,10,0
 	stand: ross5
-        Start: 122
+		Start: 122
 		Facings: 8
 	run: ross5
 		Start: 0
@@ -355,26 +355,26 @@ ross5:
 		Facings: 8
 		Tick: 100
 	stab: ross5
-        Tick: 100
+		Tick: 100
 		Start: 66
 		Length: 7
 		Facings: 8
-    shoot: ross5
-        Tick: 100
+	shoot: ross5
+		Tick: 100
 		Start: 259
 		Length: 7
 		Facings: 8
 	idle1: ross5
-        Tick: 100
+		Tick: 100
 		Start: 146
 		Length: 7
-        Facings: 8
-    idle2: ross5
-        Tick: 100
+		Facings: 8
+	idle2: ross5
+		Tick: 100
 		Start: 202
 		Length: 7
-        Facings: 8
-    die1: ross5
+		Facings: 8
+	die1: ross5
 		Start: 131
 		Length: 15
 		Tick: 80
@@ -383,5 +383,5 @@ ross5:
 		Length: *
 		Tick: 80
 	icon: nhcavicon.shp
-        Offset: 0,0,0
-		AddExtension: False        
+		Offset: 0,0,0
+		AddExtension: False		

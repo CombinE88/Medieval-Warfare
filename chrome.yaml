@@ -16,7 +16,7 @@ paperframe: chromeMW.png
 	corner-tr: 288,96,24,24
 	corner-bl: 216,168,24,24
 	corner-br: 288,168,24,24
-    
+	
 castleframe: chromeMW.png
 	background: 240,24,72,48
 	border-r: 328,24,8,48
@@ -27,7 +27,7 @@ castleframe: chromeMW.png
 	corner-tr: 312,4,24,20
 	corner-bl: 216,72,24,12
 	corner-br: 312,72,24,12
-    
+	
 castleframenocolum: chromeMW.png
 	background: 240,24,72,48
 	border-r: 328,24,8,48
@@ -38,7 +38,7 @@ castleframenocolum: chromeMW.png
 	corner-tr: 312,84,24,12
 	corner-bl: 216,72,24,12
 	corner-br: 312,72,24,12
-    
+	
 button: chromeMW.png
 	background: 79,80,57,57
 	border-r: 136,80,8,57
@@ -502,7 +502,7 @@ scrollbar: chrome.png
 flags: chrome.png
 	nod: 352,0,32,16
 	gdi: 352,16,32,16
-    sul: 352,64,32,16
+	sul: 352,64,32,16
 	Random: 352,32,32,16
 
 strategic: strategic.png
@@ -556,4 +556,4 @@ order-icons: chromeMW.png
 	stats-active: 312,312,24,24
 
 dropdown: chrome.png
-    separator: 64,1,1,19
+	separator: 64,1,1,19

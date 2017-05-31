@@ -144,7 +144,7 @@
 			Road: 100
 			Tiberium: 60
 			BlueTiberium: 60
-            Crops: 75
+			Crops: 75
 			Wood: 75
 			Loot: 75
 			Beach: 50
@@ -187,7 +187,7 @@
 			Road: 100
 			Tiberium: 60
 			BlueTiberium: 60
-            Crops: 75
+			Crops: 75
 			Wood: 75
 			Loot: 75
 			Beach: 70
@@ -240,14 +240,14 @@
 		VoiceSet: VehicleVoice
 	BodyOrientation:
 		UseClassicFacingFudge: True
-    ExternalCondition@TORNADO:
-        Condition: Tornadodeath
-    SelfHealing@TORNADO:
-        Step: -6500
-        HealIfBelow: 110
-        Delay: 25
-        RequiresCondition: Tornadodeath
-        DamageTypes: DefaultDeath
+	ExternalCondition@TORNADO:
+		Condition: Tornadodeath
+	SelfHealing@TORNADO:
+		Step: -6500
+		HealIfBelow: 110
+		Delay: 25
+		RequiresCondition: Tornadodeath
+		DamageTypes: DefaultDeath
 
 ^Infantry:
 	Inherits@1: ^ExistsInWorld
@@ -267,14 +267,14 @@
 			Clear: 90
 			Rough: 80
 			Road: 100
-            Tiberium: 60
-                PathingCost: 350
+			Tiberium: 60
+				PathingCost: 350
 			BlueTiberium: 60
-                PathingCost: 350
-            Crops: 75
-                PathingCost: 300
+				PathingCost: 350
+			Crops: 75
+				PathingCost: 300
 			Wood: 75
-                PathingCost: 300
+				PathingCost: 300
 			Loot: 75
 			Beach: 80
 	SelectionDecorations:
@@ -396,15 +396,15 @@
 	Wanders:
 		MinMoveDelay: 150
 		MaxMoveDelay: 750
-    ConditionManager:
-    ExternalCondition@TORNADO:
-        Condition: Tornadodeath
-    SelfHealing@TORNADO:
-        Step: -6500
-        HealIfBelow: 110
-        Delay: 25
-        RequiresCondition: Tornadodeath
-        DamageTypes: DefaultDeath
+	ConditionManager:
+	ExternalCondition@TORNADO:
+		Condition: Tornadodeath
+	SelfHealing@TORNADO:
+		Step: -6500
+		HealIfBelow: 110
+		Delay: 25
+		RequiresCondition: Tornadodeath
+		DamageTypes: DefaultDeath
 
 ^ArmedCivilian:
 	Armament:
@@ -442,7 +442,7 @@
 			Road: 100
 			Tiberium: 70
 			BlueTiberium: 70
-            Crops: 75
+			Crops: 75
 			Wood: 75
 			Loot: 75
 			Beach: 80
@@ -493,13 +493,13 @@
 			Rough: 60
 			Road: 70
 			Tiberium: 60
-                PathingCost: 350
+				PathingCost: 350
 			BlueTiberium: 60
-                PathingCost: 350
-            Crops: 75
-                PathingCost: 300
+				PathingCost: 350
+			Crops: 75
+				PathingCost: 300
 			Wood: 75
-                PathingCost: 300
+				PathingCost: 300
 			Loot: 75
 			Beach: 60
 	SelectionDecorations:
@@ -647,14 +647,14 @@
 		SellSounds: cashturn.aud
 	Capturable:
 	WithMakeAnimation:
-    ExternalCondition@TORNADO:
-        Condition: Tornadodeath
-    SelfHealing@TORNADO:
-        Step: -6500
-        HealIfBelow: 110
-        Delay: 25
-        RequiresCondition: Tornadodeath
-        DamageTypes: DefaultDeath
+	ExternalCondition@TORNADO:
+		Condition: Tornadodeath
+	SelfHealing@TORNADO:
+		Step: -6500
+		HealIfBelow: 110
+		Delay: 25
+		RequiresCondition: Tornadodeath
+		DamageTypes: DefaultDeath
 
 ^CivBuilding:
 	Inherits: ^Building
@@ -666,14 +666,14 @@
 		GenericStancePrefix: false
 		ShowOwnerRow: false
 	FrozenUnderFog:
-    ExternalCondition@TORNADO:
-        Condition: Tornadodeath
-    SelfHealing@TORNADO:
-        Step: -6500
-        HealIfBelow: 110
-        Delay: 25
-        RequiresCondition: Tornadodeath
-        DamageTypes: DefaultDeath
+	ExternalCondition@TORNADO:
+		Condition: Tornadodeath
+	SelfHealing@TORNADO:
+		Step: -6500
+		HealIfBelow: 110
+		Delay: 25
+		RequiresCondition: Tornadodeath
+		DamageTypes: DefaultDeath
 
 ^CivBuildingHusk:
 	Inherits@1: ^SpriteActor
@@ -789,12 +789,12 @@
 	AutoTargetIgnore:
 	HiddenUnderShroud:
 	ScriptTriggers:
-    Health:
+	Health:
 		HP: 40000
-    Explodes@Tib:
+	Explodes@Tib:
 		Weapon: LeaveWoodM
-        EmptyWeapon: LeaveWoodM
-    ThrowsShrapnel@SMALL:
+		EmptyWeapon: LeaveWoodM
+	ThrowsShrapnel@SMALL:
 		Weapons: SmallWood1, SmallWood2, SmallWood3
 		Pieces: 1, 3
 		Range: 0c512, 3c0
@@ -938,35 +938,35 @@
 	-GivesBuildableArea:
 	MustBeDestroyed:
 		RequiredForShortGame: false
-        
+		
 ^MWGate:
 	Inherits@1: ^ExistsInWorld
 	Inherits@2: ^SpriteActor
 	Huntable:
-    Sellable:
-    RepairableBuilding:
+	Sellable:
+	RepairableBuilding:
 		RepairPercent: 40
 		RepairStep: 350
 		PlayerExperience: 15
-    SelectionDecorations:
+	SelectionDecorations:
 	WithSpriteControlGroupDecoration:
 	Selectable:
 		Priority: 3
 	Targetable:
 		TargetTypes: Ground, C4, Structure
-    SoundOnDamageTransition:
+	SoundOnDamageTransition:
 		DamagedSounds: xplos.aud
 		DestroyedSounds: crumble.aud
-    Explodes:
+	Explodes:
 		Type: Footprint
 		Weapon: BuildingExplode
 		EmptyWeapon: BuildingExplode
-    ActorLostNotification:
+	ActorLostNotification:
 		Notification: BuildingLost
-    ShakeOnDeath:
-    Guardable:
+	ShakeOnDeath:
+	Guardable:
 		Range: 3c0
-    FrozenUnderFog:
+	FrozenUnderFog:
 	Demolishable:
 	Valued:
 		Cost: 250
@@ -1000,7 +1000,7 @@
 		Delay: 12
 		HealIfBelow: 101
 		DamageCooldown: 0
-        DamageTypes: DefaultDeath
+		DamageTypes: DefaultDeath
 	Targetable:
 		RequiresForceFire: yes
 		TargetTypes: Ground, Husk
@@ -1054,43 +1054,43 @@
 	MustBeDestroyed:
 	Voiced:
 		VoiceSet: GenericVoice
-    ExternalCondition@TORNADO:
-        Condition: Tornadodeath
-    SelfHealing@TORNADO:
-        Step: -6500
-        HealIfBelow: 110
-        Delay: 25
-        RequiresCondition: Tornadodeath
-        DamageTypes: DefaultDeath
+	ExternalCondition@TORNADO:
+		Condition: Tornadodeath
+	SelfHealing@TORNADO:
+		Step: -6500
+		HealIfBelow: 110
+		Delay: 25
+		RequiresCondition: Tornadodeath
+		DamageTypes: DefaultDeath
 
 ^MWBaseBuilding:
-    Inherits@1: ^BaseBuilding
+	Inherits@1: ^BaseBuilding
 	EmitInfantryOnSell:
 		ActorTypes: engeneer,e1new
-    RepairableBuilding:
+	RepairableBuilding:
 		RepairPercent: 40
 		RepairStep: 350
 		PlayerExperience: 15
-    ThrowsShrapnel@SMALL:
+	ThrowsShrapnel@SMALL:
 		Weapons: SmallWood1, SmallWood2, SmallWood3, SmallStone1, SmallStone2
 		Pieces: 2, 4
 		Range: 0c512, 3c0
-    Targetable:
+	Targetable:
 		TargetTypes: Ground, C4, Structure, Wanderer
-    ProximityExternalCondition@WANDERER:
-        Range: 6c0
-        ValidStances: Ally
-        Condition: Wander
-        
+	ProximityExternalCondition@WANDERER:
+		Range: 6c0
+		ValidStances: Ally
+		Condition: Wander
+		
 ^MWDefense:
-    Inherits@1: ^Defense
-    EmitInfantryOnSell:
+	Inherits@1: ^Defense
+	EmitInfantryOnSell:
 		ActorTypes: engeneer,e1new
-    RepairableBuilding:
+	RepairableBuilding:
 		RepairPercent: 40
 		RepairStep: 350
 		PlayerExperience: 15
-    ThrowsShrapnel@SMALL:
+	ThrowsShrapnel@SMALL:
 		Weapons: SmallWood1, SmallWood2, SmallWood3, SmallStone1, SmallStone2
 		Pieces: 2, 4
 		Range: 0c512, 3c0
@@ -1114,13 +1114,13 @@
 			Rough: 80
 			Road: 100
 			Tiberium: 60
-                PathingCost: 350
+				PathingCost: 350
 			BlueTiberium: 60
-                PathingCost: 350
-            Crops: 75
-                PathingCost: 300
+				PathingCost: 350
+			Crops: 75
+				PathingCost: 300
 			Wood: 75
-                PathingCost: 300
+				PathingCost: 300
 			Loot: 75
 			Beach: 80
 	SelectionDecorations:
@@ -1130,15 +1130,15 @@
 	QuantizeFacingsFromSequence:
 		Sequence: stand
 	WithInfantryBody:
-    ExternalCondition@ROTTEN:
-        Condition: RottenKadaver
-    ExternalCondition@DDler:
-        Condition: DDler
-    ExternalCondition@ROYAL:
-        Condition: KingIsNear
-    ExternalCondition@HOSPITAL:
-        Condition: hospitalheal
-    SelfHealing@HOSPITAL:
+	ExternalCondition@ROTTEN:
+		Condition: RottenKadaver
+	ExternalCondition@DDler:
+		Condition: DDler
+	ExternalCondition@ROYAL:
+		Condition: KingIsNear
+	ExternalCondition@HOSPITAL:
+		Condition: hospitalheal
+	SelfHealing@HOSPITAL:
 		Step: 400
 		Delay: 35
 		HealIfBelow: 100
@@ -1164,46 +1164,46 @@
 	DeathSounds@POISONED:
 		Voice: Poisoned
 		DeathTypes: PoisonDeath
-    DeathSounds@BURNED:
+	DeathSounds@BURNED:
 		Voice: Burned
 		DeathTypes: BurnToDeath
-    WithDecoration@Crown:
+	WithDecoration@Crown:
 		Image: pips
 		Sequence: pip-crown
 		ReferencePoint: Top, Left
 		RequiresCondition: KingIsNear
-    DamageMultiplier@Crown:
-        RequiresCondition: KingIsNear
-        Modifier: 120
-    FirepowerMultiplier@Crown:
-        RequiresCondition: KingIsNear
-        Modifier: 120
-    ReloadDelayMultiplier:
-        RequiresCondition: KingIsNear
-        Modifier: 120
-    ExternalCondition@TORNADO:
-        Condition: Tornadodeath
-    SelfHealing@TORNADO:
-        Step: -6500
-        HealIfBelow: 110
-        Delay: 25
-        RequiresCondition: Tornadodeath
-        DamageTypes: DefaultDeath
-        
+	DamageMultiplier@Crown:
+		RequiresCondition: KingIsNear
+		Modifier: 120
+	FirepowerMultiplier@Crown:
+		RequiresCondition: KingIsNear
+		Modifier: 120
+	ReloadDelayMultiplier:
+		RequiresCondition: KingIsNear
+		Modifier: 120
+	ExternalCondition@TORNADO:
+		Condition: Tornadodeath
+	SelfHealing@TORNADO:
+		Step: -6500
+		HealIfBelow: 110
+		Delay: 25
+		RequiresCondition: Tornadodeath
+		DamageTypes: DefaultDeath
+		
 ^Knight:  
 	Inherits: ^MedievalInfantry
-    Inherits@2: ^GainsExperience
-    WithDeathAnimation:
-        DeathSequencePalette: raplayer
-        DeathTypes:
+	Inherits@2: ^GainsExperience
+	WithDeathAnimation:
+		DeathSequencePalette: raplayer
+		DeathTypes:
 			DefaultDeath: 1
 			RippedApartDeath: 2
 			PoisonDeath: 3
 			BallistaDeath: 4
-            BurnToDeath: 5
-            SkeletonDeath: 5
+			BurnToDeath: 5
+			SkeletonDeath: 5
 		CrushedSequence: die-crushed
-    Targetable:
+	Targetable:
 		TargetTypes: Ground, Infantry
 	MustBeDestroyed:
 	Tooltip:
@@ -1214,26 +1214,26 @@
 	WithInfantryBody:
 		IdleSequences: idle1, idle2
 		StandSequences: stand
-    Power:
+	Power:
 		Amount: -1
-    Passenger:
+	Passenger:
 		CargoType: Infantry
-        GrantUpgrades: batteringupgrade
-    SelfHealing@Rotaway:
-        PercentageStep: -2
-        Step: -0
-        HealIfBelow: 110
-        Delay: 10
-        RequiresCondition: RottenKadaver
-        DamageTypes: PoisonDeath
-    SelfHealing@DDler:
-        PercentageStep: -2
-        Step: -0
-        HealIfBelow: 110
-        Delay: 10
-        RequiresCondition: DDler
-        DamageTypes: PoisonDeath
-    SelfHealing@HOSPITAL:
+		GrantUpgrades: batteringupgrade
+	SelfHealing@Rotaway:
+		PercentageStep: -2
+		Step: -0
+		HealIfBelow: 110
+		Delay: 10
+		RequiresCondition: RottenKadaver
+		DamageTypes: PoisonDeath
+	SelfHealing@DDler:
+		PercentageStep: -2
+		Step: -0
+		HealIfBelow: 110
+		Delay: 10
+		RequiresCondition: DDler
+		DamageTypes: PoisonDeath
+	SelfHealing@HOSPITAL:
 		PercentageStep: 1
 		Delay: 25
 		HealIfBelow: 100
@@ -1244,59 +1244,59 @@
 		Sequence: pip-heal
 		ReferencePoint: Bottom, Right
 		RequiresCondition: hospitalheal || hospitalhealbarr
-    Voiced:
+	Voiced:
 		VoiceSet: GenericVoice
-    ExternalCondition@BARRACKS:
-        Condition: hospitalhealbarr
-    Explodes@Tib:
+	ExternalCondition@BARRACKS:
+		Condition: hospitalhealbarr
+	Explodes@Tib:
 		Weapon: LeaveStuff
-        EmptyWeapon: LeaveStuff
-        Chance: 25
-    SpawnActorOnDeath@SCELET:
-        DeathType: SkeletonDeath
-        Probability: 66
-        Actor: SULM1SKELET
-        OwnerType: Killer
-    ExternalCondition@SNAKES:
-        Condition: snaketrap
-    SelfHealing@SNAKES:
-        Step: -1000
-        HealIfBelow: 110
-        Delay: 25
-        RequiresCondition: snaketrap
-        DamageTypes: PoisonDeath
-    SpeedMultiplier@SNAKES:
-        Modifier: 0
-        RequiresCondition: snaketrap
-    WithIdleOverlay@SNAKES:
-        Sequence: stunned
-        RequiresCondition: snaketrap
-    RangeMultiplier:
-        Modifier: 0
-        RequiresCondition: snaketrap
-        
+		EmptyWeapon: LeaveStuff
+		Chance: 25
+	SpawnActorOnDeath@SCELET:
+		DeathType: SkeletonDeath
+		Probability: 66
+		Actor: SULM1SKELET
+		OwnerType: Killer
+	ExternalCondition@SNAKES:
+		Condition: snaketrap
+	SelfHealing@SNAKES:
+		Step: -1000
+		HealIfBelow: 110
+		Delay: 25
+		RequiresCondition: snaketrap
+		DamageTypes: PoisonDeath
+	SpeedMultiplier@SNAKES:
+		Modifier: 0
+		RequiresCondition: snaketrap
+	WithIdleOverlay@SNAKES:
+		Sequence: stunned
+		RequiresCondition: snaketrap
+	RangeMultiplier:
+		Modifier: 0
+		RequiresCondition: snaketrap
+		
 ^Cavalry:
 	Inherits: ^MedievalInfantry
-    Inherits@2: ^GainsExperience
-    Voiced:
+	Inherits@2: ^GainsExperience
+	Voiced:
 		VoiceSet: GenericHorseVoice
-    Targetable:
+	Targetable:
 		TargetTypes: Ground, Cavalry
-    WithDeathAnimation:
-        DeathSequencePalette: raplayer
-        DeathTypes:
+	WithDeathAnimation:
+		DeathSequencePalette: raplayer
+		DeathTypes:
 			DefaultDeath: 1
 			RippedApartDeath: 1
 			PoisonDeath: 1
 			BallistaDeath: 1
-            BurnToDeath: 2
+			BurnToDeath: 2
 	MustBeDestroyed:
 	Health:
-        Shape: Capsule
-            Radius: 226
-            PointA: 0, -312
-            PointB: 0, 312
-    Tooltip:
+		Shape: Capsule
+			Radius: 226
+			PointA: 0, -312
+			PointB: 0, 312
+	Tooltip:
 		GenericName: Cavalry
 	Guard:
 	AutoTarget:
@@ -1304,63 +1304,63 @@
 	WithInfantryBody:
 		IdleSequences: idle1, idle2
 		StandSequences: stand
-    Power:
+	Power:
 		Amount: -2
-    -Crushable:
-    SelfHealing@Rotaway:
-        PercentageStep: -2
-        Step: -0
-        HealIfBelow: 110
-        Delay: 10
-        RequiresCondition: RottenKadaver
-        DamageTypes: PoisonDeath
-    SelfHealing@DDler:
-        PercentageStep: -2
-        Step: -0
-        HealIfBelow: 110
-        Delay: 10
-        RequiresCondition: DDler
-        DamageTypes: PoisonDeath
-    Selectable:
+	-Crushable:
+	SelfHealing@Rotaway:
+		PercentageStep: -2
+		Step: -0
+		HealIfBelow: 110
+		Delay: 10
+		RequiresCondition: RottenKadaver
+		DamageTypes: PoisonDeath
+	SelfHealing@DDler:
+		PercentageStep: -2
+		Step: -0
+		HealIfBelow: 110
+		Delay: 10
+		RequiresCondition: DDler
+		DamageTypes: PoisonDeath
+	Selectable:
 		Bounds: 26,34,0,-6
-    SelectionDecorations:
+	SelectionDecorations:
 		VisualBounds: 26,34,0,-6
-    SpawnActorOnDeath@1:
-        DeathType: DefaultDeath
-        Probability: 10
-        Actor: emptyross
+	SpawnActorOnDeath@1:
+		DeathType: DefaultDeath
+		Probability: 10
+		Actor: emptyross
 		OwnerType: InternalName
 		InternalOwner: Neutral
-    SpawnActorOnDeath@2:
-        DeathType: RippedApartDeath
-        Probability: 10
-        Actor: emptyross
+	SpawnActorOnDeath@2:
+		DeathType: RippedApartDeath
+		Probability: 10
+		Actor: emptyross
 		OwnerType: InternalName
 		InternalOwner: Neutral
-    SpawnActorOnDeath@3:
-        DeathType: PoisonDeath
-        Probability: 10
-        Actor: emptyross
+	SpawnActorOnDeath@3:
+		DeathType: PoisonDeath
+		Probability: 10
+		Actor: emptyross
 		OwnerType: InternalName
 		InternalOwner: Neutral
-    SpawnActorOnDeath@4:
-        DeathType: BallistaDeath
-        Probability: 33
-        Actor: emptyross
+	SpawnActorOnDeath@4:
+		DeathType: BallistaDeath
+		Probability: 33
+		Actor: emptyross
 		OwnerType: InternalName
 		InternalOwner: Neutral
-    SpawnActorOnDeath@5:
-        DeathType: BurnToDeath
-        Probability: 100
-        Actor: burninghorse
+	SpawnActorOnDeath@5:
+		DeathType: BurnToDeath
+		Probability: 100
+		Actor: burninghorse
 		OwnerType: InternalName
 		InternalOwner: Neutral
-    DeathSounds@NORMAL:
+	DeathSounds@NORMAL:
 		DeathTypes: DefaultDeath, RippedApartDeath, BallistaDeath, PoisonDeath, BurnToDeath
 	-DeathSounds@HEAVY:
 	-DeathSounds@POISONED:
-    -DeathSounds@BURNED:
-    SelfHealing@HOSPITAL:
+	-DeathSounds@BURNED:
+	SelfHealing@HOSPITAL:
 		PercentageStep: 1
 		Delay: 25
 		HealIfBelow: 100
@@ -1371,53 +1371,53 @@
 		Sequence: pip-heal
 		ReferencePoint: Bottom, Right
 		RequiresCondition: hospitalheal || hospitalhealbarr
-    ExternalCondition@BARRACKS:
-        Condition: hospitalhealbarr
-    Explodes@Tib:
+	ExternalCondition@BARRACKS:
+		Condition: hospitalhealbarr
+	Explodes@Tib:
 		Weapon: LeaveStuff
-        EmptyWeapon: LeaveStuff
-        Chance: 25
-    ExternalCondition@SNAKES:
-        Condition: snaketrap
-    SelfHealing@SNAKES:
-        PercentageStep: -8
-        Step: -0
-        HealIfBelow: 110
-        Delay: 25
-        RequiresCondition: snaketrap >= 1
-        DamageTypes: PoisonDeath
-    SelfHealing@SNAKES2:
-        PercentageStep: -8
-        Step: -0
-        HealIfBelow: 110
-        Delay: 25
-        RequiresCondition: snaketrap >= 2
-        DamageTypes: PoisonDeath
-    SelfHealing@SNAKES3:
-        PercentageStep: -8
-        Step: -0
-        HealIfBelow: 110
-        Delay: 25
-        RequiresCondition: snaketrap >= 3
-        DamageTypes: PoisonDeath
-    SelfHealing@SNAKES4:
-        PercentageStep: -8
-        Step: -0
-        HealIfBelow: 110
-        Delay: 25
-        RequiresCondition: snaketrap >= 4
-        DamageTypes: PoisonDeath
-    SpeedMultiplier@SNAKES:
-        Modifier: 40
-        RequiresCondition: snaketrap
-       
+		EmptyWeapon: LeaveStuff
+		Chance: 25
+	ExternalCondition@SNAKES:
+		Condition: snaketrap
+	SelfHealing@SNAKES:
+		PercentageStep: -8
+		Step: -0
+		HealIfBelow: 110
+		Delay: 25
+		RequiresCondition: snaketrap >= 1
+		DamageTypes: PoisonDeath
+	SelfHealing@SNAKES2:
+		PercentageStep: -8
+		Step: -0
+		HealIfBelow: 110
+		Delay: 25
+		RequiresCondition: snaketrap >= 2
+		DamageTypes: PoisonDeath
+	SelfHealing@SNAKES3:
+		PercentageStep: -8
+		Step: -0
+		HealIfBelow: 110
+		Delay: 25
+		RequiresCondition: snaketrap >= 3
+		DamageTypes: PoisonDeath
+	SelfHealing@SNAKES4:
+		PercentageStep: -8
+		Step: -0
+		HealIfBelow: 110
+		Delay: 25
+		RequiresCondition: snaketrap >= 4
+		DamageTypes: PoisonDeath
+	SpeedMultiplier@SNAKES:
+		Modifier: 40
+		RequiresCondition: snaketrap
+	   
 ^Siege:
 	Inherits: ^MedievalInfantry
-    Mobile:
+	Mobile:
 		SharesCell: false
-    Targetable:
+	Targetable:
 		TargetTypes: Ground, Siege
-    MustBeDestroyed:
+	MustBeDestroyed:
 	Tooltip:
 		GenericName: Cavalry
 	Guard:
@@ -1426,44 +1426,44 @@
 	WithInfantryBody:
 		IdleSequences: stand
 		StandSequences: stand
-    Power:
+	Power:
 		Amount: -4
-    -Crushable:
-    SelfHealing@Rotaway:
-        PercentageStep: -2
-        Step: -0
-        Delay: 10
-        HealIfBelow: 110
-        RequiresCondition: RottenKadaver
-        DamageTypes: DefaultDeath
-    SelfHealing@DDler:
-        PercentageStep: -2
-        Step: -0
-        Delay: 10
-        HealIfBelow: 110
-        RequiresCondition: DDler
-        DamageTypes: PoisonDeath
-    Selectable:
+	-Crushable:
+	SelfHealing@Rotaway:
+		PercentageStep: -2
+		Step: -0
+		Delay: 10
+		HealIfBelow: 110
+		RequiresCondition: RottenKadaver
+		DamageTypes: DefaultDeath
+	SelfHealing@DDler:
+		PercentageStep: -2
+		Step: -0
+		Delay: 10
+		HealIfBelow: 110
+		RequiresCondition: DDler
+		DamageTypes: PoisonDeath
+	Selectable:
 		Bounds: 35,35,0,-6 
-    Voiced:
+	Voiced:
 		VoiceSet: SiegeVoice
-    ThrowsShrapnel@SMALL:
+	ThrowsShrapnel@SMALL:
 		Weapons: SmallWood1, SmallWood2, SmallWood3
 		Pieces: 0, 2
 		Range: 0c512, 3c0
-    Explodes@Tib:
+	Explodes@Tib:
 		Weapon: LeaveStuff
-        EmptyWeapon: LeaveStuff
-        Chance: 25
-    ExternalCondition@SNAKES:
-        Condition: snaketrap
-    SelfHealing@SNAKES:
-        Step: -500
-        HealIfBelow: 110
-        Delay: 25
-        RequiresCondition: snaketrap
-        DamageTypes: PoisonDeath
-        
+		EmptyWeapon: LeaveStuff
+		Chance: 25
+	ExternalCondition@SNAKES:
+		Condition: snaketrap
+	SelfHealing@SNAKES:
+		Step: -500
+		HealIfBelow: 110
+		Delay: 25
+		RequiresCondition: snaketrap
+		DamageTypes: PoisonDeath
+		
 ^MWCiv:
 	Inherits: ^Infantry
 	Valued:
@@ -1484,270 +1484,270 @@
 	Crushable:
 		CrushSound: squish2.aud
 	WithDeathAnimation:
-        DeathTypes:
+		DeathTypes:
 			DefaultDeath: 1
 			RippedApartDeath: 2
 			PoisonDeath: 3
 			BallistaDeath: 4
-            BurnToDeath: 5
+			BurnToDeath: 5
 		CrushedSequence: die-crushed
-        DeathSequencePalette: raplayer
-    Voiced:
+		DeathSequencePalette: raplayer
+	Voiced:
 		VoiceSet: CivilianMaleVoice
 	Wanders:
 		MinMoveDelay: 150
 		MaxMoveDelay: 750
-    WithInfantryBody:
+	WithInfantryBody:
 		StandSequences: stand
-    ConditionManager:
-    ExternalCondition@TORNADO:
-        Condition: Tornadodeath
-    SelfHealing@TORNADO:
-        Step: -6500
-        HealIfBelow: 110
-        Delay: 25
-        RequiresCondition: Tornadodeath
-        DamageTypes: DefaultDeath
-    ExternalCondition@SNAKES:
-        Condition: snaketrap
-    SelfHealing@SNAKES:
-        PercentageStep: -10
-        Step: -0
-        HealIfBelow: 110
-        Delay: 25
-        RequiresCondition: snaketrap
-        DamageTypes: PoisonDeath
-    SpeedMultiplier@SNAKES:
-        Modifier: 0
-        RequiresCondition: snaketrap
-    WithIdleOverlay@SNAKES:
-        Sequence: stunned
-        RequiresCondition: snaketrap
+	ConditionManager:
+	ExternalCondition@TORNADO:
+		Condition: Tornadodeath
+	SelfHealing@TORNADO:
+		Step: -6500
+		HealIfBelow: 110
+		Delay: 25
+		RequiresCondition: Tornadodeath
+		DamageTypes: DefaultDeath
+	ExternalCondition@SNAKES:
+		Condition: snaketrap
+	SelfHealing@SNAKES:
+		PercentageStep: -10
+		Step: -0
+		HealIfBelow: 110
+		Delay: 25
+		RequiresCondition: snaketrap
+		DamageTypes: PoisonDeath
+	SpeedMultiplier@SNAKES:
+		Modifier: 0
+		RequiresCondition: snaketrap
+	WithIdleOverlay@SNAKES:
+		Sequence: stunned
+		RequiresCondition: snaketrap
  
 ^MWAnimal:
 	Inherits: ^MedievalInfantry
 	SelfHealing@Rotaway:
-        PercentageStep: -2
-        Step: -0
-        HealIfBelow: 110
-        Delay: 10
-        RequiresCondition: RottenKadaver
-        DamageTypes: PoisonDeath
-    SelfHealing@HOSPITAL:
+		PercentageStep: -2
+		Step: -0
+		HealIfBelow: 110
+		Delay: 10
+		RequiresCondition: RottenKadaver
+		DamageTypes: PoisonDeath
+	SelfHealing@HOSPITAL:
 		PercentageStep: 1
 		Delay: 25
 		HealIfBelow: 100
 		DamageCooldown: 125
 		RequiresCondition: hospitalheal || hospitalhealbarr
-    Valued:
+	Valued:
 		Cost: 50
 	Tooltip:
 		Name: Animal
 		GenericVisibility: None
 	ScaredyCat:
-    Mobile:
+	Mobile:
 		Speed: 56
 	Health:
 		HP: 2500
 	RevealsShroud:
 		Range: 1c0
-    -Selectable:
-    Targetable:
-        TargetTypes: Ground, Infantry
+	-Selectable:
+	Targetable:
+		TargetTypes: Ground, Infantry
 	Crushable:
 		CrushSound: squish2.aud
 	WithDeathAnimation:
-        DeathTypes:
+		DeathTypes:
 			DefaultDeath: 1
 			RippedApartDeath: 1
 			PoisonDeath: 1
 			BallistaDeath: 1
-            BurnToDeath: 1
+			BurnToDeath: 1
 		CrushedSequence: die1
-        DeathSequencePalette: raplayer
+		DeathSequencePalette: raplayer
 	Wanders:
-        WanderMoveRadius: 2
-        ReduceMoveRadiusDelay: 5
+		WanderMoveRadius: 2
+		ReduceMoveRadiusDelay: 5
 		MinMoveDelay: 150
 		MaxMoveDelay: 750
-        RequiresCondition: Wander
-    WithInfantryBody:
-        MaxIdleDelay: 60
+		RequiresCondition: Wander
+	WithInfantryBody:
+		MaxIdleDelay: 60
 		StandSequences: stand
-    ExternalCondition@Wander:
-        Condition: Wander
+	ExternalCondition@Wander:
+		Condition: Wander
  
 ^MWWanderer:
 	Inherits: ^MedievalInfantry
 	SelfHealing@Rotaway:
-        PercentageStep: -2
-        Step: -0
-        HealIfBelow: 110
-        Delay: 10
-        RequiresCondition: RottenKadaver
-        DamageTypes: PoisonDeath
-    SelfHealing@HOSPITAL:
+		PercentageStep: -2
+		Step: -0
+		HealIfBelow: 110
+		Delay: 10
+		RequiresCondition: RottenKadaver
+		DamageTypes: PoisonDeath
+	SelfHealing@HOSPITAL:
 		PercentageStep: 1
 		Delay: 25
 		HealIfBelow: 100
 		DamageCooldown: 125
 		RequiresCondition: hospitalheal || hospitalhealbarr
-    Voiced:
+	Voiced:
 		VoiceSet: CivilianNew
-    Valued:
+	Valued:
 		Cost: 200
 	Tooltip:
 		Name: Peasant
 		GenericVisibility: None
-        ShowOwnerRow: false
+		ShowOwnerRow: false
 	Mobile:
 		Speed: 56
 	Health:
 		HP: 7000
 	RevealsShroud:
 		Range: 2c0
-    -Selectable:
-    Targetable:
-        TargetTypes: Ground, Infantry
+	-Selectable:
+	Targetable:
+		TargetTypes: Ground, Infantry
 	Crushable:
 		CrushSound: squish2.aud
 	WithDeathAnimation:
-        DeathTypes:
+		DeathTypes:
 			DefaultDeath: 1
 			RippedApartDeath: 2
 			PoisonDeath: 3
 			BallistaDeath: 4
-            BurnToDeath: 5
-            SkeletonDeath: 5
+			BurnToDeath: 5
+			SkeletonDeath: 5
 		CrushedSequence: die-crushed
-        DeathSequencePalette: raplayer
+		DeathSequencePalette: raplayer
 	Wanders:
-        WanderMoveRadius: 2
-        ReduceMoveRadiusDelay: 5
+		WanderMoveRadius: 2
+		ReduceMoveRadiusDelay: 5
 		MinMoveDelay: 150
 		MaxMoveDelay: 750
-        RequiresCondition: Wander
-    AttackWander: 
-        WanderMoveRadius: 1
-        ReduceMoveRadiusDelay: 5
+		RequiresCondition: Wander
+	AttackWander: 
+		WanderMoveRadius: 1
+		ReduceMoveRadiusDelay: 5
 		MinMoveDelay: 0
 		MaxMoveDelay: 25
-        RequiresCondition: !Wander
-    WithInfantryBody:
+		RequiresCondition: !Wander
+	WithInfantryBody:
 		StandSequences: stand
-    AutoTarget:
+	AutoTarget:
 		ScanRadius: 20
-        InitialStance: AttackAnything
-        RequiresCondition: !Wander
-    AttackFrontal:
-        RequiresCondition: !Wander
-    AttackMove:
-        RequiresCondition: !Wander
-    ExternalCondition@Wander:
-        Condition: Wander
-    Armament:
+		InitialStance: AttackAnything
+		RequiresCondition: !Wander
+	AttackFrontal:
+		RequiresCondition: !Wander
+	AttackMove:
+		RequiresCondition: !Wander
+	ExternalCondition@Wander:
+		Condition: Wander
+	Armament:
 		Weapon: WanderAttack
 		TargetStances: Ally
-        RequiresCondition: !Wander
-    ExternalCondition@Tax:
-        Condition: Tax
-    CashTrickler@PayTax:
-        Interval: 25
-        Amount: 2
-        RequiresCondition: Tax
-    SpawnActorOnDeath@SCELET:
-        DeathType: SkeletonDeath
-        Probability: 80
-        Actor: SULM1SKELET
-        OwnerType: Killer
-    ExternalCondition@SNAKES:
-        Condition: snaketrap
-    SelfHealing@SNAKES:
-        PercentageStep: -10
-        Step: -0
-        HealIfBelow: 110
-        Delay: 25
-        RequiresCondition: snaketrap
-        DamageTypes: PoisonDeath
-    SpeedMultiplier@SNAKES:
-        Modifier: 0
-        RequiresCondition: snaketrap
-    WithIdleOverlay@SNAKES:
-        Sequence: stunned
-        RequiresCondition: snaketrap
-        
+		RequiresCondition: !Wander
+	ExternalCondition@Tax:
+		Condition: Tax
+	CashTrickler@PayTax:
+		Interval: 25
+		Amount: 2
+		RequiresCondition: Tax
+	SpawnActorOnDeath@SCELET:
+		DeathType: SkeletonDeath
+		Probability: 80
+		Actor: SULM1SKELET
+		OwnerType: Killer
+	ExternalCondition@SNAKES:
+		Condition: snaketrap
+	SelfHealing@SNAKES:
+		PercentageStep: -10
+		Step: -0
+		HealIfBelow: 110
+		Delay: 25
+		RequiresCondition: snaketrap
+		DamageTypes: PoisonDeath
+	SpeedMultiplier@SNAKES:
+		Modifier: 0
+		RequiresCondition: snaketrap
+	WithIdleOverlay@SNAKES:
+		Sequence: stunned
+		RequiresCondition: snaketrap
+		
 ^MWTalker:
 	Inherits: ^MWWanderer
-    Targetable@TALKBACK:
-        TargetTypes: Talkbacks
-        RequiresCondition: Wander
-    Targetable@TALKABLE:
-        TargetTypes: Talkable
-        RequiresCondition: Wander && !Talking
-    ExternalCondition@Talker:
-        Condition: Talking
-    ExternalCondition@Backtalker:
-        Condition: Talkback
-    AttackFrontal:
-        RequiresCondition: !Wander || Talking || Talkback
-        AttackRequiresEnteringCell: True
-    AttackMove:
-        RequiresCondition: !Wander || Talking || Talkback
-    AutoTarget:
+	Targetable@TALKBACK:
+		TargetTypes: Talkbacks
+		RequiresCondition: Wander
+	Targetable@TALKABLE:
+		TargetTypes: Talkable
+		RequiresCondition: Wander && !Talking
+	ExternalCondition@Talker:
+		Condition: Talking
+	ExternalCondition@Backtalker:
+		Condition: Talkback
+	AttackFrontal:
+		RequiresCondition: !Wander || Talking || Talkback
+		AttackRequiresEnteringCell: True
+	AttackMove:
+		RequiresCondition: !Wander || Talking || Talkback
+	AutoTarget:
 		ScanRadius: 20
-        InitialStance: AttackAnything
-        RequiresCondition: !Wander || Talking || Talkback
-    Armament@Talking:
+		InitialStance: AttackAnything
+		RequiresCondition: !Wander || Talking || Talkback
+	Armament@Talking:
 		Weapon: WanderTalk
 		TargetStances: Ally
-        RequiresCondition: Talking && Wander
-    Armament@Talkback:
+		RequiresCondition: Talking && Wander
+	Armament@Talkback:
 		Weapon: WanderTalkback
 		TargetStances: Ally
-        RequiresCondition: Talkback && Wander
-    Wanders:
-        WanderMoveRadius: 2
-        ReduceMoveRadiusDelay: 5
+		RequiresCondition: Talkback && Wander
+	Wanders:
+		WanderMoveRadius: 2
+		ReduceMoveRadiusDelay: 5
 		MinMoveDelay: 150
 		MaxMoveDelay: 750
-        RequiresCondition: Wander && !Talking && !Talkback
-    AttackWander@Talking: 
-        WanderMoveRadius: 2
-        ReduceMoveRadiusDelay: 5
+		RequiresCondition: Wander && !Talking && !Talkback
+	AttackWander@Talking: 
+		WanderMoveRadius: 2
+		ReduceMoveRadiusDelay: 5
 		MinMoveDelay: 150
 		MaxMoveDelay: 750
-        RequiresCondition: Wander && (Talking || Talkback)
-    ExternalCondition@SNAKES:
-        Condition: snaketrap
-    SelfHealing@SNAKES:
-        PercentageStep: -10
-        Step: -0
-        HealIfBelow: 110
-        Delay: 25
-        RequiresCondition: snaketrap
-        DamageTypes: PoisonDeath
-    SpeedMultiplier@SNAKES:
-        Modifier: 0
-        RequiresCondition: snaketrap
-    WithIdleOverlay@SNAKES:
-        Sequence: stunned
-        RequiresCondition: snaketrap
-        
+		RequiresCondition: Wander && (Talking || Talkback)
+	ExternalCondition@SNAKES:
+		Condition: snaketrap
+	SelfHealing@SNAKES:
+		PercentageStep: -10
+		Step: -0
+		HealIfBelow: 110
+		Delay: 25
+		RequiresCondition: snaketrap
+		DamageTypes: PoisonDeath
+	SpeedMultiplier@SNAKES:
+		Modifier: 0
+		RequiresCondition: snaketrap
+	WithIdleOverlay@SNAKES:
+		Sequence: stunned
+		RequiresCondition: snaketrap
+		
 ^MWConstructor:
 	Inherits: ^MedievalInfantry
 	Valued:
 		Cost: 120
-    RenderSprites:
-        PlayerPalette: 
-        Palette: mwcivilian
-    Tooltip:
+	RenderSprites:
+		PlayerPalette: 
+		Palette: mwcivilian
+	Tooltip:
 		Name: Labourer
 		GenericVisibility: None
-        ShowOwnerRow: false
+		ShowOwnerRow: false
 	-Selectable:
-    Targetable:
-        TargetTypes: Ground, Infantry
-    Mobile:
+	Targetable:
+		TargetTypes: Ground, Infantry
+	Mobile:
 		Speed: 46
 	Health:
 		HP: 5000
@@ -1756,36 +1756,36 @@
 	Crushable:
 		CrushSound: squish2.aud
 	WithDeathAnimation:
-        DeathTypes:
+		DeathTypes:
 			DefaultDeath: 1
 			RippedApartDeath: 2
 			PoisonDeath: 3
 			BallistaDeath: 4
-            BurnToDeath: 5
+			BurnToDeath: 5
 		CrushedSequence: die-crushed
-        DeathSequencePalette: raplayer
-    Voiced:
+		DeathSequencePalette: raplayer
+	Voiced:
 		VoiceSet: CivilianMaleVoice
-    WithInfantryBody:
+	WithInfantryBody:
 		StandSequences: stand
-    ExternalCondition@SNAKES:
-        Condition: snaketrap
-    SelfHealing@SNAKES:
-        Step: -1000
-        HealIfBelow: 110
-        Delay: 25
-        RequiresCondition: snaketrap
-        DamageTypes: PoisonDeath
-    SpeedMultiplier@SNAKES:
-        Modifier: 0
-        RequiresCondition: snaketrap
-    WithIdleOverlay@SNAKES:
-        Sequence: stunned
-        RequiresCondition: snaketrap
+	ExternalCondition@SNAKES:
+		Condition: snaketrap
+	SelfHealing@SNAKES:
+		Step: -1000
+		HealIfBelow: 110
+		Delay: 25
+		RequiresCondition: snaketrap
+		DamageTypes: PoisonDeath
+	SpeedMultiplier@SNAKES:
+		Modifier: 0
+		RequiresCondition: snaketrap
+	WithIdleOverlay@SNAKES:
+		Sequence: stunned
+		RequiresCondition: snaketrap
 
 
 ^Props:
-    Inherits@1: ^ExistsInWorld
+	Inherits@1: ^ExistsInWorld
 	Inherits@2: ^SpriteActor
 	RevealsShroud:
 		Range: 3c0
@@ -1795,39 +1795,39 @@
 	Building:
 		Dimensions: 2,2
 		Footprint: __ __
-    WithSpriteBody:
+	WithSpriteBody:
 	FrozenUnderFog:
 	BodyOrientation:
 		QuantizedFacings: 1
 	AutoSelectionSize:
-    Health:
+	Health:
 		HP: 6000
-    Targetable:
-        TargetTypes: Ground, Prop
-    WithMakeAnimation:
-    ThrowsShrapnel@SMALL:
+	Targetable:
+		TargetTypes: Ground, Prop
+	WithMakeAnimation:
+	ThrowsShrapnel@SMALL:
 		Weapons: SmallWood1, SmallWood2, SmallWood3
 		Pieces: 0, 2
 		Range: 0c512, 3c0
-    Transforms:
+	Transforms:
 		IntoActor: mwconst1back
 		Offset: 0,0
 		Facing: 76
-    ExternalCondition@TORNADO:
-        Condition: Tornadodeath
-    SelfHealing@TORNADO:
-        Step: -6500
-        HealIfBelow: 110
-        Delay: 25
-        RequiresCondition: Tornadodeath
-        DamageTypes: DefaultDeath
-        
-        
+	ExternalCondition@TORNADO:
+		Condition: Tornadodeath
+	SelfHealing@TORNADO:
+		Step: -6500
+		HealIfBelow: 110
+		Delay: 25
+		RequiresCondition: Tornadodeath
+		DamageTypes: DefaultDeath
+		
+		
 ^GrowableTree:
 	Inherits@1: ^SpriteActor
 	EditorTilesetFilter:
 		RequireTilesets: TEMPERAT
-    Tooltip:
+	Tooltip:
 		Name: Tree
 		ShowOwnerRow: false
 	RenderSprites:
@@ -1847,13 +1847,13 @@
 		TargetTypes: Trees
 	HiddenUnderShroud:
 	ScriptTriggers:
-    
+	
 ^Lv5GrowableTree:
 	Inherits@1: ^SpriteActor
-    ConditionManager:
+	ConditionManager:
 	EditorTilesetFilter:
 		RequireTilesets: TEMPERAT
-    Tooltip:
+	Tooltip:
 		Name: Tree
 		ShowOwnerRow: false
 	WithSpriteBody:
@@ -1871,26 +1871,26 @@
 		TargetTypes: Trees
 	HiddenUnderShroud:
 	ScriptTriggers:
-    RenderSprites:
+	RenderSprites:
 		Palette: staticterrain
-    GrantConditionOnDamageState@1:
-        Condition: Heavy
-        ValidDamageStates: Heavy
-        GrantPermanently: true
-    GrantConditionOnDamageState@2:
-        Condition: Critical
-        ValidDamageStates: Critical
-        GrantPermanently: true
-    WithIdleOverlay@Lv0:
-        Sequence: tree
-        RequiresCondition: !Heavy && !Critical
-    WithIdleOverlay@Lv1:
-        Sequence: treedown
-        RequiresCondition: Heavy && !Critical
-    WithIdleOverlay@Lv3:
-        Sequence: treehalf
-        RequiresCondition: Heavy && Critical
-    SoundOnDamageTransition:
+	GrantConditionOnDamageState@1:
+		Condition: Heavy
+		ValidDamageStates: Heavy
+		GrantPermanently: true
+	GrantConditionOnDamageState@2:
+		Condition: Critical
+		ValidDamageStates: Critical
+		GrantPermanently: true
+	WithIdleOverlay@Lv0:
+		Sequence: tree
+		RequiresCondition: !Heavy && !Critical
+	WithIdleOverlay@Lv1:
+		Sequence: treedown
+		RequiresCondition: Heavy && !Critical
+	WithIdleOverlay@Lv3:
+		Sequence: treehalf
+		RequiresCondition: Heavy && Critical
+	SoundOnDamageTransition:
 		DamagedSounds: treefell.wav
-        
+		
    

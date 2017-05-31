@@ -2,10 +2,10 @@ General:
 	Name: Temperate
 	Id: TEMPERAT
 	Palette: temperat.pal
-    Palette@2: temperatRA.pal
+	Palette@2: temperatRA.pal
 	EditorTemplateOrder: Terrain, Debris, Road, Cliffs, Water Cliffs, Beach, RA1 Beach, River, Bridge
 	HeightDebugColors: AA0000
-    SheetSize: 1024
+	SheetSize: 1024
    
 
 Terrain:
@@ -49,19 +49,19 @@ Terrain:
 		AcceptsSmudgeType: Crater, Scorch
 		Color: D67A48
 		RestrictPlayerColor: true
-    TerrainType@CROPS:
+	TerrainType@CROPS:
 		Type: Crops
 		TargetTypes: Ground
 		AcceptsSmudgeType: Crater, Scorch
 		Color: 55C785
 		RestrictPlayerColor: true
-    TerrainType@WOOD:
+	TerrainType@WOOD:
 		Type: Wood
 		TargetTypes: Ground
 		AcceptsSmudgeType: Crater, Scorch
 		Color: A18739
 		RestrictPlayerColor: true
-    TerrainType@LOOT:
+	TerrainType@LOOT:
 		Type: Loot
 		TargetTypes: Ground
 		AcceptsSmudgeType: Crater, Scorch
@@ -82,7 +82,7 @@ Terrain:
 		IsWater: True
 		Color: 5C74A4
 		RestrictPlayerColor: true
-    TerrainType@Palace:
+	TerrainType@Palace:
 		Type: Palace
 		TargetTypes: Ground
 		AcceptsSmudgeType: Crater, Scorch
@@ -1815,7 +1815,7 @@ Templates:
 		Images: rash01.tem
 		Size: 4,5
 		Category: RA1 Beach
-        Palette: raterrain
+		Palette: raterrain
 		Tiles:
 			3: Rock
 			5: Clear
@@ -1833,7 +1833,7 @@ Templates:
 		Images: rash02.tem
 		Size: 5,5
 		Category: RA1 Beach
-        Palette: raterrain
+		Palette: raterrain
 		Tiles:
 			4: Clear
 			8: Beach
@@ -1853,7 +1853,7 @@ Templates:
 	Template@205:
 		Id: 205
 		Images: rash03.tem
-        Palette: raterrain
+		Palette: raterrain
 		Size: 3,5
 		Category: RA1 Beach
 		Tiles:
@@ -1869,7 +1869,7 @@ Templates:
 	Template@206:
 		Id: 206
 		Images: rash04.tem
-        Palette: raterrain
+		Palette: raterrain
 		Size: 3,3
 		Category: RA1 Beach
 		Tiles:
@@ -1887,7 +1887,7 @@ Templates:
 		Images: rash05.tem
 		Size: 3,3
 		Category: RA1 Beach
-        Palette: raterrain
+		Palette: raterrain
 		Tiles:
 			0: Beach
 			1: Rock
@@ -1903,7 +1903,7 @@ Templates:
 		Images: rash06.tem
 		Size: 3,3
 		Category: RA1 Beach
-        Palette: raterrain
+		Palette: raterrain
 		Tiles:
 			0: Beach
 			1: Beach
@@ -1919,7 +1919,7 @@ Templates:
 		Images: rash07.tem
 		Size: 3,3
 		Category: RA1 Beach
-        Palette: raterrain
+		Palette: raterrain
 		Tiles:
 			0: Beach
 			1: Beach
@@ -1935,7 +1935,7 @@ Templates:
 		Images: rash08.tem
 		Size: 1,2
 		Category: RA1 Beach
-        Palette: raterrain
+		Palette: raterrain
 		Tiles:
 			0: Beach
 			1: Beach
@@ -1944,7 +1944,7 @@ Templates:
 		Images: rash09.tem
 		Size: 3,3
 		Category: RA1 Beach
-        Palette: raterrain
+		Palette: raterrain
 		Tiles:
 			0: Clear
 			1: River
@@ -1960,7 +1960,7 @@ Templates:
 		Images: rash10.tem
 		Size: 5,6
 		Category: RA1 Beach
-        Palette: raterrain
+		Palette: raterrain
 		Tiles:
 			0: Clear
 			5: Beach
@@ -1982,7 +1982,7 @@ Templates:
 		Images: rash11.tem
 		Size: 4,5
 		Category: RA1 Beach
-        Palette: raterrain
+		Palette: raterrain
 		Tiles:
 			0: Beach
 			1: Clear
@@ -2002,7 +2002,7 @@ Templates:
 		Images: rash12.tem
 		Size: 3,5
 		Category: RA1 Beach
-        Palette: raterrain
+		Palette: raterrain
 		Tiles:
 			0: Beach
 			1: Clear
@@ -2020,7 +2020,7 @@ Templates:
 		Images: rash13.tem
 		Size: 6,5
 		Category: RA1 Beach
-        Palette: raterrain
+		Palette: raterrain
 		Tiles:
 			0: Water
 			1: Rock
@@ -2045,7 +2045,7 @@ Templates:
 		Images: rash14.tem
 		Size: 4,4
 		Category: RA1 Beach
-        Palette: raterrain
+		Palette: raterrain
 		Tiles:
 			0: Beach
 			1: Beach
@@ -2064,7 +2064,7 @@ Templates:
 		Images: rash15.tem
 		Size: 5,3
 		Category: RA1 Beach
-        Palette: raterrain
+		Palette: raterrain
 		Tiles:
 			0: Water
 			1: Water
@@ -2081,7 +2081,7 @@ Templates:
 		Images: rash16.tem
 		Size: 3,3
 		Category: RA1 Beach
-        Palette: raterrain
+		Palette: raterrain
 		Tiles:
 			0: Water
 			1: Beach
@@ -2097,7 +2097,7 @@ Templates:
 		Images: rash17.tem
 		Size: 2,1
 		Category: RA1 Beach
-        Palette: raterrain
+		Palette: raterrain
 		Tiles:
 			0: Beach
 			1: Clear
@@ -2106,7 +2106,7 @@ Templates:
 		Images: rash18.tem
 		Size: 3,3
 		Category: RA1 Beach
-        Palette: raterrain
+		Palette: raterrain
 		Tiles:
 			0: Water
 			1: Water
@@ -2122,7 +2122,7 @@ Templates:
 		Images: rash19.tem
 		Size: 4,5
 		Category: RA1 Beach
-        Palette: raterrain
+		Palette: raterrain
 		Tiles:
 			1: Water
 			2: Beach
@@ -2144,7 +2144,7 @@ Templates:
 		Images: rash20.tem
 		Size: 5,4
 		Category: RA1 Beach
-        Palette: raterrain
+		Palette: raterrain
 		Tiles:
 			2: Water
 			3: Beach
@@ -2164,7 +2164,7 @@ Templates:
 		Images: rash21.tem
 		Size: 5,3
 		Category: RA1 Beach
-        Palette: raterrain
+		Palette: raterrain
 		Tiles:
 			1: Water
 			2: Beach
@@ -2182,7 +2182,7 @@ Templates:
 		Images: rash22.tem
 		Size: 6,5
 		Category: RA1 Beach
-        Palette: raterrain
+		Palette: raterrain
 		Tiles:
 			0: Water
 			6: Water
@@ -2206,7 +2206,7 @@ Templates:
 		Images: rash23.tem
 		Size: 5,5
 		Category: RA1 Beach
-        Palette: raterrain
+		Palette: raterrain
 		Tiles:
 			0: Beach
 			1: Water
@@ -2231,7 +2231,7 @@ Templates:
 		Images: rash24.tem
 		Size: 3,4
 		Category: RA1 Beach
-        Palette: raterrain
+		Palette: raterrain
 		Tiles:
 			0: Beach
 			1: Water
@@ -2246,7 +2246,7 @@ Templates:
 		Images: rash25.tem
 		Size: 3,3
 		Category: RA1 Beach
-        Palette: raterrain
+		Palette: raterrain
 		Tiles:
 			0: Water
 			1: Water
@@ -2262,7 +2262,7 @@ Templates:
 		Images: rash26.tem
 		Size: 3,3
 		Category: RA1 Beach
-        Palette: raterrain
+		Palette: raterrain
 		Tiles:
 			0: Water
 			1: Water
@@ -2278,7 +2278,7 @@ Templates:
 		Images: rash27.tem
 		Size: 3,3
 		Category: RA1 Beach
-        Palette: raterrain
+		Palette: raterrain
 		Tiles:
 			0: Rock
 			1: Rock
@@ -2294,7 +2294,7 @@ Templates:
 		Images: rash28.tem
 		Size: 3,3
 		Category: RA1 Beach
-        Palette: raterrain
+		Palette: raterrain
 		Tiles:
 			1: Rock
 			2: Rock
@@ -2309,7 +2309,7 @@ Templates:
 		Images: rash29.tem
 		Size: 1,2
 		Category: RA1 Beach
-        Palette: raterrain
+		Palette: raterrain
 		Tiles:
 			0: Beach
 			1: Clear
@@ -2318,7 +2318,7 @@ Templates:
 		Images: rash30.tem
 		Size: 3,2
 		Category: RA1 Beach
-        Palette: raterrain
+		Palette: raterrain
 		Tiles:
 			0: Beach
 			1: River
@@ -2331,7 +2331,7 @@ Templates:
 		Images: rash31.tem
 		Size: 6,5
 		Category: RA1 Beach
-        Palette: raterrain
+		Palette: raterrain
 		Tiles:
 			3: Water
 			4: Water
@@ -2360,7 +2360,7 @@ Templates:
 		Images: rash32.tem
 		Size: 4,4
 		Category: RA1 Beach
-        Palette: raterrain
+		Palette: raterrain
 		Tiles:
 			2: Water
 			3: Water
@@ -2378,7 +2378,7 @@ Templates:
 		Images: rash33.tem
 		Size: 3,4
 		Category: RA1 Beach
-        Palette: raterrain
+		Palette: raterrain
 		Tiles:
 			1: Water
 			2: Beach
@@ -2394,7 +2394,7 @@ Templates:
 		Images: rash34.tem
 		Size: 6,5
 		Category: RA1 Beach
-        Palette: raterrain
+		Palette: raterrain
 		Tiles:
 			3: Clear
 			4: Beach
@@ -2417,7 +2417,7 @@ Templates:
 		Images: rash35.tem
 		Size: 4,4
 		Category: RA1 Beach
-        Palette: raterrain
+		Palette: raterrain
 		Tiles:
 			2: Beach
 			3: Water
@@ -2435,7 +2435,7 @@ Templates:
 		Images: rash36.tem
 		Size: 4,3
 		Category: RA1 Beach
-        Palette: raterrain
+		Palette: raterrain
 		Tiles:
 			1: Beach
 			2: Beach
@@ -2451,7 +2451,7 @@ Templates:
 		Images: rash37.tem
 		Size: 3,3
 		Category: RA1 Beach
-        Palette: raterrain
+		Palette: raterrain
 		Tiles:
 			1: Beach
 			2: Water
@@ -2466,7 +2466,7 @@ Templates:
 		Images: rash38.tem
 		Size: 2,1
 		Category: RA1 Beach
-        Palette: raterrain
+		Palette: raterrain
 		Tiles:
 			0: Clear
 			1: Beach
@@ -2475,7 +2475,7 @@ Templates:
 		Images: rash39.tem
 		Size: 3,3
 		Category: RA1 Beach
-        Palette: raterrain
+		Palette: raterrain
 		Tiles:
 			0: Rock
 			1: Beach
@@ -2491,7 +2491,7 @@ Templates:
 		Images: rash40.tem
 		Size: 5,5
 		Category: RA1 Beach
-        Palette: raterrain
+		Palette: raterrain
 		Tiles:
 			0: Clear
 			1: Beach
@@ -2513,7 +2513,7 @@ Templates:
 		Images: rash41.tem
 		Size: 4,4
 		Category: RA1 Beach
-        Palette: raterrain
+		Palette: raterrain
 		Tiles:
 			0: Beach
 			1: Water
@@ -2532,7 +2532,7 @@ Templates:
 		Images: rash42.tem
 		Size: 4,3
 		Category: RA1 Beach
-        Palette: raterrain
+		Palette: raterrain
 		Tiles:
 			0: Beach
 			1: Beach
@@ -2548,7 +2548,7 @@ Templates:
 		Images: rash43.tem
 		Size: 3,3
 		Category: RA1 Beach
-        Palette: raterrain
+		Palette: raterrain
 		Tiles:
 			0: Beach
 			1: Beach
@@ -2564,7 +2564,7 @@ Templates:
 		Images: rash44.tem
 		Size: 2,2
 		Category: RA1 Beach
-        Palette: raterrain
+		Palette: raterrain
 		Tiles:
 			0: Water
 			1: Beach
@@ -2575,7 +2575,7 @@ Templates:
 		Images: rash45.tem
 		Size: 3,3
 		Category: RA1 Beach
-        Palette: raterrain
+		Palette: raterrain
 		Tiles:
 			0: Water
 			1: Beach
@@ -2591,7 +2591,7 @@ Templates:
 		Images: rash46.tem
 		Size: 2,2
 		Category: RA1 Beach
-        Palette: raterrain
+		Palette: raterrain
 		Tiles:
 			0: Water
 			1: River
@@ -2602,7 +2602,7 @@ Templates:
 		Images: rash47.tem
 		Size: 3,3
 		Category: RA1 Beach
-        Palette: raterrain
+		Palette: raterrain
 		Tiles:
 			0: Water
 			3: Beach
@@ -2615,7 +2615,7 @@ Templates:
 		Images: rash48.tem
 		Size: 2,2
 		Category: RA1 Beach
-        Palette: raterrain
+		Palette: raterrain
 		Tiles:
 			0: Water
 			1: Water
@@ -2626,7 +2626,7 @@ Templates:
 		Images: rash49.tem
 		Size: 3,3
 		Category: RA1 Beach
-        Palette: raterrain
+		Palette: raterrain
 		Tiles:
 			0: Beach
 			1: Water
@@ -2642,7 +2642,7 @@ Templates:
 		Images: rash50.tem
 		Size: 2,2
 		Category: RA1 Beach
-        Palette: raterrain
+		Palette: raterrain
 		Tiles:
 			0: Beach
 			1: Beach
@@ -2653,7 +2653,7 @@ Templates:
 		Images: rash51.tem
 		Size: 3,3
 		Category: RA1 Beach
-        Palette: raterrain
+		Palette: raterrain
 		Tiles:
 			0: Clear
 			1: Beach
@@ -2667,7 +2667,7 @@ Templates:
 		Images: rash52.tem
 		Size: 3,3
 		Category: RA1 Beach
-        Palette: raterrain
+		Palette: raterrain
 		Tiles:
 			1: Clear
 			2: Clear
@@ -2681,7 +2681,7 @@ Templates:
 		Images: rash53.tem
 		Size: 3,3
 		Category: RA1 Beach
-        Palette: raterrain
+		Palette: raterrain
 		Tiles:
 			0: Beach
 			1: Clear
@@ -2696,7 +2696,7 @@ Templates:
 		Images: rash54.tem
 		Size: 3,3
 		Category: RA1 Beach
-        Palette: raterrain
+		Palette: raterrain
 		Tiles:
 			0: Water
 			1: Beach
@@ -2709,7 +2709,7 @@ Templates:
 		Images: rawc01.tem
 		Size: 2,2
 		Category: Water Cliffs
-        Palette: raterrain
+		Palette: raterrain
 		Tiles:
 			0: Rock
 			1: Rock
@@ -2720,7 +2720,7 @@ Templates:
 		Images: rawc02.tem
 		Size: 2,3
 		Category: Water Cliffs
-        Palette: raterrain
+		Palette: raterrain
 		Tiles:
 			0: Rock
 			1: Rough
@@ -2733,7 +2733,7 @@ Templates:
 		Images: rawc03.tem
 		Size: 2,2
 		Category: Water Cliffs
-        Palette: raterrain
+		Palette: raterrain
 		Tiles:
 			0: Rock
 			1: Rock
@@ -2744,7 +2744,7 @@ Templates:
 		Images: rawc04.tem
 		Size: 2,2
 		Category: Water Cliffs
-        Palette: raterrain
+		Palette: raterrain
 		Tiles:
 			0: Rock
 			1: Rock
@@ -2755,7 +2755,7 @@ Templates:
 		Images: rawc05.tem
 		Size: 2,2
 		Category: Water Cliffs
-        Palette: raterrain
+		Palette: raterrain
 		Tiles:
 			0: Rock
 			1: Rock
@@ -2766,7 +2766,7 @@ Templates:
 		Images: rawc06.tem
 		Size: 2,3
 		Category: Water Cliffs
-        Palette: raterrain
+		Palette: raterrain
 		Tiles:
 			0: Rough
 			1: Rock
@@ -2778,7 +2778,7 @@ Templates:
 		Images: rawc07.tem
 		Size: 2,2
 		Category: Water Cliffs
-        Palette: raterrain
+		Palette: raterrain
 		Tiles:
 			0: Rock
 			1: Rock
@@ -2789,7 +2789,7 @@ Templates:
 		Images: rawc08.tem
 		Size: 2,2
 		Category: Water Cliffs
-        Palette: raterrain
+		Palette: raterrain
 		Tiles:
 			0: Rock
 			1: Rock
@@ -2800,7 +2800,7 @@ Templates:
 		Images: rawc09.tem
 		Size: 3,2
 		Category: Water Cliffs
-        Palette: raterrain
+		Palette: raterrain
 		Tiles:
 			0: Rock
 			1: Rock
@@ -2813,7 +2813,7 @@ Templates:
 		Images: rawc10.tem
 		Size: 2,2
 		Category: Water Cliffs
-        Palette: raterrain
+		Palette: raterrain
 		Tiles:
 			0: Rock
 			1: Rock
@@ -2824,7 +2824,7 @@ Templates:
 		Images: rawc11.tem
 		Size: 2,2
 		Category: Water Cliffs
-        Palette: raterrain
+		Palette: raterrain
 		Tiles:
 			0: Rock
 			1: Rock
@@ -2835,7 +2835,7 @@ Templates:
 		Images: rawc12.tem
 		Size: 2,2
 		Category: Water Cliffs
-        Palette: raterrain
+		Palette: raterrain
 		Tiles:
 			0: Rock
 			1: Rock
@@ -2846,7 +2846,7 @@ Templates:
 		Images: rawc13.tem
 		Size: 3,2
 		Category: Water Cliffs
-        Palette: raterrain
+		Palette: raterrain
 		Tiles:
 			0: Rock
 			1: Rock
@@ -2859,7 +2859,7 @@ Templates:
 		Images: rawc14.tem
 		Size: 2,2
 		Category: Water Cliffs
-        Palette: raterrain
+		Palette: raterrain
 		Tiles:
 			0: Rock
 			1: Beach
@@ -2870,7 +2870,7 @@ Templates:
 		Images: rawc15.tem
 		Size: 2,2
 		Category: Water Cliffs
-        Palette: raterrain
+		Palette: raterrain
 		Tiles:
 			0: Rock
 			1: Rock
@@ -2881,7 +2881,7 @@ Templates:
 		Images: rawc16.tem
 		Size: 2,3
 		Category: Water Cliffs
-        Palette: raterrain
+		Palette: raterrain
 		Tiles:
 			0: Water
 			2: Rock
@@ -2892,7 +2892,7 @@ Templates:
 		Images: rawc17.tem
 		Size: 2,2
 		Category: Water Cliffs
-        Palette: raterrain
+		Palette: raterrain
 		Tiles:
 			0: Rock
 			1: Rock
@@ -2903,7 +2903,7 @@ Templates:
 		Images: rawc18.tem
 		Size: 2,2
 		Category: Water Cliffs
-        Palette: raterrain
+		Palette: raterrain
 		Tiles:
 			0: Rock
 			1: Rock
@@ -2914,7 +2914,7 @@ Templates:
 		Images: rawc19.tem
 		Size: 2,2
 		Category: Water Cliffs
-        Palette: raterrain
+		Palette: raterrain
 		Tiles:
 			0: Rock
 			1: Rock
@@ -2925,7 +2925,7 @@ Templates:
 		Images: rawc20.tem
 		Size: 2,3
 		Category: Water Cliffs
-        Palette: raterrain
+		Palette: raterrain
 		Tiles:
 			1: River
 			2: Rock
@@ -2937,7 +2937,7 @@ Templates:
 		Images: rawc21.tem
 		Size: 1,2
 		Category: Water Cliffs
-        Palette: raterrain
+		Palette: raterrain
 		Tiles:
 			0: Rock
 			1: Rock
@@ -2946,7 +2946,7 @@ Templates:
 		Images: rawc22.tem
 		Size: 2,2
 		Category: Water Cliffs
-        Palette: raterrain
+		Palette: raterrain
 		Tiles:
 			0: Rock
 			1: Rock
@@ -2957,7 +2957,7 @@ Templates:
 		Images: rawc23.tem
 		Size: 3,2
 		Category: Water Cliffs
-        Palette: raterrain
+		Palette: raterrain
 		Tiles:
 			0: Rock
 			1: Rock
@@ -2970,7 +2970,7 @@ Templates:
 		Images: rawc24.tem
 		Size: 2,2
 		Category: Water Cliffs
-        Palette: raterrain
+		Palette: raterrain
 		Tiles:
 			0: Rock
 			1: Rock
@@ -2981,7 +2981,7 @@ Templates:
 		Images: rawc25.tem
 		Size: 2,2
 		Category: Water Cliffs
-        Palette: raterrain
+		Palette: raterrain
 		Tiles:
 			0: Rock
 			1: Rock
@@ -2992,7 +2992,7 @@ Templates:
 		Images: rawc26.tem
 		Size: 2,2
 		Category: Water Cliffs
-        Palette: raterrain
+		Palette: raterrain
 		Tiles:
 			0: Rock
 			1: Rock
@@ -3003,7 +3003,7 @@ Templates:
 		Images: rawc27.tem
 		Size: 3,2
 		Category: Water Cliffs
-        Palette: raterrain
+		Palette: raterrain
 		Tiles:
 			0: Rock
 			1: Rock
@@ -3016,7 +3016,7 @@ Templates:
 		Images: rawc28.tem
 		Size: 2,2
 		Category: Water Cliffs
-        Palette: raterrain
+		Palette: raterrain
 		Tiles:
 			0: Rock
 			1: Rock
@@ -3026,7 +3026,7 @@ Templates:
 		Images: rawc29.tem
 		Size: 2,2
 		Category: Water Cliffs
-        Palette: raterrain
+		Palette: raterrain
 		Tiles:
 			0: Rock
 			1: Rock
@@ -3037,7 +3037,7 @@ Templates:
 		Images: rawc30.tem
 		Size: 2,2
 		Category: Water Cliffs
-        Palette: raterrain
+		Palette: raterrain
 		Tiles:
 			0: Rock
 			1: Rock
@@ -3048,7 +3048,7 @@ Templates:
 		Images: rawc31.tem
 		Size: 2,2
 		Category: Water Cliffs
-        Palette: raterrain
+		Palette: raterrain
 		Tiles:
 			0: Rock
 			1: River
@@ -3059,7 +3059,7 @@ Templates:
 		Images: rawc32.tem
 		Size: 2,2
 		Category: Water Cliffs
-        Palette: raterrain
+		Palette: raterrain
 		Tiles:
 			0: Rock
 			1: Rock
@@ -3069,7 +3069,7 @@ Templates:
 		Images: rawc33.tem
 		Size: 2,2
 		Category: Water Cliffs
-        Palette: raterrain
+		Palette: raterrain
 		Tiles:
 			0: Rock
 			1: Rock
@@ -3080,7 +3080,7 @@ Templates:
 		Images: rawc34.tem
 		Size: 2,2
 		Category: Water Cliffs
-        Palette: raterrain
+		Palette: raterrain
 		Tiles:
 			0: Rock
 			1: Rock
@@ -3091,7 +3091,7 @@ Templates:
 		Images: rawc35.tem
 		Size: 2,2
 		Category: Water Cliffs
-        Palette: raterrain
+		Palette: raterrain
 		Tiles:
 			0: Rock
 			1: Rock
@@ -3102,7 +3102,7 @@ Templates:
 		Images: rawc36.tem
 		Size: 2,2
 		Category: Water Cliffs
-        Palette: raterrain
+		Palette: raterrain
 		Tiles:
 			0: Rock
 			1: Rock
@@ -3113,7 +3113,7 @@ Templates:
 		Images: rawc37.tem
 		Size: 2,2
 		Category: Water Cliffs
-        Palette: raterrain
+		Palette: raterrain
 		Tiles:
 			0: Rock
 			1: Rock
@@ -3124,7 +3124,7 @@ Templates:
 		Images: rawc38.tem
 		Size: 2,2
 		Category: Water Cliffs
-        Palette: raterrain
+		Palette: raterrain
 		Tiles:
 			0: Rock
 			1: Rock
@@ -3135,7 +3135,7 @@ Templates:
 		Images: sccnr.tem
 		Size: 2,3
 		Category: Water Cliffs
-        Palette: raterrain
+		Palette: raterrain
 		Tiles:
 			0: Rock
 			1: Rock
@@ -3148,7 +3148,7 @@ Templates:
 		Images: sccnl.tem
 		Size: 2,3
 		Category: Water Cliffs
-        Palette: raterrain
+		Palette: raterrain
 		Tiles:
 			0: Rock
 			1: Rock
@@ -3161,7 +3161,7 @@ Templates:
 		Images: sccsr.tem
 		Size: 2,3
 		Category: Water Cliffs
-        Palette: raterrain
+		Palette: raterrain
 		Tiles:
 			0: Rock
 			1: Rock
@@ -3174,7 +3174,7 @@ Templates:
 		Images: sccsl.tem
 		Size: 2,3
 		Category: Water Cliffs
-        Palette: raterrain
+		Palette: raterrain
 		Tiles:
 			0: Rock
 			1: Rock
@@ -3187,7 +3187,7 @@ Templates:
 		Images: sccln.tem
 		Size: 3,2
 		Category: Water Cliffs
-        Palette: raterrain
+		Palette: raterrain
 		Tiles:
 			0: Rock
 			1: Rock
@@ -3200,7 +3200,7 @@ Templates:
 		Images: sccls.tem
 		Size: 3,2
 		Category: Water Cliffs
-        Palette: raterrain
+		Palette: raterrain
 		Tiles:
 			0: Rock
 			1: Rock
@@ -3213,7 +3213,7 @@ Templates:
 		Images: sccrn.tem
 		Size: 3,2
 		Category: Water Cliffs
-        Palette: raterrain
+		Palette: raterrain
 		Tiles:
 			0: Rock
 			1: Rock
@@ -3226,7 +3226,7 @@ Templates:
 		Images: sccrs.tem
 		Size: 3,2
 		Category: Water Cliffs
-        Palette: raterrain
+		Palette: raterrain
 		Tiles:
 			0: Rock
 			1: Rock

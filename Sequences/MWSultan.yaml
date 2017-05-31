@@ -2,41 +2,41 @@
 
 sulfact:
 	idle: ironore4
-        Start: 9
-    idle0: newfact
+		Start: 9
+	idle0: newfact
 	damaged-idle: newfact
 		Start: 1
-    idle1: newfact
-        Start: 3
+	idle1: newfact
+		Start: 3
 	damaged-idle1: newfact
 		Start: 7
-    idle2: newfact
-        Start: 4
+	idle2: newfact
+		Start: 4
 	damaged-idle2: newfact
 		Start: 8
-    idle3: newfact
-        Start: 5
+	idle3: newfact
+		Start: 5
 	damaged-idle3: newfact
 		Start: 9
-    idle4: sulfactpalette
-        Start: 0
-        Offset: 0, -12
+	idle4: sulfactpalette
+		Start: 0
+		Offset: 0, -12
 	damaged-idle4: sulfactpalette
 		Start: 1
-        Offset: 0, -12
+		Offset: 0, -12
 	dead: newfact
 		Start: 2
 		Tick: 800
-    flag1start: newflag
-        Start: 0
-        Length: 9
-        Tick: 120
-        ZOffset: -1024
-    flag1: newflag
-        Start: 9
-        Length: 4
-        Tick: 120
-        ZOffset: -1024
+	flag1start: newflag
+		Start: 0
+		Length: 9
+		Tick: 120
+		ZOffset: -1024
+	flag1: newflag
+		Start: 9
+		Length: 4
+		Tick: 120
+		ZOffset: -1024
 	make: newfactmake
 		Length: *
 		Tick: 120
@@ -48,13 +48,13 @@ sulfact:
 
 
 sule1:
-    stunned: sulm4
-        ZOffset: 125
-        Start: 312
-        Length: 2
-        Tick: 200
+	stunned: sulm4
+		ZOffset: 125
+		Start: 312
+		Length: 2
+		Tick: 200
 	stand: 
-        Start: 122
+		Start: 122
 		Facings: 8
 	run: 
 		Start: 0
@@ -62,24 +62,24 @@ sule1:
 		Facings: 8
 		Tick: 100
 	shoot: 
-        Tick: 100
+		Tick: 100
 		Start: 66
 		Length: 7
 		Facings: 8
-    idle1: 
-        Tick: 100
+	idle1: 
+		Tick: 100
 		Start: 190
 		Length: 12
-    idle2: 
-        Tick: 100
+	idle2: 
+		Tick: 100
 		Start: 202
 		Length: 12
-    idle3: 
-        Tick: 100
+	idle3: 
+		Tick: 100
 		Start: 214
 		Length: 19
-    idle4: 
-        Tick: 100
+	idle4: 
+		Tick: 100
 		Start: 233
 		Length: 12
 	die1: 
@@ -89,7 +89,7 @@ sule1:
 	# large hit
 	die2: splatterdead
 		Length: *
-        Tick: 80
+		Tick: 80
 	# poision
 	die3: 
 		Start: 163
@@ -105,20 +105,20 @@ sule1:
 		Length: 4
 		Tick: 1600
 		ZOffset: -511
-    die5: burningman
-        Length: *
-        Tick: 80
+	die5: burningman
+		Length: *
+		Tick: 80
 	icon: sule1icon.shp
 		AddExtension: False
-        
+		
 sule2:
-    stunned: sulm4
-        ZOffset: 125
-        Start: 312
-        Length: 2
-        Tick: 200
+	stunned: sulm4
+		ZOffset: 125
+		Start: 312
+		Length: 2
+		Tick: 200
 	stand: 
-        Start: 122
+		Start: 122
 		Facings: 8
 	run: 
 		Start: 0
@@ -126,21 +126,21 @@ sule2:
 		Facings: 8
 		Tick: 100
 	shoot: 
-        Tick: 100
+		Tick: 100
 		Start: 66
 		Length: 7
 		Facings: 8
-    shootae: 
-        Tick: 100
+	shootae: 
+		Tick: 100
 		Start: 222
 		Length: 7
 		Facings: 8
-    idle1: 
-        Tick: 100
+	idle1: 
+		Tick: 100
 		Start: 205
 		Length: 17
-    idle2: 
-        Tick: 100
+	idle2: 
+		Tick: 100
 		Start: 195
 		Length: 11
 	die1: 
@@ -150,7 +150,7 @@ sule2:
 	# large hit
 	die2: splatterdead
 		Length: *
-        Tick: 80
+		Tick: 80
 	# poision
 	die3: 
 		Start: 163
@@ -166,20 +166,20 @@ sule2:
 		Length: 4
 		Tick: 1600
 		ZOffset: -511
-    die5: burningman
-        Length: *
-        Tick: 80
+	die5: burningman
+		Length: *
+		Tick: 80
 	icon: sule2icon.shp
 		AddExtension: False
-        
+		
 sule3:
-    stunned: sulm4
-        ZOffset: 125
-        Start: 312
-        Length: 2
-        Tick: 200
+	stunned: sulm4
+		ZOffset: 125
+		Start: 312
+		Length: 2
+		Tick: 200
 	stand: 
-        Start: 122
+		Start: 122
 		Facings: 8
 	run: 
 		Start: 0
@@ -187,16 +187,16 @@ sule3:
 		Facings: 8
 		Tick: 100
 	shoot: 
-        Tick: 100
+		Tick: 100
 		Start: 66
 		Length: 7
 		Facings: 8
-    idle1: 
-        Tick: 100
+	idle1: 
+		Tick: 100
 		Start: 190
 		Length: 35
-    idle2: 
-        Tick: 100
+	idle2: 
+		Tick: 100
 		Start: 224
 		Length: 21
 	die1: 
@@ -206,7 +206,7 @@ sule3:
 	# large hit
 	die2: splatterdead
 		Length: *
-        Tick: 80
+		Tick: 80
 	# poision
 	die3: 
 		Start: 163
@@ -222,20 +222,20 @@ sule3:
 		Length: 4
 		Tick: 1600
 		ZOffset: -511
-    die5: burningman
-        Length: *
-        Tick: 80
+	die5: burningman
+		Length: *
+		Tick: 80
 	icon: sule3icon.shp
 		AddExtension: False
-        
+		
 sule4:
-    stunned: sulm4
-        ZOffset: 125
-        Start: 312
-        Length: 2
-        Tick: 200
+	stunned: sulm4
+		ZOffset: 125
+		Start: 312
+		Length: 2
+		Tick: 200
 	stand: 
-        Start: 122
+		Start: 122
 		Facings: 8
 	run: 
 		Start: 0
@@ -243,15 +243,15 @@ sule4:
 		Facings: 8
 		Tick: 100
 	shoot: 
-        Tick: 100
+		Tick: 100
 		Start: 66
 		Length: 7
 		Facings: 8
-    idle1: 
-        Tick: 250
+	idle1: 
+		Tick: 250
 		Start: 195
 		Length: 17
-        Facings: 4
+		Facings: 4
 	die1: 
 		Start: 131
 		Length: 16
@@ -259,7 +259,7 @@ sule4:
 	# large hit
 	die2: splatterdead
 		Length: *
-        Tick: 80
+		Tick: 80
 	# poision
 	die3: 
 		Start: 163
@@ -275,20 +275,20 @@ sule4:
 		Length: 4
 		Tick: 1600
 		ZOffset: -511
-    die5: burningman
-        Length: *
-        Tick: 80
+	die5: burningman
+		Length: *
+		Tick: 80
 	icon: sule4icon.shp
 		AddExtension: False
-        
+		
 sule5:
-    stunned: sulm4
-        ZOffset: 125
-        Start: 312
-        Length: 2
-        Tick: 200
+	stunned: sulm4
+		ZOffset: 125
+		Start: 312
+		Length: 2
+		Tick: 200
 	stand: 
-        Start: 122
+		Start: 122
 		Facings: 8
 	run: 
 		Start: 0
@@ -296,7 +296,7 @@ sule5:
 		Facings: 8
 		Tick: 100
 	shoot: 
-        Tick: 100
+		Tick: 100
 		Start: 66
 		Length: 7
 		Facings: 8
@@ -307,7 +307,7 @@ sule5:
 	# large hit
 	die2: splatterdead
 		Length: *
-        Tick: 80
+		Tick: 80
 	# poision
 	die3: 
 		Start: 163
@@ -323,23 +323,23 @@ sule5:
 		Length: 4
 		Tick: 1600
 		ZOffset: -511
-    die5: burningman
-        Length: *
-        Tick: 80
+	die5: burningman
+		Length: *
+		Tick: 80
 	icon: sule5icon.shp
 		AddExtension: False
-        
+		
 sule6:
-    stunned: sulm4
-        ZOffset: 125
-        Start: 312
-        Length: 2
-        Tick: 200
+	stunned: sulm4
+		ZOffset: 125
+		Start: 312
+		Length: 2
+		Tick: 200
 	idle: 
-        Start: 122
+		Start: 122
 		Facings: 8
-    stand: 
-        Start: 122
+	stand: 
+		Start: 122
 		Facings: 8
 	move: 
 		Start: 0
@@ -347,22 +347,22 @@ sule6:
 		Facings: 8
 		Tick: 100
 	harvest: 
-        Tick: 130
+		Tick: 130
 		Start: 66
 		Length: 7
 		Facings: 8
-    dock: 
+	dock: 
 		Start: 320
 		Length: 21
-        Tick: 80
+		Tick: 80
 	dock-loop: 
 		Start: 341
-    empty-move: 
+	empty-move: 
 		Start: 0
 		Length: 8
 		Facings: 8
 		Tick: 100
-    empty-idle: 
+	empty-idle: 
 		Start: 122
 		Facings: 8
 	empty-harvest: 
@@ -370,27 +370,27 @@ sule6:
 		Start: 66
 		Length: 7
 		Facings: 8
-    full-move: 
+	full-move: 
 		Start: 0
 		Length: 8
 		Facings: 8
 		Tick: 100
-    full-idle: 
+	full-idle: 
 		Start: 312
 		Facings: 8
 	full-harvest: 
 		Start: 256
-        Facings: 8
+		Facings: 8
 		Length: 7
-        Tick: 130  
-    die1: 
+		Tick: 130  
+	die1: 
 		Start: 131
 		Length: 16
 		Tick: 80
-    # large hit
+	# large hit
 	die2: splatterdead
 		Length: *
-        Tick: 80
+		Tick: 80
 	# poision
 	die3: 
 		Start: 163
@@ -407,20 +407,20 @@ sule6:
 		Tick: 1600
 		ZOffset: -511
 	die5: burningman
-        Length: *
-        Tick: 80
-    icon: farmericon.shp
-        Offset: 0,0,0
+		Length: *
+		Tick: 80
+	icon: farmericon.shp
+		Offset: 0,0,0
 		AddExtension: False
-        
+		
 sulm1:
-    stunned: sulm4
-        ZOffset: 125
-        Start: 312
-        Length: 2
-        Tick: 200
+	stunned: sulm4
+		ZOffset: 125
+		Start: 312
+		Length: 2
+		Tick: 200
 	stand: 
-        Start: 122
+		Start: 122
 		Facings: 8
 	run: 
 		Start: 0
@@ -428,15 +428,15 @@ sulm1:
 		Facings: 8
 		Tick: 100
 	shoot: 
-        Tick: 100
+		Tick: 100
 		Start: 66
 		Length: 7
 		Facings: 8
-    idle1: 
-        Tick: 800
+	idle1: 
+		Tick: 800
 		Start: 190
 		Length: 7
-        Facings: 8
+		Facings: 8
 	die1: 
 		Start: 131
 		Length: 16
@@ -444,7 +444,7 @@ sulm1:
 	# large hit
 	die2: splatterdead
 		Length: *
-        Tick: 80
+		Tick: 80
 	# poision
 	die3: 
 		Start: 163
@@ -460,35 +460,35 @@ sulm1:
 		Length: 4
 		Tick: 1600
 		ZOffset: -511
-    die5: burningman
-        Length: *
-        Tick: 80
+	die5: burningman
+		Length: *
+		Tick: 80
 	icon: sulm1icon.shp
 		AddExtension: False
-        
+		
 sulm1skelet:
-    stunned: sulm4
-        ZOffset: 125
-        Start: 312
-        Length: 2
-        Tick: 200
+	stunned: sulm4
+		ZOffset: 125
+		Start: 312
+		Length: 2
+		Tick: 200
 	stand: 
-        Start: 122
+		Start: 122
 		Facings: 8
-    idle: 
-        Start: 122
+	idle: 
+		Start: 122
 		Facings: 8
 	move: 
 		Start: 0
 		Length: 8
 		Facings: 8
 		Tick: 100
-    make: 
-        Start: 190
+	make: 
+		Start: 190
 		Length: 12
 		Tick: 100
 	shoot: 
-        Tick: 100
+		Tick: 100
 		Start: 66
 		Length: 7
 		Facings: 8
@@ -498,7 +498,7 @@ sulm1skelet:
 		Tick: 80
 	# large hit
 	die2: 
-        Start: 202
+		Start: 202
 		Length: 20
 		Tick: 80
 	# poision
@@ -516,28 +516,28 @@ sulm1skelet:
 		Length: 4
 		Tick: 1600
 		ZOffset: -511
-    die5: burningman
-        Length: *
-        Tick: 80
-        
+	die5: burningman
+		Length: *
+		Tick: 80
+		
 sulm2:
-    stunned: sulm4
-        ZOffset: 125
-        Start: 312
-        Length: 2
-        Tick: 200
+	stunned: sulm4
+		ZOffset: 125
+		Start: 312
+		Length: 2
+		Tick: 200
 	stand: 
-        Start: 219
+		Start: 219
 		Facings: 8
-        Length: 8
-        Tick: 100
+		Length: 8
+		Tick: 100
 	run: 
 		Start: 0
 		Length: 8
 		Facings: 8
 		Tick: 100
 	shoot: 
-        Tick: 100
+		Tick: 100
 		Start: 64
 		Length: 8
 		Facings: 8
@@ -545,15 +545,15 @@ sulm2:
 		Start: 155
 		Length: 16
 		Tick: 80
-    idle: 
-        Start: 219
+	idle: 
+		Start: 219
 		Facings: 8
-        Length: 8
-        Tick: 100
+		Length: 8
+		Tick: 100
 	# large hit
 	die2: splatterdead
 		Length: *
-        Tick: 80
+		Tick: 80
 	# poision
 	die3: 
 		Start: 187
@@ -569,40 +569,40 @@ sulm2:
 		Length: 4
 		Tick: 1600
 		ZOffset: -511
-    die5: burningman
-        Length: *
-        Tick: 80
+	die5: burningman
+		Length: *
+		Tick: 80
 	icon: sulm2icon.shp
 		AddExtension: False
-        
+		
 sulm3:
-    stunned: sulm4
-        ZOffset: 125
-        Start: 312
-        Length: 2
-        Tick: 200
+	stunned: sulm4
+		ZOffset: 125
+		Start: 312
+		Length: 2
+		Tick: 200
 	idle: 
-        Start: 257
+		Start: 257
 		Facings: 32
 	run: 
 		Start: 289
 		Facings: 32
 	attack: 
-        Tick: 80
+		Tick: 80
 		Start: 32
 		Length: 7
 		Facings: 32
 	icon: sulm3icon.shp
 		AddExtension: False
-        
+		
 sulm4:
-    stunned: sulm4
-        ZOffset: 125
-        Start: 312
-        Length: 2
-        Tick: 200
+	stunned: sulm4
+		ZOffset: 125
+		Start: 312
+		Length: 2
+		Tick: 200
 	stand: 
-        Start: 122
+		Start: 122
 		Facings: 8
 	run: 
 		Start: 0
@@ -610,16 +610,16 @@ sulm4:
 		Facings: 8
 		Tick: 100
 	shoot: 
-        Tick: 100
+		Tick: 100
 		Start: 66
 		Length: 7
 		Facings: 8
-    idle1: 
-        Tick: 80
+	idle1: 
+		Tick: 80
 		Start: 190
 		Length: 21
-    idle2: 
-        Tick: 80
+	idle2: 
+		Tick: 80
 		Start: 211
 		Length: 21
 	die1: 
@@ -629,7 +629,7 @@ sulm4:
 	# large hit
 	die2: splatterdead
 		Length: *
-        Tick: 80
+		Tick: 80
 	# poision
 	die3: 
 		Start: 163
@@ -645,32 +645,32 @@ sulm4:
 		Length: 4
 		Tick: 1600
 		ZOffset: -511
-    die5: burningman
-        Length: *
-        Tick: 80
+	die5: burningman
+		Length: *
+		Tick: 80
 	icon: sulm4icon.shp
 		AddExtension: False
-        
+		
 sulm3.husk:
-    idle: sulm3
-        Start: 0
+	idle: sulm3
+		Start: 0
 		Facings: 32
 
 sulm3.manhusk: 
-    idle: sulm3
-        Start: 322
+	idle: sulm3
+		Start: 322
 		Facings: 31
-        
+		
 sulm3grenade: 
-    idle: sulm3
-        Start: 353
+	idle: sulm3
+		Start: 353
 		Length: 18
-        
+		
 #Buildings
 
 sulbarr:
 	idle: 
-        Start: 29
+		Start: 29
 	damaged-idle: 
 		Start: 30
 	dead: 
@@ -684,10 +684,10 @@ sulbarr:
 		Length: *
 	icon: sulbarricon.shp
 		AddExtension: False  
-        
+		
 sulnuke:
 	idle: 
-        Start: 19
+		Start: 19
 	damaged-idle: 
 		Start: 20
 	dead: 
@@ -701,10 +701,10 @@ sulnuke:
 		Length: *
 	icon: sulnukeicon.shp
 		AddExtension: False  
-        
+		
 sulnuk2:
 	idle: 
-        Start: 19
+		Start: 19
 	damaged-idle: 
 		Start: 20
 	dead: 
@@ -718,247 +718,247 @@ sulnuk2:
 		Length: *
 	icon: sulnuk2icon.shp
 		AddExtension: False 
-        
+		
 sulmill:
 	idle: 
-        Start: 0
-        Length: 19
-        Offset: 12,-12,0
+		Start: 0
+		Length: 19
+		Offset: 12,-12,0
 	damaged-idle: 
 		Start: 20
-        Length: 19
-        Offset: 12,-12,0
+		Length: 19
+		Offset: 12,-12,0
 	dead: 
 		Start: 40
 		Tick: 800
-        Offset: 12,-12,0
+		Offset: 12,-12,0
 	make: sulmilmake
 		Length: *
 		Tick: 80
-        Offset: 12,-12,0
+		Offset: 12,-12,0
 	bib: bib3
 		UseTilesetExtension: true
 		Length: *
 	icon: sulmillicon.shp
 		AddExtension: False 
-        
+		
 sulmystic:
 	idle: 
-        Start: 29
-        Offset: 12,-24,0
+		Start: 29
+		Offset: 12,-24,0
 	damaged-idle: 
 		Start: 30
-        Offset: 12,-24,0
+		Offset: 12,-24,0
 	dead: 
 		Start: 31
 		Tick: 800
-        Offset: 12,-24,0
+		Offset: 12,-24,0
 	make: 
 		Length: 29
 		Tick: 80
-        Offset: 12,-24,0
+		Offset: 12,-24,0
 	bib: bib2
 		UseTilesetExtension: true
 		Length: *
 	icon: sulmysticicon.shp
 		AddExtension: False 
-        
-        
+		
+		
 sulcastle:
 	idle: 
-        Start: 25
-        Offset: 0,-18
+		Start: 25
+		Offset: 0,-18
 	damaged-idle: 
 		Start: 26
-        Offset: 0,-18
+		Offset: 0,-18
 	dead: 
 		Start: 27
 		Tick: 800
-        Offset: 0,-18
+		Offset: 0,-18
 	make: 
 		Length: 25
 		Tick: 80
-        Offset: 0,-18
+		Offset: 0,-18
 	bib: bib2
 		UseTilesetExtension: true
 		Length: *
 	icon: sulcastleicon.shp
 		AddExtension: False 
-    tower1: sultow1
-        Start: 28
-        Offset: 0, -36
-        ZOffset: -100
-    damaged-tower1: sultow1
-        Start: 29
-        Offset: 0, -36
-        ZOffset: -100
-    tower1make: sultow1
-        Length: 28
+	tower1: sultow1
+		Start: 28
+		Offset: 0, -36
+		ZOffset: -100
+	damaged-tower1: sultow1
+		Start: 29
+		Offset: 0, -36
+		ZOffset: -100
+	tower1make: sultow1
+		Length: 28
 		Tick: 80
-        Offset: 0, -36
-        ZOffset: -100
-    tower2: sultow2
-        Start: 28
-        Offset: 0, -36
-    damaged-tower2: sultow2
-        Start: 29
-        Offset: 0, -36
-    tower2make: sultow2
-        Length: 28
+		Offset: 0, -36
+		ZOffset: -100
+	tower2: sultow2
+		Start: 28
+		Offset: 0, -36
+	damaged-tower2: sultow2
+		Start: 29
+		Offset: 0, -36
+	tower2make: sultow2
+		Length: 28
 		Tick: 80
-        Offset: 0, -36
-    tower3: sultow3
-        Start: 28
-        Offset: 0, -36
-    damaged-tower3: sultow3
-        Start: 29
-        Offset: 0, -36
-    tower3make: sultow3
-        Length: 28
+		Offset: 0, -36
+	tower3: sultow3
+		Start: 28
+		Offset: 0, -36
+	damaged-tower3: sultow3
+		Start: 29
+		Offset: 0, -36
+	tower3make: sultow3
+		Length: 28
 		Tick: 80
-        Offset: 0, -36
-    tower4: sultow4
-        Start: 28
-        Offset: 0, -36
-        ZOffset: -100
-    damaged-tower4: sultow4
-        Start: 29
-        Offset: 0, -36
-        ZOffset: -100
-    tower4make: sultow4
-        Length: 28
+		Offset: 0, -36
+	tower4: sultow4
+		Start: 28
+		Offset: 0, -36
+		ZOffset: -100
+	damaged-tower4: sultow4
+		Start: 29
+		Offset: 0, -36
+		ZOffset: -100
+	tower4make: sultow4
+		Length: 28
 		Tick: 80
-        Offset: 0, -36
-        ZOffset: -100
-        
+		Offset: 0, -36
+		ZOffset: -100
+		
 sultow1:
 	idle: 
-        Start: 28
-        Offset: 0, -36
+		Start: 28
+		Offset: 0, -36
 	damaged-idle: 
 		Start: 29
-        Offset: 0, -36
+		Offset: 0, -36
 	dead: 
 		Start: 30
 		Tick: 800
-        Offset: 0, -36
-    idle-plug:
-        Start: 28
-        Offset: 0, -36
-    damaged-idle-plug:
-        Start: 29
-        Offset: 0, -36
+		Offset: 0, -36
+	idle-plug:
+		Start: 28
+		Offset: 0, -36
+	damaged-idle-plug:
+		Start: 29
+		Offset: 0, -36
 	make: 
 		Length: 28
 		Tick: 80
-        Offset: 0, -36
+		Offset: 0, -36
 	bib: bib2
 		UseTilesetExtension: true
 		Length: *
 	icon: sultow1icon.shp
 		AddExtension: False 
-        
+		
 sultow2:
 	idle: 
-        Start: 28
-        Offset: 0, -36
+		Start: 28
+		Offset: 0, -36
 	damaged-idle: 
 		Start: 29
-        Offset: 0, -36
+		Offset: 0, -36
 	dead: 
 		Start: 30
 		Tick: 800
-        Offset: 0, -36
+		Offset: 0, -36
 	idle-plug:
-        Start: 28
-        Offset: 0, -36
-    damaged-idle-plug:
-        Start: 29
-        Offset: 0, -36
-    make: 
+		Start: 28
+		Offset: 0, -36
+	damaged-idle-plug:
+		Start: 29
+		Offset: 0, -36
+	make: 
 		Length: 28
 		Tick: 80
-        Offset: 0, -36
+		Offset: 0, -36
 	bib: bib2
 		UseTilesetExtension: true
 		Length: *
 	icon: sultow2icon.shp
 		AddExtension: False
-        
+		
 sultow3:
 	idle: 
-        Start: 28
-        Offset: 0, -36
+		Start: 28
+		Offset: 0, -36
 	damaged-idle: 
 		Start: 29
-        Offset: 0, -36
+		Offset: 0, -36
 	dead: 
 		Start: 30
 		Tick: 800
-        Offset: 0, -36
+		Offset: 0, -36
 	idle-plug:
-        Start: 28
-        Offset: 0, -36
-    damaged-idle-plug:
-        Start: 29
-        Offset: 0, -36
-    make: 
+		Start: 28
+		Offset: 0, -36
+	damaged-idle-plug:
+		Start: 29
+		Offset: 0, -36
+	make: 
 		Length: 28
 		Tick: 80
-        Offset: 0, -36
+		Offset: 0, -36
 	bib: bib2
 		UseTilesetExtension: true
 		Length: *
 	icon: sultow3icon.shp
 		AddExtension: False
-        
+		
 sultow4:
 	idle: 
-        Start: 28
-        Offset: 0, -36
-    active: 
-        Start: 28
-        Offset: 0, -36
-    damaged-idle: 
-        Start: 29
-        Offset: 0, -36
+		Start: 28
+		Offset: 0, -36
+	active: 
+		Start: 28
+		Offset: 0, -36
 	damaged-idle: 
 		Start: 29
-        Offset: 0, -36
+		Offset: 0, -36
+	damaged-idle: 
+		Start: 29
+		Offset: 0, -36
 	dead: 
 		Start: 30
 		Tick: 800
-        Offset: 0, -36
+		Offset: 0, -36
 	idle-plug:
-        Start: 28
-        Offset: 0, -36
-    damaged-idle-plug:
-        Start: 29
-        Offset: 0, -36
-    make: 
+		Start: 28
+		Offset: 0, -36
+	damaged-idle-plug:
+		Start: 29
+		Offset: 0, -36
+	make: 
 		Length: 28
 		Tick: 80
-        Offset: 0, -36
+		Offset: 0, -36
 	bib: bib2
 		UseTilesetExtension: true
 		Length: *
 	icon: sultow4icon.shp
 		AddExtension: False
-        
+		
 sulfix:
 	idle: 
-        Start: 30
+		Start: 30
 	damaged-idle: 
-        Start: 31
-    active: sulfixanim
-        Length: *
-        Tick: 100
-    damaged-active: sulfixanimd
-        Length: *
-        Tick: 100
+		Start: 31
+	active: sulfixanim
+		Length: *
+		Tick: 100
+	damaged-active: sulfixanimd
+		Length: *
+		Tick: 100
 	dead: 
 		Tick: 800
-        Start: 32
+		Start: 32
 	make: 
 		Length: 30
 		Tick: 80
@@ -967,24 +967,24 @@ sulfix:
 		Length: *
 	icon: sulfixicon.shp
 		AddExtension: False
-        
-        
+		
+		
 #Defenses
 
 sulgtw:
 	idle: 
-        Start: 11
-        Offset: 0,-12
+		Start: 11
+		Offset: 0,-12
 	damaged-idle: 
 		Start: 12
-        Offset: 0,-12
+		Offset: 0,-12
 	dead: 
 		Start: 15
-        Offset: 0,-12
+		Offset: 0,-12
 	make: 
 		Length: 10
 		Tick: 80
-        Offset: 0,-12
+		Offset: 0,-12
 	bib: mbGTWR
 		UseTilesetExtension: true
 		TilesetOverrides:
@@ -995,28 +995,28 @@ sulgtw:
 		Offset: 0,-2
 	icon: sulgtwicon.shp
 		AddExtension: False
-    turretidle: sule3
-        Start: 122
+	turretidle: sule3
+		Start: 122
 		Facings: 8
 	turretanim: sule3
-        Tick: 100
+		Tick: 100
 		Start: 66
 		Length: 7
 		Facings: 8 
-    idle-overlay: 
+	idle-overlay: 
 		ZOffset: 1024
-        Start: 13
-        Offset: 0,-12
+		Start: 13
+		Offset: 0,-12
 	damaged-idle-overlay: 
 		ZOffset: 1024
-        Start: 14
-        Offset: 0,-12
-        
+		Start: 14
+		Offset: 0,-12
+		
 #SiegeWeapons
 
 sulb0:
 	stand: 
-        Start: 0
+		Start: 0
 		Facings: 32
 	run: 
 		Start: 88
@@ -1024,23 +1024,23 @@ sulb0:
 		Facings: 32
 		Tick: 100
 	die: 
-        Start: 312
-        Tick: 100
-        Length: 12
+		Start: 312
+		Tick: 100
+		Length: 12
 	icon: sulb0icon.shp
 		AddExtension: False 
-    turretidle: sule3
-        Start: 122
+	turretidle: sule3
+		Start: 122
 		Facings: 8
 	turretanim: sule3
-        Tick: 100
+		Tick: 100
 		Start: 66
 		Length: 7
 		Facings: 8 
 
 sulb1:
 	stand: 
-        Start: 0
+		Start: 0
 		Facings: 32
 	run: 
 		Start: 32
@@ -1048,61 +1048,61 @@ sulb1:
 		Facings: 8
 		Tick: 100
 	shoot: 
-        Tick: 80
+		Tick: 80
 		Start: 88
 		Length: 7
 		Facings: 32
 	die1: sulb1husk
-        Start: 0
-        Tick: 100
-        Length: 7
+		Start: 0
+		Tick: 100
+		Length: 7
 		Facings: 32
 	# Explode
 	die2: sulb1husk
-        Start: 0
-        Tick: 100
-        Length: 7
+		Start: 0
+		Tick: 100
+		Length: 7
 		Facings: 32
 	# Fly and explode in air
 	die3: sulb1husk
-        Start: 0
-        Tick: 100
-        Length: 7
+		Start: 0
+		Tick: 100
+		Length: 7
 		Facings: 32
 	# Fly through air squish on ground
 	die4: sulb1husk
-        Start: 0
-        Tick: 100
-        Length: 7
+		Start: 0
+		Tick: 100
+		Length: 7
 		Facings: 32
 	# Burn
 	die5: sulb1husk
-        Start: 0
-        Tick: 100
-        Length: 7
+		Start: 0
+		Tick: 100
+		Length: 7
 		Facings: 32
 	# Tib
 	die6: sulb1husk
-        Start: 0
-        Tick: 100
-        Length: 7
+		Start: 0
+		Tick: 100
+		Length: 7
 		Facings: 32
 	icon: sulb1icon.shp
 		AddExtension: False 
 
 sulb1.husk:
 	start: sulb1husk
-        Start: 0
-        Tick: 100
-        Length: 7
+		Start: 0
+		Tick: 100
+		Length: 7
 		Facings: 32
-    idle: sulb1husk
-        Start: 225
-		Facings: 32        
-        
+	idle: sulb1husk
+		Start: 225
+		Facings: 32		
+		
 sulb2:
 	stand: 
-        Start: 0
+		Start: 0
 		Facings: 32
 	run: 
 		Start: 32
@@ -1110,71 +1110,71 @@ sulb2:
 		Facings: 8
 		Tick: 100
 	shoot: 
-        Tick: 80
+		Tick: 80
 		Start: 88
 		Length: 7
 		Facings: 32
 	die1: sulb2husk
-        Start: 0
-        Tick: 100
-        Length: 7
+		Start: 0
+		Tick: 100
+		Length: 7
 		Facings: 32
 	# Explode
 	die2: sulb2husk
-        Start: 0
-        Tick: 100
-        Length: 7
+		Start: 0
+		Tick: 100
+		Length: 7
 		Facings: 32
 	# Fly and explode in air
 	die3: sulb2husk
-        Start: 0
-        Tick: 100
-        Length: 7
+		Start: 0
+		Tick: 100
+		Length: 7
 		Facings: 32
 	# Fly through air squish on ground
 	die4: sulb2husk
-        Start: 0
-        Tick: 100
-        Length: 7
+		Start: 0
+		Tick: 100
+		Length: 7
 		Facings: 32
 	# Burn
 	die5: sulb2husk
-        Start: 0
-        Tick: 100
-        Length: 7
+		Start: 0
+		Tick: 100
+		Length: 7
 		Facings: 32
 	# Tib
 	die6: sulb2husk
-        Start: 0
-        Tick: 100
-        Length: 7
+		Start: 0
+		Tick: 100
+		Length: 7
 		Facings: 32
 	icon: sulb2icon.shp
 		AddExtension: False 
 
 sulb2.husk:
 	start: sulb2husk
-        Start: 0
-        Tick: 100
-        Length: 7
+		Start: 0
+		Tick: 100
+		Length: 7
 		Facings: 32
-    idle: sulb2husk
-        Start: 225
+	idle: sulb2husk
+		Start: 225
 		Facings: 32  
 
 sulb3:
 	idle: 
-        Start: 0
-        Length: 7
+		Start: 0
+		Length: 7
 		Facings: 32
-        Tick: 100
-    move: 
-        Start: 0
-        Length: 7
+		Tick: 100
+	move: 
+		Start: 0
+		Length: 7
 		Facings: 32
-        Tick: 60
+		Tick: 60
 	attack: 
-        Tick: 80
+		Tick: 80
 		Start: 225
 		Length: 7
 		Facings: 32
@@ -1182,30 +1182,30 @@ sulb3:
 		AddExtension: False 
 
 sulb3.husk:
-    idle: sulb3
-        Start: 449
-		Facings: 32         
+	idle: sulb3
+		Start: 449
+		Facings: 32		 
 
 sulspball:
 	turretanim:
-        Start: 32
-        Facings: 32
-        Length: 7
-        Tick: 80
-    turret:
-        Start: 32
-        Facings: 32
-        Length: 7
-        Tick: 80
-    idle: 
-        Start: 0
-        Facings: 32
+		Start: 32
+		Facings: 32
+		Length: 7
+		Tick: 80
+	turret:
+		Start: 32
+		Facings: 32
+		Length: 7
+		Tick: 80
+	idle: 
+		Start: 0
+		Facings: 32
 	damaged-idle: sulspballd
-        Start: 0
-        Facings: 32
-    dead: sulspballd
+		Start: 0
+		Facings: 32
+	dead: sulspballd
 		Tick: 800
-        Start: 289
+		Start: 289
 	make: sulspballmake
 		Length: *
 		Tick: 80
@@ -1217,55 +1217,55 @@ sulspball:
 			SNOW: TEMPERAT
 		Length: *
 	icon: sulspballicon.shp
-		AddExtension: False        
-        
-        
+		AddExtension: False		
+		
+		
 #misc
 
-smbllboltdown:     
-    idle: smallaaballarrow
+smbllboltdown:	 
+	idle: smallaaballarrow
 		Start: 16
-        
-snakemissil:     
-    idle: sulm4
+		
+snakemissil:	 
+	idle: sulm4
 		Start: 288
-        Tick: 80
-        Facings: 8
-        Length: 3
-        
-sulb3feather:     
-    idle: 
-        Facings: 32
-        
-sulb3feathersmall:    
-    idle: 
-        Facings: 32
-        
+		Tick: 80
+		Facings: 8
+		Length: 3
+		
+sulb3feather:	 
+	idle: 
+		Facings: 32
+		
+sulb3feathersmall:	
+	idle: 
+		Facings: 32
+		
 sulturnxl:
-    make: sulturn
-        Start: 0
-        Length: 40
-        Tick: 100
-        Offset: 30, -52
-        ZOffset: 2024
-    idle: sulturn
-        Start: 40
-        Length: 130
-        Tick: 100
-        Offset: 30, -52
-        ZOffset: 2024
-    die: sulturn
-        Start: 180
-        Length: 30
-        Tick: 100
-        Offset: 30, -52
-        ZOffset: 2024
-        
+	make: sulturn
+		Start: 0
+		Length: 40
+		Tick: 100
+		Offset: 30, -52
+		ZOffset: 2024
+	idle: sulturn
+		Start: 40
+		Length: 130
+		Tick: 100
+		Offset: 30, -52
+		ZOffset: 2024
+	die: sulturn
+		Start: 180
+		Length: 30
+		Tick: 100
+		Offset: 30, -52
+		ZOffset: 2024
+		
 beacon:
-    sulspballiconstiny: sulspballiconstiny
-        Offset: 0,-42
-        
+	sulspballiconstiny: sulspballiconstiny
+		Offset: 0,-42
+		
 icon:
-    sulb2iconsmall: sulb2iconsmall.shp
-    sulspballiconsmall: sulspballiconsmall.shp
-    sulturnxlicon: sulturnxlicon.shp
+	sulb2iconsmall: sulb2iconsmall.shp
+	sulspballiconsmall: sulspballiconsmall.shp
+	sulturnxlicon: sulturnxlicon.shp

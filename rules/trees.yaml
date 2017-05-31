@@ -4,12 +4,12 @@ SPLIT2:
 		ResourceType: Tiberium
 		Interval: 55
 	WithIdleAnimation:
-    Tooltip:
+	Tooltip:
 		Name: Iron Mine
-    RenderSprites:
-        Image: ironmine
-        PlayerPalette: raplayer
-        Palette: ra
+	RenderSprites:
+		Image: ironmine
+		PlayerPalette: raplayer
+		Palette: ra
 
 SPLIT3:
 	Inherits: ^TibTree
@@ -19,17 +19,17 @@ SPLIT3:
 		ResourceType: Tiberium
 		Interval: 55
 	WithIdleAnimation:
-    RenderSprites:
-        Image: coppermine
-        PlayerPalette: raplayer
-        Palette: ra
-    Tooltip:
+	RenderSprites:
+		Image: coppermine
+		PlayerPalette: raplayer
+		Palette: ra
+	Tooltip:
 		Name: Scarecrow (Crops)
-    SeedsResource:
+	SeedsResource:
 		ResourceType: Copper
 		Interval: 35
-    WithIdleAnimation:
-        Interval: 200
+	WithIdleAnimation:
+		Interval: 200
 
 SPLITBLUE:
 	Inherits: ^TibTree
@@ -41,80 +41,80 @@ SPLITBLUE:
 	WithIdleAnimation:
 	RadarColorFromTerrain:
 		Terrain: BlueTiberium
-    Tooltip:
+	Tooltip:
 		Name: Gold Mine
-    RenderSprites:
-        Image: goldmine
-        PlayerPalette: raplayer
-        Palette: ra
-        
+	RenderSprites:
+		Image: goldmine
+		PlayerPalette: raplayer
+		Palette: ra
+		
 SPLIT4:
-    Inherits: SPLIT3
-    Tooltip:
+	Inherits: SPLIT3
+	Tooltip:
 		Name: Scarecrow (Grain)
-    SeedsResource:
+	SeedsResource:
 		ResourceType: Grains
 		Interval: 35
-        
+		
 SPLIT4B:
-    Inherits: SPLIT3
-    Tooltip:
+	Inherits: SPLIT3
+	Tooltip:
 		Name: Scarecrow (Corn)
-    SeedsResource:
+	SeedsResource:
 		ResourceType: Corn
 		Interval: 35
-        
+		
 SPLIT5:
-    Inherits: SPLIT3
-    RenderSprites:
-        Image: mwlumbershack
-        PlayerPalette: 
-        Palette: mwcivilian
-    Tooltip:
+	Inherits: SPLIT3
+	RenderSprites:
+		Image: mwlumbershack
+		PlayerPalette: 
+		Palette: mwcivilian
+	Tooltip:
 		Name: Lumber Shack
-    -SeedsResource:
-    -WithIdleAnimation:
-    ConditionManager:
-    Targetable:
+	-SeedsResource:
+	-WithIdleAnimation:
+	ConditionManager:
+	Targetable:
 		TargetTypes: LumberShack
-    ProximityExternalCondition@Jack:
-        Range: 8c0
-        ValidStances: Ally, Neutral, Enemy
-        Condition: Jack
-    ExternalCondition@Loot:
-        Condition: BuildingLoot
-    SeedsResource:
-        RequiresCondition: BuildingLoot
-        ResourceType: Lumber
-        Interval: 50
-        MaxRange: 4
-        
+	ProximityExternalCondition@Jack:
+		Range: 8c0
+		ValidStances: Ally, Neutral, Enemy
+		Condition: Jack
+	ExternalCondition@Loot:
+		Condition: BuildingLoot
+	SeedsResource:
+		RequiresCondition: BuildingLoot
+		ResourceType: Lumber
+		Interval: 50
+		MaxRange: 4
+		
 SPLIT6:
-    Inherits: SPLIT3
-    RenderSprites:
-        Palette: terrain
-        Image: v24
-    Tooltip:
+	Inherits: SPLIT3
+	RenderSprites:
+		Palette: terrain
+		Image: v24
+	Tooltip:
 		Name: Camel Trader
-    SeedsResource:
-        RequiresCondition: BuildingLoot
-        ResourceType: Goods
-        Interval: 50
-        MaxRange: 4
-    -WithIdleAnimation:
-    Building:
+	SeedsResource:
+		RequiresCondition: BuildingLoot
+		ResourceType: Goods
+		Interval: 50
+		MaxRange: 4
+	-WithIdleAnimation:
+	Building:
 		Footprint: __ xx
 		Dimensions: 2,2
-    ConditionManager:
-    ExternalCondition@Loot:
-        Condition: BuildingLoot
-    Targetable:
+	ConditionManager:
+	ExternalCondition@Loot:
+		Condition: BuildingLoot
+	Targetable:
 		TargetTypes: CamelTrader
-    ProximityExternalCondition@Trader:
-        Range: 8c0
-        ValidStances: Ally, Neutral, Enemy
-        Condition: Trader
-    EditorTilesetFilter:
+	ProximityExternalCondition@Trader:
+		Range: 8c0
+		ValidStances: Ally, Neutral, Enemy
+		Condition: Trader
+	EditorTilesetFilter:
 		RequireTilesets: DESERT
 
 ROCK1:
@@ -209,9 +209,9 @@ T10:
 		Footprint: __ xx
 	EditorTilesetFilter:
 		ExcludeTilesets: DESERT
-    Explodes@Tib:
+	Explodes@Tib:
 		Weapon: LeaveWoodL
-        EmptyWeapon: LeaveWoodL
+		EmptyWeapon: LeaveWoodL
 
 T11:
 	Inherits: ^Tree
@@ -221,7 +221,7 @@ T11:
 		ExcludeTilesets: DESERT
 	Explodes@Tib:
 		Weapon: LeaveWoodL
-        EmptyWeapon: LeaveWoodL
+		EmptyWeapon: LeaveWoodL
 
 T12:
 	Inherits: ^Tree
@@ -249,7 +249,7 @@ T15:
 		ExcludeTilesets: DESERT
 	Explodes@Tib:
 		Weapon: LeaveWoodL
-        EmptyWeapon: LeaveWoodL
+		EmptyWeapon: LeaveWoodL
 
 T16:
 	Inherits: ^Tree
@@ -275,7 +275,7 @@ TC01:
 		ExcludeTilesets: DESERT
 	Explodes@Tib:
 		Weapon: LeaveWoodL
-        EmptyWeapon: LeaveWoodL
+		EmptyWeapon: LeaveWoodL
 
 TC02:
 	Inherits: ^Tree
@@ -286,7 +286,7 @@ TC02:
 		ExcludeTilesets: DESERT
 	Explodes@Tib:
 		Weapon: LeaveWoodXL
-        EmptyWeapon: LeaveWoodXL
+		EmptyWeapon: LeaveWoodXL
 
 TC03:
 	Inherits: ^Tree
@@ -297,7 +297,7 @@ TC03:
 		ExcludeTilesets: DESERT
 	Explodes@Tib:
 		Weapon: LeaveWoodXL
-        EmptyWeapon: LeaveWoodXL
+		EmptyWeapon: LeaveWoodXL
 
 TC04:
 	Inherits: ^Tree
@@ -308,7 +308,7 @@ TC04:
 		ExcludeTilesets: DESERT
 	Explodes@Tib:
 		Weapon: LeaveWoodXL
-        EmptyWeapon: LeaveWoodXL
+		EmptyWeapon: LeaveWoodXL
 
 TC05:
 	Inherits: ^Tree
@@ -319,4 +319,4 @@ TC05:
 		ExcludeTilesets: DESERT
 	Explodes@Tib:
 		Weapon: LeaveWoodXL
-        EmptyWeapon: LeaveWoodXL
+		EmptyWeapon: LeaveWoodXL

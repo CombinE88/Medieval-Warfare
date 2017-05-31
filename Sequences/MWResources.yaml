@@ -1,364 +1,364 @@
 resources:
-    Defaults:
-        TilesetOverrides:
+	Defaults:
+		TilesetOverrides:
 			WINTER: TEMPERAT
 			JUNGLE: TEMPERAT
 			SNOW: TEMPERAT
-            DESERT: TEMPERAT
-    guns1: guns1
-    guns2: guns2
-    guns3: guns3
-    guns4: guns4
-    guns5: guns5
-    guns6: guns6
-    reslumb1: reslumb1
-    reslumb2: reslumb2
-    reslumb3: reslumb3
-    reslumb4: reslumb4
-    reslumb5: reslumb5
-    reslumb6: reslumb6
-    goods1: resgoods1
-    goods2: resgoods2
-    goods3: resgoods3
-    goods4: resgoods4
-    goods5: resgoods5
-    wood1: reswoodall
-        Length: 5
-    wood2: reswoodall
-        Length: 5
-        Start: 5
-    wood3: reswoodall
-        Length: 5
-        Start: 10
-    wood4: reswoodall
-        Length: 5
-        Start: 15
-    wood5: reswoodall
-        Length: 5
-        Start: 20
-    wood6: reswoodall
-        Length: 5
-        Start: 25
-    wood7: reswoodall
-        Length: 5
-        Start: 30
-    crop1: rescrop
-    	TilesetOverrides:
+			DESERT: TEMPERAT
+	guns1: guns1
+	guns2: guns2
+	guns3: guns3
+	guns4: guns4
+	guns5: guns5
+	guns6: guns6
+	reslumb1: reslumb1
+	reslumb2: reslumb2
+	reslumb3: reslumb3
+	reslumb4: reslumb4
+	reslumb5: reslumb5
+	reslumb6: reslumb6
+	goods1: resgoods1
+	goods2: resgoods2
+	goods3: resgoods3
+	goods4: resgoods4
+	goods5: resgoods5
+	wood1: reswoodall
+		Length: 5
+	wood2: reswoodall
+		Length: 5
+		Start: 5
+	wood3: reswoodall
+		Length: 5
+		Start: 10
+	wood4: reswoodall
+		Length: 5
+		Start: 15
+	wood5: reswoodall
+		Length: 5
+		Start: 20
+	wood6: reswoodall
+		Length: 5
+		Start: 25
+	wood7: reswoodall
+		Length: 5
+		Start: 30
+	crop1: rescrop
+		TilesetOverrides:
 			WINTER: TEMPERAT
 			JUNGLE: TEMPERAT
 			SNOW: TEMPERAT
-            DESERT: DESERT
-        Length: 12
-        Start: 0
-    crop2: rescrop
-    	TilesetOverrides:
+			DESERT: DESERT
+		Length: 12
+		Start: 0
+	crop2: rescrop
+		TilesetOverrides:
 			WINTER: TEMPERAT
 			JUNGLE: TEMPERAT
 			SNOW: TEMPERAT
-            DESERT: DESERT
-        Length: 12
-        Start: 12    
-    crop3: rescrop
-    	TilesetOverrides:
+			DESERT: DESERT
+		Length: 12
+		Start: 12	
+	crop3: rescrop
+		TilesetOverrides:
 			WINTER: TEMPERAT
 			JUNGLE: TEMPERAT
 			SNOW: TEMPERAT
-            DESERT: DESERT
-        Length: 12
-        Start: 24
-    crop4: rescrop
-    	TilesetOverrides:
+			DESERT: DESERT
+		Length: 12
+		Start: 24
+	crop4: rescrop
+		TilesetOverrides:
 			WINTER: TEMPERAT
 			JUNGLE: TEMPERAT
 			SNOW: TEMPERAT
-            DESERT: DESERT
-        Length: 12
-        Start: 36
-    crop5: rescrop
-    	TilesetOverrides:
+			DESERT: DESERT
+		Length: 12
+		Start: 36
+	crop5: rescrop
+		TilesetOverrides:
 			WINTER: TEMPERAT
 			JUNGLE: TEMPERAT
 			SNOW: TEMPERAT
-            DESERT: DESERT
-        Length: 12
-        Start: 48
-    crop6: rescrop
-    	TilesetOverrides:
+			DESERT: DESERT
+		Length: 12
+		Start: 48
+	crop6: rescrop
+		TilesetOverrides:
 			WINTER: TEMPERAT
 			JUNGLE: TEMPERAT
 			SNOW: TEMPERAT
-            DESERT: DESERT
-        Length: 12
-        Start: 60
-    crop7: rescrop
-    	TilesetOverrides:
+			DESERT: DESERT
+		Length: 12
+		Start: 60
+	crop7: rescrop
+		TilesetOverrides:
 			WINTER: TEMPERAT
 			JUNGLE: TEMPERAT
 			SNOW: TEMPERAT
-            DESERT: DESERT
-        Length: 12
-        Start: 72
-    crop8: rescrop
-    	TilesetOverrides:
+			DESERT: DESERT
+		Length: 12
+		Start: 72
+	crop8: rescrop
+		TilesetOverrides:
 			WINTER: TEMPERAT
 			JUNGLE: TEMPERAT
 			SNOW: TEMPERAT
-            DESERT: DESERT
-        Length: 12
-        Start: 84
-    crop9: rescrop
-    	TilesetOverrides:
+			DESERT: DESERT
+		Length: 12
+		Start: 84
+	crop9: rescrop
+		TilesetOverrides:
 			WINTER: TEMPERAT
 			JUNGLE: TEMPERAT
 			SNOW: TEMPERAT
-            DESERT: DESERT
-        Length: 12
-        Start: 96
-    crop10: rescrop
-    	TilesetOverrides:
+			DESERT: DESERT
+		Length: 12
+		Start: 96
+	crop10: rescrop
+		TilesetOverrides:
 			WINTER: TEMPERAT
 			JUNGLE: TEMPERAT
 			SNOW: TEMPERAT
-            DESERT: DESERT
-        Length: 12
-        Start: 108
-    crop11: rescrop
-    	TilesetOverrides:
+			DESERT: DESERT
+		Length: 12
+		Start: 108
+	crop11: rescrop
+		TilesetOverrides:
 			WINTER: TEMPERAT
 			JUNGLE: TEMPERAT
 			SNOW: TEMPERAT
-            DESERT: DESERT
-        Length: 12
-        Start: 120
-    gold1: resgol1
-    	TilesetOverrides:
+			DESERT: DESERT
+		Length: 12
+		Start: 120
+	gold1: resgol1
+		TilesetOverrides:
 			WINTER: TEMPERAT
 			JUNGLE: TEMPERAT
 			SNOW: TEMPERAT
-    gold2: resgol2
-    	TilesetOverrides:
+	gold2: resgol2
+		TilesetOverrides:
 			WINTER: TEMPERAT
 			JUNGLE: TEMPERAT
 			SNOW: TEMPERAT
-    gold3: resgol3
-    	TilesetOverrides:
+	gold3: resgol3
+		TilesetOverrides:
 			WINTER: TEMPERAT
 			JUNGLE: TEMPERAT
 			SNOW: TEMPERAT
-    gold4: resgol4
-    	TilesetOverrides:
+	gold4: resgol4
+		TilesetOverrides:
 			WINTER: TEMPERAT
 			JUNGLE: TEMPERAT
 			SNOW: TEMPERAT
-    gold5: resgol5
-    	TilesetOverrides:
+	gold5: resgol5
+		TilesetOverrides:
 			WINTER: TEMPERAT
 			JUNGLE: TEMPERAT
 			SNOW: TEMPERAT
-    gold6: resgol6
-    	TilesetOverrides:
+	gold6: resgol6
+		TilesetOverrides:
 			WINTER: TEMPERAT
 			JUNGLE: TEMPERAT
 			SNOW: TEMPERAT
-    gold7: resgol7
-    	TilesetOverrides:
+	gold7: resgol7
+		TilesetOverrides:
 			WINTER: TEMPERAT
 			JUNGLE: TEMPERAT
 			SNOW: TEMPERAT
-    gold8: resgol8
-        TilesetOverrides:
+	gold8: resgol8
+		TilesetOverrides:
 			WINTER: TEMPERAT
 			JUNGLE: TEMPERAT
 			SNOW: TEMPERAT
-    gold9: resgol9
-    	TilesetOverrides:
+	gold9: resgol9
+		TilesetOverrides:
 			WINTER: TEMPERAT
 			JUNGLE: TEMPERAT
 			SNOW: TEMPERAT
-    gold10: resgol10
-    	TilesetOverrides:
+	gold10: resgol10
+		TilesetOverrides:
 			WINTER: TEMPERAT
 			JUNGLE: TEMPERAT
 			SNOW: TEMPERAT
-    iron1: ironres1
-    	TilesetOverrides:
+	iron1: ironres1
+		TilesetOverrides:
 			WINTER: TEMPERAT
 			JUNGLE: TEMPERAT
 			SNOW: TEMPERAT
-    iron2: ironres2
-    	TilesetOverrides:
+	iron2: ironres2
+		TilesetOverrides:
 			WINTER: TEMPERAT
 			JUNGLE: TEMPERAT
 			SNOW: TEMPERAT
-    iron3: ironres3
-    	TilesetOverrides:
+	iron3: ironres3
+		TilesetOverrides:
 			WINTER: TEMPERAT
 			JUNGLE: TEMPERAT
 			SNOW: TEMPERAT
-    iron4: ironres4
-    	TilesetOverrides:
+	iron4: ironres4
+		TilesetOverrides:
 			WINTER: TEMPERAT
 			JUNGLE: TEMPERAT
 			SNOW: TEMPERAT
-    iron5: ironres5
-    	TilesetOverrides:
+	iron5: ironres5
+		TilesetOverrides:
 			WINTER: TEMPERAT
 			JUNGLE: TEMPERAT
 			SNOW: TEMPERAT
-    iron6: ironres6
-    	TilesetOverrides:
+	iron6: ironres6
+		TilesetOverrides:
 			WINTER: TEMPERAT
 			JUNGLE: TEMPERAT
 			SNOW: TEMPERAT
-    iron7: ironres7
-    	TilesetOverrides:
+	iron7: ironres7
+		TilesetOverrides:
 			WINTER: TEMPERAT
 			JUNGLE: TEMPERAT
 			SNOW: TEMPERAT
-    iron8: ironres8
-        TilesetOverrides:
+	iron8: ironres8
+		TilesetOverrides:
 			WINTER: TEMPERAT
 			JUNGLE: TEMPERAT
 			SNOW: TEMPERAT
-    iron9: ironres9
-    	TilesetOverrides:
+	iron9: ironres9
+		TilesetOverrides:
 			WINTER: TEMPERAT
 			JUNGLE: TEMPERAT
 			SNOW: TEMPERAT
-    iron10: ironres10
-    	TilesetOverrides:
+	iron10: ironres10
+		TilesetOverrides:
 			WINTER: TEMPERAT
 			JUNGLE: TEMPERAT
 			SNOW: TEMPERAT
-    iron11: ironres11
-    	TilesetOverrides:
+	iron11: ironres11
+		TilesetOverrides:
 			WINTER: TEMPERAT
 			JUNGLE: TEMPERAT
 			SNOW: TEMPERAT
-    iron12: ironres12
-    	TilesetOverrides:
+	iron12: ironres12
+		TilesetOverrides:
 			WINTER: TEMPERAT
 			JUNGLE: TEMPERAT
 			SNOW: TEMPERAT
-    grain1: resgrain
-        Offset: 0, -12, 0
-        Start: 0
-        Length: 12
-    	TilesetOverrides:
+	grain1: resgrain
+		Offset: 0, -12, 0
+		Start: 0
+		Length: 12
+		TilesetOverrides:
 			WINTER: TEMPERAT
 			JUNGLE: TEMPERAT
 			SNOW: TEMPERAT
-    grain2: resgrain
-        Start: 12
-        Length: 12
-        Offset: 0, -12, 0
-    	TilesetOverrides:
+	grain2: resgrain
+		Start: 12
+		Length: 12
+		Offset: 0, -12, 0
+		TilesetOverrides:
 			WINTER: TEMPERAT
 			JUNGLE: TEMPERAT
 			SNOW: TEMPERAT
-    grain3: resgrain
-        Start: 24
-        Length: 12
-        Offset: 0, -12, 0
-    	TilesetOverrides:
+	grain3: resgrain
+		Start: 24
+		Length: 12
+		Offset: 0, -12, 0
+		TilesetOverrides:
 			WINTER: TEMPERAT
 			JUNGLE: TEMPERAT
 			SNOW: TEMPERAT
-    grain4: resgrain
-        Start: 36
-        Length: 12
-        Offset: 0, -12, 0
-    	TilesetOverrides:
+	grain4: resgrain
+		Start: 36
+		Length: 12
+		Offset: 0, -12, 0
+		TilesetOverrides:
 			WINTER: TEMPERAT
 			JUNGLE: TEMPERAT
 			SNOW: TEMPERAT
-    grain5: resgrain
-        Start: 48
-        Length: 12
-        Offset: 0, -12, 0
-    	TilesetOverrides:
+	grain5: resgrain
+		Start: 48
+		Length: 12
+		Offset: 0, -12, 0
+		TilesetOverrides:
 			WINTER: TEMPERAT
 			JUNGLE: TEMPERAT
 			SNOW: TEMPERAT
-    grain6: resgrain
-        Start: 60
-        Length: 12
-        Offset: 0, -12, 0
-    	TilesetOverrides:
+	grain6: resgrain
+		Start: 60
+		Length: 12
+		Offset: 0, -12, 0
+		TilesetOverrides:
 			WINTER: TEMPERAT
 			JUNGLE: TEMPERAT
 			SNOW: TEMPERAT
-    grain7: resgrain
-        Start: 72
-        Length: 12
-        Offset: 0, -12, 0
-    	TilesetOverrides:
+	grain7: resgrain
+		Start: 72
+		Length: 12
+		Offset: 0, -12, 0
+		TilesetOverrides:
 			WINTER: TEMPERAT
 			JUNGLE: TEMPERAT
 			SNOW: TEMPERAT
-    corn1: rescorn
-        TilesetOverrides:
-            DESERT: DESERT
-        Start: 0
-        Length: 12
-        Offset: 0, -12, 0
-    corn2: rescorn
-        TilesetOverrides:
-            DESERT: DESERT
-        Start: 12
-        Length: 12
-        Offset: 0, -12, 0
-    corn3: rescorn
-        TilesetOverrides:
-            DESERT: DESERT
-        Start: 24
-        Length: 12
-        Offset: 0, -12, 0
-    corn4: rescorn
-        TilesetOverrides:
-            DESERT: DESERT
-        Start: 36
-        Length: 12
-        Offset: 0, -12, 0
-    corn5: rescorn
-        TilesetOverrides:
-            DESERT: DESERT
-        Start: 48
-        Length: 12
-        Offset: 0, -12, 0
-    corn6: rescorn
-        TilesetOverrides:
-            DESERT: DESERT
-        Start: 60
-        Length: 12
-        Offset: 0, -12, 0
-    corn7: rescorn
-        TilesetOverrides:
-            DESERT: DESERT
-        Start: 72
-        Length: 12
-        Offset: 0, -12, 0
-    corn8: rescorn
-        TilesetOverrides:
-            DESERT: DESERT
-        Start: 84
-        Length: 12
-        Offset: 0, -12, 0
-    corn9: rescorn
-        TilesetOverrides:
-            DESERT: DESERT
-        Start: 96
-        Length: 12
-        Offset: 0, -12, 0
-    corn10: rescorn
-        TilesetOverrides:
-            DESERT: DESERT
-        Start: 108
-        Length: 12
-        Offset: 0, -12, 0
-    corn11: rescorn
-        TilesetOverrides:
-            DESERT: DESERT
-        Start: 120
-        Length: 12
-        Offset: 0, -12, 0
+	corn1: rescorn
+		TilesetOverrides:
+			DESERT: DESERT
+		Start: 0
+		Length: 12
+		Offset: 0, -12, 0
+	corn2: rescorn
+		TilesetOverrides:
+			DESERT: DESERT
+		Start: 12
+		Length: 12
+		Offset: 0, -12, 0
+	corn3: rescorn
+		TilesetOverrides:
+			DESERT: DESERT
+		Start: 24
+		Length: 12
+		Offset: 0, -12, 0
+	corn4: rescorn
+		TilesetOverrides:
+			DESERT: DESERT
+		Start: 36
+		Length: 12
+		Offset: 0, -12, 0
+	corn5: rescorn
+		TilesetOverrides:
+			DESERT: DESERT
+		Start: 48
+		Length: 12
+		Offset: 0, -12, 0
+	corn6: rescorn
+		TilesetOverrides:
+			DESERT: DESERT
+		Start: 60
+		Length: 12
+		Offset: 0, -12, 0
+	corn7: rescorn
+		TilesetOverrides:
+			DESERT: DESERT
+		Start: 72
+		Length: 12
+		Offset: 0, -12, 0
+	corn8: rescorn
+		TilesetOverrides:
+			DESERT: DESERT
+		Start: 84
+		Length: 12
+		Offset: 0, -12, 0
+	corn9: rescorn
+		TilesetOverrides:
+			DESERT: DESERT
+		Start: 96
+		Length: 12
+		Offset: 0, -12, 0
+	corn10: rescorn
+		TilesetOverrides:
+			DESERT: DESERT
+		Start: 108
+		Length: 12
+		Offset: 0, -12, 0
+	corn11: rescorn
+		TilesetOverrides:
+			DESERT: DESERT
+		Start: 120
+		Length: 12
+		Offset: 0, -12, 0

@@ -12,7 +12,7 @@ Packages:
 	~^Content/cnc/movies
 	.
 	$cnc: cnc
-    $mw: mw
+	$mw: mw
 	./mods/common: common
 	~speech.mix
 	~conquer.mix
@@ -36,15 +36,15 @@ Packages:
 	mw|bits/Misc
 	mw|bits/Music
 	mw|bits/Sounds
-    mw|bits/Voice
-    mw|bits/Scripts
-    mw|bits/Icons
-    mw|bits/Resources
-    mw|bits/Buildings
-    mw|bits/Sultan
+	mw|bits/Voice
+	mw|bits/Scripts
+	mw|bits/Icons
+	mw|bits/Resources
+	mw|bits/Buildings
+	mw|bits/Sultan
 	mw|uibits
-    mw|bits/terrain
-    mw|bits/terrain/Desert
+	mw|bits/terrain
+	mw|bits/terrain/Desert
 
 MapFolders:
 	mw|maps: System
@@ -67,8 +67,8 @@ Rules:
 	mw|rules/Props.yaml
 	mw|rules/Siegeweapons.yaml
 	mw|rules/trees.yaml
-    mw|rules/world.yaml
-    mw|rules/Sultan.yaml
+	mw|rules/world.yaml
+	mw|rules/Sultan.yaml
 
 Sequences:
 	cnc|sequences/structures.yaml
@@ -80,16 +80,16 @@ Sequences:
 	cnc|sequences/funpark.yaml
 	cnc|sequences/civilian.yaml
 	cnc|sequences/campaign.yaml
-    mw|Sequences/MWBuildings.yaml
-    mw|Sequences/MWCavalry.yaml
-    mw|Sequences/MWCivilians.yaml
-    mw|Sequences/MWEnvironments.yaml
-    mw|Sequences/MWInfantry.yaml
-    mw|Sequences/MWmisc.yaml
-    mw|Sequences/MWProps.yaml
-    mw|Sequences/MWResources.yaml
-    mw|Sequences/MWSiegeweapons.yaml
-    mw|Sequences/MWSultan.yaml
+	mw|Sequences/MWBuildings.yaml
+	mw|Sequences/MWCavalry.yaml
+	mw|Sequences/MWCivilians.yaml
+	mw|Sequences/MWEnvironments.yaml
+	mw|Sequences/MWInfantry.yaml
+	mw|Sequences/MWmisc.yaml
+	mw|Sequences/MWProps.yaml
+	mw|Sequences/MWResources.yaml
+	mw|Sequences/MWSiegeweapons.yaml
+	mw|Sequences/MWSultan.yaml
 
 TileSets:
 	mw|tilesets/desert.yaml
@@ -98,8 +98,8 @@ TileSets:
 	mw|tilesets/temperat.yaml
 
 Weapons:
-    mw|weapons/MWWeapons.yaml
-    mw|weapons/MWSultanW.yaml
+	mw|weapons/MWWeapons.yaml
+	mw|weapons/MWSultanW.yaml
 	cnc|weapons/explosions.yaml
 	cnc|weapons/ballistics.yaml
 	cnc|weapons/missiles.yaml
@@ -116,7 +116,7 @@ Chrome:
 Assemblies:
 	common|OpenRA.Mods.Common.dll
 	common|OpenRA.Mods.Cnc.dll
-    mw|OpenRA.Mods.AS.dll
+	mw|OpenRA.Mods.AS.dll
 
 ChromeLayout:
 	mw|chrome/mainmenu.yaml
@@ -157,7 +157,7 @@ ChromeLayout:
 
 Voices:
 	mw|audio/MWVoices.yaml
-    cnc|audio/voices.yaml
+	cnc|audio/voices.yaml
 
 Notifications:
 	mw|audio/MWNotifications.yaml

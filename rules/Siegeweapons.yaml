@@ -1,8 +1,8 @@
 MCVNEW:
 	Inherits: ^Siege
-    Power:
+	Power:
 		Amount: 10
-    Transforms:
+	Transforms:
 		IntoActor: factnew
 		Offset: -1,-1
 		Facing: 160
@@ -13,7 +13,7 @@ MCVNEW:
 	Tooltip:
 		Name: Supply wagon
 	Buildable:
-        IconPalette: raicon
+		IconPalette: raicon
 		BuildPaletteOrder: 100
 		Prerequisites: anyhq, ~techlevel.medium, anyarmory
 		Description: Deploys into another Keep.\n  Unarmed
@@ -21,65 +21,65 @@ MCVNEW:
 	Selectable:
 		Priority: 4
 	AttackFrontal:
-    Mobile:
-        Crushes: crate, infantry
+	Mobile:
+		Crushes: crate, infantry
 		Speed: 65
-        TurnSpeed: 3
+		TurnSpeed: 3
 	Health:
 		HP: 120000
-        Shape: Capsule
-            Radius: 426
-            PointA: 0, -612
-            PointB: 0, 512
+		Shape: Capsule
+			Radius: 426
+			PointA: 0, -612
+			PointB: 0, 512
 	Armor:
 		Type: Light
 	RevealsShroud:
 		Range: 8c0
-    RenderSprites:
-        Image: newmcv
-        PlayerPalette: raplayer
-    WithInfantryBody:
+	RenderSprites:
+		Image: newmcv
+		PlayerPalette: raplayer
+	WithInfantryBody:
 	MustBeDestroyed:
 		RequiredForShortGame: true
 	BaseBuilding:
 	SelectionDecorations:
 		VisualBounds: 36,36
-    SpawnActorOnDeath:
+	SpawnActorOnDeath:
 		Actor: MCVNEW.Husk 
-        OwnerType: InternalName
-		InternalOwner: Neutral
-    SpawnActorOnDeath@2:
-        Probability: 100
-        Actor: emptyross
 		OwnerType: InternalName
 		InternalOwner: Neutral
-    Voiced:
+	SpawnActorOnDeath@2:
+		Probability: 100
+		Actor: emptyross
+		OwnerType: InternalName
+		InternalOwner: Neutral
+	Voiced:
 		VoiceSet: CivilianFemaleVoice
-    ProximityExternalCondition@WANDERER:
-        Range: 6c0
-        ValidStances: Ally
-        Condition: Wander
-    ProximityExternalCondition@LABORER:
-        Range: 3c0
-        ValidStances: Ally
-        Condition: Labor
-    Targetable:
+	ProximityExternalCondition@WANDERER:
+		Range: 6c0
+		ValidStances: Ally
+		Condition: Wander
+	ProximityExternalCondition@LABORER:
+		Range: 3c0
+		ValidStances: Ally
+		Condition: Labor
+	Targetable:
 		TargetTypes: Ground, Siege, Wanderer, Laborer
 
 
-        
+		
 
 SIEGE1:
 	Inherits: ^Siege
-    Inherits@2: ^GainsExperience
+	Inherits@2: ^GainsExperience
 	Valued:
 		Cost: 950
 	Tooltip:
 		Name: Siege Ballista
 	Buildable:
-        IconPalette: raicon
+		IconPalette: raicon
 		BuildPaletteOrder: 20
-        Prerequisites: anyhq, ~techlevel.medium
+		Prerequisites: anyhq, ~techlevel.medium
 		Description: The Siege Ballista is a missile weapon that launched a large projectile \nat a distant target.\n  Very strong vs Cavalry and Buildings \n  Moderate vs Infantry\n  Weak vs Aircrafts
 		Queue: MSiege.Nod
 	Mobile:
@@ -87,38 +87,38 @@ SIEGE1:
 		Speed: 60
 	Health:
 		HP: 10000
-        Shape: Capsule
-            Radius: 526
-            PointA: 0, -412
-            PointB: 0, 212
+		Shape: Capsule
+			Radius: 526
+			PointA: 0, -412
+			PointB: 0, 212
 	Armament:
 		Weapon: siegebalista
-        LocalOffset: 712,0,100
+		LocalOffset: 712,0,100
 	AttackFrontal:
-    AutoTarget:
+	AutoTarget:
 		ScanRadius: 11
-    RenderSprites:
-        Image: siege1
-        PlayerPalette: raplayer
+	RenderSprites:
+		Image: siege1
+		PlayerPalette: raplayer
 	WithInfantryBody:
 		IdleSequences: stand
 		DefaultAttackSequence: shoot
-    Armor:
+	Armor:
 		Type: LightCavalry
-    Selectable:
+	Selectable:
 		Bounds: 35,35,0,-6
-    Power:
+	Power:
 		Amount: -4
-    Targetable:
+	Targetable:
 		TargetTypes: Ground, Siege
-    SpawnActorOnDeath:
+	SpawnActorOnDeath:
 		Actor: SIEGE1.Husk
-    SpawnActorOnDeath@1:
+	SpawnActorOnDeath@1:
 		Actor: SIEGERUNNER
-        Probability: 50
-    SpawnActorOnDeath@2:
+		Probability: 50
+	SpawnActorOnDeath@2:
 		Actor: SIEGERUNNER
-        Probability: 50
+		Probability: 50
 
 
 
@@ -130,9 +130,9 @@ SIEGE2:
 	Tooltip:
 		Name: Siege Catapult
 	Buildable:
-        IconPalette: raicon
+		IconPalette: raicon
 		BuildPaletteOrder: 20
-        Prerequisites: anyhq, ~techlevel.medium
+		Prerequisites: anyhq, ~techlevel.medium
 		Description: The Catapult is a ballistic device used to launch multiple projectiles \nat a great distance without the aid of explosive devices.\n  Very strong vs Infantry and Buildings\n  Moderate vs Cavalry\n  Weak vs Aircrafts
 		Queue: MSiege.GDI
 	Mobile:
@@ -140,322 +140,322 @@ SIEGE2:
 		TurnSpeed: 2
 	Health:
 		HP: 12000
-        Shape: Capsule
-            Radius: 526
-            PointA: 0, -412
-            PointB: 0, 212
+		Shape: Capsule
+			Radius: 526
+			PointA: 0, -412
+			PointB: 0, 212
 	Armament:
-        LocalOffset: 0,0,500
+		LocalOffset: 0,0,500
 		Weapon: siegeboulder
 	AttackFrontal:
-    AutoTarget:
+	AutoTarget:
 		ScanRadius: 12
-    RenderSprites:
-        Image: siege2
-        PlayerPalette: raplayer
+	RenderSprites:
+		Image: siege2
+		PlayerPalette: raplayer
 	WithInfantryBody:
 		IdleSequences: stand
 		DefaultAttackSequence: shoot
-    Armor:
+	Armor:
 		Type: LightCavalry
-    Selectable:
+	Selectable:
 		Bounds: 35,35,0,-6
-    Power:
+	Power:
 		Amount: -4
-    Targetable:
+	Targetable:
 		TargetTypes: Ground, Siege
-    SpawnActorOnDeath:
+	SpawnActorOnDeath:
 		Actor: SIEGE2.Husk
-    SpawnActorOnDeath@1:
+	SpawnActorOnDeath@1:
 		Actor: SIEGERUNNER
-        Probability: 50
-    SpawnActorOnDeath@2:
+		Probability: 50
+	SpawnActorOnDeath@2:
 		Actor: SIEGERUNNER
-        Probability: 50
-        
+		Probability: 50
+		
 
 
 SIEGE3:
 	Inherits: ^Siege
 	Inherits@2: ^GainsExperience
-    ConditionManager:
-    Cargo:
-        MaxWeight: 6
-        PipCount: 6
-        Types: Archer, Infantry
+	ConditionManager:
+	Cargo:
+		MaxWeight: 6
+		PipCount: 6
+		Types: Archer, Infantry
 	Valued:
 		Cost: 800
 	Tooltip:
 		Name: Siege Tower
 	Buildable:
-        IconPalette: raicon
+		IconPalette: raicon
 		BuildPaletteOrder: 20
-        Prerequisites: barracks, ~techlevel.medium
+		Prerequisites: barracks, ~techlevel.medium
 		Description: The Siege Tower is a specialized siege engine, \nconstructed to protect assailants while approaching the defensive walls of a fortification .\n  Crushes Walls and Infantry\n  Transports up to 6 men\n  Very strong vs Infantry and Aircrafts\n  Weak vs Cavalry\n  Can attack Aircrafts
 		Queue: MSiege.GDI
 	Mobile:
-        Crushes: wall, heavywall, crate, infantry
+		Crushes: wall, heavywall, crate, infantry
 		Speed: 55
-        SharesCell: false
-        TurnSpeed: 3
-    Health:
+		SharesCell: false
+		TurnSpeed: 3
+	Health:
 		HP: 30000
-        Shape: Rectangle
-            TopLeft: -512, -512
-            BottomRight: 512, 512
-    WithRoof:
-        Sequence: top
-    RenderSprites:
-        Image: siege3
-        PlayerPalette: raplayer
+		Shape: Rectangle
+			TopLeft: -512, -512
+			BottomRight: 512, 512
+	WithRoof:
+		Sequence: top
+	RenderSprites:
+		Image: siege3
+		PlayerPalette: raplayer
 	WithInfantryBody:
 		IdleSequences: stand
-    BodyOrientation:
+	BodyOrientation:
 		QuantizedFacings: 32
-    AutoTarget:
+	AutoTarget:
 		ScanRadius: 7
-        InitialStance: AttackAnything
-    Armor:
+		InitialStance: AttackAnything
+	Armor:
 		Type: HeavyCavalry
-    Selectable:
+	Selectable:
 		Bounds: 42,54,0,-8
-    SelectionDecorations:
+	SelectionDecorations:
 		VisualBounds: 42,54,0,-8
-    Power:
+	Power:
 		Amount: -6
-    Targetable:
+	Targetable:
 		TargetTypes: Ground, Siege
-    SpawnActorOnDeath:
+	SpawnActorOnDeath:
 		Actor: SIEGE3.Husk
-    SpawnActorOnDeath@1:
+	SpawnActorOnDeath@1:
 		Actor: SIEGERUNNER
-        Probability: 50
-    SpawnActorOnDeath@2:
+		Probability: 50
+	SpawnActorOnDeath@2:
 		Actor: SIEGERUNNER
-        Probability: 50
-    AttackTurreted:
-    WithSpriteTurret@1: 
-        Sequence: turretidle
-        AimSequence: turretanim
-        Turret: primary
-    WithSpriteTurret@2: 
-        Sequence: turretidle
-        AimSequence: turretanim
-        Turret: secondary
-    WithSpriteTurret@3: 
-        Sequence: turretidle
-        AimSequence: turretanim
-        Turret: tritiary
+		Probability: 50
+	AttackTurreted:
+	WithSpriteTurret@1: 
+		Sequence: turretidle
+		AimSequence: turretanim
+		Turret: primary
+	WithSpriteTurret@2: 
+		Sequence: turretidle
+		AimSequence: turretanim
+		Turret: secondary
+	WithSpriteTurret@3: 
+		Sequence: turretidle
+		AimSequence: turretanim
+		Turret: tritiary
 	Turreted@1:
-        Turret: primary
+		Turret: primary
 		TurnSpeed: 100
-        Offset: 150,-150,950
-    Turreted@2:
-        Turret: secondary
+		Offset: 150,-150,950
+	Turreted@2:
+		Turret: secondary
 		TurnSpeed: 100
-        Offset: -150,0,950
-    Turreted@3:
-        Turret: tritiary
+		Offset: -150,0,950
+	Turreted@3:
+		Turret: tritiary
 		TurnSpeed: 100
-        Offset: 150,150,950
-    Armament@1:
+		Offset: 150,150,950
+	Armament@1:
 		Weapon: BowNArrowSiegeTower
 		LocalOffset: 0,0,427
-        Turret: primary
-    Armament@2:
+		Turret: primary
+	Armament@2:
 		Weapon: BowNArrowSiegeTower
 		LocalOffset: 0,0,427
-        Turret: secondary
-        FireDelay: 15
-    Armament@3:
+		Turret: secondary
+		FireDelay: 15
+	Armament@3:
 		Weapon: BowNArrowSiegeTower
 		LocalOffset: 0,0,427
-        Turret: tritiary
-        FireDelay: 30
-    Armament@1DUMMY:
+		Turret: tritiary
+		FireDelay: 30
+	Armament@1DUMMY:
 		Weapon: BowNArrowTowerDUMMY
 		LocalOffset: 0,0,427
-        Turret: primary
-    Armament@2DUMMY:
+		Turret: primary
+	Armament@2DUMMY:
 		Weapon: BowNArrowTowerDUMMY
 		LocalOffset: 0,0,427
-        Turret: secondary
-        FireDelay: 15
-    Armament@3DUMMY:
+		Turret: secondary
+		FireDelay: 15
+	Armament@3DUMMY:
 		Weapon: BowNArrowTowerDUMMY
 		LocalOffset: 0,0,427
-        Turret: tritiary
-        FireDelay: 30
-        
+		Turret: tritiary
+		FireDelay: 30
+		
 
 
 SIEGE4:
 	Inherits: ^Siege
 	Inherits@2: ^GainsExperience
-    ConditionManager:
-    Cargo:
-        MaxWeight: 8
-        PipCount: 8
-        Types: Infantry, Archer
-        EjectOnDeath: True
-        LoadedCondition: batteringupgrade
+	ConditionManager:
+	Cargo:
+		MaxWeight: 8
+		PipCount: 8
+		Types: Infantry, Archer
+		EjectOnDeath: True
+		LoadedCondition: batteringupgrade
 	Valued:
 		Cost: 650
 	Tooltip:
 		Name: Battering Ram
 	Buildable:
-        IconPalette: raicon
+		IconPalette: raicon
 		BuildPaletteOrder: 20
-        Prerequisites: barracks, ~techlevel.medium
+		Prerequisites: barracks, ~techlevel.medium
 		Description: The battering ram is a siege engine that is designed \nto break open the masonry walls of fortifications.\n  Crushes Walls, Cavalry and Infantry\n  Transports up to 8 men\n  Gets faster with each passenger up to 220%\n  Very strong vs Buildings \n  Weak vs Cavalry, Infantry \n  Can only attack Buildings
 		Queue: MSiege.Nod
-    Mobile:
-        Crushes: wall, heavywall, crate, infantry, cavalry
+	Mobile:
+		Crushes: wall, heavywall, crate, infantry, cavalry
 		Speed: 30
-        SharesCell: false
-        TurnSpeed: 2
-    Health:
+		SharesCell: false
+		TurnSpeed: 2
+	Health:
 		HP: 35000
-        Shape: Rectangle
-            TopLeft: -412, -412
-            BottomRight: 412, 712
-    RenderSprites:
-        Image: siege5
-        PlayerPalette: raplayer
+		Shape: Rectangle
+			TopLeft: -412, -412
+			BottomRight: 412, 712
+	RenderSprites:
+		Image: siege5
+		PlayerPalette: raplayer
 	WithInfantryBody:
 		IdleSequences: stand
-        MoveSequence: run
+		MoveSequence: run
 		DefaultAttackSequence: shoot
-    Armor:
+	Armor:
 		Type: Knight
-    Selectable:
+	Selectable:
 		Bounds: 42,38,0,-8
-    SelectionDecorations:
+	SelectionDecorations:
 		VisualBounds: 42,38,0,-8
-    AttackFrontal:
-    Power:
+	AttackFrontal:
+	Power:
 		Amount: -4
-    Targetable:
+	Targetable:
 		TargetTypes: Ground, Siege
-    AutoTarget:
+	AutoTarget:
 		ScanRadius: 7
-        InitialStance: AttackAnything
-    Armament:
-        Weapon: battering
-    SpeedMultiplier:
-        RequiresCondition: batteringupgrade == 1
-        Modifier: 110
-    SpeedMultiplier@1:
-        RequiresCondition: batteringupgrade == 2
-        Modifier: 120
-    SpeedMultiplier@2:
-        RequiresCondition: batteringupgrade == 3
-        Modifier: 130
-    SpeedMultiplier@3:
-        RequiresCondition: batteringupgrade == 4
-        Modifier: 140
-    SpeedMultiplier@4:
-        RequiresCondition: batteringupgrade == 5
-        Modifier: 160
-    SpeedMultiplier@5:
-        RequiresCondition: batteringupgrade == 6
-        Modifier: 180
-    SpeedMultiplier@6:
-        RequiresCondition: batteringupgrade == 7
-        Modifier: 200
-    SpeedMultiplier@7:
-        RequiresCondition: batteringupgrade == 8
-        Modifier: 220
-    ReloadDelayMultiplier@1:
-        RequiresCondition: batteringupgrade == 1
-        Modifier: 94
-    ReloadDelayMultiplier@2:
-        RequiresCondition: batteringupgrade == 2
-        Modifier: 82 
-    ReloadDelayMultiplier@3:
-        RequiresCondition: batteringupgrade == 3
-        Modifier: 76
-    ReloadDelayMultiplier@4:
-        RequiresCondition: batteringupgrade == 4
-        Modifier: 70
-    ReloadDelayMultiplier@5:
-        RequiresCondition: batteringupgrade == 5
-        Modifier: 64
-    ReloadDelayMultiplier@6:
-        RequiresCondition: batteringupgrade == 6
-        Modifier: 58
-    ReloadDelayMultiplier@7:
-        RequiresCondition: batteringupgrade == 7
-        Modifier: 52     
-    ReloadDelayMultiplier@8:
-        RequiresCondition: batteringupgrade == 8
-        Modifier: 46 
-    SpawnActorOnDeath:
+		InitialStance: AttackAnything
+	Armament:
+		Weapon: battering
+	SpeedMultiplier:
+		RequiresCondition: batteringupgrade == 1
+		Modifier: 110
+	SpeedMultiplier@1:
+		RequiresCondition: batteringupgrade == 2
+		Modifier: 120
+	SpeedMultiplier@2:
+		RequiresCondition: batteringupgrade == 3
+		Modifier: 130
+	SpeedMultiplier@3:
+		RequiresCondition: batteringupgrade == 4
+		Modifier: 140
+	SpeedMultiplier@4:
+		RequiresCondition: batteringupgrade == 5
+		Modifier: 160
+	SpeedMultiplier@5:
+		RequiresCondition: batteringupgrade == 6
+		Modifier: 180
+	SpeedMultiplier@6:
+		RequiresCondition: batteringupgrade == 7
+		Modifier: 200
+	SpeedMultiplier@7:
+		RequiresCondition: batteringupgrade == 8
+		Modifier: 220
+	ReloadDelayMultiplier@1:
+		RequiresCondition: batteringupgrade == 1
+		Modifier: 94
+	ReloadDelayMultiplier@2:
+		RequiresCondition: batteringupgrade == 2
+		Modifier: 82 
+	ReloadDelayMultiplier@3:
+		RequiresCondition: batteringupgrade == 3
+		Modifier: 76
+	ReloadDelayMultiplier@4:
+		RequiresCondition: batteringupgrade == 4
+		Modifier: 70
+	ReloadDelayMultiplier@5:
+		RequiresCondition: batteringupgrade == 5
+		Modifier: 64
+	ReloadDelayMultiplier@6:
+		RequiresCondition: batteringupgrade == 6
+		Modifier: 58
+	ReloadDelayMultiplier@7:
+		RequiresCondition: batteringupgrade == 7
+		Modifier: 52	 
+	ReloadDelayMultiplier@8:
+		RequiresCondition: batteringupgrade == 8
+		Modifier: 46 
+	SpawnActorOnDeath:
 		Actor: SIEGE4.Husk
-    SpawnActorOnDeath@1:
+	SpawnActorOnDeath@1:
 		Actor: SIEGERUNNER
-        Probability: 33
-    SpawnActorOnDeath@2:
+		Probability: 33
+	SpawnActorOnDeath@2:
 		Actor: SIEGERUNNER
-        Probability: 33
-    SpawnActorOnDeath@3:
+		Probability: 33
+	SpawnActorOnDeath@3:
 		Actor: SIEGERUNNER
-        Probability: 33
-    SpawnActorOnDeath@4:
+		Probability: 33
+	SpawnActorOnDeath@4:
 		Actor: SIEGERUNNER
-        Probability: 33
-    SpawnActorOnDeath@5:
+		Probability: 33
+	SpawnActorOnDeath@5:
 		Actor: SIEGERUNNER
-        Probability: 33
-    SpawnActorOnDeath@6:
+		Probability: 33
+	SpawnActorOnDeath@6:
 		Actor: SIEGERUNNER
-        Probability: 33
-        
+		Probability: 33
+		
 EHARVXL:
 	Inherits: ^Siege
-    BodyOrientation:
-        QuantizedFacings: 8
-    QuantizeFacingsFromSequence:
+	BodyOrientation:
+		QuantizedFacings: 8
+	QuantizeFacingsFromSequence:
 		Sequence: stand
-    WithInfantryBody:
+	WithInfantryBody:
 		IdleSequences: idle
-        MoveSequence: move
-        RequiresCondition: MoveAnim
-    GrantConditionOnMovement:
-        Condition: MoveAnim
-    WithFacingSpriteBody:
-        Sequence: idle
-        RequiresCondition: !MoveAnim
-    WithHarvestAnimation:
-        HarvestSequence: harvest
-        PrefixByFullness: empty-, half-, full-
-    WithDockingAnimation:
+		MoveSequence: move
+		RequiresCondition: MoveAnim
+	GrantConditionOnMovement:
+		Condition: MoveAnim
+	WithFacingSpriteBody:
+		Sequence: idle
+		RequiresCondition: !MoveAnim
+	WithHarvestAnimation:
+		HarvestSequence: harvest
+		PrefixByFullness: empty-, half-, full-
+	WithDockingAnimation:
 	Valued:
 		Cost: 1000
 	Tooltip:
 		Name: Harvester
 	Buildable:
-        IconPalette: raicon
+		IconPalette: raicon
 		BuildPaletteOrder: 0
 		Description: Collects iron- and goldore.\n  Unarmed
 		Queue: MSiege.GDI, MSiege.Nod, MSiege.SUL
-        Prerequisites: procnew, ~techlevel.medium
-    Mobile:
-        TurnSpeed: 5
+		Prerequisites: procnew, ~techlevel.medium
+	Mobile:
+		TurnSpeed: 5
 		Speed: 85
-        SharesCell: false
+		SharesCell: false
 	Health:
 		HP: 30000
-    RenderSprites:
-        Image: eharvxl
-        PlayerPalette: raplayer
-    AttackFrontal:
-    Armor:
-		Type: MediumCavalry       
-    Selectable:
+	RenderSprites:
+		Image: eharvxl
+		PlayerPalette: raplayer
+	AttackFrontal:
+	Armor:
+		Type: MediumCavalry	   
+	Selectable:
 		Priority: 7
-    Harvester:
-        DeliveryBuildings: procnew
+	Harvester:
+		DeliveryBuildings: procnew
 		Resources: Tiberium, BlueTiberium
 		PipCount: 7
 		Capacity: 20
@@ -463,32 +463,32 @@ EHARVXL:
 		BaleUnloadDelay: 3
 		SearchFromProcRadius: 25
 		SearchFromOrderRadius: 15
-    Selectable:
+	Selectable:
 		Bounds: 36,36,0,0
 	SelectionDecorations:
 		VisualBounds: 36,36,0,0
-    Contrail@1:
-        Offset: 256,256,0
-        ZOffset: -256
-        TrailLength: 30
-        TrailWidth: 0c64
-        Color: 180500
-        UsePlayerColor: False
-    Contrail@2:
-        Offset: 256,-256,0
-        ZOffset: -256
-        TrailLength: 30
-        TrailWidth: 0c64
-        Color: 180500
-        UsePlayerColor: False
-    
-        
+	Contrail@1:
+		Offset: 256,256,0
+		ZOffset: -256
+		TrailLength: 30
+		TrailWidth: 0c64
+		Color: 180500
+		UsePlayerColor: False
+	Contrail@2:
+		Offset: 256,-256,0
+		ZOffset: -256
+		TrailLength: 30
+		TrailWidth: 0c64
+		Color: 180500
+		UsePlayerColor: False
+	
+		
 PLANEWAGEN:
 	Inherits: ^Siege
-    Cargo:
-        MaxWeight: 8
-        PipCount: 8
-        Types: Infantry, Archer
+	Cargo:
+		MaxWeight: 8
+		PipCount: 8
+		Types: Infantry, Archer
 	Valued:
 		Cost: 500
 	Tooltip:
@@ -498,19 +498,19 @@ PLANEWAGEN:
 		Speed: 60
 	Health:
 		HP: 10000
-        Shape: Capsule
-            Radius: 326
-            PointA: 0, -312
-            PointB: 0, 312
-    AttackFrontal:
-    RenderSprites:
-        Image: planewagen
-        PlayerPalette: raplayer
+		Shape: Capsule
+			Radius: 326
+			PointA: 0, -312
+			PointB: 0, 312
+	AttackFrontal:
+	RenderSprites:
+		Image: planewagen
+		PlayerPalette: raplayer
 	WithInfantryBody:
 		IdleSequences: stand
-    Armor:
+	Armor:
 		Type: LightCavalry
-    Selectable:
+	Selectable:
 		Bounds: 35,35,0,-6
-    Targetable:
+	Targetable:
 		TargetTypes: Ground, Siege

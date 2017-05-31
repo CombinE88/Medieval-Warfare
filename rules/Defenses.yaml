@@ -1,12 +1,12 @@
 GTWNEW:
 	Inherits: ^MWDefense
-    WithDeathAnimation:
-        DeathSequencePalette: raplayer
-    RenderSprites:
-        PlayerPalette: raplayer
+	WithDeathAnimation:
+		DeathSequencePalette: raplayer
+	RenderSprites:
+		PlayerPalette: raplayer
 	Valued:
 		Cost: 800
-    CustomSellValue:
+	CustomSellValue:
 		Value: 400
 	Tooltip:
 		Name: Guard Tower
@@ -17,89 +17,89 @@ GTWNEW:
 		Queue: MDefenses.GDI, MDefenses.Nod
 		BuildDuration: 1600
 		BuildDurationModifier: 40
-        IconPalette: raicon
+		IconPalette: raicon
 	Building:
-        Footprint: x
+		Footprint: x
 		Dimensions: 1,1
 	Health:
 		HP: 40000
-        Shape: Rectangle
-            TopLeft: -456, -456
-            BottomRight: 456, 456
+		Shape: Rectangle
+			TopLeft: -456, -456
+			BottomRight: 456, 456
 	RevealsShroud:
 		Range: 7c0
 	Bib:
 		HasMinibib: Yes
-    WithIdleOverlay:
-    Armament@1:
+	WithIdleOverlay:
+	Armament@1:
 		Weapon: bownarrowtower
 		LocalOffset: 0,0,427
-        Turret: primary
-    Armament@2:
+		Turret: primary
+	Armament@2:
 		Weapon: bownarrowtower
 		LocalOffset: 0,0,427
-        Turret: secondary
-        FireDelay: 12
-    Armament@1DUMMY:
+		Turret: secondary
+		FireDelay: 12
+	Armament@1DUMMY:
 		Weapon: BowNArrowTowerDUMMY
 		LocalOffset: 0,0,427
-        Turret: primary
-    Armament@2DUMMY:
+		Turret: primary
+	Armament@2DUMMY:
 		Weapon: BowNArrowTowerDUMMY
 		LocalOffset: 0,0,427
-        Turret: secondary
-        FireDelay: 12
+		Turret: secondary
+		FireDelay: 12
 	AttackTurreted:
 	BodyOrientation:
 		QuantizedFacings: 8
 	DetectCloaked:
 		Range: 3c0
-    WithSpriteTurret@1: 
-        Sequence: turretidle
-        AimSequence: turretanim
-        Turret: primary
-    WithSpriteTurret@2: 
-        Sequence: turretidle
-        AimSequence: turretanim
-        Turret: secondary
+	WithSpriteTurret@1: 
+		Sequence: turretidle
+		AimSequence: turretanim
+		Turret: primary
+	WithSpriteTurret@2: 
+		Sequence: turretidle
+		AimSequence: turretanim
+		Turret: secondary
 	Turreted@1:
-        Turret: primary
+		Turret: primary
 		TurnSpeed: 100
-        Offset: -170,-170,500
-    Turreted@2:
-        Turret: secondary
+		Offset: -170,-170,500
+	Turreted@2:
+		Turret: secondary
 		TurnSpeed: 100
-        Offset: 170,170,500
+		Offset: 170,170,500
 	Power:
-		Amount: -2    
-    Armor:
+		Amount: -2	
+	Armor:
 		Type: HeavyBuilding 
-    Selectable:
+	Selectable:
 		Bounds: 24,48,0,-10
 	SelectionDecorations
 		VisualBounds: 22,48,0,-10
-    ThrowsShrapnel@SMALL:
+	ThrowsShrapnel@SMALL:
 		Weapons: SmallWood1, SmallWood2, SmallWood3, LargeWood1
 		Pieces: 2, 3
 		Range: 0c512, 3c0
-        
+		
 WTW:
 	Inherits: ^MWDefense
-    Cargo:
-        MaxWeight: 8
-        PipCount: 8
-        Types: Archer
-        InitialUnits: E4NEW, E4NEW, E4NEW, E4NEW
-    WithDeathAnimation:
-        DeathSequencePalette: raplayer
-    BlocksProjectiles:
-    RenderSprites:
-        PlayerPalette: raplayer
+	Cargo:
+		MaxWeight: 8
+		PipCount: 8
+		Types: Archer
+		InitialUnits: E4NEW, E4NEW, E4NEW, E4NEW
+	WithDeathAnimation:
+		DeathSequencePalette: raplayer
+	BlocksProjectiles:
+	RenderSprites:
+		PlayerPalette: raplayer
 	LineBuildNode:
 		Types: concrete
-    Valued:
+	Valued:
 		Cost: 1750
-    CustomSellValue:
+	CustomSellValue:
 		Value: 875
 	Tooltip:
 		Name: Square Tower
@@ -110,63 +110,63 @@ WTW:
 		Queue: MDefenses.Nod
 		BuildDuration: 1950
 		BuildDurationModifier: 40
-        IconPalette: raicon
+		IconPalette: raicon
 	Building:
-        Footprint:  x
+		Footprint:  x
 		Dimensions: 1,1
 	Health:
 		HP: 90000
-        Shape: Rectangle
-            TopLeft: -512,-512
-            BottomRight: 512, 512
+		Shape: Rectangle
+			TopLeft: -512,-512
+			BottomRight: 512, 512
 	RevealsShroud:
 		Range: 7c0
 	AttackGarrisoned: 
-        PortOffsets: -194,0,294, -194,0,680, -555,-469,294, -555,-469,680, -896,0,294, -896,0,680, -555,469,294, -555,469,680
-        PortYaws: 0, 0, 256, 256, 511, 511, 767, 767
-        PortCones: 170, 170, 170, 170, 170, 170, 170, 170
-        Armaments: garrisoned
+		PortOffsets: -194,0,294, -194,0,680, -555,-469,294, -555,-469,680, -896,0,294, -896,0,680, -555,469,294, -555,469,680
+		PortYaws: 0, 0, 256, 256, 511, 511, 767, 767
+		PortCones: 170, 170, 170, 170, 170, 170, 170, 170
+		Armaments: garrisoned
 	BodyOrientation:
 		QuantizedFacings: 1
 	DetectCloaked:
 		Range: 3c0
 	Power:
-		Amount: -5    
-    Armor:
+		Amount: -5	
+	Armor:
 		Type: Concrete 
-    Selectable:
+	Selectable:
 		Bounds: 24,48,0,-10
 	SelectionDecorations
 		VisualBounds: 22,48,0,-10
-    ThrowsShrapnel@SMALL:
+	ThrowsShrapnel@SMALL:
 		Weapons: SmallStone1, SmallStone2, LargeStone1
 		Pieces: 2, 3
 		Range: 0c512, 3c0
-    -WithSpriteBody:
-    WithWallSpriteBody:
-        Type: concrete
-        
+	-WithSpriteBody:
+	WithWallSpriteBody:
+		Type: concrete
+		
 WTW2:
-    Inherits: WTW
-    Cargo:
-        InitialUnits: E4NEWv2, E4NEWv2, E4NEWv2, E4NEWv2
+	Inherits: WTW
+	Cargo:
+		InitialUnits: E4NEWv2, E4NEWv2, E4NEWv2, E4NEWv2
 	Buildable:
 		Queue: MDefenses.GDI
-    RenderSprites:
-        Image: wtw
-        PlayerPalette: raplayer
+	RenderSprites:
+		Image: wtw
+		PlayerPalette: raplayer
 
 
 SAMNEW:
 	Inherits: ^MWDefense
-    -RenderDetectionCircle:
-    WithDeathAnimation:
-        DeathSequencePalette: raplayer
-    RenderSprites:
-        PlayerPalette: raplayer
+	-RenderDetectionCircle:
+	WithDeathAnimation:
+		DeathSequencePalette: raplayer
+	RenderSprites:
+		PlayerPalette: raplayer
 	Valued:
 		Cost: 650
-    CustomSellValue:
+	CustomSellValue:
 		Value: 325
 	Tooltip:
 		Name: Anti-Aircraft Ballista
@@ -177,15 +177,15 @@ SAMNEW:
 		Queue: MDefenses.Nod, MDefenses.SUL
 		BuildDuration: 1700
 		BuildDurationModifier: 40
-        IconPalette: raicon
+		IconPalette: raicon
 	Building:
-        Footprint: xx
+		Footprint: xx
 		Dimensions: 2,1
 	Health:
 		HP: 40000
-        Shape: Rectangle
-            TopLeft: -724,-656
-            BottomRight: 724, 412
+		Shape: Rectangle
+			TopLeft: -724,-656
+			BottomRight: 724, 412
 	RevealsShroud:
 		Range: 8c0
 	Bib:
@@ -193,32 +193,32 @@ SAMNEW:
 	Armament@1:
 		Weapon: samballista
 		LocalOffset: 200,0,227
-        Turret: primary
+		Turret: primary
 	AttackTurreted:
 	BodyOrientation:
 		QuantizedFacings: 8
-    WithSpriteTurret@1: 
-        Sequence: turretidle
-        AimSequence: turretanim
-        Turret: primary
+	WithSpriteTurret@1: 
+		Sequence: turretidle
+		AimSequence: turretanim
+		Turret: primary
 	Turreted@1:
-        Turret: primary
+		Turret: primary
 		TurnSpeed: 100
-        Offset: 0,0,932
+		Offset: 0,0,932
 	Power:
-		Amount: -2    
-    Armor:
+		Amount: -2	
+	Armor:
 		Type: Concrete 
-    SelectionDecorations:
+	SelectionDecorations:
 		VisualBounds: 50,50,0,-10
-    Selectable:
+	Selectable:
 		Bounds: 50,50,0,-10
 
 TRIBU:
 	Inherits: ^MWDefense
-    Valued:
+	Valued:
 		Cost: 1500
-    CustomSellValue:
+	CustomSellValue:
 		Value: 750
 	Tooltip:
 		Name: Counterweight Trebuchet
@@ -229,15 +229,15 @@ TRIBU:
 		Queue: MDefenses.Nod
 		BuildDuration: 3120
 		BuildDurationModifier: 40
-        IconPalette: raicon
+		IconPalette: raicon
 	Building:
-        Footprint: x
+		Footprint: x
 		Dimensions: 1,1
 	Health:
 		HP: 60000
-        Shape: Rectangle
-            TopLeft: -456, -656
-            BottomRight: 456, 456
+		Shape: Rectangle
+			TopLeft: -456, -656
+			BottomRight: 456, 456
 	Armor:
 		Type: Concrete
 	RevealsShroud:
@@ -247,38 +247,38 @@ TRIBU:
 	Armament:
 		Weapon: tribuchetboulder
 		LocalOffset: 0,0,2124
-    DetectCloaked:
+	DetectCloaked:
 		Range: 3c0
 	Power:
 		Amount: -4
-    Selectable:
+	Selectable:
 		Bounds: 30,52,0,-12
 	SelectionDecorations:
 		VisualBounds: 30,52,0,-12 
-    RenderSprites:
-        Image: tribu
-        PlayerPalette: raplayer
-    BodyOrientation:
-        QuantizedFacings: 32
-    WithAttackAnimation:
-        AttackSequence: turretanim
-    WithTurretedSpriteBody:
-    -WithSpriteBody:
-    AttackTurreted:
-    Turreted:
-        TurnSpeed: 2
-    WithDeathAnimation:
-        DeathSequencePalette: raplayer 
-    ThrowsShrapnel@SMALL:
+	RenderSprites:
+		Image: tribu
+		PlayerPalette: raplayer
+	BodyOrientation:
+		QuantizedFacings: 32
+	WithAttackAnimation:
+		AttackSequence: turretanim
+	WithTurretedSpriteBody:
+	-WithSpriteBody:
+	AttackTurreted:
+	Turreted:
+		TurnSpeed: 2
+	WithDeathAnimation:
+		DeathSequencePalette: raplayer 
+	ThrowsShrapnel@SMALL:
 		Weapons: SmallWood1, SmallWood2, SmallWood3, LargeWood1, LargeWood1, LargeWood1
 		Pieces: 2, 4
 		Range: 0c512, 3c0
-        
+		
 BATO:
 	Inherits: ^MWDefense
-    Valued:
+	Valued:
 		Cost: 1400
-    CustomSellValue:
+	CustomSellValue:
 		Value: 700
 	Tooltip:
 		Name: Tower with Ballista
@@ -289,15 +289,15 @@ BATO:
 		Queue: MDefenses.GDI
 		BuildDuration: 2880
 		BuildDurationModifier: 40
-        IconPalette: raicon
+		IconPalette: raicon
 	Building:
-        Footprint: x
+		Footprint: x
 		Dimensions: 1,1
 	Health:
 		HP: 60000
-        Shape: Rectangle
-            TopLeft: -456, -412
-            BottomRight: 456, 524
+		Shape: Rectangle
+			TopLeft: -456, -412
+			BottomRight: 456, 524
 	RevealsShroud:
 		Range: 8c0
 	Bib:
@@ -305,47 +305,47 @@ BATO:
 	Armament@1:
 		Weapon: stationbalistaag
 		LocalOffset: 356,0,809
-        Name: secondary
-    Armament@2:
+		Name: secondary
+	Armament@2:
 		Weapon: stationbalistaaa
 		LocalOffset: 356,0,809
-        Name: primary
-    DetectCloaked:
+		Name: primary
+	DetectCloaked:
 		Range: 3c0
 	Power:
 		Amount: -4
-    Armor:
+	Armor:
 		Type: Concrete
-    Selectable:
+	Selectable:
 		Bounds: 30,40,0,-12
 	SelectionDecorations:
 		VisualBounds: 30,40,0,-12 
-    WithIdleOverlay:
-        Sequence: overlay
-    RenderSprites:
-        Image: siege4
-        PlayerPalette: raplayer
-    BodyOrientation:
-        QuantizedFacings: 32
-    WithAttackAnimation@1:
-        AttackSequence: turretanim
-        Armament: primary
-    WithAttackAnimation@2:
-        AttackSequence: turretanim
-        Armament: secondary
-    WithTurretedSpriteBody:
-    -WithSpriteBody:
-    AttackTurreted:
-    Turreted:
-        TurnSpeed: 2
-    WithDeathAnimation:
-        DeathSequencePalette: raplayer 
-        
+	WithIdleOverlay:
+		Sequence: overlay
+	RenderSprites:
+		Image: siege4
+		PlayerPalette: raplayer
+	BodyOrientation:
+		QuantizedFacings: 32
+	WithAttackAnimation@1:
+		AttackSequence: turretanim
+		Armament: primary
+	WithAttackAnimation@2:
+		AttackSequence: turretanim
+		Armament: secondary
+	WithTurretedSpriteBody:
+	-WithSpriteBody:
+	AttackTurreted:
+	Turreted:
+		TurnSpeed: 2
+	WithDeathAnimation:
+		DeathSequencePalette: raplayer 
+		
 GUNNEW:
 	Inherits: ^MWDefense
 	Valued:
 		Cost: 600
-    CustomSellValue:
+	CustomSellValue:
 		Value: 300
 	Tooltip:
 		Name: Gunpowder Cannon
@@ -354,7 +354,7 @@ GUNNEW:
 		BuildPaletteOrder: 30
 		Prerequisites: barracks
 		Queue: MDefenses.GDI, MDefenses.Nod, MDefenses.SUL
-        IconPalette: raicon
+		IconPalette: raicon
 		BuildDuration: 1440
 		BuildDurationModifier: 40
 	Building:
@@ -378,50 +378,50 @@ GUNNEW:
 	AttackTurreted:
 	WithMuzzleOverlay:
 	-WithDeathAnimation:
-    RenderSprites:
-        Image: gunnew
-        PlayerPalette: raplayer
+	RenderSprites:
+		Image: gunnew
+		PlayerPalette: raplayer
 	DetectCloaked:
 		Range: 3c0
 	Power:
 		Amount: -2
 	BodyOrientation:
-        QuantizedFacings: 32
-    Selectable:
+		QuantizedFacings: 32
+	Selectable:
 		Bounds: 25,25,0,0
 	SelectionDecorations:
 		VisualBounds: 25,25,0,0 
-    ThrowsShrapnel@SMALL:
+	ThrowsShrapnel@SMALL:
 		Weapons: SmallStone1, SmallStone2, LargeStone1
 		Pieces: 2, 3
 		Range: 0c512, 3c0
-        
+		
 CSTLWLL:
 	Inherits: ^Wall
 	Valued:
 		Cost: 350
-    CustomSellValue:
+	CustomSellValue:
 		Value: 0
 	Tooltip:
 		Name: Castle Wall
 	Buildable:
 		Description: Castlewall that blocks arrows and other projectiles\n\n\n
 		BuildPaletteOrder: 50
-        BuildDuration: 500
+		BuildDuration: 500
 		Prerequisites: anyworkshop
 		Queue: MDefenses.GDI, MDefenses.Nod
 		BuildDurationModifier: 40
-        IconPalette: raicon
+		IconPalette: raicon
 	Health:
 		HP: 65000
 	Armor:
 		Type: Concrete
 	BlocksProjectiles:
 	Building:
-    RenderSprites:
-        PlayerPalette: raplayer
-        -Palette:
-    SoundOnDamageTransition:
+	RenderSprites:
+		PlayerPalette: raplayer
+		-Palette:
+	SoundOnDamageTransition:
 		DestroyedSounds: crumble.aud
 	LineBuild:
 		NodeTypes: concrete
@@ -429,31 +429,31 @@ CSTLWLL:
 		Types: concrete
 	WithWallSpriteBody:
 		Type: concrete
-    Crushable:
+	Crushable:
 		CrushClasses: heavywall
-        
-        
+		
+		
 CSTLGTEW:
 	Inherits: ^MWGate
-    WithMakeAnimation:
-    WithDeathAnimation:
-        DeathSequencePalette: raplayer
-    RenderSprites:
-        PlayerPalette: raplayer
-    Gate:
-        Adjacent: 7
-        Footprint: xxx
-        Dimensions: 3,1
-    WithGateSpriteBody:
-        WallConnections: -1,0, 3,0
-        Type: concrete
-        OpenSequence: open
-    LineBuildNode:
+	WithMakeAnimation:
+	WithDeathAnimation:
+		DeathSequencePalette: raplayer
+	RenderSprites:
+		PlayerPalette: raplayer
+	Gate:
+		Adjacent: 7
+		Footprint: xxx
+		Dimensions: 3,1
+	WithGateSpriteBody:
+		WallConnections: -1,0, 3,0
+		Type: concrete
+		OpenSequence: open
+	LineBuildNode:
 		Connections: -1,0, 3,0
-            Types: concrete
+			Types: concrete
 	Valued:
 		Cost: 1000
-    CustomSellValue:
+	CustomSellValue:
 		Value: 500
 	Tooltip:
 		Name: Castle Gate
@@ -464,12 +464,12 @@ CSTLGTEW:
 		Queue: MDefenses.GDI, MDefenses.Nod
 		BuildDuration: 1540
 		BuildDurationModifier: 40
-        IconPalette: raicon
+		IconPalette: raicon
 	Health:
 		HP: 200000
-        Shape: Rectangle
-            TopLeft: -1436,-412
-            BottomRight: 1436, 412
+		Shape: Rectangle
+			TopLeft: -1436,-412
+			BottomRight: 1436, 412
 	RevealsShroud:
 		Range: 5c0
 	Bib:
@@ -477,38 +477,38 @@ CSTLGTEW:
 		QuantizedFacings: 1
 	Power:
 		Amount: -4  
-    Armor:
+	Armor:
 		Type: Concrete 
-    Selectable:
+	Selectable:
 		Bounds: 96,66,0,-21
 	SelectionDecorations:
 		VisualBounds: 96,66,0,-21
-    ThrowsShrapnel@SMALL:
+	ThrowsShrapnel@SMALL:
 		Weapons: SmallStone1, SmallStone2, LargeStone1
 		Pieces: 5, 7
 		Range: 0c512, 3c0
-        
+		
 CSTLGTNS: 
-    Inherits: ^MWGate
-    WithMakeAnimation:
-    WithDeathAnimation:
-        DeathSequencePalette: raplayer
-    RenderSprites:
-        PlayerPalette: raplayer
-    Gate:
-        Adjacent: 7
-        Footprint: xxx
-        Dimensions: 3,1
-    WithGateSpriteBody:
-        WallConnections: -1,0, 3,0
-        Type: concrete
-        OpenSequence: open
-    LineBuildNode:
+	Inherits: ^MWGate
+	WithMakeAnimation:
+	WithDeathAnimation:
+		DeathSequencePalette: raplayer
+	RenderSprites:
+		PlayerPalette: raplayer
+	Gate:
+		Adjacent: 7
+		Footprint: xxx
+		Dimensions: 3,1
+	WithGateSpriteBody:
+		WallConnections: -1,0, 3,0
+		Type: concrete
+		OpenSequence: open
+	LineBuildNode:
 		Connections: -1,0, 3,0
-            Types: concrete
+			Types: concrete
 	Valued:
 		Cost: 1000
-    CustomSellValue:
+	CustomSellValue:
 		Value: 500
 	Tooltip:
 		Name: Castle Gate
@@ -519,44 +519,44 @@ CSTLGTNS:
 		Queue: MDefenses.GDI, MDefenses.Nod
 		BuildDuration: 1540
 		BuildDurationModifier: 40
-        IconPalette: raicon
+		IconPalette: raicon
 	Health:
 		HP: 200000
-        Shape: Rectangle
-            TopLeft: -456,-1436
-            BottomRight: 456, 1436
+		Shape: Rectangle
+			TopLeft: -456,-1436
+			BottomRight: 456, 1436
 	RevealsShroud:
 		Range: 5c0
 	BodyOrientation:
 		QuantizedFacings: 1
 	Power:
 		Amount: -4  
-    Armor:
+	Armor:
 		Type: Concrete 
-    ThrowsShrapnel@SMALL:
+	ThrowsShrapnel@SMALL:
 		Weapons: SmallStone1, SmallStone2, LargeStone1
 		Pieces: 5, 7
 		Range: 0c512, 3c0 
-    Selectable:
+	Selectable:
 		Bounds: 28,94,3,-12
 	SelectionDecorations:
 		VisualBounds: 28,94,3,-12
-    Gate:
-        Adjacent: 7
-        Footprint: x x x
-        Dimensions: 1,3
-    WithGateSpriteBody:
-        WallConnections: 0,-1, 0,3
-        Type: concrete
-        OpenSequence: open
-    LineBuildNode:
+	Gate:
+		Adjacent: 7
+		Footprint: x x x
+		Dimensions: 1,3
+	WithGateSpriteBody:
+		WallConnections: 0,-1, 0,3
+		Type: concrete
+		OpenSequence: open
+	LineBuildNode:
 		Connections: 0,0, 0,2
-            Types: concrete
-    WithIdleOverlay:
-        Sequence: top
-        
-        
-        
+			Types: concrete
+	WithIdleOverlay:
+		Sequence: top
+		
+		
+		
 WDWLL:
 	Inherits: ^Wall
 	Valued:
@@ -570,15 +570,15 @@ WDWLL:
 		BuildPaletteOrder: 10
 		Queue: MDefenses.GDI, MDefenses.Nod, MDefenses.SUL
 		BuildDurationModifier: 40
-        IconPalette: raicon
+		IconPalette: raicon
 	Health:
 		HP: 30000
 	Armor:
 		Type: HeavyBuilding
 	Building:
-    RenderSprites:
+	RenderSprites:
 		Palette: ra
-        PlayerPalette: raplayer
+		PlayerPalette: raplayer
 	LineBuild:
 		Range: 11
 		NodeTypes: Wood
@@ -586,7 +586,7 @@ WDWLL:
 		Types: Wood
 	WithWallSpriteBody:
 		Type: wood
-    Crushable:
+	Crushable:
 		CrushClasses: wall
-    Building:
-        Adjacent: 12
+	Building:
+		Adjacent: 12

@@ -21,24 +21,24 @@ hospnew.husk:
 			JUNGLE: TEMPERAT
 			SNOW: TEMPERAT
 		Length: *
-        
+		
 largecastle:
 	idle: largecastle
 	damaged-idle: largecastle
-        Start: 1
+		Start: 1
 largecastle.husk:
 	idle: largecastle
 		Start: 2
 
 largecastlecolor:
 	idle: largecastle
-        Start: 3
+		Start: 3
 	damaged-idle: largecastle
-        Start: 4
+		Start: 4
 largecastlecolor.husk:
 	idle: largecastle
 		Start: 5
-        
+		
 v19new:
 	idle: oilnew
 		Length: 28
@@ -53,62 +53,62 @@ v19new.husk:
 		Start: 54
 		Length: 7
 		Tick: 170
-        
+		
 explosion:
-    cannonsboulder: cannonstrikeboulder
-        Offset: 0,-60,0
-        Tick: 50
+	cannonsboulder: cannonstrikeboulder
+		Offset: 0,-60,0
+		Tick: 50
 	smokey: smokey
-    deadk1: deadbody01
-        Length: 26
-        Offset: 0,-120,0
-        ZOffset: 2048
-    rottk1: deadbody01
-        Length: 5
-        Tick: 3000
-        Start: 25
-        ZOffset: 0
-        Offset: 0,-120,0
-    deadk2: deadbody02
-        Length: 26
-        Offset: 0,-120,0
-        ZOffset: 2048
-    rottk2: deadbody02
-        Length: 5
-        Tick: 3000
-        Start: 25
-        ZOffset: 0
-        Offset: 0,-120,0
-    deadk3: deadbody03
-        Length: 26
-        Offset: 0,-120,0
-        ZOffset: 2048
-    rottk3: deadbody03
-        Length: 5
-        Tick: 3000
-        Start: 25
-        ZOffset: 0
-        Offset: 0,-120,0
-    kadavsmoke1: smokey
-    smalllight1: lightningstrikes
-        Start: 5
-        Length: 2
-        Tick: 100
-        Offset: 31,-114,0
-    smalllight2: lightningstrikes
-        Start: 8
-        Length: 2
-        Tick: 100
-        Offset: -31,-124,0
-    smalllight3: lightningstrikes
-        Start: 7
-        Tick: 100
-        Length: 2
-        Offset: -22,-58,0
-    largelight1: lightningstrikes
-        Length: 4
-        Tick: 150
-        Offset: 0,-84,0
+	deadk1: deadbody01
+		Length: 26
+		Offset: 0,-120,0
+		ZOffset: 2048
+	rottk1: deadbody01
+		Length: 5
+		Tick: 3000
+		Start: 25
+		ZOffset: 0
+		Offset: 0,-120,0
+	deadk2: deadbody02
+		Length: 26
+		Offset: 0,-120,0
+		ZOffset: 2048
+	rottk2: deadbody02
+		Length: 5
+		Tick: 3000
+		Start: 25
+		ZOffset: 0
+		Offset: 0,-120,0
+	deadk3: deadbody03
+		Length: 26
+		Offset: 0,-120,0
+		ZOffset: 2048
+	rottk3: deadbody03
+		Length: 5
+		Tick: 3000
+		Start: 25
+		ZOffset: 0
+		Offset: 0,-120,0
+	kadavsmoke1: smokey
+	smalllight1: lightningstrikes
+		Start: 5
+		Length: 2
+		Tick: 100
+		Offset: 31,-114,0
+	smalllight2: lightningstrikes
+		Start: 8
+		Length: 2
+		Tick: 100
+		Offset: -31,-124,0
+	smalllight3: lightningstrikes
+		Start: 7
+		Tick: 100
+		Length: 2
+		Offset: -22,-58,0
+	largelight1: lightningstrikes
+		Length: 4
+		Tick: 150
+		Offset: 0,-84,0
 	fire1: fire1
 		Length: *
 		Offset: 0,-3
@@ -117,7 +117,7 @@ explosion:
 		Length: *
 		Offset: 0,-3
 		ZOffset: 1023
-    fire3: fire3
+	fire3: fire3
 		Length: *
 		Offset: 0,-3
 		ZOffset: 1023
@@ -128,195 +128,195 @@ explosion:
 	dragonrot: dragonrot
 		Length: *
 		Offset: 0,-3
-        Tick: 800
+		Tick: 800
 		ZOffset: 1023
-    balloonpop: warballoonpop
+	balloonpop: warballoonpop
 		Length: *
-        Offset: 0,-24,0
-        Tick: 20
+		Offset: 0,-24,0
+		Tick: 20
 		ZOffset: 1023
-    burninglarge: burn-m
-        idle:
-            Length: *
-            ZOffset: 512
-        
+	burninglarge: burn-m
+		idle:
+			Length: *
+			ZOffset: 512
+		
 trmr1: 
-    idle: trmrwood
+	idle: trmrwood
 		Length: 20
-        Tick: 20
+		Tick: 20
 trmr2: 
-    idle: trmrwood
-        Start: 20
+	idle: trmrwood
+		Start: 20
 		Length: 20
-        Tick: 20
+		Tick: 20
 trmr3: 
-    idle: trmrwood
+	idle: trmrwood
 		Length: 20
-        Start: 40
-        Tick: 20
+		Start: 40
+		Tick: 20
 trmr4: 
-    idle: trmrstone
+	idle: trmrstone
 		Length: 20
-        Tick: 20
+		Tick: 20
 trmr5: 
-    idle: trmrstone
+	idle: trmrstone
 		Length: 20
-        Start: 20
-        Tick: 20
+		Start: 20
+		Tick: 20
 trmr6: 
-    idle: trmrlarge
+	idle: trmrlarge
 		Length: 20
-        Tick: 20
+		Tick: 20
 trmr7: 
-    idle: trmrlarge
+	idle: trmrlarge
 		Length: 20
-        Start: 20
-        Tick: 20
+		Start: 20
+		Tick: 20
 trmr8: 
-    idle: trmrfurnl
+	idle: trmrfurnl
 		Length: 20
-        Tick: 20
+		Tick: 20
 trmr9: 
-    idle: trmrfurnl
+	idle: trmrfurnl
 		Length: 20
-        Start: 20
-        Tick: 20
+		Start: 20
+		Tick: 20
 trmr10: 
-    idle: trmrfurnl
+	idle: trmrfurnl
 		Length: 20
-        Start: 40
-        Tick: 20
+		Start: 40
+		Tick: 20
 trmr11: 
-    idle: trmrfurnl
+	idle: trmrfurnl
 		Length: 20
-        Start: 60
-        Tick: 20
+		Start: 60
+		Tick: 20
 trmr12: 
-    idle: trmranvil
+	idle: trmranvil
 		Length: *
-        Tick: 20
+		Tick: 20
 trmr13: 
-    idle: trmrutils
+	idle: trmrutils
 		Length: 20
-        Tick: 20
+		Tick: 20
 trmr14: 
-    idle: trmrutils
+	idle: trmrutils
 		Length: 20
-        Start: 20
-        Tick: 20
+		Start: 20
+		Tick: 20
 trmr15: 
-    idle: trmrutils
+	idle: trmrutils
 		Length: 20
-        Start: 40
-        Tick: 20
+		Start: 40
+		Tick: 20
 trmr16: 
-    idle: trmrweapons
+	idle: trmrweapons
 		Length: 20
-        Tick: 20
+		Tick: 20
 trmr17: 
-    idle: trmrweapons
+	idle: trmrweapons
 		Length: 20
-        Start: 20
-        Tick: 20
+		Start: 20
+		Tick: 20
 trmr18: 
-    idle: trmrweapons
+	idle: trmrweapons
 		Length: 20
-        Start: 40
-        Tick: 20
-spear:      
+		Start: 40
+		Tick: 20
+spear:	  
 	idle: ross4
 		Start: 150
 		Facings: 32
   
-flamespit:      
+flamespit:	  
 	idle: spitflame
 		Facings: 32
-        
-siegearrow:     
-    idle: siege1
-        Start: 313
+		
+siegearrow:	 
+	idle: siege1
+		Start: 313
 		Facings: 32
 	
-siegeboulder:      
+siegeboulder:	  
 	idle: boulder
 
-cantowboulder:      
+cantowboulder:	  
 	idle: cannonboulder
-    
-tribuboulder:      
+	
+tribuboulder:	  
 	idle: largeboulder
-    
-smbllbolt:     
-    idle: smallaaballarrow
+	
+smbllbolt:	 
+	idle: smallaaballarrow
 		Facings: 32
 
-e4arrow:      
+e4arrow:	  
 	idle: arrow
 		Facings: 32
 
-firearrow:      
+firearrow:	  
 	idle: arrow
 		Start: 33
-		Facings: 32        
-        
-assassarrow:      
+		Facings: 32		
+		
+assassarrow:	  
 	idle: thief
 		Start: 267
 		Facings: 32
-        
+		
 pips:
 	pip-crown: pip-crown
 		Length: *
 
 beacon:
 	cadaver: corpseiconsmall
-        Length: 9
-        Tick: 50
+		Length: 9
+		Tick: 50
 		Offset: 0,-42  
-    cannonbeacon: cannonstriceiconsmall
-        Offset: 0,-42
-    lightbeacon: lightniniconsmall
-        Offset: 0,-42
-    trojanbeacon: trojaniconsmall
-        Offset: 0,-42
-    firestormbeacon: firestormiconsmall
-        Offset: 0,-42
-    strange: davinciiconsmall
-        Offset: 0,-42
+	cannonbeacon: cannonstriceiconsmall
+		Offset: 0,-42
+	lightbeacon: lightniniconsmall
+		Offset: 0,-42
+	trojanbeacon: trojaniconsmall
+		Offset: 0,-42
+	firestormbeacon: firestormiconsmall
+		Offset: 0,-42
+	strange: davinciiconsmall
+		Offset: 0,-42
 icon:
-    ddicon: ddicon.shp
-    cadaver: corpseicon.shp
-        Start:6
-    cannonstrike: cannonstriceicon.shp
-    lightning: lightninicon.shp
-    trojan: trojanicon.shp
-    firestorm: firestormicon.shp
-    strangedavinci: davinciiconpower.shp
+	ddicon: ddicon.shp
+	cadaver: corpseicon.shp
+		Start:6
+	cannonstrike: cannonstriceicon.shp
+	lightning: lightninicon.shp
+	trojan: trojanicon.shp
+	firestorm: firestormicon.shp
+	strangedavinci: davinciiconpower.shp
 placeholder:
-    idle: ironore4
-        Start: 9 
-    up: ironore4
-        Start: 9 
+	idle: ironore4
+		Start: 9 
+	up: ironore4
+		Start: 9 
 	down: ironore4
-        Start: 9 
-        
+		Start: 9 
+		
 cannonstrike:
-     up: ironore4
-        Start: 9 
+	 up: ironore4
+		Start: 9 
 	down: ironore4
-        Start: 9 
-        
+		Start: 9 
+		
 lightningstrike:
-     up: ironore4
-        Start: 9 
+	 up: ironore4
+		Start: 9 
 	down: ironore4
-        Start: 9  
+		Start: 9  
 
 selectioncircle:
-    active: selectioncircle
-        ZOffset: 1
-    idle: selectioncircle
-        Start: 1
+	active: selectioncircle
+		ZOffset: 1
+	idle: selectioncircle
+		Start: 1
 
 litning:
 	bright:

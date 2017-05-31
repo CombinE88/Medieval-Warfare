@@ -1,11 +1,11 @@
 Palettes:
 	cursor: temperat.pal
-    newcursor: Medieval_Civ_palette.pal
-    newcursor3: Medieval_Civ_palette.pal
-    newcursorsell: Medieval_Civ_palette.pal
+	newcursor: Medieval_Civ_palette.pal
+	newcursor3: Medieval_Civ_palette.pal
+	newcursorsell: Medieval_Civ_palette.pal
 
 Cursors:
-    newcursor.shp: newcursor
+	newcursor.shp: newcursor
 		scroll-t:
 			Start: 2
 		scroll-tr:
@@ -22,7 +22,7 @@ Cursors:
 			Start: 8
 		scroll-tl:
 			Start: 9
-    mouse2.shp: cursor
+	mouse2.shp: cursor
 		scroll-t-blocked:
 			Start: 130
 		scroll-tr-blocked:
@@ -42,7 +42,7 @@ Cursors:
 		select:
 			Start: 12
 			Length: 6
-    newcursor.shp: newcursor
+	newcursor.shp: newcursor
 		default-minimap:
 			Start: 10
 			Length: 1
@@ -63,11 +63,11 @@ Cursors:
 			Length: 1
 		enter:
 			Start: 26
-            Length: 1
+			Length: 1
 		enter-minimap:
 			Start: 106
 			Length: 1
-    mouse2.shp: cursor
+	mouse2.shp: cursor
 		c4:
 			Start: 122
 			Length: 3
@@ -91,7 +91,7 @@ Cursors:
 		joystick-tl-blocked:
 			Start: 137
 # Cursors that need minimap variants
-    newcursor.shp: newcursor
+	newcursor.shp: newcursor
 		deploy:
 			Start: 11
 			Length: 7
@@ -101,14 +101,14 @@ Cursors:
 		repair-blocked:
 			Start: 124
 			Length: 1
-    newcursorsell.shp: newcursorsell
+	newcursorsell.shp: newcursorsell
 		sell:
 			Start: 0
 			Length: 10
 		sell-blocked:
 			Start: 10
 			Length: 1
-    newcursor.shp: newcursor        
+	newcursor.shp: newcursor		
 		ability:
 			Start: 44
 			Length: 18
@@ -118,16 +118,16 @@ Cursors:
 		ioncannon:
 			Start: 62
 			Length: 12
-    mouse2.shp: cursor
+	mouse2.shp: cursor
 		sell-vehicle:
 			Start: 154
 			Length: 24
-    newquill.shp: newcursor3
+	newquill.shp: newcursor3
 		default:
 			Start: 0
 			X: -16
 			Y: 12
-    newcursor.shp: newcursor	
+	newcursor.shp: newcursor	
 		joystick-all:
 			Start: 0
 			X: -16
@@ -147,7 +147,7 @@ Cursors:
 		attackmove:
 			Start: 19
 			Length: 6
-        harvest:
+		harvest:
 			Start: 117
 			Length: 7
 		attackmove-minimap:
@@ -200,4 +200,4 @@ Cursors:
 			Length: 1
 		attackoutsiderange-minimap:
 			Start: 112
-            Length: 1
+			Length: 1

@@ -1,23 +1,23 @@
 KING:
 	Inherits: ^Knight
-    GivesBounty:
-        Percentage: 50
+	GivesBounty:
+		Percentage: 50
 	MustBeDestroyed:
 		RequiredForShortGame: true
-    Valued:
+	Valued:
 		Cost: 2000
 	Tooltip:
 		Name: Your Highness
 	Buildable:
-        IconPalette: raicon
+		IconPalette: raicon
 		BuildPaletteOrder: 1000
-        Prerequisites: !king
+		Prerequisites: !king
 		Description: The ruler over your Kingdome!\n  Very strong against Infantry and Cavalry\n  cannot attack Buildings\n  detect cloaked units\n\n\n
 		Queue: MInfantry.Castle
-        BuildLimit: 1
-    Mobile:
+		BuildLimit: 1
+	Mobile:
 		Speed: 55
-        Voice: Move
+		Voice: Move
 	Guard:
 		Voice: Move
 	Passenger:
@@ -27,93 +27,93 @@ KING:
 		HP: 35000
 	Armament:
 		Weapon: kingssword
-    AutoTarget:
+	AutoTarget:
 		ScanRadius: 4
-        InitialStance: AttackAnything
-    RenderSprites:
-        Image: koenig
-        PlayerPalette: raplayer
+		InitialStance: AttackAnything
+	RenderSprites:
+		Image: koenig
+		PlayerPalette: raplayer
 	-WithInfantryBody:
 	WithFacingSpriteBody:
-        StartSequence: make
-        Sequence: idle
-    WithMoveAnimation: 
-        MoveSequence: move
-    WithAttackAnimation:
-        AttackSequence: shoot
-    Armor:
+		StartSequence: make
+		Sequence: idle
+	WithMoveAnimation: 
+		MoveSequence: move
+	WithAttackAnimation:
+		AttackSequence: shoot
+	Armor:
 		Type: Knight
-    AttackFrontal:
+	AttackFrontal:
 		Voice: Attack
 	AttackMove:
 		Voice: Attack
 	AnnounceOnBuild:
 	AnnounceOnKill:
-    Voiced:
+	Voiced:
 		VoiceSet: CommandoVoice
-    SpawnActorOnDeath@1:
-        DeathType: DefaultDeath
-        Probability: 100
-        Actor: Husk.KING
-    SpawnActorOnDeath@2:
-        DeathType: RippedApartDeath
-        Probability: 100
-        Actor: Husk.KING
-    SpawnActorOnDeath@3:
-        DeathType: PoisonDeath
-        Probability: 100
-        Actor: Husk.KING
-    SpawnActorOnDeath@4:
-        DeathType: BallistaDeath
-        Probability: 100
-        Actor: Husk.KING
-    SpawnActorOnDeath@5:
-        DeathType: BurnToDeath
-        Probability: 100
-        Actor: Husk.KING
-    -WithDeathAnimation:
-    ProximityExternalCondition@BUFF:
-        Range: 7c0
-        ValidStances: Ally
-        Condition: KingIsNear
-    SelfHealing@AlwaysHeals:
-        Delay: 10
-        Step: 500
+	SpawnActorOnDeath@1:
+		DeathType: DefaultDeath
+		Probability: 100
+		Actor: Husk.KING
+	SpawnActorOnDeath@2:
+		DeathType: RippedApartDeath
+		Probability: 100
+		Actor: Husk.KING
+	SpawnActorOnDeath@3:
+		DeathType: PoisonDeath
+		Probability: 100
+		Actor: Husk.KING
+	SpawnActorOnDeath@4:
+		DeathType: BallistaDeath
+		Probability: 100
+		Actor: Husk.KING
+	SpawnActorOnDeath@5:
+		DeathType: BurnToDeath
+		Probability: 100
+		Actor: Husk.KING
+	-WithDeathAnimation:
+	ProximityExternalCondition@BUFF:
+		Range: 7c0
+		ValidStances: Ally
+		Condition: KingIsNear
+	SelfHealing@AlwaysHeals:
+		Delay: 10
+		Step: 500
 		HealIfBelow: 110
 		DamageCooldown: 200 
-    DetectCloaked:
+	DetectCloaked:
 		Range: 3c0
-    Captures:
+	Captures:
 		CaptureTypes: horse
 		PlayerExperience: 200
-        Sabotage: False
-        Voice: Attack
-    -Crushable:
-    -ExternalCondition@SNAKES:
-    -SelfHealing@SNAKES:
-    -SpeedMultiplier@SNAKES:
-    -WithIdleOverlay@SNAKES:
-    -RangeMultiplier:
-        
+		Sabotage: False
+		Voice: Attack
+	-Crushable:
+	-ExternalCondition@SNAKES:
+	-SelfHealing@SNAKES:
+	-SpeedMultiplier@SNAKES:
+	-WithIdleOverlay@SNAKES:
+	-RangeMultiplier:
+		
  
 Husk.KING:
-    Inherits@1: ^ExistsInWorld
+	Inherits@1: ^ExistsInWorld
 	Inherits@3: ^SpriteActor		
-    Tooltip:
+	Tooltip:
 		Name: Surrendered
-    RenderSprites:
-        Image: koenig
-        PlayerPalette: raplayer
+	RenderSprites:
+		Image: koenig
+		PlayerPalette: raplayer
 	WithSpriteBody:
-        StartSequence: die1
-        Sequence: stand-dead
+		StartSequence: die1
+		Sequence: stand-dead
 	SelfHealing@EndOfSurrender:
-        Step: -100
-        HealIfBelow: 110
-        Delay: 25
-        DamageTypes: KingSurrender
+		Step: -100
+		HealIfBelow: 110
+		Delay: 25
+		DamageTypes: KingSurrender
 	Health:
-        HP: 6000
+		HP: 6000
 		Shape: Circle
 			Radius: 128
 	Armor:
@@ -121,7 +121,7 @@ Husk.KING:
 	RevealsShroud:
 		Range: 2c0
 	Mobile:
-        Speed: 0
+		Speed: 0
 		Crushes: crate
 		SharesCell: true
 		TerrainSpeeds:
@@ -134,36 +134,36 @@ Husk.KING:
 	SelectionDecorations:
 	WithSpriteControlGroupDecoration:
 	Selectable:
-        Priority: 8
+		Priority: 8
 		Bounds: 12,17,0,-6
 	QuantizeFacingsFromSequence:
 		Sequence: stand-dead
 	HiddenUnderFog:
-    SpawnActorOnDeath:
-        Actor: KING
-        DeathType: KingSurrender
-        SkipMakeAnimations: false
-    ProvidesPrerequisite:
+	SpawnActorOnDeath:
+		Actor: KING
+		DeathType: KingSurrender
+		SkipMakeAnimations: false
+	ProvidesPrerequisite:
 		Prerequisite: king  
-        
+		
 Husk2.KING:
-    Inherits@1: ^ExistsInWorld
+	Inherits@1: ^ExistsInWorld
 	Inherits@3: ^SpriteActor
-    Tooltip:
+	Tooltip:
 		Name: Preparing
-    RenderSprites:
-        Image: koenig
-        PlayerPalette: raplayer
+	RenderSprites:
+		Image: koenig
+		PlayerPalette: raplayer
 	WithSpriteBody:
-        StartSequence: die1
-        Sequence: stand-dead
+		StartSequence: die1
+		Sequence: stand-dead
 	SelfHealing@EndOfSurrender:
-        Step: -100
-        HealIfBelow: 110
-        Delay: 25
-        DamageTypes: KingSurrender
+		Step: -100
+		HealIfBelow: 110
+		Delay: 25
+		DamageTypes: KingSurrender
 	Health:
-        HP: 15000
+		HP: 15000
 		Shape: Circle
 			Radius: 128
 	Armor:
@@ -171,7 +171,7 @@ Husk2.KING:
 	RevealsShroud:
 		Range: 2c0
 	Mobile:
-        Speed: 0
+		Speed: 0
 		Crushes: crate
 		SharesCell: true
 		TerrainSpeeds:
@@ -184,22 +184,22 @@ Husk2.KING:
 	SelectionDecorations:
 	WithSpriteControlGroupDecoration:
 	Selectable:
-        Priority: 8
+		Priority: 8
 		Bounds: 12,17,0,-6
 	QuantizeFacingsFromSequence:
 		Sequence: stand-dead
 	HiddenUnderFog:
-    SpawnActorOnDeath:
-        Actor: KING
-        DeathType: KingSurrender
-        SkipMakeAnimations: false
-    ProvidesPrerequisite:
+	SpawnActorOnDeath:
+		Actor: KING
+		DeathType: KingSurrender
+		SkipMakeAnimations: false
+	ProvidesPrerequisite:
 		Prerequisite: king 
-    
+	
 
 ENGENEER:
-    Passenger:
-        PipType: Yellow
+	Passenger:
+		PipType: Yellow
 	Inherits: ^Knight
 	Valued:
 		Cost: 500
@@ -207,9 +207,9 @@ ENGENEER:
 		Name: Engineer
 	Selectable:
 		Priority: 9
-    Buildable:
+	Buildable:
 		Description: Can quick repair buildings and siege weapons.\n  Captures and damages buildings.\n  Unarmed\n\n\n
-        IconPalette: raicon
+		IconPalette: raicon
 		BuildPaletteOrder: 50
 		Queue: MInfantry.GDI, MInfantry.Nod, MInfantry.SUL
 	Mobile:
@@ -217,27 +217,27 @@ ENGENEER:
 	Captures:
 		CaptureTypes: building, husk
 		PlayerExperience: 50
-        SabotageHPRemoval: 10
-    Health:
+		SabotageHPRemoval: 10
+	Health:
 		HP: 2000
 	Armament:
 		Weapon: repair
 		TargetStances: Ally
 		ForceTargetStances: None
 	AttackFrontal:
-    RenderSprites:
-        Image: engeneer
-        PlayerPalette: raplayer
-    WithInfantryBody:
+	RenderSprites:
+		Image: engeneer
+		PlayerPalette: raplayer
+	WithInfantryBody:
 		DefaultAttackSequence: shoot
-    AutoTarget:
+	AutoTarget:
 		ScanRadius: 6
-        InitialStance: AttackAnything
-    Armor:
+		InitialStance: AttackAnything
+	Armor:
 		Type: Leather
-    Voiced:
+	Voiced:
 		VoiceSet: EngineerVoice
-        
+		
 E1NEW:
 	Inherits: ^Knight
 	Valued:
@@ -251,22 +251,22 @@ E1NEW:
 	Armament:
 		Weapon: Fork
 	AttackFrontal:
-    RenderSprites:
-        Image: e1new
-        PlayerPalette: raplayer
-    WithInfantryBody:
+	RenderSprites:
+		Image: e1new
+		PlayerPalette: raplayer
+	WithInfantryBody:
 		DefaultAttackSequence: shoot
-    AutoTarget:
+	AutoTarget:
 		ScanRadius: 4
-        InitialStance: AttackAnything
-    Armor:
+		InitialStance: AttackAnything
+	Armor:
 		Type: Leather
-    Power:
+	Power:
 		Amount: 0
-    Wanders:
-        WanderMoveRadius: 2
-        MinMoveDelay: 50
-        MaxMoveDelay: 250
+	Wanders:
+		WanderMoveRadius: 2
+		MinMoveDelay: 50
+		MaxMoveDelay: 250
 
 E2NEW:
 	Inherits: ^Knight
@@ -276,32 +276,32 @@ E2NEW:
 		Name: Pike Guard
 	Buildable:
 		Description: Anti-Cavalry infantry.\n  Strong vs Cavalry.\n  Weak vs Infantry\n  Deals damage when trampled by Cavalry\n  Can cut down trees.\n\n\n
-        IconPalette: raicon
+		IconPalette: raicon
 		BuildPaletteOrder: 20
 		Queue:  MInfantry.Nod, MInfantry.Horse
 	Mobile:
 		Speed: 45
 	Health:
 		HP: 8000
-    Armament:
+	Armament:
 		Weapon: pike
 	AttackFrontal:
-    AutoTarget:
+	AutoTarget:
 		ScanRadius: 4
-        InitialStance: AttackAnything
-    RenderSprites:
-        Image: e2new
-        PlayerPalette: raplayer
+		InitialStance: AttackAnything
+	RenderSprites:
+		Image: e2new
+		PlayerPalette: raplayer
 	WithInfantryBody:
 		DefaultAttackSequence: shoot
-    Armor:
+	Armor:
 		Type: Light
-    Voiced:
+	Voiced:
 		VoiceSet: NodPikeVoice
-    Explodes:
-        Weapon: KilledPike
-        EmptyWeapon: KilledPike
-        
+	Explodes:
+		Weapon: KilledPike
+		EmptyWeapon: KilledPike
+		
 E2NEWV2:
 	Inherits: ^Knight
 	Valued:
@@ -310,32 +310,32 @@ E2NEWV2:
 		Name: Halberd Guard
 	Buildable:
 		Description: Anti-Cavalry infantry.\n  Strong vs Cavalry.\n  Weak vs Infantry\n  Deals damage when trampled by Cavalry\n  Can cut down trees.\n\n\n
-        IconPalette: raicon
+		IconPalette: raicon
 		BuildPaletteOrder: 20
 		Queue: MInfantry.GDI
 	Mobile:
 		Speed: 45
 	Health:
 		HP: 8000
-    Armament:
+	Armament:
 		Weapon: pikespread
 	AttackFrontal:
-    AutoTarget:
+	AutoTarget:
 		ScanRadius: 4
-        InitialStance: AttackAnything
-    RenderSprites:
-        Image: e2newv2
-        PlayerPalette: raplayer
+		InitialStance: AttackAnything
+	RenderSprites:
+		Image: e2newv2
+		PlayerPalette: raplayer
 	WithInfantryBody:
 		DefaultAttackSequence: shoot
-    Armor:
+	Armor:
 		Type: Light
-    Voiced:
+	Voiced:
 		VoiceSet: GDIPikeVoice
-    Explodes:
-        Weapon: KilledPike
-        EmptyWeapon: KilledPike
-        
+	Explodes:
+		Weapon: KilledPike
+		EmptyWeapon: KilledPike
+		
 E3NEW:
 	Inherits: ^Knight
 	Valued:
@@ -344,29 +344,29 @@ E3NEW:
 		Name: Knight
 	Buildable:
 		Description: General-purpose infantry.\n  Strong vs Infantry\n  Weak vs Cavalry \n  Can cut down trees.\n\n\n
-        IconPalette: raicon
+		IconPalette: raicon
 		BuildPaletteOrder: 10
 		Queue: MInfantry.GDI
-    Mobile:
+	Mobile:
 		Speed: 56
 	Health:
 		HP: 10000
 	Armament:
 		Weapon: broadsword
 	AttackFrontal:
-    AutoTarget:
+	AutoTarget:
 		ScanRadius: 4
-        InitialStance: AttackAnything
-    RenderSprites:
-        Image: e3new
-        PlayerPalette: raplayer
+		InitialStance: AttackAnything
+	RenderSprites:
+		Image: e3new
+		PlayerPalette: raplayer
 	WithInfantryBody:
 		DefaultAttackSequence: shoot
-    Armor:
+	Armor:
 		Type: Heavy
-    Voiced:
+	Voiced:
 		VoiceSet: GDIKnightVoice
-        
+		
 E3NEWV2:
 	Inherits: ^Knight
 	Valued:
@@ -375,86 +375,86 @@ E3NEWV2:
 		Name: Footman
 	Buildable:
 		Description: General-purpose infantry.\n  Strong vs Infantry\n  Weak vs Cavalry \nCan cut down trees.\n\n\n
-        IconPalette: raicon
+		IconPalette: raicon
 		BuildPaletteOrder: 10
 		Queue: MInfantry.Nod, MInfantry.Horse
-    Mobile:
+	Mobile:
 		Speed: 56
 	Health:
 		HP: 9500
 	Armament:
 		Weapon: broadsword
 	AttackFrontal:
-    AutoTarget:
+	AutoTarget:
 		ScanRadius: 4
-        InitialStance: AttackAnything
-    RenderSprites:
-        Image: e3newv2
-        PlayerPalette: raplayer
+		InitialStance: AttackAnything
+	RenderSprites:
+		Image: e3newv2
+		PlayerPalette: raplayer
 	WithInfantryBody:
 		DefaultAttackSequence: shoot
-    Armor:
+	Armor:
 		Type: Heavy
-    Voiced:
+	Voiced:
 		VoiceSet: NodKnightVoice
-        
+		
 BARBAR:
 	Inherits: ^Knight
 	Valued:
 		Cost: 250
 	Tooltip:
 		Name: Bandit
-    Mobile:
+	Mobile:
 		Speed: 75
-    Buildable:
-        Description: Very tough and fast fighter.\n  Strong vs Infantry\n  Weak vs Cavalry \nCan cut down trees.\n\n\n
-        IconPalette: raicon
+	Buildable:
+		Description: Very tough and fast fighter.\n  Strong vs Infantry\n  Weak vs Cavalry \nCan cut down trees.\n\n\n
+		IconPalette: raicon
 		BuildPaletteOrder: 30
 		Queue: MInfantry.Bandit
-        BuildDuration: 360
+		BuildDuration: 360
 	Health:
 		HP: 15000
 	Armament:
 		Weapon: broadswordmongol
 	AttackFrontal:
-    AutoTarget:
+	AutoTarget:
 		ScanRadius: 4
-        InitialStance: AttackAnything
-    RenderSprites:
-        Image: mongol
-        PlayerPalette: raplayer
+		InitialStance: AttackAnything
+	RenderSprites:
+		Image: mongol
+		PlayerPalette: raplayer
 	WithInfantryBody:
 		DefaultAttackSequence: shoot
-    Armor:
+	Armor:
 		Type: Heavy
-        
+		
 BARBAR2:
 	Inherits: ^Knight
 	Valued:
 		Cost: 450
 	Tooltip:
 		Name: Bandit
-    Mobile:
+	Mobile:
 		Speed: 65
 	Health:
 		HP: 10000
 	Armament:
 		Weapon: DaggerMongol
-        LocalOffset: 541,50,456
+		LocalOffset: 541,50,456
 	AttackFrontal:
-    AutoTarget:
+	AutoTarget:
 		ScanRadius: 5
-        InitialStance: AttackAnything
-    RenderSprites:
-        Image: mongolknife
-        PlayerPalette: raplayer
+		InitialStance: AttackAnything
+	RenderSprites:
+		Image: mongolknife
+		PlayerPalette: raplayer
 	WithInfantryBody:
 		DefaultAttackSequence: shoot
-    Armor:
+	Armor:
 		Type: Heavy
-        
+		
 E9NEW:
-    RevealsShroud:
+	RevealsShroud:
 		Range: 6c0
 	Inherits: ^Knight
 	Valued:
@@ -463,7 +463,7 @@ E9NEW:
 		Name: Fire Mage
 	Buildable:
 		Description: Advanced Anti-infantry unit.\n  Strong vs Infantry, Buildings and Spectral Units\n  Weak vs Cavalry\n  Detects cloaked units\n  Cannot attack Aircrafts anymore!!!\n\n\n
-        IconPalette: raicon
+		IconPalette: raicon
 		BuildPaletteOrder: 70
 		Prerequisites: anyhq
 		Queue: MInfantry.Nod, MInfantry.Horse
@@ -473,26 +473,26 @@ E9NEW:
 		HP: 8000
 	Armament@Ground:
 		Weapon: magefire
-        LocalOffset: 541,-50,256
-        FireDelay: 3
+		LocalOffset: 541,-50,256
+		FireDelay: 3
 	AttackFrontal:
-    AutoTarget:
+	AutoTarget:
 		ScanRadius: 5
-        InitialStance: AttackAnything
-    RenderSprites:
-        Image: firmag
-        PlayerPalette: raplayer
+		InitialStance: AttackAnything
+	RenderSprites:
+		Image: firmag
+		PlayerPalette: raplayer
 	WithInfantryBody:
 		DefaultAttackSequence: shoot
-    Armor:
+	Armor:
 		Type: Leather
-    DetectCloaked:
+	DetectCloaked:
 		Range: 2c0
-    Voiced:
+	Voiced:
 		VoiceSet: NodMageVoice
-        
+		
 E4NEW:
-    RevealsShroud:
+	RevealsShroud:
 		Range: 6c0
 	Inherits: ^Knight
 	Valued:
@@ -501,7 +501,7 @@ E4NEW:
 		Name: Archer
 	Buildable:
 		Description: Advanced Anti-infantry unit.\n  Strong vs Light Infantry\n  Weak vs Cavalry and heavy Infantry\n  Detects cloaked units\n  Can attack Aircrafts\n\n\n
-        IconPalette: raicon
+		IconPalette: raicon
 		BuildPaletteOrder: 30
 		Queue: MInfantry.Nod, MInfantry.Horse
 	Mobile:
@@ -510,40 +510,40 @@ E4NEW:
 		HP: 5000
 	Armament:
 		Weapon: bownarrow
-        LocalOffset: 341,20,356
-    Armament@DUMMY:
+		LocalOffset: 341,20,356
+	Armament@DUMMY:
 		Weapon: BowNArrowDUMMY
-        LocalOffset: 341,20,356
-    Armament@Air:
+		LocalOffset: 341,20,356
+	Armament@Air:
 		Weapon: bownarrowair
-        LocalOffset: 341,20,356
-    Armament@GARRISONED:
+		LocalOffset: 341,20,356
+	Armament@GARRISONED:
 		Name: garrisoned
 		Weapon: BowNArrowTowerUnblock
-    Armament@GARRISONEDDUMMY:
+	Armament@GARRISONEDDUMMY:
 		Name: garrisoned
 		Weapon: BowNArrowTowerUnblockDUMMY
 	AttackFrontal:
-    AutoTarget:
+	AutoTarget:
 		ScanRadius: 5
-        InitialStance: AttackAnything
-    RenderSprites:
-        Image: e4new
-        PlayerPalette: raplayer
+		InitialStance: AttackAnything
+	RenderSprites:
+		Image: e4new
+		PlayerPalette: raplayer
 	WithInfantryBody:
 		DefaultAttackSequence: shoot
-    Armor:
+	Armor:
 		Type: Leather
-    DetectCloaked:
+	DetectCloaked:
 		Range: 2c0
-    Passenger:
+	Passenger:
 		CargoType: Archer
-    Voiced:
+	Voiced:
 		VoiceSet: NodArcherVoice
-        
-        
+		
+		
 E4NEWV2:
-    RevealsShroud:
+	RevealsShroud:
 		Range: 6c0
 	Inherits: ^Knight
 	Valued:
@@ -552,7 +552,7 @@ E4NEWV2:
 		Name: Archer
 	Buildable:
 		Description: Advanced Anti-infantry unit.\n  Strong vs Light Infantry\n  Weak vs Cavalry and heavy Infantry\n  Detects cloaked units\n  Can attack Aircrafts\n\n\n
-        IconPalette: raicon
+		IconPalette: raicon
 		BuildPaletteOrder: 30
 		Queue: MInfantry.GDI
 	Mobile:
@@ -561,51 +561,51 @@ E4NEWV2:
 		HP: 5000
 	Armament:
 		Weapon: bownarrow
-        LocalOffset: 341,20,356
-    Armament@Air:
+		LocalOffset: 341,20,356
+	Armament@Air:
 		Weapon: bownarrowair
-        LocalOffset: 341,20,356
-    Armament@DUMMY:
+		LocalOffset: 341,20,356
+	Armament@DUMMY:
 		Weapon: BowNArrowDUMMY
-        LocalOffset: 341,20,356
-    Armament@GARRISONED:
+		LocalOffset: 341,20,356
+	Armament@GARRISONED:
 		Name: garrisoned
 		Weapon: BowNArrowTowerUnblock
-    Armament@GARRISONEDDUMMY:
+	Armament@GARRISONEDDUMMY:
 		Name: garrisoned
 		Weapon: BowNArrowTowerUnblockDUMMY
 	AttackFrontal:
-    AutoTarget:
+	AutoTarget:
 		ScanRadius: 5
-        InitialStance: AttackAnything
-    RenderSprites:
-        Image: e4newv2
-        PlayerPalette: raplayer
+		InitialStance: AttackAnything
+	RenderSprites:
+		Image: e4newv2
+		PlayerPalette: raplayer
 	WithInfantryBody:
 		DefaultAttackSequence: shoot
-    Armor:
+	Armor:
 		Type: Leather
-    DetectCloaked:
+	DetectCloaked:
 		Range: 2c0
-    Passenger:
+	Passenger:
 		CargoType: Archer
-    Voiced:
+	Voiced:
 		VoiceSet: GDIArcherVoice
-        
-        
+		
+		
 E5NEW:
-    RevealsShroud:
+	RevealsShroud:
 		Range: 8c0
 	Inherits: ^Knight
 	DetectCloaked:
 		Range: 2c0
-    Valued:
+	Valued:
 		Cost: 400
 	Tooltip:
 		Name: Marksman
 	Buildable:
 		Description: Advanced general-purpose infantry.\n  Strong vs all Ground units\n  Detects cloaked units\n  Cannot attack Aircrafts anymore!!!!\n\n\n
-        IconPalette: raicon
+		IconPalette: raicon
 		BuildPaletteOrder: 80
 		Prerequisites: anyarmory, ~techlevel.medium
 		Queue: MInfantry.Nod, MInfantry.Horse
@@ -615,25 +615,25 @@ E5NEW:
 		HP: 9000
 	Armament:
 		Weapon: crossbow
-        LocalOffset: 341,0,456
+		LocalOffset: 341,0,456
 	AttackFrontal:
-    AutoTarget:
+	AutoTarget:
 		ScanRadius: 5
-        InitialStance: AttackAnything
-    RenderSprites:
-        Image: e5new
-        PlayerPalette: raplayer
+		InitialStance: AttackAnything
+	RenderSprites:
+		Image: e5new
+		PlayerPalette: raplayer
 	WithInfantryBody:
 		DefaultAttackSequence: shoot
-    Armor:
+	Armor:
 		Type: Light
-    Power:
+	Power:
 		Amount: -2
-    Voiced:
+	Voiced:
 		VoiceSet: NodCrossVoice
 
 RMBONEW:
-    RevealsShroud:
+	RevealsShroud:
 		Range: 9c0
 	Inherits: ^Knight
 	Valued:
@@ -641,35 +641,35 @@ RMBONEW:
 	Tooltip:
 		Name: Paladin
 	Buildable:
-        Description: Elite Infantry\n Strong vs Infantry, Buildings and Spectral Units\n  Arrow proofed.\n\n\n
-        IconPalette: raicon
-        BuildPaletteOrder: 70
-        Prerequisites: anyhq, ~techlevel.high
-        Queue: MInfantry.GDI
-    Mobile:
+		Description: Elite Infantry\n Strong vs Infantry, Buildings and Spectral Units\n  Arrow proofed.\n\n\n
+		IconPalette: raicon
+		BuildPaletteOrder: 70
+		Prerequisites: anyhq, ~techlevel.high
+		Queue: MInfantry.GDI
+	Mobile:
 		Speed: 50
 	Health:
 		HP: 15000
 	Armament:
 		Weapon: claymore
 	AttackFrontal:
-    AutoTarget:
+	AutoTarget:
 		ScanRadius: 4
-        InitialStance: AttackAnything
-    RenderSprites:
-        Image: rmbonew
-        PlayerPalette: raplayer
+		InitialStance: AttackAnything
+	RenderSprites:
+		Image: rmbonew
+		PlayerPalette: raplayer
 	WithInfantryBody:
 		DefaultAttackSequence: shoot
-    Armor:
+	Armor:
 		Type: Heavy
-    Power:
+	Power:
 		Amount: -1
-    Voiced:
+	Voiced:
 		VoiceSet: PaladinVoice
-        
+		
 NEWCOMM:
-    RevealsShroud:
+	RevealsShroud:
 		Range: 9c0
 	Inherits: ^Knight
 	Valued:
@@ -678,52 +678,52 @@ NEWCOMM:
 		Name: Juggernaut
 	Buildable:
 		Description: Juggernaut Infantry \n Very Strong vs Infantry, Buildings and Spectral Units\n  Can only slightly be harmed by Arrows. \nCan cut down trees.\n\n\n
-        IconPalette: raicon
+		IconPalette: raicon
 		BuildPaletteOrder: 80
 		Prerequisites: anycastle, anyhq, ~techlevel.high
 		Queue: MInfantry.GDI
-    Mobile:
+	Mobile:
 		Speed: 50
 	Health:
 		HP: 39000
 	Armament@1:
 		Weapon: sledgehammer
-    AttackFrontal:
-        Armaments: primary
-    AutoTarget:
+	AttackFrontal:
+		Armaments: primary
+	AutoTarget:
 		ScanRadius: 4
-        InitialStance: AttackAnything
-    RenderSprites:
-        Image: newcomm
-        PlayerPalette: raplayer
+		InitialStance: AttackAnything
+	RenderSprites:
+		Image: newcomm
+		PlayerPalette: raplayer
 	-WithInfantryBody:
-    WithFacingSpriteBody:
-        Sequence: idle
-    WithMoveAnimation: 
-        MoveSequence: move
-    WithAttackAnimation:
-        AttackSequence: shoot
-    Armor:
+	WithFacingSpriteBody:
+		Sequence: idle
+	WithMoveAnimation: 
+		MoveSequence: move
+	WithAttackAnimation:
+		AttackSequence: shoot
+	Armor:
 		Type: Knight
-    Power:
+	Power:
 		Amount: -2  
-    Voiced:
+	Voiced:
 		VoiceSet: JuggernautVoice 
-    AnnounceOnBuild:
+	AnnounceOnBuild:
 	AnnounceOnKill:
-    -Crushable:
-    -ExternalCondition@SNAKES:
-    -SelfHealing@SNAKES:
-    -SpeedMultiplier@SNAKES:
-    -WithIdleOverlay@SNAKES:
-    -RangeMultiplier:
+	-Crushable:
+	-ExternalCondition@SNAKES:
+	-SelfHealing@SNAKES:
+	-SpeedMultiplier@SNAKES:
+	-WithIdleOverlay@SNAKES:
+	-RangeMultiplier:
 
 ASSASSIN:
-    RevealsShroud:
+	RevealsShroud:
 		Range: 6c0
-    DetectCloaked:
+	DetectCloaked:
 		Range: 2c0
-    Cloak:
+	Cloak:
 		-UpgradeTypes:
 		InitialDelay: 90
 		CloakDelay: 90
@@ -734,69 +734,69 @@ ASSASSIN:
 		Name: Assaassin
 	Buildable:
 		Description: Mid/Long-range knifthrowing infantry that can cloak.\nHas weak armor. Can be spotted by some infantry and defense structures.\n  Strong vs Cavalry, Infantry. Moderate vs Spectral Units\n  Sets buildings on fire.\n  Detects cloaked units\n  Can attack Aircrafts\n\n\n
-        IconPalette: raicon
+		IconPalette: raicon
 		BuildPaletteOrder: 90
 		Queue: MInfantry.Nod, MInfantry.Horse
-        Prerequisites: anycastle, ~techlevel.high
+		Prerequisites: anycastle, ~techlevel.high
 	Mobile:
 		Speed: 66
 	Health:
 		HP: 7000
-    Armament@dagger:
-        Name: Primary
+	Armament@dagger:
+		Name: Primary
 		Weapon: dagger
-        LocalOffset: 241,80,356
-    Armament@daggerair:
-        Name: Primary
+		LocalOffset: 241,80,356
+	Armament@daggerair:
+		Name: Primary
 		Weapon: daggerair
-        LocalOffset: 241,80,356
-    Armament@fire:
-        Name: Secondary
+		LocalOffset: 241,80,356
+	Armament@fire:
+		Name: Secondary
 		Weapon: SetFire
-        LocalOffset: 241,80,356
-    AttackFrontal:
-        Armaments: Primary, Secondary
-    RenderSprites:
-        Image: thief
-        PlayerPalette: raplayer
+		LocalOffset: 241,80,356
+	AttackFrontal:
+		Armaments: Primary, Secondary
+	RenderSprites:
+		Image: thief
+		PlayerPalette: raplayer
 	WithInfantryBody:
-        DefaultAttackSequence: attack
-        AttackSequences:
-            Secondary: fireattack
-            Primary: knifeattack
-    AutoTarget:
+		DefaultAttackSequence: attack
+		AttackSequences:
+			Secondary: fireattack
+			Primary: knifeattack
+	AutoTarget:
 		InitialStance: HoldFire
 		InitialStanceAI: ReturnFire
-    Armor:
+	Armor:
 		Type: Leather
 
-    Voiced:
+	Voiced:
 		VoiceSet: AssasinVoice
 
 E8FARMER:
 	Inherits: ^Knight
-    BodyOrientation:
-        QuantizedFacings: 8
-    QuantizeFacingsFromSequence:
+	BodyOrientation:
+		QuantizedFacings: 8
+	QuantizeFacingsFromSequence:
 		Sequence: stand
-    Buildable:
+	Buildable:
 		Description: Gathers grains and Crops and Corn.\nDelivers to a windmill.\nCan collect chopped wood, lumber and goods\n\n
-        IconPalette: raicon
+		IconPalette: raicon
 		BuildPaletteOrder: 40
 		Queue: MInfantry.GDI, MInfantry.Nod, ~disabled
-    WithFacingSpriteBody:
-        Sequence: idle
-        RequiresCondition: !MoveAnim
-    WithHarvestAnimation:
-        HarvestSequence: harvest
-        PrefixByFullness: empty-, full-
-    WithDockingAnimation:
-    GrantConditionOnMovement:
-        Condition: MoveAnim
-    WithInfantryBody:
-        MoveSequence: move
-        StandSequences: idle
-        RequiresCondition: MoveAnim
+	WithFacingSpriteBody:
+		Sequence: idle
+		RequiresCondition: !MoveAnim
+	WithHarvestAnimation:
+		HarvestSequence: harvest
+		PrefixByFullness: empty-, full-
+	WithDockingAnimation:
+	GrantConditionOnMovement:
+		Condition: MoveAnim
+	WithInfantryBody:
+		MoveSequence: move
+		StandSequences: idle
+		RequiresCondition: MoveAnim
 	Valued:
 		Cost: 375
 	Tooltip:
@@ -805,16 +805,16 @@ E8FARMER:
 		Speed: 60
 	Health:
 		HP: 25000
-    RenderSprites:
-        Image: e8farmer
-        PlayerPalette: raplayer
-    AttackFrontal:
-    Armor:
-		Type: Heavy       
-    Selectable:
+	RenderSprites:
+		Image: e8farmer
+		PlayerPalette: raplayer
+	AttackFrontal:
+	Armor:
+		Type: Heavy	   
+	Selectable:
 		Priority: 7
-    Harvester:
-        DeliveryBuildings: zeroproc, ghostproc, sulmill
+	Harvester:
+		DeliveryBuildings: zeroproc, ghostproc, sulmill
 		Resources: Copper, Grains, Wood, Goods, Lumber, Corn
 		PipCount: 2
 		Capacity: 10
@@ -822,35 +822,35 @@ E8FARMER:
 		BaleUnloadDelay: 5
 		SearchFromProcRadius: 25
 		SearchFromOrderRadius: 15
-    Selectable:
+	Selectable:
 		Bounds: 14,26,0,-6
 	SelectionDecorations:
 		VisualBounds: 14,26,0,-6 
-    -Crushable:
-        
+	-Crushable:
+		
 BUMMLER:
 	Inherits: ^Knight
-    BodyOrientation:
-        QuantizedFacings: 8
-    QuantizeFacingsFromSequence:
+	BodyOrientation:
+		QuantizedFacings: 8
+	QuantizeFacingsFromSequence:
 		Sequence: stand
-    Buildable:
+	Buildable:
 		Description: Collects leftovers of the battlefield.\nDelivers to barracks, stables and workshops.\n\n\n
-        IconPalette: raicon
+		IconPalette: raicon
 		BuildPaletteOrder: 60
 		Queue: MInfantry.GDI, MInfantry.Nod, ~disabled, MInfantry.SUL
-    WithFacingSpriteBody:
-        Sequence: idle
-        RequiresCondition: !MoveAnim
-    WithHarvestAnimation:
-        HarvestSequence: harvest
-    WithDockingAnimation:
-    GrantConditionOnMovement:
-        Condition: MoveAnim
-    WithInfantryBody:
-        MoveSequence: move
-        StandSequences: idle
-        RequiresCondition: MoveAnim
+	WithFacingSpriteBody:
+		Sequence: idle
+		RequiresCondition: !MoveAnim
+	WithHarvestAnimation:
+		HarvestSequence: harvest
+	WithDockingAnimation:
+	GrantConditionOnMovement:
+		Condition: MoveAnim
+	WithInfantryBody:
+		MoveSequence: move
+		StandSequences: idle
+		RequiresCondition: MoveAnim
 	Valued:
 		Cost: 750
 	Tooltip:
@@ -859,16 +859,16 @@ BUMMLER:
 		Speed: 60
 	Health:
 		HP: 35000
-    RenderSprites:
-        Image: bummler
-        PlayerPalette: raplayer
-    AttackFrontal:
-    Armor:
-		Type: Leather       
-    Selectable:
+	RenderSprites:
+		Image: bummler
+		PlayerPalette: raplayer
+	AttackFrontal:
+	Armor:
+		Type: Leather	   
+	Selectable:
 		Priority: 7
-    Harvester:
-        DeliveryBuildings: barrnew, handnew, stall, nodstall, workshopnod, workshopgdi, sulmystic, sulfix, sulbarr
+	Harvester:
+		DeliveryBuildings: barrnew, handnew, stall, nodstall, workshopnod, workshopgdi, sulmystic, sulfix, sulbarr
 		Resources: Guns
 		PipCount: 1
 		Capacity: 3
@@ -876,11 +876,11 @@ BUMMLER:
 		BaleUnloadDelay: 25
 		SearchFromProcRadius: 25
 		SearchFromOrderRadius: 15
-    Selectable:
+	Selectable:
 		Bounds: 14,26,0,-6
 	SelectionDecorations:
 		VisualBounds: 14,26,0,-6 
-        
+		
 SIEGERUNNER:
 	Inherits: ^Knight
 	Valued:
@@ -888,525 +888,525 @@ SIEGERUNNER:
 	Tooltip:
 		Name: Engineer (escaping)
 	-Selectable:
-    Targetable:
-        RequiresForceFire: true
+	Targetable:
+		RequiresForceFire: true
 	Mobile:
 		Speed: 86
-    Health:
+	Health:
 		HP: 5000
 	AttackFrontal:
-    RenderSprites:
-        Image: engeneer
-        PlayerPalette: raplayer
-    WithInfantryBody:
-        MoveSequence: runfast
-    Armor:
+	RenderSprites:
+		Image: engeneer
+		PlayerPalette: raplayer
+	WithInfantryBody:
+		MoveSequence: runfast
+	Armor:
 		Type: Leather
-    Voiced:
+	Voiced:
 		VoiceSet: EngineerVoice
-    Wanders:
-        WanderMoveRadius: 30
-        ReduceMoveRadiusDelay: 5
-    SelfHealing@KILLSELF:
+	Wanders:
+		WanderMoveRadius: 30
+		ReduceMoveRadiusDelay: 5
+	SelfHealing@KILLSELF:
 		PercentageStep: -5
 		Delay: 12
 		HealIfBelow: 101
 		DamageCooldown: 0
-        DamageTypes: DefaultDeath
-    RevealsShroud:
+		DamageTypes: DefaultDeath
+	RevealsShroud:
 		Range: 2c0
 
 MWCHICK1:
 	Inherits: ^MWAnimal
-    RenderSprites:
-        Image: mwchick
-        PlayerPalette: 
-        Palette: ra
-    Tooltip:
+	RenderSprites:
+		Image: mwchick
+		PlayerPalette: 
+		Palette: ra
+	Tooltip:
 		Name: Chicken
-    WithInfantryBody:
-        IdleSequences: idle1
-    Power:
-		Amount: 0       
-      
+	WithInfantryBody:
+		IdleSequences: idle1
+	Power:
+		Amount: 0	   
+	  
 MWWAND1:
 	Inherits: ^MWTalker
-    RenderSprites:
-        Image: mwciv1
-        PlayerPalette: 
-        Palette: mwcivilian
-    WithInfantryBody:
-        DefaultAttackSequence: talking
-        IdleSequences: idle1, idle2, idle3, idle4, idle5, idle6, idle7, idle8
-    Power:
+	RenderSprites:
+		Image: mwciv1
+		PlayerPalette: 
+		Palette: mwcivilian
+	WithInfantryBody:
+		DefaultAttackSequence: talking
+		IdleSequences: idle1, idle2, idle3, idle4, idle5, idle6, idle7, idle8
+	Power:
 		Amount: 4
-        
+		
 MWWAND2:
 	Inherits: ^MWTalker
-    RenderSprites:
-        Image: mwciv2
-        PlayerPalette: 
-        Palette: mwcivilian
-    WithInfantryBody:
-        DefaultAttackSequence: talking
-        IdleSequences: idle1, idle2, idle3, idle4, idle5, idle6, idle7, idle8
-    Power:
+	RenderSprites:
+		Image: mwciv2
+		PlayerPalette: 
+		Palette: mwcivilian
+	WithInfantryBody:
+		DefaultAttackSequence: talking
+		IdleSequences: idle1, idle2, idle3, idle4, idle5, idle6, idle7, idle8
+	Power:
 		Amount: 4
-    
-        
+	
+		
 MWWAND3:
 	Inherits: ^MWTalker
-    RenderSprites:
-        Image: mwciv3
-        PlayerPalette: 
-        Palette: mwcivilian
-    WithInfantryBody:
-        DefaultAttackSequence: talking
-        IdleSequences: idle1, idle2, idle3, idle4, idle5, idle6, idle7, idle8
-    Power:
+	RenderSprites:
+		Image: mwciv3
+		PlayerPalette: 
+		Palette: mwcivilian
+	WithInfantryBody:
+		DefaultAttackSequence: talking
+		IdleSequences: idle1, idle2, idle3, idle4, idle5, idle6, idle7, idle8
+	Power:
 		Amount: 4 
-        
+		
 MWWAND4:
 	Inherits: ^MWTalker
-    RenderSprites:
-        Image: mwciv4
-        PlayerPalette: 
-        Palette: mwcivilian
+	RenderSprites:
+		Image: mwciv4
+		PlayerPalette: 
+		Palette: mwcivilian
 	WithInfantryBody:
-        DefaultAttackSequence: talking
-        IdleSequences: idle1, idle2, idle3, idle4, idle5, idle6, idle7, idle8
-    Power:
+		DefaultAttackSequence: talking
+		IdleSequences: idle1, idle2, idle3, idle4, idle5, idle6, idle7, idle8
+	Power:
 		Amount: 4
-        
+		
 MWWAND5:
 	Inherits: ^MWTalker
-    RenderSprites:
-        Image: mwciv5
-        PlayerPalette: 
-        Palette: mwcivilian
+	RenderSprites:
+		Image: mwciv5
+		PlayerPalette: 
+		Palette: mwcivilian
 	WithInfantryBody:
-        DefaultAttackSequence: talking
-        IdleSequences: idle1, idle2, idle3, idle4, idle5, idle6, idle7, idle8
-    Power:
+		DefaultAttackSequence: talking
+		IdleSequences: idle1, idle2, idle3, idle4, idle5, idle6, idle7, idle8
+	Power:
 		Amount: 4
-        
+		
 MWWAND6:
 	Inherits: ^MWTalker
-    RenderSprites:
-        Image: mwciv6
-        PlayerPalette: 
-        Palette: mwcivilian
-    WithInfantryBody:
-        DefaultAttackSequence: talking
-        IdleSequences: idle1, idle2, idle3, idle4, idle5, idle6, idle7, idle8
-    Power:
+	RenderSprites:
+		Image: mwciv6
+		PlayerPalette: 
+		Palette: mwcivilian
+	WithInfantryBody:
+		DefaultAttackSequence: talking
+		IdleSequences: idle1, idle2, idle3, idle4, idle5, idle6, idle7, idle8
+	Power:
 		Amount: 4
-        
+		
 MWWAND10:
 	Inherits: ^MWTalker
-    RenderSprites:
-        Image: mwciv10
-        PlayerPalette: 
-        Palette: mwcivilian
-    WithInfantryBody:
-        DefaultAttackSequence: talking
-        IdleSequences: idle1, idle2, idle3, idle4, idle5, idle6, idle7, idle8
-    Power:
+	RenderSprites:
+		Image: mwciv10
+		PlayerPalette: 
+		Palette: mwcivilian
+	WithInfantryBody:
+		DefaultAttackSequence: talking
+		IdleSequences: idle1, idle2, idle3, idle4, idle5, idle6, idle7, idle8
+	Power:
 		Amount: 4
-        
+		
 MWWAND11:
 	Inherits: ^MWTalker
-    RenderSprites:
-        Image: mwciv11
-        PlayerPalette: 
-        Palette: mwcivilian
-    WithInfantryBody:
-        DefaultAttackSequence: talking
-        IdleSequences: idle1, idle2, idle3, idle4, idle5, idle6, idle7, idle8
-    Power:
+	RenderSprites:
+		Image: mwciv11
+		PlayerPalette: 
+		Palette: mwcivilian
+	WithInfantryBody:
+		DefaultAttackSequence: talking
+		IdleSequences: idle1, idle2, idle3, idle4, idle5, idle6, idle7, idle8
+	Power:
 		Amount: 4
-        
+		
 MWWAND12:
 	Inherits: ^MWTalker
-    RenderSprites:
-        Image: mwciv12
-        PlayerPalette: 
-        Palette: mwcivilian
-    WithInfantryBody:
-        DefaultAttackSequence: talking
-        IdleSequences: idle1, idle2, idle3, idle4, idle5, idle6, idle7, idle8
-    Power:
+	RenderSprites:
+		Image: mwciv12
+		PlayerPalette: 
+		Palette: mwcivilian
+	WithInfantryBody:
+		DefaultAttackSequence: talking
+		IdleSequences: idle1, idle2, idle3, idle4, idle5, idle6, idle7, idle8
+	Power:
 		Amount: 4
-                
+				
 MWWAND7:
 	Inherits: ^MWWanderer
-    RenderSprites:
-        Image: mwciv7
-        PlayerPalette: raplayer
-    WithInfantryBody:
-        MinIdleDelay: 25
-        MaxIdleDelay: 50
-        IdleSequences: idle1, idle2, idle3
-    Tooltip:
+	RenderSprites:
+		Image: mwciv7
+		PlayerPalette: raplayer
+	WithInfantryBody:
+		MinIdleDelay: 25
+		MaxIdleDelay: 50
+		IdleSequences: idle1, idle2, idle3
+	Tooltip:
 		Name: Blacksmith
 		GenericVisibility: None
-        
+		
 MWWAND8:
 	Inherits: ^MWWanderer
-    RenderSprites:
-        Image: mwciv8
-        PlayerPalette: 
-        Palette: mwnobles
-    WithInfantryBody:
-        StandSequences: idlestand
-        IdleSequences: idle1, idle2
-    Tooltip:
+	RenderSprites:
+		Image: mwciv8
+		PlayerPalette: 
+		Palette: mwnobles
+	WithInfantryBody:
+		StandSequences: idlestand
+		IdleSequences: idle1, idle2
+	Tooltip:
 		Name: Treasurer
 		GenericVisibility: None
-    ProximityExternalCondition@TAX:
-        Range: 5c0
-        ValidStances: Ally
-        Condition: Tax
-    Wanders:
-        WanderMoveRadius: 4
-        ReduceMoveRadiusDelay: 5
-        RequiresCondition: Wander
-    -CashTrickler@PayTax:
-        
+	ProximityExternalCondition@TAX:
+		Range: 5c0
+		ValidStances: Ally
+		Condition: Tax
+	Wanders:
+		WanderMoveRadius: 4
+		ReduceMoveRadiusDelay: 5
+		RequiresCondition: Wander
+	-CashTrickler@PayTax:
+		
 MWWAND9:
 	Inherits: ^MWWanderer
-    RenderSprites:
-        Image: mwciv9
-        PlayerPalette: 
-        Palette: mwcivilian
-    WithInfantryBody:
-        MinIdleDelay: 25
-        MaxIdleDelay: 75
-        IdleSequences: idle1, idle2, idle3, idle4, idle5, idle6
-    Tooltip:
+	RenderSprites:
+		Image: mwciv9
+		PlayerPalette: 
+		Palette: mwcivilian
+	WithInfantryBody:
+		MinIdleDelay: 25
+		MaxIdleDelay: 75
+		IdleSequences: idle1, idle2, idle3, idle4, idle5, idle6
+	Tooltip:
 		Name: Labourer
 		GenericVisibility: None
-    Wanders:
-        WanderMoveRadius: 1
-        ReduceMoveRadiusDelay: 5
+	Wanders:
+		WanderMoveRadius: 1
+		ReduceMoveRadiusDelay: 5
 		MinMoveDelay: 250
 		MaxMoveDelay: 650
-        RequiresCondition: Labor
-    AttackWander: 
-        WanderMoveRadius: 1
-        ReduceMoveRadiusDelay: 5
+		RequiresCondition: Labor
+	AttackWander: 
+		WanderMoveRadius: 1
+		ReduceMoveRadiusDelay: 5
 		MinMoveDelay: 0
 		MaxMoveDelay: 25
-        RequiresCondition: !Labor
-    WithInfantryBody:
+		RequiresCondition: !Labor
+	WithInfantryBody:
 		StandSequences: stand
-    AutoTarget:
+	AutoTarget:
 		ScanRadius: 20
-        InitialStance: AttackAnything
-        RequiresCondition: !Labor
-    AttackFrontal:
-        RequiresCondition: !Labor
-    AttackMove:
-        RequiresCondition: !Labor
-    ExternalCondition@Wander:
-        Condition: Labor
-    Armament:
+		InitialStance: AttackAnything
+		RequiresCondition: !Labor
+	AttackFrontal:
+		RequiresCondition: !Labor
+	AttackMove:
+		RequiresCondition: !Labor
+	ExternalCondition@Wander:
+		Condition: Labor
+	Armament:
 		Weapon: WanderAttackWorkshop
 		TargetStances: Ally
-        RequiresCondition: !Labor
-        
+		RequiresCondition: !Labor
+		
 MWCIVCOM:
 	Inherits: ^MWWanderer
-    Tooltip:
+	Tooltip:
 		Name: Commander
 		GenericVisibility: None
-    ProvidesPrerequisite@buildingname:
-    RenderSprites:
-        Image: mwcivcom
-        PlayerPalette: raplayer
-    AttackWander: 
-        WanderMoveRadius: 1
-        ReduceMoveRadiusDelay: 5
+	ProvidesPrerequisite@buildingname:
+	RenderSprites:
+		Image: mwcivcom
+		PlayerPalette: raplayer
+	AttackWander: 
+		WanderMoveRadius: 1
+		ReduceMoveRadiusDelay: 5
 		MinMoveDelay: 25
 		MaxMoveDelay: 25
-        RequiresCondition: !Wander
-    AttackWander@2: 
-        WanderMoveRadius: 1
-        ReduceMoveRadiusDelay: 5
+		RequiresCondition: !Wander
+	AttackWander@2: 
+		WanderMoveRadius: 1
+		ReduceMoveRadiusDelay: 5
 		MinMoveDelay: 150
 		MaxMoveDelay: 750
-        RequiresCondition: Wander
-    -Wanders:
-    WithInfantryBody:
+		RequiresCondition: Wander
+	-Wanders:
+	WithInfantryBody:
 		StandSequences: stand
-        DefaultAttackSequence: shoot
-        IdleSequences: idle1, idle2, idle3, idle4, idle5, idle6
-    Armament@SWORD:
+		DefaultAttackSequence: shoot
+		IdleSequences: idle1, idle2, idle3, idle4, idle5, idle6
+	Armament@SWORD:
 		Weapon: WanderCommander
-        RequiresCondition: Wander
-    AutoTarget:
+		RequiresCondition: Wander
+	AutoTarget:
 		ScanRadius: 10
-        InitialStance: AttackAnything
-        RequiresCondition: Wander || !Wander
-    AttackFrontal:
-        RequiresCondition: Wander || !Wander
-    AttackMove:
-        RequiresCondition: Wander || !Wander
-    Health:
+		InitialStance: AttackAnything
+		RequiresCondition: Wander || !Wander
+	AttackFrontal:
+		RequiresCondition: Wander || !Wander
+	AttackMove:
+		RequiresCondition: Wander || !Wander
+	Health:
 		HP: 30000
-    Armor:
+	Armor:
 		Type: Heavy
-    RevealsShroud:
+	RevealsShroud:
 		Range: 6c0
-    -CashTrickler@PayTax:
-        
+	-CashTrickler@PayTax:
+		
 NOBLE1:
 	Inherits: ^MWTalker
-    Tooltip:
+	Tooltip:
 		Name: Noble
 		GenericVisibility: None
-    RenderSprites:
-        Image: nobl1
-        PlayerPalette: 
-        Palette: mwnobles
-    WithInfantryBody:
-        DefaultAttackSequence: talking
-        IdleSequences: idle1, idle2, idle3, idle4, idle5, idle6, idle7, idle8
-    Power:
+	RenderSprites:
+		Image: nobl1
+		PlayerPalette: 
+		Palette: mwnobles
+	WithInfantryBody:
+		DefaultAttackSequence: talking
+		IdleSequences: idle1, idle2, idle3, idle4, idle5, idle6, idle7, idle8
+	Power:
 		Amount: 6
-    CashTrickler@PayTax:
-        Interval: 25
-        Amount: 4
-        RequiresCondition: Tax
-        
+	CashTrickler@PayTax:
+		Interval: 25
+		Amount: 4
+		RequiresCondition: Tax
+		
 NOBLE2:
 	Inherits: ^MWTalker
-    Tooltip:
+	Tooltip:
 		Name: Noble
 		GenericVisibility: None
-    RenderSprites:
-        Image: nobl2
-        PlayerPalette: 
-        PlayerPalette: 
-        Palette: mwnobles
-    WithInfantryBody:
-        DefaultAttackSequence: talking
-        IdleSequences: idle1, idle2, idle3, idle4, idle5, idle6, idle7, idle8
-    Power:
+	RenderSprites:
+		Image: nobl2
+		PlayerPalette: 
+		PlayerPalette: 
+		Palette: mwnobles
+	WithInfantryBody:
+		DefaultAttackSequence: talking
+		IdleSequences: idle1, idle2, idle3, idle4, idle5, idle6, idle7, idle8
+	Power:
 		Amount: 6
-    CashTrickler@PayTax:
-        Interval: 25
-        Amount: 4
-        RequiresCondition: Tax
-        
+	CashTrickler@PayTax:
+		Interval: 25
+		Amount: 4
+		RequiresCondition: Tax
+		
 NOBLE3:
 	Inherits: ^MWTalker
-    Tooltip:
+	Tooltip:
 		Name: Noble
 		GenericVisibility: None
-    RenderSprites:
-        Image: nobl3
-        PlayerPalette: 
-        Palette: mwnobles
-    WithInfantryBody:
-        DefaultAttackSequence: talking
-        IdleSequences: idle1, idle2, idle3, idle4, idle5, idle6, idle7, idle8
-    Power:
+	RenderSprites:
+		Image: nobl3
+		PlayerPalette: 
+		Palette: mwnobles
+	WithInfantryBody:
+		DefaultAttackSequence: talking
+		IdleSequences: idle1, idle2, idle3, idle4, idle5, idle6, idle7, idle8
+	Power:
 		Amount: 6
-    CashTrickler@PayTax:
-        Interval: 25
-        Amount: 4
-        RequiresCondition: Tax
-        
+	CashTrickler@PayTax:
+		Interval: 25
+		Amount: 4
+		RequiresCondition: Tax
+		
 NOBLE4:
 	Inherits: ^MWTalker
-    Tooltip:
+	Tooltip:
 		Name: Noble
 		GenericVisibility: None
-    RenderSprites:
-        Image: nobl4
-        PlayerPalette: 
-        Palette: mwnobles
-    WithInfantryBody:
-        DefaultAttackSequence: talking
-        IdleSequences: idle1, idle2, idle3, idle4, idle5, idle6, idle7, idle8
-    Power:
+	RenderSprites:
+		Image: nobl4
+		PlayerPalette: 
+		Palette: mwnobles
+	WithInfantryBody:
+		DefaultAttackSequence: talking
+		IdleSequences: idle1, idle2, idle3, idle4, idle5, idle6, idle7, idle8
+	Power:
 		Amount: 6
-    CashTrickler@PayTax:
-        Interval: 25
-        Amount: 4
-        RequiresCondition: Tax
-        
+	CashTrickler@PayTax:
+		Interval: 25
+		Amount: 4
+		RequiresCondition: Tax
+		
 NOBLE5:
 	Inherits: ^MWTalker
-    Tooltip:
+	Tooltip:
 		Name: Landlord
 		GenericVisibility: None
-    RenderSprites:
-        Image: mwcivll
-        PlayerPalette: 
-        Palette: mwnobles
-    WithInfantryBody:
-        DefaultAttackSequence: talking
-        IdleSequences: idle1
-    -CashTrickler@PayTax:
-    Health:
+	RenderSprites:
+		Image: mwcivll
+		PlayerPalette: 
+		Palette: mwnobles
+	WithInfantryBody:
+		DefaultAttackSequence: talking
+		IdleSequences: idle1
+	-CashTrickler@PayTax:
+	Health:
 		HP: 14000
-        
+		
 MWCONST1:
 	Inherits: ^MWConstructor
-    RenderSprites:
-        Image: mwcivconst
-    Transforms:
+	RenderSprites:
+		Image: mwcivconst
+	Transforms:
 		IntoActor: prop1
 		Offset: 0,0
 		Facing: 76
-        
+		
 MWCONST2:
 	Inherits: ^MWConstructor
-    RenderSprites:
-        Image: mwcivconst
-    Transforms:
+	RenderSprites:
+		Image: mwcivconst
+	Transforms:
 		IntoActor: prop2
 		Offset: 0,0
 		Facing: 76
-        
+		
 MWCONST3:
 	Inherits: ^MWConstructor
-    RenderSprites:
-        Image: mwcivconst
-    Transforms:
+	RenderSprites:
+		Image: mwcivconst
+	Transforms:
 		IntoActor: prop3
 		Offset: 0,0
 		Facing: 76
-        
+		
 MWCONST4:
 	Inherits: ^MWConstructor
-    RenderSprites:
-        Image: mwcivconst
-    Transforms:
+	RenderSprites:
+		Image: mwcivconst
+	Transforms:
 		IntoActor: prop4
 		Offset: 0,0
 		Facing: 76
-        
+		
 MWCONST5:
 	Inherits: ^MWConstructor
-    RenderSprites:
-        Image: mwcivconst
-    Transforms:
+	RenderSprites:
+		Image: mwcivconst
+	Transforms:
 		IntoActor: prop5
 		Offset: 0,0
 		Facing: 76
-        
+		
 MWCONST6:
 	Inherits: ^MWConstructor
-    RenderSprites:
-        Image: mwcivconst
-    Transforms:
+	RenderSprites:
+		Image: mwcivconst
+	Transforms:
 		IntoActor: prop6
 		Offset: 0,0
 		Facing: 76
-        
+		
 MWCONST7:
 	Inherits: ^MWConstructor
-    RenderSprites:
-        Image: mwcivconst
-    Transforms:
+	RenderSprites:
+		Image: mwcivconst
+	Transforms:
 		IntoActor: prop7
 		Offset: 0,0
 		Facing: 76
-        
+		
 MWCONST1BACK:
 	Inherits: ^MWConstructor
-    RenderSprites:
-        Image: mwciv9
-        
+	RenderSprites:
+		Image: mwciv9
+		
 MWLUMBERER:
 	Inherits: ^MWConstructor
-    RenderSprites:
-        Image: mwlumber
-    Tooltip:
+	RenderSprites:
+		Image: mwlumber
+	Tooltip:
 		Name: Lumberman
 	Health:
 		HP: 10000
 	RevealsShroud:
 		Range: 7c0
-    WithFacingSpriteBody:
-    WithInfantryBody:
-        DefaultAttackSequence: attack
-        RequiresCondition: !TraderLoot
-    WithInfantryBody@Lumberer:
-        StandSequences: standwood
-        MoveSequence: runwood
-        DefaultAttackSequence: attackwood
-        RequiresCondition: TraderLoot
-    AttackFrontal:
-    AttackMove:
-    AutoTarget:
+	WithFacingSpriteBody:
+	WithInfantryBody:
+		DefaultAttackSequence: attack
+		RequiresCondition: !TraderLoot
+	WithInfantryBody@Lumberer:
+		StandSequences: standwood
+		MoveSequence: runwood
+		DefaultAttackSequence: attackwood
+		RequiresCondition: TraderLoot
+	AttackFrontal:
+	AttackMove:
+	AutoTarget:
 		ScanRadius: 10
-        InitialStance: AttackAnything
-    ExternalCondition@Jack:
-        Condition: Jack
-    ExternalCondition@Loot:
-        Condition: TraderLoot
-    Armament@Normal:
+		InitialStance: AttackAnything
+	ExternalCondition@Jack:
+		Condition: Jack
+	ExternalCondition@Loot:
+		Condition: TraderLoot
+	Armament@Normal:
 		Weapon: LumberJackAxe
 		TargetStances: Enemy, Neutral, Ally
-        RequiresCondition: !TraderLoot
-    AttackWander: 
-        WanderMoveRadius: 1
-        ReduceMoveRadiusDelay: 5
+		RequiresCondition: !TraderLoot
+	AttackWander: 
+		WanderMoveRadius: 1
+		ReduceMoveRadiusDelay: 5
 		MinMoveDelay: 50
 		MaxMoveDelay: 300
-    Armament@Jack:
+	Armament@Jack:
 		Weapon: WanderAttackLumberShack
 		TargetStances: Enemy, Neutral, Ally
-        RequiresCondition: !Jack && !TraderLoot
-    Targetable:
-        TargetTypes: Ground, Infantry, LLumber
-    Armament@Report:
+		RequiresCondition: !Jack && !TraderLoot
+	Targetable:
+		TargetTypes: Ground, Infantry, LLumber
+	Armament@Report:
 		Weapon: LumberGrantLootAttack
 		TargetStances: Enemy, Neutral, Ally
-        RequiresCondition: TraderLoot
-        
+		RequiresCondition: TraderLoot
+		
 CAMELTRADER:
 	Inherits: ^MWConstructor
-    RenderSprites:
-        Image: mwcameltrader
-    Tooltip:
+	RenderSprites:
+		Image: mwcameltrader
+	Tooltip:
 		Name: Camel Trader
 	Health:
 		HP: 10000
 	RevealsShroud:
 		Range: 7c0
-    WithInfantryBody:
-        DefaultAttackSequence: attack
-    AttackFrontal:
-    AttackMove:
-    AutoTarget:
+	WithInfantryBody:
+		DefaultAttackSequence: attack
+	AttackFrontal:
+	AttackMove:
+	AutoTarget:
 		ScanRadius: 10
-        InitialStance: AttackAnything
-    ExternalCondition@Trader:
-        Condition: Trader
-    ExternalCondition@Loot:
-        Condition: TraderLoot
-    Armament@Normal:
+		InitialStance: AttackAnything
+	ExternalCondition@Trader:
+		Condition: Trader
+	ExternalCondition@Loot:
+		Condition: TraderLoot
+	Armament@Normal:
 		Weapon: CamelTraderSlaughter
 		TargetStances: Enemy, Neutral, Ally
-        RequiresCondition: Trader && !TraderLoot
-    AttackWander: 
-        WanderMoveRadius: 1
-        ReduceMoveRadiusDelay: 5
+		RequiresCondition: Trader && !TraderLoot
+	AttackWander: 
+		WanderMoveRadius: 1
+		ReduceMoveRadiusDelay: 5
 		MinMoveDelay: 50
 		MaxMoveDelay: 300
-    Armament@Trader:
+	Armament@Trader:
 		Weapon: WanderAttackCamelTrader
 		TargetStances: Enemy, Neutral, Ally
-        RequiresCondition: !Trader && !TraderLoot
-    Armament@Report:
+		RequiresCondition: !Trader && !TraderLoot
+	Armament@Report:
 		Weapon: GrantLootAttack
 		TargetStances: Enemy, Neutral, Ally
-        RequiresCondition: TraderLoot
-    Targetable:
-        TargetTypes: Ground, Infantry, CTrader
-        
+		RequiresCondition: TraderLoot
+	Targetable:
+		TargetTypes: Ground, Infantry, CTrader
+		
