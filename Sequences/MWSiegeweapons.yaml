@@ -1,4 +1,9 @@
 mwcivcom:
+    stunned: sulm4
+        ZOffset: 125
+        Start: 312
+        Length: 2
+        Tick: 200
     panic-stand: mwcivcom
         Start: 122
 		Facings: 8
