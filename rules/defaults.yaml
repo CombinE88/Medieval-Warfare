@@ -1384,28 +1384,28 @@
         Step: -0
         HealIfBelow: 110
         Delay: 25
-        RequiresCondition: snaketrap
+        RequiresCondition: snaketrap >= 1
         DamageTypes: PoisonDeath
     SelfHealing@SNAKES2:
         PercentageStep: -8
         Step: -0
         HealIfBelow: 110
         Delay: 25
-        RequiresCondition: snaketrap && snaketrap
+        RequiresCondition: snaketrap >= 2
         DamageTypes: PoisonDeath
     SelfHealing@SNAKES3:
         PercentageStep: -8
         Step: -0
         HealIfBelow: 110
         Delay: 25
-        RequiresCondition: snaketrap && snaketrap && snaketrap
+        RequiresCondition: snaketrap >= 3
         DamageTypes: PoisonDeath
     SelfHealing@SNAKES4:
         PercentageStep: -8
         Step: -0
         HealIfBelow: 110
         Delay: 25
-        RequiresCondition: snaketrap && snaketrap && snaketrap && snaketrap
+        RequiresCondition: snaketrap >= 4
         DamageTypes: PoisonDeath
     SpeedMultiplier@SNAKES:
         Modifier: 40
