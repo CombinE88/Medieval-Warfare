@@ -48,6 +48,8 @@ SULGTW:
         PlayerPalette: sultanplayer
 	Valued:
 		Cost: 1000
+    CustomSellValue:
+		Value: 500
 	Tooltip:
 		Name: Mosaic Guard Tower
 	Buildable:
@@ -135,6 +137,8 @@ SULNUK2:
         PlayerPalette: sultanplayer
 	Valued:
 		Cost: 800
+    CustomSellValue:
+		Value: 400
 	Tooltip:
 		Name: Large Hut
 	ProvidesPrerequisite:
@@ -263,6 +267,8 @@ SULBARR:
         PlayerPalette: sultanplayer
 	Valued:
 		Cost: 900
+    CustomSellValue:
+		Value: 450
 	Tooltip:
 		Name: Barracks
 	ProvidesPrerequisite:
@@ -328,7 +334,9 @@ SULMYSTIC:
     RenderSprites:
         PlayerPalette: sultanplayer
 	Valued:
-		Cost: 1700
+		Cost: 1500
+    CustomSellValue:
+		Value: 750
 	Tooltip:
 		Name: School of Mystic Teachings
 	ProvidesPrerequisite@buildingname:
@@ -390,6 +398,8 @@ SULCASTLE:
         PlayerPalette: sultanplayer
 	Valued:
 		Cost: 1500
+    CustomSellValue:
+		Value: 750
     Tooltip:
 		Name: Palace
 	ProvidesPrerequisite:
@@ -648,6 +658,8 @@ SULMILL:
         PlayerPalette: sultanplayer
 	Valued:
 		Cost: 1400
+    CustomSellValue:
+		Value: 400
 	Tooltip:
 		Name: Windmill
 	ProvidesPrerequisite:
@@ -690,8 +702,6 @@ SULMILL:
 		PipColor: Yellow
 		PipCount: 5
 		Capacity: 1000
-    CustomSellValue:
-		Value: 500
 	FreeActor@1:
 		Actor: SULE6
 		SpawnOffset: 1,3
@@ -722,7 +732,9 @@ SULFIX:
     RenderSprites:
         PlayerPalette: sultanplayer
 	Valued:
-		Cost: 1300
+		Cost: 1200
+    CustomSellValue:
+		Value: 600
 	Tooltip:
 		Name: Siege Workshop
 	Buildable:
@@ -828,7 +840,7 @@ SULE1:
     Mobile:
 		Speed: 85
 	Health:
-		HP: 5500
+		HP: 8000
 	Armament:
 		Weapon: SulSword
 	AttackFrontal:
@@ -889,7 +901,7 @@ SULE3:
 		Range: 6c0
 	Inherits: ^Knight
 	Valued:
-		Cost: 200
+		Cost: 250
 	Tooltip:
 		Name: Bedouin
 	Buildable:
@@ -900,22 +912,22 @@ SULE3:
 	Mobile:
 		Speed: 60
 	Health:
-		HP: 5000
+		HP: 7000
 	Armament:
-		Weapon: bownarrow
+		Weapon: BedouinBow
         LocalOffset: 341,20,356
     Armament@DUMMY:
-		Weapon: BowNArrowDUMMY
+		Weapon: BedouinBowDUMMY
         LocalOffset: 341,20,356
     Armament@Air:
-		Weapon: bownarrowair
+		Weapon: BedouinBowAir
         LocalOffset: 341,20,356
     Armament@GARRISONED:
 		Name: garrisoned
-		Weapon: BowNArrowTowerUnblock
+		Weapon: BedouinBowTowerUnblock
     Armament@GARRISONEDDUMMY:
 		Name: garrisoned
-		Weapon: BowNArrowTowerUnblockDUMMY
+		Weapon: BedouinBowTowerUnblockDUMMY
 	AttackFrontal:
     AutoTarget:
 		ScanRadius: 5
@@ -1043,9 +1055,9 @@ SULE6:
 	Tooltip:
 		Name: Farmer
 	Mobile:
-		Speed: 59
+		Speed: 70
 	Health:
-		HP: 20000
+		HP: 17000
     RenderSprites:
         PlayerPalette: raplayer
     AttackFrontal:
@@ -1075,7 +1087,7 @@ SULM1:
 		Range: 6c0
 	Inherits: ^Knight
 	Valued:
-		Cost: 450
+		Cost: 350
 	Tooltip:
 		Name: Apprentice
 	Buildable:
@@ -1140,7 +1152,7 @@ SULM1SKELET:
         Delay: 25
         DamageTypes: DefaultDeath
     Armor:
-		Type: Leather
+		Type: Heavy
     -SelfHealing@Rotaway:
     -SelfHealing@DDler:
     WithDeathAnimation:
@@ -1169,7 +1181,7 @@ SULM2:
 		Range: 6c0
 	Inherits: ^Knight
 	Valued:
-		Cost: 850
+		Cost: 950
 	Tooltip:
 		Name: Djinn
 	Buildable:
@@ -1182,7 +1194,7 @@ SULM2:
 		Speed: 66
 	-Crushable:
     Health:
-		HP: 20000
+		HP: 25000
 	Armament@Ground:
 		Weapon: DjinElectro
         LocalOffset: 141,75,352
@@ -1249,7 +1261,7 @@ SULB0:
 	Inherits: ^Siege
     Inherits@2: ^GainsExperience
 	Valued:
-		Cost: 650
+		Cost: 725
 	Tooltip:
 		Name: War Elephant
 	Buildable:
@@ -1259,11 +1271,11 @@ SULB0:
 		Description: Equipped with 2 Archers.\n  Very strong vs Light Infantry and Aircrafts \n  Moderate vs Cavalry\n  Weak vs Buildings\n\n\n
 		Queue: MSiege.SUL
 	Mobile:
-		TurnSpeed: 3
+		TurnSpeed: 2
 		Speed: 45
         Crushes: crate, infantry
 	Health:
-		HP: 27000
+		HP: 30000
         Shape: Capsule
             Radius: 526
             PointA: 0, -412
@@ -1276,7 +1288,7 @@ SULB0:
 		IdleSequences: stand
 		DefaultAttackSequence: shoot
     Armor:
-		Type: MediumCavalry
+		Type: HeavyCavalry
     Selectable:
 		Bounds: 26,26,0,-13
     SelectionDecorations:

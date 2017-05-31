@@ -1380,14 +1380,35 @@
     ExternalCondition@SNAKES:
         Condition: snaketrap
     SelfHealing@SNAKES:
-        PercentageStep: -10
+        PercentageStep: -8
         Step: -0
         HealIfBelow: 110
         Delay: 25
         RequiresCondition: snaketrap
         DamageTypes: PoisonDeath
+    SelfHealing@SNAKES2:
+        PercentageStep: -8
+        Step: -0
+        HealIfBelow: 110
+        Delay: 25
+        RequiresCondition: snaketrap && snaketrap
+        DamageTypes: PoisonDeath
+    SelfHealing@SNAKES3:
+        PercentageStep: -8
+        Step: -0
+        HealIfBelow: 110
+        Delay: 25
+        RequiresCondition: snaketrap && snaketrap && snaketrap
+        DamageTypes: PoisonDeath
+    SelfHealing@SNAKES4:
+        PercentageStep: -8
+        Step: -0
+        HealIfBelow: 110
+        Delay: 25
+        RequiresCondition: snaketrap && snaketrap && snaketrap && snaketrap
+        DamageTypes: PoisonDeath
     SpeedMultiplier@SNAKES:
-        Modifier: 66
+        Modifier: 40
         RequiresCondition: snaketrap
        
 ^Siege:
@@ -1636,7 +1657,7 @@
         RequiresCondition: Tax
     SpawnActorOnDeath@SCELET:
         DeathType: SkeletonDeath
-        Probability: 66
+        Probability: 80
         Actor: SULM1SKELET
         OwnerType: Killer
     ExternalCondition@SNAKES:

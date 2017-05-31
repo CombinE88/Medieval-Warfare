@@ -462,7 +462,7 @@ E9NEW:
 	Tooltip:
 		Name: Fire Mage
 	Buildable:
-		Description: Advanced Anti-infantry unit.\n  Strong vs Infantry, Buildings and Spectral Units\n  Weak vs Cavalry\n  Detects cloaked units\n  Can attack Aircrafts\n\n\n
+		Description: Advanced Anti-infantry unit.\n  Strong vs Infantry, Buildings and Spectral Units\n  Weak vs Cavalry\n  Detects cloaked units\n  Cannot attack Aircrafts anymore!!!\n\n\n
         IconPalette: raicon
 		BuildPaletteOrder: 70
 		Prerequisites: anyhq
@@ -475,13 +475,6 @@ E9NEW:
 		Weapon: magefire
         LocalOffset: 541,-50,256
         FireDelay: 3
-    Armament@Air:
-		Weapon: magefireair
-        LocalOffset: 541,-50,256
-        FireDelay: 3
-    Armament@GARRISONED:
-		Name: garrisoned
-		Weapon: magefiresiegetower
 	AttackFrontal:
     AutoTarget:
 		ScanRadius: 5
@@ -611,7 +604,7 @@ E5NEW:
 	Tooltip:
 		Name: Marksman
 	Buildable:
-		Description: Advanced general-purpose infantry.\n  Strong vs all Ground units\n  Detects cloaked units\n  Can attack Aircrafts\n\n\n
+		Description: Advanced general-purpose infantry.\n  Strong vs all Ground units\n  Detects cloaked units\n  Cannot attack Aircrafts anymore!!!!\n\n\n
         IconPalette: raicon
 		BuildPaletteOrder: 80
 		Prerequisites: anyarmory, ~techlevel.medium
@@ -623,12 +616,6 @@ E5NEW:
 	Armament:
 		Weapon: crossbow
         LocalOffset: 341,0,456
-    Armament@Air:
-		Weapon: crossbowair
-        LocalOffset: 341,0,456
-    Armament@GARRISONED:
-		Name: garrisoned
-		Weapon: crossbowsiegetower
 	AttackFrontal:
     AutoTarget:
 		ScanRadius: 5

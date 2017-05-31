@@ -44,7 +44,9 @@ FACTNEW:
             sul: sulfact
         PlayerPalette: raplayer
 	Valued:
-		Cost: 4000
+		Cost: 3000
+    CustomSellValue:
+		Value: 1500
 	Tooltip:
 		Name: Keep
 	Building:
@@ -188,7 +190,9 @@ HQNEWNOD:
     WithDeathAnimation:
         DeathSequencePalette: raplayer
 	Valued:
-		Cost: 1000
+		Cost: 1200
+    CustomSellValue:
+		Value: 500
 	Tooltip:
 		Name: Smith
 	ProvidesPrerequisite@buildingname:
@@ -240,7 +244,9 @@ ARMORYNOD:
     WithDeathAnimation:
         DeathSequencePalette: raplayer
 	Valued:
-		Cost: 1500
+		Cost: 1750
+    CustomSellValue:
+		Value: 875
 	Tooltip:
 		Name: Armory
 	ProvidesPrerequisite@buildingname:
@@ -330,7 +336,9 @@ ARMORYGDI:
     WithDeathAnimation:
         DeathSequencePalette: raplayer
 	Valued:
-		Cost: 1500
+		Cost: 1750
+    CustomSellValue:
+		Value: 875
 	Tooltip:
 		Name: Armory
 	ProvidesPrerequisite@buildingname:
@@ -420,6 +428,8 @@ NUK2NEW:
         PlayerPalette: raplayer
 	Valued:
 		Cost: 800
+    CustomSellValue:
+		Value: 400
 	Tooltip:
 		Name: Large Hut
 	ProvidesPrerequisite:
@@ -548,6 +558,8 @@ NODNUK2:
         PlayerPalette: raplayer
 	Valued:
 		Cost: 800
+    CustomSellValue:
+		Value: 400
 	Tooltip:
 		Name: Large Shack
 	ProvidesPrerequisite:
@@ -779,7 +791,7 @@ PROCNEW:
     RenderSprites:
         PlayerPalette: raplayer
 	Valued:
-		Cost: 2000
+		Cost: 1500
 	Tooltip:
 		Name: Ore Refinery
 	Buildable:
@@ -810,7 +822,7 @@ PROCNEW:
 	Selectable:
 		Bounds: 72,56,0,12
 	CustomSellValue:
-		Value: 700
+		Value: 500
 	FreeActor@1:
 		Actor: eharvxl
 		SpawnOffset: 1,2
@@ -835,6 +847,8 @@ SILONEW:
 		Type: HeavyBuilding
     Valued:
 		Cost: 300
+    CustomSellValue:
+		Value: 150
 	Tooltip:
 		Name: Smelter
 	Buildable:
@@ -944,6 +958,8 @@ BARRNEW:
         PlayerPalette: raplayer
 	Valued:
 		Cost: 750
+    CustomSellValue:
+		Value: 375
 	Tooltip:
 		Name: Barracks
 	ProvidesPrerequisite:
@@ -1006,6 +1022,8 @@ HANDNEW:
         PlayerPalette: raplayer
 	Valued:
 		Cost: 900
+    CustomSellValue:
+		Value: 450
 	Tooltip:
 		Name: Barracks
 	ProvidesPrerequisite:
@@ -1065,6 +1083,8 @@ STALL:
         PlayerPalette: raplayer
 	Valued:
 		Cost: 2000
+    CustomSellValue:
+		Value: 1000
 	Tooltip:
 		Name: Stables
 	Buildable:
@@ -1149,6 +1169,8 @@ NODSTALL:
         PlayerPalette: raplayer
 	Valued:
 		Cost: 1750
+    CustomSellValue:
+		Value: 875
 	Tooltip:
 		Name: Stables
 	Buildable:
@@ -1234,7 +1256,9 @@ CASTLE:
         Image: castle
         PlayerPalette: raplayer
 	Valued:
-		Cost: 2000
+		Cost: 2500
+    CustomSellValue:
+		Value: 1250
 	Tooltip:
 		Name: Castle
 	Buildable:
@@ -1315,7 +1339,9 @@ CASTLE2:
         Image: castle2
         PlayerPalette: raplayer
 	Valued:
-		Cost: 1800
+		Cost: 2000
+    CustomSellValue:
+		Value: 1000
 	Tooltip:
 		Name: Castle
 	Buildable:
@@ -1399,6 +1425,8 @@ WORKSHOPNOD:
         PlayerPalette: raplayer
 	Valued:
 		Cost: 1400
+    CustomSellValue:
+		Value: 700
 	Tooltip:
 		Name: Siege Workshop
 	Buildable:
@@ -1503,6 +1531,8 @@ WORKSHOPGDI:
         PlayerPalette: raplayer
 	Valued:
 		Cost: 1600
+    CustomSellValue:
+		Value: 800
 	Tooltip:
 		Name: Siege Workshop
 	Buildable:

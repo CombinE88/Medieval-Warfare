@@ -266,7 +266,7 @@ DjinElectro:
 	Projectile: TeslaZap
 	Warhead@1Dam: SpreadDamage
 		Spread: 42
-		Damage: 5200
+		Damage: 6000
         ValidTargets: Ground, Air
 		Versus:
 			None: 100
@@ -602,3 +602,173 @@ SnakesSmall:
             HeavyBuilding: 100
             Spectral: 50
 		DamageTypes: Prone50Percent, TriggerProne, PoisonDeath
+        
+BedouinBow:
+	ReloadDelay: 45
+	Range: 5c512
+	MinRange: 0c512
+	Report: arrow01.aud
+    InvalidTargets: Wall, Air
+    ValidTargets: Ground
+	Projectile: Missile
+        HorizontalRateOfTurn: 60
+        RangeLimit: 8c204
+        Arm: 0
+		Speed: 200
+		LaunchAngle: 46
+        Palette: ra
+	Warhead@1Dam: SpreadDamage
+		Spread: 25
+        InvalidTargets: Wall, Air
+        ValidTargets: Ground
+		Damage: 1800
+		Versus:
+			Leather: 100
+			Light: 75
+			Heavy: 55
+            Concrete: 15
+            Knight: 15
+            LightCavalry: 80
+            MediumCavalry: 35
+            HeavyCavalry: 15
+            HeavyBuilding: 45
+            Spectral: 15
+		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+BedouinBowDUMMY:
+	ReloadDelay: 45
+	Range: 5c512
+	MinRange: 0c512
+    InvalidTargets: Wall, Air
+    ValidTargets: Ground
+	Projectile: Bullet
+        RangeLimit: 9c204
+        LaunchAngle: 130
+		Speed: 250
+		Inaccuracy: 0c0
+		ContrailLength: 20
+        ContrailWidth: 10
+        ContrailDelay: 0
+        ContrailUsePlayerColor : true
+		Image: e4arrow
+        Palette: ra
+	Warhead@1Dam: SpreadDamage
+		Spread: 25
+        InvalidTargets: Wall, Air
+        ValidTargets: Ground
+		Damage: 0
+		Versus:
+			Leather: 0
+			Light: 0
+			Heavy: 0
+            Concrete: 0
+            Knight: 0
+            LightCavalry: 0
+            MediumCavalry: 0
+            HeavyCavalry: 0
+            HeavyBuilding: 0
+            Spectral: 0
+		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+        
+BedouinBowAir:
+	ReloadDelay: 45
+	Range: 7c0
+	MinRange: 0c0
+	Report: arrow01.aud
+    InvalidTargets: Wall, Ground
+    ValidTargets: Air
+	Projectile: Missile
+        HorizontalRateOfTurn: 60
+        RangeLimit: 8c204
+        Arm: 0
+		Speed: 350
+		LaunchAngle: 46
+		Inaccuracy: 0c0
+		ContrailLength: 20
+        ContrailWidth: 10
+        ContrailDelay: 0
+        ContrailUsePlayerColor : true
+		Image: e4arrow
+        Palette: ra
+	Warhead@1Dam: SpreadDamage
+		Spread: 141
+        InvalidTargets: Wall, Ground
+        ValidTargets: Air
+		Damage: 2500
+		Versus:
+			Leather: 100
+			Light: 100
+			Heavy: 90
+            Concrete: 15
+            Knight: 15
+            LightCavalry: 80
+            MediumCavalry: 55
+            HeavyCavalry: 35
+            HeavyBuilding: 45
+		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+BedouinBowTowerUnblock:
+	ReloadDelay: 25
+	Range: 8c0
+	MinRange: 0c0
+	Report: arrow01.aud
+    InvalidTargets: Wall
+    ValidTargets: Ground, Air
+	Projectile: Missile
+        HorizontalRateOfTurn: 60
+        RangeLimit: 10c204
+        Arm: 0
+        Blockable: false
+		Speed: 200
+		LaunchAngle: 46
+		Inaccuracy: 0c0
+	Warhead@1Dam: SpreadDamage
+		Spread: 302
+		Damage: 1000
+        ValidTargets: Ground, Air
+        InvalidTargets: Wall
+		Versus:
+			Leather: 150
+			Light: 135
+			Heavy: 125
+            Concrete: 40
+            Knight: 50
+            LightCavalry: 95
+            MediumCavalry: 30
+            HeavyCavalry: 20
+            HeavyBuilding: 40
+            Spectral: 15
+		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath  
+BedouinBowTowerUnblockDUMMY:
+	ReloadDelay: 25
+	Range: 8c0
+	MinRange: 0c512
+    InvalidTargets: Wall, Air
+    ValidTargets: Ground
+	Projectile: Bullet
+        RangeLimit: 9c204
+        LaunchAngle: 130
+		Blockable: false
+        Speed: 250
+		Inaccuracy: 0c0
+		ContrailLength: 20
+        ContrailWidth: 10
+        ContrailDelay: 0
+        ContrailUsePlayerColor : true
+		Image: e4arrow
+        Palette: ra
+	Warhead@1Dam: SpreadDamage
+		Spread: 25
+        InvalidTargets: Wall, Air
+        ValidTargets: Ground
+		Damage: 0
+		Versus:
+			Leather: 0
+			Light: 0
+			Heavy: 0
+            Concrete: 0
+            Knight: 0
+            LightCavalry: 0
+            MediumCavalry: 0
+            HeavyCavalry: 0
+            HeavyBuilding: 0
+            Spectral: 0
+		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath 

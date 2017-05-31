@@ -6,6 +6,8 @@ GTWNEW:
         PlayerPalette: raplayer
 	Valued:
 		Cost: 800
+    CustomSellValue:
+		Value: 400
 	Tooltip:
 		Name: Guard Tower
 	Buildable:
@@ -97,10 +99,12 @@ WTW:
 		Types: concrete
     Valued:
 		Cost: 1750
+    CustomSellValue:
+		Value: 875
 	Tooltip:
 		Name: Square Tower
 	Buildable:
-		Description: Square Towers are often used to fit in defensive walls of fortifications.\n Very strong vs Infantry and Light Cavalry\n  Weak vs Heavy Cavalry and Siege weapons\n  Can target Aircraft\n  Fits with Castle Walls\n  Can shoot over Castle Walls\n  Detects cloaked units\n\n
+		Description: Square Towers are often used to fit in defensive walls of fortifications.\n Very strong vs Infantry and Light Cavalry\n  Weak vs Heavy Cavalry and Siege weapons\n  Fits with Castle Walls\n  Can shoot over Castle Walls\n  Detects cloaked units\n\n
 		BuildPaletteOrder: 60
 		Prerequisites: barracks, anyworkshop, anyarmory
 		Queue: MDefenses.Nod
@@ -162,13 +166,15 @@ SAMNEW:
         PlayerPalette: raplayer
 	Valued:
 		Cost: 650
+    CustomSellValue:
+		Value: 325
 	Tooltip:
 		Name: Anti-Aircraft Ballista
 	Buildable:
 		Description: Because of the 4 elastic limbs out of black wood \nthe Anti-Aircraft Ballista is designed to shoot down targets \nin the air with a very high speed missile.\n  Very strong vs Aircraft\n  Cannot target Ground units.\n\n\n
 		BuildPaletteOrder: 35
 		Prerequisites: barracks
-		Queue: MDefenses.Nod
+		Queue: MDefenses.Nod, MDefenses.SUL
 		BuildDuration: 1700
 		BuildDurationModifier: 40
         IconPalette: raicon
@@ -212,6 +218,8 @@ TRIBU:
 	Inherits: ^MWDefense
     Valued:
 		Cost: 1500
+    CustomSellValue:
+		Value: 750
 	Tooltip:
 		Name: Counterweight Trebuchet
 	Buildable:
@@ -270,6 +278,8 @@ BATO:
 	Inherits: ^MWDefense
     Valued:
 		Cost: 1400
+    CustomSellValue:
+		Value: 700
 	Tooltip:
 		Name: Tower with Ballista
 	Buildable:
@@ -335,6 +345,8 @@ GUNNEW:
 	Inherits: ^MWDefense
 	Valued:
 		Cost: 600
+    CustomSellValue:
+		Value: 300
 	Tooltip:
 		Name: Gunpowder Cannon
 	Buildable:
@@ -441,12 +453,14 @@ CSTLGTEW:
             Types: concrete
 	Valued:
 		Cost: 1000
+    CustomSellValue:
+		Value: 500
 	Tooltip:
 		Name: Castle Gate
 	Buildable:
 		Description: Operated gate that opens for allied units.\nUnarmed\n\n\n
 		BuildPaletteOrder: 70
-		Prerequisites: anyworkshop
+		Prerequisites: anyworkshop, ~nouse
 		Queue: MDefenses.GDI, MDefenses.Nod
 		BuildDuration: 1540
 		BuildDurationModifier: 40
@@ -494,12 +508,14 @@ CSTLGTNS:
             Types: concrete
 	Valued:
 		Cost: 1000
+    CustomSellValue:
+		Value: 500
 	Tooltip:
 		Name: Castle Gate
 	Buildable:
 		Description:Operated gate that opens for allied units.\nUnarmed\n\n\n
 		BuildPaletteOrder: 80
-		Prerequisites: anyworkshop
+		Prerequisites: anyworkshop, ~nouse
 		Queue: MDefenses.GDI, MDefenses.Nod
 		BuildDuration: 1540
 		BuildDurationModifier: 40

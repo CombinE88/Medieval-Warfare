@@ -1258,7 +1258,7 @@ SpearThrow:
         Palette: ra
 	Warhead@1Dam: SpreadDamage
 		Spread: 141
-		Damage: 1500
+		Damage: 4500
         ValidTargets: Ground
         InvalidTargets: Air
 		Versus:
@@ -1298,7 +1298,7 @@ SpearThrowAir:
         Palette: ra
 	Warhead@1Dam: SpreadDamage
 		Spread: 141
-		Damage: 2000
+		Damage: 2500
         ValidTargets: Air
         InvalidTargets: Ground
 		Versus:
