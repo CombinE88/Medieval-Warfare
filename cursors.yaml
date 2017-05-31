@@ -1,6 +1,7 @@
 Palettes:
 	cursor: temperat.pal
     newcursor: Medieval_Civ_palette.pal
+    newcursor3: Medieval_Civ_palette.pal
     newcursorsell: Medieval_Civ_palette.pal
 
 Cursors:
@@ -121,11 +122,12 @@ Cursors:
 		sell-vehicle:
 			Start: 154
 			Length: 24
-    newcursor.shp: newcursor	
+    newquill.shp: newcursor3
 		default:
 			Start: 0
 			X: -16
 			Y: 12
+    newcursor.shp: newcursor	
 		joystick-all:
 			Start: 0
 			X: -16
