@@ -89,6 +89,11 @@ KING:
         Sabotage: False
         Voice: Attack
     -Crushable:
+    -ExternalCondition@SNAKES:
+    -SelfHealing@SNAKES:
+    -SpeedMultiplier@SNAKES:
+    -WithIdleOverlay@SNAKES:
+    -RangeMultiplier:
         
  
 Husk.KING:
@@ -720,6 +725,11 @@ NEWCOMM:
     AnnounceOnBuild:
 	AnnounceOnKill:
     -Crushable:
+    -ExternalCondition@SNAKES:
+    -SelfHealing@SNAKES:
+    -SpeedMultiplier@SNAKES:
+    -WithIdleOverlay@SNAKES:
+    -RangeMultiplier:
 
 ASSASSIN:
     RevealsShroud:
