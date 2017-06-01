@@ -1174,8 +1174,8 @@ BowNArrowSiegeTower:
 	Range: 6c0
 	MinRange: 0c0
 	Report: arrow01.aud
-	ValidTargets: Air, Ground
-	InvalidTargets: Wall
+	ValidTargets: Ground
+	InvalidTargets: Wall, Air
 	Projectile: Missile
 		HorizontalRateOfTurn: 60
 		RangeLimit: 8c204
@@ -1185,8 +1185,44 @@ BowNArrowSiegeTower:
 		Inaccuracy: 0c0
 	Warhead@1Dam: SpreadDamage
 		Spread: 141
-		InvalidTargets: Wall
-		ValidTargets: Air, Ground
+		InvalidTargets: Wall, Air
+		ValidTargets: Ground
+		Damage: 2100
+		Versus:
+			Leather: 100
+			Light: 100
+			Heavy: 90
+			Concrete: 15
+			Knight: 15
+			LightCavalry: 80
+			MediumCavalry: 55
+			HeavyCavalry: 35
+			HeavyBuilding: 25
+		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath  
+BowNArrowSiegeTowerAIR:
+	ReloadDelay: 45
+	Range: 8c0
+	MinRange: 0c0
+	Report: arrow01.aud
+	ValidTargets: Air
+	InvalidTargets: Wall, Ground
+	Projectile: Missile
+		HorizontalRateOfTurn: 60
+		RangeLimit: 10c0
+		Arm: 0
+		Speed: 250
+		LaunchAngle: 46
+		Inaccuracy: 0c0
+		ContrailLength: 20
+		ContrailWidth: 10
+		ContrailDelay: 0
+		ContrailUsePlayerColor : true
+		Image: e4arrow
+        Palette: ra
+	Warhead@1Dam: SpreadDamage
+		Spread: 141
+		InvalidTargets: Wall, Ground
+		ValidTargets: Air
 		Damage: 2100
 		Versus:
 			Leather: 100

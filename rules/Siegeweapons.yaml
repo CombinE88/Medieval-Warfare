@@ -286,6 +286,20 @@ SIEGE3:
 		LocalOffset: 0,0,427
 		Turret: tritiary
 		FireDelay: 30
+    Armament@1AIR:
+		Weapon: BowNArrowSiegeTowerAIR
+		LocalOffset: 0,0,427
+		Turret: primary
+	Armament@2AIR:
+		Weapon: BowNArrowSiegeTowerAIR
+		LocalOffset: 0,0,427
+		Turret: secondary
+		FireDelay: 15
+	Armament@3AIR:
+		Weapon: BowNArrowSiegeTowerAIR
+		LocalOffset: 0,0,427
+		Turret: tritiary
+		FireDelay: 30
 		
 
 

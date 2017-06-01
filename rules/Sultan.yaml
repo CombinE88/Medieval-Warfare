@@ -1354,6 +1354,15 @@ SULB0:
 		LocalOffset: 0,0,427
 		Turret: secondary
 		FireDelay: 10	
+    Armament@1@Air:
+		Weapon: BowNArrowSiegeTowerAIR
+		LocalOffset: 0,0,427
+		Turret: primary
+	Armament@2Air:
+		Weapon: BowNArrowSiegeTowerAIR
+		LocalOffset: 0,0,427
+		Turret: secondary
+		FireDelay: 10
 	Voiced:
 		VoiceSet: ElephantVoice
 		
