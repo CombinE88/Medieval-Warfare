@@ -775,3 +775,28 @@ BedouinBowTowerUnblockDUMMY:
 			HeavyBuilding: 0
 			Spectral: 0
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath 
+        
+TowerPike:
+	ReloadDelay: 40
+	Range: 2c512
+	ValidTargets: Ground, Trees
+	InvalidTargets: Air
+	Projectile: Bullet
+		Speed: 1c382
+	Warhead@1Dam: SpreadDamage
+		Spread: 15
+		Damage: 3000
+		ValidTargets: Ground, Trees
+		InvalidTargets: Air
+		Versus:
+			Leather: 50
+			Light: 50
+			Heavy: 75
+			Concrete: 85
+			HeavyBuilding: 100
+			Knight: 50
+			LightCavalry: 135
+			MediumCavalry: 125
+			HeavyCavalry: 120
+			Spectral: 15
+		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath

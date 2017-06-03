@@ -98,6 +98,7 @@ SULGTW:
 		Conditions:
 			sulgtw.archers: archers
 			sulgtw.djinn: djinn
+            sulgtw.static: static
 	WithIdleOverlay@archers:
 		Sequence: archgtw
 		Offset: 0, 0, 0
@@ -169,18 +170,30 @@ SULGTW:
 	Power@djinn:
 		Amount: -2
 		RequiresCondition: djinn
+    WithSpriteBody:
+        RequiresCondition: !static
+    WithIdleOverlay@static:
+        Sequence: idleupped
+        RequiresCondition: static
+    Armament@static:
+		Weapon: TowerPike
+		LocalOffset: 0,0,0
+		RequiresCondition: static
+        
 
 SULPLUG1:
 	AlwaysVisible:
 	Building:
-		BuildSounds: place2.aud
+		BuildSounds: hvydoor1.aud
 	KillsSelf:
 		RemoveInstead: true
 	RenderSprites:
-	Buildable:
+	Tooltip:
+		Name: Extra Firepower Upgrade
+    Buildable:
 		Description: Upgrades the Guard Tower with 2 additional Archers.\n\n\n\n
 		BuildPaletteOrder: 70
-		Prerequisites: sultow1, anyhq
+		Prerequisites: vehicleproduction
 		Queue: MDefenses.SUL
 		BuildDuration:800
 		BuildDurationModifier: 40
@@ -195,24 +208,50 @@ SULPLUG1:
 SULPLUG3:
 	AlwaysVisible:
 	Building:
-		BuildSounds: place2.aud
+		BuildSounds: hvydoor1.aud
 	KillsSelf:
 		RemoveInstead: true
 	RenderSprites:
-	Buildable:
+	Tooltip:
+		Name: Mystical Firepower Upgrade
+    Buildable:
 		Description: Upgrades the Guard Tower with 1 Djinn.\n  Can attack Aricrafts\n\n\n
 		BuildPaletteOrder: 80
-		Prerequisites: vehicleproduction
+		Prerequisites: sultow2
 		Queue: MDefenses.SUL
 		BuildDuration:800
 		BuildDurationModifier: 40
 		IconPalette: raicon
 	Valued:
-		Cost: 500
+		Cost: 600
 	Plug:
 		Type: sulgtw.djinn
 	Power:
 		Amount: -2
+        
+SULPLUG4:
+	AlwaysVisible:
+	Building:
+		BuildSounds: hvydoor1.aud
+	KillsSelf:
+		RemoveInstead: true
+	RenderSprites:
+	Tooltip:
+		Name: Basic Defense Upgrade
+    Buildable:
+		Description: Upgrades the Guard Tower with a static defense.\n  Deals high damage to surrounding Cavalry\n\n\n
+		BuildPaletteOrder: 60
+		Prerequisites: barracks
+		Queue: MDefenses.SUL
+		BuildDuration:800
+		BuildDurationModifier: 40
+		IconPalette: raicon
+	Valued:
+		Cost: 400
+	Plug:
+		Type: sulgtw.static
+	Power:
+		Amount: 0
 
 		
 #Buildings		

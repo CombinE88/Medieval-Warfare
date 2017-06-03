@@ -978,6 +978,12 @@ sulgtw:
 	damaged-idle: 
 		Start: 12
 		Offset: 0,-12
+    idleupped: sulgtwbase2
+		Start: 0
+		Offset: 0,-8
+	damaged-idleupped: sulgtwbase2
+		Start: 1
+		Offset: 0,-8
 	dead: 
 		Start: 15
 		Offset: 0,-12
@@ -1081,6 +1087,15 @@ sulplug3:
 		Offset: 0, -24
 	icon: sulgtwplugsicon.shp
 		Start: 2
+		AddExtension: False 
+        
+sulplug4:
+	idle: sulgtwbase2
+		Start: 0
+	damaged-idle: sulgtwbase2
+		Start: 1
+	icon: sulgtwplugsicon.shp
+		Start: 3
 		AddExtension: False 
 		
 #SiegeWeapons

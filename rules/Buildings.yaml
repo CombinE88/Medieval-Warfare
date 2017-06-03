@@ -1956,8 +1956,8 @@ ANYWORKSHOP:
 VEHICLEPRODUCTION:
 	AlwaysVisible:
 	Tooltip:
-		Name: Stables or Shool
-		Description: Stables or Shool
+		Name: Stables or School
+		Description: Stables or School
 		
 ANYPOWER:
 	AlwaysVisible:
