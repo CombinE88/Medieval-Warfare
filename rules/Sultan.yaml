@@ -164,7 +164,7 @@ SULGTW:
 		Turret: turr3
 		RequiresCondition: djinn
 	Power@archer:
-		Amount: -1d
+		Amount: -1
 		RequiresCondition: archers
 	Power@djinn:
 		Amount: -2
