@@ -558,6 +558,7 @@ Snakes:
 		AimChance: 100
 		AllowDirectHit: true
 		AimTargetStances: Enemy, Neutral
+		Amount: 2
 	Warhead@2Dam: SpreadDamage
 		Spread: 20
 		InvalidTargets: Wall, Air, Structure

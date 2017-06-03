@@ -32,7 +32,7 @@ MCVNEW:
 			PointA: 0, -612
 			PointB: 0, 512
 	Armor:
-		Type: Light
+		Type: MediumCavalry
 	RevealsShroud:
 		Range: 8c0
 	RenderSprites:

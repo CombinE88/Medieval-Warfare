@@ -1004,13 +1004,84 @@ sulgtw:
 		Length: 7
 		Facings: 8 
 	idle-overlay: 
-		ZOffset: 1024
+		ZOffset: 125
 		Start: 13
 		Offset: 0,-12
 	damaged-idle-overlay: 
-		ZOffset: 1024
+		ZOffset: 125
 		Start: 14
 		Offset: 0,-12
+	archgtw: sulgtw
+		Start: 13
+		Offset: 0, -25
+		ZOffset: 325
+	damaged-archgtw: sulgtw
+		Start: 14
+		Offset: 0, -25
+		ZOffset: 325
+	djingtw: sulgtwplugs
+		Start: 0
+		Offset: 0, -25
+		ZOffset: 325
+	damaged-djingtw: sulgtwplugs
+		Start: 1
+		Offset: 0, -25
+		ZOffset: 325
+	dturretidle: sulm2
+		Start: 219
+		Facings: 8
+		Length: 8
+		Tick: 100
+		ZOffset: 225
+	dturretanim: sulm2
+		Tick: 100
+		Start: 64
+		Length: 8
+		Facings: 8
+		ZOffset: 225
+	turretidle2: sule3
+		Start: 122
+		Facings: 8
+		ZOffset: 225
+	turretanim2: sule3
+		Tick: 100
+		Start: 66
+		Length: 7
+		Facings: 8 
+		ZOffset: 225
+		
+sulplug1:
+	idle: sulgtw
+		Start: 13
+		Offset: 0, -24
+	damaged-idle: sulgtw
+		Start: 14
+		Offset: 0, -24
+	icon: sulgtwplugsicon.shp
+		Start: 0
+		AddExtension: False 
+		
+sulplug2:
+	idle: sulgtwplugs
+		Start: 0
+		Offset: 0, -24
+	damaged-idle: sulgtwplugs
+		Start: 1
+		Offset: 0, -24
+	icon: sulgtwplugsicon.shp
+		Start: 1
+		AddExtension: False 
+		
+sulplug3:
+	idle: sulgtwplugs
+		Start: 2
+		Offset: 0, -24
+	damaged-idle: sulgtwplugs
+		Start: 3
+		Offset: 0, -24
+	icon: sulgtwplugsicon.shp
+		Start: 2
+		AddExtension: False 
 		
 #SiegeWeapons
 

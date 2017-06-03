@@ -103,14 +103,6 @@ WTW:
 		Value: 875
 	Tooltip:
 		Name: Square Tower
-	Buildable:
-		Description: Square Towers are often used to fit in defensive walls of fortifications.\n Very strong vs Infantry and Light Cavalry\n  Weak vs Heavy Cavalry and Siege weapons\n  Fits with Castle Walls\n  Can shoot over Castle Walls\n  Detects cloaked units\n\n
-		BuildPaletteOrder: 60
-		Prerequisites: barracks, anyworkshop, anyarmory
-		Queue: MDefenses.Nod
-		BuildDuration: 1950
-		BuildDurationModifier: 40
-		IconPalette: raicon
 	Building:
 		Footprint:  x
 		Dimensions: 1,1
@@ -150,8 +142,6 @@ WTW2:
 	Inherits: WTW
 	Cargo:
 		InitialUnits: E4NEWv2, E4NEWv2, E4NEWv2, E4NEWv2
-	Buildable:
-		Queue: MDefenses.GDI
 	RenderSprites:
 		Image: wtw
 		PlayerPalette: raplayer
@@ -174,7 +164,7 @@ SAMNEW:
 		Description: Because of the 4 elastic limbs out of black wood \nthe Anti-Aircraft Ballista is designed to shoot down targets \nin the air with a very high speed missile.\n  Very strong vs Aircraft\n  Cannot target Ground units.\n\n\n
 		BuildPaletteOrder: 35
 		Prerequisites: barracks
-		Queue: MDefenses.Nod, MDefenses.SUL
+		Queue: MDefenses.Nod
 		BuildDuration: 1700
 		BuildDurationModifier: 40
 		IconPalette: raicon
@@ -457,14 +447,6 @@ CSTLGTEW:
 		Value: 500
 	Tooltip:
 		Name: Castle Gate
-	Buildable:
-		Description: Operated gate that opens for allied units.\nUnarmed\n\n\n
-		BuildPaletteOrder: 70
-		Prerequisites: anyworkshop, ~nouse
-		Queue: MDefenses.GDI, MDefenses.Nod
-		BuildDuration: 1540
-		BuildDurationModifier: 40
-		IconPalette: raicon
 	Health:
 		HP: 200000
 		Shape: Rectangle
@@ -512,14 +494,6 @@ CSTLGTNS:
 		Value: 500
 	Tooltip:
 		Name: Castle Gate
-	Buildable:
-		Description:Operated gate that opens for allied units.\nUnarmed\n\n\n
-		BuildPaletteOrder: 80
-		Prerequisites: anyworkshop, ~nouse
-		Queue: MDefenses.GDI, MDefenses.Nod
-		BuildDuration: 1540
-		BuildDurationModifier: 40
-		IconPalette: raicon
 	Health:
 		HP: 200000
 		Shape: Rectangle

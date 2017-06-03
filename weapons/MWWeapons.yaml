@@ -1218,7 +1218,7 @@ BowNArrowSiegeTowerAIR:
 		ContrailDelay: 0
 		ContrailUsePlayerColor : true
 		Image: e4arrow
-        Palette: ra
+		Palette: ra
 	Warhead@1Dam: SpreadDamage
 		Spread: 141
 		InvalidTargets: Wall, Ground

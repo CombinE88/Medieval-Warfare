@@ -8,37 +8,6 @@ CSTLWLLSUL:
 	Buildable:
 		Queue: MDefenses.SUL
 		IconPalette: raWall
-		
-		
-CSTLGTEWSUL:
-	Inherits: CSTLGTEW
-	RenderSprites:
-		PlayerPalette: sulwallplayer
-		Image: cstlgtew
-	Buildable:
-		Queue: MDefenses.SUL
-		IconPalette: raWall
-
-		
-CSTLGTNSSUL: 
-	Inherits: CSTLGTNS
-	RenderSprites:
-		Image: cstlgtns
-		PlayerPalette: sulwallplayer
-	Buildable:
-		Queue: MDefenses.SUL
-		IconPalette: raWall
-
-WTW3:
-	Inherits: WTW
-	Cargo:
-		InitialUnits: sule3, sule3, sule3, sule3
-	Buildable:
-		Queue: MDefenses.SUL
-	RenderSprites:
-		Image: wtw
-		PlayerPalette: raplayer
-		IconPalette: raWall
 
 SULGTW:
 	Inherits: ^MWDefense
@@ -64,7 +33,7 @@ SULGTW:
 		Footprint: x
 		Dimensions: 1,1
 	Health:
-		HP: 55000
+		HP: 60000
 		Shape: Rectangle
 			TopLeft: -456, -456
 			BottomRight: 456, 456
@@ -92,6 +61,7 @@ SULGTW:
 		Turret: secondary
 		FireDelay: 12
 	AttackTurreted:
+		Armaments: primary, secondary, turr1, turr2
 	BodyOrientation:
 		QuantizedFacings: 8
 	DetectCloaked:
@@ -124,7 +94,127 @@ SULGTW:
 		Weapons: SmallStone1, SmallStone2, LargeStone1
 		Pieces: 2, 3
 		Range: 0c512, 3c0
-	
+	Pluggable:
+		Conditions:
+			sulgtw.archers: archers
+			sulgtw.djinn: djinn
+	WithIdleOverlay@archers:
+		Sequence: archgtw
+		Offset: 0, 0, 0
+		RequiresCondition: archers
+	WithSpriteTurret@1archers: 
+		Sequence: turretidle2
+		AimSequence: turretanim2
+		Turret: turr1
+		RequiresCondition: archers
+	WithSpriteTurret@2archers: 
+		Sequence: turretidle2
+		AimSequence: turretanim2
+		Turret: turr2
+		RequiresCondition: archers
+	Turreted@1archers:
+		Turret: turr1
+		TurnSpeed: 100
+		Offset: -170,-170,850
+		RequiresCondition: archers
+	Turreted@2archers:
+		Turret: turr2
+		TurnSpeed: 100
+		Offset: 170,170,850
+		RequiresCondition: archers
+	Armament@1archers:
+		Weapon: bownarrowtower
+		LocalOffset: 0,0,427
+		Turret: turr1
+		RequiresCondition: archers
+	Armament@2archers:
+		Weapon: bownarrowtower
+		LocalOffset: 0,0,427
+		Turret: turr2
+		FireDelay: 12
+		RequiresCondition: archers
+	Armament@1DUMMYarchers:
+		Weapon: BowNArrowTowerDUMMY
+		LocalOffset: 0,0,427
+		Turret: turr1
+		RequiresCondition: archers
+	Armament@2DUMMYarchers:
+		Weapon: BowNArrowTowerDUMMY
+		LocalOffset: 0,0,427
+		Turret: turr2
+		FireDelay: 12
+		RequiresCondition: archers
+	WithIdleOverlay@djinn:
+		Sequence: djingtw
+		Offset: 0, 0, 0
+		RequiresCondition: djinn
+	WithSpriteTurret@djinn: 
+		Sequence: dturretidle
+		AimSequence: dturretanim
+		Turret: turr3
+		RequiresCondition: djinn
+	Turreted@djinn:
+		Turret: turr3
+		TurnSpeed: 100
+		Offset: 0,0,900
+		RequiresCondition: djinn
+	Armament@djinn:
+		Weapon: DjinElectro
+		LocalOffset: 141,75,352
+		Turret: turr3
+		RequiresCondition: djinn
+	Power@archer:
+		Amount: -1d
+		RequiresCondition: archers
+	Power@djinn:
+		Amount: -2
+		RequiresCondition: djinn
+
+SULPLUG1:
+	AlwaysVisible:
+	Building:
+		BuildSounds: place2.aud
+	KillsSelf:
+		RemoveInstead: true
+	RenderSprites:
+	Buildable:
+		Description: Upgrades the Guard Tower with 2 additional Archers.\n\n\n\n
+		BuildPaletteOrder: 70
+		Prerequisites: sultow1, anyhq
+		Queue: MDefenses.SUL
+		BuildDuration:800
+		BuildDurationModifier: 40
+		IconPalette: raicon
+	Valued:
+		Cost: 500
+	Plug:
+		Type: sulgtw.archers
+	Power:
+		Amount: -1
+		
+SULPLUG3:
+	AlwaysVisible:
+	Building:
+		BuildSounds: place2.aud
+	KillsSelf:
+		RemoveInstead: true
+	RenderSprites:
+	Buildable:
+		Description: Upgrades the Guard Tower with 1 Djinn.\n  Can attack Aricrafts\n\n\n
+		BuildPaletteOrder: 80
+		Prerequisites: vehicleproduction
+		Queue: MDefenses.SUL
+		BuildDuration:800
+		BuildDurationModifier: 40
+		IconPalette: raicon
+	Valued:
+		Cost: 500
+	Plug:
+		Type: sulgtw.djinn
+	Power:
+		Amount: -2
+
+		
 #Buildings		
 		
 SULNUK2:
@@ -136,9 +226,9 @@ SULNUK2:
 	RenderSprites:
 		PlayerPalette: sultanplayer
 	Valued:
-		Cost: 800
+		Cost: 1000
 	CustomSellValue:
-		Value: 400
+		Value: 500
 	Tooltip:
 		Name: Large Hut
 	ProvidesPrerequisite:
@@ -163,7 +253,7 @@ SULNUK2:
 		Range: 4c0
 	Bib:
 	Power:
-		Amount: 12
+		Amount: 16
 	Selectable:
 		Bounds: 48,40,0,9
 	SelectionDecorations:
@@ -207,9 +297,9 @@ SULNUKE:
 	RenderSprites:
 		PlayerPalette: sultanplayer
 	Valued:
-		Cost: 500
+		Cost: 600
 	CustomSellValue:
-		Value: 250
+		Value: 300
 	Tooltip:
 		Name: Shack
 	ProvidesPrerequisite:
@@ -232,7 +322,7 @@ SULNUKE:
 		Range: 4c0
 	Bib:
 	Power:
-		Amount: 4
+		Amount: 7
 	Selectable:
 		Bounds: 48,40,0,9
 	SelectionDecorations:
@@ -266,9 +356,9 @@ SULBARR:
 	RenderSprites:
 		PlayerPalette: sultanplayer
 	Valued:
-		Cost: 900
+		Cost: 1000
 	CustomSellValue:
-		Value: 450
+		Value: 500
 	Tooltip:
 		Name: Barracks
 	ProvidesPrerequisite:
@@ -283,7 +373,7 @@ SULBARR:
 		Footprint: xxx xxx
 		Dimensions: 3,2
 	Health:
-		HP: 60000
+		HP: 65000
 		Shape: Rectangle
 			TopLeft: -1424,-924
 			BottomRight: 1424, 924
@@ -1354,7 +1444,7 @@ SULB0:
 		LocalOffset: 0,0,427
 		Turret: secondary
 		FireDelay: 10	
-    Armament@1@Air:
+	Armament@1@Air:
 		Weapon: BowNArrowSiegeTowerAIR
 		LocalOffset: 0,0,427
 		Turret: primary
