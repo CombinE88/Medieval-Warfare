@@ -430,7 +430,7 @@ PikeCavalry:
 		Speed: 1c382
 	Warhead@1Dam: SpreadDamage
 		Spread: 75
-		Damage: 1350
+		Damage: 2050
 		ValidTargets: Ground, Trees
 		InvalidTargets: Air
 		Versus:
@@ -456,7 +456,7 @@ PikeAxe:
 		Speed: 1c682
 	Warhead@1Dam: SpreadDamage
 		Spread: 452
-		Damage: 1925
+		Damage: 2950
 		ValidTargets: Ground, Trees
 		InvalidTargets: Air
 		Versus:
@@ -1294,7 +1294,7 @@ SpearThrow:
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
 		Spread: 141
-		Damage: 4500
+		Damage: 1800
 		ValidTargets: Ground
 		InvalidTargets: Air
 		Versus:

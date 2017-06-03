@@ -548,6 +548,8 @@ Snakes:
 	ReloadDelay: 85
 	Range: 5c512
 	MinRange: 0
+    Burst: 2
+    BurstDelay: 25
 	InvalidTargets: Wall, Air, Structure
 	ValidTargets: Ground
 	Projectile: InstantExplode
@@ -558,7 +560,7 @@ Snakes:
 		AimChance: 100
 		AllowDirectHit: true
 		AimTargetStances: Enemy, Neutral
-		Amount: 2
+		Amount: 1
 	Warhead@2Dam: SpreadDamage
 		Spread: 20
 		InvalidTargets: Wall, Air, Structure
