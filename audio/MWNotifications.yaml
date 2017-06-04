@@ -2,6 +2,7 @@ Speech:
 	Variants:
 		nod: .nod
 		gdi: .gdi
+		sul: .sul
 	Notifications:
 		ReadyHorse: strange1, strange2
 		IncomingDeath: ddlerapproach

@@ -679,7 +679,7 @@ SULCASTLE:
 		ClockSequence: clock
 		CircleSequence: circles
 		OrderName: TornadoPowerInfoOrder
-		EndChargeSpeechNotification: ReadyHorse
+		EndChargeSpeechNotification: NodcannonReady
 		IncomingSpeechNotification: 
 		IncomingSound: 
 		RequiresCondition: Tower4build
@@ -1128,7 +1128,7 @@ SULE5:
 		Description: Elite Infantry that is hard to hit when its moving.\n  Strong vs Infantry, Cavalry\n  Moderate vs Buildings\n  Detects cloaked units\n\n\n
 		IconPalette: raicon
 		BuildPaletteOrder: 40
-		Prerequisites: sultow4, anyhq, ~techlevel.high
+		Prerequisites: sultow1, sultow4, anyhq, ~techlevel.high
 		Queue: MInfantry.SUL
 	Mobile:
 		Speed: 175
@@ -1321,7 +1321,7 @@ SULM2:
 	Buildable:
 		Description: Advanced Multi-Role unit.\n  Can only badly hurt by magical or fire weapons.\n  Moderate vs Everything\n  Weak vs Buildings\n  Detects cloaked units at a very large area\n  Can attack Aircrafts\n\n
 		IconPalette: raicon
-		Prerequisites: sultow4, anyhq
+		Prerequisites: sultow2, sultow4, anyhq
 		BuildPaletteOrder: 70
 		Queue: MVehicle.SUL
 	Mobile:
@@ -1797,7 +1797,7 @@ SULB3:
 	Buildable:
 		Description: Giant Roc wich throws razor sharp faethers at the enemy.\n  Strong vs Ground Units and Aircrafts\n\n\n\n
 		BuildPaletteOrder: 100
-		Prerequisites: sultow4, anyhq
+		Prerequisites: sultow3, sultow4, anyhq
 		Queue: MSiege.SUL
 		BuildDurationModifier: 40
 		IconPalette: raicon
