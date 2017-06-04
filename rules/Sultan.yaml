@@ -1003,7 +1003,7 @@ SULE2:
 	Mobile:
 		Speed: 56
 	Health:
-		HP: 12000
+		HP: 9500
 	Armament@Primary:
 		Name: Primary
 		Weapon: PikeAC
@@ -1094,7 +1094,7 @@ SULE4:
 	Mobile:
 		Speed: 55
 	Health:
-		HP: 32000
+		HP: 27000
 	Armament@Primary:
 		Weapon: SuperioirPike
 	AttackFrontal:  
@@ -1221,7 +1221,7 @@ SULM1:
 		Range: 6c0
 	Inherits: ^Knight
 	Valued:
-		Cost: 350
+		Cost: 400
 	Tooltip:
 		Name: Apprentice
 	Buildable:
@@ -1432,20 +1432,20 @@ SULB0:
 	Targetable:
 		TargetTypes: Ground, Siege
 	Armament@1:
-		Weapon: bownarrowtower
+		Weapon: BowNArrowSiegeTower
 		LocalOffset: 0,0,427
 		Turret: primary
 	Armament@2:
-		Weapon: bownarrowtower
+		Weapon: BowNArrowSiegeTower
 		LocalOffset: 0,0,427
 		Turret: secondary
 		FireDelay: 12
 	Armament@1DUMMY:
-		Weapon: BowNArrowTowerDUMMY
+		Weapon: BowNArrowSiegeTowerDUMMY
 		LocalOffset: 0,0,427
 		Turret: primary
 	Armament@2DUMMY:
-		Weapon: BowNArrowTowerDUMMY
+		Weapon: BowNArrowSiegeTowerDUMMY
 		LocalOffset: 0,0,427
 		Turret: secondary
 		FireDelay: 12
@@ -1808,7 +1808,7 @@ SULB3:
 		Speed: 90
 		IdealSeparation: 1c125
 	Health:
-		HP: 21000
+		HP: 35000
 	Armor:
 		Type: LightCavalry
 	RevealsShroud:

@@ -548,8 +548,6 @@ Snakes:
 	ReloadDelay: 85
 	Range: 5c512
 	MinRange: 0
-    Burst: 2
-    BurstDelay: 25
 	InvalidTargets: Wall, Air, Structure
 	ValidTargets: Ground
 	Projectile: InstantExplode
@@ -585,7 +583,7 @@ SnakesSmall:
 		Palette: ra
 	Warhead@1Snakes: GrantExternalCondition
 		Range: 0c204
-		Duration: 100
+		Duration: 150
 		Condition: snaketrap
 		ValidStances: Enemy, Neutral
 	Warhead@2Dam: SpreadDamage

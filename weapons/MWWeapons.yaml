@@ -19,7 +19,7 @@ OrniSpearThrow:
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
 		Spread: 141
-		Damage: 2000
+		Damage: 3000
 		ValidTargets: Air, Ground
 		Versus:
 			Leather: 25
@@ -804,7 +804,6 @@ Dagger:
 DaggerAir:
 	ReloadDelay: 60
 	Range: 5c512
-	InvalidTargets: Wall
 	Report: throw01.aud
 	InvalidTargets: Wall, Structure, Ground
 	ValidTargets: Air
@@ -823,7 +822,7 @@ DaggerAir:
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
 		Spread: 51
-		Damage: 6000
+		Damage: 2000
 		InvalidTargets: Wall, Structure, Ground
 		ValidTargets: Air
 		Versus:
@@ -1030,7 +1029,7 @@ BowNArrowAir:
 		Spread: 141
 		InvalidTargets: Wall, Ground
 		ValidTargets: Air
-		Damage: 2500
+		Damage: 1900
 		Versus:
 			Leather: 100
 			Light: 100
@@ -1108,7 +1107,7 @@ MageFireAir:
 		Spread: 210
 		ValidTargets: Air
 		InvalidTargets: Ground
-		Damage: 1000
+		Damage: 800
 		Falloff: 100, 70, 60, 50, 18, 7, 0
 		Versus:
 			None: 100
@@ -1223,7 +1222,7 @@ BowNArrowSiegeTowerAIR:
 		Spread: 141
 		InvalidTargets: Wall, Ground
 		ValidTargets: Air
-		Damage: 2100
+		Damage: 1800
 		Versus:
 			Leather: 100
 			Light: 100
@@ -1334,7 +1333,7 @@ SpearThrowAir:
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
 		Spread: 141
-		Damage: 2500
+		Damage: 2100
 		ValidTargets: Air
 		InvalidTargets: Ground
 		Versus:
@@ -1489,7 +1488,7 @@ LongBowNArrowAir:
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
 		Spread: 110
-		Damage: 3500
+		Damage: 1000
 		ValidTargets: Air
 		InvalidTargets: Ground
 		Versus:
@@ -1673,14 +1672,14 @@ BowNArrowTower:
 		ValidTargets: Ground
 		InvalidTargets: Wall, Air
 		Versus:
-			Leather: 150
-			Light: 135
-			Heavy: 125
+			Leather: 120
+			Light: 115
+			Heavy: 105
 			Concrete: 40
 			Knight: 50
-			LightCavalry: 95
+			LightCavalry: 120
 			MediumCavalry: 30
-			HeavyCavalry: 20
+			HeavyCavalry: 15
 			HeavyBuilding: 40
 			Spectral: 15
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath  
@@ -2129,7 +2128,7 @@ KingCrossbowAir:
 		Spread: 256
 		InvalidTargets: Wall, Structure, Ground
 		ValidTargets: Air
-		Damage: 9000
+		Damage: 4000
 		Versus:
 			Leather: 100
 			Light: 100
@@ -2230,7 +2229,7 @@ CrossbowAir:
 		Spread: 256
 		InvalidTargets: Wall, Ground
 		ValidTargets: Air
-		Damage: 4200
+		Damage: 3000
 		Versus:
 			Leather: 100
 			Light: 100
