@@ -1791,7 +1791,7 @@ SULB3:
 	Inherits: ^Helicopter
 	Inherits@EXPERIENCE: ^GainsExperience
 	Valued:
-		Cost: 2300
+		Cost: 2500
 	Tooltip:
 		Name: Giant Roc
 	Buildable:
@@ -1808,7 +1808,7 @@ SULB3:
 		Speed: 90
 		IdealSeparation: 1c125
 	Health:
-		HP: 35000
+		HP: 30500
 	Armor:
 		Type: LightCavalry
 	RevealsShroud:
