@@ -437,7 +437,7 @@ SpearBarrage:
 		ImpactSounds: tnkfire2.aud, tnkfire3.aud, tnkfire4.aud, tnkfire6.aud
 		
 CarpetBomber:
-	ReloadDelay: 50
+	ReloadDelay: 35
 	Range: 4c0
 	Report: toss1.aud
 	ValidTargets: Ground
@@ -451,7 +451,7 @@ CarpetBomber:
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
 		Spread: 375
-		Damage: 3750
+		Damage: 2900
 		ValidTargets: Ground
 		InvalidTargets: Air
 		Versus:
@@ -475,7 +475,7 @@ CarpetBomber:
 		
 
 SonicRaptor:
-	ReloadDelay: 65
+	ReloadDelay: 45
 	Range: 7c0
 	Report: toss1.aud
 	ValidTargets: Ground, Air
@@ -492,7 +492,7 @@ SonicRaptor:
 		ContrailUsePlayerColor : true
 	Warhead@1Dam: SpreadDamage
 		Spread: 256
-		Damage: 1000
+		Damage: 1900
 		ValidTargets: Ground, Air
 		Versus:
 			Leather: 100
@@ -510,7 +510,7 @@ SonicRaptor:
 		ImpactSounds: Sword02.aud, Sword03.aud, Sword04.aud, Sword06.aud, Sword07.aud
 		
 SonicRaptorSoundLess:
-	ReloadDelay: 65
+	ReloadDelay: 45
 	Range: 7c0
 	ValidTargets: Ground, Air
 	Projectile: Bullet
@@ -526,7 +526,7 @@ SonicRaptorSoundLess:
 		ContrailUsePlayerColor : true
 	Warhead@1Dam: SpreadDamage
 		Spread: 375
-		Damage: 1500
+		Damage: 1900
 		ValidTargets: Ground, Air
 		Versus:
 			Leather: 100

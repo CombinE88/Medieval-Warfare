@@ -210,7 +210,7 @@ ENGENEER:
 	Buildable:
 		Description: Can quick repair buildings and siege weapons.\n  Captures and damages buildings.\n  Unarmed\n\n\n
 		IconPalette: raicon
-		BuildPaletteOrder: 50
+		BuildPaletteOrder: 110
 		Queue: MInfantry.GDI, MInfantry.Nod, MInfantry.SUL
 	Mobile:
 		Speed: 56
@@ -464,7 +464,7 @@ E9NEW:
 	Buildable:
 		Description: Advanced Anti-infantry unit.\n  Strong vs Infantry, Buildings and Spectral Units\n  Weak vs Cavalry\n  Detects cloaked units\n  Cannot attack Aircrafts anymore!!!\n\n\n
 		IconPalette: raicon
-		BuildPaletteOrder: 70
+		BuildPaletteOrder: 40
 		Prerequisites: anyhq
 		Queue: MInfantry.Nod, MInfantry.Horse
 	Mobile:
@@ -606,7 +606,7 @@ E5NEW:
 	Buildable:
 		Description: Advanced general-purpose infantry.\n  Strong vs all Ground units\n  Detects cloaked units\n  Cannot attack Aircrafts anymore!!!!\n\n\n
 		IconPalette: raicon
-		BuildPaletteOrder: 80
+		BuildPaletteOrder: 50
 		Prerequisites: anyarmory, ~techlevel.medium
 		Queue: MInfantry.Nod, MInfantry.Horse
 	Mobile:
@@ -643,7 +643,7 @@ RMBONEW:
 	Buildable:
 		Description: Elite Infantry\n Strong vs Infantry, Buildings and Spectral Units\n  Arrow proofed.\n\n\n
 		IconPalette: raicon
-		BuildPaletteOrder: 70
+		BuildPaletteOrder: 40
 		Prerequisites: anyhq, ~techlevel.high
 		Queue: MInfantry.GDI
 	Mobile:
@@ -679,7 +679,7 @@ NEWCOMM:
 	Buildable:
 		Description: Juggernaut Infantry \n Very Strong vs Infantry, Buildings and Spectral Units\n  Can only slightly be harmed by Arrows. \nCan cut down trees.\n\n\n
 		IconPalette: raicon
-		BuildPaletteOrder: 80
+		BuildPaletteOrder: 50
 		Prerequisites: anycastle, anyhq, ~techlevel.high
 		Queue: MInfantry.GDI
 	Mobile:
@@ -735,7 +735,7 @@ ASSASSIN:
 	Buildable:
 		Description: Mid/Long-range knifthrowing infantry that can cloak.\nHas weak armor. Can be spotted by some infantry and defense structures.\n  Strong vs Cavalry, Infantry. Moderate vs Spectral Units\n  Sets buildings on fire.\n  Detects cloaked units\n  Can attack Aircrafts\n\n\n
 		IconPalette: raicon
-		BuildPaletteOrder: 90
+		BuildPaletteOrder: 140
 		Queue: MInfantry.Nod, MInfantry.Horse
 		Prerequisites: anycastle, ~techlevel.high
 	Mobile:
@@ -769,7 +769,6 @@ ASSASSIN:
 		InitialStanceAI: ReturnFire
 	Armor:
 		Type: Leather
-
 	Voiced:
 		VoiceSet: AssasinVoice
 
@@ -782,7 +781,7 @@ E8FARMER:
 	Buildable:
 		Description: Gathers grains and Crops and Corn.\nDelivers to a windmill.\nCan collect chopped wood, lumber and goods\n\n
 		IconPalette: raicon
-		BuildPaletteOrder: 40
+		BuildPaletteOrder: 100
 		Queue: MInfantry.GDI, MInfantry.Nod, ~disabled
 	WithFacingSpriteBody:
 		Sequence: idle
@@ -837,7 +836,7 @@ BUMMLER:
 	Buildable:
 		Description: Collects leftovers of the battlefield.\nDelivers to barracks, stables and workshops.\n\n\n
 		IconPalette: raicon
-		BuildPaletteOrder: 60
+		BuildPaletteOrder: 120
 		Queue: MInfantry.GDI, MInfantry.Nod, ~disabled, MInfantry.SUL
 	WithFacingSpriteBody:
 		Sequence: idle

@@ -724,10 +724,12 @@ sulmill:
 		Start: 0
 		Length: 19
 		Offset: 12,-12,0
+		Tick: 50
 	damaged-idle: 
 		Start: 20
 		Length: 19
 		Offset: 12,-12,0
+		Tick: 50
 	dead: 
 		Start: 40
 		Tick: 800
@@ -978,7 +980,7 @@ sulgtw:
 	damaged-idle: 
 		Start: 12
 		Offset: 0,-12
-    idleupped: sulgtwbase2
+	idleupped: sulgtwbase2
 		Start: 0
 		Offset: 0,-8
 	damaged-idleupped: sulgtwbase2
@@ -1088,7 +1090,7 @@ sulplug3:
 	icon: sulgtwplugsicon.shp
 		Start: 2
 		AddExtension: False 
-        
+		
 sulplug4:
 	idle: sulgtwbase2
 		Start: 0

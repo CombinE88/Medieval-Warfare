@@ -205,7 +205,7 @@ HQNEWNOD:
 		PlayerPalette: raplayer
 	Buildable:
 		IconPalette: raicon
-		BuildPaletteOrder: 70
+		BuildPaletteOrder: 50
 		Prerequisites: proc, ~techlevel.medium
 		Queue: MBuilding.Nod, MBuilding.GDI
 		Description: Unlocks higher-tech units and buildings.\n\n\n\n
@@ -255,7 +255,7 @@ ARMORYNOD:
 		PlayerPalette: raplayer
 	Buildable:
 		IconPalette: raicon
-		BuildPaletteOrder: 75
+		BuildPaletteOrder: 90
 		Prerequisites: anyhq, ~techlevel.medium
 		Queue: MBuilding.Nod
 		Description: Unlocks Support Powers and Raiding Squad.\nHeals Cavalry and Infantry.\n\n\n\n
@@ -266,11 +266,6 @@ ARMORYNOD:
 		Bounds: 48,40,0,9
 	SelectionDecorations:
 		VisualBounds: 48,53,0,-4
-	RequiresPower:
-	CanPowerDown:
-		PowerupSound: EnablePower
-		PowerdownSound: DisablePower
-	DisabledOverlay:
 	WithSpriteBody:
 		PauseAnimationWhenDisabled: true
 	Health:
@@ -286,6 +281,11 @@ ARMORYNOD:
 		Range: 5c0
 	Power:
 		Amount: -4
+	RequiresPower:
+	CanPowerDown:
+		PowerupSound: EnablePower
+		PowerdownSound: DisablePower
+	DisabledOverlay:
 	AirstrikePower:
 		Prerequisites: ~techlevel.superweapons
 		Icon: cadaver
@@ -347,7 +347,7 @@ ARMORYGDI:
 		PlayerPalette: raplayer
 	Buildable:
 		IconPalette: raicon
-		BuildPaletteOrder: 75
+		BuildPaletteOrder: 90
 		Prerequisites: anyhq, ~techlevel.medium
 		Queue: MBuilding.GDI
 		Description: Unlocks Support Powers.\nHeals Cavalry and Infantry.\n\n\n\n
@@ -436,7 +436,7 @@ NUK2NEW:
 		Prerequisite: anypower
 	Buildable:
 		IconPalette: raicon
-		BuildPaletteOrder: 80
+		BuildPaletteOrder: 60
 		Prerequisites: anyhq, ~techlevel.medium
 		Queue: MBuilding.GDI
 		Description: Provides more livingspace. Livingspace increases over time by generating peasants.\nCan hold up to 3 peasents, spawntime depends on number of shacks and large huts. \ncheaper than the standard Shack.\n\n\n\n
@@ -566,7 +566,7 @@ NODNUK2:
 		Prerequisite: anypower
 	Buildable:
 		IconPalette: raicon
-		BuildPaletteOrder: 80
+		BuildPaletteOrder: 60
 		Prerequisites: anyhq, ~techlevel.medium
 		Queue: MBuilding.Nod
 		Description: Provides more livingspace. Livingspace increases over time by generating peasants.\nCan hold up to 3 peasents, spawntime depends on number of shacks and large huts. \ncheaper than the standard Shack.\n\n\n\n
@@ -796,7 +796,7 @@ PROCNEW:
 		Name: Ore Refinery
 	Buildable:
 		IconPalette: raicon
-		BuildPaletteOrder: 75
+		BuildPaletteOrder: 70
 		Prerequisites: anyhq
 		Description: Processes raw ore and Gold into useable metal.\nGenerates ore money than the windmill.\n\n\n\n
 		Queue: MBuilding.GDI, MBuilding.Nod, MBuilding.SUL
@@ -852,7 +852,7 @@ SILONEW:
 	Tooltip:
 		Name: Smelter
 	Buildable:
-		BuildPaletteOrder: 40
+		BuildPaletteOrder: 70
 		Prerequisites: proc
 		Queue: MDefenses.GDI, MDefenses.Nod, MDefenses.SUL
 		Description: Stores additional Ore\n\n\n\n
@@ -1304,7 +1304,7 @@ CASTLE:
 		Prerequisites: ~techlevel.superweapons
 		Icon: cannonstrike
 		Cursor: nuke
-		ChargeTime: 300
+		ChargeTime: 350
 		Description: Cannon Strike
 		LongDesc: Launch long range cannonboulder off your casle.\nApplies heavy damage over a large area.\n\n\n\n
 		EndChargeSpeechNotification: NodcannonReady
@@ -1375,14 +1375,14 @@ CASTLE2:
 	SelectionDecorations:
 		VisualBounds: 72,68,0,0
 	RequiresPower:
-	ProvidesRadar:
-		RequiresCondition: !disabled
-	GrantConditionOnDisabled@IDISABLE:
-		Condition: disabled
 	CanPowerDown:
 		PowerupSound: EnablePower
 		PowerdownSound: DisablePower
 	DisabledOverlay:
+	ProvidesRadar:
+		RequiresCondition: !disabled
+	GrantConditionOnDisabled@IDISABLE:
+		Condition: disabled
 	SupportPowerChargeBar:
 	NukePower:
 		Prerequisites: ~techlevel.superweapons
@@ -1431,7 +1431,7 @@ WORKSHOPNOD:
 		Name: Siege Workshop
 	Buildable:
 		IconPalette: raicon
-		BuildPaletteOrder: 60
+		BuildPaletteOrder: 80
 		Prerequisites: proc
 		Description: Provides Siege weapons construction.\nEnables Supportpowers in combination with an Armory.\n\n\n
 		Queue: MBuilding.Nod
@@ -1466,6 +1466,11 @@ WORKSHOPNOD:
 		RequireOwner: false
 		LowPowerSlowdown: 3
 	ProductionBar:
+	RequiresPower:
+	CanPowerDown:
+		PowerupSound: EnablePower
+		PowerdownSound: DisablePower
+	DisabledOverlay:
 	SpawnActorPower:
 		Prerequisites: ~techlevel.superweapons
 		Icon: trojan
@@ -1511,14 +1516,6 @@ WORKSHOPNOD:
 		DockAngle: 72
 		DockOffset: 1,2
 		TickRate: 15
-	FreeActor@1:
-		Actor: mwwand9
-		SpawnOffset: 1,-1
-		Facing: 64
-	FreeActor@2:
-		Actor: mwwand9
-		SpawnOffset: 1,-1
-		Facing: 64
 
 WORKSHOPGDI:
 	Inherits: ^MWBaseBuilding
@@ -1537,7 +1534,7 @@ WORKSHOPGDI:
 		Name: Siege Workshop
 	Buildable:
 		IconPalette: raicon
-		BuildPaletteOrder: 60
+		BuildPaletteOrder: 80
 		Prerequisites: proc
 		Description: Provides Siege weapons construction.\nEnables Supportpowers in combination with an Armory.\n\n\n
 		Queue: MBuilding.GDI
@@ -1572,6 +1569,11 @@ WORKSHOPGDI:
 		RequireOwner: false
 		LowPowerSlowdown: 3
 	ProductionBar:
+	RequiresPower:
+	CanPowerDown:
+		PowerupSound: EnablePower
+		PowerdownSound: DisablePower
+	DisabledOverlay:
 	ProduceActorPower:
 		Prerequisites: ~techlevel.superweapons
 		Icon: strangedavinci
@@ -1610,14 +1612,6 @@ WORKSHOPGDI:
 		DockAngle: 72
 		DockOffset: 1,2
 		TickRate: 15
-	FreeActor@1:
-		Actor: mwwand9
-		SpawnOffset: 1,-1
-		Facing: 64
-	FreeActor@2:
-		Actor: mwwand9
-		SpawnOffset: 1,-1
-		Facing: 64
 
 	
 HOSP: 

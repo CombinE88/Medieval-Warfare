@@ -162,7 +162,7 @@ SAMNEW:
 		Name: Anti-Aircraft Ballista
 	Buildable:
 		Description: Because of the 4 elastic limbs out of black wood \nthe Anti-Aircraft Ballista is designed to shoot down targets \nin the air with a very high speed missile.\n  Very strong vs Aircraft\n  Cannot target Ground units.\n\n\n
-		BuildPaletteOrder: 35
+		BuildPaletteOrder: 40
 		Prerequisites: barracks
 		Queue: MDefenses.Nod
 		BuildDuration: 1700
@@ -214,7 +214,7 @@ TRIBU:
 		Name: Counterweight Trebuchet
 	Buildable:
 		Description: The Counterweight Trebuchet is a type of siege engine \nmost frequently used to outrange other siege weapons.\n  Requires power to operate.\n  Strong vs all Ground units\n  Cannot target Aircraft\n\n\n
-		BuildPaletteOrder: 40
+		BuildPaletteOrder: 50
 		Prerequisites: anycastle
 		Queue: MDefenses.Nod
 		BuildDuration: 3120
@@ -263,6 +263,8 @@ TRIBU:
 		Weapons: SmallWood1, SmallWood2, SmallWood3, LargeWood1, LargeWood1, LargeWood1
 		Pieces: 2, 4
 		Range: 0c512, 3c0
+	 RequiresPower:
+	 DisabledOverlay:
 		
 BATO:
 	Inherits: ^MWDefense
@@ -274,7 +276,7 @@ BATO:
 		Name: Tower with Ballista
 	Buildable:
 		Description: Because of its smaller design and light weighted missiles, \nthe ballista on top of the tower can target \neither ground or aircraft units.\n  Strong vs ground units\n  Weak vs close by units\n  Long distance\n Can target Aircraft\n\n\n
-		BuildPaletteOrder: 40
+		BuildPaletteOrder: 50
 		Prerequisites: anyarmory
 		Queue: MDefenses.GDI
 		BuildDuration: 2880
@@ -330,6 +332,8 @@ BATO:
 		TurnSpeed: 2
 	WithDeathAnimation:
 		DeathSequencePalette: raplayer 
+	 RequiresPower:
+	 DisabledOverlay:
 		
 GUNNEW:
 	Inherits: ^MWDefense
@@ -343,7 +347,7 @@ GUNNEW:
 		Description: The early Cannon uses gunpowder to throw a large boulder. \nIt's most effectively used against large targets.\n  Strong vs Cavalry\n  Weak vs Infantry\n\n\n
 		BuildPaletteOrder: 30
 		Prerequisites: barracks
-		Queue: MDefenses.GDI, MDefenses.Nod, MDefenses.SUL
+		Queue: MDefenses.GDI, MDefenses.Nod
 		IconPalette: raicon
 		BuildDuration: 1440
 		BuildDurationModifier: 40
@@ -396,7 +400,7 @@ CSTLWLL:
 		Name: Castle Wall
 	Buildable:
 		Description: Castlewall that blocks arrows and other projectiles\n\n\n
-		BuildPaletteOrder: 50
+		BuildPaletteOrder: 60
 		BuildDuration: 500
 		Prerequisites: anyworkshop
 		Queue: MDefenses.GDI, MDefenses.Nod

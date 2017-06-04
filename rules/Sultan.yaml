@@ -98,7 +98,7 @@ SULGTW:
 		Conditions:
 			sulgtw.archers: archers
 			sulgtw.djinn: djinn
-            sulgtw.static: static
+			sulgtw.static: static
 	WithIdleOverlay@archers:
 		Sequence: archgtw
 		Offset: 0, 0, 0
@@ -170,16 +170,19 @@ SULGTW:
 	Power@djinn:
 		Amount: -2
 		RequiresCondition: djinn
-    WithSpriteBody:
-        RequiresCondition: !static
-    WithIdleOverlay@static:
-        Sequence: idleupped
-        RequiresCondition: static
-    Armament@static:
+	WithSpriteBody:
+		RequiresCondition: !static
+	WithIdleOverlay@static:
+		Sequence: idleupped
+		RequiresCondition: static
+	Armament@static:
 		Weapon: TowerPike
 		LocalOffset: 0,0,0
 		RequiresCondition: static
-        
+	DamageMultiplier@static:
+		RequiresCondition: static
+		Modifier: 70
+		
 
 SULPLUG1:
 	AlwaysVisible:
@@ -190,10 +193,10 @@ SULPLUG1:
 	RenderSprites:
 	Tooltip:
 		Name: Extra Firepower Upgrade
-    Buildable:
-		Description: Upgrades the Guard Tower with 2 additional Archers.\n\n\n\n
-		BuildPaletteOrder: 70
-		Prerequisites: vehicleproduction
+	Buildable:
+		Description: Upgrades the Guard Tower with 2 additional Archers.\n  Doubles the firepower\n  Strong vs Infantry\n\n
+		BuildPaletteOrder: 23
+		Prerequisites: anyhq
 		Queue: MDefenses.SUL
 		BuildDuration:800
 		BuildDurationModifier: 40
@@ -214,21 +217,21 @@ SULPLUG3:
 	RenderSprites:
 	Tooltip:
 		Name: Mystical Firepower Upgrade
-    Buildable:
-		Description: Upgrades the Guard Tower with 1 Djinn.\n  Can attack Aricrafts\n\n\n
-		BuildPaletteOrder: 80
+	Buildable:
+		Description: Upgrades the Guard Tower with 1 Djinn.\n  Can attack Aricrafts\n  Strong vs Aircrafts\n\n
+		BuildPaletteOrder: 22
 		Prerequisites: sultow2
 		Queue: MDefenses.SUL
 		BuildDuration:800
 		BuildDurationModifier: 40
 		IconPalette: raicon
 	Valued:
-		Cost: 600
+		Cost: 700
 	Plug:
 		Type: sulgtw.djinn
 	Power:
 		Amount: -2
-        
+		
 SULPLUG4:
 	AlwaysVisible:
 	Building:
@@ -238,16 +241,16 @@ SULPLUG4:
 	RenderSprites:
 	Tooltip:
 		Name: Basic Defense Upgrade
-    Buildable:
-		Description: Upgrades the Guard Tower with a static defense.\n  Deals high damage to surrounding Cavalry\n\n\n
-		BuildPaletteOrder: 60
-		Prerequisites: barracks
+	Buildable:
+		Description: Upgrades the Guard Tower with a static defense.\n  Deals high damage to surrounding Cavalry\n  Strong vs Cavalry\n  Increases base hitpoints by 30%\n
+		BuildPaletteOrder: 21
+		Prerequisites: vehicleproduction
 		Queue: MDefenses.SUL
 		BuildDuration:800
 		BuildDurationModifier: 40
 		IconPalette: raicon
 	Valued:
-		Cost: 400
+		Cost: 300
 	Plug:
 		Type: sulgtw.static
 	Power:
@@ -519,6 +522,11 @@ SULMYSTIC:
 		
 SULCASTLE:
 	Inherits: ^MWBaseBuilding
+	RequiresPower:
+	CanPowerDown:
+		PowerupSound: EnablePower
+		PowerdownSound: DisablePower
+	DisabledOverlay:
 	Armor:
 		Type: Concrete
 	WithDeathAnimation:
@@ -681,7 +689,7 @@ SULTOW1:
 	RenderSprites:
 		PlayerPalette: sultanplayer
 	Valued:
-		Cost: 1000
+		Cost: 700
 	Tooltip:
 		Name: Tower of Knowledge
 	ProvidesPrerequisite@buildingname:
@@ -689,7 +697,7 @@ SULTOW1:
 		IconPalette: raicon
 		BuildPaletteOrder: 80
 		Prerequisites: anyhq
-		Description: Grands acess to advanced tech at the barracks.\n Allows Supportpower I \n Heals surrounding units.\n\n
+		Description: Grands acess to advanced tech at the barracks.\n  Allows Supportpower I \n  Heals surrounding units.\n\n
 		Queue: MBuilding.SUL#
 		BuildLimit: 1
 	GrantConditionOnPrerequisite@Palace:
@@ -706,7 +714,7 @@ SULTOW2:
 	RenderSprites:
 		PlayerPalette: sultanplayer
 	Valued:
-		Cost: 1000
+		Cost: 800
 	Tooltip:
 		Name: Tower of Mystical Teachings
 	ProvidesPrerequisite@buildingname:
@@ -730,7 +738,7 @@ SULTOW3:
 	RenderSprites:
 		PlayerPalette: sultanplayer
 	Valued:
-		Cost: 1000
+		Cost: 900
 	Tooltip:
 		Name: Tower of Progress
 	ProvidesPrerequisite@buildingname:
@@ -765,7 +773,7 @@ SULTOW4:
 	Buildable:
 		IconPalette: raicon
 		BuildPaletteOrder: 110
-		Prerequisites: anyhq, sultow1, sultow2, sultow3
+		Prerequisites: anyhq
 		Description: Grands acess to superb tech and super weapons.\n\n\n\n
 		Queue: MDefenses.SUL
 		BuildLimit: 1
@@ -921,14 +929,11 @@ SULFIX:
 		DockAngle: 72
 		DockOffset: 1,2
 		TickRate: 15
-	FreeActor@1:
-		Actor: mwwand9
-		SpawnOffset: 1,-1
-		Facing: 64
-	FreeActor@2:
-		Actor: mwwand9
-		SpawnOffset: 1,-1
-		Facing: 64
+	RequiresPower:
+	CanPowerDown:
+		PowerupSound: EnablePower
+		PowerdownSound: DisablePower
+	DisabledOverlay:
 	ProduceActorPower:
 		Prerequisites: ~techlevel.superweapons
 		Icon: sulb2iconsmall
@@ -1695,7 +1700,7 @@ SULM3:
 		Speed: 138
 		IdealSeparation: 0c612
 	Health:
-		HP: 10000
+		HP: 13000
 	Armor:
 		Type: LightCavalry
 	RevealsShroud:
@@ -1800,10 +1805,10 @@ SULB3:
 		RearmBuildings: hpad
 		InitialFacing: 224
 		TurnSpeed: 10
-		Speed: 100
+		Speed: 90
 		IdealSeparation: 1c125
 	Health:
-		HP: 15500
+		HP: 21000
 	Armor:
 		Type: LightCavalry
 	RevealsShroud:
@@ -1811,31 +1816,31 @@ SULB3:
 		Type: CenterPosition
 	Armament@1:
 		Weapon: SonicRaptor
-		LocalOffset: 341,625,456
+		LocalOffset: 641,925,456
 		FireDelay: 3
 	Armament@2:
 		Weapon: SonicRaptorSoundLess
-		LocalOffset: 341,424,356
+		LocalOffset: 441,724,356
 		FireDelay: 3
 		Name: secondary
 	Armament@3:
 		Weapon: SonicRaptorSoundLess
-		LocalOffset: 341,234,256
+		LocalOffset: 341,534,256
 		FireDelay: 3
 		Name: secondary
 	Armament@4:
 		Weapon: SonicRaptorSoundLess
-		LocalOffset: 341,-625,456
+		LocalOffset: 641,-925,456
 		FireDelay: 3
 		Name: secondary
 	Armament@5:
 		Weapon: SonicRaptorSoundLess
-		LocalOffset: 341,-424,356
+		LocalOffset: 441,-724,356
 		FireDelay: 3
 		Name: secondary
 	Armament@6:
 		Weapon: SonicRaptorSoundLess
-		LocalOffset: 341,-234,256
+		LocalOffset: 341,-534,256
 		FireDelay: 3
 		Name: secondary
 	AttackHeli:

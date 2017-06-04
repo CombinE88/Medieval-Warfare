@@ -1174,7 +1174,7 @@
 		RequiresCondition: KingIsNear
 	DamageMultiplier@Crown:
 		RequiresCondition: KingIsNear
-		Modifier: 120
+		Modifier: 80
 	FirepowerMultiplier@Crown:
 		RequiresCondition: KingIsNear
 		Modifier: 120
@@ -1265,6 +1265,27 @@
 		Delay: 25
 		RequiresCondition: snaketrap
 		DamageTypes: PoisonDeath
+	 SelfHealing@SNAKES2:
+		PercentageStep: -8
+		Step: -0
+		HealIfBelow: 110
+		Delay: 25
+		RequiresCondition: snaketrap >= 2
+		DamageTypes: PoisonDeath
+	SelfHealing@SNAKES3:
+		PercentageStep: -8
+		Step: -0
+		HealIfBelow: 110
+		Delay: 25
+		RequiresCondition: snaketrap >= 3
+		DamageTypes: PoisonDeath
+	SelfHealing@SNAKES4:
+		PercentageStep: -8
+		Step: -0
+		HealIfBelow: 110
+		Delay: 25
+		RequiresCondition: snaketrap >= 4
+		DamageTypes: PoisonDeath	 
 	SpeedMultiplier@SNAKES:
 		Modifier: 0
 		RequiresCondition: snaketrap
@@ -1410,7 +1431,7 @@
 	SpeedMultiplier@SNAKES:
 		Modifier: 40
 		RequiresCondition: snaketrap
-	   
+		
 ^Siege:
 	Inherits: ^MedievalInfantry
 	Mobile:
@@ -1462,6 +1483,27 @@
 		HealIfBelow: 110
 		Delay: 25
 		RequiresCondition: snaketrap
+		DamageTypes: PoisonDeath
+	 SelfHealing@SNAKES2:
+		PercentageStep: -8
+		Step: -0
+		HealIfBelow: 110
+		Delay: 25
+		RequiresCondition: snaketrap >= 2
+		DamageTypes: PoisonDeath
+	SelfHealing@SNAKES3:
+		PercentageStep: -8
+		Step: -0
+		HealIfBelow: 110
+		Delay: 25
+		RequiresCondition: snaketrap >= 3
+		DamageTypes: PoisonDeath
+	SelfHealing@SNAKES4:
+		PercentageStep: -8
+		Step: -0
+		HealIfBelow: 110
+		Delay: 25
+		RequiresCondition: snaketrap >= 4
 		DamageTypes: PoisonDeath
 		
 ^MWCiv:
@@ -1893,4 +1935,4 @@
 	SoundOnDamageTransition:
 		DamagedSounds: treefell.wav
 		
-   
+	
