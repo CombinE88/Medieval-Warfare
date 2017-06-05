@@ -344,7 +344,7 @@ GUNNEW:
 	Tooltip:
 		Name: Gunpowder Cannon
 	Buildable:
-		Description: The early Cannon uses gunpowder to throw a large boulder. \nIt's most effectively used against large targets.\n  Strong vs Cavalry\n  Weak vs Infantry\n\n\n
+		Description: The early Cannon uses gunpowder to throw a large boulder. \nIt's most effectively used against large targets.\n  Strong vs Cavalry and Spectral Units\n  Weak vs Infantry\n\n\n
 		BuildPaletteOrder: 30
 		Prerequisites: barracks
 		Queue: MDefenses.GDI, MDefenses.Nod

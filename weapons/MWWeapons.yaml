@@ -1814,7 +1814,7 @@ CannonBoulder:
 			MediumCavalry: 100
 			HeavyCavalry: 100
 			HeavyBuilding: 45
-			Spectral: 15
+			Spectral: 75
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
 	Warhead@2Smu: LeaveSmudge
 		SmudgeType: Crater
