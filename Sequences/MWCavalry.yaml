@@ -345,7 +345,7 @@ rossempty:
 		
 ross5:
 	Default:
-		Offset: 0,10,0
+		Offset: 0,-10,0
 	stand: ross5
 		Start: 122
 		Facings: 8
@@ -362,6 +362,11 @@ ross5:
 	shoot: ross5
 		Tick: 100
 		Start: 259
+		Length: 7
+		Facings: 8
+	shootground: ross5
+		Tick: 100
+		Start: 316
 		Length: 7
 		Facings: 8
 	idle1: ross5
@@ -382,6 +387,7 @@ ross5:
 	die2: burninghorserider
 		Length: *
 		Tick: 80
+		Offset: 0,0,0
 	icon: nhcavicon.shp
 		Offset: 0,0,0
 		AddExtension: False		

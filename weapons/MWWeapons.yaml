@@ -1,3 +1,87 @@
+GunlanceAir:
+	ReloadDelay: 45
+	Range: 7c0
+	Report: gunlance.aud
+	ValidTargets: Air
+	InvalidTargets: Wall, Structure, Ground
+	Projectile:Bullet
+		Speed: 1c682
+		ContrailLength: 500
+		ContrailWidth: 20
+		ContrailDelay: 0
+		ContrailUsePlayerColor : true
+	Warhead@1Dam: SpreadDamage
+		Spread: 51
+		Damage: 3500
+		InvalidTargets: Wall, Structure, Ground
+		ValidTargets: Air
+		Versus:
+			Leather: 50
+			Light: 75
+			Heavy: 100
+			Concrete: 90
+			Knight: 50
+			HeavyBuilding: 90
+			LightCavalry: 100
+			MediumCavalry: 90
+			HeavyCavalry: 50
+			Spectral: 15
+		DamageTypes: Prone50Percent, TriggerProne, PoisonDeath
+	Warhead@2SmokeySpaner: FireShrapnel
+		Weapon: SmokeySpawner
+		InvalidTargets: Wall, Air, Structuren, ground
+		ValidTargets: none
+		AimChance: 0
+		AllowDirectHit: true
+		AimTargetStances: Neutral
+		Amount: 4
+		
+GunlanceGround:
+	ReloadDelay: 65
+	Range: 4c0
+	Report: gunlance.aud
+	ValidTargets: Infantry, Ground
+	InvalidTargets: Wall, Structure, Air, Cavalry
+	Projectile:Bullet
+		Speed: 1c682
+		ContrailLength: 500
+		ContrailWidth: 20
+		ContrailDelay: 0
+		ContrailUsePlayerColor : true
+	Warhead@2SmokeySpaner: FireShrapnel
+		Weapon: SmokeySpawner
+		AimChance: 0
+		AllowDirectHit: true
+		AimTargetStances: Neutral
+		Amount: 4
+			
+SmokeySpawner:   
+	ReloadDelay: 85
+	MinRange: 0
+	Range: 0c712
+	Projectile:Bullet
+		Speed: 100
+		ValidTargets: none
+	Warhead@1Eff: CreateEffect
+		Explosions: smokey
+		ImpactSounds: tnkfire2.aud, tnkfire3.aud, tnkfire4.aud, tnkfire6.aud
+	Warhead@2Dam: SpreadDamage
+		Spread: 256
+		Damage: 2000
+		Versus:
+			Leather: 100
+			Light: 90
+			Heavy: 85
+			Concrete: 100
+			Knight: 50
+			LightCavalry: 100
+			MediumCavalry: 100
+			HeavyCavalry: 100
+			HeavyBuilding: 100
+			Spectral: 75
+		DamageTypes: Prone50Percent, TriggerProne, RippedApartDeath		
+			
+			
 OrniSpearThrow:
 	ReloadDelay: 8
 	Range: 6c0
@@ -477,16 +561,16 @@ MammothPike:
 	Range: 1c512
 	Burst: 2
 	BurstDelay: 20
-	ValidTargets: Ground, Trees
+	ValidTargets: Cavalry, Trees, Structure
 	InvalidTargets: Air
 	Report: Sword02.aud, Sword03.aud, Sword04.aud, Sword06.aud, Sword07.aud
 	Projectile: Bullet
 		Speed: 1c382
 	Warhead@1Dam: SpreadDamage
-		ValidTargets: Ground, Trees
+		ValidTargets: Cavalry, Trees, Structure
 		InvalidTargets: Air
 		Spread: 180
-		Damage: 3850
+		Damage: 4300
 		Versus:
 			Leather: 35
 			Light: 35
