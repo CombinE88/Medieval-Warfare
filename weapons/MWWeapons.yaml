@@ -688,7 +688,7 @@ Sledgehammer:
 	Range: 1c512
 	ValidTargets: Ground, Trees
 	InvalidTargets: Air
-	Report: Sounds/jugg-attack.aud
+	Report: jugg-attack.aud
 	Projectile: GravityBomb
 	Warhead@1Eff: CreateEffect
 		ImpactSounds: Sword02.aud, Sword03.aud, Sword04.aud, Sword06.aud, Sword07.aud
@@ -2981,7 +2981,7 @@ LeaveWoodS:
 KilledPike:
 	ValidTargets: Cavalry
 	Warhead@1Dam: SpreadDamage
-		Spread: 0c512
+		Spread: 0c356
 		Damage: 15000
 		ValidTargets: Cavalry
 		Versus:
