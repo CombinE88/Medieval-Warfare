@@ -344,7 +344,7 @@ rossempty:
 		
 		
 ross5:
-	Default:
+	Defaults:
 		Offset: 0,-10,0
 	stand: ross5
 		Start: 122
@@ -360,14 +360,14 @@ ross5:
 		Length: 7
 		Facings: 8
 	shoot: ross5
-		Tick: 100
+		Tick: 120
 		Start: 259
-		Length: 7
+		Length: 14
 		Facings: 8
 	shootground: ross5
-		Tick: 100
-		Start: 316
-		Length: 7
+		Tick: 120
+		Start: 373
+		Length: 14
 		Facings: 8
 	idle1: ross5
 		Tick: 100

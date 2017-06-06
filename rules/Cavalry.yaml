@@ -448,11 +448,11 @@ ROSS5:
 	Armament@GunlanceAir:
 		Weapon: GunlanceAir 
 		Name: Secondary
-		LocalOffset: 700,0,200
+		LocalOffset: 700,0,700
 	Armament@GunlanceGround:
 		Weapon: GunlanceGround 
 		Name: Tertiary
-		LocalOffset: 800,0,700
+		LocalOffset: 800,0,300
 	AttackFrontal:
 		Armaments: Primary, Secondary, Tertiary
 	AutoTarget:

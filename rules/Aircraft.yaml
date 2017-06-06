@@ -157,7 +157,7 @@ DRGNRDR:
 		Ammo: 15
 		PipCount: 5
 		SelfReloads: true
-		ReloadCount: 1
+		ReloadCount: 2
 		SelfReloadDelay: 20
 	SpawnActorOnDeath:
 		Actor: DRAGON.Husk

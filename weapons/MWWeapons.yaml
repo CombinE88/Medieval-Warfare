@@ -10,35 +10,30 @@ GunlanceAir:
 		ContrailWidth: 20
 		ContrailDelay: 0
 		ContrailUsePlayerColor : true
-	Warhead@1Dam: SpreadDamage
-		Spread: 51
-		Damage: 3500
-		InvalidTargets: Wall, Structure, Ground
+	Warhead@1Eff: CreateEffect
+		Explosions: smokey
+		ImpactSounds: tnkfire2.aud, tnkfire3.aud, tnkfire4.aud, tnkfire6.aud
+	Warhead@2Dam: SpreadDamage
+		Spread: 256
+		Damage: 4500
 		ValidTargets: Air
+		InvalidTargets: Wall, Structure, Ground
 		Versus:
-			Leather: 50
-			Light: 75
-			Heavy: 100
-			Concrete: 90
+			Leather: 100
+			Light: 90
+			Heavy: 85
+			Concrete: 100
 			Knight: 50
-			HeavyBuilding: 90
 			LightCavalry: 100
-			MediumCavalry: 90
-			HeavyCavalry: 50
-			Spectral: 15
-		DamageTypes: Prone50Percent, TriggerProne, PoisonDeath
-	Warhead@2SmokeySpaner: FireShrapnel
-		Weapon: SmokeySpawner
-		InvalidTargets: Wall, Air, Structuren, ground
-		ValidTargets: none
-		AimChance: 0
-		AllowDirectHit: true
-		AimTargetStances: Neutral
-		Amount: 4
+			MediumCavalry: 100
+			HeavyCavalry: 100
+			HeavyBuilding: 100
+			Spectral: 75
+		DamageTypes: Prone50Percent, TriggerProne, RippedApartDeath	
 		
 GunlanceGround:
 	ReloadDelay: 65
-	Range: 4c0
+	Range: 3c0
 	Report: gunlance.aud
 	ValidTargets: Infantry, Ground
 	InvalidTargets: Wall, Structure, Air, Cavalry
@@ -59,7 +54,7 @@ SmokeySpawner:
 	ReloadDelay: 85
 	MinRange: 0
 	Range: 0c712
-	Projectile:Bullet
+	Projectile: Bullet
 		Speed: 100
 		ValidTargets: none
 	Warhead@1Eff: CreateEffect
@@ -67,7 +62,7 @@ SmokeySpawner:
 		ImpactSounds: tnkfire2.aud, tnkfire3.aud, tnkfire4.aud, tnkfire6.aud
 	Warhead@2Dam: SpreadDamage
 		Spread: 256
-		Damage: 2000
+		Damage: 1500
 		Versus:
 			Leather: 100
 			Light: 90
@@ -462,20 +457,20 @@ Pike:
 		Speed: 1c382
 	Warhead@1Dam: SpreadDamage
 		Spread: 15
-		Damage: 2000
+		Damage: 3500
 		ValidTargets: Ground, Trees
 		InvalidTargets: Air
 		Versus:
-			Leather: 30
-			Light: 30
-			Heavy: 45
+			Leather: 20
+			Light: 20
+			Heavy: 30
 			Concrete: 85
 			HeavyBuilding: 100
 			Knight: 30
 			LightCavalry: 135
 			MediumCavalry: 125
 			HeavyCavalry: 120
-			Spectral: 15
+			Spectral: 10
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
 		
 PikeSpread:
@@ -488,20 +483,20 @@ PikeSpread:
 		Speed: 1c382
 	Warhead@1Dam: SpreadDamage
 		Spread: 375
-		Damage: 2500
+		Damage: 4000
 		ValidTargets: Ground, Trees
 		InvalidTargets: Air
 		Versus:
-			Leather: 30
-			Light: 30
-			Heavy: 45
+			Leather: 20
+			Light: 20
+			Heavy: 30
 			Concrete: 85
 			HeavyBuilding: 100
 			Knight: 30
 			LightCavalry: 135
 			MediumCavalry: 125
 			HeavyCavalry: 120
-			Spectral: 15
+			Spectral: 10
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
 		
 PikeCavalry:
@@ -1608,7 +1603,7 @@ DragonFire:
 		Spread: 210
 		ValidTargets: Ground
 		InvalidTargets: Air
-		Damage: 1200
+		Damage: 1700
 		Falloff: 100, 70, 60, 50, 18, 7, 0
 		Versus:
 			Leather: 75
@@ -1627,7 +1622,7 @@ DragonFire:
 		ValidTargets: Ground
 		InvalidTargets: Air
 		Delay: 20
-		Damage: 550
+		Damage: 750
 		Falloff: 100, 70, 60, 50, 18, 7, 0
 		Versus:
 			Leather: 100
