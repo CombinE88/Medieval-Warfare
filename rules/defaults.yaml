@@ -612,7 +612,6 @@
 		EmptyWeapon: BuildingExplode
 	CaptureNotification:
 		Notification: BuildingCaptured
-		NewOwnerVoice: no
 	ActorLostNotification:
 		Notification: BuildingLost
 	ShakeOnDeath:

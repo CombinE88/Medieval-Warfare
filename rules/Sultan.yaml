@@ -160,7 +160,12 @@ SULGTW:
 		Offset: 0,0,900
 		RequiresCondition: djinn
 	Armament@djinn:
-		Weapon: DjinElectro
+		Weapon: DjinElectroGround
+		LocalOffset: 141,75,352
+		Turret: turr3
+		RequiresCondition: djinn
+	 Armament@djinnAir:
+		Weapon: DjinElectroAir
 		LocalOffset: 141,75,352
 		Turret: turr3
 		RequiresCondition: djinn
@@ -683,7 +688,37 @@ SULCASTLE:
 		IncomingSpeechNotification: 
 		IncomingSound: 
 		RequiresCondition: Tower4build
-	   
+	SelfHealing@TORNADO:
+		Step: -6500
+		HealIfBelow: 110
+		Delay: 25
+		RequiresCondition: Tornadodeath && (Tower1build + Tower2build + Tower3build + Tower4build) == 0
+		DamageTypes: DefaultDeath
+	SelfHealing@TORNADO1:
+		Step: -5500
+		HealIfBelow: 110
+		Delay: 25
+		RequiresCondition: Tornadodeath && (Tower1build + Tower2build + Tower3build + Tower4build) == 1
+		DamageTypes: DefaultDeath
+	SelfHealing@TORNADO2:
+		Step: -4750
+		HealIfBelow: 110
+		Delay: 25
+		RequiresCondition: Tornadodeath && (Tower1build + Tower2build + Tower3build + Tower4build) == 2
+		DamageTypes: DefaultDeath
+	SelfHealing@TORNADO3:
+		Step: -4000
+		HealIfBelow: 110
+		Delay: 25
+		RequiresCondition: Tornadodeath && (Tower1build + Tower2build + Tower3build + Tower4build) == 3
+		DamageTypes: DefaultDeath
+	SelfHealing@TORNADO4:
+		Step: -3250
+		HealIfBelow: 110
+		Delay: 25
+		RequiresCondition: Tornadodeath && (Tower1build + Tower2build + Tower3build + Tower4build) == 4
+		DamageTypes: DefaultDeath
+		
 SULTOW1:
 	AlwaysVisible:
 	RenderSprites:
@@ -1196,7 +1231,7 @@ SULE6:
 		PlayerPalette: raplayer
 	AttackFrontal:
 	Armor:
-		Type: Heavy	   
+		Type: Heavy		
 	Selectable:
 		Priority: 7
 	Harvester:
@@ -1232,7 +1267,7 @@ SULM1:
 	Mobile:
 		Speed: 66
 	Health:
-		HP: 9000
+		HP: 19000
 	Armament@Ground:
 		Weapon: ApprenticeFire
 	AttackFrontal:
@@ -1338,7 +1373,9 @@ SULM2:
 		ScanRadius: 5
 		InitialStance: AttackAnything
 	RenderSprites:
-		PlayerPalette: raplayer
+		PlayerPalette: sultanplayer
+	WithDeathAnimation:
+		DeathSequencePalette: sultanplayer
 	WithInfantryBody:
 		DefaultAttackSequence: shoot
 		IdleSequences: idle
@@ -1353,6 +1390,8 @@ SULM2:
 	-SelfHealing@SNAKES:
 	-SpeedMultiplier@SNAKES:
 	-WithIdleOverlay@SNAKES:
+	Voiced:
+		VoiceSet: DjinVoice
 	
 SULM4:
 	RevealsShroud:
@@ -1733,7 +1772,7 @@ SULM3.Husk:
 	Tooltip:
 		Name: Dude
 	WithFacingSpriteBody:
-		Sequence: idle   
+		Sequence: idle	
 	Aircraft:
 		TurnSpeed: 4
 		Speed: 156
@@ -1865,7 +1904,7 @@ SULB3.Husk:
 	Tooltip:
 		Name: Dude
 	WithFacingSpriteBody:
-		Sequence: idle   
+		Sequence: idle	
 	Aircraft:
 		TurnSpeed: 4
 		Speed: 156
@@ -1900,6 +1939,7 @@ SULTURNXL:
 	-Targetable@GROUND:
 	-Targetable@AIRBORNE:
 	Selectable:
+	ActorLostNotification:
 	RevealsShroud:
 		Range: 5c0
 		Type: CenterPosition

@@ -226,7 +226,10 @@ ENGENEER:
 		ForceTargetStances: None
 	AttackFrontal:
 	RenderSprites:
-		Image: engeneer
+		FactionImages:
+			nod: engeneer
+			gdi: engeneer
+			sul: sulengi
 		PlayerPalette: raplayer
 	WithInfantryBody:
 		DefaultAttackSequence: shoot
@@ -895,7 +898,11 @@ SIEGERUNNER:
 		HP: 5000
 	AttackFrontal:
 	RenderSprites:
-		Image: engeneer
+		RenderSprites:
+		FactionImages:
+			nod: engeneer
+			gdi: engeneer
+			sul: sulengi
 		PlayerPalette: raplayer
 	WithInfantryBody:
 		MoveSequence: runfast

@@ -34,20 +34,20 @@ PikeAC:
 		Speed: 1c382
 	Warhead@1Dam: SpreadDamage
 		Spread: 15
-		Damage: 2000
+		Damage: 3500
 		ValidTargets: Ground, Trees
 		InvalidTargets: Air, Infantry
 		Versus:
-			Leather: 30
-			Light: 30
-			Heavy: 45
+			Leather: 20
+			Light: 20
+			Heavy: 30
 			Concrete: 85
 			HeavyBuilding: 100
 			Knight: 30
 			LightCavalry: 135
 			MediumCavalry: 125
 			HeavyCavalry: 120
-			Spectral: 15
+			Spectral: 10
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
 		
 BroadSwordAE:
@@ -141,10 +141,9 @@ ApprenticeFire:
 		InvalidTargets: Air, Structure, Skeleton
 		Damage: 1500
 		Versus:
-			None: 100
-			Leather: 100
-			Light: 100
-			Heavy: 100
+			Leather: 200
+			Light: 180
+			Heavy: 160
 			Spectral: 65
 			Concrete: 85
 			Knight: 45
@@ -160,10 +159,9 @@ ApprenticeFire:
 		InvalidTargets: Air, Structure, Skeleton
 		Damage: 1500
 		Versus:
-			None: 100
-			Leather: 100
-			Light: 100
-			Heavy: 100
+			Leather: 200
+			Light: 180
+			Heavy: 160
 			Spectral: 65
 			Concrete: 100
 			Knight: 45
@@ -179,10 +177,9 @@ ApprenticeFire:
 		InvalidTargets: Air, Structure, Skeleton
 		Damage: 1500
 		Versus:
-			None: 100
-			Leather: 100
-			Light: 100
-			Heavy: 100
+			Leather: 200
+			Light: 180
+			Heavy: 160
 			Spectral: 65
 			Concrete: 100
 			Knight: 45
@@ -198,10 +195,9 @@ ApprenticeFire:
 		InvalidTargets: Air, Structure, Skeleton
 		Damage: 1500
 		Versus:
-			None: 100
-			Leather: 100
-			Light: 100
-			Heavy: 100
+			Leather: 200
+			Light: 180
+			Heavy: 160
 			Spectral: 65
 			Concrete: 100
 			Knight: 45
@@ -217,10 +213,9 @@ ApprenticeFire:
 		InvalidTargets: Air, Structure, Skeleton
 		Damage: 1500
 		Versus:
-			None: 100
-			Leather: 100
-			Light: 100
-			Heavy: 100
+			Leather: 200
+			Light: 180
+			Heavy: 160
 			Spectral: 65
 			Concrete: 100
 			Knight: 45
@@ -236,10 +231,9 @@ ApprenticeFire:
 		InvalidTargets: Air, Structure, Skeleton
 		Damage: 1500
 		Versus:
-			None: 100
-			Leather: 100
-			Light: 100
-			Heavy: 100
+			Leather: 200
+			Light: 180
+			Heavy: 160
 			Spectral: 65
 			Concrete: 100
 			Knight: 45
@@ -268,6 +262,58 @@ DjinElectro:
 		Spread: 42
 		Damage: 6000
 		ValidTargets: Ground, Air
+		Versus:
+			None: 100
+			Leather: 100
+			Light: 100
+			Heavy: 100
+			Spectral: 100
+			Concrete: 100
+			Knight: 100
+			LightCavalry: 100
+			MediumCavalry: 100
+			HeavyCavalry: 100
+			HeavyBuilding: 100
+		DamageTypes: Prone50Percent, TriggerProne, RippedApartDeath
+		
+DjinElectroAir:
+	ReloadDelay: 55
+	Range: 9c0
+	ValidTargets: Air
+	InvalidTargets: Ground
+	Report: tesla1.aud
+	Projectile: TeslaZap
+	Warhead@1Dam: SpreadDamage
+		Spread: 42
+		Damage: 6000
+		ValidTargets: Air
+		InvalidTargets: Ground
+		Versus:
+			None: 100
+			Leather: 100
+			Light: 100
+			Heavy: 100
+			Spectral: 100
+			Concrete: 100
+			Knight: 100
+			LightCavalry: 100
+			MediumCavalry: 100
+			HeavyCavalry: 100
+			HeavyBuilding: 100
+		DamageTypes: Prone50Percent, TriggerProne, RippedApartDeath
+		  
+DjinElectroGround:
+	ReloadDelay: 55
+	Range: 6c0
+	ValidTargets: Ground
+	InvalidTargets: Air
+	Report: tesla1.aud
+	Projectile: TeslaZap
+	Warhead@1Dam: SpreadDamage
+		Spread: 42
+		Damage: 6000
+		ValidTargets: Ground
+		  InvalidTargets: Air
 		Versus:
 			None: 100
 			Leather: 100
@@ -773,7 +819,7 @@ BedouinBowTowerUnblockDUMMY:
 			HeavyBuilding: 0
 			Spectral: 0
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath 
-        
+		
 TowerPike:
 	ReloadDelay: 40
 	Range: 2c512

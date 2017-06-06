@@ -32,8 +32,8 @@ GunlanceAir:
 		DamageTypes: Prone50Percent, TriggerProne, RippedApartDeath	
 		
 GunlanceGround:
-	ReloadDelay: 65
-	Range: 3c0
+	ReloadDelay: 75
+	Range: 4c0
 	Report: gunlance.aud
 	ValidTargets: Infantry, Ground
 	InvalidTargets: Wall, Structure, Air, Cavalry
@@ -62,7 +62,7 @@ SmokeySpawner:
 		ImpactSounds: tnkfire2.aud, tnkfire3.aud, tnkfire4.aud, tnkfire6.aud
 	Warhead@2Dam: SpreadDamage
 		Spread: 256
-		Damage: 1500
+		Damage: 1750
 		Versus:
 			Leather: 100
 			Light: 90
@@ -1746,8 +1746,8 @@ BowNArrowTower:
 		LaunchAngle: 46
 		Inaccuracy: 0c0
 	Warhead@1Dam: SpreadDamage
-		Spread: 205
-		Damage: 2000
+		Spread: 125
+		Damage: 2500
 		ValidTargets: Ground
 		InvalidTargets: Wall, Air
 		Versus:
@@ -1755,7 +1755,7 @@ BowNArrowTower:
 			Light: 115
 			Heavy: 105
 			Concrete: 40
-			Knight: 50
+			Knight: 25
 			LightCavalry: 120
 			MediumCavalry: 30
 			HeavyCavalry: 15

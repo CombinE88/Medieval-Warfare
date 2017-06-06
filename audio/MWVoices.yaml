@@ -6,6 +6,15 @@ SiegeVoice:
 		Burned: WoodExplMed,WoodExplsmall2,WoodExplMed,WoodExplMed2
 		Zapped: WoodExplMed,WoodExplsmall2,WoodExplMed,WoodExplMed2
 		Poisoned: WoodExplMed,WoodExplsmall2,WoodExplMed,WoodExplMed2
+        
+DjinVoice:
+	Voices:
+		Select: 13-i000,13-i002,13-i004
+		Action: 13-i006,13-i012,13-i014,13-i016
+		Die: djindie
+		Burned: djindie
+		Zapped: djindie
+		Poisoned: djindie
 		
 ElephantVoice:
 	Voices:
