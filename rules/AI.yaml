@@ -19,8 +19,8 @@ Player:
 			zeroproc: 2
 			sulmill: 3
 			procnew: 3
-			barrnew: 3
-			sulbarr: 3
+			barrnew: 2
+			sulbarr: 2
 			handnew: 3
 			hqnewnod: 1
 			sulcastle: 1
@@ -46,13 +46,13 @@ Player:
 			wtw2: 20%
 			wtw3: 20%
 			procnew: 40%
-			zeroproc: 40%
-			sulmill: 40%
+			zeroproc: 90%
+			sulmill: 90%
 			nukenew: 9%
 			sulnuke: 9%
 			nodnuke: 9%
-			barrnew: 5%
-			sulbarr: 5%
+			barrnew: 100%
+			sulbarr: 100%
 			handnew: 5%
 			hqnewnod: 4%
 			armorygdi: 4%
@@ -83,7 +83,7 @@ Player:
 			sule3: 40%
 			sule4: 35%
 			sule5: 45%
-			sule6: 80%
+			sule6: 100%
 			sulm1: 25%
 			sulm2: 45%
 			sulb0: 40%
@@ -118,11 +118,11 @@ Player:
 			wrbln: 10%
 			newcomm: 50%
 			rmbonew: 50%
-			e8farmer: 80%
+			e8farmer: 100%
 		UnitLimits:
 			eharvxl: 6
-			e8farmer: 6
-			sule6: 6
+			e8farmer: 14
+			sule6: 18
 		SquadSize: 15
 		SupportPowerDecision@Airstrike:
 			OrderName: CorpsePowerInfoOrder

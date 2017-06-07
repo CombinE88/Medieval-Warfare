@@ -124,8 +124,8 @@ FACTNEW:
 	ProductionBar@DefSUL:
 		ProductionType: MDefenses.SUL
 	BaseProvider:
-		Cooldown: 150
-		Range: 14c0
+		Cooldown: 100
+		Range: 10c0
 	Power:
 		Amount: 10
 	ProvidesPrerequisite@buildingname:		

@@ -185,12 +185,13 @@ World:
 	SpawnMPUnits:
 		StartingUnitsClass: medieval
 	CrateSpawner:
-		Minimum: 1
-		Maximum: 6
+		Minimum: 10
+		Maximum: 30
 		SpawnInterval: 3000
 		WaterChance: 0
-		InitialSpawnDelay: 1500
-		CrateActors: fireplace
+		InitialSpawnDelay: 0
+		CrateActors: deer01, deer02, deer03, deer03a
+		CrateActorShares: 25, 25, 25, 25
 	PathFinder:
 	ValidateOrder:
 	DebugPauseState:

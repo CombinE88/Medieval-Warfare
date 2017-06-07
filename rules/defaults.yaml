@@ -1617,6 +1617,62 @@
 		StandSequences: stand
 	ExternalCondition@Wander:
 		Condition: Wander
+		
+^MWWildlife:
+	Inherits: ^MedievalInfantry
+	Tooltip:
+		Name: Animal
+		GenericVisibility: None
+	ScaredyCat:
+	Mobile:
+		Speed: 56
+	-Selectable:
+	Targetable:
+		TargetTypes: Ground, Infantry
+	Crushable:
+		CrushSound: squish2.aud
+	WithDeathAnimation:
+		DeathTypes:
+			DefaultDeath: 1
+			RippedApartDeath: 1
+			PoisonDeath: 1
+			BallistaDeath: 1
+			BurnToDeath: 1
+		CrushedSequence: die1
+		DeathSequencePalette: raplayer
+	WithInfantryBody:
+		MaxIdleDelay: 60
+		StandSequences: stand
+	ExternalCondition@Wander:
+		Condition: Wander
+	Valued:
+		Cost: 150
+	Health:
+		HP: 5000
+	RevealsShroud:
+		Range: 3c0
+	Wanders:
+		WanderMoveRadius: 5
+		ReduceMoveRadiusDelay: 5
+		MinMoveDelay: 150
+		MaxMoveDelay: 1050
+	Power:
+		Amount: 0
+	CrateAction:
+	-ExternalCondition@ROTTEN:
+	-ExternalCondition@DDler:
+	-ExternalCondition@ROYAL:
+	-ExternalCondition@HOSPITAL:
+	-SelfHealing@HOSPITAL:
+	-WithDecoration@REDCROSS:
+	-DeathSounds@NORMAL:
+	-DeathSounds@HEAVY:
+	-DeathSounds@POISONED:
+	-DeathSounds@BURNED:
+	-WithDecoration@Crown:
+	-DamageMultiplier@Crown:
+	-FirepowerMultiplier@Crown:
+	-ReloadDelayMultiplier:
  
 ^MWWanderer:
 	Inherits: ^MedievalInfantry

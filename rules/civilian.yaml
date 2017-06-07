@@ -576,3 +576,43 @@ MWCIV6:
 	RenderSprites:
 		Image: mwciv6
 		PlayerPalette: raplayer
+
+DEER01:
+	Inherits: ^MWWildlife
+	RenderSprites:
+		PlayerPalette: 
+		Palette: mwcivilian
+	Tooltip:
+		Name: Wildlife
+	WithInfantryBody:
+		IdleSequences: idle1
+
+DEER02:
+	Inherits: ^MWWildlife
+	RenderSprites:
+		PlayerPalette: 
+		Palette: mwcivilian
+	Tooltip:
+		Name: Wildlife
+	WithInfantryBody:
+		IdleSequences: idle1, idle2
+
+DEER03:
+	Inherits: ^MWWildlife
+	RenderSprites:
+		PlayerPalette: 
+		Palette: mwcivilian
+	Tooltip:
+		Name: Wildlife
+	WithInfantryBody:
+		IdleSequences: idle1
+
+DEER03A:
+	Inherits: ^MWWildlife
+	RenderSprites:
+		PlayerPalette: 
+		Palette: mwcivilian
+	Tooltip:
+		Name: Wildlife
+	WithInfantryBody:
+		IdleSequences: idle1

@@ -1,7 +1,7 @@
 Metadata:
 	Title: Medieval Warfare
 	Description: Siege under Gabriel Dardanus the first or \nbetray with Baron Hodsworth of Noddingen in a \ntotalconversion of the classic game that started it all.\n\nMedieval Warfare demodernizes the original Command & Conquer \nTiberian Dawn gameplay\nby shifting the gme into the dark ages, including siegeweapons \ncavalry, high infantry verietiy, and buildable fortresses.
-	Version: 1706061
+	Version: 1706071
 	Author: the Medieval Warfare Team
 
 RequiresMods:
@@ -253,6 +253,10 @@ GameSpeeds:
         Name: Faster (Very High Latency)
 		Timestep: 30
 		OrderLatency: 9
+    superfast:
+		Name: Super Fast(AI only)
+		Timestep: 10
+		OrderLatency: 5
 
 ColorValidator:
 
