@@ -1,5 +1,6 @@
 FACTNEW:
 	Inherits: ^MWBaseBuilding
+	WithMakeAnimation:
 	GrantConditionOnPrerequisite@4:
 		Prerequisites: vehicleproduction
 		Condition: visibility
@@ -28,6 +29,18 @@ FACTNEW:
 	WithIdleOverlay@Lv4:
 		Sequence: idle4
 		RequiresCondition: visibility == 4
+	DamageMultiplier@KEEPLEVEL1:
+		RequiresCondition: visibility == 1
+		Modifier: 95
+	DamageMultiplier@KEEPLEVEL2:
+		RequiresCondition: visibility == 2
+		Modifier: 90
+	DamageMultiplier@KEEPLEVEL3:
+		RequiresCondition: visibility == 3
+		Modifier: 80
+	DamageMultiplier@KEEPLEVEL4:
+		RequiresCondition: visibility == 4
+		Modifier: 60
 	BodyOrientation:
 		QuantizedFacings: 8
 	Selectable:
@@ -44,16 +57,16 @@ FACTNEW:
 			sul: sulfact
 		PlayerPalette: raplayer
 	Valued:
-		Cost: 3000
+		Cost: 5000
 	CustomSellValue:
-		Value: 1500
+		Value: 1000
 	Tooltip:
 		Name: Keep
 	Building:
 		Footprint: xxx xxx
 		Dimensions: 3,2
 	Health:
-		HP: 200000
+		HP: 500000
 		Shape: Rectangle
 			TopLeft: -1436,-924
 			BottomRight: 1436, 924
@@ -63,11 +76,7 @@ FACTNEW:
 		Range: 10c0
 	Bib:
 	Production:
-		Produces: MBuilding.GDI, MBuilding.Nod, MDefenses.GDI, MDefenses.Nod, MBuilding.SUL, MDefenses.SUL
-	Transforms:
-		IntoActor: mcvnew
-		Offset: 1,1
-		Facing: 160
+		Produces: MBuilding.GDI, MBuilding.Nod, MDefenses.GDI, MDefenses.Nod, MBuilding.SUL, MDefenses.SUL, MBuilding2.GDI, MBuilding2.Nod,MBuilding3.GDI, MBuilding3.Nod,MBuilding2.SUL, MBuilding3.SUL
 	ProductionQueue@GDIMBuilding:
 		Type: MBuilding.GDI
 		Factions: gdi
@@ -110,6 +119,48 @@ FACTNEW:
 		LowPowerSlowdown: 2
 		QueuedAudio: Building
 		ReadyAudio: ConstructionComplete
+	ProductionQueue@GDIMBuilding2:
+		Type: MBuilding2.GDI
+		Factions: gdi
+		Group: Building2
+		LowPowerSlowdown: 2
+		QueuedAudio: Building
+		ReadyAudio: ConstructionComplete
+	ProductionQueue@NodMBuilding2:
+		Type: MBuilding2.Nod
+		Factions: nod
+		Group: Building2
+		LowPowerSlowdown: 2
+		QueuedAudio: Building
+		ReadyAudio: ConstructionComplete
+	ProductionQueue@GDIMBuilding3:
+		Type: MBuilding3.GDI
+		Factions: gdi
+		Group: Building3
+		LowPowerSlowdown: 2
+		QueuedAudio: Building
+		ReadyAudio: ConstructionComplete
+	ProductionQueue@NodMBuilding3:
+		Type: MBuilding3.Nod
+		Factions: nod
+		Group: Building3
+		LowPowerSlowdown: 2
+		QueuedAudio: Building
+		ReadyAudio: ConstructionComplete
+	ProductionQueue@SULBuilding2:
+		Type: MBuilding2.SUL
+		Factions: sul
+		Group: Building2
+		LowPowerSlowdown: 2
+		QueuedAudio: Building
+		ReadyAudio: ConstructionComplete
+	ProductionQueue@SULBuilding3:
+		Type: MBuilding3.SUL
+		Factions: sul
+		Group: Building3
+		LowPowerSlowdown: 2
+		QueuedAudio: Building
+		ReadyAudio: ConstructionComplete
 	BaseBuilding:
 	ProductionBar@BuildingGDI:
 		ProductionType: MBuilding.GDI
@@ -123,9 +174,21 @@ FACTNEW:
 		ProductionType: MBuilding.SUL
 	ProductionBar@DefSUL:
 		ProductionType: MDefenses.SUL
+	ProductionBar@BuildingGDI2:
+		ProductionType: MBuilding2.GDI
+	ProductionBar@BuildingNod2:
+		ProductionType: MBuilding2.Nod
+	ProductionBar@BuildingSUL2:
+		ProductionType: MBuilding2.SUL
+	ProductionBar@BuildingGDI3:
+		ProductionType: MBuilding3.GDI
+	ProductionBar@BuildingNod3:
+		ProductionType: MBuilding3.Nod
+	ProductionBar@BuildingSUL3:
+		ProductionType: MBuilding3.SUL
 	BaseProvider:
-		Cooldown: 100
-		Range: 10c0
+		Cooldown: 25
+		Range: 13c0
 	Power:
 		Amount: 10
 	ProvidesPrerequisite@buildingname:		
@@ -140,13 +203,51 @@ FACTNEW:
 		ValidStances: Ally
 		Condition: Labor
 	Targetable:
-		TargetTypes: Ground, C4, Structure, Wanderer, Laborer
+		TargetTypes: Ground, C4, Structure, Wanderer, Laborer, BaseCenter, Material
 	ProvidesRadar:
+	ProvidesLivingspace:
+		Ammount: 6
+		SpawnOffset: -213,554,0
+		ExitCell: 1,2
+	WithFreeSpawnableActor@LABOURONE:
+		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
+		SpawnActor: transporter
+		Offset: -124,1024, 0
+		MoveOffset: 1,2
+		Sticky: true
+		Lasso: 5c0
+	WithFreeSpawnableActor@LABOURTWO:
+		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
+		SpawnActor: transporter
+		Offset: -124,1024, 0
+		MoveOffset: 1,2
+		Sticky: true
+		Lasso: 5c0
+	WithFreeSpawnableActor@LABOURTHREE:
+		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
+		SpawnActor: transporter
+		Offset: -124,1024, 0
+		MoveOffset: 1,2
+		Sticky: true
+		Lasso: 5c0
+	WithFreeSpawnableActor@LABOURFOUR:
+		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
+		SpawnActor: engeneer
+		Offset: -124,1024, 0
+		MoveOffset: 1,2
+		Sticky: true
+		Lasso: 5c0
+	WithFreeSpawnableActor@LABOURFIVE:
+		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
+		SpawnActor: hunter
+		Offset: -124,1024, 0
+		MoveOffset: 1,2
+		Sticky: true
+		SpawnStart: false
+		Lasso: 30c0
+		ForceLasso: 35
 		
 
-	
-		
- 
 FACTNEW.GDI:
 	Inherits: FACTNEW
 	RenderSprites:
@@ -183,6 +284,221 @@ FACTNEW.NOD:
 		Pieces: 1, 2
 		Range: 1c0, 5c0
 		
+		
+MINIFACT:
+	Inherits: ^MWBaseBuilding
+	Transforms:
+		IntoActor: mcv2new
+		Offset: 1,1
+		Facing: 108
+	WithMakeAnimation:
+	WithSpriteBody:	 
+	BodyOrientation:
+		QuantizedFacings: 8
+	Selectable:
+		Bounds:72,48,0,9
+	SelectionDecorations:
+		VisualBounds: 72,53,0,-4
+	Exit@1:
+		SpawnOffset: -426,85,0
+		ExitCell: 0,1
+	RenderSprites:
+		Image: wtentt
+		PlayerPalette: raplayer
+	Valued:
+		Cost: 2000
+	CustomSellValue:
+		Value: 1000
+	Tooltip:
+		Name: Resource Outpost
+	Building:
+		Footprint: xxx xxx
+		Dimensions: 3,2
+	Health:
+		HP: 200000
+		Shape: Rectangle
+			TopLeft: -1436,-924
+			BottomRight: 1436, 924
+	Armor:
+		Type: Concrete
+	RevealsShroud:
+		Range: 10c0
+	Bib:
+	Production:
+		Produces: MBuilding.GDI, MBuilding.Nod, MDefenses.GDI, MDefenses.Nod, MBuilding.SUL, MDefenses.SUL, MBuilding2.GDI, MBuilding2.Nod,MBuilding3.GDI, MBuilding3.Nod,MBuilding2.SUL, MBuilding3.SUL
+	ProductionQueue@GDIMBuilding:
+		Type: MBuilding.GDI
+		Factions: gdi
+		Group: Building
+		LowPowerSlowdown: 2
+		QueuedAudio: Building
+		ReadyAudio: ConstructionComplete
+	ProductionQueue@NodMBuilding:
+		Type: MBuilding.Nod
+		Factions: nod
+		Group: Building
+		LowPowerSlowdown: 2
+		QueuedAudio: Building
+		ReadyAudio: ConstructionComplete
+	ProductionQueue@GDIMDefence:
+		Type: MDefenses.GDI
+		Factions: gdi
+		Group: Defence
+		LowPowerSlowdown: 2
+		QueuedAudio: Building
+		ReadyAudio: ConstructionComplete
+	ProductionQueue@NodMDefence:
+		Type: MDefenses.Nod
+		Factions: nod
+		Group: Defence
+		LowPowerSlowdown: 2
+		QueuedAudio: Building
+		ReadyAudio: ConstructionComplete
+	ProductionQueue@SULBuilding:
+		Type: MBuilding.SUL
+		Factions: sul
+		Group: Building
+		LowPowerSlowdown: 2
+		QueuedAudio: Building
+		ReadyAudio: ConstructionComplete
+	ProductionQueue@SULDefense:
+		Type: MDefenses.SUL
+		Factions: sul
+		Group: Defence
+		LowPowerSlowdown: 2
+		QueuedAudio: Building
+		ReadyAudio: ConstructionComplete
+	ProductionQueue@GDIMBuilding2:
+		Type: MBuilding2.GDI
+		Factions: gdi
+		Group: Building2
+		LowPowerSlowdown: 2
+		QueuedAudio: Building
+		ReadyAudio: ConstructionComplete
+	ProductionQueue@NodMBuilding2:
+		Type: MBuilding2.Nod
+		Factions: nod
+		Group: Building2
+		LowPowerSlowdown: 2
+		QueuedAudio: Building
+		ReadyAudio: ConstructionComplete
+	ProductionQueue@GDIMBuilding3:
+		Type: MBuilding3.GDI
+		Factions: gdi
+		Group: Building3
+		LowPowerSlowdown: 2
+		QueuedAudio: Building
+		ReadyAudio: ConstructionComplete
+	ProductionQueue@NodMBuilding3:
+		Type: MBuilding3.Nod
+		Factions: nod
+		Group: Building3
+		LowPowerSlowdown: 2
+		QueuedAudio: Building
+		ReadyAudio: ConstructionComplete
+	ProductionQueue@SULBuilding2:
+		Type: MBuilding2.SUL
+		Factions: sul
+		Group: Building2
+		LowPowerSlowdown: 2
+		QueuedAudio: Building
+		ReadyAudio: ConstructionComplete
+	ProductionQueue@SULBuilding3:
+		Type: MBuilding3.SUL
+		Factions: sul
+		Group: Building3
+		LowPowerSlowdown: 2
+		QueuedAudio: Building
+		ReadyAudio: ConstructionComplete
+	BaseBuilding:
+	ProductionBar@BuildingGDI:
+		ProductionType: MBuilding.GDI
+	ProductionBar@BuildingNod:
+		ProductionType: MBuilding.Nod
+	ProductionBar@DefGDI:
+		ProductionType: MDefenses.GDI
+	ProductionBar@DefNod:
+		ProductionType: MDefenses.Nod
+	ProductionBar@BuildingSUL:
+		ProductionType: MBuilding.SUL
+	ProductionBar@DefSUL:
+		ProductionType: MDefenses.SUL
+	ProductionBar@BuildingGDI2:
+		ProductionType: MBuilding2.GDI
+	ProductionBar@BuildingNod2:
+		ProductionType: MBuilding2.Nod
+	ProductionBar@BuildingSUL2:
+		ProductionType: MBuilding2.SUL
+	ProductionBar@BuildingGDI3:
+		ProductionType: MBuilding3.GDI
+	ProductionBar@BuildingNod3:
+		ProductionType: MBuilding3.Nod
+	ProductionBar@BuildingSUL3:
+		ProductionType: MBuilding3.SUL
+	BaseProvider:
+		Cooldown: 25
+		Range: 13c0
+	ProvidesPrerequisite@buildingname:		
+	WithDeathAnimation:
+		DeathSequencePalette: raplayer
+	ThrowsShrapnel@LARGE:
+		Weapons: LargeWood1, LargeStone1, DebrUtility1, DebrUtility2, DebrUtility3
+		Pieces: 1, 2
+		Range: 1c0, 5c0
+	ProximityExternalCondition@LABORER:
+		Range: 3c0
+		ValidStances: Ally
+		Condition: Labor
+	Targetable:
+		TargetTypes: Ground, C4, Structure, Wanderer, Laborer, BaseCenter, Material
+	ProvidesRadar:
+	PersonValued:
+		ActorCount: 6
+		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
+	WithFreeSpawnableActor@1:
+		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
+		SpawnActor: transporter
+		Offset: -597,469, 0
+		MoveOffset: 1,2
+		Sticky: true
+		FindRadius: 100
+		Lasso: 5c0
+	WithFreeSpawnableActor@4:
+		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
+		SpawnActor: engeneer
+		Offset: -597,469, 0
+		MoveOffset: 1,2
+		Sticky: true
+		FindRadius: 100
+		Lasso: 5c0
+	WithFreeSpawnableActor@2:
+		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
+		SpawnActor: transporter
+		Offset: -597,469, 0
+		MoveOffset: 1,2
+		Sticky: true
+		FindRadius: 100
+		Lasso: 5c0
+	WithFreeSpawnableActor@3:
+		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
+		SpawnActor: transporter
+		Offset: -597,469, 0
+		MoveOffset: 1,2
+		Sticky: true
+		FindRadius: 100
+		Lasso: 30c0
+	WithFreeSpawnableActor@5:
+		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
+		SpawnActor: hunter
+		Offset: -597,469, 0
+		MoveOffset: 1,2
+		Sticky: true
+		FindRadius: 100
+		SpawnStart: false
+		Lasso: 30c0
+		ForceLasso: 35c0
+
+		
 HQNEWNOD:
 	Inherits: ^MWBaseBuilding
 	Armor:
@@ -206,8 +522,8 @@ HQNEWNOD:
 	Buildable:
 		IconPalette: raicon
 		BuildPaletteOrder: 50
-		Prerequisites: proc, ~techlevel.medium
-		Queue: MBuilding.Nod, MBuilding.GDI
+		Prerequisites: proc, ~scaffold
+		Queue: MBuilding2.Nod, MBuilding2.GDI
 		Description: Unlocks higher-tech units and buildings.\n\n\n\n
 	Building:
 		Footprint: xx xx
@@ -230,10 +546,11 @@ HQNEWNOD:
 		Weapons: DebrAnvil1, DebrUtility1, DebrUtility2, DebrUtility3
 		Pieces: 1, 2
 		Range: 1c0, 5c0
-	FreeActor@1:
-		Actor: mwwand7
-		SpawnOffset: 1,2
-		Facing: 64
+	WithFreeSpawnableActor:
+		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
+		SpawnActor: mwwand7
+		Offset: 171,256, 0
+		MoveOffset: 1,2
 		
 ARMORYNOD:
 	Inherits: ^MWBaseBuilding
@@ -256,8 +573,8 @@ ARMORYNOD:
 	Buildable:
 		IconPalette: raicon
 		BuildPaletteOrder: 90
-		Prerequisites: anyhq, ~techlevel.medium
-		Queue: MBuilding.Nod
+		Prerequisites: anyhq, ~scaffold
+		Queue: MBuilding3.Nod
 		Description: Unlocks Support Powers and Raiding Squad.\nHeals Cavalry and Infantry.\n\n\n\n
 	Building:
 		Footprint: xx xx
@@ -287,7 +604,6 @@ ARMORYNOD:
 		PowerdownSound: DisablePower
 	DisabledOverlay:
 	AirstrikePower:
-		Prerequisites: ~techlevel.superweapons
 		Icon: cadaver
 		ChargeTime: 210
 		SquadOffset	-206,206,0
@@ -315,10 +631,11 @@ ARMORYNOD:
 		Weapons: LargeWood1, LargeWood1, LargeStone1, LargeStone1
 		Pieces: 1, 2
 		Range: 1c0, 5c0
-	FreeActor@1:
-		Actor: mwcivcom
-		SpawnOffset: 1,2
-		Facing: 64
+	WithFreeSpawnableActor:
+		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
+		SpawnActor: mwcivcom
+		Offset: 0,469, 0
+		MoveOffset: 1,2
 	ProximityExternalCondition@HEAL:
 		Range: 5c0
 		ValidStances: Ally
@@ -348,8 +665,8 @@ ARMORYGDI:
 	Buildable:
 		IconPalette: raicon
 		BuildPaletteOrder: 90
-		Prerequisites: anyhq, ~techlevel.medium
-		Queue: MBuilding.GDI
+		Prerequisites: anyhq, ~scaffold
+		Queue: MBuilding3.GDI
 		Description: Unlocks Support Powers.\nHeals Cavalry and Infantry.\n\n\n\n
 	Building:
 		Footprint: xx xx
@@ -379,7 +696,6 @@ ARMORYGDI:
 	Power:
 		Amount: -4
 	AirstrikePower:
-		Prerequisites: ~techlevel.superweapons
 		Icon: firestorm
 		ChargeTime: 210
 		SquadOffset	-236,236,0
@@ -406,10 +722,11 @@ ARMORYGDI:
 		Weapons: LargeWood1, LargeWood1, LargeStone1, LargeStone1
 		Pieces: 1, 2
 		Range: 1c0, 5c0
-	FreeActor@1:
-		Actor: mwcivcom
-		SpawnOffset: 1,2
-		Facing: 64
+	WithFreeSpawnableActor:
+		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
+		SpawnActor: mwcivcom
+		Offset: 768,1152, 0
+		MoveOffset: 1,2
 	ProximityExternalCondition@HEAL:
 		Range: 5c0
 		ValidStances: Ally
@@ -437,7 +754,7 @@ NUK2NEW:
 	Buildable:
 		IconPalette: raicon
 		BuildPaletteOrder: 60
-		Prerequisites: anyhq, ~techlevel.medium
+		Prerequisites: anyhq, ~scaffold
 		Queue: MBuilding.GDI
 		Description: Provides more livingspace. Livingspace increases over time by generating peasants.\nCan hold up to 3 peasents, spawntime depends on number of shacks and large huts. \ncheaper than the standard Shack.\n\n\n\n
 	Building:
@@ -488,6 +805,100 @@ NUK2NEW:
 		Weapons: DebrFurniture1, DebrFurniture2, DebrFurniture3, DebrFurniture4
 		Pieces: 1, 2
 		Range: 1c0, 5c0
+	ProvidesLivingspace:
+		Ammount: 7
+		SpawnOffset: 128,811,0
+		ExitCell: 1,2
+	WithFreeSpawnableActor@Chicken:
+		SpawnActor: mwchick1
+		Offset: 128,811,0
+		MoveOffset:1,2
+		SpawnStart: false
+		
+NUKXL:
+	Inherits: ^MWBaseBuilding
+	Armor:
+		Type: Concrete
+	WithDeathAnimation:
+		DeathSequencePalette: raplayer
+	RenderSprites:
+		PlayerPalette: raplayer
+	Valued:
+		Cost: 1200
+	CustomSellValue:
+		Value: 600
+	Tooltip:
+		Name: Extra Large Hut
+	ProvidesPrerequisite:
+		Prerequisite: anypower
+	Buildable:
+		IconPalette: raicon
+		BuildPaletteOrder: 70
+		Prerequisites: anyarmory, ~scaffold
+		Queue: MBuilding.GDI
+		Description: Provides more livingspace. Livingspace increases over time by generating peasants.\nCan hold up to 14 peasents. \ncheaper than the standard Shack.\n\n\n\n
+	Building:
+		Footprint: xxx xxx
+		Dimensions: 3,2
+	CustomSellValue:
+		Value: 400
+	Health:
+		HP: 120000
+		Shape: Rectangle
+			TopLeft: -1424,-924
+			BottomRight: 1424, 924
+	RevealsShroud:
+		Range: 4c0
+	Bib:
+	Power:
+		Amount: 12
+	Selectable:
+		Bounds: 72,48
+	SelectionDecorations:
+		VisualBounds: 72,64,0,-16
+	SpawnActorOnDeath@Farmer1:
+		Actor: e1new
+		Probability: 33
+		OwnerType: InternalName
+		InternalOwner: Creeps
+	SpawnActorOnDeath@Farmer2:
+		Actor: e1new
+		Probability: 33
+		OwnerType: InternalName
+		InternalOwner: Creeps
+	SpawnActorOnDeath@Farmer3:
+		Actor: e1new
+		Probability: 33
+		OwnerType: InternalName
+		InternalOwner: Creeps
+	SpawnActorOnDeath@Farmer4:
+		Actor: e1new
+		Probability: 33
+		OwnerType: InternalName
+		InternalOwner: Creeps
+	SpawnActorOnDeath@Farmer5:
+		Actor: e1new
+		Probability: 33
+		OwnerType: InternalName
+		InternalOwner: Creeps
+	ThrowsShrapnel@LARGE:
+		Weapons: DebrFurniture1, DebrFurniture2, DebrFurniture3, DebrFurniture4
+		Pieces: 1, 2
+		Range: 1c0, 5c0
+	ProvidesLivingspace:
+		Ammount: 14
+		SpawnOffset: 938,725,0
+		ExitCell: 2,2
+	WithFreeSpawnableActor@Chicken:
+		SpawnActor: mwchick1
+		Offset: 938,725,0
+		MoveOffset:2,2
+		SpawnStart: false
+	WithFreeSpawnableActor@Chicken2:
+		SpawnActor: mwchick1
+		Offset: 938,725,0
+		MoveOffset:2,2
+		SpawnStart: false
  
 NUKENEW:
 	Inherits: ^MWBaseBuilding
@@ -508,7 +919,7 @@ NUKENEW:
 	Buildable:
 		IconPalette: raicon
 		BuildPaletteOrder: 10
-		Prerequisites: factnew
+		Prerequisites: factnew, ~scaffldbuilded
 		Description: Generates livingspace. Livingspace increases over time by generating peasants.\nCan hold up to 2 peasents, spawntime depends on number of shacks and large huts.\n\n\n\n
 		Queue: MBuilding.GDI
 	Building:
@@ -547,7 +958,15 @@ NUKENEW:
 		Weapons: DebrFurniture1, DebrFurniture2, DebrFurniture3, DebrFurniture4
 		Pieces: 2, 3
 		Range: 1c0, 5c0
-		
+	ProvidesLivingspace:
+		Ammount: 4
+		SpawnOffset: -384,597,0
+		ExitCell: 0,2
+	WithFreeSpawnableActor@Chicken:
+		SpawnActor: mwchick1
+		Offset: -384,597,0
+		MoveOffset: 0,2
+		SpawnStart: false
 NODNUK2:
 	Inherits: ^MWBaseBuilding
 	Armor:
@@ -567,7 +986,7 @@ NODNUK2:
 	Buildable:
 		IconPalette: raicon
 		BuildPaletteOrder: 60
-		Prerequisites: anyhq, ~techlevel.medium
+		Prerequisites: anyhq, ~scaffold
 		Queue: MBuilding.Nod
 		Description: Provides more livingspace. Livingspace increases over time by generating peasants.\nCan hold up to 3 peasents, spawntime depends on number of shacks and large huts. \ncheaper than the standard Shack.\n\n\n\n
 	Building:
@@ -618,6 +1037,15 @@ NODNUK2:
 		Weapons: DebrFurniture1, DebrFurniture2, DebrFurniture3, DebrFurniture4
 		Pieces: 1, 2
 		Range: 1c0, 5c0
+	ProvidesLivingspace:
+		Ammount: 7
+		SpawnOffset: 256,768,0
+		ExitCell: 1,2
+	WithFreeSpawnableActor@Chicken:
+		SpawnActor: mwchick1
+		Offset: 256,768,0
+		MoveOffset: 1,2
+		SpawnStart: false
  
 NODNUKE:
 	Inherits: ^MWBaseBuilding
@@ -625,8 +1053,41 @@ NODNUKE:
 		Type: Concrete
 	WithDeathAnimation:
 		DeathSequencePalette: raplayer
+		RequiresCondition: valida
+	WithDeathAnimation@B:
+		DeathSequencePalette: raplayer
+		RequiresCondition: validb
+		DeathSequence: deadb
+	WithDeathAnimation@C:
+		DeathSequencePalette: raplayer
+		RequiresCondition: validc
+		DeathSequence: deadc
+	WithDeathAnimation@D:
+		DeathSequencePalette: raplayer
+		RequiresCondition: validd
+		DeathSequence: deadd
 	RenderSprites:
 		PlayerPalette: raplayer
+	-WithSpriteBody:
+	GrantRandomCondition:
+		RandomConditions: valida, validb, validc, validd
+		FallbackCondition: none
+	WithIdleOverlay@a:  
+		StartSequence: make
+		Sequence: idle
+		RequiresCondition: valida
+	WithIdleOverlay@b:  
+		StartSequence: makeb
+		Sequence: idleb
+		RequiresCondition: validb
+	WithIdleOverlay@c:  
+		StartSequence: makec
+		Sequence: idlec
+		RequiresCondition: validc
+	WithIdleOverlay@d:  
+		StartSequence: maked
+		Sequence: idled
+		RequiresCondition: validd
 	Valued:
 		Cost: 350
 	CustomSellValue:
@@ -639,7 +1100,7 @@ NODNUKE:
 		IconPalette: raicon
 		BuildPaletteOrder: 10
 		Prerequisites: factnew
-		Description: Generates livingspace. Livingspace increases over time by generating peasants.\nCan hold up to 2 peasents, spawntime depends on number of shacks and large huts.\n\n\n\n
+		Description: Generates livingspace. Livingspace increases over time by generating peasants.\nCan hold up to 2 peasents, spawntime depends on number of shacks and large huts.\nA tent can be plopped down instant.\n\n\n
 		Queue: MBuilding.Nod
 	Building:
 		Footprint: xx
@@ -677,6 +1138,15 @@ NODNUKE:
 		Weapons: DebrFurniture1, DebrFurniture2, DebrFurniture3, DebrFurniture4
 		Pieces: 2, 3
 		Range: 1c0, 5c0
+	ProvidesLivingspace:
+		Ammount: 2
+		SpawnOffset: 256,811,0
+		ExitCell: 1,2
+	WithFreeSpawnableActor@Chicken:
+		SpawnActor: mwchick1
+		Offset: 256,811,0
+		MoveOffset: 1,2
+		SpawnStart: false
  
 ZEROPROC:
 	Inherits: ^MWBaseBuilding
@@ -696,9 +1166,9 @@ ZEROPROC:
 	Buildable:
 		IconPalette: raicon
 		BuildPaletteOrder: 30
-		Prerequisites: anypower
+		Prerequisites: anypower, ~scaffold
 		Description: Provides basic resource gathering for Crops and Grain.\n Comes with 2 farmers.\n Can only operate up to 6 farmers at once.\n\n\n\n
-		Queue: MBuilding.GDI, MBuilding.Nod
+		Queue: MBuilding2.GDI, MBuilding2.Nod
 	Building:
 		Footprint: __ xx x=
 		Dimensions: 2,3
@@ -733,14 +1203,6 @@ ZEROPROC:
 		Capacity: 1000
 	CustomSellValue:
 		Value: 500
-	FreeActor@1:
-		Actor: e8farmer
-		SpawnOffset: 1,2
-		Facing: 64
-	FreeActor@2:
-		Actor: e8farmer
-		SpawnOffset: 1,2
-		Facing: 64
 	FreeActor@3:
 		Actor: GHOSTPROC
 		SpawnOffset: 0,0
@@ -749,6 +1211,16 @@ ZEROPROC:
 		Range: 1c0
 		ValidStances: Ally
 		Condition: KillRef
+	WithFreeSpawnableActor@1:
+		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
+		SpawnActor: e8farmer
+		Offset: 298,981, 0
+		MoveOffset: 1,3
+	WithFreeSpawnableActor@2:
+		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
+		SpawnActor: e8farmer
+		Offset: 298,981, 0
+		MoveOffset: 1,3
 		
 PROC:
 	Tooltip:
@@ -797,9 +1269,9 @@ PROCNEW:
 	Buildable:
 		IconPalette: raicon
 		BuildPaletteOrder: 70
-		Prerequisites: anyhq
+		Prerequisites: anyhq, ~scaffold
 		Description: Processes raw ore and Gold into useable metal.\nGenerates ore money than the windmill.\n\n\n\n
-		Queue: MBuilding.GDI, MBuilding.Nod, MBuilding.SUL
+		Queue: MBuilding2.GDI, MBuilding2.Nod, MBuilding2.SUL
 	Building:
 		Footprint: _x_ xxx xx=
 		Dimensions: 3,3
@@ -853,7 +1325,7 @@ SILONEW:
 		Name: Smelter
 	Buildable:
 		BuildPaletteOrder: 70
-		Prerequisites: proc
+		Prerequisites: proc, ~scaffold
 		Queue: MDefenses.GDI, MDefenses.Nod, MDefenses.SUL
 		Description: Stores additional Ore\n\n\n\n
 		IconPalette: raicon
@@ -967,9 +1439,9 @@ BARRNEW:
 	Buildable:
 		IconPalette: raicon
 		BuildPaletteOrder: 30
-		Prerequisites: anypower
+		Prerequisites: anypower, ~scaffold
 		Description: Trains Infantry only\n\n\n\n
-		Queue: MBuilding.GDI
+		Queue: MBuilding3.GDI
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
@@ -982,20 +1454,23 @@ BARRNEW:
 		Range: 5c0
 	Bib:
 	RallyPoint:
+	WithActorProduction:
+		Produces: MInfantry.GDI
+		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
+		FindRadius: 15
 	Exit@1:
 		SpawnOffset: -259,640,0
 		ExitCell: 0,2
 	Exit@2:
 		SpawnOffset: 0,640,0
 		ExitCell: 1,2
-	Production:
-		Produces: MInfantry.GDI
 	ProductionQueue@1:
 		Type: MInfantry.GDI
 		Group: Infantry
 		RequireOwner: false
 		LowPowerSlowdown: 3
 		Factions: gdi
+		ReadyAudio:
 	ProductionBar:
 	Power:
 		Amount: -2
@@ -1031,9 +1506,9 @@ HANDNEW:
 	Buildable:
 		IconPalette: raicon
 		BuildPaletteOrder: 30
-		Prerequisites: anypower
+		Prerequisites: anypower, ~scaffold
 		Description: Trains Infantry only\n\n\n\n
-		Queue: MBuilding.Nod
+		Queue: MBuilding3.Nod
 	Building:
 		Footprint: __ xx xx
 		Dimensions: 2,3
@@ -1049,7 +1524,9 @@ HANDNEW:
 	Exit@1:
 		SpawnOffset: 426,938,0
 		ExitCell: 1,2
-	Production:
+	WithActorProduction:
+		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
+		FindRadius: 15
 		Produces:  MInfantry.Nod
 	ProductionQueue@2:
 		Type: MInfantry.Nod
@@ -1057,6 +1534,7 @@ HANDNEW:
 		RequireOwner: false
 		LowPowerSlowdown: 3
 		Factions: nod
+		ReadyAudio:
 	ProductionBar:
 	Power:
 		Amount: -2
@@ -1090,9 +1568,9 @@ STALL:
 	Buildable:
 		IconPalette: raicon
 		BuildPaletteOrder: 40
-		Prerequisites: proc
+		Prerequisites: proc, ~scaffold
 		Description: Trains cavalry\n\n\n\n
-		Queue: MBuilding.GDI
+		Queue: MBuilding3.GDI
 	Building:
 		Footprint: xxx xx=
 		Dimensions: 3,2
@@ -1111,7 +1589,9 @@ STALL:
 		SpawnOffset: 554,682,0
 		ExitCell: 2,2
 		ExitDelay: 10
-	Production:
+	WithActorProduction:
+		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
+		FindRadius: 15
 		Produces: MVehicle.GDI
 	ProductionQueue@1:
 		Type: MVehicle.GDI
@@ -1119,6 +1599,7 @@ STALL:
 		Group: Vehicle
 		RequireOwner: false
 		LowPowerSlowdown: 3
+		ReadyAudio:
 	ProductionBar:
 	Power:
 		Amount: -3
@@ -1176,9 +1657,9 @@ NODSTALL:
 	Buildable:
 		IconPalette: raicon
 		BuildPaletteOrder: 40
-		Prerequisites: proc
+		Prerequisites: proc, ~scaffold
 		Description: Trains cavalry\n\n\n\n
-		Queue: MBuilding.Nod
+		Queue: MBuilding3.Nod
 	Building:
 		Footprint: xxxx xx=x
 		Dimensions: 4,2
@@ -1194,8 +1675,9 @@ NODSTALL:
 	Exit@1:
 		SpawnOffset: 540,540,0
 		ExitCell: 2,2
-	ProductionAirdrop:
-		ActorType: delbir
+	WithActorProduction:
+		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
+		FindRadius: 15
 		Produces: MVehicle.Nod
 	ProductionQueue@2:
 		Type: MVehicle.Nod
@@ -1203,6 +1685,7 @@ NODSTALL:
 		Factions: nod
 		RequireOwner: false
 		LowPowerSlowdown: 3
+		ReadyAudio:
 	ProductionBar:
 	Power:
 		Amount: -3
@@ -1264,9 +1747,9 @@ CASTLE:
 	Buildable:
 		IconPalette: raicon
 		BuildPaletteOrder: 100
-		Prerequisites: anyhq, anyarmory
+		Prerequisites: anyhq, anyarmory, ~scaffold
 		Description: Unlocks Superweapon.\n Unlocks Heavy Cavalry, Knight's and Tribuchet.\nRequires power to operate.\nCan hold up to 4 nobles.\n\n\n\n
-		Queue: MBuilding.Nod
+		Queue: MBuilding3.Nod
 	Building:
 		Footprint: ___ xxx xxx
 		Dimensions: 3,3
@@ -1301,7 +1784,6 @@ CASTLE:
 	GrantConditionOnDisabled@IDISABLE:
 		Condition: disabled
 	NukePower:
-		Prerequisites: ~techlevel.superweapons
 		Icon: cannonstrike
 		Cursor: nuke
 		ChargeTime: 350
@@ -1347,9 +1829,9 @@ CASTLE2:
 	Buildable:
 		IconPalette: raicon
 		BuildPaletteOrder: 100
-		Prerequisites: anyhq, anyarmory
+		Prerequisites: anyhq, anyarmory, ~scaffold
 		Description: Unlocks Superweapon.\n Unlocks Assasines, Crossbows and Ballista Towers.\nRequires power to operate.\nCan hold up to 4 nobles.\n\n\n\n
-		Queue: MBuilding.GDI
+		Queue: MBuilding3.GDI
 	Building:
 		Footprint: ___ xxx xxx
 		Dimensions: 3,3
@@ -1385,7 +1867,6 @@ CASTLE2:
 		Condition: disabled
 	SupportPowerChargeBar:
 	NukePower:
-		Prerequisites: ~techlevel.superweapons
 		Icon: lightning
 		Cursor: ioncannon
 		ChargeTime: 180
@@ -1432,9 +1913,9 @@ WORKSHOPNOD:
 	Buildable:
 		IconPalette: raicon
 		BuildPaletteOrder: 80
-		Prerequisites: proc
+		Prerequisites: proc, ~scaffold
 		Description: Provides Siege weapons construction.\nEnables Supportpowers in combination with an Armory.\n\n\n
-		Queue: MBuilding.Nod
+		Queue: MBuilding3.Nod
 	Building:
 		Footprint: xxx =xx
 		Dimensions: 3,2
@@ -1457,7 +1938,9 @@ WORKSHOPNOD:
 	Exit@1:
 		SpawnOffset: 325,512,0
 		ExitCell: 1,2
-	Production:
+	WithActorProduction:
+		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
+		FindRadius: 15
 		Produces: MSiege.Nod
 	ProductionQueue@2:
 		Type: MSiege.Nod
@@ -1472,7 +1955,6 @@ WORKSHOPNOD:
 		PowerdownSound: DisablePower
 	DisabledOverlay:
 	SpawnActorPower:
-		Prerequisites: ~techlevel.superweapons
 		Icon: trojan
 		ChargeTime: 280
 		Actor: trojan
@@ -1535,9 +2017,9 @@ WORKSHOPGDI:
 	Buildable:
 		IconPalette: raicon
 		BuildPaletteOrder: 80
-		Prerequisites: proc
+		Prerequisites: proc, ~scaffold
 		Description: Provides Siege weapons construction.\nEnables Supportpowers in combination with an Armory.\n\n\n
-		Queue: MBuilding.GDI
+		Queue: MBuilding3.GDI
 	Building:
 		Footprint: xxx xx=
 		Dimensions: 3,2
@@ -1560,7 +2042,9 @@ WORKSHOPGDI:
 	Exit@1:
 		SpawnOffset: -200,200,0
 		ExitCell: 0,2
-	Production:
+	WithActorProduction:
+		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
+		FindRadius: 15
 		Produces: MSiege.GDI
 	ProductionQueue@1:
 		Type: MSiege.GDI
@@ -1575,7 +2059,6 @@ WORKSHOPGDI:
 		PowerdownSound: DisablePower
 	DisabledOverlay:
 	ProduceActorPower:
-		Prerequisites: ~techlevel.superweapons
 		Icon: strangedavinci
 		ChargeTime: 280
 		Actors: davinci
@@ -1645,7 +2128,6 @@ HOSP:
 		RequireOwner: false
 		LowPowerSlowdown: 3
 	ProduceActorPower:
-		Prerequisites: ~techlevel.superweapons
 		Icon: ddicon
 		ChargeTime: 250
 		Actors: ddler
@@ -2087,3 +2569,119 @@ DECOR9:
 		Palette: ra
 	Health:
 		HP: 10000
+		
+TAVERN:
+	Inherits: ^MWBaseBuilding
+	Armor:
+		Type: Concrete
+	WithDeathAnimation:
+		DeathSequencePalette: raplayer
+	RenderSprites:
+		Image: tavern
+		PlayerPalette: raplayer
+	Valued:
+		Cost: 1000
+	CustomSellValue:
+		Value: 100
+	Tooltip:
+		Name: Tavern
+	Buildable:
+		IconPalette: raicon
+		BuildPaletteOrder: 40
+		Prerequisites: proc, ~scaffold
+		Description: Provides 2 additional worker.\n\n\n\n
+		Queue: MBuilding.GDI, MBuilding.Nod
+	Building:
+		Footprint: xxx xxx
+		Dimensions: 3,2
+	Health:
+		HP: 80000
+		Shape: Rectangle
+			TopLeft: -1424,-924
+			BottomRight: 1424, 924
+	RevealsShroud:
+		Range: 4c0
+	Bib:
+	Power:
+		Amount: -4
+	ProvidesPrerequisite@buildingname:
+	Selectable:
+		Bounds: 72,48
+	SelectionDecorations:
+		VisualBounds: 72,64,0,-16
+	ThrowsShrapnel@LARGE:
+		Weapons: LargeWood1, LargeWood1, LargeStone1, LargeStone1
+		Pieces: 1, 2
+		Range: 1c0, 5c0
+	Targetable@Tavern:
+		TargetTypes: Material
+	WithFreeSpawnableActor@1:
+		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
+		SpawnActor: transporter
+		Offset: -1109,554, 0
+		MoveOffset: 1,2
+		Sticky: true
+	WithFreeSpawnableActor@2:
+		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
+		SpawnActor: transporter
+		Offset: -1109,554, 0
+		MoveOffset: 1,2
+		Sticky: true
+	WithFreeSpawnableActor@3:
+		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
+		SpawnActor: transporter
+		Offset: -1109,554, 0
+		MoveOffset: 1,2
+		Sticky: true
+		
+TOWNHALL:
+	Inherits: ^MWBaseBuilding
+	Armor:
+		Type: Concrete
+	WithDeathAnimation:
+		DeathSequencePalette: raplayer
+	RenderSprites:
+		Image: townhall
+		PlayerPalette: raplayer
+	Valued:
+		Cost: 2000
+	CustomSellValue:
+		Value: 1000
+	Tooltip:
+		Name: Town Hall
+	Buildable:
+		IconPalette: raicon
+		BuildPaletteOrder: 100
+		Prerequisites: anyarmory, ~scaffold
+		Description: Attracts citizens to your town.\nNew Peasants will spawn faster.\n\n\n
+		Queue: MBuilding.GDI, MBuilding.Nod
+	Building:
+		Footprint: xxx xxx
+		Dimensions: 3,2
+	Health:
+		HP: 100000
+		Shape: Rectangle
+			TopLeft: -1424,-924
+			BottomRight: 1424, 924
+	RevealsShroud:
+		Range: 4c0
+	Bib:
+	Power:
+		Amount: -4
+	ProvidesPrerequisite@buildingname:
+	Selectable:
+		Bounds: 72,48
+	SelectionDecorations:
+		VisualBounds: 72,64,0,-16
+	ThrowsShrapnel@LARGE:
+		Weapons: LargeStone1, LargeStone1, LargeStone1, LargeStone1
+		Pieces: 1, 2
+		Range: 1c0, 5c0
+	WithFreeSpawnableActor@3:
+		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
+		SpawnActor: noble5
+		Offset: 213,811, 0
+		MoveOffset: 1,2
+		Sticky: true
+		
+

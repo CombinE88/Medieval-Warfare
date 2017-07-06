@@ -7,18 +7,6 @@ Container@MENU_BACKGROUND:
 			Logic: MusicControllerLogic
 			Children:
 				LogicKeyListener@MUSICCONTROLLER_KEYHANDLER:
-		Container@SHELLMAP_DECORATIONS:
-			Children:
-				Image@NOD:
-					X: WINDOW_RIGHT/2-384
-					Y: (WINDOW_BOTTOM-256)/2
-					ImageCollection: logos
-					ImageName: nod-load
-				Image@GDI:
-					X: WINDOW_RIGHT/2+128
-					Y: (WINDOW_BOTTOM-256)/2
-					ImageCollection: logos
-					ImageName: gdi-load
 		Image@EVA:
 			X: WINDOW_RIGHT-128-11
 			Y: 43
@@ -26,6 +14,13 @@ Container@MENU_BACKGROUND:
 			Height: 64
 			ImageCollection: logos
 			ImageName: eva
+        Image@thanks:
+			X: (WINDOW_RIGHT/2) - 285
+			Y: (WINDOW_BOTTOM/2) - 150
+			Width: 200
+			Height: 200
+			ImageCollection: thanks
+			ImageName: thankv
 		Label@VERSION_LABEL:
 			X: WINDOW_RIGHT-128-43
 			Y: 115
@@ -37,17 +32,24 @@ Container@MENU_BACKGROUND:
 			Height: WINDOW_BOTTOM
 			Background: shellmapborder
 		Container@MENUS:
-			X: (WINDOW_RIGHT-WIDTH)/2
-			Y: WINDOW_BOTTOM-33-HEIGHT-10
-			Width: 890
-			Height: 35
+			X: 100
+			Y: WINDOW_BOTTOM/2 - 180
+			Width: 250
+			Height: WINDOW_BOTTOM/2 + 130
 			Children:
 				Container@MAIN_MENU:
 					Width: PARENT_RIGHT
+					Height: PARENT_BOTTOM
 					Children:
-						Label@MAINMENU_LABEL_TITLE:
+						Background@MAIN_MENU_BACKGROUND:
 							X: 0
-							Y: 0-30
+							Y: 0
+							Width: PARENT_RIGHT
+							Height: PARENT_BOTTOM
+							Background: castleframe
+						Label@MAINMENU_LABEL_TITLE:
+							X: (PARENT_RIGHT-WIDTH)/2
+							Y: 25
 							Width: PARENT_RIGHT
 							Height: 20
 							Text: Main Menu
@@ -55,48 +57,55 @@ Container@MENU_BACKGROUND:
 							Font: Bold
 							Contrast: True
 						Button@SINGLEPLAYER_BUTTON:
-							X: 0
-							Y: 0
-							Width: 140
-							Height: 35
+							X: (PARENT_RIGHT-WIDTH)/2
+							Y: 50+25
+							Width: 200
+							Height: 45
 							Text: Singleplayer
 						Button@MULTIPLAYER_BUTTON:
-							X: 150
-							Y: 0
-							Width: 140
-							Height: 35
+							X: (PARENT_RIGHT-WIDTH)/2
+							Y: 125+25
+							Width: 200
+							Height: 45
 							Text: Multiplayer
 						Button@SETTINGS_BUTTON:
-							X: 300
-							Y: 0
-							Width: 140
-							Height: 35
+							X: (PARENT_RIGHT-WIDTH)/2
+							Y: 200+25
+							Width: 200
+							Height: 45
 							Text: Settings
 						Button@EXTRAS_BUTTON:
-							X: 450
-							Y: 0
-							Width: 140
-							Height: 35
+							X: (PARENT_RIGHT-WIDTH)/2
+							Y: 275 + 25
+							Width: 200
+							Height: 45
 							Text: Extras
 						Button@MODS_BUTTON:
-							X: 600
-							Y: 0
-							Width: 140
-							Height: 35
+							X: (PARENT_RIGHT-WIDTH)/2
+							Y: 350+25
+							Width: 200
+							Height: 45
 							Text: Mods
 						Button@QUIT_BUTTON:
-							X: 750
-							Y: 0
-							Width: 140
-							Height: 35
+							X: (PARENT_RIGHT-WIDTH)/2
+							Y: 425+25
+							Width: 200
+							Height: 45
 							Text: Quit
 				Container@SINGLEPLAYER_MENU:
 					Width: PARENT_RIGHT
+					Height: PARENT_BOTTOM
 					Visible: False
 					Children:
-						Label@SINGLEPLAYER_MENU_TITLE:
+						Background@MAIN_MENU_BACKGROUND:
 							X: 0
-							Y: 0-30
+							Y: 0
+							Width: PARENT_RIGHT
+							Height: PARENT_BOTTOM
+							Background: castleframe
+						Label@SINGLEPLAYER_MENU_TITLE:
+							X: (PARENT_RIGHT-WIDTH)/2
+							Y: 25
 							Width: PARENT_RIGHT
 							Height: 20
 							Text: Singleplayer
@@ -104,31 +113,38 @@ Container@MENU_BACKGROUND:
 							Font: Bold
 							Contrast: True
 						Button@SKIRMISH_BUTTON:
-							X: 0
-							Y: 0
-							Width: 140
-							Height: 35
+							X: (PARENT_RIGHT-WIDTH)/2
+							Y: 50+25
+							Width: 200
+							Height: 45
 							Text: Skirmish
 						Button@MISSIONS_BUTTON:
-							X: 150
-							Y: 0
-							Width: 140
-							Height: 35
+							X: (PARENT_RIGHT-WIDTH)/2
+							Y: 125+25
+							Width: 200
+							Height: 45
 							Text: Missions
 						Button@BACK_BUTTON:
 							Key: escape
-							X: 450
-							Y: 0
-							Width: 140
-							Height: 35
+							X: (PARENT_RIGHT-WIDTH)/2
+							Y: 200+25
+							Width: 200
+							Height: 45
 							Text: Back
 				Container@EXTRAS_MENU:
 					Width: PARENT_RIGHT
+					Height: PARENT_BOTTOM
 					Visible: False
 					Children:
-						Label@EXTRAS_MENU_TITLE:
+						Background@MAIN_MENU_BACKGROUND:
 							X: 0
-							Y: 0-30
+							Y: 0
+							Width: PARENT_RIGHT
+							Height: PARENT_BOTTOM
+							Background: castleframe
+						Label@EXTRAS_MENU_TITLE:
+							X: (PARENT_RIGHT-WIDTH)/2
+							Y: 25
 							Width: PARENT_RIGHT
 							Height: 20
 							Text: Extras
@@ -136,50 +152,57 @@ Container@MENU_BACKGROUND:
 							Font: Bold
 							Contrast: True
 						Button@REPLAYS_BUTTON:
-							X: 0
-							Y: 0
-							Width: 140
-							Height: 35
+							X: (PARENT_RIGHT-WIDTH)/2
+							Y: 50+25
+							Width: 200
+							Height: 45
 							Text: Replays
 						Button@MUSIC_BUTTON:
-							X: 150
-							Y: 0
-							Width: 140
-							Height: 35
+							X: (PARENT_RIGHT-WIDTH)/2
+							Y: 125+25
+							Width: 200
+							Height: 45
 							Text: Music
 						Button@MAP_EDITOR_BUTTON:
-							X: 300
-							Y: 0
-							Width: 140
-							Height: 35
+							X: (PARENT_RIGHT-WIDTH)/2
+							Y: 200+25
+							Width: 200
+							Height: 45
 							Text: Map Editor
 							Font: Bold
 						Button@ASSETBROWSER_BUTTON:
-							X: 450
-							Y: 0
-							Width: 140
-							Height: 35
+							X: (PARENT_RIGHT-WIDTH)/2
+							Y: 275+25
+							Width: 200
+							Height: 45
 							Text: Asset Browser
 						Button@CREDITS_BUTTON:
-							X: 600
-							Y: 0
-							Width: 140
-							Height: 35
+							X: (PARENT_RIGHT-WIDTH)/2
+							Y: 350+25
+							Width: 200
+							Height: 45
 							Text: Credits
 						Button@BACK_BUTTON:
 							Key: escape
-							X: 750
-							Y: 0
-							Width: 140
-							Height: 35
+							X: (PARENT_RIGHT-WIDTH)/2
+							Y: 425+25
+							Width: 200
+							Height: 45
 							Text: Back
 				Background@MAP_EDITOR_MENU:
 					Width: PARENT_RIGHT
+					Height: PARENT_BOTTOM
 					Visible: False
 					Children:
-						Label@MAP_EDITOR_MENU_TITLE:
+						Background@MAIN_MENU_BACKGROUND:
 							X: 0
-							Y: 0-30
+							Y: 0
+							Width: PARENT_RIGHT
+							Height: PARENT_BOTTOM
+							Background: castleframe
+						Label@MAP_EDITOR_MENU_TITLE:
+							X: (PARENT_RIGHT-WIDTH)/2
+							Y: 25
 							Width: PARENT_RIGHT
 							Height: 20
 							Text: Map Editor
@@ -187,24 +210,24 @@ Container@MENU_BACKGROUND:
 							Font: Bold
 							Contrast: True
 						Button@NEW_MAP_BUTTON:
-							X: 0
-							Y: 0
-							Width: 140
-							Height: 35
+							X: (PARENT_RIGHT-WIDTH)/2
+							Y: 50+25
+							Width: 200
+							Height: 45
 							Text: New Map
 							Font: Bold
 						Button@LOAD_MAP_BUTTON:
-							X: 150
-							Y: 0
-							Width: 140
-							Height: 35
+							X: (PARENT_RIGHT-WIDTH)/2
+							Y: 125+25
+							Width: 200
+							Height: 45
 							Text: Load Map
 							Font: Bold
 						Button@BACK_BUTTON:
-							X: 300
-							Y: 0
-							Width: 140
-							Height: 35
+							X: (PARENT_RIGHT-WIDTH)/2
+							Y: 200+25
+							Width: 200
+							Height: 45
 							Text: Back
 							Font: Bold
 							Key: escape

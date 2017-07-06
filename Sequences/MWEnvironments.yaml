@@ -1,3 +1,15 @@
+deerstand:
+	Defaults:
+		Offset: 0,-12
+		TilesetOverrides:
+			DESERT: TEMPERAT
+			WINTER: TEMPERAT
+			SNOW: TEMPERAT
+	idle: 
+		Start: 0
+	idle2: 
+		Start: 1
+		
 coppermine:
 	Defaults:
 		Offset: 0,-5

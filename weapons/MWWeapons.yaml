@@ -279,7 +279,7 @@ GrantLootAttack:
 WanderAttackCamelTrader:
 	ValidTargets: CamelTrader
 	ReloadDelay: 1
-	Range: 1c512
+	Range: 1c800
 	Projectile: Bullet
 		Speed: 1c682
 	Warhead@1Dam: SpreadDamage
@@ -299,7 +299,7 @@ WanderAttackCamelTrader:
 		
 CamelTraderSlaughter:
 	ReloadDelay: 25
-	Range: 1c512
+	Range: 1c800
 	InvalidTargets: Wall
 	ValidTargets: GrownCamel
 	Projectile: Bullet
@@ -323,7 +323,7 @@ CamelTraderSlaughter:
 WanderAttackLumberShack:
 	ValidTargets: LumberShack
 	ReloadDelay: 1
-	Range: 1c512
+	Range: 1c800
 	Projectile: Bullet
 		Speed: 1c682
 	Warhead@1Dam: SpreadDamage
@@ -343,7 +343,7 @@ WanderAttackLumberShack:
 		
 LumberJackAxe:
 	ReloadDelay: 25
-	Range: 1c512
+	Range: 1c800
 	InvalidTargets: Wall
 	Report: chop1.aud, chop2.aud, chop3.aud
 	ValidTargets: LargeTree
@@ -380,7 +380,7 @@ LumberGrantLootAttack:
 		
 WanderCommander:
 	ReloadDelay: 45
-	Range: 1c512
+	Range: 1c800
 	ValidTargets: Ground
 	InvalidTargets: Air
 	Report: Sword02.aud, Sword03.aud, Sword04.aud, Sword06.aud, Sword07.aud
@@ -409,7 +409,7 @@ WanderCommander:
 		
 Repair:
 	ReloadDelay: 25
-	Range: 1c512
+	Range: 1c800
 	Report: repair01.aud
 	ValidTargets: Structure, Siege, Wall
 	InvalidTargets: Air
@@ -417,14 +417,14 @@ Repair:
 		Speed: 1c682
 	Warhead@1Dam: SpreadDamage
 		Spread: 213
-		Damage: -850
+		Damage: -400
 		ValidTargets: Structure, Siege, Wall
 		InvalidTargets: Air
 
 		
 Fork:
 	ReloadDelay: 35
-	Range: 1c512
+	Range: 1c800
 	InvalidTargets: Wall
 	Report: Sword01.aud
 	InvalidTargets: Air
@@ -449,7 +449,7 @@ Fork:
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
 Pike:
 	ReloadDelay: 50
-	Range: 2c512
+	Range: 2c800
 	Report: Sword02.aud, Sword03.aud, Sword04.aud, Sword06.aud, Sword07.aud
 	ValidTargets: Ground, Trees
 	InvalidTargets: Air
@@ -475,7 +475,7 @@ Pike:
 		
 PikeSpread:
 	ReloadDelay: 65
-	Range: 2c512
+	Range: 2c800
 	Report: Sword02.aud, Sword03.aud, Sword04.aud, Sword06.aud, Sword07.aud
 	ValidTargets: Ground, Trees
 	InvalidTargets: Air
@@ -501,7 +501,7 @@ PikeSpread:
 		
 PikeCavalry:
 	ReloadDelay: 30
-	Range: 1c512
+	Range: 1c800
 	Report: Sword02.aud, Sword03.aud, Sword04.aud, Sword06.aud, Sword07.aud
 	ValidTargets: Ground, Trees
 	InvalidTargets: Air
@@ -527,7 +527,7 @@ PikeCavalry:
 		
 PikeAxe:
 	ReloadDelay: 40
-	Range: 1c512
+	Range: 1c800
 	Report: Sword02.aud, Sword03.aud, Sword04.aud, Sword06.aud, Sword07.aud
 	ValidTargets: Ground, Trees
 	InvalidTargets: Air
@@ -553,7 +553,7 @@ PikeAxe:
 
 MammothPike:
 	ReloadDelay: 45
-	Range: 1c512
+	Range: 1c800
 	Burst: 2
 	BurstDelay: 20
 	ValidTargets: Cavalry, Trees, Structure
@@ -619,7 +619,7 @@ MammothDagger:
 		
 BroadSword:
 	ReloadDelay: 35
-	Range: 1c512
+	Range: 1c800
 	Report: Sword02.aud, Sword03.aud, Sword04.aud, Sword06.aud, Sword07.aud
 	ValidTargets: Ground, Trees
 	InvalidTargets: Air
@@ -647,7 +647,7 @@ BroadSwordMongol:
 	ReloadDelay: 35
 	Burst: 2
 	BurstDelay: 10
-	Range: 1c512
+	Range: 1c800
 	Report: Sword02.aud, Sword03.aud, Sword04.aud, Sword06.aud, Sword07.aud
 	ValidTargets: Ground, Trees
 	InvalidTargets: Air
@@ -711,7 +711,7 @@ DaggerMongol:
   
 KingsSword:
 	ReloadDelay: 60
-	Range: 1c512
+	Range: 1c800
 	Report: Sword02.aud, Sword03.aud, Sword04.aud, Sword06.aud, Sword07.aud
 	ValidTargets: Ground
 	InvalidTargets: Wall, Structure, Air
@@ -738,7 +738,7 @@ KingsSword:
 
 Claymore:
 	ReloadDelay: 45
-	Range: 1c512
+	Range: 1c800
 	Report: Sword02.aud, Sword03.aud, Sword04.aud, Sword06.aud, Sword07.aud
 	ValidTargets: Ground, Trees
 	InvalidTargets: Air
@@ -764,7 +764,7 @@ Claymore:
 
 Sledgehammer:
 	ReloadDelay: 60
-	Range: 1c512
+	Range: 1c800
 	ValidTargets: Ground, Trees
 	InvalidTargets: Air
 	Report: jugg-attack.aud
@@ -960,7 +960,7 @@ DaggerSiegeTower:
 		
 SetFire:
 	ReloadDelay: 110
-	Range: 1c512
+	Range: 1c800
 	ValidTargets: Structure
 	Report: flamer2.aud
 	Projectile: Bullet
@@ -1022,7 +1022,7 @@ BowNArrow:
 	ReloadDelay: 45
 	Range: 4c0
 	MinRange: 0c512
-	Report: arrow01.aud
+	Report: arrow01.aud, arrow02.aud, arrow02.aud
 	InvalidTargets: Wall, Air
 	ValidTargets: Ground
 	Projectile: Missile
@@ -1049,6 +1049,7 @@ BowNArrow:
 			HeavyBuilding: 45
 			Spectral: 15
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+
 BowNArrowDUMMY:
 	ReloadDelay: 45
 	Range: 4c0
@@ -1088,7 +1089,7 @@ BowNArrowAir:
 	ReloadDelay: 45
 	Range: 6c0
 	MinRange: 0c0
-	Report: arrow01.aud
+	Report: arrow01.aud, arrow02.aud, arrow02.aud
 	InvalidTargets: Wall, Ground
 	ValidTargets: Air
 	Projectile: Missile
@@ -1251,7 +1252,7 @@ BowNArrowSiegeTower:
 	ReloadDelay: 45
 	Range: 6c0
 	MinRange: 0c0
-	Report: arrow01.aud
+	Report: arrow01.aud, arrow02.aud, arrow02.aud
 	ValidTargets: Ground
 	InvalidTargets: Wall, Air
 	Projectile: Missile
@@ -1277,11 +1278,12 @@ BowNArrowSiegeTower:
 			HeavyCavalry: 35
 			HeavyBuilding: 25
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath  
+		
 BowNArrowSiegeTowerAIR:
 	ReloadDelay: 45
 	Range: 8c0
 	MinRange: 0c0
-	Report: arrow01.aud
+	Report: arrow01.aud, arrow02.aud, arrow02.aud
 	ValidTargets: Air
 	InvalidTargets: Wall, Ground
 	Projectile: Missile
@@ -1312,7 +1314,8 @@ BowNArrowSiegeTowerAIR:
 			MediumCavalry: 55
 			HeavyCavalry: 35
 			HeavyBuilding: 25
-		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath  
+		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath 
+
 BowNArrowSiegeTowerDUMMY:
 	ReloadDelay: 45
 	Range: 6c0
@@ -1462,7 +1465,7 @@ LongBowNArrow:
 	Burst: 4
 	BurstDelay: 0
 	ValidTargets: Ground
-	Report: arrow01.aud
+	Report: arrow01.aud, arrow02.aud, arrow02.aud
 	InvalidTargets: Wall, Air
 	Projectile: Bullet
 		Speed: 250
@@ -1551,7 +1554,7 @@ LongBowNArrowAir:
 	BurstDelay: 4
 	ValidTargets: Air
 	InvalidTargets: Ground
-	Report: arrow01.aud
+	Report: arrow01.aud, arrow02.aud, arrow02.aud
 	Projectile: Missile
 		HorizontalRateOfTurn: 60
 		RangeLimit: 7c204
@@ -1735,7 +1738,7 @@ BowNArrowTower:
 	ReloadDelay: 25
 	Range: 5c0
 	MinRange: 0c0
-	Report: arrow01.aud
+	Report: arrow01.aud, arrow02.aud, arrow02.aud
 	InvalidTargets: Wall, Air
 	ValidTargets: Ground
 	Projectile: Missile
@@ -1744,24 +1747,25 @@ BowNArrowTower:
 		Arm: 0
 		Speed: 200
 		LaunchAngle: 46
-		Inaccuracy: 0c0
+		Palette: ra
 	Warhead@1Dam: SpreadDamage
-		Spread: 125
-		Damage: 2500
-		ValidTargets: Ground
+		Spread: 25
 		InvalidTargets: Wall, Air
+		ValidTargets: Ground
+		Damage: 1800
 		Versus:
-			Leather: 120
-			Light: 115
-			Heavy: 105
-			Concrete: 40
-			Knight: 25
-			LightCavalry: 120
-			MediumCavalry: 30
+			Leather: 100
+			Light: 75
+			Heavy: 55
+			Concrete: 15
+			Knight: 15
+			LightCavalry: 80
+			MediumCavalry: 35
 			HeavyCavalry: 15
-			HeavyBuilding: 40
+			HeavyBuilding: 45
 			Spectral: 15
-		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath  
+		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath 
+		
 BowNArrowTowerDUMMY:
 	ReloadDelay: 25
 	Range: 5c0
@@ -1801,7 +1805,7 @@ BowNArrowTowerUnblock:
 	ReloadDelay: 25
 	Range: 7c0
 	MinRange: 0c0
-	Report: arrow01.aud
+	Report: arrow01.aud, arrow02.aud, arrow02.aud
 	InvalidTargets: Wall
 	ValidTargets: Ground, Air
 	Projectile: Missile
@@ -1829,6 +1833,7 @@ BowNArrowTowerUnblock:
 			HeavyBuilding: 40
 			Spectral: 15
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath  
+
 BowNArrowTowerUnblockDUMMY:
 	ReloadDelay: 25
 	Range: 7c0
@@ -2135,7 +2140,7 @@ SamBallista:
   
 Battering:
 	ReloadDelay: 160
-	Range: 1c512
+	Range: 1c800
 	Report: battering01.aud
 	ValidTargets: Structure, Wall
 	Projectile: Bullet
@@ -2222,7 +2227,7 @@ KingCrossbowAir:
 
 KingsSwordMounted:
 	ReloadDelay: 60
-	Range: 1c512
+	Range: 1c800
 	Report: Sword02.aud, Sword03.aud, Sword04.aud, Sword06.aud, Sword07.aud
 	ValidTargets: Structure
 	InvalidTargets: Air
@@ -2406,7 +2411,7 @@ FireArrowBarrage:
 	Burst: 3
 	BurstDelay: 0
 	MinRange: 0c0
-	Report: arrow01.aud
+	Report: arrow01.aud, arrow02.aud, arrow02.aud
 	Projectile: Bullet
 		Speed: 250
 		Blockable: false
@@ -2481,16 +2486,15 @@ FireArrowBarrage:
 	Warhead@2Smu: LeaveSmudge
 		SmudgeType: Scorch
 		InvalidTargets: Vehicle, Structure, Wall
- 
 
 FireBarrage:
 	ReloadDelay: 2
-	Range: 2c512
+	Range: 2c800
 	Burst: 3
 	BurstDelay: 0
 	MinRange: 0c0
 	ValidTargets: Ground
-	Report: arrow01.aud
+	Report: arrow01.aud, arrow02.aud, arrow02.aud
 	InvalidTargets: Wall
 	Projectile: Bullet
 		Speed: 250
@@ -2729,7 +2733,7 @@ CannonStrike:
 		ImpactSounds: xplos.aud
 		Delay: 42
 	Warhead@3Dam_areanukea: SpreadDamage
-		Spread: 2c512
+		Spread: 2c800
 		Damage: 10000
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
 		Delay: 20
@@ -2815,7 +2819,7 @@ LightningStrike:
 		ImpactSounds: lightning2.aud
 		Delay: 0
 	Warhead@1Dam_impact: SpreadDamage
-		Range: 0, 1c1, 2c1, 2c512
+		Range: 0, 1c1, 2c1, 2c800
 		Damage: 10000
 		Falloff: 1000, 1000, 250, 100
 		ValidTargets: Ground, Air, Trees
@@ -3076,3 +3080,162 @@ KilledPike:
 			Spectral: 0
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
  
+# Hunter
+
+BowNArrowHunter:
+	ReloadDelay: 45
+	Range: 5c0
+	MinRange: 2c800
+	Report: arrow01.aud, arrow02.aud, arrow02.aud
+	InvalidTargets: Wall, Air
+	ValidTargets: Wildlife
+	Projectile: Missile
+		HorizontalRateOfTurn: 60
+		RangeLimit: 8c204
+		Arm: 0
+		Speed: 250
+		LaunchAngle: 46
+		Palette: ra
+	Warhead@1Dam: SpreadDamage
+		Spread: 25
+		InvalidTargets: Wall, Air
+		ValidTargets: Wildlife
+		Damage: 1000
+		Versus:
+			Leather: 100
+			Light: 75
+			Heavy: 55
+			Concrete: 15
+			Knight: 15
+			LightCavalry: 80
+			MediumCavalry: 35
+			HeavyCavalry: 15
+			HeavyBuilding: 45
+			Spectral: 15
+		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+
+BowNArrowHunterDUMMY:
+	ReloadDelay: 45
+	Range: 5c0
+	MinRange: 2c800
+	InvalidTargets: Wall, Air
+	ValidTargets: Wildlife
+	Projectile: Bullet
+		RangeLimit: 9c204
+		LaunchAngle: 130
+		Speed: 290
+		Inaccuracy: 0c0
+		ContrailLength: 20
+		ContrailWidth: 10
+		ContrailDelay: 0
+		ContrailUsePlayerColor : true
+		Image: e4arrow
+		Palette: ra
+	Warhead@1Dam: SpreadDamage
+		Spread: 25
+		InvalidTargets: Wall, Air
+		ValidTargets: Wildlife
+		Damage: 0
+		Versus:
+			Leather: 0
+			Light: 0
+			Heavy: 0
+			Concrete: 0
+			Knight: 0
+			LightCavalry: 0
+			MediumCavalry: 0
+			HeavyCavalry: 0
+			HeavyBuilding: 0
+			Spectral: 0
+		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+		
+HunterGather:
+	ValidTargets: Deaddeer
+	InvalidTargets: Air
+	ReloadDelay: 25
+	Range: 1c800
+	Projectile: Bullet
+		Speed: 1c682
+	Warhead@GrantMonez: GrantSelfCondition
+		Duration: 30
+		Condition: DeerHunter
+		ValidStances: Ally
+		AffectsParent: true
+		InvalidTargets: Air
+		ValidTargets: Deaddeer, Hunterer
+	Warhead@1Dam: SpreadDamage
+		Spread: 25
+		InvalidTargets: Air
+		ValidTargets: Deaddeer
+		Damage: 100
+		Versus:
+			Leather: 100
+			Light: 100
+			Heavy: 100
+			Concrete: 100
+			Knight: 100
+			LightCavalry: 100
+			MediumCavalry: 100
+			HeavyCavalry: 100
+			HeavyBuilding: 100
+			Spectral: 100
+		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+		
+HunterUnload:
+	ValidTargets: BaseCenter
+	InvalidTargets: Air
+	ReloadDelay: 25
+	Range: 1c800
+	Projectile: Bullet
+		Speed: 1c682
+	Warhead@GrantMonez: GrantSelfCondition
+		Duration: 30
+		Condition: UnloadDeer
+		ValidStances: Ally
+		AffectsParent: true
+		InvalidTargets: Air
+		ValidTargets: BaseCenter, Hunterer
+        
+BuildConstruction:
+	ValidTargets: Buildable
+	InvalidTargets: Air
+	ReloadDelay: 25
+	Range: 1c800
+	Report: repair01.aud
+	Projectile: Bullet
+		Speed: 1c682
+	Warhead@Grant: GrantExternalCondition
+		Duration: 0
+		Range: 1c0
+		Condition: Construct
+		ValidStances: Ally
+		ValidTargets: Buildable
+        
+LaborourUnload:
+	ValidTargets: Deliverable
+	InvalidTargets: Air
+	ReloadDelay: 10
+	Range: 1c800
+	Projectile: Bullet
+		Speed: 1c682
+	Warhead@Talking: GrantExternalCondition
+		Range: 1c0
+		Duration: 0
+		Condition: DeliveredResources
+		ValidStances: Ally
+		ValidTargets: Deliverable
+        
+LaborourLoad:
+	ValidTargets: Material
+	InvalidTargets: Air
+	ReloadDelay: 10
+	Range: 1c800
+	Projectile: Bullet
+		Speed: 1c682
+	Warhead@Un: GrantSelfCondition
+		Duration: 12
+		Condition: Loading
+		ValidStances: Ally
+		AffectsParent: true
+		InvalidTargets: Air
+		ValidTargets: Infantry, Ground, Material

@@ -142,8 +142,6 @@ DDLER:
 		Bounds: 26,34,0,-6
 	SelectionDecorations:
 		VisualBounds: 26,34,0,-6
-	Power:
-		Amount: 0
 	WithDeathAnimation:
 		DeathTypes:
 			DefaultDeath: 1
@@ -198,8 +196,6 @@ BURNINGHORSE:
 	Armor:
 		Type: LightCavalry
 	-Selectable:
-	Power:
-		Amount: 0
 	Wanders:
 		WanderMoveRadius: 5
 		MinMoveDelay: 0
@@ -256,8 +252,6 @@ EMPTYROSS:
 		Bounds: 26,34,0,-6
 	SelectionDecorations:
 		VisualBounds: 26,34,0,-6
-	Power:
-		Amount: 0
 	Wanders:
 		WanderMoveRadius: 5
 		MinMoveDelay: 50
@@ -317,8 +311,6 @@ ROSSNEUTRAL:
 		Bounds: 26,34,0,-6
 	SelectionDecorations:
 		VisualBounds: 26,34,0,-6
-	Power:
-		Amount: 0
  
 ROSS1:
 	Inherits: ^Cavalry
@@ -335,8 +327,8 @@ ROSS1:
 	Buildable:
 		IconPalette: raicon
 		BuildPaletteOrder: 20
-		Prerequisites: anyhq, ~techlevel.medium
-		Description: Fast, light Cavalry.\n  Strong vs Cavalry and Buildings\n  Weak vs Infantry\n\n\n\n
+		Prerequisites: anyhq
+		Description: Fast, light Cavalry.\n  Strong vs Cavalry and Buildings\n  Weak vs Infantry\n\nTrains: 1 Peasant\n\n
 		Queue: MVehicle.Nod
 	Mobile:
 		SharesCell: false
@@ -364,8 +356,9 @@ ROSS1:
 		Bounds: 26,34,0,-6
 	SelectionDecorations:
 		VisualBounds: 26,34,0,-6
-	Power:
-		Amount: -2
+	PersonValued:
+		ActorCount: 1
+        ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
 
 ROSS2:
 	Inherits: ^Cavalry
@@ -382,8 +375,8 @@ ROSS2:
 	Buildable:
 		IconPalette: raicon
 		BuildPaletteOrder: 20
-		Prerequisites: anyhq, ~techlevel.high
-		Description: Slow, medium Cavalry.\n  Strong vs Cavalry and Buildings\n  Weak vs Infantry\n\n\n\n
+		Prerequisites: anyhq
+		Description: Slow, medium Cavalry.\n  Strong vs Cavalry and Buildings\n  Weak vs Infantry\n\nTrains: 1 Peasant\n\n
 		Queue: MVehicle.GDI
 	Mobile:
 		SharesCell: false
@@ -405,16 +398,18 @@ ROSS2:
 		DefaultAttackSequence: shoot
 	Armor:
 		Type: MediumCavalry
-	Power:
-		Amount: -2
 	Selectable:
 		Bounds: 26,34,0,-6
 	SelectionDecorations:
 		VisualBounds: 26,34,0,-6	
+	PersonValued:
+		ActorCount: 1
+        ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
 
 
 ROSS5:
 	Inherits: ^Cavalry
+    Inherits@88: ^GameSettingsArcher
 	GrantConditionOnDamageState@Slow:
 		Condition: Slowmotion
 		ValidDamageStates: Heavy, Critical 
@@ -428,8 +423,8 @@ ROSS5:
 	Buildable:
 		IconPalette: raicon
 		BuildPaletteOrder: 30
-		Prerequisites: anyarmory, ~techlevel.high
-		Description: Heavily armored and very slow.\n  Strong vs Everything (+Spectral Units)\n  Weak vs Long-ranged weapons\n  Can attack Aircrafts\n\n\n\n
+		Prerequisites: anyarmory
+		Description: Heavily armored and very slow.\n  Strong vs Everything (+Spectral Units)\n  Weak vs Long-ranged weapons\n  Can attack Aircrafts\n\nTrains: 1 Peasant\n\n
 		Queue: MVehicle.GDI
 	Mobile:
 		SharesCell: false
@@ -469,8 +464,6 @@ ROSS5:
 			Tertiary: shootground
 	Armor:
 		Type: HeavyCavalry
-	Power:
-		Amount: -3
 	Selectable:
 		Bounds: 26,34,0,-6
 	SelectionDecorations:
@@ -481,9 +474,13 @@ ROSS5:
 		DamageCooldown: 200 
 	Voiced:
 		VoiceSet: HeavyCavalVoice
+	PersonValued:
+		ActorCount: 1
+        ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
 
 ROSS3:
 	Inherits: ^Cavalry
+    Inherits@88: ^GameSettingsArcher
 	GrantConditionOnDamageState@Slow:
 		Condition: Slowmotion
 		ValidDamageStates: Heavy, Critical 
@@ -499,8 +496,8 @@ ROSS3:
 	Buildable:
 		IconPalette: raicon
 		BuildPaletteOrder: 30
-		Description: Strong mounted Archer.\n  Strong vs Infantry, Aircrafts and Buildings and Spectral Units\n  Has long range, very fast\n  Can detect cloaked units\n  Can attack Aircrafts\n\n\n\n
-		Prerequisites: anyhq, armorynod,  ~techlevel.medium
+		Description: Strong mounted Archer.\n  Strong vs Infantry, Aircrafts and Buildings and Spectral Units\n  Has long range, very fast\n  Can detect cloaked units\n  Can attack Aircrafts\n\nTrains: 1 Peasant\n\n
+		Prerequisites: anyhq, armorynod
 		Queue:  MVehicle.Nod
 	Mobile:
 		SharesCell: false
@@ -531,12 +528,14 @@ ROSS3:
 		Bounds: 26,34,0,-6
 	SelectionDecorations:
 		VisualBounds: 26,34,0,-6
-	Power:
-		Amount: -2		
+	PersonValued:
+		ActorCount: 1
+        ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
 
 
 ROSS4:
 	Inherits: ^Cavalry
+    Inherits@88: ^GameSettingsArcher
 	GrantConditionOnDamageState@Slow:
 		Condition: Slowmotion
 		ValidDamageStates: Heavy, Critical  
@@ -550,8 +549,7 @@ ROSS4:
 	Buildable:
 		IconPalette: raicon
 		BuildPaletteOrder: 10
-		Prerequisites: ~techlevel.medium
-		Description: Fast scout cavalry, armed with spears.\n  Very weak vs Infantry!!\n  Strong vs Cavalry, Buildings and light Aircrafts\n  Can attack Aircrafts\n\n\n\n
+		Description: Fast scout cavalry, armed with spears.\n  Very weak vs Infantry!!\n  Strong vs Cavalry, Buildings and light Aircrafts\n  Can attack Aircrafts\n\nTrains: 1 Peasant\n\n
 		Queue:  MVehicle.Nod
 	Mobile:
 		SharesCell: false
@@ -589,8 +587,10 @@ ROSS4:
 		Bounds: 26,34,0,-6
 	SelectionDecorations:
 		VisualBounds: 26,34,0,-6
-	Power:
-		Amount: -2	   
+	PersonValued:
+		ActorCount: 1
+        ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
+   
 
 ROSS4B:
 	Inherits: ^Cavalry
@@ -605,10 +605,9 @@ ROSS4B:
 	Tooltip:
 		Name: Scout (Flail)
 	Buildable:
-		Description: Fast scout and anti-infantry cavalry.\n  Very strong vs Infantry. Can harm Spectral Units\n  Weak vs Cavalry\n\n\n\n
+		Description: Fast scout and anti-infantry cavalry.\n  Very strong vs Infantry. Can harm Spectral Units\n  Weak vs Cavalry\n\nTrains: 1 Peasant\n\n
 		IconPalette: raicon
 		BuildPaletteOrder: 5
-		Prerequisites: ~techlevel.medium
 		Queue: MVehicle.GDI
 	RevealsShroud:
 		Range: 8c0
@@ -636,9 +635,10 @@ ROSS4B:
 		Bounds: 26,34,0,-6
 	SelectionDecorations:
 		VisualBounds: 26,34,0,-6
-	Power:
-		Amount: -2	  
-		
+	PersonValued:
+		ActorCount: 1
+        ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
+	
 		
 ROSS4C:
 	Inherits: ^Cavalry
@@ -653,10 +653,9 @@ ROSS4C:
 	Tooltip:
 		Name: Hussar
 	Buildable:
-		Description: Fast scout and anti-infantry cavalry.\n  Very strong vs Infantry\n  Weak vs Cavalry\n\n\n\n
+		Description: Fast scout and anti-infantry cavalry.\n  Very strong vs Infantry\n  Weak vs Cavalry\n\nTrains: 1 Peasant\n\n
 		IconPalette: raicon
 		BuildPaletteOrder: 5
-		Prerequisites: ~techlevel.medium
 		Queue: MVehicle.Nod
 	RevealsShroud:
 		Range: 8c0
@@ -684,8 +683,9 @@ ROSS4C:
 		Bounds: 26,34,0,-6
 	SelectionDecorations:
 		VisualBounds: 26,34,0,-6
-	Power:
-		Amount: -2  
+	PersonValued:
+		ActorCount: 1
+        ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
 		
 		
 MWCAMEL:

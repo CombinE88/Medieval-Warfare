@@ -116,6 +116,45 @@ SPLIT6:
 		Condition: Trader
 	EditorTilesetFilter:
 		RequireTilesets: DESERT
+		
+SPLIT7:
+	Inherits: SPLIT3
+	RenderSprites:
+		Image: deerstand
+		PlayerPalette: 
+		Palette: ra
+	Tooltip:
+		Name: Deerstand
+	-SeedsResource:
+	-WithIdleAnimation:
+	WithSpriteBody:
+		Sequence: idle
+	CritterSpawner:
+		Actors: deer01, deer02, deer03, deer03a
+		AliveMax: 5
+		TicksMin: 1000
+		TicksMax: 2000
+		RadiusMin: 5
+		RadiusMax: 8
+		
+SPLIT8:
+	Inherits: SPLIT7
+	RenderSprites:
+		Image: deerstand
+		PlayerPalette: 
+		Palette: ra
+	Tooltip:
+		Name: Deerstand
+	WithSpriteBody:
+		Sequence: idle2
+	CritterSpawner:
+		Actors: deer01, deer02, deer03, deer03a
+		AliveMax: 10
+		TicksMin: 500
+		TicksMax: 1500
+		RadiusMin: 5
+		RadiusMax: 10
+
 
 ROCK1:
 	Inherits: ^Rock

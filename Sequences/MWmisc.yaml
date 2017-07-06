@@ -1,3 +1,9 @@
+prioarrow:
+    Left: prioarrow
+        Start: 1
+    Right: prioarrow
+        Start: 0
+
 hospnew:
 	idle: hospnew
 	damaged-idle: hospnew

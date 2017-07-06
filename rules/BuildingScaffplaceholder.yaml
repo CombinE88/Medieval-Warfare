@@ -1,0 +1,144 @@
+NUKENEW.PLACE:
+	Inherits: ^BLDPLC
+	SpawnActorOnDeath@Finsihed:
+		Probability: 100
+		Actor: NUKENEW
+
+HANDNEW.PLACE:
+	Inherits: ^BLDPLC
+	SpawnActorOnDeath@Finsihed:
+		Probability: 100
+		Actor: HANDNEW
+
+ZEROPROC.PLACE:
+	Inherits: ^BLDPLC
+	SpawnActorOnDeath@Finsihed:
+		Probability: 100
+		Actor: ZEROPROC
+
+HQNEWNOD.PLACE:
+	Inherits: ^BLDPLC
+	SpawnActorOnDeath@Finsihed:
+		Probability: 100
+		Actor: HQNEWNOD
+
+ARMORYNOD.PLACE:
+	Inherits: ^BLDPLC
+	SpawnActorOnDeath@Finsihed:
+		Probability: 100
+		Actor: ARMORYNOD
+
+ARMORYGDI.PLACE:
+	Inherits: ^BLDPLC
+	SpawnActorOnDeath@Finsihed:
+		Probability: 100
+		Actor: ARMORYGDI
+
+NUK2NEW.PLACE:
+	Inherits: ^BLDPLC
+	SpawnActorOnDeath@Finsihed:
+		Probability: 100
+		Actor: NUK2NEW
+
+NODNUK2.PLACE:
+	Inherits: ^BLDPLC
+	SpawnActorOnDeath@Finsihed:
+		Probability: 100
+		Actor: NODNUK2
+
+PROCNEW.PLACE:
+	Inherits: ^BLDPLC
+	SpawnActorOnDeath@Finsihed:
+		Probability: 100
+		Actor: PROCNEW
+
+SILONEW.PLACE:
+	Inherits: ^BLDPLC
+	SpawnActorOnDeath@Finsihed:
+		Probability: 100
+		Actor: SILONEW
+
+BARRNEW.PLACE:
+	Inherits: ^BLDPLC
+	SpawnActorOnDeath@Finsihed:
+		Probability: 100
+		Actor: BARRNEW
+
+STALL.PLACE:
+	Inherits: ^BLDPLC
+	SpawnActorOnDeath@Finsihed:
+		Probability: 100
+		Actor: STALL
+
+NODSTALL.PLACE:
+	Inherits: ^BLDPLC
+	SpawnActorOnDeath@Finsihed:
+		Probability: 100
+		Actor: NODSTALL
+
+CASTLE.PLACE:
+	Inherits: ^BLDPLC
+	SpawnActorOnDeath@Finsihed:
+		Probability: 100
+		Actor: CASTLE
+
+CASTLE2.PLACE:
+	Inherits: ^BLDPLC
+	SpawnActorOnDeath@Finsihed:
+		Probability: 100
+		Actor: CASTLE2
+
+WORKSHOPNOD.PLACE:
+	Inherits: ^BLDPLC
+	SpawnActorOnDeath@Finsihed:
+		Probability: 100
+		Actor: WORKSHOPNOD
+
+WORKSHOPGDI.PLACE:
+	Inherits: ^BLDPLC
+	SpawnActorOnDeath@Finsihed:
+		Probability: 100
+		Actor: WORKSHOPGDI
+
+GTWNEW.PLACE:
+	Inherits: ^BLDPLC
+	SpawnActorOnDeath@Finsihed:
+		Probability: 100
+		Actor: GTWNEW
+
+GUNNEW.PLACE:
+	Inherits: ^BLDPLC
+	SpawnActorOnDeath@Finsihed:
+		Probability: 100
+		Actor: GUNNEW
+
+TRIBU.PLACE:
+	Inherits: ^BLDPLC
+	SpawnActorOnDeath@Finsihed:
+		Probability: 100
+		Actor: TRIBU
+
+BATO.PLACE:
+	Inherits: ^BLDPLC
+	SpawnActorOnDeath@Finsihed:
+		Probability: 100
+		Actor: BATO
+
+SAMNEW.PLACE:
+	Inherits: ^BLDPLC
+	SpawnActorOnDeath@Finsihed:
+		Probability: 100
+		Actor: SAMNEW
+
+TAVERN.PLACE:
+	Inherits: ^BLDPLC
+	SpawnActorOnDeath@Finsihed:
+		Probability: 100
+		Actor: TAVERN
+
+TOWNHALL.PLACE:
+	Inherits: ^BLDPLC
+	SpawnActorOnDeath@Finsihed:
+		Probability: 100
+		Actor: TOWNHALL
+

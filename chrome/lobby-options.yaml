@@ -32,7 +32,7 @@ Background@LOBBY_OPTIONS_BIN:
 					Width: 225
 					Height: 20
 					Font: Regular
-					Text: Wildlife
+					Text: Crates
 				Checkbox@ALLYBUILDRADIUS_CHECKBOX:
 					X: 170
 					Y: 35
@@ -103,7 +103,7 @@ Background@LOBBY_OPTIONS_BIN:
 					Y: 150
 					Width: 80
 					Height: 25
-					Text: Tech Level:
+					Text: Tactic Level:
 					Align: Right
 				Label@GAMESPEED_DESC:
 					X: PARENT_RIGHT - WIDTH - 165

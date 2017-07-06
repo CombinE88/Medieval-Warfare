@@ -1,0 +1,19 @@
+SULNUKE.PLACE:	Inherits: ^BLDPLC	SpawnActorOnDeath@Finsihed:		Probability: 100		Actor: SULNUKE
+
+SULMILL.PLACE:	Inherits: ^BLDPLC	SpawnActorOnDeath@Finsihed:		Probability: 100		Actor: SULMILL	
+SULBARR.PLACE:	Inherits: ^BLDPLC	SpawnActorOnDeath@Finsihed:		Probability: 100		Actor: SULBARR
+
+SULMYSTIC.PLACE:	Inherits: ^BLDPLC	SpawnActorOnDeath@Finsihed:		Probability: 100		Actor: SULMYSTIC
+
+SULNUK2.PLACE:	Inherits: ^BLDPLC	SpawnActorOnDeath@Finsihed:		Probability: 100		Actor: SULNUK2
+
+SULCASTLE.PLACE:	Inherits: ^BLDPLC	SpawnActorOnDeath@Finsihed:		Probability: 100		Actor: SULCASTLE
+
+SULFIX.PLACE:	Inherits: ^BLDPLC	SpawnActorOnDeath@Finsihed:		Probability: 100		Actor: SULFIX
+
+SULGTW.PLACE:	Inherits: ^BLDPLC	SpawnActorOnDeath@Finsihed:		Probability: 100		Actor: SULGTW
+
+SULARRAY.PLACE:	Inherits: ^BLDPLC	SpawnActorOnDeath@Finsihed:		Probability: 100		Actor: SULARRAY
+
+SULHALL.PLACE:	Inherits: ^BLDPLC	SpawnActorOnDeath@Finsihed:		Probability: 100		Actor: SULHALL
+

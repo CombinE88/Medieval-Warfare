@@ -16,22 +16,26 @@ Player:
 	PlayerStatistics:
 	FrozenActorLayer:
 	PlaceBeacon:
-	ProvidesTechPrerequisite@low:
-		Name: Low
-		Prerequisites: techlevel.low
-		Id: low
-	ProvidesTechPrerequisite@medium:
-		Name: Medium
-		Prerequisites: techlevel.low, techlevel.medium
-		Id: medium
-	ProvidesTechPrerequisite@nosuper:
-		Name: No Powers
-		Prerequisites: techlevel.low, techlevel.medium, techlevel.high
-		Id: nopowers
+	PlayerCivilization:
+		SpawnModifier: 2
+		TownHalls: townhall, sulhall
+		Peasants: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
 	ProvidesTechPrerequisite@all:
-		Name: Unrestricted
-		Prerequisites: techlevel.low, techlevel.medium, techlevel.high, techlevel.superweapons
+		Name: Less Tactical
+		Prerequisites:
 		Id: unrestricted
+	ProvidesTechPrerequisite@nosuper:
+		Name: Medium Tactical
+		Prerequisites: HPLevel30Set
+		Id: nopowers
+	ProvidesTechPrerequisite@medium:
+		Name: Nromal Tactical
+		Prerequisites: HPLevel50Set
+		Id: medium
+	ProvidesTechPrerequisite@low:
+		Name: Highly Tactical
+		Prerequisites: HPLevel100Set
+		Id: low
 	GrantConditionOnPrerequisiteManager:
 	ResourceStorageWarning:
 	PlayerExperience:

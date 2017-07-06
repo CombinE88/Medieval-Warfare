@@ -2,6 +2,11 @@ fb4:
 	idle:
 		Length: 4
 		ZOffset: 1023
+        
+menu:
+    idle: 
+        Length: *
+        Tick: 200
 
 fire:
 	1: fire1

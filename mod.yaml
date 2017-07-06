@@ -1,7 +1,7 @@
 Metadata:
 	Title: Medieval Warfare
 	Description: Siege under Gabriel Dardanus the first or \nbetray with Baron Hodsworth of Noddingen in a \ntotalconversion of the classic game that started it all.\n\nMedieval Warfare demodernizes the original Command & Conquer \nTiberian Dawn gameplay\nby shifting the gme into the dark ages, including siegeweapons \ncavalry, high infantry verietiy, and buildable fortresses.
-	Version: 1706071
+	Version: 1707053
 	Author: the Medieval Warfare Team
 
 RequiresMods:
@@ -10,6 +10,7 @@ RequiresMods:
 Packages:
 	~^Content/cnc
 	~^Content/cnc/movies
+    ~^Content/Mw/Music
 	.
 	$cnc: cnc
 	$mw: mw
@@ -54,6 +55,8 @@ Rules:
 	mw|rules/AI.yaml
 	mw|rules/Aircraft.yaml
 	mw|rules/Buildings.yaml
+	mw|rules/BuildingScaffolds.yaml
+	mw|rules/BuildingScaffplaceholder.yaml
 	mw|rules/Cavalry.yaml
 	mw|rules/civilian.yaml
 	mw|rules/civilian-desert.yaml
@@ -69,6 +72,8 @@ Rules:
 	mw|rules/trees.yaml
 	mw|rules/world.yaml
 	mw|rules/Sultan.yaml
+	mw|rules/SultanScaffolds.yaml
+	mw|rules/SultanScaffplaceholder.yaml
 
 Sequences:
 	cnc|sequences/structures.yaml
@@ -116,7 +121,7 @@ Chrome:
 Assemblies:
 	common|OpenRA.Mods.Common.dll
 	common|OpenRA.Mods.Cnc.dll
-	mw|OpenRA.Mods.AS.dll
+	mw|OpenRA.Mods.MW.dll
 
 ChromeLayout:
 	mw|chrome/mainmenu.yaml
@@ -233,27 +238,27 @@ GameSpeeds:
 		Name: Normal
 		Timestep: 40
 		OrderLatency: 3
-    hdefault:
-        Name: Normal (High Latency)
+	hdefault:
+		Name: Normal (High Latency)
 		Timestep: 40
 		OrderLatency: 6
-    vhldefault:
-        Name: Normal (Very High Latency)
+	vhldefault:
+		Name: Normal (Very High Latency)
 		Timestep: 40
 		OrderLatency: 9
 	faster:
 		Name: Faster
 		Timestep: 30
 		OrderLatency: 4
-    hfaster:
-        Name: Faster (High Latency)
+	hfaster:
+		Name: Faster (High Latency)
 		Timestep: 30
 		OrderLatency: 6
-    vfaster:
-        Name: Faster (Very High Latency)
+	vfaster:
+		Name: Faster (Very High Latency)
 		Timestep: 30
 		OrderLatency: 9
-    superfast:
+	superfast:
 		Name: Super Fast(AI only)
 		Timestep: 10
 		OrderLatency: 5

@@ -11,6 +11,7 @@ CSTLWLLSUL:
 
 SULGTW:
 	Inherits: ^MWDefense
+	Inherits@88: ^GameSettingsTowers
 	WithDeathAnimation:
 		DeathSequencePalette: sultanplayer
 	RenderSprites:
@@ -24,7 +25,7 @@ SULGTW:
 	Buildable:
 		Description: A Super guard tower, stationed with 2 archers.\n  Strong vs Infantry, Light Cavalry\n  Weak vs Siege weapons and Heavy Cavalry \n  Cannot target Aircraft (because of I say so)\n\n\n
 		BuildPaletteOrder: 20
-		Prerequisites: barracks
+		Prerequisites: barracks, ~scaffold
 		Queue: MDefenses.SUL
 		BuildDuration: 1600
 		BuildDurationModifier: 40
@@ -187,6 +188,9 @@ SULGTW:
 	DamageMultiplier@static:
 		RequiresCondition: static
 		Modifier: 70
+	PersonValued:
+		ActorCount: 2
+		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
 		
 
 SULPLUG1:
@@ -263,6 +267,120 @@ SULPLUG4:
 
 		
 #Buildings		
+
+SULHALL:
+	Inherits: ^MWBaseBuilding
+	Armor:
+		Type: Concrete
+	WithDeathAnimation:
+		DeathSequencePalette: sultanplayer
+	RenderSprites:
+		Image: sulhall
+		PlayerPalette: sultanplayer
+	Valued:
+		Cost: 2000
+	CustomSellValue:
+		Value: 1000
+	Tooltip:
+		Name: Town Hall
+	Buildable:
+		IconPalette: raicon
+		BuildPaletteOrder: 100
+		Prerequisites: anyarmory, ~scaffold
+		Description: Attracts citizens to your town.\nNew Peasants will spawn faster.\n\n\n
+		Queue: MBuilding.SUL
+	Building:
+		Footprint: xxx xxx
+		Dimensions: 3,2
+	Health:
+		HP: 100000
+		Shape: Rectangle
+			TopLeft: -1424,-924
+			BottomRight: 1424, 924
+	RevealsShroud:
+		Range: 4c0
+	Bib:
+	Power:
+		Amount: -4
+	ProvidesPrerequisite@buildingname:
+	Selectable:
+		Bounds: 72,48
+	SelectionDecorations:
+		VisualBounds: 72,64,0,-16
+	ThrowsShrapnel@LARGE:
+		Weapons: LargeStone1, LargeStone1, LargeStone1, LargeStone1
+		Pieces: 1, 2
+		Range: 1c0, 5c0
+    WithFreeSpawnableActor@3:
+        TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
+        SpawnActor: noble5
+        Offset: 725,341, 0
+        MoveOffset: 1,2
+        Sticky: true
+        
+SULARRAY:
+	Inherits: ^MWBaseBuilding
+	Armor:
+		Type: Concrete
+	WithDeathAnimation:
+		DeathSequencePalette: sultanplayer
+	RenderSprites:
+		Image: sularray
+		PlayerPalette: sultanplayer
+	Valued:
+		Cost: 1000
+	CustomSellValue:
+		Value: 100
+	Tooltip:
+		Name: Material Storage
+	Buildable:
+		IconPalette: raicon
+		BuildPaletteOrder: 40
+		Prerequisites: proc, ~scaffold
+		Description: Provides 2 additional worker.\n\n\n\n
+		Queue: MBuilding.SUL
+	Building:
+		Footprint: xxx xxx
+		Dimensions: 3,2
+	Health:
+		HP: 80000
+		Shape: Rectangle
+			TopLeft: -1424,-924
+			BottomRight: 1424, 924
+	RevealsShroud:
+		Range: 4c0
+	Bib:
+	Power:
+		Amount: -4
+	ProvidesPrerequisite@buildingname:
+	Selectable:
+		Bounds: 72,48
+	SelectionDecorations:
+		VisualBounds: 72,64,0,-16
+	ThrowsShrapnel@LARGE:
+		Weapons: LargeWood1, LargeWood1, LargeStone1, LargeStone1
+		Pieces: 1, 2
+		Range: 1c0, 5c0
+	Targetable@Tavern:
+		TargetTypes: Material
+    WithFreeSpawnableActor@1:
+        TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
+        SpawnActor: transporter
+        Offset: 384,298, 0
+        MoveOffset: 1,2
+        Sticky: true
+    WithFreeSpawnableActor@2:
+        TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
+        SpawnActor: transporter
+        Offset: 384,298, 0
+        MoveOffset: 1,2
+        Sticky: true
+    WithFreeSpawnableActor@3:
+        TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
+        SpawnActor: transporter
+        Offset: 384,298, 0
+        MoveOffset: 1,2
+        Sticky: true
 		
 SULNUK2:
 	Inherits: ^MWBaseBuilding
@@ -283,28 +401,28 @@ SULNUK2:
 	Buildable:
 		IconPalette: raicon
 		BuildPaletteOrder: 60
-		Prerequisites: anyhq, ~techlevel.medium
+		Prerequisites: anyhq, ~scaffold
 		Queue: MBuilding.SUL
 		Description: Provides more livingspace. Livingspace increases over time by generating peasants.\nCan hold up to 5 peasents, spawntime depends on number of shacks and large huts. \ncheaper than the standard Shack.\n\n\n\n
 	Building:
-		Footprint: xx xx
-		Dimensions: 2,2
+		Footprint: xxx xx=
+		Dimensions: 3,2
 	CustomSellValue:
 		Value: 400
 	Health:
-		HP: 70000
+		HP: 100000
 		Shape: Rectangle
-			TopLeft: -924,-825
-			BottomRight: 924, 924
+			TopLeft: -1424,-924
+			BottomRight: 1424, 924
 	RevealsShroud:
 		Range: 4c0
 	Bib:
 	Power:
 		Amount: 16
 	Selectable:
-		Bounds: 48,40,0,9
+		Bounds:72,48,0,9
 	SelectionDecorations:
-		VisualBounds: 48,53,0,-4
+		VisualBounds: 72,53,0,-4
 	SpawnActorOnDeath@Farmer1:
 		Actor: e1new
 		Probability: 33
@@ -334,6 +452,15 @@ SULNUK2:
 		Weapons: DebrFurniture1, DebrFurniture2, DebrFurniture3, DebrFurniture4
 		Pieces: 1, 2
 		Range: 1c0, 5c0
+	ProvidesLivingspace:
+		Ammount: 9
+		SpawnOffset: -469,853,0
+		ExitCell: 1,2
+	WithFreeSpawnableActor@Chicken2:
+		SpawnActor: mwchick1
+		Offset: -469,853,0
+		MoveOffset:1,2
+		SpawnStart: false
  
 SULNUKE:
 	Inherits: ^MWBaseBuilding
@@ -348,13 +475,13 @@ SULNUKE:
 	CustomSellValue:
 		Value: 300
 	Tooltip:
-		Name: Shack
+		Name: Hut
 	ProvidesPrerequisite:
 		Prerequisite: anypower
 	Buildable:
 		IconPalette: raicon
 		BuildPaletteOrder: 10
-		Prerequisites: factnew
+		Prerequisites: factnew, ~scaffold
 		Description: Generates livingspace. Livingspace increases over time by generating peasants.\nCan hold up to 3 peasents, spawntime depends on number of shacks and large huts.\n\n\n\n
 		Queue: MBuilding.SUL
 	Building:
@@ -393,6 +520,15 @@ SULNUKE:
 		Weapons: DebrFurniture1, DebrFurniture2, DebrFurniture3, DebrFurniture4
 		Pieces: 2, 3
 		Range: 1c0, 5c0
+	ProvidesLivingspace:
+		Ammount: 4
+		SpawnOffset: 0,426,0
+		ExitCell: 1,2
+	WithFreeSpawnableActor@Chicken2:
+		SpawnActor: mwchick1
+		Offset: 0,426,0
+		MoveOffset:1,2
+		SpawnStart: false
 		
 SULBARR:
 	Inherits: ^MWBaseBuilding
@@ -413,9 +549,9 @@ SULBARR:
 	Buildable:
 		IconPalette: raicon
 		BuildPaletteOrder: 30
-		Prerequisites: anypower
+		Prerequisites: anypower, ~scaffold
 		Description: Trains Infantry only\n\n\n\n
-		Queue: MBuilding.SUL
+		Queue: MBuilding3.SUL
 	Building:
 		Footprint: xxx xxx
 		Dimensions: 3,2
@@ -437,7 +573,9 @@ SULBARR:
 	Exit@3:
 		SpawnOffset: -213,896,0
 		ExitCell: 0,2
-	Production:
+	WithActorProduction:
+		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
+		FindRadius: 15
 		Produces: MInfantry.SUL
 	ProductionQueue@1:
 		Type: MInfantry.SUL
@@ -445,6 +583,7 @@ SULBARR:
 		RequireOwner: false
 		LowPowerSlowdown: 3
 		Factions: sul
+		ReadyAudio:
 	ProductionBar:
 	Power:
 		Amount: -2
@@ -482,9 +621,9 @@ SULMYSTIC:
 	Buildable:
 		IconPalette: raicon
 		BuildPaletteOrder: 40
-		Prerequisites: proc
+		Prerequisites: proc, ~scaffold
 		Description: Trains Magical and Mystical Units\n\n\n\n
-		Queue: MBuilding.SUL
+		Queue: MBuilding3.SUL
 	Building:
 		Footprint: xxx xxx
 		Dimensions: 3,2
@@ -500,7 +639,9 @@ SULMYSTIC:
 	Exit@1:
 		SpawnOffset: 213,896,0
 		ExitCell: 0,2
-	Production:
+	WithActorProduction:
+		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
+		FindRadius: 15
 		Produces: MVehicle.SUL
 	ProductionQueue@1:
 		Type: MVehicle.SUL
@@ -508,6 +649,7 @@ SULMYSTIC:
 		RequireOwner: false
 		LowPowerSlowdown: 3
 		Factions: sul
+		ReadyAudio:
 	ProductionBar:
 	Power:
 		Amount: -3
@@ -552,7 +694,7 @@ SULCASTLE:
 	Buildable:
 		IconPalette: raicon
 		BuildPaletteOrder: 50
-		Prerequisites: proc
+		Prerequisites: proc, ~scaffold
 		Description: Can unlock Superweapons.\n Can unlock advanced tech.\nCan hold up to 4 nobles.\n\n\n\n
 		Queue: MBuilding.SUL
 	Building:
@@ -633,7 +775,7 @@ SULCASTLE:
 		Modifier: 33
 		RequiresCondition: (Tower1build + Tower2build + Tower3build + Tower4build) == 4
 	AirstrikePower:
-		Prerequisites: ~techlevel.superweapons, sultow1
+		Prerequisites: sultow1
 		RequiresCondition: Tower1build
 		Icon: sulspballiconsmall
 		ChargeTime: 210
@@ -666,7 +808,6 @@ SULCASTLE:
 		ValidStances: Ally, Neutral
 		Range: 5c0
 	SpawnActorPower@Tornado:
-		Prerequisites: ~techlevel.superweapons
 		Icon: sulturnxlicon
 		ChargeTime: 230
 		Actor: sulturnxl
@@ -733,7 +874,7 @@ SULTOW1:
 		BuildPaletteOrder: 80
 		Prerequisites: anyhq
 		Description: Grands acess to advanced tech at the barracks.\n  Allows Supportpower I \n  Heals surrounding units.\n\n
-		Queue: MBuilding.SUL#
+		Queue: MBuilding2.SUL
 		BuildLimit: 1
 	GrantConditionOnPrerequisite@Palace:
 		Condition: Palace
@@ -758,7 +899,7 @@ SULTOW2:
 		BuildPaletteOrder: 90
 		Prerequisites: anyhq
 		Description: Grands acess to advanced tech at the School of Mystic Teachings.\n\n\n\n
-		Queue: MBuilding.SUL
+		Queue: MBuilding2.SUL
 		BuildLimit: 1
 	GrantConditionOnPrerequisite@Palace:
 		Condition: Palace
@@ -784,7 +925,7 @@ SULTOW3:
 		BuildPaletteOrder: 100
 		Prerequisites: anyhq
 		Description: Grands acess to advanced tech and support powers at the Siege Workshop.\n\n\n\n
-		Queue: MDefenses.SUL
+		Queue: MBuilding2.SUL
 		BuildLimit: 1
 	GrantConditionOnPrerequisite@Palace:
 		Condition: Palace
@@ -810,7 +951,7 @@ SULTOW4:
 		BuildPaletteOrder: 110
 		Prerequisites: anyhq
 		Description: Grands acess to superb tech and super weapons.\n\n\n\n
-		Queue: MDefenses.SUL
+		Queue: MBuilding2.SUL
 		BuildLimit: 1
 	GrantConditionOnPrerequisite@Palace:
 		Condition: Palace
@@ -839,9 +980,9 @@ SULMILL:
 	Buildable:
 		IconPalette: raicon
 		BuildPaletteOrder: 20
-		Prerequisites: anypower
+		Prerequisites: anypower, ~scaffold
 		Description: Provides basic resource gathering for Crops and Grain.\n Comes with 2 farmers.\n Can only operate up to 6 farmers at once.\n\n\n\n
-		Queue: MBuilding.SUL
+		Queue: MBuilding2.SUL
 	Building:
 		Footprint: __ xx xx
 		Dimensions: 2,3
@@ -874,26 +1015,29 @@ SULMILL:
 		PipColor: Yellow
 		PipCount: 5
 		Capacity: 1000
-	FreeActor@1:
-		Actor: SULE6
-		SpawnOffset: 1,3
-		Facing: 64
-	FreeActor@2:
-		Actor: SULE6
-		SpawnOffset: 1,3
-		Facing: 64
 	FreeActor@3:
 		Actor: GHOSTPROC
 		SpawnOffset: 0,0
-		Facing: 64
-	FreeActor@4:
-		Actor: SULE6
-		SpawnOffset: 1,3
 		Facing: 64
 	ProximityExternalCondition@KILL:
 		Range: 1c0
 		ValidStances: Ally
 		Condition: KillRef
+    WithFreeSpawnableActor@1:
+        TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
+        SpawnActor: sule6
+        Offset: -512,1877, 0
+        MoveOffset: 0,2
+    WithFreeSpawnableActor@2:
+        TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
+        SpawnActor: sule6
+        Offset: -512,1877, 0
+        MoveOffset: 0,2
+    WithFreeSpawnableActor@3:
+        TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
+        SpawnActor: sule6
+        Offset: -512,1877, 0
+        MoveOffset: 0,2
 
 SULFIX:
 	Inherits: ^MWBaseBuilding
@@ -912,9 +1056,9 @@ SULFIX:
 	Buildable:
 		IconPalette: raicon
 		BuildPaletteOrder: 60
-		Prerequisites: proc
+		Prerequisites: proc, ~scaffold
 		Description: Provides Siege weapons construction.\n\n\n\n
-		Queue: MBuilding.SUL
+		Queue: MBuilding3.SUL
 	Building:
 		Footprint: xxx =xx
 		Dimensions: 3,2
@@ -937,7 +1081,9 @@ SULFIX:
 	Exit@1:
 		SpawnOffset: -200,200,0
 		ExitCell: 0,2
-	Production:
+	WithActorProduction:
+		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
+		FindRadius: 15
 		Produces: MSiege.SUL
 	ProductionQueue@2:
 		Type: MSiege.SUL
@@ -945,6 +1091,7 @@ SULFIX:
 		Factions: sul
 		RequireOwner: false
 		LowPowerSlowdown: 3
+		ReadyAudio:
 	ProductionBar:
 	WithIdleAnimation:
 		Interval: 360
@@ -970,7 +1117,6 @@ SULFIX:
 		PowerdownSound: DisablePower
 	DisabledOverlay:
 	ProduceActorPower:
-		Prerequisites: ~techlevel.superweapons
 		Icon: sulb2iconsmall
 		ChargeTime: 230
 		Actors: sulb2
@@ -1001,7 +1147,7 @@ SULE1:
 	Tooltip:
 		Name: Mubarizun
 	Buildable:
-		Description: General-purpose infantry.\n  Strong vs Infantry\n  Weak vs Everything\n  Can cut down trees.\n\n\n
+		Description: General-purpose infantry.\n  Strong vs Infantry\n  Weak vs Everything\n  Can cut down trees.\n\nTrains: 1 Peasant\n
 		IconPalette: raicon
 		BuildPaletteOrder: 10
 		Queue: MInfantry.SUL
@@ -1022,6 +1168,10 @@ SULE1:
 		DefaultAttackSequence: shoot
 	Armor:
 		Type: Leather
+	PersonValued:
+		ActorCount: 1
+		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
+
 		
 SULE2:
 	Inherits: ^Knight
@@ -1030,7 +1180,7 @@ SULE2:
 	Tooltip:
 		Name: Rashidun Champion
 	Buildable:
-		Description: Anti-Cavalry infantry.\n  Strong vs Cavalry.\n  Moderate vs Infantry\n  Deals damage when trampled by Cavalry\n  Can cut down trees.\n\n\n
+		Description: Anti-Cavalry infantry.\n  Strong vs Cavalry.\n  Moderate vs Infantry\n  Deals damage when trampled by Cavalry\n  Can cut down trees.\n\nTrains: 1 Peasant\n
 		IconPalette: raicon
 		BuildPaletteOrder: 30
 		Queue: MInfantry.SUL
@@ -1062,19 +1212,22 @@ SULE2:
 	Explodes:
 		Weapon: KilledPike
 		EmptyWeapon: KilledPike
-	Power:
-		Amount: -2
+	PersonValued:
+		ActorCount: 1
+		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
+
 		
 SULE3:
+	Inherits: ^Knight
+	Inherits@88: ^GameSettingsArcher
 	RevealsShroud:
 		Range: 6c0
-	Inherits: ^Knight
 	Valued:
 		Cost: 250
 	Tooltip:
 		Name: Bedouin
 	Buildable:
-		Description: Advanced Anti-infantry unit.\n  Strong vs Light Infantry\n  Weak vs Cavalry and heavy Infantry\n  Detects cloaked units\n  Can attack Aircrafts\n\n\n
+		Description: Advanced Anti-infantry unit.\n  Strong vs Light Infantry\n  Weak vs Cavalry and heavy Infantry\n  Detects cloaked units\n  Can attack Aircrafts\n\nTrains: 1 Peasant\n
 		IconPalette: raicon
 		BuildPaletteOrder: 20
 		Queue: MInfantry.SUL
@@ -1113,6 +1266,10 @@ SULE3:
 		CargoType: Archer
 	Crushable:
 		WarnProbability: 55
+	PersonValued:
+		ActorCount: 1
+		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
+
 		
 SULE4:
 	Inherits: ^Knight
@@ -1121,7 +1278,7 @@ SULE4:
 	Tooltip:
 		Name: Palace Guard
 	Buildable:
-		Description: Heavy Anti-Cavalry infantry that are able to regenerate thier health if not in combat.\n  Superb vs Cavalry.\n  Moderate vs Infantry\n  Cannot be trampled by Cavalry\n  Can cut down trees.\n\n\n
+		Description: Heavy Anti-Cavalry infantry that are able to regenerate thier health if not in combat.\n  Superb vs Cavalry.\n  Moderate vs Infantry\n  Cannot be trampled by Cavalry\n  Can cut down trees.\n\nTrains: 1 Peasant\n
 		IconPalette: raicon
 		BuildPaletteOrder: 30
 		Queue: MInfantry.SUL
@@ -1142,14 +1299,16 @@ SULE4:
 		DefaultAttackSequence: shoot
 	Armor:
 		Type: Heavy
-	Power:
-		Amount: -2
 	-Crushable:
 	SelfHealing@HealsConst:
 		Step: 900
 		HealIfBelow: 100
 		Delay: 25
 		DamageCooldown: 25
+	PersonValued:
+		ActorCount: 1
+		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
+
 		
 SULE5:
 	RevealsShroud:
@@ -1160,10 +1319,10 @@ SULE5:
 	Tooltip:
 		Name: Scimitar 
 	Buildable:
-		Description: Elite Infantry that is hard to hit when its moving.\n  Strong vs Infantry, Cavalry\n  Moderate vs Buildings\n  Detects cloaked units\n\n\n
+		Description: Elite Infantry that is hard to hit when its moving.\n  Strong vs Infantry, Cavalry\n  Moderate vs Buildings\n  Detects cloaked units\n\nTrains: 1 Peasant\n
 		IconPalette: raicon
 		BuildPaletteOrder: 40
-		Prerequisites: sultow1, sultow4, anyhq, ~techlevel.high
+		Prerequisites: sultow1, sultow4, anyhq
 		Queue: MInfantry.SUL
 	Mobile:
 		Speed: 175
@@ -1182,8 +1341,6 @@ SULE5:
 		DefaultAttackSequence: shoot
 	Armor:
 		Type: Heavy
-	Power:
-		Amount: -4
 	DetectCloaked:
 		Range: 2c0
 	GrantConditionOnMovement@Runfast:
@@ -1193,6 +1350,10 @@ SULE5:
 		RequiresCondition: Runfast
 	Crushable:
 		WarnProbability: 75
+	PersonValued:
+		ActorCount: 1
+		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
+
 		
 		
 SULE6:
@@ -1202,7 +1363,7 @@ SULE6:
 	QuantizeFacingsFromSequence:
 		Sequence: stand
 	Buildable:
-		Description: Gathers grains and Crops and Corn.\nDelivers to a windmill.\nCan collect chopped wood, lumber and goods\n\n
+		Description: Gathers grains and Crops and Corn.\nDelivers to a windmill.\nCan collect chopped wood, lumber and goods\n\nTrains: 1 Peasant\n
 		IconPalette: raicon
 		BuildPaletteOrder: 40
 		Queue: MInfantry.SUL
@@ -1248,6 +1409,10 @@ SULE6:
 	SelectionDecorations:
 		VisualBounds: 14,26,0,-6 
 	-Crushable:
+	PersonValued:
+		ActorCount: 1
+		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
+
 
 # Mystics
 
@@ -1260,7 +1425,7 @@ SULM1:
 	Tooltip:
 		Name: Apprentice
 	Buildable:
-		Description: Anti-infantry unit.\n  Strong vs Infantry\n  Weak vs Cavalry, Buildings\n  Detects cloaked units\n  Can spawn sceletons upon death infantry\n\n\n
+		Description: Anti-infantry unit.\n  Strong vs Infantry\n  Weak vs Cavalry, Buildings\n  Detects cloaked units\n  Can spawn sceletons upon death infantry\n\nTrains: 1 Peasant\n
 		IconPalette: raicon
 		BuildPaletteOrder: 10
 		Queue: MVehicle.SUL
@@ -1284,6 +1449,10 @@ SULM1:
 		Range: 2c0
 	Crushable:
 		WarnProbability: 95
+	PersonValued:
+		ActorCount: 1
+		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
+
 		
 SULM1SKELET:
 	Inherits: ^Knight
@@ -1346,15 +1515,16 @@ SULM1SKELET:
 		TargetTypes: Ground, Infantry, Skeleton
 		
 SULM2:
+	Inherits: ^Knight
+	Inherits@88: ^GameSettingsArcher
 	RevealsShroud:
 		Range: 6c0
-	Inherits: ^Knight
 	Valued:
 		Cost: 950
 	Tooltip:
 		Name: Djinn
 	Buildable:
-		Description: Advanced Multi-Role unit.\n  Can only badly hurt by magical or fire weapons.\n  Moderate vs Everything\n  Weak vs Buildings\n  Detects cloaked units at a very large area\n  Can attack Aircrafts\n\n
+		Description: Advanced Multi-Role unit.\n  Can only badly hurt by magical or fire weapons.\n  Moderate vs Everything\n  Weak vs Buildings\n  Detects cloaked units at a very large area\n  Can attack Aircrafts\n\nConsumes: 2 Peasants\n
 		IconPalette: raicon
 		Prerequisites: sultow2, sultow4, anyhq
 		BuildPaletteOrder: 70
@@ -1392,17 +1562,22 @@ SULM2:
 	-WithIdleOverlay@SNAKES:
 	Voiced:
 		VoiceSet: DjinVoice
+	PersonValued:
+		ActorCount: 2
+		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
+
 	
 SULM4:
-	RevealsShroud:
-		Range: 7c0
 	Inherits: ^Knight
+    Inherits@88: ^GameSettingsArcher
+    RevealsShroud:
+		Range: 7c0
 	Valued:
 		Cost: 600
 	Tooltip:
 		Name: Rattlemystic
 	Buildable:
-		Description: Advanced Anti-infantry unit.\n  Strong vs Infantry\n  Cannot attack Buildings\n  Detects cloaked units\n  Can stun Infantry with summoned snakes\n  Can slow down Cavalry with summoned snakes\n\n
+		Description: Advanced Anti-infantry unit.\n  Strong vs Infantry\n  Cannot attack Buildings\n  Detects cloaked units\n  Can stun Infantry with summoned snakes\n  Can slow down Cavalry with summoned snakes\n\nTrains: 1 Peasant\n
 		IconPalette: raicon
 		BuildPaletteOrder: 60
 		Queue: MVehicle.SUL
@@ -1427,12 +1602,18 @@ SULM4:
 		Range: 2c0
 	Crushable:
 		WarnProbability: 95
+	PersonValued:
+		ActorCount: 1
+		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
+
 
 # Siegeweapons
 
 SULB0:
 	Inherits: ^Siege
 	Inherits@2: ^GainsExperience
+    Inherits@88: ^GameSettingsArcher
+    Inherits@89: ^GameSettingsTowers
 	Valued:
 		Cost: 725
 	Tooltip:
@@ -1440,8 +1621,7 @@ SULB0:
 	Buildable:
 		IconPalette: raicon
 		BuildPaletteOrder: 15
-		Prerequisites: ~techlevel.medium
-		Description: Equipped with 2 Archers.\n  Very strong vs Light Infantry and Aircrafts \n  Moderate vs Cavalry\n  Weak vs Buildings\n\n\n
+		Description: Equipped with 2 Archers.\n  Very strong vs Light Infantry and Aircrafts \n  Moderate vs Cavalry\n  Weak vs Buildings\n\nTrains: 2 Peasants\n
 		Queue: MSiege.SUL
 	Mobile:
 		TurnSpeed: 2
@@ -1466,8 +1646,6 @@ SULB0:
 		Bounds: 26,26,0,-13
 	SelectionDecorations:
 		VisualBounds: 26,26,0,-13
-	Power:
-		Amount: -4
 	Targetable:
 		TargetTypes: Ground, Siege
 	Armament@1:
@@ -1538,10 +1716,16 @@ SULB0:
 		FireDelay: 10
 	Voiced:
 		VoiceSet: ElephantVoice
+	PersonValued:
+		ActorCount: 2
+		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
+
 		
 SULB1:
 	Inherits: ^Siege
 	Inherits@2: ^GainsExperience
+    Inherits@88: ^GameSettingsArcher
+    Inherits@89: ^GameSettingsTowers
 	Valued:
 		Cost: 1300
 	Tooltip:
@@ -1549,8 +1733,8 @@ SULB1:
 	Buildable:
 		IconPalette: raicon
 		BuildPaletteOrder: 20
-		Prerequisites: sultow3, ~techlevel.medium, anyhq
-		Description: The Siege Ballista is a missile weapon that launches two large projectile \nat a distant target.\n  Very strong vs Cavalry and Buildings \n  Moderate vs Infantry\n  Weak vs Aircrafts
+		Prerequisites: sultow3
+		Description: The Siege Ballista is a missile weapon that launches two large projectile \nat a distant target.\n  Very strong vs Cavalry and Buildings \n  Moderate vs Infantry\n  Weak vs Aircrafts\n\nTrains: 2 Peasants\n
 		Queue: MSiege.SUL
 	Mobile:
 		TurnSpeed: 2
@@ -1576,8 +1760,6 @@ SULB1:
 		Type: LightCavalry
 	Selectable:
 		Bounds: 35,35,0,-6
-	Power:
-		Amount: -4
 	Targetable:
 		TargetTypes: Ground, Siege
 	SpawnActorOnDeath:
@@ -1588,6 +1770,10 @@ SULB1:
 	SpawnActorOnDeath@2:
 		Actor: SIEGERUNNER
 		Probability: 50
+	PersonValued:
+		ActorCount: 2
+		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
+
 		
 SULB1.Husk:
 	Inherits: ^MedievalHusk
@@ -1607,6 +1793,8 @@ SULB1.Husk:
 SULB2:
 	Inherits: ^Siege
 	Inherits@2: ^GainsExperience
+    Inherits@88: ^GameSettingsArcher
+    Inherits@89: ^GameSettingsTowers
 	Valued:
 		Cost: 2500
 	Tooltip:
@@ -1650,8 +1838,6 @@ SULB2:
 		Type: MediumCavalry
 	Selectable:
 		Bounds: 35,35,0,-6
-	Power:
-		Amount: -5
 	Targetable:
 		TargetTypes: Ground, Siege
 	SpawnActorOnDeath:
@@ -1665,6 +1851,9 @@ SULB2:
 	SpawnActorOnDeath@3:
 		Actor: SIEGERUNNER
 		Probability: 50
+	PersonValued:
+		ActorCount: 0
+		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
 		
 SULB2.Husk:
 	Inherits: ^MedievalHusk
@@ -1717,16 +1906,19 @@ PLACEHOLDERBOLTS:
 		Name: bombs
 		Weapon: SpearBarrage
 		LocalOffset: 0,0,-43, 0,100,-43, 0,100,-43
+
+
 		
 SULM3:
 	Inherits: ^Helicopter
 	Inherits@EXPERIENCE: ^GainsExperience
+    Inherits@88: ^GameSettingsArcher
 	Valued:
 		Cost: 1000
 	Tooltip:
 		Name: Flying Carpet
 	Buildable:
-		Description: Man on a flying carpet.\n  Strong vs Ground Units\n  Weak vs Aircrafts\n  Cannot attack Aircrafts!!\n\n\n
+		Description: Man on a flying carpet.\n  Strong vs Ground Units\n  Weak vs Aircrafts\n  Cannot attack Aircrafts!!\n\nTrains: 1 Peasant\n
 		BuildPaletteOrder: 40
 		Prerequisites: anyhq
 		Queue: MVehicle.SUL
@@ -1759,12 +1951,14 @@ SULM3:
 		MoveSequence: run
 	SelectionDecorations:
 		VisualBounds: 24,24
-	Power:
-		Amount: -2
 	SpawnActorOnDeath@1:
 		Actor: SULM3.Husk
 	SpawnActorOnDeath@2:
 		Actor: SULM3.ManHusk
+	PersonValued:
+		ActorCount: 1
+		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
+
 		
 SULM3.Husk:
 	Inherits: ^HelicopterHusk
@@ -1834,7 +2028,7 @@ SULB3:
 	Tooltip:
 		Name: Giant Roc
 	Buildable:
-		Description: Giant Roc wich throws razor sharp faethers at the enemy.\n  Strong vs Ground Units and Aircrafts\n\n\n\n
+		Description: Giant Roc wich throws razor sharp faethers at the enemy.\n  Strong vs Ground Units and Aircrafts\n\nTrains: no Peasant\n\n
 		BuildPaletteOrder: 100
 		Prerequisites: sultow3, sultow4, anyhq
 		Queue: MSiege.SUL
@@ -1893,10 +2087,12 @@ SULB3:
 		MoveSequence: move
 	SelectionDecorations:
 		VisualBounds: 48,48
-	Power:
-		Amount: -4
 	SpawnActorOnDeath@1:
 		Actor: SULB3.Husk
+	PersonValued:
+		ActorCount: 0
+		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
+
 		
 SULB3.Husk:
 	Inherits: ^HelicopterHusk

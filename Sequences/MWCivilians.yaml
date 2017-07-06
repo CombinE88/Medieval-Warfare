@@ -54,6 +54,9 @@ deer01:
 		Length: 7
 		Facings: 8
 		Tick: 100
+	body:
+		Frames: 186, 193, 200, 207, 214, 221, 228, 235
+		Facings: 8
 		
 deer02:
 	stand:
@@ -87,6 +90,9 @@ deer02:
 		Length: 7
 		Facings: 8
 		Tick: 100
+	body:
+		Frames: 243, 250, 257, 264, 271, 278, 285, 292
+		Facings: 8
 		
 deer03:
 	stand:
@@ -115,6 +121,9 @@ deer03:
 		Length: 7
 		Facings: 8
 		Tick: 100
+	body:
+		Frames: 186, 193, 200, 207, 214, 221, 228, 235
+		Facings: 8
 		
 deer03a:
 	stand:
@@ -143,8 +152,68 @@ deer03a:
 		Length: 7
 		Facings: 8
 		Tick: 100
+	body:
+		Frames: 186, 193, 200, 207, 214, 221, 228, 235
+		Facings: 8
 
 #Humanoids		
+
+hunter:
+	Defaults:
+		UseTilesetExtension: true
+	stunned: sulm4
+		ZOffset: 125
+		Start: 312
+		Length: 2
+		Tick: 200
+		UseTilesetExtension: false
+	stand: 
+		Start: 122
+		Facings: 8
+	run: 
+		Start: 0
+		Length: 8
+		Facings: 8
+		Tick: 100
+	shoot: 
+		Tick: 100
+		Start: 66
+		Length: 7
+		Facings: 8
+	shoot2: 
+		Tick: 150
+		Start: 190
+		Length: 8
+		Facings: 8
+	die1: 
+		Start: 132
+		Length: 15
+		Tick: 80
+	die2: splatterdead
+		Length: *
+		Tick: 80
+		UseTilesetExtension: false
+	# poision
+	die3: 
+		Start: 163
+		Length: 15
+		Tick: 80
+	# ballista
+	die4: 
+		Start: 180
+		Length: 11
+		Tick: 80
+	die-crushed: e1rot
+		Start: 16
+		Length: 4
+		Tick: 1600
+		ZOffset: -511
+		UseTilesetExtension: false
+	die5: burningman
+		Length: *
+		Tick: 80
+		UseTilesetExtension: false
+
 		
 mwcivll:
 	stunned: sulm4

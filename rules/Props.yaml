@@ -118,6 +118,18 @@ MCVNEW.Husk:
 		PlayerPalette: raplayer
 	Burns:
 		Interval: 8
+        
+MCVNEW2.Husk:
+	Inherits: ^Husk
+	Tooltip:
+		Name: Supply wagon (Destroyed)
+	TransformOnCapture:
+		IntoActor: mwtentt
+	RenderSprites:
+		Image: mcvnew2.destroyed
+		PlayerPalette: raplayer
+	Burns:
+		Interval: 8
 		
 ORNI.Husk:
 	Inherits@1: ^SpriteActor

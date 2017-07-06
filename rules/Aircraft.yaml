@@ -1,5 +1,7 @@
 ORNI:
 	Inherits: ^AttackPlane
+    Inherits@88: ^GameSettingsArcher
+    Inherits@5: ^GameSettings
 	Valued:
 		Cost: 1200
 	Tooltip:
@@ -9,7 +11,7 @@ ORNI:
 		Pieces: 1, 3
 		Range: 1c512, 4c0
 	Buildable:
-		Description: The Ornithopter is an aircraft that flies by flapping its wings.\n  Strong vs Buildings, Cavalry\n  Weak vs Infantry\n  Moderate vs Aircrafts\n  Can attack Aircrafts\n\n\n
+		Description: The Ornithopter is an aircraft that flies by flapping its wings.\n  Strong vs Buildings, Cavalry\n  Weak vs Infantry\n  Moderate vs Aircrafts\n  Can attack Aircrafts\n\nTrains: 1 Peasant\n
 		BuildPaletteOrder: 40
 		Prerequisites: anyhq
 		Queue: MSiege.GDI
@@ -54,23 +56,25 @@ ORNI:
 	ReturnOnIdle:
 	SelectionDecorations:
 		VisualBounds: 48,32
-	Power:
-		Amount: -2
 	Voiced:
 		VoiceSet: VehicleVoice
 	SmokeTrailWhenDamaged:
 		Offset: -853,0,0
 		Interval: 2
+	PersonValued:
+		ActorCount: 1
+        ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
 	
 WARKITE:
 	Inherits: ^Helicopter
 	Inherits@EXPERIENCE: ^GainsExperience
+    Inherits@88: ^GameSettingsArcher
 	Valued:
 		Cost: 1000
 	Tooltip:
 		Name: WarKite
 	Buildable:
-		Description: The Warkite is a manned heavier-than-air craft with wing surfaces \nthat react against the air to create lift and drag.\n  Strong vs Infantry\n  Weak vs Cavalry and Buildings\n  Moderate vs Aircrafts\n  Can attack Aircrafts\n\n\n
+		Description: The Warkite is a manned heavier-than-air craft with wing surfaces \nthat react against the air to create lift and drag.\n  Strong vs Infantry\n  Weak vs Cavalry and Buildings\n  Moderate vs Aircrafts\n  Can attack Aircrafts\n\nTrains: 1 Peasant\n
 		BuildPaletteOrder: 40
 		Prerequisites: anyhq
 		Queue: MSiege.Nod
@@ -107,24 +111,26 @@ WARKITE:
 		AttackSequence: attack
 	SelectionDecorations:
 		VisualBounds: 48,32
-	Power:
-		Amount: -2
 	Voiced:
 		VoiceSet: VehicleVoice
 	SpawnActorOnDeath@1:
 		Actor: WARKITEMAN.Husk
 	SpawnActorOnDeath@2:
 		Actor: WARKITEKITE.Husk
+	PersonValued:
+		ActorCount: 1
+        ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
 	  
 DRGNRDR:
 	Inherits: ^Helicopter
 	Inherits@EXPERIENCE: ^GainsExperience
+    Inherits@88: ^GameSettingsArcher
 	Valued:
 		Cost: 2000
 	Tooltip:
 		Name: Dragon Rider
 	Buildable:
-		Description: The Dragon Rider is a legendary creature, \ntypically scaled or fire-spewing and with serpentine, \nreptilian or avian traits mounted and controlled by a Tamer.\n  Strong vs Infantry, Buildings and Aircrafts\n  Moderate vs Cavalry\n  Can attack Aircrafts\n\n\n
+		Description: The Dragon Rider is a legendary creature, \ntypically scaled or fire-spewing and with serpentine, \nreptilian or avian traits mounted and controlled by a Tamer.\n  Strong vs Infantry, Buildings and Aircrafts\n  Moderate vs Cavalry\n  Can attack Aircrafts\n\nTrains: 1 Peasant\n
 		BuildPaletteOrder: 100
 		Prerequisites: anycastle
 		Queue: MSiege.GDI
@@ -167,8 +173,6 @@ DRGNRDR:
 	Explodes:
 		Weapon: DragonFlame
 		EmptyWeapon: DragonFlame
-	Power:
-		Amount: -5
 	Voiced:
 		VoiceSet: DragonVoice
 	SpawnActorOnDeath@Prime:
@@ -176,6 +180,9 @@ DRGNRDR:
 		Probability: 33
 		OwnerType: InternalName
 		InternalOwner: Neutral
+	PersonValued:
+		ActorCount: 1
+        ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
 
 		
 DRAGONWALK:
@@ -223,8 +230,6 @@ DRAGONWALK:
 			PoisonDeath: 1
 			BallistaDeath: 1
 			BurnToDeath: 1
-	Power:
-		Amount: 0
 	Voiced:
 		VoiceSet: DragonVoice
 	ExternalCondition@INSTANT:
@@ -281,20 +286,22 @@ DAVINCI:
 	Explodes:
 		Weapon: HeliExplode
 		EmptyWeapon: HeliExplode
-	Power:
-		Amount: 0
 	Voiced:
 		VoiceSet: VehicleVoice
+	PersonValued:
+		ActorCount: 0
+		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
 	   
 WRBLN:
 	Inherits: ^Helicopter
 	Inherits@EXPERIENCE: ^GainsExperience
+    Inherits@88: ^GameSettingsArcher
 	Valued:
 		Cost: 1700
 	Tooltip:
 		Name: War Balloon
 	Buildable:
-		Description: The War Balloon is a lighter than air aircraft consisting\n of a bag, called an envelope, which contains heated air. An Soldier with a double barreled crossbow stands at the front.\n  Strong vs Infantry and Aircrafts\n  Moderate vs Cavalry and Buildings\n  Can attack Aircrafts\n\n\n
+		Description: The War Balloon is a lighter than air aircraft consisting\n of a bag, called an envelope, which contains heated air. An Soldier with a double barreled crossbow stands at the front.\n  Strong vs Infantry and Aircrafts\n  Moderate vs Cavalry and Buildings\n  Can attack Aircrafts\n\nTrains: 1 Peasant\n
 		BuildPaletteOrder: 100
 		Prerequisites: anycastle
 		Queue: MSiege.Nod
@@ -332,14 +339,15 @@ WRBLN:
 	Explodes:
 		Weapon: Balloonpop
 		EmptyWeapon: Balloonpop
-	Power:
-		Amount: -5
 	WithAttackAnimation:
 		AttackSequence: attack
 	SelectionDecorations:
 		VisualBounds: 48,48,0,-24
 	Voiced:
 		VoiceSet: BalloonVoice
+	PersonValued:
+		ActorCount: 1
+        ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
 			  
 PLACEHOLDERPLANE:
 	Inherits: ^Plane

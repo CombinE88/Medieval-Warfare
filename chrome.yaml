@@ -3,8 +3,12 @@ shellmapbits: chrome.png
 
 logos: chrome.png
 	eva:323,129,55,63
-	nod-load:0,256,256,256
+	nod-load:4,27,308,160
 	gdi-load:256,256,256,256
+	
+thanks: thanksto.png
+	thankv: 4,27,308,160
+
 
 paperframe: chromeMW.png
 	background: 240,120,48,48
@@ -199,18 +203,17 @@ progressbar-thumb: chromeMW.png
 	corner-bl: 120,476,5,5
 	corner-br: 155,475,5,4
 
-
 # A copy of panel-gray
 scrollpanel-bg: chromeMW.png
-	background: 4,365,31,31
-	border-r: 35,365,5,31
-	border-l: 0,365,4,31
-	border-b: 4,396,31,4
-	border-t: 4,360,31,5
-	corner-tl: 0,360,4,5
-	corner-tr: 35,360,5,5
-	corner-bl: 0,396,4,4
-	corner-br: 35,396,5,4
+	background: 447,448,57,57
+	border-r: 504,448,5,57
+	border-l: 442,448,5,57
+	border-b: 447,504,57,5
+	border-t: 447,443,57,5
+	corner-tl: 442,443,5,5
+	corner-tr: 504,443,5,5
+	corner-bl: 442,504,5,5
+	corner-br: 504,504,5,5
 
 scrollpanel-button: chromeMW.png
 	background: 151,80,57,57
@@ -514,9 +517,11 @@ strategic: strategic.png
 sidebar-bits: chromeMW.png
 	indicator-left: 336,265,16,8
 	indicator-right: 336,273,16,8
+	indicator-peasant: 264, 264, 24, 24
 	production-tooltip-time: 192, 1, 24, 24
 	production-tooltip-power: 264, 264, 24, 24
 	production-tooltip-cost: 240, 264, 24, 24
+	production-tooltip-actors: 264, 264, 24, 24
 
 production-icons: chromeMW.png
 	building: 0,0,24,24
@@ -537,6 +542,12 @@ production-icons: chromeMW.png
 	support: 120,0,24,24
 	support-disabled: 120,24,24,24
 	support-alert: 120,48,24,24
+	building2: 360,264,24,24
+	building2-disabled: 360,288,24,24
+	building2-alert: 360,312,24,24
+	building3: 384,264,24,24
+	building3-disabled: 384,288,24,24
+	building3-alert: 384,312,24,24
 
 order-icons: chromeMW.png
 	options: 120,0,24,24

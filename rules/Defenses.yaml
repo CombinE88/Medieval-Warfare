@@ -13,7 +13,7 @@ GTWNEW:
 	Buildable:
 		Description: A wooden tower, stationed with 2 archers.\n  Strong vs Infantry, Light Cavalry\n  Weak vs Siege weapons and Heavy Cavalry \n  Cannot target Aircraft (because of I say so)\n\n\n
 		BuildPaletteOrder: 20
-		Prerequisites: barracks
+		Prerequisites: barracks, ~scaffold
 		Queue: MDefenses.GDI, MDefenses.Nod
 		BuildDuration: 1600
 		BuildDurationModifier: 40
@@ -82,6 +82,9 @@ GTWNEW:
 		Weapons: SmallWood1, SmallWood2, SmallWood3, LargeWood1
 		Pieces: 2, 3
 		Range: 0c512, 3c0
+	PersonValued:
+		ActorCount: 2
+		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
 		
 WTW:
 	Inherits: ^MWDefense
@@ -163,7 +166,7 @@ SAMNEW:
 	Buildable:
 		Description: Because of the 4 elastic limbs out of black wood \nthe Anti-Aircraft Ballista is designed to shoot down targets \nin the air with a very high speed missile.\n  Very strong vs Aircraft\n  Cannot target Ground units.\n\n\n
 		BuildPaletteOrder: 40
-		Prerequisites: barracks
+		Prerequisites: barracks, ~scaffold
 		Queue: MDefenses.Nod
 		BuildDuration: 1700
 		BuildDurationModifier: 40
@@ -203,6 +206,9 @@ SAMNEW:
 		VisualBounds: 50,50,0,-10
 	Selectable:
 		Bounds: 50,50,0,-10
+	PersonValued:
+		ActorCount: 2
+		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
 
 TRIBU:
 	Inherits: ^MWDefense
@@ -215,7 +221,7 @@ TRIBU:
 	Buildable:
 		Description: The Counterweight Trebuchet is a type of siege engine \nmost frequently used to outrange other siege weapons.\n  Requires power to operate.\n  Strong vs all Ground units\n  Cannot target Aircraft\n\n\n
 		BuildPaletteOrder: 50
-		Prerequisites: anycastle
+		Prerequisites: anycastle, ~scaffold
 		Queue: MDefenses.Nod
 		BuildDuration: 3120
 		BuildDurationModifier: 40
@@ -265,6 +271,9 @@ TRIBU:
 		Range: 0c512, 3c0
 	 RequiresPower:
 	 DisabledOverlay:
+	PersonValued:
+		ActorCount: 3
+		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12 
 		
 BATO:
 	Inherits: ^MWDefense
@@ -277,7 +286,7 @@ BATO:
 	Buildable:
 		Description: Because of its smaller design and light weighted missiles, \nthe ballista on top of the tower can target \neither ground or aircraft units.\n  Strong vs ground units\n  Weak vs close by units\n  Long distance\n Can target Aircraft\n\n\n
 		BuildPaletteOrder: 50
-		Prerequisites: anyarmory
+		Prerequisites: anyarmory, ~scaffold
 		Queue: MDefenses.GDI
 		BuildDuration: 2880
 		BuildDurationModifier: 40
@@ -334,6 +343,9 @@ BATO:
 		DeathSequencePalette: raplayer 
 	 RequiresPower:
 	 DisabledOverlay:
+	PersonValued:
+		ActorCount: 3
+		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
 		
 GUNNEW:
 	Inherits: ^MWDefense
@@ -346,7 +358,7 @@ GUNNEW:
 	Buildable:
 		Description: The early Cannon uses gunpowder to throw a large boulder. \nIt's most effectively used against large targets.\n  Strong vs Cavalry and Spectral Units\n  Weak vs Infantry\n\n\n
 		BuildPaletteOrder: 30
-		Prerequisites: barracks
+		Prerequisites: barracks, ~scaffold
 		Queue: MDefenses.GDI, MDefenses.Nod
 		IconPalette: raicon
 		BuildDuration: 1440
@@ -389,6 +401,9 @@ GUNNEW:
 		Weapons: SmallStone1, SmallStone2, LargeStone1
 		Pieces: 2, 3
 		Range: 0c512, 3c0
+	PersonValued:
+		ActorCount: 1
+		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
 		
 CSTLWLL:
 	Inherits: ^Wall

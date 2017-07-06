@@ -1,3 +1,133 @@
+transporter:
+	stunned: sulm4
+		ZOffset: 125
+		Start: 312
+		Length: 2
+		Tick: 200
+	stand: mwcivconst
+		Start: 146
+		Facings: 8
+	run: mwcivconst
+		Start: 0
+		Length: 8
+		Facings: 8
+		Tick: 100
+	panic-stand: mwcivconst
+		Start: 135
+		Facings: 8
+	panic-run: mwcivconst
+		Start: 65
+		Length: 8
+		Facings: 8
+		Tick: 100
+	standempty: mwciv9
+		Start: 146
+		Facings: 8
+	runempty: mwciv9
+		Start: 0
+		Length: 8
+		Facings: 8
+		Tick: 100
+	panic-standempty: mwciv9
+		Start: 135
+		Facings: 8
+	panic-runempty: mwciv9
+		Start: 65
+		Length: 8
+		Facings: 8
+		Tick: 100
+	die1: mwciv9
+		Start: 156
+		Length: 15
+		Tick: 80
+	# large hit
+	die2: splatterdead
+		Length: *
+		Tick: 80
+	# poision
+	die3: mwciv9
+		Start: 187
+		Length: 15
+		Tick: 80
+	# ballista
+	die4: mwciv9
+		Start: 203
+		Length: 11
+		Tick: 80
+	die-crushed: e1rot
+		Start: 16
+		Length: 4
+		Tick: 1600
+		ZOffset: -511
+	die5: burningman
+		Length: *
+		Tick: 80
+
+sultransporter:
+	stunned: sulm4
+		ZOffset: 125
+		Start: 312
+		Length: 2
+		Tick: 200
+	stand: mwciv9sul
+		Start: 146
+		Facings: 8
+	run: mwciv9sul
+		Start: 0
+		Length: 8
+		Facings: 8
+		Tick: 100
+	panic-stand: mwciv9sul
+		Start: 135
+		Facings: 8
+	panic-run: mwciv9sul
+		Start: 65
+		Length: 8
+		Facings: 8
+		Tick: 100
+	standempty: mwciv9
+		Start: 146
+		Facings: 8
+	runempty: mwciv9
+		Start: 0
+		Length: 8
+		Facings: 8
+		Tick: 100
+	panic-standempty: mwciv9
+		Start: 135
+		Facings: 8
+	panic-runempty: mwciv9
+		Start: 65
+		Length: 8
+		Facings: 8
+		Tick: 100
+	die1: mwciv9
+		Start: 156
+		Length: 15
+		Tick: 80
+	# large hit
+	die2: splatterdead
+		Length: *
+		Tick: 80
+	# poision
+	die3: mwciv9
+		Start: 187
+		Length: 15
+		Tick: 80
+	# ballista
+	die4: mwciv9
+		Start: 203
+		Length: 11
+		Tick: 80
+	die-crushed: e1rot
+		Start: 16
+		Length: 4
+		Tick: 1600
+		ZOffset: -511
+	die5: burningman
+		Length: *
+		Tick: 80
+		
 koenig:
 	make: koenig
 		Start: 176
@@ -174,7 +304,7 @@ engeneer:
 		Facings: 8
 		Tick: 100
 	shoot: baumei
-		Tick: 100
+		Tick: 150
 		Start: 66
 		Length: 7
 		Facings: 8

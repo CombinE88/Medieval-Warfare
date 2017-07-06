@@ -1,6 +1,34 @@
 Container@INGAME_ROOT:
 	Logic: LoadIngamePlayerOrObserverUILogic
 	Children:
+		Container@SYSTEM_INFO_PROMPT:
+			X: (WINDOW_RIGHT - WIDTH)/2
+			Y: (WINDOW_BOTTOM - HEIGHT)/2
+			Width: 490
+			Height: 222
+			Children:
+		Container@PERFORMANCE_INFO:
+			Logic: PerfDebugLogic
+			Children:
+				Label@PERF_TEXT:
+					X: 40
+					Y: 40
+					Width: 170
+					Height: 40
+					Contrast: true
+					VAlign: Top
+				Background@GRAPH_BG:
+					X: WINDOW_RIGHT-WIDTH-31
+					Y: 31
+					Width: 220
+					Height: 220
+					Background: panel-black
+					Children:
+						PerfGraph@GRAPH:
+							X: 10
+							Y: 10
+							Width: 200
+							Height: 200
 		Container@MUSICBUTTONS:
 			Logic: MusicControllerLogic
 			Children:
@@ -34,7 +62,7 @@ Container@INGAME_ROOT:
 					Height: WINDOW_BOTTOM
 				Container@GAME_TIMER_BLOCK:
 					Logic: GameTimerLogic
-					X: WINDOW_RIGHT - 400
+					X: WINDOW_RIGHT - 420
 					Y: WINDOW_BOTTOM - 240
 					Width: 100
 					Height: 55
@@ -300,21 +328,63 @@ Container@PLAYER_WIDGETS:
 							TooltipTemplate: SIMPLE_TOOLTIP
 							IndicatorImage: indicator-right
 				Background@CASH:
-					X: 40
+					X: 30
 					Y: 15
-					Width: PARENT_RIGHT / 2
-					Height: 30
+					Width: PARENT_RIGHT / 2 + 10
+					Height: 120
 					Background: panel-gray
 					Children:
 						LabelWithTooltip@CASH:
 							Logic: IngameCashCounterLogic
-							Y: 14
-							X: 0
+							Y: 15
+							X: 15
 							Width: PARENT_RIGHT
 							Height: 0
-							Align: Center
+							Align: Left
 							Font: Bold
-							Text: ${0}
+							Text: Gold: {0}
+							TextColor: FCD054
+							ContrastColorDark: 7E682A
+						LabelWithTooltip@FULLPOP:
+							Logic: IngameFullPopulationCounterLogic
+							Y: 75
+							X: 15
+							Width: PARENT_RIGHT
+							Height: 0
+							Align: Left
+							Font: Bold
+							Text: Sum Population: {0}
+						LabelWithTooltip@POP:
+							Logic: IngamePopulationCounterLogic
+							Y: 35
+							X: 15
+							Width: PARENT_RIGHT
+							Height: 0
+							Align: Left
+							Font: Bold
+							Text: Peasants: {0}
+							TextColor: 2ECC71
+							ContrastColorDark: 12512D
+						LabelWithTooltip@USEDPOP:
+							Logic: IngameUsedPopulationCounterLogic
+							Y: 55
+							X: 15
+							Width: PARENT_RIGHT
+							Height: 0
+							Align: Left
+							Font: Bold
+							Text: Working: {0}
+							TextColor: B56357
+							ContrastColorDark: 482722
+						LabelWithTooltip@MAXPOP:
+							Logic: IngameMaxPopulationCounterLogic
+							Y: 95
+							X: 15
+							Width: PARENT_RIGHT
+							Height: 0
+							Align: Left
+							Font: Bold
+							Text: Free Beds: {0}
 				Container@SUPPORT_POWERS:
 					Logic: SupportPowerBinLogic
 					X: PARENT_RIGHT - 13 - 72
@@ -346,7 +416,7 @@ Container@PLAYER_WIDGETS:
 			Children:
 				MenuButton@OPTIONS_BUTTON:
 					Key: escape
-					X: 228
+					X: 208
 					Y: 20
 					Width: 50
 					Height: 44
@@ -362,7 +432,7 @@ Container@PLAYER_WIDGETS:
 							ImageName: options
 				Button@BEACON_BUTTON:
 					Logic: BeaconOrderButtonLogic
-					X: 228
+					X: 208
 					Y: 69
 					Width: 50
 					Height: 44
@@ -376,7 +446,7 @@ Container@PLAYER_WIDGETS:
 							ImageCollection: order-icons
 				Button@SELL_BUTTON:
 					Logic: SellOrderButtonLogic
-					X: 228
+					X: 208
 					Y: 118
 					Width: 50
 					Height: 44
@@ -390,7 +460,7 @@ Container@PLAYER_WIDGETS:
 							ImageCollection: order-icons
 				Button@REPAIR_BUTTON:
 					Logic: RepairOrderButtonLogic
-					X: 228
+					X: 208
 					Y: 167
 					Width: 50
 					Height: 44
@@ -431,22 +501,22 @@ Container@PLAYER_WIDGETS:
 									Width: PARENT_RIGHT-2
 									Height: PARENT_BOTTOM-2
 									Skippable: false
-				Background@POWERBAR_PANEL:
-					Logic: IngamePowerBarLogic
-					X: 207
-					Y: 15
-					Width: 20
-					Height: 200
-					Background: panel-darkred
-					Children:
-						ResourceBar@POWERBAR:
-							X: 5
-							Y: 5
-							Width: PARENT_RIGHT-12
-							Height: PARENT_BOTTOM-10
-							TooltipContainer: TOOLTIP_CONTAINER
-							TooltipTemplate: SIMPLE_TOOLTIP
-							IndicatorImage: indicator-left
+		Background@POWERBAR_PANEL:
+			Logic: IngamePeasantSpawnBarLogic
+			X: 290
+			Y: WINDOW_BOTTOM - 216
+			Width: WINDOW_RIGHT - 580
+			Height: 16
+			Background:
+			Children: panel-black
+				ResourceBar@POWERBAR:
+					X: 6
+					Y: 5
+					Width: PARENT_RIGHT-6
+					Height: PARENT_BOTTOM-5
+					TooltipContainer: TOOLTIP_CONTAINER
+					TooltipTemplate: SIMPLE_TOOLTIP
+					IndicatorImage: indicator-left
 		Background@SIDEBAR_BACKGROUND2:
 			Logic: MenuButtonsChromeLogic
 			X: 290
@@ -464,29 +534,57 @@ Container@PLAYER_WIDGETS:
 						ProductionTypeButton@BUILDING:
 							X: PARENT_RIGHT - 150
 							Y: 4
-							Width: 150
+							Width: 75
 							Height: ((200 - 10) / 5)
-							TooltipText: Buildings
+							TooltipText: Village Buildings
 							TooltipContainer: TOOLTIP_CONTAINER
 							ProductionGroup: Building
 							HotkeyName: ProductionTypeBuildingKey
 							Children:
 								Image@ICON:
-									X: PARENT_RIGHT / 2
+									X: PARENT_RIGHT / 2 -12
+									Y: 6
+									ImageCollection: production-icons
+						ProductionTypeButton@BUILDING2:
+							X: PARENT_RIGHT - 150 + 75
+							Y: 4
+							Width: 75
+							Height: ((200 - 10) / 5)
+							TooltipText: Resource Buildings
+							TooltipContainer: TOOLTIP_CONTAINER
+							ProductionGroup: Building2
+							HotkeyName: ProductionTypeBuildingKey
+							Children:
+								Image@ICON:
+									X: PARENT_RIGHT / 2 -12
+									Y: 6
+									ImageCollection: production-icons
+						ProductionTypeButton@BUILDING3:
+							X: PARENT_RIGHT - 150 
+							Y: ((200 - 20) / 5) * 1 + 6
+							Width: 75
+							Height: ((200 - 10) / 5)
+							TooltipText: Military Buildings
+							TooltipContainer: TOOLTIP_CONTAINER
+							ProductionGroup: Building3
+							HotkeyName: ProductionTypeBuildingKey
+							Children:
+								Image@ICON:
+									X: PARENT_RIGHT / 2 -12
 									Y: 6
 									ImageCollection: production-icons
 						ProductionTypeButton@DEFENCE:
-							X: PARENT_RIGHT - 150
+							X: PARENT_RIGHT - 150 + 75
 							Y: ((200 - 20) / 5) * 1 + 6
-							Width: 150
+							Width: 75
 							Height: ((200 - 10) / 5)
-							TooltipText: Support
+							TooltipText: Defensive Buildings
 							TooltipContainer: TOOLTIP_CONTAINER
 							ProductionGroup: Defence
 							HotkeyName: ProductionTypeDefenseKey
 							Children:
 								Image@ICON:
-									X: PARENT_RIGHT / 2
+									X: PARENT_RIGHT / 2 -12
 									Y: 6
 									ImageCollection: production-icons
 						ProductionTypeButton@INFANTRY:
@@ -500,7 +598,7 @@ Container@PLAYER_WIDGETS:
 							HotkeyName: ProductionTypeInfantryKey
 							Children:
 								Image@ICON:
-									X: PARENT_RIGHT / 2
+									X: PARENT_RIGHT / 2 -12
 									Y: 6
 									ImageCollection: production-icons
 						ProductionTypeButton@VEHICLE:
@@ -514,7 +612,7 @@ Container@PLAYER_WIDGETS:
 							HotkeyName: ProductionTypeVehicleKey
 							Children:
 								Image@ICON:
-									X: PARENT_RIGHT / 2
+									X: PARENT_RIGHT / 2 -12
 									Y: 6
 									ImageCollection: production-icons
 						ProductionTypeButton@AIRCRAFT:
@@ -528,7 +626,7 @@ Container@PLAYER_WIDGETS:
 							HotkeyName: ProductionTypeAircraftKey
 							Children:
 								Image@ICON:
-									X: PARENT_RIGHT / 2
+									X: PARENT_RIGHT / 2 -12
 									Y: 6
 									ImageCollection: production-icons
 				ProductionTabs@PRODUCTION_TABS:

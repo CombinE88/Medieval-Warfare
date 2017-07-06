@@ -1,25 +1,80 @@
-Stronghold_Castle_Jam: Stronghold - Castle Jam
-Stronghold_Happy_Times: Stronghold - Happy Times
-Stronghold_Matts_Jig: Stronghold - Matt's Jig
-Stronghold_Under_an_Old_Tree: Stronghold - Under an Old Trees
-Stronghold_Darktime: Stronghold - Darktime
-Stronghold_Sad_Times: Stronghold - Sad Times
-Stronghold_Exploration: Stronghold - Exploration
-Stronghold_Honor_Medley: Stronghold - Honor Medley
-Stronghold_Paranoia: Stronghold - Paranoia
-Stronghold_Stained_Glas: Stronghold - Stained Glas
-Stronghold_Stix_and_Stone_Medley: Stronghold - Stix and Stone Medley
-Stronghold_The_Maiden: Stronghold - The Maiden
-SC_Trancefusion: Stronghold Crusader - Trancefusion
-SC_The_Last_Drop: Stronghold Crusader - The Last Drop
-SC_Sandal_Maker: Stronghold Crusader - Sandal Maker
-SC_Oudunnit: Stronghold Crusader - Oudunnit
-SC_Gorn_With_The_Wind: Stronghold Crusader - Gorn With The Wind
-SC_Dar_Meshq: Stronghold Crusader - Dar Meshq
-SC_Crusader_Solo: Stronghold Crusader - Crusader Solo
-SC_Crusader: Stronghold Crusader - Crusader
-SC_Caravan_Ambient: Stronghold Crusader - Caravan Ambient
-SC_Caravan: Stronghold Crusader - Caravan
-SC_A_Panel_In_The_Glass: Stronghold Crusader - A Panel In The Glass
-theme: Stronghold - The Chant
-	Hidden: true
+Alone: Vindsvept - Alone
+As_we_March: Vindsvept - As we March
+A_Night_at_the_Eolian: Vindsvept - A Night at the Eolian
+A_Song_from_the_Deep: Vindsvept - A Song from the Deep
+Bringer_of_Rain: Vindsvept - Bringer of Rain
+Chasing_Shadows: Vindsvept - Chasing Shadows
+Chasing_the_Traitor: Vindsvept - Chasing the Traitor
+Clarity: Vindsvept - Clarity
+Clockwork: Vindsvept - Clockwork
+Deliverance: Vindsvept - Deliverance
+Distant: Vindsvept - Distant
+Diverging_Realms: Vindsvept - Diverging Realms
+Fall_of_the_Leaf: Vindsvept - Fall of the Leaf
+Farseer: Vindsvept - Farseer
+Flying_High: Vindsvept - Flying High
+Forsaken: Vindsvept - Forsaken
+Guardian: Vindsvept - Guardian
+Hearthfire: Vindsvept - Hearthfire
+Heart_of_Ice: Vindsvept - Heart of Ice
+Heart_of_Thunder: Vindsvept - Heart of Thunder
+Hiding_in_Solitude: Vindsvept - Hiding in Solitude
+Hollow: Vindsvept - Hollow
+Hugin_s_Flight: Vindsvept - Hugin's Flight
+Illuminate: Vindsvept - Illuminate
+Into_the_Mind_s_Eye: Vindsvept - Into the Mind's Eye
+Into_the_Mind_s_Eye_part_two: Vindsvept - Into the Mind's Eye part two
+In_Honour_of_the_King: Vindsvept - In Honour of the King
+In_Honour_of_the_King_part_two: Vindsvept - In Honour of the King part two
+In_Winter_s_Grasp: Vindsvept - In Winter's Grasp
+Lake_of_Light: Vindsvept - Lake of Light
+Last_Light: Vindsvept - Last Light
+Last_Stand: Vindsvept - Last Stand
+Let_the_Embers_Burn: Vindsvept - Let the Embers Burn
+Light_the_Bonfire: Vindsvept - Light the Bonfire
+Lost_but_not_Forgotten: Vindsvept - Lost but not Forgotten
+Lycanthropy: Vindsvept - Lycanthropy
+Moonless_Night: Vindsvept - Moonless Night
+Mourning: Vindsvept - Mourning
+Munin_s_Return: Vindsvept - Munin's Return
+Never_to_Return: Vindsvept - Never to Return
+New_Hope: Vindsvept - New Hope
+Nightfall: Vindsvept - Nightfall
+On_the_Other_Side: Vindsvept - On the Other Side
+On_the_Twilight_Strand: Vindsvept - On the Twilight Strand
+Over_the_Mountain: Vindsvept - Over the Mountain
+Rain: Vindsvept - Rain
+Reverie: Vindsvept - Reverie
+Rite_of_Passage: Vindsvept - Rite of Passage
+Sanctuary: Vindsvept - Sanctuary
+Satyr: Vindsvept - Satyr
+Seven_Flowers: Vindsvept - Seven Flowers
+Shapeshifter: Vindsvept - Shapeshifter
+Shattered_Sun: Vindsvept - Shattered Sun
+Shimmering_in_the_Shallows: Vindsvept - Shimmering in the Shallows
+Skymning: Vindsvept - Skymning
+Sleeper: Vindsvept - Sleeper
+Sombre: Vindsvept - Sombre
+Spellbound: Vindsvept - Spellbound
+Spirit_Of_The_Wind: Vindsvept - Spirit Of The Wind
+Storm: Vindsvept - Storm
+The_Fae: Vindsvept - The Fae
+The_Journey_Home: Vindsvept - The Journey Home
+The_Mad_Harvester: Vindsvept - The Mad Harvester
+The_Oracle_s_Prophecy: Vindsvept - The Oracle's Prophecy
+The_Siren_s_Cadence: Vindsvept - The Siren's Cadence
+Through_the_Fog: Vindsvept - Through the Fog
+Through_the_Woods_we_Ran: Vindsvept - Through the Woods we Ran
+Untamed: Vindsvept - Untamed
+Wanderer: Vindsvept - Wanderer
+Wanderer_part_two: Vindsvept - Wanderer part two
+Wayworn: Vindsvept - Wayworn
+Weaving_the_Skies: Vindsvept - Weaving the Skies
+Westward: Vindsvept - Westward
+What_Lies_Beyond: Vindsvept - What Lies Beyond
+Wherever_the_Path_May_Lead: Vindsvept - Wherever the Path May Lead
+Wildfire_part_one: Vindsvept - Wildfire part one
+Wildfire_part_two: Vindsvept - Wildfire part two
+
+theme: Vindsvept - He Has Escaped
+	Hidden: Vindsvept - true

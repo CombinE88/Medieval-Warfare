@@ -586,6 +586,23 @@ DEER01:
 		Name: Wildlife
 	WithInfantryBody:
 		IdleSequences: idle1
+	SpawnActorOnDeath@Lootable:
+		Actor: DEER01.Husk
+		OwnerType: Killer
+		SkipMakeAnimations: False
+		
+DEER01.Husk:
+	Inherits: ^DeadWildlife
+	Health:
+		HP: 1500
+	Tooltip:
+		Name: Wildlife (Dead)
+	RenderSprites:
+		PlayerPalette: mwcivilianplayer
+		Image: deer01
+	WithFacingSpriteBody:
+		StartSequence: die1
+		Sequence: body
 
 DEER02:
 	Inherits: ^MWWildlife
@@ -596,6 +613,23 @@ DEER02:
 		Name: Wildlife
 	WithInfantryBody:
 		IdleSequences: idle1, idle2
+	SpawnActorOnDeath@Lootable:
+		Actor: DEER02.Husk
+		OwnerType: Killer
+		SkipMakeAnimations: False
+		
+DEER02.Husk:
+	Inherits: ^DeadWildlife
+	Health:
+		HP: 500
+	Tooltip:
+		Name: Wildlife (Dead)
+	RenderSprites:
+		PlayerPalette: mwcivilianplayer
+		Image: deer02
+	WithFacingSpriteBody:
+		StartSequence: die1
+		Sequence: body
 
 DEER03:
 	Inherits: ^MWWildlife
@@ -606,6 +640,23 @@ DEER03:
 		Name: Wildlife
 	WithInfantryBody:
 		IdleSequences: idle1
+	SpawnActorOnDeath@Lootable:
+		Actor: DEER03.Husk
+		OwnerType: Killer
+		SkipMakeAnimations: False
+		
+DEER03.Husk:
+	Inherits: ^DeadWildlife
+	Tooltip:
+		Name: Wildlife (Dead)
+	Health:
+		HP: 1200
+	RenderSprites:
+		PlayerPalette: mwcivilianplayer
+		Image: deer03
+	WithFacingSpriteBody:
+		StartSequence: die1
+		Sequence: body
 
 DEER03A:
 	Inherits: ^MWWildlife
@@ -616,3 +667,113 @@ DEER03A:
 		Name: Wildlife
 	WithInfantryBody:
 		IdleSequences: idle1
+	SpawnActorOnDeath@Lootable:
+		Actor: DEER03A.Husk
+		OwnerType: Killer
+		SkipMakeAnimations: False
+		
+DEER03A.Husk:
+	Inherits: ^DeadWildlife
+	Health:
+		HP: 700
+	Tooltip:
+		Name: Wildlife (Dead)
+	RenderSprites:
+		PlayerPalette: mwcivilianplayer
+		Image: deer03a
+	WithFacingSpriteBody:
+		StartSequence: die1
+		Sequence: body
+
+HUNTER:
+	Inherits: ^Knight
+	RevealsShroud:
+		Range: 6c0
+	Valued:
+		Cost: 400
+	Tooltip:
+		Name: Hunter
+	Mobile:
+		Speed: 56
+	Health:
+		HP: 13000
+	RenderSprites:
+		PlayerPalette: mwcivilianplayer
+	WithInfantryBody:
+		DefaultAttackSequence: shoot
+		AttackSequences:
+			secondary: shoot
+			primary: shoot2
+			tairt: shoot2
+	Armor:
+		Type: Leather
+	Power:
+		Amount: 0
+	-Selectable:
+	Targetable:
+		TargetTypes: Ground, Infantry, Hunterer
+	RejectsOrders:
+	WithDeathAnimation:
+		DeathSequencePalette: mwcivilianplayer
+	AttackWander: 
+		WanderMoveRadius: 2
+		ReduceMoveRadiusDelay: 2
+		MinMoveDelay: 100
+		MaxMoveDelay: 500
+	AutoTarget:
+		ScanRadius: 30
+		InitialStance: AttackAnything
+	AttackFrontal:
+		Armaments: primary, secondary, tairt
+		IgnoresVisibility: true	
+	AttackMove:
+	ExternalCondition@DeerHunter:
+		Condition: DeerHunter
+	ExternalCondition@LootingDeer:
+		Condition: LootingDeer
+	ExternalCondition@Unload:
+		Condition: UnloadDeer
+	Armament@Huntdeer:
+		Weapon: BowNArrowHunter
+		Name: primary
+		TargetStances: Neutral, Ally
+		IgnoresVisibility: True
+		RequiresCondition: (FullFood + LootingDeer) == 0
+	Armament@HuntdeerDummy:
+		Weapon: BowNArrowHunterDUMMY
+		Name: secondary
+		TargetStances: Neutral, Ally
+		IgnoresVisibility: True
+		RequiresCondition: (FullFood + LootingDeer) == 0
+	Armament@GatherDeer:
+		Weapon: HunterGather
+		Name: primary
+		TargetStances: Ally, Neutral
+		IgnoresVisibility: True
+		RequiresCondition: !FullFood
+	Armament@Unload:
+		Weapon: HunterUnload
+		Name: tairt
+		TargetStances: Ally, Neutral
+		IgnoresVisibility: True
+		RequiresCondition: !NoFood || FullFood
+		AmmoPoolName: Food
+	CashTrickler@LotDeer:
+		Interval: 25
+		Amount: 25
+		RequiresCondition: UnloadDeer
+	AmmoPool:
+		Name: Food
+		Ammo: 10
+		InitialAmmo: 0
+		PipCount: 2
+	AmmoPoolConditions:
+		ConditionFull: FullFood
+		ConditionEmpty: NoFood
+		AmmoPoolName: Food
+	ReloadAmmoWhenEnabled:
+		Name: Food
+		ReloadDelay: 25
+		ResetDelayOnEnable: false
+		RequiresCondition: DeerHunter
+		

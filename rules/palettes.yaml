@@ -147,3 +147,7 @@
 		ExcludePalettes: effect, chrome, raplayer, ra, raicon, grain, mwcivilian, mwnobles, sul, sultanplayer
 		RotationBase: 32
 	FlashPaletteEffect:
+    PaletteFromFile@Menu:
+		Name: menu
+		Filename: flag.pal
+		AllowModifiers: False

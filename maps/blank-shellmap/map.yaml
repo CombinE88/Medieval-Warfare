@@ -8,9 +8,9 @@ Author: Paul Chote
 
 Tileset: DESERT
 
-MapSize: 5,5
+MapSize: 28,18
 
-Bounds: 1,1,1,1
+Bounds: 1,1,26,15
 
 Visibility: Shellmap
 
@@ -24,6 +24,9 @@ Players:
 		Faction: Random
 
 Actors:
+    Actor01: menu
+		Owner: Neutral
+		Location: 13,8
 
 Rules:
 	World:

@@ -93,6 +93,20 @@ newmcv:
 	icon: mcvnewicon.shp
 		AddExtension: False
 		
+new2mcv:
+	idle: medimcv2
+		Start: 64
+		Facings: 32
+	stand: medimcv2
+		Start: 64
+		Facings: 32
+	run: medimcv2
+		Tick: 100
+		Facings: 8
+		Length: 8
+	icon: mcvnewicon.shp
+		AddExtension: False
+        
 planewagen:
 	idle: planewagen
 		Start: 64
@@ -112,6 +126,13 @@ mcvnew.destroyed:
 		Facings: 32
 		UseClassicFacingFudge: True
 		ZOffset: -512
+        
+mcvnew2.destroyed:
+	idle: mcvnew2husk
+		Facings: 32
+		UseClassicFacingFudge: True
+		ZOffset: -512
+        
 siege1:
 	stand: siege1
 		Start: 0
@@ -275,6 +296,7 @@ siege5.husk:
 		Facings: 32  
 		
 siege4:
+    Inherits: ^scaffold
 	turretanim: batowgun
 		Facings: 32
 		ZOffset: 512
@@ -313,7 +335,30 @@ siege4:
 		Offset: 0,-2
 	icon: batoicon.shp
 		AddExtension: False
-
+    make1: batowbasemake
+		Start: 1
+		ZOffset: -25
+		Offset: 0,-12,0
+	make2: batowbasemake
+		Start: 3
+		ZOffset: -25
+		Offset: 0,-12,0
+	make3: batowbasemake
+		Start: 5
+		ZOffset: -25
+		Offset: 0,-12,0
+	make4: batowbasemake
+		Start: 7
+		ZOffset: -25
+		Offset: 0,-12,0
+	make5: batowbasemake
+		Start: 9
+		ZOffset: -25
+		Offset: 0,-12,0
+    make6: batowbasemake
+		Start: 10
+		ZOffset: -25
+		Offset: 0,-12,0
 davinci:
 	idle: davinci
 		Start: 0

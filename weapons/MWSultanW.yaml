@@ -654,7 +654,7 @@ BedouinBow:
 	ReloadDelay: 45
 	Range: 5c512
 	MinRange: 0c512
-	Report: arrow01.aud
+	Report: arrow01.aud, arrow02.aud, arrow02.aud
 	InvalidTargets: Wall, Air
 	ValidTargets: Ground
 	Projectile: Missile
@@ -681,6 +681,7 @@ BedouinBow:
 			HeavyBuilding: 45
 			Spectral: 15
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+		
 BedouinBowDUMMY:
 	ReloadDelay: 45
 	Range: 5c512
@@ -720,7 +721,7 @@ BedouinBowAir:
 	ReloadDelay: 45
 	Range: 7c0
 	MinRange: 0c0
-	Report: arrow01.aud
+	Report: arrow01.aud, arrow02.aud, arrow02.aud
 	InvalidTargets: Wall, Ground
 	ValidTargets: Air
 	Projectile: Missile
@@ -752,11 +753,12 @@ BedouinBowAir:
 			HeavyCavalry: 35
 			HeavyBuilding: 45
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+		
 BedouinBowTowerUnblock:
 	ReloadDelay: 25
 	Range: 8c0
 	MinRange: 0c0
-	Report: arrow01.aud
+	Report: arrow01.aud, arrow02.aud, arrow02.aud
 	InvalidTargets: Wall
 	ValidTargets: Ground, Air
 	Projectile: Missile
@@ -784,6 +786,7 @@ BedouinBowTowerUnblock:
 			HeavyBuilding: 40
 			Spectral: 15
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath  
+		
 BedouinBowTowerUnblockDUMMY:
 	ReloadDelay: 25
 	Range: 8c0

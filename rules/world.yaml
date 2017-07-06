@@ -38,7 +38,7 @@
 		Name: Iron
 		ResourceType: 1
 		Type: Tiberium
-		ValuePerUnit: 35
+		ValuePerUnit: 23
 		AllowedTerrainTypes: Clear,Road
 		AllowUnderActors: true
 	ResourceType@blue-tib:
@@ -49,7 +49,7 @@
 		Name: Gold
 		Sequences: gold1,gold2,gold3,gold4,gold5,gold6,gold7,gold8,gold9,gold10
 		MaxDensity: 12
-		ValuePerUnit: 60
+		ValuePerUnit: 40
 		AllowedTerrainTypes: Clear,Road
 		AllowUnderActors: true
 		Type: BlueTiberium
@@ -59,7 +59,7 @@
 		TerrainType: Crops
 		Sequences: crop1,crop2,crop3,crop4,crop5,crop6,crop7,crop8,crop9,crop10,crop11
 		MaxDensity: 12
-		ValuePerUnit: 18
+		ValuePerUnit: 12
 		Name: Crops
 		Type: Copper
 		PipColor: Blue
@@ -71,7 +71,7 @@
 		TerrainType: Crops
 		Sequences: grain1,grain2,grain3,grain4,grain5,grain6,grain7
 		MaxDensity: 12
-		ValuePerUnit: 18
+		ValuePerUnit: 12
 		Name: Grain
 		Type: Grains
 		PipColor: Blue
@@ -83,7 +83,7 @@
 		TerrainType: Crops
 		Sequences: corn1,corn2,corn3,corn4,corn5,corn6,corn7,corn8,corn9,corn10,corn11
 		MaxDensity: 12
-		ValuePerUnit: 18
+		ValuePerUnit: 12
 		Name: Corn
 		Type: Corn
 		PipColor: Blue
@@ -107,7 +107,7 @@
 		TerrainType: Wood
 		Sequences: wood1,wood2,wood3,wood4,wood5,wood6,wood7
 		MaxDensity: 7
-		ValuePerUnit: 35
+		ValuePerUnit: 23
 		Name: Chopped Wood
 		Type: Wood
 		PipColor: Blue
@@ -119,7 +119,7 @@
 		TerrainType: Loot
 		Sequences: goods1,goods2,goods3,goods4,goods5
 		MaxDensity: 5
-		ValuePerUnit: 55
+		ValuePerUnit: 37
 		Name: Goods
 		Type: Goods
 		PipColor: Blue
@@ -131,7 +131,7 @@
 		TerrainType: Wood
 		Sequences: reslumb1,reslumb2,reslumb3,reslumb4,reslumb5,reslumb6
 		MaxDensity: 6
-		ValuePerUnit: 55
+		ValuePerUnit: 37
 		Name: Lumber
 		Type: Lumber
 		PipColor: Blue
@@ -171,27 +171,39 @@ World:
 	CreateMPPlayers:
 	LuaScript:
 		Scripts: Peasants.lua
-	MPStartUnits@MEDUNI:
+	MPStartUnits@minimum:
 		Class: medieval
-		ClassName: Supply wagon only
+		ClassName: Exiled
 		Factions: gdi, nod, sul
 		BaseActor: mcvnew
-	MPStartUnits@MEDIUNI2:
-		Class: royal
-		ClassName: Highness
+        SupportActors: mwwand1,mwwand2,mwwand3,mwwand4
+	MPStartUnits@medium:
+		Class: medieval2
+		ClassName: new Start
 		Factions: gdi, nod, sul
 		BaseActor: mcvnew
-		SupportActors: Husk2.KING, e3new, e3new, e3new, e2new
+        SupportActors: mwwand1,mwwand2,mwwand3,mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, transporter, transporter
+	MPStartUnits@bunch:
+		Class: medieval3
+		ClassName: Expedition
+		Factions: gdi, nod, sul
+		BaseActor: mcvnew
+        SupportActors: mwwand1,mwwand2,mwwand3,mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12,mwwand1,mwwand2,mwwand3, transporter, transporter, transporter, engeneer
+	MPStartUnits@maximum:
+		Class: medieval4
+		ClassName: Huge Expedition
+		Factions: gdi, nod, sul
+		BaseActor: mcvnew
+        SupportActors: mwwand1,mwwand2,mwwand3,mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12,mwwand1,mwwand2,mwwand3, mwwand5, mwwand6, mwwand10, mwwand11, mcv2new, transporter, transporter, transporter, transporter, transporter, transporter, engeneer, engeneer
 	SpawnMPUnits:
-		StartingUnitsClass: medieval
+		StartingUnitsClass: medieval2
 	CrateSpawner:
-		Minimum: 10
-		Maximum: 30
+		Minimum: 0
+		Maximum: 2
 		SpawnInterval: 3000
 		WaterChance: 0
-		InitialSpawnDelay: 0
-		CrateActors: deer01, deer02, deer03, deer03a
-		CrateActorShares: 25, 25, 25, 25
+		InitialSpawnDelay: 1000
+		CrateActors: fireplace
 	PathFinder:
 	ValidateOrder:
 	DebugPauseState:

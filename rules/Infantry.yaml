@@ -208,7 +208,7 @@ ENGENEER:
 	Selectable:
 		Priority: 9
 	Buildable:
-		Description: Can quick repair buildings and siege weapons.\n  Captures and damages buildings.\n  Unarmed\n\n\n
+		Description: Can quick repair buildings and siege weapons.\n  Captures and damages buildings.\n  Unarmed\n\nTrains: 1 Peasant\n
 		IconPalette: raicon
 		BuildPaletteOrder: 110
 		Queue: MInfantry.GDI, MInfantry.Nod, MInfantry.SUL
@@ -219,9 +219,13 @@ ENGENEER:
 		PlayerExperience: 50
 		SabotageHPRemoval: 10
 	Health:
-		HP: 2000
+		HP: 7000
 	Armament:
 		Weapon: repair
+		TargetStances: Ally
+		ForceTargetStances: None
+	Armament@Build:
+		Weapon: BuildConstruction
 		TargetStances: Ally
 		ForceTargetStances: None
 	AttackFrontal:
@@ -234,12 +238,15 @@ ENGENEER:
 	WithInfantryBody:
 		DefaultAttackSequence: shoot
 	AutoTarget:
-		ScanRadius: 6
+		ScanRadius: 15
 		InitialStance: AttackAnything
 	Armor:
 		Type: Leather
 	Voiced:
 		VoiceSet: EngineerVoice
+	PersonValued:
+		ActorCount: 1
+		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
 		
 E1NEW:
 	Inherits: ^Knight
@@ -264,8 +271,6 @@ E1NEW:
 		InitialStance: AttackAnything
 	Armor:
 		Type: Leather
-	Power:
-		Amount: 0
 	Wanders:
 		WanderMoveRadius: 2
 		MinMoveDelay: 50
@@ -278,7 +283,7 @@ E2NEW:
 	Tooltip:
 		Name: Pike Guard
 	Buildable:
-		Description: Anti-Cavalry infantry.\n  Strong vs Cavalry.\n  Weak vs Infantry\n  Deals damage when trampled by Cavalry\n  Can cut down trees.\n\n\n
+		Description: Anti-Cavalry infantry.\n  Strong vs Cavalry.\n  Weak vs Infantry\n  Deals damage when trampled by Cavalry\n  Can cut down trees.\n\nTrains: 1 Peasant\n
 		IconPalette: raicon
 		BuildPaletteOrder: 20
 		Queue:  MInfantry.Nod, MInfantry.Horse
@@ -304,6 +309,9 @@ E2NEW:
 	Explodes:
 		Weapon: KilledPike
 		EmptyWeapon: KilledPike
+	PersonValued:
+		ActorCount: 1
+		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
 		
 E2NEWV2:
 	Inherits: ^Knight
@@ -312,7 +320,7 @@ E2NEWV2:
 	Tooltip:
 		Name: Halberd Guard
 	Buildable:
-		Description: Anti-Cavalry infantry.\n  Strong vs Cavalry.\n  Weak vs Infantry\n  Deals damage when trampled by Cavalry\n  Can cut down trees.\n\n\n
+		Description: Anti-Cavalry infantry.\n  Strong vs Cavalry.\n  Weak vs Infantry\n  Deals damage when trampled by Cavalry\n  Can cut down trees.\n\nTrains: 1 Peasant\n
 		IconPalette: raicon
 		BuildPaletteOrder: 20
 		Queue: MInfantry.GDI
@@ -338,6 +346,9 @@ E2NEWV2:
 	Explodes:
 		Weapon: KilledPike
 		EmptyWeapon: KilledPike
+	PersonValued:
+		ActorCount: 1
+		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
 		
 E3NEW:
 	Inherits: ^Knight
@@ -346,7 +357,7 @@ E3NEW:
 	Tooltip:
 		Name: Knight
 	Buildable:
-		Description: General-purpose infantry.\n  Strong vs Infantry\n  Weak vs Cavalry \n  Can cut down trees.\n\n\n
+		Description: General-purpose infantry.\n  Strong vs Infantry\n  Weak vs Cavalry \n  Can cut down trees.\n\nTrains: 1 Peasant\n
 		IconPalette: raicon
 		BuildPaletteOrder: 10
 		Queue: MInfantry.GDI
@@ -369,6 +380,9 @@ E3NEW:
 		Type: Heavy
 	Voiced:
 		VoiceSet: GDIKnightVoice
+	PersonValued:
+		ActorCount: 1
+		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
 		
 E3NEWV2:
 	Inherits: ^Knight
@@ -377,7 +391,7 @@ E3NEWV2:
 	Tooltip:
 		Name: Footman
 	Buildable:
-		Description: General-purpose infantry.\n  Strong vs Infantry\n  Weak vs Cavalry \nCan cut down trees.\n\n\n
+		Description: General-purpose infantry.\n  Strong vs Infantry\n  Weak vs Cavalry \nCan cut down trees.\n\nTrains: 1 Peasant\n
 		IconPalette: raicon
 		BuildPaletteOrder: 10
 		Queue: MInfantry.Nod, MInfantry.Horse
@@ -400,6 +414,9 @@ E3NEWV2:
 		Type: Heavy
 	Voiced:
 		VoiceSet: NodKnightVoice
+	PersonValued:
+		ActorCount: 1
+		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
 		
 BARBAR:
 	Inherits: ^Knight
@@ -410,7 +427,7 @@ BARBAR:
 	Mobile:
 		Speed: 75
 	Buildable:
-		Description: Very tough and fast fighter.\n  Strong vs Infantry\n  Weak vs Cavalry \nCan cut down trees.\n\n\n
+		Description: Very tough and fast fighter.\n  Strong vs Infantry\n  Weak vs Cavalry \nCan cut down trees.\n\nTrains: 1 Peasant\n
 		IconPalette: raicon
 		BuildPaletteOrder: 30
 		Queue: MInfantry.Bandit
@@ -457,15 +474,16 @@ BARBAR2:
 		Type: Heavy
 		
 E9NEW:
+	Inherits: ^Knight
+	Inherits@88: ^GameSettingsArcher
 	RevealsShroud:
 		Range: 6c0
-	Inherits: ^Knight
 	Valued:
 		Cost: 350
 	Tooltip:
 		Name: Fire Mage
 	Buildable:
-		Description: Advanced Anti-infantry unit.\n  Strong vs Infantry, Buildings and Spectral Units\n  Weak vs Cavalry\n  Detects cloaked units\n  Cannot attack Aircrafts anymore!!!\n\n\n
+		Description: Advanced Anti-infantry unit.\n  Strong vs Infantry, Buildings and Spectral Units\n  Weak vs Cavalry\n  Detects cloaked units\n  Cannot attack Aircrafts anymore!!!\n\nTrains: 1 Peasant\n
 		IconPalette: raicon
 		BuildPaletteOrder: 40
 		Prerequisites: anyhq
@@ -493,17 +511,21 @@ E9NEW:
 		Range: 2c0
 	Voiced:
 		VoiceSet: NodMageVoice
+	PersonValued:
+		ActorCount: 1
+		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
 		
 E4NEW:
+	Inherits: ^Knight
 	RevealsShroud:
 		Range: 6c0
-	Inherits: ^Knight
+	Inherits@88: ^GameSettingsArcher
 	Valued:
 		Cost: 200
 	Tooltip:
 		Name: Archer
 	Buildable:
-		Description: Advanced Anti-infantry unit.\n  Strong vs Light Infantry\n  Weak vs Cavalry and heavy Infantry\n  Detects cloaked units\n  Can attack Aircrafts\n\n\n
+		Description: Advanced Anti-infantry unit.\n  Strong vs Light Infantry\n  Weak vs Cavalry and heavy Infantry\n  Detects cloaked units\n  Can attack Aircrafts\n\nTrains: 1 Peasant\n
 		IconPalette: raicon
 		BuildPaletteOrder: 30
 		Queue: MInfantry.Nod, MInfantry.Horse
@@ -543,18 +565,22 @@ E4NEW:
 		CargoType: Archer
 	Voiced:
 		VoiceSet: NodArcherVoice
+	PersonValued:
+		ActorCount: 1
+		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
 		
 		
 E4NEWV2:
+	Inherits: ^Knight
 	RevealsShroud:
 		Range: 6c0
-	Inherits: ^Knight
+	Inherits@88: ^GameSettingsArcher
 	Valued:
 		Cost: 200
 	Tooltip:
 		Name: Archer
 	Buildable:
-		Description: Advanced Anti-infantry unit.\n  Strong vs Light Infantry\n  Weak vs Cavalry and heavy Infantry\n  Detects cloaked units\n  Can attack Aircrafts\n\n\n
+		Description: Advanced Anti-infantry unit.\n  Strong vs Light Infantry\n  Weak vs Cavalry and heavy Infantry\n  Detects cloaked units\n  Can attack Aircrafts\n\nTrains: 1 Peasant\n
 		IconPalette: raicon
 		BuildPaletteOrder: 30
 		Queue: MInfantry.GDI
@@ -594,12 +620,16 @@ E4NEWV2:
 		CargoType: Archer
 	Voiced:
 		VoiceSet: GDIArcherVoice
+	PersonValued:
+		ActorCount: 1
+		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
 		
 		
 E5NEW:
+	Inherits: ^Knight
 	RevealsShroud:
 		Range: 8c0
-	Inherits: ^Knight
+	Inherits@88: ^GameSettingsArcher
 	DetectCloaked:
 		Range: 2c0
 	Valued:
@@ -607,10 +637,10 @@ E5NEW:
 	Tooltip:
 		Name: Marksman
 	Buildable:
-		Description: Advanced general-purpose infantry.\n  Strong vs all Ground units\n  Detects cloaked units\n  Cannot attack Aircrafts anymore!!!!\n\n\n
+		Description: Advanced general-purpose infantry.\n  Strong vs all Ground units\n  Detects cloaked units\n  Cannot attack Aircrafts anymore!!!!\n\nTrains: 1 Peasant\n
 		IconPalette: raicon
 		BuildPaletteOrder: 50
-		Prerequisites: anyarmory, ~techlevel.medium
+		Prerequisites: anyarmory
 		Queue: MInfantry.Nod, MInfantry.Horse
 	Mobile:
 		Speed: 56
@@ -630,10 +660,11 @@ E5NEW:
 		DefaultAttackSequence: shoot
 	Armor:
 		Type: Light
-	Power:
-		Amount: -2
 	Voiced:
 		VoiceSet: NodCrossVoice
+	PersonValued:
+		ActorCount: 1
+		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
 
 RMBONEW:
 	RevealsShroud:
@@ -644,10 +675,10 @@ RMBONEW:
 	Tooltip:
 		Name: Paladin
 	Buildable:
-		Description: Elite Infantry\n Strong vs Infantry, Buildings and Spectral Units\n  Arrow proofed.\n\n\n
+		Description: Elite Infantry\n Strong vs Infantry, Buildings and Spectral Units\n  Arrow proofed.\n\nTrains: 1 Peasant\n
 		IconPalette: raicon
 		BuildPaletteOrder: 40
-		Prerequisites: anyhq, ~techlevel.high
+		Prerequisites: anyhq
 		Queue: MInfantry.GDI
 	Mobile:
 		Speed: 50
@@ -666,10 +697,11 @@ RMBONEW:
 		DefaultAttackSequence: shoot
 	Armor:
 		Type: Heavy
-	Power:
-		Amount: -1
 	Voiced:
 		VoiceSet: PaladinVoice
+	PersonValued:
+		ActorCount: 1
+		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
 		
 NEWCOMM:
 	RevealsShroud:
@@ -680,10 +712,10 @@ NEWCOMM:
 	Tooltip:
 		Name: Juggernaut
 	Buildable:
-		Description: Juggernaut Infantry \n Very Strong vs Infantry, Buildings and Spectral Units\n  Can only slightly be harmed by Arrows. \nCan cut down trees.\n\n\n
+		Description: Juggernaut Infantry \n Very Strong vs Infantry, Buildings and Spectral Units\n  Can only slightly be harmed by Arrows. \nCan cut down trees.\n\nTrains: 1 Peasant\n
 		IconPalette: raicon
 		BuildPaletteOrder: 50
-		Prerequisites: anycastle, anyhq, ~techlevel.high
+		Prerequisites: anycastle, anyhq
 		Queue: MInfantry.GDI
 	Mobile:
 		Speed: 50
@@ -708,8 +740,6 @@ NEWCOMM:
 		AttackSequence: shoot
 	Armor:
 		Type: Knight
-	Power:
-		Amount: -2  
 	Voiced:
 		VoiceSet: JuggernautVoice 
 	AnnounceOnBuild:
@@ -720,8 +750,12 @@ NEWCOMM:
 	-SpeedMultiplier@SNAKES:
 	-WithIdleOverlay@SNAKES:
 	-RangeMultiplier:
+	PersonValued:
+		ActorCount: 1
+		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
 
 ASSASSIN:
+	Inherits: ^Knight
 	RevealsShroud:
 		Range: 6c0
 	DetectCloaked:
@@ -730,17 +764,17 @@ ASSASSIN:
 		-UpgradeTypes:
 		InitialDelay: 90
 		CloakDelay: 90
-	Inherits: ^Knight
+	Inherits@88: ^GameSettingsArcher
 	Valued:
 		Cost: 600
 	Tooltip:
 		Name: Assaassin
 	Buildable:
-		Description: Mid/Long-range knifthrowing infantry that can cloak.\nHas weak armor. Can be spotted by some infantry and defense structures.\n  Strong vs Cavalry, Infantry. Moderate vs Spectral Units\n  Sets buildings on fire.\n  Detects cloaked units\n  Can attack Aircrafts\n\n\n
+		Description: Mid/Long-range knifthrowing infantry that can cloak.\nHas weak armor. Can be spotted by some infantry and defense structures.\n  Strong vs Cavalry, Infantry. Moderate vs Spectral Units\n  Sets buildings on fire.\n  Detects cloaked units\n  Can attack Aircrafts\n\nTrains: 1 Peasant\n
 		IconPalette: raicon
 		BuildPaletteOrder: 140
 		Queue: MInfantry.Nod, MInfantry.Horse
-		Prerequisites: anycastle, ~techlevel.high
+		Prerequisites: anycastle
 	Mobile:
 		Speed: 66
 	Health:
@@ -774,6 +808,9 @@ ASSASSIN:
 		Type: Leather
 	Voiced:
 		VoiceSet: AssasinVoice
+	PersonValued:
+		ActorCount: 1
+		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
 
 E8FARMER:
 	Inherits: ^Knight
@@ -782,7 +819,7 @@ E8FARMER:
 	QuantizeFacingsFromSequence:
 		Sequence: stand
 	Buildable:
-		Description: Gathers grains and Crops and Corn.\nDelivers to a windmill.\nCan collect chopped wood, lumber and goods\n\n
+		Description: Gathers grains and Crops and Corn.\nDelivers to a windmill.\nCan collect chopped wood, lumber and goods\n\nTrains: 1 Peasant
 		IconPalette: raicon
 		BuildPaletteOrder: 100
 		Queue: MInfantry.GDI, MInfantry.Nod, ~disabled
@@ -806,7 +843,7 @@ E8FARMER:
 	Mobile:
 		Speed: 60
 	Health:
-		HP: 25000
+		HP: 20000
 	RenderSprites:
 		Image: e8farmer
 		PlayerPalette: raplayer
@@ -829,6 +866,9 @@ E8FARMER:
 	SelectionDecorations:
 		VisualBounds: 14,26,0,-6 
 	-Crushable:
+	PersonValued:
+		ActorCount: 1
+		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
 		
 BUMMLER:
 	Inherits: ^Knight
@@ -837,7 +877,7 @@ BUMMLER:
 	QuantizeFacingsFromSequence:
 		Sequence: stand
 	Buildable:
-		Description: Collects leftovers of the battlefield.\nDelivers to barracks, stables and workshops.\n\n\n
+		Description: Collects leftovers of the battlefield.\nDelivers to barracks, stables and workshops.\n\nTrains: 1 Peasant\n
 		IconPalette: raicon
 		BuildPaletteOrder: 120
 		Queue: MInfantry.GDI, MInfantry.Nod, ~disabled, MInfantry.SUL
@@ -882,6 +922,9 @@ BUMMLER:
 		Bounds: 14,26,0,-6
 	SelectionDecorations:
 		VisualBounds: 14,26,0,-6 
+	PersonValued:
+		ActorCount: 1
+		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
 		
 SIEGERUNNER:
 	Inherits: ^Knight
@@ -931,9 +974,7 @@ MWCHICK1:
 	Tooltip:
 		Name: Chicken
 	WithInfantryBody:
-		IdleSequences: idle1
-	Power:
-		Amount: 0	   
+		IdleSequences: idle1	   
 	  
 MWWAND1:
 	Inherits: ^MWTalker
@@ -944,8 +985,7 @@ MWWAND1:
 	WithInfantryBody:
 		DefaultAttackSequence: talking
 		IdleSequences: idle1, idle2, idle3, idle4, idle5, idle6, idle7, idle8
-	Power:
-		Amount: 4
+	IsPeasant:
 		
 MWWAND2:
 	Inherits: ^MWTalker
@@ -956,8 +996,7 @@ MWWAND2:
 	WithInfantryBody:
 		DefaultAttackSequence: talking
 		IdleSequences: idle1, idle2, idle3, idle4, idle5, idle6, idle7, idle8
-	Power:
-		Amount: 4
+	IsPeasant:
 	
 		
 MWWAND3:
@@ -969,8 +1008,7 @@ MWWAND3:
 	WithInfantryBody:
 		DefaultAttackSequence: talking
 		IdleSequences: idle1, idle2, idle3, idle4, idle5, idle6, idle7, idle8
-	Power:
-		Amount: 4 
+	IsPeasant:
 		
 MWWAND4:
 	Inherits: ^MWTalker
@@ -981,8 +1019,7 @@ MWWAND4:
 	WithInfantryBody:
 		DefaultAttackSequence: talking
 		IdleSequences: idle1, idle2, idle3, idle4, idle5, idle6, idle7, idle8
-	Power:
-		Amount: 4
+	IsPeasant:
 		
 MWWAND5:
 	Inherits: ^MWTalker
@@ -993,8 +1030,7 @@ MWWAND5:
 	WithInfantryBody:
 		DefaultAttackSequence: talking
 		IdleSequences: idle1, idle2, idle3, idle4, idle5, idle6, idle7, idle8
-	Power:
-		Amount: 4
+	IsPeasant:
 		
 MWWAND6:
 	Inherits: ^MWTalker
@@ -1005,8 +1041,7 @@ MWWAND6:
 	WithInfantryBody:
 		DefaultAttackSequence: talking
 		IdleSequences: idle1, idle2, idle3, idle4, idle5, idle6, idle7, idle8
-	Power:
-		Amount: 4
+	IsPeasant:
 		
 MWWAND10:
 	Inherits: ^MWTalker
@@ -1017,8 +1052,7 @@ MWWAND10:
 	WithInfantryBody:
 		DefaultAttackSequence: talking
 		IdleSequences: idle1, idle2, idle3, idle4, idle5, idle6, idle7, idle8
-	Power:
-		Amount: 4
+	IsPeasant:
 		
 MWWAND11:
 	Inherits: ^MWTalker
@@ -1029,8 +1063,7 @@ MWWAND11:
 	WithInfantryBody:
 		DefaultAttackSequence: talking
 		IdleSequences: idle1, idle2, idle3, idle4, idle5, idle6, idle7, idle8
-	Power:
-		Amount: 4
+	IsPeasant:
 		
 MWWAND12:
 	Inherits: ^MWTalker
@@ -1041,8 +1074,7 @@ MWWAND12:
 	WithInfantryBody:
 		DefaultAttackSequence: talking
 		IdleSequences: idle1, idle2, idle3, idle4, idle5, idle6, idle7, idle8
-	Power:
-		Amount: 4
+	IsPeasant:
 				
 MWWAND7:
 	Inherits: ^MWWanderer
@@ -1165,6 +1197,9 @@ MWCIVCOM:
 	RevealsShroud:
 		Range: 6c0
 	-CashTrickler@PayTax:
+	PersonValued:
+		ActorCount: 1
+		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
 		
 NOBLE1:
 	Inherits: ^MWTalker
@@ -1178,8 +1213,6 @@ NOBLE1:
 	WithInfantryBody:
 		DefaultAttackSequence: talking
 		IdleSequences: idle1, idle2, idle3, idle4, idle5, idle6, idle7, idle8
-	Power:
-		Amount: 6
 	CashTrickler@PayTax:
 		Interval: 25
 		Amount: 4
@@ -1198,8 +1231,6 @@ NOBLE2:
 	WithInfantryBody:
 		DefaultAttackSequence: talking
 		IdleSequences: idle1, idle2, idle3, idle4, idle5, idle6, idle7, idle8
-	Power:
-		Amount: 6
 	CashTrickler@PayTax:
 		Interval: 25
 		Amount: 4
@@ -1217,8 +1248,6 @@ NOBLE3:
 	WithInfantryBody:
 		DefaultAttackSequence: talking
 		IdleSequences: idle1, idle2, idle3, idle4, idle5, idle6, idle7, idle8
-	Power:
-		Amount: 6
 	CashTrickler@PayTax:
 		Interval: 25
 		Amount: 4
@@ -1236,8 +1265,6 @@ NOBLE4:
 	WithInfantryBody:
 		DefaultAttackSequence: talking
 		IdleSequences: idle1, idle2, idle3, idle4, idle5, idle6, idle7, idle8
-	Power:
-		Amount: 6
 	CashTrickler@PayTax:
 		Interval: 25
 		Amount: 4
@@ -1326,6 +1353,10 @@ MWCONST1BACK:
 	Inherits: ^MWConstructor
 	RenderSprites:
 		Image: mwciv9
+	Infiltrates:
+		Types: BaseCenter
+		ValidStances: Ally
+		Notification: 
 		
 MWLUMBERER:
 	Inherits: ^MWConstructor
@@ -1415,4 +1446,77 @@ CAMELTRADER:
 		RequiresCondition: TraderLoot
 	Targetable:
 		TargetTypes: Ground, Infantry, CTrader
+		
+TRANSPORTER:
+	Inherits: ^Knight
+	-Explodes@Tib:
+	RevealsShroud:
+		Range: 4c0
+	Valued:
+		Cost: 250
+	Tooltip:
+		Name: Labourer
+	Mobile:
+		Speed: 56
+	Health:
+		HP: 25000
+	RenderSprites:
+		PlayerPalette: mwcivilianplayer
+		Image: transporter
+		FactionImages:
+			nod: transporter
+			gdi: transporter
+			sul: sultransporter
+	WithInfantryBody:
+		MoveSequence: run
+		StandSequences: stand
+	Armor:
+		Type: Leather
+	-Selectable:
+	Targetable:
+		TargetTypes: Ground, Infantry
+	WithDeathAnimation:
+		DeathSequencePalette: mwcivilianplayer
+	AttackWander: 
+		WanderMoveRadius: 1
+		ReduceMoveRadiusDelay: 2
+		MinMoveDelay: 100
+		MaxMoveDelay: 1000
+	AutoTarget:
+		ScanRadius: 15
+		InitialStance: AttackAnything
+	AttackFrontal:
+		Armaments: primary, secondary, tairt
+		IgnoresVisibility: true	
+	AttackMove:
+	ExternalCondition@Loading:
+		Condition: Loading
+	Armament@Unload:
+		Weapon: LaborourUnload
+		Name: primary
+		TargetStances: Neutral, Ally
+		AmmoPoolName: Goods
+		RequiresCondition: !EmptyGoods
+	Armament@Load:
+		Weapon: LaborourLoad
+		Name: secondary
+		TargetStances: Neutral, Ally
+		RequiresCondition: !FullGoods
+	AmmoPool:
+		Name: Goods
+		Ammo: 3
+		InitialAmmo: 0
+		PipCount: 2
+	AmmoPoolConditions:
+		ConditionFull: FullGoods
+		ConditionEmpty: EmptyGoods
+		AmmoPoolName: Goods
+	ReloadAmmoWhenEnabled:
+		Name: Goods
+		ReloadDelay: 10
+		ResetDelayOnEnable: false
+		RequiresCondition: Loading
+	PersonValued:
+		ActorCount: 1
+		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
 		
