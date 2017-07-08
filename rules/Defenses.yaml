@@ -5,15 +5,15 @@ GTWNEW:
 	RenderSprites:
 		PlayerPalette: raplayer
 	Valued:
-		Cost: 800
+		Cost: 400
 	CustomSellValue:
-		Value: 400
+		Value: 200
 	Tooltip:
 		Name: Guard Tower
 	Buildable:
 		Description: A wooden tower, stationed with 2 archers.\n  Strong vs Infantry, Light Cavalry\n  Weak vs Siege weapons and Heavy Cavalry \n  Cannot target Aircraft (because of I say so)\n\n\n
 		BuildPaletteOrder: 20
-		Prerequisites: barracks, ~scaffold
+		Prerequisites: ~scaffold
 		Queue: MDefenses.GDI, MDefenses.Nod
 		BuildDuration: 1600
 		BuildDurationModifier: 40
@@ -70,8 +70,6 @@ GTWNEW:
 		Turret: secondary
 		TurnSpeed: 100
 		Offset: 170,170,500
-	Power:
-		Amount: -2	
 	Armor:
 		Type: HeavyBuilding 
 	Selectable:
@@ -124,9 +122,7 @@ WTW:
 	BodyOrientation:
 		QuantizedFacings: 1
 	DetectCloaked:
-		Range: 3c0
-	Power:
-		Amount: -5	
+		Range: 3c0	
 	Armor:
 		Type: Concrete 
 	Selectable:
@@ -198,8 +194,6 @@ SAMNEW:
 		Turret: primary
 		TurnSpeed: 100
 		Offset: 0,0,932
-	Power:
-		Amount: -2	
 	Armor:
 		Type: Concrete 
 	SelectionDecorations:
@@ -245,8 +239,6 @@ TRIBU:
 		LocalOffset: 0,0,2124
 	DetectCloaked:
 		Range: 3c0
-	Power:
-		Amount: -4
 	Selectable:
 		Bounds: 30,52,0,-12
 	SelectionDecorations:
@@ -313,8 +305,6 @@ BATO:
 		Name: primary
 	DetectCloaked:
 		Range: 3c0
-	Power:
-		Amount: -4
 	Armor:
 		Type: Concrete
 	Selectable:
@@ -389,8 +379,6 @@ GUNNEW:
 		PlayerPalette: raplayer
 	DetectCloaked:
 		Range: 3c0
-	Power:
-		Amount: -2
 	BodyOrientation:
 		QuantizedFacings: 32
 	Selectable:
@@ -476,8 +464,6 @@ CSTLGTEW:
 	Bib:
 	BodyOrientation:
 		QuantizedFacings: 1
-	Power:
-		Amount: -4  
 	Armor:
 		Type: Concrete 
 	Selectable:
@@ -521,9 +507,7 @@ CSTLGTNS:
 	RevealsShroud:
 		Range: 5c0
 	BodyOrientation:
-		QuantizedFacings: 1
-	Power:
-		Amount: -4  
+		QuantizedFacings: 1 
 	Armor:
 		Type: Concrete 
 	ThrowsShrapnel@SMALL:

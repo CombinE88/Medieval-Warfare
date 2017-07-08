@@ -5,6 +5,8 @@ NUKENEW.SCAFF:
 	RenderSprites:
 		PlayerPalette: raplayer
 		Image: nukenew
+	CustomSellValue:
+		Value: 150
 	Valued:
 		Cost: 500
 	Tooltip:
@@ -70,7 +72,7 @@ NUKENEW.SCAFF:
 	WithIdleOverlay@base6:
 		Sequence: make6
 		RequiresCondition: Construct >= 18
-        
+		
 NUKXL.SCAFF:
 	Inherits: ^3x2SITE
 	Armor:
@@ -78,6 +80,8 @@ NUKXL.SCAFF:
 	RenderSprites:
 		PlayerPalette: raplayer
 		Image: nukxl
+	CustomSellValue:
+		Value: 400
 	Valued:
 		Cost: 1200
 	Tooltip:
@@ -155,6 +159,8 @@ HANDNEW.SCAFF:
 	RenderSprites:
 		PlayerPalette: raplayer
 		Image: handew
+	CustomSellValue:
+		Value: 300
 	Valued:
 		Cost: 900
 	Tooltip:
@@ -228,6 +234,8 @@ ZEROPROC.SCAFF:
 	RenderSprites:
 		PlayerPalette: raplayer
 		Image: windmill
+	CustomSellValue:
+		Value: 450
 	Valued:
 		Cost: 1300
 	Tooltip:
@@ -298,6 +306,8 @@ HQNEWNOD.SCAFF:
 	RenderSprites:
 		PlayerPalette: raplayer
 		Image: hqnew
+	CustomSellValue:
+		Value: 400
 	Valued:
 		Cost: 1200
 	Tooltip:
@@ -374,6 +384,8 @@ ARMORYNOD.SCAFF:
 	RenderSprites:
 		PlayerPalette: raplayer
 		Image: armory
+	CustomSellValue:
+		Value: 600
 	Valued:
 		Cost: 1750
 	Tooltip:
@@ -444,6 +456,8 @@ ARMORYGDI.SCAFF:
 	RenderSprites:
 		PlayerPalette: raplayer
 		Image: armorygdi
+	CustomSellValue:
+		Value: 600
 	Valued:
 		Cost: 1750
 	Tooltip:
@@ -514,6 +528,8 @@ NUK2NEW.SCAFF:
 	RenderSprites:
 		PlayerPalette: raplayer
 		Image: nuk2new
+	CustomSellValue:
+		Value: 250
 	Valued:
 		Cost: 800
 	Tooltip:
@@ -581,6 +597,8 @@ NODNUK2.SCAFF:
 	RenderSprites:
 		PlayerPalette: raplayer
 		Image: nodnuk2
+	CustomSellValue:
+		Value: 250
 	Valued:
 		Cost: 800
 	Tooltip:
@@ -654,6 +672,8 @@ PROCNEW.SCAFF:
 	RenderSprites:
 		PlayerPalette: raplayer
 		Image: procnew
+	CustomSellValue:
+		Value: 500
 	Valued:
 		Cost: 1500
 	Tooltip:
@@ -730,6 +750,8 @@ SILONEW.SCAFF:
 	RenderSprites:
 		PlayerPalette: raplayer
 		Image: silonew
+	CustomSellValue:
+		Value: 100
 	Valued:
 		Cost: 300
 	Tooltip:
@@ -798,6 +820,8 @@ BARRNEW.SCAFF:
 	RenderSprites:
 		PlayerPalette: raplayer
 		Image: barrnew
+	CustomSellValue:
+		Value: 240
 	Valued:
 		Cost: 750
 	Tooltip:
@@ -868,6 +892,8 @@ STALL.SCAFF:
 	RenderSprites:
 		PlayerPalette: raplayer
 		Image: stall
+	CustomSellValue:
+		Value: 700
 	Valued:
 		Cost: 2000
 	Tooltip:
@@ -941,8 +967,10 @@ NODSTALL.SCAFF:
 	RenderSprites:
 		PlayerPalette: raplayer
 		Image: nodstall
+	CustomSellValue:
+		Value: 600
 	Valued:
-		Cost: 2000
+		Cost: 1750
 	Tooltip:
 		Name: Construction Site (Stables)
 	Buildable:
@@ -1017,6 +1045,8 @@ CASTLE.SCAFF:
 	RenderSprites:
 		PlayerPalette: raplayer
 		Image: castle
+	CustomSellValue:
+		Value: 850
 	Valued:
 		Cost: 2500
 	Tooltip:
@@ -1093,6 +1123,8 @@ CASTLE2.SCAFF:
 	RenderSprites:
 		PlayerPalette: raplayer
 		Image: castle2
+	CustomSellValue:
+		Value: 700
 	Valued:
 		Cost: 2000
 	Tooltip:
@@ -1166,6 +1198,8 @@ WORKSHOPNOD.SCAFF:
 	RenderSprites:
 		PlayerPalette: raplayer
 		Image: nodfix
+	CustomSellValue:
+		Value: 450
 	Valued:
 		Cost: 1400
 	Tooltip:
@@ -1233,6 +1267,8 @@ WORKSHOPGDI.SCAFF:
 	RenderSprites:
 		PlayerPalette: raplayer
 		Image: gdifix
+	CustomSellValue:
+		Value: 600
 	Valued:
 		Cost: 1600
 	Tooltip:
@@ -1300,14 +1336,15 @@ GTWNEW.SCAFF:
 	RenderSprites:
 		PlayerPalette: raplayer
 		Image: gtwnew
+	CustomSellValue:
+		Value: 135
 	Valued:
-		Cost: 800
+		Cost: 400
 	Tooltip:
 		Name: Construction Site ( Guard Tower)
 	Buildable:
 		Description: A wooden tower, stationed with 2 archers.\n  Strong vs Infantry, Light Cavalry\n  Weak vs Siege weapons and Heavy Cavalry \n  Cannot target Aircraft (because of I say so)\n\n\n
 		BuildPaletteOrder: 20
-		Prerequisites: barracks
 		Queue: MDefenses.GDI, MDefenses.Nod
 		BuildDurationModifier: 40
 		IconPalette: raicon
@@ -1333,40 +1370,42 @@ GTWNEW.SCAFF:
 		DeathType: FinishedDeath
 	ExternalCondition@buildfurther: 
 		Condition: Construct
-		TotalCap: 33
+		TotalCap: 15
 	ExternalCondition@Deliverfurther:
 		Condition: DeliveredResources
-		TotalCap: 33
+		TotalCap: 15
 	Targetable@buildfurther: 
 		TargetTypes: Buildable
-		RequiresCondition: DeliveredResources > Construct && (33 - Construct) > 0
+		RequiresCondition: DeliveredResources > Construct && (15 - Construct) > 0
 	Targetable@deliverresources: 
 		TargetTypes: Deliverable
-		RequiresCondition: 33 > DeliveredResources
+		RequiresCondition: 15 > DeliveredResources
 	SelfHealing@Finished:
 		PercentageStep: -200
 		HealIfBelow: 110
 		Delay: 1
-		RequiresCondition: (33 - Construct) <= 0
+		RequiresCondition: (15 - Construct) <= 0
 		DamageTypes: FinishedDeath
 	WithIdleOverlay@base1:
 		Sequence: make1
-		RequiresCondition: Construct > 10 && Construct < 10
+		RequiresCondition: Construct > 1 && Construct < 3
 	WithIdleOverlay@base2:
 		Sequence: make2
-		RequiresCondition: Construct >= 10 && Construct < 17
+		RequiresCondition: Construct >= 3 && Construct < 5
 	WithIdleOverlay@base3:
 		Sequence: make3
-		RequiresCondition: Construct >= 17 && Construct < 23
+		RequiresCondition: Construct >= 5 && Construct < 7
 	WithIdleOverlay@base4:
 		Sequence: make4
-		RequiresCondition: Construct >= 23 && Construct < 27
+		RequiresCondition: Construct >= 7 && Construct < 10
 	WithIdleOverlay@base5:
 		Sequence: make5
-		RequiresCondition: Construct >= 27 && Construct < 30
+		RequiresCondition: Construct >= 10 && Construct < 12
 	WithIdleOverlay@base6:
 		Sequence: make6
-		RequiresCondition: Construct >= 30
+		RequiresCondition: Construct >= 12
+	WithRangeCircle:
+		Range: 7c0
 		
 GUNNEW.SCAFF:
 	Inherits: ^1x1SITE
@@ -1375,6 +1414,8 @@ GUNNEW.SCAFF:
 	RenderSprites:
 		PlayerPalette: raplayer
 		Image: gunnew
+	CustomSellValue:
+		Value: 200
 	Valued:
 		Cost: 600
 	Tooltip:
@@ -1439,6 +1480,8 @@ GUNNEW.SCAFF:
 	WithIdleOverlay@base6:
 		Sequence: make6
 		RequiresCondition: Construct >= 20
+	WithRangeCircle:
+		Range: 8c0
 		
 TRIBU.SCAFF:
 	Inherits: ^1x1SITE
@@ -1447,6 +1490,8 @@ TRIBU.SCAFF:
 	RenderSprites:
 		PlayerPalette: raplayer
 		Image: tribu
+	CustomSellValue:
+		Value: 500
 	Valued:
 		Cost: 1500
 	Tooltip:
@@ -1517,6 +1562,8 @@ TRIBU.SCAFF:
 	WithIdleOverlay@base7:
 		Sequence: make7
 		RequiresCondition: Construct >= 55
+	WithRangeCircle:
+		Range: 12c0
 		
 BATO.SCAFF:
 	Inherits: ^1x1SITE
@@ -1525,6 +1572,8 @@ BATO.SCAFF:
 	RenderSprites:
 		PlayerPalette: raplayer
 		Image: siege4
+	CustomSellValue:
+		Value: 450
 	Valued:
 		Cost: 1400
 	Tooltip:
@@ -1592,6 +1641,10 @@ BATO.SCAFF:
 	WithIdleOverlay@base6:
 		Sequence: make6
 		RequiresCondition: Construct >= 45
+	WithRangeCircle:
+		Range: 9c0
+	WithRangeCircle@Air:
+		Range: 10c0
 		
 SAMNEW.SCAFF:
 	Inherits: ^2x2SITE
@@ -1603,6 +1656,8 @@ SAMNEW.SCAFF:
 	RenderSprites:
 		PlayerPalette: raplayer
 		Image: samnew
+	CustomSellValue:
+		Value: 225
 	Valued:
 		Cost: 650
 	Tooltip:
@@ -1667,7 +1722,9 @@ SAMNEW.SCAFF:
 	WithIdleOverlay@base5:
 		Sequence: make5
 		RequiresCondition: Construct >= 20 && Construct < 24
-        
+	WithRangeCircle@Air:
+		Range: 8c0
+		
 TAVERN.SCAFF:
 	Inherits: ^3x2SITE
 	Armor:
@@ -1675,6 +1732,8 @@ TAVERN.SCAFF:
 	RenderSprites:
 		PlayerPalette: raplayer
 		Image: tavern
+	CustomSellValue:
+		Value: 350
 	Valued:
 		Cost: 1000
 	Tooltip:
@@ -1748,6 +1807,8 @@ TOWNHALL.SCAFF:
 	RenderSprites:
 		PlayerPalette: raplayer
 		Image: townhall
+	CustomSellValue:
+		Value: 700
 	Valued:
 		Cost: 2000
 	Tooltip:

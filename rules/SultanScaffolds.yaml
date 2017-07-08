@@ -5,6 +5,8 @@ SULNUKE.SCAFF:
 	RenderSprites:
 		PlayerPalette: sultanplayer
 		Image: sulnuke
+	CustomSellValue:
+		Value: 200
 	Valued:
 		Cost: 600
 	Tooltip:
@@ -81,6 +83,8 @@ SULMILL.SCAFF:
 	RenderSprites:
 		PlayerPalette: sultanplayer
 		Image: sulmill
+	CustomSellValue:
+		Value: 450
 	Valued:
 		Cost: 1400
 	Tooltip:
@@ -89,11 +93,11 @@ SULMILL.SCAFF:
 		DockAngle: 72
 		DockOffset: 1,3
 		TickRate: 5
-    Refinery:
+	Refinery:
 		DockAngle: 72
 		DockOffset: 1,3
 		TickRate: 5
-    Buildable:
+	Buildable:
 		IconPalette: raicon
 		BuildPaletteOrder: 20
 		Prerequisites: anypower
@@ -160,6 +164,8 @@ SULNUK2.SCAFF:
 	RenderSprites:
 		PlayerPalette: sultanplayer
 		Image: sulnuk2
+	CustomSellValue:
+		Value: 300
 	Valued:
 		Cost: 1000
 	Tooltip:
@@ -227,6 +233,8 @@ SULBARR.SCAFF:
 	RenderSprites:
 		PlayerPalette: sultanplayer
 		Image: sulbarr
+	CustomSellValue:
+		Value: 300
 	Valued:
 		Cost: 1000
 	Tooltip:
@@ -297,9 +305,11 @@ SULMYSTIC.SCAFF:
 	Building:
 		Footprint: xxx xxx
 		Dimensions: 3,2
-    RenderSprites:
+	RenderSprites:
 		PlayerPalette: sultanplayer
 		Image: sulmystic
+	CustomSellValue:
+		Value: 500
 	Valued:
 		Cost: 1500
 	Tooltip:
@@ -376,6 +386,8 @@ SULCASTLE.SCAFF:
 	RenderSprites:
 		PlayerPalette: sultanplayer
 		Image: sulcastle
+	CustomSellValue:
+		Value: 500
 	Valued:
 		Cost: 1500
 	Tooltip:
@@ -449,6 +461,8 @@ SULFIX.SCAFF:
 	RenderSprites:
 		PlayerPalette: sultanplayer
 		Image: sulfix
+	CustomSellValue:
+		Value: 400
 	Valued:
 		Cost: 1200
 	Tooltip:
@@ -508,22 +522,24 @@ SULFIX.SCAFF:
 	WithIdleOverlay@base4:
 		Sequence: make4
 		RequiresCondition: Construct >= 45
-		
-SULGTW.SCAFF:
+
+
+SULGTW.ENABLER:
 	Inherits: ^1x1SITE
 	Armor:
 		Type: HeavyBuilding
 	RenderSprites:
 		PlayerPalette: sultanplayer
 		Image: sulgtw
+	CustomSellValue:
+		Value: 175
 	Valued:
-		Cost: 1000
+		Cost: 550
 	Tooltip:
 		Name: Construction Site (Mosaic Guard Tower)
 	Buildable:
 		Description: A Super guard tower, stationed with 2 archers.\n  Strong vs Infantry, Light Cavalry\n  Weak vs Siege weapons and Heavy Cavalry \n  Cannot target Aircraft (because of I say so)\n\n\n
 		BuildPaletteOrder: 20
-		Prerequisites: barracks
 		Queue: MDefenses.SUL
 		BuildDurationModifier: 40
 		IconPalette: raicon
@@ -545,44 +561,120 @@ SULGTW.SCAFF:
 		RequiresCondition: inactive
 	SpawnActorOnDeath@Finsihed:
 		Probability: 100
-		Actor: SULGTW
+		Actor: SULGTW.SCAFF
 		DeathType: FinishedDeath
 	ExternalCondition@buildfurther: 
 		Condition: Construct
-		TotalCap: 40
+		TotalCap: 18
 	ExternalCondition@Deliverfurther:
 		Condition: DeliveredResources
-		TotalCap: 40
+		TotalCap: 18
 	Targetable@buildfurther: 
 		TargetTypes: Buildable
-		RequiresCondition: DeliveredResources > Construct && (40 - Construct) > 0
+		RequiresCondition: DeliveredResources > Construct && (18 - Construct) > 0
 	Targetable@deliverresources: 
 		TargetTypes: Deliverable
-		RequiresCondition: 40 > DeliveredResources
+		RequiresCondition: 18 > DeliveredResources
 	SelfHealing@Finished:
 		PercentageStep: -200
 		HealIfBelow: 110
 		Delay: 1
-		RequiresCondition: (40 - Construct) <= 0
+		RequiresCondition: DeliveredResources >= 0
 		DamageTypes: FinishedDeath
 	WithIdleOverlay@base1:
 		Sequence: make1
-		RequiresCondition: Construct > 10 && Construct < 10
+		RequiresCondition: Construct > 2 && Construct < 5
 	WithIdleOverlay@base2:
 		Sequence: make2
-		RequiresCondition: Construct >= 10 && Construct < 17
+		RequiresCondition: Construct >= 5 && Construct < 7
 	WithIdleOverlay@base3:
 		Sequence: make3
-		RequiresCondition: Construct >= 17 && Construct < 24
+		RequiresCondition: Construct >= 7 && Construct < 11
 	WithIdleOverlay@base4:
 		Sequence: make4
-		RequiresCondition: Construct >= 24 && Construct < 29
+		RequiresCondition: Construct >= 11 && Construct < 13
 	WithIdleOverlay@base5:
 		Sequence: make5
-		RequiresCondition: Construct >= 29 && Construct < 35
+		RequiresCondition: Construct >= 13 && Construct < 15
 	WithIdleOverlay@base6:
 		Sequence: make6
-		RequiresCondition: Construct >= 35
+		RequiresCondition: Construct >= 15
+	WithRangeCircle:
+		Range: 7c0		
+		
+SULGTW.SCAFF:
+	Inherits: ^1x1SITE
+	-Building:
+	-FrozenUnderFog:
+	HiddenUnderFog:
+	Immobile:
+		OccupiesSpace: true
+	Armor:
+		Type: HeavyBuilding
+	RenderSprites:
+		PlayerPalette: sultanplayer
+		Image: sulgtw
+	CustomSellValue:
+		Value: 175
+	Valued:
+		Cost: 550
+	Tooltip:
+		Name: Construction Site (Mosaic Guard Tower)
+	Health:
+		HP: 30000
+		Shape: Rectangle
+			TopLeft: -456, -456
+			BottomRight: 456, 456
+	RevealsShroud:
+		Range: 4c0
+	Selectable:
+		Bounds: 24,48,0,-10
+	SelectionDecorations
+		VisualBounds: 22,48,0,-10
+	WithSpriteBody:
+		RequiresCondition: inactive
+	SpawnActorOnDeath@Finsihed:
+		Probability: 100
+		Actor: SULGTW
+		DeathType: FinishedDeath
+	ExternalCondition@buildfurther: 
+		Condition: Construct
+		TotalCap: 18
+	ExternalCondition@Deliverfurther:
+		Condition: DeliveredResources
+		TotalCap: 18
+	Targetable@buildfurther: 
+		TargetTypes: Buildable
+		RequiresCondition: DeliveredResources > Construct && (18 - Construct) > 0
+	Targetable@deliverresources: 
+		TargetTypes: Deliverable
+		RequiresCondition: 18 > DeliveredResources
+	SelfHealing@Finished:
+		PercentageStep: -200
+		HealIfBelow: 110
+		Delay: 1
+		RequiresCondition: (18 - Construct) <= 0
+		DamageTypes: FinishedDeath
+	WithIdleOverlay@base1:
+		Sequence: make1
+		RequiresCondition: Construct > 2 && Construct < 5
+	WithIdleOverlay@base2:
+		Sequence: make2
+		RequiresCondition: Construct >= 5 && Construct < 7
+	WithIdleOverlay@base3:
+		Sequence: make3
+		RequiresCondition: Construct >= 7 && Construct < 11
+	WithIdleOverlay@base4:
+		Sequence: make4
+		RequiresCondition: Construct >= 11 && Construct < 13
+	WithIdleOverlay@base5:
+		Sequence: make5
+		RequiresCondition: Construct >= 13 && Construct < 15
+	WithIdleOverlay@base6:
+		Sequence: make6
+		RequiresCondition: Construct >= 15
+	WithRangeCircle:
+		Range: 7c0
 
 SULARRAY.SCAFF:
 	Inherits: ^3x2SITE
@@ -591,6 +683,8 @@ SULARRAY.SCAFF:
 	RenderSprites:
 		PlayerPalette: sultanplayer
 		Image: sularray
+	CustomSellValue:
+		Value: 420
 	Valued:
 		Cost: 1300
 	Tooltip:
@@ -656,7 +750,7 @@ SULARRAY.SCAFF:
 	WithIdleOverlay@base6:
 		Sequence: make6
 		RequiresCondition: Construct >= 45
-        
+		
 SULHALL.SCAFF:
 	Inherits: ^3x2SITE
 	Armor:
@@ -664,6 +758,8 @@ SULHALL.SCAFF:
 	RenderSprites:
 		PlayerPalette: sultanplayer
 		Image: sulhall
+	CustomSellValue:
+		Value: 700
 	Valued:
 		Cost: 2000
 	Tooltip:

@@ -491,7 +491,7 @@ E9NEW:
 	Mobile:
 		Speed: 56
 	Health:
-		HP: 8000
+		HP: 11000
 	Armament@Ground:
 		Weapon: magefire
 		LocalOffset: 541,-50,256
@@ -645,7 +645,7 @@ E5NEW:
 	Mobile:
 		Speed: 56
 	Health:
-		HP: 9000
+		HP: 13000
 	Armament:
 		Weapon: crossbow
 		LocalOffset: 341,0,456
@@ -683,7 +683,7 @@ RMBONEW:
 	Mobile:
 		Speed: 50
 	Health:
-		HP: 15000
+		HP: 17000
 	Armament:
 		Weapon: claymore
 	AttackFrontal:
@@ -778,7 +778,7 @@ ASSASSIN:
 	Mobile:
 		Speed: 66
 	Health:
-		HP: 7000
+		HP: 10000
 	Armament@dagger:
 		Name: Primary
 		Weapon: dagger
@@ -843,7 +843,7 @@ E8FARMER:
 	Mobile:
 		Speed: 60
 	Health:
-		HP: 20000
+		HP: 9000
 	RenderSprites:
 		Image: e8farmer
 		PlayerPalette: raplayer
@@ -900,7 +900,7 @@ BUMMLER:
 	Mobile:
 		Speed: 60
 	Health:
-		HP: 35000
+		HP: 20000
 	RenderSprites:
 		Image: bummler
 		PlayerPalette: raplayer
@@ -1285,6 +1285,10 @@ NOBLE5:
 	-CashTrickler@PayTax:
 	Health:
 		HP: 14000
+    ProximityExternalCondition@BUFF:
+		Range: 3c0
+		ValidStances: Ally
+		Condition: Tax
 		
 MWCONST1:
 	Inherits: ^MWConstructor
@@ -1459,7 +1463,7 @@ TRANSPORTER:
 	Mobile:
 		Speed: 56
 	Health:
-		HP: 25000
+		HP: 11000
 	RenderSprites:
 		PlayerPalette: mwcivilianplayer
 		Image: transporter

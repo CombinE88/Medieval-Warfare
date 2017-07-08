@@ -17,15 +17,15 @@ SULGTW:
 	RenderSprites:
 		PlayerPalette: sultanplayer
 	Valued:
-		Cost: 1000
+		Cost: 550
 	CustomSellValue:
-		Value: 500
+		Value: 275
 	Tooltip:
 		Name: Mosaic Guard Tower
 	Buildable:
 		Description: A Super guard tower, stationed with 2 archers.\n  Strong vs Infantry, Light Cavalry\n  Weak vs Siege weapons and Heavy Cavalry \n  Cannot target Aircraft (because of I say so)\n\n\n
 		BuildPaletteOrder: 20
-		Prerequisites: barracks, ~scaffold
+		Prerequisites: ~scaffold
 		Queue: MDefenses.SUL
 		BuildDuration: 1600
 		BuildDurationModifier: 40
@@ -47,20 +47,24 @@ SULGTW:
 		Weapon: bownarrowtower
 		LocalOffset: 0,0,427
 		Turret: primary
+		RequiresCondition: !static
 	Armament@2:
 		Weapon: bownarrowtower
 		LocalOffset: 0,0,427
 		Turret: secondary
 		FireDelay: 12
+		RequiresCondition: !static
 	Armament@1DUMMY:
 		Weapon: BowNArrowTowerDUMMY
 		LocalOffset: 0,0,427
 		Turret: primary
+		RequiresCondition: !static
 	Armament@2DUMMY:
 		Weapon: BowNArrowTowerDUMMY
 		LocalOffset: 0,0,427
 		Turret: secondary
 		FireDelay: 12
+		RequiresCondition: !static
 	AttackTurreted:
 		Armaments: primary, secondary, turr1, turr2
 	BodyOrientation:
@@ -71,10 +75,12 @@ SULGTW:
 		Sequence: turretidle
 		AimSequence: turretanim
 		Turret: primary
+		RequiresCondition: !static
 	WithSpriteTurret@2: 
 		Sequence: turretidle
 		AimSequence: turretanim
 		Turret: secondary
+		RequiresCondition: !static
 	Turreted@1:
 		Turret: primary
 		TurnSpeed: 100
@@ -83,8 +89,6 @@ SULGTW:
 		Turret: secondary
 		TurnSpeed: 100
 		Offset: 170,170,500
-	Power:
-		Amount: -3	
 	Armor:
 		Type: HeavyBuilding 
 	Selectable:
@@ -103,94 +107,319 @@ SULGTW:
 	WithIdleOverlay@archers:
 		Sequence: archgtw
 		Offset: 0, 0, 0
-		RequiresCondition: archers
+		RequiresCondition: archers && Construct >= 20
 	WithSpriteTurret@1archers: 
 		Sequence: turretidle2
 		AimSequence: turretanim2
 		Turret: turr1
-		RequiresCondition: archers
+		RequiresCondition: archers && Construct >= 20
 	WithSpriteTurret@2archers: 
 		Sequence: turretidle2
 		AimSequence: turretanim2
 		Turret: turr2
-		RequiresCondition: archers
+		RequiresCondition: archers && Construct >= 20
 	Turreted@1archers:
 		Turret: turr1
 		TurnSpeed: 100
 		Offset: -170,-170,850
-		RequiresCondition: archers
+		RequiresCondition: archers && Construct >= 20
 	Turreted@2archers:
 		Turret: turr2
 		TurnSpeed: 100
 		Offset: 170,170,850
-		RequiresCondition: archers
+		RequiresCondition: archers && Construct >= 20
 	Armament@1archers:
 		Weapon: bownarrowtower
 		LocalOffset: 0,0,427
 		Turret: turr1
-		RequiresCondition: archers
+		RequiresCondition: archers && Construct >= 20
 	Armament@2archers:
 		Weapon: bownarrowtower
 		LocalOffset: 0,0,427
 		Turret: turr2
 		FireDelay: 12
-		RequiresCondition: archers
+		RequiresCondition: archers && Construct >= 20
 	Armament@1DUMMYarchers:
 		Weapon: BowNArrowTowerDUMMY
 		LocalOffset: 0,0,427
 		Turret: turr1
-		RequiresCondition: archers
+		RequiresCondition: archers && Construct >= 20
 	Armament@2DUMMYarchers:
 		Weapon: BowNArrowTowerDUMMY
 		LocalOffset: 0,0,427
 		Turret: turr2
 		FireDelay: 12
-		RequiresCondition: archers
+		RequiresCondition: archers && Construct >= 20
 	WithIdleOverlay@djinn:
 		Sequence: djingtw
 		Offset: 0, 0, 0
-		RequiresCondition: djinn
+		RequiresCondition: djinn && Construct >= 50
 	WithSpriteTurret@djinn: 
 		Sequence: dturretidle
 		AimSequence: dturretanim
 		Turret: turr3
-		RequiresCondition: djinn
+		RequiresCondition: djinn && Construct >= 50
 	Turreted@djinn:
 		Turret: turr3
 		TurnSpeed: 100
 		Offset: 0,0,900
-		RequiresCondition: djinn
+		RequiresCondition: djinn && Construct >= 50
 	Armament@djinn:
 		Weapon: DjinElectroGround
 		LocalOffset: 141,75,352
 		Turret: turr3
-		RequiresCondition: djinn
-	 Armament@djinnAir:
+		RequiresCondition: djinn && Construct >= 50
+	Armament@djinnAir:
 		Weapon: DjinElectroAir
 		LocalOffset: 141,75,352
 		Turret: turr3
-		RequiresCondition: djinn
-	Power@archer:
-		Amount: -1
-		RequiresCondition: archers
-	Power@djinn:
-		Amount: -2
-		RequiresCondition: djinn
+		RequiresCondition: djinn && Construct >= 50
 	WithSpriteBody:
-		RequiresCondition: !static
+		RequiresCondition: !staticfinished
 	WithIdleOverlay@static:
 		Sequence: idleupped
-		RequiresCondition: static
-	Armament@static:
-		Weapon: TowerPike
-		LocalOffset: 0,0,0
-		RequiresCondition: static
+		RequiresCondition: static && Construct >= 30
+	Armament@static1:
+		Weapon: SulGTSpearThrow
+		LocalOffset: 0,0,427
+		Turret: primary
+		RequiresCondition: static && Construct >= 30
+	Armament@static2:
+		Weapon: SulGTSpearThrow
+		LocalOffset: 0,0,427
+		Turret: secondary
+		FireDelay: 25
+		RequiresCondition: static && Construct >= 30
+	Armament@static1AIR:
+		Weapon: SulGTSpearThrowAir
+		LocalOffset: 0,0,427
+		Turret: primary
+		RequiresCondition: static && Construct >= 30
+	Armament@static2AIR:
+		Weapon: SulGTSpearThrowAir
+		LocalOffset: 0,0,427
+		Turret: secondary
+		FireDelay: 25
+		RequiresCondition: static && Construct >= 30
 	DamageMultiplier@static:
-		RequiresCondition: static
-		Modifier: 70
+		RequiresCondition: static && Construct >= 30
+		Modifier: 70   
 	PersonValued:
 		ActorCount: 2
 		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
+	ExternalCondition@buildfurther: 
+		Condition: Construct
+		TotalCap: 50
+	ExternalCondition@Deliverfurther:
+		Condition: DeliveredResources
+		TotalCap: 50
+	Targetable@buildfurtherPLUG1: 
+		TargetTypes: Buildable
+		RequiresCondition: (DeliveredResources > Construct && (20 - Construct) > 0) && archers
+	Targetable@deliverresourcesPLUG1: 
+		TargetTypes: Deliverable
+		RequiresCondition: 20 > DeliveredResources && archers
+	Targetable@buildfurtherPLUG2: 
+		TargetTypes: Buildable
+		RequiresCondition: (DeliveredResources > Construct && (50 - Construct) > 0) && djinn
+	Targetable@deliverresourcesPLUG2: 
+		TargetTypes: Deliverable
+		RequiresCondition: 50 > DeliveredResources && djinn
+	Targetable@buildfurtherPLUG3: 
+		TargetTypes: Buildable
+		RequiresCondition: (DeliveredResources > Construct && (30 - Construct) > 0) && static
+	Targetable@deliverresourcesPLUG3: 
+		TargetTypes: Deliverable
+		RequiresCondition: 30 > DeliveredResources && static 
+	GrantCondition@FinishPLUG1:
+		RequiresCondition: Construct >= 20 && archers
+		Condition: archersfinished
+	GrantCondition@FinishPLUG2:
+		RequiresCondition: Construct >= 50 && djinn
+		Condition: djinnfinished
+	GrantCondition@FinishPLUG3:
+		RequiresCondition: Construct >= 30 && static
+		Condition: staticfinished
+	WithIdleOverlay@NW0:
+		Sequence: scaffnw0
+		Palette: mwcivilian
+		Offset: 212,-212,0
+		RequiresCondition: Construct < 3 && (archers || djinn || static) && !archersfinished && !djinnfinished && !staticfinished
+	WithIdleOverlay@SE0:
+		Sequence: scaffse0
+		Palette: mwcivilian
+		Offset: -212,212,0
+		RequiresCondition: Construct < 3 && (archers || djinn || static) && !archersfinished && !djinnfinished && !staticfinished
+	WithIdleOverlay@NW1:
+		Sequence: scaffnw1
+		Palette: mwcivilian
+		Offset: 212,-212,0
+		RequiresCondition: Construct >= 3 && Construct < 5 && (archers || djinn || static) && !archersfinished && !djinnfinished && !staticfinished
+	WithIdleOverlay@SE1:
+		Sequence: scaffse1
+		Palette: mwcivilian
+		Offset: -212,212,0
+		RequiresCondition: Construct >= 3 && Construct < 5 && (archers || djinn || static) && !archersfinished && !djinnfinished && !staticfinished
+	WithIdleOverlay@NW2:
+		Sequence: scaffnw2
+		Palette: mwcivilian
+		Offset: 212,-212,0
+		RequiresCondition: Construct >= 5 && Construct < 9 && (archers || djinn || static) && !archersfinished && !djinnfinished && !staticfinished
+	WithIdleOverlay@SE2:
+		Sequence: scaffse2
+		Palette: mwcivilian
+		Offset: -212,212,0
+		RequiresCondition: Construct >= 5 && Construct < 9 && (archers || djinn || static) && !archersfinished && !djinnfinished && !staticfinished
+	WithIdleOverlay@NW3:
+		Sequence: scaffnw3
+		Palette: mwcivilian
+		Offset: 212,-212,0
+		RequiresCondition: Construct >= 9 && Construct < 13 && (archers || djinn || static) && !archersfinished && !djinnfinished && !staticfinished
+	WithIdleOverlay@SE3:
+		Sequence: scaffse3
+		Palette: mwcivilian
+		Offset: -212,212,0
+		RequiresCondition: Construct >= 9 && Construct < 13 && (archers || djinn || static) && !archersfinished && !djinnfinished && !staticfinished
+	WithIdleOverlay@NW4:
+		Sequence: scaffnw4
+		Palette: mwcivilian
+		Offset: 212,-212,0
+		RequiresCondition: Construct >= 13 && Construct < 17 && (archers || djinn || static) && !archersfinished && !djinnfinished && !staticfinished
+	WithIdleOverlay@SE4:
+		Sequence: scaffse4
+		Palette: mwcivilian
+		Offset: -212,212,0
+		RequiresCondition: Construct >= 13 && Construct < 17 && (archers || djinn || static) && !archersfinished && !djinnfinished && !staticfinished
+	WithIdleOverlay@NW5:
+		Sequence: scaffnw5
+		Palette: mwcivilian
+		Offset: 212,-212,0
+		RequiresCondition: Construct >= 17 && Construct < 21 && (archers || djinn || static) && !archersfinished && !djinnfinished && !staticfinished
+	WithIdleOverlay@SE5:
+		Sequence: scaffse5
+		Palette: mwcivilian
+		Offset: -212,212,0
+		RequiresCondition: Construct >= 17 && Construct < 21 && (archers || djinn || static) && !archersfinished && !djinnfinished && !staticfinished
+	WithIdleOverlay@NW6:
+		Sequence: scaffnw6
+		Palette: mwcivilian
+		Offset: 212,-212,0
+		RequiresCondition: Construct >= 21 && (archers || djinn || static) && !archersfinished && !djinnfinished && !staticfinished
+	WithIdleOverlay@SE6:
+		Sequence: scaffse6
+		Palette: mwcivilian
+		Offset: -212,212,0
+		RequiresCondition: Construct >= 21 && (archers || djinn || static) && !archersfinished && !djinnfinished && !staticfinished
+	WithIdleOverlay@bricks0:
+		Sequence: bricks0
+		Palette: mwcivilian
+		Offset: -1534,-512,0
+		RequiresCondition: (DeliveredResources - Construct) > 0 && (DeliveredResources - Construct) < 4 && (archers || djinn || static) && !archersfinished && !djinnfinished && !staticfinished
+	WithIdleOverlay@bricks1:
+		Sequence: bricks1
+		Palette: mwcivilian
+		Offset: -1534,-512,0
+		RequiresCondition: (DeliveredResources - Construct) >= 4 && (DeliveredResources - Construct) < 8 && (archers || djinn || static) && !archersfinished && !djinnfinished && !staticfinished
+	WithIdleOverlay@bricks2:
+		Sequence: bricks2
+		Palette: mwcivilian
+		Offset: -1534,-512,0
+		RequiresCondition: (DeliveredResources - Construct) >= 8 && (DeliveredResources - Construct) < 12 && (archers || djinn || static) && !archersfinished && !djinnfinished && !staticfinished
+	WithIdleOverlay@bricks3:
+		Sequence: bricks3
+		Palette: mwcivilian
+		Offset: -1534,-512,0
+		RequiresCondition: (DeliveredResources - Construct) >= 12 && (DeliveredResources - Construct) < 16 && (archers || djinn || static) && !archersfinished && !djinnfinished && !staticfinished
+	WithIdleOverlay@bricks4:
+		Sequence: bricks4
+		Palette: mwcivilian
+		Offset: -1534,-512,0
+		RequiresCondition: (DeliveredResources - Construct) >= 16 && (DeliveredResources - Construct) < 20 && (archers || djinn || static) && !archersfinished && !djinnfinished && !staticfinished
+	WithIdleOverlay@bricks5:
+		Sequence: bricks5
+		Palette: mwcivilian
+		Offset: -1534,-512,0
+		RequiresCondition: (DeliveredResources - Construct) >= 20 && (DeliveredResources - Construct) < 24 && (archers || djinn || static) && !archersfinished && !djinnfinished && !staticfinished
+	WithIdleOverlay@bricks6:
+		Sequence: bricks6
+		Palette: mwcivilian
+		Offset: -1534,-512,0
+		RequiresCondition: (DeliveredResources - Construct) >= 24 && (DeliveredResources - Construct) < 28 && (archers || djinn || static) && !archersfinished && !djinnfinished && !staticfinished
+	WithIdleOverlay@bricks7:
+		Sequence: bricks7
+		Palette: mwcivilian
+		Offset: -1534,-512,0
+		RequiresCondition: (DeliveredResources - Construct) >= 28 && (DeliveredResources - Construct) < 32 && (archers || djinn || static) && !archersfinished && !djinnfinished && !staticfinished
+	WithIdleOverlay@bricks8:
+		Sequence: bricks8
+		Palette: mwcivilian
+		Offset: -1534,-512,0
+		RequiresCondition: (DeliveredResources - Construct) >= 32 && (DeliveredResources - Construct) < 36 && (archers || djinn || static) && !archersfinished && !djinnfinished && !staticfinished
+	WithIdleOverlay@bricks9:
+		Sequence: bricks9
+		Palette: mwcivilian
+		Offset: -1534,-512,0
+		RequiresCondition: (DeliveredResources - Construct) >= 36 && (DeliveredResources - Construct) < 40 && (archers || djinn || static) && !archersfinished && !djinnfinished && !staticfinished
+	WithIdleOverlay@bricks10:
+		Sequence: bricks10
+		Palette: mwcivilian
+		Offset: -1534,-512,0
+		RequiresCondition: (DeliveredResources - Construct) >= 40 && (archers || djinn || static) && !archersfinished && !djinnfinished && !staticfinished
+	WithIdleOverlay@lumnber0:
+		Sequence: lumnber0
+		Palette: mwcivilian
+		Offset: -1534,512,0
+		RequiresCondition: (DeliveredResources - Construct) >= 2 && (DeliveredResources - Construct) < 6 && (archers || djinn || static) && !archersfinished && !djinnfinished && !staticfinished
+	WithIdleOverlay@lumnber1:
+		Sequence: lumnber1
+		Palette: mwcivilian
+		Offset: -1534,512,0
+		RequiresCondition: (DeliveredResources - Construct) >= 6 && (DeliveredResources - Construct) < 10 && (archers || djinn || static) && !archersfinished && !djinnfinished && !staticfinished
+	WithIdleOverlay@lumnber2:
+		Sequence: lumnber2
+		Palette: mwcivilian
+		Offset: -1534,512,0
+		RequiresCondition: (DeliveredResources - Construct) >= 10 && (DeliveredResources - Construct) < 14 && (archers || djinn || static) && !archersfinished && !djinnfinished && !staticfinished
+	WithIdleOverlay@lumnber3:
+		Sequence: lumnber3
+		Palette: mwcivilian
+		Offset: -1534,512,0
+		RequiresCondition: (DeliveredResources - Construct) >= 14 && (DeliveredResources - Construct) < 18 && (archers || djinn || static) && !archersfinished && !djinnfinished && !staticfinished
+	WithIdleOverlay@lumnber4:
+		Sequence: lumnber4
+		Palette: mwcivilian
+		Offset: -1534,512,0
+		RequiresCondition: (DeliveredResources - Construct) >= 18 && (DeliveredResources - Construct) < 22 && (archers || djinn || static) && !archersfinished && !djinnfinished && !staticfinished
+	WithIdleOverlay@lumnber5:
+		Sequence: lumnber5
+		Palette: mwcivilian
+		Offset: -1534,512,0
+		RequiresCondition: (DeliveredResources - Construct) >= 22 && (DeliveredResources - Construct) < 26 && (archers || djinn || static) && !archersfinished && !djinnfinished && !staticfinished
+	WithIdleOverlay@lumnber6:
+		Sequence: lumnber6
+		Palette: mwcivilian
+		Offset: -1534,512,0
+		RequiresCondition: (DeliveredResources - Construct) >= 26 && (DeliveredResources - Construct) < 30 && (archers || djinn || static) && !archersfinished && !djinnfinished && !staticfinished
+	WithIdleOverlay@lumnber7:
+		Sequence: lumnber7
+		Palette: mwcivilian
+		Offset: -1534,512,0
+		RequiresCondition: (DeliveredResources - Construct) >= 30 && (DeliveredResources - Construct) < 34 && (archers || djinn || static) && !archersfinished && !djinnfinished && !staticfinished
+	WithIdleOverlay@lumnber8:
+		Sequence: lumnber8
+		Palette: mwcivilian
+		Offset: -1534,512,0
+		RequiresCondition: (DeliveredResources - Construct) >= 34 && (DeliveredResources - Construct) < 38 && (archers || djinn || static) && !archersfinished && !djinnfinished && !staticfinished
+	WithIdleOverlay@lumnber9:
+		Sequence: lumnber9
+		Palette: mwcivilian
+		Offset: -1534,512,0
+		RequiresCondition: (DeliveredResources - Construct) >= 38 && (DeliveredResources - Construct) < 42 && (archers || djinn || static) && !archersfinished && !djinnfinished && !staticfinished
+	WithIdleOverlay@lumnber10:
+		Sequence: lumnber10
+		Palette: mwcivilian
+		Offset: -1534,512,0
+		RequiresCondition: (DeliveredResources - Construct) >= 42 && (archers || djinn || static) && !archersfinished && !djinnfinished && !staticfinished
 		
 
 SULPLUG1:
@@ -205,17 +434,15 @@ SULPLUG1:
 	Buildable:
 		Description: Upgrades the Guard Tower with 2 additional Archers.\n  Doubles the firepower\n  Strong vs Infantry\n\n
 		BuildPaletteOrder: 23
-		Prerequisites: anyhq
+		Prerequisites: barracks
 		Queue: MDefenses.SUL
-		BuildDuration:800
+		BuildDuration:25
 		BuildDurationModifier: 40
 		IconPalette: raicon
 	Valued:
-		Cost: 500
+		Cost: 300
 	Plug:
 		Type: sulgtw.archers
-	Power:
-		Amount: -1
 		
 SULPLUG3:
 	AlwaysVisible:
@@ -227,19 +454,17 @@ SULPLUG3:
 	Tooltip:
 		Name: Mystical Firepower Upgrade
 	Buildable:
-		Description: Upgrades the Guard Tower with 1 Djinn.\n  Can attack Aricrafts\n  Strong vs Aircrafts\n\n
+		Description: Upgrades the Guard Tower with 1 Djinn.\n  Can attack Aricrafts\n  Strong vs Everything\n\n
 		BuildPaletteOrder: 22
 		Prerequisites: sultow2
 		Queue: MDefenses.SUL
-		BuildDuration:800
+		BuildDuration:25
 		BuildDurationModifier: 40
 		IconPalette: raicon
 	Valued:
 		Cost: 700
 	Plug:
 		Type: sulgtw.djinn
-	Power:
-		Amount: -2
 		
 SULPLUG4:
 	AlwaysVisible:
@@ -249,21 +474,19 @@ SULPLUG4:
 		RemoveInstead: true
 	RenderSprites:
 	Tooltip:
-		Name: Basic Defense Upgrade
+		Name: Advanced Defense Upgrade
 	Buildable:
-		Description: Upgrades the Guard Tower with a static defense.\n  Deals high damage to surrounding Cavalry\n  Strong vs Cavalry\n  Increases base hitpoints by 30%\n
+		Description: Upgrades the Guard Tower with a static defense.\n  Deals high damage to Cavalry\n  Strong vs Cavalry\n  Weak vs Infantry\n  Increases base hitpoints by 30%\n  Replaces arrows with jevalines\n  
 		BuildPaletteOrder: 21
 		Prerequisites: vehicleproduction
 		Queue: MDefenses.SUL
-		BuildDuration:800
+		BuildDuration:25
 		BuildDurationModifier: 40
 		IconPalette: raicon
 	Valued:
 		Cost: 300
 	Plug:
 		Type: sulgtw.static
-	Power:
-		Amount: 0
 
 		
 #Buildings		
@@ -300,8 +523,6 @@ SULHALL:
 	RevealsShroud:
 		Range: 4c0
 	Bib:
-	Power:
-		Amount: -4
 	ProvidesPrerequisite@buildingname:
 	Selectable:
 		Bounds: 72,48
@@ -311,13 +532,13 @@ SULHALL:
 		Weapons: LargeStone1, LargeStone1, LargeStone1, LargeStone1
 		Pieces: 1, 2
 		Range: 1c0, 5c0
-    WithFreeSpawnableActor@3:
-        TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
-        SpawnActor: noble5
-        Offset: 725,341, 0
-        MoveOffset: 1,2
-        Sticky: true
-        
+	WithFreeSpawnableActor@3:
+		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
+		SpawnActor: noble5
+		Offset: 725,341, 0
+		MoveOffset: 1,2
+		Sticky: true
+		
 SULARRAY:
 	Inherits: ^MWBaseBuilding
 	Armor:
@@ -350,8 +571,6 @@ SULARRAY:
 	RevealsShroud:
 		Range: 4c0
 	Bib:
-	Power:
-		Amount: -4
 	ProvidesPrerequisite@buildingname:
 	Selectable:
 		Bounds: 72,48
@@ -363,24 +582,24 @@ SULARRAY:
 		Range: 1c0, 5c0
 	Targetable@Tavern:
 		TargetTypes: Material
-    WithFreeSpawnableActor@1:
-        TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
-        SpawnActor: transporter
-        Offset: 384,298, 0
-        MoveOffset: 1,2
-        Sticky: true
-    WithFreeSpawnableActor@2:
-        TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
-        SpawnActor: transporter
-        Offset: 384,298, 0
-        MoveOffset: 1,2
-        Sticky: true
-    WithFreeSpawnableActor@3:
-        TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
-        SpawnActor: transporter
-        Offset: 384,298, 0
-        MoveOffset: 1,2
-        Sticky: true
+	WithFreeSpawnableActor@1:
+		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
+		SpawnActor: transporter
+		Offset: 384,298, 0
+		MoveOffset: 1,2
+		Sticky: true
+	WithFreeSpawnableActor@2:
+		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
+		SpawnActor: transporter
+		Offset: 384,298, 0
+		MoveOffset: 1,2
+		Sticky: true
+	WithFreeSpawnableActor@3:
+		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
+		SpawnActor: transporter
+		Offset: 384,298, 0
+		MoveOffset: 1,2
+		Sticky: true
 		
 SULNUK2:
 	Inherits: ^MWBaseBuilding
@@ -417,8 +636,6 @@ SULNUK2:
 	RevealsShroud:
 		Range: 4c0
 	Bib:
-	Power:
-		Amount: 16
 	Selectable:
 		Bounds:72,48,0,9
 	SelectionDecorations:
@@ -495,8 +712,6 @@ SULNUKE:
 	RevealsShroud:
 		Range: 4c0
 	Bib:
-	Power:
-		Amount: 7
 	Selectable:
 		Bounds: 48,40,0,9
 	SelectionDecorations:
@@ -564,18 +779,12 @@ SULBARR:
 		Range: 5c0
 	Bib:
 	RallyPoint:
-	Exit@1:
-		SpawnOffset: 981,426,0
-		ExitCell: 2,2
-	Exit@2:
+	Exit:
 		SpawnOffset: 341,682,0
 		ExitCell: 1,2
-	Exit@3:
-		SpawnOffset: -213,896,0
-		ExitCell: 0,2
 	WithActorProduction:
 		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
-		FindRadius: 15
+		FindRadius: 30
 		Produces: MInfantry.SUL
 	ProductionQueue@1:
 		Type: MInfantry.SUL
@@ -585,8 +794,6 @@ SULBARR:
 		Factions: sul
 		ReadyAudio:
 	ProductionBar:
-	Power:
-		Amount: -2
 	ProvidesPrerequisite@buildingname:
 	Selectable:
 		Bounds:72,48,0,9
@@ -641,7 +848,7 @@ SULMYSTIC:
 		ExitCell: 0,2
 	WithActorProduction:
 		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
-		FindRadius: 15
+		FindRadius: 30
 		Produces: MVehicle.SUL
 	ProductionQueue@1:
 		Type: MVehicle.SUL
@@ -651,8 +858,6 @@ SULMYSTIC:
 		Factions: sul
 		ReadyAudio:
 	ProductionBar:
-	Power:
-		Amount: -3
 	ProvidesPrerequisite@buildingname:
 	Selectable:
 		Bounds:72,48,0,9
@@ -708,8 +913,6 @@ SULCASTLE:
 	RevealsShroud:
 		Range: 5c0
 	Bib:
-	Power:
-		Amount: -5
 	Selectable:
 		Bounds: 72,48,0,12
 	SelectionDecorations:
@@ -996,8 +1199,6 @@ SULMILL:
 	Bib:
 	CustomSellValue:
 		Value: 200
-	Power:
-		Amount: -2
 	ProvidesPrerequisite@buildingname:
 	Selectable:
 		Bounds: 48,70,0,5
@@ -1023,21 +1224,27 @@ SULMILL:
 		Range: 1c0
 		ValidStances: Ally
 		Condition: KillRef
-    WithFreeSpawnableActor@1:
-        TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
-        SpawnActor: sule6
-        Offset: -512,1877, 0
-        MoveOffset: 0,2
-    WithFreeSpawnableActor@2:
-        TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
-        SpawnActor: sule6
-        Offset: -512,1877, 0
-        MoveOffset: 0,2
-    WithFreeSpawnableActor@3:
-        TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
-        SpawnActor: sule6
-        Offset: -512,1877, 0
-        MoveOffset: 0,2
+	WithFreeSpawnableActor@1:
+		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
+		SpawnActor: sule6
+		Offset: -512,1877, 0
+		MoveOffset: 0,2
+		RespawnTime: 750
+		FindRadius: 30
+	WithFreeSpawnableActor@2:
+		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
+		SpawnActor: sule6
+		Offset: -512,1877, 0
+		MoveOffset: 0,2
+		RespawnTime: 750
+		FindRadius: 30
+	WithFreeSpawnableActor@3:
+		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
+		SpawnActor: sule6
+		Offset: -512,1877, 0
+		MoveOffset: 0,2
+		RespawnTime: 750
+		FindRadius: 30
 
 SULFIX:
 	Inherits: ^MWBaseBuilding
@@ -1074,8 +1281,6 @@ SULFIX:
 	RevealsShroud:
 		Range: 4c0
 	Bib:
-	Power:
-		Amount: -4
 	ProvidesPrerequisite@buildingname: 
 	RallyPoint:
 	Exit@1:
@@ -1083,7 +1288,7 @@ SULFIX:
 		ExitCell: 0,2
 	WithActorProduction:
 		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
-		FindRadius: 15
+		FindRadius: 30
 		Produces: MSiege.SUL
 	ProductionQueue@2:
 		Type: MSiege.SUL
@@ -1155,7 +1360,7 @@ SULE1:
 	Mobile:
 		Speed: 85
 	Health:
-		HP: 8000
+		HP: 7000
 	Armament:
 		Weapon: SulSword
 	AttackFrontal:
@@ -1188,7 +1393,7 @@ SULE2:
 	Mobile:
 		Speed: 56
 	Health:
-		HP: 9500
+		HP: 11000
 	Armament@Primary:
 		Name: Primary
 		Weapon: PikeAC
@@ -1234,7 +1439,7 @@ SULE3:
 	Mobile:
 		Speed: 60
 	Health:
-		HP: 7000
+		HP: 6000
 	Armament:
 		Weapon: BedouinBow
 		LocalOffset: 341,20,356
@@ -1286,7 +1491,7 @@ SULE4:
 	Mobile:
 		Speed: 55
 	Health:
-		HP: 27000
+		HP: 25000
 	Armament@Primary:
 		Weapon: SuperioirPike
 	AttackFrontal:  
@@ -1387,7 +1592,7 @@ SULE6:
 	Mobile:
 		Speed: 70
 	Health:
-		HP: 17000
+		HP: 10000
 	RenderSprites:
 		PlayerPalette: raplayer
 	AttackFrontal:
@@ -1569,8 +1774,8 @@ SULM2:
 	
 SULM4:
 	Inherits: ^Knight
-    Inherits@88: ^GameSettingsArcher
-    RevealsShroud:
+	Inherits@88: ^GameSettingsArcher
+	RevealsShroud:
 		Range: 7c0
 	Valued:
 		Cost: 600
@@ -1612,8 +1817,7 @@ SULM4:
 SULB0:
 	Inherits: ^Siege
 	Inherits@2: ^GainsExperience
-    Inherits@88: ^GameSettingsArcher
-    Inherits@89: ^GameSettingsTowers
+	Inherits@88: ^GameSettingsArcher
 	Valued:
 		Cost: 725
 	Tooltip:
@@ -1724,8 +1928,8 @@ SULB0:
 SULB1:
 	Inherits: ^Siege
 	Inherits@2: ^GainsExperience
-    Inherits@88: ^GameSettingsArcher
-    Inherits@89: ^GameSettingsTowers
+	Inherits@88: ^GameSettingsArcher
+	Inherits@89: ^GameSettingsTowers
 	Valued:
 		Cost: 1300
 	Tooltip:
@@ -1793,8 +1997,8 @@ SULB1.Husk:
 SULB2:
 	Inherits: ^Siege
 	Inherits@2: ^GainsExperience
-    Inherits@88: ^GameSettingsArcher
-    Inherits@89: ^GameSettingsTowers
+	Inherits@88: ^GameSettingsArcher
+	Inherits@89: ^GameSettingsTowers
 	Valued:
 		Cost: 2500
 	Tooltip:
@@ -1912,7 +2116,7 @@ PLACEHOLDERBOLTS:
 SULM3:
 	Inherits: ^Helicopter
 	Inherits@EXPERIENCE: ^GainsExperience
-    Inherits@88: ^GameSettingsArcher
+	Inherits@88: ^GameSettingsArcher
 	Valued:
 		Cost: 1000
 	Tooltip:

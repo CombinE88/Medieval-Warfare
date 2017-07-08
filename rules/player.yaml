@@ -21,19 +21,19 @@ Player:
 		TownHalls: townhall, sulhall
 		Peasants: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
 	ProvidesTechPrerequisite@all:
-		Name: Less Tactical
+		Name: Normal Health
 		Prerequisites:
 		Id: unrestricted
 	ProvidesTechPrerequisite@nosuper:
-		Name: Medium Tactical
+		Name: +40% Health
 		Prerequisites: HPLevel30Set
 		Id: nopowers
 	ProvidesTechPrerequisite@medium:
-		Name: Nromal Tactical
+		Name: +200% Health
 		Prerequisites: HPLevel50Set
 		Id: medium
 	ProvidesTechPrerequisite@low:
-		Name: Highly Tactical
+		Name: +400% Health
 		Prerequisites: HPLevel100Set
 		Id: low
 	GrantConditionOnPrerequisiteManager:

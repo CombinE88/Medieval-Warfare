@@ -189,8 +189,6 @@ FACTNEW:
 	BaseProvider:
 		Cooldown: 25
 		Range: 13c0
-	Power:
-		Amount: 10
 	ProvidesPrerequisite@buildingname:		
 	WithDeathAnimation:
 		DeathSequencePalette: raplayer
@@ -211,32 +209,36 @@ FACTNEW:
 		ExitCell: 1,2
 	WithFreeSpawnableActor@LABOURONE:
 		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
+        UseConverting: false
 		SpawnActor: transporter
 		Offset: -124,1024, 0
 		MoveOffset: 1,2
 		Sticky: true
-		Lasso: 5c0
+		Lasso: 10c0
 	WithFreeSpawnableActor@LABOURTWO:
 		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
+        UseConverting: false
 		SpawnActor: transporter
 		Offset: -124,1024, 0
 		MoveOffset: 1,2
 		Sticky: true
-		Lasso: 5c0
+		Lasso: 10c0
 	WithFreeSpawnableActor@LABOURTHREE:
 		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
+        UseConverting: false
 		SpawnActor: transporter
 		Offset: -124,1024, 0
 		MoveOffset: 1,2
 		Sticky: true
-		Lasso: 5c0
+		Lasso: 10c0
 	WithFreeSpawnableActor@LABOURFOUR:
 		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
+        UseConverting: false
 		SpawnActor: engeneer
 		Offset: -124,1024, 0
 		MoveOffset: 1,2
 		Sticky: true
-		Lasso: 5c0
+		Lasso: 10c0
 	WithFreeSpawnableActor@LABOURFIVE:
 		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
 		SpawnActor: hunter
@@ -462,7 +464,8 @@ MINIFACT:
 		MoveOffset: 1,2
 		Sticky: true
 		FindRadius: 100
-		Lasso: 5c0
+		Lasso: 10c0
+        UseConverting: false
 	WithFreeSpawnableActor@4:
 		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
 		SpawnActor: engeneer
@@ -470,7 +473,8 @@ MINIFACT:
 		MoveOffset: 1,2
 		Sticky: true
 		FindRadius: 100
-		Lasso: 5c0
+		Lasso: 10c0
+        UseConverting: false
 	WithFreeSpawnableActor@2:
 		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
 		SpawnActor: transporter
@@ -478,7 +482,8 @@ MINIFACT:
 		MoveOffset: 1,2
 		Sticky: true
 		FindRadius: 100
-		Lasso: 5c0
+		Lasso: 10c0
+        UseConverting: false
 	WithFreeSpawnableActor@3:
 		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
 		SpawnActor: transporter
@@ -487,6 +492,7 @@ MINIFACT:
 		Sticky: true
 		FindRadius: 100
 		Lasso: 30c0
+        UseConverting: false
 	WithFreeSpawnableActor@5:
 		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
 		SpawnActor: hunter
@@ -539,9 +545,7 @@ HQNEWNOD:
 			BottomRight: 924, 924
 	RevealsShroud:
 		Range: 10c0
-	Bib:
-	Power:
-		Amount: -2 
+	Bib: 
 	ThrowsShrapnel@LARGE:
 		Weapons: DebrAnvil1, DebrUtility1, DebrUtility2, DebrUtility3
 		Pieces: 1, 2
@@ -596,8 +600,6 @@ ARMORYNOD:
 	RenderDetectionCircle:
 	DetectCloaked:
 		Range: 5c0
-	Power:
-		Amount: -4
 	RequiresPower:
 	CanPowerDown:
 		PowerupSound: EnablePower
@@ -693,8 +695,6 @@ ARMORYGDI:
 	RenderDetectionCircle:
 	DetectCloaked:
 		Range: 5c0
-	Power:
-		Amount: -4
 	AirstrikePower:
 		Icon: firestorm
 		ChargeTime: 210
@@ -770,8 +770,6 @@ NUK2NEW:
 	RevealsShroud:
 		Range: 4c0
 	Bib:
-	Power:
-		Amount: 12
 	Selectable:
 		Bounds: 48,40,0,9
 	SelectionDecorations:
@@ -850,8 +848,6 @@ NUKXL:
 	RevealsShroud:
 		Range: 4c0
 	Bib:
-	Power:
-		Amount: 12
 	Selectable:
 		Bounds: 72,48
 	SelectionDecorations:
@@ -933,8 +929,6 @@ NUKENEW:
 	RevealsShroud:
 		Range: 4c0
 	Bib:
-	Power:
-		Amount: 4
 	Selectable:
 		Bounds: 48,40,0,9
 	SelectionDecorations:
@@ -1002,8 +996,6 @@ NODNUK2:
 	RevealsShroud:
 		Range: 4c0
 	Bib:
-	Power:
-		Amount: 12
 	Selectable:
 		Bounds: 48,40,0,9
 	SelectionDecorations:
@@ -1113,8 +1105,6 @@ NODNUKE:
 	RevealsShroud:
 		Range: 4c0
 	Bib:
-	Power:
-		Amount: 3
 	Selectable:
 		Bounds: 40,26,0,0
 	SelectionDecorations:
@@ -1182,8 +1172,6 @@ ZEROPROC:
 	Bib:
 	CustomSellValue:
 		Value: 200
-	Power:
-		Amount: -2
 	ProvidesPrerequisite@buildingname:
 	Selectable:
 		Bounds: 48,70,0,5
@@ -1216,11 +1204,13 @@ ZEROPROC:
 		SpawnActor: e8farmer
 		Offset: 298,981, 0
 		MoveOffset: 1,3
+		RespawnTime: 750
 	WithFreeSpawnableActor@2:
 		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
 		SpawnActor: e8farmer
 		Offset: 298,981, 0
 		MoveOffset: 1,3
+		RespawnTime: 750
 		
 PROC:
 	Tooltip:
@@ -1299,8 +1289,6 @@ PROCNEW:
 		Actor: eharvxl
 		SpawnOffset: 1,2
 		Facing: 64
-	Power:
-		Amount: -5
 	ProvidesPrerequisite:
 		Prerequisite: proc
 	SelectionDecorations:
@@ -1355,8 +1343,6 @@ SILONEW:
 		PipColor: Green
 		Capacity: 2000
 	-EmitInfantryOnSell:
-	Power:
-		Amount: -1
 	MustBeDestroyed:
 		RequiredForShortGame: false
 	SelectionDecorations:
@@ -1409,8 +1395,6 @@ TROJAN:
 		LowPowerSlowdown: 1
 		BuildDurationModifier: 30
 	ProductionBar:
-	Power:
-		Amount: 0
 	Selectable:
 		Bounds: 32,32,0,0
 	ProvidesPrerequisite@buildingname:
@@ -1457,7 +1441,7 @@ BARRNEW:
 	WithActorProduction:
 		Produces: MInfantry.GDI
 		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
-		FindRadius: 15
+		FindRadius: 30
 	Exit@1:
 		SpawnOffset: -259,640,0
 		ExitCell: 0,2
@@ -1472,8 +1456,6 @@ BARRNEW:
 		Factions: gdi
 		ReadyAudio:
 	ProductionBar:
-	Power:
-		Amount: -2
 	ProvidesPrerequisite@buildingname:
 	Selectable:
 		Bounds: 48,42,0,-5
@@ -1526,7 +1508,7 @@ HANDNEW:
 		ExitCell: 1,2
 	WithActorProduction:
 		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
-		FindRadius: 15
+		FindRadius: 30
 		Produces:  MInfantry.Nod
 	ProductionQueue@2:
 		Type: MInfantry.Nod
@@ -1536,8 +1518,6 @@ HANDNEW:
 		Factions: nod
 		ReadyAudio:
 	ProductionBar:
-	Power:
-		Amount: -2
 	ProvidesPrerequisite@buildingname:
 	Selectable:
 		Bounds: 48,72,0,-5
@@ -1591,7 +1571,7 @@ STALL:
 		ExitDelay: 10
 	WithActorProduction:
 		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
-		FindRadius: 15
+		FindRadius: 30
 		Produces: MVehicle.GDI
 	ProductionQueue@1:
 		Type: MVehicle.GDI
@@ -1601,8 +1581,6 @@ STALL:
 		LowPowerSlowdown: 3
 		ReadyAudio:
 	ProductionBar:
-	Power:
-		Amount: -3
 	ProvidesPrerequisite@buildingname:
 	ProvidesPrerequisite:
 		Prerequisite: vehicleproduction
@@ -1677,7 +1655,7 @@ NODSTALL:
 		ExitCell: 2,2
 	WithActorProduction:
 		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
-		FindRadius: 15
+		FindRadius: 30
 		Produces: MVehicle.Nod
 	ProductionQueue@2:
 		Type: MVehicle.Nod
@@ -1687,8 +1665,6 @@ NODSTALL:
 		LowPowerSlowdown: 3
 		ReadyAudio:
 	ProductionBar:
-	Power:
-		Amount: -3
 	ProvidesPrerequisite@buildingname:
 	ProvidesPrerequisite:
 		Prerequisite: vehicleproduction
@@ -1761,8 +1737,6 @@ CASTLE:
 	RevealsShroud:
 		Range: 6c0
 	Bib:
-	Power:
-		Amount: -15
 	ProvidesPrerequisite:
 		Prerequisite: anyhq
 	ProvidesPrerequisite@2:
@@ -1843,8 +1817,6 @@ CASTLE2:
 	RevealsShroud:
 		Range: 6c0
 	Bib:
-	Power:
-		Amount: -20
 	ProvidesPrerequisite:
 		Prerequisite: anyhq
 	ProvidesPrerequisite@buildingname:
@@ -1931,8 +1903,6 @@ WORKSHOPNOD:
 	RevealsShroud:
 		Range: 5c0
 	Bib:
-	Power:
-		Amount: -3
 	ProvidesPrerequisite@buildingname: 
 	RallyPoint:
 	Exit@1:
@@ -1940,7 +1910,7 @@ WORKSHOPNOD:
 		ExitCell: 1,2
 	WithActorProduction:
 		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
-		FindRadius: 15
+		FindRadius: 30
 		Produces: MSiege.Nod
 	ProductionQueue@2:
 		Type: MSiege.Nod
@@ -2035,8 +2005,6 @@ WORKSHOPGDI:
 	RevealsShroud:
 		Range: 5c0
 	Bib:
-	Power:
-		Amount: -3
 	ProvidesPrerequisite@buildingname: 
 	RallyPoint:
 	Exit@1:
@@ -2044,7 +2012,7 @@ WORKSHOPGDI:
 		ExitCell: 0,2
 	WithActorProduction:
 		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
-		FindRadius: 15
+		FindRadius: 30
 		Produces: MSiege.GDI
 	ProductionQueue@1:
 		Type: MSiege.GDI
@@ -2101,6 +2069,8 @@ HOSP:
 	Inherits: ^TechBuilding
 	Selectable:
 		Priority: 0
+	Tooltip:
+		Name: Hospital
 	SpawnActorOnDeath:
 		Actor: HOSP.Husk
 		OwnerType: InternalName
@@ -2602,8 +2572,6 @@ TAVERN:
 	RevealsShroud:
 		Range: 4c0
 	Bib:
-	Power:
-		Amount: -4
 	ProvidesPrerequisite@buildingname:
 	Selectable:
 		Bounds: 72,48
@@ -2666,8 +2634,6 @@ TOWNHALL:
 	RevealsShroud:
 		Range: 4c0
 	Bib:
-	Power:
-		Amount: -4
 	ProvidesPrerequisite@buildingname:
 	Selectable:
 		Bounds: 72,48

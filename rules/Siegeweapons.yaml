@@ -93,6 +93,7 @@ SIEGE1:
 	Inherits: ^Siege
 	Inherits@2: ^GainsExperience
     Inherits@88: ^GameSettingsArcher
+    Inherits@89: ^GameSettingsTowers
 	Valued:
 		Cost: 950
 	Tooltip:
@@ -204,7 +205,6 @@ SIEGE3:
 	Inherits: ^Siege
 	Inherits@2: ^GainsExperience
     Inherits@88: ^GameSettingsArcher
-    Inherits@89: ^GameSettingsTowers
 	ConditionManager:
 	Cargo:
 		MaxWeight: 6
@@ -488,7 +488,7 @@ EHARVXL:
 		Speed: 85
 		SharesCell: false
 	Health:
-		HP: 30000
+		HP: 23000
 	RenderSprites:
 		Image: eharvxl
 		PlayerPalette: raplayer

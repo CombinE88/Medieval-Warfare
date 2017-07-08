@@ -138,10 +138,11 @@ rank:
 		Start: 3
 
 rallypoint:
-	flag: flagfly
-		Length: *
-		Offset: 10,-5
-		ZOffset: 2535
+	flag: newflag
+		Start: 9
+		Length: 4
+		Tick: 120
+        Offset: 12, -14
 	circles: fpls
 		Length: *
 		ZOffset: 2047

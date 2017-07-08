@@ -1736,7 +1736,7 @@ ThopterBomb:
 		
 BowNArrowTower:
 	ReloadDelay: 25
-	Range: 5c0
+	Range: 7c0
 	MinRange: 0c0
 	Report: arrow01.aud, arrow02.aud, arrow02.aud
 	InvalidTargets: Wall, Air
@@ -1768,7 +1768,7 @@ BowNArrowTower:
 		
 BowNArrowTowerDUMMY:
 	ReloadDelay: 25
-	Range: 5c0
+	Range: 7c0
 	MinRange: 0c0
 	InvalidTargets: Wall, Air
 	ValidTargets: Ground
@@ -1873,7 +1873,7 @@ BowNArrowTowerUnblockDUMMY:
    
 CannonBoulder:
 	ReloadDelay: 40
-	Range: 6c0
+	Range: 8c0
 	Report: tnkfire2.aud, tnkfire3.aud, tnkfire4.aud, tnkfire6.aud
 	ValidTargets: Ground
 	InvalidTargets: Air
@@ -1885,7 +1885,7 @@ CannonBoulder:
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
-		Damage: 7500
+		Damage: 9500
 		ValidTargets: Ground
 		InvalidTargets: Air
 		Versus:
@@ -1990,7 +1990,7 @@ TribuchetBoulder:
 	ReloadDelay: 90
 	ValidTargets: Ground
 	InvalidTargets: Air
-	Range: 10c0
+	Range: 12c0
 	MinRange: 2c0
 	Report: siege01.aud
 	Projectile: Bullet

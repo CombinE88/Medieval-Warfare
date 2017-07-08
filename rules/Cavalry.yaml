@@ -124,7 +124,7 @@ DDLER:
 	RevealsShroud:
 		Range: 3c0
 	Health:
-		HP: 20000
+		HP: 16000
 	Armament:
 		Weapon: none
 	AttackFrontal:

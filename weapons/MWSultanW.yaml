@@ -277,7 +277,7 @@ DjinElectro:
 		DamageTypes: Prone50Percent, TriggerProne, RippedApartDeath
 		
 DjinElectroAir:
-	ReloadDelay: 55
+	ReloadDelay: 65
 	Range: 9c0
 	ValidTargets: Air
 	InvalidTargets: Ground
@@ -285,7 +285,7 @@ DjinElectroAir:
 	Projectile: TeslaZap
 	Warhead@1Dam: SpreadDamage
 		Spread: 42
-		Damage: 6000
+		Damage: 10000
 		ValidTargets: Air
 		InvalidTargets: Ground
 		Versus:
@@ -303,15 +303,15 @@ DjinElectroAir:
 		DamageTypes: Prone50Percent, TriggerProne, RippedApartDeath
 		  
 DjinElectroGround:
-	ReloadDelay: 55
-	Range: 6c0
+	ReloadDelay: 50
+	Range: 8c0
 	ValidTargets: Ground
 	InvalidTargets: Air
 	Report: tesla1.aud
 	Projectile: TeslaZap
 	Warhead@1Dam: SpreadDamage
 		Spread: 42
-		Damage: 6000
+		Damage: 10000
 		ValidTargets: Ground
 		  InvalidTargets: Air
 		Versus:
@@ -847,3 +847,82 @@ TowerPike:
 			HeavyCavalry: 120
 			Spectral: 15
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+		
+SulGTSpearThrow:
+	ReloadDelay: 50
+	Range: 8c0
+	MinRange: 0c0
+	Burst: 2
+	BurstDelay: 10
+	Report: throw01.aud
+	ValidTargets: Ground
+	InvalidTargets: Air
+	Projectile: Missile
+		HorizontalRateOfTurn: 60
+		RangeLimit: 5c204
+		Arm: 0
+		Speed: 200
+		LaunchAngle: 46
+		Inaccuracy: 0c0
+		ContrailLength: 10
+		ContrailWidth: 15
+		ContrailDelay: 0
+		ContrailUsePlayerColor : true
+		Image: spear
+		Palette: ra
+	Warhead@1Dam: SpreadDamage
+		Spread: 141
+		Damage: 2500
+		ValidTargets: Ground
+		InvalidTargets: Air
+		Versus:
+			Leather: 25
+			Light: 25
+			Heavy: 25
+			Knight: 25
+			Concrete: 75
+			LightCavalry: 100
+			MediumCavalry: 100
+			HeavyCavalry: 100
+			HeavyBuilding: 100
+			Spectral: 15
+		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath	 
+
+SulGTSpearThrowAir:
+	ReloadDelay: 50
+	Range: 10c0
+	MinRange: 0c0
+	Burst: 2
+	BurstDelay: 10
+	Report: throw01.aud
+	ValidTargets: Air
+	InvalidTargets: Ground
+	Projectile: Missile
+		HorizontalRateOfTurn: 60
+		RangeLimit: 5c204
+		Arm: 0
+		Speed: 300
+		LaunchAngle: 46
+		Inaccuracy: 0c0
+		ContrailLength: 10
+		ContrailWidth: 15
+		ContrailDelay: 0
+		ContrailUsePlayerColor : true
+		Image: spear
+		Palette: ra
+	Warhead@1Dam: SpreadDamage
+		Spread: 141
+		Damage: 3100
+		ValidTargets: Air
+		InvalidTargets: Ground
+		Versus:
+			Leather: 100
+			Light: 100
+			Heavy: 100
+			Knight: 100
+			Concrete: 100
+			LightCavalry: 100
+			MediumCavalry: 100
+			HeavyCavalry: 100
+			HeavyBuilding: 100
+		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath 

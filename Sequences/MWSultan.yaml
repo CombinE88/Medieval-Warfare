@@ -1320,6 +1320,14 @@ sulgtw:
 		Start: 66
 		Length: 7
 		Facings: 8 
+    turretstatidle: sule2
+		Start: 122
+		Facings: 8
+	turretstatanim: sule2
+		Tick: 100
+		Start: 66
+		Length: 7
+		Facings: 8 
 	idle-overlay: 
 		ZOffset: 125
 		Start: 13

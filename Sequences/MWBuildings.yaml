@@ -588,10 +588,10 @@ nukxl:
 		Start: 6
 		Offset: 0,-12
 	damaged-idle: 
-		Start: 1
+		Start: 7
 		Offset: 0,-12
 	dead: 
-		Start: 2
+		Start: 8
 		Tick: 800
 		Offset: 0,-12
 	make: 

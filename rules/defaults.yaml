@@ -58,7 +58,7 @@
 		Modifier: 200
 	FirepowerMultiplier@HPLevel100:
 		RequiresCondition: HPLevel100
-		Modifier: 350
+		Modifier: 300
 		
 ^ExistsInWorld:
 	AppearsOnRadar:
@@ -69,9 +69,6 @@
 	ScriptTriggers:
 	ConditionManager:
 	RenderDebugState:
-
-		
-		
 
 ^SpriteActor:
 	BodyOrientation:
