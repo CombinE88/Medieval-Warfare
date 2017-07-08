@@ -72,6 +72,77 @@ NUKENEW.SCAFF:
 	WithIdleOverlay@base6:
 		Sequence: make6
 		RequiresCondition: Construct >= 18
+        
+LODGE.SCAFF:
+	Inherits: ^2x2SITE
+	Building:
+		Dimensions: 2, 1
+		Footprint: xx
+	Armor:
+		Type: Concrete
+	RenderSprites:
+		PlayerPalette: raplayer
+		Image: lodge
+	CustomSellValue:
+		Value: 150
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Hunter Lodge (Small Hut)
+	Buildable:
+		IconPalette: raicon
+		BuildPaletteOrder: 10
+		Description: A hunter can go out and hunt down animals from here.\n\n\n
+		Queue: MBuilding2.GDI, MBuilding2.Nod
+		BuildDuration: 25
+	Health:
+		HP: 10000
+		Shape: Rectangle
+			TopLeft: -924,-825
+			BottomRight: 924, 924
+	RevealsShroud:
+		Range: 4c0
+	Bib:
+	Selectable:
+		Bounds: 48,26,0,9
+	SelectionDecorations:
+		VisualBounds: 48,27,0,-4
+	WithSpriteBody:
+		RequiresCondition: inactive
+	SpawnActorOnDeath@Finsihed:
+		Probability: 100
+		Actor: LODGE
+		DeathType: FinishedDeath
+	ExternalCondition@buildfurther: 
+		Condition: Construct
+		TotalCap: 20
+	ExternalCondition@Deliverfurther:
+		Condition: DeliveredResources
+		TotalCap: 20
+	Targetable@buildfurther: 
+		TargetTypes: Buildable
+		RequiresCondition: DeliveredResources > Construct && (20 - Construct) > 0
+	Targetable@deliverresources: 
+		TargetTypes: Deliverable
+		RequiresCondition: 20 > DeliveredResources
+	SelfHealing@Finished:
+		PercentageStep: -200
+		HealIfBelow: 110
+		Delay: 1
+		RequiresCondition: (20 - Construct) <= 0
+		DamageTypes: FinishedDeath
+	WithIdleOverlay@base1:
+		Sequence: make1
+		RequiresCondition: Construct > 3 && Construct < 6
+	WithIdleOverlay@base2:
+		Sequence: make2
+		RequiresCondition: Construct >= 6 && Construct < 10
+	WithIdleOverlay@base3:
+		Sequence: make3
+		RequiresCondition: Construct >= 10 && Construct < 16
+	WithIdleOverlay@base4:
+		Sequence: make4
+		RequiresCondition: Construct > 16 
 		
 NUKXL.SCAFF:
 	Inherits: ^3x2SITE
@@ -901,7 +972,7 @@ STALL.SCAFF:
 	Buildable:
 		IconPalette: raicon
 		BuildPaletteOrder: 40
-		Prerequisites: proc
+		Prerequisites: proc, barracks
 		Description: Trains cavalry\n\n\n\n
 		Queue: MBuilding3.GDI
 		BuildDuration: 25
@@ -976,7 +1047,7 @@ NODSTALL.SCAFF:
 	Buildable:
 		IconPalette: raicon
 		BuildPaletteOrder: 40
-		Prerequisites: proc
+		Prerequisites: proc, barracks
 		Description: Trains cavalry\n\n\n\n
 		Queue: MBuilding3.Nod
 		BuildDuration: 25

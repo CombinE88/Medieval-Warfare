@@ -760,7 +760,7 @@ HUNTER:
 		AmmoPoolName: Food
 	CashTrickler@LotDeer:
 		Interval: 25
-		Amount: 25
+		Amount: 75
 		RequiresCondition: UnloadDeer
 	AmmoPool:
 		Name: Food
@@ -776,4 +776,7 @@ HUNTER:
 		ReloadDelay: 25
 		ResetDelayOnEnable: false
 		RequiresCondition: DeerHunter
+	PersonValued:
+		ActorCount: 1
+		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
 		

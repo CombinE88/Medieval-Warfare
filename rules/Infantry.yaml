@@ -280,7 +280,8 @@ E2NEW:
 	Inherits: ^Knight
 	Valued:
 		Cost: 200
-	Tooltip:
+	-Crushable:
+    Tooltip:
 		Name: Pike Guard
 	Buildable:
 		Description: Anti-Cavalry infantry.\n  Strong vs Cavalry.\n  Weak vs Infantry\n  Deals damage when trampled by Cavalry\n  Can cut down trees.\n\nTrains: 1 Peasant\n
@@ -317,7 +318,8 @@ E2NEWV2:
 	Inherits: ^Knight
 	Valued:
 		Cost: 200
-	Tooltip:
+	-Crushable:
+    Tooltip:
 		Name: Halberd Guard
 	Buildable:
 		Description: Anti-Cavalry infantry.\n  Strong vs Cavalry.\n  Weak vs Infantry\n  Deals damage when trampled by Cavalry\n  Can cut down trees.\n\nTrains: 1 Peasant\n
@@ -1285,7 +1287,7 @@ NOBLE5:
 	-CashTrickler@PayTax:
 	Health:
 		HP: 14000
-    ProximityExternalCondition@BUFF:
+	ProximityExternalCondition@BUFF:
 		Range: 3c0
 		ValidStances: Ally
 		Condition: Tax

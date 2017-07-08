@@ -209,7 +209,7 @@ FACTNEW:
 		ExitCell: 1,2
 	WithFreeSpawnableActor@LABOURONE:
 		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
-        UseConverting: false
+		UseConverting: false
 		SpawnActor: transporter
 		Offset: -124,1024, 0
 		MoveOffset: 1,2
@@ -217,7 +217,7 @@ FACTNEW:
 		Lasso: 10c0
 	WithFreeSpawnableActor@LABOURTWO:
 		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
-        UseConverting: false
+		UseConverting: false
 		SpawnActor: transporter
 		Offset: -124,1024, 0
 		MoveOffset: 1,2
@@ -225,7 +225,7 @@ FACTNEW:
 		Lasso: 10c0
 	WithFreeSpawnableActor@LABOURTHREE:
 		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
-        UseConverting: false
+		UseConverting: false
 		SpawnActor: transporter
 		Offset: -124,1024, 0
 		MoveOffset: 1,2
@@ -233,21 +233,12 @@ FACTNEW:
 		Lasso: 10c0
 	WithFreeSpawnableActor@LABOURFOUR:
 		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
-        UseConverting: false
+		UseConverting: false
 		SpawnActor: engeneer
 		Offset: -124,1024, 0
 		MoveOffset: 1,2
 		Sticky: true
 		Lasso: 10c0
-	WithFreeSpawnableActor@LABOURFIVE:
-		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
-		SpawnActor: hunter
-		Offset: -124,1024, 0
-		MoveOffset: 1,2
-		Sticky: true
-		SpawnStart: false
-		Lasso: 30c0
-		ForceLasso: 35
 		
 
 FACTNEW.GDI:
@@ -465,7 +456,7 @@ MINIFACT:
 		Sticky: true
 		FindRadius: 100
 		Lasso: 10c0
-        UseConverting: false
+		UseConverting: false
 	WithFreeSpawnableActor@4:
 		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
 		SpawnActor: engeneer
@@ -474,7 +465,7 @@ MINIFACT:
 		Sticky: true
 		FindRadius: 100
 		Lasso: 10c0
-        UseConverting: false
+		UseConverting: false
 	WithFreeSpawnableActor@2:
 		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
 		SpawnActor: transporter
@@ -483,7 +474,7 @@ MINIFACT:
 		Sticky: true
 		FindRadius: 100
 		Lasso: 10c0
-        UseConverting: false
+		UseConverting: false
 	WithFreeSpawnableActor@3:
 		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
 		SpawnActor: transporter
@@ -492,17 +483,7 @@ MINIFACT:
 		Sticky: true
 		FindRadius: 100
 		Lasso: 30c0
-        UseConverting: false
-	WithFreeSpawnableActor@5:
-		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
-		SpawnActor: hunter
-		Offset: -597,469, 0
-		MoveOffset: 1,2
-		Sticky: true
-		FindRadius: 100
-		SpawnStart: false
-		Lasso: 30c0
-		ForceLasso: 35c0
+		UseConverting: false
 
 		
 HQNEWNOD:
@@ -600,10 +581,6 @@ ARMORYNOD:
 	RenderDetectionCircle:
 	DetectCloaked:
 		Range: 5c0
-	RequiresPower:
-	CanPowerDown:
-		PowerupSound: EnablePower
-		PowerdownSound: DisablePower
 	DisabledOverlay:
 	AirstrikePower:
 		Icon: cadaver
@@ -677,10 +654,6 @@ ARMORYGDI:
 		Bounds: 48,40,0,9
 	SelectionDecorations:
 		VisualBounds: 48,53,0,-4
-	RequiresPower:
-	CanPowerDown:
-		PowerupSound: EnablePower
-		PowerdownSound: DisablePower
 	DisabledOverlay:
 	WithSpriteBody:
 		PauseAnimationWhenDisabled: true
@@ -1748,10 +1721,6 @@ CASTLE:
 		Bounds: 72,48,0,12
 	SelectionDecorations:
 		VisualBounds: 72,68,0,0
-	RequiresPower:
-	CanPowerDown:
-		PowerupSound: EnablePower
-		PowerdownSound: DisablePower
 	DisabledOverlay:
 	ProvidesRadar:
 		RequiresCondition: !disabled
@@ -1828,10 +1797,6 @@ CASTLE2:
 		Bounds: 72,48,0,12
 	SelectionDecorations:
 		VisualBounds: 72,68,0,0
-	RequiresPower:
-	CanPowerDown:
-		PowerupSound: EnablePower
-		PowerdownSound: DisablePower
 	DisabledOverlay:
 	ProvidesRadar:
 		RequiresCondition: !disabled
@@ -1919,10 +1884,6 @@ WORKSHOPNOD:
 		RequireOwner: false
 		LowPowerSlowdown: 3
 	ProductionBar:
-	RequiresPower:
-	CanPowerDown:
-		PowerupSound: EnablePower
-		PowerdownSound: DisablePower
 	DisabledOverlay:
 	SpawnActorPower:
 		Icon: trojan
@@ -2021,10 +1982,6 @@ WORKSHOPGDI:
 		RequireOwner: false
 		LowPowerSlowdown: 3
 	ProductionBar:
-	RequiresPower:
-	CanPowerDown:
-		PowerupSound: EnablePower
-		PowerdownSound: DisablePower
 	DisabledOverlay:
 	ProduceActorPower:
 		Icon: strangedavinci
@@ -2601,6 +2558,9 @@ TAVERN:
 		Offset: -1109,554, 0
 		MoveOffset: 1,2
 		Sticky: true
+	BaseProvider:
+		Cooldown: 25
+		Range: 5c0
 		
 TOWNHALL:
 	Inherits: ^MWBaseBuilding
@@ -2650,4 +2610,46 @@ TOWNHALL:
 		MoveOffset: 1,2
 		Sticky: true
 		
-
+LODGE:
+	Inherits: ^MWBaseBuilding
+	Armor:
+		Type: Concrete
+	WithDeathAnimation:
+		DeathSequencePalette: raplayer
+	RenderSprites:
+		PlayerPalette: raplayer
+	Valued:
+		Cost: 500
+	CustomSellValue:
+		Value: 250
+	Tooltip:
+		Name: Hunters Lodge
+	Buildable:
+		IconPalette: raicon
+		BuildPaletteOrder: 10
+		Prerequisites: factnew, ~scaffold
+		Description: A hunter can go out and hunt down animals from here.\n\n\n
+		Queue: MBuilding2.GDI, MBuilding2.Nod
+		BuildDuration: 25
+	Building:
+		Footprint: xx
+		Dimensions: 2,1
+	Health:
+		HP: 50000
+		Shape: Rectangle
+			TopLeft: -924,-825
+			BottomRight: 924, 924
+	RevealsShroud:
+		Range: 7c0
+	Bib:
+	Targetable@Lodge:
+		TargetTypes: HunterLodge
+	Selectable:
+		Bounds: 48,26,0,9
+	SelectionDecorations:
+		VisualBounds: 48,27,0,-4
+	WithFreeSpawnableActor@3:
+		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
+		SpawnActor: hunter
+		Offset: -256,768, 0
+		MoveOffset: 0,1

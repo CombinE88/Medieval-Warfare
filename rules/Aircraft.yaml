@@ -25,7 +25,7 @@ ORNI:
 		RepulsionSpeed: 40
 		MaximumPitch: 56
 	Health:
-		HP: 13000
+		HP: 10000
 	Armor:
 		Type: LightCavalry
 	RevealsShroud:
@@ -86,7 +86,7 @@ WARKITE:
 		TurnSpeed: 10
 		Speed: 158
 	Health:
-		HP: 16500
+		HP: 9000
 	Armor:
 		Type: LightCavalry
 	RevealsShroud:
@@ -142,7 +142,7 @@ DRGNRDR:
 		TurnSpeed: 10
 		Speed: 100
 	Health:
-		HP: 29000
+		HP: 19000
 	Armor:
 		Type: LightCavalry
 	RevealsShroud:
@@ -313,7 +313,7 @@ WRBLN:
 		TurnSpeed: 5
 		Speed: 70
 	Health:
-		HP: 31000
+		HP: 29000
 	Armor:
 		Type: LightCavalry
 	RevealsShroud:

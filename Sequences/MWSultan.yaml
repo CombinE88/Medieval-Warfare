@@ -729,6 +729,44 @@ sulm3grenade:
 		
 #Buildings
 
+sullodge:
+	Inherits: ^scaffold
+	idle: 
+		Start: 5
+		Offset: 0,-12
+	damaged-idle: 
+		Start: 6
+		Offset: 0,-12
+	dead: 
+		Start: 6
+		Tick: 800
+		Offset: 0,-12
+	make:
+		Length: *
+		Tick: 80
+		Offset: 0,-12
+	bib: bib3
+		UseTilesetExtension: true
+		Length: *
+	icon: sullodgeicon.shp
+		AddExtension: False
+	make1: 
+		Start: 1
+		ZOffset: -25
+		Offset: 0,-12
+	make2: 
+		Start: 2
+		ZOffset: -25
+		Offset: 0,-12
+	make3: 
+		Start: 3
+		ZOffset: -25
+		Offset: 0,-12
+	make4: 
+		Start: 4
+		ZOffset: -25
+		Offset: 0,-12
+
 sulhall:
 	Inherits: ^scaffold
 	idle: 
@@ -1320,7 +1358,7 @@ sulgtw:
 		Start: 66
 		Length: 7
 		Facings: 8 
-    turretstatidle: sule2
+	turretstatidle: sule2
 		Start: 122
 		Facings: 8
 	turretstatanim: sule2

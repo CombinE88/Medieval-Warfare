@@ -491,6 +491,50 @@ SULPLUG4:
 		
 #Buildings		
 
+SULLODGE:
+	Inherits: ^MWBaseBuilding
+	Armor:
+		Type: Concrete
+	WithDeathAnimation:
+		DeathSequencePalette: sultanplayer
+	RenderSprites:
+		PlayerPalette: sultanplayer
+	Valued:
+		Cost: 500
+	CustomSellValue:
+		Value: 250
+	Tooltip:
+		Name: Hunters Lodge
+	Buildable:
+		IconPalette: raicon
+		BuildPaletteOrder: 10
+		Prerequisites: factnew, ~scaffold
+		Description: A hunter can go out and hunt down animals from here.\n\n\n
+		Queue: MBuilding2.SUL
+		BuildDuration: 25
+	Building:
+		Footprint: xx
+		Dimensions: 2,1
+	Health:
+		HP: 50000
+		Shape: Rectangle
+			TopLeft: -924,-825
+			BottomRight: 924, 924
+	RevealsShroud:
+		Range: 7c0
+	Bib:
+	Targetable@Lodge:
+		TargetTypes: HunterLodge
+	Selectable:
+		Bounds: 48,26,0,9
+	SelectionDecorations:
+		VisualBounds: 48,27,0,-4
+	WithFreeSpawnableActor@3:
+		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
+		SpawnActor: hunter
+		Offset: -256,768, 0
+		MoveOffset: 0,1
+
 SULHALL:
 	Inherits: ^MWBaseBuilding
 	Armor:
@@ -600,6 +644,9 @@ SULARRAY:
 		Offset: 384,298, 0
 		MoveOffset: 1,2
 		Sticky: true
+	BaseProvider:
+		Cooldown: 25
+		Range: 6c0
 		
 SULNUK2:
 	Inherits: ^MWBaseBuilding
@@ -874,10 +921,6 @@ SULMYSTIC:
 		
 SULCASTLE:
 	Inherits: ^MWBaseBuilding
-	RequiresPower:
-	CanPowerDown:
-		PowerupSound: EnablePower
-		PowerdownSound: DisablePower
 	DisabledOverlay:
 	Armor:
 		Type: Concrete
@@ -1316,10 +1359,6 @@ SULFIX:
 		DockAngle: 72
 		DockOffset: 1,2
 		TickRate: 15
-	RequiresPower:
-	CanPowerDown:
-		PowerupSound: EnablePower
-		PowerdownSound: DisablePower
 	DisabledOverlay:
 	ProduceActorPower:
 		Icon: sulb2iconsmall
@@ -1384,7 +1423,8 @@ SULE2:
 		Cost: 300
 	Tooltip:
 		Name: Rashidun Champion
-	Buildable:
+	-Crushable:
+    Buildable:
 		Description: Anti-Cavalry infantry.\n  Strong vs Cavalry.\n  Moderate vs Infantry\n  Deals damage when trampled by Cavalry\n  Can cut down trees.\n\nTrains: 1 Peasant\n
 		IconPalette: raicon
 		BuildPaletteOrder: 30

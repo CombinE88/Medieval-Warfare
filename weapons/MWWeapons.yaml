@@ -114,7 +114,7 @@ OrniSpearThrow:
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath  
 		
 WarkiteCrossbow:
-	ReloadDelay: 20
+	ReloadDelay: 30
 	Range: 4c0
 	MinRange: 0c512
 	Report: crossbow01.aud
@@ -137,7 +137,7 @@ WarkiteCrossbow:
 		Spread: 356
 		InvalidTargets: Wall
 		ValidTargets: Air, Ground
-		Damage: 2500
+		Damage: 2000
 		Versus:
 			Leather: 100
 			Light: 100
@@ -1087,14 +1087,14 @@ BowNArrowDUMMY:
 		
 BowNArrowAir:
 	ReloadDelay: 45
-	Range: 6c0
+	Range: 7c512
 	MinRange: 0c0
 	Report: arrow01.aud, arrow02.aud, arrow02.aud
 	InvalidTargets: Wall, Ground
 	ValidTargets: Air
 	Projectile: Missile
 		HorizontalRateOfTurn: 60
-		RangeLimit: 8c204
+		RangeLimit: 12c204
 		Arm: 0
 		Speed: 350
 		LaunchAngle: 46
@@ -1281,14 +1281,14 @@ BowNArrowSiegeTower:
 		
 BowNArrowSiegeTowerAIR:
 	ReloadDelay: 45
-	Range: 8c0
+	Range: 10c0
 	MinRange: 0c0
 	Report: arrow01.aud, arrow02.aud, arrow02.aud
 	ValidTargets: Air
 	InvalidTargets: Wall, Ground
 	Projectile: Missile
 		HorizontalRateOfTurn: 60
-		RangeLimit: 10c0
+		RangeLimit: 15c0
 		Arm: 0
 		Speed: 250
 		LaunchAngle: 46
@@ -1393,7 +1393,7 @@ SpearThrow:
 
 SpearThrowAir:
 	ReloadDelay: 50
-	Range: 5c0
+	Range: 6c0
 	MinRange: 0c0
 	Burst: 2
 	BurstDelay: 10
@@ -1402,7 +1402,7 @@ SpearThrowAir:
 	InvalidTargets: Ground
 	Projectile: Missile
 		HorizontalRateOfTurn: 60
-		RangeLimit: 5c204
+		RangeLimit: 9c204
 		Arm: 0
 		Speed: 300
 		LaunchAngle: 46
@@ -3182,7 +3182,7 @@ HunterGather:
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
 		
 HunterUnload:
-	ValidTargets: BaseCenter
+	ValidTargets: HunterLodge
 	InvalidTargets: Air
 	ReloadDelay: 25
 	Range: 1c800
@@ -3194,8 +3194,8 @@ HunterUnload:
 		ValidStances: Ally
 		AffectsParent: true
 		InvalidTargets: Air
-		ValidTargets: BaseCenter, Hunterer
-        
+		ValidTargets: HunterLodge, Hunterer
+		
 BuildConstruction:
 	ValidTargets: Buildable
 	InvalidTargets: Air
@@ -3210,7 +3210,7 @@ BuildConstruction:
 		Condition: Construct
 		ValidStances: Ally
 		ValidTargets: Buildable
-        
+		
 LaborourUnload:
 	ValidTargets: Deliverable
 	InvalidTargets: Air
@@ -3224,7 +3224,7 @@ LaborourUnload:
 		Condition: DeliveredResources
 		ValidStances: Ally
 		ValidTargets: Deliverable
-        
+		
 LaborourLoad:
 	ValidTargets: Material
 	InvalidTargets: Air
