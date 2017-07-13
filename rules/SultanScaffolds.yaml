@@ -15,7 +15,7 @@ SULNUKE.SCAFF:
 		IconPalette: raicon
 		BuildPaletteOrder: 10
 		Prerequisites: factnew
-		Description: Generates livingspace. Livingspace increases over time by generating peasants.\nCan hold up to 3 peasents, spawntime depends on number of shacks and large huts.\n\n\n\n
+		Description: Generates livingspace. Livingspace increases over time by generating peasants.\nCan hold up to 6 peasents, spawntime depends on number of shacks and large huts.\n\n\n\n
 		Queue: MBuilding.SUL
 		BuildDuration: 25
 	Health:
@@ -86,7 +86,7 @@ SULLODGE.SCAFF:
 	CustomSellValue:
 		Value: 150
 	Valued:
-		Cost: 500
+		Cost: 300
 	Tooltip:
 		Name: Hunter Lodge (Small Hut)
 	Buildable:
@@ -142,7 +142,11 @@ SULLODGE.SCAFF:
 		RequiresCondition: Construct >= 10 && Construct < 16
 	WithIdleOverlay@base4:
 		Sequence: make4
-		RequiresCondition: Construct > 16	   
+		RequiresCondition: Construct > 16	 
+    WithRangeCircle:
+        Type: HunterLodge
+        UsePlayerColor: true
+        Range: 15c0
 		
 SULMILL.SCAFF:
 	Inherits: ^2x3SITE
@@ -246,7 +250,7 @@ SULNUK2.SCAFF:
 		BuildPaletteOrder: 60
 		Prerequisites: anyhq
 		Queue: MBuilding.SUL
-		Description: Provides more livingspace. Livingspace increases over time by generating peasants.\nCan hold up to 5 peasents, spawntime depends on number of shacks and large huts. \ncheaper than the standard Shack.\n\n\n\n
+		Description: Provides more livingspace. Livingspace increases over time by generating peasants.\nCan hold up to 11 peasents, spawntime depends on number of shacks and large huts. \ncheaper than the standard Shack.\n\n\n\n
 		BuildDuration: 25
 	Health:
 		HP: 50000
@@ -458,9 +462,9 @@ SULCASTLE.SCAFF:
 		PlayerPalette: sultanplayer
 		Image: sulcastle
 	CustomSellValue:
-		Value: 500
+		Value: 400
 	Valued:
-		Cost: 1500
+		Cost: 1200
 	Tooltip:
 		Name: Construction Site (Palace)
 	Buildable:
@@ -896,3 +900,80 @@ SULHALL.SCAFF:
 	WithIdleOverlay@base6:
 		Sequence: make6
 		RequiresCondition: Construct >= 75
+        
+        
+SULCNSHMBR.SCAFF:
+	Inherits: ^3x2SITE
+	Armor:
+		Type: Concrete
+	RenderSprites:
+		PlayerPalette: sultanplayer
+		Image: sulcnshmbr
+	CustomSellValue:
+		Value: 330
+	Valued:
+		Cost: 1000
+	Tooltip:
+		Name: Construction Site (Corn Chamber)
+	Buildable:
+		IconPalette: raicon
+		BuildPaletteOrder: 30
+		Prerequisites: proc, !sulcnshmbr
+		Description: Corn Chambers were meant to store corn for times when food was raw.\n  Generates a little bit of gold, when resources are gathered.\n  Limited to 1.\n\n
+		Queue: MBuilding2.SUL
+		BuildDuration: 25
+        BuildLimit: 1
+	Health:
+		HP: 60000
+		Shape: Rectangle
+			TopLeft: -1424,-924
+			BottomRight: 1424, 924
+	RevealsShroud:
+		Range: 4c0
+	Bib:
+	Selectable:
+		Bounds: 72,48
+	SelectionDecorations:
+		VisualBounds: 72,64,0,-16
+	WithSpriteBody:
+		RequiresCondition: inactive
+	SpawnActorOnDeath@Finsihed:
+		Probability: 100
+		Actor: SULCNSHMBR
+		DeathType: FinishedDeath
+	ExternalCondition@buildfurther: 
+		Condition: Construct
+		TotalCap: 50
+	ExternalCondition@Deliverfurther:
+		Condition: DeliveredResources
+		TotalCap: 50
+	Targetable@buildfurther: 
+		TargetTypes: Buildable
+		RequiresCondition: DeliveredResources > Construct && (50 - Construct) > 0
+	Targetable@deliverresources: 
+		TargetTypes: Deliverable
+		RequiresCondition: 50 > DeliveredResources
+	SelfHealing@Finished:
+		PercentageStep: -200
+		HealIfBelow: 110
+		Delay: 1
+		RequiresCondition: (50 - Construct) <= 0
+		DamageTypes: FinishedDeath
+	WithIdleOverlay@base1:
+		Sequence: make1
+		RequiresCondition: Construct > 5 && Construct < 10
+	WithIdleOverlay@base2:
+		Sequence: make2
+		RequiresCondition: Construct >= 10 && Construct < 15
+	WithIdleOverlay@base3:
+		Sequence: make3
+		RequiresCondition: Construct >= 15 && Construct < 25
+	WithIdleOverlay@base4:
+		Sequence: make4
+		RequiresCondition: Construct >= 25 && Construct < 35
+	WithIdleOverlay@base5:
+		Sequence: make5
+		RequiresCondition: Construct >= 35 && Construct < 40
+	WithIdleOverlay@base6:
+		Sequence: make6
+		RequiresCondition: Construct >= 40

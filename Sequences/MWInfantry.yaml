@@ -1102,7 +1102,7 @@ e8farmer:
 	stand: e8farmer
 		Start: 122
 		Facings: 8
-	move: e8farmer
+	run: e8farmer
 		Start: 0
 		Length: 8
 		Facings: 8
@@ -1131,7 +1131,7 @@ e8farmer:
 		Start: 66
 		Length: 7
 		Facings: 8
-	full-move: e8farmer
+	full-run: e8farmer
 		Start: 0
 		Length: 8
 		Facings: 8

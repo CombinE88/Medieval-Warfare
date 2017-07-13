@@ -486,48 +486,194 @@ nodnuke:
 		Tick: 80
 		Offset: 0,-12
 		
-nodnuk2:
+xltnt1:
 	Inherits: ^scaffold
 	idle: 
-		Start: 21
-		Offset: 0,-2
+		Start: 7
+		Offset: 0,-6
 	damaged-idle: 
-		Start: 22
-		Offset: 0,-2
+		Start: 8
+		Offset: 0,-6
 	dead: 
-		Start: 23
+		Start: 9
 		Tick: 800
-		Offset: 0,-2
+		Offset: 0,-6
 	make: 
-		Length: 21
+		Length: 7
 		Start: 0
 		Tick: 80
-		Offset: 0,-2
+		Offset: 0,-6
 	bib: bib3
 		UseTilesetExtension: true
 		Length: *
-	icon: nodnuk2icon.shp
+	icon: xltnticon.shp
 		AddExtension: False
 	make1: 
+		Start: 1
+		ZOffset: -25
+		Offset: 0,-6
+	make2: 
+		Start: 2
+		ZOffset: -25
+		Offset: 0,-6
+	make3: 
+		Start: 3
+		ZOffset: -25
+		Offset: 0,-6
+	make4: 
+		Start: 4
+		ZOffset: -25
+		Offset: 0,-6
+	make5: 
 		Start: 5
 		ZOffset: -25
-		Offset: 0,-2
-	make2: 
+		Offset: 0,-6
+	make6: 
+		Start: 6
+		ZOffset: -25
+		Offset: 0,-6
+	make1a: xltnt2
+		Start: 1
+		ZOffset: -25
+		Offset: 0,-6
+	make2a: xltnt2
+		Start: 2
+		ZOffset: -25
+		Offset: 0,-6
+	make3a: xltnt2
+		Start: 3
+		ZOffset: -25
+		Offset: 0,-6
+	make4a: xltnt2
+		Start: 4
+		ZOffset: -25
+		Offset: 0,-6
+	make5a: xltnt2
+		Start: 5
+		ZOffset: -25
+		Offset: 0,-6
+	make6a: xltnt2
+		Start: 6
+		ZOffset: -25
+		Offset: 0,-6
+	make1b: xltnt3
+		Start: 1
+		ZOffset: -25
+		Offset: 0,-6
+	make2b: xltnt3
+		Start: 2
+		ZOffset: -25
+		Offset: 0,-6
+	make3b: xltnt3
+		Start: 3
+		ZOffset: -25
+		Offset: 0,-6
+	make4b: xltnt3
+		Start: 4
+		ZOffset: -25
+		Offset: 0,-6
+	make5b: xltnt3
+		Start: 5
+		ZOffset: -25
+		Offset: 0,-6
+	make6b: xltnt3
+		Start: 6
+		ZOffset: -25
+		Offset: 0,-6
+
+xltnt2:
+	Inherits: ^scaffold
+	idle: 
+		Start: 7
+		Offset: 0,-6
+	damaged-idle: 
+		Start: 8
+		Offset: 0,-6
+	dead: 
 		Start: 9
+		Tick: 800
+		Offset: 0,-6
+	make: 
+		Length: 6
+		Start: 0
+		Tick: 80
+		Offset: 0,-6
+	bib: bib3
+		UseTilesetExtension: true
+		Length: *
+	icon: xltnticon.shp
+		AddExtension: False
+	make1: 
+		Start: 0
 		ZOffset: -25
-		Offset: 0,-2
+		Offset: 0,-6
+	make2: 
+		Start: 1
+		ZOffset: -25
+		Offset: 0,-6
 	make3: 
-		Start: 12
+		Start: 2
 		ZOffset: -25
-		Offset: 0,-2
+		Offset: 0,-6
 	make4: 
-		Start: 15
+		Start: 3
 		ZOffset: -25
-		Offset: 0,-2
+		Offset: 0,-6
 	make5: 
-		Start: 18
+		Start: 4
 		ZOffset: -25
-		Offset: 0,-2
+		Offset: 0,-6
+	make5: 
+		Start: 5
+		ZOffset: -25
+		Offset: 0,-6
+        
+xltnt3:
+	Inherits: ^scaffold
+	idle: 
+		Start: 7
+		Offset: 0,-6
+	damaged-idle: 
+		Start: 8
+		Offset: 0,-6
+	dead: 
+		Start: 9
+		Tick: 800
+		Offset: 0,-6
+	make: 
+		Length: 6
+		Start: 0
+		Tick: 80
+		Offset: 0,-6
+	bib: bib3
+		UseTilesetExtension: true
+		Length: *
+	icon: xltnticon.shp
+		AddExtension: False
+	make1: 
+		Start: 0
+		ZOffset: -25
+		Offset: 0,-6
+	make2: 
+		Start: 1
+		ZOffset: -25
+		Offset: 0,-6
+	make3: 
+		Start: 2
+		ZOffset: -25
+		Offset: 0,-6
+	make4: 
+		Start: 3
+		ZOffset: -25
+		Offset: 0,-6
+	make5: 
+		Start: 4
+		ZOffset: -25
+		Offset: 0,-6
+	make5: 
+		Start: 5
+		ZOffset: -25
+		Offset: 0,-6   
 		
 nuk5new:
 	Inherits: ^scaffold

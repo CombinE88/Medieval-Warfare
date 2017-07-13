@@ -677,7 +677,7 @@ RMBONEW:
 	Tooltip:
 		Name: Paladin
 	Buildable:
-		Description: Elite Infantry\n Strong vs Infantry, Buildings and Spectral Units\n  Arrow proofed.\n\nTrains: 1 Peasant\n
+		Description: Elite Infantry\n Strong vs Infantry, Buildings and Spectral Units.\n\nTrains: 1 Peasant\n\n
 		IconPalette: raicon
 		BuildPaletteOrder: 40
 		Prerequisites: anyhq
@@ -685,7 +685,7 @@ RMBONEW:
 	Mobile:
 		Speed: 50
 	Health:
-		HP: 17000
+		HP: 18500
 	Armament:
 		Weapon: claymore
 	AttackFrontal:
@@ -780,7 +780,7 @@ ASSASSIN:
 	Mobile:
 		Speed: 66
 	Health:
-		HP: 10000
+		HP: 12000
 	Armament@dagger:
 		Name: Primary
 		Weapon: dagger
@@ -835,7 +835,7 @@ E8FARMER:
 	GrantConditionOnMovement:
 		Condition: MoveAnim
 	WithInfantryBody:
-		MoveSequence: move
+		MoveSequence: run
 		StandSequences: idle
 		RequiresCondition: MoveAnim
 	Valued:
@@ -844,8 +844,13 @@ E8FARMER:
 		Name: Farmer
 	Mobile:
 		Speed: 60
+		TerrainSpeeds:
+			Crops: 100
+				PathingCost: 0
+			Wood: 100
+				PathingCost: 0
 	Health:
-		HP: 9000
+		HP: 11000
 	RenderSprites:
 		Image: e8farmer
 		PlayerPalette: raplayer
@@ -976,7 +981,8 @@ MWCHICK1:
 	Tooltip:
 		Name: Chicken
 	WithInfantryBody:
-		IdleSequences: idle1	   
+		IdleSequences: idle1	
+    AutoTargetIgnore:
 	  
 MWWAND1:
 	Inherits: ^MWTalker

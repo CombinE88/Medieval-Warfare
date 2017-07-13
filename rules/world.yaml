@@ -173,25 +173,24 @@ World:
 		Scripts: Peasants.lua
 	MPStartUnits@minimum:
 		Class: medieval
-		ClassName: Exiled
+		ClassName: Supply Wagon Only
 		Factions: gdi, nod, sul
 		BaseActor: mcvnew
-        SupportActors: mwwand1,mwwand2,mwwand3,mwwand4
 	MPStartUnits@medium:
 		Class: medieval2
-		ClassName: new Start
+		ClassName: Quick Start
 		Factions: gdi, nod, sul
 		BaseActor: mcvnew
-        SupportActors: mwwand1,mwwand2,mwwand3,mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, transporter, transporter
+        SupportActors: transporter, transporter
 	MPStartUnits@bunch:
 		Class: medieval3
-		ClassName: Expedition
+		ClassName: Well Populated
 		Factions: gdi, nod, sul
 		BaseActor: mcvnew
         SupportActors: mwwand1,mwwand2,mwwand3,mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12,mwwand1,mwwand2,mwwand3, transporter, transporter, transporter, engeneer
 	MPStartUnits@maximum:
 		Class: medieval4
-		ClassName: Huge Expedition
+		ClassName: Over Populated
 		Factions: gdi, nod, sul
 		BaseActor: mcvnew
         SupportActors: mwwand1,mwwand2,mwwand3,mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12,mwwand1,mwwand2,mwwand3, mwwand5, mwwand6, mwwand10, mwwand11, mcv2new, transporter, transporter, transporter, transporter, transporter, transporter, engeneer, engeneer

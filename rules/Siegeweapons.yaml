@@ -68,13 +68,13 @@ MCV2NEW:
 		TransformSounds: constru2.aud, hvydoor1.aud
 		NoTransformNotification: BuildingCannotPlaceAudio
 	Valued:
-		Cost: 2000
+		Cost: 1500
 	Tooltip:
 		Name: Supply wagon
 	Buildable:
 		IconPalette: raicon
 		BuildPaletteOrder: 100
-		Description: Deploys into another Keep.\n  Unarmed\n\nTrains: 6 Peasants\n
+		Description: Deploys into another Keep.\n  Unarmed\n\nTrains: 3 Peasants\n
 		Queue: MSiege.GDI, MSiege.Nod, MSiege.SUL
 	Health:
 		HP: 120000
@@ -83,7 +83,7 @@ MCV2NEW:
 			PointA: 0, -612
 			PointB: 0, 512
 	PersonValued:
-		ActorCount: 6
+		ActorCount: 3
 		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
 
 
@@ -92,8 +92,8 @@ MCV2NEW:
 SIEGE1:
 	Inherits: ^Siege
 	Inherits@2: ^GainsExperience
-    Inherits@88: ^GameSettingsArcher
-    Inherits@89: ^GameSettingsTowers
+	Inherits@88: ^GameSettingsArcher
+	Inherits@89: ^GameSettingsTowers
 	Valued:
 		Cost: 950
 	Tooltip:
@@ -101,7 +101,7 @@ SIEGE1:
 	Buildable:
 		IconPalette: raicon
 		BuildPaletteOrder: 20
-		Prerequisites: anyhq
+		Prerequisites: anyarmory
 		Description: The Siege Ballista is a missile weapon that launched a large projectile \nat a distant target.\n  Very strong vs Cavalry and Buildings \n  Moderate vs Infantry\n  Weak vs Aircrafts\n\nTrains: 2 Peasants
 		Queue: MSiege.Nod
 	Mobile:
@@ -157,7 +157,7 @@ SIEGE2:
 	Buildable:
 		IconPalette: raicon
 		BuildPaletteOrder: 20
-		Prerequisites: anyhq
+		Prerequisites: anyarmory
 		Description: The Catapult is a ballistic device used to launch multiple projectiles \nat a great distance without the aid of explosive devices.\n  Very strong vs Infantry and Buildings\n  Moderate vs Cavalry\n  Weak vs Aircrafts\n\nTrains: 2 Peasants
 		Queue: MSiege.GDI
 	Mobile:
@@ -218,7 +218,7 @@ SIEGE3:
 		IconPalette: raicon
 		BuildPaletteOrder: 20
 		Prerequisites: barracks
-		Description: The Siege Tower is a specialized siege engine, \nconstructed to protect assailants while approaching the defensive walls of a fortification .\n  Crushes Walls and Infantry\n  Transports up to 6 men\n  Very strong vs Infantry and Aircrafts\n  Weak vs Cavalry\n  Can attack Aircrafts\n\nTrains: 4 Peasants
+		Description: The Siege Tower is a specialized siege engine, \nconstructed to protect assailants while approaching the defensive walls of a fortification .\n  Crushes Walls and Infantry\n  Transports up to 6 men\n  Very strong vs Infantry and Aircrafts\n  Weak vs Cavalry\n  Can attack Aircrafts\n\nTrains: 3 Peasants
 		Queue: MSiege.GDI
 	Mobile:
 		Crushes: wall, heavywall, crate, infantry
@@ -326,7 +326,7 @@ SIEGE3:
 		Turret: tritiary
 		FireDelay: 30
 	PersonValued:
-		ActorCount: 4
+		ActorCount: 3
 		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
 		
 
@@ -349,7 +349,7 @@ SIEGE4:
 		IconPalette: raicon
 		BuildPaletteOrder: 20
 		Prerequisites: barracks
-		Description: The battering ram is a siege engine that is designed \nto break open the masonry walls of fortifications.\n  Crushes Walls, Cavalry and Infantry\n  Transports up to 8 men\n  Gets faster with each passenger up to 220%\n  Very strong vs Buildings \n  Weak vs Cavalry, Infantry \n  Can only attack Buildings\n\nTrains: 4 Peasants
+		Description: The battering ram is a siege engine that is designed \nto break open the masonry walls of fortifications.\n  Crushes Walls, Cavalry and Infantry\n  Transports up to 8 men\n  Gets faster with each passenger up to 220%\n  Very strong vs Buildings \n  Weak vs Cavalry, Infantry \n  Can only attack Buildings\n\nTrains: 3 Peasants
 		Queue: MSiege.Nod
 	Mobile:
 		Crushes: wall, heavywall, crate, infantry, cavalry
@@ -451,7 +451,7 @@ SIEGE4:
 		Actor: SIEGERUNNER
 		Probability: 33
 	PersonValued:
-		ActorCount: 4
+		ActorCount: 3
 		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
 		
 EHARVXL:
@@ -487,6 +487,12 @@ EHARVXL:
 		TurnSpeed: 5
 		Speed: 85
 		SharesCell: false
+		TerrainSpeeds:
+			Tiberium: 100
+				PathingCost: 0
+			BlueTiberium: 100
+				PathingCost: 0
+			 
 	Health:
 		HP: 23000
 	RenderSprites:

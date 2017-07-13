@@ -3088,7 +3088,7 @@ BowNArrowHunter:
 	MinRange: 2c800
 	Report: arrow01.aud, arrow02.aud, arrow02.aud
 	InvalidTargets: Wall, Air
-	ValidTargets: Wildlife
+	ValidTargets: Wildlife, Infantry, Cavalry, Siege
 	Projectile: Missile
 		HorizontalRateOfTurn: 60
 		RangeLimit: 8c204
@@ -3099,7 +3099,7 @@ BowNArrowHunter:
 	Warhead@1Dam: SpreadDamage
 		Spread: 25
 		InvalidTargets: Wall, Air
-		ValidTargets: Wildlife
+		ValidTargets: Wildlife, Infantry, Cavalry, Siege
 		Damage: 1000
 		Versus:
 			Leather: 100
@@ -3119,7 +3119,7 @@ BowNArrowHunterDUMMY:
 	Range: 5c0
 	MinRange: 2c800
 	InvalidTargets: Wall, Air
-	ValidTargets: Wildlife
+	ValidTargets: Wildlife, Infantry, Cavalry, Siege
 	Projectile: Bullet
 		RangeLimit: 9c204
 		LaunchAngle: 130
@@ -3134,7 +3134,7 @@ BowNArrowHunterDUMMY:
 	Warhead@1Dam: SpreadDamage
 		Spread: 25
 		InvalidTargets: Wall, Air
-		ValidTargets: Wildlife
+		ValidTargets: Wildlife, Infantry, Cavalry, Siege
 		Damage: 0
 		Versus:
 			Leather: 0
@@ -3188,9 +3188,8 @@ HunterUnload:
 	Range: 1c800
 	Projectile: Bullet
 		Speed: 1c682
-	Warhead@GrantMonez: GrantSelfCondition
-		Duration: 30
-		Condition: UnloadDeer
+	Warhead@GrantMonez: CashTick
+		Ammount: 50
 		ValidStances: Ally
 		AffectsParent: true
 		InvalidTargets: Air

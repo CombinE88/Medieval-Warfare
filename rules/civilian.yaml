@@ -586,10 +586,11 @@ DEER01:
 		Name: Wildlife
 	WithInfantryBody:
 		IdleSequences: idle1
-	SpawnActorOnDeath@Lootable:
+	HuntableDeer@Lootable:
 		Actor: DEER01.Husk
 		OwnerType: Killer
 		SkipMakeAnimations: False
+        HuntTypes: Wildlife
 		
 DEER01.Husk:
 	Inherits: ^DeadWildlife
@@ -603,6 +604,8 @@ DEER01.Husk:
 	WithFacingSpriteBody:
 		StartSequence: die1
 		Sequence: body
+    LootableBody: 
+        LootTypes: DeadWildlife
 
 DEER02:
 	Inherits: ^MWWildlife
@@ -613,10 +616,11 @@ DEER02:
 		Name: Wildlife
 	WithInfantryBody:
 		IdleSequences: idle1, idle2
-	SpawnActorOnDeath@Lootable:
+	HuntableDeer@Lootable:
 		Actor: DEER02.Husk
 		OwnerType: Killer
 		SkipMakeAnimations: False
+        HuntTypes: Wildlife
 		
 DEER02.Husk:
 	Inherits: ^DeadWildlife
@@ -630,6 +634,8 @@ DEER02.Husk:
 	WithFacingSpriteBody:
 		StartSequence: die1
 		Sequence: body
+    LootableBody: 
+        LootTypes: DeadWildlife
 
 DEER03:
 	Inherits: ^MWWildlife
@@ -640,10 +646,11 @@ DEER03:
 		Name: Wildlife
 	WithInfantryBody:
 		IdleSequences: idle1
-	SpawnActorOnDeath@Lootable:
+	HuntableDeer@Lootable:
 		Actor: DEER03.Husk
 		OwnerType: Killer
 		SkipMakeAnimations: False
+        HuntTypes: Wildlife
 		
 DEER03.Husk:
 	Inherits: ^DeadWildlife
@@ -657,6 +664,8 @@ DEER03.Husk:
 	WithFacingSpriteBody:
 		StartSequence: die1
 		Sequence: body
+    LootableBody: 
+        LootTypes: DeadWildlife
 
 DEER03A:
 	Inherits: ^MWWildlife
@@ -667,10 +676,11 @@ DEER03A:
 		Name: Wildlife
 	WithInfantryBody:
 		IdleSequences: idle1
-	SpawnActorOnDeath@Lootable:
+	HuntableDeer@Lootable:
 		Actor: DEER03A.Husk
 		OwnerType: Killer
 		SkipMakeAnimations: False
+        HuntTypes: Wildlife
 		
 DEER03A.Husk:
 	Inherits: ^DeadWildlife
@@ -684,6 +694,8 @@ DEER03A.Husk:
 	WithFacingSpriteBody:
 		StartSequence: die1
 		Sequence: body
+    LootableBody: 
+        LootTypes: DeadWildlife
 
 HUNTER:
 	Inherits: ^Knight
@@ -715,14 +727,6 @@ HUNTER:
 	RejectsOrders:
 	WithDeathAnimation:
 		DeathSequencePalette: mwcivilianplayer
-	AttackWander: 
-		WanderMoveRadius: 2
-		ReduceMoveRadiusDelay: 2
-		MinMoveDelay: 100
-		MaxMoveDelay: 500
-	AutoTarget:
-		ScanRadius: 30
-		InitialStance: AttackAnything
 	AttackFrontal:
 		Armaments: primary, secondary, tairt
 		IgnoresVisibility: true	
@@ -736,31 +740,29 @@ HUNTER:
 	Armament@Huntdeer:
 		Weapon: BowNArrowHunter
 		Name: primary
-		TargetStances: Neutral, Ally
-		IgnoresVisibility: True
+		IgnoresVisibility: true
 		RequiresCondition: (FullFood + LootingDeer) == 0
 	Armament@HuntdeerDummy:
 		Weapon: BowNArrowHunterDUMMY
 		Name: secondary
-		TargetStances: Neutral, Ally
-		IgnoresVisibility: True
+		IgnoresVisibility: true
 		RequiresCondition: (FullFood + LootingDeer) == 0
 	Armament@GatherDeer:
 		Weapon: HunterGather
 		Name: primary
 		TargetStances: Ally, Neutral
-		IgnoresVisibility: True
+		IgnoresVisibility: true
 		RequiresCondition: !FullFood
 	Armament@Unload:
 		Weapon: HunterUnload
 		Name: tairt
 		TargetStances: Ally, Neutral
-		IgnoresVisibility: True
+		IgnoresVisibility: true
 		RequiresCondition: !NoFood || FullFood
 		AmmoPoolName: Food
 	CashTrickler@LotDeer:
 		Interval: 25
-		Amount: 75
+		Amount: 100
 		RequiresCondition: UnloadDeer
 	AmmoPool:
 		Name: Food
@@ -779,4 +781,8 @@ HUNTER:
 	PersonValued:
 		ActorCount: 1
 		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
+    DeerHunter: 
+        HuntTypes: Wildlife
+        LootTypes: DeadWildlife
+        SearchDistance: 15c0
 		

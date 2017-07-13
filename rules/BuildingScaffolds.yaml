@@ -15,7 +15,7 @@ NUKENEW.SCAFF:
 		IconPalette: raicon
 		BuildPaletteOrder: 10
 		Prerequisites: factnew
-		Description: Generates livingspace. Livingspace increases over time by generating peasants.\nCan hold up to 2 peasents, spawntime depends on number of shacks and large huts.\n\n\n\n
+		Description: Generates livingspace. Livingspace increases over time by generating peasants.\nCan hold up to 4 peasents, spawntime depends on number of shacks and large huts.\n\n\n\n
 		Queue: MBuilding.GDI
 		BuildDuration: 25
 	Health:
@@ -72,7 +72,7 @@ NUKENEW.SCAFF:
 	WithIdleOverlay@base6:
 		Sequence: make6
 		RequiresCondition: Construct >= 18
-        
+		
 LODGE.SCAFF:
 	Inherits: ^2x2SITE
 	Building:
@@ -84,9 +84,9 @@ LODGE.SCAFF:
 		PlayerPalette: raplayer
 		Image: lodge
 	CustomSellValue:
-		Value: 150
+		Value: 100
 	Valued:
-		Cost: 500
+		Cost: 300
 	Tooltip:
 		Name: Hunter Lodge (Small Hut)
 	Buildable:
@@ -143,6 +143,10 @@ LODGE.SCAFF:
 	WithIdleOverlay@base4:
 		Sequence: make4
 		RequiresCondition: Construct > 16 
+	WithRangeCircle:
+		Type: HunterLodge
+		UsePlayerColor: true
+		Range: 15c0
 		
 NUKXL.SCAFF:
 	Inherits: ^3x2SITE
@@ -163,7 +167,7 @@ NUKXL.SCAFF:
 		BuildPaletteOrder: 70
 		Prerequisites: anyarmory
 		Queue: MBuilding.GDI
-		Description: Provides more livingspace. Livingspace increases over time by generating peasants.\nCan hold up to 14 peasents. \ncheaper than the standard Shack.\n\n\n\n
+		Description: Provides more livingspace. Livingspace increases over time by generating peasants.\nCan hold up to 15 peasents. \ncheaper than the standard Shack.\n\n\n\n
 		BuildDuration: 25
 	Health:
 		HP: 60000
@@ -295,6 +299,8 @@ HANDNEW.SCAFF:
 		Sequence: make5
 		RequiresCondition: Construct >= 32
 
+
+		
 ZEROPROC.SCAFF:
 	Inherits: ^2x3SITE
 	Building:
@@ -316,7 +322,7 @@ ZEROPROC.SCAFF:
 		BuildPaletteOrder: 30
 		Prerequisites: anypower
 		Description: Provides basic resource gathering for Crops and Grain.\n Comes with 2 farmers.\n Can only operate up to 6 farmers at once.\n\n\n\n
-		Queue: MBuilding2.GDI, MBuilding2.Nod
+		Queue: MBuilding2.GDI
 		BuildDuration: 25
 	Health:
 		HP: 40000
@@ -369,6 +375,38 @@ ZEROPROC.SCAFF:
 	WithIdleOverlay@base5:
 		Sequence: make5
 		RequiresCondition: Construct >= 35
+		
+ZEROPROC.SCAFF.NOD:
+	Inherits: ZEROPROC.SCAFF
+	RenderSprites:
+		Image: windmill
+	Valued:
+		Cost: 1500
+	Buildable:
+		IconPalette: raicon
+		BuildPaletteOrder: 30
+		Prerequisites: anypower
+		Description: Provides basic resource gathering for Crops and Grain.\n Comes with 2 farmers.\n Can only operate up to 6 farmers at once.\n\n\n\n
+		Queue: MBuilding2.Nod
+		BuildDuration: 25
+	ExternalCondition@buildfurther: 
+		Condition: Construct
+		TotalCap: 52
+	ExternalCondition@Deliverfurther:
+		Condition: DeliveredResources
+		TotalCap: 52
+	Targetable@buildfurther: 
+		TargetTypes: Buildable
+		RequiresCondition: DeliveredResources > Construct && (52 - Construct) > 0
+	Targetable@deliverresources: 
+		TargetTypes: Deliverable
+		RequiresCondition: 52 > DeliveredResources
+	SelfHealing@Finished:
+		PercentageStep: -200
+		HealIfBelow: 110
+		Delay: 1
+		RequiresCondition: (52 - Construct) <= 0
+		DamageTypes: FinishedDeath
 
 HQNEWNOD.SCAFF:
 	Inherits: ^2x2SITE
@@ -610,7 +648,7 @@ NUK2NEW.SCAFF:
 		BuildPaletteOrder: 60
 		Prerequisites: anyhq
 		Queue: MBuilding.GDI
-		Description: Provides more livingspace. Livingspace increases over time by generating peasants.\nCan hold up to 3 peasents, spawntime depends on number of shacks and large huts. \ncheaper than the standard Shack.\n\n\n\n
+		Description: Provides more livingspace. Livingspace increases over time by generating peasants.\nCan hold up to 8 peasents, spawntime depends on number of shacks and large huts. \ncheaper than the standard Shack.\n\n\n\n
 		BuildDuration: 25
 	Health:
 		HP: 17500
@@ -661,26 +699,34 @@ NUK2NEW.SCAFF:
 		Sequence: make4
 		RequiresCondition: Construct >= 20
 
-NODNUK2.SCAFF:
-	Inherits: ^2x2SITE
+
+XLTNTUNI.SCAFF:
+	Inherits: ^ConstructionSite
+	-ConstructionProgress@DeliveredResources:
+    -SelfHealing@Finished:
+	GrantRandomCondition:
+		RandomConditions: valida, validb, validc
+		FallbackCondition: none
+	Building:
+		Dimensions: 2,2
+		Footprint: xx xx
 	Armor:
 		Type: Concrete
 	RenderSprites:
 		PlayerPalette: raplayer
-		Image: nodnuk2
+		Image: xltnt1
 	CustomSellValue:
-		Value: 250
+		Value: 300
 	Valued:
-		Cost: 800
+		Cost: 600
 	Tooltip:
-		Name: Construction Site (Large Shack)
+		Name: Construction Site (Large Tent)
 	Buildable:
 		IconPalette: raicon
 		BuildPaletteOrder: 60
 		Prerequisites: anyhq
 		Queue: MBuilding.Nod
-		Description: Provides more livingspace. Livingspace increases over time by generating peasants.\nCan hold up to 3 peasents, spawntime depends on number of shacks and large huts. \ncheaper than the standard Shack.\n\n\n\n
-		BuildDuration: 25
+		Description: Provides more livingspace. Livingspace increases over time by generating peasants.\nCan hold up to 6 peasents, spawntime depends on number of shacks and large huts. \ncheaper than the standard Shack.\n\n\n\n
 	Health:
 		HP: 17500
 		Shape: Rectangle
@@ -694,44 +740,79 @@ NODNUK2.SCAFF:
 	SelectionDecorations:
 		VisualBounds: 48,53,0,-4
 	WithSpriteBody:
-		RequiresCondition: inactive
-	SpawnActorOnDeath@Finsihed:
-		Probability: 100
-		Actor: NODNUK2
-		DeathType: FinishedDeath
+		RequiresCondition: DoNotRender
 	ExternalCondition@buildfurther: 
 		Condition: Construct
-		TotalCap: 28
-	ExternalCondition@Deliverfurther:
-		Condition: DeliveredResources
-		TotalCap: 28
+		TotalCap: 40
+	-ExternalCondition@Deliverfurther:
 	Targetable@buildfurther: 
 		TargetTypes: Buildable
-		RequiresCondition: DeliveredResources > Construct && (28 - Construct) > 0
-	Targetable@deliverresources: 
-		TargetTypes: Deliverable
-		RequiresCondition: 28 > DeliveredResources
-	SelfHealing@Finished:
-		PercentageStep: -200
-		HealIfBelow: 110
-		Delay: 1
-		RequiresCondition: (28 - Construct) <= 0
-		DamageTypes: FinishedDeath
+		RequiresCondition: Construct < 40
+	-Targetable@deliverresources: 
+	TransformOnCondition@typeA:
+		IntoActor: XLTNT1
+		RequiresCondition: Construct >= 40 && valida
+	TransformOnCondition@typeB:
+		IntoActor: XLTNT2
+		RequiresCondition: Construct >= 40 && validb
+	TransformOnCondition@typeC:
+		IntoActor: XLTNT3
+		RequiresCondition: Construct >= 40 && validc
 	WithIdleOverlay@base1:
 		Sequence: make1
-		RequiresCondition: Construct > 5 && Construct < 10
+		RequiresCondition: Construct >= 0 && Construct < 10 && valida
 	WithIdleOverlay@base2:
 		Sequence: make2
-		RequiresCondition: Construct >= 10 && Construct < 14
+		RequiresCondition: Construct >= 10 && Construct < 15 && valida
 	WithIdleOverlay@base3:
 		Sequence: make3
-		RequiresCondition: Construct >= 14 && Construct < 16
+		RequiresCondition: Construct >= 15 && Construct < 20 && valida
 	WithIdleOverlay@base4:
 		Sequence: make4
-		RequiresCondition: Construct >= 16 && Construct < 20
+		RequiresCondition: Construct >= 20 && Construct < 25 && valida
 	WithIdleOverlay@base5:
 		Sequence: make5
-		RequiresCondition: Construct >= 20
+		RequiresCondition: Construct >= 25 && Construct < 35 && valida
+	WithIdleOverlay@base6:
+		Sequence: make6
+		RequiresCondition: Construct >= 35 && valida
+	WithIdleOverlay@base1a:
+		Sequence: make1a
+		RequiresCondition: Construct >= 0 && Construct < 10 && validb
+	WithIdleOverlay@base2a:
+		Sequence: make2a
+		RequiresCondition: Construct >= 10 && Construct < 15 && validb
+	WithIdleOverlay@base3a:
+		Sequence: make3a
+		RequiresCondition: Construct >= 15 && Construct < 20 && validb
+	WithIdleOverlay@base4a:
+		Sequence: make4a
+		RequiresCondition: Construct >= 20 && Construct < 25 && validb
+	WithIdleOverlay@base5a:
+		Sequence: make5a
+		RequiresCondition: Construct >= 25 && Construct < 35 && validb
+	WithIdleOverlay@base6a:
+		Sequence: make6a
+		RequiresCondition: Construct >= 35 && validb
+	WithIdleOverlay@base1b:
+		Sequence: make1b
+		RequiresCondition: Construct >= 0 && Construct < 10 && validc
+	WithIdleOverlay@base2b:
+		Sequence: make2b
+		RequiresCondition: Construct >= 10 && Construct < 15 && validc
+	WithIdleOverlay@base3b:
+		Sequence: make3b
+		RequiresCondition: Construct >= 15 && Construct < 20 && validc
+	WithIdleOverlay@base4b:
+		Sequence: make4b
+		RequiresCondition: Construct >= 20 && Construct < 25 && validc
+	WithIdleOverlay@base5b:
+		Sequence: make5b
+		RequiresCondition: Construct >= 25 && Construct < 35 && validc
+	WithIdleOverlay@base6b:
+		Sequence: make6b
+		RequiresCondition: Construct >= 35 && validc
+
 		
 PROCNEW.SCAFF:
 	Inherits: ^3x3SITE

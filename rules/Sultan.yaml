@@ -534,6 +534,17 @@ SULLODGE:
 		SpawnActor: hunter
 		Offset: -256,768, 0
 		MoveOffset: 0,1
+		Lasso: 15
+		ForceLasso: 20
+	WithRangeCircle:
+		Type: HunterLodge
+		UsePlayerColor: true
+		Range: 15c0
+	LodgeActor:
+	StoresResources:
+		PipColor: Yellow
+		PipCount: 5
+		Capacity: 1000
 
 SULHALL:
 	Inherits: ^MWBaseBuilding
@@ -669,7 +680,7 @@ SULNUK2:
 		BuildPaletteOrder: 60
 		Prerequisites: anyhq, ~scaffold
 		Queue: MBuilding.SUL
-		Description: Provides more livingspace. Livingspace increases over time by generating peasants.\nCan hold up to 5 peasents, spawntime depends on number of shacks and large huts. \ncheaper than the standard Shack.\n\n\n\n
+		Description: Provides more livingspace. Livingspace increases over time by generating peasants.\nCan hold up to 11 peasents, spawntime depends on number of shacks and large huts. \ncheaper than the standard Shack.\n\n\n\n
 	Building:
 		Footprint: xxx xx=
 		Dimensions: 3,2
@@ -717,7 +728,7 @@ SULNUK2:
 		Pieces: 1, 2
 		Range: 1c0, 5c0
 	ProvidesLivingspace:
-		Ammount: 9
+		Ammount: 11
 		SpawnOffset: -469,853,0
 		ExitCell: 1,2
 	WithFreeSpawnableActor@Chicken2:
@@ -746,7 +757,7 @@ SULNUKE:
 		IconPalette: raicon
 		BuildPaletteOrder: 10
 		Prerequisites: factnew, ~scaffold
-		Description: Generates livingspace. Livingspace increases over time by generating peasants.\nCan hold up to 3 peasents, spawntime depends on number of shacks and large huts.\n\n\n\n
+		Description: Generates livingspace. Livingspace increases over time by generating peasants.\nCan hold up to 6 peasents, spawntime depends on number of shacks and large huts.\n\n\n\n
 		Queue: MBuilding.SUL
 	Building:
 		Footprint: xx xx
@@ -783,7 +794,7 @@ SULNUKE:
 		Pieces: 2, 3
 		Range: 1c0, 5c0
 	ProvidesLivingspace:
-		Ammount: 4
+		Ammount: 6
 		SpawnOffset: 0,426,0
 		ExitCell: 1,2
 	WithFreeSpawnableActor@Chicken2:
@@ -929,9 +940,9 @@ SULCASTLE:
 	RenderSprites:
 		PlayerPalette: sultanplayer
 	Valued:
-		Cost: 1500
+		Cost: 1200
 	CustomSellValue:
-		Value: 750
+		Value: 600
 	Tooltip:
 		Name: Palace
 	ProvidesPrerequisite:
@@ -1055,7 +1066,7 @@ SULCASTLE:
 		Range: 5c0
 	SpawnActorPower@Tornado:
 		Icon: sulturnxlicon
-		ChargeTime: 230
+		ChargeTime: 300
 		Actor: sulturnxl
 		LifeTime: 2000
 		Description: Tornado\n\n\n\n
@@ -1382,6 +1393,49 @@ SULFIX:
 		Condition: Enabled
 		Prerequisites: sultow3, anyhq
 		
+SULCNSHMBR:
+	Inherits: ^MWBaseBuilding
+	Armor:
+		Type: Concrete
+	WithDeathAnimation:
+		DeathSequencePalette: sultanplayer
+	RenderSprites:
+		PlayerPalette: sultanplayer
+	Valued:
+		Cost: 1000
+	CustomSellValue:
+		Value: 50
+	Tooltip:
+		Name: Corn Chamber
+	ProvidesPrerequisite@buildingname:
+	Buildable:
+		IconPalette: raicon
+		BuildPaletteOrder: 30
+		Prerequisites: proc, !sulcnshmbr, ~scaffold
+		Description: Corn Chambers were meant to store corn for times when food was raw.\n  Generates a little bit of gold, when resources are gathered.\n  Limited to 1.\n\n
+		Queue: MBuilding2.SUL
+		BuildLimit: 1
+	Building:
+		Footprint: xxx xxx
+		Dimensions: 3,2
+	Health:
+		HP: 100000
+		Shape: Rectangle
+			TopLeft: -1424,-924
+			BottomRight: 1424, 924
+	RevealsShroud:
+		Range: 4c0
+	Bib:
+	Selectable:
+		Bounds:72,48,0,9
+	SelectionDecorations:
+		VisualBounds: 72,53,0,-4
+	ThrowsShrapnel@LARGE:
+		Weapons: DebrUtility1, DebrUtility2, DebrUtility3
+		Pieces: 2, 3
+		Range: 1c0, 5c0
+	ResourcePurifier:
+		
 #Infantry
 
 SULE1:
@@ -1424,7 +1478,7 @@ SULE2:
 	Tooltip:
 		Name: Rashidun Champion
 	-Crushable:
-    Buildable:
+	Buildable:
 		Description: Anti-Cavalry infantry.\n  Strong vs Cavalry.\n  Moderate vs Infantry\n  Deals damage when trampled by Cavalry\n  Can cut down trees.\n\nTrains: 1 Peasant\n
 		IconPalette: raicon
 		BuildPaletteOrder: 30
@@ -1626,11 +1680,16 @@ SULE6:
 		StandSequences: idle
 		RequiresCondition: MoveAnim
 	Valued:
-		Cost: 325
+		Cost: 250
 	Tooltip:
 		Name: Farmer
 	Mobile:
 		Speed: 70
+		TerrainSpeeds:
+			Crops: 100
+				PathingCost: 0
+			Wood: 100
+				PathingCost: 0
 	Health:
 		HP: 10000
 	RenderSprites:
@@ -1869,7 +1928,7 @@ SULB0:
 		Queue: MSiege.SUL
 	Mobile:
 		TurnSpeed: 2
-		Speed: 45
+		Speed: 60
 		Crushes: crate, infantry
 	Health:
 		HP: 30000
@@ -2175,7 +2234,7 @@ SULM3:
 		Speed: 138
 		IdealSeparation: 0c612
 	Health:
-		HP: 13000
+		HP: 8000
 	Armor:
 		Type: LightCavalry
 	RevealsShroud:
@@ -2268,7 +2327,7 @@ SULB3:
 	Inherits: ^Helicopter
 	Inherits@EXPERIENCE: ^GainsExperience
 	Valued:
-		Cost: 2500
+		Cost: 2000
 	Tooltip:
 		Name: Giant Roc
 	Buildable:
@@ -2285,7 +2344,7 @@ SULB3:
 		Speed: 90
 		IdealSeparation: 1c125
 	Health:
-		HP: 30500
+		HP: 22500
 	Armor:
 		Type: LightCavalry
 	RevealsShroud:
@@ -2386,7 +2445,7 @@ SULTURNXL:
 	RenderSprites:
 		PlayerPalette: raplayer
 	SelfHealing@KILLSELF:
-		PercentageStep: -4
+		PercentageStep: -5
 		Delay: 30
 		HealIfBelow: 101
 		DamageCooldown: 0

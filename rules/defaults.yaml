@@ -1197,13 +1197,13 @@
 			Rough: 80
 			Road: 100
 			Tiberium: 60
-				PathingCost: 350
+				PathingCost: 150
 			BlueTiberium: 60
-				PathingCost: 350
+				PathingCost: 150
 			Crops: 75
-				PathingCost: 300
+				PathingCost: 150
 			Wood: 75
-				PathingCost: 300
+				PathingCost: 150
 			Loot: 75
 			Beach: 80
 	SelectionDecorations:
@@ -2197,11 +2197,11 @@
 		Modifier: 52
 	ConstructionProgress@Construct:
 		ConstructionCondition: Construct
-		YOffset: -8
+		YOffset: 0
         XOffset: 5
 	ConstructionProgress@DeliveredResources:
 		ConstructionCondition: DeliveredResources
-		YOffset: 8
+		YOffset: 16
         XOffset: 5
 		Font: Bold
 

@@ -204,7 +204,7 @@ FACTNEW:
 		TargetTypes: Ground, C4, Structure, Wanderer, Laborer, BaseCenter, Material
 	ProvidesRadar:
 	ProvidesLivingspace:
-		Ammount: 6
+		Ammount: 8
 		SpawnOffset: -213,554,0
 		ExitCell: 1,2
 	WithFreeSpawnableActor@LABOURONE:
@@ -315,7 +315,7 @@ MINIFACT:
 	Armor:
 		Type: Concrete
 	RevealsShroud:
-		Range: 10c0
+		Range: 7c0
 	Bib:
 	Production:
 		Produces: MBuilding.GDI, MBuilding.Nod, MDefenses.GDI, MDefenses.Nod, MBuilding.SUL, MDefenses.SUL, MBuilding2.GDI, MBuilding2.Nod,MBuilding3.GDI, MBuilding3.Nod,MBuilding2.SUL, MBuilding3.SUL
@@ -446,7 +446,7 @@ MINIFACT:
 		TargetTypes: Ground, C4, Structure, Wanderer, Laborer, BaseCenter, Material
 	ProvidesRadar:
 	PersonValued:
-		ActorCount: 6
+		ActorCount: 3
 		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
 	WithFreeSpawnableActor@1:
 		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
@@ -729,12 +729,10 @@ NUK2NEW:
 		BuildPaletteOrder: 60
 		Prerequisites: anyhq, ~scaffold
 		Queue: MBuilding.GDI
-		Description: Provides more livingspace. Livingspace increases over time by generating peasants.\nCan hold up to 3 peasents, spawntime depends on number of shacks and large huts. \ncheaper than the standard Shack.\n\n\n\n
+		Description: Provides more livingspace. Livingspace increases over time by generating peasants.\nCan hold up to 8 peasents, spawntime depends on number of shacks and large huts. \ncheaper than the standard Shack.\n\n\n\n
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
-	CustomSellValue:
-		Value: 400
 	Health:
 		HP: 70000
 		Shape: Rectangle
@@ -777,7 +775,7 @@ NUK2NEW:
 		Pieces: 1, 2
 		Range: 1c0, 5c0
 	ProvidesLivingspace:
-		Ammount: 7
+		Ammount: 8
 		SpawnOffset: 128,811,0
 		ExitCell: 1,2
 	WithFreeSpawnableActor@Chicken:
@@ -807,12 +805,10 @@ NUKXL:
 		BuildPaletteOrder: 70
 		Prerequisites: anyarmory, ~scaffold
 		Queue: MBuilding.GDI
-		Description: Provides more livingspace. Livingspace increases over time by generating peasants.\nCan hold up to 14 peasents. \ncheaper than the standard Shack.\n\n\n\n
+		Description: Provides more livingspace. Livingspace increases over time by generating peasants.\nCan hold up to 15 peasents. \ncheaper than the standard Shack.\n\n\n\n
 	Building:
 		Footprint: xxx xxx
 		Dimensions: 3,2
-	CustomSellValue:
-		Value: 400
 	Health:
 		HP: 120000
 		Shape: Rectangle
@@ -855,7 +851,7 @@ NUKXL:
 		Pieces: 1, 2
 		Range: 1c0, 5c0
 	ProvidesLivingspace:
-		Ammount: 14
+		Ammount: 15
 		SpawnOffset: 938,725,0
 		ExitCell: 2,2
 	WithFreeSpawnableActor@Chicken:
@@ -889,7 +885,7 @@ NUKENEW:
 		IconPalette: raicon
 		BuildPaletteOrder: 10
 		Prerequisites: factnew, ~scaffldbuilded
-		Description: Generates livingspace. Livingspace increases over time by generating peasants.\nCan hold up to 2 peasents, spawntime depends on number of shacks and large huts.\n\n\n\n
+		Description: Generates livingspace. Livingspace increases over time by generating peasants.\nCan hold up to 4 peasents, spawntime depends on number of shacks and large huts.\n\n\n\n
 		Queue: MBuilding.GDI
 	Building:
 		Footprint: xx xx
@@ -934,7 +930,7 @@ NUKENEW:
 		Offset: -384,597,0
 		MoveOffset: 0,2
 		SpawnStart: false
-NODNUK2:
+XLTNT1:
 	Inherits: ^MWBaseBuilding
 	Armor:
 		Type: Concrete
@@ -943,11 +939,11 @@ NODNUK2:
 	RenderSprites:
 		PlayerPalette: raplayer
 	Valued:
-		Cost: 800
+		Cost: 600
 	CustomSellValue:
-		Value: 400
+		Value: 300
 	Tooltip:
-		Name: Large Shack
+		Name: Large Tent
 	ProvidesPrerequisite:
 		Prerequisite: anypower
 	Buildable:
@@ -955,12 +951,10 @@ NODNUK2:
 		BuildPaletteOrder: 60
 		Prerequisites: anyhq, ~scaffold
 		Queue: MBuilding.Nod
-		Description: Provides more livingspace. Livingspace increases over time by generating peasants.\nCan hold up to 3 peasents, spawntime depends on number of shacks and large huts. \ncheaper than the standard Shack.\n\n\n\n
+		Description: Provides more livingspace. Livingspace increases over time by generating peasants.\nCan hold up to 6 peasents, spawntime depends on number of shacks and large huts. \ncheaper than the standard Shack.\n\n\n\n
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
-	CustomSellValue:
-		Value: 400
 	Health:
 		HP: 70000
 		Shape: Rectangle
@@ -1003,7 +997,7 @@ NODNUK2:
 		Pieces: 1, 2
 		Range: 1c0, 5c0
 	ProvidesLivingspace:
-		Ammount: 7
+		Ammount: 6
 		SpawnOffset: 256,768,0
 		ExitCell: 1,2
 	WithFreeSpawnableActor@Chicken:
@@ -1011,6 +1005,16 @@ NODNUK2:
 		Offset: 256,768,0
 		MoveOffset: 1,2
 		SpawnStart: false
+        
+XLTNT2:
+    Inherits: XLTNT1
+    RenderSprites:
+        Image: xltnt2
+        
+XLTNT3:
+    Inherits: XLTNT1
+    RenderSprites:
+        Image: xltnt3
  
 NODNUKE:
 	Inherits: ^MWBaseBuilding
@@ -1162,8 +1166,6 @@ ZEROPROC:
 		PipColor: Yellow
 		PipCount: 5
 		Capacity: 1000
-	CustomSellValue:
-		Value: 500
 	FreeActor@3:
 		Actor: GHOSTPROC
 		SpawnOffset: 0,0
@@ -2619,9 +2621,9 @@ LODGE:
 	RenderSprites:
 		PlayerPalette: raplayer
 	Valued:
-		Cost: 500
+		Cost: 300
 	CustomSellValue:
-		Value: 250
+		Value: 150
 	Tooltip:
 		Name: Hunters Lodge
 	Buildable:
@@ -2653,3 +2655,14 @@ LODGE:
 		SpawnActor: hunter
 		Offset: -256,768, 0
 		MoveOffset: 0,1
+        Lasso: 15
+        ForceLasso: 20
+    WithRangeCircle:
+        Type: HunterLodge
+        UsePlayerColor: true
+        Range: 15c0
+    LodgeActor:
+	StoresResources:
+		PipColor: Yellow
+		PipCount: 5
+		Capacity: 1000
