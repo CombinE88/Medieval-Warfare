@@ -63,7 +63,7 @@ ORNI:
 		Interval: 2
 	PersonValued:
 		ActorCount: 1
-        ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
+        ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 	
 WARKITE:
 	Inherits: ^Helicopter
@@ -119,7 +119,7 @@ WARKITE:
 		Actor: WARKITEKITE.Husk
 	PersonValued:
 		ActorCount: 1
-        ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
+        ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 	  
 DRGNRDR:
 	Inherits: ^Helicopter
@@ -182,7 +182,7 @@ DRGNRDR:
 		InternalOwner: Neutral
 	PersonValued:
 		ActorCount: 1
-        ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
+        ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 
 		
 DRAGONWALK:
@@ -290,7 +290,7 @@ DAVINCI:
 		VoiceSet: VehicleVoice
 	PersonValued:
 		ActorCount: 0
-		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
+		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 	   
 WRBLN:
 	Inherits: ^Helicopter
@@ -347,7 +347,7 @@ WRBLN:
 		VoiceSet: BalloonVoice
 	PersonValued:
 		ActorCount: 1
-        ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
+        ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 			  
 PLACEHOLDERPLANE:
 	Inherits: ^Plane

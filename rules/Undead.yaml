@@ -1,0 +1,574 @@
+^Skeleton:  
+	Inherits: ^MedievalInfantry
+	-ExternalCondition@ROTTEN:
+	-ExternalCondition@DDler:
+	-ExternalCondition@ROYAL:
+	-ExternalCondition@HOSPITAL:
+	IsDeathArmyMob:
+		Role: Fighter
+	WithDeathAnimation:
+		DeathSequencePalette: raplayer
+		DeathTypes:
+			DefaultDeath: 1
+			RippedApartDeath: 1
+			PoisonDeath: 1
+			BallistaDeath: 1
+			BurnToDeath: 1
+			SkeletonDeath: 1
+		CrushedSequence: die1
+	Targetable:
+		TargetTypes: Ground, Infantry
+	MustBeDestroyed:
+	Tooltip:
+		GenericName: Soldier
+	Guard:
+	WithMakeAnimation:
+	-WithInfantryBody:
+	WithFacingSpriteBody:
+		StartSequence: make
+		Sequence: idle
+	WithMoveAnimation: 
+		MoveSequence: move
+	WithAttackAnimation:
+		AttackSequence: shoot
+	Armor:
+		Type: Heavy
+	AutoTarget:
+		ScanRadius: 10
+		InitialStance: AttackAnything
+	Voiced:
+		VoiceSet: SkeletonVoice
+	ExternalCondition@SNAKES:
+		Condition: snaketrap
+	SelfHealing@SNAKES:
+		Step: -1000
+		HealIfBelow: 110
+		Delay: 25
+		RequiresCondition: snaketrap
+		DamageTypes: PoisonDeath
+	SelfHealing@SNAKES2:
+		PercentageStep: -8
+		Step: -0
+		HealIfBelow: 110
+		Delay: 25
+		RequiresCondition: snaketrap >= 2
+		DamageTypes: PoisonDeath
+	SelfHealing@SNAKES3:
+		PercentageStep: -8
+		Step: -0
+		HealIfBelow: 110
+		Delay: 25
+		RequiresCondition: snaketrap >= 3
+		DamageTypes: PoisonDeath
+	SelfHealing@SNAKES4:
+		PercentageStep: -8
+		Step: -0
+		HealIfBelow: 110
+		Delay: 25
+		RequiresCondition: snaketrap >= 4
+		DamageTypes: PoisonDeath	 
+	SpeedMultiplier@SNAKES:
+		Modifier: 0
+		RequiresCondition: snaketrap
+	WithIdleOverlay@SNAKES:
+		Sequence: stunned
+		RequiresCondition: snaketrap
+	RangeMultiplier:
+		Modifier: 0
+		RequiresCondition: snaketrap
+		
+		
+^Gravestone:
+	Inherits: ^MWBaseBuilding
+	WithMakeAnimation:
+	ShakeOnCreate:
+	Armor:
+		Type: Concrete
+	WithDeathAnimation:
+		DeathSequencePalette: raplayer
+	RenderSprites:
+		PlayerPalette: raplayer
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Gravestone
+	ProvidesPrerequisite:
+		Prerequisite: anypower
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+	Health:
+		HP: 25000
+		Shape: Rectangle
+			TopLeft: -512,-512
+			BottomRight: 512, 512
+	RevealsShroud:
+		Range: 4c0
+	Selectable:
+		Bounds: 28,28,0,-4
+	SelectionDecorations:
+		VisualBounds: 28,28,0,-4
+
+gravespawner:
+	EditorOnlyTooltip:
+		Name: (Large Army Collector)
+	AlwaysVisible:
+	Immobile:
+		OccupiesSpace: false
+	WithSpriteBody:
+	RenderSpritesEditorOnly:
+	BodyOrientation:
+		QuantizedFacings: 1
+	DeadArmyHandler:
+		Countdown: 6000
+		Counttdownreducer: 150
+		ArmySize: 4
+		UtlityWaveAdder: 1
+		CommandoWaveAdder: 2
+		
+gravespawnera:
+	EditorOnlyTooltip:
+		Name: (Medium Army Collector)
+	AlwaysVisible:
+	Immobile:
+		OccupiesSpace: false
+	WithSpriteBody:
+	RenderSpritesEditorOnly:
+	BodyOrientation:
+		QuantizedFacings: 1
+	DeadArmyHandler:
+		Countdown: 5500
+		Counttdownreducer: 150
+		ArmySize: 3
+		UtlityWaveAdder: 2
+		CommandoWaveAdder: 3
+		
+gravespawnerb:
+	EditorOnlyTooltip:
+		Name: (Small Army Collector)
+	AlwaysVisible:
+	Immobile:
+		OccupiesSpace: false
+	WithSpriteBody:
+	RenderSpritesEditorOnly:
+	BodyOrientation:
+		QuantizedFacings: 1
+	DeadArmyHandler:
+		Countdown: 4500
+		Counttdownreducer: 150
+		ArmySize: 2
+		UtlityWaveAdder: 3
+		CommandoWaveAdder: 4 
+
+UNDEAD1:
+	Inherits: ^Skeleton
+	Valued:
+		Cost: 50
+	RevealsShroud:
+		Range: 5c0
+	Tooltip:
+		Name: Skeleton (Saber)
+	Mobile:
+		Speed: 75
+	Health:
+		HP: 12000
+	Armament:
+		Weapon: SkeletonBroadSword
+	AttackFrontal:
+	RenderSprites:
+		Image: undead1
+		PlayerPalette: raplayer
+
+		
+UNDEAD2:
+	Inherits: ^Skeleton
+	Valued:
+		Cost: 50
+	RevealsShroud:
+		Range: 5c0
+	Tooltip:
+		Name: Skeleton (Club)
+	Mobile:
+		Speed: 75
+	Health:
+		HP: 12000
+	Armament:
+		Weapon: SkeletonClub
+	AttackFrontal:
+	RenderSprites:
+		PlayerPalette: raplayer
+		
+UNDEAD3:
+	Inherits: ^Skeleton
+	Valued:
+		Cost: 50
+	RevealsShroud:
+		Range: 5c0
+	Tooltip:
+		Name: Skeleton (Pike)
+	Mobile:
+		Speed: 75
+	Health:
+		HP: 10000
+	Armament:
+		Weapon: SkeletonPike
+	AttackFrontal:
+	RenderSprites:
+		PlayerPalette: raplayer
+	Armor:
+		Type: Leather
+UNDEAD4:
+	Inherits: ^Skeleton
+	Valued:
+		Cost: 400
+	RevealsShroud:
+		Range: 6c0
+	Tooltip:
+		Name: Skeleton (Berserker)
+	Mobile:
+		Speed: 75
+	Health:
+		HP: 30000
+	Armament:
+		Weapon: SkeletonAxe
+	Armor:
+		Type: LightCavalry
+	AttackFrontal:
+	RenderSprites:
+		PlayerPalette: raplayer
+		
+UNDEAD5:
+	Inherits: ^Skeleton
+	Valued:
+		Cost: 120
+	RevealsShroud:
+		Range: 7c0
+	Tooltip:
+		Name: Skeleton (Archer)
+	Mobile:
+		Speed: 75
+	Health:
+		HP: 9000
+	Armament:
+		Weapon: SkeletonBowNArrow
+		LocalOffset: 341,20,356
+	Armament@Air:
+		Name: secondary
+		Weapon: SkeletonBowNArrowAir
+		LocalOffset: 341,20,356
+	Armament@Dummy:
+		Name: tertiary
+		Weapon: SkeletonBowNArrowDUMMY
+		LocalOffset: 341,20,356
+	AttackFrontal:
+		Armaments: primary, secondary, tertiary
+	RenderSprites:
+		PlayerPalette: raplayer
+	Armor:
+		Type: Light
+		
+UNDEAD6:
+	Inherits: ^Skeleton
+	Valued:
+		Cost: 1000
+	RevealsShroud:
+		Range: 9c0
+	Tooltip:
+		Name: Skeleton (Giant)
+	Mobile:
+		SharesCell: false
+		Speed: 55
+	Health:
+		HP: 70000
+	Armament:
+		Weapon: SkeletonGiant
+		FireDelay: 5
+	AttackFrontal:
+	RenderSprites:
+		PlayerPalette: raplayer
+	IsDeathArmyMob:
+		Role: Utility
+	Armor:
+		Type: HeavyCavalry
+	Selectable:
+		Bounds: 14,24,0,-12
+	SelectionDecorations:
+		VisualBounds: 14,24,0,-12
+		
+UNDEAD7:
+	Inherits: ^Skeleton
+	Valued:
+		Cost: 1000
+	RevealsShroud:
+		Range: 9c0
+	Tooltip:
+		Name: Skeleton (Giant)
+	Mobile:
+		SharesCell: false
+		Speed: 55
+	Health:
+		HP: 50000
+	Armament:
+		Weapon: SkeletonRock
+		FireDelay: 30
+		LocalOffset: 0,0,512
+	AttackFrontal:
+	RenderSprites:
+		PlayerPalette: raplayer
+	IsDeathArmyMob:
+		Role: Utility
+	Armor:
+		Type: HeavyCavalry
+
+		
+GSTONE1:
+	Inherits: ^Gravestone
+	CritterSpawner:
+		Actors: Undead1,Undead2
+		AliveMax: 5
+		TicksMin: 500
+		TicksMax: 1200
+		RadiusMin: 0
+		RadiusMax: 2
+		
+GSTONE2:
+	Inherits: ^Gravestone
+	CritterSpawner:
+		Actors: Undead1,Undead2
+		AliveMax: 5
+		TicksMin: 500
+		TicksMax: 1200
+		RadiusMin: 0
+		RadiusMax: 2
+		
+GSTONE3:
+	Inherits: ^Gravestone
+	CritterSpawner:
+		Actors: Undead1,Undead2
+		AliveMax: 5
+		TicksMin: 500
+		TicksMax: 1200
+		RadiusMin: 0
+		RadiusMax: 2
+		
+GSTONE4:
+	Inherits: ^Gravestone
+	CritterSpawner:
+		Actors: Undead3
+		AliveMax: 5
+		TicksMin: 500
+		TicksMax: 1200
+		RadiusMin: 0
+		RadiusMax: 2
+		
+GSTONE5:
+	Inherits: ^Gravestone
+	CritterSpawner:
+		Actors: Undead3
+		AliveMax: 5
+		TicksMin: 500
+		TicksMax: 1200
+		RadiusMin: 0
+		RadiusMax: 2
+		
+GSTONE6:
+	Inherits: ^Gravestone
+	CritterSpawner:
+		Actors: Undead3
+		AliveMax: 5
+		TicksMin: 500
+		TicksMax: 1200
+		RadiusMin: 0
+		RadiusMax: 2
+	
+GSTONE7:
+	Inherits: ^Gravestone
+	CritterSpawner:
+		Actors: Undead5
+		AliveMax: 5
+		TicksMin: 500
+		TicksMax: 1200
+		RadiusMin: 0
+		RadiusMax: 2
+	
+GSTONE8:
+	Inherits: ^Gravestone
+	CritterSpawner:
+		Actors: Undead5
+		AliveMax: 5
+		TicksMin: 500
+		TicksMax: 1200
+		RadiusMin: 0
+		RadiusMax: 2
+	
+GSTONE9:
+	Inherits: ^Gravestone
+	CritterSpawner:
+		Actors: Undead5
+		AliveMax: 5
+		TicksMin: 500
+		TicksMax: 1200
+		RadiusMin: 0
+		RadiusMax: 2
+		
+GSTONEXL1:
+	Inherits: ^Gravestone
+	CritterSpawner:
+		Actors: Undead4
+		AliveMax: 4
+		TicksMin: 700
+		TicksMax: 1600
+		RadiusMin: 0
+		RadiusMax: 2
+	Health:
+		HP: 40000
+		
+GSTONEXL2:
+	Inherits: ^Gravestone
+	CritterSpawner:
+		Actors: Undead4
+		AliveMax: 4
+		TicksMin: 700
+		TicksMax: 1600
+		RadiusMin: 0
+		RadiusMax: 2
+	Health:
+		HP: 40000
+		
+OBELISK:
+	Inherits: ^MWBaseBuilding
+	Armor:
+		Type: Concrete
+	WithDeathAnimation:
+		DeathSequencePalette: raplayer
+	Targetable@Preyable:
+		TargetTypes: Preyable
+	RenderSprites:
+		PlayerPalette: raplayer
+	ExternalCondition@ChargeObelisk:
+		Condition: ChargeObelisk
+	Valued:
+		Cost: 2000
+	Tooltip:
+		Name: Obelisk
+	ProvidesPrerequisite:
+		Prerequisite: anypower
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+	AutoTarget:
+	Health:
+		HP: 150000
+		Shape: Rectangle
+			TopLeft: -512,-512
+			BottomRight: 512, 512
+	RevealsShroud:
+		Range: 10c0
+	Selectable:
+		Bounds: 28,28,0,-4
+	SelectionDecorations:
+		VisualBounds: 28,28,0,-4
+	AttackOmni:
+	Armament@VisualA: 
+		Weapon: ObeliskGraveCleaner
+		LocalOffset: 0,0,1312
+	Armament@VisualB: 
+		FireDelay: 10
+		Weapon: ObeliskGraveCleaner
+		LocalOffset: 0,0,1312
+	Armament@VisualC: 
+		FireDelay: 20
+		Weapon: ObeliskGraveCleaner
+		LocalOffset: 0,0,1312
+	Armament@VisualD: 
+		FireDelay: 30
+		Weapon: ObeliskGraveCleaner
+		LocalOffset: 0,0,1312
+	Armament@VisualE: 
+		FireDelay: 40
+		Weapon: ObeliskGraveCleaner
+		LocalOffset: 0,0,1312
+	CritterSpawner:
+		Actors: gstone1,gstone2,gstone3,gstone4,gstone5,gstone6,gstone7,gstone8,gstone9,gstonexl1,gstonexl2
+		AliveMax: 8
+		TicksMin: 1000
+		TicksMax: 3000
+		RadiusMin: 2
+		RadiusMax: 7
+	CritterSpawner@acolyte:
+		Actors: acolyte, acolyteb
+		AliveMax: 4
+		TicksMin: 3000
+		TicksMax: 6000
+		RadiusMin: 1
+		RadiusMax: 6
+	CritterSpawner@Giant:
+		Actors: undead6, undead7
+		AliveMax: 4
+		TicksMin: 3000
+		TicksMax: 6000
+		RadiusMin: 1
+		RadiusMax: 6
+		
+ACOLYTE:
+	Inherits: ^Knight
+	Valued:
+		Cost: 500
+	-Crushable:
+	Tooltip:
+		Name: Acolyte
+	Mobile:
+		Speed: 65
+	Health:
+		HP: 30000
+	Armament@Spawn:
+		Weapon: AcolyteSpawnHelper
+		Name: primary
+	AttackFrontal:
+	AutoTarget:
+		ScanRadius: 10
+		InitialStance: AttackAnything
+	RenderSprites:
+		PlayerPalette: raplayer
+	WithInfantryBody:
+		DefaultAttackSequence: shoot
+			secondary: fireattack
+			primary: knifeattack
+	Armor:
+		Type: Leather
+	-Explodes@Tib:
+	IsDeathArmyMob:
+		Role: Commander
+		
+ACOLYTEB:
+	Inherits: ^Knight
+	Valued:
+		Cost: 500
+	-Crushable:
+	Tooltip:
+		Name: Acolyte
+	Mobile:
+		Speed: 65
+	Health:
+		HP: 30000
+	Armament@Spawn:
+		Weapon: AcolyteGiantHand
+		Name: primary
+	AttackFrontal:
+	AutoTarget:
+		ScanRadius: 10
+		InitialStance: AttackAnything
+	RenderSprites:
+		PlayerPalette: raplayer
+	WithInfantryBody:
+		DefaultAttackSequence: shoot
+			secondary: fireattack
+			primary: knifeattack
+	Armor:
+		Type: Leather
+	-Explodes@Tib:
+	IsDeathArmyMob:
+		Role: Commander
+
+
+		

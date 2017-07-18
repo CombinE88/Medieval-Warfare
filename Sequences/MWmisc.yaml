@@ -1,8 +1,8 @@
 prioarrow:
-    Left: prioarrow
-        Start: 1
-    Right: prioarrow
-        Start: 0
+	Left: prioarrow
+		Start: 1
+	Right: prioarrow
+		Start: 0
 
 hospnew:
 	idle: hospnew

@@ -15,7 +15,7 @@ SULNUKE.SCAFF:
 		IconPalette: raicon
 		BuildPaletteOrder: 10
 		Prerequisites: factnew
-		Description: Generates livingspace. Livingspace increases over time by generating peasants.\nCan hold up to 6 peasents, spawntime depends on number of shacks and large huts.\n\n\n\n
+		Description: Generates livingspace. Livingspace increases over time by generating peasants.\nCan hold up to 6 peasents, spawntime depends on number of shacks and large huts.\n  Requires 3 Peasants\n\n\n
 		Queue: MBuilding.SUL
 		BuildDuration: 25
 	Health:
@@ -88,7 +88,7 @@ SULLODGE.SCAFF:
 	Valued:
 		Cost: 300
 	Tooltip:
-		Name: Hunter Lodge (Small Hut)
+		Name: Construction Site (Hunter Lodge)
 	Buildable:
 		IconPalette: raicon
 		BuildPaletteOrder: 10
@@ -977,3 +977,81 @@ SULCNSHMBR.SCAFF:
 	WithIdleOverlay@base6:
 		Sequence: make6
 		RequiresCondition: Construct >= 40
+        
+SULREF.SCAFF:
+	Inherits: ^3x3SITE
+	Building:
+		Footprint: _x_ xxx xx=
+		Dimensions: 3,3
+	Armor:
+		Type: Concrete
+	RenderSprites:
+		PlayerPalette: sultanplayer
+		Image: sulref
+	CustomSellValue:
+		Value: 500
+	Valued:
+		Cost: 1500
+	Tooltip:
+		Name: Construction Site (Ore Refinery)
+	Buildable:
+		IconPalette: raicon
+		BuildPaletteOrder: 70
+		Prerequisites: anyhq
+		Description: Processes raw ore and Gold into useable metal.\nGenerates ore money than the windmill.\n\n\n\n
+		Queue: MBuilding2.SUL
+		BuildDuration: 25
+	Health:
+		HP: 60000
+		Shape: Rectangle
+			TopLeft: -1436,-756
+			BottomRight: 1436, 924
+	RevealsShroud:
+		Range: 4c0
+	Bib:
+	Selectable:
+		Bounds: 72,56,0,12
+	SelectionDecorations:
+		VisualBounds: 72,56,0,12
+	WithSpriteBody:
+		RequiresCondition: inactive
+	SpawnActorOnDeath@Finsihed:
+		Probability: 100
+		Actor: SULREF
+		DeathType: FinishedDeath
+	ExternalCondition@buildfurther: 
+		Condition: Construct
+		TotalCap: 60
+	ExternalCondition@Deliverfurther:
+		Condition: DeliveredResources
+		TotalCap: 60
+	Targetable@buildfurther: 
+		TargetTypes: Buildable
+		RequiresCondition: DeliveredResources > Construct && (60 - Construct) > 0
+	Targetable@deliverresources: 
+		TargetTypes: Deliverable
+		RequiresCondition: 60 > DeliveredResources
+	SelfHealing@Finished:
+		PercentageStep: -200
+		HealIfBelow: 110
+		Delay: 1
+		RequiresCondition: (60 - Construct) <= 0
+		DamageTypes: FinishedDeath
+	WithIdleOverlay@base1:
+		Sequence: make1
+		RequiresCondition: Construct > 5 && Construct < 15
+	WithIdleOverlay@base2:
+		Sequence: make2
+		RequiresCondition: Construct >= 15 && Construct < 25
+	WithIdleOverlay@base3:
+		Sequence: make3
+		RequiresCondition: Construct >= 25 && Construct < 35
+	WithIdleOverlay@base4:
+		Sequence: make4
+		RequiresCondition: Construct >= 35 && Construct < 45
+	WithIdleOverlay@base5:
+		Sequence: make5
+		RequiresCondition: Construct >= 45 && Construct < 55
+	WithIdleOverlay@base6:
+		Sequence: make6
+		RequiresCondition: Construct >= 55

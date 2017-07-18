@@ -1,4 +1,5 @@
 Player:
+	AttackedByDead:
 	AlwaysVisible:
 	PlaceBuilding:
 	TechTree:
@@ -19,7 +20,7 @@ Player:
 	PlayerCivilization:
 		SpawnModifier: 2
 		TownHalls: townhall, sulhall
-		Peasants: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
+		Peasants: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 	ProvidesTechPrerequisite@all:
 		Name: Normal Health
 		Prerequisites:

@@ -727,6 +727,7 @@ XLTNTUNI.SCAFF:
 		Prerequisites: anyhq
 		Queue: MBuilding.Nod
 		Description: Provides more livingspace. Livingspace increases over time by generating peasants.\nCan hold up to 6 peasents, spawntime depends on number of shacks and large huts. \ncheaper than the standard Shack.\n\n\n\n
+        BuildDuration: 25
 	Health:
 		HP: 17500
 		Shape: Rectangle
@@ -835,7 +836,7 @@ PROCNEW.SCAFF:
 		BuildPaletteOrder: 70
 		Prerequisites: anyhq
 		Description: Processes raw ore and Gold into useable metal.\nGenerates ore money than the windmill.\n\n\n\n
-		Queue: MBuilding2.GDI, MBuilding2.Nod, MBuilding2.SUL
+		Queue: MBuilding2.GDI, MBuilding2.Nod
 		BuildDuration: 25
 	Health:
 		HP: 60000
@@ -1495,7 +1496,7 @@ GTWNEW.SCAFF:
 	Tooltip:
 		Name: Construction Site ( Guard Tower)
 	Buildable:
-		Description: A wooden tower, stationed with 2 archers.\n  Strong vs Infantry, Light Cavalry\n  Weak vs Siege weapons and Heavy Cavalry \n  Cannot target Aircraft (because of I say so)\n\n\n
+		Description: A wooden tower, stationed with 2 archers.\n  Strong vs Infantry, Light Cavalry\n  Weak vs Siege weapons and Heavy Cavalry \n  Cannot target Aircraft (because of I say so)\n  Requires 2 Peasants\n\n
 		BuildPaletteOrder: 20
 		Queue: MDefenses.GDI, MDefenses.Nod
 		BuildDurationModifier: 40
@@ -1573,7 +1574,7 @@ GUNNEW.SCAFF:
 	Tooltip:
 		Name: Construction Site (Gunpowder Cannon)
 	Buildable:
-		Description: The early Cannon uses gunpowder to throw a large boulder. \nIt's most effectively used against large targets.\n  Strong vs Cavalry and Spectral Units\n  Weak vs Infantry\n\n\n
+		Description: The early Cannon uses gunpowder to throw a large boulder. \nIt's most effectively used against large targets.\n  Strong vs Cavalry and Spectral Units\n  Weak vs Infantry\n  Requires 1 Peasants\n\n
 		BuildPaletteOrder: 30
 		Prerequisites: barracks
 		Queue: MDefenses.GDI, MDefenses.Nod
@@ -1649,7 +1650,7 @@ TRIBU.SCAFF:
 	Tooltip:
 		Name: Construction Site (Counterweight Trebuchet)
 	Buildable:
-		Description: The Counterweight Trebuchet is a type of siege engine \nmost frequently used to outrange other siege weapons.\n  Requires power to operate.\n  Strong vs all Ground units\n  Cannot target Aircraft\n\n\n
+		Description: The Counterweight Trebuchet is a type of siege engine \nmost frequently used to outrange other siege weapons.\n  Requires power to operate.\n  Strong vs all Ground units\n  Cannot target Aircraft\n  Requires 3 Peasants\n\n
 		BuildPaletteOrder: 50
 		Prerequisites: anycastle
 		Queue: MDefenses.Nod
@@ -1731,7 +1732,7 @@ BATO.SCAFF:
 	Tooltip:
 		Name: Construction Site (Tower with Ballista)
 	Buildable:
-		Description: Because of its smaller design and light weighted missiles, \nthe ballista on top of the tower can target \neither ground or aircraft units.\n  Strong vs ground units\n  Weak vs close by units\n  Long distance\n Can target Aircraft\n\n\n
+		Description: Because of its smaller design and light weighted missiles, \nthe ballista on top of the tower can target \neither ground or aircraft units.\n  Strong vs ground units\n  Weak vs close by units\n  Long distance\n Can target Aircraft\n  Requires 3 Peasants\n\n
 		BuildPaletteOrder: 50
 		Prerequisites: anyarmory
 		Queue: MDefenses.GDI
@@ -1815,7 +1816,7 @@ SAMNEW.SCAFF:
 	Tooltip:
 		Name: Construction Site (Anti-Aircraft Ballista)
 	Buildable:
-		Description: Because of the 4 elastic limbs out of black wood \nthe Anti-Aircraft Ballista is designed to shoot down targets \nin the air with a very high speed missile.\n  Very strong vs Aircraft\n  Cannot target Ground units.\n\n\n
+		Description: Because of the 4 elastic limbs out of black wood \nthe Anti-Aircraft Ballista is designed to shoot down targets \nin the air with a very high speed missile.\n  Very strong vs Aircraft\n  Cannot target Ground units.\n  Requires 2 Peasants\n\n
 		BuildPaletteOrder: 40
 		Prerequisites: barracks
 		Queue: MDefenses.Nod

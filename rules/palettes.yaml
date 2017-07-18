@@ -71,54 +71,51 @@
 	MenuPaletteEffect:
 		MenuEffect: Desaturated
 	CloakPaletteEffect:
-	RotationPaletteEffect@water:
-		ExcludePalettes: effect, chrome
-		RotationBase: 32
 	PaletteFromFile@RESOURCES:
 		Name: grain
 		Filename: grains_palette.pal
 		ShadowIndex: 1
-		AllowModifiers: False
+		AllowModifiers: true
 	PaletteFromFile@RA2:
 		Name: mwcivilian
 		Filename: Medieval_Civ_palette.pal
 		ShadowIndex: 1
-		AllowModifiers: False
+		AllowModifiers: true
 	PaletteFromFile@Nobles:
 		Name: mwnobles
 		Filename: Medieval_noble_palette.pal
 		ShadowIndex: 1
-		AllowModifiers: False
+		AllowModifiers: true
 	PlayerColorPalette@RA2:
 		BasePalette: mwcivilian
 		BaseName: mwcivilianplayer
 		RemapIndex: 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 3
-		AllowModifiers: False
+		AllowModifiers: true
 	PaletteFromFile@RATERRAIN:
 		Name: raterrain
 		Filename: temperatRA.pal
 		ShadowIndex: 1
-		AllowModifiers: False
+		AllowModifiers: true
 	PaletteFromFile@RA:
 		Name: ra
 		Filename: newMWPalette.pal
 		ShadowIndex: 1
-		AllowModifiers: False
+		AllowModifiers: true
 	PaletteFromFile@RAWALL:
 		Name: raWall
 		Filename: temperatRAWall.pal
 		ShadowIndex: 1
-		AllowModifiers: False
+		AllowModifiers: true
 	PaletteFromFile@SUL:
 		Name: sultan
 		Filename: sulMWPalette.pal
 		ShadowIndex: 1
-		AllowModifiers: False
+		AllowModifiers: true
 	PaletteFromFile@SULWALL:
 		Name: sulwall
 		Filename: sulWallPalette.pal
 		ShadowIndex: 1
-		AllowModifiers: False
+		AllowModifiers: true
 	PaletteFromFile@RAICON:
 		Name: raicon
 		Filename: temperatRA.pal
@@ -132,21 +129,22 @@
 		BasePalette: ra
 		BaseName: raplayer
 		RemapIndex: 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 3
-		AllowModifiers: False
+		AllowModifiers: true
 	PlayerColorPalette@SUL:
 		BasePalette: sultan
 		BaseName: sultanplayer
 		RemapIndex: 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 3
-		AllowModifiers: False
+		AllowModifiers: true
 	PlayerColorPalette@SULWALL:
 		BasePalette: sulwall
 		BaseName: sulwallplayer
 		RemapIndex: 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 3
-		AllowModifiers: False
+		AllowModifiers: true
 	RotationPaletteEffect@water:
 		ExcludePalettes: effect, chrome, raplayer, ra, raicon, grain, mwcivilian, mwnobles, sul, sultanplayer
 		RotationBase: 32
 	FlashPaletteEffect:
+        ExcludePalettes: raplayer, ra, raicon, grain, mwcivilian, mwnobles, sul, sultanplayer
     PaletteFromFile@Menu:
 		Name: menu
 		Filename: flag.pal

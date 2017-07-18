@@ -338,7 +338,7 @@ ROSS1:
 		VisualBounds: 26,34,0,-6
 	PersonValued:
 		ActorCount: 1
-        ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
+        ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 
 ROSS2:
 	Inherits: ^Cavalry
@@ -384,7 +384,7 @@ ROSS2:
 		VisualBounds: 26,34,0,-6	
 	PersonValued:
 		ActorCount: 1
-        ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
+        ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 
 
 ROSS5:
@@ -456,7 +456,7 @@ ROSS5:
 		VoiceSet: HeavyCavalVoice
 	PersonValued:
 		ActorCount: 1
-        ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
+        ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 
 ROSS3:
 	Inherits: ^Cavalry
@@ -510,7 +510,7 @@ ROSS3:
 		VisualBounds: 26,34,0,-6
 	PersonValued:
 		ActorCount: 1
-        ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
+        ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 
 
 ROSS4:
@@ -569,7 +569,7 @@ ROSS4:
 		VisualBounds: 26,34,0,-6
 	PersonValued:
 		ActorCount: 1
-        ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
+        ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
    
 
 ROSS4B:
@@ -617,7 +617,7 @@ ROSS4B:
 		VisualBounds: 26,34,0,-6
 	PersonValued:
 		ActorCount: 1
-        ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
+        ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 	
 		
 ROSS4C:
@@ -665,7 +665,7 @@ ROSS4C:
 		VisualBounds: 26,34,0,-6
 	PersonValued:
 		ActorCount: 1
-        ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
+        ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 		
 		
 MWCAMEL:

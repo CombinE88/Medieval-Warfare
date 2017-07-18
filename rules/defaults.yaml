@@ -837,7 +837,6 @@
 		Palette: staticterrain
 	WithWallSpriteBody:
 	GivesExperience:
-	AutoTargetIgnore:
 	Sellable:
 		SellSounds: cashturn.aud
 	Guardable:
@@ -879,6 +878,8 @@
 		Weapons: SmallWood1, SmallWood2, SmallWood3
 		Pieces: 1, 3
 		Range: 0c512, 3c0
+	Targetable@Disguises:
+		TargetTypes: Disguise
 
 ^TreeHusk:
 	Inherits@1: ^SpriteActor
@@ -909,6 +910,8 @@
 		Terrain: Tiberium
 	HiddenUnderShroud:
 	WithMakeAnimation:
+	Targetable:
+		TargetTypes: Trees, Disguise
 
 ^Rock:
 	Inherits@1: ^SpriteActor
@@ -928,6 +931,8 @@
 	ScriptTriggers:
 	EditorTilesetFilter:
 		RequireTilesets: DESERT
+	Targetable:
+		TargetTypes: Disguise
 
 ^CommonHuskDefaults:
 	Inherits@1: ^SpriteActor
@@ -939,6 +944,8 @@
 		Type: CenterPosition
 	AutoTargetIgnore:
 	WithFacingSpriteBody:
+	Targetable:
+		TargetTypes: Trees
 
 ^Husk:
 	Inherits: ^CommonHuskDefaults
@@ -964,6 +971,8 @@
 		EmptyWeapon: UnitExplodeSmall
 	BodyOrientation:
 		UseClassicFacingFudge: True
+	Targetable:
+		TargetTypes: Husk, Disguise
 
 ^HelicopterHusk:
 	Inherits: ^CommonHuskDefaults
@@ -1516,7 +1525,7 @@
 	Mobile:
 		SharesCell: false
 	Targetable:
-		TargetTypes: Ground, Siege
+		TargetTypes: Ground, Siege, Disguise
 	MustBeDestroyed:
 	Tooltip:
 		GenericName: Cavalry
@@ -2045,6 +2054,8 @@
 		TargetTypes: Trees
 	HiddenUnderShroud:
 	ScriptTriggers:
+	Targetable@Disguises:
+		TargetTypes: Disguise
 	
 ^Lv5GrowableTree:
 	Inherits@1: ^SpriteActor
@@ -2090,6 +2101,8 @@
 		RequiresCondition: Heavy && Critical
 	SoundOnDamageTransition:
 		DamagedSounds: treefell.wav
+	Targetable@Disguises:
+		TargetTypes: Disguise
 		
 ^ConstructionSite:
 	Inherits@1: ^ExistsInWorld

@@ -202,7 +202,7 @@ ENGENEER:
 		PipType: Yellow
 	Inherits: ^Knight
 	Valued:
-		Cost: 500
+		Cost: 350
 	Tooltip:
 		Name: Engineer
 	Selectable:
@@ -246,7 +246,7 @@ ENGENEER:
 		VoiceSet: EngineerVoice
 	PersonValued:
 		ActorCount: 1
-		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
+		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 		
 E1NEW:
 	Inherits: ^Knight
@@ -312,7 +312,7 @@ E2NEW:
 		EmptyWeapon: KilledPike
 	PersonValued:
 		ActorCount: 1
-		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
+		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 		
 E2NEWV2:
 	Inherits: ^Knight
@@ -350,7 +350,7 @@ E2NEWV2:
 		EmptyWeapon: KilledPike
 	PersonValued:
 		ActorCount: 1
-		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
+		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 		
 E3NEW:
 	Inherits: ^Knight
@@ -384,7 +384,7 @@ E3NEW:
 		VoiceSet: GDIKnightVoice
 	PersonValued:
 		ActorCount: 1
-		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
+		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 		
 E3NEWV2:
 	Inherits: ^Knight
@@ -418,7 +418,7 @@ E3NEWV2:
 		VoiceSet: NodKnightVoice
 	PersonValued:
 		ActorCount: 1
-		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
+		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 		
 BARBAR:
 	Inherits: ^Knight
@@ -515,7 +515,7 @@ E9NEW:
 		VoiceSet: NodMageVoice
 	PersonValued:
 		ActorCount: 1
-		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
+		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 		
 E4NEW:
 	Inherits: ^Knight
@@ -569,7 +569,7 @@ E4NEW:
 		VoiceSet: NodArcherVoice
 	PersonValued:
 		ActorCount: 1
-		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
+		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 		
 		
 E4NEWV2:
@@ -624,7 +624,7 @@ E4NEWV2:
 		VoiceSet: GDIArcherVoice
 	PersonValued:
 		ActorCount: 1
-		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
+		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 		
 		
 E5NEW:
@@ -666,7 +666,7 @@ E5NEW:
 		VoiceSet: NodCrossVoice
 	PersonValued:
 		ActorCount: 1
-		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
+		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 
 RMBONEW:
 	RevealsShroud:
@@ -703,7 +703,7 @@ RMBONEW:
 		VoiceSet: PaladinVoice
 	PersonValued:
 		ActorCount: 1
-		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
+		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 		
 NEWCOMM:
 	RevealsShroud:
@@ -754,7 +754,7 @@ NEWCOMM:
 	-RangeMultiplier:
 	PersonValued:
 		ActorCount: 1
-		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
+		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 
 ASSASSIN:
 	Inherits: ^Knight
@@ -770,7 +770,7 @@ ASSASSIN:
 	Valued:
 		Cost: 600
 	Tooltip:
-		Name: Assaassin
+		Name: Assassin
 	Buildable:
 		Description: Mid/Long-range knifthrowing infantry that can cloak.\nHas weak armor. Can be spotted by some infantry and defense structures.\n  Strong vs Cavalry, Infantry. Moderate vs Spectral Units\n  Sets buildings on fire.\n  Detects cloaked units\n  Can attack Aircrafts\n\nTrains: 1 Peasant\n
 		IconPalette: raicon
@@ -801,8 +801,8 @@ ASSASSIN:
 	WithInfantryBody:
 		DefaultAttackSequence: attack
 		AttackSequences:
-			Secondary: fireattack
-			Primary: knifeattack
+			Secondary: prey
+			Primary: shoot
 	AutoTarget:
 		InitialStance: HoldFire
 		InitialStanceAI: ReturnFire
@@ -812,7 +812,7 @@ ASSASSIN:
 		VoiceSet: AssasinVoice
 	PersonValued:
 		ActorCount: 1
-		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
+		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 
 E8FARMER:
 	Inherits: ^Knight
@@ -875,7 +875,9 @@ E8FARMER:
 	-Crushable:
 	PersonValued:
 		ActorCount: 1
-		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
+		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
+	Voiced:
+		VoiceSet: FarmerVoice
 		
 BUMMLER:
 	Inherits: ^Knight
@@ -931,7 +933,9 @@ BUMMLER:
 		VisualBounds: 14,26,0,-6 
 	PersonValued:
 		ActorCount: 1
-		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
+		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
+	Voiced:
+		VoiceSet: LooterVoice
 		
 SIEGERUNNER:
 	Inherits: ^Knight
@@ -1207,13 +1211,10 @@ MWCIVCOM:
 	-CashTrickler@PayTax:
 	PersonValued:
 		ActorCount: 1
-		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
+		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 		
 NOBLE1:
 	Inherits: ^MWTalker
-	Tooltip:
-		Name: Noble
-		GenericVisibility: None
 	RenderSprites:
 		Image: nobl1
 		PlayerPalette: 
@@ -1221,16 +1222,10 @@ NOBLE1:
 	WithInfantryBody:
 		DefaultAttackSequence: talking
 		IdleSequences: idle1, idle2, idle3, idle4, idle5, idle6, idle7, idle8
-	CashTrickler@PayTax:
-		Interval: 25
-		Amount: 4
-		RequiresCondition: Tax
+	IsPeasant:
 		
 NOBLE2:
 	Inherits: ^MWTalker
-	Tooltip:
-		Name: Noble
-		GenericVisibility: None
 	RenderSprites:
 		Image: nobl2
 		PlayerPalette: 
@@ -1239,16 +1234,10 @@ NOBLE2:
 	WithInfantryBody:
 		DefaultAttackSequence: talking
 		IdleSequences: idle1, idle2, idle3, idle4, idle5, idle6, idle7, idle8
-	CashTrickler@PayTax:
-		Interval: 25
-		Amount: 4
-		RequiresCondition: Tax
+	IsPeasant:
 		
 NOBLE3:
 	Inherits: ^MWTalker
-	Tooltip:
-		Name: Noble
-		GenericVisibility: None
 	RenderSprites:
 		Image: nobl3
 		PlayerPalette: 
@@ -1256,16 +1245,10 @@ NOBLE3:
 	WithInfantryBody:
 		DefaultAttackSequence: talking
 		IdleSequences: idle1, idle2, idle3, idle4, idle5, idle6, idle7, idle8
-	CashTrickler@PayTax:
-		Interval: 25
-		Amount: 4
-		RequiresCondition: Tax
+	IsPeasant:
 		
 NOBLE4:
 	Inherits: ^MWTalker
-	Tooltip:
-		Name: Noble
-		GenericVisibility: None
 	RenderSprites:
 		Image: nobl4
 		PlayerPalette: 
@@ -1273,10 +1256,7 @@ NOBLE4:
 	WithInfantryBody:
 		DefaultAttackSequence: talking
 		IdleSequences: idle1, idle2, idle3, idle4, idle5, idle6, idle7, idle8
-	CashTrickler@PayTax:
-		Interval: 25
-		Amount: 4
-		RequiresCondition: Tax
+	IsPeasant:
 		
 NOBLE5:
 	Inherits: ^MWTalker
@@ -1489,13 +1469,8 @@ TRANSPORTER:
 		TargetTypes: Ground, Infantry
 	WithDeathAnimation:
 		DeathSequencePalette: mwcivilianplayer
-	AttackWander: 
-		WanderMoveRadius: 1
-		ReduceMoveRadiusDelay: 2
-		MinMoveDelay: 100
-		MaxMoveDelay: 1000
 	AutoTarget:
-		ScanRadius: 15
+		ScanRadius: 22
 		InitialStance: AttackAnything
 	AttackFrontal:
 		Armaments: primary, secondary, tairt
@@ -1530,5 +1505,5 @@ TRANSPORTER:
 		RequiresCondition: Loading
 	PersonValued:
 		ActorCount: 1
-		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
+		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 		

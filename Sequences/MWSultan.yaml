@@ -728,6 +728,50 @@ sulm3grenade:
 		Length: 18
 		
 #Buildings
+sulref:
+	Inherits: ^scaffold
+	idle: 
+		Start: 6
+		Offset: 2,4
+	damaged-idle: 
+		Start: 7
+		Offset: 2,4
+	dead: 
+		Start: 8
+		Offset: 2,4
+	make: 
+		Length: 5
+		Tick: 80
+		Offset: 2,4
+	bib: bib2
+		UseTilesetExtension: true
+		Length: *
+	icon: sulreficon.shp
+		AddExtension: False
+	make1: 
+		Start: 0
+		ZOffset: -25
+		Offset: 2,4
+	make2: 
+		Start: 1
+		ZOffset: -25
+		Offset: 2,4
+	make3: 
+		Start: 2
+		ZOffset: -25
+		Offset: 2,4
+	make4: 
+		Start: 3
+		ZOffset: -25
+		Offset: 2,4
+	make5: 
+		Start: 4
+		ZOffset: -25
+		Offset: 2,4
+	make6: 
+		Start: 5
+		ZOffset: -25
+		Offset: 2,4
 
 sullodge:
 	Inherits: ^scaffold

@@ -411,14 +411,28 @@ Repair:
 	ReloadDelay: 25
 	Range: 1c800
 	Report: repair01.aud
-	ValidTargets: Structure, Siege, Wall
-	InvalidTargets: Air
+	ValidTargets: Structure, Siege
+	InvalidTargets: Air, Wall
 	Projectile: Bullet
 		Speed: 1c682
 	Warhead@1Dam: SpreadDamage
 		Spread: 213
 		Damage: -400
-		ValidTargets: Structure, Siege, Wall
+		ValidTargets: Structure, Siege
+		InvalidTargets: Air, Wall
+        
+RepairWall:
+	ReloadDelay: 25
+	Range: 1c800
+	Report: repair01.aud
+	ValidTargets: Wall
+	InvalidTargets: Air
+	Projectile: Bullet
+		Speed: 1c682
+	Warhead@1Dam: SpreadDamage
+		Spread: 213
+		Damage: -1000
+		ValidTargets: Wall
 		InvalidTargets: Air
 
 		
@@ -3088,7 +3102,7 @@ BowNArrowHunter:
 	MinRange: 2c800
 	Report: arrow01.aud, arrow02.aud, arrow02.aud
 	InvalidTargets: Wall, Air
-	ValidTargets: Wildlife, Infantry, Cavalry, Siege
+	ValidTargets: Wildlife
 	Projectile: Missile
 		HorizontalRateOfTurn: 60
 		RangeLimit: 8c204
@@ -3099,7 +3113,7 @@ BowNArrowHunter:
 	Warhead@1Dam: SpreadDamage
 		Spread: 25
 		InvalidTargets: Wall, Air
-		ValidTargets: Wildlife, Infantry, Cavalry, Siege
+		ValidTargets: Wildlife
 		Damage: 1000
 		Versus:
 			Leather: 100
@@ -3119,7 +3133,7 @@ BowNArrowHunterDUMMY:
 	Range: 5c0
 	MinRange: 2c800
 	InvalidTargets: Wall, Air
-	ValidTargets: Wildlife, Infantry, Cavalry, Siege
+	ValidTargets: Wildlife
 	Projectile: Bullet
 		RangeLimit: 9c204
 		LaunchAngle: 130
@@ -3134,7 +3148,7 @@ BowNArrowHunterDUMMY:
 	Warhead@1Dam: SpreadDamage
 		Spread: 25
 		InvalidTargets: Wall, Air
-		ValidTargets: Wildlife, Infantry, Cavalry, Siege
+		ValidTargets: Wildlife
 		Damage: 0
 		Versus:
 			Leather: 0

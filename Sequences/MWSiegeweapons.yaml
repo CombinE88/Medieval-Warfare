@@ -118,8 +118,17 @@ planewagen:
 		Tick: 100
 		Facings: 8
 		Length: 8
-	icon: mcvnewicon.shp
+	icon: planeicon.shp
 		AddExtension: False
+        
+planewagenhusk:
+	idle: 
+		Start: 64
+		Facings: 32
+	stand: 
+		Start: 64
+		Facings: 32
+
 
 mcvnew.destroyed:
 	idle: mcvnewhusk
@@ -177,7 +186,20 @@ siege1:
 		Tick: 1600
 		ZOffset: -511
 	icon: nballistaicon.shp
-		AddExtension: False   
+		AddExtension: False  
+
+newhorse:
+	idle: 
+		Start: 63
+		Facings: 32
+	stand: 
+		Start: 63
+		Facings: 32
+	die1: trojanhorse
+		Start: 2
+		Offset: 0,-14
+	icon: trojanicon.shp
+		AddExtension: False
 
 siege1.husk:
 	start: siege1husk

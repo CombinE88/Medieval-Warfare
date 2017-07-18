@@ -11,7 +11,7 @@ GTWNEW:
 	Tooltip:
 		Name: Guard Tower
 	Buildable:
-		Description: A wooden tower, stationed with 2 archers.\n  Strong vs Infantry, Light Cavalry\n  Weak vs Siege weapons and Heavy Cavalry \n  Cannot target Aircraft (because of I say so)\n\n\n
+		Description: A wooden tower, stationed with 2 archers.\n  Strong vs Infantry, Light Cavalry\n  Weak vs Siege weapons and Heavy Cavalry \n  Cannot target Aircraft (because of I say so)\n  Requires 2 Peasants\n\n
 		BuildPaletteOrder: 20
 		Prerequisites: ~scaffold
 		Queue: MDefenses.GDI, MDefenses.Nod
@@ -82,7 +82,7 @@ GTWNEW:
 		Range: 0c512, 3c0
 	PersonValued:
 		ActorCount: 2
-		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
+		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 		
 WTW:
 	Inherits: ^MWDefense
@@ -202,7 +202,7 @@ SAMNEW:
 		Bounds: 50,50,0,-10
 	PersonValued:
 		ActorCount: 2
-		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
+		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 
 TRIBU:
 	Inherits: ^MWDefense
@@ -265,7 +265,7 @@ TRIBU:
 	 DisabledOverlay:
 	PersonValued:
 		ActorCount: 3
-		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12 
+		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4 
 		
 BATO:
 	Inherits: ^MWDefense
@@ -335,7 +335,7 @@ BATO:
 	 DisabledOverlay:
 	PersonValued:
 		ActorCount: 3
-		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
+		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 		
 GUNNEW:
 	Inherits: ^MWDefense
@@ -391,7 +391,7 @@ GUNNEW:
 		Range: 0c512, 3c0
 	PersonValued:
 		ActorCount: 1
-		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
+		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 		
 CSTLWLL:
 	Inherits: ^Wall

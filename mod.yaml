@@ -1,7 +1,7 @@
 Metadata:
 	Title: Medieval Warfare
 	Description: Siege under Gabriel Dardanus the first or \nbetray with Baron Hodsworth of Noddingen in a \ntotalconversion of the classic game that started it all.\n\nMedieval Warfare demodernizes the original Command & Conquer \nTiberian Dawn gameplay\nby shifting the gme into the dark ages, including siegeweapons \ncavalry, high infantry verietiy, and buildable fortresses.
-	Version: 1707131
+	Version: 17071701
 	Author: the Medieval Warfare Team
 
 RequiresMods:
@@ -43,9 +43,11 @@ Packages:
 	mw|bits/Resources
 	mw|bits/Buildings
 	mw|bits/Sultan
+	mw|bits/Sultan/Sounds
 	mw|uibits
 	mw|bits/terrain
 	mw|bits/terrain/Desert
+    mw|bits/Undead
 
 MapFolders:
 	mw|maps: System
@@ -74,6 +76,7 @@ Rules:
 	mw|rules/Sultan.yaml
 	mw|rules/SultanScaffolds.yaml
 	mw|rules/SultanScaffplaceholder.yaml
+    mw|rules/Undead.yaml
 
 Sequences:
 	cnc|sequences/structures.yaml
@@ -95,6 +98,7 @@ Sequences:
 	mw|Sequences/MWResources.yaml
 	mw|Sequences/MWSiegeweapons.yaml
 	mw|Sequences/MWSultan.yaml
+    mw|Sequences/MWUndead.yaml
 
 TileSets:
 	mw|tilesets/desert.yaml
@@ -105,12 +109,14 @@ TileSets:
 Weapons:
 	mw|weapons/MWWeapons.yaml
 	mw|weapons/MWSultanW.yaml
+    mw|weapons/MWUndeadGuns.yaml
 	cnc|weapons/explosions.yaml
 	cnc|weapons/ballistics.yaml
 	cnc|weapons/missiles.yaml
 	cnc|weapons/other.yaml
 	cnc|weapons/smallcaliber.yaml
 	cnc|weapons/superweapons.yaml
+
 
 Cursors:
 	mw|cursors.yaml
@@ -188,6 +194,15 @@ ChromeMetrics:
 	mw|metrics.yaml
 
 Fonts:
+    Infestsmall:
+        Font: mw|infested.ttf
+        Size:12
+    Infestregular:
+        Font: mw|infested.ttf
+        Size:14
+    Infestmedium:
+        Font: mw|infested.ttf
+        Size:18
 	Small:
 		Font: common|FreeSans.ttf
 		Size:12

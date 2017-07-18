@@ -84,7 +84,7 @@ MCV2NEW:
 			PointB: 0, 512
 	PersonValued:
 		ActorCount: 3
-		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
+		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 
 
 		
@@ -141,15 +141,15 @@ SIEGE1:
 		Probability: 50
 	PersonValued:
 		ActorCount: 2
-		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
+		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 
 
 
 SIEGE2:
 	Inherits: ^Siege
 	Inherits@2: ^GainsExperience
-    Inherits@88: ^GameSettingsArcher
-    Inherits@89: ^GameSettingsTowers
+	Inherits@88: ^GameSettingsArcher
+	Inherits@89: ^GameSettingsTowers
 	Valued:
 		Cost: 1200
 	Tooltip:
@@ -197,14 +197,14 @@ SIEGE2:
 		Probability: 50
 	PersonValued:
 		ActorCount: 2
-		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
+		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 		
 
 
 SIEGE3:
 	Inherits: ^Siege
 	Inherits@2: ^GainsExperience
-    Inherits@88: ^GameSettingsArcher
+	Inherits@88: ^GameSettingsArcher
 	ConditionManager:
 	Cargo:
 		MaxWeight: 6
@@ -327,7 +327,7 @@ SIEGE3:
 		FireDelay: 30
 	PersonValued:
 		ActorCount: 3
-		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
+		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 		
 
 
@@ -369,7 +369,7 @@ SIEGE4:
 		MoveSequence: run
 		DefaultAttackSequence: shoot
 	Armor:
-		Type: Knight
+		Type: HeavyCavalry
 	Selectable:
 		Bounds: 42,38,0,-8
 	SelectionDecorations:
@@ -452,7 +452,7 @@ SIEGE4:
 		Probability: 33
 	PersonValued:
 		ActorCount: 3
-		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
+		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 		
 EHARVXL:
 	Inherits: ^Siege
@@ -504,7 +504,7 @@ EHARVXL:
 	Selectable:
 		Priority: 7
 	Harvester:
-		DeliveryBuildings: procnew
+		DeliveryBuildings: procnew, sulref
 		Resources: Tiberium, BlueTiberium
 		PipCount: 7
 		Capacity: 20
@@ -532,7 +532,7 @@ EHARVXL:
 		UsePlayerColor: False
 	PersonValued:
 		ActorCount: 1
-		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12
+		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 	
 		
 PLANEWAGEN:
@@ -544,16 +544,16 @@ PLANEWAGEN:
 	Valued:
 		Cost: 500
 	Tooltip:
-		Name: Covered Wagon
+		Name: Construction Wagon
 	Mobile:
 		TurnSpeed: 2
 		Speed: 60
 	Health:
-		HP: 10000
+		HP: 30000
 		Shape: Capsule
-			Radius: 326
-			PointA: 0, -312
-			PointB: 0, 312
+			Radius: 426
+			PointA: 0, -612
+			PointB: 0, 512
 	AttackFrontal:
 	RenderSprites:
 		Image: planewagen
@@ -561,8 +561,64 @@ PLANEWAGEN:
 	WithInfantryBody:
 		IdleSequences: stand
 	Armor:
-		Type: LightCavalry
+		Type: MediumCavalry
 	Selectable:
 		Bounds: 35,35,0,-6
+	SelectionDecorations:
+		VisualBounds: 36,36
 	Targetable:
 		TargetTypes: Ground, Siege
+	Voiced:
+		VoiceSet: CivilianFemaleVoice
+		
+		
+SIEGE99:
+	Inherits: ^Siege
+	Inherits@2: ^GainsExperience
+	Valued:
+		Cost: 2000
+	Tooltip:
+		Name: Wooden Horse
+	Buildable:
+		IconPalette: raicon
+		BuildPaletteOrder: 20
+		Prerequisites: ~notavailable
+		Description: nonhere
+		Queue: MSiege.Nod
+	Mobile:
+		TurnSpeed: 6
+		Speed: 45
+	NewDisguiseTooltip:
+		Name: Wooden Horse
+	Health:
+		HP: 55000
+		Shape: Rectangle
+			TopLeft: -265,-265
+			BottomRight: 265, 265
+	AttackFrontal:
+	RenderSprites:
+		Image: newhorse
+		PlayerPalette: raplayer
+	NewWithDisguisingInfantryBody:
+		MoveSequence: idle
+		StandSequences: idle
+	-WithInfantryBody:
+	Armor:
+		Type: HeavyCavalry
+	Selectable:
+		Bounds: 42,42,0,0
+	SelectionDecorations:
+		VisualBounds: 42,42,0,0
+	Targetable:
+		TargetTypes: Ground, Siege
+	Cargo:
+		MaxWeight: 10
+		PipCount: 10
+		InitialUnits: e3newv2,e3newv2,e3newv2,e2new,e2new,e2new,e2new,e4new,e4new,e4new
+		Types: Infantry, Archer
+		EjectOnDeath: True
+	PersonValued:
+		ActorCount: 0
+		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
+	NewDisguise:
+	DisguiseChargeBar: 

@@ -9,7 +9,7 @@ Terrain:
 	TerrainType@Beach:
 		Type: Beach
 		TargetTypes: Ground
-		Color: B09C78
+		Color: D7CDBB
 	TerrainType@BlueTiberium:
 		Type: BlueTiberium
 		TargetTypes: Ground
@@ -20,26 +20,26 @@ Terrain:
 		Type: Clear
 		TargetTypes: Ground
 		AcceptsSmudgeType: Crater, Scorch
-		Color: 284428
+		Color: 758075
 		RestrictPlayerColor: true
 	TerrainType@River:
 		Type: River
 		TargetTypes: Ground
-		Color: 5C8CB4
+		Color: 9DBAD2
 	TerrainType@Road:
 		Type: Road
 		TargetTypes: Ground
 		AcceptsSmudgeType: Crater, Scorch
-		Color: 587474
+		Color: 8A9D9D
 	TerrainType@Rock:
 		Type: Rock
 		TargetTypes: Ground
-		Color: 44443C
+		Color: 7C7C76
 	TerrainType@Rough:
 		Type: Rough
 		TargetTypes: Ground
 		AcceptsSmudgeType: Crater, Scorch
-		Color: 44443C
+		Color: 7C7C76
 	TerrainType@Tiberium:
 		Type: Tiberium
 		TargetTypes: Ground
@@ -67,7 +67,7 @@ Terrain:
 	TerrainType@Tree:
 		Type: Tree
 		TargetTypes: Ground
-		Color: 1C2024
+		Color: 606265
 	TerrainType@Wall:
 		Type: Wall
 		TargetTypes: Ground
@@ -77,7 +77,7 @@ Terrain:
 		Type: Water
 		TargetTypes: Water
 		IsWater: True
-		Color: 5C74A4
+		Color: 9DABC8
 		RestrictPlayerColor: true
 	TerrainType@Palace:
 		Type: Palace

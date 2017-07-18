@@ -35,10 +35,13 @@ Player:
 			sulnuk2.scaff: 1
 			nodnuk2.scaff: 1
             sularray: 2
+            gtwnew.scaff: 1
+            gunnew.scaff: 1
+            tribu.scaff: 1
+            bato.scaff: 1
+            samnew.scaff: 1
             sularray.scaff: 1
 			zeroproc: 2
-            tavern: 2
-            tavern.scaff: 2
 			sulmill.scaff: 1
             sulmill: 3
 			procnew: 3
@@ -66,8 +69,6 @@ Player:
 			workshopgdi: 1
 			workshopnod: 1
 		BuildingFractions:
-            sularray.scaff: 50%
-            tavern.scaff: 50%
 			procnew.scaff: 50%
 			zeroproc.scaff: 90%
 			sulmill.scaff: 90%

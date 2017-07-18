@@ -14,7 +14,7 @@ Container@MENU_BACKGROUND:
 			Height: 64
 			ImageCollection: logos
 			ImageName: eva
-        Image@thanks:
+		Image@thanks:
 			X: (WINDOW_RIGHT/2) - 285
 			Y: (WINDOW_BOTTOM/2) - 150
 			Width: 200
@@ -27,6 +27,14 @@ Container@MENU_BACKGROUND:
 			Width: 128
 			Align: Center
 			Contrast: true
+		Label@INFESTED_LABEL:
+			X: WINDOW_RIGHT-128-43
+			Y: 135
+			Text: Infested Version
+			Width: 128
+			Align: Center
+			Contrast: true
+			Font: Infestmedium
 		Background@BORDER:
 			Width: WINDOW_RIGHT
 			Height: WINDOW_BOTTOM
