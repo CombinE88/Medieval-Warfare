@@ -434,13 +434,13 @@ SULPLUG1:
 	Buildable:
 		Description: Upgrades the Guard Tower with 2 additional Archers.\n  Doubles the firepower\n  Strong vs Infantry\n\n
 		BuildPaletteOrder: 23
-		Prerequisites: barracks
+		Prerequisites: vehicleproduction
 		Queue: MDefenses.SUL
 		BuildDuration:25
 		BuildDurationModifier: 40
 		IconPalette: raicon
 	Valued:
-		Cost: 300
+		Cost: 400
 	Plug:
 		Type: sulgtw.archers
 		
@@ -456,13 +456,13 @@ SULPLUG3:
 	Buildable:
 		Description: Upgrades the Guard Tower with 1 Djinn.\n  Can attack Aricrafts\n  Strong vs Everything\n\n
 		BuildPaletteOrder: 22
-		Prerequisites: sultow2
+		Prerequisites: sultow2, sultow4
 		Queue: MDefenses.SUL
 		BuildDuration:25
 		BuildDurationModifier: 40
 		IconPalette: raicon
 	Valued:
-		Cost: 700
+		Cost: 1000
 	Plug:
 		Type: sulgtw.djinn
 		
@@ -478,13 +478,13 @@ SULPLUG4:
 	Buildable:
 		Description: Upgrades the Guard Tower with a static defense.\n  Deals high damage to Cavalry\n  Strong vs Cavalry\n  Weak vs Infantry\n  Increases base hitpoints by 30%\n  Replaces arrows with jevalines\n  
 		BuildPaletteOrder: 21
-		Prerequisites: vehicleproduction
+		Prerequisites: vehicleproduction, sultow3
 		Queue: MDefenses.SUL
 		BuildDuration:25
 		BuildDurationModifier: 40
 		IconPalette: raicon
 	Valued:
-		Cost: 300
+		Cost: 400
 	Plug:
 		Type: sulgtw.static
 

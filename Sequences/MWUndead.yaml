@@ -384,6 +384,33 @@ undead7:
 	die5: burningman
 		Length: *
 		Tick: 80
+        
+coffin1:
+	idle:
+		Start: 23
+	make:
+		Length: 23
+		Tick: 200
+	dead:
+		Start: 24
+        
+coffin2:
+	idle:
+		Start: 23
+	make:
+		Length: 23
+		Tick: 200
+	dead:
+		Start: 24
+        
+coffin3:
+	idle:
+		Start: 23
+	make:
+		Length: 23
+		Tick: 200
+	dead:
+		Start: 24
 		
 gstone1: 
 	idle:

@@ -997,7 +997,7 @@ SULREF.SCAFF:
 	Buildable:
 		IconPalette: raicon
 		BuildPaletteOrder: 70
-		Prerequisites: anyhq
+		Prerequisites: sulcastle
 		Description: Processes raw ore and Gold into useable metal.\nGenerates ore money than the windmill.\n\n\n\n
 		Queue: MBuilding2.SUL
 		BuildDuration: 25

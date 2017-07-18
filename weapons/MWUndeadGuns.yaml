@@ -123,13 +123,13 @@ SkeletonAxe:
 			Leather: 100
 			Light: 100
 			Heavy: 100
-			HeavyBuilding: 10
-			Concrete: 25
-			Knight: 30
-			LightCavalry: 25
-			MediumCavalry: 10
-			HeavyCavalry: 10
-			Spectral: 35
+			HeavyBuilding: 100
+			Concrete: 50
+			Knight: 50
+			LightCavalry: 70
+			MediumCavalry: 60
+			HeavyCavalry: 50
+			Spectral: 45
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
 	
 SkeletonBowNArrow:
@@ -483,3 +483,35 @@ AcolyteSpawnSkeletonD:
 		Actors: undead5
 		ValidTargets: Ground
 		InvalidTargets: Air
+        
+AcolyteAttackCleaner:
+	ReloadDelay: 150
+	Range: 7c0
+    Burst: 4
+	BurstDelay: 10
+	Report: lightning1.aud, lightning2.aud
+	ValidTargets: Wall, Infantry, Structure, Cavalry, Siege, Air
+	Projectile: TeslaZap
+		Image: zombspark   
+		Palette: raicon
+		Duration: 12
+		DimZaps: 1
+		BrightZaps: 1
+	Warhead@2Smu: LeaveSmudge
+		SmudgeType: Scorch
+		InvalidTargets: Vehicle, Structure, Wall
+	Warhead@1Dam: SpreadDamage
+		Spread: 141
+		ValidTargets: Wall, Infantry, Structure, Cavalry, Siege, Air
+		Damage: 2000
+		Versus:
+			Leather: 100
+			Light: 100
+			Heavy: 100
+			Concrete: 100
+			Knight: 100
+			LightCavalry: 100
+			MediumCavalry: 100
+			HeavyCavalry: 100
+			HeavyBuilding: 100
+		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath

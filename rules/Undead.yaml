@@ -278,6 +278,8 @@ UNDEAD6:
 	Mobile:
 		SharesCell: false
 		Speed: 55
+	Targetable:
+		TargetTypes: Ground, Cavalry
 	Health:
 		HP: 70000
 	Armament:
@@ -303,6 +305,8 @@ UNDEAD7:
 		Range: 9c0
 	Tooltip:
 		Name: Skeleton (Giant)
+	Targetable:
+		TargetTypes: Ground, Cavalry
 	Mobile:
 		SharesCell: false
 		Speed: 55
@@ -435,6 +439,48 @@ GSTONEXL2:
 	Health:
 		HP: 40000
 		
+COFFIN1:
+	Inherits: ^Gravestone
+	ShakeOnCreate:
+		Intensity: 30
+	CritterSpawner:
+		Actors: Undead6,Undead7
+		AliveMax: 4
+		TicksMin: 2000
+		TicksMax: 4000
+		RadiusMin: 0
+		RadiusMax: 2
+	Health:
+		HP: 70000
+		
+COFFIN2:
+	Inherits: ^Gravestone
+	ShakeOnCreate:
+		Intensity: 30
+	CritterSpawner:
+		Actors: Undead6,Undead7
+		AliveMax: 4
+		TicksMin: 2000
+		TicksMax: 4000
+		RadiusMin: 0
+		RadiusMax: 2
+	Health:
+		HP: 70000
+		
+COFFIN3:
+	Inherits: ^Gravestone
+	ShakeOnCreate:
+		Intensity: 30
+	CritterSpawner:
+		Actors: Undead6,Undead7
+		AliveMax: 4
+		TicksMin: 2000
+		TicksMax: 4000
+		RadiusMin: 0
+		RadiusMax: 2
+	Health:
+		HP: 70000
+		
 OBELISK:
 	Inherits: ^MWBaseBuilding
 	Armor:
@@ -496,19 +542,19 @@ OBELISK:
 		RadiusMin: 2
 		RadiusMax: 7
 	CritterSpawner@acolyte:
-		Actors: acolyte, acolyteb
+		Actors: acolyte, acolyteb, acolytec
 		AliveMax: 4
 		TicksMin: 3000
 		TicksMax: 6000
 		RadiusMin: 1
 		RadiusMax: 6
 	CritterSpawner@Giant:
-		Actors: undead6, undead7
+		Actors: coffin1, coffin2, coffin3
 		AliveMax: 4
-		TicksMin: 3000
-		TicksMax: 6000
-		RadiusMin: 1
-		RadiusMax: 6
+		TicksMin: 2000
+		TicksMax: 4000
+		RadiusMin: 2
+		RadiusMax: 7
 		
 ACOLYTE:
 	Inherits: ^Knight
@@ -569,6 +615,40 @@ ACOLYTEB:
 	-Explodes@Tib:
 	IsDeathArmyMob:
 		Role: Commander
+        
+ACOLYTEC:
+	Inherits: ^Knight
+	Valued:
+		Cost: 500
+	-Crushable:
+	Tooltip:
+		Name: Acolyte
+	Mobile:
+		Speed: 65
+	Health:
+		HP: 30000
+	Armament@Spawn:
+		Weapon: AcolyteAttackCleaner
+		Name: primary
+        LocalOffset: 100,0,400
+        FireDelay: 4
+	AttackFrontal:
+	AutoTarget:
+		ScanRadius: 10
+		InitialStance: AttackAnything
+	RenderSprites:
+        Image: acolyteb
+		PlayerPalette: raplayer
+	WithInfantryBody:
+		DefaultAttackSequence: shoot
+			secondary: fireattack
+			primary: knifeattack
+	Armor:
+		Type: Leather
+	-Explodes@Tib:
+	IsDeathArmyMob:
+		Role: Commander
+
 
 
 		
