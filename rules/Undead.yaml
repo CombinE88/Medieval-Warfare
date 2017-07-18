@@ -226,13 +226,13 @@ UNDEAD4:
 	Tooltip:
 		Name: Skeleton (Berserker)
 	Mobile:
-		Speed: 75
+		Speed: 65
 	Health:
-		HP: 30000
+		HP: 27000
 	Armament:
 		Weapon: SkeletonAxe
 	Armor:
-		Type: LightCavalry
+		Type: Knight
 	AttackFrontal:
 	RenderSprites:
 		PlayerPalette: raplayer
@@ -278,7 +278,8 @@ UNDEAD6:
 	Mobile:
 		SharesCell: false
 		Speed: 55
-	Targetable:
+	-Crushable:
+    Targetable:
 		TargetTypes: Ground, Cavalry
 	Health:
 		HP: 70000
@@ -312,7 +313,8 @@ UNDEAD7:
 		Speed: 55
 	Health:
 		HP: 50000
-	Armament:
+	-Crushable:
+    Armament:
 		Weapon: SkeletonRock
 		FireDelay: 30
 		LocalOffset: 0,0,512

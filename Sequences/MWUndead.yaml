@@ -387,30 +387,30 @@ undead7:
         
 coffin1:
 	idle:
-		Start: 23
+		Start: 22
 	make:
-		Length: 23
+		Length: 22
 		Tick: 200
 	dead:
-		Start: 24
+		Start: 23
         
 coffin2:
 	idle:
-		Start: 23
+		Start: 22
 	make:
-		Length: 23
+		Length: 22
 		Tick: 200
 	dead:
-		Start: 24
+		Start: 23
         
 coffin3:
 	idle:
-		Start: 23
+		Start: 22
 	make:
-		Length: 23
+		Length: 22
 		Tick: 200
 	dead:
-		Start: 24
+		Start: 23
 		
 gstone1: 
 	idle:

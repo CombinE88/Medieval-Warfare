@@ -18,9 +18,9 @@ SulSword:
 			HeavyBuilding: 10
 			Concrete: 25
 			Knight: 30
-			LightCavalry: 25
-			MediumCavalry: 10
-			HeavyCavalry: 10
+			LightCavalry: 50
+			MediumCavalry: 20
+			HeavyCavalry: 20
 			Spectral: 15
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
 		
@@ -70,9 +70,9 @@ BroadSwordAE:
 			HeavyBuilding: 10
 			Concrete: 25
 			Knight: 30
-			LightCavalry: 25
-			MediumCavalry: 10
-			HeavyCavalry: 10
+			LightCavalry: 50
+			MediumCavalry: 20
+			HeavyCavalry: 20
 			Spectral: 15
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
 		
