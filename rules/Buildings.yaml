@@ -591,7 +591,7 @@ ARMORYNOD:
 		SquadOffset	-206,206,0
 		SquadSize: 2
 		QuantizedFacings: 8
-		Description: Throw plague cropse
+		Description: Throw plague corpse
 		LongDesc: Deploy poisonous corpes infecting everything surrounding.
 		EndChargeSpeechNotification: NewAirstrike
 		SelectTargetSpeechNotification: SelectTarget
@@ -678,7 +678,7 @@ ARMORYGDI:
 		SquadOffset	-236,236,0
 		SquadSize: 3
 		QuantizedFacings: 8
-		Description: Pulverising Fire Storm
+		Description: Pulverizing Fire Storm
 		LongDesc: Discription.
 		EndChargeSpeechNotification: NewAirstrike
 		SelectTargetSpeechNotification: SelectTarget
@@ -734,7 +734,7 @@ NUK2NEW:
 		BuildPaletteOrder: 60
 		Prerequisites: anyhq, ~scaffold
 		Queue: MBuilding.GDI
-		Description: Provides more livingspace. Livingspace increases over time by generating peasants.\nCan hold up to 8 peasents, spawntime depends on number of shacks and large huts. \ncheaper than the standard Shack.\n\n\n\n
+		Description: Provides more livingspace. Livingspace increases over time by generating peasants.\nCan hold up to 8 peasants, spawntime depends on number of shacks and large huts. \ncheaper than the standard Shack.\n\n\n\n
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
@@ -810,7 +810,7 @@ NUKXL:
 		BuildPaletteOrder: 70
 		Prerequisites: anyarmory, ~scaffold
 		Queue: MBuilding.GDI
-		Description: Provides more livingspace. Livingspace increases over time by generating peasants.\nCan hold up to 15 peasents. \ncheaper than the standard Shack.\n\n\n\n
+		Description: Provides more livingspace. Livingspace increases over time by generating peasants.\nCan hold up to 15 peasants. \ncheaper than the standard Shack.\n\n\n\n
 	Building:
 		Footprint: xxx xxx
 		Dimensions: 3,2
@@ -890,7 +890,7 @@ NUKENEW:
 		IconPalette: raicon
 		BuildPaletteOrder: 10
 		Prerequisites: factnew, ~scaffldbuilded
-		Description: Generates livingspace. Livingspace increases over time by generating peasants.\nCan hold up to 4 peasents, spawntime depends on number of shacks and large huts.\n\n\n\n
+		Description: Generates livingspace. Livingspace increases over time by generating peasants.\nCan hold up to 4 peasants, spawntime depends on number of shacks and large huts.\n\n\n\n
 		Queue: MBuilding.GDI
 	Building:
 		Footprint: xx xx
@@ -956,7 +956,7 @@ XLTNT1:
 		BuildPaletteOrder: 60
 		Prerequisites: anyhq, ~scaffold
 		Queue: MBuilding.Nod
-		Description: Provides more livingspace. Livingspace increases over time by generating peasants.\nCan hold up to 6 peasents, spawntime depends on number of shacks and large huts. \ncheaper than the standard Shack.\n\n\n\n
+		Description: Provides more livingspace. Livingspace increases over time by generating peasants.\nCan hold up to 6 peasants, spawntime depends on number of shacks and large huts. \ncheaper than the standard Shack.\n\n\n\n
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
@@ -1074,7 +1074,7 @@ NODNUKE:
 		IconPalette: raicon
 		BuildPaletteOrder: 10
 		Prerequisites: factnew
-		Description: Generates livingspace. Livingspace increases over time by generating peasants.\nCan hold up to 2 peasents, spawntime depends on number of shacks and large huts.\nA tent can be plopped down instant.\n\n\n
+		Description: Generates livingspace. Livingspace increases over time by generating peasants.\nCan hold up to 2 peasants, spawntime depends on number of shacks and large huts.\nA tent can be plopped down instant.\n\n\n
 		Queue: MBuilding.Nod
 	Building:
 		Footprint: xx
@@ -1242,7 +1242,7 @@ PROCNEW:
 		IconPalette: raicon
 		BuildPaletteOrder: 70
 		Prerequisites: anyhq, ~scaffold
-		Description: Processes raw ore and Gold into useable metal.\nGenerates ore money than the windmill.\n\n\n\n
+		Description: Processes raw ore and Gold into useable metal.\nGenerates more money than the windmill.\n\n\n\n
 		Queue: MBuilding2.GDI, MBuilding2.Nod, MBuilding2.SUL
 	Building:
 		Footprint: _x_ xxx xx=
@@ -1706,7 +1706,7 @@ CASTLE:
 		IconPalette: raicon
 		BuildPaletteOrder: 100
 		Prerequisites: anyhq, anyarmory, ~scaffold
-		Description: Unlocks Superweapon.\n Unlocks Heavy Cavalry, Knight's and Tribuchet.\nRequires power to operate.\nCan hold up to 4 nobles.\n\n\n\n
+		Description: Unlocks Superweapon.\n Unlocks Heavy Cavalry, Knight's and Trebuchet.\nRequires power to operate.\nCan hold up to 4 nobles.\n\n\n\n
 		Queue: MBuilding3.Nod
 	Building:
 		Footprint: ___ xxx xxx
@@ -1782,7 +1782,7 @@ CASTLE2:
 		IconPalette: raicon
 		BuildPaletteOrder: 100
 		Prerequisites: anyhq, anyarmory, ~scaffold
-		Description: Unlocks Superweapon.\n Unlocks Assasines, Crossbows and Ballista Towers.\nRequires power to operate.\nCan hold up to 4 nobles.\n\n\n\n
+		Description: Unlocks Superweapon.\n Unlocks Assassins, Crossbows and Ballista Towers.\nRequires power to operate.\nCan hold up to 4 nobles.\n\n\n\n
 		Queue: MBuilding3.GDI
 	Building:
 		Footprint: ___ xxx xxx
@@ -2375,7 +2375,7 @@ ANYPOWER:
 	AlwaysVisible:
 	Tooltip:
 		Name: Living Quaters
-		Description: Living Quaters
+		Description: Living Quarters
 
 ANYHQ:
 	AlwaysVisible:

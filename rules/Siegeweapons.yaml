@@ -480,7 +480,7 @@ EHARVXL:
 	Buildable:
 		IconPalette: raicon
 		BuildPaletteOrder: 0
-		Description: Collects iron- and goldore.\n  Unarmed\n\nTrains: 1 Peasant
+		Description: Collects iron and goldore.\n  Unarmed\n\nTrains: 1 Peasant
 		Queue: MSiege.GDI, MSiege.Nod, MSiege.SUL
 		Prerequisites: procnew
 	Mobile:
@@ -583,7 +583,7 @@ SIEGE99:
 		IconPalette: raicon
 		BuildPaletteOrder: 20
 		Prerequisites: ~notavailable
-		Description: nonhere
+		Description: Transports infantry.
 		Queue: MSiege.Nod
 	Mobile:
 		TurnSpeed: 6

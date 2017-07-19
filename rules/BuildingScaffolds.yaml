@@ -15,7 +15,7 @@ NUKENEW.SCAFF:
 		IconPalette: raicon
 		BuildPaletteOrder: 10
 		Prerequisites: factnew
-		Description: Generates livingspace. Livingspace increases over time by generating peasants.\nCan hold up to 4 peasents, spawntime depends on number of shacks and large huts.\n\n\n\n
+		Description: Generates livingspace. Livingspace increases over time by generating peasants.\nCan hold up to 4 peasants, spawntime depends on number of shacks and large huts.\n\n\n\n
 		Queue: MBuilding.GDI
 		BuildDuration: 25
 	Health:
@@ -167,7 +167,7 @@ NUKXL.SCAFF:
 		BuildPaletteOrder: 70
 		Prerequisites: anyarmory
 		Queue: MBuilding.GDI
-		Description: Provides more livingspace. Livingspace increases over time by generating peasants.\nCan hold up to 15 peasents. \ncheaper than the standard Shack.\n\n\n\n
+		Description: Provides more livingspace. Livingspace increases over time by generating peasants.\nCan hold up to 15 peasants. \ncheaper than the standard Shack.\n\n\n\n
 		BuildDuration: 25
 	Health:
 		HP: 60000
@@ -648,7 +648,7 @@ NUK2NEW.SCAFF:
 		BuildPaletteOrder: 60
 		Prerequisites: anyhq
 		Queue: MBuilding.GDI
-		Description: Provides more livingspace. Livingspace increases over time by generating peasants.\nCan hold up to 8 peasents, spawntime depends on number of shacks and large huts. \ncheaper than the standard Shack.\n\n\n\n
+		Description: Provides more livingspace. Livingspace increases over time by generating peasants.\nCan hold up to 8 peasants, spawntime depends on number of shacks and large huts. \ncheaper than the standard Shack.\n\n\n\n
 		BuildDuration: 25
 	Health:
 		HP: 17500
@@ -726,7 +726,7 @@ XLTNTUNI.SCAFF:
 		BuildPaletteOrder: 60
 		Prerequisites: anyhq
 		Queue: MBuilding.Nod
-		Description: Provides more livingspace. Livingspace increases over time by generating peasants.\nCan hold up to 6 peasents, spawntime depends on number of shacks and large huts. \ncheaper than the standard Shack.\n\n\n\n
+		Description: Provides more livingspace. Livingspace increases over time by generating peasants.\nCan hold up to 6 peasants, spawntime depends on number of shacks and large huts. \ncheaper than the standard Shack.\n\n\n\n
         BuildDuration: 25
 	Health:
 		HP: 17500
@@ -835,7 +835,7 @@ PROCNEW.SCAFF:
 		IconPalette: raicon
 		BuildPaletteOrder: 70
 		Prerequisites: anyhq
-		Description: Processes raw ore and Gold into useable metal.\nGenerates ore money than the windmill.\n\n\n\n
+		Description: Processes raw ore and Gold into useable metal.\nGenerates more money than the windmill.\n\n\n\n
 		Queue: MBuilding2.GDI, MBuilding2.Nod
 		BuildDuration: 25
 	Health:
@@ -1208,7 +1208,7 @@ CASTLE.SCAFF:
 		IconPalette: raicon
 		BuildPaletteOrder: 100
 		Prerequisites: anyhq, anyarmory
-		Description: Unlocks Superweapon.\n Unlocks Heavy Cavalry, Knight's and Tribuchet.\nRequires power to operate.\nCan hold up to 4 nobles.\n\n\n\n
+		Description: Unlocks Superweapon.\n Unlocks Heavy Cavalry, Knight's and Trebuchet.\nRequires power to operate.\nCan hold up to 4 nobles.\n\n\n\n
 		Queue: MBuilding3.Nod
 		BuildDuration: 25
 	Health:
@@ -1286,7 +1286,7 @@ CASTLE2.SCAFF:
 		IconPalette: raicon
 		BuildPaletteOrder: 100
 		Prerequisites: anyhq, anyarmory
-		Description: Unlocks Superweapon.\n Unlocks Assasines, Crossbows and Ballista Towers.\nRequires power to operate.\nCan hold up to 4 nobles.\n\n\n\n
+		Description: Unlocks Superweapon.\n Unlocks Assassins, Crossbows and Ballista Towers.\nRequires power to operate.\nCan hold up to 4 nobles.\n\n\n\n
 		Queue: MBuilding3.GDI
 		BuildDuration: 25
 	Health:
@@ -1895,7 +1895,7 @@ TAVERN.SCAFF:
 		IconPalette: raicon
 		BuildPaletteOrder: 200
 		Prerequisites: barracks
-		Description: Provides 2 additional worker.\n\n\n\n
+		Description: Provides 2 additional workers.\n\n\n\n
 		Queue: MBuilding.GDI, MBuilding.Nod
 		BuildDuration: 25
 	Health:

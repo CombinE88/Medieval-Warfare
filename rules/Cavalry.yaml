@@ -15,7 +15,7 @@ KINGROSS:
 		IconPalette: raicon
 		BuildPaletteOrder: 300
 		Prerequisites: anycastle
-		Description: The ruler over your Kingdome!\n  Very strong against Infantry and Cavalry and Spectral Units\n Detect cloaked units\n  Grants morale buff 10% all stats to surrounding allied units.\n\n\n
+		Description: The ruler over your Kingdom!\n  Very strong against Infantry and Cavalry and Spectral Units\n Detects cloaked units\n  Grants morale buff 10% all stats to surrounding allied units.\n\n\n
 		Queue: MVehicle.GDI
         BuildLimit: 1
         ForceFaction: gdi

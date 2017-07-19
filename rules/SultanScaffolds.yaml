@@ -15,7 +15,7 @@ SULNUKE.SCAFF:
 		IconPalette: raicon
 		BuildPaletteOrder: 10
 		Prerequisites: factnew
-		Description: Generates livingspace. Livingspace increases over time by generating peasants.\nCan hold up to 6 peasents, spawntime depends on number of shacks and large huts.\n  Requires 3 Peasants\n\n\n
+		Description: Generates livingspace. Livingspace increases over time by generating peasants.\nCan hold up to 6 peasants, spawntime depends on number of shacks and large huts.  
 		Queue: MBuilding.SUL
 		BuildDuration: 25
 	Health:
@@ -176,7 +176,7 @@ SULMILL.SCAFF:
 		IconPalette: raicon
 		BuildPaletteOrder: 20
 		Prerequisites: anypower
-		Description: Provides basic resource gathering for Crops and Grain.\n Comes with 2 farmers.\n Can only operate up to 6 farmers at once.\n\n\n\n
+		Description: Provides basic resource gathering for Crops and Grain.\n Comes with 3 farmers.\n Can only operate up to 6 farmers at once.\n\n\n\n
 		Queue: MBuilding2.SUL
 		BuildDuration: 25
 	Health:
@@ -250,7 +250,7 @@ SULNUK2.SCAFF:
 		BuildPaletteOrder: 60
 		Prerequisites: anyhq
 		Queue: MBuilding.SUL
-		Description: Provides more livingspace. Livingspace increases over time by generating peasants.\nCan hold up to 11 peasents, spawntime depends on number of shacks and large huts. \ncheaper than the standard Shack.\n\n\n\n
+		Description: Provides more livingspace. Livingspace increases over time by generating peasants.\nCan hold up to 11 peasants, spawntime depends on number of shacks and large huts. \ncheaper than the standard Shack.\n\n\n\n
 		BuildDuration: 25
 	Health:
 		HP: 50000
@@ -919,7 +919,7 @@ SULCNSHMBR.SCAFF:
 		IconPalette: raicon
 		BuildPaletteOrder: 30
 		Prerequisites: proc, !sulcnshmbr
-		Description: Corn Chambers were meant to store corn for times when food was raw.\n  Generates a little bit of gold, when resources are gathered.\n  Limited to 1.\n\n
+		Description: Corn Chambers were meant to store corn for times when food was rare.\n  Generates a little bit of gold, when resources are gathered.\n  Limited to 1.\n\n
 		Queue: MBuilding2.SUL
 		BuildDuration: 25
         BuildLimit: 1
@@ -998,7 +998,7 @@ SULREF.SCAFF:
 		IconPalette: raicon
 		BuildPaletteOrder: 70
 		Prerequisites: sulcastle
-		Description: Processes raw ore and Gold into useable metal.\nGenerates ore money than the windmill.\n\n\n\n
+		Description: Processes raw ore and Gold into useable metal.\nGenerates more money than the windmill.\n\n\n\n
 		Queue: MBuilding2.SUL
 		BuildDuration: 25
 	Health:

@@ -476,7 +476,7 @@ SULPLUG4:
 	Tooltip:
 		Name: Advanced Defense Upgrade
 	Buildable:
-		Description: Upgrades the Guard Tower with a static defense.\n  Deals high damage to Cavalry\n  Strong vs Cavalry\n  Weak vs Infantry\n  Increases base hitpoints by 30%\n  Replaces arrows with jevalines\n  
+		Description: Upgrades the Guard Tower with a static defense.\n  Deals high damage to Cavalry\n  Strong vs Cavalry\n  Weak vs Infantry\n  Increases base hitpoints by 30%\n  Replaces arrows with javelines\n  
 		BuildPaletteOrder: 21
 		Prerequisites: vehicleproduction, sultow3
 		Queue: MDefenses.SUL
@@ -685,7 +685,7 @@ SULNUK2:
 		BuildPaletteOrder: 60
 		Prerequisites: anyhq, ~scaffold
 		Queue: MBuilding.SUL
-		Description: Provides more livingspace. Livingspace increases over time by generating peasants.\nCan hold up to 11 peasents, spawntime depends on number of shacks and large huts. \ncheaper than the standard Shack.\n\n\n\n
+		Description: Provides more livingspace. Livingspace increases over time by generating peasants.\nCan hold up to 11 peasants, spawntime depends on number of shacks and large huts. \ncheaper than the standard Shack.\n\n\n\n
 	Building:
 		Footprint: xxx xx=
 		Dimensions: 3,2
@@ -762,7 +762,7 @@ SULNUKE:
 		IconPalette: raicon
 		BuildPaletteOrder: 10
 		Prerequisites: factnew, ~scaffold
-		Description: Generates livingspace. Livingspace increases over time by generating peasants.\nCan hold up to 6 peasents, spawntime depends on number of shacks and large huts.\n\n\n\n
+		Description: Generates livingspace. Livingspace increases over time by generating peasants.\nCan hold up to 6 peasants, spawntime depends on number of shacks and large huts.\n\n\n\n
 		Queue: MBuilding.SUL
 	Building:
 		Footprint: xx xx
@@ -1044,7 +1044,7 @@ SULCASTLE:
 		SquadOffset	-236,236,0
 		SquadSize: 3
 		QuantizedFacings: 8
-		Description: Pulverising Spear Storm (placeholder)
+		Description: Pulverizing Spear Storm (placeholder)
 		LongDesc: A barrage of spears falling from the sky. Can hit Aircrafts.
 		EndChargeSpeechNotification: NewAirstrike
 		SelectTargetSpeechNotification: SelectTarget
@@ -1135,7 +1135,7 @@ SULTOW1:
 		IconPalette: raicon
 		BuildPaletteOrder: 80
 		Prerequisites: anyhq
-		Description: Grands acess to advanced tech at the barracks.\n  Allows Supportpower I \n  Heals surrounding units.\n\n
+		Description: Grants access to advanced tech at the barracks.\n  Allows Supportpower I \n  Heals surrounding units.\n\n
 		Queue: MBuilding2.SUL
 		BuildLimit: 1
 	GrantConditionOnPrerequisite@Palace:
@@ -1160,7 +1160,7 @@ SULTOW2:
 		IconPalette: raicon
 		BuildPaletteOrder: 90
 		Prerequisites: anyhq
-		Description: Grands acess to advanced tech at the School of Mystic Teachings.\n\n\n\n
+		Description: Grants access to advanced tech at the School of Mystic Teachings.\n\n\n\n
 		Queue: MBuilding2.SUL
 		BuildLimit: 1
 	GrantConditionOnPrerequisite@Palace:
@@ -1186,7 +1186,7 @@ SULTOW3:
 		IconPalette: raicon
 		BuildPaletteOrder: 100
 		Prerequisites: anyhq
-		Description: Grands acess to advanced tech and support powers at the Siege Workshop.\n\n\n\n
+		Description: Grants access to advanced tech and support powers at the Siege Workshop.\n\n\n\n
 		Queue: MBuilding2.SUL
 		BuildLimit: 1
 	GrantConditionOnPrerequisite@Palace:
@@ -1212,7 +1212,7 @@ SULTOW4:
 		IconPalette: raicon
 		BuildPaletteOrder: 110
 		Prerequisites: anyhq
-		Description: Grands acess to superb tech and super weapons.\n\n\n\n
+		Description: Grants access to superb tech and super weapons.\n\n\n\n
 		Queue: MBuilding2.SUL
 		BuildLimit: 1
 	GrantConditionOnPrerequisite@Palace:
@@ -1243,7 +1243,7 @@ SULMILL:
 		IconPalette: raicon
 		BuildPaletteOrder: 20
 		Prerequisites: anypower, ~scaffold
-		Description: Provides basic resource gathering for Crops and Grain.\n Comes with 2 farmers.\n Can only operate up to 6 farmers at once.\n\n\n\n
+		Description: Provides basic resource gathering for Crops and Grain.\n Comes with 3 farmers.\n Can only operate up to 6 farmers at once.\n\n\n\n
 		Queue: MBuilding2.SUL
 	Building:
 		Footprint: __ xx xx
@@ -1417,7 +1417,7 @@ SULCNSHMBR:
 		IconPalette: raicon
 		BuildPaletteOrder: 30
 		Prerequisites: proc, !sulcnshmbr, ~scaffold
-		Description: Corn Chambers were meant to store corn for times when food was raw.\n  Generates a little bit of gold, when resources are gathered.\n  Limited to 1.\n\n
+		Description: Corn Chambers were meant to store corn for times when food was rare.\n  Generates a little bit of gold, when resources are gathered.\n  Limited to 1.\n\n
 		Queue: MBuilding2.SUL
 		BuildLimit: 1
 	Building:
@@ -1457,7 +1457,7 @@ SULREF:
 		IconPalette: raicon
 		BuildPaletteOrder: 70
 		Prerequisites: anyhq, ~scaffold
-		Description: Processes raw ore and Gold into useable metal.\nGenerates ore money than the windmill.\n\n\n\n
+		Description: Processes raw ore and Gold into useable metal.\nGenerates more money than the windmill.\n\n\n\n
 		Queue: MBuilding2.SUL
 	Building:
 		Footprint: _x_ xxx xx=
@@ -1644,7 +1644,7 @@ SULE4:
 	Tooltip:
 		Name: Palace Guard
 	Buildable:
-		Description: Heavy Anti-Cavalry infantry that are able to regenerate thier health if not in combat.\n  Superb vs Cavalry.\n  Moderate vs Infantry\n  Cannot be trampled by Cavalry\n  Can cut down trees.\n\nTrains: 1 Peasant\n
+		Description: Heavy Anti-Cavalry infantry that are able to regenerate their health if not in combat.\n  Superb vs Cavalry.\n  Moderate vs Infantry\n  Cannot be trampled by Cavalry\n  Can cut down trees.\n\nTrains: 1 Peasant\n
 		IconPalette: raicon
 		BuildPaletteOrder: 30
 		Queue: MInfantry.SUL
@@ -1800,7 +1800,7 @@ SULM1:
 	Tooltip:
 		Name: Apprentice
 	Buildable:
-		Description: Anti-infantry unit.\n  Strong vs Infantry\n  Weak vs Cavalry, Buildings\n  Detects cloaked units\n  Can spawn sceletons upon death infantry\n\nTrains: 1 Peasant\n
+		Description: Anti-infantry unit.\n  Strong vs Infantry\n  Weak vs Cavalry, Buildings\n  Detects cloaked units\n  Can spawn skeletons upon death infantry\n\nTrains: 1 Peasant\n
 		IconPalette: raicon
 		BuildPaletteOrder: 10
 		Queue: MVehicle.SUL
@@ -1901,7 +1901,7 @@ SULM2:
 	Tooltip:
 		Name: Djinn
 	Buildable:
-		Description: Advanced Multi-Role unit.\n  Can only badly hurt by magical or fire weapons.\n  Moderate vs Everything\n  Weak vs Buildings\n  Detects cloaked units at a very large area\n  Can attack Aircrafts\n\nConsumes: 2 Peasants\n
+		Description: Advanced Multi-Role unit.\n  Can only be hurt by magical or fire weaponary.\n  Moderate vs Everything\n  Weak vs Buildings\n  Detects cloaked units at a very large area\n  Can attack Aircrafts\n\nConsumes: 2 Peasants\n
 		IconPalette: raicon
 		Prerequisites: sultow2, sultow4, anyhq
 		BuildPaletteOrder: 70
@@ -2415,7 +2415,7 @@ SULB3:
 	Tooltip:
 		Name: Giant Roc
 	Buildable:
-		Description: Giant Roc wich throws razor sharp faethers at the enemy.\n  Strong vs Ground Units and Aircrafts\n\nTrains: no Peasant\n\n
+		Description: Giant Roc which throws razor sharp feathers at the enemy.\n  Strong vs Ground Units and Aircrafts\n\nTrains: no Peasant\n\n
 		BuildPaletteOrder: 100
 		Prerequisites: sultow3, sultow4, anyhq
 		Queue: MSiege.SUL

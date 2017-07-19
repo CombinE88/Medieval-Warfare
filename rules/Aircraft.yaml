@@ -301,7 +301,7 @@ WRBLN:
 	Tooltip:
 		Name: War Balloon
 	Buildable:
-		Description: The War Balloon is a lighter than air aircraft consisting\n of a bag, called an envelope, which contains heated air. An Soldier with a double barreled crossbow stands at the front.\n  Strong vs Infantry and Aircrafts\n  Moderate vs Cavalry and Buildings\n  Can attack Aircrafts\n\nTrains: 1 Peasant\n
+		Description: The War Balloon is a lighter than air aircraft consisting\n of a bag, called an envelope, which contains heated air. A Soldier with a double barreled crossbow stands at the front.\n  Strong vs Infantry and Aircrafts\n  Moderate vs Cavalry and Buildings\n  Can attack Aircrafts\n\nTrains: 1 Peasant\n
 		BuildPaletteOrder: 100
 		Prerequisites: anycastle
 		Queue: MSiege.Nod
