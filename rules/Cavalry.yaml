@@ -1,554 +1,538 @@
 KINGROSS:
 	Inherits: ^Cavalry
-    -Explodes@Tib:
-    GrantConditionOnDamageState@Slow:
-        Condition: Slowmotion
-        ValidDamageStates: Heavy, Critical 
-    SpeedMultiplier:
-        RequiresCondition: Slowmotion
-        Modifier: 85
-    Valued:
-		Cost: 4000
+	-Explodes@Tib:
+	GrantConditionOnDamageState@Slow:
+		Condition: Slowmotion
+		ValidDamageStates: Heavy, Critical 
+	SpeedMultiplier:
+		RequiresCondition: Slowmotion
+		Modifier: 85
+	Valued:
+		Cost: 2500
 	Tooltip:
-		Name: Your Highness (Mounted)
+		Name: Your Highness
 	Buildable:
-        IconPalette: raicon
-		BuildPaletteOrder: 20
-        Prerequisites: ~disabled
-		Description: The ruler over your Kingdome!\n  Very strong against Infantry and Cavalry\n  Cannot attack Buildings unless hes mounted a horse\n  Detect cloaked units\n\n\n\n
-		Queue: MVehicle.Nod, MVehicle.GDI
+		IconPalette: raicon
+		BuildPaletteOrder: 300
+		Prerequisites: anycastle
+		Description: The ruler over your Kingdom!\n  Very strong against Infantry and Cavalry and Spectral Units\n Detects cloaked units\n  Grants morale buff 10% all stats to surrounding allied units.\n\n\n
+		Queue: MVehicle.GDI
+        BuildLimit: 1
+        ForceFaction: gdi
 	MustBeDestroyed:
 		RequiredForShortGame: true
-    Guard:
+	Guard:
 		Voice: Move
-    Mobile:
-        SharesCell: false
-        Crushes: crate, infantry
-        TurnSpeed: 7
+	Mobile:
+		SharesCell: false
+		Crushes: crate, infantry
+		TurnSpeed: 7
 		Speed: 110
-        Voice: Move
-    RevealsShroud:
+		Voice: Move
+	RevealsShroud:
 		Range: 7c0
 	Health:
 		HP: 65000
 	Armament:
 		Weapon: kingcrossbow
-        Name: Primary
-        LocalOffset: 0,0,500
-    Armament@Air:
+		Name: Primary
+		LocalOffset: 0,0,500
+	Armament@Air:
 		Weapon: kingcrossbowair
-        LocalOffset: 0,0,500
-        Name: Primary
-    Armament@Ground:
+		LocalOffset: 0,0,500
+		Name: Primary
+	Armament@Ground:
 		Weapon: KingsSwordMounted
-        Name: Secondary
-        LocalOffset: 0,0,500
+		Name: Secondary
+		LocalOffset: 0,0,500
 	AttackFrontal:
-        Armaments: Primary, Secondary
+		Armaments: Primary, Secondary
 		Voice: Attack
 	AttackMove:
 		Voice: Attack
-    AutoTarget:
+	AutoTarget:
 		ScanRadius: 6
-        InitialStance: AttackAnything
-    RenderSprites:
-        Image: kingross
-        PlayerPalette: raplayer
+		InitialStance: AttackAnything
+	RenderSprites:
+		Image: kingross
+		PlayerPalette: raplayer
 	WithInfantryBody:
 		DefaultAttackSequence: shoot2
-        AttackSequences:
-            Secondary: shoot2
-            Primary: shoot
-    Armor:
+		AttackSequences:
+			Secondary: shoot2
+			Primary: shoot
+	Armor:
 		Type: Knight
-    Selectable:
+	Selectable:
 		Bounds: 26,34,0,-6
-    SelectionDecorations:
+	SelectionDecorations:
 		VisualBounds: 26,34,0,-6
-    Voiced:
+	Voiced:
 		VoiceSet: CommandoVoice
-    SpawnActorOnDeath@n1:
-        DeathType: DefaultDeath
-        Probability: 100
-        Actor: Husk.KING
-    SpawnActorOnDeath@n2:
-        DeathType: RippedApartDeath
-        Probability: 100
-        Actor: Husk.KING
-    SpawnActorOnDeath@n3:
-        DeathType: PoisonDeath
-        Probability: 100
-        Actor: Husk.KING
-    SpawnActorOnDeath@n4:
-        DeathType: BallistaDeath
-        Probability: 100
-        Actor: Husk.KING
-    SpawnActorOnDeath@n5:
-        DeathType: BurnToDeath
-        Probability: 100
-        Actor: Husk.KING
-    ProximityExternalCondition@HEAL:
-        Range: 9c0
-        ValidStances: Ally
-        Condition: KingIsNear
-    SelfHealing@AlwaysHeals:
-        Delay: 10
-        Step: 500
+	ProximityExternalCondition@HEAL:
+		Range: 9c0
+		ValidStances: Ally
+		Condition: KingIsNear
+	SelfHealing@AlwaysHeals:
+		Delay: 10
+		Step: 500
 		HealIfBelow: 160
 		DamageCooldown: 200 
-    AnnounceOnBuild:
+	AnnounceOnBuild:
 	AnnounceOnKill:
-    ProvidesPrerequisite:
+	ProvidesPrerequisite:
 		Prerequisite: king  
-    GivesBounty:
-        Percentage: 75
-    DetectCloaked:
+	DetectCloaked:
 		Range: 3c0
 
 DDLER:
 	Inherits: ^Cavalry
-    -Explodes@Tib:
-    Valued:
+	-Explodes@Tib:
+	Valued:
 		Cost: 1300
 	Tooltip:
 		Name: Deathdealer
 	Buildable:
-        IconPalette: raicon
+		IconPalette: raicon
 		BuildPaletteOrder: 1000
-        Prerequisites: ~disabled
+		Prerequisites: ~disabled
 		Queue: MInfantry.Nod,  MInfantry.GDI, MHosp.Medi
-    Mobile:
-        SharesCell: false
-        TurnSpeed: 12
+	Mobile:
+		SharesCell: false
+		TurnSpeed: 12
 		Speed: 55
-    RevealsShroud:
+	RevealsShroud:
 		Range: 3c0
 	Health:
-		HP: 20000
+		HP: 16000
 	Armament:
 		Weapon: none
 	AttackFrontal:
-    AutoTarget:
+	AutoTarget:
 		ScanRadius: 0
-    RenderSprites:
-        Image: deathdealer
-        PlayerPalette: raplayer
+	RenderSprites:
+		Image: deathdealer
+		PlayerPalette: raplayer
 	WithInfantryBody:
 		WithInfantryBody:
 		IdleSequences: idle1
-    Armor:
+	Armor:
 		Type: LightCavalry
-    Selectable:
+	Selectable:
 		Bounds: 26,34,0,-6
-    SelectionDecorations:
+	SelectionDecorations:
 		VisualBounds: 26,34,0,-6
-    Power:
-		Amount: 0
-    WithDeathAnimation:
-        DeathTypes:
+	WithDeathAnimation:
+		DeathTypes:
 			DefaultDeath: 1
 			RippedApartDeath: 2
 			PoisonDeath: 3
 			BallistaDeath: 4
-            BurnToDeath: 5
-    -SelfHealing@Rotaway:
-    ProximityExternalCondition@DEATH:
-        Range: 2c0
-        ValidStances: Enemy
-        Condition: DDler
-    WithRangeCircle:
-        Type: Dead
-        Visible: Always
-        Range: 2c0
-    AutoTargetIgnore:
-    -SpawnActorOnDeath@1:
-    -SpawnActorOnDeath@2:
-    -SpawnActorOnDeath@3:
-    -SpawnActorOnDeath@4:
-    -SpawnActorOnDeath@5:
-    Selectable:
+			BurnToDeath: 5
+	-SelfHealing@Rotaway:
+	ProximityExternalCondition@DEATH:
+		Range: 2c0
+		ValidStances: Enemy
+		Condition: DDler
+	WithRangeCircle:
+		Type: Dead
+		Visible: Always
+		Range: 2c0
+	AutoTargetIgnore:
+	-SpawnActorOnDeath@1:
+	-SpawnActorOnDeath@2:
+	-SpawnActorOnDeath@3:
+	-SpawnActorOnDeath@4:
+	-SpawnActorOnDeath@5:
+	Selectable:
 		Priority: 9
-    Voiced:
+	Voiced:
 		VoiceSet: DeathdealerVoice
-    
+	
 
 BURNINGHORSE:
-    Inherits: ^Cavalry
-    -Explodes@Tib:
+	Inherits: ^Cavalry
+	-Explodes@Tib:
 	Valued:
 		Cost: 0
 	Tooltip:
 		Name: Horse
 	Mobile:
-        TurnSpeed: 100
+		TurnSpeed: 100
 		Speed: 60
-    RevealsShroud:
+	RevealsShroud:
 		Range: 2c0
 	Health:
 		HP: 5000
 	Armament:
 		Weapon: none
 	AttackFrontal:
-    AutoTarget:
-    RenderSprites:
-        Image: burhors
-        PlayerPalette: raplayer
+	AutoTarget:
+	RenderSprites:
+		Image: burhors
+		PlayerPalette: raplayer
 	WithInfantryBody:
 		IdleSequences: stand
-    Armor:
+	Armor:
 		Type: LightCavalry
-    -Selectable:
-    Power:
-		Amount: 0
-    Wanders:
-        WanderMoveRadius: 5
-        MinMoveDelay: 0
-        MaxMoveDelay: 0
-    -SpawnActorOnDeath@1:
-    -SpawnActorOnDeath@2:
-    -SpawnActorOnDeath@3:
-    -SpawnActorOnDeath@4:
-    -SpawnActorOnDeath@5:
-    ScaredyCat:
-        AttackPanicChance: 100
-    SelfHealing@BURNING:
-        Step: -1000
-        HealIfBelow: 110
-        Delay: 10
-        DamageTypes: BurnToDeath
-    -Targetable:
-    Voiced:
+	-Selectable:
+	Wanders:
+		WanderMoveRadius: 5
+		MinMoveDelay: 0
+		MaxMoveDelay: 0
+	-SpawnActorOnDeath@1:
+	-SpawnActorOnDeath@2:
+	-SpawnActorOnDeath@3:
+	-SpawnActorOnDeath@4:
+	-SpawnActorOnDeath@5:
+	ScaredyCat:
+		AttackPanicChance: 100
+	SelfHealing@BURNING:
+		Step: -1000
+		HealIfBelow: 110
+		Delay: 10
+		DamageTypes: BurnToDeath
+	-Targetable:
+	Voiced:
 		VoiceSet: GenericHorseOnly
 
 EMPTYROSS:
 	Inherits: ^Cavalry
-    GrantConditionOnDamageState@Slow:
-        Condition: Slowmotion
-        ValidDamageStates: Heavy, Critical 
-    SpeedMultiplier:
-        RequiresCondition: Slowmotion
-        Modifier: 70
-    -Explodes@Tib:
+	GrantConditionOnDamageState@Slow:
+		Condition: Slowmotion
+		ValidDamageStates: Heavy, Critical 
+	SpeedMultiplier:
+		RequiresCondition: Slowmotion
+		Modifier: 70
+	-Explodes@Tib:
 	Valued:
 		Cost: 0
 	Tooltip:
 		Name: Horse
 	Mobile:
-        TurnSpeed: 20
+		TurnSpeed: 20
 		Speed: 60
-    RevealsShroud:
+	RevealsShroud:
 		Range: 7c0
 	Health:
 		HP: 7500
 	Armament:
 		Weapon: none
 	AttackFrontal:
-    AutoTarget:
-    RenderSprites:
-        Image: rossempty
-        PlayerPalette: raplayer
+	AutoTarget:
+	RenderSprites:
+		Image: rossempty
+		PlayerPalette: raplayer
 	WithInfantryBody:
 		IdleSequences: stand
 		DefaultAttackSequence: shoot
-    Armor:
+	Armor:
 		Type: LightCavalry
-    Selectable:
+	Selectable:
 		Bounds: 26,34,0,-6
-    SelectionDecorations:
+	SelectionDecorations:
 		VisualBounds: 26,34,0,-6
-    Power:
-		Amount: 0
-    Wanders:
-        WanderMoveRadius: 5
-        MinMoveDelay: 50
-        MaxMoveDelay: 250
-    -SpawnActorOnDeath@1:
-    -SpawnActorOnDeath@2:
-    -SpawnActorOnDeath@3:
-    -SpawnActorOnDeath@4:
-    -SpawnActorOnDeath@5:
-    ScaredyCat:
-    Voiced:
+	Wanders:
+		WanderMoveRadius: 5
+		MinMoveDelay: 50
+		MaxMoveDelay: 250
+	-SpawnActorOnDeath@1:
+	-SpawnActorOnDeath@2:
+	-SpawnActorOnDeath@3:
+	-SpawnActorOnDeath@4:
+	-SpawnActorOnDeath@5:
+	ScaredyCat:
+	Voiced:
 		VoiceSet: GenericHorseOnly
-    Capturable:
-        CaptureThreshold: 101
-        AllowAllies: true
-        Type: horse
-    TransformOnCapture:
-        ForceHealthPercentage: 100
+	Capturable:
+		CaptureThreshold: 101
+		AllowAllies: true
+		Type: horse
+	TransformOnCapture:
+		ForceHealthPercentage: 100
 		IntoActor: kingross
-    
+	
 ROSSNEUTRAL:
 	Inherits: ^Cavalry
-    GrantConditionOnDamageState@Slow:
-        Condition: Slowmotion
-        ValidDamageStates: Heavy, Critical 
-    SpeedMultiplier:
-        RequiresCondition: Slowmotion
-        Modifier: 70
-    -Explodes@Tib:
+	GrantConditionOnDamageState@Slow:
+		Condition: Slowmotion
+		ValidDamageStates: Heavy, Critical 
+	SpeedMultiplier:
+		RequiresCondition: Slowmotion
+		Modifier: 70
+	-Explodes@Tib:
 	Valued:
 		Cost: 700
 	Tooltip:
 		Name: Camel Rider
 	Mobile:
-        SharesCell: false
-        TurnSpeed: 30
+		SharesCell: false
+		TurnSpeed: 30
 		Speed: 90
-    RevealsShroud:
+	RevealsShroud:
 		Range: 7c0
 	Health:
 		HP: 29000
 	Armament:
 		Weapon: pike
 	AttackFrontal:
-    AutoTarget:
+	AutoTarget:
 		ScanRadius: 4
-        InitialStance: AttackAnything
-    RenderSprites:
-        Image: rossneutral
-        PlayerPalette: raplayer
+		InitialStance: AttackAnything
+	RenderSprites:
+		Image: rossneutral
+		PlayerPalette: raplayer
 	WithInfantryBody:
 		IdleSequences: stand
 		DefaultAttackSequence: shoot
-    Armor:
+	Armor:
 		Type: MediumCavalry
-    Selectable:
+	Selectable:
 		Bounds: 26,34,0,-6
-    SelectionDecorations:
+	SelectionDecorations:
 		VisualBounds: 26,34,0,-6
-    Power:
-		Amount: 0
  
 ROSS1:
 	Inherits: ^Cavalry
 	GrantConditionOnDamageState@Slow:
-        Condition: Slowmotion
-        ValidDamageStates: Heavy, Critical 
-    SpeedMultiplier:
-        RequiresCondition: Slowmotion
-        Modifier: 70
-    Valued:
+		Condition: Slowmotion
+		ValidDamageStates: Heavy, Critical 
+	SpeedMultiplier:
+		RequiresCondition: Slowmotion
+		Modifier: 70
+	Valued:
 		Cost: 500
 	Tooltip:
 		Name: Light cavalry
 	Buildable:
-        IconPalette: raicon
+		IconPalette: raicon
 		BuildPaletteOrder: 20
-        Prerequisites: anyhq, ~techlevel.medium
-		Description: Fast, light Cavalry.\n  Strong vs Cavalry and Buildings\n  Weak vs Infantry\n\n\n\n
+		Prerequisites: anyhq
+		Description: Fast, light Cavalry.\n  Strong vs Cavalry and Buildings\n  Weak vs Infantry\n\nTrains: 1 Peasant\n\n
 		Queue: MVehicle.Nod
 	Mobile:
-        SharesCell: false
-        Crushes: crate, infantry
-        TurnSpeed: 8
+		SharesCell: false
+		Crushes: crate, infantry
+		TurnSpeed: 8
 		Speed: 110
-    RevealsShroud:
+	RevealsShroud:
 		Range: 7c0
 	Health:
 		HP: 34000
 	Armament:
 		Weapon: pikecavalry
 	AttackFrontal:
-    AutoTarget:
+	AutoTarget:
 		ScanRadius: 4
-        InitialStance: AttackAnything
-    RenderSprites:
-        Image: ross1
-        PlayerPalette: raplayer
+		InitialStance: AttackAnything
+	RenderSprites:
+		Image: ross1
+		PlayerPalette: raplayer
 	WithInfantryBody:
 		DefaultAttackSequence: shoot
-    Armor:
+	Armor:
 		Type: MediumCavalry
-    Selectable:
+	Selectable:
 		Bounds: 26,34,0,-6
-    SelectionDecorations:
+	SelectionDecorations:
 		VisualBounds: 26,34,0,-6
-    Power:
-		Amount: -2
+	PersonValued:
+		ActorCount: 1
+        ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 
 ROSS2:
-    Inherits: ^Cavalry
-    GrantConditionOnDamageState@Slow:
-        Condition: Slowmotion
-        ValidDamageStates: Heavy, Critical 
-    SpeedMultiplier:
-        RequiresCondition: Slowmotion
-        Modifier: 70
+	Inherits: ^Cavalry
+	GrantConditionOnDamageState@Slow:
+		Condition: Slowmotion
+		ValidDamageStates: Heavy, Critical 
+	SpeedMultiplier:
+		RequiresCondition: Slowmotion
+		Modifier: 70
 	Valued:
 		Cost: 600
 	Tooltip:
 		Name: Medium cavalry
 	Buildable:
-        IconPalette: raicon
+		IconPalette: raicon
 		BuildPaletteOrder: 20
-        Prerequisites: anyhq, ~techlevel.high
-		Description: Slow, medium Cavalry.\n  Strong vs Cavalry and Buildings\n  Weak vs Infantry\n\n\n\n
+		Prerequisites: anyhq
+		Description: Slow, medium Cavalry.\n  Strong vs Cavalry and Buildings\n  Weak vs Infantry\n\nTrains: 1 Peasant\n\n
 		Queue: MVehicle.GDI
 	Mobile:
-        SharesCell: false
-        Crushes: crate, infantry
-        TurnSpeed: 6
+		SharesCell: false
+		Crushes: crate, infantry
+		TurnSpeed: 6
 		Speed: 95
 	Health:
 		HP: 45000
 	Armament:
 		Weapon: pikeaxe
 	AttackFrontal:
-    AutoTarget:
+	AutoTarget:
 		ScanRadius: 4
-        InitialStance: AttackAnything
-    RenderSprites:
-        Image: ross2
-        PlayerPalette: raplayer
+		InitialStance: AttackAnything
+	RenderSprites:
+		Image: ross2
+		PlayerPalette: raplayer
 	WithInfantryBody:
 		DefaultAttackSequence: shoot
-    Armor:
+	Armor:
 		Type: MediumCavalry
-    Power:
-		Amount: -2
-    Selectable:
+	Selectable:
 		Bounds: 26,34,0,-6
-    SelectionDecorations:
-		VisualBounds: 26,34,0,-6    
+	SelectionDecorations:
+		VisualBounds: 26,34,0,-6	
+	PersonValued:
+		ActorCount: 1
+        ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 
 
 ROSS5:
-    Inherits: ^Cavalry
-    GrantConditionOnDamageState@Slow:
-        Condition: Slowmotion
-        ValidDamageStates: Heavy, Critical 
-    SpeedMultiplier:
-        RequiresCondition: Slowmotion
-        Modifier: 70
+	Inherits: ^Cavalry
+    Inherits@88: ^GameSettingsArcher
+	GrantConditionOnDamageState@Slow:
+		Condition: Slowmotion
+		ValidDamageStates: Heavy, Critical 
+	SpeedMultiplier:
+		RequiresCondition: Slowmotion
+		Modifier: 70
 	Valued:
 		Cost: 1300
 	Tooltip:
 		Name: Heavy cavalry
 	Buildable:
-        IconPalette: raicon
+		IconPalette: raicon
 		BuildPaletteOrder: 30
-        Prerequisites: anyarmory, ~techlevel.high
-		Description: Heavily armored and very slow.\n  Strong vs Everything\n  Weak vs Long-ranged weapons\n  Can attack Aircrafts\n\n\n\n
+		Prerequisites: anyarmory
+		Description: Heavily armored and very slow.\n  Strong vs Everything (+Spectral Units)\n  Weak vs Long-ranged weapons\n  Can attack Aircrafts\n\nTrains: 1 Peasant\n\n
 		Queue: MVehicle.GDI
 	Mobile:
-        SharesCell: false
-        Crushes: crate, infantry
-        TurnSpeed: 4
+		SharesCell: false
+		Crushes: crate, infantry
+		TurnSpeed: 4
 		Speed: 80
 	Health:
 		HP: 80000
-        Shape: Capsule
-            Radius: 356
-            PointA: 0, -352
-            PointB: 0, 352
+		Shape: Capsule
+			Radius: 356
+			PointA: 0, -352
+			PointB: 0, 352
 	Armament@Ground:
 		Weapon: mammothpike
-        Name: Primary
-    Armament@Air:
-		Weapon: mammothdagger 
-        Name: Secondary
+		Name: Primary
+	Armament@GunlanceAir:
+		Weapon: GunlanceAir 
+		Name: Secondary
+		LocalOffset: 700,0,700
+	Armament@GunlanceGround:
+		Weapon: GunlanceGround 
+		Name: Tertiary
+		LocalOffset: 800,0,300
 	AttackFrontal:
-        Armaments: Primary, Secondary
-    AutoTarget:
+		Armaments: Primary, Secondary, Tertiary
+	AutoTarget:
 		ScanRadius: 5
-        InitialStance: AttackAnything
-    RenderSprites:
-        Image: ross5
-        PlayerPalette: raplayer
+		InitialStance: AttackAnything
+	RenderSprites:
+		Image: ross5
+		PlayerPalette: raplayer
 	WithInfantryBody:
 		DefaultAttackSequence: stab
-        AttackSequences:
-            Secondary: shoot
-            Primary: stab
-    Armor:
+		AttackSequences:
+			Secondary: shoot
+			Primary: stab
+			Tertiary: shootground
+	Armor:
 		Type: HeavyCavalry
-    Power:
-		Amount: -3
-    Selectable:
+	Selectable:
 		Bounds: 26,34,0,-6
-    SelectionDecorations:
+	SelectionDecorations:
 		VisualBounds: 26,34,0,-6  
-    SelfHealing@Mammothtank:
-        Delay: 10
+	SelfHealing@Mammothtank:
+		Delay: 10
 		HealIfBelow: 50
 		DamageCooldown: 200 
-    Voiced:
+	Voiced:
 		VoiceSet: HeavyCavalVoice
+	PersonValued:
+		ActorCount: 1
+        ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 
 ROSS3:
-    Inherits: ^Cavalry
-    GrantConditionOnDamageState@Slow:
-        Condition: Slowmotion
-        ValidDamageStates: Heavy, Critical 
-    SpeedMultiplier:
-        RequiresCondition: Slowmotion
-        Modifier: 70
-    DetectCloaked:
+	Inherits: ^Cavalry
+    Inherits@88: ^GameSettingsArcher
+	GrantConditionOnDamageState@Slow:
+		Condition: Slowmotion
+		ValidDamageStates: Heavy, Critical 
+	SpeedMultiplier:
+		RequiresCondition: Slowmotion
+		Modifier: 70
+	DetectCloaked:
 		Range: 2c0
 	Valued:
-		Cost: 600
+		Cost: 950
 	Tooltip:
 		Name: Raiding Squad (fire Arrows)
 	Buildable:
-        IconPalette: raicon
+		IconPalette: raicon
 		BuildPaletteOrder: 30
-		Description: Strong mounted Archer.\n  Strong vs Infantry, Aircrafts and Buildings\n  Has long range, very fast\n  Can detect cloaked units\n  Can attack Aircrafts\n\n\n\n
-        Prerequisites: anyhq, armorynod,  ~techlevel.medium
+		Description: Strong mounted Archer.\n  Strong vs Infantry, Aircrafts and Buildings and Spectral Units\n  Has long range, very fast\n  Can detect cloaked units\n  Can attack Aircrafts\n\nTrains: 1 Peasant\n\n
+		Prerequisites: anyhq, armorynod
 		Queue:  MVehicle.Nod
 	Mobile:
-        SharesCell: false
-        TurnSpeed: 8
+		SharesCell: false
+		TurnSpeed: 8
 		Speed: 99
-    RevealsShroud:
+	RevealsShroud:
 		Range: 8c0
 	Health:
 		HP: 21000
 	Armament:
 		Weapon: longbownarrow
-        LocalOffset: 0,0,500
-    Armament@Air:
+		LocalOffset: 0,0,500
+	Armament@Air:
 		Weapon: longbownarrowair
-        LocalOffset: 0,0,500
+		LocalOffset: 0,0,500
 	AttackFrontal:
-    AutoTarget:
+	AutoTarget:
 		ScanRadius: 6
-        InitialStance: AttackAnything
-    RenderSprites:
-        Image: ross3
-        PlayerPalette: raplayer
+		InitialStance: AttackAnything
+	RenderSprites:
+		Image: ross3
+		PlayerPalette: raplayer
 	WithInfantryBody:
 		DefaultAttackSequence: shoot
-    Armor:
+	Armor:
 		Type: MediumCavalry
-    Selectable:
+	Selectable:
 		Bounds: 26,34,0,-6
-    SelectionDecorations:
+	SelectionDecorations:
 		VisualBounds: 26,34,0,-6
-    Power:
-		Amount: -2        
+	PersonValued:
+		ActorCount: 1
+        ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 
 
 ROSS4:
-    Inherits: ^Cavalry
-    GrantConditionOnDamageState@Slow:
-        Condition: Slowmotion
-        ValidDamageStates: Heavy, Critical  
-    SpeedMultiplier:
-        RequiresCondition: Slowmotion
-        Modifier: 70
+	Inherits: ^Cavalry
+    Inherits@88: ^GameSettingsArcher
+	GrantConditionOnDamageState@Slow:
+		Condition: Slowmotion
+		ValidDamageStates: Heavy, Critical  
+	SpeedMultiplier:
+		RequiresCondition: Slowmotion
+		Modifier: 70
 	Valued:
 		Cost: 350
 	Tooltip:
 		Name: Javelin Cavalry
 	Buildable:
-        IconPalette: raicon
+		IconPalette: raicon
 		BuildPaletteOrder: 10
-        Prerequisites: ~techlevel.medium
-		Description: Fast scout cavalry, armed with spears.\n  Very weak vs Infantry!!\n  Strong vs Cavalry, Buildings and light Aircrafts\n  Can attack Aircrafts\n\n\n\n
+		Description: Fast scout cavalry, armed with spears.\n  Very weak vs Infantry!!\n  Strong vs Cavalry, Buildings and light Aircrafts\n  Can attack Aircrafts\n\nTrains: 1 Peasant\n\n
 		Queue:  MVehicle.Nod
 	Mobile:
-        SharesCell: false
+		SharesCell: false
 		TurnSpeed: 12
 		Speed: 213
 		TerrainSpeeds:
@@ -558,208 +542,210 @@ ROSS4:
 			Tiberium: 35
 			BlueTiberium: 35
 			Beach: 35
-    RevealsShroud:
+	RevealsShroud:
 		Range: 8c0
 	Health:
 		HP: 18000
 	Armament:
 		Weapon: spearthrow
-        LocalOffset: 0,0,700
-    Armament@Air:
+		LocalOffset: 0,0,700
+	Armament@Air:
 		Weapon: spearthrowair
-        LocalOffset: 0,0,700
+		LocalOffset: 0,0,700
 	AttackFrontal:
-    AutoTarget:
+	AutoTarget:
 		ScanRadius: 5
-        InitialStance: AttackAnything
-    RenderSprites:
-        Image: ross4
-        PlayerPalette: raplayer
+		InitialStance: AttackAnything
+	RenderSprites:
+		Image: ross4
+		PlayerPalette: raplayer
 	WithInfantryBody:
 		DefaultAttackSequence: shoot
-    Armor:
+	Armor:
 		Type: LightCavalry
-    Selectable:
+	Selectable:
 		Bounds: 26,34,0,-6
-    SelectionDecorations:
+	SelectionDecorations:
 		VisualBounds: 26,34,0,-6
-    Power:
-		Amount: -2       
+	PersonValued:
+		ActorCount: 1
+        ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
+   
 
 ROSS4B:
-    Inherits: ^Cavalry
-    GrantConditionOnDamageState@Slow:
-        Condition: Slowmotion
-        ValidDamageStates: Heavy, Critical 
-    SpeedMultiplier:
-        RequiresCondition: Slowmotion
-        Modifier: 70
+	Inherits: ^Cavalry
+	GrantConditionOnDamageState@Slow:
+		Condition: Slowmotion
+		ValidDamageStates: Heavy, Critical 
+	SpeedMultiplier:
+		RequiresCondition: Slowmotion
+		Modifier: 70
 	Valued:
 		Cost: 300
 	Tooltip:
 		Name: Scout (Flail)
 	Buildable:
-		Description: Fast scout and anti-infantry cavalry.\n  Very strong vs Infantry\n  Weak vs Cavalry\n\n\n\n
-        IconPalette: raicon
+		Description: Fast scout and anti-infantry cavalry.\n  Very strong vs Infantry. Can harm Spectral Units\n  Weak vs Cavalry\n\nTrains: 1 Peasant\n\n
+		IconPalette: raicon
 		BuildPaletteOrder: 5
-        Prerequisites: ~techlevel.medium
 		Queue: MVehicle.GDI
-    RevealsShroud:
+	RevealsShroud:
 		Range: 8c0
 	Mobile:
-        SharesCell: false
+		SharesCell: false
 		TurnSpeed: 12
 		Speed: 156
 	Health:
 		HP: 20000
 	Armament:
 		Weapon: mace
-        LocalOffset: 0,0,0
+		LocalOffset: 0,0,0
 	AttackFrontal:
-    AutoTarget:
+	AutoTarget:
 		ScanRadius: 4
-        InitialStance: AttackAnything
-    RenderSprites:
-        Image: ross4b
-        PlayerPalette: raplayer
+		InitialStance: AttackAnything
+	RenderSprites:
+		Image: ross4b
+		PlayerPalette: raplayer
 	WithInfantryBody:
 		DefaultAttackSequence: shoot
-    Armor:
+	Armor:
 		Type: LightCavalry
-    Selectable:
+	Selectable:
 		Bounds: 26,34,0,-6
-    SelectionDecorations:
+	SelectionDecorations:
 		VisualBounds: 26,34,0,-6
-    Power:
-		Amount: -2      
-        
-        
+	PersonValued:
+		ActorCount: 1
+        ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
+	
+		
 ROSS4C:
-    Inherits: ^Cavalry
-    GrantConditionOnDamageState@Slow:
-        Condition: Slowmotion
-        ValidDamageStates: Heavy, Critical 
-    SpeedMultiplier:
-        RequiresCondition: Slowmotion
-        Modifier: 70
+	Inherits: ^Cavalry
+	GrantConditionOnDamageState@Slow:
+		Condition: Slowmotion
+		ValidDamageStates: Heavy, Critical 
+	SpeedMultiplier:
+		RequiresCondition: Slowmotion
+		Modifier: 70
 	Valued:
 		Cost: 300
 	Tooltip:
 		Name: Hussar
 	Buildable:
-		Description: Fast scout and anti-infantry cavalry.\n  Very strong vs Infantry\n  Weak vs Cavalry\n\n\n\n
-        IconPalette: raicon
+		Description: Fast scout and anti-infantry cavalry.\n  Very strong vs Infantry\n  Weak vs Cavalry\n\nTrains: 1 Peasant\n\n
+		IconPalette: raicon
 		BuildPaletteOrder: 5
-        Prerequisites: ~techlevel.medium
 		Queue: MVehicle.Nod
-    RevealsShroud:
+	RevealsShroud:
 		Range: 8c0
 	Mobile:
-        SharesCell: false
+		SharesCell: false
 		TurnSpeed: 12
 		Speed: 170
 	Health:
 		HP: 12000
 	Armament:
 		Weapon: mace
-        LocalOffset: 0,0,0
+		LocalOffset: 0,0,0
 	AttackFrontal:
-    AutoTarget:
+	AutoTarget:
 		ScanRadius: 4
-        InitialStance: AttackAnything
-    RenderSprites:
-        Image: ross4c
-        PlayerPalette: raplayer
+		InitialStance: AttackAnything
+	RenderSprites:
+		Image: ross4c
+		PlayerPalette: raplayer
 	WithInfantryBody:
 		DefaultAttackSequence: shoot
-    Armor:
+	Armor:
 		Type: LightCavalry
-    Selectable:
+	Selectable:
 		Bounds: 26,34,0,-6
-    SelectionDecorations:
+	SelectionDecorations:
 		VisualBounds: 26,34,0,-6
-    Power:
-		Amount: -2  
-        
-        
+	PersonValued:
+		ActorCount: 1
+        ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
+		
+		
 MWCAMEL:
 	Inherits: ^MWWanderer
-    -Voiced:
-    Mobile:
-        SharesCell: false
+	-Voiced:
+	Mobile:
+		SharesCell: false
 		Speed: 35
-    RenderSprites:
-        Image: mwcamel
-        PlayerPalette: 
-        Palette: mwcivilian
-    WithInfantryBody:
-        MinIdleDelay: 100
-        MaxIdleDelay: 350
-        IdleSequences: idle1, idle2
-    Tooltip:
+	RenderSprites:
+		Image: mwcamel
+		PlayerPalette: 
+		Palette: mwcivilian
+	WithInfantryBody:
+		MinIdleDelay: 100
+		MaxIdleDelay: 350
+		IdleSequences: idle1, idle2
+	Tooltip:
 		Name: Camel
 		GenericVisibility: None
-    Wanders:
-        WanderMoveRadius: 1
-        ReduceMoveRadiusDelay: 5
+	Wanders:
+		WanderMoveRadius: 1
+		ReduceMoveRadiusDelay: 5
 		MinMoveDelay: 250
 		MaxMoveDelay: 650
-        RequiresCondition: Trader
-    AttackWander: 
-        WanderMoveRadius: 1
-        ReduceMoveRadiusDelay: 5
+		RequiresCondition: Trader
+	AttackWander: 
+		WanderMoveRadius: 1
+		ReduceMoveRadiusDelay: 5
 		MinMoveDelay: 0
 		MaxMoveDelay: 25
-        RequiresCondition: !Trader
-    WithInfantryBody:
+		RequiresCondition: !Trader
+	WithInfantryBody:
 		StandSequences: stand
-    AutoTarget:
+	AutoTarget:
 		ScanRadius: 20
-        InitialStance: AttackAnything
-        RequiresCondition: !Trader
-    -Crushable:
-    AttackFrontal:
-        RequiresCondition: !Trader
-    AttackMove:
-        RequiresCondition: !Trader
-    ExternalCondition@Wander:
-        Condition: Trader
-    Armament:
+		InitialStance: AttackAnything
+		RequiresCondition: !Trader
+	-Crushable:
+	AttackFrontal:
+		RequiresCondition: !Trader
+	AttackMove:
+		RequiresCondition: !Trader
+	ExternalCondition@Wander:
+		Condition: Trader
+	Armament:
 		Weapon: WanderAttackCamelTrader
 		TargetStances: Ally, Neutral
-        RequiresCondition: !Trader
-    Health:
+		RequiresCondition: !Trader
+	Health:
 		HP: 10000
-    SelfHealing@SpawnCamele:
-        PercentageStep: -50
-        Step: -0
-        HealIfBelow: 110
-        Delay: 4250
-        DamageTypes: SpawnCamele
-    SpawnActorOnDeath@1:
-        DeathType: SpawnCamele
-        Actor: GROWNMWCAMEL
-    WithDeathAnimation:
-        DeathTypes:
+	SelfHealing@SpawnCamele:
+		PercentageStep: -50
+		Step: -0
+		HealIfBelow: 110
+		Delay: 4250
+		DamageTypes: SpawnCamele
+	SpawnActorOnDeath@1:
+		DeathType: SpawnCamele
+		Actor: GROWNMWCAMEL
+	WithDeathAnimation:
+		DeathTypes:
 			DefaultDeath: 1
 			RippedApartDeath: 1
 			PoisonDeath: 1
 			BallistaDeath: 1
-            BurnToDeath: 1
+			BurnToDeath: 1
 		CrushedSequence: die1
 
 GROWNMWCAMEL:
 	Inherits: MWCAMEL
-    RenderSprites:
-        Image: mwcamel
-        PlayerPalette: 
-        Palette: mwcivilian
-    Targetable@Camel:
+	RenderSprites:
+		Image: mwcamel
+		PlayerPalette: 
+		Palette: mwcivilian
+	Targetable@Camel:
 		TargetTypes: GrownCamel
-    -SelfHealing@SpawnCamele:
-    -SpawnActorOnDeath@1:
-    Explodes@Loot:
+	-SelfHealing@SpawnCamele:
+	-SpawnActorOnDeath@1:
+	Explodes@Loot:
 		Weapon: CamelDeadLoot
-        EmptyWeapon: CamelDeadLoot
-        
-        
+		EmptyWeapon: CamelDeadLoot
+		
+		

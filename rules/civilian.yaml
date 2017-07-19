@@ -454,69 +454,69 @@ BRIDGEHUT:
 
 C1:
 	Inherits: ^MWCiv
-    RenderSprites:
-        Image: mwciv1
-        PlayerPalette: raplayer
+	RenderSprites:
+		Image: mwciv1
+		PlayerPalette: raplayer
 
 C2:
 	Inherits: ^MWCiv
-    RenderSprites:
-        Image: mwciv2
-        PlayerPalette: raplayer
+	RenderSprites:
+		Image: mwciv2
+		PlayerPalette: raplayer
 
 C3:
 	Inherits: ^MWCiv
 	Voiced:
 		VoiceSet: CivilianFemaleVoice
-    RenderSprites:
-        Image: mwciv3
-        PlayerPalette: raplayer
+	RenderSprites:
+		Image: mwciv3
+		PlayerPalette: raplayer
 
 C4:
 	Inherits: ^MWCiv
 	Voiced:
 		VoiceSet: CivilianFemaleVoice
-    RenderSprites:
-        Image: mwciv4
-        PlayerPalette: raplayer
+	RenderSprites:
+		Image: mwciv4
+		PlayerPalette: raplayer
 
 C5:
 	Inherits: ^MWCiv
 	Voiced:
 		VoiceSet: CivilianFemaleVoice
-    RenderSprites:
-        Image: mwciv5
-        PlayerPalette: raplayer
+	RenderSprites:
+		Image: mwciv5
+		PlayerPalette: raplayer
 
 C6:
 	Inherits: ^MWCiv
-    RenderSprites:
-        Image: mwciv6
-        PlayerPalette: raplayer
+	RenderSprites:
+		Image: mwciv6
+		PlayerPalette: raplayer
 
 C7:
 	Inherits: ^MWCiv
-    RenderSprites:
-        Image: mwciv1
-        PlayerPalette: raplayer
+	RenderSprites:
+		Image: mwciv1
+		PlayerPalette: raplayer
 
 C8:
 	Inherits: ^MWCiv
-    RenderSprites:
-        Image: mwciv2
-        PlayerPalette: raplayer
+	RenderSprites:
+		Image: mwciv2
+		PlayerPalette: raplayer
 
 C9:
 	Inherits: ^MWCiv
-    RenderSprites:
-        Image: mwciv3
-        PlayerPalette: raplayer
+	RenderSprites:
+		Image: mwciv3
+		PlayerPalette: raplayer
 
 C10:
 	Inherits: ^MWCiv
-    RenderSprites:
-        Image: mwciv4
-        PlayerPalette: raplayer
+	RenderSprites:
+		Image: mwciv4
+		PlayerPalette: raplayer
 
 DELPHI:
 	Inherits: ^MWCiv
@@ -536,43 +536,253 @@ MOEBIUS:
 		VoiceSet: MoebiusVoice
 	Tooltip:
 		Name: Dr. Moebius
-        
+		
 MWCIV1:
 	Inherits: ^MWCiv
-    RenderSprites:
-        Image: mwciv1
-        PlayerPalette: raplayer
-        
+	RenderSprites:
+		Image: mwciv1
+		PlayerPalette: raplayer
+		
 MWCIV2:
 	Inherits: ^MWCiv
-    RenderSprites:
-        Image: mwciv2
-        PlayerPalette: raplayer
-        
+	RenderSprites:
+		Image: mwciv2
+		PlayerPalette: raplayer
+		
 MWCIV3:
 	Inherits: ^MWCiv
-    RenderSprites:
-        Image: mwciv3
-        PlayerPalette: raplayer
-        
+	RenderSprites:
+		Image: mwciv3
+		PlayerPalette: raplayer
+		
 MWCIV4:
 	Inherits: ^MWCiv
-    RenderSprites:
-        Image: mwciv4
-        PlayerPalette: raplayer
+	RenderSprites:
+		Image: mwciv4
+		PlayerPalette: raplayer
 	Voiced:
 		VoiceSet: CivilianFemaleVoice
-        
+		
 MWCIV5:
 	Inherits: ^MWCiv
-    RenderSprites:
-        Image: mwciv5
-        PlayerPalette: raplayer
+	RenderSprites:
+		Image: mwciv5
+		PlayerPalette: raplayer
 	Voiced:
 		VoiceSet: CivilianFemaleVoice
-        
+		
 MWCIV6:
 	Inherits: ^MWCiv
-    RenderSprites:
-        Image: mwciv6
-        PlayerPalette: raplayer
+	RenderSprites:
+		Image: mwciv6
+		PlayerPalette: raplayer
+
+DEER01:
+	Inherits: ^MWWildlife
+	RenderSprites:
+		PlayerPalette: 
+		Palette: mwcivilian
+	Tooltip:
+		Name: Wildlife
+	WithInfantryBody:
+		IdleSequences: idle1
+	HuntableDeer@Lootable:
+		Actor: DEER01.Husk
+		OwnerType: Killer
+		SkipMakeAnimations: False
+        HuntTypes: Wildlife
+		
+DEER01.Husk:
+	Inherits: ^DeadWildlife
+	Health:
+		HP: 1500
+	Tooltip:
+		Name: Wildlife (Dead)
+	RenderSprites:
+		PlayerPalette: mwcivilianplayer
+		Image: deer01
+	WithFacingSpriteBody:
+		StartSequence: die1
+		Sequence: body
+    LootableBody: 
+        LootTypes: DeadWildlife
+
+DEER02:
+	Inherits: ^MWWildlife
+	RenderSprites:
+		PlayerPalette: 
+		Palette: mwcivilian
+	Tooltip:
+		Name: Wildlife
+	WithInfantryBody:
+		IdleSequences: idle1, idle2
+	HuntableDeer@Lootable:
+		Actor: DEER02.Husk
+		OwnerType: Killer
+		SkipMakeAnimations: False
+        HuntTypes: Wildlife
+		
+DEER02.Husk:
+	Inherits: ^DeadWildlife
+	Health:
+		HP: 500
+	Tooltip:
+		Name: Wildlife (Dead)
+	RenderSprites:
+		PlayerPalette: mwcivilianplayer
+		Image: deer02
+	WithFacingSpriteBody:
+		StartSequence: die1
+		Sequence: body
+    LootableBody: 
+        LootTypes: DeadWildlife
+
+DEER03:
+	Inherits: ^MWWildlife
+	RenderSprites:
+		PlayerPalette: 
+		Palette: mwcivilian
+	Tooltip:
+		Name: Wildlife
+	WithInfantryBody:
+		IdleSequences: idle1
+	HuntableDeer@Lootable:
+		Actor: DEER03.Husk
+		OwnerType: Killer
+		SkipMakeAnimations: False
+        HuntTypes: Wildlife
+		
+DEER03.Husk:
+	Inherits: ^DeadWildlife
+	Tooltip:
+		Name: Wildlife (Dead)
+	Health:
+		HP: 1200
+	RenderSprites:
+		PlayerPalette: mwcivilianplayer
+		Image: deer03
+	WithFacingSpriteBody:
+		StartSequence: die1
+		Sequence: body
+    LootableBody: 
+        LootTypes: DeadWildlife
+
+DEER03A:
+	Inherits: ^MWWildlife
+	RenderSprites:
+		PlayerPalette: 
+		Palette: mwcivilian
+	Tooltip:
+		Name: Wildlife
+	WithInfantryBody:
+		IdleSequences: idle1
+	HuntableDeer@Lootable:
+		Actor: DEER03A.Husk
+		OwnerType: Killer
+		SkipMakeAnimations: False
+        HuntTypes: Wildlife
+		
+DEER03A.Husk:
+	Inherits: ^DeadWildlife
+	Health:
+		HP: 700
+	Tooltip:
+		Name: Wildlife (Dead)
+	RenderSprites:
+		PlayerPalette: mwcivilianplayer
+		Image: deer03a
+	WithFacingSpriteBody:
+		StartSequence: die1
+		Sequence: body
+    LootableBody: 
+        LootTypes: DeadWildlife
+
+HUNTER:
+	Inherits: ^Knight
+	RevealsShroud:
+		Range: 6c0
+	Valued:
+		Cost: 400
+	Tooltip:
+		Name: Hunter
+	Mobile:
+		Speed: 56
+	Health:
+		HP: 13000
+	RenderSprites:
+		PlayerPalette: mwcivilianplayer
+	WithInfantryBody:
+		DefaultAttackSequence: shoot
+		AttackSequences:
+			secondary: shoot
+			primary: shoot2
+			tairt: shoot2
+	Armor:
+		Type: Leather
+	Power:
+		Amount: 0
+	-Selectable:
+	Targetable:
+		TargetTypes: Ground, Infantry, Hunterer
+	RejectsOrders:
+	WithDeathAnimation:
+		DeathSequencePalette: mwcivilianplayer
+	AttackFrontal:
+		Armaments: primary, secondary, tairt
+		IgnoresVisibility: true	
+	AttackMove:
+	ExternalCondition@DeerHunter:
+		Condition: DeerHunter
+	ExternalCondition@LootingDeer:
+		Condition: LootingDeer
+	ExternalCondition@Unload:
+		Condition: UnloadDeer
+	Armament@Huntdeer:
+		Weapon: BowNArrowHunter
+		Name: primary
+		IgnoresVisibility: true
+		RequiresCondition: (FullFood + LootingDeer) == 0
+	Armament@HuntdeerDummy:
+		Weapon: BowNArrowHunterDUMMY
+		Name: secondary
+		IgnoresVisibility: true
+		RequiresCondition: (FullFood + LootingDeer) == 0
+	Armament@GatherDeer:
+		Weapon: HunterGather
+		Name: primary
+		TargetStances: Ally, Neutral
+		IgnoresVisibility: true
+		RequiresCondition: !FullFood
+	Armament@Unload:
+		Weapon: HunterUnload
+		Name: tairt
+		TargetStances: Ally, Neutral
+		IgnoresVisibility: true
+		RequiresCondition: !NoFood || FullFood
+		AmmoPoolName: Food
+	CashTrickler@LotDeer:
+		Interval: 25
+		Amount: 100
+		RequiresCondition: UnloadDeer
+	AmmoPool:
+		Name: Food
+		Ammo: 10
+		InitialAmmo: 0
+		PipCount: 2
+	AmmoPoolConditions:
+		ConditionFull: FullFood
+		ConditionEmpty: NoFood
+		AmmoPoolName: Food
+	ReloadAmmoWhenEnabled:
+		Name: Food
+		ReloadDelay: 25
+		ResetDelayOnEnable: false
+		RequiresCondition: DeerHunter
+	PersonValued:
+		ActorCount: 1
+		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4, noble1, noble2, noble3, noble4
+    DeerHunter: 
+        HuntTypes: Wildlife
+        LootTypes: DeadWildlife
+        SearchDistance: 15c0
+		

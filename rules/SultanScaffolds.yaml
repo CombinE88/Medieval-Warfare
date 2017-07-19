@@ -1,0 +1,1057 @@
+SULNUKE.SCAFF:
+	Inherits: ^2x2SITE
+	Armor:
+		Type: Concrete
+	RenderSprites:
+		PlayerPalette: sultanplayer
+		Image: sulnuke
+	CustomSellValue:
+		Value: 200
+	Valued:
+		Cost: 600
+	Tooltip:
+		Name: Construction Site (Hut)
+	Buildable:
+		IconPalette: raicon
+		BuildPaletteOrder: 10
+		Prerequisites: factnew
+		Description: Generates livingspace. Livingspace increases over time by generating peasants.\nCan hold up to 6 peasants, spawntime depends on number of shacks and large huts.  
+		Queue: MBuilding.SUL
+		BuildDuration: 25
+	Health:
+		HP: 25000
+		Shape: Rectangle
+			TopLeft: -924,-825
+			BottomRight: 924, 924
+	RevealsShroud:
+		Range: 4c0
+	Bib:
+	Selectable:
+		Bounds: 48,40,0,9
+	SelectionDecorations:
+		VisualBounds: 48,53,0,-4
+	WithSpriteBody:
+		RequiresCondition: inactive
+	SpawnActorOnDeath@Finsihed:
+		Probability: 100
+		Actor: SULNUKE
+		DeathType: FinishedDeath
+	ExternalCondition@buildfurther: 
+		Condition: Construct
+		TotalCap: 24
+	ExternalCondition@Deliverfurther:
+		Condition: DeliveredResources
+		TotalCap: 24
+	Targetable@buildfurther: 
+		TargetTypes: Buildable
+		RequiresCondition: DeliveredResources > Construct && (24 - Construct) > 0
+	Targetable@deliverresources: 
+		TargetTypes: Deliverable
+		RequiresCondition: 24 > DeliveredResources
+	SelfHealing@Finished:
+		PercentageStep: -200
+		HealIfBelow: 110
+		Delay: 1
+		RequiresCondition: (24 - Construct) <= 0
+		DamageTypes: FinishedDeath
+	WithIdleOverlay@base1:
+		Sequence: make1
+		RequiresCondition: Construct > 3 && Construct < 6
+	WithIdleOverlay@base2:
+		Sequence: make2
+		RequiresCondition: Construct >= 6 && Construct < 9
+	WithIdleOverlay@base3:
+		Sequence: make3
+		RequiresCondition: Construct >= 9 && Construct < 12
+	WithIdleOverlay@base4:
+		Sequence: make4
+		RequiresCondition: Construct >= 12 && Construct < 15
+	WithIdleOverlay@base5:
+		Sequence: make5
+		RequiresCondition: Construct >= 15 && Construct < 18
+	WithIdleOverlay@base6:
+		Sequence: make6
+		RequiresCondition: Construct >= 18
+
+SULLODGE.SCAFF:
+	Inherits: ^2x2SITE
+	Building:
+		Dimensions: 2, 1
+		Footprint: xx
+	Armor:
+		Type: Concrete
+	RenderSprites:
+		PlayerPalette: sultanplayer
+		Image: sullodge
+	CustomSellValue:
+		Value: 150
+	Valued:
+		Cost: 300
+	Tooltip:
+		Name: Construction Site (Hunter Lodge)
+	Buildable:
+		IconPalette: raicon
+		BuildPaletteOrder: 10
+		Description: A hunter can go out and hunt down animals from here.\n\n\n
+		Queue: MBuilding2.SUL
+		BuildDuration: 25
+	Health:
+		HP: 10000
+		Shape: Rectangle
+			TopLeft: -924,-825
+			BottomRight: 924, 924
+	RevealsShroud:
+		Range: 4c0
+	Bib:
+	Selectable:
+		Bounds: 48,26,0,9
+	SelectionDecorations:
+		VisualBounds: 48,27,0,-4
+	WithSpriteBody:
+		RequiresCondition: inactive
+	SpawnActorOnDeath@Finsihed:
+		Probability: 100
+		Actor: SULLODGE
+		DeathType: FinishedDeath
+	ExternalCondition@buildfurther: 
+		Condition: Construct
+		TotalCap: 20
+	ExternalCondition@Deliverfurther:
+		Condition: DeliveredResources
+		TotalCap: 20
+	Targetable@buildfurther: 
+		TargetTypes: Buildable
+		RequiresCondition: DeliveredResources > Construct && (20 - Construct) > 0
+	Targetable@deliverresources: 
+		TargetTypes: Deliverable
+		RequiresCondition: 20 > DeliveredResources
+	SelfHealing@Finished:
+		PercentageStep: -200
+		HealIfBelow: 110
+		Delay: 1
+		RequiresCondition: (20 - Construct) <= 0
+		DamageTypes: FinishedDeath
+	WithIdleOverlay@base1:
+		Sequence: make1
+		RequiresCondition: Construct > 3 && Construct < 6
+	WithIdleOverlay@base2:
+		Sequence: make2
+		RequiresCondition: Construct >= 6 && Construct < 10
+	WithIdleOverlay@base3:
+		Sequence: make3
+		RequiresCondition: Construct >= 10 && Construct < 16
+	WithIdleOverlay@base4:
+		Sequence: make4
+		RequiresCondition: Construct > 16	 
+    WithRangeCircle:
+        Type: HunterLodge
+        UsePlayerColor: true
+        Range: 15c0
+		
+SULMILL.SCAFF:
+	Inherits: ^2x3SITE
+	Building:
+		Dimensions: 2,3
+		Footprint: __ xx xx
+	Armor:
+		Type: Concrete
+	RenderSprites:
+		PlayerPalette: sultanplayer
+		Image: sulmill
+	CustomSellValue:
+		Value: 450
+	Valued:
+		Cost: 1400
+	Tooltip:
+		Name: Construction Site (Windmill)
+	Refinery:
+		DockAngle: 72
+		DockOffset: 1,3
+		TickRate: 5
+	Refinery:
+		DockAngle: 72
+		DockOffset: 1,3
+		TickRate: 5
+	Buildable:
+		IconPalette: raicon
+		BuildPaletteOrder: 20
+		Prerequisites: anypower
+		Description: Provides basic resource gathering for Crops and Grain.\n Comes with 3 farmers.\n Can only operate up to 6 farmers at once.\n\n\n\n
+		Queue: MBuilding2.SUL
+		BuildDuration: 25
+	Health:
+		HP: 40000
+		Shape: Rectangle
+			TopLeft: -924,-825
+			BottomRight: 924, 924
+	RevealsShroud:
+		Range: 4c0
+	Bib:
+	Selectable:
+		Bounds: 48,70,0,5
+	SelectionDecorations:
+		VisualBounds: 48,70,0,5
+	WithSpriteBody:
+		RequiresCondition: inactive
+	SpawnActorOnDeath@Finsihed:
+		Probability: 100
+		Actor: SULMILL
+		DeathType: FinishedDeath
+	ExternalCondition@buildfurther: 
+		Condition: Construct
+		TotalCap: 40
+	ExternalCondition@Deliverfurther:
+		Condition: DeliveredResources
+		TotalCap: 40
+	Targetable@buildfurther: 
+		TargetTypes: Buildable
+		RequiresCondition: DeliveredResources > Construct && (40 - Construct) > 0
+	Targetable@deliverresources: 
+		TargetTypes: Deliverable
+		RequiresCondition: 40 > DeliveredResources
+	SelfHealing@Finished:
+		PercentageStep: -200
+		HealIfBelow: 110
+		Delay: 1
+		RequiresCondition: (40 - Construct) <= 0
+		DamageTypes: FinishedDeath
+	WithIdleOverlay@base1:
+		Sequence: make1
+		RequiresCondition: Construct > 10 && Construct < 10
+	WithIdleOverlay@base2:
+		Sequence: make2
+		RequiresCondition: Construct >= 10 && Construct < 15
+	WithIdleOverlay@base3:
+		Sequence: make3
+		RequiresCondition: Construct >= 15 && Construct < 20
+	WithIdleOverlay@base4:
+		Sequence: make4
+		RequiresCondition: Construct >= 20 && Construct < 35
+	WithIdleOverlay@base5:
+		Sequence: make5
+		RequiresCondition: Construct >= 35
+
+
+SULNUK2.SCAFF:
+	Inherits: ^3x2SITE
+	Armor:
+		Type: Concrete
+	RenderSprites:
+		PlayerPalette: sultanplayer
+		Image: sulnuk2
+	CustomSellValue:
+		Value: 300
+	Valued:
+		Cost: 1000
+	Tooltip:
+		Name: Construction Site (Large Hut)
+	Buildable:
+		IconPalette: raicon
+		BuildPaletteOrder: 60
+		Prerequisites: anyhq
+		Queue: MBuilding.SUL
+		Description: Provides more livingspace. Livingspace increases over time by generating peasants.\nCan hold up to 11 peasants, spawntime depends on number of shacks and large huts. \ncheaper than the standard Shack.\n\n\n\n
+		BuildDuration: 25
+	Health:
+		HP: 50000
+		Shape: Rectangle
+			TopLeft: -1424,-924
+			BottomRight: 1424, 924
+	RevealsShroud:
+		Range: 4c0
+	Bib:
+	Selectable:
+		Bounds:72,48,0,9
+	SelectionDecorations:
+		VisualBounds: 72,53,0,-4
+	WithSpriteBody:
+		RequiresCondition: inactive
+	SpawnActorOnDeath@Finsihed:
+		Probability: 100
+		Actor: SULNUK2
+		DeathType: FinishedDeath
+	ExternalCondition@buildfurther: 
+		Condition: Construct
+		TotalCap: 40
+	ExternalCondition@Deliverfurther:
+		Condition: DeliveredResources
+		TotalCap: 40
+	Targetable@buildfurther: 
+		TargetTypes: Buildable
+		RequiresCondition: DeliveredResources > Construct && (40 - Construct) > 0
+	Targetable@deliverresources: 
+		TargetTypes: Deliverable
+		RequiresCondition: 40 > DeliveredResources
+	SelfHealing@Finished:
+		PercentageStep: -200
+		HealIfBelow: 110
+		Delay: 1
+		RequiresCondition: (40 - Construct) <= 0
+		DamageTypes: FinishedDeath
+	WithIdleOverlay@base1:
+		Sequence: make1
+		RequiresCondition: Construct > 5 && Construct < 15
+	WithIdleOverlay@base2:
+		Sequence: make2
+		RequiresCondition: Construct >= 15 && Construct < 25
+	WithIdleOverlay@base3:
+		Sequence: make3
+		RequiresCondition: Construct >= 25 && Construct < 35
+	WithIdleOverlay@base4:
+		Sequence: make4
+		RequiresCondition: Construct >= 35
+
+SULBARR.SCAFF:
+	Inherits: ^3x2SITE
+	Armor:
+		Type: Concrete
+	RenderSprites:
+		PlayerPalette: sultanplayer
+		Image: sulbarr
+	CustomSellValue:
+		Value: 300
+	Valued:
+		Cost: 1000
+	Tooltip:
+		Name: Construction Site (Barracks)
+	Buildable:
+		IconPalette: raicon
+		BuildPaletteOrder: 30
+		Prerequisites: anypower
+		Description: Trains Infantry only\n\n\n\n
+		Queue: MBuilding3.SUL
+		BuildDuration: 25
+	Health:
+		HP: 32500
+		Shape: Rectangle
+			TopLeft: -1424,-924
+			BottomRight: 1424, 924
+	RevealsShroud:
+		Range: 4c0
+	Bib:
+	Selectable:
+		Bounds:72,48,0,9
+	SelectionDecorations:
+		VisualBounds: 72,53,0,-4
+	WithSpriteBody:
+		RequiresCondition: inactive
+	SpawnActorOnDeath@Finsihed:
+		Probability: 100
+		Actor: SULBARR
+		DeathType: FinishedDeath
+	ExternalCondition@buildfurther: 
+		Condition: Construct
+		TotalCap: 40
+	ExternalCondition@Deliverfurther:
+		Condition: DeliveredResources
+		TotalCap: 40
+	Targetable@buildfurther: 
+		TargetTypes: Buildable
+		RequiresCondition: DeliveredResources > Construct && (40 - Construct) > 0
+	Targetable@deliverresources: 
+		TargetTypes: Deliverable
+		RequiresCondition: 40 > DeliveredResources
+	SelfHealing@Finished:
+		PercentageStep: -200
+		HealIfBelow: 110
+		Delay: 1
+		RequiresCondition: (40 - Construct) <= 0
+		DamageTypes: FinishedDeath
+	WithIdleOverlay@base1:
+		Sequence: make1
+		RequiresCondition: Construct > 6 && Construct < 10
+	WithIdleOverlay@base2:
+		Sequence: make2
+		RequiresCondition: Construct >= 10 && Construct < 20
+	WithIdleOverlay@base3:
+		Sequence: make3
+		RequiresCondition: Construct >= 20 && Construct < 30
+	WithIdleOverlay@base4:
+		Sequence: make4
+		RequiresCondition: Construct >= 30 && Construct < 35
+	WithIdleOverlay@base5:
+		Sequence: make5
+		RequiresCondition: Construct >= 35
+		
+SULMYSTIC.SCAFF:
+	Inherits: ^3x3SITE
+	Armor:
+		Type: Concrete
+	Building:
+		Footprint: xxx xxx
+		Dimensions: 3,2
+	RenderSprites:
+		PlayerPalette: sultanplayer
+		Image: sulmystic
+	CustomSellValue:
+		Value: 500
+	Valued:
+		Cost: 1500
+	Tooltip:
+		Name: Construction Site (School of Mystic Teachings)
+	Buildable:
+		IconPalette: raicon
+		BuildPaletteOrder: 40
+		Prerequisites: proc
+		Description: Trains Magical and Mystical Units\n\n\n\n
+		Queue: MBuilding3.SUL
+		BuildDuration: 25
+	Health:
+		HP: 42500
+		Shape: Rectangle
+			TopLeft: -1424,-924
+			BottomRight: 1424, 924
+	RevealsShroud:
+		Range: 4c0
+	Bib:
+	Selectable:
+		Bounds:72,48,0,9
+	SelectionDecorations:
+		VisualBounds: 72,53,0,-4
+	WithSpriteBody:
+		RequiresCondition: inactive
+	SpawnActorOnDeath@Finsihed:
+		Probability: 100
+		Actor: SULMYSTIC
+		DeathType: FinishedDeath
+	ExternalCondition@buildfurther: 
+		Condition: Construct
+		TotalCap: 60
+	ExternalCondition@Deliverfurther:
+		Condition: DeliveredResources
+		TotalCap: 60
+	Targetable@buildfurther: 
+		TargetTypes: Buildable
+		RequiresCondition: DeliveredResources > Construct && (60 - Construct) > 0
+	Targetable@deliverresources: 
+		TargetTypes: Deliverable
+		RequiresCondition: 60 > DeliveredResources
+	SelfHealing@Finished:
+		PercentageStep: -200
+		HealIfBelow: 110
+		Delay: 1
+		RequiresCondition: (60 - Construct) <= 0
+		DamageTypes: FinishedDeath
+	WithIdleOverlay@base1:
+		Sequence: make1
+		RequiresCondition: Construct > 5 && Construct < 15
+	WithIdleOverlay@base2:
+		Sequence: make2
+		RequiresCondition: Construct >= 15 && Construct < 25
+	WithIdleOverlay@base3:
+		Sequence: make3
+		RequiresCondition: Construct >= 25 && Construct < 35
+	WithIdleOverlay@base4:
+		Sequence: make4
+		RequiresCondition: Construct >= 35 && Construct < 45
+	WithIdleOverlay@base5:
+		Sequence: make5
+		RequiresCondition: Construct >= 45 && Construct < 50
+	WithIdleOverlay@base6:
+		Sequence: make6
+		RequiresCondition: Construct >= 50
+		
+SULCASTLE.SCAFF:
+	Inherits: ^3x3SITE
+	Building:
+		Footprint: xxx xxx xxx
+		Dimensions: 3,3
+	Armor:
+		Type: Concrete
+	RenderSprites:
+		PlayerPalette: sultanplayer
+		Image: sulcastle
+	CustomSellValue:
+		Value: 400
+	Valued:
+		Cost: 1200
+	Tooltip:
+		Name: Construction Site (Palace)
+	Buildable:
+		IconPalette: raicon
+		BuildPaletteOrder: 50
+		Prerequisites: proc
+		Description: Can unlock Superweapons.\n Can unlock advanced tech.\nCan hold up to 4 nobles.\n\n\n\n
+		Queue: MBuilding2.SUL
+		BuildDuration: 25
+	Health:
+		HP: 42500
+		Shape: Rectangle
+			TopLeft: -1424,-1020
+			BottomRight: 1424, 1524
+	RevealsShroud:
+		Range: 4c0
+	Bib:
+	Selectable:
+		Bounds: 72,48,0,12
+	SelectionDecorations:
+		VisualBounds: 72,68,0,0
+	WithSpriteBody:
+		RequiresCondition: inactive
+	SpawnActorOnDeath@Finsihed:
+		Probability: 100
+		Actor: SULCASTLE
+		DeathType: FinishedDeath
+	ExternalCondition@buildfurther: 
+		Condition: Construct
+		TotalCap: 60
+	ExternalCondition@Deliverfurther:
+		Condition: DeliveredResources
+		TotalCap: 60
+	Targetable@buildfurther: 
+		TargetTypes: Buildable
+		RequiresCondition: DeliveredResources > Construct && (60 - Construct) > 0
+	Targetable@deliverresources: 
+		TargetTypes: Deliverable
+		RequiresCondition: 60 > DeliveredResources
+	SelfHealing@Finished:
+		PercentageStep: -200
+		HealIfBelow: 110
+		Delay: 1
+		RequiresCondition: (60 - Construct) <= 0
+		DamageTypes: FinishedDeath
+	WithIdleOverlay@base1:
+		Sequence: make1
+		RequiresCondition: Construct > 5 && Construct < 15
+	WithIdleOverlay@base2:
+		Sequence: make2
+		RequiresCondition: Construct >= 15 && Construct < 30
+	WithIdleOverlay@base3:
+		Sequence: make3
+		RequiresCondition: Construct >= 30 && Construct < 45
+	WithIdleOverlay@base4:
+		Sequence: make4
+		RequiresCondition: Construct >= 45 && Construct < 50
+	WithIdleOverlay@base5:
+		Sequence: make5
+		RequiresCondition: Construct >= 50 && Construct < 55
+	WithIdleOverlay@base6:
+		Sequence: make6
+		RequiresCondition: Construct >= 55
+
+SULFIX.SCAFF:
+	Inherits: ^3x2SITE
+	Armor:
+		Type: Concrete
+	RenderSprites:
+		PlayerPalette: sultanplayer
+		Image: sulfix
+	CustomSellValue:
+		Value: 400
+	Valued:
+		Cost: 1200
+	Tooltip:
+		Name: Construction Site (Siege Workshop)
+	Buildable:
+		IconPalette: raicon
+		BuildPaletteOrder: 60
+		Prerequisites: proc
+		Description: Provides Siege weapons construction.\n\n\n\n
+		Queue: MBuilding3.SUL
+		BuildDuration: 25
+	Health:
+		HP: 35000
+		Shape: Rectangle
+			TopLeft: -1424,-720
+			BottomRight: 1424, 824
+	RevealsShroud:
+		Range: 4c0
+	Bib:
+	Selectable:
+		Bounds: 64,64,0,-10
+	SelectionDecorations:
+		VisualBounds: 72,48
+	WithSpriteBody:
+		RequiresCondition: inactive
+	SpawnActorOnDeath@Finsihed:
+		Probability: 100
+		Actor: SULFIX
+		DeathType: FinishedDeath
+	ExternalCondition@buildfurther: 
+		Condition: Construct
+		TotalCap: 55
+	ExternalCondition@Deliverfurther:
+		Condition: DeliveredResources
+		TotalCap: 55
+	Targetable@buildfurther: 
+		TargetTypes: Buildable
+		RequiresCondition: DeliveredResources > Construct && (55 - Construct) > 0
+	Targetable@deliverresources: 
+		TargetTypes: Deliverable
+		RequiresCondition: 55 > DeliveredResources
+	SelfHealing@Finished:
+		PercentageStep: -200
+		HealIfBelow: 110
+		Delay: 1
+		RequiresCondition: (55 - Construct) <= 0
+		DamageTypes: FinishedDeath
+	WithIdleOverlay@base1:
+		Sequence: make1
+		RequiresCondition: Construct > 10 && Construct < 25
+	WithIdleOverlay@base2:
+		Sequence: make2
+		RequiresCondition: Construct >= 25 && Construct < 35
+	WithIdleOverlay@base3:
+		Sequence: make3
+		RequiresCondition: Construct >= 35 && Construct < 45
+	WithIdleOverlay@base4:
+		Sequence: make4
+		RequiresCondition: Construct >= 45
+
+
+SULGTW.ENABLER:
+	Inherits: ^1x1SITE
+	Armor:
+		Type: HeavyBuilding
+	RenderSprites:
+		PlayerPalette: sultanplayer
+		Image: sulgtw
+	CustomSellValue:
+		Value: 175
+	Valued:
+		Cost: 550
+	Tooltip:
+		Name: Construction Site (Mosaic Guard Tower)
+	Buildable:
+		Description: A Super guard tower, stationed with 2 archers.\n  Strong vs Infantry, Light Cavalry\n  Weak vs Siege weapons and Heavy Cavalry \n  Cannot target Aircraft (because of I say so)\n\n\n
+		BuildPaletteOrder: 20
+		Queue: MDefenses.SUL
+		BuildDurationModifier: 40
+		IconPalette: raicon
+		BuildDuration: 25
+	Health:
+		HP: 30000
+		Shape: Rectangle
+			TopLeft: -456, -456
+			BottomRight: 456, 456
+	RevealsShroud:
+		Range: 4c0
+	Bib:
+		HasMinibib: Yes
+	Selectable:
+		Bounds: 24,48,0,-10
+	SelectionDecorations
+		VisualBounds: 22,48,0,-10
+	WithSpriteBody:
+		RequiresCondition: inactive
+	SpawnActorOnDeath@Finsihed:
+		Probability: 100
+		Actor: SULGTW.SCAFF
+		DeathType: FinishedDeath
+	ExternalCondition@buildfurther: 
+		Condition: Construct
+		TotalCap: 18
+	ExternalCondition@Deliverfurther:
+		Condition: DeliveredResources
+		TotalCap: 18
+	Targetable@buildfurther: 
+		TargetTypes: Buildable
+		RequiresCondition: DeliveredResources > Construct && (18 - Construct) > 0
+	Targetable@deliverresources: 
+		TargetTypes: Deliverable
+		RequiresCondition: 18 > DeliveredResources
+	SelfHealing@Finished:
+		PercentageStep: -200
+		HealIfBelow: 110
+		Delay: 1
+		RequiresCondition: DeliveredResources >= 0
+		DamageTypes: FinishedDeath
+	WithIdleOverlay@base1:
+		Sequence: make1
+		RequiresCondition: Construct > 2 && Construct < 5
+	WithIdleOverlay@base2:
+		Sequence: make2
+		RequiresCondition: Construct >= 5 && Construct < 7
+	WithIdleOverlay@base3:
+		Sequence: make3
+		RequiresCondition: Construct >= 7 && Construct < 11
+	WithIdleOverlay@base4:
+		Sequence: make4
+		RequiresCondition: Construct >= 11 && Construct < 13
+	WithIdleOverlay@base5:
+		Sequence: make5
+		RequiresCondition: Construct >= 13 && Construct < 15
+	WithIdleOverlay@base6:
+		Sequence: make6
+		RequiresCondition: Construct >= 15
+	WithRangeCircle:
+		Range: 7c0		
+		
+SULGTW.SCAFF:
+	Inherits: ^1x1SITE
+	-Building:
+	-FrozenUnderFog:
+	HiddenUnderFog:
+	Immobile:
+		OccupiesSpace: true
+	Armor:
+		Type: HeavyBuilding
+	RenderSprites:
+		PlayerPalette: sultanplayer
+		Image: sulgtw
+	CustomSellValue:
+		Value: 175
+	Valued:
+		Cost: 550
+	Tooltip:
+		Name: Construction Site (Mosaic Guard Tower)
+	Health:
+		HP: 30000
+		Shape: Rectangle
+			TopLeft: -456, -456
+			BottomRight: 456, 456
+	RevealsShroud:
+		Range: 4c0
+	Selectable:
+		Bounds: 24,48,0,-10
+	SelectionDecorations
+		VisualBounds: 22,48,0,-10
+	WithSpriteBody:
+		RequiresCondition: inactive
+	SpawnActorOnDeath@Finsihed:
+		Probability: 100
+		Actor: SULGTW
+		DeathType: FinishedDeath
+	ExternalCondition@buildfurther: 
+		Condition: Construct
+		TotalCap: 18
+	ExternalCondition@Deliverfurther:
+		Condition: DeliveredResources
+		TotalCap: 18
+	Targetable@buildfurther: 
+		TargetTypes: Buildable
+		RequiresCondition: DeliveredResources > Construct && (18 - Construct) > 0
+	Targetable@deliverresources: 
+		TargetTypes: Deliverable
+		RequiresCondition: 18 > DeliveredResources
+	SelfHealing@Finished:
+		PercentageStep: -200
+		HealIfBelow: 110
+		Delay: 1
+		RequiresCondition: (18 - Construct) <= 0
+		DamageTypes: FinishedDeath
+	WithIdleOverlay@base1:
+		Sequence: make1
+		RequiresCondition: Construct > 2 && Construct < 5
+	WithIdleOverlay@base2:
+		Sequence: make2
+		RequiresCondition: Construct >= 5 && Construct < 7
+	WithIdleOverlay@base3:
+		Sequence: make3
+		RequiresCondition: Construct >= 7 && Construct < 11
+	WithIdleOverlay@base4:
+		Sequence: make4
+		RequiresCondition: Construct >= 11 && Construct < 13
+	WithIdleOverlay@base5:
+		Sequence: make5
+		RequiresCondition: Construct >= 13 && Construct < 15
+	WithIdleOverlay@base6:
+		Sequence: make6
+		RequiresCondition: Construct >= 15
+	WithRangeCircle:
+		Range: 7c0
+
+SULARRAY.SCAFF:
+	Inherits: ^3x2SITE
+	Armor:
+		Type: Concrete
+	RenderSprites:
+		PlayerPalette: sultanplayer
+		Image: sularray
+	CustomSellValue:
+		Value: 420
+	Valued:
+		Cost: 1300
+	Tooltip:
+		Name: Construction Site (Material Storage)
+	Buildable:
+		IconPalette: raicon
+		BuildPaletteOrder: 200
+		Prerequisites: barracks
+		Description: Provides 2 additional worker.\n\n\n\n
+		Queue: MBuilding.SUL
+		BuildDuration: 25
+	Health:
+		HP: 40000
+		Shape: Rectangle
+			TopLeft: -1424,-924
+			BottomRight: 1424, 924
+	RevealsShroud:
+		Range: 4c0
+	Bib:
+	Selectable:
+		Bounds: 72,48
+	SelectionDecorations:
+		VisualBounds: 72,64,0,-16
+	WithSpriteBody:
+		RequiresCondition: inactive
+	SpawnActorOnDeath@Finsihed:
+		Probability: 100
+		Actor: SULARRAY
+		DeathType: FinishedDeath
+	ExternalCondition@buildfurther: 
+		Condition: Construct
+		TotalCap: 52
+	ExternalCondition@Deliverfurther:
+		Condition: DeliveredResources
+		TotalCap: 52
+	Targetable@buildfurther: 
+		TargetTypes: Buildable
+		RequiresCondition: DeliveredResources > Construct && (52 - Construct) > 0
+	Targetable@deliverresources: 
+		TargetTypes: Deliverable
+		RequiresCondition: 52 > DeliveredResources
+	SelfHealing@Finished:
+		PercentageStep: -200
+		HealIfBelow: 110
+		Delay: 1
+		RequiresCondition: (52 - Construct) <= 0
+		DamageTypes: FinishedDeath
+	WithIdleOverlay@base1:
+		Sequence: make1
+		RequiresCondition: Construct > 5 && Construct < 15
+	WithIdleOverlay@base2:
+		Sequence: make2
+		RequiresCondition: Construct >= 15 && Construct < 25
+	WithIdleOverlay@base3:
+		Sequence: make3
+		RequiresCondition: Construct >= 25 && Construct < 35
+	WithIdleOverlay@base4:
+		Sequence: make4
+		RequiresCondition: Construct >= 35 && Construct < 40
+	WithIdleOverlay@base5:
+		Sequence: make5
+		RequiresCondition: Construct >= 40 && Construct < 45
+	WithIdleOverlay@base6:
+		Sequence: make6
+		RequiresCondition: Construct >= 45
+		
+SULHALL.SCAFF:
+	Inherits: ^3x2SITE
+	Armor:
+		Type: Concrete
+	RenderSprites:
+		PlayerPalette: sultanplayer
+		Image: sulhall
+	CustomSellValue:
+		Value: 700
+	Valued:
+		Cost: 2000
+	Tooltip:
+		Name: Construction Site (Town Hall)
+	Buildable:
+		IconPalette: raicon
+		BuildPaletteOrder: 210
+		Prerequisites: anyarmory
+		Description: Attracts citizens to your town.\nNew Peasants will spawn faster.\n\n\n
+		Queue: MBuilding.SUL
+		BuildDuration: 25
+	Health:
+		HP: 60000
+		Shape: Rectangle
+			TopLeft: -1424,-924
+			BottomRight: 1424, 924
+	RevealsShroud:
+		Range: 4c0
+	Bib:
+	Selectable:
+		Bounds: 72,48
+	SelectionDecorations:
+		VisualBounds: 72,64,0,-16
+	WithSpriteBody:
+		RequiresCondition: inactive
+	SpawnActorOnDeath@Finsihed:
+		Probability: 100
+		Actor: SULHALL
+		DeathType: FinishedDeath
+	ExternalCondition@buildfurther: 
+		Condition: Construct
+		TotalCap: 80
+	ExternalCondition@Deliverfurther:
+		Condition: DeliveredResources
+		TotalCap: 80
+	Targetable@buildfurther: 
+		TargetTypes: Buildable
+		RequiresCondition: DeliveredResources > Construct && (80 - Construct) > 0
+	Targetable@deliverresources: 
+		TargetTypes: Deliverable
+		RequiresCondition: 80 > DeliveredResources
+	SelfHealing@Finished:
+		PercentageStep: -200
+		HealIfBelow: 110
+		Delay: 1
+		RequiresCondition: (80 - Construct) <= 0
+		DamageTypes: FinishedDeath
+	WithIdleOverlay@base1:
+		Sequence: make1
+		RequiresCondition: Construct > 5 && Construct < 10
+	WithIdleOverlay@base2:
+		Sequence: make2
+		RequiresCondition: Construct >= 10 && Construct < 15
+	WithIdleOverlay@base3:
+		Sequence: make3
+		RequiresCondition: Construct >= 15 && Construct < 35
+	WithIdleOverlay@base4:
+		Sequence: make4
+		RequiresCondition: Construct >= 35 && Construct < 55
+	WithIdleOverlay@base5:
+		Sequence: make5
+		RequiresCondition: Construct >= 55 && Construct < 75
+	WithIdleOverlay@base6:
+		Sequence: make6
+		RequiresCondition: Construct >= 75
+        
+        
+SULCNSHMBR.SCAFF:
+	Inherits: ^3x2SITE
+	Armor:
+		Type: Concrete
+	RenderSprites:
+		PlayerPalette: sultanplayer
+		Image: sulcnshmbr
+	CustomSellValue:
+		Value: 330
+	Valued:
+		Cost: 1000
+	Tooltip:
+		Name: Construction Site (Corn Chamber)
+	Buildable:
+		IconPalette: raicon
+		BuildPaletteOrder: 30
+		Prerequisites: proc, !sulcnshmbr
+		Description: Corn Chambers were meant to store corn for times when food was rare.\n  Generates a little bit of gold, when resources are gathered.\n  Limited to 1.\n\n
+		Queue: MBuilding2.SUL
+		BuildDuration: 25
+        BuildLimit: 1
+	Health:
+		HP: 60000
+		Shape: Rectangle
+			TopLeft: -1424,-924
+			BottomRight: 1424, 924
+	RevealsShroud:
+		Range: 4c0
+	Bib:
+	Selectable:
+		Bounds: 72,48
+	SelectionDecorations:
+		VisualBounds: 72,64,0,-16
+	WithSpriteBody:
+		RequiresCondition: inactive
+	SpawnActorOnDeath@Finsihed:
+		Probability: 100
+		Actor: SULCNSHMBR
+		DeathType: FinishedDeath
+	ExternalCondition@buildfurther: 
+		Condition: Construct
+		TotalCap: 50
+	ExternalCondition@Deliverfurther:
+		Condition: DeliveredResources
+		TotalCap: 50
+	Targetable@buildfurther: 
+		TargetTypes: Buildable
+		RequiresCondition: DeliveredResources > Construct && (50 - Construct) > 0
+	Targetable@deliverresources: 
+		TargetTypes: Deliverable
+		RequiresCondition: 50 > DeliveredResources
+	SelfHealing@Finished:
+		PercentageStep: -200
+		HealIfBelow: 110
+		Delay: 1
+		RequiresCondition: (50 - Construct) <= 0
+		DamageTypes: FinishedDeath
+	WithIdleOverlay@base1:
+		Sequence: make1
+		RequiresCondition: Construct > 5 && Construct < 10
+	WithIdleOverlay@base2:
+		Sequence: make2
+		RequiresCondition: Construct >= 10 && Construct < 15
+	WithIdleOverlay@base3:
+		Sequence: make3
+		RequiresCondition: Construct >= 15 && Construct < 25
+	WithIdleOverlay@base4:
+		Sequence: make4
+		RequiresCondition: Construct >= 25 && Construct < 35
+	WithIdleOverlay@base5:
+		Sequence: make5
+		RequiresCondition: Construct >= 35 && Construct < 40
+	WithIdleOverlay@base6:
+		Sequence: make6
+		RequiresCondition: Construct >= 40
+        
+SULREF.SCAFF:
+	Inherits: ^3x3SITE
+	Building:
+		Footprint: _x_ xxx xx=
+		Dimensions: 3,3
+	Armor:
+		Type: Concrete
+	RenderSprites:
+		PlayerPalette: sultanplayer
+		Image: sulref
+	CustomSellValue:
+		Value: 500
+	Valued:
+		Cost: 1500
+	Tooltip:
+		Name: Construction Site (Ore Refinery)
+	Buildable:
+		IconPalette: raicon
+		BuildPaletteOrder: 70
+		Prerequisites: sulcastle
+		Description: Processes raw ore and Gold into useable metal.\nGenerates more money than the windmill.\n\n\n\n
+		Queue: MBuilding2.SUL
+		BuildDuration: 25
+	Health:
+		HP: 60000
+		Shape: Rectangle
+			TopLeft: -1436,-756
+			BottomRight: 1436, 924
+	RevealsShroud:
+		Range: 4c0
+	Bib:
+	Selectable:
+		Bounds: 72,56,0,12
+	SelectionDecorations:
+		VisualBounds: 72,56,0,12
+	WithSpriteBody:
+		RequiresCondition: inactive
+	SpawnActorOnDeath@Finsihed:
+		Probability: 100
+		Actor: SULREF
+		DeathType: FinishedDeath
+	ExternalCondition@buildfurther: 
+		Condition: Construct
+		TotalCap: 60
+	ExternalCondition@Deliverfurther:
+		Condition: DeliveredResources
+		TotalCap: 60
+	Targetable@buildfurther: 
+		TargetTypes: Buildable
+		RequiresCondition: DeliveredResources > Construct && (60 - Construct) > 0
+	Targetable@deliverresources: 
+		TargetTypes: Deliverable
+		RequiresCondition: 60 > DeliveredResources
+	SelfHealing@Finished:
+		PercentageStep: -200
+		HealIfBelow: 110
+		Delay: 1
+		RequiresCondition: (60 - Construct) <= 0
+		DamageTypes: FinishedDeath
+	WithIdleOverlay@base1:
+		Sequence: make1
+		RequiresCondition: Construct > 5 && Construct < 15
+	WithIdleOverlay@base2:
+		Sequence: make2
+		RequiresCondition: Construct >= 15 && Construct < 25
+	WithIdleOverlay@base3:
+		Sequence: make3
+		RequiresCondition: Construct >= 25 && Construct < 35
+	WithIdleOverlay@base4:
+		Sequence: make4
+		RequiresCondition: Construct >= 35 && Construct < 45
+	WithIdleOverlay@base5:
+		Sequence: make5
+		RequiresCondition: Construct >= 45 && Construct < 55
+	WithIdleOverlay@base6:
+		Sequence: make6
+		RequiresCondition: Construct >= 55

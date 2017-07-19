@@ -61,7 +61,43 @@ CAMERA.small:
 	RevealsShroud:
 		Range: 6c0
 		Type: CenterPosition
-
+        
+PLHOLDERA:
+	EditorOnlyTooltip:
+		Name: (reveals small area to owner)
+	AlwaysVisible:
+	WithSpriteBody:
+	RenderSpritesEditorOnly:
+		Image: camera
+	BodyOrientation:
+		QuantizedFacings: 1
+	Immobile:
+		OccupiesSpace: false
+	Health:
+		HP: 1000
+	RevealsShroud:
+		Range: 6c0
+		Type: CenterPosition
+    Production:
+		Produces: MBuilding2.GDI, MBuilding3.GDI
+	ProductionQueue@GDIMBuilding2:
+		Type: MBuilding2.GDI
+		Factions: gdi
+		Group: Building2
+		LowPowerSlowdown: 2
+		QueuedAudio: Building
+		ReadyAudio: ConstructionComplete
+    ProductionQueue@GDIMBuilding3:
+		Type: MBuilding3.GDI
+		Factions: gdi
+		Group: Building3
+		LowPowerSlowdown: 2
+		QueuedAudio: Building
+		ReadyAudio: ConstructionComplete
+    ProductionBar@BuildingNod2:
+		ProductionType: MBuilding2.GDI
+    ProductionBar@BuildingNod3:
+		ProductionType: MBuilding3.GDI
 FLARE:
 	Immobile:
 		OccupiesSpace: false
@@ -73,6 +109,25 @@ FLARE:
 		Palette: terrain
 	WithSpriteBody:
 		StartSequence: open
+	HiddenUnderFog:
+		Type: CenterPosition
+	Tooltip:
+		Name: Flare
+		ShowOwnerRow: false
+	BodyOrientation:
+		QuantizedFacings: 1
+	AutoSelectionSize:
+    
+MENU:
+	Immobile:
+		OccupiesSpace: false
+	RevealsShroud:
+		Range: 3c0
+		Type: CenterPosition
+	RenderSprites:
+		Image: menu
+		Palette: menu
+	WithSpriteBody:
 	HiddenUnderFog:
 		Type: CenterPosition
 	Tooltip:

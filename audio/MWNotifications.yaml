@@ -1,18 +1,19 @@
 Speech:
-    Variants:
+	Variants:
 		nod: .nod
 		gdi: .gdi
+		sul: .sul
 	Notifications:
-        ReadyHorse: strange1, strange2
-        IncomingDeath: ddlerapproach
-        ReadyDeath: ddlerrdy
-        StrangeReady: strange1, strange2
-        NewAirstrike: airstrikeridy1, airstrikeridy2
-        NewAirstrikeAnnounce: incomairstrike1, incomairstrike2
-        NodcannonApproach: incomnuke1
-        NodcannonReady: nukerdy1, nukerdy2
-        LightningReady: ionstrike1, ionstrike2
-        AirstrikeReady: 
+		ReadyHorse: strange1, strange2
+		IncomingDeath: ddlerapproach
+		ReadyDeath: ddlerrdy
+		StrangeReady: strange1, strange2
+		NewAirstrike: airstrikeridy1, airstrikeridy2
+		NewAirstrikeAnnounce: incomairstrike1, incomairstrike2
+		NodcannonApproach: incomnuke1
+		NodcannonReady: nukerdy1, nukerdy2
+		LightningReady: ionstrike1, ionstrike2
+		AirstrikeReady: 
 		BaseAttack: baseunderattack1
 		Building: building1, building2
 		BuildingCannotPlaceAudio: cannotplace
@@ -54,7 +55,7 @@ Speech:
 		UnitLost: unitlost1, unitlost2
 		UnitReady: unitready1, unitready2
 		Win: win
-        
+		
 Sounds:
 	Notifications:
 		Appear: appear1

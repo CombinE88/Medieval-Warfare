@@ -15,7 +15,7 @@
 	Faction@Random:
 		Name: Any
 		InternalName: Random
-		RandomFactionMembers: gdi, nod
+		RandomFactionMembers: gdi, nod, sul
 		Description: Select a random faction.
 	Faction@gdi:
 		Name: King
@@ -25,67 +25,71 @@
 		Name: Baron
 		InternalName: nod
 		Description: Baron Hodsworth Noddingen (Nod)
+	Faction@sul:
+		Name: Sultan
+		InternalName: sul
+		Description: Sultan Cem Rashid il-Nuredin (Scrin)
 	ResourceType@green-tib:
 		Sequences: iron1,iron2,iron3,iron4,iron5,iron6,iron7,iron8,iron9,iron10,iron11,iron12
-        Palette: ra
-		MaxDensity: 12
-        PipColor: Red
-        TerrainType: Tiberium
-        Name: Iron
-        ResourceType: 1
-        Type: Tiberium
-		ValuePerUnit: 35
-		AllowedTerrainTypes: Clear,Road
-		AllowUnderActors: true
-    ResourceType@blue-tib:
-        ResourceType: 2
-        Palette: ra
-        TerrainType: BlueTiberium
-        PipColor: Yellow
-        Name: Gold
-		Sequences: gold1,gold2,gold3,gold4,gold5,gold6,gold7,gold8,gold9,gold10
-        MaxDensity: 12
-        ValuePerUnit: 60
-		AllowedTerrainTypes: Clear,Road
-		AllowUnderActors: true
-        Type: BlueTiberium
-    ResourceType@copper-tib:
-		ResourceType: 3
 		Palette: ra
+		MaxDensity: 12
+		PipColor: Red
+		TerrainType: Tiberium
+		Name: Iron
+		ResourceType: 1
+		Type: Tiberium
+		ValuePerUnit: 23
+		AllowedTerrainTypes: Clear,Road
+		AllowUnderActors: true
+	ResourceType@blue-tib:
+		ResourceType: 2
+		Palette: ra
+		TerrainType: BlueTiberium
+		PipColor: Yellow
+		Name: Gold
+		Sequences: gold1,gold2,gold3,gold4,gold5,gold6,gold7,gold8,gold9,gold10
+		MaxDensity: 12
+		ValuePerUnit: 40
+		AllowedTerrainTypes: Clear,Road
+		AllowUnderActors: true
+		Type: BlueTiberium
+	ResourceType@copper-tib:
+		ResourceType: 3
+		Palette: grain
 		TerrainType: Crops
 		Sequences: crop1,crop2,crop3,crop4,crop5,crop6,crop7,crop8,crop9,crop10,crop11
 		MaxDensity: 12
-		ValuePerUnit: 18
+		ValuePerUnit: 12
 		Name: Crops
-        Type: Copper
+		Type: Copper
 		PipColor: Blue
 		AllowedTerrainTypes: Clear,Road
 		AllowUnderActors: true
-    ResourceType@Grain-tib:
+	ResourceType@Grain-tib:
 		ResourceType: 4
 		Palette: grain
 		TerrainType: Crops
 		Sequences: grain1,grain2,grain3,grain4,grain5,grain6,grain7
 		MaxDensity: 12
-		ValuePerUnit: 18
+		ValuePerUnit: 12
 		Name: Grain
-        Type: Grains
+		Type: Grains
 		PipColor: Blue
 		AllowedTerrainTypes: Clear,Road
 		AllowUnderActors: true
-    ResourceType@CORN:
+	ResourceType@CORN:
 		ResourceType: 9
 		Palette: grain
 		TerrainType: Crops
 		Sequences: corn1,corn2,corn3,corn4,corn5,corn6,corn7,corn8,corn9,corn10,corn11
 		MaxDensity: 12
-		ValuePerUnit: 18
+		ValuePerUnit: 12
 		Name: Corn
-        Type: Corn
+		Type: Corn
 		PipColor: Blue
 		AllowedTerrainTypes: Clear,Road
 		AllowUnderActors: true
-    ResourceType@Guns:
+	ResourceType@Guns:
 		ResourceType: 5
 		Palette: mwcivilian
 		TerrainType: Loot
@@ -93,43 +97,43 @@
 		MaxDensity: 6
 		ValuePerUnit: 150
 		Name: Loot
-        Type: Guns
+		Type: Guns
 		PipColor: Yellow
 		AllowedTerrainTypes: Clear,Road
 		AllowUnderActors: true
-    ResourceType@Wood:
+	ResourceType@Wood:
 		ResourceType: 6
 		Palette: ra
 		TerrainType: Wood
 		Sequences: wood1,wood2,wood3,wood4,wood5,wood6,wood7
 		MaxDensity: 7
-		ValuePerUnit: 35
+		ValuePerUnit: 23
 		Name: Chopped Wood
-        Type: Wood
+		Type: Wood
 		PipColor: Blue
 		AllowedTerrainTypes: Clear,Road
 		AllowUnderActors: true
-    ResourceType@Goods:
+	ResourceType@Goods:
 		ResourceType: 7
 		Palette: mwcivilian
 		TerrainType: Loot
 		Sequences: goods1,goods2,goods3,goods4,goods5
 		MaxDensity: 5
-		ValuePerUnit: 55
+		ValuePerUnit: 37
 		Name: Goods
-        Type: Goods
+		Type: Goods
 		PipColor: Blue
 		AllowedTerrainTypes: Clear,Road
 		AllowUnderActors: true
-    ResourceType@Lumber:
+	ResourceType@Lumber:
 		ResourceType: 8
 		Palette: mwcivilian
 		TerrainType: Wood
 		Sequences: reslumb1,reslumb2,reslumb3,reslumb4,reslumb5,reslumb6
 		MaxDensity: 6
-		ValuePerUnit: 55
+		ValuePerUnit: 37
 		Name: Lumber
-        Type: Lumber
+		Type: Lumber
 		PipColor: Blue
 		AllowedTerrainTypes: Clear,Road
 		AllowUnderActors: true
@@ -165,39 +169,40 @@ World:
 	MapOptions:
 	MPStartLocations:
 	CreateMPPlayers:
-    LuaScript:
-        Scripts: Peasants.lua
-	MPStartUnits@MEDIGDI:
+	LuaScript:
+		Scripts: Peasants.lua
+	MPStartUnits@minimum:
 		Class: medieval
-		ClassName: Supply wagon only
-		Factions: gdi
+		ClassName: Supply Wagon Only
+		Factions: gdi, nod, sul
 		BaseActor: mcvnew
-	MPStartUnits@MEDINOD:
-		Class: medieval
-		ClassName: Supply wagon only
-		Factions: nod
+	MPStartUnits@medium:
+		Class: medieval2
+		ClassName: Quick Start
+		Factions: gdi, nod, sul
 		BaseActor: mcvnew
-    MPStartUnits@MEDIGDI2:
-		Class: royal
-		ClassName: Highness
-		Factions: gdi
+        SupportActors: transporter, transporter
+	MPStartUnits@bunch:
+		Class: medieval3
+		ClassName: Well Populated
+		Factions: gdi, nod, sul
 		BaseActor: mcvnew
-        SupportActors: Husk2.KING, e3new, e3new, e3new, e2new,
-	MPStartUnits@MEDINOD2:
-		Class: royal
-		ClassName: Highness
-		Factions: nod
+        SupportActors: mwwand1,mwwand2,mwwand3,mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12,mwwand1,mwwand2,mwwand3, transporter, transporter, transporter, engeneer
+	MPStartUnits@maximum:
+		Class: medieval4
+		ClassName: Over Populated
+		Factions: gdi, nod, sul
 		BaseActor: mcvnew
-        SupportActors: Husk2.KING, e3new, e3new, e3new, e2new,
+        SupportActors: mwwand1,mwwand2,mwwand3,mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12,mwwand1,mwwand2,mwwand3, mwwand5, mwwand6, mwwand10, mwwand11, mcv2new, transporter, transporter, transporter, transporter, transporter, transporter, engeneer, engeneer
 	SpawnMPUnits:
-		StartingUnitsClass: medieval
+		StartingUnitsClass: medieval2
 	CrateSpawner:
-		Minimum: 1
-		Maximum: 6
+		Minimum: 0
+		Maximum: 2
 		SpawnInterval: 3000
 		WaterChance: 0
-		InitialSpawnDelay: 1500
-        CrateActors: fireplace
+		InitialSpawnDelay: 1000
+		CrateActors: fireplace
 	PathFinder:
 	ValidateOrder:
 	DebugPauseState:

@@ -1,18 +1,19 @@
 Metadata:
 	Title: Medieval Warfare
 	Description: Siege under Gabriel Dardanus the first or \nbetray with Baron Hodsworth of Noddingen in a \ntotalconversion of the classic game that started it all.\n\nMedieval Warfare demodernizes the original Command & Conquer \nTiberian Dawn gameplay\nby shifting the gme into the dark ages, including siegeweapons \ncavalry, high infantry verietiy, and buildable fortresses.
-	Version: 173518 Alpha (fix)
+	Version: 17071804
 	Author: the Medieval Warfare Team
 
 RequiresMods:
-	modchooser: release-20170421
+	modchooser: release-20170527
 
 Packages:
 	~^Content/cnc
 	~^Content/cnc/movies
+    ~^Content/Mw/Music
 	.
 	$cnc: cnc
-    $mw: mw
+	$mw: mw
 	./mods/common: common
 	~speech.mix
 	~conquer.mix
@@ -36,12 +37,17 @@ Packages:
 	mw|bits/Misc
 	mw|bits/Music
 	mw|bits/Sounds
-    mw|bits/Voice
-    mw|bits/Scripts
-    mw|bits/Icons
-    mw|bits/Resources
-    mw|bits/Buildings
+	mw|bits/Voice
+	mw|bits/Scripts
+	mw|bits/Icons
+	mw|bits/Resources
+	mw|bits/Buildings
+	mw|bits/Sultan
+	mw|bits/Sultan/Sounds
 	mw|uibits
+	mw|bits/terrain
+	mw|bits/terrain/Desert
+    mw|bits/Undead
 
 MapFolders:
 	mw|maps: System
@@ -51,6 +57,8 @@ Rules:
 	mw|rules/AI.yaml
 	mw|rules/Aircraft.yaml
 	mw|rules/Buildings.yaml
+	mw|rules/BuildingScaffolds.yaml
+	mw|rules/BuildingScaffplaceholder.yaml
 	mw|rules/Cavalry.yaml
 	mw|rules/civilian.yaml
 	mw|rules/civilian-desert.yaml
@@ -64,7 +72,11 @@ Rules:
 	mw|rules/Props.yaml
 	mw|rules/Siegeweapons.yaml
 	mw|rules/trees.yaml
-    mw|rules/world.yaml
+	mw|rules/world.yaml
+	mw|rules/Sultan.yaml
+	mw|rules/SultanScaffolds.yaml
+	mw|rules/SultanScaffplaceholder.yaml
+    mw|rules/Undead.yaml
 
 Sequences:
 	cnc|sequences/structures.yaml
@@ -76,31 +88,35 @@ Sequences:
 	cnc|sequences/funpark.yaml
 	cnc|sequences/civilian.yaml
 	cnc|sequences/campaign.yaml
-    mw|Sequences/MWBuildings.yaml
-    mw|Sequences/MWCavalry.yaml
-    mw|Sequences/MWCivilians.yaml
-    mw|Sequences/MWEnvironments.yaml
-    mw|Sequences/MWInfantry.yaml
-    mw|Sequences/MWmisc.yaml
-    mw|Sequences/MWProps.yaml
-    mw|Sequences/MWResources.yaml
-    mw|Sequences/MWSiegeweapons.yaml
+	mw|Sequences/MWBuildings.yaml
+	mw|Sequences/MWCavalry.yaml
+	mw|Sequences/MWCivilians.yaml
+	mw|Sequences/MWEnvironments.yaml
+	mw|Sequences/MWInfantry.yaml
+	mw|Sequences/MWmisc.yaml
+	mw|Sequences/MWProps.yaml
+	mw|Sequences/MWResources.yaml
+	mw|Sequences/MWSiegeweapons.yaml
+	mw|Sequences/MWSultan.yaml
+    mw|Sequences/MWUndead.yaml
 
 TileSets:
 	mw|tilesets/desert.yaml
 	mw|tilesets/winter.yaml
 	mw|tilesets/snow.yaml
 	mw|tilesets/temperat.yaml
-	mw|tilesets/jungle.yaml
 
 Weapons:
-    mw|weapons/MWWeapons.yaml
+	mw|weapons/MWWeapons.yaml
+	mw|weapons/MWSultanW.yaml
+    mw|weapons/MWUndeadGuns.yaml
 	cnc|weapons/explosions.yaml
 	cnc|weapons/ballistics.yaml
 	cnc|weapons/missiles.yaml
 	cnc|weapons/other.yaml
 	cnc|weapons/smallcaliber.yaml
 	cnc|weapons/superweapons.yaml
+
 
 Cursors:
 	mw|cursors.yaml
@@ -111,6 +127,7 @@ Chrome:
 Assemblies:
 	common|OpenRA.Mods.Common.dll
 	common|OpenRA.Mods.Cnc.dll
+	mw|OpenRA.Mods.MW.dll
 
 ChromeLayout:
 	mw|chrome/mainmenu.yaml
@@ -151,7 +168,7 @@ ChromeLayout:
 
 Voices:
 	mw|audio/MWVoices.yaml
-    cnc|audio/voices.yaml
+	cnc|audio/voices.yaml
 
 Notifications:
 	mw|audio/MWNotifications.yaml
@@ -177,6 +194,15 @@ ChromeMetrics:
 	mw|metrics.yaml
 
 Fonts:
+    Infestsmall:
+        Font: mw|infested.ttf
+        Size:12
+    Infestregular:
+        Font: mw|infested.ttf
+        Size:14
+    Infestmedium:
+        Font: mw|infested.ttf
+        Size:18
 	Small:
 		Font: common|FreeSans.ttf
 		Size:12
@@ -223,22 +249,34 @@ SpriteSequenceFormat: TilesetSpecificSpriteSequence
 		JUNGLE: .jun
 
 GameSpeeds:
-	slower:
-		Name: Slower
-		Timestep: 50
-		OrderLatency: 3
 	default:
 		Name: Normal
 		Timestep: 40
 		OrderLatency: 3
+	hdefault:
+		Name: Normal (High Latency)
+		Timestep: 40
+		OrderLatency: 6
+	vhldefault:
+		Name: Normal (Very High Latency)
+		Timestep: 40
+		OrderLatency: 9
 	faster:
 		Name: Faster
 		Timestep: 30
 		OrderLatency: 4
-	fastest:
-		Name: Fastest
-		Timestep: 20
+	hfaster:
+		Name: Faster (High Latency)
+		Timestep: 30
 		OrderLatency: 6
+	vfaster:
+		Name: Faster (Very High Latency)
+		Timestep: 30
+		OrderLatency: 9
+	superfast:
+		Name: Super Fast(AI only)
+		Timestep: 10
+		OrderLatency: 5
 
 ColorValidator:
 

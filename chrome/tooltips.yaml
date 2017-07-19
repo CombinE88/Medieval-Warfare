@@ -114,6 +114,17 @@ Background@PRODUCTION_TOOLTIP:
             X: 2
 			Height: 23
 			Font: Bold
+        Image@ACTORS_ICON:
+			Y: 57+26
+            X: 9
+			Width: 16
+			ImageCollection: sidebar-bits
+			ImageName: production-tooltip-power
+		Label@ACTORS:
+			Y: 57+26
+            X: 2
+			Height: 23
+			Font: Bold
 
 Background@SUPPORT_POWER_TOOLTIP:
 	Logic: SupportPowerTooltipLogic

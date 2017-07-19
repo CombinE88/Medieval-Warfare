@@ -46,19 +46,19 @@ Terrain:
 		AcceptsSmudgeType: Crater, Scorch
 		Color: D67A48
 		RestrictPlayerColor: true
-    TerrainType@CROPS:
+	TerrainType@CROPS:
 		Type: Crops
 		TargetTypes: Ground
 		AcceptsSmudgeType: Crater, Scorch
 		Color: 55C785
 		RestrictPlayerColor: true
-    TerrainType@WOOD:
+	TerrainType@WOOD:
 		Type: Wood
 		TargetTypes: Ground
 		AcceptsSmudgeType: Crater, Scorch
 		Color: A18739
 		RestrictPlayerColor: true
-    TerrainType@LOOT:
+	TerrainType@LOOT:
 		Type: Loot
 		TargetTypes: Ground
 		AcceptsSmudgeType: Crater, Scorch
@@ -78,6 +78,11 @@ Terrain:
 		TargetTypes: Water
 		IsWater: True
 		Color: 5C74A4
+		RestrictPlayerColor: true
+	TerrainType@Palace:
+		Type: Palace
+		TargetTypes: Ground
+		AcceptsSmudgeType: Crater, Scorch
 		RestrictPlayerColor: true
 
 Templates:

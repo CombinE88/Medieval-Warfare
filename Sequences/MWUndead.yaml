@@ -1,0 +1,644 @@
+explosion:
+   	gianthand: acolytebattack
+		Length: *
+		Tick: 80
+	rockimpact: undead7
+		Start: 287
+		Length: 7
+		Tick: 100
+		
+giantrock:
+	idle: undead7
+		Start: 277
+		Length: 9
+		Tick: 30
+
+zombspark:
+	bright:
+		Length: 4
+		ZOffset: 1023
+	dim:
+		Start: 4
+		Length: 4
+		ZOffset: 1023
+
+gravespawner:
+	idle:
+		Length: *
+        
+
+gravespawnera:
+	idle:
+		Length: *
+        
+
+gravespawnerb:
+	idle:
+		Length: *
+
+undead1:
+	stunned: sulm4
+		ZOffset: 125
+		Start: 312
+		Length: 2
+		Tick: 200
+	idle: 
+		Start: 122
+		Facings: 8
+	stand: 
+		Start: 122
+		Facings: 8
+	move: 
+		Start: 0
+		Length: 8
+		Facings: 8
+		Tick: 100
+	make: undead1born
+		Length: *
+		Tick: 130
+	shoot: 
+		Tick: 100
+		Start: 66
+		Length: 7
+		Facings: 8
+	die1: 
+		Start: 202
+		Length: 20
+		Tick: 80
+	# large hit
+	die2: 
+		Start: 202
+		Length: 20
+		Tick: 80
+	# poision
+	die3: 
+		Start: 202
+		Length: 20
+		Tick: 80
+	# ballista
+	die4: 
+		Start: 202
+		Length: 20
+		Tick: 80
+	die-crushed: e1rot
+		Start: 16
+		Length: 4
+		Tick: 1600
+		ZOffset: -511
+	die5: burningman
+		Length: *
+		Tick: 80
+		
+undead2:
+	stunned: sulm4
+		ZOffset: 125
+		Start: 312
+		Length: 2
+		Tick: 200
+	idle: 
+		Start: 122
+		Facings: 8
+	stand: 
+		Start: 122
+		Facings: 8
+	move: 
+		Start: 0
+		Length: 8
+		Facings: 8
+		Tick: 100
+	make: undead2born
+		Length: *
+		Tick: 130
+	shoot: 
+		Tick: 100
+		Start: 66
+		Length: 7
+		Facings: 8
+	die1: 
+		Start: 202
+		Length: 20
+		Tick: 80
+	# large hit
+	die2: 
+		Start: 202
+		Length: 20
+		Tick: 80
+	# poision
+	die3: 
+		Start: 202
+		Length: 20
+		Tick: 80
+	# ballista
+	die4: 
+		Start: 202
+		Length: 20
+		Tick: 80
+	die-crushed: e1rot
+		Start: 16
+		Length: 4
+		Tick: 1600
+		ZOffset: -511
+	die5: burningman
+		Length: *
+		Tick: 80
+		
+undead3:
+	stunned: sulm4
+		ZOffset: 125
+		Start: 312
+		Length: 2
+		Tick: 200
+	idle: 
+		Start: 122
+		Facings: 8
+	stand: 
+		Start: 122
+		Facings: 8
+	move: 
+		Start: 0
+		Length: 8
+		Facings: 8
+		Tick: 100
+	make: undead3born
+		Length: *
+		Tick: 130
+	shoot: 
+		Tick: 100
+		Start: 66
+		Length: 7
+		Facings: 8
+	die1: 
+		Start: 131
+		Length: 16
+		Tick: 80
+	# large hit
+	die2: 
+		Start: 131
+		Length: 16
+		Tick: 80
+	# poision
+	die3: 
+		Start: 131
+		Length: 16
+		Tick: 80
+	# ballista
+	die4: 
+		Start: 180
+		Length: 11
+		Tick: 80
+	die-crushed: 
+		Start: 131
+		Length: 16
+		Tick: 80
+	die5: burningman
+		Length: *
+		Tick: 80
+		
+undead4:
+	stunned: sulm4
+		ZOffset: 125
+		Start: 312
+		Length: 2
+		Tick: 200
+	idle: 
+		Start: 122
+		Facings: 8
+	stand: 
+		Start: 122
+		Facings: 8
+	move: 
+		Start: 0
+		Length: 8
+		Facings: 8
+		Tick: 100
+	make: undead4born
+		Length: *
+		Tick: 130
+	shoot: 
+		Tick: 100
+		Start: 66
+		Length: 7
+		Facings: 8
+	die1: 
+		Start: 202
+		Length: 20
+		Tick: 80
+	# large hit
+	die2: 
+		Start: 202
+		Length: 20
+		Tick: 80
+	# poision
+	die3: 
+		Start: 202
+		Length: 20
+		Tick: 80
+	# ballista
+	die4: 
+		Start: 202
+		Length: 20
+		Tick: 80
+	die-crushed: e1rot
+		Start: 16
+		Length: 4
+		Tick: 1600
+		ZOffset: -511
+	die5: burningman
+		Length: *
+		Tick: 80
+		
+undead5:
+	make: undead5born
+		Length: *
+		Tick: 130
+	stunned: sulm4
+		ZOffset: 125
+		Start: 312
+		Length: 2
+		Tick: 200
+	idle: 
+		Start: 122
+		Facings: 8
+	stand: 
+		Start: 122
+		Facings: 8
+	run: 
+		Start: 0
+		Length: 8
+		Facings: 8
+		Tick: 100
+	shoot: 
+		Tick: 100
+		Start: 66
+		Length: 7
+		Facings: 8
+	die1: 
+		Start: 132
+		Length: 15
+		Tick: 80
+	# large hit
+	die2: 
+		Start: 132
+		Length: 15
+		Tick: 80
+	# poision
+	die3: 
+		Start: 132
+		Length: 15
+		Tick: 80
+	# ballista
+	die4: 
+		Start: 180
+		Length: 11
+		Tick: 80
+	die-crushed: 
+		Start: 132
+		Length: 15
+		Tick: 80
+	die5: burningman
+		Length: *
+		Tick: 80
+
+undead6:
+	stunned: sulm4
+		ZOffset: 125
+		Start: 312
+		Length: 2
+		Tick: 200
+	idle: 
+		Start: 122
+		Facings: 8
+	stand: 
+		Start: 122
+		Facings: 8
+	move: 
+		Start: 0
+		Length: 8
+		Facings: 8
+		Tick: 100
+	make: undead6born
+		Length: *
+		Tick: 130
+	shoot: 
+		Tick: 100
+		Start: 66
+		Length: 7
+		Facings: 8
+	die1: 
+		Start: 202
+		Length: 20
+		Tick: 80
+	# large hit
+	die2: 
+		Start: 202
+		Length: 20
+		Tick: 80
+	# poision
+	die3: 
+		Start: 202
+		Length: 20
+		Tick: 80
+	# ballista
+	die4: 
+		Start: 202
+		Length: 20
+		Tick: 80
+	die-crushed: e1rot
+		Start: 16
+		Length: 4
+		Tick: 1600
+		ZOffset: -511
+	die5: burningman
+		Length: *
+		Tick: 80
+		
+undead7:
+	stunned: sulm4
+		ZOffset: 125
+		Start: 312
+		Length: 2
+		Tick: 200
+	idle: 
+		Start: 178
+		Facings: 8
+	stand: 
+		Start: 122
+		Facings: 8
+	move: 
+		Start: 0
+		Length: 8
+		Facings: 8
+		Tick: 100
+	make: undead7born
+		Length: *
+		Tick: 130
+	shoot: 
+		Tick: 100
+		Start: 66
+		Length: 14
+		Facings: 8
+	die1: 
+		Start: 257
+		Length: 20
+		Tick: 80
+	die5: burningman
+		Length: *
+		Tick: 80
+        
+coffin1:
+	idle:
+		Start: 22
+	make:
+		Length: 22
+		Tick: 200
+	dead:
+		Start: 23
+        
+coffin2:
+	idle:
+		Start: 22
+	make:
+		Length: 22
+		Tick: 200
+	dead:
+		Start: 23
+        
+coffin3:
+	idle:
+		Start: 22
+	make:
+		Length: 22
+		Tick: 200
+	dead:
+		Start: 23
+		
+gstone1: 
+	idle:
+		Start: 10
+	make:
+		Length: 10
+		Tick: 80
+	dead:
+		Start: 11
+		
+gstone2: 
+	idle:
+		Start: 10
+	make:
+		Length: 10
+		Tick: 80
+	dead:
+		Start: 11
+		
+gstone3: 
+	idle:
+		Start: 10
+	make:
+		Length: 10
+		Tick: 80
+	dead:
+		Start: 11
+		
+gstone4: 
+	idle:
+		Start: 10
+	make:
+		Length: 10
+		Tick: 80
+	dead:
+		Start: 11
+		
+gstone5: 
+	idle:
+		Start: 10
+	make:
+		Length: 10
+		Tick: 80
+	dead:
+		Start: 11
+		
+gstone6: 
+	idle:
+		Start: 10
+	make:
+		Length: 10
+		Tick: 80
+	dead:
+		Start: 11
+		
+gstone7: 
+	idle:
+		Start: 10
+	make:
+		Length: 10
+		Tick: 80
+	dead:
+		Start: 11
+		
+gstone8: 
+	idle:
+		Start: 10
+	make:
+		Length: 10
+		Tick: 80
+	dead:
+		Start: 11		
+gstone9: 
+	idle:
+		Start: 10
+	make:
+		Length: 10
+		Tick: 80
+	dead:
+		Start: 11		
+gstonexl1: 
+	idle:
+		Start: 10
+	make:
+		Length: 10
+		Tick: 80
+	dead:
+		Start: 11		
+gstonexl2: 
+	idle:
+		Start: 10
+	make:
+		Length: 10
+		Tick: 80
+	dead:
+		Start: 11
+		
+obelisk: 
+	idle:
+		Offset: 0,-5
+		Start: 0
+	damaged-idle:
+		Offset: 0,-5
+		Length: 1
+	dead:
+		Offset: 0,-5
+		Start: 2
+		
+acolyte:
+	stunned: sulm4
+		ZOffset: 125
+		Start: 312
+		Length: 2
+		Tick: 200
+	idle: 
+		Start: 122
+		Facings: 8
+	stand: 
+		Start: 122
+		Facings: 8
+	run: 
+		Start: 0
+		Length: 8
+		Facings: 8
+		Tick: 100
+	shoot: 
+		Tick: 100
+		Start: 66
+		Length: 7
+		Facings: 8
+	prey: 
+		Tick: 100
+		Start: 232
+		Length: 7
+		Facings: 8
+	idle1: 
+		Tick: 100
+		Start: 211
+		Length: 21
+	idle2: 
+		Tick: 100
+		Start: 190
+		Length: 21 
+	die1: 
+		Start: 131
+		Length: 16
+		Tick: 80
+	# large hit
+	die2: splatterdead
+		Length: *
+		Tick: 80
+	# poision
+	die3: 
+		Start: 163
+		Length: 15
+		Tick: 80
+	# ballista
+	die4: 
+		Start: 180
+		Length: 11
+		Tick: 80
+	die-crushed: e1rot
+		Start: 16
+		Length: 4
+		Tick: 1600
+		ZOffset: -511
+	die5: burningman
+		Length: *
+		Tick: 80
+		
+acolyteb:
+	stunned: sulm4
+		ZOffset: 125
+		Start: 312
+		Length: 2
+		Tick: 200
+	idle: 
+		Start: 122
+		Facings: 8
+	stand: 
+		Start: 122
+		Facings: 8
+	run: 
+		Start: 0
+		Length: 8
+		Facings: 8
+		Tick: 100
+	shoot: 
+		Tick: 100
+		Start: 66
+		Length: 7
+		Facings: 8
+	prey: 
+		Tick: 100
+		Start: 232
+		Length: 7
+		Facings: 8
+	idle1: 
+		Tick: 100
+		Start: 211
+		Length: 21
+	idle2: 
+		Tick: 100
+		Start: 190
+		Length: 21 
+	die1: 
+		Start: 131
+		Length: 16
+		Tick: 80
+	# large hit
+	die2: splatterdead
+		Length: *
+		Tick: 80
+	# poision
+	die3: 
+		Start: 163
+		Length: 15
+		Tick: 80
+	# ballista
+	die4: 
+		Start: 180
+		Length: 11
+		Tick: 80
+	die-crushed: e1rot
+		Start: 16
+		Length: 4
+		Tick: 1600
+		ZOffset: -511
+	die5: burningman
+		Length: *
+		Tick: 80

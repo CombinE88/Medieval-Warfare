@@ -1,263 +1,275 @@
+deerstand:
+	Defaults:
+		Offset: 0,-12
+		TilesetOverrides:
+			DESERT: TEMPERAT
+			WINTER: TEMPERAT
+			SNOW: TEMPERAT
+	idle: 
+		Start: 0
+	idle2: 
+		Start: 1
+		
 coppermine:
-    Defaults:
-        Offset: 0,-5
+	Defaults:
+		Offset: 0,-5
 		TilesetOverrides:
 			DESERT: TEMPERAT
 	active: cropmin
 		Length: *
-        Tick: 80
-        Start: 0
+		Tick: 80
+		Start: 0
 	idle: cropmin
-        Start: 0
-        
+		Start: 0
+		
 mwlumbershack:
-    Defaults:
+	Defaults:
 		TilesetOverrides:
 			DESERT: TEMPERAT
 	idle: mwlumbershack
-        Start: 0
-        Offset: 0,-12,0
-        
+		Start: 0
+		Offset: 0,-12,0
+		
 ironmine:
-    Defaults:
+	Defaults:
 		TilesetOverrides:
 			DESERT: TEMPERAT
 	active: iromin
 		Length: 29
-        Tick: 100
-        Start: 1
+		Tick: 100
+		Start: 1
 	idle: iromin
-        Start: 0
+		Start: 0
 goldmine:
-    Defaults:
+	Defaults:
 		TilesetOverrides:
 			DESERT: TEMPERAT
 	active: golmin
 		Length: 29
-        Tick: 100
-        Start: 1
+		Tick: 100
+		Start: 1
 	idle: golmin
-        Start: 0
-        
+		Start: 0
+		
 ntree11:
-    idle: newtree
-        Offset: 0,-12
-        Start: 4
+	idle: newtree
+		Offset: 0,-12
+		Start: 4
 ntree12:
-    idle: newtree
-        Offset: 0,-12    
-        Start: 3  
+	idle: newtree
+		Offset: 0,-12	
+		Start: 3  
 ntree13:
-    idle: newtree
-        Offset: 0,-12
-        Start: 2
+	idle: newtree
+		Offset: 0,-12
+		Start: 2
 ntree14: 
-    idle: newtree
-        Offset: 0,-12
-        Start: 1
+	idle: newtree
+		Offset: 0,-12
+		Start: 1
 ntree15:
-    tree: newtree
-        Offset: 0,-12
-        Start: 0
-    treedown: newtreechopped
-        Start: 2
-    treehalf: newtreechopped
-        Start: 3
-    idle: ironore4
-        Start: 9 
-        
+	tree: newtree
+		Offset: 0,-12
+		Start: 0
+	treedown: newtreechopped
+		Start: 2
+	treehalf: newtreechopped
+		Start: 3
+	idle: ironore4
+		Start: 9 
+		
 ntree21:
-    idle: newtree
-        Offset: 0,-12
-        Start: 9
+	idle: newtree
+		Offset: 0,-12
+		Start: 9
 ntree22:
-    idle: newtree
-        Offset: 0,-12    
-        Start: 8  
+	idle: newtree
+		Offset: 0,-12	
+		Start: 8  
 ntree23:
-    idle: newtree
-        Offset: 0,-12
-        Start: 7
+	idle: newtree
+		Offset: 0,-12
+		Start: 7
 ntree24: 
-    idle: newtree
-        Offset: 0,-12
-        Start: 6
+	idle: newtree
+		Offset: 0,-12
+		Start: 6
 ntree25:
-    tree: newtree
-        Offset: 0,-12
-        Start: 5
-    treedown: newtreechopped
-        Start: 0
-    treehalf: newtreechopped
-        Start: 1
-    idle: ironore4
-        Start: 9 
-        
+	tree: newtree
+		Offset: 0,-12
+		Start: 5
+	treedown: newtreechopped
+		Start: 0
+	treehalf: newtreechopped
+		Start: 1
+	idle: ironore4
+		Start: 9 
+		
 ntree31:
-    idle: newtree
-        Offset: 0,-12
-        Start: 14
+	idle: newtree
+		Offset: 0,-12
+		Start: 14
 ntree32:
-    idle: newtree
-        Offset: 0,-12    
-        Start: 13
+	idle: newtree
+		Offset: 0,-12	
+		Start: 13
 ntree33:
-    idle: newtree
-        Offset: 0,-12
-        Start: 12
+	idle: newtree
+		Offset: 0,-12
+		Start: 12
 ntree34: 
-    idle: newtree
-        Offset: 0,-12
-        Start: 11
+	idle: newtree
+		Offset: 0,-12
+		Start: 11
 ntree35:
-    tree: newtree
-        Offset: 0,-12
-        Start: 10
-    treedown: newtreechopped
-        Start: 0
-    treehalf: newtreechopped
-        Start: 1
-    idle: ironore4
-        Start: 9 
-        
+	tree: newtree
+		Offset: 0,-12
+		Start: 10
+	treedown: newtreechopped
+		Start: 0
+	treehalf: newtreechopped
+		Start: 1
+	idle: ironore4
+		Start: 9 
+		
 ntree41:
-    idle: newtree
-        Offset: 0,-12
-        Start: 19
+	idle: newtree
+		Offset: 0,-12
+		Start: 19
 ntree42:
-    idle: newtree
-        Offset: 0,-12    
-        Start: 18
+	idle: newtree
+		Offset: 0,-12	
+		Start: 18
 ntree43:
-    idle: newtree
-        Offset: 0,-12
-        Start: 17
+	idle: newtree
+		Offset: 0,-12
+		Start: 17
 ntree44: 
-    idle: newtree
-        Offset: 0,-12
-        Start: 16
+	idle: newtree
+		Offset: 0,-12
+		Start: 16
 ntree45:
-    tree: newtree
-        Offset: 0,-12
-        Start: 15
-    treedown: newtreechopped
-        Start: 0
-    treehalf: newtreechopped
-        Start: 1
-    idle: ironore4
-        Start: 9 
-        
+	tree: newtree
+		Offset: 0,-12
+		Start: 15
+	treedown: newtreechopped
+		Start: 0
+	treehalf: newtreechopped
+		Start: 1
+	idle: ironore4
+		Start: 9 
+		
 ntree51:
-    idle: newtree
-        Offset: 0,-12
-        Start: 24
+	idle: newtree
+		Offset: 0,-12
+		Start: 24
 ntree52:
-    idle: newtree
-        Offset: 0,-12    
-        Start: 23
+	idle: newtree
+		Offset: 0,-12	
+		Start: 23
 ntree53:
-    idle: newtree
-        Offset: 0,-12
-        Start: 22
+	idle: newtree
+		Offset: 0,-12
+		Start: 22
 ntree54: 
-    idle: newtree
-        Offset: 0,-12
-        Start: 21
+	idle: newtree
+		Offset: 0,-12
+		Start: 21
 ntree55:
-    tree: newtree
-        Offset: 0,-12
-        Start: 20
-    treedown: newtreechopped
-        Start: 0
-    treehalf: newtreechopped
-        Start: 1
-    idle: ironore4
-        Start: 9 
+	tree: newtree
+		Offset: 0,-12
+		Start: 20
+	treedown: newtreechopped
+		Start: 0
+	treehalf: newtreechopped
+		Start: 1
+	idle: ironore4
+		Start: 9 
 
 ntree61:
-    idle: newtree2
-        Offset: 0,0
-        Start: 4
+	idle: newtree2
+		Offset: 0,0
+		Start: 4
 ntree62:
-    idle: newtree2
-        Offset: 0,0 
-        Start: 3
+	idle: newtree2
+		Offset: 0,0 
+		Start: 3
 ntree63:
-    idle: newtree2
-        Offset: 0,0
-        Start: 2
+	idle: newtree2
+		Offset: 0,0
+		Start: 2
 ntree64: 
-    idle: newtree2
-        Offset: 0,0
-        Start: 1
+	idle: newtree2
+		Offset: 0,0
+		Start: 1
 ntree65:
-    tree: newtree2
-        Offset: 0,0
-        Start: 0
-    treedown: newtree2chopped
-        Start: 2
-    treehalf: newtree2chopped
-        Start: 3
-    idle: ironore4
-        Start: 9 
-        
+	tree: newtree2
+		Offset: 0,0
+		Start: 0
+	treedown: newtree2chopped
+		Start: 2
+	treehalf: newtree2chopped
+		Start: 3
+	idle: ironore4
+		Start: 9 
+		
 ntree71:
-    idle: newtree3
-        Offset: 0,0
-        Start: 4
+	idle: newtree3
+		Offset: 0,0
+		Start: 4
 ntree72:
-    idle: newtree3
-        Offset: 0,0 
-        Start: 3
+	idle: newtree3
+		Offset: 0,0 
+		Start: 3
 ntree73:
-    idle: newtree3
-        Offset: 0,0
-        Start: 2
+	idle: newtree3
+		Offset: 0,0
+		Start: 2
 ntree74: 
-    idle: newtree3
-        Offset: 0,0
-        Start: 1
+	idle: newtree3
+		Offset: 0,0
+		Start: 1
 ntree75:
-    tree: newtree3
-        Offset: 0,0
-        Start: 0
-    treedown: newtree2chopped
-        Start: 0
-    treehalf: newtree2chopped
-        Start: 1
-    idle: ironore4
-        Start: 9 
-        
+	tree: newtree3
+		Offset: 0,0
+		Start: 0
+	treedown: newtree2chopped
+		Start: 0
+	treehalf: newtree2chopped
+		Start: 1
+	idle: ironore4
+		Start: 9 
+		
 ntree81:
-    idle: newtree4
-        Offset: -5,-12
-        Start: 4
+	idle: newtree4
+		Offset: -5,-12
+		Start: 4
 ntree82:
-    idle: newtree4
-        Offset: -5,-12
-        Start: 3
+	idle: newtree4
+		Offset: -5,-12
+		Start: 3
 ntree83:
-    idle: newtree4
-        Offset: -5,-12
-        Start: 2
+	idle: newtree4
+		Offset: -5,-12
+		Start: 2
 ntree84: 
-    idle: newtree4
-        Offset: -5,-12
-        Start: 1
+	idle: newtree4
+		Offset: -5,-12
+		Start: 1
 ntree85:
-    tree: newtree4
-        Offset: -5,-12
-        Start: 0
-    treedown: newtreechopped
-        Start: 2
-    treehalf: newtreechopped
-        Start: 3
-    idle: ironore4
-        Start: 9 
-        
+	tree: newtree4
+		Offset: -5,-12
+		Start: 0
+	treedown: newtreechopped
+		Start: 2
+	treehalf: newtreechopped
+		Start: 3
+	idle: ironore4
+		Start: 9 
+		
 mwcamel:
 	stand: mwcamel
-        Start: 122
+		Start: 122
 		Facings: 8
 	run: mwcamel
 		Start: 0
@@ -265,11 +277,11 @@ mwcamel:
 		Facings: 8
 		Tick: 100
 	shoot: mwcamel
-        Tick: 100
+		Tick: 100
 		Start: 66
 		Length: 7
 		Facings: 8
-    die1: mwcamel
+	die1: mwcamel
 		Start: 132
 		Length: 13
 		Tick: 120
@@ -278,20 +290,20 @@ mwcamel:
 		Start: 76
 		Length: 14
 		Tick: 80
-    idle1: mwcamel
-        Tick: 100
+	idle1: mwcamel
+		Tick: 100
 		Start: 150
 		Length: 7
-        Facings: 8
-    idle2: mwcamel
-        Tick: 500
+		Facings: 8
+	idle2: mwcamel
+		Tick: 500
 		Start: 206
 		Length: 7
-        Facings: 8
-        
+		Facings: 8
+		
 mwcameltrader:
 	stand: 
-        Start: 146
+		Start: 146
 		Facings: 8
 	run: 
 		Start: 0
@@ -310,7 +322,7 @@ mwcameltrader:
 	# large hit
 	die2: splatterdead
 		Length: *
-        Tick: 80
+		Tick: 80
 	# poision
 	die3: 
 		Start: 187
@@ -326,7 +338,7 @@ mwcameltrader:
 		Length: 4
 		Tick: 1600
 		ZOffset: -511
-    die5: burningman
-        Length: *
-        Tick: 80
-        
+	die5: burningman
+		Length: *
+		Tick: 80
+		

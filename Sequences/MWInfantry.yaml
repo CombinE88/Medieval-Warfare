@@ -1,15 +1,145 @@
+transporter:
+	stunned: sulm4
+		ZOffset: 125
+		Start: 312
+		Length: 2
+		Tick: 200
+	stand: mwcivconst
+		Start: 146
+		Facings: 8
+	run: mwcivconst
+		Start: 0
+		Length: 8
+		Facings: 8
+		Tick: 100
+	panic-stand: mwcivconst
+		Start: 135
+		Facings: 8
+	panic-run: mwcivconst
+		Start: 65
+		Length: 8
+		Facings: 8
+		Tick: 100
+	standempty: mwciv9
+		Start: 146
+		Facings: 8
+	runempty: mwciv9
+		Start: 0
+		Length: 8
+		Facings: 8
+		Tick: 100
+	panic-standempty: mwciv9
+		Start: 135
+		Facings: 8
+	panic-runempty: mwciv9
+		Start: 65
+		Length: 8
+		Facings: 8
+		Tick: 100
+	die1: mwciv9
+		Start: 156
+		Length: 15
+		Tick: 80
+	# large hit
+	die2: splatterdead
+		Length: *
+		Tick: 80
+	# poision
+	die3: mwciv9
+		Start: 187
+		Length: 15
+		Tick: 80
+	# ballista
+	die4: mwciv9
+		Start: 203
+		Length: 11
+		Tick: 80
+	die-crushed: e1rot
+		Start: 16
+		Length: 4
+		Tick: 1600
+		ZOffset: -511
+	die5: burningman
+		Length: *
+		Tick: 80
+
+sultransporter:
+	stunned: sulm4
+		ZOffset: 125
+		Start: 312
+		Length: 2
+		Tick: 200
+	stand: mwciv9sul
+		Start: 146
+		Facings: 8
+	run: mwciv9sul
+		Start: 0
+		Length: 8
+		Facings: 8
+		Tick: 100
+	panic-stand: mwciv9sul
+		Start: 135
+		Facings: 8
+	panic-run: mwciv9sul
+		Start: 65
+		Length: 8
+		Facings: 8
+		Tick: 100
+	standempty: mwciv9
+		Start: 146
+		Facings: 8
+	runempty: mwciv9
+		Start: 0
+		Length: 8
+		Facings: 8
+		Tick: 100
+	panic-standempty: mwciv9
+		Start: 135
+		Facings: 8
+	panic-runempty: mwciv9
+		Start: 65
+		Length: 8
+		Facings: 8
+		Tick: 100
+	die1: mwciv9
+		Start: 156
+		Length: 15
+		Tick: 80
+	# large hit
+	die2: splatterdead
+		Length: *
+		Tick: 80
+	# poision
+	die3: mwciv9
+		Start: 187
+		Length: 15
+		Tick: 80
+	# ballista
+	die4: mwciv9
+		Start: 203
+		Length: 11
+		Tick: 80
+	die-crushed: e1rot
+		Start: 16
+		Length: 4
+		Tick: 1600
+		ZOffset: -511
+	die5: burningman
+		Length: *
+		Tick: 80
+		
 koenig:
-    make: koenig
+	make: koenig
 		Start: 176
 		Length: 13
 		Tick: 80
-    stand-dead: koenig
+	stand-dead: koenig
 		Start: 172
 	idle: koenig
-        Start: 122
+		Start: 122
 		Facings: 8
-    stand: koenig
-        Start: 122
+	stand: koenig
+		Start: 122
 		Facings: 8
 	move: koenig
 		Start: 0
@@ -17,19 +147,19 @@ koenig:
 		Facings: 8
 		Tick: 100
 	shoot: koenig
-        Tick: 100
+		Tick: 100
 		Start: 66
 		Length: 7
 		Facings: 8
-    idle1: koenig
-        Tick: 100
+	idle1: koenig
+		Tick: 100
 		Start: 190
 		Length: 22
-    idle2: koenig
-        Tick: 100
+	idle2: koenig
+		Tick: 100
 		Start: 210
 		Length: 17
-    die1: koenig
+	die1: koenig
 		Start: 132
 		Length: 16
 		Tick: 80
@@ -57,7 +187,7 @@ koenig:
  
 deathdealer:
 	stand: deathdealer
-        Start: 122
+		Start: 122
 		Facings: 8
 	run: deathdealer
 		Start: 0
@@ -65,7 +195,7 @@ deathdealer:
 		Facings: 8
 		Tick: 100
 	idle1: deathdealer
-        Tick: 100
+		Tick: 100
 		Start: 66
 		Length: 7
 		Facings: 8
@@ -76,7 +206,7 @@ deathdealer:
 	# large hit
 	die2: splatterdead
 		Length: *
-        Tick: 80
+		Tick: 80
 	# poision
 	die3: deathdealer
 		Start: 163
@@ -92,15 +222,20 @@ deathdealer:
 		Length: 4
 		Tick: 1600
 		ZOffset: -511
-    die5: burningman
-        Length: *
-        Tick: 80
+	die5: burningman
+		Length: *
+		Tick: 80
 	icon: ne1icon.shp
 		AddExtension: False
  
 e1new:
+	stunned: sulm4
+		ZOffset: 125
+		Start: 312
+		Length: 2
+		Tick: 200
 	stand: newe1
-        Start: 122
+		Start: 122
 		Facings: 8
 	run: newe1
 		Start: 0
@@ -108,16 +243,16 @@ e1new:
 		Facings: 8
 		Tick: 100
 	shoot: newe1
-        Tick: 100
+		Tick: 100
 		Start: 66
 		Length: 7
 		Facings: 8
-    idle1: newe1
-        Tick: 100
+	idle1: newe1
+		Tick: 100
 		Start: 211
 		Length: 21
-    idle2: newe1
-        Tick: 100
+	idle2: newe1
+		Tick: 100
 		Start: 190
 		Length: 22
 	die1: newe1
@@ -127,7 +262,7 @@ e1new:
 	# large hit
 	die2: splatterdead
 		Length: *
-        Tick: 80
+		Tick: 80
 	# poision
 	die3: newe1
 		Start: 163
@@ -143,47 +278,52 @@ e1new:
 		Length: 4
 		Tick: 1600
 		ZOffset: -511
-    die5: burningman
-        Length: *
-        Tick: 80
+	die5: burningman
+		Length: *
+		Tick: 80
 	icon: ne1icon.shp
 		AddExtension: False
-        
+		
 engeneer:
+	stunned: sulm4
+		ZOffset: 125
+		Start: 312
+		Length: 2
+		Tick: 200
 	stand: baumei
-        Start: 122
+		Start: 122
 		Facings: 8
 	run: baumei
 		Start: 0
 		Length: 8
 		Facings: 8
 		Tick: 100
-    runfast: baumei
-        Start: 254
+	runfast: baumei
+		Start: 254
 		Length: 8
 		Facings: 8
 		Tick: 100
 	shoot: baumei
-        Tick: 100
+		Tick: 150
 		Start: 66
 		Length: 7
 		Facings: 8
 	idle1: baumei
-        Tick: 100
+		Tick: 100
 		Start: 190
 		Length: 35
-    idle2: baumei
-        Tick: 100
+	idle2: baumei
+		Tick: 100
 		Start: 222
 		Length: 32
-    die1: baumei
+	die1: baumei
 		Start: 130
 		Length: 17
 		Tick: 80
 	# large hit
 	die2: splatterdead
 		Length: *
-        Tick: 80
+		Tick: 80
 	# poision
 	die3: baumei
 		Start: 163
@@ -200,14 +340,19 @@ engeneer:
 		Tick: 1600
 		ZOffset: -511
 	die5: burningman
-        Length: *
-        Tick: 80
-    icon: ne5icon.shp
-		AddExtension: False        
-        
+		Length: *
+		Tick: 80
+	icon: ne5icon.shp
+		AddExtension: False		
+		
 e2new:
+	stunned: sulm4
+		ZOffset: 125
+		Start: 312
+		Length: 2
+		Tick: 200
 	stand: e2new
-        Start: 122
+		Start: 122
 		Facings: 8
 	run: e2new
 		Start: 0
@@ -215,26 +360,26 @@ e2new:
 		Facings: 8
 		Tick: 100
 	shoot: e2new
-        Tick: 100
+		Tick: 100
 		Start: 66
 		Length: 7
 		Facings: 8
 	idle1: e2new
-        Tick: 100
+		Tick: 100
 		Start: 195
 		Length: 12
-    idle2: e2new
-        Tick: 100
+	idle2: e2new
+		Tick: 100
 		Start: 206
 		Length: 16
-    die1: e2new
+	die1: e2new
 		Start: 131
 		Length: 16
 		Tick: 80
 	# large hit
 	die2: splatterdead
 		Length: *
-        Tick: 80
+		Tick: 80
 	# poision
 	die3: e2new
 		Start: 163
@@ -251,15 +396,20 @@ e2new:
 		Tick: 1600
 		ZOffset: -511
 	die5: burningman
-        Length: *
-        Tick: 80
-    icon: ne3icon.shp
-        Offset: 0,0,0
+		Length: *
+		Tick: 80
+	icon: ne3icon.shp
+		Offset: 0,0,0
 		AddExtension: False
-        
+		
 newcomm:
+	stunned: sulm4
+		ZOffset: 125
+		Start: 312
+		Length: 2
+		Tick: 200
 	stand: newcomm
-        Start: 122
+		Start: 122
 		Facings: 8
 	move: newcomm
 		Start: 0
@@ -267,20 +417,20 @@ newcomm:
 		Facings: 8
 		Tick: 100
 	shoot: newcomm
-        Tick: 40
+		Tick: 40
 		Start: 66
 		Length: 56
 	idle: newcomm
 		Start: 122
 		Facings: 8
-    die1: newcomm
+	die1: newcomm
 		Start: 131
 		Length: 16
 		Tick: 80
 	# large hit
 	die2: splatterdead
 		Length: *
-        Tick: 80
+		Tick: 80
 	# poision
 	die3: newcomm
 		Start: 163
@@ -297,78 +447,88 @@ newcomm:
 		Tick: 1600
 		ZOffset: -511
 	die5: burningman
-        Length: *
-        Tick: 80
-    icon: juggicon.shp
-        Offset: 0,0,0
+		Length: *
+		Tick: 80
+	icon: juggicon.shp
+		Offset: 0,0,0
 		AddExtension: False
-    empty: ironore4
-        Tick: 1000
-        Start: 9 
-        
+	empty: ironore4
+		Tick: 1000
+		Start: 9 
+		
 e2newv2:
+	stunned: sulm4
+		ZOffset: 125
+		Start: 312
+		Length: 2
+		Tick: 200
 	stand: e2newv2
-        Start: 122
+		Start: 122
 		Facings: 8
-        Offset: 0,-6,0
+		Offset: 0,-6,0
 	run: e2newv2
 		Start: 0
 		Length: 8
 		Facings: 8
 		Tick: 100
-        Offset: 0,-6,0
+		Offset: 0,-6,0
 	shoot: e2newv2
-        Tick: 100
+		Tick: 100
 		Start: 66
 		Length: 7
 		Facings: 8
-        Offset: 0,-6,0
+		Offset: 0,-6,0
 	idle1: e2newv2
-        Tick: 100
+		Tick: 100
 		Start: 195
 		Length: 12
-        Offset: 0,-6,0
-    idle2: e2newv2
-        Tick: 100
+		Offset: 0,-6,0
+	idle2: e2newv2
+		Tick: 100
 		Start: 206
 		Length: 16
-        Offset: 0,-6,0
-    die1: e2newv2
+		Offset: 0,-6,0
+	die1: e2newv2
 		Start: 131
 		Length: 16
 		Tick: 80
-        Offset: 0,-6,0
+		Offset: 0,-6,0
 	# large hit
 	die2: splatterdead
 		Length: *
-        Tick: 80
+		Tick: 80
 	# poision
 	die3: e2newv2
 		Start: 163
 		Length: 15
 		Tick: 80
-        Offset: 0,-6,0
+		Offset: 0,-6,0
 	# ballista
 	die4: e2newv2
 		Start: 180
 		Length: 11
 		Tick: 80
-        Offset: 0,-6,0
+		Offset: 0,-6,0
 	die-crushed: e1rot
 		Start: 16
 		Length: 4
 		Tick: 1600
 		ZOffset: -511
 	die5: burningman
-        Length: *
-        Tick: 80
-    icon: ne3icona.shp
-        Offset: 0,0,0
+		Length: *
+		Tick: 80
+	icon: ne3icona.shp
+		Offset: 0,0,0
 		AddExtension: False
-        
+		
 firmag:
+	stunned: sulm4
+		ZOffset: 125
+		Start: 312
+		Length: 2
+		Tick: 200
 	stand: frmge
-        Start: 122
+		Start: 122
 		Facings: 8
 	run: frmge
 		Start: 0
@@ -376,26 +536,26 @@ firmag:
 		Facings: 8
 		Tick: 100
 	shoot: frmge
-        Tick: 100
+		Tick: 100
 		Start: 66
 		Length: 7
 		Facings: 8
 	idle1: frmge
-        Tick: 100
+		Tick: 100
 		Start: 195
 		Length: 23
-    idle2: frmge
-        Tick: 100
+	idle2: frmge
+		Tick: 100
 		Start: 218
 		Length: 23
-    die1: frmge
+	die1: frmge
 		Start: 131
 		Length: 16
 		Tick: 80
 	# large hit
 	die2: splatterdead
 		Length: *
-        Tick: 80
+		Tick: 80
 	# poision
 	die3: frmge
 		Start: 163
@@ -412,16 +572,20 @@ firmag:
 		Tick: 1600
 		ZOffset: -511
 	die5: burningman
-        Length: *
-        Tick: 80
-    icon: nfrmgicon.shp
-        Offset: 0,0,0
+		Length: *
+		Tick: 80
+	icon: nfrmgicon.shp
+		Offset: 0,0,0
 		AddExtension: False
 
 thief:
-    Defaults:
+	stunned: sulm4
+		ZOffset: 125
+		Start: 312
+		Length: 2
+		Tick: 200
 	stand: thief
-        Start: 122
+		Start: 122
 		Facings: 8
 	run: thief
 		Start: 0
@@ -429,36 +593,36 @@ thief:
 		Facings: 8
 		Tick: 100
 	attack: thief
-        Tick: 100
+		Tick: 100
 		Start: 66
 		Length: 7
 		Facings: 8
-    knifeattack: thief
-        Tick: 100
+	knifeattack: thief
+		Tick: 100
 		Start: 66
 		Length: 7
 		Facings: 8
-    fireattack: thief
-        Tick: 100
+	fireattack: thief
+		Tick: 100
 		Start: 300
 		Length: 7
 		Facings: 8
 	idle1: thief
-        Tick: 200
+		Tick: 200
 		Start: 190
 		Length: 9
-    idle2: thief
-        Tick: 100
+	idle2: thief
+		Tick: 100
 		Start: 199
 		Length: 11
-    die1: thief
+	die1: thief
 		Start: 132
 		Length: 15
 		Tick: 80
 	# large hit
 	die2: splatterdead
 		Length: *
-        Tick: 80
+		Tick: 80
 	# poision
 	die3: thief
 		Start: 163
@@ -475,14 +639,19 @@ thief:
 		Tick: 1600
 		ZOffset: -511
 	die5: burningman
-        Length: *
-        Tick: 80
-    icon: nstnkicon.shp
+		Length: *
+		Tick: 80
+	icon: nstnkicon.shp
 		AddExtension: False
-        
+		
 e3new:
+	stunned: sulm4
+		ZOffset: 125
+		Start: 312
+		Length: 2
+		Tick: 200
 	stand: e3new
-        Start: 122
+		Start: 122
 		Facings: 8
 	run: e3new
 		Start: 0
@@ -490,26 +659,26 @@ e3new:
 		Facings: 8
 		Tick: 100
 	shoot: e3new
-        Tick: 100
+		Tick: 100
 		Start: 66
 		Length: 7
 		Facings: 8
-    idle1: e3new
-        Tick: 100
+	idle1: e3new
+		Tick: 100
 		Start: 190
 		Length: 22
-    idle2: e3new
-        Tick: 100
+	idle2: e3new
+		Tick: 100
 		Start: 210
 		Length: 17
-    die1: e3new
+	die1: e3new
 		Start: 132
 		Length: 15
 		Tick: 80
 	# large hit
 	die2: splatterdead
 		Length: *
-        Tick: 80
+		Tick: 80
 	# poision
 	die3: e3new
 		Start: 163
@@ -526,14 +695,19 @@ e3new:
 		Tick: 1600
 		ZOffset: -511
 	die5: burningman
-        Length: *
-        Tick: 80
-    icon: ne1icona.shp
+		Length: *
+		Tick: 80
+	icon: ne1icona.shp
 		AddExtension: False
-        
+		
 e3newv2:
+	stunned: sulm4
+		ZOffset: 125
+		Start: 312
+		Length: 2
+		Tick: 200
 	stand: e3newv2
-        Start: 122
+		Start: 122
 		Facings: 8
 	run: e3newv2
 		Start: 0
@@ -541,26 +715,26 @@ e3newv2:
 		Facings: 8
 		Tick: 100
 	shoot: e3newv2
-        Tick: 100
+		Tick: 100
 		Start: 66
 		Length: 7
 		Facings: 8
-    idle1: e3newv2
-        Tick: 100
+	idle1: e3newv2
+		Tick: 100
 		Start: 190
 		Length: 22
-    idle2: e3newv2
-        Tick: 100
+	idle2: e3newv2
+		Tick: 100
 		Start: 210
 		Length: 17
-    die1: e3newv2
+	die1: e3newv2
 		Start: 132
 		Length: 15
 		Tick: 80
 	# large hit
 	die2: splatterdead
 		Length: *
-        Tick: 80
+		Tick: 80
 	# poision
 	die3: e3newv2
 		Start: 163
@@ -577,14 +751,19 @@ e3newv2:
 		Tick: 1600
 		ZOffset: -511
 	die5: burningman
-        Length: *
-        Tick: 80
-    icon: ne1icon.shp
+		Length: *
+		Tick: 80
+	icon: ne1icon.shp
 		AddExtension: False
-        
+		
 mongolknife:
+	stunned: sulm4
+		ZOffset: 125
+		Start: 312
+		Length: 2
+		Tick: 200
 	stand: mongolknife
-        Start: 122
+		Start: 122
 		Facings: 8
 	run: mongolknife
 		Start: 0
@@ -592,26 +771,26 @@ mongolknife:
 		Facings: 8
 		Tick: 100
 	shoot: mongolknife
-        Tick: 100
+		Tick: 100
 		Start: 66
 		Length: 7
 		Facings: 8
-    idle1: mongolknife
-        Tick: 100
+	idle1: mongolknife
+		Tick: 100
 		Start: 195
 		Length: 9
-    idle2: mongolknife
-        Tick: 100
+	idle2: mongolknife
+		Tick: 100
 		Start: 204
 		Length: 7
-    die1: mongolknife
+	die1: mongolknife
 		Start: 132
 		Length: 15
 		Tick: 80
 	# large hit
 	die2: splatterdead
 		Length: *
-        Tick: 80
+		Tick: 80
 	# poision
 	die3: mongolknife
 		Start: 163
@@ -628,14 +807,19 @@ mongolknife:
 		Tick: 1600
 		ZOffset: -511
 	die5: burningman
-        Length: *
-        Tick: 80
-    icon: banditicon.shp
+		Length: *
+		Tick: 80
+	icon: banditicon.shp
 		AddExtension: False
-        
+		
 mongol:
+	stunned: sulm4
+		ZOffset: 125
+		Start: 312
+		Length: 2
+		Tick: 200
 	stand: mongol
-        Start: 122
+		Start: 122
 		Facings: 8
 	run: mongol
 		Start: 0
@@ -643,26 +827,26 @@ mongol:
 		Facings: 8
 		Tick: 100
 	shoot: mongol
-        Tick: 100
+		Tick: 100
 		Start: 66
 		Length: 7
 		Facings: 8
-    idle1: mongol
-        Tick: 100
+	idle1: mongol
+		Tick: 100
 		Start: 190
 		Length: 22
-    idle2: mongol
-        Tick: 100
+	idle2: mongol
+		Tick: 100
 		Start: 210
 		Length: 17
-    die1: mongol
+	die1: mongol
 		Start: 132
 		Length: 15
 		Tick: 80
 	# large hit
 	die2: splatterdead
 		Length: *
-        Tick: 80
+		Tick: 80
 	# poision
 	die3: mongol
 		Start: 163
@@ -679,14 +863,19 @@ mongol:
 		Tick: 1600
 		ZOffset: -511
 	die5: burningman
-        Length: *
-        Tick: 80
-    icon: banditicon.shp
+		Length: *
+		Tick: 80
+	icon: banditicon.shp
 		AddExtension: False 
-        
+		
 e4new:
+	stunned: sulm4
+		ZOffset: 125
+		Start: 312
+		Length: 2
+		Tick: 200
 	stand: e4new
-        Start: 122
+		Start: 122
 		Facings: 8
 	run: e4new
 		Start: 0
@@ -694,25 +883,25 @@ e4new:
 		Facings: 8
 		Tick: 100
 	shoot: e4new
-        Tick: 100
+		Tick: 100
 		Start: 66
 		Length: 7
 		Facings: 8
 	idle1: e4new
-        Tick: 100
+		Tick: 100
 		Start: 190
 		Length: 35
-    idle2: e4new
-        Tick: 100
+	idle2: e4new
+		Tick: 100
 		Start: 224
 		Length: 21
-    die1: e4new
+	die1: e4new
 		Start: 132
 		Length: 15
 		Tick: 80
 	die2: splatterdead
 		Length: *
-        Tick: 80
+		Tick: 80
 	# poision
 	die3: e4new
 		Start: 163
@@ -729,14 +918,19 @@ e4new:
 		Tick: 1600
 		ZOffset: -511
 	die5: burningman
-        Length: *
-        Tick: 80
-    icon: ne2icona.shp
+		Length: *
+		Tick: 80
+	icon: ne2icona.shp
 		AddExtension: False
-        
+		
 e4newv2:
+	stunned: sulm4
+		ZOffset: 125
+		Start: 312
+		Length: 2
+		Tick: 200
 	stand: e4newv2
-        Start: 122
+		Start: 122
 		Facings: 8
 	run: e4newv2
 		Start: 0
@@ -744,25 +938,25 @@ e4newv2:
 		Facings: 8
 		Tick: 100
 	shoot: e4newv2
-        Tick: 100
+		Tick: 100
 		Start: 66
 		Length: 7
 		Facings: 8
 	idle1: e4newv2
-        Tick: 100
+		Tick: 100
 		Start: 190
 		Length: 35
-    idle2: e4newv2
-        Tick: 100
+	idle2: e4newv2
+		Tick: 100
 		Start: 224
 		Length: 21
-    die1: e4newv2
+	die1: e4newv2
 		Start: 132
 		Length: 15
 		Tick: 80
 	die2: splatterdead
 		Length: *
-        Tick: 80
+		Tick: 80
 	# poision
 	die3: e4newv2
 		Start: 163
@@ -779,14 +973,19 @@ e4newv2:
 		Tick: 1600
 		ZOffset: -511
 	die5: burningman
-        Length: *
-        Tick: 80
-    icon: ne2icon.shp
+		Length: *
+		Tick: 80
+	icon: ne2icon.shp
 		AddExtension: False
 
 rmbonew:
+	stunned: sulm4
+		ZOffset: 125
+		Start: 312
+		Length: 2
+		Tick: 200
 	stand: rmbonew
-        Start: 122
+		Start: 122
 		Facings: 8
 	run: rmbonew
 		Start: 0
@@ -794,26 +993,26 @@ rmbonew:
 		Facings: 8
 		Tick: 100
 	shoot: rmbonew
-        Tick: 100
+		Tick: 100
 		Start: 66
 		Length: 7
 		Facings: 8
 	idle1: rmbonew
-        Tick: 100
+		Tick: 100
 		Start: 190
 		Length: 14
-    idle2: rmbonew
-        Tick: 100
+	idle2: rmbonew
+		Tick: 100
 		Start: 204
 		Length: 26
-    die1: rmbonew
+	die1: rmbonew
 		Start: 132
 		Length: 15
 		Tick: 80
 	# large hit
 	die2: splatterdead
 		Length: *
-        Tick: 80
+		Tick: 80
 	# poision
 	die3: rmbonew
 		Start: 163
@@ -830,14 +1029,19 @@ rmbonew:
 		Tick: 1600
 		ZOffset: -511
 	die5: burningman
-        Length: *
-        Tick: 80
-    icon: nemboicon.shp
+		Length: *
+		Tick: 80
+	icon: nemboicon.shp
 		AddExtension: False  
-        
+		
 e5new:
+	stunned: sulm4
+		ZOffset: 125
+		Start: 312
+		Length: 2
+		Tick: 200
 	stand: e5new
-        Start: 149
+		Start: 149
 		Facings: 8
 	run: e5new
 		Start: 0
@@ -845,26 +1049,26 @@ e5new:
 		Facings: 8
 		Tick: 100
 	shoot: e5new
-        Tick: 120
+		Tick: 120
 		Start: 66
 		Length: 10
 		Facings: 8
 	idle1: e5new
-        Tick: 100
+		Tick: 100
 		Start: 215
 		Length: 21
-    idle2: e5new
-        Tick: 100
+	idle2: e5new
+		Tick: 100
 		Start: 215
 		Length: 21
-    die1: e5new
+	die1: e5new
 		Start: 155
 		Length: 17
 		Tick: 80
 	# large hit
 	die2: splatterdead
 		Length: *
-        Tick: 80
+		Tick: 80
 	# poision
 	die3: e5new
 		Start: 188
@@ -881,40 +1085,45 @@ e5new:
 		Tick: 1600
 		ZOffset: -511
 	die5: burningman
-        Length: *
-        Tick: 80
-    icon: ne4icon.shp
+		Length: *
+		Tick: 80
+	icon: ne4icon.shp
 		AddExtension: False
-        
+		
 e8farmer:
+	stunned: sulm4
+		ZOffset: 125
+		Start: 312
+		Length: 2
+		Tick: 200
 	idle: e8farmer
-        Start: 122
+		Start: 122
 		Facings: 8
-    stand: e8farmer
-        Start: 122
+	stand: e8farmer
+		Start: 122
 		Facings: 8
-	move: e8farmer
+	run: e8farmer
 		Start: 0
 		Length: 8
 		Facings: 8
 		Tick: 100
 	harvest: e8farmer
-        Tick: 100
+		Tick: 100
 		Start: 66
 		Length: 7
 		Facings: 8
-    dock: e8farmer
+	dock: e8farmer
 		Start: 320
 		Length: 21
-        Tick: 80
+		Tick: 80
 	dock-loop: e8farmer
 		Start: 341
-    empty-move: e8farmer
+	empty-move: e8farmer
 		Start: 0
 		Length: 8
 		Facings: 8
 		Tick: 100
-    empty-idle: e8farmer
+	empty-idle: e8farmer
 		Start: 122
 		Facings: 8
 	empty-harvest: e8farmer
@@ -922,27 +1131,27 @@ e8farmer:
 		Start: 66
 		Length: 7
 		Facings: 8
-    full-move: e8farmer
+	full-run: e8farmer
 		Start: 0
 		Length: 8
 		Facings: 8
 		Tick: 100
-    full-idle: e8farmer
+	full-idle: e8farmer
 		Start: 312
 		Facings: 8
 	full-harvest: e8farmer
 		Start: 256
-        Facings: 8
+		Facings: 8
 		Length: 7
-        Tick: 100  
-    die1: e8farmer
+		Tick: 100  
+	die1: e8farmer
 		Start: 131
 		Length: 16
 		Tick: 80
-    # large hit
+	# large hit
 	die2: splatterdead
 		Length: *
-        Tick: 80
+		Tick: 80
 	# poision
 	die3: e8farmer
 		Start: 163
@@ -959,18 +1168,23 @@ e8farmer:
 		Tick: 1600
 		ZOffset: -511
 	die5: burningman
-        Length: *
-        Tick: 80
-    icon: farmericon.shp
-        Offset: 0,0,0
+		Length: *
+		Tick: 80
+	icon: farmericon.shp
+		Offset: 0,0,0
 		AddExtension: False
-        
+		
 bummler:
+	stunned: sulm4
+		ZOffset: 125
+		Start: 312
+		Length: 2
+		Tick: 200
 	idle: bummler
-        Start: 122
+		Start: 122
 		Facings: 8
-    stand: bummler
-        Start: 122
+	stand: bummler
+		Start: 122
 		Facings: 8
 	move: bummler
 		Start: 0
@@ -978,24 +1192,24 @@ bummler:
 		Facings: 8
 		Tick: 100
 	harvest: bummler
-        Tick: 100
+		Tick: 100
 		Start: 66
 		Length: 7
 		Facings: 8
-    dock: bummler
+	dock: bummler
 		Start: 195
 		Length: 15
-        Tick: 80
+		Tick: 80
 	dock-loop: bummler
 		Start: 211
-    die1: bummler
+	die1: bummler
 		Start: 131
 		Length: 16
 		Tick: 80
-    # large hit
+	# large hit
 	die2: splatterdead
 		Length: *
-        Tick: 80
+		Tick: 80
 	# poision
 	die3: bummler
 		Start: 163
@@ -1012,15 +1226,20 @@ bummler:
 		Tick: 1600
 		ZOffset: -511
 	die5: burningman
-        Length: *
-        Tick: 80
-    icon: bummlericon.shp
-        Offset: 0,0,0
+		Length: *
+		Tick: 80
+	icon: bummlericon.shp
+		Offset: 0,0,0
 		AddExtension: False
-        
+		
 mwcivconst:
+	stunned: sulm4
+		ZOffset: 125
+		Start: 312
+		Length: 2
+		Tick: 200
 	stand: mwcivconst
-        Start: 146
+		Start: 146
 		Facings: 8
 	run: mwcivconst
 		Start: 0
@@ -1028,7 +1247,7 @@ mwcivconst:
 		Facings: 8
 		Tick: 100
 	panic-stand: mwcivconst
-        Start: 135
+		Start: 135
 		Facings: 8
 	panic-run: mwcivconst
 		Start: 65
@@ -1042,7 +1261,7 @@ mwcivconst:
 	# large hit
 	die2: splatterdead
 		Length: *
-        Tick: 80
+		Tick: 80
 	# poision
 	die3: mwcivconst
 		Start: 187
@@ -1058,17 +1277,22 @@ mwcivconst:
 		Length: 4
 		Tick: 1600
 		ZOffset: -511
-    die5: burningman
-        Length: *
-        Tick: 80
-    make: mwcivconst
-        Start: 219
-        Length: 58
+	die5: burningman
+		Length: *
+		Tick: 80
+	make: mwcivconst
+		Start: 219
+		Length: 58
 		Tick: 60
-        
+		
 mwlumber:
+	stunned: sulm4
+		ZOffset: 125
+		Start: 312
+		Length: 2
+		Tick: 200
 	stand: 
-        Start: 146
+		Start: 146
 		Facings: 8
 	run: 
 		Start: 0
@@ -1076,7 +1300,7 @@ mwlumber:
 		Facings: 8
 		Tick: 100
 	panic-stand: 
-        Start: 135
+		Start: 135
 		Facings: 8
 	attack: 
 		Start: 65
@@ -1090,7 +1314,7 @@ mwlumber:
 	# large hit
 	die2: splatterdead
 		Length: *
-        Tick: 80
+		Tick: 80
 	# poision
 	die3: 
 		Start: 187
@@ -1106,11 +1330,11 @@ mwlumber:
 		Length: 4
 		Tick: 1600
 		ZOffset: -511
-    die5: burningman
-        Length: *
-        Tick: 80
+	die5: burningman
+		Length: *
+		Tick: 80
 	standwood: mwlumbersaw
-        Start: 146
+		Start: 146
 		Facings: 8
 	runwood: mwlumbersaw
 		Start: 0
@@ -1122,5 +1346,5 @@ mwlumber:
 		Length: 8
 		Facings: 8
 		Tick: 120
-    idle: ironore4
-        Start: 9 
+	idle: ironore4
+		Start: 9 

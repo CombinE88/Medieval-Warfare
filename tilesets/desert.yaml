@@ -2,7 +2,7 @@ General:
 	Name: Desert
 	Id: DESERT
 	Palette: desert.pal
-	EditorTemplateOrder: Terrain, Debris, Road, Cliffs, Beach, River, Bridge
+	EditorTemplateOrder: Terrain, Debris, Road, Cliffs, Water Cliffs, Beach, River, Bridge
 	HeightDebugColors: 880000
 
 Terrain:
@@ -46,19 +46,19 @@ Terrain:
 		AcceptsSmudgeType: Crater, Scorch
 		Color: D67A48
 		RestrictPlayerColor: true
-    TerrainType@CROPS:
+	TerrainType@CROPS:
 		Type: Crops
 		TargetTypes: Ground
 		AcceptsSmudgeType: Crater, Scorch
 		Color: 55C785
 		RestrictPlayerColor: true
-    TerrainType@WOOD:
+	TerrainType@WOOD:
 		Type: Wood
 		TargetTypes: Ground
 		AcceptsSmudgeType: Crater, Scorch
 		Color: A18739
 		RestrictPlayerColor: true
-    TerrainType@LOOT:
+	TerrainType@LOOT:
 		Type: Loot
 		TargetTypes: Ground
 		AcceptsSmudgeType: Crater, Scorch
@@ -79,7 +79,12 @@ Terrain:
 		IsWater: True
 		Color: 5DA5CE
 		RestrictPlayerColor: true
-
+	TerrainType@Palace:
+		Type: Palace
+		TargetTypes: Ground
+		AcceptsSmudgeType: Crater, Scorch
+		RestrictPlayerColor: true
+	
 Templates:
 	Template@255:
 		Id: 255
@@ -2203,3 +2208,728 @@ Templates:
 		Tiles:
 			0: Rock
 			1: Rock
+	Template@900:
+		Id: 900
+		Images: radt01.des
+		Size: 4,3
+		Category: River
+		Tiles:
+			0: Rock
+			1: Rock
+			2: River
+			3: Rock
+			4: Rock
+			5: River
+			6: River
+			7: River
+			8: River
+			9: Rock
+			10: Tree
+			11: Rock
+	Template@901:
+		Id: 901
+		Images: radt02.des
+		Size: 2,4
+		Category: River
+		Tiles:
+			0: Rock
+			1: River
+			2: River
+			3: Rock
+			4: Rock
+			5: River
+			6: Rough
+			7: River
+	Template@902:
+		Id: 902
+		Images: radt03.des
+		Size: 3,3
+		Category: River
+		Tiles:
+			0: Rough
+			1: Tree
+			2: River
+			3: River
+			4: River
+			5: River
+			6: Tree
+			7: River
+			8: Rock
+	Template@903:
+		Id: 903
+		Images: radt04.des
+		Size: 3,4
+		Category: River
+		Tiles:
+			0: Rock
+			1: Rock
+			2: Rough
+			3: River
+			4: River
+			5: Rough
+			6: Rock
+			7: Rock
+			8: River
+			9: Rough
+			10: River
+	Template@600:
+		Id: 600
+		Images: raf01.des
+		Size: 3,3
+		Category: Bridge
+		Tiles:
+			0: Rough
+			1: Road
+			2: Road
+			3: Beach
+			4: Beach
+			5: Beach
+			6: Beach
+			7: Beach
+			8: Beach
+	Template@601:
+		Id: 601
+		Images: raf02.des
+		Size: 3,3
+		Category: Bridge
+		Tiles:
+			0: Beach
+			1: Beach
+			2: Beach
+			3: Beach
+			4: Beach
+			5: Beach
+			6: Beach
+			7: Beach
+			8: Beach
+	Template@602:
+		Id: 602
+		Images: raf03.des
+		Size: 3,3
+		Category: Bridge
+		Tiles:
+			0: Beach
+			1: Beach
+			2: Beach
+			3: Beach
+			4: Beach
+			5: Beach
+			6: Clear
+			7: Road
+			8: Clear
+	Template@603:
+		Id: 603
+		Images: raf04.des
+		Size: 3,3
+		Category: Bridge
+		Tiles:
+			0: Clear
+			1: Beach
+			2: Beach
+			3: Road
+			4: Beach
+			5: Beach
+			6: Clear
+			7: Beach
+			8: Beach
+	Template@604:
+		Id: 604
+		Images: raf05.des
+		Size: 3,3
+		Category: Bridge
+		Tiles:
+			0: Beach
+			1: Beach
+			2: Beach
+			3: Beach
+			4: Beach
+			5: Beach
+			6: Beach
+			7: Beach
+			8: Beach
+	Template@605:
+		Id: 605
+		Images: raf06.des
+		Size: 3,3
+		Category: Bridge
+		Tiles:
+			0: Beach
+			1: Beach
+			2: Clear
+			3: Beach
+			4: Beach
+			5: Road
+			6: Beach
+			7: Beach
+			8: Clear
+	Template@296:
+		Id: 296
+		Images: rarvm01.des
+		Size: 2,3
+		Category: River
+		Tiles:
+			0: Rock
+			1: Rock
+			2: River
+			3: River
+			4: Rock
+			5: Rock
+	Template@297:
+		Id: 297
+		Images: rarvm02.des
+		Size: 1,3
+		Category: River
+		Tiles:
+			0: Rock
+			1: River
+			2: Rock
+	Template@298:
+		Id: 298
+		Images: rarvm03.des
+		Size: 3,2
+		Category: River
+		Tiles:
+			0: Rock
+			1: River
+			2: Rock
+			3: Rock
+			4: River
+			5: Rock
+	Template@299:
+		Id: 299
+		Images: rarvm04.des
+		Size: 3,1
+		Category: River
+		Tiles:
+			0: Rock
+			1: River
+			2: Rock
+	Template@441:
+		Id: 441
+		Images: rash64.des
+		Size: 2,3
+		Category: Beach
+		Tiles:
+			0: River
+			1: Rough
+			2: River
+			3: River
+			4: River
+			5: Rock
+	Template@422:
+		Id: 422
+		Images: rash65.des
+		Size: 2,3
+		Category: Beach
+		Tiles:
+			0: Rough
+			1: River
+			2: River
+			3: River
+			4: Rock
+			5: River
+	Template@300:
+		Id: 300
+		Images: rawc01.des
+		Size: 2,2
+		Category: Water Cliffs
+		Tiles:
+			0: Rock
+			1: Rock
+			2: Rock
+			3: Rock
+	Template@301:
+		Id: 301
+		Images: rawc02.des
+		Size: 2,3
+		Category: Water Cliffs
+		Tiles:
+			0: Rock
+			1: Rough
+			2: Rock
+			3: Rock
+			4: Rock
+			5: Rock
+	Template@302:
+		Id: 302
+		Images: rawc03.des
+		Size: 2,2
+		Category: Water Cliffs
+		Tiles:
+			0: Rock
+			1: Rock
+			2: Rock
+			3: Rock
+	Template@303:
+		Id: 303
+		Images: rawc04.des
+		Size: 2,2
+		Category: Water Cliffs
+		Tiles:
+			0: Rock
+			1: Rock
+			2: Rock
+			3: Rock
+	Template@304:
+		Id: 304
+		Images: rawc05.des
+		Size: 2,2
+		Category: Water Cliffs
+		Tiles:
+			0: Rock
+			1: Rock
+			2: Rock
+			3: Rock
+	Template@305:
+		Id: 305
+		Images: rawc06.des
+		Size: 2,3
+		Category: Water Cliffs
+		Tiles:
+			0: Rough
+			1: Rock
+			2: Rock
+			3: Rock
+			4: Rock
+	Template@306:
+		Id: 306
+		Images: rawc07.des
+		Size: 2,2
+		Category: Water Cliffs
+		Tiles:
+			0: Rock
+			1: Rock
+			2: Rock
+			3: Rock
+	Template@307:
+		Id: 307
+		Images: rawc08.des
+		Size: 2,2
+		Category: Water Cliffs
+		Tiles:
+			0: Rock
+			1: Rock
+			2: Rock
+			3: Rock
+	Template@308:
+		Id: 308
+		Images: rawc09.des
+		Size: 3,2
+		Category: Water Cliffs
+		Tiles:
+			0: Rock
+			1: Rock
+			2: Rock
+			3: River
+			4: Rock
+			5: Rock
+	Template@309:
+		Id: 309
+		Images: rawc10.des
+		Size: 2,2
+		Category: Water Cliffs
+		Tiles:
+			0: Rock
+			1: Rock
+			2: Rock
+			3: Rock
+	Template@310:
+		Id: 310
+		Images: rawc11.des
+		Size: 2,2
+		Category: Water Cliffs
+		Tiles:
+			0: Rock
+			1: Rock
+			2: Rock
+			3: Rock
+	Template@311:
+		Id: 311
+		Images: rawc12.des
+		Size: 2,2
+		Category: Water Cliffs
+		Tiles:
+			0: Rock
+			1: Rock
+			2: Rock
+			3: Rock
+	Template@312:
+		Id: 312
+		Images: rawc13.des
+		Size: 3,2
+		Category: Water Cliffs
+		Tiles:
+			0: Rock
+			1: Rock
+			2: Rough
+			3: Rock
+			4: Rock
+			5: Clear
+	Template@313:
+		Id: 313
+		Images: rawc14.des
+		Size: 2,2
+		Category: Water Cliffs
+		Tiles:
+			0: Rock
+			1: Beach
+			2: Beach
+	Template@314:
+		Id: 314
+		Images: rawc15.des
+		Size: 2,2
+		Category: Water Cliffs
+		Tiles:
+			0: Rock
+			1: Rock
+			2: Rock
+			3: Rock
+	Template@315:
+		Id: 315
+		Images: rawc16.des
+		Size: 2,3
+		Category: Water Cliffs
+		Tiles:
+			0: Water
+			2: Rock
+			3: Rock
+			5: Rock
+	Template@316:
+		Id: 316
+		Images: rawc17.des
+		Size: 2,2
+		Category: Water Cliffs
+		Tiles:
+			0: Rock
+			1: Rock
+			2: Rock
+			3: Rock
+	Template@317:
+		Id: 317
+		Images: rawc18.des
+		Size: 2,2
+		Category: Water Cliffs
+		Tiles:
+			0: Rock
+			1: Rock
+			2: Rock
+			3: Rock
+	Template@318:
+		Id: 318
+		Images: rawc19.des
+		Size: 2,2
+		Category: Water Cliffs
+		Tiles:
+			0: Rock
+			1: Rock
+			2: Rock
+			3: Rock
+	Template@319:
+		Id: 319
+		Images: rawc20.des
+		Size: 2,3
+		Category: Water Cliffs
+		Tiles:
+			1: River
+			2: Rock
+			3: Rock
+			4: Rock
+			5: Rough
+	Template@320:
+		Id: 320
+		Images: rawc21.des
+		Size: 1,2
+		Category: Water Cliffs
+		Tiles:
+			0: Rock
+			1: Rock
+	Template@321:
+		Id: 321
+		Images: rawc22.des
+		Size: 2,1
+		Category: Water Cliffs
+		Tiles:
+			0: Rock
+			1: Rock
+	Template@322:
+		Id: 322
+		Images: rawc23.des
+		Size: 3,2
+		Category: Water Cliffs
+		Tiles:
+			0: Rock
+			1: Rock
+			2: River
+			3: Rock
+			4: Rock
+			5: Water
+	Template@323:
+		Id: 323
+		Images: rawc24.des
+		Size: 2,2
+		Category: Water Cliffs
+		Tiles:
+			0: Rock
+			1: Rock
+			2: Rock
+			3: Rock
+	Template@324:
+		Id: 324
+		Images: rawc25.des
+		Size: 2,2
+		Category: Water Cliffs
+		Tiles:
+			0: Rock
+			1: Rock
+			2: Rock
+			3: Rock
+	Template@325:
+		Id: 325
+		Images: rawc26.des
+		Size: 2,2
+		Category: Water Cliffs
+		Tiles:
+			0: Rock
+			1: Rock
+			2: Rock
+			3: Rock
+	Template@326:
+		Id: 326
+		Images: rawc27.des
+		Size: 3,2
+		Category: Water Cliffs
+		Tiles:
+			0: Rock
+			1: Rock
+			2: Water
+			3: Clear
+			4: Rock
+			5: Rock
+	Template@327:
+		Id: 327
+		Images: rawc28.des
+		Size: 2,2
+		Category: Water Cliffs
+		Tiles:
+			0: Rock
+			1: Rock
+			3: Rock
+	Template@328:
+		Id: 328
+		Images: rawc29.des
+		Size: 2,2
+		Category: Water Cliffs
+		Tiles:
+			0: Rock
+			1: Rock
+			2: Rock
+			3: Rock
+	Template@329:
+		Id: 329
+		Images: rawc30.des
+		Size: 2,2
+		Category: Water Cliffs
+		Tiles:
+			0: Rock
+			1: Rock
+			2: Rock
+			3: Rock
+	Template@330:
+		Id: 330
+		Images: rawc31.des
+		Size: 2,2
+		Category: Water Cliffs
+		Tiles:
+			0: Rock
+			1: River
+			2: Rock
+			3: Rock
+	Template@331:
+		Id: 331
+		Images: rawc32.des
+		Size: 2,2
+		Category: Water Cliffs
+		Tiles:
+			0: Rock
+			1: Rock
+			2: Water
+	Template@332:
+		Id: 332
+		Images: rawc33.des
+		Size: 2,2
+		Category: Water Cliffs
+		Tiles:
+			0: Rock
+			1: Rock
+			2: Rock
+			3: Rock
+	Template@333:
+		Id: 333
+		Images: rawc34.des
+		Size: 2,2
+		Category: Water Cliffs
+		Tiles:
+			0: Rock
+			1: Rock
+			2: Rock
+			3: Rock
+	Template@334:
+		Id: 334
+		Images: rawc35.des
+		Size: 2,2
+		Category: Water Cliffs
+		Tiles:
+			0: Rock
+			1: Rock
+			2: Rock
+			3: Rock
+	Template@335:
+		Id: 335
+		Images: rawc36.des
+		Size: 2,2
+		Category: Water Cliffs
+		Tiles:
+			0: Rock
+			1: Rock
+			2: Rock
+			3: Rock
+	Template@336:
+		Id: 336
+		Images: rawc37.des
+		Size: 2,2
+		Category: Water Cliffs
+		Tiles:
+			0: Rock
+			1: Rock
+			2: Rock
+			3: Rock
+	Template@337:
+		Id: 337
+		Images: rawc38.des
+		Size: 2,2
+		Category: Water Cliffs
+		Tiles:
+			0: Rock
+			1: Rock
+			2: Rock
+			3: Rock
+	Template@338:
+		Id: 338
+		Images: rawc39.des
+		Size: 3,2
+		Category: Water Cliffs
+		Tiles:
+			0: Rock
+			1: Rock
+			2: Rock
+			3: Rock
+			4: Rock
+			5: Rock
+	Template@339:
+		Id: 339
+		Images: rawc40.des
+		Size: 3,2
+		Category: Water Cliffs
+		Tiles:
+			0: Rock
+			1: Rock
+			2: Rock
+			3: Rock
+			4: Rock
+			5: Rock
+	Template@340:
+		Id: 340
+		Images: rawc41.des
+		Size: 3,2
+		Category: Water Cliffs
+		Tiles:
+			0: Rock
+			1: Rock
+			2: Rock
+			3: Rock
+			4: Rock
+			5: Rock
+	Template@341:
+		Id: 341
+		Images: rawc42.des
+		Size: 3,2
+		Category: Water Cliffs
+		Tiles:
+			0: Rock
+			1: Rock
+			2: Rock
+			3: Rock
+			4: Rock
+			5: Rock
+	Template@342:
+		Id: 342
+		Images: rawc43.des
+		Size: 2,3
+		Category: Water Cliffs
+		Tiles:
+			0: Rock
+			1: Rock
+			2: Rock
+			3: Rock
+			4: Rock
+			5: Rock
+	Template@343:
+		Id: 343
+		Images: rawc44.des
+		Size: 2,3
+		Category: Water Cliffs
+		Tiles:
+			0: Rock
+			1: Rock
+			2: Rock
+			3: Rock
+			4: Rock
+			5: Rock
+	Template@344:
+		Id: 344
+		Images: rawc45.des
+		Size: 2,3
+		Category: Water Cliffs
+		Tiles:
+			0: Rock
+			1: Rock
+			2: Rock
+			3: Rock
+			4: Rock
+			5: Rock
+	Template@345:
+		Id: 345
+		Images: rawc46.des
+		Size: 2,3
+		Category: Water Cliffs
+		Tiles:
+			0: Rock
+			1: Rock
+			2: Rock
+			3: Rock
+			4: Rock
+			5: Rock
+	Template@666:
+		Id: 666
+		Images: rafalls3.des
+		Size: 3,2
+		Category: Water Cliffs
+		Tiles:
+			0: Rock
+			1: River
+			2: Rock
+			3: Rock
+			4: River
+			5: Rock
+	Template@665:
+		Id: 665
+		Images: rafalls4.des
+		Size: 2,3
+		Category: Water Cliffs
+		Tiles:
+			0: Rock
+			1: Rock
+			2: River
+			3: River
+			4: Rock
+			5: Rock

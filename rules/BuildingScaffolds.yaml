@@ -1,0 +1,2029 @@
+NUKENEW.SCAFF:
+	Inherits: ^2x2SITE
+	Armor:
+		Type: Concrete
+	RenderSprites:
+		PlayerPalette: raplayer
+		Image: nukenew
+	CustomSellValue:
+		Value: 150
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Construction Site (Small Hut)
+	Buildable:
+		IconPalette: raicon
+		BuildPaletteOrder: 10
+		Prerequisites: factnew
+		Description: Generates livingspace. Livingspace increases over time by generating peasants.\nCan hold up to 4 peasants, spawntime depends on number of shacks and large huts.\n\n\n\n
+		Queue: MBuilding.GDI
+		BuildDuration: 25
+	Health:
+		HP: 25000
+		Shape: Rectangle
+			TopLeft: -924,-825
+			BottomRight: 924, 924
+	RevealsShroud:
+		Range: 4c0
+	Bib:
+	Selectable:
+		Bounds: 48,40,0,9
+	SelectionDecorations:
+		VisualBounds: 48,53,0,-4
+	WithSpriteBody:
+		RequiresCondition: inactive
+	SpawnActorOnDeath@Finsihed:
+		Probability: 100
+		Actor: NUKENEW
+		DeathType: FinishedDeath
+	ExternalCondition@buildfurther: 
+		Condition: Construct
+		TotalCap: 20
+	ExternalCondition@Deliverfurther:
+		Condition: DeliveredResources
+		TotalCap: 20
+	Targetable@buildfurther: 
+		TargetTypes: Buildable
+		RequiresCondition: DeliveredResources > Construct && (20 - Construct) > 0
+	Targetable@deliverresources: 
+		TargetTypes: Deliverable
+		RequiresCondition: 20 > DeliveredResources
+	SelfHealing@Finished:
+		PercentageStep: -200
+		HealIfBelow: 110
+		Delay: 1
+		RequiresCondition: (20 - Construct) <= 0
+		DamageTypes: FinishedDeath
+	WithIdleOverlay@base1:
+		Sequence: make1
+		RequiresCondition: Construct > 3 && Construct < 6
+	WithIdleOverlay@base2:
+		Sequence: make2
+		RequiresCondition: Construct >= 6 && Construct < 9
+	WithIdleOverlay@base3:
+		Sequence: make3
+		RequiresCondition: Construct >= 9 && Construct < 12
+	WithIdleOverlay@base4:
+		Sequence: make4
+		RequiresCondition: Construct >= 12 && Construct < 15
+	WithIdleOverlay@base5:
+		Sequence: make5
+		RequiresCondition: Construct >= 15 && Construct < 18
+	WithIdleOverlay@base6:
+		Sequence: make6
+		RequiresCondition: Construct >= 18
+		
+LODGE.SCAFF:
+	Inherits: ^2x2SITE
+	Building:
+		Dimensions: 2, 1
+		Footprint: xx
+	Armor:
+		Type: Concrete
+	RenderSprites:
+		PlayerPalette: raplayer
+		Image: lodge
+	CustomSellValue:
+		Value: 100
+	Valued:
+		Cost: 300
+	Tooltip:
+		Name: Hunter Lodge (Small Hut)
+	Buildable:
+		IconPalette: raicon
+		BuildPaletteOrder: 10
+		Description: A hunter can go out and hunt down animals from here.\n\n\n
+		Queue: MBuilding2.GDI, MBuilding2.Nod
+		BuildDuration: 25
+	Health:
+		HP: 10000
+		Shape: Rectangle
+			TopLeft: -924,-825
+			BottomRight: 924, 924
+	RevealsShroud:
+		Range: 4c0
+	Bib:
+	Selectable:
+		Bounds: 48,26,0,9
+	SelectionDecorations:
+		VisualBounds: 48,27,0,-4
+	WithSpriteBody:
+		RequiresCondition: inactive
+	SpawnActorOnDeath@Finsihed:
+		Probability: 100
+		Actor: LODGE
+		DeathType: FinishedDeath
+	ExternalCondition@buildfurther: 
+		Condition: Construct
+		TotalCap: 20
+	ExternalCondition@Deliverfurther:
+		Condition: DeliveredResources
+		TotalCap: 20
+	Targetable@buildfurther: 
+		TargetTypes: Buildable
+		RequiresCondition: DeliveredResources > Construct && (20 - Construct) > 0
+	Targetable@deliverresources: 
+		TargetTypes: Deliverable
+		RequiresCondition: 20 > DeliveredResources
+	SelfHealing@Finished:
+		PercentageStep: -200
+		HealIfBelow: 110
+		Delay: 1
+		RequiresCondition: (20 - Construct) <= 0
+		DamageTypes: FinishedDeath
+	WithIdleOverlay@base1:
+		Sequence: make1
+		RequiresCondition: Construct > 3 && Construct < 6
+	WithIdleOverlay@base2:
+		Sequence: make2
+		RequiresCondition: Construct >= 6 && Construct < 10
+	WithIdleOverlay@base3:
+		Sequence: make3
+		RequiresCondition: Construct >= 10 && Construct < 16
+	WithIdleOverlay@base4:
+		Sequence: make4
+		RequiresCondition: Construct > 16 
+	WithRangeCircle:
+		Type: HunterLodge
+		UsePlayerColor: true
+		Range: 15c0
+		
+NUKXL.SCAFF:
+	Inherits: ^3x2SITE
+	Armor:
+		Type: Concrete
+	RenderSprites:
+		PlayerPalette: raplayer
+		Image: nukxl
+	CustomSellValue:
+		Value: 400
+	Valued:
+		Cost: 1200
+	Tooltip:
+		Name: Construction Site (Extra Large Hut)
+	Buildable:
+		Buildable:
+		IconPalette: raicon
+		BuildPaletteOrder: 70
+		Prerequisites: anyarmory
+		Queue: MBuilding.GDI
+		Description: Provides more livingspace. Livingspace increases over time by generating peasants.\nCan hold up to 15 peasants. \ncheaper than the standard Shack.\n\n\n\n
+		BuildDuration: 25
+	Health:
+		HP: 60000
+		Shape: Rectangle
+			TopLeft: -1424,-924
+			BottomRight: 1424, 924
+	RevealsShroud:
+		Range: 4c0
+	Bib:
+	Selectable:
+		Bounds: 72,48
+	SelectionDecorations:
+		VisualBounds: 72,64,0,-16
+	WithSpriteBody:
+		RequiresCondition: inactive
+	SpawnActorOnDeath@Finsihed:
+		Probability: 100
+		Actor: NUKXL
+		DeathType: FinishedDeath
+	ExternalCondition@buildfurther: 
+		Condition: Construct
+		TotalCap: 35
+	ExternalCondition@Deliverfurther:
+		Condition: DeliveredResources
+		TotalCap: 35
+	Targetable@buildfurther: 
+		TargetTypes: Buildable
+		RequiresCondition: DeliveredResources > Construct && (35 - Construct) > 0
+	Targetable@deliverresources: 
+		TargetTypes: Deliverable
+		RequiresCondition: 35 > DeliveredResources
+	SelfHealing@Finished:
+		PercentageStep: -200
+		HealIfBelow: 110
+		Delay: 1
+		RequiresCondition: (35 - Construct) <= 0
+		DamageTypes: FinishedDeath
+	WithIdleOverlay@base1:
+		Sequence: make1
+		RequiresCondition: Construct > 5 && Construct < 10
+	WithIdleOverlay@base2:
+		Sequence: make2
+		RequiresCondition: Construct >= 10 && Construct < 15
+	WithIdleOverlay@base3:
+		Sequence: make3
+		RequiresCondition: Construct >= 15 && Construct < 20
+	WithIdleOverlay@base4:
+		Sequence: make4
+		RequiresCondition: Construct >= 20 && Construct < 25
+	WithIdleOverlay@base5:
+		Sequence: make5
+		RequiresCondition: Construct >= 25 && Construct < 30
+	WithIdleOverlay@base6:
+		Sequence: make6
+		RequiresCondition: Construct >= 30
+
+HANDNEW.SCAFF:
+	Inherits: ^2x3SITE
+	Building:
+		Dimensions: 2,3
+		Footprint: __ xx xx
+	Armor:
+		Type: Concrete
+	RenderSprites:
+		PlayerPalette: raplayer
+		Image: handew
+	CustomSellValue:
+		Value: 300
+	Valued:
+		Cost: 900
+	Tooltip:
+		Name: Construction Site (Barracks)
+	Buildable:
+		IconPalette: raicon
+		BuildPaletteOrder: 30
+		Prerequisites: anypower
+		Description: Trains Infantry only\n\n\n\n
+		Queue: MBuilding3.Nod
+		BuildDuration: 25
+	Health:
+		HP: 32500
+		Shape: Rectangle
+			TopLeft: -924,-824
+			BottomRight: 924, 924
+	RevealsShroud:
+		Range: 4c0
+	Bib:
+	Selectable:
+		Bounds: 48,72,0,-5
+	SelectionDecorations:
+		VisualBounds: 48,72,0,-5
+	WithSpriteBody:
+		RequiresCondition: inactive
+	SpawnActorOnDeath@Finsihed:
+		Probability: 100
+		Actor: HANDNEW
+		DeathType: FinishedDeath
+	ExternalCondition@buildfurther: 
+		Condition: Construct
+		TotalCap: 36
+	ExternalCondition@Deliverfurther:
+		Condition: DeliveredResources
+		TotalCap: 36
+	Targetable@buildfurther: 
+		TargetTypes: Buildable
+		RequiresCondition: DeliveredResources > Construct && (36 - Construct) > 0
+	Targetable@deliverresources: 
+		TargetTypes: Deliverable
+		RequiresCondition: 36 > DeliveredResources
+	SelfHealing@Finished:
+		PercentageStep: -200
+		HealIfBelow: 110
+		Delay: 1
+		RequiresCondition: (36 - Construct) <= 0
+		DamageTypes: FinishedDeath
+	WithIdleOverlay@base1:
+		Sequence: make1
+		RequiresCondition: Construct > 10 && Construct < 14
+	WithIdleOverlay@base2:
+		Sequence: make2
+		RequiresCondition: Construct >= 14 && Construct < 20
+	WithIdleOverlay@base3:
+		Sequence: make3
+		RequiresCondition: Construct >= 20 && Construct < 26
+	WithIdleOverlay@base4:
+		Sequence: make4
+		RequiresCondition: Construct >= 26 && Construct < 32
+	WithIdleOverlay@base5:
+		Sequence: make5
+		RequiresCondition: Construct >= 32
+
+
+		
+ZEROPROC.SCAFF:
+	Inherits: ^2x3SITE
+	Building:
+		Dimensions: 2,3
+		Footprint: __ xx xx
+	Armor:
+		Type: Concrete
+	RenderSprites:
+		PlayerPalette: raplayer
+		Image: windmill
+	CustomSellValue:
+		Value: 450
+	Valued:
+		Cost: 1300
+	Tooltip:
+		Name: Construction Site (Windmill)
+	Buildable:
+		IconPalette: raicon
+		BuildPaletteOrder: 30
+		Prerequisites: anypower
+		Description: Provides basic resource gathering for Crops and Grain.\n Comes with 2 farmers.\n Can only operate up to 6 farmers at once.\n\n\n\n
+		Queue: MBuilding2.GDI
+		BuildDuration: 25
+	Health:
+		HP: 40000
+		Shape: Rectangle
+			TopLeft: -924,-825
+			BottomRight: 924, 924
+	RevealsShroud:
+		Range: 4c0
+	Bib:
+	Selectable:
+		Bounds: 48,70,0,5
+	SelectionDecorations:
+		VisualBounds: 48,70,0,5
+	WithSpriteBody:
+		RequiresCondition: inactive
+	SpawnActorOnDeath@Finsihed:
+		Probability: 100
+		Actor: ZEROPROC
+		DeathType: FinishedDeath
+	ExternalCondition@buildfurther: 
+		Condition: Construct
+		TotalCap: 45
+	ExternalCondition@Deliverfurther:
+		Condition: DeliveredResources
+		TotalCap: 45
+	Targetable@buildfurther: 
+		TargetTypes: Buildable
+		RequiresCondition: DeliveredResources > Construct && (45 - Construct) > 0
+	Targetable@deliverresources: 
+		TargetTypes: Deliverable
+		RequiresCondition: 45 > DeliveredResources
+	SelfHealing@Finished:
+		PercentageStep: -200
+		HealIfBelow: 110
+		Delay: 1
+		RequiresCondition: (45 - Construct) <= 0
+		DamageTypes: FinishedDeath
+	WithIdleOverlay@base1:
+		Sequence: make1
+		RequiresCondition: Construct > 10 && Construct < 15
+	WithIdleOverlay@base2:
+		Sequence: make2
+		RequiresCondition: Construct >= 15 && Construct < 20
+	WithIdleOverlay@base3:
+		Sequence: make3
+		RequiresCondition: Construct >= 20 && Construct < 25
+	WithIdleOverlay@base4:
+		Sequence: make4
+		RequiresCondition: Construct >= 25 && Construct < 35
+	WithIdleOverlay@base5:
+		Sequence: make5
+		RequiresCondition: Construct >= 35
+		
+ZEROPROC.SCAFF.NOD:
+	Inherits: ZEROPROC.SCAFF
+	RenderSprites:
+		Image: windmill
+	Valued:
+		Cost: 1500
+	Buildable:
+		IconPalette: raicon
+		BuildPaletteOrder: 30
+		Prerequisites: anypower
+		Description: Provides basic resource gathering for Crops and Grain.\n Comes with 2 farmers.\n Can only operate up to 6 farmers at once.\n\n\n\n
+		Queue: MBuilding2.Nod
+		BuildDuration: 25
+	ExternalCondition@buildfurther: 
+		Condition: Construct
+		TotalCap: 52
+	ExternalCondition@Deliverfurther:
+		Condition: DeliveredResources
+		TotalCap: 52
+	Targetable@buildfurther: 
+		TargetTypes: Buildable
+		RequiresCondition: DeliveredResources > Construct && (52 - Construct) > 0
+	Targetable@deliverresources: 
+		TargetTypes: Deliverable
+		RequiresCondition: 52 > DeliveredResources
+	SelfHealing@Finished:
+		PercentageStep: -200
+		HealIfBelow: 110
+		Delay: 1
+		RequiresCondition: (52 - Construct) <= 0
+		DamageTypes: FinishedDeath
+
+HQNEWNOD.SCAFF:
+	Inherits: ^2x2SITE
+	Armor:
+		Type: Concrete
+	RenderSprites:
+		PlayerPalette: raplayer
+		Image: hqnew
+	CustomSellValue:
+		Value: 400
+	Valued:
+		Cost: 1200
+	Tooltip:
+		Name: Construction Site (Smith)
+	Buildable:
+		IconPalette: raicon
+		BuildPaletteOrder: 50
+		Prerequisites: proc
+		Queue: MBuilding2.Nod, MBuilding2.GDI
+		Description: Unlocks higher-tech units and buildings.\n\n\n\n
+		BuildDuration: 25
+	Health:
+		HP: 17000
+		Shape: Rectangle
+			TopLeft: -924,-825
+			BottomRight: 924, 924
+	RevealsShroud:
+		Range: 4c0
+	Bib:
+	Selectable:
+		Bounds: 48,40,0,9
+	SelectionDecorations:
+		VisualBounds: 48,53,0,-4
+	WithSpriteBody:
+		RequiresCondition: inactive
+	SpawnActorOnDeath@Finsihed:
+		Probability: 100
+		Actor: HQNEWNOD
+		DeathType: FinishedDeath
+	ExternalCondition@buildfurther: 
+		Condition: Construct
+		TotalCap: 42
+	ExternalCondition@Deliverfurther:
+		Condition: DeliveredResources
+		TotalCap: 42
+	Targetable@buildfurther: 
+		TargetTypes: Buildable
+		RequiresCondition: DeliveredResources > Construct && (42 - Construct) > 0
+	Targetable@deliverresources: 
+		TargetTypes: Deliverable
+		RequiresCondition: 42 > DeliveredResources
+	SelfHealing@Finished:
+		PercentageStep: -200
+		HealIfBelow: 110
+		Delay: 1
+		RequiresCondition: (42 - Construct) <= 0
+		DamageTypes: FinishedDeath
+	WithIdleOverlay@base1:
+		Sequence: make1
+		RequiresCondition: Construct > 5 && Construct < 10
+	WithIdleOverlay@base2:
+		Sequence: make2
+		RequiresCondition: Construct >= 10 && Construct < 14
+	WithIdleOverlay@base3:
+		Sequence: make3
+		RequiresCondition: Construct >= 14 && Construct < 20
+	WithIdleOverlay@base4:
+		Sequence: make4
+		RequiresCondition: Construct >= 20 && Construct < 26
+	WithIdleOverlay@base5:
+		Sequence: make5
+		RequiresCondition: Construct >= 26 && Construct < 32
+	WithIdleOverlay@base6:
+		Sequence: make6
+		RequiresCondition: Construct >= 32 && Construct < 38
+	WithIdleOverlay@base7:
+		Sequence: make7
+		RequiresCondition: Construct >= 38
+
+ARMORYNOD.SCAFF:
+	Inherits: ^2x2SITE
+	Armor:
+		Type: Concrete
+	RenderSprites:
+		PlayerPalette: raplayer
+		Image: armory
+	CustomSellValue:
+		Value: 600
+	Valued:
+		Cost: 1750
+	Tooltip:
+		Name: Construction Site (Armory)
+	Buildable:
+		IconPalette: raicon
+		BuildPaletteOrder: 90
+		Prerequisites: anyhq
+		Queue: MBuilding3.Nod
+		Description: Unlocks Support Powers and Raiding Squad.\nHeals Cavalry and Infantry.\n\n\n\n
+		BuildDuration: 25
+	Health:
+		HP: 22500
+		Shape: Rectangle
+			TopLeft: -924,-825
+			BottomRight: 924, 924
+	RevealsShroud:
+		Range: 4c0
+	Bib:
+	Selectable:
+		Bounds: 48,40,0,9
+	SelectionDecorations:
+		VisualBounds: 48,53,0,-4
+	WithSpriteBody:
+		RequiresCondition: inactive
+	SpawnActorOnDeath@Finsihed:
+		Probability: 100
+		Actor: ARMORYNOD
+		DeathType: FinishedDeath
+	ExternalCondition@buildfurther: 
+		Condition: Construct
+		TotalCap: 55
+	ExternalCondition@Deliverfurther:
+		Condition: DeliveredResources
+		TotalCap: 55
+	Targetable@buildfurther: 
+		TargetTypes: Buildable
+		RequiresCondition: DeliveredResources > Construct && (55 - Construct) > 0
+	Targetable@deliverresources: 
+		TargetTypes: Deliverable
+		RequiresCondition: 55 > DeliveredResources
+	SelfHealing@Finished:
+		PercentageStep: -200
+		HealIfBelow: 110
+		Delay: 1
+		RequiresCondition: (55 - Construct) <= 0
+		DamageTypes: FinishedDeath
+	WithIdleOverlay@base1:
+		Sequence: make1
+		RequiresCondition: Construct > 5 && Construct < 15
+	WithIdleOverlay@base2:
+		Sequence: make2
+		RequiresCondition: Construct >= 15 && Construct < 25
+	WithIdleOverlay@base3:
+		Sequence: make3
+		RequiresCondition: Construct >= 25 && Construct < 35
+	WithIdleOverlay@base4:
+		Sequence: make4
+		RequiresCondition: Construct >= 35 && Construct < 45
+	WithIdleOverlay@base5:
+		Sequence: make5
+		RequiresCondition: Construct >= 45
+
+ARMORYGDI.SCAFF:
+	Inherits: ^2x2SITE
+	Armor:
+		Type: Concrete
+	RenderSprites:
+		PlayerPalette: raplayer
+		Image: armorygdi
+	CustomSellValue:
+		Value: 600
+	Valued:
+		Cost: 1750
+	Tooltip:
+		Name: Construction Site (Armory)
+	Buildable:
+		IconPalette: raicon
+		BuildPaletteOrder: 90
+		Prerequisites: anyhq
+		Queue: MBuilding3.GDI
+		Description: Unlocks Support Powers.\nHeals Cavalry and Infantry.\n\n\n\n
+		BuildDuration: 25
+	Health:
+		HP: 22500
+		Shape: Rectangle
+			TopLeft: -924,-825
+			BottomRight: 924, 924
+	RevealsShroud:
+		Range: 4c0
+	Bib:
+	Selectable:
+		Bounds: 48,40,0,9
+	SelectionDecorations:
+		VisualBounds: 48,53,0,-4
+	WithSpriteBody:
+		RequiresCondition: inactive
+	SpawnActorOnDeath@Finsihed:
+		Probability: 100
+		Actor: ARMORYGDI
+		DeathType: FinishedDeath
+	ExternalCondition@buildfurther: 
+		Condition: Construct
+		TotalCap: 55
+	ExternalCondition@Deliverfurther:
+		Condition: DeliveredResources
+		TotalCap: 55
+	Targetable@buildfurther: 
+		TargetTypes: Buildable
+		RequiresCondition: DeliveredResources > Construct && (55 - Construct) > 0
+	Targetable@deliverresources: 
+		TargetTypes: Deliverable
+		RequiresCondition: 55 > DeliveredResources
+	SelfHealing@Finished:
+		PercentageStep: -200
+		HealIfBelow: 110
+		Delay: 1
+		RequiresCondition: (55 - Construct) <= 0
+		DamageTypes: FinishedDeath
+	WithIdleOverlay@base1:
+		Sequence: make1
+		RequiresCondition: Construct > 5 && Construct < 15
+	WithIdleOverlay@base2:
+		Sequence: make2
+		RequiresCondition: Construct >= 15 && Construct < 25
+	WithIdleOverlay@base3:
+		Sequence: make3
+		RequiresCondition: Construct >= 25 && Construct < 35
+	WithIdleOverlay@base4:
+		Sequence: make4
+		RequiresCondition: Construct >= 35 && Construct < 45
+	WithIdleOverlay@base5:
+		Sequence: make5
+		RequiresCondition: Construct >= 45
+
+NUK2NEW.SCAFF:
+	Inherits: ^2x2SITE
+	Armor:
+		Type: Concrete
+	RenderSprites:
+		PlayerPalette: raplayer
+		Image: nuk2new
+	CustomSellValue:
+		Value: 250
+	Valued:
+		Cost: 800
+	Tooltip:
+		Name: Construction Site (Large Hut)
+	Buildable:
+		IconPalette: raicon
+		BuildPaletteOrder: 60
+		Prerequisites: anyhq
+		Queue: MBuilding.GDI
+		Description: Provides more livingspace. Livingspace increases over time by generating peasants.\nCan hold up to 8 peasants, spawntime depends on number of shacks and large huts. \ncheaper than the standard Shack.\n\n\n\n
+		BuildDuration: 25
+	Health:
+		HP: 17500
+		Shape: Rectangle
+			TopLeft: -924,-825
+			BottomRight: 924, 924
+	RevealsShroud:
+		Range: 4c0
+	Bib:
+	Selectable:
+		Bounds:72,48,0,9
+	SelectionDecorations:
+		VisualBounds: 72,53,0,-4
+	WithSpriteBody:
+		RequiresCondition: inactive
+	SpawnActorOnDeath@Finsihed:
+		Probability: 100
+		Actor: NUK2NEW
+		DeathType: FinishedDeath
+	ExternalCondition@buildfurther: 
+		Condition: Construct
+		TotalCap: 28
+	ExternalCondition@Deliverfurther:
+		Condition: DeliveredResources
+		TotalCap: 28
+	Targetable@buildfurther: 
+		TargetTypes: Buildable
+		RequiresCondition: DeliveredResources > Construct && (28 - Construct) > 0
+	Targetable@deliverresources: 
+		TargetTypes: Deliverable
+		RequiresCondition: 28 > DeliveredResources
+	SelfHealing@Finished:
+		PercentageStep: -200
+		HealIfBelow: 110
+		Delay: 1
+		RequiresCondition: (28 - Construct) <= 0
+		DamageTypes: FinishedDeath
+	WithIdleOverlay@base1:
+		Sequence: make1
+		RequiresCondition: Construct > 5 && Construct < 10
+	WithIdleOverlay@base2:
+		Sequence: make2
+		RequiresCondition: Construct >= 10 && Construct < 15
+	WithIdleOverlay@base3:
+		Sequence: make3
+		RequiresCondition: Construct >= 15 && Construct < 20
+	WithIdleOverlay@base4:
+		Sequence: make4
+		RequiresCondition: Construct >= 20
+
+
+XLTNTUNI.SCAFF:
+	Inherits: ^ConstructionSite
+	-ConstructionProgress@DeliveredResources:
+    -SelfHealing@Finished:
+	GrantRandomCondition:
+		RandomConditions: valida, validb, validc
+		FallbackCondition: none
+	Building:
+		Dimensions: 2,2
+		Footprint: xx xx
+	Armor:
+		Type: Concrete
+	RenderSprites:
+		PlayerPalette: raplayer
+		Image: xltnt1
+	CustomSellValue:
+		Value: 300
+	Valued:
+		Cost: 600
+	Tooltip:
+		Name: Construction Site (Large Tent)
+	Buildable:
+		IconPalette: raicon
+		BuildPaletteOrder: 60
+		Prerequisites: anyhq
+		Queue: MBuilding.Nod
+		Description: Provides more livingspace. Livingspace increases over time by generating peasants.\nCan hold up to 6 peasants, spawntime depends on number of shacks and large huts. \ncheaper than the standard Shack.\n\n\n\n
+        BuildDuration: 25
+	Health:
+		HP: 17500
+		Shape: Rectangle
+			TopLeft: -924,-825
+			BottomRight: 924, 924
+	RevealsShroud:
+		Range: 4c0
+	Bib:
+	Selectable:
+		Bounds: 48,40,0,9
+	SelectionDecorations:
+		VisualBounds: 48,53,0,-4
+	WithSpriteBody:
+		RequiresCondition: DoNotRender
+	ExternalCondition@buildfurther: 
+		Condition: Construct
+		TotalCap: 40
+	-ExternalCondition@Deliverfurther:
+	Targetable@buildfurther: 
+		TargetTypes: Buildable
+		RequiresCondition: Construct < 40
+	-Targetable@deliverresources: 
+	TransformOnCondition@typeA:
+		IntoActor: XLTNT1
+		RequiresCondition: Construct >= 40 && valida
+	TransformOnCondition@typeB:
+		IntoActor: XLTNT2
+		RequiresCondition: Construct >= 40 && validb
+	TransformOnCondition@typeC:
+		IntoActor: XLTNT3
+		RequiresCondition: Construct >= 40 && validc
+	WithIdleOverlay@base1:
+		Sequence: make1
+		RequiresCondition: Construct >= 0 && Construct < 10 && valida
+	WithIdleOverlay@base2:
+		Sequence: make2
+		RequiresCondition: Construct >= 10 && Construct < 15 && valida
+	WithIdleOverlay@base3:
+		Sequence: make3
+		RequiresCondition: Construct >= 15 && Construct < 20 && valida
+	WithIdleOverlay@base4:
+		Sequence: make4
+		RequiresCondition: Construct >= 20 && Construct < 25 && valida
+	WithIdleOverlay@base5:
+		Sequence: make5
+		RequiresCondition: Construct >= 25 && Construct < 35 && valida
+	WithIdleOverlay@base6:
+		Sequence: make6
+		RequiresCondition: Construct >= 35 && valida
+	WithIdleOverlay@base1a:
+		Sequence: make1a
+		RequiresCondition: Construct >= 0 && Construct < 10 && validb
+	WithIdleOverlay@base2a:
+		Sequence: make2a
+		RequiresCondition: Construct >= 10 && Construct < 15 && validb
+	WithIdleOverlay@base3a:
+		Sequence: make3a
+		RequiresCondition: Construct >= 15 && Construct < 20 && validb
+	WithIdleOverlay@base4a:
+		Sequence: make4a
+		RequiresCondition: Construct >= 20 && Construct < 25 && validb
+	WithIdleOverlay@base5a:
+		Sequence: make5a
+		RequiresCondition: Construct >= 25 && Construct < 35 && validb
+	WithIdleOverlay@base6a:
+		Sequence: make6a
+		RequiresCondition: Construct >= 35 && validb
+	WithIdleOverlay@base1b:
+		Sequence: make1b
+		RequiresCondition: Construct >= 0 && Construct < 10 && validc
+	WithIdleOverlay@base2b:
+		Sequence: make2b
+		RequiresCondition: Construct >= 10 && Construct < 15 && validc
+	WithIdleOverlay@base3b:
+		Sequence: make3b
+		RequiresCondition: Construct >= 15 && Construct < 20 && validc
+	WithIdleOverlay@base4b:
+		Sequence: make4b
+		RequiresCondition: Construct >= 20 && Construct < 25 && validc
+	WithIdleOverlay@base5b:
+		Sequence: make5b
+		RequiresCondition: Construct >= 25 && Construct < 35 && validc
+	WithIdleOverlay@base6b:
+		Sequence: make6b
+		RequiresCondition: Construct >= 35 && validc
+
+		
+PROCNEW.SCAFF:
+	Inherits: ^3x3SITE
+	Building:
+		Footprint: _x_ xxx xx=
+		Dimensions: 3,3
+	Armor:
+		Type: Concrete
+	RenderSprites:
+		PlayerPalette: raplayer
+		Image: procnew
+	CustomSellValue:
+		Value: 500
+	Valued:
+		Cost: 1500
+	Tooltip:
+		Name: Construction Site (Ore Refinery)
+	Buildable:
+		IconPalette: raicon
+		BuildPaletteOrder: 70
+		Prerequisites: anyhq
+		Description: Processes raw ore and Gold into useable metal.\nGenerates more money than the windmill.\n\n\n\n
+		Queue: MBuilding2.GDI, MBuilding2.Nod
+		BuildDuration: 25
+	Health:
+		HP: 60000
+		Shape: Rectangle
+			TopLeft: -1436,-756
+			BottomRight: 1436, 924
+	RevealsShroud:
+		Range: 4c0
+	Bib:
+	Selectable:
+		Bounds: 72,56,0,12
+	SelectionDecorations:
+		VisualBounds: 72,56,0,12
+	WithSpriteBody:
+		RequiresCondition: inactive
+	SpawnActorOnDeath@Finsihed:
+		Probability: 100
+		Actor: PROCNEW
+		DeathType: FinishedDeath
+	ExternalCondition@buildfurther: 
+		Condition: Construct
+		TotalCap: 60
+	ExternalCondition@Deliverfurther:
+		Condition: DeliveredResources
+		TotalCap: 60
+	Targetable@buildfurther: 
+		TargetTypes: Buildable
+		RequiresCondition: DeliveredResources > Construct && (60 - Construct) > 0
+	Targetable@deliverresources: 
+		TargetTypes: Deliverable
+		RequiresCondition: 60 > DeliveredResources
+	SelfHealing@Finished:
+		PercentageStep: -200
+		HealIfBelow: 110
+		Delay: 1
+		RequiresCondition: (60 - Construct) <= 0
+		DamageTypes: FinishedDeath
+	WithIdleOverlay@base1:
+		Sequence: make1
+		RequiresCondition: Construct > 5 && Construct < 15
+	WithIdleOverlay@base2:
+		Sequence: make2
+		RequiresCondition: Construct >= 15 && Construct < 25
+	WithIdleOverlay@base3:
+		Sequence: make3
+		RequiresCondition: Construct >= 25 && Construct < 35
+	WithIdleOverlay@base4:
+		Sequence: make4
+		RequiresCondition: Construct >= 35 && Construct < 45
+	WithIdleOverlay@base5:
+		Sequence: make5
+		RequiresCondition: Construct >= 45 && Construct < 55
+	WithIdleOverlay@base6:
+		Sequence: make6
+		RequiresCondition: Construct >= 55
+		
+SILONEW.SCAFF:
+	Inherits: ^2x2SITE
+	Building:
+		Footprint: _x xx
+		Dimensions: 2,2
+	Armor:
+		Type: Concrete
+	RenderSprites:
+		PlayerPalette: raplayer
+		Image: silonew
+	CustomSellValue:
+		Value: 100
+	Valued:
+		Cost: 300
+	Tooltip:
+		Name: Construction Site (Smelter)
+	Buildable:
+		BuildPaletteOrder: 70
+		Prerequisites: proc
+		Queue: MBuilding2.GDI, MBuilding2.Nod, MBuilding2.SUL
+		Description: Stores additional Ore\n\n\n\n
+		IconPalette: raicon
+		BuildDuration: 25
+	Health:
+		HP: 20000
+		Shape: Rectangle
+			TopLeft: -724, -424
+			BottomRight: 924, 924
+	RevealsShroud:
+		Range: 4c0
+	Bib:
+		HasMinibib: Yes
+	SelectionDecorations:
+		VisualBounds: 50,50
+	Selectable:
+		Bounds: 50,50,0,3
+	WithSpriteBody:
+		RequiresCondition: inactive
+	SpawnActorOnDeath@Finsihed:
+		Probability: 100
+		Actor: SILONEW
+		DeathType: FinishedDeath
+	ExternalCondition@buildfurther: 
+		Condition: Construct
+		TotalCap: 16
+	ExternalCondition@Deliverfurther:
+		Condition: DeliveredResources
+		TotalCap: 16
+	Targetable@buildfurther: 
+		TargetTypes: Buildable
+		RequiresCondition: DeliveredResources > Construct && (16 - Construct) > 0
+	Targetable@deliverresources: 
+		TargetTypes: Deliverable
+		RequiresCondition: 16 > DeliveredResources
+	SelfHealing@Finished:
+		PercentageStep: -200
+		HealIfBelow: 110
+		Delay: 1
+		RequiresCondition: (16 - Construct) <= 0
+		DamageTypes: FinishedDeath
+	WithIdleOverlay@base1:
+		Sequence: make1
+		RequiresCondition: Construct > 2 && Construct < 4
+	WithIdleOverlay@base2:
+		Sequence: make2
+		RequiresCondition: Construct >= 4 && Construct < 6
+	WithIdleOverlay@base3:
+		Sequence: make3
+		RequiresCondition: Construct >= 6 && Construct < 9
+	WithIdleOverlay@base4:
+		Sequence: make4
+		RequiresCondition: Construct >= 12
+		
+BARRNEW.SCAFF:
+	Inherits: ^2x2SITE
+	Armor:
+		Type: Concrete
+	RenderSprites:
+		PlayerPalette: raplayer
+		Image: barrnew
+	CustomSellValue:
+		Value: 240
+	Valued:
+		Cost: 750
+	Tooltip:
+		Name: Construction Site (Barracks)
+	Buildable:
+		IconPalette: raicon
+		BuildPaletteOrder: 30
+		Prerequisites: anypower
+		Description: Trains Infantry only\n\n\n\n
+		Queue: MBuilding3.GDI
+		BuildDuration: 25
+	Health:
+		HP: 25000
+		Shape: Rectangle
+			TopLeft: -924,-824
+			BottomRight: 924, 924
+	RevealsShroud:
+		Range: 4c0
+	Bib:
+	Selectable:
+		Bounds: 48,42,0,-5
+	SelectionDecorations:
+		VisualBounds: 48,42,0,-5
+	WithSpriteBody:
+		RequiresCondition: inactive
+	SpawnActorOnDeath@Finsihed:
+		Probability: 100
+		Actor: BARRNEW
+		DeathType: FinishedDeath
+	ExternalCondition@buildfurther: 
+		Condition: Construct
+		TotalCap: 30
+	ExternalCondition@Deliverfurther:
+		Condition: DeliveredResources
+		TotalCap: 30
+	Targetable@buildfurther: 
+		TargetTypes: Buildable
+		RequiresCondition: DeliveredResources > Construct && (30 - Construct) > 0
+	Targetable@deliverresources: 
+		TargetTypes: Deliverable
+		RequiresCondition: 30 > DeliveredResources
+	SelfHealing@Finished:
+		PercentageStep: -200
+		HealIfBelow: 110
+		Delay: 1
+		RequiresCondition: (30 - Construct) <= 0
+		DamageTypes: FinishedDeath
+	WithIdleOverlay@base1:
+		Sequence: make1
+		RequiresCondition: Construct > 6 && Construct < 12
+	WithIdleOverlay@base2:
+		Sequence: make2
+		RequiresCondition: Construct >= 12 && Construct < 18
+	WithIdleOverlay@base3:
+		Sequence: make3
+		RequiresCondition: Construct >= 18 && Construct < 22
+	WithIdleOverlay@base4:
+		Sequence: make4
+		RequiresCondition: Construct >= 22 && Construct < 26
+	WithIdleOverlay@base5:
+		Sequence: make5
+		RequiresCondition: Construct >= 26
+		
+STALL.SCAFF:
+	Inherits: ^3x2SITE
+	Armor:
+		Type: Concrete
+	RenderSprites:
+		PlayerPalette: raplayer
+		Image: stall
+	CustomSellValue:
+		Value: 700
+	Valued:
+		Cost: 2000
+	Tooltip:
+		Name: Construction Site (Stables)
+	Buildable:
+		IconPalette: raicon
+		BuildPaletteOrder: 40
+		Prerequisites: proc, barracks
+		Description: Trains cavalry\n\n\n\n
+		Queue: MBuilding3.GDI
+		BuildDuration: 25
+	Health:
+		HP: 50000
+		Shape: Rectangle
+			TopLeft: -1424,-924
+			BottomRight: 1424, 924
+	RevealsShroud:
+		Range: 4c0
+	Bib:
+	Selectable:
+		Bounds: 72,48
+	SelectionDecorations:
+		VisualBounds: 72,64,0,-16
+	WithSpriteBody:
+		RequiresCondition: inactive
+	SpawnActorOnDeath@Finsihed:
+		Probability: 100
+		Actor: STALL
+		DeathType: FinishedDeath
+	ExternalCondition@buildfurther: 
+		Condition: Construct
+		TotalCap: 80
+	ExternalCondition@Deliverfurther:
+		Condition: DeliveredResources
+		TotalCap: 80
+	Targetable@buildfurther: 
+		TargetTypes: Buildable
+		RequiresCondition: DeliveredResources > Construct && (80 - Construct) > 0
+	Targetable@deliverresources: 
+		TargetTypes: Deliverable
+		RequiresCondition: 80 > DeliveredResources
+	SelfHealing@Finished:
+		PercentageStep: -200
+		HealIfBelow: 110
+		Delay: 1
+		RequiresCondition: (80 - Construct) <= 0
+		DamageTypes: FinishedDeath
+	WithIdleOverlay@base1:
+		Sequence: make1
+		RequiresCondition: Construct > 5 && Construct < 15
+	WithIdleOverlay@base2:
+		Sequence: make2
+		RequiresCondition: Construct >= 15 && Construct < 25
+	WithIdleOverlay@base3:
+		Sequence: make3
+		RequiresCondition: Construct >= 25 && Construct < 35
+	WithIdleOverlay@base4:
+		Sequence: make4
+		RequiresCondition: Construct >= 35 && Construct < 55
+	WithIdleOverlay@base5:
+		Sequence: make5
+		RequiresCondition: Construct >= 55 && Construct < 70
+	WithIdleOverlay@base6:
+		Sequence: make6
+		RequiresCondition: Construct >= 70
+		
+NODSTALL.SCAFF:
+	Inherits: ^4x2SITE
+	Armor:
+		Type: Concrete
+	RenderSprites:
+		PlayerPalette: raplayer
+		Image: nodstall
+	CustomSellValue:
+		Value: 600
+	Valued:
+		Cost: 1750
+	Tooltip:
+		Name: Construction Site (Stables)
+	Buildable:
+		IconPalette: raicon
+		BuildPaletteOrder: 40
+		Prerequisites: proc, barracks
+		Description: Trains cavalry\n\n\n\n
+		Queue: MBuilding3.Nod
+		BuildDuration: 25
+	Health:
+		HP: 43000
+		Shape: Rectangle
+			TopLeft: -1948,-924
+			BottomRight: 1948, 924
+	RevealsShroud:
+		Range: 4c0
+	Bib:
+	Selectable:
+		Bounds: 96,48
+	SelectionDecorations:
+		VisualBounds: 86,64,0,-4
+	WithSpriteBody:
+		RequiresCondition: inactive
+	SpawnActorOnDeath@Finsihed:
+		Probability: 100
+		Actor: NODSTALL
+		DeathType: FinishedDeath
+	ExternalCondition@buildfurther: 
+		Condition: Construct
+		TotalCap: 75
+	ExternalCondition@Deliverfurther:
+		Condition: DeliveredResources
+		TotalCap: 75
+	Targetable@buildfurther: 
+		TargetTypes: Buildable
+		RequiresCondition: DeliveredResources > Construct && (75 - Construct) > 0
+	Targetable@deliverresources: 
+		TargetTypes: Deliverable
+		RequiresCondition: 75 > DeliveredResources
+	SelfHealing@Finished:
+		PercentageStep: -200
+		HealIfBelow: 110
+		Delay: 1
+		RequiresCondition: (75 - Construct) <= 0
+		DamageTypes: FinishedDeath
+	WithIdleOverlay@base1:
+		Sequence: make1
+		RequiresCondition: Construct > 5 && Construct < 15
+	WithIdleOverlay@base2:
+		Sequence: make2
+		RequiresCondition: Construct >= 15 && Construct < 25
+	WithIdleOverlay@base3:
+		Sequence: make3
+		RequiresCondition: Construct >= 25 && Construct < 35
+	WithIdleOverlay@base4:
+		Sequence: make4
+		RequiresCondition: Construct >= 35 && Construct < 55
+	WithIdleOverlay@base5:
+		Sequence: make5
+		RequiresCondition: Construct >= 55 && Construct < 65
+	WithIdleOverlay@base6:
+		Sequence: make6
+		RequiresCondition: Construct >= 65
+		
+CASTLE.SCAFF:
+	Inherits: ^3x3SITE
+	Building:
+		Footprint: ___ xxx xxx
+		Dimensions: 3,3
+	Armor:
+		Type: Concrete
+	RenderSprites:
+		PlayerPalette: raplayer
+		Image: castle
+	CustomSellValue:
+		Value: 850
+	Valued:
+		Cost: 2500
+	Tooltip:
+		Name: Construction Site (Castle)
+	Buildable:
+		IconPalette: raicon
+		BuildPaletteOrder: 100
+		Prerequisites: anyhq, anyarmory
+		Description: Unlocks Superweapon.\n Unlocks Heavy Cavalry, Knight's and Trebuchet.\nRequires power to operate.\nCan hold up to 4 nobles.\n\n\n\n
+		Queue: MBuilding3.Nod
+		BuildDuration: 25
+	Health:
+		HP: 100000
+		Shape: Rectangle
+			TopLeft: -1424,-1020
+			BottomRight: 1424, 1524
+	RevealsShroud:
+		Range: 4c0
+	Bib:
+	Selectable:
+		Bounds: 72,48,0,12
+	SelectionDecorations:
+		VisualBounds: 72,68,0,0
+	WithSpriteBody:
+		RequiresCondition: inactive
+	SpawnActorOnDeath@Finsihed:
+		Probability: 100
+		Actor: CASTLE
+		DeathType: FinishedDeath
+	ExternalCondition@buildfurther: 
+		Condition: Construct
+		TotalCap: 100
+	ExternalCondition@Deliverfurther:
+		Condition: DeliveredResources
+		TotalCap: 100
+	Targetable@buildfurther: 
+		TargetTypes: Buildable
+		RequiresCondition: DeliveredResources > Construct && (100 - Construct) > 0
+	Targetable@deliverresources: 
+		TargetTypes: Deliverable
+		RequiresCondition: 100 > DeliveredResources
+	SelfHealing@Finished:
+		PercentageStep: -200
+		HealIfBelow: 110
+		Delay: 1
+		RequiresCondition: (100 - Construct) <= 0
+		DamageTypes: FinishedDeath
+	WithIdleOverlay@base1:
+		Sequence: make1
+		RequiresCondition: Construct > 5 && Construct < 15
+	WithIdleOverlay@base2:
+		Sequence: make2
+		RequiresCondition: Construct >= 15 && Construct < 30
+	WithIdleOverlay@base3:
+		Sequence: make3
+		RequiresCondition: Construct >= 30 && Construct < 50
+	WithIdleOverlay@base4:
+		Sequence: make4
+		RequiresCondition: Construct >= 50 && Construct < 70
+	WithIdleOverlay@base5:
+		Sequence: make5
+		RequiresCondition: Construct >= 70 && Construct < 90
+	WithIdleOverlay@base6:
+		Sequence: make6
+		RequiresCondition: Construct >= 90
+		
+CASTLE2.SCAFF:
+	Inherits: ^3x3SITE
+	Building:
+		Footprint: ___ xxx xxx
+		Dimensions: 3,3
+	Armor:
+		Type: Concrete
+	RenderSprites:
+		PlayerPalette: raplayer
+		Image: castle2
+	CustomSellValue:
+		Value: 700
+	Valued:
+		Cost: 2000
+	Tooltip:
+		Name: Construction Site (Castle)
+	Buildable:
+		IconPalette: raicon
+		BuildPaletteOrder: 100
+		Prerequisites: anyhq, anyarmory
+		Description: Unlocks Superweapon.\n Unlocks Assassins, Crossbows and Ballista Towers.\nRequires power to operate.\nCan hold up to 4 nobles.\n\n\n\n
+		Queue: MBuilding3.GDI
+		BuildDuration: 25
+	Health:
+		HP: 90000
+		Shape: Rectangle
+			TopLeft: -1424,-1020
+			BottomRight: 1424, 1524
+	RevealsShroud:
+		Range: 4c0
+	Bib:
+	Selectable:
+		Bounds: 72,48,0,12
+	SelectionDecorations:
+		VisualBounds: 72,68,0,0
+	WithSpriteBody:
+		RequiresCondition: inactive
+	SpawnActorOnDeath@Finsihed:
+		Probability: 100
+		Actor: CASTLE2
+		DeathType: FinishedDeath
+	ExternalCondition@buildfurther: 
+		Condition: Construct
+		TotalCap: 80
+	ExternalCondition@Deliverfurther:
+		Condition: DeliveredResources
+		TotalCap: 80
+	Targetable@buildfurther: 
+		TargetTypes: Buildable
+		RequiresCondition: DeliveredResources > Construct && (80 - Construct) > 0
+	Targetable@deliverresources: 
+		TargetTypes: Deliverable
+		RequiresCondition: 80 > DeliveredResources
+	SelfHealing@Finished:
+		PercentageStep: -200
+		HealIfBelow: 110
+		Delay: 1
+		RequiresCondition: (80 - Construct) <= 0
+		DamageTypes: FinishedDeath
+	WithIdleOverlay@base1:
+		Sequence: make1
+		RequiresCondition: Construct > 10 && Construct < 25
+	WithIdleOverlay@base2:
+		Sequence: make2
+		RequiresCondition: Construct >= 25 && Construct < 35
+	WithIdleOverlay@base3:
+		Sequence: make3
+		RequiresCondition: Construct >= 35 && Construct < 45
+	WithIdleOverlay@base4:
+		Sequence: make4
+		RequiresCondition: Construct >= 45 && Construct < 55
+	WithIdleOverlay@base5:
+		Sequence: make5
+		RequiresCondition: Construct >= 55 && Construct < 65
+	WithIdleOverlay@base6:
+		Sequence: make6
+		RequiresCondition: Construct >= 65
+		
+WORKSHOPNOD.SCAFF:
+	Inherits: ^3x2SITE
+	Armor:
+		Type: Concrete
+	RenderSprites:
+		PlayerPalette: raplayer
+		Image: nodfix
+	CustomSellValue:
+		Value: 450
+	Valued:
+		Cost: 1400
+	Tooltip:
+		Name: Construction Site (Siege Workshop)
+	Buildable:
+		IconPalette: raicon
+		BuildPaletteOrder: 80
+		Prerequisites: proc
+		Description: Provides Siege weapons construction.\nEnables Supportpowers in combination with an Armory.\n\n\n
+		Queue: MBuilding3.Nod
+		BuildDuration: 25
+	Health:
+		HP: 30000
+		Shape: Rectangle
+			TopLeft: -1424,-720
+			BottomRight: 1424, 824
+	RevealsShroud:
+		Range: 4c0
+	Bib:
+	Selectable:
+		Bounds: 64,64,0,-10
+	SelectionDecorations:
+		VisualBounds: 72,48
+	WithSpriteBody:
+		RequiresCondition: inactive
+	SpawnActorOnDeath@Finsihed:
+		Probability: 100
+		Actor: WORKSHOPNOD
+		DeathType: FinishedDeath
+	ExternalCondition@buildfurther: 
+		Condition: Construct
+		TotalCap: 55
+	ExternalCondition@Deliverfurther:
+		Condition: DeliveredResources
+		TotalCap: 55
+	Targetable@buildfurther: 
+		TargetTypes: Buildable
+		RequiresCondition: DeliveredResources > Construct && (55 - Construct) > 0
+	Targetable@deliverresources: 
+		TargetTypes: Deliverable
+		RequiresCondition: 55 > DeliveredResources
+	SelfHealing@Finished:
+		PercentageStep: -200
+		HealIfBelow: 110
+		Delay: 1
+		RequiresCondition: (55 - Construct) <= 0
+		DamageTypes: FinishedDeath
+	WithIdleOverlay@base1:
+		Sequence: make1
+		RequiresCondition: Construct > 10 && Construct < 25
+	WithIdleOverlay@base2:
+		Sequence: make2
+		RequiresCondition: Construct >= 25 && Construct < 35
+	WithIdleOverlay@base3:
+		Sequence: make3
+		RequiresCondition: Construct >= 35 && Construct < 45
+	WithIdleOverlay@base4:
+		Sequence: make4
+		RequiresCondition: Construct >= 45
+		
+WORKSHOPGDI.SCAFF:
+	Inherits: ^3x2SITE
+	Armor:
+		Type: Concrete
+	RenderSprites:
+		PlayerPalette: raplayer
+		Image: gdifix
+	CustomSellValue:
+		Value: 600
+	Valued:
+		Cost: 1600
+	Tooltip:
+		Name: Construction Site (Siege Workshop)
+	Buildable:
+		IconPalette: raicon
+		BuildPaletteOrder: 80
+		Prerequisites: proc
+		Description: Provides Siege weapons construction.\nEnables Supportpowers in combination with an Armory.\n\n\n
+		Queue: MBuilding3.GDI
+		BuildDuration: 25
+	Health:
+		HP: 37350
+		Shape: Rectangle
+			TopLeft: -1424,-720
+			BottomRight: 1424, 824
+	RevealsShroud:
+		Range: 4c0
+	Bib:
+	Selectable:
+		Bounds: 64,64,0,-10
+	SelectionDecorations:
+		VisualBounds: 72,48
+	WithSpriteBody:
+		RequiresCondition: inactive
+	SpawnActorOnDeath@Finsihed:
+		Probability: 100
+		Actor: WORKSHOPGDI
+		DeathType: FinishedDeath
+	ExternalCondition@buildfurther: 
+		Condition: Construct
+		TotalCap: 65
+	ExternalCondition@Deliverfurther:
+		Condition: DeliveredResources
+		TotalCap: 65
+	Targetable@buildfurther: 
+		TargetTypes: Buildable
+		RequiresCondition: DeliveredResources > Construct && (65 - Construct) > 0
+	Targetable@deliverresources: 
+		TargetTypes: Deliverable
+		RequiresCondition: 65 > DeliveredResources
+	SelfHealing@Finished:
+		PercentageStep: -200
+		HealIfBelow: 110
+		Delay: 1
+		RequiresCondition: (65 - Construct) <= 0
+		DamageTypes: FinishedDeath
+	WithIdleOverlay@base1:
+		Sequence: make1
+		RequiresCondition: Construct > 10 && Construct < 26
+	WithIdleOverlay@base2:
+		Sequence: make2
+		RequiresCondition: Construct >= 26 && Construct < 38
+	WithIdleOverlay@base3:
+		Sequence: make3
+		RequiresCondition: Construct >= 38 && Construct < 50
+	WithIdleOverlay@base4:
+		Sequence: make4
+		RequiresCondition: Construct >= 55
+		
+GTWNEW.SCAFF:
+	Inherits: ^1x1SITE
+	Armor:
+		Type: HeavyBuilding
+	RenderSprites:
+		PlayerPalette: raplayer
+		Image: gtwnew
+	CustomSellValue:
+		Value: 135
+	Valued:
+		Cost: 400
+	Tooltip:
+		Name: Construction Site ( Guard Tower)
+	Buildable:
+		Description: A wooden tower, stationed with 2 archers.\n  Strong vs Infantry, Light Cavalry\n  Weak vs Siege weapons and Heavy Cavalry \n  Cannot target Aircraft (because of I say so)\n  Requires 2 Peasants\n\n
+		BuildPaletteOrder: 20
+		Queue: MDefenses.GDI, MDefenses.Nod
+		BuildDurationModifier: 40
+		IconPalette: raicon
+		BuildDuration: 25
+	Health:
+		HP: 20000
+		Shape: Rectangle
+			TopLeft: -456, -456
+			BottomRight: 456, 456
+	RevealsShroud:
+		Range: 4c0
+	Bib:
+		HasMinibib: Yes
+	Selectable:
+		Bounds: 24,48,0,-10
+	SelectionDecorations
+		VisualBounds: 22,48,0,-10
+	WithSpriteBody:
+		RequiresCondition: inactive
+	SpawnActorOnDeath@Finsihed:
+		Probability: 100
+		Actor: GTWNEW
+		DeathType: FinishedDeath
+	ExternalCondition@buildfurther: 
+		Condition: Construct
+		TotalCap: 15
+	ExternalCondition@Deliverfurther:
+		Condition: DeliveredResources
+		TotalCap: 15
+	Targetable@buildfurther: 
+		TargetTypes: Buildable
+		RequiresCondition: DeliveredResources > Construct && (15 - Construct) > 0
+	Targetable@deliverresources: 
+		TargetTypes: Deliverable
+		RequiresCondition: 15 > DeliveredResources
+	SelfHealing@Finished:
+		PercentageStep: -200
+		HealIfBelow: 110
+		Delay: 1
+		RequiresCondition: (15 - Construct) <= 0
+		DamageTypes: FinishedDeath
+	WithIdleOverlay@base1:
+		Sequence: make1
+		RequiresCondition: Construct > 1 && Construct < 3
+	WithIdleOverlay@base2:
+		Sequence: make2
+		RequiresCondition: Construct >= 3 && Construct < 5
+	WithIdleOverlay@base3:
+		Sequence: make3
+		RequiresCondition: Construct >= 5 && Construct < 7
+	WithIdleOverlay@base4:
+		Sequence: make4
+		RequiresCondition: Construct >= 7 && Construct < 10
+	WithIdleOverlay@base5:
+		Sequence: make5
+		RequiresCondition: Construct >= 10 && Construct < 12
+	WithIdleOverlay@base6:
+		Sequence: make6
+		RequiresCondition: Construct >= 12
+	WithRangeCircle:
+		Range: 7c0
+		
+GUNNEW.SCAFF:
+	Inherits: ^1x1SITE
+	Armor:
+		Type: HeavyBuilding
+	RenderSprites:
+		PlayerPalette: raplayer
+		Image: gunnew
+	CustomSellValue:
+		Value: 200
+	Valued:
+		Cost: 600
+	Tooltip:
+		Name: Construction Site (Gunpowder Cannon)
+	Buildable:
+		Description: The early Cannon uses gunpowder to throw a large boulder. \nIt's most effectively used against large targets.\n  Strong vs Cavalry and Spectral Units\n  Weak vs Infantry\n  Requires 1 Peasants\n\n
+		BuildPaletteOrder: 30
+		Prerequisites: barracks
+		Queue: MDefenses.GDI, MDefenses.Nod
+		IconPalette: raicon
+		BuildDurationModifier: 40
+		BuildDuration: 25
+	Health:
+		HP: 20000
+	RevealsShroud:
+		Range: 4c0
+	Bib:
+		HasMinibib: Yes
+	Selectable:
+		Bounds: 25,25,0,0
+	SelectionDecorations:
+		VisualBounds: 25,25,0,0 
+	WithSpriteBody:
+		RequiresCondition: inactive
+	SpawnActorOnDeath@Finsihed:
+		Probability: 100
+		Actor: GUNNEW
+		DeathType: FinishedDeath
+	ExternalCondition@buildfurther: 
+		Condition: Construct
+		TotalCap: 25
+	ExternalCondition@Deliverfurther:
+		Condition: DeliveredResources
+		TotalCap: 25
+	Targetable@buildfurther: 
+		TargetTypes: Buildable
+		RequiresCondition: DeliveredResources > Construct && (25 - Construct) > 0
+	Targetable@deliverresources: 
+		TargetTypes: Deliverable
+		RequiresCondition: 25 > DeliveredResources
+	SelfHealing@Finished:
+		PercentageStep: -200
+		HealIfBelow: 110
+		Delay: 1
+		RequiresCondition: (25 - Construct) <= 0
+		DamageTypes: FinishedDeath
+	WithIdleOverlay@base1:
+		Sequence: make1
+		RequiresCondition: Construct > 5 && Construct < 8
+	WithIdleOverlay@base2:
+		Sequence: make2
+		RequiresCondition: Construct >= 8 && Construct < 11
+	WithIdleOverlay@base3:
+		Sequence: make3
+		RequiresCondition: Construct >= 11 && Construct < 14
+	WithIdleOverlay@base4:
+		Sequence: make4
+		RequiresCondition: Construct >= 14 && Construct < 17
+	WithIdleOverlay@base5:
+		Sequence: make5
+		RequiresCondition: Construct >= 17 && Construct < 20
+	WithIdleOverlay@base6:
+		Sequence: make6
+		RequiresCondition: Construct >= 20
+	WithRangeCircle:
+		Range: 8c0
+		
+TRIBU.SCAFF:
+	Inherits: ^1x1SITE
+	Armor:
+		Type: HeavyBuilding
+	RenderSprites:
+		PlayerPalette: raplayer
+		Image: tribu
+	CustomSellValue:
+		Value: 500
+	Valued:
+		Cost: 1500
+	Tooltip:
+		Name: Construction Site (Counterweight Trebuchet)
+	Buildable:
+		Description: The Counterweight Trebuchet is a type of siege engine \nmost frequently used to outrange other siege weapons.\n  Requires power to operate.\n  Strong vs all Ground units\n  Cannot target Aircraft\n  Requires 3 Peasants\n\n
+		BuildPaletteOrder: 50
+		Prerequisites: anycastle
+		Queue: MDefenses.Nod
+		BuildDurationModifier: 40
+		IconPalette: raicon
+		BuildDuration: 25
+	Health:
+		HP: 30000
+		Shape: Rectangle
+			TopLeft: -456, -656
+			BottomRight: 456, 456
+	RevealsShroud:
+		Range: 4c0
+	Bib:
+		HasMinibib: Yes
+	Selectable:
+		Bounds: 30,52,0,-12
+	SelectionDecorations:
+		VisualBounds: 30,52,0,-12 
+	WithSpriteBody:
+		RequiresCondition: inactive
+	SpawnActorOnDeath@Finsihed:
+		Probability: 100
+		Actor: TRIBU
+		DeathType: FinishedDeath
+	ExternalCondition@buildfurther: 
+		Condition: Construct
+		TotalCap: 60
+	ExternalCondition@Deliverfurther:
+		Condition: DeliveredResources
+		TotalCap: 60
+	Targetable@buildfurther: 
+		TargetTypes: Buildable
+		RequiresCondition: DeliveredResources > Construct && (60 - Construct) > 0
+	Targetable@deliverresources: 
+		TargetTypes: Deliverable
+		RequiresCondition: 60 > DeliveredResources
+	SelfHealing@Finished:
+		PercentageStep: -200
+		HealIfBelow: 110
+		Delay: 1
+		RequiresCondition: (60 - Construct) <= 0
+		DamageTypes: FinishedDeath
+	WithIdleOverlay@base1:
+		Sequence: make1
+		RequiresCondition: Construct > 5 && Construct < 15
+	WithIdleOverlay@base2:
+		Sequence: make2
+		RequiresCondition: Construct >= 15 && Construct < 25
+	WithIdleOverlay@base3:
+		Sequence: make3
+		RequiresCondition: Construct >= 25 && Construct < 30
+	WithIdleOverlay@base4:
+		Sequence: make4
+		RequiresCondition: Construct >= 30 && Construct < 35
+	WithIdleOverlay@base5:
+		Sequence: make5
+		RequiresCondition: Construct >= 35 && Construct < 40
+	WithIdleOverlay@base6:
+		Sequence: make6
+		RequiresCondition: Construct >= 40 && Construct < 55
+	WithIdleOverlay@base7:
+		Sequence: make7
+		RequiresCondition: Construct >= 55
+	WithRangeCircle:
+		Range: 12c0
+		
+BATO.SCAFF:
+	Inherits: ^1x1SITE
+	Armor:
+		Type: HeavyBuilding
+	RenderSprites:
+		PlayerPalette: raplayer
+		Image: siege4
+	CustomSellValue:
+		Value: 450
+	Valued:
+		Cost: 1400
+	Tooltip:
+		Name: Construction Site (Tower with Ballista)
+	Buildable:
+		Description: Because of its smaller design and light weighted missiles, \nthe ballista on top of the tower can target \neither ground or aircraft units.\n  Strong vs ground units\n  Weak vs close by units\n  Long distance\n Can target Aircraft\n  Requires 3 Peasants\n\n
+		BuildPaletteOrder: 50
+		Prerequisites: anyarmory
+		Queue: MDefenses.GDI
+		BuildDurationModifier: 40
+		IconPalette: raicon
+		BuildDuration: 25
+	Health:
+		HP: 30000
+		Shape: Rectangle
+			TopLeft: -456, -412
+			BottomRight: 456, 524
+	RevealsShroud:
+		Range: 4c0
+	Bib:
+		HasMinibib: Yes
+	Selectable:
+		Bounds: 30,40,0,-12
+	SelectionDecorations:
+		VisualBounds: 30,40,0,-12 
+	WithSpriteBody:
+		RequiresCondition: inactive
+	SpawnActorOnDeath@Finsihed:
+		Probability: 100
+		Actor: BATO
+		DeathType: FinishedDeath
+	ExternalCondition@buildfurther: 
+		Condition: Construct
+		TotalCap: 55
+	ExternalCondition@Deliverfurther:
+		Condition: DeliveredResources
+		TotalCap: 55
+	Targetable@buildfurther: 
+		TargetTypes: Buildable
+		RequiresCondition: DeliveredResources > Construct && (55 - Construct) > 0
+	Targetable@deliverresources: 
+		TargetTypes: Deliverable
+		RequiresCondition: 55 > DeliveredResources
+	SelfHealing@Finished:
+		PercentageStep: -200
+		HealIfBelow: 110
+		Delay: 1
+		RequiresCondition: (55 - Construct) <= 0
+		DamageTypes: FinishedDeath
+	WithIdleOverlay@base1:
+		Sequence: make1
+		RequiresCondition: Construct > 5 && Construct < 15
+	WithIdleOverlay@base2:
+		Sequence: make2
+		RequiresCondition: Construct >= 15 && Construct < 25
+	WithIdleOverlay@base3:
+		Sequence: make3
+		RequiresCondition: Construct >= 25 && Construct < 30
+	WithIdleOverlay@base4:
+		Sequence: make4
+		RequiresCondition: Construct >= 30 && Construct < 35
+	WithIdleOverlay@base5:
+		Sequence: make5
+		RequiresCondition: Construct >= 35 && Construct < 45
+	WithIdleOverlay@base6:
+		Sequence: make6
+		RequiresCondition: Construct >= 45
+	WithRangeCircle:
+		Range: 9c0
+	WithRangeCircle@Air:
+		Range: 10c0
+		
+SAMNEW.SCAFF:
+	Inherits: ^2x2SITE
+	Building:
+		Footprint: xx
+		Dimensions: 2,1
+	Armor:
+		Type: Concrete
+	RenderSprites:
+		PlayerPalette: raplayer
+		Image: samnew
+	CustomSellValue:
+		Value: 225
+	Valued:
+		Cost: 650
+	Tooltip:
+		Name: Construction Site (Anti-Aircraft Ballista)
+	Buildable:
+		Description: Because of the 4 elastic limbs out of black wood \nthe Anti-Aircraft Ballista is designed to shoot down targets \nin the air with a very high speed missile.\n  Very strong vs Aircraft\n  Cannot target Ground units.\n  Requires 2 Peasants\n\n
+		BuildPaletteOrder: 40
+		Prerequisites: barracks
+		Queue: MDefenses.Nod
+		BuildDurationModifier: 40
+		IconPalette: raicon
+		BuildDuration: 25
+	Health:
+		HP: 20000
+		Shape: Rectangle
+			TopLeft: -724,-656
+			BottomRight: 724, 412
+	RevealsShroud:
+		Range: 4c0
+	Bib:
+		HasMinibib: Yes
+	SelectionDecorations:
+		VisualBounds: 50,50,0,-10
+	Selectable:
+		Bounds: 50,50,0,-10
+	WithSpriteBody:
+		RequiresCondition: inactive
+	SpawnActorOnDeath@Finsihed:
+		Probability: 100
+		Actor: SAMNEW
+		DeathType: FinishedDeath
+	ExternalCondition@buildfurther: 
+		Condition: Construct
+		TotalCap: 26
+	ExternalCondition@Deliverfurther:
+		Condition: DeliveredResources
+		TotalCap: 26
+	Targetable@buildfurther: 
+		TargetTypes: Buildable
+		RequiresCondition: DeliveredResources > Construct && (26 - Construct) > 0
+	Targetable@deliverresources: 
+		TargetTypes: Deliverable
+		RequiresCondition: 26 > DeliveredResources
+	SelfHealing@Finished:
+		PercentageStep: -200
+		HealIfBelow: 110
+		Delay: 1
+		RequiresCondition: (26 - Construct) <= 0
+		DamageTypes: FinishedDeath
+	WithIdleOverlay@base1:
+		Sequence: make1
+		RequiresCondition: Construct > 5 && Construct < 6
+	WithIdleOverlay@base2:
+		Sequence: make2
+		RequiresCondition: Construct >= 6 && Construct < 12
+	WithIdleOverlay@base3:
+		Sequence: make3
+		RequiresCondition: Construct >= 12 && Construct < 16
+	WithIdleOverlay@base4:
+		Sequence: make4
+		RequiresCondition: Construct >= 16 && Construct < 20
+	WithIdleOverlay@base5:
+		Sequence: make5
+		RequiresCondition: Construct >= 20 && Construct < 24
+	WithRangeCircle@Air:
+		Range: 8c0
+		
+TAVERN.SCAFF:
+	Inherits: ^3x2SITE
+	Armor:
+		Type: Concrete
+	RenderSprites:
+		PlayerPalette: raplayer
+		Image: tavern
+	CustomSellValue:
+		Value: 350
+	Valued:
+		Cost: 1000
+	Tooltip:
+		Name: Construction Site (Tavern)
+	Buildable:
+		IconPalette: raicon
+		BuildPaletteOrder: 200
+		Prerequisites: barracks
+		Description: Provides 2 additional workers.\n\n\n\n
+		Queue: MBuilding.GDI, MBuilding.Nod
+		BuildDuration: 25
+	Health:
+		HP: 40000
+		Shape: Rectangle
+			TopLeft: -1424,-924
+			BottomRight: 1424, 924
+	RevealsShroud:
+		Range: 4c0
+	Bib:
+	Selectable:
+		Bounds: 72,48
+	SelectionDecorations:
+		VisualBounds: 72,64,0,-16
+	WithSpriteBody:
+		RequiresCondition: inactive
+	SpawnActorOnDeath@Finsihed:
+		Probability: 100
+		Actor: TAVERN
+		DeathType: FinishedDeath
+	ExternalCondition@buildfurther: 
+		Condition: Construct
+		TotalCap: 52
+	ExternalCondition@Deliverfurther:
+		Condition: DeliveredResources
+		TotalCap: 52
+	Targetable@buildfurther: 
+		TargetTypes: Buildable
+		RequiresCondition: DeliveredResources > Construct && (52 - Construct) > 0
+	Targetable@deliverresources: 
+		TargetTypes: Deliverable
+		RequiresCondition: 52 > DeliveredResources
+	SelfHealing@Finished:
+		PercentageStep: -200
+		HealIfBelow: 110
+		Delay: 1
+		RequiresCondition: (52 - Construct) <= 0
+		DamageTypes: FinishedDeath
+	WithIdleOverlay@base1:
+		Sequence: make1
+		RequiresCondition: Construct > 5 && Construct < 15
+	WithIdleOverlay@base2:
+		Sequence: make2
+		RequiresCondition: Construct >= 15 && Construct < 25
+	WithIdleOverlay@base3:
+		Sequence: make3
+		RequiresCondition: Construct >= 25 && Construct < 35
+	WithIdleOverlay@base4:
+		Sequence: make4
+		RequiresCondition: Construct >= 35 && Construct < 40
+	WithIdleOverlay@base5:
+		Sequence: make5
+		RequiresCondition: Construct >= 40 && Construct < 45
+	WithIdleOverlay@base6:
+		Sequence: make6
+		RequiresCondition: Construct >= 45
+		
+TOWNHALL.SCAFF:
+	Inherits: ^3x2SITE
+	Armor:
+		Type: Concrete
+	RenderSprites:
+		PlayerPalette: raplayer
+		Image: townhall
+	CustomSellValue:
+		Value: 700
+	Valued:
+		Cost: 2000
+	Tooltip:
+		Name: Construction Site (Town Hall)
+	Buildable:
+		IconPalette: raicon
+		BuildPaletteOrder: 210
+		Prerequisites: anyarmory
+		Description: Attracts citizens to your town.\nNew Peasants will spawn faster.\n\n\n
+		Queue: MBuilding.GDI, MBuilding.Nod
+		BuildDuration: 25
+	Health:
+		HP: 60000
+		Shape: Rectangle
+			TopLeft: -1424,-924
+			BottomRight: 1424, 924
+	RevealsShroud:
+		Range: 4c0
+	Bib:
+	Selectable:
+		Bounds: 72,48
+	SelectionDecorations:
+		VisualBounds: 72,64,0,-16
+	WithSpriteBody:
+		RequiresCondition: inactive
+	SpawnActorOnDeath@Finsihed:
+		Probability: 100
+		Actor: TOWNHALL
+		DeathType: FinishedDeath
+	ExternalCondition@buildfurther: 
+		Condition: Construct
+		TotalCap: 80
+	ExternalCondition@Deliverfurther:
+		Condition: DeliveredResources
+		TotalCap: 80
+	Targetable@buildfurther: 
+		TargetTypes: Buildable
+		RequiresCondition: DeliveredResources > Construct && (80 - Construct) > 0
+	Targetable@deliverresources: 
+		TargetTypes: Deliverable
+		RequiresCondition: 80 > DeliveredResources
+	SelfHealing@Finished:
+		PercentageStep: -200
+		HealIfBelow: 110
+		Delay: 1
+		RequiresCondition: (80 - Construct) <= 0
+		DamageTypes: FinishedDeath
+	WithIdleOverlay@base1:
+		Sequence: make1
+		RequiresCondition: Construct > 5 && Construct < 10
+	WithIdleOverlay@base2:
+		Sequence: make2
+		RequiresCondition: Construct >= 10 && Construct < 15
+	WithIdleOverlay@base3:
+		Sequence: make3
+		RequiresCondition: Construct >= 15 && Construct < 35
+	WithIdleOverlay@base4:
+		Sequence: make4
+		RequiresCondition: Construct >= 35 && Construct < 55
+	WithIdleOverlay@base5:
+		Sequence: make5
+		RequiresCondition: Construct >= 55 && Construct < 75
+	WithIdleOverlay@base6:
+		Sequence: make6
+		RequiresCondition: Construct >= 75
