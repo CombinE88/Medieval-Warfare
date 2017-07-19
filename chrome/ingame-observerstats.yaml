@@ -1,14 +1,14 @@
 Background@INGAME_OBSERVERSTATS_BG:
 	Logic: ObserverStatsLogic
-	X: (WINDOW_RIGHT - WIDTH) / 2
-	Y: (WINDOW_BOTTOM - HEIGHT) / 2
-	Width: 1005
-	Height: 500
+	X: 290
+	Y: WINDOW_BOTTOM - 200
+	Width: WINDOW_RIGHT - 580
+	Height: 200
 	Children:
 		Background@BACKGROUND:
 			Width: PARENT_RIGHT
 			Background: panel-black
-			Height: PARENT_BOTTOM - 35
+			Height: PARENT_BOTTOM
 			Children:
 				Label@TITLE:
 					X: 0
@@ -544,7 +544,7 @@ Background@INGAME_OBSERVERSTATS_BG:
 									AxisFont: Bold
 		Button@CLOSE:
 			X: 0
-			Y: PARENT_BOTTOM - 36
+			Y: PARENT_BOTTOM - 200 - 36
 			Width: 140
 			Height: 35
 			Text: Close

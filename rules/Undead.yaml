@@ -314,7 +314,7 @@ UNDEAD7:
 	Health:
 		HP: 50000
 	-Crushable:
-    Armament:
+	Armament:
 		Weapon: SkeletonRock
 		FireDelay: 30
 		LocalOffset: 0,0,512
@@ -325,6 +325,10 @@ UNDEAD7:
 		Role: Utility
 	Armor:
 		Type: HeavyCavalry
+	Selectable:
+		Bounds: 14,24,0,-12
+	SelectionDecorations:
+		VisualBounds: 14,24,0,-12
 
 		
 GSTONE1:
@@ -443,6 +447,8 @@ GSTONEXL2:
 		
 COFFIN1:
 	Inherits: ^Gravestone
+	Tooltip:
+		Name: Coffin
 	ShakeOnCreate:
 		Intensity: 30
 	CritterSpawner:
@@ -457,6 +463,8 @@ COFFIN1:
 		
 COFFIN2:
 	Inherits: ^Gravestone
+	Tooltip:
+		Name: Coffin
 	ShakeOnCreate:
 		Intensity: 30
 	CritterSpawner:
@@ -471,6 +479,8 @@ COFFIN2:
 		
 COFFIN3:
 	Inherits: ^Gravestone
+	Tooltip:
+		Name: Coffin
 	ShakeOnCreate:
 		Intensity: 30
 	CritterSpawner:
@@ -499,14 +509,77 @@ OBELISK:
 		Cost: 2000
 	Tooltip:
 		Name: Obelisk
-	ProvidesPrerequisite:
-		Prerequisite: anypower
 	Building:
 		Footprint: x
 		Dimensions: 1,1
 	AutoTarget:
 	Health:
 		HP: 150000
+		Shape: Rectangle
+			TopLeft: -512,-512
+			BottomRight: 512, 512
+	RevealsShroud:
+		Range: 10c0
+	Selectable:
+		Bounds: 28,28,0,-4
+	SelectionDecorations:
+		VisualBounds: 28,28,0,-4
+	AttackOmni:
+	Armament@VisualA: 
+		Weapon: ObeliskGraveCleaner
+		LocalOffset: 0,0,1312
+	Armament@VisualB: 
+		FireDelay: 10
+		Weapon: ObeliskGraveCleaner
+		LocalOffset: 0,0,1312
+	Armament@VisualC: 
+		FireDelay: 20
+		Weapon: ObeliskGraveCleaner
+		LocalOffset: 0,0,1312
+	CritterSpawner:
+		Actors: gstone1,gstone2,gstone3,gstone4,gstone5,gstone6,gstone7,gstone8,gstone9,gstonexl1,gstonexl2
+		AliveMax: 4
+		TicksMin: 1000
+		TicksMax: 3000
+		RadiusMin: 2
+		RadiusMax: 7
+	CritterSpawner@acolyte:
+		Actors: acolyte, acolyteb, acolytec
+		AliveMax: 2
+		TicksMin: 3000
+		TicksMax: 6000
+		RadiusMin: 1
+		RadiusMax: 6
+	CritterSpawner@Giant:
+		Actors: coffin1, coffin2, coffin3
+		AliveMax: 2
+		TicksMin: 3000
+		TicksMax: 5000
+		RadiusMin: 2
+		RadiusMax: 7
+        
+OBELISKB:
+	Inherits: ^MWBaseBuilding
+	Armor:
+		Type: Concrete
+	WithDeathAnimation:
+		DeathSequencePalette: raplayer
+	Targetable@Preyable:
+		TargetTypes: Preyable
+	RenderSprites:
+		PlayerPalette: raplayer
+	ExternalCondition@ChargeObelisk:
+		Condition: ChargeObelisk
+	Valued:
+		Cost: 3000
+	Tooltip:
+		Name: Obelisk
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+	AutoTarget:
+	Health:
+		HP: 250000
 		Shape: Rectangle
 			TopLeft: -512,-512
 			BottomRight: 512, 512
@@ -537,26 +610,82 @@ OBELISK:
 		Weapon: ObeliskGraveCleaner
 		LocalOffset: 0,0,1312
 	CritterSpawner:
+		CheckReachability: true
 		Actors: gstone1,gstone2,gstone3,gstone4,gstone5,gstone6,gstone7,gstone8,gstone9,gstonexl1,gstonexl2
-		AliveMax: 8
+		AliveMax: 7
 		TicksMin: 1000
 		TicksMax: 3000
 		RadiusMin: 2
 		RadiusMax: 7
 	CritterSpawner@acolyte:
+		CheckReachability: true
 		Actors: acolyte, acolyteb, acolytec
-		AliveMax: 4
+		AliveMax: 3
 		TicksMin: 3000
 		TicksMax: 6000
 		RadiusMin: 1
 		RadiusMax: 6
 	CritterSpawner@Giant:
+		CheckReachability: true
 		Actors: coffin1, coffin2, coffin3
-		AliveMax: 4
-		TicksMin: 2000
-		TicksMax: 4000
+		AliveMax: 3
+		TicksMin: 3000
+		TicksMax: 5000
 		RadiusMin: 2
 		RadiusMax: 7
+	SelfHealing@HealsConst:
+		PercentageStep: 1
+		HealIfBelow: 100
+		Delay: 100
+		DamageCooldown: 100
+        
+  
+CRYPT:
+	Inherits: ^MWBaseBuilding
+	Armor:
+		Type: Concrete
+	WithDeathAnimation:
+		DeathSequencePalette: raplayer
+	Targetable@Preyable:
+		TargetTypes: Preyable
+	RenderSprites:
+		PlayerPalette: raplayer
+	ExternalCondition@ChargeObelisk:
+		Condition: ChargeObelisk
+	Valued:
+		Cost: 5000
+	Tooltip:
+		Name: Crypt
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+	AutoTarget:
+	Health:
+		HP: 400000
+		Shape: Rectangle
+			TopLeft: -925,-925
+			BottomRight: 925, 925
+	RevealsShroud:
+		Range: 10c0
+	Selectable:
+		Bounds: 48,48,0,0
+	SelectionDecorations:
+		VisualBounds: 48,48,0,0
+	Bib:
+	AttackOmni:
+	CritterSpawner:
+		CheckReachability: true
+		Actors: obelisk
+		AliveMax: 4
+		TicksMin: 2000
+		TicksMax: 5000
+		RadiusMin: 6
+		RadiusMax: 7
+	SelfHealing@HealsConst:
+		PercentageStep: 1
+		HealIfBelow: 100
+		Delay: 25
+		DamageCooldown: 100
 		
 ACOLYTE:
 	Inherits: ^Knight

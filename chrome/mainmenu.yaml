@@ -27,9 +27,17 @@ Container@MENU_BACKGROUND:
 			Width: 128
 			Align: Center
 			Contrast: true
+		Label@SILKROAD_LABEL:
+			X: WINDOW_RIGHT-128-43
+			Y: 138
+			Text: The Silk Road
+			Width: 128
+			Align: Center
+			Contrast: true
+			Font: tsrmedium
 		Label@INFESTED_LABEL:
 			X: WINDOW_RIGHT-128-43
-			Y: 135
+			Y: 165
 			Text: Infested Version
 			Width: 128
 			Align: Center

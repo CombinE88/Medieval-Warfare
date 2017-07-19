@@ -22,7 +22,7 @@ SkeletonPike:
 			MediumCavalry: 125
 			HeavyCavalry: 120
 			Spectral: 30
-		DamageTypes: Prone50Percent, TriggerProne, DefaultDeat
+		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
 
 SkeletonBroadSword:
 	ReloadDelay: 35
@@ -101,7 +101,7 @@ SkeletonGiant:
 			MediumCavalry: 100
 			HeavyCavalry: 100
 			Spectral: 55
-		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+		DamageTypes: Prone50Percent, TriggerProne, RippedApartDeath
 	Warhead@Shake: ShakeGround	 
 		Intensity: 5
 		Delay: 5
@@ -305,7 +305,7 @@ ObeliskGraveCleaner:
 			MediumCavalry: 100
 			HeavyCavalry: 100
 			HeavyBuilding: 100
-		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+		DamageTypes: Prone50Percent, TriggerProne, RippedApartDeath
 		
 AcolytePrey:
 	ValidTargets: Preyable
@@ -345,7 +345,7 @@ AcolyteGiantHand:
 			HeavyCavalry: 100
 			HeavyBuilding: 100
 			Spectral: 100
-		DamageTypes: Prone50Percent, TriggerProne, BallistaDeath
+		DamageTypes: Prone50Percent, TriggerProne, RippedApartDeath
 	Warhead@5hand: CreateEffect
 		Explosions: gianthand 
         ExplosionPalette : ra
@@ -406,7 +406,7 @@ AcolyteSpawnHelper:
 		InvalidTargets: Air
 		ValidTargets: Ground
 		Damage: 0
-		DamageTypes: Prone50Percent, TriggerProne, PoisonDeath
+		DamageTypes: Prone50Percent, TriggerProne, RippedApartDeath
 	
 AcolyteSpawnSkeletonA:
 	ValidTargets: Ground
@@ -514,4 +514,4 @@ AcolyteAttackCleaner:
 			MediumCavalry: 100
 			HeavyCavalry: 100
 			HeavyBuilding: 100
-		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+		DamageTypes: Prone50Percent, TriggerProne, RippedApartDeath

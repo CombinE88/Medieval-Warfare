@@ -518,6 +518,28 @@ obelisk:
 	dead:
 		Offset: 0,-5
 		Start: 2
+        
+obeliskb: 
+	idle:
+		Offset: 0,-10
+		Start: 0
+	damaged-idle:
+		Offset: 0,-10
+		Length: 1
+	dead:
+		Offset: 0,-10
+		Start: 2
+        
+crypt: 
+	idle:
+		Start: 0
+	damaged-idle:
+		Length: 1
+	dead:
+		Start: 2
+	bib: bib3
+		UseTilesetExtension: true
+		Length: *
 		
 acolyte:
 	stunned: sulm4

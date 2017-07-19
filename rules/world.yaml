@@ -38,7 +38,7 @@
 		Name: Iron
 		ResourceType: 1
 		Type: Tiberium
-		ValuePerUnit: 23
+		ValuePerUnit: 28
 		AllowedTerrainTypes: Clear,Road
 		AllowUnderActors: true
 	ResourceType@blue-tib:
@@ -59,7 +59,7 @@
 		TerrainType: Crops
 		Sequences: crop1,crop2,crop3,crop4,crop5,crop6,crop7,crop8,crop9,crop10,crop11
 		MaxDensity: 12
-		ValuePerUnit: 12
+		ValuePerUnit: 16
 		Name: Crops
 		Type: Copper
 		PipColor: Blue
@@ -71,7 +71,7 @@
 		TerrainType: Crops
 		Sequences: grain1,grain2,grain3,grain4,grain5,grain6,grain7
 		MaxDensity: 12
-		ValuePerUnit: 12
+		ValuePerUnit: 16
 		Name: Grain
 		Type: Grains
 		PipColor: Blue
@@ -83,7 +83,7 @@
 		TerrainType: Crops
 		Sequences: corn1,corn2,corn3,corn4,corn5,corn6,corn7,corn8,corn9,corn10,corn11
 		MaxDensity: 12
-		ValuePerUnit: 12
+		ValuePerUnit: 16
 		Name: Corn
 		Type: Corn
 		PipColor: Blue

@@ -88,7 +88,7 @@ LODGE.SCAFF:
 	Valued:
 		Cost: 300
 	Tooltip:
-		Name: Hunter Lodge (Small Hut)
+		Name: Construction Site (Hunter Lodge)
 	Buildable:
 		IconPalette: raicon
 		BuildPaletteOrder: 10
