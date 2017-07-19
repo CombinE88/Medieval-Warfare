@@ -537,6 +537,7 @@ OBELISK:
 		Weapon: ObeliskGraveCleaner
 		LocalOffset: 0,0,1312
 	CritterSpawner:
+		CheckReachability: true
 		Actors: gstone1,gstone2,gstone3,gstone4,gstone5,gstone6,gstone7,gstone8,gstone9,gstonexl1,gstonexl2
 		AliveMax: 4
 		TicksMin: 1000
@@ -544,13 +545,15 @@ OBELISK:
 		RadiusMin: 2
 		RadiusMax: 7
 	CritterSpawner@acolyte:
+		CheckReachability: true
 		Actors: acolyte, acolyteb, acolytec
-		AliveMax: 2
+		AliveMax: 8
 		TicksMin: 3000
 		TicksMax: 6000
 		RadiusMin: 1
 		RadiusMax: 6
 	CritterSpawner@Giant:
+		CheckReachability: true
 		Actors: coffin1, coffin2, coffin3
 		AliveMax: 2
 		TicksMin: 3000
@@ -620,7 +623,7 @@ OBELISKB:
 	CritterSpawner@acolyte:
 		CheckReachability: true
 		Actors: acolyte, acolyteb, acolytec
-		AliveMax: 3
+		AliveMax: 12
 		TicksMin: 3000
 		TicksMax: 6000
 		RadiusMin: 1
