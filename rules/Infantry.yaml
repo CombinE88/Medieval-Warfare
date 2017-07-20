@@ -690,9 +690,9 @@ RMBONEW:
 		Queue: MInfantry.GDI
 		BuildDuration: 150
 	Mobile:
-		Speed: 50
+		Speed: 45
 	Health:
-		HP: 18500
+		HP: 15000
 	Armament:
 		Weapon: paladingun
 		MuzzleSequence: muzzle

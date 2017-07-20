@@ -20,8 +20,6 @@ SULGTW:
 		Cost: 550
 	CustomSellValue:
 		Value: 275
-	ProvidesPrerequisite:
-		Prerequisite: anyrefinery
 	Tooltip:
 		Name: Mosaic Guard Tower
 	Buildable:
@@ -168,11 +166,6 @@ SULGTW:
 		RequiresCondition: djinn && Construct >= 50
 	Armament@djinn:
 		Weapon: DjinElectroGround
-		LocalOffset: 141,75,352
-		Turret: turr3
-		RequiresCondition: djinn && Construct >= 50
-	Armament@djinnAir:
-		Weapon: DjinElectroAir
 		LocalOffset: 141,75,352
 		Turret: turr3
 		RequiresCondition: djinn && Construct >= 50
@@ -456,7 +449,7 @@ SULPLUG3:
 	Tooltip:
 		Name: Mystical Firepower Upgrade
 	Buildable:
-		Description: Upgrades the Guard Tower with 1 Djinn.\n  Can attack Aricrafts\n  Strong vs Everything\n\n
+		Description: Upgrades the Guard Tower with 1 Djinn.\n Attacks ground units only!\n  Strong vs Everything\n\n
 		BuildPaletteOrder: 22
 		Prerequisites: sultow2, sultow4
 		Queue: MDefenses.SUL
@@ -478,7 +471,7 @@ SULPLUG4:
 	Tooltip:
 		Name: Advanced Defense Upgrade
 	Buildable:
-		Description: Upgrades the Guard Tower with a static defense.\n  Deals high damage to Cavalry\n  Strong vs Cavalry\n  Weak vs Infantry\n  Increases base hitpoints by 30%\n  Replaces arrows with javelines\n  
+		Description: Upgrades the Guard Tower with jevalin defense.\n  Deals high damage to Cavalry\n  Strong vs Cavalry\n  Weak vs Infantry\n  Increases base hitpoints by 30%\n  Replaces arrows with javelines\n  Can attack Aircrafts
 		BuildPaletteOrder: 21
 		Prerequisites: vehicleproduction, sultow3
 		Queue: MDefenses.SUL
@@ -1501,6 +1494,8 @@ SULREF:
 		Facing: 64
 	ProvidesPrerequisite:
 		Prerequisite: proc
+	ProvidesPrerequisite:
+		Prerequisite: anyrefinery
 	SelectionDecorations:
 		VisualBounds: 73,72
 	ProvidesPrerequisite@buildingname:
@@ -1920,7 +1915,7 @@ SULM2:
 	Tooltip:
 		Name: Djinn
 	Buildable:
-		Description: Advanced Multi-Role unit.\n  Can only be hurt by magical or fire weaponary.\n  Moderate vs Everything\n  Weak vs Buildings\n  Detects cloaked units at a very large area\n  Can attack Aircrafts\n\nConsumes: 2 Peasants\n
+		Description: Advanced Multi-Role unit.\n  Can only be hurt by magical or fire weaponary.\n  Moderate vs Everything\n  Weak vs Buildings\n  Detects cloaked units at a very large area\n  Can only attack ground targets\n\nConsumes: 2 Peasants\n
 		IconPalette: raicon
 		Prerequisites: sultow2, sultow4, anyhq
 		BuildPaletteOrder: 70

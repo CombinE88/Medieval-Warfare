@@ -130,6 +130,7 @@ SPLIT7:
 	WithSpriteBody:
 		Sequence: idle
 	CritterSpawner:
+		CheckReachability: true
 		Actors: deer01, deer02, deer03, deer03a
 		AliveMax: 5
 		TicksMin: 1000
@@ -148,6 +149,7 @@ SPLIT8:
 	WithSpriteBody:
 		Sequence: idle2
 	CritterSpawner:
+		CheckReachability: true
 		Actors: deer01, deer02, deer03, deer03a
 		AliveMax: 10
 		TicksMin: 500

@@ -255,13 +255,15 @@ ApprenticeFire:
 DjinElectro:
 	ReloadDelay: 55
 	Range: 5c512
-	ValidTargets: Ground, Air
+	ValidTargets: Ground
+    InvalidTargets: Air
 	Report: tesla1.aud
 	Projectile: TeslaZap
 	Warhead@1Dam: SpreadDamage
 		Spread: 42
 		Damage: 6000
-		ValidTargets: Ground, Air
+		ValidTargets: Ground
+        InvalidTargets: Air
 		Versus:
 			None: 100
 			Leather: 100
