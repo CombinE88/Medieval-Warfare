@@ -68,7 +68,7 @@ MCV2NEW:
 		TransformSounds: constru2.aud, hvydoor1.aud
 		NoTransformNotification: BuildingCannotPlaceAudio
 	Valued:
-		Cost: 1500
+		Cost: 2000
 	Tooltip:
 		Name: Supply wagon
 	Buildable:
@@ -482,7 +482,7 @@ EHARVXL:
 		BuildPaletteOrder: 0
 		Description: Collects iron and goldore.\n  Unarmed\n\nTrains: 1 Peasant
 		Queue: MSiege.GDI, MSiege.Nod, MSiege.SUL
-		Prerequisites: procnew
+		Prerequisites: anyrefinery
 	Mobile:
 		TurnSpeed: 5
 		Speed: 85

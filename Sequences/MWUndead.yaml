@@ -533,13 +533,29 @@ obeliskb:
 crypt: 
 	idle:
 		Start: 0
+		Length: 15
+		Tick: 80
 	damaged-idle:
-		Length: 1
+		Start: 15
+		Length: 15
+		Tick: 80
 	dead:
-		Start: 2
+		Start: 30
 	bib: bib3
 		UseTilesetExtension: true
 		Length: *
+	burnloop1: burn-m
+		Start: 16
+		Length: 44
+		Tick: 80
+		ZOffset: 512
+		Offset: -22, 10
+	burnloop2: burn-m
+		Start: 16
+		Length: 44
+		Tick: 80
+		ZOffset: 512
+		Offset: -3, 17
 		
 acolyte:
 	stunned: sulm4

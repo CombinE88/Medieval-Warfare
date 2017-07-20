@@ -653,8 +653,7 @@ CRYPT:
 		TargetTypes: Preyable
 	RenderSprites:
 		PlayerPalette: raplayer
-	ExternalCondition@ChargeObelisk:
-		Condition: ChargeObelisk
+	WithSpriteBody
 	Valued:
 		Cost: 5000
 	Tooltip:
@@ -662,7 +661,6 @@ CRYPT:
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
-	AutoTarget:
 	Health:
 		HP: 400000
 		Shape: Rectangle
@@ -675,7 +673,6 @@ CRYPT:
 	SelectionDecorations:
 		VisualBounds: 48,48,0,0
 	Bib:
-	AttackOmni:
 	CritterSpawner:
 		CheckReachability: true
 		Actors: obelisk
@@ -689,6 +686,12 @@ CRYPT:
 		HealIfBelow: 100
 		Delay: 25
 		DamageCooldown: 100
+	WithIdleOverlay@one:
+		Sequence: burnloop1
+		Palette: terrain
+	WithIdleOverlay@two:
+		Sequence: burnloop2
+		Palette: terrain
 		
 ACOLYTE:
 	Inherits: ^Knight

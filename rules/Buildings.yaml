@@ -214,7 +214,7 @@ FACTNEW:
 		Offset: -124,1024, 0
 		MoveOffset: 1,2
 		Sticky: true
-		Lasso: 10c0
+		Lasso: 4c0
 	WithFreeSpawnableActor@LABOURTWO:
 		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 		UseConverting: false
@@ -222,7 +222,7 @@ FACTNEW:
 		Offset: -124,1024, 0
 		MoveOffset: 1,2
 		Sticky: true
-		Lasso: 10c0
+		Lasso: 4c0
 	WithFreeSpawnableActor@LABOURTHREE:
 		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 		UseConverting: false
@@ -230,16 +230,45 @@ FACTNEW:
 		Offset: -124,1024, 0
 		MoveOffset: 1,2
 		Sticky: true
-		Lasso: 10c0
+		Lasso: 4c0
 	WithFreeSpawnableActor@LABOURFOUR:
 		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 		UseConverting: false
 		SpawnActor: engeneer
+		RespawnTime: 125
 		Offset: -124,1024, 0
 		MoveOffset: 1,2
 		Sticky: true
-		Lasso: 10c0
-		
+		Lasso: 4c0
+	WithFreeSpawnableActor@LABOUR4:
+		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
+		UseConverting: false
+		SpawnActor: transporter
+		Offset: -124,1024, 0
+		MoveOffset: 1,2
+		Sticky: true
+		Lasso: 4c0
+	WithFreeSpawnableActor@LABOUR5:
+		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
+		UseConverting: false
+		SpawnActor: transporter
+		Offset: -124,1024, 0
+		MoveOffset: 1,2
+		Sticky: true
+		Lasso: 4c0
+	WithFreeSpawnableActor@LABOUR6:
+		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
+		UseConverting: false
+		SpawnActor: transporter
+		Offset: -124,1024, 0
+		MoveOffset: 1,2
+		Sticky: true
+		Lasso: 4c0
+	StoresResources:
+		PipColor: Yellow
+		PipCount: 10
+		Capacity: 4000
+
 
 FACTNEW.GDI:
 	Inherits: FACTNEW
@@ -282,10 +311,6 @@ MINIFACT:
 	Inherits: ^MWBaseBuilding
 	ProvidesPrerequisite@FACTNEW:
 		Prerequisite: factnew
-	Transforms:
-		IntoActor: mcv2new
-		Offset: 1,1
-		Facing: 108
 	WithMakeAnimation:
 	WithSpriteBody:	 
 	BodyOrientation:
@@ -1234,6 +1259,8 @@ PROCNEW:
 		DeathSequencePalette: raplayer
 	RenderSprites:
 		PlayerPalette: raplayer
+	ProvidesPrerequisite:
+		Prerequisite: anyrefinery
 	Valued:
 		Cost: 1500
 	Tooltip:
@@ -1248,7 +1275,7 @@ PROCNEW:
 		Footprint: _x_ xxx xx=
 		Dimensions: 3,3
 	Health:
-		HP: 120000
+		HP: 150000
 		Shape: Rectangle
 			TopLeft: -1436,-756
 			BottomRight: 1436, 924
@@ -1738,7 +1765,7 @@ CASTLE:
 	NukePower:
 		Icon: cannonstrike
 		Cursor: nuke
-		ChargeTime: 350
+		ChargeTime: 360
 		Description: Cannon Strike
 		LongDesc: Launch long range cannonboulder off your casle.\nApplies heavy damage over a large area.\n\n\n\n
 		EndChargeSpeechNotification: NodcannonReady
@@ -1815,7 +1842,7 @@ CASTLE2:
 	NukePower:
 		Icon: lightning
 		Cursor: ioncannon
-		ChargeTime: 180
+		ChargeTime: 270
 		Description: Weather control
 		LongDesc: Initiate an Lightning strike.\nApplies instant damage to a small area.\n\n\n\n
 		EndChargeSpeechNotification: LightningReady
@@ -2352,6 +2379,12 @@ ANYARMORY:
 	Tooltip:
 		Name: Armory or Tower of Progress
 		Description: Armory or Tower of Progress
+        
+ANYREFINERY:
+	AlwaysVisible:
+	Tooltip:
+		Name: Ore refinery
+		Description: Ore refinery 
 		
 BARRACKS:
 	AlwaysVisible:
@@ -2534,16 +2567,16 @@ TAVERN:
 		Image: tavern
 		PlayerPalette: raplayer
 	Valued:
-		Cost: 1000
+		Cost: 700
 	CustomSellValue:
-		Value: 100
+		Value: 350
 	Tooltip:
 		Name: Tavern
 	Buildable:
 		IconPalette: raicon
 		BuildPaletteOrder: 40
 		Prerequisites: proc, ~scaffold
-		Description: Provides 2 additional worker.\n\n\n\n
+		Description: Provides 3 additional worker and 1 engineer.\n\n\n\n
 		Queue: MBuilding.GDI, MBuilding.Nod
 	Building:
 		Footprint: xxx xxx
@@ -2574,6 +2607,7 @@ TAVERN:
 		MoveOffset: 1,2
 		FindRadius: 100
 		Sticky: true
+        Lasso: 4c0
 	WithFreeSpawnableActor@2:
 		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 		SpawnActor: transporter
@@ -2581,12 +2615,22 @@ TAVERN:
 		MoveOffset: 1,2
 		FindRadius: 100
 		Sticky: true
+        Lasso: 4c0
 	WithFreeSpawnableActor@3:
 		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 		SpawnActor: transporter
 		Offset: -1109,554, 0
 		MoveOffset: 1,2
 		FindRadius: 100
+		Sticky: true
+        Lasso: 4c0
+	WithFreeSpawnableActor@4:
+		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
+		SpawnActor: engeneer
+		Offset: -1109,554, 0
+		MoveOffset: 1,2
+		FindRadius: 100
+        Lasso: 4c0
 		Sticky: true
 	BaseProvider:
 		Cooldown: 25

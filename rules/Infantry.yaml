@@ -202,7 +202,7 @@ ENGENEER:
 		PipType: Yellow
 	Inherits: ^Knight
 	Valued:
-		Cost: 350
+		Cost: 250
 	Tooltip:
 		Name: Engineer
 	Selectable:
@@ -212,18 +212,16 @@ ENGENEER:
 		IconPalette: raicon
 		BuildPaletteOrder: 110
 		Queue: MInfantry.GDI, MInfantry.Nod, MInfantry.SUL
+        BuildDuration: 150
 	Mobile:
-		Speed: 56
+		Speed: 66
 	Captures:
 		CaptureTypes: building, husk
 		PlayerExperience: 50
 		SabotageHPRemoval: 10
 	Health:
-		HP: 7000
-	Armament:
-		Weapon: repair
-		TargetStances: Ally
-		ForceTargetStances: None
+		HP: 8000
+	AutoTargetIgnore:
 	Armament@Build:
 		Weapon: BuildConstruction
 		TargetStances: Ally
@@ -238,7 +236,7 @@ ENGENEER:
 	WithInfantryBody:
 		DefaultAttackSequence: shoot
 	AutoTarget:
-		ScanRadius: 15
+		ScanRadius: 18
 		InitialStance: AttackAnything
 	Armor:
 		Type: Leather
@@ -281,13 +279,14 @@ E2NEW:
 	Valued:
 		Cost: 200
 	-Crushable:
-    Tooltip:
+	Tooltip:
 		Name: Pike Guard
 	Buildable:
 		Description: Anti-Cavalry infantry.\n  Strong vs Cavalry.\n  Weak vs Infantry\n  Deals damage when trampled by Cavalry\n  Can cut down trees.\n\nTrains: 1 Peasant\n
 		IconPalette: raicon
 		BuildPaletteOrder: 20
 		Queue:  MInfantry.Nod, MInfantry.Horse
+		BuildDuration: 50
 	Mobile:
 		Speed: 45
 	Health:
@@ -326,6 +325,7 @@ E2NEWV2:
 		IconPalette: raicon
 		BuildPaletteOrder: 20
 		Queue: MInfantry.GDI
+		BuildDuration: 50
 	Mobile:
 		Speed: 45
 	Health:
@@ -363,6 +363,7 @@ E3NEW:
 		IconPalette: raicon
 		BuildPaletteOrder: 10
 		Queue: MInfantry.GDI
+		BuildDuration: 50
 	Mobile:
 		Speed: 56
 	Health:
@@ -397,6 +398,7 @@ E3NEWV2:
 		IconPalette: raicon
 		BuildPaletteOrder: 10
 		Queue: MInfantry.Nod, MInfantry.Horse
+		BuildDuration: 50
 	Mobile:
 		Speed: 56
 	Health:
@@ -490,6 +492,7 @@ E9NEW:
 		BuildPaletteOrder: 40
 		Prerequisites: anyhq
 		Queue: MInfantry.Nod, MInfantry.Horse
+		BuildDuration: 100
 	Mobile:
 		Speed: 56
 	Health:
@@ -531,6 +534,7 @@ E4NEW:
 		IconPalette: raicon
 		BuildPaletteOrder: 30
 		Queue: MInfantry.Nod, MInfantry.Horse
+		BuildDuration: 50
 	Mobile:
 		Speed: 60
 	Health:
@@ -586,6 +590,7 @@ E4NEWV2:
 		IconPalette: raicon
 		BuildPaletteOrder: 30
 		Queue: MInfantry.GDI
+		BuildDuration: 50
 	Mobile:
 		Speed: 60
 	Health:
@@ -644,6 +649,7 @@ E5NEW:
 		BuildPaletteOrder: 50
 		Prerequisites: anyarmory
 		Queue: MInfantry.Nod, MInfantry.Horse
+		BuildDuration: 200
 	Mobile:
 		Speed: 56
 	Health:
@@ -682,6 +688,7 @@ RMBONEW:
 		BuildPaletteOrder: 40
 		Prerequisites: anyhq
 		Queue: MInfantry.GDI
+		BuildDuration: 150
 	Mobile:
 		Speed: 50
 	Health:
@@ -719,6 +726,7 @@ NEWCOMM:
 		BuildPaletteOrder: 50
 		Prerequisites: anycastle, anyhq
 		Queue: MInfantry.GDI
+		BuildDuration: 700
 	Mobile:
 		Speed: 50
 	Health:
@@ -777,6 +785,7 @@ ASSASSIN:
 		BuildPaletteOrder: 140
 		Queue: MInfantry.Nod, MInfantry.Horse
 		Prerequisites: anycastle
+		BuildDuration: 300
 	Mobile:
 		Speed: 66
 	Health:
@@ -825,6 +834,7 @@ E8FARMER:
 		IconPalette: raicon
 		BuildPaletteOrder: 100
 		Queue: MInfantry.GDI, MInfantry.Nod, ~disabled
+		BuildDuration: 150
 	WithFacingSpriteBody:
 		Sequence: idle
 		RequiresCondition: !MoveAnim
@@ -890,6 +900,7 @@ BUMMLER:
 		IconPalette: raicon
 		BuildPaletteOrder: 120
 		Queue: MInfantry.GDI, MInfantry.Nod, ~disabled, MInfantry.SUL
+		BuildDuration: 350
 	WithFacingSpriteBody:
 		Sequence: idle
 		RequiresCondition: !MoveAnim
@@ -1449,9 +1460,9 @@ TRANSPORTER:
 	Tooltip:
 		Name: Labourer
 	Mobile:
-		Speed: 56
+		Speed: 66
 	Health:
-		HP: 11000
+		HP: 10000
 	RenderSprites:
 		PlayerPalette: mwcivilianplayer
 		Image: transporter
@@ -1459,6 +1470,7 @@ TRANSPORTER:
 			nod: transporter
 			gdi: transporter
 			sul: sultransporter
+	AutoTargetIgnore:
 	WithInfantryBody:
 		MoveSequence: run
 		StandSequences: stand
@@ -1470,7 +1482,7 @@ TRANSPORTER:
 	WithDeathAnimation:
 		DeathSequencePalette: mwcivilianplayer
 	AutoTarget:
-		ScanRadius: 22
+		ScanRadius: 19
 		InitialStance: AttackAnything
 	AttackFrontal:
 		Armaments: primary, secondary, tairt

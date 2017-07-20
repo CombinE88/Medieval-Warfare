@@ -38,40 +38,40 @@ SULNUKE.SCAFF:
 		DeathType: FinishedDeath
 	ExternalCondition@buildfurther: 
 		Condition: Construct
-		TotalCap: 24
+		TotalCap: 14
 	ExternalCondition@Deliverfurther:
 		Condition: DeliveredResources
-		TotalCap: 24
+		TotalCap: 14
 	Targetable@buildfurther: 
 		TargetTypes: Buildable
-		RequiresCondition: DeliveredResources > Construct && (24 - Construct) > 0
+		RequiresCondition: DeliveredResources > Construct && (14 - Construct) > 0
 	Targetable@deliverresources: 
 		TargetTypes: Deliverable
-		RequiresCondition: 24 > DeliveredResources
+		RequiresCondition: 14 > DeliveredResources
 	SelfHealing@Finished:
 		PercentageStep: -200
 		HealIfBelow: 110
 		Delay: 1
-		RequiresCondition: (24 - Construct) <= 0
+		RequiresCondition: (14 - Construct) <= 0
 		DamageTypes: FinishedDeath
 	WithIdleOverlay@base1:
 		Sequence: make1
-		RequiresCondition: Construct > 3 && Construct < 6
+		RequiresCondition: Construct > 3 && Construct < 5
 	WithIdleOverlay@base2:
 		Sequence: make2
-		RequiresCondition: Construct >= 6 && Construct < 9
+		RequiresCondition: Construct >= 5 && Construct < 6
 	WithIdleOverlay@base3:
 		Sequence: make3
-		RequiresCondition: Construct >= 9 && Construct < 12
+		RequiresCondition: Construct >= 6 && Construct < 7
 	WithIdleOverlay@base4:
 		Sequence: make4
-		RequiresCondition: Construct >= 12 && Construct < 15
+		RequiresCondition: Construct >= 7 && Construct < 8
 	WithIdleOverlay@base5:
 		Sequence: make5
-		RequiresCondition: Construct >= 15 && Construct < 18
+		RequiresCondition: Construct >= 8 && Construct < 10
 	WithIdleOverlay@base6:
 		Sequence: make6
-		RequiresCondition: Construct >= 18
+		RequiresCondition: Construct >= 10
 
 SULLODGE.SCAFF:
 	Inherits: ^2x2SITE
@@ -341,21 +341,21 @@ SULBARR.SCAFF:
 		DeathType: FinishedDeath
 	ExternalCondition@buildfurther: 
 		Condition: Construct
-		TotalCap: 40
+		TotalCap: 35
 	ExternalCondition@Deliverfurther:
 		Condition: DeliveredResources
-		TotalCap: 40
+		TotalCap: 35
 	Targetable@buildfurther: 
 		TargetTypes: Buildable
-		RequiresCondition: DeliveredResources > Construct && (40 - Construct) > 0
+		RequiresCondition: DeliveredResources > Construct && (35 - Construct) > 0
 	Targetable@deliverresources: 
 		TargetTypes: Deliverable
-		RequiresCondition: 40 > DeliveredResources
+		RequiresCondition: 35 > DeliveredResources
 	SelfHealing@Finished:
 		PercentageStep: -200
 		HealIfBelow: 110
 		Delay: 1
-		RequiresCondition: (40 - Construct) <= 0
+		RequiresCondition: (35 - Construct) <= 0
 		DamageTypes: FinishedDeath
 	WithIdleOverlay@base1:
 		Sequence: make1
@@ -365,13 +365,13 @@ SULBARR.SCAFF:
 		RequiresCondition: Construct >= 10 && Construct < 20
 	WithIdleOverlay@base3:
 		Sequence: make3
-		RequiresCondition: Construct >= 20 && Construct < 30
+		RequiresCondition: Construct >= 20 && Construct < 25
 	WithIdleOverlay@base4:
 		Sequence: make4
-		RequiresCondition: Construct >= 30 && Construct < 35
+		RequiresCondition: Construct >= 25 && Construct < 30
 	WithIdleOverlay@base5:
 		Sequence: make5
-		RequiresCondition: Construct >= 35
+		RequiresCondition: Construct >= 30
 		
 SULMYSTIC.SCAFF:
 	Inherits: ^3x3SITE
@@ -759,16 +759,16 @@ SULARRAY.SCAFF:
 		PlayerPalette: sultanplayer
 		Image: sularray
 	CustomSellValue:
-		Value: 420
+		Value: 250
 	Valued:
-		Cost: 1300
+		Cost: 700
 	Tooltip:
 		Name: Construction Site (Material Storage)
 	Buildable:
 		IconPalette: raicon
 		BuildPaletteOrder: 200
 		Prerequisites: barracks
-		Description: Provides 2 additional worker.\n\n\n\n
+		Description: Provides 3 additional worker and 1 engineer.\n\n\n\n
 		Queue: MBuilding.SUL
 		BuildDuration: 25
 	Health:

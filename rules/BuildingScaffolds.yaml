@@ -38,40 +38,40 @@ NUKENEW.SCAFF:
 		DeathType: FinishedDeath
 	ExternalCondition@buildfurther: 
 		Condition: Construct
-		TotalCap: 20
+		TotalCap: 10
 	ExternalCondition@Deliverfurther:
 		Condition: DeliveredResources
-		TotalCap: 20
+		TotalCap: 10
 	Targetable@buildfurther: 
 		TargetTypes: Buildable
-		RequiresCondition: DeliveredResources > Construct && (20 - Construct) > 0
+		RequiresCondition: DeliveredResources > Construct && (10 - Construct) > 0
 	Targetable@deliverresources: 
 		TargetTypes: Deliverable
-		RequiresCondition: 20 > DeliveredResources
+		RequiresCondition: 10 > DeliveredResources
 	SelfHealing@Finished:
 		PercentageStep: -200
 		HealIfBelow: 110
 		Delay: 1
-		RequiresCondition: (20 - Construct) <= 0
+		RequiresCondition: (10 - Construct) <= 0
 		DamageTypes: FinishedDeath
 	WithIdleOverlay@base1:
 		Sequence: make1
-		RequiresCondition: Construct > 3 && Construct < 6
+		RequiresCondition: Construct > 3 && Construct < 4
 	WithIdleOverlay@base2:
 		Sequence: make2
-		RequiresCondition: Construct >= 6 && Construct < 9
+		RequiresCondition: Construct >= 4 && Construct < 5
 	WithIdleOverlay@base3:
 		Sequence: make3
-		RequiresCondition: Construct >= 9 && Construct < 12
+		RequiresCondition: Construct >= 5 && Construct < 6
 	WithIdleOverlay@base4:
 		Sequence: make4
-		RequiresCondition: Construct >= 12 && Construct < 15
+		RequiresCondition: Construct >= 6 && Construct < 7
 	WithIdleOverlay@base5:
 		Sequence: make5
-		RequiresCondition: Construct >= 15 && Construct < 18
+		RequiresCondition: Construct >= 7 && Construct < 8
 	WithIdleOverlay@base6:
 		Sequence: make6
-		RequiresCondition: Construct >= 18
+		RequiresCondition: Construct >= 8
 		
 LODGE.SCAFF:
 	Inherits: ^2x2SITE
@@ -115,21 +115,21 @@ LODGE.SCAFF:
 		DeathType: FinishedDeath
 	ExternalCondition@buildfurther: 
 		Condition: Construct
-		TotalCap: 20
+		TotalCap: 15
 	ExternalCondition@Deliverfurther:
 		Condition: DeliveredResources
-		TotalCap: 20
+		TotalCap: 15
 	Targetable@buildfurther: 
 		TargetTypes: Buildable
-		RequiresCondition: DeliveredResources > Construct && (20 - Construct) > 0
+		RequiresCondition: DeliveredResources > Construct && (15 - Construct) > 0
 	Targetable@deliverresources: 
 		TargetTypes: Deliverable
-		RequiresCondition: 20 > DeliveredResources
+		RequiresCondition: 15 > DeliveredResources
 	SelfHealing@Finished:
 		PercentageStep: -200
 		HealIfBelow: 110
 		Delay: 1
-		RequiresCondition: (20 - Construct) <= 0
+		RequiresCondition: (15 - Construct) <= 0
 		DamageTypes: FinishedDeath
 	WithIdleOverlay@base1:
 		Sequence: make1
@@ -139,10 +139,10 @@ LODGE.SCAFF:
 		RequiresCondition: Construct >= 6 && Construct < 10
 	WithIdleOverlay@base3:
 		Sequence: make3
-		RequiresCondition: Construct >= 10 && Construct < 16
+		RequiresCondition: Construct >= 10 && Construct < 12
 	WithIdleOverlay@base4:
 		Sequence: make4
-		RequiresCondition: Construct > 16 
+		RequiresCondition: Construct > 12 
 	WithRangeCircle:
 		Type: HunterLodge
 		UsePlayerColor: true
@@ -267,21 +267,21 @@ HANDNEW.SCAFF:
 		DeathType: FinishedDeath
 	ExternalCondition@buildfurther: 
 		Condition: Construct
-		TotalCap: 36
+		TotalCap: 30
 	ExternalCondition@Deliverfurther:
 		Condition: DeliveredResources
-		TotalCap: 36
+		TotalCap: 30
 	Targetable@buildfurther: 
 		TargetTypes: Buildable
-		RequiresCondition: DeliveredResources > Construct && (36 - Construct) > 0
+		RequiresCondition: DeliveredResources > Construct && (30 - Construct) > 0
 	Targetable@deliverresources: 
 		TargetTypes: Deliverable
-		RequiresCondition: 36 > DeliveredResources
+		RequiresCondition: 30 > DeliveredResources
 	SelfHealing@Finished:
 		PercentageStep: -200
 		HealIfBelow: 110
 		Delay: 1
-		RequiresCondition: (36 - Construct) <= 0
+		RequiresCondition: (30 - Construct) <= 0
 		DamageTypes: FinishedDeath
 	WithIdleOverlay@base1:
 		Sequence: make1
@@ -291,13 +291,13 @@ HANDNEW.SCAFF:
 		RequiresCondition: Construct >= 14 && Construct < 20
 	WithIdleOverlay@base3:
 		Sequence: make3
-		RequiresCondition: Construct >= 20 && Construct < 26
+		RequiresCondition: Construct >= 20 && Construct < 23
 	WithIdleOverlay@base4:
 		Sequence: make4
-		RequiresCondition: Construct >= 26 && Construct < 32
+		RequiresCondition: Construct >= 23 && Construct < 27
 	WithIdleOverlay@base5:
 		Sequence: make5
-		RequiresCondition: Construct >= 32
+		RequiresCondition: Construct >= 27
 
 
 		
@@ -1006,37 +1006,37 @@ BARRNEW.SCAFF:
 		DeathType: FinishedDeath
 	ExternalCondition@buildfurther: 
 		Condition: Construct
-		TotalCap: 30
+		TotalCap: 20
 	ExternalCondition@Deliverfurther:
 		Condition: DeliveredResources
-		TotalCap: 30
+		TotalCap: 20
 	Targetable@buildfurther: 
 		TargetTypes: Buildable
-		RequiresCondition: DeliveredResources > Construct && (30 - Construct) > 0
+		RequiresCondition: DeliveredResources > Construct && (20 - Construct) > 0
 	Targetable@deliverresources: 
 		TargetTypes: Deliverable
-		RequiresCondition: 30 > DeliveredResources
+		RequiresCondition: 20 > DeliveredResources
 	SelfHealing@Finished:
 		PercentageStep: -200
 		HealIfBelow: 110
 		Delay: 1
-		RequiresCondition: (30 - Construct) <= 0
+		RequiresCondition: (20 - Construct) <= 0
 		DamageTypes: FinishedDeath
 	WithIdleOverlay@base1:
 		Sequence: make1
-		RequiresCondition: Construct > 6 && Construct < 12
+		RequiresCondition: Construct > 6 && Construct < 10
 	WithIdleOverlay@base2:
 		Sequence: make2
-		RequiresCondition: Construct >= 12 && Construct < 18
+		RequiresCondition: Construct >= 10 && Construct < 13
 	WithIdleOverlay@base3:
 		Sequence: make3
-		RequiresCondition: Construct >= 18 && Construct < 22
+		RequiresCondition: Construct >= 13 && Construct < 15
 	WithIdleOverlay@base4:
 		Sequence: make4
-		RequiresCondition: Construct >= 22 && Construct < 26
+		RequiresCondition: Construct >= 15 && Construct < 18
 	WithIdleOverlay@base5:
 		Sequence: make5
-		RequiresCondition: Construct >= 26
+		RequiresCondition: Construct >= 18
 		
 STALL.SCAFF:
 	Inherits: ^3x2SITE
@@ -1886,16 +1886,16 @@ TAVERN.SCAFF:
 		PlayerPalette: raplayer
 		Image: tavern
 	CustomSellValue:
-		Value: 350
+		Value: 250
 	Valued:
-		Cost: 1000
+		Cost: 700
 	Tooltip:
 		Name: Construction Site (Tavern)
 	Buildable:
 		IconPalette: raicon
 		BuildPaletteOrder: 200
 		Prerequisites: barracks
-		Description: Provides 2 additional workers.\n\n\n\n
+		Description: Provides 3 additional worker and 1 engineer.\n\n\n\n
 		Queue: MBuilding.GDI, MBuilding.Nod
 		BuildDuration: 25
 	Health:

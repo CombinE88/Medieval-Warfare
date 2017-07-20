@@ -5,7 +5,7 @@ Player:
 		BuildingCommonNames:
 			ConstructionYard: factnew
 			Refinery: procnew, zeroproc, bummler, sulmill, procnew.scaff, zeroproc.scaff, bummler.scaff, sulmill.scaff
-			Power: nukenew,nuk2new, sulnuke,sulnuk2,nodnuke,nodnuk2, nukenew.scaff,nuk2new.scaff, sulnuke.scaff,sulnuk2.scaff,nodnuk2.scaff
+			Power: 
 			Barracks: barrnew,handnew,sulbarr,barrnew.scaff,handnew.scaff,sulbarr.scaff
 			VehiclesFactory: stall,nodstall,sulmystic,stall.scaff,nodstall.scaff,sulmystic.scaff
 			Production: barrnew,handnew,stall,nodstall,sulmystic,sulbarr,barrnew.scaff,handnew.scaff,stall.scaff,nodstall.scaff,sulmystic.scaff,sulbarr.scaff
@@ -34,7 +34,7 @@ Player:
             nuk2new.scaff: 1
 			sulnuk2.scaff: 1
 			nodnuk2.scaff: 1
-            sularray: 2
+            sularray: 1
             gtwnew.scaff: 1
             gunnew.scaff: 1
             tribu.scaff: 1
@@ -69,17 +69,17 @@ Player:
 			workshopgdi: 1
 			workshopnod: 1
 		BuildingFractions:
-			procnew.scaff: 50%
-			zeroproc.scaff: 90%
-			sulmill.scaff: 90%
-			nukenew.scaff: 50%
-			sulnuke.scaff: 50%
-            nuk2new.scaff: 50%
-            nodnuke: 50%
-			sulnuk2.scaff: 50%
-			nodnuk2.scaff: 50%
+			procnew.scaff: 200%
+			zeroproc.scaff: 200%
+			sulmill.scaff: 200%
+			nukenew.scaff: 200%
+			sulnuke.scaff: 200%
+            nuk2new.scaff: 200%
+            nodnuke: 200%
+			sulnuk2.scaff: 200%
+			nodnuk2.scaff: 200%
 			barrnew.scaff: 50%
-			sulbarr.scaff: 100%
+			sulbarr.scaff: 50%
 			handnew.scaff: 50%
 			hqnewnod.scaff: 50%
 			armorygdi.scaff: 50%

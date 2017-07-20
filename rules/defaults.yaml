@@ -715,7 +715,7 @@
 		RequiredForShortGame: true
 	RepairableBuilding:
 		RepairPercent: 40
-		RepairStep: 14
+		RepairStep: 190
 		PlayerExperience: 15
 	WithDeathAnimation:
 		DeathSequence: dead

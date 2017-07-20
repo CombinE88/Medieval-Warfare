@@ -181,19 +181,19 @@ World:
 		ClassName: Quick Start
 		Factions: gdi, nod, sul
 		BaseActor: mcvnew
-        SupportActors: transporter, transporter
+        SupportActors: transporter, transporter, engeneer
 	MPStartUnits@bunch:
 		Class: medieval3
 		ClassName: Well Populated
 		Factions: gdi, nod, sul
 		BaseActor: mcvnew
-        SupportActors: mwwand1,mwwand2,mwwand3,mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12,mwwand1,mwwand2,mwwand3, transporter, transporter, transporter, engeneer
+        SupportActors: mwwand1,mwwand2,mwwand3,mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12,mwwand1,mwwand2,mwwand3, transporter, transporter, transporter, engeneer,, engeneer
 	MPStartUnits@maximum:
 		Class: medieval4
 		ClassName: Over Populated
 		Factions: gdi, nod, sul
 		BaseActor: mcvnew
-        SupportActors: mwwand1,mwwand2,mwwand3,mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12,mwwand1,mwwand2,mwwand3, mwwand5, mwwand6, mwwand10, mwwand11, mcv2new, transporter, transporter, transporter, transporter, transporter, transporter, engeneer, engeneer
+        SupportActors: mwwand1,mwwand2,mwwand3,mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12,mwwand1,mwwand2,mwwand3, mwwand5, mwwand6, mwwand10, mwwand11, transporter, transporter, transporter, transporter, transporter, transporter, engeneer, engeneer,, engeneer
 	SpawnMPUnits:
 		StartingUnitsClass: medieval2
 	CrateSpawner:

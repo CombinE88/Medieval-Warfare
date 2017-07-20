@@ -20,6 +20,8 @@ SULGTW:
 		Cost: 550
 	CustomSellValue:
 		Value: 275
+	ProvidesPrerequisite:
+		Prerequisite: anyrefinery
 	Tooltip:
 		Name: Mosaic Guard Tower
 	Buildable:
@@ -615,7 +617,7 @@ SULARRAY:
 		IconPalette: raicon
 		BuildPaletteOrder: 40
 		Prerequisites: proc, ~scaffold
-		Description: Provides 2 additional worker.\n\n\n\n
+		Description: Provides 3 additional worker and 1 engineer.\n\n\n\n
 		Queue: MBuilding.SUL
 	Building:
 		Footprint: xxx xxx
@@ -644,6 +646,7 @@ SULARRAY:
 		SpawnActor: transporter
 		Offset: 384,298, 0
 		MoveOffset: 1,2
+        Lasso: 4c0
         FindRadius: 100
 		Sticky: true
 	WithFreeSpawnableActor@2:
@@ -652,6 +655,7 @@ SULARRAY:
 		Offset: 384,298, 0
 		MoveOffset: 1,2
         FindRadius: 100
+        Lasso: 4c0
 		Sticky: true
 	WithFreeSpawnableActor@3:
 		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
@@ -660,6 +664,15 @@ SULARRAY:
 		MoveOffset: 1,2
 		Sticky: true
         FindRadius: 100
+        Lasso: 4c0
+	WithFreeSpawnableActor@4:
+		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
+		SpawnActor: engeneer
+		Offset: 384,298, 0
+		MoveOffset: 1,2
+		Sticky: true
+        FindRadius: 100
+        Lasso: 4c0
 	BaseProvider:
 		Cooldown: 25
 		Range: 8c0
@@ -1071,7 +1084,7 @@ SULCASTLE:
 		Range: 5c0
 	SpawnActorPower@Tornado:
 		Icon: sulturnxlicon
-		ChargeTime: 300
+		ChargeTime: 420
 		Actor: sulturnxl
 		LifeTime: 2000
 		Description: Tornado\n\n\n\n
@@ -1463,7 +1476,7 @@ SULREF:
 		Footprint: _x_ xxx xx=
 		Dimensions: 3,3
 	Health:
-		HP: 120000
+		HP: 160000
 		Shape: Rectangle
 			TopLeft: -1436,-756
 			BottomRight: 1436, 924
@@ -1510,7 +1523,7 @@ SULE1:
 		IconPalette: raicon
 		BuildPaletteOrder: 10
 		Queue: MInfantry.SUL
-		BuildDuration: 100
+		BuildDuration: 50
 	Mobile:
 		Speed: 85
 	Health:
@@ -1547,6 +1560,7 @@ SULE2:
 		BuildPaletteOrder: 30
 		Queue: MInfantry.SUL
 		Prerequisites: anyhq
+		BuildDuration: 75
 	Mobile:
 		Speed: 56
 	Health:
@@ -1595,6 +1609,7 @@ SULE3:
 		IconPalette: raicon
 		BuildPaletteOrder: 20
 		Queue: MInfantry.SUL
+		BuildDuration: 75
 	Mobile:
 		Speed: 60
 	Health:
@@ -1649,6 +1664,7 @@ SULE4:
 		BuildPaletteOrder: 30
 		Queue: MInfantry.SUL
 		Prerequisites: sultow1
+		BuildDuration: 200
 	Mobile:
 		Speed: 55
 	Health:
@@ -1683,7 +1699,7 @@ SULE5:
 		Range: 9c0
 	Inherits: ^Knight
 	Valued:
-		Cost: 700
+		Cost: 900
 	Tooltip:
 		Name: Scimitar 
 	Buildable:
@@ -1692,6 +1708,7 @@ SULE5:
 		BuildPaletteOrder: 40
 		Prerequisites: sultow1, sultow4, anyhq
 		Queue: MInfantry.SUL
+		BuildDuration: 450
 	Mobile:
 		Speed: 175
 	Health:
@@ -1735,6 +1752,7 @@ SULE6:
 		IconPalette: raicon
 		BuildPaletteOrder: 40
 		Queue: MInfantry.SUL
+		BuildDuration: 150
 	WithFacingSpriteBody:
 		Sequence: idle
 		RequiresCondition: !MoveAnim
@@ -1804,6 +1822,7 @@ SULM1:
 		IconPalette: raicon
 		BuildPaletteOrder: 10
 		Queue: MVehicle.SUL
+		BuildDuration: 200
 	Mobile:
 		Speed: 66
 	Health:
@@ -1906,6 +1925,7 @@ SULM2:
 		Prerequisites: sultow2, sultow4, anyhq
 		BuildPaletteOrder: 70
 		Queue: MVehicle.SUL
+		BuildDuration: 600
 	Mobile:
 		Speed: 66
 	-Crushable:
@@ -1959,6 +1979,7 @@ SULM4:
 		BuildPaletteOrder: 60
 		Queue: MVehicle.SUL
 		Prerequisites: sultow2, anyhq
+		BuildDuration: 300
 	Mobile:
 		Speed: 66
 	Health:
