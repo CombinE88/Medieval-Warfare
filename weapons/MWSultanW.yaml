@@ -93,8 +93,8 @@ ScimitarDuals:
 			Leather: 100
 			Light: 100
 			Heavy: 100
-			HeavyBuilding: 10
-			Concrete: 25
+			HeavyBuilding: 5
+			Concrete: 20
 			Knight: 30
 			LightCavalry: 100
 			MediumCavalry: 85

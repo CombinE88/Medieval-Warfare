@@ -694,7 +694,13 @@ RMBONEW:
 	Health:
 		HP: 18500
 	Armament:
-		Weapon: claymore
+		Weapon: paladingun
+		MuzzleSequence: muzzle
+		LocalOffset: 0,0,356
+	Armament@visual:
+		Weapon: paladingunvisual
+		LocalOffset: 0,0,356
+		MuzzleSequence: muzzle
 	AttackFrontal:
 	AutoTarget:
 		ScanRadius: 4

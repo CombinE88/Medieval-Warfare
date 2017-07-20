@@ -1000,11 +1000,11 @@ rmbonew:
 	idle1: rmbonew
 		Tick: 100
 		Start: 190
-		Length: 14
+		Length: 13
 	idle2: rmbonew
 		Tick: 100
-		Start: 204
-		Length: 26
+		Start: 203
+		Length: 13
 	die1: rmbonew
 		Start: 132
 		Length: 15
@@ -1033,6 +1033,12 @@ rmbonew:
 		Tick: 80
 	icon: nemboicon.shp
 		AddExtension: False  
+	muzzle: rmbonew
+		Start: 242
+		Facings: 8
+		Length: 7
+		Tick: 100
+		ZOffset: 512
 		
 e5new:
 	stunned: sulm4

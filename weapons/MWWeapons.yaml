@@ -749,6 +749,61 @@ KingsSword:
 			HeavyCavalry: 65
 		DamageTypes: Prone50Percent, TriggerProne, RippedApartDeath
 
+paladingun:
+	ReloadDelay: 45
+	Range: 4c512
+	ValidTargets: Ground, Trees
+	InvalidTargets: Air
+	Projectile: Bullet
+		Speed: 1c800
+	Warhead@1Dam: SpreadDamage
+		ValidTargets: Ground, Trees
+		InvalidTargets: Air
+		Spread: 65
+		Damage: 2500
+		Versus:
+			Leather: 100
+			Light: 90
+			Heavy: 80
+			Concrete: 35
+			Spectral: 70
+			HeavyBuilding: 50
+			Knight: 40
+			LightCavalry: 100
+			MediumCavalry: 75
+			HeavyCavalry: 50
+		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath	 
+        
+paladingunvisual:
+	ReloadDelay: 45
+	Range: 4c512
+	Report: palashotgun.aud
+	ValidTargets: Ground, Trees
+	InvalidTargets: Air
+	Projectile: Bullet
+		Speed: 0c600
+        ContrailLength: 15
+		ContrailWidth: 20
+		ContrailDelay: 0
+		ContrailUsePlayerColor : true
+	Warhead@1Dam: SpreadDamage
+		ValidTargets: Ground, Trees
+		InvalidTargets: Air
+		Spread: 65
+		Damage: 0
+		Versus:
+			Leather: 0
+			Light: 0
+			Heavy: 0
+			Concrete: 0
+			Spectral: 0
+			HeavyBuilding: 0
+			Knight: 0
+			LightCavalry: 0
+			MediumCavalry: 0
+			HeavyCavalry: 0
+		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath	 
+
 
 Claymore:
 	ReloadDelay: 45
