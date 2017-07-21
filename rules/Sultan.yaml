@@ -1133,7 +1133,7 @@ SULTOW1:
 	RenderSprites:
 		PlayerPalette: sultanplayer
 	Valued:
-		Cost: 700
+		Cost: 900
 	Tooltip:
 		Name: Tower of Knowledge
 	ProvidesPrerequisite@buildingname:
@@ -1158,7 +1158,7 @@ SULTOW2:
 	RenderSprites:
 		PlayerPalette: sultanplayer
 	Valued:
-		Cost: 800
+		Cost: 1000
 	Tooltip:
 		Name: Tower of Mystical Teachings
 	ProvidesPrerequisite@buildingname:
@@ -1182,7 +1182,7 @@ SULTOW3:
 	RenderSprites:
 		PlayerPalette: sultanplayer
 	Valued:
-		Cost: 900
+		Cost: 1100
 	Tooltip:
 		Name: Tower of Progress
 	ProvidesPrerequisite@buildingname:
@@ -1217,7 +1217,7 @@ SULTOW4:
 	Buildable:
 		IconPalette: raicon
 		BuildPaletteOrder: 110
-		Prerequisites: anyhq
+		Prerequisites: anyhq, sultow1, sultow2, sultow3
 		Description: Grants access to superb tech and super weapons.\n\n\n\n
 		Queue: MBuilding2.SUL
 		BuildLimit: 1
@@ -1494,7 +1494,7 @@ SULREF:
 		Facing: 64
 	ProvidesPrerequisite:
 		Prerequisite: proc
-	ProvidesPrerequisite:
+	ProvidesPrerequisite@anyref:
 		Prerequisite: anyrefinery
 	SelectionDecorations:
 		VisualBounds: 73,72
@@ -1681,7 +1681,7 @@ SULE4:
 		Step: 900
 		HealIfBelow: 100
 		Delay: 25
-		DamageCooldown: 25
+		DamageCooldown: 100
 	PersonValued:
 		ActorCount: 1
 		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
@@ -1707,7 +1707,7 @@ SULE5:
 	Mobile:
 		Speed: 175
 	Health:
-		HP: 21500
+		HP: 19000
 	Armament:
 		Weapon: ScimitarDuals
 		Name: primary
@@ -1720,13 +1720,13 @@ SULE5:
 	WithInfantryBody:
 		DefaultAttackSequence: shoot
 	Armor:
-		Type: Heavy
+		Type: Light
 	DetectCloaked:
 		Range: 2c0
 	GrantConditionOnMovement@Runfast:
 		Condition: Runfast
 	DamageMultiplier@Runfast:
-		Modifier: 50
+		Modifier: 75
 		RequiresCondition: Runfast
 	Crushable:
 		WarnProbability: 75

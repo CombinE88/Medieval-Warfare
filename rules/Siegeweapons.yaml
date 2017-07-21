@@ -357,7 +357,7 @@ SIEGE4:
 		SharesCell: false
 		TurnSpeed: 2
 	Health:
-		HP: 35000
+		HP: 90000
 		Shape: Rectangle
 			TopLeft: -412, -412
 			BottomRight: 412, 712

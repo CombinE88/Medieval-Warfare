@@ -714,8 +714,8 @@
 	MustBeDestroyed:
 		RequiredForShortGame: true
 	RepairableBuilding:
-		RepairPercent: 70
-		RepairStep: 300
+		RepairPercent: 40
+		RepairStep: 1000
 		PlayerExperience: 15
 	WithDeathAnimation:
 		DeathSequence: dead
@@ -777,7 +777,7 @@
 		Notification: CivilianBuildingCaptured
 	RepairableBuilding:
 		RepairPercent: 40
-		RepairStep: 14
+		RepairStep: 1000
 		PlayerExperience: 15
 	EngineerRepairable:
 	RevealsShroud:
@@ -1036,7 +1036,7 @@
 	Sellable:
 	RepairableBuilding:
 		RepairPercent: 40
-		RepairStep: 350
+		RepairStep: 1000
 		PlayerExperience: 15
 	SelectionDecorations:
 	WithSpriteControlGroupDecoration:
@@ -1160,7 +1160,7 @@
 		ActorTypes: engeneer,e1new
 	RepairableBuilding:
 		RepairPercent: 40
-		RepairStep: 350
+		RepairStep: 1000
 		PlayerExperience: 15
 	ThrowsShrapnel@SMALL:
 		Weapons: SmallWood1, SmallWood2, SmallWood3, SmallStone1, SmallStone2
@@ -1179,7 +1179,7 @@
 		ActorTypes: engeneer,e1new
 	RepairableBuilding:
 		RepairPercent: 40
-		RepairStep: 350
+		RepairStep: 1500
 		PlayerExperience: 15
 	ThrowsShrapnel@SMALL:
 		Weapons: SmallWood1, SmallWood2, SmallWood3, SmallStone1, SmallStone2

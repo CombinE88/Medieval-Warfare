@@ -760,7 +760,7 @@ paladingun:
 		ValidTargets: Ground, Trees
 		InvalidTargets: Air
 		Spread: 65
-		Damage: 2500
+		Damage: 3000
 		Versus:
 			Leather: 100
 			Light: 90
@@ -851,8 +851,9 @@ Sledgehammer:
 		Delay: 10
 		ValidTargets: Ground, Trees
 		InvalidTargets: Air
-		Spread: 512
+		Spread: 725
 		Damage: 3000
+		Falloff: 100, 100, 100, 100, 50, 25, 0
 		Versus:
 			Leather: 150
 			Light: 125
@@ -872,6 +873,7 @@ Sledgehammer:
 		InvalidTargets: Air
 		Spread: 725
 		Damage: 3000
+		Falloff: 100, 100, 100, 100, 50, 25, 0
 		Versus:
 			Leather: 150
 			Light: 125
@@ -891,6 +893,7 @@ Sledgehammer:
 		InvalidTargets: Air
 		Spread: 725
 		Damage: 3000
+		Falloff: 100, 100, 100, 100, 50, 25, 0
 		Versus:
 			Leather: 150
 			Light: 125
@@ -1224,7 +1227,7 @@ MageFire:
 			MediumCavalry: 45
 			HeavyCavalry: 35
 			HeavyBuilding: 125
-			Spectral: 90
+			Spectral: 120
 		DamageTypes: Prone50Percent, TriggerProne, BurnToDeath
 	Warhead@2Smu: LeaveSmudge
 		SmudgeType: Scorch
@@ -1548,7 +1551,7 @@ LongBowNArrow:
 		ContrailDelay: 0
 		ContrailUsePlayerColor : true
 	Warhead@1Dam: SpreadDamage
-		Spread: 90
+		Spread: 210
 		InvalidTargets: Wall, Air
 		Damage: 1000
 		ValidTargets: Ground
@@ -1564,10 +1567,10 @@ LongBowNArrow:
 			MediumCavalry: 25
 			HeavyCavalry: 25
 			HeavyBuilding: 125
-			Spectral: 55
+			Spectral: 90
 		DamageTypes: Prone50Percent, TriggerProne, BurnToDeath
 	Warhead@2Dam: SpreadDamage
-		Spread: 90
+		Spread: 210
 		ValidTargets: Ground
 		InvalidTargets: Wall, Air
 		Delay: 10
@@ -1584,10 +1587,10 @@ LongBowNArrow:
 			MediumCavalry: 25
 			HeavyCavalry: 25
 			HeavyBuilding: 125
-			Spectral: 55
+			Spectral: 90
 		DamageTypes: Prone50Percent, TriggerProne, BurnToDeath
 	Warhead@3Dam: SpreadDamage
-		Spread: 90
+		Spread: 210
 		ValidTargets: Ground
 		InvalidTargets: Wall, Air
 		Delay: 20
@@ -1604,7 +1607,7 @@ LongBowNArrow:
 			MediumCavalry: 25
 			HeavyCavalry: 25
 			HeavyBuilding: 125
-			Spectral: 55
+			Spectral: 90
 		DamageTypes: Prone50Percent, TriggerProne, BurnToDeath
 	Warhead@1Eff: CreateEffect
 		Explosions: fire2	
@@ -2322,7 +2325,7 @@ KingsSwordMounted:
 		
 Crossbow:
 	ReloadDelay: 55
-	Range: 4c0
+	Range: 5c0
 	MinRange: 0c512
 	Report: crossbow01.aud
 	InvalidTargets: Wall, Air
@@ -2344,7 +2347,7 @@ Crossbow:
 		Spread: 125
 		InvalidTargets: Wall, Air
 		ValidTargets: Ground
-		Damage: 4200
+		Damage: 6000
 		Versus:
 			Leather: 100
 			Light: 100

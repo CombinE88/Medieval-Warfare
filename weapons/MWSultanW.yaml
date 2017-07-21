@@ -93,8 +93,8 @@ ScimitarDuals:
 			Leather: 100
 			Light: 100
 			Heavy: 100
-			HeavyBuilding: 5
-			Concrete: 20
+			HeavyBuilding: 15
+			Concrete: 10
 			Knight: 30
 			LightCavalry: 100
 			MediumCavalry: 85
@@ -116,9 +116,9 @@ SuperioirPike:
 		ValidTargets: Ground, Trees
 		InvalidTargets: Air
 		Versus:
-			Leather: 50
-			Light: 50
-			Heavy: 75
+			Leather: 45
+			Light: 45
+			Heavy: 65
 			Concrete: 85
 			HeavyBuilding: 100
 			Knight: 50
@@ -606,7 +606,7 @@ Snakes:
 		AimChance: 100
 		AllowDirectHit: true
 		AimTargetStances: Enemy, Neutral
-		Amount: 1
+		Amount: 2
 	Warhead@2Dam: SpreadDamage
 		Spread: 20
 		InvalidTargets: Wall, Air, Structure

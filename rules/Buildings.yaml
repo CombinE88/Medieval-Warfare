@@ -1,5 +1,9 @@
 FACTNEW:
 	Inherits: ^MWBaseBuilding
+	RepairableBuilding:
+		RepairPercent: 40
+		RepairStep: 3000
+		PlayerExperience: 15
 	WithMakeAnimation:
 	GrantConditionOnPrerequisite@4:
 		Prerequisites: vehicleproduction
@@ -214,7 +218,7 @@ FACTNEW:
 		Offset: -124,1024, 0
 		MoveOffset: 1,2
 		Sticky: true
-		Lasso: 4c0
+		Lasso: 3c0
 	WithFreeSpawnableActor@LABOURTWO:
 		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 		UseConverting: false
@@ -222,7 +226,7 @@ FACTNEW:
 		Offset: -124,1024, 0
 		MoveOffset: 1,2
 		Sticky: true
-		Lasso: 4c0
+		Lasso: 3c0
 	WithFreeSpawnableActor@LABOURTHREE:
 		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 		UseConverting: false
@@ -230,7 +234,7 @@ FACTNEW:
 		Offset: -124,1024, 0
 		MoveOffset: 1,2
 		Sticky: true
-		Lasso: 4c0
+		Lasso: 3c0
 	WithFreeSpawnableActor@LABOURFOUR:
 		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 		UseConverting: false
@@ -239,7 +243,7 @@ FACTNEW:
 		Offset: -124,1024, 0
 		MoveOffset: 1,2
 		Sticky: true
-		Lasso: 4c0
+		Lasso: 3c0
 	WithFreeSpawnableActor@LABOUR4:
 		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 		UseConverting: false
@@ -247,7 +251,7 @@ FACTNEW:
 		Offset: -124,1024, 0
 		MoveOffset: 1,2
 		Sticky: true
-		Lasso: 4c0
+		Lasso: 3c0
 	WithFreeSpawnableActor@LABOUR5:
 		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 		UseConverting: false
@@ -255,7 +259,7 @@ FACTNEW:
 		Offset: -124,1024, 0
 		MoveOffset: 1,2
 		Sticky: true
-		Lasso: 4c0
+		Lasso: 3c0
 	WithFreeSpawnableActor@LABOUR6:
 		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 		UseConverting: false
@@ -263,7 +267,7 @@ FACTNEW:
 		Offset: -124,1024, 0
 		MoveOffset: 1,2
 		Sticky: true
-		Lasso: 4c0
+		Lasso: 3c0
 	StoresResources:
 		PipColor: Yellow
 		PipCount: 10
@@ -482,7 +486,7 @@ MINIFACT:
 		MoveOffset: 1,2
 		Sticky: true
 		FindRadius: 100
-		Lasso: 10c0
+		Lasso: 3c0
 		UseConverting: false
 	WithFreeSpawnableActor@4:
 		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
@@ -491,7 +495,7 @@ MINIFACT:
 		MoveOffset: 1,2
 		Sticky: true
 		FindRadius: 100
-		Lasso: 10c0
+		Lasso: 3c0
 		UseConverting: false
 	WithFreeSpawnableActor@2:
 		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
@@ -500,7 +504,7 @@ MINIFACT:
 		MoveOffset: 1,2
 		Sticky: true
 		FindRadius: 100
-		Lasso: 10c0
+		Lasso: 3c0
 		UseConverting: false
 	WithFreeSpawnableActor@3:
 		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
@@ -509,7 +513,16 @@ MINIFACT:
 		MoveOffset: 1,2
 		Sticky: true
 		FindRadius: 100
-		Lasso: 30c0
+		Lasso: 3c0
+		UseConverting: false
+	WithFreeSpawnableActor@4:
+		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
+		SpawnActor: transporter
+		Offset: -597,469, 0
+		MoveOffset: 1,2
+		Sticky: true
+		FindRadius: 100
+		Lasso: 3c0
 		UseConverting: false
 
 		
@@ -1259,7 +1272,7 @@ PROCNEW:
 		DeathSequencePalette: raplayer
 	RenderSprites:
 		PlayerPalette: raplayer
-	ProvidesPrerequisite:
+	ProvidesPrerequisite@anyref:
 		Prerequisite: anyrefinery
 	Valued:
 		Cost: 1500
@@ -2607,7 +2620,7 @@ TAVERN:
 		MoveOffset: 1,2
 		FindRadius: 100
 		Sticky: true
-        Lasso: 4c0
+        Lasso: 3c0
 	WithFreeSpawnableActor@2:
 		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 		SpawnActor: transporter
@@ -2615,7 +2628,7 @@ TAVERN:
 		MoveOffset: 1,2
 		FindRadius: 100
 		Sticky: true
-        Lasso: 4c0
+        Lasso: 3c0
 	WithFreeSpawnableActor@3:
 		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 		SpawnActor: transporter
@@ -2623,14 +2636,14 @@ TAVERN:
 		MoveOffset: 1,2
 		FindRadius: 100
 		Sticky: true
-        Lasso: 4c0
+        Lasso: 3c0
 	WithFreeSpawnableActor@4:
 		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 		SpawnActor: engeneer
 		Offset: -1109,554, 0
 		MoveOffset: 1,2
 		FindRadius: 100
-        Lasso: 4c0
+        Lasso: 3c0
 		Sticky: true
 	BaseProvider:
 		Cooldown: 25

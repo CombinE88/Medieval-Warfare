@@ -692,7 +692,7 @@ RMBONEW:
 	Mobile:
 		Speed: 45
 	Health:
-		HP: 15000
+		HP: 19000
 	Armament:
 		Weapon: paladingun
 		MuzzleSequence: muzzle
@@ -786,7 +786,7 @@ ASSASSIN:
 	Tooltip:
 		Name: Assassin
 	Buildable:
-		Description: Mid/Long-range knifethrowing infantry that can cloak.\nHas weak armor. Can be spotted by some infantry and defense structures.\n  Strong vs Cavalry, Infantry. Moderate vs Spectral Units\n  Sets buildings on fire.\n  Detects cloaked units\n  Can attack Aircrafts\n\nTrains: 1 Peasant\n
+		Description: Mid/Long-range knifethrowing infantry that can cloak.\nHas weak armor. Can be spotted by some infantry and defense structures.\n  Strong vs Cavalry, Infantry and Spectral Units\n  Sets buildings on fire.\n  Detects cloaked units\n  Can attack Aircrafts\n\nTrains: 1 Peasant\n
 		IconPalette: raicon
 		BuildPaletteOrder: 140
 		Queue: MInfantry.Nod, MInfantry.Horse
