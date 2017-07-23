@@ -1,0 +1,570 @@
+shellmapbits: chrome.png
+	record: 288,16,16,16
+
+logos: chrome.png
+	eva:323,129,55,63
+	nod-load:4,27,308,160
+	gdi-load:256,256,256,256
+	
+thanks: thanksto.png
+	thankv: 4,27,308,160
+
+
+paperframe: chromeMW.png
+	background: 240,120,48,48
+	border-r: 288,120,24,48
+	border-l: 216,120,24,48
+	border-b: 240,168,48,24
+	border-t: 240,96,48,24
+	corner-tl: 216,96,24,24
+	corner-tr: 288,96,24,24
+	corner-bl: 216,168,24,24
+	corner-br: 288,168,24,24
+	
+castleframe: chromeMW.png
+	background: 240,24,72,48
+	border-r: 328,24,8,48
+	border-l: 216,24,8,48
+	border-b: 240,72,72,12
+	border-t: 240,4,72,20
+	corner-tl: 216,4,24,20
+	corner-tr: 312,4,24,20
+	corner-bl: 216,72,24,12
+	corner-br: 312,72,24,12
+	
+castleframenocolum: chromeMW.png
+	background: 240,24,72,48
+	border-r: 328,24,8,48
+	border-l: 216,24,8,48
+	border-b: 240,72,72,12
+	border-t: 240,84,72,12
+	corner-tl: 216,84,24,12
+	corner-tr: 312,84,24,12
+	corner-bl: 216,72,24,12
+	corner-br: 312,72,24,12
+	
+button: chromeMW.png
+	background: 79,80,57,57
+	border-r: 136,80,8,57
+	border-l: 72,80,7,57
+	border-b: 79,137,57,7
+	border-t: 79,72,57,8
+	corner-tl: 72,72,7,8
+	corner-tr: 136,72,8,8
+	corner-bl: 72,137,7,7
+	corner-br: 136,137,8,7
+
+button-hover: chromeMW.png
+	background: 79,224,57,57
+	border-r: 136,224,8,57
+	border-l: 72,224,7,57
+	border-b: 79,281,57,7
+	border-t: 79,216,57,8
+	corner-tl: 72,216,7,8
+	corner-tr: 136,216,8,8
+	corner-bl: 72,281,7,7
+	corner-br: 136,281,8,7
+
+button-disabled: chromeMW.png
+	background: 79,152,57,57
+	border-r: 136,152,8,57
+	border-l: 72,152,7,57
+	border-b: 79,209,57,7
+	border-t: 79,144,57,8
+	corner-tl: 72,144,7,8
+	corner-tr: 136,144,8,8
+	corner-bl: 72,209,7,7
+	corner-br: 136,209,8,7
+
+button-pressed: chromeMW.png
+	background: 79,152,57,57
+	border-r: 136,152,8,57
+	border-l: 72,152,7,57
+	border-b: 79,209,57,7
+	border-t: 79,144,57,8
+	corner-tl: 72,144,7,8
+	corner-tr: 136,144,8,8
+	corner-bl: 72,209,7,7
+	corner-br: 136,209,8,7
+
+button-highlighted: chromeMW.png
+	background: 7,80,57,57
+	border-r: 64,80,8,57
+	border-l: 0,80,7,57
+	border-b: 7,137,57,7
+	border-t: 7,72,57,8
+	corner-tl: 0,72,7,8
+	corner-tr: 64,72,8,8
+	corner-bl: 0,137,7,7
+	corner-br: 64,137,8,7
+
+button-highlighted-hover: chromeMW.png
+	background: 7,224,57,57
+	border-r: 64,224,8,57
+	border-l: 0,224,7,57
+	border-b: 7,281,57,7
+	border-t: 7,216,57,8
+	corner-tl: 0,216,7,8
+	corner-tr: 64,216,8,8
+	corner-bl: 0,281,7,7
+	corner-br: 64,281,8,7
+
+button-highlighted-pressed: chromeMW.png
+	background: 7,152,57,57
+	border-r: 64,152,8,57
+	border-l: 0,152,7,57
+	border-b: 7,209,57,7
+	border-t: 7,144,57,8
+	corner-tl: 0,144,7,8
+	corner-tr: 64,144,8,8
+	corner-bl: 0,209,7,7
+	corner-br: 64,209,8,7
+
+button-highlighted-disabled: chromeMW.png
+	background: 7,152,57,57
+	border-r: 64,152,8,57
+	border-l: 0,152,7,57
+	border-b: 7,209,57,7
+	border-t: 7,144,57,8
+	corner-tl: 0,144,7,8
+	corner-tr: 64,144,8,8
+	corner-bl: 0,209,7,7
+	corner-br: 64,209,8,7
+
+# A copy of button
+textfield: chromeMW.png
+	background: 44,365,31,31
+	border-r: 75,365,5,31
+	border-l: 40,365,4,31
+	border-b: 44,396,31,4
+	border-t: 44,360,31,5
+	corner-tl: 40,360,4,5
+	corner-tr: 75,360,5,5
+	corner-bl: 40,396,4,4
+	corner-br: 75,396,5,4
+
+# A copy of button-hover
+textfield-hover: chromeMW.png
+	background: 44,545,31,31
+	border-r: 75,545,5,31
+	border-l: 40,545,4,31
+	border-b: 44,556,31,4
+	border-t: 44,540,31,5
+	corner-tl: 40,540,4,5
+	corner-tr: 75,540,5,5
+	corner-bl: 40,556,4,4
+	corner-br: 75,556,5,4
+
+# A copy of button-disabled
+textfield-disabled: chromeMW.png
+	background: 44,445,31,31
+	border-r: 75,445,5,31
+	border-l: 40,445,4,31
+	border-b: 44,476,31,4
+	border-t: 44,440,31,5
+	corner-tl: 40,440,4,5
+	corner-tr: 75,440,5,5
+	corner-bl: 40,476,4,4
+	corner-br: 75,476,5,4
+
+# A copy of button-pressed
+textfield-focused: chromeMW.png
+	background: 84,365,31,31
+	border-r: 115,365,5,31
+	border-l: 80,365,4,31
+	border-b: 84,396,31,4
+	border-t: 84,360,31,5
+	corner-tl: 80,360,4,5
+	corner-tr: 115,360,5,5
+	corner-bl: 80,396,4,4
+	corner-br: 115,396,5,4
+
+# A copy of button
+progressbar-bg: chrome.png
+	background: 2,194,60,60
+	border-r: 62,194,2,60
+	border-l: 0,194,2,60
+	border-b: 2,254,60,2
+	border-t: 2,192,60,2
+	corner-tl: 0,192,2,2
+	corner-tr: 62,192,2,2
+	corner-bl: 0,254,2,2
+	corner-br: 62,254,2,2
+
+# A copy of button-hover
+progressbar-thumb: chromeMW.png
+	background: 124,445,31,31
+	border-r: 155,445,5,31
+	border-l: 120,445,4,32
+	border-b: 124,476,31,4
+	border-t: 124,440,31,5
+	corner-tl: 120,440,4,5
+	corner-tr: 155,330,5,5
+	corner-bl: 120,476,5,5
+	corner-br: 155,475,5,4
+
+# A copy of panel-gray
+scrollpanel-bg: chromeMW.png
+	background: 447,448,57,57
+	border-r: 504,448,5,57
+	border-l: 442,448,5,57
+	border-b: 447,504,57,5
+	border-t: 447,443,57,5
+	corner-tl: 442,443,5,5
+	corner-tr: 504,443,5,5
+	corner-bl: 442,504,5,5
+	corner-br: 504,504,5,5
+
+scrollpanel-button: chromeMW.png
+	background: 151,80,57,57
+	border-r: 208,80,8,57
+	border-l: 144,80,7,57
+	border-b: 151,137,57,7
+	border-t: 151,72,57,8
+	corner-tl: 144,72,7,8
+	corner-tr: 208,72,8,8
+	corner-bl: 144,137,7,7
+	corner-br: 208,137,8,7
+
+scrollpanel-button-hover: chromeMW.png
+	background: 151,224,57,57
+	border-r: 208,224,8,57
+	border-l: 144,224,7,57
+	border-b: 151,281,57,7
+	border-t: 151,216,57,8
+	corner-tl: 144,216,7,8
+	corner-tr: 208,216,8,8
+	corner-bl: 144,281,7,7
+	corner-br: 208,281,8,7
+
+scrollpanel-button-disabled: chromeMW.png
+	background: 151,152,57,57
+	border-r: 208,152,8,57
+	border-l: 144,152,7,57
+	border-b: 151,209,57,7
+	border-t: 151,144,57,8
+	corner-tl: 144,144,7,8
+	corner-tr: 208,144,8,8
+	corner-bl: 144,209,7,7
+	corner-br: 208,209,8,7
+
+scrollpanel-button-pressed: chromeMW.png
+	background: 151,152,57,57
+	border-r: 208,152,8,57
+	border-l: 144,152,7,57
+	border-b: 151,209,57,7
+	border-t: 151,144,57,8
+	corner-tl: 144,144,7,8
+	corner-tr: 208,144,8,8
+	corner-bl: 144,209,7,7
+	corner-br: 208,209,8,7
+
+# A copy of button-hover
+scrollitem-hover: chromeMW.png
+	background: 204,445,31,31
+	border-r: 235,445,5,31
+	border-l: 200,445,4,32
+	border-b: 204,476,31,4
+	border-t: 204,440,31,5
+	corner-tl: 200,440,4,5
+	corner-tr: 235,330,5,5
+	corner-bl: 200,476,5,5
+	corner-br: 235,475,5,4
+
+# A copy of button-pressed
+scrollitem-selected: chromeMW.png
+	background: 164,445,31,31
+	border-r: 215,445,5,31
+	border-l: 160,445,4,32
+	border-b: 164,476,31,4
+	border-t: 164,440,31,5
+	corner-tl: 160,440,4,5
+	corner-tr: 215,330,5,5
+	corner-bl: 160,476,5,5
+	corner-br: 215,475,5,4
+
+slider: chrome.png
+	tick: 64,64,1,4
+
+# A copy of panel-gray
+slider-track: chromeMW.png
+	background: 164,445,31,31
+	border-r: 215,445,5,31
+	border-l: 160,445,4,32
+	border-b: 164,476,31,4
+	border-t: 164,440,31,5
+	corner-tl: 160,440,4,5
+	corner-tr: 215,330,5,5
+	corner-bl: 160,476,5,5
+	corner-br: 215,475,5,4
+
+slider-thumb: chromeMW.png
+	background: 7,296,57,57
+	border-r: 64,296,8,57
+	border-l: 0,296,7,57
+	border-b: 7,353,57,7
+	border-t: 7,288,57,8
+	corner-tl: 0,288,7,8
+	corner-tr: 64,288,8,8
+	corner-bl: 0,353,7,7
+	corner-br: 64,353,8,7
+
+slider-thumb-hover: chromeMW.png
+	background: 151,296,57,57
+	border-r: 208,296,8,57
+	border-l: 144,296,7,57
+	border-b: 151,353,57,7
+	border-t: 151,288,57,8
+	corner-tl: 144,288,7,8
+	corner-tr: 208,288,8,8
+	corner-bl: 144,353,7,7
+	corner-br: 208,353,8,7
+
+slider-thumb-disabled: chromeMW.png
+	background: 79,296,57,57
+	border-r: 136,296,8,57
+	border-l: 72,296,7,57
+	border-b: 79,353,57,7
+	border-t: 79,288,57,8
+	corner-tl: 72,288,7,8
+	corner-tr: 136,288,8,8
+	corner-bl: 72,353,7,7
+	corner-br: 136,353,8,7
+
+slider-thumb-pressed: chromeMW.png
+	background: 79,296,57,57
+	border-r: 136,296,8,57
+	border-l: 72,296,7,57
+	border-b: 79,353,57,7
+	border-t: 79,288,57,8
+	corner-tl: 72,288,7,8
+	corner-tr: 136,288,8,8
+	corner-bl: 72,353,7,7
+	corner-br: 136,353,8,7
+	
+# A copy of button
+checkbox: chromeMW.png
+	background: 7,296,57,57
+	border-r: 64,296,8,57
+	border-l: 0,296,7,57
+	border-b: 7,353,57,7
+	border-t: 7,288,57,8
+	corner-tl: 0,288,7,8
+	corner-tr: 64,288,8,8
+	corner-bl: 0,353,7,7
+	corner-br: 64,353,8,7
+
+# A copy of button-hover
+checkbox-hover: chromeMW.png
+	background: 151,296,57,57
+	border-r: 208,296,8,57
+	border-l: 144,296,7,57
+	border-b: 151,353,57,7
+	border-t: 151,288,57,8
+	corner-tl: 144,288,7,8
+	corner-tr: 208,288,8,8
+	corner-bl: 144,353,7,7
+	corner-br: 208,353,8,7
+
+# A copy of button-disabled
+checkbox-disabled: chromeMW.png
+	background: 79,296,57,57
+	border-r: 136,296,8,57
+	border-l: 72,296,7,57
+	border-b: 79,353,57,7
+	border-t: 79,288,57,8
+	corner-tl: 72,288,7,8
+	corner-tr: 136,288,8,8
+	corner-bl: 72,353,7,7
+	corner-br: 136,353,8,7
+
+
+# A copy of button-pressed
+checkbox-pressed: chromeMW.png
+	background: 79,296,57,57
+	border-r: 136,296,8,57
+	border-l: 72,296,7,57
+	border-b: 79,353,57,7
+	border-t: 79,288,57,8
+	corner-tl: 72,288,7,8
+	corner-tr: 136,288,8,8
+	corner-bl: 72,353,7,7
+	corner-br: 136,353,8,7
+
+# A copy of button-highlighted-pressed
+checkbox-highlighted: chromeMW.png
+	background: 151,296,57,57
+	border-r: 208,296,8,57
+	border-l: 144,296,7,57
+	border-b: 151,353,57,7
+	border-t: 151,288,57,8
+	corner-tl: 144,288,7,8
+	corner-tr: 208,288,8,8
+	corner-bl: 144,353,7,7
+	corner-br: 208,353,8,7
+
+panel-black: chromeMW.png
+	background: 360,24,72,48
+	border-r: 448,24,8,48
+	border-l: 336,24,8,48
+	border-b: 360,72,72,12
+	border-t: 360,84,72,12
+	corner-tl: 336,84,24,12
+	corner-tr: 432,84,24,12
+	corner-bl: 336,72,24,12
+	corner-br: 432,72,24,12
+
+panel-darkred: chromeMW.png
+	background: 79,296,57,57
+	border-r: 136,296,8,57
+	border-l: 72,296,7,57
+	border-b: 79,353,57,7
+	border-t: 79,288,57,8
+	corner-tl: 72,288,7,8
+	corner-tr: 136,288,8,8
+	corner-bl: 72,353,7,7
+	corner-br: 136,353,8,7
+
+panel-gray: chromeMW.png
+	background: 79,296,57,57
+	border-r: 136,296,8,57
+	border-l: 72,296,7,57
+	border-b: 79,353,57,7
+	border-t: 79,288,57,8
+	corner-tl: 72,288,7,8
+	corner-tr: 136,288,8,8
+	corner-bl: 72,353,7,7
+	corner-br: 136,353,8,7
+
+panel-allblack: chrome.png
+	background: 2,2,60,60
+	border-r: 62,2,2,60
+	border-l: 0,2,2,60
+	border-b: 2,62,60,2
+	border-t: 2,0,60,2
+	corner-tl: 0,0,2,2
+	corner-tr: 62,0,2,2
+	corner-bl: 0,62,2,2
+	corner-br: 62,62,2,2
+
+panel-transparent: chrome.png
+	border-r: 190,2,2,60
+	border-l: 128,2,2,60
+	border-b: 130,62,60,2
+	border-t: 130,0,60,2
+	corner-tl: 128,0,2,2
+	corner-tr: 190,0,2,2
+	corner-bl: 128,62,2,2
+	corner-br: 190,62,2,2
+
+shellmapborder: chrome.png
+	border-t: 161,128,62,33
+	border-b: 161,223,62,33
+	border-l: 128,161,33,62
+	border-r: 223,161,33,62
+	corner-tl: 128,128,33,33
+	corner-tr: 223,128,33,33
+	corner-bl: 128,223,33,33
+	corner-br: 223,223,33,33
+
+music: chrome.png
+	pause: 256,0,16,16
+	stop: 272,0,16,16
+	play: 288,0,16,16
+	next: 256,16,16,16
+	prev: 272,16,16,16
+	fastforward: 416,64,16,16
+	slowmo: 416,80,16,16
+
+lobby-bits: chrome.png
+	spawn-claimed: 458,55,19,19
+	spawn-unclaimed: 435,55,19,19
+	admin: 340,39,7,5
+	colorpicker: 257,33,14,14
+	huepicker: 388,96,7,15
+	kick: 386,115,11,11
+	protected: 403,97,10,13
+	protected-disabled: 403,113,10,13
+
+checkbox-bits: chrome.png
+	checked: 272,32,16,16
+	checked-disabled: 272,48,16,16
+	crossed: 288,32,16,16
+	crossed-disabled: 288,48,16,16
+
+scrollbar: chrome.png
+	down_arrow: 304,0,16,16
+	down_pressed: 304,16,16,16
+	up_arrow: 304,32,16,16
+	up_pressed: 304,48,16,16
+	right_arrow: 320,48,16,16
+	right_pressed: 336,48,16,16
+	left_arrow: 352,48,16,16
+	left_pressed: 368,48,16,16
+
+flags: chrome.png
+	nod: 352,0,32,16
+	gdi: 352,16,32,16
+	sul: 480,145,32,16
+	Random: 352,32,32,16
+
+strategic: strategic.png
+	unowned: 0,0,32,32
+	critical_unowned: 0,32,32,32
+	enemy_owned: 32,32,32,32
+	player_owned: 96,0,32,32
+
+sidebar-bits: chromeMW.png
+	indicator-left: 336,265,16,8
+	indicator-right: 336,273,16,8
+	indicator-peasant: 264, 264, 24, 24
+	production-tooltip-time: 192, 1, 24, 24
+	production-tooltip-power: 264, 264, 24, 24
+	production-tooltip-cost: 240, 264, 24, 24
+	production-tooltip-actors: 264, 264, 24, 24
+
+production-icons: chromeMW.png
+	building: 0,0,24,24
+	building-disabled: 0,24,24,24
+	building-alert: 0,48,24,24
+	building3: 24,0,24,24
+	building3-disabled: 24,24,24,24
+	building3-alert: 24,48,24,24
+	infantry: 48,0,24,24
+	infantry-disabled: 48,24,24,24
+	infantry-alert: 48,48,24,24
+	vehicle: 72,0,24,24
+	vehicle-disabled: 72,24,24,24
+	vehicle-alert: 72,48,24,24
+	aircraft: 96,0,24,24
+	aircraft-disabled: 96,24,24,24
+	aircraft-alert: 96,48,24,24
+	support: 120,0,24,24
+	support-disabled: 120,24,24,24
+	support-alert: 120,48,24,24
+	building2: 360,264,24,24
+	building2-disabled: 360,288,24,24
+	building2-alert: 360,312,24,24
+	tech: 384,264,24,24
+	tech-disabled: 384,288,24,24
+	tech-alert: 384,312,24,24
+
+order-icons: chromeMW.png
+	options: 120,0,24,24
+	options-disabled: 120,24,24,24
+	options-active: 120,48,24,24
+	sell: 144,0,24,24
+	sell-disabled: 144,24,24,24
+	sell-active: 144,48,24,24
+	repair: 168,0,24,24
+	repair-disabled: 168,24,24,24
+	repair-active: 168,48,24,24
+	beacon: 288,264,24,24
+	beacon-disabled: 288,288,24,24
+	beacon-active: 288,312,24,24
+	stats: 312,264,24,24
+	stats-disabled: 312,288,24,24
+	stats-active: 312,312,24,24
+
+dropdown: chrome.png
+	separator: 64,1,1,19

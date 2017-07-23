@@ -1,0 +1,802 @@
+V01:
+	Inherits: ^CivBuilding
+	HitShape:
+		UseTargetableCellsOffsets: false
+		TargetableOffsets: -490,-384,0, 0,0,0, 0,470,0
+		Type: Rectangle
+			TopLeft: -768, -597
+			BottomRight: 896, 683
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+	Tooltip:
+		Name: Church
+	SpawnActorOnDeath:
+		Actor: V01.Husk
+	EditorTilesetFilter:
+		ExcludeTilesets: DESERT
+
+V01.Husk:
+	Inherits: ^CivBuildingHusk
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+	Tooltip:
+		Name: Church (Destroyed)
+	EditorTilesetFilter:
+		ExcludeTilesets: DESERT
+
+V02:
+	Inherits: ^CivBuilding
+	HitShape:
+		UseTargetableCellsOffsets: false
+		TargetableOffsets: -490,-512,0, 0,0,0, 0,512,0
+		Type: Rectangle
+			TopLeft: -1024, -512
+			BottomRight: 1024, 597
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+	SpawnActorOnDeath:
+		Actor: V02.Husk
+	EditorTilesetFilter:
+		ExcludeTilesets: DESERT
+	Tooltip:
+		Name: Han's and Gretel's
+
+V02.Husk:
+	Inherits: ^CivBuildingHusk
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+	EditorTilesetFilter:
+		ExcludeTilesets: DESERT
+	Tooltip:
+		Name: Han's and Gretel's (Destroyed)
+
+V03:
+	Inherits: ^CivBuilding
+	HitShape:
+		UseTargetableCellsOffsets: false
+		TargetableOffsets: -490,-512,0, 0,0,0, 421,512,0, -210,512,0
+		Type: Rectangle
+			TopLeft: -1024, -597
+			BottomRight: 1024, 597
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+	SpawnActorOnDeath:
+		Actor: V03.Husk
+	EditorTilesetFilter:
+		ExcludeTilesets: DESERT
+	Tooltip:
+		Name: Hewitt's House
+
+V03.Husk:
+	Inherits: ^CivBuildingHusk
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+	EditorTilesetFilter:
+		ExcludeTilesets: DESERT
+	Tooltip:
+		Name: Hewitt's House (Destroyed)
+
+V04:
+	Inherits: ^CivBuilding
+	HitShape:
+		UseTargetableCellsOffsets: false
+		TargetableOffsets: 0,0,0, -421,-256,0, -421,256,0
+		Type: Rectangle
+			TopLeft: -683, -432
+			BottomRight: 683, 683
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+	SpawnActorOnDeath:
+		Actor: V04.Husk
+	EditorTilesetFilter:
+		ExcludeTilesets: DESERT
+	Tooltip:
+		Name: Ricktor's House
+
+V04.Husk:
+	Inherits: ^CivBuildingHusk
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+	EditorTilesetFilter:
+		ExcludeTilesets: DESERT
+	Tooltip:
+		Name: Ricktor's House (Destroyed)
+
+V05:
+	Inherits: ^CivBuilding
+	Inherits@shape: ^2x1Shape
+	Building:
+		Footprint: xx
+		Dimensions: 2,1
+	SpawnActorOnDeath:
+		Actor: V05.Husk
+	EditorTilesetFilter:
+		ExcludeTilesets: DESERT
+	Tooltip:
+		Name: Gretchkin's house
+
+V05.Husk:
+	Inherits: ^CivBuildingHusk
+	Building:
+		Footprint: xx
+		Dimensions: 2,1
+	EditorTilesetFilter:
+		ExcludeTilesets: DESERT
+	Tooltip:
+		Name: Gretchkin's house (Destroyed)
+
+V06:
+	Inherits: ^CivBuilding
+	Inherits@shape: ^2x1Shape
+	Building:
+		Footprint: xx
+		Dimensions: 2,1
+	SpawnActorOnDeath:
+		Actor: V06.Husk
+	EditorTilesetFilter:
+		ExcludeTilesets: DESERT
+	Tooltip:
+		Name: The Barn
+
+V06.Husk:
+	Inherits: ^CivBuildingHusk
+	Building:
+		Footprint: xx
+		Dimensions: 2,1
+	EditorTilesetFilter:
+		ExcludeTilesets: DESERT
+	Tooltip:
+		Name: The Barn (Destroyed)
+
+V07:
+	Inherits: ^CivBuilding
+	Inherits@shape: ^2x1Shape
+	Building:
+		Footprint: xx
+		Dimensions: 2,1
+	SpawnActorOnDeath:
+		Actor: V07.Husk
+	EditorTilesetFilter:
+		ExcludeTilesets: DESERT
+	Tooltip:
+		Name: Damon's Pub
+
+V07.Husk:
+	Inherits: ^CivBuildingHusk
+	Building:
+		Footprint: xx
+		Dimensions: 2,1
+	EditorTilesetFilter:
+		ExcludeTilesets: DESERT
+	Tooltip:
+		Name: Damon's Pub (Destroyed)
+
+V08:
+	Inherits: ^CivBuilding
+	SpawnActorOnDeath:
+		Actor: V08.Husk
+	EditorTilesetFilter:
+		ExcludeTilesets: DESERT
+	Tooltip:
+		Name: Fran's House
+
+V08.Husk:
+	Inherits: ^CivBuildingHusk
+	EditorTilesetFilter:
+		ExcludeTilesets: DESERT
+	Tooltip:
+		Name: Fran's House (Destroyed)
+
+V09:
+	Inherits: ^CivBuilding
+	SpawnActorOnDeath:
+		Actor: V09.Husk
+	EditorTilesetFilter:
+		ExcludeTilesets: DESERT
+	Tooltip:
+		Name: Music Factory
+
+V09.Husk:
+	Inherits: ^CivBuildingHusk
+	EditorTilesetFilter:
+		ExcludeTilesets: DESERT
+	Tooltip:
+		Name: Music Factory (Destroyed)
+
+V10:
+	Inherits: ^CivBuilding
+	SpawnActorOnDeath:
+		Actor: V10.Husk
+	EditorTilesetFilter:
+		ExcludeTilesets: DESERT
+	Tooltip:
+		Name: Toymaker's
+
+V10.Husk:
+	Inherits: ^CivBuildingHusk
+	EditorTilesetFilter:
+		ExcludeTilesets: DESERT
+	Tooltip:
+		Name: Toymaker's (Destroyed)
+
+V11:
+	Inherits: ^CivBuilding
+	SpawnActorOnDeath:
+		Actor: V11.Husk
+	EditorTilesetFilter:
+		ExcludeTilesets: DESERT
+	Tooltip:
+		Name: Ludwig's House
+
+V11.Husk:
+	Inherits: ^CivBuildingHusk
+	EditorTilesetFilter:
+		ExcludeTilesets: DESERT
+	Tooltip:
+		Name: Ludwig's House (Destroyed)
+
+V12:
+	Inherits: ^CivField
+	SpawnActorOnDeath:
+		Actor: V12.Husk
+	EditorTilesetFilter:
+		ExcludeTilesets: DESERT
+	Tooltip:
+		Name: Haystacks
+
+V12.Husk:
+	Inherits: ^CivBuildingHusk
+	EditorTilesetFilter:
+		ExcludeTilesets: DESERT
+	Tooltip:
+		Name: Haystacks (Destroyed)
+
+V13:
+	Inherits: ^CivField
+	SpawnActorOnDeath:
+		Actor: V13.Husk
+	EditorTilesetFilter:
+		ExcludeTilesets: DESERT
+	Tooltip:
+		Name: Haystacks
+
+V13.Husk:
+	Inherits: ^CivBuildingHusk
+	EditorTilesetFilter:
+		ExcludeTilesets: DESERT
+	Tooltip:
+		Name: Haystacks (Destroyed)
+
+V14:
+	Inherits: ^CivField
+	SpawnActorOnDeath:
+		Actor: V14.Husk
+	EditorTilesetFilter:
+		ExcludeTilesets: DESERT
+	Tooltip:
+		Name: Wheat Field
+
+V14.Husk:
+	Inherits: ^CivFieldHusk
+	EditorTilesetFilter:
+		ExcludeTilesets: DESERT
+	Tooltip:
+		Name: Wheat Field (Destroyed)
+
+V15:
+	Inherits: ^CivField
+	SpawnActorOnDeath:
+		Actor: V15.Husk
+	EditorTilesetFilter:
+		ExcludeTilesets: DESERT
+	Tooltip:
+		Name: Fallow Field
+
+V15.Husk:
+	Inherits: ^CivFieldHusk
+	EditorTilesetFilter:
+		ExcludeTilesets: DESERT
+	Tooltip:
+		Name: Fallow Field (Destroyed)
+
+V16:
+	Inherits: ^CivField
+	SpawnActorOnDeath:
+		Actor: V16.Husk
+	EditorTilesetFilter:
+		ExcludeTilesets: DESERT
+	Tooltip:
+		Name: Corn Field
+
+V16.Husk:
+	Inherits: ^CivFieldHusk
+	EditorTilesetFilter:
+		ExcludeTilesets: DESERT
+	Tooltip:
+		Name: Corn Field (Destroyed)
+
+V17:
+	Inherits: ^CivField
+	SpawnActorOnDeath:
+		Actor: V17.Husk
+	EditorTilesetFilter:
+		ExcludeTilesets: DESERT
+	Tooltip:
+		Name: Celery Field
+
+V17.Husk:
+	Inherits: ^CivFieldHusk
+	EditorTilesetFilter:
+		ExcludeTilesets: DESERT
+	Tooltip:
+		Name: Celery Field (Destroyed)
+
+V18:
+	Inherits: ^CivField
+	SpawnActorOnDeath:
+		Actor: V18.Husk
+	EditorTilesetFilter:
+		ExcludeTilesets: DESERT
+	Tooltip:
+		Name: Potato Field
+
+V18.Husk:
+	Inherits: ^CivFieldHusk
+	EditorTilesetFilter:
+		ExcludeTilesets: DESERT
+	Tooltip:
+		Name: Potato Field (Destroyed)
+
+ARCO:
+	Inherits: ^CivBuilding
+	Inherits@shape: ^2x1Shape
+	Building:
+		Footprint: xx
+		Dimensions: 2,1
+	SpawnActorOnDeath:
+		Actor: ARCO.Husk
+	Tooltip:
+		Name: Oil Pump
+		ShowOwnerRow: True
+
+ARCO.Husk:
+	Inherits: ^CivBuildingHusk
+	Building:
+		Footprint: xx
+		Dimensions: 2,1
+	Tooltip:
+		Name: Oil Pump (Destroyed)
+
+WOOD:
+	Inherits: ^Wall
+	Armor:
+		Type: Wood
+	Tooltip:
+		Name: Wooden Fence
+	LineBuild:
+		NodeTypes: woodfence
+	LineBuildNode:
+		Types: woodfence
+	WithWallSpriteBody:
+		Type: woodfence
+
+BRIDGE1:
+	Inherits: ^Bridge
+	Bridge:
+		Template: 165
+		DestroyedTemplate: 166
+	Building:
+		Footprint: ____ ____ ____ ____
+		Dimensions: 4,4
+	CustomSelectionSize:
+		CustomBounds: 96,96
+	FreeActor@north:
+		Actor: bridgehut
+		SpawnOffset: 2,0
+	FreeActor@south:
+		Actor: bridgehut
+		SpawnOffset: 0,2
+
+BRIDGE2:
+	Inherits: ^Bridge
+	Bridge:
+		Template: 167
+		DestroyedTemplate: 168
+	Building:
+		Footprint: _____ _____ _____ _____ _____
+		Dimensions: 5,5
+	CustomSelectionSize:
+		CustomBounds: 120,120
+	FreeActor@north:
+		Actor: bridgehut
+		SpawnOffset: 0,0
+	FreeActor@south:
+		Actor: bridgehut
+		SpawnOffset: 2,2
+
+BRIDGE3:
+	Inherits: ^Bridge
+	Bridge:
+		Template: 169
+		DestroyedTemplate: 170
+	Building:
+		Footprint: ______ ______ ______ ______ ______
+		Dimensions: 6,5
+	CustomSelectionSize:
+		CustomBounds: 144,120
+	FreeActor@north:
+		Actor: bridgehut
+		SpawnOffset: 3,0
+	FreeActor@south:
+		Actor: bridgehut
+		SpawnOffset: 1,2
+
+BRIDGE4:
+	Inherits: ^Bridge
+	Bridge:
+		Template: 171
+		DestroyedTemplate: 172
+	Building:
+		Footprint: ______ ______ ______ ______
+		Dimensions: 6,4
+	CustomSelectionSize:
+		CustomBounds: 144,96
+	FreeActor@north:
+		Actor: bridgehut
+		SpawnOffset: 1,0
+	FreeActor@south:
+		Actor: bridgehut
+		SpawnOffset: 3,2
+
+BRIDGEHUT:
+	AlwaysVisible:
+	Building:
+		Footprint: __ __
+		Dimensions: 2,2
+	CustomSelectionSize:
+		CustomBounds: 48,48
+	LegacyBridgeHut:
+	Targetable:
+		TargetTypes: BridgeHut, C4
+
+C1:
+	Inherits: ^MWCiv
+	RenderSprites:
+		Image: mwciv1
+		PlayerPalette: raplayer
+
+C2:
+	Inherits: ^MWCiv
+	RenderSprites:
+		Image: mwciv2
+		PlayerPalette: raplayer
+
+C3:
+	Inherits: ^MWCiv
+	Voiced:
+		VoiceSet: CivilianFemaleVoice
+	RenderSprites:
+		Image: mwciv3
+		PlayerPalette: raplayer
+
+C4:
+	Inherits: ^MWCiv
+	Voiced:
+		VoiceSet: CivilianFemaleVoice
+	RenderSprites:
+		Image: mwciv4
+		PlayerPalette: raplayer
+
+C5:
+	Inherits: ^MWCiv
+	Voiced:
+		VoiceSet: CivilianFemaleVoice
+	RenderSprites:
+		Image: mwciv5
+		PlayerPalette: raplayer
+
+C6:
+	Inherits: ^MWCiv
+	RenderSprites:
+		Image: mwciv6
+		PlayerPalette: raplayer
+
+C7:
+	Inherits: ^MWCiv
+	RenderSprites:
+		Image: mwciv1
+		PlayerPalette: raplayer
+
+C8:
+	Inherits: ^MWCiv
+	RenderSprites:
+		Image: mwciv2
+		PlayerPalette: raplayer
+
+C9:
+	Inherits: ^MWCiv
+	RenderSprites:
+		Image: mwciv3
+		PlayerPalette: raplayer
+
+C10:
+	Inherits: ^MWCiv
+	RenderSprites:
+		Image: mwciv4
+		PlayerPalette: raplayer
+
+DELPHI:
+	Inherits: ^MWCiv
+	-Wanders:
+	Tooltip:
+		Name: Agent Delphi
+
+CHAN:
+	Inherits: ^MWCiv
+	Tooltip:
+		Name: Dr. Chan
+
+MOEBIUS:
+	Inherits: ^MWCiv
+	-Wanders:
+	Voiced:
+		VoiceSet: MoebiusVoice
+	Tooltip:
+		Name: Dr. Moebius
+		
+MWCIV1:
+	Inherits: ^MWCiv
+	RenderSprites:
+		Image: mwciv1
+		PlayerPalette: raplayer
+		
+MWCIV2:
+	Inherits: ^MWCiv
+	RenderSprites:
+		Image: mwciv2
+		PlayerPalette: raplayer
+		
+MWCIV3:
+	Inherits: ^MWCiv
+	RenderSprites:
+		Image: mwciv3
+		PlayerPalette: raplayer
+		
+MWCIV4:
+	Inherits: ^MWCiv
+	RenderSprites:
+		Image: mwciv4
+		PlayerPalette: raplayer
+	Voiced:
+		VoiceSet: CivilianFemaleVoice
+		
+MWCIV5:
+	Inherits: ^MWCiv
+	RenderSprites:
+		Image: mwciv5
+		PlayerPalette: raplayer
+	Voiced:
+		VoiceSet: CivilianFemaleVoice
+		
+MWCIV6:
+	Inherits: ^MWCiv
+	RenderSprites:
+		Image: mwciv6
+		PlayerPalette: raplayer
+
+DEER01:
+	Inherits: ^MWWildlife
+	RenderSprites:
+		PlayerPalette: 
+		Palette: mwcivilian
+	Tooltip:
+		Name: Wildlife
+	WithInfantryBody:
+		IdleSequences: idle1
+	HuntableDeer@Lootable:
+		Actor: DEER01.Husk
+		OwnerType: Killer
+		SkipMakeAnimations: False
+        HuntTypes: Wildlife
+		
+DEER01.Husk:
+	Inherits: ^DeadWildlife
+	Health:
+		HP: 1500
+	Tooltip:
+		Name: Wildlife (Dead)
+	RenderSprites:
+		PlayerPalette: mwcivilianplayer
+		Image: deer01
+	WithFacingSpriteBody:
+		StartSequence: die1
+		Sequence: body
+    LootableBody: 
+        LootTypes: DeadWildlife
+
+DEER02:
+	Inherits: ^MWWildlife
+	RenderSprites:
+		PlayerPalette: 
+		Palette: mwcivilian
+	Tooltip:
+		Name: Wildlife
+	WithInfantryBody:
+		IdleSequences: idle1, idle2
+	HuntableDeer@Lootable:
+		Actor: DEER02.Husk
+		OwnerType: Killer
+		SkipMakeAnimations: False
+        HuntTypes: Wildlife
+		
+DEER02.Husk:
+	Inherits: ^DeadWildlife
+	Health:
+		HP: 500
+	Tooltip:
+		Name: Wildlife (Dead)
+	RenderSprites:
+		PlayerPalette: mwcivilianplayer
+		Image: deer02
+	WithFacingSpriteBody:
+		StartSequence: die1
+		Sequence: body
+    LootableBody: 
+        LootTypes: DeadWildlife
+
+DEER03:
+	Inherits: ^MWWildlife
+	RenderSprites:
+		PlayerPalette: 
+		Palette: mwcivilian
+	Tooltip:
+		Name: Wildlife
+	WithInfantryBody:
+		IdleSequences: idle1
+	HuntableDeer@Lootable:
+		Actor: DEER03.Husk
+		OwnerType: Killer
+		SkipMakeAnimations: False
+        HuntTypes: Wildlife
+		
+DEER03.Husk:
+	Inherits: ^DeadWildlife
+	Tooltip:
+		Name: Wildlife (Dead)
+	Health:
+		HP: 1200
+	RenderSprites:
+		PlayerPalette: mwcivilianplayer
+		Image: deer03
+	WithFacingSpriteBody:
+		StartSequence: die1
+		Sequence: body
+    LootableBody: 
+        LootTypes: DeadWildlife
+
+DEER03A:
+	Inherits: ^MWWildlife
+	RenderSprites:
+		PlayerPalette: 
+		Palette: mwcivilian
+	Tooltip:
+		Name: Wildlife
+	WithInfantryBody:
+		IdleSequences: idle1
+	HuntableDeer@Lootable:
+		Actor: DEER03A.Husk
+		OwnerType: Killer
+		SkipMakeAnimations: False
+        HuntTypes: Wildlife
+		
+DEER03A.Husk:
+	Inherits: ^DeadWildlife
+	Health:
+		HP: 700
+	Tooltip:
+		Name: Wildlife (Dead)
+	RenderSprites:
+		PlayerPalette: mwcivilianplayer
+		Image: deer03a
+	WithFacingSpriteBody:
+		StartSequence: die1
+		Sequence: body
+    LootableBody: 
+        LootTypes: DeadWildlife
+
+HUNTER:
+	Inherits: ^Knight
+	RevealsShroud:
+		Range: 6c0
+	Valued:
+		Cost: 400
+	Tooltip:
+		Name: Hunter
+	Mobile:
+		Speed: 56
+	Health:
+		HP: 13000
+	RenderSprites:
+		PlayerPalette: mwcivilianplayer
+	WithInfantryBody:
+		DefaultAttackSequence: shoot
+		AttackSequences:
+			secondary: shoot
+			primary: shoot2
+			tairt: shoot2
+	Armor:
+		Type: Leather
+	Power:
+		Amount: 0
+	-Selectable:
+	Targetable:
+		TargetTypes: Ground, Infantry, Hunterer
+	RejectsOrders:
+	WithDeathAnimation:
+		DeathSequencePalette: mwcivilianplayer
+	AttackFrontal:
+		Armaments: primary, secondary, tairt
+		IgnoresVisibility: true	
+	AttackMove:
+	ExternalCondition@DeerHunter:
+		Condition: DeerHunter
+	ExternalCondition@LootingDeer:
+		Condition: LootingDeer
+	ExternalCondition@Unload:
+		Condition: UnloadDeer
+	Armament@Huntdeer:
+		Weapon: BowNArrowHunter
+		Name: primary
+		IgnoresVisibility: true
+		RequiresCondition: (FullFood + LootingDeer) == 0
+	Armament@HuntdeerDummy:
+		Weapon: BowNArrowHunterDUMMY
+		Name: secondary
+		IgnoresVisibility: true
+		RequiresCondition: (FullFood + LootingDeer) == 0
+	Armament@GatherDeer:
+		Weapon: HunterGather
+		Name: primary
+		TargetStances: Ally, Neutral
+		IgnoresVisibility: true
+		RequiresCondition: !FullFood
+	Armament@Unload:
+		Weapon: HunterUnload
+		Name: tairt
+		TargetStances: Ally, Neutral
+		IgnoresVisibility: true
+		RequiresCondition: !NoFood || FullFood
+		AmmoPoolName: Food
+	CashTrickler@LotDeer:
+		Interval: 25
+		Amount: 100
+		RequiresCondition: UnloadDeer
+	AmmoPool:
+		Name: Food
+		Ammo: 10
+		InitialAmmo: 0
+		PipCount: 2
+	AmmoPoolConditions:
+		ConditionFull: FullFood
+		ConditionEmpty: NoFood
+		AmmoPoolName: Food
+	ReloadAmmoWhenEnabled:
+		Name: Food
+		ReloadDelay: 25
+		ResetDelayOnEnable: false
+		RequiresCondition: DeerHunter
+	PersonValued:
+		ActorCount: 1
+		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4, noble1, noble2, noble3, noble4
+    DeerHunter: 
+        HuntTypes: Wildlife
+        LootTypes: DeadWildlife
+        SearchDistance: 15c0

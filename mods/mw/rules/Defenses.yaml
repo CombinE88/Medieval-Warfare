@@ -1,0 +1,584 @@
+GTWNEW:
+	Inherits: ^MWDefense
+	Inherits@AUTOTARGET: ^AutoTargetGround
+	Inherits@Hitshape: ^1x1Shape
+	EditorTilesetFilter:
+		Categories: Defense
+	WithDeathAnimation:
+		DeathSequencePalette: raplayer
+	RenderSprites:
+		PlayerPalette: raplayer
+	Valued:
+		Cost: 400
+	CustomSellValue:
+		Value: 200
+	Tooltip:
+		Name: Guard Tower
+	Buildable:
+		Description: A wooden tower, stationed with 2 archers.\n  Strong vs Infantry, Light Cavalry\n  Weak vs Siege weapons and Heavy Cavalry \n  Cannot target Aircraft (because of I say so)\n  Requires 2 Peasants\n\n
+		BuildPaletteOrder: 20
+		Prerequisites: ~scaffold
+		Queue: MMilitary.GDI, MMilitary.Nod
+		BuildDuration: 1600
+		BuildDurationModifier: 40
+		IconPalette: raicon
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+	Health:
+		HP: 40000
+		Shape: Rectangle
+			TopLeft: -456, -456
+			BottomRight: 456, 456
+	RevealsShroud:
+		Range: 7c0
+	WithBuildingBib:
+		HasMinibib: Yes
+	WithIdleOverlay:
+	Armament@1:
+		Weapon: bownarrowtower
+		LocalOffset: 0,0,427
+		Turret: primary
+	Armament@2:
+		Weapon: bownarrowtower
+		LocalOffset: 0,0,427
+		Turret: secondary
+		FireDelay: 12
+	Armament@1DUMMY:
+		Weapon: BowNArrowTowerDUMMY
+		LocalOffset: 0,0,427
+		Turret: primary
+	Armament@2DUMMY:
+		Weapon: BowNArrowTowerDUMMY
+		LocalOffset: 0,0,427
+		Turret: secondary
+		FireDelay: 12
+	AttackTurreted:
+	BodyOrientation:
+		QuantizedFacings: 8
+	DetectCloaked:
+		Range: 3c0
+	WithSpriteTurret@1: 
+		Sequence: turretidle
+		AimSequence: turretanim
+		Turret: primary
+	WithSpriteTurret@2: 
+		Sequence: turretidle
+		AimSequence: turretanim
+		Turret: secondary
+	Turreted@1:
+		Turret: primary
+		TurnSpeed: 100
+		Offset: -170,-170,500
+	Turreted@2:
+		Turret: secondary
+		TurnSpeed: 100
+		Offset: 170,170,500
+	Armor:
+		Type: HeavyBuilding 
+	Selectable:
+		Bounds: 24,48,0,-10
+	SelectionDecorations
+		VisualBounds: 22,48,0,-10
+	ThrowsShrapnel@SMALL:
+		Weapons: SmallWood1, SmallWood2, SmallWood3, LargeWood1
+		Pieces: 2, 3
+		Range: 0c512, 3c0
+	PersonValued:
+		ActorCount: 2
+		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
+		
+WTW:
+	Inherits: ^MWDefense
+	Inherits@Hitshape: ^1x1Shape
+	Cargo:
+		MaxWeight: 8
+		PipCount: 8
+		Types: Archer
+		InitialUnits: E4NEW, E4NEW, E4NEW, E4NEW
+	WithDeathAnimation:
+		DeathSequencePalette: raplayer
+	BlocksProjectiles:
+	RenderSprites:
+		PlayerPalette: raplayer
+	LineBuildNode:
+		Types: concrete
+	Valued:
+		Cost: 1750
+	CustomSellValue:
+		Value: 875
+	Tooltip:
+		Name: Square Tower
+	Building:
+		Footprint:  x
+		Dimensions: 1,1
+	Health:
+		HP: 90000
+		Shape: Rectangle
+			TopLeft: -512,-512
+			BottomRight: 512, 512
+	RevealsShroud:
+		Range: 7c0
+	AttackGarrisoned: 
+		PortOffsets: -194,0,294, -194,0,680, -555,-469,294, -555,-469,680, -896,0,294, -896,0,680, -555,469,294, -555,469,680
+		PortYaws: 0, 0, 256, 256, 511, 511, 767, 767
+		PortCones: 170, 170, 170, 170, 170, 170, 170, 170
+		Armaments: garrisoned
+	BodyOrientation:
+		QuantizedFacings: 1
+	DetectCloaked:
+		Range: 3c0	
+	Armor:
+		Type: Concrete 
+	Selectable:
+		Bounds: 24,48,0,-10
+	SelectionDecorations
+		VisualBounds: 22,48,0,-10
+	ThrowsShrapnel@SMALL:
+		Weapons: SmallStone1, SmallStone2, LargeStone1
+		Pieces: 2, 3
+		Range: 0c512, 3c0
+	-WithSpriteBody:
+	WithWallSpriteBody:
+		Type: concrete
+		
+WTW2:
+	Inherits: WTW
+	Cargo:
+		InitialUnits: E4NEWv2, E4NEWv2, E4NEWv2, E4NEWv2
+	RenderSprites:
+		Image: wtw
+		PlayerPalette: raplayer
+
+
+SAMNEW:
+	Inherits: ^MWDefense
+	Inherits@AUTOTARGET: ^AutoTargetAir
+	Inherits@Hitshape: ^2x1Shape
+	-RenderDetectionCircle:
+	WithDeathAnimation:
+		DeathSequencePalette: raplayer
+	RenderSprites:
+		PlayerPalette: raplayer
+	Valued:
+		Cost: 650
+	CustomSellValue:
+		Value: 325
+	Tooltip:
+		Name: Anti-Aircraft Ballista
+	Buildable:
+		Description: Because of the 4 elastic limbs out of black wood \nthe Anti-Aircraft Ballista is designed to shoot down targets \nin the air with a very high speed missile.\n  Very strong vs Aircraft\n  Cannot target Ground units.\n\n\n
+		BuildPaletteOrder: 40
+		Prerequisites: barracks, ~scaffold
+		Queue: MMilitary.Nod
+		BuildDuration: 1700
+		BuildDurationModifier: 40
+		IconPalette: raicon
+	Building:
+		Footprint: xx
+		Dimensions: 2,1
+	Health:
+		HP: 40000
+		Shape: Rectangle
+			TopLeft: -724,-656
+			BottomRight: 724, 412
+	RevealsShroud:
+		Range: 8c0
+	WithBuildingBib:
+		HasMinibib: Yes
+	Armament@1:
+		Weapon: samballista
+		LocalOffset: 200,0,227
+		Turret: primary
+	AttackTurreted:
+	BodyOrientation:
+		QuantizedFacings: 8
+	WithSpriteTurret@1: 
+		Sequence: turretidle
+		AimSequence: turretanim
+		Turret: primary
+	Turreted@1:
+		Turret: primary
+		TurnSpeed: 100
+		Offset: 0,0,932
+	Armor:
+		Type: Concrete 
+	SelectionDecorations:
+		VisualBounds: 50,50,0,-10
+	Selectable:
+		Bounds: 50,50,0,-10
+	PersonValued:
+		ActorCount: 2
+		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
+
+TRIBU:
+	Inherits: ^MWDefense
+	Inherits@AUTOTARGET: ^AutoTargetGround
+	Inherits@Hitshape: ^1x1Shape
+	Valued:
+		Cost: 1500
+	CustomSellValue:
+		Value: 750
+	Tooltip:
+		Name: Counterweight Trebuchet
+	Buildable:
+		Description: The Counterweight Trebuchet is a type of siege engine \nmost frequently used to outrange other siege weapons.\n  Requires power to operate.\n  Strong vs all Ground units\n  Cannot target Aircraft\n\n\n
+		BuildPaletteOrder: 50
+		Prerequisites: anycastle, ~scaffold
+		Queue: MMilitary.Nod
+		BuildDuration: 3120
+		BuildDurationModifier: 40
+		IconPalette: raicon
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+	Health:
+		HP: 60000
+		Shape: Rectangle
+			TopLeft: -456, -656
+			BottomRight: 456, 456
+	Armor:
+		Type: Concrete
+	RevealsShroud:
+		Range: 8c0
+	WithBuildingBib:
+		HasMinibib: Yes
+	Armament:
+		Weapon: tribuchetboulder
+		LocalOffset: 0,0,2124
+	DetectCloaked:
+		Range: 3c0
+	Selectable:
+		Bounds: 30,52,0,-12
+	SelectionDecorations:
+		VisualBounds: 30,52,0,-12 
+	RenderSprites:
+		Image: tribu
+		PlayerPalette: raplayer
+	BodyOrientation:
+		QuantizedFacings: 32
+	WithAttackAnimation:
+		AttackSequence: turretanim
+	WithTurretedSpriteBody:
+	-WithSpriteBody:
+	AttackTurreted:
+	Turreted:
+		TurnSpeed: 2
+	WithDeathAnimation:
+		DeathSequencePalette: raplayer 
+	ThrowsShrapnel@SMALL:
+		Weapons: SmallWood1, SmallWood2, SmallWood3, LargeWood1, LargeWood1, LargeWood1
+		Pieces: 2, 4
+		Range: 0c512, 3c0
+	PersonValued:
+		ActorCount: 3
+		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4 
+		
+BATO:
+	Inherits: ^MWDefense
+	Inherits@AUTOTARGET: ^AutoTargetAll
+	Inherits@Hitshape: ^1x1Shape
+	EditorTilesetFilter:
+		Categories: Defense
+	Valued:
+		Cost: 1400
+	CustomSellValue:
+		Value: 700
+	Tooltip:
+		Name: Tower with Ballista
+	Buildable:
+		Description: Because of its smaller design and light weighted missiles, \nthe ballista on top of the tower can target \neither ground or aircraft units.\n  Strong vs ground units\n  Weak vs close by units\n  Long distance\n Can target Aircraft\n\n\n
+		BuildPaletteOrder: 50
+		Prerequisites: anyarmory, ~scaffold
+		Queue: MMilitary.GDI
+		BuildDuration: 2880
+		BuildDurationModifier: 40
+		IconPalette: raicon
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+	Health:
+		HP: 60000
+		Shape: Rectangle
+			TopLeft: -456, -412
+			BottomRight: 456, 524
+	RevealsShroud:
+		Range: 8c0
+	WithBuildingBib:
+		HasMinibib: Yes
+	Armament@1:
+		Weapon: stationbalistaag
+		LocalOffset: 356,0,809
+		Name: secondary
+	Armament@2:
+		Weapon: stationbalistaaa
+		LocalOffset: 356,0,809
+		Name: primary
+	DetectCloaked:
+		Range: 3c0
+	Armor:
+		Type: Concrete
+	Selectable:
+		Bounds: 30,40,0,-12
+	SelectionDecorations:
+		VisualBounds: 30,40,0,-12 
+	WithIdleOverlay:
+		Sequence: overlay
+	RenderSprites:
+		Image: siege4
+		PlayerPalette: raplayer
+	BodyOrientation:
+		QuantizedFacings: 32
+	WithAttackAnimation@1:
+		AttackSequence: turretanim
+		Armament: primary
+	WithAttackAnimation@2:
+		AttackSequence: turretanim
+		Armament: secondary
+	WithTurretedSpriteBody:
+	-WithSpriteBody:
+	AttackTurreted:
+	Turreted:
+		TurnSpeed: 2
+	WithDeathAnimation:
+		DeathSequencePalette: raplayer 
+	PersonValued:
+		ActorCount: 3
+		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
+		
+GUNNEW:
+	Inherits: ^MWDefense
+	Inherits@AUTOTARGET: ^AutoTargetGround
+	Inherits@Hitshape: ^1x1Shape
+	Valued:
+		Cost: 600
+	CustomSellValue:
+		Value: 300
+	Tooltip:
+		Name: Gunpowder Cannon
+	Buildable:
+		Description: The early Cannon uses gunpowder to throw a large boulder. \nIt's most effectively used against large targets.\n  Strong vs Cavalry and Spectral Units\n  Weak vs Infantry\n\n\n
+		BuildPaletteOrder: 30
+		Prerequisites: barracks, ~scaffold
+		Queue: MMilitary.GDI, MMilitary.Nod
+		IconPalette: raicon
+		BuildDuration: 1440
+		BuildDurationModifier: 40
+	Building:
+	Health:
+		HP: 40000
+	Armor:
+		Type: HeavyBuilding
+	RevealsShroud:
+		Range: 6c0
+	WithBuildingBib:
+		HasMinibib: Yes
+	Turreted:
+		TurnSpeed: 12
+		InitialFacing: 56
+	-WithSpriteBody:
+	WithTurretedSpriteBody:
+	Armament:
+		Weapon: cannonboulder
+		LocalOffset: 512,0,212
+		MuzzleSequence: muzzle
+	AttackTurreted:
+	WithMuzzleOverlay:
+	-WithDeathAnimation:
+	RenderSprites:
+		Image: gunnew
+		PlayerPalette: raplayer
+	DetectCloaked:
+		Range: 3c0
+	BodyOrientation:
+		QuantizedFacings: 32
+	Selectable:
+		Bounds: 25,25,0,0
+	SelectionDecorations:
+		VisualBounds: 25,25,0,0 
+	ThrowsShrapnel@SMALL:
+		Weapons: SmallStone1, SmallStone2, LargeStone1
+		Pieces: 2, 3
+		Range: 0c512, 3c0
+	PersonValued:
+		ActorCount: 1
+		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
+		
+CSTLWLL:
+	Inherits: ^Wall
+	Inherits@Hitshape: ^1x1Shape
+	Valued:
+		Cost: 350
+	CustomSellValue:
+		Value: 0
+	Tooltip:
+		Name: Castle Wall
+	Buildable:
+		Description: Castlewall that blocks arrows and other projectiles\n\n\n
+		BuildPaletteOrder: 50
+		BuildDuration: 500
+		Prerequisites: anyworkshop
+		Queue: MMilitary.GDI, MMilitary.Nod
+		BuildDurationModifier: 40
+		IconPalette: raicon
+	Health:
+		HP: 65000
+	Armor:
+		Type: Concrete
+	BlocksProjectiles:
+	Building:
+	RenderSprites:
+		PlayerPalette: raplayer
+		-Palette:
+	SoundOnDamageTransition:
+		DestroyedSounds: crumble.aud
+	LineBuild:
+		NodeTypes: concrete
+	LineBuildNode:
+		Types: concrete
+	WithWallSpriteBody:
+		Type: concrete
+	Crushable:
+		CrushClasses: heavywall
+		
+		
+CSTLGTEW:
+	Inherits: ^MWGate
+	Inherits@Hitshape: ^1x1Shape
+	WithMakeAnimation:
+	WithDeathAnimation:
+		DeathSequencePalette: raplayer
+	RenderSprites:
+		PlayerPalette: raplayer
+	Gate:
+		Adjacent: 7
+		Footprint: xxx
+		Dimensions: 3,1
+	WithGateSpriteBody:
+		WallConnections: -1,0, 3,0
+		Type: concrete
+		OpenSequence: open
+	LineBuildNode:
+		Connections: -1,0, 3,0
+			Types: concrete
+	Valued:
+		Cost: 1000
+	CustomSellValue:
+		Value: 500
+	Tooltip:
+		Name: Castle Gate
+	Health:
+		HP: 200000
+		Shape: Rectangle
+			TopLeft: -1436,-412
+			BottomRight: 1436, 412
+	RevealsShroud:
+		Range: 5c0
+	WithBuildingBib:
+	BodyOrientation:
+		QuantizedFacings: 1
+	Armor:
+		Type: Concrete 
+	Selectable:
+		Bounds: 96,66,0,-21
+	SelectionDecorations:
+		VisualBounds: 96,66,0,-21
+	ThrowsShrapnel@SMALL:
+		Weapons: SmallStone1, SmallStone2, LargeStone1
+		Pieces: 5, 7
+		Range: 0c512, 3c0
+		
+CSTLGTNS: 
+	Inherits: ^MWGate
+	Inherits@Hitshape: ^1x1Shape
+	WithMakeAnimation:
+	WithDeathAnimation:
+		DeathSequencePalette: raplayer
+	RenderSprites:
+		PlayerPalette: raplayer
+	Gate:
+		Adjacent: 7
+		Footprint: xxx
+		Dimensions: 3,1
+	WithGateSpriteBody:
+		WallConnections: -1,0, 3,0
+		Type: concrete
+		OpenSequence: open
+	LineBuildNode:
+		Connections: -1,0, 3,0
+			Types: concrete
+	Valued:
+		Cost: 1000
+	CustomSellValue:
+		Value: 500
+	Tooltip:
+		Name: Castle Gate
+	Health:
+		HP: 200000
+		Shape: Rectangle
+			TopLeft: -456,-1436
+			BottomRight: 456, 1436
+	RevealsShroud:
+		Range: 5c0
+	BodyOrientation:
+		QuantizedFacings: 1 
+	Armor:
+		Type: Concrete 
+	ThrowsShrapnel@SMALL:
+		Weapons: SmallStone1, SmallStone2, LargeStone1
+		Pieces: 5, 7
+		Range: 0c512, 3c0 
+	Selectable:
+		Bounds: 28,94,3,-12
+	SelectionDecorations:
+		VisualBounds: 28,94,3,-12
+	Gate:
+		Adjacent: 7
+		Footprint: x x x
+		Dimensions: 1,3
+	WithGateSpriteBody:
+		WallConnections: 0,-1, 0,3
+		Type: concrete
+		OpenSequence: open
+	LineBuildNode:
+		Connections: 0,0, 0,2
+			Types: concrete
+	WithIdleOverlay:
+		Sequence: top
+		
+		
+		
+WDWLL:
+	Inherits: ^Wall
+	Inherits@Hitshape: ^1x1Shape
+	Valued:
+		Cost: 150
+	CustomSellValue:
+		Value: 0
+	Tooltip:
+		Name: Palisades 
+	Buildable:
+		Description: Palisades. Nothing else.\n\n\n
+		BuildPaletteOrder: 40
+		Queue: MMilitary.GDI, MMilitary.Nod, MMilitary.SUL
+		BuildDurationModifier: 40
+		IconPalette: raicon
+	Health:
+		HP: 30000
+	Armor:
+		Type: HeavyBuilding
+	Building:
+	RenderSprites:
+		Palette: ra
+		PlayerPalette: raplayer
+	LineBuild:
+		Range: 11
+		NodeTypes: Wood
+	LineBuildNode:
+		Types: Wood
+	WithWallSpriteBody:
+		Type: wood
+	Crushable:
+		CrushClasses: wall
+	Building:
+		Adjacent: 12

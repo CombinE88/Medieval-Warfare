@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{6DEEE499-98E5-4977-AAAE-CEAE165F17CF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>OpenRA.Mods.MW</RootNamespace>
+    <AssemblyName>OpenRA.Mods.MW</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <DebugType>full</DebugType>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <WarningLevel>4</WarningLevel>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Optimize>true</Optimize>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Eluant, Version=1.0.5867.35197, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\engine\thirdparty\download\Eluant.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="Eluant">
+      <HintPath>..\thirdparty\download\Eluant.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <ProjectReference Include="..\engine\OpenRA.Game\OpenRA.Game.csproj">
+      <Project>{0DFB103F-2962-400F-8C6D-E2C28CCBA633}</Project>
+      <Name>OpenRA.Game</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\engine\OpenRA.Mods.Cnc\OpenRA.Mods.Cnc.csproj">
+      <Project>{2881135d-4d62-493e-8f83-5eee92ccc6be}</Project>
+      <Name>OpenRA.Mods.Cnc</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\engine\OpenRA.Mods.Cnc\OpenRA.Mods.Cnc.csproj">
+      <Project>{2881135d-4d62-493e-8f83-5eee92ccc6be}</Project>
+      <Name>OpenRA.Mods.Cnc</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\engine\OpenRA.Mods.Cnc\OpenRA.Mods.Cnc.csproj">
+      <Project>{2881135d-4d62-493e-8f83-5eee92ccc6be}</Project>
+      <Name>OpenRA.Mods.Cnc</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\engine\OpenRA.Mods.Common\OpenRA.Mods.Common.csproj">
+      <Project>{FE6C8CC0-2F07-442A-B29F-17617B3B7FC6}</Project>
+      <Name>OpenRA.Mods.Common</Name>
+      <Private>False</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Activities\FallDown.cs" />
+    <Compile Include="Projectiles\AthenaProjectile.cs" />
+    <Compile Include="Projectiles\InstantExplode.cs" />
+    <Compile Include="Traits\AmmoPoolConditions.cs" />
+    <Compile Include="Traits\ArmyOfTheDeath\AttackedByDead.cs" />
+    <Compile Include="Traits\ArmyOfTheDeath\IsDeathArmyMob.cs" />
+    <Compile Include="Traits\ArmyOfTheDeath\DeadArmyHandler.cs" />
+    <Compile Include="Traits\ArmyOfTheDeath\PlayRandomSoundEffect.cs" />
+    <Compile Include="Traits\AutoTargetFilter.cs" />
+    <Compile Include="Traits\ConstructionProgress.cs" />
+    <Compile Include="Traits\CreateActorOnDeath.cs" />
+    <Compile Include="Traits\CritterSpawner.cs" />
+    <Compile Include="Traits\DisguiseChargeBar.cs" />
+    <Compile Include="Traits\GrantRandomCondition.cs" />
+    <Compile Include="Traits\HunterTraits\HuntableDeer.cs" />
+    <Compile Include="Traits\HunterTraits\DeerHunter.cs" />
+    <Compile Include="Traits\HunterTraits\LodgeActor.cs" />
+    <Compile Include="Traits\HunterTraits\LootableBody.cs" />
+    <Compile Include="Traits\IsPeasant.cs" />
+    <Compile Include="Traits\NewDisguise.cs" />
+    <Compile Include="Traits\PersonValued.cs" />
+    <Compile Include="Traits\Player\ConstructionResources.cs" />
+    <Compile Include="Traits\Player\PlayerCivilization.cs" />
+    <Compile Include="Traits\ProvidesLivingspace.cs" />
+    <Compile Include="Traits\ReloadAmmoWhenEnabled.cs" />
+    <Compile Include="Traits\Render\NewWithDisguisingInfantryBodyInfo.cs" />
+    <Compile Include="Traits\Render\WithInfantryBodyDisguisedUpdate.cs" />
+    <Compile Include="Traits\ResourceProvider.cs" />
+    <Compile Include="Traits\ResourcePurifier.cs" />
+    <Compile Include="Traits\ShakeOnCreate.cs" />
+    <Compile Include="Traits\TransformOnCondition.cs" />
+    <Compile Include="Traits\WithActorProduction.cs" />
+    <Compile Include="Traits\WithFreeSpawnableActor.cs" />
+    <Compile Include="Warheads\CashTickWarhead.cs" />
+    <Compile Include="Warheads\FireClusterWarhead.cs" />
+    <Compile Include="Warheads\FireFragmentWarhead.cs" />
+    <Compile Include="Warheads\FireShrapnelWarhead.cs" />
+    <Compile Include="Warheads\GrantSingletonConditionWarhead.cs" />
+    <Compile Include="Warheads\GrantSelfCondition.cs" />
+    <Compile Include="Warheads\RemoveExternalCondition.cs" />
+    <Compile Include="Warheads\ShakeGroundWarhead.cs" />
+    <Compile Include="Warheads\SpawnActorWarhead.cs" />
+    <Compile Include="Warheads\WarheadAS.cs" />
+    <Compile Include="Warheads\PromotionWarhead.cs" />
+    <Compile Include="Widgets\Logic\Ingame\IngameFullPopulationCounterLogic.cs" />
+    <Compile Include="Widgets\Logic\Ingame\IngameMaxPopulationCounterLogic.cs" />
+    <Compile Include="Widgets\Logic\Ingame\IngamePeasantSpawnBarLogic.cs" />
+    <Compile Include="Widgets\Logic\Ingame\IngamePopulationCounterLogic.cs" />
+    <Compile Include="Widgets\Logic\Ingame\IngameUsedPopulationCounterLogic.cs" />
+  </ItemGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>mkdir "$(SolutionDir)mods/mw/"
+copy "$(TargetPath)" "$(SolutionDir)mods/mw/"
+cd "$(SolutionDir)"</PostBuildEvent>
+  </PropertyGroup>
+</Project>

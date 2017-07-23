@@ -1,0 +1,296 @@
+Player:
+	HackyAI@Olaf:
+        Type: olaf
+		Name: Olaf the Barbar
+		MinimumExcessPower: 10
+		BuildingCommonNames:
+			ConstructionYard: factnew
+			Refinery: procnew, zeroproc, bummler, sulmill, procnew.scaff, zeroproc.scaff, bummler.scaff, sulmill.scaff
+			Power: 
+			Barracks: barrnew,handnew,sulbarr,barrnew.scaff,handnew.scaff,sulbarr.scaff
+			VehiclesFactory: stall,nodstall,sulmystic,stall.scaff,nodstall.scaff,sulmystic.scaff
+			Production: barrnew,handnew,stall,nodstall,sulmystic,sulbarr,barrnew.scaff,handnew.scaff,stall.scaff,nodstall.scaff,sulmystic.scaff,sulbarr.scaff
+		UnitsCommonNames:
+			Mcv: mcvnew
+			ExcludeFromSquads: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, mwwand7, mwwand8, mwwand8, mwcivcom, noble1, noble2, noble3, noble4, noble5, mwconst1, mwconst2, mwconst3, mwconst4, mwconst5, mwconst6, mwconst7, mwchick1, hunter, transporter, engeneer
+		BuildingQueues: MBuilding.Nod, MBuilding.GDI, MBuilding.SUL, MBuilding2.Nod, MBuilding2.GDI, MBuilding2.SUL, MBuilding3.Nod, MBuilding3.GDI, MBuilding3.SUL
+		DefenseQueues: MDefenses.GDI, MDefenses.Nod, MDefenses.SUL
+		UnitQueues: MVehicle.Nod, MVehicle.GDI, MVehicle.SUL, MInfantry.Nod, MInfantry.GDI, MInfantry.SUL, MSiege.Nod, MSiege.GDI, MSiege.SUL, MInfantry.Horse
+		BuildingLimits:
+			zeroproc.scaff: 2
+			procnew.scaff: 1
+			barrnew.scaff: 1
+			handnew.scaff: 1
+			hqnewnod.scaff: 1
+			armorygdi.scaff: 1
+			armorynod.scaff: 1
+			stall.scaff: 1
+			nodstall.scaff: 1
+			castle.scaff: 1
+			castle2.scaff: 1
+			workshopgdi.scaff: 1
+			workshopnod.scaff: 1
+            nukenew.scaff: 1
+			sulnuke.scaff: 1
+            nuk2new.scaff: 1
+			sulnuk2.scaff: 1
+			nodnuk2.scaff: 1
+            sularray: 1
+            gtwnew.scaff: 1
+            gunnew.scaff: 1
+            tribu.scaff: 1
+            bato.scaff: 1
+            samnew.scaff: 1
+            sularray.scaff: 1
+			zeroproc: 2
+			sulmill.scaff: 1
+            sulmill: 3
+			procnew: 3
+			barrnew: 2
+			sulbarr.scaff: 1
+            sulbarr: 2
+			handnew: 3
+			hqnewnod: 1
+			sulcastle.scaff: 1
+            sulcastle: 1
+			sultow1: 1
+			sultow2: 1
+			sultow3: 1
+			sultow4: 1
+			armorygdi: 1
+			armorynod: 1
+			sulfix.scaff: 2
+			sulmystic.scaff: 1
+            sulfix: 2
+			sulmystic: 3
+			stall: 3
+			nodstall: 3
+			castle: 1
+			castle2: 1
+			workshopgdi: 1
+			workshopnod: 1
+		BuildingFractions:
+			procnew.scaff: 200%
+			zeroproc.scaff: 200%
+			sulmill.scaff: 200%
+			nukenew.scaff: 200%
+			sulnuke.scaff: 200%
+            nuk2new.scaff: 200%
+            nodnuke: 200%
+			sulnuk2.scaff: 200%
+			nodnuk2.scaff: 200%
+			barrnew.scaff: 50%
+			sulbarr.scaff: 50%
+			handnew.scaff: 50%
+			hqnewnod.scaff: 50%
+			armorygdi.scaff: 50%
+			armorynod.scaff: 50%
+			sultow1: 50%
+			sultow2: 50%
+			sultow3: 50%
+			sultow4: 50%
+			stall.scaff: 50%
+			sulmystic.scaff: 50%
+			nodstall.scaff: 50%
+			gtwnew.scaff: 50%
+			sulgtw.scaff: 50%
+			tribu.scaff: 50%
+			bato.scaff: 50%
+			castle2.scaff: 50%
+			castle.scaff: 50%
+			sulcastle.scaff: 50%
+			workshopgdi.scaff: 50%
+			workshopnod.scaff: 50%
+			sulfix.scaff: 50%
+		UnitsToBuild:
+            engeneer: 30%
+			sule1: 65%
+			sule2: 65%
+			sule3: 40%
+			sule4: 35%
+			sule5: 45%
+			sule6: 100%
+			sulm1: 25%
+			sulm2: 45%
+			sulb0: 40%
+			sulb1: 25%
+			sulb3: 15%
+			sulm3: 10%
+			sulm4: 35%
+			e1new: 65%
+			e3newv2: 40%
+			e2newv2: 65%
+			e2new: 25%
+			e3new: 40%
+			e4new: 35%
+			e4newv2: 35%
+			e9new: 35%
+			e5new: 45%
+			eharvxl: 50%
+			ross4: 5%
+			ross3: 40%
+			ross1: 25%
+			siege2: 60%
+			assassin: 40%
+			ross2: 20%
+			siege1: 40%
+			ross5: 50%
+			siege3: 15%
+			ross4c: 35%
+			ross4b: 35%
+			orni: 10%
+			warkite: 10%
+			drgnrdr: 25%
+			wrbln: 10%
+			newcomm: 50%
+			rmbonew: 50%
+			e8farmer: 100%
+		UnitLimits:
+            engeneer: 4
+			eharvxl: 6
+			e8farmer: 14
+			sule6: 20
+		SquadSize: 15
+		SupportPowerDecision@Airstrike:
+			OrderName: CorpsePowerInfoOrder
+			MinimumAttractiveness: 2000
+			Consideration@1:
+				Against: Enemy
+				Types: Vehicle, Infantry
+				Attractiveness: 1
+				TargetMetric: Value
+				CheckRadius: 2c0
+			Consideration@2:
+				Against: Ally
+				Types: Ground, Water
+				Attractiveness: -10
+				TargetMetric: Value
+				CheckRadius: 2c0
+		SupportPowerDecision@FireArrows:
+			OrderName: ArrowsPowerInfoOrder
+			MinimumAttractiveness: 2000
+			Consideration@1:
+				Against: Enemy
+				Types: Vehicle, Infantry
+				Attractiveness: 1
+				TargetMetric: Value
+				CheckRadius: 2c0
+			Consideration@2:
+				Against: Ally
+				Types: Ground, Water
+				Attractiveness: -10
+				TargetMetric: Value
+				CheckRadius: 2c0
+		SupportPowerDecision@Thopter:
+			OrderName: StrangePowerInfoOrder
+			MinimumAttractiveness: 100
+			Consideration@1:
+				Against: Enemy
+				Types: Structure
+				Attractiveness: 1
+				TargetMetric: Value
+				CheckRadius: 2c0
+			Consideration@2:
+				Against: Ally
+				Types: Ground, Water
+				Attractiveness: -10
+				TargetMetric: Value
+				CheckRadius: 2c0
+		SupportPowerDecision@WoodHorse:
+			OrderName: TrojanPowerInfoOrder
+			MinimumAttractiveness: 100
+			Consideration@1:
+				Against: Enemy
+				Types: Structure
+				Attractiveness: 1
+				TargetMetric: Value
+				CheckRadius: 10c0
+			Consideration@2:
+				Against: Ally
+				Types: Ground, Water
+				Attractiveness: -10
+				TargetMetric: Value
+				CheckRadius: 2c0
+		SupportPowerDecision@IonCannonPower:
+			OrderName: LightningPowerInfoOrder
+			MinimumAttractiveness: 1000
+			FineScanRadius: 2
+			Consideration@1:
+				Against: Enemy
+				Types: Air, Tank, Vehicle, Infantry, Water
+				Attractiveness: 2
+				TargetMetric: Value
+				CheckRadius: 2c0
+			Consideration@2:
+				Against: Enemy
+				Types: Structure
+				Attractiveness: 1
+				TargetMetric: Value
+				CheckRadius: 2c0
+			Consideration@3:
+				Against: Ally
+				Types: Ground, Water
+				Attractiveness: -10
+				TargetMetric: Value
+				CheckRadius: 3c0
+		SupportPowerDecision@NukePower:
+			OrderName: CannonPowerInfoOrder
+			MinimumAttractiveness: 3000
+			Consideration@1:
+				Against: Enemy
+				Types: Structure
+				Attractiveness: 1
+				TargetMetric: Value
+				CheckRadius: 5c0
+			Consideration@2:
+				Against: Ally
+				Types: Air, Ground, Water
+				Attractiveness: -10
+				TargetMetric: Value
+				CheckRadius: 7c0
+		SupportPowerDecision@Spear:
+			OrderName: SpearsPowerInfoOrder
+			MinimumAttractiveness: 2000
+			Consideration@1:
+				Against: Enemy
+				Types: Vehicle, Infantry
+				Attractiveness: 1
+				TargetMetric: Value
+				CheckRadius: 2c0
+			Consideration@2:
+				Against: Ally
+				Types: Ground, Water
+				Attractiveness: -10
+				TargetMetric: Value
+				CheckRadius: 2c0
+		SupportPowerDecision@Mortar:
+			OrderName: MortarInfoOrder
+			MinimumAttractiveness: 100
+			Consideration@1:
+				Against: Enemy
+				Types: Structure
+				Attractiveness: 1
+				TargetMetric: Value
+				CheckRadius: 2c0
+			Consideration@2:
+				Against: Ally
+				Types: Ground, Water
+				Attractiveness: -10
+				TargetMetric: Value
+				CheckRadius: 2c0
+		SupportPowerDecision@Tornado:
+			OrderName: TornadoPowerInfoOrder
+			MinimumAttractiveness: 3000
+			Consideration@1:
+				Against: Enemy
+				Types: Structure
+				Attractiveness: 1
+				TargetMetric: Value
+				CheckRadius: 5c0
+			Consideration@2:
+				Against: Ally
+				Types: Air, Ground, Water
+				Attractiveness: -10
+				TargetMetric: Value
+				CheckRadius: 7c0
+				

@@ -1,0 +1,930 @@
+SulSword:
+	ReloadDelay: 30
+	Range: 1c512
+	Report: Sword02.aud, Sword03.aud, Sword04.aud, Sword06.aud, Sword07.aud
+	ValidTargets: Ground, Trees
+	InvalidTargets: Air
+	Projectile: Bullet
+		Speed: 1c382
+	Warhead@1Dam: SpreadDamage
+		Spread: 25
+		Damage: 1000
+		ValidTargets: Ground, Trees
+		InvalidTargets: Air
+		Versus:
+			Leather: 100
+			Light: 100
+			Heavy: 100
+			HeavyBuilding: 10
+			Concrete: 25
+			Knight: 30
+			LightCavalry: 50
+			MediumCavalry: 20
+			HeavyCavalry: 20
+			Spectral: 15
+		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+		
+PikeAC:
+	ReloadDelay: 50
+	Range: 2c512
+	Report: Sword02.aud, Sword03.aud, Sword04.aud, Sword06.aud, Sword07.aud
+	ValidTargets: Ground, Trees
+	InvalidTargets: Air, Infantry
+	Projectile: Bullet
+		Speed: 1c382
+	Warhead@1Dam: SpreadDamage
+		Spread: 15
+		Damage: 3500
+		ValidTargets: Ground, Trees
+		InvalidTargets: Air, Infantry
+		Versus:
+			Leather: 20
+			Light: 20
+			Heavy: 30
+			Concrete: 85
+			HeavyBuilding: 100
+			Knight: 30
+			LightCavalry: 135
+			MediumCavalry: 125
+			HeavyCavalry: 120
+			Spectral: 10
+		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+		
+BroadSwordAE:
+	ReloadDelay: 35
+	Range: 1c512
+	Report: Sword02.aud, Sword03.aud, Sword04.aud, Sword06.aud, Sword07.aud
+	ValidTargets: Infantry, Trees
+	InvalidTargets: Air
+	Projectile: Bullet
+		Speed: 1c382
+	Warhead@1Dam: SpreadDamage
+		Spread: 25
+		Damage: 1250
+		ValidTargets: Infantry, Trees
+		InvalidTargets: Air
+		Versus:
+			Leather: 100
+			Light: 100
+			Heavy: 100
+			HeavyBuilding: 10
+			Concrete: 25
+			Knight: 30
+			LightCavalry: 50
+			MediumCavalry: 20
+			HeavyCavalry: 20
+			Spectral: 15
+		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+		
+ScimitarDuals:
+	ReloadDelay: 22
+	Range: 1c512
+	Report: Sword02.aud, Sword03.aud, Sword04.aud, Sword06.aud, Sword07.aud
+	ValidTargets: Ground, Trees
+	InvalidTargets: Air
+	Projectile: Bullet
+		Speed: 1c382
+	Warhead@1Dam: SpreadDamage
+		Spread: 25
+		Damage: 5500
+		ValidTargets: Ground, Trees
+		InvalidTargets: Air
+		Versus:
+			Leather: 100
+			Light: 100
+			Heavy: 100
+			HeavyBuilding: 15
+			Concrete: 10
+			Knight: 30
+			LightCavalry: 100
+			MediumCavalry: 85
+			HeavyCavalry: 60
+			Spectral: 45
+		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+		
+SuperioirPike:
+	ReloadDelay: 50
+	Range: 2c512
+	Report: Sword02.aud, Sword03.aud, Sword04.aud, Sword06.aud, Sword07.aud
+	ValidTargets: Ground, Trees
+	InvalidTargets: Air
+	Projectile: Bullet
+		Speed: 1c382
+	Warhead@1Dam: SpreadDamage
+		Spread: 15
+		Damage: 3000
+		ValidTargets: Ground, Trees
+		InvalidTargets: Air
+		Versus:
+			Leather: 45
+			Light: 45
+			Heavy: 65
+			Concrete: 85
+			HeavyBuilding: 100
+			Knight: 50
+			LightCavalry: 135
+			MediumCavalry: 125
+			HeavyCavalry: 120
+			Spectral: 15
+		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+		
+ApprenticeFire:
+	ReloadDelay: 75
+	Range: 6c0
+	ValidTargets: Ground
+	InvalidTargets: Air, Structure, Skeleton
+	Projectile: Bullet
+		Speed: 1c382
+	Warhead@1Dam: SpreadDamage
+		Spread: 50
+		ValidTargets: Ground
+		InvalidTargets: Air, Structure, Skeleton
+		Damage: 1500
+		Versus:
+			Leather: 200
+			Light: 180
+			Heavy: 160
+			Spectral: 65
+			Concrete: 85
+			Knight: 45
+			LightCavalry: 35
+			MediumCavalry: 25
+			HeavyCavalry: 15
+			HeavyBuilding: 5
+		DamageTypes: Prone50Percent, TriggerProne, BurnToDeath, SkeletonDeath
+		Delay: 6
+	Warhead@2Dam: SpreadDamage
+		Spread: 50
+		ValidTargets: Ground
+		InvalidTargets: Air, Structure, Skeleton
+		Damage: 1500
+		Versus:
+			Leather: 200
+			Light: 180
+			Heavy: 160
+			Spectral: 65
+			Concrete: 100
+			Knight: 45
+			LightCavalry: 35
+			MediumCavalry: 25
+			HeavyCavalry: 15
+			HeavyBuilding: 5
+		DamageTypes: Prone50Percent, TriggerProne, BurnToDeath, SkeletonDeath
+		Delay: 12
+	Warhead@3Dam: SpreadDamage
+		Spread: 50
+		ValidTargets: Ground
+		InvalidTargets: Air, Structure, Skeleton
+		Damage: 1500
+		Versus:
+			Leather: 200
+			Light: 180
+			Heavy: 160
+			Spectral: 65
+			Concrete: 100
+			Knight: 45
+			LightCavalry: 35
+			MediumCavalry: 25
+			HeavyCavalry: 15
+			HeavyBuilding: 5
+		DamageTypes: Prone50Percent, TriggerProne, BurnToDeath, SkeletonDeath
+		Delay: 18
+	Warhead@4Dam: SpreadDamage
+		Spread: 50
+		ValidTargets: Ground
+		InvalidTargets: Air, Structure, Skeleton
+		Damage: 1500
+		Versus:
+			Leather: 200
+			Light: 180
+			Heavy: 160
+			Spectral: 65
+			Concrete: 100
+			Knight: 45
+			LightCavalry: 35
+			MediumCavalry: 25
+			HeavyCavalry: 15
+			HeavyBuilding: 5
+		DamageTypes: Prone50Percent, TriggerProne, BurnToDeath, SkeletonDeath
+		Delay: 24
+	Warhead@5Dam: SpreadDamage
+		Spread: 50
+		ValidTargets: Ground
+		InvalidTargets: Air, Structure, Skeleton
+		Damage: 1500
+		Versus:
+			Leather: 200
+			Light: 180
+			Heavy: 160
+			Spectral: 65
+			Concrete: 100
+			Knight: 45
+			LightCavalry: 35
+			MediumCavalry: 25
+			HeavyCavalry: 15
+			HeavyBuilding: 5
+		DamageTypes: Prone50Percent, TriggerProne, BurnToDeath, SkeletonDeath
+		Delay: 30
+	Warhead@6Dam: SpreadDamage
+		Spread: 50
+		ValidTargets: Ground
+		InvalidTargets: Air, Structure, Skeleton
+		Damage: 1500
+		Versus:
+			Leather: 200
+			Light: 180
+			Heavy: 160
+			Spectral: 65
+			Concrete: 100
+			Knight: 45
+			LightCavalry: 35
+			MediumCavalry: 25
+			HeavyCavalry: 15
+			HeavyBuilding: 5
+		DamageTypes: Prone50Percent, TriggerProne, BurnToDeath, SkeletonDeath
+		Delay: 36
+	Warhead@2Smu: LeaveSmudge
+		SmudgeType: Scorch
+		InvalidTargets: Vehicle, Structure, Wall
+		Delay: 6
+	Warhead@5Eff: CreateEffect
+		Explosions: burninglarge
+		ImpactSounds: flamer2.aud
+		Delay: 6
+		
+DjinElectro:
+	ReloadDelay: 55
+	Range: 5c512
+	ValidTargets: Ground
+    InvalidTargets: Air
+	Report: tesla1.aud
+	Projectile: TeslaZap
+	Warhead@1Dam: SpreadDamage
+		Spread: 42
+		Damage: 6000
+		ValidTargets: Ground
+        InvalidTargets: Air
+		Versus:
+			None: 100
+			Leather: 100
+			Light: 100
+			Heavy: 100
+			Spectral: 100
+			Concrete: 100
+			Knight: 100
+			LightCavalry: 100
+			MediumCavalry: 100
+			HeavyCavalry: 100
+			HeavyBuilding: 100
+		DamageTypes: Prone50Percent, TriggerProne, RippedApartDeath
+		
+DjinElectroAir:
+	ReloadDelay: 65
+	Range: 9c0
+	ValidTargets: Air
+	InvalidTargets: Ground
+	Report: tesla1.aud
+	Projectile: TeslaZap
+	Warhead@1Dam: SpreadDamage
+		Spread: 42
+		Damage: 10000
+		ValidTargets: Air
+		InvalidTargets: Ground
+		Versus:
+			None: 100
+			Leather: 100
+			Light: 100
+			Heavy: 100
+			Spectral: 100
+			Concrete: 100
+			Knight: 100
+			LightCavalry: 100
+			MediumCavalry: 100
+			HeavyCavalry: 100
+			HeavyBuilding: 100
+		DamageTypes: Prone50Percent, TriggerProne, RippedApartDeath
+		  
+DjinElectroGround:
+	ReloadDelay: 50
+	Range: 8c0
+	ValidTargets: Ground
+	InvalidTargets: Air
+	Report: tesla1.aud
+	Projectile: TeslaZap
+	Warhead@1Dam: SpreadDamage
+		Spread: 42
+		Damage: 10000
+		ValidTargets: Ground
+		  InvalidTargets: Air
+		Versus:
+			None: 100
+			Leather: 100
+			Light: 100
+			Heavy: 100
+			Spectral: 100
+			Concrete: 100
+			Knight: 100
+			LightCavalry: 100
+			MediumCavalry: 100
+			HeavyCavalry: 100
+			HeavyBuilding: 100
+		DamageTypes: Prone50Percent, TriggerProne, RippedApartDeath
+		
+DualSiegeBalista:
+	ReloadDelay: 85
+	Range: 11c0
+	MinRange: 2c896
+	 Burst: 2
+	BurstDelay: 0
+	ValidTargets: Ground
+	InvalidTargets: Air
+	Report: Balista01.aud
+	Projectile: Bullet
+		Speed: 400
+		Blockable: false
+		LaunchAngle: 66
+		Inaccuracy: 2c056
+		Image: siegearrow
+		Palette: ra
+	Warhead@1Dam: SpreadDamage
+		Spread: 550
+		Damage: 5500
+		ValidTargets: Ground
+		InvalidTargets: Air
+		Versus:
+			None: 100
+			Leather: 100
+			Light: 80
+			Heavy: 80
+			Concrete: 80
+			Knight: 65
+			LightCavalry: 120
+			MediumCavalry: 90
+			HeavyCavalry: 85
+			HeavyBuilding: 100
+			Spectral: 40
+		DamageTypes: Prone50Percent, TriggerProne, BallistaDeath
+	Warhead@2Eff: CreateEffect
+		Explosions: smokey
+	Warhead@2Smu: LeaveSmudge
+		SmudgeType: Scorch
+		InvalidTargets: Vehicle, Structure, Wall, Husk, Trees, Creep
+		
+SuperSiegeBallista:
+	ReloadDelay: 500
+	Range: 22c0
+	MinRange: 5c0
+	Report: Balista01.aud
+	ValidTargets: Ground
+	InvalidTargets: Air
+	Projectile: Bullet
+		HorizontalRateOfTurn: 60
+		RangeLimit: 14c204
+		Arm: 5
+		Speed: 250
+		LaunchAngle: 140
+		Inaccuracy: 3c012
+		ContrailLength: 4
+		Image: smbllbolt
+		Palette: ra
+	Warhead@1Dam: SpreadDamage
+		Spread: 512
+		Damage: 6000
+		ValidTargets: Ground
+		InvalidTargets: Air
+		Versus:
+			None: 100
+			Leather: 100
+			Light: 80
+			Heavy: 80
+			Concrete: 80
+			Knight: 65
+			LightCavalry: 120
+			MediumCavalry: 90
+			HeavyCavalry: 85
+			HeavyBuilding: 100
+			Spectral: 40
+		DamageTypes: Prone50Percent, TriggerProne, BallistaDeath
+	Warhead@2Eff: CreateEffect
+		Explosions: smokey
+		ImpactSounds: tnkfire2.aud, tnkfire3.aud, tnkfire4.aud, tnkfire6.aud
+		
+MortarBoulder:
+	ReloadDelay: 140
+	Range: 13c0
+	MinRange: 5c0
+	Report: tnkfire2.aud, tnkfire3.aud, tnkfire4.aud, tnkfire6.aud
+	ValidTargets: Ground
+	InvalidTargets: Air
+	Projectile: Bullet
+		Image: cantowboulder
+		Speed: 200
+		Blockable: false
+		LaunchAngle: 126
+		Palette: ra
+		Inaccuracy: 4c012
+	Warhead@1Dam: SpreadDamage
+		Spread: 412
+		Damage: 9500
+		ValidTargets: Ground
+		InvalidTargets: Air
+		Versus:
+			Leather: 100
+			Light: 100
+			Heavy: 100
+			Concrete: 65
+			Knight: 50
+			LightCavalry: 100
+			MediumCavalry: 80
+			HeavyCavalry: 65
+			HeavyBuilding: 75
+			Spectral: 35
+		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+	Warhead@2Smu: LeaveSmudge
+		SmudgeType: Crater
+		InvalidTargets: Vehicle, Structure, Wall, Husk, Trees, Creep
+	Warhead@3Eff: CreateEffect
+		Explosions: smokey
+		ImpactSounds: tnkfire2.aud, tnkfire3.aud, tnkfire4.aud, tnkfire6.aud
+		
+SpearBarrage:
+	ReloadDelay: 4
+	Range: 3c0
+	Burst: 2
+	BurstDelay: 3
+	MinRange: 0c0
+	ValidTargets: Ground, Air
+	InvalidTargets: Wall
+	Projectile: Bullet
+		Speed: 250
+		Blockable: false
+		LaunchAngle: 96
+		Inaccuracy: 0c175
+		Image: smbllboltdown
+		Palette: ra
+	Warhead@1Dam: SpreadDamage
+		Spread: 552
+		InvalidTargets: Wall
+		Damage: 6250
+		ValidTargets: Ground, Air
+		Versus:
+			None: 100
+			Leather: 100
+			Light: 100
+			Heavy: 100
+			Concrete: 50
+			Knight: 250
+			LightCavalry: 100
+			MediumCavalry: 100
+			HeavyCavalry: 100
+			HeavyBuilding: 150
+			Spectral: 100
+		DamageTypes: Prone50Percent, TriggerProne, RippedApartDeath
+	Warhead@2Eff: CreateEffect
+		Explosions: smokey
+		ImpactSounds: tnkfire2.aud, tnkfire3.aud, tnkfire4.aud, tnkfire6.aud
+		
+CarpetBomber:
+	ReloadDelay: 35
+	Range: 4c0
+	Report: toss1.aud
+	ValidTargets: Ground
+	InvalidTargets: Air
+	Projectile: Bullet
+		Speed: 140
+		Blockable: false
+		LaunchAngle: 82
+		Inaccuracy: 813
+		Image: sulm3grenade
+		Palette: ra
+	Warhead@1Dam: SpreadDamage
+		Spread: 375
+		Damage: 2900
+		ValidTargets: Ground
+		InvalidTargets: Air
+		Versus:
+			Leather: 200
+			Light: 170
+			Heavy: 140
+			Concrete: 65
+			Knight: 65
+			LightCavalry: 90
+			MediumCavalry: 75
+			HeavyCavalry: 55
+			HeavyBuilding: 75
+			Spectral: 75
+		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+	Warhead@2Smu: LeaveSmudge
+		SmudgeType: Scorch
+		InvalidTargets: Vehicle, Structure, Wall
+	Warhead@5Eff: CreateEffect
+		Explosions: med_napalm
+		ImpactSounds: flamer2.aud
+		
+
+SonicRaptor:
+	ReloadDelay: 45
+	Range: 7c0
+	Report: toss1.aud
+	ValidTargets: Ground, Air
+	Projectile: Bullet
+		Speed: 250
+		Blockable: false
+		LaunchAngle: 0
+		Inaccuracy: 1c512
+		Image: sulb3feathersmall
+		Palette: ra
+		ContrailLength: 5
+		ContrailWidth: 20
+		ContrailDelay: 0
+		ContrailUsePlayerColor : true
+	Warhead@1Dam: SpreadDamage
+		Spread: 256
+		Damage: 1900
+		ValidTargets: Ground, Air
+		Versus:
+			Leather: 100
+			Light: 90
+			Heavy: 80
+			Concrete: 65
+			Knight: 25
+			LightCavalry: 60
+			MediumCavalry: 50
+			HeavyCavalry: 40
+			HeavyBuilding: 75
+			Spectral: 20
+		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+	Warhead@5Eff: CreateEffect
+		ImpactSounds: Sword02.aud, Sword03.aud, Sword04.aud, Sword06.aud, Sword07.aud
+		
+SonicRaptorSoundLess:
+	ReloadDelay: 45
+	Range: 7c0
+	ValidTargets: Ground, Air
+	Projectile: Bullet
+		Speed: 250
+		Blockable: false
+		LaunchAngle: 0
+		Inaccuracy: 1c512
+		Image: sulb3feathersmall
+		Palette: ra
+		ContrailLength: 5
+		ContrailWidth: 20
+		ContrailDelay: 0
+		ContrailUsePlayerColor : true
+	Warhead@1Dam: SpreadDamage
+		Spread: 375
+		Damage: 1900
+		ValidTargets: Ground, Air
+		Versus:
+			Leather: 100
+			Light: 90
+			Heavy: 80
+			Concrete: 65
+			Knight: 25
+			LightCavalry: 60
+			MediumCavalry: 50
+			HeavyCavalry: 40
+			HeavyBuilding: 75
+			Spectral: 20
+		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+	Warhead@5Eff: CreateEffect
+		ImpactSounds: Sword02.aud, Sword03.aud, Sword04.aud, Sword06.aud, Sword07.aud
+		
+
+Snakes:
+	ReloadDelay: 85
+	Range: 5c512
+	MinRange: 0
+	InvalidTargets: Wall, Air, Structure
+	ValidTargets: Ground
+	Projectile: InstantExplode
+	Warhead@1Snakes: FireShrapnel
+		Weapon: SnakesSmall
+		InvalidTargets: Wall, Air, Structure
+		ValidTargets: Ground
+		AimChance: 100
+		AllowDirectHit: true
+		AimTargetStances: Enemy, Neutral
+		Amount: 2
+	Warhead@2Dam: SpreadDamage
+		Spread: 20
+		InvalidTargets: Wall, Air, Structure
+		ValidTargets: Ground
+		Damage: 0
+		DamageTypes: Prone50Percent, TriggerProne, PoisonDeath
+		
+SnakesSmall:
+	ReloadDelay: 85
+	Range: 7c0
+	MinRange: 0
+	InvalidTargets: Wall, Air, Structure
+	ValidTargets: Ground
+	Projectile: Missile
+		HorizontalRateOfTurn: 60
+		RangeLimit: 8c0
+		Arm: 0
+		Speed: 100
+		LaunchAngle: 46
+		Inaccuracy: 0c0
+		Image: snakemissil
+		Palette: ra
+	Warhead@1Snakes: GrantSingletonCondition
+		Range: 0c512
+		Duration: 150
+		Condition: snaketrap
+		ValidStances: Enemy, Neutral
+	Warhead@2Dam: SpreadDamage
+		Spread: 20
+		InvalidTargets: Wall, Air, Structure
+		ValidTargets: Ground
+		Damage: 500
+		Versus:
+			Leather: 100
+			Light: 100
+			Heavy: 100
+			Concrete: 100
+			Knight: 100
+			LightCavalry: 100
+			MediumCavalry: 100
+			HeavyCavalry: 100
+			HeavyBuilding: 100
+			Spectral: 50
+		DamageTypes: Prone50Percent, TriggerProne, PoisonDeath
+		
+BedouinBow:
+	ReloadDelay: 45
+	Range: 5c512
+	MinRange: 0c512
+	Report: arrow01.aud, arrow02.aud, arrow02.aud
+	InvalidTargets: Wall, Air
+	ValidTargets: Ground
+	Projectile: Missile
+		HorizontalRateOfTurn: 60
+		RangeLimit: 8c204
+		Arm: 0
+		Speed: 200
+		LaunchAngle: 46
+		Palette: ra
+	Warhead@1Dam: SpreadDamage
+		Spread: 25
+		InvalidTargets: Wall, Air
+		ValidTargets: Ground
+		Damage: 1800
+		Versus:
+			Leather: 100
+			Light: 75
+			Heavy: 55
+			Concrete: 15
+			Knight: 15
+			LightCavalry: 80
+			MediumCavalry: 35
+			HeavyCavalry: 15
+			HeavyBuilding: 45
+			Spectral: 15
+		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+		
+BedouinBowDUMMY:
+	ReloadDelay: 45
+	Range: 5c512
+	MinRange: 0c512
+	InvalidTargets: Wall, Air
+	ValidTargets: Ground
+	Projectile: Bullet
+		RangeLimit: 9c204
+		LaunchAngle: 130
+		Speed: 250
+		Inaccuracy: 0c0
+		ContrailLength: 20
+		ContrailWidth: 10
+		ContrailDelay: 0
+		ContrailUsePlayerColor : true
+		Image: e4arrow
+		Palette: ra
+	Warhead@1Dam: SpreadDamage
+		Spread: 25
+		InvalidTargets: Wall, Air
+		ValidTargets: Ground
+		Damage: 0
+		Versus:
+			Leather: 0
+			Light: 0
+			Heavy: 0
+			Concrete: 0
+			Knight: 0
+			LightCavalry: 0
+			MediumCavalry: 0
+			HeavyCavalry: 0
+			HeavyBuilding: 0
+			Spectral: 0
+		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+		
+BedouinBowAir:
+	ReloadDelay: 45
+	Range: 7c0
+	MinRange: 0c0
+	Report: arrow01.aud, arrow02.aud, arrow02.aud
+	InvalidTargets: Wall, Ground
+	ValidTargets: Air
+	Projectile: Missile
+		HorizontalRateOfTurn: 60
+		RangeLimit: 8c204
+		Arm: 0
+		Speed: 350
+		LaunchAngle: 46
+		Inaccuracy: 0c0
+		ContrailLength: 20
+		ContrailWidth: 10
+		ContrailDelay: 0
+		ContrailUsePlayerColor : true
+		Image: e4arrow
+		Palette: ra
+	Warhead@1Dam: SpreadDamage
+		Spread: 141
+		InvalidTargets: Wall, Ground
+		ValidTargets: Air
+		Damage: 2500
+		Versus:
+			Leather: 100
+			Light: 100
+			Heavy: 90
+			Concrete: 15
+			Knight: 15
+			LightCavalry: 80
+			MediumCavalry: 55
+			HeavyCavalry: 35
+			HeavyBuilding: 45
+		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+		
+BedouinBowTowerUnblock:
+	ReloadDelay: 25
+	Range: 8c0
+	MinRange: 0c0
+	Report: arrow01.aud, arrow02.aud, arrow02.aud
+	InvalidTargets: Wall
+	ValidTargets: Ground, Air
+	Projectile: Missile
+		HorizontalRateOfTurn: 60
+		RangeLimit: 10c204
+		Arm: 0
+		Blockable: false
+		Speed: 200
+		LaunchAngle: 46
+		Inaccuracy: 0c0
+	Warhead@1Dam: SpreadDamage
+		Spread: 302
+		Damage: 1000
+		ValidTargets: Ground, Air
+		InvalidTargets: Wall
+		Versus:
+			Leather: 150
+			Light: 135
+			Heavy: 125
+			Concrete: 40
+			Knight: 50
+			LightCavalry: 95
+			MediumCavalry: 30
+			HeavyCavalry: 20
+			HeavyBuilding: 40
+			Spectral: 15
+		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath  
+		
+BedouinBowTowerUnblockDUMMY:
+	ReloadDelay: 25
+	Range: 8c0
+	MinRange: 0c512
+	InvalidTargets: Wall, Air
+	ValidTargets: Ground
+	Projectile: Bullet
+		RangeLimit: 9c204
+		LaunchAngle: 130
+		Blockable: false
+		Speed: 250
+		Inaccuracy: 0c0
+		ContrailLength: 20
+		ContrailWidth: 10
+		ContrailDelay: 0
+		ContrailUsePlayerColor : true
+		Image: e4arrow
+		Palette: ra
+	Warhead@1Dam: SpreadDamage
+		Spread: 25
+		InvalidTargets: Wall, Air
+		ValidTargets: Ground
+		Damage: 0
+		Versus:
+			Leather: 0
+			Light: 0
+			Heavy: 0
+			Concrete: 0
+			Knight: 0
+			LightCavalry: 0
+			MediumCavalry: 0
+			HeavyCavalry: 0
+			HeavyBuilding: 0
+			Spectral: 0
+		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath 
+		
+TowerPike:
+	ReloadDelay: 40
+	Range: 2c512
+	ValidTargets: Ground, Trees
+	InvalidTargets: Air
+	Projectile: Bullet
+		Speed: 1c382
+	Warhead@1Dam: SpreadDamage
+		Spread: 15
+		Damage: 3000
+		ValidTargets: Ground, Trees
+		InvalidTargets: Air
+		Versus:
+			Leather: 50
+			Light: 50
+			Heavy: 75
+			Concrete: 85
+			HeavyBuilding: 100
+			Knight: 50
+			LightCavalry: 135
+			MediumCavalry: 125
+			HeavyCavalry: 120
+			Spectral: 15
+		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+		
+SulGTSpearThrow:
+	ReloadDelay: 50
+	Range: 8c0
+	MinRange: 0c0
+	Burst: 2
+	BurstDelay: 10
+	Report: throw01.aud
+	ValidTargets: Ground
+	InvalidTargets: Air
+	Projectile: Missile
+		HorizontalRateOfTurn: 60
+		RangeLimit: 10c204
+		Arm: 0
+		Speed: 200
+		LaunchAngle: 46
+		Inaccuracy: 0c0
+		ContrailLength: 10
+		ContrailWidth: 15
+		ContrailDelay: 0
+		ContrailUsePlayerColor : true
+		Image: spear
+		Palette: ra
+	Warhead@1Dam: SpreadDamage
+		Spread: 141
+		Damage: 2500
+		ValidTargets: Ground
+		InvalidTargets: Air
+		Versus:
+			Leather: 25
+			Light: 25
+			Heavy: 25
+			Knight: 25
+			Concrete: 75
+			LightCavalry: 100
+			MediumCavalry: 100
+			HeavyCavalry: 100
+			HeavyBuilding: 100
+			Spectral: 15
+		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath	 
+
+SulGTSpearThrowAir:
+	ReloadDelay: 50
+	Range: 10c0
+	MinRange: 0c0
+	Burst: 2
+	BurstDelay: 10
+	Report: throw01.aud
+	ValidTargets: Air
+	InvalidTargets: Ground
+	Projectile: Missile
+		HorizontalRateOfTurn: 60
+		RangeLimit: 13c204
+		Arm: 0
+		Speed: 300
+		LaunchAngle: 46
+		Inaccuracy: 0c0
+		ContrailLength: 10
+		ContrailWidth: 15
+		ContrailDelay: 0
+		ContrailUsePlayerColor : true
+		Image: spear
+		Palette: ra
+	Warhead@1Dam: SpreadDamage
+		Spread: 141
+		Damage: 3100
+		ValidTargets: Air
+		InvalidTargets: Ground
+		Versus:
+			Leather: 100
+			Light: 100
+			Heavy: 100
+			Knight: 100
+			Concrete: 100
+			LightCavalry: 100
+			MediumCavalry: 100
+			HeavyCavalry: 100
+			HeavyBuilding: 100
+		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath 
