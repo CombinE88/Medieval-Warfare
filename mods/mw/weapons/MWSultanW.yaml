@@ -654,14 +654,14 @@ SnakesSmall:
 		
 BedouinBow:
 	ReloadDelay: 45
-	Range: 5c512
+	Range: 7c0
 	MinRange: 0c512
 	Report: arrow01.aud, arrow02.aud, arrow02.aud
 	InvalidTargets: Wall, Air
 	ValidTargets: Ground
 	Projectile: Missile
 		HorizontalRateOfTurn: 60
-		RangeLimit: 8c204
+		RangeLimit: 10c204
 		Arm: 0
 		Speed: 200
 		LaunchAngle: 46
@@ -686,7 +686,7 @@ BedouinBow:
 		
 BedouinBowDUMMY:
 	ReloadDelay: 45
-	Range: 5c512
+	Range: 7c0
 	MinRange: 0c512
 	InvalidTargets: Wall, Air
 	ValidTargets: Ground
@@ -721,14 +721,14 @@ BedouinBowDUMMY:
 		
 BedouinBowAir:
 	ReloadDelay: 45
-	Range: 7c0
+	Range: 8c0
 	MinRange: 0c0
 	Report: arrow01.aud, arrow02.aud, arrow02.aud
 	InvalidTargets: Wall, Ground
 	ValidTargets: Air
 	Projectile: Missile
 		HorizontalRateOfTurn: 60
-		RangeLimit: 8c204
+		RangeLimit: 10c204
 		Arm: 0
 		Speed: 350
 		LaunchAngle: 46

@@ -124,7 +124,8 @@
 		Type: Rectangle
 			TopLeft: -1536, -1536
 			BottomRight: 1536, 1536   
-            
+
+  
 ^AutoTargetGround:
 	AutoTarget:
 		AttackAnythingCondition: stance-attackanything
@@ -132,10 +133,17 @@
 		RequiresCondition: !stance-attackanything
 		ValidTargets: Infantry, Vehicle, Creep, Water, Defense, Cavalry, Siegeengine
 		InvalidTargets: NoAutoTarget, Wall
+        Priority: 2
 	AutoTargetPriority@ATTACKANYTHING:
 		RequiresCondition: stance-attackanything
 		ValidTargets: Infantry, Cavalry, Creep, Water, Structure, Defense, Cavalry, Siegeengine
 		InvalidTargets: NoAutoTarget, Wall
+        Priority: 2
+	AutoTargetPriority@PEASANTS:
+		RequiresCondition: stance-attackanything
+		ValidTargets: Peasant
+		InvalidTargets: NoAutoTarget, Wall
+        Priority: 1
 
 ^AutoTargetAir:
 	AutoTarget:
@@ -150,10 +158,17 @@
 		RequiresCondition: !stance-attackanything
 		ValidTargets: Infantry, Creep, Water, Air, Defense, Cavalry, Siegeengine
 		InvalidTargets: NoAutoTarget, Wall
+        Priority: 2
 	AutoTargetPriority@ATTACKANYTHING:
 		RequiresCondition: stance-attackanything
 		ValidTargets: Infantry, Creep, Water, Air, Structure, Defense, Cavalry, Siegeengine
 		InvalidTargets: NoAutoTarget, Wall
+        Priority: 2
+	AutoTargetPriority@PEASANTS:
+		RequiresCondition: stance-attackanything
+		ValidTargets: Peasant
+		InvalidTargets: NoAutoTarget, Wall
+        Priority: 1
         
 ^AutoTargetTalking:
 	AutoTarget:
@@ -1914,7 +1929,7 @@
 		Range: 2c0
 	-Selectable:
 	Targetable:
-		TargetTypes: Ground, Infantry, NoAutoTarget
+		TargetTypes: Ground, Infantry, Peasant
 	Crushable:
 		CrushSound: squish2.aud
 	WithDeathAnimation:

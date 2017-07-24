@@ -35,42 +35,40 @@ GTWNEW:
 	WithBuildingBib:
 		HasMinibib: Yes
 	WithIdleOverlay:
-	Armament@1:
-		Weapon: bownarrowtower
-		LocalOffset: 0,0,427
-		Turret: primary
-	Armament@2:
-		Weapon: bownarrowtower
-		LocalOffset: 0,0,427
-		Turret: secondary
-		FireDelay: 12
-	Armament@1DUMMY:
-		Weapon: BowNArrowTowerDUMMY
-		LocalOffset: 0,0,427
-		Turret: primary
-	Armament@2DUMMY:
-		Weapon: BowNArrowTowerDUMMY
-		LocalOffset: 0,0,427
-		Turret: secondary
-		FireDelay: 12
 	AttackTurreted:
 	BodyOrientation:
 		QuantizedFacings: 8
 	DetectCloaked:
 		Range: 3c0
-	WithSpriteTurret@1: 
-		Sequence: turretidle
-		AimSequence: turretanim
+	Armament@ARMONE:
+		Weapon: bownarrowtower
+		LocalOffset: 0,0,427
 		Turret: primary
-	WithSpriteTurret@2: 
+	Armament@ONEDUMMY:
+		Weapon: BowNArrowTowerDUMMY
+		LocalOffset: 0,0,427
+		Turret: primary
+	WithSpriteTurret@SPRITURRONE: 
 		Sequence: turretidle
-		AimSequence: turretanim
-		Turret: secondary
-	Turreted@1:
+        AimSequence: turretanim
+		Turret: primary
+	Turreted@TURRONE:
 		Turret: primary
 		TurnSpeed: 100
 		Offset: -170,-170,500
-	Turreted@2:
+	Armament@ARMTWO:
+		Weapon: bownarrowtower
+		LocalOffset: 0,0,427
+		Turret: secondary
+	Armament@TWODUMMY:
+		Weapon: BowNArrowTowerDUMMY
+		LocalOffset: 0,0,427
+		Turret: secondary
+	WithSpriteTurret@SPRITURRTWO: 
+		Sequence: turretidle
+        AimSequence: turretanim
+		Turret: secondary
+	Turreted@TURRTWO:
 		Turret: secondary
 		TurnSpeed: 100
 		Offset: 170,170,500

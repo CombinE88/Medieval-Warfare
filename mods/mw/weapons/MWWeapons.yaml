@@ -702,9 +702,9 @@ paladingun:
 			Spectral: 70
 			HeavyBuilding: 50
 			Knight: 40
-			LightCavalry: 100
-			MediumCavalry: 75
-			HeavyCavalry: 50
+			LightCavalry: 75
+			MediumCavalry: 55
+			HeavyCavalry: 35
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath	 
         
 paladingunvisual:
@@ -3101,7 +3101,7 @@ BowNArrowHunter:
 	ValidTargets: Wildlife
 	Projectile: Missile
 		HorizontalRateOfTurn: 60
-		RangeLimit: 8c204
+		RangeLimit: 9c204
 		Arm: 0
 		Speed: 250
 		LaunchAngle: 46

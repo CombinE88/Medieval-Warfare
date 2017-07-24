@@ -34,13 +34,12 @@ namespace OpenRA.Mods.Mw.Traits
 		public override object Create(ActorInitializer init) { return new WithActorProduction(init, this); }
 	}
 
-	class WithActorProduction : Production, ITick
+	class WithActorProduction : Production
 	{
 		readonly WithActorProductionInfo info;
 		public HashSet<Actor> InUse = new HashSet<Actor>();
 		private int Ticker;
 		private bool Tickenabler = false;
-		private int totalTicks;
 		
 		public WithActorProduction(ActorInitializer init, WithActorProductionInfo info)
 			: base(init, info)
@@ -141,17 +140,6 @@ namespace OpenRA.Mods.Mw.Traits
 
 			return null;
 		}
-		
-		public WPos Position(Actor actor)
-		{
-			return actor.CenterPosition;
-		}
-		
-		public void Tick(Actor self)
-		{
-			if(++totalTicks == 1234) {}
-		}
-
 
 		public bool StillValid(Actor actor, Actor self)
 		{
@@ -179,7 +167,7 @@ namespace OpenRA.Mods.Mw.Traits
 		public override bool Produce(Actor self, ActorInfo producee, string factionVariant)
 		{
 			
-			var devMode = self.World.LocalPlayer.PlayerActor.TraitOrDefault<DeveloperMode>();
+			var devMode = self.Owner.PlayerActor.TraitOrDefault<DeveloperMode>();
 			if (devMode != null && devMode.FastBuild)
 			{
 				

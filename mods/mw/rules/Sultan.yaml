@@ -176,25 +176,33 @@ SULGTW:
 	Armament@static1:
 		Weapon: SulGTSpearThrow
 		LocalOffset: 0,0,427
-		Turret: primary
+		Turret: primary1
 		RequiresCondition: static && Construct >= 30
 	Armament@static2:
 		Weapon: SulGTSpearThrow
 		LocalOffset: 0,0,427
-		Turret: secondary
+		Turret: secondary1
 		FireDelay: 25
 		RequiresCondition: static && Construct >= 30
 	Armament@static1AIR:
 		Weapon: SulGTSpearThrowAir
 		LocalOffset: 0,0,427
-		Turret: primary
+		Turret: primary1
 		RequiresCondition: static && Construct >= 30
 	Armament@static2AIR:
 		Weapon: SulGTSpearThrowAir
 		LocalOffset: 0,0,427
-		Turret: secondary
+		Turret: secondary1
 		FireDelay: 25
 		RequiresCondition: static && Construct >= 30
+	Turreted@1a:
+		Turret: primary1
+		TurnSpeed: 100
+		Offset: -170,-170,500
+	Turreted@2a:
+		Turret: secondary1
+		TurnSpeed: 100
+		Offset: 170,170,500
 	DamageMultiplier@static:
 		RequiresCondition: static && Construct >= 30
 		Modifier: 70   
@@ -1273,6 +1281,13 @@ SULMILL:
 		RespawnTime: 750
 		FindRadius: 100
 	WithFreeSpawnableActor@3:
+		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
+		SpawnActor: sule6
+		Offset: -512,1877, 0
+		MoveOffset: 0,2
+		RespawnTime: 750
+		FindRadius: 100
+	WithFreeSpawnableActor@4:
 		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 		SpawnActor: sule6
 		Offset: -512,1877, 0

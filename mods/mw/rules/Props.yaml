@@ -240,10 +240,6 @@ WARKITEMAN.Husk:
 		Spins: True
 		Moves: False
 		Explosion: GroundHit
-	ProximityExternalCondition@Prime:
-		Range: 1c0
-		ValidStances: Ally, Neutral
-		Condition: DragonPrime
 	
 WARKITEKITE.Husk:
 	Inherits@1: ^SpriteActor
@@ -331,22 +327,22 @@ DRAGON.Husk:
 		Spins: True
 		Moves: False
 		Explosion: DragonDecay
-	ExternalCondition@Prime:
-		Condition: DragonPrime
-	KillsSelf@1:
-		RemoveInstead: true
-		RequiresCondition: DragonPrime
 	KillsSelf@2:
 		Delay: 25
+	GrantRandomCondition:
+		RandomConditions: valida, validb, validc, validd, valide
+        FallbackCondition: valida
 	SpawnActorOnDeath@Dragon:
 		Actor: DRAGONWALK
 		Probability: 100
 		OwnerType: InternalName
+        FallbackCondition: valida
 		InternalOwner: Creeps
 	SpawnActorOnDeath@chance:
 		Actor: DRAGONDEADPLACEHOLDER
-		Probability: 75
+		Probability: 100
 		OwnerType: InternalName
+        FallbackCondition: validb || validc || validd || valide
 		InternalOwner: Creeps
 	
 DRGNEMPTY:
@@ -375,9 +371,6 @@ DRGNEMPTY:
 		Weapon: DragonFlame
 		EmptyWeapon: DragonFlame
 	FlyAwayOnIdle:
-	FreeActor@Falling:
-		Actor: WARKITEMAN.Husk
-		Facing: 64
 		
 DAVINCI.Husk:
 	Inherits: ^HelicopterHusk
