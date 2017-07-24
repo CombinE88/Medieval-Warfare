@@ -1028,14 +1028,9 @@ BowNArrowDebuff:
 	Range: 6c0
 	MinRange: 0c512
 	InvalidTargets: Wall, Air
-	ValidTargets: Ground
-	Projectile: Missile
-		HorizontalRateOfTurn: 60
-		RangeLimit: 8c204
-		Arm: 0
-		Speed: 40
-		LaunchAngle: 46
-		Palette: ra
+	ValidTargets: Cavalry, Infantry
+	Projectile: Bullet
+		Speed: 1c682
 	Warhead@1Dam: SpreadDamage
 		Spread: 25
 		InvalidTargets: Wall, Air
@@ -1058,6 +1053,8 @@ BowNArrowDebuff:
 		Duration: 10
 		Condition: archerprone
 		ValidStances: Enemy, Neutral, Ally
+		InvalidTargets: Wall, Air
+		ValidTargets: Ground
 		
 BowNArrow:
 	ReloadDelay: 45

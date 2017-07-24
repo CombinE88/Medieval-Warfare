@@ -1602,31 +1602,29 @@ SULE3:
 	Armament:
 		Weapon: BedouinBow
 		LocalOffset: 341,20,356
+        Name: Primary
 	Armament@DUMMY:
 		Weapon: BedouinBowDUMMY
 		LocalOffset: 341,20,356
+        Name: Primary
 	Armament@Air:
 		Weapon: BedouinBowAir
 		LocalOffset: 341,20,356
-	Armament@GARRISONED:
-		Name: garrisoned
-		Weapon: BedouinBowTowerUnblock
-	Armament@GARRISONEDDUMMY:
-		Name: garrisoned
-		Weapon: BedouinBowTowerUnblockDUMMY
+        Name: Primary
 	Armament@Debuffapply:
 		Weapon: BedouinBowNArrowDebuff
 		LocalOffset: 341,20,356
-        Name: secondary
+        Name: Secondary
 	AttackFrontal:
+        Armaments: Primary, Secondary
+	WithInfantryBody:
+ 		AttackSequences:
+			Primary: shoot
 	AutoTarget:
 		ScanRadius: 5
 		InitialStance: AttackAnything
 	RenderSprites:
 		PlayerPalette: raplayer
-	WithInfantryBody:
- 		AttackSequences:
-			primary: shoot
 	Armor:
 		Type: Leather
 	DetectCloaked:

@@ -558,16 +558,24 @@ E4NEW:
 	Armament:
 		Weapon: bownarrow
 		LocalOffset: 341,20,356
+        Name: Primary
 	Armament@DUMMY:
 		Weapon: BowNArrowDUMMY
 		LocalOffset: 341,20,356
+        Name: Primary
 	Armament@Air:
 		Weapon: bownarrowair
 		LocalOffset: 341,20,356
+        Name: Primary
 	Armament@Debuffapply:
 		Weapon: BowNArrowDebuff
 		LocalOffset: 341,20,356
-        Name: secondary
+        Name: Secondary
+	AttackFrontal:
+        Armaments: Primary, Secondary
+	WithInfantryBody:
+ 		AttackSequences:
+			Primary: shoot    
 	AttackFrontal:
 	AutoTarget:
 		ScanRadius: 5
@@ -577,7 +585,7 @@ E4NEW:
 		PlayerPalette: raplayer
 	WithInfantryBody:
  		AttackSequences:
-			primary: shoot
+			Primary: shoot
 	Armor:
 		Type: Leather
 	DetectCloaked:
@@ -614,16 +622,24 @@ E4NEWV2:
 	Armament:
 		Weapon: bownarrow
 		LocalOffset: 341,20,356
-	Armament@Air:
-		Weapon: bownarrowair
-		LocalOffset: 341,20,356
+        Name: Primary
 	Armament@DUMMY:
 		Weapon: BowNArrowDUMMY
 		LocalOffset: 341,20,356
+        Name: Primary
+	Armament@Air:
+		Weapon: bownarrowair
+		LocalOffset: 341,20,356
+        Name: Primary
 	Armament@Debuffapply:
 		Weapon: BowNArrowDebuff
 		LocalOffset: 341,20,356
-        Name: secondary
+        Name: Secondary
+	AttackFrontal:
+        Armaments: Primary, Secondary
+	WithInfantryBody:
+ 		AttackSequences:
+			Primary: shoot
 	AttackFrontal:
 	AutoTarget:
 		ScanRadius: 5
@@ -631,9 +647,6 @@ E4NEWV2:
 	RenderSprites:
 		Image: e4newv2
 		PlayerPalette: raplayer
-	WithInfantryBody:
- 		AttackSequences:
-			primary: shoot
 	Armor:
 		Type: Leather
 	DetectCloaked:
