@@ -1614,6 +1614,10 @@ SULE3:
 	Armament@GARRISONEDDUMMY:
 		Name: garrisoned
 		Weapon: BedouinBowTowerUnblockDUMMY
+	Armament@Debuffapply:
+		Weapon: BedouinBowNArrowDebuff
+		LocalOffset: 341,20,356
+        Name: secondary
 	AttackFrontal:
 	AutoTarget:
 		ScanRadius: 5
@@ -1621,7 +1625,8 @@ SULE3:
 	RenderSprites:
 		PlayerPalette: raplayer
 	WithInfantryBody:
-		DefaultAttackSequence: shoot
+ 		AttackSequences:
+			primary: shoot
 	Armor:
 		Type: Leather
 	DetectCloaked:
@@ -1669,7 +1674,7 @@ SULE4:
 		Type: Heavy
 	-Crushable:
 	SelfHealing@HealsConst:
-		Step: 900
+		PercentageStep: 3
 		HealIfBelow: 100
 		Delay: 25
 		DamageCooldown: 100

@@ -651,6 +651,42 @@ SnakesSmall:
 			HeavyBuilding: 100
 			Spectral: 50
 		DamageTypes: Prone50Percent, TriggerProne, PoisonDeath
+        
+BedouinBowNArrowDebuff:
+	ReloadDelay: 10
+	Range: 7c0
+	MinRange: 0c512
+	InvalidTargets: Wall, Air
+	ValidTargets: Ground
+	Projectile: Missile
+		HorizontalRateOfTurn: 60
+		RangeLimit: 8c204
+		Arm: 0
+		Speed: 40
+		LaunchAngle: 46
+		Palette: ra
+	Warhead@1Dam: SpreadDamage
+		Spread: 25
+		InvalidTargets: Wall, Air
+		ValidTargets: Ground
+		Damage: 0
+		Versus:
+			Leather: 0
+			Light: 0
+			Heavy: 0
+			Concrete: 0
+			Knight: 0
+			LightCavalry: 0
+			MediumCavalry: 0
+			HeavyCavalry: 0
+			HeavyBuilding: 0
+			Spectral: 0
+		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+	Warhead@rotten: GrantSingletonCondition
+		Range: 0c512
+		Duration: 10
+		Condition: archerprone
+		ValidStances: Enemy, Neutral, Ally
 		
 BedouinBow:
 	ReloadDelay: 45
@@ -678,9 +714,9 @@ BedouinBow:
 			Concrete: 15
 			Knight: 15
 			LightCavalry: 80
-			MediumCavalry: 35
-			HeavyCavalry: 15
-			HeavyBuilding: 45
+			MediumCavalry: 40
+			HeavyCavalry: 25
+			HeavyBuilding: 35
 			Spectral: 15
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
 		

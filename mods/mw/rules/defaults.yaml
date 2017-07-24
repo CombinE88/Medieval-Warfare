@@ -131,12 +131,12 @@
 		AttackAnythingCondition: stance-attackanything
 	AutoTargetPriority@DEFAULT:
 		RequiresCondition: !stance-attackanything
-		ValidTargets: Infantry, Vehicle, Creep, Water, Defense, Cavalry, Siegeengine
+		ValidTargets: Infantry, Vehicle, Creep, Water, Defense, Cavalry, Siege
 		InvalidTargets: NoAutoTarget, Wall
         Priority: 2
 	AutoTargetPriority@ATTACKANYTHING:
 		RequiresCondition: stance-attackanything
-		ValidTargets: Infantry, Cavalry, Creep, Water, Structure, Defense, Cavalry, Siegeengine
+		ValidTargets: Infantry, Cavalry, Creep, Water, Structure, Defense, Cavalry, Siege
 		InvalidTargets: NoAutoTarget, Wall
         Priority: 2
 	AutoTargetPriority@PEASANTS:
@@ -156,12 +156,12 @@
 		AttackAnythingCondition: stance-attackanything
 	AutoTargetPriority@DEFAULT:
 		RequiresCondition: !stance-attackanything
-		ValidTargets: Infantry, Creep, Water, Air, Defense, Cavalry, Siegeengine
+		ValidTargets: Infantry, Creep, Water, Air, Defense, Cavalry, Siege
 		InvalidTargets: NoAutoTarget, Wall
         Priority: 2
 	AutoTargetPriority@ATTACKANYTHING:
 		RequiresCondition: stance-attackanything
-		ValidTargets: Infantry, Creep, Water, Air, Structure, Defense, Cavalry, Siegeengine
+		ValidTargets: Infantry, Creep, Water, Air, Structure, Defense, Cavalry, Siege
 		InvalidTargets: NoAutoTarget, Wall
         Priority: 2
 	AutoTargetPriority@PEASANTS:
@@ -1463,6 +1463,11 @@
 			Radius: 128
 	EditorTilesetFilter:
 		Categories: Infantry
+	ExternalCondition@PRONE:
+		Condition: archerprone
+	SpeedMultiplier@PRONE:
+		Modifier: 75
+		RequiresCondition: archerprone
 		
 ^Cavalry:
 	Inherits: ^MedievalInfantry
@@ -1596,13 +1601,18 @@
 	HitShape:
 	EditorTilesetFilter:
 		Categories: Cavalry
+	ExternalCondition@PRONE:
+		Condition: archerprone
+	SpeedMultiplier@PRONE:
+		Modifier: 90
+		RequiresCondition: archerprone
 		
 ^Siege:
 	Inherits: ^MedievalInfantry
 	Mobile:
 		SharesCell: false
 	Targetable:
-		TargetTypes: Ground, Siege, Disguise, Siegeengine
+		TargetTypes: Ground, Siege, Disguise
 	MustBeDestroyed:
 	Tooltip:
 		GenericName: Cavalry

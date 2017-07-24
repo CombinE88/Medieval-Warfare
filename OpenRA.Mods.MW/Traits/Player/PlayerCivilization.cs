@@ -220,29 +220,26 @@ namespace OpenRA.Traits
 
 			if (basecheck <= 0)
 			{
-
-				
-				
 				if (FreePopulation > 0)
 					spawnapeasant(world);
 
 				nextchecktick = info.Delay * 25;
-				nextchecktick += Peasantpopulationvar;
-				nextchecktick += WorkerPopulationvar;
 				var spawn2 = 0;
 				if (info.SpecialModifier.Any())
 					foreach (var var in info.SpecialModifier)
 					{
 						if (player.Faction.InternalName == var.Key)
 						{
-							spawn2 = MaxLivingspacevar * var.Value;
+							spawn2 = FreePopulation * var.Value;
 						}
 					}
 				 
-				nextchecktick -= (MaxLivingspacevar*info.SpawnModifier)+spawn2;
+				nextchecktick -= FreePopulation*info.SpawnModifier;
+				nextchecktick -= spawn2;
+				
 				basecheck = nextchecktick/HasTownHalls(world);
-				if (nextchecktick<10)
-					basecheck = 10;
+				if (nextchecktick<25)
+					basecheck = 25;
 			}
 		}
 	}

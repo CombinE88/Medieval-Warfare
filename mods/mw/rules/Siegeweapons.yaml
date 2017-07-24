@@ -229,7 +229,7 @@ SIEGE3:
 		SharesCell: false
 		TurnSpeed: 3
 	Health:
-		HP: 30000
+		HP: 47000
 		Shape: Rectangle
 			TopLeft: -512, -512
 			BottomRight: 512, 512

@@ -52,6 +52,8 @@ namespace OpenRA.Mods.Mw.Traits
 			var possibles = self.World.ActorsHavingTrait<WithActorProduction>()
 				.Where(a =>
 				{
+					if (a.Owner != self.Owner)
+						return false;
 					return true;
 				});
 
@@ -76,6 +78,8 @@ namespace OpenRA.Mods.Mw.Traits
 			var possibles = self.World.ActorsHavingTrait<WithFreeSpawnableActor>()
 				.Where(a =>
 				{
+					if (a.Owner != self.Owner)
+						return false;
 					return true;
 				});
 

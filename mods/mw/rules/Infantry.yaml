@@ -564,12 +564,10 @@ E4NEW:
 	Armament@Air:
 		Weapon: bownarrowair
 		LocalOffset: 341,20,356
-	Armament@GARRISONED:
-		Name: garrisoned
-		Weapon: BowNArrowTowerUnblock
-	Armament@GARRISONEDDUMMY:
-		Name: garrisoned
-		Weapon: BowNArrowTowerUnblockDUMMY
+	Armament@Debuffapply:
+		Weapon: BowNArrowDebuff
+		LocalOffset: 341,20,356
+        Name: secondary
 	AttackFrontal:
 	AutoTarget:
 		ScanRadius: 5
@@ -578,7 +576,8 @@ E4NEW:
 		Image: e4new
 		PlayerPalette: raplayer
 	WithInfantryBody:
-		DefaultAttackSequence: shoot
+ 		AttackSequences:
+			primary: shoot
 	Armor:
 		Type: Leather
 	DetectCloaked:
@@ -621,12 +620,10 @@ E4NEWV2:
 	Armament@DUMMY:
 		Weapon: BowNArrowDUMMY
 		LocalOffset: 341,20,356
-	Armament@GARRISONED:
-		Name: garrisoned
-		Weapon: BowNArrowTowerUnblock
-	Armament@GARRISONEDDUMMY:
-		Name: garrisoned
-		Weapon: BowNArrowTowerUnblockDUMMY
+	Armament@Debuffapply:
+		Weapon: BowNArrowDebuff
+		LocalOffset: 341,20,356
+        Name: secondary
 	AttackFrontal:
 	AutoTarget:
 		ScanRadius: 5
@@ -635,7 +632,8 @@ E4NEWV2:
 		Image: e4newv2
 		PlayerPalette: raplayer
 	WithInfantryBody:
-		DefaultAttackSequence: shoot
+ 		AttackSequences:
+			primary: shoot
 	Armor:
 		Type: Leather
 	DetectCloaked:

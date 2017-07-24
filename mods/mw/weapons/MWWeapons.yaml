@@ -1022,6 +1022,42 @@ SetFire:
 	Warhead@4Eff: CreateEffect
 		Explosions: fire4
 		Delay: 39
+
+BowNArrowDebuff:
+	ReloadDelay: 10
+	Range: 6c0
+	MinRange: 0c512
+	InvalidTargets: Wall, Air
+	ValidTargets: Ground
+	Projectile: Missile
+		HorizontalRateOfTurn: 60
+		RangeLimit: 8c204
+		Arm: 0
+		Speed: 40
+		LaunchAngle: 46
+		Palette: ra
+	Warhead@1Dam: SpreadDamage
+		Spread: 25
+		InvalidTargets: Wall, Air
+		ValidTargets: Ground
+		Damage: 0
+		Versus:
+			Leather: 0
+			Light: 0
+			Heavy: 0
+			Concrete: 0
+			Knight: 0
+			LightCavalry: 0
+			MediumCavalry: 0
+			HeavyCavalry: 0
+			HeavyBuilding: 0
+			Spectral: 0
+		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+	Warhead@rotten: GrantSingletonCondition
+		Range: 0c512
+		Duration: 10
+		Condition: archerprone
+		ValidStances: Enemy, Neutral, Ally
 		
 BowNArrow:
 	ReloadDelay: 45
@@ -1049,9 +1085,9 @@ BowNArrow:
 			Concrete: 15
 			Knight: 15
 			LightCavalry: 80
-			MediumCavalry: 35
-			HeavyCavalry: 15
-			HeavyBuilding: 45
+			MediumCavalry: 40
+			HeavyCavalry: 25
+			HeavyBuilding: 35
 			Spectral: 15
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
 
@@ -1465,7 +1501,7 @@ Mace:
  
 LongBowNArrow:
 	ReloadDelay: 100
-	Range: 6c512
+	Range: 8c512
 	MinRange: 0c512
 	Burst: 4
 	BurstDelay: 0
@@ -1553,7 +1589,7 @@ LongBowNArrow:
 		
 LongBowNArrowAir:
 	ReloadDelay: 50
-	Range: 6c512
+	Range: 8c512
 	MinRange: 0c512
 	Burst: 4
 	BurstDelay: 4
@@ -1575,7 +1611,7 @@ LongBowNArrowAir:
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
 		Spread: 110
-		Damage: 1000
+		Damage: 1500
 		ValidTargets: Air
 		InvalidTargets: Ground
 		Versus:
@@ -2107,7 +2143,7 @@ StationBalistaAA:
 		
 SamBallista:
 	ReloadDelay: 25
-	Range: 8c0
+	Range: 10c0
 	MinRange: 0c896
 	Report: Balista01.aud
 	ValidTargets: Air
