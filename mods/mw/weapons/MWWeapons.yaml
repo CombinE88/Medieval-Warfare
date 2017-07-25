@@ -1595,9 +1595,9 @@ LongBowNArrowAir:
 	Report: arrow01.aud, arrow02.aud, arrow02.aud
 	Projectile: Missile
 		HorizontalRateOfTurn: 60
-		RangeLimit: 7c204
+		RangeLimit: 12c204
 		Arm: 0
-		Speed: 350
+		Speed: 425
 		LaunchAngle: 46
 		Inaccuracy: 0c0
 		ContrailLength: 20
@@ -1608,7 +1608,7 @@ LongBowNArrowAir:
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
 		Spread: 110
-		Damage: 1500
+		Damage: 2000
 		ValidTargets: Air
 		InvalidTargets: Ground
 		Versus:
@@ -2185,7 +2185,18 @@ Battering:
 		Speed: 1c682
 	Warhead@1Dam: SpreadDamage
 		Spread: 213
-		Damage: 10000
+		Damage: 12000
+		Versus:
+			None: 100
+			Leather: 100
+			Light: 100
+			Heavy: 100
+			Concrete: 100
+			Knight: 100
+			LightCavalry: 100
+			MediumCavalry: 100
+			HeavyCavalry: 100
+			HeavyBuilding: 200
 		ValidTargets: Structure, Wall
 
 KingCrossbow:
@@ -2436,8 +2447,8 @@ BallonCrossbow:
 			Heavy: 90
 			Knight: 25
 			LightCavalry: 75
-			MediumCavalry: 25
-			HeavyCavalry: 25
+			MediumCavalry: 55
+			HeavyCavalry: 40
 			HeavyBuilding: 75
 			Concrete: 50   
 			Spectral: 20

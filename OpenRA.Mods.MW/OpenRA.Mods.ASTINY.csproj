@@ -75,8 +75,16 @@
     <Compile Include="Activities\FallDown.cs" />
     <Compile Include="Projectiles\AthenaProjectile.cs" />
     <Compile Include="Projectiles\InstantExplode.cs" />
+    <Compile Include="Traits\Activites\DockUtils.cs" />
+    <Compile Include="Traits\Activites\Prey.cs" />
+    <Compile Include="Traits\Activites\PreyActiviy.cs" />
     <Compile Include="Traits\AmmoPoolConditions.cs" />
+    <Compile Include="Traits\ArmyOfTheDeath\Acolytprey.cs" />
+    <Compile Include="Traits\ArmyOfTheDeath\ActivityInterfaces.cs" />
     <Compile Include="Traits\ArmyOfTheDeath\AttackedByDead.cs" />
+    <Compile Include="Traits\ArmyOfTheDeath\Dock.cs" />
+    <Compile Include="Traits\ArmyOfTheDeath\DockClient.cs" />
+    <Compile Include="Traits\ArmyOfTheDeath\DockManager.cs" />
     <Compile Include="Traits\ArmyOfTheDeath\IsDeathArmyMob.cs" />
     <Compile Include="Traits\ArmyOfTheDeath\DeadArmyHandler.cs" />
     <Compile Include="Traits\ArmyOfTheDeath\PlayRandomSoundEffect.cs" />

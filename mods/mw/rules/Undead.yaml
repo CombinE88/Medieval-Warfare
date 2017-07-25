@@ -797,6 +797,40 @@ ACOLYTEC:
 	IsDeathArmyMob:
 		Role: Commander
 
-
+        
+PREYCOLYTE:
+	Inherits: ^Knight
+	Valued:
+		Cost: 500
+	-Crushable:
+	Tooltip:
+		Name: Acolyte
+	Mobile:
+		Speed: 65
+	Health:
+		HP: 20000
+	AttackFrontal:
+	AutoTarget:
+		ScanRadius: 10
+		InitialStance: AttackAnything
+	RenderSprites:
+        Image: acolyte
+		PlayerPalette: raplayer
+	GrantConditionOnMovement:
+		Condition: MoveAnim
+	WithFacingSpriteBody:
+		Sequence: idle
+		RequiresCondition: !MoveAnim
+	WithInfantryBody:
+		RequiresCondition: MoveAnim
+	Armor:
+		Type: Leather
+	-Explodes@Tib:
+	IsDeathArmyMob:
+		Role: Commander
+    DockClient:
+    AcolytePrey: 
+        TargetActors: split2, split3, split4, split4b, splitblue
+        PreyLoopSequence: prey
 
 		

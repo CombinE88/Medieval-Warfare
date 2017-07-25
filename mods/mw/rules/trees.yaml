@@ -10,6 +10,34 @@ SPLIT2:
 		Image: ironmine
 		PlayerPalette: raplayer
 		Palette: ra
+    DockManager:
+        ExternalDocks: true
+        #DeadlockDetectionEnabled: false
+    Dock@1: 
+        DockOffset: 1,1
+        WOffset: 0,0,0
+        DockAngle: 32
+        IsDragRequired: false
+        FaceTowardsCenter: true
+    Dock@2: 
+        DockOffset: -1,1
+        WOffset: 0,0,0
+        DockAngle: 223
+        IsDragRequired: false
+        FaceTowardsCenter: true
+    Dock@3: 
+        DockOffset: -1,-1
+        WOffset: 0,0,0
+        DockAngle: 159
+        IsDragRequired: false
+        FaceTowardsCenter: true
+    Dock@4: 
+        DockOffset: 1,-1
+        WOffset: 0,0,0
+        DockAngle: 96
+        IsDragRequired: false
+        FaceTowardsCenter: true
+
 
 SPLIT3:
 	Inherits: ^TibTree
@@ -30,6 +58,33 @@ SPLIT3:
 		Interval: 35
 	WithIdleAnimation:
 		Interval: 200
+    DockManager:
+        ExternalDocks: true
+        #DeadlockDetectionEnabled: false
+    Dock@1: 
+        DockOffset: 1,1
+        WOffset: 0,0,0
+        DockAngle: 32
+        IsDragRequired: false
+        FaceTowardsCenter: true
+    Dock@2: 
+        DockOffset: -1,1
+        WOffset: 0,0,0
+        DockAngle: 223
+        IsDragRequired: false
+        FaceTowardsCenter: true
+    Dock@3: 
+        DockOffset: -1,-1
+        WOffset: 0,0,0
+        DockAngle: 159
+        IsDragRequired: false
+        FaceTowardsCenter: true
+    Dock@4: 
+        DockOffset: 1,-1
+        WOffset: 0,0,0
+        DockAngle: 96
+        IsDragRequired: false
+        FaceTowardsCenter: true
 
 SPLITBLUE:
 	Inherits: ^TibTree
@@ -47,6 +102,33 @@ SPLITBLUE:
 		Image: goldmine
 		PlayerPalette: raplayer
 		Palette: ra
+    DockManager:
+        ExternalDocks: true
+        #DeadlockDetectionEnabled: false
+    Dock@1: 
+        DockOffset: 1,1
+        WOffset: 0,0,0
+        DockAngle: 32
+        IsDragRequired: false
+        FaceTowardsCenter: true
+    Dock@2: 
+        DockOffset: -1,1
+        WOffset: 0,0,0
+        DockAngle: 223
+        IsDragRequired: false
+        FaceTowardsCenter: true
+    Dock@3: 
+        DockOffset: -1,-1
+        WOffset: 0,0,0
+        DockAngle: 159
+        IsDragRequired: false
+        FaceTowardsCenter: true
+    Dock@4: 
+        DockOffset: 1,-1
+        WOffset: 0,0,0
+        DockAngle: 96
+        IsDragRequired: false
+        FaceTowardsCenter: true
 		
 SPLIT4:
 	Inherits: SPLIT3
@@ -55,6 +137,33 @@ SPLIT4:
 	SeedsResource:
 		ResourceType: Grains
 		Interval: 35
+    DockManager:
+        ExternalDocks: true
+        #DeadlockDetectionEnabled: false
+    Dock@1: 
+        DockOffset: 1,1
+        WOffset: 0,0,0
+        DockAngle: 32
+        IsDragRequired: false
+        FaceTowardsCenter: true
+    Dock@2: 
+        DockOffset: -1,1
+        WOffset: 0,0,0
+        DockAngle: 223
+        IsDragRequired: false
+        FaceTowardsCenter: true
+    Dock@3: 
+        DockOffset: -1,-1
+        WOffset: 0,0,0
+        DockAngle: 159
+        IsDragRequired: false
+        FaceTowardsCenter: true
+    Dock@4: 
+        DockOffset: 1,-1
+        WOffset: 0,0,0
+        DockAngle: 96
+        IsDragRequired: false
+        FaceTowardsCenter: true
 		
 SPLIT4B:
 	Inherits: SPLIT3
@@ -63,6 +172,33 @@ SPLIT4B:
 	SeedsResource:
 		ResourceType: Corn
 		Interval: 35
+    DockManager:
+        ExternalDocks: true
+        #DeadlockDetectionEnabled: false
+    Dock@1: 
+        DockOffset: 1,1
+        WOffset: 0,0,0
+        DockAngle: 32
+        IsDragRequired: false
+        FaceTowardsCenter: true
+    Dock@2: 
+        DockOffset: -1,1
+        WOffset: 0,0,0
+        DockAngle: 223
+        IsDragRequired: false
+        FaceTowardsCenter: true
+    Dock@3: 
+        DockOffset: -1,-1
+        WOffset: 0,0,0
+        DockAngle: 159
+        IsDragRequired: false
+        FaceTowardsCenter: true
+    Dock@4: 
+        DockOffset: 1,-1
+        WOffset: 0,0,0
+        DockAngle: 96
+        IsDragRequired: false
+        FaceTowardsCenter: true
 		
 SPLIT5:
 	Inherits: SPLIT3

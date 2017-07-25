@@ -583,7 +583,7 @@ SIEGE99:
 	NewDisguiseTooltip:
 		Name: Wooden Horse
 	Health:
-		HP: 55000
+		HP: 70000
 		Shape: Rectangle
 			TopLeft: -265,-265
 			BottomRight: 265, 265
@@ -604,9 +604,9 @@ SIEGE99:
 	Targetable:
 		TargetTypes: Ground, Siege
 	Cargo:
-		MaxWeight: 10
-		PipCount: 10
-		InitialUnits: e3newv2,e3newv2,e3newv2,e2new,e2new,e2new,e2new,e4new,e4new,e4new
+		MaxWeight: 15
+		PipCount: 15
+		InitialUnits: e3newv2,e3newv2,e3newv2,e3newv2,e3newv2,e2new,e2new,e2new,e2new,e2new,e4new,e4new,e4new,e4new,e4new
 		Types: Infantry, Archer
 		EjectOnDeath: True
 	PersonValued:

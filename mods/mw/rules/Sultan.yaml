@@ -1590,7 +1590,7 @@ SULE3:
 	Tooltip:
 		Name: Bedouin
 	Buildable:
-		Description: Advanced Anti-infantry unit.\n  Strong vs Light Infantry\n  Weak vs Cavalry and heavy Infantry\n  Detects cloaked units\n  Can attack Aircrafts\n\nTrains: 1 Peasant\n
+		Description: Advanced Anti-infantry unit.\n  Strong vs Light Infantry\n  Weak vs Cavalry and heavy Infantry\n  Detects cloaked units\n  Can attack Aircrafts\n  Slows targets under fire\nTrains: 1 Peasant
 		IconPalette: raicon
 		BuildPaletteOrder: 20
 		Queue: MInfantry.SUL

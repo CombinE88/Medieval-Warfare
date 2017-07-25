@@ -546,7 +546,7 @@ E4NEW:
 	Tooltip:
 		Name: Archer
 	Buildable:
-		Description: Advanced Anti-infantry unit.\n  Strong vs Light Infantry\n  Weak vs Cavalry and heavy Infantry\n  Detects cloaked units\n  Can attack Aircrafts\n\nTrains: 1 Peasant\n
+		Description: Advanced Anti-infantry unit.\n  Strong vs Light Infantry\n  Weak vs Cavalry and heavy Infantry\n  Detects cloaked units\n  Can attack Aircrafts\n  Slows targets under fire\nTrains: 1 Peasant
 		IconPalette: raicon
 		BuildPaletteOrder: 30
 		Queue: MInfantry.Nod, MInfantry.Horse
@@ -610,7 +610,7 @@ E4NEWV2:
 	Tooltip:
 		Name: Archer
 	Buildable:
-		Description: Advanced Anti-infantry unit.\n  Strong vs Light Infantry\n  Weak vs Cavalry and heavy Infantry\n  Detects cloaked units\n  Can attack Aircrafts\n\nTrains: 1 Peasant\n
+		Description: Advanced Anti-infantry unit.\n  Strong vs Light Infantry\n  Weak vs Cavalry and heavy Infantry\n  Detects cloaked units\n  Can attack Aircrafts\n  Slows targets under fire\nTrains: 1 Peasant
 		IconPalette: raicon
 		BuildPaletteOrder: 30
 		Queue: MInfantry.GDI
@@ -848,8 +848,8 @@ ASSASSIN:
 	WithInfantryBody:
 		DefaultAttackSequence: attack
 		AttackSequences:
-			Secondary: prey
-			Primary: shoot
+			Secondary: fireattack
+			Primary: knifeattack
 	AutoTarget:
 		InitialStance: HoldFire
 		InitialStanceAI: ReturnFire
