@@ -59,9 +59,7 @@ namespace OpenRA.Mods.Cnc.Activities
 
 		Activity IDockActivity.DockActivities(Actor host, Actor client, Dock dock)
 		{
-			return ActivityUtils.SequenceActivities(
-				//new SpriteHarvesterDockSequence(client, host, dock.Info.DockAngle, dock.Info.IsDragRequired, dock.Info.DragOffset, dock.Info.DragLength),
-				new PreyActivity(client,host,dock.Info.FaceTowardsCenter) );
+			return ActivityUtils.SequenceActivities( new PreyActivity(client,host,dock.Info.FaceTowardsCenter,dock) );
 		}
 
 		Activity IDockActivity.ActivitiesAfterDockDone(Actor host, Actor client, Dock dock)

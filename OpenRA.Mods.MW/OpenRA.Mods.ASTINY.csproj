@@ -82,6 +82,7 @@
     <Compile Include="Traits\ArmyOfTheDeath\Acolytprey.cs" />
     <Compile Include="Traits\ArmyOfTheDeath\ActivityInterfaces.cs" />
     <Compile Include="Traits\ArmyOfTheDeath\AttackedByDead.cs" />
+    <Compile Include="Traits\ArmyOfTheDeath\DecaysResources.cs" />
     <Compile Include="Traits\ArmyOfTheDeath\Dock.cs" />
     <Compile Include="Traits\ArmyOfTheDeath\DockClient.cs" />
     <Compile Include="Traits\ArmyOfTheDeath\DockManager.cs" />

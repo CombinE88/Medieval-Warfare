@@ -5,6 +5,7 @@ using System.Runtime.InteropServices;
 using OpenRA.Mods.Cnc.Activities;
 using OpenRA.Mods.Common.Activities;
 using OpenRA.Mods.Common.Orders;
+using OpenRA.Support;
 using OpenRA.Traits;
 
 namespace OpenRA.Mods.Common.Traits
@@ -19,6 +20,8 @@ namespace OpenRA.Mods.Common.Traits
 
 		[Desc("Voice string when planting explosive charges.")]
 		[VoiceReference] public readonly string Voice = "Action";
+		
+		public readonly string GrantsCondition = null;
 
 		public readonly string Cursor = "enter";
 

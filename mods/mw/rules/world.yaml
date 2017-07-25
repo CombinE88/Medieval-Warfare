@@ -181,7 +181,7 @@ World:
 		ClassName: Quick Start
 		Factions: gdi, nod, sul
 		BaseActor: mcvnew
-        SupportActors: transporter, transporter, engeneer, preycolyte, preycolyte, preycolyte, preycolyte
+        SupportActors: transporter, transporter, engeneer, preycolyte, preycolyte, preycolyte, preycolyte, preycolyte
 	MPStartUnits@bunch:
 		Class: medieval3
 		ClassName: Well Populated
