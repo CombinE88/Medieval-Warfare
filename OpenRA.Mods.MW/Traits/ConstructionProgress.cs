@@ -27,6 +27,8 @@ namespace OpenRA.Mods.MW.Traits.Render
 		[Desc("Image used for this Prioritysettings. Defaults to the actor's type.")]
 	
 		[PaletteReference] public readonly string Palette = "ra";
+
+		public readonly int Resourceprocess = 30;
 		
 		public readonly string Font = "BigBold";
 
@@ -71,6 +73,9 @@ namespace OpenRA.Mods.MW.Traits.Render
 		protected readonly Animation LeftAnim;
 		readonly string image;
 		protected readonly Animation RightAnim;
+
+		public int Progress;
+		public int Resources;
 		
 		
 		public WPos Location;

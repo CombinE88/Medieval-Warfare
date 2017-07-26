@@ -20,7 +20,7 @@ namespace OpenRA.Mods.Common.Traits
 	{
 		public readonly int Interval = 75;
 		public readonly string ResourceType = "Ore";
-		public readonly int MaxRange = 100;
+		public readonly int MaxRange = 10;
 
 		public override object Create(ActorInitializer init) { return new DecaysResource(init.Self, this); }
 	}
@@ -36,13 +36,6 @@ namespace OpenRA.Mods.Common.Traits
 			: base(info)
 		{
 			this.info = info;
-
-			resourceType = self.World.WorldActor.TraitsImplementing<ResourceType>()
-				.FirstOrDefault(t => t.Info.Type == info.ResourceType);
-
-			if (resourceType == null)
-				throw new InvalidOperationException("No such resource type `{0}`".F(info.ResourceType));
-
 			resLayer = self.World.WorldActor.Trait<ResourceLayer>();
 		}
 
@@ -62,14 +55,22 @@ namespace OpenRA.Mods.Common.Traits
 
 		public void Seed(Actor self)
 		{
-			var cell = Util.RandomWalk(self.Location, self.World.SharedRandom)
+
+			var cellone = Util.RandomWalk(self.Location, self.World.SharedRandom)
 				.Take(info.MaxRange)
-				.SkipWhile(p => !self.World.Map.Contains(p) && resLayer.GetResourceDensity(p) > 0)
+				.SkipWhile(p => !self.World.Map.Contains(p) ||
+				                (resLayer.GetResourceDensity(p) > 0 && resLayer.IsFull(p)))
 				.Cast<CPos?>().FirstOrDefault();
 
-			if (cell != null)
+			if (cellone != null)
 			{
-				resLayer.Harvest(cell.Value);
+				var cell = Util.RandomWalk(cellone.Value, self.World.SharedRandom)
+					.Take(info.MaxRange)
+					.SkipWhile(p => !self.World.Map.Contains(p) && resLayer.GetResourceDensity(p) > 0)
+					.Cast<CPos?>().FirstOrDefault();
+
+				if (cell != null)
+					resLayer.Harvest(cell.Value);
 			}
 		}
 		

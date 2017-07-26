@@ -43,9 +43,11 @@ namespace OpenRA.Traits
 		public int nextchecktick;
 		public int basecheck;
 		private Player player;
+		
 		public int Peasantpopulationvar;
 		public int MaxLivingspacevar;
 		public int WorkerPopulationvar;
+		
 		public int FreePopulation;
 		
 		void INotifyCreated.Created(Actor self)
@@ -60,47 +62,6 @@ namespace OpenRA.Traits
 			this.info = info;
 			nextchecktick += info.Delay * 25;
 			basecheck += info.Delay * 25;
-		}
-
-		public int Peasantpopulation(World world)
-		{
-
-
-			var possibles = player.World.ActorsHavingTrait<IsPeasant>()
-				.Where(a =>
-				{
-					if (a.Owner != player)
-					{
-						return false;
-					}
-
-					return true;
-				});
-			
-			return possibles.Count();
-
-		}
-
-		public int WorkerPopulation(World world)
-		{
-			var people = player.World.ActorsHavingTrait<PersonValued>()
-				.Where(b =>
-				{
-					if (b.Owner != player)
-					{
-						return false;
-					}
-
-					return true;
-				});
-
-			var npeople = 0;
-			foreach (var n in people)
-			{
-				var needspop = n.Info.TraitInfo<PersonValuedInfo>().ActorCount;
-				npeople = npeople + needspop;
-			}
-			return npeople;
 		}
 		
 		public int MaxLivingspace(World world)
@@ -209,10 +170,6 @@ namespace OpenRA.Traits
 
 		public void Tick(Actor self)
 		{
-			Peasantpopulationvar = Peasantpopulation(world);
-			MaxLivingspacevar = MaxLivingspace(world);
-			WorkerPopulationvar = WorkerPopulation(world);
-				
 			FreePopulation = MaxLivingspacevar - (WorkerPopulationvar+Peasantpopulationvar);
 			
 			if (FreePopulation>0)

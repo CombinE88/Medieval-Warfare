@@ -48,8 +48,7 @@ namespace OpenRA.Mods.MW.Warheads
 				if (checkTargetType && !IsValidAgainst(victim, firedBy))
 					continue;
 
-				var hitshapeinfo = victim.Info.TraitInfoOrDefault<HitShapeInfo>();
-				if (hitshapeinfo == null)
+				if (victim.Info.HasTraitInfo<HitShapeInfo>())
 					continue;
 
 				// If the impact position is within any actor's HitShape, we have a direct hit

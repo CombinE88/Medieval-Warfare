@@ -754,7 +754,7 @@ NEWCOMM:
 	RevealsShroud:
 		Range: 9c0
 	Valued:
-		Cost: 1400
+		Cost: 2000
 	Tooltip:
 		Name: Juggernaut
 	Buildable:

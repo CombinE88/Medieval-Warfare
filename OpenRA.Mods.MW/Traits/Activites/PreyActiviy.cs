@@ -1,14 +1,12 @@
 ﻿
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
 using OpenRA.Activities;
-using OpenRA.Graphics;
-using OpenRA.Mods.Cnc.Traits;
-using OpenRA.Mods.Common.Activities;
+using OpenRA.Mods.Common;
+using OpenRA.Mods.Common.Effects;
 using OpenRA.Mods.Common.Traits;
 using OpenRA.Mods.Common.Traits.Render;
-using OpenRA.Primitives;
+using OpenRA.Support;
 using OpenRA.Traits;
 
 namespace OpenRA.Mods.Cnc.Activities
@@ -20,13 +18,16 @@ namespace OpenRA.Mods.Cnc.Activities
         readonly AcolytePreyInfo info;
         readonly WithSpriteBody wsb;
         
-        ConditionManager conditionManager;
+        ExternalCondition externalCondition;
         int token = ConditionManager.InvalidConditionToken;
 
         private Actor dockactor;
         private bool lockfacing;
         bool playanim;
         private Dock _d;
+
+        private int ticks;
+        private ResourceLayer resLayer;
 
         public PreyActivity(Actor self,Actor dockact,bool facingDock,Dock d)
         {
@@ -36,7 +37,15 @@ namespace OpenRA.Mods.Cnc.Activities
             lockfacing = facingDock;
             playanim = true;
             _d = d;
-            conditionManager = dockact.Trait<ConditionManager>();
+            
+            ticks = self.Info.TraitInfo<AcolytePreyInfo>().leechinterval;
+            resLayer = self.World.WorldActor.Trait<ResourceLayer>();
+                
+            externalCondition =  dockact.TraitsImplementing<ExternalCondition>()
+                .FirstOrDefault(t =>
+                    t.Info.Condition == self.Info.TraitInfo<AcolytePreyInfo>().GrantsCondition &&
+                    t.CanGrantCondition(dockactor, self));
+            
 
         }
 
@@ -47,9 +56,10 @@ namespace OpenRA.Mods.Cnc.Activities
                 wsb.PlayCustomAnimationRepeating(self,wsb.Info.Sequence);
                 playanim = true;
 
-                if (token != ConditionManager.InvalidConditionToken)
+                if (externalCondition != null && token != null)
                 {
-                    token = conditionManager.RevokeCondition(dockactor, token);
+                    Game.Debug("revoke: " + token);
+                    externalCondition.TryRevokeCondition(self, dockactor, token);
                 }
                 return NextActivity;
                 
@@ -60,8 +70,6 @@ namespace OpenRA.Mods.Cnc.Activities
                 ActivityUtils.RunActivity(self, ChildActivity);
                 return this;
             }
-            
-            
            
             if (playanim)
             {
@@ -69,7 +77,6 @@ namespace OpenRA.Mods.Cnc.Activities
                 QueueChild(self.Trait<IMove>().VisualMove(self, self.CenterPosition, _d.CenterPosition));
                 QueueChild(new CallFunc (() =>
                 {
-
                     var facing = self.Trait<IFacing>();
                     if (dockactor != null && facing != null && lockfacing)
                     {
@@ -80,17 +87,75 @@ namespace OpenRA.Mods.Cnc.Activities
                         facing.Facing = desiredFacing;
                     }
                     wsb.PlayCustomAnimationRepeating(self, info.PreySequence);
+                    
+                    Game.Debug("Manager: " + externalCondition);
+                    if (externalCondition != null)
+                    {
+                        token = externalCondition.GrantCondition(dockactor, self);
+                    }
                 }));
             }
             
-            
-            if (token == ConditionManager.InvalidConditionToken)
+            if (self.Info.TraitInfo<AcolytePreyInfo>().LeechesResources && --ticks <= 0)
             {
-                token = conditionManager.GrantCondition(dockactor, self.Info.TraitInfo<AcolytePreyInfo>().GrantsCondition);
+                Leech(self);
+                ticks = self.Info.TraitInfo<AcolytePreyInfo>().leechinterval;
             }
-
-
+            
+            
             return this;
+        }
+
+        public void Leech(Actor self)
+        {
+            CPos cell = CPos.Zero;
+            var cells = self.World.Map.FindTilesInCircle(self.World.Map.CellContaining(self.CenterPosition), 6, true)
+                .Where(c =>
+                {
+                    if (!self.World.Map.Contains(c))
+                        return false;
+                    if (resLayer.GetResource(c) != null)
+                        return false;
+                    return true;
+                });
+            if (cells != null && cells.Any())
+                cell = self.ClosestCell(cells);
+
+            if (cell != CPos.Zero && resLayer.GetResourceDensity(cell) > 0)
+            {
+                var ammount = resLayer.GetResource(cell).Info.ValuePerUnit;
+
+                if ((self.Owner.PlayerActor.Trait<PlayerResources>().Resources + ammount) <= self.Owner.PlayerActor.Trait<PlayerResources>().ResourceCapacity)
+                {
+
+                    var playerResources = self.Owner.PlayerActor.Trait<PlayerResources>();
+                    playerResources.GiveResources(ammount);
+
+                    if (ammount > 0 && self.IsInWorld && !self.IsDead)
+                    {
+                        if (self.Owner.IsAlliedWith(self.World.RenderPlayer))
+                            self.World.AddFrameEndTask(w => w.Add(new FloatingText(self.CenterPosition,
+                                self.Owner.Color.RGB, FloatingText.FormatCashTick(ammount), 30)));
+                    }
+                    resLayer.Harvest(cell);
+                }
+            }
+        }
+
+
+        public static IEnumerable<CPos> RandomWalk(CPos p, MersenneTwister r)
+        {
+            for (;;)
+            {
+                var dx = r.Next(-1, 2);
+                var dy = r.Next(-1, 2);
+
+                if (dx == 0 && dy == 0)
+                    continue;
+
+                p += new CVec(dx, dy);
+                yield return p;
+            }
         }
     }
 }

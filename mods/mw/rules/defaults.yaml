@@ -942,6 +942,7 @@
 
 ^TibTree:
 	Inherits@1: ^SpriteActor
+    ConditionManager:
 	Tooltip:
 		Name: Blossom Tree
 		ShowOwnerRow: false

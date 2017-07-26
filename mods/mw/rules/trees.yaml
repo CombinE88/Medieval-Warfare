@@ -3,11 +3,6 @@ SPLIT2:
 	SeedsResource:
 		ResourceType: Tiberium
 		Interval: 55
-        RequiresCondition: !infested
-    DecaysResource:
-        ResourceType: Tiberium
-		Interval: 110
-        RequiresCondition: infested
 	WithIdleAnimation:
 	Tooltip:
 		Name: Iron Mine
@@ -48,6 +43,8 @@ SPLIT2:
         DockAngle: 96
         IsDragRequired: false
         FaceTowardsCenter: true
+	ExternalCondition@DECAY:
+		Condition: infested
 
 
 SPLIT3:
@@ -64,11 +61,6 @@ SPLIT3:
 	SeedsResource:
 		ResourceType: Crops
 		Interval: 35
-        RequiresCondition: !infested
-    DecaysResource:
-        ResourceType: Crops
-		Interval: 70
-        RequiresCondition: infested
 	WithIdleAnimation:
 		Interval: 200
     DockManager:
@@ -104,6 +96,8 @@ SPLIT3:
         DockAngle: 96
         IsDragRequired: false
         FaceTowardsCenter: true
+	ExternalCondition@DECAY:
+		Condition: infested
 
 SPLITBLUE:
 	Inherits: ^TibTree
@@ -112,11 +106,6 @@ SPLITBLUE:
 	SeedsResource:
 		ResourceType: BlueTiberium
 		Interval: 110
-        RequiresCondition: !infested
-    DecaysResource:
-        ResourceType: BlueTiberium
-		Interval: 220
-        RequiresCondition: infested
 	WithIdleAnimation:
 	RadarColorFromTerrain:
 		Terrain: BlueTiberium
@@ -159,6 +148,8 @@ SPLITBLUE:
         DockAngle: 96
         IsDragRequired: false
         FaceTowardsCenter: true
+	ExternalCondition@DECAY:
+		Condition: infested
 		
 SPLIT4:
 	Inherits: SPLIT3
@@ -167,11 +158,6 @@ SPLIT4:
 	SeedsResource:
 		ResourceType: Grains
 		Interval: 35
-        RequiresCondition: !infested
-    DecaysResource:
-        ResourceType: Grains
-		Interval: 70
-        RequiresCondition: infested
     DockManager:
         ExternalDocks: true
         #DeadlockDetectionEnabled: false
@@ -205,6 +191,8 @@ SPLIT4:
         DockAngle: 96
         IsDragRequired: false
         FaceTowardsCenter: true
+	ExternalCondition@DECAY:
+		Condition: infested
 		
 SPLIT4B:
 	Inherits: SPLIT3
@@ -213,11 +201,6 @@ SPLIT4B:
 	SeedsResource:
 		ResourceType: Corn
 		Interval: 35
-        RequiresCondition: !infested
-    DecaysResource:
-        ResourceType: Corn
-		Interval: 70
-        RequiresCondition: infested
     DockManager:
         ExternalDocks: true
         #DeadlockDetectionEnabled: false
@@ -251,6 +234,8 @@ SPLIT4B:
         DockAngle: 96
         IsDragRequired: false
         FaceTowardsCenter: true
+	ExternalCondition@DECAY:
+		Condition: infested
 		
 SPLIT5:
 	Inherits: SPLIT3

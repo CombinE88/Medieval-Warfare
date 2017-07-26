@@ -76,6 +76,8 @@
     <Compile Include="Projectiles\AthenaProjectile.cs" />
     <Compile Include="Projectiles\InstantExplode.cs" />
     <Compile Include="Traits\Activites\DockUtils.cs" />
+    <Compile Include="Traits\Activites\HauldelRes.cs" />
+    <Compile Include="Traits\Activites\HaulGetRes.cs" />
     <Compile Include="Traits\Activites\Prey.cs" />
     <Compile Include="Traits\Activites\PreyActiviy.cs" />
     <Compile Include="Traits\AmmoPoolConditions.cs" />
@@ -95,6 +97,7 @@
     <Compile Include="Traits\CritterSpawner.cs" />
     <Compile Include="Traits\DisguiseChargeBar.cs" />
     <Compile Include="Traits\GrantRandomCondition.cs" />
+    <Compile Include="Traits\HaulerLogic\Hauler.cs" />
     <Compile Include="Traits\HunterTraits\HuntableDeer.cs" />
     <Compile Include="Traits\HunterTraits\DeerHunter.cs" />
     <Compile Include="Traits\HunterTraits\LodgeActor.cs" />

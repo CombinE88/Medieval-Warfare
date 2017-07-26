@@ -830,7 +830,8 @@ PREYCOLYTE:
 		Role: Commander
     DockClient:
     AcolytePrey: 
+        GrantsCondition: infested
         TargetActors: split2, split3, split4, split4b, splitblue
         PreyLoopSequence: prey
-
+        leechinterval: 33
 		

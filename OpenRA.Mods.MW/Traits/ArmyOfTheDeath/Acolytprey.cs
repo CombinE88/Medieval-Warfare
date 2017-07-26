@@ -25,6 +25,10 @@ namespace OpenRA.Mods.Common.Traits
 
 		public readonly string Cursor = "enter";
 
+		public bool LeechesResources = true;
+
+		public int leechinterval = 100;
+		
 		public object Create(ActorInitializer init) { return new AcolytePrey(this); }
 	}
 
