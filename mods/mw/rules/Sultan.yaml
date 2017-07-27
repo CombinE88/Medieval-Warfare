@@ -594,7 +594,8 @@ SULHALL:
 		Offset: 725,341, 0
 		MoveOffset: 1,2
 		Sticky: true
-        FindRadius: 100
+		FindRadius: 100
+	IsTownhall:
 		
 SULARRAY:
 	Inherits: ^MWBaseBuilding

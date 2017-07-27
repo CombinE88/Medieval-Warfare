@@ -45,6 +45,7 @@ namespace OpenRA.Mods.Mw.Traits
 			if (!self.Owner.NonCombatant && self.Owner.WinState != WinState.Lost && self.Owner.PlayerActor.Info.HasTraitInfo<PlayerCivilizationInfo>())
 			{
 				self.Owner.PlayerActor.Trait<PlayerCivilization>().MaxLivingspacevar += info.Ammount;
+				self.Owner.PlayerActor.Trait<PlayerCivilization>().PeasantPorivder.Add(self);
 			}
 		}
 
@@ -53,6 +54,7 @@ namespace OpenRA.Mods.Mw.Traits
 			if (!self.Owner.NonCombatant && self.Owner.WinState != WinState.Lost && self.Owner.PlayerActor.Info.HasTraitInfo<PlayerCivilizationInfo>())
 			{
 				self.Owner.PlayerActor.Trait<PlayerCivilization>().MaxLivingspacevar -= info.Ammount;
+				self.Owner.PlayerActor.Trait<PlayerCivilization>().PeasantPorivder.Remove(self);
 			}
 		}
 	}

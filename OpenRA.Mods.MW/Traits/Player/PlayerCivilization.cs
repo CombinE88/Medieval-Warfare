@@ -51,6 +51,8 @@ namespace OpenRA.Traits
 		public int FreePopulation;
 
 		public int HasTownHalls;
+
+		public HashSet<Actor> PeasantPorivder = new HashSet<Actor>();
 		
 		void INotifyCreated.Created(Actor self)
 		{
@@ -68,20 +70,9 @@ namespace OpenRA.Traits
 		
 		public Actor RandomBuildingWithLivingspace(World world)
 		{
-
-			var freehuts = player.World.ActorsHavingTrait<ProvidesLivingspace>()
-				.Where(a =>
-				{
-					if (a.Owner != player)
-					{
-						return false;
-					}
-					return true;
-				});
-
-			if (freehuts.Any())
+			if (PeasantPorivder.Any())
 			{
-				return freehuts.Random(player.World.SharedRandom);
+				return PeasantPorivder.Random(player.World.SharedRandom);
 			}
 			return null;
 		}
@@ -89,7 +80,7 @@ namespace OpenRA.Traits
 		public void spawnapeasant(World world)
 		{
 			var SpwanPosition = RandomBuildingWithLivingspace(world);
-			if (SpwanPosition != null)
+			if (SpwanPosition != null && !SpwanPosition.IsDead && SpwanPosition.IsInWorld)
 			
 			{
 				player.World.AddFrameEndTask(w =>

@@ -2483,6 +2483,7 @@ TOWNHALL:
 		Offset: 213,811, 0
 		MoveOffset: 1,2
 		Sticky: true
+    IsTownhall:
 		
 LODGE:
 	Inherits: ^MWBaseBuilding
