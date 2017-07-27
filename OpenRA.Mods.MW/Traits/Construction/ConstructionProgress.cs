@@ -50,6 +50,8 @@ namespace OpenRA.Mods.MW.Traits.Render
 
 		public readonly BooleanExpression ConstructionCondition = null;
 		
+		public readonly string PriorityCondition = null;
+		
 		public override object Create(ActorInitializer init) { return new ConstructionProgress(init.Self, this); }
 
 		public override void RulesetLoaded(Ruleset rules, ActorInfo ai)
@@ -80,7 +82,6 @@ namespace OpenRA.Mods.MW.Traits.Render
 		
 		public WPos Location;
 		
-		private Image Button;
 
 		public ConstructionProgress(Actor self, ConstructionProgressInfo info)
 			: base(info)
@@ -166,5 +167,6 @@ namespace OpenRA.Mods.MW.Traits.Render
 			var Rend = new IRenderable[] { new TextRenderable(font, wr.ProjectedPosition(screenPos), Info.ZOffset, color, priority + " %") };
 			return Rend;
 		}
+
 	}
 }

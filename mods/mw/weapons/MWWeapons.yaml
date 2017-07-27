@@ -62,7 +62,7 @@ SmokeySpawner:
 		ImpactSounds: tnkfire2.aud, tnkfire3.aud, tnkfire4.aud, tnkfire6.aud
 	Warhead@2Dam: SpreadDamage
 		Spread: 256
-		Damage: 1750
+		Damage: 2200
 		Versus:
 			Leather: 100
 			Light: 90
@@ -683,8 +683,8 @@ KingsSword:
 		DamageTypes: Prone50Percent, TriggerProne, RippedApartDeath
 
 paladingun:
-	ReloadDelay: 45
-	Range: 5c0
+	ReloadDelay: 75
+	Range: 3c512
 	ValidTargets: Ground, Trees
 	InvalidTargets: Air
 	Projectile: Bullet
@@ -693,7 +693,7 @@ paladingun:
 		ValidTargets: Ground, Trees
 		InvalidTargets: Air
 		Spread: 65
-		Damage: 3000
+		Damage: 3500
 		Versus:
 			Leather: 100
 			Light: 90
@@ -708,15 +708,15 @@ paladingun:
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath	 
         
 paladingunvisual:
-	ReloadDelay: 45
-	Range: 4c512
+	ReloadDelay: 75
+	Range: 3c512
 	Report: palashotgun.aud
 	ValidTargets: Ground, Trees
 	InvalidTargets: Air
 	Projectile: Bullet
-		Speed: 0c600
-        ContrailLength: 15
-		ContrailWidth: 20
+		Speed: 0c500
+        ContrailLength: 25
+		ContrailWidth: 40
 		ContrailDelay: 0
 		ContrailUsePlayerColor : true
 	Warhead@1Dam: SpreadDamage
@@ -974,7 +974,7 @@ SetFire:
 	Warhead@1Dam: SpreadDamage
 		Spread: 512
 		Delay: 5
-		Damage: 2000
+		Damage: 2600
 		ValidTargets: Structure
 		InvalidTargets: Infantry
 		Versus:
@@ -983,7 +983,7 @@ SetFire:
 		DamageTypes: Prone50Percent, TriggerProne, BurnToDeath 
 	Warhead@2Dam: SpreadDamage
 		Spread: 512
-		Damage: 1900
+		Damage: 1500
 		Delay: 15
 		ValidTargets: Structure
 		InvalidTargets: Infantry
@@ -993,7 +993,7 @@ SetFire:
 		DamageTypes: Prone50Percent, TriggerProne, BurnToDeath 
 	Warhead@3Dam: SpreadDamage
 		Spread: 512
-		Damage: 1800
+		Damage: 1400
 		Delay: 27
 		ValidTargets: Structure
 		InvalidTargets: Infantry
@@ -1003,7 +1003,7 @@ SetFire:
 		DamageTypes: Prone50Percent, TriggerProne, BurnToDeath 
 	Warhead@4Dam: SpreadDamage
 		Spread: 512
-		Damage: 1700
+		Damage: 1300
 		Delay: 39
 		ValidTargets: Structure
 		InvalidTargets: Infantry
@@ -1170,7 +1170,7 @@ MageFire:
 	ValidTargets: Ground
 	InvalidTargets: Air
 	Projectile: Bullet
-		Speed: 250
+		Speed: 350
 		Blockable: false
 		LaunchAngle: 46
 		Inaccuracy: 1c0
@@ -1188,7 +1188,7 @@ MageFire:
 			Light: 100
 			Heavy: 100
 			Concrete: 100
-			Knight: 45
+			Knight: 85
 			LightCavalry: 100
 			MediumCavalry: 45
 			HeavyCavalry: 35
@@ -1528,7 +1528,7 @@ LongBowNArrow:
 			Light: 100
 			Heavy: 100
 			Concrete: 125
-			Knight: 35
+			Knight: 55
 			LightCavalry: 75
 			MediumCavalry: 25
 			HeavyCavalry: 25
@@ -1548,7 +1548,7 @@ LongBowNArrow:
 			Light: 100
 			Heavy: 100
 			Concrete: 125
-			Knight: 35
+			Knight: 55
 			LightCavalry: 75
 			MediumCavalry: 25
 			HeavyCavalry: 25
@@ -1568,7 +1568,7 @@ LongBowNArrow:
 			Light: 100
 			Heavy: 100
 			Concrete: 125
-			Knight: 35
+			Knight: 55
 			LightCavalry: 75
 			MediumCavalry: 25
 			HeavyCavalry: 25

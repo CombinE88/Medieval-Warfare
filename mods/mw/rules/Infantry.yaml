@@ -206,7 +206,24 @@ Husk2.KING:
 
 ENGENEER:
 	Inherits: ^Knight
-	Inherits@AUTOTARGET: ^AutoTargetGround
+	AutoTargetPriority@Prio5:
+		ValidTargets: Priority5
+        Priority: 5
+	AutoTargetPriority@Prio4:
+		ValidTargets: Priority4
+        Priority: 4
+	AutoTargetPriority@Prio3:
+		ValidTargets: Priority3
+        Priority: 3
+	AutoTargetPriority@Prio2:
+		ValidTargets: Priority2
+        Priority: 2
+	AutoTargetPriority@Prio1:
+		ValidTargets: Priority1
+        Priority: 1
+	AutoTargetPriority@Prio0:
+		ValidTargets: Structure, Infantry, Vehicle, Creep, Water, Defense, Cavalry, Siege, Air
+        Priority: 0
 	Passenger:
 		PipType: Yellow
 	Valued:
@@ -378,7 +395,7 @@ E3NEW:
 	Mobile:
 		Speed: 56
 	Health:
-		HP: 10000
+		HP: 12500
 	Armament:
 		Weapon: broadsword
 	AttackFrontal:
@@ -414,7 +431,7 @@ E3NEWV2:
 	Mobile:
 		Speed: 56
 	Health:
-		HP: 9500
+		HP: 11500
 	Armament:
 		Weapon: broadsword
 	AttackFrontal:
@@ -507,7 +524,7 @@ E9NEW:
 		BuildPaletteOrder: 40
 		Prerequisites: anyhq
 		Queue: MInfantry.Nod, MInfantry.Horse
-		BuildDuration: 100
+		BuildDuration: 250
 	Mobile:
 		Speed: 56
 	Health:
@@ -554,7 +571,7 @@ E4NEW:
 	Mobile:
 		Speed: 60
 	Health:
-		HP: 5000
+		HP: 8000
 	Armament:
 		Weapon: bownarrow
 		LocalOffset: 341,20,356
@@ -618,7 +635,7 @@ E4NEWV2:
 	Mobile:
 		Speed: 60
 	Health:
-		HP: 5000
+		HP: 8000
 	Armament:
 		Weapon: bownarrow
 		LocalOffset: 341,20,356
@@ -678,7 +695,7 @@ E5NEW:
 		BuildPaletteOrder: 50
 		Prerequisites: anyarmory
 		Queue: MInfantry.Nod, MInfantry.Horse
-		BuildDuration: 200
+		BuildDuration: 300
 	Mobile:
 		Speed: 56
 	Health:
@@ -709,7 +726,7 @@ RMBONEW:
 		Range: 9c0
 	Inherits@AUTOTARGET: ^AutoTargetGround
 	Valued:
-		Cost: 350
+		Cost: 450
 	Tooltip:
 		Name: Paladin
 	Buildable:
@@ -718,7 +735,7 @@ RMBONEW:
 		BuildPaletteOrder: 40
 		Prerequisites: anyhq
 		Queue: MInfantry.GDI
-		BuildDuration: 150
+		BuildDuration: 250
 	Mobile:
 		Speed: 45
 	Health:
@@ -1450,14 +1467,31 @@ MWLUMBERER:
 		
 TRANSPORTER:
 	Inherits: ^Knight
-	Inherits@AUTOTARGET: ^AutoTargetGround
+	AutoTargetPriority@Prio5:
+		ValidTargets: Priority5
+        Priority: 5
+	AutoTargetPriority@Prio4:
+		ValidTargets: Priority4
+        Priority: 4
+	AutoTargetPriority@Prio3:
+		ValidTargets: Priority3
+        Priority: 3
+	AutoTargetPriority@Prio2:
+		ValidTargets: Priority2
+        Priority: 2
+	AutoTargetPriority@Prio1:
+		ValidTargets: Priority1
+        Priority: 1
+	AutoTargetPriority@Prio0:
+		ValidTargets: Structure
+        Priority: 0
 	-Explodes@Tib:
 	RevealsShroud:
 		Range: 4c0
 	Valued:
 		Cost: 250
 	Tooltip:
-		Name: Labourer
+		Name: Hauler
 	Mobile:
 		Speed: 66
 	Health:

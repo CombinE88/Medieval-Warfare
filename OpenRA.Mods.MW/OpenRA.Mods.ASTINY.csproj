@@ -77,6 +77,7 @@
     <Compile Include="Projectiles\InstantExplode.cs" />
     <Compile Include="Traits\Activites\DockUtils.cs" />
     <Compile Include="Traits\Activites\HauldelRes.cs" />
+    <Compile Include="Traits\Activites\HaulerDockingScaffold.cs" />
     <Compile Include="Traits\Activites\HaulGetRes.cs" />
     <Compile Include="Traits\Activites\Prey.cs" />
     <Compile Include="Traits\Activites\PreyActiviy.cs" />
@@ -92,7 +93,10 @@
     <Compile Include="Traits\ArmyOfTheDeath\DeadArmyHandler.cs" />
     <Compile Include="Traits\ArmyOfTheDeath\PlayRandomSoundEffect.cs" />
     <Compile Include="Traits\AutoTargetFilter.cs" />
-    <Compile Include="Traits\ConstructionProgress.cs" />
+    <Compile Include="Traits\Construction\AddPrioTargeter.cs" />
+    <Compile Include="Traits\Construction\ConstructionPriority.cs" />
+    <Compile Include="Traits\Construction\ConstructionProgress.cs" />
+    <Compile Include="Traits\Construction\RemPrioTargeter.cs" />
     <Compile Include="Traits\CreateActorOnDeath.cs" />
     <Compile Include="Traits\CritterSpawner.cs" />
     <Compile Include="Traits\DisguiseChargeBar.cs" />
@@ -103,6 +107,7 @@
     <Compile Include="Traits\HunterTraits\LodgeActor.cs" />
     <Compile Include="Traits\HunterTraits\LootableBody.cs" />
     <Compile Include="Traits\IsPeasant.cs" />
+    <Compile Include="Traits\IsTownHall.cs" />
     <Compile Include="Traits\NewDisguise.cs" />
     <Compile Include="Traits\PersonValued.cs" />
     <Compile Include="Traits\Player\ConstructionResources.cs" />
@@ -128,6 +133,7 @@
     <Compile Include="Warheads\SpawnActorWarhead.cs" />
     <Compile Include="Warheads\WarheadAS.cs" />
     <Compile Include="Warheads\PromotionWarhead.cs" />
+    <Compile Include="Widgets\Logic\Ingame\ConstructionPriorityLogic.cs" />
     <Compile Include="Widgets\Logic\Ingame\IngameFullPopulationCounterLogic.cs" />
     <Compile Include="Widgets\Logic\Ingame\IngameMaxPopulationCounterLogic.cs" />
     <Compile Include="Widgets\Logic\Ingame\IngamePeasantSpawnBarLogic.cs" />

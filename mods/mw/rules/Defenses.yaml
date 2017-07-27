@@ -214,9 +214,9 @@ TRIBU:
 	Inherits@AUTOTARGET: ^AutoTargetGround
 	Inherits@Hitshape: ^1x1Shape
 	Valued:
-		Cost: 1500
+		Cost: 1100
 	CustomSellValue:
-		Value: 750
+		Value: 550
 	Tooltip:
 		Name: Counterweight Trebuchet
 	Buildable:

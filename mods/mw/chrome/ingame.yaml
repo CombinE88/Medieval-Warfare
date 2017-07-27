@@ -378,6 +378,43 @@ Container@PLAYER_WIDGETS:
 							ClockSequence: old
 							IconCount: 20
 							IconMargin: 8
+                Background@PRIORITY_BAR:
+                    Logic: ConstructionPriorityLogic
+                    X: 30
+                    Y: PARENT_BOTTOM - 80
+                    Background: panel-black
+                    Width: 100
+                    Height: 50
+                    Children:
+                        Button@ADD_PRIO:
+                            X: 1
+                            Y: 1
+                            Width: 45
+                            Height: 45
+                            Background: button
+                            DisableKeyRepeat: true
+                            TooltipText: Add Priority
+                            TooltipDesc: none
+                            Children:
+                                Image@ICON:
+                                    X: 24
+                                    Y: 24
+                                    ImageCollection: prioritybuttons
+                                    ImageName: up_arrow
+                        Button@REM_PRIO:
+                            X: 50
+                            Y: 1
+                            Width: 45
+                            Height: 45
+                            Background: button
+                            TooltipText: Remove Priority
+                            TooltipDesc: none
+                            Children:
+                                Image@ICON:
+                                    X: 24
+                                    Y: 24
+                                    ImageCollection: prioritybuttons
+                                    ImageName: down_arrow
 		Background@SIDEBAR_BACKGROUND:
 			Logic: MenuButtonsChromeLogic
 			X: 2

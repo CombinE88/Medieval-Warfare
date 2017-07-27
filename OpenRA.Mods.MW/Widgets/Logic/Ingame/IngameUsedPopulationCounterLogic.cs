@@ -16,6 +16,7 @@ using System.Linq;
 using System.Threading;
 using OpenRA.Mods.Common.Widgets;
 using OpenRA.Mods.Mw.Traits;
+using OpenRA.Traits;
 using OpenRA.Widgets;
 
 
@@ -47,34 +48,7 @@ namespace OpenRA.Mods.MW.Widgets.Logic
 
 			pop.GetText = () => displayLabel;
 
-			displayResources = CountPopulation(world);
-		}
-		
-		public int CountPopulation(World world)
-		{
-
-			var player = world.LocalPlayer;
-
-			var people = player.World.ActorsHavingTrait<PersonValued>()
-				.Where(b =>
-				{
-					if (b.Owner != player)
-					{
-						return false;
-					}
-
-					return true;
-				});
-
-			var npeople = 0;
-			foreach (var n in people)
-			{
-				var needspop = n.Info.TraitInfo<PersonValuedInfo>().ActorCount;
-				npeople = npeople + needspop;
-			}
-
-			return npeople;
-			
+			displayResources = player.PlayerActor.Trait<PlayerCivilization>().WorkerPopulationvar;
 		}
 
 		public override void Tick()
@@ -84,7 +58,7 @@ namespace OpenRA.Mods.MW.Widgets.Logic
 			if (nextCashTickTime > 0)
 				nextCashTickTime--;
 
-			var actual = CountPopulation(world);
+			var actual = player.PlayerActor.Trait<PlayerCivilization>().WorkerPopulationvar;
 			Debug.Write(actual.ToString());
 
 			var diff = Math.Abs(actual - displayResources);

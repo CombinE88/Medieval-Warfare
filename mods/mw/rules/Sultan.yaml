@@ -1510,7 +1510,7 @@ SULE1:
 	Mobile:
 		Speed: 85
 	Health:
-		HP: 7000
+		HP: 9000
 	Armament:
 		Weapon: SulSword
 	AttackFrontal:
@@ -1548,7 +1548,7 @@ SULE2:
 	Mobile:
 		Speed: 56
 	Health:
-		HP: 11000
+		HP: 15000
 	Armament@Primary:
 		Name: Primary
 		Weapon: PikeAC
@@ -1598,7 +1598,7 @@ SULE3:
 	Mobile:
 		Speed: 60
 	Health:
-		HP: 6000
+		HP: 8000
 	Armament:
 		Weapon: BedouinBow
 		LocalOffset: 341,20,356
@@ -1653,7 +1653,7 @@ SULE4:
 		BuildPaletteOrder: 30
 		Queue: MInfantry.SUL
 		Prerequisites: sultow1
-		BuildDuration: 200
+		BuildDuration: 250
 	Mobile:
 		Speed: 55
 	Health:

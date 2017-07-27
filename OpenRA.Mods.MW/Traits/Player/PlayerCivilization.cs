@@ -49,6 +49,8 @@ namespace OpenRA.Traits
 		public int WorkerPopulationvar;
 		
 		public int FreePopulation;
+
+		public int HasTownHalls;
 		
 		void INotifyCreated.Created(Actor self)
 		{
@@ -64,28 +66,6 @@ namespace OpenRA.Traits
 			basecheck += info.Delay * 25;
 		}
 		
-		public int MaxLivingspace(World world)
-		{
-		var hutbeds = 0;
-				
-			var freehuts = player.World.ActorsHavingTrait<ProvidesLivingspace>()
-				.Where(a =>
-				{
-					if (a.Owner != player)
-					{
-						return false;
-					}
-					return true;
-				});
-
-
-			foreach (var a in freehuts)
-			{
-				hutbeds += a.Info.TraitInfo<ProvidesLivingspaceInfo>().Ammount;
-			}
-
-			return hutbeds;
-		}
 		public Actor RandomBuildingWithLivingspace(World world)
 		{
 
@@ -106,30 +86,6 @@ namespace OpenRA.Traits
 			return null;
 		}
 		
-		public int HasTownHalls(World world)
-		{
-			var freehuts = player.World.Actors
-				.Where(a =>
-				{
-					if (a.Owner != player)
-					{
-						return false;
-					}
-
-					if (info.TownHalls.Contains(a.Info.Name))
-					{
-						return true;
-					}
-				
-					return false;
-				});
-
-			if (freehuts.Any())
-				return 2;
-			return 1;
-		}
-		
-
 		public void spawnapeasant(World world)
 		{
 			var SpwanPosition = RandomBuildingWithLivingspace(world);
@@ -193,8 +149,8 @@ namespace OpenRA.Traits
 				 
 				nextchecktick -= FreePopulation*info.SpawnModifier;
 				nextchecktick -= spawn2;
-				
-				basecheck = nextchecktick/HasTownHalls(world);
+
+				basecheck = nextchecktick / HasTownHalls > 0 ? 1 : 2;
 				if (nextchecktick<25)
 					basecheck = 25;
 			}

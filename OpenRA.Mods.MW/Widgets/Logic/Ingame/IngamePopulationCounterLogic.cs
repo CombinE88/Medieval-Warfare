@@ -56,29 +56,6 @@ namespace OpenRA.Mods.MW.Widgets.Logic
 
 		}
 
-		public int CountPopulation(World world)
-		{
-
-			var player = world.LocalPlayer;
-
-			var possibles = player.World.Actors
-				.Where(a =>
-				{
-					if (a.Owner != player)
-					{
-						return false;
-					}
-					
-					if (Population.Contains(a.Info.Name))
-						return true;
-
-					return false;
-				});
-
-			return possibles.Count();
-			
-		}
-
 		public override void Tick()
 		{
 			displayLabel = cashLabel.F(player.PlayerActor.Trait<PlayerCivilization>().Peasantpopulationvar);
