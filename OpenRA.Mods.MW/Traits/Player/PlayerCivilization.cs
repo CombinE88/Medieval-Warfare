@@ -80,7 +80,7 @@ namespace OpenRA.Traits
 		public void spawnapeasant(World world)
 		{
 			var SpwanPosition = RandomBuildingWithLivingspace(world);
-			if (SpwanPosition != null && !SpwanPosition.IsDead && SpwanPosition.IsInWorld)
+			if (SpwanPosition != null)
 			
 			{
 				player.World.AddFrameEndTask(w =>
@@ -141,7 +141,9 @@ namespace OpenRA.Traits
 				nextchecktick -= FreePopulation*info.SpawnModifier;
 				nextchecktick -= spawn2;
 
-				basecheck = nextchecktick / HasTownHalls > 0 ? 1 : 2;
+				var hastownhalls = HasTownHalls > 0 ? 2 : 1;
+				
+				basecheck = nextchecktick /hastownhalls;
 				if (nextchecktick<25)
 					basecheck = 25;
 			}

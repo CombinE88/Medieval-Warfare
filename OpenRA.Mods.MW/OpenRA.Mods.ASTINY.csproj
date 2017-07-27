@@ -76,9 +76,6 @@
     <Compile Include="Projectiles\AthenaProjectile.cs" />
     <Compile Include="Projectiles\InstantExplode.cs" />
     <Compile Include="Traits\Activites\DockUtils.cs" />
-    <Compile Include="Traits\Activites\HauldelRes.cs" />
-    <Compile Include="Traits\Activites\HaulerDockingScaffold.cs" />
-    <Compile Include="Traits\Activites\HaulGetRes.cs" />
     <Compile Include="Traits\Activites\Prey.cs" />
     <Compile Include="Traits\Activites\PreyActiviy.cs" />
     <Compile Include="Traits\AmmoPoolConditions.cs" />
@@ -92,7 +89,6 @@
     <Compile Include="Traits\ArmyOfTheDeath\IsDeathArmyMob.cs" />
     <Compile Include="Traits\ArmyOfTheDeath\DeadArmyHandler.cs" />
     <Compile Include="Traits\ArmyOfTheDeath\PlayRandomSoundEffect.cs" />
-    <Compile Include="Traits\AutoTargetFilter.cs" />
     <Compile Include="Traits\Construction\AddPrioTargeter.cs" />
     <Compile Include="Traits\Construction\ConstructionPriority.cs" />
     <Compile Include="Traits\Construction\ConstructionProgress.cs" />
@@ -101,13 +97,12 @@
     <Compile Include="Traits\CritterSpawner.cs" />
     <Compile Include="Traits\DisguiseChargeBar.cs" />
     <Compile Include="Traits\GrantRandomCondition.cs" />
-    <Compile Include="Traits\HaulerLogic\Hauler.cs" />
     <Compile Include="Traits\HunterTraits\HuntableDeer.cs" />
     <Compile Include="Traits\HunterTraits\DeerHunter.cs" />
     <Compile Include="Traits\HunterTraits\LodgeActor.cs" />
     <Compile Include="Traits\HunterTraits\LootableBody.cs" />
     <Compile Include="Traits\IsPeasant.cs" />
-    <Compile Include="Traits\IsTownHall.cs" />
+    <Compile Include="Traits\IsTownhall.cs" />
     <Compile Include="Traits\NewDisguise.cs" />
     <Compile Include="Traits\PersonValued.cs" />
     <Compile Include="Traits\Player\ConstructionResources.cs" />

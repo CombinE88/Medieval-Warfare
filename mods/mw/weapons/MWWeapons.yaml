@@ -62,7 +62,7 @@ SmokeySpawner:
 		ImpactSounds: tnkfire2.aud, tnkfire3.aud, tnkfire4.aud, tnkfire6.aud
 	Warhead@2Dam: SpreadDamage
 		Spread: 256
-		Damage: 2200
+		Damage: 1800
 		Versus:
 			Leather: 100
 			Light: 90
@@ -693,7 +693,7 @@ paladingun:
 		ValidTargets: Ground, Trees
 		InvalidTargets: Air
 		Spread: 65
-		Damage: 3500
+		Damage: 3200
 		Versus:
 			Leather: 100
 			Light: 90
@@ -2331,8 +2331,8 @@ Crossbow:
 			Heavy: 90
 			Knight: 50
 			LightCavalry: 75
-			MediumCavalry: 50
-			HeavyCavalry: 50
+			MediumCavalry: 60
+			HeavyCavalry: 55
 			HeavyBuilding: 40
 			Concrete: 25   
 			Spectral: 20

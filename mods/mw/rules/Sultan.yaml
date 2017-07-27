@@ -750,11 +750,11 @@ SULNUK2:
 		Ammount: 11
 		SpawnOffset: -469,853,0
 		ExitCell: 1,2
-	WithFreeSpawnableActor@Chicken2:
-		SpawnActor: mwchick1
-		Offset: -469,853,0
-		MoveOffset:1,2
-		SpawnStart: false
+	#WithFreeSpawnableActor@Chicken2:
+	#	SpawnActor: mwchick1
+	#	Offset: -469,853,0
+	#	MoveOffset:1,2
+	#	SpawnStart: false
  
 SULNUKE:
 	Inherits: ^MWBaseBuilding
@@ -815,11 +815,10 @@ SULNUKE:
 		Ammount: 6
 		SpawnOffset: 0,426,0
 		ExitCell: 1,2
-	WithFreeSpawnableActor@Chicken2:
-		SpawnActor: mwchick1
-		Offset: 0,426,0
-		MoveOffset:1,2
-		SpawnStart: false
+	#WithFreeSpawnableActor@Chicken2:
+	#	SpawnActor: mwchick1
+	#	MoveOffset:1,2
+	#	SpawnStart: false
 		
 SULBARR:
 	Inherits: ^MWBaseBuilding
@@ -1148,6 +1147,7 @@ SULTOW1:
 		Description: Grants access to advanced tech at the barracks.\n  Allows Supportpower I \n  Heals surrounding units.\n\n
 		Queue: MTech.SUL
 		BuildLimit: 1
+		BuildDuration: 1200
 	
 		
 SULTOW2:
@@ -1167,6 +1167,7 @@ SULTOW2:
 		Description: Grants access to advanced tech at the School of Mystic Teachings.\n\n\n\n
 		Queue: MTech.SUL
 		BuildLimit: 1
+		BuildDuration: 1400
 		
 SULTOW3:
 	AlwaysVisible:
@@ -1187,6 +1188,7 @@ SULTOW3:
 		Description: Grants access to advanced tech and support powers at the Siege Workshop.\n\n\n\n
 		Queue: MTech.SUL
 		BuildLimit: 1
+		BuildDuration: 1300
 		
 SULTOW4:
 	AlwaysVisible:
@@ -1207,6 +1209,7 @@ SULTOW4:
 		Description: Grants access to superb tech and super weapons.\n\n\n\n
 		Queue: MTech.SUL
 		BuildLimit: 1
+		BuildDuration: 2500
 		
 SULMILL:
 	Inherits: ^MWBaseBuilding

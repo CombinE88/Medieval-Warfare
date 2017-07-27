@@ -823,11 +823,11 @@ NUK2NEW:
 		Ammount: 8
 		SpawnOffset: 128,811,0
 		ExitCell: 1,2
-	WithFreeSpawnableActor@Chicken:
-		SpawnActor: mwchick1
-		Offset: 128,811,0
-		MoveOffset:1,2
-		SpawnStart: false
+	#WithFreeSpawnableActor@Chicken:
+	#	SpawnActor: mwchick1
+	#	Offset: 128,811,0
+	#	MoveOffset:1,2
+	#	SpawnStart: false
 		
 NUKXL:
 	Inherits: ^MWBaseBuilding
@@ -898,16 +898,16 @@ NUKXL:
 		Ammount: 15
 		SpawnOffset: 938,725,0
 		ExitCell: 2,2
-	WithFreeSpawnableActor@Chicken:
-		SpawnActor: mwchick1
-		Offset: 938,725,0
-		MoveOffset:2,2
-		SpawnStart: false
-	WithFreeSpawnableActor@Chicken2:
-		SpawnActor: mwchick1
-		Offset: 938,725,0
-		MoveOffset:2,2
-		SpawnStart: false
+	#WithFreeSpawnableActor@Chicken:
+	#	SpawnActor: mwchick1
+	#	Offset: 938,725,0
+	#	MoveOffset:2,2
+	#	SpawnStart: false
+	#WithFreeSpawnableActor@Chicken2:
+	#	SpawnActor: mwchick1
+	#	Offset: 938,725,0
+	#	MoveOffset:2,2
+	#	SpawnStart: false
  
 NUKENEW:
 	Inherits: ^MWBaseBuilding
@@ -968,11 +968,11 @@ NUKENEW:
 		Ammount: 4
 		SpawnOffset: -384,597,0
 		ExitCell: 0,2
-	WithFreeSpawnableActor@Chicken:
-		SpawnActor: mwchick1
-		Offset: -384,597,0
-		MoveOffset: 0,2
-		SpawnStart: false
+	#WithFreeSpawnableActor@Chicken:
+	#	SpawnActor: mwchick1
+	#	Offset: -384,597,0
+	#	MoveOffset: 0,2
+	#	SpawnStart: false
 XLTNT1:
 	Inherits: ^MWBaseBuilding
 	Inherits@Hitshape: ^2x2Shape
@@ -995,7 +995,7 @@ XLTNT1:
 		BuildPaletteOrder: 60
 		Prerequisites: anyhq, ~scaffold
 		Queue: MBuilding.Nod
-		Description: Provides more livingspace. Livingspace increases over time by generating peasants.\nCan hold up to 6 peasants, spawntime depends on number of shacks and large huts. \ncheaper than the standard Shack.\n\n\n\n
+		Description: Provides more livingspace. Livingspace increases over time by generating peasants.\nCan hold up to 8 peasants, spawntime depends on number of shacks and large huts. \ncheaper than the standard Shack.\n\n\n\n
 	Building:
 		Footprint: xx xx ==
 		Dimensions: 2,3
@@ -1039,14 +1039,14 @@ XLTNT1:
 		Pieces: 1, 2
 		Range: 1c0, 5c0
 	ProvidesLivingspace:
-		Ammount: 6
+		Ammount: 8
 		SpawnOffset: 256,768,0
 		ExitCell: 1,2
-	WithFreeSpawnableActor@Chicken:
-		SpawnActor: mwchick1
-		Offset: 256,768,0
-		MoveOffset: 1,2
-		SpawnStart: false
+	#WithFreeSpawnableActor@Chicken:
+	#	SpawnActor: mwchick1
+	#	Offset: 256,768,0
+	#	MoveOffset: 1,2
+	#	SpawnStart: false
 		
 XLTNT2:
 	Inherits: XLTNT1
@@ -1150,11 +1150,11 @@ NODNUKE:
 		Ammount: 2
 		SpawnOffset: 256,811,0
 		ExitCell: 1,1
-	WithFreeSpawnableActor@Chicken:
-		SpawnActor: mwchick1
-		Offset: 256,811,0
-		MoveOffset: 1,1
-		SpawnStart: false
+	#WithFreeSpawnableActor@Chicken:
+	#	SpawnActor: mwchick1
+	#	Offset: 256,811,0
+	#	MoveOffset: 1,1
+	#	SpawnStart: false
  
 ZEROPROC:
 	Inherits: ^MWBaseBuilding

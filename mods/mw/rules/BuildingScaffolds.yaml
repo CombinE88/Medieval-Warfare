@@ -439,43 +439,43 @@ HQNEWNOD.SCAFF:
 		DeathType: FinishedDeath
 	ExternalCondition@buildfurther: 
 		Condition: Construct
-		TotalCap: 42
+		TotalCap: 74
 	ExternalCondition@Deliverfurther:
 		Condition: DeliveredResources
-		TotalCap: 42
+		TotalCap: 74
 	Targetable@buildfurther: 
 		TargetTypes: Buildable
-		RequiresCondition: DeliveredResources > Construct && (42 - Construct) > 0
+		RequiresCondition: DeliveredResources > Construct && (74 - Construct) > 0
 	Targetable@deliverresources: 
 		TargetTypes: Deliverable
-		RequiresCondition: 42 > DeliveredResources
+		RequiresCondition: 74 > DeliveredResources
 	SelfHealing@Finished:
 		PercentageStep: -200
 		HealIfBelow: 110
 		Delay: 1
-		RequiresCondition: (42 - Construct) <= 0
+		RequiresCondition: (74 - Construct) <= 0
 		DamageTypes: FinishedDeath
 	WithIdleOverlay@base1:
 		Sequence: make1
-		RequiresCondition: Construct > 5 && Construct < 10
+		RequiresCondition: Construct > 10 && Construct < 22
 	WithIdleOverlay@base2:
 		Sequence: make2
-		RequiresCondition: Construct >= 10 && Construct < 14
+		RequiresCondition: Construct >= 22 && Construct < 23
 	WithIdleOverlay@base3:
 		Sequence: make3
-		RequiresCondition: Construct >= 14 && Construct < 20
+		RequiresCondition: Construct >= 23 && Construct < 34
 	WithIdleOverlay@base4:
 		Sequence: make4
-		RequiresCondition: Construct >= 20 && Construct < 26
+		RequiresCondition: Construct >= 34 && Construct < 45
 	WithIdleOverlay@base5:
 		Sequence: make5
-		RequiresCondition: Construct >= 26 && Construct < 32
+		RequiresCondition: Construct >= 45 && Construct < 55
 	WithIdleOverlay@base6:
 		Sequence: make6
-		RequiresCondition: Construct >= 32 && Construct < 38
+		RequiresCondition: Construct >= 55 && Construct < 64
 	WithIdleOverlay@base7:
 		Sequence: make7
-		RequiresCondition: Construct >= 38
+		RequiresCondition: Construct >= 64
 
 ARMORYNOD.SCAFF:
 	Inherits: ^2x2SITE
@@ -515,37 +515,37 @@ ARMORYNOD.SCAFF:
 		DeathType: FinishedDeath
 	ExternalCondition@buildfurther: 
 		Condition: Construct
-		TotalCap: 55
+		TotalCap: 86
 	ExternalCondition@Deliverfurther:
 		Condition: DeliveredResources
-		TotalCap: 55
+		TotalCap: 86
 	Targetable@buildfurther: 
 		TargetTypes: Buildable
-		RequiresCondition: DeliveredResources > Construct && (55 - Construct) > 0
+		RequiresCondition: DeliveredResources > Construct && (86 - Construct) > 0
 	Targetable@deliverresources: 
 		TargetTypes: Deliverable
-		RequiresCondition: 55 > DeliveredResources
+		RequiresCondition: 86 > DeliveredResources
 	SelfHealing@Finished:
 		PercentageStep: -200
 		HealIfBelow: 110
 		Delay: 1
-		RequiresCondition: (55 - Construct) <= 0
+		RequiresCondition: (86 - Construct) <= 0
 		DamageTypes: FinishedDeath
 	WithIdleOverlay@base1:
 		Sequence: make1
-		RequiresCondition: Construct > 5 && Construct < 15
+		RequiresCondition: Construct > 5 && Construct < 20
 	WithIdleOverlay@base2:
 		Sequence: make2
-		RequiresCondition: Construct >= 15 && Construct < 25
+		RequiresCondition: Construct >= 20 && Construct < 40
 	WithIdleOverlay@base3:
 		Sequence: make3
-		RequiresCondition: Construct >= 25 && Construct < 35
+		RequiresCondition: Construct >= 40 && Construct < 60
 	WithIdleOverlay@base4:
 		Sequence: make4
-		RequiresCondition: Construct >= 35 && Construct < 45
+		RequiresCondition: Construct >= 60 && Construct < 80
 	WithIdleOverlay@base5:
 		Sequence: make5
-		RequiresCondition: Construct >= 45
+		RequiresCondition: Construct >= 80
 
 ARMORYGDI.SCAFF:
 	Inherits: ^2x2SITE
@@ -585,37 +585,37 @@ ARMORYGDI.SCAFF:
 		DeathType: FinishedDeath
 	ExternalCondition@buildfurther: 
 		Condition: Construct
-		TotalCap: 55
+		TotalCap: 90
 	ExternalCondition@Deliverfurther:
 		Condition: DeliveredResources
-		TotalCap: 55
+		TotalCap: 90
 	Targetable@buildfurther: 
 		TargetTypes: Buildable
-		RequiresCondition: DeliveredResources > Construct && (55 - Construct) > 0
+		RequiresCondition: DeliveredResources > Construct && (90 - Construct) > 0
 	Targetable@deliverresources: 
 		TargetTypes: Deliverable
-		RequiresCondition: 55 > DeliveredResources
+		RequiresCondition: 90 > DeliveredResources
 	SelfHealing@Finished:
 		PercentageStep: -200
 		HealIfBelow: 110
 		Delay: 1
-		RequiresCondition: (55 - Construct) <= 0
+		RequiresCondition: (90 - Construct) <= 0
 		DamageTypes: FinishedDeath
 	WithIdleOverlay@base1:
 		Sequence: make1
-		RequiresCondition: Construct > 5 && Construct < 15
+		RequiresCondition: Construct > 5 && Construct < 20
 	WithIdleOverlay@base2:
 		Sequence: make2
-		RequiresCondition: Construct >= 15 && Construct < 25
+		RequiresCondition: Construct >= 20 && Construct < 40
 	WithIdleOverlay@base3:
 		Sequence: make3
-		RequiresCondition: Construct >= 25 && Construct < 35
+		RequiresCondition: Construct >= 40 && Construct < 60
 	WithIdleOverlay@base4:
 		Sequence: make4
-		RequiresCondition: Construct >= 35 && Construct < 45
+		RequiresCondition: Construct >= 60 && Construct < 80
 	WithIdleOverlay@base5:
 		Sequence: make5
-		RequiresCondition: Construct >= 45
+		RequiresCondition: Construct >= 80
 
 NUK2NEW.SCAFF:
 	Inherits: ^2x2SITE

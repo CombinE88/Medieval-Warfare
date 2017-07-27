@@ -413,7 +413,7 @@ ROSS5:
 		Prerequisites: anyarmory
 		Description: Heavily armored and very slow.\n  Strong vs Everything (+Spectral Units)\n  Weak vs Long-ranged weapons\n  Can attack Aircrafts\n\nTrains: 2 Peasant\n\n
 		Queue: MVehicle.GDI
-		BuildDuration: 600
+		BuildDuration: 1300
 	Mobile:
 		SharesCell: false
 		Crushes: crate, infantry

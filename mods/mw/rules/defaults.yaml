@@ -132,7 +132,7 @@
 	AutoTargetPriority@DEFAULT:
 		ValidTargets: Infantry, Vehicle, Creep, Water, Defense, Cavalry, Siege
 		InvalidTargets: NoAutoTarget, Wall
-        Priority: 2
+        Priority: 3
 	AutoTargetPriority@ATTACKANYTHING:
 		ValidTargets: Structure
 		InvalidTargets: NoAutoTarget, Wall
@@ -154,7 +154,7 @@
 	AutoTargetPriority@DEFAULT:
 		ValidTargets: Infantry, Vehicle, Creep, Water, Defense, Cavalry, Siege, Air
 		InvalidTargets: NoAutoTarget, Wall
-        Priority: 2
+        Priority: 3
 	AutoTargetPriority@ATTACKANYTHING:
 		ValidTargets: Structure
 		InvalidTargets: NoAutoTarget, Wall
