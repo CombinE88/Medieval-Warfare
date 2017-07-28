@@ -250,6 +250,10 @@ ENGENEER:
 		Weapon: BuildConstruction
 		TargetStances: Ally
 		ForceTargetStances: None
+    Armament@RepairEngine:
+		Weapon: Repair
+		TargetStances: Ally
+		ForceTargetStances: None
 	AttackFrontal:
 	RenderSprites:
 		FactionImages:
@@ -395,7 +399,7 @@ E3NEW:
 	Mobile:
 		Speed: 56
 	Health:
-		HP: 12500
+		HP: 11500
 	Armament:
 		Weapon: broadsword
 	AttackFrontal:
@@ -431,7 +435,7 @@ E3NEWV2:
 	Mobile:
 		Speed: 56
 	Health:
-		HP: 11500
+		HP: 14000
 	Armament:
 		Weapon: broadsword
 	AttackFrontal:
@@ -759,7 +763,8 @@ RMBONEW:
 		DefaultAttackSequence: shoot
 	Armor:
 		Type: Heavy
-	Voiced:
+	WithMuzzleOverlay:
+ 	Voiced:
 		VoiceSet: PaladinVoice
 	PersonValued:
 		ActorCount: 1
@@ -1503,9 +1508,6 @@ TRANSPORTER:
 			nod: transporter
 			gdi: transporter
 			sul: sultransporter
-	WithInfantryBody:
-		MoveSequence: run
-		StandSequences: stand
 	Armor:
 		Type: Leather
 	-Selectable:
@@ -1522,6 +1524,15 @@ TRANSPORTER:
 	AttackMove:
 	ExternalCondition@Loading:
 		Condition: Loading
+	WithFacingSpriteBody:
+    WithInfantryBody:
+		MoveSequence: run
+		StandSequences: stand
+		RequiresCondition: !EmptyGoods
+	WithInfantryBody@Empty:
+		MoveSequence: runempty
+		StandSequences: standempty
+		RequiresCondition: EmptyGoods
 	Armament@Unload:
 		Weapon: LaborourUnload
 		Name: primary

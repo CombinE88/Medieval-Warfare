@@ -1,4 +1,6 @@
 transporter:
+	idle: ironore4
+		Start: 9 
 	stunned: sulm4
 		ZOffset: 125
 		Start: 312
@@ -64,6 +66,8 @@ transporter:
 		Tick: 80
 
 sultransporter:
+	idle: ironore4
+		Start: 9 
 	stunned: sulm4
 		ZOffset: 125
 		Start: 312
@@ -1035,6 +1039,7 @@ rmbonew:
 		AddExtension: False  
 	muzzle: rmbonew
 		Start: 242
+        Offset: 0,6
 		Facings: 8
 		Length: 7
 		Tick: 100

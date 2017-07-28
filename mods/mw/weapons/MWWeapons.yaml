@@ -243,8 +243,7 @@ WanderAttackWorkshop:
 WoodDeadLoot:
 	ValidTargets: LLumber
     Projectile: InstantHit
-	Warhead@Loot: GrantSingletonCondition
-		Range: 0c512
+	Warhead@Loot: GrantExternalCondition
 		Range: 2c0
 		Duration: 650
 		ValidTargets: LLumber
@@ -304,7 +303,7 @@ LumberGrantLootAttack:
 	Range: 1c712
 	Projectile: Bullet
 		Speed: 1c682
-	Warhead@Trade: GrantSingletonCondition
+	Warhead@Trade: GrantExternalCondition
 		ValidTargets: LumberShack
 		Range: 1c512
 		Duration: 250
@@ -344,30 +343,15 @@ Repair:
 	ReloadDelay: 25
 	Range: 1c800
 	Report: repair01.aud
-	ValidTargets: Structure, Siege
-	InvalidTargets: Air, Wall
-	Projectile: Bullet
-		Speed: 1c682
-	Warhead@1Dam: SpreadDamage
-		Spread: 213
-		Damage: -400
-		ValidTargets: Structure, Siege
-		InvalidTargets: Air, Wall
-        
-RepairWall:
-	ReloadDelay: 25
-	Range: 1c800
-	Report: repair01.aud
-	ValidTargets: Wall
+	ValidTargets: Siege
 	InvalidTargets: Air
 	Projectile: Bullet
 		Speed: 1c682
 	Warhead@1Dam: SpreadDamage
 		Spread: 213
-		Damage: -1000
-		ValidTargets: Wall
+		Damage: -400
+		ValidTargets: Siege
 		InvalidTargets: Air
-
 		
 Fork:
 	ReloadDelay: 35
@@ -379,13 +363,13 @@ Fork:
 		Speed: 1c682
 	Warhead@1Dam: SpreadDamage
 		Spread: 75
-		Damage: 600
+		Damage: 1000
 		InvalidTargets: Wall
 		InvalidTargets: Air
 		Versus:
-			Leather: 50
-			Light: 50
-			Heavy: 45
+			Leather: 100
+			Light: 80
+			Heavy: 60
 			Concrete: 25
 			HeavyBuilding: 35
 			Knight: 30
@@ -433,6 +417,7 @@ PikeSpread:
 		Damage: 4000
 		ValidTargets: Ground, Trees
 		InvalidTargets: Air
+        ValidStances: Enemy, Neutral  
 		Versus:
 			Leather: 20
 			Light: 20
@@ -485,6 +470,7 @@ PikeAxe:
 		Damage: 2950
 		ValidTargets: Ground, Trees
 		InvalidTargets: Air
+        ValidStances: Enemy, Neutral
 		Versus:
 			Leather: 25
 			Light: 25
@@ -513,6 +499,7 @@ MammothPike:
 		InvalidTargets: Air
 		Spread: 180
 		Damage: 4300
+        ValidStances: Enemy, Neutral 
 		Versus:
 			Leather: 35
 			Light: 35
@@ -1501,12 +1488,12 @@ LongBowNArrow:
 	Range: 8c512
 	MinRange: 0c512
 	Burst: 4
-	BurstDelay: 0
+	BurstDelay: 1
 	ValidTargets: Ground
 	Report: arrow01.aud, arrow02.aud, arrow02.aud
 	InvalidTargets: Wall, Air
 	Projectile: Bullet
-		Speed: 250
+		Speed: 350
 		Blockable: false
 		LaunchAngle: 96
 		Inaccuracy: 1c0
@@ -1953,7 +1940,7 @@ SiegeBalista:
 	InvalidTargets: Air
 	Report: Balista01.aud
 	Projectile: Bullet
-		Speed: 400
+		Speed: 500
 		Blockable: false
 		LaunchAngle: 66
 		Inaccuracy: 0c256
@@ -1961,7 +1948,7 @@ SiegeBalista:
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
 		Spread: 250
-		Damage: 10000
+		Damage: 13000
 		ValidTargets: Ground
 		InvalidTargets: Air
 		Versus:
@@ -2012,8 +1999,8 @@ SiegeBoulder:
 			Concrete: 100
 			Knight: 50
 			LightCavalry: 100
-			MediumCavalry: 80
-			HeavyCavalry: 75
+			MediumCavalry: 85
+			HeavyCavalry: 80
 			HeavyBuilding: 100
 			Spectral: 35
 		DamageTypes: Prone50Percent, TriggerProne, BallistaDeath
@@ -2180,7 +2167,7 @@ Battering:
 	ReloadDelay: 160
 	Range: 1c800
 	Report: battering01.aud
-	ValidTargets: Structure, Wall
+	ValidTargets: Structure, Wall, Siege
 	Projectile: Bullet
 		Speed: 1c682
 	Warhead@1Dam: SpreadDamage
@@ -2197,7 +2184,7 @@ Battering:
 			MediumCavalry: 100
 			HeavyCavalry: 100
 			HeavyBuilding: 200
-		ValidTargets: Structure, Wall
+		ValidTargets: Structure, Wall, Siege
 
 KingCrossbow:
 	ReloadDelay: 70
@@ -2440,15 +2427,15 @@ BallonCrossbow:
 		Spread: 141
 		InvalidTargets: Wall
 		ValidTargets: Air, Ground
-		Damage: 3500
+		Damage: 3600
 		Versus:
 			Leather: 100
 			Light: 100
 			Heavy: 90
 			Knight: 25
-			LightCavalry: 75
-			MediumCavalry: 55
-			HeavyCavalry: 40
+			LightCavalry: 95
+			MediumCavalry: 80
+			HeavyCavalry: 70
 			HeavyBuilding: 75
 			Concrete: 50   
 			Spectral: 20

@@ -578,3 +578,81 @@ order-icons: chromeMW.png
 
 dropdown: chrome.png
 	separator: 64,1,1,19
+
+command-button: chrome.png
+
+command-button-hover: chrome.png
+	background: 2,130,60,60
+
+command-button-disabled: chrome.png
+
+command-button-pressed: chrome.png
+	background: 66,194,60,60
+
+command-button-highlighted: chrome.png
+	background: 257,129,30,30
+
+command-button-highlighted-hover: chrome.png
+	background: 289,129,30,30
+
+command-button-highlighted-pressed: chrome.png
+	background: 257,161,30,30
+
+command-button-highlighted-disabled: chrome.png
+	background: 289,161,30,30
+
+stance-button: chrome.png
+	background: 2,194,60,60
+
+stance-button-hover: chrome.png
+	background: 2,130,60,60
+
+stance-button-disabled: chrome.png
+	background: 66,130,60,60
+
+stance-button-pressed: chrome.png
+	background: 66,194,60,60
+
+stance-button-highlighted: chrome.png
+	background: 257,129,30,30
+
+stance-button-highlighted-hover: chrome.png
+	background: 289,129,30,30
+
+stance-button-highlighted-pressed: chrome.png
+	background: 257,161,30,30
+
+stance-button-highlighted-disabled: chrome.png
+	background: 289,161,30,30
+    
+command-icons: chrome.png
+	attack-move: 256,192,24,24
+	attack-move-disabled: 256,216,24,24
+	force-move: 280,192,24,24
+	force-move-disabled: 280,216,24,24
+	force-attack: 303,192,24,24
+	force-attack-disabled: 303,216,24,24
+	guard: 328,192,24,24
+	guard-disabled: 328,216,24,24
+	deploy: 352,192,24,24
+	deploy-disabled: 352,216,24,24
+	scatter: 376,192,24,24
+	scatter-disabled: 376,216,24,24
+	stop: 400,192,24,24
+	stop-disabled: 400,216,24,24
+	queue-orders: 423,192,24,24
+	queue-orders-disabled: 423,216,24,24
+
+stance-icons: chrome.png
+	attack-anything: 256,240,16,16
+	attack-anything-disabled: 272,240,16,16
+	attack-anything-active: 288,240,16,16
+	defend: 304,240,16,16
+	defend-disabled: 320,240,16,16
+	defend-active: 336,240,16,16
+	return-fire: 352,240,16,16
+	return-fire-disabled: 368,240,16,16
+	return-fire-active: 384,240,16,16
+	hold-fire: 400,240,16,16
+	hold-fire-disabled: 416,240,16,16
+	hold-fire-active: 432,240,16,16

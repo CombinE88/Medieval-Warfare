@@ -1381,6 +1381,7 @@ castle:
 castle2:
 	Inherits: ^scaffold
 	idle: castle2
+        Offset: 0,-12,0
 	damaged-idle: castle2
 		Offset: 0,-12,0
 		Start: 1

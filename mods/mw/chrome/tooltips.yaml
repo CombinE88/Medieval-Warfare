@@ -8,7 +8,7 @@ Background@SIMPLE_TOOLTIP:
 			Height: 19
 		Label@LABEL:
 			X: 5
-			Y: 0-2
+			Y: 0 - 2
 			Height: 23
 			Font: Bold
 
@@ -26,6 +26,34 @@ Background@BUTTON_TOOLTIP:
 			TextColor: FFFF00
 			Height: 23
 			Font: Bold
+		Label@DESC:
+			X: 5
+			Y: 23
+			Height: 12
+			Font: TinyBold
+			VAlign: Top
+
+Background@BUTTON_WITH_DESC_HIGHLIGHT_TOOLTIP:
+	Logic: ButtonTooltipWithDescHighlightLogic
+		Highlight: FFFF00
+	Background: panel-black
+	Height: 25
+	Children:
+		Label@LABEL:
+			X: 5
+			Height: 23
+			Font: Bold
+		Label@HOTKEY:
+			Visible: false
+			TextColor: FFFF00
+			Height: 23
+			Font: Bold
+		Label@DESC:
+			X: 5
+			Y: 23
+			Height: 12
+			Font: TinyBold
+			VAlign: Top
 
 Background@WORLD_TOOLTIP:
 	Logic: WorldTooltipLogic
@@ -59,8 +87,8 @@ Background@WORLD_TOOLTIP:
 Background@PRODUCTION_TOOLTIP:
 	Logic: ProductionTooltipLogic
 	Background: panel-black
-	Width: 235
-	Height: 140
+	Width: 200
+	Height: 65
 	Children:
 		Label@NAME:
 			X: 5
@@ -85,44 +113,29 @@ Background@PRODUCTION_TOOLTIP:
 			VAlign: Top
 		Image@COST_ICON:
 			Y: 5
-            X: 9
 			Width: 16
 			ImageCollection: sidebar-bits
 			ImageName: production-tooltip-cost
 		Label@COST:
-            Y: 17
-            X: 2
+			Height: 23
 			Font: Bold
 		Image@TIME_ICON:
-			Y: 31
-            X: 9
+			X: 3
+			Y: 24
 			Width: 16
 			ImageCollection: sidebar-bits
 			ImageName: production-tooltip-time
 		Label@TIME:
-			Y: 42
-            X: 2
+			Y: 19
+			Height: 23
 			Font: Bold
 		Image@POWER_ICON:
-			Y: 57
-            X: 9
+			Y: 44
 			Width: 16
 			ImageCollection: sidebar-bits
 			ImageName: production-tooltip-power
 		Label@POWER:
-			Y: 57
-            X: 2
-			Height: 23
-			Font: Bold
-        Image@ACTORS_ICON:
-			Y: 57+26
-            X: 9
-			Width: 16
-			ImageCollection: sidebar-bits
-			ImageName: production-tooltip-power
-		Label@ACTORS:
-			Y: 57+26
-            X: 2
+			Y: 39
 			Height: 23
 			Font: Bold
 
@@ -232,22 +245,3 @@ Background@INGAME_CLIENT_TOOLTIP:
 			Height: 10
 			Font: TinyBold
 			Align: Center
-
-Background@FACTION_DESCRIPTION_TOOLTIP:
-	Logic: FactionTooltipLogic
-	Background: panel-black
-	Children:
-		Label@HEADER:
-			X: 7
-			Y: 6
-			Width: 8
-			Height: 12
-			Font: Bold
-			VAlign: Top
-		Label@DESCRIPTION:
-			X: 14
-			Y: 0
-			Width: 15
-			Height: 14
-			Font: TinyBold
-			VAlign: Top

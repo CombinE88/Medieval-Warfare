@@ -410,7 +410,7 @@ ROSS5:
 	Buildable:
 		IconPalette: raicon
 		BuildPaletteOrder: 30
-		Prerequisites: anyarmory
+		Prerequisites: anycastle
 		Description: Heavily armored and very slow.\n  Strong vs Everything (+Spectral Units)\n  Weak vs Long-ranged weapons\n  Can attack Aircrafts\n\nTrains: 2 Peasant\n\n
 		Queue: MVehicle.GDI
 		BuildDuration: 1300
@@ -491,7 +491,7 @@ ROSS3:
 		BuildDuration: 450
 	Mobile:
 		SharesCell: false
-		TurnSpeed: 8
+		TurnSpeed: 12
 		Speed: 99
 	RevealsShroud:
 		Range: 8c0
@@ -504,6 +504,7 @@ ROSS3:
 		Weapon: longbownarrowair
 		LocalOffset: 0,0,500
 	AttackFrontal:
+		FacingTolerance: 10
 	AutoTarget:
 		ScanRadius: 6
 		InitialStance: AttackAnything

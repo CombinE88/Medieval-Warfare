@@ -48,8 +48,6 @@ namespace OpenRA.Mods.Cnc.Activities
 			
 			rearmTarget.Trait<DockManager>().ReserveDock(rearmTarget, self, this);
 			return NextActivity;
-
-			return this;
 		}
 
 		Activity IDockActivity.ApproachDockActivities(Actor host, Actor client, Dock dock)

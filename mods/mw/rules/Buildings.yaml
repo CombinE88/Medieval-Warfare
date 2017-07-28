@@ -1112,8 +1112,9 @@ NODNUKE:
 		IconPalette: raicon
 		BuildPaletteOrder: 10
 		Prerequisites: factnew
-		Description: Generates livingspace. Livingspace increases over time by generating peasants.\nCan hold up to 2 peasants, spawntime depends on number of shacks and large huts.\nA tent can be plopped down instant.\n\n\n
+		Description: Generates livingspace. Livingspace increases over time by generating peasants.\nCan hold up to 3 peasants, spawntime depends on number of shacks and large huts.\nA tent can be plopped down instant.\n\n\n
 		Queue: MBuilding.Nod
+		BuildDuration: 150
 	Building:
 		Footprint: xx ==
 		Dimensions: 2,2
@@ -1147,7 +1148,7 @@ NODNUKE:
 		Pieces: 2, 3
 		Range: 1c0, 5c0
 	ProvidesLivingspace:
-		Ammount: 2
+		Ammount: 3
 		SpawnOffset: 256,811,0
 		ExitCell: 1,1
 	#WithFreeSpawnableActor@Chicken:

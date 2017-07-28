@@ -56,7 +56,7 @@ namespace OpenRA.Mods.Cnc.Activities
                 wsb.PlayCustomAnimationRepeating(self,wsb.Info.Sequence);
                 playanim = true;
 
-                if (externalCondition != null && token != null)
+                if (externalCondition != null)
                 {
                     Game.Debug("revoke: " + token);
                     externalCondition.TryRevokeCondition(self, dockactor, token);

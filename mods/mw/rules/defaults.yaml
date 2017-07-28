@@ -179,10 +179,10 @@
 		AttackAnythingCondition: stance-attackanything
 	AutoTargetPriority@DEFAULT:
 		RequiresCondition: !stance-attackanything
-		ValidTargets: Growntree
+		ValidTargets: LargeTree, LumberShack
 	AutoTargetPriority@ATTACKANYTHING:
 		RequiresCondition: stance-attackanything
-		ValidTargets: Growntree
+		ValidTargets: LargeTree, LumberShack
 	
 ^GainsExperience:
 	GainsExperience:
@@ -2011,45 +2011,45 @@
 		
 ^MWTalker:
 	Inherits: ^MWWanderer
-	Targetable@TALKBACK:
-		TargetTypes: Talkbacks
-		RequiresCondition: Wander
-	Targetable@TALKABLE:
-		TargetTypes: Talkable
-		RequiresCondition: Wander && !Talking
-	ExternalCondition@Talker:
-		Condition: Talking
-	ExternalCondition@Backtalker:
-		Condition: Talkback
-	AttackFrontal:
-		RequiresCondition: !Wander || Talking || Talkback
-		AttackRequiresEnteringCell: True
-	AttackMove:
-		RequiresCondition: !Wander || Talking || Talkback
-	AutoTarget:
-		ScanRadius: 20
-		InitialStance: AttackAnything
-		RequiresCondition: !Wander || Talking || Talkback
-	Armament@Talking:
-		Weapon: WanderTalk
-		TargetStances: Ally
-		RequiresCondition: Talking && Wander
-	Armament@Talkback:
-		Weapon: WanderTalkback
-		TargetStances: Ally
-		RequiresCondition: Talkback && Wander
+	#Targetable@TALKBACK:
+	#	TargetTypes: Talkbacks
+	#	RequiresCondition: Wander
+	#Targetable@TALKABLE:
+	#	TargetTypes: Talkable
+	#	RequiresCondition: Wander && !Talking
+	#ExternalCondition@Talker:
+	#	Condition: Talking
+	#ExternalCondition@Backtalker:
+	#	Condition: Talkback
+	#AttackFrontal:
+	#	RequiresCondition: !Wander || Talking || Talkback
+    #   AttackRequiresEnteringCell: True
+	#AttackMove:
+	#	RequiresCondition: !Wander || Talking || Talkback
+	#AutoTarget:
+	#	ScanRadius: 20
+	#	InitialStance: AttackAnything
+	#	RequiresCondition: !Wander || Talking || Talkback
+	#Armament@Talking:
+	#	Weapon: WanderTalk
+	#	TargetStances: Ally
+	#	RequiresCondition: Talking && Wander
+	#Armament@Talkback:
+	#	Weapon: WanderTalkback
+	#	TargetStances: Ally
+	#	RequiresCondition: Talkback && Wander
 	Wanders:
 		WanderMoveRadius: 2
 		ReduceMoveRadiusDelay: 5
 		MinMoveDelay: 150
 		MaxMoveDelay: 750
 		RequiresCondition: Wander && !Talking && !Talkback
-	AttackWander@Talking: 
-		WanderMoveRadius: 2
-		ReduceMoveRadiusDelay: 5
-		MinMoveDelay: 150
-		MaxMoveDelay: 750
-		RequiresCondition: Wander && (Talking || Talkback)
+	#AttackWander@Talking: 
+	#	WanderMoveRadius: 2
+	#	ReduceMoveRadiusDelay: 5
+	#	MinMoveDelay: 150
+	#	MaxMoveDelay: 750
+	#	RequiresCondition: Wander && (Talking || Talkback)
 	ExternalCondition@SNAKES:
 		Condition: snaketrap
 	SelfHealing@SNAKES:
@@ -2238,12 +2238,15 @@
 		Sequence: treehalf
 		RequiresCondition: Heavy && Critical
 	SoundOnDamageTransition:
-		DamagedSounds: treefell.wav
+		DamagedSounds: treefell.aud
 	Targetable@Disguises:
 		TargetTypes: Disguise
 	HitShape:
 	EditorTilesetFilter:
 		Categories: Tree
+	Explodes@Tib:
+		Weapon: WoodDeadLoot
+		EmptyWeapon: WoodDeadLoot
 		
 ^ConstructionSite:
 	Inherits@1: ^ExistsInWorld

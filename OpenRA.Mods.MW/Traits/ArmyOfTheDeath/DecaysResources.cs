@@ -27,29 +27,29 @@ namespace OpenRA.Mods.Common.Traits
 
 	class DecaysResource : ConditionalTrait<DecaysResourceInfo>, ITick
 	{
-		readonly DecaysResourceInfo info;
+		readonly DecaysResourceInfo _info;
 
-		readonly ResourceType resourceType;
-		readonly ResourceLayer resLayer;
+		readonly ResourceType _resourceType;
+		readonly ResourceLayer _resLayer;
 
 		public DecaysResource(Actor self, DecaysResourceInfo info)
 			: base(info)
 		{
-			this.info = info;
-			resLayer = self.World.WorldActor.Trait<ResourceLayer>();
+			this._info = info;
+			_resLayer = self.World.WorldActor.Trait<ResourceLayer>();
 		}
 
-		int ticks;
+		int _ticks;
 
 		public void Tick(Actor self)
 		{
 			if (IsTraitDisabled)
 				return;
 
-			if (--ticks <= 0)
+			if (--_ticks <= 0)
 			{
 				Seed(self);
-				ticks = info.Interval;
+				_ticks = _info.Interval;
 			}
 		}
 
@@ -57,20 +57,20 @@ namespace OpenRA.Mods.Common.Traits
 		{
 
 			var cellone = Util.RandomWalk(self.Location, self.World.SharedRandom)
-				.Take(info.MaxRange)
+				.Take(_info.MaxRange)
 				.SkipWhile(p => !self.World.Map.Contains(p) ||
-				                (resLayer.GetResourceDensity(p) > 0 && resLayer.IsFull(p)))
+				                (_resLayer.GetResourceDensity(p) > 0 && _resLayer.IsFull(p)))
 				.Cast<CPos?>().FirstOrDefault();
 
 			if (cellone != null)
 			{
 				var cell = Util.RandomWalk(cellone.Value, self.World.SharedRandom)
-					.Take(info.MaxRange)
-					.SkipWhile(p => !self.World.Map.Contains(p) && resLayer.GetResourceDensity(p) > 0)
+					.Take(_info.MaxRange)
+					.SkipWhile(p => !self.World.Map.Contains(p) && _resLayer.GetResourceDensity(p) > 0)
 					.Cast<CPos?>().FirstOrDefault();
 
 				if (cell != null)
-					resLayer.Harvest(cell.Value);
+					_resLayer.Harvest(cell.Value);
 			}
 		}
 		

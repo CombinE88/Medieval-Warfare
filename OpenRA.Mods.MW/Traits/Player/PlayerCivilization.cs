@@ -144,7 +144,7 @@ namespace OpenRA.Traits
 				var hastownhalls = HasTownHalls > 0 ? 2 : 1;
 				
 				basecheck = nextchecktick /hastownhalls;
-				if (nextchecktick<25)
+				if (basecheck<25)
 					basecheck = 25;
 			}
 		}

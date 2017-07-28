@@ -274,29 +274,29 @@ pips:
 		Length: *
 
 overlay:
-	build-valid-desert:
-	build-valid-snow:
+	build-valid-desert: mwoverlay
+	build-valid-snow: mwoverlay
 		Start: 2
-	build-valid-temperat:
-	build-valid-winter:
-	build-valid-jungle:
-	build-invalid:
+	build-valid-temperat: mwoverlay
+	build-valid-winter: mwoverlay
+	build-valid-jungle: mwoverlay
+	build-invalid: mwoverlay
 		Start: 1
-	target-select:
+	target-select: mwoverlay
 		Start: 3
-	target-valid-desert:
-	target-valid-snow:
+	target-valid-desert: mwoverlay
+	target-valid-snow: mwoverlay
 		Start: 2
-	target-valid-temperat:
-	target-valid-winter:
-	target-valid-jungle:
-	target-invalid:
+	target-valid-temperat: mwoverlay
+	target-valid-winter: mwoverlay
+	target-valid-jungle: mwoverlay
+	target-invalid: mwoverlay
 		Start: 1
 
 editor-overlay:
-	copy: overlay
+	copy: mwoverlay
 		Start: 0
-	paste: overlay
+	paste: mwoverlay
 		Start: 1
 
 poweroff:
