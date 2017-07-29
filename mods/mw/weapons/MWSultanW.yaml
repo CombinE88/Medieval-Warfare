@@ -631,7 +631,7 @@ SnakesSmall:
 		Palette: ra
 	Warhead@1Snakes: GrantSingletonCondition
 		Range: 0c512
-		Duration: 150
+		Duration: 82
 		Condition: snaketrap
 		ValidStances: Enemy, Neutral
 	Warhead@2Dam: SpreadDamage

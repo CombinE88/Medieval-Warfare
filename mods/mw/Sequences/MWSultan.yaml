@@ -1360,6 +1360,57 @@ sularray:
 		ZOffset: -25
 		Offset: 0,-12
         
+sulminaret:
+	Inherits: ^scaffold
+	idle: 
+		Start: 21
+        Offset: 12,-37
+	damaged-idle: 
+		Start: 22
+        Offset: 12,-37
+	dead: 
+		Start: 23
+		Tick: 800
+        Offset: 12,-37
+	make: 
+		Length: 20
+        Offset: 12,-37
+		Tick: 80
+	icon: sulminareticon.shp
+		AddExtension: False
+	bib: mbGTWR
+		UseTilesetExtension: true
+		TilesetOverrides:
+			WINTER: TEMPERAT
+			JUNGLE: TEMPERAT
+			SNOW: TEMPERAT
+		Length: *
+		Offset: 0,-2
+	make1: 
+		Start: 0
+		ZOffset: -25
+        Offset: 12,-37
+	make2: 
+		Start: 5
+		ZOffset: -25
+        Offset: 12,-37
+	make3: 
+		Start: 10
+		ZOffset: -25
+        Offset: 12,-37
+	make4: 
+		Start: 13
+		ZOffset: -25
+        Offset: 12,-37
+	make5: 
+		Start: 16
+		ZOffset: -25
+        Offset: 12,-37
+	make6: 
+		Start: 18
+		ZOffset: -25
+        Offset: 12,-37
+        
 sulcnshmbr:
 	Inherits: ^sulscaffold
 	idle: 

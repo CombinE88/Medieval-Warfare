@@ -881,6 +881,79 @@ SULHALL.SCAFF:
 		Sequence: make6
 		RequiresCondition: Construct >= 75
         
+SULMINARET.SCAFF:
+	Inherits: ^1x1SITE
+	Inherits@Hitshape: ^1x1Shape
+	Armor:
+		Type: Concrete
+	RenderSprites:
+		PlayerPalette: sultanplayer
+		Image: sulminaret
+	CustomSellValue:
+		Value: 400
+	Valued:
+		Cost: 1200
+	Tooltip:
+		Name: Construction Site (Minaret)
+	Buildable:
+		IconPalette: raicon
+		BuildPaletteOrder: 25
+		Prerequisites: anyhq
+		Description: Attracts citizens to your town.\nNew Peasants will spawn faster.\n\n\n
+		Queue: MBuilding.SUL
+		BuildDuration: 25
+	Health:
+		HP: 30000
+	RevealsShroud:
+		Range: 4c0
+	WithBuildingBib:
+	Selectable:
+		Bounds: 28,96,0,-40
+	SelectionDecorations:
+		VisualBounds: 28,96,0,-40
+	WithSpriteBody:
+		RequiresCondition: inactive
+	SpawnActorOnDeath@Finsihed:
+		Probability: 100
+		Actor: SULMINARET
+		DeathType: FinishedDeath
+	ExternalCondition@buildfurther: 
+		Condition: Construct
+		TotalCap: 55
+	ExternalCondition@Deliverfurther:
+		Condition: DeliveredResources
+		TotalCap: 55
+	Targetable@buildfurther: 
+		TargetTypes: Buildable
+		RequiresCondition: DeliveredResources > Construct && (55 - Construct) > 0
+	Targetable@deliverresources: 
+		TargetTypes: Deliverable
+		RequiresCondition: 55 > DeliveredResources
+	SelfHealing@Finished:
+		PercentageStep: -200
+		HealIfBelow: 110
+		Delay: 1
+		RequiresCondition: (55 - Construct) <= 0
+		DamageTypes: FinishedDeath
+	WithIdleOverlay@base1:
+		Sequence: make1
+		RequiresCondition: Construct > 5 && Construct < 10
+	WithIdleOverlay@base2:
+		Sequence: make2
+		RequiresCondition: Construct >= 10 && Construct < 15
+	WithIdleOverlay@base3:
+		Sequence: make3
+		RequiresCondition: Construct >= 15 && Construct < 20
+	WithIdleOverlay@base4:
+		Sequence: make4
+		RequiresCondition: Construct >= 20 && Construct < 30
+	WithIdleOverlay@base5:
+		Sequence: make5
+		RequiresCondition: Construct >= 40 && Construct < 40
+	WithIdleOverlay@base6:
+		Sequence: make6
+		RequiresCondition: Construct >= 50
+        
         
 SULCNSHMBR.SCAFF:
 	Inherits: ^3x2SITE

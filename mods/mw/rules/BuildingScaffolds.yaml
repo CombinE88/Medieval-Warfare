@@ -1992,3 +1992,149 @@ TOWNHALL.SCAFF:
 	WithIdleOverlay@base6:
 		Sequence: make6
 		RequiresCondition: Construct >= 75
+        
+SCHAFOTT.SCAFF:
+	Inherits: ^2x2SITE
+	Inherits@Hitshape: ^2x2Shape
+	Armor:
+		Type: Concrete
+	RenderSprites:
+		PlayerPalette: raplayer
+		Image: schafott
+	CustomSellValue:
+		Value: 333
+	Valued:
+		Cost: 1000
+	Tooltip:
+		Name: Construction Site (Scaffold)
+	Buildable:
+		IconPalette: raicon
+		BuildPaletteOrder: 35
+		Prerequisites: anyhq
+		Description: Attracts citizens to your town.\nNew Peasants will spawn faster.\n\n\n
+		Queue: MBuilding.Nod
+		BuildDuration: 25
+	Health:
+		HP: 40000
+	RevealsShroud:
+		Range: 4c0
+	WithBuildingBib:
+	Selectable:
+		Bounds: 48,40,0,9
+	SelectionDecorations:
+		VisualBounds: 48,53,0,-4
+	WithSpriteBody:
+		RequiresCondition: inactive
+	SpawnActorOnDeath@Finsihed:
+		Probability: 100
+		Actor: SCHAFOTT
+		DeathType: FinishedDeath
+	ExternalCondition@buildfurther: 
+		Condition: Construct
+		TotalCap: 45
+	ExternalCondition@Deliverfurther:
+		Condition: DeliveredResources
+		TotalCap: 45
+	Targetable@buildfurther: 
+		TargetTypes: Buildable
+		RequiresCondition: DeliveredResources > Construct && (45 - Construct) > 0
+	Targetable@deliverresources: 
+		TargetTypes: Deliverable
+		RequiresCondition: 45 > DeliveredResources
+	SelfHealing@Finished:
+		PercentageStep: -200
+		HealIfBelow: 110
+		Delay: 1
+		RequiresCondition: (45 - Construct) <= 0
+		DamageTypes: FinishedDeath
+	WithIdleOverlay@base1:
+		Sequence: make1
+		RequiresCondition: Construct > 5 && Construct < 10
+	WithIdleOverlay@base2:
+		Sequence: make2
+		RequiresCondition: Construct >= 10 && Construct < 15
+	WithIdleOverlay@base3:
+		Sequence: make3
+		RequiresCondition: Construct >= 15 && Construct < 25
+	WithIdleOverlay@base4:
+		Sequence: make4
+		RequiresCondition: Construct >= 25 && Construct < 35
+	WithIdleOverlay@base5:
+		Sequence: make5
+		RequiresCondition: Construct >= 35 && Construct < 40
+	WithIdleOverlay@base6:
+		Sequence: make6
+		RequiresCondition: Construct >= 40
+        
+HERBALIST.SCAFF:
+	Inherits: ^2x2SITE
+	Inherits@Hitshape: ^2x2Shape
+	Armor:
+		Type: Concrete
+	RenderSprites:
+		PlayerPalette: raplayer
+		Image: herbalist
+	CustomSellValue:
+		Value: 333
+	Valued:
+		Cost: 1000
+	Tooltip:
+		Name: Construction Site (Herbalist)
+	Buildable:
+		IconPalette: raicon
+		BuildPaletteOrder: 35
+		Prerequisites: anyhq
+		Description: Attracts citizens to your town.\nNew Peasants will spawn faster.\n\n\n
+		Queue: MBuilding.GDI
+		BuildDuration: 25
+	Health:
+		HP: 40000
+	RevealsShroud:
+		Range: 4c0
+	WithBuildingBib:
+	Selectable:
+		Bounds: 48,40,0,9
+	SelectionDecorations:
+		VisualBounds: 48,53,0,-4
+	WithSpriteBody:
+		RequiresCondition: inactive
+	SpawnActorOnDeath@Finsihed:
+		Probability: 100
+		Actor: HERBALIST
+		DeathType: FinishedDeath
+	ExternalCondition@buildfurther: 
+		Condition: Construct
+		TotalCap: 45
+	ExternalCondition@Deliverfurther:
+		Condition: DeliveredResources
+		TotalCap: 45
+	Targetable@buildfurther: 
+		TargetTypes: Buildable
+		RequiresCondition: DeliveredResources > Construct && (45 - Construct) > 0
+	Targetable@deliverresources: 
+		TargetTypes: Deliverable
+		RequiresCondition: 45 > DeliveredResources
+	SelfHealing@Finished:
+		PercentageStep: -200
+		HealIfBelow: 110
+		Delay: 1
+		RequiresCondition: (45 - Construct) <= 0
+		DamageTypes: FinishedDeath
+	WithIdleOverlay@base1:
+		Sequence: make1
+		RequiresCondition: Construct > 5 && Construct < 10
+	WithIdleOverlay@base2:
+		Sequence: make2
+		RequiresCondition: Construct >= 10 && Construct < 15
+	WithIdleOverlay@base3:
+		Sequence: make3
+		RequiresCondition: Construct >= 15 && Construct < 25
+	WithIdleOverlay@base4:
+		Sequence: make4
+		RequiresCondition: Construct >= 25 && Construct < 35
+	WithIdleOverlay@base5:
+		Sequence: make5
+		RequiresCondition: Construct >= 35 && Construct < 40
+	WithIdleOverlay@base6:
+		Sequence: make6
+		RequiresCondition: Construct >= 40

@@ -101,6 +101,7 @@
     <Compile Include="Traits\HunterTraits\DeerHunter.cs" />
     <Compile Include="Traits\HunterTraits\LodgeActor.cs" />
     <Compile Include="Traits\HunterTraits\LootableBody.cs" />
+    <Compile Include="Traits\IsEarlyTownhall.cs" />
     <Compile Include="Traits\IsPeasant.cs" />
     <Compile Include="Traits\IsTownhall.cs" />
     <Compile Include="Traits\NewDisguise.cs" />

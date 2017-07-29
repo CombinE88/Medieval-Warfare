@@ -2096,6 +2096,8 @@ HOSP.Husk:
 		Notification: CivilianBuildingCaptured
 	Health:
 		HP: 125000
+	Tooltip:
+		Name: Hospital (Destroyed)
 		
 
 V19:
@@ -2485,6 +2487,90 @@ TOWNHALL:
 		MoveOffset: 1,2
 		Sticky: true
     IsTownhall:
+    
+SCHAFOTT:
+	Inherits: ^MWBaseBuilding	
+	Inherits@Hitshape: ^2x2Shape
+	Armor:
+		Type: Concrete
+	WithDeathAnimation:
+		DeathSequencePalette: raplayer
+	RenderSprites:
+		Image: schafott
+		PlayerPalette: raplayer
+	Valued:
+		Cost: 1000
+	CustomSellValue:
+		Value: 500
+	Tooltip:
+		Name: Scaffold
+	Buildable:
+		IconPalette: raicon
+		BuildPaletteOrder: 95
+		Prerequisites: anyhq, ~scaffold
+		Description: Attracts citizens to your town.\nNew Peasants will spawn faster.\n\n\n
+		Queue: MBuilding.Nod
+	Building:
+		Footprint: xx xx ==
+		Dimensions: 2,3
+		LocalCenterOffset: 0,-512,0
+	Health:
+		HP: 60000
+	RevealsShroud:
+		Range: 4c0
+	WithBuildingBib:
+	ProvidesPrerequisite@buildingname:
+	Selectable:
+		Bounds: 48,40,0,9
+	SelectionDecorations:
+		VisualBounds: 48,53,0,-4
+	ThrowsShrapnel@LARGE:
+		Weapons: LargeStone1, LargeStone1, LargeStone1, LargeStone1
+		Pieces: 1, 2
+		Range: 1c0, 5c0
+    IsAtracter:
+    
+HERBALIST:
+	Inherits: ^MWBaseBuilding	
+	Inherits@Hitshape: ^2x2Shape
+	Armor:
+		Type: Concrete
+	WithDeathAnimation:
+		DeathSequencePalette: raplayer
+	RenderSprites:
+		Image: herbalist
+		PlayerPalette: raplayer
+	Valued:
+		Cost: 1000
+	CustomSellValue:
+		Value: 500
+	Tooltip:
+		Name: Herbalist
+	Buildable:
+		IconPalette: raicon
+		BuildPaletteOrder: 95
+		Prerequisites: anyhq, ~scaffold
+		Description: Attracts citizens to your town.\nNew Peasants will spawn faster.\n\n\n
+		Queue: MBuilding.GDI
+	Building:
+		Footprint: xx xx ==
+		Dimensions: 2,3
+		LocalCenterOffset: 0,-512,0
+	Health:
+		HP: 60000
+	RevealsShroud:
+		Range: 4c0
+	WithBuildingBib:
+	ProvidesPrerequisite@buildingname:
+	Selectable:
+		Bounds: 48,40,0,9
+	SelectionDecorations:
+		VisualBounds: 48,53,0,-4
+	ThrowsShrapnel@LARGE:
+		Weapons: LargeStone1, LargeStone1, LargeStone1, LargeStone1
+		Pieces: 1, 2
+		Range: 1c0, 5c0
+    IsAtracter:
 		
 LODGE:
 	Inherits: ^MWBaseBuilding

@@ -596,6 +596,47 @@ SULHALL:
 		Sticky: true
 		FindRadius: 100
 	IsTownhall:
+    
+SULMINARET:
+	Inherits: ^MWBaseBuilding
+	Inherits@Hitshape: ^1x1Shape
+	Armor:
+		Type: Concrete
+	WithDeathAnimation:
+		DeathSequencePalette: sultanplayer
+	RenderSprites:
+		Image: sulminaret
+		PlayerPalette: sultanplayer
+	Valued:
+		Cost: 1200
+	CustomSellValue:
+		Value: 600
+	Tooltip:
+		Name: Minaret
+	Buildable:
+		IconPalette: raicon
+		BuildPaletteOrder: 100
+		Prerequisites: anyhq, ~scaffold
+		Description: Attracts citizens to your town.\nNew Peasants will spawn faster.\n\n\n
+		Queue: MBuilding.SUL
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+	WithBuildingBib:
+	Health:
+		HP: 50000
+	RevealsShroud:
+		Range: 4c0
+	ProvidesPrerequisite@buildingname:
+	Selectable:
+		Bounds: 28,96,0,-40
+	SelectionDecorations:
+		VisualBounds: 28,96,0,-40
+	ThrowsShrapnel@LARGE:
+		Weapons: LargeStone1, LargeStone1, LargeStone1, LargeStone1
+		Pieces: 1, 2
+		Range: 1c0, 5c0
+	IsAtracter:
 		
 SULARRAY:
 	Inherits: ^MWBaseBuilding
@@ -1784,7 +1825,7 @@ SULE6:
 		DeliveryBuildings: zeroproc, ghostproc, sulmill
 		Resources: Crops, Grains, Wood, Goods, Lumber, Corn
 		PipCount: 2
-		Capacity: 8
+		Capacity: 7
 		BaleLoadDelay: 30
 		BaleUnloadDelay: 5
 		SearchFromProcRadius: 25

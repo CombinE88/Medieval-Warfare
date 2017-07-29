@@ -31,6 +31,9 @@ namespace OpenRA.Traits
 		public readonly HashSet<string> TownHalls = new HashSet<string>();
 		public readonly HashSet<string> Peasants = new HashSet<string>();
 		
+		public readonly int SmallHallBonus = 30;
+		public readonly int BigHallBonus = 70;
+		
 		public object Create(ActorInitializer init) { return new PlayerCivilization(init.Self, this); }
 	}
 	
@@ -51,6 +54,7 @@ namespace OpenRA.Traits
 		public int FreePopulation;
 
 		public int HasTownHalls;
+		public int HasAttrackter;
 
 		public HashSet<Actor> PeasantPorivder = new HashSet<Actor>();
 		
@@ -141,9 +145,12 @@ namespace OpenRA.Traits
 				nextchecktick -= FreePopulation*info.SpawnModifier;
 				nextchecktick -= spawn2;
 
-				var hastownhalls = HasTownHalls > 0 ? 2 : 1;
+				var devider = 100;
 				
-				basecheck = nextchecktick /hastownhalls;
+				devider += HasAttrackter > 0 ? info.SmallHallBonus  : 0;
+				devider += HasTownHalls > 0 ? info.BigHallBonus : 0;
+					
+				basecheck = nextchecktick*100 /devider;
 				if (basecheck<25)
 					basecheck = 25;
 			}
