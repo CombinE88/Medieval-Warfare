@@ -9,9 +9,9 @@ GTWNEW:
 	RenderSprites:
 		PlayerPalette: raplayer
 	Valued:
-		Cost: 400
+		Cost: 600
 	CustomSellValue:
-		Value: 200
+		Value: 300
 	Tooltip:
 		Name: Guard Tower
 	Buildable:
@@ -349,9 +349,9 @@ GUNNEW:
 	Inherits@AUTOTARGET: ^AutoTargetGround
 	Inherits@Hitshape: ^1x1Shape
 	Valued:
-		Cost: 600
+		Cost: 700
 	CustomSellValue:
-		Value: 300
+		Value: 350
 	Tooltip:
 		Name: Gunpowder Cannon
 	Buildable:

@@ -35,14 +35,6 @@ Container@MENU_BACKGROUND:
 			Align: Center
 			Contrast: true
 			Font: tsrmedium
-		Label@INFESTED_LABEL:
-			X: WINDOW_RIGHT-128-43
-			Y: 165
-			Text: Infested Version
-			Width: 128
-			Align: Center
-			Contrast: true
-			Font: Infestmedium
 		Background@BORDER:
 			Width: WINDOW_RIGHT
 			Height: WINDOW_BOTTOM

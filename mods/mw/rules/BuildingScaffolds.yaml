@@ -1467,9 +1467,9 @@ GTWNEW.SCAFF:
 		PlayerPalette: raplayer
 		Image: gtwnew
 	CustomSellValue:
-		Value: 135
+		Value: 200
 	Valued:
-		Cost: 400
+		Cost: 600
 	Tooltip:
 		Name: Construction Site ( Guard Tower)
 	Buildable:
@@ -1543,9 +1543,9 @@ GUNNEW.SCAFF:
 		PlayerPalette: raplayer
 		Image: gunnew
 	CustomSellValue:
-		Value: 200
+		Value: 250
 	Valued:
-		Cost: 600
+		Cost: 700
 	Tooltip:
 		Name: Construction Site (Gunpowder Cannon)
 	Buildable:

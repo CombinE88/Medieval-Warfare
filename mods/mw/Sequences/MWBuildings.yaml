@@ -1949,37 +1949,37 @@ schafott:
         
 herbalist:
 	Inherits: ^scaffold
-	idle: nodnuk2
+	idle: 
+		Start: 20
+	damaged-idle: 
 		Start: 21
-	damaged-idle: nodnuk2
+	dead: 
 		Start: 22
-	dead: nodnuk2
-		Start: 23
 		Tick: 800
-	make: nodnuk2
+	make: 
 		Length: *
 		Tick: 80
 	bib: bib3
 		UseTilesetExtension: true
 		Length: *
-	icon: nodnuk2icon.shp
+	icon: herbalisticon.shp
 		AddExtension: False
-	make1: nodnuk2
+	make1: 
 		Start: 1
 		ZOffset: -25
-	make2: nodnuk2
+	make2: 
 		Start: 5
 		ZOffset: -25
-	make3: nodnuk2
+	make3: 
 		Start: 9
 		ZOffset: -25
-	make4: nodnuk2
+	make4: 
 		Start: 12
 		ZOffset: -25
-	make5: nodnuk2
+	make5: 
 		Start: 15
 		ZOffset: -25
-	make6: nodnuk2
+	make6: 
 		Start: 18
 		ZOffset: -25
 	

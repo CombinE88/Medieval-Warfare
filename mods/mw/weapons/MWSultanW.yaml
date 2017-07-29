@@ -141,9 +141,9 @@ ApprenticeFire:
 		InvalidTargets: Air, Structure, Skeleton
 		Damage: 1500
 		Versus:
-			Leather: 200
-			Light: 180
-			Heavy: 160
+			Leather: 170
+			Light: 150
+			Heavy: 135
 			Spectral: 65
 			Concrete: 85
 			Knight: 45
@@ -159,9 +159,9 @@ ApprenticeFire:
 		InvalidTargets: Air, Structure, Skeleton
 		Damage: 1500
 		Versus:
-			Leather: 200
-			Light: 180
-			Heavy: 160
+			Leather: 170
+			Light: 150
+			Heavy: 135
 			Spectral: 65
 			Concrete: 100
 			Knight: 45
@@ -175,11 +175,11 @@ ApprenticeFire:
 		Spread: 50
 		ValidTargets: Ground
 		InvalidTargets: Air, Structure, Skeleton
-		Damage: 1500
+		Damage: 1400
 		Versus:
-			Leather: 200
-			Light: 180
-			Heavy: 160
+			Leather: 170
+			Light: 150
+			Heavy: 135
 			Spectral: 65
 			Concrete: 100
 			Knight: 45
@@ -193,11 +193,11 @@ ApprenticeFire:
 		Spread: 50
 		ValidTargets: Ground
 		InvalidTargets: Air, Structure, Skeleton
-		Damage: 1500
+		Damage: 1300
 		Versus:
-			Leather: 200
-			Light: 180
-			Heavy: 160
+			Leather: 170
+			Light: 150
+			Heavy: 135
 			Spectral: 65
 			Concrete: 100
 			Knight: 45
@@ -211,11 +211,11 @@ ApprenticeFire:
 		Spread: 50
 		ValidTargets: Ground
 		InvalidTargets: Air, Structure, Skeleton
-		Damage: 1500
+		Damage: 1200
 		Versus:
-			Leather: 200
-			Light: 180
-			Heavy: 160
+			Leather: 170
+			Light: 150
+			Heavy: 135
 			Spectral: 65
 			Concrete: 100
 			Knight: 45
@@ -229,11 +229,11 @@ ApprenticeFire:
 		Spread: 50
 		ValidTargets: Ground
 		InvalidTargets: Air, Structure, Skeleton
-		Damage: 1500
+		Damage: 1100
 		Versus:
-			Leather: 200
-			Light: 180
-			Heavy: 160
+			Leather: 170
+			Light: 150
+			Heavy: 135
 			Spectral: 65
 			Concrete: 100
 			Knight: 45
