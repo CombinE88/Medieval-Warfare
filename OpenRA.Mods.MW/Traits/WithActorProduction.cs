@@ -241,6 +241,7 @@ namespace OpenRA.Mods.Mw.Traits
 							//safe in array and set underway statement +1
 							InUse.Add(actor);
 	
+							self.Owner.PlayerActor.Trait<PlayerCivilization>().SpawnStoredPeasant(self.Owner.World);
 							//beginn movement
 							actor.CancelActivity();
 							actor.QueueActivity(move.MoveTo(exit, 5));

@@ -336,6 +336,7 @@ namespace OpenRA.Mods.Mw.Traits
 
 			if ((!actor.IsInWorld || !actor.IsDead))
 			{
+				self.Owner.PlayerActor.Trait<PlayerCivilization>().SpawnStoredPeasant(self.Owner.World);
 				//beginn movement
 				actor.CancelActivity();
 				actor.QueueActivity(move.MoveTo(exit, 5));

@@ -182,18 +182,24 @@ World:
 		Factions: gdi, nod, sul
 		BaseActor: mcvnew
         SupportActors: transporter, transporter, engeneer
+        InnerSupportRadius: 4
+        OuterSupportRadius: 5
 	MPStartUnits@bunch:
 		Class: medieval3
 		ClassName: Well Populated
 		Factions: gdi, nod, sul
 		BaseActor: mcvnew
         SupportActors: mwwand1,mwwand2,mwwand3,mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12,mwwand1,mwwand2,mwwand3, transporter, transporter, transporter, engeneer,, engeneer
+        InnerSupportRadius: 4
+        OuterSupportRadius: 5
 	MPStartUnits@maximum:
 		Class: medieval4
 		ClassName: Over Populated
 		Factions: gdi, nod, sul
 		BaseActor: mcvnew
         SupportActors: mwwand1,mwwand2,mwwand3,mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12,mwwand1,mwwand2,mwwand3, mwwand5, mwwand6, mwwand10, mwwand11, transporter, transporter, transporter, transporter, transporter, transporter, engeneer, engeneer,, engeneer
+        InnerSupportRadius: 4
+        OuterSupportRadius: 5
 	SpawnMPUnits:
 		StartingUnitsClass: medieval2
 	CrateSpawner:

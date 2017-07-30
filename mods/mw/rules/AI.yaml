@@ -2,86 +2,105 @@ Player:
 	HackyAI@Olaf:
         Type: olaf
 		Name: Olaf the Barbar
-		MinimumExcessPower: 10
+		MinimumExcessPower: 0
 		BuildingCommonNames:
 			ConstructionYard: factnew
-			Refinery: procnew, zeroproc, bummler, sulmill, procnew.scaff, zeroproc.scaff, bummler.scaff, sulmill.scaff
-			Power: 
+			Refinery: sulref.scaff, sulref, procnew, zeroproc, sulmill, procnew.scaff, zeroproc.scaff, sulmill.scaff, sulcnshmbr.scaff, sulcnshmbr
+			Power: xltntuni.scaff, nodnuke, nukenew.scaff, nukenew, nuk2new.scaff, nuk2new, nodnuk2.scaff, nodnuk2, sulnuke.scaff, sulnuke, sulnuk2, sulnuk2.scaff, nukxl.scaff, nukxl
 			Barracks: barrnew,handnew,sulbarr,barrnew.scaff,handnew.scaff,sulbarr.scaff
 			VehiclesFactory: stall,nodstall,sulmystic,stall.scaff,nodstall.scaff,sulmystic.scaff
 			Production: barrnew,handnew,stall,nodstall,sulmystic,sulbarr,barrnew.scaff,handnew.scaff,stall.scaff,nodstall.scaff,sulmystic.scaff,sulbarr.scaff
 		UnitsCommonNames:
 			Mcv: mcvnew
-			ExcludeFromSquads: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, mwwand7, mwwand8, mwwand8, mwcivcom, noble1, noble2, noble3, noble4, noble5, mwconst1, mwconst2, mwconst3, mwconst4, mwconst5, mwconst6, mwconst7, mwchick1, hunter, transporter, engeneer
-		BuildingQueues: MBuilding.Nod, MBuilding.GDI, MBuilding.SUL, MBuilding2.Nod, MBuilding2.GDI, MBuilding2.SUL, MBuilding3.Nod, MBuilding3.GDI, MBuilding3.SUL
-		DefenseQueues: MDefenses.GDI, MDefenses.Nod, MDefenses.SUL
-		UnitQueues: MVehicle.Nod, MVehicle.GDI, MVehicle.SUL, MInfantry.Nod, MInfantry.GDI, MInfantry.SUL, MSiege.Nod, MSiege.GDI, MSiege.SUL, MInfantry.Horse
+			ExcludeFromSquads: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, mwwand7, mwwand8, mwwand8, mwcivcom, noble1, noble2, noble3, noble4, noble5, mwconst1, mwconst2, mwconst3, mwconst4, mwconst5, mwconst6, mwconst7, mwchick1, hunter, transporter, engeneer, sulturnxl
+		BuildingQueues: MBuilding.Nod, MBuilding.GDI, MBuilding.SUL, MTech.Nod, MTech.GDI, MTech.SUL, MResources.Nod, MResources.GDI, MResources.SUL, MMilitary.Nod, MMilitary.GDI, MMilitary.SUL
+		UnitQueues: MVehicle.Nod, MVehicle.GDI, MVehicle.SUL, MInfantry.Nod, MInfantry.GDI, MInfantry.SUL, MSiege.Nod, MSiege.GDI, MSiege.SUL
 		BuildingLimits:
-			zeroproc.scaff: 2
-			procnew.scaff: 1
+			zeroproc.scaff: 4
+			procnew.scaff: 3
+            sulref.scaff: 3
+            sulmill.scaff: 4
+            nodproc.scaff: 4
+            sulcnshmbr.scaff: 1
+            lodge.scaff: 2
+            sullodge.scaff: 2
+            #
 			barrnew.scaff: 1
 			handnew.scaff: 1
+            sulbarr.scaff: 1
+            #
 			hqnewnod.scaff: 1
 			armorygdi.scaff: 1
 			armorynod.scaff: 1
+            castle.scaff: 1
+			castle2.scaff: 1
+            sulcastle.scaff: 1
+            sultow1: 1
+            sultow2: 1
+            sultow3: 1
+            sultow4: 1
+            #
+            #gtwnew.scaff: 1
+            #gunnew.scaff: 1
+            samnew.scaff: 3
+            #sulgtw.scaff: 1
+            tribu.scaff: 4
+			bato.scaff: 5
+            #
 			stall.scaff: 1
 			nodstall.scaff: 1
-			castle.scaff: 1
-			castle2.scaff: 1
+            sulmystic.scaff: 1
+			#
 			workshopgdi.scaff: 1
 			workshopnod.scaff: 1
-            nukenew.scaff: 1
-			sulnuke.scaff: 1
-            nuk2new.scaff: 1
-			sulnuk2.scaff: 1
-			nodnuk2.scaff: 1
-            sularray: 1
-            gtwnew.scaff: 1
-            gunnew.scaff: 1
-            tribu.scaff: 1
-            bato.scaff: 1
-            samnew.scaff: 1
-            sularray.scaff: 1
-			zeroproc: 2
-			sulmill.scaff: 1
-            sulmill: 3
-			procnew: 3
-			barrnew: 2
-			sulbarr.scaff: 1
-            sulbarr: 2
-			handnew: 3
-			hqnewnod: 1
-			sulcastle.scaff: 1
-            sulcastle: 1
-			sultow1: 1
-			sultow2: 1
-			sultow3: 1
-			sultow4: 1
-			armorygdi: 1
-			armorynod: 1
-			sulfix.scaff: 2
-			sulmystic.scaff: 1
-            sulfix: 2
-			sulmystic: 3
-			stall: 3
-			nodstall: 3
-			castle: 1
-			castle2: 1
-			workshopgdi: 1
-			workshopnod: 1
+            sulfix.scaff: 1
+            #
+            #nukenew.scaff: 4
+			#sulnuke.scaff: 4
+            #nodnuke: 8
+            #
+            #nuk2new.scaff: 4
+			#sulnuk2.scaff: 7
+			#nodnuk2.scaff: 4
+            #xltntuni.scaff: 4
+            #xltnt1: 5
+            #xltnt2: 5
+            #xltnt3: 5
+            #
+            #nukxl.scaff: 3
+			#
+            schafott.scaff: 1
+            herbalist.scaff: 1
+            sulminaret.scaff: 1
+            townhall.scaff: 1
+            sulhall.scaff: 1
 		BuildingFractions:
+            lodge.scaff: 200%
+            sullodge.scaff: 200%
 			procnew.scaff: 200%
 			zeroproc.scaff: 200%
 			sulmill.scaff: 200%
-			nukenew.scaff: 200%
-			sulnuke.scaff: 200%
-            nuk2new.scaff: 200%
-            nodnuke: 200%
-			sulnuk2.scaff: 200%
-			nodnuk2.scaff: 200%
+            nodproc.scaff: 200%
+            sulcnshmbr.scaff: 100%
+            #
+            #gtwnew.scaff: 10%
+            #gunnew.scaff: 10%
+            samnew.scaff: 5%
+            #sulgtw.scaff: 10%
+            #
+			nukenew.scaff: 100%
+			sulnuke.scaff: 100%
+            nodnuke: 100%
+            nuk2new.scaff: 400%
+			sulnuk2.scaff: 400%
+			#nodnuk2.scaff: 400%
+            nukxl.scaff: 1000%
+            xltntuni.scaff: 400%
+            #
 			barrnew.scaff: 50%
 			sulbarr.scaff: 50%
 			handnew.scaff: 50%
+            #
 			hqnewnod.scaff: 50%
 			armorygdi.scaff: 50%
 			armorynod.scaff: 50%
@@ -89,19 +108,27 @@ Player:
 			sultow2: 50%
 			sultow3: 50%
 			sultow4: 50%
+            #
 			stall.scaff: 50%
 			sulmystic.scaff: 50%
-			nodstall.scaff: 50%
-			gtwnew.scaff: 50%
-			sulgtw.scaff: 50%
+			nodstall.scaff: 200%
+            #
 			tribu.scaff: 50%
 			bato.scaff: 50%
+            #
 			castle2.scaff: 50%
 			castle.scaff: 50%
 			sulcastle.scaff: 50%
+            #
 			workshopgdi.scaff: 50%
 			workshopnod.scaff: 50%
 			sulfix.scaff: 50%
+            #
+            schafott.scaff: 2%
+            herbalist.scaff: 2%
+            sulminaret.scaff: 2%
+            townhall.scaff: 2%
+            sulhall.scaff: 2%
 		UnitsToBuild:
             engeneer: 30%
 			sule1: 65%
@@ -149,7 +176,7 @@ Player:
             engeneer: 4
 			eharvxl: 6
 			e8farmer: 14
-			sule6: 20
+			sule6: 18
 		SquadSize: 15
 		SupportPowerDecision@Airstrike:
 			OrderName: CorpsePowerInfoOrder

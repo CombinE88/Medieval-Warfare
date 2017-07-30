@@ -1236,6 +1236,15 @@ ZEROPROC:
 		MoveOffset: 1,3
 		RespawnTime: 750
 		FindRadius: 100
+        
+NODPROC:
+	Inherits: ZEROPROC
+	RenderSprites:
+		Image: windmill
+	Valued:
+		Cost: 1500
+	CustomSellValue:
+		Value: 400
 		
 PROC:
 	Tooltip:

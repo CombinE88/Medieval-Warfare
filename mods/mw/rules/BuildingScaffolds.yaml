@@ -166,7 +166,7 @@ NUKXL.SCAFF:
 		Prerequisites: anyarmory
 		Queue: MBuilding.GDI
 		Description: Provides more livingspace. Livingspace increases over time by generating peasants.\nCan hold up to 15 peasants. \ncheaper than the standard Shack.\n\n\n\n
-		BuildDuration: 25
+		BuildDuration: 75
 	Health:
 		HP: 60000
 	RevealsShroud:
@@ -243,7 +243,7 @@ HANDNEW.SCAFF:
 		Prerequisites: anypower
 		Description: Trains Infantry only\n\n\n\n
 		Queue: MMilitary.Nod
-		BuildDuration: 25
+		BuildDuration: 50
 	Health:
 		HP: 32500
 	RevealsShroud:
@@ -319,7 +319,7 @@ ZEROPROC.SCAFF:
 		Prerequisites: anypower
 		Description: Provides basic resource gathering for Crops and Grain.\n Comes with 2 farmers.\n Can only operate up to 6 farmers at once.\n\n\n\n
 		Queue: MResources.GDI
-		BuildDuration: 25
+		BuildDuration: 75
 	Health:
 		HP: 40000
 	RevealsShroud:
@@ -368,9 +368,17 @@ ZEROPROC.SCAFF:
 	WithIdleOverlay@base5:
 		Sequence: make5
 		RequiresCondition: Construct >= 35
+	Refinery:
+		DockAngle: 1
+		DockOffset: 1,1
+		TickRate: 1
 		
-ZEROPROC.SCAFF.NOD:
+NODPROC.SCAFF:
 	Inherits: ZEROPROC.SCAFF
+	SpawnActorOnDeath@Finsihed:
+		Probability: 100
+		Actor: NODPROC
+		DeathType: FinishedDeath
 	RenderSprites:
 		Image: windmill
 	Valued:
@@ -381,7 +389,7 @@ ZEROPROC.SCAFF.NOD:
 		Prerequisites: anypower
 		Description: Provides basic resource gathering for Crops and Grain.\n Comes with 2 farmers.\n Can only operate up to 6 farmers at once.\n\n\n\n
 		Queue: MResources.Nod
-		BuildDuration: 25
+		BuildDuration: 75
 	ExternalCondition@buildfurther: 
 		Condition: Construct
 		TotalCap: 52
@@ -421,7 +429,7 @@ HQNEWNOD.SCAFF:
 		Prerequisites: proc
 		Queue: MTech.Nod, MTech.GDI
 		Description: Unlocks higher-tech units and buildings.\n\n\n\n
-		BuildDuration: 25
+		BuildDuration: 75
 	Health:
 		HP: 17000
 	RevealsShroud:
@@ -497,7 +505,7 @@ ARMORYNOD.SCAFF:
 		Prerequisites: anyhq
 		Queue: MTech.Nod
 		Description: Unlocks Support Powers and Raiding Squad.\nHeals Cavalry and Infantry.\n\n\n\n
-		BuildDuration: 25
+		BuildDuration: 100
 	Health:
 		HP: 22500
 	RevealsShroud:
@@ -567,7 +575,7 @@ ARMORYGDI.SCAFF:
 		Prerequisites: anyhq
 		Queue: MTech.GDI
 		Description: Unlocks Support Powers.\nHeals Cavalry and Infantry.\n\n\n\n
-		BuildDuration: 25
+		BuildDuration: 100
 	Health:
 		HP: 22500
 	RevealsShroud:
@@ -637,7 +645,7 @@ NUK2NEW.SCAFF:
 		Prerequisites: anyhq
 		Queue: MBuilding.GDI
 		Description: Provides more livingspace. Livingspace increases over time by generating peasants.\nCan hold up to 8 peasants, spawntime depends on number of shacks and large huts. \ncheaper than the standard Shack.\n\n\n\n
-		BuildDuration: 25
+		BuildDuration: 50
 	Health:
 		HP: 17500
 	RevealsShroud:
@@ -714,7 +722,7 @@ XLTNTUNI.SCAFF:
 		Prerequisites: anyhq
 		Queue: MBuilding.Nod
 		Description: Provides more livingspace. Livingspace increases over time by generating peasants.\nCan hold up to 6 peasants, spawntime depends on number of shacks and large huts. \ncheaper than the standard Shack.\n\n\n\n
-        BuildDuration: 25
+        BuildDuration: 50
 	Health:
 		HP: 17500
 	RevealsShroud:
@@ -830,7 +838,7 @@ PROCNEW.SCAFF:
 		Prerequisites: anyhq
 		Description: Processes raw ore and Gold into useable metal.\nGenerates more money than the windmill.\n\n\n\n
 		Queue: MResources.GDI, MResources.Nod
-		BuildDuration: 25
+		BuildDuration: 75
 	Health:
 		HP: 60000
 	RevealsShroud:
@@ -974,7 +982,7 @@ BARRNEW.SCAFF:
 		Prerequisites: anypower
 		Description: Trains Infantry only\n\n\n\n
 		Queue: MMilitary.GDI
-		BuildDuration: 25
+		BuildDuration: 50
 	Health:
 		HP: 25000
 	RevealsShroud:
@@ -1044,7 +1052,7 @@ STALL.SCAFF:
 		Prerequisites: proc, barracks
 		Description: Trains cavalry\n\n\n\n
 		Queue: MMilitary.GDI
-		BuildDuration: 25
+		BuildDuration: 100
 	Health:
 		HP: 50000
 	RevealsShroud:
@@ -1117,7 +1125,7 @@ NODSTALL.SCAFF:
 		Prerequisites: proc, barracks
 		Description: Trains cavalry\n\n\n\n
 		Queue: MMilitary.Nod
-		BuildDuration: 25
+		BuildDuration: 100
 	Health:
 		HP: 43000
 	RevealsShroud:
@@ -1194,7 +1202,7 @@ CASTLE.SCAFF:
 		Prerequisites: anyhq, anyarmory
 		Description: Unlocks Superweapon.\n Unlocks Heavy Cavalry, Knight's and Trebuchet.\nRequires power to operate.\nCan hold up to 4 nobles.\n\n\n\n
 		Queue: MTech.Nod
-		BuildDuration: 25
+		BuildDuration: 125
 	Health:
 		HP: 100000
 	RevealsShroud:
@@ -1271,7 +1279,7 @@ CASTLE2.SCAFF:
 		Prerequisites: anyhq, anyarmory
 		Description: Unlocks Superweapon.\n Unlocks Assassins, Crossbows and Ballista Towers.\nRequires power to operate.\nCan hold up to 4 nobles.\n\n\n\n
 		Queue: MTech.GDI
-		BuildDuration: 25
+		BuildDuration: 100
 	Health:
 		HP: 90000
 	RevealsShroud:
@@ -1344,7 +1352,7 @@ WORKSHOPNOD.SCAFF:
 		Prerequisites: proc
 		Description: Provides Siege weapons construction.\nEnables Supportpowers in combination with an Armory.\n\n\n
 		Queue: MMilitary.Nod
-		BuildDuration: 25
+		BuildDuration: 100
 	Health:
 		HP: 30000
 	RevealsShroud:
@@ -1411,7 +1419,7 @@ WORKSHOPGDI.SCAFF:
 		Prerequisites: proc
 		Description: Provides Siege weapons construction.\nEnables Supportpowers in combination with an Armory.\n\n\n
 		Queue: MMilitary.GDI
-		BuildDuration: 25
+		BuildDuration: 100
 	Health:
 		HP: 37350
 	RevealsShroud:
@@ -1478,7 +1486,7 @@ GTWNEW.SCAFF:
 		Queue: MMilitary.GDI, MMilitary.Nod
 		BuildDurationModifier: 60
 		IconPalette: raicon
-		BuildDuration: 25
+		BuildDuration: 50
 	Health:
 		HP: 20000
 	RevealsShroud:
@@ -1555,7 +1563,7 @@ GUNNEW.SCAFF:
 		Queue: MMilitary.GDI, MMilitary.Nod
 		IconPalette: raicon
 		BuildDurationModifier: 40
-		BuildDuration: 25
+		BuildDuration: 50
 	Health:
 		HP: 20000
 	RevealsShroud:
@@ -1632,7 +1640,7 @@ TRIBU.SCAFF:
 		Queue: MMilitary.Nod
 		BuildDurationModifier: 40
 		IconPalette: raicon
-		BuildDuration: 25
+		BuildDuration: 100
 	Health:
 		HP: 30000
 	RevealsShroud:
@@ -1712,7 +1720,7 @@ BATO.SCAFF:
 		Queue: MMilitary.GDI
 		BuildDurationModifier: 40
 		IconPalette: raicon
-		BuildDuration: 25
+		BuildDuration: 75
 	Health:
 		HP: 30000
 	RevealsShroud:
@@ -1794,7 +1802,7 @@ SAMNEW.SCAFF:
 		Queue: MMilitary.Nod
 		BuildDurationModifier: 40
 		IconPalette: raicon
-		BuildDuration: 25
+		BuildDuration: 50
 	Health:
 		HP: 20000
 	RevealsShroud:
@@ -1867,7 +1875,7 @@ TAVERN.SCAFF:
 		Prerequisites: barracks
 		Description: Provides 3 additional worker and 1 engineer.\n\n\n\n
 		Queue: MTech.GDI, MTech.Nod
-		BuildDuration: 25
+		BuildDuration: 50
 	Health:
 		HP: 40000
 	RevealsShroud:
@@ -1940,7 +1948,7 @@ TOWNHALL.SCAFF:
 		Prerequisites: anyarmory
 		Description: Attracts citizens to your town.\nNew Peasants will spawn faster.\n\n\n
 		Queue: MBuilding.GDI, MBuilding.Nod
-		BuildDuration: 25
+		BuildDuration: 125
 	Health:
 		HP: 60000
 	RevealsShroud:
@@ -2013,7 +2021,7 @@ SCHAFOTT.SCAFF:
 		Prerequisites: anyhq
 		Description: Attracts citizens to your town.\nNew Peasants will spawn faster.\n\n\n
 		Queue: MBuilding.Nod
-		BuildDuration: 25
+		BuildDuration: 75
 	Health:
 		HP: 40000
 	RevealsShroud:
@@ -2086,7 +2094,7 @@ HERBALIST.SCAFF:
 		Prerequisites: anyhq
 		Description: Attracts citizens to your town.\nNew Peasants will spawn faster.\n\n\n
 		Queue: MBuilding.GDI
-		BuildDuration: 25
+		BuildDuration: 75
 	Health:
 		HP: 40000
 	RevealsShroud:

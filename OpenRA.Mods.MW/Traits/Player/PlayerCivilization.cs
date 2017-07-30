@@ -25,6 +25,8 @@ namespace OpenRA.Traits
 		public readonly int Delay = 10;
 		[Desc("Each Ammount in ProvidesLivingspaces reduces this time by this modifier.")] 
 		public readonly int SpawnModifier = 1;
+		[Desc("Maximal ammount of Peasants that leave the houses at a same time (new will instantly spawn when gets lower of that point).")] 
+		public readonly int AlivePeasants = 15;
 		[Desc("Each Ammount in ProvidesLivingspaces reduces this time by this modifier for this faction.")] 
 		public readonly Dictionary<string, int> SpecialModifier = new Dictionary<string, int>();
 		
@@ -53,8 +55,11 @@ namespace OpenRA.Traits
 		
 		public int FreePopulation;
 
+		public int hiddenpeasants;
+
 		public int HasTownHalls;
 		public int HasAttrackter;
+		
 
 		public HashSet<Actor> PeasantPorivder = new HashSet<Actor>();
 		
@@ -83,45 +88,98 @@ namespace OpenRA.Traits
 		
 		public void spawnapeasant(World world)
 		{
+			
 			var SpwanPosition = RandomBuildingWithLivingspace(world);
 			if (SpwanPosition != null)
-			
 			{
-				player.World.AddFrameEndTask(w =>
+				if (Peasantpopulationvar-hiddenpeasants >= info.AlivePeasants)
 				{
-					if (SpwanPosition.Disposed || SpwanPosition.IsDead || !SpwanPosition.IsInWorld)
-						return;
-					
-					var randomspawnedpeas = info.Peasants.Random(player.World.SharedRandom);
-
-					var exitinfo = SpwanPosition.Info.TraitInfo<ProvidesLivingspaceInfo>();
-					var exit = SpwanPosition.Location + exitinfo.ExitCell;
-					var spawn = SpwanPosition.CenterPosition + exitinfo.SpawnOffset;
-					
-					var td = new TypeDictionary
+					hiddenpeasants += 1;
+					Peasantpopulationvar += 1;
+				}
+				else
+				{
+					player.World.AddFrameEndTask(w =>
 					{
+						if (SpwanPosition.Disposed || SpwanPosition.IsDead || !SpwanPosition.IsInWorld)
+							return;
+
+						var randomspawnedpeas = info.Peasants.Random(player.World.SharedRandom);
+
+						var exitinfo = SpwanPosition.Info.TraitInfo<ProvidesLivingspaceInfo>();
+						var exit = SpwanPosition.Location + exitinfo.ExitCell;
+						var spawn = SpwanPosition.CenterPosition + exitinfo.SpawnOffset;
+
+						var td = new TypeDictionary
+						{
 							new CenterPositionInit(spawn),
 							new OwnerInit(player),
 							new ParentActorInit(SpwanPosition),
 							new FactionInit(player.Faction.InternalName)
 						};
-					
-					var peas = w.CreateActor(randomspawnedpeas, td);
-					if (peas != null)
-						if (!peas.IsDead && peas.IsInWorld)
-						{
-							var move = peas.TraitOrDefault<IMove>();
-							peas.QueueActivity(move.MoveIntoWorld(peas, exit, SubCell.Any));
-						}
-				});
+
+						var peas = w.CreateActor(randomspawnedpeas, td);
+						if (peas != null)
+							if (!peas.IsDead && peas.IsInWorld)
+							{
+								var move = peas.TraitOrDefault<IMove>();
+								peas.QueueActivity(move.MoveIntoWorld(peas, exit, SubCell.Any));
+							}
+					});
+				}
 			}
 		
+		}
+		
+		public void SpawnStoredPeasant(World world)
+		{
+			if (hiddenpeasants > 0 && FreePopulation-hiddenpeasants < info.AlivePeasants)
+			{
+				var SpwanPosition = RandomBuildingWithLivingspace(world);
+				if (SpwanPosition != null)
+				{
+					hiddenpeasants -= 1;
+					Peasantpopulationvar -= 1;
+
+					player.World.AddFrameEndTask(w =>
+					{
+						if (SpwanPosition.Disposed || SpwanPosition.IsDead || !SpwanPosition.IsInWorld)
+							return;
+
+						var randomspawnedpeas = info.Peasants.Random(player.World.SharedRandom);
+
+						var exitinfo = SpwanPosition.Info.TraitInfo<ProvidesLivingspaceInfo>();
+						var exit = SpwanPosition.Location + exitinfo.ExitCell;
+						var spawn = SpwanPosition.CenterPosition + exitinfo.SpawnOffset;
+
+						var td = new TypeDictionary
+						{
+							new CenterPositionInit(spawn),
+							new OwnerInit(player),
+							new ParentActorInit(SpwanPosition),
+							new FactionInit(player.Faction.InternalName)
+						};
+
+						var peas = w.CreateActor(randomspawnedpeas, td);
+						if (peas != null)
+							if (!peas.IsDead && peas.IsInWorld)
+							{
+								var move = peas.TraitOrDefault<IMove>();
+								peas.QueueActivity(move.MoveIntoWorld(peas, exit, SubCell.Any));
+							}
+					});
+				}
+
+			}
+
 		}
 		
 
 		public void Tick(Actor self)
 		{
-			FreePopulation = MaxLivingspacevar - (WorkerPopulationvar+Peasantpopulationvar);
+			FreePopulation = (MaxLivingspacevar) - (WorkerPopulationvar+Peasantpopulationvar);
+			
+			SpawnStoredPeasant(world);
 			
 			if (FreePopulation>0)
 				basecheck--;
