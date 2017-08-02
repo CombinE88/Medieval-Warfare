@@ -58,7 +58,10 @@ namespace OpenRA.Mods.MW.Widgets.Logic
 			displayResources = player.PlayerActor.Trait<PlayerCivilization>().FreePopulation>0 ? player.PlayerActor.Trait<PlayerCivilization>().FreePopulation : 0;
 			displaymaxbeds = player.PlayerActor.Trait<PlayerCivilization>().MaxLivingspacevar;
 			
-			displayLabel = cashLabel.F(displayResources + " ( " + displaymaxbeds + " )");
+			if (player.Faction.InternalName != "ded")
+				displayLabel = "Free Beds: " + cashLabel.F(displayResources + " ( " + displaymaxbeds + " )");
+			else
+				displayLabel = "Free Graves: " + cashLabel.F(displayResources + " ( " + displaymaxbeds + " )");
 		}
 	}
 }

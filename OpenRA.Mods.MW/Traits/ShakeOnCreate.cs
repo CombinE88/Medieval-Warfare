@@ -15,7 +15,9 @@ namespace OpenRA.Mods.Common.Traits
 {
 	public class ShakeOnCreateInfo : ITraitInfo
 	{
-		public readonly int Intensity = 10;
+		public readonly int Intensity = 1;
+		
+		public readonly int Time = 10;
 		public object Create(ActorInitializer init) { return new ShakeOnCreate(this); }
 	}
 
@@ -30,7 +32,7 @@ namespace OpenRA.Mods.Common.Traits
 
 		void INotifyCreated.Created(Actor self)
 		{
-			self.World.WorldActor.Trait<ScreenShaker>().AddEffect(info.Intensity, self.CenterPosition, 1);
+			self.World.WorldActor.Trait<ScreenShaker>().AddEffect(info.Time, self.CenterPosition, info.Intensity);
 		}
 	}
 }

@@ -10,56 +10,60 @@
 #endregion
 
 using System;
-using System.Collections.Generic;
-using System.Diagnostics;
+using System.Drawing;
 using System.Linq;
-using System.Threading;
-using OpenRA.Mods.Common.Widgets;
-using OpenRA.Mods.Mw.Traits;
+using OpenRA.Mods.Common.Traits;
 using OpenRA.Traits;
 using OpenRA.Widgets;
 
-
-namespace OpenRA.Mods.MW.Widgets.Logic
+namespace OpenRA.Mods.Common.Widgets.Logic
 {
-	public class IngameUsedPopulationCounterLogic : ChromeLogic
+	public class NewCashCounterLogic : ChromeLogic
 	{
 		const float DisplayFracPerFrame = .07f;
 		const int DisplayDeltaPerFrame = 37;
 
 		readonly World world;
 		readonly Player player;
-		readonly int playerResources;
+		readonly PlayerResources playerResources;
 		readonly string cashLabel;
+
 		int nextCashTickTime = 0;
 		int displayResources;
 		string displayLabel;
-		
+
 		[ObjectCreator.UseCtor]
-		public IngameUsedPopulationCounterLogic(Widget widget, World world)
+		public NewCashCounterLogic(Widget widget, World world)
 		{
-			var pop = widget.Get<LabelWithTooltipWidget>("USEDPOP");
-			
+			var cash = widget.Get<LabelWithTooltipWidget>("CASH");
+
 			this.world = world;
 			player = world.LocalPlayer;
-			
-			cashLabel = pop.Text;
+			playerResources = player.PlayerActor.Trait<PlayerResources>();
+			displayResources = playerResources.Cash + playerResources.Resources;
+			cashLabel = cash.Text;
 			displayLabel = cashLabel.F(displayResources);
 
-			pop.GetText = () => displayLabel;
+			cash.GetText = () => displayLabel;
 
-			displayResources = player.PlayerActor.Trait<PlayerCivilization>().WorkerPopulationvar;
+			if (player.Faction.InternalName != "ded")
+			{
+				cash.TextColor = Color.Gold;
+				cash.GetTooltipText = () => "Silo Usage: {0}/{1}".F(playerResources.Resources, playerResources.ResourceCapacity);
+			}
+			else
+			{
+				cash.GetTooltipText = () => "Essence Usage: {0}/{1}".F(playerResources.Resources, playerResources.ResourceCapacity);
+				cash.TextColor = Color.DarkRed;
+			}
 		}
 
 		public override void Tick()
 		{
-			
-			
 			if (nextCashTickTime > 0)
 				nextCashTickTime--;
 
-			var actual = player.PlayerActor.Trait<PlayerCivilization>().WorkerPopulationvar;
-			Debug.Write(actual.ToString());
+			var actual = playerResources.Cash + playerResources.Resources;
 
 			var diff = Math.Abs(actual - displayResources);
 			var move = Math.Min(Math.Max((int)(diff * DisplayFracPerFrame), DisplayDeltaPerFrame), diff);
@@ -67,6 +71,9 @@ namespace OpenRA.Mods.MW.Widgets.Logic
 			if (displayResources < actual)
 			{
 				displayResources += move;
+
+				if (Game.Settings.Sound.CashTicks)
+					Game.Sound.PlayNotification(world.Map.Rules, player, "Sounds", "CashTickUp", player.Faction.InternalName);
 			}
 			else if (displayResources > actual)
 			{
@@ -74,14 +81,16 @@ namespace OpenRA.Mods.MW.Widgets.Logic
 
 				if (Game.Settings.Sound.CashTicks && nextCashTickTime == 0)
 				{
+					Game.Sound.PlayNotification(world.Map.Rules, player, "Sounds", "CashTickDown", player.Faction.InternalName);
 					nextCashTickTime = 2;
 				}
 			}
 
 			if (player.Faction.InternalName != "ded")
-				displayLabel = "Working: " + cashLabel.F(displayResources);
+				displayLabel = "Gold: " + cashLabel.F(displayResources);
 			else
-				displayLabel = "Ressurected: " + cashLabel.F(displayResources);
+				displayLabel = "Essence: " + cashLabel.F(displayResources);
+			
 		}
 	}
 }

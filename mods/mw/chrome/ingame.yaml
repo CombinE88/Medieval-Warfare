@@ -481,7 +481,7 @@ Container@PLAYER_WIDGETS:
 			Logic: MenuButtonsChromeLogic
 			X: WINDOW_RIGHT - 290
 			Y: WINDOW_BOTTOM - 230
-			Width: 290
+			Width: 340
 			Height: 230
 			Background: castleframe
 			Children:
@@ -509,16 +509,14 @@ Container@PLAYER_WIDGETS:
 					Background: panel-gray
 					Children:
 						LabelWithTooltip@CASH:
-							Logic: IngameCashCounterLogic
+							Logic: NewCashCounterLogic
 							Y: 15
 							X: 15
 							Width: PARENT_RIGHT
 							Height: 0
 							Align: Left
 							Font: Bold
-							Text: Gold: {0}
-							TextColor: FCD054
-							ContrastColorDark: 7E682A
+							Text: {0}
 						LabelWithTooltip@FULLPOP:
 							Logic: IngameFullPopulationCounterLogic
 							Y: 75
@@ -536,7 +534,7 @@ Container@PLAYER_WIDGETS:
 							Height: 0
 							Align: Left
 							Font: Bold
-							Text: Peasants: {0}
+							Text: {0}
 							TextColor: 2ECC71
 							ContrastColorDark: 12512D
 						LabelWithTooltip@USEDPOP:
@@ -547,7 +545,7 @@ Container@PLAYER_WIDGETS:
 							Height: 0
 							Align: Left
 							Font: Bold
-							Text: Working: {0}
+							Text: {0}
 							TextColor: B56357
 							ContrastColorDark: 482722
 						LabelWithTooltip@MAXPOP:
@@ -558,7 +556,7 @@ Container@PLAYER_WIDGETS:
 							Height: 0
 							Align: Left
 							Font: Bold
-							Text: Free Beds: {0}
+							Text: {0}
 				Container@SUPPORT_POWERS:
 					Logic: SupportPowerBinLogic
 					X: PARENT_RIGHT - 13 - 72

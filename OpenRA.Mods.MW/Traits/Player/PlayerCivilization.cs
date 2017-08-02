@@ -177,40 +177,48 @@ namespace OpenRA.Traits
 
 		public void Tick(Actor self)
 		{
-			FreePopulation = (MaxLivingspacevar) - (WorkerPopulationvar+Peasantpopulationvar);
-			
-			SpawnStoredPeasant(world);
-			
+			if (self.Owner.Faction.InternalName != "ded")
+			{
+				FreePopulation = (MaxLivingspacevar) - (WorkerPopulationvar + Peasantpopulationvar);
+			}
+			{
+				FreePopulation = MaxLivingspacevar - WorkerPopulationvar;
+			}
+
+			if (self.Owner.Faction.InternalName != "ded")
+			{
+				SpawnStoredPeasant(world);
+
 			if (FreePopulation>0)
 				basecheck--;
 
-			if (basecheck <= 0)
-			{
-				if (FreePopulation > 0)
+				if (basecheck <= 0)
+				{
 					spawnapeasant(world);
 
-				nextchecktick = info.Delay * 25;
-				var spawn2 = 0;
-				if (info.SpecialModifier.Any())
-					foreach (var var in info.SpecialModifier)
-					{
-						if (player.Faction.InternalName == var.Key)
+					nextchecktick = info.Delay * 25;
+					var spawn2 = 0;
+					if (info.SpecialModifier.Any())
+						foreach (var var in info.SpecialModifier)
 						{
-							spawn2 = FreePopulation * var.Value;
+							if (player.Faction.InternalName == var.Key)
+							{
+								spawn2 = FreePopulation * var.Value;
+							}
 						}
-					}
-				 
-				nextchecktick -= FreePopulation*info.SpawnModifier;
-				nextchecktick -= spawn2;
 
-				var devider = 100;
-				
-				devider += HasAttrackter > 0 ? info.SmallHallBonus  : 0;
-				devider += HasTownHalls > 0 ? info.BigHallBonus : 0;
-					
-				basecheck = nextchecktick*100 /devider;
-				if (basecheck<25)
-					basecheck = 25;
+					nextchecktick -= FreePopulation * info.SpawnModifier;
+					nextchecktick -= spawn2;
+
+					var devider = 100;
+
+					devider += HasAttrackter > 0 ? info.SmallHallBonus : 0;
+					devider += HasTownHalls > 0 ? info.BigHallBonus : 0;
+
+					basecheck = nextchecktick * 100 / devider;
+					if (basecheck < 25)
+						basecheck = 25;
+				}
 			}
 		}
 	}

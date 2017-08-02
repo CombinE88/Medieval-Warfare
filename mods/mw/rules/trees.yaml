@@ -13,33 +13,33 @@ SPLIT2:
     DockManager:
         ExternalDocks: true
         #DeadlockDetectionEnabled: false
-    Dock@1: 
-        DockOffset: 1,3
-        WOffset: 0,102,0
+    Dock@up: 
+        DockOffset: 0,-2
+        WOffset: 383,170,0
         DockAngle: 32
         IsDragRequired: false
         FaceTowardsCenter: true
-    Dock@2: 
-        DockOffset: 3,0
-        WOffset: 204,0,0
+    Dock@right: 
+        DockOffset: 2,0
+        WOffset: 425,0,0
         DockAngle: 223
         IsDragRequired: false
         FaceTowardsCenter: true
-    Dock@3: 
-        DockOffset: 1,-3
-        WOffset: 0,-102,0
+    Dock@down: 
+        DockOffset: 0,2
+        WOffset: 340,-170,0
         DockAngle: 159
         IsDragRequired: false
         FaceTowardsCenter: true
-    Dock@4: 
-        DockOffset: -2,-1
-        WOffset: -614,-922,0
+    Dock@leftdown: 
+        DockOffset: -2,2
+        WOffset: -425,-510,0
         DockAngle: 96
         IsDragRequired: false
         FaceTowardsCenter: true
-    Dock@5: 
-        DockOffset: -2,1
-        WOffset: -614,922,0
+    Dock@leftup: 
+        DockOffset: -2,-2
+        WOffset: -425,510,0
         DockAngle: 96
         IsDragRequired: false
         FaceTowardsCenter: true
@@ -66,33 +66,33 @@ SPLIT3:
     DockManager:
         ExternalDocks: true
         #DeadlockDetectionEnabled: false
-    Dock@1: 
-        DockOffset: 1,3
-        WOffset: 0,102,0
+    Dock@up: 
+        DockOffset: 0,-2
+        WOffset: 383,170,0
         DockAngle: 32
         IsDragRequired: false
         FaceTowardsCenter: true
-    Dock@2: 
-        DockOffset: 3,0
-        WOffset: 204,0,0
+    Dock@right: 
+        DockOffset: 2,0
+        WOffset: 425,0,0
         DockAngle: 223
         IsDragRequired: false
         FaceTowardsCenter: true
-    Dock@3: 
-        DockOffset: 1,-3
-        WOffset: 0,-102,0
+    Dock@down: 
+        DockOffset: 0,2
+        WOffset: 340,-170,0
         DockAngle: 159
         IsDragRequired: false
         FaceTowardsCenter: true
-    Dock@4: 
-        DockOffset: -2,-1
-        WOffset: -614,-922,0
+    Dock@leftdown: 
+        DockOffset: -2,2
+        WOffset: -425,-510,0
         DockAngle: 96
         IsDragRequired: false
         FaceTowardsCenter: true
-    Dock@5: 
-        DockOffset: -2,1
-        WOffset: -614,922,0
+    Dock@leftup: 
+        DockOffset: -2,-2
+        WOffset: -425,510,0
         DockAngle: 96
         IsDragRequired: false
         FaceTowardsCenter: true
@@ -118,33 +118,33 @@ SPLITBLUE:
     DockManager:
         ExternalDocks: true
         #DeadlockDetectionEnabled: false
-    Dock@1: 
-        DockOffset: 1,3
-        WOffset: 0,102,0
+    Dock@up: 
+        DockOffset: 0,-2
+        WOffset: 383,170,0
         DockAngle: 32
         IsDragRequired: false
         FaceTowardsCenter: true
-    Dock@2: 
-        DockOffset: 3,0
-        WOffset: 204,0,0
+    Dock@right: 
+        DockOffset: 2,0
+        WOffset: 425,0,0
         DockAngle: 223
         IsDragRequired: false
         FaceTowardsCenter: true
-    Dock@3: 
-        DockOffset: 1,-3
-        WOffset: 0,-102,0
+    Dock@down: 
+        DockOffset: 0,2
+        WOffset: 340,-170,0
         DockAngle: 159
         IsDragRequired: false
         FaceTowardsCenter: true
-    Dock@4: 
-        DockOffset: -2,-1
-        WOffset: -614,-922,0
+    Dock@leftdown: 
+        DockOffset: -2,2
+        WOffset: -425,-510,0
         DockAngle: 96
         IsDragRequired: false
         FaceTowardsCenter: true
-    Dock@5: 
-        DockOffset: -2,1
-        WOffset: -614,922,0
+    Dock@leftup: 
+        DockOffset: -2,-2
+        WOffset: -425,510,0
         DockAngle: 96
         IsDragRequired: false
         FaceTowardsCenter: true
@@ -161,33 +161,33 @@ SPLIT4:
     DockManager:
         ExternalDocks: true
         #DeadlockDetectionEnabled: false
-    Dock@1: 
-        DockOffset: 1,3
-        WOffset: 0,102,0
+    Dock@up: 
+        DockOffset: 0,-2
+        WOffset: 383,170,0
         DockAngle: 32
         IsDragRequired: false
         FaceTowardsCenter: true
-    Dock@2: 
-        DockOffset: 3,0
-        WOffset: 204,0,0
+    Dock@right: 
+        DockOffset: 2,0
+        WOffset: 425,0,0
         DockAngle: 223
         IsDragRequired: false
         FaceTowardsCenter: true
-    Dock@3: 
-        DockOffset: 1,-3
-        WOffset: 0,-102,0
+    Dock@down: 
+        DockOffset: 0,2
+        WOffset: 340,-170,0
         DockAngle: 159
         IsDragRequired: false
         FaceTowardsCenter: true
-    Dock@4: 
-        DockOffset: -2,-1
-        WOffset: -614,-922,0
+    Dock@leftdown: 
+        DockOffset: -2,2
+        WOffset: -425,-510,0
         DockAngle: 96
         IsDragRequired: false
         FaceTowardsCenter: true
-    Dock@5: 
-        DockOffset: -2,1
-        WOffset: -614,922,0
+    Dock@leftup: 
+        DockOffset: -2,-2
+        WOffset: -425,510,0
         DockAngle: 96
         IsDragRequired: false
         FaceTowardsCenter: true
@@ -204,33 +204,33 @@ SPLIT4B:
     DockManager:
         ExternalDocks: true
         #DeadlockDetectionEnabled: false
-    Dock@1: 
-        DockOffset: 1,3
-        WOffset: 0,102,0
+    Dock@up: 
+        DockOffset: 0,-2
+        WOffset: 383,170,0
         DockAngle: 32
         IsDragRequired: false
         FaceTowardsCenter: true
-    Dock@2: 
-        DockOffset: 3,0
-        WOffset: 204,0,0
+    Dock@right: 
+        DockOffset: 2,0
+        WOffset: 425,0,0
         DockAngle: 223
         IsDragRequired: false
         FaceTowardsCenter: true
-    Dock@3: 
-        DockOffset: 1,-3
-        WOffset: 0,-102,0
+    Dock@down: 
+        DockOffset: 0,2
+        WOffset: 340,-170,0
         DockAngle: 159
         IsDragRequired: false
         FaceTowardsCenter: true
-    Dock@4: 
-        DockOffset: -2,-1
-        WOffset: -614,-922,0
+    Dock@leftdown: 
+        DockOffset: -2,2
+        WOffset: -425,-510,0
         DockAngle: 96
         IsDragRequired: false
         FaceTowardsCenter: true
-    Dock@5: 
-        DockOffset: -2,1
-        WOffset: -614,922,0
+    Dock@leftup: 
+        DockOffset: -2,-2
+        WOffset: -425,510,0
         DockAngle: 96
         IsDragRequired: false
         FaceTowardsCenter: true
@@ -261,6 +261,39 @@ SPLIT5:
 		ResourceType: Lumber
 		Interval: 50
 		MaxRange: 4
+    DockManager:
+        ExternalDocks: true
+        #DeadlockDetectionEnabled: false
+    Dock@up: 
+        DockOffset: 0,-2
+        WOffset: 383,170,0
+        DockAngle: 32
+        IsDragRequired: false
+        FaceTowardsCenter: true
+    Dock@right: 
+        DockOffset: 2,0
+        WOffset: 425,0,0
+        DockAngle: 223
+        IsDragRequired: false
+        FaceTowardsCenter: true
+    Dock@down: 
+        DockOffset: 0,2
+        WOffset: 340,-170,0
+        DockAngle: 159
+        IsDragRequired: false
+        FaceTowardsCenter: true
+    Dock@leftdown: 
+        DockOffset: -2,2
+        WOffset: -425,-510,0
+        DockAngle: 96
+        IsDragRequired: false
+        FaceTowardsCenter: true
+    Dock@leftup: 
+        DockOffset: -2,-2
+        WOffset: -425,510,0
+        DockAngle: 96
+        IsDragRequired: false
+        FaceTowardsCenter: true
 		
 SPLIT7:
 	Inherits: SPLIT3

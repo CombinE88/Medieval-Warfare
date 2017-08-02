@@ -123,7 +123,14 @@
 		UseTargetableCellsOffsets: true
 		Type: Rectangle
 			TopLeft: -1536, -1536
-			BottomRight: 1536, 1536   
+			BottomRight: 1536, 1536  
+
+^4x4Shape:
+	HitShape:
+		UseTargetableCellsOffsets: true
+		Type: Rectangle
+			TopLeft: -2048, -2048
+			BottomRight: 2048, 2048  
 
   
 ^AutoTargetGround:
@@ -551,6 +558,7 @@
 		GenericVisibility: None
 	Mobile:
 		Speed: 56
+		Crushes:
 	Health:
 		HP: 25
 	RevealsShroud:
@@ -1690,6 +1698,7 @@
 		GenericVisibility: None
 	Mobile:
 		Speed: 56
+		Crushes:
 	Health:
 		HP: 2500
 	RevealsShroud:
@@ -1769,6 +1778,7 @@
 	ScaredyCat:
 	Mobile:
 		Speed: 56
+		Crushes:
 	Health:
 		HP: 2500
 	RevealsShroud:
@@ -1814,6 +1824,7 @@
 		Range: 0c0
 	Mobile:
 		Speed: 56
+		Crushes:
 	-Selectable:
 	Targetable:
 		TargetTypes: Ground, Infantry, Wildlife, NoAutoTarget
@@ -1930,6 +1941,7 @@
 		ShowOwnerRow: false
 	Mobile:
 		Speed: 56
+		Crushes:
 	Health:
 		HP: 7000
 	RevealsShroud:
@@ -2082,6 +2094,7 @@
 		TargetTypes: Ground, Infantry
 	Mobile:
 		Speed: 46
+		Crushes:
 	Health:
 		HP: 5000
 	RevealsShroud:

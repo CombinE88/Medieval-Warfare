@@ -75,17 +75,15 @@
     <Compile Include="Activities\FallDown.cs" />
     <Compile Include="Projectiles\AthenaProjectile.cs" />
     <Compile Include="Projectiles\InstantExplode.cs" />
-    <Compile Include="Traits\Activites\DockUtils.cs" />
+    <Compile Include="Traits\Activites\Instanttransforms.cs" />
+    <Compile Include="Traits\Activites\PreyActiviyBuild.cs" />
+    <Compile Include="Traits\Activites\PreyBuild.cs" />
     <Compile Include="Traits\Activites\Prey.cs" />
     <Compile Include="Traits\Activites\PreyActiviy.cs" />
     <Compile Include="Traits\AmmoPoolConditions.cs" />
-    <Compile Include="Traits\ArmyOfTheDeath\Acolytprey.cs" />
     <Compile Include="Traits\ArmyOfTheDeath\ActivityInterfaces.cs" />
     <Compile Include="Traits\ArmyOfTheDeath\AttackedByDead.cs" />
     <Compile Include="Traits\ArmyOfTheDeath\DecaysResources.cs" />
-    <Compile Include="Traits\ArmyOfTheDeath\Dock.cs" />
-    <Compile Include="Traits\ArmyOfTheDeath\DockClient.cs" />
-    <Compile Include="Traits\ArmyOfTheDeath\DockManager.cs" />
     <Compile Include="Traits\ArmyOfTheDeath\IsDeathArmyMob.cs" />
     <Compile Include="Traits\ArmyOfTheDeath\DeadArmyHandler.cs" />
     <Compile Include="Traits\ArmyOfTheDeath\PlayRandomSoundEffect.cs" />
@@ -96,6 +94,10 @@
     <Compile Include="Traits\CreateActorOnDeath.cs" />
     <Compile Include="Traits\CritterSpawner.cs" />
     <Compile Include="Traits\DisguiseChargeBar.cs" />
+    <Compile Include="Traits\DockBasics\Dock.cs" />
+    <Compile Include="Traits\DockBasics\DockClient.cs" />
+    <Compile Include="Traits\DockBasics\DockManager.cs" />
+    <Compile Include="Traits\DockBasics\DockUtils.cs" />
     <Compile Include="Traits\GrantRandomCondition.cs" />
     <Compile Include="Traits\HunterTraits\HuntableDeer.cs" />
     <Compile Include="Traits\HunterTraits\DeerHunter.cs" />
@@ -105,6 +107,7 @@
     <Compile Include="Traits\IsPeasant.cs" />
     <Compile Include="Traits\IsTownhall.cs" />
     <Compile Include="Traits\NewDisguise.cs" />
+    <Compile Include="Traits\Orders\AlwaysTrueOrderTargeter.cs" />
     <Compile Include="Traits\PersonValued.cs" />
     <Compile Include="Traits\Player\ConstructionResources.cs" />
     <Compile Include="Traits\Player\PlayerCivilization.cs" />
@@ -116,6 +119,14 @@
     <Compile Include="Traits\ResourcePurifier.cs" />
     <Compile Include="Traits\ShakeOnCreate.cs" />
     <Compile Include="Traits\TransformOnCondition.cs" />
+    <Compile Include="Traits\Undead Faction\AcolytpreyBuild.cs" />
+    <Compile Include="Traits\Undead Faction\AcolytpreyResources.cs" />
+    <Compile Include="Traits\Undead Faction\BuildUpSound.cs" />
+    <Compile Include="Traits\Undead Faction\IsGrave.cs" />
+    <Compile Include="Traits\Undead Faction\Skiptransforms.cs" />
+    <Compile Include="Traits\Undead Faction\UndeadBuilder.cs" />
+    <Compile Include="Traits\Undead Faction\UndeadGraveProduction.cs" />
+    <Compile Include="Traits\Undead Faction\WithUndeadBuilderOverlay.cs" />
     <Compile Include="Traits\WithActorProduction.cs" />
     <Compile Include="Traits\WithFreeSpawnableActor.cs" />
     <Compile Include="Warheads\CashTickWarhead.cs" />
@@ -135,6 +146,7 @@
     <Compile Include="Widgets\Logic\Ingame\IngamePeasantSpawnBarLogic.cs" />
     <Compile Include="Widgets\Logic\Ingame\IngamePopulationCounterLogic.cs" />
     <Compile Include="Widgets\Logic\Ingame\IngameUsedPopulationCounterLogic.cs" />
+    <Compile Include="Widgets\Logic\Ingame\NewCashCounterLogic.cs" />
   </ItemGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.

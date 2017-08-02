@@ -58,7 +58,10 @@ namespace OpenRA.Mods.MW.Widgets.Logic
 
 		public override void Tick()
 		{
-			displayLabel = cashLabel.F(player.PlayerActor.Trait<PlayerCivilization>().Peasantpopulationvar);
+			if (player.Faction.InternalName != "ded")
+				displayLabel = "Peasants: " + cashLabel.F(player.PlayerActor.Trait<PlayerCivilization>().Peasantpopulationvar);
+			else
+				displayLabel = "Souls: " + cashLabel.F(player.PlayerActor.Trait<PlayerCivilization>().Peasantpopulationvar);
 		}
 	}
 }

@@ -29,6 +29,10 @@
 		Name: Sultan
 		InternalName: sul
 		Description: Sultan Cem Rashid il-Nuredin (Scrin)
+	Faction@ded:
+		Name: Undead
+		InternalName: ded
+		Description: they were forgotton
 	ResourceType@green-tib:
 		Sequences: iron1,iron2,iron3,iron4,iron5,iron6,iron7,iron8,iron9,iron10,iron11,iron12
 		Palette: ra
@@ -176,6 +180,35 @@ World:
 		ClassName: Supply Wagon Only
 		Factions: gdi, nod, sul
 		BaseActor: mcvnew
+	MPStartUnits@minimumdead:
+		Class: medieval
+		ClassName: Supply Wagon Only
+		Factions: ded
+		BaseActor: undeadcomm
+	MPStartUnits@dead:
+		Class: medieval2
+		ClassName: Quick Start
+		Factions: ded
+		BaseActor: undeadcomm
+        SupportActors: preycolyte,preycolyte, preycolyte 
+        InnerSupportRadius: 4
+        OuterSupportRadius: 5
+	MPStartUnits@2:
+		Class: medieval3
+		ClassName: Well Populated
+		Factions: ded
+		BaseActor: undeadcomm
+        SupportActors: preycolyte,preycolyte, preycolyte ,preycolyte, preycolyte 
+        InnerSupportRadius: 4
+        OuterSupportRadius: 5
+	MPStartUnits@3:
+		Class: medieval4
+		ClassName: Over Populated
+		Factions: ded
+		BaseActor: undeadcomm
+        SupportActors: preycolyte,preycolyte, preycolyte ,preycolyte, preycolyte ,preycolyte, preycolyte
+        InnerSupportRadius: 4
+        OuterSupportRadius: 5
 	MPStartUnits@medium:
 		Class: medieval2
 		ClassName: Quick Start

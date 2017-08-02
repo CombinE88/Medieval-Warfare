@@ -5,10 +5,10 @@ Player:
 		MinimumExcessPower: 0
 		BuildingCommonNames:
 			ConstructionYard: factnew
-			Refinery: sulref.scaff, sulref, procnew, zeroproc, sulmill, procnew.scaff, zeroproc.scaff, sulmill.scaff, sulcnshmbr.scaff, sulcnshmbr
-			Power: xltntuni.scaff, nodnuke, nukenew.scaff, nukenew, nuk2new.scaff, nuk2new, nodnuk2.scaff, nodnuk2, sulnuke.scaff, sulnuke, sulnuk2, sulnuk2.scaff, nukxl.scaff, nukxl
-			Barracks: barrnew,handnew,sulbarr,barrnew.scaff,handnew.scaff,sulbarr.scaff
-			VehiclesFactory: stall,nodstall,sulmystic,stall.scaff,nodstall.scaff,sulmystic.scaff
+			Refinery: procnew.scaff, zeroproc.scaff, sulmill.scaff, sulref.scaff, nodproc.scaff
+			Power: xltntuni.scaff, nodnuke, nukenew.scaff, nuk2new.scaff, nodnuk2.scaff, sulnuke.scaff, sulnuk2.scaff, nukxl.scaff
+			Barracks: barrnew.scaff,handnew.scaff,sulbarr.scaff
+			VehiclesFactory: stall.scaff,nodstall.scaff,sulmystic.scaff
 			Production: barrnew,handnew,stall,nodstall,sulmystic,sulbarr,barrnew.scaff,handnew.scaff,stall.scaff,nodstall.scaff,sulmystic.scaff,sulbarr.scaff
 		UnitsCommonNames:
 			Mcv: mcvnew
@@ -16,11 +16,11 @@ Player:
 		BuildingQueues: MBuilding.Nod, MBuilding.GDI, MBuilding.SUL, MTech.Nod, MTech.GDI, MTech.SUL, MResources.Nod, MResources.GDI, MResources.SUL, MMilitary.Nod, MMilitary.GDI, MMilitary.SUL
 		UnitQueues: MVehicle.Nod, MVehicle.GDI, MVehicle.SUL, MInfantry.Nod, MInfantry.GDI, MInfantry.SUL, MSiege.Nod, MSiege.GDI, MSiege.SUL
 		BuildingLimits:
-			zeroproc.scaff: 4
+			#zeroproc.scaff: 4
 			procnew.scaff: 3
             sulref.scaff: 3
-            sulmill.scaff: 4
-            nodproc.scaff: 4
+            #sulmill.scaff: 4
+            #nodproc.scaff: 4
             sulcnshmbr.scaff: 1
             lodge.scaff: 2
             sullodge.scaff: 2

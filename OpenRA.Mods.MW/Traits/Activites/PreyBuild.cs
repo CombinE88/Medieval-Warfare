@@ -22,31 +22,26 @@ using OpenRA.Traits;
 
 namespace OpenRA.Mods.Cnc.Activities
 {
-	public class Prey : Activity, IDockActivity
+	public class PreyBuild : Activity, IDockActivity
 	{
-		readonly AcolytePreyInfo info;
+		readonly AcolytePreyBuildInfo info;
 		
 		readonly HashSet<string> preyBuildings;
-		private Actor targetActor;
 
-		public Prey(Actor self)
+		public PreyBuild(Actor self)
 		{
-			info = self.Info.TraitInfo<AcolytePreyInfo>();
+			info = self.Info.TraitInfo<AcolytePreyBuildInfo>();
 			preyBuildings = info.TargetActors;
-			targetActor =  self.Trait<AcolytePrey>().forceactor;
-
+			
 		}
 
 		public override Activity Tick(Actor self)
 		{
 			if (IsCanceled)
 				return NextActivity;
-
-			Actor rearmTarget = null;
-			if (targetActor != null)
-				rearmTarget = targetActor;
-			else
-			rearmTarget = self.World.Actors.Where(a => preyBuildings.Contains(a.Info.Name))
+			
+			
+			var rearmTarget = self.World.Actors.Where(a => preyBuildings.Contains(a.Info.Name))
 				.ClosestTo(self);
 			
 			if (rearmTarget == null)
@@ -63,7 +58,7 @@ namespace OpenRA.Mods.Cnc.Activities
 
 		Activity IDockActivity.DockActivities(Actor host, Actor client, Dock dock)
 		{
-			return ActivityUtils.SequenceActivities( new PreyActivity(client,host,dock.Info.FaceTowardsCenter,dock) );
+			return ActivityUtils.SequenceActivities( new PreyBuildActivity(client,host,dock.Info.FaceTowardsCenter,dock) );
 		}
 
 		Activity IDockActivity.ActivitiesAfterDockDone(Actor host, Actor client, Dock dock)

@@ -5,12 +5,13 @@ using System.Runtime.InteropServices;
 using OpenRA.Mods.Cnc.Activities;
 using OpenRA.Mods.Common.Activities;
 using OpenRA.Mods.Common.Orders;
+using OpenRA.Mods.Common.Traits;
 using OpenRA.Support;
 using OpenRA.Traits;
 
-namespace OpenRA.Mods.Common.Traits
+namespace OpenRA.Mods.MW.Traits
 {
-	class AcolytePreyInfo : ITraitInfo
+	class AcolytePreyInfo : ConditionalTraitInfo
 	{
 		
 		[Desc("Prey Animation when docking.")]
@@ -20,8 +21,6 @@ namespace OpenRA.Mods.Common.Traits
 
 		[Desc("Voice string when planting explosive charges.")]
 		[VoiceReference] public readonly string Voice = "Action";
-		
-		public readonly string GrantsCondition = null;
 
 		public readonly string Cursor = "enter";
 
@@ -29,14 +28,17 @@ namespace OpenRA.Mods.Common.Traits
 
 		public int leechinterval = 100;
 		
-		public object Create(ActorInitializer init) { return new AcolytePrey(this); }
+		public string SelfEnabledCondition = null;
+		
+		public override object Create(ActorInitializer init) { return new AcolytePrey(this); }
 	}
 
-	class AcolytePrey : IIssueOrder, IResolveOrder, IOrderVoice
+	class AcolytePrey : ConditionalTrait<AcolytePreyInfo>, IIssueOrder, IResolveOrder, IOrderVoice
 	{
 		readonly AcolytePreyInfo info;
+		public Actor forceactor;
 
-		public AcolytePrey(AcolytePreyInfo info)
+		public AcolytePrey(AcolytePreyInfo info) : base(info)
 		{
 			this.info = info;
 		}
@@ -50,6 +52,7 @@ namespace OpenRA.Mods.Common.Traits
 		{
 			if (order.OrderID == "Prey")
 			{
+				forceactor = target.Actor;
 				return new Order(order.OrderID, self, queued) {TargetActor = target.Actor};
 			}
 
@@ -63,7 +66,9 @@ namespace OpenRA.Mods.Common.Traits
 			
 			if (!order.Queued)
 				self.CancelActivity();
-
+			
+			if (forceactor != null)
+				self.SetTargetLine(Target.FromCell(self.World, forceactor.Location), Color.Green);
 			self.QueueActivity(new Prey(self));
 
 		}

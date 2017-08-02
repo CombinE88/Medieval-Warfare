@@ -6,6 +6,7 @@ using OpenRA.Mods.Common;
 using OpenRA.Mods.Common.Effects;
 using OpenRA.Mods.Common.Traits;
 using OpenRA.Mods.Common.Traits.Render;
+using OpenRA.Mods.Mw.Traits;
 using OpenRA.Mods.MW.Traits;
 using OpenRA.Support;
 using OpenRA.Traits;
@@ -14,12 +15,10 @@ namespace OpenRA.Mods.Cnc.Activities
 {
 
     // Assumes you have Minelayer on that unit
-    public class PreyActivity : Activity
+    public class PreyBuildActivity : Activity
     {
-        readonly AcolytePreyInfo info;
+        readonly AcolytePreyBuildInfo info;
         readonly WithSpriteBody wsb;
-        
-        ExternalCondition externalCondition;
 
         private Actor dockactor;
         private bool lockfacing;
@@ -28,27 +27,29 @@ namespace OpenRA.Mods.Cnc.Activities
         private Dock _d;
 
         private int ticks;
-        private ResourceLayer resLayer;
-        
+        private int buildpower;
+        private UndeadBuilder UndeadBuilder;
+
         private ConditionManager ConditionManager;
         private int token;
         private string condtion;
 
-        public PreyActivity(Actor self,Actor dockact,bool facingDock,Dock d)
+        public PreyBuildActivity(Actor self,Actor dockact,bool facingDock,Dock d)
         {
-            info = self.Info.TraitInfo<AcolytePreyInfo>();
+            info = self.Info.TraitInfo<AcolytePreyBuildInfo>();
             wsb = self.Trait<WithSpriteBody>();
             dockactor = dockact;
             lockfacing = facingDock;
             playanim = true;
             _d = d;
             
-            ticks = self.Info.TraitInfo<AcolytePreyInfo>().leechinterval;
-            resLayer = self.World.WorldActor.Trait<ResourceLayer>();
-            
+            ticks = self.Info.TraitInfo<AcolytePreyBuildInfo>().Buildinterval;
+            buildpower = self.Info.TraitInfo<AcolytePreyBuildInfo>().Buildpower;
+            UndeadBuilder = dockactor.TraitsImplementing<UndeadBuilder>().FirstOrDefault();
+
             ConditionManager = self.Trait<ConditionManager>();
             token = ConditionManager.InvalidConditionToken;
-            condtion = self.Info.TraitInfo<AcolytePreyInfo>().SelfEnabledCondition;
+            condtion = self.Info.TraitInfo<AcolytePreyBuildInfo>().SelfEnabledCondition;
 
         }
 
@@ -57,12 +58,15 @@ namespace OpenRA.Mods.Cnc.Activities
             if (IsCanceled)
             {
                 wsb.PlayCustomAnimationRepeating(self,wsb.Info.Sequence);
-                playanim = true;
+
                 if (condtion != null && token != ConditionManager.InvalidConditionToken)
                 {
                     token = ConditionManager.RevokeCondition(self, token);
                     token = ConditionManager.InvalidConditionToken;
                 }
+
+
+                playanim = true;
                 
                 if( endqueueonce)
                 {
@@ -75,11 +79,12 @@ namespace OpenRA.Mods.Cnc.Activities
                             .SetPosition(self, self.World.Map.CellContaining(self.CenterPosition));
                     }));
                 }
+
                 if (ChildActivity == null)
                 {
                     return NextActivity;
                 }
-
+                
             }
             
             if (ChildActivity != null)
@@ -92,7 +97,6 @@ namespace OpenRA.Mods.Cnc.Activities
             {
                 playanim = false;
                 endqueueonce = true;
-
                 QueueChild(self.Trait<IMove>().VisualMove(self, self.CenterPosition, _d.CenterPosition));
                 QueueChild(new CallFunc (() =>
                 {
@@ -106,77 +110,22 @@ namespace OpenRA.Mods.Cnc.Activities
                         facing.Facing = desiredFacing;
                     }
                     wsb.PlayCustomAnimationRepeating(self, info.PreySequence);
+                    
                     if (condtion != null)
-                        token = ConditionManager.GrantCondition(self, condtion);
-
+                           token = ConditionManager.GrantCondition(self, condtion);
                 }));
             }
             
-            if (self.Info.TraitInfo<AcolytePreyInfo>().LeechesResources && --ticks <= 0)
+            if (UndeadBuilder != null && --ticks <= 0)
             {
-                Leech(self);
-                ticks = self.Info.TraitInfo<AcolytePreyInfo>().leechinterval;
+
+                ticks = self.Info.TraitInfo<AcolytePreyBuildInfo>().Buildinterval;
+                UndeadBuilder.hassummoningcount += 1;
             }
             
             
             return this;
         }
 
-        public void Leech(Actor self)
-        {
-            CPos cell = CPos.Zero;
-            var cells = self.World.Map.FindTilesInCircle(self.World.Map.CellContaining(self.CenterPosition), 6, true)
-                .Where(c =>
-                {
-                    if (!self.World.Map.Contains(c))
-                        return false;
-                    if (resLayer.GetResource(c) == null)
-                        return false;
-                    if (resLayer.GetResourceDensity(c) == 0)
-                        return false;
-                    return true;
-                });
-            if (cells != null && cells.Any())
-                cell = self.ClosestCell(cells);
-
-            if (cell != CPos.Zero && resLayer.GetResourceDensity(cell) > 0)
-            {
-                var ammount = resLayer.GetResource(cell).Info.ValuePerUnit;
-
-                if ((self.Owner.PlayerActor.Trait<PlayerResources>().Resources + ammount) <= self.Owner.PlayerActor.Trait<PlayerResources>().ResourceCapacity)
-                {
-
-                    var playerResources = self.Owner.PlayerActor.Trait<PlayerResources>();
-                    playerResources.GiveResources(ammount);
-
-                    if (ammount > 0 && self.IsInWorld && !self.IsDead)
-                    {
-                        var floattest = FloatingText.FormatCashTick(ammount);
-                        if (self.Owner.IsAlliedWith(self.World.RenderPlayer))
-                            self.World.AddFrameEndTask(w => w.Add(new FloatingText(self.CenterPosition,
-                                self.Owner.Color.RGB, floattest.Replace("$","Essence "), 30)));
-                    }
-                    resLayer.Harvest(cell);
-                    if (resLayer.GetResourceDensity(cell)<=0)
-                        resLayer.Destroy(cell);
-                }
-            }
-        }
-
-
-        public static IEnumerable<CPos> RandomWalk(CPos p, MersenneTwister r)
-        {
-            for (;;)
-            {
-                var dx = r.Next(-1, 2);
-                var dy = r.Next(-1, 2);
-
-                if (dx == 0 && dy == 0)
-                    continue;
-
-                p += new CVec(dx, dy);
-                yield return p;
-            }
-        }
     }
 }
