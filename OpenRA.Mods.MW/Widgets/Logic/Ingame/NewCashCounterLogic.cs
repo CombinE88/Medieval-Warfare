@@ -54,7 +54,7 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 			else
 			{
 				cash.GetTooltipText = () => "Essence Usage: {0}/{1}".F(playerResources.Resources, playerResources.ResourceCapacity);
-				cash.TextColor = Color.DarkRed;
+				cash.TextColor = Color.Red;
 			}
 		}
 

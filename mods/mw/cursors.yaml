@@ -3,8 +3,14 @@ Palettes:
 	newcursor: Medieval_Civ_palette.pal
 	newcursor3: Medieval_Civ_palette.pal
 	newcursorsell: Medieval_Civ_palette.pal
+    preycursor: Medieval_Civ_palette.pal
 
 Cursors:
+    preycursor.shp: preycursor
+        preycursor:
+            Start: 0
+            Length: 7
+            Tick: 40
 	newcursor.shp: newcursor
 		scroll-t:
 			Start: 2

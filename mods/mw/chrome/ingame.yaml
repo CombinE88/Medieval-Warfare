@@ -559,7 +559,7 @@ Container@PLAYER_WIDGETS:
 							Text: {0}
 				Container@SUPPORT_POWERS:
 					Logic: SupportPowerBinLogic
-					X: PARENT_RIGHT - 13 - 72
+					X: PARENT_RIGHT - 13 - 72 - 35
 					Y: 20
 					Children:
 						Container@PALETTE_BACKGROUND:

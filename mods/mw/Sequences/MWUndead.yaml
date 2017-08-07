@@ -57,7 +57,7 @@ ziggurat2:
 	bib: bib1
 		UseTilesetExtension: true
 		Length: *
-	icon: ziggurat1icon.shp
+	icon: ziggurat2icon.shp
 		AddExtension: False    
 
 
@@ -79,7 +79,7 @@ ziggurat3:
 	bib: bib1
 		UseTilesetExtension: true
 		Length: *
-	icon: ziggurat1icon.shp
+	icon: ziggurat3icon.shp
 		AddExtension: False
         
 crypt: 
@@ -127,12 +127,48 @@ mauso:
 		Start: 25
         Tick: 800
     make:
-		Length: 25
+		Length: 23
 		Tick: 200
 	bib: bib3
 		UseTilesetExtension: true
 		Length: *
 	icon: mausoicon.shp
+		AddExtension: False
+        
+libra: 
+    Inherits: ^pentagram
+	idle:
+		Start: 25
+	damaged-idle:
+		Start: 26
+	dead:
+		Start: 27
+        Tick: 800
+    make:
+		Length: 25
+		Tick: 200
+	bib: bib3
+		UseTilesetExtension: true
+		Length: *
+	icon: libraicon.shp
+		AddExtension: False
+        
+tomb: 
+    Inherits: ^pentagram
+	idle:
+		Start: 25
+	damaged-idle:
+		Start: 26
+	dead:
+		Start: 27
+        Tick: 800
+    make:
+		Length: 25
+		Tick: 200
+	bib: bib2
+		UseTilesetExtension: true
+		Length: *
+	icon: tombicon.shp
 		AddExtension: False
         
 hellgate: 
@@ -156,6 +192,30 @@ hellgate:
 		Length: *
 	icon: hellgateicon.shp
 		AddExtension: False
+        
+#SEALS
+
+seal1:
+	icon: seal1.shp
+		AddExtension: False 
+        
+seal2:
+	icon: seal2.shp
+		AddExtension: False 
+        
+seal3:
+	icon: seal3.shp
+		AddExtension: False 
+        
+seal4:
+	icon: seal4.shp
+		AddExtension: False 
+        
+seal5:
+	icon: seal5.shp
+		AddExtension: False 
+
+        
         
 #MCV
 
@@ -188,15 +248,13 @@ undeadcomm:
         
 #misc
 
+beacon: 
+	handaiconsmall: handaiconsmall
+		Offset: 0,-42
+        
+icon:
+	handaicon: handaicon.shp
 
-explosion:
-   	gianthand: acolytebattack
-		Length: *
-		Tick: 80
-	rockimpact: undead7
-		Start: 287
-		Length: 7
-		Tick: 100
 		
 giantrock:
 	idle: undead7
@@ -205,6 +263,15 @@ giantrock:
 		Tick: 30
 
 zombspark:
+	bright:
+		Length: 4
+		ZOffset: 1023
+	dim:
+		Start: 4
+		Length: 4
+		ZOffset: 1023
+        
+bloodspark:
 	bright:
 		Length: 4
 		ZOffset: 1023
@@ -239,7 +306,7 @@ undead1:
 	stand: 
 		Start: 122
 		Facings: 8
-	move: 
+	run: 
 		Start: 0
 		Length: 8
 		Facings: 8
@@ -294,7 +361,7 @@ undead2:
 	stand: 
 		Start: 122
 		Facings: 8
-	move: 
+	run: 
 		Start: 0
 		Length: 8
 		Facings: 8
@@ -349,7 +416,7 @@ undead3:
 	stand: 
 		Start: 122
 		Facings: 8
-	move: 
+	run: 
 		Start: 0
 		Length: 8
 		Facings: 8
@@ -403,7 +470,7 @@ undead4:
 	stand: 
 		Start: 122
 		Facings: 8
-	move: 
+	run: 
 		Start: 0
 		Length: 8
 		Facings: 8
@@ -511,7 +578,7 @@ undead6:
 	stand: 
 		Start: 122
 		Facings: 8
-	move: 
+	run: 
 		Start: 0
 		Length: 8
 		Facings: 8
@@ -551,6 +618,8 @@ undead6:
 	die5: burningman
 		Length: *
 		Tick: 80
+	icon: undead6icon.shp
+		AddExtension: False
 		
 undead7:
 	stunned: sulm4
@@ -564,7 +633,7 @@ undead7:
 	stand: 
 		Start: 122
 		Facings: 8
-	move: 
+	run: 
 		Start: 0
 		Length: 8
 		Facings: 8
@@ -584,33 +653,36 @@ undead7:
 	die5: burningman
 		Length: *
 		Tick: 80
+	icon: undead7icon.shp
+		AddExtension: False
         
-coffin1:
-	idle:
+coffin:
+    empty: ironore4
+		Start: 9 
+    idle: ironore4
+		Start: 9 
+	idlea: coffin1
 		Start: 22
-	make:
+	makea: coffin1
 		Length: 22
 		Tick: 200
-	dead:
+	deada: coffin1
 		Start: 23
-        
-coffin2:
-	idle:
+	idleb:  coffin2
 		Start: 22
-	make:
+	makeb: coffin2
 		Length: 22
 		Tick: 200
-	dead:
+	deadb: coffin2
 		Start: 23
-        
-coffin3:
-	idle:
+	idlec: coffin3
 		Start: 22
-	make:
+	makec: coffin3
 		Length: 22
 		Tick: 200
-	dead:
+	deadc: coffin3
 		Start: 23
+
 		
 gstone1: 
     empty: ironore4
@@ -699,6 +771,7 @@ gstonexl2:
 		Start: 11
 		
 obelisk: 
+    Inherits: ^pentagram
 	idle:
 		Offset: 0,-5
 		Start: 0
@@ -708,6 +781,12 @@ obelisk:
 	dead:
 		Offset: 0,-5
 		Start: 2
+        Tick: 800
+    make: obeliskmake
+		Length: *
+		Tick: 200
+	icon: obeliskicon.shp
+		AddExtension: False
         
 obeliskb: 
 	idle:
@@ -720,7 +799,231 @@ obeliskb:
 		Offset: 0,-10
 		Start: 2
         
-
+lichk:
+	stunned: sulm4
+		ZOffset: 125
+		Start: 312
+		Length: 2
+		Tick: 200
+	idle: 
+		Start: 122
+		Facings: 8
+        Offset: 0,5
+	stand: 
+		Start: 122
+		Facings: 8
+        Offset: 0,5
+	run: 
+		Start: 0
+		Length: 8
+		Facings: 8
+		Tick: 100
+        Offset: 0,5
+	move: 
+		Start: 0
+		Length: 8
+		Facings: 8
+		Tick: 100
+        Offset: 0,5
+	summon: 
+		Tick: 100
+		Start: 66
+		Length: 7
+		Facings: 8
+        Offset: 0,5
+	attack: 
+		Tick: 100
+		Start: 169
+		Length: 7
+		Facings: 8
+        Offset: 0,5
+	die1: 
+		Start: 133
+		Length: 22
+		Tick: 100
+        Offset: 0,5
+	icon: lichkicon.shp
+		AddExtension: False
+        
+deadross:
+	stand: 
+		Start: 122
+		Facings: 8
+	idle: 
+		Start: 122
+		Facings: 8
+	run: 
+		Start: 0
+		Length: 8
+		Facings: 8
+		Tick: 100
+	move: 
+		Start: 0
+		Length: 8
+		Facings: 8
+		Tick: 100
+	shoot: 
+		Tick: 100
+		Start: 66
+		Length: 7
+		Facings: 8
+	die1: 
+		Start: 132
+		Length: 18
+		Tick: 80
+	make: 
+        Start: 262
+		Length: 15
+		Tick: 100
+	# Burn
+	die2: burninghorserider
+		Length: *
+		Tick: 80
+	icon: deadrossicon.shp
+		AddExtension: False
+        
+grim:
+	stunned: sulm4
+		ZOffset: 125
+		Start: 312
+		Length: 2
+		Tick: 200
+	idle: 
+		Start: 122
+		Length: 8
+		Facings: 8
+		Tick: 80
+	stand: 
+		Start: 122
+		Length: 8
+		Facings: 8
+		Tick: 80
+	run: 
+		Start: 0
+		Length: 8
+		Facings: 8
+		Tick: 80
+	move: 
+		Start: 0
+		Length: 8
+		Facings: 8
+		Tick: 80
+	attackharvest: 
+		Tick: 80
+		Start: 66
+		Length: 7
+		Facings: 8
+	attacksummon: 
+		Tick: 80
+		Start: 186
+		Length: 8
+		Facings: 8
+	attacksummon: 
+		Tick: 80
+		Start: 186
+		Length: 8
+		Facings: 8
+	attackthrow: 
+		Tick: 80
+		Start: 293
+		Length: 7
+		Facings: 8
+	die1: 
+		Start: 250
+		Length: 20
+		Tick: 80
+	icon: grimicon.shp
+		AddExtension: False
+        
+skytheproj:
+    idle: grim
+        Length: 32
+        Start: 349
+        Tick: 10
+        
+bloodparticle:
+    idle:
+        Length: *
+        
+vamp:
+	stunned: sulm4
+		ZOffset: 125
+		Start: 312
+		Length: 2
+		Tick: 200
+	idle: 
+		Start: 122
+        Facings: 8
+	idle-flying: 
+		Start: 254
+		Length: 8
+		Facings: 8
+		Tick: 80
+	stand-flying: 
+		Start: 254
+		Length: 8
+		Facings: 8
+		Tick: 80
+	stand: 
+		Start: 122
+        Facings: 8
+	idle1:
+        Start: 190
+		Length: 8
+		Facings: 8
+		Tick: 80
+    run: 
+		Start: 0
+		Length: 8
+		Facings: 8
+		Tick: 80
+	move: 
+		Start: 0
+		Length: 8
+		Facings: 8
+		Tick: 80
+	falling: 
+		Start: 384
+		Length: 32
+		Tick: 20
+	attackground: 
+		Start: 66
+		Length: 7
+		Facings: 8
+        Tick: 80
+	attackair: 
+		Start: 320
+		Length: 8
+		Facings: 8
+        Tick: 80
+	die1: 
+		Start: 131
+		Length: 16
+		Tick: 80
+	# large hit
+	die2: splatterdead
+		Length: *
+		Tick: 80
+	# poision
+	die3: 
+		Start: 163
+		Length: 15
+		Tick: 80
+	# ballista
+	die4: 
+		Start: 180
+		Length: 11
+		Tick: 80
+	die-crushed: e1rot
+		Start: 16
+		Length: 4
+		Tick: 1600
+		ZOffset: -511
+	die5: burningman
+		Length: *
+		Tick: 80
+	icon: vampicon.shp
+		AddExtension: False
         
 acolyte:
 	stunned: sulm4
@@ -847,7 +1150,42 @@ acolyteb:
 	die5: burningman
 		Length: *
 		Tick: 80
-	icon: acolyteicon.shp
+	icon: cultisticon.shp
+		AddExtension: False
+        
+demonhorse:
+	idle1: 
+		Tick: 100
+		Start: 150
+		Length: 7
+		Facings: 8
+		Offset: 0,4,0
+	stand: 
+		Start: 122
+		Facings: 8
+		Offset: 0,4,0
+	run: 
+		Start: 0
+		Length: 8
+		Facings: 8
+		Tick: 80
+		Offset: 0,4,0
+	shoot: 
+		Tick: 80
+		Start: 66
+		Length: 7
+		Facings: 8
+		Offset: 0,4,0
+	die1: 
+		Start: 132
+		Length: 18
+		Tick: 80
+		Offset: 0,4,0
+	# Burn
+	die2: burninghorserider
+		Length: *
+		Tick: 80
+	icon: demonhorseicon.shp
 		AddExtension: False
         
 ^pentagram:

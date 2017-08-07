@@ -114,15 +114,15 @@ namespace OpenRA.Mods.Cnc.Activities
             
             if (self.Info.TraitInfo<AcolytePreyInfo>().LeechesResources && --ticks <= 0)
             {
-                Leech(self);
-                ticks = self.Info.TraitInfo<AcolytePreyInfo>().leechinterval;
+                var amm = Leech(self);
+                ticks = self.Info.TraitInfo<AcolytePreyInfo>().leechinterval + amm*2;
             }
             
             
             return this;
         }
 
-        public void Leech(Actor self)
+        public int Leech(Actor self)
         {
             CPos cell = CPos.Zero;
             var cells = self.World.Map.FindTilesInCircle(self.World.Map.CellContaining(self.CenterPosition), 6, true)
@@ -141,7 +141,8 @@ namespace OpenRA.Mods.Cnc.Activities
 
             if (cell != CPos.Zero && resLayer.GetResourceDensity(cell) > 0)
             {
-                var ammount = resLayer.GetResource(cell).Info.ValuePerUnit;
+                var type = resLayer.GetResource(cell);
+                var ammount = type.Info.ValuePerUnit;
 
                 if ((self.Owner.PlayerActor.Trait<PlayerResources>().Resources + ammount) <= self.Owner.PlayerActor.Trait<PlayerResources>().ResourceCapacity)
                 {
@@ -152,15 +153,20 @@ namespace OpenRA.Mods.Cnc.Activities
                     if (ammount > 0 && self.IsInWorld && !self.IsDead)
                     {
                         var floattest = FloatingText.FormatCashTick(ammount);
+                        floattest.Replace("$", "Essence ");
+                        floattest.Replace("+", "");
                         if (self.Owner.IsAlliedWith(self.World.RenderPlayer))
                             self.World.AddFrameEndTask(w => w.Add(new FloatingText(self.CenterPosition,
-                                self.Owner.Color.RGB, floattest.Replace("$","Essence "), 30)));
+                                self.Owner.Color.RGB, floattest, 30)));
                     }
                     resLayer.Harvest(cell);
                     if (resLayer.GetResourceDensity(cell)<=0)
                         resLayer.Destroy(cell);
+                    
+                    return ammount;
                 }
             }
+            return 0;
         }
 
 

@@ -1,3 +1,29 @@
+^GrimReanimatable:
+    GrimTarget:
+        GrantCondition: grimactive
+	DamageMultiplier@GRIM:
+		RequiresCondition: grimactive
+		Modifier: 133
+	RangeMultiplier@GRIM:
+		RequiresCondition: grimactive
+		Modifier: 77
+	FirepowerMultiplier@GRIM:
+		RequiresCondition: grimactive
+		Modifier: 77
+	SpeedMultiplier@GRIM:
+		RequiresCondition: grimactive
+		Modifier: 77
+    ReloadDelayMultiplier@GRIM:
+		RequiresCondition: grimactive
+		Modifier: 133
+    GivesExperienceMultiplier@GRIM:
+		RequiresCondition: grimactive
+		Modifier: 0
+	WithColoredOverlay@GRIM:
+		Palette: disabled
+        RequiresCondition: grimactive
+        
+        
 ^GameSettings:
 	GrantConditionOnPrerequisite@Level30:
 		Condition: HPLevel30
@@ -1269,6 +1295,7 @@
 	Inherits@1: ^ExistsInWorld
 	Inherits@3: ^SpriteActor
 	Inherits@5: ^GameSettings
+    Inherits@Grim: ^GrimReanimatable
     HitShape:
 	Huntable:
 	Health:

@@ -23,7 +23,7 @@ namespace OpenRA.Mods.MW.Traits
 		[Desc("Voice string when planting explosive charges.")]
 		[VoiceReference] public readonly string Voice = "Action";
 
-		public readonly string Cursor = "enter";
+		public readonly string Cursor = "preycursor";
 
 		public int Buildinterval = 25;
 		
@@ -72,7 +72,7 @@ namespace OpenRA.Mods.MW.Traits
 			
 			if (forceactor != null)
 				self.SetTargetLine(Target.FromCell(self.World, forceactor.Location), Color.Green);
-			self.QueueActivity(new PreyBuild(self));
+			self.QueueActivity(new PreyBuild(self, forceactor));
 
 		}
 
@@ -88,7 +88,7 @@ namespace OpenRA.Mods.MW.Traits
 			
 			public PreyBuildOrderTargeter(string order, int priority,
 				Func<Actor, bool> canTarget)
-				: base(order, priority, "enter", false, true)
+				: base(order, priority, "preycursor", false, true)
 			{
 				this.canTarget = canTarget;
 			}

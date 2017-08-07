@@ -3346,3 +3346,4 @@ LaborourLoad:
 			HeavyBuilding: 0
 			Spectral: 0
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+        

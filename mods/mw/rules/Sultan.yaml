@@ -1998,6 +1998,14 @@ SULM2:
 	-SelfHealing@SNAKES2:
 	-SelfHealing@SNAKES3:
 	-SelfHealing@SNAKES4:
+    -GrimTarget:
+	-DamageMultiplier@GRIM:
+	-RangeMultiplier@GRIM:
+	-FirepowerMultiplier@GRIM:
+	-SpeedMultiplier@GRIM:
+    -ReloadDelayMultiplier@GRIM:
+    -GivesExperienceMultiplier@GRIM:
+	-WithColoredOverlay@GRIM:
 	Voiced:
 		VoiceSet: DjinVoice
 	PersonValued:

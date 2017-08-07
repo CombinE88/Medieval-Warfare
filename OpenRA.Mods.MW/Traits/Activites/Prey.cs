@@ -28,31 +28,54 @@ namespace OpenRA.Mods.Cnc.Activities
 		
 		readonly HashSet<string> preyBuildings;
 		private Actor targetActor;
+		Actor target;
 
-		public Prey(Actor self)
+		public Prey(Actor self, Actor who = null)
 		{
 			info = self.Info.TraitInfo<AcolytePreyInfo>();
 			preyBuildings = info.TargetActors;
 			targetActor =  self.Trait<AcolytePrey>().forceactor;
+			
+			target = who;
 
+		}
+		
+		public IEnumerable<Actor> getPentas(Actor self)
+		{
+			return self.World.ActorsHavingTrait<DockManager>()
+				.Where(a =>preyBuildings.Contains(a.Info.Name));
 		}
 
 		public override Activity Tick(Actor self)
 		{
 			if (IsCanceled)
 				return NextActivity;
+			
+			if (target == null || target.IsDead || target.Disposed || !target.Trait<DockManager>().HasFreeServiceDock(self))
+			{
+				var pentas = getPentas(self);
+				var dockablePentas = pentas.Where(p => p.Trait<DockManager>().HasFreeServiceDock(self));
+				if (dockablePentas.Any())
+					target = dockablePentas.ClosestTo(self);
+				else if (pentas.Any())
+					target = pentas.ClosestTo(self);
+				else
+					target = null;
+			}
 
-			Actor rearmTarget = null;
-			if (targetActor != null)
-				rearmTarget = targetActor;
-			else
-			rearmTarget = self.World.Actors.Where(a => preyBuildings.Contains(a.Info.Name))
-				.ClosestTo(self);
+			if (target == null)
+			{
+				Cancel(self);
+				return NextActivity;
+			}
 			
-			if (rearmTarget == null)
+			if (!target.Trait<DockManager>().HasFreeServiceDock(self))
+			{
 				return new Wait(20);
+			}
 			
-			rearmTarget.Trait<DockManager>().ReserveDock(rearmTarget, self, this);
+			target.Trait<DockManager>().ReserveDock(target, self, this);
+			
 			return NextActivity;
 		}
 

@@ -127,6 +127,33 @@ explosion:
 	building: fball1
 	building_napalm: napalm2
 		FlipX: true
+   	gianthand: acolytebattack
+		Length: *
+		Tick: 80
+	rockimpact: undead7
+		Start: 287
+		Length: 7
+		Tick: 100
+    grimsummon: grim
+        Start: 270
+        Length: 23
+        Tick: 20
+    handa1: handa1
+        Start: 0
+        Length:*
+        Tick: 100
+    handa2: handa2
+        Start: 0
+        Length:*
+        Tick: 100
+    handa3: handa3
+        Start: 0
+        Length:*
+        Tick: 100
+    handa4: handa4
+        Start: 0
+        Length:*
+        Tick: 100
 
 rank:
 	rank-veteran-1:

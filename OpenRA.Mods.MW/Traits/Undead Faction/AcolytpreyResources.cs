@@ -22,7 +22,7 @@ namespace OpenRA.Mods.MW.Traits
 		[Desc("Voice string when planting explosive charges.")]
 		[VoiceReference] public readonly string Voice = "Action";
 
-		public readonly string Cursor = "enter";
+		public readonly string Cursor = "preycursor";
 
 		public bool LeechesResources = true;
 
@@ -69,7 +69,7 @@ namespace OpenRA.Mods.MW.Traits
 			
 			if (forceactor != null)
 				self.SetTargetLine(Target.FromCell(self.World, forceactor.Location), Color.Green);
-			self.QueueActivity(new Prey(self));
+			self.QueueActivity(new Prey(self, forceactor));
 
 		}
 

@@ -10,11 +10,13 @@
 #endregion
 
 using System.Collections.Generic;
+using OpenRA.Mods.Common;
 using OpenRA.Mods.Common.Activities;
 using OpenRA.Mods.Common.Orders;
+using OpenRA.Mods.Common.Traits;
 using OpenRA.Traits;
 
-namespace OpenRA.Mods.Common.Traits
+namespace OpenRA.Mods.MW.Traits
 {
 	[Desc("Actor becomes a specified actor type when this trait is triggered.")]
 	public class SkipTransformsInfo : ITraitInfo
