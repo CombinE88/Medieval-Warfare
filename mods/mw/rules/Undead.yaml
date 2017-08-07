@@ -1697,16 +1697,16 @@ GRIM:
 	RevealsShroud:
 		Range: 6c0
 	Valued:
-		Cost: 1000
+		Cost: 1300
 	Tooltip:
 		Name: Grim Reaper
 	Buildable:
 		Description: none yet
 		IconPalette: raicon
 		Prerequisites: seal4
-		BuildPaletteOrder: 40
+		BuildPaletteOrder: 30
 		Queue: MVehicle.ded
-		BuildDuration: 600
+		BuildDuration: 1500
 	Mobile:
 		Speed: 45
 	-Crushable:
@@ -1831,11 +1831,11 @@ VAMP:
 		Type: Knight
 	Buildable:
 		IconPalette: raicon
-		BuildPaletteOrder: 30
+		BuildPaletteOrder: 10
         Prerequisites: seal2
 		Description: none
 		Queue: MVehicle.ded
-        BuildDuration: 400
+        BuildDuration: 900
     Transforms:
         IntoActor: vampflying
         
@@ -1927,11 +1927,11 @@ DEMONHORSE:
 		Name: Demon Knight
 	Buildable:
 		IconPalette: raicon
-		BuildPaletteOrder: 20
-		Prerequisites: seal3
+		BuildPaletteOrder: 30
+		Prerequisites: seal4
 		Description: Fast, light Cavalry.\n  Strong vs Cavalry and Buildings\n  Weak vs Infantry\n\n
 		Queue: MVehicle.ded
-		BuildDuration: 250
+		BuildDuration: 800
 	Mobile:
 		SharesCell: false
 		Crushes: crate, infantry

@@ -47,7 +47,7 @@ namespace OpenRA.Mods.MW.Warheads
 
 			shrapnelTarget = Target.FromActor(selftarget);
 
-			if (shrapnelTarget.Type != TargetType.Invalid && target.Type == TargetType.Actor)
+			if (shrapnelTarget.Type != TargetType.Invalid)
 			{
 				var args = new ProjectileArgs
 				{
