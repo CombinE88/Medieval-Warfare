@@ -367,7 +367,8 @@ AcolyteSpawnHelper:
 	MinRange: 0
 	InvalidTargets: Air
 	ValidTargets: Ground
-	Projectile: InstantExplode
+	Projectile: GravityBomb
+        Velocity: 10,0,0
 	Warhead@1Snakes: FireShrapnel
 		Weapon: AcolyteSpawnSkeletonA
 		InvalidTargets: Air
@@ -415,17 +416,15 @@ AcolyteSpawnSkeletonA:
 	InvalidTargets: Air, Structure, Infantry, Siege, Cavalry, Wall
 	ReloadDelay: 200
 	MinRange: 2c0
-	Range: 3c0
-	Report: lightning1.aud, lightning2.aud
-	Projectile: TeslaZap
-		Image: zombspark   
-		Palette: raicon
-		Duration: 12
-		DimZaps: 1
-		BrightZaps: 0
+	Range: 2c0
+	Projectile: Bullet
+		Speed: 1c382
+	Warhead@SpawnEffect: CreateEffect
+		Explosions: summoning
+        ExplosionPalette : grimspawnalpha
 	Warhead@Talking: SpawnActor
-		Actors: undead1
-		Delay: 10
+		Actors: ressurect1
+		Delay: 3
 		ValidTargets: Ground
 		InvalidTargets: Air
 		
@@ -434,17 +433,15 @@ AcolyteSpawnSkeletonB:
 	InvalidTargets: Air, Structure, Infantry, Siege, Cavalry, Wall
 	ReloadDelay: 200
 	MinRange: 2c0
-	Range: 3c0
-	Report: lightning1.aud, lightning2.aud
-	Projectile: TeslaZap
-		Image: zombspark   
-		Palette: raicon
-		Duration: 12
-		DimZaps: 1
-		BrightZaps: 0
+	Range: 2c0
+	Projectile: Bullet
+		Speed: 1c382
+	Warhead@SpawnEffect: CreateEffect
+		Explosions: summoning
+        ExplosionPalette : grimspawnalpha
 	Warhead@Talking: SpawnActor
-		Actors: undead2
-		Delay: 10
+		Actors: ressurect2
+		Delay: 3
 		ValidTargets: Ground
 		InvalidTargets: Air
 		
@@ -453,17 +450,15 @@ AcolyteSpawnSkeletonC:
 	InvalidTargets: Air, Structure, Infantry, Siege, Cavalry, Wall
 	ReloadDelay: 200
 	MinRange: 2c0
-	Range: 3c0
-	Report: lightning1.aud, lightning2.aud
-	Projectile: TeslaZap
-		Image: zombspark   
-		Palette: raicon
-		Duration: 12
-		DimZaps: 1
-		BrightZaps: 0
+	Range: 2c0
+	Projectile: Bullet
+		Speed: 1c382
+	Warhead@SpawnEffect: CreateEffect
+		Explosions: summoning
+        ExplosionPalette : grimspawnalpha
 	Warhead@Talking: SpawnActor
-		Delay: 10
-		Actors: undead3
+		Delay: 3
+		Actors: ressurect3
 		ValidTargets: Ground
 		InvalidTargets: Air
 
@@ -472,32 +467,27 @@ AcolyteSpawnSkeletonD:
 	InvalidTargets: Air, Structure, Infantry, Siege, Cavalry, Wall
 	ReloadDelay: 200
 	MinRange: 2c0
-	Range: 3c0
-	Report: lightning1.aud, lightning2.aud
-	Projectile: TeslaZap
-		Image: zombspark   
-		Palette: raicon
-		Duration: 12
-		DimZaps: 1
-		BrightZaps: 0
+	Range: 2c0
+	Projectile: Bullet
+		Speed: 1c382
+	Warhead@SpawnEffect: CreateEffect
+		Explosions: summoning
+        ExplosionPalette : grimspawnalpha
 	Warhead@Talking: SpawnActor
-		Delay: 10
-		Actors: undead5
+		Delay: 3
+		Actors: ressurect4
 		ValidTargets: Ground
 		InvalidTargets: Air
         
 AcolyteAttackCleaner:
-	ReloadDelay: 100
-	Range: 7c0
-    Burst: 3
-	BurstDelay: 10
+	ReloadDelay: 65
+	Range: 5c512
 	Report: lightning1.aud, lightning2.aud
 	ValidTargets: Ground
     InvalidTargets: Air
 	Projectile: TeslaZap
 		Image: zombspark   
 		Palette: raicon
-		Duration: 12
 		DimZaps: 1
 		BrightZaps: 1
 	Warhead@2Smu: LeaveSmudge
@@ -507,7 +497,39 @@ AcolyteAttackCleaner:
 		Spread: 141
 		ValidTargets: Ground
         InvalidTargets: Air
-		Damage: 1500
+		Damage: 3000
+		Versus:
+			Leather: 100
+			Light: 100
+			Heavy: 100
+			Concrete: 100
+			Knight: 100
+			LightCavalry: 100
+			MediumCavalry: 100
+			HeavyCavalry: 100
+			HeavyBuilding: 100
+            Spectral: 80
+		DamageTypes: Prone50Percent, TriggerProne, RippedApartDeath
+        
+AcolyteAttackCleanerAIR:
+	ReloadDelay: 65
+	Range: 8c0
+	Report: lightning1.aud, lightning2.aud
+	ValidTargets: Air
+    InvalidTargets: Ground
+	Projectile: TeslaZap
+		Image: zombspark   
+		Palette: raicon
+		DimZaps: 1
+		BrightZaps: 1
+	Warhead@2Smu: LeaveSmudge
+		SmudgeType: Scorch
+		InvalidTargets: Vehicle, Structure, Wall
+	Warhead@1Dam: SpreadDamage
+		Spread: 141
+		ValidTargets: Air
+        InvalidTargets: Ground
+		Damage: 3000
 		Versus:
 			Leather: 100
 			Light: 100
@@ -519,6 +541,7 @@ AcolyteAttackCleaner:
 			HeavyCavalry: 100
 			HeavyBuilding: 100
 		DamageTypes: Prone50Percent, TriggerProne, RippedApartDeath
+        
         
 GrimSkytheThrow:
 	ReloadDelay: 35
@@ -537,7 +560,7 @@ GrimSkytheThrow:
 		Palette: grimprojalpha
 	Warhead@1Dam: SpreadDamage
 		Spread: 65
-		Damage: 3000
+		Damage: 4000
 		ValidTargets: Ground
         InvalidTargets: Air
 		Versus:
@@ -577,10 +600,12 @@ VampAttackGG:
 			MediumCavalry: 100
 			HeavyCavalry: 100
 			HeavyBuilding: 45
+            Spectral: 20
 		DamageTypes: Prone50Percent, TriggerProne, RippedApartDeath
     Warhead@2Backfire: BackFireShrapnel
         Weapon: BackFlyingBlood
-        ValidTargets: Air, Ground
+        ValidTargets: Ground
+        InvalidTargets: Air
         
 VampAttackAA:
 	ReloadDelay: 45
@@ -604,10 +629,12 @@ VampAttackAA:
 			MediumCavalry: 100
 			HeavyCavalry: 100
 			HeavyBuilding: 45
+            Spectral: 20
 		DamageTypes: Prone50Percent, TriggerProne, RippedApartDeath
     Warhead@2Backfire: BackFireShrapnel
         Weapon: BackFlyingBlood
-        ValidTargets: Air, Ground
+        ValidTargets: Air
+        InvalidTargets: Ground
         
         
 BackFlyingBlood:
@@ -626,7 +653,7 @@ BackFlyingBlood:
 		Palette: vamprojalpha
 	Warhead@1Dam: SpreadDamage
 		Spread: 141
-        ValidTargets: Air, Ground
+        ValidTargets:  Air, Ground
 		Damage: -600
         AffectsParent: true
 		Versus:
@@ -738,11 +765,284 @@ FromBelow:
 	Warhead@1Eff: CreateEffect
 		Explosions: handa1, handa2, handa3, handa4
         ExplosionPalette : ra
+        ImpactSounds: skeletondie.aud
 	Warhead@2Eff: CreateEffect
 		Explosions: handa1, handa2, handa3, handa4
         ExplosionPalette : ra
+        ImpactSounds: skeletondie.aud
 		Delay: 20
 	Warhead@3Eff: CreateEffect
 		Explosions: handa1, handa2, handa3, handa4
         ExplosionPalette : ra
+        ImpactSounds: skeletondie.aud
 		Delay: 40
+        
+GargAttack:
+	ReloadDelay: 35
+	Range: 7c0
+	Burst: 5
+	BurstDelay: 3
+	MinRange: 0c512
+	Report: flamer2.aud
+	ValidTargets: Ground
+	InvalidTargets: Air
+	Projectile: Bullet
+		Speed: 350
+		Blockable: false
+		LaunchAngle: 46
+		Inaccuracy: 0c788
+		Image: flamespit
+		Palette: ra
+	Warhead@1Dam: SpreadDamage
+		Spread: 210
+		ValidTargets: Ground
+		InvalidTargets: Air
+		Damage: 800
+		Falloff: 100, 70, 60, 50, 18, 7, 0
+		Versus:
+			None: 100
+			Leather: 100
+			Light: 100
+			Heavy: 100
+			Concrete: 100
+			Knight: 85
+			LightCavalry: 100
+			MediumCavalry: 45
+			HeavyCavalry: 35
+			HeavyBuilding: 125
+			Spectral: 120
+		DamageTypes: Prone50Percent, TriggerProne, BurnToDeath
+	Warhead@2Smu: LeaveSmudge
+		SmudgeType: Scorch
+		InvalidTargets: Vehicle, Structure, Wall
+	Warhead@5Eff: CreateEffect
+		Explosions: small_napalm
+		ImpactSounds: xplos.aud
+        
+GrimSpawn:
+	ReloadDelay: 55
+	Range: 7c0
+	Burst: 5
+	BurstDelay: 3
+	MinRange: 0c512
+	ValidTargets: Ground
+	Projectile: InstantExplode
+	Warhead@1Spawneffect: CreateEffect
+		Explosions: grimsummon
+
+ObeliskLight:
+	ReloadDelay: 65
+	Range: 8c512
+    Burst: 4
+    BurstDelay: 10
+	Report: lightning1.aud, lightning2.aud
+	ValidTargets: Ground, Air
+	Projectile: TeslaZap
+		Image: zombspark   
+		Palette: raicon
+		DimZaps: 1
+		BrightZaps: 1
+	Warhead@2Smu: LeaveSmudge
+		SmudgeType: Scorch
+		InvalidTargets: Vehicle, Structure, Wall
+	Warhead@1Dam: SpreadDamage
+		Spread: 141
+		ValidTargets: Ground, Air
+		Damage: 2000
+		Versus:
+			Leather: 100
+			Light: 100
+			Heavy: 100
+			Concrete: 100
+			Knight: 100
+			LightCavalry: 100
+			MediumCavalry: 100
+			HeavyCavalry: 100
+			HeavyBuilding: 100
+		DamageTypes: Prone50Percent, TriggerProne, RippedApartDeath
+        
+RealDeath:
+	ValidTargets: Ground, Air
+	Warhead@1Eff_impact: CreateEffect
+        Delay: 15
+		Explosions: giantskull
+        ImpactSounds: horror3.aud
+        ExplosionPalette : alphaeight
+	Warhead@1Snakes: FireShrapnel
+        Delay: 0
+		Weapon: RDHand
+		InvalidTargets: Air
+		ValidTargets: Ground
+		AimChance: 100
+		AllowDirectHit: true
+		AimTargetStances: Enemy, Neutral
+		Amount: 25
+	Warhead@2Snakes: FireShrapnel
+        Delay: 40
+		Weapon: RDHand
+		InvalidTargets: Air
+		ValidTargets: Ground
+		AimChance: 100
+		AllowDirectHit: true
+		AimTargetStances: Enemy, Neutral
+		Amount: 25
+	Warhead@3Snakes: FireShrapnel
+        Delay: 80
+		Weapon: RDHand
+		InvalidTargets: Air
+		ValidTargets: Ground
+		AimChance: 100
+		AllowDirectHit: true
+		AimTargetStances: Enemy, Neutral
+		Amount: 25
+	Warhead@4Snakes: FireShrapnel
+        Delay: 120
+		Weapon: SpawnBLocker1
+		InvalidTargets: Air
+		ValidTargets: Ground
+		AimChance: 100
+		AllowDirectHit: true
+		AimTargetStances: Enemy, Neutral
+		Amount: 5
+	Warhead@5Snakes: FireShrapnel
+        Delay: 140
+		Weapon: SpawnBLocker2
+		InvalidTargets: Air
+		ValidTargets: Ground
+		AimChance: 100
+		AllowDirectHit: true
+		AimTargetStances: Enemy, Neutral
+		Amount: 5
+	Warhead@6Snakes: FireShrapnel
+        Delay: 160
+		Weapon: SpawnBLocker3
+		InvalidTargets: Air
+		ValidTargets: Ground
+		AimChance: 100
+		AllowDirectHit: true
+		AimTargetStances: Enemy, Neutral
+		Amount: 5
+        
+        
+RDHand:
+	ReloadDelay: 3
+	Range: 5c0
+	MinRange: 0c0
+	ValidTargets: Ground
+	InvalidTargets: Wall
+	Projectile: Bullet
+		Speed: 250
+		Blockable: false
+		LaunchAngle: 96
+		Inaccuracy: 2c0
+	Warhead@1Dam: SpreadDamage
+		Spread: 752
+		InvalidTargets: Wall
+		Damage: 2500
+		ValidTargets: Ground
+		Versus:
+			None: 100
+			Leather: 100
+			Light: 100
+			Heavy: 100
+			Concrete: 50
+			Knight: 250
+			LightCavalry: 100
+			MediumCavalry: 100
+			HeavyCavalry: 100
+			HeavyBuilding: 150
+			Spectral: 100
+		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+	Warhead@2Dam: SpreadDamage
+		Spread: 712
+		ValidTargets: Ground
+		InvalidTargets: Wall
+		Delay: 20
+		Damage: 2500
+		Versus:
+			None: 100
+			Leather: 100
+			Light: 100
+			Heavy: 100
+			Concrete: 50
+			Knight: 250
+			LightCavalry: 100
+			MediumCavalry: 100
+			HeavyCavalry: 100
+			HeavyBuilding: 150
+		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+	Warhead@3Dam: SpreadDamage
+		Spread: 450
+		ValidTargets: Ground
+		InvalidTargets: Wall
+		Delay: 40
+		Damage: 2500
+		Versus:
+			None: 100
+			Leather: 100
+			Light: 100
+			Heavy: 100
+			Concrete: 50
+			Knight: 250
+			LightCavalry: 100
+			MediumCavalry: 100
+			HeavyCavalry: 100
+			HeavyBuilding: 150
+			Spectral: 100
+		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+	Warhead@1Eff: CreateEffect
+		Explosions: handa1, handa2, handa3, handa4
+        ExplosionPalette : ra
+        ImpactSounds: skeletondie.aud
+	Warhead@2Eff: CreateEffect
+		Explosions: handa1, handa2, handa3, handa4
+        ExplosionPalette : ra
+        ImpactSounds: skeletondie.aud
+		Delay: 20
+	Warhead@3Eff: CreateEffect
+		Explosions: handa1, handa2, handa3, handa4
+        ExplosionPalette : ra
+        ImpactSounds: skeletondie.aud
+		Delay: 40
+        
+SpawnBLocker1:
+	ValidTargets: Ground
+	InvalidTargets: Air, Structure, Infantry, Siege, Cavalry, Wall
+	ReloadDelay: 200
+	MinRange: 1c0
+	Range: 5c0
+	Projectile: Bullet
+		Speed: 0c512
+	Warhead@Talking: SpawnActor
+		Actors: blocker1
+		Delay: 10
+		ValidTargets: Ground
+		InvalidTargets: Air
+        
+SpawnBLocker2:
+	ValidTargets: Ground
+	InvalidTargets: Air, Structure, Infantry, Siege, Cavalry, Wall
+	ReloadDelay: 200
+	MinRange: 1c0
+	Range: 5c0
+	Projectile: Bullet
+		Speed: 0c512
+	Warhead@Talking: SpawnActor
+		Actors: blocker2
+		Delay: 10
+		ValidTargets: Ground
+		InvalidTargets: Air
+        
+SpawnBLocker3:
+	ValidTargets: Ground
+	InvalidTargets: Air, Structure, Infantry, Siege, Cavalry, Wall
+	ReloadDelay: 200
+	MinRange: 1c0
+	Range: 5c0
+	Projectile: Bullet
+		Speed: 0c512
+	Warhead@Talking: SpawnActor
+		Actors: blocker3
+		Delay: 10
+		ValidTargets: Ground
+		InvalidTargets: Air

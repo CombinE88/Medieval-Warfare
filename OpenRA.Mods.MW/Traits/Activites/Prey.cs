@@ -16,6 +16,7 @@ using OpenRA.Mods.Cnc.Traits;
 using OpenRA.Mods.Common.Activities;
 using OpenRA.Mods.Common.Traits;
 using OpenRA.Mods.Common.Traits.Render;
+using OpenRA.Mods.Mw.Activities;
 using OpenRA.Mods.MW.Traits;
 using OpenRA.Primitives;
 using OpenRA.Traits;
@@ -27,14 +28,13 @@ namespace OpenRA.Mods.Cnc.Activities
 		readonly AcolytePreyInfo info;
 		
 		readonly HashSet<string> preyBuildings;
-		private Actor targetActor;
+		
 		Actor target;
 
-		public Prey(Actor self, Actor who = null)
+		public Prey(Actor self, Actor who)
 		{
 			info = self.Info.TraitInfo<AcolytePreyInfo>();
 			preyBuildings = info.TargetActors;
-			targetActor =  self.Trait<AcolytePrey>().forceactor;
 			
 			target = who;
 
@@ -96,7 +96,6 @@ namespace OpenRA.Mods.Cnc.Activities
 
 		Activity IDockActivity.ActivitiesOnDockFail(Actor client)
 		{
-			// Find another FIX or something.
 			return null;
 		}
 	}

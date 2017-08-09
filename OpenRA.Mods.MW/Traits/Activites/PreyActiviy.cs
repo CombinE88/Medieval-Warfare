@@ -10,7 +10,7 @@ using OpenRA.Mods.MW.Traits;
 using OpenRA.Support;
 using OpenRA.Traits;
 
-namespace OpenRA.Mods.Cnc.Activities
+namespace OpenRA.Mods.Mw.Activities
 {
 
     // Assumes you have Minelayer on that unit
@@ -115,7 +115,7 @@ namespace OpenRA.Mods.Cnc.Activities
             if (self.Info.TraitInfo<AcolytePreyInfo>().LeechesResources && --ticks <= 0)
             {
                 var amm = Leech(self);
-                ticks = self.Info.TraitInfo<AcolytePreyInfo>().leechinterval + amm*2;
+                ticks = self.Info.TraitInfo<AcolytePreyInfo>().leechinterval + amm;
             }
             
             
@@ -152,9 +152,10 @@ namespace OpenRA.Mods.Cnc.Activities
 
                     if (ammount > 0 && self.IsInWorld && !self.IsDead)
                     {
-                        var floattest = FloatingText.FormatCashTick(ammount);
-                        floattest.Replace("$", "Essence ");
-                        floattest.Replace("+", "");
+                        var floattest = ammount.ToString();
+                        
+                       floattest = "+ " + floattest + " Essence";
+                        
                         if (self.Owner.IsAlliedWith(self.World.RenderPlayer))
                             self.World.AddFrameEndTask(w => w.Add(new FloatingText(self.CenterPosition,
                                 self.Owner.Color.RGB, floattest, 30)));

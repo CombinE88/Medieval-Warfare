@@ -65,6 +65,9 @@ ziggurat3:
 	idle: 
         Start: 25
         Offset: 0,-24
+	active: 
+        Start: 25
+        Offset: 0,-24
     damaged-idle: 
         Start: 26
         Offset: 0,-24
@@ -157,14 +160,18 @@ tomb:
     Inherits: ^pentagram
 	idle:
 		Start: 25
+        Offset: 0,-12
 	damaged-idle:
 		Start: 26
+        Offset: 0,-12
 	dead:
 		Start: 27
         Tick: 800
+        Offset: 0,-12
     make:
 		Length: 25
 		Tick: 200
+        Offset: 0,-12
 	bib: bib2
 		UseTilesetExtension: true
 		Length: *
@@ -631,7 +638,7 @@ undead7:
 		Start: 178
 		Facings: 8
 	stand: 
-		Start: 122
+		Start: 178
 		Facings: 8
 	run: 
 		Start: 0
@@ -1186,6 +1193,43 @@ demonhorse:
 		Length: *
 		Tick: 80
 	icon: demonhorseicon.shp
+		AddExtension: False
+        
+garg:
+    Inherits: ^pentagram
+	damaged-idle: 
+		Offset: 0,-12,0
+		Facings: 32
+		ZOffset: 512
+        Start: 28
+	idle: 
+		Offset: 0,-12,0
+		Facings: 32
+		ZOffset: 512
+        Start: 28
+	overlay: 
+		Offset: 0,-12,0
+        Start: 26
+	damaged-overlay: 
+		Start: 27
+		Offset: 0,-12,0
+	dead: 
+		Start: 61
+		Tick: 800
+		Offset: 0,-12,0
+	make: 
+		Length: 25
+		Tick: 80
+		Offset: 0,-12,0
+	bib: mbGTWR
+		UseTilesetExtension: true
+		TilesetOverrides:
+			WINTER: TEMPERAT
+			JUNGLE: TEMPERAT
+			SNOW: TEMPERAT
+		Length: *
+		Offset: 0,-2
+	icon: gargicon.shp
 		AddExtension: False
         
 ^pentagram:

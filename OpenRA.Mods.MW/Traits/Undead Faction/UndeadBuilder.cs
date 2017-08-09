@@ -24,6 +24,8 @@ namespace OpenRA.Mods.Mw.Traits
         public readonly bool SkipMakeAnims = false;
 
         public readonly bool ForceHealthPercentage = false;
+
+        public readonly int Cost = 1000;
         
         public object Create(ActorInitializer init) { return new UndeadBuilder(init.Self, this); }
     }
@@ -35,12 +37,16 @@ namespace OpenRA.Mods.Mw.Traits
 
         public int hassummoningcount;
         public int decaycounter;
+
+        public int PayPerTick;
+        private DeveloperMode devMode;
 		
         public UndeadBuilder(Actor self, UndeadBuilderInfo info)
         {
             this.info = info;
             this.self = self;
             decaycounter = info.DecayTime;
+            PayPerTick = info.Cost / info.SummoningTime;
         }
 
 
@@ -58,6 +64,12 @@ namespace OpenRA.Mods.Mw.Traits
 
             if (hassummoningcount >= info.SummoningTime)
                 replaceSelf(self);
+            
+            devMode = self.Owner.PlayerActor.TraitOrDefault<DeveloperMode>();
+            if (devMode != null && devMode.FastBuild)
+            {
+                replaceSelf(self);
+            }
         }
 
         public void replaceSelf(Actor self)

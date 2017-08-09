@@ -1295,7 +1295,6 @@
 	Inherits@1: ^ExistsInWorld
 	Inherits@3: ^SpriteActor
 	Inherits@5: ^GameSettings
-    Inherits@Grim: ^GrimReanimatable
     HitShape:
 	Huntable:
 	Health:
@@ -1390,6 +1389,7 @@
 ^Knight:  
 	Inherits: ^MedievalInfantry
 	Inherits@2: ^GainsExperience
+    Inherits@Grim: ^GrimReanimatable
 	WithDeathAnimation:
 		DeathSequencePalette: raplayer
 		DeathTypes:
@@ -1504,6 +1504,7 @@
 ^Cavalry:
 	Inherits: ^MedievalInfantry
 	Inherits@2: ^GainsExperience
+    Inherits@Grim: ^GrimReanimatable
 	Voiced:
 		VoiceSet: GenericHorseVoice
 	Targetable:

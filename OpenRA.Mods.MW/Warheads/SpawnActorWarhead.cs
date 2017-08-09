@@ -10,13 +10,19 @@
 
 using System.Collections.Generic;
 using System.Linq;
+using OpenRA.Graphics;
 using OpenRA.Mods.MW.Activities;
 using OpenRA.Mods.Common.Activities;
-using OpenRA.Mods.Common.Warheads;
+using OpenRA.Mods.Common.Traits;
+using OpenRA.Mods.MW.Warheads;
 using OpenRA.Primitives;
 using OpenRA.Traits;
+using System.Linq;
+using OpenRA.Mods.Common;
+using OpenRA.Support;
+using OpenRA.Traits;
 
-namespace OpenRA.Mods.MW.Warheads
+namespace OpenRA.Mods.Mw.Warheads
 {
 	[Desc("Spawn actors upon explosion.")]
 	public class SpawnActorWarhead : WarheadAS
@@ -50,37 +56,93 @@ namespace OpenRA.Mods.MW.Warheads
 			foreach (var a in Actors)
 			{
 				var placed = false;
+				var building = false;
+				var spawn = true;
 				var td = new TypeDictionary();
 				if (Owner == null)
 					td.Add(new OwnerInit(firedBy.Owner));
 				else
 					td.Add(new OwnerInit(firedBy.World.Players.First(p => p.InternalName == Owner)));
 
-				var unit = firedBy.World.CreateActor(false, a.ToLowerInvariant(), td);
-
-				while (cell.MoveNext())
+				if (firedBy.World.Map.Rules.Actors[a].HasTraitInfo<BuildingInfo>())
 				{
-					if (unit.Trait<IPositionable>().CanEnterCell(cell.Current))
+
+
+					var blng = firedBy.World.Map.Rules.Actors[a].TraitInfo<BuildingInfo>();
+					var cellone = RandomWalk(firedBy.World.Map.CellContaining(target.CenterPosition), firedBy.World.SharedRandom)
+						.Take(Range)
+						.SkipWhile(p => !firedBy.World.CanPlaceBuilding(a, blng, p, null))
+						.Cast<CPos?>().FirstOrDefault();
+
+					if (cellone == null)
 					{
-						var cellpos = firedBy.World.Map.CenterOfCell(cell.Current);
-						var pos = cellpos.Z < target.CenterPosition.Z
-							? new WPos(cellpos.X, cellpos.Y, target.CenterPosition.Z)
-							: cellpos;
-						firedBy.World.AddFrameEndTask(w =>
-						{
-							w.Add(unit);
-							if (Paradrop)
-								unit.QueueActivity(new Parachute(unit, pos));
-							else
-								unit.QueueActivity(new FallDown(unit, pos, FallRate));
-						});
-						placed = true;
-						break;
+						spawn = false;
 					}
+					else
+					{
+						td.Add(new LocationInit(cellone.Value));
+						td.Add(new CenterPositionInit(firedBy.World.Map.CenterOfCell(cellone.Value)));
+					}
+
+					building = true;
+					
+					
 				}
 
-				if (!placed)
-					unit.Dispose();
+
+				
+
+				if (!building)
+				{
+					
+					var unit = firedBy.World.CreateActor(false, a.ToLowerInvariant(), td);
+					
+					while (cell.MoveNext())
+					{
+						if (unit.Trait<IPositionable>().CanEnterCell(cell.Current))
+						{
+							var cellpos = firedBy.World.Map.CenterOfCell(cell.Current);
+							var pos = cellpos.Z < target.CenterPosition.Z
+								? new WPos(cellpos.X, cellpos.Y, target.CenterPosition.Z)
+								: cellpos;
+							firedBy.World.AddFrameEndTask(w =>
+							{
+								w.Add(unit);
+								if (Paradrop)
+									unit.QueueActivity(new Parachute(unit, pos));
+								else
+									unit.QueueActivity(new FallDown(unit, pos, FallRate));
+							});
+							placed = true;
+							break;
+						}
+					}
+
+					if (!placed)
+						unit.Dispose();
+				}
+				else if (spawn)
+				{
+					firedBy.World.AddFrameEndTask(w =>
+					{
+						firedBy.World.CreateActor(true, a.ToLowerInvariant(), td);
+					});
+				}
+			}
+		}
+		
+		public static IEnumerable<CPos> RandomWalk(CPos p, MersenneTwister r)
+		{
+			for (;;)
+			{
+				var dx = r.Next(-1, 2);
+				var dy = r.Next(-1, 2);
+
+				if (dx == 0 && dy == 0)
+					continue;
+
+				p += new CVec(dx, dy);
+				yield return p;
 			}
 		}
 	}

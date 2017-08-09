@@ -125,6 +125,10 @@
 		Name: empty
 		BasePalette: ra
 		Alpha: 0
+	PaletteFromPaletteWithAlpha@80ALPHA:
+		Name: alphaeight
+		BasePalette: ra
+		Alpha: 0.7
 	PlayerColorPalette@RA:
 		BasePalette: ra
 		BaseName: raplayer
@@ -185,4 +189,13 @@
     PaletteFromPaletteWithAlpha@VAMPPROJECT:
 		Name: vamprojalpha
 		BasePalette: ra
+		Alpha: 0.8
+	PaletteFromFile@GRIMSPAWN:
+		Name: grimspawn
+		Filename: grimspawn.pal
+		ShadowIndex: 1
+		AllowModifiers: true
+    PaletteFromPaletteWithAlpha@GRIMSPAWN:
+		Name: grimspawnalpha
+		BasePalette: grimspawn
 		Alpha: 0.8

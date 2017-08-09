@@ -54,8 +54,7 @@ namespace OpenRA.Mods.MW.Traits
 		{
 			if (order.OrderID == "PreyBuild")
 			{
-				forceactor = target.Actor;
-				return new Order(order.OrderID, self, queued);
+				return new Order(order.OrderID, self, queued) {TargetActor = target.Actor};
 			}
 
 			return null;
@@ -69,6 +68,7 @@ namespace OpenRA.Mods.MW.Traits
 			if (!order.Queued)
 				self.CancelActivity();
 
+			forceactor = order.TargetActor;
 			
 			if (forceactor != null)
 				self.SetTargetLine(Target.FromCell(self.World, forceactor.Location), Color.Green);

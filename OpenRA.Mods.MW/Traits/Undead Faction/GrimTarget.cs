@@ -62,9 +62,11 @@ namespace OpenRA.Mods.Mw.Traits
 
         public void Killed(Actor self, AttackInfo e)
         {
+            
             if (!Reanimated && e.Attacker.Info.HasTraitInfo<GrimReanimationInfo>() && e.Attacker.IsInWorld && !e.Attacker.IsDead)
             {
-                if (e.Attacker.Trait<GrimReanimation>().Actor == null)
+                var GrimTrait = e.Attacker.Trait<GrimReanimation>();
+                if (GrimTrait.Actor == null)
                 {
                     var unit = self.World.CreateActor(true, self.Info.Name, new TypeDictionary
                     {
@@ -74,7 +76,7 @@ namespace OpenRA.Mods.Mw.Traits
                     });
                     unit.Trait<GrimTarget>().Reanimated = true;
                     unit.Trait<GrimTarget>().Grim = e.Attacker;
-                    e.Attacker.Trait<GrimReanimation>().Actor = self;
+                    GrimTrait.Actor = unit;
                 }
             }
         }
@@ -91,5 +93,6 @@ namespace OpenRA.Mods.Mw.Traits
         {
             conditionManager = self.TraitOrDefault<ConditionManager>();
         }
+        
     } 
 }

@@ -145,6 +145,15 @@ explosion:
 		idle:
 			Length: *
 			ZOffset: 512
+    giantskull: giantskull
+        BlendMode: Additive
+        Length: *
+        ZOffset: 10240
+        Tick: 500
+    summoning: grim
+        Length: 23
+        Start: 270
+        Tick: 40
 		
 trmr1: 
 	idle: trmrwood
@@ -289,6 +298,8 @@ beacon:
 		Offset: 0,-42
 	strange: davinciiconsmall
 		Offset: 0,-42
+	gravebeacon: gravebeacon
+		Offset: 0,-42
 icon:
 	ddicon: ddicon.shp
 	cadaver: corpseicon.shp
@@ -298,6 +309,7 @@ icon:
 	trojan: trojanicon.shp
 	firestorm: firestormicon.shp
 	strangedavinci: davinciiconpower.shp
+	graveicon: graveicon.shp
 placeholder:
 	idle: ironore4
 		Start: 9 
@@ -317,6 +329,12 @@ lightningstrike:
 		Start: 9 
 	down: ironore4
 		Start: 9  
+        
+realdeath:
+	 up: ironore4
+		Start: 9 
+	down: ironore4
+		Start: 9
 
 selectioncircle:
 	active: selectioncircle

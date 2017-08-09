@@ -12,12 +12,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using OpenRA.Activities;
-using OpenRA.Mods.Cnc.Traits;
 using OpenRA.Mods.Common.Activities;
 using OpenRA.Mods.Common.Traits;
-using OpenRA.Mods.Common.Traits.Render;
+using OpenRA.Mods.Mw.Activities;
 using OpenRA.Mods.MW.Traits;
-using OpenRA.Primitives;
 using OpenRA.Traits;
 
 namespace OpenRA.Mods.Cnc.Activities
@@ -29,13 +27,14 @@ namespace OpenRA.Mods.Cnc.Activities
 		readonly HashSet<string> preyBuildings;
 
 		Actor target;
-	
 
-		public PreyBuild(Actor self, Actor who = null)
+		public PreyBuild(Actor self, Actor who)
 		{
 			info = self.Info.TraitInfo<AcolytePreyBuildInfo>();
 			preyBuildings = info.TargetActors;
+			
 			target = who;
+			
 		}
 		
 		public IEnumerable<Actor> getPentas(Actor self)
@@ -89,7 +88,6 @@ namespace OpenRA.Mods.Cnc.Activities
 
 		Activity IDockActivity.ActivitiesAfterDockDone(Actor host, Actor client, Dock dock)
 		{
-
 			return null;
 		}
 

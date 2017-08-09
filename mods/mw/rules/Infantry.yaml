@@ -1010,6 +1010,13 @@ BUMMLER:
 		
 SIEGERUNNER:
 	Inherits: ^Knight
+    -GrimTarget:
+	-DamageMultiplier@GRIM:
+	-RangeMultiplier@GRIM:
+	-FirepowerMultiplier@GRIM:
+	-SpeedMultiplier@GRIM:
+    -ReloadDelayMultiplier@GRIM:
+    -GivesExperienceMultiplier@GRIM:
 	Valued:
 		Cost: 250
 	Tooltip:

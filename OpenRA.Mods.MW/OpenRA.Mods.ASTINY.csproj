@@ -122,12 +122,14 @@
     <Compile Include="Traits\Undead Faction\AcolytpreyBuild.cs" />
     <Compile Include="Traits\Undead Faction\AcolytpreyResources.cs" />
     <Compile Include="Traits\Undead Faction\BuildUpSound.cs" />
+    <Compile Include="Traits\Undead Faction\FloatingTextBackwards.cs" />
     <Compile Include="Traits\Undead Faction\GrimReanimation.cs" />
     <Compile Include="Traits\Undead Faction\GrimTarget.cs" />
     <Compile Include="Traits\Undead Faction\IsGrave.cs" />
     <Compile Include="Traits\Undead Faction\Skiptransforms.cs" />
     <Compile Include="Traits\Undead Faction\UndeadBuilder.cs" />
     <Compile Include="Traits\Undead Faction\UndeadGraveProduction.cs" />
+    <Compile Include="Traits\Undead Faction\ActorEnsurance.cs" />
     <Compile Include="Traits\Undead Faction\WithUndeadBuilderOverlay.cs" />
     <Compile Include="Traits\WithActorProduction.cs" />
     <Compile Include="Traits\WithFreeSpawnableActor.cs" />

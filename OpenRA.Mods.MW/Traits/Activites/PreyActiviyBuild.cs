@@ -6,12 +6,13 @@ using OpenRA.Mods.Common;
 using OpenRA.Mods.Common.Effects;
 using OpenRA.Mods.Common.Traits;
 using OpenRA.Mods.Common.Traits.Render;
+using OpenRA.Mods.Mw.Effects;
 using OpenRA.Mods.Mw.Traits;
 using OpenRA.Mods.MW.Traits;
 using OpenRA.Support;
 using OpenRA.Traits;
 
-namespace OpenRA.Mods.Cnc.Activities
+namespace OpenRA.Mods.Mw.Activities
 {
 
     // Assumes you have Minelayer on that unit
@@ -34,6 +35,8 @@ namespace OpenRA.Mods.Cnc.Activities
         private int token;
         private string condtion;
 
+        private PlayerResources PR;
+
         public PreyBuildActivity(Actor self,Actor dockact,bool facingDock,Dock d)
         {
             info = self.Info.TraitInfo<AcolytePreyBuildInfo>();
@@ -50,6 +53,7 @@ namespace OpenRA.Mods.Cnc.Activities
             ConditionManager = self.Trait<ConditionManager>();
             token = ConditionManager.InvalidConditionToken;
             condtion = self.Info.TraitInfo<AcolytePreyBuildInfo>().SelfEnabledCondition;
+            PR = self.Owner.PlayerActor.Trait<PlayerResources>(); 
 
         }
 
@@ -115,15 +119,27 @@ namespace OpenRA.Mods.Cnc.Activities
                            token = ConditionManager.GrantCondition(self, condtion);
                 }));
             }
-            
+
             if (UndeadBuilder != null && --ticks <= 0)
             {
 
                 ticks = self.Info.TraitInfo<AcolytePreyBuildInfo>().Buildinterval;
-                UndeadBuilder.hassummoningcount += 1;
+                if (PR.TakeCash(UndeadBuilder.PayPerTick, true))
+                {
+                    UndeadBuilder.hassummoningcount += 1;
+                    var floattest  =UndeadBuilder.PayPerTick.ToString();
+                    floattest = "- " + floattest + " Essence";
+                    if (self.Owner.IsAlliedWith(self.World.RenderPlayer))
+                        self.World.AddFrameEndTask(w => w.Add(new FloatingTextBackwards(self.CenterPosition,
+                            self.Owner.Color.RGB, floattest, 30)));
+                     
+                }
             }
-            
-            
+
+
+
+
+
             return this;
         }
 
