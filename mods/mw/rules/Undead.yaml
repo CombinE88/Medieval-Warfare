@@ -1239,7 +1239,7 @@ TOMB:
         Produces: MVehicle.ded
 	ProductionQueue:
 		Type: MVehicle.ded
-		Group: Infantry
+		Group: Vehicle
 		RequireOwner: false
 		LowPowerSlowdown: 3
 		Factions: ded
@@ -1960,8 +1960,8 @@ ACOLYTEC:
 	Armor:
 		Type: Leather
 	Buildable:
-		Description: none yet
-		IconPalette: \n  Strong vs Infantry and cavalry\n  Can attack Aircrafts
+		Description: \n  Strong vs Infantry and cavalry\n  Can attack Aircrafts
+		IconPalette: raicon
 		Prerequisites: ziggurat2
 		BuildPaletteOrder: 10
 		Queue: MBuilding.ded
@@ -2149,10 +2149,10 @@ LICHK:
 	Tooltip:
 		Name: Lich
 	Buildable:
-		Description: not yet
+		Description: not\n  Cannot attack\n  Very slow\n  Can go over all terrain\n  Summons a skeletal army.yet
 		IconPalette: raicon
 		BuildPaletteOrder: 30
-		Prerequisites: \n  Cannot attack\n  Very slow\n  Can go over all terrain\n  Summons a skeletal army.
+		Prerequisites: seal5
 		Queue: MVehicle.ded
 		BuildDuration: 1200
 	-Mobile:

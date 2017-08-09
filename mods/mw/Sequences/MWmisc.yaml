@@ -149,7 +149,7 @@ explosion:
         BlendMode: Additive
         Length: *
         ZOffset: 10240
-        Tick: 500
+        Tick: 50
     summoning: grim
         Length: 23
         Start: 270

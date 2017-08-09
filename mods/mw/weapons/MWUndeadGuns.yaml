@@ -1012,7 +1012,7 @@ SpawnBLocker1:
 	MinRange: 1c0
 	Range: 5c0
 	Projectile: Bullet
-		Speed: 0c512
+		Speed: 0c112
 	Warhead@Talking: SpawnActor
 		Actors: blocker1
 		Delay: 10
@@ -1026,7 +1026,7 @@ SpawnBLocker2:
 	MinRange: 1c0
 	Range: 5c0
 	Projectile: Bullet
-		Speed: 0c512
+		Speed: 0c112
 	Warhead@Talking: SpawnActor
 		Actors: blocker2
 		Delay: 10
@@ -1040,7 +1040,7 @@ SpawnBLocker3:
 	MinRange: 1c0
 	Range: 5c0
 	Projectile: Bullet
-		Speed: 0c512
+		Speed: 0c112
 	Warhead@Talking: SpawnActor
 		Actors: blocker3
 		Delay: 10
