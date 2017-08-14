@@ -92,7 +92,6 @@ namespace OpenRA.Mods.Mw.Activities
             {
                 playanim = false;
                 endqueueonce = true;
-
                 QueueChild(self.Trait<IMove>().VisualMove(self, self.CenterPosition, _d.CenterPosition));
                 QueueChild(new CallFunc (() =>
                 {
@@ -108,7 +107,6 @@ namespace OpenRA.Mods.Mw.Activities
                     wsb.PlayCustomAnimationRepeating(self, info.PreySequence);
                     if (condtion != null)
                         token = ConditionManager.GrantCondition(self, condtion);
-
                 }));
             }
             

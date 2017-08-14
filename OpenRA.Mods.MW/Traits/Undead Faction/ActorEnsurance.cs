@@ -11,6 +11,7 @@
 
 
 using System.Linq;
+using System.Net.Security;
 using OpenRA.Mods.Common;
 using OpenRA.Mods.Common.Traits;
 using OpenRA.Primitives;
@@ -37,6 +38,8 @@ namespace OpenRA.Mods.Mw.Traits
 		[Desc("Target Pos where newly spawned actor move.")]
 		public readonly CVec MoveOffset = CVec.Zero;
 
+		public readonly int StartDelay = 125;
+
 		public object Create(ActorInitializer init) { return new ActorEnsurance(init, this); }
 	}
 
@@ -50,7 +53,8 @@ namespace OpenRA.Mods.Mw.Traits
 		public ActorEnsurance(ActorInitializer init, ActorEnsuranceInfo info)
 		{
 			this.info = info;
-			Ticker = info.RespawnTime;
+			
+			Ticker = info.StartDelay;
 		}
 
 

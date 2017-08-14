@@ -110,6 +110,7 @@
     <Compile Include="Traits\Orders\AlwaysTrueOrderTargeter.cs" />
     <Compile Include="Traits\PersonValued.cs" />
     <Compile Include="Traits\Player\ConstructionResources.cs" />
+    <Compile Include="Traits\Player\AcolyteAttackNotifier.cs" />
     <Compile Include="Traits\Player\PlayerCivilization.cs" />
     <Compile Include="Traits\ProvidesLivingspace.cs" />
     <Compile Include="Traits\ReloadAmmoWhenEnabled.cs" />
@@ -125,8 +126,10 @@
     <Compile Include="Traits\Undead Faction\FloatingTextBackwards.cs" />
     <Compile Include="Traits\Undead Faction\GrimReanimation.cs" />
     <Compile Include="Traits\Undead Faction\GrimTarget.cs" />
+    <Compile Include="Traits\Undead Faction\InvisibleToLiving.cs" />
     <Compile Include="Traits\Undead Faction\IsGrave.cs" />
     <Compile Include="Traits\Undead Faction\Skiptransforms.cs" />
+    <Compile Include="Traits\Undead Faction\StartandIdle.cs" />
     <Compile Include="Traits\Undead Faction\UndeadBuilder.cs" />
     <Compile Include="Traits\Undead Faction\UndeadGraveProduction.cs" />
     <Compile Include="Traits\Undead Faction\ActorEnsurance.cs" />

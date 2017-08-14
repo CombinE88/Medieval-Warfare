@@ -68,8 +68,6 @@ namespace OpenRA.Mods.MW.Traits
 			
 			forceactor = order.TargetActor;
 			
-			if (forceactor != null)
-				self.SetTargetLine(Target.FromCell(self.World, forceactor.Location), Color.Green);
 			self.QueueActivity(new Prey(self, forceactor));
 
 		}

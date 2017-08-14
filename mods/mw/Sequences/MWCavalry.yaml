@@ -96,7 +96,7 @@ ross2:
 		Length: 8
 		Facings: 8
 		Tick: 100
-	shoot: ross2
+	shoot: ross2s
 		Tick: 100
 		Start: 66
 		Length: 7
@@ -282,7 +282,7 @@ ross4c:
 		Length: 8
 		Facings: 8
 		Tick: 100
-	shoot: ross4c
+	shoot: ross4cs
 		Tick: 100
 		Start: 66
 		Length: 7

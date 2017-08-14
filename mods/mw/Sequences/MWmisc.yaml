@@ -300,6 +300,8 @@ beacon:
 		Offset: 0,-42
 	gravebeacon: gravebeacon
 		Offset: 0,-42
+	coffinbeacon: coffinbeacon
+		Offset: 0,-42
 icon:
 	ddicon: ddicon.shp
 	cadaver: corpseicon.shp
@@ -310,6 +312,7 @@ icon:
 	firestorm: firestormicon.shp
 	strangedavinci: davinciiconpower.shp
 	graveicon: graveicon.shp
+	coffinicon: coffinicon.shp
 placeholder:
 	idle: ironore4
 		Start: 9 

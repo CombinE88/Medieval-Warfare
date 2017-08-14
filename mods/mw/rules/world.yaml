@@ -184,13 +184,14 @@ World:
 		Class: medieval
 		ClassName: Supply Wagon Only
 		Factions: ded
+        SupportActors: preycolyte,preycolyte, preycolyte
 		BaseActor: undeadcomm
 	MPStartUnits@dead:
 		Class: medieval2
 		ClassName: Quick Start
 		Factions: ded
 		BaseActor: undeadcomm
-        SupportActors: preycolyte,preycolyte, preycolyte 
+        SupportActors: preycolyte,preycolyte, preycolyte, preycolyte
         InnerSupportRadius: 4
         OuterSupportRadius: 5
 	MPStartUnits@2:
@@ -198,7 +199,7 @@ World:
 		ClassName: Well Populated
 		Factions: ded
 		BaseActor: undeadcomm
-        SupportActors: preycolyte,preycolyte, preycolyte ,preycolyte, preycolyte 
+        SupportActors: preycolyte,preycolyte, preycolyte ,preycolyte, preycolyte
         InnerSupportRadius: 4
         OuterSupportRadius: 5
 	MPStartUnits@3:

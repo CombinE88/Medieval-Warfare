@@ -121,7 +121,7 @@ sule1:
 		Length: 8
 		Facings: 8
 		Tick: 100
-	shoot: 
+	shoot: sule1s
 		Tick: 100
 		Start: 66
 		Length: 7

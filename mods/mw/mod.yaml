@@ -1,6 +1,6 @@
 Metadata:
 	Title: Medieval Warfare
-	Version: undeadtest
+	Version: Undead10
 
 PackageFormats: Mix
 
@@ -23,7 +23,7 @@ Packages:
 	~scores2.mix
 	~scores-covertops.mix
 	~transit.mix
-    mw|bits
+	mw|bits
 	mw|bits/cnc/snow.mix
 	mw|bits/cnc
 	mw|bits/cnc/desert
@@ -42,7 +42,8 @@ Packages:
 	mw|uibits
 	mw|bits/terrain
 	mw|bits/terrain/Desert
-    mw|bits/Undead
+	mw|bits/Undead
+	mw|bits/Undead/voice
 
 MapFolders:
 	mw|maps: System

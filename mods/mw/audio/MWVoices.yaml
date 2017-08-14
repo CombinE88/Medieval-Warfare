@@ -448,3 +448,15 @@ SkeletonVoice:
 		Burned: skeletondie
 		Zapped: skeletondie
 		Poisoned: skeletondie
+        
+AcolyteVoice:
+	DefaultVariant: .aud
+	Voices:
+		Action: acov1a,acov2a,acov3a
+		Select: acov1,acov2,acov3
+		Harvest: acov1c,acov2c
+		Build: acov1b,acov2b
+		Die: nuyell1,nuyell4,nuyell5,nuyell6
+		Burned: yell1
+		Zapped: nuyell3
+		Poisoned: nuyell12

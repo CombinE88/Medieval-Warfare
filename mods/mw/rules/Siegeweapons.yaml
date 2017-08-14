@@ -498,7 +498,7 @@ EHARVXL:
 				PathingCost: 0
 			 
 	Health:
-		HP: 23000
+		HP: 65000
 	RenderSprites:
 		FactionImages:
 			nod: eharvxl

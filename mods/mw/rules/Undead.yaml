@@ -1,5 +1,25 @@
 #Basics
 
+^MWUndeadBuilding:
+	Inherits@1: ^BaseBuilding
+	Inherits@5: ^GameSettingsBuildings
+	RepairableBuilding:
+		RepairPercent: 40
+		RepairStep: 1000
+		PlayerExperience: 15
+	ThrowsShrapnel@SMALL:
+		Weapons: SmallWood1, SmallWood2, SmallWood3, SmallStone1, SmallStone2
+		Pieces: 2, 4
+		Range: 0c512, 3c0
+	Targetable:
+		TargetTypes: Ground, C4, Structure, Wanderer
+	ProximityExternalCondition@WANDERER:
+		Range: 6c0
+		ValidStances: Ally
+		Condition: Wander
+	EmitInfantryOnSell:
+        ActorTypes: undead1, undead3, undead5, preycolyte
+
 ^MWBasePentagram:
 	Inherits@1: ^BaseBuilding
 	Inherits@5: ^GameSettingsBuildings
@@ -10,6 +30,7 @@
 		PlayerExperience: 15
 	Targetable:
 		TargetTypes: Ground, C4, Structure, Pentagram
+	-Sellable:
 
 ^Skeleton:  
 	Inherits: ^MedievalInfantry
@@ -398,8 +419,10 @@
         FaceTowardsCenter: true
 
 ^Gravestone:
-	Inherits: ^MWBaseBuilding
+	Inherits: ^MWUndeadBuilding
 	Inherits@Hitshape: ^1x1Shape
+    -ActorLostNotification:
+    -RepairableBuilding:
 	EditorTilesetFilter:
 		Categories: Undead
 	ShakeOnCreate:
@@ -423,6 +446,54 @@
 		Bounds: 28,28,0,-4
 	SelectionDecorations:
 		VisualBounds: 28,28,0,-4
+	MustBeDestroyed:
+		RequiredForShortGame: false
+	-Sellable:
+	ThrowsShrapnel@SMALL:
+		Weapons: SmallStone1, SmallStone2, LargeStone1
+		Pieces: 2, 4
+		Range: 0c512, 3c0
+        
+^CoffinAmbush:
+	Inherits: ^MWUndeadBuilding
+	Inherits@Hitshape: ^1x1Shape
+	EditorTilesetFilter:
+		Categories: Undead
+	ShakeOnCreate:
+    -RepairableBuilding:
+    -ActorLostNotification:
+	Armor:
+		Type: Concrete
+	-WithDeathAnimation:
+    WithMakeAnimation:
+	RenderSprites:
+		PlayerPalette: raplayer
+	Valued:
+		Cost: 250
+	Tooltip:
+		Name: Coffin
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+	Health:
+		HP: 15000
+	RevealsShroud:
+		Range: 3c0
+	Selectable:
+		Bounds: 28,28,0,-4
+	SelectionDecorations:
+		VisualBounds: 28,28,0,-4
+	MustBeDestroyed:
+		RequiredForShortGame: false
+	-Sellable:
+    ThrowsShrapnel@SMALL:
+		Weapons: SmallWood1, SmallWood2, SmallWood3
+	SelfHealing@Killsslef:
+		PercentageStep: -3
+		Step: -0
+		HealIfBelow: 110
+		Delay: 25
+		DamageTypes: DefaultDeath
         
 #Upgrades
 
@@ -489,7 +560,7 @@ SEAL2:
 	RenderSprites:
 		Image: seal2
 	Valued:
-		Cost: 1400
+		Cost: 1700
 	Tooltip:
 		Name: Break Seal 2
 	ProvidesPrerequisite@buildingname:
@@ -507,7 +578,7 @@ SEAL3:
 	RenderSprites:
 		Image: seal3
 	Valued:
-		Cost: 2100
+		Cost: 2700
 	Tooltip:
 		Name: Break Seal 3
 	ProvidesPrerequisite@buildingname:
@@ -518,7 +589,6 @@ SEAL3:
 		Description: Unknown!\n\n\n
 		Queue: MTech.ded
 		BuildLimit: 1
-        BuildDuration: 2000
         
 SEAL4:
 	AlwaysVisible:
@@ -526,7 +596,7 @@ SEAL4:
 	RenderSprites:
 		Image: seal4
 	Valued:
-		Cost: 2800
+		Cost: 3700
 	Tooltip:
 		Name: Break Seal 4
 	ProvidesPrerequisite@buildingname:
@@ -537,7 +607,6 @@ SEAL4:
 		Description: Unknown!\n\n\n
 		Queue: MTech.ded
 		BuildLimit: 1
-        BuildDuration: 2000
         
 SEAL5:
 	AlwaysVisible:
@@ -545,7 +614,7 @@ SEAL5:
 	RenderSprites:
 		Image: seal5
 	Valued:
-		Cost: 3500
+		Cost: 4000
 	Tooltip:
 		Name: Break the Forgotten Seal
 	ProvidesPrerequisite@buildingname:
@@ -556,11 +625,11 @@ SEAL5:
 		Description: Unknown!\n\n\n
 		Queue: MTech.ded
 		BuildLimit: 1
-        BuildDuration: 2500
+        BuildDuration: 2000
 #Buildings
 
 ZIGGURAT1:
-	Inherits: ^MWBaseBuilding
+	Inherits: ^MWUndeadBuilding
 	Inherits@Hitshape: ^2x2Shape
 	RepairableBuilding:
 		RepairPercent: 40
@@ -604,22 +673,22 @@ ZIGGURAT1:
 		Factions: ded
 		Group: Building
 		LowPowerSlowdown: 2
-		QueuedAudio: Building
-		ReadyAudio: ConstructionComplete
+        ReadyAudio:
+        QueuedAudio: Building
 	ProductionQueue@DeadMDefence:
 		Type: MTech.ded
 		Factions: ded
 		Group: Tech
 		LowPowerSlowdown: 2
-		QueuedAudio: Building
-		ReadyAudio: ConstructionComplete
+        QueuedAudio: Building
+        ReadyAudio:
 	ProductionQueue@DeadMMilitary:
 		Type: MMilitary.ded
 		Factions: ded
 		Group: Building3
-		LowPowerSlowdown: 2
-		QueuedAudio: Building
-		ReadyAudio: ConstructionComplete   
+		LowPowerSlowdown: 2 
+        ReadyAudio:
+        QueuedAudio: Building
 	BaseBuilding:
 	ProductionBar@Buildingded:
 		ProductionType: MBuilding.ded
@@ -639,14 +708,11 @@ ZIGGURAT1:
 	Targetable:
 		TargetTypes: Ground, C4, Structure, Wanderer, BaseCenter
 	ProvidesRadar:
-	StoresResources:
-		PipColor: Yellow
-		PipCount: 10
-		Capacity: 4000
     TransformOnCondition:
         IntoActor: ziggurat2
         SkipMakeAnims: false
         RequiresCondition: hassealone && hassealtwo && zigup
+        ReadyAudio: 
     GrantConditionOnPrerequisite@SEALONE:
         Condition: hassealone
         Prerequisites: seal1
@@ -661,6 +727,10 @@ ZIGGURAT1:
         Maxalive: 3
         Offset: 0,0,0
         MoveOffset: 2,3
+	StoresResources:
+		PipColor: Red
+		PipCount: 10
+		Capacity: 500
         
 
 ZIGGURAT2:
@@ -683,6 +753,7 @@ ZIGGURAT2:
         IntoActor: ziggurat3
         SkipMakeAnims: false
         RequiresCondition: hassealthree && hassealfour && zigup3
+        ReadyAudio: 
     GrantConditionOnPrerequisite@SEALONE:
         Condition: hassealthree
         Prerequisites: seal3
@@ -763,7 +834,7 @@ ZIGGURAT3:
 		ArrowSequence: arrow
 		ClockSequence: clock
 		CircleSequence: circles
-		OrderName: CannonPowerInfoOrder
+		OrderName: GraveyardPowerInfoOrder
 		CameraSpawnAdvance: 5
 		CameraRemoveDelay: 25
 		BeaconRemoveAdvance: 0
@@ -836,7 +907,7 @@ SPPOOL.PENTA:
 	Valued:
 		Cost: 0 #1000
 	Tooltip:
-		Name: Summoning (Soul Collector)
+		Name: Summoning (Essence pool)
 	Health:
 		HP: 50000
 	RevealsShroud:
@@ -844,8 +915,14 @@ SPPOOL.PENTA:
     UndeadBuilder:
         SpawnActor: sppool
         SpawnOffset: 1,1
-        SummoningTime: 75
+        SummoningTime: 100
         Cost: 1000
+	Buildable:
+		IconPalette: raicon
+		BuildPaletteOrder: 30
+		Description: Summons a Essence pool.\n  Stores some Essence
+		Queue: MBuilding.ded
+        BuildDuration: 10
         
         # Summon Barracks
         
@@ -894,7 +971,7 @@ MAUSO.PENTA:
 		IconPalette: raicon
 		BuildPaletteOrder: 30
 		Description: Summons a Tomn.\n  Tomb summons advanced skeletons\n  Increases the number of possible skeletons over time\n  Summons up to 2 coffins each giving grave space\n 
-		Prerequisites: ziggurat2
+		Prerequisites: seal4
 		Queue: MMilitary.ded
         BuildDuration: 10
 	Health:
@@ -985,7 +1062,7 @@ HELLGATE.PENTA:
 
         
 SPPOOL:
-	Inherits: ^MWBaseBuilding
+	Inherits: ^MWUndeadBuilding
 	Inherits@Hitshape: ^2x2Shape
 	EditorTilesetFilter:
 		Categories: Undead
@@ -999,7 +1076,7 @@ SPPOOL:
 	Valued:
 		Cost: 1000
 	Tooltip:
-		Name: Soulpool
+		Name: Essence pool
 	Building:
 		Footprint: xx xx ==
 		Dimensions: 2,3
@@ -1016,10 +1093,14 @@ SPPOOL:
     WithMakeAnimation:
     ShakeOnCreate:
         Time: 85
+	StoresResources:
+		PipColor: Red
+		PipCount: 10
+		Capacity: 1000
         
   
 CRYPT:
-	Inherits: ^MWBaseBuilding
+	Inherits: ^MWUndeadBuilding
 	Inherits@Hitshape: ^2x2Shape
 	EditorTilesetFilter:
 		Categories: Undead
@@ -1080,7 +1161,7 @@ CRYPT:
 		RadiusMax: 3
         
 MAUSO:
-	Inherits: ^MWBaseBuilding
+	Inherits: ^MWUndeadBuilding
 	Inherits@Hitshape: ^2x2Shape
 	EditorTilesetFilter:
 		Categories: Undead
@@ -1136,10 +1217,33 @@ MAUSO:
 		ReadyAudio:
 	ProductionBar:
     ProvidesPrerequisite@buildingname:
+	AirstrikePower:
+		Icon: coffinicon
+		ChargeTime: 210
+		SquadOffset	-236,236,0
+		SquadSize: 1
+		QuantizedFacings: 8
+		Description: Ambush from below
+		LongDesc: Discription.
+		EndChargeSpeechNotification: NewAirstrike
+		SelectTargetSpeechNotification: SelectTarget
+		InsufficientPowerSpeechNotification: InsufficientPower
+		IncomingSpeechNotification: NewAirstrikeAnnounce
+		UnitType: placeholdercoffin
+		DisplayBeacon: True
+		BeaconPoster: coffinbeacon
+		BeaconPosterPalette: beaconposter
+		DisplayRadarPing: True
+		CameraActor: camera
+		ArrowSequence: arrow
+		ClockSequence: clock
+		CircleSequence: circles
+		OrderName: BelowCoffinPowerInfoOrder
+	SupportPowerChargeBar:
 
         
 LIBRA:
-	Inherits: ^MWBaseBuilding
+	Inherits: ^MWUndeadBuilding
 	Inherits@Hitshape: ^2x2Shape
 	EditorTilesetFilter:
 		Categories: Undead
@@ -1196,10 +1300,10 @@ LIBRA:
 		ArrowSequence: arrow
 		ClockSequence: clock
 		CircleSequence: circles
-		OrderName: ArrowsPowerInfoOrder
+		OrderName: HandsBelowPowerInfoOrder
         
 TOMB:
-	Inherits: ^MWBaseBuilding
+	Inherits: ^MWUndeadBuilding
 	Inherits@Hitshape: ^3x2Shape
 	EditorTilesetFilter:
 		Categories: Undead
@@ -1236,7 +1340,7 @@ TOMB:
 	RallyPoint:
 	ProvidesPrerequisite@buildingname:
     Production:
-        Produces: MVehicle.ded
+		Produces: MVehicle.ded
 	ProductionQueue:
 		Type: MVehicle.ded
 		Group: Vehicle
@@ -1248,7 +1352,7 @@ TOMB:
     ProvidesPrerequisite@buildingname:
         
 HELLGATE:
-	Inherits: ^MWBaseBuilding
+	Inherits: ^MWUndeadBuilding
 	Inherits@Hitshape: ^2x2Shape
 	EditorTilesetFilter:
 		Categories: Undead
@@ -1376,7 +1480,7 @@ OBELISK:
 	Inherits@Hitshape: ^1x1Shape
     Inherits@AUTOTARGET: ^AutoTargetAll
 	Armor:
-		Type: HeavyBuilding
+		Type: Concrete
 	WithDeathAnimation:
 		DeathSequencePalette: raplayer
 	RenderSprites:
@@ -1393,7 +1497,7 @@ OBELISK:
 		Dimensions: 1,1
 	AutoTarget:
 	Health:
-		HP: 80000
+		HP: 60000
 	RevealsShroud:
 		Range: 10c0
 	Selectable:
@@ -1519,6 +1623,10 @@ UNDEADCOMM:
 
 PREYCOLYTE:
 	Inherits: ^Knight
+	Captures:
+		CaptureTypes: building
+		PlayerExperience: 50
+		SabotageHPRemoval: 10
 	Valued:
 		Cost: 650
 	-Crushable:
@@ -1553,21 +1661,27 @@ PREYCOLYTE:
 	-Explodes@Tib:
     DockClient:
     AcolytePrey: 
-        TargetActors: split3, split4, split4b, split2, splitblue, split5
+        TargetActors: split3, split4, split4b, split2, splitblue, split5, splitdead
         PreyLoopSequence: prey
         leechinterval: 45
         SelfEnabledCondition: whisper
+        Voice: Harvest
     AcolytePreyBuild: 
         TargetActors: crypt.penta, sppool.penta, mauso.penta, hellgate.penta, tomb.penta, libra.penta, obelisk.penta, garg.penta
         PreyLoopSequence: prey
         Buildinterval: 20
         Buildpower: 1
         SelfEnabledCondition: whisper
+        Voice: Build
     AmbientSound:
         SoundFiles: pray.aud
         RequiresCondition: whisper
 	Selectable:
 		Priority: 7
+	Voiced:
+		VoiceSet: AcolyteVoice
+        Volume: 3
+
         
 DEADROSS:
 	Inherits: ^Cavalry
@@ -1601,7 +1715,7 @@ DEADROSS:
 		Description: Very Fast\n  Strong vs Infantry\n  Weak vs Cavalry \n  Can cut down trees.
 		Queue: MInfantry.ded
         BuildDuration: 750
-        Prerequisites: seal2
+        Prerequisites: ziggurat2
 	WithInfantryBody:
 		RequiresCondition: !makeanim
         DefaultAttackSequence: shoot
@@ -1631,7 +1745,7 @@ UNDEAD1:
 	Mobile:
 		Speed: 75
 	Health:
-		HP: 12000
+		HP: 9000
 	Armament:
 		Weapon: SkeletonBroadSword
 	AttackFrontal:
@@ -1658,7 +1772,7 @@ UNDEAD2:
 	Mobile:
 		Speed: 75
 	Health:
-		HP: 12000
+		HP: 9000
 	Armament:
 		Weapon: SkeletonBroadSword
 	AttackFrontal:
@@ -1681,7 +1795,7 @@ UNDEAD3:
 	Mobile:
 		Speed: 75
 	Health:
-		HP: 10000
+		HP: 8500
 	Armament:
 		Weapon: SkeletonPike
 	AttackFrontal:
@@ -1710,7 +1824,7 @@ UNDEAD4:
 	Mobile:
 		Speed: 65
 	Health:
-		HP: 45000
+		HP: 35000
 	Armament:
 		Weapon: SkeletonAxe
 	Armor:
@@ -1741,7 +1855,7 @@ UNDEAD5:
 	Mobile:
 		Speed: 75
 	Health:
-		HP: 9000
+		HP: 7000
 	Armament:
 		Weapon: SkeletonBowNArrow
 		LocalOffset: 341,20,356
@@ -1783,10 +1897,10 @@ UNDEAD6:
     Targetable:
 		TargetTypes: Ground, Cavalry
 	Health:
-		HP: 100000
+		HP: 68250
 	Armament:
 		Weapon: SkeletonGiant
-		FireDelay: 5
+		FireDelay: 9
 	AttackFrontal:
 	RenderSprites:
 		PlayerPalette: raplayer
@@ -1801,9 +1915,11 @@ UNDEAD6:
 		BuildPaletteOrder: 10
 		Description: Skeletal siegeunit\n  Strong vs all\n  Very slow\n  Very strong
 		Queue: MSiege.ded
-        Prerequisites: seal3
     PersonValued:
         ActorCount: 3
+	-RangeMultiplier:
+    SpeedMultiplier@SNAKES:
+		Modifier: 77
 		
 UNDEAD7:
 	Inherits: ^Skeleton
@@ -1819,12 +1935,12 @@ UNDEAD7:
 		SharesCell: false
 		Speed: 55
 	Health:
-		HP: 60000
+		HP: 50000
 	-Crushable:
 	Armament:
 		Weapon: SkeletonRock
 		FireDelay: 30
-		LocalOffset: 0,0,512
+		LocalOffset: 0,0,1024
 	AttackFrontal:
 	RenderSprites:
 		PlayerPalette: raplayer
@@ -1838,7 +1954,7 @@ UNDEAD7:
 		IconPalette: raicon
 		BuildPaletteOrder: 20
 		Description: Skeletal siegeunit\n  Strong vs all\n  Very slow\n  very strong\n  Attacks ranged.
-        Prerequisites: seal4
+        Prerequisites: ziggurat3
 		Queue: MSiege.ded
     PersonValued:
         ActorCount: 3
@@ -1856,7 +1972,7 @@ GRIM:
 	RevealsShroud:
 		Range: 6c0
 	Valued:
-		Cost: 1300
+		Cost: 1000
 	Tooltip:
 		Name: Grim Reaper
 	Mobile:
@@ -1948,7 +2064,6 @@ ACOLYTEC:
         FireDelay: 14
     AttackFrontal:
 	AutoTarget:
-		ScanRadius: 10
 		InitialStance: AttackAnything
 	RenderSprites:
         Image: acolyteb
@@ -1973,7 +2088,7 @@ VAMP:
     Inherits@5: ^GameSettings
     Inherits@88: ^GameSettingsArcher
 	Valued:
-		Cost: 700
+		Cost: 750
 	-Crushable:
 	Tooltip:
 		Name: Vampire
@@ -1981,9 +2096,14 @@ VAMP:
 		Speed: 65
 	Health:
 		HP: 20000
-	Armament@Spawn:
+	Armament@Leech:
 		Weapon: VampAttackGG
 		Name: primary
+        LocalOffset: 100,0,400
+        FireDelay: 4
+	Armament@Building:
+		Weapon: VampAttackGBuilding
+		Name: secondary
         LocalOffset: 100,0,400
         FireDelay: 4
 	AttackFrontal:
@@ -1994,7 +2114,9 @@ VAMP:
         Image: vamp
 		PlayerPalette: raplayer
 	WithInfantryBody:
-		DefaultAttackSequence: attackground
+		AttackSequences: 
+            primary: attackgranged
+            secondary: attackgclose
         IdleSequences: idle1
         MoveSequence: run
         StandSequences: stand
@@ -2022,7 +2144,7 @@ VAMPFLYING:
     WithAttackAnimation: 
         AttackSequence: attackair
     Valued:
-		Cost: 1000
+		Cost: 750
 	Tooltip:
 		Name: Vampire (Flying)
 	Aircraft:
@@ -2032,10 +2154,10 @@ VAMPFLYING:
         MaximumPitch: 56
 		InitialFacing: 96
 		TurnSpeed: 255
-		Speed: 120
+		Speed: 110
         LandableTerrainTypes: Clear, Rough, Road, DirtRoad, Ground, Tiberium, BlueTiberium, Crops, Loot, Wood
 	Health:
-		HP: 10000
+		HP: 20000
 	Armor:
 		Type: Leather
 	RevealsShroud:
@@ -2093,7 +2215,7 @@ DEMONHORSE:
 		RequiresCondition: Slowmotion
 		Modifier: 70
 	Valued:
-		Cost: 650
+		Cost: 550
 	Tooltip:
 		Name: Demon Knight
 	Buildable:
@@ -2129,14 +2251,18 @@ DEMONHORSE:
 	SelectionDecorations:
 		VisualBounds: 26,34,0,-6
     LeavesTrails@left:
-        Image: burn-s
-        MovingInterval: 12
-        Offsets: 412,200,0
+        Image: burningprints
+        MovingInterval: 6
+        Offsets: 0,130,0
+        Type: CenterPosition
+        TerrainTypes: Clear, Rough, Road, DirtRoad, Ground, Tiberium, BlueTiberium, Crops, Loot, Wood
     LeavesTrails@right:
-        Image: burn-s
-        MovingInterval: 12
-        StartDelay: 6
-        Offsets: 412,-200,0
+        Image: burningprints
+        MovingInterval: 6
+        StartDelay: 3
+        Offsets: 0,-130,0
+        Type: CenterPosition
+        TerrainTypes: Clear, Rough, Road, DirtRoad, Ground, Tiberium, BlueTiberium, Crops, Loot, Wood
 
 LICHK:
 	Inherits: ^Knight
@@ -2145,7 +2271,7 @@ LICHK:
 		Range: 9c0
 		Type: CenterPosition
 	Valued:
-		Cost: 2500
+		Cost: 2000
 	Tooltip:
 		Name: Lich
 	Buildable:
@@ -2165,6 +2291,8 @@ LICHK:
 		InitialStance: AttackAnything
 	RenderSprites:
 		PlayerPalette: raplayer
+	HiddenUnderFog:
+		Type: GroundPosition
 	WithInfantryBody:
         MoveSequence: move
         AttackSequences: 
@@ -2242,6 +2370,42 @@ PLACEHOLDERHANDATTACK:
 		Name: bombs
 		Weapon: FromBelow
 		LocalOffset: 0,0,-43, 0,100,-43, 0,100,-43
+        
+PLACEHOLDERCOFFIN:
+	Inherits: ^Plane
+	HitShape:
+	-AppearsOnRadar:
+	RenderSprites:
+		Image: placeholder
+		Palette: empty
+	Tooltip:
+		Name:
+	Valued:
+		Cost: 2000
+	Aircraft:
+		TurnSpeed: 4
+		Speed: 303
+		Repulsable: False
+		AirborneCondition: airborne
+		CruiseAltitude: 3c0
+		IdealSeparation: 0c512
+	Health:
+		HP: 15000
+	Armor:
+		Type: Heavy
+	AttackBomber:
+		Armaments: bombs
+		Bombs: bombs
+	WithMuzzleOverlay:
+	Armament@BOMBS:
+        AmmoPoolName: bombs
+		Name: bombs
+		Weapon: CoffinAmbush
+		LocalOffset: 0,0,-43, 0,100,-43, 0,100,-43
+    AmmoPool:
+        Name: bombs
+        InitialAmmo: 1
+        Ammo: 1
         
 BLOCKER1:
 	Inherits: ^Gravestone
@@ -2326,7 +2490,7 @@ RESSURECT1:
 	Mobile:
 		Speed: 75
 	Health:
-		HP: 12000
+		HP: 9000
 	Armament:
 		Weapon: SkeletonBroadSword
 	AttackFrontal:
@@ -2341,7 +2505,7 @@ RESSURECT1:
 		Delay: 25
 		DamageTypes: DefaultDeath
 	AutoTarget:
-		ScanRadius: 1
+		ScanRadius: 10
         
 RESSURECT2:
 	Inherits: ^SkeletonSpawn
@@ -2354,7 +2518,7 @@ RESSURECT2:
 	Mobile:
 		Speed: 75
 	Health:
-		HP: 12000
+		HP: 9000
 	Armament:
 		Weapon: SkeletonBroadSword
 	AttackFrontal:
@@ -2369,7 +2533,7 @@ RESSURECT2:
 		Delay: 25
 		DamageTypes: DefaultDeath
 	AutoTarget:
-		ScanRadius: 1
+		ScanRadius: 10
 		
 		
 RESSURECT3:
@@ -2383,7 +2547,7 @@ RESSURECT3:
 	Mobile:
 		Speed: 75
 	Health:
-		HP: 10000
+		HP: 8500
 	Armament:
 		Weapon: SkeletonPike
 	AttackFrontal:
@@ -2416,7 +2580,7 @@ RESSURECT4:
 	Mobile:
 		Speed: 75
 	Health:
-		HP: 9000
+		HP: 7000
 	Armament:
 		Weapon: SkeletonBowNArrow
 		LocalOffset: 341,20,356
@@ -2446,3 +2610,120 @@ RESSURECT4:
 		DamageTypes: DefaultDeath
 	AutoTarget:
 		ScanRadius: 10
+        
+        
+SPLITDEAD:
+	Inherits: ^TibTree
+	Tooltip:
+		Name: Fracture in the World
+	RenderSprites:
+		Image: flicker
+		PlayerPalette: grimalphaplayer
+		Palette: Fracture
+	-Building:
+    -HiddenUnderShroud:
+	Immobile:
+		OccupiesSpace: false
+	HiddenUnderFog:
+		Type: CenterPosition
+	Targetable:
+		TargetTypes: Trees
+    DockManager:
+        ExternalDocks: true
+        #DeadlockDetectionEnabled: false
+    Dock@up: 
+        DockOffset: 0,-2
+        WOffset: 383,170,0
+        DockAngle: 32
+        IsDragRequired: false
+        FaceTowardsCenter: true
+    Dock@right: 
+        DockOffset: 2,0
+        WOffset: 425,0,0
+        DockAngle: 223
+        IsDragRequired: false
+        FaceTowardsCenter: true
+    Dock@down: 
+        DockOffset: 0,2
+        WOffset: 340,-170,0
+        DockAngle: 159
+        IsDragRequired: false
+        FaceTowardsCenter: true
+    Dock@leftdown: 
+        DockOffset: -2,2
+        WOffset: -425,-510,0
+        DockAngle: 96
+        IsDragRequired: false
+        FaceTowardsCenter: true
+    Dock@leftup: 
+        DockOffset: -2,-2
+        WOffset: -425,510,0
+        DockAngle: 96
+        IsDragRequired: false
+        FaceTowardsCenter: true
+    AutoSelectionSize:
+    InvisibleToLiving:
+        Factions: Undead
+        
+        
+COFRESSURECT1:
+    Inherits: RESSURECT1
+    
+COFRESSURECT2:
+    Inherits: RESSURECT2
+    
+COFRESSURECT3:
+    Inherits: RESSURECT3
+    
+COFRESSURECT4:
+    Inherits: RESSURECT4 
+        
+COFSPAWN1:
+	Inherits: ^CoffinAmbush
+    WithSpriteBody:
+        Sequence: idle
+    ActorEnsurance:
+        SpawnActor: cofressurect1
+        Maxalive: 3
+        Offset: -128,85,0
+        MoveOffset: 0,1
+        RespawnTime: 200
+        StartDelay: 50
+        
+COFSPAWN2:
+	Inherits: ^CoffinAmbush
+    WithSpriteBody:
+        Sequence: idle
+    ActorEnsurance:
+        SpawnActor: cofressurect2
+        Maxalive: 5
+        Offset: -43,85,0
+        MoveOffset: 0,1
+        RespawnTime: 125
+        StartDelay: 50
+        
+COFSPAWN3:
+	Inherits: ^CoffinAmbush
+    WithSpriteBody:
+        Sequence: idle
+    ActorEnsurance:
+        SpawnActor: cofressurect3
+        Maxalive: 5
+        Offset: 43,350,0
+        MoveOffset: 1,0
+        RespawnTime: 125
+        StartDelay: 50
+        
+COFSPAWN4:
+	Inherits: ^CoffinAmbush
+    WithSpriteBody:
+        Sequence: idle
+    ActorEnsurance:
+        SpawnActor: cofressurect4
+        Maxalive: 5
+        Offset: 128,-85,0
+        MoveOffset: -1,0
+        RespawnTime: 125
+        StartDelay: 50
+        
+        

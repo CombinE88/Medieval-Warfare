@@ -12,6 +12,7 @@ Player:
 	PlayerResources:
 	DeveloperMode:
 	BaseAttackNotifier:
+    AcolyteAttackNotifier:
 	Shroud:
 	PlayerStatistics:
 	FrozenActorLayer:

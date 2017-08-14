@@ -745,12 +745,15 @@ XLTNTUNI.SCAFF:
 	TransformOnCondition@typeA:
 		IntoActor: XLTNT1
 		RequiresCondition: Construct >= 40 && valida
+        ReadyAudio: ConstructionComplete
 	TransformOnCondition@typeB:
 		IntoActor: XLTNT2
 		RequiresCondition: Construct >= 40 && validb
+        ReadyAudio: ConstructionComplete
 	TransformOnCondition@typeC:
 		IntoActor: XLTNT3
 		RequiresCondition: Construct >= 40 && validc
+        ReadyAudio: ConstructionComplete
 	WithIdleOverlay@base1:
 		Sequence: make1
 		RequiresCondition: Construct >= 0 && Construct < 10 && valida

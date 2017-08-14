@@ -177,15 +177,15 @@
 	PaletteFromPlayerPaletteWithAlpha@GRIN:
 		BaseName: grimalphaplayer
 		BasePalette: grimplayer
-		Alpha: 0.6
+		Alpha: 0.8
     PaletteFromPaletteWithAlpha@GRIM:
 		Name: grimalpha
 		BasePalette: ra
-		Alpha: 0.6
+		Alpha: 0.8
     PaletteFromPaletteWithAlpha@GRIMPROJECTILE:
 		Name: grimprojalpha
 		BasePalette: mwcivilian
-		Alpha: 0.6
+		Alpha: 0.8
     PaletteFromPaletteWithAlpha@VAMPPROJECT:
 		Name: vamprojalpha
 		BasePalette: ra
@@ -199,3 +199,11 @@
 		Name: grimspawnalpha
 		BasePalette: grimspawn
 		Alpha: 0.8
+	PaletteFromPaletteWithAlpha@Fracture:
+		Name: Fracture
+		BasePalette: ra
+		Alpha: 0.8
+	PaletteFromPaletteWithAlpha@Souls:
+		Name: Soulalpha
+		BasePalette: effect
+		Alpha: 0.5

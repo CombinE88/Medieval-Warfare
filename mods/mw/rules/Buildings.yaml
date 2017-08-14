@@ -86,84 +86,84 @@ FACTNEW:
 		Group: Building
 		LowPowerSlowdown: 2
 		QueuedAudio: Building
-		ReadyAudio: ConstructionComplete
+		ReadyAudio: 
 	ProductionQueue@NodMBuilding:
 		Type: MBuilding.Nod
 		Factions: nod
 		Group: Building
 		LowPowerSlowdown: 2
 		QueuedAudio: Building
-		ReadyAudio: ConstructionComplete
+		ReadyAudio: 
 	ProductionQueue@GDIMDefence:
 		Type: MTech.GDI
 		Factions: gdi
 		Group: Tech
 		LowPowerSlowdown: 2
 		QueuedAudio: Building
-		ReadyAudio: ConstructionComplete
+		ReadyAudio: 
 	ProductionQueue@NodMDefence:
 		Type: MTech.Nod
 		Factions: nod
 		Group: Tech
 		LowPowerSlowdown: 2
 		QueuedAudio: Building
-		ReadyAudio: ConstructionComplete
+		ReadyAudio: 
 	ProductionQueue@SULBuilding:
 		Type: MBuilding.SUL
 		Factions: sul
 		Group: Building
 		LowPowerSlowdown: 2
 		QueuedAudio: Building
-		ReadyAudio: ConstructionComplete
+		ReadyAudio: 
 	ProductionQueue@SULDefense:
 		Type: MTech.SUL
 		Factions: sul
 		Group: Tech
 		LowPowerSlowdown: 2
 		QueuedAudio: Building
-		ReadyAudio: ConstructionComplete
+		ReadyAudio: 
 	ProductionQueue@GDIMResources:
 		Type: MResources.GDI
 		Factions: gdi
 		Group: Building2
 		LowPowerSlowdown: 2
 		QueuedAudio: Building
-		ReadyAudio: ConstructionComplete
+		ReadyAudio: 
 	ProductionQueue@NodMResources:
 		Type: MResources.Nod
 		Factions: nod
 		Group: Building2
 		LowPowerSlowdown: 2
 		QueuedAudio: Building
-		ReadyAudio: ConstructionComplete
+		ReadyAudio: 
 	ProductionQueue@GDIMMilitary:
 		Type: MMilitary.GDI
 		Factions: gdi
 		Group: Building3
 		LowPowerSlowdown: 2
 		QueuedAudio: Building
-		ReadyAudio: ConstructionComplete
+		ReadyAudio: 
 	ProductionQueue@NodMMilitary:
 		Type: MMilitary.Nod
 		Factions: nod
 		Group: Building3
 		LowPowerSlowdown: 2
 		QueuedAudio: Building
-		ReadyAudio: ConstructionComplete
+		ReadyAudio: 
 	ProductionQueue@SULBuilding2:
 		Type: MResources.SUL
 		Factions: sul
 		Group: Building2
 		LowPowerSlowdown: 2
 		QueuedAudio: Building
-		ReadyAudio: ConstructionComplete
+		ReadyAudio: 
 	ProductionQueue@SULBuilding3:
 		Type: MMilitary.SUL
 		Factions: sul
 		Group: Building3
 		LowPowerSlowdown: 2
 		QueuedAudio: Building
-		ReadyAudio: ConstructionComplete
+		ReadyAudio: 
 	BaseBuilding:
 	ProductionBar@BuildingGDI:
 		ProductionType: MBuilding.GDI

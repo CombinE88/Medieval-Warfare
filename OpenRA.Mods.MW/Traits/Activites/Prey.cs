@@ -10,6 +10,7 @@
 #endregion
 
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using OpenRA.Activities;
 using OpenRA.Mods.Cnc.Traits;
@@ -75,6 +76,7 @@ namespace OpenRA.Mods.Cnc.Activities
 			}
 			
 			target.Trait<DockManager>().ReserveDock(target, self, this);
+			self.SetTargetLine(Target.FromCell(self.World, target.Location), Color.Green);
 			
 			return NextActivity;
 		}

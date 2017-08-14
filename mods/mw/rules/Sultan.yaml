@@ -2076,11 +2076,7 @@ SULB0:
 		Speed: 60
 		Crushes: crate, infantry
 	Health:
-		HP: 30000
-		Shape: Capsule
-			Radius: 526
-			PointA: 0, -412
-			PointB: 0, 212
+		HP: 75000
 	AutoTarget:
 		ScanRadius: 7
 	RenderSprites:
@@ -2598,7 +2594,6 @@ SULTURNXL:
 	-Targetable@GROUND:
 	-Targetable@AIRBORNE:
 	Selectable:
-	ActorLostNotification:
 	RevealsShroud:
 		Range: 5c0
 		Type: CenterPosition

@@ -662,7 +662,7 @@ e3new:
 		Length: 8
 		Facings: 8
 		Tick: 100
-	shoot: e3new
+	shoot: e3news
 		Tick: 100
 		Start: 66
 		Length: 7
@@ -718,7 +718,7 @@ e3newv2:
 		Length: 8
 		Facings: 8
 		Tick: 100
-	shoot: e3newv2
+	shoot: e3newv2s
 		Tick: 100
 		Start: 66
 		Length: 7

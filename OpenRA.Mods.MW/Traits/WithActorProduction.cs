@@ -30,6 +30,9 @@ namespace OpenRA.Mods.Mw.Traits
 		
 		[Desc("The range in cells where should be looked for.")]
 		public readonly int FindRadius = 0;
+
+		[Desc("Go direct into the entry not checking anything else.")]
+		public readonly bool GoDirect = false;
 		
 		public override object Create(ActorInitializer init) { return new WithActorProduction(init, this); }
 	}
@@ -235,17 +238,21 @@ namespace OpenRA.Mods.Mw.Traits
 					{
 						//Actor is possible to move?
 						var move = actor.TraitOrDefault<IMove>();
-	
+
 						if ((!actor.IsInWorld || !actor.IsDead))
 						{
 							//safe in array and set underway statement +1
 							InUse.Add(actor);
-	
+
 							self.Owner.PlayerActor.Trait<PlayerCivilization>().SpawnStoredPeasant(self.Owner.World);
 							//beginn movement
 							actor.CancelActivity();
-							actor.QueueActivity(move.MoveTo(exit, 5));
-							
+
+							if (!info.GoDirect)
+							{
+								actor.QueueActivity(move.MoveTo(exit, 5));
+							}
+
 							//what happens when actor or barracks dies
 							actor.QueueActivity(new CallFunc(() =>
 							{
@@ -259,7 +266,10 @@ namespace OpenRA.Mods.Mw.Traits
 								//visually enter the building
 								var selfposition = actor.CenterPosition;
 								//actor.QueueActivity(move.MoveIntoWorld(actor,exit));
-								actor.QueueActivity(move.VisualMove(actor, selfposition, infiltrate));
+								if (!info.GoDirect)
+								{
+									actor.QueueActivity(move.VisualMove(actor, selfposition, infiltrate));
+								}
 								//if dead before finished
 								actor.QueueActivity(new CallFunc(() =>
 								{

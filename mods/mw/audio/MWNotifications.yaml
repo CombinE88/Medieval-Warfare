@@ -3,6 +3,7 @@ Speech:
 		nod: .nod
 		gdi: .gdi
 		sul: .sul
+		ded: .ded
 	Notifications:
 		ReadyHorse: strange1, strange2
 		IncomingDeath: ddlerapproach
@@ -27,11 +28,11 @@ Speech:
 		EnemyUnitsApproaching: 
 		EnemyStructureDestroyed: 
 		EnemyPlanesApproaching: 
-		HarvesterAttack:
+		HarvesterAttack: harvattacked
 		InsufficientPower: lowpowe1, lowpowe2
 		IonCannonCharging: 
 		IonCannonReady: 
-		Leave: loose
+		Leave: leave
 		Lose: loose
 		LowPower: lowpowe1, lowpowe2
 		MissionAccomplished: win

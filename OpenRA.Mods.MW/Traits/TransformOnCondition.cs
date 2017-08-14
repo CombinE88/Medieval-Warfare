@@ -12,6 +12,7 @@ namespace OpenRA.Mods.MW.Traits
 	public class TransformOnConditionInfo : ConditionalTraitInfo
 	{
 		[FieldLoader.Require]
+		public readonly string ReadyAudio = "ConstructionComplete";
 		[Desc("The Actors name you want to transform to.")]
 		public readonly string IntoActor = null;
 		public readonly bool SkipMakeAnims = true;
@@ -96,6 +97,9 @@ namespace OpenRA.Mods.MW.Traits
 					w.Selection.Add(w, a);
 				if (controlgroup.HasValue)
 					w.Selection.AddToControlGroup(a, controlgroup.Value);
+				
+				Game.Sound.PlayNotification(self.World.Map.Rules, self.Owner, "Speech", info.ReadyAudio,
+					self.Owner.Faction.InternalName);
 				
 				self.Dispose();
 			});

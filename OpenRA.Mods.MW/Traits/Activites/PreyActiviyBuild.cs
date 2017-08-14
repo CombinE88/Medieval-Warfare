@@ -6,6 +6,7 @@ using OpenRA.Mods.Common;
 using OpenRA.Mods.Common.Effects;
 using OpenRA.Mods.Common.Traits;
 using OpenRA.Mods.Common.Traits.Render;
+using OpenRA.Mods.Common.Widgets.Logic;
 using OpenRA.Mods.Mw.Effects;
 using OpenRA.Mods.Mw.Traits;
 using OpenRA.Mods.MW.Traits;
@@ -62,16 +63,13 @@ namespace OpenRA.Mods.Mw.Activities
             if (IsCanceled)
             {
                 wsb.PlayCustomAnimationRepeating(self,wsb.Info.Sequence);
-
+                playanim = true;
                 if (condtion != null && token != ConditionManager.InvalidConditionToken)
                 {
                     token = ConditionManager.RevokeCondition(self, token);
                     token = ConditionManager.InvalidConditionToken;
                 }
-
-
-                playanim = true;
-                
+               
                 if( endqueueonce)
                 {
                     endqueueonce = false;
@@ -83,7 +81,6 @@ namespace OpenRA.Mods.Mw.Activities
                             .SetPosition(self, self.World.Map.CellContaining(self.CenterPosition));
                     }));
                 }
-
                 if (ChildActivity == null)
                 {
                     return NextActivity;
@@ -114,13 +111,24 @@ namespace OpenRA.Mods.Mw.Activities
                         facing.Facing = desiredFacing;
                     }
                     wsb.PlayCustomAnimationRepeating(self, info.PreySequence);
-                    
                     if (condtion != null)
-                           token = ConditionManager.GrantCondition(self, condtion);
+                        token = ConditionManager.GrantCondition(self, condtion);
                 }));
             }
 
-            if (UndeadBuilder != null && --ticks <= 0)
+            BuildPrey(self);
+
+           
+            return this;
+        }
+
+        void BuildPrey(Actor self)
+        {
+            if (UndeadBuilder.hassummoningcount >= UndeadBuilder.info.SummoningTime)
+            {
+                Cancel(self, true);
+            }
+            else if (UndeadBuilder != null && --ticks <= 0)
             {
 
                 ticks = self.Info.TraitInfo<AcolytePreyBuildInfo>().Buildinterval;
@@ -135,12 +143,15 @@ namespace OpenRA.Mods.Mw.Activities
                      
                 }
             }
-
-
-
-
-
-            return this;
+            else if (dockactor == null)
+            {
+                Cancel(self, true);
+            }
+            else if (dockactor.IsDead || !dockactor.IsInWorld)
+            {
+                Cancel(self, true);
+            }
+            
         }
 
     }

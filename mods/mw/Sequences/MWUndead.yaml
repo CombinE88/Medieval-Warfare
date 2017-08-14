@@ -307,13 +307,13 @@ undead1:
 		Start: 312
 		Length: 2
 		Tick: 200
-	idle: 
+	idle: undead1smear
 		Start: 122
 		Facings: 8
-	stand: 
+	stand: undead1smear
 		Start: 122
 		Facings: 8
-	run: 
+	run: undead1smear
 		Start: 0
 		Length: 8
 		Facings: 8
@@ -321,27 +321,27 @@ undead1:
 	make: undead1born
 		Length: *
 		Tick: 130
-	shoot: 
+	shoot: undead1smear
 		Tick: 100
 		Start: 66
 		Length: 7
 		Facings: 8
-	die1: 
+	die1: undead1smear
 		Start: 202
 		Length: 20
 		Tick: 80
 	# large hit
-	die2: 
+	die2: undead1smear
 		Start: 202
 		Length: 20
 		Tick: 80
 	# poision
-	die3: 
+	die3: undead1smear
 		Start: 202
 		Length: 20
 		Tick: 80
 	# ballista
-	die4: 
+	die4: undead1smear
 		Start: 202
 		Length: 20
 		Tick: 80
@@ -431,33 +431,29 @@ undead3:
 	make: undead3born
 		Length: *
 		Tick: 130
-	shoot: 
+	shoot: undead3smear
 		Tick: 100
 		Start: 66
 		Length: 7
 		Facings: 8
 	die1: 
-		Start: 131
-		Length: 16
+		Start: 132
+		Length: 21
 		Tick: 80
 	# large hit
 	die2: 
-		Start: 131
-		Length: 16
+		Start: 132
+		Length: 21
 		Tick: 80
 	# poision
 	die3: 
-		Start: 131
-		Length: 16
+		Start: 132
+		Length: 21
 		Tick: 80
 	# ballista
 	die4: 
-		Start: 180
-		Length: 11
-		Tick: 80
-	die-crushed: 
-		Start: 131
-		Length: 16
+		Start: 132
+		Length: 21
 		Tick: 80
 	die5: burningman
 		Length: *
@@ -485,7 +481,7 @@ undead4:
 	make: undead4born
 		Length: *
 		Tick: 130
-	shoot: 
+	shoot: undead4smear
 		Tick: 100
 		Start: 66
 		Length: 7
@@ -518,6 +514,11 @@ undead4:
 		Length: *
 	icon: undead4icon.shp
 		AddExtension: False
+        
+burningprints:
+    idle: fire4
+        Length: *
+        ZOffset: -1023
 		
 undead5:
 	make: undead5born
@@ -545,27 +546,27 @@ undead5:
 		Length: 7
 		Facings: 8
 	die1: 
-		Start: 132
-		Length: 15
+		Start: 131
+		Length: 22
 		Tick: 80
 	# large hit
 	die2: 
-		Start: 132
-		Length: 15
+		Start: 131
+		Length: 22
 		Tick: 80
 	# poision
 	die3: 
-		Start: 132
-		Length: 15
+		Start: 131
+		Length: 22
 		Tick: 80
 	# ballista
 	die4: 
-		Start: 180
-		Length: 11
+		Start: 131
+		Length: 22
 		Tick: 80
 	die-crushed: 
-		Start: 132
-		Length: 15
+		Start: 131
+		Length: 22
 		Tick: 80
 	die5: burningman
 		Length: *
@@ -580,10 +581,10 @@ undead6:
 		Length: 2
 		Tick: 200
 	idle: 
-		Start: 122
+		Start: 64
 		Facings: 8
 	stand: 
-		Start: 122
+		Start: 64
 		Facings: 8
 	run: 
 		Start: 0
@@ -594,33 +595,33 @@ undead6:
 		Length: *
 		Tick: 130
 	shoot: 
-		Tick: 100
-		Start: 66
-		Length: 7
+		Tick: 70
+		Start: 95
+		Length: 14
 		Facings: 8
 	die1: 
-		Start: 202
-		Length: 20
+		Start: 74
+		Length: 21
 		Tick: 80
 	# large hit
 	die2: 
-		Start: 202
-		Length: 20
+		Start: 74
+		Length: 21
 		Tick: 80
 	# poision
 	die3: 
-		Start: 202
-		Length: 20
+		Start: 74
+		Length: 21
 		Tick: 80
 	# ballista
 	die4: 
-		Start: 202
-		Length: 20
+		Start: 74
+		Length: 21
 		Tick: 80
-	die-crushed: e1rot
-		Start: 16
-		Length: 4
-		Tick: 1600
+	die-crushed:
+		Start: 74
+		Length: 21
+		Tick: 80
 		ZOffset: -511
 	die5: burningman
 		Length: *
@@ -794,6 +795,23 @@ obelisk:
 		Tick: 200
 	icon: obeliskicon.shp
 		AddExtension: False
+        
+flicker: 
+	idle:
+		Offset: 0,-10
+        Length: *
+        Tick: 40
+        BlendMode: Additive
+	make:
+		Offset: 0,-10
+        Length: *
+        Tick: 40
+        BlendMode: Additive
+	active:
+		Offset: 0,-10
+        Length: *
+        Tick: 40
+        BlendMode: Additive
         
 obeliskb: 
 	idle:
@@ -993,8 +1011,13 @@ vamp:
 		Start: 384
 		Length: 32
 		Tick: 20
-	attackground: 
+	attackgranged: 
 		Start: 66
+		Length: 7
+		Facings: 8
+        Tick: 80
+	attackgclose: 
+		Start: 417
 		Length: 7
 		Facings: 8
         Tick: 80
@@ -1031,6 +1054,33 @@ vamp:
 		Tick: 80
 	icon: vampicon.shp
 		AddExtension: False
+        
+cofspawn1:
+    idle: 
+        Start: 20
+    make:
+        Length: *
+        Tick: 80
+        
+cofspawn2:
+    idle: 
+        Start: 20
+    make:
+        Length: *
+        Tick: 80        
+cofspawn3:
+    idle: 
+        Start: 20
+    make:
+        Length: *
+        Tick: 80
+        
+cofspawn4:
+    idle: 
+        Start: 20
+    make:
+        Length: *
+        Tick: 80
         
 acolyte:
 	stunned: sulm4

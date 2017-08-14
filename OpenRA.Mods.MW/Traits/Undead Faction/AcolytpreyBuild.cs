@@ -34,20 +34,38 @@ namespace OpenRA.Mods.MW.Traits
 		public object Create(ActorInitializer init) { return new AcolytePreyBuild(this); }
 	}
 
-	class AcolytePreyBuild : IIssueOrder, IResolveOrder, IOrderVoice
+	class AcolytePreyBuild : IIssueOrder, IResolveOrder, IOrderVoice, ITick
 	{
 		readonly AcolytePreyBuildInfo info;
 		public Actor forceactor;
+		public bool SmartPrey;
+		public int smarPreyWait;
+
 
 		public AcolytePreyBuild(AcolytePreyBuildInfo info)
 		{
 			this.info = info;
+			smarPreyWait = 20;
 		}
+		
+		void ITick.Tick(Actor self)
+		{
+			if (SmartPrey && self.IsIdle)
+			{
+				--smarPreyWait;
+				if (smarPreyWait <= 0)
+				{
+					self.QueueActivity(new PreyBuild(self, null));
+					smarPreyWait = 20;
+				}
+			}
+		}
+
 
 		public IEnumerable<IOrderTargeter> Orders
 		{
 			get { yield return new PreyBuildOrderTargeter("PreyBuild", 5,
-				act => info.TargetActors.Contains(act.Info.Name)); }
+				act => info.TargetActors.Contains(act.Info.Name), info.TargetActors); }
 		}
 
 		public Order IssueOrder(Actor self, IOrderTargeter order, Target target, bool queued)
@@ -62,17 +80,25 @@ namespace OpenRA.Mods.MW.Traits
 
 		public void ResolveOrder(Actor self, Order order)
 		{
-			if (order.OrderString != "PreyBuild")
-				return;
 			
+			if (order.OrderString == "Stop" || order.OrderString == "Move")
+			{
+				// Turn off idle smarts to obey the stop/move:
+				SmartPrey = false;
+			}
+			if (order.OrderString != "PreyBuild")
+			{
+				return;
+			}
+
 			if (!order.Queued)
 				self.CancelActivity();
 
 			forceactor = order.TargetActor;
-			
-			if (forceactor != null)
-				self.SetTargetLine(Target.FromCell(self.World, forceactor.Location), Color.Green);
+			SmartPrey = true;
 			self.QueueActivity(new PreyBuild(self, forceactor));
+			
+			
 
 		}
 
@@ -84,19 +110,22 @@ namespace OpenRA.Mods.MW.Traits
 
 		class PreyBuildOrderTargeter : UnitOrderTargeter
 		{
-			readonly Func<Actor, bool> canTarget;
+			private readonly Func<Actor, bool> canTarget;
+			private HashSet<String> Validnames;
 			
 			public PreyBuildOrderTargeter(string order, int priority,
-				Func<Actor, bool> canTarget)
+				Func<Actor, bool> able, HashSet<string> ValidActors)
 				: base(order, priority, "preycursor", false, true)
 			{
-				this.canTarget = canTarget;
+				this.canTarget = able;
+				Validnames = ValidActors;
+
 			}
 
 			public override bool CanTargetActor(Actor self, Actor target, TargetModifiers modifiers, ref string cursor)
 			{
 
-				if (!self.Owner.IsAlliedWith(target.Owner) || !canTarget(target))
+				if (!self.Owner.IsAlliedWith(target.Owner) || !Validnames.Contains(target.Info.Name))
 					return false;
 
 				cursor = self.Info.TraitInfo<AcolytePreyInfo>().Cursor;

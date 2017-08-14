@@ -10,6 +10,7 @@ namespace OpenRA.Mods.Mw.Traits
     [Desc("Is Unit a Peasant (adds a count of 1 to the PlayerCivilisation).")]
     public class UndeadBuilderInfo : ITraitInfo
     {
+        public readonly string ReadyAudio = "ConstructionComplete";
         
         public readonly string SpawnActor = null;
         
@@ -107,6 +108,9 @@ namespace OpenRA.Mods.Mw.Traits
                     w.Selection.Add(w, a);
                 if (controlgroup.HasValue)
                     w.Selection.AddToControlGroup(a, controlgroup.Value);
+                
+                Game.Sound.PlayNotification(self.World.Map.Rules, self.Owner, "Speech", info.ReadyAudio,
+                    self.Owner.Faction.InternalName);
 				
                 self.Dispose();
             });
