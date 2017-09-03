@@ -512,7 +512,7 @@ EHARVXL:
 		Priority: 7
 	Harvester:
 		DeliveryBuildings: procnew, sulref
-		Resources: Tiberium, BlueTiberium
+		Resources: Iron, Gold
 		PipCount: 7
 		Capacity: 20
 		BaleLoadDelay: 12

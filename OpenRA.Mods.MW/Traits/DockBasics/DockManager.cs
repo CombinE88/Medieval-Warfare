@@ -20,7 +20,7 @@ using OpenRA.Traits;
 
 namespace OpenRA.Mods.Common.Traits
 {
-	public class DockManagerInfo : ITraitInfo, Requires<DockInfo>
+	public class DockManagerInfo : ConditionalTraitInfo, Requires<DockInfo>
 	{
 		[Desc("Are any of the docks lie outside the building footprint? (and needs obstacle checking)")]
 		public readonly bool ExternalDocks = false;
@@ -35,14 +35,14 @@ namespace OpenRA.Mods.Common.Traits
 		[Desc("Dead lock detection sampling is done this often.")]
 		public readonly int DeadlockDetectionPeriod = 457; // prime number yay =~ 30 seconds
 
-		public object Create(ActorInitializer init) { return new DockManager(init, this); }
+		public override object Create(ActorInitializer init) { return new DockManager(init, this); }
 	}
 
 	/*
 	 * The class to do all the crazy queue management.
 	 * Not all multi-dock guys need queue management so making a separate manager class.
 	 */
-	public class DockManager : ITick, INotifyKilled, INotifyActorDisposing
+	public class DockManager : ConditionalTrait<DockManagerInfo>, ITick, INotifyKilled, INotifyActorDisposing
 	{
 		readonly DockManagerInfo info;
 		readonly Actor host; // Don't use "self" as the name. Eventually, it gets confusing with client and causes bug!
@@ -55,8 +55,8 @@ namespace OpenRA.Mods.Common.Traits
 		CPos lastLocation; // in case this is a mobile dock.
 		int ticks;
 
-		public DockManager(ActorInitializer init, DockManagerInfo info)
-		{
+		public DockManager(ActorInitializer init, DockManagerInfo info) : base(info)
+        {
 			host = init.Self;
 			this.info = info;
 			ticks = info.DeadlockDetectionPeriod;
@@ -73,16 +73,20 @@ namespace OpenRA.Mods.Common.Traits
 
 		public bool HasFreeServiceDock(Actor client)
 		{
-			// This one is usually used by actors who will NOT use
-			// waiting docks (aircrafts).
-			// It makes sense to update dock status here.
-			CheckObstacle(host);
+            // This one is usually used by actors who will NOT use
+            // waiting docks (aircrafts).
+            // It makes sense to update dock status here.
+
+            if (IsTraitDisabled)
+                return false;
+
+            CheckObstacle(host);
 			RemoveDead(queue);
 
 			foreach (var d in serviceDocks)
 			{
 
-				if (d.Reserver == null && CanReachPosition(client,d))
+				if (d.Reserver == null && CanReachPosition(client, d))
 					return true;
 				if (d.Reserver == client && CanReachPosition(client, d))
 					return true;

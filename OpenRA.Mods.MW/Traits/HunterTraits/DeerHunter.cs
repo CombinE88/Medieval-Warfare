@@ -135,7 +135,6 @@ namespace OpenRA.Mods.Mw.Traits
 				closestLoot = LootableDeer.ClosestTo(self);
 				closestLoot.Trait<LootableBody>().Hunter = self;
 				DeerLoot = closestLoot;
-				Log.Write("debug","Next Loot Target = " + closestLoot.Info.Name);
 				return closestLoot;
 			}
 			return null;
@@ -172,7 +171,6 @@ namespace OpenRA.Mods.Mw.Traits
 				closestHunt = HuntableDeer.ClosestTo(self);
 				closestHunt.Trait<HuntableDeer>().Hunter = self;
 				DeerHunt = closestHunt;
-				Log.Write("debug","Next Hunt Target = " + closestHunt.Info.Name);
 				return closestHunt;
 				
 			}
@@ -225,7 +223,7 @@ namespace OpenRA.Mods.Mw.Traits
 				{
 					FindALodge();
 				}
-				else if (whatAmmo >= maxAmmo && self.IsInWorld && !self.IsDead)
+				else if (whatAmmo > 0 && self.IsInWorld && !self.IsDead)
 				{
 					Move(self, Lodge);
 					Attack(self, Lodge);

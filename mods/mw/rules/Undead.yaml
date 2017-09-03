@@ -18,7 +18,7 @@
 		ValidStances: Ally
 		Condition: Wander
 	EmitInfantryOnSell:
-        ActorTypes: undead1, undead3, undead5, preycolyte
+		ActorTypes: undead1, undead3, undead5, preycolyte
 
 ^MWBasePentagram:
 	Inherits@1: ^BaseBuilding
@@ -34,21 +34,21 @@
 
 ^Skeleton:  
 	Inherits: ^MedievalInfantry
-    Inherits@AUTOTARGET: ^AutoTargetAll
+	Inherits@AUTOTARGET: ^AutoTargetAll
 	EditorTilesetFilter:
 		Categories: Undead
 	-ExternalCondition@ROTTEN:
 	-ExternalCondition@DDler:
 	-ExternalCondition@ROYAL:
 	-ExternalCondition@HOSPITAL:
-    -WithDecoration@REDCROSS:
-    -WithDecoration@Crown:
+	-WithDecoration@REDCROSS:
+	-WithDecoration@Crown:
 	-DamageMultiplier@Crown:
 	-FirepowerMultiplier@Crown:
 	-ReloadDelayMultiplier:
 	-SelfHealing@HOSPITAL:
-    WithSpriteBody:
-        RequiresCondition: makeanim
+	WithSpriteBody:
+		RequiresCondition: makeanim
 	WithDeathAnimation:
 		DeathSequencePalette: raplayer
 		DeathTypes:
@@ -66,14 +66,14 @@
 		GenericName: Soldier
 	Guard:
 	WithMakeAnimation:
-        Condition: makeanim
-        Sequence: make
+		Condition: makeanim
+		Sequence: make
 	WithInfantryBody:
-        RequiresCondition: !makeanim
-        DefaultAttackSequence: shoot
-    SpeedMultiplier:
-        Modifier: 0
-        RequiresCondition: makeanim
+		RequiresCondition: !makeanim
+		DefaultAttackSequence: shoot
+	SpeedMultiplier:
+		Modifier: 0
+		RequiresCondition: makeanim
 	Armor:
 		Type: Heavy
 	AutoTarget:
@@ -119,18 +119,18 @@
 	RangeMultiplier:
 		Modifier: 0
 		RequiresCondition: snaketrap
-        
+		
 ^SkeletonSpawn:
 	Inherits: ^MedievalInfantry
-    Inherits@AUTOTARGET: ^AutoTargetAll
+	Inherits@AUTOTARGET: ^AutoTargetAll
 	EditorTilesetFilter:
 		Categories: Undead
 	-ExternalCondition@ROTTEN:
 	-ExternalCondition@DDler:
 	-ExternalCondition@ROYAL:
 	-ExternalCondition@HOSPITAL:
-    -WithDecoration@REDCROSS:
-    -WithDecoration@Crown:
+	-WithDecoration@REDCROSS:
+	-WithDecoration@Crown:
 	-DamageMultiplier@Crown:
 	-FirepowerMultiplier@Crown:
 	-ReloadDelayMultiplier:
@@ -152,7 +152,7 @@
 		GenericName: Soldier
 	Guard:
 	WithInfantryBody:
-        DefaultAttackSequence: shoot
+		DefaultAttackSequence: shoot
 	Armor:
 		Type: Heavy
 	AutoTarget:
@@ -203,7 +203,7 @@
 		ReduceMoveRadiusDelay: 5
 		MinMoveDelay: 0
 		MaxMoveDelay: 50
-    
+	
 
 ^Mediumpenta:
 	Inherits: ^MWBasePentagram
@@ -211,19 +211,19 @@
 	Armor:
 		Type: Concrete
 	RenderSprites:
-        Palette: undead
+		Palette: undead
 		PlayerPalette: undeadplayer
-    -WithDeathAnimation:
-    -WithSpriteBody:
+	-WithDeathAnimation:
+	-WithSpriteBody:
 	Tooltip:
 		Name: Spawner
 	Building:
 		Footprint: _==_ =xx= =xx= _==_
 		Dimensions: 4,4
-        Adjacent: 4
-        RequiresBaseProvider: false
+		Adjacent: 4
+		RequiresBaseProvider: false
 	-GivesBuildableArea:
-    Health:
+	Health:
 		HP: 50000
 	RevealsShroud:
 		Range: 4c0
@@ -231,69 +231,69 @@
 		Bounds: 60,60,0,0
 	SelectionDecorations:
 		VisualBounds: 60,60,0,0
-    UndeadBuilder:
-        SpawnOffset: 1,1
-        SummoningTime: 100
-    WithUndeadBuilderOverlay: 
-        Sequence: circlem
-        Palette: undeadalpha
-        IsPlayerPalette: True
-    WithIdleOverlay:
-        Sequence: pentagramm
-        Palette: undeadalpha
-        IsPlayerPalette: True
-    DockManager:
-        ExternalDocks: true
-        #DeadlockDetectionEnabled: false
-    Dock@leftup: 
-        DockOffset: 0,1
-        WOffset: -468,-298,0
-        DockAngle: 32
-        IsDragRequired: false
-        FaceTowardsCenter: true
-    Dock@up: 
-        DockOffset: 2,0
-        WOffset: -42,383,0
-        DockAngle: 223
-        IsDragRequired: false
-        FaceTowardsCenter: true
-    Dock@right: 
-        DockOffset: 3,1
-        WOffset: 468,553,0
-        DockAngle: 159
-        IsDragRequired: false
-        FaceTowardsCenter: true
-    Dock@down: 
-        DockOffset: 2,3
-        WOffset: -86,-468,0
-        DockAngle: 96
-        IsDragRequired: false
-        FaceTowardsCenter: true
-    Dock@leftdown: 
-        DockOffset: 0,2
-        WOffset: -425,170,0
-        DockAngle: 96
-        IsDragRequired: false
-        FaceTowardsCenter: true
-        
+	UndeadBuilder:
+		SpawnOffset: 1,1
+		SummoningTime: 100
+	WithUndeadBuilderOverlay: 
+		Sequence: circlem
+		Palette: undeadalpha
+		IsPlayerPalette: True
+	WithIdleOverlay:
+		Sequence: pentagramm
+		Palette: undeadalpha
+		IsPlayerPalette: True
+	DockManager:
+		ExternalDocks: true
+		#DeadlockDetectionEnabled: false
+	Dock@leftup: 
+		DockOffset: 0,1
+		WOffset: -468,-298,0
+		DockAngle: 32
+		IsDragRequired: false
+		FaceTowardsCenter: true
+	Dock@up: 
+		DockOffset: 2,0
+		WOffset: -42,383,0
+		DockAngle: 223
+		IsDragRequired: false
+		FaceTowardsCenter: true
+	Dock@right: 
+		DockOffset: 3,1
+		WOffset: 468,553,0
+		DockAngle: 159
+		IsDragRequired: false
+		FaceTowardsCenter: true
+	Dock@down: 
+		DockOffset: 2,3
+		WOffset: -86,-468,0
+		DockAngle: 96
+		IsDragRequired: false
+		FaceTowardsCenter: true
+	Dock@leftdown: 
+		DockOffset: 0,2
+		WOffset: -425,170,0
+		DockAngle: 96
+		IsDragRequired: false
+		FaceTowardsCenter: true
+		
 ^Smallpenta:
 	Inherits: ^MWBasePentagram
 	Inherits@Hitshape: ^1x1Shape
 	Armor:
 		Type: Concrete
 	RenderSprites:
-        Palette: undead
+		Palette: undead
 		PlayerPalette: undeadplayer
-    -WithDeathAnimation:
-    -WithSpriteBody:
+	-WithDeathAnimation:
+	-WithSpriteBody:
 	Tooltip:
 		Name: Spawner
 	Building:
 		Footprint: _=_ =x= _=_ 
 		Dimensions: 3,3
-        Adjacent: 4
-        RequiresBaseProvider: false
-    -GivesBuildableArea:
+		Adjacent: 4
+		RequiresBaseProvider: false
+	-GivesBuildableArea:
 	Health:
 		HP: 50000
 	RevealsShroud:
@@ -302,69 +302,69 @@
 		Bounds: 40,40,0,0
 	SelectionDecorations:
 		VisualBounds: 40,40,0,0
-    UndeadBuilder:
-        SpawnOffset: 1,1
-        SummoningTime: 100
-    WithUndeadBuilderOverlay: 
-        Sequence: circles
-        Palette: undeadalpha
-        IsPlayerPalette: True
-    WithIdleOverlay:
-        Sequence: pentagrams
-        Palette: undeadalpha
-        IsPlayerPalette: True
-    DockManager:
-        ExternalDocks: true
-        #DeadlockDetectionEnabled: false
-    Dock@up: 
-        DockOffset: 1,0
-        WOffset: 383,170,0
-        DockAngle: 32
-        IsDragRequired: false
-        FaceTowardsCenter: true
-    Dock@right: 
-        DockOffset: 2,1
-        WOffset: 425,0,0
-        DockAngle: 223
-        IsDragRequired: false
-        FaceTowardsCenter: true
-    Dock@down: 
-        DockOffset: 1,2
-        WOffset: 340,-170,0
-        DockAngle: 159
-        IsDragRequired: false
-        FaceTowardsCenter: true
-    Dock@leftdown: 
-        DockOffset: 0,2
-        WOffset: -425,-510,0
-        DockAngle: 96
-        IsDragRequired: false
-        FaceTowardsCenter: true
-    Dock@leftup: 
-        DockOffset: 0,0
-        WOffset: -425,510,0
-        DockAngle: 96
-        IsDragRequired: false
-        FaceTowardsCenter: true
-        
+	UndeadBuilder:
+		SpawnOffset: 1,1
+		SummoningTime: 100
+	WithUndeadBuilderOverlay: 
+		Sequence: circles
+		Palette: undeadalpha
+		IsPlayerPalette: True
+	WithIdleOverlay:
+		Sequence: pentagrams
+		Palette: undeadalpha
+		IsPlayerPalette: True
+	DockManager:
+		ExternalDocks: true
+		#DeadlockDetectionEnabled: false
+	Dock@up: 
+		DockOffset: 1,0
+		WOffset: 383,170,0
+		DockAngle: 32
+		IsDragRequired: false
+		FaceTowardsCenter: true
+	Dock@right: 
+		DockOffset: 2,1
+		WOffset: 425,0,0
+		DockAngle: 223
+		IsDragRequired: false
+		FaceTowardsCenter: true
+	Dock@down: 
+		DockOffset: 1,2
+		WOffset: 340,-170,0
+		DockAngle: 159
+		IsDragRequired: false
+		FaceTowardsCenter: true
+	Dock@leftdown: 
+		DockOffset: 0,2
+		WOffset: -425,-510,0
+		DockAngle: 96
+		IsDragRequired: false
+		FaceTowardsCenter: true
+	Dock@leftup: 
+		DockOffset: 0,0
+		WOffset: -425,510,0
+		DockAngle: 96
+		IsDragRequired: false
+		FaceTowardsCenter: true
+		
 ^Largepenta:
 	Inherits: ^MWBasePentagram
 	Inherits@Hitshape: ^3x3Shape
 	Armor:
 		Type: Concrete
 	RenderSprites:
-        Palette: undead
+		Palette: undead
 		PlayerPalette: undeadplayer
-    -WithDeathAnimation:
-    -WithSpriteBody:
+	-WithDeathAnimation:
+	-WithSpriteBody:
 	Tooltip:
 		Name: Spawner
 	Building:
 		Footprint: _===_ =xxx= =xxx= =xxx= _===_ 
 		Dimensions: 5,5
-        Adjacent: 4
-        RequiresBaseProvider: false
-    -GivesBuildableArea:
+		Adjacent: 4
+		RequiresBaseProvider: false
+	-GivesBuildableArea:
 	Health:
 		HP: 50000
 	RevealsShroud:
@@ -373,56 +373,56 @@
 		Bounds: 80,80,0,0
 	SelectionDecorations:
 		VisualBounds: 80,80,0,0
-    UndeadBuilder:
-        SpawnOffset: 1,1
-        SummoningTime: 100
-    WithUndeadBuilderOverlay: 
-        Sequence: circlel
-        Palette: undeadalpha
-        IsPlayerPalette: True
-    WithIdleOverlay:
-        Sequence: pentagraml
-        Palette: undeadalpha
-        IsPlayerPalette: True
-    DockManager:
-        ExternalDocks: true
-        #DeadlockDetectionEnabled: false
-    Dock@up: 
-        DockOffset: 3,0
-        WOffset: -468,510,0
-        DockAngle: 32
-        IsDragRequired: false
-        FaceTowardsCenter: true
-    Dock@right: 
-        DockOffset: 4,2
-        WOffset: 420,0,0
-        DockAngle: 223
-        IsDragRequired: false
-        FaceTowardsCenter: true
-    Dock@down: 
-        DockOffset: 3,4
-        WOffset: -425,-553,0
-        DockAngle: 159
-        IsDragRequired: false
-        FaceTowardsCenter: true
-    Dock@leftdown: 
-        DockOffset: 0,3
-        WOffset: -425,-170,0
-        DockAngle: 96
-        IsDragRequired: false
-        FaceTowardsCenter: true
-    Dock@leftup: 
-        DockOffset: 0,1
-        WOffset: -425,85,0
-        DockAngle: 96
-        IsDragRequired: false
-        FaceTowardsCenter: true
+	UndeadBuilder:
+		SpawnOffset: 1,1
+		SummoningTime: 100
+	WithUndeadBuilderOverlay: 
+		Sequence: circlel
+		Palette: undeadalpha
+		IsPlayerPalette: True
+	WithIdleOverlay:
+		Sequence: pentagraml
+		Palette: undeadalpha
+		IsPlayerPalette: True
+	DockManager:
+		ExternalDocks: true
+		#DeadlockDetectionEnabled: false
+	Dock@up: 
+		DockOffset: 3,0
+		WOffset: -468,510,0
+		DockAngle: 32
+		IsDragRequired: false
+		FaceTowardsCenter: true
+	Dock@right: 
+		DockOffset: 4,2
+		WOffset: 420,0,0
+		DockAngle: 223
+		IsDragRequired: false
+		FaceTowardsCenter: true
+	Dock@down: 
+		DockOffset: 3,4
+		WOffset: -425,-553,0
+		DockAngle: 159
+		IsDragRequired: false
+		FaceTowardsCenter: true
+	Dock@leftdown: 
+		DockOffset: 0,3
+		WOffset: -425,-170,0
+		DockAngle: 96
+		IsDragRequired: false
+		FaceTowardsCenter: true
+	Dock@leftup: 
+		DockOffset: 0,1
+		WOffset: -425,85,0
+		DockAngle: 96
+		IsDragRequired: false
+		FaceTowardsCenter: true
 
 ^Gravestone:
 	Inherits: ^MWUndeadBuilding
 	Inherits@Hitshape: ^1x1Shape
-    -ActorLostNotification:
-    -RepairableBuilding:
+	-ActorLostNotification:
+	-RepairableBuilding:
 	EditorTilesetFilter:
 		Categories: Undead
 	ShakeOnCreate:
@@ -453,19 +453,19 @@
 		Weapons: SmallStone1, SmallStone2, LargeStone1
 		Pieces: 2, 4
 		Range: 0c512, 3c0
-        
+		
 ^CoffinAmbush:
 	Inherits: ^MWUndeadBuilding
 	Inherits@Hitshape: ^1x1Shape
 	EditorTilesetFilter:
 		Categories: Undead
 	ShakeOnCreate:
-    -RepairableBuilding:
-    -ActorLostNotification:
+	-RepairableBuilding:
+	-ActorLostNotification:
 	Armor:
 		Type: Concrete
 	-WithDeathAnimation:
-    WithMakeAnimation:
+	WithMakeAnimation:
 	RenderSprites:
 		PlayerPalette: raplayer
 	Valued:
@@ -486,7 +486,7 @@
 	MustBeDestroyed:
 		RequiredForShortGame: false
 	-Sellable:
-    ThrowsShrapnel@SMALL:
+	ThrowsShrapnel@SMALL:
 		Weapons: SmallWood1, SmallWood2, SmallWood3
 	SelfHealing@Killsslef:
 		PercentageStep: -3
@@ -494,7 +494,7 @@
 		HealIfBelow: 110
 		Delay: 25
 		DamageTypes: DefaultDeath
-        
+		
 #Upgrades
 
 ZIGG2UPGRADE:
@@ -511,11 +511,11 @@ ZIGG2UPGRADE:
 		IconPalette: raicon
 		BuildPaletteOrder: 60
 		Prerequisites: seal1, seal2
-		Description: Grants access to advanced summoning methodes.\n\n\n
+		Description: Grants access to advanced summoning methodes.\n  Grants possiblility to convert Iron and Gold into Essence\n\n
 		Queue: MTech.ded
 		BuildLimit: 1
 		BuildDuration: 1000
-        
+		
 
 ZIGG3UPGRADE:
 	AlwaysVisible:
@@ -535,8 +535,8 @@ ZIGG3UPGRADE:
 		Queue: MTech.ded
 		BuildLimit: 1
 		BuildDuration: 1500
-        
-        
+		
+		
 SEAL1:
 	AlwaysVisible:
 	ConditionManager:
@@ -553,7 +553,7 @@ SEAL1:
 		Description: Unknown!\n\n\n
 		Queue: MTech.ded
 		BuildLimit: 1
-        
+		
 SEAL2:
 	AlwaysVisible:
 	ConditionManager:
@@ -571,7 +571,7 @@ SEAL2:
 		Description: Unknown!\n\n\n
 		Queue: MTech.ded
 		BuildLimit: 1
-        
+		
 SEAL3:
 	AlwaysVisible:
 	ConditionManager:
@@ -589,7 +589,7 @@ SEAL3:
 		Description: Unknown!\n\n\n
 		Queue: MTech.ded
 		BuildLimit: 1
-        
+		
 SEAL4:
 	AlwaysVisible:
 	ConditionManager:
@@ -607,7 +607,7 @@ SEAL4:
 		Description: Unknown!\n\n\n
 		Queue: MTech.ded
 		BuildLimit: 1
-        
+		
 SEAL5:
 	AlwaysVisible:
 	ConditionManager:
@@ -625,7 +625,7 @@ SEAL5:
 		Description: Unknown!\n\n\n
 		Queue: MTech.ded
 		BuildLimit: 1
-        BuildDuration: 2000
+		BuildDuration: 2000
 #Buildings
 
 ZIGGURAT1:
@@ -636,8 +636,8 @@ ZIGGURAT1:
 		RepairStep: 3000
 		PlayerExperience: 15
 	WithMakeAnimation:
-    ShakeOnCreate:
-        Time: 120
+	ShakeOnCreate:
+		Time: 120
 	WithSpriteBody:	 
 	Selectable:
 		Bounds:48,48,0,-12
@@ -673,22 +673,22 @@ ZIGGURAT1:
 		Factions: ded
 		Group: Building
 		LowPowerSlowdown: 2
-        ReadyAudio:
-        QueuedAudio: Building
+		ReadyAudio:
+		QueuedAudio: Building
 	ProductionQueue@DeadMDefence:
 		Type: MTech.ded
 		Factions: ded
 		Group: Tech
 		LowPowerSlowdown: 2
-        QueuedAudio: Building
-        ReadyAudio:
+		QueuedAudio: Building
+		ReadyAudio:
 	ProductionQueue@DeadMMilitary:
 		Type: MMilitary.ded
 		Factions: ded
 		Group: Building3
 		LowPowerSlowdown: 2 
-        ReadyAudio:
-        QueuedAudio: Building
+		ReadyAudio:
+		QueuedAudio: Building
 	BaseBuilding:
 	ProductionBar@Buildingded:
 		ProductionType: MBuilding.ded
@@ -708,34 +708,34 @@ ZIGGURAT1:
 	Targetable:
 		TargetTypes: Ground, C4, Structure, Wanderer, BaseCenter
 	ProvidesRadar:
-    TransformOnCondition:
-        IntoActor: ziggurat2
-        SkipMakeAnims: false
-        RequiresCondition: hassealone && hassealtwo && zigup
-        ReadyAudio: 
-    GrantConditionOnPrerequisite@SEALONE:
-        Condition: hassealone
-        Prerequisites: seal1
-    GrantConditionOnPrerequisite@SEALTWO:
-        Condition: hassealtwo
-        Prerequisites: seal2
-    GrantConditionOnPrerequisite@ZIGGUPP:
-        Condition: zigup 
-        Prerequisites: zigg2upgrade
-    ActorEnsurance:
-        SpawnActor: preycolyte
-        Maxalive: 3
-        Offset: 0,0,0
-        MoveOffset: 2,3
+	TransformOnCondition:
+		IntoActor: ziggurat2
+		SkipMakeAnims: false
+		RequiresCondition: hassealone && hassealtwo && zigup
+		ReadyAudio: 
+	GrantConditionOnPrerequisite@SEALONE:
+		Condition: hassealone
+		Prerequisites: seal1
+	GrantConditionOnPrerequisite@SEALTWO:
+		Condition: hassealtwo
+		Prerequisites: seal2
+	GrantConditionOnPrerequisite@ZIGGUPP:
+		Condition: zigup 
+		Prerequisites: zigg2upgrade
+	ActorEnsurance:
+		SpawnActor: preycolyte
+		Maxalive: 3
+		Offset: 0,0,0
+		MoveOffset: 2,3
 	StoresResources:
 		PipColor: Red
 		PipCount: 10
 		Capacity: 500
-        
+		
 
 ZIGGURAT2:
-    Inherits: ZIGGURAT1
-    Inherits@Hitshape: ^3x3Shape
+	Inherits: ZIGGURAT1
+	Inherits@Hitshape: ^3x3Shape
 	Health:
 		HP: 600000
 	Building:
@@ -744,25 +744,25 @@ ZIGGURAT2:
 		LocalCenterOffset: 0,-512,0
 	RenderSprites:
 		PlayerPalette: raplayer
-        Image: ziggurat2
+		Image: ziggurat2
 	Selectable:
 		Bounds: 72,78,0,-18
 	SelectionDecorations:
 		VisualBounds: 72,78,0,-18
-    TransformOnCondition:
-        IntoActor: ziggurat3
-        SkipMakeAnims: false
-        RequiresCondition: hassealthree && hassealfour && zigup3
-        ReadyAudio: 
-    GrantConditionOnPrerequisite@SEALONE:
-        Condition: hassealthree
-        Prerequisites: seal3
-    GrantConditionOnPrerequisite@SEALTWO:
-        Condition: hassealfour
-        Prerequisites: seal4
-    GrantConditionOnPrerequisite@ZIGGUPP:
-        Condition: zigup3 
-        Prerequisites: zigg3upgrade
+	TransformOnCondition:
+		IntoActor: ziggurat3
+		SkipMakeAnims: false
+		RequiresCondition: hassealthree && hassealfour && zigup3
+		ReadyAudio: 
+	GrantConditionOnPrerequisite@SEALONE:
+		Condition: hassealthree
+		Prerequisites: seal3
+	GrantConditionOnPrerequisite@SEALTWO:
+		Condition: hassealfour
+		Prerequisites: seal4
+	GrantConditionOnPrerequisite@ZIGGUPP:
+		Condition: zigup3 
+		Prerequisites: zigg3upgrade
 	Exit:
 		SpawnOffset: 128,856,0
 		ExitCell: 2,3
@@ -773,15 +773,15 @@ ZIGGURAT2:
 		Prerequisite: ziggurat2
 	Tooltip:
 		Name: Ziggurat Lv2
-    ActorEnsurance:
-        SpawnActor: preycolyte
-        Maxalive: 6
-        Offset: 128,856,0
-        MoveOffset: 2,3
-        
+	ActorEnsurance:
+		SpawnActor: preycolyte
+		Maxalive: 6
+		Offset: 128,856,0
+		MoveOffset: 2,3
+		
 ZIGGURAT3:
-    Inherits: ZIGGURAT1
-    Inherits@Hitshape: ^4x4Shape
+	Inherits: ZIGGURAT1
+	Inherits@Hitshape: ^4x4Shape
 	Health:
 		HP: 1000000
 	Building:
@@ -790,12 +790,12 @@ ZIGGURAT3:
 		LocalCenterOffset: 0,-512,0
 	RenderSprites:
 		PlayerPalette: raplayer
-        Image: ziggurat3
+		Image: ziggurat3
 	Selectable:
 		Bounds:110,110,0,-20
 	SelectionDecorations:
 		VisualBounds: 110,110,0,-20
-    -TransformOnCondition:
+	-TransformOnCondition:
 	Exit:
 		SpawnOffset: 510,1024,0
 		ExitCell: 2,3
@@ -808,11 +808,11 @@ ZIGGURAT3:
 		Prerequisite: ziggurat3
 	Tooltip:
 		Name: Ziggurat Final
-    ActorEnsurance:
-        SpawnActor: preycolyte
-        Maxalive: 10
-        Offset: 510,1024,0
-        MoveOffset: 2,3
+	ActorEnsurance:
+		SpawnActor: preycolyte
+		Maxalive: 10
+		Offset: 510,1024,0
+		MoveOffset: 2,3
 	NukePower:
 		Icon: graveicon
 		Cursor: nuke
@@ -838,15 +838,15 @@ ZIGGURAT3:
 		CameraSpawnAdvance: 5
 		CameraRemoveDelay: 25
 		BeaconRemoveAdvance: 0
-        FlightDelay: 10
+		FlightDelay: 10
 	SupportPowerChargeBar:
-    
+	
 
 OBELISK.PENTA:
 	Inherits: ^Smallpenta
 	RenderSprites:
-        Image: obelisk
-        Palette: undead
+		Image: obelisk
+		Palette: undead
 		PlayerPalette: undeadalpha
 	Valued:
 		Cost: 0 #1300
@@ -856,24 +856,24 @@ OBELISK.PENTA:
 		IconPalette: raicon
 		BuildPaletteOrder: 70
 		Description: Summons a defensive statue attacking with lightning.\n  Strong vs all\n  Weak vs Siege weapons\n  can target Aircraft\n 
-        Prerequisites: seal3
+		Prerequisites: seal3
 		Queue: MMilitary.ded
-        BuildDuration: 10
+		BuildDuration: 10
 	Health:
 		HP: 35000
 	RevealsShroud:
 		Range: 4c0
-    UndeadBuilder:
-        SpawnActor: obelisk
-        SpawnOffset: 1,1
-        SummoningTime: 150
-        Cost: 1300
-        
+	UndeadBuilder:
+		SpawnActor: obelisk
+		SpawnOffset: 1,1
+		SummoningTime: 150
+		Cost: 1300
+		
 GARG.PENTA:
 	Inherits: ^Smallpenta
 	RenderSprites:
-        Image: garg
-        Palette: undead
+		Image: garg
+		Palette: undead
 		PlayerPalette: undeadalpha
 	Valued:
 		Cost: 0 #500
@@ -883,26 +883,26 @@ GARG.PENTA:
 		IconPalette: raicon
 		BuildPaletteOrder: 60
 		Description: Summons a defensive statue attacking with fire.\n  Strong vs Infantry, Light Cavalry\n  Weak vs Siege weapons and Heavy Cavalry \n\n 
-        Prerequisites: seal1
+		Prerequisites: seal1
 		Queue: MMilitary.ded
-        BuildDuration: 10
+		BuildDuration: 10
 	Health:
 		HP: 25000
 	RevealsShroud:
 		Range: 4c0
-    UndeadBuilder:
-        SpawnActor: garg
-        SpawnOffset: 1,1
-        SummoningTime: 75
-        Cost: 500
-        
-       
-        
+	UndeadBuilder:
+		SpawnActor: garg
+		SpawnOffset: 1,1
+		SummoningTime: 75
+		Cost: 500
+		
+	   
+		
 SPPOOL.PENTA:
 	Inherits: ^Mediumpenta
 	RenderSprites:
-        Image: sppool
-        Palette: undead
+		Image: sppool
+		Palette: undead
 		PlayerPalette: undeadalpha
 	Valued:
 		Cost: 0 #1000
@@ -912,25 +912,25 @@ SPPOOL.PENTA:
 		HP: 50000
 	RevealsShroud:
 		Range: 4c0
-    UndeadBuilder:
-        SpawnActor: sppool
-        SpawnOffset: 1,1
-        SummoningTime: 100
-        Cost: 1000
+	UndeadBuilder:
+		SpawnActor: sppool
+		SpawnOffset: 1,1
+		SummoningTime: 100
+		Cost: 1000
 	Buildable:
 		IconPalette: raicon
 		BuildPaletteOrder: 30
 		Description: Summons a Essence pool.\n  Stores some Essence
 		Queue: MBuilding.ded
-        BuildDuration: 10
-        
-        # Summon Barracks
-        
+		BuildDuration: 10
+		
+		# Summon Barracks
+		
 CRYPT.PENTA:
 	Inherits: ^Mediumpenta
 	RenderSprites:
-        Image: crypt
-        Palette: undead
+		Image: crypt
+		Palette: undead
 		PlayerPalette: undeadalpha
 	Valued:
 		Cost: 0 # 1500
@@ -942,7 +942,7 @@ CRYPT.PENTA:
 		Prerequisites: seal1
 		Description: Summons a Crypt.\n  Crypt summons basic skeletons\n  Increases the number of possible skeletons over time\n  Summons up to 3 gravestones each giving grave space\n 
 		Queue: MMilitary.ded
-        BuildDuration: 10
+		BuildDuration: 10
 	Health:
 		HP: 50000
 	RevealsShroud:
@@ -951,17 +951,17 @@ CRYPT.PENTA:
 		Bounds: 60,60,0,0
 	SelectionDecorations:
 		VisualBounds: 60,60,0,0
-    UndeadBuilder:
-        SpawnActor: crypt
-        SpawnOffset: 1,1
-        SummoningTime: 150
-        Cost: 1500
-        
+	UndeadBuilder:
+		SpawnActor: crypt
+		SpawnOffset: 1,1
+		SummoningTime: 150
+		Cost: 1500
+		
 MAUSO.PENTA:
 	Inherits: ^Mediumpenta
 	RenderSprites:
-        Image: mauso
-        Palette: undead
+		Image: mauso
+		Palette: undead
 		PlayerPalette: undeadalpha
 	Valued:
 		Cost: 0 # 2000
@@ -973,22 +973,22 @@ MAUSO.PENTA:
 		Description: Summons a Tomn.\n  Tomb summons advanced skeletons\n  Increases the number of possible skeletons over time\n  Summons up to 2 coffins each giving grave space\n 
 		Prerequisites: seal4
 		Queue: MMilitary.ded
-        BuildDuration: 10
+		BuildDuration: 10
 	Health:
 		HP: 50000
 	RevealsShroud:
 		Range: 4c0
-    UndeadBuilder:
-        SpawnActor: mauso
-        SpawnOffset: 1,1
-        SummoningTime: 200
-        Cost: 2000
-        
+	UndeadBuilder:
+		SpawnActor: mauso
+		SpawnOffset: 1,1
+		SummoningTime: 200
+		Cost: 2000
+		
 LIBRA.PENTA:
 	Inherits: ^Mediumpenta
 	RenderSprites:
-        Image: libra
-        Palette: undead
+		Image: libra
+		Palette: undead
 		PlayerPalette: undeadalpha
 	Valued:
 		Cost: 0 #1500
@@ -1000,22 +1000,22 @@ LIBRA.PENTA:
 		Description: Summons a Library.\n  Library grants access to Supportpowers\n 
 		Prerequisites: ziggurat2
 		Queue: MMilitary.ded
-        BuildDuration: 10
+		BuildDuration: 10
 	Health:
 		HP: 50000
 	RevealsShroud:
 		Range: 4c0
-    UndeadBuilder:
-        SpawnActor: LIBRA
-        SpawnOffset: 1,1
-        SummoningTime: 250
-        Cost: 1500
-        
+	UndeadBuilder:
+		SpawnActor: LIBRA
+		SpawnOffset: 1,1
+		SummoningTime: 250
+		Cost: 1500
+		
 TOMB.PENTA:
 	Inherits: ^Largepenta
 	RenderSprites:
-        Image: tomb
-        Palette: undead
+		Image: tomb
+		Palette: undead
 		PlayerPalette: undeadalpha
 	Valued:
 		Cost: 0 #2000
@@ -1027,22 +1027,22 @@ TOMB.PENTA:
 		Description: Summons a Mausoleum.\n  Mausoleum trains advanced no skeletal units\n\n 
 		Prerequisites: seal2
 		Queue: MMilitary.ded
-        BuildDuration: 10
+		BuildDuration: 10
 	Health:
 		HP: 100000
 	RevealsShroud:
 		Range: 4c0
-    UndeadBuilder:
-        SpawnActor: TOMB
-        SpawnOffset: 1,1
-        SummoningTime: 300
-        Cost: 2000
-        
+	UndeadBuilder:
+		SpawnActor: TOMB
+		SpawnOffset: 1,1
+		SummoningTime: 300
+		Cost: 2000
+		
 HELLGATE.PENTA:
 	Inherits: ^Largepenta
 	RenderSprites:
-        Image: hellgate
-        Palette: undead
+		Image: hellgate
+		Palette: undead
 		PlayerPalette: undeadalpha
 	Valued:
 		Cost: 0 #2000
@@ -1052,15 +1052,15 @@ HELLGATE.PENTA:
 		HP: 100000
 	RevealsShroud:
 		Range: 4c0
-    UndeadBuilder:
-        SpawnActor: hellgate
-        SpawnOffset: 1,1
-        SummoningTime: 350
-        Cost: 2000
-        
+	UndeadBuilder:
+		SpawnActor: hellgate
+		SpawnOffset: 1,1
+		SummoningTime: 350
+		Cost: 2000
+		
 # Buildings Summoned
 
-        
+		
 SPPOOL:
 	Inherits: ^MWUndeadBuilding
 	Inherits@Hitshape: ^2x2Shape
@@ -1090,14 +1090,14 @@ SPPOOL:
 	SelectionDecorations:
 		VisualBounds: 48,48,0,0
 	WithBuildingBib:
-    WithMakeAnimation:
-    ShakeOnCreate:
-        Time: 85
+	WithMakeAnimation:
+	ShakeOnCreate:
+		Time: 85
 	StoresResources:
 		PipColor: Red
 		PipCount: 10
 		Capacity: 1000
-        
+		
   
 CRYPT:
 	Inherits: ^MWUndeadBuilding
@@ -1128,9 +1128,9 @@ CRYPT:
 	SelectionDecorations:
 		VisualBounds: 48,48,0,0
 	WithBuildingBib:
-    WithMakeAnimation:
-    ShakeOnCreate:
-        Time: 50
+	WithMakeAnimation:
+	ShakeOnCreate:
+		Time: 50
 	WithIdleOverlay@one:
 		Sequence: burnloop1
 		Palette: terrain
@@ -1141,8 +1141,8 @@ CRYPT:
 		SpawnOffset: -298,638,0
 		ExitCell: 0,2
 	RallyPoint:
-    UndeadGraveProduction:
-        Produces: MInfantry.ded
+	UndeadGraveProduction:
+		Produces: MInfantry.ded
 	ProductionQueue:
 		Type: MInfantry.ded
 		Group: Infantry
@@ -1154,12 +1154,12 @@ CRYPT:
 	ProvidesPrerequisite@buildingname:
 	CritterSpawner:
 		Actors: gstone1, gstone2, gstone3
-		AliveMax: 3
+		AliveMax: 2
 		TicksMin: 250
 		TicksMax: 500
 		RadiusMin: 2
 		RadiusMax: 3
-        
+		
 MAUSO:
 	Inherits: ^MWUndeadBuilding
 	Inherits@Hitshape: ^2x2Shape
@@ -1189,9 +1189,9 @@ MAUSO:
 	SelectionDecorations:
 		VisualBounds: 50,50,0,-2
 	WithBuildingBib:
-    WithMakeAnimation:
-    ShakeOnCreate:
-        Time: 85
+	WithMakeAnimation:
+	ShakeOnCreate:
+		Time: 85
 	Exit:
 		SpawnOffset: 0,1105,0
 		ExitCell: 0,2
@@ -1206,8 +1206,8 @@ MAUSO:
 		TicksMax: 500
 		RadiusMin: 2
 		RadiusMax: 3
-    UndeadGraveProduction:
-        Produces: MSiege.ded
+	UndeadGraveProduction:
+		Produces: MSiege.ded
 	ProductionQueue:
 		Type: MSiege.ded
 		Group: Aircraft
@@ -1216,7 +1216,7 @@ MAUSO:
 		Factions: ded
 		ReadyAudio:
 	ProductionBar:
-    ProvidesPrerequisite@buildingname:
+	ProvidesPrerequisite@buildingname:
 	AirstrikePower:
 		Icon: coffinicon
 		ChargeTime: 210
@@ -1241,7 +1241,7 @@ MAUSO:
 		OrderName: BelowCoffinPowerInfoOrder
 	SupportPowerChargeBar:
 
-        
+		
 LIBRA:
 	Inherits: ^MWUndeadBuilding
 	Inherits@Hitshape: ^2x2Shape
@@ -1271,9 +1271,9 @@ LIBRA:
 	SelectionDecorations:
 		VisualBounds: 50,50,0,-2
 	WithBuildingBib:
-    WithMakeAnimation:
-    ShakeOnCreate:
-        Time: 85
+	WithMakeAnimation:
+	ShakeOnCreate:
+		Time: 85
 	Exit:
 		SpawnOffset: 850,723,0
 		ExitCell: 1,2
@@ -1301,7 +1301,7 @@ LIBRA:
 		ClockSequence: clock
 		CircleSequence: circles
 		OrderName: HandsBelowPowerInfoOrder
-        
+		
 TOMB:
 	Inherits: ^MWUndeadBuilding
 	Inherits@Hitshape: ^3x2Shape
@@ -1331,15 +1331,15 @@ TOMB:
 	SelectionDecorations:
 		VisualBounds: 72,64,0,-16
 	WithBuildingBib:
-    WithMakeAnimation:
-    ShakeOnCreate:
-        Time: 85
+	WithMakeAnimation:
+	ShakeOnCreate:
+		Time: 85
 	Exit:
 		SpawnOffset: -595,338,0
 		ExitCell: 0,2
 	RallyPoint:
 	ProvidesPrerequisite@buildingname:
-    Production:
+	Production:
 		Produces: MVehicle.ded
 	ProductionQueue:
 		Type: MVehicle.ded
@@ -1349,8 +1349,8 @@ TOMB:
 		Factions: ded
 		ReadyAudio:
 	ProductionBar:
-    ProvidesPrerequisite@buildingname:
-        
+	ProvidesPrerequisite@buildingname:
+		
 HELLGATE:
 	Inherits: ^MWUndeadBuilding
 	Inherits@Hitshape: ^2x2Shape
@@ -1380,16 +1380,16 @@ HELLGATE:
 	SelectionDecorations:
 		VisualBounds: 72,52,0,-4
 	WithBuildingBib:
-    WithMakeAnimation:
-    ShakeOnCreate:
-        Time: 150
+	WithMakeAnimation:
+	ShakeOnCreate:
+		Time: 150
 	ProvidesPrerequisite@buildingname:
-        
+		
 GSTONE1:
 	Inherits: ^Gravestone
-    WithSpriteBody:
-        Sequence: empty
-    GrantRandomCondition:
+	WithSpriteBody:
+		Sequence: empty
+	GrantRandomCondition:
 		RandomConditions: valida, validb, validc
 		FallbackCondition: valida
 	WithIdleOverlay@a:  
@@ -1404,14 +1404,14 @@ GSTONE1:
 		StartSequence: makec
 		Sequence: idlec
 		RequiresCondition: validc
-    ProvidesLivingspace:
-        Ammount: 3
-        
+	ProvidesLivingspace:
+		Ammount: 3
+		
 GSTONE2:
 	Inherits: ^Gravestone
-    WithSpriteBody:
-        Sequence: empty
-    GrantRandomCondition:
+	WithSpriteBody:
+		Sequence: empty
+	GrantRandomCondition:
 		RandomConditions: valida, validb, validc
 		FallbackCondition: valida
 	WithIdleOverlay@a:  
@@ -1426,14 +1426,14 @@ GSTONE2:
 		StartSequence: makec
 		Sequence: idlec
 		RequiresCondition: validc
-    ProvidesLivingspace:
-        Ammount: 3
-        
+	ProvidesLivingspace:
+		Ammount: 3
+		
 GSTONE3:
 	Inherits: ^Gravestone
-    WithSpriteBody:
-        Sequence: empty
-    GrantRandomCondition:
+	WithSpriteBody:
+		Sequence: empty
+	GrantRandomCondition:
 		RandomConditions: valida, validb, validc
 		FallbackCondition: valida
 	WithIdleOverlay@a:  
@@ -1448,14 +1448,14 @@ GSTONE3:
 		StartSequence: makec
 		Sequence: idlec
 		RequiresCondition: validc
-    ProvidesLivingspace:
-        Ammount: 3
-        
+	ProvidesLivingspace:
+		Ammount: 3
+		
 COFFIN:
 	Inherits: ^Gravestone
-    WithSpriteBody:
-        Sequence: empty
-    GrantRandomCondition:
+	WithSpriteBody:
+		Sequence: empty
+	GrantRandomCondition:
 		RandomConditions: valida, validb, validc
 		FallbackCondition: valida
 	WithIdleOverlay@a:  
@@ -1470,22 +1470,22 @@ COFFIN:
 		StartSequence: makec
 		Sequence: idlec
 		RequiresCondition: validc
-    ProvidesLivingspace:
-        Ammount: 5
-        
+	ProvidesLivingspace:
+		Ammount: 5
+		
 #defense
-    
+	
 OBELISK:
 	Inherits: ^MWDefense
 	Inherits@Hitshape: ^1x1Shape
-    Inherits@AUTOTARGET: ^AutoTargetAll
+	Inherits@AUTOTARGET: ^AutoTargetAll
 	Armor:
 		Type: Concrete
 	WithDeathAnimation:
 		DeathSequencePalette: raplayer
 	RenderSprites:
 		PlayerPalette: raplayer
-    WithMakeAnimation:
+	WithMakeAnimation:
 	ExternalCondition@ChargeObelisk:
 		Condition: ChargeObelisk
 	Valued:
@@ -1512,16 +1512,16 @@ OBELISK:
 	Armament@VisualA: 
 		Weapon: ObeliskLight
 		LocalOffset: 0,0,1312
-    ThrowsShrapnel@SMALL:
+	ThrowsShrapnel@SMALL:
 		Weapons: SmallWood1, SmallWood2, SmallWood3, LargeWood1
 		Pieces: 2, 3
 		Range: 0c512, 3c0
-        
+		
 GARG:
 	Inherits: ^MWDefense
 	Inherits@AUTOTARGET: ^AutoTargetGround
 	Inherits@Hitshape: ^1x1Shape
-    WithMakeAnimation:
+	WithMakeAnimation:
 	EditorTilesetFilter:
 		Categories: Defense
 	Valued:
@@ -1584,11 +1584,11 @@ UNDEADCOMM:
 	AttackFrontal:
 	BodyOrientation:
 		QuantizedFacings: 8
-    WithFacingSpriteBody:
-    WithMoveAnimation:
-        MoveSequence: move
-    WithMakeAnimation:
-    WithDeathAnimation:
+	WithFacingSpriteBody:
+	WithMoveAnimation:
+		MoveSequence: move
+	WithMakeAnimation:
+	WithDeathAnimation:
 		DeathSequencePalette: raplayer
 		DeathTypes:
 			DefaultDeath: 1
@@ -1628,14 +1628,14 @@ PREYCOLYTE:
 		PlayerExperience: 50
 		SabotageHPRemoval: 10
 	Valued:
-		Cost: 650
+		Cost: 600
 	-Crushable:
 	Buildable:
 		IconPalette: raicon
 		BuildPaletteOrder: 10
-		Description: \nCan pray at resourcefields to accomplish essence\n  Can pray at pentagrams to and spend essence to summon structures.
+		Description: \n   Can pray at scarecrows, mines and deerstands to convert essence\n  Can pray at pentagrams to and spend essence to summon structures\n  Ziggurat needs to be upgraded to level 2 to convert Iron and Gold into Essence.
 		Queue: MBuilding.ded
-        BuildDuration: 500
+		BuildDuration: 600 
 	Tooltip:
 		Name: Acolyte
 	Mobile:
@@ -1647,7 +1647,7 @@ PREYCOLYTE:
 		ScanRadius: 10
 		InitialStance: AttackAnything
 	RenderSprites:
-        Image: acolyte
+		Image: acolyte
 		PlayerPalette: raplayer
 	GrantConditionOnMovement:
 		Condition: MoveAnim
@@ -1659,33 +1659,43 @@ PREYCOLYTE:
 	Armor:
 		Type: Leather
 	-Explodes@Tib:
-    DockClient:
-    AcolytePrey: 
-        TargetActors: split3, split4, split4b, split2, splitblue, split5, splitdead
-        PreyLoopSequence: prey
-        leechinterval: 45
-        SelfEnabledCondition: whisper
-        Voice: Harvest
-    AcolytePreyBuild: 
-        TargetActors: crypt.penta, sppool.penta, mauso.penta, hellgate.penta, tomb.penta, libra.penta, obelisk.penta, garg.penta
-        PreyLoopSequence: prey
-        Buildinterval: 20
-        Buildpower: 1
-        SelfEnabledCondition: whisper
-        Voice: Build
-    AmbientSound:
-        SoundFiles: pray.aud
-        RequiresCondition: whisper
+	DockClient:
+	AcolytePrey: 
+		TargetActors: split3, split4, split4b, split2, splitblue, split5, splitdead, split7, split8
+		PreyLoopSequence: prey
+		leechinterval: 45
+		SelfEnabledCondition: whisper
+		Voice: Harvest
+        ResourceTypesPreres:
+            Crops: NONE
+            Grains: NONE
+            Corn: NONE
+            Iron: ziggurat2
+            Gold: ziggurat2
+            Guns: NONE
+            Wood: NONE
+            Lumber: NONE
+            Corruption: ziggurat2
+	AcolytePreyBuild: 
+		TargetActors: crypt.penta, sppool.penta, mauso.penta, hellgate.penta, tomb.penta, libra.penta, obelisk.penta, garg.penta
+		PreyLoopSequence: prey
+		Buildinterval: 20
+		Buildpower: 1
+		SelfEnabledCondition: whisper
+		Voice: Build
+	AmbientSound:
+		SoundFiles: pray.aud
+		RequiresCondition: whisper
 	Selectable:
 		Priority: 7
 	Voiced:
 		VoiceSet: AcolyteVoice
-        Volume: 3
+		Volume: 3
 
-        
+		
 DEADROSS:
 	Inherits: ^Cavalry
-    Inherits@AUTOTARGET: ^AutoTargetGround
+	Inherits@AUTOTARGET: ^AutoTargetGround
 	Valued:
 		Cost: 225
 	RevealsShroud:
@@ -1707,18 +1717,18 @@ DEADROSS:
 	RenderSprites:
 		Image: deadross
 		PlayerPalette: raplayer
-    PersonValued:
-        ActorCount: 1
+	PersonValued:
+		ActorCount: 1
 	Buildable:
 		IconPalette: raicon
 		BuildPaletteOrder: 40
 		Description: Very Fast\n  Strong vs Infantry\n  Weak vs Cavalry \n  Can cut down trees.
 		Queue: MInfantry.ded
-        BuildDuration: 750
-        Prerequisites: ziggurat2
+		BuildDuration: 750
+		Prerequisites: ziggurat2
 	WithInfantryBody:
 		RequiresCondition: !makeanim
-        DefaultAttackSequence: shoot
+		DefaultAttackSequence: shoot
 	Armor:
 		Type: LightCavalry
 	Selectable:
@@ -1726,14 +1736,14 @@ DEADROSS:
 	SelectionDecorations:
 		VisualBounds: 26,34,0,-6
 	WithMakeAnimation:
-        Condition: makeanim
-        Sequence: make
-    SpeedMultiplier:
-        Modifier: 0
-        RequiresCondition: makeanim
-    WithSpriteBody:
-        RequiresCondition: makeanim
-        
+		Condition: makeanim
+		Sequence: make
+	SpeedMultiplier:
+		Modifier: 0
+		RequiresCondition: makeanim
+	WithSpriteBody:
+		RequiresCondition: makeanim
+		
 UNDEAD1:
 	Inherits: ^Skeleton
 	Valued:
@@ -1745,22 +1755,24 @@ UNDEAD1:
 	Mobile:
 		Speed: 75
 	Health:
-		HP: 9000
+		HP: 8000
 	Armament:
 		Weapon: SkeletonBroadSword
 	AttackFrontal:
 	RenderSprites:
 		Image: undead1
 		PlayerPalette: raplayer
-    PersonValued:
-        ActorCount: 1
+	PersonValued:
+		ActorCount: 1
 	Buildable:
 		IconPalette: raicon
 		BuildPaletteOrder: 10
 		Description: \n  Strong vs Infantry\n  Weak vs Cavalry \n  Can cut down trees.
 		Queue: MInfantry.ded
-        BuildDuration: 300
-        
+		BuildDuration: 300
+	Armor:
+		Type: Heavy
+		
 UNDEAD2:
 	Inherits: ^Skeleton
 	Valued:
@@ -1772,22 +1784,24 @@ UNDEAD2:
 	Mobile:
 		Speed: 75
 	Health:
-		HP: 9000
+		HP: 8000
 	Armament:
 		Weapon: SkeletonBroadSword
 	AttackFrontal:
 	RenderSprites:
 		Image: undead2
 		PlayerPalette: raplayer
-    PersonValued:
-        ActorCount: 1
-    
+	PersonValued:
+		ActorCount: 1
+	Armor:
+		Type: Heavy
+	
 		
 		
 UNDEAD3:
 	Inherits: ^Skeleton
 	Valued:
-		Cost: 80
+		Cost: 100
 	RevealsShroud:
 		Range: 5c0
 	Tooltip:
@@ -1795,24 +1809,24 @@ UNDEAD3:
 	Mobile:
 		Speed: 75
 	Health:
-		HP: 8500
+		HP: 7500
 	Armament:
 		Weapon: SkeletonPike
 	AttackFrontal:
 	RenderSprites:
 		PlayerPalette: raplayer
 	Armor:
-		Type: Leather
-    PersonValued:
-        ActorCount: 1
+		Type: Light
+	PersonValued:
+		ActorCount: 1
 	Buildable:
 		IconPalette: raicon
 		BuildPaletteOrder: 20
 		Description: \n  Strong vs Cavalry.\n  Weak vs Infantry\n  Deals damage when trampled by Cavalry\n  Can cut down trees.
 		Queue: MInfantry.ded
-        BuildDuration: 400
-    -Crushable:
-    
+		BuildDuration: 400
+	-Crushable:
+	
 UNDEAD4:
 	Inherits: ^Skeleton
 	Valued:
@@ -1832,17 +1846,17 @@ UNDEAD4:
 	AttackFrontal:
 	RenderSprites:
 		PlayerPalette: raplayer
-    PersonValued:
-        ActorCount: 2
-    -Crushable:
+	PersonValued:
+		ActorCount: 2
+	-Crushable:
 	Buildable:
 		IconPalette: raicon
 		BuildPaletteOrder: 50
 		Description: \n  Strong vs all\n  Weak vs Aircrafts
-        Prerequisites: seal3
+		Prerequisites: seal3
 		Queue: MInfantry.ded
-        BuildDuration: 800
-        
+		BuildDuration: 800
+		
 		
 UNDEAD5:
 	Inherits: ^Skeleton
@@ -1855,7 +1869,7 @@ UNDEAD5:
 	Mobile:
 		Speed: 75
 	Health:
-		HP: 7000
+		HP: 6000
 	Armament:
 		Weapon: SkeletonBowNArrow
 		LocalOffset: 341,20,356
@@ -1872,16 +1886,16 @@ UNDEAD5:
 	RenderSprites:
 		PlayerPalette: raplayer
 	Armor:
-		Type: Light
-    PersonValued:
-        ActorCount: 1
+		Type: Leather
+	PersonValued:
+		ActorCount: 1
 	Buildable:
 		IconPalette: raicon
 		BuildPaletteOrder: 30
 		Description: \n  Strong vs Light Infantry\n  Weak vs Cavalry and heavy Infantry\n  Detects cloaked units\n  Can attack Aircrafts\n  Slows targets under fire
 		Queue: MInfantry.ded
-        BuildDuration: 500
-        
+		BuildDuration: 500
+		
 UNDEAD6:
 	Inherits: ^Skeleton
 	Valued:
@@ -1894,7 +1908,7 @@ UNDEAD6:
 		SharesCell: false
 		Speed: 55
 	-Crushable:
-    Targetable:
+	Targetable:
 		TargetTypes: Ground, Cavalry
 	Health:
 		HP: 68250
@@ -1915,10 +1929,10 @@ UNDEAD6:
 		BuildPaletteOrder: 10
 		Description: Skeletal siegeunit\n  Strong vs all\n  Very slow\n  Very strong
 		Queue: MSiege.ded
-    PersonValued:
-        ActorCount: 3
+	PersonValued:
+		ActorCount: 3
 	-RangeMultiplier:
-    SpeedMultiplier@SNAKES:
+	SpeedMultiplier@SNAKES:
 		Modifier: 77
 		
 UNDEAD7:
@@ -1954,21 +1968,21 @@ UNDEAD7:
 		IconPalette: raicon
 		BuildPaletteOrder: 20
 		Description: Skeletal siegeunit\n  Strong vs all\n  Very slow\n  very strong\n  Attacks ranged.
-        Prerequisites: ziggurat3
+		Prerequisites: ziggurat3
 		Queue: MSiege.ded
-    PersonValued:
-        ActorCount: 3
-        
+	PersonValued:
+		ActorCount: 3
+		
 GRIM:
 	Inherits: ^Knight
 	Inherits@AUTOTARGET: ^AutoTargetGround
-    -GrimTarget:
+	-GrimTarget:
 	-DamageMultiplier@GRIM:
 	-RangeMultiplier@GRIM:
 	-FirepowerMultiplier@GRIM:
 	-SpeedMultiplier@GRIM:
-    -ReloadDelayMultiplier@GRIM:
-    -GivesExperienceMultiplier@GRIM:
+	-ReloadDelayMultiplier@GRIM:
+	-GivesExperienceMultiplier@GRIM:
 	RevealsShroud:
 		Range: 6c0
 	Valued:
@@ -1988,9 +2002,9 @@ GRIM:
 			Wood: 100
 			Loot: 100
 			Beach: 100
-            Rock: 100
-            River: 100
-            Water: 100
+			Rock: 100
+			River: 100
+			Water: 100
 	-Crushable:
 	Health:
 		HP: 25000
@@ -1998,9 +2012,9 @@ GRIM:
 		Weapon: GrimSkytheThrow
 		LocalOffset: 141,75,352
 		FireDelay: 5
-        name: primary
+		name: primary
 	AttackFrontal:
-        Armaments: primary
+		Armaments: primary
 	AutoTarget:
 		ScanRadius: 5
 		InitialStance: AttackAnything
@@ -2017,8 +2031,8 @@ GRIM:
 			SkeletonDeath: 1
 		CrushedSequence: die1
 	WithInfantryBody:
-        AttackSequences:
-            primary: attackthrow
+		AttackSequences:
+			primary: attackthrow
 	Armor:
 		Type: Spectral
 	DetectCloaked:
@@ -2035,11 +2049,11 @@ GRIM:
 		IconPalette: raicon
 		BuildPaletteOrder: 30
 		Description: \n  Strong vs Infantry and cavalry\n  Very slow\n  Can go over most terrain\n  Reanimates killed enemies
-        Prerequisites: seal4
+		Prerequisites: seal4
 		Queue: MVehicle.ded
-    GrimReanimation:
-        
-        
+	GrimReanimation:
+		
+		
 ACOLYTEC:
 	Inherits: ^Knight
 	Inherits@AUTOTARGET: ^AutoTargetAll
@@ -2055,38 +2069,44 @@ ACOLYTEC:
 	Armament@Spawn:
 		Weapon: AcolyteAttackCleaner
 		Name: primary
-        LocalOffset: 127,-128,638
-        FireDelay: 14
-    Armament@AIR:
+		LocalOffset: 127,-128,638
+		FireDelay: 14
+    Armament@Corrupt:
+		Weapon: CorruptionSpawner
+		Name: secondary
+		LocalOffset: 127,-128,638 
+	Armament@AIR:
 		Weapon: AcolyteAttackCleanerAIR
 		Name: primary
-        LocalOffset: 127,-128,638
-        FireDelay: 14
-    AttackFrontal:
+		LocalOffset: 127,-128,638
+		FireDelay: 14
+	AttackFrontal:
 	AutoTarget:
 		InitialStance: AttackAnything
 	RenderSprites:
-        Image: acolyteb
+		Image: acolyteb
 		PlayerPalette: raplayer
 	WithInfantryBody:
-		DefaultAttackSequence: shoot
-			secondary: fireattack
-			primary: knifeattack
+		AttackSequences:
+			secondary: shootchannel
+			primary: shoot
 	Armor:
 		Type: Leather
 	Buildable:
-		Description: \n  Strong vs Infantry and cavalry\n  Can attack Aircrafts
+		Description: Can corrupt deerstands to spawn corruption, wich is harvetable by Acolytes \n  Strong vs Infantry and cavalry\n  Can attack Aircrafts
 		IconPalette: raicon
-		Prerequisites: ziggurat2
+		Prerequisites: libra
 		BuildPaletteOrder: 10
 		Queue: MBuilding.ded
 		BuildDuration: 600
-        
+    CorruptDeerstand:
+        TargetActors: split7, split8
+		
 VAMP:
 	Inherits: ^Knight
 	Inherits@AUTOTARGET: ^AutoTargetGround
-    Inherits@5: ^GameSettings
-    Inherits@88: ^GameSettingsArcher
+	Inherits@5: ^GameSettings
+	Inherits@88: ^GameSettingsArcher
 	Valued:
 		Cost: 750
 	-Crushable:
@@ -2099,63 +2119,63 @@ VAMP:
 	Armament@Leech:
 		Weapon: VampAttackGG
 		Name: primary
-        LocalOffset: 100,0,400
-        FireDelay: 4
+		LocalOffset: 100,0,400
+		FireDelay: 4
 	Armament@Building:
 		Weapon: VampAttackGBuilding
 		Name: secondary
-        LocalOffset: 100,0,400
-        FireDelay: 4
+		LocalOffset: 100,0,400
+		FireDelay: 4
 	AttackFrontal:
 	AutoTarget:
 		ScanRadius: 6
 		InitialStance: AttackAnything
 	RenderSprites:
-        Image: vamp
+		Image: vamp
 		PlayerPalette: raplayer
 	WithInfantryBody:
 		AttackSequences: 
-            primary: attackgranged
-            secondary: attackgclose
-        IdleSequences: idle1
-        MoveSequence: run
-        StandSequences: stand
+			primary: attackgranged
+			secondary: attackgclose
+		IdleSequences: idle1
+		MoveSequence: run
+		StandSequences: stand
 	Armor:
 		Type: Heavy
 	Buildable:
 		IconPalette: raicon
 		BuildPaletteOrder: 20
-        Prerequisites: seal3
+		Prerequisites: seal3
 		Description: \n  Strong vs Infantry and cavalry\n  Can transform flying\n  Leeches life\n  Transformed: can attack Aircrafts
 		Queue: MVehicle.ded
-        BuildDuration: 900
-    Transforms:
-        IntoActor: vampflying
-        
+		BuildDuration: 900
+	Transforms:
+		IntoActor: vampflying
+		
 VAMPFLYING:
 	Inherits: ^Helicopter
 	Inherits@EXPERIENCE: ^GainsExperience
-    Inherits@5: ^GameSettings
-    Inherits@88: ^GameSettingsArcher
+	Inherits@5: ^GameSettings
+	Inherits@88: ^GameSettingsArcher
 	Inherits@AUTOTARGET: ^AutoTargetAir
 	HitShape:
-    WithFacingSpriteBody:
-        Sequence: stand-flying
-    WithAttackAnimation: 
-        AttackSequence: attackair
-    Valued:
+	WithFacingSpriteBody:
+		Sequence: stand-flying
+	WithAttackAnimation: 
+		AttackSequence: attackair
+	Valued:
 		Cost: 750
 	Tooltip:
 		Name: Vampire (Flying)
 	Aircraft:
-        IdealSeparation: 0c712
-        CruiseAltitude: 1c0
-        AltitudeVelocity: 0c74
-        MaximumPitch: 56
+		IdealSeparation: 0c712
+		CruiseAltitude: 1c0
+		AltitudeVelocity: 0c74
+		MaximumPitch: 56
 		InitialFacing: 96
 		TurnSpeed: 255
 		Speed: 110
-        LandableTerrainTypes: Clear, Rough, Road, DirtRoad, Ground, Tiberium, BlueTiberium, Crops, Loot, Wood
+		LandableTerrainTypes: Clear, Rough, Road, DirtRoad, Ground, Tiberium, BlueTiberium, Crops, Loot, Wood
 	Health:
 		HP: 20000
 	Armor:
@@ -2166,7 +2186,7 @@ VAMPFLYING:
 	Armament:
 		Weapon: VampAttackAA
 		LocalOffset: 100,0,400
-        FireDelay: 4
+		FireDelay: 4
 	AttackHeli:
 		FacingTolerance: 20
 	RenderSprites:
@@ -2179,11 +2199,11 @@ VAMPFLYING:
 		Bounds: 28,28,0,-12
 	SpawnActorOnDeath@1:
 		Actor: VAMPMAN.Husk
-    Transforms:
-        IntoActor: vamp
-        Facing: 96
+	Transforms:
+		IntoActor: vamp
+		Facing: 96
 
-        
+		
 VAMPMAN.Husk:
 	Inherits: ^HelicopterHusk
 	ConditionManager:
@@ -2204,7 +2224,7 @@ VAMPMAN.Husk:
 		Spins: True
 		Moves: False
 		Explosion: GroundHit
-        
+		
 DEMONHORSE:
 	Inherits: ^Cavalry
 	Inherits@AUTOTARGET: ^AutoTargetGround
@@ -2250,19 +2270,19 @@ DEMONHORSE:
 		Bounds: 26,34,0,-6
 	SelectionDecorations:
 		VisualBounds: 26,34,0,-6
-    LeavesTrails@left:
-        Image: burningprints
-        MovingInterval: 6
-        Offsets: 0,130,0
-        Type: CenterPosition
-        TerrainTypes: Clear, Rough, Road, DirtRoad, Ground, Tiberium, BlueTiberium, Crops, Loot, Wood
-    LeavesTrails@right:
-        Image: burningprints
-        MovingInterval: 6
-        StartDelay: 3
-        Offsets: 0,-130,0
-        Type: CenterPosition
-        TerrainTypes: Clear, Rough, Road, DirtRoad, Ground, Tiberium, BlueTiberium, Crops, Loot, Wood
+	LeavesTrails@left:
+		Image: burningprints
+		MovingInterval: 6
+		Offsets: 0,130,0
+		Type: CenterPosition
+		TerrainTypes: Clear, Rough, Road, DirtRoad, Ground, Tiberium, BlueTiberium, Crops, Loot, Wood
+	LeavesTrails@right:
+		Image: burningprints
+		MovingInterval: 6
+		StartDelay: 3
+		Offsets: 0,-130,0
+		Type: CenterPosition
+		TerrainTypes: Clear, Rough, Road, DirtRoad, Ground, Tiberium, BlueTiberium, Crops, Loot, Wood
 
 LICHK:
 	Inherits: ^Knight
@@ -2294,9 +2314,9 @@ LICHK:
 	HiddenUnderFog:
 		Type: GroundPosition
 	WithInfantryBody:
-        MoveSequence: move
-        AttackSequences: 
-            primary: summon
+		MoveSequence: move
+		AttackSequences: 
+			primary: summon
 	Armor:
 		Type: Spectral
 	-Crushable:
@@ -2305,7 +2325,7 @@ LICHK:
 	-SpeedMultiplier@SNAKES:
 	-WithIdleOverlay@SNAKES:
 	-RangeMultiplier:
-    WithDeathAnimation:
+	WithDeathAnimation:
 		DeathSequencePalette: raplayer
 		DeathTypes:
 			DefaultDeath: 1
@@ -2318,7 +2338,7 @@ LICHK:
 	AppearsOnRadar:
 		UseLocation: yes
 	Aircraft:
-        CruiseAltitude: 0c256
+		CruiseAltitude: 0c256
 		LandWhenIdle: false
 		AirborneCondition: airborne
 		CruisingCondition: cruising
@@ -2334,7 +2354,7 @@ LICHK:
 	SelectionDecorations:
 		VisualBounds: 26,30,0,-5
 
-        
+		
 PLACEHOLDERHANDATTACK:
 	Inherits: ^Plane
 	HitShape:
@@ -2370,7 +2390,7 @@ PLACEHOLDERHANDATTACK:
 		Name: bombs
 		Weapon: FromBelow
 		LocalOffset: 0,0,-43, 0,100,-43, 0,100,-43
-        
+		
 PLACEHOLDERCOFFIN:
 	Inherits: ^Plane
 	HitShape:
@@ -2398,24 +2418,24 @@ PLACEHOLDERCOFFIN:
 		Bombs: bombs
 	WithMuzzleOverlay:
 	Armament@BOMBS:
-        AmmoPoolName: bombs
+		AmmoPoolName: bombs
 		Name: bombs
 		Weapon: CoffinAmbush
 		LocalOffset: 0,0,-43, 0,100,-43, 0,100,-43
-    AmmoPool:
-        Name: bombs
-        InitialAmmo: 1
-        Ammo: 1
-        
+	AmmoPool:
+		Name: bombs
+		InitialAmmo: 1
+		Ammo: 1
+		
 BLOCKER1:
 	Inherits: ^Gravestone
-    Valued:
+	Valued:
 		Cost: 0
-    RenderSprites:
-        Image: gstone1
-    WithSpriteBody:
-        Sequence: empty
-    GrantRandomCondition:
+	RenderSprites:
+		Image: gstone1
+	WithSpriteBody:
+		Sequence: empty
+	GrantRandomCondition:
 		RandomConditions: valida, validb, validc
 		FallbackCondition: valida
 	WithIdleOverlay@a:  
@@ -2430,16 +2450,16 @@ BLOCKER1:
 		StartSequence: makec
 		Sequence: idlec
 		RequiresCondition: validc
-        
+		
 BLOCKER2:
 	Inherits: ^Gravestone
-    Valued:
+	Valued:
 		Cost: 0
-    RenderSprites:
-        Image: gstone2
-    WithSpriteBody:
-        Sequence: empty
-    GrantRandomCondition:
+	RenderSprites:
+		Image: gstone2
+	WithSpriteBody:
+		Sequence: empty
+	GrantRandomCondition:
 		RandomConditions: valida, validb, validc
 		FallbackCondition: valida
 	WithIdleOverlay@a:  
@@ -2454,16 +2474,16 @@ BLOCKER2:
 		StartSequence: makec
 		Sequence: idlec
 		RequiresCondition: validc
-        
+		
 BLOCKER3:
 	Inherits: ^Gravestone
-    Valued:
+	Valued:
 		Cost: 0
-    RenderSprites:
-        Image: gstone3
-    WithSpriteBody:
-        Sequence: empty
-    GrantRandomCondition:
+	RenderSprites:
+		Image: gstone3
+	WithSpriteBody:
+		Sequence: empty
+	GrantRandomCondition:
 		RandomConditions: valida, validb, validc
 		FallbackCondition: valida
 	WithIdleOverlay@a:  
@@ -2478,7 +2498,7 @@ BLOCKER3:
 		StartSequence: makec
 		Sequence: idlec
 		RequiresCondition: validc
-        
+		
 RESSURECT1:
 	Inherits: ^SkeletonSpawn
 	Valued:
@@ -2494,9 +2514,9 @@ RESSURECT1:
 	Armament:
 		Weapon: SkeletonBroadSword
 	AttackFrontal:
-    -Selectable:
+	-Selectable:
 	RenderSprites:
-        Image: undead1
+		Image: undead1
 		PlayerPalette: raplayer
 	SelfHealing@Killsslef:
 		PercentageStep: -5
@@ -2506,7 +2526,7 @@ RESSURECT1:
 		DamageTypes: DefaultDeath
 	AutoTarget:
 		ScanRadius: 10
-        
+		
 RESSURECT2:
 	Inherits: ^SkeletonSpawn
 	Valued:
@@ -2522,9 +2542,9 @@ RESSURECT2:
 	Armament:
 		Weapon: SkeletonBroadSword
 	AttackFrontal:
-    -Selectable:
+	-Selectable:
 	RenderSprites:
-        Image: undead2
+		Image: undead2
 		PlayerPalette: raplayer
 	SelfHealing@Killsslef:
 		PercentageStep: -5
@@ -2555,9 +2575,9 @@ RESSURECT3:
 		PlayerPalette: raplayer
 	Armor:
 		Type: Leather
-    -Selectable:
+	-Selectable:
 	RenderSprites:
-        Image: undead3
+		Image: undead3
 		PlayerPalette: raplayer
 	SelfHealing@Killsslef:
 		PercentageStep: -5
@@ -2567,8 +2587,8 @@ RESSURECT3:
 		DamageTypes: DefaultDeath
 	AutoTarget:
 		ScanRadius: 10
-    
-    
+	
+	
 RESSURECT4:
 	Inherits: ^SkeletonSpawn
 	Valued:
@@ -2598,9 +2618,9 @@ RESSURECT4:
 		PlayerPalette: raplayer
 	Armor:
 		Type: Light
-    -Selectable:
+	-Selectable:
 	RenderSprites:
-        Image: undead5
+		Image: undead5
 		PlayerPalette: raplayer
 	SelfHealing@Killsslef:
 		PercentageStep: -5
@@ -2610,8 +2630,8 @@ RESSURECT4:
 		DamageTypes: DefaultDeath
 	AutoTarget:
 		ScanRadius: 10
-        
-        
+		
+		
 SPLITDEAD:
 	Inherits: ^TibTree
 	Tooltip:
@@ -2621,109 +2641,109 @@ SPLITDEAD:
 		PlayerPalette: grimalphaplayer
 		Palette: Fracture
 	-Building:
-    -HiddenUnderShroud:
+	-HiddenUnderShroud:
 	Immobile:
 		OccupiesSpace: false
 	HiddenUnderFog:
 		Type: CenterPosition
 	Targetable:
 		TargetTypes: Trees
-    DockManager:
-        ExternalDocks: true
-        #DeadlockDetectionEnabled: false
-    Dock@up: 
-        DockOffset: 0,-2
-        WOffset: 383,170,0
-        DockAngle: 32
-        IsDragRequired: false
-        FaceTowardsCenter: true
-    Dock@right: 
-        DockOffset: 2,0
-        WOffset: 425,0,0
-        DockAngle: 223
-        IsDragRequired: false
-        FaceTowardsCenter: true
-    Dock@down: 
-        DockOffset: 0,2
-        WOffset: 340,-170,0
-        DockAngle: 159
-        IsDragRequired: false
-        FaceTowardsCenter: true
-    Dock@leftdown: 
-        DockOffset: -2,2
-        WOffset: -425,-510,0
-        DockAngle: 96
-        IsDragRequired: false
-        FaceTowardsCenter: true
-    Dock@leftup: 
-        DockOffset: -2,-2
-        WOffset: -425,510,0
-        DockAngle: 96
-        IsDragRequired: false
-        FaceTowardsCenter: true
-    AutoSelectionSize:
-    InvisibleToLiving:
-        Factions: Undead
-        
-        
+	DockManager:
+		ExternalDocks: true
+		#DeadlockDetectionEnabled: false
+	Dock@up: 
+		DockOffset: 0,-2
+		WOffset: 383,170,0
+		DockAngle: 32
+		IsDragRequired: false
+		FaceTowardsCenter: true
+	Dock@right: 
+		DockOffset: 2,0
+		WOffset: 425,0,0
+		DockAngle: 223
+		IsDragRequired: false
+		FaceTowardsCenter: true
+	Dock@down: 
+		DockOffset: 0,2
+		WOffset: 340,-170,0
+		DockAngle: 159
+		IsDragRequired: false
+		FaceTowardsCenter: true
+	Dock@leftdown: 
+		DockOffset: -2,2
+		WOffset: -425,-510,0
+		DockAngle: 96
+		IsDragRequired: false
+		FaceTowardsCenter: true
+	Dock@leftup: 
+		DockOffset: -2,-2
+		WOffset: -425,510,0
+		DockAngle: 96
+		IsDragRequired: false
+		FaceTowardsCenter: true
+	AutoSelectionSize:
+	InvisibleToLiving:
+		Factions: Undead
+		
+		
 COFRESSURECT1:
-    Inherits: RESSURECT1
-    
+	Inherits: RESSURECT1
+	
 COFRESSURECT2:
-    Inherits: RESSURECT2
-    
+	Inherits: RESSURECT2
+	
 COFRESSURECT3:
-    Inherits: RESSURECT3
-    
+	Inherits: RESSURECT3
+	
 COFRESSURECT4:
-    Inherits: RESSURECT4 
-        
+	Inherits: RESSURECT4 
+		
 COFSPAWN1:
 	Inherits: ^CoffinAmbush
-    WithSpriteBody:
-        Sequence: idle
-    ActorEnsurance:
-        SpawnActor: cofressurect1
-        Maxalive: 3
-        Offset: -128,85,0
-        MoveOffset: 0,1
-        RespawnTime: 200
-        StartDelay: 50
-        
+	WithSpriteBody:
+		Sequence: idle
+	ActorEnsurance:
+		SpawnActor: cofressurect1
+		Maxalive: 3
+		Offset: -128,85,0
+		MoveOffset: 0,1
+		RespawnTime: 200
+		StartDelay: 50
+		
 COFSPAWN2:
 	Inherits: ^CoffinAmbush
-    WithSpriteBody:
-        Sequence: idle
-    ActorEnsurance:
-        SpawnActor: cofressurect2
-        Maxalive: 5
-        Offset: -43,85,0
-        MoveOffset: 0,1
-        RespawnTime: 125
-        StartDelay: 50
-        
+	WithSpriteBody:
+		Sequence: idle
+	ActorEnsurance:
+		SpawnActor: cofressurect2
+		Maxalive: 5
+		Offset: -43,85,0
+		MoveOffset: 0,1
+		RespawnTime: 125
+		StartDelay: 50
+		
 COFSPAWN3:
 	Inherits: ^CoffinAmbush
-    WithSpriteBody:
-        Sequence: idle
-    ActorEnsurance:
-        SpawnActor: cofressurect3
-        Maxalive: 5
-        Offset: 43,350,0
-        MoveOffset: 1,0
-        RespawnTime: 125
-        StartDelay: 50
-        
+	WithSpriteBody:
+		Sequence: idle
+	ActorEnsurance:
+		SpawnActor: cofressurect3
+		Maxalive: 5
+		Offset: 43,350,0
+		MoveOffset: 1,0
+		RespawnTime: 125
+		StartDelay: 50
+		
 COFSPAWN4:
 	Inherits: ^CoffinAmbush
-    WithSpriteBody:
-        Sequence: idle
-    ActorEnsurance:
-        SpawnActor: cofressurect4
-        Maxalive: 5
-        Offset: 128,-85,0
-        MoveOffset: -1,0
-        RespawnTime: 125
-        StartDelay: 50
-        
-        
+	WithSpriteBody:
+		Sequence: idle
+	ActorEnsurance:
+		SpawnActor: cofressurect4
+		Maxalive: 5
+		Offset: 128,-85,0
+		MoveOffset: -1,0
+		RespawnTime: 125
+		StartDelay: 50
+		
+		

@@ -19,6 +19,12 @@ Terrain:
 		AcceptsSmudgeType: Crater, Scorch
 		Color: C6D648
 		RestrictPlayerColor: true
+	TerrainType@Corruption:
+		Type: Corruption
+		TargetTypes: Ground
+		AcceptsSmudgeType: Crater, Scorch
+		Color: 2F0D0D
+		RestrictPlayerColor: true
 	TerrainType@Clear:
 		Type: Clear
 		TargetTypes: Ground

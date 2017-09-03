@@ -9,6 +9,12 @@ deerstand:
 		Start: 0
 	idle2: 
 		Start: 1
+	corputed1:
+		Start: 2
+	corputed2:
+		Start: 3
+    empty: ironore4
+		Start: 9 
 		
 coppermine:
 	Defaults:

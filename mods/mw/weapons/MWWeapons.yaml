@@ -3230,7 +3230,7 @@ HunterUnload:
 	Projectile: Bullet
 		Speed: 1c682
 	Warhead@GrantMonez: CashTick
-		Ammount: 50
+		Ammount: 65
 		ValidStances: Ally
 		AffectsParent: true
 		InvalidTargets: Air

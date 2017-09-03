@@ -121,6 +121,7 @@
     <Compile Include="Traits\ShakeOnCreate.cs" />
     <Compile Include="Traits\TransformOnCondition.cs" />
     <Compile Include="Traits\Undead Faction\AcolytpreyBuild.cs" />
+    <Compile Include="Traits\Undead Faction\CorruptDeerstands.cs" />
     <Compile Include="Traits\Undead Faction\AcolytpreyResources.cs" />
     <Compile Include="Traits\Undead Faction\BuildUpSound.cs" />
     <Compile Include="Traits\Undead Faction\FloatingTextBackwards.cs" />

@@ -15,7 +15,7 @@
 	Faction@Random:
 		Name: Any
 		InternalName: Random
-		RandomFactionMembers: gdi, nod, sul
+		RandomFactionMembers: gdi, nod, sul, ded
 		Description: Select a random faction.
 	Faction@gdi:
 		Name: King
@@ -41,7 +41,7 @@
 		TerrainType: Tiberium
 		Name: Iron
 		ResourceType: 1
-		Type: Tiberium
+		Type: Iron
 		ValuePerUnit: 28
 		AllowedTerrainTypes: Clear,Road
 		AllowUnderActors: true
@@ -56,7 +56,7 @@
 		ValuePerUnit: 40
 		AllowedTerrainTypes: Clear,Road
 		AllowUnderActors: true
-		Type: BlueTiberium
+		Type: Gold
 	ResourceType@copper-tib:
 		ResourceType: 3
 		Palette: grain
@@ -141,6 +141,18 @@
 		PipColor: Blue
 		AllowedTerrainTypes: Clear,Road
 		AllowUnderActors: true
+	ResourceType@Corruption:
+		Type: Corruption
+		Name: Corruption
+		PipColor: Red
+		ResourceType: 10
+		Palette: alphabarely
+		TerrainType: Corruption
+		Sequences: corrupt1,corrupt2,corrupt3,corrupt4,corrupt5,corrupt6,corrupt7,corrupt8,corrupt9
+		MaxDensity: 1
+		ValuePerUnit: 20
+		AllowedTerrainTypes: Clear,Road
+		AllowUnderActors: true
    
 
 World:
@@ -184,56 +196,56 @@ World:
 		Class: medieval
 		ClassName: Supply Wagon Only
 		Factions: ded
-        SupportActors: preycolyte,preycolyte, preycolyte
+		SupportActors: preycolyte,preycolyte, preycolyte
 		BaseActor: undeadcomm
 	MPStartUnits@dead:
 		Class: medieval2
 		ClassName: Quick Start
 		Factions: ded
 		BaseActor: undeadcomm
-        SupportActors: preycolyte,preycolyte, preycolyte, preycolyte
-        InnerSupportRadius: 4
-        OuterSupportRadius: 5
+		SupportActors: preycolyte,preycolyte, preycolyte, preycolyte
+		InnerSupportRadius: 4
+		OuterSupportRadius: 5
 	MPStartUnits@2:
 		Class: medieval3
 		ClassName: Well Populated
 		Factions: ded
 		BaseActor: undeadcomm
-        SupportActors: preycolyte,preycolyte, preycolyte ,preycolyte, preycolyte
-        InnerSupportRadius: 4
-        OuterSupportRadius: 5
+		SupportActors: preycolyte,preycolyte, preycolyte ,preycolyte, preycolyte
+		InnerSupportRadius: 4
+		OuterSupportRadius: 5
 	MPStartUnits@3:
 		Class: medieval4
 		ClassName: Over Populated
 		Factions: ded
 		BaseActor: undeadcomm
-        SupportActors: preycolyte,preycolyte, preycolyte ,preycolyte, preycolyte ,preycolyte, preycolyte
-        InnerSupportRadius: 4
-        OuterSupportRadius: 5
+		SupportActors: preycolyte,preycolyte, preycolyte ,preycolyte, preycolyte ,preycolyte, preycolyte
+		InnerSupportRadius: 4
+		OuterSupportRadius: 5
 	MPStartUnits@medium:
 		Class: medieval2
 		ClassName: Quick Start
 		Factions: gdi, nod, sul
 		BaseActor: mcvnew
-        SupportActors: transporter, transporter, engeneer
-        InnerSupportRadius: 4
-        OuterSupportRadius: 5
+		SupportActors: transporter, transporter, engeneer
+		InnerSupportRadius: 4
+		OuterSupportRadius: 5
 	MPStartUnits@bunch:
 		Class: medieval3
 		ClassName: Well Populated
 		Factions: gdi, nod, sul
 		BaseActor: mcvnew
-        SupportActors: mwwand1,mwwand2,mwwand3,mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12,mwwand1,mwwand2,mwwand3, transporter, transporter, transporter, engeneer,, engeneer
-        InnerSupportRadius: 4
-        OuterSupportRadius: 5
+		SupportActors: mwwand1,mwwand2,mwwand3,mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12,mwwand1,mwwand2,mwwand3, transporter, transporter, transporter, engeneer,, engeneer
+		InnerSupportRadius: 4
+		OuterSupportRadius: 5
 	MPStartUnits@maximum:
 		Class: medieval4
 		ClassName: Over Populated
 		Factions: gdi, nod, sul
 		BaseActor: mcvnew
-        SupportActors: mwwand1,mwwand2,mwwand3,mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12,mwwand1,mwwand2,mwwand3, mwwand5, mwwand6, mwwand10, mwwand11, transporter, transporter, transporter, transporter, transporter, transporter, engeneer, engeneer,, engeneer
-        InnerSupportRadius: 4
-        OuterSupportRadius: 5
+		SupportActors: mwwand1,mwwand2,mwwand3,mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12,mwwand1,mwwand2,mwwand3, mwwand5, mwwand6, mwwand10, mwwand11, transporter, transporter, transporter, transporter, transporter, transporter, engeneer, engeneer,, engeneer
+		InnerSupportRadius: 4
+		OuterSupportRadius: 5
 	SpawnMPUnits:
 		StartingUnitsClass: medieval2
 	CrateSpawner:

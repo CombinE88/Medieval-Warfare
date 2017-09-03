@@ -207,3 +207,7 @@
 		Name: Soulalpha
 		BasePalette: effect
 		Alpha: 0.5
+	PaletteFromPaletteWithAlpha@Barelyseen:
+		Name: alphabarely
+		BasePalette: ra
+		Alpha: 0.1

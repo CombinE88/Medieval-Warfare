@@ -1,6 +1,6 @@
 ^GrimReanimatable:
-    GrimTarget:
-        GrantCondition: grimactive
+	GrimTarget:
+		GrantCondition: grimactive
 	DamageMultiplier@GRIM:
 		RequiresCondition: grimactive
 		Modifier: 133
@@ -13,17 +13,17 @@
 	SpeedMultiplier@GRIM:
 		RequiresCondition: grimactive
 		Modifier: 77
-    ReloadDelayMultiplier@GRIM:
+	ReloadDelayMultiplier@GRIM:
 		RequiresCondition: grimactive
 		Modifier: 133
-    GivesExperienceMultiplier@GRIM:
+	GivesExperienceMultiplier@GRIM:
 		RequiresCondition: grimactive
 		Modifier: 0
 	WithColoredOverlay@GRIM:
 		Palette: disabled
-        RequiresCondition: grimactive
-        
-        
+		RequiresCondition: grimactive
+		
+		
 ^GameSettings:
 	GrantConditionOnPrerequisite@Level30:
 		Condition: HPLevel30
@@ -101,7 +101,7 @@
 	QuantizeFacingsFromSequence:
 	AutoSelectionSize:
 	RenderSprites:
-    
+	
 ^1x1Shape:
 	HitShape:
 		UseTargetableCellsOffsets: true
@@ -128,22 +128,22 @@
 		UseTargetableCellsOffsets: true
 		Type: Rectangle
 			TopLeft: -1536, -1024
-			BottomRight: 1536, 1024    
-            
+			BottomRight: 1536, 1024	
+			
 ^4x2Shape:
 	HitShape:
 		UseTargetableCellsOffsets: true
 		Type: Rectangle
 			TopLeft: -2048, -1024
-			BottomRight: 2048, 1024    
-            
+			BottomRight: 2048, 1024	
+			
 ^2x3Shape:
 	HitShape:
 		UseTargetableCellsOffsets: true
 		Type: Rectangle
 			TopLeft: -1024, -1536
-			BottomRight: 1024, 1536    
-            
+			BottomRight: 1024, 1536	
+			
 ^3x3Shape:
 	HitShape:
 		UseTargetableCellsOffsets: true
@@ -165,15 +165,15 @@
 	AutoTargetPriority@DEFAULT:
 		ValidTargets: Infantry, Vehicle, Creep, Water, Defense, Cavalry, Siege
 		InvalidTargets: NoAutoTarget, Wall
-        Priority: 3
+		Priority: 3
 	AutoTargetPriority@ATTACKANYTHING:
 		ValidTargets: Structure
 		InvalidTargets: NoAutoTarget, Wall
-        Priority: 2
+		Priority: 2
 	AutoTargetPriority@PEASANTS:
 		ValidTargets: Peasant
 		InvalidTargets: NoAutoTarget, Wall
-        Priority: 1
+		Priority: 1
 
 ^AutoTargetAir:
 	AutoTarget:
@@ -187,16 +187,16 @@
 	AutoTargetPriority@DEFAULT:
 		ValidTargets: Infantry, Vehicle, Creep, Water, Defense, Cavalry, Siege, Air
 		InvalidTargets: NoAutoTarget, Wall
-        Priority: 3
+		Priority: 3
 	AutoTargetPriority@ATTACKANYTHING:
 		ValidTargets: Structure
 		InvalidTargets: NoAutoTarget, Wall
-        Priority: 2
+		Priority: 2
 	AutoTargetPriority@PEASANTS:
 		ValidTargets: Peasant
 		InvalidTargets: NoAutoTarget, Wall
-        Priority: 1
-        
+		Priority: 1
+		
 ^AutoTargetTalking:
 	AutoTarget:
 		AttackAnythingCondition: stance-attackanything
@@ -206,7 +206,7 @@
 	AutoTargetPriority@ATTACKANYTHING:
 		RequiresCondition: stance-attackanything
 		ValidTargets: Talkbacks, Talkable
-        
+		
 ^AutoTargetGrowntrees:
 	AutoTarget:
 		AttackAnythingCondition: stance-attackanything
@@ -351,6 +351,7 @@
 			Wood: 75
 			Loot: 75
 			Beach: 50
+			Corruption: 80
 		TurnSpeed: 5
 	SelectionDecorations:
 	WithSpriteControlGroupDecoration:
@@ -394,6 +395,7 @@
 			Wood: 75
 			Loot: 75
 			Beach: 70
+			Corruption: 80
 		TurnSpeed: 5
 	Tooltip:
 		GenericName: Tank
@@ -484,6 +486,7 @@
 				PathingCost: 300
 			Loot: 75
 			Beach: 80
+			Corruption: 80
 	SelectionDecorations:
 	WithSpriteControlGroupDecoration:
 	Selectable:
@@ -645,6 +648,7 @@
 			Wood: 75
 			Loot: 75
 			Beach: 80
+			Corruption: 80
 		Voice: Move
 	SelectionDecorations:
 	WithSpriteControlGroupDecoration:
@@ -803,7 +807,7 @@
 
 ^CivBuilding:
 	Inherits: ^Building
-    HitShape:
+	HitShape:
 	ConditionManager:
 	Health:
 		HP: 40000
@@ -972,7 +976,7 @@
 
 ^TibTree:
 	Inherits@1: ^SpriteActor
-    ConditionManager:
+	ConditionManager:
 	Tooltip:
 		Name: Blossom Tree
 		ShowOwnerRow: false
@@ -1297,7 +1301,7 @@
 	Inherits@1: ^ExistsInWorld
 	Inherits@3: ^SpriteActor
 	Inherits@5: ^GameSettings
-    HitShape:
+	HitShape:
 	Huntable:
 	Health:
 	Armor:
@@ -1321,6 +1325,7 @@
 				PathingCost: 150
 			Loot: 75
 			Beach: 80
+			Corruption: 80
 	SelectionDecorations:
 	WithSpriteControlGroupDecoration:
 	Selectable:
@@ -1391,7 +1396,7 @@
 ^Knight:  
 	Inherits: ^MedievalInfantry
 	Inherits@2: ^GainsExperience
-    Inherits@Grim: ^GrimReanimatable
+	Inherits@Grim: ^GrimReanimatable
 	WithDeathAnimation:
 		DeathSequencePalette: raplayer
 		DeathTypes:
@@ -1506,7 +1511,7 @@
 ^Cavalry:
 	Inherits: ^MedievalInfantry
 	Inherits@2: ^GainsExperience
-    Inherits@Grim: ^GrimReanimatable
+	Inherits@Grim: ^GrimReanimatable
 	Voiced:
 		VoiceSet: GenericHorseVoice
 	Targetable:
@@ -1908,7 +1913,7 @@
 		Type: CenterPosition
 	WithFacingSpriteBody:
 	Husk:
-		AllowedTerrain: Clear, Rough, Road, Tiberium, BlueTiberium, Beach
+		AllowedTerrain: Clear, Rough, Road, Tiberium, BlueTiberium, Beach, Corruption, Crops, Wood, Loot
 	Targetable:
 		TargetTypes: Ground, Infantry, Deaddeer, NoAutoTarget
 	Tooltip:
@@ -2067,7 +2072,7 @@
 	#	Condition: Talkback
 	#AttackFrontal:
 	#	RequiresCondition: !Wander || Talking || Talkback
-    #   AttackRequiresEnteringCell: True
+	#   AttackRequiresEnteringCell: True
 	#AttackMove:
 	#	RequiresCondition: !Wander || Talking || Talkback
 	#AutoTarget:
@@ -2323,21 +2328,21 @@
 		RequiresCondition: 40 > DeliveredResources
 	Targetable@Priority1:
 		TargetTypes: Priority1
-        RequiresCondition: delconpriority == 1
+		RequiresCondition: delconpriority == 1
 	Targetable@Priority2:
 		TargetTypes: Priority2
-        RequiresCondition: delconpriority == 2
+		RequiresCondition: delconpriority == 2
 	Targetable@Priority3:
 		TargetTypes: Priority3
-        RequiresCondition: delconpriority == 3
+		RequiresCondition: delconpriority == 3
 	Targetable@Priority4:
 		TargetTypes: Priority4
-        RequiresCondition: delconpriority == 4
+		RequiresCondition: delconpriority == 4
 	Targetable@Priority5:
 		TargetTypes: Priority5
-        RequiresCondition: delconpriority >= 5
+		RequiresCondition: delconpriority >= 5
 	ConstructionPriority:
-        PriorityCondition: delconpriority
+		PriorityCondition: delconpriority
 	Armor:
 		Type: Wood
 	Building:
@@ -2409,11 +2414,11 @@
 	ConstructionProgress@Construct:
 		ConstructionCondition: Construct
 		YOffset: 0
-        XOffset: 5
+		XOffset: 5
 	ConstructionProgress@DeliveredResources:
 		ConstructionCondition: DeliveredResources
 		YOffset: 16
-        XOffset: 5
+		XOffset: 5
 		Font: Bold
 	HitShape:
 	EditorTilesetFilter:

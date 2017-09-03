@@ -1168,6 +1168,10 @@ acolyteb:
 		Start: 66
 		Length: 7
 		Facings: 8
+    shootchannel:
+        Tick: 800
+        Facings: 8
+        Frames: 72,79,86,93,100,107,114,121
 	prey: 
 		Tick: 100
 		Start: 232

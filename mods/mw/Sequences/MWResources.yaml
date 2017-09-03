@@ -362,3 +362,12 @@ resources:
 		Start: 120
 		Length: 12
 		Offset: 0, -12, 0
+	corrupt1: corrupt1
+	corrupt2: corrupt2
+	corrupt3: corrupt3
+	corrupt4: corrupt4
+	corrupt5: corrupt5
+	corrupt6: corrupt6
+	corrupt7: corrupt7
+	corrupt8: corrupt8
+	corrupt9: corrupt9

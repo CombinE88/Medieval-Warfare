@@ -1,4 +1,5 @@
 ﻿
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using OpenRA.Activities;
@@ -14,7 +15,7 @@ namespace OpenRA.Mods.Mw.Activities
 {
 
     // Assumes you have Minelayer on that unit
-    public class PreyActivity : Activity
+    public class PreyActivity : Activity, ITechTreePrerequisiteInfo
     {
         readonly AcolytePreyInfo info;
         readonly WithSpriteBody wsb;
@@ -34,6 +35,8 @@ namespace OpenRA.Mods.Mw.Activities
         private int token;
         private string condtion;
 
+        private Dictionary<string, string> ResourceTypesPreres;
+
         public PreyActivity(Actor self,Actor dockact,bool facingDock,Dock d)
         {
             info = self.Info.TraitInfo<AcolytePreyInfo>();
@@ -49,6 +52,8 @@ namespace OpenRA.Mods.Mw.Activities
             ConditionManager = self.Trait<ConditionManager>();
             token = ConditionManager.InvalidConditionToken;
             condtion = self.Info.TraitInfo<AcolytePreyInfo>().SelfEnabledCondition;
+
+            ResourceTypesPreres = self.Info.TraitInfo<AcolytePreyInfo>().ResourceTypesPreres;
 
         }
 
@@ -122,6 +127,23 @@ namespace OpenRA.Mods.Mw.Activities
 
         public int Leech(Actor self)
         {
+            var ValidRes = new HashSet<string>();
+
+            foreach (var restype in ResourceTypesPreres)
+            {
+                var hash = new List<string>();
+                    hash.Add(restype.Value);
+
+                if (restype.Value == "NONE")
+                {
+                    ValidRes.Add(restype.Key);
+                }
+                else if (self.Owner.PlayerActor.TraitOrDefault<TechTree>().HasPrerequisites(hash))
+                {
+                    ValidRes.Add(restype.Key);
+                }
+            }
+
             CPos cell = CPos.Zero;
             var cells = self.World.Map.FindTilesInCircle(self.World.Map.CellContaining(self.CenterPosition), 6, true)
                 .Where(c =>
@@ -132,7 +154,10 @@ namespace OpenRA.Mods.Mw.Activities
                         return false;
                     if (resLayer.GetResourceDensity(c) == 0)
                         return false;
-                    return true;
+                    if (ValidRes.Contains(resLayer.GetResource(c).Info.Type))
+                        return true;
+
+                    return false;
                 });
             if (cells != null && cells.Any())
                 cell = self.ClosestCell(cells);
@@ -182,6 +207,11 @@ namespace OpenRA.Mods.Mw.Activities
                 p += new CVec(dx, dy);
                 yield return p;
             }
+        }
+
+        public object Create(ActorInitializer init)
+        {
+            throw new NotImplementedException();
         }
     }
 }
