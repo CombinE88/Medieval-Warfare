@@ -1072,6 +1072,10 @@ MWWAND1:
 		Image: mwciv1
 		PlayerPalette: 
 		Palette: mwcivilian
+		FactionImages:
+			nod: mwciv1
+			gdi: mwciv1
+			sul: sulciv1
 	WithInfantryBody:
 		DefaultAttackSequence: talking
 		IdleSequences: idle1, idle2, idle3, idle4, idle5, idle6, idle7, idle8
@@ -1083,6 +1087,10 @@ MWWAND2:
 		Image: mwciv2
 		PlayerPalette: 
 		Palette: mwcivilian
+		FactionImages:
+			nod: mwciv2
+			gdi: mwciv2
+			sul: sulciv2
 	WithInfantryBody:
 		DefaultAttackSequence: talking
 		IdleSequences: idle1, idle2, idle3, idle4, idle5, idle6, idle7, idle8
@@ -1095,6 +1103,10 @@ MWWAND3:
 		Image: mwciv3
 		PlayerPalette: 
 		Palette: mwcivilian
+		FactionImages:
+			nod: mwciv3
+			gdi: mwci3
+			sul: sulciv3
 	WithInfantryBody:
 		DefaultAttackSequence: talking
 		IdleSequences: idle1, idle2, idle3, idle4, idle5, idle6, idle7, idle8
@@ -1106,6 +1118,10 @@ MWWAND4:
 		Image: mwciv4
 		PlayerPalette: 
 		Palette: mwcivilian
+		FactionImages:
+			nod: mwciv4
+			gdi: mwciv4
+			sul: sulciv4
 	WithInfantryBody:
 		DefaultAttackSequence: talking
 		IdleSequences: idle1, idle2, idle3, idle4, idle5, idle6, idle7, idle8
@@ -1117,6 +1133,10 @@ MWWAND5:
 		Image: mwciv5
 		PlayerPalette: 
 		Palette: mwcivilian
+		FactionImages:
+			nod: mwciv5
+			gdi: mwciv5
+			sul: sulciv5
 	WithInfantryBody:
 		DefaultAttackSequence: talking
 		IdleSequences: idle1, idle2, idle3, idle4, idle5, idle6, idle7, idle8
@@ -1128,6 +1148,10 @@ MWWAND6:
 		Image: mwciv6
 		PlayerPalette: 
 		Palette: mwcivilian
+		FactionImages:
+			nod: mwciv6
+			gdi: mwciv6
+			sul: sulciv6
 	WithInfantryBody:
 		DefaultAttackSequence: talking
 		IdleSequences: idle1, idle2, idle3, idle4, idle5, idle6, idle7, idle8
@@ -1139,6 +1163,10 @@ MWWAND10:
 		Image: mwciv10
 		PlayerPalette: 
 		Palette: mwcivilian
+		FactionImages:
+			nod: mwciv10
+			gdi: mwciv10
+			sul: sulciv1
 	WithInfantryBody:
 		DefaultAttackSequence: talking
 		IdleSequences: idle1, idle2, idle3, idle4, idle5, idle6, idle7, idle8
@@ -1150,6 +1178,10 @@ MWWAND11:
 		Image: mwciv11
 		PlayerPalette: 
 		Palette: mwcivilian
+		FactionImages:
+			nod: mwciv11
+			gdi: mwciv11
+			sul: sulciv2
 	WithInfantryBody:
 		DefaultAttackSequence: talking
 		IdleSequences: idle1, idle2, idle3, idle4, idle5, idle6, idle7, idle8
@@ -1161,6 +1193,10 @@ MWWAND12:
 		Image: mwciv12
 		PlayerPalette: 
 		Palette: mwcivilian
+		FactionImages:
+			nod: mwciv12
+			gdi: mwciv12
+			sul: sulciv4
 	WithInfantryBody:
 		DefaultAttackSequence: talking
 		IdleSequences: idle1, idle2, idle3, idle4, idle5, idle6, idle7, idle8
@@ -1171,6 +1207,10 @@ MWWAND7:
 	RenderSprites:
 		Image: mwciv7
 		PlayerPalette: raplayer
+		FactionImages:
+			nod: mwciv7
+			gdi: mwciv7
+			sul: sulciv3
 	WithInfantryBody:
 		MinIdleDelay: 25
 		MaxIdleDelay: 50
@@ -1298,6 +1338,10 @@ NOBLE1:
 		Image: nobl1
 		PlayerPalette: 
 		Palette: mwnobles
+		FactionImages:
+			nod: nobl1
+			gdi: nobl1
+			sul: sulciv7
 	WithInfantryBody:
 		DefaultAttackSequence: talking
 		IdleSequences: idle1, idle2, idle3, idle4, idle5, idle6, idle7, idle8
@@ -1310,6 +1354,10 @@ NOBLE2:
 		PlayerPalette: 
 		PlayerPalette: 
 		Palette: mwnobles
+		FactionImages:
+			nod: nobl2
+			gdi: nobl2
+			sul: sulciv8
 	WithInfantryBody:
 		DefaultAttackSequence: talking
 		IdleSequences: idle1, idle2, idle3, idle4, idle5, idle6, idle7, idle8
@@ -1321,6 +1369,10 @@ NOBLE3:
 		Image: nobl3
 		PlayerPalette: 
 		Palette: mwnobles
+		FactionImages:
+			nod: nobl3
+			gdi: nobl3
+			sul: sulciv9
 	WithInfantryBody:
 		DefaultAttackSequence: talking
 		IdleSequences: idle1, idle2, idle3, idle4, idle5, idle6, idle7, idle8
@@ -1332,6 +1384,10 @@ NOBLE4:
 		Image: nobl4
 		PlayerPalette: 
 		Palette: mwnobles
+		FactionImages:
+			nod: nobl4
+			gdi: nobl4
+			sul: sulciv10
 	WithInfantryBody:
 		DefaultAttackSequence: talking
 		IdleSequences: idle1, idle2, idle3, idle4, idle5, idle6, idle7, idle8
@@ -1346,6 +1402,10 @@ NOBLE5:
 		Image: mwcivll
 		PlayerPalette: 
 		Palette: mwnobles
+		FactionImages:
+			nod: mwcivll
+			gdi: mwcivll
+			sul: sulciv11
 	WithInfantryBody:
 		DefaultAttackSequence: talking
 		IdleSequences: idle1

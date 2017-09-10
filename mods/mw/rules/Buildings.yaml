@@ -283,7 +283,7 @@ FACTNEW.GDI:
 	RenderSprites:
 		Image: newfact
 	Buildable:
-		Queue: MBuilding.GDI, MBuilding.Nod
+		Queue: MTech.Nod, MTech.GDI, MTech.Sul, MTech.ded
 		BuildPaletteOrder: 1000
 		Prerequisites: ~disabled
 		ForceFaction: gdi
@@ -301,14 +301,32 @@ FACTNEW.NOD:
 	RenderSprites:
 		Image: newfact
 	Buildable:
-		Queue: MBuilding.GDI, MBuilding.Nod
-		BuildPaletteOrder: 1000
+		Queue: MTech.Nod, MTech.GDI, MTech.Sul, MTech.ded
+		BuildPaletteOrder: 1001
 		Prerequisites: ~disabled
 		ForceFaction: nod
 		IconPalette: raicon
 		Description: Constructs your village
 	Tooltip:
 		Name: Construction Yard (Nod)
+	ThrowsShrapnel@LARGE:
+		Weapons: LargeWood1, LargeStone1, DebrUtility1, DebrUtility2, DebrUtility3
+		Pieces: 1, 2
+		Range: 1c0, 5c0
+        
+FACTNEW.SUL:
+	Inherits: FACTNEW
+	RenderSprites:
+		Image: newfact
+	Buildable:
+		Queue: MTech.Nod, MTech.GDI, MTech.Sul, MTech.ded
+		BuildPaletteOrder: 1002
+		Prerequisites: ~disabled
+		ForceFaction: sul
+		IconPalette: raicon
+		Description: Constructs your village
+	Tooltip:
+		Name: Construction Yard (Sultan)
 	ThrowsShrapnel@LARGE:
 		Weapons: LargeWood1, LargeStone1, DebrUtility1, DebrUtility2, DebrUtility3
 		Pieces: 1, 2
@@ -557,10 +575,11 @@ HQNEWNOD:
 		PlayerPalette: raplayer
 	Buildable:
 		IconPalette: raicon
-		BuildPaletteOrder: 50
-		Prerequisites: proc, ~scaffold
-		Queue: MResources.Nod, MResources.GDI
+		BuildPaletteOrder: 110
+		Prerequisites: ~scaffold
+		Queue: MTech.Nod, MTech.GDI
 		Description: Unlocks higher-tech units and buildings.\n\n\n\n
+		BuildDuration: 75
 	Building:
 		Footprint: xx xx ==
 		Dimensions: 2,3
@@ -606,10 +625,11 @@ ARMORYNOD:
 		PlayerPalette: raplayer
 	Buildable:
 		IconPalette: raicon
-		BuildPaletteOrder: 90
-		Prerequisites: anyhq, ~scaffold
-		Queue: MMilitary.Nod
+		BuildPaletteOrder: 120
+		Prerequisites: ~scaffold
+		Queue: MTech.Nod
 		Description: Unlocks Support Powers and Raiding Squad.\nHeals Cavalry and Infantry.\n\n\n\n
+		BuildDuration: 100
 	Building:
 		Footprint: xx xx ==
 		Dimensions: 2,3
@@ -691,10 +711,11 @@ ARMORYGDI:
 		PlayerPalette: raplayer
 	Buildable:
 		IconPalette: raicon
-		BuildPaletteOrder: 90
-		Prerequisites: anyhq, ~scaffold
-		Queue: MMilitary.GDI
+		BuildPaletteOrder: 120
+		Prerequisites: ~scaffold
+		Queue: MTech.GDI
 		Description: Unlocks Support Powers.\nHeals Cavalry and Infantry.\n\n\n\n
+		BuildDuration: 100
 	Building:
 		Footprint: xx xx ==
 		Dimensions: 2,3
@@ -773,10 +794,11 @@ NUK2NEW:
 		Prerequisite: anypower
 	Buildable:
 		IconPalette: raicon
-		BuildPaletteOrder: 60
-		Prerequisites: anyhq, ~scaffold
+		BuildPaletteOrder: 120
+		Prerequisites: ~scaffold
 		Queue: MBuilding.GDI
 		Description: Provides more livingspace. Livingspace increases over time by generating peasants.\nCan hold up to 8 peasants, spawntime depends on number of shacks and large huts. \ncheaper than the standard Shack.\n\n\n\n
+		BuildDuration: 50
 	Building:
 		Footprint: xx xx ==
 		Dimensions: 2,3
@@ -847,11 +869,13 @@ NUKXL:
 	ProvidesPrerequisite:
 		Prerequisite: anypower
 	Buildable:
+		Buildable:
 		IconPalette: raicon
-		BuildPaletteOrder: 70
-		Prerequisites: anyarmory, ~scaffold
+		BuildPaletteOrder: 130
+		Prerequisites: ~scaffold
 		Queue: MBuilding.GDI
 		Description: Provides more livingspace. Livingspace increases over time by generating peasants.\nCan hold up to 15 peasants. \ncheaper than the standard Shack.\n\n\n\n
+		BuildDuration: 75
 	Building:
 		Footprint: xxx xxx ===
 		Dimensions: 3,3
@@ -928,10 +952,11 @@ NUKENEW:
 		Prerequisite: anypower
 	Buildable:
 		IconPalette: raicon
-		BuildPaletteOrder: 10
-		Prerequisites: factnew, ~scaffldbuilded
+		BuildPaletteOrder: 110
+		Prerequisites: ~scaffldbuilded
 		Description: Generates livingspace. Livingspace increases over time by generating peasants.\nCan hold up to 4 peasants, spawntime depends on number of shacks and large huts.\n\n\n\n
 		Queue: MBuilding.GDI
+		BuildDuration: 25
 	Building:
 		Footprint: xx xx ==
 		Dimensions: 2,3
@@ -973,6 +998,7 @@ NUKENEW:
 	#	Offset: -384,597,0
 	#	MoveOffset: 0,2
 	#	SpawnStart: false
+    
 XLTNT1:
 	Inherits: ^MWBaseBuilding
 	Inherits@Hitshape: ^2x2Shape
@@ -992,10 +1018,11 @@ XLTNT1:
 		Prerequisite: anypower
 	Buildable:
 		IconPalette: raicon
-		BuildPaletteOrder: 60
-		Prerequisites: anyhq, ~scaffold
+		BuildPaletteOrder: 120
+		Prerequisites: ~scaffold
 		Queue: MBuilding.Nod
-		Description: Provides more livingspace. Livingspace increases over time by generating peasants.\nCan hold up to 8 peasants, spawntime depends on number of shacks and large huts. \ncheaper than the standard Shack.\n\n\n\n
+		Description: Provides more livingspace. Livingspace increases over time by generating peasants.\nCan hold up to 6 peasants, spawntime depends on number of shacks and large huts. \ncheaper than the standard Shack.\n\n\n\n
+        BuildDuration: 50
 	Building:
 		Footprint: xx xx ==
 		Dimensions: 2,3
@@ -1052,11 +1079,13 @@ XLTNT2:
 	Inherits: XLTNT1
 	RenderSprites:
 		Image: xltnt2
+	-Buildable:
 		
 XLTNT3:
 	Inherits: XLTNT1
 	RenderSprites:
 		Image: xltnt3
+	-Buildable:
  
 NODNUKE:
 	Inherits: ^MWBaseBuilding
@@ -1175,10 +1204,11 @@ ZEROPROC:
 		Prerequisite: proc
 	Buildable:
 		IconPalette: raicon
-		BuildPaletteOrder: 30
-		Prerequisites: anypower, ~scaffold
+		BuildPaletteOrder: 120
+		Prerequisites: ~scaffold
 		Description: Provides basic resource gathering for Crops and Grain.\n Comes with 2 farmers.\n Can only operate up to 6 farmers at once.\n\n\n\n
-		Queue: MResources.GDI, MResources.Nod
+		Queue: MResources.GDI
+		BuildDuration: 75
 	Building:
 		Footprint: __ xx x= ==
 		Dimensions: 2,4
@@ -1236,15 +1266,55 @@ ZEROPROC:
 		MoveOffset: 1,3
 		RespawnTime: 750
 		FindRadius: 100
+	Selectable:
+		Bounds: 48,70,0,5
+	SelectionDecorations:
+		VisualBounds: 48,70,0,5
         
 NODPROC:
 	Inherits: ZEROPROC
 	RenderSprites:
-		Image: windmill
+		Image: nodmill
+	Building:
+		Footprint: __ xx xx ==
+		Dimensions: 2,4
+		LocalCenterOffset: 0,-512,0
 	Valued:
 		Cost: 1500
 	CustomSellValue:
 		Value: 400
+	Buildable:
+		IconPalette: raicon
+		BuildPaletteOrder: 120
+		Prerequisites: ~scaffold
+		Description: Provides basic resource gathering for Crops and Grain.\n Comes with 2 farmers.\n Can only operate up to 6 farmers at once.\n\n\n\n
+		Queue: MResources.Nod
+		BuildDuration: 75
+	WithFreeSpawnableActor@1:
+		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
+		SpawnActor: e8farmer
+		Offset: 368,1067, 0
+		MoveOffset: 1,3
+		RespawnTime: 750
+		FindRadius: 100
+	WithFreeSpawnableActor@2:
+		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
+		SpawnActor: e8farmer
+		Offset: 368,1067, 0
+		MoveOffset: 1,3
+		RespawnTime: 750
+		FindRadius: 100
+	WithFreeSpawnableActor@3:
+		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
+		SpawnActor: e8farmer
+		Offset: 368,1067, 0
+		MoveOffset: 1,3
+		RespawnTime: 750
+		FindRadius: 100
+	Selectable:
+		Bounds: 48,70,0,-10
+	SelectionDecorations:
+		VisualBounds: 48,70,0,-10
 		
 PROC:
 	Tooltip:
@@ -1303,10 +1373,11 @@ PROCNEW:
 		Name: Ore Refinery
 	Buildable:
 		IconPalette: raicon
-		BuildPaletteOrder: 70
-		Prerequisites: anyhq, ~scaffold
+		BuildPaletteOrder: 130
+		Prerequisites: ~scaffold
 		Description: Processes raw ore and Gold into useable metal.\nGenerates more money than the windmill.\n\n\n\n
-		Queue: MResources.GDI, MResources.Nod, MResources.SUL
+		Queue: MResources.GDI, MResources.Nod
+		BuildDuration: 75
 	Building:
 		Footprint: _x_ xxx xx= ===
 		Dimensions: 3,4
@@ -1356,11 +1427,12 @@ SILONEW:
 	Tooltip:
 		Name: Smelter
 	Buildable:
-		BuildPaletteOrder: 70
-		Prerequisites: proc, ~scaffold
-		Queue: MTech.GDI, MTech.Nod, MTech.SUL
+		BuildPaletteOrder: 140
+		Prerequisites: ~scaffold
+		Queue: MResources.GDI, MResources.Nod, MResources.SUL
 		Description: Stores additional Ore\n\n\n\n
 		IconPalette: raicon
+		BuildDuration: 25
 	Building:
 		Footprint: _x xx
 		Dimensions: 2,2
@@ -1410,10 +1482,11 @@ BARRNEW:
 		Prerequisite: barracks
 	Buildable:
 		IconPalette: raicon
-		BuildPaletteOrder: 30
-		Prerequisites: anypower, ~scaffold
+		BuildPaletteOrder: 110
+		Prerequisites: ~scaffold
 		Description: Trains Infantry only\n\n\n\n
 		Queue: MMilitary.GDI
+		BuildDuration: 50
 	Building:
 		Footprint: xx xx ==
 		Dimensions: 2,3
@@ -1474,10 +1547,11 @@ HANDNEW:
 		Prerequisite: barracks
 	Buildable:
 		IconPalette: raicon
-		BuildPaletteOrder: 30
-		Prerequisites: anypower, ~scaffold
+		BuildPaletteOrder: 110
+		Prerequisites: ~scaffold
 		Description: Trains Infantry only\n\n\n\n
 		Queue: MMilitary.Nod
+		BuildDuration: 50
 	Building:
 		Footprint: __ xx xx ==
 		Dimensions: 2,4
@@ -1533,10 +1607,11 @@ STALL:
 		Name: Stables
 	Buildable:
 		IconPalette: raicon
-		BuildPaletteOrder: 40
-		Prerequisites: proc, ~scaffold
+		BuildPaletteOrder: 120
+		Prerequisites: ~scaffold
 		Description: Trains cavalry\n\n\n\n
 		Queue: MMilitary.GDI
+		BuildDuration: 100
 	Building:
 		Footprint: xxx xx= ===
 		Dimensions: 3,3
@@ -1619,10 +1694,11 @@ NODSTALL:
 		Name: Stables
 	Buildable:
 		IconPalette: raicon
-		BuildPaletteOrder: 40
-		Prerequisites: proc, ~scaffold
+		BuildPaletteOrder: 120
+		Prerequisites: ~scaffold
 		Description: Trains cavalry\n\n\n\n
 		Queue: MMilitary.Nod
+		BuildDuration: 100
 	Building:
 		Footprint: xxxx xx=x ====
 		Dimensions: 4,3
@@ -1706,10 +1782,11 @@ CASTLE:
 		Name: Castle
 	Buildable:
 		IconPalette: raicon
-		BuildPaletteOrder: 100
-		Prerequisites: anyhq, anyarmory, ~scaffold
+		BuildPaletteOrder: 130
+		Prerequisites: ~scaffold
 		Description: Unlocks Superweapon.\n Unlocks Heavy Cavalry, Knight's and Trebuchet.\nRequires power to operate.\nCan hold up to 4 nobles.\n\n\n\n
-		Queue: MMilitary.Nod
+		Queue: MTech.Nod
+		BuildDuration: 125
 	Building:
 		Footprint: ___ xxx xxx ===
 		Dimensions: 3,4
@@ -1780,10 +1857,11 @@ CASTLE2:
 		Name: Castle
 	Buildable:
 		IconPalette: raicon
-		BuildPaletteOrder: 100
-		Prerequisites: anyhq, anyarmory, ~scaffold
+		BuildPaletteOrder: 130
+		Prerequisites: ~scaffold
 		Description: Unlocks Superweapon.\n Unlocks Assassins, Crossbows and Ballista Towers.\nRequires power to operate.\nCan hold up to 4 nobles.\n\n\n\n
-		Queue: MMilitary.GDI
+		Queue: MTech.GDI
+		BuildDuration: 100
 	Building:
 		Footprint: ___ xxx xxx ===
 		Dimensions: 3,4
@@ -1856,10 +1934,11 @@ WORKSHOPNOD:
 		Name: Siege Workshop
 	Buildable:
 		IconPalette: raicon
-		BuildPaletteOrder: 80
-		Prerequisites: proc, ~scaffold
+		BuildPaletteOrder: 130
+		Prerequisites: ~scaffold
 		Description: Provides Siege weapons construction.\nEnables Supportpowers in combination with an Armory.\n\n\n
 		Queue: MMilitary.Nod
+		BuildDuration: 100
 	Building:
 		Footprint: xxx =xx ===
 		Dimensions: 3,3
@@ -1950,10 +2029,11 @@ WORKSHOPGDI:
 		Name: Siege Workshop
 	Buildable:
 		IconPalette: raicon
-		BuildPaletteOrder: 80
-		Prerequisites: proc, ~scaffold
+		BuildPaletteOrder: 130
+		Prerequisites: ~scaffold
 		Description: Provides Siege weapons construction.\nEnables Supportpowers in combination with an Armory.\n\n\n
 		Queue: MMilitary.GDI
+		BuildDuration: 100
 	Building:
 		Footprint: xxx xx= ===
 		Dimensions: 3,3
@@ -2385,10 +2465,11 @@ TAVERN:
 		Name: Tavern
 	Buildable:
 		IconPalette: raicon
-		BuildPaletteOrder: 40
-		Prerequisites: proc, ~scaffold
+		BuildPaletteOrder: 100
+		Prerequisites: ~scaffold
 		Description: Provides 3 additional worker and 1 engineer.\n\n\n\n
-		Queue: MBuilding.GDI, MBuilding.Nod
+		Queue: MTech.GDI, MTech.Nod
+		BuildDuration: 50
 	Building:
 		Footprint: xxx xxx ===
 		Dimensions: 3,3
@@ -2467,10 +2548,11 @@ TOWNHALL:
 		Name: Town Hall
 	Buildable:
 		IconPalette: raicon
-		BuildPaletteOrder: 100
-		Prerequisites: anyarmory, ~scaffold
+		BuildPaletteOrder: 140
+		Prerequisites: ~scaffold
 		Description: Attracts citizens to your town.\nNew Peasants will spawn faster.\n\n\n
 		Queue: MBuilding.GDI, MBuilding.Nod
+		BuildDuration: 125
 	Building:
 		Footprint: xxx xxx ===
 		Dimensions: 3,3
@@ -2515,10 +2597,11 @@ SCHAFOTT:
 		Name: Scaffold
 	Buildable:
 		IconPalette: raicon
-		BuildPaletteOrder: 95
-		Prerequisites: anyhq, ~scaffold
+		BuildPaletteOrder: 135
+		Prerequisites: ~scaffold
 		Description: Attracts citizens to your town.\nNew Peasants will spawn faster.\n\n\n
 		Queue: MBuilding.Nod
+		BuildDuration: 75
 	Building:
 		Footprint: xx xx ==
 		Dimensions: 2,3
@@ -2557,10 +2640,11 @@ HERBALIST:
 		Name: Herbalist
 	Buildable:
 		IconPalette: raicon
-		BuildPaletteOrder: 95
-		Prerequisites: anyhq, ~scaffold
+		BuildPaletteOrder: 135
+		Prerequisites: ~scaffold
 		Description: Attracts citizens to your town.\nNew Peasants will spawn faster.\n\n\n
 		Queue: MBuilding.GDI
+		BuildDuration: 75
 	Building:
 		Footprint: xx xx ==
 		Dimensions: 2,3
@@ -2598,11 +2682,11 @@ LODGE:
 		Name: Hunters Lodge
 	Buildable:
 		IconPalette: raicon
-		BuildPaletteOrder: 10
-		Prerequisites: factnew, ~scaffold
+		BuildPaletteOrder: 110
 		Description: A hunter can go out and hunt down animals from here.\n\n\n
 		Queue: MResources.GDI, MResources.Nod
 		BuildDuration: 25
+		Prerequisites: ~scaffold
 	Building:
 		Footprint: xx ==
 		Dimensions: 2,2

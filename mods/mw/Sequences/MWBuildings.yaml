@@ -49,7 +49,7 @@ newfact:
 	make: newfactmake
 		Length: *
 		Tick: 120
-	bib: bib2
+	bib: mwbib2
 		UseTilesetExtension: true
 		Length: *
 	icon: keepicon.shp
@@ -122,7 +122,7 @@ nodfact:
 	make: newfactmake
 		Length: *
 		Tick: 120
-	bib: bib2
+	bib: mwbib2
 		UseTilesetExtension: true
 		Length: *
 	icon: keepicon.shp
@@ -186,7 +186,7 @@ hqnew:
 	make: radarnewmake
 		Length: *
 		Tick: 80
-	bib: bib3
+	bib: mwbib3
 		UseTilesetExtension: true
 		Length: *
 	icon: smitticon.shp
@@ -229,7 +229,7 @@ tavern:
 		Length: 30
 		Tick: 80
 		Offset: 0,-12
-	bib: bib2
+	bib: mwbib2
 		UseTilesetExtension: true
 		Length: *
 	icon: tavernicon.shp
@@ -275,7 +275,7 @@ townhall:
 		Length: 30
 		Tick: 80
 		Offset: 0,-12
-	bib: bib2
+	bib: mwbib2
 		UseTilesetExtension: true
 		Length: *
 	icon: townhallicon.shp
@@ -321,7 +321,7 @@ armory:
 		Length: *
 		Tick: 80
 		Offset: 0,-12
-	bib: bib3
+	bib: mwbib3
 		UseTilesetExtension: true
 		Length: *
 	icon: armoryicon.shp
@@ -362,7 +362,7 @@ armorygdi:
 		Length: *
 		Tick: 80
 		Offset: -2,-12
-	bib: bib3
+	bib: mwbib3
 		UseTilesetExtension: true
 		Length: *
 	icon: armorygdiicon.shp
@@ -400,22 +400,22 @@ nuk2new:
 	make: nuk2newmake
 		Length: *
 		Tick: 80
-	bib: bib3
+	bib: mwbib3
 		UseTilesetExtension: true
 		Length: *
 	icon: nuk2newicon.shp
 		AddExtension: False
 	make1: nuk2newmake
-		Start: 5
+		Start: 2
 		ZOffset: -25
 	make2: nuk2newmake
-		Start: 10
+		Start: 3
 		ZOffset: -25
 	make3: nuk2newmake
-		Start: 15
+		Start: 4
 		ZOffset: -25
 	make4: nuk2newmake
-		Start: 20
+		Start: 5
 		ZOffset: -25
 		
 nodnuke:
@@ -688,7 +688,7 @@ nuk5new:
 		Length: 14
 		Start: 1
 		Tick: 80
-	bib: bib3
+	bib: mwbib3
 		UseTilesetExtension: true
 		Length: *
 		
@@ -710,22 +710,22 @@ nukenew:
 	icon: nukenewicon.shp
 		AddExtension: False
 	make1: nukenewmake
-		Start: 2
+		Start: 0
 		ZOffset: -25
 	make2: nukenewmake
-		Start: 4
+		Start: 1
 		ZOffset: -25
 	make3: nukenewmake
-		Start: 6
+		Start: 2
 		ZOffset: -25
 	make4: nukenewmake
-		Start: 8
+		Start: 3
 		ZOffset: -25
 	make5: nukenewmake
-		Start: 10
+		Start: 4
 		ZOffset: -25
 	make6: nukenewmake
-		Start: 12
+		Start: 5
 		ZOffset: -25
 		
 nukxl:
@@ -744,7 +744,7 @@ nukxl:
 		Length: 6
 		Tick: 80
 		Offset: 0,-12
-	bib: bib2
+	bib: mwbib2
 		UseTilesetExtension: true
 		Length: *
 	icon: nukxlicon.shp
@@ -864,33 +864,33 @@ procnew:
 		Length: *
 		Tick: 80
 		Offset: 2,4
-	bib: bib2
+	bib: mwbib2
 		UseTilesetExtension: true
 		Length: *
 	icon: refnewicon.shp
 		AddExtension: False
 	make1: procnewmake
-		Start: 5
+		Start: 0
 		ZOffset: -25
 		Offset: 2,4
 	make2: procnewmake
-		Start: 10
+		Start: 1
 		ZOffset: -25
 		Offset: 2,4
 	make3: procnewmake
-		Start: 15
+		Start: 2
 		ZOffset: -25
 		Offset: 2,4
 	make4: procnewmake
-		Start: 20
+		Start: 3
 		ZOffset: -25
 		Offset: 2,4
 	make5: procnewmake
-		Start: 25
+		Start: 4
 		ZOffset: -25
 		Offset: 2,4
 	make6: procnewmake
-		Start: 30
+		Start: 5
 		ZOffset: -25
 		Offset: 2,4
 		
@@ -1125,7 +1125,7 @@ barrnew:
 	make: barrnewmake
 		Length: *
 		Tick: 80
-	bib: bib3
+	bib: mwbib3
 		UseTilesetExtension: true
 		Length: *
 	icon: barracksicon.shp
@@ -1183,6 +1183,54 @@ windmill:
 	make6: windmillmake
 		Start: 30
 		ZOffset: -25
+        
+nodmill:
+	Inherits: ^scaffold
+	idle: nodmillv2
+		Length: 20
+		Tick: 100
+        Offset: 12,-12
+	damaged-idle: nodmillv2
+		Length: 20
+		Tick: 100
+        Offset: 12,-12
+	dead: nodmilldv2
+		Tick: 800
+		Start: 20
+        Offset: 12,-12
+	make: nodmillmakev2
+		Length: *
+		Tick: 80
+        Offset: 12,-12
+	bib: bib3
+		UseTilesetExtension: true
+		Length: *
+	icon: nodmillicon.shp
+		AddExtension: False
+	make1: nodmillmakev2
+		Start: 0
+		ZOffset: -25
+        Offset: 12,-12
+	make2: nodmillmakev2
+		Start: 1
+		ZOffset: -25
+        Offset: 12,-12
+	make3: nodmillmakev2
+		Start: 2
+		ZOffset: -25
+        Offset: 12,-12
+	make4: nodmillmakev2
+		Start: 3
+		ZOffset: -25
+        Offset: 12,-12
+	make5: nodmillmakev2
+		Start: 4
+		ZOffset: -25
+        Offset: 12,-12
+	make6: nodmillmakev2
+		Start: 5
+		ZOffset: -25
+        Offset: 12,-12
 		
 ghostmill:
 	Inherits: ^scaffold
@@ -1206,7 +1254,7 @@ handew:
 	make: handnewmake
 		Length: *
 		Tick: 80
-	bib: bib3
+	bib: mwbib3
 		UseTilesetExtension: true
 		Length: *
 	icon: barrnodicon.shp
@@ -1245,7 +1293,7 @@ stall:
 		Start: 9
 		Length: 9
 		ZOffset: -1024
-	bib: bib2
+	bib: mwbib2
 		UseTilesetExtension: true
 		Length: *
 	icon: stallicon.shp
@@ -1340,7 +1388,7 @@ castle:
 		Offset: 0,-12,0
 		Length: *
 		Tick: 80
-	bib: bib2
+	bib: mwbib2
 		UseTilesetExtension: true
 		Length: *
 	icon: castleicon.shp
@@ -1355,27 +1403,27 @@ castle:
 		Tick: 80
 	make1: castlemake
 		Offset: 0,-12,0
-		Start: 5
+		Start: 0
 		ZOffset: -25
 	make2: castlemake
 		Offset: 0,-12,0
-		Start: 10
+		Start: 1
 		ZOffset: -25
 	make3: castlemake
 		Offset: 0,-12,0
-		Start: 15
+		Start: 2
 		ZOffset: -25
 	make4: castlemake
 		Offset: 0,-12,0
-		Start: 20
+		Start: 3
 		ZOffset: -25
 	make5: castlemake
 		Offset: 0,-12,0
-		Start: 25
+		Start: 4
 		ZOffset: -25
 	make6: castlemake
 		Offset: 0,-12,0
-		Start: 28
+		Start: 5
 		ZOffset: -25
 
 castle2:
@@ -1393,7 +1441,7 @@ castle2:
 		Offset: 0,-12,0
 		Length: *
 		Tick: 80
-	bib: bib2
+	bib: mwbib2
 		UseTilesetExtension: true
 		Length: *
 	icon: castle2icon.shp
@@ -1408,27 +1456,27 @@ castle2:
 		Tick: 80
 	make1: castle2make
 		Offset: 0,-12,0
-		Start: 5
+		Start: 0
 		ZOffset: -25
 	make2: castle2make
 		Offset: 0,-12,0
-		Start: 10
+		Start: 1
 		ZOffset: -25
 	make3: castle2make
 		Offset: 0,-12,0
-		Start: 15
+		Start: 2
 		ZOffset: -25
 	make4: castle2make
 		Offset: 0,-12,0
-		Start: 20
+		Start: 3
 		ZOffset: -25
 	make5: castle2make
 		Offset: 0,-12,0
-		Start: 25
+		Start: 4
 		ZOffset: -25
 	make6: castle2make
 		Offset: 0,-12,0
-		Start: 28
+		Start: 5
 		ZOffset: -25
 
 workshop:
@@ -1615,7 +1663,7 @@ cstlgtew:
 		Tick: 80
 		Offset: 0,-14,0
 		ZOffset: 512
-	bib: bib2
+	bib: mwbib2
 		UseTilesetExtension: true
 		Length: *
 		Offset: 0,-4,0
@@ -1964,22 +2012,22 @@ herbalist:
 		Length: *
 	icon: herbalisticon.shp
 		AddExtension: False
-	make1: 
+	make1: herbalistmake
+		Start: 0
+		ZOffset: -25
+	make2: herbalistmake
 		Start: 1
 		ZOffset: -25
-	make2: 
+	make3: herbalistmake
+		Start: 2
+		ZOffset: -25
+	make4: herbalistmake
+		Start: 3
+		ZOffset: -25
+	make5: herbalistmake
+		Start: 4
+		ZOffset: -25
+	make6: herbalistmake
 		Start: 5
-		ZOffset: -25
-	make3: 
-		Start: 9
-		ZOffset: -25
-	make4: 
-		Start: 12
-		ZOffset: -25
-	make5: 
-		Start: 15
-		ZOffset: -25
-	make6: 
-		Start: 18
 		ZOffset: -25
 	

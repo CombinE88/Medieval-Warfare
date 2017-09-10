@@ -731,6 +731,13 @@ ZIGGURAT1:
 		PipColor: Red
 		PipCount: 10
 		Capacity: 500
+	Buildable:
+		Queue: MTech.Nod, MTech.GDI, MTech.Sul, MTech.ded
+		BuildPaletteOrder: 1003
+		Prerequisites: ~disabled
+		ForceFaction: ded
+		IconPalette: raicon
+		Description: Constructs your graveyard
 		
 
 ZIGGURAT2:

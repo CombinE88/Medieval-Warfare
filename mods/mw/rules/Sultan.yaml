@@ -24,14 +24,6 @@ SULGTW:
 		Value: 275
 	Tooltip:
 		Name: Mosaic Guard Tower
-	Buildable:
-		Description: A Super guard tower, stationed with 2 archers.\n  Strong vs Infantry, Light Cavalry\n  Weak vs Siege weapons and Heavy Cavalry \n  Cannot target Aircraft (because of I say so)\n\n\n
-		BuildPaletteOrder: 20
-		Prerequisites: ~scaffold
-		Queue: MMilitary.SUL
-		BuildDuration: 1600
-		BuildDurationModifier: 40
-		IconPalette: raicon
 	Building:
 		Footprint: x
 		Dimensions: 1,1
@@ -510,11 +502,11 @@ SULLODGE:
 		Name: Hunters Lodge
 	Buildable:
 		IconPalette: raicon
-		BuildPaletteOrder: 10
-		Prerequisites: factnew, ~scaffold
+		BuildPaletteOrder: 110
 		Description: A hunter can go out and hunt down animals from here.\n\n\n
 		Queue: MResources.SUL
 		BuildDuration: 25
+		Prerequisites: ~scaffold
 	Building:
 		Footprint: xx ==
 		Dimensions: 2,2
@@ -566,10 +558,11 @@ SULHALL:
 		Name: Town Hall
 	Buildable:
 		IconPalette: raicon
-		BuildPaletteOrder: 100
-		Prerequisites: anyarmory, ~scaffold
+		BuildPaletteOrder: 130
+		Prerequisites: ~scaffold
 		Description: Attracts citizens to your town.\nNew Peasants will spawn faster.\n\n\n
 		Queue: MBuilding.SUL
+		BuildDuration: 125
 	Building:
 		Footprint: xxx xxx ===
 		Dimensions: 3,3
@@ -615,10 +608,11 @@ SULMINARET:
 		Name: Minaret
 	Buildable:
 		IconPalette: raicon
-		BuildPaletteOrder: 100
-		Prerequisites: anyhq, ~scaffold
+		BuildPaletteOrder: 125
+		Prerequisites: ~scaffold
 		Description: Attracts citizens to your town.\nNew Peasants will spawn faster.\n\n\n
 		Queue: MBuilding.SUL
+		BuildDuration: 75
 	Building:
 		Footprint: x
 		Dimensions: 1,1
@@ -656,10 +650,11 @@ SULARRAY:
 		Name: Material Storage
 	Buildable:
 		IconPalette: raicon
-		BuildPaletteOrder: 40
-		Prerequisites: proc, ~scaffold
+		BuildPaletteOrder: 100
+		Prerequisites: ~scaffold
 		Description: Provides 3 additional worker and 1 engineer.\n\n\n\n
 		Queue: MTech.SUL
+		BuildDuration: 50
 	Building:
 		Footprint: xxx xxx ===
 		Dimensions: 3,3
@@ -739,10 +734,11 @@ SULNUK2:
 		Prerequisite: anypower
 	Buildable:
 		IconPalette: raicon
-		BuildPaletteOrder: 60
-		Prerequisites: anyhq, ~scaffold
+		BuildPaletteOrder: 120
 		Queue: MBuilding.SUL
 		Description: Provides more livingspace. Livingspace increases over time by generating peasants.\nCan hold up to 11 peasants, spawntime depends on number of shacks and large huts. \ncheaper than the standard Shack.\n\n\n\n
+		BuildDuration: 75
+		Prerequisites: ~scaffold
 	Building:
 		Footprint: xxx xx= ===
 		Dimensions: 3,3
@@ -816,10 +812,11 @@ SULNUKE:
 		Prerequisite: anypower
 	Buildable:
 		IconPalette: raicon
-		BuildPaletteOrder: 10
-		Prerequisites: factnew, ~scaffold
-		Description: Generates livingspace. Livingspace increases over time by generating peasants.\nCan hold up to 6 peasants, spawntime depends on number of shacks and large huts.\n\n\n\n
+		BuildPaletteOrder: 110
+		Prerequisites: ~scaffold
+		Description: Generates livingspace. Livingspace increases over time by generating peasants.\nCan hold up to 6 peasants, spawntime depends on number of shacks and large huts.  
 		Queue: MBuilding.SUL
+		BuildDuration: 50
 	Building:
 		Footprint: xx xx ==
 		Dimensions: 2,3
@@ -880,10 +877,11 @@ SULBARR:
 		Prerequisite: barracks
 	Buildable:
 		IconPalette: raicon
-		BuildPaletteOrder: 30
-		Prerequisites: anypower, ~scaffold
+		BuildPaletteOrder: 110
+		Prerequisites: ~scaffold
 		Description: Trains Infantry only\n\n\n\n
 		Queue: MMilitary.SUL
+		BuildDuration: 75
 	Building:
 		Footprint: xxx xxx ===
 		Dimensions: 3,3
@@ -943,14 +941,15 @@ SULMYSTIC:
 		Prerequisite: vehicleproduction
 	Buildable:
 		IconPalette: raicon
-		BuildPaletteOrder: 40
-		Prerequisites: proc, ~scaffold
+		BuildPaletteOrder: 120
+		Prerequisites: ~scaffold
 		Description: Trains Magical and Mystical Units\n\n\n\n
 		Queue: MMilitary.SUL
+		BuildDuration: 100
 	Building:
-		Footprint: xxx xxx ===
+		Footprint: xx= xxx =xx
 		Dimensions: 3,3
-		LocalCenterOffset: 0,-512,0
+		LocalCenterOffset: 0,0,0
 	Health:
 		HP: 85000
 	RevealsShroud:
@@ -958,7 +957,7 @@ SULMYSTIC:
 	WithBuildingBib:
 	RallyPoint:
 	Exit@1:
-		SpawnOffset: 213,896,0
+		SpawnOffset: 180,1200,0
 		ExitCell: 0,2
 	WithActorProduction:
 		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
@@ -1008,10 +1007,11 @@ SULCASTLE:
 	ProvidesPrerequisite@buildingname:
 	Buildable:
 		IconPalette: raicon
-		BuildPaletteOrder: 50
-		Prerequisites: proc, ~scaffold
+		BuildPaletteOrder: 110
+		Prerequisites: ~scaffold
 		Description: Can unlock Superweapons.\n Can unlock advanced tech.\nCan hold up to 4 nobles.\n\n\n\n
 		Queue: MTech.SUL
+		BuildDuration: 100
 	Building:
 		Footprint: xxx xxx xxx ===
 		Dimensions: 3,4
@@ -1271,10 +1271,11 @@ SULMILL:
 		Prerequisite: proc
 	Buildable:
 		IconPalette: raicon
-		BuildPaletteOrder: 20
-		Prerequisites: anypower, ~scaffold
+		BuildPaletteOrder: 120
 		Description: Provides basic resource gathering for Crops and Grain.\n Comes with 3 farmers.\n Can only operate up to 6 farmers at once.\n\n\n\n
 		Queue: MResources.SUL
+		BuildDuration: 75
+		Prerequisites: ~scaffold
 	Building:
 		Footprint: __ xx xx ==
 		Dimensions: 2,4
@@ -1357,10 +1358,11 @@ SULFIX:
 		Name: Siege Workshop
 	Buildable:
 		IconPalette: raicon
-		BuildPaletteOrder: 60
-		Prerequisites: proc, ~scaffold
+		BuildPaletteOrder: 130
+		Prerequisites: ~scaffold
 		Description: Provides Siege weapons construction.\n\n\n\n
 		Queue: MMilitary.SUL
+		BuildDuration: 100
 	Building:
 		Footprint: xxx =xx ===
 		Dimensions: 3,3
@@ -1449,11 +1451,12 @@ SULCNSHMBR:
 	ProvidesPrerequisite@buildingname:
 	Buildable:
 		IconPalette: raicon
-		BuildPaletteOrder: 30
-		Prerequisites: proc, !sulcnshmbr, ~scaffold
+		BuildPaletteOrder: 140
+		Prerequisites: ~scaffold
 		Description: Corn Chambers were meant to store corn for times when food was rare.\n  Generates a little bit of gold, when resources are gathered.\n  Limited to 1.\n\n
 		Queue: MResources.SUL
-		BuildLimit: 1
+		BuildDuration: 75
+        BuildLimit: 1
 	Building:
 		Footprint: xxx xxx ===
 		Dimensions: 3,3
@@ -1495,10 +1498,11 @@ SULREF:
 		Name: Ore Refinery
 	Buildable:
 		IconPalette: raicon
-		BuildPaletteOrder: 70
-		Prerequisites: anyhq, ~scaffold
+		BuildPaletteOrder: 130
+		Prerequisites: ~scaffold
 		Description: Processes raw ore and Gold into useable metal.\nGenerates more money than the windmill.\n\n\n\n
 		Queue: MResources.SUL
+		BuildDuration: 100
 	Building:
 		Footprint: _x_ xxx xx= ===
 		Dimensions: 3,4

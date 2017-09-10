@@ -78,6 +78,7 @@ SULLODGE.SCAFF:
 		Dimensions: 2, 2
 		Footprint: xx ==
 		LocalCenterOffset: 0,-512,0
+		RequiresBaseProvider: false
 	Armor:
 		Type: Concrete
 	RenderSprites:
@@ -95,6 +96,7 @@ SULLODGE.SCAFF:
 		Description: A hunter can go out and hunt down animals from here.\n\n\n
 		Queue: MResources.SUL
 		BuildDuration: 25
+		Adjacent: 10
 	Health:
 		HP: 10000
 	RevealsShroud:
@@ -375,9 +377,9 @@ SULMYSTIC.SCAFF:
 	Armor:
 		Type: Concrete
 	Building:
-		Footprint: xxx xxx ===
+		Footprint: xx= xxx =xx
 		Dimensions: 3,3
-		LocalCenterOffset: 0,-512,0
+		LocalCenterOffset: 0,0,0
 	RenderSprites:
 		PlayerPalette: sultanplayer
 		Image: sulmystic

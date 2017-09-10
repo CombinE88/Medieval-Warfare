@@ -14,14 +14,6 @@ GTWNEW:
 		Value: 300
 	Tooltip:
 		Name: Guard Tower
-	Buildable:
-		Description: A wooden tower, stationed with 2 archers.\n  Strong vs Infantry, Light Cavalry\n  Weak vs Siege weapons and Heavy Cavalry \n  Cannot target Aircraft (because of I say so)\n  Requires 2 Peasants\n\n
-		BuildPaletteOrder: 20
-		Prerequisites: ~scaffold
-		Queue: MMilitary.GDI, MMilitary.Nod
-		BuildDuration: 1600
-		BuildDurationModifier: 40
-		IconPalette: raicon
 	Building:
 		Footprint: x
 		Dimensions: 1,1
@@ -165,13 +157,13 @@ SAMNEW:
 	Tooltip:
 		Name: Anti-Aircraft Ballista
 	Buildable:
-		Description: Because of the 4 elastic limbs out of black wood \nthe Anti-Aircraft Ballista is designed to shoot down targets \nin the air with a very high speed missile.\n  Very strong vs Aircraft\n  Cannot target Ground units.\n\n\n
-		BuildPaletteOrder: 40
-		Prerequisites: barracks, ~scaffold
+		Description: Because of the 4 elastic limbs out of black wood \nthe Anti-Aircraft Ballista is designed to shoot down targets \nin the air with a very high speed missile.\n  Very strong vs Aircraft\n  Cannot target Ground units.\n  Requires 2 Peasants\n\n
+		BuildPaletteOrder: 180
+		Prerequisites: ~scaffold
 		Queue: MMilitary.Nod
-		BuildDuration: 1700
 		BuildDurationModifier: 40
 		IconPalette: raicon
+		BuildDuration: 50
 	Building:
 		Footprint: xx
 		Dimensions: 2,1
@@ -220,13 +212,13 @@ TRIBU:
 	Tooltip:
 		Name: Counterweight Trebuchet
 	Buildable:
-		Description: The Counterweight Trebuchet is a type of siege engine \nmost frequently used to outrange other siege weapons.\n  Requires power to operate.\n  Strong vs all Ground units\n  Cannot target Aircraft\n\n\n
-		BuildPaletteOrder: 50
-		Prerequisites: anycastle, ~scaffold
+		Description: The Counterweight Trebuchet is a type of siege engine \nmost frequently used to outrange other siege weapons.\n  Requires power to operate.\n  Strong vs all Ground units\n  Cannot target Aircraft\n  Requires 3 Peasants\n\n
+		BuildPaletteOrder: 190
+		Prerequisites: ~scaffold
 		Queue: MMilitary.Nod
-		BuildDuration: 3120
 		BuildDurationModifier: 40
 		IconPalette: raicon
+		BuildDuration: 100
 	Building:
 		Footprint: x
 		Dimensions: 1,1
@@ -285,13 +277,13 @@ BATO:
 	Tooltip:
 		Name: Tower with Ballista
 	Buildable:
-		Description: Because of its smaller design and light weighted missiles, \nthe ballista on top of the tower can target \neither ground or aircraft units.\n  Strong vs ground units\n  Weak vs close by units\n  Long distance\n Can target Aircraft\n\n\n
-		BuildPaletteOrder: 50
-		Prerequisites: anyarmory, ~scaffold
+		Description: Because of its smaller design and light weighted missiles, \nthe ballista on top of the tower can target \neither ground or aircraft units.\n  Strong vs ground units\n  Weak vs close by units\n  Long distance\n Can target Aircraft\n  Requires 3 Peasants\n\n
+		BuildPaletteOrder: 180
+		Prerequisites: ~scaffold
 		Queue: MMilitary.GDI
-		BuildDuration: 2880
 		BuildDurationModifier: 40
 		IconPalette: raicon
+		BuildDuration: 75
 	Building:
 		Footprint: x
 		Dimensions: 1,1
@@ -355,13 +347,13 @@ GUNNEW:
 	Tooltip:
 		Name: Gunpowder Cannon
 	Buildable:
-		Description: The early Cannon uses gunpowder to throw a large boulder. \nIt's most effectively used against large targets.\n  Strong vs Cavalry and Spectral Units\n  Weak vs Infantry\n\n\n
-		BuildPaletteOrder: 30
-		Prerequisites: barracks, ~scaffold
+		Description: The early Cannon uses gunpowder to throw a large boulder. \nIt's most effectively used against large targets.\n  Strong vs Cavalry and Spectral Units\n  Weak vs Infantry\n  Requires 1 Peasants\n\n
+		BuildPaletteOrder: 170
+		Prerequisites: ~scaffold
 		Queue: MMilitary.GDI, MMilitary.Nod
 		IconPalette: raicon
-		BuildDuration: 1440
 		BuildDurationModifier: 40
+		BuildDuration: 50
 	Building:
 	Health:
 		HP: 40000

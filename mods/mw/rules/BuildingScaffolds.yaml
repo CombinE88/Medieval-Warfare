@@ -78,6 +78,7 @@ LODGE.SCAFF:
 		Dimensions: 2, 2
 		Footprint: xx ==
 		LocalCenterOffset: 0,-512,0
+		RequiresBaseProvider: false
 	Armor:
 		Type: Concrete
 	RenderSprites:
@@ -94,6 +95,7 @@ LODGE.SCAFF:
 		BuildPaletteOrder: 10
 		Description: A hunter can go out and hunt down animals from here.\n\n\n
 		Queue: MResources.GDI, MResources.Nod
+		Adjacent: 10
 		BuildDuration: 25
 	Health:
 		HP: 10000
@@ -380,7 +382,7 @@ NODPROC.SCAFF:
 		Actor: NODPROC
 		DeathType: FinishedDeath
 	RenderSprites:
-		Image: windmill
+		Image: nodmill
 	Valued:
 		Cost: 1500
 	Buildable:
@@ -408,6 +410,10 @@ NODPROC.SCAFF:
 		Delay: 1
 		RequiresCondition: (52 - Construct) <= 0
 		DamageTypes: FinishedDeath
+	Selectable:
+		Bounds: 48,70,0,-10
+	SelectionDecorations:
+		VisualBounds: 48,70,0,-10
 
 HQNEWNOD.SCAFF:
 	Inherits: ^2x2SITE
@@ -848,9 +854,9 @@ PROCNEW.SCAFF:
 		Range: 4c0
 	WithBuildingBib:
 	Selectable:
-		Bounds: 72,56,0,12
+		Bounds: 73,72
 	SelectionDecorations:
-		VisualBounds: 72,56,0,12
+		VisualBounds: 73,72
 	WithSpriteBody:
 		RequiresCondition: inactive
 	SpawnActorOnDeath@Finsihed:
