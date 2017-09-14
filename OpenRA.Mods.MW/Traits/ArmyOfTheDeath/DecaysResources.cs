@@ -9,11 +9,12 @@
  */
 #endregion
 
-using System;
 using System.Linq;
+using OpenRA.Mods.Common;
+using OpenRA.Mods.Common.Traits;
 using OpenRA.Traits;
 
-namespace OpenRA.Mods.Common.Traits
+namespace OpenRA.Mods.MW.Traits
 {
 	[Desc("Lets the actor spread resources around it in a circle.")]
 	class DecaysResourceInfo : ConditionalTraitInfo

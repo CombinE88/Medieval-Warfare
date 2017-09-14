@@ -23,7 +23,7 @@ using OpenRA.Primitives;
 using OpenRA.Traits;
 
 
-namespace OpenRA.Mods.Mw.Traits
+namespace OpenRA.Mods.MW.Traits
 {
 	[Desc("A actor has to enter the building before the unit spawns.")]
 	public class UndeadGraveProductionInfo : ProductionInfo, Requires<ExitInfo>

@@ -16,7 +16,7 @@ using OpenRA.Effects;
 using OpenRA.Graphics;
 using OpenRA.Mods.Common.Graphics;
 
-namespace OpenRA.Mods.Mw.Effects
+namespace OpenRA.Mods.MW.Effects
 {
     public class FloatingTextBackwards : IEffect, IEffectAboveShroud
     {

@@ -34,9 +34,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Eluant, Version=1.0.5867.35197, Culture=neutral, PublicKeyToken=null">
-      <HintPath>..\engine\thirdparty\download\Eluant.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
@@ -90,7 +87,7 @@
     <Compile Include="Traits\Construction\RemPrioTargeter.cs" />
     <Compile Include="Traits\CreateActorOnDeath.cs" />
     <Compile Include="Traits\CritterSpawner.cs" />
-    <Compile Include="Traits\DisguiseChargeBar.cs" />
+    <Compile Include="Traits\Render\DisguiseChargeBar.cs" />
     <Compile Include="Traits\DockBasics\Dock.cs" />
     <Compile Include="Traits\DockBasics\DockClient.cs" />
     <Compile Include="Traits\DockBasics\DockManager.cs" />

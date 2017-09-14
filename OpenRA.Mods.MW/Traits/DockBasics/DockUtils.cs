@@ -10,12 +10,13 @@
 #endregion
 
 using System.Drawing;
-using MW.Mods.Common.Traits;
 using OpenRA.Activities;
+using OpenRA.Mods.Common.Activities;
 using OpenRA.Mods.Common.Traits;
+using OpenRA.Mods.MW.Traits;
 using OpenRA.Traits;
 
-namespace OpenRA.Mods.Common.Activities
+namespace OpenRA.Mods.MW.Activities
 {
 	public static class DockUtils
 	{

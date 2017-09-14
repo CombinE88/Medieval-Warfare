@@ -12,17 +12,14 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
-using MW.Mods.Common.Activities;
-using MW.Mods.Common.Traits;
 using OpenRA;
 using OpenRA.Activities;
 using OpenRA.Mods.Common.Activities;
 using OpenRA.Mods.Common.Traits;
-using OpenRA.Mods.Mw.Activities;
 using OpenRA.Mods.MW.Traits;
 using OpenRA.Traits;
 
-namespace MW.Mods.Cnc.Activities
+namespace OpenRA.Mods.MW.Activities
 {
 	public class Prey : Activity, IDockActivity
 	{

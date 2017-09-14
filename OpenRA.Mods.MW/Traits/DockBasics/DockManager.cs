@@ -22,15 +22,14 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using MW.Mods.Common.Activities;
-using OpenRA;
 using OpenRA.Activities;
 using OpenRA.Mods.Common.Activities;
 using OpenRA.Mods.Common.Pathfinder;
 using OpenRA.Mods.Common.Traits;
+using OpenRA.Mods.MW.Activities;
 using OpenRA.Traits;
 
-namespace MW.Mods.Common.Traits
+namespace OpenRA.Mods.MW.Traits
 {
     public class DockManagerInfo : ITraitInfo, Requires<DockInfo>
     {

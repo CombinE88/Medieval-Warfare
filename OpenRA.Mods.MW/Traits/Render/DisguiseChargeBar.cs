@@ -1,11 +1,8 @@
 ﻿using System.Drawing;
 using System.Linq;
-using OpenRA;
-using OpenRA.Mods.Cnc.Traits;
-using OpenRA.Mods.MW.Traits;
 using OpenRA.Traits;
 
-namespace MW.Mods.Common.Traits.Render
+namespace OpenRA.Mods.MW.Traits.Render
 {
 	[Desc("Display the time remaining until the super weapon attached to the actor is ready.")]
 	class DisguiseChargeBarInfo : ITraitInfo, Requires<NewDisguiseInfo>

@@ -11,9 +11,6 @@
 
 using System.Collections.Generic;
 using System.Linq;
-using OpenRA.Effects;
-using OpenRA.Mods.Common.Activities;
-using OpenRA.Mods.Common.Widgets;
 using OpenRA.Traits;
 
 namespace OpenRA.Mods.MW.Traits

@@ -9,20 +9,17 @@
  */
 #endregion
 
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 using OpenRA.Activities;
 using OpenRA.Mods.Common.Activities;
 using OpenRA.Mods.Common.Traits;
-using OpenRA.Mods.Mw.Activities;
 using OpenRA.Mods.MW.Traits;
 using OpenRA.Traits;
-using MW.Mods.Common.Activities;
-using MW.Mods.Common.Traits;
-using OpenRA;
 
-namespace MW.Mods.Cnc.Activities
+namespace OpenRA.Mods.MW.Activities
 {
 	public class PreyBuild : Activity, IDockActivity
     {
@@ -102,5 +99,20 @@ namespace MW.Mods.Cnc.Activities
 		{
 			return null;
 		}
-	}
+
+        public Activity ApproachDockActivities(Actor host, Actor client, Dock dock)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Activity DockActivities(Actor host, Actor client, Dock dock)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Activity ActivitiesAfterDockDone(Actor host, Actor client, Dock dock)
+        {
+            throw new NotImplementedException();
+        }
+    }
 }

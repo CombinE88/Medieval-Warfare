@@ -1,7 +1,6 @@
-﻿using System.Collections.Generic;
-using OpenRA.Traits;
+﻿using OpenRA.Traits;
 
-namespace OpenRA.Mods.Mw.Traits
+namespace OpenRA.Mods.MW.Traits
 {
 	[Desc("Is Unit a Peasant (adds a count of 1 to the PlayerCivilisation).")]
 	public class IsPeasantInfo : ITraitInfo

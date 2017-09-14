@@ -13,12 +13,10 @@
  */
 #endregion
 
-using MW.Mods.Common.Activities;
-using OpenRA;
-using OpenRA.Mods.Common.Activities;
+using OpenRA.Mods.MW.Activities;
 using OpenRA.Traits;
 
-namespace MW.Mods.Common.Traits
+namespace OpenRA.Mods.MW.Traits
 {
     public class DockClientInfo : ITraitInfo
     {

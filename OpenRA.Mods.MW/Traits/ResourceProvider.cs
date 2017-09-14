@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using OpenRA.Traits;
 
-namespace OpenRA.Mods.Mw.Traits
+namespace OpenRA.Mods.MW.Traits
 {
 	public class ResourceProviderInfo : TraitInfo<ResourceProvider>
 	{

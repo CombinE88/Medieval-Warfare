@@ -11,12 +11,11 @@
 
 using System;
 using System.Drawing;
-using System.Linq;
-using OpenRA.Mods.Common.Traits;
+using OpenRA.Mods.Common.Widgets;
 using OpenRA.Traits;
 using OpenRA.Widgets;
 
-namespace OpenRA.Mods.Common.Widgets.Logic
+namespace OpenRA.Mods.MW.Widgets.Logic
 {
 	public class NewCashCounterLogic : ChromeLogic
 	{

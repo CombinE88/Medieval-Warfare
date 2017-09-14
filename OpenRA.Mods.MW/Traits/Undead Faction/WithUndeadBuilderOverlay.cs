@@ -17,7 +17,6 @@ using OpenRA.Mods.Common;
 using OpenRA.Mods.Common.Graphics;
 using OpenRA.Mods.Common.Traits;
 using OpenRA.Mods.Common.Traits.Render;
-using OpenRA.Mods.Mw.Traits;
 using OpenRA.Traits;
 
 namespace OpenRA.Mods.MW.Traits.Render
@@ -78,8 +77,8 @@ namespace OpenRA.Mods.MW.Traits.Render
 	public class WithUndeadBuilderOverlay : PausableConditionalTrait<WithUndeadBuilderOverlayInfo>, INotifyDamageStateChanged, INotifyBuildComplete, INotifySold, INotifyTransform, ITick
 	{
 		readonly Animation overlay;
-		private readonly WithUndeadBuilderOverlayInfo Info;
-		bool buildComplete;
+        private readonly new WithUndeadBuilderOverlayInfo Info;
+        bool buildComplete;
 		
 
 		private AnimationWithOffset anim;

@@ -11,12 +11,14 @@
 
 using System.Linq;
 using OpenRA.Activities;
+using OpenRA.Mods.Common;
+using OpenRA.Mods.Common.Activities;
 using OpenRA.Mods.Common.Traits;
 using OpenRA.Mods.Common.Traits.Render;
 using OpenRA.Primitives;
 using OpenRA.Traits;
 
-namespace OpenRA.Mods.Common.Activities
+namespace OpenRA.Mods.MW.Activities
 {
 	public class InstantTransform : Activity
 	{

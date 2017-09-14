@@ -9,10 +9,9 @@
  */
 #endregion
 
-using System.Collections.Generic;
 using OpenRA.Traits;
 
-namespace OpenRA.Mods.Mw.Traits
+namespace OpenRA.Mods.MW.Traits
 {
 	[Desc("How much the unit is worth in Peasants.")]
 	public class ProvidesLivingspaceInfo : ITraitInfo

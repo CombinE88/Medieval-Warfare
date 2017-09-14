@@ -10,20 +10,13 @@
 #endregion
 
 using System;
-using System.Diagnostics;
-using System.Drawing;
 using System.Linq;
-using OpenRA.Graphics;
-using OpenRA.Mods.Common.Activities;
-using OpenRA.Mods.Common.Orders;
 using OpenRA.Mods.Common.Traits;
+using OpenRA.Mods.Common.Widgets;
 using OpenRA.Mods.MW.Traits.Render;
-using OpenRA.Orders;
-using OpenRA.Primitives;
-using OpenRA.Traits;
 using OpenRA.Widgets;
 
-namespace OpenRA.Mods.Common.Widgets
+namespace OpenRA.Mods.MW.Widgets
 {
 	/// <summary> Contains all functions that are unit-specific. </summary>
 	public class ConstructionPriorityLogic : ChromeLogic

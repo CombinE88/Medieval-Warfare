@@ -1,6 +1,6 @@
 ﻿using OpenRA.Traits;
 
-namespace OpenRA.Mods.Mw.Traits
+namespace OpenRA.Mods.MW.Traits
 {
     public class IsTownhallInfo : ITraitInfo
     {

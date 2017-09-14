@@ -18,7 +18,7 @@ using OpenRA.Mods.Common.Traits;
 using OpenRA.Traits;
 
 
-namespace OpenRA.Mods.Mw.Traits
+namespace OpenRA.Mods.MW.Traits
 {
 	[Desc("A actor has to enter the building before the unit spawns.")]
 	public class WithActorProductionInfo : ProductionInfo, Requires<ExitInfo>

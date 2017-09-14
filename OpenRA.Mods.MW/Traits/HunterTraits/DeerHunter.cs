@@ -11,18 +11,14 @@
 
 
 using System.Collections.Generic;
-using System.Drawing;
 using System.Linq;
-using System.Runtime.CompilerServices;
-using OpenRA.Chat;
 using OpenRA.Mods.Common;
 using OpenRA.Mods.Common.Activities;
 using OpenRA.Mods.Common.Traits;
-using OpenRA.Mods.MW.Traits;
 using OpenRA.Traits;
 
 
-namespace OpenRA.Mods.Mw.Traits
+namespace OpenRA.Mods.MW.Traits
 {
 	[Desc("A actor has to enter the building before the unit spawns.")]
 	public class DeerHunterInfo : ITraitInfo

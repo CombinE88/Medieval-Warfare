@@ -9,11 +9,10 @@
  */
 #endregion
 
-using OpenRA;
 using OpenRA.Mods.Common.Traits;
 using OpenRA.Traits;
 
-namespace MW.Mods.Common.Traits
+namespace OpenRA.Mods.MW.Traits
 {
     public class DockInfo : ITraitInfo
     {

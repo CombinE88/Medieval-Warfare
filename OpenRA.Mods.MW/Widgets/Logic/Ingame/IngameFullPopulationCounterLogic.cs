@@ -10,12 +10,7 @@
 #endregion
 
 using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading;
 using OpenRA.Mods.Common.Widgets;
-using OpenRA.Mods.Mw.Traits;
 using OpenRA.Traits;
 using OpenRA.Widgets;
 

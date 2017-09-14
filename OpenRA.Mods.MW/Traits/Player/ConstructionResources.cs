@@ -9,15 +9,9 @@
  */
 #endregion
 
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using OpenRA.Mods.Common;
-using OpenRA.Mods.Common.Traits;
-using OpenRA.Mods.Mw.Traits;
-using OpenRA.Primitives;
+using OpenRA.Traits;
 
-namespace OpenRA.Traits
+namespace OpenRA.Mods.MW.Traits
 {
 	public class ConstructionResourcesInfo : ITraitInfo
 	{

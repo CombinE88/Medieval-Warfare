@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using OpenRA.Traits;
 
-namespace OpenRA.Mods.Mw.Traits
+namespace OpenRA.Mods.MW.Traits
 {
 	[Desc("Is Unit a Grave (adds a count of x to the PlayerCivilisation Peasantpopulation).")]
 	public class IsGraveInfo : ITraitInfo

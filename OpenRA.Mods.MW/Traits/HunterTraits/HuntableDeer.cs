@@ -5,10 +5,9 @@ using OpenRA.Mods.Common.Traits;
 using OpenRA.Primitives;
 using OpenRA.Traits;
 
-namespace OpenRA.Mods.Mw.Traits
+namespace OpenRA.Mods.MW.Traits
 {
-	public enum OwnerType { Victim, Killer, InternalName }
-	
+
 	[Desc("How much the unit is worth in Peasants.")]
 	public class HuntableDeerInfo : ITraitInfo
 	{

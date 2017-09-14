@@ -14,7 +14,7 @@ using OpenRA.Mods.Common.Traits;
 using OpenRA.Mods.MW.Traits;
 using OpenRA.Traits;
 
-namespace OpenRA.Mods.Mw.Traits
+namespace OpenRA.Mods.MW.Traits
 {
 	[Desc("Plays an audio notification and shows a radar ping when a harvester is attacked.",
 		"Attach this to the player actor.")]

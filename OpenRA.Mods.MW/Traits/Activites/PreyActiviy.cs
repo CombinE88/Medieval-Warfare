@@ -2,7 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using MW.Mods.Common.Traits;
 using OpenRA.Activities;
 using OpenRA.Mods.Common;
 using OpenRA.Mods.Common.Effects;
@@ -12,7 +11,7 @@ using OpenRA.Mods.MW.Traits;
 using OpenRA.Support;
 using OpenRA.Traits;
 
-namespace OpenRA.Mods.Mw.Activities
+namespace OpenRA.Mods.MW.Activities
 {
 
     // Assumes you have Minelayer on that unit

@@ -7,7 +7,7 @@ using System.Linq;
 using OpenRA.Graphics;
 using OpenRA.Mods.Common.Graphics;
 
-namespace OpenRA.Mods.Mw.Traits
+namespace OpenRA.Mods.MW.Traits
 {
 	[Desc("Is this Unit part of the Dead Army Chooser.")]
 	public class IsDeathArmyMobInfo  : ITraitInfo

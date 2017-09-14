@@ -8,7 +8,6 @@ using OpenRA.Mods.Common.Effects;
 using OpenRA.Mods.Common.Graphics;
 using OpenRA.Mods.Common.Pathfinder;
 using OpenRA.Mods.Common.Traits;
-using OpenRA.Mods.Mw.Traits;
 using OpenRA.Traits;
 
 namespace OpenRA.Mods.MW.Traits.ArmyOfTheDeath

@@ -11,7 +11,7 @@
 
 using OpenRA.Traits;
 
-namespace OpenRA.Mods.Common.Traits
+namespace OpenRA.Mods.MW.Traits
 {
 	public class ShakeOnCreateInfo : ITraitInfo
 	{

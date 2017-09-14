@@ -10,19 +10,15 @@
 
 using System.Collections.Generic;
 using System.Linq;
-using OpenRA.Graphics;
 using OpenRA.Mods.MW.Activities;
 using OpenRA.Mods.Common.Activities;
 using OpenRA.Mods.Common.Traits;
-using OpenRA.Mods.MW.Warheads;
 using OpenRA.Primitives;
 using OpenRA.Traits;
-using System.Linq;
 using OpenRA.Mods.Common;
 using OpenRA.Support;
-using OpenRA.Traits;
 
-namespace OpenRA.Mods.Mw.Warheads
+namespace OpenRA.Mods.MW.Warheads
 {
 	[Desc("Spawn actors upon explosion.")]
 	public class SpawnActorWarhead : WarheadAS

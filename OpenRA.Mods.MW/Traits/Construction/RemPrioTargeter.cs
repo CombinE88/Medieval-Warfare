@@ -13,7 +13,7 @@ using System;
 using System.Collections.Generic;
 using OpenRA.Traits;
 
-namespace OpenRA.Mods.Common.Orders
+namespace OpenRA.Mods.MW.Orders
 {
     public class RemPrioTargeter : IOrderTargeter
     {
