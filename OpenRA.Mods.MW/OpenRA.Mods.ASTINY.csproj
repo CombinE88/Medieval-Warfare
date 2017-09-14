@@ -48,14 +48,12 @@
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
     <ProjectReference Include="..\engine\OpenRA.Game\OpenRA.Game.csproj">
-      <Project>{0DFB103F-2962-400F-8C6D-E2C28CCBA633}</Project>
+      <Project>{0dfb103f-2962-400f-8c6d-e2c28ccba633}</Project>
       <Name>OpenRA.Game</Name>
-      <Private>False</Private>
     </ProjectReference>
     <ProjectReference Include="..\engine\OpenRA.Mods.Cnc\OpenRA.Mods.Cnc.csproj">
       <Project>{2881135d-4d62-493e-8f83-5eee92ccc6be}</Project>
       <Name>OpenRA.Mods.Cnc</Name>
-      <Private>False</Private>
     </ProjectReference>
     <ProjectReference Include="..\engine\OpenRA.Mods.Cnc\OpenRA.Mods.Cnc.csproj">
       <Project>{2881135d-4d62-493e-8f83-5eee92ccc6be}</Project>
@@ -66,9 +64,8 @@
       <Name>OpenRA.Mods.Cnc</Name>
     </ProjectReference>
     <ProjectReference Include="..\engine\OpenRA.Mods.Common\OpenRA.Mods.Common.csproj">
-      <Project>{FE6C8CC0-2F07-442A-B29F-17617B3B7FC6}</Project>
+      <Project>{fe6c8cc0-2f07-442a-b29f-17617b3b7fc6}</Project>
       <Name>OpenRA.Mods.Common</Name>
-      <Private>False</Private>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

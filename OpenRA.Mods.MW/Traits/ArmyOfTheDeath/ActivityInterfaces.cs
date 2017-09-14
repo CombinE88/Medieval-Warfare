@@ -9,10 +9,12 @@
  */
 #endregion
 
+using MW.Mods.Common.Traits;
+using OpenRA;
 using OpenRA.Activities;
 using OpenRA.Mods.Common.Traits;
 
-namespace OpenRA.Mods.Common.Activities
+namespace MW.Mods.Common.Activities
 {
     public interface IDockActivity
     {

@@ -85,6 +85,8 @@ KINGROSS:
 		Prerequisite: king  
 	DetectCloaked:
 		Range: 3c0
+	Targetable@CombatRole:
+		TargetTypes: HeavyCavalry
 
 DDLER:
 	Inherits: ^Cavalry
@@ -254,46 +256,6 @@ EMPTYROSS:
 		ForceHealthPercentage: 100
 		IntoActor: kingross
 	
-ROSSNEUTRAL:
-	Inherits: ^Cavalry
-	GrantConditionOnDamageState@Slow:
-		Condition: Slowmotion
-		ValidDamageStates: Heavy, Critical 
-	SpeedMultiplier:
-		RequiresCondition: Slowmotion
-		Modifier: 70
-	-Explodes@Tib:
-	Valued:
-		Cost: 700
-	Tooltip:
-		Name: Camel Rider
-	Mobile:
-		SharesCell: false
-		TurnSpeed: 30
-		Speed: 90
-	RevealsShroud:
-		Range: 7c0
-	Health:
-		HP: 29000
-	Armament:
-		Weapon: pike
-	AttackFrontal:
-	AutoTarget:
-		ScanRadius: 4
-		InitialStance: AttackAnything
-	RenderSprites:
-		Image: rossneutral
-		PlayerPalette: raplayer
-	WithInfantryBody:
-		IdleSequences: stand
-		DefaultAttackSequence: shoot
-	Armor:
-		Type: MediumCavalry
-	Selectable:
-		Bounds: 26,34,0,-6
-	SelectionDecorations:
-		VisualBounds: 26,34,0,-6
- 
 ROSS1:
 	Inherits: ^Cavalry
 	Inherits@AUTOTARGET: ^AutoTargetGround
@@ -343,6 +305,11 @@ ROSS1:
 	PersonValued:
 		ActorCount: 1
         ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
+	Targetable@CombatRole:
+		TargetTypes: RegularCavalry
+	AutoTargetPriority@Counter1:
+		ValidTargets: LightCavalry, RegularCavalry, HeavyCavalry, Support, Defenses
+		Priority: 4
 
 ROSS2:
 	Inherits: ^Cavalry
@@ -391,6 +358,11 @@ ROSS2:
 	PersonValued:
 		ActorCount: 1
         ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
+	Targetable@CombatRole:
+		TargetTypes: RegularCavalry
+	AutoTargetPriority@Counter1:
+		ValidTargets: LightCavalry, RegularCavalry, HeavyCavalry, Support, Defenses
+		Priority: 4
 
 
 ROSS5:
@@ -465,6 +437,8 @@ ROSS5:
 	PersonValued:
 		ActorCount: 2
         ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
+	Targetable@CombatRole:
+		TargetTypes: HeavyCavalry
 
 ROSS3:
 	Inherits: ^Cavalry
@@ -522,6 +496,11 @@ ROSS3:
 	PersonValued:
 		ActorCount: 1
         ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
+	Targetable@CombatRole:
+		TargetTypes: RegularCavalry
+	AutoTargetPriority@Counter1:
+		ValidTargets: Light, Heavy, Ranged, Flying, LightCavalry, Support, Spectral, Defenses
+		Priority: 4
 
 
 ROSS4:
@@ -583,6 +562,11 @@ ROSS4:
 	PersonValued:
 		ActorCount: 1
         ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
+	Targetable@CombatRole:
+		TargetTypes: LightCavalry
+	AutoTargetPriority@Counter1:
+		ValidTargets: HeavyCavalry, RegularCavalry, LightCavalry, Flying, Support, Defenses
+		Priority: 4
    
 
 ROSS4B:
@@ -633,6 +617,11 @@ ROSS4B:
 	PersonValued:
 		ActorCount: 1
         ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
+	Targetable@CombatRole:
+		TargetTypes: LightCavalry
+	AutoTargetPriority@Counter1:
+		ValidTargets: Light, Heavy, LightCavalry, Support, Ranged
+		Priority: 4
 	
 		
 ROSS4C:
@@ -683,4 +672,9 @@ ROSS4C:
 	PersonValued:
 		ActorCount: 1
         ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
+	Targetable@CombatRole:
+		TargetTypes: LightCavalry
+	AutoTargetPriority@Counter1:
+		ValidTargets: Light, Heavy, LightCavalry, Support, Ranged
+		Priority: 4
 		

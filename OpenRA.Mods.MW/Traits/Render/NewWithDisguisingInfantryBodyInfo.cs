@@ -14,8 +14,10 @@ using OpenRA.Mods.Common.Activities;
 using OpenRA.Mods.Common.Traits;
 using OpenRA.Mods.Common.Traits.Render;
 using OpenRA.Traits;
+using OpenRA.Mods.MW.Traits;
+using OpenRA;
 
-namespace OpenRA.Mods.Cnc.Traits.Render
+namespace MW.Mods.Cnc.Traits.Render
 {
 	class NewWithDisguisingInfantryBodyInfo : WithInfantryBodyDisguisedUpdateInfo, Requires<NewDisguiseInfo>
 	{

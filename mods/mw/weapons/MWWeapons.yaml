@@ -3320,8 +3320,7 @@ LaborourLoad:
 	InvalidTargets: Air
 	ReloadDelay: 10
 	Range: 1c800
-	Projectile: Bullet
-		Speed: 1c682
+	Projectile: InstantHit
 	Warhead@Un: GrantSelfCondition
 		Duration: 12
 		Condition: Loading

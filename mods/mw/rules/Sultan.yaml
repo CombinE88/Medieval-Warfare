@@ -414,7 +414,8 @@ SULGTW:
 		Palette: mwcivilian
 		Offset: -1534,512,0
 		RequiresCondition: (DeliveredResources - Construct) >= 42 && (archers || djinn || static) && !archersfinished && !djinnfinished && !staticfinished
-		
+	Targetable@CombatRole:
+		TargetTypes: Defenses		
 
 SULPLUG1:
 	AlwaysVisible:
@@ -1577,7 +1578,11 @@ SULE1:
 		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 	Voiced:
 		VoiceSet: RashudinVoice
-
+	Targetable@CombatRole:
+		TargetTypes: Light
+	AutoTargetPriority@Counter:
+		ValidTargets: Light, Heavy, Ranged, Support
+		Priority: 4
 		
 SULE2:
 	Inherits: ^Knight
@@ -1626,7 +1631,8 @@ SULE2:
 		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 	Voiced:
 		VoiceSet: RashudinVoice
-
+	Targetable@CombatRole:
+		TargetTypes: Heavy
 		
 SULE3:
 	Inherits: ^Knight
@@ -1687,7 +1693,11 @@ SULE3:
 		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 	Voiced:
 		VoiceSet: BedouinVoice
-
+	Targetable@CombatRole:
+		TargetTypes: Ranged
+	AutoTargetPriority@Counter1:
+		ValidTargets: Light, Ranged, LightCavalry, Support, Flying
+		Priority: 4
 		
 SULE4:
 	Inherits: ^Knight
@@ -1730,7 +1740,11 @@ SULE4:
 		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 	Voiced:
 		VoiceSet: GardVoice
-
+	Targetable@CombatRole:
+		TargetTypes: Heavy
+	AutoTargetPriority@Counter:
+		ValidTargets: RegularCavalry, LightCavalry, HeavyCavalry, Support, Defenses
+		Priority: 4
 		
 SULE5:
 	Inherits: ^Knight
@@ -1777,7 +1791,11 @@ SULE5:
 	PersonValued:
 		ActorCount: 1
 		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
-
+	Targetable@CombatRole:
+		TargetTypes: Light
+	AutoTargetPriority@Counter1:
+		ValidTargets: Light, Ranged, LightCavalry, Support, RegularCavalry, Heavy
+		Priority: 4
 		
 		
 SULE6:
@@ -1886,6 +1904,11 @@ SULM1:
 	PersonValued:
 		ActorCount: 1
 		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
+	Targetable@CombatRole:
+		TargetTypes: Light
+	AutoTargetPriority@Counter1:
+		ValidTargets: Light, Ranged, LightCavalry, Support, Heavy, Spectral
+		Priority: 4
 
 		
 SULM1SKELET:
@@ -1950,6 +1973,8 @@ SULM1SKELET:
 		TargetTypes: Ground, Infantry, Skeleton
 	Voiced:
 		VoiceSet: SkeletonVoice
+	Targetable@CombatRole:
+		TargetTypes: Light
 		
 SULM2:
 	Inherits: ^Knight
@@ -2015,7 +2040,8 @@ SULM2:
 	PersonValued:
 		ActorCount: 2
 		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
-
+	Targetable@CombatRole:
+		TargetTypes: Spectral
 	
 SULM4:
 	Inherits: ^Knight
@@ -2057,7 +2083,11 @@ SULM4:
 	PersonValued:
 		ActorCount: 1
 		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
-
+	Targetable@CombatRole:
+		TargetTypes: Light
+	AutoTargetPriority@Counter1:
+		ValidTargets: Light, Ranged, LightCavalry, Support, Heavy
+		Priority: 4
 
 # Siegeweapons
 
@@ -2178,7 +2208,11 @@ SULB0:
 		Sequence: pip-heal
 		ReferencePoint: Bottom, Right
 		RequiresCondition: hospitalheal || hospitalhealbarr
-
+	Targetable@CombatRole:
+		TargetTypes: HeavyCavalry
+	AutoTargetPriority@Counter1:
+		ValidTargets: Light, Ranged, LightCavalry, Support, Flying
+		Priority: 4
 		
 SULB1:
 	Inherits: ^Siege
@@ -2233,6 +2267,8 @@ SULB1:
 	PersonValued:
 		ActorCount: 2
 		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
+	Targetable@CombatRole:
+		TargetTypes: Support
 
 		
 SULB1.Husk:
@@ -2315,6 +2351,11 @@ SULB2:
 	PersonValued:
 		ActorCount: 0
 		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
+	Targetable@CombatRole:
+		TargetTypes: Support
+	AutoTargetPriority@Counter1:
+		ValidTargets: Light, Heavy, Ranged, Support, LightCavalry, Defenses
+		Priority: 4
 		
 SULB2.Husk:
 	Inherits: ^MedievalHusk
@@ -2420,6 +2461,11 @@ SULM3:
 	PersonValued:
 		ActorCount: 1
 		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
+	Targetable@CombatRole:
+		TargetTypes: Flying
+	AutoTargetPriority@Counter1:
+		ValidTargets: Light, Heavy, Ranged, Support, LightCavalry, Defenses
+		Priority: 4
 
 		
 SULM3.Husk:
@@ -2554,7 +2600,8 @@ SULB3:
 	PersonValued:
 		ActorCount: 0
 		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
-
+	Targetable@CombatRole:
+		TargetTypes: Flying
 		
 SULB3.Husk:
 	Inherits: ^HelicopterHusk

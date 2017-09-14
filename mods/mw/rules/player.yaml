@@ -12,12 +12,13 @@ Player:
 	PlayerResources:
 	DeveloperMode:
 	BaseAttackNotifier:
-    AcolyteAttackNotifier:
+	AcolyteAttackNotifier:
 	Shroud:
 	PlayerStatistics:
 	FrozenActorLayer:
 	PlaceBeacon:
 	PlayerCivilization:
+		AlivePeasants: 10
 		SpawnModifier: 2
 		SpecialModifier: 
 			nod: 2

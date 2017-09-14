@@ -65,6 +65,11 @@ ORNI:
 	PersonValued:
 		ActorCount: 1
         ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
+	Targetable@CombatRole:
+		TargetTypes: Flying
+	AutoTargetPriority@Counter1:
+		ValidTargets: HeavyCavalry, RegularCavalry, LightCavalry, Support, Flying, Defenses
+		Priority: 4
 	
 WARKITE:
 	Inherits: ^Helicopter
@@ -123,6 +128,11 @@ WARKITE:
 	PersonValued:
 		ActorCount: 1
         ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
+	Targetable@CombatRole:
+		TargetTypes: Flying
+	AutoTargetPriority@Counter1:
+		ValidTargets: Light, Heavy, Ranged, Support, Flying, LightCavalry
+		Priority: 4
 	  
 DRGNRDR:
 	Inherits: ^Helicopter
@@ -192,6 +202,8 @@ DRGNRDR:
 	PersonValued:
 		ActorCount: 1
         ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
+	Targetable@CombatRole:
+		TargetTypes: Flying
 
 		
 DRAGONWALK:
@@ -302,6 +314,8 @@ DAVINCI:
 	PersonValued:
 		ActorCount: 0
 		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
+	Targetable@CombatRole:
+		TargetTypes: Flying
 	   
 WRBLN:
 	Inherits: ^Helicopter
@@ -360,6 +374,12 @@ WRBLN:
 	PersonValued:
 		ActorCount: 1
         ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
+	Targetable@CombatRole:
+		TargetTypes: Flying
+	AutoTargetPriority@Counter1:
+		ValidTargets: Light, Heavy, Ranged, Support, Flying, LightCavalry, RegularCavalry, Defenses
+		Priority: 4
+        
 			  
 PLACEHOLDERPLANE:
 	Inherits: ^Plane

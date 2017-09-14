@@ -56,7 +56,10 @@ MCVNEW:
 		ValidStances: Ally
 		Condition: Labor
 	Targetable:
-		TargetTypes: Ground, Siege, Wanderer, Laborer		
+		TargetTypes: Ground, Siege, Wanderer, Laborer
+	Targetable@CombatRole:
+		TargetTypes: Support
+		
 MCV2NEW:
 	Inherits@66: MCVNEW
 	RenderSprites:
@@ -85,9 +88,8 @@ MCV2NEW:
 	PersonValued:
 		ActorCount: 3
 		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
-
-
-		
+	Targetable@CombatRole:
+		TargetTypes: Support
 
 SIEGE1:
 	Inherits: ^Siege
@@ -106,7 +108,7 @@ SIEGE1:
 		Description: The Siege Ballista is a missile weapon that launched a large projectile \nat a distant target.\n  Very strong vs Cavalry and Buildings \n  Moderate vs Infantry\n  Weak vs Aircrafts\n\nTrains: 2 Peasants
 		Queue: MSiege.Nod
 	Mobile:
-		TurnSpeed: 2
+		TurnSpeed: 4
 		Speed: 60
 	Health:
 		HP: 10000
@@ -143,6 +145,11 @@ SIEGE1:
 	PersonValued:
 		ActorCount: 2
 		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
+	Targetable@CombatRole:
+		TargetTypes: Support
+	AutoTargetPriority@Counter1:
+		ValidTargets: HeavyCavalry, RegularCavalry, LightCavalry, Support, Defenses
+		Priority: 4
 
 
 
@@ -164,7 +171,7 @@ SIEGE2:
 		Queue: MSiege.GDI
 	Mobile:
 		Speed: 60
-		TurnSpeed: 2
+		TurnSpeed: 4
 	Health:
 		HP: 12000
 		Shape: Capsule
@@ -200,8 +207,11 @@ SIEGE2:
 	PersonValued:
 		ActorCount: 2
 		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
-		
-
+	Targetable@CombatRole:
+		TargetTypes: Support
+	AutoTargetPriority@Counter1:
+		ValidTargets: Light, Heavy, Ranged, Support, LightCavalry, Defenses
+		Priority: 4
 
 SIEGE3:
 	Inherits: ^Siege
@@ -227,7 +237,7 @@ SIEGE3:
 		Crushes: wall, heavywall, crate, infantry
 		Speed: 55
 		SharesCell: false
-		TurnSpeed: 3
+		TurnSpeed: 5
 	Health:
 		HP: 100000
 		Shape: Rectangle
@@ -331,8 +341,11 @@ SIEGE3:
 	PersonValued:
 		ActorCount: 3
 		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
-		
-
+	Targetable@CombatRole:
+		TargetTypes: HeavyCavalry
+	AutoTargetPriority@Counter1:
+		ValidTargets: Light, Ranged, Support, LightCavalry, Flying
+		Priority: 4
 
 SIEGE4:
 	Inherits: ^Siege
@@ -359,7 +372,7 @@ SIEGE4:
 		Crushes: wall, heavywall, crate, infantry, cavalry
 		Speed: 30
 		SharesCell: false
-		TurnSpeed: 2
+		TurnSpeed: 4
 	Health:
 		HP: 150000
 		Shape: Rectangle
@@ -457,6 +470,8 @@ SIEGE4:
 	PersonValued:
 		ActorCount: 3
 		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
+	Targetable@CombatRole:
+		TargetTypes: HeavyCavalry
 		
 EHARVXL:
 	Inherits: ^Siege
@@ -614,3 +629,5 @@ SIEGE99:
 		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 	NewDisguise:
 	DisguiseChargeBar: 
+	Targetable@CombatRole:
+		TargetTypes: Support

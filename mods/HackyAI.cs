@@ -53,6 +53,7 @@ namespace OpenRA.Mods.Common.AI
 			public readonly HashSet<string> Refinery = new HashSet<string>();
 			public readonly HashSet<string> Power = new HashSet<string>();
 			public readonly HashSet<string> Barracks = new HashSet<string>();
+			public readonly HashSet<string> Defenses = new HashSet<string>();
 			public readonly HashSet<string> Production = new HashSet<string>();
 			public readonly HashSet<string> NavalProduction = new HashSet<string>();
 			public readonly HashSet<string> Silo = new HashSet<string>();
@@ -477,6 +478,18 @@ namespace OpenRA.Mods.Common.AI
 				});
 		}
 
+		int CountBuildingByPlayer(Player owner)
+		{
+			return World.ActorsHavingTrait<Building>()
+				.Count(a =>
+				{
+					if (a.Owner != owner)
+						return false;
+
+					return true;
+				});
+		}
+
 		public ActorInfo GetInfoByCommonName(HashSet<string> names, Player owner)
 		{
 			return Map.Rules.Actors.Where(k => names.Contains(k.Key)).Random(Random).Value;
@@ -501,6 +514,22 @@ namespace OpenRA.Mods.Common.AI
 			// Require at least two refineries, unless we have no power (can't build it)
 			// or barracks (higher priority?)
 			return CountBuildingByCommonName(Info.BuildingCommonNames.Refinery, Player) > 2 ||
+				CountBuildingByCommonName(Info.BuildingCommonNames.ConstructionYard, Player) == 0;
+		}
+
+		public bool HasAdequateBarracks()
+		{
+			// Require at least two refineries, unless we have no power (can't build it)
+			// or barracks (higher priority?)
+			return CountBuildingByCommonName(Info.BuildingCommonNames.Barracks, Player) > 0 ||
+				CountBuildingByCommonName(Info.BuildingCommonNames.ConstructionYard, Player) == 0;
+		}
+
+		public bool HasAdequateDefense()
+		{
+			// Require at least two refineries, unless we have no power (can't build it)
+			// or barracks (higher priority?)
+			return CountBuildingByCommonName(Info.BuildingCommonNames.Defenses, Player) > (CountBuildingByPlayer(Player)/7) ||
 				CountBuildingByCommonName(Info.BuildingCommonNames.ConstructionYard, Player) == 0;
 		}
 
@@ -914,7 +943,7 @@ namespace OpenRA.Mods.Common.AI
 			{
 				var ownUnits = World.FindActorsInCircle(World.Map.CenterOfCell(GetRandomBaseCenter()), WDist.FromCells(Info.ProtectUnitScanRadius))
 					.Where(unit => unit.Owner == Player && !unit.Info.HasTraitInfo<BuildingInfo>() && !unit.Info.HasTraitInfo<HarvesterInfo>()
-						&& unit.Info.HasTraitInfo<AttackBaseInfo>());
+						&& unit.Info.HasTraitInfo<AttackBaseInfo>() && !Info.UnitsCommonNames.ExcludeFromSquads.Contains(unit.Info.Name));
 
 				foreach (var a in ownUnits)
 					protectSq.Units.Add(a);

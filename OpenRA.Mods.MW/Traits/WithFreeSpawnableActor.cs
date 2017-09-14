@@ -10,17 +10,11 @@
 #endregion
 
 
-using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.IO.IsolatedStorage;
 using System.Linq;
 using OpenRA.Activities;
-using OpenRA.Graphics;
 using OpenRA.Mods.Common;
 using OpenRA.Mods.Common.Activities;
-using OpenRA.Mods.Common.Graphics;
 using OpenRA.Mods.Common.Traits;
 using OpenRA.Primitives;
 using OpenRA.Traits;
@@ -68,8 +62,8 @@ namespace OpenRA.Mods.Mw.Traits
 		public object Create(ActorInitializer init) { return new WithFreeSpawnableActor(init, this); }
 	}
 
-	class WithFreeSpawnableActor : ITick, INotifyActorDisposing
-	{
+	class WithFreeSpawnableActor : ITick, INotifyActorDisposing, INotifyRemovedFromWorld
+    {
 		private int Ticker;
 		private Actor RespawnActor = null;
 		private Actor self;
@@ -340,8 +334,15 @@ namespace OpenRA.Mods.Mw.Traits
 				//beginn movement
 				actor.CancelActivity();
 				actor.QueueActivity(move.MoveTo(exit, 5));
-				//what happens when actor or barracks dies
-				actor.QueueActivity(new CallFunc(() =>
+
+                if (!actor.IsDead && actor.IsInWorld && actor.Info.HasTraitInfo<IsPeasantInfo>())
+                {
+                    var peas = actor.TraitsImplementing<IsPeasant>().FirstOrDefault();
+                    peas.setWroking();
+                }
+
+                //what happens when actor or barracks dies
+                actor.QueueActivity(new CallFunc(() =>
 				{
 
 					if (StillValid(actor, self))
@@ -402,7 +403,24 @@ namespace OpenRA.Mods.Mw.Traits
 			}
 			return true;
 		}
-	}
+
+        public void RemovedFromWorld(Actor self)
+        {
+            if (!self.Owner.NonCombatant && self.Owner.WinState != WinState.Lost && self.Owner.PlayerActor.Info.HasTraitInfo<PlayerCivilizationInfo>())
+            {
+                if (InUse.Any())
+                {
+                    foreach (var var in InUse)
+                    {
+                        if (!var.IsDead && var.IsInWorld && var.Info.HasTraitInfo<IsPeasantInfo>())
+                        {
+                            var.Trait<IsPeasant>().setPeasant();
+                        }
+                    }
+                }
+            }
+        }
+    }
 	
 	
 

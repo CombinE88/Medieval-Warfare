@@ -1571,7 +1571,9 @@ GARG:
 		TurnSpeed: 4
 	WithDeathAnimation:
 		DeathSequencePalette: raplayer 
-
+	Targetable@CombatRole:
+		TargetTypes: Defenses
+        
 #Infantry
 
 UNDEADCOMM:
@@ -1627,6 +1629,8 @@ UNDEADCOMM:
 		VoiceSet: CivilianMaleVoice
 	Targetable:
 		TargetTypes: Ground, Infantry
+	Targetable@CombatRole:
+		TargetTypes: Support
 
 PREYCOLYTE:
 	Inherits: ^Knight
@@ -1698,7 +1702,8 @@ PREYCOLYTE:
 	Voiced:
 		VoiceSet: AcolyteVoice
 		Volume: 3
-
+	Targetable@CombatRole:
+		TargetTypes: Light
 		
 DEADROSS:
 	Inherits: ^Cavalry
@@ -1750,6 +1755,11 @@ DEADROSS:
 		RequiresCondition: makeanim
 	WithSpriteBody:
 		RequiresCondition: makeanim
+	Targetable@CombatRole:
+		TargetTypes: LightCavalry
+	AutoTargetPriority@Counter1:
+		ValidTargets: HeavyCavalry, RegularCavalry, LightCavalry, Flying, Support
+		Priority: 4
 		
 UNDEAD1:
 	Inherits: ^Skeleton
@@ -1779,6 +1789,11 @@ UNDEAD1:
 		BuildDuration: 300
 	Armor:
 		Type: Heavy
+	Targetable@CombatRole:
+		TargetTypes: Light
+	AutoTargetPriority@Counter1:
+		ValidTargets: Light, Ranged, LightCavalry, Support, Heavy
+		Priority: 4
 		
 UNDEAD2:
 	Inherits: ^Skeleton
@@ -1802,7 +1817,11 @@ UNDEAD2:
 		ActorCount: 1
 	Armor:
 		Type: Heavy
-	
+	Targetable@CombatRole:
+		TargetTypes: Light
+	AutoTargetPriority@Counter1:
+		ValidTargets: Light, Ranged, LightCavalry, Support, Heavy
+		Priority: 4
 		
 		
 UNDEAD3:
@@ -1833,6 +1852,14 @@ UNDEAD3:
 		Queue: MInfantry.ded
 		BuildDuration: 400
 	-Crushable:
+	Targetable@CombatRole:
+		TargetTypes: Light
+	AutoTargetPriority@Counter1:
+		ValidTargets: LightCavalry, Defenses
+		Priority: 5
+	AutoTargetPriority@Counter2:
+		ValidTargets: RegularCavalry, HeavyCavalry, Defenses
+		Priority: 4
 	
 UNDEAD4:
 	Inherits: ^Skeleton
@@ -1863,7 +1890,8 @@ UNDEAD4:
 		Prerequisites: seal3
 		Queue: MInfantry.ded
 		BuildDuration: 800
-		
+	Targetable@CombatRole:
+		TargetTypes: Heavy
 		
 UNDEAD5:
 	Inherits: ^Skeleton
@@ -1902,7 +1930,12 @@ UNDEAD5:
 		Description: \n  Strong vs Light Infantry\n  Weak vs Cavalry and heavy Infantry\n  Detects cloaked units\n  Can attack Aircrafts\n  Slows targets under fire
 		Queue: MInfantry.ded
 		BuildDuration: 500
-		
+	Targetable@CombatRole:
+		TargetTypes: Ranged
+	AutoTargetPriority@Counter1:
+		ValidTargets: Light, Ranged, LightCavalry, Support, Flying
+		Priority: 4
+        
 UNDEAD6:
 	Inherits: ^Skeleton
 	Valued:
@@ -1941,6 +1974,8 @@ UNDEAD6:
 	-RangeMultiplier:
 	SpeedMultiplier@SNAKES:
 		Modifier: 77
+	Targetable@CombatRole:
+		TargetTypes: HeavyCavalry
 		
 UNDEAD7:
 	Inherits: ^Skeleton
@@ -1979,6 +2014,8 @@ UNDEAD7:
 		Queue: MSiege.ded
 	PersonValued:
 		ActorCount: 3
+	Targetable@CombatRole:
+		TargetTypes: HeavyCavalry
 		
 GRIM:
 	Inherits: ^Knight
@@ -2059,7 +2096,8 @@ GRIM:
 		Prerequisites: seal4
 		Queue: MVehicle.ded
 	GrimReanimation:
-		
+	Targetable@CombatRole:
+		TargetTypes: Spectral
 		
 ACOLYTEC:
 	Inherits: ^Knight
@@ -2108,6 +2146,11 @@ ACOLYTEC:
 		BuildDuration: 600
     CorruptDeerstand:
         TargetActors: split7, split8
+	Targetable@CombatRole:
+		TargetTypes: Ranged
+	AutoTargetPriority@Counter1:
+		ValidTargets: Light, Ranged, LightCavalry, Support, Flying
+		Priority: 4
 		
 VAMP:
 	Inherits: ^Knight
@@ -2158,6 +2201,11 @@ VAMP:
 		BuildDuration: 900
 	Transforms:
 		IntoActor: vampflying
+	Targetable@CombatRole:
+		TargetTypes: Ranged, Heavy
+	AutoTargetPriority@Counter1:
+		ValidTargets: Light, Ranged, LightCavalry, Support
+		Priority: 4
 		
 VAMPFLYING:
 	Inherits: ^Helicopter
@@ -2209,7 +2257,8 @@ VAMPFLYING:
 	Transforms:
 		IntoActor: vamp
 		Facing: 96
-
+	Targetable@CombatRole:
+		TargetTypes: Flying
 		
 VAMPMAN.Husk:
 	Inherits: ^HelicopterHusk
@@ -2290,7 +2339,11 @@ DEMONHORSE:
 		Offsets: 0,-130,0
 		Type: CenterPosition
 		TerrainTypes: Clear, Rough, Road, DirtRoad, Ground, Tiberium, BlueTiberium, Crops, Loot, Wood
-
+	Targetable@CombatRole:
+		TargetTypes: RegularCavalry
+	AutoTargetPriority@Counter1:
+		ValidTargets: LightCavalry, RegularCavalry, HeavyCavalry, Support, Defenses
+		Priority: 4
 LICHK:
 	Inherits: ^Knight
 	Inherits@AUTOTARGET: ^AutoTargetGround
@@ -2360,7 +2413,8 @@ LICHK:
 		Bounds: 26,30,0,-5
 	SelectionDecorations:
 		VisualBounds: 26,30,0,-5
-
+	Targetable@CombatRole:
+		TargetTypes: Spectral
 		
 PLACEHOLDERHANDATTACK:
 	Inherits: ^Plane
@@ -2533,6 +2587,8 @@ RESSURECT1:
 		DamageTypes: DefaultDeath
 	AutoTarget:
 		ScanRadius: 10
+	Targetable@CombatRole:
+		TargetTypes: Light
 		
 RESSURECT2:
 	Inherits: ^SkeletonSpawn
@@ -2561,7 +2617,9 @@ RESSURECT2:
 		DamageTypes: DefaultDeath
 	AutoTarget:
 		ScanRadius: 10
-		
+	Targetable@CombatRole:
+		TargetTypes: Light
+
 		
 RESSURECT3:
 	Inherits: ^SkeletonSpawn
@@ -2594,7 +2652,14 @@ RESSURECT3:
 		DamageTypes: DefaultDeath
 	AutoTarget:
 		ScanRadius: 10
-	
+	Targetable@CombatRole:
+		TargetTypes: Light
+	AutoTargetPriority@Counter1:
+		ValidTargets: LightCavalry, Defenses
+		Priority: 5
+	AutoTargetPriority@Counter2:
+		ValidTargets: RegularCavalry, HeavyCavalry, Defenses
+		Priority: 4
 	
 RESSURECT4:
 	Inherits: ^SkeletonSpawn
@@ -2637,7 +2702,9 @@ RESSURECT4:
 		DamageTypes: DefaultDeath
 	AutoTarget:
 		ScanRadius: 10
-		
+	Targetable@CombatRole:
+		TargetTypes: Light
+
 		
 SPLITDEAD:
 	Inherits: ^TibTree

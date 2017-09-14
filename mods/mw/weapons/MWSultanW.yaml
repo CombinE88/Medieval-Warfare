@@ -901,7 +901,7 @@ SulGTSpearThrow:
 		Inaccuracy: 0c0
 		ContrailLength: 10
 		ContrailWidth: 15
-		ContrailDelay: 0
+		ContrailDelay: 5
 		ContrailUsePlayerColor : true
 		Image: spear
 		Palette: ra
@@ -941,7 +941,7 @@ SulGTSpearThrowAir:
 		Inaccuracy: 0c0
 		ContrailLength: 10
 		ContrailWidth: 15
-		ContrailDelay: 0
+		ContrailDelay: 5
 		ContrailUsePlayerColor : true
 		Image: spear
 		Palette: ra

@@ -290,15 +290,21 @@ SULNUK2.SCAFF:
 		DamageTypes: FinishedDeath
 	WithIdleOverlay@base1:
 		Sequence: make1
-		RequiresCondition: Construct > 5 && Construct < 15
+		RequiresCondition: Construct > 5 && Construct < 12
 	WithIdleOverlay@base2:
 		Sequence: make2
-		RequiresCondition: Construct >= 15 && Construct < 25
+		RequiresCondition: Construct >= 12 && Construct < 20
 	WithIdleOverlay@base3:
 		Sequence: make3
-		RequiresCondition: Construct >= 25 && Construct < 35
+		RequiresCondition: Construct >= 20 && Construct < 25
 	WithIdleOverlay@base4:
 		Sequence: make4
+		RequiresCondition: Construct >= 25 && Construct < 30
+	WithIdleOverlay@base5:
+		Sequence: make5
+		RequiresCondition: Construct >= 30 && Construct < 35
+	WithIdleOverlay@base6:
+		Sequence: make6
 		RequiresCondition: Construct >= 35
 
 SULBARR.SCAFF:
@@ -592,8 +598,8 @@ SULFIX.SCAFF:
 		Sequence: make4
 		RequiresCondition: Construct >= 45
 
-
-SULGTW.ENABLER:
+		
+SULGTW.SCAFF:
 	Inherits: ^1x1SITE
 	Inherits@Hitshape: ^1x1Shape
 	Armor:
@@ -607,6 +613,16 @@ SULGTW.ENABLER:
 		Cost: 550
 	Tooltip:
 		Name: Construction Site (Mosaic Guard Tower)
+	Health:
+		HP: 30000
+	RevealsShroud:
+		Range: 4c0
+	Selectable:
+		Bounds: 24,48,0,-10
+	SelectionDecorations
+		VisualBounds: 22,48,0,-10
+	WithSpriteBody:
+		RequiresCondition: inactive
 	Buildable:
 		Description: A Super guard tower, stationed with 2 archers.\n  Strong vs Infantry, Light Cavalry\n  Weak vs Siege weapons and Heavy Cavalry \n  Cannot target Aircraft (because of I say so)\n\n\n
 		BuildPaletteOrder: 60
@@ -614,90 +630,6 @@ SULGTW.ENABLER:
 		BuildDurationModifier: 40
 		IconPalette: raicon
 		BuildDuration: 50
-	Health:
-		HP: 30000
-	RevealsShroud:
-		Range: 4c0
-	WithBuildingBib:
-		HasMinibib: Yes
-	Selectable:
-		Bounds: 24,48,0,-10
-	SelectionDecorations
-		VisualBounds: 22,48,0,-10
-	WithSpriteBody:
-		RequiresCondition: inactive
-	SpawnActorOnDeath@Finsihed:
-		Probability: 100
-		Actor: SULGTW.SCAFF
-		DeathType: FinishedDeath
-	ExternalCondition@buildfurther: 
-		Condition: Construct
-		TotalCap: 18
-	ExternalCondition@Deliverfurther:
-		Condition: DeliveredResources
-		TotalCap: 18
-	Targetable@buildfurther: 
-		TargetTypes: Buildable
-		RequiresCondition: DeliveredResources > Construct && (18 - Construct) > 0
-	Targetable@deliverresources: 
-		TargetTypes: Deliverable
-		RequiresCondition: 18 > DeliveredResources
-	SelfHealing@Finished:
-		PercentageStep: -200
-		HealIfBelow: 110
-		Delay: 1
-		RequiresCondition: DeliveredResources >= 0
-		DamageTypes: FinishedDeath
-	WithIdleOverlay@base1:
-		Sequence: make1
-		RequiresCondition: Construct > 2 && Construct < 5
-	WithIdleOverlay@base2:
-		Sequence: make2
-		RequiresCondition: Construct >= 5 && Construct < 7
-	WithIdleOverlay@base3:
-		Sequence: make3
-		RequiresCondition: Construct >= 7 && Construct < 11
-	WithIdleOverlay@base4:
-		Sequence: make4
-		RequiresCondition: Construct >= 11 && Construct < 13
-	WithIdleOverlay@base5:
-		Sequence: make5
-		RequiresCondition: Construct >= 13 && Construct < 15
-	WithIdleOverlay@base6:
-		Sequence: make6
-		RequiresCondition: Construct >= 15
-	WithRangeCircle:
-		Range: 7c0		
-		
-SULGTW.SCAFF:
-	Inherits: ^1x1SITE
-	Inherits@Hitshape: ^1x1Shape
-	-Building:
-	-FrozenUnderFog:
-	HiddenUnderFog:
-	Immobile:
-		OccupiesSpace: true
-	Armor:
-		Type: HeavyBuilding
-	RenderSprites:
-		PlayerPalette: sultanplayer
-		Image: sulgtw
-	CustomSellValue:
-		Value: 175
-	Valued:
-		Cost: 550
-	Tooltip:
-		Name: Construction Site (Mosaic Guard Tower)
-	Health:
-		HP: 30000
-	RevealsShroud:
-		Range: 4c0
-	Selectable:
-		Bounds: 24,48,0,-10
-	SelectionDecorations
-		VisualBounds: 22,48,0,-10
-	WithSpriteBody:
-		RequiresCondition: inactive
 	SpawnActorOnDeath@Finsihed:
 		Probability: 100
 		Actor: SULGTW
@@ -913,6 +845,7 @@ SULMINARET.SCAFF:
 	RevealsShroud:
 		Range: 4c0
 	WithBuildingBib:
+		HasMinibib: Yes
 	Selectable:
 		Bounds: 28,96,0,-40
 	SelectionDecorations:
@@ -955,10 +888,10 @@ SULMINARET.SCAFF:
 		RequiresCondition: Construct >= 20 && Construct < 30
 	WithIdleOverlay@base5:
 		Sequence: make5
-		RequiresCondition: Construct >= 40 && Construct < 40
+		RequiresCondition: Construct >= 30 && Construct < 40
 	WithIdleOverlay@base6:
 		Sequence: make6
-		RequiresCondition: Construct >= 50
+		RequiresCondition: Construct >= 40
         
         
 SULCNSHMBR.SCAFF:

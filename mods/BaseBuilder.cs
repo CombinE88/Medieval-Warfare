@@ -231,11 +231,14 @@ namespace OpenRA.Mods.Common.AI
 			freebeds += playerBuildings.Count(a => a.Info.Name.Contains("sulnuke"))*6;
 			freebeds += playerBuildings.Count(a => a.Info.Name.Contains("sulnuk2"))*11;
 			freebeds += playerBuildings.Count(a => a.Info.Name.Contains("nodnuke"))*3;
-			freebeds += playerBuildings.Count(a => a.Info.Name.Contains("tribu"))*3;
-			freebeds += playerBuildings.Count(a => a.Info.Name.Contains("bato"))*3;
-			freebeds += playerBuildings.Count(a => a.Info.Name.Contains("samnew"))*2;
-			
-			
+			freebeds -= playerBuildings.Count(a => a.Info.Name.Contains("tribu"))*3;
+			freebeds -= playerBuildings.Count(a => a.Info.Name.Contains("bato"))*3;
+			freebeds -= playerBuildings.Count(a => a.Info.Name.Contains("samnew"))*2;
+			freebeds -= playerBuildings.Count(a => a.Info.Name.Contains("gunnew")) * 1;
+			freebeds -= playerBuildings.Count(a => a.Info.Name.Contains("gtwnew")) * 2;
+			freebeds -= playerBuildings.Count(a => a.Info.Name.Contains("sulgtw")) * 2;
+
+
 
 			var check = freebeds + checkpeasants.Length - consumer.Length;
 			
@@ -269,12 +272,50 @@ namespace OpenRA.Mods.Common.AI
 					HackyAI.BotDebug("AI: {0} decided to build {1}: Priority override (refinery)", queue.Actor.Owner, refinery.Name);
 					return refinery;
 				}
+
+
 				
 			if (player.World.WorldTick<4500)
 				return null;
 
 			}
-			
+
+			if (!ai.HasAdequateBarracks())
+			{
+				var barracks = GetProducibleBuilding(ai.Info.BuildingCommonNames.Barracks, buildableThings);
+
+				if (power != null && check < 4)
+				{
+					HackyAI.BotDebug("{0} decided to build {1}: Priority override (would be low peasants)", queue.Actor.Owner, power.Name);
+					return power;
+				}
+
+				if (barracks != null)
+				{
+					HackyAI.BotDebug("AI: {0} decided to build {1}: Priority override (refinery)", queue.Actor.Owner, barracks.Name);
+					return barracks;
+				}
+
+			}
+
+			if (!ai.HasAdequateDefense())
+			{
+				var defenses = GetProducibleBuilding(ai.Info.BuildingCommonNames.Defenses, buildableThings);
+
+				if (power != null && check < 4)
+				{
+					HackyAI.BotDebug("{0} decided to build {1}: Priority override (would be low peasants)", queue.Actor.Owner, power.Name);
+					return power;
+				}
+
+				if (defenses != null)
+				{
+					HackyAI.BotDebug("AI: {0} decided to build {1}: Priority override (refinery)", queue.Actor.Owner, defenses.Name);
+					return defenses;
+				}
+
+			}
+
 			// Make sure that we can spend as fast as we are earning
 			if (ai.Info.NewProductionCashThreshold > 0 && playerResources.Resources > ai.Info.NewProductionCashThreshold)
 			{

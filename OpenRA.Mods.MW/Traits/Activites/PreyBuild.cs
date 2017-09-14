@@ -18,11 +18,14 @@ using OpenRA.Mods.Common.Traits;
 using OpenRA.Mods.Mw.Activities;
 using OpenRA.Mods.MW.Traits;
 using OpenRA.Traits;
+using MW.Mods.Common.Activities;
+using MW.Mods.Common.Traits;
+using OpenRA;
 
-namespace OpenRA.Mods.Cnc.Activities
+namespace MW.Mods.Cnc.Activities
 {
 	public class PreyBuild : Activity, IDockActivity
-	{
+    {
 		readonly AcolytePreyBuildInfo info;
 		
 		readonly HashSet<string> preyBuildings;
@@ -87,7 +90,7 @@ namespace OpenRA.Mods.Cnc.Activities
 
 		Activity IDockActivity.DockActivities(Actor host, Actor client, Dock dock)
 		{
-			return ActivityUtils.SequenceActivities( new PreyBuildActivity(client,host,dock.Info.FaceTowardsCenter,dock) );
+			return ActivityUtils.SequenceActivities( new PreyBuildActivity(client,host,true,dock));
 		}
 
 		Activity IDockActivity.ActivitiesAfterDockDone(Actor host, Actor client, Dock dock)

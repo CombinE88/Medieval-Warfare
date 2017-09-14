@@ -941,20 +941,20 @@ sulbarr:
 		Length: *
 	icon: sulbarricon.shp
 		AddExtension: False 
-	make1: 
-		Start: 5
+	make1: sulbarrmake
+		Start: 0
 		ZOffset: -25
-	make2: 
-		Start: 10
+	make2: sulbarrmake
+		Start: 1
 		ZOffset: -25
-	make3: 
-		Start: 15
+	make3: sulbarrmake
+		Start: 2
 		ZOffset: -25
-	make4: 
-		Start: 20
+	make4: sulbarrmake
+		Start: 3
 		ZOffset: -25
-	make5: 
-		Start: 25
+	make5: sulbarrmake
+		Start: 4
 		ZOffset: -25	   
 		
 sulnuke:
@@ -966,31 +966,31 @@ sulnuke:
 	dead: 
 		Start: 21
 		Tick: 800
-	make: 
-		Length: 19
+	make: sulnukemake
+		Length: *
 		Tick: 80
 	bib: mwbib3
 		UseTilesetExtension: true
 		Length: *
 	icon: sulnukeicon.shp
 		AddExtension: False 
-	make1: 
+	make1: sulnukemake
+		Start: 0
+		ZOffset: -25
+	make2: sulnukemake
+		Start: 1
+		ZOffset: -25
+	make3: sulnukemake
+		Start: 2
+		ZOffset: -25
+	make4: sulnukemake
 		Start: 3
 		ZOffset: -25
-	make2: 
-		Start: 6
+	make5: sulnukemake
+		Start: 4
 		ZOffset: -25
-	make3: 
-		Start: 9
-		ZOffset: -25
-	make4: 
-		Start: 12
-		ZOffset: -25
-	make5: 
-		Start: 15
-		ZOffset: -25
-	make6: 
-		Start: 18
+	make6: sulnukemake
+		Start: 5
 		ZOffset: -25
 		
 sulnuk2:
@@ -1005,8 +1005,8 @@ sulnuk2:
 		Start: 21
 		Tick: 800
 		Offset: 0,-15
-	make: 
-		Length: 19
+	make: sulnuk2make
+		Length: *
 		Tick: 80
 		Offset: 0,-15
 	bib: mwbib2
@@ -1014,20 +1014,28 @@ sulnuk2:
 		Length: *
 	icon: sulnuk2icon.shp
 		AddExtension: False 
-	make1: 
+	make1: sulnuk2make
+		Start: 0
+		ZOffset: -25
+		Offset: 0,-15
+	make2: sulnuk2make
+		Start: 1
+		ZOffset: -25
+		Offset: 0,-15
+	make3: sulnuk2make
 		Start: 2
 		ZOffset: -25
 		Offset: 0,-15
-	make2: 
+	make4: sulnuk2make
+		Start: 3
+		ZOffset: -25
+		Offset: 0,-15
+	make5: sulnuk2make
+		Start: 4
+		ZOffset: -25
+		Offset: 0,-15
+	make6: sulnuk2make
 		Start: 5
-		ZOffset: -25
-		Offset: 0,-15
-	make3: 
-		Start: 10
-		ZOffset: -25
-		Offset: 0,-15
-	make4: 
-		Start: 15
 		ZOffset: -25
 		Offset: 0,-15
  
@@ -1059,23 +1067,23 @@ sulmill:
 		AddExtension: False 
 	make1: sulmilmake
 		Offset: 12,-12,0
-		Start: 2
+		Start: 0
 		ZOffset: -25
 	make2: sulmilmake
 		Offset: 12,-12,0
-		Start: 5
+		Start: 1
 		ZOffset: -25
 	make3: sulmilmake
 		Offset: 12,-12,0
-		Start: 10
+		Start: 2
 		ZOffset: -25
 	make4: sulmilmake
 		Offset: 12,-12,0
-		Start: 15
+		Start: 3
 		ZOffset: -25
 	make5: sulmilmake
 		Offset: 12,-12,0
-		Start: 25
+		Start: 4
 		ZOffset: -25
 		
 sulmystic:
@@ -1192,28 +1200,28 @@ sulcastle:
 		Tick: 80
 		Offset: 0, -36
 		ZOffset: -100
-	make1: 
+	make1: sulcastlemake
+		Start: 0
+		ZOffset: -25
+		Offset: 0,-18
+	make2: sulcastlemake
+		Start: 1
+		ZOffset: -25
+		Offset: 0,-18
+	make3: sulcastlemake
+		Start: 2
+		ZOffset: -25
+		Offset: 0,-18
+	make4: sulcastlemake
 		Start: 3
 		ZOffset: -25
 		Offset: 0,-18
-	make2: 
-		Start: 8
+	make5: sulcastlemake
+		Start: 4
 		ZOffset: -25
 		Offset: 0,-18
-	make3: 
-		Start: 11
-		ZOffset: -25
-		Offset: 0,-18
-	make4: 
-		Start: 14
-		ZOffset: -25
-		Offset: 0,-18
-	make5: 
-		Start: 17
-		ZOffset: -25
-		Offset: 0,-18
-	make6: 
-		Start: 20
+	make6: sulcastlemake
+		Start: 5
 		ZOffset: -25
 		Offset: 0,-18
 		

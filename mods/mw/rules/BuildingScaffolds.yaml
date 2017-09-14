@@ -328,9 +328,9 @@ ZEROPROC.SCAFF:
 		Range: 4c0
 	WithBuildingBib:
 	Selectable:
-		Bounds: 48,70,0,5
+		Bounds: 48,70,0,-10
 	SelectionDecorations:
-		VisualBounds: 48,70,0,5
+		VisualBounds: 48,70,0,-10
 	WithSpriteBody:
 		RequiresCondition: inactive
 	SpawnActorOnDeath@Finsihed:
@@ -969,7 +969,7 @@ SILONEW.SCAFF:
 		RequiresCondition: Construct >= 6 && Construct < 9
 	WithIdleOverlay@base4:
 		Sequence: make4
-		RequiresCondition: Construct >= 12
+		RequiresCondition: Construct >= 9
 		
 BARRNEW.SCAFF:
 	Inherits: ^2x2SITE
@@ -1783,9 +1783,11 @@ BATO.SCAFF:
 		Sequence: make6
 		RequiresCondition: Construct >= 45
 	WithRangeCircle:
-		Range: 9c0
+		Range: 8c0
+		Color: FFFF0080
 	WithRangeCircle@Air:
 		Range: 10c0
+		Color: FFFF0080
 		
 SAMNEW.SCAFF:
 	Inherits: ^2x2SITE

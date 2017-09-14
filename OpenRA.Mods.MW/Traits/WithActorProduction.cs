@@ -37,8 +37,8 @@ namespace OpenRA.Mods.Mw.Traits
 		public override object Create(ActorInitializer init) { return new WithActorProduction(init, this); }
 	}
 
-	class WithActorProduction : Production
-	{
+	class WithActorProduction : Production, INotifyRemovedFromWorld
+    {
 		readonly WithActorProductionInfo info;
 		public HashSet<Actor> InUse = new HashSet<Actor>();
 		private int Ticker;
@@ -163,7 +163,7 @@ namespace OpenRA.Mods.Mw.Traits
 			{
 				if (InUse.Contains(actor))
 				{
-					InUse.Remove(actor);
+                    InUse.Remove(actor);
 					actor.CancelActivity();
 					return true;
 				}
@@ -253,8 +253,14 @@ namespace OpenRA.Mods.Mw.Traits
 								actor.QueueActivity(move.MoveTo(exit, 5));
 							}
 
-							//what happens when actor or barracks dies
-							actor.QueueActivity(new CallFunc(() =>
+                            if (!actor.IsDead && actor.IsInWorld && actor.Info.HasTraitInfo<IsPeasantInfo>())
+                            {
+                                var peas = actor.TraitsImplementing<IsPeasant>().FirstOrDefault();
+                                peas.setWroking();
+                            }
+
+                            //what happens when actor or barracks dies
+                            actor.QueueActivity(new CallFunc(() =>
 							{
 	
 								if (StillValid(actor, self))
@@ -278,7 +284,7 @@ namespace OpenRA.Mods.Mw.Traits
 	
 									if (!self.IsInWorld || self.IsDead)
 									{
-										return;
+                                        return;
 									}
 									//if not continue
 									alreadyReached++;
@@ -306,5 +312,22 @@ namespace OpenRA.Mods.Mw.Traits
 			return true;
 		}
 
-	}
+        public void RemovedFromWorld(Actor self)
+        {
+            if (!self.Owner.NonCombatant && self.Owner.WinState != WinState.Lost && self.Owner.PlayerActor.Info.HasTraitInfo<PlayerCivilizationInfo>())
+            {
+                if (InUse.Any())
+                {
+                    foreach (var var in InUse)
+                    {
+                        if (!var.IsDead && var.IsInWorld && var.Info.HasTraitInfo<IsPeasantInfo>())
+                        {
+                            var.Trait<IsPeasant>().setPeasant();
+                        }
+                    }
+                }
+            }
+        }
+
+    }
 }

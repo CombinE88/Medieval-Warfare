@@ -1151,38 +1151,48 @@ windmill:
 	idle: windmill
 		Length: 20
 		Tick: 100
+		Offset: 0,-5
 	damaged-idle: windmilld
 		Length: 20
 		Tick: 100
+        Offset: 0,-5
 	dead: windmill
 		Tick: 800
 		Start: 21
+        Offset: 0,-5
 	make: windmillmake
 		Length: *
 		Tick: 80
+        Offset: 0,-5
 	bib: bib3
 		UseTilesetExtension: true
 		Length: *
 	icon: winmillicon.shp
 		AddExtension: False
 	make1: windmillmake
+		Start: 0
+		ZOffset: -25
+        Offset: 0,-5
+	make2: windmillmake
+		Start: 1
+		ZOffset: -25
+        Offset: 0,-5
+	make3: windmillmake
+		Start: 2
+		ZOffset: -25
+        Offset: 0,-5
+	make4: windmillmake
+		Start: 3
+		ZOffset: -25
+        Offset: 0,-5
+	make5: windmillmake
+		Start: 4
+		ZOffset: -25
+        Offset: 0,-5
+	make6: windmillmake
 		Start: 5
 		ZOffset: -25
-	make2: windmillmake
-		Start: 10
-		ZOffset: -25
-	make3: windmillmake
-		Start: 15
-		ZOffset: -25
-	make4: windmillmake
-		Start: 20
-		ZOffset: -25
-	make5: windmillmake
-		Start: 25
-		ZOffset: -25
-	make6: windmillmake
-		Start: 30
-		ZOffset: -25
+        Offset: 0,-5
         
 nodmill:
 	Inherits: ^scaffold

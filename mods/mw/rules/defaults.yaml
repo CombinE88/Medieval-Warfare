@@ -18,7 +18,7 @@
 		Modifier: 133
 	GivesExperienceMultiplier@GRIM:
 		RequiresCondition: grimactive
-		Modifier: 0
+		Modifier: 10
 	WithColoredOverlay@GRIM:
 		Palette: disabled
 		RequiresCondition: grimactive
@@ -1489,13 +1489,13 @@
 		RequiresCondition: snaketrap >= 4
 		DamageTypes: PoisonDeath	 
 	SpeedMultiplier@SNAKES:
-		Modifier: 0
+		Modifier: 10
 		RequiresCondition: snaketrap
 	WithIdleOverlay@SNAKES:
 		Sequence: stunned
 		RequiresCondition: snaketrap
 	RangeMultiplier:
-		Modifier: 0
+		Modifier: 10
 		RequiresCondition: snaketrap
 	HitShape:
 		Type: Circle
@@ -1780,7 +1780,7 @@
 		RequiresCondition: snaketrap
 		DamageTypes: PoisonDeath
 	SpeedMultiplier@SNAKES:
-		Modifier: 0
+		Modifier: 10
 		RequiresCondition: snaketrap
 	WithIdleOverlay@SNAKES:
 		Sequence: stunned
@@ -2046,7 +2046,7 @@
 		RequiresCondition: snaketrap
 		DamageTypes: PoisonDeath
 	SpeedMultiplier@SNAKES:
-		Modifier: 0
+		Modifier: 10
 		RequiresCondition: snaketrap
 	WithIdleOverlay@SNAKES:
 		Sequence: stunned
@@ -2109,7 +2109,7 @@
 		RequiresCondition: snaketrap
 		DamageTypes: PoisonDeath
 	SpeedMultiplier@SNAKES:
-		Modifier: 0
+		Modifier: 10
 		RequiresCondition: snaketrap
 	WithIdleOverlay@SNAKES:
 		Sequence: stunned
@@ -2160,7 +2160,7 @@
 		RequiresCondition: snaketrap
 		DamageTypes: PoisonDeath
 	SpeedMultiplier@SNAKES:
-		Modifier: 0
+		Modifier: 10
 		RequiresCondition: snaketrap
 	WithIdleOverlay@SNAKES:
 		Sequence: stunned

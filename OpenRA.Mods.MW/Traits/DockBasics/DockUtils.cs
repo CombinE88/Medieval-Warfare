@@ -10,6 +10,7 @@
 #endregion
 
 using System.Drawing;
+using MW.Mods.Common.Traits;
 using OpenRA.Activities;
 using OpenRA.Mods.Common.Traits;
 using OpenRA.Traits;
@@ -29,6 +30,7 @@ namespace OpenRA.Mods.Common.Activities
 					// Let's reload. The assumption here is that for aircrafts, there are no waiting docks.
 					System.Diagnostics.Debug.Assert(requester is ReturnToBase, "Wrong parameter for landing");
 					var rtb = requester as ReturnToBase;
+					// return rtb.LandingProcedure(client, dock); does not work for me
 				}
 
 				var angle = dock.Info.DockAngle;

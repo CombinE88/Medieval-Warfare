@@ -10,6 +10,7 @@ Player:
 			Barracks: barrnew.scaff,handnew.scaff,sulbarr.scaff
 			VehiclesFactory: stall.scaff,nodstall.scaff,sulmystic.scaff
 			Production: barrnew,handnew,stall,nodstall,sulmystic,sulbarr,barrnew.scaff,handnew.scaff,stall.scaff,nodstall.scaff,sulmystic.scaff,sulbarr.scaff
+            Defenses: gtwnew.scaff, gunnew.scaff, tribu.scaff, bato.scaff, sulgtw.scaff, sulgtw.ENABLER
 		UnitsCommonNames:
 			Mcv: mcvnew
 			ExcludeFromSquads: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, mwwand7, mwwand8, mwwand8, mwcivcom, noble1, noble2, noble3, noble4, noble5, mwconst1, mwconst2, mwconst3, mwconst4, mwconst5, mwconst6, mwconst7, mwchick1, hunter, transporter, engeneer, sulturnxl
@@ -78,9 +79,9 @@ Player:
             lodge.scaff: 200%
             sullodge.scaff: 200%
 			procnew.scaff: 200%
-			zeroproc.scaff: 200%
-			sulmill.scaff: 200%
-            nodproc.scaff: 200%
+			#zeroproc.scaff: 200%
+			#sulmill.scaff: 200%
+            #nodproc.scaff: 200%
             sulcnshmbr.scaff: 100%
             #
             #gtwnew.scaff: 10%

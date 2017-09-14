@@ -1,3 +1,5 @@
+
+
 KING:
 	Inherits: ^Knight
 	Inherits@AUTOTARGET: ^AutoTargetAll
@@ -302,6 +304,8 @@ E1NEW:
 		WanderMoveRadius: 2
 		MinMoveDelay: 50
 		MaxMoveDelay: 250
+	Targetable@CombatRole:
+		TargetTypes: Light
 
 E2NEW:
 	Inherits: ^Knight
@@ -342,6 +346,14 @@ E2NEW:
 	PersonValued:
 		ActorCount: 1
 		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
+	Targetable@CombatRole:
+		TargetTypes: Light
+	AutoTargetPriority@Counter1:
+		ValidTargets: LightCavalry, Defenses
+		Priority: 5
+	AutoTargetPriority@Counter2:
+		ValidTargets: RegularCavalry, HeavyCavalry, Defenses
+		Priority: 4
 		
 E2NEWV2:
 	Inherits: ^Knight
@@ -382,6 +394,14 @@ E2NEWV2:
 	PersonValued:
 		ActorCount: 1
 		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
+	Targetable@CombatRole:
+		TargetTypes: Light
+	AutoTargetPriority@Counter1:
+		ValidTargets: LightCavalry, Defenses
+		Priority: 5
+	AutoTargetPriority@Counter2:
+		ValidTargets: RegularCavalry, HeavyCavalry, Defenses
+		Priority: 4
 		
 E3NEW:
 	Inherits: ^Knight
@@ -418,6 +438,11 @@ E3NEW:
 	PersonValued:
 		ActorCount: 1
 		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
+	Targetable@CombatRole:
+		TargetTypes: Heavy
+	AutoTargetPriority@Counter:
+		ValidTargets: Light, Heavy, Ranged, Support
+		Priority: 4
 		
 E3NEWV2:
 	Inherits: ^Knight
@@ -454,63 +479,12 @@ E3NEWV2:
 	PersonValued:
 		ActorCount: 1
 		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
+	Targetable@CombatRole:
+		TargetTypes: Heavy
+	AutoTargetPriority@Counter:
+		ValidTargets: Light, Heavy, Ranged, Support
+		Priority: 4
 		
-BARBAR:
-	Inherits: ^Knight
-	Inherits@AUTOTARGET: ^AutoTargetGround
-	Valued:
-		Cost: 250
-	Tooltip:
-		Name: Bandit
-	Mobile:
-		Speed: 75
-	Buildable:
-		Description: Very tough and fast fighter.\n  Strong vs Infantry\n  Weak vs Cavalry \nCan cut down trees.\n\nTrains: 1 Peasant\n
-		IconPalette: raicon
-		BuildPaletteOrder: 30
-		Queue: MInfantry.Bandit
-		BuildDuration: 360
-	Health:
-		HP: 15000
-	Armament:
-		Weapon: broadswordmongol
-	AttackFrontal:
-	AutoTarget:
-		ScanRadius: 4
-		InitialStance: AttackAnything
-	RenderSprites:
-		Image: mongol
-		PlayerPalette: raplayer
-	WithInfantryBody:
-		DefaultAttackSequence: shoot
-	Armor:
-		Type: Heavy
-		
-BARBAR2:
-	Inherits: ^Knight
-	Inherits@AUTOTARGET: ^AutoTargetGround
-	Valued:
-		Cost: 450
-	Tooltip:
-		Name: Bandit
-	Mobile:
-		Speed: 65
-	Health:
-		HP: 10000
-	Armament:
-		Weapon: DaggerMongol
-		LocalOffset: 541,50,456
-	AttackFrontal:
-	AutoTarget:
-		ScanRadius: 5
-		InitialStance: AttackAnything
-	RenderSprites:
-		Image: mongolknife
-		PlayerPalette: raplayer
-	WithInfantryBody:
-		DefaultAttackSequence: shoot
-	Armor:
-		Type: Heavy
 		
 E9NEW:
 	Inherits: ^Knight
@@ -555,6 +529,11 @@ E9NEW:
 	PersonValued:
 		ActorCount: 1
 		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
+	Targetable@CombatRole:
+		TargetTypes: Ranged
+	AutoTargetPriority@Counter1:
+		ValidTargets: Light, Heavy, Ranged, Spectral, Defenses
+		Priority: 4
 		
 E4NEW:
 	Inherits: ^Knight
@@ -618,6 +597,11 @@ E4NEW:
 	PersonValued:
 		ActorCount: 1
 		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
+	Targetable@CombatRole:
+		TargetTypes: Ranged
+	AutoTargetPriority@Counter1:
+		ValidTargets: Light, Ranged, LightCavalry, Support, Flying
+		Priority: 4
 		
 		
 E4NEWV2:
@@ -679,6 +663,11 @@ E4NEWV2:
 	PersonValued:
 		ActorCount: 1
 		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
+	Targetable@CombatRole:
+		TargetTypes: Ranged
+	AutoTargetPriority@Counter1:
+		ValidTargets: Light, Ranged, LightCavalry, Support, Flying
+		Priority: 4
 		
 		
 E5NEW:
@@ -723,6 +712,11 @@ E5NEW:
 	PersonValued:
 		ActorCount: 1
 		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
+	Targetable@CombatRole:
+		TargetTypes: Ranged
+	AutoTargetPriority@Counter1:
+		ValidTargets: Light, Ranged, LightCavalry, Support
+		Priority: 4
 
 RMBONEW:
 	Inherits: ^Knight
@@ -769,6 +763,11 @@ RMBONEW:
 	PersonValued:
 		ActorCount: 1
 		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
+	Targetable@CombatRole:
+		TargetTypes: Ranged, Heavy
+	AutoTargetPriority@Counter1:
+		ValidTargets: Light, Ranged, LightCavalry, Support, RegularCavalry, Heavy, Spectral
+		Priority: 4
 		
 NEWCOMM:
 	Inherits: ^Knight
@@ -822,6 +821,11 @@ NEWCOMM:
 	PersonValued:
 		ActorCount: 1
 		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
+	Targetable@CombatRole:
+		TargetTypes: Heavy
+	AutoTargetPriority@Counter1:
+		ValidTargets: Light, Ranged, Support, Heavy, Spectral, Defenses
+		Priority: 4
 
 ASSASSIN:
 	Inherits: ^Knight
@@ -882,7 +886,9 @@ ASSASSIN:
 	PersonValued:
 		ActorCount: 1
 		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
-
+	Targetable@CombatRole:
+		TargetTypes: Light
+        
 E8FARMER:
 	Inherits: ^Knight
 	BodyOrientation:

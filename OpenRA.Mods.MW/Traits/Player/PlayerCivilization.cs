@@ -133,7 +133,7 @@ namespace OpenRA.Traits
 		
 		public void SpawnStoredPeasant(World world)
 		{
-			if (hiddenpeasants > 0 && FreePopulation-hiddenpeasants < info.AlivePeasants)
+			if (hiddenpeasants > 0 && Peasantpopulationvar - hiddenpeasants < info.AlivePeasants)
 			{
 				var SpwanPosition = RandomBuildingWithLivingspace(world);
 				if (SpwanPosition != null)
@@ -180,9 +180,6 @@ namespace OpenRA.Traits
 			if (self.Owner.Faction.InternalName != "ded")
 			{
 				FreePopulation = (MaxLivingspacevar) - (WorkerPopulationvar + Peasantpopulationvar);
-			}
-			{
-				FreePopulation = MaxLivingspacevar - WorkerPopulationvar;
 			}
 
 			if (self.Owner.Faction.InternalName != "ded")
