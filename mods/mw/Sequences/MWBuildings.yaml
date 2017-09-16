@@ -146,7 +146,27 @@ missnew:
 			SNOW: TEMPERAT
 		Length: *
 		Offset: 0,1
-	icon: missicnh		
+	icon: missicnh	
+
+tech1:
+	idle: techbuilding1
+	damaged-idle: techbuilding1
+		Start: 1
+	bib: mwbib2
+		UseTilesetExtension: true
+		Length: *
+	turret: techbuilding1turret
+		Facings: 32
+	muzzle: gunfire2
+		Length: *
+    
+tech1.husk:
+	idle: techbuilding1
+		Start: 2
+	bib: mwbib2
+		UseTilesetExtension: true
+		Length: *
+	
 bacamp:
 	idle: bacamp
 	damaged-idle: bacamp

@@ -44,6 +44,7 @@ Packages:
 	mw|bits/terrain/Desert
 	mw|bits/Undead
 	mw|bits/Undead/voice
+	mw|bits/Trees
 
 MapFolders:
 	mw|maps: System

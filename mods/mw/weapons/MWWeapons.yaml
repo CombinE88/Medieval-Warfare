@@ -754,10 +754,17 @@ Claymore:
 Sledgehammer:
 	ReloadDelay: 60
 	Range: 1c800
-	ValidTargets: Ground, Trees
+	ValidTargets: Ground, Trees, Juggernaut
 	InvalidTargets: Air
 	Report: jugg-attack.aud
 	Projectile: GravityBomb
+	Warhead@SelfParalyze: GrantSelfCondition
+		Duration: 50
+		Condition: Swinging
+		ValidStances: Ally
+		AffectsParent: true
+		InvalidTargets: Air
+		ValidTargets: Juggernaut
 	Warhead@1Eff: CreateEffect
 		ImpactSounds: Sword02.aud, Sword03.aud, Sword04.aud, Sword06.aud, Sword07.aud
 		Delay: 10
@@ -1911,6 +1918,44 @@ CannonBoulder:
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
 		Damage: 9500
+		ValidTargets: Ground
+		InvalidTargets: Air
+		Versus:
+			Leather: 20
+			Light: 20
+			Heavy: 20
+			Concrete: 35
+			Knight: 65
+			LightCavalry: 100
+			MediumCavalry: 100
+			HeavyCavalry: 100
+			HeavyBuilding: 45
+			Spectral: 75
+		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+	Warhead@2Smu: LeaveSmudge
+		SmudgeType: Crater
+		InvalidTargets: Vehicle, Structure, Wall, Husk, Trees, Creep
+	Warhead@3Eff: CreateEffect
+		Explosions: smokey
+		ImpactSounds: tnkfire2.aud, tnkfire3.aud, tnkfire4.aud, tnkfire6.aud
+        
+SiegeBoulderTech:
+	ReloadDelay: 40
+	Range: 15c0
+	MinRange: 4c0
+	Report: tnkfire2.aud, tnkfire3.aud, tnkfire4.aud, tnkfire6.aud
+	ValidTargets: Ground
+	InvalidTargets: Air
+	Projectile: Bullet
+		Image: cantowboulder
+		Speed: 300
+		Blockable: false
+		LaunchAngle: 86
+		Palette: ra
+		Inaccuracy: 0c256
+	Warhead@1Dam: SpreadDamage
+		Spread: 512
+		Damage: 18500
 		ValidTargets: Ground
 		InvalidTargets: Air
 		Versus:

@@ -39,7 +39,10 @@ tc04:
 		UseTilesetExtension: true
 		TilesetOverrides:
 			DESERT: TEMPERAT
-	idle:
+	idle: maple4
+		Length: *
+		Tick: 120
+		Offset: 16,2 
 	damaged-idle:
 		Start: 1
 
@@ -53,14 +56,17 @@ tc04.husk:
 	dead:
 		Start: 2
 		Length: 8
-		Tick: 80
+		Tick:120
 
 tc05:
 	Defaults:
 		UseTilesetExtension: true
 		TilesetOverrides:
 			DESERT: TEMPERAT
-	idle:
+	idle: maple2
+		Length: *
+		Tick: 120
+		Offset: 16,19 
 	damaged-idle:
 		Start: 1
 
@@ -74,7 +80,7 @@ tc05.husk:
 	dead:
 		Start: 2
 		Length: 8
-		Tick: 80
+		Tick:120
 
 tc03:
 	Defaults:
@@ -93,14 +99,17 @@ tc03.husk:
 	dead:
 		Start: 2
 		Length: 8
-		Tick: 80
+		Tick:120
 
 tc02:
 	Defaults:
 		UseTilesetExtension: true
 		TilesetOverrides:
 			DESERT: TEMPERAT
-	idle:
+	idle: maple3
+		Length: *
+		Tick: 120
+		Offset: 16,19 
 
 tc02.husk:
 	Defaults: tc02
@@ -112,14 +121,17 @@ tc02.husk:
 	dead:
 		Start: 2
 		Length: 8
-		Tick: 80
+		Tick:120
 
 tc01:
 	Defaults:
 		UseTilesetExtension: true
 		TilesetOverrides:
 			DESERT: TEMPERAT
-	idle:
+	idle: maple1
+		Length: *
+		Tick:120
+		Offset: 16,19 
 
 tc01.husk:
 	Defaults: tc01
@@ -131,12 +143,40 @@ tc01.husk:
 	dead:
 		Start: 2
 		Length: 8
-		Tick: 80
+		Tick:120
 
 t18:
 	Defaults:
 		AddExtension: false
-	idle: t18.des
+	idle: destree1.des
+		Length: *
+		Tick: 120
+		Offset: 4,13 
+        
+t18a:
+	Defaults:
+		AddExtension: false
+	idle: destree2.des
+		Length: *
+		Tick: 120
+		Offset: 12,6
+        
+t18b:
+	Defaults:
+		AddExtension: false
+	idle: destree3.des
+		Length: *
+		Tick: 120
+		Offset: 4,7 
+        
+t18c:
+	Defaults:
+		AddExtension: false
+	idle: destree4.des
+		Length: *
+		Tick: 120
+		Offset: 12,16 
+
 
 t18.husk:
 	Defaults: t18
@@ -146,14 +186,27 @@ t18.husk:
 	dead: t18.des
 		Start: 2
 		Length: 8
-		Tick: 80
+		Tick:120
+        
+t17a:
+	Defaults:
+		UseTilesetExtension: true
+		TilesetOverrides:
+			DESERT: TEMPERAT
+	idle: tree9
+		Length: *
+		Tick:120
+		Offset: 10,10 
 
 t17:
 	Defaults:
 		UseTilesetExtension: true
 		TilesetOverrides:
 			DESERT: TEMPERAT
-	idle:
+	idle: tree8
+		Length: *
+		Tick:120
+		Offset: 14,14 
 
 t17.husk:
 	Defaults: t17
@@ -165,14 +218,17 @@ t17.husk:
 	dead:
 		Start: 2
 		Length: 8
-		Tick: 80
+		Tick:120
 
 t16:
 	Defaults:
 		UseTilesetExtension: true
 		TilesetOverrides:
 			DESERT: TEMPERAT
-	idle:
+	idle: tree7
+		Length: *
+		Tick:120
+		Offset: 14,10 
 
 t16.husk:
 	Defaults: t16
@@ -184,14 +240,17 @@ t16.husk:
 	dead:
 		Start: 2
 		Length: 8
-		Tick: 80
+		Tick:120
 
 t15:
 	Defaults:
 		UseTilesetExtension: true
 		TilesetOverrides:
 			DESERT: TEMPERAT
-	idle:
+	idle: tree6
+		Length: *
+		Tick:120
+		Offset: 10,14 
 
 t15.husk:
 	Defaults: t15
@@ -203,14 +262,17 @@ t15.husk:
 	dead:
 		Start: 2
 		Length: 8
-		Tick: 80
+		Tick:120
 
 t14:
 	Defaults:
 		UseTilesetExtension: true
 		TilesetOverrides:
 			DESERT: TEMPERAT
-	idle:
+	idle: tree5
+		Length: *
+		Tick:120
+		Offset: 10,12 
 
 t14.husk:
 	Defaults: t14
@@ -222,14 +284,17 @@ t14.husk:
 	dead:
 		Start: 2
 		Length: 8
-		Tick: 80
+		Tick:120
 
 t13:
 	Defaults:
 		UseTilesetExtension: true
 		TilesetOverrides:
 			DESERT: TEMPERAT
-	idle:
+	idle: tree4
+		Length: *
+		Tick:120
+		Offset: 8,13        
 
 t13.husk:
 	Defaults: t13
@@ -241,14 +306,17 @@ t13.husk:
 	dead:
 		Start: 2
 		Length: 8
-		Tick: 80
+		Tick:120
 
 t12:
 	Defaults:
 		UseTilesetExtension: true
 		TilesetOverrides:
 			DESERT: TEMPERAT
-	idle:
+	idle: tree3
+		Length: *
+		Tick:120
+		Offset: 15,10 
 
 t12.husk:
 	Defaults: t12
@@ -260,14 +328,17 @@ t12.husk:
 	dead:
 		Start: 2
 		Length: 8
-		Tick: 80
+		Tick:120
 
 t11:
 	Defaults:
 		UseTilesetExtension: true
 		TilesetOverrides:
 			DESERT: TEMPERAT
-	idle:
+	idle: tree2
+		Length: *
+		Tick:120
+		Offset: 10,7 
 
 t11.husk:
 	Defaults: t11
@@ -279,14 +350,17 @@ t11.husk:
 	dead:
 		Start: 2
 		Length: 8
-		Tick: 80
+		Tick:120
 
 t10:
 	Defaults:
 		UseTilesetExtension: true
 		TilesetOverrides:
 			DESERT: TEMPERAT
-	idle:
+	idle: tree1
+		Length: *
+		Tick:120
+		Offset: 16,14 
 
 t10.husk:
 	Defaults: t10
@@ -298,7 +372,7 @@ t10.husk:
 	dead:
 		Start: 2
 		Length: 8
-		Tick: 80
+		Tick:120
 
 t09:
 	Defaults:
@@ -313,12 +387,15 @@ t09.husk:
 	dead: t09.des
 		Start: 2
 		Length: 8
-		Tick: 80
+		Tick:120
 
 t08:
 	Defaults:
 		UseTilesetExtension: true
-	idle:
+	idle: tree10
+		Length: *
+		Tick:120
+		Offset: 10,14
 
 t08.husk:
 	Defaults: t08
@@ -330,14 +407,17 @@ t08.husk:
 	dead:
 		Start: 2
 		Length: 8
-		Tick: 80
+		Tick:120
 
 t07:
 	Defaults:
 		UseTilesetExtension: true
 		TilesetOverrides:
 			DESERT: TEMPERAT
-	idle:
+	idle: tree11
+		Length: *
+		Tick:120
+		Offset: 5,17 
 
 t07.husk:
 	Defaults: t07
@@ -349,14 +429,36 @@ t07.husk:
 	dead:
 		Start: 2
 		Length: 8
-		Tick: 80
+		Tick:120
+        
+t06b:
+	Defaults:
+		UseTilesetExtension: true
+		TilesetOverrides:
+			DESERT: TEMPERAT
+	idle: tanne7
+		Length: *
+		Tick:120
+		Offset: 17,3         
+t06a:
+	Defaults:
+		UseTilesetExtension: true
+		TilesetOverrides:
+			DESERT: TEMPERAT
+	idle: tanne6
+		Length: *
+		Tick:120
+		Offset: 12,8 
 
 t06:
 	Defaults:
 		UseTilesetExtension: true
 		TilesetOverrides:
 			DESERT: TEMPERAT
-	idle:
+	idle: tanne5
+		Length: *
+		Tick:120
+		Offset: 16,19 
 
 t06.husk:
 	Defaults: t06
@@ -368,14 +470,17 @@ t06.husk:
 	dead:
 		Start: 2
 		Length: 8
-		Tick: 80
+		Tick:120
 
 t05:
 	Defaults:
 		UseTilesetExtension: true
 		TilesetOverrides:
 			DESERT: TEMPERAT
-	idle:
+	idle: tanne4
+		Length: *
+		Tick:120
+		Offset: 10,6 
 
 t05.husk:
 	Defaults: t05
@@ -387,7 +492,7 @@ t05.husk:
 	dead:
 		Start: 2
 		Length: 8
-		Tick: 80
+		Tick:120
 
 t04:
 	Defaults:
@@ -402,14 +507,17 @@ t04.husk:
 	dead: t04.des
 		Start: 2
 		Length: 8
-		Tick: 80
+		Tick:120
 
 t03:
 	Defaults:
 		UseTilesetExtension: true
 		TilesetOverrides:
 			DESERT: TEMPERAT
-	idle:
+	idle: tanne3
+		Length: *
+		Tick:120
+		Offset: 16,12 
 
 t03.husk:
 	Defaults: t03
@@ -421,14 +529,17 @@ t03.husk:
 	dead:
 		Start: 2
 		Length: 8
-		Tick: 80
+		Tick:120
 
 t02:
 	Defaults:
 		UseTilesetExtension: true
 		TilesetOverrides:
 			DESERT: TEMPERAT
-	idle:
+	idle: tanne2
+		Length: *
+		Tick:120
+		Offset: 6,7 
 
 t02.husk:
 	Defaults: t02
@@ -440,14 +551,17 @@ t02.husk:
 	dead:
 		Start: 2
 		Length: 8
-		Tick: 80
+		Tick:120
 
 t01:
 	Defaults:
 		UseTilesetExtension: true
 		TilesetOverrides:
 			DESERT: TEMPERAT
-	idle:
+	idle: tanne1
+		Length: *
+		Tick:120
+		Offset: 12,18 
 
 t01.husk:
 	Defaults: t01
@@ -459,7 +573,7 @@ t01.husk:
 	dead:
 		Start: 2
 		Length: 8
-		Tick: 80
+		Tick:120
 
 v01:
 	Defaults:

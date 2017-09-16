@@ -787,6 +787,7 @@ NEWCOMM:
 		BuildDuration: 700
 	Mobile:
 		Speed: 50
+		RequiresCondition: !Swinging
 	Health:
 		HP: 39000
 	Armament@1:
@@ -826,6 +827,10 @@ NEWCOMM:
 	AutoTargetPriority@Counter1:
 		ValidTargets: Light, Ranged, Support, Heavy, Spectral, Defenses
 		Priority: 4
+	Targetable@Paralyze:
+		TargetTypes: Juggernaut
+	ExternalCondition@Juggernaut:
+		Condition: Swinging
 
 ASSASSIN:
 	Inherits: ^Knight

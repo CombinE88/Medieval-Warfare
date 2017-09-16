@@ -2255,7 +2255,83 @@ MISS:
 		Pieces: 1, 2
 		Range: 1c0, 5c0
 		
-
+TECH1:
+	Inherits: ^TechBuilding	
+	Inherits@AUTOTARGET: ^AutoTargetGround
+	Inherits@Hitshape: ^3x2Shape
+	Building:
+		Footprint: xxx xxx ===
+		Dimensions: 3,3
+		LocalCenterOffset: 0,-512,0
+	RenderSprites:
+		Image: tech1
+		PlayerPalette: raplayer
+	Capturable:
+	Tooltip:
+		Name: Mortar Station
+	RevealsShroud:
+		Range: 12c0
+	Health:
+		HP: 300000
+	RepairableBuilding:
+	EngineerRepairable:
+	CaptureNotification:
+		Notification: CivilianBuildingCaptured
+	ThrowsShrapnel@LARGE:
+		Weapons: LargeWood1, LargeWood1, LargeStone1, LargeStone1
+		Pieces: 1, 2
+		Range: 1c0, 5c0
+	SpawnActorOnDeath:
+		Actor: TECH1.Husk
+		OwnerType: InternalName
+		InternalOwner: Neutral
+	Targetable@CombatRole:
+		TargetTypes: Defenses
+	AttackTurreted:
+	Armament:
+		Weapon: SiegeBoulderTech
+		LocalOffset: 618,0,310
+		Turret: primary
+		MuzzleSequence: muzzle
+	WithSpriteTurret: 
+		Sequence: turret
+		Turret: primary
+	Turreted:
+		Turret: primary
+		TurnSpeed: 5
+		Offset: 1425,567,0
+	WithMuzzleOverlay:
+	AutoTarget:
+	RenderRangeCircle:
+	WithBuildingBib:
+		
+TECH1.Husk:
+	Inherits:^TechBuilding
+	Inherits@Hitshape: ^3x2Shape
+	Building:
+		Footprint: xxx xxx ===
+		Dimensions: 3,3
+		LocalCenterOffset: 0,-512,0
+	Targetable:
+		RequiresForceFire: yes
+	-Selectable:
+	RenderSprites:
+		Image: tech1.husk
+		PlayerPalette: raplayer
+	TransformOnCapture:
+		ForceHealthPercentage: 25
+		IntoActor: tech1
+	Capturable:
+		AllowAllies: True
+		CaptureThreshold: 101
+	CaptureNotification:
+		Notification: CivilianBuildingCaptured
+	Health:
+		HP: 300000
+	Tooltip:
+		Name: Mortar Station (Destroyed)
+	WithBuildingBib:
+        
 ANYARMORY:
 	AlwaysVisible:
 	Tooltip:
