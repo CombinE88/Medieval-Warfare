@@ -1,3 +1,7 @@
+Tree:
+	Voices:
+		Die: treefell
+
 GenericVoice:
 	Variants:
 		nod: .v01,.v03

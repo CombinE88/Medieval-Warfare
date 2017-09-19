@@ -18,7 +18,7 @@ SULNUKE.SCAFF:
 		Prerequisites: factnew
 		Description: Generates livingspace. Livingspace increases over time by generating peasants.\nCan hold up to 6 peasants, spawntime depends on number of shacks and large huts.  
 		Queue: MBuilding.SUL
-		BuildDuration: 50
+		BuildDuration: 30
 	Health:
 		HP: 25000
 	RevealsShroud:
@@ -96,7 +96,7 @@ SULLODGE.SCAFF:
 		Description: A hunter can go out and hunt down animals from here.\n\n\n
 		Queue: MResources.SUL
 		BuildDuration: 25
-		Adjacent: 10
+		Adjacent: 15
 	Health:
 		HP: 10000
 	RevealsShroud:
@@ -132,7 +132,7 @@ SULLODGE.SCAFF:
 		DamageTypes: FinishedDeath
 	WithIdleOverlay@base1:
 		Sequence: make1
-		RequiresCondition: Construct > 3 && Construct < 6
+		RequiresCondition: Construct >= 3 && Construct < 6
 	WithIdleOverlay@base2:
 		Sequence: make2
 		RequiresCondition: Construct >= 6 && Construct < 10
@@ -141,7 +141,7 @@ SULLODGE.SCAFF:
 		RequiresCondition: Construct >= 10 && Construct < 16
 	WithIdleOverlay@base4:
 		Sequence: make4
-		RequiresCondition: Construct > 16	 
+		RequiresCondition: Construct >= 16	 
     WithRangeCircle:
         Type: HunterLodge
         UsePlayerColor: true
@@ -179,7 +179,7 @@ SULMILL.SCAFF:
 		Prerequisites: anypower
 		Description: Provides basic resource gathering for Crops and Grain.\n Comes with 3 farmers.\n Can only operate up to 6 farmers at once.\n\n\n\n
 		Queue: MResources.SUL
-		BuildDuration: 75
+		BuildDuration: 70
 	Health:
 		HP: 40000
 	RevealsShroud:
@@ -254,7 +254,7 @@ SULNUK2.SCAFF:
 		Prerequisites: anyhq
 		Queue: MBuilding.SUL
 		Description: Provides more livingspace. Livingspace increases over time by generating peasants.\nCan hold up to 11 peasants, spawntime depends on number of shacks and large huts. \ncheaper than the standard Shack.\n\n\n\n
-		BuildDuration: 75
+		BuildDuration: 50
 	Health:
 		HP: 50000
 	RevealsShroud:
@@ -327,7 +327,7 @@ SULBARR.SCAFF:
 		Prerequisites: anypower
 		Description: Trains Infantry only\n\n\n\n
 		Queue: MMilitary.SUL
-		BuildDuration: 75
+		BuildDuration: 50
 	Health:
 		HP: 32500
 	RevealsShroud:
@@ -401,7 +401,7 @@ SULMYSTIC.SCAFF:
 		Prerequisites: proc
 		Description: Trains Magical and Mystical Units\n\n\n\n
 		Queue: MMilitary.SUL
-		BuildDuration: 100
+		BuildDuration: 75
 	Health:
 		HP: 42500
 	RevealsShroud:
@@ -478,7 +478,7 @@ SULCASTLE.SCAFF:
 		Prerequisites: proc
 		Description: Can unlock Superweapons.\n Can unlock advanced tech.\nCan hold up to 4 nobles.\n\n\n\n
 		Queue: MTech.SUL
-		BuildDuration: 100
+		BuildDuration: 60
 	Health:
 		HP: 42500
 	RevealsShroud:
@@ -551,7 +551,7 @@ SULFIX.SCAFF:
 		Prerequisites: proc
 		Description: Provides Siege weapons construction.\n\n\n\n
 		Queue: MMilitary.SUL
-		BuildDuration: 100
+		BuildDuration: 60
 	Health:
 		HP: 35000
 	RevealsShroud:
@@ -629,7 +629,7 @@ SULGTW.SCAFF:
 		Queue: MMilitary.SUL
 		BuildDurationModifier: 40
 		IconPalette: raicon
-		BuildDuration: 50
+		BuildDuration: 28
 	SpawnActorOnDeath@Finsihed:
 		Probability: 100
 		Actor: SULGTW
@@ -693,7 +693,7 @@ SULARRAY.SCAFF:
 		Prerequisites: barracks
 		Description: Provides 3 additional worker and 1 engineer.\n\n\n\n
 		Queue: MTech.SUL
-		BuildDuration: 50
+		BuildDuration: 45
 	Health:
 		HP: 40000
 	RevealsShroud:
@@ -766,7 +766,7 @@ SULHALL.SCAFF:
 		Prerequisites: anyarmory
 		Description: Attracts citizens to your town.\nNew Peasants will spawn faster.\n\n\n
 		Queue: MBuilding.SUL
-		BuildDuration: 125
+		BuildDuration: 100
 	Health:
 		HP: 60000
 	RevealsShroud:
@@ -839,7 +839,7 @@ SULMINARET.SCAFF:
 		Prerequisites: anyhq
 		Description: Attracts citizens to your town.\nNew Peasants will spawn faster.\n\n\n
 		Queue: MBuilding.SUL
-		BuildDuration: 75
+		BuildDuration: 60
 	Health:
 		HP: 30000
 	RevealsShroud:
@@ -914,7 +914,7 @@ SULCNSHMBR.SCAFF:
 		Prerequisites: proc, !sulcnshmbr
 		Description: Corn Chambers were meant to store corn for times when food was rare.\n  Generates a little bit of gold, when resources are gathered.\n  Limited to 1.\n\n
 		Queue: MResources.SUL
-		BuildDuration: 75
+		BuildDuration: 50
         BuildLimit: 1
 	Health:
 		HP: 60000
@@ -999,7 +999,7 @@ SULREF.SCAFF:
 		Prerequisites: sulcastle
 		Description: Processes raw ore and Gold into useable metal.\nGenerates more money than the windmill.\n\n\n\n
 		Queue: MResources.SUL
-		BuildDuration: 100
+		BuildDuration: 75
 	Health:
 		HP: 60000
 	RevealsShroud:

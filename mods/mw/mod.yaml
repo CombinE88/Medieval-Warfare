@@ -1,6 +1,6 @@
 Metadata:
 	Title: Medieval Warfare
-	Version: Playtest2-3
+	Version: Playtest26
 
 PackageFormats: Mix
 
@@ -45,6 +45,7 @@ Packages:
 	mw|bits/Undead
 	mw|bits/Undead/voice
 	mw|bits/Trees
+	mw|bits/Trees/Anim
 
 MapFolders:
 	mw|maps: System

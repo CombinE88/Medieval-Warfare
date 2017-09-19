@@ -147,7 +147,7 @@ missnew:
 		Length: *
 		Offset: 0,1
 	icon: missicnh	
-
+    
 tech1:
 	idle: techbuilding1
 	damaged-idle: techbuilding1
@@ -232,6 +232,33 @@ hqnew:
 	make7: radarnewmake
 		Start: 35
 		ZOffset: -25
+        
+ljackb:
+	Inherits: ^scaffold
+	idle: 
+		Start: 3
+		Offset: 0,-12
+	damaged-idle: 
+		Start: 4
+		Offset: 0,-12
+	make: 
+		Length: *
+		Tick: 80
+		Offset: 0,-12	
+	icon: ljackbicon.shp
+		AddExtension: False
+	make1: 
+		Start: 0
+		ZOffset: -25
+		Offset: 0,-12
+	make2: 
+		Start: 1
+		ZOffset: -25
+		Offset: 0,-12	
+	make3: 
+		Start: 2
+		ZOffset: -25
+		Offset: 0,-12	
 		
 tavern:
 	Inherits: ^scaffold

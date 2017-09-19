@@ -1305,10 +1305,6 @@ SULMILL:
 		PipColor: Yellow
 		PipCount: 5
 		Capacity: 1000
-	FreeActor@3:
-		Actor: GHOSTPROC
-		SpawnOffset: 0,0
-		Facing: 64
 	ProximityExternalCondition@KILL:
 		Range: 1c0
 		ValidStances: Ally
@@ -1844,7 +1840,7 @@ SULE6:
 	Selectable:
 		Priority: 7
 	Harvester:
-		DeliveryBuildings: zeroproc, ghostproc, sulmill
+		DeliveryBuildings: zeroproc, sulmill, nodproc
 		Resources: Crops, Grains, Wood, Goods, Lumber, Corn
 		PipCount: 2
 		Capacity: 7
@@ -1852,6 +1848,7 @@ SULE6:
 		BaleUnloadDelay: 5
 		SearchFromProcRadius: 25
 		SearchFromOrderRadius: 15
+		MaxUnloadQueue: 10
 	Selectable:
 		Bounds: 14,26,0,-6
 	SelectionDecorations:

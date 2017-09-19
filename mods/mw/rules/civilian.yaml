@@ -619,8 +619,8 @@ DEER01.Husk:
 	WithFacingSpriteBody:
 		StartSequence: die1
 		Sequence: body
-    LootableBody: 
-        LootTypes: DeadWildlife
+	LootableBody: 
+		LootTypes: DeadWildlife
 
 DEER02:
 	Inherits: ^MWWildlife

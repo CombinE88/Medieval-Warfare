@@ -185,8 +185,8 @@ World:
 	MapOptions:
 	MPStartLocations:
 	CreateMPPlayers:
-	LuaScript:
-		Scripts: Peasants.lua
+	#LuaScript:
+	#	Scripts: Peasants.lua
 	MPStartUnits@minimum:
 		Class: medieval
 		ClassName: Supply Wagon Only

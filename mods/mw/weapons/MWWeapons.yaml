@@ -240,75 +240,6 @@ WanderAttackWorkshop:
 			HeavyCavalry: 100
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
 
-WoodDeadLoot:
-	ValidTargets: LLumber
-    Projectile: InstantHit
-	Warhead@Loot: GrantExternalCondition
-		Range: 2c0
-		Duration: 650
-		ValidTargets: LLumber
-		ValidStances: Enemy, Neutral, Ally
-		Condition: TraderLoot
-		AffectsParent: True	 
-		
-		
-WanderAttackLumberShack:
-	ValidTargets: LumberShack
-	ReloadDelay: 1
-	Range: 1c800
-	Projectile: Bullet
-		Speed: 1c682
-	Warhead@1Dam: SpreadDamage
-		Spread: 0
-		Damage: 1
-		ValidTargets: LumberShack
-		Versus:
-			Leather: 100
-			Light: 100
-			Heavy: 100
-			Concrete: 100
-			Knight: 100
-			LightCavalry: 100
-			MediumCavalry: 100
-			HeavyCavalry: 100
-		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
-		
-LumberJackAxe:
-	ReloadDelay: 25
-	Range: 1c800
-	InvalidTargets: Wall
-	Report: chop1.aud, chop2.aud, chop3.aud
-	ValidTargets: LargeTree
-	Projectile: Bullet
-		Speed: 1c682
-	Warhead@1Dam: SpreadDamage
-		Spread: 75
-		Damage: 1600
-		ValidTargets: LargeTree
-		Versus:
-			Leather: 100
-			Light: 100
-			Heavy: 100
-			Concrete: 100
-			Knight: 100
-			LightCavalry: 100
-			MediumCavalry: 100
-			HeavyCavalry: 100
-		DamageTypes: Prone50Percent, TriggerProne, LumberDead
-		
-LumberGrantLootAttack:
-	ValidTargets: LumberShack
-	ReloadDelay: 18
-	Report: saw01.aud, saw02.aud, saw03.aud
-	Range: 1c712
-	Projectile: Bullet
-		Speed: 1c682
-	Warhead@Trade: GrantExternalCondition
-		ValidTargets: LumberShack
-		Range: 1c512
-		Duration: 250
-		Condition: BuildingLoot
-		ValidStances: Enemy, Neutral, Ally
 		
 WanderCommander:
 	ReloadDelay: 45
@@ -1940,7 +1871,7 @@ CannonBoulder:
 		ImpactSounds: tnkfire2.aud, tnkfire3.aud, tnkfire4.aud, tnkfire6.aud
         
 SiegeBoulderTech:
-	ReloadDelay: 40
+	ReloadDelay: 60
 	Range: 15c0
 	MinRange: 4c0
 	Report: tnkfire2.aud, tnkfire3.aud, tnkfire4.aud, tnkfire6.aud
@@ -1948,13 +1879,13 @@ SiegeBoulderTech:
 	InvalidTargets: Air
 	Projectile: Bullet
 		Image: cantowboulder
-		Speed: 300
+		Speed: 200
 		Blockable: false
-		LaunchAngle: 86
+		LaunchAngle: 106
 		Palette: ra
 		Inaccuracy: 0c256
 	Warhead@1Dam: SpreadDamage
-		Spread: 512
+		Spread: 1024
 		Damage: 18500
 		ValidTargets: Ground
 		InvalidTargets: Air
@@ -3297,6 +3228,134 @@ HunterUnload:
 			HeavyBuilding: 0
 			Spectral: 0
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+        
+        
+# Hunter
+
+#LumberJackAxe
+
+
+LumberJackAxe:
+	ReloadDelay: 25
+	Range: 1c800
+	InvalidTargets: Wall
+	Report: chop1.aud, chop2.aud, chop3.aud
+	ValidTargets: ChoppableTree
+	Projectile: Bullet
+		Speed: 1c682
+	Warhead@1Dam: SpreadDamage
+		Spread: 75
+		Damage: 2000
+		ValidTargets: ChoppableTree
+		Versus:
+			Leather: 100
+			Light: 100
+			Heavy: 100
+			Concrete: 100
+			Knight: 100
+			LightCavalry: 100
+			MediumCavalry: 100
+			HeavyCavalry: 100
+		DamageTypes: Prone50Percent, TriggerProne, LumberDead
+
+		
+LumbererGather:
+	ReloadDelay: 25
+	Range: 1c800
+	Report: chop1.aud, chop2.aud, chop3.aud
+	ValidTargets: Choptree
+	InvalidTargets: Air
+	Projectile: Bullet
+		Speed: 1c682
+	Warhead@GrantMonez: GrantSelfCondition
+		Duration: 30
+		Condition: DeerHunter
+		ValidStances: Ally
+		AffectsParent: true
+		InvalidTargets: Air
+		ValidTargets: Choptree, LLumber
+	Warhead@1Dam: SpreadDamage
+		Spread: 25
+		InvalidTargets: Air
+		ValidTargets: Choptree
+		Damage: 500
+		Versus:
+			Leather: 100
+			Light: 100
+			Heavy: 100
+			Concrete: 100
+			Knight: 100
+			LightCavalry: 100
+			MediumCavalry: 100
+			HeavyCavalry: 100
+			HeavyBuilding: 100
+			Spectral: 100
+		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+		
+        
+LumberGrantLootAttack:
+	ValidTargets: LumberShack
+	ReloadDelay: 18
+	Report: saw01.aud, saw02.aud, saw03.aud
+	Range: 1c712
+	Projectile: InstantHit
+	Warhead@Trade: GrantExternalCondition
+		ValidTargets: LumberShack
+		Range: 1c512
+		Duration: 250
+		Condition: BuildingLoot
+		ValidStances: Enemy, Neutral, Ally
+	Warhead@1Dam: SpreadDamage
+		Spread: 25
+		InvalidTargets: Wall, Air
+		ValidTargets: Wildlife
+		Damage: 0
+		Versus:
+			Leather: 0
+			Light: 0
+			Heavy: 0
+			Concrete: 0
+			Knight: 0
+			LightCavalry: 0
+			MediumCavalry: 0
+			HeavyCavalry: 0
+			HeavyBuilding: 0
+			Spectral: 0
+		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+        
+LumberGrantLootPlayer:
+	ValidTargets: LumberShack
+	ReloadDelay: 18
+	Report: saw01.aud, saw02.aud, saw03.aud
+	Range: 1c712
+	Projectile: InstantHit
+	Warhead@GrantMonez: CashTick
+		Ammount: 30
+		ValidStances: Ally
+		AffectsParent: true
+		InvalidTargets: Air
+		ValidTargets: LumberShack, LLumber
+	Warhead@1Dam: SpreadDamage
+		Spread: 25
+		InvalidTargets: Wall, Air
+		ValidTargets: LumberShack
+		Damage: 0
+		Versus:
+			Leather: 0
+			Light: 0
+			Heavy: 0
+			Concrete: 0
+			Knight: 0
+			LightCavalry: 0
+			MediumCavalry: 0
+			HeavyCavalry: 0
+			HeavyBuilding: 0
+			Spectral: 0
+		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+		
+#-------------------------
+
+
 		
 BuildConstruction:
 	ValidTargets: Buildable

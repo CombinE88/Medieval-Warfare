@@ -1237,10 +1237,6 @@ ZEROPROC:
 		PipColor: Yellow
 		PipCount: 5
 		Capacity: 1000
-	FreeActor@3:
-		Actor: GHOSTPROC
-		SpawnOffset: 0,0
-		Facing: 64
 	ProximityExternalCondition@KILL:
 		Range: 1c0
 		ValidStances: Ally
@@ -1319,36 +1315,7 @@ NODPROC:
 PROC:
 	Tooltip:
 		Name: Ore Refinery or Farm
-		
- 
-GHOSTPROC:
-	Inherits@1: ^ExistsInWorld
-	Inherits@2: ^SpriteActor
-	ExternalCondition@Killself:
-		Condition: KillRef
-	KillsSelf:
-		Delay: 25
-		RequiresCondition: !KillRef
-	FrozenUnderFog:
-	RenderSprites:
-		Image: ghostmill
-		PlayerPalette: raplayer
-	Building:
-		Footprint: __ == == ==
-		Dimensions: 2,4
-		LocalCenterOffset: 0,-512,0
-		Adjacent: 4
-		RequiresBaseProvider: true
-		BuildSounds: constru2.aud, hvydoor1.aud
-		TerrainTypes: Clear,Road
-	WithSpriteBody:
-		Sequence: idle
-	Refinery:
-		DockAngle: 72
-		DockOffset: 0,3
-		TickRate: 5
- 
-	
+			
 PROCNEW:
 	Inherits: ^MWBaseBuilding
 	HitShape:
@@ -2795,3 +2762,56 @@ LODGE:
 		PipColor: Yellow
 		PipCount: 5
 		Capacity: 1000
+        
+LJACKB:
+	Inherits: ^MWBaseBuilding
+	Inherits@Hitshape: ^1x1Shape
+	Armor:
+		Type: Concrete
+	-WithDeathAnimation:
+	RenderSprites:
+		PlayerPalette: raplayer
+	Valued:
+		Cost: 450
+	CustomSellValue:
+		Value: 225
+	Tooltip:
+		Name: Lumber Shack
+	Buildable:
+		IconPalette: raicon
+		BuildPaletteOrder: 105
+		Description: A hunter can go out and hunt down animals from here.\n\n\n
+		Queue: MResources.GDI, MResources.Nod, MResources.SUL
+		BuildDuration: 25
+		Prerequisites: ~scaffold
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+	Health:
+		HP: 35000
+	RevealsShroud:
+		Range: 5c0
+	Selectable:
+		Bounds: 27,26,0,0
+	SelectionDecorations:
+		VisualBounds: 27,27,0,0
+	WithFreeSpawnableActor@3:
+		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
+		SpawnActor: mwlumbererowned
+		Offset: -0,256, 0
+		MoveOffset: 0,1
+		FindRadius: 100
+		Lasso: 17c0
+		ForceLasso: 22c0
+		ReturnOnDeath: true
+	WithRangeCircle:
+		Type: Lumberer
+		UsePlayerColor: true
+		Range: 17c0
+	LodgeActor:
+	StoresResources:
+		PipColor: Yellow
+		PipCount: 3
+		Capacity: 600
+	Targetable:
+		TargetTypes: LumberShack

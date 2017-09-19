@@ -180,6 +180,10 @@ namespace OpenRA.Traits
 			{
 				FreePopulation = (MaxLivingspacevar) - (WorkerPopulationvar + Peasantpopulationvar);
 			}
+            else
+            {
+                FreePopulation = MaxLivingspacevar - WorkerPopulationvar;
+            }
 
 			if (self.Owner.Faction.InternalName != "ded")
 			{

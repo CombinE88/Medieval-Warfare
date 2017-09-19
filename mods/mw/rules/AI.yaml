@@ -13,7 +13,7 @@ Player:
             Defenses: gtwnew.scaff, gunnew.scaff, tribu.scaff, bato.scaff, sulgtw.scaff, sulgtw.ENABLER
 		UnitsCommonNames:
 			Mcv: mcvnew
-			ExcludeFromSquads: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, mwwand7, mwwand8, mwwand8, mwcivcom, noble1, noble2, noble3, noble4, noble5, mwconst1, mwconst2, mwconst3, mwconst4, mwconst5, mwconst6, mwconst7, mwchick1, hunter, transporter, engeneer, sulturnxl
+			ExcludeFromSquads: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, mwwand7, mwwand8, mwwand8, mwcivcom, noble1, noble2, noble3, noble4, noble5, mwconst1, mwconst2, mwconst3, mwconst4, mwconst5, mwconst6, mwconst7, mwchick1, hunter, transporter, engeneer, sulturnxl, mwlumbererowned
 		BuildingQueues: MBuilding.Nod, MBuilding.GDI, MBuilding.SUL, MTech.Nod, MTech.GDI, MTech.SUL, MResources.Nod, MResources.GDI, MResources.SUL, MMilitary.Nod, MMilitary.GDI, MMilitary.SUL
 		UnitQueues: MVehicle.Nod, MVehicle.GDI, MVehicle.SUL, MInfantry.Nod, MInfantry.GDI, MInfantry.SUL, MSiege.Nod, MSiege.GDI, MSiege.SUL
 		BuildingLimits:
@@ -24,6 +24,7 @@ Player:
             #nodproc.scaff: 4
             sulcnshmbr.scaff: 1
             lodge.scaff: 2
+            ljackb.scaff: 2
             sullodge.scaff: 2
             #
 			barrnew.scaff: 1
@@ -77,6 +78,7 @@ Player:
             sulhall.scaff: 1
 		BuildingFractions:
             lodge.scaff: 200%
+            ljackb.scaff: 200%
             sullodge.scaff: 200%
 			procnew.scaff: 200%
 			#zeroproc.scaff: 200%
@@ -137,7 +139,6 @@ Player:
 			sule3: 40%
 			sule4: 35%
 			sule5: 45%
-			sule6: 100%
 			sulm1: 25%
 			sulm2: 45%
 			sulb0: 40%
@@ -172,12 +173,9 @@ Player:
 			wrbln: 10%
 			newcomm: 50%
 			rmbonew: 50%
-			e8farmer: 100%
 		UnitLimits:
             engeneer: 4
 			eharvxl: 6
-			e8farmer: 14
-			sule6: 18
 		SquadSize: 15
 		SupportPowerDecision@Airstrike:
 			OrderName: CorpsePowerInfoOrder

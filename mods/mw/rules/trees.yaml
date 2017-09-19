@@ -239,6 +239,22 @@ SPLIT4B:
 		
 SPLIT5:
 	Inherits: SPLIT3
+	HitShape:
+	WithFreeSpawnableActor@Lumberer:
+		TrainingActors:
+		SpawnActor: mwlumberer
+		UseConverting: false
+		Offset: 0,512, 0
+		MoveOffset: 0,1
+		FindRadius: 100
+		Lasso: 15c0
+		ForceLasso: 20c0
+		Sticky: true
+	WithRangeCircle:
+		Type: HunterLodge
+		UsePlayerColor: true
+		Range: 15c0
+	LodgeActor:
 	RenderSprites:
 		Image: mwlumbershack
 		PlayerPalette: 
@@ -248,14 +264,10 @@ SPLIT5:
 	-SeedsResource:
 	-WithIdleAnimation:
 	ConditionManager:
+	ExternalCondition@BuildingLoot:
+		Condition: BuildingLoot
 	Targetable:
 		TargetTypes: LumberShack
-	ProximityExternalCondition@Jack:
-		Range: 8c0
-		ValidStances: Ally, Neutral, Enemy
-		Condition: Jack
-	ExternalCondition@Loot:
-		Condition: BuildingLoot
 	SeedsResource:
 		RequiresCondition: BuildingLoot
 		ResourceType: Lumber
@@ -499,17 +511,39 @@ T01:
 	Inherits: ^Tree
 	EditorTilesetFilter:
 		ExcludeTilesets: DESERT
+	HuntableDeer@LootableTree:
+		Actor: ChoppedtreeN4
+		OwnerType: Killer
+		SkipMakeAnimations: False
+        HuntTypes: TreeToChop
+	Targetable@Choppable:
+		TargetTypes: ChoppableTree
 
 T02:
 	Inherits: ^Tree
 	EditorTilesetFilter:
 		ExcludeTilesets: DESERT
+	HuntableDeer@LootableTree:
+		Actor: ChoppedtreeN4
+		OwnerType: Killer
+		SkipMakeAnimations: False
+        HuntTypes: TreeToChop
+	Targetable@Choppable:
+		TargetTypes: ChoppableTree
+        
 
 
 T03:
 	Inherits: ^Tree
 	EditorTilesetFilter:
 		ExcludeTilesets: DESERT
+	HuntableDeer@LootableTree:
+		Actor: ChoppedtreeN4
+		OwnerType: Killer
+		SkipMakeAnimations: False
+        HuntTypes: TreeToChop
+	Targetable@Choppable:
+		TargetTypes: ChoppableTree
 
 
 T04:
@@ -522,11 +556,25 @@ T05:
 	Inherits: ^Tree
 	EditorTilesetFilter:
 		ExcludeTilesets: DESERT
+	HuntableDeer@LootableTree:
+		Actor: ChoppedtreeN4
+		OwnerType: Killer
+		SkipMakeAnimations: False
+        HuntTypes: TreeToChop
+	Targetable@Choppable:
+		TargetTypes: ChoppableTree
 
 T06:
 	Inherits: ^Tree
 	EditorTilesetFilter:
 		ExcludeTilesets: DESERT
+	HuntableDeer@LootableTree:
+		Actor: ChoppedtreeN4
+		OwnerType: Killer
+		SkipMakeAnimations: False
+        HuntTypes: TreeToChop
+	Targetable@Choppable:
+		TargetTypes: ChoppableTree
         
 T06A:
 	Inherits: ^Tree
@@ -545,6 +593,13 @@ T07:
 
 T08:
 	Inherits: ^Tree
+	HuntableDeer@LootableTree:
+		Actor: ChoppedtreeN1
+		OwnerType: Killer
+		SkipMakeAnimations: False
+        HuntTypes: TreeToChop
+	Targetable@Choppable:
+		TargetTypes: ChoppableTree
 
 
 T09:
@@ -552,65 +607,137 @@ T09:
 	EditorTilesetFilter:
 		RequireTilesets: DESERT
 
-T09.Husk:
-	Inherits: ^TreeHusk
-	EditorTilesetFilter:
-		ExcludeTilesets: DESERT
 
 T10:
 	Inherits: ^Tree
 	EditorTilesetFilter:
 		ExcludeTilesets: DESERT
+	HuntableDeer@LootableTree:
+		Actor: ChoppedtreeN1
+		OwnerType: Killer
+		SkipMakeAnimations: False
+        HuntTypes: TreeToChop
+	Targetable@Choppable:
+		TargetTypes: ChoppableTree
+        
 T11:
 	Inherits: ^Tree
 	EditorTilesetFilter:
 		ExcludeTilesets: DESERT
-
+	HuntableDeer@LootableTree:
+		Actor: ChoppedtreeN1
+		OwnerType: Killer
+		SkipMakeAnimations: False
+        HuntTypes: TreeToChop
+	Targetable@Choppable:
+		TargetTypes: ChoppableTree
 T12:
 	Inherits: ^Tree
 	EditorTilesetFilter:
 		ExcludeTilesets: DESERT
+	HuntableDeer@LootableTree:
+		Actor: ChoppedtreeN1
+		OwnerType: Killer
+		SkipMakeAnimations: False
+        HuntTypes: TreeToChop
+	Targetable@Choppable:
+		TargetTypes: ChoppableTree
 
 T13:
 	Inherits: ^Tree
 	EditorTilesetFilter:
 		ExcludeTilesets: DESERT
+	HuntableDeer@LootableTree:
+		Actor: ChoppedtreeN1
+		OwnerType: Killer
+		SkipMakeAnimations: False
+        HuntTypes: TreeToChop
+	Targetable@Choppable:
+		TargetTypes: ChoppableTree
 
 
 T14:
 	Inherits: ^Tree
 	EditorTilesetFilter:
 		ExcludeTilesets: DESERT
+	HuntableDeer@LootableTree:
+		Actor: ChoppedtreeN1
+		OwnerType: Killer
+		SkipMakeAnimations: False
+        HuntTypes: TreeToChop
+	Targetable@Choppable:
+		TargetTypes: ChoppableTree
 
 T15:
 	Inherits: ^Tree
 	EditorTilesetFilter:
 		ExcludeTilesets: DESERT
+	HuntableDeer@LootableTree:
+		Actor: ChoppedtreeN1
+		OwnerType: Killer
+		SkipMakeAnimations: False
+        HuntTypes: TreeToChop
+	Targetable@Choppable:
+		TargetTypes: ChoppableTree
 
 
 T16:
 	Inherits: ^Tree
 	EditorTilesetFilter:
 		ExcludeTilesets: DESERT
+	HuntableDeer@LootableTree:
+		Actor: ChoppedtreeN2
+		OwnerType: Killer
+		SkipMakeAnimations: False
+        HuntTypes: TreeToChop
+	Targetable@Choppable:
+		TargetTypes: ChoppableTree
 
 T17:
 	Inherits: ^Tree
 	EditorTilesetFilter:
 		ExcludeTilesets: DESERT
+	HuntableDeer@LootableTree:
+		Actor: ChoppedtreeN2
+		OwnerType: Killer
+		SkipMakeAnimations: False
+        HuntTypes: TreeToChop
+	Targetable@Choppable:
+		TargetTypes: ChoppableTree
 
 T17A:
 	Inherits: ^Tree
 	EditorTilesetFilter:
 		ExcludeTilesets: DESERT
-
+	HuntableDeer@LootableTree:
+		Actor: ChoppedtreeN2
+		OwnerType: Killer
+		SkipMakeAnimations: False
+        HuntTypes: TreeToChop
+	Targetable@Choppable:
+		TargetTypes: ChoppableTree
 T18:
 	Inherits: ^Tree
 	EditorTilesetFilter:
 		RequireTilesets: DESERT
+	HuntableDeer@LootableTree:
+		Actor: ChoppedtreeN2
+		OwnerType: Killer
+		SkipMakeAnimations: False
+        HuntTypes: TreeToChop
+	Targetable@Choppable:
+		TargetTypes: ChoppableTree
 T18A:
 	Inherits: ^Tree
 	EditorTilesetFilter:
 		RequireTilesets: DESERT
+	HuntableDeer@LootableTree:
+		Actor: ChoppedtreeN4
+		OwnerType: Killer
+		SkipMakeAnimations: False
+        HuntTypes: TreeToChop
+	Targetable@Choppable:
+		TargetTypes: ChoppableTree
 T18B:
 	Inherits: ^Tree
 	EditorTilesetFilter:
@@ -619,6 +746,13 @@ T18C:
 	Inherits: ^Tree
 	EditorTilesetFilter:
 		RequireTilesets: DESERT
+	HuntableDeer@LootableTree:
+		Actor: ChoppedtreeN3A
+		OwnerType: Killer
+		SkipMakeAnimations: False
+        HuntTypes: TreeToChop
+	Targetable@Choppable:
+		TargetTypes: ChoppableTree
 
 
 
@@ -629,9 +763,13 @@ TC01:
 		Dimensions: 3,2
 	EditorTilesetFilter:
 		ExcludeTilesets: DESERT
-	Explodes@Tib:
-		Weapon: LeaveWoodL
-		EmptyWeapon: LeaveWoodL
+	HuntableDeer@LootableTree:
+		Actor: ChoppedtreeN3
+		OwnerType: Killer
+		SkipMakeAnimations: False
+        HuntTypes: TreeToChop
+	Targetable@Choppable:
+		TargetTypes: ChoppableTree
 
 TC02:
 	Inherits: ^Tree
@@ -640,9 +778,13 @@ TC02:
 		Dimensions: 3,2
 	EditorTilesetFilter:
 		ExcludeTilesets: DESERT
-	Explodes@Tib:
-		Weapon: LeaveWoodXL
-		EmptyWeapon: LeaveWoodXL
+	HuntableDeer@LootableTree:
+		Actor: ChoppedtreeN3
+		OwnerType: Killer
+		SkipMakeAnimations: False
+        HuntTypes: TreeToChop
+	Targetable@Choppable:
+		TargetTypes: ChoppableTree
 
 TC03:
 	Inherits: ^Tree

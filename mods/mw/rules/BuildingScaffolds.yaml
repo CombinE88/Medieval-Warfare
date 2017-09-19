@@ -96,7 +96,7 @@ LODGE.SCAFF:
 		Description: A hunter can go out and hunt down animals from here.\n\n\n
 		Queue: MResources.GDI, MResources.Nod
 		Adjacent: 10
-		BuildDuration: 25
+		BuildDuration: 15
 	Health:
 		HP: 10000
 	RevealsShroud:
@@ -132,7 +132,7 @@ LODGE.SCAFF:
 		DamageTypes: FinishedDeath
 	WithIdleOverlay@base1:
 		Sequence: make1
-		RequiresCondition: Construct > 3 && Construct < 6
+		RequiresCondition: Construct >= 3 && Construct < 6
 	WithIdleOverlay@base2:
 		Sequence: make2
 		RequiresCondition: Construct >= 6 && Construct < 10
@@ -141,12 +141,83 @@ LODGE.SCAFF:
 		RequiresCondition: Construct >= 10 && Construct < 12
 	WithIdleOverlay@base4:
 		Sequence: make4
-		RequiresCondition: Construct > 12 
+		RequiresCondition: Construct >= 12 
 	WithRangeCircle:
 		Type: HunterLodge
 		UsePlayerColor: true
 		Range: 15c0
 		
+LJACKB.SCAFF:
+	Inherits: ^1x1SITE
+	Inherits@Hitshape: ^1x1Shape
+	Building:
+		Dimensions: 1, 1
+		Footprint: x
+		RequiresBaseProvider: false
+	Armor:
+		Type: Concrete
+	RenderSprites:
+		PlayerPalette: raplayer
+		Image: ljackb
+	CustomSellValue:
+		Value: 175
+	Valued:
+		Cost: 450
+	Tooltip:
+		Name: Construction Site (Lumber Shack)
+	Buildable:
+		IconPalette: raicon
+		BuildPaletteOrder: 5
+		Description: Collects Lumber by chopping surrounding Trees.\n Remember: Trees do not respawn!\n\n
+		Queue: MResources.GDI, MResources.Nod, , MResources.SUL
+		Adjacent: 10
+		BuildDuration: 15
+	Health:
+		HP: 10000
+	RevealsShroud:
+		Range: 4c0
+	Selectable:
+		Bounds: 27,26,0,0
+	SelectionDecorations:
+		VisualBounds: 27,27,0,0
+	WithSpriteBody:
+		RequiresCondition: inactive
+	SpawnActorOnDeath@Finsihed:
+		Probability: 100
+		Actor: ljackb
+		DeathType: FinishedDeath
+	ExternalCondition@buildfurther: 
+		Condition: Construct
+		TotalCap: 20
+	ExternalCondition@Deliverfurther:
+		Condition: DeliveredResources
+		TotalCap: 20
+	Targetable@buildfurther: 
+		TargetTypes: Buildable
+		RequiresCondition: DeliveredResources > Construct && (20 - Construct) > 0
+	Targetable@deliverresources: 
+		TargetTypes: Deliverable
+		RequiresCondition: 20 > DeliveredResources
+	SelfHealing@Finished:
+		PercentageStep: -200
+		HealIfBelow: 110
+		Delay: 1
+		RequiresCondition: (20 - Construct) <= 0
+		DamageTypes: FinishedDeath
+	WithIdleOverlay@base1:
+		Sequence: make1
+		RequiresCondition: Construct >= 3 && Construct < 9
+	WithIdleOverlay@base2:
+		Sequence: make2
+		RequiresCondition: Construct >= 9 && Construct < 15
+	WithIdleOverlay@base3:
+		Sequence: make3
+		RequiresCondition: Construct >= 15 
+	WithRangeCircle:
+		Type: Lumberer
+		UsePlayerColor: true
+		Range: 17c0
+        
 NUKXL.SCAFF:
 	Inherits: ^3x2SITE
 	Inherits@Hitshape: ^3x2Shape
@@ -168,7 +239,7 @@ NUKXL.SCAFF:
 		Prerequisites: anyarmory
 		Queue: MBuilding.GDI
 		Description: Provides more livingspace. Livingspace increases over time by generating peasants.\nCan hold up to 15 peasants. \ncheaper than the standard Shack.\n\n\n\n
-		BuildDuration: 75
+		BuildDuration: 20
 	Health:
 		HP: 60000
 	RevealsShroud:
@@ -245,7 +316,7 @@ HANDNEW.SCAFF:
 		Prerequisites: anypower
 		Description: Trains Infantry only\n\n\n\n
 		Queue: MMilitary.Nod
-		BuildDuration: 50
+		BuildDuration: 45
 	Health:
 		HP: 32500
 	RevealsShroud:
@@ -321,7 +392,7 @@ ZEROPROC.SCAFF:
 		Prerequisites: anypower
 		Description: Provides basic resource gathering for Crops and Grain.\n Comes with 2 farmers.\n Can only operate up to 6 farmers at once.\n\n\n\n
 		Queue: MResources.GDI
-		BuildDuration: 75
+		BuildDuration: 65
 	Health:
 		HP: 40000
 	RevealsShroud:
@@ -435,7 +506,7 @@ HQNEWNOD.SCAFF:
 		Prerequisites: proc
 		Queue: MTech.Nod, MTech.GDI
 		Description: Unlocks higher-tech units and buildings.\n\n\n\n
-		BuildDuration: 75
+		BuildDuration: 60
 	Health:
 		HP: 17000
 	RevealsShroud:
@@ -511,7 +582,7 @@ ARMORYNOD.SCAFF:
 		Prerequisites: anyhq
 		Queue: MTech.Nod
 		Description: Unlocks Support Powers and Raiding Squad.\nHeals Cavalry and Infantry.\n\n\n\n
-		BuildDuration: 100
+		BuildDuration: 87
 	Health:
 		HP: 22500
 	RevealsShroud:
@@ -581,7 +652,7 @@ ARMORYGDI.SCAFF:
 		Prerequisites: anyhq
 		Queue: MTech.GDI
 		Description: Unlocks Support Powers.\nHeals Cavalry and Infantry.\n\n\n\n
-		BuildDuration: 100
+		BuildDuration: 87
 	Health:
 		HP: 22500
 	RevealsShroud:
@@ -651,7 +722,7 @@ NUK2NEW.SCAFF:
 		Prerequisites: anyhq
 		Queue: MBuilding.GDI
 		Description: Provides more livingspace. Livingspace increases over time by generating peasants.\nCan hold up to 8 peasants, spawntime depends on number of shacks and large huts. \ncheaper than the standard Shack.\n\n\n\n
-		BuildDuration: 50
+		BuildDuration: 40
 	Health:
 		HP: 17500
 	RevealsShroud:
@@ -728,7 +799,7 @@ XLTNTUNI.SCAFF:
 		Prerequisites: anyhq
 		Queue: MBuilding.Nod
 		Description: Provides more livingspace. Livingspace increases over time by generating peasants.\nCan hold up to 6 peasants, spawntime depends on number of shacks and large huts. \ncheaper than the standard Shack.\n\n\n\n
-        BuildDuration: 50
+		BuildDuration: 30
 	Health:
 		HP: 17500
 	RevealsShroud:
@@ -923,7 +994,7 @@ SILONEW.SCAFF:
 		Queue: MResources.GDI, MResources.Nod, MResources.SUL
 		Description: Stores additional Ore\n\n\n\n
 		IconPalette: raicon
-		BuildDuration: 25
+		BuildDuration: 15
 	Health:
 		HP: 20000
 	RevealsShroud:
@@ -991,7 +1062,7 @@ BARRNEW.SCAFF:
 		Prerequisites: anypower
 		Description: Trains Infantry only\n\n\n\n
 		Queue: MMilitary.GDI
-		BuildDuration: 50
+		BuildDuration: 37
 	Health:
 		HP: 25000
 	RevealsShroud:
@@ -1134,7 +1205,7 @@ NODSTALL.SCAFF:
 		Prerequisites: proc, barracks
 		Description: Trains cavalry\n\n\n\n
 		Queue: MMilitary.Nod
-		BuildDuration: 100
+		BuildDuration: 87
 	Health:
 		HP: 43000
 	RevealsShroud:
@@ -1361,7 +1432,7 @@ WORKSHOPNOD.SCAFF:
 		Prerequisites: proc
 		Description: Provides Siege weapons construction.\nEnables Supportpowers in combination with an Armory.\n\n\n
 		Queue: MMilitary.Nod
-		BuildDuration: 100
+		BuildDuration: 70
 	Health:
 		HP: 30000
 	RevealsShroud:
@@ -1428,7 +1499,7 @@ WORKSHOPGDI.SCAFF:
 		Prerequisites: proc
 		Description: Provides Siege weapons construction.\nEnables Supportpowers in combination with an Armory.\n\n\n
 		Queue: MMilitary.GDI
-		BuildDuration: 100
+		BuildDuration: 80
 	Health:
 		HP: 37350
 	RevealsShroud:
@@ -1495,7 +1566,7 @@ GTWNEW.SCAFF:
 		Queue: MMilitary.GDI, MMilitary.Nod
 		BuildDurationModifier: 60
 		IconPalette: raicon
-		BuildDuration: 50
+		BuildDuration: 30
 	Health:
 		HP: 20000
 	RevealsShroud:
@@ -1572,7 +1643,7 @@ GUNNEW.SCAFF:
 		Queue: MMilitary.GDI, MMilitary.Nod
 		IconPalette: raicon
 		BuildDurationModifier: 40
-		BuildDuration: 50
+		BuildDuration: 35
 	Health:
 		HP: 20000
 	RevealsShroud:
@@ -1649,7 +1720,7 @@ TRIBU.SCAFF:
 		Queue: MMilitary.Nod
 		BuildDurationModifier: 40
 		IconPalette: raicon
-		BuildDuration: 100
+		BuildDuration: 75
 	Health:
 		HP: 30000
 	RevealsShroud:
@@ -1729,7 +1800,7 @@ BATO.SCAFF:
 		Queue: MMilitary.GDI
 		BuildDurationModifier: 40
 		IconPalette: raicon
-		BuildDuration: 75
+		BuildDuration: 70
 	Health:
 		HP: 30000
 	RevealsShroud:
@@ -1813,7 +1884,7 @@ SAMNEW.SCAFF:
 		Queue: MMilitary.Nod
 		BuildDurationModifier: 40
 		IconPalette: raicon
-		BuildDuration: 50
+		BuildDuration: 32
 	Health:
 		HP: 20000
 	RevealsShroud:
@@ -1886,7 +1957,7 @@ TAVERN.SCAFF:
 		Prerequisites: barracks
 		Description: Provides 3 additional worker and 1 engineer.\n\n\n\n
 		Queue: MTech.GDI, MTech.Nod
-		BuildDuration: 50
+		BuildDuration: 45
 	Health:
 		HP: 40000
 	RevealsShroud:
@@ -1959,7 +2030,7 @@ TOWNHALL.SCAFF:
 		Prerequisites: anyarmory
 		Description: Attracts citizens to your town.\nNew Peasants will spawn faster.\n\n\n
 		Queue: MBuilding.GDI, MBuilding.Nod
-		BuildDuration: 125
+		BuildDuration: 100
 	Health:
 		HP: 60000
 	RevealsShroud:
@@ -2032,7 +2103,7 @@ SCHAFOTT.SCAFF:
 		Prerequisites: anyhq
 		Description: Attracts citizens to your town.\nNew Peasants will spawn faster.\n\n\n
 		Queue: MBuilding.Nod
-		BuildDuration: 75
+		BuildDuration: 50
 	Health:
 		HP: 40000
 	RevealsShroud:
@@ -2105,7 +2176,7 @@ HERBALIST.SCAFF:
 		Prerequisites: anyhq
 		Description: Attracts citizens to your town.\nNew Peasants will spawn faster.\n\n\n
 		Queue: MBuilding.GDI
-		BuildDuration: 75
+		BuildDuration: 50
 	Health:
 		HP: 40000
 	RevealsShroud:

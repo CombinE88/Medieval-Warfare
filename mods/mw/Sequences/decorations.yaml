@@ -42,7 +42,7 @@ tc04:
 	idle: maple4
 		Length: *
 		Tick: 120
-		Offset: 16,2 
+		Offset: 4,-5
 	damaged-idle:
 		Start: 1
 
@@ -66,7 +66,7 @@ tc05:
 	idle: maple2
 		Length: *
 		Tick: 120
-		Offset: 16,19 
+		Offset: 3,7 
 	damaged-idle:
 		Start: 1
 
@@ -109,7 +109,7 @@ tc02:
 	idle: maple3
 		Length: *
 		Tick: 120
-		Offset: 16,19 
+		Offset: 2,7 
 
 tc02.husk:
 	Defaults: tc02
@@ -131,7 +131,7 @@ tc01:
 	idle: maple1
 		Length: *
 		Tick:120
-		Offset: 16,19 
+		Offset: 4,2 
 
 tc01.husk:
 	Defaults: tc01
@@ -151,7 +151,7 @@ t18:
 	idle: destree1.des
 		Length: *
 		Tick: 120
-		Offset: 4,13 
+		Offset: -4,7 
         
 t18a:
 	Defaults:
@@ -159,7 +159,7 @@ t18a:
 	idle: destree2.des
 		Length: *
 		Tick: 120
-		Offset: 12,6
+		Offset: 0,-3
         
 t18b:
 	Defaults:
@@ -167,7 +167,7 @@ t18b:
 	idle: destree3.des
 		Length: *
 		Tick: 120
-		Offset: 4,7 
+		Offset: -3,-7
         
 t18c:
 	Defaults:
@@ -175,7 +175,7 @@ t18c:
 	idle: destree4.des
 		Length: *
 		Tick: 120
-		Offset: 12,16 
+		Offset: 4,0 
 
 
 t18.husk:
@@ -196,7 +196,7 @@ t17a:
 	idle: tree9
 		Length: *
 		Tick:120
-		Offset: 10,10 
+		Offset: -3,-7 
 
 t17:
 	Defaults:
@@ -206,7 +206,7 @@ t17:
 	idle: tree8
 		Length: *
 		Tick:120
-		Offset: 14,14 
+		Offset: 2,2 
 
 t17.husk:
 	Defaults: t17
@@ -228,7 +228,7 @@ t16:
 	idle: tree7
 		Length: *
 		Tick:120
-		Offset: 14,10 
+		Offset: 2,-2 
 
 t16.husk:
 	Defaults: t16
@@ -250,7 +250,7 @@ t15:
 	idle: tree6
 		Length: *
 		Tick:120
-		Offset: 10,14 
+		Offset: -2,2 
 
 t15.husk:
 	Defaults: t15
@@ -272,7 +272,7 @@ t14:
 	idle: tree5
 		Length: *
 		Tick:120
-		Offset: 10,12 
+		Offset: -4,0 
 
 t14.husk:
 	Defaults: t14
@@ -294,7 +294,7 @@ t13:
 	idle: tree4
 		Length: *
 		Tick:120
-		Offset: 8,13        
+		Offset: -4,1        
 
 t13.husk:
 	Defaults: t13
@@ -316,7 +316,7 @@ t12:
 	idle: tree3
 		Length: *
 		Tick:120
-		Offset: 15,10 
+		Offset: 3,-2 
 
 t12.husk:
 	Defaults: t12
@@ -338,7 +338,7 @@ t11:
 	idle: tree2
 		Length: *
 		Tick:120
-		Offset: 10,7 
+		Offset: -2,-5
 
 t11.husk:
 	Defaults: t11
@@ -360,7 +360,7 @@ t10:
 	idle: tree1
 		Length: *
 		Tick:120
-		Offset: 16,14 
+		Offset: 4,2 
 
 t10.husk:
 	Defaults: t10
@@ -395,7 +395,7 @@ t08:
 	idle: tree10
 		Length: *
 		Tick:120
-		Offset: 10,14
+		Offset: -2,2
 
 t08.husk:
 	Defaults: t08
@@ -417,7 +417,7 @@ t07:
 	idle: tree11
 		Length: *
 		Tick:120
-		Offset: 5,17 
+		Offset: -5,4 
 
 t07.husk:
 	Defaults: t07
@@ -439,7 +439,7 @@ t06b:
 	idle: tanne7
 		Length: *
 		Tick:120
-		Offset: 17,3         
+		Offset: 5,-9        
 t06a:
 	Defaults:
 		UseTilesetExtension: true
@@ -448,7 +448,7 @@ t06a:
 	idle: tanne6
 		Length: *
 		Tick:120
-		Offset: 12,8 
+		Offset: 0,-8 
 
 t06:
 	Defaults:
@@ -458,7 +458,7 @@ t06:
 	idle: tanne5
 		Length: *
 		Tick:120
-		Offset: 16,19 
+		Offset: 3,5 
 
 t06.husk:
 	Defaults: t06
@@ -480,7 +480,7 @@ t05:
 	idle: tanne4
 		Length: *
 		Tick:120
-		Offset: 10,6 
+		Offset: -2,-5 
 
 t05.husk:
 	Defaults: t05
@@ -517,7 +517,7 @@ t03:
 	idle: tanne3
 		Length: *
 		Tick:120
-		Offset: 16,12 
+		Offset: 4,0 
 
 t03.husk:
 	Defaults: t03
@@ -539,7 +539,7 @@ t02:
 	idle: tanne2
 		Length: *
 		Tick:120
-		Offset: 6,7 
+		Offset: -4,-6
 
 t02.husk:
 	Defaults: t02
@@ -561,7 +561,7 @@ t01:
 	idle: tanne1
 		Length: *
 		Tick:120
-		Offset: 12,18 
+		Offset: 0,4 
 
 t01.husk:
 	Defaults: t01

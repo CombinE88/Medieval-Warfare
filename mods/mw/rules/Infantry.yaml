@@ -941,7 +941,7 @@ E8FARMER:
 	Selectable:
 		Priority: 7
 	Harvester:
-		DeliveryBuildings: zeroproc, ghostproc, sulmill
+		DeliveryBuildings: zeroproc, sulmill, nodproc
 		Resources: Crops, Grains, Wood, Goods, Lumber, Corn
 		PipCount: 2
 		Capacity: 10
@@ -949,6 +949,7 @@ E8FARMER:
 		BaleUnloadDelay: 5
 		SearchFromProcRadius: 25
 		SearchFromOrderRadius: 15
+		MaxUnloadQueue: 10
 	Selectable:
 		Bounds: 14,26,0,-6
 	SelectionDecorations:
@@ -1502,7 +1503,6 @@ MWCONST1BACK:
 		
 MWLUMBERER:
 	Inherits: ^MWConstructor
-	Inherits@AUTOTARGET: ^AutoTargetGrowntrees
 	RenderSprites:
 		Image: mwlumber
 	Tooltip:
@@ -1513,41 +1513,158 @@ MWLUMBERER:
 		Range: 7c0
 	WithFacingSpriteBody:
 	WithInfantryBody:
-		DefaultAttackSequence: attack
-		RequiresCondition: !TraderLoot
+		RequiresCondition: NoFood
+		AttackSequences:
+			secondary: attack
+			primary: attack
+            tairt: attackwood
 	WithInfantryBody@Lumberer:
 		StandSequences: standwood
 		MoveSequence: runwood
-		DefaultAttackSequence: attackwood
-		RequiresCondition: TraderLoot
+		RequiresCondition: !NoFood
+		AttackSequences:
+			secondary: attack
+			primary: attack
+            tairt: attackwood
 	AttackFrontal:
+		Armaments: primary, secondary, tairt
+		IgnoresVisibility: true	
 	AttackMove:
-	AutoTarget:
-		ScanRadius: 10
-		InitialStance: AttackAnything
-	ExternalCondition@Jack:
-		Condition: Jack
-	ExternalCondition@Loot:
-		Condition: TraderLoot
-	Armament@Normal:
-		Weapon: LumberJackAxe
-		TargetStances: Enemy, Neutral, Ally
-		RequiresCondition: !TraderLoot
-	AttackWander: 
-		WanderMoveRadius: 1
-		ReduceMoveRadiusDelay: 5
-		MinMoveDelay: 50
-		MaxMoveDelay: 300
-	Armament@Jack:
-		Weapon: WanderAttackLumberShack
-		TargetStances: Enemy, Neutral, Ally
-		RequiresCondition: !Jack && !TraderLoot
 	Targetable:
 		TargetTypes: Ground, Infantry, LLumber
-	Armament@Report:
+	ExternalCondition@DeerHunter:
+		Condition: DeerHunter
+	ExternalCondition@LootingDeer:
+		Condition: LootingDeer
+	ExternalCondition@Unload:
+		Condition: UnloadDeer
+	Armament@Huntdeer:
+		Weapon: LumberJackAxe
+		Name: primary
+		IgnoresVisibility: true
+		RequiresCondition: (FullFood + LootingDeer) == 0
+		TargetStances: Ally, Neutral
+	Armament@GatherDeer:
+		Weapon: LumbererGather
+		Name: primary
+		TargetStances: Ally, Neutral
+		IgnoresVisibility: true
+		RequiresCondition: !FullFood
+	Armament@Unload:
 		Weapon: LumberGrantLootAttack
-		TargetStances: Enemy, Neutral, Ally
-		RequiresCondition: TraderLoot
+		Name: tairt
+		TargetStances: Ally, Neutral
+		IgnoresVisibility: true
+		RequiresCondition: !NoFood
+		AmmoPoolName: Food
+	CashTrickler@LotDeer:
+		Interval: 25
+		Amount: 100
+		RequiresCondition: UnloadDeer
+	AmmoPool:
+		Name: Food
+		Ammo: 10
+		InitialAmmo: 0
+		PipCount: 2
+	AmmoPoolConditions:
+		ConditionFull: FullFood
+		ConditionEmpty: NoFood
+		AmmoPoolName: Food
+	ReloadAmmoWhenEnabled:
+		Name: Food
+		ReloadDelay: 25
+		ResetDelayOnEnable: false
+		RequiresCondition: DeerHunter
+	DeerHunter: 
+        HuntTypes: TreeToChop
+        LootTypes: ChopTree
+        SearchDistance: 15c0
+    PersonValued:
+		ActorCount: 0
+		ConvertingActors: 
+        
+        
+MWLUMBEREROWNED:
+	Inherits: ^MWConstructor
+	RenderSprites:
+		Image: mwlumber
+	Tooltip:
+		Name: Lumberman
+	Health:
+		HP: 10000
+	RevealsShroud:
+		Range: 7c0
+	WithFacingSpriteBody:
+	WithInfantryBody:
+		RequiresCondition: NoFood
+		AttackSequences:
+			secondary: attack
+			primary: attack
+            tairt: attackwood
+	WithInfantryBody@Lumberer:
+		StandSequences: standwood
+		MoveSequence: runwood
+		RequiresCondition: !NoFood
+		AttackSequences:
+			secondary: attack
+			primary: attack
+            tairt: attackwood
+	AttackFrontal:
+		Armaments: primary, secondary, tairt
+		IgnoresVisibility: true	
+	AttackMove:
+	Targetable:
+		TargetTypes: Ground, Infantry, LLumber
+	ExternalCondition@DeerHunter:
+		Condition: DeerHunter
+	ExternalCondition@LootingDeer:
+		Condition: LootingDeer
+	ExternalCondition@Unload:
+		Condition: UnloadDeer
+	Armament@Huntdeer:
+		Weapon: LumberJackAxe
+		Name: primary
+		IgnoresVisibility: true
+		RequiresCondition: (FullFood + LootingDeer) == 0
+		TargetStances: Ally, Neutral
+	Armament@GatherDeer:
+		Weapon: LumbererGather
+		Name: primary
+		TargetStances: Ally, Neutral
+		IgnoresVisibility: true
+		RequiresCondition: !FullFood
+	Armament@Unload:
+		Weapon: LumberGrantLootPlayer
+		Name: tairt
+		TargetStances: Ally, Neutral
+		IgnoresVisibility: true
+		RequiresCondition: !NoFood
+		AmmoPoolName: Food
+	CashTrickler@LotDeer:
+		Interval: 25
+		Amount: 100
+		RequiresCondition: UnloadDeer
+	AmmoPool:
+		Name: Food
+		Ammo: 10
+		InitialAmmo: 0
+		PipCount: 2
+	AmmoPoolConditions:
+		ConditionFull: FullFood
+		ConditionEmpty: NoFood
+		AmmoPoolName: Food
+	ReloadAmmoWhenEnabled:
+		Name: Food
+		ReloadDelay: 25
+		ResetDelayOnEnable: false
+		RequiresCondition: DeerHunter
+	DeerHunter: 
+        HuntTypes: TreeToChop
+        LootTypes: ChopTree
+        SearchDistance: 17c0
+    PersonValued:
+		ActorCount: 1
+		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 		
 TRANSPORTER:
 	Inherits: ^Knight
