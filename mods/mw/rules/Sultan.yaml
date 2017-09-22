@@ -471,7 +471,7 @@ SULPLUG4:
 	Tooltip:
 		Name: Advanced Defense Upgrade
 	Buildable:
-		Description: Upgrades the Guard Tower with jevalin defense.\n  Deals high damage to Cavalry\n  Strong vs Cavalry\n  Weak vs Infantry\n  Increases base hitpoints by 30%\n  Replaces arrows with javelines\n  Can attack Aircrafts
+		Description: Upgrades the Guard Tower with javelin defense.\n  Deals high damage to Cavalry\n  Strong vs Cavalry\n  Weak vs Infantry\n  Increases base hitpoints by 30%\n  Replaces arrows with javelines\n  Can attack Aircraft
 		BuildPaletteOrder: 70
 		Prerequisites: vehicleproduction, sultow3
 		Queue: MMilitary.SUL
@@ -653,7 +653,7 @@ SULARRAY:
 		IconPalette: raicon
 		BuildPaletteOrder: 100
 		Prerequisites: ~scaffold
-		Description: Provides 3 additional worker and 1 engineer.\n\n\n\n
+		Description: Provides 3 additional haulers and 1 engineer.\n\n\n\n
 		Queue: MTech.SUL
 		BuildDuration: 50
 	Building:
@@ -2225,7 +2225,7 @@ SULB1:
 		IconPalette: raicon
 		BuildPaletteOrder: 20
 		Prerequisites: sultow3
-		Description: The Siege Ballista is a missile weapon that launches two large projectile \nat a distant target.\n  Very strong vs Cavalry and Buildings \n  Moderate vs Infantry\n  Weak vs Aircrafts\n\nTrains: 2 Peasants\n
+		Description: The Siege Ballista is a missile weapon that launches two large projectile \nat a distant target.\n  Very strong vs Cavalry and Buildings \n  Moderate vs Infantry\n  Weak vs Aircraft\n\nTrains: 2 Peasants\n
 		Queue: MSiege.SUL
 	Mobile:
 		TurnSpeed: 2
@@ -2419,7 +2419,7 @@ SULM3:
 	Tooltip:
 		Name: Flying Carpet
 	Buildable:
-		Description: Man on a flying carpet.\n  Strong vs Ground Units\n  Weak vs Aircrafts\n  Cannot attack Aircrafts!!\n\nTrains: 1 Peasant\n
+		Description: Man on a flying carpet.\n  Strong vs Ground Units\n  Weak vs Aircraft\n  Cannot attack Aircrafts!!\n\nTrains: 1 Peasant\n
 		BuildPaletteOrder: 40
 		Prerequisites: anyhq
 		Queue: MVehicle.SUL
@@ -2534,7 +2534,7 @@ SULB3:
 	Tooltip:
 		Name: Giant Roc
 	Buildable:
-		Description: Giant Roc which throws razor sharp feathers at the enemy.\n  Strong vs Ground Units and Aircrafts\n\nTrains: no Peasant\n\n
+		Description: Giant Roc which throws razor sharp feathers at the enemy.\n  Strong vs Ground Units and Aircraft\n\nTrains: no Peasant\n\n
 		BuildPaletteOrder: 100
 		Prerequisites: sultow3, sultow4, anyhq
 		Queue: MSiege.SUL

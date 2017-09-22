@@ -383,7 +383,7 @@ ROSS5:
 		IconPalette: raicon
 		BuildPaletteOrder: 30
 		Prerequisites: anycastle
-		Description: Heavily armored and very slow.\n  Strong vs Everything (+Spectral Units)\n  Weak vs Long-ranged weapons\n  Can attack Aircrafts\n\nTrains: 2 Peasant\n\n
+		Description: Heavily armored and very slow.\n  Strong vs Everything (+Spectral Units)\n  Weak vs Long-ranged weapons\n  Can attack Aircraft\n\nTrains: 2 Peasant\n\n
 		Queue: MVehicle.GDI
 		BuildDuration: 1300
 	Mobile:
@@ -459,7 +459,7 @@ ROSS3:
 	Buildable:
 		IconPalette: raicon
 		BuildPaletteOrder: 30
-		Description: Strong mounted Archer.\n  Strong vs Infantry, Aircrafts and Buildings and Spectral Units\n  Has long range, very fast\n  Can detect cloaked units\n  Can attack Aircrafts\n\nTrains: 1 Peasant\n\n
+		Description: Strong mounted Archer.\n  Strong vs Infantry, Aircrafts and Buildings and Spectral Units\n  Has long range, very fast\n  Can detect cloaked units\n  Can attack Aircraft\n\nTrains: 1 Peasant\n\n
 		Prerequisites: anyhq, armorynod
 		Queue:  MVehicle.Nod
 		BuildDuration: 450
@@ -520,7 +520,7 @@ ROSS4:
 	Buildable:
 		IconPalette: raicon
 		BuildPaletteOrder: 10
-		Description: Fast scout cavalry, armed with spears.\n  Very weak vs Infantry!!\n  Strong vs Cavalry, Buildings and light Aircrafts\n  Can attack Aircrafts\n\nTrains: 1 Peasant\n\n
+		Description: Fast scout cavalry, armed with spears.\n  Very weak vs Infantry!\n  Strong vs Cavalry, Buildings and light Aircraft\n  Can attack Aircraft\n\nTrains: 1 Peasant\n\n
 		Queue:  MVehicle.Nod
 		BuildDuration: 150
 	Mobile:

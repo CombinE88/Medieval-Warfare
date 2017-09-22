@@ -497,7 +497,7 @@ E9NEW:
 	Tooltip:
 		Name: Fire Mage
 	Buildable:
-		Description: Advanced Anti-infantry unit.\n  Strong vs Infantry, Buildings and Spectral Units\n  Weak vs Cavalry\n  Detects cloaked units\n  Cannot attack Aircrafts anymore!!!\n\nTrains: 1 Peasant\n
+		Description: Advanced Anti-infantry unit.\n  Strong vs Infantry, Buildings and Spectral Units\n  Weak vs Cavalry\n  Detects cloaked units\n  Cannot attack Aircraft anymore!\n\nTrains: 1 Peasant\n
 		IconPalette: raicon
 		BuildPaletteOrder: 40
 		Prerequisites: anyhq
@@ -546,7 +546,7 @@ E4NEW:
 	Tooltip:
 		Name: Archer
 	Buildable:
-		Description: Advanced Anti-infantry unit.\n  Strong vs Light Infantry\n  Weak vs Cavalry and heavy Infantry\n  Detects cloaked units\n  Can attack Aircrafts\n  Slows targets under fire\nTrains: 1 Peasant
+		Description: Advanced Anti-infantry unit.\n  Strong vs Light Infantry\n  Weak vs Cavalry and heavy Infantry\n  Detects cloaked units\n  Can attack Aircraft\n  Slows targets under fire\nTrains: 1 Peasant
 		IconPalette: raicon
 		BuildPaletteOrder: 30
 		Queue: MInfantry.Nod, MInfantry.Horse
@@ -615,7 +615,7 @@ E4NEWV2:
 	Tooltip:
 		Name: Archer
 	Buildable:
-		Description: Advanced Anti-infantry unit.\n  Strong vs Light Infantry\n  Weak vs Cavalry and heavy Infantry\n  Detects cloaked units\n  Can attack Aircrafts\n  Slows targets under fire\nTrains: 1 Peasant
+		Description: Advanced Anti-infantry unit.\n  Strong vs Light Infantry\n  Weak vs Cavalry and heavy Infantry\n  Detects cloaked units\n  Can attack Aircraft\n  Slows targets under fire\nTrains: 1 Peasant
 		IconPalette: raicon
 		BuildPaletteOrder: 30
 		Queue: MInfantry.GDI
@@ -683,7 +683,7 @@ E5NEW:
 	Tooltip:
 		Name: Marksman
 	Buildable:
-		Description: Advanced general-purpose infantry.\n  Strong vs all Ground units\n  Detects cloaked units\n  Cannot attack Aircrafts anymore!!!!\n\nTrains: 1 Peasant\n
+		Description: Advanced general-purpose infantry.\n  Strong vs all Ground units\n  Detects cloaked units\n  Cannot attack Aircraft anymore!\n\nTrains: 1 Peasant\n
 		IconPalette: raicon
 		BuildPaletteOrder: 50
 		Prerequisites: anyarmory
@@ -849,7 +849,7 @@ ASSASSIN:
 	Tooltip:
 		Name: Assassin
 	Buildable:
-		Description: Mid/Long-range knifethrowing infantry that can cloak.\nHas weak armor. Can be spotted by some infantry and defense structures.\n  Strong vs Cavalry, Infantry and Spectral Units\n  Sets buildings on fire.\n  Detects cloaked units\n  Can attack Aircrafts\n\nTrains: 1 Peasant\n
+		Description: Mid/Long-range knifethrowing infantry that can cloak.\nHas weak armor. Can be spotted by some infantry and defense structures.\n  Strong vs Cavalry, Infantry and Spectral Units\n  Sets buildings on fire.\n  Detects cloaked units\n  Can attack Aircraft\n\nTrains: 1 Peasant\n
 		IconPalette: raicon
 		BuildPaletteOrder: 140
 		Queue: MInfantry.Nod, MInfantry.Horse

@@ -2351,7 +2351,7 @@ SCAFFOLD:
 	AlwaysVisible:
 	Tooltip:
 		Name: saffold
-		Description: saffold
+		Description: scaffold
 	ProvidesPrerequisite@buildingname:
 
 DECOR1:
@@ -2510,7 +2510,7 @@ TAVERN:
 		IconPalette: raicon
 		BuildPaletteOrder: 100
 		Prerequisites: ~scaffold
-		Description: Provides 3 additional worker and 1 engineer.\n\n\n\n
+		Description: Provides 3 additional haulers and 1 engineer.\n\n\n\n
 		Queue: MTech.GDI, MTech.Nod
 		BuildDuration: 50
 	Building:

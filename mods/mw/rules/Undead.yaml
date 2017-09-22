@@ -511,7 +511,7 @@ ZIGG2UPGRADE:
 		IconPalette: raicon
 		BuildPaletteOrder: 60
 		Prerequisites: seal1, seal2
-		Description: Grants access to advanced summoning methodes.\n  Grants possiblility to convert Iron and Gold into Essence\n\n
+		Description: Grants access to advanced summoning methods.\n  Grants possiblility to convert Iron and Gold into Essence\n\n
 		Queue: MTech.ded
 		BuildLimit: 1
 		BuildDuration: 1000
@@ -531,7 +531,7 @@ ZIGG3UPGRADE:
 		IconPalette: raicon
 		BuildPaletteOrder: 70
 		Prerequisites: seal3, seal4
-		Description: Grants access to most advanced summoning methodes.\n  Accesses Superpowers \n\n
+		Description: Grants access to most advanced summoning methods.\n  Accesses Superpowers \n\n
 		Queue: MTech.ded
 		BuildLimit: 1
 		BuildDuration: 1500
@@ -550,7 +550,7 @@ SEAL1:
 	Buildable:
 		IconPalette: raicon
 		BuildPaletteOrder: 10
-		Description: Unknown!\n\n\n
+		Description: Unlocks crypt and seal 2\n\n\n
 		Queue: MTech.ded
 		BuildLimit: 1
 		
@@ -568,7 +568,7 @@ SEAL2:
 		IconPalette: raicon
 		BuildPaletteOrder: 20
 		Prerequisites: seal1
-		Description: Unknown!\n\n\n
+		Description: Unlocks mausoleum and ziggurat level 2\n\n\n
 		Queue: MTech.ded
 		BuildLimit: 1
 		
@@ -586,7 +586,7 @@ SEAL3:
 		IconPalette: raicon
 		BuildPaletteOrder: 30
 		Prerequisites: ziggurat2
-		Description: Unknown!\n\n\n
+		Description: Unlocks Beserker, Vampire and seal 4\n\n\n
 		Queue: MTech.ded
 		BuildLimit: 1
 		
@@ -604,7 +604,7 @@ SEAL4:
 		IconPalette: raicon
 		Prerequisites: ziggurat2, seal3
 		BuildPaletteOrder: 40
-		Description: Unknown!\n\n\n
+		Description: Unlocks tomb, Grim Reaper and ziggurat level 2\n\n\n
 		Queue: MTech.ded
 		BuildLimit: 1
 		
@@ -622,7 +622,7 @@ SEAL5:
 		IconPalette: raicon
 		Prerequisites: ziggurat3
 		BuildPaletteOrder: 50
-		Description: Unknown!\n\n\n
+		Description: Unlocks Lich\n\n\n
 		Queue: MTech.ded
 		BuildLimit: 1
 		BuildDuration: 2000
@@ -927,7 +927,7 @@ SPPOOL.PENTA:
 	Buildable:
 		IconPalette: raicon
 		BuildPaletteOrder: 30
-		Description: Summons a Essence pool.\n  Stores some Essence
+		Description: Summons an Essence pool.\n  Stores some Essence
 		Queue: MBuilding.ded
 		BuildDuration: 10
 		
@@ -977,7 +977,7 @@ MAUSO.PENTA:
 	Buildable:
 		IconPalette: raicon
 		BuildPaletteOrder: 30
-		Description: Summons a Tomn.\n  Tomb summons advanced skeletons\n  Increases the number of possible skeletons over time\n  Summons up to 2 coffins each giving grave space\n 
+		Description: Summons a Tomb.\n  Tomb summons advanced skeletons\n  Increases the number of possible skeletons over time\n  Summons up to 2 coffins each giving grave space\n 
 		Prerequisites: seal4
 		Queue: MMilitary.ded
 		BuildDuration: 10
@@ -1927,7 +1927,7 @@ UNDEAD5:
 	Buildable:
 		IconPalette: raicon
 		BuildPaletteOrder: 30
-		Description: \n  Strong vs Light Infantry\n  Weak vs Cavalry and heavy Infantry\n  Detects cloaked units\n  Can attack Aircrafts\n  Slows targets under fire
+		Description: \n  Strong vs Light Infantry\n  Weak vs Cavalry and heavy Infantry\n  Detects cloaked units\n  Can attack Aircraft\n  Slows targets under fire
 		Queue: MInfantry.ded
 		BuildDuration: 500
 	Targetable@CombatRole:
@@ -2009,7 +2009,7 @@ UNDEAD7:
 	Buildable:
 		IconPalette: raicon
 		BuildPaletteOrder: 20
-		Description: Skeletal siegeunit\n  Strong vs all\n  Very slow\n  very strong\n  Attacks ranged.
+		Description: Skeletal siegeunit\n  Strong vs all\n  Very slow\n  very strong\n  Attacks ranged
 		Prerequisites: ziggurat3
 		Queue: MSiege.ded
 	PersonValued:
@@ -2138,7 +2138,7 @@ ACOLYTEC:
 	Armor:
 		Type: Leather
 	Buildable:
-		Description: Can corrupt deerstands to spawn corruption, wich is harvetable by Acolytes \n  Strong vs Infantry and cavalry\n  Can attack Aircrafts
+		Description: Can corrupt deerstands to spawn corruption, wich is harvetable by Acolytes \n  Strong vs Infantry and cavalry\n  Can attack Aircraft
 		IconPalette: raicon
 		Prerequisites: libra
 		BuildPaletteOrder: 10
@@ -2196,7 +2196,7 @@ VAMP:
 		IconPalette: raicon
 		BuildPaletteOrder: 20
 		Prerequisites: seal3
-		Description: \n  Strong vs Infantry and cavalry\n  Can transform flying\n  Leeches life\n  Transformed: can attack Aircrafts
+		Description: \n  Strong vs Infantry and cavalry\n  Can transform flying\n  Leeches life\n  Transformed: can attack Aircraft
 		Queue: MVehicle.ded
 		BuildDuration: 900
 	Transforms:
@@ -2355,7 +2355,7 @@ LICHK:
 	Tooltip:
 		Name: Lich
 	Buildable:
-		Description: not\n  Cannot attack\n  Very slow\n  Can go over all terrain\n  Summons a skeletal army.yet
+		Description: \n  Cannot attack\n  Very slow\n  Can go over all terrain\n  Summons a skeletal army
 		IconPalette: raicon
 		BuildPaletteOrder: 30
 		Prerequisites: seal5
