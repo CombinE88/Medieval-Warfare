@@ -1573,7 +1573,7 @@ GARG:
 		DeathSequencePalette: raplayer 
 	Targetable@CombatRole:
 		TargetTypes: Defenses
-        
+		
 #Infantry
 
 UNDEADCOMM:
@@ -1677,16 +1677,16 @@ PREYCOLYTE:
 		leechinterval: 45
 		SelfEnabledCondition: whisper
 		Voice: Harvest
-        ResourceTypesPreres:
-            Crops: NONE
-            Grains: NONE
-            Corn: NONE
-            Iron: ziggurat2
-            Gold: ziggurat2
-            Guns: NONE
-            Wood: NONE
-            Lumber: NONE
-            Corruption: ziggurat2
+		ResourceTypesPreres:
+			Crops: NONE
+			Grains: NONE
+			Corn: NONE
+			Iron: ziggurat2
+			Gold: ziggurat2
+			Guns: NONE
+			Wood: NONE
+			Lumber: NONE
+			Corruption: ziggurat2
 	AcolytePreyBuild: 
 		TargetActors: crypt.penta, sppool.penta, mauso.penta, hellgate.penta, tomb.penta, libra.penta, obelisk.penta, garg.penta
 		PreyLoopSequence: prey
@@ -1935,7 +1935,7 @@ UNDEAD5:
 	AutoTargetPriority@Counter1:
 		ValidTargets: Light, Ranged, LightCavalry, Support, Flying
 		Priority: 4
-        
+		
 UNDEAD6:
 	Inherits: ^Skeleton
 	Valued:
@@ -2116,7 +2116,7 @@ ACOLYTEC:
 		Name: primary
 		LocalOffset: 127,-128,638
 		FireDelay: 14
-    Armament@Corrupt:
+	Armament@Corrupt:
 		Weapon: CorruptionSpawner
 		Name: secondary
 		LocalOffset: 127,-128,638 
@@ -2144,8 +2144,8 @@ ACOLYTEC:
 		BuildPaletteOrder: 10
 		Queue: MBuilding.ded
 		BuildDuration: 600
-    CorruptDeerstand:
-        TargetActors: split7, split8
+	CorruptDeerstand:
+		TargetActors: split7, split8
 	Targetable@CombatRole:
 		TargetTypes: Ranged
 	AutoTargetPriority@Counter1:

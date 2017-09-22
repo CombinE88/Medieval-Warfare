@@ -595,6 +595,8 @@ SIEGE99:
 	Mobile:
 		TurnSpeed: 6
 		Speed: 45
+	Selectable:
+		Priority: 5
 	NewDisguiseTooltip:
 		Name: Wooden Horse
 	Health:
@@ -615,6 +617,7 @@ SIEGE99:
 	Selectable:
 		Bounds: 42,42,0,0
 	SelectionDecorations:
+		RenderSelectionBars: false
 		VisualBounds: 42,42,0,0
 	Targetable:
 		TargetTypes: Ground, Siege

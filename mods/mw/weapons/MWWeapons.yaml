@@ -266,12 +266,8 @@ WanderCommander:
 			HeavyCavalry: 55
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
 
-		
-
-
-		
 Repair:
-	ReloadDelay: 25
+	ReloadDelay: 20
 	Range: 1c800
 	Report: repair01.aud
 	ValidTargets: Siege
@@ -280,7 +276,7 @@ Repair:
 		Speed: 1c682
 	Warhead@1Dam: SpreadDamage
 		Spread: 213
-		Damage: -400
+		Damage: -760
 		ValidTargets: Siege
 		InvalidTargets: Air
 		
@@ -2593,76 +2589,186 @@ RottenKadaver:
 		Blockable: false
 		Inaccuracy: 1c120
 		Speed: 141
-	Warhead@rotten1: GrantExternalCondition
-		Range: 2c215
+	Warhead@rotten1: HealthPercentageDamage
 		Delay: 25
-		Duration: 50
-		Condition: RottenKadaver
-		ValidTargets: Infantry, Cavalry, Siege
-		ValidStances: Enemy, Neutral, Ally
-	Warhead@rotten2: GrantExternalCondition
-		Range: 2c215
+		Spread: 2c215
+		Damage: 10
+		InvalidTargets: Wall, Structure, Air
+		ValidTargets: Ground
+		Versus:
+			Leather: 100
+			Light: 100
+			Heavy: 100
+			Concrete: 100
+			Knight: 100
+			HeavyBuilding: 100
+			LightCavalry: 100
+			MediumCavalry: 100
+			HeavyCavalry: 100
+			Spectral: 50
+		DamageTypes: PoisonDeath 
+	Warhead@rotten2: HealthPercentageDamage
 		Delay: 75
-		Duration: 50
-		Condition: RottenKadaver
-		ValidTargets: Infantry, Cavalry, Siege
-		ValidStances: Enemy, Neutral, Ally
-	Warhead@rotten3: GrantExternalCondition
-		Range: 2c215
+		Spread: 2c215
+		Damage: 10
+		InvalidTargets: Wall, Structure, Air
+		ValidTargets: Ground
+		Versus:
+			Leather: 100
+			Light: 100
+			Heavy: 100
+			Concrete: 100
+			Knight: 100
+			HeavyBuilding: 100
+			LightCavalry: 100
+			MediumCavalry: 100
+			HeavyCavalry: 100
+			Spectral: 50
+		DamageTypes: PoisonDeath 
+	Warhead@rotten3: HealthPercentageDamage
 		Delay: 125
-		Duration: 50
-		Condition: RottenKadaver
-		ValidTargets: Infantry, Cavalry, Siege
-		ValidStances: Enemy, Neutral, Ally
-	Warhead@rotten4: GrantExternalCondition
-		Range: 2c215
+		Spread: 2c215
+		Damage: 10
+		InvalidTargets: Wall, Structure, Air
+		ValidTargets: Ground
+		Versus:
+			Leather: 100
+			Light: 100
+			Heavy: 100
+			Concrete: 100
+			Knight: 100
+			HeavyBuilding: 100
+			LightCavalry: 100
+			MediumCavalry: 100
+			HeavyCavalry: 100
+			Spectral: 50
+		DamageTypes: PoisonDeath 
+	Warhead@rotten4: HealthPercentageDamage
 		Delay: 175
-		Duration: 50
-		Condition: RottenKadaver
-		ValidTargets: Infantry, Cavalry, Siege
-		ValidStances: Enemy, Neutral, Ally
-	Warhead@rotten5: GrantExternalCondition
-		Range: 2c215
+		Spread: 2c215
+		Damage: 10
+		InvalidTargets: Wall, Structure, Air
+		ValidTargets: Ground
+		Versus:
+			Leather: 100
+			Light: 100
+			Heavy: 100
+			Concrete: 100
+			Knight: 100
+			HeavyBuilding: 100
+			LightCavalry: 100
+			MediumCavalry: 100
+			HeavyCavalry: 100
+			Spectral: 50
+		DamageTypes: PoisonDeath 
+	Warhead@rotten5: HealthPercentageDamage
 		Delay: 225
-		Duration: 50
-		Condition: RottenKadaver
-		ValidTargets: Infantry, Cavalry, Siege
-		ValidStances: Enemy, Neutral, Ally
-	Warhead@rotten6: GrantExternalCondition
-		Range: 2c215
+		Spread: 2c215
+		Damage: 10
+		InvalidTargets: Wall, Structure, Air
+		ValidTargets: Ground
+		Versus:
+			Leather: 100
+			Light: 100
+			Heavy: 100
+			Concrete: 100
+			Knight: 100
+			HeavyBuilding: 100
+			LightCavalry: 100
+			MediumCavalry: 100
+			HeavyCavalry: 100
+			Spectral: 50
+		DamageTypes: PoisonDeath 
+	Warhead@rotten6: HealthPercentageDamage
 		Delay: 275
-		Duration: 50
-		Condition: RottenKadaver
-		ValidTargets: Infantry, Cavalry, Siege
-		ValidStances: Enemy, Neutral, Ally
-	Warhead@rotten7: GrantExternalCondition
-		Range: 2c215
+		Spread: 2c215
+		Damage: 10
+		InvalidTargets: Wall, Structure, Air
+		ValidTargets: Ground
+		Versus:
+			Leather: 100
+			Light: 100
+			Heavy: 100
+			Concrete: 100
+			Knight: 100
+			HeavyBuilding: 100
+			LightCavalry: 100
+			MediumCavalry: 100
+			HeavyCavalry: 100
+			Spectral: 50
+		DamageTypes: PoisonDeath 
+	Warhead@rotten7: HealthPercentageDamage
 		Delay: 325
-		Duration: 50
-		Condition: RottenKadaver
-		ValidTargets: Infantry, Cavalry, Siege
-		ValidStances: Enemy, Neutral, Ally
-	Warhead@rotten8: GrantExternalCondition
-		Range: 2c215
+		Spread: 2c215
+		Damage: 10
+		InvalidTargets: Wall, Structure, Air
+		ValidTargets: Ground
+		Versus:
+			Leather: 100
+			Light: 100
+			Heavy: 100
+			Concrete: 100
+			Knight: 100
+			HeavyBuilding: 100
+			LightCavalry: 100
+			MediumCavalry: 100
+			HeavyCavalry: 100
+			Spectral: 50
+		DamageTypes: PoisonDeath 
+	Warhead@rotten8: HealthPercentageDamage
 		Delay: 375
-		Duration: 50
-		Condition: RottenKadaver
-		ValidTargets: Infantry, Cavalry, Siege
-		ValidStances: Enemy, Neutral, Ally
-	Warhead@rotten9: GrantExternalCondition
-		Range: 2c215
+		Spread: 2c215
+		Damage: 10
+		InvalidTargets: Wall, Structure, Air
+		ValidTargets: Ground
+		Versus:
+			Leather: 100
+			Light: 100
+			Heavy: 100
+			Concrete: 100
+			Knight: 100
+			HeavyBuilding: 100
+			LightCavalry: 100
+			MediumCavalry: 100
+			HeavyCavalry: 100
+			Spectral: 50
+		DamageTypes: PoisonDeath 
+	Warhead@rotten9: HealthPercentageDamage
 		Delay: 425
-		Duration: 50
-		Condition: RottenKadaver
-		ValidTargets: Infantry, Cavalry, Siege
-		ValidStances: Enemy, Neutral, Ally
-	Warhead@rotten10: GrantExternalCondition
-		Range: 2c215
+		Spread: 2c215
+		Damage: 10
+		InvalidTargets: Wall, Structure, Air
+		ValidTargets: Ground
+		Versus:
+			Leather: 100
+			Light: 100
+			Heavy: 100
+			Concrete: 100
+			Knight: 100
+			HeavyBuilding: 100
+			LightCavalry: 100
+			MediumCavalry: 100
+			HeavyCavalry: 100
+			Spectral: 50
+		DamageTypes: PoisonDeath 
+	Warhead@rotten10: HealthPercentageDamage
 		Delay: 475
-		Duration: 50
-		Condition: RottenKadaver
-		ValidTargets: Infantry, Cavalry, Siege
-		ValidStances: Enemy, Neutral, Ally
+		Spread: 2c215
+		Damage: 10
+		InvalidTargets: Wall, Structure, Air
+		ValidTargets: Ground
+		Versus:
+			Leather: 100
+			Light: 100
+			Heavy: 100
+			Concrete: 100
+			Knight: 100
+			HeavyBuilding: 100
+			LightCavalry: 100
+			MediumCavalry: 100
+			HeavyCavalry: 100
+			Spectral: 50
+		DamageTypes: PoisonDeath 
 	Warhead@1Dam: SpreadDamage
 		Spread: 1c0
 		Damage: 6000
@@ -2695,6 +2801,179 @@ RottenKadaver:
 		Delay: 13
 		SmudgeType: Crater
 		InvalidTargets: Vehicle, Structure, Wall, Husk, Trees, Creep
+        
+        
+SingleDeadKadaver:
+	ReloadDelay: 100
+	Range: 1c0
+	InvalidTargets: Wall
+	Projectile: InstantHit
+	Warhead@rotten1: HealthPercentageDamage
+		Delay: 25
+		Spread: 2c215
+		Damage: 8
+		InvalidTargets: Wall, Structure, Air
+		ValidTargets: Ground
+		Versus:
+			Leather: 100
+			Light: 100
+			Heavy: 100
+			Concrete: 100
+			Knight: 100
+			HeavyBuilding: 100
+			LightCavalry: 100
+			MediumCavalry: 100
+			HeavyCavalry: 100
+			Spectral: 50
+		DamageTypes: PoisonDeath 
+	Warhead@rotten2: HealthPercentageDamage
+		Delay: 75
+		Spread: 2c215
+		Damage: 8
+		InvalidTargets: Wall, Structure, Air
+		ValidTargets: Ground
+		Versus:
+			Leather: 100
+			Light: 100
+			Heavy: 100
+			Concrete: 100
+			Knight: 100
+			HeavyBuilding: 100
+			LightCavalry: 100
+			MediumCavalry: 100
+			HeavyCavalry: 100
+			Spectral: 50
+		DamageTypes: PoisonDeath 
+	Warhead@rotten3: HealthPercentageDamage
+		Delay: 125
+		Spread: 2c215
+		Damage: 8
+		InvalidTargets: Wall, Structure, Air
+		ValidTargets: Ground
+		Versus:
+			Leather: 100
+			Light: 100
+			Heavy: 100
+			Concrete: 100
+			Knight: 100
+			HeavyBuilding: 100
+			LightCavalry: 100
+			MediumCavalry: 100
+			HeavyCavalry: 100
+			Spectral: 50
+		DamageTypes: PoisonDeath 
+	Warhead@rotten4: HealthPercentageDamage
+		Delay: 175
+		Spread: 2c215
+		Damage: 8
+		InvalidTargets: Wall, Structure, Air
+		ValidTargets: Ground
+		Versus:
+			Leather: 100
+			Light: 100
+			Heavy: 100
+			Concrete: 100
+			Knight: 100
+			HeavyBuilding: 100
+			LightCavalry: 100
+			MediumCavalry: 100
+			HeavyCavalry: 100
+			Spectral: 50
+		DamageTypes: PoisonDeath 
+	Warhead@rotten5: HealthPercentageDamage
+		Delay: 225
+		Spread: 2c215
+		Damage: 8
+		InvalidTargets: Wall, Structure, Air
+		ValidTargets: Ground
+		Versus:
+			Leather: 100
+			Light: 100
+			Heavy: 100
+			Concrete: 100
+			Knight: 100
+			HeavyBuilding: 100
+			LightCavalry: 100
+			MediumCavalry: 100
+			HeavyCavalry: 100
+			Spectral: 50
+		DamageTypes: PoisonDeath 
+	Warhead@rotten6: HealthPercentageDamage
+		Delay: 275
+		Spread: 2c215
+		Damage: 8
+		InvalidTargets: Wall, Structure, Air
+		ValidTargets: Ground
+		Versus:
+			Leather: 100
+			Light: 100
+			Heavy: 100
+			Concrete: 100
+			Knight: 100
+			HeavyBuilding: 100
+			LightCavalry: 100
+			MediumCavalry: 100
+			HeavyCavalry: 100
+			Spectral: 50
+		DamageTypes: PoisonDeath 
+	Warhead@rotten7: HealthPercentageDamage
+		Delay: 325
+		Spread: 2c215
+		Damage: 8
+		InvalidTargets: Wall, Structure, Air
+		ValidTargets: Ground
+		Versus:
+			Leather: 100
+			Light: 100
+			Heavy: 100
+			Concrete: 100
+			Knight: 100
+			HeavyBuilding: 100
+			LightCavalry: 100
+			MediumCavalry: 100
+			HeavyCavalry: 100
+			Spectral: 50
+		DamageTypes: PoisonDeath 
+	Warhead@rotten8: HealthPercentageDamage
+		Delay: 375
+		Spread: 2c215
+		Damage: 8
+		InvalidTargets: Wall, Structure, Air
+		ValidTargets: Ground
+		Versus:
+			Leather: 100
+			Light: 100
+			Heavy: 100
+			Concrete: 100
+			Knight: 100
+			HeavyBuilding: 100
+			LightCavalry: 100
+			MediumCavalry: 100
+			HeavyCavalry: 100
+			Spectral: 50
+		DamageTypes: PoisonDeath 		
+	Warhead@rotten9: HealthPercentageDamage
+		Delay: 425
+		Spread: 2c215
+		Damage: 8
+		InvalidTargets: Wall, Structure, Air
+		ValidTargets: Ground
+		Versus:
+			Leather: 100
+			Light: 100
+			Heavy: 100
+			Concrete: 100
+			Knight: 100
+			HeavyBuilding: 100
+			LightCavalry: 100
+			MediumCavalry: 100
+			HeavyCavalry: 100
+			Spectral: 50
+		DamageTypes: PoisonDeath 	
+	Warhead@2Eff: CreateEffect
+		Explosions: rottk1,rottk2,rottk3
+		Delay: 10
+		ExplosionPalette : ra
 		
 		
 CannonStrike:
@@ -3117,7 +3396,7 @@ BowNArrowHunter:
 		Spread: 25
 		InvalidTargets: Wall, Air
 		ValidTargets: Wildlife
-		Damage: 1000
+		Damage: 3000
 		Versus:
 			Leather: 100
 			Light: 75

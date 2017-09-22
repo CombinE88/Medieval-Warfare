@@ -78,7 +78,6 @@ LODGE.SCAFF:
 		Dimensions: 2, 2
 		Footprint: xx ==
 		LocalCenterOffset: 0,-512,0
-		RequiresBaseProvider: false
 	Armor:
 		Type: Concrete
 	RenderSprites:
@@ -153,7 +152,6 @@ LJACKB.SCAFF:
 	Building:
 		Dimensions: 1, 1
 		Footprint: x
-		RequiresBaseProvider: false
 	Armor:
 		Type: Concrete
 	RenderSprites:
@@ -1478,6 +1476,10 @@ WORKSHOPNOD.SCAFF:
 	WithIdleOverlay@base4:
 		Sequence: make4
 		RequiresCondition: Construct >= 45
+	WithRangeCircle:
+		Type: Workshop
+		Range: 4c0
+		Color: b50909
 		
 WORKSHOPGDI.SCAFF:
 	Inherits: ^3x2SITE
@@ -1545,6 +1547,10 @@ WORKSHOPGDI.SCAFF:
 	WithIdleOverlay@base4:
 		Sequence: make4
 		RequiresCondition: Construct >= 55
+	WithRangeCircle:
+		Type: Workshop
+		Range: 4c0
+		Color: b50909
 		
 GTWNEW.SCAFF:
 	Inherits: ^1x1SITE

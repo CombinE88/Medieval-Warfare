@@ -65,6 +65,147 @@ transporter:
 		Length: *
 		Tick: 80
 		
+		
+workshoplabor:
+	stunned: sulm4
+		ZOffset: 125
+		Start: 312
+		Length: 2
+		Tick: 200
+	stand: shopworker
+		Start: 146
+		Facings: 8
+	run: shopworker
+		Start: 0
+		Length: 8
+		Facings: 8
+		Tick: 100
+	repair: shopworker
+		Start: 573
+		Length: 7
+		Facings: 8
+		Tick: 150
+	idle1: shopworker
+		Start: 219
+		Length: 59
+		Tick: 60
+	idle2: shopworker
+		Start: 278
+		Length: 59
+		Tick: 60
+	idle3: shopworker
+		Start: 337
+		Length: 59
+		Tick: 60
+	idle4: shopworker
+		Start: 396
+		Length: 59
+		Tick: 60
+	idle5: shopworker
+		Start: 455
+		Length: 59
+		Tick: 60
+	idle6: shopworker
+		Start: 514
+		Length: 59
+		Tick: 60
+	die1: shopworker
+		Start: 155
+		Length: 16
+		Tick: 80
+	# large hit
+	die2: splatterdead
+		Length: *
+		Tick: 80
+	# poision
+	die3: shopworker
+		Start: 187
+		Length: 15
+		Tick: 80
+	# ballista
+	die4: shopworker
+		Start: 203
+		Length: 11
+		Tick: 80
+	die-crushed: e1rot
+		Start: 16
+		Length: 4
+		Tick: 1600
+		ZOffset: -511
+	die5: burningman
+		Length: *
+		Tick: 80
+		
+sulshoplabor:
+	stunned: sulm4
+		ZOffset: 125
+		Start: 312
+		Length: 2
+		Tick: 200
+	stand: sulshopworker
+		Start: 146
+		Facings: 8
+	run: sulshopworker
+		Start: 0
+		Length: 8
+		Facings: 8
+		Tick: 100
+	repair: sulshopworker
+		Start: 573
+		Length: 7
+		Facings: 8
+		Tick: 150
+	idle1: sulshopworker
+		Start: 219
+		Length: 59
+		Tick: 60
+	idle2: sulshopworker
+		Start: 278
+		Length: 59
+		Tick: 60
+	idle3: sulshopworker
+		Start: 337
+		Length: 59
+		Tick: 60
+	idle4: sulshopworker
+		Start: 396
+		Length: 59
+		Tick: 60
+	idle5: sulshopworker
+		Start: 455
+		Length: 59
+		Tick: 60
+	idle6: sulshopworker
+		Start: 514
+		Length: 59
+		Tick: 60
+	die1: sulshopworker
+		Start: 155
+		Length: 16
+		Tick: 80
+	# large hit
+	die2: splatterdead
+		Length: *
+		Tick: 80
+	# poision
+	die3: sulshopworker
+		Start: 187
+		Length: 15
+		Tick: 80
+	# ballista
+	die4: sulshopworker
+		Start: 203
+		Length: 11
+		Tick: 80
+	die-crushed: e1rot
+		Start: 16
+		Length: 4
+		Tick: 1600
+		ZOffset: -511
+	die5: burningman
+		Length: *
+		Tick: 80
+		
 koenig:
 	make: koenig
 		Start: 176
@@ -972,7 +1113,7 @@ rmbonew:
 		AddExtension: False  
 	muzzle: rmbonew
 		Start: 242
-        Offset: 0,6
+		Offset: 0,6
 		Facings: 8
 		Length: 7
 		Tick: 100

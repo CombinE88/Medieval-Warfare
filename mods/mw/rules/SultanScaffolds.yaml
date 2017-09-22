@@ -78,7 +78,6 @@ SULLODGE.SCAFF:
 		Dimensions: 2, 2
 		Footprint: xx ==
 		LocalCenterOffset: 0,-512,0
-		RequiresBaseProvider: false
 	Armor:
 		Type: Concrete
 	RenderSprites:
@@ -597,7 +596,10 @@ SULFIX.SCAFF:
 	WithIdleOverlay@base4:
 		Sequence: make4
 		RequiresCondition: Construct >= 45
-
+	WithRangeCircle:
+		Type: Workshop
+		Range: 4c0
+		Color: b50909
 		
 SULGTW.SCAFF:
 	Inherits: ^1x1SITE

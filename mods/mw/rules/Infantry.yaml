@@ -210,22 +210,22 @@ ENGENEER:
 	Inherits: ^Knight
 	AutoTargetPriority@Prio5:
 		ValidTargets: Priority5
-        Priority: 5
+		Priority: 5
 	AutoTargetPriority@Prio4:
 		ValidTargets: Priority4
-        Priority: 4
+		Priority: 4
 	AutoTargetPriority@Prio3:
 		ValidTargets: Priority3
-        Priority: 3
+		Priority: 3
 	AutoTargetPriority@Prio2:
 		ValidTargets: Priority2
-        Priority: 2
+		Priority: 2
 	AutoTargetPriority@Prio1:
 		ValidTargets: Priority1
-        Priority: 1
+		Priority: 1
 	AutoTargetPriority@Prio0:
 		ValidTargets: Structure, Infantry, Vehicle, Creep, Water, Defense, Cavalry, Siege, Air
-        Priority: 0
+		Priority: 0
 	Passenger:
 		PipType: Yellow
 	Valued:
@@ -250,10 +250,6 @@ ENGENEER:
 		HP: 8000
 	Armament@Build:
 		Weapon: BuildConstruction
-		TargetStances: Ally
-		ForceTargetStances: None
-    Armament@RepairEngine:
-		Weapon: Repair
 		TargetStances: Ally
 		ForceTargetStances: None
 	AttackFrontal:
@@ -361,7 +357,7 @@ E2NEWV2:
 	Valued:
 		Cost: 200
 	-Crushable:
-    Tooltip:
+	Tooltip:
 		Name: Halberd Guard
 	Buildable:
 		Description: Anti-Cavalry infantry.\n  Strong vs Cavalry.\n  Weak vs Infantry\n  Deals damage when trampled by Cavalry\n  Can cut down trees.\n\nTrains: 1 Peasant\n
@@ -558,24 +554,24 @@ E4NEW:
 	Armament:
 		Weapon: bownarrow
 		LocalOffset: 341,20,356
-        Name: Primary
+		Name: Primary
 	Armament@DUMMY:
 		Weapon: BowNArrowDUMMY
 		LocalOffset: 341,20,356
-        Name: Primary
+		Name: Primary
 	Armament@Air:
 		Weapon: bownarrowair
 		LocalOffset: 341,20,356
-        Name: Primary
+		Name: Primary
 	Armament@Debuffapply:
 		Weapon: BowNArrowDebuff
 		LocalOffset: 341,20,356
-        Name: Secondary
+		Name: Secondary
 	AttackFrontal:
-        Armaments: Primary, Secondary
+		Armaments: Primary, Secondary
 	WithInfantryBody:
  		AttackSequences:
-			Primary: shoot    
+			Primary: shoot	
 	AttackFrontal:
 	AutoTarget:
 		ScanRadius: 5
@@ -627,21 +623,21 @@ E4NEWV2:
 	Armament:
 		Weapon: bownarrow
 		LocalOffset: 341,20,356
-        Name: Primary
+		Name: Primary
 	Armament@DUMMY:
 		Weapon: BowNArrowDUMMY
 		LocalOffset: 341,20,356
-        Name: Primary
+		Name: Primary
 	Armament@Air:
 		Weapon: bownarrowair
 		LocalOffset: 341,20,356
-        Name: Primary
+		Name: Primary
 	Armament@Debuffapply:
 		Weapon: BowNArrowDebuff
 		LocalOffset: 341,20,356
-        Name: Secondary
+		Name: Secondary
 	AttackFrontal:
-        Armaments: Primary, Secondary
+		Armaments: Primary, Secondary
 	WithInfantryBody:
  		AttackSequences:
 			Primary: shoot
@@ -893,7 +889,7 @@ ASSASSIN:
 		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 	Targetable@CombatRole:
 		TargetTypes: Light
-        
+		
 E8FARMER:
 	Inherits: ^Knight
 	BodyOrientation:
@@ -960,7 +956,7 @@ E8FARMER:
 		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 	Voiced:
 		VoiceSet: FarmerVoice
-        Volume: 3
+		Volume: 3
 		
 BUMMLER:
 	Inherits: ^Knight
@@ -1023,13 +1019,13 @@ BUMMLER:
 		
 SIEGERUNNER:
 	Inherits: ^Knight
-    -GrimTarget:
+	-GrimTarget:
 	-DamageMultiplier@GRIM:
 	-RangeMultiplier@GRIM:
 	-FirepowerMultiplier@GRIM:
 	-SpeedMultiplier@GRIM:
-    -ReloadDelayMultiplier@GRIM:
-    -GivesExperienceMultiplier@GRIM:
+	-ReloadDelayMultiplier@GRIM:
+	-GivesExperienceMultiplier@GRIM:
 	Valued:
 		Cost: 250
 	Tooltip:
@@ -1253,47 +1249,54 @@ MWWAND8:
 		RequiresCondition: Wander
 	-CashTrickler@PayTax:
 		
-MWWAND9:
-	Inherits: ^MWWanderer
+SHOPPLAYER:
+	Inherits: ^Knight
+	-GainsExperience:
+	AutoTargetPriority@Prio0:
+		ValidTargets: Structure, Infantry, Vehicle, Creep, Water, Defense, Cavalry, Siege, Air
+		Priority: 1
+	Armor:
+		Type: Leather
+	Mobile:
+		Speed: 56
+	Valued:
+		Cost: 250
 	RenderSprites:
-		Image: mwciv9
-		PlayerPalette: 
-		Palette: mwcivilian
+		PlayerPalette: raplayer
+		Image: workshoplabor
+		FactionImages:
+			nod: workshoplabor
+			gdi: workshoplabor
+			sul: sulshoplabor
+	-Selectable:
 	WithInfantryBody:
+		StandSequences: stand
+		DefaultAttackSequence: repair
 		MinIdleDelay: 25
 		MaxIdleDelay: 75
 		IdleSequences: idle1, idle2, idle3, idle4, idle5, idle6
 	Tooltip:
-		Name: Labourer
+		Name: Craftsmen
 		GenericVisibility: None
-	Wanders:
-		WanderMoveRadius: 1
-		ReduceMoveRadiusDelay: 5
-		MinMoveDelay: 250
-		MaxMoveDelay: 650
-		RequiresCondition: Labor
+	AutoTarget:
+		ScanRadius: 5
+		InitialStance: AttackAnything
+	AttackFrontal:
+	AttackMove:
+	Armament@RepairEngine:
+		Weapon: Repair
+		TargetStances: Ally
+		ForceTargetStances: None
 	AttackWander: 
 		WanderMoveRadius: 1
-		ReduceMoveRadiusDelay: 5
-		MinMoveDelay: 0
-		MaxMoveDelay: 25
-		RequiresCondition: !Labor
-	WithInfantryBody:
-		StandSequences: stand
-	AutoTarget:
-		ScanRadius: 20
-		InitialStance: AttackAnything
-		RequiresCondition: !Labor
-	AttackFrontal:
-		RequiresCondition: !Labor
-	AttackMove:
-		RequiresCondition: !Labor
-	ExternalCondition@Wander:
-		Condition: Labor
-	Armament:
-		Weapon: WanderAttackWorkshop
-		TargetStances: Ally
-		RequiresCondition: !Labor
+		ReduceMoveRadiusDelay: 25
+		MinMoveDelay: 175
+		MaxMoveDelay: 300
+	PersonValued:
+		ActorCount: 1
+		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
+
+
 		
 MWCIVCOM:
 	Inherits: ^MWWanderer
@@ -1492,15 +1495,7 @@ MWCONST7:
 		Offset: 0,0
 		Facing: 76
 		
-MWCONST1BACK:
-	Inherits: ^MWConstructor
-	RenderSprites:
-		Image: mwciv9
-	Infiltrates:
-		Types: BaseCenter
-		ValidStances: Ally
-		Notification: 
-		
+
 MWLUMBERER:
 	Inherits: ^MWConstructor
 	RenderSprites:
@@ -1517,7 +1512,7 @@ MWLUMBERER:
 		AttackSequences:
 			secondary: attack
 			primary: attack
-            tairt: attackwood
+			tairt: attackwood
 	WithInfantryBody@Lumberer:
 		StandSequences: standwood
 		MoveSequence: runwood
@@ -1525,7 +1520,7 @@ MWLUMBERER:
 		AttackSequences:
 			secondary: attack
 			primary: attack
-            tairt: attackwood
+			tairt: attackwood
 	AttackFrontal:
 		Armaments: primary, secondary, tairt
 		IgnoresVisibility: true	
@@ -1576,14 +1571,14 @@ MWLUMBERER:
 		ResetDelayOnEnable: false
 		RequiresCondition: DeerHunter
 	DeerHunter: 
-        HuntTypes: TreeToChop
-        LootTypes: ChopTree
-        SearchDistance: 15c0
-    PersonValued:
+		HuntTypes: TreeToChop
+		LootTypes: ChopTree
+		SearchDistance: 15c0
+	PersonValued:
 		ActorCount: 0
 		ConvertingActors: 
-        
-        
+		
+		
 MWLUMBEREROWNED:
 	Inherits: ^MWConstructor
 	RenderSprites:
@@ -1600,7 +1595,7 @@ MWLUMBEREROWNED:
 		AttackSequences:
 			secondary: attack
 			primary: attack
-            tairt: attackwood
+			tairt: attackwood
 	WithInfantryBody@Lumberer:
 		StandSequences: standwood
 		MoveSequence: runwood
@@ -1608,7 +1603,7 @@ MWLUMBEREROWNED:
 		AttackSequences:
 			secondary: attack
 			primary: attack
-            tairt: attackwood
+			tairt: attackwood
 	AttackFrontal:
 		Armaments: primary, secondary, tairt
 		IgnoresVisibility: true	
@@ -1659,10 +1654,10 @@ MWLUMBEREROWNED:
 		ResetDelayOnEnable: false
 		RequiresCondition: DeerHunter
 	DeerHunter: 
-        HuntTypes: TreeToChop
-        LootTypes: ChopTree
-        SearchDistance: 17c0
-    PersonValued:
+		HuntTypes: TreeToChop
+		LootTypes: ChopTree
+		SearchDistance: 17c0
+	PersonValued:
 		ActorCount: 1
 		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 		
@@ -1670,22 +1665,22 @@ TRANSPORTER:
 	Inherits: ^Knight
 	AutoTargetPriority@Prio5:
 		ValidTargets: Priority5
-        Priority: 5
+		Priority: 5
 	AutoTargetPriority@Prio4:
 		ValidTargets: Priority4
-        Priority: 4
+		Priority: 4
 	AutoTargetPriority@Prio3:
 		ValidTargets: Priority3
-        Priority: 3
+		Priority: 3
 	AutoTargetPriority@Prio2:
 		ValidTargets: Priority2
-        Priority: 2
+		Priority: 2
 	AutoTargetPriority@Prio1:
 		ValidTargets: Priority1
-        Priority: 1
+		Priority: 1
 	AutoTargetPriority@Prio0:
 		ValidTargets: Structure
-        Priority: 0
+		Priority: 0
 	-Explodes@Tib:
 	RevealsShroud:
 		Range: 4c0
@@ -1721,7 +1716,7 @@ TRANSPORTER:
 	ExternalCondition@Loading:
 		Condition: Loading
 	WithFacingSpriteBody:
-    WithInfantryBody:
+	WithInfantryBody:
 		MoveSequence: run
 		StandSequences: stand
 		RequiresCondition: !EmptyGoods
@@ -1758,7 +1753,7 @@ TRANSPORTER:
 		ActorCount: 1
 		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 		
-        
+		
 HUNTER:
 	Inherits: ^Knight
 	RevealsShroud:
@@ -1843,7 +1838,7 @@ HUNTER:
 	PersonValued:
 		ActorCount: 1
 		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4, noble1, noble2, noble3, noble4
-    DeerHunter: 
-        HuntTypes: Wildlife
-        LootTypes: DeadWildlife
-        SearchDistance: 15c0
+	DeerHunter: 
+		HuntTypes: Wildlife
+		LootTypes: DeadWildlife
+		SearchDistance: 15c0

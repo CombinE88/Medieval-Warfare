@@ -1449,7 +1449,12 @@
 	Explodes@Tib:
 		Weapon: LeaveStuff
 		EmptyWeapon: LeaveStuff
-		Chance: 25
+	Explodes@Kadaver:
+		Weapon: SingleDeadKadaver
+		EmptyWeapon: SingleDeadKadaver
+		Chance: 50
+		LoadedChance: 50
+		DeathTypes: PoisonDeath
 	SpawnActorOnDeath@SCELET:
 		DeathType: SkeletonDeath
 		Probability: 33

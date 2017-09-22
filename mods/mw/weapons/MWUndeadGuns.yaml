@@ -270,7 +270,7 @@ SkeletonRock:
 		DamageTypes: Prone50Percent, TriggerProne, BallistaDeath, SpawnSoul
 	Warhead@2Eff: CreateEffect
 		ImpactSounds: dirtexplosion.aud
-        ExplosionPalette : ra
+		ExplosionPalette : ra
 		Explosions: rockimpact 
 	Warhead@2Smu: LeaveSmudge
 		SmudgeType: Crater
@@ -283,8 +283,8 @@ ObeliskGraveCleaner:
 	ReloadDelay: 80
 	Range: 10c0
 	MinRange: 0c0
-    Burst: 3
-    BurstDelay: 15
+	Burst: 3
+	BurstDelay: 15
 	Report: lightning1.aud, lightning2.aud
 	ValidTargets: Ground, Air
 	Projectile: TeslaZap
@@ -350,12 +350,12 @@ AcolyteGiantHand:
 		DamageTypes: Prone50Percent, TriggerProne, RippedApartDeath, SpawnSoul
 	Warhead@5hand: CreateEffect
 		Explosions: gianthand 
-        ExplosionPalette : ra
+		ExplosionPalette : ra
 		Delay: 10
 	Warhead@2Eff: CreateEffect
 		ImpactSounds: dirtexplosion.aud
 		Delay: 30
-    Warhead@2Rubble: CreateEffect
+	Warhead@2Rubble: CreateEffect
 		ImpactSounds: rubble.aud
 	Warhead@Shake: ShakeGround	 
 		Intensity: 5
@@ -368,7 +368,7 @@ AcolyteSpawnHelper:
 	InvalidTargets: Air
 	ValidTargets: Ground
 	Projectile: GravityBomb
-        Velocity: 10,0,0
+		Velocity: 10,0,0
 	Warhead@1Snakes: FireShrapnel
 		Weapon: AcolyteSpawnSkeletonA
 		InvalidTargets: Air
@@ -421,7 +421,7 @@ AcolyteSpawnSkeletonA:
 		Speed: 1c382
 	Warhead@SpawnEffect: CreateEffect
 		Explosions: summoning
-        ExplosionPalette : grimspawnalpha
+		ExplosionPalette : grimspawnalpha
 	Warhead@Talking: SpawnActor
 		Actors: ressurect1
 		Delay: 3
@@ -438,7 +438,7 @@ AcolyteSpawnSkeletonB:
 		Speed: 1c382
 	Warhead@SpawnEffect: CreateEffect
 		Explosions: summoning
-        ExplosionPalette : grimspawnalpha
+		ExplosionPalette : grimspawnalpha
 	Warhead@Talking: SpawnActor
 		Actors: ressurect2
 		Delay: 3
@@ -455,7 +455,7 @@ AcolyteSpawnSkeletonC:
 		Speed: 1c382
 	Warhead@SpawnEffect: CreateEffect
 		Explosions: summoning
-        ExplosionPalette : grimspawnalpha
+		ExplosionPalette : grimspawnalpha
 	Warhead@Talking: SpawnActor
 		Delay: 3
 		Actors: ressurect3
@@ -472,19 +472,19 @@ AcolyteSpawnSkeletonD:
 		Speed: 1c382
 	Warhead@SpawnEffect: CreateEffect
 		Explosions: summoning
-        ExplosionPalette : grimspawnalpha
+		ExplosionPalette : grimspawnalpha
 	Warhead@Talking: SpawnActor
 		Delay: 3
 		Actors: ressurect4
 		ValidTargets: Ground
 		InvalidTargets: Air
-        
+		
 AcolyteAttackCleaner:
 	ReloadDelay: 65
 	Range: 5c512
 	Report: lightning1.aud, lightning2.aud
 	ValidTargets: Ground
-    InvalidTargets: Air
+	InvalidTargets: Air
 	Projectile: TeslaZap
 		Image: zombspark   
 		Palette: raicon
@@ -496,7 +496,7 @@ AcolyteAttackCleaner:
 	Warhead@1Dam: SpreadDamage
 		Spread: 141
 		ValidTargets: Ground
-        InvalidTargets: Air
+		InvalidTargets: Air
 		Damage: 1750
 		Versus:
 			Leather: 100
@@ -508,15 +508,15 @@ AcolyteAttackCleaner:
 			MediumCavalry: 70
 			HeavyCavalry: 50
 			HeavyBuilding: 50
-            Spectral: 80
+			Spectral: 80
 		DamageTypes: Prone50Percent, TriggerProne, RippedApartDeath, SpawnSoul
-        
+		
 AcolyteAttackCleanerAIR:
 	ReloadDelay: 65
-	Range: 8c0
+	Range: 9c0
 	Report: lightning1.aud, lightning2.aud
 	ValidTargets: Air
-    InvalidTargets: Ground
+	InvalidTargets: Ground
 	Projectile: TeslaZap
 		Image: zombspark   
 		Palette: raicon
@@ -526,10 +526,10 @@ AcolyteAttackCleanerAIR:
 		SmudgeType: Scorch
 		InvalidTargets: Vehicle, Structure, Wall
 	Warhead@1Dam: SpreadDamage
-		Spread: 141
+		Spread: 265
 		ValidTargets: Air
-        InvalidTargets: Ground
-		Damage: 1750
+		InvalidTargets: Ground
+		Damage: 2800
 		Versus:
 			Leather: 100
 			Light: 100
@@ -541,15 +541,15 @@ AcolyteAttackCleanerAIR:
 			HeavyCavalry: 50
 			HeavyBuilding: 50
 		DamageTypes: Prone50Percent, TriggerProne, RippedApartDeath, SpawnSoul
-        
-        
+		
+		
 GrimSkytheThrow:
 	ReloadDelay: 35
 	Range: 6c0
 	MinRange: 1c0
 	Report: throw01.aud
 	ValidTargets: Ground
-    InvalidTargets: Air
+	InvalidTargets: Air
 	Projectile: Missile
 		HorizontalRateOfTurn: 60
 		RangeLimit: 10c0
@@ -562,7 +562,7 @@ GrimSkytheThrow:
 		Spread: 65
 		Damage: 4000
 		ValidTargets: Ground
-        InvalidTargets: Air
+		InvalidTargets: Air
 		Versus:
 			Leather: 100
 			Light: 100
@@ -577,18 +577,18 @@ GrimSkytheThrow:
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath, SpawnSoul
 	Warhead@1Eff: CreateEffect
 		ImpactSounds: Sword02.aud, Sword03.aud, Sword04.aud, Sword06.aud, Sword07.aud
-        
+		
 VampAttackGG:
 	ReloadDelay: 45
 	Range: 2c512
 	ValidTargets: Infantry, Cavalry, Siege
-    InvalidTargets: Air
+	InvalidTargets: Air
 	Projectile: Bullet
 		Speed: 1c382
 	Warhead@1Dam: SpreadDamage
 		Spread: 141
 		ValidTargets: Ground
-        InvalidTargets: Air
+		InvalidTargets: Air
 		Damage: 2000
 		Versus:
 			Leather: 100
@@ -600,13 +600,13 @@ VampAttackGG:
 			MediumCavalry: 100
 			HeavyCavalry: 100
 			HeavyBuilding: 45
-            Spectral: 20
+			Spectral: 80
 		DamageTypes: Prone50Percent, TriggerProne, RippedApartDeath, SpawnSoul
-    Warhead@2Backfire: BackFireShrapnel
-        Weapon: BackFlyingBlood
-        ValidTargets: Ground
-        InvalidTargets: Air
-        
+	Warhead@2Backfire: BackFireShrapnel
+		Weapon: BackFlyingBlood
+		ValidTargets: Ground
+		InvalidTargets: Air
+		
 VampAttackGBuilding:
 	ReloadDelay: 35
 	Range: 1c800
@@ -630,20 +630,20 @@ VampAttackGBuilding:
 			MediumCavalry: 100
 			HeavyCavalry: 100
 			HeavyBuilding: 45
-            Spectral: 25
+			Spectral: 25
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath, SpawnSoul
-        
+		
 VampAttackAA:
 	ReloadDelay: 45
 	Range: 5c0
 	ValidTargets: Air
-    InvalidTargets: Ground
-	Projectile: Bullet
+	InvalidTargets: Ground
+	Projectile: Missile
 		Speed: 1c382
 	Warhead@1Dam: SpreadDamage
-		Spread: 141
-        ValidTargets: Air
-        InvalidTargets: Ground
+		Spread: 215
+		ValidTargets: Air
+		InvalidTargets: Ground
 		Damage: 2000
 		Versus:
 			Leather: 100
@@ -655,14 +655,14 @@ VampAttackAA:
 			MediumCavalry: 100
 			HeavyCavalry: 100
 			HeavyBuilding: 45
-            Spectral: 20
+			Spectral: 70
 		DamageTypes: Prone50Percent, TriggerProne, RippedApartDeath, SpawnSoul
-    Warhead@2Backfire: BackFireShrapnel
-        Weapon: BackFlyingBlood
-        ValidTargets: Air
-        InvalidTargets: Ground
-        
-        
+	Warhead@2Backfire: BackFireShrapnel
+		Weapon: BackFlyingBlood
+		ValidTargets: Air
+		InvalidTargets: Ground
+		
+		
 BackFlyingBlood:
 	ReloadDelay: 45
 	Range: 8c512
@@ -679,9 +679,9 @@ BackFlyingBlood:
 		Palette: vamprojalpha
 	Warhead@1Dam: SpreadDamage
 		Spread: 141
-        ValidTargets:  Air, Ground
+		ValidTargets:  Air, Ground
 		Damage: -600
-        AffectsParent: true
+		AffectsParent: true
 		Versus:
 			Leather: 100
 			Light: 100
@@ -693,7 +693,7 @@ BackFlyingBlood:
 			HeavyCavalry: 100
 			HeavyBuilding: 100
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath, SpawnSoul
-        
+		
 SuperiorPikeCavalry:
 	ReloadDelay: 35
 	Range: 1c800
@@ -719,7 +719,7 @@ SuperiorPikeCavalry:
 			HeavyCavalry: 100
 			Spectral: 15
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath, SpawnSoul
-        
+		
 FromBelow:
 	ReloadDelay: 3
 	Range: 2c800
@@ -790,19 +790,19 @@ FromBelow:
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath, SpawnSoul
 	Warhead@1Eff: CreateEffect
 		Explosions: handa1, handa2, handa3, handa4
-        ExplosionPalette : ra
-        ImpactSounds: skeletondie.aud
+		ExplosionPalette : ra
+		ImpactSounds: skeletondie.aud
 	Warhead@2Eff: CreateEffect
 		Explosions: handa1, handa2, handa3, handa4
-        ExplosionPalette : ra
-        ImpactSounds: skeletondie.aud
+		ExplosionPalette : ra
+		ImpactSounds: skeletondie.aud
 		Delay: 20
 	Warhead@3Eff: CreateEffect
 		Explosions: handa1, handa2, handa3, handa4
-        ExplosionPalette : ra
-        ImpactSounds: skeletondie.aud
+		ExplosionPalette : ra
+		ImpactSounds: skeletondie.aud
 		Delay: 40
-        
+		
 GargAttack:
 	ReloadDelay: 35
 	Range: 7c0
@@ -844,7 +844,7 @@ GargAttack:
 	Warhead@5Eff: CreateEffect
 		Explosions: small_napalm
 		ImpactSounds: xplos.aud
-        
+		
 GrimSpawn:
 	ReloadDelay: 55
 	Range: 7c0
@@ -859,8 +859,8 @@ GrimSpawn:
 ObeliskLight:
 	ReloadDelay: 65
 	Range: 8c512
-    Burst: 4
-    BurstDelay: 10
+	Burst: 4
+	BurstDelay: 10
 	Report: lightning1.aud, lightning2.aud
 	ValidTargets: Ground, Air
 	Projectile: TeslaZap
@@ -886,16 +886,16 @@ ObeliskLight:
 			HeavyCavalry: 100
 			HeavyBuilding: 100
 		DamageTypes: Prone50Percent, TriggerProne, RippedApartDeath, SpawnSoul
-        
+		
 RealDeath:
 	ValidTargets: Ground, Air
 	Warhead@1Eff_impact: CreateEffect
-        Delay: 15
+		Delay: 15
 		Explosions: giantskull
-        ImpactSounds: horror3.aud
-        ExplosionPalette : alphaeight
+		ImpactSounds: horror3.aud
+		ExplosionPalette : alphaeight
 	Warhead@1Snakes: FireShrapnel
-        Delay: 0
+		Delay: 0
 		Weapon: RDHand
 		InvalidTargets: Air
 		ValidTargets: Ground
@@ -904,7 +904,7 @@ RealDeath:
 		AimTargetStances: Enemy, Neutral
 		Amount: 25
 	Warhead@2Snakes: FireShrapnel
-        Delay: 40
+		Delay: 40
 		Weapon: RDHand
 		InvalidTargets: Air
 		ValidTargets: Ground
@@ -913,7 +913,7 @@ RealDeath:
 		AimTargetStances: Enemy, Neutral
 		Amount: 25
 	Warhead@3Snakes: FireShrapnel
-        Delay: 80
+		Delay: 80
 		Weapon: RDHand
 		InvalidTargets: Air
 		ValidTargets: Ground
@@ -922,7 +922,7 @@ RealDeath:
 		AimTargetStances: Enemy, Neutral
 		Amount: 25
 	Warhead@4Snakes: FireShrapnel
-        Delay: 120
+		Delay: 120
 		Weapon: SpawnBLocker1
 		InvalidTargets: Air
 		ValidTargets: Ground
@@ -931,7 +931,7 @@ RealDeath:
 		AimTargetStances: Enemy, Neutral
 		Amount: 5
 	Warhead@5Snakes: FireShrapnel
-        Delay: 140
+		Delay: 140
 		Weapon: SpawnBLocker2
 		InvalidTargets: Air
 		ValidTargets: Ground
@@ -940,7 +940,7 @@ RealDeath:
 		AimTargetStances: Enemy, Neutral
 		Amount: 5
 	Warhead@6Snakes: FireShrapnel
-        Delay: 160
+		Delay: 160
 		Weapon: SpawnBLocker3
 		InvalidTargets: Air
 		ValidTargets: Ground
@@ -948,8 +948,8 @@ RealDeath:
 		AllowDirectHit: true
 		AimTargetStances: Enemy, Neutral
 		Amount: 5
-        
-        
+		
+		
 RDHand:
 	ReloadDelay: 3
 	Range: 5c0
@@ -1018,19 +1018,19 @@ RDHand:
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath, SpawnSoul
 	Warhead@1Eff: CreateEffect
 		Explosions: handa1, handa2, handa3, handa4
-        ExplosionPalette : ra
-        ImpactSounds: skeletondie.aud
+		ExplosionPalette : ra
+		ImpactSounds: skeletondie.aud
 	Warhead@2Eff: CreateEffect
 		Explosions: handa1, handa2, handa3, handa4
-        ExplosionPalette : ra
-        ImpactSounds: skeletondie.aud
+		ExplosionPalette : ra
+		ImpactSounds: skeletondie.aud
 		Delay: 20
 	Warhead@3Eff: CreateEffect
 		Explosions: handa1, handa2, handa3, handa4
-        ExplosionPalette : ra
-        ImpactSounds: skeletondie.aud
+		ExplosionPalette : ra
+		ImpactSounds: skeletondie.aud
 		Delay: 40
-        
+		
 SpawnBLocker1:
 	ValidTargets: Ground
 	InvalidTargets: Air, Structure, Infantry, Siege, Cavalry, Wall
@@ -1044,7 +1044,7 @@ SpawnBLocker1:
 		Delay: 10
 		ValidTargets: Ground
 		InvalidTargets: Air
-        
+		
 SpawnBLocker2:
 	ValidTargets: Ground
 	InvalidTargets: Air, Structure, Infantry, Siege, Cavalry, Wall
@@ -1058,7 +1058,7 @@ SpawnBLocker2:
 		Delay: 10
 		ValidTargets: Ground
 		InvalidTargets: Air
-        
+		
 SpawnBLocker3:
 	ValidTargets: Ground
 	InvalidTargets: Air, Structure, Infantry, Siege, Cavalry, Wall
@@ -1072,7 +1072,7 @@ SpawnBLocker3:
 		Delay: 10
 		ValidTargets: Ground
 		InvalidTargets: Air
-        
+		
 CoffinAmbush:
 	ReloadDelay: 1000
 	Range: 1c0
@@ -1115,7 +1115,7 @@ CoffinAmbush:
 		AllowDirectHit: true
 		AimTargetStances: Enemy, Neutral
 		Amount: 1
-        
+		
 CoffinsSpawn1:
 	ValidTargets: Ground
 	InvalidTargets: Air, Structure, Infantry, Siege, Cavalry, Wall
@@ -1127,7 +1127,7 @@ CoffinsSpawn1:
 	Warhead@Talking: SpawnActor
 		Actors: cofspawn1
 		ValidTargets: Ground
-        
+		
 CoffinsSpawn2:
 	ValidTargets: Ground
 	InvalidTargets: Air, Structure, Infantry, Siege, Cavalry, Wall
@@ -1139,7 +1139,7 @@ CoffinsSpawn2:
 	Warhead@Talking: SpawnActor
 		Actors: cofspawn2
 		ValidTargets: Ground
-        
+		
 CoffinsSpawn3:
 	ValidTargets: Ground
 	InvalidTargets: Air, Structure, Infantry, Siege, Cavalry, Wall
@@ -1151,7 +1151,7 @@ CoffinsSpawn3:
 	Warhead@Talking: SpawnActor
 		Actors: cofspawn3
 		ValidTargets: Ground
-        
+		
 CoffinsSpawn4:
 	ValidTargets: Ground
 	InvalidTargets: Air, Structure, Infantry, Siege, Cavalry, Wall
@@ -1163,7 +1163,7 @@ CoffinsSpawn4:
 	Warhead@Talking: SpawnActor
 		Actors: cofspawn4
 		ValidTargets: Ground
-        
+		
 CorruptionSpawner:
 	ReloadDelay: 35
 	Range: 3c512
@@ -1173,7 +1173,7 @@ CorruptionSpawner:
 		Palette: raicon
 		DimZaps: 1
 		BrightZaps: 0
-        Duration: 15
+		Duration: 15
 	Warhead@Loot: GrantExternalCondition
 		Range: 2c0
 		Duration: 35
