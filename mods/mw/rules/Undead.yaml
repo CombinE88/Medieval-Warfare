@@ -862,7 +862,7 @@ OBELISK.PENTA:
 	Buildable:
 		IconPalette: raicon
 		BuildPaletteOrder: 70
-		Description: Summons a defensive statue attacking with lightning.\n  Strong vs all\n  Weak vs Siege weapons\n  can target Aircraft\n 
+		Description: Summons a defensive statue attacking with lightning.\n  Strong vs all\n  Weak vs Siege weapons\n  can target Aircraft\n  Transforms battlefield loot to essence, requires Essence pool
 		Prerequisites: seal3
 		Queue: MMilitary.ded
 		BuildDuration: 10
@@ -927,7 +927,7 @@ SPPOOL.PENTA:
 	Buildable:
 		IconPalette: raicon
 		BuildPaletteOrder: 30
-		Description: Summons an Essence pool.\n  Stores some Essence
+		Description: Summons an Essence pool.\n  Stores some Essence\n  Grants the obelisk the ability to collect essence by converting battlefield loot.
 		Queue: MBuilding.ded
 		BuildDuration: 10
 		
@@ -2203,16 +2203,13 @@ VAMP:
 		StandSequences: stand
 	Armor:
 		Type: Heavy
-<<<<<<< HEAD
-=======
 	Buildable:
 		IconPalette: raicon
 		BuildPaletteOrder: 20
 		Prerequisites: seal3
-		Description: \n  Strong vs Infantry and cavalry\n  Can transform flying\n  Leeches life\n  Transformed: can attack Aircraft
+		Description: \n  Strong vs Aircraft\n  Can land\n  Leeches life\n  Landed: can attack ground units
 		Queue: MVehicle.ded
 		BuildDuration: 900
->>>>>>> 64fe1a11133aaaa02376966567c6a06d9555c61e
 	Transforms:
 		IntoActor: vampflying
 	Targetable@CombatRole:
