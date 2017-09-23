@@ -649,7 +649,7 @@ SnakesSmall:
 			MediumCavalry: 100
 			HeavyCavalry: 100
 			HeavyBuilding: 100
-			Spectral: 50
+			Spectral: 200
 		DamageTypes: Prone50Percent, TriggerProne, PoisonDeath
         
 BedouinBowNArrowDebuff:

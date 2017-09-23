@@ -376,7 +376,7 @@ ROSS5:
 		RequiresCondition: Slowmotion
 		Modifier: 70
 	Valued:
-		Cost: 1800
+		Cost: 1400
 	Tooltip:
 		Name: Heavy cavalry
 	Buildable:
@@ -385,7 +385,7 @@ ROSS5:
 		Prerequisites: anycastle
 		Description: Heavily armored and very slow.\n  Strong vs Everything (+Spectral Units)\n  Weak vs Long-ranged weapons\n  Can attack Aircraft\n\nTrains: 2 Peasant\n\n
 		Queue: MVehicle.GDI
-		BuildDuration: 1300
+		BuildDuration: 1000
 	Mobile:
 		SharesCell: false
 		Crushes: crate, infantry

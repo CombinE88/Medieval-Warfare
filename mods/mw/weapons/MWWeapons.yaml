@@ -54,7 +54,7 @@ SmokeySpawner:
 	ReloadDelay: 85
 	MinRange: 0
 	Range: 0c712
-	Projectile: Bullet
+	Profvjectile: Bullet
 		Speed: 100
 		ValidTargets: none
 	Warhead@1Eff: CreateEffect
@@ -2624,7 +2624,7 @@ RottenKadaver:
 			MediumCavalry: 100
 			HeavyCavalry: 100
 			Spectral: 50
-		DamageTypes: PoisonDeath 
+		DamageTypes: PoisonDeath, KadaverDeath 
 	Warhead@rotten3: HealthPercentageDamage
 		Delay: 125
 		Spread: 2c215
@@ -2642,7 +2642,7 @@ RottenKadaver:
 			MediumCavalry: 100
 			HeavyCavalry: 100
 			Spectral: 50
-		DamageTypes: PoisonDeath 
+		DamageTypes: PoisonDeath, KadaverDeath 
 	Warhead@rotten4: HealthPercentageDamage
 		Delay: 175
 		Spread: 2c215
@@ -2660,7 +2660,7 @@ RottenKadaver:
 			MediumCavalry: 100
 			HeavyCavalry: 100
 			Spectral: 50
-		DamageTypes: PoisonDeath 
+		DamageTypes: PoisonDeath, KadaverDeath 
 	Warhead@rotten5: HealthPercentageDamage
 		Delay: 225
 		Spread: 2c215
@@ -2678,7 +2678,7 @@ RottenKadaver:
 			MediumCavalry: 100
 			HeavyCavalry: 100
 			Spectral: 50
-		DamageTypes: PoisonDeath 
+		DamageTypes: PoisonDeath, KadaverDeath 
 	Warhead@rotten6: HealthPercentageDamage
 		Delay: 275
 		Spread: 2c215
@@ -2696,7 +2696,7 @@ RottenKadaver:
 			MediumCavalry: 100
 			HeavyCavalry: 100
 			Spectral: 50
-		DamageTypes: PoisonDeath 
+		DamageTypes: PoisonDeath, KadaverDeath 
 	Warhead@rotten7: HealthPercentageDamage
 		Delay: 325
 		Spread: 2c215
@@ -2714,7 +2714,7 @@ RottenKadaver:
 			MediumCavalry: 100
 			HeavyCavalry: 100
 			Spectral: 50
-		DamageTypes: PoisonDeath 
+		DamageTypes: PoisonDeath, KadaverDeath 
 	Warhead@rotten8: HealthPercentageDamage
 		Delay: 375
 		Spread: 2c215
@@ -2732,7 +2732,7 @@ RottenKadaver:
 			MediumCavalry: 100
 			HeavyCavalry: 100
 			Spectral: 50
-		DamageTypes: PoisonDeath 
+		DamageTypes: PoisonDeath, KadaverDeath 
 	Warhead@rotten9: HealthPercentageDamage
 		Delay: 425
 		Spread: 2c215
@@ -2750,7 +2750,7 @@ RottenKadaver:
 			MediumCavalry: 100
 			HeavyCavalry: 100
 			Spectral: 50
-		DamageTypes: PoisonDeath 
+		DamageTypes: PoisonDeath, KadaverDeath 
 	Warhead@rotten10: HealthPercentageDamage
 		Delay: 475
 		Spread: 2c215
@@ -2768,7 +2768,7 @@ RottenKadaver:
 			MediumCavalry: 100
 			HeavyCavalry: 100
 			Spectral: 50
-		DamageTypes: PoisonDeath 
+		DamageTypes: PoisonDeath, KadaverDeath 
 	Warhead@1Dam: SpreadDamage
 		Spread: 1c0
 		Damage: 6000
@@ -2825,7 +2825,7 @@ SingleDeadKadaver:
 			MediumCavalry: 100
 			HeavyCavalry: 100
 			Spectral: 50
-		DamageTypes: PoisonDeath 
+		DamageTypes: PoisonDeath, KadaverDeath 
 	Warhead@rotten2: HealthPercentageDamage
 		Delay: 75
 		Spread: 2c215
@@ -2843,7 +2843,7 @@ SingleDeadKadaver:
 			MediumCavalry: 100
 			HeavyCavalry: 100
 			Spectral: 50
-		DamageTypes: PoisonDeath 
+		DamageTypes: PoisonDeath, KadaverDeath 
 	Warhead@rotten3: HealthPercentageDamage
 		Delay: 125
 		Spread: 2c215
@@ -2861,7 +2861,7 @@ SingleDeadKadaver:
 			MediumCavalry: 100
 			HeavyCavalry: 100
 			Spectral: 50
-		DamageTypes: PoisonDeath 
+		DamageTypes: PoisonDeath, KadaverDeath 
 	Warhead@rotten4: HealthPercentageDamage
 		Delay: 175
 		Spread: 2c215
@@ -2879,7 +2879,7 @@ SingleDeadKadaver:
 			MediumCavalry: 100
 			HeavyCavalry: 100
 			Spectral: 50
-		DamageTypes: PoisonDeath 
+		DamageTypes: PoisonDeath, KadaverDeath 
 	Warhead@rotten5: HealthPercentageDamage
 		Delay: 225
 		Spread: 2c215
@@ -2897,7 +2897,7 @@ SingleDeadKadaver:
 			MediumCavalry: 100
 			HeavyCavalry: 100
 			Spectral: 50
-		DamageTypes: PoisonDeath 
+		DamageTypes: PoisonDeath, KadaverDeath 
 	Warhead@rotten6: HealthPercentageDamage
 		Delay: 275
 		Spread: 2c215
@@ -2915,7 +2915,7 @@ SingleDeadKadaver:
 			MediumCavalry: 100
 			HeavyCavalry: 100
 			Spectral: 50
-		DamageTypes: PoisonDeath 
+		DamageTypes: PoisonDeath, KadaverDeath 
 	Warhead@rotten7: HealthPercentageDamage
 		Delay: 325
 		Spread: 2c215
@@ -2933,7 +2933,7 @@ SingleDeadKadaver:
 			MediumCavalry: 100
 			HeavyCavalry: 100
 			Spectral: 50
-		DamageTypes: PoisonDeath 
+		DamageTypes: PoisonDeath, KadaverDeath 
 	Warhead@rotten8: HealthPercentageDamage
 		Delay: 375
 		Spread: 2c215
@@ -2951,7 +2951,7 @@ SingleDeadKadaver:
 			MediumCavalry: 100
 			HeavyCavalry: 100
 			Spectral: 50
-		DamageTypes: PoisonDeath 		
+		DamageTypes: PoisonDeath, KadaverDeath 		
 	Warhead@rotten9: HealthPercentageDamage
 		Delay: 425
 		Spread: 2c215
@@ -2969,7 +2969,7 @@ SingleDeadKadaver:
 			MediumCavalry: 100
 			HeavyCavalry: 100
 			Spectral: 50
-		DamageTypes: PoisonDeath 	
+		DamageTypes: PoisonDeath, KadaverDeath 	
 	Warhead@2Eff: CreateEffect
 		Explosions: rottk1,rottk2,rottk3
 		Delay: 10
@@ -3386,10 +3386,10 @@ BowNArrowHunter:
 	InvalidTargets: Wall, Air
 	ValidTargets: Wildlife
 	Projectile: Missile
-		HorizontalRateOfTurn: 60
-		RangeLimit: 9c204
+		HorizontalRateOfTurn: 255
+		RangeLimit: 11c0
 		Arm: 0
-		Speed: 250
+		Speed: 280
 		LaunchAngle: 46
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
@@ -3448,7 +3448,7 @@ BowNArrowHunterDUMMY:
 HunterGather:
 	ValidTargets: Deaddeer
 	InvalidTargets: Air
-	ReloadDelay: 25
+	ReloadDelay: 20
 	Range: 1c800
 	Projectile: Bullet
 		Speed: 1c682
@@ -3480,7 +3480,7 @@ HunterGather:
 HunterUnload:
 	ValidTargets: HunterLodge
 	InvalidTargets: Air
-	ReloadDelay: 25
+	ReloadDelay: 20
 	Range: 1c800
 	Projectile: Bullet
 		Speed: 1c682

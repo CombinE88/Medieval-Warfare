@@ -119,6 +119,10 @@
 	RangeMultiplier:
 		Modifier: 0
 		RequiresCondition: snaketrap
+	Explodes@Tib:
+		Weapon: LeaveStuff
+		EmptyWeapon: LeaveStuff
+		Chance: 15
 		
 ^SkeletonSpawn:
 	Inherits: ^MedievalInfantry
@@ -1779,7 +1783,7 @@ UNDEAD1:
 	Tooltip:
 		Name: Skeleton (Saber)
 	Mobile:
-		Speed: 75
+		Speed: 55
 	Health:
 		HP: 8000
 	Armament:
@@ -1813,7 +1817,7 @@ UNDEAD2:
 	Tooltip:
 		Name: Skeleton (Club)
 	Mobile:
-		Speed: 75
+		Speed: 55
 	Health:
 		HP: 8000
 	Armament:
@@ -1842,7 +1846,7 @@ UNDEAD3:
 	Tooltip:
 		Name: Skeleton (Pike)
 	Mobile:
-		Speed: 75
+		Speed: 55
 	Health:
 		HP: 7500
 	Armament:
@@ -1879,7 +1883,7 @@ UNDEAD4:
 	Tooltip:
 		Name: Skeleton (Berserker)
 	Mobile:
-		Speed: 65
+		Speed: 50
 	Health:
 		HP: 35000
 	Armament:
@@ -1911,7 +1915,7 @@ UNDEAD5:
 	Tooltip:
 		Name: Skeleton (Archer)
 	Mobile:
-		Speed: 75
+		Speed: 55
 	Health:
 		HP: 6000
 	Armament:
@@ -1955,7 +1959,7 @@ UNDEAD6:
 		Name: Skeleton (Giant)
 	Mobile:
 		SharesCell: false
-		Speed: 55
+		Speed: 45
 	-Crushable:
 	Targetable:
 		TargetTypes: Ground, Cavalry
@@ -1998,7 +2002,7 @@ UNDEAD7:
 		TargetTypes: Ground, Cavalry
 	Mobile:
 		SharesCell: false
-		Speed: 55
+		Speed: 45
 	Health:
 		HP: 50000
 	-Crushable:
@@ -2176,7 +2180,7 @@ VAMP:
 	Mobile:
 		Speed: 65
 	Health:
-		HP: 20000
+		HP: 23000
 	Armament@Leech:
 		Weapon: VampAttackGG
 		Name: primary
@@ -2203,13 +2207,6 @@ VAMP:
 		StandSequences: stand
 	Armor:
 		Type: Heavy
-	Buildable:
-		IconPalette: raicon
-		BuildPaletteOrder: 20
-		Prerequisites: seal3
-		Description: \n  Strong vs Aircraft\n  Can land\n  Leeches life\n  Landed: can attack ground units
-		Queue: MVehicle.ded
-		BuildDuration: 900
 	Transforms:
 		IntoActor: vampflying
 	Targetable@CombatRole:
@@ -2240,7 +2237,7 @@ VAMPFLYING:
 		MaximumPitch: 56
 		InitialFacing: 96
 		TurnSpeed: 255
-		Speed: 90
+		Speed: 100
 		LandableTerrainTypes: Clear, Rough, Road, DirtRoad, Ground, Tiberium, BlueTiberium, Crops, Loot, Wood
 	Buildable:
 		IconPalette: raicon
@@ -2250,7 +2247,7 @@ VAMPFLYING:
 		Queue: MVehicle.ded
 		BuildDuration: 900
 	Health:
-		HP: 24000
+		HP: 23000
 	Armor:
 		Type: Leather
 	RevealsShroud:
@@ -2587,7 +2584,7 @@ RESSURECT1:
 	Tooltip:
 		Name: Skeleton (Saber)
 	Mobile:
-		Speed: 75
+		Speed: 55
 	Health:
 		HP: 9000
 	Armament:
@@ -2617,7 +2614,7 @@ RESSURECT2:
 	Tooltip:
 		Name: Skeleton (Club)
 	Mobile:
-		Speed: 75
+		Speed: 55
 	Health:
 		HP: 9000
 	Armament:
@@ -2648,7 +2645,7 @@ RESSURECT3:
 	Tooltip:
 		Name: Skeleton (Pike)
 	Mobile:
-		Speed: 75
+		Speed: 55
 	Health:
 		HP: 8500
 	Armament:
@@ -2688,7 +2685,7 @@ RESSURECT4:
 	Tooltip:
 		Name: Skeleton (Archer)
 	Mobile:
-		Speed: 75
+		Speed: 55
 	Health:
 		HP: 7000
 	Armament:

@@ -1578,7 +1578,7 @@ SULE1:
 	Mobile:
 		Speed: 85
 	Health:
-		HP: 9000
+		HP: 9500
 	Armament:
 		Weapon: SulSword
 	AttackFrontal:
