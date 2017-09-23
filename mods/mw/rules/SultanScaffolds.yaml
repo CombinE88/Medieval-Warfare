@@ -16,7 +16,7 @@ SULNUKE.SCAFF:
 		IconPalette: raicon
 		BuildPaletteOrder: 10
 		Prerequisites: factnew
-		Description: Generates livingspace. Livingspace increases over time by generating peasants.\nCan hold up to 6 peasants, spawntime depends on number of shacks and large huts.  
+		Description: Generates livingspace. Livingspace increases over time by generating peasants\nCan hold up to 6 peasants, spawntime depends on number of shacks and large huts  
 		Queue: MBuilding.SUL
 		BuildDuration: 30
 	Health:
@@ -626,7 +626,7 @@ SULGTW.SCAFF:
 	WithSpriteBody:
 		RequiresCondition: inactive
 	Buildable:
-		Description: A Super guard tower, stationed with 2 archers.\n  Strong vs Infantry, Light Cavalry\n  Weak vs Siege weapons and Heavy Cavalry \n  Cannot target Aircraft (because of I say so)\n\n\n
+		Description: A Super guard tower, stationed with 2 archers.\n  Strong vs Infantry, Light Cavalry\n  Weak vs Siege weapons and Heavy Cavalry \n  Cannot target Aircraft\n\n\n
 		BuildPaletteOrder: 60
 		Queue: MMilitary.SUL
 		BuildDurationModifier: 40
@@ -693,7 +693,7 @@ SULARRAY.SCAFF:
 		IconPalette: raicon
 		BuildPaletteOrder: 0
 		Prerequisites: barracks
-		Description: Provides 3 additional worker and 1 engineer.\n\n\n\n
+		Description: Provides 3 additional haulers and 1 engineer.\n\n\n\n
 		Queue: MTech.SUL
 		BuildDuration: 45
 	Health:

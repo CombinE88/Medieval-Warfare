@@ -166,7 +166,7 @@ LJACKB.SCAFF:
 	Buildable:
 		IconPalette: raicon
 		BuildPaletteOrder: 5
-		Description: Collects Lumber by chopping surrounding Trees.\n Remember: Trees do not respawn!\n\n
+		Description: Collects Lumber by chopping surrounding Trees.\n Remember: Trees do not respawn!\nRequires 1 peasant\n
 		Queue: MResources.GDI, MResources.Nod, , MResources.SUL
 		Adjacent: 10
 		BuildDuration: 15
@@ -1567,7 +1567,7 @@ GTWNEW.SCAFF:
 	Tooltip:
 		Name: Construction Site ( Guard Tower)
 	Buildable:
-		Description: A wooden tower, stationed with 2 archers.\n  Strong vs Infantry, Light Cavalry\n  Weak vs Siege weapons and Heavy Cavalry \n  Cannot target Aircraft (because of I say so)\n  Requires 2 Peasants\n\n
+		Description: A wooden tower, stationed with 2 archers.\n  Strong vs Infantry, Light Cavalry\n  Weak vs Siege weapons and Heavy Cavalry \n  Cannot target Aircraft\n  Requires 2 Peasants\n\n
 		BuildPaletteOrder: 60
 		Queue: MMilitary.GDI, MMilitary.Nod
 		BuildDurationModifier: 60
@@ -1961,7 +1961,7 @@ TAVERN.SCAFF:
 		IconPalette: raicon
 		BuildPaletteOrder: 0
 		Prerequisites: barracks
-		Description: Provides 3 additional worker and 1 engineer.\n\n\n\n
+		Description: Provides 3 additional haulers and 1 engineer.\n\n\n\n
 		Queue: MTech.GDI, MTech.Nod
 		BuildDuration: 45
 	Health:
