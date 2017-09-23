@@ -2439,7 +2439,7 @@ SULM3:
 	Valued:
 		Cost: 1000
 	Tooltip:
-		Name: Flying Carpet
+		Name: Warlock
 	Buildable:
 		Description: Man on a flying carpet.\n  Strong vs Ground Units\n  Weak vs Aircrafts\n  Cannot attack Aircrafts!!\n\nTrains: 1 Peasant\n
 		BuildPaletteOrder: 40
@@ -2451,7 +2451,7 @@ SULM3:
 		InitialFacing: 224
 		TurnSpeed: 10
 		Speed: 138
-		IdealSeparation: 0c612
+		IdealSeparation: 0c812
 	Health:
 		HP: 8000
 	Armor:
@@ -2565,7 +2565,7 @@ SULB3:
 	Aircraft:
 		InitialFacing: 224
 		TurnSpeed: 10
-		Speed: 90
+		Speed: 100
 		IdealSeparation: 1c125
 	Health:
 		HP: 22500

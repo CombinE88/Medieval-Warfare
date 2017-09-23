@@ -830,7 +830,7 @@ ZIGGURAT3:
 		SelectTargetSpeechNotification: SelectTarget
 		InsufficientPowerSpeechNotification: InsufficientPower
 		LaunchSpeechNotification: 
-		IncomingSpeechNotification: NodcannonApproach
+		IncomingSpeechNotification: 
 		BeginChargeSpeechNotification: 
 		MissileWeapon: RealDeath
 		DisplayBeacon: True
@@ -912,7 +912,7 @@ SPPOOL.PENTA:
 		Palette: undead
 		PlayerPalette: undeadalpha
 	Valued:
-		Cost: 0 #1000
+		Cost: 0 #700
 	Tooltip:
 		Name: Summoning (Essence pool)
 	Health:
@@ -923,7 +923,7 @@ SPPOOL.PENTA:
 		SpawnActor: sppool
 		SpawnOffset: 1,1
 		SummoningTime: 100
-		Cost: 1000
+		Cost: 700
 	Buildable:
 		IconPalette: raicon
 		BuildPaletteOrder: 30
@@ -1103,7 +1103,8 @@ SPPOOL:
 	StoresResources:
 		PipColor: Red
 		PipCount: 10
-		Capacity: 1000
+		Capacity: 1500
+	ProvidesPrerequisite@buildingname:
 		
   
 CRYPT:
@@ -1520,9 +1521,17 @@ OBELISK:
 		Weapon: ObeliskLight
 		LocalOffset: 0,0,1312
 	ThrowsShrapnel@SMALL:
-		Weapons: SmallWood1, SmallWood2, SmallWood3, LargeWood1
+		Weapons: SmallStone1, SmallStone2, LargeStone1
 		Pieces: 2, 3
 		Range: 0c512, 3c0
+	GarbageCollector:
+    	ResourcesNames: Loot
+    	CollectRange: 9
+    	RequiresCondition: Sppollbuild
+    	Weapon: SummonEffect
+	GrantConditionOnPrerequisite:
+		Condition: Sppollbuild
+		Prerequisites: sppool
 		
 GARG:
 	Inherits: ^MWDefense
@@ -2030,7 +2039,7 @@ GRIM:
 	RevealsShroud:
 		Range: 6c0
 	Valued:
-		Cost: 1000
+		Cost: 900
 	Tooltip:
 		Name: Grim Reaper
 	Mobile:
@@ -2051,7 +2060,7 @@ GRIM:
 			Water: 100
 	-Crushable:
 	Health:
-		HP: 25000
+		HP: 18500
 	Armament@Ground:
 		Weapon: GrimSkytheThrow
 		LocalOffset: 141,75,352
@@ -2151,6 +2160,8 @@ ACOLYTEC:
 	AutoTargetPriority@Counter1:
 		ValidTargets: Light, Ranged, LightCavalry, Support, Flying
 		Priority: 4
+	Selectable:
+		Priority: 9
 		
 VAMP:
 	Inherits: ^Knight
@@ -2192,13 +2203,6 @@ VAMP:
 		StandSequences: stand
 	Armor:
 		Type: Heavy
-	Buildable:
-		IconPalette: raicon
-		BuildPaletteOrder: 20
-		Prerequisites: seal3
-		Description: \n  Strong vs Infantry and cavalry\n  Can transform flying\n  Leeches life\n  Transformed: can attack Aircrafts
-		Queue: MVehicle.ded
-		BuildDuration: 900
 	Transforms:
 		IntoActor: vampflying
 	Targetable@CombatRole:
@@ -2229,10 +2233,17 @@ VAMPFLYING:
 		MaximumPitch: 56
 		InitialFacing: 96
 		TurnSpeed: 255
-		Speed: 110
+		Speed: 90
 		LandableTerrainTypes: Clear, Rough, Road, DirtRoad, Ground, Tiberium, BlueTiberium, Crops, Loot, Wood
+	Buildable:
+		IconPalette: raicon
+		BuildPaletteOrder: 20
+		Prerequisites: seal3
+		Description: \n  Strong vs Infantry and cavalry\n  Can transform flying\n  Leeches life\n  Transformed: can attack Aircrafts
+		Queue: MVehicle.ded
+		BuildDuration: 900
 	Health:
-		HP: 20000
+		HP: 24000
 	Armor:
 		Type: Leather
 	RevealsShroud:

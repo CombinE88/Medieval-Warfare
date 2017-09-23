@@ -485,7 +485,7 @@ SpearBarrage:
 		ImpactSounds: tnkfire2.aud, tnkfire3.aud, tnkfire4.aud, tnkfire6.aud
 		
 CarpetBomber:
-	ReloadDelay: 35
+	ReloadDelay: 41
 	Range: 4c0
 	Report: toss1.aud
 	ValidTargets: Ground

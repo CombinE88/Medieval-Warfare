@@ -635,7 +635,7 @@ VampAttackGBuilding:
 		
 VampAttackAA:
 	ReloadDelay: 45
-	Range: 5c0
+	Range: 7c0
 	ValidTargets: Air
 	InvalidTargets: Ground
 	Projectile: Missile
@@ -644,7 +644,7 @@ VampAttackAA:
 		Spread: 215
 		ValidTargets: Air
 		InvalidTargets: Ground
-		Damage: 2000
+		Damage: 3300
 		Versus:
 			Leather: 100
 			Light: 100
@@ -1180,3 +1180,8 @@ CorruptionSpawner:
 		ValidTargets: Corrupt
 		ValidStances: Enemy, Neutral, Ally
 		Condition: SpawnCorruption
+        
+SummonEffect:
+	Warhead@SpawnEffect: CreateEffect
+		Explosions: summoning
+		ExplosionPalette : grimspawnalpha
