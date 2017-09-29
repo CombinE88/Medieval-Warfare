@@ -358,7 +358,7 @@ E2NEWV2:
 		Cost: 200
 	-Crushable:
 	Tooltip:
-		Name: Halberd Guard
+		Name: Guard
 	Buildable:
 		Description: Anti-Cavalry infantry.\n  Strong vs Cavalry.\n  Weak vs Infantry\n  Deals damage when trampled by Cavalry\n  Can cut down trees.\n\nTrains: 1 Peasant\n
 		IconPalette: raicon
@@ -370,8 +370,48 @@ E2NEWV2:
 	Health:
 		HP: 8000
 	Armament:
-		Weapon: pikespread
+		Weapon: KingPike
+		Name: Secondary
+		RequiresCondition: Noammo && !Shooting
+	Armament@target:
+		Weapon: KingPikeStructure
+		Name: Secondary
+		RequiresCondition: FullAmmo && !Shooting
+	Armament@Pinning:
+		Weapon: KingPikePinning
+		Name: Secondary
+		BroadSwordPinning: FullAmmo && !Shooting
+	Armament@gun:
+		Weapon: KingPikeRanged
+		Name: Primary
+		FireDelay: 5
+		AmmoPoolName: Gun
+		RequiresCondition: FullAmmo
+		LocalOffset: 341,20,356
+	Armament@Dummy:
+		Weapon: KingPikeRangedDummy
+		Name: Primary
+		RequiresCondition: FullAmmo
+	AmmoPool:
+		Name: Gun
+		Ammo: 1
+	ReloadAmmoWhenEnabled:
+		Name: Gun
+		ReloadDelay: 62
+		ResetDelayOnEnable: True
+		RequiresCondition: !NotAttacking && !FullAmmo
+	AmmoPoolConditions:
+		ConditionFull: FullAmmo
+		ConditionEmpty: Noammo
+		AmmoPoolName: Gun
+	ExternalCondition@NotAttacking:
+		Condition: NotAttacking
+	ExternalCondition@Shooting:
+		Condition: Shooting
 	AttackFrontal:
+		Armaments: Secondary, Primary
+	Targetable@KingSword:
+		TargetTypes: KingPike
 	AutoTarget:
 		ScanRadius: 4
 		InitialStance: AttackAnything
@@ -379,7 +419,10 @@ E2NEWV2:
 		Image: e2newv2
 		PlayerPalette: raplayer
 	WithInfantryBody:
-		DefaultAttackSequence: shoot
+		DefaultAttackSequence: attack
+		AttackSequences:
+			Primary: shoot
+			Secondary: attack
 	Armor:
 		Type: Light
 	Voiced:
@@ -403,22 +446,63 @@ E3NEW:
 	Inherits: ^Knight
 	Inherits@AUTOTARGET: ^AutoTargetGround
 	Valued:
-		Cost: 100
+		Cost: 125
 	Tooltip:
 		Name: Knight
 	Buildable:
-		Description: General-purpose infantry.\n  Strong vs Infantry\n  Weak vs Cavalry \n  Can cut down trees.\n\nTrains: 1 Peasant\n
+		Description: General-purpose infantry.\n  Strong vs Infantry\n  Weak vs Cavalry \n  Can fire 1 ranged shot when not attacking for a 5 seconds\n  Can cut down trees.\n\nTrains: 1 Peasant\n
 		IconPalette: raicon
 		BuildPaletteOrder: 10
 		Queue: MInfantry.GDI
 		BuildDuration: 50
 	Mobile:
-		Speed: 56
+		Speed: 54
+		RequiresCondition: !Shooting
 	Health:
-		HP: 11500
+		HP: 10000
 	Armament:
-		Weapon: broadsword
+		Weapon: BroadSword
+		Name: Secondary
+		RequiresCondition: Noammo && !Shooting
+	Armament@target:
+		Weapon: BroadSwordStructure
+		Name: Secondary
+		RequiresCondition: FullAmmo && !Shooting
+	Armament@Pinning:
+		Weapon: BroadSwordPinning
+		Name: Secondary
+		BroadSwordPinning: FullAmmo && !Shooting
+	Armament@gun:
+		Weapon: broadswordranged
+		Name: Primary
+		FireDelay: 5
+		AmmoPoolName: Gun
+		RequiresCondition: FullAmmo
+		LocalOffset: 341,20,356
+	Armament@Dummy:
+		Weapon: BroadSwordRangedDummy
+		Name: Primary
+		RequiresCondition: FullAmmo
+	AmmoPool:
+		Name: Gun
+		Ammo: 1
+	ReloadAmmoWhenEnabled:
+		Name: Gun
+		ReloadDelay: 62
+		ResetDelayOnEnable: True
+		RequiresCondition: !NotAttacking && !FullAmmo
+	AmmoPoolConditions:
+		ConditionFull: FullAmmo
+		ConditionEmpty: Noammo
+		AmmoPoolName: Gun
+	ExternalCondition@NotAttacking:
+		Condition: NotAttacking
+	ExternalCondition@Shooting:
+		Condition: Shooting
 	AttackFrontal:
+		Armaments: Secondary, Primary
+	Targetable@KingSword:
+		TargetTypes: KingSword
 	AutoTarget:
 		ScanRadius: 4
 		InitialStance: AttackAnything
@@ -426,7 +510,10 @@ E3NEW:
 		Image: e3new
 		PlayerPalette: raplayer
 	WithInfantryBody:
-		DefaultAttackSequence: shoot
+		DefaultAttackSequence: attack
+		AttackSequences:
+			Primary: shoot
+			Secondary: attack
 	Armor:
 		Type: Heavy
 	Voiced:
@@ -458,7 +545,7 @@ E3NEWV2:
 	Health:
 		HP: 14000
 	Armament:
-		Weapon: broadsword
+		Weapon: BroadSwordBaron
 	AttackFrontal:
 	AutoTarget:
 		ScanRadius: 4
@@ -574,7 +661,7 @@ E4NEW:
 			Primary: shoot	
 	AttackFrontal:
 	AutoTarget:
-		ScanRadius: 5
+		ScanRadius: 8
 		InitialStance: AttackAnything
 	RenderSprites:
 		Image: e4new
@@ -643,7 +730,7 @@ E4NEWV2:
 			Primary: shoot
 	AttackFrontal:
 	AutoTarget:
-		ScanRadius: 5
+		ScanRadius: 8
 		InitialStance: AttackAnything
 	RenderSprites:
 		Image: e4newv2

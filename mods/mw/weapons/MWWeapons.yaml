@@ -330,6 +330,153 @@ Pike:
 			HeavyCavalry: 120
 			Spectral: 10
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+        
+        
+# PikeGuard --------------------
+
+KingPike:
+	ReloadDelay: 50
+	Range: 2c800
+	Report: Sword02.aud, Sword03.aud, Sword04.aud, Sword06.aud, Sword07.aud
+	ValidTargets: Ground, Trees
+	InvalidTargets: Air
+	Projectile: Bullet
+		Speed: 1c382
+	Warhead@1Dam: SpreadDamage
+		Spread: 15
+		Damage: 3000
+		ValidTargets: Ground, Trees
+		InvalidTargets: Air
+		Versus:
+			Leather: 20
+			Light: 20
+			Heavy: 30
+			Concrete: 85
+			HeavyBuilding: 100
+			Knight: 30
+			LightCavalry: 135
+			MediumCavalry: 125
+			HeavyCavalry: 120
+			Spectral: 10
+		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+	Warhead@RemoveCannon: GrantSelfCondition
+		Duration: 125
+		Condition: NotAttacking
+		ValidStances: Ally
+		AffectsParent: true
+		ValidTargets: KingPike
+		InvalidTargets: Air
+        
+KingPikeStructure:
+	ReloadDelay: 50
+	Range: 2c800
+	Report: Sword02.aud, Sword03.aud, Sword04.aud, Sword06.aud, Sword07.aud
+	ValidTargets: Ground
+	InvalidTargets: Air, Cavalry
+	Projectile: Bullet
+		Speed: 1c382
+	Warhead@1Dam: SpreadDamage
+		Spread: 15
+		Damage: 3000
+		ValidTargets: Ground, Trees
+		InvalidTargets: Air, Cavalry
+		Versus:
+			Leather: 20
+			Light: 20
+			Heavy: 30
+			Concrete: 85
+			HeavyBuilding: 100
+			Knight: 30
+			LightCavalry: 135
+			MediumCavalry: 125
+			HeavyCavalry: 120
+			Spectral: 10
+		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+	Warhead@RemoveCannon: GrantSelfCondition
+		Duration: 62
+		Condition: NotAttacking
+		ValidStances: Ally
+		AffectsParent: true
+		ValidTargets: KingPike
+		InvalidTargets: Air
+        
+KingPikeRanged:
+	ReloadDelay: 125
+	Range: 4c512
+	Report: pistolking2.aud
+	ValidTargets: Cavalry
+	InvalidTargets: Air, Wall, Structure
+	Projectile: Bullet
+		Speed: 1c000
+        ContrailLength: 25
+		ContrailWidth: 40
+		ContrailDelay: 0
+		ContrailUsePlayerColor : true
+	Warhead@1Dam: SpreadDamage
+		Spread: 0
+		Damage: 0
+		ValidTargets: Cavalry 
+		InvalidTargets: Air, Wall, Structure
+		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+        
+KingPikeRangedDummy:
+	ReloadDelay: 125
+	Range: 4c512
+	ValidTargets: Cavalry
+	InvalidTargets: Air, Wall, Structure
+	Projectile: Missile
+		HorizontalRateOfTurn: 120
+		RangeLimit: 8c204
+		Arm: 0
+		Speed: 400
+		LaunchAngle: 46
+		Palette: ra
+	Warhead@1Dam: SpreadDamage
+		Spread: 15
+		Damage: 4000
+		ValidTargets: Cavalry
+		InvalidTargets: Air
+		Versus:
+			Leather: 20
+			Light: 20
+			Heavy: 30
+			Concrete: 85
+			HeavyBuilding: 100
+			Knight: 30
+			LightCavalry: 135
+			MediumCavalry: 125
+			HeavyCavalry: 120
+			Spectral: 10
+		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+        
+KingPikePinning:
+	ReloadDelay: 125
+	Range: 4c512
+	ValidTargets: Cavalry
+	InvalidTargets: Air, Wall, Structure
+	Projectile: InstantHit
+	Warhead@1Dam: SpreadDamage
+		Spread: 0
+		Damage: 0
+		ValidTargets: Cavalry
+		InvalidTargets: Air, Wall, Structure
+		DamageTypes: DefaultDeath
+	Warhead@Paralyze: GrantSelfCondition
+		Duration: 15
+		Condition: Shooting
+		ValidStances: Ally
+		AffectsParent: true
+		ValidTargets: KingPike
+		InvalidTargets: Air
+	Warhead@RemoveCannon: GrantSelfCondition
+		Duration: 62
+		Condition: NotAttacking
+		ValidStances: Ally
+		AffectsParent: true
+		ValidTargets: KingPike
+		InvalidTargets: Air
+
+# -----------------------
 		
 PikeSpread:
 	ReloadDelay: 65
@@ -488,6 +635,72 @@ BroadSword:
 		Speed: 1c382
 	Warhead@1Dam: SpreadDamage
 		Spread: 25
+		Damage: 1100
+		ValidTargets: Ground, Trees
+		InvalidTargets: Air
+		Versus:
+			Leather: 100
+			Light: 100
+			Heavy: 100
+			HeavyBuilding: 10
+			Concrete: 25
+			Knight: 30
+			LightCavalry: 25
+			MediumCavalry: 10
+			HeavyCavalry: 10
+			Spectral: 15
+		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+	Warhead@RemoveCannon: GrantSelfCondition
+		Duration: 125
+		Condition: NotAttacking
+		ValidStances: Ally
+		AffectsParent: true
+		ValidTargets: KingSword
+		InvalidTargets: Air
+        
+BroadSwordStructure:
+	ReloadDelay: 35
+	Range: 1c800
+	Report: Sword02.aud, Sword03.aud, Sword04.aud, Sword06.aud, Sword07.aud
+	ValidTargets: Structure, Wall
+	InvalidTargets: Air
+	Projectile: Bullet
+		Speed: 1c382
+	Warhead@1Dam: SpreadDamage
+		Spread: 25
+		Damage: 1100
+		ValidTargets: Structure, Wall
+		InvalidTargets: Air
+		Versus:
+			Leather: 100
+			Light: 100
+			Heavy: 100
+			HeavyBuilding: 10
+			Concrete: 25
+			Knight: 30
+			LightCavalry: 25
+			MediumCavalry: 10
+			HeavyCavalry: 10
+			Spectral: 15
+		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+	Warhead@RemoveCannon: GrantSelfCondition
+		Duration: 62
+		Condition: NotAttacking
+		ValidStances: Ally
+		AffectsParent: true
+		ValidTargets: KingSword
+		InvalidTargets: Air
+        
+BroadSwordBaron:
+	ReloadDelay: 35
+	Range: 1c800
+	Report: Sword02.aud, Sword03.aud, Sword04.aud, Sword06.aud, Sword07.aud
+	ValidTargets: Ground, Trees
+	InvalidTargets: Air
+	Projectile: Bullet
+		Speed: 1c382
+	Warhead@1Dam: SpreadDamage
+		Spread: 25
 		Damage: 1250
 		ValidTargets: Ground, Trees
 		InvalidTargets: Air
@@ -503,6 +716,82 @@ BroadSword:
 			HeavyCavalry: 10
 			Spectral: 15
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+        
+BroadSwordRanged:
+	ReloadDelay: 125
+	Range: 4c0
+	Report: pistolking2.aud
+	ValidTargets: Ground
+	InvalidTargets: Air, Wall, Structure
+	Projectile: Bullet
+		Speed: 1c000
+        ContrailLength: 25
+		ContrailWidth: 40
+		ContrailDelay: 0
+		ContrailUsePlayerColor : true
+	Warhead@1Dam: SpreadDamage
+		Spread: 0
+		Damage: 0
+		ValidTargets: Ground
+		InvalidTargets: Air, Wall, Structure
+		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+        
+BroadSwordRangedDummy:
+	ReloadDelay: 125
+	Range: 4c0
+	ValidTargets: Ground
+	InvalidTargets: Air, Wall, Structure
+	Projectile: Missile
+		HorizontalRateOfTurn: 120
+		RangeLimit: 8c204
+		Arm: 0
+		Speed: 400
+		LaunchAngle: 46
+		Palette: ra
+	Warhead@1Dam: SpreadDamage
+		Spread: 75
+		Damage: 2000
+		ValidTargets: Ground
+		InvalidTargets: Air, Wall, Structure
+		Versus:
+			Leather: 100
+			Light: 85
+			Heavy: 70
+			HeavyBuilding: 10
+			Concrete: 25
+			Knight: 30
+			LightCavalry: 25
+			MediumCavalry: 10
+			HeavyCavalry: 10
+			Spectral: 33
+		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+        
+BroadSwordPinning:
+	ReloadDelay: 62
+	Range: 4c0
+	ValidTargets: Ground
+	InvalidTargets: Air, Wall, Structure
+	Projectile: InstantHit
+	Warhead@1Dam: SpreadDamage
+		Spread: 0
+		Damage: 0
+		ValidTargets: Ground
+		InvalidTargets: Air, Wall, Structure
+		DamageTypes: DefaultDeath
+	Warhead@Paralyze: GrantSelfCondition
+		Duration: 20
+		Condition: Shooting
+		ValidStances: Ally
+		AffectsParent: true
+		ValidTargets: KingSword
+		InvalidTargets: Air
+	Warhead@RemoveCannon: GrantSelfCondition
+		Duration: 62
+		Condition: NotAttacking
+		ValidStances: Ally
+		AffectsParent: true
+		ValidTargets: KingSword
+		InvalidTargets: Air
 		
 BroadSwordMongol:
 	ReloadDelay: 35

@@ -540,33 +540,34 @@ e2newv2:
 		Start: 312
 		Length: 2
 		Tick: 200
-	stand: e2newv2
+	stand: e2newv2gun
 		Start: 122
 		Facings: 8
 		Offset: 0,-6,0
-	run: e2newv2
+	run: e2newv2gun
 		Start: 0
 		Length: 8
 		Facings: 8
 		Tick: 100
 		Offset: 0,-6,0
-	shoot: e2newv2
+	attack: e2newv2gun
 		Tick: 100
 		Start: 66
 		Length: 7
 		Facings: 8
 		Offset: 0,-6,0
-	idle1: e2newv2
+	shoot: e2newv2gun
+		Tick: 100
+		Start: 227
+		Length: 7
+		Facings: 8
+		Offset: 0,-6,0
+	idle1: e2newv2gun
 		Tick: 100
 		Start: 195
-		Length: 12
+		Length: 32
 		Offset: 0,-6,0
-	idle2: e2newv2
-		Tick: 100
-		Start: 206
-		Length: 16
-		Offset: 0,-6,0
-	die1: e2newv2
+	die1: e2newv2gun
 		Start: 131
 		Length: 16
 		Tick: 80
@@ -576,13 +577,13 @@ e2newv2:
 		Length: *
 		Tick: 80
 	# poision
-	die3: e2newv2
+	die3: e2newv2gun
 		Start: 163
 		Length: 15
 		Tick: 80
 		Offset: 0,-6,0
 	# ballista
-	die4: e2newv2
+	die4: e2newv2gun
 		Start: 180
 		Length: 11
 		Tick: 80
@@ -595,7 +596,7 @@ e2newv2:
 	die5: burningman
 		Length: *
 		Tick: 80
-	icon: ne3icona.shp
+	icon: ne2iconagun.shp
 		Offset: 0,0,0
 		AddExtension: False
 		
@@ -728,28 +729,33 @@ e3new:
 		Start: 312
 		Length: 2
 		Tick: 200
-	stand: e3new
+	stand: e3newgun
 		Start: 122
 		Facings: 8
-	run: e3new
+	run: e3newgun
 		Start: 0
 		Length: 8
 		Facings: 8
 		Tick: 100
-	shoot: e3news
+	shoot: e3newgun
+		Tick: 100
+		Start: 227
+		Length: 7
+		Facings: 8
+	attack: e3newgun
 		Tick: 100
 		Start: 66
 		Length: 7
 		Facings: 8
-	idle1: e3new
+	idle1: e3newgun
 		Tick: 100
 		Start: 190
 		Length: 22
-	idle2: e3new
+	idle2: e3newgun
 		Tick: 100
 		Start: 210
 		Length: 17
-	die1: e3new
+	die1: e3newgun
 		Start: 132
 		Length: 15
 		Tick: 80
@@ -758,12 +764,12 @@ e3new:
 		Length: *
 		Tick: 80
 	# poision
-	die3: e3new
+	die3: e3newgun
 		Start: 163
 		Length: 15
 		Tick: 80
 	# ballista
-	die4: e3new
+	die4: e3newgun
 		Start: 180
 		Length: 11
 		Tick: 80
@@ -775,7 +781,7 @@ e3new:
 	die5: burningman
 		Length: *
 		Tick: 80
-	icon: ne1icona.shp
+	icon: e3newgunicon.shp
 		AddExtension: False
 		
 e3newv2:

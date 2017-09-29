@@ -1694,7 +1694,7 @@ SULE3:
  		AttackSequences:
 			Primary: shoot
 	AutoTarget:
-		ScanRadius: 5
+		ScanRadius: 8
 		InitialStance: AttackAnything
 	RenderSprites:
 		PlayerPalette: raplayer

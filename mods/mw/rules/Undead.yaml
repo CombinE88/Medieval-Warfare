@@ -2141,6 +2141,7 @@ ACOLYTEC:
 	AttackFrontal:
 	AutoTarget:
 		InitialStance: AttackAnything
+		ScanRadius: 9
 	RenderSprites:
 		Image: acolyteb
 		PlayerPalette: raplayer

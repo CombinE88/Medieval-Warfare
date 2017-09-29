@@ -513,7 +513,7 @@ AcolyteAttackCleaner:
 		
 AcolyteAttackCleanerAIR:
 	ReloadDelay: 65
-	Range: 9c0
+	Range: 8c0
 	Report: lightning1.aud, lightning2.aud
 	ValidTargets: Air
 	InvalidTargets: Ground
@@ -639,7 +639,10 @@ VampAttackAA:
 	ValidTargets: Air
 	InvalidTargets: Ground
 	Projectile: Missile
-		Speed: 1c382
+		HorizontalRateOfTurn: 255
+		RangeLimit: 10c0
+		Arm: 0
+		Speed: 1c0
 	Warhead@1Dam: SpreadDamage
 		Spread: 215
 		ValidTargets: Air
