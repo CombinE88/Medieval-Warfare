@@ -3,23 +3,23 @@ using OpenRA.Traits;
 
 namespace OpenRA.Mods.MW.Traits
 {
-    public class IsTownhallInfo : ConditionalTraitInfo
+    public class DirectSpawnModifierInfo : ConditionalTraitInfo
     {
 
-        [Desc("Number in Percent 0-100 How much the total spawnrate will be reduced.")]
-        public readonly int Percent = 50;
+        [Desc("Number in ticks wich reduce spawntime.")]
+        public readonly int Ticks = 25;
 
-        public override object Create(ActorInitializer init) { return new IsTownhall(init.Self, this); }
+        public override object Create(ActorInitializer init) { return new DirectSpawnModifier(init.Self, this); }
     }
 
-    public class IsTownhall : ConditionalTrait<IsTownhallInfo>, INotifyCreated, INotifyRemovedFromWorld
+    public class DirectSpawnModifier : ConditionalTrait<DirectSpawnModifierInfo>, INotifyCreated, INotifyRemovedFromWorld
     {
-        private IsTownhallInfo info;
+        private DirectSpawnModifierInfo info;
         readonly Actor self;
         PlayerCivilization PlayerCiv;
         bool Enabled = false;
 
-        public IsTownhall(Actor self, IsTownhallInfo info) : base(info)
+        public DirectSpawnModifier(Actor self, DirectSpawnModifierInfo info) : base(info)
         {
             this.info = info;
             this.self = self;
@@ -32,7 +32,7 @@ namespace OpenRA.Mods.MW.Traits
             {
                if (!IsTraitDisabled && !Enabled)
                 {
-                    PlayerCiv.PercentageModifier += Info.Percent;
+                    PlayerCiv.DirectModifier += Info.Ticks;
                     Enabled = true;
                 }
             }
@@ -44,7 +44,7 @@ namespace OpenRA.Mods.MW.Traits
             {
                 if (!IsTraitDisabled && Enabled)
                 {
-                    PlayerCiv.PercentageModifier -= Info.Percent;
+                    PlayerCiv.DirectModifier -= Info.Ticks;
                     Enabled = false;
                 }
             }
@@ -54,7 +54,7 @@ namespace OpenRA.Mods.MW.Traits
         {
             if (!IsTraitDisabled && !Enabled)
             {
-                PlayerCiv.PercentageModifier += Info.Percent;
+                PlayerCiv.DirectModifier += Info.Ticks;
                 Enabled = true;
             }
         }
@@ -63,7 +63,7 @@ namespace OpenRA.Mods.MW.Traits
         {
             if (!IsTraitDisabled && Enabled)
             {
-                PlayerCiv.PercentageModifier -= Info.Percent;
+                PlayerCiv.DirectModifier -= Info.Ticks;
                 Enabled = false;
             }
         }

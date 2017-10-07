@@ -856,7 +856,7 @@ Container@PLAYER_WIDGETS:
 					TooltipContainer: TOOLTIP_CONTAINERSPECIAL
 					ReadyText: Ready
 					HoldText: On Hold
-					Columns: 5
+					Columns: 7
 					IconSize: 100, 80
 					MinimumRows: 1
 					MaximumRows: 6

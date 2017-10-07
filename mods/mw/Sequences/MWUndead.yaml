@@ -1308,3 +1308,14 @@ garg:
     circlel: ptimerl
         Length: 21
         ZOffset: -2024
+        
+grafence:
+	idle: 
+		Length: 16
+		Offset: 0,-12,0
+	damaged-idle: 
+		Start: 16
+		Length: 16
+		Offset: 0,-12,0
+	icon: grafenceicon.shp
+		AddExtension: False

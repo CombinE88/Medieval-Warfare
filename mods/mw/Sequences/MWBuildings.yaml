@@ -233,6 +233,51 @@ hqnew:
 		Start: 35
 		ZOffset: -25
         
+obs:
+	Inherits: ^scaffold
+	idle: obs
+		Tick: 100
+	active: obs
+		Length: *
+		Tick: 100
+	damaged-active: obsd
+		Length: 36
+		Tick: 100
+	damaged-idle: obsd
+		Tick: 100
+	dead: obsd
+		Start: 36
+		Tick: 800
+	make: obsmake
+		Length: *
+		Tick: 80
+	bib: mwbib3
+		UseTilesetExtension: true
+		Length: *
+	icon: obsicon.shp
+		AddExtension: False
+	make1: obsmake
+		Start: 0
+		ZOffset: -25
+	make2: obsmake
+		Start: 1
+		ZOffset: -25
+	make3: obsmake
+		Start: 2
+		ZOffset: -25
+	make4: obsmake
+		Start: 3
+		ZOffset: -25
+	make5: obsmake
+		Start: 4
+		ZOffset: -25
+	make6: obsmake
+		Start: 5
+		ZOffset: -25
+	make7: obsmake
+		Start: 6
+		ZOffset: -25
+        
 ljackb:
 	Inherits: ^scaffold
 	idle: 

@@ -54,7 +54,7 @@ SmokeySpawner:
 	ReloadDelay: 85
 	MinRange: 0
 	Range: 0c712
-	Profvjectile: Bullet
+	Projectile: Bullet
 		Speed: 100
 		ValidTargets: none
 	Warhead@1Eff: CreateEffect
@@ -360,7 +360,7 @@ KingPike:
 			Spectral: 10
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
 	Warhead@RemoveCannon: GrantSelfCondition
-		Duration: 125
+		Duration: 375
 		Condition: NotAttacking
 		ValidStances: Ally
 		AffectsParent: true
@@ -393,7 +393,7 @@ KingPikeStructure:
 			Spectral: 10
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
 	Warhead@RemoveCannon: GrantSelfCondition
-		Duration: 62
+		Duration: 375
 		Condition: NotAttacking
 		ValidStances: Ally
 		AffectsParent: true
@@ -401,7 +401,7 @@ KingPikeStructure:
 		InvalidTargets: Air
         
 KingPikeRanged:
-	ReloadDelay: 125
+	ReloadDelay: 375
 	Range: 4c512
 	Report: pistolking2.aud
 	ValidTargets: Cavalry
@@ -420,7 +420,7 @@ KingPikeRanged:
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
         
 KingPikeRangedDummy:
-	ReloadDelay: 125
+	ReloadDelay: 375
 	Range: 4c512
 	ValidTargets: Cavalry
 	InvalidTargets: Air, Wall, Structure
@@ -450,7 +450,7 @@ KingPikeRangedDummy:
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
         
 KingPikePinning:
-	ReloadDelay: 125
+	ReloadDelay: 375
 	Range: 4c512
 	ValidTargets: Cavalry
 	InvalidTargets: Air, Wall, Structure
@@ -469,7 +469,7 @@ KingPikePinning:
 		ValidTargets: KingPike
 		InvalidTargets: Air
 	Warhead@RemoveCannon: GrantSelfCondition
-		Duration: 62
+		Duration: 375
 		Condition: NotAttacking
 		ValidStances: Ally
 		AffectsParent: true
@@ -651,7 +651,7 @@ BroadSword:
 			Spectral: 15
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
 	Warhead@RemoveCannon: GrantSelfCondition
-		Duration: 125
+		Duration: 375
 		Condition: NotAttacking
 		ValidStances: Ally
 		AffectsParent: true
@@ -684,7 +684,7 @@ BroadSwordStructure:
 			Spectral: 15
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
 	Warhead@RemoveCannon: GrantSelfCondition
-		Duration: 62
+		Duration: 375
 		Condition: NotAttacking
 		ValidStances: Ally
 		AffectsParent: true
@@ -718,7 +718,7 @@ BroadSwordBaron:
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
         
 BroadSwordRanged:
-	ReloadDelay: 125
+	ReloadDelay: 375
 	Range: 4c0
 	Report: pistolking2.aud
 	ValidTargets: Ground
@@ -737,7 +737,7 @@ BroadSwordRanged:
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
         
 BroadSwordRangedDummy:
-	ReloadDelay: 125
+	ReloadDelay: 375
 	Range: 4c0
 	ValidTargets: Ground
 	InvalidTargets: Air, Wall, Structure
@@ -767,7 +767,7 @@ BroadSwordRangedDummy:
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
         
 BroadSwordPinning:
-	ReloadDelay: 62
+	ReloadDelay: 375
 	Range: 4c0
 	ValidTargets: Ground
 	InvalidTargets: Air, Wall, Structure
@@ -786,7 +786,7 @@ BroadSwordPinning:
 		ValidTargets: KingSword
 		InvalidTargets: Air
 	Warhead@RemoveCannon: GrantSelfCondition
-		Duration: 62
+		Duration: 375
 		Condition: NotAttacking
 		ValidStances: Ally
 		AffectsParent: true

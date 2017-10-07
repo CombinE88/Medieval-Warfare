@@ -1,3 +1,11 @@
+upgradeguns1:	
+	icon: guns1.shp
+		AddExtension: False
+        
+upgradeguns2:
+	icon: guns2.shp
+		AddExtension: False
+
 fb4:
 	idle:
 		Length: 4
@@ -17,6 +25,31 @@ fire:
 		Length: *
 		Offset: 0,-3
 		ZOffset: 1023
+        
+pillow:
+	lagepillow: pillowxl
+		ZOffset: 1023
+		Tick: 800
+		Length: *
+	normalpillow: pillow
+		ZOffset: 1023
+		Length: *
+		Tick: 800
+	smallpillow: pillows
+		ZOffset: 1023
+		Tick: 800
+		Length: *
+	tinypillow: pillowxs
+		ZOffset: 1023
+		Tick: 800
+		Length: *
+        
+firesmoke:
+	fire1: fire1
+		Length: *
+		Offset: 0,-3
+		ZOffset: 1023
+		Tick: 60
 
 burn-l:
 	idle:

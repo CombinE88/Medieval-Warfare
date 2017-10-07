@@ -534,7 +534,7 @@ newcomm:
 		Tick: 1000
 		Start: 9 
 		
-e2newv2:
+e2newv2u:
 	stunned: sulm4
 		ZOffset: 125
 		Start: 312
@@ -599,7 +599,71 @@ e2newv2:
 	icon: ne2iconagun.shp
 		Offset: 0,0,0
 		AddExtension: False
-		
+        
+e2newv2:
+	stunned: sulm4
+		ZOffset: 125
+		Start: 312
+		Length: 2
+		Tick: 200
+	stand: e2newv2
+		Start: 122
+		Facings: 8
+		Offset: 0,-6,0
+	run: e2newv2
+		Start: 0
+		Length: 8
+		Facings: 8
+		Tick: 100
+		Offset: 0,-6,0
+	shoot: e2newv2
+		Tick: 100
+		Start: 66
+		Length: 7
+		Facings: 8
+		Offset: 0,-6,0
+	idle1: e2newv2
+		Tick: 100
+		Start: 195
+		Length: 12
+		Offset: 0,-6,0
+	idle2: e2newv2
+		Tick: 100
+		Start: 206
+		Length: 16
+		Offset: 0,-6,0
+	die1: e2newv2
+		Start: 131
+		Length: 16
+		Tick: 80
+		Offset: 0,-6,0
+	# large hit
+	die2: splatterdead
+		Length: *
+		Tick: 80
+	# poision
+	die3: e2newv2
+		Start: 163
+		Length: 15
+		Tick: 80
+		Offset: 0,-6,0
+	# ballista
+	die4: e2newv2
+		Start: 180
+		Length: 11
+		Tick: 80
+		Offset: 0,-6,0
+	die-crushed: e1rot
+		Start: 16
+		Length: 4
+		Tick: 1600
+		ZOffset: -511
+	die5: burningman
+		Length: *
+		Tick: 80
+	icon: ne3icona.shp
+		Offset: 0,0,0
+		AddExtension: False
 firmag:
 	stunned: sulm4
 		ZOffset: 125
@@ -723,7 +787,7 @@ thief:
 	icon: nstnkicon.shp
 		AddExtension: False
 		
-e3new:
+e3newu:
 	stunned: sulm4
 		ZOffset: 125
 		Start: 312
@@ -783,7 +847,63 @@ e3new:
 		Tick: 80
 	icon: e3newgunicon.shp
 		AddExtension: False
-		
+
+e3new:
+	stunned: sulm4
+		ZOffset: 125
+		Start: 312
+		Length: 2
+		Tick: 200
+	stand: e3new
+		Start: 122
+		Facings: 8
+	run: e3new
+		Start: 0
+		Length: 8
+		Facings: 8
+		Tick: 100
+	shoot: e3news
+		Tick: 100
+		Start: 66
+		Length: 7
+		Facings: 8
+	idle1: e3new
+		Tick: 100
+		Start: 190
+		Length: 22
+	idle2: e3new
+		Tick: 100
+		Start: 210
+		Length: 17
+	die1: e3new
+		Start: 132
+		Length: 15
+		Tick: 80
+	# large hit
+	die2: splatterdead
+		Length: *
+		Tick: 80
+	# poision
+	die3: e3new
+		Start: 163
+		Length: 15
+		Tick: 80
+	# ballista
+	die4: e3new
+		Start: 180
+		Length: 11
+		Tick: 80
+	die-crushed: e1rot
+		Start: 16
+		Length: 4
+		Tick: 1600
+		ZOffset: -511
+	die5: burningman
+		Length: *
+		Tick: 80
+	icon: ne1icona.shp
+		AddExtension: False
+        
 e3newv2:
 	stunned: sulm4
 		ZOffset: 125

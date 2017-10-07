@@ -502,7 +502,7 @@ HQNEWNOD.SCAFF:
 		IconPalette: raicon
 		BuildPaletteOrder: 10
 		Prerequisites: proc
-		Queue: MTech.Nod, MTech.GDI
+		Queue: MTech.Nod
 		Description: Unlocks higher-tech units and buildings.\n\n\n\n
 		BuildDuration: 60
 	Health:
@@ -519,6 +519,82 @@ HQNEWNOD.SCAFF:
 	SpawnActorOnDeath@Finsihed:
 		Probability: 100
 		Actor: HQNEWNOD
+		DeathType: FinishedDeath
+	ExternalCondition@buildfurther: 
+		Condition: Construct
+		TotalCap: 74
+	ExternalCondition@Deliverfurther:
+		Condition: DeliveredResources
+		TotalCap: 74
+	Targetable@buildfurther: 
+		TargetTypes: Buildable
+		RequiresCondition: DeliveredResources > Construct && (74 - Construct) > 0
+	Targetable@deliverresources: 
+		TargetTypes: Deliverable
+		RequiresCondition: 74 > DeliveredResources
+	SelfHealing@Finished:
+		PercentageStep: -200
+		HealIfBelow: 110
+		Delay: 1
+		RequiresCondition: (74 - Construct) <= 0
+		DamageTypes: FinishedDeath
+	WithIdleOverlay@base1:
+		Sequence: make1
+		RequiresCondition: Construct > 10 && Construct < 22
+	WithIdleOverlay@base2:
+		Sequence: make2
+		RequiresCondition: Construct >= 22 && Construct < 23
+	WithIdleOverlay@base3:
+		Sequence: make3
+		RequiresCondition: Construct >= 23 && Construct < 34
+	WithIdleOverlay@base4:
+		Sequence: make4
+		RequiresCondition: Construct >= 34 && Construct < 45
+	WithIdleOverlay@base5:
+		Sequence: make5
+		RequiresCondition: Construct >= 45 && Construct < 55
+	WithIdleOverlay@base6:
+		Sequence: make6
+		RequiresCondition: Construct >= 55 && Construct < 64
+	WithIdleOverlay@base7:
+		Sequence: make7
+		RequiresCondition: Construct >= 64
+        
+HQNEWGDI.SCAFF:
+	Inherits: ^2x2SITE
+	Inherits@Hitshape: ^2x2Shape
+	Armor:
+		Type: Concrete
+	RenderSprites:
+		PlayerPalette: raplayer
+		Image: obs
+	CustomSellValue:
+		Value: 400
+	Valued:
+		Cost: 1200
+	Tooltip:
+		Name: Construction Site (Inventor)
+	Buildable:
+		IconPalette: raicon
+		BuildPaletteOrder: 10
+		Prerequisites: proc
+		Queue: MTech.Nod, MTech.GDI
+		Description: Unlocks higher-tech units and buildings.\n\n\n\n
+		BuildDuration: 60
+	Health:
+		HP: 17000
+	RevealsShroud:
+		Range: 4c0
+	WithBuildingBib:
+	Selectable:
+		Bounds: 48,40,0,9
+	SelectionDecorations:
+		VisualBounds: 48,53,0,-4
+	WithSpriteBody:
+		RequiresCondition: inactive
+	SpawnActorOnDeath@Finsihed:
+		Probability: 100
+		Actor: HQNEWGDI
 		DeathType: FinishedDeath
 	ExternalCondition@buildfurther: 
 		Condition: Construct
@@ -2033,10 +2109,11 @@ TOWNHALL.SCAFF:
 	Buildable:
 		IconPalette: raicon
 		BuildPaletteOrder: 40
-		Prerequisites: anyarmory
+		Prerequisites: anyarmory, !townhall
 		Description: Attracts citizens to your town.\nNew Peasants will spawn faster.\n\n\n
 		Queue: MBuilding.GDI, MBuilding.Nod
 		BuildDuration: 100
+		BuildLimit: 1
 	Health:
 		HP: 60000
 	RevealsShroud:
@@ -2106,10 +2183,11 @@ SCHAFOTT.SCAFF:
 	Buildable:
 		IconPalette: raicon
 		BuildPaletteOrder: 35
-		Prerequisites: anyhq
+		Prerequisites: anyhq, !schafott
 		Description: Attracts citizens to your town.\nNew Peasants will spawn faster.\n\n\n
 		Queue: MBuilding.Nod
 		BuildDuration: 50
+		BuildLimit: 1
 	Health:
 		HP: 40000
 	RevealsShroud:
@@ -2179,10 +2257,11 @@ HERBALIST.SCAFF:
 	Buildable:
 		IconPalette: raicon
 		BuildPaletteOrder: 35
-		Prerequisites: anyhq
+		Prerequisites: anyhq, !herbalist
 		Description: Attracts citizens to your town.\nNew Peasants will spawn faster.\n\n\n
 		Queue: MBuilding.GDI
 		BuildDuration: 50
+		BuildLimit: 1
 	Health:
 		HP: 40000
 	RevealsShroud:

@@ -83,6 +83,9 @@
     <Compile Include="Traits\Construction\RemPrioTargeter.cs" />
     <Compile Include="Traits\CreateActorOnDeath.cs" />
     <Compile Include="Traits\CritterSpawner.cs" />
+    <Compile Include="Traits\DirectSpawnModifier.cs" />
+    <Compile Include="Traits\Render\ChimneySmoke.cs" />
+    <Compile Include="Traits\Render\ADVSpriteEffect.cs" />
     <Compile Include="Traits\Render\DisguiseChargeBar.cs" />
     <Compile Include="Traits\DockBasics\Dock.cs" />
     <Compile Include="Traits\DockBasics\DockClient.cs" />
@@ -93,7 +96,6 @@
     <Compile Include="Traits\HunterTraits\DeerHunter.cs" />
     <Compile Include="Traits\HunterTraits\LodgeActor.cs" />
     <Compile Include="Traits\HunterTraits\LootableBody.cs" />
-    <Compile Include="Traits\IsEarlyTownhall.cs" />
     <Compile Include="Traits\IsPeasant.cs" />
     <Compile Include="Traits\IsTownhall.cs" />
     <Compile Include="Traits\NewDisguise.cs" />

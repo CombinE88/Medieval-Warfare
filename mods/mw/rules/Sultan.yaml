@@ -590,6 +590,7 @@ SULHALL:
 		Sticky: true
 		FindRadius: 100
 	IsTownhall:
+		Percent: 60
     
 SULMINARET:
 	Inherits: ^MWBaseBuilding
@@ -631,7 +632,8 @@ SULMINARET:
 		Weapons: LargeStone1, LargeStone1, LargeStone1, LargeStone1
 		Pieces: 1, 2
 		Range: 1c0, 5c0
-	IsAtracter:
+	IsTownhall:
+		Percent: 40
 		
 SULARRAY:
 	Inherits: ^MWBaseBuilding

@@ -9,6 +9,7 @@
  */
 #endregion
 
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using OpenRA.Mods.Common;
@@ -29,11 +30,9 @@ namespace OpenRA.Traits
 		[Desc("Each Ammount in ProvidesLivingspaces reduces this time by this modifier for this faction.")] 
 		public readonly Dictionary<string, int> SpecialModifier = new Dictionary<string, int>();
 		
-		public readonly HashSet<string> TownHalls = new HashSet<string>();
 		public readonly HashSet<string> Peasants = new HashSet<string>();
 		
-		public readonly int SmallHallBonus = 30;
-		public readonly int BigHallBonus = 70;
+		public readonly bool AllowModifiers = true;
 		
 		public object Create(ActorInitializer init) { return new PlayerCivilization(init.Self, this); }
 	}
@@ -56,8 +55,8 @@ namespace OpenRA.Traits
 
 		public int hiddenpeasants;
 
-		public int HasTownHalls;
-		public int HasAttrackter;
+        public decimal PercentageModifier;
+        public int DirectModifier;
 		
 
 		public HashSet<Actor> PeasantPorivder = new HashSet<Actor>();
@@ -67,7 +66,10 @@ namespace OpenRA.Traits
 			nextchecktick += info.Delay * 25;
 			basecheck += info.Delay * 25;
 			player = self.Owner;
-		}
+            PercentageModifier = 100;
+            DirectModifier = 0;
+
+        }
 
 		public PlayerCivilization(Actor self, PlayerCivilizationInfo info)
 		{
@@ -210,13 +212,12 @@ namespace OpenRA.Traits
 					nextchecktick -= FreePopulation * info.SpawnModifier;
 					nextchecktick -= spawn2;
 
-					var devider = 100;
+                    decimal devider = Decimal.Round(100 / PercentageModifier, 2);
 
-					devider += HasAttrackter > 0 ? info.SmallHallBonus : 0;
-					devider += HasTownHalls > 0 ? info.BigHallBonus : 0;
+                    basecheck = (int) (decimal) (nextchecktick * devider);
+                    basecheck -= DirectModifier;
 
-					basecheck = nextchecktick * 100 / devider;
-					if (basecheck < 25)
+                    if (basecheck < 25)
 						basecheck = 25;
 				}
 			}

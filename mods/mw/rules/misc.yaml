@@ -1,3 +1,39 @@
+upgradeguns1:
+	AlwaysVisible:
+	Tooltip:
+		Name: Handout Guns
+	Buildable:
+		BuildPaletteOrder: 112
+		Prerequisites: anyhq
+		Queue: MInfantry.GDI
+		BuildLimit: 1
+		BuildDuration: 500
+		IconPalette: raicon
+		Description: Knights now have firststrike and a single ranged attack.
+	Valued:
+		Cost: 1000
+	RenderSprites:
+		Image: upgradeguns1
+	ProvidesPrerequisite@upgradename:
+    
+upgradeguns2:
+	AlwaysVisible:
+	Tooltip:
+		Name: Handout Rifles
+	Buildable:
+		BuildPaletteOrder: 114
+		Prerequisites: anyarmory
+		Queue: MInfantry.GDI
+		BuildLimit: 1
+		BuildDuration: 1000
+		IconPalette: raicon
+		Description: Hellbard Guards now have firststrike and a single ranged attack.
+	Valued:
+		Cost: 1500
+	RenderSprites:
+		Image: upgradeguns2
+	ProvidesPrerequisite@upgradename:
+
 CRATE.plain:
 	Inherits: ^Crate
 	ScriptTriggers:

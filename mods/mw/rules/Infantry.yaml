@@ -350,8 +350,57 @@ E2NEW:
 	AutoTargetPriority@Counter2:
 		ValidTargets: RegularCavalry, HeavyCavalry, Defenses
 		Priority: 4
-		
+        
 E2NEWV2:
+	Inherits: ^Knight
+	Inherits@AUTOTARGET: ^AutoTargetGround
+	Valued:
+		Cost: 200
+	-Crushable:
+	Tooltip:
+		Name: Halberd Guard
+	Buildable:
+		Description: Anti-Cavalry infantry.\n  Strong vs Cavalry.\n  Weak vs Infantry\n  Deals damage when trampled by Cavalry\n  Can cut down trees.\n\nTrains: 1 Peasant\n
+		IconPalette: raicon
+		Prerequisites: ~!upgradeguns2
+		BuildPaletteOrder: 20
+		Queue: MInfantry.GDI
+		BuildDuration: 50
+	Mobile:
+		Speed: 45
+	Health:
+		HP: 8000
+	Armament:
+		Weapon: pikespread
+	AttackFrontal:
+	AutoTarget:
+		ScanRadius: 4
+		InitialStance: AttackAnything
+	RenderSprites:
+		Image: e2newv2
+		PlayerPalette: raplayer
+	WithInfantryBody:
+		DefaultAttackSequence: shoot
+	Armor:
+		Type: Light
+	Voiced:
+		VoiceSet: GDIPikeVoice
+	Explodes:
+		Weapon: KilledPike
+		EmptyWeapon: KilledPike
+	PersonValued:
+		ActorCount: 1
+		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
+	Targetable@CombatRole:
+		TargetTypes: Light
+	AutoTargetPriority@Counter1:
+		ValidTargets: LightCavalry, Defenses
+		Priority: 5
+	AutoTargetPriority@Counter2:
+		ValidTargets: RegularCavalry, HeavyCavalry, Defenses
+		Priority: 4
+		
+E2NEWV2U:
 	Inherits: ^Knight
 	Inherits@AUTOTARGET: ^AutoTargetGround
 	Valued:
@@ -365,6 +414,7 @@ E2NEWV2:
 		BuildPaletteOrder: 20
 		Queue: MInfantry.GDI
 		BuildDuration: 50
+		Prerequisites: ~upgradeguns2
 	Mobile:
 		Speed: 45
 	Health:
@@ -416,7 +466,7 @@ E2NEWV2:
 		ScanRadius: 4
 		InitialStance: AttackAnything
 	RenderSprites:
-		Image: e2newv2
+		Image: e2newv2u
 		PlayerPalette: raplayer
 	WithInfantryBody:
 		DefaultAttackSequence: attack
@@ -442,7 +492,7 @@ E2NEWV2:
 		ValidTargets: RegularCavalry, HeavyCavalry, Defenses
 		Priority: 4
 		
-E3NEW:
+E3NEWU:
 	Inherits: ^Knight
 	Inherits@AUTOTARGET: ^AutoTargetGround
 	Valued:
@@ -450,11 +500,12 @@ E3NEW:
 	Tooltip:
 		Name: Knight
 	Buildable:
-		Description: General-purpose infantry.\n  Strong vs Infantry\n  Weak vs Cavalry \n  Can fire 1 ranged shot when not attacking for a 5 seconds\n  Can cut down trees.\n\nTrains: 1 Peasant\n
+		Description: General-purpose infantry.\n  Strong vs Infantry\n  Weak vs Cavalry \n  Can fire 1 ranged shot when not attacking for a 15 seconds\n  Can cut down trees.\n\nTrains: 1 Peasant\n
 		IconPalette: raicon
 		BuildPaletteOrder: 10
 		Queue: MInfantry.GDI
 		BuildDuration: 50
+		Prerequisites: ~upgradeguns1
 	Mobile:
 		Speed: 54
 		RequiresCondition: !Shooting
@@ -507,13 +558,55 @@ E3NEW:
 		ScanRadius: 4
 		InitialStance: AttackAnything
 	RenderSprites:
-		Image: e3new
+		Image: e3newu
 		PlayerPalette: raplayer
 	WithInfantryBody:
 		DefaultAttackSequence: attack
 		AttackSequences:
 			Primary: shoot
 			Secondary: attack
+	Armor:
+		Type: Heavy
+	Voiced:
+		VoiceSet: GDIKnightVoice
+	PersonValued:
+		ActorCount: 1
+		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
+	Targetable@CombatRole:
+		TargetTypes: Heavy
+	AutoTargetPriority@Counter:
+		ValidTargets: Light, Heavy, Ranged, Support
+		Priority: 4
+        
+E3NEW:
+	Inherits: ^Knight
+	Inherits@AUTOTARGET: ^AutoTargetGround
+	Valued:
+		Cost: 100
+	Tooltip:
+		Name: Knight
+	Buildable:
+		Description: General-purpose infantry.\n  Strong vs Infantry\n  Weak vs Cavalry \n  Can cut down trees.\n\nTrains: 1 Peasant\n
+		IconPalette: raicon
+		BuildPaletteOrder: 10
+		Queue: MInfantry.GDI
+		BuildDuration: 50
+		Prerequisites: ~!upgradeguns1
+	Mobile:
+		Speed: 56
+	Health:
+		HP: 11500
+	Armament:
+		Weapon: BroadSwordBaron
+	AttackFrontal:
+	AutoTarget:
+		ScanRadius: 4
+		InitialStance: AttackAnything
+	RenderSprites:
+		Image: e3new
+		PlayerPalette: raplayer
+	WithInfantryBody:
+		DefaultAttackSequence: shoot
 	Armor:
 		Type: Heavy
 	Voiced:
@@ -934,7 +1027,7 @@ ASSASSIN:
 	Buildable:
 		Description: Mid/Long-range knifethrowing infantry that can cloak.\nHas weak armor. Can be spotted by some infantry and defense structures.\n  Strong vs Cavalry, Infantry and Spectral Units\n  Sets buildings on fire.\n  Detects cloaked units\n  Can attack Aircraft\n\nTrains: 1 Peasant\n
 		IconPalette: raicon
-		BuildPaletteOrder: 140
+		BuildPaletteOrder: 60
 		Queue: MInfantry.Nod, MInfantry.Horse
 		Prerequisites: anycastle
 		BuildDuration: 300

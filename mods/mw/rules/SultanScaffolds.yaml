@@ -765,10 +765,11 @@ SULHALL.SCAFF:
 	Buildable:
 		IconPalette: raicon
 		BuildPaletteOrder: 30
-		Prerequisites: anyarmory
+		Prerequisites: anyarmory, !sulhall
 		Description: Attracts citizens to your town.\nNew Peasants will spawn faster.\n\n\n
 		Queue: MBuilding.SUL
 		BuildDuration: 100
+		BuildLimit: 1
 	Health:
 		HP: 60000
 	RevealsShroud:
@@ -838,10 +839,11 @@ SULMINARET.SCAFF:
 	Buildable:
 		IconPalette: raicon
 		BuildPaletteOrder: 25
-		Prerequisites: anyhq
+		Prerequisites: anyhq, !sulminaret
 		Description: Attracts citizens to your town.\nNew Peasants will spawn faster.\n\n\n
 		Queue: MBuilding.SUL
 		BuildDuration: 60
+		BuildLimit: 1
 	Health:
 		HP: 30000
 	RevealsShroud:
