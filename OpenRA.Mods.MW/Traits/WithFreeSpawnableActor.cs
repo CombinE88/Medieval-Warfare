@@ -66,7 +66,6 @@ namespace OpenRA.Mods.MW.Traits
     {
 		private int Ticker;
 		private Actor RespawnActor = null;
-		private Actor self;
 		private readonly WithFreeSpawnableActorInfo info;
 		public HashSet<Actor> InUse = new HashSet<Actor>();
 		private int idlecount;
@@ -259,11 +258,8 @@ namespace OpenRA.Mods.MW.Traits
 			//find produced unit cost values
 			var ValidActors = new HashSet<string>();
 			;
-			var Actorcount = 1;
 
 			var guysFound = new HashSet<Actor>();
-			var underWay = 0;
-			var alreadyReached = 0;
 
 			//find enough actors
 

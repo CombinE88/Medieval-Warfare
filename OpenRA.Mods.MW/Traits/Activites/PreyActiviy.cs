@@ -19,8 +19,6 @@ namespace OpenRA.Mods.MW.Activities
     {
         readonly AcolytePreyInfo info;
         readonly WithSpriteBody wsb;
-        
-        ExternalCondition externalCondition;
 
         private Actor dockactor;
         private bool lockfacing;
@@ -36,8 +34,6 @@ namespace OpenRA.Mods.MW.Activities
         private string condtion;
 
         private Dictionary<string, string> ResourceTypesPreres;
-
-        public ExternalCondition ExternalCondition { get => externalCondition; set => externalCondition = value; }
 
         public PreyActivity(Actor self,Actor dockact,bool facingDock,Dock d)
         {

@@ -23,12 +23,7 @@ namespace OpenRA.Mods.MW.Widgets
 	{
 		readonly World world;
 
-		int selectionHash;
 		Actor[] selectedActors = { };
-		bool attackMoveDisabled = true;
-
-		int deployHighlighted;
-		int scatterHighlighted;
 		int stopHighlighted;
 
 		private bool priorityisdisabled;
@@ -70,8 +65,6 @@ namespace OpenRA.Mods.MW.Widgets
 
 		void UpdateStateIfNecessary()
 		{
-			if (selectionHash == world.Selection.Hash)
-				return;
 
 			selectedActors = world.Selection.Actors
 				.Where(a => a.Owner == world.LocalPlayer && a.IsInWorld && a.Info.HasTraitInfo<ConstructionPriorityInfo>())

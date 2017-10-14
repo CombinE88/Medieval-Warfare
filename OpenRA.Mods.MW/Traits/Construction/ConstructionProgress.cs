@@ -65,15 +65,11 @@ namespace OpenRA.Mods.MW.Traits.Render
 
 	public class ConstructionProgress : ConditionalTrait<ConstructionProgressInfo>, IRender, IRenderAboveShroudWhenSelected, IObservesVariables
 	{
-		private int check = 10;
 		readonly SpriteFont font;
 		Color color;
 		public int priority;
-		private Actor self;
-		private int tick = 25;
 
 		protected readonly Animation LeftAnim;
-		readonly string image;
 		protected readonly Animation RightAnim;
 
 		public int Progress;
@@ -91,7 +87,7 @@ namespace OpenRA.Mods.MW.Traits.Render
 		}
 
 		
-		public virtual IEnumerable<VariableObserver> GetVariableObservers()
+		public new virtual IEnumerable<VariableObserver> GetVariableObservers()
 		{
 			if (Info.ConstructionCondition != null)
 				yield return new VariableObserver(ConditionsChanged, Info.ConstructionCondition.Variables);

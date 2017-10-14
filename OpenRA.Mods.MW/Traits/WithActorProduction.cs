@@ -41,8 +41,6 @@ namespace OpenRA.Mods.MW.Traits
     {
 		readonly WithActorProductionInfo info;
 		public HashSet<Actor> InUse = new HashSet<Actor>();
-		private int Ticker;
-		private bool Tickenabler = false;
 		
 		public WithActorProduction(ActorInitializer init, WithActorProductionInfo info)
 			: base(init, info)
@@ -196,7 +194,6 @@ namespace OpenRA.Mods.MW.Traits
 			var Actorcount = 1;
 			
 			var guysFound = new HashSet<Actor>();
-			var underWay = 0;
 			var alreadyReached = 0;
 			
 			//find enough actors

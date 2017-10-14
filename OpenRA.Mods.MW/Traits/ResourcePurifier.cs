@@ -19,12 +19,10 @@ namespace OpenRA.Mods.MW.Traits
 
 	class ResourcePurifier : ITick
 	{
-		private Actor self;
 		private readonly ResourcePurifierInfo info;
 		private PlayerResources playerResources;
 		private int Resources;
 		private int ResourcesTickBefore;
-		int currentDisplayValue;
 		
 
 
@@ -50,7 +48,6 @@ namespace OpenRA.Mods.MW.Traits
 				{
 					if (self.Owner.IsAlliedWith(self.World.RenderPlayer))
 						self.World.AddFrameEndTask(w => w.Add(new FloatingText(self.CenterPosition, self.Owner.Color.RGB, FloatingText.FormatCashTick(temp), 30)));
-					currentDisplayValue = 0;
 				}
 				
 			}

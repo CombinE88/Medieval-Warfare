@@ -41,8 +41,6 @@ namespace OpenRA.Traits
 	public class PlayerCivilization : ITick, INotifyCreated
 	{
 		readonly PlayerCivilizationInfo info;
-		readonly Player owner;
-		readonly World world;
 		public int nextchecktick;
 		public int basecheck;
 		private Player player;
@@ -189,14 +187,14 @@ namespace OpenRA.Traits
 
 			if (self.Owner.Faction.InternalName != "ded")
 			{
-				SpawnStoredPeasant(world);
+				SpawnStoredPeasant(self.World);
 
 			if (FreePopulation>0)
 				basecheck--;
 
 				if (basecheck <= 0)
 				{
-					spawnapeasant(world);
+					spawnapeasant(self.World);
 
 					nextchecktick = info.Delay * 25;
 					var spawn2 = 0;

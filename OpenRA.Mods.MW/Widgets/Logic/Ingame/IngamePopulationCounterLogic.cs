@@ -27,13 +27,11 @@ namespace OpenRA.Mods.MW.Widgets.Logic
 
 		readonly World world;
 		readonly Player player;
-		readonly int playerResources;
 		readonly string cashLabel;
 		readonly HashSet<string> Population  = new HashSet<string>();
 		
 		
-
-		int nextCashTickTime = 0;
+        
 		int displayResources;
 		string displayLabel;
 		

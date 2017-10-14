@@ -29,8 +29,7 @@ namespace OpenRA.Mods.MW.Traits
 	class DecaysResource : ConditionalTrait<DecaysResourceInfo>, ITick
 	{
 		readonly DecaysResourceInfo _info;
-
-		readonly ResourceType _resourceType;
+        
 		readonly ResourceLayer _resLayer;
 
 		public DecaysResource(Actor self, DecaysResourceInfo info)

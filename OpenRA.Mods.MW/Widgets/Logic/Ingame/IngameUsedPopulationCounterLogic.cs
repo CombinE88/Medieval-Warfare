@@ -25,7 +25,6 @@ namespace OpenRA.Mods.MW.Widgets.Logic
 
 		readonly World world;
 		readonly Player player;
-		readonly int playerResources;
 		readonly string cashLabel;
 		int nextCashTickTime = 0;
 		int displayResources;

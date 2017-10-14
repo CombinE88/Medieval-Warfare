@@ -107,7 +107,6 @@ namespace OpenRA.Mods.MW.Traits
 		public int Timer;
 		public int ChargeTime;
 		public bool cannotdsguise;
-		private WorldRenderer wr;
 
 		public Actor Target;
 		
