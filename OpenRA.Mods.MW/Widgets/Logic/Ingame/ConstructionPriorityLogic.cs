@@ -49,7 +49,6 @@ namespace OpenRA.Mods.MW.Widgets
 					UpdateStateIfNecessary();
 					return priorityisdisabled;
 				};
-				addprioritybutton.GetKey = _ => new Hotkey(Keycode.KP_PLUS, Modifiers.None);
 				addprioritybutton.IsHighlighted = () => stopHighlighted > 0;
 				addprioritybutton.OnClick = () => PerformOrderOnSelection(a => new Order("AddPrio", a, false));
 				addprioritybutton.OnKeyPress = ki => { stopHighlighted = 2; addprioritybutton.OnClick(); };
@@ -62,7 +61,6 @@ namespace OpenRA.Mods.MW.Widgets
 					UpdateStateIfNecessary();
 					return priorityisdisabled;
 				};
-				addprioritybutton.GetKey = _ => new Hotkey(Keycode.KP_MINUS, Modifiers.None);
 				removeprioritybutton.IsHighlighted = () => stopHighlighted > 0;
 				removeprioritybutton.OnClick = () => PerformOrderOnSelection(a => new Order("RemPrio", a, false));
 				removeprioritybutton.OnKeyPress = ki => { stopHighlighted = 2; addprioritybutton.OnClick(); };

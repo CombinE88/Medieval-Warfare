@@ -37,6 +37,8 @@ namespace OpenRA.Mods.MW.Activities
 
         private Dictionary<string, string> ResourceTypesPreres;
 
+        public ExternalCondition ExternalCondition { get => externalCondition; set => externalCondition = value; }
+
         public PreyActivity(Actor self,Actor dockact,bool facingDock,Dock d)
         {
             info = self.Info.TraitInfo<AcolytePreyInfo>();

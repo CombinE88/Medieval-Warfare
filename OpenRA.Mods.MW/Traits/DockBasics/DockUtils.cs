@@ -26,13 +26,6 @@ namespace OpenRA.Mods.MW.Activities
 			var air = client.TraitOrDefault<Aircraft>();
 			if (air != null)
 			{
-				if (air.IsPlane)
-				{
-					// Let's reload. The assumption here is that for aircrafts, there are no waiting docks.
-					System.Diagnostics.Debug.Assert(requester is ReturnToBase, "Wrong parameter for landing");
-					var rtb = requester as ReturnToBase;
-					// return rtb.LandingProcedure(client, dock); does not work for me
-				}
 
 				var angle = dock.Info.DockAngle;
 				if (angle < 0)
@@ -57,14 +50,6 @@ namespace OpenRA.Mods.MW.Activities
 			var air = client.TraitOrDefault<Aircraft>();
 			if (air != null)
 			{
-				if (air.IsPlane)
-				{
-					// ResupplyAircraft handles this.
-					// Take off and move to RP.
-					return ActivityUtils.SequenceActivities(
-						new Fly(client, Target.FromCell(client.World, rp.Location)),
-						new FlyCircle(client));
-				}
 
 				// Don't make helis do attack move, it will waste ammo.
 				return client.Trait<IMove>().MoveTo(rp.Location, 2);

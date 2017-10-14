@@ -60,7 +60,7 @@ namespace OpenRA.Mods.MW.Traits
 				self.CancelActivity();
 			
 			
-			self.QueueActivity(new Attack(self, Target.FromActor(order.TargetActor), true, true));
+			self.QueueActivity(new Attack(self, Target.FromActor(order.TargetActor), true, true,100));
 
 		}
 

@@ -330,8 +330,8 @@ Pike:
 			HeavyCavalry: 120
 			Spectral: 10
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
-        
-        
+		
+		
 # PikeGuard --------------------
 
 KingPike:
@@ -366,7 +366,7 @@ KingPike:
 		AffectsParent: true
 		ValidTargets: KingPike
 		InvalidTargets: Air
-        
+		
 KingPikeStructure:
 	ReloadDelay: 50
 	Range: 2c800
@@ -399,7 +399,7 @@ KingPikeStructure:
 		AffectsParent: true
 		ValidTargets: KingPike
 		InvalidTargets: Air
-        
+		
 KingPikeRanged:
 	ReloadDelay: 375
 	Range: 4c512
@@ -408,7 +408,7 @@ KingPikeRanged:
 	InvalidTargets: Air, Wall, Structure
 	Projectile: Bullet
 		Speed: 1c000
-        ContrailLength: 25
+		ContrailLength: 25
 		ContrailWidth: 40
 		ContrailDelay: 0
 		ContrailUsePlayerColor : true
@@ -418,19 +418,13 @@ KingPikeRanged:
 		ValidTargets: Cavalry 
 		InvalidTargets: Air, Wall, Structure
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
-        
+		
 KingPikeRangedDummy:
 	ReloadDelay: 375
 	Range: 4c512
 	ValidTargets: Cavalry
 	InvalidTargets: Air, Wall, Structure
-	Projectile: Missile
-		HorizontalRateOfTurn: 120
-		RangeLimit: 8c204
-		Arm: 0
-		Speed: 400
-		LaunchAngle: 46
-		Palette: ra
+	Projectile: InstantHit
 	Warhead@1Dam: SpreadDamage
 		Spread: 15
 		Damage: 4000
@@ -448,7 +442,7 @@ KingPikeRangedDummy:
 			HeavyCavalry: 120
 			Spectral: 10
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
-        
+		
 KingPikePinning:
 	ReloadDelay: 375
 	Range: 4c512
@@ -491,7 +485,7 @@ PikeSpread:
 		Damage: 4000
 		ValidTargets: Ground, Trees
 		InvalidTargets: Air
-        ValidStances: Enemy, Neutral  
+		ValidStances: Enemy, Neutral  
 		Versus:
 			Leather: 20
 			Light: 20
@@ -544,7 +538,7 @@ PikeAxe:
 		Damage: 2950
 		ValidTargets: Ground, Trees
 		InvalidTargets: Air
-        ValidStances: Enemy, Neutral
+		ValidStances: Enemy, Neutral
 		Versus:
 			Leather: 25
 			Light: 25
@@ -573,7 +567,7 @@ MammothPike:
 		InvalidTargets: Air
 		Spread: 180
 		Damage: 4300
-        ValidStances: Enemy, Neutral 
+		ValidStances: Enemy, Neutral 
 		Versus:
 			Leather: 35
 			Light: 35
@@ -635,7 +629,7 @@ BroadSword:
 		Speed: 1c382
 	Warhead@1Dam: SpreadDamage
 		Spread: 25
-		Damage: 1100
+		Damage: 1150
 		ValidTargets: Ground, Trees
 		InvalidTargets: Air
 		Versus:
@@ -657,7 +651,7 @@ BroadSword:
 		AffectsParent: true
 		ValidTargets: KingSword
 		InvalidTargets: Air
-        
+		
 BroadSwordStructure:
 	ReloadDelay: 35
 	Range: 1c800
@@ -668,7 +662,7 @@ BroadSwordStructure:
 		Speed: 1c382
 	Warhead@1Dam: SpreadDamage
 		Spread: 25
-		Damage: 1100
+		Damage: 1150
 		ValidTargets: Structure, Wall
 		InvalidTargets: Air
 		Versus:
@@ -690,7 +684,7 @@ BroadSwordStructure:
 		AffectsParent: true
 		ValidTargets: KingSword
 		InvalidTargets: Air
-        
+		
 BroadSwordBaron:
 	ReloadDelay: 35
 	Range: 1c800
@@ -716,7 +710,7 @@ BroadSwordBaron:
 			HeavyCavalry: 10
 			Spectral: 15
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
-        
+		
 BroadSwordRanged:
 	ReloadDelay: 375
 	Range: 4c0
@@ -725,7 +719,7 @@ BroadSwordRanged:
 	InvalidTargets: Air, Wall, Structure
 	Projectile: Bullet
 		Speed: 1c000
-        ContrailLength: 25
+		ContrailLength: 25
 		ContrailWidth: 40
 		ContrailDelay: 0
 		ContrailUsePlayerColor : true
@@ -735,22 +729,16 @@ BroadSwordRanged:
 		ValidTargets: Ground
 		InvalidTargets: Air, Wall, Structure
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
-        
+		
 BroadSwordRangedDummy:
 	ReloadDelay: 375
 	Range: 4c0
 	ValidTargets: Ground
 	InvalidTargets: Air, Wall, Structure
-	Projectile: Missile
-		HorizontalRateOfTurn: 120
-		RangeLimit: 8c204
-		Arm: 0
-		Speed: 400
-		LaunchAngle: 46
-		Palette: ra
+	Projectile: InstantHit
 	Warhead@1Dam: SpreadDamage
 		Spread: 75
-		Damage: 2000
+		Damage: 5000
 		ValidTargets: Ground
 		InvalidTargets: Air, Wall, Structure
 		Versus:
@@ -765,7 +753,7 @@ BroadSwordRangedDummy:
 			HeavyCavalry: 10
 			Spectral: 33
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
-        
+		
 BroadSwordPinning:
 	ReloadDelay: 375
 	Range: 4c0
@@ -909,7 +897,7 @@ paladingun:
 			MediumCavalry: 55
 			HeavyCavalry: 35
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath	 
-        
+		
 paladingunvisual:
 	ReloadDelay: 75
 	Range: 3c512
@@ -918,7 +906,7 @@ paladingunvisual:
 	InvalidTargets: Air
 	Projectile: Bullet
 		Speed: 0c500
-        ContrailLength: 25
+		ContrailLength: 25
 		ContrailWidth: 40
 		ContrailDelay: 0
 		ContrailUsePlayerColor : true
@@ -1259,8 +1247,8 @@ BowNArrowDebuff:
 			Spectral: 0
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
 	Warhead@rotten: GrantSingletonCondition
-		Range: 0c512
-		Duration: 10
+		Range: 265
+		Duration: 25
 		Condition: archerprone
 		ValidStances: Enemy, Neutral, Ally
 		InvalidTargets: Wall, Air
@@ -2154,7 +2142,7 @@ CannonBoulder:
 	Warhead@3Eff: CreateEffect
 		Explosions: smokey
 		ImpactSounds: tnkfire2.aud, tnkfire3.aud, tnkfire4.aud, tnkfire6.aud
-        
+		
 SiegeBoulderTech:
 	ReloadDelay: 60
 	Range: 15c0
@@ -3090,8 +3078,8 @@ RottenKadaver:
 		Delay: 13
 		SmudgeType: Crater
 		InvalidTargets: Vehicle, Structure, Wall, Husk, Trees, Creep
-        
-        
+		
+		
 SingleDeadKadaver:
 	ReloadDelay: 100
 	Range: 1c0
@@ -3503,10 +3491,10 @@ HuskExplosion:
 	Warhead@4Smu: LeaveSmudge
 		SmudgeType: Scorch
 		InvalidTargets: Siege, Structure, Wall
-        
+		
 Demolish:
-    Inherits: LargeStone1
-    Burst: 3
+	Inherits: LargeStone1
+	Burst: 3
 		
 SmallWood1:
 	Inherits: ^Debris
@@ -3796,8 +3784,8 @@ HunterUnload:
 			HeavyBuilding: 0
 			Spectral: 0
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
-        
-        
+		
+		
 # Hunter
 
 #LumberJackAxe
@@ -3860,7 +3848,7 @@ LumbererGather:
 			Spectral: 100
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
 		
-        
+		
 LumberGrantLootAttack:
 	ValidTargets: LumberShack
 	ReloadDelay: 18
@@ -3890,7 +3878,7 @@ LumberGrantLootAttack:
 			HeavyBuilding: 0
 			Spectral: 0
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
-        
+		
 LumberGrantLootPlayer:
 	ValidTargets: LumberShack
 	ReloadDelay: 18
@@ -3933,13 +3921,13 @@ BuildConstruction:
 	Report: repair01.aud
 	Projectile: InstantHit
 	Warhead@Grant: GrantSingletonCondition
-		Range: 0c512
+		Range: 265
 		Duration: 0
 		Condition: Construct
 		ValidStances: Ally
 		ValidTargets: Buildable
 	Warhead@1Dam: SpreadDamage
-		Spread: 25
+		Spread: 65
 		InvalidTargets: Wall, Air
 		ValidTargets: Wildlife
 		Damage: 0
@@ -3963,13 +3951,13 @@ LaborourUnload:
 	Range: 1c800
 	Projectile: InstantHit
 	Warhead@Talking: GrantSingletonCondition
-		Range: 0c512
+		Range: 265
 		Duration: 0
 		Condition: DeliveredResources
 		ValidStances: Ally
 		ValidTargets: Deliverable
 	Warhead@1Dam: SpreadDamage
-		Spread: 25
+		Spread: 65
 		InvalidTargets: Wall, Air
 		ValidTargets: Wildlife
 		Damage: 0
@@ -4017,4 +4005,4 @@ LaborourLoad:
 			HeavyBuilding: 0
 			Spectral: 0
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
-        
+		

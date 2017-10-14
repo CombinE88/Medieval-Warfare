@@ -350,7 +350,7 @@ E2NEW:
 	AutoTargetPriority@Counter2:
 		ValidTargets: RegularCavalry, HeavyCavalry, Defenses
 		Priority: 4
-        
+		
 E2NEWV2:
 	Inherits: ^Knight
 	Inherits@AUTOTARGET: ^AutoTargetGround
@@ -498,7 +498,7 @@ E3NEWU:
 	Valued:
 		Cost: 125
 	Tooltip:
-		Name: Knight
+		Name: Battalionist
 	Buildable:
 		Description: General-purpose infantry.\n  Strong vs Infantry\n  Weak vs Cavalry \n  Can fire 1 ranged shot when not attacking for a 15 seconds\n  Can cut down trees.\n\nTrains: 1 Peasant\n
 		IconPalette: raicon
@@ -510,7 +510,7 @@ E3NEWU:
 		Speed: 54
 		RequiresCondition: !Shooting
 	Health:
-		HP: 10000
+		HP: 11500
 	Armament:
 		Weapon: BroadSword
 		Name: Secondary
@@ -577,7 +577,7 @@ E3NEWU:
 	AutoTargetPriority@Counter:
 		ValidTargets: Light, Heavy, Ranged, Support
 		Priority: 4
-        
+		
 E3NEW:
 	Inherits: ^Knight
 	Inherits@AUTOTARGET: ^AutoTargetGround

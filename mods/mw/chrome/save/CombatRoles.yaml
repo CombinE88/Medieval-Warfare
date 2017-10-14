@@ -1,0 +1,35 @@
+Assignable Roles:
+
+	Targetable@CombatRole:
+		TargetTypes: Light
+        
+	Targetable@CombatRole:
+		TargetTypes: Heavy
+        
+	Targetable@CombatRole:
+		TargetTypes: Ranged
+        
+	Targetable@CombatRole:
+		TargetTypes: Support
+        
+	Targetable@CombatRole:
+		TargetTypes: HeavyCavalry
+        
+	Targetable@CombatRole:
+		TargetTypes: RegularCavalry
+        
+	Targetable@CombatRole:
+		TargetTypes: LightCavalry
+        
+	Targetable@CombatRole:
+		TargetTypes: Flying     
+
+	Targetable@CombatRole:
+		TargetTypes: Spectral    
+
+	Targetable@CombatRole:
+		TargetTypes: Defenses   
+        
+	AutoTargetPriority@Counter:
+		ValidTargets: Light
+		Priority: 4

@@ -1,7 +1,19 @@
+debuffs:
+	poison: debuffs
+		Start: 0
+	bleed: debuffs
+		Start: 1
+	slowed: debuffs
+		Start: 2
+	immobile: debuffs
+		Start: 3
+	reanimated: debuffs
+		Start: 4
+
 upgradeguns1:	
 	icon: guns1.shp
 		AddExtension: False
-        
+		
 upgradeguns2:
 	icon: guns2.shp
 		AddExtension: False
@@ -10,11 +22,11 @@ fb4:
 	idle:
 		Length: 4
 		ZOffset: 1023
-        
+		
 menu:
-    idle: 
-        Length: *
-        Tick: 200
+	idle: 
+		Length: *
+		Tick: 200
 
 fire:
 	1: fire1
@@ -25,25 +37,25 @@ fire:
 		Length: *
 		Offset: 0,-3
 		ZOffset: 1023
-        
+		
 pillow:
 	lagepillow: pillowxl
-		ZOffset: 1023
+		ZOffset: 2023
 		Tick: 800
 		Length: *
 	normalpillow: pillow
-		ZOffset: 1023
+		ZOffset: 2023
 		Length: *
 		Tick: 800
 	smallpillow: pillows
-		ZOffset: 1023
+		ZOffset: 2023
 		Tick: 800
 		Length: *
 	tinypillow: pillowxs
-		ZOffset: 1023
+		ZOffset: 2023
 		Tick: 800
 		Length: *
-        
+		
 firesmoke:
 	fire1: fire1
 		Length: *
@@ -167,26 +179,26 @@ explosion:
 		Start: 287
 		Length: 7
 		Tick: 100
-    grimsummon: grim
-        Start: 270
-        Length: 23
-        Tick: 20
-    handa1: handa1
-        Start: 0
-        Length:*
-        Tick: 100
-    handa2: handa2
-        Start: 0
-        Length:*
-        Tick: 100
-    handa3: handa3
-        Start: 0
-        Length:*
-        Tick: 100
-    handa4: handa4
-        Start: 0
-        Length:*
-        Tick: 100
+	grimsummon: grim
+		Start: 270
+		Length: 23
+		Tick: 20
+	handa1: handa1
+		Start: 0
+		Length:*
+		Tick: 100
+	handa2: handa2
+		Start: 0
+		Length:*
+		Tick: 100
+	handa3: handa3
+		Start: 0
+		Length:*
+		Tick: 100
+	handa4: handa4
+		Start: 0
+		Length:*
+		Tick: 100
 
 rank:
 	rank-veteran-1:
@@ -202,7 +214,7 @@ rallypoint:
 		Start: 9
 		Length: 4
 		Tick: 120
-        Offset: 12, -14
+		Offset: 12, -14
 	circles: fpls
 		Length: *
 		ZOffset: 2047

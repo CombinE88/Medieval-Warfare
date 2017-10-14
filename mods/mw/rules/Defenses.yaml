@@ -253,7 +253,7 @@ TRIBU:
 		QuantizedFacings: 32
 	WithAttackAnimation:
 		AttackSequence: turretanim
-	WithTurretedSpriteBody:
+	WithEmbeddedTurretSpriteBody:
 	-WithSpriteBody:
 	AttackTurreted:
 	Turreted:
@@ -331,7 +331,7 @@ BATO:
 	WithAttackAnimation@2:
 		AttackSequence: turretanim
 		Armament: secondary
-	WithTurretedSpriteBody:
+	WithEmbeddedTurretSpriteBody:
 	-WithSpriteBody:
 	AttackTurreted:
 	Turreted:
@@ -379,7 +379,7 @@ GUNNEW:
 		TurnSpeed: 12
 		InitialFacing: 56
 	-WithSpriteBody:
-	WithTurretedSpriteBody:
+	WithEmbeddedTurretSpriteBody:
 	Armament:
 		Weapon: cannonboulder
 		LocalOffset: 512,0,212

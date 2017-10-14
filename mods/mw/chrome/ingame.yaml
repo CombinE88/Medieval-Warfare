@@ -1,10 +1,24 @@
 Container@INGAME_ROOT:
 	Logic: LoadIngamePlayerOrObserverUILogic
 	Children:
-		Container@MUSICBUTTONS:
-			Logic: MusicControllerLogic
-			Children:
-				LogicKeyListener@MUSICCONTROLLER_KEYHANDLER:
+		LogicKeyListener@GLOBAL_KEYHANDLER:
+			Logic: MusicHotkeyLogic, ScreenshotHotkeyLogic, MuteHotkeyLogic
+				StopMusicKey: StopMusic
+				PauseMusicKey: PauseMusic
+				PrevMusicKey: PrevMusic
+				NextMusicKey: NextMusic
+				TakeScreenshotKey: TakeScreenshot
+				MuteAudioKey: ToggleMute
+		LogicKeyListener@WORLD_KEYHANDLER:
+			Logic: CycleBasesHotkeyLogic, CycleProductionActorsHotkeyLogic, JumpToLastEventHotkeyLogic, JumpToSelectedActorsHotkeyLogic, TogglePixelDoubleHotkeyLogic, TogglePlayerStanceColorHotkeyLogic, CycleStatusBarsHotkeyLogic, PauseHotkeyLogic
+				CycleBasesKey: CycleBase
+				CycleProductionActorsKey: CycleProductionBuildings
+				JumpToLastEventKey: ToLastEvent
+				JumpToSelectedActorsKey: ToSelection
+				TogglePixelDoubleKey: TogglePixelDouble
+				TogglePlayerStanceColorKey: TogglePlayerStanceColor
+				CycleStatusBarsKey: CycleStatusBars
+				PauseKey: Pause
 		Container@WORLD_ROOT:
 			Logic: LoadIngamePerfLogic
 			Children:
@@ -29,9 +43,6 @@ Container@INGAME_ROOT:
 					Width: WINDOW_RIGHT
 					Height: WINDOW_BOTTOM
 					TooltipContainer: TOOLTIP_CONTAINER
-				WorldCommand:
-					Width: WINDOW_RIGHT
-					Height: WINDOW_BOTTOM
 				Container@GAME_TIMER_BLOCK:
 					Logic: GameTimerLogic
 					X: WINDOW_RIGHT - 420
@@ -71,8 +82,8 @@ Container@PERF_WIDGETS:
 			Contrast: true
 			VAlign: Top
 		Background@GRAPH_BG:
-			X: 10
-			Y: WINDOW_BOTTOM-HEIGHT-10
+			X: 5
+			Y: WINDOW_BOTTOM - HEIGHT - 45
 			Width: 220
 			Height: 220
 			Background: panel-black
@@ -84,7 +95,14 @@ Container@PERF_WIDGETS:
 					Height: 200
 
 Container@OBSERVER_WIDGETS:
+	Logic: MenuButtonsChromeLogic
+		StatisticsBasicKey: StatisticsBasic
+		StatisticsEconomyKey: StatisticsEconomy
+		StatisticsProductionKey: StatisticsProduction
+		StatisticsCombatKey: StatisticsCombat
+		StatisticsGraphKey: StatisticsGraph
 	Children:
+		LogicKeyListener@OBSERVER_KEY_LISTENER:
 		Background@SIDEBAR_BACKGROUND:
 			Logic: MenuButtonsChromeLogic
 			X: 2
@@ -283,6 +301,7 @@ Container@PLAYER_WIDGETS:
 					Width: 34
 					Height: 34
 					Background: command-button
+					Key: AttackMove
 					DisableKeyRepeat: true
 					TooltipText: Attack Move
 					TooltipDesc: Selected units will move to the desired location\nand attack any enemies they encounter en route.\n\nLeft-click icon then right-click on target location.
@@ -332,6 +351,7 @@ Container@PLAYER_WIDGETS:
 					Height: 34
 					Background: command-button
 					DisableKeyRepeat: true
+					Key: Guard
 					TooltipText: Guard
 					TooltipDesc: Selected units will follow the targeted unit.\n\nLeft-click icon then right-click on target unit.
 					TooltipContainer: TOOLTIP_CONTAINER
@@ -346,6 +366,7 @@ Container@PLAYER_WIDGETS:
 					Y: 139
 					Width: 34
 					Height: 34
+					Key: Deploy
 					Background: command-button
 					DisableKeyRepeat: true
 					TooltipText: Deploy
@@ -364,6 +385,7 @@ Container@PLAYER_WIDGETS:
 					Height: 34
 					Background: command-button
 					DisableKeyRepeat: true
+					Key: Scatter
 					TooltipText: Scatter
 					TooltipDesc: Selected units will stop their current activity\nand move to a nearby location.\n\nActs immediately on selected units.
 					TooltipContainer: TOOLTIP_CONTAINER
@@ -381,6 +403,7 @@ Container@PLAYER_WIDGETS:
 					Background: command-button
 					DisableKeyRepeat: true
 					TooltipText: Stop
+					Key: Stop
 					TooltipDesc: Selected units will stop their current activity.\n\nActs immediately on selected units.
 					TooltipContainer: TOOLTIP_CONTAINER
 					Children:
@@ -748,7 +771,7 @@ Container@PLAYER_WIDGETS:
 							TooltipText: Village Buildings
 							TooltipContainer: TOOLTIP_CONTAINER
 							ProductionGroup: Building
-							HotkeyName: ProductionTypeBuildingKey
+							Key: ProductionTypeBuildingKey
 							Children:
 								Image@ICON:
 									X: PARENT_RIGHT / 2 -12
@@ -762,7 +785,7 @@ Container@PLAYER_WIDGETS:
 							TooltipText: Resource Buildings
 							TooltipContainer: TOOLTIP_CONTAINER
 							ProductionGroup: Building2
-							HotkeyName: ProductionTypeBuildingKey
+							Key: ProductionTypeBuildingKey
 							Children:
 								Image@ICON:
 									X: PARENT_RIGHT / 2 -12
@@ -776,7 +799,7 @@ Container@PLAYER_WIDGETS:
 							TooltipText: Military Buildings
 							TooltipContainer: TOOLTIP_CONTAINER
 							ProductionGroup: Building3
-							HotkeyName: ProductionTypeBuildingKey
+							Key: ProductionTypeBuildingKey
 							Children:
 								Image@ICON:
 									X: PARENT_RIGHT / 2 -12
@@ -790,7 +813,7 @@ Container@PLAYER_WIDGETS:
 							TooltipText: Technology Buildings
 							TooltipContainer: TOOLTIP_CONTAINER
 							ProductionGroup: Tech
-							HotkeyName: ProductionTypeDefenseKey
+							Key: ProductionTypeDefenseKey
 							Children:
 								Image@ICON:
 									X: PARENT_RIGHT / 2 -12
@@ -804,7 +827,7 @@ Container@PLAYER_WIDGETS:
 							TooltipText: Infantry
 							TooltipContainer: TOOLTIP_CONTAINER
 							ProductionGroup: Infantry
-							HotkeyName: ProductionTypeInfantryKey
+							Key: ProductionTypeInfantryKey
 							Children:
 								Image@ICON:
 									X: PARENT_RIGHT / 2 -12
@@ -818,7 +841,7 @@ Container@PLAYER_WIDGETS:
 							TooltipText: Cavalry
 							TooltipContainer: TOOLTIP_CONTAINER
 							ProductionGroup: Vehicle
-							HotkeyName: ProductionTypeVehicleKey
+							Key: ProductionTypeVehicleKey
 							Children:
 								Image@ICON:
 									X: PARENT_RIGHT / 2 -12
@@ -832,7 +855,7 @@ Container@PLAYER_WIDGETS:
 							TooltipText: Siege Engines
 							TooltipContainer: TOOLTIP_CONTAINER
 							ProductionGroup: Aircraft
-							HotkeyName: ProductionTypeAircraftKey
+							Key: ProductionTypeAircraftKey
 							Children:
 								Image@ICON:
 									X: PARENT_RIGHT / 2 -12

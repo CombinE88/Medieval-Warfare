@@ -898,6 +898,34 @@ NUK2NEW:
 	#	Offset: 128,811,0
 	#	MoveOffset:1,2
 	#	SpawnStart: false
+	#ChimneySmoke@One:
+	#	Image: pillow
+	#	Sequences: tinypillow
+	#	Palette: ra
+	#	Delay: 100
+	#	BonusDelay: 500
+	#	SpawnTime: 18
+	#	BonusSpawnTime: 88
+	#	LoopDelay: 9
+	#	Amplitude: 200
+	#	Velocity: 10
+	#	StartDelay: 25
+	#	Offsets: 1280,-341,0
+	#	SpeedAmplitude: 1
+	#ChimneySmoke@Two:
+	#	Image: pillow
+	#	Sequences: tinypillow
+	#	Palette: ra
+	#	Delay: 100
+	#	BonusDelay: 500
+	#	SpawnTime: 18
+	#	BonusSpawnTime: 88
+	#	LoopDelay: 9
+	#	Amplitude: 200
+	#	Velocity: 10
+	#	StartDelay: 25
+	#	Offsets: 1066,682,0
+	#	SpeedAmplitude: 1
 		
 NUKXL:
 	Inherits: ^MWBaseBuilding
@@ -980,6 +1008,34 @@ NUKXL:
 	#	Offset: 938,725,0
 	#	MoveOffset:2,2
 	#	SpawnStart: false
+	#ChimneySmoke@One:
+	#	Image: pillow
+	#	Sequences: tinypillow
+	#	Palette: ra
+	#	Delay: 100
+	#	BonusDelay: 500
+	#	SpawnTime: 38
+	#	BonusSpawnTime: 128
+	#	LoopDelay: 9
+	#	Amplitude: 200
+	#	Velocity: 10
+	#	StartDelay: 25
+	#	Offsets: 1809,512,0
+	#	SpeedAmplitude: 1
+	#ChimneySmoke@Two:
+	#	Image: pillow
+	#	Sequences: tinypillow
+	#	Palette: ra
+	#	Delay: 100
+	#	BonusDelay: 500
+	#	SpawnTime: 18
+	#	BonusSpawnTime: 88
+	#	LoopDelay: 9
+	#	Amplitude: 200
+	#	Velocity: 10
+	#	StartDelay: 25
+	#	Offsets: 1809,-1109,0
+	#	SpeedAmplitude: 1
  
 NUKENEW:
 	Inherits: ^MWBaseBuilding
@@ -1046,20 +1102,20 @@ NUKENEW:
 	#	Offset: -384,597,0
 	#	MoveOffset: 0,2
 	#	SpawnStart: false
-	ChimneySmoke:
-		Image: pillow
-		Sequences: tinypillow
-		Palette: ra
-		Delay: 100
-		BonusDelay: 500
-		SpawnTime: 18
-		BonusSpawnTime: 48
-		LoopDelay: 3
-		Amplitude: 200
-		Velocity: 10
-		StartDelay: 25
-		Offsets: 1424,412,0
-		SpeedAmplitude: 1
+	#ChimneySmoke:
+	#	Image: pillow
+	#	Sequences: tinypillow
+	#	Palette: ra
+	#	Delay: 100
+	#	BonusDelay: 500
+	#	SpawnTime: 18
+	#	BonusSpawnTime: 88
+	#	LoopDelay: 9
+	#	Amplitude: 200
+	#	Velocity: 10
+	#	StartDelay: 25
+	#	Offsets: 1424,412,0
+	#	SpeedAmplitude: 1
     
 XLTNT1:
 	Inherits: ^MWBaseBuilding

@@ -15,6 +15,10 @@ upgradeguns1:
 	RenderSprites:
 		Image: upgradeguns1
 	ProvidesPrerequisite@upgradename:
+	PersonValued:
+		ActorCount: 0
+		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
+
     
 upgradeguns2:
 	AlwaysVisible:
@@ -33,6 +37,9 @@ upgradeguns2:
 	RenderSprites:
 		Image: upgradeguns2
 	ProvidesPrerequisite@upgradename:
+	PersonValued:
+		ActorCount: 0
+		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 
 CRATE.plain:
 	Inherits: ^Crate

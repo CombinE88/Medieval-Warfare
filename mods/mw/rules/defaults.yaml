@@ -22,6 +22,14 @@
 	WithColoredOverlay@GRIM:
 		Palette: disabled
 		RequiresCondition: grimactive
+	WithDecoration@Reanimated:
+		Image: debuffs
+		Sequence: reanimated
+		Palette: ra
+		ReferencePoint: Top, Left
+		RequiresCondition: grimactive
+		ZOffset: 256
+		ValidStances: Ally, Enemy, Neutral
 		
 		
 ^GameSettings:
@@ -1431,6 +1439,14 @@
 		Delay: 10
 		RequiresCondition: DDler
 		DamageTypes: PoisonDeath
+	WithDecoration@DDlerPoison:
+		Image: debuffs
+		Sequence: poison
+		Palette: ra
+		ReferencePoint: Top, Left
+		RequiresCondition: DDler || RottenKadaver
+		ZOffset: 256
+		ValidStances: Ally, Enemy, Neutral
 	SelfHealing@HOSPITAL:
 		PercentageStep: 1
 		Delay: 25
@@ -1463,6 +1479,22 @@
 		OwnerType: Killer
 	ExternalCondition@SNAKES:
 		Condition: snaketrap
+	WithDecoration@SNAKES:
+		Image: debuffs
+		Sequence: immobile
+		Palette: ra
+		ReferencePoint: Top, Left
+		RequiresCondition: snaketrap
+		ZOffset: 256
+		ValidStances: Ally, Enemy, Neutral
+	WithDecoration@SNAKESPoison:
+		Image: debuffs
+		Sequence: poison
+		Palette: ra
+		ReferencePoint: Top, Left
+		RequiresCondition: snaketrap
+		ZOffset: 256
+		ValidStances: Ally, Enemy, Neutral
 	SelfHealing@SNAKES:
 		Step: -1000
 		HealIfBelow: 110
@@ -1509,6 +1541,14 @@
 	SpeedMultiplier@PRONE:
 		Modifier: 75
 		RequiresCondition: archerprone
+	WithDecoration@PRONE:
+		Image: debuffs
+		Sequence: slowed
+		Palette: ra
+		ReferencePoint: Top, Left
+		RequiresCondition: archerprone
+		ZOffset: 256
+		ValidStances: Ally, Enemy, Neutral
 
 ^Cavalry:
 	Inherits: ^MedievalInfantry
@@ -1551,6 +1591,14 @@
 		Delay: 10
 		RequiresCondition: DDler
 		DamageTypes: PoisonDeath
+	WithDecoration@DDlerPoison:
+		ValidStances: Ally, Enemy, Neutral
+		Image: debuffs
+		Sequence: poison
+		Palette: ra
+		ReferencePoint: Top, Left
+		RequiresCondition: DDler || RottenKadaver
+		ZOffset: 256
 	Selectable:
 		Bounds: 26,34,0,-6
 	SelectionDecorations:
@@ -1609,6 +1657,22 @@
 		Chance: 25
 	ExternalCondition@SNAKES:
 		Condition: snaketrap
+	WithDecoration@SNAKES:
+		Image: debuffs
+		Sequence: slowed
+		Palette: ra
+		ReferencePoint: Top, Left
+		RequiresCondition: snaketrap || archerprone
+		ZOffset: 256
+		ValidStances: Ally, Enemy, Neutral
+	WithDecoration@SNAKESPoison:
+		Image: debuffs
+		Sequence: poison
+		Palette: ra
+		ReferencePoint: Top, Left
+		RequiresCondition: snaketrap
+		ZOffset: 256
+		ValidStances: Ally, Enemy, Neutral
 	SelfHealing@SNAKES:
 		PercentageStep: -8
 		Step: -0
@@ -1680,6 +1744,14 @@
 		HealIfBelow: 110
 		RequiresCondition: DDler
 		DamageTypes: PoisonDeath
+	WithDecoration@DDlerPoison:
+		Image: debuffs
+		Sequence: poison
+		Palette: ra
+		ReferencePoint: Top, Left
+		RequiresCondition: DDler || RottenKadaver
+		ZOffset: 256
+		ValidStances: Ally, Enemy, Neutral
 	Selectable:
 		Bounds: 35,35,0,-6 
 	Voiced:
@@ -1694,6 +1766,14 @@
 		Chance: 25
 	ExternalCondition@SNAKES:
 		Condition: snaketrap
+	WithDecoration@SNAKESPoison:
+		Image: debuffs
+		Sequence: poison
+		Palette: ra
+		ReferencePoint: Top, Left
+		RequiresCondition: snaketrap
+		ZOffset: 256
+		ValidStances: Ally, Enemy, Neutral
 	SelfHealing@SNAKES:
 		Step: -500
 		HealIfBelow: 110
@@ -1956,6 +2036,14 @@
 		Delay: 10
 		RequiresCondition: DDler
 		DamageTypes: PoisonDeath
+	WithDecoration@DDlerPoison:
+		Image: debuffs
+		Sequence: poison
+		Palette: ra
+		ReferencePoint: Top, Left
+		RequiresCondition: DDler || RottenKadaver
+		ZOffset: 256
+		ValidStances: Ally, Enemy, Neutral
 	ExternalCondition@BARRACKS:
 		Condition: hospitalhealbarr
 	SelfHealing@HOSPITAL:

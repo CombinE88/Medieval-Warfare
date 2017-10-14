@@ -1,6 +1,6 @@
 Metadata:
 	Title: Medieval Warfare
-	Version: NTRfix
+	Version: TestBeforeReleae
 
 PackageFormats: Mix
 
@@ -138,6 +138,7 @@ ChromeLayout:
 	mw|chrome/ingame-infoscripterror.yaml
 	mw|chrome/ingame-infoobjectives.yaml
 	mw|chrome/ingame-infostats.yaml
+	mw|chrome/ingame-infochat.yaml
 	mw|chrome/ingame-observerstats.yaml
 	mw|chrome/music.yaml
 	mw|chrome/settings.yaml
