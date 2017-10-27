@@ -4,7 +4,7 @@ upgradeguns1:
 		Name: Handout Guns
 	Buildable:
 		BuildPaletteOrder: 112
-		Prerequisites: anyhq
+		Prerequisites: anyhq, ~notyet
 		Queue: MInfantry.GDI
 		BuildLimit: 1
 		BuildDuration: 500
@@ -26,7 +26,7 @@ upgradeguns2:
 		Name: Handout Rifles
 	Buildable:
 		BuildPaletteOrder: 114
-		Prerequisites: anyarmory
+		Prerequisites: anyarmory, ~notyet
 		Queue: MInfantry.GDI
 		BuildLimit: 1
 		BuildDuration: 1000

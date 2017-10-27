@@ -501,17 +501,17 @@ scrollbar: chrome.png
 	right_pressed: 336,48,16,16
 	left_arrow: 352,48,16,16
 	left_pressed: 368,48,16,16
-    
+	
 prioritybuttons: chrome.png
-	down_arrow: 304,0,16,16
-    down_arrow-highlighted: 304,0,16,16
-	down_arrow-pressed: 304,16,16,16
-    down_arrow-disabled: 304,16,16,16
-	up_arrow: 304,32,16,16
-    up_arrow-highlighted: 304,32,16,16
-    up_arrow-disabled: 304,48,16,16
-	up_arrow-pressed: 304,48,16,16
-    
+	down_arrow: 470,193,24,24
+	down_arrow-highlighted: 470,193,24,24
+	down_arrow-pressed: 470,216,24,24
+	down_arrow-disabled: 470,216,24,24
+	up_arrow: 446,193,24,24
+	up_arrow-highlighted: 446,193,24,24
+	up_arrow-disabled: 446,217,24,24
+	up_arrow-pressed: 446,217,24,24
+	
 flags: chrome.png
 	nod: 352,0,32,16
 	gdi: 352,16,32,16
@@ -625,7 +625,7 @@ stance-button-highlighted-pressed: chrome.png
 
 stance-button-highlighted-disabled: chrome.png
 	background: 289,161,30,30
-    
+	
 command-icons: chrome.png
 	attack-move: 256,192,24,24
 	attack-move-disabled: 256,216,24,24

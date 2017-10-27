@@ -293,7 +293,7 @@ Container@PLAYER_WIDGETS:
 			Y: WINDOW_BOTTOM - HEIGHT - 230
 			Background: panel-black
 			Width: 36
-			Height: 276
+			Height: 276 + 34 + 34
 			Children:
 				Button@ATTACK_MOVE:
 					X: 1
@@ -428,10 +428,48 @@ Container@PLAYER_WIDGETS:
 							Y: 5
 							ImageCollection: command-icons
 							ImageName: queue-orders
+				Background@PRIORITY_BAR:
+					Logic: ConstructionPriorityLogic
+					X: 0
+					Y: PARENT_BOTTOM - 34 - 34
+					Background: command-button
+					Width: 36
+					Height: 34 + 34
+					Children:
+						Button@ADD_PRIO:
+							X: 1
+							Y: 0
+							Width: 34
+							Height: 34
+							Background: command-button
+							DisableKeyRepeat: true
+							TooltipText: Add Priority
+							TooltipDesc: none
+							Children:
+								Image@ICON:
+									X: 5
+									Y: 5
+									ImageCollection: prioritybuttons
+									ImageName: up_arrow
+						Button@REM_PRIO:
+							X: 1
+							Y: 34
+							Width: 34
+							Height: 34
+							Background: command-button
+							TooltipText: Remove Priority
+							TooltipDesc: none
+							Children:
+								Image@ICON:
+									X: 5
+									Y: 5
+									ImageCollection: prioritybuttons
+									ImageName: down_arrow
+                                    
 		Background@COMMAND_BAR:
 			Logic: StanceSelectorLogic
 			X: 5
-			Y: WINDOW_BOTTOM - HEIGHT - 5 - 276 - 230
+			Y: WINDOW_BOTTOM - HEIGHT - 5 - 276 - 230 - 34 - 34
 			Background: panel-black
 			Width: 34 
 			Height: 138
@@ -601,43 +639,6 @@ Container@PLAYER_WIDGETS:
 							ClockSequence: old
 							IconCount: 20
 							IconMargin: 8
-				Background@PRIORITY_BAR:
-					Logic: ConstructionPriorityLogic
-					X: 30
-					Y: PARENT_BOTTOM - 80
-					Background: panel-black
-					Width: 100
-					Height: 50
-					Children:
-						Button@ADD_PRIO:
-							X: 1
-							Y: 1
-							Width: 45
-							Height: 45
-							Background: button
-							DisableKeyRepeat: true
-							TooltipText: Add Priority
-							TooltipDesc: none
-							Children:
-								Image@ICON:
-									X: 24
-									Y: 24
-									ImageCollection: prioritybuttons
-									ImageName: up_arrow
-						Button@REM_PRIO:
-							X: 50
-							Y: 1
-							Width: 45
-							Height: 45
-							Background: button
-							TooltipText: Remove Priority
-							TooltipDesc: none
-							Children:
-								Image@ICON:
-									X: 24
-									Y: 24
-									ImageCollection: prioritybuttons
-									ImageName: down_arrow
 		Background@SIDEBAR_BACKGROUND:
 			Logic: MenuButtonsChromeLogic
 			X: 2

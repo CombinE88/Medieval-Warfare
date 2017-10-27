@@ -51,14 +51,15 @@ namespace OpenRA.Mods.MW.Widgets
 			var removeprioritybutton = widget.GetOrNull<ButtonWidget>("REM_PRIO");
 			if (removeprioritybutton != null)
 			{
-				removeprioritybutton.IsDisabled = () =>
+                BindButtonIcon(removeprioritybutton);
+                removeprioritybutton.IsDisabled = () =>
 				{
 					UpdateStateIfNecessary();
 					return priorityisdisabled;
 				};
 				removeprioritybutton.IsHighlighted = () => stopHighlighted > 0;
 				removeprioritybutton.OnClick = () => PerformOrderOnSelection(a => new Order("RemPrio", a, false));
-				removeprioritybutton.OnKeyPress = ki => { stopHighlighted = 2; addprioritybutton.OnClick(); };
+				removeprioritybutton.OnKeyPress = ki => { stopHighlighted = 2; removeprioritybutton.OnClick(); };
 
 			}
 		}
