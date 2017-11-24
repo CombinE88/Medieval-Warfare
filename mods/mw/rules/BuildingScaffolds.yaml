@@ -578,7 +578,7 @@ HQNEWGDI.SCAFF:
 		IconPalette: raicon
 		BuildPaletteOrder: 10
 		Prerequisites: proc
-		Queue: MTech.Nod, MTech.GDI
+		Queue: MTech.GDI
 		Description: Unlocks higher-tech units and buildings.\n\n\n\n
 		BuildDuration: 60
 	Health:

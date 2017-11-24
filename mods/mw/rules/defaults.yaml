@@ -2283,15 +2283,10 @@
 		HP: 6000
 	Targetable:
 		TargetTypes: Ground, Prop, NoAutoTarget
-	WithMakeAnimation:
 	ThrowsShrapnel@SMALL:
 		Weapons: SmallWood1, SmallWood2, SmallWood3
 		Pieces: 0, 2
 		Range: 0c512, 3c0
-	Transforms:
-		IntoActor: mwconst1back
-		Offset: 0,0
-		Facing: 76
 	ExternalCondition@TORNADO:
 		Condition: Tornadodeath
 	SelfHealing@TORNADO:

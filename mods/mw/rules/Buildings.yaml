@@ -1134,13 +1134,6 @@ XLTNT1:
 		Name: Large Tent
 	ProvidesPrerequisite:
 		Prerequisite: anypower
-	Buildable:
-		IconPalette: raicon
-		BuildPaletteOrder: 120
-		Prerequisites: ~scaffold
-		Queue: MBuilding.Nod
-		Description: Provides more livingspace. Livingspace increases over time by generating peasants.\nCan hold up to 6 peasants, spawntime depends on number of shacks and large huts. \ncheaper than the standard Shack.\n\n\n\n
-        BuildDuration: 50
 	Building:
 		Footprint: xx xx ==
 		Dimensions: 2,3
@@ -1197,13 +1190,11 @@ XLTNT2:
 	Inherits: XLTNT1
 	RenderSprites:
 		Image: xltnt2
-	-Buildable:
 		
 XLTNT3:
 	Inherits: XLTNT1
 	RenderSprites:
 		Image: xltnt3
-	-Buildable:
  
 NODNUKE:
 	Inherits: ^MWBaseBuilding
@@ -1303,6 +1294,98 @@ NODNUKE:
 	#	Offset: 256,811,0
 	#	MoveOffset: 1,1
 	#	SpawnStart: false
+	EditorTilesetFilter:
+		ExcludeTilesets: TEMPERATE, SNOW, DESERT, WINTER
+		Categories: 
+        
+NTENT1:
+	Inherits: ^MWBaseBuilding
+	Inherits@Hitshape: ^2x1Shape
+	Armor:
+		Type: Concrete
+	WithDeathAnimation:
+		DeathSequencePalette: raplayer
+		DeathSequence: dead
+	RenderSprites:
+		PlayerPalette: raplayer
+		Image: nodnuke
+	WithSpriteBody:
+		Sequence: idle
+		StartSequence: make
+	Valued:
+		Cost: 350
+	CustomSellValue:
+		Value: 125
+	Tooltip:
+		Name: Tent
+	ProvidesPrerequisite:
+		Prerequisite: anypower
+	Building:
+		Footprint: xx ==
+		Dimensions: 2,2
+		LocalCenterOffset: 0,-512,0
+	Health:
+		HP: 35000
+	RevealsShroud:
+		Range: 4c0
+	WithBuildingBib:
+	Selectable:
+		Bounds: 40,26,0,0
+	SelectionDecorations:
+		VisualBounds: 40,26,0,0
+	SpawnActorOnDeath@Farmer1:
+		Actor: e1new
+		Probability: 33
+		OwnerType: InternalName
+		InternalOwner: Creeps
+	SpawnActorOnDeath@Farmer2:
+		Actor: e1new
+		Probability: 33
+		OwnerType: InternalName
+		InternalOwner: Creeps
+	SpawnActorOnDeath@Farmer3:
+		Actor: e1new
+		Probability: 33
+		OwnerType: InternalName
+		InternalOwner: Creeps
+	ThrowsShrapnel@LARGE:
+		Weapons: DebrFurniture1, DebrFurniture2, DebrFurniture3, DebrFurniture4
+		Pieces: 2, 3
+		Range: 1c0, 5c0
+	ProvidesLivingspace:
+		Ammount: 3
+		SpawnOffset: 256,811,0
+		ExitCell: 1,1
+	#WithFreeSpawnableActor@Chicken:
+	#	SpawnActor: mwchick1
+	#	Offset: 256,811,0
+	#	MoveOffset: 1,1
+	#	SpawnStart: false
+        
+NTENT2:
+	Inherits: NTENT1
+	WithDeathAnimation:
+		DeathSequencePalette: raplayer
+		DeathSequence: deadb
+	WithSpriteBody:
+		Sequence: idleb
+		StartSequence: makeb        
+NTENT3:
+	Inherits: NTENT1
+	WithDeathAnimation:
+		DeathSequencePalette: raplayer
+		DeathSequence: deadc
+	WithSpriteBody:
+		Sequence: idlec
+		StartSequence: makec      
+NTENT4:
+	Inherits: NTENT1
+	WithDeathAnimation:
+		DeathSequencePalette: raplayer
+		DeathSequence: deadd
+	WithSpriteBody:
+		Sequence: idled
+		StartSequence: maked
  
 ZEROPROC:
 	Inherits: ^MWBaseBuilding
@@ -2530,6 +2613,8 @@ DECOR1:
 		HP: 5000
 	Targetable@Disguise:
 		TargetTypes: Disguise
+	EditorTilesetFilter:
+		Categories: Props
 		
 DECOR2:
  	Inherits: ^CivBuilding
@@ -2545,6 +2630,8 @@ DECOR2:
 		HP: 5000
 	Targetable@Disguise:
 		TargetTypes: Disguise
+	EditorTilesetFilter:
+		Categories: Props
 		
 DECOR3:
  	Inherits: ^CivBuilding
@@ -2560,6 +2647,8 @@ DECOR3:
 		HP: 20000
 	Targetable@Disguise:
 		TargetTypes: Disguise
+	EditorTilesetFilter:
+		Categories: Props
 		
 DECOR4:
  	Inherits: ^CivBuilding
@@ -2575,6 +2664,8 @@ DECOR4:
 		HP: 5000
 	Targetable@Disguise:
 		TargetTypes: Disguise
+	EditorTilesetFilter:
+		Categories: Props
 		
 DECOR5:
  	Inherits: ^CivBuilding
@@ -2590,6 +2681,8 @@ DECOR5:
 		HP: 10000
 	Targetable@Disguise:
 		TargetTypes: Disguise
+	EditorTilesetFilter:
+		Categories: Props
 		
 DECOR6:
  	Inherits: ^CivBuilding
@@ -2605,6 +2698,8 @@ DECOR6:
 		HP: 5000
 	Targetable@Disguise:
 		TargetTypes: Disguise
+	EditorTilesetFilter:
+		Categories: Props
 		
 DECOR7:
  	Inherits: ^CivBuilding
@@ -2620,6 +2715,8 @@ DECOR7:
 		HP: 5000
 	Targetable@Disguise:
 		TargetTypes: Disguise
+	EditorTilesetFilter:
+		Categories: Props
 		
 DECOR8:
  	Inherits: ^CivBuilding
@@ -2635,6 +2732,8 @@ DECOR8:
 		HP: 13000
 	Targetable@Disguise:
 		TargetTypes: Disguise
+	EditorTilesetFilter:
+		Categories: Props
 		
 DECOR9:
  	Inherits: ^CivBuilding
@@ -2651,6 +2750,8 @@ DECOR9:
 		HP: 10000
 	Targetable@Disguise:
 		TargetTypes: Disguise
+	EditorTilesetFilter:
+		Categories: Props
 		
 TAVERN:
 	Inherits: ^MWBaseBuilding

@@ -665,6 +665,7 @@ Container@PLAYER_WIDGETS:
 							ImageName: options
 				Button@BEACON_BUTTON:
 					Logic: BeaconOrderButtonLogic
+					Key: PlaceBeaconKey
 					X: 208
 					Y: 69
 					Width: 50
@@ -679,6 +680,7 @@ Container@PLAYER_WIDGETS:
 							ImageCollection: order-icons
 				Button@SELL_BUTTON:
 					Logic: SellOrderButtonLogic
+					Key: SellKey
 					X: 208
 					Y: 118
 					Width: 50
@@ -693,6 +695,7 @@ Container@PLAYER_WIDGETS:
 							ImageCollection: order-icons
 				Button@REPAIR_BUTTON:
 					Logic: RepairOrderButtonLogic
+					Key: RepairKey
 					X: 208
 					Y: 167
 					Width: 50
@@ -786,7 +789,7 @@ Container@PLAYER_WIDGETS:
 							TooltipText: Resource Buildings
 							TooltipContainer: TOOLTIP_CONTAINER
 							ProductionGroup: Building2
-							Key: ProductionTypeBuildingKey
+							Key: ProductionTypeDefenseKey
 							Children:
 								Image@ICON:
 									X: PARENT_RIGHT / 2 -12
@@ -800,7 +803,7 @@ Container@PLAYER_WIDGETS:
 							TooltipText: Military Buildings
 							TooltipContainer: TOOLTIP_CONTAINER
 							ProductionGroup: Building3
-							Key: ProductionTypeBuildingKey
+							Key: T
 							Children:
 								Image@ICON:
 									X: PARENT_RIGHT / 2 -12

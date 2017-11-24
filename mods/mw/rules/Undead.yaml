@@ -428,7 +428,8 @@
 	-ActorLostNotification:
 	-RepairableBuilding:
 	EditorTilesetFilter:
-		Categories: Undead
+		ExcludeTilesets: TEMPERATE, SNOW, DESERT, WINTER
+		Categories: 
 	ShakeOnCreate:
 	Armor:
 		Type: Concrete
@@ -457,12 +458,14 @@
 		Weapons: SmallStone1, SmallStone2, LargeStone1
 		Pieces: 2, 4
 		Range: 0c512, 3c0
+	ProvidesLivingspace:
+		Ammount: 1
 		
 ^CoffinAmbush:
 	Inherits: ^MWUndeadBuilding
 	Inherits@Hitshape: ^1x1Shape
 	EditorTilesetFilter:
-		Categories: Undead
+		Categories:
 	ShakeOnCreate:
 	-RepairableBuilding:
 	-ActorLostNotification:
@@ -1762,7 +1765,7 @@ DEADROSS:
 	RevealsShroud:
 		Range: 8c0
 	Tooltip:
-		Name: Skeleton (Saber)
+		Name: Skeleton Rider (Saber)
 	Mobile:
 		SharesCell: false
 		TurnSpeed: 12
@@ -1813,7 +1816,7 @@ DEADROSS:
 UNDEAD1:
 	Inherits: ^Skeleton
 	Valued:
-		Cost: 50
+		Cost: 35
 	RevealsShroud:
 		Range: 5c0
 	Tooltip:
@@ -1821,7 +1824,7 @@ UNDEAD1:
 	Mobile:
 		Speed: 55
 	Health:
-		HP: 8000
+		HP: 9200
 	Armament:
 		Weapon: SkeletonBroadSword
 	AttackFrontal:
@@ -1876,7 +1879,7 @@ UNDEAD2:
 UNDEAD3:
 	Inherits: ^Skeleton
 	Valued:
-		Cost: 100
+		Cost: 50
 	RevealsShroud:
 		Range: 5c0
 	Tooltip:
@@ -1913,7 +1916,7 @@ UNDEAD3:
 UNDEAD4:
 	Inherits: ^Skeleton
 	Valued:
-		Cost: 500
+		Cost: 450
 	RevealsShroud:
 		Range: 6c0
 	Tooltip:
@@ -1945,7 +1948,7 @@ UNDEAD4:
 UNDEAD5:
 	Inherits: ^Skeleton
 	Valued:
-		Cost: 100
+		Cost: 75
 	RevealsShroud:
 		Range: 7c0
 	Tooltip:
@@ -2623,7 +2626,7 @@ RESSURECT1:
 	Mobile:
 		Speed: 55
 	Health:
-		HP: 9000
+		HP: 9200
 	Armament:
 		Weapon: SkeletonBroadSword
 	AttackFrontal:
@@ -2872,4 +2875,132 @@ COFSPAWN4:
 		RespawnTime: 125
 		StartDelay: 50
 		
+GSPLACE1A:
+	Inherits: ^Gravestone
+	WithSpriteBody:
+		StartSequence: makea
+		Sequence: idlea
+	ProvidesLivingspace:
+		Ammount: 3
+	EditorTilesetFilter:
+		Categories: Undead
+	RenderSprites:
+		Image: gstone1
+GSPLACE1B:
+	Inherits: ^Gravestone
+	WithSpriteBody: 
+		StartSequence: makeb
+		Sequence: idleb
+	ProvidesLivingspace:
+		Ammount: 3
+	EditorTilesetFilter:
+		Categories: Undead
+	RenderSprites:
+		Image: gstone1
+GSPLACE1C:
+	Inherits: ^Gravestone
+	WithSpriteBody: 
+		StartSequence: makec
+		Sequence: idlec
+	ProvidesLivingspace:
+		Ammount: 3
+	EditorTilesetFilter:
+		Categories: Undead
+	RenderSprites:
+		Image: gstone1
+        
+GSPLACE2A:
+	Inherits: ^Gravestone
+	WithSpriteBody: 
+		StartSequence: makea
+		Sequence: idlea
+	ProvidesLivingspace:
+		Ammount: 3
+	EditorTilesetFilter:
+		Categories: Undead
+	RenderSprites:
+		Image: gstone2
+GSPLACE2B:
+	Inherits: ^Gravestone
+	WithSpriteBody: 
+		StartSequence: makeb
+		Sequence: idleb
+	ProvidesLivingspace:
+		Ammount: 3
+	EditorTilesetFilter:
+		Categories: Undead
+	RenderSprites:
+		Image: gstone2
+GSPLACE2C:
+	Inherits: ^Gravestone
+	WithSpriteBody: 
+		StartSequence: makec
+		Sequence: idlec
+	ProvidesLivingspace:
+		Ammount: 3
+	EditorTilesetFilter:
+		Categories: Undead
+	RenderSprites:
+		Image: gstone2
+GSPLACE3A:
+	Inherits: ^Gravestone
+	WithSpriteBody: 
+		StartSequence: makea
+		Sequence: idlea
+	ProvidesLivingspace:
+		Ammount: 3
+	EditorTilesetFilter:
+		Categories: Undead
+	RenderSprites:
+		Image: gstone3
+GSPLACE3B:
+	Inherits: ^Gravestone
+	WithSpriteBody: 
+		StartSequence: makeb
+		Sequence: idleb
+	ProvidesLivingspace:
+		Ammount: 3
+	EditorTilesetFilter:
+		Categories: Undead
+	RenderSprites:
+		Image: gstone3
+GSPLACE3C:
+	Inherits: ^Gravestone
+	WithSpriteBody: 
+		StartSequence: makec
+		Sequence: idlec
+	ProvidesLivingspace:
+		Ammount: 3
+	EditorTilesetFilter:
+		Categories: Undead
+	RenderSprites:
+		Image: gstone3
+        
 		
+CFFPLACE1A:
+	Inherits: ^Gravestone
+	RenderSprites:
+		Image: coffin
+	WithSpriteBody:
+		StartSequence: makea
+		Sequence: idlea
+	ProvidesLivingspace:
+		Ammount: 5
+CFFPLACE1B:
+	Inherits: ^Gravestone
+	RenderSprites:
+		Image: coffin
+	WithSpriteBody:
+		StartSequence: makeb
+		Sequence: idleb
+	ProvidesLivingspace:
+		Ammount: 5
+CFFPLACE1C:
+	Inherits: ^Gravestone
+	RenderSprites:
+		Image: coffin
+	WithSpriteBody:
+		StartSequence: makec
+		Sequence: idlec
+	ProvidesLivingspace:
+		Ammount: 5

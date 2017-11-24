@@ -1612,69 +1612,6 @@ NOBLE5:
 		ValidStances: Ally
 		Condition: Tax
 		
-MWCONST1:
-	Inherits: ^MWConstructor
-	RenderSprites:
-		Image: mwcivconst
-	Transforms:
-		IntoActor: prop1
-		Offset: 0,0
-		Facing: 76
-		
-MWCONST2:
-	Inherits: ^MWConstructor
-	RenderSprites:
-		Image: mwcivconst
-	Transforms:
-		IntoActor: prop2
-		Offset: 0,0
-		Facing: 76
-		
-MWCONST3:
-	Inherits: ^MWConstructor
-	RenderSprites:
-		Image: mwcivconst
-	Transforms:
-		IntoActor: prop3
-		Offset: 0,0
-		Facing: 76
-		
-MWCONST4:
-	Inherits: ^MWConstructor
-	RenderSprites:
-		Image: mwcivconst
-	Transforms:
-		IntoActor: prop4
-		Offset: 0,0
-		Facing: 76
-		
-MWCONST5:
-	Inherits: ^MWConstructor
-	RenderSprites:
-		Image: mwcivconst
-	Transforms:
-		IntoActor: prop5
-		Offset: 0,0
-		Facing: 76
-		
-MWCONST6:
-	Inherits: ^MWConstructor
-	RenderSprites:
-		Image: mwcivconst
-	Transforms:
-		IntoActor: prop6
-		Offset: 0,0
-		Facing: 76
-		
-MWCONST7:
-	Inherits: ^MWConstructor
-	RenderSprites:
-		Image: mwcivconst
-	Transforms:
-		IntoActor: prop7
-		Offset: 0,0
-		Facing: 76
-		
 
 MWLUMBERER:
 	Inherits: ^MWConstructor
