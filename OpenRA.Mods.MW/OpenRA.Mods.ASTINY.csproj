@@ -157,9 +157,10 @@
   <Target Name="AfterBuild">
   </Target>
   -->
-  <PropertyGroup>
-    <PostBuildEvent>mkdir "$(SolutionDir)mods/mw/"
-copy "$(TargetPath)" "$(SolutionDir)mods/mw/"
-cd "$(SolutionDir)"</PostBuildEvent>
-  </PropertyGroup>
+  <Target Name="AfterBuild">
+    <MakeDir Directories="$(SolutionDir)mods/mw/" />
+    <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(SolutionDir)mods/mw/" />
+    <Copy SourceFiles="$(TargetDir)$(TargetName).pdb" DestinationFolder="$(SolutionDir)mods/mw/" Condition="Exists('$(TargetDir)$(TargetName).pdb')" />
+    <Copy SourceFiles="$(TargetPath).mdb" DestinationFolder="$(SolutionDir)mods/mw/" Condition="Exists('$(TargetPath).mdb')" />
+  </Target>
 </Project>
