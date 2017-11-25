@@ -1354,7 +1354,7 @@ CASTLE.SCAFF:
 		IconPalette: raicon
 		BuildPaletteOrder: 30
 		Prerequisites: anyhq, anyarmory
-		Description: Unlocks Superweapon.\n Unlocks Heavy Cavalry, Knight's and Trebuchet.\nRequires power to operate.\nCan hold up to 4 nobles.\n\n\n\n
+		Description: Unlocks Superweapon.\n Unlocks Heavy Cavalry, Knight's and Trebuchet.\nCan hold up to 4 nobles.\n\n\n\n
 		Queue: MTech.Nod
 		BuildDuration: 125
 	Health:
@@ -1431,7 +1431,7 @@ CASTLE2.SCAFF:
 		IconPalette: raicon
 		BuildPaletteOrder: 30
 		Prerequisites: anyhq, anyarmory
-		Description: Unlocks Superweapon.\n Unlocks Assassins, Crossbows and Ballista Towers.\nRequires power to operate.\nCan hold up to 4 nobles.\n\n\n\n
+		Description: Unlocks Superweapon.\n Unlocks Assassins, Crossbows and Ballista Towers.\nCan hold up to 4 nobles.\n\n\n\n
 		Queue: MTech.GDI
 		BuildDuration: 100
 	Health:
@@ -1796,7 +1796,7 @@ TRIBU.SCAFF:
 	Tooltip:
 		Name: Construction Site (Counterweight Trebuchet)
 	Buildable:
-		Description: The Counterweight Trebuchet is a type of siege engine \nmost frequently used to outrange other siege weapons.\n  Requires power to operate.\n  Strong vs all Ground units\n  Cannot target Aircraft\n  Requires 3 Peasants\n\n
+		Description: The Counterweight Trebuchet is a type of siege engine \nmost frequently used to outrange other siege weapons.\n  Strong vs all Ground units\n  Cannot target Aircraft\n  Requires 3 Peasants\n\n
 		BuildPaletteOrder: 90
 		Prerequisites: anycastle
 		Queue: MMilitary.Nod

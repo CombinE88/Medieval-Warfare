@@ -153,6 +153,15 @@ Cursors:
 		attackmove:
 			Start: 19
 			Length: 6
+		attackmove-blocked:
+			Start: 86
+			Length: 1
+		assaultmove:
+			Start: 19
+			Length: 6
+		assaultmove-blocked:
+			Start: 86
+			Length: 1
 		harvest:
 			Start: 117
 			Length: 7

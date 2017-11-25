@@ -168,10 +168,6 @@ SULMILL.SCAFF:
 		DockAngle: 72
 		DockOffset: 1,3
 		TickRate: 5
-	Refinery:
-		DockAngle: 72
-		DockOffset: 1,3
-		TickRate: 5
 	Buildable:
 		IconPalette: raicon
 		BuildPaletteOrder: 20
@@ -227,10 +223,6 @@ SULMILL.SCAFF:
 	WithIdleOverlay@base5:
 		Sequence: make5
 		RequiresCondition: Construct >= 35
-	Refinery:
-		DockAngle: 1
-		DockOffset: 1,1
-		TickRate: 1
 
 
 SULNUK2.SCAFF:

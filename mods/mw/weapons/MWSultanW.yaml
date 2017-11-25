@@ -375,6 +375,7 @@ SuperSiegeBallista:
 	Range: 22c0
 	MinRange: 5c0
 	Report: Balista01.aud
+	TargetActorCenter: true
 	ValidTargets: Ground
 	InvalidTargets: Air
 	Projectile: Bullet
@@ -415,6 +416,7 @@ MortarBoulder:
 	MinRange: 5c0
 	Report: tnkfire2.aud, tnkfire3.aud, tnkfire4.aud, tnkfire6.aud
 	ValidTargets: Ground
+	TargetActorCenter: true
 	InvalidTargets: Air
 	Projectile: Bullet
 		Image: cantowboulder
@@ -490,6 +492,7 @@ CarpetBomber:
 	Report: toss1.aud
 	ValidTargets: Ground
 	InvalidTargets: Air
+	TargetActorCenter: true
 	Projectile: Bullet
 		Speed: 140
 		Blockable: false
@@ -527,6 +530,7 @@ SonicRaptor:
 	Range: 7c0
 	Report: toss1.aud
 	ValidTargets: Ground, Air
+	TargetActorCenter: true
 	Projectile: Bullet
 		Speed: 250
 		Blockable: false

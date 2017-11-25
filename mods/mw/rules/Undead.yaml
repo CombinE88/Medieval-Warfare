@@ -427,6 +427,7 @@
 	Inherits@Hitshape: ^1x1Shape
 	-ActorLostNotification:
 	-RepairableBuilding:
+	-ActorLostNotification:
 	EditorTilesetFilter:
 		ExcludeTilesets: TEMPERATE, SNOW, DESERT, WINTER
 		Categories: 
@@ -1325,10 +1326,6 @@ LIBRA:
 	WithMakeAnimation:
 	ShakeOnCreate:
 		Time: 85
-	Exit:
-		SpawnOffset: 850,723,0
-		ExitCell: 1,2
-	RallyPoint:
 	ProvidesPrerequisite@buildingname:
 	AirstrikePower:
 		Icon: handaicon

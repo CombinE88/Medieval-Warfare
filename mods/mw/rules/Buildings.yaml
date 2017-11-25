@@ -510,7 +510,17 @@ MINIFACT:
 		Lasso: 3c0
 		UseConverting: false
 		ReturnOnDeath: true
-	WithFreeSpawnableActor@4:
+	WithFreeSpawnableActor@5:
+		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
+		SpawnActor: engeneer
+		Offset: -597,469, 0
+		MoveOffset: 1,2
+		Sticky: true
+		FindRadius: 100
+		Lasso: 3c0
+		UseConverting: false
+		ReturnOnDeath: true
+	WithFreeSpawnableActor@6:
 		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 		SpawnActor: engeneer
 		Offset: -597,469, 0
@@ -1333,21 +1343,6 @@ NTENT1:
 		Bounds: 40,26,0,0
 	SelectionDecorations:
 		VisualBounds: 40,26,0,0
-	SpawnActorOnDeath@Farmer1:
-		Actor: e1new
-		Probability: 33
-		OwnerType: InternalName
-		InternalOwner: Creeps
-	SpawnActorOnDeath@Farmer2:
-		Actor: e1new
-		Probability: 33
-		OwnerType: InternalName
-		InternalOwner: Creeps
-	SpawnActorOnDeath@Farmer3:
-		Actor: e1new
-		Probability: 33
-		OwnerType: InternalName
-		InternalOwner: Creeps
 	ThrowsShrapnel@LARGE:
 		Weapons: DebrFurniture1, DebrFurniture2, DebrFurniture3, DebrFurniture4
 		Pieces: 2, 3
@@ -1356,14 +1351,12 @@ NTENT1:
 		Ammount: 3
 		SpawnOffset: 256,811,0
 		ExitCell: 1,1
-	#WithFreeSpawnableActor@Chicken:
-	#	SpawnActor: mwchick1
-	#	Offset: 256,811,0
-	#	MoveOffset: 1,1
-	#	SpawnStart: false
         
 NTENT2:
 	Inherits: NTENT1
+	RenderSprites:
+		PlayerPalette: raplayer
+		Image: nodnuke
 	WithDeathAnimation:
 		DeathSequencePalette: raplayer
 		DeathSequence: deadb
@@ -1372,6 +1365,9 @@ NTENT2:
 		StartSequence: makeb        
 NTENT3:
 	Inherits: NTENT1
+	RenderSprites:
+		PlayerPalette: raplayer
+		Image: nodnuke
 	WithDeathAnimation:
 		DeathSequencePalette: raplayer
 		DeathSequence: deadc
@@ -1380,6 +1376,9 @@ NTENT3:
 		StartSequence: makec      
 NTENT4:
 	Inherits: NTENT1
+	RenderSprites:
+		PlayerPalette: raplayer
+		Image: nodnuke
 	WithDeathAnimation:
 		DeathSequencePalette: raplayer
 		DeathSequence: deadd
@@ -1952,7 +1951,7 @@ CASTLE:
 		IconPalette: raicon
 		BuildPaletteOrder: 130
 		Prerequisites: ~scaffold
-		Description: Unlocks Superweapon.\n Unlocks Heavy Cavalry, Knight's and Trebuchet.\nRequires power to operate.\nCan hold up to 4 nobles.\n\n\n\n
+		Description: Unlocks Superweapon.\n Unlocks Heavy Cavalry, Knight's and Trebuchet.\nCan hold up to 4 nobles.\n\n\n\n
 		Queue: MTech.Nod
 		BuildDuration: 125
 	Building:
@@ -2027,7 +2026,7 @@ CASTLE2:
 		IconPalette: raicon
 		BuildPaletteOrder: 130
 		Prerequisites: ~scaffold
-		Description: Unlocks Superweapon.\n Unlocks Assassins, Crossbows and Ballista Towers.\nRequires power to operate.\nCan hold up to 4 nobles.\n\n\n\n
+		Description: Unlocks Superweapon.\n Unlocks Assassins, Crossbows and Ballista Towers.\nCan hold up to 4 nobles.\n\n\n\n
 		Queue: MTech.GDI
 		BuildDuration: 100
 	Building:

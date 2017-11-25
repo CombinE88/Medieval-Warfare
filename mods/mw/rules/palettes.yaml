@@ -149,11 +149,11 @@
 		RotationBase: 32
 	FlashPaletteEffect:
 		ExcludePalettes: raplayer, ra, raicon, grain, mwcivilian, mwnobles, sul, sultanplayer, grimalpha, grimprojalpha, undeadalpha, undeadplayer, undead
-    PaletteFromFile@Menu:
+	PaletteFromFile@Menu:
 		Name: menu
 		Filename: flag.pal
 		AllowModifiers: False
-        
+		
 	PaletteFromFile@UNDEAD:
 		Name: undead
 		Filename: Medieval_Undead.pal
@@ -166,7 +166,7 @@
 		BaseName: undeadalpha
 		BasePalette: undeadplayer
 		Alpha: 0.4
-    PaletteFromPaletteWithAlpha@undeadalpha:
+	PaletteFromPaletteWithAlpha@undeadalpha:
 		Name: undeadalpha
 		BasePalette: undead
 		Alpha: 0.4
@@ -178,15 +178,15 @@
 		BaseName: grimalphaplayer
 		BasePalette: grimplayer
 		Alpha: 0.8
-    PaletteFromPaletteWithAlpha@GRIM:
+	PaletteFromPaletteWithAlpha@GRIM:
 		Name: grimalpha
 		BasePalette: ra
 		Alpha: 0.8
-    PaletteFromPaletteWithAlpha@GRIMPROJECTILE:
+	PaletteFromPaletteWithAlpha@GRIMPROJECTILE:
 		Name: grimprojalpha
 		BasePalette: mwcivilian
 		Alpha: 0.8
-    PaletteFromPaletteWithAlpha@VAMPPROJECT:
+	PaletteFromPaletteWithAlpha@VAMPPROJECT:
 		Name: vamprojalpha
 		BasePalette: ra
 		Alpha: 0.8
@@ -195,7 +195,7 @@
 		Filename: grimspawn.pal
 		ShadowIndex: 1
 		AllowModifiers: true
-    PaletteFromPaletteWithAlpha@GRIMSPAWN:
+	PaletteFromPaletteWithAlpha@GRIMSPAWN:
 		Name: grimspawnalpha
 		BasePalette: grimspawn
 		Alpha: 0.8

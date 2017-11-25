@@ -24,7 +24,7 @@ burhors:
 		Start: 76
 		Length: 14
 		Tick: 80
-	icon: Camelross1icon.shp
+	icon: koenigicon.shp
 		AddExtension: False	   
 		
 rossneutral:
@@ -49,7 +49,7 @@ rossneutral:
 	die2: burninghorserider
 		Length: *
 		Tick: 80
-	icon: Camelross1icon.shp
+	icon: koenigicon.shp
 		AddExtension: False
 		
 ross1:

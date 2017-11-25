@@ -216,7 +216,7 @@ TRIBU:
 	Tooltip:
 		Name: Counterweight Trebuchet
 	Buildable:
-		Description: The Counterweight Trebuchet is a type of siege engine \nmost frequently used to outrange other siege weapons.\n  Requires power to operate.\n  Strong vs all Ground units\n  Cannot target Aircraft\n  Requires 3 Peasants\n\n
+		Description: The Counterweight Trebuchet is a type of siege engine \nmost frequently used to outrange other siege weapons.\n  Strong vs all Ground units\n  Cannot target Aircraft\n  Requires 3 Peasants\n\n
 		BuildPaletteOrder: 190
 		Prerequisites: ~scaffold
 		Queue: MMilitary.Nod

@@ -1860,9 +1860,7 @@ SULE6:
 		PlayerPalette: raplayer
 	AttackFrontal:
 	Armor:
-		Type: Heavy		
-	Selectable:
-		Priority: 7
+		Type: Heavy	
 	Harvester:
 		DeliveryBuildings: zeroproc, sulmill, nodproc
 		Resources: Crops, Grains, Wood, Goods, Lumber, Corn
@@ -1875,6 +1873,7 @@ SULE6:
 		MaxUnloadQueue: 10
 	Selectable:
 		Bounds: 14,26,0,-6
+		Priority: 7
 	SelectionDecorations:
 		VisualBounds: 14,26,0,-6 
 	-Crushable:
@@ -2147,24 +2146,6 @@ SULB0:
 		VisualBounds: 26,26,0,-13
 	Targetable:
 		TargetTypes: Ground, Cavalry
-	Armament@1:
-		Weapon: BowNArrowSiegeTower
-		LocalOffset: 0,0,427
-		Turret: primary
-	Armament@2:
-		Weapon: BowNArrowSiegeTower
-		LocalOffset: 0,0,427
-		Turret: secondary
-		FireDelay: 12
-	Armament@1DUMMY:
-		Weapon: BowNArrowSiegeTowerDUMMY
-		LocalOffset: 0,0,427
-		Turret: primary
-	Armament@2DUMMY:
-		Weapon: BowNArrowSiegeTowerDUMMY
-		LocalOffset: 0,0,427
-		Turret: secondary
-		FireDelay: 12
 	AttackTurreted:
 	-ThrowsShrapnel@SMALL:
 	WithDeathAnimation:

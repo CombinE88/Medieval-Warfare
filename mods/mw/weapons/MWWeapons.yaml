@@ -1701,6 +1701,7 @@ LongBowNArrow:
 	Burst: 4
 	BurstDelay: 1
 	ValidTargets: Ground
+	TargetActorCenter: true
 	Report: arrow01.aud, arrow02.aud, arrow02.aud
 	InvalidTargets: Wall, Air
 	Projectile: Bullet
@@ -1830,6 +1831,7 @@ DragonFire:
 	Range: 4c0
 	MinRange: 0c512
 	ValidTargets: Ground
+	TargetActorCenter: true
 	InvalidTargets: Air
 	Projectile: Bullet
 		Speed: 250
@@ -1937,6 +1939,7 @@ ThopterBomb:
 	Range: 1c0
 	MinRange: 0c0
 	InvalidTargets: Air
+	TargetActorCenter: true
 	ValidTargets: Ground
 	Projectile: Bullet
 		Speed: 250
@@ -2112,6 +2115,7 @@ CannonBoulder:
 	Range: 8c0
 	Report: tnkfire2.aud, tnkfire3.aud, tnkfire4.aud, tnkfire6.aud
 	ValidTargets: Ground
+	TargetActorCenter: true
 	InvalidTargets: Air
 	Projectile: Bullet
 		Image: cantowboulder
@@ -2149,6 +2153,7 @@ SiegeBoulderTech:
 	MinRange: 4c0
 	Report: tnkfire2.aud, tnkfire3.aud, tnkfire4.aud, tnkfire6.aud
 	ValidTargets: Ground
+	TargetActorCenter: true
 	InvalidTargets: Air
 	Projectile: Bullet
 		Image: cantowboulder
@@ -2186,6 +2191,7 @@ SiegeBalista:
 	Range: 11c0
 	MinRange: 2c896
 	ValidTargets: Ground
+	TargetActorCenter: true
 	InvalidTargets: Air
 	Report: Balista01.aud
 	Projectile: Bullet
@@ -2227,6 +2233,7 @@ SiegeBoulder:
 	MinRange: 3c0
 	Report: siege01.aud
 	ValidTargets: Ground
+	TargetActorCenter: true
 	InvalidTargets: Air
 	Projectile: Bullet
 		Speed: 190
@@ -2263,6 +2270,7 @@ SiegeBoulder:
 TribuchetBoulder:
 	ReloadDelay: 90
 	ValidTargets: Ground
+	TargetActorCenter: true
 	InvalidTargets: Air
 	Range: 12c0
 	MinRange: 2c0
@@ -2306,6 +2314,7 @@ StationBalistaAG:
 	Range: 8c0
 	MinRange: 2c896
 	Report: Balista01.aud
+	TargetActorCenter: true
 	ValidTargets: Ground
 	InvalidTargets: Air
 	Projectile: Bullet
@@ -2775,7 +2784,7 @@ FireArrowBarrage:
 FireBarrage:
 	ReloadDelay: 2
 	Range: 2c800
-	Burst: 3
+	Burst: 4
 	BurstDelay: 0
 	MinRange: 0c0
 	ValidTargets: Ground

@@ -749,10 +749,6 @@ E4NEW:
 		Name: Secondary
 	AttackFrontal:
 		Armaments: Primary, Secondary
-	WithInfantryBody:
- 		AttackSequences:
-			Primary: shoot	
-	AttackFrontal:
 	AutoTarget:
 		ScanRadius: 8
 		InitialStance: AttackAnything
@@ -821,7 +817,6 @@ E4NEWV2:
 	WithInfantryBody:
  		AttackSequences:
 			Primary: shoot
-	AttackFrontal:
 	AutoTarget:
 		ScanRadius: 8
 		InitialStance: AttackAnything
@@ -1113,9 +1108,7 @@ E8FARMER:
 		PlayerPalette: raplayer
 	AttackFrontal:
 	Armor:
-		Type: Heavy	   
-	Selectable:
-		Priority: 7
+		Type: Heavy	 
 	Harvester:
 		DeliveryBuildings: zeroproc, sulmill, nodproc
 		Resources: Crops, Grains, Wood, Goods, Lumber, Corn
@@ -1128,6 +1121,7 @@ E8FARMER:
 		MaxUnloadQueue: 10
 	Selectable:
 		Bounds: 14,26,0,-6
+		Priority: 7
 	SelectionDecorations:
 		VisualBounds: 14,26,0,-6 
 	-Crushable:
@@ -1175,9 +1169,7 @@ BUMMLER:
 		PlayerPalette: raplayer
 	AttackFrontal:
 	Armor:
-		Type: Leather	   
-	Selectable:
-		Priority: 7
+		Type: Leather	
 	Harvester:
 		DeliveryBuildings: barrnew, handnew, stall, nodstall, workshopnod, workshopgdi, sulmystic, sulfix, sulbarr
 		Resources: Guns
@@ -1189,6 +1181,7 @@ BUMMLER:
 		SearchFromOrderRadius: 15
 	Selectable:
 		Bounds: 14,26,0,-6
+		Priority: 7
 	SelectionDecorations:
 		VisualBounds: 14,26,0,-6 
 	PersonValued:
@@ -1959,3 +1952,78 @@ HUNTER:
 		HuntTypes: Wildlife
 		LootTypes: DeadWildlife
 		SearchDistance: 15c0
+        
+        
+SPUNIT2:
+	Inherits: ^Knight
+	Inherits@AUTOTARGET: ^AutoTargetGround
+	Valued:
+		Cost: 2500
+	Tooltip:
+		Name: Hero
+	Mobile:
+		Speed: 56
+	Health:
+		HP: 35000
+	AttackFrontal:
+	AutoTarget:
+		ScanRadius: 4
+		InitialStance: AttackAnything
+	RenderSprites:
+		PlayerPalette: raplayer
+	WithInfantryBody:
+		StandSequences: stand
+		DefaultAttackSequence: shoot
+		IdleSequences: idle1, idle2, idle3, idle4, idle5, idle6
+	Armament@SWORD:
+		Weapon: WanderCommander
+		RequiresCondition: Wander
+	Armor:
+		Type: Heavy
+	Voiced:
+		VoiceSet: GDIKnightVoice
+	PersonValued:
+		ActorCount: 0
+		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
+	Targetable@CombatRole:
+		TargetTypes: Heavy
+	AutoTargetPriority@Counter:
+		ValidTargets: Light, Heavy, Ranged, Support
+		Priority: 4
+        
+SPUNIT1:
+	Inherits: ^Knight
+	Inherits@AUTOTARGET: ^AutoTargetGround
+	Valued:
+		Cost: 2500
+	Tooltip:
+		Name: Hero
+	Mobile:
+		Speed: 56
+	Health:
+		HP: 35000
+	AttackFrontal:
+	AutoTarget:
+		ScanRadius: 4
+		InitialStance: AttackAnything
+	RenderSprites:
+		PlayerPalette: raplayer
+	WithInfantryBody:
+		StandSequences: stand
+		DefaultAttackSequence: shoot
+		IdleSequences: idle1, idle2, idle3, idle4, idle5, idle6
+	Armament@SWORD:
+		Weapon: WanderCommander
+		RequiresCondition: Wander
+	Armor:
+		Type: Heavy
+	Voiced:
+		VoiceSet: GDIKnightVoice
+	PersonValued:
+		ActorCount: 0
+		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
+	Targetable@CombatRole:
+		TargetTypes: Heavy
+	AutoTargetPriority@Counter:
+		ValidTargets: Light, Heavy, Ranged, Support
+		Priority: 4

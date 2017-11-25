@@ -523,8 +523,6 @@ EHARVXL:
 	AttackFrontal:
 	Armor:
 		Type: MediumCavalry	   
-	Selectable:
-		Priority: 7
 	Harvester:
 		DeliveryBuildings: procnew, sulref
 		Resources: Iron, Gold
@@ -536,6 +534,7 @@ EHARVXL:
 		SearchFromOrderRadius: 15
 	Selectable:
 		Bounds: 36,36,0,0
+		Priority: 7
 	SelectionDecorations:
 		VisualBounds: 36,36,0,0
 	PersonValued:
@@ -595,8 +594,6 @@ SIEGE99:
 	Mobile:
 		TurnSpeed: 6
 		Speed: 45
-	Selectable:
-		Priority: 5
 	NewDisguiseTooltip:
 		Name: Wooden Horse
 	Health:
@@ -616,6 +613,7 @@ SIEGE99:
 		Type: HeavyCavalry
 	Selectable:
 		Bounds: 42,42,0,0
+		Priority: 5
 	SelectionDecorations:
 		RenderSelectionBars: false
 		VisualBounds: 42,42,0,0

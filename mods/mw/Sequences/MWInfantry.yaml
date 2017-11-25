@@ -1559,3 +1559,247 @@ mwlumber:
 		Tick: 120
 	idle: ironore4
 		Start: 9 
+        
+        
+mwcivcom:
+	stunned: sulm4
+		ZOffset: 125
+		Start: 312
+		Length: 2
+		Tick: 200
+	panic-stand: mwcivcom
+		Start: 122
+		Facings: 8
+	panic-run: mwcivcom
+		Start: 0
+		Length: 8
+		Facings: 8
+		Tick: 100
+	stand: mwcivcom
+		Start: 122
+		Facings: 8
+	run: mwcivcom
+		Start: 0
+		Length: 8
+		Facings: 8
+		Tick: 100
+	shoot: mwcivcom
+		Tick: 100
+		Start: 66
+		Length: 7
+		Facings: 8
+	idle: mwcivcom
+		Start: 122
+		Facings: 8
+	die1: mwcivcom
+		Start: 131
+		Length: 16
+		Tick: 80
+	# large hit
+	die2: splatterdead
+		Length: *
+		Tick: 80
+	# poision
+	die3: mwcivcom
+		Start: 163
+		Length: 15
+		Tick: 80
+	# ballista
+	die4: mwcivcom
+		Start: 180
+		Length: 11
+		Tick: 80
+	die-crushed: e1rot
+		Start: 16
+		Length: 4
+		Tick: 1600
+		ZOffset: -511
+	die5: burningman
+		Length: *
+		Tick: 80
+	idle1: 
+		Start: 190
+		Length: 18
+		Tick: 100
+	idle2: 
+		Start: 209
+		Length: 18
+		Tick: 100
+	idle3: 
+		Start: 228
+		Length: 38
+		Tick: 100
+	idle4: 
+		Start: 267
+		Length: 38
+		Tick: 100
+	idle5: 
+		Start: 306
+		Length: 38
+		Tick: 100
+	idle6: 
+		Start: 345
+		Length: 38
+		Tick: 100
+           
+spunit1:
+	stunned: sulm4
+		ZOffset: 125
+		Start: 312
+		Length: 2
+		Tick: 200
+	panic-stand: 
+		Start: 122
+		Facings: 8
+	panic-run: 
+		Start: 0
+		Length: 8
+		Facings: 8
+		Tick: 100
+	stand: 
+		Start: 122
+		Facings: 8
+	run: 
+		Start: 0
+		Length: 8
+		Facings: 8
+		Tick: 100
+	shoot: 
+		Tick: 100
+		Start: 66
+		Length: 7
+		Facings: 8
+	idle: 
+		Start: 122
+		Facings: 8
+	die1: 
+		Start: 131
+		Length: 16
+		Tick: 80
+	# large hit
+	die2: splatterdead
+		Length: *
+		Tick: 80
+	# poision
+	die3: 
+		Start: 163
+		Length: 15
+		Tick: 80
+	# ballista
+	die4: 
+		Start: 180
+		Length: 11
+		Tick: 80
+	die-crushed: e1rot
+		Start: 16
+		Length: 4
+		Tick: 1600
+		ZOffset: -511
+	die5: burningman
+		Length: *
+		Tick: 80
+	idle1: 
+		Start: 190
+		Length: 18
+		Tick: 100
+	idle2: 
+		Start: 209
+		Length: 18
+		Tick: 100
+	idle3: 
+		Start: 228
+		Length: 38
+		Tick: 100
+	idle4: 
+		Start: 267
+		Length: 38
+		Tick: 100
+	idle5: 
+		Start: 306
+		Length: 38
+		Tick: 100
+	idle6: 
+		Start: 345
+		Length: 38
+		Tick: 100
+        
+spunit2:
+	stunned: sulm4
+		ZOffset: 125
+		Start: 312
+		Length: 2
+		Tick: 200
+	panic-stand: 
+		Start: 122
+		Facings: 8
+	panic-run: 
+		Start: 0
+		Length: 8
+		Facings: 8
+		Tick: 100
+	stand: 
+		Start: 122
+		Facings: 8
+	run: 
+		Start: 0
+		Length: 8
+		Facings: 8
+		Tick: 100
+	shoot: 
+		Tick: 100
+		Start: 66
+		Length: 7
+		Facings: 8
+	idle: 
+		Start: 122
+		Facings: 8
+	die1: 
+		Start: 131
+		Length: 16
+		Tick: 80
+	# large hit
+	die2: splatterdead
+		Length: *
+		Tick: 80
+	# poision
+	die3: 
+		Start: 163
+		Length: 15
+		Tick: 80
+	# ballista
+	die4: 
+		Start: 180
+		Length: 11
+		Tick: 80
+	die-crushed: e1rot
+		Start: 16
+		Length: 4
+		Tick: 1600
+		ZOffset: -511
+	die5: burningman
+		Length: *
+		Tick: 80
+	idle1: 
+		Start: 190
+		Length: 18
+		Tick: 100
+	idle2: 
+		Start: 209
+		Length: 18
+		Tick: 100
+	idle3: 
+		Start: 228
+		Length: 38
+		Tick: 100
+	idle4: 
+		Start: 267
+		Length: 38
+		Tick: 100
+	idle5: 
+		Start: 306
+		Length: 38
+		Tick: 100
+	idle6: 
+		Start: 345
+		Length: 38
+		Tick: 100

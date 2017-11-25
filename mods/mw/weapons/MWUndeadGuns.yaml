@@ -242,6 +242,7 @@ SkeletonRock:
 	MinRange: 0c512
 	Report: throw01.aud
 	InvalidTargets: Wall, Air
+	TargetActorCenter: true
 	ValidTargets: Ground
 	Projectile: Bullet
 		RangeLimit: 9c204
