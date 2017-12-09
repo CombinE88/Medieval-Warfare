@@ -712,12 +712,12 @@ BedouinBow:
 			Leather: 100
 			Light: 75
 			Heavy: 55
-			Concrete: 15
+			Concrete: 7
 			Knight: 15
 			LightCavalry: 80
 			MediumCavalry: 40
 			HeavyCavalry: 25
-			HeavyBuilding: 35
+			HeavyBuilding: 15
 			Spectral: 15
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
 		

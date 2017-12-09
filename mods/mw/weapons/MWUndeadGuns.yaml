@@ -102,9 +102,6 @@ SkeletonGiant:
 			HeavyCavalry: 100
 			Spectral: 55
 		DamageTypes: Prone50Percent, TriggerProne, RippedApartDeath, SpawnSoul
-	Warhead@Shake: ShakeGround	 
-		Intensity: 5
-		Delay: 5
 		
 SkeletonAxe:
 	ReloadDelay: 45
@@ -150,7 +147,7 @@ SkeletonBowNArrow:
 		Spread: 25
 		InvalidTargets: Wall, Air
 		ValidTargets: Ground
-		Damage: 1400
+		Damage: 1700
 		Versus:
 			Leather: 100
 			Light: 75
@@ -276,9 +273,6 @@ SkeletonRock:
 	Warhead@2Smu: LeaveSmudge
 		SmudgeType: Crater
 		InvalidTargets: Vehicle, Structure, Wall, Husk, Trees, Creep
-	Warhead@Shake: ShakeGround	 
-		Intensity: 5
-		Delay: 5
 
 ObeliskGraveCleaner:
 	ReloadDelay: 80
@@ -358,9 +352,6 @@ AcolyteGiantHand:
 		Delay: 30
 	Warhead@2Rubble: CreateEffect
 		ImpactSounds: rubble.aud
-	Warhead@Shake: ShakeGround	 
-		Intensity: 5
-		Delay: 30
 		
 AcolyteSpawnHelper:
 	ReloadDelay: 150
@@ -547,7 +538,7 @@ AcolyteAttackCleanerAIR:
 GrimSkytheThrow:
 	ReloadDelay: 35
 	Range: 6c0
-	MinRange: 1c0
+	MinRange: 1c512
 	Report: throw01.aud
 	ValidTargets: Ground
 	InvalidTargets: Air
@@ -590,7 +581,7 @@ VampAttackGG:
 		Spread: 141
 		ValidTargets: Ground
 		InvalidTargets: Air
-		Damage: 2000
+		Damage: 2200
 		Versus:
 			Leather: 100
 			Light: 100

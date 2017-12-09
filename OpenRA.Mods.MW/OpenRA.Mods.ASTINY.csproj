@@ -111,6 +111,7 @@
     <Compile Include="Traits\ResourceProvider.cs" />
     <Compile Include="Traits\ResourcePurifier.cs" />
     <Compile Include="Traits\ShakeOnCreate.cs" />
+    <Compile Include="Traits\DebugTransformOnCondition.cs" />
     <Compile Include="Traits\TransformOnCondition.cs" />
     <Compile Include="Traits\Undead Faction\AcolytpreyBuild.cs" />
     <Compile Include="Traits\Undead Faction\UndeadGarbageCollector.cs" />

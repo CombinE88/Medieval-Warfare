@@ -1281,6 +1281,7 @@ garg:
 			WINTER: TEMPERAT
 			JUNGLE: TEMPERAT
 			SNOW: TEMPERAT
+			INTERIOR: TEMPERAT
 		Length: *
 		Offset: 0,-2
 	icon: gargicon.shp

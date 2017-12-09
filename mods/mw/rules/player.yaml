@@ -25,20 +25,20 @@ Player:
 		TownHalls: townhall, sulhall
 		Peasants: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 	ProvidesTechPrerequisite@all:
-		Name: Normal Health
+		Name: No Extra Worker
 		Prerequisites:
 		Id: unrestricted
 	ProvidesTechPrerequisite@nosuper:
-		Name: +40% Health
-		Prerequisites: HPLevel30Set
+		Name: 2 Extra Worker
+		Prerequisites: 2extra
 		Id: nopowers
 	ProvidesTechPrerequisite@medium:
-		Name: +200% Health
-		Prerequisites: HPLevel50Set
+		Name: 3 Extra Worker
+		Prerequisites: 3extra
 		Id: medium
 	ProvidesTechPrerequisite@low:
-		Name: +400% Health
-		Prerequisites: HPLevel100Set
+		Name: 5 Extra Worker
+		Prerequisites: 5extra
 		Id: low
 	GrantConditionOnPrerequisiteManager:
 	ResourceStorageWarning:

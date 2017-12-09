@@ -5,8 +5,7 @@ bacamp.husk:
 		UseTilesetExtension: true
 		TilesetOverrides:
 			WINTER: TEMPERAT
-			JUNGLE: TEMPERAT
-			SNOW: TEMPERAT
+			JUNGLE: TEMPERAT			INTERIOR: TEMPERAT
 		Length: *
 		
 newfact:
@@ -142,12 +141,11 @@ missnew:
 		UseTilesetExtension: true
 		TilesetOverrides:
 			WINTER: TEMPERAT
-			JUNGLE: TEMPERAT
-			SNOW: TEMPERAT
+			JUNGLE: TEMPERAT			INTERIOR: TEMPERAT
 		Length: *
 		Offset: 0,1
 	icon: missicnh	
-    
+	
 tech1:
 	idle: techbuilding1
 	damaged-idle: techbuilding1
@@ -159,7 +157,7 @@ tech1:
 		Facings: 32
 	muzzle: gunfire2
 		Length: *
-    
+	
 tech1.husk:
 	idle: techbuilding1
 		Start: 2
@@ -179,8 +177,7 @@ bacamp:
 		UseTilesetExtension: true
 		TilesetOverrides:
 			WINTER: TEMPERAT
-			JUNGLE: TEMPERAT
-			SNOW: TEMPERAT
+			JUNGLE: TEMPERAT			INTERIOR: TEMPERAT
 		Length: *	   
 	flag1start: newflag
 		Start: 0
@@ -232,7 +229,7 @@ hqnew:
 	make7: radarnewmake
 		Start: 35
 		ZOffset: -25
-        
+		
 obs:
 	Inherits: ^scaffold
 	idle: obs
@@ -277,7 +274,7 @@ obs:
 	make7: obsmake
 		Start: 6
 		ZOffset: -25
-        
+		
 ljackb:
 	Inherits: ^scaffold
 	idle: 
@@ -719,7 +716,7 @@ xltnt2:
 		Start: 5
 		ZOffset: -25
 		Offset: 0,-6
-        
+		
 xltnt3:
 	Inherits: ^scaffold
 	idle: 
@@ -907,8 +904,7 @@ tribu:
 		UseTilesetExtension: true
 		TilesetOverrides:
 			WINTER: TEMPERAT
-			JUNGLE: TEMPERAT
-			SNOW: TEMPERAT
+			JUNGLE: TEMPERAT			INTERIOR: TEMPERAT
 		Length: *
 		Offset: 0,-2
 	icon: tribuicon.shp
@@ -1005,7 +1001,7 @@ silonew:
 		TilesetOverrides:
 			WINTER: TEMPERAT
 			JUNGLE: TEMPERAT
-			SNOW: TEMPERAT
+			JUNGLE: TEMPERAT			INTERIOR: TEMPERAT
 		Length: *
 	icon: silonewicon.shp
 		AddExtension: False
@@ -1021,6 +1017,60 @@ silonew:
 	make4: silonewmake
 		Start: 12
 		ZOffset: -25
+		
+silotwo:
+	Inherits: ^scaffold
+	idle: barn
+		Offset: 0,-12
+	damaged-idle: barn
+		Start: 6
+		Offset: 0,-12
+	dead: barn
+		Start: 12
+		Offset: 0,-12
+	stages: barn
+		Length: 6
+		Offset: 0,-12
+	damaged-stages: barn
+		Start: 6
+		Length: 6
+		Offset: 0,-12
+	make: barnmake
+		Length: *
+		Tick: 80
+		Offset: 0,-12
+	bib: mbSILO
+		UseTilesetExtension: true
+		TilesetOverrides:
+			WINTER: TEMPERAT
+			JUNGLE: TEMPERAT			INTERIOR: TEMPERAT
+		Length: *
+	icon: barnicon.shp
+		AddExtension: False
+	make1: barnmake
+		Start: 0
+		ZOffset: -25
+		Offset: 0,-12
+	make2: barnmake
+		Start: 1
+		ZOffset: -25
+		Offset: 0,-12
+	make3: barnmake
+		Start: 2
+		ZOffset: -25
+		Offset: 0,-12
+	make4: barnmake
+		Start: 3
+		ZOffset: -25
+		Offset: 0,-12
+	make5: barnmake
+		Start: 4
+		ZOffset: -25
+		Offset: 0,-12
+	make6: barnmake
+		Start: 5
+		ZOffset: -25
+		Offset: 0,-12
 		
 
 gtwnew:
@@ -1043,7 +1093,7 @@ gtwnew:
 		TilesetOverrides:
 			WINTER: TEMPERAT
 			JUNGLE: TEMPERAT
-			SNOW: TEMPERAT
+			JUNGLE: TEMPERAT			INTERIOR: TEMPERAT
 		Length: *
 		Offset: 0,-2
 	icon: gtwnewicon.shp
@@ -1108,8 +1158,7 @@ wtw:
 		UseTilesetExtension: true
 		TilesetOverrides:
 			WINTER: TEMPERAT
-			JUNGLE: TEMPERAT
-			SNOW: TEMPERAT
+			JUNGLE: TEMPERAT			INTERIOR: TEMPERAT
 		Length: *
 		Offset: 0,-2
 	icon: wtwicon.shp
@@ -1131,8 +1180,7 @@ gunnew:
 		UseTilesetExtension: true
 		TilesetOverrides:
 			WINTER: TEMPERAT
-			JUNGLE: TEMPERAT
-			SNOW: TEMPERAT
+			JUNGLE: TEMPERAT			INTERIOR: TEMPERAT
 		Length: *
 		Offset: -1,-1
 	icon: cannontowericon.shp
@@ -1175,8 +1223,7 @@ samnew:
 		UseTilesetExtension: true
 		TilesetOverrides:
 			WINTER: TEMPERAT
-			JUNGLE: TEMPERAT
-			SNOW: TEMPERAT
+			JUNGLE: TEMPERAT			INTERIOR: TEMPERAT
 		Length: *
 	icon: aaballicon.shp
 		AddExtension: False
@@ -1247,15 +1294,15 @@ windmill:
 	damaged-idle: windmilld
 		Length: 20
 		Tick: 100
-        Offset: 0,-5
+		Offset: 0,-5
 	dead: windmill
 		Tick: 800
 		Start: 21
-        Offset: 0,-5
+		Offset: 0,-5
 	make: windmillmake
 		Length: *
 		Tick: 80
-        Offset: 0,-5
+		Offset: 0,-5
 	bib: bib3
 		UseTilesetExtension: true
 		Length: *
@@ -1264,46 +1311,46 @@ windmill:
 	make1: windmillmake
 		Start: 0
 		ZOffset: -25
-        Offset: 0,-5
+		Offset: 0,-5
 	make2: windmillmake
 		Start: 1
 		ZOffset: -25
-        Offset: 0,-5
+		Offset: 0,-5
 	make3: windmillmake
 		Start: 2
 		ZOffset: -25
-        Offset: 0,-5
+		Offset: 0,-5
 	make4: windmillmake
 		Start: 3
 		ZOffset: -25
-        Offset: 0,-5
+		Offset: 0,-5
 	make5: windmillmake
 		Start: 4
 		ZOffset: -25
-        Offset: 0,-5
+		Offset: 0,-5
 	make6: windmillmake
 		Start: 5
 		ZOffset: -25
-        Offset: 0,-5
-        
+		Offset: 0,-5
+		
 nodmill:
 	Inherits: ^scaffold
 	idle: nodmillv2
 		Length: 20
 		Tick: 100
-        Offset: 12,-12
+		Offset: 12,-12
 	damaged-idle: nodmillv2
 		Length: 20
 		Tick: 100
-        Offset: 12,-12
+		Offset: 12,-12
 	dead: nodmilldv2
 		Tick: 800
 		Start: 20
-        Offset: 12,-12
+		Offset: 12,-12
 	make: nodmillmakev2
 		Length: *
 		Tick: 80
-        Offset: 12,-12
+		Offset: 12,-12
 	bib: bib3
 		UseTilesetExtension: true
 		Length: *
@@ -1312,27 +1359,27 @@ nodmill:
 	make1: nodmillmakev2
 		Start: 0
 		ZOffset: -25
-        Offset: 12,-12
+		Offset: 12,-12
 	make2: nodmillmakev2
 		Start: 1
 		ZOffset: -25
-        Offset: 12,-12
+		Offset: 12,-12
 	make3: nodmillmakev2
 		Start: 2
 		ZOffset: -25
-        Offset: 12,-12
+		Offset: 12,-12
 	make4: nodmillmakev2
 		Start: 3
 		ZOffset: -25
-        Offset: 12,-12
+		Offset: 12,-12
 	make5: nodmillmakev2
 		Start: 4
 		ZOffset: -25
-        Offset: 12,-12
+		Offset: 12,-12
 	make6: nodmillmakev2
 		Start: 5
 		ZOffset: -25
-        Offset: 12,-12
+		Offset: 12,-12
 		
 ghostmill:
 	Inherits: ^scaffold
@@ -1531,7 +1578,7 @@ castle:
 castle2:
 	Inherits: ^scaffold
 	idle: castle2
-        Offset: 0,-12,0
+		Offset: 0,-12,0
 	damaged-idle: castle2
 		Offset: 0,-12,0
 		Start: 1
@@ -2096,7 +2143,7 @@ schafott:
 	make6: 
 		Start: 6
 		ZOffset: -25
-        
+		
 herbalist:
 	Inherits: ^scaffold
 	idle: 

@@ -58,7 +58,7 @@ GTWNEW:
 		Turret: secondary
 	WithSpriteTurret@SPRITURRTWO: 
 		Sequence: turretidle
-        AimSequence: turretanim
+		AimSequence: turretanim
 		Turret: secondary
 	Turreted@TURRTWO:
 		Turret: secondary
@@ -160,14 +160,6 @@ SAMNEW:
 		Value: 325
 	Tooltip:
 		Name: Anti-Aircraft Ballista
-	Buildable:
-		Description: Because of the 4 elastic limbs out of black wood \nthe Anti-Aircraft Ballista is designed to shoot down targets \nin the air with a very high speed missile.\n  Very strong vs Aircraft\n  Cannot target Ground units.\n  Requires 2 Peasants\n\n
-		BuildPaletteOrder: 180
-		Prerequisites: ~scaffold
-		Queue: MMilitary.Nod
-		BuildDurationModifier: 40
-		IconPalette: raicon
-		BuildDuration: 50
 	Building:
 		Footprint: xx
 		Dimensions: 2,1
@@ -215,14 +207,6 @@ TRIBU:
 		Value: 550
 	Tooltip:
 		Name: Counterweight Trebuchet
-	Buildable:
-		Description: The Counterweight Trebuchet is a type of siege engine \nmost frequently used to outrange other siege weapons.\n  Strong vs all Ground units\n  Cannot target Aircraft\n  Requires 3 Peasants\n\n
-		BuildPaletteOrder: 190
-		Prerequisites: ~scaffold
-		Queue: MMilitary.Nod
-		BuildDurationModifier: 40
-		IconPalette: raicon
-		BuildDuration: 100
 	Building:
 		Footprint: x
 		Dimensions: 1,1
@@ -282,14 +266,6 @@ BATO:
 		Value: 700
 	Tooltip:
 		Name: Tower with Ballista
-	Buildable:
-		Description: Because of its smaller design and light weighted missiles, \nthe ballista on top of the tower can target \neither ground or aircraft units.\n  Strong vs ground units\n  Weak vs close by units\n  Long distance\n Can target Aircraft\n  Requires 3 Peasants\n\n
-		BuildPaletteOrder: 180
-		Prerequisites: ~scaffold
-		Queue: MMilitary.GDI
-		BuildDurationModifier: 40
-		IconPalette: raicon
-		BuildDuration: 75
 	Building:
 		Footprint: x
 		Dimensions: 1,1
@@ -358,14 +334,6 @@ GUNNEW:
 		Value: 350
 	Tooltip:
 		Name: Gunpowder Cannon
-	Buildable:
-		Description: The early Cannon uses gunpowder to throw a large boulder. \nIt's most effectively used against large targets.\n  Strong vs Cavalry and Spectral Units\n  Weak vs Infantry\n  Requires 1 Peasants\n\n
-		BuildPaletteOrder: 170
-		Prerequisites: ~scaffold
-		Queue: MMilitary.GDI, MMilitary.Nod
-		IconPalette: raicon
-		BuildDurationModifier: 40
-		BuildDuration: 50
 	Building:
 	Health:
 		HP: 40000
@@ -571,7 +539,6 @@ WDWLL:
 		HP: 30000
 	Armor:
 		Type: HeavyBuilding
-	Building:
 	RenderSprites:
 		Palette: ra
 		PlayerPalette: raplayer

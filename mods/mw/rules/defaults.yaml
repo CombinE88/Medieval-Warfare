@@ -30,70 +30,7 @@
 		RequiresCondition: grimactive
 		ZOffset: 256
 		ValidStances: Ally, Enemy, Neutral
-		
-		
-^GameSettings:
-	GrantConditionOnPrerequisite@Level30:
-		Condition: HPLevel30
-		Prerequisites: HPLevel30Set
-	DamageMultiplier@HPLevel30:
-		RequiresCondition: HPLevel30
-		Modifier: 70
-	GrantConditionOnPrerequisite@Level50:
-		Condition: HPLevel50
-		Prerequisites: HPLevel50Set
-	DamageMultiplier@HPLevel50:
-		RequiresCondition: HPLevel50
-		Modifier: 50
-	GrantConditionOnPrerequisite@Level100:
-		Condition: HPLevel100
-		Prerequisites: HPLevel100Set
-	DamageMultiplier@HPLevel100:
-		RequiresCondition: HPLevel100
-		Modifier: 25
-		
-^GameSettingsArcher:
-	RangeMultiplier@HPLevel30:
-		RequiresCondition: HPLevel30
-		Modifier: 150
-	RangeMultiplier@HPLevel50:
-		RequiresCondition: HPLevel50
-		Modifier: 200
-	RangeMultiplier@HPLevel100:
-		RequiresCondition: HPLevel100
-		Modifier: 250
-		
-^GameSettingsBuildings:
-	GrantConditionOnPrerequisite@Level30:
-		Condition: HPLevel30
-		Prerequisites: HPLevel30Set
-	DamageMultiplier@HPLevel30:
-		RequiresCondition: HPLevel30
-		Modifier: 70
-	GrantConditionOnPrerequisite@Level50:
-		Condition: HPLevel50
-		Prerequisites: HPLevel50Set
-	DamageMultiplier@HPLevel50:
-		RequiresCondition: HPLevel50
-		Modifier: 50
-	GrantConditionOnPrerequisite@Level100:
-		Condition: HPLevel100
-		Prerequisites: HPLevel100Set
-	DamageMultiplier@HPLevel100:
-		RequiresCondition: HPLevel100
-		Modifier: 25
-		
-^GameSettingsTowers:
-	FirepowerMultiplier@HPLevel30:
-		RequiresCondition: HPLevel30
-		Modifier: 150
-	FirepowerMultiplier@HPLevel50:
-		RequiresCondition: HPLevel50
-		Modifier: 200
-	FirepowerMultiplier@HPLevel100:
-		RequiresCondition: HPLevel100
-		Modifier: 300
-		
+
 ^ExistsInWorld:
 	AppearsOnRadar:
 	UpdatesPlayerStatistics:
@@ -470,7 +407,6 @@
 ^Infantry:
 	Inherits@1: ^ExistsInWorld
 	Inherits@3: ^SpriteActor
-	Inherits@4: ^GameSettings
 	Huntable:
 	Health:
 	Armor:
@@ -1065,6 +1001,94 @@
 		UseClassicFacingFudge: True
 	Targetable:
 		TargetTypes: Husk, Disguise
+        
+^PropHusk:
+	Inherits@1: ^SpriteActor
+	Health:
+		HP: 14000
+	Armor:
+		Type: Light
+	FrozenUnderFog:
+	WithSpriteBody:
+	HitShape:
+	EditorTilesetFilter:
+		Categories: Interior Props
+		RequireTilesets: INTERIOR
+	Tooltip:
+		GenericName: Destroyed Furniture
+	Building:
+		Dimensions: 1,1
+		Footprint: =
+        
+^InteriorProp:
+	Inherits@1: ^ExistsInWorld
+	Inherits@2: ^SpriteActor
+	RevealsShroud:
+		Range: 3c0
+		Type: CenterPosition
+	RenderSprites:
+	Building:
+		Dimensions: 1,1
+		Footprint: x
+	WithSpriteBody:
+	FrozenUnderFog:
+	AutoSelectionSize:
+	Health:
+		HP: 6000
+	Targetable:
+		TargetTypes: Ground, Prop, NoAutoTarget
+	ExternalCondition@TORNADO:
+		Condition: Tornadodeath
+	SelfHealing@TORNADO:
+		Step: -6500
+		HealIfBelow: 110
+		Delay: 25
+		RequiresCondition: Tornadodeath
+		DamageTypes: DefaultDeath
+	HitShape:
+	EditorTilesetFilter:
+		Categories: Interior Props
+		RequireTilesets: INTERIOR
+	Tooltip:
+		GenericName: Furniture
+        
+^PropDoor:
+	Inherits@1: ^ExistsInWorld
+	Inherits@2: ^SpriteActor
+	RenderSprites:
+		Palette: mwcivilian
+	Building:
+		Dimensions: 1,1
+		Footprint: x
+	WithSpriteBody:
+	FrozenUnderFog:
+	AutoSelectionSize:
+	Health:
+		HP: 1
+	Targetable:
+		TargetTypes: Door
+	HitShape:
+	Selectable:
+	EditorTilesetFilter:
+		Categories: Interior Props
+		RequireTilesets: INTERIOR
+        
+^PropDoorOpen:
+	Inherits@1: ^ExistsInWorld
+	Inherits@2: ^SpriteActor
+	RenderSprites:
+		Palette: mwcivilian
+	Building:
+		Dimensions: 1,1
+		Footprint: =
+	WithSpriteBody:
+	FrozenUnderFog:
+	AutoSelectionSize:
+	WithMakeAnimation:
+	HitShape:
+	EditorTilesetFilter:
+		Categories: Props
+		RequireTilesets: INTERIOR
 
 ^HelicopterHusk:
 	Inherits: ^CommonHuskDefaults
@@ -1266,7 +1290,7 @@
 
 ^MWBaseBuilding:
 	Inherits@1: ^BaseBuilding
-	Inherits@5: ^GameSettingsBuildings
+
 	EmitInfantryOnSell:
 		ActorTypes: engeneer,e1new
 	RepairableBuilding:
@@ -1304,7 +1328,6 @@
 ^MedievalInfantry:
 	Inherits@1: ^ExistsInWorld
 	Inherits@3: ^SpriteActor
-	Inherits@5: ^GameSettings
 	HitShape:
 	Huntable:
 	Health:
@@ -1539,7 +1562,7 @@
 	ExternalCondition@PRONE:
 		Condition: archerprone
 	SpeedMultiplier@PRONE:
-		Modifier: 75
+		Modifier: 65
 		RequiresCondition: archerprone
 	WithDecoration@PRONE:
 		Image: debuffs
@@ -1710,7 +1733,7 @@
 	ExternalCondition@PRONE:
 		Condition: archerprone
 	SpeedMultiplier@PRONE:
-		Modifier: 90
+		Modifier: 80
 		RequiresCondition: archerprone
 
 		
@@ -2265,7 +2288,6 @@
 ^Props:
 	Inherits@1: ^ExistsInWorld
 	Inherits@2: ^SpriteActor
-	Inherits: ^GameSettings
 	RevealsShroud:
 		Range: 3c0
 		Type: CenterPosition
@@ -2302,7 +2324,6 @@
 ^ConstructionSite:
 	Inherits@1: ^ExistsInWorld
 	Inherits@2: ^SpriteActor
-	Inherits: ^GameSettings
 	Sellable:
 	Huntable:
 	SelectionDecorations:
@@ -2311,22 +2332,22 @@
 		Priority: 3
 	Targetable:
 		TargetTypes: Ground, C4, Structure
-	#the number indicates how long it takes to construct in this example its 40
+	#the number indicates how long it takes to construct in this example its 200
 	ExternalCondition@buildfurther: 
 		Condition: Construct
-		TotalCap: 40
+		TotalCap: 200
 	ExternalCondition@Deliverfurther:
 		Condition: DeliveredResources
-		TotalCap: 40
+		TotalCap: 200
 	ExternalCondition@PLACEHOLDER:
 		Condition: inactive
 		TotalCap: 1
 	Targetable@buildfurther: 
 		TargetTypes: Buildable
-		RequiresCondition: DeliveredResources > Construct && (40 - Construct) > 0
+		RequiresCondition: DeliveredResources > Construct && (200 - Construct) > 0
 	Targetable@deliverresources: 
 		TargetTypes: Deliverable
-		RequiresCondition: 40 > DeliveredResources
+		RequiresCondition: 200 > DeliveredResources
 	Targetable@Priority1:
 		TargetTypes: Priority1
 		RequiresCondition: delconpriority == 1
@@ -2362,12 +2383,6 @@
 	Demolishable:
 	GivesBuildableArea:
 	EngineerRepairable:
-	SelfHealing@Finished:
-		PercentageStep: -200
-		HealIfBelow: 110
-		Delay: 1
-		RequiresCondition: (40 - Construct) <= 0
-		DamageTypes: FinishedDeath
 	ExternalCondition@TORNADO:
 		Condition: Tornadodeath
 	SelfHealing@TORNADO:

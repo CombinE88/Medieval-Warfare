@@ -29,6 +29,12 @@ GUNNEW.SCAFF:
 SILONEW.SCAFF:
 	Buildable:
 		Prerequisites: ~disabled
+CSTLWLL:
+	Buildable:
+		Prerequisites: ~disabled
+WDWLL:
+	Buildable:
+		Prerequisites: ~disabled
         
 # -- units shared --
 

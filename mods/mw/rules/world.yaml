@@ -200,7 +200,7 @@ World:
 		BaseActor: undeadcomm
 	MPStartUnits@dead:
 		Class: medieval2
-		ClassName: Quick Start
+		ClassName: Normal Start
 		Factions: ded
 		BaseActor: undeadcomm
 		SupportActors: preycolyte,preycolyte, preycolyte, preycolyte
@@ -227,7 +227,7 @@ World:
 		ClassName: Quick Start
 		Factions: gdi, nod, sul
 		BaseActor: mcvnew
-		SupportActors: transporter, transporter, engeneer
+		SupportActors: mwwand1,mwwand2,mwwand3,mwwand4,mwwand5
 		InnerSupportRadius: 4
 		OuterSupportRadius: 5
 	MPStartUnits@bunch:
@@ -235,7 +235,7 @@ World:
 		ClassName: Well Populated
 		Factions: gdi, nod, sul
 		BaseActor: mcvnew
-		SupportActors: mwwand1,mwwand2,mwwand3,mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12,mwwand1,mwwand2,mwwand3, transporter, transporter, transporter, engeneer,, engeneer
+		SupportActors: mwwand1,mwwand2,mwwand3,mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12,mwwand1,mwwand2,mwwand3
 		InnerSupportRadius: 4
 		OuterSupportRadius: 5
 	MPStartUnits@maximum:
@@ -243,7 +243,7 @@ World:
 		ClassName: Over Populated
 		Factions: gdi, nod, sul
 		BaseActor: mcvnew
-		SupportActors: mwwand1,mwwand2,mwwand3,mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12,mwwand1,mwwand2,mwwand3, mwwand5, mwwand6, mwwand10, mwwand11, transporter, transporter, transporter, transporter, transporter, transporter, engeneer, engeneer,, engeneer
+		SupportActors: mwwand1,mwwand2,mwwand3,mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12,mwwand1,mwwand2,mwwand3, mwwand5, mwwand6, mwwand10, mwwand11
 		InnerSupportRadius: 4
 		OuterSupportRadius: 5
 	SpawnMPUnits:

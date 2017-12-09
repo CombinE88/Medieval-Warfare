@@ -2,7 +2,6 @@
 
 ^MWUndeadBuilding:
 	Inherits@1: ^BaseBuilding
-	Inherits@5: ^GameSettingsBuildings
 	RepairableBuilding:
 		RepairPercent: 40
 		RepairStep: 1000
@@ -22,7 +21,6 @@
 
 ^MWBasePentagram:
 	Inherits@1: ^BaseBuilding
-	Inherits@5: ^GameSettingsBuildings
 	-EmitInfantryOnSell:
 	RepairableBuilding:
 		RepairPercent: 40
@@ -427,7 +425,6 @@
 	Inherits@Hitshape: ^1x1Shape
 	-ActorLostNotification:
 	-RepairableBuilding:
-	-ActorLostNotification:
 	EditorTilesetFilter:
 		ExcludeTilesets: TEMPERATE, SNOW, DESERT, WINTER
 		Categories: 
@@ -1454,6 +1451,9 @@ GSTONE1:
 		RequiresCondition: validc
 	ProvidesLivingspace:
 		Ammount: 3
+	EditorTilesetFilter:
+		ExcludeTilesets: TEMPERATE, SNOW, DESERT, WINTER
+		Categories: 
 		
 GSTONE2:
 	Inherits: ^Gravestone
@@ -1476,6 +1476,9 @@ GSTONE2:
 		RequiresCondition: validc
 	ProvidesLivingspace:
 		Ammount: 3
+	EditorTilesetFilter:
+		ExcludeTilesets: TEMPERATE, SNOW, DESERT, WINTER
+		Categories: 
 		
 GSTONE3:
 	Inherits: ^Gravestone
@@ -1498,6 +1501,9 @@ GSTONE3:
 		RequiresCondition: validc
 	ProvidesLivingspace:
 		Ammount: 3
+	EditorTilesetFilter:
+		ExcludeTilesets: TEMPERATE, SNOW, DESERT, WINTER
+		Categories: 
 		
 COFFIN:
 	Inherits: ^Gravestone
@@ -1520,6 +1526,9 @@ COFFIN:
 		RequiresCondition: validc
 	ProvidesLivingspace:
 		Ammount: 5
+	EditorTilesetFilter:
+		ExcludeTilesets: TEMPERATE, SNOW, DESERT, WINTER
+		Categories: 
 		
 #defense
 	
@@ -1821,7 +1830,7 @@ UNDEAD1:
 	Mobile:
 		Speed: 55
 	Health:
-		HP: 9200
+		HP: 12200
 	Armament:
 		Weapon: SkeletonBroadSword
 	AttackFrontal:
@@ -1855,7 +1864,7 @@ UNDEAD2:
 	Mobile:
 		Speed: 55
 	Health:
-		HP: 8000
+		HP: 14000
 	Armament:
 		Weapon: SkeletonBroadSword
 	AttackFrontal:
@@ -1884,7 +1893,7 @@ UNDEAD3:
 	Mobile:
 		Speed: 55
 	Health:
-		HP: 7500
+		HP: 11500
 	Armament:
 		Weapon: SkeletonPike
 	AttackFrontal:
@@ -1913,7 +1922,7 @@ UNDEAD3:
 UNDEAD4:
 	Inherits: ^Skeleton
 	Valued:
-		Cost: 450
+		Cost: 370
 	RevealsShroud:
 		Range: 6c0
 	Tooltip:
@@ -1930,7 +1939,7 @@ UNDEAD4:
 	RenderSprites:
 		PlayerPalette: raplayer
 	PersonValued:
-		ActorCount: 2
+		ActorCount: 1
 	-Crushable:
 	Buildable:
 		IconPalette: raicon
@@ -1953,7 +1962,7 @@ UNDEAD5:
 	Mobile:
 		Speed: 55
 	Health:
-		HP: 6000
+		HP: 9000
 	Armament:
 		Weapon: SkeletonBowNArrow
 		LocalOffset: 341,20,356
@@ -2000,7 +2009,7 @@ UNDEAD6:
 	Targetable:
 		TargetTypes: Ground, Cavalry
 	Health:
-		HP: 68250
+		HP: 70250
 	Armament:
 		Weapon: SkeletonGiant
 		FireDelay: 9
@@ -2083,7 +2092,7 @@ GRIM:
 	Tooltip:
 		Name: Grim Reaper
 	Mobile:
-		Speed: 45
+		Speed: 37
 		Crushes:
 		TerrainSpeeds:
 			Clear: 100
@@ -2207,8 +2216,6 @@ ACOLYTEC:
 VAMP:
 	Inherits: ^Knight
 	Inherits@AUTOTARGET: ^AutoTargetGround
-	Inherits@5: ^GameSettings
-	Inherits@88: ^GameSettingsArcher
 	Valued:
 		Cost: 750
 	-Crushable:
@@ -2255,8 +2262,6 @@ VAMP:
 VAMPFLYING:
 	Inherits: ^Helicopter
 	Inherits@EXPERIENCE: ^GainsExperience
-	Inherits@5: ^GameSettings
-	Inherits@88: ^GameSettingsArcher
 	Inherits@AUTOTARGET: ^AutoTargetAir
 	HitShape:
 	WithFacingSpriteBody:
@@ -2623,7 +2628,7 @@ RESSURECT1:
 	Mobile:
 		Speed: 55
 	Health:
-		HP: 9200
+		HP: 12200
 	Armament:
 		Weapon: SkeletonBroadSword
 	AttackFrontal:
@@ -2653,7 +2658,7 @@ RESSURECT2:
 	Mobile:
 		Speed: 55
 	Health:
-		HP: 9000
+		HP: 14000
 	Armament:
 		Weapon: SkeletonBroadSword
 	AttackFrontal:
@@ -2684,7 +2689,7 @@ RESSURECT3:
 	Mobile:
 		Speed: 55
 	Health:
-		HP: 8500
+		HP: 11500
 	Armament:
 		Weapon: SkeletonPike
 	AttackFrontal:
@@ -2724,7 +2729,7 @@ RESSURECT4:
 	Mobile:
 		Speed: 55
 	Health:
-		HP: 7000
+		HP: 9000
 	Armament:
 		Weapon: SkeletonBowNArrow
 		LocalOffset: 341,20,356
@@ -2983,6 +2988,8 @@ CFFPLACE1A:
 		Sequence: idlea
 	ProvidesLivingspace:
 		Ammount: 5
+	EditorTilesetFilter:
+		Categories: Undead
 CFFPLACE1B:
 	Inherits: ^Gravestone
 	RenderSprites:
@@ -2992,6 +2999,8 @@ CFFPLACE1B:
 		Sequence: idleb
 	ProvidesLivingspace:
 		Ammount: 5
+	EditorTilesetFilter:
+		Categories: Undead
 CFFPLACE1C:
 	Inherits: ^Gravestone
 	RenderSprites:
@@ -3001,3 +3010,5 @@ CFFPLACE1C:
 		Sequence: idlec
 	ProvidesLivingspace:
 		Ammount: 5
+	EditorTilesetFilter:
+		Categories: Undead

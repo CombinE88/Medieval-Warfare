@@ -11,6 +11,6 @@ basefiles: Base Freeware Content
 		^Content/cnc/transit.mix: transit.mix
 		^Content/cnc/winter.mix: winter.mix
 music: Freeware Music
-	MirrorList: http://www.openra.net/packages/cnc-music-mirrors.txt
+	MirrorList: https://drive.google.com/uc?export=download&confirm=c_qK&id=0B7dZOdMKjLv-N0Rrakp3UGlxSTg
 	Extract:
-		^Content/cnc/scores.mix: scores.mix
+		^Content/Mw/Music/: MusicMW.zip

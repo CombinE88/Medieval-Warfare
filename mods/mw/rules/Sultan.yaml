@@ -11,7 +11,6 @@ CSTLWLLSUL:
 
 SULGTW:
 	Inherits: ^MWDefense
-	Inherits@88: ^GameSettingsTowers
 	Inherits@AUTOTARGET: ^AutoTargetAll
 	Inherits@Hitshape: ^1x1Shape
 	WithDeathAnimation:
@@ -501,13 +500,6 @@ SULLODGE:
 		Value: 250
 	Tooltip:
 		Name: Hunters Lodge
-	Buildable:
-		IconPalette: raicon
-		BuildPaletteOrder: 110
-		Description: A hunter can go out and hunt down animals from here.\n\n\n
-		Queue: MResources.SUL
-		BuildDuration: 25
-		Prerequisites: ~scaffold
 	Building:
 		Footprint: xx ==
 		Dimensions: 2,2
@@ -557,13 +549,6 @@ SULHALL:
 		Value: 1000
 	Tooltip:
 		Name: Town Hall
-	Buildable:
-		IconPalette: raicon
-		BuildPaletteOrder: 130
-		Prerequisites: ~scaffold
-		Description: Attracts citizens to your town.\nNew Peasants will spawn faster.\n\n\n
-		Queue: MBuilding.SUL
-		BuildDuration: 125
 	Building:
 		Footprint: xxx xxx ===
 		Dimensions: 3,3
@@ -608,13 +593,6 @@ SULMINARET:
 		Value: 600
 	Tooltip:
 		Name: Minaret
-	Buildable:
-		IconPalette: raicon
-		BuildPaletteOrder: 125
-		Prerequisites: ~scaffold
-		Description: Attracts citizens to your town.\nNew Peasants will spawn faster.\n\n\n
-		Queue: MBuilding.SUL
-		BuildDuration: 75
 	Building:
 		Footprint: x
 		Dimensions: 1,1
@@ -651,13 +629,6 @@ SULARRAY:
 		Value: 100
 	Tooltip:
 		Name: Material Storage
-	Buildable:
-		IconPalette: raicon
-		BuildPaletteOrder: 100
-		Prerequisites: ~scaffold
-		Description: Provides 3 additional haulers and 1 engineer.\n\n\n\n
-		Queue: MTech.SUL
-		BuildDuration: 50
 	Building:
 		Footprint: xxx xxx ===
 		Dimensions: 3,3
@@ -735,13 +706,6 @@ SULNUK2:
 		Name: Large Hut
 	ProvidesPrerequisite:
 		Prerequisite: anypower
-	Buildable:
-		IconPalette: raicon
-		BuildPaletteOrder: 120
-		Queue: MBuilding.SUL
-		Description: Provides more livingspace. Livingspace increases over time by generating peasants.\nCan hold up to 11 peasants, spawntime depends on number of shacks and large huts. \ncheaper than the standard Shack.\n\n\n\n
-		BuildDuration: 75
-		Prerequisites: ~scaffold
 	Building:
 		Footprint: xxx xx= ===
 		Dimensions: 3,3
@@ -813,13 +777,6 @@ SULNUKE:
 		Name: Hut
 	ProvidesPrerequisite:
 		Prerequisite: anypower
-	Buildable:
-		IconPalette: raicon
-		BuildPaletteOrder: 110
-		Prerequisites: ~scaffold
-		Description: Generates livingspace. Livingspace increases over time by generating peasants.\nCan hold up to 6 peasants, spawntime depends on number of shacks and large huts.  
-		Queue: MBuilding.SUL
-		BuildDuration: 50
 	Building:
 		Footprint: xx xx ==
 		Dimensions: 2,3
@@ -878,13 +835,6 @@ SULBARR:
 		Name: Barracks
 	ProvidesPrerequisite:
 		Prerequisite: barracks
-	Buildable:
-		IconPalette: raicon
-		BuildPaletteOrder: 110
-		Prerequisites: ~scaffold
-		Description: Trains Infantry only\n\n\n\n
-		Queue: MMilitary.SUL
-		BuildDuration: 75
 	Building:
 		Footprint: xxx xxx ===
 		Dimensions: 3,3
@@ -942,13 +892,6 @@ SULMYSTIC:
 	ProvidesPrerequisite@buildingname:
 	ProvidesPrerequisite:
 		Prerequisite: vehicleproduction
-	Buildable:
-		IconPalette: raicon
-		BuildPaletteOrder: 120
-		Prerequisites: ~scaffold
-		Description: Trains Magical and Mystical Units\n\n\n\n
-		Queue: MMilitary.SUL
-		BuildDuration: 100
 	Building:
 		Footprint: xx= xxx =xx
 		Dimensions: 3,3
@@ -1008,13 +951,6 @@ SULCASTLE:
 	ProvidesPrerequisite@3:
 		Prerequisite: Level3
 	ProvidesPrerequisite@buildingname:
-	Buildable:
-		IconPalette: raicon
-		BuildPaletteOrder: 110
-		Prerequisites: ~scaffold
-		Description: Can unlock Superweapons.\n Can unlock advanced tech.\nCan hold up to 4 nobles.\n\n\n\n
-		Queue: MTech.SUL
-		BuildDuration: 100
 	Building:
 		Footprint: xxx xxx xxx ===
 		Dimensions: 3,4
@@ -1272,13 +1208,6 @@ SULMILL:
 		Name: Windmill
 	ProvidesPrerequisite:
 		Prerequisite: proc
-	Buildable:
-		IconPalette: raicon
-		BuildPaletteOrder: 120
-		Description: Provides basic resource gathering for Crops and Grain.\n Comes with 3 farmers.\n Can only operate up to 6 farmers at once.\n\n\n\n
-		Queue: MResources.SUL
-		BuildDuration: 75
-		Prerequisites: ~scaffold
 	Building:
 		Footprint: __ xx xx ==
 		Dimensions: 2,4
@@ -1355,13 +1284,6 @@ SULFIX:
 		Value: 600
 	Tooltip:
 		Name: Siege Workshop
-	Buildable:
-		IconPalette: raicon
-		BuildPaletteOrder: 130
-		Prerequisites: ~scaffold
-		Description: Provides Siege weapons construction.\n\n\n\n
-		Queue: MMilitary.SUL
-		BuildDuration: 100
 	Building:
 		Footprint: xxx =xx ===
 		Dimensions: 3,3
@@ -1470,14 +1392,6 @@ SULCNSHMBR:
 	Tooltip:
 		Name: Corn Chamber
 	ProvidesPrerequisite@buildingname:
-	Buildable:
-		IconPalette: raicon
-		BuildPaletteOrder: 140
-		Prerequisites: ~scaffold
-		Description: Corn Chambers were meant to store corn for times when food was rare.\n  Generates a little bit of gold, when resources are gathered.\n  Limited to 1.\n\n
-		Queue: MResources.SUL
-		BuildDuration: 75
-        BuildLimit: 1
 	Building:
 		Footprint: xxx xxx ===
 		Dimensions: 3,3
@@ -1517,13 +1431,6 @@ SULREF:
 		Cost: 1500
 	Tooltip:
 		Name: Ore Refinery
-	Buildable:
-		IconPalette: raicon
-		BuildPaletteOrder: 130
-		Prerequisites: ~scaffold
-		Description: Processes raw ore and Gold into useable metal.\nGenerates more money than the windmill.\n\n\n\n
-		Queue: MResources.SUL
-		BuildDuration: 100
 	Building:
 		Footprint: _x_ xxx xx= ===
 		Dimensions: 3,4
@@ -1622,7 +1529,7 @@ SULE2:
 	Mobile:
 		Speed: 56
 	Health:
-		HP: 15000
+		HP: 17500
 	Armament@Primary:
 		Name: Primary
 		Weapon: PikeAC
@@ -1656,7 +1563,6 @@ SULE2:
 		
 SULE3:
 	Inherits: ^Knight
-	Inherits@88: ^GameSettingsArcher
 	Inherits@AUTOTARGET: ^AutoTargetAll
 	RevealsShroud:
 		Range: 6c0
@@ -1998,7 +1904,6 @@ SULM1SKELET:
 		
 SULM2:
 	Inherits: ^Knight
-	Inherits@88: ^GameSettingsArcher
 	Inherits@AUTOTARGET: ^AutoTargetGround
 	RevealsShroud:
 		Range: 6c0
@@ -2066,7 +1971,6 @@ SULM2:
 SULM4:
 	Inherits: ^Knight
 	Inherits@AUTOTARGET: ^AutoTargetGround
-	Inherits@88: ^GameSettingsArcher
 	RevealsShroud:
 		Range: 7c0
 	Valued:
@@ -2114,7 +2018,6 @@ SULM4:
 SULB0:
 	Inherits: ^Siege
 	Inherits@2: ^GainsExperience
-	Inherits@88: ^GameSettingsArcher
 	Inherits@AUTOTARGET: ^AutoTargetAll
 	Valued:
 		Cost: 725
@@ -2219,8 +2122,6 @@ SULB0:
 SULB1:
 	Inherits: ^Siege
 	Inherits@2: ^GainsExperience
-	Inherits@88: ^GameSettingsArcher
-	Inherits@89: ^GameSettingsTowers
 	Inherits@AUTOTARGET: ^AutoTargetGround
 	Valued:
 		Cost: 1300
@@ -2291,8 +2192,6 @@ SULB1.Husk:
 SULB2:
 	Inherits: ^Siege
 	Inherits@2: ^GainsExperience
-	Inherits@88: ^GameSettingsArcher
-	Inherits@89: ^GameSettingsTowers
 	Inherits@AUTOTARGET: ^AutoTargetGround
 	Valued:
 		Cost: 2500
@@ -2417,7 +2316,6 @@ PLACEHOLDERBOLTS:
 SULM3:
 	Inherits: ^Helicopter
 	Inherits@EXPERIENCE: ^GainsExperience
-	Inherits@88: ^GameSettingsArcher
 	Inherits@AUTOTARGET: ^AutoTargetGround
 	Valued:
 		Cost: 1000

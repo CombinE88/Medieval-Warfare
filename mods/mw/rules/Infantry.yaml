@@ -320,7 +320,7 @@ E2NEW:
 	Mobile:
 		Speed: 45
 	Health:
-		HP: 8000
+		HP: 10000
 	Armament:
 		Weapon: pike
 	AttackFrontal:
@@ -369,7 +369,7 @@ E2NEWV2:
 	Mobile:
 		Speed: 45
 	Health:
-		HP: 8000
+		HP: 10000
 	Armament:
 		Weapon: pikespread
 	AttackFrontal:
@@ -664,7 +664,7 @@ E3NEWV2:
 		
 E9NEW:
 	Inherits: ^Knight
-	Inherits@88: ^GameSettingsArcher
+
 	Inherits@AUTOTARGET: ^AutoTargetGround
 	RevealsShroud:
 		Range: 6c0
@@ -716,7 +716,7 @@ E4NEW:
 	Inherits@AUTOTARGET: ^AutoTargetAll
 	RevealsShroud:
 		Range: 6c0
-	Inherits@88: ^GameSettingsArcher
+
 	Valued:
 		Cost: 200
 	Tooltip:
@@ -781,7 +781,7 @@ E4NEWV2:
 	Inherits@AUTOTARGET: ^AutoTargetAll
 	RevealsShroud:
 		Range: 6c0
-	Inherits@88: ^GameSettingsArcher
+
 	Valued:
 		Cost: 200
 	Tooltip:
@@ -846,7 +846,7 @@ E5NEW:
 	Inherits@AUTOTARGET: ^AutoTargetGround
 	RevealsShroud:
 		Range: 8c0
-	Inherits@88: ^GameSettingsArcher
+
 	DetectCloaked:
 		Range: 2c0
 	Valued:
@@ -863,7 +863,7 @@ E5NEW:
 	Mobile:
 		Speed: 56
 	Health:
-		HP: 13000
+		HP: 12000
 	Armament:
 		Weapon: crossbow
 		LocalOffset: 341,0,456
@@ -908,7 +908,7 @@ RMBONEW:
 	Mobile:
 		Speed: 45
 	Health:
-		HP: 19000
+		HP: 19750
 	Armament:
 		Weapon: paladingun
 		MuzzleSequence: muzzle
@@ -1014,7 +1014,7 @@ ASSASSIN:
 		-UpgradeTypes:
 		InitialDelay: 90
 		CloakDelay: 90
-	Inherits@88: ^GameSettingsArcher
+
 	Valued:
 		Cost: 600
 	Tooltip:

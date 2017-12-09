@@ -30,10 +30,10 @@ NUKENEW.SCAFF:
 		VisualBounds: 48,53,0,-4
 	WithSpriteBody:
 		RequiresCondition: inactive
-	SpawnActorOnDeath@Finsihed:
-		Probability: 100
-		Actor: NUKENEW
-		DeathType: FinishedDeath
+	DebugTransformOnCondition@Finsihed:
+		RequiresCondition: (10 - Construct) <= 0
+		IntoActor: NUKENEW
+		ReadyAudio: ConstructionComplete
 	ExternalCondition@buildfurther: 
 		Condition: Construct
 		TotalCap: 10
@@ -46,12 +46,6 @@ NUKENEW.SCAFF:
 	Targetable@deliverresources: 
 		TargetTypes: Deliverable
 		RequiresCondition: 10 > DeliveredResources
-	SelfHealing@Finished:
-		PercentageStep: -200
-		HealIfBelow: 110
-		Delay: 1
-		RequiresCondition: (10 - Construct) <= 0
-		DamageTypes: FinishedDeath
 	WithIdleOverlay@base1:
 		Sequence: make1
 		RequiresCondition: Construct > 3 && Construct < 4
@@ -107,10 +101,10 @@ LODGE.SCAFF:
 		VisualBounds: 48,27,0,-4
 	WithSpriteBody:
 		RequiresCondition: inactive
-	SpawnActorOnDeath@Finsihed:
-		Probability: 100
-		Actor: LODGE
-		DeathType: FinishedDeath
+	DebugTransformOnCondition@Finsihed:
+		RequiresCondition: (15 - Construct) <= 0
+		IntoActor: LODGE
+		ReadyAudio: ConstructionComplete
 	ExternalCondition@buildfurther: 
 		Condition: Construct
 		TotalCap: 15
@@ -123,12 +117,6 @@ LODGE.SCAFF:
 	Targetable@deliverresources: 
 		TargetTypes: Deliverable
 		RequiresCondition: 15 > DeliveredResources
-	SelfHealing@Finished:
-		PercentageStep: -200
-		HealIfBelow: 110
-		Delay: 1
-		RequiresCondition: (15 - Construct) <= 0
-		DamageTypes: FinishedDeath
 	WithIdleOverlay@base1:
 		Sequence: make1
 		RequiresCondition: Construct >= 3 && Construct < 6
@@ -180,10 +168,10 @@ LJACKB.SCAFF:
 		VisualBounds: 27,27,0,0
 	WithSpriteBody:
 		RequiresCondition: inactive
-	SpawnActorOnDeath@Finsihed:
-		Probability: 100
-		Actor: ljackb
-		DeathType: FinishedDeath
+	DebugTransformOnCondition@Finsihed:
+		RequiresCondition: (20 - Construct) <= 0
+		IntoActor: ljackb
+		ReadyAudio: ConstructionComplete
 	ExternalCondition@buildfurther: 
 		Condition: Construct
 		TotalCap: 20
@@ -196,12 +184,6 @@ LJACKB.SCAFF:
 	Targetable@deliverresources: 
 		TargetTypes: Deliverable
 		RequiresCondition: 20 > DeliveredResources
-	SelfHealing@Finished:
-		PercentageStep: -200
-		HealIfBelow: 110
-		Delay: 1
-		RequiresCondition: (20 - Construct) <= 0
-		DamageTypes: FinishedDeath
 	WithIdleOverlay@base1:
 		Sequence: make1
 		RequiresCondition: Construct >= 3 && Construct < 9
@@ -249,10 +231,10 @@ NUKXL.SCAFF:
 		VisualBounds: 72,64,0,-16
 	WithSpriteBody:
 		RequiresCondition: inactive
-	SpawnActorOnDeath@Finsihed:
-		Probability: 100
-		Actor: NUKXL
-		DeathType: FinishedDeath
+	DebugTransformOnCondition@Finsihed:
+		RequiresCondition: (35 - Construct) <= 0
+		IntoActor: NUKXL
+		ReadyAudio: ConstructionComplete
 	ExternalCondition@buildfurther: 
 		Condition: Construct
 		TotalCap: 35
@@ -265,12 +247,6 @@ NUKXL.SCAFF:
 	Targetable@deliverresources: 
 		TargetTypes: Deliverable
 		RequiresCondition: 35 > DeliveredResources
-	SelfHealing@Finished:
-		PercentageStep: -200
-		HealIfBelow: 110
-		Delay: 1
-		RequiresCondition: (35 - Construct) <= 0
-		DamageTypes: FinishedDeath
 	WithIdleOverlay@base1:
 		Sequence: make1
 		RequiresCondition: Construct > 5 && Construct < 10
@@ -326,10 +302,10 @@ HANDNEW.SCAFF:
 		VisualBounds: 48,72,0,-5
 	WithSpriteBody:
 		RequiresCondition: inactive
-	SpawnActorOnDeath@Finsihed:
-		Probability: 100
-		Actor: HANDNEW
-		DeathType: FinishedDeath
+	DebugTransformOnCondition@Finsihed:
+		RequiresCondition: (30 - Construct) <= 0
+		IntoActor: HANDNEW
+		ReadyAudio: ConstructionComplete
 	ExternalCondition@buildfurther: 
 		Condition: Construct
 		TotalCap: 30
@@ -342,12 +318,6 @@ HANDNEW.SCAFF:
 	Targetable@deliverresources: 
 		TargetTypes: Deliverable
 		RequiresCondition: 30 > DeliveredResources
-	SelfHealing@Finished:
-		PercentageStep: -200
-		HealIfBelow: 110
-		Delay: 1
-		RequiresCondition: (30 - Construct) <= 0
-		DamageTypes: FinishedDeath
 	WithIdleOverlay@base1:
 		Sequence: make1
 		RequiresCondition: Construct > 10 && Construct < 14
@@ -402,10 +372,13 @@ ZEROPROC.SCAFF:
 		VisualBounds: 48,70,0,-10
 	WithSpriteBody:
 		RequiresCondition: inactive
-	SpawnActorOnDeath@Finsihed:
-		Probability: 100
-		Actor: ZEROPROC
-		DeathType: FinishedDeath
+	GrantCondition@finishedbuild: # test
+		RequiresCondition: (45 - Construct) <= 0
+		Condition: transform
+	DebugTransformOnCondition@Finsihed:
+		RequiresCondition: transform
+		IntoActor: ZEROPROC
+		ReadyAudio: ConstructionComplete
 	ExternalCondition@buildfurther: 
 		Condition: Construct
 		TotalCap: 45
@@ -418,12 +391,6 @@ ZEROPROC.SCAFF:
 	Targetable@deliverresources: 
 		TargetTypes: Deliverable
 		RequiresCondition: 45 > DeliveredResources
-	SelfHealing@Finished:
-		PercentageStep: -200
-		HealIfBelow: 110
-		Delay: 1
-		RequiresCondition: (45 - Construct) <= 0
-		DamageTypes: FinishedDeath
 	WithIdleOverlay@base1:
 		Sequence: make1
 		RequiresCondition: Construct > 10 && Construct < 15
@@ -446,10 +413,10 @@ ZEROPROC.SCAFF:
 		
 NODPROC.SCAFF:
 	Inherits: ZEROPROC.SCAFF
-	SpawnActorOnDeath@Finsihed:
-		Probability: 100
-		Actor: NODPROC
-		DeathType: FinishedDeath
+	DebugTransformOnCondition@Finsihed:
+		RequiresCondition: (52 - Construct) <= 0
+		IntoActor: NODPROC
+		ReadyAudio: ConstructionComplete
 	RenderSprites:
 		Image: nodmill
 	Valued:
@@ -473,12 +440,6 @@ NODPROC.SCAFF:
 	Targetable@deliverresources: 
 		TargetTypes: Deliverable
 		RequiresCondition: 52 > DeliveredResources
-	SelfHealing@Finished:
-		PercentageStep: -200
-		HealIfBelow: 110
-		Delay: 1
-		RequiresCondition: (52 - Construct) <= 0
-		DamageTypes: FinishedDeath
 	Selectable:
 		Bounds: 48,70,0,-10
 	SelectionDecorations:
@@ -516,10 +477,10 @@ HQNEWNOD.SCAFF:
 		VisualBounds: 48,53,0,-4
 	WithSpriteBody:
 		RequiresCondition: inactive
-	SpawnActorOnDeath@Finsihed:
-		Probability: 100
-		Actor: HQNEWNOD
-		DeathType: FinishedDeath
+	DebugTransformOnCondition@Finsihed:
+		RequiresCondition: (74 - Construct) <= 0
+		IntoActor: HQNEWNOD
+		ReadyAudio: ConstructionComplete
 	ExternalCondition@buildfurther: 
 		Condition: Construct
 		TotalCap: 74
@@ -532,12 +493,6 @@ HQNEWNOD.SCAFF:
 	Targetable@deliverresources: 
 		TargetTypes: Deliverable
 		RequiresCondition: 74 > DeliveredResources
-	SelfHealing@Finished:
-		PercentageStep: -200
-		HealIfBelow: 110
-		Delay: 1
-		RequiresCondition: (74 - Construct) <= 0
-		DamageTypes: FinishedDeath
 	WithIdleOverlay@base1:
 		Sequence: make1
 		RequiresCondition: Construct > 10 && Construct < 22
@@ -592,10 +547,10 @@ HQNEWGDI.SCAFF:
 		VisualBounds: 48,53,0,-4
 	WithSpriteBody:
 		RequiresCondition: inactive
-	SpawnActorOnDeath@Finsihed:
-		Probability: 100
-		Actor: HQNEWGDI
-		DeathType: FinishedDeath
+	DebugTransformOnCondition@Finsihed:
+		RequiresCondition: (74 - Construct) <= 0
+		IntoActor: HQNEWGDI
+		ReadyAudio: ConstructionComplete
 	ExternalCondition@buildfurther: 
 		Condition: Construct
 		TotalCap: 74
@@ -608,12 +563,6 @@ HQNEWGDI.SCAFF:
 	Targetable@deliverresources: 
 		TargetTypes: Deliverable
 		RequiresCondition: 74 > DeliveredResources
-	SelfHealing@Finished:
-		PercentageStep: -200
-		HealIfBelow: 110
-		Delay: 1
-		RequiresCondition: (74 - Construct) <= 0
-		DamageTypes: FinishedDeath
 	WithIdleOverlay@base1:
 		Sequence: make1
 		RequiresCondition: Construct > 10 && Construct < 22
@@ -668,10 +617,10 @@ ARMORYNOD.SCAFF:
 		VisualBounds: 48,53,0,-4
 	WithSpriteBody:
 		RequiresCondition: inactive
-	SpawnActorOnDeath@Finsihed:
-		Probability: 100
-		Actor: ARMORYNOD
-		DeathType: FinishedDeath
+	DebugTransformOnCondition@Finsihed:
+		RequiresCondition: (86 - Construct) <= 0
+		IntoActor: ARMORYNOD
+		ReadyAudio: ConstructionComplete
 	ExternalCondition@buildfurther: 
 		Condition: Construct
 		TotalCap: 86
@@ -684,12 +633,6 @@ ARMORYNOD.SCAFF:
 	Targetable@deliverresources: 
 		TargetTypes: Deliverable
 		RequiresCondition: 86 > DeliveredResources
-	SelfHealing@Finished:
-		PercentageStep: -200
-		HealIfBelow: 110
-		Delay: 1
-		RequiresCondition: (86 - Construct) <= 0
-		DamageTypes: FinishedDeath
 	WithIdleOverlay@base1:
 		Sequence: make1
 		RequiresCondition: Construct > 5 && Construct < 20
@@ -738,10 +681,10 @@ ARMORYGDI.SCAFF:
 		VisualBounds: 48,53,0,-4
 	WithSpriteBody:
 		RequiresCondition: inactive
-	SpawnActorOnDeath@Finsihed:
-		Probability: 100
-		Actor: ARMORYGDI
-		DeathType: FinishedDeath
+	DebugTransformOnCondition@Finsihed:
+		RequiresCondition: (90 - Construct) <= 0
+		IntoActor: ARMORYGDI
+		ReadyAudio: ConstructionComplete
 	ExternalCondition@buildfurther: 
 		Condition: Construct
 		TotalCap: 90
@@ -754,12 +697,6 @@ ARMORYGDI.SCAFF:
 	Targetable@deliverresources: 
 		TargetTypes: Deliverable
 		RequiresCondition: 90 > DeliveredResources
-	SelfHealing@Finished:
-		PercentageStep: -200
-		HealIfBelow: 110
-		Delay: 1
-		RequiresCondition: (90 - Construct) <= 0
-		DamageTypes: FinishedDeath
 	WithIdleOverlay@base1:
 		Sequence: make1
 		RequiresCondition: Construct > 5 && Construct < 20
@@ -808,10 +745,10 @@ NUK2NEW.SCAFF:
 		VisualBounds: 72,53,0,-4
 	WithSpriteBody:
 		RequiresCondition: inactive
-	SpawnActorOnDeath@Finsihed:
-		Probability: 100
-		Actor: NUK2NEW
-		DeathType: FinishedDeath
+	DebugTransformOnCondition@Finsihed:
+		RequiresCondition: (28 - Construct) <= 0
+		IntoActor: NUK2NEW
+		ReadyAudio: ConstructionComplete
 	ExternalCondition@buildfurther: 
 		Condition: Construct
 		TotalCap: 28
@@ -824,12 +761,6 @@ NUK2NEW.SCAFF:
 	Targetable@deliverresources: 
 		TargetTypes: Deliverable
 		RequiresCondition: 28 > DeliveredResources
-	SelfHealing@Finished:
-		PercentageStep: -200
-		HealIfBelow: 110
-		Delay: 1
-		RequiresCondition: (28 - Construct) <= 0
-		DamageTypes: FinishedDeath
 	WithIdleOverlay@base1:
 		Sequence: make1
 		RequiresCondition: Construct > 5 && Construct < 10
@@ -848,7 +779,6 @@ XLTNTUNI.SCAFF:
 	Inherits: ^ConstructionSite
 	Inherits@Hitshape: ^2x2Shape
 	-ConstructionProgress@DeliveredResources:
-    -SelfHealing@Finished:
 	GrantRandomCondition:
 		RandomConditions: valida, validb, validc
 		FallbackCondition: none
@@ -893,18 +823,18 @@ XLTNTUNI.SCAFF:
 		TargetTypes: Buildable
 		RequiresCondition: Construct < 40
 	-Targetable@deliverresources: 
-	TransformOnCondition@typeA:
+	DebugTransformOnCondition@typeA:
 		IntoActor: XLTNT1
 		RequiresCondition: Construct >= 40 && valida
-        ReadyAudio: ConstructionComplete
+		ReadyAudio: ConstructionComplete
 	TransformOnCondition@typeB:
 		IntoActor: XLTNT2
 		RequiresCondition: Construct >= 40 && validb
-        ReadyAudio: ConstructionComplete
+		ReadyAudio: ConstructionComplete
 	TransformOnCondition@typeC:
 		IntoActor: XLTNT3
 		RequiresCondition: Construct >= 40 && validc
-        ReadyAudio: ConstructionComplete
+		ReadyAudio: ConstructionComplete
 	WithIdleOverlay@base1:
 		Sequence: make1
 		RequiresCondition: Construct >= 0 && Construct < 10 && valida
@@ -1004,10 +934,10 @@ PROCNEW.SCAFF:
 		VisualBounds: 73,72
 	WithSpriteBody:
 		RequiresCondition: inactive
-	SpawnActorOnDeath@Finsihed:
-		Probability: 100
-		Actor: PROCNEW
-		DeathType: FinishedDeath
+	DebugTransformOnCondition@Finsihed:
+		RequiresCondition: (60 - Construct) <= 0
+		IntoActor: PROCNEW
+		ReadyAudio: ConstructionComplete
 	ExternalCondition@buildfurther: 
 		Condition: Construct
 		TotalCap: 60
@@ -1020,12 +950,6 @@ PROCNEW.SCAFF:
 	Targetable@deliverresources: 
 		TargetTypes: Deliverable
 		RequiresCondition: 60 > DeliveredResources
-	SelfHealing@Finished:
-		PercentageStep: -200
-		HealIfBelow: 110
-		Delay: 1
-		RequiresCondition: (60 - Construct) <= 0
-		DamageTypes: FinishedDeath
 	WithIdleOverlay@base1:
 		Sequence: make1
 		RequiresCondition: Construct > 5 && Construct < 15
@@ -1065,8 +989,8 @@ SILONEW.SCAFF:
 	Buildable:
 		BuildPaletteOrder: 40
 		Prerequisites: proc
-		Queue: MResources.GDI, MResources.Nod, MResources.SUL
-		Description: Stores additional Ore\n\n\n\n
+		Queue: MResources.SUL
+		Description: Stores additional Resources\n\n\n\n
 		IconPalette: raicon
 		BuildDuration: 15
 	Health:
@@ -1081,10 +1005,10 @@ SILONEW.SCAFF:
 		Bounds: 50,50,0,3
 	WithSpriteBody:
 		RequiresCondition: inactive
-	SpawnActorOnDeath@Finsihed:
-		Probability: 100
-		Actor: SILONEW
-		DeathType: FinishedDeath
+	DebugTransformOnCondition@Finsihed:
+		RequiresCondition: (16 - Construct) <= 0
+		IntoActor: SILONEW
+		ReadyAudio: ConstructionComplete
 	ExternalCondition@buildfurther: 
 		Condition: Construct
 		TotalCap: 16
@@ -1097,12 +1021,6 @@ SILONEW.SCAFF:
 	Targetable@deliverresources: 
 		TargetTypes: Deliverable
 		RequiresCondition: 16 > DeliveredResources
-	SelfHealing@Finished:
-		PercentageStep: -200
-		HealIfBelow: 110
-		Delay: 1
-		RequiresCondition: (16 - Construct) <= 0
-		DamageTypes: FinishedDeath
 	WithIdleOverlay@base1:
 		Sequence: make1
 		RequiresCondition: Construct > 2 && Construct < 4
@@ -1115,6 +1033,78 @@ SILONEW.SCAFF:
 	WithIdleOverlay@base4:
 		Sequence: make4
 		RequiresCondition: Construct >= 9
+        
+        		
+SILOTWO.SCAFF:
+	Inherits: ^2x2SITE
+	Inherits@Hitshape: ^2x2Shape
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+	Armor:
+		Type: Concrete
+	RenderSprites:
+		PlayerPalette: raplayer
+		Image: silotwo
+	CustomSellValue:
+		Value: 115
+	Valued:
+		Cost: 350
+	Tooltip:
+		Name: Construction Site (Barn)
+	Buildable:
+		BuildPaletteOrder: 40
+		Prerequisites: proc
+		Queue: MResources.GDI, MResources.Nod
+		Description: Stores additional Resources\n\n\n\n
+		IconPalette: raicon
+		BuildDuration: 15
+	Health:
+		HP: 20000
+	RevealsShroud:
+		Range: 4c0
+	WithBuildingBib:
+		HasMinibib: Yes
+	SelectionDecorations:
+		VisualBounds: 50,50
+	Selectable:
+		Bounds: 50,50,0,3
+	WithSpriteBody:
+		RequiresCondition: inactive
+	DebugTransformOnCondition@Finsihed:
+		RequiresCondition: (18 - Construct) <= 0
+		IntoActor: SILOTWO
+		ReadyAudio: ConstructionComplete
+	ExternalCondition@buildfurther: 
+		Condition: Construct
+		TotalCap: 18
+	ExternalCondition@Deliverfurther:
+		Condition: DeliveredResources
+		TotalCap: 18
+	Targetable@buildfurther: 
+		TargetTypes: Buildable
+		RequiresCondition: DeliveredResources > Construct && (18 - Construct) > 0
+	Targetable@deliverresources: 
+		TargetTypes: Deliverable
+		RequiresCondition: 18 > DeliveredResources
+	WithIdleOverlay@base1:
+		Sequence: make1
+		RequiresCondition: Construct > 2 && Construct < 4
+	WithIdleOverlay@base2:
+		Sequence: make2
+		RequiresCondition: Construct >= 4 && Construct < 6
+	WithIdleOverlay@base3:
+		Sequence: make3
+		RequiresCondition: Construct >= 6 && Construct < 9
+	WithIdleOverlay@base4:
+		Sequence: make4
+		RequiresCondition: Construct >= 9 && Construct < 12
+	WithIdleOverlay@base5:
+		Sequence: make5
+		RequiresCondition: Construct >= 12 && Construct < 14
+	WithIdleOverlay@base6:
+		Sequence: make6
+		RequiresCondition: Construct >= 14
 		
 BARRNEW.SCAFF:
 	Inherits: ^2x2SITE
@@ -1148,10 +1138,10 @@ BARRNEW.SCAFF:
 		VisualBounds: 48,42,0,-5
 	WithSpriteBody:
 		RequiresCondition: inactive
-	SpawnActorOnDeath@Finsihed:
-		Probability: 100
-		Actor: BARRNEW
-		DeathType: FinishedDeath
+	DebugTransformOnCondition@Finsihed:
+		RequiresCondition: (20 - Construct) <= 0
+		IntoActor: BARRNEW
+		ReadyAudio: ConstructionComplete
 	ExternalCondition@buildfurther: 
 		Condition: Construct
 		TotalCap: 20
@@ -1164,12 +1154,6 @@ BARRNEW.SCAFF:
 	Targetable@deliverresources: 
 		TargetTypes: Deliverable
 		RequiresCondition: 20 > DeliveredResources
-	SelfHealing@Finished:
-		PercentageStep: -200
-		HealIfBelow: 110
-		Delay: 1
-		RequiresCondition: (20 - Construct) <= 0
-		DamageTypes: FinishedDeath
 	WithIdleOverlay@base1:
 		Sequence: make1
 		RequiresCondition: Construct > 6 && Construct < 10
@@ -1218,10 +1202,10 @@ STALL.SCAFF:
 		VisualBounds: 72,64,0,-16
 	WithSpriteBody:
 		RequiresCondition: inactive
-	SpawnActorOnDeath@Finsihed:
-		Probability: 100
-		Actor: STALL
-		DeathType: FinishedDeath
+	DebugTransformOnCondition@Finsihed:
+		RequiresCondition: (80 - Construct) <= 0
+		IntoActor: STALL
+		ReadyAudio: ConstructionComplete
 	ExternalCondition@buildfurther: 
 		Condition: Construct
 		TotalCap: 80
@@ -1234,12 +1218,6 @@ STALL.SCAFF:
 	Targetable@deliverresources: 
 		TargetTypes: Deliverable
 		RequiresCondition: 80 > DeliveredResources
-	SelfHealing@Finished:
-		PercentageStep: -200
-		HealIfBelow: 110
-		Delay: 1
-		RequiresCondition: (80 - Construct) <= 0
-		DamageTypes: FinishedDeath
 	WithIdleOverlay@base1:
 		Sequence: make1
 		RequiresCondition: Construct > 5 && Construct < 15
@@ -1291,10 +1269,10 @@ NODSTALL.SCAFF:
 		VisualBounds: 86,64,0,-4
 	WithSpriteBody:
 		RequiresCondition: inactive
-	SpawnActorOnDeath@Finsihed:
-		Probability: 100
-		Actor: NODSTALL
-		DeathType: FinishedDeath
+	DebugTransformOnCondition@Finsihed:
+		RequiresCondition: (75 - Construct) <= 0
+		IntoActor: NODSTALL
+		ReadyAudio: ConstructionComplete
 	ExternalCondition@buildfurther: 
 		Condition: Construct
 		TotalCap: 75
@@ -1307,12 +1285,6 @@ NODSTALL.SCAFF:
 	Targetable@deliverresources: 
 		TargetTypes: Deliverable
 		RequiresCondition: 75 > DeliveredResources
-	SelfHealing@Finished:
-		PercentageStep: -200
-		HealIfBelow: 110
-		Delay: 1
-		RequiresCondition: (75 - Construct) <= 0
-		DamageTypes: FinishedDeath
 	WithIdleOverlay@base1:
 		Sequence: make1
 		RequiresCondition: Construct > 5 && Construct < 15
@@ -1368,10 +1340,10 @@ CASTLE.SCAFF:
 		VisualBounds: 72,68,0,0
 	WithSpriteBody:
 		RequiresCondition: inactive
-	SpawnActorOnDeath@Finsihed:
-		Probability: 100
-		Actor: CASTLE
-		DeathType: FinishedDeath
+	DebugTransformOnCondition@Finsihed:
+		RequiresCondition: (100 - Construct) <= 0
+		IntoActor: CASTLE
+		ReadyAudio: ConstructionComplete
 	ExternalCondition@buildfurther: 
 		Condition: Construct
 		TotalCap: 100
@@ -1384,12 +1356,6 @@ CASTLE.SCAFF:
 	Targetable@deliverresources: 
 		TargetTypes: Deliverable
 		RequiresCondition: 100 > DeliveredResources
-	SelfHealing@Finished:
-		PercentageStep: -200
-		HealIfBelow: 110
-		Delay: 1
-		RequiresCondition: (100 - Construct) <= 0
-		DamageTypes: FinishedDeath
 	WithIdleOverlay@base1:
 		Sequence: make1
 		RequiresCondition: Construct > 5 && Construct < 15
@@ -1445,10 +1411,10 @@ CASTLE2.SCAFF:
 		VisualBounds: 72,68,0,0
 	WithSpriteBody:
 		RequiresCondition: inactive
-	SpawnActorOnDeath@Finsihed:
-		Probability: 100
-		Actor: CASTLE2
-		DeathType: FinishedDeath
+	DebugTransformOnCondition@Finsihed:
+		RequiresCondition: (80 - Construct) <= 0
+		IntoActor: CASTLE2
+		ReadyAudio: ConstructionComplete
 	ExternalCondition@buildfurther: 
 		Condition: Construct
 		TotalCap: 80
@@ -1461,12 +1427,6 @@ CASTLE2.SCAFF:
 	Targetable@deliverresources: 
 		TargetTypes: Deliverable
 		RequiresCondition: 80 > DeliveredResources
-	SelfHealing@Finished:
-		PercentageStep: -200
-		HealIfBelow: 110
-		Delay: 1
-		RequiresCondition: (80 - Construct) <= 0
-		DamageTypes: FinishedDeath
 	WithIdleOverlay@base1:
 		Sequence: make1
 		RequiresCondition: Construct > 10 && Construct < 25
@@ -1518,10 +1478,10 @@ WORKSHOPNOD.SCAFF:
 		VisualBounds: 72,48
 	WithSpriteBody:
 		RequiresCondition: inactive
-	SpawnActorOnDeath@Finsihed:
-		Probability: 100
-		Actor: WORKSHOPNOD
-		DeathType: FinishedDeath
+	DebugTransformOnCondition@Finsihed:
+		RequiresCondition: (55 - Construct) <= 0
+		IntoActor: WORKSHOPNOD
+		ReadyAudio: ConstructionComplete
 	ExternalCondition@buildfurther: 
 		Condition: Construct
 		TotalCap: 55
@@ -1534,12 +1494,6 @@ WORKSHOPNOD.SCAFF:
 	Targetable@deliverresources: 
 		TargetTypes: Deliverable
 		RequiresCondition: 55 > DeliveredResources
-	SelfHealing@Finished:
-		PercentageStep: -200
-		HealIfBelow: 110
-		Delay: 1
-		RequiresCondition: (55 - Construct) <= 0
-		DamageTypes: FinishedDeath
 	WithIdleOverlay@base1:
 		Sequence: make1
 		RequiresCondition: Construct > 10 && Construct < 25
@@ -1589,10 +1543,10 @@ WORKSHOPGDI.SCAFF:
 		VisualBounds: 72,48
 	WithSpriteBody:
 		RequiresCondition: inactive
-	SpawnActorOnDeath@Finsihed:
-		Probability: 100
-		Actor: WORKSHOPGDI
-		DeathType: FinishedDeath
+	DebugTransformOnCondition@Finsihed:
+		RequiresCondition: (65 - Construct) <= 0
+		IntoActor: WORKSHOPGDI
+		ReadyAudio: ConstructionComplete
 	ExternalCondition@buildfurther: 
 		Condition: Construct
 		TotalCap: 65
@@ -1605,12 +1559,6 @@ WORKSHOPGDI.SCAFF:
 	Targetable@deliverresources: 
 		TargetTypes: Deliverable
 		RequiresCondition: 65 > DeliveredResources
-	SelfHealing@Finished:
-		PercentageStep: -200
-		HealIfBelow: 110
-		Delay: 1
-		RequiresCondition: (65 - Construct) <= 0
-		DamageTypes: FinishedDeath
 	WithIdleOverlay@base1:
 		Sequence: make1
 		RequiresCondition: Construct > 10 && Construct < 26
@@ -1661,10 +1609,10 @@ GTWNEW.SCAFF:
 		VisualBounds: 22,48,0,-10
 	WithSpriteBody:
 		RequiresCondition: inactive
-	SpawnActorOnDeath@Finsihed:
-		Probability: 100
-		Actor: GTWNEW
-		DeathType: FinishedDeath
+	DebugTransformOnCondition@Finsihed:
+		RequiresCondition: (15 - Construct) <= 0
+		IntoActor: GTWNEW
+		ReadyAudio: ConstructionComplete
 	ExternalCondition@buildfurther: 
 		Condition: Construct
 		TotalCap: 15
@@ -1677,12 +1625,6 @@ GTWNEW.SCAFF:
 	Targetable@deliverresources: 
 		TargetTypes: Deliverable
 		RequiresCondition: 15 > DeliveredResources
-	SelfHealing@Finished:
-		PercentageStep: -200
-		HealIfBelow: 110
-		Delay: 1
-		RequiresCondition: (15 - Construct) <= 0
-		DamageTypes: FinishedDeath
 	WithIdleOverlay@base1:
 		Sequence: make1
 		RequiresCondition: Construct > 1 && Construct < 3
@@ -1738,10 +1680,10 @@ GUNNEW.SCAFF:
 		VisualBounds: 25,25,0,0 
 	WithSpriteBody:
 		RequiresCondition: inactive
-	SpawnActorOnDeath@Finsihed:
-		Probability: 100
-		Actor: GUNNEW
-		DeathType: FinishedDeath
+	DebugTransformOnCondition@Finsihed:
+		RequiresCondition: (25 - Construct) <= 0
+		IntoActor: GUNNEW
+		ReadyAudio: ConstructionComplete
 	ExternalCondition@buildfurther: 
 		Condition: Construct
 		TotalCap: 25
@@ -1754,12 +1696,6 @@ GUNNEW.SCAFF:
 	Targetable@deliverresources: 
 		TargetTypes: Deliverable
 		RequiresCondition: 25 > DeliveredResources
-	SelfHealing@Finished:
-		PercentageStep: -200
-		HealIfBelow: 110
-		Delay: 1
-		RequiresCondition: (25 - Construct) <= 0
-		DamageTypes: FinishedDeath
 	WithIdleOverlay@base1:
 		Sequence: make1
 		RequiresCondition: Construct > 5 && Construct < 8
@@ -1815,10 +1751,10 @@ TRIBU.SCAFF:
 		VisualBounds: 30,52,0,-12 
 	WithSpriteBody:
 		RequiresCondition: inactive
-	SpawnActorOnDeath@Finsihed:
-		Probability: 100
-		Actor: TRIBU
-		DeathType: FinishedDeath
+	DebugTransformOnCondition@Finsihed:
+		RequiresCondition: (60 - Construct) <= 0
+		IntoActor: TRIBU
+		ReadyAudio: ConstructionComplete
 	ExternalCondition@buildfurther: 
 		Condition: Construct
 		TotalCap: 60
@@ -1831,12 +1767,6 @@ TRIBU.SCAFF:
 	Targetable@deliverresources: 
 		TargetTypes: Deliverable
 		RequiresCondition: 60 > DeliveredResources
-	SelfHealing@Finished:
-		PercentageStep: -200
-		HealIfBelow: 110
-		Delay: 1
-		RequiresCondition: (60 - Construct) <= 0
-		DamageTypes: FinishedDeath
 	WithIdleOverlay@base1:
 		Sequence: make1
 		RequiresCondition: Construct > 5 && Construct < 15
@@ -1895,10 +1825,10 @@ BATO.SCAFF:
 		VisualBounds: 30,40,0,-12 
 	WithSpriteBody:
 		RequiresCondition: inactive
-	SpawnActorOnDeath@Finsihed:
-		Probability: 100
-		Actor: BATO
-		DeathType: FinishedDeath
+	DebugTransformOnCondition@Finsihed:
+		RequiresCondition: (55 - Construct) <= 0
+		IntoActor: BATO
+		ReadyAudio: ConstructionComplete
 	ExternalCondition@buildfurther: 
 		Condition: Construct
 		TotalCap: 55
@@ -1911,12 +1841,6 @@ BATO.SCAFF:
 	Targetable@deliverresources: 
 		TargetTypes: Deliverable
 		RequiresCondition: 55 > DeliveredResources
-	SelfHealing@Finished:
-		PercentageStep: -200
-		HealIfBelow: 110
-		Delay: 1
-		RequiresCondition: (55 - Construct) <= 0
-		DamageTypes: FinishedDeath
 	WithIdleOverlay@base1:
 		Sequence: make1
 		RequiresCondition: Construct > 5 && Construct < 15
@@ -1979,10 +1903,10 @@ SAMNEW.SCAFF:
 		Bounds: 50,50,0,-10
 	WithSpriteBody:
 		RequiresCondition: inactive
-	SpawnActorOnDeath@Finsihed:
-		Probability: 100
-		Actor: SAMNEW
-		DeathType: FinishedDeath
+	DebugTransformOnCondition@Finsihed:
+		RequiresCondition: (26 - Construct) <= 0
+		IntoActor: SAMNEW
+		ReadyAudio: ConstructionComplete
 	ExternalCondition@buildfurther: 
 		Condition: Construct
 		TotalCap: 26
@@ -1995,12 +1919,6 @@ SAMNEW.SCAFF:
 	Targetable@deliverresources: 
 		TargetTypes: Deliverable
 		RequiresCondition: 26 > DeliveredResources
-	SelfHealing@Finished:
-		PercentageStep: -200
-		HealIfBelow: 110
-		Delay: 1
-		RequiresCondition: (26 - Construct) <= 0
-		DamageTypes: FinishedDeath
 	WithIdleOverlay@base1:
 		Sequence: make1
 		RequiresCondition: Construct > 5 && Construct < 6
@@ -2051,10 +1969,10 @@ TAVERN.SCAFF:
 		VisualBounds: 72,64,0,-16
 	WithSpriteBody:
 		RequiresCondition: inactive
-	SpawnActorOnDeath@Finsihed:
-		Probability: 100
-		Actor: TAVERN
-		DeathType: FinishedDeath
+	DebugTransformOnCondition@Finsihed:
+		RequiresCondition: (52 - Construct) <= 0
+		IntoActor: TAVERN
+		ReadyAudio: ConstructionComplete
 	ExternalCondition@buildfurther: 
 		Condition: Construct
 		TotalCap: 52
@@ -2067,12 +1985,6 @@ TAVERN.SCAFF:
 	Targetable@deliverresources: 
 		TargetTypes: Deliverable
 		RequiresCondition: 52 > DeliveredResources
-	SelfHealing@Finished:
-		PercentageStep: -200
-		HealIfBelow: 110
-		Delay: 1
-		RequiresCondition: (52 - Construct) <= 0
-		DamageTypes: FinishedDeath
 	WithIdleOverlay@base1:
 		Sequence: make1
 		RequiresCondition: Construct > 5 && Construct < 15
@@ -2125,10 +2037,10 @@ TOWNHALL.SCAFF:
 		VisualBounds: 72,64,0,-16
 	WithSpriteBody:
 		RequiresCondition: inactive
-	SpawnActorOnDeath@Finsihed:
-		Probability: 100
-		Actor: TOWNHALL
-		DeathType: FinishedDeath
+	DebugTransformOnCondition@Finsihed:
+		RequiresCondition: (80 - Construct) <= 0
+		IntoActor: TOWNHALL
+		ReadyAudio: ConstructionComplete
 	ExternalCondition@buildfurther: 
 		Condition: Construct
 		TotalCap: 80
@@ -2141,12 +2053,6 @@ TOWNHALL.SCAFF:
 	Targetable@deliverresources: 
 		TargetTypes: Deliverable
 		RequiresCondition: 80 > DeliveredResources
-	SelfHealing@Finished:
-		PercentageStep: -200
-		HealIfBelow: 110
-		Delay: 1
-		RequiresCondition: (80 - Construct) <= 0
-		DamageTypes: FinishedDeath
 	WithIdleOverlay@base1:
 		Sequence: make1
 		RequiresCondition: Construct > 5 && Construct < 10
@@ -2199,10 +2105,10 @@ SCHAFOTT.SCAFF:
 		VisualBounds: 48,53,0,-4
 	WithSpriteBody:
 		RequiresCondition: inactive
-	SpawnActorOnDeath@Finsihed:
-		Probability: 100
-		Actor: SCHAFOTT
-		DeathType: FinishedDeath
+	DebugTransformOnCondition@Finsihed:
+		RequiresCondition: (45 - Construct) <= 0
+		IntoActor: SCHAFOTT
+		ReadyAudio: ConstructionComplete
 	ExternalCondition@buildfurther: 
 		Condition: Construct
 		TotalCap: 45
@@ -2215,12 +2121,6 @@ SCHAFOTT.SCAFF:
 	Targetable@deliverresources: 
 		TargetTypes: Deliverable
 		RequiresCondition: 45 > DeliveredResources
-	SelfHealing@Finished:
-		PercentageStep: -200
-		HealIfBelow: 110
-		Delay: 1
-		RequiresCondition: (45 - Construct) <= 0
-		DamageTypes: FinishedDeath
 	WithIdleOverlay@base1:
 		Sequence: make1
 		RequiresCondition: Construct > 5 && Construct < 10
@@ -2273,10 +2173,10 @@ HERBALIST.SCAFF:
 		VisualBounds: 48,53,0,-4
 	WithSpriteBody:
 		RequiresCondition: inactive
-	SpawnActorOnDeath@Finsihed:
-		Probability: 100
-		Actor: HERBALIST
-		DeathType: FinishedDeath
+	DebugTransformOnCondition@Finsihed:
+		RequiresCondition: (45 - Construct) <= 0
+		IntoActor: HERBALIST
+		ReadyAudio: ConstructionComplete
 	ExternalCondition@buildfurther: 
 		Condition: Construct
 		TotalCap: 45
@@ -2289,12 +2189,6 @@ HERBALIST.SCAFF:
 	Targetable@deliverresources: 
 		TargetTypes: Deliverable
 		RequiresCondition: 45 > DeliveredResources
-	SelfHealing@Finished:
-		PercentageStep: -200
-		HealIfBelow: 110
-		Delay: 1
-		RequiresCondition: (45 - Construct) <= 0
-		DamageTypes: FinishedDeath
 	WithIdleOverlay@base1:
 		Sequence: make1
 		RequiresCondition: Construct > 5 && Construct < 10

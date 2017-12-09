@@ -276,6 +276,107 @@ FACTNEW:
 		PipColor: Yellow
 		PipCount: 10
 		Capacity: 4000
+	GrantConditionOnPrerequisite@extra2:
+		Condition: extra2
+		Prerequisites: 2extra
+	GrantConditionOnPrerequisite@extra3:
+		Condition: extra3
+		Prerequisites: 3extra
+	GrantConditionOnPrerequisite@extra31:
+		Condition: extra2
+		Prerequisites: 3extra
+	GrantConditionOnPrerequisite@extra5:
+		Condition: extra2
+		Prerequisites: 5extra
+	GrantConditionOnPrerequisite@extra51:
+		Condition: extra3
+		Prerequisites: 5extra
+	GrantConditionOnPrerequisite@extra52:
+		Condition: extra5
+		Prerequisites: 5extra
+	WithFreeSpawnableActor@ExtraLabor1:
+		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
+		UseConverting: false
+		SpawnActor: transporter
+		RequiresCondition: extra2
+		Offset: -124,1024, 0
+		MoveOffset: 1,2
+		Sticky: true
+		Lasso: 3c0
+		ReturnOnDeath: true
+	WithFreeSpawnableActor@ExtraEngeneer1:
+		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
+		UseConverting: false
+		RequiresCondition: extra2
+		SpawnActor: engeneer
+		RespawnTime: 125
+		Offset: -124,1024, 0
+		MoveOffset: 1,2
+		Sticky: true
+		Lasso: 3c0
+		ReturnOnDeath: true
+	WithFreeSpawnableActor@ExtraLabor2:
+		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
+		UseConverting: false
+		SpawnActor: transporter
+		RequiresCondition: extra2
+		Offset: -124,1024, 0
+		MoveOffset: 1,2
+		Sticky: true
+		Lasso: 3c0
+		ReturnOnDeath: true
+	WithFreeSpawnableActor@ExtraLabor3:
+		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
+		UseConverting: false
+		SpawnActor: transporter
+		RequiresCondition: extra3
+		Offset: -124,1024, 0
+		MoveOffset: 1,2
+		Sticky: true
+		Lasso: 3c0
+		ReturnOnDeath: true
+	WithFreeSpawnableActor@ExtraEngeneer2:
+		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
+		UseConverting: false
+		RequiresCondition: extra3
+		SpawnActor: engeneer
+		RespawnTime: 125
+		Offset: -124,1024, 0
+		MoveOffset: 1,2
+		Sticky: true
+		Lasso: 3c0
+		ReturnOnDeath: true
+	WithFreeSpawnableActor@ExtraLabor4:
+		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
+		UseConverting: false
+		SpawnActor: transporter
+		RequiresCondition: extra5
+		Offset: -124,1024, 0
+		MoveOffset: 1,2
+		Sticky: true
+		Lasso: 3c0
+		ReturnOnDeath: true
+	WithFreeSpawnableActor@ExtraEngeneer3:
+		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
+		UseConverting: false
+		RequiresCondition: extra5
+		SpawnActor: engeneer
+		RespawnTime: 125
+		Offset: -124,1024, 0
+		MoveOffset: 1,2
+		Sticky: true
+		Lasso: 3c0
+		ReturnOnDeath: true
+	WithFreeSpawnableActor@ExtraLabor5:
+		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
+		UseConverting: false
+		SpawnActor: transporter
+		RequiresCondition: extra5
+		Offset: -124,1024, 0
+		MoveOffset: 1,2
+		Sticky: true
+		Lasso: 3c0
+		ReturnOnDeath: true
 
 
 FACTNEW.GDI:
@@ -583,13 +684,6 @@ HQNEWNOD:
 	RenderSprites:
 		Image: hqnew
 		PlayerPalette: raplayer
-	Buildable:
-		IconPalette: raicon
-		BuildPaletteOrder: 110
-		Prerequisites: ~scaffold
-		Queue: MTech.Nod
-		Description: Unlocks higher-tech units and buildings.\n\n\n\n
-		BuildDuration: 75
 	Building:
 		Footprint: xx xx ==
 		Dimensions: 2,3
@@ -635,13 +729,6 @@ HQNEWGDI:
 	RenderSprites:
 		Image: obs
 		PlayerPalette: raplayer
-	Buildable:
-		IconPalette: raicon
-		BuildPaletteOrder: 110
-		Prerequisites: ~scaffold
-		Queue: MTech.Nod
-		Description: Unlocks higher-tech units and buildings.\n\n\n\n
-		BuildDuration: 75
 	Building:
 		Footprint: xx xx ==
 		Dimensions: 2,3
@@ -681,13 +768,6 @@ ARMORYNOD:
 	RenderSprites:
 		Image: armory
 		PlayerPalette: raplayer
-	Buildable:
-		IconPalette: raicon
-		BuildPaletteOrder: 120
-		Prerequisites: ~scaffold
-		Queue: MTech.Nod
-		Description: Unlocks Support Powers and Raiding Squad.\nHeals Cavalry and Infantry.\n\n\n\n
-		BuildDuration: 100
 	Building:
 		Footprint: xx xx ==
 		Dimensions: 2,3
@@ -767,13 +847,6 @@ ARMORYGDI:
 	RenderSprites:
 		Image: armorygdi
 		PlayerPalette: raplayer
-	Buildable:
-		IconPalette: raicon
-		BuildPaletteOrder: 120
-		Prerequisites: ~scaffold
-		Queue: MTech.GDI
-		Description: Unlocks Support Powers.\nHeals Cavalry and Infantry.\n\n\n\n
-		BuildDuration: 100
 	Building:
 		Footprint: xx xx ==
 		Dimensions: 2,3
@@ -850,13 +923,6 @@ NUK2NEW:
 		Name: Large Hut
 	ProvidesPrerequisite:
 		Prerequisite: anypower
-	Buildable:
-		IconPalette: raicon
-		BuildPaletteOrder: 120
-		Prerequisites: ~scaffold
-		Queue: MBuilding.GDI
-		Description: Provides more livingspace. Livingspace increases over time by generating peasants.\nCan hold up to 8 peasants, spawntime depends on number of shacks and large huts. \ncheaper than the standard Shack.\n\n\n\n
-		BuildDuration: 50
 	Building:
 		Footprint: xx xx ==
 		Dimensions: 2,3
@@ -954,14 +1020,6 @@ NUKXL:
 		Name: Extra Large Hut
 	ProvidesPrerequisite:
 		Prerequisite: anypower
-	Buildable:
-		Buildable:
-		IconPalette: raicon
-		BuildPaletteOrder: 130
-		Prerequisites: ~scaffold
-		Queue: MBuilding.GDI
-		Description: Provides more livingspace. Livingspace increases over time by generating peasants.\nCan hold up to 15 peasants. \ncheaper than the standard Shack.\n\n\n\n
-		BuildDuration: 75
 	Building:
 		Footprint: xxx xxx ===
 		Dimensions: 3,3
@@ -1064,13 +1122,6 @@ NUKENEW:
 		Name: Small Hut
 	ProvidesPrerequisite:
 		Prerequisite: anypower
-	Buildable:
-		IconPalette: raicon
-		BuildPaletteOrder: 110
-		Prerequisites: ~scaffldbuilded
-		Description: Generates livingspace. Livingspace increases over time by generating peasants.\nCan hold up to 4 peasants, spawntime depends on number of shacks and large huts.\n\n\n\n
-		Queue: MBuilding.GDI
-		BuildDuration: 25
 	Building:
 		Footprint: xx xx ==
 		Dimensions: 2,3
@@ -1248,6 +1299,13 @@ NODNUKE:
 		StartSequence: maked
 		Sequence: idled
 		RequiresCondition: validd
+	Buildable:
+		IconPalette: raicon
+		BuildPaletteOrder: 10
+		Prerequisites: factnew
+		Description: Generates livingspace. Livingspace increases over time by generating peasants.\nCan hold up to 3 peasants, spawntime depends on number of shacks and large huts.\nA tent can be plopped down instant.\n\n\n
+		Queue: MBuilding.Nod
+		BuildDuration: 150
 	Valued:
 		Cost: 350
 	CustomSellValue:
@@ -1256,13 +1314,6 @@ NODNUKE:
 		Name: Tent
 	ProvidesPrerequisite:
 		Prerequisite: anypower
-	Buildable:
-		IconPalette: raicon
-		BuildPaletteOrder: 10
-		Prerequisites: factnew
-		Description: Generates livingspace. Livingspace increases over time by generating peasants.\nCan hold up to 3 peasants, spawntime depends on number of shacks and large huts.\nA tent can be plopped down instant.\n\n\n
-		Queue: MBuilding.Nod
-		BuildDuration: 150
 	Building:
 		Footprint: xx ==
 		Dimensions: 2,2
@@ -1402,13 +1453,6 @@ ZEROPROC:
 		Name: Windmill
 	ProvidesPrerequisite:
 		Prerequisite: proc
-	Buildable:
-		IconPalette: raicon
-		BuildPaletteOrder: 120
-		Prerequisites: ~scaffold
-		Description: Provides basic resource gathering for Crops and Grain.\n Comes with 2 farmers.\n Can only operate up to 6 farmers at once.\n\n\n\n
-		Queue: MResources.GDI
-		BuildDuration: 75
 	Building:
 		Footprint: __ xx x= ==
 		Dimensions: 2,4
@@ -1479,13 +1523,6 @@ NODPROC:
 		Cost: 1500
 	CustomSellValue:
 		Value: 400
-	Buildable:
-		IconPalette: raicon
-		BuildPaletteOrder: 120
-		Prerequisites: ~scaffold
-		Description: Provides basic resource gathering for Crops and Grain.\n Comes with 2 farmers.\n Can only operate up to 6 farmers at once.\n\n\n\n
-		Queue: MResources.Nod
-		BuildDuration: 75
 	WithFreeSpawnableActor@1:
 		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 		SpawnActor: e8farmer
@@ -1538,13 +1575,6 @@ PROCNEW:
 		Cost: 1500
 	Tooltip:
 		Name: Ore Refinery
-	Buildable:
-		IconPalette: raicon
-		BuildPaletteOrder: 130
-		Prerequisites: ~scaffold
-		Description: Processes raw ore and Gold into useable metal.\nGenerates more money than the windmill.\n\n\n\n
-		Queue: MResources.GDI, MResources.Nod
-		BuildDuration: 75
 	Building:
 		Footprint: _x_ xxx xx= ===
 		Dimensions: 3,4
@@ -1593,13 +1623,6 @@ SILONEW:
 		Value: 150
 	Tooltip:
 		Name: Smelter
-	Buildable:
-		BuildPaletteOrder: 140
-		Prerequisites: ~scaffold
-		Queue: MResources.GDI, MResources.Nod, MResources.SUL
-		Description: Stores additional Ore\n\n\n\n
-		IconPalette: raicon
-		BuildDuration: 25
 	Building:
 		Footprint: _x xx
 		Dimensions: 2,2
@@ -1628,6 +1651,46 @@ SILONEW:
 	SelectionDecorations:
 		VisualBounds: 50,50
 	Selectable:
+		Bounds: 50,50,0,3 
+SILOTWO:
+	Inherits: ^MWBaseBuilding
+	Inherits@Hitshape: ^2x2Shape
+	Armor:
+		Type: HeavyBuilding
+	Valued:
+		Cost: 350
+	CustomSellValue:
+		Value: 175
+	Tooltip:
+		Name: Barn
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+	-GivesBuildableArea:
+	Health:
+		HP: 50000
+	RevealsShroud:
+		Range: 4c0
+	WithBuildingBib:
+		HasMinibib: Yes
+	WithDeathAnimation:
+		DeathSequencePalette: raplayer
+	RenderSprites:
+		Image: silotwo
+		PlayerPalette: raplayer
+	WithSpriteBody:
+	AutoSelectionSize:
+	WithSiloAnimation:
+	StoresResources:
+		PipCount: 10
+		PipColor: Green
+		Capacity: 2250
+	-EmitInfantryOnSell:
+	MustBeDestroyed:
+		RequiredForShortGame: false
+	SelectionDecorations:
+		VisualBounds: 50,50
+	Selectable:
 		Bounds: 50,50,0,3
  
 BARRNEW:
@@ -1647,13 +1710,6 @@ BARRNEW:
 		Name: Barracks
 	ProvidesPrerequisite:
 		Prerequisite: barracks
-	Buildable:
-		IconPalette: raicon
-		BuildPaletteOrder: 110
-		Prerequisites: ~scaffold
-		Description: Trains Infantry only\n\n\n\n
-		Queue: MMilitary.GDI
-		BuildDuration: 50
 	Building:
 		Footprint: xx xx ==
 		Dimensions: 2,3
@@ -1712,13 +1768,6 @@ HANDNEW:
 		Name: Barracks
 	ProvidesPrerequisite:
 		Prerequisite: barracks
-	Buildable:
-		IconPalette: raicon
-		BuildPaletteOrder: 110
-		Prerequisites: ~scaffold
-		Description: Trains Infantry only\n\n\n\n
-		Queue: MMilitary.Nod
-		BuildDuration: 50
 	Building:
 		Footprint: __ xx xx ==
 		Dimensions: 2,4
@@ -1772,13 +1821,6 @@ STALL:
 		Value: 1000
 	Tooltip:
 		Name: Stables
-	Buildable:
-		IconPalette: raicon
-		BuildPaletteOrder: 120
-		Prerequisites: ~scaffold
-		Description: Trains cavalry\n\n\n\n
-		Queue: MMilitary.GDI
-		BuildDuration: 100
 	Building:
 		Footprint: xxx xx= ===
 		Dimensions: 3,3
@@ -1859,13 +1901,6 @@ NODSTALL:
 		Value: 875
 	Tooltip:
 		Name: Stables
-	Buildable:
-		IconPalette: raicon
-		BuildPaletteOrder: 120
-		Prerequisites: ~scaffold
-		Description: Trains cavalry\n\n\n\n
-		Queue: MMilitary.Nod
-		BuildDuration: 100
 	Building:
 		Footprint: xxxx xx=x ====
 		Dimensions: 4,3
@@ -1947,13 +1982,6 @@ CASTLE:
 		Value: 1250
 	Tooltip:
 		Name: Castle
-	Buildable:
-		IconPalette: raicon
-		BuildPaletteOrder: 130
-		Prerequisites: ~scaffold
-		Description: Unlocks Superweapon.\n Unlocks Heavy Cavalry, Knight's and Trebuchet.\nCan hold up to 4 nobles.\n\n\n\n
-		Queue: MTech.Nod
-		BuildDuration: 125
 	Building:
 		Footprint: ___ xxx xxx ===
 		Dimensions: 3,4
@@ -2022,13 +2050,6 @@ CASTLE2:
 		Value: 1000
 	Tooltip:
 		Name: Castle
-	Buildable:
-		IconPalette: raicon
-		BuildPaletteOrder: 130
-		Prerequisites: ~scaffold
-		Description: Unlocks Superweapon.\n Unlocks Assassins, Crossbows and Ballista Towers.\nCan hold up to 4 nobles.\n\n\n\n
-		Queue: MTech.GDI
-		BuildDuration: 100
 	Building:
 		Footprint: ___ xxx xxx ===
 		Dimensions: 3,4
@@ -2099,13 +2120,6 @@ WORKSHOPNOD:
 		Value: 700
 	Tooltip:
 		Name: Siege Workshop
-	Buildable:
-		IconPalette: raicon
-		BuildPaletteOrder: 130
-		Prerequisites: ~scaffold
-		Description: Provides Siege weapons construction.\nEnables Supportpowers in combination with an Armory.\n\n\n
-		Queue: MMilitary.Nod
-		BuildDuration: 100
 	Building:
 		Footprint: xxx =xx ===
 		Dimensions: 3,3
@@ -2217,13 +2231,6 @@ WORKSHOPGDI:
 		Value: 800
 	Tooltip:
 		Name: Siege Workshop
-	Buildable:
-		IconPalette: raicon
-		BuildPaletteOrder: 130
-		Prerequisites: ~scaffold
-		Description: Provides Siege weapons construction.\nEnables Supportpowers in combination with an Armory.\n\n\n
-		Queue: MMilitary.GDI
-		BuildDuration: 100
 	Building:
 		Footprint: xxx xx= ===
 		Dimensions: 3,3
@@ -2768,13 +2775,6 @@ TAVERN:
 		Value: 350
 	Tooltip:
 		Name: Tavern
-	Buildable:
-		IconPalette: raicon
-		BuildPaletteOrder: 100
-		Prerequisites: ~scaffold
-		Description: Provides 3 additional haulers and 1 engineer.\n\n\n\n
-		Queue: MTech.GDI, MTech.Nod
-		BuildDuration: 50
 	Building:
 		Footprint: xxx xxx ===
 		Dimensions: 3,3
@@ -2851,13 +2851,6 @@ TOWNHALL:
 		Value: 1000
 	Tooltip:
 		Name: Town Hall
-	Buildable:
-		IconPalette: raicon
-		BuildPaletteOrder: 140
-		Prerequisites: ~scaffold
-		Description: Attracts citizens to your town.\nNew Peasants will spawn faster.\n\n\n
-		Queue: MBuilding.GDI, MBuilding.Nod
-		BuildDuration: 125
 	Building:
 		Footprint: xxx xxx ===
 		Dimensions: 3,3
@@ -2901,13 +2894,6 @@ SCHAFOTT:
 		Value: 500
 	Tooltip:
 		Name: Scaffold
-	Buildable:
-		IconPalette: raicon
-		BuildPaletteOrder: 135
-		Prerequisites: ~scaffold
-		Description: Attracts citizens to your town.\nNew Peasants will spawn faster.\n\n\n
-		Queue: MBuilding.Nod
-		BuildDuration: 75
 	Building:
 		Footprint: xx xx ==
 		Dimensions: 2,3
@@ -2945,13 +2931,6 @@ HERBALIST:
 		Value: 500
 	Tooltip:
 		Name: Herbalist
-	Buildable:
-		IconPalette: raicon
-		BuildPaletteOrder: 135
-		Prerequisites: ~scaffold
-		Description: Attracts citizens to your town.\nNew Peasants will spawn faster.\n\n\n
-		Queue: MBuilding.GDI
-		BuildDuration: 75
 	Building:
 		Footprint: xx xx ==
 		Dimensions: 2,3
@@ -2988,13 +2967,6 @@ LODGE:
 		Value: 150
 	Tooltip:
 		Name: Hunters Lodge
-	Buildable:
-		IconPalette: raicon
-		BuildPaletteOrder: 110
-		Description: A hunter can go out and hunt down animals from here.\n\n\n
-		Queue: MResources.GDI, MResources.Nod
-		BuildDuration: 25
-		Prerequisites: ~scaffold
 	Building:
 		Footprint: xx ==
 		Dimensions: 2,2
@@ -3042,13 +3014,6 @@ LJACKB:
 		Value: 225
 	Tooltip:
 		Name: Lumber Shack
-	Buildable:
-		IconPalette: raicon
-		BuildPaletteOrder: 105
-		Description: A hunter can go out and hunt down animals from here.\n\n\n
-		Queue: MResources.GDI, MResources.Nod, MResources.SUL
-		BuildDuration: 25
-		Prerequisites: ~scaffold
 	Building:
 		Footprint: x
 		Dimensions: 1,1

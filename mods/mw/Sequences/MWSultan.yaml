@@ -1459,6 +1459,7 @@ sulminaret:
 			WINTER: TEMPERAT
 			JUNGLE: TEMPERAT
 			SNOW: TEMPERAT
+			INTERIOR: TEMPERAT
 		Length: *
 		Offset: 0,-2
 	make1: 
@@ -1562,6 +1563,7 @@ sulgtw:
 			WINTER: TEMPERAT
 			JUNGLE: TEMPERAT
 			SNOW: TEMPERAT
+			INTERIOR: TEMPERAT
 		Length: *
 		Offset: 0,-2
 	icon: sulgtwicon.shp
@@ -1969,6 +1971,7 @@ sulspball:
 			WINTER: TEMPERAT
 			JUNGLE: TEMPERAT
 			SNOW: TEMPERAT
+			INTERIOR: TEMPERAT
 		Length: *
 	icon: sulspballicon.shp
 		AddExtension: False		

@@ -1,0 +1,1114 @@
+General:
+	Name: Interior
+	Id: INTERIOR
+	Palette: temperat.pal
+	Palette@3: newMWPalette.pal
+	EditorTemplateOrder: Floor, Wall, Openings
+	HeightDebugColors: 880000
+	SheetSize: 1024
+   
+
+Terrain:
+	TerrainType@BlueTiberium:
+		Type: BlueTiberium
+		TargetTypes: Ground
+		AcceptsSmudgeType: Crater, Scorch
+		Color: C6D648
+		RestrictPlayerColor: true
+	TerrainType@Corruption:
+		Type: Corruption
+		TargetTypes: Ground
+		AcceptsSmudgeType: Crater, Scorch
+		Color: 2F0D0D
+		RestrictPlayerColor: true
+	TerrainType@Tiberium:
+		Type: Tiberium
+		TargetTypes: Ground
+		AcceptsSmudgeType: Crater, Scorch
+		Color: D67A48
+		RestrictPlayerColor: true
+	TerrainType@CROPS:
+		Type: Crops
+		TargetTypes: Ground
+		AcceptsSmudgeType: Crater, Scorch
+		Color: 55C785
+		RestrictPlayerColor: true
+	TerrainType@WOOD:
+		Type: Wood
+		TargetTypes: Ground
+		AcceptsSmudgeType: Crater, Scorch
+		Color: A18739
+		RestrictPlayerColor: true
+	TerrainType@LOOT:
+		Type: Loot
+		TargetTypes: Ground
+		AcceptsSmudgeType: Crater, Scorch
+		Color: C74343
+		RestrictPlayerColor: true
+	TerrainType@Tree:
+		Type: Tree
+		TargetTypes: Ground
+		Color: 1C2024
+	TerrainType@Wall:
+		Type: Wall
+		TargetTypes: Ground
+		Color: 000000
+		RestrictPlayerColor: true
+	TerrainType@Clear:
+		Type: Clear
+		TargetTypes: Ground
+		AcceptsSmudgeType: Scorch
+		Color: D0C0A0
+
+Templates:
+	Template@65535:
+		Id: 65535
+		Images: empty.shp
+		Size: 1,1
+		Categories: Floor
+		Palette: mwcivilian
+		Tiles:
+			0: Wall
+	Template@255:
+		Id: 255
+		Images: empty.shp
+		Size: 1,1
+		Categories: Floor
+		Palette: mwcivilian
+		Tiles:
+			0: Wall
+	Template@1:
+		Id: 1
+		Images: wgw.shp
+		Size: 1,1
+		PickAny: True
+		Categories: Floor
+		Palette: mwcivilian
+		Tiles:
+			0: Clear
+			1: Clear
+			2: Clear
+			3: Clear
+			4: Clear
+			5: Clear
+	Template@2:
+		Id: 2
+		Images: wgsw.shp
+		Size: 1,1
+		PickAny: True
+		Categories: Floor
+		Palette: mwcivilian
+		Tiles:
+			0: Clear
+			1: Clear
+			2: Clear
+			3: Clear
+			4: Clear
+			5: Clear
+	Template@3:
+		Id: 3
+		Images: wgsn.shp
+		Size: 1,1
+		PickAny: True
+		Categories: Floor
+		Palette: mwcivilian
+		Tiles:
+			0: Clear
+			1: Clear
+			2: Clear
+			3: Clear
+			4: Clear
+			5: Clear
+	Template@4:
+		Id: 4
+		Images: wgse1.shp
+		Size: 1,1
+		PickAny: True
+		Categories: Floor
+		Palette: mwcivilian
+		Tiles:
+			0: Clear
+			1: Clear
+			2: Clear
+			3: Clear
+			4: Clear
+			5: Clear
+	Template@5:
+		Id: 5
+		Images: wgse2.shp
+		Size: 1,1
+		PickAny: True
+		Categories: Floor
+		Palette: mwcivilian
+		Tiles:
+			0: Clear
+			1: Clear
+			2: Clear
+			3: Clear
+			4: Clear
+			5: Clear
+	Template@6:
+		Id: 6
+		Images: wgwsc1.shp
+		Size: 1,1
+		PickAny: True
+		Categories: Floor
+		Palette: mwcivilian
+		Tiles:
+			0: Clear
+			1: Clear
+			2: Clear
+			3: Clear
+			4: Clear
+			5: Clear
+	Template@7:
+		Id: 7
+		Images: wgwsc2.shp
+		Size: 1,1
+		PickAny: True
+		Categories: Floor
+		Palette: mwcivilian
+		Tiles:
+			0: Clear
+			1: Clear
+			2: Clear
+			3: Clear
+			4: Clear
+			5: Clear
+	Template@10:
+		Id: 10
+		Images: cobble.shp
+		Size: 1,1
+		Categories: Floor
+		PickAny: True
+		Palette: mwcivilian
+		Tiles:
+			0: Clear
+			1: Clear
+			2: Clear
+			3: Clear
+			4: Clear
+			5: Clear
+			6: Clear
+			7: Clear
+	Template@11:
+		Id: 11
+		Images: cobblesw.shp
+		Size: 1,1
+		Categories: Floor
+		PickAny: True
+		Palette: mwcivilian
+		Tiles:
+			0: Clear
+			1: Clear
+			2: Clear
+			3: Clear
+			4: Clear
+			5: Clear
+			6: Clear
+			7: Clear
+	Template@12:
+		Id: 12
+		Images: cobblesn.shp
+		Size: 1,1
+		Categories: Floor
+		PickAny: True
+		Palette: mwcivilian
+		Tiles:
+			0: Clear
+			1: Clear
+			2: Clear
+			3: Clear
+			4: Clear
+			5: Clear
+			6: Clear
+			7: Clear
+	Template@13:
+		Id: 13
+		Images: cobblese1.shp
+		Size: 1,1
+		Categories: Floor
+		PickAny: True
+		Palette: mwcivilian
+		Tiles:
+			0: Clear
+			1: Clear
+			2: Clear
+			3: Clear
+			4: Clear
+			5: Clear
+			6: Clear
+			7: Clear
+	Template@14:
+		Id: 14
+		Images: cobblese2.shp
+		Size: 1,1
+		Categories: Floor
+		PickAny: True
+		Palette: mwcivilian
+		Tiles:
+			0: Clear
+			1: Clear
+			2: Clear
+			3: Clear
+			4: Clear
+			5: Clear
+			6: Clear
+			7: Clear
+	Template@414:
+		Id: 414
+		Images: cobblesc1.shp
+		Size: 1,1
+		Categories: Floor
+		PickAny: True
+		Palette: mwcivilian
+		Tiles:
+			0: Clear
+			1: Clear
+			2: Clear
+			3: Clear
+			4: Clear
+			5: Clear
+			6: Clear
+			7: Clear
+	Template@415:
+		Id: 415
+		Images: cobblesc2.shp
+		Size: 1,1
+		Categories: Floor
+		PickAny: True
+		Palette: mwcivilian
+		Tiles:
+			0: Clear
+			1: Clear
+			2: Clear
+			3: Clear
+			4: Clear
+			5: Clear
+			6: Clear
+			7: Clear
+
+	Template@15:
+		Id: 15
+		Images: cobbled.shp
+		Size: 1,1
+		Categories: Floor
+		PickAny: True
+		Palette: mwcivilian
+		Tiles:
+			0: Clear
+			1: Clear
+			2: Clear
+			3: Clear
+			4: Clear
+			5: Clear
+			6: Clear
+			7: Clear
+	Template@16:
+		Id: 16
+		Images: cobbledsw.shp
+		Size: 1,1
+		Categories: Floor
+		PickAny: True
+		Palette: mwcivilian
+		Tiles:
+			0: Clear
+			1: Clear
+			2: Clear
+			3: Clear
+			4: Clear
+			5: Clear
+			6: Clear
+			7: Clear
+	Template@17:
+		Id: 17
+		Images: cobbledsn.shp
+		Size: 1,1
+		Categories: Floor
+		PickAny: True
+		Palette: mwcivilian
+		Tiles:
+			0: Clear
+			1: Clear
+			2: Clear
+			3: Clear
+			4: Clear
+			5: Clear
+			6: Clear
+			7: Clear
+	Template@18:
+		Id: 18
+		Images: cobbledse1.shp
+		Size: 1,1
+		Categories: Floor
+		PickAny: True
+		Palette: mwcivilian
+		Tiles:
+			0: Clear
+			1: Clear
+			2: Clear
+			3: Clear
+			4: Clear
+			5: Clear
+			6: Clear
+			7: Clear
+	Template@19:
+		Id: 19
+		Images: cobbledse2.shp
+		Size: 1,1
+		Categories: Floor
+		PickAny: True
+		Palette: mwcivilian
+		Tiles:
+			0: Clear
+			1: Clear
+			2: Clear
+			3: Clear
+			4: Clear
+			5: Clear
+			6: Clear
+			7: Clear
+	Template@418:
+		Id: 418
+		Images: cobbledsc1.shp
+		Size: 1,1
+		Categories: Floor
+		PickAny: True
+		Palette: mwcivilian
+		Tiles:
+			0: Clear
+			1: Clear
+			2: Clear
+			3: Clear
+			4: Clear
+			5: Clear
+			6: Clear
+			7: Clear
+	Template@419:
+		Id: 419
+		Images: cobbledsc2.shp
+		Size: 1,1
+		Categories: Floor
+		PickAny: True
+		Palette: mwcivilian
+		Tiles:
+			0: Clear
+			1: Clear
+			2: Clear
+			3: Clear
+			4: Clear
+			5: Clear
+			6: Clear
+			7: Clear
+	Template@20:
+		Id: 20
+		Images: wgwd.shp
+		Size: 1,1
+		PickAny: True
+		Categories: Floor
+		Palette: mwcivilian
+		Tiles:
+			0: Clear
+			1: Clear
+			2: Clear
+			3: Clear
+			4: Clear
+			5: Clear
+	Template@21:
+		Id: 21
+		Images: wgwdsw.shp
+		Size: 1,1
+		PickAny: True
+		Categories: Floor
+		Palette: mwcivilian
+		Tiles:
+			0: Clear
+			1: Clear
+			2: Clear
+			3: Clear
+			4: Clear
+			5: Clear
+	Template@23:
+		Id: 23
+		Images: wgwdsn.shp
+		Size: 1,1
+		PickAny: True
+		Categories: Floor
+		Palette: mwcivilian
+		Tiles:
+			0: Clear
+			1: Clear
+			2: Clear
+			3: Clear
+			4: Clear
+			5: Clear
+	Template@24:
+		Id: 24
+		Images: wgwdse1.shp
+		Size: 1,1
+		PickAny: True
+		Categories: Floor
+		Palette: mwcivilian
+		Tiles:
+			0: Clear
+			1: Clear
+			2: Clear
+			3: Clear
+			4: Clear
+			5: Clear
+	Template@25:
+		Id: 25
+		Images: wgwdse2.shp
+		Size: 1,1
+		PickAny: True
+		Categories: Floor
+		Palette: mwcivilian
+		Tiles:
+			0: Clear
+			1: Clear
+			2: Clear
+			3: Clear
+			4: Clear
+			5: Clear
+	Template@424:
+		Id: 424
+		Images: wgwdsc1.shp
+		Size: 1,1
+		PickAny: True
+		Categories: Floor
+		Palette: mwcivilian
+		Tiles:
+			0: Clear
+			1: Clear
+			2: Clear
+			3: Clear
+			4: Clear
+			5: Clear
+	Template@425:
+		Id: 425
+		Images: wgwdsc2.shp
+		Size: 1,1
+		PickAny: True
+		Categories: Floor
+		Palette: mwcivilian
+		Tiles:
+			0: Clear
+			1: Clear
+			2: Clear
+			3: Clear
+			4: Clear
+			5: Clear
+	Template@26:
+		Id: 26
+		Images: cobbledw.shp
+		Size: 1,1
+		PickAny: True
+		Categories: Floor
+		Palette: mwcivilian
+		Tiles:
+			0: Clear
+			1: Clear
+			2: Clear
+			3: Clear
+			4: Clear
+			5: Clear
+			6: Clear
+			7: Clear
+	Template@27:
+		Id: 27
+		Images: wgwdw.shp
+		Size: 1,1
+		PickAny: True
+		Categories: Floor
+		Palette: mwcivilian
+		Tiles:
+			0: Clear
+			1: Clear
+			2: Clear
+			3: Clear
+			4: Clear
+			5: Clear
+	Template@28:
+		Id: 28
+		Images: stairs.shp
+		Size: 2,2
+		Categories: Floor
+		Palette: mwcivilian
+		Tiles:
+			0: Clear
+			1: Wall
+			2: Wall
+			3: Clear
+	Template@29:
+		Id: 29
+		Images: stairsr.shp
+		Size: 2,2
+		Categories: Floor
+		Palette: mwcivilian
+		Tiles:
+			0: Wall
+			1: Clear
+			2: Clear
+			3: Wall
+	Template@30:
+		Id: 30
+		Images: clear1.tem
+		Size: 1,1
+		PickAny: True
+		Categories: Floor
+		Palette: tdterrain
+		Tiles:
+			0: Clear
+			1: Clear
+			2: Clear
+			3: Clear
+			4: Clear
+			5: Clear
+			6: Clear
+			7: Clear
+			8: Clear
+			9: Clear
+			10: Clear
+			11: Clear
+			12: Clear
+			13: Clear
+			14: Clear
+			15: Clear
+	Template@31:
+		Id: 31
+		Images: clearst.shp
+		Size: 1,1
+		PickAny: True
+		Categories: Floor
+		Palette: tdterrain
+		Tiles:
+			0: Clear
+			1: Clear
+			2: Clear
+			3: Clear
+			4: Clear
+			5: Clear
+			6: Clear
+			7: Clear
+			8: Clear
+	Template@32:
+		Id: 32
+		Images: clearsl.shp
+		Size: 1,1
+		PickAny: True
+		Categories: Floor
+		Palette: tdterrain
+		Tiles:
+			0: Clear
+			1: Clear
+			2: Clear
+			3: Clear
+			4: Clear
+			5: Clear
+			6: Clear
+			7: Clear
+			8: Clear
+	Template@33:
+		Id: 33
+		Images: clearse1.shp
+		Size: 1,1
+		PickAny: True
+		Categories: Floor
+		Palette: tdterrain
+		Tiles:
+			0: Clear
+			1: Clear
+			2: Clear
+			3: Clear
+			4: Clear
+			5: Clear
+			6: Clear
+			7: Clear
+			8: Clear
+	Template@34:
+		Id: 34
+		Images: clearse2.shp
+		Size: 1,1
+		PickAny: True
+		Categories: Floor
+		Palette: tdterrain
+		Tiles:
+			0: Clear
+			1: Clear
+			2: Clear
+			3: Clear
+			4: Clear
+			5: Clear
+			6: Clear
+			7: Clear
+			8: Clear
+	Template@35:
+		Id: 35
+		Images: clearsc1.shp
+		Size: 1,1
+		PickAny: True
+		Categories: Floor
+		Palette: tdterrain
+		Tiles:
+			0: Clear
+			1: Clear
+			2: Clear
+			3: Clear
+			4: Clear
+			5: Clear
+			6: Clear
+			7: Clear
+			8: Clear
+	Template@36:
+		Id: 36
+		Images: clearsc2.shp
+		Size: 1,1
+		PickAny: True
+		Categories: Floor
+		Palette: tdterrain
+		Tiles:
+			0: Clear
+			1: Clear
+			2: Clear
+			3: Clear
+			4: Clear
+			5: Clear
+			6: Clear
+			7: Clear
+			8: Clear
+	Template@37:
+		Id: 37
+		Images: clearsfull.shp
+		Size: 1,1
+		PickAny: True
+		Categories: Floor
+		Palette: tdterrain
+		Tiles:
+			0: Clear
+			1: Clear
+			2: Clear
+			3: Clear
+			4: Clear
+			5: Clear
+			6: Clear
+			7: Clear
+			8: Clear
+            
+	Template@98:
+		Id: 98
+		Images: columl.shp
+		Size: 1,1
+		Categories: Wall
+		Palette: mwcivilian
+		Tiles:
+			0: Wall
+	Template@99:
+		Id: 99
+		Images: Colum.shp
+		Size: 1,1
+		Categories: Wall
+		Palette: mwcivilian
+		Tiles:
+			0: Wall
+	Template@100:
+		Id: 100
+		Images: columr.shp
+		Size: 1,1
+		Categories: Wall
+		Palette: mwcivilian
+		Tiles:
+			0: Wall
+	Template@101:
+		Id: 101
+		Images: columtl.shp
+		Size: 1,1
+		Categories: Wall
+		Palette: mwcivilian
+		Tiles:
+			0: Wall
+	Template@102:
+		Id: 102
+		Images: columt.shp
+		Size: 1,1
+		Categories: Wall
+		Palette: mwcivilian
+		Tiles:
+			0: Wall
+	Template@103:
+		Id: 103
+		Images: columtr.shp
+		Size: 1,1
+		Categories: Wall
+		Palette: mwcivilian
+		Tiles:
+			0: Wall
+	Template@104:
+		Id: 104
+		Images: columbl.shp
+		Size: 1,1
+		Categories: Wall
+		Palette: mwcivilian
+		Tiles:
+			0: Wall
+	Template@105:
+		Id: 105
+		Images: columb.shp
+		Size: 1,1
+		Categories: Wall
+		Palette: mwcivilian
+		Tiles:
+			0: Wall
+	Template@106:
+		Id: 106
+		Images: columbr.shp
+		Size: 1,1
+		Categories: Wall
+		Palette: mwcivilian
+		Tiles:
+			0: Wall
+	Template@107:
+		Id: 107
+		Images: columtblr.shp
+		Size: 1,1
+		Categories: Wall
+		Palette: mwcivilian
+		Tiles:
+			0: Wall
+	Template@108:
+		Id: 108
+		Images: columlr.shp
+		Size: 1,1
+		Categories: Wall
+		Palette: mwcivilian
+		Tiles:
+			0: Wall
+	Template@109:
+		Id: 109
+		Images: columtlr.shp
+		Size: 1,1
+		Categories: Wall
+		Palette: mwcivilian
+		Tiles:
+			0: Wall
+	Template@110:
+		Id: 110
+		Images: columtbl.shp
+		Size: 1,1
+		Categories: Wall
+		Palette: mwcivilian
+		Tiles:
+			0: Wall
+	Template@111:
+		Id: 111
+		Images: columtb.shp
+		Size: 1,1
+		Categories: Wall
+		Palette: mwcivilian
+		Tiles:
+			0: Wall
+	Template@112:
+		Id: 112
+		Images: columtbr.shp
+		Size: 1,1
+		Categories: Wall
+		Palette: mwcivilian
+		Tiles:
+			0: Wall
+	Template@113:
+		Id: 113
+		Images: columemptyl.shp
+		Size: 1,1
+		Categories: Wall
+		Palette: mwcivilian
+		Tiles:
+			0: Wall
+	Template@114:
+		Id: 114
+		Images: columempty.shp
+		Size: 1,1
+		Categories: Wall
+		Palette: mwcivilian
+		Tiles:
+			0: Wall
+	Template@115:
+		Id: 115
+		Images: columemptyr.shp
+		Size: 1,1
+		Categories: Wall
+		Palette: mwcivilian
+		Tiles:
+			0: Wall
+	Template@116:
+		Id: 116
+		Images: columemptybl.shp
+		Size: 1,1
+		Categories: Wall
+		Palette: mwcivilian
+		Tiles:
+			0: Wall
+	Template@117:
+		Id: 117
+		Images: columemptyb.shp
+		Size: 1,1
+		Categories: Wall
+		Palette: mwcivilian
+		Tiles:
+			0: Wall
+	Template@118:
+		Id: 118
+		Images: columemptybr.shp
+		Size: 1,1
+		Categories: Wall
+		Palette: mwcivilian
+		Tiles:
+			0: Wall
+	Template@119:
+		Id: 119
+		Images: columemptylr.shp
+		Size: 1,1
+		Categories: Wall
+		Palette: mwcivilian
+		Tiles:
+			0: Wall
+	Template@120:
+		Id: 120
+		Images: columemptybn.shp
+		Size: 1,1
+		Categories: Wall
+		Palette: mwcivilian
+		Tiles:
+			0: Wall
+	Template@300:
+		Id: 300
+		Images: roofl.shp
+		Size: 1,1
+		Categories: Wall
+		Palette: mwcivilian
+		Tiles:
+			0: Wall
+	Template@301:
+		Id: 301
+		Images: roof.shp
+		Size: 1,1
+		Categories: Wall
+		Palette: mwcivilian
+		Tiles:
+			0: Wall
+	Template@302:
+		Id: 302
+		Images: roofr.shp
+		Size: 1,1
+		Categories: Wall
+		Palette: mwcivilian
+		Tiles:
+			0: Wall
+            
+	Template@303:
+		Id: 303
+		Images: roofn.shp
+		Size: 1,1
+		Categories: Wall
+		Palette: mwcivilian
+		Tiles:
+			0: Wall
+	Template@304:
+		Id: 304
+		Images: roofb.shp
+		Size: 1,1
+		Categories: Wall
+		Palette: mwcivilian
+		Tiles:
+			0: Wall
+	Template@305:
+		Id: 305
+		Images: roofr.shp
+		Size: 1,1
+		Categories: Wall
+		Palette: mwcivilian
+		Tiles:
+			0: Wall
+            
+	Template@306:
+		Id: 306
+		Images: roofbr.shp
+		Size: 1,1
+		Categories: Wall
+		Palette: mwcivilian
+		Tiles:
+			0: Wall
+	Template@307:
+		Id: 307
+		Images: roofbl.shp
+		Size: 1,1
+		Categories: Wall
+		Palette: mwcivilian
+		Tiles:
+			0: Wall
+	Template@308:
+		Id: 308
+		Images: roofnl.shp
+		Size: 1,1
+		Categories: Wall
+		Palette: mwcivilian
+		Tiles:
+			0: Wall
+	Template@309:
+		Id: 309
+		Images: roofnr.shp
+		Size: 1,1
+		Categories: Wall
+		Palette: mwcivilian
+		Tiles:
+			0: Wall
+	Template@310:
+		Id: 310
+		Images: rooflr.shp
+		Size: 1,1
+		Categories: Wall
+		Palette: mwcivilian
+		Tiles:
+			0: Wall
+	Template@311:
+		Id: 311
+		Images: roofnb.shp
+		Size: 1,1
+		Categories: Wall
+		Palette: mwcivilian
+		Tiles:
+			0: Wall
+	Template@314:
+		Id: 314
+		Images: roofnlr.shp
+		Size: 1,1
+		Categories: Wall
+		Palette: mwcivilian
+		Tiles:
+			0: Wall
+	Template@315:
+		Id: 315
+		Images: roofblr.shp
+		Size: 1,1
+		Categories: Wall
+		Palette: mwcivilian
+		Tiles:
+			0: Wall
+            
+            
+	Template@400:
+		Id: 400
+		Images: walll.shp
+		Size: 1,1
+		Categories: Wall
+		Palette: mwcivilian
+		Tiles:
+			0: Wall
+	Template@401:
+		Id: 401
+		Images: wall.shp
+		Size: 1,1
+		Categories: Wall
+		Palette: mwcivilian
+		Tiles:
+			0: Wall
+	Template@402:
+		Id: 402
+		Images: wallr.shp
+		Size: 1,1
+		Categories: Wall
+		Palette: mwcivilian
+		Tiles:
+			0: Wall
+	Template@403:
+		Id: 403
+		Images: wallbl.shp
+		Size: 1,1
+		Categories: Wall
+		Palette: mwcivilian
+		Tiles:
+			0: Wall
+	Template@404:
+		Id: 404
+		Images: wallb.shp
+		Size: 1,1
+		Categories: Wall
+		Palette: mwcivilian
+		Tiles:
+			0: Wall
+	Template@405:
+		Id: 405
+		Images: wallbr.shp
+		Size: 1,1
+		Categories: Wall
+		Palette: mwcivilian
+		Tiles:
+			0: Wall
+	Template@406:
+		Id: 406
+		Images: walllr.shp
+		Size: 1,1
+		Categories: Wall
+		Palette: mwcivilian
+		Tiles:
+			0: Wall
+	Template@407:
+		Id: 407
+		Images: wallblr.shp
+		Size: 1,1
+		Categories: Wall
+		Palette: mwcivilian
+		Tiles:
+			0: Wall
+	Template@900:
+		Id: 900
+		Images: holeclear.shp
+		Size: 1,1
+		PickAny: True
+		Categories: Openings
+		Palette: mwcivilian
+		Tiles:
+			0: Clear
+	Template@901:
+		Id: 901
+		Images: holecobble.shp
+		Size: 1,1
+		PickAny: True
+		Categories: Openings
+		Palette: mwcivilian
+		Tiles:
+			0: Clear
+	Template@902:
+		Id: 902
+		Images: holecobbled.shp
+		Size: 1,1
+		PickAny: True
+		Categories: Openings
+		Palette: mwcivilian
+		Tiles:
+			0: Clear
+	Template@903:
+		Id: 903
+		Images: holewgw.shp
+		Size: 1,1
+		PickAny: True
+		Categories: Openings
+		Palette: mwcivilian
+		Tiles:
+			0: Clear
+	Template@904:
+		Id: 904
+		Images: holewgwd.shp
+		Size: 1,1
+		PickAny: True
+		Categories: Openings
+		Palette: mwcivilian
+		Tiles:
+			0: Clear
+	Template@905:
+		Id: 905
+		Images: holevert.shp
+		Size: 1,1
+		PickAny: True
+		Categories: Openings
+		Palette: mwcivilian
+		Tiles:
+			0: Clear

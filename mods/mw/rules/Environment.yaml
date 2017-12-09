@@ -124,3 +124,929 @@ FIREPLACE:
 		Sequence: burnloop
 		Palette: terrain
 		
+bulb:
+	Inherits: ^Props
+	RenderSprites:
+		Palette: fire
+	EditorTilesetFilter:
+		RequireTilesets: INTERIOR
+		Categories: Enviroment lightning
+	Building:
+		Dimensions: 1,1
+		Footprint: _	
+	-Targetable:
+bulbr:
+	Inherits: ^Props
+	RenderSprites:
+		Palette: fire
+	EditorTilesetFilter:
+		RequireTilesets: INTERIOR
+		Categories: Enviroment lightning
+	Building:
+		Dimensions: 1,1
+		Footprint: _	
+	-Targetable:
+bulbl:
+	Inherits: ^Props
+	RenderSprites:
+		Palette: fire
+	EditorTilesetFilter:
+		RequireTilesets: INTERIOR
+		Categories: Enviroment lightning
+	Building:
+		Dimensions: 1,1
+		Footprint: _	
+	-Targetable:
+bulbt:
+	Inherits: ^Props
+	RenderSprites:
+		Palette: fire
+	EditorTilesetFilter:
+		RequireTilesets: INTERIOR
+		Categories: Enviroment lightning
+	Building:
+		Dimensions: 1,1
+		Footprint: _	
+	-Targetable:
+bulbb:
+	Inherits: ^Props
+	RenderSprites:
+		Palette: fire
+	EditorTilesetFilter:
+		RequireTilesets: INTERIOR
+		Categories: Enviroment lightning
+	Building:
+		Dimensions: 1,1
+		Footprint: _	
+	-Targetable:
+bulbtl:
+	Inherits: ^Props
+	RenderSprites:
+		Palette: fire
+	EditorTilesetFilter:
+		RequireTilesets: INTERIOR
+		Categories: Enviroment lightning
+	Building:
+		Dimensions: 1,1
+		Footprint: _
+	-Targetable:	
+bulbtr:
+	Inherits: ^Props
+	RenderSprites:
+		Palette: fire
+	EditorTilesetFilter:
+		RequireTilesets: INTERIOR
+		Categories: Enviroment lightning
+	Building:
+		Dimensions: 1,1
+		Footprint: _	
+	-Targetable:
+bulbbl:
+	Inherits: ^Props
+	RenderSprites:
+		Palette: fire
+	EditorTilesetFilter:
+		RequireTilesets: INTERIOR
+		Categories: Enviroment lightning
+	Building:
+		Dimensions: 1,1
+		Footprint: _	
+	-Targetable:
+bulbbr:
+	Inherits: ^Props
+	RenderSprites:
+		Palette: fire
+	EditorTilesetFilter:
+		RequireTilesets: INTERIOR
+		Categories: Enviroment lightning
+	Building:
+		Dimensions: 1,1
+		Footprint: _	
+	-Targetable:
+        
+FIREPIT:
+	Inherits: ^InteriorProp
+	RenderSprites:
+		Palette: mwcivilian
+	WithIdleOverlay:
+		Sequence: burnloop
+		Palette: effect
+	-Targetable:
+        
+FIRETORCH:
+	Inherits: ^InteriorProp
+	RenderSprites:
+		Palette: mwcivilian
+	WithIdleOverlay:
+		Sequence: burnloop
+		Palette: effect
+	-Targetable:
+    
+
+FIRETORCHN:
+	Inherits: ^InteriorProp
+	RenderSprites:
+		Palette: mwcivilian
+	WithIdleOverlay:
+		Sequence: burnloop
+		Palette: effect
+	-Targetable:
+	Building:
+		Dimensions: 1,1
+		Footprint: _	    
+FIRETORCHNW:
+	Inherits: ^InteriorProp
+	RenderSprites:
+		Palette: mwcivilian
+	WithIdleOverlay:
+		Sequence: burnloop
+		Palette: effect
+	-Targetable:
+	Building:
+		Dimensions: 1,1
+		Footprint: _	
+FIRETORCHW:
+	Inherits: ^InteriorProp
+	RenderSprites:
+		Palette: mwcivilian
+	WithIdleOverlay:
+		Sequence: burnloop
+		Palette: effect
+	-Targetable:
+	Building:
+		Dimensions: 1,1
+		Footprint: _	
+FIRETORCHSW:
+	Inherits: ^InteriorProp
+	RenderSprites:
+		Palette: mwcivilian
+	WithIdleOverlay:
+		Sequence: burnloop
+		Palette: effect
+	-Targetable:
+	Building:
+		Dimensions: 1,1
+		Footprint: _	
+FIRETORCHS:
+	Inherits: ^InteriorProp
+	RenderSprites:
+		Palette: mwcivilian
+	WithIdleOverlay:
+		Sequence: burnloop
+		Palette: effect
+	-Targetable:
+	Building:
+		Dimensions: 1,1
+		Footprint: _	
+FIRETORCHSE:
+	Inherits: ^InteriorProp
+	RenderSprites:
+		Palette: mwcivilian
+	WithIdleOverlay:
+		Sequence: burnloop
+		Palette: effect
+	-Targetable:
+	Building:
+		Dimensions: 1,1
+		Footprint: _	
+FIRETORCHE:
+	Inherits: ^InteriorProp
+	RenderSprites:
+		Palette: mwcivilian
+	WithIdleOverlay:
+		Sequence: burnloop
+		Palette: effect
+	-Targetable:
+	Building:
+		Dimensions: 1,1
+		Footprint: _	
+FIRETORCHNE:
+	Inherits: ^InteriorProp
+	RenderSprites:
+		Palette: mwcivilian
+	WithIdleOverlay:
+		Sequence: burnloop
+		Palette: effect
+	-Targetable:
+	Building:
+		Dimensions: 1,1
+		Footprint: _	
+    
+        
+FIRETORCH:
+	Inherits: ^InteriorProp
+	RenderSprites:
+		Palette: mwcivilian
+	WithIdleOverlay:
+		Sequence: burnloop
+		Palette: effect
+        
+STOOL1:
+	Inherits: ^InteriorProp
+	RenderSprites:
+		Palette: mwcivilian
+	SpawnActorOnDeath@SCELET:
+		Actor: DEADSTOOL1
+	Tooltip:
+		Name: Wooden Chair
+		ShowOwnerRow: false
+	SoundOnDamageTransition:
+		DestroyedSounds: WoodExplsmall.aud, WoodExplsmall2.aud
+DEADSTOOL1:
+	Inherits: ^PropHusk
+	RenderSprites:
+		Palette: mwcivilian
+STOOL2:
+	Inherits: ^InteriorProp
+	RenderSprites:
+		Palette: mwcivilian
+	SpawnActorOnDeath@SCELET:
+		Actor: DEADSTOOL2
+	Tooltip:
+		Name: Wooden Chair
+		ShowOwnerRow: false
+	SoundOnDamageTransition:
+		DestroyedSounds: WoodExplsmall.aud, WoodExplsmall2.aud
+DEADSTOOL2:
+	Inherits: ^PropHusk
+	RenderSprites:
+		Palette: mwcivilian
+STOOL3:
+	Inherits: ^InteriorProp
+	RenderSprites:
+		Palette: mwcivilian
+	SpawnActorOnDeath@SCELET:
+		Actor: DEADSTOOL3
+	Tooltip:
+		Name: Wooden Chair
+		ShowOwnerRow: false
+	SoundOnDamageTransition:
+		DestroyedSounds: WoodExplsmall.aud, WoodExplsmall2.aud
+DEADSTOOL3:
+	Inherits: ^PropHusk
+	RenderSprites:
+		Palette: mwcivilian
+STOOL4:
+	Inherits: ^InteriorProp
+	RenderSprites:
+		Palette: mwcivilian
+	SpawnActorOnDeath@SCELET:
+		Actor: DEADSTOOL4
+	Tooltip:
+		Name: Wooden Chair
+		ShowOwnerRow: false
+	SoundOnDamageTransition:
+		DestroyedSounds: WoodExplsmall.aud, WoodExplsmall2.aud
+DEADSTOOL4:
+	Inherits: ^PropHusk
+	RenderSprites:
+		Palette: mwcivilian
+STOOL5:
+	Inherits: ^InteriorProp
+	RenderSprites:
+		Palette: mwcivilian
+	SpawnActorOnDeath@SCELET:
+		Actor: DEADSTOOL5
+	Tooltip:
+		Name: Wooden Chair
+		ShowOwnerRow: false
+	SoundOnDamageTransition:
+		DestroyedSounds: WoodExplsmall.aud, WoodExplsmall2.aud
+DEADSTOOL5:
+	Inherits: ^PropHusk
+	RenderSprites:
+		Palette: mwcivilian
+STOOL6:
+	Inherits: ^InteriorProp
+	RenderSprites:
+		Palette: mwcivilian
+	SpawnActorOnDeath@SCELET:
+		Actor: DEADSTOOL6
+	Tooltip:
+		Name: Wooden Chair
+		ShowOwnerRow: false
+	SoundOnDamageTransition:
+		DestroyedSounds: WoodExplsmall.aud, WoodExplsmall2.aud
+DEADSTOOL6:
+	Inherits: ^PropHusk
+	RenderSprites:
+		Palette: mwcivilian
+STOOL7:
+	Inherits: ^InteriorProp
+	RenderSprites:
+		Palette: mwcivilian
+	SpawnActorOnDeath@SCELET:
+		Actor: DEADSTOOL7
+	Tooltip:
+		Name: Wooden Chair
+		ShowOwnerRow: false
+	SoundOnDamageTransition:
+		DestroyedSounds: WoodExplsmall.aud, WoodExplsmall2.aud
+DEADSTOOL7:
+	Inherits: ^PropHusk
+	RenderSprites:
+		Palette: mwcivilian
+STOOL8:
+	Inherits: ^InteriorProp
+	RenderSprites:
+		Palette: mwcivilian
+	SpawnActorOnDeath@SCELET:
+		Actor: DEADSTOOL8
+	Tooltip:
+		Name: Wooden Chair
+		ShowOwnerRow: false
+	SoundOnDamageTransition:
+		DestroyedSounds: WoodExplsmall.aud, WoodExplsmall2.aud
+DEADSTOOL8:
+	Inherits: ^PropHusk
+	RenderSprites:
+		Palette: mwcivilian
+        
+BARRELMW1:
+	Inherits: ^InteriorProp
+	RenderSprites:
+		Palette: mwcivilian
+	SpawnActorOnDeath@SCELET:
+		Actor: DEADBARRELMW1
+	Tooltip:
+		Name: Barrel
+		ShowOwnerRow: false
+	SoundOnDamageTransition:
+		DestroyedSounds: WoodExplsmall.aud, WoodExplsmall2.aud
+DEADBARRELMW1:
+	Inherits: ^PropHusk
+	RenderSprites:
+		Palette: mwcivilian
+BARRELMW2:
+	Inherits: ^InteriorProp
+	RenderSprites:
+		Palette: mwcivilian
+	SpawnActorOnDeath@SCELET:
+		Actor: DEADBARRELMW2
+	Tooltip:
+		Name: Barrel
+		ShowOwnerRow: false
+	SoundOnDamageTransition:
+		DestroyedSounds: WoodExplsmall.aud, WoodExplsmall2.aud
+DEADBARRELMW2:
+	Inherits: ^PropHusk
+	RenderSprites:
+		Palette: mwcivilian
+BARRELMW3:
+	Inherits: ^InteriorProp
+	RenderSprites:
+		Palette: mwcivilian
+	SpawnActorOnDeath@SCELET:
+		Actor: DEADBARRELMW3
+	Tooltip:
+		Name: Barrel
+		ShowOwnerRow: false
+	SoundOnDamageTransition:
+		DestroyedSounds: WoodExplsmall.aud, WoodExplsmall2.aud
+DEADBARRELMW3:
+	Inherits: ^PropHusk
+	RenderSprites:
+		Palette: mwcivilian
+BARRELMW4:
+	Inherits: ^InteriorProp
+	RenderSprites:
+		Palette: mwcivilian
+	SpawnActorOnDeath@SCELET:
+		Actor: DEADBARRELMW4
+	Tooltip:
+		Name: Barrel
+		ShowOwnerRow: false
+	SoundOnDamageTransition:
+		DestroyedSounds: WoodExplsmall.aud, WoodExplsmall2.aud
+DEADBARRELMW4:
+	Inherits: ^PropHusk
+	RenderSprites:
+		Palette: mwcivilian
+BARRELMW5:
+	Inherits: ^InteriorProp
+	RenderSprites:
+		Palette: mwcivilian
+	SpawnActorOnDeath@SCELET:
+		Actor: DEADBARRELMW5
+	Tooltip:
+		Name: Barrel
+		ShowOwnerRow: false
+	SoundOnDamageTransition:
+		DestroyedSounds: WoodExplsmall.aud, WoodExplsmall2.aud
+DEADBARRELMW5:
+	Inherits: ^PropHusk
+	RenderSprites:
+		Palette: mwcivilian
+BARRELMW6:
+	Inherits: ^InteriorProp
+	RenderSprites:
+		Palette: mwcivilian
+	SpawnActorOnDeath@SCELET:
+		Actor: DEADBARRELMW6
+	Tooltip:
+		Name: Barrel
+		ShowOwnerRow: false
+	SoundOnDamageTransition:
+		DestroyedSounds: WoodExplsmall.aud, WoodExplsmall2.aud
+DEADBARRELMW6:
+	Inherits: ^PropHusk
+	RenderSprites:
+		Palette: mwcivilian
+BARRELMW7:
+	Inherits: ^InteriorProp
+	RenderSprites:
+		Palette: mwcivilian
+	SpawnActorOnDeath@SCELET:
+		Actor: DEADBARRELMW7
+	Tooltip:
+		Name: Barrel
+		ShowOwnerRow: false
+	SoundOnDamageTransition:
+		DestroyedSounds: WoodExplsmall.aud, WoodExplsmall2.aud
+DEADBARRELMW7:
+	Inherits: ^PropHusk
+	RenderSprites:
+		Palette: mwcivilian
+BARRELMW8:
+	Inherits: ^InteriorProp
+	RenderSprites:
+		Palette: mwcivilian
+	SpawnActorOnDeath@SCELET:
+		Actor: DEADBARRELMW8
+	Tooltip:
+		Name: Barrel
+		ShowOwnerRow: false
+	SoundOnDamageTransition:
+		DestroyedSounds: WoodExplsmall.aud, WoodExplsmall2.aud
+DEADBARRELMW8:
+	Inherits: ^PropHusk
+	RenderSprites:
+		Palette: mwcivilian
+BARRELMW9:
+	Inherits: ^InteriorProp
+	RenderSprites:
+		Palette: mwcivilian
+	SpawnActorOnDeath@SCELET:
+		Actor: DEADBARRELMW9
+	Tooltip:
+		Name: Barrel
+		ShowOwnerRow: false
+	SoundOnDamageTransition:
+		DestroyedSounds: WoodExplsmall.aud, WoodExplsmall2.aud
+DEADBARRELMW9:
+	Inherits: ^PropHusk
+	RenderSprites:
+		Palette: mwcivilian
+BARRELMW10:
+	Inherits: ^InteriorProp
+	RenderSprites:
+		Palette: mwcivilian
+	SpawnActorOnDeath@SCELET:
+		Actor: DEADBARRELMW10
+	Tooltip:
+		Name: Barrel
+		ShowOwnerRow: false
+	SoundOnDamageTransition:
+		DestroyedSounds: WoodExplsmall.aud, WoodExplsmall2.aud
+DEADBARRELMW10:
+	Inherits: ^PropHusk
+	RenderSprites:
+		Palette: mwcivilian
+BARRELMW11:
+	Inherits: ^InteriorProp
+	RenderSprites:
+		Palette: mwcivilian
+	SpawnActorOnDeath@SCELET:
+		Actor: DEADBARRELMW11
+	Tooltip:
+		Name: Barrel
+		ShowOwnerRow: false
+	SoundOnDamageTransition:
+		DestroyedSounds: WoodExplsmall.aud, WoodExplsmall2.aud
+DEADBARRELMW11:
+	Inherits: ^PropHusk
+	RenderSprites:
+		Palette: mwcivilian
+        
+TABLE1:
+	Inherits: ^InteriorProp
+	RenderSprites:
+		Palette: mwcivilian
+	SpawnActorOnDeath:
+		Actor: DEADTABLE1
+	SoundOnDamageTransition:
+		DestroyedSounds: WoodExplsmall.aud, WoodExplsmall2.aud
+        
+DEADTABLE1:
+	Inherits: ^PropHusk
+	RenderSprites:
+		Palette: mwcivilian
+TABLE2:
+	Inherits: ^InteriorProp
+	RenderSprites:
+		Palette: mwcivilian
+	SpawnActorOnDeath:
+		Actor: DEADTABLE2
+	SoundOnDamageTransition:
+		DestroyedSounds: WoodExplsmall.aud, WoodExplsmall2.aud
+        
+DEADTABLE2:
+	Inherits: ^PropHusk
+	RenderSprites:
+		Palette: mwcivilian
+TABLE3:
+	Inherits: ^InteriorProp
+	RenderSprites:
+		Palette: mwcivilian
+	SpawnActorOnDeath:
+		Actor: DEADTABLE3
+	SoundOnDamageTransition:
+		DestroyedSounds: WoodExplsmall.aud, WoodExplsmall2.aud
+        
+DEADTABLE3:
+	Inherits: ^PropHusk
+	RenderSprites:
+		Palette: mwcivilian
+TABLE4:
+	Inherits: ^InteriorProp
+	RenderSprites:
+		Palette: mwcivilian
+	SpawnActorOnDeath:
+		Actor: DEADTABLE4
+	Building:
+		Dimensions: 1,2
+		Footprint: x x	
+	SoundOnDamageTransition:
+		DestroyedSounds: WoodExplsmall.aud, WoodExplsmall2.aud
+        
+DEADTABLE4:
+	Inherits: ^PropHusk
+	RenderSprites:
+		Palette: mwcivilian
+	Building:
+		Dimensions: 1,2
+		Footprint: _ _	
+        
+TABLE5:
+	Inherits: ^InteriorProp
+	RenderSprites:
+		Palette: mwcivilian
+	SpawnActorOnDeath:
+		Actor: DEADTABLE5
+	Building:
+		Dimensions: 2,1
+		Footprint: xx	
+	SoundOnDamageTransition:
+		DestroyedSounds: WoodExplsmall.aud, WoodExplsmall2.aud
+        
+DEADTABLE5:
+	Inherits: ^PropHusk
+	RenderSprites:
+		Palette: mwcivilian
+	Building:
+		Dimensions: 2,1
+		Footprint: _ _	
+        
+        
+IDOORNORTH:
+	Inherits: ^PropDoor
+	RenderSprites:
+		Palette: mwcivilian
+	SpawnActorOnDeath:
+		Actor: IDOORNORTHOPEN
+		SkipMakeAnimations: false
+	Tooltip:
+		Name: Door
+		ShowOwnerRow: false
+        
+IDOORNORTHOPEN:
+	Inherits: ^PropDoorOpen
+	RenderSprites:
+		Palette: mwcivilian
+	Tooltip:
+		Name: Door
+		ShowOwnerRow: false
+IDOORSOUTH:
+	Inherits: ^PropDoor
+	RenderSprites:
+		Palette: mwcivilian
+	SpawnActorOnDeath:
+		Actor: IDOORSOUTHOPEN
+		SkipMakeAnimations: false
+	Tooltip:
+		Name: Door
+		ShowOwnerRow: false
+        
+IDOORSOUTHOPEN:
+	Inherits: ^PropDoorOpen
+	RenderSprites:
+		Palette: mwcivilian
+	Tooltip:
+		Name: Door
+		ShowOwnerRow: false
+        
+IDOORWEST:
+	Inherits: ^PropDoor
+	RenderSprites:
+		Palette: mwcivilian
+	SpawnActorOnDeath:
+		Actor: IDOORWESTOPEN
+		SkipMakeAnimations: false
+	Tooltip:
+		Name: Door
+		ShowOwnerRow: false
+        
+IDOORWESTOPEN:
+	Inherits: ^PropDoorOpen
+	RenderSprites:
+		Palette: mwcivilian
+	Tooltip:
+		Name: Door
+		ShowOwnerRow: false
+IDOOREAST:
+	Inherits: ^PropDoor
+	RenderSprites:
+		Palette: mwcivilian
+	SpawnActorOnDeath:
+		Actor: IDOOREASTOPEN
+		SkipMakeAnimations: false
+	Tooltip:
+		Name: Door
+		ShowOwnerRow: false
+        
+IDOOREASTOPEN:
+	Inherits: ^PropDoorOpen
+	RenderSprites:
+		Palette: mwcivilian
+	Tooltip:
+		Name: Door
+		ShowOwnerRow: false
+        
+IDOORIRON:
+	Inherits: ^PropDoor
+	RenderSprites:
+		Palette: mwcivilian
+	SpawnActorOnDeath:
+		Actor: IDOORIRONOPEN
+		SkipMakeAnimations: false
+	Tooltip:
+		Name: Door
+		ShowOwnerRow: false
+	Building:
+		Dimensions: 2,2
+		Footprint: == xx	
+        
+IDOORIRONOPEN:
+	Inherits: ^PropDoorOpen
+	RenderSprites:
+		Palette: mwcivilian
+	Tooltip:
+		Name: Door
+		ShowOwnerRow: false
+	Building:
+		Dimensions: 2,2
+		Footprint: == ==	
+        
+SWITCHA:
+	Inherits: ^InteriorProp
+	RenderSprites:
+		PlayerPalette: raplayer
+		Palette:
+	SpawnActorOnDeath:
+		Actor: SWITCHPULLEDA
+		SkipMakeAnimations: false
+	SoundOnDamageTransition:
+		DestroyedSounds: crank1.wav
+	Health:
+		HP: 1
+        
+SWITCHPULLEDA:
+	Inherits: ^PropHusk
+	WithMakeAnimation:
+	RenderSprites:
+		PlayerPalette: raplayer
+		Palette: 
+SWITCHB:
+	Inherits: ^InteriorProp
+	RenderSprites:
+		PlayerPalette: raplayer
+		Palette: 
+	SpawnActorOnDeath:
+		Actor: SWITCHPULLEDB
+		SkipMakeAnimations: false
+	Health:
+		HP: 1
+	SoundOnDamageTransition:
+		DestroyedSounds: crank1.wav
+        
+SWITCHPULLEDB:
+	Inherits: ^PropHusk
+	WithMakeAnimation:
+	RenderSprites:
+		PlayerPalette: raplayer
+		Palette: 
+SWITCHC:
+	Inherits: ^InteriorProp
+	RenderSprites:
+		PlayerPalette: raplayer
+		Palette: 
+	SpawnActorOnDeath:
+		Actor: SWITCHPULLEDC
+		SkipMakeAnimations: false
+	Health:
+		HP: 1
+	SoundOnDamageTransition:
+		DestroyedSounds: crank1.wav
+        
+SWITCHPULLEDC:
+	Inherits: ^PropHusk
+	WithMakeAnimation:
+	RenderSprites:
+		PlayerPalette: raplayer
+		Palette: 
+SWITCHD:
+	Inherits: ^InteriorProp
+	RenderSprites:
+		PlayerPalette: raplayer
+		Palette: 
+	SpawnActorOnDeath:
+		Actor: SWITCHPULLEDD
+		SkipMakeAnimations: false
+	Health:
+		HP: 1
+	SoundOnDamageTransition:
+		DestroyedSounds: crank1.wav
+        
+SWITCHPULLEDD:
+	Inherits: ^PropHusk
+	WithMakeAnimation:
+	RenderSprites:
+		PlayerPalette: raplayer
+		Palette: 
+IBOOKA:
+	Inherits: ^InteriorProp
+	RenderSprites:
+		Palette: mwcivilian
+	SpawnActorOnDeath:
+		Actor: IBOOKDEAD
+	Building:
+		Dimensions: 1,2
+		Footprint: x_	
+	SoundOnDamageTransition:
+		DestroyedSounds: WoodExplsmall.aud, WoodExplsmall2.aud
+IBOOKB:
+	Inherits: ^InteriorProp
+	RenderSprites:
+		Palette: mwcivilian
+	SpawnActorOnDeath:
+		Actor: IBOOKDEAD
+	Building:
+		Dimensions: 1,2
+		Footprint: x_	
+	SoundOnDamageTransition:
+		DestroyedSounds: WoodExplsmall.aud, WoodExplsmall2.aud
+IBOOKC:
+	Inherits: ^InteriorProp
+	RenderSprites:
+		Palette: mwcivilian
+	SpawnActorOnDeath:
+		Actor: IBOOKDEAD
+	Building:
+		Dimensions: 1,2
+		Footprint: x_	
+	SoundOnDamageTransition:
+		DestroyedSounds: WoodExplsmall.aud, WoodExplsmall2.aud
+IBOOKD:
+	Inherits: ^InteriorProp
+	RenderSprites:
+		Palette: mwcivilian
+	SpawnActorOnDeath:
+		Actor: IBOOKDEAD
+	Building:
+		Dimensions: 1,2
+		Footprint: x_	
+	SoundOnDamageTransition:
+		DestroyedSounds: WoodExplsmall.aud, WoodExplsmall2.aud
+        
+IBOOKDEAD:
+	Inherits: ^PropHusk
+	RenderSprites:
+		Palette: mwcivilian
+	Building:
+		Dimensions: 1,2
+		Footprint: = _	
+        
+IBANNERA:
+	Inherits: ^InteriorProp
+	RenderSprites:
+		PlayerPalette: raplayer
+		Palette:
+	Building:
+		Dimensions: 1,2
+		Footprint: __	
+	SoundOnDamageTransition:
+		DestroyedSounds: WoodExplsmall.aud, WoodExplsmall2.aud
+IBANNERB:
+	Inherits: ^InteriorProp
+	RenderSprites:
+		PlayerPalette: raplayer
+		Palette:
+	Building:
+		Dimensions: 1,2
+		Footprint: __	
+	SoundOnDamageTransition:
+		DestroyedSounds: WoodExplsmall.aud, WoodExplsmall2.aud
+IBANNERC:
+	Inherits: ^InteriorProp
+	RenderSprites:
+		PlayerPalette: raplayer
+		Palette:
+	Building:
+		Dimensions: 1,2
+		Footprint: __	
+IBANNERD:
+	Inherits: ^InteriorProp
+	RenderSprites:
+		PlayerPalette: raplayer
+		Palette:
+	Building:
+		Dimensions: 1,2
+		Footprint: __	
+IBANNERE:
+	Inherits: ^InteriorProp
+	RenderSprites:
+		PlayerPalette: raplayer
+		Palette:
+	Building:
+		Dimensions: 1,2
+		Footprint: __	
+        
+
+OBJECTIVEA:
+	Inherits: ^InteriorProp
+	RenderSprites:
+		Palette: mwcivilian
+	EditorTilesetFilter:
+		RequireTilesets: INTERIOR
+		Categories: Interior Objectives
+	Building:
+		Dimensions: 1,1
+		Footprint: _	
+	-Targetable:
+OBJECTIVEB:
+	Inherits: ^InteriorProp
+	RenderSprites:
+		Palette: mwcivilian
+	EditorTilesetFilter:
+		RequireTilesets: INTERIOR
+		Categories: Interior Objectives
+	Building:
+		Dimensions: 1,1
+		Footprint: _	
+	-Targetable:
+OBJECTIVEC:
+	Inherits: ^InteriorProp
+	RenderSprites:
+		Palette: mwcivilian
+	EditorTilesetFilter:
+		RequireTilesets: INTERIOR
+		Categories: Interior Objectives
+	Building:
+		Dimensions: 1,1
+		Footprint: _	
+	-Targetable:
+OBJECTIVED:
+	Inherits: ^InteriorProp
+	RenderSprites:
+		Palette: mwcivilian
+	EditorTilesetFilter:
+		RequireTilesets: INTERIOR
+		Categories: Interior Objectives
+	Building:
+		Dimensions: 1,1
+		Footprint: _	
+	-Targetable:
+CRACKWALL:
+	Inherits: ^InteriorProp
+	RenderSprites:
+		Palette: mwcivilian
+	EditorTilesetFilter:
+		RequireTilesets: INTERIOR
+		Categories: Interior Objectives
+	Targetable:
+	Health:
+		HP: 100
+	SoundOnDamageTransition:
+		DestroyedSounds: collapsebricks.aud
+CRACKWALLH:
+	Inherits: ^InteriorProp
+	RenderSprites:
+		Palette: mwcivilian
+	EditorTilesetFilter:
+		RequireTilesets: INTERIOR
+		Categories: Interior Objectives
+	Targetable:
+	Health:
+		HP: 100
+	SoundOnDamageTransition:
+		DestroyedSounds: collapsebricks.aud

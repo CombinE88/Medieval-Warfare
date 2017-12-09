@@ -368,7 +368,6 @@ ROSS2:
 ROSS5:
 	Inherits: ^Cavalry
 	Inherits@AUTOTARGET: ^AutoTargetAll
-    Inherits@88: ^GameSettingsArcher
 	GrantConditionOnDamageState@Slow:
 		Condition: Slowmotion
 		ValidDamageStates: Heavy, Critical 
@@ -443,7 +442,6 @@ ROSS5:
 ROSS3:
 	Inherits: ^Cavalry
 	Inherits@AUTOTARGET: ^AutoTargetAll
-    Inherits@88: ^GameSettingsArcher
 	GrantConditionOnDamageState@Slow:
 		Condition: Slowmotion
 		ValidDamageStates: Heavy, Critical 
@@ -506,7 +504,6 @@ ROSS3:
 ROSS4:
 	Inherits: ^Cavalry
 	Inherits@AUTOTARGET: ^AutoTargetAll
-    Inherits@88: ^GameSettingsArcher
 	GrantConditionOnDamageState@Slow:
 		Condition: Slowmotion
 		ValidDamageStates: Heavy, Critical  

@@ -15,7 +15,7 @@ hospnew:
 		TilesetOverrides:
 			WINTER: TEMPERAT
 			JUNGLE: TEMPERAT
-			SNOW: TEMPERAT
+			JUNGLE: TEMPERAT			INTERIOR: TEMPERAT
 		Length: *
 hospnew.husk:
 	idle: hospnew
@@ -25,7 +25,7 @@ hospnew.husk:
 		TilesetOverrides:
 			WINTER: TEMPERAT
 			JUNGLE: TEMPERAT
-			SNOW: TEMPERAT
+			JUNGLE: TEMPERAT			INTERIOR: TEMPERAT
 		Length: *
 		
 largecastle:
@@ -145,15 +145,15 @@ explosion:
 		idle:
 			Length: *
 			ZOffset: 512
-    giantskull: giantskull
-        BlendMode: Additive
-        Length: *
-        ZOffset: 10240
-        Tick: 50
-    summoning: grim
-        Length: 23
-        Start: 270
-        Tick: 40
+	giantskull: giantskull
+		BlendMode: Additive
+		Length: *
+		ZOffset: 10240
+		Tick: 50
+	summoning: grim
+		Length: 23
+		Start: 270
+		Tick: 40
 		
 trmr1: 
 	idle: trmrwood
@@ -332,7 +332,7 @@ lightningstrike:
 		Start: 9 
 	down: ironore4
 		Start: 9  
-        
+		
 realdeath:
 	 up: ironore4
 		Start: 9 

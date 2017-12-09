@@ -1,7 +1,5 @@
 ORNI:
 	Inherits: ^AttackPlane
-    Inherits@88: ^GameSettingsArcher
-    Inherits@5: ^GameSettings
 	Inherits@AUTOTARGET: ^AutoTargetAll
 	Valued:
 		Cost: 1200
@@ -74,11 +72,9 @@ ORNI:
 WARKITE:
 	Inherits: ^Helicopter
 	Inherits@EXPERIENCE: ^GainsExperience
-    Inherits@5: ^GameSettings
-    Inherits@88: ^GameSettingsArcher
 	Inherits@AUTOTARGET: ^AutoTargetAll
 	HitShape:
-    Valued:
+	Valued:
 		Cost: 1000
 	Tooltip:
 		Name: WarKite
@@ -137,8 +133,6 @@ WARKITE:
 DRGNRDR:
 	Inherits: ^Helicopter
 	Inherits@EXPERIENCE: ^GainsExperience
-    Inherits@5: ^GameSettings
-    Inherits@88: ^GameSettingsArcher
 	Inherits@AUTOTARGET: ^AutoTargetAll
 	GrantRandomCondition:
 		RandomConditions: valida, validb
@@ -263,7 +257,6 @@ DRAGONWALK:
 	
 DAVINCI:
 	Inherits: ^Helicopter
-    Inherits@5: ^GameSettings
 	Inherits@EXPERIENCE: ^GainsExperience
 	Inherits@AUTOTARGET: ^AutoTargetGround
 	Valued:
@@ -319,9 +312,7 @@ DAVINCI:
 	   
 WRBLN:
 	Inherits: ^Helicopter
-    Inherits@5: ^GameSettings
 	Inherits@EXPERIENCE: ^GainsExperience
-    Inherits@88: ^GameSettingsArcher
 	Inherits@AUTOTARGET: ^AutoTargetAll
 	Valued:
 		Cost: 1700
@@ -429,7 +420,7 @@ PLACEHOLDERFLAMESTRIKE:
 		Speed: 303
 		Repulsable: False
 		AirborneCondition: airborne
-		CruiseAltitude: 3c0
+		CruiseAltitude: 13c0
 		IdealSeparation: 0c512
 	Health:
 		HP: 15000

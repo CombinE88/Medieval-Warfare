@@ -1277,12 +1277,12 @@ BowNArrow:
 			Leather: 100
 			Light: 75
 			Heavy: 55
-			Concrete: 15
+			Concrete: 7
 			Knight: 15
 			LightCavalry: 80
 			MediumCavalry: 40
 			HeavyCavalry: 25
-			HeavyBuilding: 35
+			HeavyBuilding: 15
 			Spectral: 15
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
 
@@ -1359,7 +1359,7 @@ BowNArrowAir:
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
 
 MageFire:
-	ReloadDelay: 55
+	ReloadDelay: 60
 	Range: 4c0
 	Burst: 5
 	BurstDelay: 3
@@ -1371,14 +1371,14 @@ MageFire:
 		Speed: 350
 		Blockable: false
 		LaunchAngle: 46
-		Inaccuracy: 1c0
+		Inaccuracy: 1c256
 		Image: flamespit
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
-		Spread: 210
+		Spread: 185
 		ValidTargets: Ground
 		InvalidTargets: Air
-		Damage: 700
+		Damage: 720
 		Falloff: 100, 70, 60, 50, 18, 7, 0
 		Versus:
 			None: 100
@@ -2546,8 +2546,8 @@ KingsSwordMounted:
 		DamageTypes: Prone50Percent, TriggerProne, RippedApartDeath
 		
 Crossbow:
-	ReloadDelay: 55
-	Range: 7c0
+	ReloadDelay: 70
+	Range: 6c512
 	MinRange: 0c512
 	Report: crossbow01.aud
 	InvalidTargets: Wall, Air
@@ -2566,7 +2566,7 @@ Crossbow:
 		Image: e4arrow
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
-		Spread: 125
+		Spread: 25
 		InvalidTargets: Wall, Air
 		ValidTargets: Ground
 		Damage: 6000
@@ -2574,12 +2574,12 @@ Crossbow:
 			Leather: 100
 			Light: 100
 			Heavy: 90
-			Knight: 50
-			LightCavalry: 75
-			MediumCavalry: 60
-			HeavyCavalry: 55
-			HeavyBuilding: 40
-			Concrete: 25   
+			Knight: 33
+			LightCavalry: 60
+			MediumCavalry: 45
+			HeavyCavalry: 35
+			HeavyBuilding: 15
+			Concrete: 6   
 			Spectral: 20
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath   
 		
@@ -2702,7 +2702,7 @@ BallonCrossbow:
 FireArrowBarrage:
 	ReloadDelay: 100
 	Range: 512c0
-	Burst: 3
+	Burst: 5
 	BurstDelay: 0
 	MinRange: 0c0
 	Report: arrow01.aud, arrow02.aud, arrow02.aud
@@ -2783,18 +2783,17 @@ FireArrowBarrage:
 
 FireBarrage:
 	ReloadDelay: 2
-	Range: 2c800
-	Burst: 4
-	BurstDelay: 0
+	Range: 4c510
+	Burst: 2
+	BurstDelay: 5
 	MinRange: 0c0
 	ValidTargets: Ground
-	Report: arrow01.aud, arrow02.aud, arrow02.aud
 	InvalidTargets: Wall
 	Projectile: Bullet
 		Speed: 250
 		Blockable: false
 		LaunchAngle: 96
-		Inaccuracy: 2c0
+		Inaccuracy: 0c515
 		Image: firearrow
 		Palette: ra
 	Warhead@1Dam: SpreadDamage

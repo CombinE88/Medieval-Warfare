@@ -352,6 +352,7 @@ overlay:
 	build-valid-temperat: mwoverlay
 	build-valid-winter: mwoverlay
 	build-valid-jungle: mwoverlay
+	build-valid-interior: mwoverlay
 	build-invalid: mwoverlay
 		Start: 1
 	target-select: mwoverlay
@@ -360,6 +361,7 @@ overlay:
 	target-valid-snow: mwoverlay
 		Start: 2
 	target-valid-temperat: mwoverlay
+	target-valid-interior: mwoverlay
 	target-valid-winter: mwoverlay
 	target-valid-jungle: mwoverlay
 	target-invalid: mwoverlay
@@ -411,61 +413,73 @@ resources:
 			WINTER: TEMPERAT
 			JUNGLE: TEMPERAT
 			SNOW: TEMPERAT
+			INTERIOR: TEMPERAT
 	bti2: rtib2
 		TilesetOverrides:
 			WINTER: TEMPERAT
 			JUNGLE: TEMPERAT
 			SNOW: TEMPERAT
+			INTERIOR: TEMPERAT
 	bti3: rtib3
 		TilesetOverrides:
 			WINTER: TEMPERAT
 			JUNGLE: TEMPERAT
 			SNOW: TEMPERAT
+			INTERIOR: TEMPERAT
 	bti4: rtib4
 		TilesetOverrides:
 			WINTER: TEMPERAT
 			JUNGLE: TEMPERAT
 			SNOW: TEMPERAT
+			INTERIOR: TEMPERAT
 	bti5: rtib5
 		TilesetOverrides:
 			WINTER: TEMPERAT
 			JUNGLE: TEMPERAT
 			SNOW: TEMPERAT
+			INTERIOR: TEMPERAT
 	bti6: rtib6
 		TilesetOverrides:
 			WINTER: TEMPERAT
 			JUNGLE: TEMPERAT
 			SNOW: TEMPERAT
+			INTERIOR: TEMPERAT
 	bti7: rtib7
 		TilesetOverrides:
 			WINTER: TEMPERAT
 			JUNGLE: TEMPERAT
 			SNOW: TEMPERAT
+			INTERIOR: TEMPERAT
 	bti8: rtib8
 		TilesetOverrides:
 			WINTER: TEMPERAT
 			JUNGLE: TEMPERAT
 			SNOW: TEMPERAT
+			INTERIOR: TEMPERAT
 	bti9: rtib9
 		TilesetOverrides:
 			WINTER: TEMPERAT
 			JUNGLE: TEMPERAT
 			SNOW: TEMPERAT
+			INTERIOR: TEMPERAT
 	bti10: rtib10
 		TilesetOverrides:
 			WINTER: TEMPERAT
 			JUNGLE: TEMPERAT
 			SNOW: TEMPERAT
+			INTERIOR: TEMPERAT
 	bti11: rtib11
 		TilesetOverrides:
 			WINTER: TEMPERAT
 			JUNGLE: TEMPERAT
 			SNOW: TEMPERAT
+			INTERIOR: TEMPERAT
 	bti12: rtib12
 		TilesetOverrides:
 			WINTER: TEMPERAT
 			JUNGLE: TEMPERAT
 			SNOW: TEMPERAT
+			INTERIOR: TEMPERAT
 
 shroud:
 	Defaults:

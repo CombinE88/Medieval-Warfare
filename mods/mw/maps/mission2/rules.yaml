@@ -1,0 +1,394 @@
+World:
+	LuaScript:
+		Scripts: king01.lua
+	MissionData:
+		Briefing: Briefing here
+	ResourceType@Grain-tib:
+		ValuePerUnit: 0
+	PlayerResources:
+		DefaultCashLocked: True
+		DefaultCash: 1500
+        
+MINIFACT:
+	-WithFreeSpawnableActor@6:
+	-WithFreeSpawnableActor@1:
+	-WithFreeSpawnableActor@2:
+	StoresResources:
+		PipColor: Yellow
+		PipCount: 5
+		Capacity: 3000
+	BaseProvider:
+		Cooldown: 25
+		Range: 10c0
+	Tooltip:
+		Name: Camp
+        
+CASHCRATE500:
+	Inherits: ^Crate
+	GiveCashCrateAction:
+		Amount: 500
+		SelectionShares: 20
+		UseCashTick: yes
+	RenderSprites:
+		Image: fireplace
+		Palette: ra
+	WithSpriteBody:
+		StartSequence: open
+	Tooltip:
+		Name: Campfire
+		ShowOwnerRow: false
+	WithIdleOverlay:
+		Sequence: burnloop
+		Palette: terrain
+	EditorTilesetFilter:
+		Categories: Crates
+CASHCRATE1000:
+	Inherits: ^Crate
+	GiveCashCrateAction:
+		Amount: 1000
+		SelectionShares: 20
+		UseCashTick: yes
+	RenderSprites:
+		Image: fireplace
+		Palette: ra
+	WithSpriteBody:
+		StartSequence: open
+	Tooltip:
+		Name: Campfire
+		ShowOwnerRow: false
+	WithIdleOverlay:
+		Sequence: burnloop
+		Palette: terrain
+	EditorTilesetFilter:
+		Categories: Crates
+CASHCRATE1500:
+	Inherits: ^Crate
+	GiveCashCrateAction:
+		Amount: 1500
+		SelectionShares: 20
+		UseCashTick: yes
+	RenderSprites:
+		Image: fireplace
+		Palette: ra
+	WithSpriteBody:
+		StartSequence: open
+	Tooltip:
+		Name: Campfire
+		ShowOwnerRow: false
+	WithIdleOverlay:
+		Sequence: burnloop
+		Palette: terrain
+	EditorTilesetFilter:
+		Categories: Crates
+        
+# -- shared ---
+ 
+TAVERN.SCAFF:
+	Buildable:
+		Prerequisites: ~disabled 
+TOWNHALL.SCAFF:
+	Buildable:
+		Prerequisites: ~disabled
+GTWNEW.SCAFF:
+	Buildable:
+		Prerequisites: ~disabled
+GUNNEW.SCAFF:
+	Buildable:
+		Prerequisites: ~disabled
+SILONEW.SCAFF:
+	Buildable:
+		Prerequisites: ~disabled
+CSTLWLL:
+	Buildable:
+		Prerequisites: ~disabled
+WDWLL:
+	Buildable:
+		Prerequisites: ~disabled
+        
+# -- units shared --
+
+ENGENEER:
+	Buildable:
+		Prerequisites: ~disabled
+E8FARMER: # farmer
+	Buildable:
+		Prerequisites: ~disabled 
+BUMMLER: # Looter
+	Buildable:
+		Prerequisites: ~disabled 
+MCV2NEW: # supply wagon
+	Buildable:
+		Prerequisites: ~disabled 
+EHARVXL: # cart harvester
+	Buildable:
+		Prerequisites: ~disabled 
+
+# -- king --
+
+
+NUKENEW.SCAFF:
+	Buildable:
+		Prerequisites: ~disabled
+NUKXL.SCAFF:
+	Buildable:
+		Prerequisites: ~disabled
+ZEROPROC.SCAFF:
+	Buildable:
+		Prerequisites: ~disabled
+HQNEWGDI.SCAFF:
+	Buildable:
+		Prerequisites: ~disabled
+ARMORYGDI.SCAFF:
+	Buildable:
+		Prerequisites: ~disabled
+NUK2NEW.SCAFF:
+	Buildable:
+		Prerequisites: ~disabled
+PROCNEW.SCAFF:
+	Buildable:
+		Prerequisites: ~disabled
+STALL.SCAFF:
+	Buildable:
+		Prerequisites: ~disabled
+CASTLE2.SCAFF:
+	Buildable:
+		Prerequisites: ~disabled
+WORKSHOPGDI.SCAFF:
+	Buildable:
+		Prerequisites: ~disabled
+BATO.SCAFF:
+	Buildable:
+		Prerequisites: ~disabled
+HERBALIST.SCAFF:
+	Buildable:
+		Prerequisites: ~disabled
+        
+# -- units king ---
+
+KINGROSS:
+	Buildable:
+		Prerequisites: ~disabled
+KING:
+	Buildable:
+		Prerequisites: ~disabled
+RMBONEW: # paladin
+	Buildable:
+		Prerequisites: ~disabled 
+NEWCOMM: # Juggernaut
+	Buildable:
+		Prerequisites: ~disabled 
+ROSS2: # Medium Cavalry
+	Buildable:
+		Prerequisites: ~disabled 
+ROSS5: # HEavy Cavalry
+	Buildable:
+		Prerequisites: ~disabled
+ROSS4B: # Scout
+	Buildable:
+		Prerequisites: ~disabled
+SIEGE2: # catapult
+	Buildable:
+		Prerequisites: ~disabled
+SIEGE3: # siege tower
+	Buildable:
+		Prerequisites: ~disabled
+ORNI: # ornithopter
+	Buildable:
+		Prerequisites: ~disabled
+DRGNRDR: # dragon
+	Buildable:
+		Prerequisites: ~disabled
+
+# -- baron --
+
+NODNUKE:
+	Buildable:
+		Queue: MBuilding.Nod, MBuilding.GDI
+        
+WORKSHOPNOD.SCAFF:
+	Buildable:
+		Prerequisites: ~disabled
+CASTLE.SCAFF:
+	Buildable:
+		Prerequisites: ~disabled
+NODSTALL.SCAFF:
+	Buildable:
+		Prerequisites: ~disabled
+XLTNTUNI.SCAFF:
+	Buildable:
+		Prerequisites: ~disabled
+ARMORYNOD.SCAFF:
+	Buildable:
+		Prerequisites: ~disabled
+HQNEWNOD.SCAFF:
+	Buildable:
+		Prerequisites: ~disabled
+NODPROC.SCAFF:
+	Buildable:
+		Prerequisites: ~disabled
+HANDNEW.SCAFF:
+	Buildable:
+		Prerequisites: ~disabled
+SCHAFOTT.SCAFF:
+	Buildable:
+		Prerequisites: ~disabled
+SAMNEW.SCAFF:
+	Buildable:
+		Prerequisites: ~disabled
+TRIBU.SCAFF:
+	Buildable:
+		Prerequisites: ~disabled
+        
+# -- units baron --
+
+E2NEW: # spear
+	Buildable:
+		Prerequisites: ~disabled 
+E3NEWV2: # footman
+	Buildable:
+		Prerequisites: ~disabled 
+E9NEW: # flame mage
+	Buildable:
+		Prerequisites: ~disabled 
+E4NEW: # archer
+	Buildable:
+		Prerequisites: ~disabled 
+E5NEW: # marksman
+	Buildable:
+		Prerequisites: ~disabled 
+ASSASSIN:
+	Buildable:
+		Prerequisites: ~disabled
+ROSS1: # light cavalry
+	Buildable:
+		Prerequisites: ~disabled
+ROSS3: # raiding squad
+	Buildable:
+		Prerequisites: ~disabled
+ROSS4: # jevalin
+	Buildable:
+		Prerequisites: ~disabled
+ROSS4C: # hussar
+	Buildable:
+		Prerequisites: ~disabled
+SIEGE1: # ballista
+	Buildable:
+		Prerequisites: ~disabled
+SIEGE4: # ram
+	Buildable:
+		Prerequisites: ~disabled
+WARKITE: # warkite
+	Buildable:
+		Prerequisites: ~disabled
+WRBLN: # War ballo0n
+	Buildable:
+		Prerequisites: ~disabled
+        
+#--- Sultan ----
+
+SULNUKE.SCAFF:
+	Buildable:
+		Prerequisites: ~disabled
+SULLODGE.SCAFF:
+	Buildable:
+		Prerequisites: ~disabled
+SULMILL.SCAFF:
+	Buildable:
+		Prerequisites: ~disabled
+SULNUK2.SCAFF:
+	Buildable:
+		Prerequisites: ~disabled
+SULBARR.SCAFF:
+	Buildable:
+		Prerequisites: ~disabled
+SULMYSTIC.SCAFF:
+	Buildable:
+		Prerequisites: ~disabled
+SULCASTLE.SCAFF:
+	Buildable:
+		Prerequisites: ~disabled
+SULFIX.SCAFF:
+	Buildable:
+		Prerequisites: ~disabled
+SULGTW.SCAFF:
+	Buildable:
+		Prerequisites: ~disabled
+SULARRAY.SCAFF:
+	Buildable:
+		Prerequisites: ~disabled
+SULHALL.SCAFF:
+	Buildable:
+		Prerequisites: ~disabled
+SULMINARET.SCAFF:
+	Buildable:
+		Prerequisites: ~disabled
+SULCNSHMBR.SCAFF:
+	Buildable:
+		Prerequisites: ~disabled
+SULREF.SCAFF:
+	Buildable:
+		Prerequisites: ~disabled 
+SULPLUG1: # extra archers
+	Buildable:
+		Prerequisites: ~disabled 
+SULPLUG3: # djin 
+	Buildable:
+		Prerequisites: ~disabled 
+SULPLUG4: # jevalins
+	Buildable:
+		Prerequisites: ~disabled 
+SULTOW1: # Knowledge
+	Buildable:
+		Prerequisites: ~disabled 
+SULTOW2: # Mystical
+	Buildable:
+		Prerequisites: ~disabled 
+SULTOW3: # Progress
+	Buildable:
+		Prerequisites: ~disabled 
+SULTOW4: # Annihilation
+	Buildable:
+		Prerequisites: ~disabled 
+
+        
+# -- units sultan --
+
+SULE1: # Mubarizun
+	Buildable:
+		Prerequisites: ~disabled 
+SULE2: # Rashidun
+	Buildable:
+		Prerequisites: ~disabled 
+SULE3: # Bedouin
+	Buildable:
+		Prerequisites: ~disabled 
+SULE4: # Palace Guard
+	Buildable:
+		Prerequisites: ~disabled 
+SULE5: # Scimitar
+	Buildable:
+		Prerequisites: ~disabled 
+SULE6: # Farmer
+	Buildable:
+		Prerequisites: ~disabled 
+SULM1: # Apprentice
+	Buildable:
+		Prerequisites: ~disabled  
+SULM2: # Djinn
+	Buildable:
+		Prerequisites: ~disabled 
+SULM4: # Rattlemystic
+	Buildable:
+		Prerequisites: ~disabled  
+SULB0: # Elephant
+	Buildable:
+		Prerequisites: ~disabled 
+SULB1: # Ballista
+	Buildable:
+		Prerequisites: ~disabled  
+SULM3: # Warlock
+	Buildable:
+		Prerequisites: ~disabled 
+SULB3: # Roc
+	Buildable:
+		Prerequisites: ~disabled 

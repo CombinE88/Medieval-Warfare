@@ -459,15 +459,15 @@ Container@PLAYER_WIDGETS:
 					Height: 34 + 34
 					Children:
 						Button@ADD_PRIO:
-							Key: plus
+							Key: Plus
 							X: 1
 							Y: 0
 							Width: 34
 							Height: 34
 							Background: command-button
 							DisableKeySound: true
-							TooltipText: Add Priority
-							TooltipDesc: none
+							TooltipText: Add Priority, the building will build and delivered first.
+							TooltipContainer: TOOLTIP_CONTAINER
 							Children:
 								Image@ICON:
 									X: 5
@@ -475,15 +475,15 @@ Container@PLAYER_WIDGETS:
 									ImageCollection: prioritybuttons
 									ImageName: up_arrow
 						Button@REM_PRIO:
-							Key: minus
+							Key: Minus
 							X: 1
 							Y: 34
 							Width: 34
 							Height: 34
 							Background: command-button
 							DisableKeySound: true
-							TooltipText: Remove Priority
-							TooltipDesc: none
+							TooltipText: Remove Priority, the building will build and delivered last.
+							TooltipContainer: TOOLTIP_CONTAINER
 							Children:
 								Image@ICON:
 									X: 5

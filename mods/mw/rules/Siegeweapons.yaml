@@ -94,8 +94,6 @@ MCV2NEW:
 SIEGE1:
 	Inherits: ^Siege
 	Inherits@2: ^GainsExperience
-	Inherits@88: ^GameSettingsArcher
-	Inherits@89: ^GameSettingsTowers
 	Inherits@AUTOTARGET: ^AutoTargetGround
 	Valued:
 		Cost: 950
@@ -156,8 +154,6 @@ SIEGE1:
 SIEGE2:
 	Inherits: ^Siege
 	Inherits@2: ^GainsExperience
-	Inherits@88: ^GameSettingsArcher
-	Inherits@89: ^GameSettingsTowers
 	Inherits@AUTOTARGET: ^AutoTargetGround
 	Valued:
 		Cost: 1200
@@ -216,7 +212,6 @@ SIEGE2:
 SIEGE3:
 	Inherits: ^Siege
 	Inherits@2: ^GainsExperience
-	Inherits@88: ^GameSettingsArcher
 	Inherits@AUTOTARGET: ^AutoTargetAll
 	ConditionManager:
 	Cargo:

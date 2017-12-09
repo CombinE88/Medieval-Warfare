@@ -1,4 +1,12 @@
 ^Palettes:
+	PaletteFromFile@interiorfire:
+		Name: fire
+		Filename: fireblend.pal
+		AllowModifiers: false
+	PaletteFromPaletteWithAlpha@firealpha:
+		Name: firealpha
+		BasePalette: fire
+		Alpha: 0.5
 	PaletteFromCurrentTileset@terrain:
 		Name: terrain
 		ShadowIndex: 4
@@ -96,6 +104,11 @@
 		Filename: temperatRA.pal
 		ShadowIndex: 1
 		AllowModifiers: true
+	PaletteFromFile@TDTERRAIN:
+		Name: tdterrain
+		Filename: temperat.pal
+		ShadowIndex: 1
+		AllowModifiers: true
 	PaletteFromFile@RA:
 		Name: ra
 		Filename: newMWPalette.pal
@@ -147,8 +160,10 @@
 	RotationPaletteEffect@water:
 		ExcludePalettes: effect, chrome, raplayer, ra, raicon, grain, mwcivilian, mwnobles, sul, sultanplayer, grimalpha, grimprojalpha, undeadalpha, undeadplayer, undead
 		RotationBase: 32
+		ExcludeTilesets: INTERIOR
 	FlashPaletteEffect:
 		ExcludePalettes: raplayer, ra, raicon, grain, mwcivilian, mwnobles, sul, sultanplayer, grimalpha, grimprojalpha, undeadalpha, undeadplayer, undead
+		ExcludeTilesets: INTERIOR
 	PaletteFromFile@Menu:
 		Name: menu
 		Filename: flag.pal
@@ -211,3 +226,4 @@
 		Name: alphabarely
 		BasePalette: ra
 		Alpha: 0.1
+        

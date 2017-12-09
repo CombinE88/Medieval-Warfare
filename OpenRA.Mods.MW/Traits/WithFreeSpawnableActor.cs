@@ -23,8 +23,8 @@ using OpenRA.Traits;
 namespace OpenRA.Mods.MW.Traits
 {
 	[Desc("A actor has to enter the building before the unit spawns.")]
-	public class WithFreeSpawnableActorInfo : ITraitInfo
-	{
+	public class WithFreeSpawnableActorInfo : ConditionalTraitInfo
+    {
 		[Desc("Valid actortypes wich can pe used to produce/ convert.")]
 		public readonly HashSet<string> TrainingActors = new HashSet<string>();
 		
@@ -59,10 +59,10 @@ namespace OpenRA.Mods.MW.Traits
 		
 		public readonly bool ReturnOnDeath = false;
 		
-		public object Create(ActorInitializer init) { return new WithFreeSpawnableActor(init, this); }
+		public override object Create(ActorInitializer init) { return new WithFreeSpawnableActor(init, this); }
 	}
 
-	class WithFreeSpawnableActor : ITick, INotifyActorDisposing, INotifyRemovedFromWorld
+	class WithFreeSpawnableActor : ConditionalTrait<WithFreeSpawnableActorInfo>, ITick, INotifyActorDisposing, INotifyRemovedFromWorld
     {
 		private int Ticker;
 		private Actor RespawnActor = null;
@@ -72,8 +72,8 @@ namespace OpenRA.Mods.MW.Traits
 
 
 
-		public WithFreeSpawnableActor(ActorInitializer init, WithFreeSpawnableActorInfo info)
-		{
+		public WithFreeSpawnableActor(ActorInitializer init, WithFreeSpawnableActorInfo info) : base(info)
+        {
 			this.info = info;
 			if (!info.SpawnStart)
 				Ticker = info.RespawnTime;
@@ -182,7 +182,10 @@ namespace OpenRA.Mods.MW.Traits
 
 		void ITick.Tick(Actor self)
 		{
-			if (RespawnActor != null && !RespawnActor.IsDead && RespawnActor.IsInWorld && RespawnActor.IsIdle && idlecount > -10)
+            if (IsTraitDisabled)
+                return;
+
+            if (RespawnActor != null && !RespawnActor.IsDead && RespawnActor.IsInWorld && RespawnActor.IsIdle && idlecount > -10)
 			{
 				idlecount--;
 			}
