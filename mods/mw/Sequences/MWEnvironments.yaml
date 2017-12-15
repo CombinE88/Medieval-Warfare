@@ -88,9 +88,46 @@ deadtable4:
 table5:
 	idle: itablelongs
 		Start: 0
+		Offset: 0,3
 deadtable5:
 	idle: itablelongs
 		Start: 1
+		Offset: 0,3
+ichesta:
+	idle: ichesta
+		Start: 0
+ichestdeada:
+	idle: ichesta
+		Start: 9
+		make: *
+ichestb:
+	idle: ichestb
+		Start: 0
+ichestdeadb:
+	idle: ichestb
+		Start: 9
+		make: *
+ichestc:
+	idle: ichestc
+		Start: 0
+ichestdeadc:
+	idle: ichestc
+		Start: 9
+		make: *
+        
+        
+ipaintinga:
+	idle: ipainting
+		Start: 0
+ipaintingb:
+	idle: ipainting
+		Start: 1
+ipaintingc:
+	idle: ipainting
+		Start: 2
+ipaintingd:
+	idle: ipainting
+		Start: 3
         
 barrelmw1:
 	idle: barrelmw
@@ -206,6 +243,59 @@ idooreastopen:
 		Offset: -6, -12
 		ZOffset: -1025
         
+idoorsnorth:
+	idle: idoorns
+		Offset: -11,0
+idoorsnorthopen:
+	idle: idoorns
+		Offset: -11,0
+		Start: 9
+		ZOffset: -1025
+	make: idoorns
+		Offset: -11,0
+		Length: *
+		Tick: 150
+		ZOffset: -1025
+idoorssouth:
+	idle: idoorss
+		Offset: -11,0
+idoorssouthopen:
+	idle: idoorss
+		Offset: -11,0
+		Start: 9
+		ZOffset: -1025
+	make: idoors
+		Offset: -11,0
+		Length: *
+		Tick: 150
+		ZOffset: -1025
+idoorswest:
+	idle: idoorws
+		Offset: 6, -12
+idoorswestopen:
+	idle: idoorws
+		Start: 9
+		Offset: 6, -12
+		ZOffset: -1025
+	make: idoorws
+		Length: *
+		Tick: 150
+		Offset: 6, -12
+		ZOffset: -1025
+idoorseast:
+	idle: idoores
+		Offset: -11, -12
+idoorseastopen:
+	idle: idoores
+		Start: 9
+		Offset: -11, -12
+		ZOffset: -1025
+	make: idoores
+		Length: *
+		Tick: 150
+		Offset: -1, -12
+		ZOffset: -1025
+        
 idooriron:
 	idle: idoorgate
 		ZOffset: 1025
@@ -216,6 +306,20 @@ idoorironopen:
 		Length: *
 		Tick: 150
 		ZOffset: 1025
+        
+idoorbars:
+	idle: idoorbarsdoor
+		Offset: -11,6
+idoorbarsopen:
+	idle: idoorbarsdoor
+		Offset: -11,6
+		Start: 9
+		ZOffset: -1025
+	make: idoorbarsdoor
+		Offset: -11,6
+		Length: *
+		Tick: 150
+		ZOffset: -1025
         
 
 switcha:

@@ -2566,7 +2566,7 @@ Crossbow:
 		Image: e4arrow
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
-		Spread: 25
+		Spread: 55
 		InvalidTargets: Wall, Air
 		ValidTargets: Ground
 		Damage: 6000

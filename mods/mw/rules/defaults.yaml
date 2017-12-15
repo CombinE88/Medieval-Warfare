@@ -1133,11 +1133,7 @@
 		ShowOwnerRow: false
 	Crate:
 		TerrainTypes: Clear, Rough, Road, Tiberium, BlueTiberium, Beach
-	RenderSprites:
-		Palette: effect
-		Image: crate
-	WithCrateBody:
-		XmasImages: xcratea, xcrateb, xcratec, xcrated
+	WithSpriteBody:
 
 ^Defense:
 	Inherits: ^BaseBuilding

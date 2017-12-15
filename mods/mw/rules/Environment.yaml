@@ -807,6 +807,103 @@ IDOORIRONOPEN:
 		Dimensions: 2,2
 		Footprint: == ==	
         
+        
+IDOORSNORTH:
+	Inherits: ^PropDoor
+	RenderSprites:
+		Palette: mwcivilian
+	SpawnActorOnDeath:
+		Actor: IDOORSNORTHOPEN
+		SkipMakeAnimations: false
+	Tooltip:
+		Name: Door
+		ShowOwnerRow: false
+        
+IDOORSNORTHOPEN:
+	Inherits: ^PropDoorOpen
+	RenderSprites:
+		Palette: mwcivilian
+	Tooltip:
+		Name: Door
+		ShowOwnerRow: false
+IDOORSSOUTH:
+	Inherits: ^PropDoor
+	RenderSprites:
+		Palette: mwcivilian
+	SpawnActorOnDeath:
+		Actor: IDOORSSOUTHOPEN
+		SkipMakeAnimations: false
+	Tooltip:
+		Name: Door
+		ShowOwnerRow: false
+        
+IDOORSSOUTHOPEN:
+	Inherits: ^PropDoorOpen
+	RenderSprites:
+		Palette: mwcivilian
+	Tooltip:
+		Name: Door
+		ShowOwnerRow: false
+        
+IDOORSWEST:
+	Inherits: ^PropDoor
+	RenderSprites:
+		Palette: mwcivilian
+	SpawnActorOnDeath:
+		Actor: IDOORSWESTOPEN
+		SkipMakeAnimations: false
+	Tooltip:
+		Name: Door
+		ShowOwnerRow: false
+        
+IDOORSWESTOPEN:
+	Inherits: ^PropDoorOpen
+	RenderSprites:
+		Palette: mwcivilian
+	Tooltip:
+		Name: Door
+		ShowOwnerRow: false
+IDOORSEAST:
+	Inherits: ^PropDoor
+	RenderSprites:
+		Palette: mwcivilian
+	SpawnActorOnDeath:
+		Actor: IDOORSEASTOPEN
+		SkipMakeAnimations: false
+	Tooltip:
+		Name: Door
+		ShowOwnerRow: false
+        
+IDOORSEASTOPEN:
+	Inherits: ^PropDoorOpen
+	RenderSprites:
+		Palette: mwcivilian
+	Tooltip:
+		Name: Door
+		ShowOwnerRow: false
+        
+        
+
+IDOORBARS:
+	Inherits: ^PropDoor
+	RenderSprites:
+		Palette: mwcivilian
+	SpawnActorOnDeath:
+		Actor: IDOORBARSOPEN
+		SkipMakeAnimations: false
+	Tooltip:
+		Name: Door
+		ShowOwnerRow: false
+        
+IDOORBARSOPEN:
+	Inherits: ^PropDoorOpen
+	RenderSprites:
+		Palette: mwcivilian
+	Tooltip:
+		Name: Door
+		ShowOwnerRow: false
+        	
+        
 SWITCHA:
 	Inherits: ^InteriorProp
 	RenderSprites:
@@ -1050,3 +1147,125 @@ CRACKWALLH:
 		HP: 100
 	SoundOnDamageTransition:
 		DestroyedSounds: collapsebricks.aud
+        
+
+ICHESTAHEAL:
+	Inherits: ^Crate
+	RenderSprites:
+		Image: ichesta
+		PlayerPalette: raplayer
+		Palette:
+	SpawnActorOnDeath:
+		Actor: ICHESTDEADA
+		SkipMakeAnimations: false
+	SoundOnDamageTransition:
+		DestroyedSounds: chest01.wav
+#	GiveCashCrateAction:
+#		Amount: 1000
+#		SelectionShares: 20
+#		UseCashTick: yes
+	HealUnitsCrateAction:
+		TimeDelay: 10
+		Notification: heal2.aud
+		SelectionShares: 100
+	Tooltip:
+		Name: Chest
+		ShowOwnerRow: false
+	HitShape:
+	EditorTilesetFilter:
+		RequireTilesets: INTERIOR
+		Categories: Interior Props
+        
+ICHESTDEADA:
+	Inherits: ^PropHusk
+	WithMakeAnimation:
+	RenderSprites:
+		PlayerPalette: raplayer
+		Palette:
+ICHESTBHEAL:
+	Inherits: ^Crate
+	RenderSprites:
+		Image: ichestb
+		PlayerPalette: raplayer
+		Palette:
+	SpawnActorOnDeath:
+		Actor: ICHESTDEADB
+		SkipMakeAnimations: false
+	Health:
+		HP: 1
+	SoundOnDamageTransition:
+		DestroyedSounds: chest01.wav
+	HealUnitsCrateAction:
+		TimeDelay: 10
+		Notification: heal2.aud
+		SelectionShares: 10
+	Tooltip:
+		Name: Chest
+		ShowOwnerRow: false
+	HitShape:
+	EditorTilesetFilter:
+		RequireTilesets: INTERIOR
+		Categories: Interior Props
+        
+ICHESTDEADB:
+	Inherits: ^PropHusk
+	WithMakeAnimation:
+	RenderSprites:
+		PlayerPalette: raplayer
+		Palette: 
+ICHESTCHEAL:
+	Inherits: ^Crate
+	RenderSprites:
+		Image: ichestc
+		PlayerPalette: raplayer
+		Palette:
+	SpawnActorOnDeath:
+		Actor: ICHESTDEADC
+		SkipMakeAnimations: false
+	Health:
+		HP: 1
+	SoundOnDamageTransition:
+		DestroyedSounds: chest01.wav
+	HealUnitsCrateAction:
+		TimeDelay: 10
+		Notification: heal2.aud
+		SelectionShares: 10
+	Tooltip:
+		Name: Chest
+		ShowOwnerRow: false
+	HitShape:
+	EditorTilesetFilter:
+		RequireTilesets: INTERIOR
+		Categories: Interior Props
+        
+ICHESTDEADC:
+	Inherits: ^PropHusk
+	WithMakeAnimation:
+	RenderSprites:
+		PlayerPalette: raplayer
+		Palette: 
+        
+IPAINTINGA:
+	Inherits: ^PropHusk
+	WithMakeAnimation:
+	RenderSprites:
+		PlayerPalette: raplayer
+		Palette: 
+IPAINTINGB:
+	Inherits: ^PropHusk
+	WithMakeAnimation:
+	RenderSprites:
+		PlayerPalette: raplayer
+		Palette: 
+IPAINTINGC:
+	Inherits: ^PropHusk
+	WithMakeAnimation:
+	RenderSprites:
+		PlayerPalette: raplayer
+		Palette: 
+IPAINTINGD:
+	Inherits: ^PropHusk
+	WithMakeAnimation:
+	RenderSprites:
+		PlayerPalette: raplayer
+		Palette: 

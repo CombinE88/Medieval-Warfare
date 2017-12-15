@@ -27,7 +27,7 @@ Sledgehammer:
 		ValidTargets: Ground, Trees
 		InvalidTargets: Air
 		Spread: 425
-		Damage: 2000
+		Damage: 2500
 		Falloff: 100, 100, 100, 100, 50, 25, 0
 		Versus:
 			Leather: 150
@@ -47,7 +47,7 @@ Sledgehammer:
 		ValidTargets: Ground, Trees
 		InvalidTargets: Air
 		Spread: 425
-		Damage: 2000
+		Damage: 2500
 		Falloff: 100, 100, 100, 100, 50, 25, 0
 		Versus:
 			Leather: 150
@@ -67,7 +67,7 @@ Sledgehammer:
 		ValidTargets: Ground, Trees
 		InvalidTargets: Air
 		Spread: 425
-		Damage: 2000
+		Damage: 2500
 		Falloff: 100, 100, 100, 100, 50, 25, 0
 		Versus:
 			Leather: 150

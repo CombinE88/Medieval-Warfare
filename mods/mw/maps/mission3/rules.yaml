@@ -122,6 +122,8 @@ WDWLL:
 ENGENEER:
 	Buildable:
 		Prerequisites: ~disabled
+	RevealsShroud:
+		Range: 4c0
 E8FARMER: # farmer
 	Buildable:
 		Prerequisites: ~disabled 
