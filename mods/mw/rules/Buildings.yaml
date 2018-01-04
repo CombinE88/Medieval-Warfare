@@ -1249,6 +1249,7 @@ NODNUKE:
 		Footprint: xx ==
 		Dimensions: 2,2
 		LocalCenterOffset: 0,-512,0
+		BuildSounds: tentcloth.aud
 	Health:
 		HP: 35000
 	RevealsShroud:

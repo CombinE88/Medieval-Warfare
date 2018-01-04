@@ -553,3 +553,4 @@ WDWLL:
 		CrushClasses: wall
 	Building:
 		Adjacent: 12
+		BuildSounds: shovel.aud

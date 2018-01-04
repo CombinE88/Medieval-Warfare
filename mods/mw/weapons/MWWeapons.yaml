@@ -1172,7 +1172,7 @@ SetFire:
 	Warhead@1Dam: SpreadDamage
 		Spread: 512
 		Delay: 5
-		Damage: 2600
+		Damage: 3000
 		ValidTargets: Structure
 		InvalidTargets: Infantry
 		Versus:
@@ -1181,7 +1181,7 @@ SetFire:
 		DamageTypes: Prone50Percent, TriggerProne, BurnToDeath 
 	Warhead@2Dam: SpreadDamage
 		Spread: 512
-		Damage: 1500
+		Damage: 2000
 		Delay: 15
 		ValidTargets: Structure
 		InvalidTargets: Infantry
@@ -1191,7 +1191,7 @@ SetFire:
 		DamageTypes: Prone50Percent, TriggerProne, BurnToDeath 
 	Warhead@3Dam: SpreadDamage
 		Spread: 512
-		Damage: 1400
+		Damage: 1700
 		Delay: 27
 		ValidTargets: Structure
 		InvalidTargets: Infantry
@@ -1201,7 +1201,7 @@ SetFire:
 		DamageTypes: Prone50Percent, TriggerProne, BurnToDeath 
 	Warhead@4Dam: SpreadDamage
 		Spread: 512
-		Damage: 1300
+		Damage: 1500
 		Delay: 39
 		ValidTargets: Structure
 		InvalidTargets: Infantry

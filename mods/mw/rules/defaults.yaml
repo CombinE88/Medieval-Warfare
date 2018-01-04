@@ -934,7 +934,7 @@
 	Building:
 		Adjacent: 10
 		RequiresBaseProvider: true
-		BuildSounds: constru2.aud, hvydoor1.aud
+		BuildSounds: tentcloth.aud, brickconc.aud
 		TerrainTypes: Clear,Road
 	MustBeDestroyed:
 		RequiredForShortGame: true
@@ -950,7 +950,7 @@
 		ActorTypes: e1new,e1new,e1new,e1new
 	EngineerRepairable:
 	Sellable:
-		SellSounds: cashturn.aud
+		SellSounds: coindrop.aud
 	Capturable:
 	#WithMakeAnimation:
 
@@ -1038,7 +1038,7 @@
 	Building:
 		Dimensions: 1,1
 		Footprint: x
-		BuildSounds: hvydoor1.aud
+		BuildSounds: brickconc.aud
 		Adjacent: 7
 		TerrainTypes: Clear,Road
 	Targetable:
@@ -1056,7 +1056,7 @@
 	WithWallSpriteBody:
 	GivesExperience:
 	Sellable:
-		SellSounds: cashturn.aud
+		SellSounds: coindrop.aud
 	Guardable:
 	FrozenUnderFog:
 	ScriptTriggers:
@@ -2219,7 +2219,7 @@
 		Footprint: x
 		Adjacent: 10
 		RequiresBaseProvider: true
-		BuildSounds: hvydoor1.aud
+		BuildSounds: shovel.aud
 		TerrainTypes: Clear,Road
 	RenderSprites:
 	Guardable:

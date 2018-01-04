@@ -9,7 +9,7 @@ MCVNEW:
 		IntoActor: factnew
 		Offset: -1,-1
 		Facing: 160
-		TransformSounds: constru2.aud, hvydoor1.aud
+		TransformSounds: tentcloth.aud, brickconc.aud
 		NoTransformNotification: BuildingCannotPlaceAudio
 	Valued:
 		Cost: 5000
@@ -73,7 +73,7 @@ MCV2NEW:
 		IntoActor: minifact
 		Offset: -1,-1
 		Facing: 160
-		TransformSounds: constru2.aud, hvydoor1.aud
+		TransformSounds: tentcloth.aud, brickconc.aud
 		NoTransformNotification: BuildingCannotPlaceAudio
 	Valued:
 		Cost: 2000
