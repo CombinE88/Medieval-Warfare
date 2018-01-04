@@ -42,19 +42,21 @@ namespace OpenRA.Mods.MW.Traits
 		public void Created(Actor self)
 		{
 			if (!self.Owner.NonCombatant && self.Owner.WinState != WinState.Lost && self.Owner.PlayerActor.Info.HasTraitInfo<PlayerCivilizationInfo>())
-			{
-				self.Owner.PlayerActor.Trait<PlayerCivilization>().MaxLivingspacevar += info.Ammount;
-				self.Owner.PlayerActor.Trait<PlayerCivilization>().PeasantPorivder.Add(self);
-			}
+            {
+                self.Owner.PlayerActor.Trait<PlayerCivilization>().MaxLivingspacevar += info.Ammount;
+                self.Owner.PlayerActor.Trait<PlayerCivilization>().Recalculate();
+                self.Owner.PlayerActor.Trait<PlayerCivilization>().PeasantProvider.Add(self);
+            }
 		}
 
 		public void RemovedFromWorld(Actor self)
 		{
 			if (!self.Owner.NonCombatant && self.Owner.WinState != WinState.Lost && self.Owner.PlayerActor.Info.HasTraitInfo<PlayerCivilizationInfo>())
-			{
-				self.Owner.PlayerActor.Trait<PlayerCivilization>().MaxLivingspacevar -= info.Ammount;
-				self.Owner.PlayerActor.Trait<PlayerCivilization>().PeasantPorivder.Remove(self);
-			}
+            {
+                self.Owner.PlayerActor.Trait<PlayerCivilization>().MaxLivingspacevar -= info.Ammount;
+                self.Owner.PlayerActor.Trait<PlayerCivilization>().Recalculate();
+                self.Owner.PlayerActor.Trait<PlayerCivilization>().PeasantProvider.Remove(self);
+            }
 		}
 	}
 }

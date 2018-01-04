@@ -29,7 +29,11 @@ namespace OpenRA.Mods.MW.Traits
 		{
 			if (!self.Owner.NonCombatant && self.Owner.WinState != WinState.Lost && self.Owner.PlayerActor.Info.HasTraitInfo<PlayerCivilizationInfo>())
 			{
-				self.Owner.PlayerActor.Trait<PlayerCivilization>().WorkerPopulationvar += info.ActorCount;
+                for (int i = 1; i <= info.ActorCount; i++)
+                {
+                    self.Owner.PlayerActor.Trait<PlayerCivilization>().WorkerPopulationvar += info.ActorCount;
+                    self.Owner.PlayerActor.Trait<PlayerCivilization>().Recalculate();
+                }
 			}
 		}
 
@@ -37,8 +41,12 @@ namespace OpenRA.Mods.MW.Traits
 		{
 			if (!self.Owner.NonCombatant && self.Owner.WinState != WinState.Lost && self.Owner.PlayerActor.Info.HasTraitInfo<PlayerCivilizationInfo>())
 			{
-				self.Owner.PlayerActor.Trait<PlayerCivilization>().WorkerPopulationvar -= info.ActorCount;
-			}
+                for (int i = 1; i <= info.ActorCount; i++)
+                {
+                    self.Owner.PlayerActor.Trait<PlayerCivilization>().WorkerPopulationvar -= info.ActorCount;
+                    self.Owner.PlayerActor.Trait<PlayerCivilization>().Recalculate();
+                }
+            }
 		}
 	}
 }

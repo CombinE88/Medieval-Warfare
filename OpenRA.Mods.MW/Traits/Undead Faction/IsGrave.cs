@@ -29,7 +29,8 @@ namespace OpenRA.Mods.MW.Traits
 			if (!self.Owner.NonCombatant && self.Owner.WinState != WinState.Lost && self.Owner.PlayerActor.Info.HasTraitInfo<PlayerCivilizationInfo>())
 			{
 				self.Owner.PlayerActor.Trait<PlayerCivilization>().MaxLivingspacevar += info.Value;
-			}
+                self.Owner.PlayerActor.Trait<PlayerCivilization>().Recalculate();
+            }
 		}
 
 		public void RemovedFromWorld(Actor self)
@@ -37,7 +38,8 @@ namespace OpenRA.Mods.MW.Traits
 			if (!self.Owner.NonCombatant && self.Owner.WinState != WinState.Lost && self.Owner.PlayerActor.Info.HasTraitInfo<PlayerCivilizationInfo>())
 			{
 				self.Owner.PlayerActor.Trait<PlayerCivilization>().MaxLivingspacevar -= info.Value;
-			}
+                self.Owner.PlayerActor.Trait<PlayerCivilization>().Recalculate();
+            }
 		}
 	}
 }

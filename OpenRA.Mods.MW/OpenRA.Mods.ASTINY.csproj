@@ -71,12 +71,8 @@
     <Compile Include="Traits\Activites\Prey.cs" />
     <Compile Include="Traits\Activites\PreyActiviy.cs" />
     <Compile Include="Traits\AmmoPoolConditions.cs" />
-    <Compile Include="Traits\ArmyOfTheDeath\ActivityInterfaces.cs" />
-    <Compile Include="Traits\ArmyOfTheDeath\AttackedByDead.cs" />
-    <Compile Include="Traits\ArmyOfTheDeath\DecaysResources.cs" />
-    <Compile Include="Traits\ArmyOfTheDeath\IsDeathArmyMob.cs" />
-    <Compile Include="Traits\ArmyOfTheDeath\DeadArmyHandler.cs" />
-    <Compile Include="Traits\ArmyOfTheDeath\PlayRandomSoundEffect.cs" />
+    <Compile Include="Traits\Activites\ActivityInterfaces.cs" />
+    <Compile Include="Traits\WithPermanentExplosion.cs" />
     <Compile Include="Traits\Construction\AddPrioTargeter.cs" />
     <Compile Include="Traits\Construction\ConstructionPriority.cs" />
     <Compile Include="Traits\Construction\ConstructionProgress.cs" />
@@ -84,8 +80,6 @@
     <Compile Include="Traits\CreateActorOnDeath.cs" />
     <Compile Include="Traits\CritterSpawner.cs" />
     <Compile Include="Traits\DirectSpawnModifier.cs" />
-    <Compile Include="Traits\Render\ChimneySmoke.cs" />
-    <Compile Include="Traits\Render\ADVSpriteEffect.cs" />
     <Compile Include="Traits\Render\DisguiseChargeBar.cs" />
     <Compile Include="Traits\DockBasics\Dock.cs" />
     <Compile Include="Traits\DockBasics\DockClient.cs" />
@@ -133,6 +127,7 @@
     <Compile Include="Traits\WithFreeSpawnableActor.cs" />
     <Compile Include="Warheads\BackFireShrapnelWarhead.cs" />
     <Compile Include="Warheads\CashTickWarhead.cs" />
+    <Compile Include="Warheads\DecayResourceWarhead.cs" />
     <Compile Include="Warheads\FireClusterWarhead.cs" />
     <Compile Include="Warheads\FireFragmentWarhead.cs" />
     <Compile Include="Warheads\FireShrapnelWarhead.cs" />

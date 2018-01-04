@@ -41,8 +41,7 @@ namespace OpenRA.Mods.MW.Traits
 		
 		void ITick.Tick(Actor self)
 		{
-			//Log.Write("debug", "Max Ammo: " + maxAmmo);
-			//Log.Write("debug", "Now Ammo: " + GetAmmoCount());
+
 			if (conditionManager == null)
 			{
 				//Log.Write("debug", "Terminate");
@@ -53,15 +52,12 @@ namespace OpenRA.Mods.MW.Traits
 			{
 				if (tokenFull == ConditionManager.InvalidConditionToken)
 				{
-					//Log.Write("debug", "ConditionFull on");
 					tokenFull = conditionManager.GrantCondition(self, Info.ConditionFull);
 				}
-
 			}
 			else if (tokenFull != ConditionManager.InvalidConditionToken)
 			{
 				tokenFull = conditionManager.RevokeCondition(self, tokenFull);
-				//Log.Write("debug", "ConditionFull off");
 			}
 
 			if (GetAmmoCount() == 0)
@@ -69,15 +65,12 @@ namespace OpenRA.Mods.MW.Traits
 				if (tokenEmpty == ConditionManager.InvalidConditionToken)
 				{
 					tokenEmpty = conditionManager.GrantCondition(self, Info.ConditionEmpty);
-					//Log.Write("debug", "ConditionEmpty On");
 				}
 			}
 			else if (tokenEmpty != ConditionManager.InvalidConditionToken)
 			{
 				tokenEmpty = conditionManager.RevokeCondition(self, tokenEmpty);
-				//Log.Write("debug", "ConditionEmpty off");
 			}
-			
 		}
 	}
 }

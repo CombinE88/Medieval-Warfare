@@ -32,19 +32,13 @@
 
 ^Skeleton:  
 	Inherits: ^MedievalInfantry
+	Inherits@GainsExperience: ^GainsExperience
+	Inherits@ArcherDemo65: ^ArcherDemo65
+	Inherits@TornadoVunerable: ^TornadoVunerable
+	Inherits@SnakeStunnable: ^SnakeStunnable
 	Inherits@AUTOTARGET: ^AutoTargetAll
 	EditorTilesetFilter:
 		Categories: Undead
-	-ExternalCondition@ROTTEN:
-	-ExternalCondition@DDler:
-	-ExternalCondition@ROYAL:
-	-ExternalCondition@HOSPITAL:
-	-WithDecoration@REDCROSS:
-	-WithDecoration@Crown:
-	-DamageMultiplier@Crown:
-	-FirepowerMultiplier@Crown:
-	-ReloadDelayMultiplier:
-	-SelfHealing@HOSPITAL:
 	WithSpriteBody:
 		RequiresCondition: makeanim
 	WithDeathAnimation:
@@ -79,41 +73,6 @@
 		InitialStance: AttackAnything
 	Voiced:
 		VoiceSet: SkeletonVoice
-	ExternalCondition@SNAKES:
-		Condition: snaketrap
-	SelfHealing@SNAKES:
-		Step: -1000
-		HealIfBelow: 110
-		Delay: 25
-		RequiresCondition: snaketrap
-		DamageTypes: PoisonDeath
-	SelfHealing@SNAKES2:
-		PercentageStep: -8
-		Step: -0
-		HealIfBelow: 110
-		Delay: 25
-		RequiresCondition: snaketrap >= 2
-		DamageTypes: PoisonDeath
-	SelfHealing@SNAKES3:
-		PercentageStep: -8
-		Step: -0
-		HealIfBelow: 110
-		Delay: 25
-		RequiresCondition: snaketrap >= 3
-		DamageTypes: PoisonDeath
-	SelfHealing@SNAKES4:
-		PercentageStep: -8
-		Step: -0
-		HealIfBelow: 110
-		Delay: 25
-		RequiresCondition: snaketrap >= 4
-		DamageTypes: PoisonDeath	 
-	SpeedMultiplier@SNAKES:
-		Modifier: 0
-		RequiresCondition: snaketrap
-	WithIdleOverlay@SNAKES:
-		Sequence: stunned
-		RequiresCondition: snaketrap
 	RangeMultiplier:
 		Modifier: 0
 		RequiresCondition: snaketrap
@@ -121,22 +80,16 @@
 		Weapon: LeaveStuff
 		EmptyWeapon: LeaveStuff
 		Chance: 15
+    Crushable:
 		
 ^SkeletonSpawn:
 	Inherits: ^MedievalInfantry
+	Inherits@ArcherDemo65: ^ArcherDemo65
+	Inherits@TornadoVunerable: ^TornadoVunerable
+	Inherits@SnakeStunnable: ^SnakeStunnable
 	Inherits@AUTOTARGET: ^AutoTargetAll
 	EditorTilesetFilter:
 		Categories: Undead
-	-ExternalCondition@ROTTEN:
-	-ExternalCondition@DDler:
-	-ExternalCondition@ROYAL:
-	-ExternalCondition@HOSPITAL:
-	-WithDecoration@REDCROSS:
-	-WithDecoration@Crown:
-	-DamageMultiplier@Crown:
-	-FirepowerMultiplier@Crown:
-	-ReloadDelayMultiplier:
-	-SelfHealing@HOSPITAL:
 	WithDeathAnimation:
 		DeathSequencePalette: raplayer
 		DeathTypes:
@@ -1692,6 +1645,14 @@ UNDEADCOMM:
 
 PREYCOLYTE:
 	Inherits: ^Knight
+	Inherits@GainsExperience: ^GainsExperience
+	Inherits@GetsPoisoned: ^GetsPoisoned
+	Inherits@CanTurnIntoScelett:  ^CanTurnIntoScelett
+	Inherits@ArcherDemo65: ^ArcherDemo65
+	Inherits@TornadoVunerable: ^TornadoVunerable
+	Inherits@Healable: ^Healable
+	Inherits@SnakeStunnable: ^SnakeStunnable
+	Inherits@GrimReanimatable: ^GrimReanimatable
 	Captures:
 		CaptureTypes: building
 		PlayerExperience: 50
@@ -1766,6 +1727,10 @@ PREYCOLYTE:
 DEADROSS:
 	Inherits: ^Cavalry
 	Inherits@AUTOTARGET: ^AutoTargetGround
+	Inherits@GainsExperience: ^GainsExperience
+	Inherits@ArcherDemo65: ^ArcherDemo80
+	Inherits@TornadoVunerable: ^TornadoVunerable
+	Inherits@SnakeStunnable: ^SnakeSlowable
 	Valued:
 		Cost: 225
 	RevealsShroud:
@@ -2078,13 +2043,10 @@ UNDEAD7:
 GRIM:
 	Inherits: ^Knight
 	Inherits@AUTOTARGET: ^AutoTargetGround
-	-GrimTarget:
-	-DamageMultiplier@GRIM:
-	-RangeMultiplier@GRIM:
-	-FirepowerMultiplier@GRIM:
-	-SpeedMultiplier@GRIM:
-	-ReloadDelayMultiplier@GRIM:
-	-GivesExperienceMultiplier@GRIM:
+	Inherits@GainsExperience: ^GainsExperience
+	Inherits@ArcherDemo65: ^ArcherDemo80
+	Inherits@TornadoVunerable: ^TornadoVunerable
+	Inherits@SnakeStunnable: ^SnakeSlowable
 	RevealsShroud:
 		Range: 6c0
 	Valued:
@@ -2139,14 +2101,6 @@ GRIM:
 		Type: Spectral
 	DetectCloaked:
 		Range: 4c0
-	-SpawnActorOnDeath@SCELET:
-	-ExternalCondition@SNAKES:
-	-SelfHealing@SNAKES:
-	-SpeedMultiplier@SNAKES:
-	-WithIdleOverlay@SNAKES:
-	-SelfHealing@SNAKES2:
-	-SelfHealing@SNAKES3:
-	-SelfHealing@SNAKES4:
 	Buildable:
 		IconPalette: raicon
 		BuildPaletteOrder: 30
@@ -2160,6 +2114,13 @@ GRIM:
 ACOLYTEC:
 	Inherits: ^Knight
 	Inherits@AUTOTARGET: ^AutoTargetAll
+	Inherits@GainsExperience: ^GainsExperience
+	Inherits@GetsPoisoned: ^GetsPoisoned
+	Inherits@ArcherDemo65: ^ArcherDemo65
+	Inherits@TornadoVunerable: ^TornadoVunerable
+	Inherits@Healable: ^Healable
+	Inherits@SnakeStunnable: ^SnakeStunnable
+	Inherits@CanTurnIntoScelett:  ^CanTurnIntoScelett
 	Valued:
 		Cost: 700
 	-Crushable:
@@ -2216,6 +2177,13 @@ ACOLYTEC:
 VAMP:
 	Inherits: ^Knight
 	Inherits@AUTOTARGET: ^AutoTargetGround
+	Inherits@GainsExperience: ^GainsExperience
+	Inherits@GetsPoisoned: ^GetsPoisoned
+	Inherits@ArcherDemo65: ^ArcherDemo65
+	Inherits@TornadoVunerable: ^TornadoVunerable
+	Inherits@Healable: ^Healable
+	Inherits@SnakeStunnable: ^SnakeStunnable
+	Inherits@CanTurnIntoScelett:  ^CanTurnIntoScelett
 	Valued:
 		Cost: 750
 	-Crushable:
@@ -2261,7 +2229,9 @@ VAMP:
 		
 VAMPFLYING:
 	Inherits: ^Helicopter
-	Inherits@EXPERIENCE: ^GainsExperience
+	Inherits@GainsExperience: ^GainsExperience
+	Inherits@TornadoVunerable: ^TornadoVunerable
+	Inherits@Healable: ^Healable
 	Inherits@AUTOTARGET: ^AutoTargetAir
 	HitShape:
 	WithFacingSpriteBody:
@@ -2341,6 +2311,12 @@ VAMPMAN.Husk:
 DEMONHORSE:
 	Inherits: ^Cavalry
 	Inherits@AUTOTARGET: ^AutoTargetGround
+	Inherits@GainsExperience: ^GainsExperience
+	Inherits@GetsPoisoned: ^GetsPoisoned
+	Inherits@ArcherDemo65: ^ArcherDemo80
+	Inherits@TornadoVunerable: ^TornadoVunerable
+	Inherits@Healable: ^Healable
+	Inherits@SnakeStunnable: ^SnakeSlowable
 	GrantConditionOnDamageState@Slow:
 		Condition: Slowmotion
 		ValidDamageStates: Heavy, Critical 
@@ -2404,6 +2380,9 @@ DEMONHORSE:
 LICHK:
 	Inherits: ^Knight
 	Inherits@AUTOTARGET: ^AutoTargetGround
+	Inherits@TornadoVunerable: ^TornadoVunerable
+	Inherits@Healable: ^Healable
+	Inherits@SnakeStunnable: ^SnakeDamagable
 	RevealsShroud:
 		Range: 9c0
 		Type: CenterPosition
@@ -2437,11 +2416,6 @@ LICHK:
 	Armor:
 		Type: Spectral
 	-Crushable:
-	-ExternalCondition@SNAKES:
-	-SelfHealing@SNAKES:
-	-SpeedMultiplier@SNAKES:
-	-WithIdleOverlay@SNAKES:
-	-RangeMultiplier:
 	WithDeathAnimation:
 		DeathSequencePalette: raplayer
 		DeathTypes:

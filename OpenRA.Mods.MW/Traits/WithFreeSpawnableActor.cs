@@ -180,7 +180,27 @@ namespace OpenRA.Mods.MW.Traits
 			return actor.CenterPosition;
 		}
 
-		void ITick.Tick(Actor self)
+        void BouncingActor(Actor self) // set the actor back to its origin when going to far
+        {
+            if (RespawnActor != null && !RespawnActor.IsDead && RespawnActor.IsInWorld && info.Sticky &&
+            RespawnActor.Info.Name == info.SpawnActor && !self.IsDead &&
+            self.IsInWorld)
+            {
+                if ((RespawnActor.CenterPosition - self.CenterPosition).LengthSquared >= info.ForceLasso.LengthSquared) // force the movement
+                {
+
+                    RespawnActor.CancelActivity();
+                    RespawnActor.QueueActivity(RespawnActor.TraitOrDefault<IMove>().MoveTo(self.Location + info.MoveOffset, 2));
+                }
+                else if (idlecount <= 0 && (RespawnActor.CenterPosition - self.CenterPosition).LengthSquared >= info.Lasso.LengthSquared) // queue the movement for later
+                {
+                    RespawnActor.QueueActivity(RespawnActor.TraitOrDefault<IMove>().MoveTo(self.Location + info.MoveOffset, 2));
+                }
+                
+            }
+        }
+
+        void ITick.Tick(Actor self)
 		{
             if (IsTraitDisabled)
                 return;
@@ -194,31 +214,9 @@ namespace OpenRA.Mods.MW.Traits
 				idlecount = 75;
 			}
 
-			if (idlecount <= 0 && RespawnActor != null && !RespawnActor.IsDead && RespawnActor.IsInWorld && info.Sticky && 
-			    RespawnActor.Info.Name == info.SpawnActor && !self.IsDead &&
-			    self.IsInWorld)
-			{
-				if ((RespawnActor.CenterPosition - self.CenterPosition).LengthSquared >= info.Lasso.LengthSquared)
-				{
-					RespawnActor.QueueActivity(RespawnActor.TraitOrDefault<IMove>().MoveTo(self.Location + info.MoveOffset, 2));
-				}
-			}
+            BouncingActor(self);
 
-			if (RespawnActor != null && !RespawnActor.IsDead && RespawnActor.IsInWorld && info.Sticky &&
-			    RespawnActor.Info.Name == info.SpawnActor && !self.IsDead &&
-			    self.IsInWorld)
-			{
-				if ((RespawnActor.CenterPosition - self.CenterPosition).LengthSquared >= info.ForceLasso.LengthSquared)
-				{
-
-					RespawnActor.CancelActivity();
-					RespawnActor.QueueActivity(RespawnActor.TraitOrDefault<IMove>().MoveTo(self.Location + info.MoveOffset, 2));
-				}
-
-			}
-
-
-			if (RespawnActor == null || !RespawnActor.IsInWorld || RespawnActor.IsDead)
+            if (RespawnActor == null || !RespawnActor.IsInWorld || RespawnActor.IsDead)
 				Ticker--;
 
 			if (Ticker < 1)
@@ -329,7 +327,7 @@ namespace OpenRA.Mods.MW.Traits
 
 			if ((!actor.IsInWorld || !actor.IsDead))
 			{
-				self.Owner.PlayerActor.Trait<PlayerCivilization>().SpawnStoredPeasant(self.Owner.World);
+				self.Owner.PlayerActor.Trait<PlayerCivilization>().SpawnStoredPeasant();
 				//beginn movement
 				actor.CancelActivity();
 				actor.QueueActivity(move.MoveTo(exit, 5));

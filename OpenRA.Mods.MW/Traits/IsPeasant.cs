@@ -26,6 +26,7 @@ namespace OpenRA.Mods.MW.Traits
             if (!self.Owner.NonCombatant && self.Owner.WinState != WinState.Lost && self.Owner.PlayerActor.Info.HasTraitInfo<PlayerCivilizationInfo>())
             {
                 self.Owner.PlayerActor.Trait<PlayerCivilization>().Peasantpopulationvar += 1;
+                self.Owner.PlayerActor.Trait<PlayerCivilization>().Recalculate();
             }
         }
 
@@ -36,10 +37,12 @@ namespace OpenRA.Mods.MW.Traits
                 if (isWorker)
                 {
                     self.Owner.PlayerActor.Trait<PlayerCivilization>().WorkerPopulationvar -= 1;
+                    self.Owner.PlayerActor.Trait<PlayerCivilization>().Recalculate();
                 }
                 else
                 {
                     self.Owner.PlayerActor.Trait<PlayerCivilization>().Peasantpopulationvar -= 1;
+                    self.Owner.PlayerActor.Trait<PlayerCivilization>().Recalculate();
                 }
 
             }
@@ -49,8 +52,9 @@ namespace OpenRA.Mods.MW.Traits
             if (!isWorker)
             {
                 isWorker = true;
-                self.Owner.PlayerActor.Trait<PlayerCivilization>().Peasantpopulationvar -= 1;
                 self.Owner.PlayerActor.Trait<PlayerCivilization>().WorkerPopulationvar += 1;
+                self.Owner.PlayerActor.Trait<PlayerCivilization>().Peasantpopulationvar -= 1;
+                self.Owner.PlayerActor.Trait<PlayerCivilization>().Recalculate();
             }
         }
         public void setPeasant()
@@ -59,6 +63,7 @@ namespace OpenRA.Mods.MW.Traits
             {
                 self.Owner.PlayerActor.Trait<PlayerCivilization>().WorkerPopulationvar -= 1;
                 self.Owner.PlayerActor.Trait<PlayerCivilization>().Peasantpopulationvar += 1;
+                self.Owner.PlayerActor.Trait<PlayerCivilization>().Recalculate();
                 isWorker = false;
             }
         }

@@ -1,5 +1,10 @@
 MCVNEW:
 	Inherits: ^Siege
+	Inherits@GainsExperience: ^GainsExperience
+	Inherits@GetsPoisoned: ^GetsPoisoned
+	Inherits@ArcherDemo65: ^ArcherDemo80
+	Inherits@TornadoVunerable: ^TornadoVunerable
+	Inherits@SnakeStunnable: ^SnakeDamagable
 	Transforms:
 		IntoActor: factnew
 		Offset: -1,-1
@@ -93,7 +98,11 @@ MCV2NEW:
 
 SIEGE1:
 	Inherits: ^Siege
-	Inherits@2: ^GainsExperience
+	Inherits@GainsExperience: ^GainsExperience
+	Inherits@GetsPoisoned: ^GetsPoisoned
+	Inherits@ArcherDemo65: ^ArcherDemo80
+	Inherits@TornadoVunerable: ^TornadoVunerable
+	Inherits@SnakeStunnable: ^SnakeDamagable
 	Inherits@AUTOTARGET: ^AutoTargetGround
 	Valued:
 		Cost: 950
@@ -153,7 +162,11 @@ SIEGE1:
 
 SIEGE2:
 	Inherits: ^Siege
-	Inherits@2: ^GainsExperience
+	Inherits@GainsExperience: ^GainsExperience
+	Inherits@GetsPoisoned: ^GetsPoisoned
+	Inherits@ArcherDemo65: ^ArcherDemo80
+	Inherits@TornadoVunerable: ^TornadoVunerable
+	Inherits@SnakeStunnable: ^SnakeDamagable
 	Inherits@AUTOTARGET: ^AutoTargetGround
 	Valued:
 		Cost: 1200
@@ -211,7 +224,11 @@ SIEGE2:
 
 SIEGE3:
 	Inherits: ^Siege
-	Inherits@2: ^GainsExperience
+	Inherits@GainsExperience: ^GainsExperience
+	Inherits@GetsPoisoned: ^GetsPoisoned
+	Inherits@ArcherDemo65: ^ArcherDemo80
+	Inherits@TornadoVunerable: ^TornadoVunerable
+	Inherits@SnakeStunnable: ^SnakeDamagable
 	Inherits@AUTOTARGET: ^AutoTargetAll
 	ConditionManager:
 	Cargo:
@@ -344,7 +361,9 @@ SIEGE3:
 
 SIEGE4:
 	Inherits: ^Siege
-	Inherits@2: ^GainsExperience
+	Inherits@GainsExperience: ^GainsExperience
+	Inherits@ArcherDemo65: ^ArcherDemo80
+	Inherits@TornadoVunerable: ^TornadoVunerable
 	Inherits@AUTOTARGET: ^AutoTargetGround
 	ConditionManager:
 	Cargo:
@@ -470,6 +489,10 @@ SIEGE4:
 		
 EHARVXL:
 	Inherits: ^Siege
+	Inherits@GetsPoisoned: ^GetsPoisoned
+	Inherits@ArcherDemo65: ^ArcherDemo80
+	Inherits@TornadoVunerable: ^TornadoVunerable
+	Inherits@SnakeStunnable: ^SnakeDamagable
 	BodyOrientation:
 		QuantizedFacings: 8
 	QuantizeFacingsFromSequence:
@@ -576,6 +599,9 @@ PLANEWAGEN:
 		
 SIEGE99:
 	Inherits: ^Siege
+	Inherits@GainsExperience: ^GainsExperience
+	Inherits@GetsPoisoned: ^GetsPoisoned
+	Inherits@TornadoVunerable: ^TornadoVunerable
 	Valued:
 		Cost: 2000
 	Tooltip:

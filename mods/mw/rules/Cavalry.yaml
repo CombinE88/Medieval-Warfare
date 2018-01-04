@@ -1,6 +1,11 @@
 KINGROSS:
 	Inherits: ^Cavalry
 	Inherits@AUTOTARGET: ^AutoTargetAll
+	Inherits@GetsPoisoned: ^GetsPoisoned
+	Inherits@ArcherDemo65: ^ArcherDemo80
+	Inherits@TornadoVunerable: ^TornadoVunerable
+	Inherits@Healable: ^Healable
+	Inherits@SnakeStunnable: ^SnakeSlowable
 	-Explodes@Tib:
 	GrantConditionOnDamageState@Slow:
 		Condition: Slowmotion
@@ -90,6 +95,11 @@ KINGROSS:
 
 DDLER:
 	Inherits: ^Cavalry
+	Inherits@GetsPoisoned: ^GetsPoisoned
+	Inherits@ArcherDemo65: ^ArcherDemo80
+	Inherits@TornadoVunerable: ^TornadoVunerable
+	Inherits@Healable: ^Healable
+	Inherits@SnakeStunnable: ^SnakeSlowable
 	-Explodes@Tib:
 	Valued:
 		Cost: 1300
@@ -132,7 +142,6 @@ DDLER:
 			PoisonDeath: 3
 			BallistaDeath: 4
 			BurnToDeath: 5
-	-SelfHealing@Rotaway:
 	ProximityExternalCondition@DEATH:
 		Range: 2c0
 		ValidStances: Enemy
@@ -202,6 +211,10 @@ BURNINGHORSE:
 
 EMPTYROSS:
 	Inherits: ^Cavalry
+	Inherits@GetsPoisoned: ^GetsPoisoned
+	Inherits@ArcherDemo65: ^ArcherDemo80
+	Inherits@TornadoVunerable: ^TornadoVunerable
+	Inherits@SnakeStunnable: ^SnakeSlowable
 	GrantConditionOnDamageState@Slow:
 		Condition: Slowmotion
 		ValidDamageStates: Heavy, Critical 
@@ -259,6 +272,12 @@ EMPTYROSS:
 ROSS1:
 	Inherits: ^Cavalry
 	Inherits@AUTOTARGET: ^AutoTargetGround
+	Inherits@GainsExperience: ^GainsExperience
+	Inherits@GetsPoisoned: ^GetsPoisoned
+	Inherits@ArcherDemo65: ^ArcherDemo80
+	Inherits@TornadoVunerable: ^TornadoVunerable
+	Inherits@Healable: ^Healable
+	Inherits@SnakeStunnable: ^SnakeSlowable
 	GrantConditionOnDamageState@Slow:
 		Condition: Slowmotion
 		ValidDamageStates: Heavy, Critical 
@@ -314,6 +333,12 @@ ROSS1:
 ROSS2:
 	Inherits: ^Cavalry
 	Inherits@AUTOTARGET: ^AutoTargetGround
+	Inherits@GainsExperience: ^GainsExperience
+	Inherits@GetsPoisoned: ^GetsPoisoned
+	Inherits@ArcherDemo65: ^ArcherDemo80
+	Inherits@TornadoVunerable: ^TornadoVunerable
+	Inherits@Healable: ^Healable
+	Inherits@SnakeStunnable: ^SnakeSlowable
 	GrantConditionOnDamageState@Slow:
 		Condition: Slowmotion
 		ValidDamageStates: Heavy, Critical 
@@ -368,6 +393,12 @@ ROSS2:
 ROSS5:
 	Inherits: ^Cavalry
 	Inherits@AUTOTARGET: ^AutoTargetAll
+	Inherits@GainsExperience: ^GainsExperience
+	Inherits@GetsPoisoned: ^GetsPoisoned
+	Inherits@ArcherDemo65: ^ArcherDemo80
+	Inherits@TornadoVunerable: ^TornadoVunerable
+	Inherits@Healable: ^Healable
+	Inherits@SnakeStunnable: ^SnakeSlowable
 	GrantConditionOnDamageState@Slow:
 		Condition: Slowmotion
 		ValidDamageStates: Heavy, Critical 
@@ -442,6 +473,12 @@ ROSS5:
 ROSS3:
 	Inherits: ^Cavalry
 	Inherits@AUTOTARGET: ^AutoTargetAll
+	Inherits@GainsExperience: ^GainsExperience
+	Inherits@GetsPoisoned: ^GetsPoisoned
+	Inherits@ArcherDemo65: ^ArcherDemo80
+	Inherits@TornadoVunerable: ^TornadoVunerable
+	Inherits@Healable: ^Healable
+	Inherits@SnakeStunnable: ^SnakeSlowable
 	GrantConditionOnDamageState@Slow:
 		Condition: Slowmotion
 		ValidDamageStates: Heavy, Critical 
@@ -504,6 +541,12 @@ ROSS3:
 ROSS4:
 	Inherits: ^Cavalry
 	Inherits@AUTOTARGET: ^AutoTargetAll
+	Inherits@GainsExperience: ^GainsExperience
+	Inherits@GetsPoisoned: ^GetsPoisoned
+	Inherits@ArcherDemo65: ^ArcherDemo80
+	Inherits@TornadoVunerable: ^TornadoVunerable
+	Inherits@Healable: ^Healable
+	Inherits@SnakeStunnable: ^SnakeSlowable
 	GrantConditionOnDamageState@Slow:
 		Condition: Slowmotion
 		ValidDamageStates: Heavy, Critical  
@@ -569,6 +612,12 @@ ROSS4:
 ROSS4B:
 	Inherits: ^Cavalry
 	Inherits@AUTOTARGET: ^AutoTargetGround
+	Inherits@GainsExperience: ^GainsExperience
+	Inherits@GetsPoisoned: ^GetsPoisoned
+	Inherits@ArcherDemo65: ^ArcherDemo80
+	Inherits@TornadoVunerable: ^TornadoVunerable
+	Inherits@Healable: ^Healable
+	Inherits@SnakeStunnable: ^SnakeSlowable
 	GrantConditionOnDamageState@Slow:
 		Condition: Slowmotion
 		ValidDamageStates: Heavy, Critical 
@@ -624,6 +673,12 @@ ROSS4B:
 ROSS4C:
 	Inherits: ^Cavalry
 	Inherits@AUTOTARGET: ^AutoTargetGround
+	Inherits@GainsExperience: ^GainsExperience
+	Inherits@GetsPoisoned: ^GetsPoisoned
+	Inherits@ArcherDemo65: ^ArcherDemo80
+	Inherits@TornadoVunerable: ^TornadoVunerable
+	Inherits@Healable: ^Healable
+	Inherits@SnakeStunnable: ^SnakeSlowable
 	GrantConditionOnDamageState@Slow:
 		Condition: Slowmotion
 		ValidDamageStates: Heavy, Critical 

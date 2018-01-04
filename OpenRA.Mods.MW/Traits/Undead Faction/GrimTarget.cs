@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using OpenRA.Graphics;
 using OpenRA.Mods.Common;
 using OpenRA.Mods.Common.Traits;
 using OpenRA.Mods.Common.Traits.Render;
@@ -17,11 +18,19 @@ namespace OpenRA.Mods.MW.Traits
         [Desc("Max distance in Cells wich the puppet can go")]
         public readonly int maxDistance = 5;
         
-        
+        public readonly int DamageMultiplier = 100;
+        public readonly int FirePowerMultiplier = 100;
+        public readonly int SpeedMultiplier = 100;
+        public readonly int GivesExpMultiplier = 100;
+
+        [Desc("Palette to use when rendering the overlay")]
+        [PaletteReference]
+        public readonly string Palette = "invuln";
+
         public object Create(ActorInitializer init) { return new GrimTarget(init.Self, this); }
     }
 
-    public class GrimTarget : ITick, INotifyKilled, INotifyCreated
+    public class GrimTarget : ITick, INotifyKilled, INotifyCreated, ISpeedModifier, IGivesExperienceModifier, IFirepowerModifier, IDamageModifier, IRenderModifier
     {
         public GrimTargetInfo info;
         //private Actor self;
@@ -38,23 +47,35 @@ namespace OpenRA.Mods.MW.Traits
             
         }
 
-        public void Tick(Actor self)
-        {
-            if (Reanimated && token == ConditionManager.InvalidConditionToken && conditionManager != null)
-            {
-                GrantCondition(self);
-            }
+        int ISpeedModifier.GetSpeedModifier() { return !Reanimated ? 100 : info.SpeedMultiplier; }
+        int IGivesExperienceModifier.GetGivesExperienceModifier() { return !Reanimated ? 100 : info.GivesExpMultiplier; }
+        int IFirepowerModifier.GetFirepowerModifier() { return !Reanimated ? 100 : info.FirePowerMultiplier; }
+        int IDamageModifier.GetDamageModifier(Actor attacker, Damage damage) { return !Reanimated ? 100 : info.DamageMultiplier; }
 
-            if (Reanimated && Grim != null && Grim.IsInWorld && !Grim.IsDead && self.Info.HasTraitInfo<IMoveInfo>())
+        public IEnumerable<IRenderable> ModifyRender(Actor self, WorldRenderer wr, IEnumerable<IRenderable> r)
+        {
+            if (!Reanimated)
+                return r;
+
+            return ModifiedRender(self, wr, r);
+        }
+
+        IEnumerable<IRenderable> ModifiedRender(Actor self, WorldRenderer wr, IEnumerable<IRenderable> r)
+        {
+            foreach (var a in r)
             {
-                if (!self.IsDead && self.IsInWorld && (self.Location - Grim.Location).LengthSquared >
-                    WDist.FromCells(info.maxDistance).LengthSquared)
-                {
-                    self.CancelActivity();
-                    self.QueueActivity(self.Trait<IMove>().MoveTo(Grim.Location,2));
-                }
+                yield return a;
+
+                if (!a.IsDecoration)
+                    yield return a.WithPalette(wr.Palette(info.Palette))
+                        .WithZOffset(a.ZOffset + 1)
+                        .AsDecoration();
             }
-            else if (Reanimated && Grim == null)
+        }
+
+    public void Tick(Actor self)
+        {
+            if (Reanimated && Grim == null)
                 self.Kill(self);
             else if (Reanimated && Grim != null && (Grim.IsDead || !Grim.IsInWorld))
                 self.Kill(self);
@@ -92,6 +113,21 @@ namespace OpenRA.Mods.MW.Traits
         public void Created(Actor self)
         {
             conditionManager = self.TraitOrDefault<ConditionManager>();
+            if (Reanimated && token == ConditionManager.InvalidConditionToken && conditionManager != null)
+            {
+                GrantCondition(self);
+            }
+
+            if (Reanimated && Grim != null && Grim.IsInWorld && !Grim.IsDead && self.Info.HasTraitInfo<IMoveInfo>())
+            {
+                if (!self.IsDead && self.IsInWorld && (self.Location - Grim.Location).LengthSquared >
+                    WDist.FromCells(info.maxDistance).LengthSquared)
+                {
+                    self.CancelActivity();
+                    self.QueueActivity(self.Trait<IMove>().MoveTo(Grim.Location, 2));
+                }
+            }
+
         }
         
     } 

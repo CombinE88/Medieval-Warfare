@@ -95,8 +95,8 @@ Container@PERF_WIDGETS:
 			Contrast: true
 			VAlign: Top
 		Background@GRAPH_BG:
-			X: 5
-			Y: WINDOW_BOTTOM - HEIGHT - 45
+			X: 35
+			Y: WINDOW_BOTTOM - HEIGHT - 230
 			Width: 220
 			Height: 220
 			Background: panel-black

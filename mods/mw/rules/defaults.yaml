@@ -1,27 +1,270 @@
+^GetsPoisoned:
+	ExternalCondition@ROTTEN:
+		Condition: RottenKadaver
+	ExternalCondition@DDler:
+		Condition: DDler
+	SelfHealing@Rotaway:
+		PercentageStep: -2
+		Step: -0
+		HealIfBelow: 110
+		Delay: 10
+		RequiresCondition: RottenKadaver
+		DamageTypes: PoisonDeath
+	SelfHealing@DDler:
+		PercentageStep: -2
+		Step: -0
+		HealIfBelow: 110
+		Delay: 10
+		RequiresCondition: DDler
+		DamageTypes: PoisonDeath
+	WithDecoration@DDlerPoison:
+		Image: debuffs
+		Sequence: poison
+		Palette: ra
+		ReferencePoint: Top, Left
+		RequiresCondition: DDler || RottenKadaver
+		ZOffset: 256
+		ValidStances: Ally, Enemy, Neutral
+
+^CanTurnIntoScelett:
+	SpawnActorOnDeath@SCELET:
+		DeathType: SkeletonDeath
+		Probability: 33
+		Actor: SULM1SKELET
+		OwnerType: Killer
+		
+^ArcherDemo65:
+	ExternalCondition@PRONE:
+		Condition: archerprone
+	SpeedMultiplier@PRONE:
+		Modifier: 65
+		RequiresCondition: archerprone
+	WithDecoration@PRONE:
+		Image: debuffs
+		Sequence: slowed
+		Palette: ra
+		ReferencePoint: Top, Left
+		RequiresCondition: archerprone
+		ZOffset: 256
+		ValidStances: Ally, Enemy, Neutral
+		
+^ArcherDemo80:
+	ExternalCondition@PRONE:
+		Condition: archerprone
+	SpeedMultiplier@PRONE:
+		Modifier: 80
+		RequiresCondition: archerprone
+	WithDecoration@PRONE:
+		Image: debuffs
+		Sequence: slowed
+		Palette: ra
+		ReferencePoint: Top, Left
+		RequiresCondition: archerprone
+		ZOffset: 256
+		ValidStances: Ally, Enemy, Neutral
+
+^TornadoVunerable:
+#nothing
+		
+^Healable:
+	ExternalCondition@BARRACKS:
+		Condition: hospitalhealbarr
+	ExternalCondition@HOSPITAL:
+		Condition: hospitalheal
+	SelfHealing@HOSPITAL:
+		PercentageStep: 1
+		Delay: 25
+		HealIfBelow: 100
+		DamageCooldown: 125
+		RequiresCondition: hospitalheal || hospitalhealbarr
+	WithDecoration@REDCROSS:
+		Image: pips
+		Sequence: pip-heal
+		ReferencePoint: Bottom, Right
+		RequiresCondition: hospitalheal || hospitalhealbarr
+		
+^RoyalMotivatable: # obsolete
+	ExternalCondition@ROYAL:
+		Condition: KingIsNear
+	WithDecoration@Crown:
+		Image: pips
+		Sequence: pip-crown
+		ReferencePoint: Top, Left
+		RequiresCondition: KingIsNear
+	DamageMultiplier@Crown:
+		RequiresCondition: KingIsNear
+		Modifier: 80
+	FirepowerMultiplier@Crown:
+		RequiresCondition: KingIsNear
+		Modifier: 120
+	ReloadDelayMultiplier:
+		RequiresCondition: KingIsNear
+		Modifier: 120
+		
+^SnakeStunnable:
+	ExternalCondition@SNAKES:
+		Condition: snaketrap
+	WithDecoration@SNAKES:
+		Image: debuffs
+		Sequence: immobile
+		Palette: ra
+		ReferencePoint: Top, Left
+		RequiresCondition: snaketrap
+		ZOffset: 256
+		ValidStances: Ally, Enemy, Neutral
+	WithDecoration@SNAKESPoison:
+		Image: debuffs
+		Sequence: poison
+		Palette: ra
+		ReferencePoint: Top, Left
+		RequiresCondition: snaketrap
+		ZOffset: 256
+		ValidStances: Ally, Enemy, Neutral
+	SelfHealing@SNAKES:
+		Step: -1000
+		HealIfBelow: 110
+		Delay: 25
+		RequiresCondition: snaketrap
+		DamageTypes: PoisonDeath
+	SelfHealing@SNAKES2:
+		PercentageStep: -8
+		Step: -0
+		HealIfBelow: 110
+		Delay: 25
+		RequiresCondition: snaketrap >= 2
+		DamageTypes: PoisonDeath
+	SelfHealing@SNAKES3:
+		PercentageStep: -8
+		Step: -0
+		HealIfBelow: 110
+		Delay: 25
+		RequiresCondition: snaketrap >= 3
+		DamageTypes: PoisonDeath
+	SelfHealing@SNAKES4:
+		PercentageStep: -8
+		Step: -0
+		HealIfBelow: 110
+		Delay: 25
+		RequiresCondition: snaketrap >= 4
+		DamageTypes: PoisonDeath	 
+	SpeedMultiplier@SNAKES:
+		Modifier: 10
+		RequiresCondition: snaketrap
+	WithIdleOverlay@SNAKES:
+		Sequence: stunned
+		RequiresCondition: snaketrap
+	RangeMultiplier@SNAKES:
+		Modifier: 10
+		RequiresCondition: snaketrap
+		
+^SnakeSlowable:
+	ExternalCondition@SNAKES:
+		Condition: snaketrap
+	WithDecoration@SNAKES:
+		Image: debuffs
+		Sequence: slowed
+		Palette: ra
+		ReferencePoint: Top, Left
+		RequiresCondition: snaketrap || archerprone
+		ZOffset: 256
+		ValidStances: Ally, Enemy, Neutral
+	WithDecoration@SNAKESPoison:
+		Image: debuffs
+		Sequence: poison
+		Palette: ra
+		ReferencePoint: Top, Left
+		RequiresCondition: snaketrap
+		ZOffset: 256
+		ValidStances: Ally, Enemy, Neutral
+	SelfHealing@SNAKES:
+		PercentageStep: -8
+		Step: -0
+		HealIfBelow: 110
+		Delay: 25
+		RequiresCondition: snaketrap >= 1
+		DamageTypes: PoisonDeath
+	SelfHealing@SNAKES2:
+		PercentageStep: -8
+		Step: -0
+		HealIfBelow: 110
+		Delay: 25
+		RequiresCondition: snaketrap >= 2
+		DamageTypes: PoisonDeath
+	SelfHealing@SNAKES3:
+		PercentageStep: -8
+		Step: -0
+		HealIfBelow: 110
+		Delay: 25
+		RequiresCondition: snaketrap >= 3
+		DamageTypes: PoisonDeath
+	SelfHealing@SNAKES4:
+		PercentageStep: -8
+		Step: -0
+		HealIfBelow: 110
+		Delay: 25
+		RequiresCondition: snaketrap >= 4
+		DamageTypes: PoisonDeath
+	SpeedMultiplier@SNAKES:
+		Modifier: 40
+		RequiresCondition: snaketrap
+		
+		
+^SnakeDamagable:
+	ExternalCondition@SNAKES:
+		Condition: snaketrap
+	WithDecoration@SNAKES:
+		Image: debuffs
+		Sequence: slowed
+		Palette: ra
+		ReferencePoint: Top, Left
+		RequiresCondition: snaketrap || archerprone
+		ZOffset: 256
+		ValidStances: Ally, Enemy, Neutral
+	WithDecoration@SNAKESPoison:
+		Image: debuffs
+		Sequence: poison
+		Palette: ra
+		ReferencePoint: Top, Left
+		RequiresCondition: snaketrap
+		ZOffset: 256
+		ValidStances: Ally, Enemy, Neutral
+	SelfHealing@SNAKES:
+		PercentageStep: -8
+		Step: -0
+		HealIfBelow: 110
+		Delay: 25
+		RequiresCondition: snaketrap >= 1
+		DamageTypes: PoisonDeath
+	SelfHealing@SNAKES2:
+		PercentageStep: -8
+		Step: -0
+		HealIfBelow: 110
+		Delay: 25
+		RequiresCondition: snaketrap >= 2
+		DamageTypes: PoisonDeath
+	SelfHealing@SNAKES3:
+		PercentageStep: -8
+		Step: -0
+		HealIfBelow: 110
+		Delay: 25
+		RequiresCondition: snaketrap >= 3
+		DamageTypes: PoisonDeath
+	SelfHealing@SNAKES4:
+		PercentageStep: -8
+		Step: -0
+		HealIfBelow: 110
+		Delay: 25
+		RequiresCondition: snaketrap >= 4
+		DamageTypes: PoisonDeath
+
 ^GrimReanimatable:
 	GrimTarget:
-		GrantCondition: grimactive
-	DamageMultiplier@GRIM:
-		RequiresCondition: grimactive
-		Modifier: 133
-	RangeMultiplier@GRIM:
-		RequiresCondition: grimactive
-		Modifier: 77
-	FirepowerMultiplier@GRIM:
-		RequiresCondition: grimactive
-		Modifier: 77
-	SpeedMultiplier@GRIM:
-		RequiresCondition: grimactive
-		Modifier: 77
-	ReloadDelayMultiplier@GRIM:
-		RequiresCondition: grimactive
-		Modifier: 133
-	GivesExperienceMultiplier@GRIM:
-		RequiresCondition: grimactive
-		Modifier: 10
-	WithColoredOverlay@GRIM:
 		Palette: disabled
-		RequiresCondition: grimactive
+		DamageMultiplier: 133
+		FirePowerMultiplier: 77
+		SpeedMultiplier: 77
+		GivesExpMultiplier: 10
+		GrantCondition: grimactive
 	WithDecoration@Reanimated:
 		Image: debuffs
 		Sequence: reanimated
@@ -393,14 +636,6 @@
 		VoiceSet: VehicleVoice
 	BodyOrientation:
 		UseClassicFacingFudge: True
-	ExternalCondition@TORNADO:
-		Condition: Tornadodeath
-	SelfHealing@TORNADO:
-		Step: -6500
-		HealIfBelow: 110
-		Delay: 25
-		RequiresCondition: Tornadodeath
-		DamageTypes: DefaultDeath
 	EditorTilesetFilter:
 		Categories: Aircraft
 
@@ -474,20 +709,6 @@
 		WarnProbability: 70
 		CrushSound: squish2.aud
 	Guardable:
-	SelfHealing@HOSPITAL:
-		Step: 5
-		Delay: 100
-		HealIfBelow: 100
-		DamageCooldown: 125
-		RequiresCondition: hospitalheal
-	GrantConditionOnPrerequisite@HOSPITAL:
-		Condition: hospitalheal
-		Prerequisites: hosp
-	WithDecoration@REDCROSS:
-		Image: pips
-		Sequence: pip-heal
-		ReferencePoint: Bottom, Right
-		RequiresCondition: hospitalheal
 	DetectCloaked:
 		Range: 2c0
 	DeathSounds@NORMAL:
@@ -550,14 +771,6 @@
 		MinMoveDelay: 150
 		MaxMoveDelay: 750
 	ConditionManager:
-	ExternalCondition@TORNADO:
-		Condition: Tornadodeath
-	SelfHealing@TORNADO:
-		Step: -6500
-		HealIfBelow: 110
-		Delay: 25
-		RequiresCondition: Tornadodeath
-		DamageTypes: DefaultDeath
 	EditorTilesetFilter:
 		Categories: Civilian infantry
 
@@ -692,7 +905,7 @@
 		Footprint: x
 	SoundOnDamageTransition:
 		DamagedSounds: xplos.aud
-		DestroyedSounds: crumble.aud
+		DestroyedSounds: bldgncllps.aud
 	WithSpriteBody:
 	ThrowsShrapnel@SMALL:
 		Weapons: SmallWood1, SmallWood2, SmallWood3, SmallStone1, SmallStone2
@@ -740,14 +953,6 @@
 		SellSounds: cashturn.aud
 	Capturable:
 	#WithMakeAnimation:
-	ExternalCondition@TORNADO:
-		Condition: Tornadodeath
-	SelfHealing@TORNADO:
-		Step: -6500
-		HealIfBelow: 110
-		Delay: 25
-		RequiresCondition: Tornadodeath
-		DamageTypes: DefaultDeath
 
 ^CivBuilding:
 	Inherits: ^Building
@@ -760,14 +965,6 @@
 		GenericStancePrefix: false
 		ShowOwnerRow: false
 	FrozenUnderFog:
-	ExternalCondition@TORNADO:
-		Condition: Tornadodeath
-	SelfHealing@TORNADO:
-		Step: -6500
-		HealIfBelow: 110
-		Delay: 25
-		RequiresCondition: Tornadodeath
-		DamageTypes: DefaultDeath
 	EditorTilesetFilter:
 		Categories: Civilian building
 
@@ -1001,7 +1198,7 @@
 		UseClassicFacingFudge: True
 	Targetable:
 		TargetTypes: Husk, Disguise
-        
+		
 ^PropHusk:
 	Inherits@1: ^SpriteActor
 	Health:
@@ -1019,7 +1216,7 @@
 	Building:
 		Dimensions: 1,1
 		Footprint: =
-        
+		
 ^InteriorProp:
 	Inherits@1: ^ExistsInWorld
 	Inherits@2: ^SpriteActor
@@ -1037,21 +1234,13 @@
 		HP: 6000
 	Targetable:
 		TargetTypes: Ground, Prop, NoAutoTarget
-	ExternalCondition@TORNADO:
-		Condition: Tornadodeath
-	SelfHealing@TORNADO:
-		Step: -6500
-		HealIfBelow: 110
-		Delay: 25
-		RequiresCondition: Tornadodeath
-		DamageTypes: DefaultDeath
 	HitShape:
 	EditorTilesetFilter:
 		Categories: Interior Props
 		RequireTilesets: INTERIOR
 	Tooltip:
 		GenericName: Furniture
-        
+		
 ^PropDoor:
 	Inherits@1: ^ExistsInWorld
 	Inherits@2: ^SpriteActor
@@ -1072,7 +1261,7 @@
 	EditorTilesetFilter:
 		Categories: Interior Props
 		RequireTilesets: INTERIOR
-        
+		
 ^PropDoorOpen:
 	Inherits@1: ^ExistsInWorld
 	Inherits@2: ^SpriteActor
@@ -1119,7 +1308,7 @@
 		HP: 500
 	SoundOnDamageTransition:
 		DamagedSounds: xplos.aud
-		DestroyedSounds: xplobig4.aud
+		DestroyedSounds: bldgncllps.aud
 	ScriptTriggers:
 	BodyOrientation:
 		QuantizedFacings: 1
@@ -1165,7 +1354,7 @@
 		TargetTypes: Ground, C4, Structure
 	SoundOnDamageTransition:
 		DamagedSounds: xplos.aud
-		DestroyedSounds: crumble.aud
+		DestroyedSounds: bldgncllps.aud
 	ThrowsShrapnel@SMALL:
 		Weapons: SmallWood1, SmallWood2, SmallWood3, SmallStone1, SmallStone2
 		Pieces: 2, 4
@@ -1272,14 +1461,6 @@
 	MustBeDestroyed:
 	Voiced:
 		VoiceSet: GenericVoice
-	ExternalCondition@TORNADO:
-		Condition: Tornadodeath
-	SelfHealing@TORNADO:
-		Step: -6500
-		HealIfBelow: 110
-		Delay: 25
-		RequiresCondition: Tornadodeath
-		DamageTypes: DefaultDeath
 	HitShape:
 	EditorTilesetFilter:
 		Categories: Aircraft
@@ -1356,29 +1537,9 @@
 	QuantizeFacingsFromSequence:
 		Sequence: stand
 	WithInfantryBody:
-	ExternalCondition@ROTTEN:
-		Condition: RottenKadaver
-	ExternalCondition@DDler:
-		Condition: DDler
-	ExternalCondition@ROYAL:
-		Condition: KingIsNear
-	ExternalCondition@HOSPITAL:
-		Condition: hospitalheal
-	SelfHealing@HOSPITAL:
-		Step: 400
-		Delay: 35
-		HealIfBelow: 100
-		DamageCooldown: 125
-		RequiresCondition: hospitalheal
-	WithDecoration@REDCROSS:
-		Image: pips
-		Sequence: pip-heal
-		ReferencePoint: Bottom, Right
-		RequiresCondition: hospitalheal
 	AttackMove:
 	DrawLineToTarget:
 	HiddenUnderFog:
-	Crushable:
 		WarnProbability: 40
 		CrushSound: squish2.aud
 	Guardable:
@@ -1393,33 +1554,9 @@
 	DeathSounds@BURNED:
 		Voice: Burned
 		DeathTypes: BurnToDeath
-	WithDecoration@Crown:
-		Image: pips
-		Sequence: pip-crown
-		ReferencePoint: Top, Left
-		RequiresCondition: KingIsNear
-	DamageMultiplier@Crown:
-		RequiresCondition: KingIsNear
-		Modifier: 80
-	FirepowerMultiplier@Crown:
-		RequiresCondition: KingIsNear
-		Modifier: 120
-	ReloadDelayMultiplier:
-		RequiresCondition: KingIsNear
-		Modifier: 120
-	ExternalCondition@TORNADO:
-		Condition: Tornadodeath
-	SelfHealing@TORNADO:
-		Step: -6500
-		HealIfBelow: 110
-		Delay: 25
-		RequiresCondition: Tornadodeath
-		DamageTypes: DefaultDeath
 	
 ^Knight:  
 	Inherits: ^MedievalInfantry
-	Inherits@2: ^GainsExperience
-	Inherits@Grim: ^GrimReanimatable
 	WithDeathAnimation:
 		DeathSequencePalette: raplayer
 		DeathTypes:
@@ -1436,6 +1573,7 @@
 	Tooltip:
 		GenericName: Soldier
 	Guard:
+	Crushable:
 	AutoTarget:
 		ScanRadius: 4
 	WithInfantryBody:
@@ -1444,43 +1582,8 @@
 	Passenger:
 		CargoType: Infantry
 		GrantUpgrades: batteringupgrade
-	SelfHealing@Rotaway:
-		PercentageStep: -2
-		Step: -0
-		HealIfBelow: 110
-		Delay: 10
-		RequiresCondition: RottenKadaver
-		DamageTypes: PoisonDeath
-	SelfHealing@DDler:
-		PercentageStep: -2
-		Step: -0
-		HealIfBelow: 110
-		Delay: 10
-		RequiresCondition: DDler
-		DamageTypes: PoisonDeath
-	WithDecoration@DDlerPoison:
-		Image: debuffs
-		Sequence: poison
-		Palette: ra
-		ReferencePoint: Top, Left
-		RequiresCondition: DDler || RottenKadaver
-		ZOffset: 256
-		ValidStances: Ally, Enemy, Neutral
-	SelfHealing@HOSPITAL:
-		PercentageStep: 1
-		Delay: 25
-		HealIfBelow: 100
-		DamageCooldown: 125
-		RequiresCondition: hospitalheal || hospitalhealbarr
-	WithDecoration@REDCROSS:
-		Image: pips
-		Sequence: pip-heal
-		ReferencePoint: Bottom, Right
-		RequiresCondition: hospitalheal || hospitalhealbarr
 	Voiced:
 		VoiceSet: GenericVoice
-	ExternalCondition@BARRACKS:
-		Condition: hospitalhealbarr
 	Explodes@Tib:
 		Weapon: LeaveStuff
 		EmptyWeapon: LeaveStuff
@@ -1491,88 +1594,14 @@
 		Chance: 50
 		LoadedChance: 50
 		DeathTypes: KadaverDeath
-	SpawnActorOnDeath@SCELET:
-		DeathType: SkeletonDeath
-		Probability: 33
-		Actor: SULM1SKELET
-		OwnerType: Killer
-	ExternalCondition@SNAKES:
-		Condition: snaketrap
-	WithDecoration@SNAKES:
-		Image: debuffs
-		Sequence: immobile
-		Palette: ra
-		ReferencePoint: Top, Left
-		RequiresCondition: snaketrap
-		ZOffset: 256
-		ValidStances: Ally, Enemy, Neutral
-	WithDecoration@SNAKESPoison:
-		Image: debuffs
-		Sequence: poison
-		Palette: ra
-		ReferencePoint: Top, Left
-		RequiresCondition: snaketrap
-		ZOffset: 256
-		ValidStances: Ally, Enemy, Neutral
-	SelfHealing@SNAKES:
-		Step: -1000
-		HealIfBelow: 110
-		Delay: 25
-		RequiresCondition: snaketrap
-		DamageTypes: PoisonDeath
-	SelfHealing@SNAKES2:
-		PercentageStep: -8
-		Step: -0
-		HealIfBelow: 110
-		Delay: 25
-		RequiresCondition: snaketrap >= 2
-		DamageTypes: PoisonDeath
-	SelfHealing@SNAKES3:
-		PercentageStep: -8
-		Step: -0
-		HealIfBelow: 110
-		Delay: 25
-		RequiresCondition: snaketrap >= 3
-		DamageTypes: PoisonDeath
-	SelfHealing@SNAKES4:
-		PercentageStep: -8
-		Step: -0
-		HealIfBelow: 110
-		Delay: 25
-		RequiresCondition: snaketrap >= 4
-		DamageTypes: PoisonDeath	 
-	SpeedMultiplier@SNAKES:
-		Modifier: 10
-		RequiresCondition: snaketrap
-	WithIdleOverlay@SNAKES:
-		Sequence: stunned
-		RequiresCondition: snaketrap
-	RangeMultiplier:
-		Modifier: 10
-		RequiresCondition: snaketrap
 	HitShape:
 		Type: Circle
 			Radius: 128
 	EditorTilesetFilter:
 		Categories: Infantry
-	ExternalCondition@PRONE:
-		Condition: archerprone
-	SpeedMultiplier@PRONE:
-		Modifier: 65
-		RequiresCondition: archerprone
-	WithDecoration@PRONE:
-		Image: debuffs
-		Sequence: slowed
-		Palette: ra
-		ReferencePoint: Top, Left
-		RequiresCondition: archerprone
-		ZOffset: 256
-		ValidStances: Ally, Enemy, Neutral
 
 ^Cavalry:
 	Inherits: ^MedievalInfantry
-	Inherits@2: ^GainsExperience
-	Inherits@Grim: ^GrimReanimatable
 	Voiced:
 		VoiceSet: GenericHorseVoice
 	Targetable:
@@ -1595,29 +1624,6 @@
 	WithInfantryBody:
 		IdleSequences: idle1, idle2
 		StandSequences: stand
-	-Crushable:
-	SelfHealing@Rotaway:
-		PercentageStep: -2
-		Step: -0
-		HealIfBelow: 110
-		Delay: 10
-		RequiresCondition: RottenKadaver
-		DamageTypes: PoisonDeath
-	SelfHealing@DDler:
-		PercentageStep: -2
-		Step: -0
-		HealIfBelow: 110
-		Delay: 10
-		RequiresCondition: DDler
-		DamageTypes: PoisonDeath
-	WithDecoration@DDlerPoison:
-		ValidStances: Ally, Enemy, Neutral
-		Image: debuffs
-		Sequence: poison
-		Palette: ra
-		ReferencePoint: Top, Left
-		RequiresCondition: DDler || RottenKadaver
-		ZOffset: 256
 	Selectable:
 		Bounds: 26,34,0,-6
 	SelectionDecorations:
@@ -1657,80 +1663,12 @@
 	-DeathSounds@HEAVY:
 	-DeathSounds@POISONED:
 	-DeathSounds@BURNED:
-	SelfHealing@HOSPITAL:
-		PercentageStep: 1
-		Delay: 25
-		HealIfBelow: 100
-		DamageCooldown: 125
-		RequiresCondition: hospitalheal || hospitalhealbarr
-	WithDecoration@REDCROSS:
-		Image: pips
-		Sequence: pip-heal
-		ReferencePoint: Bottom, Right
-		RequiresCondition: hospitalheal || hospitalhealbarr
-	ExternalCondition@BARRACKS:
-		Condition: hospitalhealbarr
 	Explodes@Tib:
 		Weapon: LeaveStuff
 		EmptyWeapon: LeaveStuff
 		Chance: 25
-	ExternalCondition@SNAKES:
-		Condition: snaketrap
-	WithDecoration@SNAKES:
-		Image: debuffs
-		Sequence: slowed
-		Palette: ra
-		ReferencePoint: Top, Left
-		RequiresCondition: snaketrap || archerprone
-		ZOffset: 256
-		ValidStances: Ally, Enemy, Neutral
-	WithDecoration@SNAKESPoison:
-		Image: debuffs
-		Sequence: poison
-		Palette: ra
-		ReferencePoint: Top, Left
-		RequiresCondition: snaketrap
-		ZOffset: 256
-		ValidStances: Ally, Enemy, Neutral
-	SelfHealing@SNAKES:
-		PercentageStep: -8
-		Step: -0
-		HealIfBelow: 110
-		Delay: 25
-		RequiresCondition: snaketrap >= 1
-		DamageTypes: PoisonDeath
-	SelfHealing@SNAKES2:
-		PercentageStep: -8
-		Step: -0
-		HealIfBelow: 110
-		Delay: 25
-		RequiresCondition: snaketrap >= 2
-		DamageTypes: PoisonDeath
-	SelfHealing@SNAKES3:
-		PercentageStep: -8
-		Step: -0
-		HealIfBelow: 110
-		Delay: 25
-		RequiresCondition: snaketrap >= 3
-		DamageTypes: PoisonDeath
-	SelfHealing@SNAKES4:
-		PercentageStep: -8
-		Step: -0
-		HealIfBelow: 110
-		Delay: 25
-		RequiresCondition: snaketrap >= 4
-		DamageTypes: PoisonDeath
-	SpeedMultiplier@SNAKES:
-		Modifier: 40
-		RequiresCondition: snaketrap
-	HitShape:
 	EditorTilesetFilter:
 		Categories: Cavalry
-	ExternalCondition@PRONE:
-		Condition: archerprone
-	SpeedMultiplier@PRONE:
-		Modifier: 80
-		RequiresCondition: archerprone
 
 		
 ^Siege:
@@ -1741,36 +1679,13 @@
 		TargetTypes: Ground, Siege, Disguise
 	MustBeDestroyed:
 	Tooltip:
-		GenericName: Cavalry
+		GenericName: Generic siege engine
 	Guard:
 	AutoTarget:
 		ScanRadius: 7
 	WithInfantryBody:
 		IdleSequences: stand
 		StandSequences: stand
-	-Crushable:
-	SelfHealing@Rotaway:
-		PercentageStep: -2
-		Step: -0
-		Delay: 10
-		HealIfBelow: 110
-		RequiresCondition: RottenKadaver
-		DamageTypes: DefaultDeath
-	SelfHealing@DDler:
-		PercentageStep: -2
-		Step: -0
-		Delay: 10
-		HealIfBelow: 110
-		RequiresCondition: DDler
-		DamageTypes: PoisonDeath
-	WithDecoration@DDlerPoison:
-		Image: debuffs
-		Sequence: poison
-		Palette: ra
-		ReferencePoint: Top, Left
-		RequiresCondition: DDler || RottenKadaver
-		ZOffset: 256
-		ValidStances: Ally, Enemy, Neutral
 	Selectable:
 		Bounds: 35,35,0,-6 
 	Voiced:
@@ -1783,44 +1698,6 @@
 		Weapon: LeaveStuff
 		EmptyWeapon: LeaveStuff
 		Chance: 25
-	ExternalCondition@SNAKES:
-		Condition: snaketrap
-	WithDecoration@SNAKESPoison:
-		Image: debuffs
-		Sequence: poison
-		Palette: ra
-		ReferencePoint: Top, Left
-		RequiresCondition: snaketrap
-		ZOffset: 256
-		ValidStances: Ally, Enemy, Neutral
-	SelfHealing@SNAKES:
-		Step: -500
-		HealIfBelow: 110
-		Delay: 25
-		RequiresCondition: snaketrap
-		DamageTypes: PoisonDeath
-	 SelfHealing@SNAKES2:
-		PercentageStep: -8
-		Step: -0
-		HealIfBelow: 110
-		Delay: 25
-		RequiresCondition: snaketrap >= 2
-		DamageTypes: PoisonDeath
-	SelfHealing@SNAKES3:
-		PercentageStep: -8
-		Step: -0
-		HealIfBelow: 110
-		Delay: 25
-		RequiresCondition: snaketrap >= 3
-		DamageTypes: PoisonDeath
-	SelfHealing@SNAKES4:
-		PercentageStep: -8
-		Step: -0
-		HealIfBelow: 110
-		Delay: 25
-		RequiresCondition: snaketrap >= 4
-		DamageTypes: PoisonDeath
-	HitShape:
 	EditorTilesetFilter:
 		Categories: Siegeengines
 		
@@ -1863,14 +1740,6 @@
 	WithInfantryBody:
 		StandSequences: stand
 	ConditionManager:
-	ExternalCondition@TORNADO:
-		Condition: Tornadodeath
-	SelfHealing@TORNADO:
-		Step: -6500
-		HealIfBelow: 110
-		Delay: 25
-		RequiresCondition: Tornadodeath
-		DamageTypes: DefaultDeath
 	ExternalCondition@SNAKES:
 		Condition: snaketrap
 	SelfHealing@SNAKES:
@@ -1982,20 +1851,10 @@
 		MinMoveDelay: 150
 		MaxMoveDelay: 1050
 	CrateAction:
-	-ExternalCondition@ROTTEN:
-	-ExternalCondition@DDler:
-	-ExternalCondition@ROYAL:
-	-ExternalCondition@HOSPITAL:
-	-SelfHealing@HOSPITAL:
-	-WithDecoration@REDCROSS:
 	-DeathSounds@NORMAL:
 	-DeathSounds@HEAVY:
 	-DeathSounds@POISONED:
 	-DeathSounds@BURNED:
-	-WithDecoration@Crown:
-	-DamageMultiplier@Crown:
-	-FirepowerMultiplier@Crown:
-	-ReloadDelayMultiplier:
 	HitShape:
 		Type: Circle
 			Radius: 128
@@ -2305,14 +2164,6 @@
 		Weapons: SmallWood1, SmallWood2, SmallWood3
 		Pieces: 0, 2
 		Range: 0c512, 3c0
-	ExternalCondition@TORNADO:
-		Condition: Tornadodeath
-	SelfHealing@TORNADO:
-		Step: -6500
-		HealIfBelow: 110
-		Delay: 25
-		RequiresCondition: Tornadodeath
-		DamageTypes: DefaultDeath
 	HitShape:
 	EditorTilesetFilter:
 		Categories: Props
@@ -2379,14 +2230,6 @@
 	Demolishable:
 	GivesBuildableArea:
 	EngineerRepairable:
-	ExternalCondition@TORNADO:
-		Condition: Tornadodeath
-	SelfHealing@TORNADO:
-		Step: -6500
-		HealIfBelow: 110
-		Delay: 25
-		RequiresCondition: Tornadodeath
-		DamageTypes: DefaultDeath
 	DamageMultiplier@Level1:
 		RequiresCondition: Construct >= 10 && Construct <= 15
 		Modifier: 96

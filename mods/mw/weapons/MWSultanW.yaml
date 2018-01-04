@@ -22,7 +22,7 @@ SulSword:
 			MediumCavalry: 20
 			HeavyCavalry: 20
 			Spectral: 15
-		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+		DamageTypes: Prone50Percent, DefaultDeath
 		
 PikeAC:
 	ReloadDelay: 50
@@ -48,7 +48,7 @@ PikeAC:
 			MediumCavalry: 125
 			HeavyCavalry: 120
 			Spectral: 10
-		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+		DamageTypes: Prone50Percent, DefaultDeath
 		
 BroadSwordAE:
 	ReloadDelay: 35
@@ -74,7 +74,7 @@ BroadSwordAE:
 			MediumCavalry: 20
 			HeavyCavalry: 20
 			Spectral: 15
-		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+		DamageTypes: Prone50Percent, DefaultDeath
 		
 ScimitarDuals:
 	ReloadDelay: 22
@@ -100,7 +100,7 @@ ScimitarDuals:
 			MediumCavalry: 85
 			HeavyCavalry: 60
 			Spectral: 45
-		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+		DamageTypes: Prone50Percent, DefaultDeath
 		
 SuperioirPike:
 	ReloadDelay: 50
@@ -126,7 +126,7 @@ SuperioirPike:
 			MediumCavalry: 125
 			HeavyCavalry: 120
 			Spectral: 15
-		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+		DamageTypes: Prone50Percent, DefaultDeath
 		
 ApprenticeFire:
 	ReloadDelay: 75
@@ -151,7 +151,7 @@ ApprenticeFire:
 			MediumCavalry: 25
 			HeavyCavalry: 15
 			HeavyBuilding: 5
-		DamageTypes: Prone50Percent, TriggerProne, BurnToDeath, SkeletonDeath
+		DamageTypes: Prone50Percent, BurnToDeath, SkeletonDeath
 		Delay: 6
 	Warhead@2Dam: SpreadDamage
 		Spread: 50
@@ -169,7 +169,7 @@ ApprenticeFire:
 			MediumCavalry: 25
 			HeavyCavalry: 15
 			HeavyBuilding: 5
-		DamageTypes: Prone50Percent, TriggerProne, BurnToDeath, SkeletonDeath
+		DamageTypes: Prone50Percent, BurnToDeath, SkeletonDeath
 		Delay: 12
 	Warhead@3Dam: SpreadDamage
 		Spread: 50
@@ -187,7 +187,7 @@ ApprenticeFire:
 			MediumCavalry: 25
 			HeavyCavalry: 15
 			HeavyBuilding: 5
-		DamageTypes: Prone50Percent, TriggerProne, BurnToDeath, SkeletonDeath
+		DamageTypes: Prone50Percent, BurnToDeath, SkeletonDeath
 		Delay: 18
 	Warhead@4Dam: SpreadDamage
 		Spread: 50
@@ -205,7 +205,7 @@ ApprenticeFire:
 			MediumCavalry: 25
 			HeavyCavalry: 15
 			HeavyBuilding: 5
-		DamageTypes: Prone50Percent, TriggerProne, BurnToDeath, SkeletonDeath
+		DamageTypes: Prone50Percent, BurnToDeath, SkeletonDeath
 		Delay: 24
 	Warhead@5Dam: SpreadDamage
 		Spread: 50
@@ -223,7 +223,7 @@ ApprenticeFire:
 			MediumCavalry: 25
 			HeavyCavalry: 15
 			HeavyBuilding: 5
-		DamageTypes: Prone50Percent, TriggerProne, BurnToDeath, SkeletonDeath
+		DamageTypes: Prone50Percent, BurnToDeath, SkeletonDeath
 		Delay: 30
 	Warhead@6Dam: SpreadDamage
 		Spread: 50
@@ -241,7 +241,7 @@ ApprenticeFire:
 			MediumCavalry: 25
 			HeavyCavalry: 15
 			HeavyBuilding: 5
-		DamageTypes: Prone50Percent, TriggerProne, BurnToDeath, SkeletonDeath
+		DamageTypes: Prone50Percent, BurnToDeath, SkeletonDeath
 		Delay: 36
 	Warhead@2Smu: LeaveSmudge
 		SmudgeType: Scorch
@@ -276,7 +276,7 @@ DjinElectro:
 			MediumCavalry: 100
 			HeavyCavalry: 100
 			HeavyBuilding: 100
-		DamageTypes: Prone50Percent, TriggerProne, RippedApartDeath
+		DamageTypes: Prone50Percent, RippedApartDeath
 		
 DjinElectroAir:
 	ReloadDelay: 65
@@ -302,7 +302,7 @@ DjinElectroAir:
 			MediumCavalry: 100
 			HeavyCavalry: 100
 			HeavyBuilding: 100
-		DamageTypes: Prone50Percent, TriggerProne, RippedApartDeath
+		DamageTypes: Prone50Percent, RippedApartDeath
 		  
 DjinElectroGround:
 	ReloadDelay: 50
@@ -328,7 +328,7 @@ DjinElectroGround:
 			MediumCavalry: 100
 			HeavyCavalry: 100
 			HeavyBuilding: 100
-		DamageTypes: Prone50Percent, TriggerProne, RippedApartDeath
+		DamageTypes: Prone50Percent, RippedApartDeath
 		
 DualSiegeBalista:
 	ReloadDelay: 85
@@ -363,7 +363,7 @@ DualSiegeBalista:
 			HeavyCavalry: 85
 			HeavyBuilding: 100
 			Spectral: 40
-		DamageTypes: Prone50Percent, TriggerProne, BallistaDeath
+		DamageTypes: Prone50Percent, BallistaDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: smokey
 	Warhead@2Smu: LeaveSmudge
@@ -405,7 +405,7 @@ SuperSiegeBallista:
 			HeavyCavalry: 85
 			HeavyBuilding: 100
 			Spectral: 40
-		DamageTypes: Prone50Percent, TriggerProne, BallistaDeath
+		DamageTypes: Prone50Percent, BallistaDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: smokey
 		ImpactSounds: tnkfire2.aud, tnkfire3.aud, tnkfire4.aud, tnkfire6.aud
@@ -441,7 +441,7 @@ MortarBoulder:
 			HeavyCavalry: 65
 			HeavyBuilding: 75
 			Spectral: 35
-		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+		DamageTypes: Prone50Percent, DefaultDeath
 	Warhead@2Smu: LeaveSmudge
 		SmudgeType: Crater
 		InvalidTargets: Vehicle, Structure, Wall, Husk, Trees, Creep
@@ -481,7 +481,7 @@ SpearBarrage:
 			HeavyCavalry: 100
 			HeavyBuilding: 150
 			Spectral: 100
-		DamageTypes: Prone50Percent, TriggerProne, RippedApartDeath
+		DamageTypes: Prone50Percent, RippedApartDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: smokey
 		ImpactSounds: tnkfire2.aud, tnkfire3.aud, tnkfire4.aud, tnkfire6.aud
@@ -516,7 +516,7 @@ CarpetBomber:
 			HeavyCavalry: 55
 			HeavyBuilding: 75
 			Spectral: 75
-		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+		DamageTypes: Prone50Percent, DefaultDeath
 	Warhead@2Smu: LeaveSmudge
 		SmudgeType: Scorch
 		InvalidTargets: Vehicle, Structure, Wall
@@ -557,7 +557,7 @@ SonicRaptor:
 			HeavyCavalry: 40
 			HeavyBuilding: 75
 			Spectral: 20
-		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+		DamageTypes: Prone50Percent, DefaultDeath
 	Warhead@5Eff: CreateEffect
 		ImpactSounds: Sword02.aud, Sword03.aud, Sword04.aud, Sword06.aud, Sword07.aud
 		
@@ -591,7 +591,7 @@ SonicRaptorSoundLess:
 			HeavyCavalry: 40
 			HeavyBuilding: 75
 			Spectral: 20
-		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+		DamageTypes: Prone50Percent, DefaultDeath
 	Warhead@5Eff: CreateEffect
 		ImpactSounds: Sword02.aud, Sword03.aud, Sword04.aud, Sword06.aud, Sword07.aud
 		
@@ -616,7 +616,7 @@ Snakes:
 		InvalidTargets: Wall, Air, Structure
 		ValidTargets: Ground
 		Damage: 0
-		DamageTypes: Prone50Percent, TriggerProne, PoisonDeath
+		DamageTypes: Prone50Percent, PoisonDeath
 		
 SnakesSmall:
 	ReloadDelay: 85
@@ -654,7 +654,7 @@ SnakesSmall:
 			HeavyCavalry: 100
 			HeavyBuilding: 100
 			Spectral: 200
-		DamageTypes: Prone50Percent, TriggerProne, PoisonDeath
+		DamageTypes: Prone50Percent, PoisonDeath
         
 BedouinBowNArrowDebuff:
 	ReloadDelay: 10
@@ -680,7 +680,7 @@ BedouinBowNArrowDebuff:
 			HeavyCavalry: 0
 			HeavyBuilding: 0
 			Spectral: 0
-		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+		DamageTypes: Prone50Percent, DefaultDeath
 	Warhead@rotten: GrantSingletonCondition
 		Range: 0c512
 		Duration: 10
@@ -719,7 +719,7 @@ BedouinBow:
 			HeavyCavalry: 25
 			HeavyBuilding: 15
 			Spectral: 15
-		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+		DamageTypes: Prone50Percent, DefaultDeath
 		
 BedouinBowDUMMY:
 	ReloadDelay: 45
@@ -754,7 +754,7 @@ BedouinBowDUMMY:
 			HeavyCavalry: 0
 			HeavyBuilding: 0
 			Spectral: 0
-		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+		DamageTypes: Prone50Percent, DefaultDeath
 		
 BedouinBowAir:
 	ReloadDelay: 45
@@ -791,7 +791,7 @@ BedouinBowAir:
 			MediumCavalry: 55
 			HeavyCavalry: 35
 			HeavyBuilding: 45
-		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+		DamageTypes: Prone50Percent, DefaultDeath
 		
 BedouinBowTowerUnblock:
 	ReloadDelay: 25
@@ -824,7 +824,7 @@ BedouinBowTowerUnblock:
 			HeavyCavalry: 20
 			HeavyBuilding: 40
 			Spectral: 15
-		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath  
+		DamageTypes: Prone50Percent, DefaultDeath  
 		
 BedouinBowTowerUnblockDUMMY:
 	ReloadDelay: 25
@@ -860,7 +860,7 @@ BedouinBowTowerUnblockDUMMY:
 			HeavyCavalry: 0
 			HeavyBuilding: 0
 			Spectral: 0
-		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath 
+		DamageTypes: Prone50Percent, DefaultDeath 
 		
 TowerPike:
 	ReloadDelay: 40
@@ -885,7 +885,7 @@ TowerPike:
 			MediumCavalry: 125
 			HeavyCavalry: 120
 			Spectral: 15
-		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+		DamageTypes: Prone50Percent, DefaultDeath
 		
 SulGTSpearThrow:
 	ReloadDelay: 50
@@ -925,7 +925,7 @@ SulGTSpearThrow:
 			HeavyCavalry: 100
 			HeavyBuilding: 100
 			Spectral: 15
-		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath	 
+		DamageTypes: Prone50Percent, DefaultDeath	 
 
 SulGTSpearThrowAir:
 	ReloadDelay: 50
@@ -964,4 +964,27 @@ SulGTSpearThrowAir:
 			MediumCavalry: 100
 			HeavyCavalry: 100
 			HeavyBuilding: 100
-		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath 
+		DamageTypes: Prone50Percent, DefaultDeath 
+        
+TornadoExplosion:
+	ValidTargets: Air, Ground
+	Warhead@Tonrado: SpreadDamage
+		Spread: 1536
+		Damage: 1000
+		ValidTargets: Air, Ground
+		Versus:
+			Leather: 100
+			Light: 100
+			Heavy: 100
+			Knight: 100
+			Concrete: 160
+			LightCavalry: 100
+			MediumCavalry: 100
+			HeavyCavalry: 100
+			HeavyBuilding: 130
+		DamageTypes: Prone50Percent, RippedApartDeath
+	Warhead@Resources: DecayResource
+		Size: 1
+		Amount: 1
+		ResourceTypes: Crops, Grain, Corn, Loot, Wood, Goods, Lumber
+        

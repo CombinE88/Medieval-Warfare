@@ -200,59 +200,64 @@ namespace OpenRA.Mods.MW.Traits
 					targetActor.Location + new CVec(self.World.SharedRandom.Next(-2, 3), self.World.SharedRandom.Next(-2, 3)), 4)));
 		}
 		
-		
-		
-		void INotifyIdle.TickIdle(Actor self)
-		{
+		void HunterDecisions(Actor self)
+        {
+            whatAmmo = ammoPool.CurrentAmmo; // how many loot do we have stored
 
-			if (self == null)
+            if ((Lodge == null || Lodge.IsDead || !Lodge.IsInWorld) && self.IsInWorld && !self.IsDead) // first, find a new home when our old got destroyed
+            {
+                FindALodge();
+            }
+            else if (whatAmmo > 0 && self.IsInWorld && !self.IsDead) // if we got loot stored let us deliver first
+            {
+                Move(self, Lodge);
+                Attack(self, Lodge);
+            }
+            else if ((DeerLoot != null && !DeerLoot.IsDead && DeerLoot.IsInWorld) && self.IsInWorld && !self.IsDead) // do we have a shot deer somewhere and need to gather from it?
+            {
+                Move(self, DeerLoot);
+                Attack(self, DeerLoot);
+            }
+            else if ((NextLootTarget != null && !NextLootTarget.IsDead && NextLootTarget.IsInWorld) && self.IsInWorld && !self.IsDead) // is there a dead dee somehwere that belongs to noone we can loot?
+            {
+                Move(self, NextLootTarget);
+                Attack(self, NextLootTarget);
+            }
+            else if ((DeerHunt != null && !DeerHunt.IsDead && DeerHunt.IsInWorld) && self.IsInWorld && !self.IsDead) // lets find the deer we already have reserved
+            {
+                Move(self, DeerHunt);
+                Attack(self, DeerHunt);
+            }
+            else if ((NextHunttarget != null && !NextHunttarget.IsDead && NextHunttarget.IsInWorld) && self.IsInWorld && !self.IsDead) // lets find a fresh deer noone has reserved yet
+            {
+                Move(self, NextHunttarget);
+                Attack(self, NextHunttarget);
+            }
+            else if (self.IsInWorld && !self.IsDead)
+            {
+                MovePlusRandomVector(self, Lodge);
+                if (DeerLoot == null || (DeerLoot != null && (DeerLoot.IsDead || !DeerLoot.IsInWorld)))
+                    NextLootTarget = FindLootableDeer();
+                if (DeerHunt == null || (DeerHunt != null && (DeerHunt.IsDead || !DeerHunt.IsInWorld)))
+                    NextHunttarget = FindhuntableDeer();
+            }
+        }
+		
+
+        void INotifyIdle.TickIdle(Actor self)
+		{
+            if (--Tick > 0)
+                return;
+
+            if (self == null)
 				return;
 			if (!self.IsInWorld || self.IsDead)
 				return;
-			
-			Tick--;
-			if (self.IsInWorld && !self.IsDead && Tick < 1 && self.IsIdle)
+			if (self.IsInWorld && !self.IsDead && Tick <= 0 && self.IsIdle)
 			{
-				whatAmmo = ammoPool.CurrentAmmo;
-				
-				if ((Lodge == null || Lodge.IsDead || !Lodge.IsInWorld) && self.IsInWorld && !self.IsDead)
-				{
-					FindALodge();
-				}
-				else if (whatAmmo > 0 && self.IsInWorld && !self.IsDead)
-				{
-					Move(self, Lodge);
-					Attack(self, Lodge);
-				}
-				else if ((DeerLoot != null && !DeerLoot.IsDead && DeerLoot.IsInWorld) && self.IsInWorld && !self.IsDead)
-				{
-					Move(self, DeerLoot);
-					Attack(self, DeerLoot);
-				}
-				else if ((NextLootTarget != null && !NextLootTarget.IsDead && NextLootTarget.IsInWorld) && self.IsInWorld && !self.IsDead)
-				{
-					Move(self, NextLootTarget);
-					Attack(self, NextLootTarget);
-				}
-				else if ((DeerHunt != null && !DeerHunt.IsDead && DeerHunt.IsInWorld) && self.IsInWorld && !self.IsDead)
-				{
-					Move(self, DeerHunt);
-					Attack(self, DeerHunt);
-				}
-				else if ((NextHunttarget != null && !NextHunttarget.IsDead && NextHunttarget.IsInWorld) && self.IsInWorld && !self.IsDead)
-				{
-					Move(self, NextHunttarget);
-					Attack(self, NextHunttarget);
-				}
-				else if (self.IsInWorld && !self.IsDead)
-				{
-					MovePlusRandomVector(self, Lodge);
-					if (DeerLoot == null || (DeerLoot != null && (DeerLoot.IsDead || !DeerLoot.IsInWorld)))
-						NextLootTarget = FindLootableDeer();
-					if (DeerHunt == null || (DeerHunt != null && (DeerHunt.IsDead || !DeerHunt.IsInWorld)))
-						NextHunttarget = FindhuntableDeer();
-				}
-				Tick = 10;
+                HunterDecisions(self);
+
+                Tick = 25; // wait a second
 			}
 		}
 

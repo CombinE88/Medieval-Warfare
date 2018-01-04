@@ -52,11 +52,11 @@ namespace OpenRA.Mods.MW.Traits
 		{
 			if (info.CheckReachability)
 			{
-				checkstartingcells(self);
+				Checkstartingcells(self);
 			}
 		}
 
-		void checkstartingcells(Actor self)
+		void Checkstartingcells(Actor self)
 		{
 			forbiddenCells = new HashSet<CPos>();
 			
@@ -133,6 +133,60 @@ namespace OpenRA.Mods.MW.Traits
 
 		}
 
+        void SpawnStuff(Actor self)
+        {
+            self.World.AddFrameEndTask(w =>
+            {
+                var cells = self.World.Map.FindTilesInAnnulus(self.Location, info.RadiusMin.Length, info.RadiusMax.Length)
+                    .Where(c =>
+                    {
+                        if (info.CheckReachability && forbiddenCells.Contains(c))
+                            return false;
+
+                        return true;
+                    });
+                var actor = info.Actors[self.World.SharedRandom.Next(0, info.Actors.Length)].ToLowerInvariant();
+                IPositionableInfo ip = null;
+                BuildingInfo ip2 = null;
+
+                IEnumerable<CPos> validCells = null;
+
+                if (self.World.Map.Rules.Actors[actor].HasTraitInfo<IPositionableInfo>())
+                {
+                    ip = self.World.Map.Rules.Actors[actor].TraitInfo<IPositionableInfo>();
+                    validCells = cells.Where(c => ip.CanEnterCell(self.World, null, c));
+                }
+
+                else if (self.World.Map.Rules.Actors[actor].HasTraitInfo<BuildingInfo>())
+                {
+                    ip2 = self.World.Map.Rules.Actors[actor].TraitInfo<BuildingInfo>();
+                    validCells = cells.Where(c => self.World.CanPlaceBuilding(actor, ip2, c, null));
+                }
+
+
+                if (validCells != null && !validCells.Any())
+                    return;
+
+                var randomlocation = validCells.ElementAt(self.World.SharedRandom.Next(validCells.Count()));
+
+                var facong = 0;
+                var face = self.TraitOrDefault<IFacing>();
+                if (face != null)
+                    facong = face.Facing;
+
+                var td = new TypeDictionary
+                {
+                    new LocationInit(randomlocation),
+                    new CenterPositionInit(self.World.Map.CenterOfCell(randomlocation)),
+                    new FacingInit(facong),
+                    new OwnerInit(self.Owner),
+                };
+
+                var Create = w.CreateActor(actor, td);
+                alive.Add(Create);
+            });
+        }
+
 		public void Tick(Actor self)
 		{
 			if (IsTraitDisabled)
@@ -153,58 +207,9 @@ namespace OpenRA.Mods.MW.Traits
 			if (info.TicksMax >= timer && self.World.SharedRandom.Next(0, info.Chance) != 0)
 				return;
 
-			
-			self.World.AddFrameEndTask(w =>
-			{
-				var cells = self.World.Map.FindTilesInAnnulus(self.Location, info.RadiusMin.Length, info.RadiusMax.Length)
-					.Where(c =>
-						{
-							if (info.CheckReachability && forbiddenCells.Contains(c))
-								return false;
+            SpawnStuff(self);
 
-							return true;
-						});
-				var actor = info.Actors[self.World.SharedRandom.Next(0, info.Actors.Length)].ToLowerInvariant();
-				IPositionableInfo ip = null;
-				BuildingInfo ip2 = null;
-
-				IEnumerable<CPos> validCells = null;
-	
-				if (self.World.Map.Rules.Actors[actor].HasTraitInfo<IPositionableInfo>())
-				{
-					ip = self.World.Map.Rules.Actors[actor].TraitInfo<IPositionableInfo>();
-					validCells = cells.Where(c => ip.CanEnterCell(self.World, null, c));
-				}
-				
-				else if (self.World.Map.Rules.Actors[actor].HasTraitInfo<BuildingInfo>())
-				{
-					ip2 = self.World.Map.Rules.Actors[actor].TraitInfo<BuildingInfo>();
-					validCells = cells.Where(c => self.World.CanPlaceBuilding(actor,ip2,c,null));
-				}
-
-
-				if (validCells != null && !validCells.Any())
-					return;
-				
-				var randomlocation = validCells.ElementAt(self.World.SharedRandom.Next(validCells.Count()));
-
-				var facong = 0;
-				var face = self.TraitOrDefault<IFacing>();
-				if (face != null)
-					facong = face.Facing;
-
-				var td = new TypeDictionary
-				{
-					new LocationInit(randomlocation),
-					new CenterPositionInit(self.World.Map.CenterOfCell(randomlocation)),
-					new FacingInit(facong),
-					new OwnerInit(self.Owner),
-				};
-
-				var Create = w.CreateActor(actor, td);
-				alive.Add(Create);
-				});
-		timer = 0;
+            timer = 0;
 		}
 	}
 }

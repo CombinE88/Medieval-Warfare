@@ -1,8 +1,11 @@
-
-
 KING:
 	Inherits: ^Knight
 	Inherits@AUTOTARGET: ^AutoTargetAll
+	Inherits@GetsPoisoned: ^GetsPoisoned
+	Inherits@CanTurnIntoScelett:  ^CanTurnIntoScelett
+	Inherits@ArcherDemo65: ^ArcherDemo65
+	Inherits@TornadoVunerable: ^TornadoVunerable
+	Inherits@Healable: ^Healable
 	GivesBounty:
 		Percentage: 50
 	MustBeDestroyed:
@@ -92,12 +95,6 @@ KING:
 		Sabotage: False
 		Voice: Attack
 	-Crushable:
-	-ExternalCondition@SNAKES:
-	-SelfHealing@SNAKES:
-	-SpeedMultiplier@SNAKES:
-	-WithIdleOverlay@SNAKES:
-	-RangeMultiplier:
-		
  
 Husk.KING:
 	Inherits@1: ^ExistsInWorld
@@ -208,6 +205,12 @@ Husk2.KING:
 
 ENGENEER:
 	Inherits: ^Knight
+	Inherits@GetsPoisoned: ^GetsPoisoned
+	Inherits@CanTurnIntoScelett:  ^CanTurnIntoScelett
+	Inherits@ArcherDemo65: ^ArcherDemo65
+	Inherits@TornadoVunerable: ^TornadoVunerable
+	Inherits@Healable: ^Healable
+	Inherits@SnakeStunnable: ^SnakeStunnable
 	AutoTargetPriority@Prio5:
 		ValidTargets: Priority5
 		Priority: 5
@@ -275,6 +278,13 @@ ENGENEER:
 E1NEW:
 	Inherits: ^Knight
 	Inherits@AUTOTARGET: ^AutoTargetGround
+	Inherits@GetsPoisoned: ^GetsPoisoned
+	Inherits@CanTurnIntoScelett:  ^CanTurnIntoScelett
+	Inherits@ArcherDemo65: ^ArcherDemo65
+	Inherits@TornadoVunerable: ^TornadoVunerable
+	Inherits@Healable: ^Healable
+	Inherits@SnakeStunnable: ^SnakeStunnable
+	Inherits@GrimReanimatable: ^GrimReanimatable
 	Valued:
 		Cost: 100
 	Tooltip:
@@ -306,6 +316,14 @@ E1NEW:
 E2NEW:
 	Inherits: ^Knight
 	Inherits@AUTOTARGET: ^AutoTargetGround
+	Inherits@GainsExperience: ^GainsExperience
+	Inherits@GetsPoisoned: ^GetsPoisoned
+	Inherits@CanTurnIntoScelett:  ^CanTurnIntoScelett
+	Inherits@ArcherDemo65: ^ArcherDemo65
+	Inherits@TornadoVunerable: ^TornadoVunerable
+	Inherits@Healable: ^Healable
+	Inherits@SnakeStunnable: ^SnakeStunnable
+	Inherits@GrimReanimatable: ^GrimReanimatable
 	Valued:
 		Cost: 200
 	-Crushable:
@@ -354,6 +372,14 @@ E2NEW:
 E2NEWV2:
 	Inherits: ^Knight
 	Inherits@AUTOTARGET: ^AutoTargetGround
+	Inherits@GainsExperience: ^GainsExperience
+	Inherits@GetsPoisoned: ^GetsPoisoned
+	Inherits@CanTurnIntoScelett:  ^CanTurnIntoScelett
+	Inherits@ArcherDemo65: ^ArcherDemo65
+	Inherits@TornadoVunerable: ^TornadoVunerable
+	Inherits@Healable: ^Healable
+	Inherits@SnakeStunnable: ^SnakeStunnable
+	Inherits@GrimReanimatable: ^GrimReanimatable
 	Valued:
 		Cost: 200
 	-Crushable:
@@ -403,6 +429,14 @@ E2NEWV2:
 E2NEWV2U:
 	Inherits: ^Knight
 	Inherits@AUTOTARGET: ^AutoTargetGround
+	Inherits@GainsExperience: ^GainsExperience
+	Inherits@GetsPoisoned: ^GetsPoisoned
+	Inherits@CanTurnIntoScelett:  ^CanTurnIntoScelett
+	Inherits@ArcherDemo65: ^ArcherDemo65
+	Inherits@TornadoVunerable: ^TornadoVunerable
+	Inherits@Healable: ^Healable
+	Inherits@SnakeStunnable: ^SnakeStunnable
+	Inherits@GrimReanimatable: ^GrimReanimatable
 	Valued:
 		Cost: 200
 	-Crushable:
@@ -495,6 +529,14 @@ E2NEWV2U:
 E3NEWU:
 	Inherits: ^Knight
 	Inherits@AUTOTARGET: ^AutoTargetGround
+	Inherits@GainsExperience: ^GainsExperience
+	Inherits@GetsPoisoned: ^GetsPoisoned
+	Inherits@CanTurnIntoScelett:  ^CanTurnIntoScelett
+	Inherits@ArcherDemo65: ^ArcherDemo65
+	Inherits@TornadoVunerable: ^TornadoVunerable
+	Inherits@Healable: ^Healable
+	Inherits@SnakeStunnable: ^SnakeStunnable
+	Inherits@GrimReanimatable: ^GrimReanimatable
 	Valued:
 		Cost: 125
 	Tooltip:
@@ -581,6 +623,14 @@ E3NEWU:
 E3NEW:
 	Inherits: ^Knight
 	Inherits@AUTOTARGET: ^AutoTargetGround
+	Inherits@GainsExperience: ^GainsExperience
+	Inherits@GetsPoisoned: ^GetsPoisoned
+	Inherits@CanTurnIntoScelett:  ^CanTurnIntoScelett
+	Inherits@ArcherDemo65: ^ArcherDemo65
+	Inherits@TornadoVunerable: ^TornadoVunerable
+	Inherits@Healable: ^Healable
+	Inherits@SnakeStunnable: ^SnakeStunnable
+	Inherits@GrimReanimatable: ^GrimReanimatable
 	Valued:
 		Cost: 100
 	Tooltip:
@@ -623,6 +673,14 @@ E3NEW:
 E3NEWV2:
 	Inherits: ^Knight
 	Inherits@AUTOTARGET: ^AutoTargetGround
+	Inherits@GainsExperience: ^GainsExperience
+	Inherits@GetsPoisoned: ^GetsPoisoned
+	Inherits@CanTurnIntoScelett:  ^CanTurnIntoScelett
+	Inherits@ArcherDemo65: ^ArcherDemo65
+	Inherits@TornadoVunerable: ^TornadoVunerable
+	Inherits@Healable: ^Healable
+	Inherits@SnakeStunnable: ^SnakeStunnable
+	Inherits@GrimReanimatable: ^GrimReanimatable
 	Valued:
 		Cost: 100
 	Tooltip:
@@ -664,8 +722,15 @@ E3NEWV2:
 		
 E9NEW:
 	Inherits: ^Knight
-
 	Inherits@AUTOTARGET: ^AutoTargetGround
+	Inherits@GainsExperience: ^GainsExperience
+	Inherits@GetsPoisoned: ^GetsPoisoned
+	Inherits@CanTurnIntoScelett:  ^CanTurnIntoScelett
+	Inherits@ArcherDemo65: ^ArcherDemo65
+	Inherits@TornadoVunerable: ^TornadoVunerable
+	Inherits@Healable: ^Healable
+	Inherits@SnakeStunnable: ^SnakeStunnable
+	Inherits@GrimReanimatable: ^GrimReanimatable
 	RevealsShroud:
 		Range: 6c0
 	Valued:
@@ -714,6 +779,14 @@ E9NEW:
 E4NEW:
 	Inherits: ^Knight
 	Inherits@AUTOTARGET: ^AutoTargetAll
+	Inherits@GainsExperience: ^GainsExperience
+	Inherits@GetsPoisoned: ^GetsPoisoned
+	Inherits@CanTurnIntoScelett:  ^CanTurnIntoScelett
+	Inherits@ArcherDemo65: ^ArcherDemo65
+	Inherits@TornadoVunerable: ^TornadoVunerable
+	Inherits@Healable: ^Healable
+	Inherits@SnakeStunnable: ^SnakeStunnable
+	Inherits@GrimReanimatable: ^GrimReanimatable
 	RevealsShroud:
 		Range: 6c0
 
@@ -779,9 +852,16 @@ E4NEW:
 E4NEWV2:
 	Inherits: ^Knight
 	Inherits@AUTOTARGET: ^AutoTargetAll
+	Inherits@GainsExperience: ^GainsExperience
+	Inherits@GetsPoisoned: ^GetsPoisoned
+	Inherits@CanTurnIntoScelett:  ^CanTurnIntoScelett
+	Inherits@ArcherDemo65: ^ArcherDemo65
+	Inherits@TornadoVunerable: ^TornadoVunerable
+	Inherits@Healable: ^Healable
+	Inherits@SnakeStunnable: ^SnakeStunnable
+	Inherits@GrimReanimatable: ^GrimReanimatable
 	RevealsShroud:
 		Range: 6c0
-
 	Valued:
 		Cost: 200
 	Tooltip:
@@ -844,6 +924,14 @@ E4NEWV2:
 E5NEW:
 	Inherits: ^Knight
 	Inherits@AUTOTARGET: ^AutoTargetGround
+	Inherits@GainsExperience: ^GainsExperience
+	Inherits@GetsPoisoned: ^GetsPoisoned
+	Inherits@CanTurnIntoScelett:  ^CanTurnIntoScelett
+	Inherits@ArcherDemo65: ^ArcherDemo65
+	Inherits@TornadoVunerable: ^TornadoVunerable
+	Inherits@Healable: ^Healable
+	Inherits@SnakeStunnable: ^SnakeStunnable
+	Inherits@GrimReanimatable: ^GrimReanimatable
 	RevealsShroud:
 		Range: 8c0
 
@@ -894,6 +982,14 @@ RMBONEW:
 	RevealsShroud:
 		Range: 9c0
 	Inherits@AUTOTARGET: ^AutoTargetGround
+	Inherits@GainsExperience: ^GainsExperience
+	Inherits@GetsPoisoned: ^GetsPoisoned
+	Inherits@CanTurnIntoScelett:  ^CanTurnIntoScelett
+	Inherits@ArcherDemo65: ^ArcherDemo65
+	Inherits@TornadoVunerable: ^TornadoVunerable
+	Inherits@Healable: ^Healable
+	Inherits@SnakeStunnable: ^SnakeStunnable
+	Inherits@GrimReanimatable: ^GrimReanimatable
 	Valued:
 		Cost: 450
 	Tooltip:
@@ -943,6 +1039,13 @@ RMBONEW:
 NEWCOMM:
 	Inherits: ^Knight
 	Inherits@AUTOTARGET: ^AutoTargetGround
+	Inherits@GainsExperience: ^GainsExperience
+	Inherits@GetsPoisoned: ^GetsPoisoned
+	Inherits@CanTurnIntoScelett:  ^CanTurnIntoScelett
+	Inherits@ArcherDemo65: ^ArcherDemo65
+	Inherits@TornadoVunerable: ^TornadoVunerable
+	Inherits@Healable: ^Healable
+	Inherits@SnakeStunnable: ^SnakeSlowable
 	RevealsShroud:
 		Range: 9c0
 	Valued:
@@ -985,11 +1088,6 @@ NEWCOMM:
 	AnnounceOnBuild:
 	AnnounceOnKill:
 	-Crushable:
-	-ExternalCondition@SNAKES:
-	-SelfHealing@SNAKES:
-	-SpeedMultiplier@SNAKES:
-	-WithIdleOverlay@SNAKES:
-	-RangeMultiplier:
 	PersonValued:
 		ActorCount: 1
 		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
@@ -1006,6 +1104,14 @@ NEWCOMM:
 ASSASSIN:
 	Inherits: ^Knight
 	Inherits@AUTOTARGET: ^AutoTargetAir
+	Inherits@GainsExperience: ^GainsExperience
+	Inherits@GetsPoisoned: ^GetsPoisoned
+	Inherits@CanTurnIntoScelett:  ^CanTurnIntoScelett
+	Inherits@ArcherDemo65: ^ArcherDemo65
+	Inherits@TornadoVunerable: ^TornadoVunerable
+	Inherits@Healable: ^Healable
+	Inherits@SnakeStunnable: ^SnakeStunnable
+	Inherits@GrimReanimatable: ^GrimReanimatable
 	RevealsShroud:
 		Range: 6c0
 	DetectCloaked:
@@ -1067,6 +1173,13 @@ ASSASSIN:
 		
 E8FARMER:
 	Inherits: ^Knight
+	Inherits@GetsPoisoned: ^GetsPoisoned
+	Inherits@CanTurnIntoScelett:  ^CanTurnIntoScelett
+	Inherits@ArcherDemo65: ^ArcherDemo65
+	Inherits@TornadoVunerable: ^TornadoVunerable
+	Inherits@Healable: ^Healable
+	Inherits@SnakeStunnable: ^SnakeStunnable
+	Inherits@GrimReanimatable: ^GrimReanimatable
 	BodyOrientation:
 		QuantizedFacings: 8
 	QuantizeFacingsFromSequence:
@@ -1134,6 +1247,14 @@ E8FARMER:
 		
 BUMMLER:
 	Inherits: ^Knight
+	Inherits@GainsExperience: ^GainsExperience
+	Inherits@GetsPoisoned: ^GetsPoisoned
+	Inherits@CanTurnIntoScelett:  ^CanTurnIntoScelett
+	Inherits@ArcherDemo65: ^ArcherDemo65
+	Inherits@TornadoVunerable: ^TornadoVunerable
+	Inherits@Healable: ^Healable
+	Inherits@SnakeStunnable: ^SnakeStunnable
+	Inherits@GrimReanimatable: ^GrimReanimatable
 	BodyOrientation:
 		QuantizedFacings: 8
 	QuantizeFacingsFromSequence:
@@ -1192,13 +1313,6 @@ BUMMLER:
 		
 SIEGERUNNER:
 	Inherits: ^Knight
-	-GrimTarget:
-	-DamageMultiplier@GRIM:
-	-RangeMultiplier@GRIM:
-	-FirepowerMultiplier@GRIM:
-	-SpeedMultiplier@GRIM:
-	-ReloadDelayMultiplier@GRIM:
-	-GivesExperienceMultiplier@GRIM:
 	Valued:
 		Cost: 250
 	Tooltip:
@@ -1249,6 +1363,7 @@ MWCHICK1:
 	  
 MWWAND1:
 	Inherits: ^MWTalker
+	Inherits@SnakeStunnable: ^SnakeStunnable
 	RenderSprites:
 		Image: mwciv1
 		PlayerPalette: 
@@ -1264,6 +1379,7 @@ MWWAND1:
 		
 MWWAND2:
 	Inherits: ^MWTalker
+	Inherits@SnakeStunnable: ^SnakeStunnable
 	RenderSprites:
 		Image: mwciv2
 		PlayerPalette: 
@@ -1280,6 +1396,7 @@ MWWAND2:
 		
 MWWAND3:
 	Inherits: ^MWTalker
+	Inherits@SnakeStunnable: ^SnakeStunnable
 	RenderSprites:
 		Image: mwciv3
 		PlayerPalette: 
@@ -1295,6 +1412,7 @@ MWWAND3:
 		
 MWWAND4:
 	Inherits: ^MWTalker
+	Inherits@SnakeStunnable: ^SnakeStunnable
 	RenderSprites:
 		Image: mwciv4
 		PlayerPalette: 
@@ -1310,6 +1428,7 @@ MWWAND4:
 		
 MWWAND5:
 	Inherits: ^MWTalker
+	Inherits@SnakeStunnable: ^SnakeStunnable
 	RenderSprites:
 		Image: mwciv5
 		PlayerPalette: 
@@ -1325,6 +1444,7 @@ MWWAND5:
 		
 MWWAND6:
 	Inherits: ^MWTalker
+	Inherits@SnakeStunnable: ^SnakeStunnable
 	RenderSprites:
 		Image: mwciv6
 		PlayerPalette: 
@@ -1340,6 +1460,7 @@ MWWAND6:
 		
 MWWAND10:
 	Inherits: ^MWTalker
+	Inherits@SnakeStunnable: ^SnakeStunnable
 	RenderSprites:
 		Image: mwciv10
 		PlayerPalette: 
@@ -1355,6 +1476,7 @@ MWWAND10:
 		
 MWWAND11:
 	Inherits: ^MWTalker
+	Inherits@SnakeStunnable: ^SnakeStunnable
 	RenderSprites:
 		Image: mwciv11
 		PlayerPalette: 
@@ -1370,6 +1492,7 @@ MWWAND11:
 		
 MWWAND12:
 	Inherits: ^MWTalker
+	Inherits@SnakeStunnable: ^SnakeStunnable
 	RenderSprites:
 		Image: mwciv12
 		PlayerPalette: 
@@ -1385,6 +1508,7 @@ MWWAND12:
 				
 MWWAND7:
 	Inherits: ^MWWanderer
+	Inherits@SnakeStunnable: ^SnakeStunnable
 	RenderSprites:
 		Image: mwciv7
 		PlayerPalette: raplayer
@@ -1402,6 +1526,7 @@ MWWAND7:
 		
 MWWAND8:
 	Inherits: ^MWWanderer
+	Inherits@SnakeStunnable: ^SnakeStunnable
 	RenderSprites:
 		Image: mwciv8
 		PlayerPalette: 
@@ -1424,7 +1549,7 @@ MWWAND8:
 		
 SHOPPLAYER:
 	Inherits: ^Knight
-	-GainsExperience:
+	Inherits@SnakeStunnable: ^SnakeStunnable
 	AutoTargetPriority@Prio0:
 		ValidTargets: Structure, Infantry, Vehicle, Creep, Water, Defense, Cavalry, Siege, Air
 		Priority: 1
@@ -1474,6 +1599,14 @@ SHOPPLAYER:
 MWCIVCOM:
 	Inherits: ^MWWanderer
 	Inherits@AUTOTARGET: ^AutoTargetGround
+	Inherits@GainsExperience: ^GainsExperience
+	Inherits@GetsPoisoned: ^GetsPoisoned
+	Inherits@CanTurnIntoScelett:  ^CanTurnIntoScelett
+	Inherits@ArcherDemo65: ^ArcherDemo65
+	Inherits@TornadoVunerable: ^TornadoVunerable
+	Inherits@Healable: ^Healable
+	Inherits@SnakeStunnable: ^SnakeStunnable
+	Inherits@GrimReanimatable: ^GrimReanimatable
 	Tooltip:
 		Name: Commander
 		GenericVisibility: None
@@ -1522,6 +1655,7 @@ MWCIVCOM:
 		
 NOBLE1:
 	Inherits: ^MWTalker
+	Inherits@SnakeStunnable: ^SnakeStunnable
 	RenderSprites:
 		Image: nobl1
 		PlayerPalette: 
@@ -1537,6 +1671,7 @@ NOBLE1:
 		
 NOBLE2:
 	Inherits: ^MWTalker
+	Inherits@SnakeStunnable: ^SnakeStunnable
 	RenderSprites:
 		Image: nobl2
 		PlayerPalette: 
@@ -1553,6 +1688,7 @@ NOBLE2:
 		
 NOBLE3:
 	Inherits: ^MWTalker
+	Inherits@SnakeStunnable: ^SnakeStunnable
 	RenderSprites:
 		Image: nobl3
 		PlayerPalette: 
@@ -1568,6 +1704,7 @@ NOBLE3:
 		
 NOBLE4:
 	Inherits: ^MWTalker
+	Inherits@SnakeStunnable: ^SnakeStunnable
 	RenderSprites:
 		Image: nobl4
 		PlayerPalette: 
@@ -1583,6 +1720,7 @@ NOBLE4:
 		
 NOBLE5:
 	Inherits: ^MWTalker
+	Inherits@SnakeStunnable: ^SnakeStunnable
 	Tooltip:
 		Name: Landlord
 		GenericVisibility: None
@@ -1608,6 +1746,7 @@ NOBLE5:
 
 MWLUMBERER:
 	Inherits: ^MWConstructor
+	Inherits@SnakeStunnable: ^SnakeStunnable
 	RenderSprites:
 		Image: mwlumber
 	Tooltip:
@@ -1691,6 +1830,7 @@ MWLUMBERER:
 		
 MWLUMBEREROWNED:
 	Inherits: ^MWConstructor
+	Inherits@SnakeStunnable: ^SnakeStunnable
 	RenderSprites:
 		Image: mwlumber
 	Tooltip:
@@ -1773,6 +1913,7 @@ MWLUMBEREROWNED:
 		
 TRANSPORTER:
 	Inherits: ^Knight
+	Inherits@SnakeStunnable: ^SnakeStunnable
 	AutoTargetPriority@Prio5:
 		ValidTargets: Priority5
 		Priority: 5
@@ -1866,6 +2007,7 @@ TRANSPORTER:
 		
 HUNTER:
 	Inherits: ^Knight
+	Inherits@SnakeStunnable: ^SnakeStunnable
 	RevealsShroud:
 		Range: 6c0
 	Valued:

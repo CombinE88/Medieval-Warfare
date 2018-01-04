@@ -1079,36 +1079,6 @@ SULCASTLE:
 		IncomingSpeechNotification: 
 		IncomingSound: 
 		RequiresCondition: Tower4build
-	SelfHealing@TORNADO:
-		Step: -6500
-		HealIfBelow: 110
-		Delay: 25
-		RequiresCondition: Tornadodeath && (Tower1build + Tower2build + Tower3build + Tower4build) == 0
-		DamageTypes: DefaultDeath
-	SelfHealing@TORNADO1:
-		Step: -5500
-		HealIfBelow: 110
-		Delay: 25
-		RequiresCondition: Tornadodeath && (Tower1build + Tower2build + Tower3build + Tower4build) == 1
-		DamageTypes: DefaultDeath
-	SelfHealing@TORNADO2:
-		Step: -4750
-		HealIfBelow: 110
-		Delay: 25
-		RequiresCondition: Tornadodeath && (Tower1build + Tower2build + Tower3build + Tower4build) == 2
-		DamageTypes: DefaultDeath
-	SelfHealing@TORNADO3:
-		Step: -4000
-		HealIfBelow: 110
-		Delay: 25
-		RequiresCondition: Tornadodeath && (Tower1build + Tower2build + Tower3build + Tower4build) == 3
-		DamageTypes: DefaultDeath
-	SelfHealing@TORNADO4:
-		Step: -3250
-		HealIfBelow: 110
-		Delay: 25
-		RequiresCondition: Tornadodeath && (Tower1build + Tower2build + Tower3build + Tower4build) == 4
-		DamageTypes: DefaultDeath
 		
 SULTOW1:
 	AlwaysVisible:
@@ -1474,6 +1444,13 @@ SULREF:
 SULE1:
 	Inherits: ^Knight
 	Inherits@AUTOTARGET: ^AutoTargetGround
+	Inherits@GainsExperience: ^GainsExperience
+	Inherits@GetsPoisoned: ^GetsPoisoned
+	Inherits@CanTurnIntoScelett:  ^CanTurnIntoScelett
+	Inherits@ArcherDemo65: ^ArcherDemo65
+	Inherits@Healable: ^Healable
+	Inherits@SnakeStunnable: ^SnakeStunnable
+	Inherits@GrimReanimatable: ^GrimReanimatable
 	Valued:
 		Cost: 75
 	Tooltip:
@@ -1514,6 +1491,13 @@ SULE1:
 SULE2:
 	Inherits: ^Knight
 	Inherits@AUTOTARGET: ^AutoTargetGround
+	Inherits@GainsExperience: ^GainsExperience
+	Inherits@GetsPoisoned: ^GetsPoisoned
+	Inherits@CanTurnIntoScelett:  ^CanTurnIntoScelett
+	Inherits@ArcherDemo65: ^ArcherDemo65
+	Inherits@Healable: ^Healable
+	Inherits@SnakeStunnable: ^SnakeStunnable
+	Inherits@GrimReanimatable: ^GrimReanimatable
 	Valued:
 		Cost: 300
 	Tooltip:
@@ -1564,6 +1548,13 @@ SULE2:
 SULE3:
 	Inherits: ^Knight
 	Inherits@AUTOTARGET: ^AutoTargetAll
+	Inherits@GainsExperience: ^GainsExperience
+	Inherits@GetsPoisoned: ^GetsPoisoned
+	Inherits@CanTurnIntoScelett:  ^CanTurnIntoScelett
+	Inherits@ArcherDemo65: ^ArcherDemo65
+	Inherits@Healable: ^Healable
+	Inherits@SnakeStunnable: ^SnakeStunnable
+	Inherits@GrimReanimatable: ^GrimReanimatable
 	RevealsShroud:
 		Range: 6c0
 	Valued:
@@ -1628,6 +1619,13 @@ SULE3:
 SULE4:
 	Inherits: ^Knight
 	Inherits@AUTOTARGET: ^AutoTargetGround
+	Inherits@GainsExperience: ^GainsExperience
+	Inherits@GetsPoisoned: ^GetsPoisoned
+	Inherits@CanTurnIntoScelett:  ^CanTurnIntoScelett
+	Inherits@ArcherDemo65: ^ArcherDemo65
+	Inherits@Healable: ^Healable
+	Inherits@SnakeStunnable: ^SnakeSlowable
+	Inherits@GrimReanimatable: ^GrimReanimatable
 	Valued:
 		Cost: 450
 	Tooltip:
@@ -1675,6 +1673,13 @@ SULE4:
 SULE5:
 	Inherits: ^Knight
 	Inherits@AUTOTARGET: ^AutoTargetGround
+	Inherits@GainsExperience: ^GainsExperience
+	Inherits@GetsPoisoned: ^GetsPoisoned
+	Inherits@CanTurnIntoScelett:  ^CanTurnIntoScelett
+	Inherits@ArcherDemo65: ^ArcherDemo65
+	Inherits@Healable: ^Healable
+	Inherits@SnakeStunnable: ^SnakeSlowable
+	Inherits@GrimReanimatable: ^GrimReanimatable
 	RevealsShroud:
 		Range: 9c0
 	Valued:
@@ -1726,6 +1731,12 @@ SULE5:
 		
 SULE6:
 	Inherits: ^Knight
+	Inherits@GetsPoisoned: ^GetsPoisoned
+	Inherits@CanTurnIntoScelett:  ^CanTurnIntoScelett
+	Inherits@ArcherDemo65: ^ArcherDemo65
+	Inherits@Healable: ^Healable
+	Inherits@SnakeStunnable: ^SnakeStunnable
+	Inherits@GrimReanimatable: ^GrimReanimatable
 	BodyOrientation:
 		QuantizedFacings: 8
 	QuantizeFacingsFromSequence:
@@ -1795,6 +1806,13 @@ SULE6:
 SULM1:
 	Inherits: ^Knight
 	Inherits@AUTOTARGET: ^AutoTargetGround
+	Inherits@GainsExperience: ^GainsExperience
+	Inherits@GetsPoisoned: ^GetsPoisoned
+	Inherits@CanTurnIntoScelett:  ^CanTurnIntoScelett
+	Inherits@ArcherDemo65: ^ArcherDemo65
+	Inherits@Healable: ^Healable
+	Inherits@SnakeStunnable: ^SnakeStunnable
+	Inherits@GrimReanimatable: ^GrimReanimatable
 	RevealsShroud:
 		Range: 6c0
 	Valued:
@@ -1839,6 +1857,8 @@ SULM1:
 		
 SULM1SKELET:
 	Inherits: ^Knight
+	Inherits@ArcherDemo65: ^ArcherDemo65
+	Inherits@SnakeStunnable: ^SnakeStunnable
 	Inherits@AUTOTARGET: ^AutoTargetGround
 	Valued:
 		Cost: 25
@@ -1875,8 +1895,6 @@ SULM1SKELET:
 		DamageTypes: DefaultDeath
 	Armor:
 		Type: Heavy
-	-SelfHealing@Rotaway:
-	-SelfHealing@DDler:
 	WithDeathAnimation:
 		DeathTypes:
 			DefaultDeath: 1
@@ -1886,10 +1904,7 @@ SULM1SKELET:
 			BurnToDeath: 1
 			SkeletonDeath: 1
 		CrushedSequence: die1
-	-SelfHealing@HOSPITAL:
-	-WithDecoration@REDCROSS:
 	-Explodes@Tib:
-	-SpawnActorOnDeath@SCELET:
 	AttackWander: 
 		WanderMoveRadius: 3
 		ReduceMoveRadiusDelay: 5
@@ -1905,6 +1920,9 @@ SULM1SKELET:
 SULM2:
 	Inherits: ^Knight
 	Inherits@AUTOTARGET: ^AutoTargetGround
+	Inherits@GainsExperience: ^GainsExperience
+	Inherits@ArcherDemo65: ^ArcherDemo65
+	Inherits@SnakeStunnable: ^SnakeSlowable
 	RevealsShroud:
 		Range: 6c0
 	Valued:
@@ -1944,22 +1962,6 @@ SULM2:
 		Type: Spectral
 	DetectCloaked:
 		Range: 4c0
-	-SpawnActorOnDeath@SCELET:
-	-ExternalCondition@SNAKES:
-	-SelfHealing@SNAKES:
-	-SpeedMultiplier@SNAKES:
-	-WithIdleOverlay@SNAKES:
-	-SelfHealing@SNAKES2:
-	-SelfHealing@SNAKES3:
-	-SelfHealing@SNAKES4:
-    -GrimTarget:
-	-DamageMultiplier@GRIM:
-	-RangeMultiplier@GRIM:
-	-FirepowerMultiplier@GRIM:
-	-SpeedMultiplier@GRIM:
-    -ReloadDelayMultiplier@GRIM:
-    -GivesExperienceMultiplier@GRIM:
-	-WithColoredOverlay@GRIM:
 	Voiced:
 		VoiceSet: DjinVoice
 	PersonValued:
@@ -1971,6 +1973,13 @@ SULM2:
 SULM4:
 	Inherits: ^Knight
 	Inherits@AUTOTARGET: ^AutoTargetGround
+	Inherits@GainsExperience: ^GainsExperience
+	Inherits@GetsPoisoned: ^GetsPoisoned
+	Inherits@CanTurnIntoScelett:  ^CanTurnIntoScelett
+	Inherits@ArcherDemo65: ^ArcherDemo65
+	Inherits@Healable: ^Healable
+	Inherits@SnakeStunnable: ^SnakeStunnable
+	Inherits@GrimReanimatable: ^GrimReanimatable
 	RevealsShroud:
 		Range: 7c0
 	Valued:
@@ -2017,8 +2026,12 @@ SULM4:
 
 SULB0:
 	Inherits: ^Siege
-	Inherits@2: ^GainsExperience
 	Inherits@AUTOTARGET: ^AutoTargetAll
+	Inherits@GainsExperience: ^GainsExperience
+	Inherits@GetsPoisoned: ^GetsPoisoned
+	Inherits@ArcherDemo65: ^ArcherDemo80
+	Inherits@Healable: ^Healable
+	Inherits@SnakeStunnable: ^SnakeSlowable
 	Valued:
 		Cost: 725
 	Tooltip:
@@ -2121,8 +2134,12 @@ SULB0:
 		
 SULB1:
 	Inherits: ^Siege
-	Inherits@2: ^GainsExperience
 	Inherits@AUTOTARGET: ^AutoTargetGround
+	Inherits@GainsExperience: ^GainsExperience
+	Inherits@GetsPoisoned: ^GetsPoisoned
+	Inherits@ArcherDemo65: ^ArcherDemo80
+	Inherits@Healable: ^Healable
+	Inherits@SnakeStunnable: ^SnakeSlowable
 	Valued:
 		Cost: 1300
 	Tooltip:
@@ -2191,8 +2208,13 @@ SULB1.Husk:
 		
 SULB2:
 	Inherits: ^Siege
-	Inherits@2: ^GainsExperience
 	Inherits@AUTOTARGET: ^AutoTargetGround
+	Inherits@GainsExperience: ^GainsExperience
+	Inherits@GetsPoisoned: ^GetsPoisoned
+	Inherits@ArcherDemo65: ^ArcherDemo80
+	Inherits@TornadoVunerable: ^TornadoVunerable
+	Inherits@Healable: ^Healable
+	Inherits@SnakeStunnable: ^SnakeSlowable
 	Valued:
 		Cost: 2500
 	Tooltip:
@@ -2315,7 +2337,7 @@ PLACEHOLDERBOLTS:
 		
 SULM3:
 	Inherits: ^Helicopter
-	Inherits@EXPERIENCE: ^GainsExperience
+	Inherits@GainsExperience: ^GainsExperience
 	Inherits@AUTOTARGET: ^AutoTargetGround
 	Valued:
 		Cost: 1000
@@ -2430,7 +2452,7 @@ SULM3.ManHusk:
 		
 SULB3:
 	Inherits: ^Helicopter
-	Inherits@EXPERIENCE: ^GainsExperience
+	Inherits@GainsExperience: ^GainsExperience
 	Inherits@AUTOTARGET: ^AutoTargetAll
 	Valued:
 		Cost: 2000
@@ -2544,6 +2566,9 @@ SULTURNXL:
 	ConditionManager:
 	-Targetable@GROUND:
 	-Targetable@AIRBORNE:
+	WithPermanentExplosion:
+		Weapon: TornadoExplosion
+		Delay: 5
 	Selectable:
 	RevealsShroud:
 		Range: 5c0
@@ -2577,5 +2602,4 @@ SULTURNXL:
 		SoundFiles: tornado.aud
 		Delay: 10
 	-WithShadow:
-	-ExternalCondition@TORNADO:
-	-SelfHealing@TORNADO:
+	-ActorLostNotification:

@@ -34,23 +34,28 @@ namespace OpenRA.Mods.MW.Traits
 			ResourcesTickBefore = playerResources.Resources;
 		}
 
-		void ITick.Tick(Actor self)
+        public void  GiveCash(Actor self, int CashGrant)
+        {
+            var temp = (int)Math.Ceiling((CashGrant * info.Percentage) / 100.0);
+            playerResources.GiveResources(temp);
+
+            if (info.ShowTicks && temp > 0)
+            {
+                if (self.Owner.IsAlliedWith(self.World.RenderPlayer))
+                    self.World.AddFrameEndTask(w => w.Add(new FloatingText(self.CenterPosition, self.Owner.Color.RGB, FloatingText.FormatCashTick(temp), 30)));
+            }
+
+        }
+
+        void ITick.Tick(Actor self)
 		{
 			Resources = playerResources.Resources;
 			var CashGrant = Resources-ResourcesTickBefore;
 			
 			if (CashGrant>0)
 			{
-				var temp = (int) Math.Ceiling((CashGrant * info.Percentage) / 100.0);
-				playerResources.GiveResources(temp);
-				
-				if (info.ShowTicks && temp > 0)
-				{
-					if (self.Owner.IsAlliedWith(self.World.RenderPlayer))
-						self.World.AddFrameEndTask(w => w.Add(new FloatingText(self.CenterPosition, self.Owner.Color.RGB, FloatingText.FormatCashTick(temp), 30)));
-				}
-				
-			}
+                GiveCash(self, CashGrant);
+            }
 			
 			ResourcesTickBefore = playerResources.Resources;
 		}
