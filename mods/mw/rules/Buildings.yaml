@@ -8,15 +8,27 @@ FACTNEW:
 	WithMakeAnimation:
 	GrantConditionOnPrerequisite@4:
 		Prerequisites: vehicleproduction
-		Condition: visibility
+		Condition: visibilityEnabler1
 	GrantConditionOnPrerequisite@1:
 		Prerequisites: barracks
-		Condition: visibility
+		Condition: visibilityEnabler2
 	GrantConditionOnPrerequisite@2:
 		Prerequisites: Level3
-		Condition: visibility
+		Condition: visibilityEnabler3
 	GrantConditionOnPrerequisite@3:
 		Prerequisites: Level4
+		Condition: visibilityEnabler4
+	GrantPermanentCondition@1:
+		RequiresCondition: visibilityEnabler1
+		Condition: visibility
+	GrantPermanentCondition@2:
+		RequiresCondition: visibilityEnabler2
+		Condition: visibility
+	GrantPermanentCondition@3:
+		RequiresCondition: visibilityEnabler3
+		Condition: visibility
+	GrantPermanentCondition@4:
+		RequiresCondition: visibilityEnabler4
 		Condition: visibility
 	WithSpriteBody:	 
 	WithIdleOverlay@Lv0:
@@ -1184,6 +1196,11 @@ XLTNT2:
 		Image: xltnt2
 		
 XLTNT3:
+	Inherits: XLTNT1
+	RenderSprites:
+		Image: xltnt3
+        		
+XLTNTUNI:
 	Inherits: XLTNT1
 	RenderSprites:
 		Image: xltnt3

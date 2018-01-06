@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using OpenRA.Graphics;
 using OpenRA.Mods.Common;
@@ -129,6 +131,10 @@ namespace OpenRA.Mods.MW.Traits
             }
 
         }
-        
+
+        public IEnumerable<Rectangle> ModifyScreenBounds(Actor self, WorldRenderer wr, IEnumerable<Rectangle> r)
+        {
+            throw new NotImplementedException();
+        }
     } 
 }

@@ -8,39 +8,49 @@ using OpenRA.Traits;
 
 namespace OpenRA.Mods.MW.Traits
 {
-	[Desc("Reloads an AmmoPool trait externally based on the upgrade criteria.")]
-	public class TransformOnConditionInfo : ConditionalTraitInfo
-	{
-		[FieldLoader.Require]
-		public readonly string ReadyAudio = "ConstructionComplete";
-		[Desc("The Actors name you want to transform to.")]
-		public readonly string IntoActor = null;
-		public readonly bool SkipMakeAnims = true;
-		public readonly CVec Offset = CVec.Zero;
-		public readonly int Facing = -1;
-		public readonly bool ForceHealthPercentage = true;
+    [Desc("Reloads an AmmoPool trait externally based on the upgrade criteria.")]
+    public class TransformOnConditionInfo : ConditionalTraitInfo
+    {
+        [FieldLoader.Require]
+        public readonly string ReadyAudio = "ConstructionComplete";
+        [Desc("The Actors name you want to transform to.")]
+        public readonly string IntoActor = null;
+        public readonly bool SkipMakeAnims = true;
+        public readonly CVec Offset = CVec.Zero;
+        public readonly int Facing = -1;
+        public string[] Sounds = { };
+        public readonly bool ForceHealthPercentage = true;
+
+        public override object Create(ActorInitializer init) { return new TransformOnCondition(init, this); }
+    }
+
+    public class TransformOnCondition : ConditionalTrait<TransformOnConditionInfo>, ITick, INotifyRemovedFromWorld
+    {
+        readonly TransformOnConditionInfo info;
+        readonly string faction;
+        bool enabled = false;
+        bool selected;
+        int? controlgroup;
+        Health health;
+        Cargo cargo;
+        int facong;
+        TypeDictionary init;
 
 
-		public override object Create(ActorInitializer init) { return new TransformOnCondition(init, this); }
-	}
 
-	public class TransformOnCondition : ConditionalTrait<TransformOnConditionInfo>, ITick
-	{
-		readonly TransformOnConditionInfo info;
-		readonly string faction;
-
-		
-		
-		public TransformOnCondition(ActorInitializer init, TransformOnConditionInfo info)
-			: base(info)
-		{
-			this.info = info;
-			faction = init.Contains<FactionInit>() ? init.Get<FactionInit, string>() : init.Self.Owner.Faction.InternalName;
-		}
-
-        void DoTransformation(Actor self)
+        public TransformOnCondition(ActorInitializer init, TransformOnConditionInfo info)
+            : base(info)
         {
-            self.World.AddFrameEndTask(w =>
+            this.info = info;
+            faction = init.Contains<FactionInit>() ? init.Get<FactionInit, string>() : init.Self.Owner.Faction.InternalName;
+        }
+
+        void ITick.Tick(Actor self)
+        {
+
+            var devMode = self.Owner.PlayerActor.TraitOrDefault<DeveloperMode>();
+
+            if (!IsTraitDisabled || (devMode != null && devMode.FastBuild))
             {
                 if (self.IsDead)
                     return;
@@ -48,23 +58,29 @@ namespace OpenRA.Mods.MW.Traits
                 foreach (var nt in self.TraitsImplementing<INotifyTransform>())
                     nt.OnTransform(self);
 
-                var selected = w.Selection.Contains(self);
-                var controlgroup = w.Selection.GetControlGroupForActor(self);
+                selected = self.World.Selection.Contains(self);
+                controlgroup = self.World.Selection.GetControlGroupForActor(self);
 
-                int facong;
-                var face = self.TraitOrDefault<IFacing>();
-                if (face != null && info.Facing < 0)
-                    facong = face.Facing;
+                health = self.TraitOrDefault<Health>();
+                cargo = self.TraitOrDefault<Cargo>();
+
+                enabled = true;
+
                 facong = info.Facing;
 
-
-                var init = new TypeDictionary
+                if (info.Facing == -1)
                 {
+                    var face = self.TraitOrDefault<IFacing>();
+                    if (face != null && info.Facing < 0)
+                        facong = face.Facing;
+                }
+                init = new TypeDictionary
+                    {
                     new LocationInit(self.Location + info.Offset),
-                    new CenterPositionInit(self.CenterPosition),
                     new OwnerInit(self.Owner),
                     new FacingInit(facong),
-                };
+                    };
+
 
                 if (info.SkipMakeAnims)
                     init.Add(new SkipMakeAnimsInit());
@@ -72,40 +88,40 @@ namespace OpenRA.Mods.MW.Traits
                 if (faction != null)
                     init.Add(new FactionInit(faction));
 
-                var health = self.TraitOrDefault<Health>();
-                if (health != null && info.ForceHealthPercentage)
+                if (health != null)
                 {
                     var newHP = (health.HP * 100) / health.MaxHP;
                     init.Add(new HealthInit(newHP));
                 }
 
-                var cargo = self.TraitOrDefault<Cargo>();
                 if (cargo != null)
                     init.Add(new RuntimeCargoInit(cargo.Passengers.ToArray()));
 
-                var a = w.CreateActor(info.IntoActor, init);
-                foreach (var nt in self.TraitsImplementing<INotifyTransform>())
-                    nt.AfterTransform(a);
-
-                if (selected)
-                    w.Selection.Add(w, a);
-                if (controlgroup.HasValue)
-                    w.Selection.AddToControlGroup(a, controlgroup.Value);
 
                 Game.Sound.PlayNotification(self.World.Map.Rules, self.Owner, "Speech", info.ReadyAudio,
                     self.Owner.Faction.InternalName);
 
+
                 self.Dispose();
-            });
+
+
+            }
         }
 
+        public void RemovedFromWorld(Actor self)
+        {
+            if (enabled)
+                self.World.AddFrameEndTask(w =>
+                {
 
-		void ITick.Tick(Actor self)
-		{
-			if (IsTraitDisabled)
-				return;
+                    var a = w.CreateActor(info.IntoActor, init);
 
-            DoTransformation(self);
+                    if (selected)
+                        w.Selection.Add(w, a);
+                    if (controlgroup.HasValue)
+                        w.Selection.AddToControlGroup(a, controlgroup.Value);
+
+                });
         }
-	}
+    }
 }

@@ -190,6 +190,15 @@ SIEGE2:
 	Armament:
 		LocalOffset: 0,0,500
 		Weapon: siegeboulder
+	Armament@1:
+		LocalOffset: 0,0,500
+		Weapon: siegeboulder
+	Armament@2:
+		LocalOffset: 0,0,500
+		Weapon: siegeboulder
+	Armament@3:
+		LocalOffset: 0,0,500
+		Weapon: siegeboulder
 	AttackFrontal:
 	AutoTarget:
 		ScanRadius: 12

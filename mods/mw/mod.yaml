@@ -1,6 +1,6 @@
 Metadata:
 	Title: Medieval Warfare
-	Version: perftest010318
+	Version: release-20171014
 
 PackageFormats: Mix
 
@@ -50,7 +50,7 @@ Packages:
 
 MapFolders:
 	mw|maps: System
-	~^maps/mw/9d84f4a: User
+	~^maps/mw/release-20171014: User
 
 Rules:
 	mw|rules/AI.yaml

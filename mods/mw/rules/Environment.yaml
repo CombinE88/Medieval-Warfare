@@ -332,15 +332,6 @@ FIRETORCHNE:
 		Dimensions: 1,1
 		Footprint: _	
     
-        
-FIRETORCH:
-	Inherits: ^InteriorProp
-	RenderSprites:
-		Palette: mwcivilian
-	WithIdleOverlay:
-		Sequence: burnloop
-		Palette: effect
-        
 STOOL1:
 	Inherits: ^InteriorProp
 	RenderSprites:

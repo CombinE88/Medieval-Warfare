@@ -1,4 +1,4 @@
-SULNUKE.SCAFF:
+SULNUKE.scaff:
 	Inherits: ^2x2SITE
 	Inherits@Hitshape: ^2x2Shape
 	Armor:
@@ -65,7 +65,7 @@ SULNUKE.SCAFF:
 		Sequence: make6
 		RequiresCondition: Construct >= 10
 
-SULLODGE.SCAFF:
+SULLODGE.scaff:
 	Inherits: ^2x2SITE
 	Inherits@Hitshape: ^2x2Shape
 	Building:
@@ -134,7 +134,7 @@ SULLODGE.SCAFF:
         UsePlayerColor: true
         Range: 15c0
 		
-SULMILL.SCAFF:
+SULMILL.scaff:
 	Inherits: ^2x3SITE
 	Inherits@Hitshape: ^2x2Shape
 	Building:
@@ -207,7 +207,7 @@ SULMILL.SCAFF:
 		RequiresCondition: Construct >= 35
 
 
-SULNUK2.SCAFF:
+SULNUK2.scaff:
 	Inherits: ^3x2SITE
 	Inherits@Hitshape: ^3x2Shape
 	Armor:
@@ -274,7 +274,7 @@ SULNUK2.SCAFF:
 		Sequence: make6
 		RequiresCondition: Construct >= 35
 
-SULBARR.SCAFF:
+SULBARR.scaff:
 	Inherits: ^3x2SITE
 	Inherits@Hitshape: ^3x2Shape
 	Armor:
@@ -338,7 +338,7 @@ SULBARR.SCAFF:
 		Sequence: make5
 		RequiresCondition: Construct >= 30
 		
-SULMYSTIC.SCAFF:
+SULMYSTIC.scaff:
 	Inherits: ^3x3SITE
 	Inherits@Hitshape: ^3x2Shape
 	Armor:
@@ -409,7 +409,7 @@ SULMYSTIC.SCAFF:
 		Sequence: make6
 		RequiresCondition: Construct >= 50
 		
-SULCASTLE.SCAFF:
+SULCASTLE.scaff:
 	Inherits: ^3x3SITE
 	Inherits@Hitshape: ^3x3Shape
 	Building:
@@ -480,7 +480,7 @@ SULCASTLE.SCAFF:
 		Sequence: make6
 		RequiresCondition: Construct >= 55
 
-SULFIX.SCAFF:
+SULFIX.scaff:
 	Inherits: ^3x2SITE
 	Inherits@Hitshape: ^3x2Shape
 	Armor:
@@ -545,7 +545,7 @@ SULFIX.SCAFF:
 		Range: 4c0
 		Color: b50909
 		
-SULGTW.SCAFF:
+SULGTW.scaff:
 	Inherits: ^1x1SITE
 	Inherits@Hitshape: ^1x1Shape
 	Armor:
@@ -613,7 +613,7 @@ SULGTW.SCAFF:
 	WithRangeCircle:
 		Range: 7c0
 
-SULARRAY.SCAFF:
+SULARRAY.scaff:
 	Inherits: ^3x2SITE
 	Inherits@Hitshape: ^3x2Shape
 	Armor:
@@ -680,7 +680,7 @@ SULARRAY.SCAFF:
 		Sequence: make6
 		RequiresCondition: Construct >= 45
 		
-SULHALL.SCAFF:
+SULHALL.scaff:
 	Inherits: ^3x2SITE
 	Inherits@Hitshape: ^3x2Shape
 	Armor:
@@ -748,7 +748,7 @@ SULHALL.SCAFF:
 		Sequence: make6
 		RequiresCondition: Construct >= 75
         
-SULMINARET.SCAFF:
+SULMINARET.scaff:
 	Inherits: ^1x1SITE
 	Inherits@Hitshape: ^1x1Shape
 	Armor:
@@ -818,7 +818,7 @@ SULMINARET.SCAFF:
 		RequiresCondition: Construct >= 40
         
         
-SULCNSHMBR.SCAFF:
+SULCNSHMBR.scaff:
 	Inherits: ^3x2SITE
 	Inherits@Hitshape: ^3x2Shape
 	Armor:
@@ -886,7 +886,7 @@ SULCNSHMBR.SCAFF:
 		Sequence: make6
 		RequiresCondition: Construct >= 40
         
-SULREF.SCAFF:
+SULREF.scaff:
 	Inherits: ^3x3SITE
 	HitShape:
 		Type: Rectangle

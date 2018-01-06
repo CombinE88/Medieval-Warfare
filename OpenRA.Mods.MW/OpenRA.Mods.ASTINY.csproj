@@ -34,6 +34,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="FuzzyLogicLibrary">
+      <HintPath>..\engine\thirdparty\download\FuzzyLogicLibrary.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
@@ -63,6 +67,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Activities\FallDown.cs" />
+    <Compile Include="MWAI\AttackOrFleeFuzzy.cs" />
+    <Compile Include="MWAI\MWBaseBuilder.cs" />
+    <Compile Include="MWAI\MWSquad.cs" />
+    <Compile Include="MWAI\OlafAI.cs" />
+    <Compile Include="MWAI\StateMachine.cs" />
+    <Compile Include="MWAI\States\AirStates.cs" />
+    <Compile Include="MWAI\States\GroundStates.cs" />
+    <Compile Include="MWAI\States\NavyStates.cs" />
+    <Compile Include="MWAI\States\ProtectionStates.cs" />
+    <Compile Include="MWAI\States\StateBase.cs" />
+    <Compile Include="MWAI\SupportPowerDecision.cs" />
     <Compile Include="Projectiles\AthenaProjectile.cs" />
     <Compile Include="Projectiles\InstantExplode.cs" />
     <Compile Include="Traits\Activites\Instanttransforms.cs" />
@@ -72,6 +87,7 @@
     <Compile Include="Traits\Activites\PreyActiviy.cs" />
     <Compile Include="Traits\AmmoPoolConditions.cs" />
     <Compile Include="Traits\Activites\ActivityInterfaces.cs" />
+    <Compile Include="Traits\GrantPermanentCondition.cs" />
     <Compile Include="Traits\WithPermanentExplosion.cs" />
     <Compile Include="Traits\Construction\AddPrioTargeter.cs" />
     <Compile Include="Traits\Construction\ConstructionPriority.cs" />

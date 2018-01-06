@@ -3,19 +3,12 @@
 		Condition: RottenKadaver
 	ExternalCondition@DDler:
 		Condition: DDler
-	SelfHealing@Rotaway:
-		PercentageStep: -2
-		Step: -0
-		HealIfBelow: 110
-		Delay: 10
-		RequiresCondition: RottenKadaver
-		DamageTypes: PoisonDeath
 	SelfHealing@DDler:
 		PercentageStep: -2
 		Step: -0
 		HealIfBelow: 110
 		Delay: 10
-		RequiresCondition: DDler
+		RequiresCondition: DDler || RottenKadaver
 		DamageTypes: PoisonDeath
 	WithDecoration@DDlerPoison:
 		Image: debuffs
@@ -265,14 +258,6 @@
 		SpeedMultiplier: 77
 		GivesExpMultiplier: 10
 		GrantCondition: grimactive
-	WithDecoration@Reanimated:
-		Image: debuffs
-		Sequence: reanimated
-		Palette: ra
-		ReferencePoint: Top, Left
-		RequiresCondition: grimactive
-		ZOffset: 256
-		ValidStances: Ally, Enemy, Neutral
 
 ^ExistsInWorld:
 	AppearsOnRadar:

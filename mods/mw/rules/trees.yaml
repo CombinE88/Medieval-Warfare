@@ -515,7 +515,7 @@ T01:
 		Actor: ChoppedtreeN4
 		OwnerType: Killer
 		SkipMakeAnimations: False
-        HuntTypes: TreeToChop
+		HuntTypes: TreeToChop
 	Targetable@Choppable:
 		TargetTypes: ChoppableTree
 
@@ -527,10 +527,10 @@ T02:
 		Actor: ChoppedtreeN4
 		OwnerType: Killer
 		SkipMakeAnimations: False
-        HuntTypes: TreeToChop
+		HuntTypes: TreeToChop
 	Targetable@Choppable:
 		TargetTypes: ChoppableTree
-        
+		
 
 
 T03:
@@ -541,7 +541,7 @@ T03:
 		Actor: ChoppedtreeN4
 		OwnerType: Killer
 		SkipMakeAnimations: False
-        HuntTypes: TreeToChop
+		HuntTypes: TreeToChop
 	Targetable@Choppable:
 		TargetTypes: ChoppableTree
 
@@ -560,7 +560,7 @@ T05:
 		Actor: ChoppedtreeN4
 		OwnerType: Killer
 		SkipMakeAnimations: False
-        HuntTypes: TreeToChop
+		HuntTypes: TreeToChop
 	Targetable@Choppable:
 		TargetTypes: ChoppableTree
 
@@ -572,15 +572,15 @@ T06:
 		Actor: ChoppedtreeN4
 		OwnerType: Killer
 		SkipMakeAnimations: False
-        HuntTypes: TreeToChop
+		HuntTypes: TreeToChop
 	Targetable@Choppable:
 		TargetTypes: ChoppableTree
-        
+		
 T06A:
 	Inherits: ^Tree
 	EditorTilesetFilter:
 		ExcludeTilesets: DESERT
-        
+		
 T06B:
 	Inherits: ^Tree
 	EditorTilesetFilter:
@@ -597,7 +597,7 @@ T08:
 		Actor: ChoppedtreeN1
 		OwnerType: Killer
 		SkipMakeAnimations: False
-        HuntTypes: TreeToChop
+		HuntTypes: TreeToChop
 	Targetable@Choppable:
 		TargetTypes: ChoppableTree
 
@@ -616,10 +616,10 @@ T10:
 		Actor: ChoppedtreeN1
 		OwnerType: Killer
 		SkipMakeAnimations: False
-        HuntTypes: TreeToChop
+		HuntTypes: TreeToChop
 	Targetable@Choppable:
 		TargetTypes: ChoppableTree
-        
+		
 T11:
 	Inherits: ^Tree
 	EditorTilesetFilter:
@@ -628,7 +628,7 @@ T11:
 		Actor: ChoppedtreeN1
 		OwnerType: Killer
 		SkipMakeAnimations: False
-        HuntTypes: TreeToChop
+		HuntTypes: TreeToChop
 	Targetable@Choppable:
 		TargetTypes: ChoppableTree
 T12:
@@ -639,7 +639,7 @@ T12:
 		Actor: ChoppedtreeN1
 		OwnerType: Killer
 		SkipMakeAnimations: False
-        HuntTypes: TreeToChop
+		HuntTypes: TreeToChop
 	Targetable@Choppable:
 		TargetTypes: ChoppableTree
 
@@ -651,7 +651,7 @@ T13:
 		Actor: ChoppedtreeN1
 		OwnerType: Killer
 		SkipMakeAnimations: False
-        HuntTypes: TreeToChop
+		HuntTypes: TreeToChop
 	Targetable@Choppable:
 		TargetTypes: ChoppableTree
 
@@ -664,7 +664,7 @@ T14:
 		Actor: ChoppedtreeN1
 		OwnerType: Killer
 		SkipMakeAnimations: False
-        HuntTypes: TreeToChop
+		HuntTypes: TreeToChop
 	Targetable@Choppable:
 		TargetTypes: ChoppableTree
 
@@ -676,7 +676,7 @@ T15:
 		Actor: ChoppedtreeN1
 		OwnerType: Killer
 		SkipMakeAnimations: False
-        HuntTypes: TreeToChop
+		HuntTypes: TreeToChop
 	Targetable@Choppable:
 		TargetTypes: ChoppableTree
 
@@ -689,7 +689,7 @@ T16:
 		Actor: ChoppedtreeN2
 		OwnerType: Killer
 		SkipMakeAnimations: False
-        HuntTypes: TreeToChop
+		HuntTypes: TreeToChop
 	Targetable@Choppable:
 		TargetTypes: ChoppableTree
 
@@ -701,7 +701,7 @@ T17:
 		Actor: ChoppedtreeN2
 		OwnerType: Killer
 		SkipMakeAnimations: False
-        HuntTypes: TreeToChop
+		HuntTypes: TreeToChop
 	Targetable@Choppable:
 		TargetTypes: ChoppableTree
 
@@ -713,7 +713,7 @@ T17A:
 		Actor: ChoppedtreeN2
 		OwnerType: Killer
 		SkipMakeAnimations: False
-        HuntTypes: TreeToChop
+		HuntTypes: TreeToChop
 	Targetable@Choppable:
 		TargetTypes: ChoppableTree
 T18:
@@ -724,7 +724,7 @@ T18:
 		Actor: ChoppedtreeN2
 		OwnerType: Killer
 		SkipMakeAnimations: False
-        HuntTypes: TreeToChop
+		HuntTypes: TreeToChop
 	Targetable@Choppable:
 		TargetTypes: ChoppableTree
 T18A:
@@ -735,7 +735,7 @@ T18A:
 		Actor: ChoppedtreeN4
 		OwnerType: Killer
 		SkipMakeAnimations: False
-        HuntTypes: TreeToChop
+		HuntTypes: TreeToChop
 	Targetable@Choppable:
 		TargetTypes: ChoppableTree
 T18B:
@@ -750,7 +750,7 @@ T18C:
 		Actor: ChoppedtreeN3A
 		OwnerType: Killer
 		SkipMakeAnimations: False
-        HuntTypes: TreeToChop
+		HuntTypes: TreeToChop
 	Targetable@Choppable:
 		TargetTypes: ChoppableTree
 
@@ -767,7 +767,7 @@ TC01:
 		Actor: ChoppedtreeN3
 		OwnerType: Killer
 		SkipMakeAnimations: False
-        HuntTypes: TreeToChop
+		HuntTypes: TreeToChop
 	Targetable@Choppable:
 		TargetTypes: ChoppableTree
 
@@ -782,7 +782,7 @@ TC02:
 		Actor: ChoppedtreeN3
 		OwnerType: Killer
 		SkipMakeAnimations: False
-        HuntTypes: TreeToChop
+		HuntTypes: TreeToChop
 	Targetable@Choppable:
 		TargetTypes: ChoppableTree
 

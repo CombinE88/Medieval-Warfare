@@ -10,6 +10,7 @@
 #endregion
 
 
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using OpenRA.Mods.Common;
@@ -38,7 +39,7 @@ namespace OpenRA.Mods.MW.Traits
 		public object Create(ActorInitializer init) { return new DeerHunter(init, this); }
 	}
 
-	class DeerHunter : INotifyCreated, INotifyIdle
+	class DeerHunter : INotifyCreated, INotifyIdle, INotifyKilled
 	{
 		readonly IEnumerable<AttackBase> activeAttackBases;
 		private readonly DeerHunterInfo info;
@@ -261,6 +262,11 @@ namespace OpenRA.Mods.MW.Traits
 			}
 		}
 
-	}
+        public void Killed(Actor self, AttackInfo e)
+        {
+            if (DeerLoot != null && !DeerLoot.IsDead && DeerLoot.IsInWorld)
+                DeerLoot.Trait<LootableBody>().Hunter = null;
+        }
+    }
 
 }

@@ -334,11 +334,12 @@ DualSiegeBalista:
 	ReloadDelay: 85
 	Range: 11c0
 	MinRange: 2c896
-	 Burst: 2
+	Burst: 2
 	BurstDelay: 0
 	ValidTargets: Ground
 	InvalidTargets: Air
 	Report: Balista01.aud
+	TargetActorCenter: true
 	Projectile: Bullet
 		Speed: 400
 		Blockable: false

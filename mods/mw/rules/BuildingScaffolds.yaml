@@ -1,4 +1,4 @@
-NUKENEW.SCAFF:
+NUKENEW.scaff:
 	Inherits: ^2x2SITE
 	Inherits@Hitshape: ^2x2Shape
 	Armor:
@@ -65,7 +65,7 @@ NUKENEW.SCAFF:
 		Sequence: make6
 		RequiresCondition: Construct >= 8
 		
-LODGE.SCAFF:
+LODGE.scaff:
 	Inherits: ^2x2SITE
 	Inherits@Hitshape: ^2x1Shape
 	Building:
@@ -134,7 +134,7 @@ LODGE.SCAFF:
 		UsePlayerColor: true
 		Range: 15c0
 		
-LJACKB.SCAFF:
+LJACKB.scaff:
 	Inherits: ^1x1SITE
 	Inherits@Hitshape: ^1x1Shape
 	Building:
@@ -198,7 +198,7 @@ LJACKB.SCAFF:
 		UsePlayerColor: true
 		Range: 17c0
         
-NUKXL.SCAFF:
+NUKXL.scaff:
 	Inherits: ^3x2SITE
 	Inherits@Hitshape: ^3x2Shape
 	Armor:
@@ -266,7 +266,7 @@ NUKXL.SCAFF:
 		Sequence: make6
 		RequiresCondition: Construct >= 30
 
-HANDNEW.SCAFF:
+HANDNEW.scaff:
 	Inherits: ^2x3SITE
 	Inherits@Hitshape: ^2x2Shape
 	Building:
@@ -336,7 +336,7 @@ HANDNEW.SCAFF:
 
 
 		
-ZEROPROC.SCAFF:
+ZEROPROC.scaff:
 	Inherits: ^2x3SITE
 	Inherits@Hitshape: ^2x2Shape
 	Building:
@@ -411,8 +411,8 @@ ZEROPROC.SCAFF:
 		DockOffset: 1,1
 		TickRate: 1
 		
-NODPROC.SCAFF:
-	Inherits: ZEROPROC.SCAFF
+NODPROC.scaff:
+	Inherits: ZEROPROC.scaff
 	DebugTransformOnCondition@Finsihed:
 		RequiresCondition: (52 - Construct) <= 0
 		IntoActor: NODPROC
@@ -445,7 +445,7 @@ NODPROC.SCAFF:
 	SelectionDecorations:
 		VisualBounds: 48,70,0,-10
 
-HQNEWNOD.SCAFF:
+HQNEWNOD.scaff:
 	Inherits: ^2x2SITE
 	Inherits@Hitshape: ^2x2Shape
 	Armor:
@@ -515,7 +515,7 @@ HQNEWNOD.SCAFF:
 		Sequence: make7
 		RequiresCondition: Construct >= 64
         
-HQNEWGDI.SCAFF:
+HQNEWGDI.scaff:
 	Inherits: ^2x2SITE
 	Inherits@Hitshape: ^2x2Shape
 	Armor:
@@ -585,7 +585,7 @@ HQNEWGDI.SCAFF:
 		Sequence: make7
 		RequiresCondition: Construct >= 64
 
-ARMORYNOD.SCAFF:
+ARMORYNOD.scaff:
 	Inherits: ^2x2SITE
 	Inherits@Hitshape: ^2x2Shape
 	Armor:
@@ -649,7 +649,7 @@ ARMORYNOD.SCAFF:
 		Sequence: make5
 		RequiresCondition: Construct >= 80
 
-ARMORYGDI.SCAFF:
+ARMORYGDI.scaff:
 	Inherits: ^2x2SITE
 	Inherits@Hitshape: ^2x2Shape
 	Armor:
@@ -713,7 +713,7 @@ ARMORYGDI.SCAFF:
 		Sequence: make5
 		RequiresCondition: Construct >= 80
 
-NUK2NEW.SCAFF:
+NUK2NEW.scaff:
 	Inherits: ^2x2SITE
 	Inherits@Hitshape: ^2x2Shape
 	Armor:
@@ -775,7 +775,7 @@ NUK2NEW.SCAFF:
 		RequiresCondition: Construct >= 20
 
 
-XLTNTUNI.SCAFF:
+XLTNTUNI.scaff:
 	Inherits: ^ConstructionSite
 	Inherits@Hitshape: ^2x2Shape
 	-ConstructionProgress@DeliveredResources:
@@ -891,7 +891,7 @@ XLTNTUNI.SCAFF:
 		RequiresCondition: Construct >= 35 && validc
 
 		
-PROCNEW.SCAFF:
+PROCNEW.scaff:
 	Inherits: ^3x3SITE
 	HitShape:
 		Type: Rectangle
@@ -969,7 +969,7 @@ PROCNEW.SCAFF:
 		Sequence: make6
 		RequiresCondition: Construct >= 55
 		
-SILONEW.SCAFF:
+SILONEW.scaff:
 	Inherits: ^2x2SITE
 	Inherits@Hitshape: ^2x2Shape
 	Building:
@@ -1035,7 +1035,7 @@ SILONEW.SCAFF:
 		RequiresCondition: Construct >= 9
         
         		
-SILOTWO.SCAFF:
+SILOTWO.scaff:
 	Inherits: ^2x2SITE
 	Inherits@Hitshape: ^2x2Shape
 	Building:
@@ -1106,7 +1106,7 @@ SILOTWO.SCAFF:
 		Sequence: make6
 		RequiresCondition: Construct >= 14
 		
-BARRNEW.SCAFF:
+BARRNEW.scaff:
 	Inherits: ^2x2SITE
 	Inherits@Hitshape: ^2x2Shape
 	Armor:
@@ -1170,7 +1170,7 @@ BARRNEW.SCAFF:
 		Sequence: make5
 		RequiresCondition: Construct >= 18
 		
-STALL.SCAFF:
+STALL.scaff:
 	Inherits: ^3x2SITE
 	Inherits@Hitshape: ^3x2Shape
 	Armor:
@@ -1237,7 +1237,7 @@ STALL.SCAFF:
 		Sequence: make6
 		RequiresCondition: Construct >= 70
 		
-NODSTALL.SCAFF:
+NODSTALL.scaff:
 	Inherits: ^4x2SITE
 	Inherits@Hitshape: ^4x2Shape
 	Armor:
@@ -1304,7 +1304,7 @@ NODSTALL.SCAFF:
 		Sequence: make6
 		RequiresCondition: Construct >= 65
 		
-CASTLE.SCAFF:
+CASTLE.scaff:
 	Inherits: ^3x3SITE
 	Inherits@Hitshape: ^3x2Shape
 	Building:
@@ -1375,7 +1375,7 @@ CASTLE.SCAFF:
 		Sequence: make6
 		RequiresCondition: Construct >= 90
 		
-CASTLE2.SCAFF:
+CASTLE2.scaff:
 	Inherits: ^3x3SITE
 	Inherits@Hitshape: ^3x2Shape
 	Building:
@@ -1446,7 +1446,7 @@ CASTLE2.SCAFF:
 		Sequence: make6
 		RequiresCondition: Construct >= 65
 		
-WORKSHOPNOD.SCAFF:
+WORKSHOPNOD.scaff:
 	Inherits: ^3x2SITE
 	Inherits@Hitshape: ^3x2Shape
 	Armor:
@@ -1511,7 +1511,7 @@ WORKSHOPNOD.SCAFF:
 		Range: 4c0
 		Color: b50909
 		
-WORKSHOPGDI.SCAFF:
+WORKSHOPGDI.scaff:
 	Inherits: ^3x2SITE
 	Inherits@Hitshape: ^3x2Shape
 	Armor:
@@ -1576,7 +1576,7 @@ WORKSHOPGDI.SCAFF:
 		Range: 4c0
 		Color: b50909
 		
-GTWNEW.SCAFF:
+GTWNEW.scaff:
 	Inherits: ^1x1SITE
 	Inherits@Hitshape: ^1x1Shape
 	Armor:
@@ -1646,7 +1646,7 @@ GTWNEW.SCAFF:
 	WithRangeCircle:
 		Range: 7c0
 		
-GUNNEW.SCAFF:
+GUNNEW.scaff:
 	Inherits: ^1x1SITE
 	Inherits@Hitshape: ^1x1Shape
 	Armor:
@@ -1717,7 +1717,7 @@ GUNNEW.SCAFF:
 	WithRangeCircle:
 		Range: 8c0
 		
-TRIBU.SCAFF:
+TRIBU.scaff:
 	Inherits: ^1x1SITE
 	Inherits@Hitshape: ^1x1Shape
 	Armor:
@@ -1791,7 +1791,7 @@ TRIBU.SCAFF:
 	WithRangeCircle:
 		Range: 12c0
 		
-BATO.SCAFF:
+BATO.scaff:
 	Inherits: ^1x1SITE
 	Inherits@Hitshape: ^1x1Shape
 	Armor:
@@ -1866,7 +1866,7 @@ BATO.SCAFF:
 		Range: 10c0
 		Color: FFFF0080
 		
-SAMNEW.SCAFF:
+SAMNEW.scaff:
 	Inherits: ^2x2SITE
 	Inherits@Hitshape: ^2x1Shape
 	Building:
@@ -1937,7 +1937,7 @@ SAMNEW.SCAFF:
 	WithRangeCircle@Air:
 		Range: 8c0
 		
-TAVERN.SCAFF:
+TAVERN.scaff:
 	Inherits: ^3x2SITE
 	Inherits@Hitshape: ^3x2Shape
 	Armor:
@@ -2004,7 +2004,7 @@ TAVERN.SCAFF:
 		Sequence: make6
 		RequiresCondition: Construct >= 45
 		
-TOWNHALL.SCAFF:
+TOWNHALL.scaff:
 	Inherits: ^3x2SITE
 	Inherits@Hitshape: ^3x2Shape
 	Armor:
@@ -2072,7 +2072,7 @@ TOWNHALL.SCAFF:
 		Sequence: make6
 		RequiresCondition: Construct >= 75
         
-SCHAFOTT.SCAFF:
+SCHAFOTT.scaff:
 	Inherits: ^2x2SITE
 	Inherits@Hitshape: ^2x2Shape
 	Armor:
@@ -2140,7 +2140,7 @@ SCHAFOTT.SCAFF:
 		Sequence: make6
 		RequiresCondition: Construct >= 40
         
-HERBALIST.SCAFF:
+HERBALIST.scaff:
 	Inherits: ^2x2SITE
 	Inherits@Hitshape: ^2x2Shape
 	Armor:

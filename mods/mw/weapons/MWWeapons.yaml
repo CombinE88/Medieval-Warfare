@@ -2228,8 +2228,6 @@ SiegeBalista:
 SiegeBoulder:
 	ReloadDelay: 100
 	Range: 12c0
-	Burst: 4
-	BurstDelay: 0
 	MinRange: 3c0
 	Report: siege01.aud
 	ValidTargets: Ground

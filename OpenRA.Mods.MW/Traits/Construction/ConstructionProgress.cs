@@ -9,6 +9,7 @@
  */
 #endregion
 
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
@@ -164,5 +165,9 @@ namespace OpenRA.Mods.MW.Traits.Render
 			return Rend;
 		}
 
-	}
+        public IEnumerable<Rectangle> ScreenBounds(Actor self, WorldRenderer wr)
+        {
+            throw new NotImplementedException();
+        }
+    }
 }
