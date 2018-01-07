@@ -126,6 +126,8 @@ namespace OpenRA.Mods.MW.MWAI
                     type = BuildingType.Hunter;
                 else if (ai.Info.BuildingCommonNames.LumberShacks.Contains(world.Map.Rules.Actors[currentBuilding.Item].Name.ToLower()))
                     type = BuildingType.Lumber;
+                else if (ai.Player.Faction.InternalName == "ded")
+                    type = BuildingType.Undead;
 
                 var location = ai.ChooseBuildLocation(currentBuilding.Item, true, type);
                 if (location == null)
@@ -187,105 +189,144 @@ namespace OpenRA.Mods.MW.MWAI
 
         ActorInfo ChooseBuildingToBuild(ProductionQueue queue)
         {
-            var buildableThings = queue.BuildableItems();
-
-            var scaffolds = ai.CountScaffolds();
-
-            if(scaffolds >= 2) // lets not builder faster as we can
-                return null;
-
-            var houses = GetProducibleBuilding(ai.Info.BuildingCommonNames.Houses, buildableThings,
-                a => a.TraitInfos<ValuedInfo>().Sum(p => p.Cost));
-
-            // This gets used quite a bit, so let's cache it here
-            var population = ai.CountPossiblePopulation() + ai.CountPotentialFreeBeds();
-
-
-
-            // First priority is to get out of a low power situation
-            if (population < ai.Info.Population)
+            if (ai.Player.Faction.InternalName != "ded")
             {
-                if (houses != null)
+                var buildableThings = queue.BuildableItems();
+
+                var scaffolds = ai.CountScaffolds();
+
+                if (scaffolds >= 2) // lets not builder faster as we can
+                    return null;
+
+                var houses = GetProducibleBuilding(ai.Info.BuildingCommonNames.Houses, buildableThings,
+                    a => a.TraitInfos<ValuedInfo>().Sum(p => p.Cost));
+
+                // This gets used quite a bit, so let's cache it here
+                var population = ai.CountPossiblePopulation() + ai.CountPotentialFreeBeds();
+
+
+
+                // First priority is to get out of a low power situation
+                if (population < ai.Info.Population)
                 {
-                    OlafAI.BotDebug("AI: {0} decided to build {1}: Priority override (low population) Population: " + population, queue.Actor.Owner, houses.Name);
-                    return houses;
+                    if (houses != null)
+                    {
+                        OlafAI.BotDebug("AI: {0} decided to build {1}: Priority override (low population) Population: " + population, queue.Actor.Owner, houses.Name);
+                        return houses;
+                    }
+                }
+
+                // Next is to build up a strong economy
+                if (!ai.HasAdequateFarm() || !ai.HasMinimumFarm())
+                {
+                    var farm = GetProducibleBuilding(ai.Info.BuildingCommonNames.Farms, buildableThings);
+                    if (farm != null && population > ai.Info.MinimumPeasants)
+                    {
+                        OlafAI.BotDebug("AI: {0} decided to build {1}: Priority override (refinery)", queue.Actor.Owner, farm.Name);
+                        return farm;
+                    }
+
+                    if ((houses != null && farm != null) && population < ai.Info.Population)
+                    {
+                        OlafAI.BotDebug("AI: {0} decided to build {1}: Priority override (low population) Population: " + population, queue.Actor.Owner, houses.Name);
+                        return houses;
+                    }
+                }
+
+                // Make sure that we can spend as fast as we are earning
+                if (ai.HasMinimumFarm())
+                {
+                    var production = GetProducibleBuilding(ai.Info.BuildingCommonNames.Barracks, buildableThings);
+                    if (production != null && population > ai.Info.Population)
+                    {
+                        OlafAI.BotDebug("AI: {0} decided to build {1}: Priority override (production)", queue.Actor.Owner, production.Name);
+                        return production;
+                    }
+
+                    if ((houses != null && production != null) && population < ai.Info.Population)
+                    {
+                        OlafAI.BotDebug("AI: {0} decided to build {1}: Priority override (low population) Population: " + population, queue.Actor.Owner, houses.Name);
+                        return houses;
+                    }
+                }
+
+                // Build everything else
+
+
+
+
+                foreach (var frac in ai.Info.BuildingFractions.Shuffle(ai.Random))
+                {
+
+                    var name = frac.Key;
+
+                    if (!ai.HasMinimumFarm() && ai.Info.BuildingCommonNames.Defenses.Contains(name))
+                        continue;
+
+                    if (population < ai.Info.MinimumPeasants && !(ai.Info.BuildingCommonNames.Hunter.Contains(name) || ai.Info.BuildingCommonNames.LumberShacks.Contains(name)))
+                        continue;
+
+                    // Can we build this structure?
+                    if (!buildableThings.Any(b => b.Name == name))
+                        continue;
+
+                    // Do we want to build this structure?
+                    var count = playerBuildings.Count(a => a.Info.Name == name) + playerBuildings.Count(a => a.Info.Name == name.Replace(".scaff", string.Empty).ToLower());
+                    if (count > frac.Value * playerBuildings.Length)
+                        continue;
+
+                    if (ai.Info.BuildingLimits.ContainsKey(name) && ai.Info.BuildingLimits[name] <= count)
+                        continue;
+
+
+                    // If we're considering to build a naval structure, check whether there is enough water inside the base perimeter
+                    // and any structure providing buildable area close enough to that water.
+                    // TODO: Extend this check to cover any naval structure, not just production.
+
+                    // Will this put us into low power?
+                    var actor = world.Map.Rules.Actors[name];
+
+                    // Lets build this
+                    OlafAI.BotDebug("{0} decided to build {1}: Desired is {2} ({3} / {4}); current is {5} / {4}",
+                        queue.Actor.Owner, name, frac.Value, frac.Value * playerBuildings.Length, playerBuildings.Length, count);
+                    return actor;
                 }
             }
-
-            // Next is to build up a strong economy
-            if (!ai.HasAdequateFarm() || !ai.HasMinimumFarm())
+            else
             {
-                var farm = GetProducibleBuilding(ai.Info.BuildingCommonNames.Farms, buildableThings);
-                if (farm != null && population > ai.Info.MinimumPeasants)
+                var pentagrams = ai.CountPenagrams();
+                var builder = ai.AcolyteBuilder.Count();
+
+                var buildableThings = queue.BuildableItems();
+
+                foreach (var frac in ai.Info.BuildingFractions.Shuffle(ai.Random))
                 {
-                    OlafAI.BotDebug("AI: {0} decided to build {1}: Priority override (refinery)", queue.Actor.Owner, farm.Name);
-                    return farm;
+
+                    var name = frac.Key;
+
+                    if (pentagrams * 5 > builder && !ai.Info.UndeadCommonNames.EarlyUpgrades.Contains(name))
+                        continue;
+
+                    // Can we build this structure?
+                    if (!buildableThings.Any(b => b.Name == name))
+                        continue;
+
+                    // Do we want to build this structure?
+                    var count = playerBuildings.Count(a => a.Info.Name == name) + playerBuildings.Count(a => a.Info.Name == name.Replace(".penta", string.Empty).ToLower());
+                    if (count > frac.Value * playerBuildings.Length)
+                        continue;
+
+                    if (ai.Info.BuildingLimits.ContainsKey(name) && ai.Info.BuildingLimits[name] <= count)
+                        continue;
+
+                    var actor = world.Map.Rules.Actors[name];
+
+                    // Lets build this
+                    OlafAI.BotDebug("{0} decided to build {1}: Desired is {2} ({3} / {4}); current is {5} / {4}",
+                        queue.Actor.Owner, name, frac.Value, frac.Value * playerBuildings.Length, playerBuildings.Length, count);
+                    return actor;
                 }
 
-                if ((houses != null && farm != null ) && population < ai.Info.Population)
-                {
-                    OlafAI.BotDebug("AI: {0} decided to build {1}: Priority override (low population) Population: " + population, queue.Actor.Owner, houses.Name);
-                    return houses;
-                }
-            } 
-
-            // Make sure that we can spend as fast as we are earning
-            if (ai.Info.NewProductionCashThreshold > 0 && playerResources.Resources > ai.Info.NewProductionCashThreshold)
-            {
-                var production = GetProducibleBuilding(ai.Info.BuildingCommonNames.Barracks, buildableThings);
-                if (production != null && !ai.HasAdequateBarracks() && ai.HasAdequateFarm())
-                {
-                    OlafAI.BotDebug("AI: {0} decided to build {1}: Priority override (production)", queue.Actor.Owner, production.Name);
-                    return production;
-                }
-
-                if ((houses != null && production != null) && population < ai.Info.Population)
-                {
-                    OlafAI.BotDebug("AI: {0} decided to build {1}: Priority override (low population) Population: " + population, queue.Actor.Owner, houses.Name);
-                    return houses;
-                }
-            }
-
-            // Build everything else
-
-
-
-
-            foreach (var frac in ai.Info.BuildingFractions.Shuffle(ai.Random))
-            {
-
-                var name = frac.Key;
-
-                if (!ai.HasMinimumFarm() && ai.Info.BuildingCommonNames.Defenses.Contains(name))
-                    continue;
-
-                if (population < ai.Info.MinimumPeasants && !(ai.Info.BuildingCommonNames.Hunter.Contains(name) || ai.Info.BuildingCommonNames.LumberShacks.Contains(name)))
-                    continue;
-
-                // Can we build this structure?
-                if (!buildableThings.Any(b => b.Name == name))
-                    continue;
-
-                // Do we want to build this structure?
-                var count = playerBuildings.Count(a => a.Info.Name == name ) + playerBuildings.Count(a => a.Info.Name == name.Replace(".scaff", string.Empty).ToLower());
-                if (count > frac.Value * playerBuildings.Length)
-                    continue; 
-
-                if (ai.Info.BuildingLimits.ContainsKey(name) && ai.Info.BuildingLimits[name] <= count)
-                    continue;
-
-
-                // If we're considering to build a naval structure, check whether there is enough water inside the base perimeter
-                // and any structure providing buildable area close enough to that water.
-                // TODO: Extend this check to cover any naval structure, not just production.
-
-                // Will this put us into low power?
-                var actor = world.Map.Rules.Actors[name];
-
-                // Lets build this
-                OlafAI.BotDebug("{0} decided to build {1}: Desired is {2} ({3} / {4}); current is {5} / {4}",
-                    queue.Actor.Owner, name, frac.Value, frac.Value * playerBuildings.Length, playerBuildings.Length, count);
-                return actor;
             }
 
             // Too spammy to keep enabled all the time, but very useful when debugging specific issues.

@@ -406,6 +406,7 @@ SPLIT8:
 		RequiresCondition: SpawnCorruption
 	ExternalCondition@Corruption:
 		Condition: SpawnCorruption
+		SourceCap: 1
 	CritterSpawner:
 		RequiresCondition: !SpawnCorruption
 		CheckReachability: true

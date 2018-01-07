@@ -716,10 +716,10 @@ SuperiorPikeCavalry:
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath, SpawnSoul
 		
 FromBelow:
-	ReloadDelay: 3
-	Range: 2c800
-	Burst: 3
-	BurstDelay: 0
+	ReloadDelay: 4
+	Range: 3c200
+	Burst: 4
+	BurstDelay: 1
 	MinRange: 0c0
 	ValidTargets: Ground
 	InvalidTargets: Wall

@@ -55,9 +55,6 @@ namespace OpenRA.Mods.MW.MWAI
                 case SquadType.Protection:
                     FuzzyStateMachine.ChangeState(this, new UnitsForProtectionIdleState(), true);
                     break;
-                case SquadType.Naval:
-                    FuzzyStateMachine.ChangeState(this, new NavyUnitsIdleState(), true);
-                    break;
             }
         }
 

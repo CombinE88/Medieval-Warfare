@@ -20,7 +20,7 @@ namespace OpenRA.Mods.MW.Activities
         readonly AcolytePreyInfo info;
         readonly WithSpriteBody wsb;
 
-        private Actor dockactor;
+        public Actor dockactor;
         private bool lockfacing;
         bool playanim;
         private bool endqueueonce;

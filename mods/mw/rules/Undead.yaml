@@ -807,7 +807,7 @@ ZIGGURAT3:
 	SupportPowerChargeBar:
 	
 
-OBELISK.PENTA:
+OBELISK.penta:
 	Inherits: ^Smallpenta
 	RenderSprites:
 		Image: obelisk
@@ -834,7 +834,7 @@ OBELISK.PENTA:
 		SummoningTime: 150
 		Cost: 1300
 		
-GARG.PENTA:
+GARG.penta:
 	Inherits: ^Smallpenta
 	RenderSprites:
 		Image: garg
@@ -863,7 +863,7 @@ GARG.PENTA:
 		
 	   
 		
-SPPOOL.PENTA:
+SPPOOL.penta:
 	Inherits: ^Mediumpenta
 	RenderSprites:
 		Image: sppool
@@ -891,7 +891,7 @@ SPPOOL.PENTA:
 		
 		# Summon Barracks
 		
-CRYPT.PENTA:
+CRYPT.penta:
 	Inherits: ^Mediumpenta
 	RenderSprites:
 		Image: crypt
@@ -922,7 +922,7 @@ CRYPT.PENTA:
 		SummoningTime: 150
 		Cost: 1500
 		
-MAUSO.PENTA:
+MAUSO.penta:
 	Inherits: ^Mediumpenta
 	RenderSprites:
 		Image: mauso
@@ -949,7 +949,7 @@ MAUSO.PENTA:
 		SummoningTime: 200
 		Cost: 2000
 		
-LIBRA.PENTA:
+LIBRA.penta:
 	Inherits: ^Mediumpenta
 	RenderSprites:
 		Image: libra
@@ -976,7 +976,7 @@ LIBRA.PENTA:
 		SummoningTime: 250
 		Cost: 1500
 		
-TOMB.PENTA:
+TOMB.penta:
 	Inherits: ^Largepenta
 	RenderSprites:
 		Image: tomb
@@ -1003,7 +1003,7 @@ TOMB.PENTA:
 		SummoningTime: 300
 		Cost: 2000
 		
-HELLGATE.PENTA:
+HELLGATE.penta:
 	Inherits: ^Largepenta
 	RenderSprites:
 		Image: hellgate
@@ -1299,6 +1299,7 @@ LIBRA:
 		ClockSequence: clock
 		CircleSequence: circles
 		OrderName: HandsBelowPowerInfoOrder
+	SupportPowerChargeBar:
 		
 TOMB:
 	Inherits: ^MWUndeadBuilding

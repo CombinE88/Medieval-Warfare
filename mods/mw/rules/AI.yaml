@@ -4,8 +4,8 @@ Player:
 		Name: Olaf the Barbar
 		MinimumExcessPower: 0
 		BuildingCommonNames:
-			ConstructionYard: factnew
-            
+			ConstructionYard: factnew, ziggurat1, ziggurat2, ziggurat3
+			
 			Farms: zeroproc.scaff, sulmill.scaff, nodproc.scaff
 			Refineries: sulref.scaff, procnew.scaff
 			Hunter: sullodge.scaff, lodge.scaff
@@ -18,18 +18,34 @@ Player:
 			Stable: stall.scaff,nodstall.scaff,sulmystic.scaff
 			SiegeWorkshops: workshopgdi.scaff, workshopnod.scaff, sulfix.scaff
 			
-			Production: barrnew,handnew,stall,nodstall,sulmystic,sulbarr,barrnew.scaff,handnew.scaff,stall.scaff,nodstall.scaff,sulmystic.scaff,sulbarr.scaff, workshopnod.scaff, workshopnod, sulfix.scaff, sulfix, workshopgdi.scaff, workshopgdi
+			Production: barrnew,handnew,stall,nodstall,sulmystic,sulbarr,barrnew.scaff,handnew.scaff,stall.scaff,nodstall.scaff,sulmystic.scaff,sulbarr.scaff, workshopnod.scaff, workshopnod, sulfix.scaff, sulfix, workshopgdi.scaff, workshopgdi, ziggurat1, ziggurat2, ziggurat3, crypt.penta, mauso.penta, tomb.penta
 			Defenses: gtwnew.scaff, gunnew.scaff, tribu.scaff, bato.scaff, sulgtw.scaff, sulgtw.ENABLER
 
 			ImportantBuildings: castle.scaff, castle2.scaff, sulcastle.scaff, hqnewnod.scaff, armorygdi.scaff, armorynod.scaff, sulcnshmbr.scaff, schafott.scaff, sulminaret.scaff, sulhall.scaff, townhall.scaff, herbalist.scaff, hqnewgdi.scaff
 		UnitsCommonNames:
-			Mcv: mcvnew
-			ExcludeFromSquads: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, mwwand7, mwwand8, mwwand8, mwcivcom, noble1, noble2, noble3, noble4, noble5, mwconst1, mwconst2, mwconst3, mwconst4, mwconst5, mwconst6, mwconst7, mwchick1, hunter, transporter, engeneer, sulturnxl, mwlumbererowned
-			ExcludeFromDefenders: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, mwwand7, mwwand8, mwwand8, mwcivcom, noble1, noble2, noble3, noble4, noble5, mwconst1, mwconst2, mwconst3, mwconst4, mwconst5, mwconst6, mwconst7, mwchick1, hunter, transporter, engeneer, sulturnxl, mwlumbererowned
-		BuildingQueues: MBuilding.Nod, MBuilding.GDI, MBuilding.SUL, MTech.Nod, MTech.GDI, MTech.SUL, MResources.Nod, MResources.GDI, MResources.SUL, MMilitary.Nod, MMilitary.GDI, MMilitary.SUL
-		UnitQueues: MVehicle.Nod, MVehicle.GDI, MVehicle.SUL, MInfantry.Nod, MInfantry.GDI, MInfantry.SUL, MSiege.Nod, MSiege.GDI, MSiege.SUL
+			Mcv: mcvnew, undeadcomm
+			ExcludeFromSquads: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, mwwand7, mwwand8, mwwand8, mwcivcom, noble1, noble2, noble3, noble4, noble5, mwconst1, mwconst2, mwconst3, mwconst4, mwconst5, mwconst6, mwconst7, mwchick1, hunter, transporter, engeneer, sulturnxl, mwlumbererowned, preycolyte, acolytec
+			ExcludeFromDefenders: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, mwwand7, mwwand8, mwwand8, mwcivcom, noble1, noble2, noble3, noble4, noble5, mwconst1, mwconst2, mwconst3, mwconst4, mwconst5, mwconst6, mwconst7, mwchick1, hunter, transporter, engeneer, sulturnxl, mwlumbererowned, preycolyte
+            
+		BuildingQueues: MBuilding.Nod, MBuilding.GDI, MBuilding.SUL, MTech.Nod, MTech.GDI, MTech.SUL, MResources.Nod, MResources.GDI, MResources.SUL, MMilitary.Nod, MMilitary.GDI, MMilitary.SUL, MBuilding.ded, MMilitary.ded, MTech.ded
+		UnitQueues: MVehicle.Nod, MVehicle.GDI, MVehicle.SUL, MInfantry.Nod, MInfantry.GDI, MInfantry.SUL, MSiege.Nod, MSiege.GDI, MSiege.SUL, MInfantry.ded, MSiege.ded, MVehicle.ded, MTech.ded, MBuilding.ded
+		UndeadCommonNames:
+			ZigguratLv1: ziggurat1
+			ZigguratLv2: ziggurat2
+			ZigguratLv3: ziggurat3
+			PrayableCrops: split3, split4, split4b
+			PrayableIron: split2, splitblue
+			PrayableDeerStands: split7, split8
+			Acolytes: preycolyte
+			Cultists: acolytec
+			Crypts: crypt.penta
+			Buildings:
+			Defenses: garg.penta, obelisk.penta
+			Upgrades: seal1, seal2, seal3, seal4, seal5, zigg2upgrade, zigg3upgrade
+			EarlyUpgrades: seal1, seal2, zigg2upgrade
 		FarmFields: Crops, Grains, Corn
-		OrePatches: Iron, Gold
+		OrePatches: Iron, Gold#
+		AcolyteWorkerRatio: 25
 		BuildingLimits:
 			zeroproc.scaff: 4
 			procnew.scaff: 3
@@ -91,7 +107,51 @@ Player:
 			sulminaret.scaff: 1
 			townhall.scaff: 1
 			sulhall.scaff: 1
+			#
+			# Undead Stuff
+			#
+			#
+#			obelisk.penta: 4
+#			garg.penta: 4
+			sppool.penta: 2
+			crypt.penta: 10
+			mauso.penta: 2
+			libra.penta: 1
+			tomb.penta: 2
+			seal1: 1
+			seal2: 1
+			seal3: 1
+			seal4: 1
+			seal5: 1
+			zigg2upgrade: 1
+			zigg3upgrade: 1
+			#
+			# Undead Stuff
+			#
+			#
 		BuildingFractions:
+			#
+			# Undead Stuff
+			#
+			#
+#			obelisk.penta: 10%
+#			garg.penta: 20%
+			sppool.penta: 100%
+			crypt.penta: 200%
+			mauso.penta: 50%
+			libra.penta: 50%
+			tomb.penta: 50%
+			seal1: 100%
+			seal2: 100%
+			seal3: 100%
+			seal4: 100%
+			seal5: 100%
+			zigg2upgrade: 600%
+			zigg3upgrade: 600%
+			#
+			# Undead Stuff
+			#
+			#
 			lodge.scaff: 200%
 			ljackb.scaff: 200%
 			sullodge.scaff: 200%
@@ -189,6 +249,27 @@ Player:
 			wrbln: 10%
 			newcomm: 50%
 			rmbonew: 50%
+			#
+			# Undead Stuff
+			#
+			#
+			preycolyte: 500%
+			undead1: 100%
+			undead5: 100%
+			undead3: 100%
+			undead4: 100%
+			undead6: 100%
+			undead7: 100%
+			deadross: 60%
+			grim: 50%
+			acolytec: 33%
+			vampflying: 10%
+			demonhorse: 100%
+			LichK: 70%
+			#
+			# Undead Stuff
+			#
+			#
 		UnitLimits:
 			engeneer: 4
 			eharvxl: 6
@@ -335,4 +416,49 @@ Player:
 				Attractiveness: -10
 				TargetMetric: Value
 				CheckRadius: 7c0
+		SupportPowerDecision@Graveyard:
+			OrderName: GraveyardPowerInfoOrder
+			MinimumAttractiveness: 3000
+			Consideration@1:
+				Against: Enemy
+				Types: Vehicle, Infantry
+				Attractiveness: 1
+				TargetMetric: Value
+				CheckRadius: 5c0
+			Consideration@2:
+				Against: Ally
+				Types: Air, Ground, Water
+				Attractiveness: -10
+				TargetMetric: Value
+				CheckRadius: 7c0
+		SupportPowerDecision@HandsFromBelow:
+			OrderName: HandsBelowPowerInfoOrder
+			MinimumAttractiveness: 2000
+			Consideration@1:
+				Against: Enemy
+				Types: Vehicle, Infantry
+				Attractiveness: 1
+				TargetMetric: Value
+				CheckRadius: 2c0
+			Consideration@2:
+				Against: Ally
+				Types: Ground, Water
+				Attractiveness: -10
+				TargetMetric: Value
+				CheckRadius: 2c0
+		SupportPowerDecision@AmbushCoffins:
+			OrderName: BelowCoffinPowerInfoOrder
+			MinimumAttractiveness: 500
+			Consideration@1:
+				Against: Enemy
+				Types: Structure
+				Attractiveness: 1
+				TargetMetric: Value
+				CheckRadius: 2c0
+			Consideration@2:
+				Against: Ally
+				Types: Ground, Water
+				Attractiveness: -10
+				TargetMetric: Value
+				CheckRadius: 2c0
 				

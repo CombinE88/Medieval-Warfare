@@ -1,13 +1,13 @@
 Metadata:
 	Title: Medieval Warfare
-	Version: release-20171014
+	Version: bottest01071801
 
 PackageFormats: Mix
 
 Packages:
 	~^Content/cnc
 	~^Content/cnc/movies
-    ~^Content/Mw/Music
+	~^Content/Mw/Music
 	.
 	$mw: mw
 	./mods/common: common
@@ -73,22 +73,22 @@ Rules:
 	mw|rules/world.yaml
 	mw|rules/Sultan.yaml
 	mw|rules/SultanScaffolds.yaml
-    mw|rules/Undead.yaml
+	mw|rules/Undead.yaml
 
 Sequences:
+	mw|Sequences/MWInfantry.yaml
+	mw|Sequences/MWCivilians.yaml
+	mw|Sequences/MWCavalry.yaml
+	mw|Sequences/MWSiegeweapons.yaml
+	mw|Sequences/MWBuildings.yaml
+	mw|Sequences/MWSultan.yaml
+	mw|Sequences/MWUndead.yaml
+	mw|Sequences/MWEnvironments.yaml
+	mw|Sequences/MWResources.yaml
 	mw|sequences/decorations.yaml
 	mw|sequences/misc.yaml
-	mw|Sequences/MWBuildings.yaml
-	mw|Sequences/MWCavalry.yaml
-	mw|Sequences/MWCivilians.yaml
-	mw|Sequences/MWEnvironments.yaml
-	mw|Sequences/MWInfantry.yaml
 	mw|Sequences/MWmisc.yaml
 	mw|Sequences/MWProps.yaml
-	mw|Sequences/MWResources.yaml
-	mw|Sequences/MWSiegeweapons.yaml
-	mw|Sequences/MWSultan.yaml
-    mw|Sequences/MWUndead.yaml
 
 TileSets:
 	mw|tilesets/desert.yaml
@@ -100,7 +100,7 @@ TileSets:
 Weapons:
 	mw|weapons/MWWeapons.yaml
 	mw|weapons/MWSultanW.yaml
-    mw|weapons/MWUndeadGuns.yaml
+	mw|weapons/MWUndeadGuns.yaml
 
 Cursors:
 	mw|cursors.yaml
@@ -178,24 +178,24 @@ ChromeMetrics:
 	mw|metrics.yaml
 
 Fonts:
-    tsrsmall:
-        Font: mw|AlfredDrake.ttf
-        Size:12
-    tsrregular:
-        Font: mw|AlfredDrake.ttf
-        Size:14
-    tsrmedium:
-        Font: mw|AlfredDrake.ttf
-        Size:18
-    Infestsmall:
-        Font: mw|infested.ttf
-        Size:12
-    Infestregular:
-        Font: mw|infested.ttf
-        Size:14
-    Infestmedium:
-        Font: mw|infested.ttf
-        Size:18
+	tsrsmall:
+		Font: mw|AlfredDrake.ttf
+		Size:12
+	tsrregular:
+		Font: mw|AlfredDrake.ttf
+		Size:14
+	tsrmedium:
+		Font: mw|AlfredDrake.ttf
+		Size:18
+	Infestsmall:
+		Font: mw|infested.ttf
+		Size:12
+	Infestregular:
+		Font: mw|infested.ttf
+		Size:14
+	Infestmedium:
+		Font: mw|infested.ttf
+		Size:18
 	Small:
 		Font: common|FreeSans.ttf
 		Size:12
@@ -241,7 +241,7 @@ SpriteSequenceFormat: TilesetSpecificSpriteSequence
 		DESERT: .des
 		JUNGLE: .jun
 		INTERIOR: .tem
-        
+		
 ModelSequenceFormat: PlaceholderModelSequence
 
 GameSpeeds:

@@ -74,7 +74,6 @@
     <Compile Include="MWAI\StateMachine.cs" />
     <Compile Include="MWAI\States\AirStates.cs" />
     <Compile Include="MWAI\States\GroundStates.cs" />
-    <Compile Include="MWAI\States\NavyStates.cs" />
     <Compile Include="MWAI\States\ProtectionStates.cs" />
     <Compile Include="MWAI\States\StateBase.cs" />
     <Compile Include="MWAI\SupportPowerDecision.cs" />

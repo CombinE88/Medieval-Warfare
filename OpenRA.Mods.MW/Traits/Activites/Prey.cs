@@ -27,7 +27,7 @@ namespace OpenRA.Mods.MW.Activities
 		
 		readonly HashSet<string> preyBuildings;
 		
-		Actor target;
+		public Actor target;
 
 		public Prey(Actor self, Actor who)
 		{
