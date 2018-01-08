@@ -1,0 +1,299 @@
+Metadata:
+	Title: Medieval Warfare
+	Version: bottest01071801
+
+PackageFormats: Mix
+
+Packages:
+	~^Content/cnc
+	~^Content/cnc/movies
+	~^Content/Mw/Music
+	.
+	$mw: mw
+	./mods/common: common
+	~speech.mix
+	~conquer.mix
+	~sounds.mix
+	~tempicnh.mix
+	~temperat.mix
+	~winter.mix
+	~desert.mix
+	~movies.mix
+	~scores.mix
+	~scores2.mix
+	~scores-covertops.mix
+	~transit.mix
+	mw|bits
+	mw|bits/cnc/snow.mix
+	mw|bits/cnc
+	mw|bits/cnc/desert
+	mw|bits/cnc/ss
+	mw|bits/Announcer
+	mw|bits/Misc
+	mw|bits/Music
+	mw|bits/Sounds
+	mw|bits/Voice
+	mw|bits/Scripts
+	mw|bits/Icons
+	mw|bits/Resources
+	mw|bits/Buildings
+	mw|bits/Sultan
+	mw|bits/Sultan/Sounds
+	mw|uibits
+	mw|bits/terrain
+	mw|bits/terrain/Desert
+	mw|bits/Undead
+	mw|bits/Undead/voice
+	mw|bits/Trees
+	mw|bits/Trees/Anim
+	mw|bits/interior
+
+MapFolders:
+	mw|maps: System
+	~^maps/mw/release-20171014: User
+
+Rules:
+	mw|rules/AI.yaml
+	mw|rules/Aircraft.yaml
+	mw|rules/Buildings.yaml
+	mw|rules/BuildingScaffolds.yaml
+	mw|rules/Cavalry.yaml
+	mw|rules/civilian.yaml
+	mw|rules/civilian-desert.yaml
+	mw|rules/defaults.yaml
+	mw|rules/Defenses.yaml
+	mw|rules/Environment.yaml
+	mw|rules/Infantry.yaml
+	mw|rules/misc.yaml
+	mw|rules/palettes.yaml
+	mw|rules/player.yaml
+	mw|rules/Props.yaml
+	mw|rules/Siegeweapons.yaml
+	mw|rules/trees.yaml
+	mw|rules/world.yaml
+	mw|rules/Sultan.yaml
+	mw|rules/SultanScaffolds.yaml
+	mw|rules/Undead.yaml
+
+Sequences:
+	mw|sequences/MWInfantry.yaml
+	mw|sequences/MWCivilians.yaml
+	mw|sequences/MWCavalry.yaml
+	mw|sequences/MWSiegeweapons.yaml
+	mw|sequences/MWBuildings.yaml
+	mw|sequences/MWSultan.yaml
+	mw|sequences/MWUndead.yaml
+	mw|sequences/MWEnvironments.yaml
+	mw|sequences/MWResources.yaml
+	mw|sequences/decorations.yaml
+	mw|sequences/misc.yaml
+	mw|sequences/MWmisc.yaml
+	mw|sequences/MWProps.yaml
+
+TileSets:
+	mw|tilesets/desert.yaml
+	mw|tilesets/winter.yaml
+	mw|tilesets/snow.yaml
+	mw|tilesets/temperat.yaml
+	mw|tilesets/interior.yaml
+
+Weapons:
+	mw|weapons/MWWeapons.yaml
+	mw|weapons/MWSultanW.yaml
+	mw|weapons/MWUndeadGuns.yaml
+
+Cursors:
+	mw|cursors.yaml
+
+Chrome:
+	mw|chrome.yaml
+
+Assemblies:
+	common|OpenRA.Mods.Common.dll
+	common|OpenRA.Mods.Cnc.dll
+	mw|OpenRA.Mods.MW.dll
+
+ChromeLayout:
+	mw|chrome/mainmenu.yaml
+	mw|chrome/multiplayer.yaml
+	mw|chrome/multiplayer-browser.yaml
+	mw|chrome/multiplayer-createserver.yaml
+	mw|chrome/multiplayer-directconnect.yaml
+	mw|chrome/multiplayer-globalchat.yaml
+	mw|chrome/lobby.yaml
+	mw|chrome/lobby-mappreview.yaml
+	mw|chrome/lobby-players.yaml
+	mw|chrome/lobby-options.yaml
+	mw|chrome/lobby-music.yaml
+	mw|chrome/lobby-kickdialogs.yaml
+	mw|chrome/lobby-globalchat.yaml
+	mw|chrome/connection.yaml
+	mw|chrome/color-picker.yaml
+	mw|chrome/mapchooser.yaml
+	mw|chrome/replaybrowser.yaml
+	mw|chrome/ingame.yaml
+	mw|chrome/ingame-chat.yaml
+	mw|chrome/ingame-menu.yaml
+	mw|chrome/ingame-debug.yaml
+	mw|chrome/ingame-info.yaml
+	mw|chrome/ingame-infobriefing.yaml
+	mw|chrome/ingame-infoscripterror.yaml
+	mw|chrome/ingame-infoobjectives.yaml
+	mw|chrome/ingame-infostats.yaml
+	mw|chrome/ingame-infochat.yaml
+	mw|chrome/ingame-observerstats.yaml
+	mw|chrome/music.yaml
+	mw|chrome/settings.yaml
+	mw|chrome/credits.yaml
+	mw|chrome/dialogs.yaml
+	mw|chrome/tooltips.yaml
+	mw|chrome/assetbrowser.yaml
+	mw|chrome/missionbrowser.yaml
+	mw|chrome/editor.yaml
+
+Voices:
+	mw|audio/MWVoices.yaml
+
+Notifications:
+	mw|audio/MWNotifications.yaml
+
+Music:
+	mw|audio/MWMusic.yaml
+
+Translations:
+	mw|languages/english.yaml
+
+LoadScreen: CncLoadScreen
+	Image: mw|uibits/chrome.png
+	Text: Loading
+
+ServerTraits:
+	LobbyCommands
+	PlayerPinger
+	MasterServerPinger
+	LobbySettingsNotification
+
+ChromeMetrics:
+	common|metrics.yaml
+	mw|metrics.yaml
+
+Fonts:
+	tsrsmall:
+		Font: mw|AlfredDrake.ttf
+		Size:12
+	tsrregular:
+		Font: mw|AlfredDrake.ttf
+		Size:14
+	tsrmedium:
+		Font: mw|AlfredDrake.ttf
+		Size:18
+	Infestsmall:
+		Font: mw|infested.ttf
+		Size:12
+	Infestregular:
+		Font: mw|infested.ttf
+		Size:14
+	Infestmedium:
+		Font: mw|infested.ttf
+		Size:18
+	Small:
+		Font: common|FreeSans.ttf
+		Size:12
+	Regular:
+		Font: mw|vinque.ttf
+		Size:14
+	Bold:
+		Font: mw|vinque.ttf
+		Size:14
+	Title:
+		Font: mw|vinque.ttf
+		Size:32
+	MediumBold:
+		Font: mw|vinque.ttf
+		Size:18
+	BigBold:
+		Font: mw|vinque.ttf
+		Size:24
+	Tiny:
+		Font: common|FreeSans.ttf
+		Size:10
+	TinyBold:
+		Font: common|FreeSansBold.ttf
+		Size:10
+
+Missions:
+
+MapGrid:
+	TileSize: 24,24
+	Type: Rectangular
+
+SupportsMapsFrom: mw, cnc
+
+SoundFormats: Aud, Wav
+
+SpriteFormats: ShpTD, TmpTD, ShpTS, TmpRA
+
+SpriteSequenceFormat: TilesetSpecificSpriteSequence
+	TilesetExtensions:
+		TEMPERAT: .tem
+		WINTER: .win
+		SNOW: .sno
+		DESERT: .des
+		JUNGLE: .jun
+		INTERIOR: .tem
+		
+ModelSequenceFormat: PlaceholderModelSequence
+
+GameSpeeds:
+	default:
+		Name: Normal
+		Timestep: 40
+		OrderLatency: 3
+	hdefault:
+		Name: Normal (High Latency)
+		Timestep: 40
+		OrderLatency: 6
+	vhldefault:
+		Name: Normal (Very High Latency)
+		Timestep: 40
+		OrderLatency: 9
+	faster:
+		Name: Faster
+		Timestep: 30
+		OrderLatency: 4
+	hfaster:
+		Name: Faster (High Latency)
+		Timestep: 30
+		OrderLatency: 6
+	vfaster:
+		Name: Faster (Very High Latency)
+		Timestep: 30
+		OrderLatency: 9
+	superfast:
+		Name: Super Fast(AI only)
+		Timestep: 10
+		OrderLatency: 5
+
+ColorValidator:
+
+ModContent:
+	InstallPromptMessage: Medieval Warfare requires artwork and audio from the original game Tiberian Dawn.\n\nQuick Install will automatically download this content (without music\nor videos) from a mirror of the 2007 C&C Gold freeware release.\n\nAdvanced Install includes options for downloading the music and for\ncopying the videos and other content from an original game disc.
+	QuickDownload: basefiles
+	HeaderMessage: Game content may be extracted from the original game discs or an\nexisting digital install. OpenRA can also download the base game\nfiles from an online mirror of the 2007 freeware release of C&C.
+	Packages:
+		base: Base Game Files
+			TestFiles: ^Content/cnc/conquer.mix, ^Content/cnc/desert.mix, ^Content/cnc/sounds.mix, ^Content/cnc/speech.mix, ^Content/cnc/temperat.mix, ^Content/cnc/tempicnh.mix, ^Content/cnc/winter.mix
+			Sources: gdi95, gdi95-linux, nod95, nod95-linux, tfd, origin
+			Required: true
+			Download: basefiles
+		music: Base Game Music
+			TestFiles: ^Content/Mw/Music/
+			Download: music
+	Downloads:
+		mw|installer/downloads.yaml
+	Sources:
+		mw|installer/covertops.yaml
+		mw|installer/firstdecade.yaml
+		mw|installer/gdi95.yaml
+		mw|installer/nod95.yaml
+		mw|installer/origin.yaml

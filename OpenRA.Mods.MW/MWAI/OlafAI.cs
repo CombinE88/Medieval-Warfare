@@ -988,21 +988,19 @@ namespace OpenRA.Mods.MW.MWAI
                 foreach(var stand in ClosestDeerStands)
                 {
                     var numberOFSeeds = 0;
-                    foreach (var seed in stand.TraitsImplementing<ISeedableResource>())
+
+                    var prayer = World.FindActorsInCircle(stand.CenterPosition, WDist.FromCells(3)).Where(a => a.Owner == Player && a.Info.HasTraitInfo<CorruptDeerstandInfo>()).ToList();
+
+                    foreach (var seed in prayer)
                     {
-                        if (seed.IsTraitEnabled())
-                        {
+                        if (seed.CurrentActivity.GetType() == typeof(Attack) && seed.Trait<CorruptDeerstand>().TargetStand == stand)
                             numberOFSeeds++;
-                        }
                     }
                     if (numberOFSeeds >= 3)
                         continue;
 
                     return stand;
             }
-
-                    
-
                 return null;
             }
 

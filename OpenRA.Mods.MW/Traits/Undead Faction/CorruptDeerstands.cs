@@ -30,10 +30,12 @@ namespace OpenRA.Mods.MW.Traits
 	class CorruptDeerstand : ConditionalTrait<CorruptDeerstandInfo>, IIssueOrder, IResolveOrder, IOrderVoice
 	{
 		readonly CorruptDeerstandInfo info;
+        public Actor TargetStand;
 
 		public CorruptDeerstand(CorruptDeerstandInfo info) : base(info)
 		{
 			this.info = info;
+            TargetStand = null;
 		}
 
 		public IEnumerable<IOrderTargeter> Orders
@@ -55,11 +57,14 @@ namespace OpenRA.Mods.MW.Traits
 		{
 			if (order.OrderString != "Corrupt")
 				return;
-			
-			if (!order.Queued)
-				self.CancelActivity();
-			
-			
+
+            if (!order.Queued)
+            {
+                TargetStand = null;
+                self.CancelActivity();
+            }
+
+            TargetStand = order.TargetActor;
 			self.QueueActivity(new Attack(self, Target.FromActor(order.TargetActor), true, true, 100));
 
 		}
