@@ -76,19 +76,19 @@ Rules:
 	mw|rules/Undead.yaml
 
 Sequences:
-	mw|sequences/MWInfantry.yaml
-	mw|sequences/MWCivilians.yaml
-	mw|sequences/MWCavalry.yaml
-	mw|sequences/MWSiegeweapons.yaml
-	mw|sequences/MWBuildings.yaml
-	mw|sequences/MWSultan.yaml
-	mw|sequences/MWUndead.yaml
-	mw|sequences/MWEnvironments.yaml
-	mw|sequences/MWResources.yaml
+	mw|Sequences/MWInfantry.yaml
+	mw|Sequences/MWCivilians.yaml
+	mw|Sequences/MWCavalry.yaml
+	mw|Sequences/MWSiegeweapons.yaml
+	mw|Sequences/MWBuildings.yaml
+	mw|Sequences/MWSultan.yaml
+	mw|Sequences/MWUndead.yaml
+	mw|Sequences/MWEnvironments.yaml
+	mw|Sequences/MWResources.yaml
 	mw|sequences/decorations.yaml
 	mw|sequences/misc.yaml
-	mw|sequences/MWmisc.yaml
-	mw|sequences/MWProps.yaml
+	mw|Sequences/MWmisc.yaml
+	mw|Sequences/MWProps.yaml
 
 TileSets:
 	mw|tilesets/desert.yaml

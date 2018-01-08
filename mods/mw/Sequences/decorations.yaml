@@ -54,7 +54,7 @@ tc04:
 		TilesetOverrides:
 			JUNGLE: TEMPERAT			INTERIOR: TEMPERAT
 	idle: maple4
-#		Length: *
+		Length: *
 		Tick: 120
 		Offset: 4,-5
 	damaged-idle:
@@ -69,7 +69,7 @@ tc04.husk:
 		Start: 2
 	dead:
 		Start: 2
-#		Length: 8
+		Length: 8
 		Tick:120
 
 tc05:
@@ -78,7 +78,7 @@ tc05:
 		TilesetOverrides:
 			JUNGLE: TEMPERAT			INTERIOR: TEMPERAT
 	idle: maple2
-#		Length: *
+		Length: *
 		Tick: 120
 		Offset: 3,7 
 	damaged-idle:
@@ -93,7 +93,7 @@ tc05.husk:
 		Start: 2
 	dead:
 		Start: 2
-#		Length: 8
+		Length: 8
 		Tick:120
 
 tc03:
@@ -112,7 +112,7 @@ tc03.husk:
 		Start: 1
 	dead:
 		Start: 2
-#		Length: 8
+		Length: 8
 		Tick:120
 
 tc02:
@@ -121,7 +121,7 @@ tc02:
 		TilesetOverrides:
 			JUNGLE: TEMPERAT			INTERIOR: TEMPERAT
 	idle: maple3
-#		Length: *
+		Length: *
 		Tick: 120
 		Offset: 2,7 
 
@@ -134,7 +134,7 @@ tc02.husk:
 		Start: 1
 	dead:
 		Start: 2
-#		Length: 8
+		Length: 8
 		Tick:120
 
 tc01:
@@ -143,7 +143,7 @@ tc01:
 		TilesetOverrides:
 			JUNGLE: TEMPERAT			INTERIOR: TEMPERAT
 	idle: maple1
-#		Length: *
+		Length: *
 		Tick:120
 		Offset: 4,2 
 
@@ -156,7 +156,7 @@ tc01.husk:
 		Start: 1
 	dead:
 		Start: 2
-#		Length: 8
+		Length: 8
 		Tick:120
 
 t18:
@@ -165,7 +165,7 @@ t18:
 		TilesetOverrides:
 			INTERIOR: TEMPERAT
 	idle: destree1.des
-#		Length: *
+		Length: *
 		Tick: 120
 		Offset: -4,7 
 		
@@ -175,7 +175,7 @@ t18a:
 		TilesetOverrides:
 			INTERIOR: TEMPERAT
 	idle: destree2.des
-#		Length: *
+		Length: *
 		Tick: 120
 		Offset: 0,-3
 		
@@ -185,7 +185,7 @@ t18b:
 		TilesetOverrides:
 			INTERIOR: TEMPERAT
 	idle: destree3.des
-#		Length: *
+		Length: *
 		Tick: 120
 		Offset: -3,-7
 		
@@ -195,7 +195,7 @@ t18c:
 		TilesetOverrides:
 			INTERIOR: TEMPERAT
 	idle: destree4.des
-#		Length: *
+		Length: *
 		Tick: 120
 		Offset: 4,0 
 
@@ -209,7 +209,7 @@ t18.husk:
 		Start: 1
 	dead: t18.des
 		Start: 2
-#		Length: 8
+		Length: 8
 		Tick:120
 		
 t17a:
@@ -218,7 +218,7 @@ t17a:
 		TilesetOverrides:
 			JUNGLE: TEMPERAT			INTERIOR: TEMPERAT
 	idle: tree9
-#		Length: *
+		Length: *
 		Tick:120
 		Offset: -3,-7 
 
@@ -228,7 +228,7 @@ t17:
 		TilesetOverrides:
 			JUNGLE: TEMPERAT			INTERIOR: TEMPERAT
 	idle: tree8
-#		Length: *
+		Length: *
 		Tick:120
 		Offset: 2,2 
 
@@ -241,7 +241,7 @@ t17.husk:
 		Start: 1
 	dead:
 		Start: 2
-#		Length: 8
+		Length: 8
 		Tick:120
 
 t16:
@@ -250,7 +250,7 @@ t16:
 		TilesetOverrides:
 			JUNGLE: TEMPERAT			INTERIOR: TEMPERAT
 	idle: tree7
-#		Length: *
+		Length: *
 		Tick:120
 		Offset: 2,-2 
 
@@ -263,7 +263,7 @@ t16.husk:
 		Start: 1
 	dead:
 		Start: 2
-#		Length: 8
+		Length: 8
 		Tick:120
 
 t15:
@@ -272,7 +272,7 @@ t15:
 		TilesetOverrides:
 			JUNGLE: TEMPERAT			INTERIOR: TEMPERAT
 	idle: tree6
-#		Length: *
+		Length: *
 		Tick:120
 		Offset: -2,2 
 
@@ -285,7 +285,7 @@ t15.husk:
 		Start: 1
 	dead:
 		Start: 2
-#		Length: 8
+		Length: 8
 		Tick:120
 
 t14:
@@ -294,7 +294,7 @@ t14:
 		TilesetOverrides:
 			JUNGLE: TEMPERAT			INTERIOR: TEMPERAT
 	idle: tree5
-#		Length: *
+		Length: *
 		Tick:120
 		Offset: -4,0 
 
@@ -307,7 +307,7 @@ t14.husk:
 		Start: 1
 	dead:
 		Start: 2
-#		Length: 8
+		Length: 8
 		Tick:120
 
 t13:
@@ -316,7 +316,7 @@ t13:
 		TilesetOverrides:
 			JUNGLE: TEMPERAT			INTERIOR: TEMPERAT
 	idle: tree4
-#		Length: *
+		Length: *
 		Tick:120
 		Offset: -4,1		
 
@@ -329,7 +329,7 @@ t13.husk:
 		Start: 1
 	dead:
 		Start: 2
-#		Length: 8
+		Length: 8
 		Tick:120
 
 t12:
@@ -338,7 +338,7 @@ t12:
 		TilesetOverrides:
 			JUNGLE: TEMPERAT			INTERIOR: TEMPERAT
 	idle: tree3
-#		Length: *
+		Length: *
 		Tick:120
 		Offset: 3,-2 
 
@@ -351,7 +351,7 @@ t12.husk:
 		Start: 1
 	dead:
 		Start: 2
-#		Length: 8
+		Length: 8
 		Tick:120
 
 t11:
@@ -360,7 +360,7 @@ t11:
 		TilesetOverrides:
 			JUNGLE: TEMPERAT			INTERIOR: TEMPERAT
 	idle: tree2
-#		Length: *
+		Length: *
 		Tick:120
 		Offset: -2,-5
 
@@ -373,7 +373,7 @@ t11.husk:
 		Start: 1
 	dead:
 		Start: 2
-#		Length: 8
+		Length: 8
 		Tick:120
 
 t10:
@@ -382,7 +382,7 @@ t10:
 		TilesetOverrides:
 			JUNGLE: TEMPERAT			INTERIOR: TEMPERAT
 	idle: tree1
-#		Length: *
+		Length: *
 		Tick:120
 		Offset: 4,2 
 
@@ -395,7 +395,7 @@ t10.husk:
 		Start: 1
 	dead:
 		Start: 2
-#		Length: 8
+		Length: 8
 		Tick:120
 
 t09:
@@ -414,14 +414,14 @@ t09.husk:
 		Start: 1
 	dead: t09.des
 		Start: 2
-#		Length: 8
+		Length: 8
 		Tick:120
 
 t08:
 	Defaults:
 		UseTilesetExtension: true
 	idle: tree10
-#		Length: *
+		Length: *
 		Tick:120
 		Offset: -2,2
 
@@ -434,7 +434,7 @@ t08.husk:
 		Start: 1
 	dead:
 		Start: 2
-#		Length: 8
+		Length: 8
 		Tick:120
 
 t07:
@@ -443,7 +443,7 @@ t07:
 		TilesetOverrides:
 			JUNGLE: TEMPERAT			INTERIOR: TEMPERAT
 	idle: tree11
-#		Length: *
+		Length: *
 		Tick:120
 		Offset: -5,4 
 
@@ -456,7 +456,7 @@ t07.husk:
 		Start: 1
 	dead:
 		Start: 2
-#		Length: 8
+		Length: 8
 		Tick:120
 		
 t06b:
@@ -465,7 +465,7 @@ t06b:
 		TilesetOverrides:
 			JUNGLE: TEMPERAT			INTERIOR: TEMPERAT
 	idle: tanne7
-#		Length: *
+		Length: *
 		Tick:120
 		Offset: 5,-9		
 t06a:
@@ -474,7 +474,7 @@ t06a:
 		TilesetOverrides:
 			JUNGLE: TEMPERAT			INTERIOR: TEMPERAT
 	idle: tanne6
-#		Length: *
+		Length: *
 		Tick:120
 		Offset: 0,-8 
 
@@ -484,7 +484,7 @@ t06:
 		TilesetOverrides:
 			JUNGLE: TEMPERAT			INTERIOR: TEMPERAT
 	idle: tanne5
-#		Length: *
+		Length: *
 		Tick:120
 		Offset: 3,5 
 
@@ -497,7 +497,7 @@ t06.husk:
 		Start: 1
 	dead:
 		Start: 2
-#		Length: 8
+		Length: 8
 		Tick:120
 
 t05:
@@ -506,7 +506,7 @@ t05:
 		TilesetOverrides:
 			JUNGLE: TEMPERAT			INTERIOR: TEMPERAT
 	idle: tanne4
-#		Length: *
+		Length: *
 		Tick:120
 		Offset: -2,-5 
 
@@ -519,7 +519,7 @@ t05.husk:
 		Start: 1
 	dead:
 		Start: 2
-#		Length: 8
+		Length: 8
 		Tick:120
 
 t04:
@@ -538,7 +538,7 @@ t04.husk:
 		Start: 1
 	dead: t04.des
 		Start: 2
-#		Length: 8
+		Length: 8
 		Tick:120
 
 t03:
@@ -547,7 +547,7 @@ t03:
 		TilesetOverrides:
 			JUNGLE: TEMPERAT			INTERIOR: TEMPERAT
 	idle: tanne3
-#		Length: *
+		Length: *
 		Tick:120
 		Offset: 4,0 
 
@@ -560,7 +560,7 @@ t03.husk:
 		Start: 1
 	dead:
 		Start: 2
-#		Length: 8
+		Length: 8
 		Tick:120
 
 t02:
@@ -569,7 +569,7 @@ t02:
 		TilesetOverrides:
 			JUNGLE: TEMPERAT			INTERIOR: TEMPERAT
 	idle: tanne2
-#		Length: *
+		Length: *
 		Tick:120
 		Offset: -4,-6
 
@@ -582,7 +582,7 @@ t02.husk:
 		Start: 1
 	dead:
 		Start: 2
-#		Length: 8
+		Length: 8
 		Tick:120
 
 t01:
@@ -591,7 +591,7 @@ t01:
 		TilesetOverrides:
 			JUNGLE: TEMPERAT			INTERIOR: TEMPERAT
 	idle: tanne1
-#		Length: *
+		Length: *
 		Tick:120
 		Offset: 0,4 
 
@@ -604,7 +604,7 @@ t01.husk:
 		Start: 1
 	dead:
 		Start: 2
-#		Length: 8
+		Length: 8
 		Tick:120
 
 v01:
@@ -918,23 +918,23 @@ v18.husk:
 
 v19:
 	idle:
-#		Length: 14
+		Length: 14
 		Tick: 120
 	damaged-idle:
 		Start: 14
-#		Length: 14
+		Length: 14
 		Tick: 120
 
 v19.husk:
 	idle: v19
 		Start: 28
 	fire-start: flmspt
-#		Length: *
+		Length: *
 		Offset: 7,-15
 		ZOffset: 1
 	fire-loop: flmspt
 		Start: 50
-#		Length: *
+		Length: *
 		Offset: 7,-15
 		ZOffset: 1
 
@@ -944,11 +944,11 @@ v20:
 		TilesetOverrides:
 			INTERIOR: TEMPERAT
 	idle: v20.des
-#		Length: 3
+		Length: 3
 		Tick: 120
 	damaged-idle: v20.des
 		Start: 3
-#		Length: 3
+		Length: 3
 		Tick: 120
 
 v20.husk:
@@ -964,11 +964,11 @@ v21:
 		TilesetOverrides:
 			INTERIOR: TEMPERAT
 	idle: v21.des
-#		Length: 3
+		Length: 3
 		Tick: 120
 	damaged-idle: v21.des
 		Start: 3
-#		Length: 3
+		Length: 3
 		Tick: 120
 
 v21.husk:
@@ -984,11 +984,11 @@ v22:
 		TilesetOverrides:
 			INTERIOR: TEMPERAT
 	idle: v22.des
-#		Length: 3
+		Length: 3
 		Tick: 120
 	damaged-idle: v22.des
 		Start: 3
-#		Length: 3
+		Length: 3
 		Tick: 120
 
 v22.husk:
@@ -1004,11 +1004,11 @@ v23:
 		TilesetOverrides:
 			INTERIOR: TEMPERAT
 	idle: v23.des
-#		Length: 3
+		Length: 3
 		Tick: 120
 	damaged-idle: v23.des
 		Start: 3
-#		Length: 3
+		Length: 3
 		Tick: 120
 
 v23.husk:
