@@ -97,6 +97,9 @@ namespace OpenRA.Mods.MW.MWAI
 
             [Desc("From 100% how many Acolytes are concideret as worker.")]
             public readonly int AcolyteWorkerRatio = 30;
+       
+            [Desc("How close are Acolytes allowed to go near the enemy base to harvest resource patches.")]
+            public readonly WDist AcolytePrayProximity = WDist.FromCells(5);
 
 
             [FieldLoader.LoadUsing("LoadUndeadCommonNames", true)]
@@ -586,11 +589,11 @@ namespace OpenRA.Mods.MW.MWAI
                 return CountBuildingByCommonName(Info.BuildingCommonNames.Farms, Player) >= 2;
             }
 
-        public bool HasAdequateBarracks()
-        {
-            // Require at least two Farms, unless we have no possible Peasants (can't build it)
-            return CountBuildingByCommonName(Info.BuildingCommonNames.Barracks, Player) > 0;
-        }
+            public bool HasAdequateBarracks()
+            {
+                // Require at least two Farms, unless we have no possible Peasants (can't build it)
+                return CountBuildingByCommonName(Info.BuildingCommonNames.Barracks, Player) > 0;
+            }
 
         CPos defenseCenter;
             public CPos? ChooseBuildLocation(string actorType, bool distanceToBaseIsImportant, BuildingType type)
@@ -1019,16 +1022,9 @@ namespace OpenRA.Mods.MW.MWAI
 
                 foreach(var stand in ClosestDeerStands)
                 {
-                    var numberOFSeeds = 0;
+                    var prayer = World.FindActorsInCircle(stand.CenterPosition, WDist.FromCells(4)).Where(a => a.Owner == Player && a.Info.HasTraitInfo<CorruptDeerstandInfo>()).Count();
 
-                    var prayer = World.FindActorsInCircle(stand.CenterPosition, WDist.FromCells(3)).Where(a => a.Owner == Player && a.Info.HasTraitInfo<CorruptDeerstandInfo>()).ToList();
-
-                    foreach (var seed in prayer)
-                    {
-                        if (seed.Trait<CorruptDeerstand>().TargetStand == stand)
-                            numberOFSeeds++;
-                    }
-                    if (numberOFSeeds >= 3)
+                    if (prayer >= 3)
                         continue;
 
                     return stand;
@@ -1116,12 +1112,12 @@ namespace OpenRA.Mods.MW.MWAI
                         var fields = FarmFields.ToList(); // get list of closest possible Fields
                         var closestfields = fields.OrderBy(a => (Info.UndeadCommonNames.PrayableIron.Contains(a.Info.Name) ? ((a.CenterPosition - Player.World.Map.CenterOfCell(initialBaseCenter)).LengthSquared)/2 : (a.CenterPosition - Player.World.Map.CenterOfCell(initialBaseCenter)).LengthSquared));
 
-                        Actor preytarget = null;
+                        Actor preytarget = null; 
 
                         foreach (var scarecrow in closestfields)
                         {
 
-                            var surroundingEnemies = Player.World.FindActorsInCircle(scarecrow.CenterPosition, WDist.FromCells(7))
+                            var surroundingEnemies = Player.World.FindActorsInCircle(scarecrow.CenterPosition, Info.AcolytePrayProximity)
                                 .Count(e => e.Info.HasTraitInfo<BuildingInfo>() && Player.Stances[e.Owner] == Stance.Enemy);
 
                             if (surroundingEnemies > 0)
@@ -1142,7 +1138,7 @@ namespace OpenRA.Mods.MW.MWAI
                             // Get the occupy count
                             foreach(var dock in scarecrow.TraitsImplementing<Dock>())
                             {
-                                if (dock.IsBlocked || dock.Reserver != null)
+                                if (dock.IsBlocked || dock.Reserver != null || !dock.CanAccessDock(IdleFarmer))
                                     OccupyCount++;
                             }
 
