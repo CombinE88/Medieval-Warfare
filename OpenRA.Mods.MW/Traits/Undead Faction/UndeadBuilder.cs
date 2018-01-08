@@ -112,7 +112,7 @@ namespace OpenRA.Mods.MW.Traits
                 Game.Sound.PlayNotification(self.World.Map.Rules, self.Owner, "Speech", info.ReadyAudio,
                     self.Owner.Faction.InternalName);
 				
-                self.Dispose();
+                self.Dispose(); 
             });
         }
     }

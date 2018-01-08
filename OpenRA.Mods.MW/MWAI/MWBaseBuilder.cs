@@ -299,12 +299,23 @@ namespace OpenRA.Mods.MW.MWAI
 
                 var buildableThings = queue.BuildableItems();
 
+
+                if (ai.HasAdequateCrypts()*3 < playerBuildings.Count() && !(pentagrams * 5 > builder))
+                {
+                    var crypt = GetProducibleBuilding(ai.Info.UndeadCommonNames.Crypts, buildableThings);
+                    if (crypt != null)
+                    {
+                        OlafAI.BotDebug("AI: {0} decided to build {1}: Priority override (production)", queue.Actor.Owner, crypt.Name);
+                        return crypt;
+                    }
+                }
+
                 foreach (var frac in ai.Info.BuildingFractions.Shuffle(ai.Random))
                 {
 
                     var name = frac.Key;
 
-                    if (pentagrams * 5 > builder && !ai.Info.UndeadCommonNames.EarlyUpgrades.Contains(name))
+                    if ((pentagrams * 5 > builder && !ai.Info.UndeadCommonNames.EarlyUpgrades.Contains(name)) || ai.Info.UndeadCommonNames.Crypts.Contains(name))
                         continue;
 
                     // Can we build this structure?

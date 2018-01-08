@@ -113,7 +113,7 @@ Player:
 			#
 #			obelisk.penta: 4
 #			garg.penta: 4
-			sppool.penta: 2
+			sppool.penta: 1
 			crypt.penta: 10
 			mauso.penta: 2
 			libra.penta: 1
@@ -159,7 +159,7 @@ Player:
 			zeroproc.scaff: 200%
 			sulmill.scaff: 200%
 			nodproc.scaff: 200%
-			sulcnshmbr.scaff: 100%
+			sulcnshmbr.scaff: 500%
 			#
 			gtwnew.scaff: 10%
 			gunnew.scaff: 10%
@@ -262,7 +262,7 @@ Player:
 			undead7: 100%
 			deadross: 60%
 			grim: 50%
-			acolytec: 33%
+			acolytec: 500%
 			vampflying: 10%
 			demonhorse: 100%
 			LichK: 70%
@@ -272,7 +272,9 @@ Player:
 			#
 		UnitLimits:
 			engeneer: 4
+			preycolyte: 25
 			eharvxl: 6
+			acolytec: 9
 		SquadSize: 15
 		SupportPowerDecision@Airstrike:
 			OrderName: CorpsePowerInfoOrder

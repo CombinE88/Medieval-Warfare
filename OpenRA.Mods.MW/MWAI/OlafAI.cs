@@ -124,6 +124,16 @@ namespace OpenRA.Mods.MW.MWAI
             [Desc("Delay (in ticks) between giving out orders to units.")]
             public readonly int AssignRolesInterval = 20;
 
+
+            [Desc("Delay (in ticks) between giving out orders to units.")]
+            public readonly int AcolyteCheckResourceDensity = 100;
+
+            [Desc("Maximal allowed Acolytes praying on an empty patch.")]
+            public readonly int MAxAcolytesOnEmptyPatch = 3;
+
+            [Desc("Minimal Resourcefields untill the patch is considered as unharvestable.")]
+            public readonly int MinimumResourceFields = 5;
+
             [Desc("Delay (in ticks) between attempting rush attacks.")]
             public readonly int RushInterval = 600;
 
@@ -357,6 +367,7 @@ namespace OpenRA.Mods.MW.MWAI
 
             int rushTicks;
             int assignRolesTicks;
+            int assignUndeadCheckTicks;
             int attackForceTicks;
             int minAttackForceDelayTicks;
             int minCaptureDelayTicks;
@@ -425,6 +436,7 @@ namespace OpenRA.Mods.MW.MWAI
 
                 // Avoid all AIs reevaluating assignments on the same tick, randomize their initial evaluation delay.
                 assignRolesTicks = Random.Next(0, Info.AssignRolesInterval);
+                assignUndeadCheckTicks = Random.Next(0, Info.AcolyteCheckResourceDensity);
                 attackForceTicks = Random.Next(0, Info.AttackForceInterval);
                 minAttackForceDelayTicks = Random.Next(0, Info.MinimumAttackForceDelay);
                 minCaptureDelayTicks = Random.Next(0, Info.MinimumCaptureDelay);
@@ -559,6 +571,13 @@ namespace OpenRA.Mods.MW.MWAI
                 return CountBuildingByCommonName(Info.BuildingCommonNames.Farms, Player) > 0 ||
                     CountBuildingByCommonName(Info.BuildingCommonNames.Farms, Player) == 0 ||
                     CountBuildingByCommonName(Info.BuildingCommonNames.ConstructionYard, Player) == 0;
+            }
+
+
+            public int HasAdequateCrypts()
+            {
+                // Require at least one Farms, unless we can't build it.
+                return CountUndeadBuildingByCommonName(Info.UndeadCommonNames.Crypts, Player);
             }
 
             public bool HasAdequateFarm()
@@ -811,6 +830,18 @@ namespace OpenRA.Mods.MW.MWAI
                     FindAndDeployBackupMcv(self);
                 }
 
+                if (--assignUndeadCheckTicks <= 0)
+                {
+                    assignUndeadCheckTicks = Info.AcolyteCheckResourceDensity;
+                    if (Player.Faction.InternalName == "ded")
+                    {
+                        CheckAllPatchesForProfit();
+                    }
+                }
+
+
+            
+
                 if (--minAttackForceDelayTicks <= 0)
                 {
                     minAttackForceDelayTicks = Info.MinimumAttackForceDelay;
@@ -976,6 +1007,7 @@ namespace OpenRA.Mods.MW.MWAI
                 }
             }
 
+
             Actor FindNewDeerstand()
             {
                 var DeerStands = World.ActorsHavingTrait<ISeedableResource>().Where(a => Info.UndeadCommonNames.PrayableDeerStands.Contains(a.Info.Name)).ToList();
@@ -993,20 +1025,20 @@ namespace OpenRA.Mods.MW.MWAI
 
                     foreach (var seed in prayer)
                     {
-                        if (seed.CurrentActivity.GetType() == typeof(Attack) && seed.Trait<CorruptDeerstand>().TargetStand == stand)
+                        if (seed.Trait<CorruptDeerstand>().TargetStand == stand)
                             numberOFSeeds++;
                     }
                     if (numberOFSeeds >= 3)
                         continue;
 
                     return stand;
-            }
+                }
                 return null;
             }
 
-        void ManageBuildrAcolytes()
+            void ManageBuildrAcolytes()
             {
-            var pentagrams = World.ActorsHavingTrait<UndeadBuilder>().Where(a => a.Owner == Player);
+                var pentagrams = World.ActorsHavingTrait<UndeadBuilder>().Where(a => a.Owner == Player);
 
                 if (AcolyteBuilder.Any() && pentagrams.Any())
                 {
@@ -1023,25 +1055,25 @@ namespace OpenRA.Mods.MW.MWAI
                 }
             }
 
-        void ManageVamipres()
-        {
-
-            foreach (var vamp in activeUnits)
+            void ManageVamipres()
             {
-                var transforms = vamp.TraitOrDefault<Transforms>();
-                if (transforms == null)
-                    continue;
-                var aircraft = vamp.TraitOrDefault<Aircraft>();
-                if (aircraft == null)
-                    continue;
 
-                if (!vamp.IsIdle)
-                    continue;
+                foreach (var vamp in activeUnits)
+                {
+                    var transforms = vamp.TraitOrDefault<Transforms>();
+                    if (transforms == null)
+                        continue;
+                    var aircraft = vamp.TraitOrDefault<Aircraft>();
+                    if (aircraft == null)
+                        continue;
 
-                vamp.QueueActivity(new Transform(vamp, vamp.Info.TraitInfo<TransformsInfo>().IntoActor));
+                    if (!vamp.IsIdle)
+                        continue;
 
+                    vamp.QueueActivity(new Transform(vamp, vamp.Info.TraitInfo<TransformsInfo>().IntoActor));
+
+                }
             }
-        }
 
             void ManageFarmerAcolytes()
             {
@@ -1082,12 +1114,19 @@ namespace OpenRA.Mods.MW.MWAI
                 if (FarmFields != null && FarmFields.Any())
                     {
                         var fields = FarmFields.ToList(); // get list of closest possible Fields
-                        var closestfields = fields.OrderBy(a => (a.CenterPosition - Player.World.Map.CenterOfCell(initialBaseCenter)).LengthSquared);
+                        var closestfields = fields.OrderBy(a => (Info.UndeadCommonNames.PrayableIron.Contains(a.Info.Name) ? ((a.CenterPosition - Player.World.Map.CenterOfCell(initialBaseCenter)).LengthSquared)/2 : (a.CenterPosition - Player.World.Map.CenterOfCell(initialBaseCenter)).LengthSquared));
 
                         Actor preytarget = null;
 
                         foreach (var scarecrow in closestfields)
                         {
+
+                            var surroundingEnemies = Player.World.FindActorsInCircle(scarecrow.CenterPosition, WDist.FromCells(7))
+                                .Count(e => e.Info.HasTraitInfo<BuildingInfo>() && Player.Stances[e.Owner] == Stance.Enemy);
+
+                            if (surroundingEnemies > 0)
+                                continue;
+
                             var OccupyCount = 0;
 
 
@@ -1097,12 +1136,10 @@ namespace OpenRA.Mods.MW.MWAI
                             var getResourceArroundit = Player.World.Map.FindTilesInCircle(scarecrow.Location, 4, true).Where(c => reslay.GetResourceDensity(c) > 0);
                             var NumberOfFullCells = getResourceArroundit.Count();
 
-                            if (NumberOfFullCells < 5) // We want atleast 5 cells filled with resources
+                            if (NumberOfFullCells < Info.MinimumResourceFields) // We want atleast 5 cells filled with resources
                                 continue;
 
                             // Get the occupy count
-                            var getAllAcolytes = Player.World.ActorsHavingTrait<AcolytePrey>();
-
                             foreach(var dock in scarecrow.TraitsImplementing<Dock>())
                             {
                                 if (dock.IsBlocked || dock.Reserver != null)
@@ -1201,7 +1238,50 @@ namespace OpenRA.Mods.MW.MWAI
                 }
             }
 
-        void FindNewUnits(Actor self)
+            void CheckAllPatchesForProfit()
+            {
+                // Find Empty Patches and retreat Acolytes from them:
+               
+                var FarmFields = World.ActorsHavingTrait<ISeedableResource>().Where(a => (Info.UndeadCommonNames.PrayableCrops.Contains(a.Info.Name) || Info.UndeadCommonNames.PrayableIron.Contains(a.Info.Name) || Info.UndeadCommonNames.PrayableDeerStands.Contains(a.Info.Name))).ToHashSet();
+                var reslay = Player.World.WorldActor.Trait<ResourceLayer>();
+
+                foreach (var crow in FarmFields)
+                {
+
+                    var doihavepreyers = crow.TraitsImplementing<Dock>().Where(d => d.Reserver != null && d.Reserver.Owner == Player);
+
+                    if (doihavepreyers.Count() <= Info.MAxAcolytesOnEmptyPatch)
+                    {
+                        
+                        continue;
+                    }
+                    BotDebug("AI: Non adequate ammount of acolytes at " + crow.Location + " found, with " + doihavepreyers.Count() + " acolytes");
+
+
+                    var getResourceArroundit = Player.World.Map.FindTilesInCircle(crow.Location, 4, true).Where(c => reslay.GetResourceDensity(c) > 0).Count();
+
+                    if (getResourceArroundit >= Info.MinimumResourceFields) // We want atleast MinimumResourceFields cells filled with resources
+                    {
+                        BotDebug("AI: Enough Cells Found at " + crow.Location + " with " + getResourceArroundit + " cells full resources");
+                        continue;
+                    }
+
+                    var AllowedNumber = 0;
+
+                    foreach(var dock in crow.TraitsImplementing<Dock>().Where(d => d.Reserver != null))
+                    {
+                        if (AllowedNumber >= Info.MAxAcolytesOnEmptyPatch && dock.Reserver.Owner == Player)
+                        {
+                            BotDebug("AI: acolyte " + dock.Reserver + " released from duty");
+                            dock.Reserver.CancelActivity();
+                        }
+
+                        AllowedNumber++;
+                    }
+                }
+            }
+
+            void FindNewUnits(Actor self)
             {
                 var newUnits = self.World.ActorsHavingTrait<IPositionable>()
                     .Where(a => a.Owner == Player && !Info.UnitsCommonNames.Mcv.Contains(a.Info.Name) &&
