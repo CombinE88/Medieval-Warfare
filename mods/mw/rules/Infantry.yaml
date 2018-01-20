@@ -78,10 +78,6 @@ KING:
 		Probability: 100
 		Actor: Husk.KING
 	-WithDeathAnimation:
-	ProximityExternalCondition@BUFF:
-		Range: 7c0
-		ValidStances: Ally
-		Condition: KingIsNear
 	SelfHealing@AlwaysHeals:
 		Delay: 10
 		Step: 500
@@ -1537,10 +1533,6 @@ MWWAND8:
 	Tooltip:
 		Name: Treasurer
 		GenericVisibility: None
-	ProximityExternalCondition@TAX:
-		Range: 5c0
-		ValidStances: Ally
-		Condition: Tax
 	Wanders:
 		WanderMoveRadius: 4
 		ReduceMoveRadiusDelay: 5
@@ -1778,15 +1770,13 @@ MWLUMBERER:
 		TargetTypes: Ground, Infantry, LLumber
 	ExternalCondition@DeerHunter:
 		Condition: DeerHunter
-	ExternalCondition@LootingDeer:
-		Condition: LootingDeer
 	ExternalCondition@Unload:
 		Condition: UnloadDeer
 	Armament@Huntdeer:
 		Weapon: LumberJackAxe
 		Name: primary
 		IgnoresVisibility: true
-		RequiresCondition: (FullFood + LootingDeer) == 0
+		RequiresCondition: (FullFood) == 0
 		TargetStances: Ally, Neutral
 	Armament@GatherDeer:
 		Weapon: LumbererGather

@@ -1452,7 +1452,6 @@
 
 ^MWBaseBuilding:
 	Inherits@1: ^BaseBuilding
-
 	EmitInfantryOnSell:
 		ActorTypes: engeneer,e1new
 	RepairableBuilding:
@@ -1465,10 +1464,6 @@
 		Range: 0c512, 3c0
 	Targetable:
 		TargetTypes: Ground, C4, Structure, Wanderer
-	ProximityExternalCondition@WANDERER:
-		Range: 6c0
-		ValidStances: Ally
-		Condition: Wander
 		
 ^MWDefense:
 	Inherits@1: ^Defense
@@ -1870,10 +1865,6 @@
 		Sequence: body
 	RevealsShroud:
 		Range: 2c0
-	ProximityExternalCondition@LootingDeer:
-		Range: 10c0
-		ValidStances: Ally
-		Condition: LootingDeer
 	KillsSelf:
 		Delay: 1000
 	HitShape:

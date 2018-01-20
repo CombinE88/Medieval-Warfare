@@ -42,7 +42,7 @@ GTWNEW:
 		Turret: primary
 	WithSpriteTurret@SPRITURRONE: 
 		Sequence: turretidle
-        AimSequence: turretanim
+		AimSequence: turretanim
 		Turret: primary
 	Turreted@TURRONE:
 		Turret: primary

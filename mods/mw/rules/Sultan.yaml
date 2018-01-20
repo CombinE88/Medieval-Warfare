@@ -522,7 +522,7 @@ SULLODGE:
 		MoveOffset: 0,1
 		Lasso: 15
 		ForceLasso: 20
-        FindRadius: 100
+		FindRadius: 100
 	WithRangeCircle:
 		Type: HunterLodge
 		UsePlayerColor: true
@@ -576,7 +576,7 @@ SULHALL:
 		FindRadius: 100
 	IsTownhall:
 		Percent: 60
-    
+	
 SULMINARET:
 	Inherits: ^MWBaseBuilding
 	Inherits@Hitshape: ^1x1Shape
@@ -654,8 +654,8 @@ SULARRAY:
 		SpawnActor: transporter
 		Offset: 384,298, 0
 		MoveOffset: 1,2
-        Lasso: 3c0
-        FindRadius: 100
+		Lasso: 3c0
+		FindRadius: 100
 		Sticky: true
 		ReturnOnDeath: true
 	WithFreeSpawnableActor@2:
@@ -663,8 +663,8 @@ SULARRAY:
 		SpawnActor: transporter
 		Offset: 384,298, 0
 		MoveOffset: 1,2
-        FindRadius: 100
-        Lasso: 3c0
+		FindRadius: 100
+		Lasso: 3c0
 		Sticky: true
 		ReturnOnDeath: true
 	WithFreeSpawnableActor@3:
@@ -673,8 +673,8 @@ SULARRAY:
 		Offset: 384,298, 0
 		MoveOffset: 1,2
 		Sticky: true
-        FindRadius: 100
-        Lasso: 3c0
+		FindRadius: 100
+		Lasso: 3c0
 		ReturnOnDeath: true
 	WithFreeSpawnableActor@4:
 		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
@@ -682,8 +682,8 @@ SULARRAY:
 		Offset: 384,298, 0
 		MoveOffset: 1,2
 		Sticky: true
-        FindRadius: 100
-        Lasso: 3c0
+		FindRadius: 100
+		Lasso: 3c0
 		ReturnOnDeath: true
 	BaseProvider:
 		Cooldown: 25
@@ -1380,7 +1380,7 @@ SULCNSHMBR:
 		Pieces: 2, 3
 		Range: 1c0, 5c0
 	ResourcePurifier:
-    
+	
 SULREF:
 	Inherits: ^MWBaseBuilding
 	HitShape:
@@ -1437,7 +1437,7 @@ SULREF:
 		Weapons: LargeWood1, LargeStone1, DebrUtility1, DebrUtility2, DebrUtility3
 		Pieces: 1, 2
 		Range: 1c0, 5c0
-    
+	
 		
 #Infantry
 
@@ -1574,21 +1574,21 @@ SULE3:
 	Armament:
 		Weapon: BedouinBow
 		LocalOffset: 341,20,356
-        Name: Primary
+		Name: Primary
 	Armament@DUMMY:
 		Weapon: BedouinBowDUMMY
 		LocalOffset: 341,20,356
-        Name: Primary
+		Name: Primary
 	Armament@Air:
 		Weapon: BedouinBowAir
 		LocalOffset: 341,20,356
-        Name: Primary
+		Name: Primary
 	Armament@Debuffapply:
 		Weapon: BedouinBowNArrowDebuff
 		LocalOffset: 341,20,356
-        Name: Secondary
+		Name: Secondary
 	AttackFrontal:
-        Armaments: Primary, Secondary
+		Armaments: Primary, Secondary
 	WithInfantryBody:
  		AttackSequences:
 			Primary: shoot
@@ -2594,10 +2594,6 @@ SULTURNXL:
 		QuantizedFacings: 32
 	WithSpriteBody:
 		StartSequence: make
-	ProximityExternalCondition@KILLEVETRYTHING:
-		Range: 2c512
-		ValidStances: Ally, Enemy, Neutral
-		Condition: Tornadodeath
 	AmbientSound:
 		SoundFiles: tornado.aud
 		Delay: 10

@@ -11,21 +11,37 @@ bacamp.husk:
 newfact:
 	idle: ironore4
 		Start: 9
-	idle0: newfact
-	damaged-idle: newfact
+	idle0: kingfact0
+		Offset: 0,-11
+	damaged-idle: kingfact0
+		Offset: 0,-11
 		Start: 1
-	idle1: newfact
-		Start: 3
-	damaged-idle1: newfact
-		Start: 7
-	idle2: newfact
-		Start: 4
-	damaged-idle2: newfact
-		Start: 8
-	idle3: newfact
-		Start: 5
-	damaged-idle3: newfact
-		Start: 9
+	idle1: kingfact1
+		Offset: 0,-11
+		Start: 0
+	damaged-idle1: kingfact1
+		Offset: 0,-11
+		Start: 1
+	idle2: kingfact2
+		Offset: 0,-11
+		Start: 0
+		Length: 14
+		Tick: 150
+	damaged-idle2: kingfact2
+		Offset: 0,-11
+		Start: 14
+		Length: 14
+		Tick: 150
+	idle3: kingfact3
+		Offset: 0, -12
+		Start: 0
+		Length: 14
+		Tick: 150
+	damaged-idle3: kingfact3
+		Offset: 0, -12
+		Start: 14
+		Length: 14
+		Tick: 150
 	idle4: newfact2
 		Start: 0
 		Offset: 0, -12
@@ -45,9 +61,10 @@ newfact:
 		Length: 4
 		Tick: 120
 		ZOffset: -1024
-	make: newfactmake
+	make: kingfact0make
 		Length: *
 		Tick: 120
+		Offset: 0, -15
 	bib: mwbib2
 		UseTilesetExtension: true
 		Length: *
@@ -84,21 +101,37 @@ wtentt:
 nodfact:
 	idle: ironore4
 		Start: 9
-	idle0: newfact
-	damaged-idle: newfact
+	idle0: baronfact0
+		Offset: 0,-11
+	damaged-idle: baronfact0
+		Offset: 0,-11
 		Start: 1
-	idle1: newfact
-		Start: 3
-	damaged-idle1: newfact
-		Start: 7
-	idle2: newfact
-		Start: 4
-	damaged-idle2: newfact
-		Start: 8
-	idle3: newfact
-		Start: 5
-	damaged-idle3: newfact
-		Start: 9
+	idle1: baronfact1
+		Offset: 0,-11
+		Start: 0
+	damaged-idle1: baronfact1
+		Offset: 0,-11
+		Start: 1
+	idle2: baronfact2
+		Offset: 0,-11
+		Start: 0
+		Length: 14
+		Tick: 150
+	damaged-idle2: baronfact2
+		Offset: 0,-11
+		Start: 14
+		Length: 14
+		Tick: 150
+	idle3: baronfact3
+		Offset: 0, -12
+		Start: 0
+		Length: 14
+		Tick: 150
+	damaged-idle3: baronfact3
+		Offset: 0, -12
+		Start: 14
+		Length: 14
+		Tick: 150
 	idle4: nodfact
 		Start: 0
 		Offset: 0, -12
@@ -118,7 +151,8 @@ nodfact:
 		Length: 4
 		Tick: 120
 		ZOffset: -1024
-	make: newfactmake
+	make: baronfact0make
+		Offset: 0,-11
 		Length: *
 		Tick: 120
 	bib: mwbib2

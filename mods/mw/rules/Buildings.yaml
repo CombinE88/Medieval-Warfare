@@ -389,6 +389,10 @@ FACTNEW:
 		Sticky: true
 		Lasso: 3c0
 		ReturnOnDeath: true
+	ProximityExternalCondition@WANDERER:
+		Range: 20c0
+		ValidStances: Ally
+		Condition: Wander
 
 
 FACTNEW.GDI:
@@ -426,7 +430,7 @@ FACTNEW.NOD:
 		Weapons: LargeWood1, LargeStone1, DebrUtility1, DebrUtility2, DebrUtility3
 		Pieces: 1, 2
 		Range: 1c0, 5c0
-        
+		
 FACTNEW.SUL:
 	Inherits: FACTNEW
 	RenderSprites:
@@ -673,6 +677,10 @@ MINIFACT:
 		Lasso: 3c0
 		UseConverting: false
 		ReturnOnDeath: true
+	ProximityExternalCondition@WANDERER:
+		Range: 20c0
+		ValidStances: Ally
+		Condition: Wander
 
 		
 HQNEWNOD:
@@ -719,7 +727,7 @@ HQNEWNOD:
 		FindRadius: 100
 		Offset: 171,256, 0
 		MoveOffset: 1,2
-        
+		
 HQNEWGDI:
 	Inherits: ^MWBaseBuilding
 	Inherits@Hitshape: ^2x2Shape
@@ -1120,7 +1128,7 @@ NUKENEW:
 	#	MoveOffset: 0,2
 	#	SpawnStart: false
 
-    
+	
 XLTNT1:
 	Inherits: ^MWBaseBuilding
 	Inherits@Hitshape: ^2x2Shape
@@ -1199,7 +1207,7 @@ XLTNT3:
 	Inherits: XLTNT1
 	RenderSprites:
 		Image: xltnt3
-        		
+				
 XLTNTUNI:
 	Inherits: XLTNT1
 	RenderSprites:
@@ -1307,7 +1315,7 @@ NODNUKE:
 	EditorTilesetFilter:
 		ExcludeTilesets: TEMPERATE, SNOW, DESERT, WINTER
 		Categories: 
-        
+		
 NTENT1:
 	Inherits: ^MWBaseBuilding
 	Inherits@Hitshape: ^2x1Shape
@@ -1351,7 +1359,7 @@ NTENT1:
 		Ammount: 3
 		SpawnOffset: 256,811,0
 		ExitCell: 1,1
-        
+		
 NTENT2:
 	Inherits: NTENT1
 	RenderSprites:
@@ -1362,7 +1370,7 @@ NTENT2:
 		DeathSequence: deadb
 	WithSpriteBody:
 		Sequence: idleb
-		StartSequence: makeb        
+		StartSequence: makeb		
 NTENT3:
 	Inherits: NTENT1
 	RenderSprites:
@@ -1373,7 +1381,7 @@ NTENT3:
 		DeathSequence: deadc
 	WithSpriteBody:
 		Sequence: idlec
-		StartSequence: makec      
+		StartSequence: makec	  
 NTENT4:
 	Inherits: NTENT1
 	RenderSprites:
@@ -1459,7 +1467,7 @@ ZEROPROC:
 		Bounds: 48,70,0,5
 	SelectionDecorations:
 		VisualBounds: 48,70,0,5
-        
+		
 NODPROC:
 	Inherits: ZEROPROC
 	RenderSprites:
@@ -1977,6 +1985,7 @@ CASTLE:
 		ClockSequence: clock
 		CircleSequence: circles
 		OrderName: CannonPowerInfoOrder
+		ActivationSequence: active
 	SupportPowerChargeBar:
 	ThrowsShrapnel@LARGE:
 		Weapons: LargeWood1, LargeWood1, LargeStone1, LargeStone1
@@ -2162,7 +2171,7 @@ WORKSHOPNOD:
 		Type: Workshop
 		Range: 4c0
 		Color: b50909
-        
+		
 
 WORKSHOPGDI:
 	Inherits: ^MWBaseBuilding
@@ -2498,13 +2507,13 @@ TECH1.Husk:
 	Tooltip:
 		Name: Mortar Station (Destroyed)
 	WithBuildingBib:
-        
+		
 ANYARMORY:
 	AlwaysVisible:
 	Tooltip:
 		Name: Armory or Tower of Progress
 		Description: Armory or Tower of Progress
-        
+		
 ANYREFINERY:
 	AlwaysVisible:
 	Tooltip:
@@ -2546,7 +2555,7 @@ ANYCASTLE:
 	Tooltip:
 		Name: Castle
 		Description: Castle
-        
+		
 SCAFFOLD:
 	AlwaysVisible:
 	Tooltip:
@@ -2751,7 +2760,7 @@ TAVERN:
 		MoveOffset: 1,2
 		FindRadius: 100
 		Sticky: true
-        Lasso: 3c0
+		Lasso: 3c0
 		ReturnOnDeath: true
 	WithFreeSpawnableActor@2:
 		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
@@ -2760,7 +2769,7 @@ TAVERN:
 		MoveOffset: 1,2
 		FindRadius: 100
 		Sticky: true
-        Lasso: 3c0
+		Lasso: 3c0
 		ReturnOnDeath: true
 	WithFreeSpawnableActor@3:
 		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
@@ -2769,7 +2778,7 @@ TAVERN:
 		MoveOffset: 1,2
 		FindRadius: 100
 		Sticky: true
-        Lasso: 3c0
+		Lasso: 3c0
 		ReturnOnDeath: true
 	WithFreeSpawnableActor@4:
 		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
@@ -2777,12 +2786,16 @@ TAVERN:
 		Offset: -1109,554, 0
 		MoveOffset: 1,2
 		FindRadius: 100
-        Lasso: 3c0
+		Lasso: 3c0
 		ReturnOnDeath: true
 		Sticky: true
 	BaseProvider:
 		Cooldown: 25
 		Range: 7c0
+	ProximityExternalCondition@WANDERER:
+		Range: 6c0
+		ValidStances: Ally
+		Condition: Wander
 		
 TOWNHALL:
 	Inherits: ^MWBaseBuilding	
@@ -2826,7 +2839,7 @@ TOWNHALL:
 		Sticky: true
 	IsTownhall:
 		Percent: 60
-    
+	
 SCHAFOTT:
 	Inherits: ^MWBaseBuilding	
 	Inherits@Hitshape: ^2x2Shape
@@ -2863,7 +2876,7 @@ SCHAFOTT:
 		Range: 1c0, 5c0
 	IsTownhall:
 		Percent: 40
-    
+	
 HERBALIST:
 	Inherits: ^MWBaseBuilding	
 	Inherits@Hitshape: ^2x2Shape
@@ -2948,7 +2961,7 @@ LODGE:
 		PipColor: Yellow
 		PipCount: 5
 		Capacity: 1000
-        
+		
 LJACKB:
 	Inherits: ^MWBaseBuilding
 	Inherits@Hitshape: ^1x1Shape
