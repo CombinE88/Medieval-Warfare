@@ -16,12 +16,10 @@ namespace OpenRA.Mods.MW.Traits
 	public class IsGrave : INotifyCreated, INotifyRemovedFromWorld
 	{
 		private IsGraveInfo info;
-		readonly Actor self;
 		
 		public IsGrave(Actor self,IsGraveInfo info)
 		{
 			this.info = info;
-			this.self = self;
 		}
 
 		public void Created(Actor self)

@@ -17,11 +17,7 @@ namespace OpenRA.Mods.MW.Traits
 		[Desc("Voice string when planting explosive charges.")]
 		[VoiceReference] public readonly string Voice = "Action";
 
-		public readonly string Cursor = "preycursor";
-
 		public int Buildinterval = 25;
-		
-		public int Buildpower = 1;
 
 		public string SelfEnabledCondition = null;
 		
@@ -104,14 +100,12 @@ namespace OpenRA.Mods.MW.Traits
 
 		class PreyBuildOrderTargeter : UnitOrderTargeter
 		{
-			private readonly Func<Actor, bool> canTarget;
 			private HashSet<String> Validnames;
 			
 			public PreyBuildOrderTargeter(string order, int priority,
 				Func<Actor, bool> able, HashSet<string> ValidActors)
 				: base(order, priority, "preycursor", false, true)
 			{
-				this.canTarget = able;
 				Validnames = ValidActors;
 
 			}

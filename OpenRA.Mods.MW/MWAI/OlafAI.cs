@@ -19,7 +19,6 @@ namespace OpenRA.Mods.MW.MWAI
         class CaptureTarget<TInfoType> where TInfoType : class, ITraitInfoInterface
         {
             internal readonly Actor Actor;
-            internal readonly TInfoType Info;
 
             /// <summary>The order string given to the capturer so they can capture this actor.</summary>
             /// <example>ExternalCaptureActor</example>
@@ -28,7 +27,6 @@ namespace OpenRA.Mods.MW.MWAI
             internal CaptureTarget(Actor actor, string orderString)
             {
                 Actor = actor;
-                Info = actor.Info.TraitInfoOrDefault<TInfoType>();
                 OrderString = orderString;
             }
         }
@@ -321,18 +319,6 @@ namespace OpenRA.Mods.MW.MWAI
                 return randomConstructionYard != null ? randomConstructionYard.Location : initialBaseCenter;
             }
 
-
-        public CPos NextDeer()
-            {
-
-
-
-            var randomStand = World.Actors.Where(a => Info.BuildingCommonNames.DeerStands.Contains(a.Info.Name))
-                .RandomOrDefault(Random);
-   
-                return randomStand != null ? randomStand.Location : initialBaseCenter;
-            }
-
         public bool IsEnabled;
             public List<Squad> Squads = new List<Squad>();
             public Player Player { get; private set; }
@@ -374,7 +360,6 @@ namespace OpenRA.Mods.MW.MWAI
             int attackForceTicks;
             int minAttackForceDelayTicks;
             int minCaptureDelayTicks;
-            readonly int maximumCaptureTargetOptions;
 
 
 
@@ -406,8 +391,6 @@ namespace OpenRA.Mods.MW.MWAI
 
                 foreach (var decision in info.PowerDecisions)
                     powerDecisions.Add(decision.OrderName, decision);
-
-                maximumCaptureTargetOptions = Math.Max(1, Info.MaximumCaptureTargetOptions);
 
             }
 
@@ -686,7 +669,7 @@ namespace OpenRA.Mods.MW.MWAI
 
                         var closeDeerStands = World.FindActorsInCircle(World.Map.CenterOfCell(defenseCenter), new WDist(1024 * 30))
                             .Where(a => !a.Disposed && Info.BuildingCommonNames.DeerStands.Contains(a.Info.Name.ToLower()))
-                            .Shuffle(Random);
+                            .Shuffle(Player.World.SharedRandom);
 
                         var targetstand = (closeDeerStands.Any() && closeDeerStands != null) ? closeDeerStands.First().Location : baseCenter;
 
@@ -700,7 +683,7 @@ namespace OpenRA.Mods.MW.MWAI
 
                         var findATree = World.FindActorsInCircle(World.Map.CenterOfCell(defenseCenter), new WDist(1024 * (Info.MaxBaseRadius)))
                             .Where(a => !a.Disposed && a.Info.HasTraitInfo<HuntableDeerInfo>() && a.Info.TraitInfo<HuntableDeerInfo>().HuntTypes.Contains("TreeToChop"))
-                            .Shuffle(Random);
+                            .Shuffle(Player.World.SharedRandom);
 
                         var closeTrees = (findATree.Any() && findATree.First() != null ) ?
                             World.FindActorsInCircle(World.Map.CenterOfCell(findATree.First().Location), new WDist(1024 * (7)))

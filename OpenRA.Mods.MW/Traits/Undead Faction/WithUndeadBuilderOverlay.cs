@@ -77,7 +77,6 @@ namespace OpenRA.Mods.MW.Traits.Render
 	public class WithUndeadBuilderOverlay : PausableConditionalTrait<WithUndeadBuilderOverlayInfo>, INotifyDamageStateChanged, INotifyBuildComplete, INotifySold, INotifyTransform, ITick
 	{
 		readonly Animation overlay;
-        private readonly new WithUndeadBuilderOverlayInfo Info;
         bool buildComplete;
 		
 
@@ -91,7 +90,6 @@ namespace OpenRA.Mods.MW.Traits.Render
 		{
 			var rs = self.Trait<RenderSprites>();
 			var body = self.Trait<BodyOrientation>();
-			this.Info = info;
 
 			UD = self.TraitsImplementing<UndeadBuilder>().FirstOrDefault();
 

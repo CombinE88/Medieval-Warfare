@@ -18,7 +18,6 @@ namespace OpenRA.Mods.MW.Widgets.Logic
 	{
 	public class IngameMaxPopulationCounterLogic : ChromeLogic
 	{
-		readonly World world;
 		readonly Player player;
 		readonly string cashLabel;
         
@@ -30,8 +29,6 @@ namespace OpenRA.Mods.MW.Widgets.Logic
 		public IngameMaxPopulationCounterLogic(Widget widget, World world)
 		{
 			var pop = widget.Get<LabelWithTooltipWidget>("MAXPOP");
-		
-			this.world = world;
 			player = world.LocalPlayer;
 		
 			cashLabel = pop.Text;

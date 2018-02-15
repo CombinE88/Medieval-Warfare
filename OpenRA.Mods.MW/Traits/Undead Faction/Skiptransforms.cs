@@ -62,14 +62,12 @@ namespace OpenRA.Mods.MW.Traits
 	{
 		readonly Actor self;
 		readonly SkipTransformsInfo info;
-		readonly BuildingInfo buildingInfo;
 		readonly string faction;
 
 		public SkipTransforms(ActorInitializer init, SkipTransformsInfo info)
 		{
 			self = init.Self;
 			this.info = info;
-			buildingInfo = self.World.Map.Rules.Actors[info.IntoActor].TraitInfoOrDefault<BuildingInfo>();
 			faction = init.Contains<FactionInit>() ? init.Get<FactionInit, string>() : self.Owner.Faction.InternalName;
 		}
 

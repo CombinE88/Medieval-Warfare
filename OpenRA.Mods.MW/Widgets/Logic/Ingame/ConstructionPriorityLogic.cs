@@ -28,8 +28,6 @@ namespace OpenRA.Mods.MW.Widgets
 
 		private bool priorityisdisabled;
 
-		TraitPair<IIssueDeployOrder>[] selectedDeploys = { };
-
 		[ObjectCreator.UseCtor]
 		public ConstructionPriorityLogic(Widget widget, World world)
 		{
@@ -77,8 +75,7 @@ namespace OpenRA.Mods.MW.Widgets
 
 		void BindButtonIcon(ButtonWidget button)
 		{
-			var icon = button.Get<ImageWidget>("ICON");
-			icon.GetImageName = () => button.IsDisabled() ? icon.ImageName + "-disabled" : icon.ImageName;
+            button.Get<ImageWidget>("ICON").GetImageName = () => button.IsDisabled() ? button.Get<ImageWidget>("ICON").ImageName + "-disabled" : button.Get<ImageWidget>("ICON").ImageName;
 		}
 
 		void PerformOrderOnSelection(Func<Actor, Order> f)

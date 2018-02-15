@@ -26,24 +26,24 @@ namespace OpenRA.Mods.MW.Traits
 		[Desc("Cell offset where the exiting actor enters the ActorMap relative to the topleft cell of the producing actor.")]
 		public readonly CVec ExitCell = CVec.Zero;
 		
-		public object Create(ActorInitializer init) { return new ProvidesLivingspace(init.Self, this); }
+		public object Create(ActorInitializer init) { return new ProvidesLivingspace(init, this); }
 
 	}
 
 	public class ProvidesLivingspace : INotifyCreated, INotifyRemovedFromWorld
 	{
-		private ProvidesLivingspaceInfo info;
-		
-		public ProvidesLivingspace(Actor self, ProvidesLivingspaceInfo info)
-		{
-			this.info = info;
-		}
+        readonly ProvidesLivingspaceInfo Info;
 
-		public void Created(Actor self)
+        public ProvidesLivingspace(ActorInitializer init, ProvidesLivingspaceInfo providesLivingspaceInfo)
+        {
+            this.Info = providesLivingspaceInfo;
+        }
+
+        public void Created(Actor self)
 		{
 			if (!self.Owner.NonCombatant && self.Owner.WinState != WinState.Lost && self.Owner.PlayerActor.Info.HasTraitInfo<PlayerCivilizationInfo>())
             {
-                self.Owner.PlayerActor.Trait<PlayerCivilization>().MaxLivingspacevar += info.Ammount;
+                self.Owner.PlayerActor.Trait<PlayerCivilization>().MaxLivingspacevar += Info.Ammount;
                 self.Owner.PlayerActor.Trait<PlayerCivilization>().Recalculate();
                 self.Owner.PlayerActor.Trait<PlayerCivilization>().PeasantProvider.Add(self);
             }
@@ -53,7 +53,7 @@ namespace OpenRA.Mods.MW.Traits
 		{
 			if (!self.Owner.NonCombatant && self.Owner.WinState != WinState.Lost && self.Owner.PlayerActor.Info.HasTraitInfo<PlayerCivilizationInfo>())
             {
-                self.Owner.PlayerActor.Trait<PlayerCivilization>().MaxLivingspacevar -= info.Ammount;
+                self.Owner.PlayerActor.Trait<PlayerCivilization>().MaxLivingspacevar -= Info.Ammount;
                 self.Owner.PlayerActor.Trait<PlayerCivilization>().Recalculate();
                 self.Owner.PlayerActor.Trait<PlayerCivilization>().PeasantProvider.Remove(self);
             }

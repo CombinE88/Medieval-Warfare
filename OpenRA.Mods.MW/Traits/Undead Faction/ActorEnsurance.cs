@@ -39,7 +39,7 @@ namespace OpenRA.Mods.MW.Traits
 
 		public readonly int StartDelay = 125;
 
-		public object Create(ActorInitializer init) { return new ActorEnsurance(init, this); }
+		public object Create(ActorInitializer init) { return new ActorEnsurance(this); }
 	}
 
 	class ActorEnsurance : ITick
@@ -49,7 +49,7 @@ namespace OpenRA.Mods.MW.Traits
 
 
 
-		public ActorEnsurance(ActorInitializer init, ActorEnsuranceInfo info)
+		public ActorEnsurance(ActorEnsuranceInfo info)
 		{
 			this.info = info;
 			

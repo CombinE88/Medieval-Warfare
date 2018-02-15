@@ -294,7 +294,7 @@ ROSS1:
 		Prerequisites: anyhq
 		Description: Fast, light Cavalry.\n  Strong vs Cavalry and Buildings\n  Weak vs Infantry\n\nTrains: 1 Peasant\n\n
 		Queue: MVehicle.Nod
-		BuildDuration: 250
+		#BuildDuration: 250
 	Mobile:
 		SharesCell: false
 		Crushes: crate, infantry
@@ -355,7 +355,7 @@ ROSS2:
 		Prerequisites: anyhq
 		Description: Slow, medium Cavalry.\n  Strong vs Cavalry and Buildings\n  Weak vs Infantry\n\nTrains: 1 Peasant\n\n
 		Queue: MVehicle.GDI
-		BuildDuration: 300
+		#BuildDuration: 300
 	Mobile:
 		SharesCell: false
 		Crushes: crate, infantry
@@ -415,7 +415,7 @@ ROSS5:
 		Prerequisites: anycastle
 		Description: Heavily armored and very slow.\n  Strong vs Everything (+Spectral Units)\n  Weak vs Long-ranged weapons\n  Can attack Aircraft\n\nTrains: 2 Peasant\n\n
 		Queue: MVehicle.GDI
-		BuildDuration: 1000
+		#BuildDuration: 1000
 	Mobile:
 		SharesCell: false
 		Crushes: crate, infantry
@@ -497,7 +497,7 @@ ROSS3:
 		Description: Strong mounted Archer.\n  Strong vs Infantry, Aircrafts and Buildings and Spectral Units\n  Has long range, very fast\n  Can detect cloaked units\n  Can attack Aircraft\n\nTrains: 1 Peasant\n\n
 		Prerequisites: anyhq, armorynod
 		Queue:  MVehicle.Nod
-		BuildDuration: 450
+		#BuildDuration: 450
 	Mobile:
 		SharesCell: false
 		TurnSpeed: 12
@@ -562,7 +562,7 @@ ROSS4:
 		BuildPaletteOrder: 10
 		Description: Fast scout cavalry, armed with spears.\n  Very weak vs Infantry!\n  Strong vs Cavalry, Buildings and light Aircraft\n  Can attack Aircraft\n\nTrains: 1 Peasant\n\n
 		Queue:  MVehicle.Nod
-		BuildDuration: 150
+		#BuildDuration: 150
 	Mobile:
 		SharesCell: false
 		TurnSpeed: 12
@@ -633,7 +633,7 @@ ROSS4B:
 		IconPalette: raicon
 		BuildPaletteOrder: 5
 		Queue: MVehicle.GDI
-		BuildDuration: 150
+		#BuildDuration: 150
 	RevealsShroud:
 		Range: 8c0
 	Mobile:
@@ -694,7 +694,7 @@ ROSS4C:
 		IconPalette: raicon
 		BuildPaletteOrder: 5
 		Queue: MVehicle.Nod
-		BuildDuration: 150
+		#BuildDuration: 150
 	RevealsShroud:
 		Range: 8c0
 	Mobile:

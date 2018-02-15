@@ -146,7 +146,7 @@
 		Name: Corruption
 		PipColor: Red
 		ResourceType: 10
-		Palette: alphabarely
+		Palette: alphagrey
 		TerrainType: Corruption
 		Sequences: corrupt1,corrupt2,corrupt3,corrupt4,corrupt5,corrupt6,corrupt7,corrupt8,corrupt9
 		MaxDensity: 1
@@ -191,18 +191,18 @@ World:
 		Class: medieval
 		ClassName: Supply Wagon Only
 		Factions: gdi, nod, sul
-		BaseActor: mcvnew
+		BaseActor: factnew
 	MPStartUnits@minimumdead:
 		Class: medieval
 		ClassName: Supply Wagon Only
 		Factions: ded
 		SupportActors: preycolyte,preycolyte, preycolyte
-		BaseActor: undeadcomm
+		BaseActor: ziggurat1
 	MPStartUnits@dead:
 		Class: medieval2
 		ClassName: Normal Start
 		Factions: ded
-		BaseActor: undeadcomm
+		BaseActor: ziggurat1
 		SupportActors: preycolyte,preycolyte, preycolyte, preycolyte
 		InnerSupportRadius: 4
 		OuterSupportRadius: 5
@@ -210,7 +210,7 @@ World:
 		Class: medieval3
 		ClassName: Well Populated
 		Factions: ded
-		BaseActor: undeadcomm
+		BaseActor: ziggurat1
 		SupportActors: preycolyte,preycolyte, preycolyte ,preycolyte, preycolyte
 		InnerSupportRadius: 4
 		OuterSupportRadius: 5
@@ -218,7 +218,7 @@ World:
 		Class: medieval4
 		ClassName: Over Populated
 		Factions: ded
-		BaseActor: undeadcomm
+		BaseActor: ziggurat1
 		SupportActors: preycolyte,preycolyte, preycolyte ,preycolyte, preycolyte ,preycolyte, preycolyte
 		InnerSupportRadius: 4
 		OuterSupportRadius: 5
@@ -226,7 +226,7 @@ World:
 		Class: medieval2
 		ClassName: Quick Start
 		Factions: gdi, nod, sul
-		BaseActor: mcvnew
+		BaseActor: factnew
 		SupportActors: mwwand1,mwwand2,mwwand3,mwwand4,mwwand5
 		InnerSupportRadius: 4
 		OuterSupportRadius: 5
@@ -234,7 +234,7 @@ World:
 		Class: medieval3
 		ClassName: Well Populated
 		Factions: gdi, nod, sul
-		BaseActor: mcvnew
+		BaseActor: factnew
 		SupportActors: mwwand1,mwwand2,mwwand3,mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12,mwwand1,mwwand2,mwwand3
 		InnerSupportRadius: 4
 		OuterSupportRadius: 5
@@ -242,7 +242,7 @@ World:
 		Class: medieval4
 		ClassName: Over Populated
 		Factions: gdi, nod, sul
-		BaseActor: mcvnew
+		BaseActor: factnew
 		SupportActors: mwwand1,mwwand2,mwwand3,mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12,mwwand1,mwwand2,mwwand3, mwwand5, mwwand6, mwwand10, mwwand11
 		InnerSupportRadius: 4
 		OuterSupportRadius: 5

@@ -38,7 +38,9 @@ namespace OpenRA.Mods.MW.Orders
         public bool CanTarget(Actor self, Target target, List<Actor> othersAtTarget, ref TargetModifiers modifiers, ref string cursor)
         {
             if (target.Type != TargetType.Actor)
+            {
                 return false;
+            }
 
             IsQueued = modifiers.HasModifier(TargetModifiers.ForceQueue);
             cursor = this.cursor();

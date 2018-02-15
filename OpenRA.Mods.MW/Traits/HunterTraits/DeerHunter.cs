@@ -41,7 +41,6 @@ namespace OpenRA.Mods.MW.Traits
 
 	class DeerHunter : INotifyCreated, INotifyIdle, INotifyKilled
 	{
-		readonly IEnumerable<AttackBase> activeAttackBases;
 		private readonly DeerHunterInfo info;
 		private Actor self;
 
@@ -55,7 +54,6 @@ namespace OpenRA.Mods.MW.Traits
 		private int Tick;
 		
 		AmmoPool ammoPool;
-		int maxAmmo;
 		int whatAmmo;
 
 
@@ -63,7 +61,6 @@ namespace OpenRA.Mods.MW.Traits
 		{
 			this.info = info;
 			self = init.Self;
-			activeAttackBases = self.TraitsImplementing<AttackBase>().ToArray().Where(Exts.IsTraitEnabled);
 			
 		}
 
@@ -72,7 +69,6 @@ namespace OpenRA.Mods.MW.Traits
 		void INotifyCreated.Created(Actor self)
 		{
 			ammoPool = self.TraitsImplementing<AmmoPool>().FirstOrDefault(la => la.Info.Name == "Food");
-			maxAmmo = ammoPool.Info.Ammo;
 			whatAmmo = ammoPool.CurrentAmmo;
 		}
 
@@ -177,9 +173,8 @@ namespace OpenRA.Mods.MW.Traits
 		
 		void Attack(Actor self, Actor targetActor)
 		{
-			var target = Target.FromActor(targetActor);
-			
-			self.QueueActivity(new Attack(self,target,true,true, 100));
+
+            self.QueueActivity(new Attack(self, Target.FromActor(targetActor), true,true, 100));
 		}
 
 		void Move(Actor self, Actor targetActor)
@@ -195,9 +190,8 @@ namespace OpenRA.Mods.MW.Traits
 		
 		void MovePlusRandomVector(Actor self, Actor targetActor)
 		{
-			var move = self.TraitOrDefault<IMove>();
-			self.QueueActivity(new AttackMoveActivity(self,
-				move.MoveTo(
+            self.QueueActivity(new AttackMoveActivity(self,
+                self.TraitOrDefault<IMove>().MoveTo(
 					targetActor.Location + new CVec(self.World.SharedRandom.Next(-2, 3), self.World.SharedRandom.Next(-2, 3)), 4)));
 		}
 		

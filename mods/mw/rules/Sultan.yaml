@@ -196,10 +196,7 @@ SULGTW:
 		Offset: 170,170,500
 	DamageMultiplier@static:
 		RequiresCondition: static && Construct >= 30
-		Modifier: 70   
-	PersonValued:
-		ActorCount: 3
-		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
+		Modifier: 70  
 	ExternalCondition@buildfurther: 
 		Condition: Construct
 		TotalCap: 50
@@ -1460,7 +1457,7 @@ SULE1:
 		IconPalette: raicon
 		BuildPaletteOrder: 10
 		Queue: MInfantry.SUL
-		BuildDuration: 50
+		#BuildDuration: 50
 	Mobile:
 		Speed: 85
 	Health:
@@ -1509,7 +1506,7 @@ SULE2:
 		BuildPaletteOrder: 30
 		Queue: MInfantry.SUL
 		Prerequisites: anyhq
-		BuildDuration: 75
+		#BuildDuration: 75
 	Mobile:
 		Speed: 56
 	Health:
@@ -1566,7 +1563,7 @@ SULE3:
 		IconPalette: raicon
 		BuildPaletteOrder: 20
 		Queue: MInfantry.SUL
-		BuildDuration: 75
+		#BuildDuration: 75
 	Mobile:
 		Speed: 60
 	Health:
@@ -1636,7 +1633,7 @@ SULE4:
 		BuildPaletteOrder: 30
 		Queue: MInfantry.SUL
 		Prerequisites: sultow1
-		BuildDuration: 250
+		#BuildDuration: 250
 	Mobile:
 		Speed: 55
 	Health:
@@ -1692,7 +1689,7 @@ SULE5:
 		BuildPaletteOrder: 40
 		Prerequisites: sultow1, sultow4, anyhq
 		Queue: MInfantry.SUL
-		BuildDuration: 450
+		#BuildDuration: 450
 	Mobile:
 		Speed: 175
 	Health:
@@ -1746,7 +1743,7 @@ SULE6:
 		IconPalette: raicon
 		BuildPaletteOrder: 40
 		Queue: MInfantry.SUL
-		BuildDuration: 150
+		#BuildDuration: 150
 	WithFacingSpriteBody:
 		Sequence: idle
 		RequiresCondition: !MoveAnim
@@ -1824,7 +1821,7 @@ SULM1:
 		IconPalette: raicon
 		BuildPaletteOrder: 10
 		Queue: MVehicle.SUL
-		BuildDuration: 200
+		#BuildDuration: 200
 	Mobile:
 		Speed: 66
 	Health:
@@ -1935,7 +1932,7 @@ SULM2:
 		Prerequisites: sultow2, sultow4, anyhq
 		BuildPaletteOrder: 70
 		Queue: MVehicle.SUL
-		BuildDuration: 600
+		#BuildDuration: 600
 	Mobile:
 		Speed: 66
 	-Crushable:
@@ -1992,7 +1989,7 @@ SULM4:
 		BuildPaletteOrder: 60
 		Queue: MVehicle.SUL
 		Prerequisites: sultow2, anyhq
-		BuildDuration: 300
+		#BuildDuration: 300
 	Mobile:
 		Speed: 66
 	Health:

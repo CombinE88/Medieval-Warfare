@@ -14,15 +14,11 @@ namespace OpenRA.Mods.MW.Traits
 
     public class IsTownhall : ConditionalTrait<IsTownhallInfo>, INotifyCreated, INotifyRemovedFromWorld
     {
-        private IsTownhallInfo info;
-        readonly Actor self;
         PlayerCivilization PlayerCiv;
         bool Enabled = false;
 
         public IsTownhall(Actor self, IsTownhallInfo info) : base(info)
         {
-            this.info = info;
-            this.self = self;
             PlayerCiv = self.Owner.PlayerActor.Trait<PlayerCivilization>();
         }
 

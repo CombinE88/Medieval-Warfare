@@ -32,6 +32,8 @@
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
     <Optimize>true</Optimize>
     <WarningLevel>4</WarningLevel>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+    <CodeAnalysisIgnoreGeneratedCode>false</CodeAnalysisIgnoreGeneratedCode>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="FuzzyLogicLibrary">
@@ -87,6 +89,8 @@
     <Compile Include="Traits\AmmoPoolConditions.cs" />
     <Compile Include="Traits\Activites\ActivityInterfaces.cs" />
     <Compile Include="Traits\GrantPermanentCondition.cs" />
+    <Compile Include="Traits\Undead Faction\AcolytePreyBuildInfo.cs" />
+    <Compile Include="Traits\Undead Faction\AcolytePreyInfo.cs" />
     <Compile Include="Traits\WithPermanentExplosion.cs" />
     <Compile Include="Traits\Construction\AddPrioTargeter.cs" />
     <Compile Include="Traits\Construction\ConstructionPriority.cs" />
@@ -122,10 +126,8 @@
     <Compile Include="Traits\ShakeOnCreate.cs" />
     <Compile Include="Traits\DebugTransformOnCondition.cs" />
     <Compile Include="Traits\TransformOnCondition.cs" />
-    <Compile Include="Traits\Undead Faction\AcolytpreyBuild.cs" />
     <Compile Include="Traits\Undead Faction\UndeadGarbageCollector.cs" />
     <Compile Include="Traits\Undead Faction\CorruptDeerstands.cs" />
-    <Compile Include="Traits\Undead Faction\AcolytpreyResources.cs" />
     <Compile Include="Traits\Undead Faction\BuildUpSound.cs" />
     <Compile Include="Traits\Undead Faction\FloatingTextBackwards.cs" />
     <Compile Include="Traits\Undead Faction\GrimReanimation.cs" />

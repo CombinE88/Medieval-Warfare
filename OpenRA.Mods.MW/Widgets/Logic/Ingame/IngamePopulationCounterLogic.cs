@@ -25,10 +25,8 @@ namespace OpenRA.Mods.MW.Widgets.Logic
 		const float DisplayFracPerFrame = .07f;
 		const int DisplayDeltaPerFrame = 37;
 
-		readonly World world;
 		readonly Player player;
 		readonly string cashLabel;
-		readonly HashSet<string> Population  = new HashSet<string>();
 		
 		
         
@@ -41,7 +39,6 @@ namespace OpenRA.Mods.MW.Widgets.Logic
 		{
 			var pop = widget.Get<LabelWithTooltipWidget>("POP");
 
-			this.world = world;
 			player = world.LocalPlayer;
 		
 			cashLabel = pop.Text;

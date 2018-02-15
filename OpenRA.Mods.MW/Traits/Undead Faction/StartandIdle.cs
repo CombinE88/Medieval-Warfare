@@ -9,22 +9,17 @@ namespace OpenRA.Mods.MW.Traits
     [Desc("Is Unit a Peasant (adds a count of 1 to the PlayerCivilisation).")]
     public class StartAndIdleInfo : ITraitInfo
     {
-        public object Create(ActorInitializer init) { return new StartAndIdle(init.Self, this); }
+        public object Create(ActorInitializer init) { return new StartAndIdle(init.Self); }
     }
 
     public class StartAndIdle : INotifyCreated, ITick
     {
-        private StartAndIdleInfo info;
-        readonly Actor self;
-
         private int ticker;
         private Activity move;
         bool triggered;
 		
-        public StartAndIdle(Actor self, StartAndIdleInfo info)
+        public StartAndIdle(Actor self)
         {
-            this.info = info;
-            this.self = self;
             ticker = 1;
         }
 

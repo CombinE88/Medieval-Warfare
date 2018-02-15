@@ -22,7 +22,6 @@ namespace OpenRA.Mods.MW.Widgets.Logic
 		const float DisplayFracPerFrame = .07f;
 		const int DisplayDeltaPerFrame = 37;
 
-		readonly World world;
 		readonly Player player;
 		readonly string cashLabel;
 		
@@ -35,8 +34,6 @@ namespace OpenRA.Mods.MW.Widgets.Logic
 		public IngameFullPopulationCounterLogic(Widget widget, World world)
 		{
 			var pop = widget.Get<LabelWithTooltipWidget>("FULLPOP");
-			
-			this.world = world;
 			player = world.LocalPlayer;
 			
 			cashLabel = pop.Text;

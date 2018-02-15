@@ -23,7 +23,6 @@ namespace OpenRA.Mods.MW.Activities
         private Dock _d;
 
         private int ticks;
-        private int buildpower;
         private UndeadBuilder UndeadBuilder;
 
         private ConditionManager ConditionManager;
@@ -42,7 +41,6 @@ namespace OpenRA.Mods.MW.Activities
             _d = d;
             
             ticks = self.Info.TraitInfo<AcolytePreyBuildInfo>().Buildinterval;
-            buildpower = self.Info.TraitInfo<AcolytePreyBuildInfo>().Buildpower;
             UndeadBuilder = dockactor.TraitsImplementing<UndeadBuilder>().FirstOrDefault();
 
             ConditionManager = self.Trait<ConditionManager>();

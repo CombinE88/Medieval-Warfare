@@ -17,6 +17,7 @@ Player:
 	FrozenActorLayer:
 	PlaceBeacon:
 	PlayerCivilization:
+		Delay: 8
 		AlivePeasants: 10
 		SpawnModifier: 2
 		SpecialModifier: 

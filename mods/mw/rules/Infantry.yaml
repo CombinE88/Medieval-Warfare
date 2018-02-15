@@ -238,7 +238,7 @@ ENGENEER:
 		IconPalette: raicon
 		BuildPaletteOrder: 110
 		Queue: MInfantry.GDI, MInfantry.Nod, MInfantry.SUL
-		BuildDuration: 75
+		#BuildDuration: 75
 	Mobile:
 		Speed: 66
 	Captures:
@@ -330,7 +330,7 @@ E2NEW:
 		IconPalette: raicon
 		BuildPaletteOrder: 20
 		Queue:  MInfantry.Nod, MInfantry.Horse
-		BuildDuration: 50
+		#BuildDuration: 50
 	Mobile:
 		Speed: 45
 	Health:
@@ -387,7 +387,7 @@ E2NEWV2:
 		Prerequisites: ~!upgradeguns2
 		BuildPaletteOrder: 20
 		Queue: MInfantry.GDI
-		BuildDuration: 50
+		#BuildDuration: 50
 	Mobile:
 		Speed: 45
 	Health:
@@ -443,7 +443,7 @@ E2NEWV2U:
 		IconPalette: raicon
 		BuildPaletteOrder: 20
 		Queue: MInfantry.GDI
-		BuildDuration: 50
+		#BuildDuration: 50
 		Prerequisites: ~upgradeguns2
 	Mobile:
 		Speed: 45
@@ -542,7 +542,7 @@ E3NEWU:
 		IconPalette: raicon
 		BuildPaletteOrder: 10
 		Queue: MInfantry.GDI
-		BuildDuration: 50
+		#BuildDuration: 50
 		Prerequisites: ~upgradeguns1
 	Mobile:
 		Speed: 54
@@ -636,7 +636,7 @@ E3NEW:
 		IconPalette: raicon
 		BuildPaletteOrder: 10
 		Queue: MInfantry.GDI
-		BuildDuration: 50
+		#BuildDuration: 50
 		Prerequisites: ~!upgradeguns1
 	Mobile:
 		Speed: 56
@@ -686,7 +686,7 @@ E3NEWV2:
 		IconPalette: raicon
 		BuildPaletteOrder: 10
 		Queue: MInfantry.Nod, MInfantry.Horse
-		BuildDuration: 50
+		#BuildDuration: 50
 	Mobile:
 		Speed: 56
 	Health:
@@ -739,7 +739,7 @@ E9NEW:
 		BuildPaletteOrder: 40
 		Prerequisites: anyhq
 		Queue: MInfantry.Nod, MInfantry.Horse
-		BuildDuration: 250
+		#BuildDuration: 250
 	Mobile:
 		Speed: 56
 	Health:
@@ -795,7 +795,7 @@ E4NEW:
 		IconPalette: raicon
 		BuildPaletteOrder: 30
 		Queue: MInfantry.Nod, MInfantry.Horse
-		BuildDuration: 50
+		#BuildDuration: 50
 	Mobile:
 		Speed: 60
 	Health:
@@ -867,7 +867,7 @@ E4NEWV2:
 		IconPalette: raicon
 		BuildPaletteOrder: 30
 		Queue: MInfantry.GDI
-		BuildDuration: 50
+		#BuildDuration: 50
 	Mobile:
 		Speed: 60
 	Health:
@@ -943,7 +943,7 @@ E5NEW:
 		BuildPaletteOrder: 50
 		Prerequisites: anyarmory
 		Queue: MInfantry.Nod, MInfantry.Horse
-		BuildDuration: 300
+		#BuildDuration: 300
 	Mobile:
 		Speed: 56
 	Health:
@@ -996,7 +996,7 @@ RMBONEW:
 		BuildPaletteOrder: 40
 		Prerequisites: anyhq
 		Queue: MInfantry.GDI
-		BuildDuration: 250
+		#BuildDuration: 250
 	Mobile:
 		Speed: 45
 	Health:
@@ -1054,7 +1054,7 @@ NEWCOMM:
 		BuildPaletteOrder: 50
 		Prerequisites: anycastle, anyhq
 		Queue: MInfantry.GDI
-		BuildDuration: 700
+		#BuildDuration: 700
 	Mobile:
 		Speed: 50
 		RequiresCondition: !Swinging
@@ -1127,7 +1127,7 @@ ASSASSIN:
 		BuildPaletteOrder: 60
 		Queue: MInfantry.Nod, MInfantry.Horse
 		Prerequisites: anycastle
-		BuildDuration: 300
+		#BuildDuration: 300
 	Mobile:
 		Speed: 66
 	Health:
@@ -1185,7 +1185,7 @@ E8FARMER:
 		IconPalette: raicon
 		BuildPaletteOrder: 100
 		Queue: MInfantry.GDI, MInfantry.Nod, ~disabled
-		BuildDuration: 150
+		#BuildDuration: 150
 	WithFacingSpriteBody:
 		Sequence: idle
 		RequiresCondition: !MoveAnim
@@ -1260,7 +1260,7 @@ BUMMLER:
 		IconPalette: raicon
 		BuildPaletteOrder: 120
 		Queue: MInfantry.GDI, MInfantry.Nod, ~disabled, MInfantry.SUL
-		BuildDuration: 350
+		#BuildDuration: 350
 	WithFacingSpriteBody:
 		Sequence: idle
 		RequiresCondition: !MoveAnim

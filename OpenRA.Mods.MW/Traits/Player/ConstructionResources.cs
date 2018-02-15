@@ -16,29 +16,20 @@ namespace OpenRA.Mods.MW.Traits
 	public class ConstructionResourcesInfo : ITraitInfo
 	{
 		public readonly string Type = "";
-		public object Create(ActorInitializer init) { return new ConstructionResources(init.Self, this); }
+		public object Create(ActorInitializer init) { return new ConstructionResources(init.Self); }
 	}
 	
 
-	public class ConstructionResources : ITick, INotifyCreated
+	public class ConstructionResources : ITick
 	{
 
 		private int tickrate;
-		private Actor TraitSelf;
-		private ConstructionResourcesInfo info;
 		public int Stored;
 
-		void INotifyCreated.Created(Actor self)
-		{
-		}
-
-		public ConstructionResources(Actor self, ConstructionResourcesInfo info)
-		{
-			this.info = info;
-			TraitSelf = self;
-		}
-
-		
+        public ConstructionResources(Actor self)
+        {
+        }
+ 
 
 		public void Tick(Actor self)
 		{

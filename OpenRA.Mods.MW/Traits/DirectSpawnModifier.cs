@@ -14,15 +14,11 @@ namespace OpenRA.Mods.MW.Traits
 
     public class DirectSpawnModifier : ConditionalTrait<DirectSpawnModifierInfo>, INotifyCreated, INotifyRemovedFromWorld
     {
-        private DirectSpawnModifierInfo info;
-        readonly Actor self;
         PlayerCivilization PlayerCiv;
         bool Enabled = false;
 
         public DirectSpawnModifier(Actor self, DirectSpawnModifierInfo info) : base(info)
         {
-            this.info = info;
-            this.self = self;
             PlayerCiv = self.Owner.PlayerActor.Trait<PlayerCivilization>();
         }
 

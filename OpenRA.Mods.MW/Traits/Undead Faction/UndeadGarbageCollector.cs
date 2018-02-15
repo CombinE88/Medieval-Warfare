@@ -36,7 +36,6 @@ namespace OpenRA.Mods.MW.Traits
     class GarbageCollector : ConditionalTrait<GarbageCollectorInfo>, ITick, INotifyCreated
     {
         readonly GarbageCollectorInfo info;
-        private Actor self;
         private int tickler;
         private ResourceLayer resLayer;
 
@@ -49,7 +48,6 @@ namespace OpenRA.Mods.MW.Traits
 
         void INotifyCreated.Created(Actor self)
         {
-            this.self = self;
             resLayer = self.World.WorldActor.Trait<ResourceLayer>();
         }
 

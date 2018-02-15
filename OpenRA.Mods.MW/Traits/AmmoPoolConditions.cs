@@ -25,13 +25,11 @@ namespace OpenRA.Mods.MW.Traits
 		int tokenEmpty = ConditionManager.InvalidConditionToken;
 		AmmoPool ammoPool;
 		int maxAmmo;
-		int whatAmmo;
 
 		protected override void Created(Actor self)
 		{
 			ammoPool = self.TraitsImplementing<AmmoPool>().FirstOrDefault(la => la.Info.Name == Info.AmmoPoolName);
 			maxAmmo = ammoPool.Info.Ammo;
-			whatAmmo = ammoPool.CurrentAmmo;
 
 			conditionManager = self.TraitOrDefault<ConditionManager>();
 			base.Created(self);

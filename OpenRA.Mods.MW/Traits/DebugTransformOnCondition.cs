@@ -47,9 +47,8 @@ namespace OpenRA.Mods.MW.Traits
 		void ITick.Tick(Actor self)
 		{
 
-            var devMode = self.Owner.PlayerActor.TraitOrDefault<DeveloperMode>();
 
-            if (!IsTraitDisabled || (devMode != null && devMode.FastBuild))
+            if (!IsTraitDisabled || (self.Owner.PlayerActor.TraitOrDefault<DeveloperMode>() != null && self.Owner.PlayerActor.TraitOrDefault<DeveloperMode>().FastBuild))
             {
                 if (self.IsDead)
                     return;

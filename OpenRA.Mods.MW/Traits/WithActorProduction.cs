@@ -50,17 +50,15 @@ namespace OpenRA.Mods.MW.Traits
 		
 		public bool FactoriesGet(Actor self, Actor actor)
 		{
-			var possibles = self.World.ActorsHavingTrait<WithActorProduction>()
-				.Where(a =>
-				{
-					if (a.Owner != self.Owner)
-						return false;
-					return true;
-				});
 
-			var hashsets = possibles.ToHashSet();
-			
-			foreach (var n in hashsets)
+
+            foreach (var n in self.World.ActorsHavingTrait<WithActorProduction>()
+                .Where(a =>
+                {
+                    if (a.Owner != self.Owner)
+                        return false;
+                    return true;
+                }).ToHashSet())
 			{
 				var FindTraitWithActorProduction = n.TraitsImplementing<WithActorProduction>().FirstOrDefault();
 				var hashcode = FindTraitWithActorProduction.InUse;
@@ -76,17 +74,15 @@ namespace OpenRA.Mods.MW.Traits
 		
 		public bool FreeSpawnable(Actor self, Actor actor)
 		{
-			var possibles = self.World.ActorsHavingTrait<WithFreeSpawnableActor>()
-				.Where(a =>
-				{
-					if (a.Owner != self.Owner)
-						return false;
-					return true;
-				});
 
-			var hashsets = possibles.ToHashSet();
-			
-			foreach (var n in hashsets)
+
+            foreach (var n in self.World.ActorsHavingTrait<WithFreeSpawnableActor>()
+                .Where(a =>
+                {
+                    if (a.Owner != self.Owner)
+                        return false;
+                    return true;
+                }).ToHashSet())
 			{
 				var howmany = n.TraitsImplementing<WithFreeSpawnableActor>();
 				
@@ -157,23 +153,13 @@ namespace OpenRA.Mods.MW.Traits
 					return true;
 				}
 			}
-			if ((actor.IsInWorld || !actor.IsDead) && (self.IsDead || !self.IsInWorld))
-			{
-				if (InUse.Contains(actor))
-				{
-                    InUse.Remove(actor);
-					actor.CancelActivity();
-					return true;
-				}
-			}
 			return false;
 		}
 
 		public override bool Produce(Actor self, ActorInfo producee, string factionVariant)
 		{
-			
-			var devMode = self.Owner.PlayerActor.TraitOrDefault<DeveloperMode>();
-			if (devMode != null && devMode.FastBuild)
+
+            if (self.Owner.PlayerActor.TraitOrDefault<DeveloperMode>() != null && self.Owner.PlayerActor.TraitOrDefault<DeveloperMode>().FastBuild)
 			{
 				
 				var newexit2 = self.Info.TraitInfos<ExitInfo>().FirstOrDefault();
@@ -186,8 +172,6 @@ namespace OpenRA.Mods.MW.Traits
 			
 			//basic setup of values
 			var owner = self.Owner;
-			var exit = CPos.Zero;
-
 				
 			//find produced unit cost values
 			var ValidActors = new HashSet<string>();;
@@ -222,8 +206,6 @@ namespace OpenRA.Mods.MW.Traits
 			
 			//find exit cell and spawn locations
 			var newexit = self.Info.TraitInfos<ExitInfo>().FirstOrDefault();
-			exit = self.Location + newexit.ExitCell;
-			var infiltrate = self.CenterPosition + newexit.SpawnOffset;
 			
 			if (guysFound.Count < Actorcount)
 				return false;
@@ -233,6 +215,7 @@ namespace OpenRA.Mods.MW.Traits
 				{
 					owner.World.AddFrameEndTask(w =>
 					{
+                        /*
 						//Actor is possible to move?
 						var move = actor.TraitOrDefault<IMove>();
 
@@ -275,15 +258,18 @@ namespace OpenRA.Mods.MW.Traits
 								}
 								//if dead before finished
 								actor.QueueActivity(new CallFunc(() =>
-								{
-									if (StillValid(actor, self))
-										return;
-	
-									if (!self.IsInWorld || self.IsDead)
-									{
+                                {
+                                    if (StillValid(actor, self))
                                         return;
-									}
-									//if not continue
+
+                                    if (!self.IsInWorld || self.IsDead)
+                                    {
+                                        return;
+                                    }
+                                    //if not continue
+
+                                    */
+
 									alreadyReached++;
 									if (alreadyReached >= Actorcount)
 									{
@@ -291,14 +277,67 @@ namespace OpenRA.Mods.MW.Traits
 											Game.Sound.PlayNotification(self.World.Map.Rules, self.Owner, "Speech", info.ReadyAudio,
 												self.Owner.Faction.InternalName);
 									}
-									
-								}));
-								//set reached units state +1 and units in movement state -1
-								actor.QueueActivity(new RemoveSelf()); //of he goes
-							}));
-						}
-						//if not enough actors reached the barracks yet or died repeat
-					});
+
+                        //}));
+                        //set reached units state +1 and units in movement state -1
+                        var destination = actor.Owner.PlayerActor.Trait<PlayerCivilization>().PeasantProvider.Any() ? actor.Owner.PlayerActor.Trait<PlayerCivilization>().PeasantProvider.ClosestTo(actor) : null;
+                        if (destination == null)
+                        {
+                            actor.CancelActivity();
+                            actor.QueueActivity(new RemoveSelf());
+                        }
+                        // actor.QueueActivity(new RemoveSelf()); //of he goes
+                        else
+                        {
+                            InUse.Add(actor);
+                            var move = actor.TraitOrDefault<IMove>();
+
+                            var exitinfo = destination.Info.TraitInfo<ProvidesLivingspaceInfo>();
+                            var exitcell = destination.Location + exitinfo.ExitCell;
+                            var spawn = destination.CenterPosition + exitinfo.SpawnOffset;
+
+                            self.Owner.PlayerActor.Trait<PlayerCivilization>().SpawnStoredPeasant();
+                            //beginn movement
+                            actor.CancelActivity();
+
+                            if (!info.GoDirect)
+                            {
+                                actor.QueueActivity(move.MoveTo(exitcell, 5));
+                            }
+
+                            if (!actor.IsDead && actor.IsInWorld && actor.Info.HasTraitInfo<IsPeasantInfo>())
+                            {
+                                var peas = actor.TraitsImplementing<IsPeasant>().FirstOrDefault();
+                                peas.setWroking();
+                            }
+
+                            //what happens when actor or barracks dies
+                            actor.QueueActivity(new CallFunc(() =>
+                            {
+
+                                if (StillValid(actor, self))
+                                {
+                                    return;
+                                }
+                                //if not died continue and recalculate ow position
+
+                                //visually enter the building
+                                var selfposition = actor.CenterPosition;
+                                //actor.QueueActivity(move.MoveIntoWorld(actor,exit));
+                                if (!info.GoDirect)
+                                {
+                                    actor.QueueActivity(move.VisualMove(actor, selfposition, spawn));
+                                }
+                                actor.QueueActivity(new CallFunc(() =>
+                                {
+                                    if (StillValid(actor, self))
+                                        return;
+                                    //if dead before finished
+                                    actor.QueueActivity(new RemoveSelf());
+                                }));
+                            }));
+                        }
+                    });
 				}
 			else
 			{

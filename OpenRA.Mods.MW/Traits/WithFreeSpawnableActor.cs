@@ -82,15 +82,14 @@ namespace OpenRA.Mods.MW.Traits
 
 		public bool FactoriesGet(Actor self, Actor actor)
 		{
-			var possibles = self.World.ActorsHavingTrait<WithActorProduction>()
-				.Where(a =>
-				{
-					if (a.Owner != self.Owner)
-						return false;
-					return true;
-				});
 
-			var hashsets = possibles.ToHashSet();
+            var hashsets = self.World.ActorsHavingTrait<WithActorProduction>()
+                .Where(a =>
+                {
+                    if (a.Owner != self.Owner)
+                        return false;
+                    return true;
+                }).ToHashSet();
 
 			foreach (var n in hashsets)
 			{
@@ -175,11 +174,6 @@ namespace OpenRA.Mods.MW.Traits
 			return null;
 		}
 
-		public WPos Position(Actor actor)
-		{
-			return actor.CenterPosition;
-		}
-
         void BouncingActor(Actor self) // set the actor back to its origin when going to far
         {
             if (RespawnActor != null && !RespawnActor.IsDead && RespawnActor.IsInWorld && info.Sticky &&
@@ -252,7 +246,6 @@ namespace OpenRA.Mods.MW.Traits
 		public void SpawnNewActor(Actor self)
 		{
 			//basic setup of values
-			var owner = self.Owner;
 			var exit = self.Location + info.MoveOffset;
 
 
@@ -369,7 +362,6 @@ namespace OpenRA.Mods.MW.Traits
 						self.World.AddFrameEndTask(w =>
 						{
 							RespawnActor = w.CreateActor(info.SpawnActor, td);
-							var moveto = RespawnActor.TraitOrDefault<IMove>();
 							RespawnActor.QueueActivity(move.MoveIntoWorld(RespawnActor, exit));
 							RespawnActor.QueueActivity(move.MoveTo(exit, 2));
 

@@ -13,10 +13,6 @@ namespace OpenRA.Mods.MW.Traits
 {
 	class CorruptDeerstandInfo : ConditionalTraitInfo
 	{
-		
-		[Desc("Prey Animation when docking.")]
-		[SequenceReference] public readonly string PreySequence = "prey";
-		
 		public readonly HashSet<string> TargetActors = new HashSet<string>();
 
 		[Desc("Voice string when planting explosive charges.")]
@@ -30,12 +26,10 @@ namespace OpenRA.Mods.MW.Traits
 	class CorruptDeerstand : ConditionalTrait<CorruptDeerstandInfo>, IIssueOrder, IResolveOrder, IOrderVoice
 	{
 		readonly CorruptDeerstandInfo info;
-        public Actor TargetStand;
 
 		public CorruptDeerstand(CorruptDeerstandInfo info) : base(info)
 		{
 			this.info = info;
-            TargetStand = null;
 		}
 
 		public IEnumerable<IOrderTargeter> Orders
@@ -60,11 +54,9 @@ namespace OpenRA.Mods.MW.Traits
 
             if (!order.Queued)
             {
-                TargetStand = null;
                 self.CancelActivity();
             }
 
-            TargetStand = order.TargetActor;
 			self.QueueActivity(new Attack(self, Target.FromActor(order.TargetActor), true, true, 100));
 
 		}

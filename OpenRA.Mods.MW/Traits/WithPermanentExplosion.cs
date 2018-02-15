@@ -35,7 +35,10 @@ namespace OpenRA.Mods.MW.Traits
                 WeaponInfo weapon;
                 var weaponToLower = Weapon.ToLowerInvariant();
                 if (!rules.Weapons.TryGetValue(weaponToLower, out weapon))
+                {
                     throw new YamlException("Weapons Ruleset does not contain an entry '{0}'".F(weaponToLower));
+                }
+
                 WeaponInfo = weapon;
             }
 
@@ -44,14 +47,12 @@ namespace OpenRA.Mods.MW.Traits
     }
     public class WithPermanentExplosion : ConditionalTrait<WithPermanentExplosionInfo>, INotifyCreated, ITick
     {
-        readonly Health health;
         BuildingInfo buildingInfo;
         private int _delay;
 
         public WithPermanentExplosion(WithPermanentExplosionInfo info, Actor self)
             : base(info)
         {
-            health = self.Trait<Health>();
             _delay = Info.Delay;
         }
 
@@ -74,7 +75,9 @@ namespace OpenRA.Mods.MW.Traits
             _delay = Info.Delay;
 
             if (self.World.SharedRandom.Next(100) > Info.Chance)
+            {
                 return;
+            }
 
             var weapon = Info.WeaponInfo;
             if (weapon == null)

@@ -28,7 +28,6 @@ namespace OpenRA.Mods.MW.MWAI
         readonly World world;
         readonly Player player;
         readonly PowerManager playerPower;
-        readonly PlayerResources playerResources;
 
         int waitTicks;
         Actor[] playerBuildings;
@@ -50,7 +49,6 @@ namespace OpenRA.Mods.MW.MWAI
             world = p.World;
             player = p;
             playerPower = pm;
-            playerResources = pr;
             this.category = category;
             failRetryTicks = ai.Info.StructureProductionResumeDelay;
         }

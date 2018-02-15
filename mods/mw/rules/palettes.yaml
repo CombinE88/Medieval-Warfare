@@ -226,4 +226,12 @@
 		Name: alphabarely
 		BasePalette: ra
 		Alpha: 0.1
+	PaletteFromFile@alphagrey:
+		Name: alphagrey
+		Filename: alpha.pal
+		AllowModifiers: false
+	PaletteFromPaletteWithAlpha@alphagrey:
+		Name: alphagreyalpha
+		BasePalette: fire
+		Alpha: 0.5
         

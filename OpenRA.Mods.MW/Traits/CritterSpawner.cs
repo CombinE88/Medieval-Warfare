@@ -35,7 +35,6 @@ namespace OpenRA.Mods.MW.Traits
 
 	public class CritterSpawner : ConditionalTrait<CritterSpawnerInfo>, ITick, INotifyCreated
 	{
-		readonly Actor self;
 		private readonly List<Actor> alive = new List<Actor>();
 		private CritterSpawnerInfo info;
 		private int timer;
@@ -44,7 +43,6 @@ namespace OpenRA.Mods.MW.Traits
 		public CritterSpawner(Actor self, CritterSpawnerInfo info)
 			: base(info)
 		{
-			this.self = self;
 			this.info = info;
 		}
 

@@ -28,13 +28,12 @@ namespace OpenRA.Mods.MW.Traits
 
         public readonly int Cost = 1000;
         
-        public object Create(ActorInitializer init) { return new UndeadBuilder(init.Self, this); }
+        public object Create(ActorInitializer init) { return new UndeadBuilder(this); }
     }
 
     public class UndeadBuilder : ITick
     {
         public UndeadBuilderInfo info;
-        readonly Actor self;
 
         public int hassummoningcount;
         public int decaycounter;
@@ -42,10 +41,9 @@ namespace OpenRA.Mods.MW.Traits
         public int PayPerTick;
         private DeveloperMode devMode;
 		
-        public UndeadBuilder(Actor self, UndeadBuilderInfo info)
+        public UndeadBuilder(UndeadBuilderInfo info)
         {
             this.info = info;
-            this.self = self;
             decaycounter = info.DecayTime;
             PayPerTick = info.Cost / info.SummoningTime;
         }

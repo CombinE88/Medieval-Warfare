@@ -48,39 +48,37 @@ namespace OpenRA.Mods.MW.Warheads
 
 		public override void DoImpact(Target target, Actor firedBy, IEnumerable<int> damageModifiers)
 		{
-			var world = firedBy.World;
-			var map = world.Map;
 
-			if (!IsValidImpact(target.CenterPosition, firedBy))
+            if (!IsValidImpact(target.CenterPosition, firedBy))
 				return;
 
-			var directActors = world.FindActorsInCircle(target.CenterPosition, TargetSearchRadius);
+			var directActors = firedBy.World.FindActorsInCircle(target.CenterPosition, TargetSearchRadius);
 
-			var availableTargetActors = world.FindActorsInCircle(target.CenterPosition, weapon.Range)
+			var availableTargetActors = firedBy.World.FindActorsInCircle(target.CenterPosition, weapon.Range)
 				.Where(x => (AllowDirectHit || !directActors.Contains(x))
 					&& weapon.IsValidAgainst(Target.FromActor(x), firedBy.World, firedBy)
 					&& AimTargetStances.HasStance(firedBy.Owner.Stances[x.Owner]))
-				.Shuffle(world.SharedRandom);
+				.Shuffle(firedBy.World.SharedRandom);
 
 			var targetActor = availableTargetActors.GetEnumerator();
 
 			var amount = Amount.Length == 2
-					? world.SharedRandom.Next(Amount[0], Amount[1])
+					? firedBy.World.SharedRandom.Next(Amount[0], Amount[1])
 					: Amount[0];
 
 			for (var i = 0; i < amount; i++)
 			{
 				Target shrapnelTarget = Target.Invalid;
 
-				if (world.SharedRandom.Next(100) < AimChance && targetActor.MoveNext())
+				if (firedBy.World.SharedRandom.Next(100) < AimChance && targetActor.MoveNext())
 					shrapnelTarget = Target.FromActor(targetActor.Current);
 
 				if (ThrowWithoutTarget && shrapnelTarget.Type == TargetType.Invalid)
 				{
-					var rotation = WRot.FromFacing(world.SharedRandom.Next(1024));
-					var range = world.SharedRandom.Next(weapon.MinRange.Length, weapon.Range.Length);
+					var rotation = WRot.FromFacing(firedBy.World.SharedRandom.Next(1024));
+					var range = firedBy.World.SharedRandom.Next(weapon.MinRange.Length, weapon.Range.Length);
 					var targetpos = target.CenterPosition + new WVec(range, 0, 0).Rotate(rotation);
-					var tpos = Target.FromPos(new WPos(targetpos.X, targetpos.Y, map.CenterOfCell(map.CellContaining(targetpos)).Z));
+					var tpos = Target.FromPos(new WPos(targetpos.X, targetpos.Y, firedBy.World.Map.CenterOfCell(firedBy.World.Map.CellContaining(targetpos)).Z));
 					if (weapon.IsValidAgainst(tpos, firedBy.World, firedBy))
 						shrapnelTarget = tpos;
 				}

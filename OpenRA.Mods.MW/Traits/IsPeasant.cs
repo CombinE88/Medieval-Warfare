@@ -5,19 +5,17 @@ namespace OpenRA.Mods.MW.Traits
 	[Desc("Is Unit a Peasant (adds a count of 1 to the PlayerCivilisation).")]
 	public class IsPeasantInfo : ITraitInfo
 	{
-		public object Create(ActorInitializer init) { return new IsPeasant(init.Self, this); }
+		public object Create(ActorInitializer init) { return new IsPeasant(init.Self); }
 	}
 
     public class IsPeasant : INotifyCreated, INotifyRemovedFromWorld
     {
-        private IsPeasantInfo info;
         readonly Actor self;
 
         public bool isWorker;
 
-        public IsPeasant(Actor self, IsPeasantInfo info)
+        public IsPeasant(Actor self)
         {
-            this.info = info;
             this.self = self;
         }
 

@@ -36,10 +36,9 @@ namespace OpenRA.Mods.MW.Traits.Render
 
 		public static object LoadWeaponSequences(MiniYaml yaml)
 		{
-			var md = yaml.ToDictionary();
 
-			return md.ContainsKey("AttackSequences")
-				? md["AttackSequences"].ToDictionary(my => FieldLoader.GetValue<string>("(value)", my.Value))
+            return yaml.ToDictionary().ContainsKey("AttackSequences")
+				? yaml.ToDictionary()["AttackSequences"].ToDictionary(my => FieldLoader.GetValue<string>("(value)", my.Value))
 				: new Dictionary<string, string>();
 		}
 
@@ -71,13 +70,12 @@ namespace OpenRA.Mods.MW.Traits.Render
 		public WithInfantryBodyDisguisedUpdate(ActorInitializer init, WithInfantryBodyDisguisedUpdateInfo info)
 			: base(info)
 		{
-			var self = init.Self;
-			var rs = self.Trait<RenderSprites>();
+            var rs = init.Self.Trait<RenderSprites>();
 
-			DefaultAnimation = new Animation(init.World, rs.GetImage(self), RenderSprites.MakeFacingFunc(self));
+            DefaultAnimation = new Animation(init.World, rs.GetImage(init.Self), RenderSprites.MakeFacingFunc(init.Self));
 			animwo = new AnimationWithOffset(DefaultAnimation, null, () => IsTraitDisabled);
 			rs.Add(animwo);
-			PlayStandAnimation(self);
+            PlayStandAnimation(init.Self);
 
 			state = AnimationState.Waiting;
 			move = init.Self.Trait<IMove>();
@@ -119,9 +117,11 @@ namespace OpenRA.Mods.MW.Traits.Render
 		{
 			string sequence;
 			if (!Info.AttackSequences.TryGetValue(a.Info.Name, out sequence))
-				sequence = Info.DefaultAttackSequence;
+            {
+                sequence = Info.DefaultAttackSequence;
+            }
 
-			if (!string.IsNullOrEmpty(sequence) && DefaultAnimation.HasSequence(NormalizeInfantrySequence(self, sequence)))
+            if (!string.IsNullOrEmpty(sequence) && DefaultAnimation.HasSequence(NormalizeInfantrySequence(self, sequence)))
 			{
 				state = AnimationState.Attacking;
 				DefaultAnimation.PlayThen(NormalizeInfantrySequence(self, sequence), () => state = AnimationState.Idle);

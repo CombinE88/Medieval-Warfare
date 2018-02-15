@@ -10,20 +10,15 @@ namespace OpenRA.Mods.MW.Traits
 		[Desc("Lootable Type")]
 		public readonly HashSet<string> LootTypes = new HashSet<string>();	
 		
-		public object Create(ActorInitializer init) { return new LootableBody(init, this); }
+		public object Create(ActorInitializer init) { return new LootableBody(this); }
 	}
 
 	public class LootableBody
 	{
-		
-		readonly LootableBodyInfo info;
-		
 		public Actor Hunter;
 
-		public LootableBody(ActorInitializer init, LootableBodyInfo info)
-		{
-			this.info = info;
-		}
-
-	}
+        public LootableBody(LootableBodyInfo lootableBodyInfo)
+        {
+        }
+    }
 }
