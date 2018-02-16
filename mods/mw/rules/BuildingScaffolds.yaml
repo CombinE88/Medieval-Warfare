@@ -16,7 +16,7 @@ NUKENEW.scaff:
 		IconPalette: raicon
 		BuildPaletteOrder: 10
 		Prerequisites: factnew
-		Description: Generates livingspace. Livingspace increases over time by generating peasants.\nCan hold up to 4 peasants, spawntime depends on number of shacks and large huts.\n\n\n\n
+		Description: Generates livingspace. Livingspace increases over time by generating peasants.\nCan hold up to 8 peasants, spawntime depends on number of shacks and large huts.\n\n\n\n
 		Queue: MBuilding.GDI
 		BuildDuration: 25
 	Health:
@@ -197,7 +197,7 @@ LJACKB.scaff:
 		Type: Lumberer
 		UsePlayerColor: true
 		Range: 17c0
-        
+		
 NUKXL.scaff:
 	Inherits: ^3x2SITE
 	Inherits@Hitshape: ^3x2Shape
@@ -218,7 +218,7 @@ NUKXL.scaff:
 		BuildPaletteOrder: 30
 		Prerequisites: anyarmory
 		Queue: MBuilding.GDI
-		Description: Provides more livingspace. Livingspace increases over time by generating peasants.\nCan hold up to 15 peasants. \ncheaper than the standard Shack.\n\n\n\n
+		Description: Provides more livingspace. Livingspace increases over time by generating peasants.\nCan hold up to 30 peasants. \ncheaper than the standard Shack.\n\n\n\n
 		BuildDuration: 20
 	Health:
 		HP: 60000
@@ -514,7 +514,7 @@ HQNEWNOD.scaff:
 	WithIdleOverlay@base7:
 		Sequence: make7
 		RequiresCondition: Construct >= 64
-        
+		
 HQNEWGDI.scaff:
 	Inherits: ^2x2SITE
 	Inherits@Hitshape: ^2x2Shape
@@ -732,7 +732,7 @@ NUK2NEW.scaff:
 		BuildPaletteOrder: 20
 		Prerequisites: anyhq
 		Queue: MBuilding.GDI
-		Description: Provides more livingspace. Livingspace increases over time by generating peasants.\nCan hold up to 8 peasants, spawntime depends on number of shacks and large huts. \ncheaper than the standard Shack.\n\n\n\n
+		Description: Provides more livingspace. Livingspace increases over time by generating peasants.\nCan hold up to 16 peasants, spawntime depends on number of shacks and large huts. \ncheaper than the standard Shack.\n\n\n\n
 		BuildDuration: 40
 	Health:
 		HP: 17500
@@ -802,7 +802,7 @@ XLTNTUNI.scaff:
 		BuildPaletteOrder: 20
 		Prerequisites: anyhq
 		Queue: MBuilding.Nod
-		Description: Provides more livingspace. Livingspace increases over time by generating peasants.\nCan hold up to 6 peasants, spawntime depends on number of shacks and large huts. \ncheaper than the standard Shack.\n\n\n\n
+		Description: Provides more livingspace. Livingspace increases over time by generating peasants.\nCan hold up to 12 peasants, spawntime depends on number of shacks and large huts. \ncheaper than the standard Shack.\n\n\n\n
 		BuildDuration: 30
 	Health:
 		HP: 17500
@@ -1033,8 +1033,8 @@ SILONEW.scaff:
 	WithIdleOverlay@base4:
 		Sequence: make4
 		RequiresCondition: Construct >= 9
-        
-        		
+		
+				
 SILOTWO.scaff:
 	Inherits: ^2x2SITE
 	Inherits@Hitshape: ^2x2Shape
@@ -1310,7 +1310,7 @@ CASTLE.scaff:
 	Building:
 		Footprint: ___ xxx xxx ===
 		Dimensions: 3,4
-        LocalCenterOffset: 0,-512,0
+		LocalCenterOffset: 0,-512,0
 	Armor:
 		Type: Concrete
 	RenderSprites:
@@ -1381,7 +1381,7 @@ CASTLE2.scaff:
 	Building:
 		Footprint: ___ xxx xxx ===
 		Dimensions: 3,4
-        LocalCenterOffset: 0,-512,0
+		LocalCenterOffset: 0,-512,0
 	Armor:
 		Type: Concrete
 	RenderSprites:
@@ -1591,7 +1591,7 @@ GTWNEW.scaff:
 	Tooltip:
 		Name: Construction Site ( Guard Tower)
 	Buildable:
-		Description: A wooden tower, stationed with 2 archers.\n  Strong vs Infantry, Light Cavalry\n  Weak vs Siege weapons and Heavy Cavalry \n  Cannot target Aircraft\n  Requires 2 Peasants\n\n
+		Description: A wooden tower, stationed with 2 archers.\n  Strong vs Infantry, Light Cavalry\n  Weak vs Siege weapons and Heavy Cavalry \n  Cannot target Aircraft\n\n
 		BuildPaletteOrder: 60
 		Queue: MMilitary.GDI, MMilitary.Nod
 		BuildDurationModifier: 60
@@ -1644,7 +1644,7 @@ GTWNEW.scaff:
 		Sequence: make6
 		RequiresCondition: Construct >= 12
 	WithRangeCircle:
-		Range: 7c0
+		Range: 8c512
 		
 GUNNEW.scaff:
 	Inherits: ^1x1SITE
@@ -1661,7 +1661,7 @@ GUNNEW.scaff:
 	Tooltip:
 		Name: Construction Site (Gunpowder Cannon)
 	Buildable:
-		Description: The early Cannon uses gunpowder to throw a large boulder. \nIt's most effectively used against large targets.\n  Strong vs Cavalry and Spectral Units\n  Weak vs Infantry\n  Requires 1 Peasants\n\n
+		Description: The early Cannon uses gunpowder to throw a large boulder. \nIt's most effectively used against large targets.\n  Strong vs Cavalry and Spectral Units\n  Weak vs Infantry\n\n
 		BuildPaletteOrder: 70
 		Prerequisites: barracks
 		Queue: MMilitary.GDI, MMilitary.Nod
@@ -2071,7 +2071,7 @@ TOWNHALL.scaff:
 	WithIdleOverlay@base6:
 		Sequence: make6
 		RequiresCondition: Construct >= 75
-        
+		
 SCHAFOTT.scaff:
 	Inherits: ^2x2SITE
 	Inherits@Hitshape: ^2x2Shape
@@ -2139,7 +2139,7 @@ SCHAFOTT.scaff:
 	WithIdleOverlay@base6:
 		Sequence: make6
 		RequiresCondition: Construct >= 40
-        
+		
 HERBALIST.scaff:
 	Inherits: ^2x2SITE
 	Inherits@Hitshape: ^2x2Shape

@@ -731,7 +731,7 @@ FromBelow:
 	Warhead@1Dam: SpreadDamage
 		Spread: 752
 		InvalidTargets: Wall
-		Damage: 1000
+		Damage: 2500
 		ValidTargets: Ground
 		Versus:
 			None: 100
@@ -751,7 +751,7 @@ FromBelow:
 		ValidTargets: Ground
 		InvalidTargets: Wall
 		Delay: 20
-		Damage: 1000
+		Damage: 2500
 		Versus:
 			None: 100
 			Leather: 100
@@ -769,7 +769,7 @@ FromBelow:
 		ValidTargets: Ground
 		InvalidTargets: Wall
 		Delay: 40
-		Damage: 1000
+		Damage: 2500
 		Versus:
 			None: 100
 			Leather: 100
@@ -957,7 +957,7 @@ RDHand:
 		LaunchAngle: 96
 		Inaccuracy: 2c0
 	Warhead@1Dam: SpreadDamage
-		Spread: 752
+		Spread: 452
 		InvalidTargets: Wall
 		Damage: 2500
 		ValidTargets: Ground
@@ -975,7 +975,7 @@ RDHand:
 			Spectral: 100
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath, SpawnSoul
 	Warhead@2Dam: SpreadDamage
-		Spread: 712
+		Spread: 452
 		ValidTargets: Ground
 		InvalidTargets: Wall
 		Delay: 20
@@ -993,7 +993,7 @@ RDHand:
 			HeavyBuilding: 150
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath, SpawnSoul
 	Warhead@3Dam: SpreadDamage
-		Spread: 450
+		Spread: 452
 		ValidTargets: Ground
 		InvalidTargets: Wall
 		Delay: 40

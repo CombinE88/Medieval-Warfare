@@ -986,7 +986,7 @@ NUK2NEW:
 		Pieces: 1, 2
 		Range: 1c0, 5c0
 	ProvidesLivingspace:
-		Ammount: 8
+		Ammount: 16
 		SpawnOffset: 128,811,0
 		ExitCell: 1,2
 	#WithFreeSpawnableActor@Chicken:
@@ -1055,7 +1055,7 @@ NUKXL:
 		Pieces: 1, 2
 		Range: 1c0, 5c0
 	ProvidesLivingspace:
-		Ammount: 15
+		Ammount: 30
 		SpawnOffset: 938,725,0
 		ExitCell: 2,2
 	#WithFreeSpawnableActor@Chicken:
@@ -1119,7 +1119,7 @@ NUKENEW:
 		Pieces: 2, 3
 		Range: 1c0, 5c0
 	ProvidesLivingspace:
-		Ammount: 4
+		Ammount: 8
 		SpawnOffset: -384,597,0
 		ExitCell: 0,2
 	#WithFreeSpawnableActor@Chicken:
@@ -1189,7 +1189,7 @@ XLTNT1:
 		Pieces: 1, 2
 		Range: 1c0, 5c0
 	ProvidesLivingspace:
-		Ammount: 8
+		Ammount: 12
 		SpawnOffset: 256,768,0
 		ExitCell: 1,2
 	#WithFreeSpawnableActor@Chicken:
@@ -1304,7 +1304,7 @@ NODNUKE:
 		Pieces: 2, 3
 		Range: 1c0, 5c0
 	ProvidesLivingspace:
-		Ammount: 3
+		Ammount: 4
 		SpawnOffset: 256,811,0
 		ExitCell: 1,1
 	#WithFreeSpawnableActor@Chicken:
@@ -1356,7 +1356,7 @@ NTENT1:
 		Pieces: 2, 3
 		Range: 1c0, 5c0
 	ProvidesLivingspace:
-		Ammount: 3
+		Ammount: 4
 		SpawnOffset: 256,811,0
 		ExitCell: 1,1
 		

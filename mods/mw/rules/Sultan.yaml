@@ -748,7 +748,7 @@ SULNUK2:
 		Pieces: 1, 2
 		Range: 1c0, 5c0
 	ProvidesLivingspace:
-		Ammount: 11
+		Ammount: 25
 		SpawnOffset: -469,853,0
 		ExitCell: 1,2
 	#WithFreeSpawnableActor@Chicken2:
@@ -807,7 +807,7 @@ SULNUKE:
 		Pieces: 2, 3
 		Range: 1c0, 5c0
 	ProvidesLivingspace:
-		Ammount: 6
+		Ammount: 10
 		SpawnOffset: 0,426,0
 		ExitCell: 1,2
 	#WithFreeSpawnableActor@Chicken2:
@@ -2220,7 +2220,7 @@ SULB2:
 		TurnSpeed: 2
 		Speed: 45
 	Health:
-		HP: 11000
+		HP: 14000
 		Shape: Capsule
 			Radius: 526
 			PointA: 0, -412

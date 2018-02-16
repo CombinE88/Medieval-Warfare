@@ -1000,7 +1000,7 @@ RMBONEW:
 	Mobile:
 		Speed: 45
 	Health:
-		HP: 19750
+		HP: 20750
 	Armament:
 		Weapon: paladingun
 		MuzzleSequence: muzzle

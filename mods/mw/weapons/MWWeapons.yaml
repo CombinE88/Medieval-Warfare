@@ -884,7 +884,7 @@ paladingun:
 		ValidTargets: Ground, Trees
 		InvalidTargets: Air
 		Spread: 65
-		Damage: 3200
+		Damage: 3500
 		Versus:
 			Leather: 100
 			Light: 90
@@ -1975,7 +1975,7 @@ ThopterBomb:
 		
 BowNArrowTower:
 	ReloadDelay: 25
-	Range: 7c0
+	Range: 8c512
 	MinRange: 0c0
 	Report: arrow01.aud, arrow02.aud, arrow02.aud
 	InvalidTargets: Wall, Air
@@ -1984,7 +1984,7 @@ BowNArrowTower:
 		HorizontalRateOfTurn: 60
 		RangeLimit: 8c204
 		Arm: 0
-		Speed: 200
+		Speed: 250
 		LaunchAngle: 46
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
@@ -2007,7 +2007,7 @@ BowNArrowTower:
 		
 BowNArrowTowerDUMMY:
 	ReloadDelay: 25
-	Range: 7c0
+	Range: 8c512
 	MinRange: 0c0
 	InvalidTargets: Wall, Air
 	ValidTargets: Ground
@@ -2244,10 +2244,10 @@ SiegeBoulder:
 	Warhead@1Dam: SpreadDamage
 		ValidTargets: Ground
 		InvalidTargets: Air
-		Spread: 683
+		Spread: 603
 		Damage: 2750
 		Versus:
-			Leather: 35
+			Leather: 100
 			Light: 90
 			Heavy: 80
 			Concrete: 100

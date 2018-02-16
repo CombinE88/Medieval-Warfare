@@ -23,7 +23,7 @@ Player:
 
 			ImportantBuildings: castle.scaff, castle2.scaff, sulcastle.scaff, hqnewnod.scaff, armorygdi.scaff, armorynod.scaff, sulcnshmbr.scaff, schafott.scaff, sulminaret.scaff, sulhall.scaff, townhall.scaff, herbalist.scaff, hqnewgdi.scaff
 		UnitsCommonNames:
-			Mcv: mcvnew, undeadcomm
+			Mcv: mcvnew, undeadcomm, factnew, ziggurat1, ziggurat2, ziggurat3
 			ExcludeFromSquads: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, mwwand7, mwwand8, mwwand8, mwcivcom, noble1, noble2, noble3, noble4, noble5, mwconst1, mwconst2, mwconst3, mwconst4, mwconst5, mwconst6, mwconst7, mwchick1, hunter, transporter, engeneer, sulturnxl, mwlumbererowned, preycolyte, acolytec
 			ExcludeFromDefenders: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, mwwand7, mwwand8, mwwand8, mwcivcom, noble1, noble2, noble3, noble4, noble5, mwconst1, mwconst2, mwconst3, mwconst4, mwconst5, mwconst6, mwconst7, mwchick1, hunter, transporter, engeneer, sulturnxl, mwlumbererowned, preycolyte
             

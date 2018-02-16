@@ -306,7 +306,7 @@ DjinElectroAir:
 		  
 DjinElectroGround:
 	ReloadDelay: 50
-	Range: 8c0
+	Range: 9c0
 	ValidTargets: Ground
 	InvalidTargets: Air
 	Report: tesla1.aud
@@ -335,7 +335,7 @@ DualSiegeBalista:
 	Range: 11c0
 	MinRange: 2c896
 	Burst: 2
-	BurstDelay: 0
+	BurstDelay: 45
 	ValidTargets: Ground
 	InvalidTargets: Air
 	Report: Balista01.aud
@@ -344,11 +344,11 @@ DualSiegeBalista:
 		Speed: 400
 		Blockable: false
 		LaunchAngle: 66
-		Inaccuracy: 2c056
+		Inaccuracy: 0c512
 		Image: siegearrow
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
-		Spread: 550
+		Spread: 450
 		Damage: 5500
 		ValidTargets: Ground
 		InvalidTargets: Air
@@ -413,7 +413,7 @@ SuperSiegeBallista:
 		
 MortarBoulder:
 	ReloadDelay: 140
-	Range: 13c0
+	Range: 15c0
 	MinRange: 5c0
 	Report: tnkfire2.aud, tnkfire3.aud, tnkfire4.aud, tnkfire6.aud
 	ValidTargets: Ground
@@ -425,7 +425,7 @@ MortarBoulder:
 		Blockable: false
 		LaunchAngle: 126
 		Palette: ra
-		Inaccuracy: 4c012
+		Inaccuracy: 3c012
 	Warhead@1Dam: SpreadDamage
 		Spread: 412
 		Damage: 9500
@@ -890,7 +890,7 @@ TowerPike:
 		
 SulGTSpearThrow:
 	ReloadDelay: 50
-	Range: 8c0
+	Range: 8c512
 	MinRange: 0c0
 	Burst: 2
 	BurstDelay: 10
