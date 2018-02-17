@@ -21,181 +21,181 @@ using OpenRA.Traits;
 
 namespace OpenRA.Mods.MW.Traits
 {
-	[Desc("A actor has to enter the building before the unit spawns.")]
-	public class DeerHunterInfo : ITraitInfo
-	{
+    [Desc("A actor has to enter the building before the unit spawns.")]
+    public class DeerHunterInfo : ITraitInfo
+    {
 
-		[Desc("Huntable Type")]
-		public readonly HashSet<string> HuntTypes = new HashSet<string>();	
-		
-		[Desc("Lootable Type")]
-		public readonly HashSet<string> LootTypes = new HashSet<string>();	
-		
-		public readonly WDist SearchDistance = WDist.FromCells(20);
-        		
-		
-		
-		
-		public object Create(ActorInitializer init) { return new DeerHunter(init, this); }
-	}
+        [Desc("Huntable Type")]
+        public readonly HashSet<string> HuntTypes = new HashSet<string>();
 
-	class DeerHunter : INotifyCreated, INotifyIdle, INotifyKilled
-	{
-		private readonly DeerHunterInfo info;
-		private Actor self;
+        [Desc("Lootable Type")]
+        public readonly HashSet<string> LootTypes = new HashSet<string>();
 
-		public Actor DeerHunt;
-		public Actor DeerLoot;
-		public Actor Lodge;
-		
-		Actor NextLootTarget;
-		Actor NextHunttarget;
-
-		private int Tick;
-		
-		AmmoPool ammoPool;
-		int whatAmmo;
+        public readonly WDist SearchDistance = WDist.FromCells(20);
 
 
-		public DeerHunter(ActorInitializer init, DeerHunterInfo info)
-		{
-			this.info = info;
-			self = init.Self;
-			
-		}
-
-		
-		//Set homeLodge when created
-		void INotifyCreated.Created(Actor self)
-		{
-			ammoPool = self.TraitsImplementing<AmmoPool>().FirstOrDefault(la => la.Info.Name == "Food");
-			whatAmmo = ammoPool.CurrentAmmo;
-		}
 
 
-		public void FindALodge()
-		{
-			var possiblelodges = self.World.ActorsHavingTrait<LodgeActor>()
-				.Where(a =>
-				{
-					if (a.Owner != self.Owner)
-						return false;
-					
-					if (a.IsDead || !a.IsInWorld)
-						return false;
-					
-					return true;
-				});
+        public object Create(ActorInitializer init) { return new DeerHunter(init, this); }
+    }
 
-			if (possiblelodges.Any())
-			{
-				Lodge = possiblelodges.ClosestTo(self);
-				Tick = 10;
-			}
+    class DeerHunter : INotifyCreated, INotifyIdle, INotifyKilled
+    {
+        private readonly DeerHunterInfo info;
+        private Actor self;
 
-		}
+        public Actor DeerHunt;
+        public Actor DeerLoot;
+        public Actor Lodge;
 
-		public Actor FindLootableDeer()
-		{
-			var LootableDeer = Lodge.World.FindActorsInCircle(Lodge.CenterPosition, info.SearchDistance)
-				.Where(a =>
-				{
-					
-					if (a.IsDead || !a.IsInWorld)
-						return false;
+        Actor NextLootTarget;
+        Actor NextHunttarget;
 
-					if (!a.Info.HasTraitInfo<LootableBodyInfo>())
-						return false;
+        private int Tick;
 
-					if (a.TraitsImplementing<LootableBody>().FirstOrDefault().Hunter != null)
-						return false;
+        AmmoPool ammoPool;
+        int whatAmmo;
 
-					var contains = false;
 
-					foreach (var n in a.Info.TraitInfoOrDefault<LootableBodyInfo>().LootTypes)
-					{
-						if (info.LootTypes.Contains(n))
-							contains = true;
-					}
+        public DeerHunter(ActorInitializer init, DeerHunterInfo info)
+        {
+            this.info = info;
+            self = init.Self;
 
-					return contains;
-				});
-			Actor closestLoot = null;
-			
-			if (LootableDeer.Any())
-			{
+        }
 
-				closestLoot = LootableDeer.ClosestTo(self);
-				closestLoot.Trait<LootableBody>().Hunter = self;
-				DeerLoot = closestLoot;
-				return closestLoot;
-			}
-			return null;
-		}
-		
-		public Actor FindhuntableDeer()
-		{
-			var HuntableDeer = Lodge.World.FindActorsInCircle(Lodge.CenterPosition, info.SearchDistance)
-				.Where(a =>
-				{
 
-					if (a.IsDead || !a.IsInWorld)
-						return false;
+        //Set homeLodge when created
+        void INotifyCreated.Created(Actor self)
+        {
+            ammoPool = self.TraitsImplementing<AmmoPool>().FirstOrDefault(la => la.Info.Name == "Food");
+            whatAmmo = ammoPool.CurrentAmmo;
+        }
 
-					if (!a.Info.HasTraitInfo<HuntableDeerInfo>())
-						return false;
 
-					if (a.TraitsImplementing<HuntableDeer>().FirstOrDefault().Hunter != null)
-							return false;
-					
-					var contains = false;
-					foreach (var n in a.Info.TraitInfoOrDefault<HuntableDeerInfo>().HuntTypes)
-					{
-						if (info.HuntTypes.Contains(n))
-							contains = true;
-					}
-					return contains;
-				});
+        public void FindALodge()
+        {
+            var possiblelodges = self.World.ActorsHavingTrait<LodgeActor>()
+                .Where(a =>
+                {
+                    if (a.Owner != self.Owner)
+                        return false;
 
-			Actor closestHunt = null;
+                    if (a.IsDead || !a.IsInWorld)
+                        return false;
 
-			if (HuntableDeer.Any())
-			{
-				closestHunt = HuntableDeer.ClosestTo(self);
-				closestHunt.Trait<HuntableDeer>().Hunter = self;
-				DeerHunt = closestHunt;
-				return closestHunt;
-				
-			}
-	
-			return null;
-		}
-		
-		void Attack(Actor self, Actor targetActor)
-		{
+                    return true;
+                });
 
-            self.QueueActivity(new Attack(self, Target.FromActor(targetActor), true,true, 100));
-		}
+            if (possiblelodges.Any())
+            {
+                Lodge = possiblelodges.ClosestTo(self);
+                Tick = 10;
+            }
 
-		void Move(Actor self, Actor targetActor)
-		{
-			if ((self.CenterPosition - targetActor.CenterPosition).LengthSquared > WDist.FromCells(4).LengthSquared)
-			{
+        }
 
-				var cells = self.World.Map.FindTilesInCircle(targetActor.Location, 4, false);
-				var move = self.TraitOrDefault<IMove>();
-				self.QueueActivity(new AttackMoveActivity(self, move.MoveTo(self.ClosestCell(cells), 5)));
-			}
-		}
-		
-		void MovePlusRandomVector(Actor self, Actor targetActor)
-		{
+        public Actor FindLootableDeer()
+        {
+            var LootableDeer = Lodge.World.FindActorsInCircle(Lodge.CenterPosition, info.SearchDistance)
+                .Where(a =>
+                {
+
+                    if (a.IsDead || !a.IsInWorld)
+                        return false;
+
+                    if (!a.Info.HasTraitInfo<LootableBodyInfo>())
+                        return false;
+
+                    if (a.TraitsImplementing<LootableBody>().FirstOrDefault().Hunter != null)
+                        return false;
+
+                    var contains = false;
+
+                    foreach (var n in a.Info.TraitInfoOrDefault<LootableBodyInfo>().LootTypes)
+                    {
+                        if (info.LootTypes.Contains(n))
+                            contains = true;
+                    }
+
+                    return contains;
+                });
+            Actor closestLoot = null;
+
+            if (LootableDeer.Any())
+            {
+
+                closestLoot = LootableDeer.ClosestTo(self);
+                closestLoot.Trait<LootableBody>().Hunter = self;
+                DeerLoot = closestLoot;
+                return closestLoot;
+            }
+            return null;
+        }
+
+        public Actor FindhuntableDeer()
+        {
+            var HuntableDeer = Lodge.World.FindActorsInCircle(Lodge.CenterPosition, info.SearchDistance)
+                .Where(a =>
+                {
+
+                    if (a.IsDead || !a.IsInWorld)
+                        return false;
+
+                    if (!a.Info.HasTraitInfo<HuntableDeerInfo>())
+                        return false;
+
+                    if (a.TraitsImplementing<HuntableDeer>().FirstOrDefault().Hunter != null)
+                        return false;
+
+                    var contains = false;
+                    foreach (var n in a.Info.TraitInfoOrDefault<HuntableDeerInfo>().HuntTypes)
+                    {
+                        if (info.HuntTypes.Contains(n))
+                            contains = true;
+                    }
+                    return contains;
+                });
+
+            Actor closestHunt = null;
+
+            if (HuntableDeer.Any())
+            {
+                closestHunt = HuntableDeer.ClosestTo(self);
+                closestHunt.Trait<HuntableDeer>().Hunter = self;
+                DeerHunt = closestHunt;
+                return closestHunt;
+
+            }
+
+            return null;
+        }
+
+        void Attack(Actor self, Actor targetActor)
+        {
+
+            self.QueueActivity(new Attack(self, Target.FromActor(targetActor), true, true, 100));
+        }
+
+        void Move(Actor self, Actor targetActor)
+        {
+            if ((self.CenterPosition - targetActor.CenterPosition).LengthSquared > WDist.FromCells(4).LengthSquared)
+            {
+
+                var cells = self.World.Map.FindTilesInCircle(targetActor.Location, 4, false);
+                var move = self.TraitOrDefault<IMove>();
+                self.QueueActivity(new AttackMoveActivity(self, move.MoveTo(self.ClosestCell(cells), 5)));
+            }
+        }
+
+        void MovePlusRandomVector(Actor self, Actor targetActor)
+        {
             self.QueueActivity(new AttackMoveActivity(self,
                 self.TraitOrDefault<IMove>().MoveTo(
-					targetActor.Location + new CVec(self.World.SharedRandom.Next(-2, 3), self.World.SharedRandom.Next(-2, 3)), 4)));
-		}
-		
-		void HunterDecisions(Actor self)
+                    targetActor.Location + new CVec(self.World.SharedRandom.Next(-2, 3), self.World.SharedRandom.Next(-2, 3)), 4)));
+        }
+
+        void HunterDecisions(Actor self)
         {
             whatAmmo = ammoPool.CurrentAmmo; // how many loot do we have stored
 
@@ -237,24 +237,24 @@ namespace OpenRA.Mods.MW.Traits
                     NextHunttarget = FindhuntableDeer();
             }
         }
-		
+
 
         void INotifyIdle.TickIdle(Actor self)
-		{
+        {
             if (--Tick > 0)
                 return;
 
             if (self == null)
-				return;
-			if (!self.IsInWorld || self.IsDead)
-				return;
-			if (self.IsInWorld && !self.IsDead && Tick <= 0 && self.IsIdle)
-			{
+                return;
+            if (!self.IsInWorld || self.IsDead)
+                return;
+            if (self.IsInWorld && !self.IsDead && Tick <= 0 && self.IsIdle)
+            {
                 HunterDecisions(self);
 
                 Tick = 25; // wait a second
-			}
-		}
+            }
+        }
 
         public void Killed(Actor self, AttackInfo e)
         {

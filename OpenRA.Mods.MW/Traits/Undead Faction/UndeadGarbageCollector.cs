@@ -43,7 +43,7 @@ namespace OpenRA.Mods.MW.Traits
         {
             this.info = info;
             tickler = info.CollectInterval;
-            
+
         }
 
         void INotifyCreated.Created(Actor self)
@@ -52,7 +52,7 @@ namespace OpenRA.Mods.MW.Traits
         }
 
 
-        public void Tick(Actor self)
+        void ITick.Tick(Actor self)
         {
             if (!IsTraitDisabled && tickler-- <= 0)
             {
@@ -68,7 +68,7 @@ namespace OpenRA.Mods.MW.Traits
 
                 CPos ZapRandom = CPos.Zero;
 
-                if (cells != null &&  cells.Any() && cells.Count() > 1)
+                if (cells != null && cells.Any() && cells.Count() > 1)
                 {
                     //ZapRandom = cells.ElementAt(self.World.SharedRandom.Next(cells.Count()));
                     ZapRandom = cells.MinByOrDefault(c => (self.Location - c).LengthSquared);
@@ -101,14 +101,14 @@ namespace OpenRA.Mods.MW.Traits
                     {
                         resLayer.Destroy(ZapRandom);
                     }
-                
+
 
                     var weapon = Info.WeaponInfo;
                     if (weapon == null)
                         return;
 
                     if (weapon.Report != null && weapon.Report.Any())
-                       Game.Sound.Play(SoundType.World, weapon.Report.Random(self.World.SharedRandom), self.CenterPosition);
+                        Game.Sound.Play(SoundType.World, weapon.Report.Random(self.World.SharedRandom), self.CenterPosition);
 
                     weapon.Impact(Target.FromPos(self.World.Map.CenterOfCell(ZapRandom)), self, Enumerable.Empty<int>());
 

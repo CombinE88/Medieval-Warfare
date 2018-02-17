@@ -2,11 +2,11 @@
 
 namespace OpenRA.Mods.MW.Traits
 {
-	[Desc("Is Unit a Peasant (adds a count of 1 to the PlayerCivilisation).")]
-	public class IsPeasantInfo : ITraitInfo
-	{
-		public object Create(ActorInitializer init) { return new IsPeasant(init.Self); }
-	}
+    [Desc("Is Unit a Peasant (adds a count of 1 to the PlayerCivilisation).")]
+    public class IsPeasantInfo : ITraitInfo
+    {
+        public object Create(ActorInitializer init) { return new IsPeasant(init.Self); }
+    }
 
     public class IsPeasant : INotifyCreated, INotifyRemovedFromWorld
     {
@@ -19,7 +19,7 @@ namespace OpenRA.Mods.MW.Traits
             this.self = self;
         }
 
-        public void Created(Actor self)
+        void INotifyCreated.Created(Actor self)
         {
             if (!self.Owner.NonCombatant && self.Owner.WinState != WinState.Lost && self.Owner.PlayerActor.Info.HasTraitInfo<PlayerCivilizationInfo>())
             {
@@ -28,7 +28,7 @@ namespace OpenRA.Mods.MW.Traits
             }
         }
 
-        public void RemovedFromWorld(Actor self)
+        void INotifyRemovedFromWorld.RemovedFromWorld(Actor self)
         {
             if (!self.Owner.NonCombatant && self.Owner.WinState != WinState.Lost && self.Owner.PlayerActor.Info.HasTraitInfo<PlayerCivilizationInfo>())
             {

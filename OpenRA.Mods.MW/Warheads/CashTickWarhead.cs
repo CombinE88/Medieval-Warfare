@@ -16,34 +16,34 @@ using OpenRA.Mods.Common.Warheads;
 
 namespace OpenRA.Mods.MW.Warheads
 {
-	public class CashTickWarhead : Warhead
-	{
-		[FieldLoader.Require]
+    public class CashTickWarhead : Warhead
+    {
+        [FieldLoader.Require]
 
-		[Desc("Duration of the condition (in ticks). Set to 0 for a permanent condition.")]
-		public readonly int Ammount = 0;
-		public readonly bool ShowTicks = true;
-		public readonly int TickLifetime = 30;
-		public readonly int TickVelocity = 2;
+        [Desc("Duration of the condition (in ticks). Set to 0 for a permanent condition.")]
+        public readonly int Ammount = 0;
+        public readonly bool ShowTicks = true;
+        public readonly int TickLifetime = 30;
+        public readonly int TickVelocity = 2;
 
-		public override void DoImpact(Target target, Actor firedBy, IEnumerable<int> damageModifiers)
-		{
-			if (!firedBy.IsDead && firedBy.IsInWorld)
-			{
-				var playerResources = firedBy.Owner.PlayerActor.Trait<PlayerResources>();
-				
-				playerResources.GiveResources(Ammount);
-				
-				if (ShowTicks && Ammount > 0 && firedBy.IsInWorld && !firedBy.IsDead)
-				{
-					if (firedBy.Owner.IsAlliedWith(firedBy.World.RenderPlayer))
-						firedBy.World.AddFrameEndTask(w => w.Add(new FloatingText(firedBy.CenterPosition, firedBy.Owner.Color.RGB, FloatingText.FormatCashTick(Ammount), 30)));
-				}
+        public override void DoImpact(Target target, Actor firedBy, IEnumerable<int> damageModifiers)
+        {
+            if (!firedBy.IsDead && firedBy.IsInWorld)
+            {
+                var playerResources = firedBy.Owner.PlayerActor.Trait<PlayerResources>();
 
-				//Log.Write("debug", "GrantSelfConditionWarhead ::: DoImpact");
-			}
+                playerResources.GiveResources(Ammount);
+
+                if (ShowTicks && Ammount > 0 && firedBy.IsInWorld && !firedBy.IsDead)
+                {
+                    if (firedBy.Owner.IsAlliedWith(firedBy.World.RenderPlayer))
+                        firedBy.World.AddFrameEndTask(w => w.Add(new FloatingText(firedBy.CenterPosition, firedBy.Owner.Color.RGB, FloatingText.FormatCashTick(Ammount), 30)));
+                }
+
+                //Log.Write("debug", "GrantSelfConditionWarhead ::: DoImpact");
+            }
 
 
-		}
-	}
+        }
+    }
 }

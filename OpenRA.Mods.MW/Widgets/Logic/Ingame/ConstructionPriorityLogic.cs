@@ -18,76 +18,76 @@ using OpenRA.Widgets;
 
 namespace OpenRA.Mods.MW.Widgets
 {
-	/// <summary> Contains all functions that are unit-specific. </summary>
-	public class ConstructionPriorityLogic : ChromeLogic
-	{
-		readonly World world;
+    /// <summary> Contains all functions that are unit-specific. </summary>
+    public class ConstructionPriorityLogic : ChromeLogic
+    {
+        readonly World world;
 
-		Actor[] selectedActors = { };
-		int stopHighlighted;
+        Actor[] selectedActors = { };
+        int stopHighlighted;
 
-		private bool priorityisdisabled;
+        private bool priorityisdisabled;
 
-		[ObjectCreator.UseCtor]
-		public ConstructionPriorityLogic(Widget widget, World world)
-		{
-			this.world = world;
+        [ObjectCreator.UseCtor]
+        public ConstructionPriorityLogic(Widget widget, World world)
+        {
+            this.world = world;
 
-			var addprioritybutton = widget.GetOrNull<ButtonWidget>("ADD_PRIO");
-			if (addprioritybutton != null)
-			{
-				BindButtonIcon(addprioritybutton);
-				addprioritybutton.IsDisabled = () =>
-				{
-					UpdateStateIfNecessary();
-					return priorityisdisabled;
-				};
-				addprioritybutton.IsHighlighted = () => stopHighlighted > 0;
-				addprioritybutton.OnClick = () => PerformOrderOnSelection(a => new Order("AddPrio", a, false));
-				addprioritybutton.OnKeyPress = ki => { stopHighlighted = 2; addprioritybutton.OnClick(); };
-			}
-			var removeprioritybutton = widget.GetOrNull<ButtonWidget>("REM_PRIO");
-			if (removeprioritybutton != null)
-			{
+            var addprioritybutton = widget.GetOrNull<ButtonWidget>("ADD_PRIO");
+            if (addprioritybutton != null)
+            {
+                BindButtonIcon(addprioritybutton);
+                addprioritybutton.IsDisabled = () =>
+                {
+                    UpdateStateIfNecessary();
+                    return priorityisdisabled;
+                };
+                addprioritybutton.IsHighlighted = () => stopHighlighted > 0;
+                addprioritybutton.OnClick = () => PerformOrderOnSelection(a => new Order("AddPrio", a, false));
+                addprioritybutton.OnKeyPress = ki => { stopHighlighted = 2; addprioritybutton.OnClick(); };
+            }
+            var removeprioritybutton = widget.GetOrNull<ButtonWidget>("REM_PRIO");
+            if (removeprioritybutton != null)
+            {
                 BindButtonIcon(removeprioritybutton);
                 removeprioritybutton.IsDisabled = () =>
-				{
-					UpdateStateIfNecessary();
-					return priorityisdisabled;
-				};
-				removeprioritybutton.IsHighlighted = () => stopHighlighted > 0;
-				removeprioritybutton.OnClick = () => PerformOrderOnSelection(a => new Order("RemPrio", a, false));
-				removeprioritybutton.OnKeyPress = ki => { stopHighlighted = 2; removeprioritybutton.OnClick(); };
+                {
+                    UpdateStateIfNecessary();
+                    return priorityisdisabled;
+                };
+                removeprioritybutton.IsHighlighted = () => stopHighlighted > 0;
+                removeprioritybutton.OnClick = () => PerformOrderOnSelection(a => new Order("RemPrio", a, false));
+                removeprioritybutton.OnKeyPress = ki => { stopHighlighted = 2; removeprioritybutton.OnClick(); };
 
-			}
-		}
+            }
+        }
 
-		void UpdateStateIfNecessary()
-		{
+        void UpdateStateIfNecessary()
+        {
 
-			selectedActors = world.Selection.Actors
-				.Where(a => a.Owner == world.LocalPlayer && a.IsInWorld && a.Info.HasTraitInfo<ConstructionPriorityInfo>())
-				.ToArray();
+            selectedActors = world.Selection.Actors
+                .Where(a => a.Owner == world.LocalPlayer && a.IsInWorld && a.Info.HasTraitInfo<ConstructionPriorityInfo>())
+                .ToArray();
 
-			priorityisdisabled = !selectedActors.Any(a => a.Info.HasTraitInfo<ConstructionPriorityInfo>());
-			
-		}
+            priorityisdisabled = !selectedActors.Any(a => a.Info.HasTraitInfo<ConstructionPriorityInfo>());
 
-		void BindButtonIcon(ButtonWidget button)
-		{
+        }
+
+        void BindButtonIcon(ButtonWidget button)
+        {
             button.Get<ImageWidget>("ICON").GetImageName = () => button.IsDisabled() ? button.Get<ImageWidget>("ICON").ImageName + "-disabled" : button.Get<ImageWidget>("ICON").ImageName;
-		}
+        }
 
-		void PerformOrderOnSelection(Func<Actor, Order> f)
-		{
-			UpdateStateIfNecessary();
+        void PerformOrderOnSelection(Func<Actor, Order> f)
+        {
+            UpdateStateIfNecessary();
 
-			var orders = selectedActors
-				.Select(f)
-				.ToArray();
+            var orders = selectedActors
+                .Select(f)
+                .ToArray();
 
-			foreach (var o in orders)
-				world.IssueOrder(o);
-		}
-	}
+            foreach (var o in orders)
+                world.IssueOrder(o);
+        }
+    }
 }

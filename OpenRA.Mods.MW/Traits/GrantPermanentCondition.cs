@@ -14,41 +14,41 @@ using OpenRA.Traits;
 
 namespace OpenRA.Mods.MW.Traits
 {
-	[Desc("Grants a condition while the trait is active.")]
-	class GrantPermanentConditionInfo : ConditionalTraitInfo
-	{
-		[FieldLoader.Require]
-		[GrantedConditionReference]
-		[Desc("Condition to grant.")]
-		public readonly string Condition = null;
+    [Desc("Grants a condition while the trait is active.")]
+    class GrantPermanentConditionInfo : ConditionalTraitInfo
+    {
+        [FieldLoader.Require]
+        [GrantedConditionReference]
+        [Desc("Condition to grant.")]
+        public readonly string Condition = null;
 
-		public override object Create(ActorInitializer init) { return new GrantPermanentCondition(this); }
-	}
+        public override object Create(ActorInitializer init) { return new GrantPermanentCondition(this); }
+    }
 
-	class GrantPermanentCondition : ConditionalTrait<GrantPermanentConditionInfo>
-	{
-		ConditionManager conditionManager;
-		int conditionToken = ConditionManager.InvalidConditionToken;
+    class GrantPermanentCondition : ConditionalTrait<GrantPermanentConditionInfo>
+    {
+        ConditionManager conditionManager;
+        int conditionToken = ConditionManager.InvalidConditionToken;
         bool enabled = false;
 
 
-		public GrantPermanentCondition(GrantPermanentConditionInfo info)
-			: base(info) { }
+        public GrantPermanentCondition(GrantPermanentConditionInfo info)
+            : base(info) { }
 
-		protected override void Created(Actor self)
-		{
-			conditionManager = self.Trait<ConditionManager>();
+        protected override void Created(Actor self)
+        {
+            conditionManager = self.Trait<ConditionManager>();
 
-			base.Created(self);
-		}
+            base.Created(self);
+        }
 
-		protected override void TraitEnabled(Actor self)
-		{
+        protected override void TraitEnabled(Actor self)
+        {
             if (!enabled && conditionToken == ConditionManager.InvalidConditionToken)
             {
                 conditionToken = conditionManager.GrantCondition(self, Info.Condition);
                 enabled = true;
             }
-		}
-	}
+        }
+    }
 }

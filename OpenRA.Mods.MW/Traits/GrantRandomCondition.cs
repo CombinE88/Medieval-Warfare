@@ -17,54 +17,54 @@ using OpenRA.Traits;
 
 namespace OpenRA.Mods.MW.Traits
 {
-	[Desc("Grants a condition while the trait is active.")]
-	class GrantRandomConditionInfo : ConditionalTraitInfo
-	{
-		[FieldLoader.Require]
-		[GrantedConditionReference]
-		[Desc("Condition to grant when no RandomConditions are set.")]
-		public readonly string FallbackCondition = null;
-		[Desc("Random condition to grant out of a set of strings.")]
-		public readonly HashSet<string> RandomConditions = new HashSet<string>();
+    [Desc("Grants a condition while the trait is active.")]
+    class GrantRandomConditionInfo : ConditionalTraitInfo
+    {
+        [FieldLoader.Require]
+        [GrantedConditionReference]
+        [Desc("Condition to grant when no RandomConditions are set.")]
+        public readonly string FallbackCondition = null;
+        [Desc("Random condition to grant out of a set of strings.")]
+        public readonly HashSet<string> RandomConditions = new HashSet<string>();
 
-		public override object Create(ActorInitializer init) { return new GrantRandomCondition(this); }
-	}
+        public override object Create(ActorInitializer init) { return new GrantRandomCondition(this); }
+    }
 
-	class GrantRandomCondition : ConditionalTrait<GrantRandomConditionInfo>
-	{
-		ConditionManager conditionManager;
-		int conditionToken = ConditionManager.InvalidConditionToken;
-		private string PickedCondition;
+    class GrantRandomCondition : ConditionalTrait<GrantRandomConditionInfo>
+    {
+        ConditionManager conditionManager;
+        int conditionToken = ConditionManager.InvalidConditionToken;
+        private string PickedCondition;
 
-		public GrantRandomCondition(GrantRandomConditionInfo info)
-			: base(info) { }
-		
-		protected override void Created(Actor self)
-		{
-			conditionManager = self.Trait<ConditionManager>();
-			if (Info.RandomConditions.Count == 0)
-			{
-				PickedCondition = Info.FallbackCondition;
-			}
-			else
-			{
-				PickedCondition = Info.RandomConditions.ElementAt(self.World.SharedRandom.Next(Info.RandomConditions.Count));
-			}
-			base.Created(self);
-		}
+        public GrantRandomCondition(GrantRandomConditionInfo info)
+            : base(info) { }
 
-		protected override void TraitEnabled(Actor self)
-		{
-			if (conditionToken == ConditionManager.InvalidConditionToken)
-				conditionToken = conditionManager.GrantCondition(self, PickedCondition);
-		}
+        protected override void Created(Actor self)
+        {
+            conditionManager = self.Trait<ConditionManager>();
+            if (Info.RandomConditions.Count == 0)
+            {
+                PickedCondition = Info.FallbackCondition;
+            }
+            else
+            {
+                PickedCondition = Info.RandomConditions.ElementAt(self.World.SharedRandom.Next(Info.RandomConditions.Count));
+            }
+            base.Created(self);
+        }
 
-		protected override void TraitDisabled(Actor self)
-		{
-			if (conditionToken == ConditionManager.InvalidConditionToken)
-				return;
+        protected override void TraitEnabled(Actor self)
+        {
+            if (conditionToken == ConditionManager.InvalidConditionToken)
+                conditionToken = conditionManager.GrantCondition(self, PickedCondition);
+        }
 
-			conditionToken = conditionManager.RevokeCondition(self, conditionToken);
-		}
-	}
+        protected override void TraitDisabled(Actor self)
+        {
+            if (conditionToken == ConditionManager.InvalidConditionToken)
+                return;
+
+            conditionToken = conditionManager.RevokeCondition(self, conditionToken);
+        }
+    }
 }

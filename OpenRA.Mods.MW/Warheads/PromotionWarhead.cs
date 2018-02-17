@@ -14,36 +14,36 @@ using OpenRA.Traits;
 
 namespace OpenRA.Mods.MW.Warheads
 {
-	[Desc("Grants promotion to actors.")]
-	public class PromotionWarhead : WarheadAS
-	{
-		[Desc("Range of targets to be promoted.")]
-		public readonly WDist Range = new WDist(2048);
+    [Desc("Grants promotion to actors.")]
+    public class PromotionWarhead : WarheadAS
+    {
+        [Desc("Range of targets to be promoted.")]
+        public readonly WDist Range = new WDist(2048);
 
-		[Desc("Levels of promotion granted.")]
-		public readonly int Levels = 1;
+        [Desc("Levels of promotion granted.")]
+        public readonly int Levels = 1;
 
-		[Desc("Suppress levelup effects?")]
-		public readonly bool SuppressEffects = false;
+        [Desc("Suppress levelup effects?")]
+        public readonly bool SuppressEffects = false;
 
-		public override void DoImpact(Target target, Actor firedBy, IEnumerable<int> damageModifiers)
-		{
-			if (!IsValidImpact(target.CenterPosition, firedBy))
-				return;
+        public override void DoImpact(Target target, Actor firedBy, IEnumerable<int> damageModifiers)
+        {
+            if (!IsValidImpact(target.CenterPosition, firedBy))
+                return;
 
-			var availableActors = firedBy.World.FindActorsInCircle(target.CenterPosition, Range);
+            var availableActors = firedBy.World.FindActorsInCircle(target.CenterPosition, Range);
 
-			foreach (var a in availableActors)
-			{
-				if (!IsValidAgainst(a, firedBy))
-					return;
+            foreach (var a in availableActors)
+            {
+                if (!IsValidAgainst(a, firedBy))
+                    return;
 
-				var xp = a.TraitOrDefault<GainsExperience>();
-				if (xp == null)
-					return;
+                var xp = a.TraitOrDefault<GainsExperience>();
+                if (xp == null)
+                    return;
 
-				xp.GiveLevels(Levels, SuppressEffects);
-			}
-		}
-	}
+                xp.GiveLevels(Levels, SuppressEffects);
+            }
+        }
+    }
 }

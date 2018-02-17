@@ -20,36 +20,36 @@ using OpenRA.Traits;
 
 namespace OpenRA.Mods.MW.Traits
 {
-	[Desc("A actor has to enter the building before the unit spawns.")]
-	public class WithActorProductionInfo : ProductionInfo, Requires<ExitInfo>
-	{
-		public readonly string ReadyAudio = "UnitReady";
-		
-		[Desc("Valid actortypes wich can pe used to produce/ convert.")]
-		public readonly HashSet<string> TrainingActors = new HashSet<string>();
-		
-		[Desc("The range in cells where should be looked for.")]
-		public readonly int FindRadius = 0;
-
-		[Desc("Go direct into the entry not checking anything else.")]
-		public readonly bool GoDirect = false;
-		
-		public override object Create(ActorInitializer init) { return new WithActorProduction(init, this); }
-	}
-
-	class WithActorProduction : Production, INotifyRemovedFromWorld
+    [Desc("A actor has to enter the building before the unit spawns.")]
+    public class WithActorProductionInfo : ProductionInfo, Requires<ExitInfo>
     {
-		readonly WithActorProductionInfo info;
-		public HashSet<Actor> InUse = new HashSet<Actor>();
-		
-		public WithActorProduction(ActorInitializer init, WithActorProductionInfo info)
-			: base(init, info)
-		{
-			this.info = info;
-		}
-		
-		public bool FactoriesGet(Actor self, Actor actor)
-		{
+        public readonly string ReadyAudio = "UnitReady";
+
+        [Desc("Valid actortypes wich can pe used to produce/ convert.")]
+        public readonly HashSet<string> TrainingActors = new HashSet<string>();
+
+        [Desc("The range in cells where should be looked for.")]
+        public readonly int FindRadius = 0;
+
+        [Desc("Go direct into the entry not checking anything else.")]
+        public readonly bool GoDirect = false;
+
+        public override object Create(ActorInitializer init) { return new WithActorProduction(init, this); }
+    }
+
+    class WithActorProduction : Production, INotifyRemovedFromWorld
+    {
+        readonly WithActorProductionInfo info;
+        public HashSet<Actor> inuse = new HashSet<Actor>();
+
+        public WithActorProduction(ActorInitializer init, WithActorProductionInfo info)
+            : base(init, info)
+        {
+            this.info = info;
+        }
+
+        public bool FactoriesGet(Actor self, Actor actor)
+        {
 
 
             foreach (var n in self.World.ActorsHavingTrait<WithActorProduction>()
@@ -59,21 +59,21 @@ namespace OpenRA.Mods.MW.Traits
                         return false;
                     return true;
                 }).ToHashSet())
-			{
-				var FindTraitWithActorProduction = n.TraitsImplementing<WithActorProduction>().FirstOrDefault();
-				var hashcode = FindTraitWithActorProduction.InUse;
-				
-				if (hashcode.Contains(actor))
-				{
-					return true;
-				}
-			}
+            {
+                var FindTraitWithActorProduction = n.TraitsImplementing<WithActorProduction>().FirstOrDefault();
+                var hashcode = FindTraitWithActorProduction.inuse;
 
-			return false;
-		}
-		
-		public bool FreeSpawnable(Actor self, Actor actor)
-		{
+                if (hashcode.Contains(actor))
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
+        public bool FreeSpawnable(Actor self, Actor actor)
+        {
 
 
             foreach (var n in self.World.ActorsHavingTrait<WithFreeSpawnableActor>()
@@ -83,138 +83,138 @@ namespace OpenRA.Mods.MW.Traits
                         return false;
                     return true;
                 }).ToHashSet())
-			{
-				var howmany = n.TraitsImplementing<WithFreeSpawnableActor>();
-				
-				foreach (var b in howmany)
-				{
-					if (b.InUse.Contains(actor))
-					{
-						return true;
-					}
-				}
-			}
+            {
+                var howmany = n.TraitsImplementing<WithFreeSpawnableActor>();
 
-			return false;
-		}
-		
-		public Actor PossibleActor(Actor self,HashSet<Actor> AlreadyUsed, HashSet<string> ValidList)
-		{
-			// Find all Actors within the range, and filter thier Type and if they r taken
-			var possibles = self.World.FindActorsInCircle(self.CenterPosition, WDist.FromCells(info.FindRadius))
-				.Where(a =>
-					{
-						if (a == self)
-							return false;
+                foreach (var b in howmany)
+                {
+                    if (b.inuse.Contains(actor))
+                    {
+                        return true;
+                    }
+                }
+            }
 
-						if (a.Owner != self.Owner)
-							return false;
-						
-						if (FactoriesGet(self, a))
-							return false;
-						
-						if (FreeSpawnable(self, a))
-							return false;
-						
-						if (AlreadyUsed.Contains(a))
-							return false;
+            return false;
+        }
 
-						if (ValidList.Count > 0)
-						{
-							if (ValidList.Contains(a.Info.Name))
-								return true;
-						}
-						else
-						{
-							if (info.TrainingActors.Contains(a.Info.Name))
-								return true;
-						}
+        public Actor PossibleActor(Actor self, HashSet<Actor> AlreadyUsed, HashSet<string> ValidList)
+        {
+            // Find all Actors within the range, and filter thier Type and if they r taken
+            var possibles = self.World.FindActorsInCircle(self.CenterPosition, WDist.FromCells(info.FindRadius))
+                .Where(a =>
+                    {
+                        if (a == self)
+                            return false;
 
-						return false;
-					});
+                        if (a.Owner != self.Owner)
+                            return false;
 
-			// TODO: change to smalles path
-			var closest = possibles.ClosestTo(self);
-			
-			if (closest != null)
-				return closest;
+                        if (FactoriesGet(self, a))
+                            return false;
 
-			return null;
-		}
+                        if (FreeSpawnable(self, a))
+                            return false;
 
-		public bool StillValid(Actor actor, Actor self)
-		{
-			
-			if (!actor.IsInWorld || actor.IsDead)
-			{
-				if (InUse.Contains(actor))
-				{
-					InUse.Remove(actor);
-					return true;
-				}
-			}
-			return false;
-		}
+                        if (AlreadyUsed.Contains(a))
+                            return false;
 
-		public override bool Produce(Actor self, ActorInfo producee, string factionVariant)
-		{
+                        if (ValidList.Count > 0)
+                        {
+                            if (ValidList.Contains(a.Info.Name))
+                                return true;
+                        }
+                        else
+                        {
+                            if (info.TrainingActors.Contains(a.Info.Name))
+                                return true;
+                        }
+
+                        return false;
+                    });
+
+            // TODO: change to smalles path
+            var closest = possibles.ClosestTo(self);
+
+            if (closest != null)
+                return closest;
+
+            return null;
+        }
+
+        public bool StillValid(Actor actor, Actor self)
+        {
+
+            if (!actor.IsInWorld || actor.IsDead)
+            {
+                if (inuse.Contains(actor))
+                {
+                    inuse.Remove(actor);
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        public override bool Produce(Actor self, ActorInfo producee, string factionVariant)
+        {
 
             if (self.Owner.PlayerActor.TraitOrDefault<DeveloperMode>() != null && self.Owner.PlayerActor.TraitOrDefault<DeveloperMode>().FastBuild)
-			{
-				
-				var newexit2 = self.Info.TraitInfos<ExitInfo>().FirstOrDefault();
-				
-				self.World.AddFrameEndTask(ww => DoProduction(self, producee, newexit2, factionVariant));
-				Game.Sound.PlayNotification(self.World.Map.Rules, self.Owner, "Speech", info.ReadyAudio,
-					self.Owner.Faction.InternalName);
-				return true;
-			}
-			
-			//basic setup of values
-			var owner = self.Owner;
-				
-			//find produced unit cost values
-			var ValidActors = new HashSet<string>();;
-			var Actorcount = 1;
-			
-			var guysFound = new HashSet<Actor>();
-			var alreadyReached = 0;
-			
-			//find enough actors
-			if (producee.HasTraitInfo<PersonValuedInfo>())
-			{
-				
-				var BuilderInfo = producee.TraitInfo<PersonValuedInfo>();
-				ValidActors = BuilderInfo.ConvertingActors;
-				Actorcount = BuilderInfo.ActorCount;
-				
-				for (int i = 0; i < Actorcount; i++)
-				{
-					var poss = PossibleActor(self, guysFound, ValidActors);
-					if (poss != null)
-						guysFound.Add(poss);
-				}
-			}
-			else
-			{
-				var poss = PossibleActor(self, new  HashSet<Actor>(), new  HashSet<string>());
-				if (poss != null)
-					guysFound.Add(poss);
-			}
+            {
 
-			
-			
-			//find exit cell and spawn locations
-			var newexit = self.Info.TraitInfos<ExitInfo>().FirstOrDefault();
-			
-			if (guysFound.Count < Actorcount)
-				return false;
+                var newexit2 = self.Info.TraitInfos<ExitInfo>().FirstOrDefault();
 
-			if (Actorcount > 0)
-				foreach (var actor in guysFound)
-				{
-					owner.World.AddFrameEndTask(w =>
-					{
+                self.World.AddFrameEndTask(ww => DoProduction(self, producee, newexit2, factionVariant));
+                Game.Sound.PlayNotification(self.World.Map.Rules, self.Owner, "Speech", info.ReadyAudio,
+                    self.Owner.Faction.InternalName);
+                return true;
+            }
+
+            //basic setup of values
+            var owner = self.Owner;
+
+            //find produced unit cost values
+            var ValidActors = new HashSet<string>(); ;
+            var Actorcount = 1;
+
+            var guysFound = new HashSet<Actor>();
+            var alreadyReached = 0;
+
+            //find enough actors
+            if (producee.HasTraitInfo<PersonValuedInfo>())
+            {
+
+                var BuilderInfo = producee.TraitInfo<PersonValuedInfo>();
+                ValidActors = BuilderInfo.ConvertingActors;
+                Actorcount = BuilderInfo.ActorCount;
+
+                for (int i = 0; i < Actorcount; i++)
+                {
+                    var poss = PossibleActor(self, guysFound, ValidActors);
+                    if (poss != null)
+                        guysFound.Add(poss);
+                }
+            }
+            else
+            {
+                var poss = PossibleActor(self, new HashSet<Actor>(), new HashSet<string>());
+                if (poss != null)
+                    guysFound.Add(poss);
+            }
+
+
+
+            //find exit cell and spawn locations
+            var newexit = self.Info.TraitInfos<ExitInfo>().FirstOrDefault();
+
+            if (guysFound.Count < Actorcount)
+                return false;
+
+            if (Actorcount > 0)
+                foreach (var actor in guysFound)
+                {
+                    owner.World.AddFrameEndTask(w =>
+                    {
                         /*
 						//Actor is possible to move?
 						var move = actor.TraitOrDefault<IMove>();
@@ -270,13 +270,13 @@ namespace OpenRA.Mods.MW.Traits
 
                                     */
 
-									alreadyReached++;
-									if (alreadyReached >= Actorcount)
-									{
-											self.World.AddFrameEndTask(ww => DoProduction(self, producee, newexit, factionVariant));
-											Game.Sound.PlayNotification(self.World.Map.Rules, self.Owner, "Speech", info.ReadyAudio,
-												self.Owner.Faction.InternalName);
-									}
+                        alreadyReached++;
+                        if (alreadyReached >= Actorcount)
+                        {
+                            self.World.AddFrameEndTask(ww => DoProduction(self, producee, newexit, factionVariant));
+                            Game.Sound.PlayNotification(self.World.Map.Rules, self.Owner, "Speech", info.ReadyAudio,
+                                self.Owner.Faction.InternalName);
+                        }
 
                         //}));
                         //set reached units state +1 and units in movement state -1
@@ -285,11 +285,15 @@ namespace OpenRA.Mods.MW.Traits
                         {
                             actor.CancelActivity();
                             actor.QueueActivity(new RemoveSelf());
+                            if (inuse.Contains(actor))
+                            {
+                                inuse.Remove(actor);
+                            }
                         }
                         // actor.QueueActivity(new RemoveSelf()); //of he goes
                         else
                         {
-                            InUse.Add(actor);
+                            inuse.Add(actor);
                             var move = actor.TraitOrDefault<IMove>();
 
                             var exitinfo = destination.Info.TraitInfo<ProvidesLivingspaceInfo>();
@@ -334,27 +338,31 @@ namespace OpenRA.Mods.MW.Traits
                                         return;
                                     //if dead before finished
                                     actor.QueueActivity(new RemoveSelf());
+                                    if (inuse.Contains(actor))
+                                    {
+                                        inuse.Remove(actor);
+                                    }
                                 }));
                             }));
                         }
                     });
-				}
-			else
-			{
-				self.World.AddFrameEndTask(ww => DoProduction(self, producee, newexit, factionVariant));
-				Game.Sound.PlayNotification(self.World.Map.Rules, self.Owner, "Speech", info.ReadyAudio,
-					self.Owner.Faction.InternalName);
-			}
-			return true;
-		}
+                }
+            else
+            {
+                self.World.AddFrameEndTask(ww => DoProduction(self, producee, newexit, factionVariant));
+                Game.Sound.PlayNotification(self.World.Map.Rules, self.Owner, "Speech", info.ReadyAudio,
+                    self.Owner.Faction.InternalName);
+            }
+            return true;
+        }
 
-        public void RemovedFromWorld(Actor self)
+        void INotifyRemovedFromWorld.RemovedFromWorld(Actor self)
         {
             if (!self.Owner.NonCombatant && self.Owner.WinState != WinState.Lost && self.Owner.PlayerActor.Info.HasTraitInfo<PlayerCivilizationInfo>())
             {
-                if (InUse.Any())
+                if (inuse.Any())
                 {
-                    foreach (var var in InUse)
+                    foreach (var var in inuse)
                     {
                         if (!var.IsDead && var.IsInWorld && var.Info.HasTraitInfo<IsPeasantInfo>())
                         {

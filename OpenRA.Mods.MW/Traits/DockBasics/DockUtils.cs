@@ -18,45 +18,45 @@ using OpenRA.Traits;
 
 namespace OpenRA.Mods.MW.Activities
 {
-	public static class DockUtils
-	{
-		public static Activity GenericApproachDockActivities(Actor host, Actor client, Dock dock,
-			Activity requester, bool goThroughHost = false)
-		{
-			var air = client.TraitOrDefault<Aircraft>();
-			if (air != null)
-			{
+    public static class DockUtils
+    {
+        public static Activity GenericApproachDockActivities(Actor host, Actor client, Dock dock,
+            Activity requester, bool goThroughHost = false)
+        {
+            var air = client.TraitOrDefault<Aircraft>();
+            if (air != null)
+            {
 
-				var angle = dock.Info.DockAngle;
-				if (angle < 0)
-					angle = client.Info.TraitInfo<AircraftInfo>().InitialFacing;
+                var angle = dock.Info.DockAngle;
+                if (angle < 0)
+                    angle = client.Info.TraitInfo<AircraftInfo>().InitialFacing;
 
-				return ActivityUtils.SequenceActivities(
-					new HeliFly(client, Target.FromPos(dock.CenterPosition)),
-					new Turn(client, angle),
-					new HeliLand(client, false));
-			}
+                return ActivityUtils.SequenceActivities(
+                    new HeliFly(client, Target.FromPos(dock.CenterPosition)),
+                    new Turn(client, angle),
+                    new HeliLand(client, false));
+            }
 
-			if (goThroughHost)
-				return client.Trait<IMove>().MoveTo(dock.Location, host);
-			else
-				return client.Trait<IMove>().MoveTo(dock.Location, 0);
-		}
+            if (goThroughHost)
+                return client.Trait<IMove>().MoveTo(dock.Location, host);
+            else
+                return client.Trait<IMove>().MoveTo(dock.Location, 0);
+        }
 
-		public static Activity GenericFollowRallyPointActivities(Actor host, Actor client, Dock dock, Activity requester)
-		{
-			var rp = host.Trait<RallyPoint>();
+        public static Activity GenericFollowRallyPointActivities(Actor host, Actor client, Dock dock, Activity requester)
+        {
+            var rp = host.Trait<RallyPoint>();
 
-			var air = client.TraitOrDefault<Aircraft>();
-			if (air != null)
-			{
+            var air = client.TraitOrDefault<Aircraft>();
+            if (air != null)
+            {
 
-				// Don't make helis do attack move, it will waste ammo.
-				return client.Trait<IMove>().MoveTo(rp.Location, 2);
-			}
+                // Don't make helis do attack move, it will waste ammo.
+                return client.Trait<IMove>().MoveTo(rp.Location, 2);
+            }
 
-			client.SetTargetLine(Target.FromCell(host.World, rp.Location), Color.Green);
-			return new AttackMoveActivity(client, client.Trait<IMove>().MoveTo(rp.Location, 2));
-		}
-	}
+            client.SetTargetLine(Target.FromCell(host.World, rp.Location), Color.Green);
+            return new AttackMoveActivity(client, client.Trait<IMove>().MoveTo(rp.Location, 2));
+        }
+    }
 }

@@ -19,17 +19,17 @@ namespace OpenRA.Mods.MW.Traits
         public GrimReanimationInfo info;
 
         public Actor Actor;
-		
+
         public GrimReanimation(Actor self, GrimReanimationInfo info)
         {
             this.info = info;
             Actor = null;
         }
 
-        public void Tick(Actor self)
+        void ITick.Tick(Actor self)
         {
             if (Actor != null && (Actor.IsDead || !Actor.IsInWorld))
                 Actor = null;
         }
-    } 
+    }
 }

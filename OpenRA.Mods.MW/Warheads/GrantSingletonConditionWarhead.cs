@@ -17,52 +17,52 @@ using OpenRA.Traits;
 
 namespace OpenRA.Mods.MW.Warheads
 {
-	public class GrantSingletonConditionWarhead : Warhead
-	{
-		[FieldLoader.Require]
-		[Desc("The condition to apply. Must be included in the target actor's ExternalConditions list.")]
-		public readonly string Condition = null;
+    public class GrantSingletonConditionWarhead : Warhead
+    {
+        [FieldLoader.Require]
+        [Desc("The condition to apply. Must be included in the target actor's ExternalConditions list.")]
+        public readonly string Condition = null;
 
-		[Desc("Duration of the condition (in ticks). Set to 0 for a permanent condition.")] public readonly int Duration = 0;
+        [Desc("Duration of the condition (in ticks). Set to 0 for a permanent condition.")] public readonly int Duration = 0;
 
-		public readonly WDist Range = WDist.FromCells(1);
-		
-		public readonly WDist ExtraScanRange = WDist.FromCells(3);
+        public readonly WDist Range = WDist.FromCells(1);
 
-		public override void DoImpact(Target target, Actor firedBy, IEnumerable<int> damageModifiers)
-		{
-			var actors = target.Type == TargetType.Actor
-				? new[] {target.Actor}
-				: firedBy.World.FindActorsInCircle(target.CenterPosition, ExtraScanRange)
-				.Where(a =>
-					{
-						var activeShapes = a.TraitsImplementing<HitShape>().Where(Exts.IsTraitEnabled);
-						var directHit = activeShapes.Any(i => i.Info.Type.DistanceFromEdge(target.CenterPosition, a).LengthSquared <= Range.LengthSquared);
+        public readonly WDist ExtraScanRange = WDist.FromCells(3);
 
-						if (directHit)
-						{
-							return true;
-						}
+        public override void DoImpact(Target target, Actor firedBy, IEnumerable<int> damageModifiers)
+        {
+            var actors = target.Type == TargetType.Actor
+                ? new[] { target.Actor }
+                : firedBy.World.FindActorsInCircle(target.CenterPosition, ExtraScanRange)
+                .Where(a =>
+                    {
+                        var activeShapes = a.TraitsImplementing<HitShape>().Where(Exts.IsTraitEnabled);
+                        var directHit = activeShapes.Any(i => i.Info.Type.DistanceFromEdge(target.CenterPosition, a).LengthSquared <= Range.LengthSquared);
 
-						return false;
-					});
+                        if (directHit)
+                        {
+                            return true;
+                        }
+
+                        return false;
+                    });
 
 
-			if (actors.Any())
-			{
-				var a = actors.ClosestTo(target.CenterPosition);
-				if (IsValidAgainst(a, firedBy))
-				{
+            if (actors.Any())
+            {
+                var a = actors.ClosestTo(target.CenterPosition);
+                if (IsValidAgainst(a, firedBy))
+                {
 
-					var external = a.TraitsImplementing<ExternalCondition>()
-						.FirstOrDefault(t => t.Info.Condition == Condition && t.CanGrantCondition(a, firedBy));
+                    var external = a.TraitsImplementing<ExternalCondition>()
+                        .FirstOrDefault(t => t.Info.Condition == Condition && t.CanGrantCondition(a, firedBy));
 
-					if (external != null)
-					{
-						external.GrantCondition(a, firedBy, Duration);
-					}
-				}
-			}
-		}
-	}
+                    if (external != null)
+                    {
+                        external.GrantCondition(a, firedBy, Duration);
+                    }
+                }
+            }
+        }
+    }
 }

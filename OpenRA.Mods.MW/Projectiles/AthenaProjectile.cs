@@ -15,51 +15,51 @@ using OpenRA.Traits;
 
 namespace OpenRA.Mods.MW.Projectiles
 {
-	[Desc("Dummy projectile exploding on/above the target actor/position after a specified delay.")]
-	public class AthenaProjectileInfo : IProjectileInfo
-	{
-		[Desc("Explosion altitude added to target actor.")]
-		public readonly WDist Altitude = WDist.Zero;
+    [Desc("Dummy projectile exploding on/above the target actor/position after a specified delay.")]
+    public class AthenaProjectileInfo : IProjectileInfo
+    {
+        [Desc("Explosion altitude added to target actor.")]
+        public readonly WDist Altitude = WDist.Zero;
 
-		[Desc("Delay between firing and exploding.")]
-		public readonly int Delay = 0;
+        [Desc("Delay between firing and exploding.")]
+        public readonly int Delay = 0;
 
-		public IProjectile Create(ProjectileArgs args) { return new AthenaProjectile(this, args); }
-	}
+        public IProjectile Create(ProjectileArgs args) { return new AthenaProjectile(this, args); }
+    }
 
-	class AthenaProjectile : IProjectile
-	{
-		readonly ProjectileArgs args;
-		readonly WDist altitude;
+    class AthenaProjectile : IProjectile
+    {
+        readonly ProjectileArgs args;
+        readonly WDist altitude;
 
-		int delay;
+        int delay;
 
-		public AthenaProjectile(AthenaProjectileInfo info, ProjectileArgs args)
-		{
-			this.args = args;
-			altitude = info.Altitude;
-			delay = info.Delay;
-		}
+        public AthenaProjectile(AthenaProjectileInfo info, ProjectileArgs args)
+        {
+            this.args = args;
+            altitude = info.Altitude;
+            delay = info.Delay;
+        }
 
-		public void Tick(World world)
-		{
-			if (--delay < 0)
-			{
-				WPos target;
-				if (args.GuidedTarget.IsValidFor(args.SourceActor))
-					target = args.GuidedTarget.CenterPosition + new WVec(WDist.Zero, WDist.Zero, altitude);
-				else
-					target = args.PassiveTarget + new WVec(WDist.Zero, WDist.Zero, altitude);
+        public void Tick(World world)
+        {
+            if (--delay < 0)
+            {
+                WPos target;
+                if (args.GuidedTarget.IsValidFor(args.SourceActor))
+                    target = args.GuidedTarget.CenterPosition + new WVec(WDist.Zero, WDist.Zero, altitude);
+                else
+                    target = args.PassiveTarget + new WVec(WDist.Zero, WDist.Zero, altitude);
 
-				world.AddFrameEndTask(w => w.Remove(this));
+                world.AddFrameEndTask(w => w.Remove(this));
 
-				args.Weapon.Impact(Target.FromPos(target), args.SourceActor, args.DamageModifiers);
-			}
-		}
+                args.Weapon.Impact(Target.FromPos(target), args.SourceActor, args.DamageModifiers);
+            }
+        }
 
-		public IEnumerable<IRenderable> Render(WorldRenderer wr)
-		{
-			yield break;
-		}
-	}
+        public IEnumerable<IRenderable> Render(WorldRenderer wr)
+        {
+            yield break;
+        }
+    }
 }

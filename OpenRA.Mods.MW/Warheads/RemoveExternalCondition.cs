@@ -16,33 +16,33 @@ using OpenRA.Traits;
 
 namespace OpenRA.Mods.MW.Warheads
 {
-	public class RemoveExternalConditionWarhead : WarheadAS
-	{
-		[FieldLoader.Require]
-		[Desc("The condition to apply. Must be included in the target actor's ExternalConditions list.")]
-		public readonly string Condition = null;
+    public class RemoveExternalConditionWarhead : WarheadAS
+    {
+        [FieldLoader.Require]
+        [Desc("The condition to apply. Must be included in the target actor's ExternalConditions list.")]
+        public readonly string Condition = null;
 
-		[Desc("Duration of the condition (in ticks). Set to 0 for a permanent condition.")]
-		public readonly int Duration = 0;
+        [Desc("Duration of the condition (in ticks). Set to 0 for a permanent condition.")]
+        public readonly int Duration = 0;
 
-		public readonly WDist Range = WDist.FromCells(1);
+        public readonly WDist Range = WDist.FromCells(1);
 
-		public override void DoImpact(Target target, Actor firedBy, IEnumerable<int> damageModifiers)
-		{
-			var actors = target.Type == TargetType.Actor ? new[] { target.Actor } :
-				firedBy.World.FindActorsInCircle(target.CenterPosition, Range);
-			
-			foreach (var a in actors)
-			{
-				if (!IsValidAgainst(a, firedBy))
-					continue;
+        public override void DoImpact(Target target, Actor firedBy, IEnumerable<int> damageModifiers)
+        {
+            var actors = target.Type == TargetType.Actor ? new[] { target.Actor } :
+                firedBy.World.FindActorsInCircle(target.CenterPosition, Range);
 
-				var external = a.TraitsImplementing<ExternalCondition>()
-					.FirstOrDefault(t => t.Info.Condition == Condition && t.CanGrantCondition(a, firedBy));
+            foreach (var a in actors)
+            {
+                if (!IsValidAgainst(a, firedBy))
+                    continue;
 
-				if (external != null)
-					external.TryRevokeCondition(a, firedBy, Duration);
-			}
-		}
-	}
+                var external = a.TraitsImplementing<ExternalCondition>()
+                    .FirstOrDefault(t => t.Info.Condition == Condition && t.CanGrantCondition(a, firedBy));
+
+                if (external != null)
+                    external.TryRevokeCondition(a, firedBy, Duration);
+            }
+        }
+    }
 }

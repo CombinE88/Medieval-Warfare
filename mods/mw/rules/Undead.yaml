@@ -1156,7 +1156,7 @@ CRYPT:
 	ProvidesPrerequisite@buildingname:
 	CritterSpawner:
 		Actors: gstone1, gstone2, gstone3
-		AliveMax: 2
+		AliveMax: 3
 		TicksMin: 250
 		TicksMax: 500
 		RadiusMin: 2

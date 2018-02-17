@@ -19,103 +19,106 @@ using OpenRA.Traits;
 
 namespace OpenRA.Mods.MW.Traits
 {
-	[Desc("Actor becomes a specified actor type when this trait is triggered.")]
-	public class SkipTransformsInfo : ITraitInfo
-	{
-		[Desc("Actor to transform into."), ActorReference, FieldLoader.Require]
-		public readonly string IntoActor = null;
+    [Desc("Actor becomes a specified actor type when this trait is triggered.")]
+    public class SkipTransformsInfo : ITraitInfo
+    {
+        [Desc("Actor to transform into."), ActorReference, FieldLoader.Require]
+        public readonly string IntoActor = null;
 
-		[Desc("Offset to spawn the transformed actor relative to the current cell.")]
-		public readonly CVec Offset = CVec.Zero;
+        [Desc("Offset to spawn the transformed actor relative to the current cell.")]
+        public readonly CVec Offset = CVec.Zero;
 
-		[Desc("Facing that the actor must face before transforming.")]
-		public readonly int Facing = 96;
+        [Desc("Facing that the actor must face before transforming.")]
+        public readonly int Facing = 96;
 
-		[Desc("Sounds to play when transforming.")]
-		public readonly string[] TransformSounds = { };
+        [Desc("Sounds to play when transforming.")]
+        public readonly string[] TransformSounds = { };
 
-		[Desc("Sounds to play when the transformation is blocked.")]
-		public readonly string[] NoTransformSounds = { };
+        [Desc("Sounds to play when the transformation is blocked.")]
+        public readonly string[] NoTransformSounds = { };
 
-		[Desc("Notification to play when transforming.")]
-		public readonly string TransformNotification = null;
+        [Desc("Notification to play when transforming.")]
+        public readonly string TransformNotification = null;
 
-		[Desc("Notification to play when the transformation is blocked.")]
-		public readonly string NoTransformNotification = null;
+        [Desc("Notification to play when the transformation is blocked.")]
+        public readonly string NoTransformNotification = null;
 
-		[Desc("Cursor to display when able to (un)deploy the actor.")]
-		public readonly string DeployCursor = "deploy";
+        [Desc("Cursor to display when able to (un)deploy the actor.")]
+        public readonly string DeployCursor = "deploy";
 
-		[Desc("Cursor to display when unable to (un)deploy the actor.")]
-		public readonly string DeployBlockedCursor = "deploy-blocked";
-		
-		public readonly bool SkipMakeAnimation = false;
-		
-		public readonly bool SkipUndoAnimation = false;
+        [Desc("Cursor to display when unable to (un)deploy the actor.")]
+        public readonly string DeployBlockedCursor = "deploy-blocked";
 
-		[VoiceReference] public readonly string Voice = "Action";
+        public readonly bool SkipMakeAnimation = false;
 
-		public virtual object Create(ActorInitializer init) { return new SkipTransforms(init, this); }
-	}
+        public readonly bool SkipUndoAnimation = false;
 
-	public class SkipTransforms : IIssueOrder, IResolveOrder, IOrderVoice, IIssueDeployOrder
-	{
-		readonly Actor self;
-		readonly SkipTransformsInfo info;
-		readonly string faction;
+        [VoiceReference] public readonly string Voice = "Action";
 
-		public SkipTransforms(ActorInitializer init, SkipTransformsInfo info)
-		{
-			self = init.Self;
-			this.info = info;
-			faction = init.Contains<FactionInit>() ? init.Get<FactionInit, string>() : self.Owner.Faction.InternalName;
-		}
+        public virtual object Create(ActorInitializer init) { return new SkipTransforms(init, this); }
+    }
 
-		public string VoicePhraseForOrder(Actor self, Order order)
-		{
-			return (order.OrderString == "DeployTransform") ? info.Voice : null;
-		}
+    public class SkipTransforms : IIssueOrder, IResolveOrder, IOrderVoice, IIssueDeployOrder
+    {
+        readonly Actor self;
+        readonly SkipTransformsInfo info;
+        readonly string faction;
 
-		public IEnumerable<IOrderTargeter> Orders
-		{
-			get { yield return new DeployOrderTargeter("DeployTransform", 5,
-				() => info.DeployCursor); }
-		}
+        public SkipTransforms(ActorInitializer init, SkipTransformsInfo info)
+        {
+            self = init.Self;
+            this.info = info;
+            faction = init.Contains<FactionInit>() ? init.Get<FactionInit, string>() : self.Owner.Faction.InternalName;
+        }
 
-		public Order IssueOrder(Actor self, IOrderTargeter order, Target target, bool queued)
-		{
-			if (order.OrderID == "DeployTransform")
-				return new Order(order.OrderID, self, queued);
+        public string VoicePhraseForOrder(Actor self, Order order)
+        {
+            return (order.OrderString == "DeployTransform") ? info.Voice : null;
+        }
 
-			return null;
-		}
+        public IEnumerable<IOrderTargeter> Orders
+        {
+            get
+            {
+                yield return new DeployOrderTargeter("DeployTransform", 5,
+              () => info.DeployCursor);
+            }
+        }
 
-		Order IIssueDeployOrder.IssueDeployOrder(Actor self)
-		{
-			return new Order("DeployTransform", self, false);
-		}
+        public Order IssueOrder(Actor self, IOrderTargeter order, Target target, bool queued)
+        {
+            if (order.OrderID == "DeployTransform")
+                return new Order(order.OrderID, self, queued);
 
-		public void DeployTransform(bool queued)
-		{
-			if (!queued)
-				self.CancelActivity();
+            return null;
+        }
 
-			self.QueueActivity(new InstantTransform(self, info.IntoActor)
-			{
-				Offset = info.Offset,
-				Facing = info.Facing,
-				Sounds = info.TransformSounds,
-				Notification = info.TransformNotification,
-				Faction = faction,
-				SkipMakeAnims = info.SkipMakeAnimation,
-				SkipSelfMakeAnims = info.SkipUndoAnimation
-			});
-		}
+        Order IIssueDeployOrder.IssueDeployOrder(Actor self)
+        {
+            return new Order("DeployTransform", self, false);
+        }
 
-		public void ResolveOrder(Actor self, Order order)
-		{
-			if (order.OrderString == "DeployTransform")
-				DeployTransform(order.Queued);
-		}
-	}
+        public void DeployTransform(bool queued)
+        {
+            if (!queued)
+                self.CancelActivity();
+
+            self.QueueActivity(new InstantTransform(self, info.IntoActor)
+            {
+                Offset = info.Offset,
+                Facing = info.Facing,
+                Sounds = info.TransformSounds,
+                Notification = info.TransformNotification,
+                Faction = faction,
+                SkipMakeAnims = info.SkipMakeAnimation,
+                SkipSelfMakeAnims = info.SkipUndoAnimation
+            });
+        }
+
+        public void ResolveOrder(Actor self, Order order)
+        {
+            if (order.OrderString == "DeployTransform")
+                DeployTransform(order.Queued);
+        }
+    }
 }

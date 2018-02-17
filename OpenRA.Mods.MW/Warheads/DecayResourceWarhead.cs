@@ -32,7 +32,7 @@ namespace OpenRA.Mods.MW.Warheads
                     if (resLayer.GetResourceDensity(cell) >= 1 && ResourceTypes.Contains(resLayer.GetResource(cell).Info.Name))
                     {
                         resLayer.Harvest(cell);
-                        if ( resLayer.GetResourceDensity(cell) <= 0)
+                        if (resLayer.GetResourceDensity(cell) <= 0)
                         {
                             resLayer.Destroy(cell);
                         }

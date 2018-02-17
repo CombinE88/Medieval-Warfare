@@ -108,7 +108,7 @@ namespace OpenRA.Mods.MW.Traits
             }
         }
 
-        public void RemovedFromWorld(Actor self)
+        void INotifyRemovedFromWorld.RemovedFromWorld(Actor self)
         {
             if (enabled)
                 self.World.AddFrameEndTask(w =>

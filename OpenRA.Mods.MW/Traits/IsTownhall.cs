@@ -22,11 +22,11 @@ namespace OpenRA.Mods.MW.Traits
             PlayerCiv = self.Owner.PlayerActor.Trait<PlayerCivilization>();
         }
 
-        protected override void Created(Actor self)
+        void INotifyCreated.Created(Actor self)
         {
             if (!self.Owner.NonCombatant && self.Owner.WinState != WinState.Lost && self.Owner.PlayerActor.Info.HasTraitInfo<PlayerCivilizationInfo>())
             {
-               if (!IsTraitDisabled && !Enabled)
+                if (!IsTraitDisabled && !Enabled)
                 {
                     PlayerCiv.PercentageModifier += Info.Percent;
                     Enabled = true;
@@ -34,7 +34,7 @@ namespace OpenRA.Mods.MW.Traits
             }
         }
 
-        public void RemovedFromWorld(Actor self)
+        void INotifyRemovedFromWorld.RemovedFromWorld(Actor self)
         {
             if (!self.Owner.NonCombatant && self.Owner.WinState != WinState.Lost && self.Owner.PlayerActor.Info.HasTraitInfo<PlayerCivilizationInfo>())
             {

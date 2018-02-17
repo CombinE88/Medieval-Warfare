@@ -11,8 +11,8 @@ namespace OpenRA.Mods.MW.Traits
     public class InvisibleToLivingInfo : ITraitInfo
     {
 
-        public readonly HashSet<string> Factions =  new HashSet<string>();
-        
+        public readonly HashSet<string> Factions = new HashSet<string>();
+
         public object Create(ActorInitializer init) { return new InvisibleToLiving(init.Self, this); }
     }
 
@@ -20,7 +20,7 @@ namespace OpenRA.Mods.MW.Traits
     {
         public InvisibleToLivingInfo info;
 
-		
+
         public InvisibleToLiving(Actor self, InvisibleToLivingInfo info)
         {
             this.info = info;
@@ -36,12 +36,12 @@ namespace OpenRA.Mods.MW.Traits
         {
 
             var player = self.World.RenderPlayer;
-                if (player != null && (info.Factions.Contains(player.Faction.Name) || player.NonCombatant || player.IsAlliedWith(self.Owner) || player.PlayerActor.TraitOrDefault<DeveloperMode>().DisableShroud))
-                {
-                    return r;
-                }
+            if (player != null && (info.Factions.Contains(player.Faction.Name) || player.NonCombatant || player.IsAlliedWith(self.Owner) || player.PlayerActor.TraitOrDefault<DeveloperMode>().DisableShroud))
+            {
+                return r;
+            }
             return SpriteRenderable.None;
         }
 
-    } 
+    }
 }

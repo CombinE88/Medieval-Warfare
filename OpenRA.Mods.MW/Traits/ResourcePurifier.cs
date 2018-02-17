@@ -6,35 +6,35 @@ using OpenRA.Traits;
 
 namespace OpenRA.Mods.MW.Traits
 {
-	[Desc("A actor has to enter the building before the unit spawns.")]
-	public class ResourcePurifierInfo : ITraitInfo
-	{
-		public readonly int Percentage = 10;
-		public readonly bool ShowTicks = true;
-		public readonly int TickLifetime = 30;
-		public readonly int TickVelocity = 2;
+    [Desc("A actor has to enter the building before the unit spawns.")]
+    public class ResourcePurifierInfo : ITraitInfo
+    {
+        public readonly int Percentage = 10;
+        public readonly bool ShowTicks = true;
+        public readonly int TickLifetime = 30;
+        public readonly int TickVelocity = 2;
 
-		public object Create(ActorInitializer init) { return new ResourcePurifier(init.Self, this); }
-	}
+        public object Create(ActorInitializer init) { return new ResourcePurifier(init.Self, this); }
+    }
 
-	class ResourcePurifier : ITick
-	{
-		private readonly ResourcePurifierInfo info;
-		private PlayerResources playerResources;
-		private int Resources;
-		private int ResourcesTickBefore;
-		
+    class ResourcePurifier : ITick
+    {
+        private readonly ResourcePurifierInfo info;
+        private PlayerResources playerResources;
+        private int Resources;
+        private int ResourcesTickBefore;
 
 
-		public ResourcePurifier(Actor self, ResourcePurifierInfo info)
-		{
-			this.info = info;
-			playerResources = self.Owner.PlayerActor.Trait<PlayerResources>();
-			Resources = playerResources.Resources;
-			ResourcesTickBefore = playerResources.Resources;
-		}
 
-        public void  GiveCash(Actor self, int CashGrant)
+        public ResourcePurifier(Actor self, ResourcePurifierInfo info)
+        {
+            this.info = info;
+            playerResources = self.Owner.PlayerActor.Trait<PlayerResources>();
+            Resources = playerResources.Resources;
+            ResourcesTickBefore = playerResources.Resources;
+        }
+
+        public void GiveCash(Actor self, int CashGrant)
         {
             var temp = (int)Math.Ceiling((CashGrant * info.Percentage) / 100.0);
             playerResources.GiveResources(temp);
@@ -48,17 +48,17 @@ namespace OpenRA.Mods.MW.Traits
         }
 
         void ITick.Tick(Actor self)
-		{
-			Resources = playerResources.Resources;
-			var CashGrant = Resources-ResourcesTickBefore;
-			
-			if (CashGrant>0)
-			{
+        {
+            Resources = playerResources.Resources;
+            var CashGrant = Resources - ResourcesTickBefore;
+
+            if (CashGrant > 0)
+            {
                 GiveCash(self, CashGrant);
             }
-			
-			ResourcesTickBefore = playerResources.Resources;
-		}
 
-	}
+            ResourcesTickBefore = playerResources.Resources;
+        }
+
+    }
 }

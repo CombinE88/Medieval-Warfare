@@ -31,7 +31,7 @@ namespace OpenRA.Mods.MW.Effects
         public FloatingTextBackwards(WPos pos, Color color, string text, int duration)
         {
             font = Game.Renderer.Fonts["TinyBold"];
-            this.pos = pos +Velocity*duration;
+            this.pos = pos + Velocity * duration;
             this.color = color;
             this.text = text;
             remaining = duration;

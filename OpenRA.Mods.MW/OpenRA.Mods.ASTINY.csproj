@@ -33,7 +33,7 @@
     <Optimize>true</Optimize>
     <WarningLevel>4</WarningLevel>
     <RunCodeAnalysis>true</RunCodeAnalysis>
-    <CodeAnalysisIgnoreGeneratedCode>false</CodeAnalysisIgnoreGeneratedCode>
+    <CodeAnalysisIgnoreGeneratedCode>true</CodeAnalysisIgnoreGeneratedCode>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="FuzzyLogicLibrary">
@@ -135,7 +135,6 @@
     <Compile Include="Traits\Undead Faction\InvisibleToLiving.cs" />
     <Compile Include="Traits\Undead Faction\IsGrave.cs" />
     <Compile Include="Traits\Undead Faction\Skiptransforms.cs" />
-    <Compile Include="Traits\Undead Faction\StartandIdle.cs" />
     <Compile Include="Traits\Undead Faction\UndeadBuilder.cs" />
     <Compile Include="Traits\Undead Faction\UndeadGraveProduction.cs" />
     <Compile Include="Traits\Undead Faction\ActorEnsurance.cs" />

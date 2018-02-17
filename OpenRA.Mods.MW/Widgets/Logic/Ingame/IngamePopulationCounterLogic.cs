@@ -20,43 +20,43 @@ using OpenRA.Widgets;
 
 namespace OpenRA.Mods.MW.Widgets.Logic
 {
-	public class IngamePopulationCounterLogic : ChromeLogic
-	{
-		const float DisplayFracPerFrame = .07f;
-		const int DisplayDeltaPerFrame = 37;
+    public class IngamePopulationCounterLogic : ChromeLogic
+    {
+        const float DisplayFracPerFrame = .07f;
+        const int DisplayDeltaPerFrame = 37;
 
-		readonly Player player;
-		readonly string cashLabel;
-		
-		
-        
-		int displayResources;
-		string displayLabel;
-		
-
-		[ObjectCreator.UseCtor]
-		public IngamePopulationCounterLogic(Widget widget, World world)
-		{
-			var pop = widget.Get<LabelWithTooltipWidget>("POP");
-
-			player = world.LocalPlayer;
-		
-			cashLabel = pop.Text;
-			displayLabel = cashLabel.F(displayResources);
-
-			pop.GetText = () => displayLabel;
-
-			displayResources = player.PlayerActor.Trait<PlayerCivilization>().Peasantpopulationvar;
+        readonly Player player;
+        readonly string cashLabel;
 
 
-		}
 
-		public override void Tick()
-		{
-			if (player.Faction.InternalName != "ded")
-				displayLabel = "Peasants: " + cashLabel.F(player.PlayerActor.Trait<PlayerCivilization>().Peasantpopulationvar);
-			else
-				displayLabel = "Souls: " + cashLabel.F(player.PlayerActor.Trait<PlayerCivilization>().Peasantpopulationvar);
-		}
-	}
+        int displayResources;
+        string displayLabel;
+
+
+        [ObjectCreator.UseCtor]
+        public IngamePopulationCounterLogic(Widget widget, World world)
+        {
+            var pop = widget.Get<LabelWithTooltipWidget>("POP");
+
+            player = world.LocalPlayer;
+
+            cashLabel = pop.Text;
+            displayLabel = cashLabel.F(displayResources);
+
+            pop.GetText = () => displayLabel;
+
+            displayResources = player.PlayerActor.Trait<PlayerCivilization>().Peasantpopulationvar;
+
+
+        }
+
+        public override void Tick()
+        {
+            if (player.Faction.InternalName != "ded")
+                displayLabel = "Peasants: " + cashLabel.F(player.PlayerActor.Trait<PlayerCivilization>().Peasantpopulationvar);
+            else
+                displayLabel = "Souls: " + cashLabel.F(player.PlayerActor.Trait<PlayerCivilization>().Peasantpopulationvar);
+        }
+    }
 }

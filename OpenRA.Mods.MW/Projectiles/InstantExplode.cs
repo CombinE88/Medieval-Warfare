@@ -15,30 +15,30 @@ using OpenRA.Traits;
 
 namespace OpenRA.Mods.MW.Projectiles
 {
-	public class InstantExplodeInfo : IProjectileInfo
-	{
-		public IProjectile Create(ProjectileArgs args) { return new InstantExplode(this, args); }
-	}
+    public class InstantExplodeInfo : IProjectileInfo
+    {
+        public IProjectile Create(ProjectileArgs args) { return new InstantExplode(this, args); }
+    }
 
-	class InstantExplode : IProjectile
-	{
-		readonly ProjectileArgs args;
+    class InstantExplode : IProjectile
+    {
+        readonly ProjectileArgs args;
 
-		public InstantExplode(InstantExplodeInfo info, ProjectileArgs args)
-		{
-			this.args = args;
-		}
+        public InstantExplode(InstantExplodeInfo info, ProjectileArgs args)
+        {
+            this.args = args;
+        }
 
-		public void Tick(World world)
-		{
-			world.AddFrameEndTask(w => w.Remove(this));
+        public void Tick(World world)
+        {
+            world.AddFrameEndTask(w => w.Remove(this));
 
-			args.Weapon.Impact(Target.FromPos(args.Source), args.SourceActor, args.DamageModifiers);
-		}
+            args.Weapon.Impact(Target.FromPos(args.Source), args.SourceActor, args.DamageModifiers);
+        }
 
-		public IEnumerable<IRenderable> Render(WorldRenderer wr)
-		{
-			yield break;
-		}
-	}
+        public IEnumerable<IRenderable> Render(WorldRenderer wr)
+        {
+            yield break;
+        }
+    }
 }

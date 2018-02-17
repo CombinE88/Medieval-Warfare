@@ -26,7 +26,7 @@ namespace OpenRA.Mods.MW.Traits
         {
             if (!self.Owner.NonCombatant && self.Owner.WinState != WinState.Lost && self.Owner.PlayerActor.Info.HasTraitInfo<PlayerCivilizationInfo>())
             {
-               if (!IsTraitDisabled && !Enabled)
+                if (!IsTraitDisabled && !Enabled)
                 {
                     PlayerCiv.DirectModifier += Info.Ticks;
                     Enabled = true;
@@ -34,7 +34,7 @@ namespace OpenRA.Mods.MW.Traits
             }
         }
 
-        public void RemovedFromWorld(Actor self)
+        void INotifyRemovedFromWorld.RemovedFromWorld(Actor self)
         {
             if (!self.Owner.NonCombatant && self.Owner.WinState != WinState.Lost && self.Owner.PlayerActor.Info.HasTraitInfo<PlayerCivilizationInfo>())
             {

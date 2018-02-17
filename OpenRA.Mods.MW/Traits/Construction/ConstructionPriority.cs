@@ -22,186 +22,186 @@ using OpenRA.Traits;
 
 namespace OpenRA.Mods.MW.Traits.Render
 {
-	[Desc("Displays a text overlay relative to the selection box.")]
-	public class ConstructionPriorityInfo : ITraitInfo
-	{
-		public readonly string PriorityCondition = null;
-		
-		public readonly string Font = "TinyBold";
+    [Desc("Displays a text overlay relative to the selection box.")]
+    public class ConstructionPriorityInfo : ITraitInfo
+    {
+        public readonly string PriorityCondition = null;
 
-		[Desc("Display in this color when not using the player color.")]
-		public readonly Color Color = Color.White;
+        public readonly string Font = "TinyBold";
 
-		[Desc("Use the player color of the current owner.")]
-		public readonly bool UsePlayerColor = false;
+        [Desc("Display in this color when not using the player color.")]
+        public readonly Color Color = Color.White;
 
-		[Desc("Point in the actor's selection box used as reference for offsetting the decoration image. " +
-		      "Possible values are combinations of Center, Top, Bottom, Left, Right.")]
-		public readonly ReferencePoints ReferencePoint = ReferencePoints.Top | ReferencePoints.Left;
+        [Desc("Use the player color of the current owner.")]
+        public readonly bool UsePlayerColor = false;
 
-		[Desc("The Z offset to apply when rendering this decoration.")]
-		public readonly int ZOffset = 5555;
+        [Desc("Point in the actor's selection box used as reference for offsetting the decoration image. " +
+              "Possible values are combinations of Center, Top, Bottom, Left, Right.")]
+        public readonly ReferencePoints ReferencePoint = ReferencePoints.Top | ReferencePoints.Left;
 
-		[Desc("Player stances who can view the decoration.")]
-		public readonly Stance ValidStances = Stance.Ally;
+        [Desc("The Z offset to apply when rendering this decoration.")]
+        public readonly int ZOffset = 5555;
 
-		[Desc("Should this be visible only when selected?")]
-		public readonly bool RequiresSelection = false;
-		
-		public readonly string DeployCursor = "deploy";
+        [Desc("Player stances who can view the decoration.")]
+        public readonly Stance ValidStances = Stance.Ally;
 
-		public object Create(ActorInitializer init) { return new ConstructionPriority(init.Self, this); }
-	}
+        [Desc("Should this be visible only when selected?")]
+        public readonly bool RequiresSelection = false;
 
-	public class ConstructionPriority : IRender, IRenderAboveShroudWhenSelected, INotifyCapture, INotifyCreated, IIssueOrder, IResolveOrder
-	{
-		readonly SpriteFont font;
-		Color color;
+        public readonly string DeployCursor = "deploy";
 
-		private Actor self;
-		private ConstructionPriorityInfo Info;
+        public object Create(ActorInitializer init) { return new ConstructionPriority(init.Self, this); }
+    }
 
-		public int Priority;
-		
-		ConditionManager conditionManager;
-		public HashSet<int> Conditions = new HashSet<int>();
-		
+    public class ConstructionPriority : IRender, IRenderAboveShroudWhenSelected, INotifyCapture, INotifyCreated, IIssueOrder, IResolveOrder
+    {
+        readonly SpriteFont font;
+        Color color;
 
-		public ConstructionPriority(Actor self, ConstructionPriorityInfo info)
-		{
-			this.self = self;
-			this.Info = info;
-			font = Game.Renderer.Fonts[info.Font];
-			color = info.UsePlayerColor ? self.Owner.Color.RGB : info.Color;
-		}
-		
-		public void Created(Actor self)
-		{
-			conditionManager = self.TraitOrDefault<ConditionManager>();
-		}
+        private Actor self;
+        private ConstructionPriorityInfo Info;
 
-		public void addCondition()
-		{
-			if (conditionManager != null && Conditions.Count<5)
-			{
-				var token = conditionManager.GrantCondition(self, Info.PriorityCondition);
-				Conditions.Add(token);
-			}
-		}
+        public int Priority;
 
-		public void removecondition()
-		{
-			if (conditionManager != null && Conditions.Any())
-			{
-				var token = Conditions.Last();
-				conditionManager.RevokeCondition(self, token);
-				Conditions.Remove(token);
-			}
+        ConditionManager conditionManager;
+        public HashSet<int> Conditions = new HashSet<int>();
 
-		}
 
-		public virtual bool ShouldRender(Actor self) { return true; }
+        public ConstructionPriority(Actor self, ConstructionPriorityInfo info)
+        {
+            this.self = self;
+            this.Info = info;
+            font = Game.Renderer.Fonts[info.Font];
+            color = info.UsePlayerColor ? self.Owner.Color.RGB : info.Color;
+        }
 
-		IEnumerable<IRenderable> IRender.Render(Actor self, WorldRenderer wr)
-		{
-			return !Info.RequiresSelection ? RenderInner(self, wr) : SpriteRenderable.None;
-		}
+        void INotifyCreated.Created(Actor self)
+        {
+            conditionManager = self.TraitOrDefault<ConditionManager>();
+        }
 
-		IEnumerable<IRenderable> IRenderAboveShroudWhenSelected.RenderAboveShroud(Actor self, WorldRenderer wr)
-		{
-			return Info.RequiresSelection ? RenderInner(self, wr) : SpriteRenderable.None;
-		}
+        public void addCondition()
+        {
+            if (conditionManager != null && Conditions.Count < 5)
+            {
+                var token = conditionManager.GrantCondition(self, Info.PriorityCondition);
+                Conditions.Add(token);
+            }
+        }
 
-		IEnumerable<IRenderable> RenderInner(Actor self, WorldRenderer wr)
-		{
-			if (self.IsDead || !self.IsInWorld)
-				return Enumerable.Empty<IRenderable>();
+        public void removecondition()
+        {
+            if (conditionManager != null && Conditions.Any())
+            {
+                var token = Conditions.Last();
+                conditionManager.RevokeCondition(self, token);
+                Conditions.Remove(token);
+            }
 
-			if (self.World.RenderPlayer != null)
-			{
-				var stance = self.Owner.Stances[self.World.RenderPlayer];
-				if (!Info.ValidStances.HasStance(stance))
-					return Enumerable.Empty<IRenderable>();
-			}
+        }
 
-			if (!ShouldRender(self) || self.World.FogObscures(self))
-				return Enumerable.Empty<IRenderable>();
+        public virtual bool ShouldRender(Actor self) { return true; }
 
-			var bounds = self.VisualBounds;
-			var halfSize = font.Measure(Conditions.Count.ToString()) / 2;
+        IEnumerable<IRenderable> IRender.Render(Actor self, WorldRenderer wr)
+        {
+            return !Info.RequiresSelection ? RenderInner(self, wr) : SpriteRenderable.None;
+        }
 
-			var boundsOffset = new int2(bounds.Left + bounds.Right, bounds.Top + bounds.Bottom) / 2;
-			var sizeOffset = new int2();
-			if (Info.ReferencePoint.HasFlag(ReferencePoints.Top))
-			{
-				boundsOffset -= new int2(0, bounds.Height / 2);
-				sizeOffset += new int2(0, halfSize.Y);
-			}
-			else if (Info.ReferencePoint.HasFlag(ReferencePoints.Bottom))
-			{
-				boundsOffset += new int2(0, bounds.Height / 2);
-				sizeOffset -= new int2(0, halfSize.Y);
-			}
+        IEnumerable<IRenderable> IRenderAboveShroudWhenSelected.RenderAboveShroud(Actor self, WorldRenderer wr)
+        {
+            return Info.RequiresSelection ? RenderInner(self, wr) : SpriteRenderable.None;
+        }
 
-			if (Info.ReferencePoint.HasFlag(ReferencePoints.Left))
-			{
-				boundsOffset -= new int2(bounds.Width / 2, 0);
-				sizeOffset += new int2(halfSize.X, 0);
-			}
-			else if (Info.ReferencePoint.HasFlag(ReferencePoints.Right))
-			{
-				boundsOffset += new int2(bounds.Width / 2, 0);
-				sizeOffset -= new int2(halfSize.X, 0);
-			}
+        IEnumerable<IRenderable> RenderInner(Actor self, WorldRenderer wr)
+        {
+            if (self.IsDead || !self.IsInWorld)
+                return Enumerable.Empty<IRenderable>();
 
-			var screenPos = wr.ScreenPxPosition(self.CenterPosition) + boundsOffset + sizeOffset;
-			return new IRenderable[] { new TextRenderable(font, wr.ProjectedPosition(screenPos), Info.ZOffset, color, Conditions.Count.ToString()) };
-		}
+            if (self.World.RenderPlayer != null)
+            {
+                var stance = self.Owner.Stances[self.World.RenderPlayer];
+                if (!Info.ValidStances.HasStance(stance))
+                    return Enumerable.Empty<IRenderable>();
+            }
 
-		void INotifyCapture.OnCapture(Actor self, Actor captor, Player oldOwner, Player newOwner)
-		{
-			if (Info.UsePlayerColor)
-				color = newOwner.Color.RGB;
-		}
+            if (!ShouldRender(self) || self.World.FogObscures(self))
+                return Enumerable.Empty<IRenderable>();
 
-		public IEnumerable<IOrderTargeter> Orders
-		{
-			get
-			{
-				yield return new AddPrioTargeter("AddPrio", 5,
-					() => "default");
-				yield return new RemPrioTargeter("RemPrio", 5,
-					() => "default");
-			}
-		}
+            var bounds = self.VisualBounds;
+            var halfSize = font.Measure(Conditions.Count.ToString()) / 2;
 
-		public Order IssueOrder(Actor self, IOrderTargeter order, Target target, bool queued)
-		{
-			if (order.OrderID == "AddPrio")
-			{
-				return new Order(order.OrderID, self, false);
-			}
-			
-			if (order.OrderID == "RemPrio")
-			{
-			return new Order(order.OrderID, self, false);
-			}
+            var boundsOffset = new int2(bounds.Left + bounds.Right, bounds.Top + bounds.Bottom) / 2;
+            var sizeOffset = new int2();
+            if (Info.ReferencePoint.HasFlag(ReferencePoints.Top))
+            {
+                boundsOffset -= new int2(0, bounds.Height / 2);
+                sizeOffset += new int2(0, halfSize.Y);
+            }
+            else if (Info.ReferencePoint.HasFlag(ReferencePoints.Bottom))
+            {
+                boundsOffset += new int2(0, bounds.Height / 2);
+                sizeOffset -= new int2(0, halfSize.Y);
+            }
 
-			return null;
-		}
+            if (Info.ReferencePoint.HasFlag(ReferencePoints.Left))
+            {
+                boundsOffset -= new int2(bounds.Width / 2, 0);
+                sizeOffset += new int2(halfSize.X, 0);
+            }
+            else if (Info.ReferencePoint.HasFlag(ReferencePoints.Right))
+            {
+                boundsOffset += new int2(bounds.Width / 2, 0);
+                sizeOffset -= new int2(halfSize.X, 0);
+            }
 
-		public void ResolveOrder(Actor self, Order order)
-		{
-			if (order.OrderString == "AddPrio")
-			{
-				addCondition();
-			}
-			
-			if (order.OrderString == "RemPrio")
-			{
-				removecondition();
-			}
-		}
+            var screenPos = wr.ScreenPxPosition(self.CenterPosition) + boundsOffset + sizeOffset;
+            return new IRenderable[] { new TextRenderable(font, wr.ProjectedPosition(screenPos), Info.ZOffset, color, Conditions.Count.ToString()) };
+        }
+
+        void INotifyCapture.OnCapture(Actor self, Actor captor, Player oldOwner, Player newOwner)
+        {
+            if (Info.UsePlayerColor)
+                color = newOwner.Color.RGB;
+        }
+
+        public IEnumerable<IOrderTargeter> Orders
+        {
+            get
+            {
+                yield return new AddPrioTargeter("AddPrio", 5,
+                    () => "default");
+                yield return new RemPrioTargeter("RemPrio", 5,
+                    () => "default");
+            }
+        }
+
+        public Order IssueOrder(Actor self, IOrderTargeter order, Target target, bool queued)
+        {
+            if (order.OrderID == "AddPrio")
+            {
+                return new Order(order.OrderID, self, false);
+            }
+
+            if (order.OrderID == "RemPrio")
+            {
+                return new Order(order.OrderID, self, false);
+            }
+
+            return null;
+        }
+
+        public void ResolveOrder(Actor self, Order order)
+        {
+            if (order.OrderString == "AddPrio")
+            {
+                addCondition();
+            }
+
+            if (order.OrderString == "RemPrio")
+            {
+                removecondition();
+            }
+        }
 
         public IEnumerable<Rectangle> ScreenBounds(Actor self, WorldRenderer wr)
         {

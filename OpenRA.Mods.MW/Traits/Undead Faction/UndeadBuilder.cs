@@ -11,15 +11,15 @@ namespace OpenRA.Mods.MW.Traits
     public class UndeadBuilderInfo : ITraitInfo
     {
         public readonly string ReadyAudio = "ConstructionComplete";
-        
+
         public readonly string SpawnActor = null;
-        
-        public readonly CVec SpawnOffset = new CVec(0,0);
-        
+
+        public readonly CVec SpawnOffset = new CVec(0, 0);
+
         public readonly int SummoningTime = 100;
-        
+
         public readonly bool SummoningDecay = false;
-        
+
         public readonly int DecayTime = 25;
 
         public readonly bool SkipMakeAnims = false;
@@ -27,7 +27,7 @@ namespace OpenRA.Mods.MW.Traits
         public readonly bool ForceHealthPercentage = false;
 
         public readonly int Cost = 1000;
-        
+
         public object Create(ActorInitializer init) { return new UndeadBuilder(this); }
     }
 
@@ -40,7 +40,7 @@ namespace OpenRA.Mods.MW.Traits
 
         public int PayPerTick;
         private DeveloperMode devMode;
-		
+
         public UndeadBuilder(UndeadBuilderInfo info)
         {
             this.info = info;
@@ -49,12 +49,12 @@ namespace OpenRA.Mods.MW.Traits
         }
 
 
-        public void Tick(Actor self)
+        void ITick.Tick(Actor self)
         {
             if (info.SummoningDecay)
             {
                 decaycounter--;
-                if (decaycounter <= 0 & hassummoningcount>0)
+                if (decaycounter <= 0 & hassummoningcount > 0)
                 {
                     hassummoningcount--;
                     decaycounter = info.DecayTime;
@@ -63,7 +63,7 @@ namespace OpenRA.Mods.MW.Traits
 
             if (hassummoningcount >= info.SummoningTime)
                 replaceSelf(self);
-            
+
             devMode = self.Owner.PlayerActor.TraitOrDefault<DeveloperMode>();
             if (devMode != null && devMode.FastBuild)
             {
@@ -73,7 +73,7 @@ namespace OpenRA.Mods.MW.Traits
 
         public void replaceSelf(Actor self)
         {
-            
+
             self.World.AddFrameEndTask(w =>
             {
                 if (self.IsDead)
@@ -81,8 +81,8 @@ namespace OpenRA.Mods.MW.Traits
 
                 var selected = w.Selection.Contains(self);
                 var controlgroup = w.Selection.GetControlGroupForActor(self);
-						
-				
+
+
                 var init = new TypeDictionary
                 {
                     new LocationInit(self.Location + info.SpawnOffset),
@@ -106,13 +106,13 @@ namespace OpenRA.Mods.MW.Traits
                     w.Selection.Add(w, a);
                 if (controlgroup.HasValue)
                     w.Selection.AddToControlGroup(a, controlgroup.Value);
-                
+
                 Game.Sound.PlayNotification(self.World.Map.Rules, self.Owner, "Speech", info.ReadyAudio,
                     self.Owner.Faction.InternalName);
-				
-                self.Dispose(); 
+
+                self.Dispose();
             });
         }
     }
-    
+
 }

@@ -19,189 +19,189 @@ using OpenRA.Traits;
 
 namespace OpenRA.Mods.MW.Traits.Render
 {
-	public class WithInfantryBodyDisguisedUpdateInfo : ConditionalTraitInfo, IRenderActorPreviewSpritesInfo, Requires<IMoveInfo>, Requires<RenderSpritesInfo>
-	{
-		public readonly int MinIdleDelay = 30;
-		public readonly int MaxIdleDelay = 110;
+    public class WithInfantryBodyDisguisedUpdateInfo : ConditionalTraitInfo, IRenderActorPreviewSpritesInfo, Requires<IMoveInfo>, Requires<RenderSpritesInfo>
+    {
+        public readonly int MinIdleDelay = 30;
+        public readonly int MaxIdleDelay = 110;
 
-		[SequenceReference] public readonly string MoveSequence = "run";
-		[SequenceReference] public readonly string DefaultAttackSequence = null;
+        [SequenceReference] public readonly string MoveSequence = "run";
+        [SequenceReference] public readonly string DefaultAttackSequence = null;
 
-		// TODO: [SequenceReference] isn't smart enough to use Dictionaries.
-		[Desc("Attack sequence to use for each armament.")]
-		[FieldLoader.LoadUsing("LoadWeaponSequences")]
-		public readonly Dictionary<string, string> AttackSequences = new Dictionary<string, string>();
-		[SequenceReference] public readonly string[] IdleSequences = { };
-		[SequenceReference] public readonly string[] StandSequences = { "stand" };
+        // TODO: [SequenceReference] isn't smart enough to use Dictionaries.
+        [Desc("Attack sequence to use for each armament.")]
+        [FieldLoader.LoadUsing("LoadWeaponSequences")]
+        public readonly Dictionary<string, string> AttackSequences = new Dictionary<string, string>();
+        [SequenceReference] public readonly string[] IdleSequences = { };
+        [SequenceReference] public readonly string[] StandSequences = { "stand" };
 
-		public static object LoadWeaponSequences(MiniYaml yaml)
-		{
+        public static object LoadWeaponSequences(MiniYaml yaml)
+        {
 
             return yaml.ToDictionary().ContainsKey("AttackSequences")
-				? yaml.ToDictionary()["AttackSequences"].ToDictionary(my => FieldLoader.GetValue<string>("(value)", my.Value))
-				: new Dictionary<string, string>();
-		}
+                ? yaml.ToDictionary()["AttackSequences"].ToDictionary(my => FieldLoader.GetValue<string>("(value)", my.Value))
+                : new Dictionary<string, string>();
+        }
 
-		public override object Create(ActorInitializer init) { return new WithInfantryBodyDisguisedUpdate(init, this); }
+        public override object Create(ActorInitializer init) { return new WithInfantryBodyDisguisedUpdate(init, this); }
 
-		public IEnumerable<IActorPreview> RenderPreviewSprites(ActorPreviewInitializer init, RenderSpritesInfo rs, string image, int facings, PaletteReference p)
-		{
-			var anim = new Animation(init.World, image, init.GetFacing());
-			anim.PlayRepeating(RenderSprites.NormalizeSequence(anim, init.GetDamageState(), StandSequences.First()));
-			yield return new SpriteActorPreview(anim, () => WVec.Zero, () => 0, p, rs.Scale);
-		}
-	}
+        public IEnumerable<IActorPreview> RenderPreviewSprites(ActorPreviewInitializer init, RenderSpritesInfo rs, string image, int facings, PaletteReference p)
+        {
+            var anim = new Animation(init.World, image, init.GetFacing());
+            anim.PlayRepeating(RenderSprites.NormalizeSequence(anim, init.GetDamageState(), StandSequences.First()));
+            yield return new SpriteActorPreview(anim, () => WVec.Zero, () => 0, p, rs.Scale);
+        }
+    }
 
-	public class WithInfantryBodyDisguisedUpdate : ConditionalTrait<WithInfantryBodyDisguisedUpdateInfo>, ITick, INotifyAttack, INotifyIdle
-	{
-		readonly IMove move;
-		protected readonly Animation DefaultAnimation;
+    public class WithInfantryBodyDisguisedUpdate : ConditionalTrait<WithInfantryBodyDisguisedUpdateInfo>, ITick, INotifyAttack, INotifyIdle
+    {
+        readonly IMove move;
+        protected readonly Animation DefaultAnimation;
 
-		bool dirty;
-		string idleSequence;
-		int idleDelay;
-		AnimationState state;
-		IRenderInfantrySequenceModifier rsm;
-		public AnimationWithOffset animwo;
+        bool dirty;
+        string idleSequence;
+        int idleDelay;
+        AnimationState state;
+        IRenderInfantrySequenceModifier rsm;
+        public AnimationWithOffset animwo;
 
-		bool IsModifyingSequence { get { return rsm != null && rsm.IsModifyingSequence; } }
-		bool wasModifying;
+        bool IsModifyingSequence { get { return rsm != null && rsm.IsModifyingSequence; } }
+        bool wasModifying;
 
-		public WithInfantryBodyDisguisedUpdate(ActorInitializer init, WithInfantryBodyDisguisedUpdateInfo info)
-			: base(info)
-		{
+        public WithInfantryBodyDisguisedUpdate(ActorInitializer init, WithInfantryBodyDisguisedUpdateInfo info)
+            : base(info)
+        {
             var rs = init.Self.Trait<RenderSprites>();
 
             DefaultAnimation = new Animation(init.World, rs.GetImage(init.Self), RenderSprites.MakeFacingFunc(init.Self));
-			animwo = new AnimationWithOffset(DefaultAnimation, null, () => IsTraitDisabled);
-			rs.Add(animwo);
+            animwo = new AnimationWithOffset(DefaultAnimation, null, () => IsTraitDisabled);
+            rs.Add(animwo);
             PlayStandAnimation(init.Self);
 
-			state = AnimationState.Waiting;
-			move = init.Self.Trait<IMove>();
-		}
+            state = AnimationState.Waiting;
+            move = init.Self.Trait<IMove>();
+        }
 
-		public void PlayStandAnimation(Actor self)
-		{
-			var sequence = DefaultAnimation.GetRandomExistingSequence(Info.StandSequences, Game.CosmeticRandom);
-			if (sequence != null)
-			{
-				var normalized = NormalizeInfantrySequence(self, sequence);
-				DefaultAnimation.PlayRepeating(normalized);
-			}
-		}
+        public void PlayStandAnimation(Actor self)
+        {
+            var sequence = DefaultAnimation.GetRandomExistingSequence(Info.StandSequences, Game.CosmeticRandom);
+            if (sequence != null)
+            {
+                var normalized = NormalizeInfantrySequence(self, sequence);
+                DefaultAnimation.PlayRepeating(normalized);
+            }
+        }
 
-		protected override void Created(Actor self)
-		{
-			rsm = self.TraitOrDefault<IRenderInfantrySequenceModifier>();
+        protected override void Created(Actor self)
+        {
+            rsm = self.TraitOrDefault<IRenderInfantrySequenceModifier>();
 
-			base.Created(self);
-		}
+            base.Created(self);
+        }
 
-		protected virtual string NormalizeInfantrySequence(Actor self, string baseSequence)
-		{
-			var prefix = IsModifyingSequence ? rsm.SequencePrefix : "";
+        protected virtual string NormalizeInfantrySequence(Actor self, string baseSequence)
+        {
+            var prefix = IsModifyingSequence ? rsm.SequencePrefix : "";
 
-			if (DefaultAnimation.HasSequence(prefix + baseSequence))
-				return prefix + baseSequence;
-			else
-				return baseSequence;
-		}
+            if (DefaultAnimation.HasSequence(prefix + baseSequence))
+                return prefix + baseSequence;
+            else
+                return baseSequence;
+        }
 
-		protected virtual bool AllowIdleAnimation(Actor self)
-		{
-			return !IsModifyingSequence;
-		}
+        protected virtual bool AllowIdleAnimation(Actor self)
+        {
+            return !IsModifyingSequence;
+        }
 
-		public void Attacking(Actor self, Target target, Armament a)
-		{
-			string sequence;
-			if (!Info.AttackSequences.TryGetValue(a.Info.Name, out sequence))
+        public void Attacking(Actor self, Target target, Armament a)
+        {
+            string sequence;
+            if (!Info.AttackSequences.TryGetValue(a.Info.Name, out sequence))
             {
                 sequence = Info.DefaultAttackSequence;
             }
 
             if (!string.IsNullOrEmpty(sequence) && DefaultAnimation.HasSequence(NormalizeInfantrySequence(self, sequence)))
-			{
-				state = AnimationState.Attacking;
-				DefaultAnimation.PlayThen(NormalizeInfantrySequence(self, sequence), () => state = AnimationState.Idle);
-			}
-		}
+            {
+                state = AnimationState.Attacking;
+                DefaultAnimation.PlayThen(NormalizeInfantrySequence(self, sequence), () => state = AnimationState.Idle);
+            }
+        }
 
-		void INotifyAttack.PreparingAttack(Actor self, Target target, Armament a, Barrel barrel)
-		{
-			Attacking(self, target, a);
-		}
+        void INotifyAttack.PreparingAttack(Actor self, Target target, Armament a, Barrel barrel)
+        {
+            Attacking(self, target, a);
+        }
 
-		void INotifyAttack.Attacking(Actor self, Target target, Armament a, Barrel barrel) { }
+        void INotifyAttack.Attacking(Actor self, Target target, Armament a, Barrel barrel) { }
 
-		public virtual void Tick(Actor self)
-		{
-			if (rsm != null)
-			{
-				if (wasModifying != rsm.IsModifyingSequence)
-					dirty = true;
+        public virtual void Tick(Actor self)
+        {
+            if (rsm != null)
+            {
+                if (wasModifying != rsm.IsModifyingSequence)
+                    dirty = true;
 
-				wasModifying = rsm.IsModifyingSequence;
-			}
+                wasModifying = rsm.IsModifyingSequence;
+            }
 
-			if ((state != AnimationState.Moving || dirty) && move.IsMoving)
-			{
-				state = AnimationState.Moving;
-				DefaultAnimation.PlayRepeating(NormalizeInfantrySequence(self, Info.MoveSequence));
-			}
-			else if (((state == AnimationState.Moving || dirty) && !move.IsMoving)
-			         || ((state == AnimationState.Idle || state == AnimationState.IdleAnimating) && !self.IsIdle))
-			{
-				state = AnimationState.Waiting;
-				PlayStandAnimation(self);
-			}
+            if ((state != AnimationState.Moving || dirty) && move.IsMoving)
+            {
+                state = AnimationState.Moving;
+                DefaultAnimation.PlayRepeating(NormalizeInfantrySequence(self, Info.MoveSequence));
+            }
+            else if (((state == AnimationState.Moving || dirty) && !move.IsMoving)
+                     || ((state == AnimationState.Idle || state == AnimationState.IdleAnimating) && !self.IsIdle))
+            {
+                state = AnimationState.Waiting;
+                PlayStandAnimation(self);
+            }
 
-			dirty = false;
-		}
+            dirty = false;
+        }
 
-		public void TickIdle(Actor self)
-		{
-			if (state != AnimationState.Idle && state != AnimationState.IdleAnimating && state != AnimationState.Attacking)
-			{
-				PlayStandAnimation(self);
-				state = AnimationState.Idle;
+        public void TickIdle(Actor self)
+        {
+            if (state != AnimationState.Idle && state != AnimationState.IdleAnimating && state != AnimationState.Attacking)
+            {
+                PlayStandAnimation(self);
+                state = AnimationState.Idle;
 
-				if (Info.IdleSequences.Length > 0)
-				{
-					idleSequence = Info.IdleSequences.Random(self.World.SharedRandom);
-					idleDelay = self.World.SharedRandom.Next(Info.MinIdleDelay, Info.MaxIdleDelay);
-				}
-			}
-			else if (AllowIdleAnimation(self))
-			{
-				if (idleSequence != null && DefaultAnimation.HasSequence(idleSequence))
-				{
-					if (idleDelay > 0 && --idleDelay == 0)
-					{
-						state = AnimationState.IdleAnimating;
-						DefaultAnimation.PlayThen(idleSequence, () =>
-						{
-							PlayStandAnimation(self);
-							state = AnimationState.Waiting;
-						});
-					}
-				}
-				else
-				{
-					PlayStandAnimation(self);
-					state = AnimationState.Waiting;
-				}
-			}
-		}
+                if (Info.IdleSequences.Length > 0)
+                {
+                    idleSequence = Info.IdleSequences.Random(self.World.SharedRandom);
+                    idleDelay = self.World.SharedRandom.Next(Info.MinIdleDelay, Info.MaxIdleDelay);
+                }
+            }
+            else if (AllowIdleAnimation(self))
+            {
+                if (idleSequence != null && DefaultAnimation.HasSequence(idleSequence))
+                {
+                    if (idleDelay > 0 && --idleDelay == 0)
+                    {
+                        state = AnimationState.IdleAnimating;
+                        DefaultAnimation.PlayThen(idleSequence, () =>
+                        {
+                            PlayStandAnimation(self);
+                            state = AnimationState.Waiting;
+                        });
+                    }
+                }
+                else
+                {
+                    PlayStandAnimation(self);
+                    state = AnimationState.Waiting;
+                }
+            }
+        }
 
-		enum AnimationState
-		{
-			Idle,
-			Attacking,
-			Moving,
-			Waiting,
-			IdleAnimating
-		}
-	}
+        enum AnimationState
+        {
+            Idle,
+            Attacking,
+            Moving,
+            Waiting,
+            IdleAnimating
+        }
+    }
 }

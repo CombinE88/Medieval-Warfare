@@ -21,7 +21,7 @@ Player:
 		AlivePeasants: 10
 		SpawnModifier: 2
 		SpecialModifier: 
-			nod: 2
+			nod: 50
 		TownHalls: townhall, sulhall
 		Peasants: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 	ProvidesTechPrerequisite@all:

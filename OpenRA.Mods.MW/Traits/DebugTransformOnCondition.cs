@@ -8,25 +8,25 @@ using OpenRA.Traits;
 
 namespace OpenRA.Mods.MW.Traits
 {
-	[Desc("Reloads an AmmoPool trait externally based on the upgrade criteria.")]
-	public class DebugTransformOnConditionInfo : ConditionalTraitInfo
-	{
-		[FieldLoader.Require]
-		public readonly string ReadyAudio = "ConstructionComplete";
-		[Desc("The Actors name you want to transform to.")]
-		public readonly string IntoActor = null;
-		public readonly bool SkipMakeAnims = true;
-		public readonly CVec Offset = CVec.Zero;
-		public readonly int Facing = -1;
+    [Desc("Reloads an AmmoPool trait externally based on the upgrade criteria.")]
+    public class DebugTransformOnConditionInfo : ConditionalTraitInfo
+    {
+        [FieldLoader.Require]
+        public readonly string ReadyAudio = "ConstructionComplete";
+        [Desc("The Actors name you want to transform to.")]
+        public readonly string IntoActor = null;
+        public readonly bool SkipMakeAnims = true;
+        public readonly CVec Offset = CVec.Zero;
+        public readonly int Facing = -1;
 
 
-		public override object Create(ActorInitializer init) { return new DebugTransformOnCondition(init, this); }
-	}
+        public override object Create(ActorInitializer init) { return new DebugTransformOnCondition(init, this); }
+    }
 
-	public class DebugTransformOnCondition : ConditionalTrait<DebugTransformOnConditionInfo>, ITick, INotifyRemovedFromWorld
-	{
-		readonly DebugTransformOnConditionInfo info;
-		readonly string faction;
+    public class DebugTransformOnCondition : ConditionalTrait<DebugTransformOnConditionInfo>, ITick, INotifyRemovedFromWorld
+    {
+        readonly DebugTransformOnConditionInfo info;
+        readonly string faction;
         bool enabled = false;
         bool selected;
         int? controlgroup;
@@ -38,14 +38,14 @@ namespace OpenRA.Mods.MW.Traits
 
 
         public DebugTransformOnCondition(ActorInitializer init, DebugTransformOnConditionInfo info)
-			: base(info)
-		{
-			this.info = info;
-			faction = init.Contains<FactionInit>() ? init.Get<FactionInit, string>() : init.Self.Owner.Faction.InternalName;
-		}
+            : base(info)
+        {
+            this.info = info;
+            faction = init.Contains<FactionInit>() ? init.Get<FactionInit, string>() : init.Self.Owner.Faction.InternalName;
+        }
 
-		void ITick.Tick(Actor self)
-		{
+        void ITick.Tick(Actor self)
+        {
 
 
             if (!IsTraitDisabled || (self.Owner.PlayerActor.TraitOrDefault<DeveloperMode>() != null && self.Owner.PlayerActor.TraitOrDefault<DeveloperMode>().FastBuild))
@@ -104,22 +104,22 @@ namespace OpenRA.Mods.MW.Traits
 
 
             }
-		}
+        }
 
-        public void RemovedFromWorld(Actor self)
+        void INotifyRemovedFromWorld.RemovedFromWorld(Actor self)
         {
             if (enabled)
-            self.World.AddFrameEndTask(w =>
-            {
+                self.World.AddFrameEndTask(w =>
+                {
 
-                var a = w.CreateActor(info.IntoActor, init);
+                    var a = w.CreateActor(info.IntoActor, init);
 
-                if (selected)
-                    w.Selection.Add(w, a);
-                if (controlgroup.HasValue)
-                    w.Selection.AddToControlGroup(a, controlgroup.Value);
+                    if (selected)
+                        w.Selection.Add(w, a);
+                    if (controlgroup.HasValue)
+                        w.Selection.AddToControlGroup(a, controlgroup.Value);
 
-            });
+                });
         }
     }
 }

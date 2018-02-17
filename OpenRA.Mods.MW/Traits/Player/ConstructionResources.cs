@@ -13,32 +13,32 @@ using OpenRA.Traits;
 
 namespace OpenRA.Mods.MW.Traits
 {
-	public class ConstructionResourcesInfo : ITraitInfo
-	{
-		public readonly string Type = "";
-		public object Create(ActorInitializer init) { return new ConstructionResources(init.Self); }
-	}
-	
+    public class ConstructionResourcesInfo : ITraitInfo
+    {
+        public readonly string Type = "";
+        public object Create(ActorInitializer init) { return new ConstructionResources(init.Self); }
+    }
 
-	public class ConstructionResources : ITick
-	{
 
-		private int tickrate;
-		public int Stored;
+    public class ConstructionResources : ITick
+    {
+
+        private int tickrate;
+        public int Stored;
 
         public ConstructionResources(Actor self)
         {
         }
- 
 
-		public void Tick(Actor self)
-		{
-			tickrate--;
 
-			if (tickrate <= 0)
-			{
-				tickrate = 10;
-			}
-		}
-	}
+        void ITick.Tick(Actor self)
+        {
+            tickrate--;
+
+            if (tickrate <= 0)
+            {
+                tickrate = 10;
+            }
+        }
+    }
 }

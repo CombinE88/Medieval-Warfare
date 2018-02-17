@@ -14,15 +14,15 @@ using OpenRA.Traits;
 
 namespace OpenRA.Mods.MW.Warheads
 {
-	public class ShakeGroundWarhead : WarheadAS
-	{
-		[FieldLoader.Require]
-		[Desc("The condition to apply. Must be included in the target actor's ExternalConditions list.")]
-		public readonly int Intensity = 10;
+    public class ShakeGroundWarhead : WarheadAS
+    {
+        [FieldLoader.Require]
+        [Desc("The condition to apply. Must be included in the target actor's ExternalConditions list.")]
+        public readonly int Intensity = 10;
 
-		public override void DoImpact(Target target, Actor firedBy, IEnumerable<int> damageModifiers)
-		{
-			firedBy.World.WorldActor.Trait<ScreenShaker>().AddEffect(Intensity, target.CenterPosition, 1);
-		}
-	}
+        public override void DoImpact(Target target, Actor firedBy, IEnumerable<int> damageModifiers)
+        {
+            firedBy.World.WorldActor.Trait<ScreenShaker>().AddEffect(Intensity, target.CenterPosition, 1);
+        }
+    }
 }

@@ -56,7 +56,7 @@ namespace OpenRA.Mods.MW.Traits
             _delay = Info.Delay;
         }
 
-        public void Tick(Actor self)
+        void ITick.Tick(Actor self)
         {
             if (!IsTraitDisabled)
                 _delay--;

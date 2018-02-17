@@ -13,26 +13,26 @@ using OpenRA.Traits;
 
 namespace OpenRA.Mods.MW.Traits
 {
-	public class ShakeOnCreateInfo : ITraitInfo
-	{
-		public readonly int Intensity = 1;
-		
-		public readonly int Time = 10;
-		public object Create(ActorInitializer init) { return new ShakeOnCreate(this); }
-	}
+    public class ShakeOnCreateInfo : ITraitInfo
+    {
+        public readonly int Intensity = 1;
 
-	public class ShakeOnCreate : INotifyCreated
-	{
-		readonly ShakeOnCreateInfo info;
+        public readonly int Time = 10;
+        public object Create(ActorInitializer init) { return new ShakeOnCreate(this); }
+    }
 
-		public ShakeOnCreate(ShakeOnCreateInfo info)
-		{
-			this.info = info;
-		}
+    public class ShakeOnCreate : INotifyCreated
+    {
+        readonly ShakeOnCreateInfo info;
 
-		void INotifyCreated.Created(Actor self)
-		{
-			self.World.WorldActor.Trait<ScreenShaker>().AddEffect(info.Time, self.CenterPosition, info.Intensity);
-		}
-	}
+        public ShakeOnCreate(ShakeOnCreateInfo info)
+        {
+            this.info = info;
+        }
+
+        void INotifyCreated.Created(Actor self)
+        {
+            self.World.WorldActor.Trait<ScreenShaker>().AddEffect(info.Time, self.CenterPosition, info.Intensity);
+        }
+    }
 }

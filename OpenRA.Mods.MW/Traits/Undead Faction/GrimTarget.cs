@@ -16,10 +16,10 @@ namespace OpenRA.Mods.MW.Traits
     {
         [Desc("Condition grant to itself while when got reanimated")]
         public readonly string GrantCondition = null;
-        
+
         [Desc("Max distance in Cells wich the puppet can go")]
         public readonly int maxDistance = 5;
-        
+
         public readonly int DamageMultiplier = 100;
         public readonly int FirePowerMultiplier = 100;
         public readonly int SpeedMultiplier = 100;
@@ -41,12 +41,12 @@ namespace OpenRA.Mods.MW.Traits
 
         public Actor Grim;
         public bool Reanimated;
-		
+
         public GrimTarget(Actor self, GrimTargetInfo info)
         {
             this.info = info;
             //this.self = self;
-            
+
         }
 
         int ISpeedModifier.GetSpeedModifier() { return !Reanimated ? 100 : info.SpeedMultiplier; }
@@ -75,7 +75,7 @@ namespace OpenRA.Mods.MW.Traits
             }
         }
 
-    public void Tick(Actor self)
+        void ITick.Tick(Actor self)
         {
             if (Reanimated && Grim == null)
                 self.Kill(self);
@@ -85,7 +85,7 @@ namespace OpenRA.Mods.MW.Traits
 
         public void Killed(Actor self, AttackInfo e)
         {
-            
+
             if (!Reanimated && e.Attacker.Info.HasTraitInfo<GrimReanimationInfo>() && e.Attacker.IsInWorld && !e.Attacker.IsDead)
             {
                 var GrimTrait = e.Attacker.Trait<GrimReanimation>();
@@ -112,7 +112,7 @@ namespace OpenRA.Mods.MW.Traits
             }
         }
 
-        public void Created(Actor self)
+        void INotifyCreated.Created(Actor self)
         {
             conditionManager = self.TraitOrDefault<ConditionManager>();
             if (Reanimated && token == ConditionManager.InvalidConditionToken && conditionManager != null)
@@ -136,5 +136,5 @@ namespace OpenRA.Mods.MW.Traits
         {
             throw new NotImplementedException();
         }
-    } 
+    }
 }

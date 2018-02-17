@@ -31,7 +31,7 @@ namespace OpenRA.Mods.MW.Activities
 
         private PlayerResources PR;
 
-        public PreyBuildActivity(Actor self,Actor dockact,bool facingDock,Dock d)
+        public PreyBuildActivity(Actor self, Actor dockact, bool facingDock, Dock d)
         {
             info = self.Info.TraitInfo<AcolytePreyBuildInfo>();
             wsb = self.Trait<WithSpriteBody>();
@@ -39,14 +39,14 @@ namespace OpenRA.Mods.MW.Activities
             lockfacing = facingDock;
             playanim = true;
             _d = d;
-            
+
             ticks = self.Info.TraitInfo<AcolytePreyBuildInfo>().Buildinterval;
             UndeadBuilder = dockactor.TraitsImplementing<UndeadBuilder>().FirstOrDefault();
 
             ConditionManager = self.Trait<ConditionManager>();
             token = ConditionManager.InvalidConditionToken;
             condtion = self.Info.TraitInfo<AcolytePreyBuildInfo>().SelfEnabledCondition;
-            PR = self.Owner.PlayerActor.Trait<PlayerResources>(); 
+            PR = self.Owner.PlayerActor.Trait<PlayerResources>();
 
         }
 
@@ -54,15 +54,15 @@ namespace OpenRA.Mods.MW.Activities
         {
             if (IsCanceled)
             {
-                wsb.PlayCustomAnimationRepeating(self,wsb.Info.Sequence);
+                wsb.PlayCustomAnimationRepeating(self, wsb.Info.Sequence);
                 playanim = true;
                 if (condtion != null && token != ConditionManager.InvalidConditionToken)
                 {
                     token = ConditionManager.RevokeCondition(self, token);
                     token = ConditionManager.InvalidConditionToken;
                 }
-               
-                if( endqueueonce)
+
+                if (endqueueonce)
                 {
                     endqueueonce = false;
                     QueueChild(self.Trait<IMove>().VisualMove(self, self.CenterPosition,
@@ -77,40 +77,40 @@ namespace OpenRA.Mods.MW.Activities
                 {
                     return NextActivity;
                 }
-                
+
             }
-            
+
             if (ChildActivity != null)
             {
                 ActivityUtils.RunActivity(self, ChildActivity);
                 return this;
             }
-           
+
             if (playanim)
             {
                 playanim = false;
                 endqueueonce = true;
                 QueueChild(self.Trait<IMove>().VisualMove(self, self.CenterPosition, _d.CenterPosition));
-                QueueChild(new CallFunc (() =>
-                {
-                    var facing = self.Trait<IFacing>();
-                    if (dockactor != null && facing != null && lockfacing)
-                    {
-                        var desiredFacing =
-                            (dockactor.CenterPosition - self.CenterPosition).HorizontalLengthSquared != 0
-                                ? (dockactor.CenterPosition - self.CenterPosition).Yaw.Facing
-                                : facing.Facing;
-                        facing.Facing = desiredFacing;
-                    }
-                    wsb.PlayCustomAnimationRepeating(self, info.PreySequence);
-                    if (condtion != null)
-                        token = ConditionManager.GrantCondition(self, condtion);
-                }));
+                QueueChild(new CallFunc(() =>
+               {
+                   var facing = self.Trait<IFacing>();
+                   if (dockactor != null && facing != null && lockfacing)
+                   {
+                       var desiredFacing =
+                           (dockactor.CenterPosition - self.CenterPosition).HorizontalLengthSquared != 0
+                               ? (dockactor.CenterPosition - self.CenterPosition).Yaw.Facing
+                               : facing.Facing;
+                       facing.Facing = desiredFacing;
+                   }
+                   wsb.PlayCustomAnimationRepeating(self, info.PreySequence);
+                   if (condtion != null)
+                       token = ConditionManager.GrantCondition(self, condtion);
+               }));
             }
 
             BuildPrey(self);
 
-           
+
             return this;
         }
 
@@ -127,12 +127,12 @@ namespace OpenRA.Mods.MW.Activities
                 if (PR.TakeCash(UndeadBuilder.PayPerTick, true))
                 {
                     UndeadBuilder.hassummoningcount += 1;
-                    var floattest  =UndeadBuilder.PayPerTick.ToString();
+                    var floattest = UndeadBuilder.PayPerTick.ToString();
                     floattest = "- " + floattest + " Essence";
                     if (self.Owner.IsAlliedWith(self.World.RenderPlayer))
                         self.World.AddFrameEndTask(w => w.Add(new FloatingTextBackwards(self.CenterPosition,
                             self.Owner.Color.RGB, floattest, 30)));
-                     
+
                 }
             }
             else if (dockactor == null)
@@ -143,7 +143,7 @@ namespace OpenRA.Mods.MW.Activities
             {
                 Cancel(self, true);
             }
-            
+
         }
 
     }

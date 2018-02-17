@@ -17,36 +17,36 @@ using OpenRA.Mods.Common.Warheads;
 
 namespace OpenRA.Mods.MW.Warheads
 {
-	public class GrantSelfConditionWarhead : Warhead
-	{
-		[FieldLoader.Require]
-		[Desc("The condition to apply. Must be included in the target actor's ExternalConditions list.")]
-		public readonly string Condition = null;
+    public class GrantSelfConditionWarhead : Warhead
+    {
+        [FieldLoader.Require]
+        [Desc("The condition to apply. Must be included in the target actor's ExternalConditions list.")]
+        public readonly string Condition = null;
 
-		[Desc("Duration of the condition (in ticks). Set to 0 for a permanent condition.")]
-		public readonly int Duration = 0;
+        [Desc("Duration of the condition (in ticks). Set to 0 for a permanent condition.")]
+        public readonly int Duration = 0;
 
-		public override void DoImpact(Target target, Actor firedBy, IEnumerable<int> damageModifiers)
-		{
-			if (!firedBy.IsDead && firedBy.IsInWorld)
-			{
-				//Log.Write("debug", "GrantSelfConditionWarhead ::: DoImpact");
+        public override void DoImpact(Target target, Actor firedBy, IEnumerable<int> damageModifiers)
+        {
+            if (!firedBy.IsDead && firedBy.IsInWorld)
+            {
+                //Log.Write("debug", "GrantSelfConditionWarhead ::: DoImpact");
 
-				if (!IsValidAgainst(firedBy, firedBy) && !firedBy.IsDead && firedBy.IsInWorld)
-				{
-					//Log.Write("debug", "GrantSelfConditionWarhead ::: !IsValidAgainst");
-					return;
-				}
+                if (!IsValidAgainst(firedBy, firedBy) && !firedBy.IsDead && firedBy.IsInWorld)
+                {
+                    //Log.Write("debug", "GrantSelfConditionWarhead ::: !IsValidAgainst");
+                    return;
+                }
 
-				var external = firedBy.TraitsImplementing<ExternalCondition>()
-					.FirstOrDefault(t => t.Info.Condition == Condition && t.CanGrantCondition(firedBy, firedBy));
+                var external = firedBy.TraitsImplementing<ExternalCondition>()
+                    .FirstOrDefault(t => t.Info.Condition == Condition && t.CanGrantCondition(firedBy, firedBy));
 
-				if (external != null && !firedBy.IsDead && firedBy.IsInWorld)
-				{
-					//Log.Write("debug", "GrantSelfConditionWarhead ::: external");
-					external.GrantCondition(firedBy, firedBy, Duration);
-				}
-			}
-		}
-	}
+                if (external != null && !firedBy.IsDead && firedBy.IsInWorld)
+                {
+                    //Log.Write("debug", "GrantSelfConditionWarhead ::: external");
+                    external.GrantCondition(firedBy, firedBy, Duration);
+                }
+            }
+        }
+    }
 }

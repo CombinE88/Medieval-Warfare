@@ -17,59 +17,59 @@ using OpenRA.Widgets;
 
 namespace OpenRA.Mods.MW.Widgets.Logic
 {
-	public class IngameFullPopulationCounterLogic : ChromeLogic
-	{
-		const float DisplayFracPerFrame = .07f;
-		const int DisplayDeltaPerFrame = 37;
+    public class IngameFullPopulationCounterLogic : ChromeLogic
+    {
+        const float DisplayFracPerFrame = .07f;
+        const int DisplayDeltaPerFrame = 37;
 
-		readonly Player player;
-		readonly string cashLabel;
-		
+        readonly Player player;
+        readonly string cashLabel;
 
-		int nextCashTickTime = 0;
-		int displayResources;
-		string displayLabel;
 
-		[ObjectCreator.UseCtor]
-		public IngameFullPopulationCounterLogic(Widget widget, World world)
-		{
-			var pop = widget.Get<LabelWithTooltipWidget>("FULLPOP");
-			player = world.LocalPlayer;
-			
-			cashLabel = pop.Text;
-			displayLabel = cashLabel.F(displayResources);
+        int nextCashTickTime = 0;
+        int displayResources;
+        string displayLabel;
 
-			pop.GetText = () => displayLabel;
-           
-		}		
+        [ObjectCreator.UseCtor]
+        public IngameFullPopulationCounterLogic(Widget widget, World world)
+        {
+            var pop = widget.Get<LabelWithTooltipWidget>("FULLPOP");
+            player = world.LocalPlayer;
 
-		public override void Tick()
-		{
-			
-			
-			if (nextCashTickTime > 0)
-				nextCashTickTime--;
+            cashLabel = pop.Text;
+            displayLabel = cashLabel.F(displayResources);
 
-			var nextres = player.PlayerActor.Trait<PlayerCivilization>().WorkerPopulationvar+player.PlayerActor.Trait<PlayerCivilization>().Peasantpopulationvar;
+            pop.GetText = () => displayLabel;
 
-			var diff = Math.Abs(nextres - displayResources);
-			var move = Math.Min(Math.Max((int)(diff * DisplayFracPerFrame), DisplayDeltaPerFrame), diff);
+        }
 
-			if (displayResources < nextres)
-			{
-				displayResources += move;
-			}
-			else if (displayResources > nextres)
-			{
-				displayResources -= move;
+        public override void Tick()
+        {
 
-				if (Game.Settings.Sound.CashTicks && nextCashTickTime == 0)
-				{
-					nextCashTickTime = 2;
-				}
-			}
 
-			displayLabel = cashLabel.F(displayResources);
-		}
-	}
+            if (nextCashTickTime > 0)
+                nextCashTickTime--;
+
+            var nextres = player.PlayerActor.Trait<PlayerCivilization>().WorkerPopulationvar + player.PlayerActor.Trait<PlayerCivilization>().Peasantpopulationvar;
+
+            var diff = Math.Abs(nextres - displayResources);
+            var move = Math.Min(Math.Max((int)(diff * DisplayFracPerFrame), DisplayDeltaPerFrame), diff);
+
+            if (displayResources < nextres)
+            {
+                displayResources += move;
+            }
+            else if (displayResources > nextres)
+            {
+                displayResources -= move;
+
+                if (Game.Settings.Sound.CashTicks && nextCashTickTime == 0)
+                {
+                    nextCashTickTime = 2;
+                }
+            }
+
+            displayLabel = cashLabel.F(displayResources);
+        }
+    }
 }

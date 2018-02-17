@@ -15,42 +15,42 @@ using OpenRA.Widgets;
 
 
 namespace OpenRA.Mods.MW.Widgets.Logic
-	{
-	public class IngameMaxPopulationCounterLogic : ChromeLogic
-	{
-		readonly Player player;
-		readonly string cashLabel;
-        
-		public int displayResources;
-		string displayLabel;
-		int displaymaxbeds = 0;
+{
+    public class IngameMaxPopulationCounterLogic : ChromeLogic
+    {
+        readonly Player player;
+        readonly string cashLabel;
 
-		[ObjectCreator.UseCtor]
-		public IngameMaxPopulationCounterLogic(Widget widget, World world)
-		{
-			var pop = widget.Get<LabelWithTooltipWidget>("MAXPOP");
-			player = world.LocalPlayer;
-		
-			cashLabel = pop.Text;
-			displayLabel = cashLabel.F(displayResources);
+        public int displayResources;
+        string displayLabel;
+        int displaymaxbeds = 0;
 
-			pop.GetText = () => displayLabel;
+        [ObjectCreator.UseCtor]
+        public IngameMaxPopulationCounterLogic(Widget widget, World world)
+        {
+            var pop = widget.Get<LabelWithTooltipWidget>("MAXPOP");
+            player = world.LocalPlayer;
 
-			displayResources = player.PlayerActor.Trait<PlayerCivilization>().FreePopulation>0 ? player.PlayerActor.Trait<PlayerCivilization>().FreePopulation : 0;
-			displaymaxbeds = player.PlayerActor.Trait<PlayerCivilization>().MaxLivingspacevar;
+            cashLabel = pop.Text;
+            displayLabel = cashLabel.F(displayResources);
 
-		}
+            pop.GetText = () => displayLabel;
 
-		public override void Tick()
-		{
-		
-			displayResources = player.PlayerActor.Trait<PlayerCivilization>().FreePopulation>0 ? player.PlayerActor.Trait<PlayerCivilization>().FreePopulation : 0;
-			displaymaxbeds = player.PlayerActor.Trait<PlayerCivilization>().MaxLivingspacevar;
-			
-			if (player.Faction.InternalName != "ded")
-				displayLabel = "Free Beds: " + cashLabel.F(displayResources + " ( " + displaymaxbeds + " )");
-			else
-				displayLabel = "Free Graves: " + cashLabel.F(displayResources + " ( " + displaymaxbeds + " )");
-		}
-	}
+            displayResources = player.PlayerActor.Trait<PlayerCivilization>().FreePopulation > 0 ? player.PlayerActor.Trait<PlayerCivilization>().FreePopulation : 0;
+            displaymaxbeds = player.PlayerActor.Trait<PlayerCivilization>().MaxLivingspacevar;
+
+        }
+
+        public override void Tick()
+        {
+
+            displayResources = player.PlayerActor.Trait<PlayerCivilization>().FreePopulation > 0 ? player.PlayerActor.Trait<PlayerCivilization>().FreePopulation : 0;
+            displaymaxbeds = player.PlayerActor.Trait<PlayerCivilization>().MaxLivingspacevar;
+
+            if (player.Faction.InternalName != "ded")
+                displayLabel = "Free Beds: " + cashLabel.F(displayResources + " ( " + displaymaxbeds + " )");
+            else
+                displayLabel = "Free Graves: " + cashLabel.F(displayResources + " ( " + displaymaxbeds + " )");
+        }
+    }
 }

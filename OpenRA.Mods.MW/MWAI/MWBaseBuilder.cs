@@ -170,7 +170,7 @@ namespace OpenRA.Mods.MW.MWAI
                 if (!ai.Info.BuildingLimits.ContainsKey(actor.Name))
                     return true;
 
-                return (playerBuildings.Count(a => a.Info.Name == actor.Name) + playerBuildings.Count(a => a.Info.Name == actor.Name.Replace(".scaff",string.Empty).ToLower())) < ai.Info.BuildingLimits[actor.Name];
+                return (playerBuildings.Count(a => a.Info.Name == actor.Name) + playerBuildings.Count(a => a.Info.Name == actor.Name.Replace(".scaff", string.Empty).ToLower())) < ai.Info.BuildingLimits[actor.Name];
             });
 
             if (orderBy != null)
@@ -298,7 +298,7 @@ namespace OpenRA.Mods.MW.MWAI
                 var buildableThings = queue.BuildableItems();
 
 
-                if (ai.HasAdequateCrypts()*3 < playerBuildings.Count() && !(pentagrams * 5 > builder))
+                if (ai.HasAdequateCrypts() * 3 < playerBuildings.Count() && !(pentagrams * 5 > builder))
                 {
                     var crypt = GetProducibleBuilding(ai.Info.UndeadCommonNames.Crypts, buildableThings);
                     if (crypt != null)

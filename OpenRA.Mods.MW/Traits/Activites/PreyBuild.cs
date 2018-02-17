@@ -21,84 +21,84 @@ using OpenRA.Traits;
 
 namespace OpenRA.Mods.MW.Activities
 {
-	public class PreyBuild : Activity, IDockActivity
+    public class PreyBuild : Activity, IDockActivity
     {
-		readonly AcolytePreyBuildInfo info;
-		
-		readonly HashSet<string> preyBuildings;
+        readonly AcolytePreyBuildInfo info;
 
-		Actor target;
-		public bool SmartPrey;
+        readonly HashSet<string> preyBuildings;
 
-		public PreyBuild(Actor self, Actor who)
-		{
-			info = self.Info.TraitInfo<AcolytePreyBuildInfo>();
-			preyBuildings = info.TargetActors;
-			
-			target = who;
-			
-		}
-		
-		public IEnumerable<Actor> getPentas(Actor self)
-		{
-			return self.World.ActorsHavingTrait<DockManager>()
-				.Where(a => a.Owner == self.Owner && preyBuildings.Contains(a.Info.Name));
-		}
+        Actor target;
+        public bool SmartPrey;
 
-		public override Activity Tick(Actor self)
-		{
-			if (IsCanceled)
-				return NextActivity;
-			
-			if (target == null || target.IsDead || target.Disposed || !target.Trait<DockManager>().HasFreeServiceDock(self))
-			{
-				var pentas = getPentas(self);
-				var dockablePentas = pentas.Where(p => p.Trait<DockManager>().HasFreeServiceDock(self));
-				if (dockablePentas.Any())
-					target = dockablePentas.ClosestTo(self);
-				else if (pentas.Any())
-					target = pentas.ClosestTo(self);
-				else
-					target = null;
-			}
+        public PreyBuild(Actor self, Actor who)
+        {
+            info = self.Info.TraitInfo<AcolytePreyBuildInfo>();
+            preyBuildings = info.TargetActors;
 
-			if (target == null)
-			{
-				Cancel(self);
-				return NextActivity;
-			}
-			
-			if (!target.Trait<DockManager>().HasFreeServiceDock(self))
-			{
-				return new Wait(20);
-			}
-			
-			target.Trait<DockManager>().ReserveDock(target, self, this);
-			self.SetTargetLine(Target.FromCell(self.World, target.Location), Color.Green);
-			SmartPrey = true;
-			
-			return NextActivity;
-		}
+            target = who;
 
-		Activity IDockActivity.ApproachDockActivities(Actor host, Actor client, Dock dock)
-		{
-			return DockUtils.GenericApproachDockActivities(host, client, dock, this, true);
-		}
+        }
 
-		Activity IDockActivity.DockActivities(Actor host, Actor client, Dock dock)
-		{
-			return ActivityUtils.SequenceActivities( new PreyBuildActivity(client,host,true,dock));
-		}
+        public IEnumerable<Actor> getPentas(Actor self)
+        {
+            return self.World.ActorsHavingTrait<DockManager>()
+                .Where(a => a.Owner == self.Owner && preyBuildings.Contains(a.Info.Name));
+        }
 
-		Activity IDockActivity.ActivitiesAfterDockDone(Actor host, Actor client, Dock dock)
-		{
-			return null;
-		}
+        public override Activity Tick(Actor self)
+        {
+            if (IsCanceled)
+                return NextActivity;
 
-		Activity IDockActivity.ActivitiesOnDockFail(Actor client)
-		{
-			return null;
-		}
+            if (target == null || target.IsDead || target.Disposed || !target.Trait<DockManager>().HasFreeServiceDock(self))
+            {
+                var pentas = getPentas(self);
+                var dockablePentas = pentas.Where(p => p.Trait<DockManager>().HasFreeServiceDock(self));
+                if (dockablePentas.Any())
+                    target = dockablePentas.ClosestTo(self);
+                else if (pentas.Any())
+                    target = pentas.ClosestTo(self);
+                else
+                    target = null;
+            }
+
+            if (target == null)
+            {
+                Cancel(self);
+                return NextActivity;
+            }
+
+            if (!target.Trait<DockManager>().HasFreeServiceDock(self))
+            {
+                return new Wait(20);
+            }
+
+            target.Trait<DockManager>().ReserveDock(target, self, this);
+            self.SetTargetLine(Target.FromCell(self.World, target.Location), Color.Green);
+            SmartPrey = true;
+
+            return NextActivity;
+        }
+
+        Activity IDockActivity.ApproachDockActivities(Actor host, Actor client, Dock dock)
+        {
+            return DockUtils.GenericApproachDockActivities(host, client, dock, this, true);
+        }
+
+        Activity IDockActivity.DockActivities(Actor host, Actor client, Dock dock)
+        {
+            return ActivityUtils.SequenceActivities(new PreyBuildActivity(client, host, true, dock));
+        }
+
+        Activity IDockActivity.ActivitiesAfterDockDone(Actor host, Actor client, Dock dock)
+        {
+            return null;
+        }
+
+        Activity IDockActivity.ActivitiesOnDockFail(Actor client)
+        {
+            return null;
+        }
 
         public Activity ApproachDockActivities(Actor host, Actor client, Dock dock)
         {

@@ -16,58 +16,58 @@ using OpenRA.Traits;
 
 namespace OpenRA.Mods.MW.Traits
 {
-	[Desc("Plays an audio notification and shows a radar ping when a harvester is attacked.",
-		"Attach this to the player actor.")]
-	public class AcolyteAttackNotifierInfo : ITraitInfo
-	{
-		[Desc("Minimum duration (in seconds) between notification events.")]
-		public readonly int NotifyInterval = 30;
+    [Desc("Plays an audio notification and shows a radar ping when a harvester is attacked.",
+        "Attach this to the player actor.")]
+    public class AcolyteAttackNotifierInfo : ITraitInfo
+    {
+        [Desc("Minimum duration (in seconds) between notification events.")]
+        public readonly int NotifyInterval = 30;
 
-		public readonly Color RadarPingColor = Color.Red;
+        public readonly Color RadarPingColor = Color.Red;
 
-		[Desc("Length of time (in ticks) to display a location ping in the minimap.")]
-		public readonly int RadarPingDuration = 10 * 25;
+        [Desc("Length of time (in ticks) to display a location ping in the minimap.")]
+        public readonly int RadarPingDuration = 10 * 25;
 
-		[Desc("The audio notification type to play.")]
-		public string Notification = "HarvesterAttack";
+        [Desc("The audio notification type to play.")]
+        public string Notification = "HarvesterAttack";
 
-		public object Create(ActorInitializer init) { return new AcolyteAttackNotifier(init.Self, this); }
-	}
+        public object Create(ActorInitializer init) { return new AcolyteAttackNotifier(init.Self, this); }
+    }
 
-	public class AcolyteAttackNotifier : INotifyDamage
-	{
-		readonly RadarPings radarPings;
-		readonly AcolyteAttackNotifierInfo info;
+    public class AcolyteAttackNotifier : INotifyDamage
+    {
+        readonly RadarPings radarPings;
+        readonly AcolyteAttackNotifierInfo info;
 
-		int lastAttackTime;
+        int lastAttackTime;
 
 
         public AcolyteAttackNotifier(Actor self, AcolyteAttackNotifierInfo info)
-		{
-			radarPings = self.World.WorldActor.TraitOrDefault<RadarPings>();
-			this.info = info;
-			lastAttackTime = -info.NotifyInterval * 25;
-		}
+        {
+            radarPings = self.World.WorldActor.TraitOrDefault<RadarPings>();
+            this.info = info;
+            lastAttackTime = -info.NotifyInterval * 25;
+        }
 
-		public void Damaged(Actor self, AttackInfo e)
-		{
-			// Don't track self-damage
-			if (e.Attacker != null && e.Attacker.Owner == self.Owner)
-				return;
+        public void Damaged(Actor self, AttackInfo e)
+        {
+            // Don't track self-damage
+            if (e.Attacker != null && e.Attacker.Owner == self.Owner)
+                return;
 
-			// Only track last hit against our harvesters
-			if (!self.Info.HasTraitInfo<AcolytePreyInfo>())
-				return;
+            // Only track last hit against our harvesters
+            if (!self.Info.HasTraitInfo<AcolytePreyInfo>())
+                return;
 
-			if (self.World.WorldTick - lastAttackTime > info.NotifyInterval * 25)
-			{
-				Game.Sound.PlayNotification(self.World.Map.Rules, self.Owner, "Speech", info.Notification, self.Owner.Faction.InternalName);
+            if (self.World.WorldTick - lastAttackTime > info.NotifyInterval * 25)
+            {
+                Game.Sound.PlayNotification(self.World.Map.Rules, self.Owner, "Speech", info.Notification, self.Owner.Faction.InternalName);
 
-				if (radarPings != null)
-					radarPings.Add(() => self.Owner.IsAlliedWith(self.World.RenderPlayer), self.CenterPosition, info.RadarPingColor, info.RadarPingDuration);
-			}
+                if (radarPings != null)
+                    radarPings.Add(() => self.Owner.IsAlliedWith(self.World.RenderPlayer), self.CenterPosition, info.RadarPingColor, info.RadarPingDuration);
+            }
 
-			lastAttackTime = self.World.WorldTick;
-		}
-	}
+            lastAttackTime = self.World.WorldTick;
+        }
+    }
 }

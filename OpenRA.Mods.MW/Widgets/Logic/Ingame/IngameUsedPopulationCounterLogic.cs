@@ -18,63 +18,63 @@ using OpenRA.Widgets;
 
 namespace OpenRA.Mods.MW.Widgets.Logic
 {
-	public class IngameUsedPopulationCounterLogic : ChromeLogic
-	{
-		const float DisplayFracPerFrame = .07f;
-		const int DisplayDeltaPerFrame = 37;
+    public class IngameUsedPopulationCounterLogic : ChromeLogic
+    {
+        const float DisplayFracPerFrame = .07f;
+        const int DisplayDeltaPerFrame = 37;
 
-		readonly Player player;
-		readonly string cashLabel;
-		int nextCashTickTime = 0;
-		int displayResources;
-		string displayLabel;
-		
-		[ObjectCreator.UseCtor]
-		public IngameUsedPopulationCounterLogic(Widget widget, World world)
-		{
-			var pop = widget.Get<LabelWithTooltipWidget>("USEDPOP");
-			
-			player = world.LocalPlayer;
-			
-			cashLabel = pop.Text;
-			displayLabel = cashLabel.F(displayResources);
+        readonly Player player;
+        readonly string cashLabel;
+        int nextCashTickTime = 0;
+        int displayResources;
+        string displayLabel;
 
-			pop.GetText = () => displayLabel;
+        [ObjectCreator.UseCtor]
+        public IngameUsedPopulationCounterLogic(Widget widget, World world)
+        {
+            var pop = widget.Get<LabelWithTooltipWidget>("USEDPOP");
 
-			displayResources = player.PlayerActor.Trait<PlayerCivilization>().WorkerPopulationvar;
-		}
+            player = world.LocalPlayer;
 
-		public override void Tick()
-		{
-			
-			
-			if (nextCashTickTime > 0)
-				nextCashTickTime--;
+            cashLabel = pop.Text;
+            displayLabel = cashLabel.F(displayResources);
 
-			var actual = player.PlayerActor.Trait<PlayerCivilization>().WorkerPopulationvar;
-			Debug.Write(actual.ToString());
+            pop.GetText = () => displayLabel;
 
-			var diff = Math.Abs(actual - displayResources);
-			var move = Math.Min(Math.Max((int)(diff * DisplayFracPerFrame), DisplayDeltaPerFrame), diff);
+            displayResources = player.PlayerActor.Trait<PlayerCivilization>().WorkerPopulationvar;
+        }
 
-			if (displayResources < actual)
-			{
-				displayResources += move;
-			}
-			else if (displayResources > actual)
-			{
-				displayResources -= move;
+        public override void Tick()
+        {
 
-				if (Game.Settings.Sound.CashTicks && nextCashTickTime == 0)
-				{
-					nextCashTickTime = 2;
-				}
-			}
 
-			if (player.Faction.InternalName != "ded")
-				displayLabel = "Working: " + cashLabel.F(displayResources);
-			else
-				displayLabel = "Ressurected: " + cashLabel.F(displayResources);
-		}
-	}
+            if (nextCashTickTime > 0)
+                nextCashTickTime--;
+
+            var actual = player.PlayerActor.Trait<PlayerCivilization>().WorkerPopulationvar;
+            Debug.Write(actual.ToString());
+
+            var diff = Math.Abs(actual - displayResources);
+            var move = Math.Min(Math.Max((int)(diff * DisplayFracPerFrame), DisplayDeltaPerFrame), diff);
+
+            if (displayResources < actual)
+            {
+                displayResources += move;
+            }
+            else if (displayResources > actual)
+            {
+                displayResources -= move;
+
+                if (Game.Settings.Sound.CashTicks && nextCashTickTime == 0)
+                {
+                    nextCashTickTime = 2;
+                }
+            }
+
+            if (player.Faction.InternalName != "ded")
+                displayLabel = "Working: " + cashLabel.F(displayResources);
+            else
+                displayLabel = "Ressurected: " + cashLabel.F(displayResources);
+        }
+    }
 }
