@@ -41,6 +41,7 @@ MCVNEW:
 	BaseBuilding:
 	SelectionDecorations:
 		VisualBounds: 36,36
+		DecorationBounds: 36,36,0,0
 	SpawnActorOnDeath:
 		Actor: MCVNEW.Husk 
 		OwnerType: InternalName
@@ -139,6 +140,7 @@ SIEGE1:
 		Type: LightCavalry
 	Selectable:
 		Bounds: 35,35,0,-6
+		DecorationBounds: 35,35,0,-6
 	Targetable:
 		TargetTypes: Ground, Siege
 	SpawnActorOnDeath:
@@ -212,6 +214,7 @@ SIEGE2:
 		Type: LightCavalry
 	Selectable:
 		Bounds: 35,35,0,-6
+		DecorationBounds:  35,35,0,-6
 	Targetable:
 		TargetTypes: Ground, Siege
 	SpawnActorOnDeath:
@@ -280,6 +283,7 @@ SIEGE3:
 		Type: HeavyCavalry
 	Selectable:
 		Bounds: 42,54,0,-8
+		DecorationBounds:42,54,0,-8
 	SelectionDecorations:
 		VisualBounds: 42,54,0,-8
 	Targetable:
@@ -412,6 +416,7 @@ SIEGE4:
 		Type: HeavyCavalry
 	Selectable:
 		Bounds: 42,38,0,-8
+		DecorationBounds: 42,38,0,-8
 	SelectionDecorations:
 		VisualBounds: 42,38,0,-8
 	AttackFrontal:
@@ -564,6 +569,7 @@ EHARVXL:
 		SearchFromOrderRadius: 15
 	Selectable:
 		Bounds: 36,36,0,0
+		DecorationBounds:36,36,0,0
 		Priority: 7
 	SelectionDecorations:
 		VisualBounds: 36,36,0,0
@@ -601,6 +607,7 @@ PLANEWAGEN:
 		Type: MediumCavalry
 	Selectable:
 		Bounds: 35,35,0,-6
+		DecorationBounds: 35,35,0,-6
 	SelectionDecorations:
 		VisualBounds: 36,36
 	Targetable:
@@ -640,6 +647,7 @@ SIEGE99:
 		Type: HeavyCavalry
 	Selectable:
 		Bounds: 42,42,0,0
+		DecorationBounds:  42,42,0,0
 		Priority: 5
 	SelectionDecorations:
 		RenderSelectionBars: false

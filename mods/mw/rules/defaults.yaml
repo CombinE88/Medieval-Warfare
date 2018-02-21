@@ -1525,7 +1525,6 @@
 	WithSpriteControlGroupDecoration:
 	Selectable:
 		Bounds: 12,17,0,-6
-		DecorationBounds: 12,17,0,-6
 	QuantizeFacingsFromSequence:
 		Sequence: stand
 	WithInfantryBody:
@@ -1618,6 +1617,7 @@
 		StandSequences: stand
 	Selectable:
 		Bounds: 26,34,0,-6
+		DecorationBounds: 26,34,0,-6
 	SelectionDecorations:
 		VisualBounds: 26,34,0,-6
 	SpawnActorOnDeath@1:
@@ -1680,6 +1680,7 @@
 		StandSequences: stand
 	Selectable:
 		Bounds: 35,35,0,-6 
+		DecorationBounds: 35,35,0,-6 
 	Voiced:
 		VoiceSet: SiegeVoice
 	ThrowsShrapnel@SMALL:

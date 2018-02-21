@@ -2079,6 +2079,7 @@ SULB0:
 		Type: HeavyCavalry
 	Selectable:
 		Bounds: 26,26,0,-13
+		DecorationBounds: 26,26,0,-13
 	SelectionDecorations:
 		VisualBounds: 26,26,0,-13
 	Targetable:
@@ -2196,6 +2197,7 @@ SULB1:
 		Type: LightCavalry
 	Selectable:
 		Bounds: 35,35,0,-6
+		DecorationBounds: 35,35,0,-6
 	Targetable:
 		TargetTypes: Ground, Siege
 	SpawnActorOnDeath:
@@ -2281,6 +2283,7 @@ SULB2:
 		Type: MediumCavalry
 	Selectable:
 		Bounds: 35,35,0,-6
+		DecorationBounds:35,35,0,-6
 	Targetable:
 		TargetTypes: Ground, Siege
 	SpawnActorOnDeath:
@@ -2401,6 +2404,7 @@ SULM3:
 		MoveSequence: run
 	SelectionDecorations:
 		VisualBounds: 24,24
+		DecorationBounds: 24,24
 	SpawnActorOnDeath@1:
 		Actor: SULM3.Husk
 	SpawnActorOnDeath@2:
@@ -2542,6 +2546,7 @@ SULB3:
 		MoveSequence: move
 	SelectionDecorations:
 		VisualBounds: 48,48
+		DecorationBounds: 48,48
 	SpawnActorOnDeath@1:
 		Actor: SULB3.Husk
 	PersonValued:
@@ -2618,6 +2623,7 @@ SULTURNXL:
 		DamageTypes: DefaultDeath
 	Selectable:
 		Bounds: 72,96,0,-48
+		DecorationBounds:72,96,0,-48
 	SelectionDecorations:
 		RenderSelectionBars: false
 		VisualBounds: 72,96,0,-48
