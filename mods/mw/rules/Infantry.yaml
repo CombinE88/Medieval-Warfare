@@ -943,7 +943,7 @@ E5NEW:
 #		Description: Advanced general-purpose infantry.\n  Strong vs all Ground units\n  Detects cloaked units\n  Cannot attack Aircraft anymore!\n\nTrains: 1 Peasant\n
 #		IconPalette: raicon
 #		BuildPaletteOrder: 50
-#		Prerequisites: anyarmory
+#		Prerequisites: anyhq
 #		Queue: MInfantry.Nod, MInfantry.Horse
 #		#BuildDuration: 300
 	Mobile:

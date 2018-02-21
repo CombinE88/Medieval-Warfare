@@ -500,7 +500,7 @@ ROSS3:
 		IconPalette: raicon
 		BuildPaletteOrder: 30
 		Description: Strong mounted Archer.\n  Strong vs Infantry, Aircrafts and Buildings and Spectral Units\n  Has long range, very fast\n  Can detect cloaked units\n  Can attack Aircraft\n\nTrains: 1 Peasant\n\n
-		Prerequisites: anyhq, armorynod
+		Prerequisites: anycastle
 		Queue:  MVehicle.Nod
 		#BuildDuration: 450
 	Mobile:

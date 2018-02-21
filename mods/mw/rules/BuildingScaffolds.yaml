@@ -2022,7 +2022,7 @@ TOWNHALL.scaff:
 #	Buildable:
 #		IconPalette: raicon
 #		BuildPaletteOrder: 40
-#		Prerequisites: anyarmory, !townhall
+#		Prerequisites: anyhq, !townhall
 #		Description: Attracts citizens to your town.\nNew Peasants will spawn faster.\n\n\n
 #		Queue: MBuilding.GDI, MBuilding.Nod
 #		BuildDuration: 100

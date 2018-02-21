@@ -606,7 +606,7 @@ ARMORYNOD:
 	Inherits: ^MWBaseBuilding
 	Inherits@Hitshape: ^2x2Shape
 	ProvidesPrerequisite:
-		Prerequisite: anyarmory
+		Prerequisite: anyhq
 	Armor:
 		Type: Concrete
 	WithDeathAnimation:
@@ -685,7 +685,7 @@ ARMORYGDI:
 	Inherits: ^MWBaseBuilding
 	Inherits@Hitshape: ^2x2Shape
 	ProvidesPrerequisite:
-		Prerequisite: anyarmory
+		Prerequisite: anyhq
 	Armor:
 		Type: Concrete
 	WithDeathAnimation:
@@ -1954,7 +1954,7 @@ WORKSHOPNOD:
 	SupportPowerChargeBar:
 	GrantConditionOnPrerequisite:
 		Condition: Enabled
-		Prerequisites: anyarmory
+		Prerequisites: anyhq
 	GrantConditionOnPrerequisite@Horse:
 		Condition: disable
 		Prerequisites: siege99
@@ -2065,7 +2065,7 @@ WORKSHOPGDI:
 	SupportPowerChargeBar: 
 	GrantConditionOnPrerequisite:
 		Condition: Enabled
-		Prerequisites: anyarmory
+		Prerequisites: anyhq
 	ProvidesPrerequisite@2:
 		Prerequisite: anyworkshop
 	ThrowsShrapnel@LARGE:
@@ -2338,7 +2338,7 @@ TECH1.Husk:
 		Name: Mortar Station (Destroyed)
 	WithBuildingBib:
 		
-ANYARMORY:
+anyarmory:
 	AlwaysVisible:
 	Tooltip:
 		Name: Armory or Tower of Progress
@@ -2377,8 +2377,8 @@ ANYPOWER:
 ANYHQ:
 	AlwaysVisible:
 	Tooltip:
-		Name: Smith, Castle or Palace
-		Description: Smith, Castle or Palace
+		Name: Inventor, Armory, Castle or Palace
+		Description: Inventor, Armory, Castle or Palace
 		
 ANYCASTLE:
 	AlwaysVisible:

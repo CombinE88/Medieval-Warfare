@@ -1146,7 +1146,7 @@ SULTOW3:
 		Name: Tower of Progress
 	ProvidesPrerequisite@buildingname:
 	ProvidesPrerequisite:
-		Prerequisite: anyarmory
+		Prerequisite: anyhq
 	Buildable:
 		IconPalette: raicon
 		BuildPaletteOrder: 60

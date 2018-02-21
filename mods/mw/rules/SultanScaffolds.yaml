@@ -697,7 +697,7 @@ SULHALL.scaff:
 #	Buildable:
 #		IconPalette: raicon
 #		BuildPaletteOrder: 30
-#		Prerequisites: anyarmory, !sulhall
+#		Prerequisites: anyhq, !sulhall
 #		Description: Attracts citizens to your town.\nNew Peasants will spawn faster.\n\n\n
 #		Queue: MBuilding.SUL
 #		BuildDuration: 100

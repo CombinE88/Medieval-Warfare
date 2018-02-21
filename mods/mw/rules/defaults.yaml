@@ -1402,6 +1402,7 @@
 
 ^MedievalHusk:
 	Inherits@1: ^SpriteActor
+	Interactable:
 	HitShape:
 	Health:
 		HP: 5000
