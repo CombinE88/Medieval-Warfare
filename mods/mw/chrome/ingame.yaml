@@ -306,7 +306,7 @@ Container@PLAYER_WIDGETS:
 			Y: WINDOW_BOTTOM - HEIGHT - 230
 			Background: panel-black
 			Width: 36
-			Height: 276 + 34 + 34
+			Height: 276
 			Children:
 				LogicKeyListener@MODIFIER_OVERRIDES:
 				Button@ATTACK_MOVE:
@@ -450,51 +450,51 @@ Container@PLAYER_WIDGETS:
 							Y: 5
 							ImageCollection: command-icons
 							ImageName: queue-orders
-				Background@PRIORITY_BAR:
-					Logic: ConstructionPriorityLogic
-					X: 0
-					Y: PARENT_BOTTOM - 34 - 34
-					Background: command-button
-					Width: 36
-					Height: 34 + 34
-					Children:
-						Button@ADD_PRIO:
-							Key: Plus
-							X: 1
-							Y: 0
-							Width: 34
-							Height: 34
-							Background: command-button
-							DisableKeySound: true
-							TooltipText: Add Priority, the building will build and delivered first.
-							TooltipContainer: TOOLTIP_CONTAINER
-							Children:
-								Image@ICON:
-									X: 5
-									Y: 5
-									ImageCollection: prioritybuttons
-									ImageName: up_arrow
-						Button@REM_PRIO:
-							Key: Minus
-							X: 1
-							Y: 34
-							Width: 34
-							Height: 34
-							Background: command-button
-							DisableKeySound: true
-							TooltipText: Remove Priority, the building will build and delivered last.
-							TooltipContainer: TOOLTIP_CONTAINER
-							Children:
-								Image@ICON:
-									X: 5
-									Y: 5
-									ImageCollection: prioritybuttons
-									ImageName: down_arrow
+#				Background@PRIORITY_BAR:
+#					Logic: ConstructionPriorityLogic
+#					X: 0
+#					Y: PARENT_BOTTOM - 34 - 34
+#					Background: command-button
+#					Width: 36
+#					Height: 34 + 34
+#					Children:
+#						Button@ADD_PRIO:
+#							Key: Plus
+#							X: 1
+#							Y: 0
+#							Width: 34
+#							Height: 34
+#							Background: command-button
+#							DisableKeySound: true
+#							TooltipText: Add Priority, the building will build and delivered first.
+#							TooltipContainer: TOOLTIP_CONTAINER
+#							Children:
+#								Image@ICON:
+#									X: 5
+#									Y: 5
+#									ImageCollection: prioritybuttons
+#									ImageName: up_arrow
+#						Button@REM_PRIO:
+#							Key: Minus
+#							X: 1
+#							Y: 34
+#							Width: 34
+#							Height: 34
+#							Background: command-button
+#							DisableKeySound: true
+#							TooltipText: Remove Priority, the building will build and delivered last.
+#							TooltipContainer: TOOLTIP_CONTAINER
+#							Children:
+#								Image@ICON:
+#									X: 5
+#									Y: 5
+#									ImageCollection: prioritybuttons
+#									ImageName: down_arrow
 									
 		Background@COMMAND_BAR:
 			Logic: StanceSelectorLogic
 			X: 5
-			Y: WINDOW_BOTTOM - HEIGHT - 5 - 276 - 230 - 34 - 34
+			Y: WINDOW_BOTTOM - HEIGHT - 5 - 276 - 230
 			Background: panel-black
 			Width: 34 
 			Height: 138
@@ -830,28 +830,42 @@ Container@PLAYER_WIDGETS:
 									X: PARENT_RIGHT / 2 -12
 									Y: 6
 									ImageCollection: production-icons
+#						ProductionTypeButton@BUILDING3:
+#							X: PARENT_RIGHT - 150 
+#							Y: ((200 - 20) / 5) * 1 + 6
+#							Width: 75
+#							Height: ((200 - 10) / 5)
+#							TooltipText: Military Buildings
+#							TooltipContainer: TOOLTIP_CONTAINER
+#							ProductionGroup: Building3
+#							Key: ProductionTypeNaval
+#							Children:
+#								Image@ICON:
+#									X: PARENT_RIGHT / 2 -12
+#									Y: 6
+#									ImageCollection: production-icons
+#						ProductionTypeButton@DEFENCE:
+#							X: PARENT_RIGHT - 150 + 75
+#							Y: ((200 - 20) / 5) * 1 + 6
+#							Width: 75
+#							Height: ((200 - 10) / 5)
+#							TooltipText: Technology Buildings
+#							TooltipContainer: TOOLTIP_CONTAINER
+#							ProductionGroup: Tech
+#							Key: ProductionTypeDefense
+#							Children:
+#								Image@ICON:
+#									X: PARENT_RIGHT / 2 -12
+#									Y: 6
+#									ImageCollection: production-icons
 						ProductionTypeButton@BUILDING3:
-							X: PARENT_RIGHT - 150 
+							X: PARENT_RIGHT - 150
 							Y: ((200 - 20) / 5) * 1 + 6
-							Width: 75
+							Width: 150
 							Height: ((200 - 10) / 5)
 							TooltipText: Military Buildings
 							TooltipContainer: TOOLTIP_CONTAINER
 							ProductionGroup: Building3
-							Key: ProductionTypeNaval
-							Children:
-								Image@ICON:
-									X: PARENT_RIGHT / 2 -12
-									Y: 6
-									ImageCollection: production-icons
-						ProductionTypeButton@DEFENCE:
-							X: PARENT_RIGHT - 150 + 75
-							Y: ((200 - 20) / 5) * 1 + 6
-							Width: 75
-							Height: ((200 - 10) / 5)
-							TooltipText: Technology Buildings
-							TooltipContainer: TOOLTIP_CONTAINER
-							ProductionGroup: Tech
 							Key: ProductionTypeDefense
 							Children:
 								Image@ICON:
@@ -916,10 +930,10 @@ Container@PLAYER_WIDGETS:
 					TooltipContainer: TOOLTIP_CONTAINER
 					ReadyText: Ready
 					HoldText: On Hold
-					Columns: 7
+					Columns: 5
 					IconSize: 100, 80
 					MinimumRows: 1
-					MaximumRows: 6
+					MaximumRows: 2
 					IconMargin: 2,2
 					HotkeyPrefix: Production
 					HotkeyCount: 24

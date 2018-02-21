@@ -193,6 +193,8 @@ namespace OpenRA.Traits
                 everyonereduction = 50;
             }
 
+            everyonereduction *= 2;
+
             if (info.SpecialModifier.Any())
                 foreach (var var in info.SpecialModifier)
                 {

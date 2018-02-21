@@ -256,14 +256,14 @@ DjinElectro:
 	ReloadDelay: 55
 	Range: 5c512
 	ValidTargets: Ground
-    InvalidTargets: Air
+	InvalidTargets: Air
 	Report: tesla1.aud
 	Projectile: TeslaZap
 	Warhead@1Dam: SpreadDamage
 		Spread: 42
 		Damage: 6000
 		ValidTargets: Ground
-        InvalidTargets: Air
+		InvalidTargets: Air
 		Versus:
 			None: 100
 			Leather: 100
@@ -656,7 +656,7 @@ SnakesSmall:
 			HeavyBuilding: 100
 			Spectral: 200
 		DamageTypes: Prone50Percent, PoisonDeath
-        
+		
 BedouinBowNArrowDebuff:
 	ReloadDelay: 10
 	Range: 7c0
@@ -966,7 +966,7 @@ SulGTSpearThrowAir:
 			HeavyCavalry: 100
 			HeavyBuilding: 100
 		DamageTypes: Prone50Percent, DefaultDeath 
-        
+		
 TornadoExplosion:
 	ValidTargets: Air, Ground
 	Warhead@Tonrado: SpreadDamage
@@ -988,4 +988,4 @@ TornadoExplosion:
 		Size: 1
 		Amount: 1
 		ResourceTypes: Crops, Grain, Corn, Loot, Wood, Goods, Lumber
-        
+		

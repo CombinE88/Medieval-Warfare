@@ -35,7 +35,7 @@ namespace OpenRA.Mods.MW.Traits
             base.Created(self);
         }
 
-        public int GetAmmoCount() { return ammoPool.CurrentAmmo; }
+        public int GetAmmoCount() { return ammoPool.GetAmmoCount(); }
 
         void ITick.Tick(Actor self)
         {

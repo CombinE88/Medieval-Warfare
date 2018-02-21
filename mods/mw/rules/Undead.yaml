@@ -457,6 +457,7 @@
 
 ZIGG2UPGRADE:
 	AlwaysVisible:
+	Interactable:
 	ConditionManager:
 	RenderSprites:
 		Image: ziggurat2
@@ -470,13 +471,14 @@ ZIGG2UPGRADE:
 		BuildPaletteOrder: 60
 		Prerequisites: seal1, seal2
 		Description: Grants access to advanced summoning methods.\n  Grants possiblility to convert Iron and Gold into Essence\n\n
-		Queue: MTech.ded
+		Queue: MResources.ded
 		BuildLimit: 1
 		BuildDuration: 1000
 		
 
 ZIGG3UPGRADE:
 	AlwaysVisible:
+	Interactable:
 	ConditionManager:
 	RenderSprites:
 		Image: ziggurat3
@@ -490,13 +492,14 @@ ZIGG3UPGRADE:
 		BuildPaletteOrder: 70
 		Prerequisites: seal3, seal4
 		Description: Grants access to most advanced summoning methods.\n  Accesses Superpowers \n\n
-		Queue: MTech.ded
+		Queue: MResources.ded
 		BuildLimit: 1
 		BuildDuration: 1500
 		
 		
 SEAL1:
 	AlwaysVisible:
+	Interactable:
 	ConditionManager:
 	RenderSprites:
 		Image: seal1
@@ -509,11 +512,12 @@ SEAL1:
 		IconPalette: raicon
 		BuildPaletteOrder: 10
 		Description: Unlocks crypt and seal 2\n\n\n
-		Queue: MTech.ded
+		Queue: MResources.ded
 		BuildLimit: 1
 		
 SEAL2:
 	AlwaysVisible:
+	Interactable:
 	ConditionManager:
 	RenderSprites:
 		Image: seal2
@@ -527,11 +531,12 @@ SEAL2:
 		BuildPaletteOrder: 20
 		Prerequisites: seal1
 		Description: Unlocks mausoleum and ziggurat level 2\n\n\n
-		Queue: MTech.ded
+		Queue: MResources.ded
 		BuildLimit: 1
 		
 SEAL3:
 	AlwaysVisible:
+	Interactable:
 	ConditionManager:
 	RenderSprites:
 		Image: seal3
@@ -545,11 +550,12 @@ SEAL3:
 		BuildPaletteOrder: 30
 		Prerequisites: ziggurat2
 		Description: Unlocks Beserker, Vampire and seal 4\n\n\n
-		Queue: MTech.ded
+		Queue: MResources.ded
 		BuildLimit: 1
 		
 SEAL4:
 	AlwaysVisible:
+	Interactable:
 	ConditionManager:
 	RenderSprites:
 		Image: seal4
@@ -563,11 +569,12 @@ SEAL4:
 		Prerequisites: ziggurat2, seal3
 		BuildPaletteOrder: 40
 		Description: Unlocks tomb, Grim Reaper and ziggurat level 2\n\n\n
-		Queue: MTech.ded
+		Queue: MResources.ded
 		BuildLimit: 1
 		
 SEAL5:
 	AlwaysVisible:
+	Interactable:
 	ConditionManager:
 	RenderSprites:
 		Image: seal5
@@ -581,7 +588,7 @@ SEAL5:
 		Prerequisites: ziggurat3
 		BuildPaletteOrder: 50
 		Description: Unlocks Lich\n\n\n
-		Queue: MTech.ded
+		Queue: MResources.ded
 		BuildLimit: 1
 		BuildDuration: 2000
 #Buildings
@@ -625,7 +632,7 @@ ZIGGURAT1:
 		Range: 10c0
 	WithBuildingBib:
 	Production:
-		Produces: MBuilding.ded, MTech.ded, MMilitary.ded
+		Produces: MBuilding.ded, MResources.ded, MMilitary.ded
 	ProductionQueue@DeadMBuilding:
 		Type: MBuilding.ded
 		Factions: ded
@@ -634,9 +641,9 @@ ZIGGURAT1:
 		ReadyAudio:
 		QueuedAudio: Building
 	ProductionQueue@DeadMDefence:
-		Type: MTech.ded
+		Type: MResources.ded
 		Factions: ded
-		Group: Tech
+		Group: Building2
 		LowPowerSlowdown: 2
 		QueuedAudio: Building
 		ReadyAudio:
@@ -651,7 +658,7 @@ ZIGGURAT1:
 	ProductionBar@Buildingded:
 		ProductionType: MBuilding.ded
 	ProductionBar@Defded:
-		ProductionType: MTech.ded
+		ProductionType: MResources.ded
 	ProductionBar@Buildingded3:
 		ProductionType: MMilitary.ded
 	ProvidesPrerequisite@buildingname:	
@@ -690,7 +697,7 @@ ZIGGURAT1:
 		PipCount: 10
 		Capacity: 500
 	Buildable:
-		Queue: MTech.Nod, MTech.GDI, MTech.Sul, MTech.ded
+		Queue: MResources.Nod, MResources.GDI, MResources.Sul, MResources.ded
 		BuildPaletteOrder: 1003
 		Prerequisites: ~disabled
 		ForceFaction: ded
@@ -781,7 +788,7 @@ ZIGGURAT3:
 	NukePower:
 		Icon: graveicon
 		Cursor: nuke
-		ChargeTime: 360
+		ChargeInterval: 9000
 		Description: Spawn a graveyard
 		LongDesc: none
 		EndChargeSpeechNotification: NodcannonReady
@@ -880,7 +887,7 @@ SPPOOL.penta:
 	UndeadBuilder:
 		SpawnActor: sppool
 		SpawnOffset: 1,1
-		SummoningTime: 100
+		SummoningTime: 75 #100
 		Cost: 700
 	Buildable:
 		IconPalette: raicon
@@ -919,7 +926,7 @@ CRYPT.penta:
 	UndeadBuilder:
 		SpawnActor: crypt
 		SpawnOffset: 1,1
-		SummoningTime: 150
+		SummoningTime: 112 #150
 		Cost: 1500
 		
 MAUSO.penta:
@@ -946,7 +953,7 @@ MAUSO.penta:
 	UndeadBuilder:
 		SpawnActor: mauso
 		SpawnOffset: 1,1
-		SummoningTime: 200
+		SummoningTime: 150 #200
 		Cost: 2000
 		
 LIBRA.penta:
@@ -973,7 +980,7 @@ LIBRA.penta:
 	UndeadBuilder:
 		SpawnActor: LIBRA
 		SpawnOffset: 1,1
-		SummoningTime: 250
+		SummoningTime: 185 # 250
 		Cost: 1500
 		
 TOMB.penta:
@@ -1000,7 +1007,7 @@ TOMB.penta:
 	UndeadBuilder:
 		SpawnActor: TOMB
 		SpawnOffset: 1,1
-		SummoningTime: 300
+		SummoningTime: 225 # 300
 		Cost: 2000
 		
 HELLGATE.penta:
@@ -1020,7 +1027,7 @@ HELLGATE.penta:
 	UndeadBuilder:
 		SpawnActor: hellgate
 		SpawnOffset: 1,1
-		SummoningTime: 350
+		SummoningTime: 260 # 300
 		Cost: 2000
         
 GRAFENCE:
@@ -1221,7 +1228,7 @@ MAUSO:
 	ProvidesPrerequisite@buildingname:
 	AirstrikePower:
 		Icon: coffinicon
-		ChargeTime: 210
+		ChargeInterval: 5250
 		SquadOffset	-236,236,0
 		SquadSize: 1
 		QuantizedFacings: 8
@@ -1279,7 +1286,7 @@ LIBRA:
 	ProvidesPrerequisite@buildingname:
 	AirstrikePower:
 		Icon: handaicon
-		ChargeTime: 210
+		ChargeInterval: 5250
 		SquadOffset	-236,236,0
 		SquadSize: 3
 		QuantizedFacings: 8
@@ -1850,6 +1857,7 @@ UNDEAD2:
 		
 UNDEAD3:
 	Inherits: ^Skeleton
+	Inherits@AUTOTARGETDEF: ^AutoTargetDefenses
 	Valued:
 		Cost: 50
 	RevealsShroud:
@@ -1887,6 +1895,7 @@ UNDEAD3:
 	
 UNDEAD4:
 	Inherits: ^Skeleton
+	Inherits@AUTOTARGETDEF: ^AutoTargetDefenses
 	Valued:
 		Cost: 370
 	RevealsShroud:
@@ -1962,6 +1971,7 @@ UNDEAD5:
 		
 UNDEAD6:
 	Inherits: ^Skeleton
+	Inherits@AUTOTARGETDEF: ^AutoTargetDefenses
 	Valued:
 		Cost: 1000
 	RevealsShroud:
@@ -2003,6 +2013,7 @@ UNDEAD6:
 		
 UNDEAD7:
 	Inherits: ^Skeleton
+	Inherits@AUTOTARGETDEF: ^AutoTargetDefenses
 	Valued:
 		Cost: 1500
 	RevealsShroud:
@@ -2312,6 +2323,7 @@ VAMPMAN.Husk:
 DEMONHORSE:
 	Inherits: ^Cavalry
 	Inherits@AUTOTARGET: ^AutoTargetGround
+	Inherits@AUTOTARGETDEF: ^AutoTargetDefenses
 	Inherits@GainsExperience: ^GainsExperience
 	Inherits@GetsPoisoned: ^GetsPoisoned
 	Inherits@ArcherDemo65: ^ArcherDemo80
@@ -2381,6 +2393,7 @@ DEMONHORSE:
 LICHK:
 	Inherits: ^Knight
 	Inherits@AUTOTARGET: ^AutoTargetGround
+	Inherits@AUTOTARGETDEF: ^AutoTargetDefenses
 	Inherits@TornadoVunerable: ^TornadoVunerable
 	Inherits@Healable: ^Healable
 	Inherits@SnakeStunnable: ^SnakeDamagable
@@ -2450,6 +2463,7 @@ LICHK:
 		
 PLACEHOLDERHANDATTACK:
 	Inherits: ^Plane
+	Interactable:
 	HitShape:
 	-AppearsOnRadar:
 	RenderSprites:
@@ -2486,6 +2500,7 @@ PLACEHOLDERHANDATTACK:
 		
 PLACEHOLDERCOFFIN:
 	Inherits: ^Plane
+	Interactable:
 	HitShape:
 	-AppearsOnRadar:
 	RenderSprites:
@@ -2608,6 +2623,7 @@ RESSURECT1:
 		Weapon: SkeletonBroadSword
 	AttackFrontal:
 	-Selectable:
+	Interactable:
 	RenderSprites:
 		Image: undead1
 		PlayerPalette: raplayer
@@ -2638,6 +2654,7 @@ RESSURECT2:
 		Weapon: SkeletonBroadSword
 	AttackFrontal:
 	-Selectable:
+	Interactable:
 	RenderSprites:
 		Image: undead2
 		PlayerPalette: raplayer
@@ -2655,6 +2672,7 @@ RESSURECT2:
 		
 RESSURECT3:
 	Inherits: ^SkeletonSpawn
+	Inherits@AUTOTARGETDEF: ^AutoTargetDefenses
 	Valued:
 		Cost: 0
 	RevealsShroud:
@@ -2673,6 +2691,7 @@ RESSURECT3:
 	Armor:
 		Type: Leather
 	-Selectable:
+	Interactable:
 	RenderSprites:
 		Image: undead3
 		PlayerPalette: raplayer
@@ -2723,6 +2742,7 @@ RESSURECT4:
 	Armor:
 		Type: Light
 	-Selectable:
+	Interactable:
 	RenderSprites:
 		Image: undead5
 		PlayerPalette: raplayer
@@ -2787,7 +2807,7 @@ SPLITDEAD:
 		DockAngle: 96
 		IsDragRequired: false
 		FaceTowardsCenter: true
-	AutoSelectionSize:
+	#AutoSelectionSize:
 	InvisibleToLiving:
 		Factions: Undead
 		

@@ -874,7 +874,7 @@ KingsSword:
 		DamageTypes: Prone50Percent, TriggerProne, RippedApartDeath
 
 paladingun:
-	ReloadDelay: 75
+	ReloadDelay: 70
 	Range: 3c512
 	ValidTargets: Ground, Trees
 	InvalidTargets: Air
@@ -899,7 +899,7 @@ paladingun:
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath	 
 		
 paladingunvisual:
-	ReloadDelay: 75
+	ReloadDelay: 70
 	Range: 3c512
 	Report: palashotgun.aud
 	ValidTargets: Ground, Trees
@@ -2256,7 +2256,7 @@ SiegeBoulder:
 			MediumCavalry: 85
 			HeavyCavalry: 80
 			HeavyBuilding: 100
-			Spectral: 35
+			Spectral: 75
 		DamageTypes: Prone50Percent, TriggerProne, BallistaDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: smokey

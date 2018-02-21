@@ -57,6 +57,7 @@ namespace OpenRA.Mods.MW.Traits.Render
     {
         readonly SpriteFont font;
         Color color;
+        readonly IDecorationBounds[] decorationBounds;
 
         private Actor self;
         private ConstructionPriorityInfo Info;
@@ -73,6 +74,7 @@ namespace OpenRA.Mods.MW.Traits.Render
             this.Info = info;
             font = Game.Renderer.Fonts[info.Font];
             color = info.UsePlayerColor ? self.Owner.Color.RGB : info.Color;
+            decorationBounds = self.TraitsImplementing<IDecorationBounds>().ToArray();
         }
 
         void INotifyCreated.Created(Actor self)
@@ -107,6 +109,8 @@ namespace OpenRA.Mods.MW.Traits.Render
             return !Info.RequiresSelection ? RenderInner(self, wr) : SpriteRenderable.None;
         }
 
+        bool IRenderAboveShroudWhenSelected.SpatiallyPartitionable { get { return false; } }
+
         IEnumerable<IRenderable> IRenderAboveShroudWhenSelected.RenderAboveShroud(Actor self, WorldRenderer wr)
         {
             return Info.RequiresSelection ? RenderInner(self, wr) : SpriteRenderable.None;
@@ -127,7 +131,7 @@ namespace OpenRA.Mods.MW.Traits.Render
             if (!ShouldRender(self) || self.World.FogObscures(self))
                 return Enumerable.Empty<IRenderable>();
 
-            var bounds = self.VisualBounds;
+            var bounds = decorationBounds.Select(b => b.DecorationBounds(self, wr)).FirstOrDefault(b => !b.IsEmpty);
             var halfSize = font.Measure(Conditions.Count.ToString()) / 2;
 
             var boundsOffset = new int2(bounds.Left + bounds.Right, bounds.Top + bounds.Bottom) / 2;
@@ -203,9 +207,9 @@ namespace OpenRA.Mods.MW.Traits.Render
             }
         }
 
-        public IEnumerable<Rectangle> ScreenBounds(Actor self, WorldRenderer wr)
+        IEnumerable<Rectangle> IRender.ScreenBounds(Actor self, WorldRenderer wr)
         {
-            throw new NotImplementedException();
+            yield break;
         }
     }
 }

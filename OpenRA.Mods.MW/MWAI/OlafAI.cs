@@ -1,24 +1,34 @@
-﻿
+﻿#region Copyright & License Information
+/*
+ * Copyright 2007-2017 The OpenRA Developers (see AUTHORS)
+ * This file is part of OpenRA, which is free software. It is made
+ * available to you under the terms of the GNU General Public License
+ * as published by the Free Software Foundation, either version 3 of
+ * the License, or (at your option) any later version. For more
+ * information, see COPYING.
+ */
+#endregion
+
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using OpenRA.Activities;
 using OpenRA.Mods.Common;
 using OpenRA.Mods.Common.Activities;
+using OpenRA.Mods.Common.AI;
 using OpenRA.Mods.Common.Pathfinder;
 using OpenRA.Mods.Common.Traits;
 using OpenRA.Mods.MW.Activities;
-using OpenRA.Mods.MW.MWAI;
 using OpenRA.Mods.MW.Traits;
 using OpenRA.Support;
 using OpenRA.Traits;
 
-namespace OpenRA.Mods.MW.MWAI
+namespace OpenRA.Mods.MW.AI
 {
     class CaptureTarget<TInfoType> where TInfoType : class, ITraitInfoInterface
     {
         internal readonly Actor Actor;
+        internal readonly TInfoType Info;
 
         /// <summary>The order string given to the capturer so they can capture this actor.</summary>
         /// <example>ExternalCaptureActor</example>
@@ -27,6 +37,7 @@ namespace OpenRA.Mods.MW.MWAI
         internal CaptureTarget(Actor actor, string orderString)
         {
             Actor = actor;
+            Info = actor.Info.TraitInfoOrDefault<TInfoType>();
             OrderString = orderString;
         }
     }
@@ -56,6 +67,7 @@ namespace OpenRA.Mods.MW.MWAI
             public readonly HashSet<string> ImportantBuildings = new HashSet<string>();
             public readonly HashSet<string> Hunter = new HashSet<string>();
             public readonly HashSet<string> DeerStands = new HashSet<string>();
+            public readonly HashSet<string> HarvestableTrees = new HashSet<string>();
         }
         public class UndeadCategories
         {
@@ -66,6 +78,7 @@ namespace OpenRA.Mods.MW.MWAI
             public readonly HashSet<string> PrayableIron = new HashSet<string>();
             public readonly HashSet<string> PrayableDeerStands = new HashSet<string>();
             public readonly HashSet<string> Acolytes = new HashSet<string>();
+            public readonly HashSet<string> Cultists = new HashSet<string>();
             public readonly HashSet<string> Crypts = new HashSet<string>();
             public readonly HashSet<string> Buildings = new HashSet<string>();
             public readonly HashSet<string> Upgrades = new HashSet<string>();
@@ -73,12 +86,10 @@ namespace OpenRA.Mods.MW.MWAI
             public readonly HashSet<string> FlyingVampire = new HashSet<string>();
         }
 
-        [FieldLoader.Require]
-        [Desc("Internal id for this bot.")]
-        public readonly string Type = null;
+        // MW extra Stuff
 
-        [Desc("Human-readable name this bot uses.")]
-        public readonly string Name = "Unnamed Bot";
+        [FieldLoader.LoadUsing("LoadUndeadCommonNames", true)]
+        public readonly UndeadCategories UndeadCommonNames;
 
 
         [Desc("ResourceTypes used for Farm placing.")]
@@ -99,16 +110,29 @@ namespace OpenRA.Mods.MW.MWAI
         [Desc("How close are Acolytes allowed to go near the enemy base to harvest resource patches.")]
         public readonly WDist AcolytePrayProximity = WDist.FromCells(5);
 
-
-        [FieldLoader.LoadUsing("LoadUndeadCommonNames", true)]
-        public readonly UndeadCategories UndeadCommonNames;
-
-
         [Desc("The maximum radius where important buildings should be build.")]
         public readonly int InnerBuildRadiusEnd = 5;
 
         [Desc("The maximum radius where replaceable buildings should be build.")]
         public readonly int OuterRadiusEnd = 9;
+
+        [Desc("Delay (in ticks) between giving out orders to units.")]
+        public readonly int AcolyteCheckResourceDensity = 100;
+
+        [Desc("Maximal allowed Acolytes praying on an empty patch.")]
+        public readonly int MAxAcolytesOnEmptyPatch = 3;
+
+        [Desc("Minimal Resourcefields untill the patch is considered as unharvestable.")]
+        public readonly int MinimumResourceFields = 5;
+
+        // End MW Extra Stuff
+
+        [FieldLoader.Require]
+        [Desc("Internal id for this bot.")]
+        public readonly string Type = null;
+
+        [Desc("Human-readable name this bot uses.")]
+        public readonly string Name = "Unnamed Bot";
 
         [Desc("Minimum number of units AI must have before attacking.")]
         public readonly int SquadSize = 8;
@@ -124,16 +148,6 @@ namespace OpenRA.Mods.MW.MWAI
 
         [Desc("Delay (in ticks) between giving out orders to units.")]
         public readonly int AssignRolesInterval = 20;
-
-
-        [Desc("Delay (in ticks) between giving out orders to units.")]
-        public readonly int AcolyteCheckResourceDensity = 100;
-
-        [Desc("Maximal allowed Acolytes praying on an empty patch.")]
-        public readonly int MAxAcolytesOnEmptyPatch = 3;
-
-        [Desc("Minimal Resourcefields untill the patch is considered as unharvestable.")]
-        public readonly int MinimumResourceFields = 5;
 
         [Desc("Delay (in ticks) between attempting rush attacks.")]
         public readonly int RushInterval = 600;
@@ -200,6 +214,18 @@ namespace OpenRA.Mods.MW.MWAI
 
         [Desc("Radius in cells around the center of the base to expand.")]
         public readonly int MaxBaseRadius = 20;
+
+        [Desc("Radius in cells that squads should scan for enemies around their position while idle.")]
+        public readonly int IdleScanRadius = 10;
+
+        [Desc("Radius in cells that squads should scan for danger around their position to make flee decisions.")]
+        public readonly int DangerScanRadius = 10;
+
+        [Desc("Radius in cells that attack squads should scan for enemies around their position when trying to attack.")]
+        public readonly int AttackScanRadius = 12;
+
+        [Desc("Radius in cells that protecting squads should scan for enemies around their position.")]
+        public readonly int ProtectionScanRadius = 8;
 
         [Desc("Should deployment of additional MCVs be restricted to MaxBaseRadius if explicit deploy locations are missing or occupied?")]
         public readonly bool RestrictMCVDeploymentFallbackToBase = true;
@@ -324,6 +350,7 @@ namespace OpenRA.Mods.MW.MWAI
         public Player Player { get; private set; }
 
         readonly DomainIndex domainIndex;
+        readonly ResourceLayer resLayer;
         readonly ResourceClaimLayer claimLayer;
         readonly IPathFinder pathfinder;
 
@@ -336,6 +363,7 @@ namespace OpenRA.Mods.MW.MWAI
         PowerManager playerPower;
         SupportPowerManager supportPowerMngr;
         PlayerResources playerResource;
+        FrozenActorLayer frozenLayer;
         int ticks;
 
         BitArray resourceTypeIndices;
@@ -356,14 +384,16 @@ namespace OpenRA.Mods.MW.MWAI
 
         int rushTicks;
         int assignRolesTicks;
-        int assignUndeadCheckTicks;
         int attackForceTicks;
         int minAttackForceDelayTicks;
         int minCaptureDelayTicks;
+        readonly int maximumCaptureTargetOptions;
 
+        // MW Related
 
+        int assignUndeadCheckTicks;
 
-        // uUndead variables
+        // Undead variables
 
         public HashSet<Actor> AcolyteBuilder = new HashSet<Actor>();
         public HashSet<Actor> AcolyteHarvester = new HashSet<Actor>();
@@ -379,6 +409,7 @@ namespace OpenRA.Mods.MW.MWAI
                 return;
 
             domainIndex = World.WorldActor.Trait<DomainIndex>();
+            resLayer = World.WorldActor.TraitOrDefault<ResourceLayer>();
             claimLayer = World.WorldActor.TraitOrDefault<ResourceClaimLayer>();
             pathfinder = World.WorldActor.Trait<IPathFinder>();
 
@@ -392,6 +423,7 @@ namespace OpenRA.Mods.MW.MWAI
             foreach (var decision in info.PowerDecisions)
                 powerDecisions.Add(decision.OrderName, decision);
 
+            maximumCaptureTargetOptions = Math.Max(1, Info.MaximumCaptureTargetOptions);
         }
 
         public static void BotDebug(string s, params object[] args)
@@ -408,13 +440,14 @@ namespace OpenRA.Mods.MW.MWAI
             playerPower = p.PlayerActor.Trait<PowerManager>();
             supportPowerMngr = p.PlayerActor.Trait<SupportPowerManager>();
             playerResource = p.PlayerActor.Trait<PlayerResources>();
+            frozenLayer = p.PlayerActor.Trait<FrozenActorLayer>();
 
             foreach (var building in Info.BuildingQueues)
                 builders.Add(new MWBaseBuilder(this, building, p, playerPower, playerResource));
             foreach (var defense in Info.DefenseQueues)
                 builders.Add(new MWBaseBuilder(this, defense, p, playerPower, playerResource));
 
-            Random = new MersenneTwister(Player.World.SharedRandom.Next());
+            Random = new MersenneTwister(Game.CosmeticRandom.Next());
 
             // Avoid all AIs trying to rush in the same tick, randomize their initial rush a little.
             var smallFractionOfRushInterval = Info.RushInterval / 20;
@@ -422,7 +455,6 @@ namespace OpenRA.Mods.MW.MWAI
 
             // Avoid all AIs reevaluating assignments on the same tick, randomize their initial evaluation delay.
             assignRolesTicks = Random.Next(0, Info.AssignRolesInterval);
-            assignUndeadCheckTicks = Random.Next(0, Info.AcolyteCheckResourceDensity);
             attackForceTicks = Random.Next(0, Info.AttackForceInterval);
             minAttackForceDelayTicks = Random.Next(0, Info.MinimumAttackForceDelay);
             minCaptureDelayTicks = Random.Next(0, Info.MinimumCaptureDelay);
@@ -447,6 +479,54 @@ namespace OpenRA.Mods.MW.MWAI
             }
         }
 
+        // TODO: Possibly give this a more generic name when terrain type is unhardcoded
+        public bool EnoughWaterToBuildNaval()
+        {
+            var baseProviders = World.ActorsHavingTrait<BaseProvider>()
+                .Where(a => a.Owner == Player);
+
+            foreach (var b in baseProviders)
+            {
+                // TODO: Properly check building foundation rather than 3x3 area
+                var playerWorld = Player.World;
+                var countWaterCells = Map.FindTilesInCircle(b.Location, Info.MaxBaseRadius)
+                    .Where(c => playerWorld.Map.Contains(c)
+                        && Info.WaterTerrainTypes.Contains(playerWorld.Map.GetTerrainInfo(c).Type)
+                        && Util.AdjacentCells(playerWorld, Target.FromCell(playerWorld, c))
+                            .All(a => Info.WaterTerrainTypes.Contains(playerWorld.Map.GetTerrainInfo(a).Type)))
+                    .Count();
+
+                if (countWaterCells > 0)
+                    return true;
+            }
+
+            return false;
+        }
+
+        // Check whether we have at least one building providing buildable area close enough to water to build naval structures
+        public bool CloseEnoughToWater()
+        {
+            var areaProviders = World.ActorsHavingTrait<GivesBuildableArea>()
+                .Where(a => a.Owner == Player);
+
+            foreach (var a in areaProviders)
+            {
+                // TODO: Properly check building foundation rather than 3x3 area
+                var playerWorld = Player.World;
+                var adjacentWater = Map.FindTilesInCircle(a.Location, Info.CheckForWaterRadius)
+                    .Where(c => playerWorld.Map.Contains(c)
+                        && Info.WaterTerrainTypes.Contains(playerWorld.Map.GetTerrainInfo(c).Type)
+                        && Util.AdjacentCells(playerWorld, Target.FromCell(playerWorld, c))
+                            .All(ac => Info.WaterTerrainTypes.Contains(playerWorld.Map.GetTerrainInfo(ac).Type)))
+                    .Count();
+
+                if (adjacentWater > 0)
+                    return true;
+            }
+
+            return false;
+        }
+
         public void QueueOrder(Order order)
         {
             orders.Enqueue(order);
@@ -459,7 +539,7 @@ namespace OpenRA.Mods.MW.MWAI
                 return null;
 
             var unit = buildableThings.Random(Random);
-            return unit;
+            return HasAdequateAirUnitReloadBuildings(unit) ? unit : null;
         }
 
         ActorInfo ChooseUnitToBuild(ProductionQueue queue)
@@ -476,25 +556,24 @@ namespace OpenRA.Mods.MW.MWAI
             foreach (var unit in Info.UnitsToBuild.Shuffle(Random))
                 if (buildableThings.Any(b => b.Name == unit.Key))
                     if (myUnits.Count(a => a == unit.Key) < unit.Value * myUnits.Count)
-                        return Map.Rules.Actors[unit.Key];
+                        if (HasAdequateAirUnitReloadBuildings(Map.Rules.Actors[unit.Key]))
+                            return Map.Rules.Actors[unit.Key];
 
             return null;
         }
 
-        int CountBuilding(string frac, Player owner)
-        {
-            return World.ActorsHavingTrait<Building>().Count(a => a.Owner == owner && a.Info.Name == frac);
-        }
+        // MW related
 
-        int CountUnits(string unit, Player owner)
-        {
-            return World.ActorsHavingTrait<IPositionable>().Count(a => a.Owner == owner && a.Info.Name == unit);
-        }
-
-        int CountBuildingByCommonName(HashSet<string> buildings, Player owner)
+        public int CountScaffolds()
         {
             return World.ActorsHavingTrait<Building>()
-                .Count(a => a.Owner == owner && (buildings.Contains(a.Info.Name) || buildings.Contains(a.Info.Name.Replace(".scaff", string.Empty)) || buildings.Contains(a.Info.Name + (".scaff"))));
+                .Count(a => a.Owner == Player && a.Info.Name.Contains(".scaff"));
+        }
+
+        public int CountPenagrams()
+        {
+            return World.ActorsHavingTrait<Building>()
+                .Count(a => a.Owner == Player && a.Info.Name.Contains(".penta"));
         }
 
         int CountUndeadBuildingByCommonName(HashSet<string> buildings, Player owner)
@@ -513,23 +592,11 @@ namespace OpenRA.Mods.MW.MWAI
             return Player.PlayerActor.Trait<PlayerCivilization>().FreePopulation + Player.PlayerActor.Trait<PlayerCivilization>().Peasantpopulationvar;
         }
 
-        public int CountScaffolds()
-        {
-            return World.ActorsHavingTrait<Building>()
-                .Count(a => a.Owner == Player && a.Info.Name.Contains(".scaff"));
-        }
-
-        public int CountPenagrams()
-        {
-            return World.ActorsHavingTrait<Building>()
-                .Count(a => a.Owner == Player && a.Info.Name.Contains(".penta"));
-        }
-
 
         public int CountPotentialFreeBeds()
         {
             var housactors = World.ActorsHavingTrait<Building>()
-                .Where(a => a.Owner == Player && Info.BuildingCommonNames.Houses.Contains(a.Info.Name) && a.Info.Name.Contains(".scaff"));
+                .Where(a => a.Owner == Player && Info.BuildingCommonNames.Houses.Contains(a.Info.Name));
 
             var potentialpop = 0;
 
@@ -546,6 +613,24 @@ namespace OpenRA.Mods.MW.MWAI
             return potentialpop;
         }
 
+        // MW End
+
+        int CountBuilding(string frac, Player owner)
+        {
+            return World.ActorsHavingTrait<Building>().Count(a => a.Owner == owner && a.Info.Name == frac);
+        }
+
+        int CountUnits(string unit, Player owner)
+        {
+            return World.ActorsHavingTrait<IPositionable>().Count(a => a.Owner == owner && a.Info.Name == unit);
+        }
+
+        int CountBuildingByCommonName(HashSet<string> buildings, Player owner)
+        {
+            return World.ActorsHavingTrait<Building>()
+                .Count(a => a.Owner == owner && (buildings.Contains(a.Info.Name) || buildings.Contains(a.Info.Name.Replace(".scaff", string.Empty)) || buildings.Contains(a.Info.Name + (".scaff"))));
+        }
+
         public ActorInfo GetInfoByCommonName(HashSet<string> names, Player owner)
         {
             return Map.Rules.Actors.Where(k => names.Contains(k.Key)).Random(Random).Value;
@@ -558,7 +643,6 @@ namespace OpenRA.Mods.MW.MWAI
                 CountBuildingByCommonName(Info.BuildingCommonNames.Farms, Player) == 0 ||
                 CountBuildingByCommonName(Info.BuildingCommonNames.ConstructionYard, Player) == 0;
         }
-
 
         public int HasAdequateCrypts()
         {
@@ -578,6 +662,26 @@ namespace OpenRA.Mods.MW.MWAI
             return CountBuildingByCommonName(Info.BuildingCommonNames.Barracks, Player) > 0;
         }
 
+        // For mods like RA (number of building must match the number of aircraft)
+        bool HasAdequateAirUnitReloadBuildings(ActorInfo actorInfo)
+        {
+            var aircraftInfo = actorInfo.TraitInfoOrDefault<AircraftInfo>();
+            if (aircraftInfo == null)
+                return true;
+
+            // If the aircraft has at least 1 AmmoPool and defines 1 or more RearmBuildings, check if we have enough of those
+            var hasAmmoPool = actorInfo.TraitInfos<AmmoPoolInfo>().Any();
+            if (hasAmmoPool && aircraftInfo.RearmBuildings.Count > 0)
+            {
+                var countOwnAir = CountUnits(actorInfo.Name, Player);
+                var countBuildings = aircraftInfo.RearmBuildings.Sum(b => CountBuilding(b, Player));
+                if (countOwnAir >= countBuildings)
+                    return false;
+            }
+
+            return true;
+        }
+
         CPos defenseCenter;
         public CPos? ChooseBuildLocation(string actorType, bool distanceToBaseIsImportant, BuildingType type)
         {
@@ -590,8 +694,8 @@ namespace OpenRA.Mods.MW.MWAI
             {
                 var cells = Map.FindTilesInAnnulus(center, minRange, maxRange);
 
-                    // Sort by distance to target if we have one
-                    if (center != target)
+                // Sort by distance to target if we have one
+                if (center != target)
                     cells = cells.OrderBy(c => (c - target).LengthSquared);
                 else
                     cells = cells.Shuffle(Random);
@@ -682,15 +786,15 @@ namespace OpenRA.Mods.MW.MWAI
                 case BuildingType.Lumber:
 
                     var findATree = World.FindActorsInCircle(World.Map.CenterOfCell(defenseCenter), new WDist(1024 * (Info.MaxBaseRadius)))
-                        .Where(a => !a.Disposed && a.Info.HasTraitInfo<HuntableDeerInfo>() && a.Info.TraitInfo<HuntableDeerInfo>().HuntTypes.Contains("TreeToChop"))
+                        .Where(a => !a.Disposed && Info.BuildingCommonNames.HarvestableTrees.Contains(a.Info.Name.ToLower()))
                         .Shuffle(Random);
 
                     var closeTrees = (findATree.Any() && findATree.First() != null) ?
                         World.FindActorsInCircle(World.Map.CenterOfCell(findATree.First().Location), new WDist(1024 * (7)))
-                            .Where(a => !a.Disposed && a.Info.HasTraitInfo<HuntableDeerInfo>() && a.Info.TraitInfo<HuntableDeerInfo>().HuntTypes.Contains("TreeToChop"))
+                            .Where(a => !a.Disposed && Info.BuildingCommonNames.HarvestableTrees.Contains(a.Info.Name.ToLower()))
                             :
                             World.FindActorsInCircle(World.Map.CenterOfCell(baseCenter), new WDist(1024 * (10)))
-                            .Where(a => !a.Disposed && a.Info.HasTraitInfo<HuntableDeerInfo>() && a.Info.TraitInfo<HuntableDeerInfo>().HuntTypes.Contains("TreeToChop"));
+                            .Where(a => !a.Disposed && Info.BuildingCommonNames.HarvestableTrees.Contains(a.Info.Name.ToLower()));
 
 
 
@@ -717,6 +821,7 @@ namespace OpenRA.Mods.MW.MWAI
             // Can't find a build location
             return null;
         }
+
 
         void ITick.Tick(Actor self)
         {
@@ -774,9 +879,10 @@ namespace OpenRA.Mods.MW.MWAI
 
         Squad RegisterNewSquad(SquadType type, Actor target = null)
         {
-            var ret = new Squad(this, type, target);
-            Squads.Add(ret);
-            return ret;
+            //var ret = new Squad(this, type, target);
+            //Squads.Add(ret);
+            //return ret;
+            return null;
         }
 
         void AssignRolesToIdleUnits(Actor self)
@@ -802,7 +908,8 @@ namespace OpenRA.Mods.MW.MWAI
             if (--assignRolesTicks <= 0)
             {
                 assignRolesTicks = Info.AssignRolesInterval;
-                GiveOrdersToIdleHarvesters();
+                if (resLayer != null && !resLayer.IsResourceLayerEmpty)
+                    GiveOrdersToIdleHarvesters();
                 if (Player.Faction.InternalName == "ded")
                 {
                     ManageDeadAcolytes();
@@ -816,18 +923,6 @@ namespace OpenRA.Mods.MW.MWAI
                 FindAndDeployBackupMcv(self);
             }
 
-            if (--assignUndeadCheckTicks <= 0)
-            {
-                assignUndeadCheckTicks = Info.AcolyteCheckResourceDensity;
-                if (Player.Faction.InternalName == "ded")
-                {
-                    CheckAllPatchesForProfit();
-                }
-            }
-
-
-
-
             if (--minAttackForceDelayTicks <= 0)
             {
                 minAttackForceDelayTicks = Info.MinimumAttackForceDelay;
@@ -837,8 +932,18 @@ namespace OpenRA.Mods.MW.MWAI
             if (--minCaptureDelayTicks <= 0)
             {
                 minCaptureDelayTicks = Info.MinimumCaptureDelay;
-                //QueueCaptureOrders();
+                QueueCaptureOrders();
             }
+
+            if (--assignUndeadCheckTicks <= 0)
+            {
+                assignUndeadCheckTicks = Info.AcolyteCheckResourceDensity;
+                if (Player.Faction.InternalName == "ded")
+                {
+                    CheckAllPatchesForProfit();
+                }
+            }
+
         }
 
         IEnumerable<Actor> GetVisibleActorsBelongingToPlayer(Player owner)
@@ -855,53 +960,64 @@ namespace OpenRA.Mods.MW.MWAI
                     yield return actor;
         }
 
-        /*
-            void QueueCaptureOrders()
-            {
-                if (!Info.CapturingActorTypes.Any() || Player.WinState != WinState.Undefined)
-                    return;
+        void QueueCaptureOrders()
+        {
+            if (!Info.CapturingActorTypes.Any() || Player.WinState != WinState.Undefined)
+                return;
 
-                var capturers = unitsHangingAroundTheBase.Where(a => a.IsIdle && Info.CapturingActorTypes.Contains(a.Info.Name)).ToArray();
-                if (capturers.Length == 0)
-                    return;
+            var capturers = unitsHangingAroundTheBase.Where(a => a.IsIdle && Info.CapturingActorTypes.Contains(a.Info.Name)).ToArray();
+            if (capturers.Length == 0)
+                return;
 
-                var randPlayer = World.Players.Where(p => !p.Spectating
-                    && Info.CapturableStances.HasStance(Player.Stances[p])).Random(Random);
+            var randPlayer = World.Players.Where(p => !p.Spectating
+                && Info.CapturableStances.HasStance(Player.Stances[p])).Random(Random);
 
-                var targetOptions = Info.CheckCaptureTargetsForVisibility
-                    ? GetVisibleActorsBelongingToPlayer(randPlayer)
-                    : GetActorsThatCanBeOrderedByPlayer(randPlayer);
+            var targetOptions = Info.CheckCaptureTargetsForVisibility
+                ? GetVisibleActorsBelongingToPlayer(randPlayer)
+                : GetActorsThatCanBeOrderedByPlayer(randPlayer);
 
-                var capturableTargetOptions = targetOptions
-                    .Select(a => new CaptureTarget<CapturableInfo>(a, "CaptureActor"))
-                    .Where(target => target.Info != null && capturers.Any(capturer => target.Info.CanBeTargetedBy(capturer, target.Actor.Owner)))
-                    .OrderByDescending(target => target.Actor.GetSellValue())
-                    .Take(maximumCaptureTargetOptions);
-
-                var externalCapturableTargetOptions = targetOptions
-                    .Select(a => new CaptureTarget<ExternalCapturableInfo>(a, "ExternalCaptureActor"))
-                    .Where(target => target.Info != null && capturers.Any(capturer => target.Info.CanBeTargetedBy(capturer, target.Actor.Owner)))
-                    .OrderByDescending(target => target.Actor.GetSellValue())
-                    .Take(maximumCaptureTargetOptions);
-
-                if (Info.CapturableActorTypes.Any())
+            var capturableTargetOptions = targetOptions
+                .Select(a => new CaptureTarget<CapturableInfo>(a, "CaptureActor"))
+                .Where(target =>
                 {
-                    capturableTargetOptions = capturableTargetOptions.Where(target => Info.CapturableActorTypes.Contains(target.Actor.Info.Name.ToLowerInvariant()));
-                    externalCapturableTargetOptions = externalCapturableTargetOptions.Where(target => Info.CapturableActorTypes.Contains(target.Actor.Info.Name.ToLowerInvariant()));
-                }
+                    if (target.Info == null)
+                        return false;
 
-                if (!capturableTargetOptions.Any() && !externalCapturableTargetOptions.Any())
-                    return;
+                    var capturable = target.Actor.TraitOrDefault<Capturable>();
+                    if (capturable == null)
+                        return false;
 
-                var capturesCapturers = capturers.Where(a => a.Info.HasTraitInfo<CapturesInfo>());
-                var externalCapturers = capturers.Except(capturesCapturers).Where(a => a.Info.HasTraitInfo<ExternalCapturesInfo>());
+                    return capturers.Any(capturer => capturable.CanBeTargetedBy(capturer, target.Actor.Owner));
+                })
+                .OrderByDescending(target => target.Actor.GetSellValue())
+                .Take(maximumCaptureTargetOptions);
 
-                foreach (var capturer in capturesCapturers)
-                    QueueCaptureOrderFor(capturer, GetCapturerTargetClosestToOrDefault(capturer, capturableTargetOptions));
+            var externalCapturableTargetOptions = targetOptions
+                .Select(a => new CaptureTarget<ExternalCapturableInfo>(a, "ExternalCaptureActor"))
+                .Where(target =>
+                {
+                    if (target.Info == null)
+                        return false;
 
-                foreach (var capturer in externalCapturers)
-                    QueueCaptureOrderFor(capturer, GetCapturerTargetClosestToOrDefault(capturer, externalCapturableTargetOptions));
-            }*/
+                    var externalCapturable = target.Actor.TraitOrDefault<ExternalCapturable>();
+                    if (externalCapturable == null)
+                        return false;
+
+                    return capturers.Any(capturer => externalCapturable.CanBeTargetedBy(capturer, target.Actor.Owner));
+                })
+                .OrderByDescending(target => target.Actor.GetSellValue())
+                .Take(maximumCaptureTargetOptions);
+
+            if (Info.CapturableActorTypes.Any())
+            {
+                capturableTargetOptions = capturableTargetOptions.Where(target => Info.CapturableActorTypes.Contains(target.Actor.Info.Name.ToLowerInvariant()));
+                externalCapturableTargetOptions = externalCapturableTargetOptions.Where(target => Info.CapturableActorTypes.Contains(target.Actor.Info.Name.ToLowerInvariant()));
+            }
+
+            if (!capturableTargetOptions.Any() && !externalCapturableTargetOptions.Any())
+                return;
+
+        }
 
         void QueueCaptureOrderFor<TTargetType>(Actor capturer, CaptureTarget<TTargetType> target) where TTargetType : class, ITraitInfoInterface
         {
@@ -914,7 +1030,7 @@ namespace OpenRA.Mods.MW.MWAI
             if (target.Actor == null)
                 return;
 
-            QueueOrder(new Order(target.OrderString, capturer, true) { TargetActor = target.Actor });
+            QueueOrder(new Order(target.OrderString, capturer, Target.FromActor(target.Actor), true));
             BotDebug("AI ({0}): Ordered {1} to capture {2}", Player.ClientIndex, capturer, target.Actor);
             activeUnits.Remove(capturer);
         }
@@ -957,28 +1073,32 @@ namespace OpenRA.Mods.MW.MWAI
                 if (harv == null)
                     continue;
 
+                if (!harv.IsEmpty)
+                    continue;
+
                 if (!harvester.IsIdle)
                 {
                     var act = harvester.CurrentActivity;
-                    if (act.NextActivity == null || act.NextActivity.GetType() != typeof(FindResources))
+                    if (!harv.LastSearchFailed || act.NextActivity == null || act.NextActivity.GetType() != typeof(FindResources))
                         continue;
                 }
-
-                if (!harv.IsEmpty)
-                    continue;
 
                 // Tell the idle harvester to quit slacking:
                 var newSafeResourcePatch = FindNextResource(harvester, harv);
                 BotDebug("AI: Harvester {0} is idle. Ordering to {1} in search for new resources.".F(harvester, newSafeResourcePatch));
-                QueueOrder(new Order("Harvest", harvester, false) { TargetLocation = newSafeResourcePatch });
+                QueueOrder(new Order("Harvest", harvester, Target.FromCell(World, newSafeResourcePatch), false));
             }
         }
+
+        //
+        // MW Related
+        //
 
         void GiveOrdersToIdleCultists()
         {
             // Find idle cultist and give them orders:
 
-            var Cultists = World.ActorsHavingTrait<CorruptDeerstand>().Where(a => a.Owner == Player).ToList();
+            var Cultists = World.ActorsHavingTrait<Mobile>().Where(a => a.Owner == Player && Info.UndeadCommonNames.Cultists.Contains(a.Info.Name)).ToList();
 
 
             foreach (var cultist in Cultists)
@@ -1005,7 +1125,7 @@ namespace OpenRA.Mods.MW.MWAI
 
             foreach (var stand in ClosestDeerStands)
             {
-                var prayer = World.FindActorsInCircle(stand.CenterPosition, WDist.FromCells(4)).Where(a => a.Owner == Player && a.Info.HasTraitInfo<CorruptDeerstandInfo>()).Count();
+                var prayer = World.FindActorsInCircle(stand.CenterPosition, WDist.FromCells(4)).Where(a => a.Owner == Player && Info.UndeadCommonNames.PrayableDeerStands.Contains(a.Info.Name)).Count();
 
                 if (prayer >= 3)
                     continue;
@@ -1017,7 +1137,7 @@ namespace OpenRA.Mods.MW.MWAI
 
         void ManageBuildrAcolytes()
         {
-            var pentagrams = World.ActorsHavingTrait<UndeadBuilder>().Where(a => a.Owner == Player);
+            var pentagrams = World.ActorsHavingTrait<Building>().Where(a => a.Owner == Player && a.Info.Name.Contains(".penta"));
 
             if (AcolyteBuilder.Any() && pentagrams.Any())
             {
@@ -1029,8 +1149,9 @@ namespace OpenRA.Mods.MW.MWAI
                 var preytarget = pentagrams.First();
                 var IdlePreyer = BuilderDoNothing.First();
 
+                //TODO: Acolytes start building
                 if (preytarget != null)
-                    IdlePreyer.QueueActivity(new PreyBuild(IdlePreyer, preytarget));
+                	IdlePreyer.QueueActivity(new PreyBuild(IdlePreyer, preytarget));
             }
         }
 
@@ -1260,6 +1381,10 @@ namespace OpenRA.Mods.MW.MWAI
             }
         }
 
+        // 
+        // End MW Related
+        //
+
         void FindNewUnits(Actor self)
         {
             var newUnits = self.World.ActorsHavingTrait<IPositionable>()
@@ -1327,6 +1452,7 @@ namespace OpenRA.Mods.MW.MWAI
                 var enemies = World.FindActorsInCircle(b.CenterPosition, WDist.FromCells(Info.RushAttackScanRadius))
                     .Where(unit => Player.Stances[unit.Owner] == Stance.Enemy && unit.Info.HasTraitInfo<AttackBaseInfo>()).ToList();
 
+                
                 if (AttackOrFleeFuzzy.Rush.CanAttack(ownUnits, enemies))
                 {
                     var target = enemies.Any() ? enemies.Random(Random) : b;
@@ -1339,6 +1465,7 @@ namespace OpenRA.Mods.MW.MWAI
 
                     return;
                 }
+                
             }
         }
 
@@ -1354,25 +1481,11 @@ namespace OpenRA.Mods.MW.MWAI
             if (!protectSq.IsValid)
             {
                 var ownUnits = World.FindActorsInCircle(World.Map.CenterOfCell(GetRandomBaseCenter()), WDist.FromCells(Info.ProtectUnitScanRadius))
-                    .Where(unit => unit.Owner == Player && !unit.Info.HasTraitInfo<BuildingInfo>() && !Info.UnitsCommonNames.ExcludeFromSquads.Contains(unit.Info.Name) && !Info.UnitsCommonNames.ExcludeFromDefenders.Contains(unit.Info.Name) && !unit.Info.HasTraitInfo<HarvesterInfo>()
+                    .Where(unit => unit.Owner == Player && !Info.UnitsCommonNames.ExcludeFromDefenders.Contains(unit.Info.Name) && !unit.Info.HasTraitInfo<BuildingInfo>() && !unit.Info.HasTraitInfo<HarvesterInfo>()
                         && unit.Info.HasTraitInfo<AttackBaseInfo>());
 
                 foreach (var a in ownUnits)
                     protectSq.Units.Add(a);
-            }
-        }
-
-        void RetreatAcolytes(Actor attacked)
-        {
-            if (attacked.Info.HasTraitInfo<AcolytePreyInfo>() && (attacked.CenterPosition - Player.World.Map.CenterOfCell(initialBaseCenter)).LengthSquared > 10 * 1024)
-            {
-                var findAcolytes = Player.World.FindActorsInCircle(attacked.CenterPosition, WDist.FromCells(5)).Where(a => a.Owner == Player && a.Info.HasTraitInfo<AcolytePreyInfo>());
-
-                foreach (var aco in findAcolytes)
-                {
-                    aco.CancelActivity();
-                    aco.QueueActivity(new Move(aco, initialBaseCenter, WDist.FromCells(5)));
-                }
             }
         }
 
@@ -1384,13 +1497,16 @@ namespace OpenRA.Mods.MW.MWAI
         void SetRallyPointsForNewProductionBuildings(Actor self)
         {
             foreach (var rp in self.World.ActorsWithTrait<RallyPoint>())
+            {
                 if (rp.Actor.Owner == Player &&
                     !IsRallyPointValid(rp.Trait.Location, rp.Actor.Info.TraitInfoOrDefault<BuildingInfo>()))
-                    QueueOrder(new Order("SetRallyPoint", rp.Actor, false)
+                {
+                    QueueOrder(new Order("SetRallyPoint", rp.Actor, Target.FromCell(World, ChooseRallyLocationNear(rp.Actor)), false)
                     {
-                        TargetLocation = ChooseRallyLocationNear(rp.Actor),
                         SuppressVisualFeedback = true
                     });
+                }
+            }
         }
 
         // Won't work for shipyards...
@@ -1449,7 +1565,7 @@ namespace OpenRA.Mods.MW.MWAI
                 if (desiredLocation == null)
                     continue;
 
-                QueueOrder(new Order("Move", mcv, true) { TargetLocation = desiredLocation.Value });
+                QueueOrder(new Order("Move", mcv, Target.FromCell(World, desiredLocation.Value), true));
                 QueueOrder(new Order("DeployTransform", mcv, true));
             }
         }
@@ -1483,10 +1599,11 @@ namespace OpenRA.Mods.MW.MWAI
                     }
 
                     var attackLocation = FindCoarseAttackLocationToSupportPower(sp);
+                    
                     if (attackLocation == null)
                     {
                         BotDebug("AI: {1} can't find suitable coarse attack location for support power {0}. Delaying rescan.", sp.Info.OrderName, Player.PlayerName);
-                        waitingPowers[sp] += powerDecision.GetNextScanTime(this);
+                        waitingPowers[sp] += (self.World.SharedRandom.Next(250, 262));
 
                         continue;
                     }
@@ -1496,15 +1613,16 @@ namespace OpenRA.Mods.MW.MWAI
                     if (attackLocation == null)
                     {
                         BotDebug("AI: {1} can't find suitable final attack location for support power {0}. Delaying rescan.", sp.Info.OrderName, Player.PlayerName);
-                        waitingPowers[sp] += powerDecision.GetNextScanTime(this);
+                        waitingPowers[sp] += (self.World.SharedRandom.Next(250, 262));
 
                         continue;
                     }
+                    
 
                     // Valid target found, delay by a few ticks to avoid rescanning before power fires via order
                     BotDebug("AI: {2} found new target location {0} for support power {1}.", attackLocation, sp.Info.OrderName, Player.PlayerName);
                     waitingPowers[sp] += 10;
-                    QueueOrder(new Order(sp.Key, supportPowerMngr.Self, false) { TargetLocation = attackLocation.Value, SuppressVisualFeedback = true });
+                    QueueOrder(new Order(sp.Key, supportPowerMngr.Self, Target.FromCell(World, attackLocation.Value), false) { SuppressVisualFeedback = true });
                 }
             }
         }
@@ -1527,13 +1645,17 @@ namespace OpenRA.Mods.MW.MWAI
             {
                 for (var j = 0; j < map.MapSize.Y; j += checkRadius)
                 {
-                    var consideredAttractiveness = 0;
+                    var tl = new MPos(i, j);
+                    var br = new MPos(i + checkRadius, j + checkRadius);
+                    var region = new CellRegion(map.Grid.Type, tl, br);
 
-                    var tl = World.Map.CenterOfCell(new MPos(i, j).ToCPos(map));
-                    var br = World.Map.CenterOfCell(new MPos(i + checkRadius, j + checkRadius).ToCPos(map));
-                    var targets = World.ActorMap.ActorsInBox(tl, br);
+                    // HACK: The AI code should not be messing with raw coordinate transformations
+                    var wtl = World.Map.CenterOfCell(tl.ToCPos(map));
+                    var wbr = World.Map.CenterOfCell(br.ToCPos(map));
+                    var targets = World.ActorMap.ActorsInBox(wtl, wbr);
 
-                    consideredAttractiveness = powerDecision.GetAttractiveness(targets, Player);
+                    var frozenTargets = frozenLayer.FrozenActorsInRegion(region);
+                    var consideredAttractiveness = powerDecision.GetAttractiveness(targets, Player) + powerDecision.GetAttractiveness(frozenTargets, Player);
                     if (consideredAttractiveness <= bestAttractiveness || consideredAttractiveness < powerDecision.MinimumAttractiveness)
                         continue;
 
@@ -1568,7 +1690,7 @@ namespace OpenRA.Mods.MW.MWAI
                     var y = checkPos.Y + j;
                     var pos = World.Map.CenterOfCell(new CPos(x, y));
                     var consideredAttractiveness = 0;
-                    consideredAttractiveness += powerDecision.GetAttractiveness(pos, Player);
+                    consideredAttractiveness += powerDecision.GetAttractiveness(pos, Player, frozenLayer);
 
                     if (consideredAttractiveness <= bestAttractiveness || consideredAttractiveness < powerDecision.MinimumAttractiveness)
                         continue;
@@ -1595,22 +1717,16 @@ namespace OpenRA.Mods.MW.MWAI
                 return;
 
             // No construction yards - Build a new MCV
-            /*if (!HasAdequateFact() && !self.World.Actors.Any(a => a.Owner == Player &&
-                Info.UnitsCommonNames.Mcv.Contains(a.Info.Name)))
-                BuildUnit("Vehicle", GetInfoByCommonName(Info.UnitsCommonNames.Mcv, Player).Name);*/
-
+            /*if (Info.UnitsCommonNames.Mcv.Any() && !HasAdequateFact() && !self.World.Actors.Any(a => a.Owner == Player &&
+				Info.UnitsCommonNames.Mcv.Contains(a.Info.Name)))
+				BuildUnit("Vehicle", GetInfoByCommonName(Info.UnitsCommonNames.Mcv, Player).Name);
+			*/
             foreach (var q in Info.UnitQueues)
                 BuildUnit(q, unitsHangingAroundTheBase.Count < Info.IdleBaseUnitsMaximum);
         }
 
         void BuildUnit(string category, bool buildRandom)
         {
-            // do not build if not enough spare peasants
-            if (Player.Faction.InternalName != "ded" && CountPeasants() < Info.MinimumPeasants)
-            {
-                return;
-            }
-
             // Pick a free queue
             var queue = FindQueues(category).FirstOrDefault(q => q.CurrentItem() == null);
             if (queue == null)
@@ -1662,7 +1778,7 @@ namespace OpenRA.Mods.MW.MWAI
                 {
                     BotDebug("Bot noticed damage {0} {1}->{2}, repairing.",
                         self, e.PreviousDamageState, e.DamageState);
-                    QueueOrder(new Order("RepairBuilding", self.Owner.PlayerActor, false) { TargetActor = self });
+                    QueueOrder(new Order("RepairBuilding", self.Owner.PlayerActor, Target.FromActor(self), false));
                 }
             }
 
@@ -1672,13 +1788,12 @@ namespace OpenRA.Mods.MW.MWAI
             if (!e.Attacker.Info.HasTraitInfo<ITargetableInfo>())
                 return;
 
-            // Protected harvesters or building
-            if ((self.Info.HasTraitInfo<AcolytePreyInfo>() || self.Info.HasTraitInfo<HarvesterInfo>() || self.Info.HasTraitInfo<BuildingInfo>()) &&
+            // Protected priority assets, MCVs, harvesters and buildings
+            if ((self.Info.HasTraitInfo<HarvesterInfo>() || self.Info.HasTraitInfo<BuildingInfo>() || self.Info.HasTraitInfo<BaseBuildingInfo>()) &&
                 Player.Stances[e.Attacker.Owner] == Stance.Enemy)
             {
                 defenseCenter = e.Attacker.Location;
                 ProtectOwn(e.Attacker);
-                RetreatAcolytes(self);
             }
         }
     }

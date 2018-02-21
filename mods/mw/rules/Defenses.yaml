@@ -52,10 +52,12 @@ GTWNEW:
 		Weapon: bownarrowtower
 		LocalOffset: 0,0,427
 		Turret: secondary
+		FireDelay: 12
 	Armament@TWODUMMY:
 		Weapon: BowNArrowTowerDUMMY
 		LocalOffset: 0,0,427
 		Turret: secondary
+		FireDelay: 12
 	WithSpriteTurret@SPRITURRTWO: 
 		Sequence: turretidle
 		AimSequence: turretanim

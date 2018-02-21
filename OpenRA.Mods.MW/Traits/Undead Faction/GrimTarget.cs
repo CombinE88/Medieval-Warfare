@@ -132,9 +132,9 @@ namespace OpenRA.Mods.MW.Traits
 
         }
 
-        public IEnumerable<Rectangle> ModifyScreenBounds(Actor self, WorldRenderer wr, IEnumerable<Rectangle> r)
+        IEnumerable<Rectangle> IRenderModifier.ModifyScreenBounds(Actor self, WorldRenderer wr, IEnumerable<Rectangle> bounds)
         {
-            throw new NotImplementedException();
+            return bounds;
         }
     }
 }

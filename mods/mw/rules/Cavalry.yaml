@@ -23,8 +23,8 @@ KINGROSS:
 		Prerequisites: anycastle
 		Description: The ruler over your Kingdom!\n  Very strong against Infantry and Cavalry and Spectral Units\n Detects cloaked units\n  Grants morale buff 10% all stats to surrounding allied units.\n\n\n
 		Queue: MVehicle.GDI
-        BuildLimit: 1
-        ForceFaction: gdi
+		BuildLimit: 1
+		ForceFaction: gdi
 	MustBeDestroyed:
 		RequiredForShortGame: true
 	Guard:
@@ -189,6 +189,7 @@ BURNINGHORSE:
 	Armor:
 		Type: LightCavalry
 	-Selectable:
+	Interactable:
 	Wanders:
 		WanderMoveRadius: 5
 		MinMoveDelay: 0
@@ -272,6 +273,7 @@ EMPTYROSS:
 ROSS1:
 	Inherits: ^Cavalry
 	Inherits@AUTOTARGET: ^AutoTargetGround
+	Inherits@AUTOTARGETDEF: ^AutoTargetDefenses
 	Inherits@GainsExperience: ^GainsExperience
 	Inherits@GetsPoisoned: ^GetsPoisoned
 	Inherits@ArcherDemo65: ^ArcherDemo80
@@ -323,7 +325,7 @@ ROSS1:
 		VisualBounds: 26,34,0,-6
 	PersonValued:
 		ActorCount: 1
-        ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
+		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 	Targetable@CombatRole:
 		TargetTypes: RegularCavalry
 	AutoTargetPriority@Counter1:
@@ -333,6 +335,7 @@ ROSS1:
 ROSS2:
 	Inherits: ^Cavalry
 	Inherits@AUTOTARGET: ^AutoTargetGround
+	Inherits@AUTOTARGETDEF: ^AutoTargetDefenses
 	Inherits@GainsExperience: ^GainsExperience
 	Inherits@GetsPoisoned: ^GetsPoisoned
 	Inherits@ArcherDemo65: ^ArcherDemo80
@@ -382,7 +385,7 @@ ROSS2:
 		VisualBounds: 26,34,0,-6	
 	PersonValued:
 		ActorCount: 1
-        ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
+		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 	Targetable@CombatRole:
 		TargetTypes: RegularCavalry
 	AutoTargetPriority@Counter1:
@@ -393,6 +396,7 @@ ROSS2:
 ROSS5:
 	Inherits: ^Cavalry
 	Inherits@AUTOTARGET: ^AutoTargetAll
+	Inherits@AUTOTARGETDEF: ^AutoTargetDefenses
 	Inherits@GainsExperience: ^GainsExperience
 	Inherits@GetsPoisoned: ^GetsPoisoned
 	Inherits@ArcherDemo65: ^ArcherDemo80
@@ -466,13 +470,14 @@ ROSS5:
 		VoiceSet: HeavyCavalVoice
 	PersonValued:
 		ActorCount: 2
-        ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
+		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 	Targetable@CombatRole:
 		TargetTypes: HeavyCavalry
 
 ROSS3:
 	Inherits: ^Cavalry
 	Inherits@AUTOTARGET: ^AutoTargetAll
+	Inherits@AUTOTARGETDEF: ^AutoTargetDefenses
 	Inherits@GainsExperience: ^GainsExperience
 	Inherits@GetsPoisoned: ^GetsPoisoned
 	Inherits@ArcherDemo65: ^ArcherDemo80
@@ -530,7 +535,7 @@ ROSS3:
 		VisualBounds: 26,34,0,-6
 	PersonValued:
 		ActorCount: 1
-        ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
+		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 	Targetable@CombatRole:
 		TargetTypes: RegularCavalry
 	AutoTargetPriority@Counter1:
@@ -541,6 +546,7 @@ ROSS3:
 ROSS4:
 	Inherits: ^Cavalry
 	Inherits@AUTOTARGET: ^AutoTargetAll
+	Inherits@AUTOTARGETDEF: ^AutoTargetDefenses
 	Inherits@GainsExperience: ^GainsExperience
 	Inherits@GetsPoisoned: ^GetsPoisoned
 	Inherits@ArcherDemo65: ^ArcherDemo80
@@ -601,7 +607,7 @@ ROSS4:
 		VisualBounds: 26,34,0,-6
 	PersonValued:
 		ActorCount: 1
-        ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
+		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 	Targetable@CombatRole:
 		TargetTypes: LightCavalry
 	AutoTargetPriority@Counter1:
@@ -662,7 +668,7 @@ ROSS4B:
 		VisualBounds: 26,34,0,-6
 	PersonValued:
 		ActorCount: 1
-        ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
+		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 	Targetable@CombatRole:
 		TargetTypes: LightCavalry
 	AutoTargetPriority@Counter1:
@@ -723,7 +729,7 @@ ROSS4C:
 		VisualBounds: 26,34,0,-6
 	PersonValued:
 		ActorCount: 1
-        ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
+		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 	Targetable@CombatRole:
 		TargetTypes: LightCavalry
 	AutoTargetPriority@Counter1:

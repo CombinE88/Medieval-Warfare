@@ -312,6 +312,7 @@ E1NEW:
 E2NEW:
 	Inherits: ^Knight
 	Inherits@AUTOTARGET: ^AutoTargetGround
+	Inherits@AUTOTARGETDEF: ^AutoTargetDefenses
 	Inherits@GainsExperience: ^GainsExperience
 	Inherits@GetsPoisoned: ^GetsPoisoned
 	Inherits@CanTurnIntoScelett:  ^CanTurnIntoScelett
@@ -368,6 +369,7 @@ E2NEW:
 E2NEWV2:
 	Inherits: ^Knight
 	Inherits@AUTOTARGET: ^AutoTargetGround
+	Inherits@AUTOTARGETDEF: ^AutoTargetDefenses
 	Inherits@GainsExperience: ^GainsExperience
 	Inherits@GetsPoisoned: ^GetsPoisoned
 	Inherits@CanTurnIntoScelett:  ^CanTurnIntoScelett
@@ -465,7 +467,6 @@ E2NEWV2U:
 		Weapon: KingPikeRanged
 		Name: Primary
 		FireDelay: 5
-		AmmoPoolName: Gun
 		RequiresCondition: FullAmmo
 		LocalOffset: 341,20,356
 	Armament@Dummy:
@@ -473,6 +474,7 @@ E2NEWV2U:
 		Name: Primary
 		RequiresCondition: FullAmmo
 	AmmoPool:
+		Armaments: Primary
 		Name: Gun
 		Ammo: 1
 	ReloadAmmoWhenEnabled:
@@ -565,7 +567,6 @@ E3NEWU:
 		Weapon: broadswordranged
 		Name: Primary
 		FireDelay: 5
-		AmmoPoolName: Gun
 		RequiresCondition: FullAmmo
 		LocalOffset: 341,20,356
 	Armament@Dummy:
@@ -573,6 +574,7 @@ E3NEWU:
 		Name: Primary
 		RequiresCondition: FullAmmo
 	AmmoPool:
+		Armaments: Primary
 		Name: Gun
 		Ammo: 1
 	ReloadAmmoWhenEnabled:
@@ -719,6 +721,7 @@ E3NEWV2:
 E9NEW:
 	Inherits: ^Knight
 	Inherits@AUTOTARGET: ^AutoTargetGround
+	Inherits@AUTOTARGETDEF: ^AutoTargetDefenses
 	Inherits@GainsExperience: ^GainsExperience
 	Inherits@GetsPoisoned: ^GetsPoisoned
 	Inherits@CanTurnIntoScelett:  ^CanTurnIntoScelett
@@ -785,7 +788,6 @@ E4NEW:
 	Inherits@GrimReanimatable: ^GrimReanimatable
 	RevealsShroud:
 		Range: 6c0
-
 	Valued:
 		Cost: 200
 	Tooltip:
@@ -937,13 +939,13 @@ E5NEW:
 		Cost: 400
 	Tooltip:
 		Name: Marksman
-	Buildable:
-		Description: Advanced general-purpose infantry.\n  Strong vs all Ground units\n  Detects cloaked units\n  Cannot attack Aircraft anymore!\n\nTrains: 1 Peasant\n
-		IconPalette: raicon
-		BuildPaletteOrder: 50
-		Prerequisites: anyarmory
-		Queue: MInfantry.Nod, MInfantry.Horse
-		#BuildDuration: 300
+#	Buildable:
+#		Description: Advanced general-purpose infantry.\n  Strong vs all Ground units\n  Detects cloaked units\n  Cannot attack Aircraft anymore!\n\nTrains: 1 Peasant\n
+#		IconPalette: raicon
+#		BuildPaletteOrder: 50
+#		Prerequisites: anyarmory
+#		Queue: MInfantry.Nod, MInfantry.Horse
+#		#BuildDuration: 300
 	Mobile:
 		Speed: 56
 	Health:
@@ -978,6 +980,7 @@ RMBONEW:
 	RevealsShroud:
 		Range: 9c0
 	Inherits@AUTOTARGET: ^AutoTargetGround
+	Inherits@AUTOTARGETDEF: ^AutoTargetDefenses
 	Inherits@GainsExperience: ^GainsExperience
 	Inherits@GetsPoisoned: ^GetsPoisoned
 	Inherits@CanTurnIntoScelett:  ^CanTurnIntoScelett
@@ -1035,6 +1038,7 @@ RMBONEW:
 NEWCOMM:
 	Inherits: ^Knight
 	Inherits@AUTOTARGET: ^AutoTargetGround
+	Inherits@AUTOTARGETDEF: ^AutoTargetDefenses
 	Inherits@GainsExperience: ^GainsExperience
 	Inherits@GetsPoisoned: ^GetsPoisoned
 	Inherits@CanTurnIntoScelett:  ^CanTurnIntoScelett
@@ -1155,7 +1159,7 @@ ASSASSIN:
 			Secondary: fireattack
 			Primary: knifeattack
 	AutoTarget:
-		InitialStance: HoldFire
+		InitialStance: ReturnFire
 		InitialStanceAI: ReturnFire
 	Armor:
 		Type: Leather
@@ -1314,6 +1318,7 @@ SIEGERUNNER:
 	Tooltip:
 		Name: Engineer (escaping)
 	-Selectable:
+	Interactable:
 	Targetable:
 		RequiresForceFire: true
 	Mobile:
@@ -1559,6 +1564,7 @@ SHOPPLAYER:
 			gdi: workshoplabor
 			sul: sulshoplabor
 	-Selectable:
+	Interactable:
 	WithInfantryBody:
 		StandSequences: stand
 		DefaultAttackSequence: repair
@@ -1790,12 +1796,12 @@ MWLUMBERER:
 		TargetStances: Ally, Neutral
 		IgnoresVisibility: true
 		RequiresCondition: !NoFood
-		AmmoPoolName: Food
 	CashTrickler@LotDeer:
 		Interval: 25
 		Amount: 100
 		RequiresCondition: UnloadDeer
 	AmmoPool:
+		Armaments: tairt
 		Name: Food
 		Ammo: 10
 		InitialAmmo: 0
@@ -1874,12 +1880,12 @@ MWLUMBEREROWNED:
 		TargetStances: Ally, Neutral
 		IgnoresVisibility: true
 		RequiresCondition: !NoFood
-		AmmoPoolName: Food
 	CashTrickler@LotDeer:
 		Interval: 25
 		Amount: 100
 		RequiresCondition: UnloadDeer
 	AmmoPool:
+		Armaments: tairt
 		Name: Food
 		Ammo: 10
 		InitialAmmo: 0
@@ -1943,6 +1949,7 @@ TRANSPORTER:
 	Armor:
 		Type: Leather
 	-Selectable:
+	Interactable:
 	Targetable:
 		TargetTypes: Ground, Infantry
 	WithDeathAnimation:
@@ -1969,7 +1976,6 @@ TRANSPORTER:
 		Weapon: LaborourUnload
 		Name: primary
 		TargetStances: Neutral, Ally
-		AmmoPoolName: Goods
 		RequiresCondition: !EmptyGoods
 	Armament@Load:
 		Weapon: LaborourLoad
@@ -1977,6 +1983,7 @@ TRANSPORTER:
 		TargetStances: Neutral, Ally
 		RequiresCondition: !FullGoods
 	AmmoPool:
+		Armaments: primary
 		Name: Goods
 		Ammo: 3
 		InitialAmmo: 0
@@ -2021,6 +2028,7 @@ HUNTER:
 	Power:
 		Amount: 0
 	-Selectable:
+	Interactable:
 	Targetable:
 		TargetTypes: Ground, Infantry, Hunterer
 	RejectsOrders:
@@ -2058,12 +2066,12 @@ HUNTER:
 		TargetStances: Ally, Neutral
 		IgnoresVisibility: true
 		RequiresCondition: !NoFood
-		AmmoPoolName: Food
 	CashTrickler@LotDeer:
 		Interval: 25
 		Amount: 100
 		RequiresCondition: UnloadDeer
 	AmmoPool:
+		Armaments: tairt
 		Name: Food
 		Ammo: 10
 		InitialAmmo: 0

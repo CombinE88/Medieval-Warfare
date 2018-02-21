@@ -14,11 +14,10 @@ using System.Collections.Generic;
 using System.Linq;
 using OpenRA.Mods.Common;
 using OpenRA.Mods.Common.Traits;
-using OpenRA.Mods.MW.Traits;
 using OpenRA.Support;
 using OpenRA.Traits;
 
-namespace OpenRA.Mods.MW.MWAI
+namespace OpenRA.Mods.MW.AI
 {
     class MWBaseBuilder
     {
@@ -28,11 +27,13 @@ namespace OpenRA.Mods.MW.MWAI
         readonly World world;
         readonly Player player;
         readonly PowerManager playerPower;
+        readonly PlayerResources playerResources;
 
         int waitTicks;
         Actor[] playerBuildings;
         int failCount;
         int failRetryTicks;
+        int checkForBasesTicks;
         int cachedBases;
         int cachedBuildings;
 
@@ -43,12 +44,15 @@ namespace OpenRA.Mods.MW.MWAI
             NotEnoughWater
         }
 
+        Water waterState = Water.NotChecked;
+
         public MWBaseBuilder(OlafAI ai, string category, Player p, PowerManager pm, PlayerResources pr)
         {
             this.ai = ai;
             world = p.World;
             player = p;
             playerPower = pm;
+            playerResources = pr;
             this.category = category;
             failRetryTicks = ai.Info.StructureProductionResumeDelay;
         }
@@ -68,6 +72,28 @@ namespace OpenRA.Mods.MW.MWAI
                     failCount = 0;
                 else
                     failRetryTicks = ai.Info.StructureProductionResumeDelay;
+            }
+
+            if (waterState == Water.NotChecked)
+            {
+                if (ai.EnoughWaterToBuildNaval())
+                    waterState = Water.EnoughWater;
+                else
+                {
+                    waterState = Water.NotEnoughWater;
+                    checkForBasesTicks = ai.Info.CheckForNewBasesDelay;
+                }
+            }
+
+            if (waterState == Water.NotEnoughWater && --checkForBasesTicks <= 0)
+            {
+                var currentBases = world.ActorsHavingTrait<BaseProvider>().Count(a => a.Owner == player);
+
+                if (currentBases > cachedBases)
+                {
+                    cachedBases = currentBases;
+                    waterState = Water.NotChecked;
+                }
             }
 
             // Only update once per second or so
@@ -144,11 +170,13 @@ namespace OpenRA.Mods.MW.MWAI
                 else
                 {
                     failCount = 0;
-                    ai.QueueOrder(new Order("PlaceBuilding", player.PlayerActor, false)
+                    ai.QueueOrder(new Order("PlaceBuilding", player.PlayerActor, Target.FromCell(world, location.Value), false)
                     {
-                        TargetLocation = location.Value,
+                        // Building to place
                         TargetString = currentBuilding.Item,
-                        TargetActor = queue.Actor,
+
+                        // Actor ID to associate the placement with
+                        ExtraData = queue.Actor.ActorID,
                         SuppressVisualFeedback = true
                     });
 
@@ -170,7 +198,7 @@ namespace OpenRA.Mods.MW.MWAI
                 if (!ai.Info.BuildingLimits.ContainsKey(actor.Name))
                     return true;
 
-                return (playerBuildings.Count(a => a.Info.Name == actor.Name) + playerBuildings.Count(a => a.Info.Name == actor.Name.Replace(".scaff", string.Empty).ToLower())) < ai.Info.BuildingLimits[actor.Name];
+                return playerBuildings.Count(a => a.Info.Name == actor.Name) < ai.Info.BuildingLimits[actor.Name];
             });
 
             if (orderBy != null)
@@ -190,18 +218,18 @@ namespace OpenRA.Mods.MW.MWAI
             if (ai.Player.Faction.InternalName != "ded")
             {
                 var buildableThings = queue.BuildableItems();
-
+                //become obsolete
+                /* 
                 var scaffolds = ai.CountScaffolds();
 
                 if (scaffolds >= 2) // lets not builder faster as we can
                     return null;
-
+                */
                 var houses = GetProducibleBuilding(ai.Info.BuildingCommonNames.Houses, buildableThings,
                     a => a.TraitInfos<ValuedInfo>().Sum(p => p.Cost));
 
                 // This gets used quite a bit, so let's cache it here
                 var population = ai.CountPossiblePopulation() + ai.CountPotentialFreeBeds();
-
 
 
                 // First priority is to get out of a low power situation
@@ -249,13 +277,8 @@ namespace OpenRA.Mods.MW.MWAI
                 }
 
                 // Build everything else
-
-
-
-
                 foreach (var frac in ai.Info.BuildingFractions.Shuffle(ai.Random))
                 {
-
                     var name = frac.Key;
 
                     if (!ai.HasMinimumFarm() && ai.Info.BuildingCommonNames.Defenses.Contains(name))
@@ -277,11 +300,6 @@ namespace OpenRA.Mods.MW.MWAI
                         continue;
 
 
-                    // If we're considering to build a naval structure, check whether there is enough water inside the base perimeter
-                    // and any structure providing buildable area close enough to that water.
-                    // TODO: Extend this check to cover any naval structure, not just production.
-
-                    // Will this put us into low power?
                     var actor = world.Map.Rules.Actors[name];
 
                     // Lets build this
@@ -289,14 +307,15 @@ namespace OpenRA.Mods.MW.MWAI
                         queue.Actor.Owner, name, frac.Value, frac.Value * playerBuildings.Length, playerBuildings.Length, count);
                     return actor;
                 }
+
+                return null;
             }
             else
             {
-                var pentagrams = ai.CountPenagrams();
-                var builder = ai.AcolyteBuilder.Count();
-
                 var buildableThings = queue.BuildableItems();
 
+                var pentagrams = ai.CountPenagrams();
+                var builder = ai.AcolyteBuilder.Count();
 
                 if (ai.HasAdequateCrypts() * 3 < playerBuildings.Count() && !(pentagrams * 5 > builder))
                 {
@@ -306,11 +325,12 @@ namespace OpenRA.Mods.MW.MWAI
                         OlafAI.BotDebug("AI: {0} decided to build {1}: Priority override (production)", queue.Actor.Owner, crypt.Name);
                         return crypt;
                     }
+                    return null;
                 }
 
+                // Build everything else
                 foreach (var frac in ai.Info.BuildingFractions.Shuffle(ai.Random))
                 {
-
                     var name = frac.Key;
 
                     if ((pentagrams * 5 > builder && !ai.Info.UndeadCommonNames.EarlyUpgrades.Contains(name)) || ai.Info.UndeadCommonNames.Crypts.Contains(name))
@@ -330,17 +350,16 @@ namespace OpenRA.Mods.MW.MWAI
 
                     var actor = world.Map.Rules.Actors[name];
 
+
                     // Lets build this
                     OlafAI.BotDebug("{0} decided to build {1}: Desired is {2} ({3} / {4}); current is {5} / {4}",
                         queue.Actor.Owner, name, frac.Value, frac.Value * playerBuildings.Length, playerBuildings.Length, count);
                     return actor;
                 }
-
+                // Too spammy to keep enabled all the time, but very useful when debugging specific issues.
+                // OlafAI.BotDebug("{0} couldn't decide what to build for queue {1}.", queue.Actor.Owner, queue.Info.Group);
+                return null;
             }
-
-            // Too spammy to keep enabled all the time, but very useful when debugging specific issues.
-            // HackyAI.BotDebug("{0} couldn't decide what to build for queue {1}.", queue.Actor.Owner, queue.Info.Group);
-            return null;
         }
     }
 }

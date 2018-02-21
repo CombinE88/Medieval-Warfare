@@ -1,5 +1,6 @@
 ^ChoppedTree:
 	Inherits@1: ^SpriteActor
+	Interactable:
 	Tooltip:
 		Name: Tree(Chopped)
 		ShowOwnerRow: false

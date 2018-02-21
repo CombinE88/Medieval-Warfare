@@ -23,11 +23,9 @@
 .DEFAULT_GOAL := build
 
 VERSION = $(shell git name-rev --name-only --tags --no-undefined HEAD 2>/dev/null || echo git-`git rev-parse --short HEAD`)
-MOD_ID = $(shell awk -F= '/MOD_ID/ { print $$2 }' mod.config)
-ENGINE_DIRECTORY = $(shell awk -F= '/ENGINE_DIRECTORY/ { print $$2 }' mod.config)
-AUTOMATIC_ENGINE_MANAGEMENT = $(shell awk -F= '/AUTOMATIC_ENGINE_MANAGEMENT/ { print $$2 }' mod.config)
-
-INCLUDE_DEFAULT_MODS = $(shell awk -F= '/INCLUDE_DEFAULT_MODS/ { print $$2 }' mod.config)
+MOD_ID = $(shell cat user.config mod.config 2> /dev/null | awk -F= '/MOD_ID/ { print $$2; exit }')
+ENGINE_DIRECTORY = $(shell cat user.config mod.config 2> /dev/null | awk -F= '/ENGINE_DIRECTORY/ { print $$2; exit }')
+INCLUDE_DEFAULT_MODS = $(shell cat user.config mod.config 2> /dev/null | awk -F= '/INCLUDE_DEFAULT_MODS/ { print $$2; exit }')
 
 MOD_SEARCH_PATHS = "$(shell python -c "import os; print(os.path.realpath('.'))")/mods"
 ifeq ($(INCLUDE_DEFAULT_MODS),"True")
@@ -39,6 +37,7 @@ MANIFEST_PATH = "mods/$(MOD_ID)/mod.yaml"
 HAS_MSBUILD = $(shell command -v msbuild 2> /dev/null)
 HAS_LUAC = $(shell command -v luac 2> /dev/null)
 LUA_FILES = $(shell find mods/*/maps/* -iname '*.lua')
+PROJECT_DIRS = $(shell dirname $$(find . -iname "*.csproj" -not -path "$(ENGINE_DIRECTORY)/*"))
 
 engine:
 	@./fetch-engine.sh || (printf "Unable to continue without engine files\n"; exit 1)
@@ -56,7 +55,6 @@ ifeq ("$(HAS_MSBUILD)","")
 else
 	@find . -maxdepth 1 -name '*.sln' -exec msbuild /t:Rebuild /nr:false \;
 endif
-	@find . -maxdepth 1 -name '*.sln' -exec printf "The mod logic has been built.\n" \;
 
 clean: engine
 ifeq ("$(HAS_MSBUILD)","")
@@ -64,7 +62,6 @@ ifeq ("$(HAS_MSBUILD)","")
 else
 	@find . -maxdepth 1 -name '*.sln' -exec msbuild /t:Clean /nr:false \;
 endif
-	@find . -maxdepth 1 -name '*.sln' -exec printf "The mod logic has been cleaned.\n" \;
 	@cd $(ENGINE_DIRECTORY) && make clean
 	@printf "The engine has been cleaned.\n"
 
@@ -87,8 +84,10 @@ endif
 check: utility stylecheck
 	@echo "Checking for explicit interface violations..."
 	@MOD_SEARCH_PATHS="$(MOD_SEARCH_PATHS)" mono --debug "$(ENGINE_DIRECTORY)/OpenRA.Utility.exe" $(MOD_ID) --check-explicit-interfaces
-	@echo "Checking for code style violations in OpenRA.Mods.$(MOD_ID)..."
-	@mono --debug "$(ENGINE_DIRECTORY)/OpenRA.StyleCheck.exe" OpenRA.Mods.$(MOD_ID)
+	@for i in $(PROJECT_DIRS) ; do \
+		echo "Checking for code style violations in $${i}...";\
+		mono --debug "$(ENGINE_DIRECTORY)/OpenRA.StyleCheck.exe" $${i};\
+	done
 
 test: utility
 	@echo "Testing $(MOD_ID) mod MiniYAML..."

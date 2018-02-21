@@ -61,9 +61,9 @@ FACTNEW:
 	BodyOrientation:
 		QuantizedFacings: 8
 	Selectable:
-		Bounds:72,48,0,9
+		Bounds:72,52,0,-18
 	SelectionDecorations:
-		VisualBounds: 72,53,0,-4
+		VisualBounds:72,52,0,-18
 	Exit@1:
 		SpawnOffset: -426,85,0
 		ExitCell: 0,1
@@ -98,84 +98,84 @@ FACTNEW:
 		Group: Building
 		LowPowerSlowdown: 2
 		QueuedAudio: Building
-		ReadyAudio: 
+		ReadyAudio: ConstructionComplete
 	ProductionQueue@NodMBuilding:
 		Type: MBuilding.Nod
 		Factions: nod
 		Group: Building
 		LowPowerSlowdown: 2
 		QueuedAudio: Building
-		ReadyAudio: 
+		ReadyAudio: ConstructionComplete
 	ProductionQueue@GDIMDefence:
 		Type: MTech.GDI
 		Factions: gdi
 		Group: Tech
 		LowPowerSlowdown: 2
 		QueuedAudio: Building
-		ReadyAudio: 
+		ReadyAudio: ConstructionComplete
 	ProductionQueue@NodMDefence:
 		Type: MTech.Nod
 		Factions: nod
 		Group: Tech
 		LowPowerSlowdown: 2
 		QueuedAudio: Building
-		ReadyAudio: 
+		ReadyAudio: ConstructionComplete
 	ProductionQueue@SULBuilding:
 		Type: MBuilding.SUL
 		Factions: sul
 		Group: Building
 		LowPowerSlowdown: 2
 		QueuedAudio: Building
-		ReadyAudio: 
+		ReadyAudio: ConstructionComplete
 	ProductionQueue@SULDefense:
 		Type: MTech.SUL
 		Factions: sul
 		Group: Tech
 		LowPowerSlowdown: 2
 		QueuedAudio: Building
-		ReadyAudio: 
+		ReadyAudio: ConstructionComplete
 	ProductionQueue@GDIMResources:
 		Type: MResources.GDI
 		Factions: gdi
 		Group: Building2
 		LowPowerSlowdown: 2
 		QueuedAudio: Building
-		ReadyAudio: 
+		ReadyAudio: ConstructionComplete
 	ProductionQueue@NodMResources:
 		Type: MResources.Nod
 		Factions: nod
 		Group: Building2
 		LowPowerSlowdown: 2
 		QueuedAudio: Building
-		ReadyAudio: 
+		ReadyAudio: ConstructionComplete
 	ProductionQueue@GDIMMilitary:
 		Type: MMilitary.GDI
 		Factions: gdi
 		Group: Building3
 		LowPowerSlowdown: 2
 		QueuedAudio: Building
-		ReadyAudio: 
+		ReadyAudio: ConstructionComplete
 	ProductionQueue@NodMMilitary:
 		Type: MMilitary.Nod
 		Factions: nod
 		Group: Building3
 		LowPowerSlowdown: 2
 		QueuedAudio: Building
-		ReadyAudio: 
+		ReadyAudio: ConstructionComplete
 	ProductionQueue@SULBuilding2:
 		Type: MResources.SUL
 		Factions: sul
 		Group: Building2
 		LowPowerSlowdown: 2
 		QueuedAudio: Building
-		ReadyAudio: 
+		ReadyAudio: ConstructionComplete
 	ProductionQueue@SULBuilding3:
 		Type: MMilitary.SUL
 		Factions: sul
 		Group: Building3
 		LowPowerSlowdown: 2
 		QueuedAudio: Building
-		ReadyAudio: 
+		ReadyAudio: ConstructionComplete
 	BaseBuilding:
 	ProductionBar@BuildingGDI:
 		ProductionType: MBuilding.GDI
@@ -211,10 +211,6 @@ FACTNEW:
 		Weapons: LargeWood1, LargeStone1, DebrUtility1, DebrUtility2, DebrUtility3
 		Pieces: 1, 2
 		Range: 1c0, 5c0
-	ProximityExternalCondition@LABORER:
-		Range: 3c0
-		ValidStances: Ally
-		Condition: Labor
 	Targetable:
 		TargetTypes: Ground, C4, Structure, Wanderer, Laborer, BaseCenter, Material
 	ProvidesRadar:
@@ -222,173 +218,10 @@ FACTNEW:
 		Ammount: 8
 		SpawnOffset: -213,554,0
 		ExitCell: 1,2
-	WithFreeSpawnableActor@LABOURONE:
-		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
-		UseConverting: false
-		SpawnActor: transporter
-		Offset: -124,1024, 0
-		MoveOffset: 1,2
-		Sticky: true
-		Lasso: 3c0
-		ReturnOnDeath: true
-	WithFreeSpawnableActor@LABOURTWO:
-		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
-		UseConverting: false
-		SpawnActor: transporter
-		Offset: -124,1024, 0
-		MoveOffset: 1,2
-		Sticky: true
-		Lasso: 3c0
-		ReturnOnDeath: true
-	WithFreeSpawnableActor@LABOURTHREE:
-		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
-		UseConverting: false
-		SpawnActor: transporter
-		Offset: -124,1024, 0
-		MoveOffset: 1,2
-		Sticky: true
-		Lasso: 3c0
-	WithFreeSpawnableActor@LABOURFOUR:
-		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
-		UseConverting: false
-		SpawnActor: engeneer
-		RespawnTime: 125
-		Offset: -124,1024, 0
-		MoveOffset: 1,2
-		Sticky: true
-		Lasso: 3c0
-		ReturnOnDeath: true
-	WithFreeSpawnableActor@LABOUR4:
-		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
-		UseConverting: false
-		SpawnActor: transporter
-		Offset: -124,1024, 0
-		MoveOffset: 1,2
-		Sticky: true
-		Lasso: 3c0
-	WithFreeSpawnableActor@LABOUR5:
-		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
-		UseConverting: false
-		SpawnActor: transporter
-		Offset: -124,1024, 0
-		MoveOffset: 1,2
-		Sticky: true
-		Lasso: 3c0
-		ReturnOnDeath: true
-	WithFreeSpawnableActor@LABOUR6:
-		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
-		UseConverting: false
-		SpawnActor: transporter
-		Offset: -124,1024, 0
-		MoveOffset: 1,2
-		Sticky: true
-		Lasso: 3c0
-		ReturnOnDeath: true
 	StoresResources:
 		PipColor: Yellow
 		PipCount: 10
 		Capacity: 4000
-	GrantConditionOnPrerequisite@extra2:
-		Condition: extra2
-		Prerequisites: 2extra
-	GrantConditionOnPrerequisite@extra3:
-		Condition: extra3
-		Prerequisites: 3extra
-	GrantConditionOnPrerequisite@extra31:
-		Condition: extra2
-		Prerequisites: 3extra
-	GrantConditionOnPrerequisite@extra5:
-		Condition: extra2
-		Prerequisites: 5extra
-	GrantConditionOnPrerequisite@extra51:
-		Condition: extra3
-		Prerequisites: 5extra
-	GrantConditionOnPrerequisite@extra52:
-		Condition: extra5
-		Prerequisites: 5extra
-	WithFreeSpawnableActor@ExtraLabor1:
-		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
-		UseConverting: false
-		SpawnActor: transporter
-		RequiresCondition: extra2
-		Offset: -124,1024, 0
-		MoveOffset: 1,2
-		Sticky: true
-		Lasso: 3c0
-		ReturnOnDeath: true
-	WithFreeSpawnableActor@ExtraEngeneer1:
-		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
-		UseConverting: false
-		RequiresCondition: extra2
-		SpawnActor: engeneer
-		RespawnTime: 125
-		Offset: -124,1024, 0
-		MoveOffset: 1,2
-		Sticky: true
-		Lasso: 3c0
-		ReturnOnDeath: true
-	WithFreeSpawnableActor@ExtraLabor2:
-		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
-		UseConverting: false
-		SpawnActor: transporter
-		RequiresCondition: extra2
-		Offset: -124,1024, 0
-		MoveOffset: 1,2
-		Sticky: true
-		Lasso: 3c0
-		ReturnOnDeath: true
-	WithFreeSpawnableActor@ExtraLabor3:
-		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
-		UseConverting: false
-		SpawnActor: transporter
-		RequiresCondition: extra3
-		Offset: -124,1024, 0
-		MoveOffset: 1,2
-		Sticky: true
-		Lasso: 3c0
-		ReturnOnDeath: true
-	WithFreeSpawnableActor@ExtraEngeneer2:
-		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
-		UseConverting: false
-		RequiresCondition: extra3
-		SpawnActor: engeneer
-		RespawnTime: 125
-		Offset: -124,1024, 0
-		MoveOffset: 1,2
-		Sticky: true
-		Lasso: 3c0
-		ReturnOnDeath: true
-	WithFreeSpawnableActor@ExtraLabor4:
-		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
-		UseConverting: false
-		SpawnActor: transporter
-		RequiresCondition: extra5
-		Offset: -124,1024, 0
-		MoveOffset: 1,2
-		Sticky: true
-		Lasso: 3c0
-		ReturnOnDeath: true
-	WithFreeSpawnableActor@ExtraEngeneer3:
-		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
-		UseConverting: false
-		RequiresCondition: extra5
-		SpawnActor: engeneer
-		RespawnTime: 125
-		Offset: -124,1024, 0
-		MoveOffset: 1,2
-		Sticky: true
-		Lasso: 3c0
-		ReturnOnDeath: true
-	WithFreeSpawnableActor@ExtraLabor5:
-		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
-		UseConverting: false
-		SpawnActor: transporter
-		RequiresCondition: extra5
-		Offset: -124,1024, 0
-		MoveOffset: 1,2
-		Sticky: true
-		Lasso: 3c0
-		ReturnOnDeath: true
 	ProximityExternalCondition@WANDERER:
 		Range: 20c0
 		ValidStances: Ally
@@ -400,7 +233,7 @@ FACTNEW.GDI:
 	RenderSprites:
 		Image: newfact
 	Buildable:
-		Queue: MTech.Nod, MTech.GDI, MTech.Sul, MTech.ded
+		Queue: MResources.Nod, MResources.GDI, MResources.Sul, MResources.ded
 		BuildPaletteOrder: 1000
 		Prerequisites: ~disabled
 		ForceFaction: gdi
@@ -418,7 +251,7 @@ FACTNEW.NOD:
 	RenderSprites:
 		Image: newfact
 	Buildable:
-		Queue: MTech.Nod, MTech.GDI, MTech.Sul, MTech.ded
+		Queue: MResources.Nod, MResources.GDI, MResources.Sul, MResources.ded
 		BuildPaletteOrder: 1001
 		Prerequisites: ~disabled
 		ForceFaction: nod
@@ -436,7 +269,7 @@ FACTNEW.SUL:
 	RenderSprites:
 		Image: newfact
 	Buildable:
-		Queue: MTech.Nod, MTech.GDI, MTech.Sul, MTech.ded
+		Queue: MResources.Nod, MResources.GDI, MResources.Sul, MResources.ded
 		BuildPaletteOrder: 1002
 		Prerequisites: ~disabled
 		ForceFaction: sul
@@ -778,10 +611,10 @@ ARMORYNOD:
 		Type: Concrete
 	WithDeathAnimation:
 		DeathSequencePalette: raplayer
-	Valued:
-		Cost: 1750
 	CustomSellValue:
-		Value: 875
+		Value: 650
+	Valued:
+		Cost: 1300
 	Tooltip:
 		Name: Armory
 	ProvidesPrerequisite@buildingname:
@@ -808,7 +641,7 @@ ARMORYNOD:
 		Range: 5c0
 	AirstrikePower:
 		Icon: cadaver
-		ChargeTime: 210
+		ChargeInterval: 6250
 		SquadOffset	-206,206,0
 		SquadSize: 2
 		QuantizedFacings: 8
@@ -887,7 +720,7 @@ ARMORYGDI:
 		Range: 5c0
 	AirstrikePower:
 		Icon: firestorm
-		ChargeTime: 210
+		ChargeInterval: 6250
 		SquadOffset	-236,236,0
 		SquadSize: 3
 		QuantizedFacings: 8
@@ -1596,7 +1429,7 @@ SILONEW:
 		Image: silonew
 		PlayerPalette: raplayer
 	WithSpriteBody:
-	AutoSelectionSize:
+	#AutoSelectionSize:
 	WithSiloAnimation:
 	StoresResources:
 		PipCount: 10
@@ -1636,7 +1469,7 @@ SILOTWO:
 		Image: silotwo
 		PlayerPalette: raplayer
 	WithSpriteBody:
-	AutoSelectionSize:
+	#AutoSelectionSize:
 	WithSiloAnimation:
 	StoresResources:
 		PipCount: 10
@@ -1960,13 +1793,10 @@ CASTLE:
 	SelectionDecorations:
 		VisualBounds: 72,68,0,0
 	ProvidesRadar:
-		RequiresCondition: !disabled
-	GrantConditionOnDisabled@IDISABLE:
-		Condition: disabled
 	NukePower:
 		Icon: cannonstrike
 		Cursor: nuke
-		ChargeTime: 360
+		ChargeInterval: 9000
 		Description: Cannon Strike
 		LongDesc: Launch long range cannonboulder off your casle.\nApplies heavy damage over a large area.\n\n\n\n
 		EndChargeSpeechNotification: NodcannonReady
@@ -2029,14 +1859,11 @@ CASTLE2:
 	SelectionDecorations:
 		VisualBounds: 72,68,0,0
 	ProvidesRadar:
-		RequiresCondition: !disabled
-	GrantConditionOnDisabled@IDISABLE:
-		Condition: disabled
 	SupportPowerChargeBar:
 	NukePower:
 		Icon: lightning
 		Cursor: ioncannon
-		ChargeTime: 270
+		ChargeInterval: 6750
 		Description: Weather control
 		LongDesc: Initiate an Lightning strike.\nApplies instant damage to a small area.\n\n\n\n
 		EndChargeSpeechNotification: LightningReady
@@ -2109,7 +1936,7 @@ WORKSHOPNOD:
 	ProductionBar:
 	ProduceActorPower:
 		Icon: trojan
-		ChargeTime: 280
+		ChargeInterval: 7000
 		Actors: siege99
 		Type: MSiege.Nod
 		Description: Wooden Horse \n\n\n\n
@@ -2220,7 +2047,7 @@ WORKSHOPGDI:
 	ProductionBar:
 	ProduceActorPower:
 		Icon: strangedavinci
-		ChargeTime: 280
+		ChargeInterval: 7000
 		Actors: davinci
 		Type: MSiege.GDI
 		Description: Strange Aircraft
@@ -2310,7 +2137,7 @@ HOSP:
 		LowPowerSlowdown: 3
 	ProduceActorPower:
 		Icon: ddicon
-		ChargeTime: 250
+		ChargeInterval: 6250
 		Actors: ddler
 		Type: MHosp.Medi
 		Description: Deathdealer
@@ -2348,6 +2175,7 @@ HOSP.Husk:
 	Targetable:
 		RequiresForceFire: yes
 	-Selectable:
+	Interactable:
 	RenderSprites:
 		Image: hospnew.husk
 		PlayerPalette: raplayer
@@ -2389,6 +2217,7 @@ V19.Husk:
 	Targetable:
 		RequiresForceFire: yes
 	-Selectable:
+	Interactable:
 	Capturable:
 		AllowAllies: True
 	CaptureNotification:
@@ -2491,6 +2320,7 @@ TECH1.Husk:
 	Targetable:
 		RequiresForceFire: yes
 	-Selectable:
+	Interactable:
 	RenderSprites:
 		Image: tech1.husk
 		PlayerPalette: raplayer
@@ -2924,11 +2754,11 @@ LODGE:
 	RenderSprites:
 		PlayerPalette: raplayer
 	Valued:
-		Cost: 300
+		Cost: 700
 	CustomSellValue:
-		Value: 150
+		Value: 350
 	Tooltip:
-		Name: Hunters Lodge
+		Name: Forester Lodge
 	Building:
 		Footprint: xx ==
 		Dimensions: 2,2
@@ -2941,10 +2771,10 @@ LODGE:
 	Targetable@Lodge:
 		TargetTypes: HunterLodge
 	Selectable:
-		Bounds: 48,26,0,9
+		Bounds: 48,46,0,-9
 	SelectionDecorations:
-		VisualBounds: 48,27,0,-4
-	WithFreeSpawnableActor@3:
+		VisualBounds: 48,46,0,-9
+	WithFreeSpawnableActor@Lumber:
 		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 		SpawnActor: hunter
 		Offset: -256,768, 0
@@ -2952,10 +2782,21 @@ LODGE:
 		FindRadius: 100
 		Lasso: 15c0
 		ForceLasso: 20c0
+	WithFreeSpawnableActor@Hunter:
+		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
+		SpawnActor: mwlumbererowned
+		Offset: -256,768, 0
+		MoveOffset: 0,1
+		FindRadius: 100
+		Lasso: 17c0
+		ForceLasso: 22c0
+		ReturnOnDeath: true
+	Targetable@Lumber:
+		TargetTypes: LumberShack
 	WithRangeCircle:
 		Type: HunterLodge
 		UsePlayerColor: true
-		Range: 15c0
+		Range: 17c0
 	LodgeActor:
 	StoresResources:
 		PipColor: Yellow

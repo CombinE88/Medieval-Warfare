@@ -30,7 +30,7 @@ Container@MENU_BACKGROUND:
 			Y: 115
 			Width: 128
 			Align: Center
-			Contrast: true
+			Shadow: true
 		Background@BORDER:
 			Width: WINDOW_RIGHT
 			Height: WINDOW_BOTTOM
@@ -59,7 +59,7 @@ Container@MENU_BACKGROUND:
 							Text: Main Menu
 							Align: Center
 							Font: Bold
-							Contrast: True
+							Shadow: True
 						Button@SINGLEPLAYER_BUTTON:
 							X: (PARENT_RIGHT-WIDTH)/2
 							Y: 50+25
@@ -115,7 +115,7 @@ Container@MENU_BACKGROUND:
 							Text: Singleplayer
 							Align: Center
 							Font: Bold
-							Contrast: True
+							Shadow: True
 						Button@SKIRMISH_BUTTON:
 							X: (PARENT_RIGHT-WIDTH)/2
 							Y: 50+25
@@ -154,7 +154,7 @@ Container@MENU_BACKGROUND:
 							Text: Extras
 							Align: Center
 							Font: Bold
-							Contrast: True
+							Shadow: True
 						Button@REPLAYS_BUTTON:
 							X: (PARENT_RIGHT-WIDTH)/2
 							Y: 50+25
@@ -212,7 +212,7 @@ Container@MENU_BACKGROUND:
 							Text: Map Editor
 							Align: Center
 							Font: Bold
-							Contrast: True
+							Shadow: True
 						Button@NEW_MAP_BUTTON:
 							X: (PARENT_RIGHT-WIDTH)/2
 							Y: 50+25
@@ -245,7 +245,7 @@ Container@MENU_BACKGROUND:
 					Width: PARENT_RIGHT
 					Y: 0-25
 					Font: BigBold
-					Contrast: true
+					Shadow: true
 					Align: Center
 					Text: System Information
 				Background@bg:
@@ -312,7 +312,7 @@ Container@MENU_BACKGROUND:
 					Y: 40
 					Width: 170
 					Height: 40
-					Contrast: true
+					Shadow: true
 					VAlign: Top
 				Background@GRAPH_BG:
 					X: WINDOW_RIGHT-WIDTH-31

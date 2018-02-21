@@ -64,8 +64,8 @@ Sounds:
 		Beepy2: beepy2
 		Beepy3: beepy3
 		Beepy6: beepy6
-		CashTickDown: 
-		CashTickUp: 
+		CashTickDown: tone16
+		CashTickUp: tone15
 		ChatLine: paperfold
 		ClickDisabledSound: scold2
 		ClickSound: pencil

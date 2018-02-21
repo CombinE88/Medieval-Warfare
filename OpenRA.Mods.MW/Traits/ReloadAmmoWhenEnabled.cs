@@ -55,12 +55,7 @@ namespace OpenRA.Mods.MW.Traits
 
             if (--delay < 0)
             {
-                for (var i = 0; i < info.ReloadCount; i++)
-                {
-                    if (pool.GiveAmmo() && pool.Info.RearmSound != null)
-                        Game.Sound.Play(SoundType.World, pool.Info.RearmSound, self.CenterPosition);
-                }
-
+                pool.GiveAmmo(self, 1);
                 delay = info.ReloadDelay;
             }
         }

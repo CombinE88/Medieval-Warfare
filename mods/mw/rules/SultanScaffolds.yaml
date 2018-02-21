@@ -7,7 +7,7 @@ SULNUKE.scaff:
 		PlayerPalette: sultanplayer
 		Image: sulnuke
 	CustomSellValue:
-		Value: 200
+		Value: 300
 	Valued:
 		Cost: 600
 	Tooltip:
@@ -18,7 +18,7 @@ SULNUKE.scaff:
 		Prerequisites: factnew
 		Description: Generates livingspace. Livingspace increases over time by generating peasants\nCan hold up to 10 peasants, spawntime depends on number of shacks and large huts  
 		Queue: MBuilding.SUL
-		BuildDuration: 30
+		BuildDuration: 300
 	Health:
 		HP: 25000
 	RevealsShroud:
@@ -31,39 +31,39 @@ SULNUKE.scaff:
 	WithSpriteBody:
 		RequiresCondition: inactive
 	DebugTransformOnCondition@Finsihed:
-		RequiresCondition: (14 - Construct) <= 0
+		RequiresCondition: (18 - Construct) <= 0
 		IntoActor: SULNUKE
-		ReadyAudio: ConstructionComplete
+		ReadyAudio:
 	ExternalCondition@buildfurther: 
 		Condition: Construct
-		TotalCap: 14
+		TotalCap: 18
 	ExternalCondition@Deliverfurther:
 		Condition: DeliveredResources
-		TotalCap: 14
+		TotalCap: 18
 	Targetable@buildfurther: 
 		TargetTypes: Buildable
-		RequiresCondition: DeliveredResources > Construct && (14 - Construct) > 0
+		RequiresCondition: DeliveredResources > Construct && (18 - Construct) > 0
 	Targetable@deliverresources: 
 		TargetTypes: Deliverable
-		RequiresCondition: 14 > DeliveredResources
+		RequiresCondition: 18 > DeliveredResources
 	WithIdleOverlay@base1:
 		Sequence: make1
 		RequiresCondition: Construct > 3 && Construct < 5
 	WithIdleOverlay@base2:
 		Sequence: make2
-		RequiresCondition: Construct >= 5 && Construct < 6
+		RequiresCondition: Construct >= 5 && Construct < 7
 	WithIdleOverlay@base3:
 		Sequence: make3
-		RequiresCondition: Construct >= 6 && Construct < 7
+		RequiresCondition: Construct >= 7 && Construct < 11
 	WithIdleOverlay@base4:
 		Sequence: make4
-		RequiresCondition: Construct >= 7 && Construct < 8
+		RequiresCondition: Construct >= 11 && Construct < 14
 	WithIdleOverlay@base5:
 		Sequence: make5
-		RequiresCondition: Construct >= 8 && Construct < 10
+		RequiresCondition: Construct >= 14 && Construct < 16
 	WithIdleOverlay@base6:
 		Sequence: make6
-		RequiresCondition: Construct >= 10
+		RequiresCondition: Construct >= 16
 
 SULLODGE.scaff:
 	Inherits: ^2x2SITE
@@ -78,61 +78,61 @@ SULLODGE.scaff:
 		PlayerPalette: sultanplayer
 		Image: sullodge
 	CustomSellValue:
-		Value: 150
+		Value: 425
 	Valued:
-		Cost: 300
+		Cost: 850
 	Tooltip:
-		Name: Construction Site (Hunter Lodge)
+		Name: Construction Site (Forester Lodge)
 	Buildable:
 		IconPalette: raicon
 		BuildPaletteOrder: 10
-		Description: A hunter can go out and hunt down animals from here.\n\n\n
+		Description: A hunter will start searching for deer from this building aswell as a lumberer will gather wood.\nGood for early resource management\n\n
 		Queue: MResources.SUL
-		BuildDuration: 25
-		Adjacent: 15
+		BuildDuration: 425
+		Adjacent: 10
 	Health:
 		HP: 10000
 	RevealsShroud:
 		Range: 4c0
 	WithBuildingBib:
 	Selectable:
-		Bounds: 48,26,0,9
+		Bounds: 48,46,0,-9
 	SelectionDecorations:
-		VisualBounds: 48,27,0,-4
+		VisualBounds: 48,46,0,-9
 	WithSpriteBody:
 		RequiresCondition: inactive
 	DebugTransformOnCondition@Finsihed:
-		RequiresCondition: (20 - Construct) <= 0
+		RequiresCondition: (25 - Construct) <= 0
 		IntoActor: SULLODGE
-		ReadyAudio: ConstructionComplete
+		ReadyAudio:
 	ExternalCondition@buildfurther: 
 		Condition: Construct
-		TotalCap: 20
+		TotalCap: 25
 	ExternalCondition@Deliverfurther:
 		Condition: DeliveredResources
-		TotalCap: 20
+		TotalCap: 25
 	Targetable@buildfurther: 
 		TargetTypes: Buildable
-		RequiresCondition: DeliveredResources > Construct && (20 - Construct) > 0
+		RequiresCondition: DeliveredResources > Construct && (25 - Construct) > 0
 	Targetable@deliverresources: 
 		TargetTypes: Deliverable
-		RequiresCondition: 20 > DeliveredResources
+		RequiresCondition: 25 > DeliveredResources
 	WithIdleOverlay@base1:
 		Sequence: make1
-		RequiresCondition: Construct >= 3 && Construct < 6
+		RequiresCondition: Construct >= 5 && Construct < 10
 	WithIdleOverlay@base2:
 		Sequence: make2
-		RequiresCondition: Construct >= 6 && Construct < 10
+		RequiresCondition: Construct >= 10 && Construct < 14
 	WithIdleOverlay@base3:
 		Sequence: make3
-		RequiresCondition: Construct >= 10 && Construct < 16
+		RequiresCondition: Construct >= 14 && Construct < 20
 	WithIdleOverlay@base4:
 		Sequence: make4
-		RequiresCondition: Construct >= 16	 
-    WithRangeCircle:
-        Type: HunterLodge
-        UsePlayerColor: true
-        Range: 15c0
+		RequiresCondition: Construct >= 20	 
+	WithRangeCircle:
+		Type: HunterLodge
+		UsePlayerColor: true
+		Range: 17c0
 		
 SULMILL.scaff:
 	Inherits: ^2x3SITE
@@ -147,7 +147,7 @@ SULMILL.scaff:
 		PlayerPalette: sultanplayer
 		Image: sulmill
 	CustomSellValue:
-		Value: 450
+		Value: 700
 	Valued:
 		Cost: 1400
 	Tooltip:
@@ -162,7 +162,7 @@ SULMILL.scaff:
 		Prerequisites: anypower
 		Description: Provides basic resource gathering for Crops and Grain.\n Comes with 3 farmers.\n Can only operate up to 6 farmers at once.\n\n\n\n
 		Queue: MResources.SUL
-		BuildDuration: 70
+		BuildDuration: 700
 	Health:
 		HP: 40000
 	RevealsShroud:
@@ -175,36 +175,36 @@ SULMILL.scaff:
 	WithSpriteBody:
 		RequiresCondition: inactive
 	DebugTransformOnCondition@Finsihed:
-		RequiresCondition: (40 - Construct) <= 0
+		RequiresCondition: (42 - Construct) <= 0
 		IntoActor: SULMILL
-		ReadyAudio: ConstructionComplete
+		ReadyAudio:
 	ExternalCondition@buildfurther: 
 		Condition: Construct
-		TotalCap: 40
+		TotalCap: 42
 	ExternalCondition@Deliverfurther:
 		Condition: DeliveredResources
-		TotalCap: 40
+		TotalCap: 42
 	Targetable@buildfurther: 
 		TargetTypes: Buildable
-		RequiresCondition: DeliveredResources > Construct && (40 - Construct) > 0
+		RequiresCondition: DeliveredResources > Construct && (42 - Construct) > 0
 	Targetable@deliverresources: 
 		TargetTypes: Deliverable
-		RequiresCondition: 40 > DeliveredResources
+		RequiresCondition: 42 > DeliveredResources
 	WithIdleOverlay@base1:
 		Sequence: make1
-		RequiresCondition: Construct > 10 && Construct < 10
+		RequiresCondition: Construct > 5 && Construct < 10
 	WithIdleOverlay@base2:
 		Sequence: make2
-		RequiresCondition: Construct >= 10 && Construct < 15
+		RequiresCondition: Construct >= 10 && Construct < 17
 	WithIdleOverlay@base3:
 		Sequence: make3
-		RequiresCondition: Construct >= 15 && Construct < 20
+		RequiresCondition: Construct >= 17 && Construct < 25
 	WithIdleOverlay@base4:
 		Sequence: make4
-		RequiresCondition: Construct >= 20 && Construct < 35
+		RequiresCondition: Construct >= 25 && Construct < 36
 	WithIdleOverlay@base5:
 		Sequence: make5
-		RequiresCondition: Construct >= 35
+		RequiresCondition: Construct >= 36
 
 
 SULNUK2.scaff:
@@ -216,7 +216,7 @@ SULNUK2.scaff:
 		PlayerPalette: sultanplayer
 		Image: sulnuk2
 	CustomSellValue:
-		Value: 300
+		Value: 500
 	Valued:
 		Cost: 1000
 	Tooltip:
@@ -227,7 +227,7 @@ SULNUK2.scaff:
 		Prerequisites: anyhq
 		Queue: MBuilding.SUL
 		Description: Provides more livingspace. Livingspace increases over time by generating peasants.\nCan hold up to 25 peasants, spawntime depends on number of shacks and large huts. \ncheaper than the standard Shack.\n\n\n\n
-		BuildDuration: 50
+		BuildDuration: 500
 	Health:
 		HP: 50000
 	RevealsShroud:
@@ -240,39 +240,39 @@ SULNUK2.scaff:
 	WithSpriteBody:
 		RequiresCondition: inactive
 	DebugTransformOnCondition@Finsihed:
-		RequiresCondition: (40 - Construct) <= 0
+		RequiresCondition: (30 - Construct) <= 0
 		IntoActor: SULNUK2
-		ReadyAudio: ConstructionComplete
+		ReadyAudio:
 	ExternalCondition@buildfurther: 
 		Condition: Construct
-		TotalCap: 40
+		TotalCap: 30
 	ExternalCondition@Deliverfurther:
 		Condition: DeliveredResources
-		TotalCap: 40
+		TotalCap: 30
 	Targetable@buildfurther: 
 		TargetTypes: Buildable
-		RequiresCondition: DeliveredResources > Construct && (40 - Construct) > 0
+		RequiresCondition: DeliveredResources > Construct && (30 - Construct) > 0
 	Targetable@deliverresources: 
 		TargetTypes: Deliverable
-		RequiresCondition: 40 > DeliveredResources
+		RequiresCondition: 30 > DeliveredResources
 	WithIdleOverlay@base1:
 		Sequence: make1
-		RequiresCondition: Construct > 5 && Construct < 12
+		RequiresCondition: Construct > 3 && Construct < 6
 	WithIdleOverlay@base2:
 		Sequence: make2
-		RequiresCondition: Construct >= 12 && Construct < 20
+		RequiresCondition: Construct >= 6 && Construct < 11
 	WithIdleOverlay@base3:
 		Sequence: make3
-		RequiresCondition: Construct >= 20 && Construct < 25
+		RequiresCondition: Construct >= 11 && Construct < 16
 	WithIdleOverlay@base4:
 		Sequence: make4
-		RequiresCondition: Construct >= 25 && Construct < 30
+		RequiresCondition: Construct >= 16 && Construct < 21
 	WithIdleOverlay@base5:
 		Sequence: make5
-		RequiresCondition: Construct >= 30 && Construct < 35
+		RequiresCondition: Construct >= 21 && Construct < 26
 	WithIdleOverlay@base6:
 		Sequence: make6
-		RequiresCondition: Construct >= 35
+		RequiresCondition: Construct >= 26
 
 SULBARR.scaff:
 	Inherits: ^3x2SITE
@@ -283,7 +283,7 @@ SULBARR.scaff:
 		PlayerPalette: sultanplayer
 		Image: sulbarr
 	CustomSellValue:
-		Value: 300
+		Value: 500
 	Valued:
 		Cost: 1000
 	Tooltip:
@@ -294,7 +294,7 @@ SULBARR.scaff:
 		Prerequisites: anypower
 		Description: Trains Infantry only\n\n\n\n
 		Queue: MMilitary.SUL
-		BuildDuration: 50
+		BuildDuration: 500
 	Health:
 		HP: 32500
 	RevealsShroud:
@@ -307,36 +307,36 @@ SULBARR.scaff:
 	WithSpriteBody:
 		RequiresCondition: inactive
 	DebugTransformOnCondition@Finsihed:
-		RequiresCondition: (35 - Construct) <= 0
+		RequiresCondition: (30 - Construct) <= 0
 		IntoActor: SULBARR
-		ReadyAudio: ConstructionComplete
+		ReadyAudio:
 	ExternalCondition@buildfurther: 
 		Condition: Construct
-		TotalCap: 35
+		TotalCap: 30
 	ExternalCondition@Deliverfurther:
 		Condition: DeliveredResources
-		TotalCap: 35
+		TotalCap: 30
 	Targetable@buildfurther: 
 		TargetTypes: Buildable
-		RequiresCondition: DeliveredResources > Construct && (35 - Construct) > 0
+		RequiresCondition: DeliveredResources > Construct && (30 - Construct) > 0
 	Targetable@deliverresources: 
 		TargetTypes: Deliverable
-		RequiresCondition: 35 > DeliveredResources
+		RequiresCondition: 30 > DeliveredResources
 	WithIdleOverlay@base1:
 		Sequence: make1
 		RequiresCondition: Construct > 6 && Construct < 10
 	WithIdleOverlay@base2:
 		Sequence: make2
-		RequiresCondition: Construct >= 10 && Construct < 20
+		RequiresCondition: Construct >= 10 && Construct < 18
 	WithIdleOverlay@base3:
 		Sequence: make3
-		RequiresCondition: Construct >= 20 && Construct < 25
+		RequiresCondition: Construct >= 18 && Construct < 23
 	WithIdleOverlay@base4:
 		Sequence: make4
-		RequiresCondition: Construct >= 25 && Construct < 30
+		RequiresCondition: Construct >= 23 && Construct < 27
 	WithIdleOverlay@base5:
 		Sequence: make5
-		RequiresCondition: Construct >= 30
+		RequiresCondition: Construct >= 27
 		
 SULMYSTIC.scaff:
 	Inherits: ^3x3SITE
@@ -351,7 +351,7 @@ SULMYSTIC.scaff:
 		PlayerPalette: sultanplayer
 		Image: sulmystic
 	CustomSellValue:
-		Value: 500
+		Value: 750
 	Valued:
 		Cost: 1500
 	Tooltip:
@@ -362,7 +362,7 @@ SULMYSTIC.scaff:
 		Prerequisites: proc
 		Description: Trains Magical and Mystical Units\n\n\n\n
 		Queue: MMilitary.SUL
-		BuildDuration: 75
+		BuildDuration: 750
 	Health:
 		HP: 42500
 	RevealsShroud:
@@ -375,21 +375,21 @@ SULMYSTIC.scaff:
 	WithSpriteBody:
 		RequiresCondition: inactive
 	DebugTransformOnCondition@Finsihed:
-		RequiresCondition: (60 - Construct) <= 0
+		RequiresCondition: (45 - Construct) <= 0
 		IntoActor: SULMYSTIC
-		ReadyAudio: ConstructionComplete
+		ReadyAudio:
 	ExternalCondition@buildfurther: 
 		Condition: Construct
-		TotalCap: 60
+		TotalCap: 45
 	ExternalCondition@Deliverfurther:
 		Condition: DeliveredResources
-		TotalCap: 60
+		TotalCap: 45
 	Targetable@buildfurther: 
 		TargetTypes: Buildable
-		RequiresCondition: DeliveredResources > Construct && (60 - Construct) > 0
+		RequiresCondition: DeliveredResources > Construct && (45 - Construct) > 0
 	Targetable@deliverresources: 
 		TargetTypes: Deliverable
-		RequiresCondition: 60 > DeliveredResources
+		RequiresCondition: 45 > DeliveredResources
 	WithIdleOverlay@base1:
 		Sequence: make1
 		RequiresCondition: Construct > 5 && Construct < 15
@@ -398,16 +398,16 @@ SULMYSTIC.scaff:
 		RequiresCondition: Construct >= 15 && Construct < 25
 	WithIdleOverlay@base3:
 		Sequence: make3
-		RequiresCondition: Construct >= 25 && Construct < 35
+		RequiresCondition: Construct >= 25 && Construct < 32
 	WithIdleOverlay@base4:
 		Sequence: make4
-		RequiresCondition: Construct >= 35 && Construct < 45
+		RequiresCondition: Construct >= 32 && Construct < 37
 	WithIdleOverlay@base5:
 		Sequence: make5
-		RequiresCondition: Construct >= 45 && Construct < 50
+		RequiresCondition: Construct >= 37 && Construct < 42
 	WithIdleOverlay@base6:
 		Sequence: make6
-		RequiresCondition: Construct >= 50
+		RequiresCondition: Construct >= 42
 		
 SULCASTLE.scaff:
 	Inherits: ^3x3SITE
@@ -422,18 +422,18 @@ SULCASTLE.scaff:
 		PlayerPalette: sultanplayer
 		Image: sulcastle
 	CustomSellValue:
-		Value: 400
+		Value: 600
 	Valued:
 		Cost: 1200
 	Tooltip:
 		Name: Construction Site (Palace)
 	Buildable:
 		IconPalette: raicon
-		BuildPaletteOrder: 10
+		BuildPaletteOrder: 30
 		Prerequisites: proc
 		Description: Can unlock Superweapons.\n Can unlock advanced tech.\nCan hold up to 4 nobles.\n\n\n\n
-		Queue: MTech.SUL
-		BuildDuration: 60
+		Queue: MBuilding.SUL
+		BuildDuration: 600
 	Health:
 		HP: 42500
 	RevealsShroud:
@@ -446,39 +446,39 @@ SULCASTLE.scaff:
 	WithSpriteBody:
 		RequiresCondition: inactive
 	DebugTransformOnCondition@Finsihed:
-		RequiresCondition: (60 - Construct) <= 0
+		RequiresCondition: (36 - Construct) <= 0
 		IntoActor: SULCASTLE
-		ReadyAudio: ConstructionComplete
+		ReadyAudio:
 	ExternalCondition@buildfurther: 
 		Condition: Construct
-		TotalCap: 60
+		TotalCap: 36
 	ExternalCondition@Deliverfurther:
 		Condition: DeliveredResources
-		TotalCap: 60
+		TotalCap: 36
 	Targetable@buildfurther: 
 		TargetTypes: Buildable
-		RequiresCondition: DeliveredResources > Construct && (60 - Construct) > 0
+		RequiresCondition: DeliveredResources > Construct && (36 - Construct) > 0
 	Targetable@deliverresources: 
 		TargetTypes: Deliverable
-		RequiresCondition: 60 > DeliveredResources
+		RequiresCondition: 36 > DeliveredResources
 	WithIdleOverlay@base1:
 		Sequence: make1
-		RequiresCondition: Construct > 5 && Construct < 15
+		RequiresCondition: Construct > 5 && Construct < 12
 	WithIdleOverlay@base2:
 		Sequence: make2
-		RequiresCondition: Construct >= 15 && Construct < 30
+		RequiresCondition: Construct >= 12 && Construct < 17
 	WithIdleOverlay@base3:
 		Sequence: make3
-		RequiresCondition: Construct >= 30 && Construct < 45
+		RequiresCondition: Construct >= 17 && Construct < 22
 	WithIdleOverlay@base4:
 		Sequence: make4
-		RequiresCondition: Construct >= 45 && Construct < 50
+		RequiresCondition: Construct >= 22 && Construct < 28
 	WithIdleOverlay@base5:
 		Sequence: make5
-		RequiresCondition: Construct >= 50 && Construct < 55
+		RequiresCondition: Construct >= 28 && Construct < 33
 	WithIdleOverlay@base6:
 		Sequence: make6
-		RequiresCondition: Construct >= 55
+		RequiresCondition: Construct >= 33
 
 SULFIX.scaff:
 	Inherits: ^3x2SITE
@@ -489,7 +489,7 @@ SULFIX.scaff:
 		PlayerPalette: sultanplayer
 		Image: sulfix
 	CustomSellValue:
-		Value: 400
+		Value: 600
 	Valued:
 		Cost: 1200
 	Tooltip:
@@ -500,7 +500,7 @@ SULFIX.scaff:
 		Prerequisites: proc
 		Description: Provides Siege weapons construction.\n\n\n\n
 		Queue: MMilitary.SUL
-		BuildDuration: 60
+		BuildDuration: 600
 	Health:
 		HP: 35000
 	RevealsShroud:
@@ -513,33 +513,33 @@ SULFIX.scaff:
 	WithSpriteBody:
 		RequiresCondition: inactive
 	DebugTransformOnCondition@Finsihed:
-		RequiresCondition: (55 - Construct) <= 0
+		RequiresCondition: (36 - Construct) <= 0
 		IntoActor: SULFIX
-		ReadyAudio: ConstructionComplete
+		ReadyAudio:
 	ExternalCondition@buildfurther: 
 		Condition: Construct
-		TotalCap: 55
+		TotalCap: 36
 	ExternalCondition@Deliverfurther:
 		Condition: DeliveredResources
-		TotalCap: 55
+		TotalCap: 36
 	Targetable@buildfurther: 
 		TargetTypes: Buildable
-		RequiresCondition: DeliveredResources > Construct && (55 - Construct) > 0
+		RequiresCondition: DeliveredResources > Construct && (36 - Construct) > 0
 	Targetable@deliverresources: 
 		TargetTypes: Deliverable
-		RequiresCondition: 55 > DeliveredResources
+		RequiresCondition: 36 > DeliveredResources
 	WithIdleOverlay@base1:
 		Sequence: make1
-		RequiresCondition: Construct > 10 && Construct < 25
+		RequiresCondition: Construct > 7 && Construct < 15
 	WithIdleOverlay@base2:
 		Sequence: make2
-		RequiresCondition: Construct >= 25 && Construct < 35
+		RequiresCondition: Construct >= 15 && Construct < 25
 	WithIdleOverlay@base3:
 		Sequence: make3
-		RequiresCondition: Construct >= 35 && Construct < 45
+		RequiresCondition: Construct >= 25 && Construct < 31
 	WithIdleOverlay@base4:
 		Sequence: make4
-		RequiresCondition: Construct >= 45
+		RequiresCondition: Construct >= 31
 	WithRangeCircle:
 		Type: Workshop
 		Range: 4c0
@@ -554,7 +554,7 @@ SULGTW.scaff:
 		PlayerPalette: sultanplayer
 		Image: sulgtw
 	CustomSellValue:
-		Value: 175
+		Value: 275
 	Valued:
 		Cost: 550
 	Tooltip:
@@ -575,41 +575,41 @@ SULGTW.scaff:
 		Queue: MMilitary.SUL
 		BuildDurationModifier: 40
 		IconPalette: raicon
-		BuildDuration: 28
+		BuildDuration: 450
 	DebugTransformOnCondition@Finsihed:
-		RequiresCondition: (18 - Construct) <= 0
+		RequiresCondition: (9 - Construct) <= 0
 		IntoActor: SULGTW
-		ReadyAudio: ConstructionComplete
+		ReadyAudio:
 	ExternalCondition@buildfurther: 
 		Condition: Construct
-		TotalCap: 18
+		TotalCap: 9
 	ExternalCondition@Deliverfurther:
 		Condition: DeliveredResources
-		TotalCap: 18
+		TotalCap: 9
 	Targetable@buildfurther: 
 		TargetTypes: Buildable
-		RequiresCondition: DeliveredResources > Construct && (18 - Construct) > 0
+		RequiresCondition: DeliveredResources > Construct && (9 - Construct) > 0
 	Targetable@deliverresources: 
 		TargetTypes: Deliverable
-		RequiresCondition: 18 > DeliveredResources
+		RequiresCondition: 9 > DeliveredResources
 	WithIdleOverlay@base1:
 		Sequence: make1
-		RequiresCondition: Construct > 2 && Construct < 5
+		RequiresCondition: Construct > 2 && Construct < 3
 	WithIdleOverlay@base2:
 		Sequence: make2
-		RequiresCondition: Construct >= 5 && Construct < 7
+		RequiresCondition: Construct >= 3 && Construct < 4
 	WithIdleOverlay@base3:
 		Sequence: make3
-		RequiresCondition: Construct >= 7 && Construct < 11
+		RequiresCondition: Construct >= 4 && Construct < 5
 	WithIdleOverlay@base4:
 		Sequence: make4
-		RequiresCondition: Construct >= 11 && Construct < 13
+		RequiresCondition: Construct >= 5 && Construct < 6
 	WithIdleOverlay@base5:
 		Sequence: make5
-		RequiresCondition: Construct >= 13 && Construct < 15
+		RequiresCondition: Construct >= 6 && Construct < 7
 	WithIdleOverlay@base6:
 		Sequence: make6
-		RequiresCondition: Construct >= 15
+		RequiresCondition: Construct >= 7
 	WithRangeCircle:
 		Range: 8c512
 
@@ -627,13 +627,13 @@ SULARRAY.scaff:
 		Cost: 700
 	Tooltip:
 		Name: Construction Site (Material Storage)
-	Buildable:
-		IconPalette: raicon
-		BuildPaletteOrder: 0
-		Prerequisites: barracks
-		Description: Provides 3 additional haulers and 1 engineer.\n\n\n\n
-		Queue: MTech.SUL
-		BuildDuration: 45
+#	Buildable:
+#		IconPalette: raicon
+#		BuildPaletteOrder: 0
+#		Prerequisites: barracks
+#		Description: Provides 3 additional haulers and 1 engineer.\n\n\n\n
+#		Queue: MTech.SUL
+#		BuildDuration: 45
 	Health:
 		HP: 40000
 	RevealsShroud:
@@ -648,7 +648,7 @@ SULARRAY.scaff:
 	DebugTransformOnCondition@Finsihed:
 		RequiresCondition: (52 - Construct) <= 0
 		IntoActor: SULARRAY
-		ReadyAudio: ConstructionComplete
+		ReadyAudio:
 	ExternalCondition@buildfurther: 
 		Condition: Construct
 		TotalCap: 52
@@ -694,14 +694,14 @@ SULHALL.scaff:
 		Cost: 2000
 	Tooltip:
 		Name: Construction Site (Town Hall)
-	Buildable:
-		IconPalette: raicon
-		BuildPaletteOrder: 30
-		Prerequisites: anyarmory, !sulhall
-		Description: Attracts citizens to your town.\nNew Peasants will spawn faster.\n\n\n
-		Queue: MBuilding.SUL
-		BuildDuration: 100
-		BuildLimit: 1
+#	Buildable:
+#		IconPalette: raicon
+#		BuildPaletteOrder: 30
+#		Prerequisites: anyarmory, !sulhall
+#		Description: Attracts citizens to your town.\nNew Peasants will spawn faster.\n\n\n
+#		Queue: MBuilding.SUL
+#		BuildDuration: 100
+#		BuildLimit: 1
 	Health:
 		HP: 60000
 	RevealsShroud:
@@ -716,7 +716,7 @@ SULHALL.scaff:
 	DebugTransformOnCondition@Finsihed:
 		RequiresCondition: (80 - Construct) <= 0
 		IntoActor: SULHALL
-		ReadyAudio: ConstructionComplete
+		ReadyAudio:
 	ExternalCondition@buildfurther: 
 		Condition: Construct
 		TotalCap: 80
@@ -747,7 +747,7 @@ SULHALL.scaff:
 	WithIdleOverlay@base6:
 		Sequence: make6
 		RequiresCondition: Construct >= 75
-        
+		
 SULMINARET.scaff:
 	Inherits: ^1x1SITE
 	Inherits@Hitshape: ^1x1Shape
@@ -762,14 +762,14 @@ SULMINARET.scaff:
 		Cost: 1200
 	Tooltip:
 		Name: Construction Site (Minaret)
-	Buildable:
-		IconPalette: raicon
-		BuildPaletteOrder: 25
-		Prerequisites: anyhq, !sulminaret
-		Description: Attracts citizens to your town.\nNew Peasants will spawn faster.\n\n\n
-		Queue: MBuilding.SUL
-		BuildDuration: 60
-		BuildLimit: 1
+#	Buildable:
+#		IconPalette: raicon
+#		BuildPaletteOrder: 25
+#		Prerequisites: anyhq, !sulminaret
+#		Description: Attracts citizens to your town.\nNew Peasants will spawn faster.\n\n\n
+#		Queue: MBuilding.SUL
+#		BuildDuration: 60
+#		BuildLimit: 1
 	Health:
 		HP: 30000
 	RevealsShroud:
@@ -785,7 +785,7 @@ SULMINARET.scaff:
 	DebugTransformOnCondition@Finsihed:
 		RequiresCondition: (55 - Construct) <= 0
 		IntoActor: SULMINARET
-		ReadyAudio: ConstructionComplete
+		ReadyAudio:
 	ExternalCondition@buildfurther: 
 		Condition: Construct
 		TotalCap: 55
@@ -816,8 +816,8 @@ SULMINARET.scaff:
 	WithIdleOverlay@base6:
 		Sequence: make6
 		RequiresCondition: Construct >= 40
-        
-        
+		
+		
 SULCNSHMBR.scaff:
 	Inherits: ^3x2SITE
 	Inherits@Hitshape: ^3x2Shape
@@ -827,7 +827,7 @@ SULCNSHMBR.scaff:
 		PlayerPalette: sultanplayer
 		Image: sulcnshmbr
 	CustomSellValue:
-		Value: 330
+		Value: 500
 	Valued:
 		Cost: 1000
 	Tooltip:
@@ -838,8 +838,8 @@ SULCNSHMBR.scaff:
 		Prerequisites: proc, !sulcnshmbr
 		Description: Corn Chambers were meant to store corn for times when food was rare.\n  Generates a little bit of gold, when resources are gathered.\n  Limited to 1.\n\n
 		Queue: MResources.SUL
-		BuildDuration: 50
-        BuildLimit: 1
+		BuildDuration: 500
+		BuildLimit: 1
 	Health:
 		HP: 60000
 	RevealsShroud:
@@ -852,40 +852,40 @@ SULCNSHMBR.scaff:
 	WithSpriteBody:
 		RequiresCondition: inactive
 	DebugTransformOnCondition@Finsihed:
-		RequiresCondition: (50 - Construct) <= 0
+		RequiresCondition: (30 - Construct) <= 0
 		IntoActor: SULCNSHMBR
-		ReadyAudio: ConstructionComplete
+		ReadyAudio:
 	ExternalCondition@buildfurther: 
 		Condition: Construct
-		TotalCap: 50
+		TotalCap: 30
 	ExternalCondition@Deliverfurther:
 		Condition: DeliveredResources
-		TotalCap: 50
+		TotalCap: 30
 	Targetable@buildfurther: 
 		TargetTypes: Buildable
-		RequiresCondition: DeliveredResources > Construct && (50 - Construct) > 0
+		RequiresCondition: DeliveredResources > Construct && (30 - Construct) > 0
 	Targetable@deliverresources: 
 		TargetTypes: Deliverable
-		RequiresCondition: 50 > DeliveredResources
+		RequiresCondition: 30 > DeliveredResources
 	WithIdleOverlay@base1:
 		Sequence: make1
-		RequiresCondition: Construct > 5 && Construct < 10
+		RequiresCondition: Construct > 5 && Construct < 9
 	WithIdleOverlay@base2:
 		Sequence: make2
-		RequiresCondition: Construct >= 10 && Construct < 15
+		RequiresCondition: Construct >= 9 && Construct < 13
 	WithIdleOverlay@base3:
 		Sequence: make3
-		RequiresCondition: Construct >= 15 && Construct < 25
+		RequiresCondition: Construct >= 13 && Construct < 17
 	WithIdleOverlay@base4:
 		Sequence: make4
-		RequiresCondition: Construct >= 25 && Construct < 35
+		RequiresCondition: Construct >= 17 && Construct < 22
 	WithIdleOverlay@base5:
 		Sequence: make5
-		RequiresCondition: Construct >= 35 && Construct < 40
+		RequiresCondition: Construct >= 22 && Construct < 26
 	WithIdleOverlay@base6:
 		Sequence: make6
-		RequiresCondition: Construct >= 40
-        
+		RequiresCondition: Construct >= 26
+		
 SULREF.scaff:
 	Inherits: ^3x3SITE
 	HitShape:
@@ -906,7 +906,7 @@ SULREF.scaff:
 		PlayerPalette: sultanplayer
 		Image: sulref
 	CustomSellValue:
-		Value: 500
+		Value: 750
 	Valued:
 		Cost: 1500
 	Tooltip:
@@ -917,7 +917,7 @@ SULREF.scaff:
 		Prerequisites: sulcastle
 		Description: Processes raw ore and Gold into useable metal.\nGenerates more money than the windmill.\n\n\n\n
 		Queue: MResources.SUL
-		BuildDuration: 75
+		BuildDuration: 750
 	Health:
 		HP: 60000
 	RevealsShroud:
@@ -930,36 +930,36 @@ SULREF.scaff:
 	WithSpriteBody:
 		RequiresCondition: inactive
 	DebugTransformOnCondition@Finsihed:
-		RequiresCondition: (60 - Construct) <= 0
+		RequiresCondition: (45 - Construct) <= 0
 		IntoActor: SULREF
-		ReadyAudio: ConstructionComplete
+		ReadyAudio:
 	ExternalCondition@buildfurther: 
 		Condition: Construct
-		TotalCap: 60
+		TotalCap: 45
 	ExternalCondition@Deliverfurther:
 		Condition: DeliveredResources
-		TotalCap: 60
+		TotalCap: 45
 	Targetable@buildfurther: 
 		TargetTypes: Buildable
-		RequiresCondition: DeliveredResources > Construct && (60 - Construct) > 0
+		RequiresCondition: DeliveredResources > Construct && (45 - Construct) > 0
 	Targetable@deliverresources: 
 		TargetTypes: Deliverable
-		RequiresCondition: 60 > DeliveredResources
+		RequiresCondition: 45 > DeliveredResources
 	WithIdleOverlay@base1:
 		Sequence: make1
-		RequiresCondition: Construct > 5 && Construct < 15
+		RequiresCondition: Construct > 5 && Construct < 12
 	WithIdleOverlay@base2:
 		Sequence: make2
-		RequiresCondition: Construct >= 15 && Construct < 25
+		RequiresCondition: Construct >= 12 && Construct < 20
 	WithIdleOverlay@base3:
 		Sequence: make3
-		RequiresCondition: Construct >= 25 && Construct < 35
+		RequiresCondition: Construct >= 20 && Construct < 28
 	WithIdleOverlay@base4:
 		Sequence: make4
-		RequiresCondition: Construct >= 35 && Construct < 45
+		RequiresCondition: Construct >= 28 && Construct < 36
 	WithIdleOverlay@base5:
 		Sequence: make5
-		RequiresCondition: Construct >= 45 && Construct < 55
+		RequiresCondition: Construct >= 36 && Construct < 40
 	WithIdleOverlay@base6:
 		Sequence: make6
-		RequiresCondition: Construct >= 55
+		RequiresCondition: Construct >= 40

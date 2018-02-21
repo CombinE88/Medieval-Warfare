@@ -69,7 +69,7 @@ namespace OpenRA.Mods.MW.Traits
         void INotifyCreated.Created(Actor self)
         {
             ammoPool = self.TraitsImplementing<AmmoPool>().FirstOrDefault(la => la.Info.Name == "Food");
-            whatAmmo = ammoPool.CurrentAmmo;
+            whatAmmo = ammoPool.GetAmmoCount();
         }
 
 
@@ -197,7 +197,7 @@ namespace OpenRA.Mods.MW.Traits
 
         void HunterDecisions(Actor self)
         {
-            whatAmmo = ammoPool.CurrentAmmo; // how many loot do we have stored
+            whatAmmo = ammoPool.GetAmmoCount(); // how many loot do we have stored
 
             if ((Lodge == null || Lodge.IsDead || !Lodge.IsInWorld) && self.IsInWorld && !self.IsDead) // first, find a new home when our old got destroyed
             {

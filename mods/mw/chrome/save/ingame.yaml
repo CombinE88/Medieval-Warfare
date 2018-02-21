@@ -1,0 +1,950 @@
+Container@INGAME_ROOT:
+	Logic: LoadIngamePlayerOrObserverUILogic
+	Children:
+		LogicKeyListener@GLOBAL_KEYHANDLER:
+			Logic: MusicHotkeyLogic, ScreenshotHotkeyLogic, MuteHotkeyLogic
+				StopMusicKey: StopMusic
+				PauseMusicKey: PauseMusic
+				PrevMusicKey: PrevMusic
+				NextMusicKey: NextMusic
+				TakeScreenshotKey: TakeScreenshot
+				MuteAudioKey: ToggleMute
+		LogicKeyListener@WORLD_KEYHANDLER:
+			Logic: CycleBasesHotkeyLogic, CycleProductionActorsHotkeyLogic, JumpToLastEventHotkeyLogic, JumpToSelectedActorsHotkeyLogic, TogglePixelDoubleHotkeyLogic, TogglePlayerStanceColorHotkeyLogic, CycleStatusBarsHotkeyLogic, PauseHotkeyLogic
+				CycleBasesKey: CycleBase
+				CycleProductionActorsKey: CycleProductionBuildings
+				JumpToLastEventKey: ToLastEvent
+				JumpToSelectedActorsKey: ToSelection
+				TogglePixelDoubleKey: TogglePixelDouble
+				TogglePlayerStanceColorKey: TogglePlayerStanceColor
+				CycleStatusBarsKey: CycleStatusBars
+				PauseKey: Pause
+		Container@WORLD_ROOT:
+			Logic: LoadIngamePerfLogic
+			Children:
+				LogicTicker@DISCONNECT_WATCHER:
+					Logic: DisconnectWatcherLogic
+				Label@MISSION_TEXT:
+					X: WINDOW_RIGHT/2 - 256
+					Y: 22
+					Width: 512
+					Height: 25
+					Font: Bold
+					Align: Center
+					Contrast: true
+				StrategicProgress@STRATEGIC_PROGRESS:
+					X: WINDOW_RIGHT/2
+					Y: 40
+				Container@PERF_ROOT:
+				WorldInteractionController@INTERACTION_CONTROLLER:
+					Width: WINDOW_RIGHT
+					Height: WINDOW_BOTTOM
+					SelectAllKey: SelectAllUnits		
+					SelectSameTypeKey: SelectUnitsByType
+				ViewportController:
+					Width: WINDOW_RIGHT
+					Height: WINDOW_BOTTOM
+					TooltipContainer: TOOLTIP_CONTAINER
+					ScrollUpKey: MapScrollUp		
+					ScrollDownKey: MapScrollDown		
+					ScrollLeftKey: MapScrollLeft		
+					ScrollRightKey: MapScrollRight		
+					JumpToTopEdgeKey: MapJumpToTopEdge		
+					JumpToBottomEdgeKey: MapJumpToBottomEdge		
+					JumpToLeftEdgeKey: MapJumpToLeftEdge		
+					JumpToRightEdgeKey: MapJumpToRightEdge		
+					BookmarkSaveKeyPrefix: MapBookmarkSave		
+					BookmarkRestoreKeyPrefix: MapBookmarkRestore		
+					BookmarkKeyCount: 4
+				Container@GAME_TIMER_BLOCK:
+					Logic: GameTimerLogic
+					X: WINDOW_RIGHT - 420
+					Y: WINDOW_BOTTOM - 270
+					Width: 100
+					Height: 55
+					Children:
+						LabelWithTooltip@GAME_TIMER:
+							Width: PARENT_RIGHT
+							Height: 30
+							Align: Center
+							Font: Title
+							Contrast: true
+							TooltipContainer: TOOLTIP_CONTAINER
+							TooltipTemplate: SIMPLE_TOOLTIP
+						Label@GAME_TIMER_STATUS:
+							Y: 35
+							Width: PARENT_RIGHT
+							Height: 15
+							Align: Center
+							Font: Bold
+							Contrast: true
+				Container@PLAYER_ROOT:
+		Container@MENU_ROOT:
+		TooltipContainer@TOOLTIP_CONTAINER:
+
+Container@PERF_WIDGETS:
+	Logic: PerfDebugLogic
+	Children:
+		Label@PERF_TEXT:
+			X: 10
+			Y: 430
+			Width: 290
+			Height: 230
+			Width: 170
+			Height: 40
+			Contrast: true
+			VAlign: Top
+		Background@GRAPH_BG:
+			X: 35
+			Y: WINDOW_BOTTOM - HEIGHT - 230
+			Width: 220
+			Height: 220
+			Background: panel-black
+			Children:
+				PerfGraph@GRAPH:
+					X: 10
+					Y: 10
+					Width: 200
+					Height: 200
+
+Container@OBSERVER_WIDGETS:
+	Logic: MenuButtonsChromeLogic
+		StatisticsBasicKey: StatisticsBasic
+		StatisticsEconomyKey: StatisticsEconomy
+		StatisticsProductionKey: StatisticsProduction
+		StatisticsCombatKey: StatisticsCombat
+		StatisticsGraphKey: StatisticsGraph
+	Children:
+		LogicKeyListener@OBSERVER_KEY_LISTENER:
+		Background@SIDEBAR_BACKGROUND:
+			Logic: MenuButtonsChromeLogic
+			X: 2
+			Y: WINDOW_BOTTOM - 230
+			Width: 290
+			Height: 230
+			Background: castleframe
+			Children:
+				MenuButton@OPTIONS_BUTTON:
+					Key: escape
+					X: 223
+					Y: 20
+					Width: 50
+					Height: 44
+					TooltipText: Menu
+					TooltipContainer: TOOLTIP_CONTAINER
+					DisableWorldSounds: true
+					Children:
+						Image:
+							X: 12
+							Y: 9
+							ImageCollection: order-icons
+							ImageName: options
+				MenuButton@OBSERVER_STATS_BUTTON:
+					Key: StatisticsBasic
+					X: 223
+					Y: 69
+					Width: 50
+					Height: 44
+					TooltipText: Statistics
+					TooltipContainer: TOOLTIP_CONTAINER
+					MenuContainer: INGAME_OBSERVERSTATS_BG
+					HideIngameUI: false
+					Pause: false
+					Children:
+						Image@ICON:
+							X: 12
+							Y: 9
+							ImageCollection: order-icons
+							ImageName: stats
+				Background@RADAR:
+					X: 7
+					Y: 15
+					Width: 200
+					Height: 200
+					Background: panel-gray
+					Children:
+						Background@RADAR:
+							X: 0
+							Y: 0
+							Width: 200
+							Height: 200
+							Background: paperframe
+		Background@RADAR:
+			X: 7 + 5 + 2
+			Y: WINDOW_BOTTOM - 210
+			Width: 192
+			Height: 192
+			Children:
+				Radar:
+					X: 9
+					Y: 9
+					Width: PARENT_RIGHT-18
+					Height: PARENT_BOTTOM-18
+		Background@SIDEBAR_BACKGROUND3:
+			Logic: MenuButtonsChromeLogic
+			X: WINDOW_RIGHT - 290
+			Y: WINDOW_BOTTOM - 230
+			Width: 290
+			Height: 230
+			Background: castleframe
+			Children:
+				Background@REPLAY_PLAYER:
+					Logic: ReplayControlBarLogic
+					X: 10
+					Y: 15
+					Width: PARENT_RIGHT - 20
+					Height: PARENT_BOTTOM -25
+					Background: panel-darkred
+					Visible: false
+					Children:
+						Button@BUTTON_PAUSE:
+							X: 10
+							Y: 10 + 30
+							Width: 50
+							Height: 40
+							IgnoreChildMouseOver: true
+							Children:
+								Image@IMAGE_PAUSE:
+									X: 11
+									Y: 8
+									Width: 16
+									Height: 16
+									ImageCollection: music
+									ImageName: pause
+						Button@BUTTON_PLAY:
+							X: 50
+							Y: 10 + 30
+							Width: 50
+							Height: 40
+							IgnoreChildMouseOver: true
+							Children:
+								Image@IMAGE_PLAY:
+									X: 11
+									Y: 8
+									Width: 16
+									Height: 16
+									ImageCollection: music
+									ImageName: play
+						Button@BUTTON_SLOW:
+							X: 100 
+							Y: 10 + 30
+							Width: 50
+							Height: 20
+							BaseLine: 1
+							TooltipText: Slow speed
+							TooltipContainer: TOOLTIP_CONTAINER
+							VisualHeight: 0
+							Text: 50%
+							Font: TinyBold
+						Button@BUTTON_REGULAR:
+							X: 100
+							Y: 30 + 30
+							Width: 50
+							Height: 20
+							BaseLine: 1
+							TooltipText: Regular speed
+							TooltipContainer: TOOLTIP_CONTAINER
+							VisualHeight: 0
+							Text: 100%
+							Font: TinyBold
+						Button@BUTTON_FAST:
+							X: 150
+							Y: 10 + 30
+							Width: 50
+							Height: 20
+							BaseLine: 1
+							TooltipText: Fast speed
+							TooltipContainer: TOOLTIP_CONTAINER
+							VisualHeight: 0
+							Text: 200%
+							Font: TinyBold
+						Button@BUTTON_MAXIMUM:
+							X: 150
+							Y: 30 + 30
+							Width: 50
+							Height: 20
+							BaseLine: 1
+							TooltipText: Maximum speed
+							TooltipContainer: TOOLTIP_CONTAINER
+							VisualHeight: 0
+							Text: MAX
+							Font: TinyBold
+				DropDownButton@SHROUD_SELECTOR:
+					Logic: ObserverShroudSelectorLogic
+					X: 20
+					Y: 25
+					Width: 230
+					Height: 25
+					Font: Bold
+					Children:
+						LogicKeyListener@SHROUD_KEYHANDLER:
+						Image@FLAG:
+							X: 4
+							Y: 4
+							Width: 32
+							Height: 16
+						Label@LABEL:
+							X: 40
+							Width: 60
+							Height: 25
+							Shadow: True
+						Label@NOFLAG_LABEL:
+							X: 5
+							Width: PARENT_RIGHT
+							Height: 25
+							Shadow: True
+				
+
+Container@PLAYER_WIDGETS:
+	Children:
+		LogicKeyListener@CONTROLGROUP_KEYHANDLER:
+			Logic: ControlGroupLogic
+		LogicTicker@SIDEBAR_TICKER:
+		Background@COMMAND_BAR:
+			Logic: CommandBarLogic
+			X: 5
+			Y: WINDOW_BOTTOM - HEIGHT - 230
+			Background: panel-black
+			Width: 36
+			Height: 276 + 34 + 34
+			Children:
+				LogicKeyListener@MODIFIER_OVERRIDES:
+				Button@ATTACK_MOVE:
+					X: 1
+					Y: 1
+					Width: 34
+					Height: 34
+					Background: command-button
+					Key: AttackMove
+					DisableKeySound: true
+					TooltipText: Attack Move
+					TooltipDesc: Selected units will move to the desired location\nand attack any enemies they encounter en route.\n\nLeft-click icon then right-click on target location.
+					TooltipContainer: TOOLTIP_CONTAINER
+					TooltipTemplate: BUTTON_WITH_DESC_HIGHLIGHT_TOOLTIP
+					Children:
+						Image@ICON:
+							X: 5
+							Y: 5
+							ImageCollection: command-icons
+							ImageName: attack-move
+				Button@FORCE_MOVE:
+					X: 1
+					Y: 35
+					Width: 34
+					Height: 34
+					Background: command-button
+					DisableKeySound: true
+					TooltipText: Force Move
+					TooltipDesc: Selected units will move to the desired location\n - Default activity for the target is suppressed\n - Vehicles will attempt to crush enemies at the target location\n - Units entering transports will consider nearby alternatives\n\nLeft-click icon then right-click on target.\nHold {(Alt)} to activate temporarily while commanding units.
+					TooltipContainer: TOOLTIP_CONTAINER
+					TooltipTemplate: BUTTON_WITH_DESC_HIGHLIGHT_TOOLTIP
+					Children:
+						Image@ICON:
+							X: 5
+							Y: 5
+							ImageCollection: command-icons
+							ImageName: force-move
+				Button@FORCE_ATTACK:
+					X: 1
+					Y: 69
+					Width: 34
+					Height: 34
+					Background: command-button
+					DisableKeySound: true
+					TooltipText: Force Attack
+					TooltipDesc: Selected units will attack the targeted unit or location\nignoring their default activity for the target.\n\nLeft-click icon then right-click on target.\nHold {(Ctrl)} to activate temporarily while commanding units.
+					TooltipContainer: TOOLTIP_CONTAINER
+					TooltipTemplate: BUTTON_WITH_DESC_HIGHLIGHT_TOOLTIP
+					Children:
+						Image@ICON:
+							X: 5
+							Y: 5
+							ImageCollection: command-icons
+							ImageName: force-attack
+				Button@GUARD:
+					X: 1
+					Y: 105
+					Width: 34
+					Height: 34
+					Background: command-button
+					DisableKeySound: true
+					DisableKeyRepeat: true
+					Key: Guard
+					TooltipText: Guard
+					TooltipDesc: Selected units will follow the targeted unit.\n\nLeft-click icon then right-click on target unit.
+					TooltipContainer: TOOLTIP_CONTAINER
+					Children:
+						Image@ICON:
+							X: 5
+							Y: 5
+							ImageCollection: command-icons
+							ImageName: guard
+				Button@DEPLOY:
+					X: 1
+					Y: 139
+					Width: 34
+					Height: 34
+					Key: Deploy
+					Background: command-button
+					DisableKeySound: true
+					DisableKeyRepeat: true
+					TooltipText: Deploy
+					TooltipDesc: Selected units will perform their default deploy activity\n - MCVs will unpack into a Construction Yard\n - Construction Yards will re-pack into a MCV\n - Transports will unload their passengers\n - Helicopters will return to base\n\nActs immediately on selected units.
+					TooltipContainer: TOOLTIP_CONTAINER
+					Children:
+						Image@ICON:
+							X: 5
+							Y: 5
+							ImageCollection: command-icons
+							ImageName: deploy
+				Button@SCATTER:
+					X: 1
+					Y: 173
+					Width: 34
+					Height: 34
+					Background: command-button
+					DisableKeySound: true
+					DisableKeyRepeat: true
+					Key: Scatter
+					TooltipText: Scatter
+					TooltipDesc: Selected units will stop their current activity\nand move to a nearby location.\n\nActs immediately on selected units.
+					TooltipContainer: TOOLTIP_CONTAINER
+					Children:
+						Image@ICON:
+							X: 5
+							Y: 5
+							ImageCollection: command-icons
+							ImageName: scatter
+				Button@STOP:
+					X: 1
+					Y: 207
+					Width: 34
+					Height: 34
+					Background: command-button
+					DisableKeySound: true
+					DisableKeyRepeat: true
+					TooltipText: Stop
+					Key: Stop
+					TooltipDesc: Selected units will stop their current activity.\n\nActs immediately on selected units.
+					TooltipContainer: TOOLTIP_CONTAINER
+					Children:
+						Image@ICON:
+							X: 5
+							Y: 5
+							ImageCollection: command-icons
+							ImageName: stop
+				Button@QUEUE_ORDERS:
+					X: 1
+					Y: 241
+					Width: 34
+					Height: 34
+					Background: command-button
+					DisableKeySound: true
+					TooltipText: Waypoint Mode
+					TooltipDesc: Use Waypoint Mode to give multiple linking commands\nto the selected units. Units will execute the commands\nimmediately upon receiving them.\n\nLeft-click icon then give commands in the game world.\nHold {(Shift)} to activate temporarily while commanding units.
+					TooltipContainer: TOOLTIP_CONTAINER
+					TooltipTemplate: BUTTON_WITH_DESC_HIGHLIGHT_TOOLTIP
+					Children:
+						Image@ICON:
+							X: 5
+							Y: 5
+							ImageCollection: command-icons
+							ImageName: queue-orders
+				Background@PRIORITY_BAR:
+					Logic: ConstructionPriorityLogic
+					X: 0
+					Y: PARENT_BOTTOM - 34 - 34
+					Background: command-button
+					Width: 36
+					Height: 34 + 34
+					Children:
+						Button@ADD_PRIO:
+							Key: Plus
+							X: 1
+							Y: 0
+							Width: 34
+							Height: 34
+							Background: command-button
+							DisableKeySound: true
+							TooltipText: Add Priority, the building will build and delivered first.
+							TooltipContainer: TOOLTIP_CONTAINER
+							Children:
+								Image@ICON:
+									X: 5
+									Y: 5
+									ImageCollection: prioritybuttons
+									ImageName: up_arrow
+						Button@REM_PRIO:
+							Key: Minus
+							X: 1
+							Y: 34
+							Width: 34
+							Height: 34
+							Background: command-button
+							DisableKeySound: true
+							TooltipText: Remove Priority, the building will build and delivered last.
+							TooltipContainer: TOOLTIP_CONTAINER
+							Children:
+								Image@ICON:
+									X: 5
+									Y: 5
+									ImageCollection: prioritybuttons
+									ImageName: down_arrow
+									
+		Background@COMMAND_BAR:
+			Logic: StanceSelectorLogic
+			X: 5
+			Y: WINDOW_BOTTOM - HEIGHT - 5 - 276 - 230 - 34 - 34
+			Background: panel-black
+			Width: 34 
+			Height: 138
+			Children:
+				Button@STANCE_ATTACKANYTHING:
+					X: 1
+					Y: 1
+					Width: 34
+					Height: 26
+					Background: stance-button
+					DisableKeyRepeat: true
+					DisableKeySound: true
+					Key: StanceAttackAnything
+					TooltipText: Attack Anything Stance
+					TooltipDesc: Set the selected units to Attack Anything stance:\n - Units will attack enemy units and structures on sight\n - Units will pursue attackers across the battlefield
+					TooltipContainer: TOOLTIP_CONTAINER
+					Children:
+						Image@ICON:
+							X: 9
+							Y: 5
+							ImageCollection: stance-icons
+							ImageName: attack-anything
+				Button@STANCE_DEFEND:
+					X: 1
+					Y: 35
+					Width: 34
+					Height: 26
+					Background: stance-button
+					Key: StanceDefend
+					DisableKeyRepeat: true
+					DisableKeySound: true
+					TooltipText: Defend Stance
+					TooltipDesc: Set the selected units to Defend stance:\n - Units will attack enemy units on sight\n - Units will not move or pursue enemies
+					TooltipContainer: TOOLTIP_CONTAINER
+					Children:
+						Image@ICON:
+							X: 9
+							Y: 5
+							ImageCollection: stance-icons
+							ImageName: defend
+				Button@STANCE_RETURNFIRE:
+					X: 1
+					Y: 69
+					Width: 34
+					Height: 26
+					Background: stance-button
+					Key: StanceReturnFire
+					DisableKeyRepeat: true
+					DisableKeySound: true
+					TooltipText: Return Fire Stance
+					TooltipDesc: Set the selected units to Return Fire stance:\n - Units will retaliate against enemies that attack them\n - Units will not move or pursue enemies
+					TooltipContainer: TOOLTIP_CONTAINER
+					Children:
+						Image@ICON:
+							X: 9
+							Y: 5
+							ImageCollection: stance-icons
+							ImageName: return-fire
+				Button@STANCE_HOLDFIRE:
+					X: 1
+					Y: 103
+					Width: 34
+					Height: 26
+					Background: stance-button
+					Key: StanceHoldFire
+					DisableKeyRepeat: true
+					DisableKeySound: true
+					TooltipText: Hold Fire Stance
+					TooltipDesc: Set the selected units to Hold Fire stance:\n - Units will not fire upon enemies\n - Units will not move or pursue enemies
+					TooltipContainer: TOOLTIP_CONTAINER
+					Children:
+						Image@ICON:
+							X: 9
+							Y: 5
+							ImageCollection: stance-icons
+							ImageName: hold-fire
+		Background@SIDEBAR_BACKGROUND3:
+			Logic: MenuButtonsChromeLogic
+			X: WINDOW_RIGHT - 290
+			Y: WINDOW_BOTTOM - 230
+			Width: 340
+			Height: 230
+			Background: castleframe
+			Children:
+				Background@SILOBAR_PANEL:
+					Logic: IngameSiloBarLogic
+					X: 5
+					Y: 15
+					Width: 20
+					Height: 200
+					Background: panel-darkred
+					Children:
+						ResourceBar@SILOBAR:
+							X: 5
+							Y: 5
+							Width: PARENT_RIGHT-12
+							Height: PARENT_BOTTOM-10
+							TooltipContainer: TOOLTIP_CONTAINER
+							TooltipTemplate: SIMPLE_TOOLTIP
+							IndicatorImage: indicator-right
+				Background@CASH:
+					X: 30
+					Y: 15
+					Width: PARENT_RIGHT / 2 + 10
+					Height: 120
+					Background: panel-gray
+					Children:
+						LabelWithTooltip@CASH:
+							Logic: NewCashCounterLogic
+							Y: 15
+							X: 15
+							Width: PARENT_RIGHT
+							Height: 0
+							Align: Left
+							Font: Bold
+							Text: {0}
+						LabelWithTooltip@FULLPOP:
+							Logic: IngameFullPopulationCounterLogic
+							Y: 75
+							X: 15
+							Width: PARENT_RIGHT
+							Height: 0
+							Align: Left
+							Font: Bold
+							Text: Sum Population: {0}
+						LabelWithTooltip@POP:
+							Logic: IngamePopulationCounterLogic
+							Y: 35
+							X: 15
+							Width: PARENT_RIGHT
+							Height: 0
+							Align: Left
+							Font: Bold
+							Text: {0}
+							TextColor: 2ECC71
+							ContrastColorDark: 12512D
+						LabelWithTooltip@USEDPOP:
+							Logic: IngameUsedPopulationCounterLogic
+							Y: 55
+							X: 15
+							Width: PARENT_RIGHT
+							Height: 0
+							Align: Left
+							Font: Bold
+							Text: {0}
+							TextColor: B56357
+							ContrastColorDark: 482722
+						LabelWithTooltip@MAXPOP:
+							Logic: IngameMaxPopulationCounterLogic
+							Y: 95
+							X: 15
+							Width: PARENT_RIGHT
+							Height: 0
+							Align: Left
+							Font: Bold
+							Text: {0}
+				Container@SUPPORT_POWERS:
+					Logic: SupportPowerBinLogic
+					X: PARENT_RIGHT - 13 - 72 - 35
+					Y: 20
+					Children:
+						Container@PALETTE_BACKGROUND:
+							Children:
+								Background@ICON_TEMPLATE:
+									Width: 72
+									Height: 58
+									ClickThrough: false
+									Background: panel-gray
+						SupportPowers@SUPPORT_PALETTE:
+							X: 4
+							Y: 4
+							TooltipContainer: TOOLTIP_CONTAINER
+							ReadyText: Ready
+							HoldText: On Hold
+							ClockSequence: old
+							IconCount: 20
+							IconMargin: 8	
+							HotkeyPrefix: SupportPower		
+							HotkeyCount: 6
+		Background@SIDEBAR_BACKGROUND:
+			Logic: MenuButtonsChromeLogic
+			X: 2
+			Y: WINDOW_BOTTOM - 230
+			Width: 290
+			Height: 230
+			Background: castleframe
+			Children:
+				MenuButton@OPTIONS_BUTTON:
+					Key: escape
+					X: 208
+					Y: 20
+					Width: 50
+					Height: 44
+					Font: Bold
+					TooltipText: Menu
+					TooltipContainer: TOOLTIP_CONTAINER
+					DisableWorldSounds: true
+					Children:
+						Image@ICON:
+							X: 11
+							Y: 8
+							ImageCollection: order-icons
+							ImageName: options
+				Button@BEACON_BUTTON:
+					Logic: BeaconOrderButtonLogic
+					X: 208
+					Y: 69
+					Width: 50
+					Height: 44
+					Font: Bold
+					Key: PlaceBeacon
+					TooltipText: Place Beacon
+					TooltipContainer: TOOLTIP_CONTAINER
+					Children:
+						Image@ICON:
+							X: 11
+							Y: 8
+							ImageCollection: order-icons
+				Button@SELL_BUTTON:
+					Logic: SellOrderButtonLogic
+					X: 208
+					Y: 118
+					Width: 50
+					Height: 44
+					Font: Bold
+					Key: Sell
+					TooltipText: Sell
+					TooltipContainer: TOOLTIP_CONTAINER
+					Children:
+						Image@ICON:
+							X: 11
+							Y: 8
+							ImageCollection: order-icons
+				Button@REPAIR_BUTTON:
+					Logic: RepairOrderButtonLogic
+					X: 208
+					Y: 167
+					Width: 50
+					Height: 44
+					Font: Bold
+					Key: Repair
+					TooltipText: Repair
+					TooltipContainer: TOOLTIP_CONTAINER
+					Children:
+						Image@ICON:
+							X: 11
+							Y: 8
+							ImageCollection: order-icons
+				Background@RADAR:
+					X: 5
+					Y: 15
+					Width: 200
+					Height: 200
+					Background: panel-gray
+					Children:
+						Background@RADAR:
+							X: 0
+							Y: 0
+							Width: 200
+							Height: 200
+							Background: paperframe
+							Children:
+								Radar@RADAR_MINIMAP:
+									Logic: IngameRadarDisplayLogic
+									X: 9
+									Y: 9
+									Width: PARENT_RIGHT-18
+									Height: PARENT_BOTTOM-18
+									WorldInteractionController: INTERACTION_CONTROLLER
+									Children:
+										LogicTicker@RADAR_TICKER:
+								VqaPlayer@PLAYER:
+									X: 1
+									Y: 1
+									Width: PARENT_RIGHT-2
+									Height: PARENT_BOTTOM-2
+									Skippable: false
+		Background@POWERBAR_PANEL:
+			Logic: IngamePeasantSpawnBarLogic
+			X: 290
+			Y: WINDOW_BOTTOM - 218
+			Width: WINDOW_RIGHT - 290
+			Height: 20
+			Background:
+			Children: panel-black
+				ResourceBar@POWERBAR:
+					X: 6
+					Y: 5
+					Width: PARENT_RIGHT-6
+					Height: PARENT_BOTTOM-5
+					TooltipContainer: TOOLTIP_CONTAINER
+					TooltipTemplate: SIMPLE_TOOLTIP
+					IndicatorImage: indicator-left
+		Background@SIDEBAR_BACKGROUND2:
+			Logic: MenuButtonsChromeLogic
+			X: 290
+			Y: WINDOW_BOTTOM - 200
+			Width: WINDOW_RIGHT - 580
+			Height: 200
+			Background: panel-black
+			Children:
+				Container@PRODUCTION_TYPES:
+					X: 5
+					Y: 5
+					Width: PARENT_RIGHT -10
+					Height: 45
+					Children:
+						ProductionTypeButton@BUILDING:
+							X: PARENT_RIGHT - 150
+							Y: 4
+							Width: 75
+							Height: ((200 - 10) / 5)
+							TooltipText: Village Buildings
+							TooltipContainer: TOOLTIP_CONTAINER
+							ProductionGroup: Building
+							Key: ProductionTypeBuilding
+							Children:
+								Image@ICON:
+									X: PARENT_RIGHT / 2 -12
+									Y: 6
+									ImageCollection: production-icons
+						ProductionTypeButton@BUILDING2:
+							X: PARENT_RIGHT - 150 + 75
+							Y: 4
+							Width: 75
+							Height: ((200 - 10) / 5)
+							TooltipText: Resource Buildings
+							TooltipContainer: TOOLTIP_CONTAINER
+							ProductionGroup: Building2
+							Key: ProductionTypeMerchant
+							Children:
+								Image@ICON:
+									X: PARENT_RIGHT / 2 -12
+									Y: 6
+									ImageCollection: production-icons
+						ProductionTypeButton@BUILDING3:
+							X: PARENT_RIGHT - 150 
+							Y: ((200 - 20) / 5) * 1 + 6
+							Width: 75
+							Height: ((200 - 10) / 5)
+							TooltipText: Military Buildings
+							TooltipContainer: TOOLTIP_CONTAINER
+							ProductionGroup: Building3
+							Key: ProductionTypeNaval
+							Children:
+								Image@ICON:
+									X: PARENT_RIGHT / 2 -12
+									Y: 6
+									ImageCollection: production-icons
+						ProductionTypeButton@DEFENCE:
+							X: PARENT_RIGHT - 150 + 75
+							Y: ((200 - 20) / 5) * 1 + 6
+							Width: 75
+							Height: ((200 - 10) / 5)
+							TooltipText: Technology Buildings
+							TooltipContainer: TOOLTIP_CONTAINER
+							ProductionGroup: Tech
+							Key: ProductionTypeDefense
+							Children:
+								Image@ICON:
+									X: PARENT_RIGHT / 2 -12
+									Y: 6
+									ImageCollection: production-icons
+						ProductionTypeButton@INFANTRY:
+							X: PARENT_RIGHT - 150
+							Y: ((200 - 20) / 5) * 2 + 6
+							Width: 150
+							Height: ((200 - 10) / 5)
+							TooltipText: Infantry
+							TooltipContainer: TOOLTIP_CONTAINER
+							ProductionGroup: Infantry
+							Key: ProductionTypeInfantry
+							Children:
+								Image@ICON:
+									X: PARENT_RIGHT / 2 -12
+									Y: 6
+									ImageCollection: production-icons
+						ProductionTypeButton@VEHICLE:
+							X: PARENT_RIGHT - 150
+							Y: ((200 - 20) / 5) * 3 + 6
+							Width: 150
+							Height: ((200 - 10) / 5)
+							TooltipText: Cavalry
+							TooltipContainer: TOOLTIP_CONTAINER
+							ProductionGroup: Vehicle
+							Key: ProductionTypeVehicle
+							Children:
+								Image@ICON:
+									X: PARENT_RIGHT / 2 -12
+									Y: 6
+									ImageCollection: production-icons
+						ProductionTypeButton@AIRCRAFT:
+							X: PARENT_RIGHT - 150
+							Y: ((200 - 20) / 5) * 4 + 6
+							Width: 150
+							Height: ((200 - 10) / 5)
+							TooltipText: Siege Engines
+							TooltipContainer: TOOLTIP_CONTAINER
+							ProductionGroup: Aircraft
+							Key: ProductionTypeAircraft
+							Children:
+								Image@ICON:
+									X: PARENT_RIGHT / 2 -12
+									Y: 6
+									ImageCollection: production-icons
+				Container@PRODUCTION_BACKGROUND:
+					X: WINDOW_RIGHT - 204
+					Y: 287
+					Children:
+						Background@ICON_TEMPLATE:
+							Width: 66
+							Height: 50
+							Background: panel-black
+				ProductionPalette@PRODUCTION_PALETTE:
+					X: 10 
+					Y: 10 + 12
+					Width: WINDOW_RIGHT - 580 - 20 - 150
+					Height: 200
+					TooltipContainer: TOOLTIP_CONTAINER
+					ReadyText: Ready
+					HoldText: On Hold
+					Columns: 7
+					IconSize: 100, 80
+					MinimumRows: 1
+					MaximumRows: 6
+					IconMargin: 2,2
+					HotkeyPrefix: Production
+					HotkeyCount: 24
+				ProductionTabs@PRODUCTION_TABS:
+					Logic: ProductionTabsLogic
+					PaletteWidget: PRODUCTION_PALETTE
+					TypesContainer: PRODUCTION_TYPES
+					BackgroundContainer: PRODUCTION_BACKGROUND
+					PreviousProductionTabKey: PreviousProductionTab
+					NextProductionTabKey: NextProductionTab
+					X: 10
+					Y: 10
+					Width: WINDOW_RIGHT - 580 - 20 - 150
+					Height: 12
+				
+
+		
+
+Background@FMVPLAYER:
+	Width: WINDOW_RIGHT
+	Height: WINDOW_BOTTOM
+	Background: panel-allblack
+	Children:
+		VqaPlayer@PLAYER:
+			X: 0
+			Y: 0
+			Width: WINDOW_RIGHT
+			Height: WINDOW_BOTTOM

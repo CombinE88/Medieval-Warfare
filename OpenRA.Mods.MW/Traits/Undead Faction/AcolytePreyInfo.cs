@@ -52,7 +52,7 @@ namespace OpenRA.Mods.MW.Traits
         {
             if (order.OrderID == "Prey")
             {
-                return new Order(order.OrderID, self, queued) { TargetActor = target.Actor };
+                return new Order(order.OrderID, self, Target.FromActor(target.Actor), queued) { }; // TargetActor = target.Actor };
             }
 
             return null;

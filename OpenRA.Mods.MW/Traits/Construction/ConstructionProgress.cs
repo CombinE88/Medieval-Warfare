@@ -70,6 +70,7 @@ namespace OpenRA.Mods.MW.Traits.Render
         readonly SpriteFont font;
         Color color;
         public int priority;
+        readonly IDecorationBounds[] decorationBounds;
 
         protected readonly Animation LeftAnim;
         protected readonly Animation RightAnim;
@@ -86,6 +87,7 @@ namespace OpenRA.Mods.MW.Traits.Render
         {
             font = Game.Renderer.Fonts[info.Font];
             color = Info.UsePlayerColor ? self.Owner.Color.RGB : Info.Color;
+            decorationBounds = self.TraitsImplementing<IDecorationBounds>().ToArray();
         }
 
 
@@ -124,6 +126,7 @@ namespace OpenRA.Mods.MW.Traits.Render
 
         IEnumerable<IRenderable> IRender.Render(Actor self, WorldRenderer wr)
         {
+
             if (!Info.RequiresSelection)
             {
                 return RenderInner(self, wr);
@@ -139,9 +142,11 @@ namespace OpenRA.Mods.MW.Traits.Render
             return SpriteRenderable.None;
         }
 
+        bool IRenderAboveShroudWhenSelected.SpatiallyPartitionable { get { return false; } }
+
         IEnumerable<IRenderable> RenderInner(Actor self, WorldRenderer wr)
         {
-
+            /*
             if (IsTraitDisabled || self.IsDead || !self.IsInWorld)
                 return Enumerable.Empty<IRenderable>();
 
@@ -154,7 +159,7 @@ namespace OpenRA.Mods.MW.Traits.Render
             if (!ShouldRender(self) || self.World.FogObscures(self))
                 return Enumerable.Empty<IRenderable>();
 
-            var bounds = self.VisualBounds;
+            var bounds = decorationBounds.Select(b => b.DecorationBounds(self, wr)).FirstOrDefault(b => !b.IsEmpty);
             var halfSize = font.Measure("100 %") / 2;
 
             var boundsOffset = new int2(bounds.Left + bounds.Right / 2, bounds.Top + bounds.Bottom) / 2;
@@ -163,12 +168,18 @@ namespace OpenRA.Mods.MW.Traits.Render
 
             var screenPos = wr.ScreenPxPosition(self.CenterPosition) + boundsOffset;
             var Rend = new IRenderable[] { new TextRenderable(font, wr.ProjectedPosition(screenPos), Info.ZOffset, color, priority + " %") };
-            return Rend;
+            return Rend;*/
+
+            var bounds = decorationBounds.Select(b => b.DecorationBounds(self, wr)).FirstOrDefault(b => !b.IsEmpty);
+            var spaceBuffer = (int)(10 / wr.Viewport.Zoom);
+            var effectPos = wr.ProjectedPosition(new int2((bounds.Left + bounds.Right) / 2 + Info.XOffset, (bounds.Top + bounds.Bottom) / 2 + Info.YOffset - spaceBuffer));
+
+            return new IRenderable[] { new TextRenderable(font, effectPos, Info.ZOffset, color, priority + "%") };
         }
 
-        public IEnumerable<Rectangle> ScreenBounds(Actor self, WorldRenderer wr)
+        IEnumerable<Rectangle> IRender.ScreenBounds(Actor self, WorldRenderer wr)
         {
-            throw new NotImplementedException();
+            yield break;
         }
     }
 }

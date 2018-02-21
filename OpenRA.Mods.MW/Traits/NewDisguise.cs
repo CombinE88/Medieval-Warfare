@@ -148,7 +148,9 @@ namespace OpenRA.Mods.MW.Traits
         {
 
             if (order.OrderID == "Disguise")
-                return new Order(order.OrderID, self, queued) { TargetActor = target.Actor };
+            {
+                return new Order(order.OrderID, self, target, queued) { }; // TargetActor = target.Actor };
+            }
 
             return null;
         }

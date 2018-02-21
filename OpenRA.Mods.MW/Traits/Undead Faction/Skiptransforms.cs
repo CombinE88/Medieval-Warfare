@@ -9,6 +9,7 @@
  */
 #endregion
 
+using System;
 using System.Collections.Generic;
 using OpenRA.Mods.Common;
 using OpenRA.Mods.Common.Activities;
@@ -120,5 +121,7 @@ namespace OpenRA.Mods.MW.Traits
             if (order.OrderString == "DeployTransform")
                 DeployTransform(order.Queued);
         }
+
+        bool IIssueDeployOrder.CanIssueDeployOrder(Actor self) { return true; }
     }
 }

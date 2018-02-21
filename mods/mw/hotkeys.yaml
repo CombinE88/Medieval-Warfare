@@ -1,0 +1,23 @@
+ProductionTypeBuilding: E
+	Description: Building Tab
+	Types: Production
+
+ProductionTypeDefense: R
+	Description: Defense Tab
+	Types: Production
+
+ProductionTypeMerchant: T
+	Description: Resource Tab
+	Types: Production
+    
+ProductionTypeInfantry: Z
+	Description: Infantry Tab
+	Types: Production
+
+ProductionTypeVehicle: U
+	Description: Vehicle Tab
+	Types: Production
+
+ProductionTypeAircraft: I
+	Description: Aircraft Tab
+	Types: Production

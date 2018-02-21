@@ -1,4 +1,5 @@
 upgradeguns1:
+	Interactable:
 	AlwaysVisible:
 	Tooltip:
 		Name: Handout Guns
@@ -21,6 +22,7 @@ upgradeguns1:
 
     
 upgradeguns2:
+	Interactable:
 	AlwaysVisible:
 	Tooltip:
 		Name: Handout Rifles
@@ -48,6 +50,7 @@ CRATE.plain:
 
 mpspawn:
 	EditorOnlyTooltip:
+	Interactable:
 		Name: (multiplayer player starting point)
 	AlwaysVisible:
 	Immobile:
@@ -60,6 +63,7 @@ mpspawn:
 		Categories: Spawn and Marker
 
 waypoint:
+	Interactable:
 	EditorOnlyTooltip:
 		Name: (waypoint for scripted behavior)
 	AlwaysVisible:
@@ -79,6 +83,7 @@ waypoint:
 		Palette: colorpicker
 
 CAMERA:
+	Interactable:
 	EditorOnlyTooltip:
 		Name: (reveals area to owner)
 	AlwaysVisible:
@@ -95,6 +100,7 @@ CAMERA:
 		Categories: Spawn and Marker
 
 CAMERA.small:
+	Interactable:
 	EditorOnlyTooltip:
 		Name: (reveals small area to owner)
 	AlwaysVisible:
@@ -112,6 +118,7 @@ CAMERA.small:
 		Categories: Spawn and Marker
         
 FLARE:
+	Interactable:
 	Immobile:
 		OccupiesSpace: false
 	RevealsShroud:
@@ -129,9 +136,10 @@ FLARE:
 		ShowOwnerRow: false
 	BodyOrientation:
 		QuantizedFacings: 1
-	AutoSelectionSize:
+	#AutoSelectionSize:
     
 MENU:
+	Interactable:
 	Immobile:
 		OccupiesSpace: false
 	RevealsShroud:
@@ -148,4 +156,4 @@ MENU:
 		ShowOwnerRow: false
 	BodyOrientation:
 		QuantizedFacings: 1
-	AutoSelectionSize:
+	#AutoSelectionSize:

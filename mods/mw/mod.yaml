@@ -1,6 +1,6 @@
 Metadata:
 	Title: Medieval Warfare
-	Version: playtest1702201801
+	Version: playtest2102201801
 
 PackageFormats: Mix
 
@@ -115,18 +115,17 @@ Assemblies:
 
 ChromeLayout:
 	mw|chrome/mainmenu.yaml
-	mw|chrome/multiplayer.yaml
 	mw|chrome/multiplayer-browser.yaml
+	mw|chrome/multiplayer-browserpanels.yaml
 	mw|chrome/multiplayer-createserver.yaml
 	mw|chrome/multiplayer-directconnect.yaml
-	mw|chrome/multiplayer-globalchat.yaml
 	mw|chrome/lobby.yaml
 	mw|chrome/lobby-mappreview.yaml
 	mw|chrome/lobby-players.yaml
 	mw|chrome/lobby-options.yaml
 	mw|chrome/lobby-music.yaml
+	mw|chrome/lobby-servers.yaml
 	mw|chrome/lobby-kickdialogs.yaml
-	mw|chrome/lobby-globalchat.yaml
 	mw|chrome/connection.yaml
 	mw|chrome/color-picker.yaml
 	mw|chrome/mapchooser.yaml
@@ -135,12 +134,12 @@ ChromeLayout:
 	mw|chrome/ingame-chat.yaml
 	mw|chrome/ingame-menu.yaml
 	mw|chrome/ingame-debug.yaml
+	mw|chrome/ingame-infochat.yaml
 	mw|chrome/ingame-info.yaml
 	mw|chrome/ingame-infobriefing.yaml
 	mw|chrome/ingame-infoscripterror.yaml
 	mw|chrome/ingame-infoobjectives.yaml
 	mw|chrome/ingame-infostats.yaml
-	mw|chrome/ingame-infochat.yaml
 	mw|chrome/ingame-observerstats.yaml
 	mw|chrome/music.yaml
 	mw|chrome/settings.yaml
@@ -163,6 +162,16 @@ Music:
 Translations:
 	mw|languages/english.yaml
 
+
+Hotkeys:
+	common|hotkeys/game.yaml
+	common|hotkeys/observer.yaml
+	common|hotkeys/production-common.yaml
+	common|hotkeys/production-peractor.yaml
+	common|hotkeys/supportpowers.yaml
+	common|hotkeys/viewport.yaml
+	mw|hotkeys.yaml
+    
 LoadScreen: CncLoadScreen
 	Image: mw|uibits/chrome.png
 	Text: Loading

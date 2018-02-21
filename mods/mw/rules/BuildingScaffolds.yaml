@@ -7,7 +7,7 @@ NUKENEW.scaff:
 		PlayerPalette: raplayer
 		Image: nukenew
 	CustomSellValue:
-		Value: 150
+		Value: 250
 	Valued:
 		Cost: 500
 	Tooltip:
@@ -18,7 +18,7 @@ NUKENEW.scaff:
 		Prerequisites: factnew
 		Description: Generates livingspace. Livingspace increases over time by generating peasants.\nCan hold up to 8 peasants, spawntime depends on number of shacks and large huts.\n\n\n\n
 		Queue: MBuilding.GDI
-		BuildDuration: 25
+		BuildDuration: 250
 	Health:
 		HP: 25000
 	RevealsShroud:
@@ -31,21 +31,21 @@ NUKENEW.scaff:
 	WithSpriteBody:
 		RequiresCondition: inactive
 	DebugTransformOnCondition@Finsihed:
-		RequiresCondition: (10 - Construct) <= 0
+		RequiresCondition: (15 - Construct) <= 0
 		IntoActor: NUKENEW
-		ReadyAudio: ConstructionComplete
+		ReadyAudio:
 	ExternalCondition@buildfurther: 
 		Condition: Construct
-		TotalCap: 10
+		TotalCap: 15
 	ExternalCondition@Deliverfurther:
 		Condition: DeliveredResources
 		TotalCap: 10
 	Targetable@buildfurther: 
 		TargetTypes: Buildable
-		RequiresCondition: DeliveredResources > Construct && (10 - Construct) > 0
+		RequiresCondition: DeliveredResources > Construct && (15 - Construct) > 0
 	Targetable@deliverresources: 
 		TargetTypes: Deliverable
-		RequiresCondition: 10 > DeliveredResources
+		RequiresCondition: 15 > DeliveredResources
 	WithIdleOverlay@base1:
 		Sequence: make1
 		RequiresCondition: Construct > 3 && Construct < 4
@@ -54,16 +54,16 @@ NUKENEW.scaff:
 		RequiresCondition: Construct >= 4 && Construct < 5
 	WithIdleOverlay@base3:
 		Sequence: make3
-		RequiresCondition: Construct >= 5 && Construct < 6
+		RequiresCondition: Construct >= 5 && Construct < 7
 	WithIdleOverlay@base4:
 		Sequence: make4
-		RequiresCondition: Construct >= 6 && Construct < 7
+		RequiresCondition: Construct >= 7 && Construct < 9
 	WithIdleOverlay@base5:
 		Sequence: make5
-		RequiresCondition: Construct >= 7 && Construct < 8
+		RequiresCondition: Construct >= 9 && Construct < 12
 	WithIdleOverlay@base6:
 		Sequence: make6
-		RequiresCondition: Construct >= 8
+		RequiresCondition: Construct >= 12
 		
 LODGE.scaff:
 	Inherits: ^2x2SITE
@@ -78,61 +78,61 @@ LODGE.scaff:
 		PlayerPalette: raplayer
 		Image: lodge
 	CustomSellValue:
-		Value: 100
+		Value: 350
 	Valued:
-		Cost: 300
+		Cost: 700
 	Tooltip:
-		Name: Construction Site (Hunter Lodge)
+		Name: Construction Site (Forester Lodge)
 	Buildable:
 		IconPalette: raicon
 		BuildPaletteOrder: 10
-		Description: A hunter can go out and hunt down animals from here.\n\n\n
+		Description: A hunter will start searching for deer from this building aswell as a lumberer will gather wood.\nGood for early resource management\n\n
 		Queue: MResources.GDI, MResources.Nod
 		Adjacent: 10
-		BuildDuration: 15
+		BuildDuration: 350
 	Health:
 		HP: 10000
 	RevealsShroud:
 		Range: 4c0
 	WithBuildingBib:
 	Selectable:
-		Bounds: 48,26,0,9
+		Bounds: 48,46,0,-9
 	SelectionDecorations:
-		VisualBounds: 48,27,0,-4
+		VisualBounds: 48,46,0,-9
 	WithSpriteBody:
 		RequiresCondition: inactive
 	DebugTransformOnCondition@Finsihed:
-		RequiresCondition: (15 - Construct) <= 0
+		RequiresCondition: (21 - Construct) <= 0
 		IntoActor: LODGE
-		ReadyAudio: ConstructionComplete
+		ReadyAudio:
 	ExternalCondition@buildfurther: 
 		Condition: Construct
-		TotalCap: 15
+		TotalCap: 21
 	ExternalCondition@Deliverfurther:
 		Condition: DeliveredResources
-		TotalCap: 15
+		TotalCap: 21
 	Targetable@buildfurther: 
 		TargetTypes: Buildable
-		RequiresCondition: DeliveredResources > Construct && (15 - Construct) > 0
+		RequiresCondition: DeliveredResources > Construct && (21 - Construct) > 0
 	Targetable@deliverresources: 
 		TargetTypes: Deliverable
-		RequiresCondition: 15 > DeliveredResources
+		RequiresCondition:21 > DeliveredResources
 	WithIdleOverlay@base1:
 		Sequence: make1
-		RequiresCondition: Construct >= 3 && Construct < 6
+		RequiresCondition: Construct >= 1 && Construct < 6
 	WithIdleOverlay@base2:
 		Sequence: make2
-		RequiresCondition: Construct >= 6 && Construct < 10
+		RequiresCondition: Construct >= 6 && Construct < 11
 	WithIdleOverlay@base3:
 		Sequence: make3
-		RequiresCondition: Construct >= 10 && Construct < 12
+		RequiresCondition: Construct >= 11 && Construct < 17
 	WithIdleOverlay@base4:
 		Sequence: make4
-		RequiresCondition: Construct >= 12 
+		RequiresCondition: Construct >= 17
 	WithRangeCircle:
 		Type: HunterLodge
 		UsePlayerColor: true
-		Range: 15c0
+		Range: 17c0
 		
 LJACKB.scaff:
 	Inherits: ^1x1SITE
@@ -146,18 +146,18 @@ LJACKB.scaff:
 		PlayerPalette: raplayer
 		Image: ljackb
 	CustomSellValue:
-		Value: 175
+		Value: 225
 	Valued:
 		Cost: 450
 	Tooltip:
 		Name: Construction Site (Lumber Shack)
-	Buildable:
-		IconPalette: raicon
-		BuildPaletteOrder: 5
-		Description: Collects Lumber by chopping surrounding Trees.\n Remember: Trees do not respawn!\nRequires 1 peasant\n
-		Queue: MResources.GDI, MResources.Nod, , MResources.SUL
-		Adjacent: 10
-		BuildDuration: 15
+#	Buildable:
+#		IconPalette: raicon
+#		BuildPaletteOrder: 5
+#		Description: Collects Lumber by chopping surrounding Trees.\n Remember: Trees do not respawn!\nRequires 1 peasant\n
+#		Queue: MResources.GDI, MResources.Nod, , MResources.SUL
+#		Adjacent: 10
+#		BuildDuration: 225
 	Health:
 		HP: 10000
 	RevealsShroud:
@@ -169,30 +169,30 @@ LJACKB.scaff:
 	WithSpriteBody:
 		RequiresCondition: inactive
 	DebugTransformOnCondition@Finsihed:
-		RequiresCondition: (20 - Construct) <= 0
+		RequiresCondition: (14 - Construct) <= 0
 		IntoActor: ljackb
-		ReadyAudio: ConstructionComplete
+		ReadyAudio:
 	ExternalCondition@buildfurther: 
 		Condition: Construct
-		TotalCap: 20
+		TotalCap: 14
 	ExternalCondition@Deliverfurther:
 		Condition: DeliveredResources
-		TotalCap: 20
+		TotalCap: 14
 	Targetable@buildfurther: 
 		TargetTypes: Buildable
-		RequiresCondition: DeliveredResources > Construct && (20 - Construct) > 0
+		RequiresCondition: DeliveredResources > Construct && (14 - Construct) > 0
 	Targetable@deliverresources: 
 		TargetTypes: Deliverable
-		RequiresCondition: 20 > DeliveredResources
+		RequiresCondition: 14 > DeliveredResources
 	WithIdleOverlay@base1:
 		Sequence: make1
-		RequiresCondition: Construct >= 3 && Construct < 9
+		RequiresCondition: Construct >= 2 && Construct < 7
 	WithIdleOverlay@base2:
 		Sequence: make2
-		RequiresCondition: Construct >= 9 && Construct < 15
+		RequiresCondition: Construct >= 7 && Construct < 10
 	WithIdleOverlay@base3:
 		Sequence: make3
-		RequiresCondition: Construct >= 15 
+		RequiresCondition: Construct >= 10
 	WithRangeCircle:
 		Type: Lumberer
 		UsePlayerColor: true
@@ -207,7 +207,7 @@ NUKXL.scaff:
 		PlayerPalette: raplayer
 		Image: nukxl
 	CustomSellValue:
-		Value: 400
+		Value: 600
 	Valued:
 		Cost: 1200
 	Tooltip:
@@ -216,10 +216,10 @@ NUKXL.scaff:
 		Buildable:
 		IconPalette: raicon
 		BuildPaletteOrder: 30
-		Prerequisites: anyarmory
+		Prerequisites: anycastle
 		Queue: MBuilding.GDI
 		Description: Provides more livingspace. Livingspace increases over time by generating peasants.\nCan hold up to 30 peasants. \ncheaper than the standard Shack.\n\n\n\n
-		BuildDuration: 20
+		BuildDuration: 600
 	Health:
 		HP: 60000
 	RevealsShroud:
@@ -234,7 +234,7 @@ NUKXL.scaff:
 	DebugTransformOnCondition@Finsihed:
 		RequiresCondition: (35 - Construct) <= 0
 		IntoActor: NUKXL
-		ReadyAudio: ConstructionComplete
+		ReadyAudio:
 	ExternalCondition@buildfurther: 
 		Condition: Construct
 		TotalCap: 35
@@ -279,7 +279,7 @@ HANDNEW.scaff:
 		PlayerPalette: raplayer
 		Image: handew
 	CustomSellValue:
-		Value: 300
+		Value: 450
 	Valued:
 		Cost: 900
 	Tooltip:
@@ -290,7 +290,7 @@ HANDNEW.scaff:
 		Prerequisites: anypower
 		Description: Trains Infantry only\n\n\n\n
 		Queue: MMilitary.Nod
-		BuildDuration: 45
+		BuildDuration: 450
 	Health:
 		HP: 32500
 	RevealsShroud:
@@ -303,36 +303,36 @@ HANDNEW.scaff:
 	WithSpriteBody:
 		RequiresCondition: inactive
 	DebugTransformOnCondition@Finsihed:
-		RequiresCondition: (30 - Construct) <= 0
+		RequiresCondition: (27 - Construct) <= 0
 		IntoActor: HANDNEW
-		ReadyAudio: ConstructionComplete
+		ReadyAudio:
 	ExternalCondition@buildfurther: 
 		Condition: Construct
-		TotalCap: 30
+		TotalCap: 27
 	ExternalCondition@Deliverfurther:
 		Condition: DeliveredResources
-		TotalCap: 30
+		TotalCap: 27
 	Targetable@buildfurther: 
 		TargetTypes: Buildable
-		RequiresCondition: DeliveredResources > Construct && (30 - Construct) > 0
+		RequiresCondition: DeliveredResources > Construct && (27 - Construct) > 0
 	Targetable@deliverresources: 
 		TargetTypes: Deliverable
-		RequiresCondition: 30 > DeliveredResources
+		RequiresCondition: 27 > DeliveredResources
 	WithIdleOverlay@base1:
 		Sequence: make1
 		RequiresCondition: Construct > 10 && Construct < 14
 	WithIdleOverlay@base2:
 		Sequence: make2
-		RequiresCondition: Construct >= 14 && Construct < 20
+		RequiresCondition: Construct >= 14 && Construct < 18
 	WithIdleOverlay@base3:
 		Sequence: make3
-		RequiresCondition: Construct >= 20 && Construct < 23
+		RequiresCondition: Construct >= 18 && Construct < 21
 	WithIdleOverlay@base4:
 		Sequence: make4
-		RequiresCondition: Construct >= 23 && Construct < 27
+		RequiresCondition: Construct >= 21 && Construct < 24
 	WithIdleOverlay@base5:
 		Sequence: make5
-		RequiresCondition: Construct >= 27
+		RequiresCondition: Construct >= 24
 
 
 		
@@ -349,7 +349,7 @@ ZEROPROC.scaff:
 		PlayerPalette: raplayer
 		Image: windmill
 	CustomSellValue:
-		Value: 450
+		Value: 650
 	Valued:
 		Cost: 1300
 	Tooltip:
@@ -360,7 +360,7 @@ ZEROPROC.scaff:
 		Prerequisites: anypower
 		Description: Provides basic resource gathering for Crops and Grain.\n Comes with 2 farmers.\n Can only operate up to 6 farmers at once.\n\n\n\n
 		Queue: MResources.GDI
-		BuildDuration: 65
+		BuildDuration: 650
 	Health:
 		HP: 40000
 	RevealsShroud:
@@ -373,24 +373,24 @@ ZEROPROC.scaff:
 	WithSpriteBody:
 		RequiresCondition: inactive
 	GrantCondition@finishedbuild: # test
-		RequiresCondition: (45 - Construct) <= 0
+		RequiresCondition: (39 - Construct) <= 0
 		Condition: transform
 	DebugTransformOnCondition@Finsihed:
 		RequiresCondition: transform
 		IntoActor: ZEROPROC
-		ReadyAudio: ConstructionComplete
+		ReadyAudio:
 	ExternalCondition@buildfurther: 
 		Condition: Construct
-		TotalCap: 45
+		TotalCap: 39
 	ExternalCondition@Deliverfurther:
 		Condition: DeliveredResources
-		TotalCap: 45
+		TotalCap: 39
 	Targetable@buildfurther: 
 		TargetTypes: Buildable
-		RequiresCondition: DeliveredResources > Construct && (45 - Construct) > 0
+		RequiresCondition: DeliveredResources > Construct && (39 - Construct) > 0
 	Targetable@deliverresources: 
 		TargetTypes: Deliverable
-		RequiresCondition: 45 > DeliveredResources
+		RequiresCondition: 39 > DeliveredResources
 	WithIdleOverlay@base1:
 		Sequence: make1
 		RequiresCondition: Construct > 10 && Construct < 15
@@ -414,32 +414,34 @@ ZEROPROC.scaff:
 NODPROC.scaff:
 	Inherits: ZEROPROC.scaff
 	DebugTransformOnCondition@Finsihed:
-		RequiresCondition: (52 - Construct) <= 0
+		RequiresCondition: (45 - Construct) <= 0
 		IntoActor: NODPROC
-		ReadyAudio: ConstructionComplete
+		ReadyAudio:
 	RenderSprites:
 		Image: nodmill
 	Valued:
 		Cost: 1500
+	CustomSellValue:
+		Value: 750
 	Buildable:
 		IconPalette: raicon
 		BuildPaletteOrder: 20
 		Prerequisites: anypower
 		Description: Provides basic resource gathering for Crops and Grain.\n Comes with 2 farmers.\n Can only operate up to 6 farmers at once.\n\n\n\n
 		Queue: MResources.Nod
-		BuildDuration: 75
+		BuildDuration: 750
 	ExternalCondition@buildfurther: 
 		Condition: Construct
-		TotalCap: 52
+		TotalCap: 45
 	ExternalCondition@Deliverfurther:
 		Condition: DeliveredResources
-		TotalCap: 52
+		TotalCap: 45
 	Targetable@buildfurther: 
 		TargetTypes: Buildable
-		RequiresCondition: DeliveredResources > Construct && (52 - Construct) > 0
+		RequiresCondition: DeliveredResources > Construct && (45 - Construct) > 0
 	Targetable@deliverresources: 
 		TargetTypes: Deliverable
-		RequiresCondition: 52 > DeliveredResources
+		RequiresCondition: 45 > DeliveredResources
 	Selectable:
 		Bounds: 48,70,0,-10
 	SelectionDecorations:
@@ -459,13 +461,13 @@ HQNEWNOD.scaff:
 		Cost: 1200
 	Tooltip:
 		Name: Construction Site (Smith)
-	Buildable:
-		IconPalette: raicon
-		BuildPaletteOrder: 10
-		Prerequisites: proc
-		Queue: MTech.Nod
-		Description: Unlocks higher-tech units and buildings.\n\n\n\n
-		BuildDuration: 60
+#	Buildable:
+#		IconPalette: raicon
+#		BuildPaletteOrder: 10
+#		Prerequisites: proc
+#		Queue: MTech.Nod
+#		Description: Unlocks higher-tech units and buildings.\n\n\n\n
+#		BuildDuration: 60
 	Health:
 		HP: 17000
 	RevealsShroud:
@@ -480,7 +482,7 @@ HQNEWNOD.scaff:
 	DebugTransformOnCondition@Finsihed:
 		RequiresCondition: (74 - Construct) <= 0
 		IntoActor: HQNEWNOD
-		ReadyAudio: ConstructionComplete
+		ReadyAudio:
 	ExternalCondition@buildfurther: 
 		Condition: Construct
 		TotalCap: 74
@@ -531,11 +533,11 @@ HQNEWGDI.scaff:
 		Name: Construction Site (Inventor)
 	Buildable:
 		IconPalette: raicon
-		BuildPaletteOrder: 10
+		BuildPaletteOrder: 80
 		Prerequisites: proc
-		Queue: MTech.GDI
+		Queue: MBuilding.GDI
 		Description: Unlocks higher-tech units and buildings.\n\n\n\n
-		BuildDuration: 60
+		BuildDuration: 600
 	Health:
 		HP: 17000
 	RevealsShroud:
@@ -548,42 +550,42 @@ HQNEWGDI.scaff:
 	WithSpriteBody:
 		RequiresCondition: inactive
 	DebugTransformOnCondition@Finsihed:
-		RequiresCondition: (74 - Construct) <= 0
+		RequiresCondition: (36 - Construct) <= 0
 		IntoActor: HQNEWGDI
-		ReadyAudio: ConstructionComplete
+		ReadyAudio:
 	ExternalCondition@buildfurther: 
 		Condition: Construct
-		TotalCap: 74
+		TotalCap: 36
 	ExternalCondition@Deliverfurther:
 		Condition: DeliveredResources
-		TotalCap: 74
+		TotalCap: 36
 	Targetable@buildfurther: 
 		TargetTypes: Buildable
-		RequiresCondition: DeliveredResources > Construct && (74 - Construct) > 0
+		RequiresCondition: DeliveredResources > Construct && (36 - Construct) > 0
 	Targetable@deliverresources: 
 		TargetTypes: Deliverable
-		RequiresCondition: 74 > DeliveredResources
+		RequiresCondition: 36 > DeliveredResources
 	WithIdleOverlay@base1:
 		Sequence: make1
-		RequiresCondition: Construct > 10 && Construct < 22
+		RequiresCondition: Construct > 4 && Construct < 8
 	WithIdleOverlay@base2:
 		Sequence: make2
-		RequiresCondition: Construct >= 22 && Construct < 23
+		RequiresCondition: Construct >= 8 && Construct < 13
 	WithIdleOverlay@base3:
 		Sequence: make3
-		RequiresCondition: Construct >= 23 && Construct < 34
+		RequiresCondition: Construct >= 13 && Construct < 17
 	WithIdleOverlay@base4:
 		Sequence: make4
-		RequiresCondition: Construct >= 34 && Construct < 45
+		RequiresCondition: Construct >= 17 && Construct < 22
 	WithIdleOverlay@base5:
 		Sequence: make5
-		RequiresCondition: Construct >= 45 && Construct < 55
+		RequiresCondition: Construct >= 22 && Construct < 28
 	WithIdleOverlay@base6:
 		Sequence: make6
-		RequiresCondition: Construct >= 55 && Construct < 64
+		RequiresCondition: Construct >= 28 && Construct < 32
 	WithIdleOverlay@base7:
 		Sequence: make7
-		RequiresCondition: Construct >= 64
+		RequiresCondition: Construct >= 32
 
 ARMORYNOD.scaff:
 	Inherits: ^2x2SITE
@@ -594,18 +596,18 @@ ARMORYNOD.scaff:
 		PlayerPalette: raplayer
 		Image: armory
 	CustomSellValue:
-		Value: 600
+		Value: 650
 	Valued:
-		Cost: 1750
+		Cost: 1300
 	Tooltip:
 		Name: Construction Site (Armory)
 	Buildable:
 		IconPalette: raicon
-		BuildPaletteOrder: 20
-		Prerequisites: anyhq
-		Queue: MTech.Nod
+		BuildPaletteOrder: 80
+		Prerequisites: proc
+		Queue: MBuilding.Nod
 		Description: Unlocks Support Powers and Raiding Squad.\nHeals Cavalry and Infantry.\n\n\n\n
-		BuildDuration: 87
+		BuildDuration: 650
 	Health:
 		HP: 22500
 	RevealsShroud:
@@ -618,36 +620,36 @@ ARMORYNOD.scaff:
 	WithSpriteBody:
 		RequiresCondition: inactive
 	DebugTransformOnCondition@Finsihed:
-		RequiresCondition: (86 - Construct) <= 0
+		RequiresCondition: (39 - Construct) <= 0
 		IntoActor: ARMORYNOD
-		ReadyAudio: ConstructionComplete
+		ReadyAudio:
 	ExternalCondition@buildfurther: 
 		Condition: Construct
-		TotalCap: 86
+		TotalCap: 39
 	ExternalCondition@Deliverfurther:
 		Condition: DeliveredResources
-		TotalCap: 86
+		TotalCap: 39
 	Targetable@buildfurther: 
 		TargetTypes: Buildable
-		RequiresCondition: DeliveredResources > Construct && (86 - Construct) > 0
+		RequiresCondition: DeliveredResources > Construct && (39 - Construct) > 0
 	Targetable@deliverresources: 
 		TargetTypes: Deliverable
-		RequiresCondition: 86 > DeliveredResources
+		RequiresCondition: 39 > DeliveredResources
 	WithIdleOverlay@base1:
 		Sequence: make1
-		RequiresCondition: Construct > 5 && Construct < 20
+		RequiresCondition: Construct > 5 && Construct < 12
 	WithIdleOverlay@base2:
 		Sequence: make2
-		RequiresCondition: Construct >= 20 && Construct < 40
+		RequiresCondition: Construct >= 12 && Construct < 20
 	WithIdleOverlay@base3:
 		Sequence: make3
-		RequiresCondition: Construct >= 40 && Construct < 60
+		RequiresCondition: Construct >= 20 && Construct < 28
 	WithIdleOverlay@base4:
 		Sequence: make4
-		RequiresCondition: Construct >= 60 && Construct < 80
+		RequiresCondition: Construct >= 28 && Construct < 35
 	WithIdleOverlay@base5:
 		Sequence: make5
-		RequiresCondition: Construct >= 80
+		RequiresCondition: Construct >= 35
 
 ARMORYGDI.scaff:
 	Inherits: ^2x2SITE
@@ -663,13 +665,13 @@ ARMORYGDI.scaff:
 		Cost: 1750
 	Tooltip:
 		Name: Construction Site (Armory)
-	Buildable:
-		IconPalette: raicon
-		BuildPaletteOrder: 20
-		Prerequisites: anyhq
-		Queue: MTech.GDI
-		Description: Unlocks Support Powers.\nHeals Cavalry and Infantry.\n\n\n\n
-		BuildDuration: 87
+#	Buildable:
+#		IconPalette: raicon
+#		BuildPaletteOrder: 20
+#		Prerequisites: anyhq
+#		Queue: MTech.GDI
+#		Description: Unlocks Support Powers.\nHeals Cavalry and Infantry.\n\n\n\n
+#		BuildDuration: 87
 	Health:
 		HP: 22500
 	RevealsShroud:
@@ -684,7 +686,7 @@ ARMORYGDI.scaff:
 	DebugTransformOnCondition@Finsihed:
 		RequiresCondition: (90 - Construct) <= 0
 		IntoActor: ARMORYGDI
-		ReadyAudio: ConstructionComplete
+		ReadyAudio:
 	ExternalCondition@buildfurther: 
 		Condition: Construct
 		TotalCap: 90
@@ -722,7 +724,7 @@ NUK2NEW.scaff:
 		PlayerPalette: raplayer
 		Image: nuk2new
 	CustomSellValue:
-		Value: 250
+		Value: 400
 	Valued:
 		Cost: 800
 	Tooltip:
@@ -733,7 +735,7 @@ NUK2NEW.scaff:
 		Prerequisites: anyhq
 		Queue: MBuilding.GDI
 		Description: Provides more livingspace. Livingspace increases over time by generating peasants.\nCan hold up to 16 peasants, spawntime depends on number of shacks and large huts. \ncheaper than the standard Shack.\n\n\n\n
-		BuildDuration: 40
+		BuildDuration: 400
 	Health:
 		HP: 17500
 	RevealsShroud:
@@ -746,21 +748,21 @@ NUK2NEW.scaff:
 	WithSpriteBody:
 		RequiresCondition: inactive
 	DebugTransformOnCondition@Finsihed:
-		RequiresCondition: (28 - Construct) <= 0
+		RequiresCondition: (24 - Construct) <= 0
 		IntoActor: NUK2NEW
-		ReadyAudio: ConstructionComplete
+		ReadyAudio:
 	ExternalCondition@buildfurther: 
 		Condition: Construct
-		TotalCap: 28
+		TotalCap: 24
 	ExternalCondition@Deliverfurther:
 		Condition: DeliveredResources
-		TotalCap: 28
+		TotalCap: 24
 	Targetable@buildfurther: 
 		TargetTypes: Buildable
-		RequiresCondition: DeliveredResources > Construct && (28 - Construct) > 0
+		RequiresCondition: DeliveredResources > Construct && (24 - Construct) > 0
 	Targetable@deliverresources: 
 		TargetTypes: Deliverable
-		RequiresCondition: 28 > DeliveredResources
+		RequiresCondition: 24 > DeliveredResources
 	WithIdleOverlay@base1:
 		Sequence: make1
 		RequiresCondition: Construct > 5 && Construct < 10
@@ -778,7 +780,6 @@ NUK2NEW.scaff:
 XLTNTUNI.scaff:
 	Inherits: ^ConstructionSite
 	Inherits@Hitshape: ^2x2Shape
-	-ConstructionProgress@DeliveredResources:
 	GrantRandomCondition:
 		RandomConditions: valida, validb, validc
 		FallbackCondition: none
@@ -803,7 +804,7 @@ XLTNTUNI.scaff:
 		Prerequisites: anyhq
 		Queue: MBuilding.Nod
 		Description: Provides more livingspace. Livingspace increases over time by generating peasants.\nCan hold up to 12 peasants, spawntime depends on number of shacks and large huts. \ncheaper than the standard Shack.\n\n\n\n
-		BuildDuration: 30
+		BuildDuration: 300
 	Health:
 		HP: 17500
 	RevealsShroud:
@@ -817,78 +818,78 @@ XLTNTUNI.scaff:
 		RequiresCondition: DoNotRender
 	ExternalCondition@buildfurther: 
 		Condition: Construct
-		TotalCap: 40
+		TotalCap: 18
 	-ExternalCondition@Deliverfurther:
 	Targetable@buildfurther: 
 		TargetTypes: Buildable
-		RequiresCondition: Construct < 40
+		RequiresCondition: Construct < 18
 	-Targetable@deliverresources: 
 	DebugTransformOnCondition@typeA:
 		IntoActor: XLTNT1
-		RequiresCondition: Construct >= 40 && valida
-		ReadyAudio: ConstructionComplete
+		RequiresCondition: Construct >= 18 && valida
+		ReadyAudio:
 	TransformOnCondition@typeB:
 		IntoActor: XLTNT2
-		RequiresCondition: Construct >= 40 && validb
-		ReadyAudio: ConstructionComplete
+		RequiresCondition: Construct >= 18 && validb
+		ReadyAudio:
 	TransformOnCondition@typeC:
 		IntoActor: XLTNT3
-		RequiresCondition: Construct >= 40 && validc
-		ReadyAudio: ConstructionComplete
+		RequiresCondition: Construct >= 18 && validc
+		ReadyAudio:
 	WithIdleOverlay@base1:
 		Sequence: make1
-		RequiresCondition: Construct >= 0 && Construct < 10 && valida
+		RequiresCondition: Construct >= 0 && Construct < 5 && valida
 	WithIdleOverlay@base2:
 		Sequence: make2
-		RequiresCondition: Construct >= 10 && Construct < 15 && valida
+		RequiresCondition: Construct >= 5 && Construct < 7 && valida
 	WithIdleOverlay@base3:
 		Sequence: make3
-		RequiresCondition: Construct >= 15 && Construct < 20 && valida
+		RequiresCondition: Construct >= 7 && Construct < 10 && valida
 	WithIdleOverlay@base4:
 		Sequence: make4
-		RequiresCondition: Construct >= 20 && Construct < 25 && valida
+		RequiresCondition: Construct >= 10 && Construct < 14 && valida
 	WithIdleOverlay@base5:
 		Sequence: make5
-		RequiresCondition: Construct >= 25 && Construct < 35 && valida
+		RequiresCondition: Construct >= 14 && Construct < 16 && valida
 	WithIdleOverlay@base6:
 		Sequence: make6
-		RequiresCondition: Construct >= 35 && valida
+		RequiresCondition: Construct >= 16 && valida
 	WithIdleOverlay@base1a:
 		Sequence: make1a
-		RequiresCondition: Construct >= 0 && Construct < 10 && validb
+		RequiresCondition: Construct >= 0 && Construct < 5 && validb
 	WithIdleOverlay@base2a:
 		Sequence: make2a
-		RequiresCondition: Construct >= 10 && Construct < 15 && validb
+		RequiresCondition: Construct >= 5 && Construct < 7 && validb
 	WithIdleOverlay@base3a:
 		Sequence: make3a
-		RequiresCondition: Construct >= 15 && Construct < 20 && validb
+		RequiresCondition: Construct >= 7 && Construct < 10 && validb
 	WithIdleOverlay@base4a:
 		Sequence: make4a
-		RequiresCondition: Construct >= 20 && Construct < 25 && validb
+		RequiresCondition: Construct >= 10 && Construct < 14 && validb
 	WithIdleOverlay@base5a:
 		Sequence: make5a
-		RequiresCondition: Construct >= 25 && Construct < 35 && validb
+		RequiresCondition: Construct >= 14 && Construct < 16 && validb
 	WithIdleOverlay@base6a:
 		Sequence: make6a
-		RequiresCondition: Construct >= 35 && validb
+		RequiresCondition: Construct >= 16 && validb
 	WithIdleOverlay@base1b:
 		Sequence: make1b
-		RequiresCondition: Construct >= 0 && Construct < 10 && validc
+		RequiresCondition: Construct >= 0 && Construct < 5 && validc
 	WithIdleOverlay@base2b:
 		Sequence: make2b
-		RequiresCondition: Construct >= 10 && Construct < 15 && validc
+		RequiresCondition: Construct >= 5 && Construct < 7 && validc
 	WithIdleOverlay@base3b:
 		Sequence: make3b
-		RequiresCondition: Construct >= 15 && Construct < 20 && validc
+		RequiresCondition: Construct >= 7 && Construct < 10 && validc
 	WithIdleOverlay@base4b:
 		Sequence: make4b
-		RequiresCondition: Construct >= 20 && Construct < 25 && validc
+		RequiresCondition: Construct >= 10 && Construct < 14 && validc
 	WithIdleOverlay@base5b:
 		Sequence: make5b
-		RequiresCondition: Construct >= 25 && Construct < 35 && validc
+		RequiresCondition: Construct >= 14 && Construct < 16 && validc
 	WithIdleOverlay@base6b:
 		Sequence: make6b
-		RequiresCondition: Construct >= 35 && validc
+		RequiresCondition: Construct >= 16 && validc
 
 		
 PROCNEW.scaff:
@@ -911,7 +912,7 @@ PROCNEW.scaff:
 		PlayerPalette: raplayer
 		Image: procnew
 	CustomSellValue:
-		Value: 500
+		Value: 750
 	Valued:
 		Cost: 1500
 	Tooltip:
@@ -922,7 +923,7 @@ PROCNEW.scaff:
 		Prerequisites: anyhq
 		Description: Processes raw ore and Gold into useable metal.\nGenerates more money than the windmill.\n\n\n\n
 		Queue: MResources.GDI, MResources.Nod
-		BuildDuration: 75
+		BuildDuration: 750
 	Health:
 		HP: 60000
 	RevealsShroud:
@@ -935,21 +936,21 @@ PROCNEW.scaff:
 	WithSpriteBody:
 		RequiresCondition: inactive
 	DebugTransformOnCondition@Finsihed:
-		RequiresCondition: (60 - Construct) <= 0
+		RequiresCondition: (45 - Construct) <= 0
 		IntoActor: PROCNEW
-		ReadyAudio: ConstructionComplete
+		ReadyAudio:
 	ExternalCondition@buildfurther: 
 		Condition: Construct
-		TotalCap: 60
+		TotalCap: 45
 	ExternalCondition@Deliverfurther:
 		Condition: DeliveredResources
-		TotalCap: 60
+		TotalCap: 45
 	Targetable@buildfurther: 
 		TargetTypes: Buildable
-		RequiresCondition: DeliveredResources > Construct && (60 - Construct) > 0
+		RequiresCondition: DeliveredResources > Construct && (45 - Construct) > 0
 	Targetable@deliverresources: 
 		TargetTypes: Deliverable
-		RequiresCondition: 60 > DeliveredResources
+		RequiresCondition: 45 > DeliveredResources
 	WithIdleOverlay@base1:
 		Sequence: make1
 		RequiresCondition: Construct > 5 && Construct < 15
@@ -958,16 +959,16 @@ PROCNEW.scaff:
 		RequiresCondition: Construct >= 15 && Construct < 25
 	WithIdleOverlay@base3:
 		Sequence: make3
-		RequiresCondition: Construct >= 25 && Construct < 35
+		RequiresCondition: Construct >= 25 && Construct < 30
 	WithIdleOverlay@base4:
 		Sequence: make4
-		RequiresCondition: Construct >= 35 && Construct < 45
+		RequiresCondition: Construct >= 30 && Construct < 35
 	WithIdleOverlay@base5:
 		Sequence: make5
-		RequiresCondition: Construct >= 45 && Construct < 55
+		RequiresCondition: Construct >= 35 && Construct < 40
 	WithIdleOverlay@base6:
 		Sequence: make6
-		RequiresCondition: Construct >= 55
+		RequiresCondition: Construct >= 40
 		
 SILONEW.scaff:
 	Inherits: ^2x2SITE
@@ -981,7 +982,7 @@ SILONEW.scaff:
 		PlayerPalette: raplayer
 		Image: silonew
 	CustomSellValue:
-		Value: 100
+		Value: 150
 	Valued:
 		Cost: 300
 	Tooltip:
@@ -992,7 +993,7 @@ SILONEW.scaff:
 		Queue: MResources.SUL
 		Description: Stores additional Resources\n\n\n\n
 		IconPalette: raicon
-		BuildDuration: 15
+		BuildDuration: 150
 	Health:
 		HP: 20000
 	RevealsShroud:
@@ -1006,33 +1007,33 @@ SILONEW.scaff:
 	WithSpriteBody:
 		RequiresCondition: inactive
 	DebugTransformOnCondition@Finsihed:
-		RequiresCondition: (16 - Construct) <= 0
+		RequiresCondition: (9 - Construct) <= 0
 		IntoActor: SILONEW
-		ReadyAudio: ConstructionComplete
+		ReadyAudio:
 	ExternalCondition@buildfurther: 
 		Condition: Construct
-		TotalCap: 16
+		TotalCap: 9
 	ExternalCondition@Deliverfurther:
 		Condition: DeliveredResources
-		TotalCap: 16
+		TotalCap: 9
 	Targetable@buildfurther: 
 		TargetTypes: Buildable
-		RequiresCondition: DeliveredResources > Construct && (16 - Construct) > 0
+		RequiresCondition: DeliveredResources > Construct && (9 - Construct) > 0
 	Targetable@deliverresources: 
 		TargetTypes: Deliverable
-		RequiresCondition: 16 > DeliveredResources
+		RequiresCondition: 9 > DeliveredResources
 	WithIdleOverlay@base1:
 		Sequence: make1
-		RequiresCondition: Construct > 2 && Construct < 4
+		RequiresCondition: Construct > 1 && Construct < 3
 	WithIdleOverlay@base2:
 		Sequence: make2
-		RequiresCondition: Construct >= 4 && Construct < 6
+		RequiresCondition: Construct >= 3 && Construct < 5
 	WithIdleOverlay@base3:
 		Sequence: make3
-		RequiresCondition: Construct >= 6 && Construct < 9
+		RequiresCondition: Construct >= 5 && Construct < 7
 	WithIdleOverlay@base4:
 		Sequence: make4
-		RequiresCondition: Construct >= 9
+		RequiresCondition: Construct >= 7
 		
 				
 SILOTWO.scaff:
@@ -1072,39 +1073,39 @@ SILOTWO.scaff:
 	WithSpriteBody:
 		RequiresCondition: inactive
 	DebugTransformOnCondition@Finsihed:
-		RequiresCondition: (18 - Construct) <= 0
+		RequiresCondition: (9 - Construct) <= 0
 		IntoActor: SILOTWO
-		ReadyAudio: ConstructionComplete
+		ReadyAudio:
 	ExternalCondition@buildfurther: 
 		Condition: Construct
-		TotalCap: 18
+		TotalCap: 9
 	ExternalCondition@Deliverfurther:
 		Condition: DeliveredResources
-		TotalCap: 18
+		TotalCap: 9
 	Targetable@buildfurther: 
 		TargetTypes: Buildable
-		RequiresCondition: DeliveredResources > Construct && (18 - Construct) > 0
+		RequiresCondition: DeliveredResources > Construct && (9 - Construct) > 0
 	Targetable@deliverresources: 
 		TargetTypes: Deliverable
-		RequiresCondition: 18 > DeliveredResources
+		RequiresCondition: 9 > DeliveredResources
 	WithIdleOverlay@base1:
 		Sequence: make1
 		RequiresCondition: Construct > 2 && Construct < 4
 	WithIdleOverlay@base2:
 		Sequence: make2
-		RequiresCondition: Construct >= 4 && Construct < 6
+		RequiresCondition: Construct >= 4 && Construct < 5
 	WithIdleOverlay@base3:
 		Sequence: make3
-		RequiresCondition: Construct >= 6 && Construct < 9
+		RequiresCondition: Construct >= 5 && Construct < 6
 	WithIdleOverlay@base4:
 		Sequence: make4
-		RequiresCondition: Construct >= 9 && Construct < 12
+		RequiresCondition: Construct >= 6 && Construct < 7
 	WithIdleOverlay@base5:
 		Sequence: make5
-		RequiresCondition: Construct >= 12 && Construct < 14
+		RequiresCondition: Construct >= 7 && Construct < 8
 	WithIdleOverlay@base6:
 		Sequence: make6
-		RequiresCondition: Construct >= 14
+		RequiresCondition: Construct >= 8
 		
 BARRNEW.scaff:
 	Inherits: ^2x2SITE
@@ -1115,7 +1116,7 @@ BARRNEW.scaff:
 		PlayerPalette: raplayer
 		Image: barrnew
 	CustomSellValue:
-		Value: 240
+		Value: 375
 	Valued:
 		Cost: 750
 	Tooltip:
@@ -1126,7 +1127,7 @@ BARRNEW.scaff:
 		Prerequisites: anypower
 		Description: Trains Infantry only\n\n\n\n
 		Queue: MMilitary.GDI
-		BuildDuration: 37
+		BuildDuration: 375
 	Health:
 		HP: 25000
 	RevealsShroud:
@@ -1139,21 +1140,21 @@ BARRNEW.scaff:
 	WithSpriteBody:
 		RequiresCondition: inactive
 	DebugTransformOnCondition@Finsihed:
-		RequiresCondition: (20 - Construct) <= 0
+		RequiresCondition: (23 - Construct) <= 0
 		IntoActor: BARRNEW
-		ReadyAudio: ConstructionComplete
+		ReadyAudio:
 	ExternalCondition@buildfurther: 
 		Condition: Construct
-		TotalCap: 20
+		TotalCap: 23
 	ExternalCondition@Deliverfurther:
 		Condition: DeliveredResources
-		TotalCap: 20
+		TotalCap: 23
 	Targetable@buildfurther: 
 		TargetTypes: Buildable
-		RequiresCondition: DeliveredResources > Construct && (20 - Construct) > 0
+		RequiresCondition: DeliveredResources > Construct && (23 - Construct) > 0
 	Targetable@deliverresources: 
 		TargetTypes: Deliverable
-		RequiresCondition: 20 > DeliveredResources
+		RequiresCondition: 23 > DeliveredResources
 	WithIdleOverlay@base1:
 		Sequence: make1
 		RequiresCondition: Construct > 6 && Construct < 10
@@ -1162,13 +1163,13 @@ BARRNEW.scaff:
 		RequiresCondition: Construct >= 10 && Construct < 13
 	WithIdleOverlay@base3:
 		Sequence: make3
-		RequiresCondition: Construct >= 13 && Construct < 15
+		RequiresCondition: Construct >= 13 && Construct < 16
 	WithIdleOverlay@base4:
 		Sequence: make4
-		RequiresCondition: Construct >= 15 && Construct < 18
+		RequiresCondition: Construct >= 16 && Construct < 20
 	WithIdleOverlay@base5:
 		Sequence: make5
-		RequiresCondition: Construct >= 18
+		RequiresCondition: Construct >= 20
 		
 STALL.scaff:
 	Inherits: ^3x2SITE
@@ -1179,7 +1180,7 @@ STALL.scaff:
 		PlayerPalette: raplayer
 		Image: stall
 	CustomSellValue:
-		Value: 700
+		Value: 1000
 	Valued:
 		Cost: 2000
 	Tooltip:
@@ -1187,10 +1188,10 @@ STALL.scaff:
 	Buildable:
 		IconPalette: raicon
 		BuildPaletteOrder: 20
-		Prerequisites: proc, barracks
+		Prerequisites: proc
 		Description: Trains cavalry\n\n\n\n
 		Queue: MMilitary.GDI
-		BuildDuration: 100
+		BuildDuration: 1000
 	Health:
 		HP: 50000
 	RevealsShroud:
@@ -1203,558 +1204,9 @@ STALL.scaff:
 	WithSpriteBody:
 		RequiresCondition: inactive
 	DebugTransformOnCondition@Finsihed:
-		RequiresCondition: (80 - Construct) <= 0
-		IntoActor: STALL
-		ReadyAudio: ConstructionComplete
-	ExternalCondition@buildfurther: 
-		Condition: Construct
-		TotalCap: 80
-	ExternalCondition@Deliverfurther:
-		Condition: DeliveredResources
-		TotalCap: 80
-	Targetable@buildfurther: 
-		TargetTypes: Buildable
-		RequiresCondition: DeliveredResources > Construct && (80 - Construct) > 0
-	Targetable@deliverresources: 
-		TargetTypes: Deliverable
-		RequiresCondition: 80 > DeliveredResources
-	WithIdleOverlay@base1:
-		Sequence: make1
-		RequiresCondition: Construct > 5 && Construct < 15
-	WithIdleOverlay@base2:
-		Sequence: make2
-		RequiresCondition: Construct >= 15 && Construct < 25
-	WithIdleOverlay@base3:
-		Sequence: make3
-		RequiresCondition: Construct >= 25 && Construct < 35
-	WithIdleOverlay@base4:
-		Sequence: make4
-		RequiresCondition: Construct >= 35 && Construct < 55
-	WithIdleOverlay@base5:
-		Sequence: make5
-		RequiresCondition: Construct >= 55 && Construct < 70
-	WithIdleOverlay@base6:
-		Sequence: make6
-		RequiresCondition: Construct >= 70
-		
-NODSTALL.scaff:
-	Inherits: ^4x2SITE
-	Inherits@Hitshape: ^4x2Shape
-	Armor:
-		Type: Concrete
-	RenderSprites:
-		PlayerPalette: raplayer
-		Image: nodstall
-	CustomSellValue:
-		Value: 600
-	Valued:
-		Cost: 1750
-	Tooltip:
-		Name: Construction Site (Stables)
-	Buildable:
-		IconPalette: raicon
-		BuildPaletteOrder: 20
-		Prerequisites: proc, barracks
-		Description: Trains cavalry\n\n\n\n
-		Queue: MMilitary.Nod
-		BuildDuration: 87
-	Health:
-		HP: 43000
-	RevealsShroud:
-		Range: 4c0
-	WithBuildingBib:
-	Selectable:
-		Bounds: 96,48
-	SelectionDecorations:
-		VisualBounds: 86,64,0,-4
-	WithSpriteBody:
-		RequiresCondition: inactive
-	DebugTransformOnCondition@Finsihed:
-		RequiresCondition: (75 - Construct) <= 0
-		IntoActor: NODSTALL
-		ReadyAudio: ConstructionComplete
-	ExternalCondition@buildfurther: 
-		Condition: Construct
-		TotalCap: 75
-	ExternalCondition@Deliverfurther:
-		Condition: DeliveredResources
-		TotalCap: 75
-	Targetable@buildfurther: 
-		TargetTypes: Buildable
-		RequiresCondition: DeliveredResources > Construct && (75 - Construct) > 0
-	Targetable@deliverresources: 
-		TargetTypes: Deliverable
-		RequiresCondition: 75 > DeliveredResources
-	WithIdleOverlay@base1:
-		Sequence: make1
-		RequiresCondition: Construct > 5 && Construct < 15
-	WithIdleOverlay@base2:
-		Sequence: make2
-		RequiresCondition: Construct >= 15 && Construct < 25
-	WithIdleOverlay@base3:
-		Sequence: make3
-		RequiresCondition: Construct >= 25 && Construct < 35
-	WithIdleOverlay@base4:
-		Sequence: make4
-		RequiresCondition: Construct >= 35 && Construct < 55
-	WithIdleOverlay@base5:
-		Sequence: make5
-		RequiresCondition: Construct >= 55 && Construct < 65
-	WithIdleOverlay@base6:
-		Sequence: make6
-		RequiresCondition: Construct >= 65
-		
-CASTLE.scaff:
-	Inherits: ^3x3SITE
-	Inherits@Hitshape: ^3x2Shape
-	Building:
-		Footprint: ___ xxx xxx ===
-		Dimensions: 3,4
-		LocalCenterOffset: 0,-512,0
-	Armor:
-		Type: Concrete
-	RenderSprites:
-		PlayerPalette: raplayer
-		Image: castle
-	CustomSellValue:
-		Value: 850
-	Valued:
-		Cost: 2500
-	Tooltip:
-		Name: Construction Site (Castle)
-	Buildable:
-		IconPalette: raicon
-		BuildPaletteOrder: 30
-		Prerequisites: anyhq, anyarmory
-		Description: Unlocks Superweapon.\n Unlocks Heavy Cavalry, Knight's and Trebuchet.\nCan hold up to 4 nobles.\n\n\n\n
-		Queue: MTech.Nod
-		BuildDuration: 125
-	Health:
-		HP: 100000
-	RevealsShroud:
-		Range: 4c0
-	WithBuildingBib:
-	Selectable:
-		Bounds: 72,48,0,12
-	SelectionDecorations:
-		VisualBounds: 72,68,0,0
-	WithSpriteBody:
-		RequiresCondition: inactive
-	DebugTransformOnCondition@Finsihed:
-		RequiresCondition: (100 - Construct) <= 0
-		IntoActor: CASTLE
-		ReadyAudio: ConstructionComplete
-	ExternalCondition@buildfurther: 
-		Condition: Construct
-		TotalCap: 100
-	ExternalCondition@Deliverfurther:
-		Condition: DeliveredResources
-		TotalCap: 100
-	Targetable@buildfurther: 
-		TargetTypes: Buildable
-		RequiresCondition: DeliveredResources > Construct && (100 - Construct) > 0
-	Targetable@deliverresources: 
-		TargetTypes: Deliverable
-		RequiresCondition: 100 > DeliveredResources
-	WithIdleOverlay@base1:
-		Sequence: make1
-		RequiresCondition: Construct > 5 && Construct < 15
-	WithIdleOverlay@base2:
-		Sequence: make2
-		RequiresCondition: Construct >= 15 && Construct < 30
-	WithIdleOverlay@base3:
-		Sequence: make3
-		RequiresCondition: Construct >= 30 && Construct < 50
-	WithIdleOverlay@base4:
-		Sequence: make4
-		RequiresCondition: Construct >= 50 && Construct < 70
-	WithIdleOverlay@base5:
-		Sequence: make5
-		RequiresCondition: Construct >= 70 && Construct < 90
-	WithIdleOverlay@base6:
-		Sequence: make6
-		RequiresCondition: Construct >= 90
-		
-CASTLE2.scaff:
-	Inherits: ^3x3SITE
-	Inherits@Hitshape: ^3x2Shape
-	Building:
-		Footprint: ___ xxx xxx ===
-		Dimensions: 3,4
-		LocalCenterOffset: 0,-512,0
-	Armor:
-		Type: Concrete
-	RenderSprites:
-		PlayerPalette: raplayer
-		Image: castle2
-	CustomSellValue:
-		Value: 700
-	Valued:
-		Cost: 2000
-	Tooltip:
-		Name: Construction Site (Castle)
-	Buildable:
-		IconPalette: raicon
-		BuildPaletteOrder: 30
-		Prerequisites: anyhq, anyarmory
-		Description: Unlocks Superweapon.\n Unlocks Assassins, Crossbows and Ballista Towers.\nCan hold up to 4 nobles.\n\n\n\n
-		Queue: MTech.GDI
-		BuildDuration: 100
-	Health:
-		HP: 90000
-	RevealsShroud:
-		Range: 4c0
-	WithBuildingBib:
-	Selectable:
-		Bounds: 72,48,0,12
-	SelectionDecorations:
-		VisualBounds: 72,68,0,0
-	WithSpriteBody:
-		RequiresCondition: inactive
-	DebugTransformOnCondition@Finsihed:
-		RequiresCondition: (80 - Construct) <= 0
-		IntoActor: CASTLE2
-		ReadyAudio: ConstructionComplete
-	ExternalCondition@buildfurther: 
-		Condition: Construct
-		TotalCap: 80
-	ExternalCondition@Deliverfurther:
-		Condition: DeliveredResources
-		TotalCap: 80
-	Targetable@buildfurther: 
-		TargetTypes: Buildable
-		RequiresCondition: DeliveredResources > Construct && (80 - Construct) > 0
-	Targetable@deliverresources: 
-		TargetTypes: Deliverable
-		RequiresCondition: 80 > DeliveredResources
-	WithIdleOverlay@base1:
-		Sequence: make1
-		RequiresCondition: Construct > 10 && Construct < 25
-	WithIdleOverlay@base2:
-		Sequence: make2
-		RequiresCondition: Construct >= 25 && Construct < 35
-	WithIdleOverlay@base3:
-		Sequence: make3
-		RequiresCondition: Construct >= 35 && Construct < 45
-	WithIdleOverlay@base4:
-		Sequence: make4
-		RequiresCondition: Construct >= 45 && Construct < 55
-	WithIdleOverlay@base5:
-		Sequence: make5
-		RequiresCondition: Construct >= 55 && Construct < 65
-	WithIdleOverlay@base6:
-		Sequence: make6
-		RequiresCondition: Construct >= 65
-		
-WORKSHOPNOD.scaff:
-	Inherits: ^3x2SITE
-	Inherits@Hitshape: ^3x2Shape
-	Armor:
-		Type: Concrete
-	RenderSprites:
-		PlayerPalette: raplayer
-		Image: nodfix
-	CustomSellValue:
-		Value: 450
-	Valued:
-		Cost: 1400
-	Tooltip:
-		Name: Construction Site (Siege Workshop)
-	Buildable:
-		IconPalette: raicon
-		BuildPaletteOrder: 30
-		Prerequisites: proc
-		Description: Provides Siege weapons construction.\nEnables Supportpowers in combination with an Armory.\n\n\n
-		Queue: MMilitary.Nod
-		BuildDuration: 70
-	Health:
-		HP: 30000
-	RevealsShroud:
-		Range: 4c0
-	WithBuildingBib:
-	Selectable:
-		Bounds: 64,64,0,-10
-	SelectionDecorations:
-		VisualBounds: 72,48
-	WithSpriteBody:
-		RequiresCondition: inactive
-	DebugTransformOnCondition@Finsihed:
-		RequiresCondition: (55 - Construct) <= 0
-		IntoActor: WORKSHOPNOD
-		ReadyAudio: ConstructionComplete
-	ExternalCondition@buildfurther: 
-		Condition: Construct
-		TotalCap: 55
-	ExternalCondition@Deliverfurther:
-		Condition: DeliveredResources
-		TotalCap: 55
-	Targetable@buildfurther: 
-		TargetTypes: Buildable
-		RequiresCondition: DeliveredResources > Construct && (55 - Construct) > 0
-	Targetable@deliverresources: 
-		TargetTypes: Deliverable
-		RequiresCondition: 55 > DeliveredResources
-	WithIdleOverlay@base1:
-		Sequence: make1
-		RequiresCondition: Construct > 10 && Construct < 25
-	WithIdleOverlay@base2:
-		Sequence: make2
-		RequiresCondition: Construct >= 25 && Construct < 35
-	WithIdleOverlay@base3:
-		Sequence: make3
-		RequiresCondition: Construct >= 35 && Construct < 45
-	WithIdleOverlay@base4:
-		Sequence: make4
-		RequiresCondition: Construct >= 45
-	WithRangeCircle:
-		Type: Workshop
-		Range: 4c0
-		Color: b50909
-		
-WORKSHOPGDI.scaff:
-	Inherits: ^3x2SITE
-	Inherits@Hitshape: ^3x2Shape
-	Armor:
-		Type: Concrete
-	RenderSprites:
-		PlayerPalette: raplayer
-		Image: gdifix
-	CustomSellValue:
-		Value: 600
-	Valued:
-		Cost: 1600
-	Tooltip:
-		Name: Construction Site (Siege Workshop)
-	Buildable:
-		IconPalette: raicon
-		BuildPaletteOrder: 30
-		Prerequisites: proc
-		Description: Provides Siege weapons construction.\nEnables Supportpowers in combination with an Armory.\n\n\n
-		Queue: MMilitary.GDI
-		BuildDuration: 80
-	Health:
-		HP: 37350
-	RevealsShroud:
-		Range: 4c0
-	WithBuildingBib:
-	Selectable:
-		Bounds: 64,64,0,-10
-	SelectionDecorations:
-		VisualBounds: 72,48
-	WithSpriteBody:
-		RequiresCondition: inactive
-	DebugTransformOnCondition@Finsihed:
-		RequiresCondition: (65 - Construct) <= 0
-		IntoActor: WORKSHOPGDI
-		ReadyAudio: ConstructionComplete
-	ExternalCondition@buildfurther: 
-		Condition: Construct
-		TotalCap: 65
-	ExternalCondition@Deliverfurther:
-		Condition: DeliveredResources
-		TotalCap: 65
-	Targetable@buildfurther: 
-		TargetTypes: Buildable
-		RequiresCondition: DeliveredResources > Construct && (65 - Construct) > 0
-	Targetable@deliverresources: 
-		TargetTypes: Deliverable
-		RequiresCondition: 65 > DeliveredResources
-	WithIdleOverlay@base1:
-		Sequence: make1
-		RequiresCondition: Construct > 10 && Construct < 26
-	WithIdleOverlay@base2:
-		Sequence: make2
-		RequiresCondition: Construct >= 26 && Construct < 38
-	WithIdleOverlay@base3:
-		Sequence: make3
-		RequiresCondition: Construct >= 38 && Construct < 50
-	WithIdleOverlay@base4:
-		Sequence: make4
-		RequiresCondition: Construct >= 55
-	WithRangeCircle:
-		Type: Workshop
-		Range: 4c0
-		Color: b50909
-		
-GTWNEW.scaff:
-	Inherits: ^1x1SITE
-	Inherits@Hitshape: ^1x1Shape
-	Armor:
-		Type: HeavyBuilding
-	RenderSprites:
-		PlayerPalette: raplayer
-		Image: gtwnew
-	CustomSellValue:
-		Value: 200
-	Valued:
-		Cost: 600
-	Tooltip:
-		Name: Construction Site ( Guard Tower)
-	Buildable:
-		Description: A wooden tower, stationed with 2 archers.\n  Strong vs Infantry, Light Cavalry\n  Weak vs Siege weapons and Heavy Cavalry \n  Cannot target Aircraft\n\n
-		BuildPaletteOrder: 60
-		Queue: MMilitary.GDI, MMilitary.Nod
-		BuildDurationModifier: 60
-		IconPalette: raicon
-		BuildDuration: 30
-	Health:
-		HP: 20000
-	RevealsShroud:
-		Range: 4c0
-	WithBuildingBib:
-		HasMinibib: Yes
-	Selectable:
-		Bounds: 24,48,0,-10
-	SelectionDecorations
-		VisualBounds: 22,48,0,-10
-	WithSpriteBody:
-		RequiresCondition: inactive
-	DebugTransformOnCondition@Finsihed:
-		RequiresCondition: (15 - Construct) <= 0
-		IntoActor: GTWNEW
-		ReadyAudio: ConstructionComplete
-	ExternalCondition@buildfurther: 
-		Condition: Construct
-		TotalCap: 15
-	ExternalCondition@Deliverfurther:
-		Condition: DeliveredResources
-		TotalCap: 15
-	Targetable@buildfurther: 
-		TargetTypes: Buildable
-		RequiresCondition: DeliveredResources > Construct && (15 - Construct) > 0
-	Targetable@deliverresources: 
-		TargetTypes: Deliverable
-		RequiresCondition: 15 > DeliveredResources
-	WithIdleOverlay@base1:
-		Sequence: make1
-		RequiresCondition: Construct > 1 && Construct < 3
-	WithIdleOverlay@base2:
-		Sequence: make2
-		RequiresCondition: Construct >= 3 && Construct < 5
-	WithIdleOverlay@base3:
-		Sequence: make3
-		RequiresCondition: Construct >= 5 && Construct < 7
-	WithIdleOverlay@base4:
-		Sequence: make4
-		RequiresCondition: Construct >= 7 && Construct < 10
-	WithIdleOverlay@base5:
-		Sequence: make5
-		RequiresCondition: Construct >= 10 && Construct < 12
-	WithIdleOverlay@base6:
-		Sequence: make6
-		RequiresCondition: Construct >= 12
-	WithRangeCircle:
-		Range: 8c512
-		
-GUNNEW.scaff:
-	Inherits: ^1x1SITE
-	Inherits@Hitshape: ^1x1Shape
-	Armor:
-		Type: HeavyBuilding
-	RenderSprites:
-		PlayerPalette: raplayer
-		Image: gunnew
-	CustomSellValue:
-		Value: 250
-	Valued:
-		Cost: 700
-	Tooltip:
-		Name: Construction Site (Gunpowder Cannon)
-	Buildable:
-		Description: The early Cannon uses gunpowder to throw a large boulder. \nIt's most effectively used against large targets.\n  Strong vs Cavalry and Spectral Units\n  Weak vs Infantry\n\n
-		BuildPaletteOrder: 70
-		Prerequisites: barracks
-		Queue: MMilitary.GDI, MMilitary.Nod
-		IconPalette: raicon
-		BuildDurationModifier: 40
-		BuildDuration: 35
-	Health:
-		HP: 20000
-	RevealsShroud:
-		Range: 4c0
-	WithBuildingBib:
-		HasMinibib: Yes
-	Selectable:
-		Bounds: 25,25,0,0
-	SelectionDecorations:
-		VisualBounds: 25,25,0,0 
-	WithSpriteBody:
-		RequiresCondition: inactive
-	DebugTransformOnCondition@Finsihed:
-		RequiresCondition: (25 - Construct) <= 0
-		IntoActor: GUNNEW
-		ReadyAudio: ConstructionComplete
-	ExternalCondition@buildfurther: 
-		Condition: Construct
-		TotalCap: 25
-	ExternalCondition@Deliverfurther:
-		Condition: DeliveredResources
-		TotalCap: 25
-	Targetable@buildfurther: 
-		TargetTypes: Buildable
-		RequiresCondition: DeliveredResources > Construct && (25 - Construct) > 0
-	Targetable@deliverresources: 
-		TargetTypes: Deliverable
-		RequiresCondition: 25 > DeliveredResources
-	WithIdleOverlay@base1:
-		Sequence: make1
-		RequiresCondition: Construct > 5 && Construct < 8
-	WithIdleOverlay@base2:
-		Sequence: make2
-		RequiresCondition: Construct >= 8 && Construct < 11
-	WithIdleOverlay@base3:
-		Sequence: make3
-		RequiresCondition: Construct >= 11 && Construct < 14
-	WithIdleOverlay@base4:
-		Sequence: make4
-		RequiresCondition: Construct >= 14 && Construct < 17
-	WithIdleOverlay@base5:
-		Sequence: make5
-		RequiresCondition: Construct >= 17 && Construct < 20
-	WithIdleOverlay@base6:
-		Sequence: make6
-		RequiresCondition: Construct >= 20
-	WithRangeCircle:
-		Range: 8c0
-		
-TRIBU.scaff:
-	Inherits: ^1x1SITE
-	Inherits@Hitshape: ^1x1Shape
-	Armor:
-		Type: HeavyBuilding
-	RenderSprites:
-		PlayerPalette: raplayer
-		Image: tribu
-	CustomSellValue:
-		Value: 500
-	Valued:
-		Cost: 1500
-	Tooltip:
-		Name: Construction Site (Counterweight Trebuchet)
-	Buildable:
-		Description: The Counterweight Trebuchet is a type of siege engine \nmost frequently used to outrange other siege weapons.\n  Strong vs all Ground units\n  Cannot target Aircraft\n  Requires 3 Peasants\n\n
-		BuildPaletteOrder: 90
-		Prerequisites: anycastle
-		Queue: MMilitary.Nod
-		BuildDurationModifier: 40
-		IconPalette: raicon
-		BuildDuration: 75
-	Health:
-		HP: 30000
-	RevealsShroud:
-		Range: 4c0
-	WithBuildingBib:
-		HasMinibib: Yes
-	Selectable:
-		Bounds: 30,52,0,-12
-	SelectionDecorations:
-		VisualBounds: 30,52,0,-12 
-	WithSpriteBody:
-		RequiresCondition: inactive
-	DebugTransformOnCondition@Finsihed:
 		RequiresCondition: (60 - Construct) <= 0
-		IntoActor: TRIBU
-		ReadyAudio: ConstructionComplete
+		IntoActor: STALL
+		ReadyAudio:
 	ExternalCondition@buildfurther: 
 		Condition: Construct
 		TotalCap: 60
@@ -1775,19 +1227,568 @@ TRIBU.scaff:
 		RequiresCondition: Construct >= 15 && Construct < 25
 	WithIdleOverlay@base3:
 		Sequence: make3
-		RequiresCondition: Construct >= 25 && Construct < 30
+		RequiresCondition: Construct >= 25 && Construct < 35
 	WithIdleOverlay@base4:
 		Sequence: make4
-		RequiresCondition: Construct >= 30 && Construct < 35
+		RequiresCondition: Construct >= 35 && Construct < 45
 	WithIdleOverlay@base5:
 		Sequence: make5
-		RequiresCondition: Construct >= 35 && Construct < 40
+		RequiresCondition: Construct >= 45 && Construct < 55
 	WithIdleOverlay@base6:
 		Sequence: make6
-		RequiresCondition: Construct >= 40 && Construct < 55
+		RequiresCondition: Construct >= 55
+		
+NODSTALL.scaff:
+	Inherits: ^4x2SITE
+	Inherits@Hitshape: ^4x2Shape
+	Armor:
+		Type: Concrete
+	RenderSprites:
+		PlayerPalette: raplayer
+		Image: nodstall
+	CustomSellValue:
+		Value: 875
+	Valued:
+		Cost: 1750
+	Tooltip:
+		Name: Construction Site (Stables)
+	Buildable:
+		IconPalette: raicon
+		BuildPaletteOrder: 20
+		Prerequisites: proc
+		Description: Trains cavalry\n\n\n\n
+		Queue: MMilitary.Nod
+		BuildDuration: 875
+	Health:
+		HP: 43000
+	RevealsShroud:
+		Range: 4c0
+	WithBuildingBib:
+	Selectable:
+		Bounds: 96,48
+	SelectionDecorations:
+		VisualBounds: 86,64,0,-4
+	WithSpriteBody:
+		RequiresCondition: inactive
+	DebugTransformOnCondition@Finsihed:
+		RequiresCondition: (53 - Construct) <= 0
+		IntoActor: NODSTALL
+		ReadyAudio:
+	ExternalCondition@buildfurther: 
+		Condition: Construct
+		TotalCap: 53
+	ExternalCondition@Deliverfurther:
+		Condition: DeliveredResources
+		TotalCap: 53
+	Targetable@buildfurther: 
+		TargetTypes: Buildable
+		RequiresCondition: DeliveredResources > Construct && (53 - Construct) > 0
+	Targetable@deliverresources: 
+		TargetTypes: Deliverable
+		RequiresCondition: 53 > DeliveredResources
+	WithIdleOverlay@base1:
+		Sequence: make1
+		RequiresCondition: Construct > 5 && Construct < 15
+	WithIdleOverlay@base2:
+		Sequence: make2
+		RequiresCondition: Construct >= 15 && Construct < 25
+	WithIdleOverlay@base3:
+		Sequence: make3
+		RequiresCondition: Construct >= 25 && Construct < 35
+	WithIdleOverlay@base4:
+		Sequence: make4
+		RequiresCondition: Construct >= 35 && Construct < 45
+	WithIdleOverlay@base5:
+		Sequence: make5
+		RequiresCondition: Construct >= 45 && Construct < 50
+	WithIdleOverlay@base6:
+		Sequence: make6
+		RequiresCondition: Construct >= 50
+		
+CASTLE.scaff:
+	Inherits: ^3x3SITE
+	Inherits@Hitshape: ^3x2Shape
+	Building:
+		Footprint: ___ xxx xxx ===
+		Dimensions: 3,4
+		LocalCenterOffset: 0,-512,0
+	Armor:
+		Type: Concrete
+	RenderSprites:
+		PlayerPalette: raplayer
+		Image: castle
+	CustomSellValue:
+		Value: 1250
+	Valued:
+		Cost: 2500
+	Tooltip:
+		Name: Construction Site (Castle)
+	Buildable:
+		IconPalette: raicon
+		BuildPaletteOrder: 90
+		Prerequisites: anyhq
+		Description: Unlocks Superweapon.\n Unlocks Heavy Cavalry, Knight's and Trebuchet.\nCan hold up to 4 nobles.\n\n\n\n
+		Queue: MBuilding.Nod
+		BuildDuration: 1250
+	Health:
+		HP: 100000
+	RevealsShroud:
+		Range: 4c0
+	WithBuildingBib:
+	Selectable:
+		Bounds: 72,48,0,12
+	SelectionDecorations:
+		VisualBounds: 72,68,0,0
+	WithSpriteBody:
+		RequiresCondition: inactive
+	DebugTransformOnCondition@Finsihed:
+		RequiresCondition: (75 - Construct) <= 0
+		IntoActor: CASTLE
+		ReadyAudio:
+	ExternalCondition@buildfurther: 
+		Condition: Construct
+		TotalCap: 75
+	ExternalCondition@Deliverfurther:
+		Condition: DeliveredResources
+		TotalCap: 75
+	Targetable@buildfurther: 
+		TargetTypes: Buildable
+		RequiresCondition: DeliveredResources > Construct && (75 - Construct) > 0
+	Targetable@deliverresources: 
+		TargetTypes: Deliverable
+		RequiresCondition: 75 > DeliveredResources
+	WithIdleOverlay@base1:
+		Sequence: make1
+		RequiresCondition: Construct > 5 && Construct < 15
+	WithIdleOverlay@base2:
+		Sequence: make2
+		RequiresCondition: Construct >= 15 && Construct < 30
+	WithIdleOverlay@base3:
+		Sequence: make3
+		RequiresCondition: Construct >= 30 && Construct < 50
+	WithIdleOverlay@base4:
+		Sequence: make4
+		RequiresCondition: Construct >= 50 && Construct < 60
+	WithIdleOverlay@base5:
+		Sequence: make5
+		RequiresCondition: Construct >= 60 && Construct < 70
+	WithIdleOverlay@base6:
+		Sequence: make6
+		RequiresCondition: Construct >= 70
+		
+CASTLE2.scaff:
+	Inherits: ^3x3SITE
+	Inherits@Hitshape: ^3x2Shape
+	Building:
+		Footprint: ___ xxx xxx ===
+		Dimensions: 3,4
+		LocalCenterOffset: 0,-512,0
+	Armor:
+		Type: Concrete
+	RenderSprites:
+		PlayerPalette: raplayer
+		Image: castle2
+	CustomSellValue:
+		Value: 1000
+	Valued:
+		Cost: 2000
+	Tooltip:
+		Name: Construction Site (Castle)
+	Buildable:
+		IconPalette: raicon
+		BuildPaletteOrder: 90
+		Prerequisites: anyhq
+		Description: Unlocks Superweapon.\n Unlocks Assassins, Crossbows and Ballista Towers.\nCan hold up to 4 nobles.\n\n\n\n
+		Queue: MBuilding.GDI
+		BuildDuration: 1000
+	Health:
+		HP: 90000
+	RevealsShroud:
+		Range: 4c0
+	WithBuildingBib:
+	Selectable:
+		Bounds: 72,48,0,12
+	SelectionDecorations:
+		VisualBounds: 72,68,0,0
+	WithSpriteBody:
+		RequiresCondition: inactive
+	DebugTransformOnCondition@Finsihed:
+		RequiresCondition: (60 - Construct) <= 0
+		IntoActor: CASTLE2
+		ReadyAudio:
+	ExternalCondition@buildfurther: 
+		Condition: Construct
+		TotalCap: 60
+	ExternalCondition@Deliverfurther:
+		Condition: DeliveredResources
+		TotalCap: 60
+	Targetable@buildfurther: 
+		TargetTypes: Buildable
+		RequiresCondition: DeliveredResources > Construct && (60 - Construct) > 0
+	Targetable@deliverresources: 
+		TargetTypes: Deliverable
+		RequiresCondition: 60 > DeliveredResources
+	WithIdleOverlay@base1:
+		Sequence: make1
+		RequiresCondition: Construct > 5 && Construct < 15
+	WithIdleOverlay@base2:
+		Sequence: make2
+		RequiresCondition: Construct >= 15 && Construct < 25
+	WithIdleOverlay@base3:
+		Sequence: make3
+		RequiresCondition: Construct >= 25 && Construct < 35
+	WithIdleOverlay@base4:
+		Sequence: make4
+		RequiresCondition: Construct >= 35 && Construct < 45
+	WithIdleOverlay@base5:
+		Sequence: make5
+		RequiresCondition: Construct >= 45 && Construct < 55
+	WithIdleOverlay@base6:
+		Sequence: make6
+		RequiresCondition: Construct >= 55
+		
+WORKSHOPNOD.scaff:
+	Inherits: ^3x2SITE
+	Inherits@Hitshape: ^3x2Shape
+	Armor:
+		Type: Concrete
+	RenderSprites:
+		PlayerPalette: raplayer
+		Image: nodfix
+	CustomSellValue:
+		Value: 700
+	Valued:
+		Cost: 1400
+	Tooltip:
+		Name: Construction Site (Siege Workshop)
+	Buildable:
+		IconPalette: raicon
+		BuildPaletteOrder: 30
+		Prerequisites: proc
+		Description: Provides Siege weapons construction.\nEnables Supportpowers in combination with an Armory.\n\n\n
+		Queue: MMilitary.Nod
+		BuildDuration: 700
+	Health:
+		HP: 30000
+	RevealsShroud:
+		Range: 4c0
+	WithBuildingBib:
+	Selectable:
+		Bounds: 64,64,0,-10
+	SelectionDecorations:
+		VisualBounds: 72,48
+	WithSpriteBody:
+		RequiresCondition: inactive
+	DebugTransformOnCondition@Finsihed:
+		RequiresCondition: (42 - Construct) <= 0
+		IntoActor: WORKSHOPNOD
+		ReadyAudio:
+	ExternalCondition@buildfurther: 
+		Condition: Construct
+		TotalCap: 42
+	ExternalCondition@Deliverfurther:
+		Condition: DeliveredResources
+		TotalCap: 42
+	Targetable@buildfurther: 
+		TargetTypes: Buildable
+		RequiresCondition: DeliveredResources > Construct && (42 - Construct) > 0
+	Targetable@deliverresources: 
+		TargetTypes: Deliverable
+		RequiresCondition: 42 > DeliveredResources
+	WithIdleOverlay@base1:
+		Sequence: make1
+		RequiresCondition: Construct > 10 && Construct < 20
+	WithIdleOverlay@base2:
+		Sequence: make2
+		RequiresCondition: Construct >= 20 && Construct < 30
+	WithIdleOverlay@base3:
+		Sequence: make3
+		RequiresCondition: Construct >= 30 && Construct < 37
+	WithIdleOverlay@base4:
+		Sequence: make4
+		RequiresCondition: Construct >= 37
+	WithRangeCircle:
+		Type: Workshop
+		Range: 4c0
+		Color: b50909
+		
+WORKSHOPGDI.scaff:
+	Inherits: ^3x2SITE
+	Inherits@Hitshape: ^3x2Shape
+	Armor:
+		Type: Concrete
+	RenderSprites:
+		PlayerPalette: raplayer
+		Image: gdifix
+	CustomSellValue:
+		Value: 800
+	Valued:
+		Cost: 1600
+	Tooltip:
+		Name: Construction Site (Siege Workshop)
+	Buildable:
+		IconPalette: raicon
+		BuildPaletteOrder: 30
+		Prerequisites: proc
+		Description: Provides Siege weapons construction.\nEnables Supportpowers in combination with an Armory.\n\n\n
+		Queue: MMilitary.GDI
+		BuildDuration: 800
+	Health:
+		HP: 37350
+	RevealsShroud:
+		Range: 4c0
+	WithBuildingBib:
+	Selectable:
+		Bounds: 64,64,0,-10
+	SelectionDecorations:
+		VisualBounds: 72,48
+	WithSpriteBody:
+		RequiresCondition: inactive
+	DebugTransformOnCondition@Finsihed:
+		RequiresCondition: (48 - Construct) <= 0
+		IntoActor: WORKSHOPGDI
+		ReadyAudio:
+	ExternalCondition@buildfurther: 
+		Condition: Construct
+		TotalCap: 48
+	ExternalCondition@Deliverfurther:
+		Condition: DeliveredResources
+		TotalCap: 48
+	Targetable@buildfurther: 
+		TargetTypes: Buildable
+		RequiresCondition: DeliveredResources > Construct && (48 - Construct) > 0
+	Targetable@deliverresources: 
+		TargetTypes: Deliverable
+		RequiresCondition: 48 > DeliveredResources
+	WithIdleOverlay@base1:
+		Sequence: make1
+		RequiresCondition: Construct > 10 && Construct < 25
+	WithIdleOverlay@base2:
+		Sequence: make2
+		RequiresCondition: Construct >= 25 && Construct < 35
+	WithIdleOverlay@base3:
+		Sequence: make3
+		RequiresCondition: Construct >= 35 && Construct < 50
+	WithIdleOverlay@base4:
+		Sequence: make4
+		RequiresCondition: Construct >= 40
+	WithRangeCircle:
+		Type: Workshop
+		Range: 4c0
+		Color: b50909
+		
+GTWNEW.scaff:
+	Inherits: ^1x1SITE
+	Inherits@Hitshape: ^1x1Shape
+	Armor:
+		Type: HeavyBuilding
+	RenderSprites:
+		PlayerPalette: raplayer
+		Image: gtwnew
+	CustomSellValue:
+		Value: 300
+	Valued:
+		Cost: 600
+	Tooltip:
+		Name: Construction Site ( Guard Tower)
+	Buildable:
+		Description: A wooden tower, stationed with 2 archers.\n  Strong vs Infantry, Light Cavalry\n  Weak vs Siege weapons and Heavy Cavalry \n  Cannot target Aircraft\n\n
+		BuildPaletteOrder: 60
+		Queue: MMilitary.GDI, MMilitary.Nod
+		BuildDurationModifier: 60
+		IconPalette: raicon
+		BuildDuration: 500
+	Health:
+		HP: 20000
+	RevealsShroud:
+		Range: 4c0
+	WithBuildingBib:
+		HasMinibib: Yes
+	Selectable:
+		Bounds: 24,48,0,-10
+	SelectionDecorations
+		VisualBounds: 22,48,0,-10
+	WithSpriteBody:
+		RequiresCondition: inactive
+	DebugTransformOnCondition@Finsihed:
+		RequiresCondition: (8 - Construct) <= 0
+		IntoActor: GTWNEW
+		ReadyAudio:
+	ExternalCondition@buildfurther: 
+		Condition: Construct
+		TotalCap: 8
+	ExternalCondition@Deliverfurther:
+		Condition: DeliveredResources
+		TotalCap: 8
+	Targetable@buildfurther: 
+		TargetTypes: Buildable
+		RequiresCondition: DeliveredResources > Construct && (8 - Construct) > 0
+	Targetable@deliverresources: 
+		TargetTypes: Deliverable
+		RequiresCondition: 8 > DeliveredResources
+	WithIdleOverlay@base1:
+		Sequence: make1
+		RequiresCondition: Construct > 1 && Construct < 3
+	WithIdleOverlay@base2:
+		Sequence: make2
+		RequiresCondition: Construct >= 3 && Construct < 4
+	WithIdleOverlay@base3:
+		Sequence: make3
+		RequiresCondition: Construct >= 4 && Construct < 5
+	WithIdleOverlay@base4:
+		Sequence: make4
+		RequiresCondition: Construct >= 5 && Construct < 6
+	WithIdleOverlay@base5:
+		Sequence: make5
+		RequiresCondition: Construct >= 6 && Construct < 7
+	WithIdleOverlay@base6:
+		Sequence: make6
+		RequiresCondition: Construct >= 7
+	WithRangeCircle:
+		Range: 8c512
+		
+GUNNEW.scaff:
+	Inherits: ^1x1SITE
+	Inherits@Hitshape: ^1x1Shape
+	Armor:
+		Type: HeavyBuilding
+	RenderSprites:
+		PlayerPalette: raplayer
+		Image: gunnew
+	CustomSellValue:
+		Value: 350
+	Valued:
+		Cost: 700
+	Tooltip:
+		Name: Construction Site (Gunpowder Cannon)
+	Buildable:
+		Description: The early Cannon uses gunpowder to throw a large boulder. \nIt's most effectively used against large targets.\n  Strong vs Cavalry and Spectral Units\n  Weak vs Infantry\n\n
+		BuildPaletteOrder: 70
+		Prerequisites: barracks
+		Queue: MMilitary.GDI, MMilitary.Nod
+		IconPalette: raicon
+		BuildDurationModifier: 40
+		BuildDuration: 600
+	Health:
+		HP: 20000
+	RevealsShroud:
+		Range: 4c0
+	WithBuildingBib:
+		HasMinibib: Yes
+	Selectable:
+		Bounds: 25,25,0,0
+	SelectionDecorations:
+		VisualBounds: 25,25,0,0 
+	WithSpriteBody:
+		RequiresCondition: inactive
+	DebugTransformOnCondition@Finsihed:
+		RequiresCondition: (8 - Construct) <= 0
+		IntoActor: GUNNEW
+		ReadyAudio:
+	ExternalCondition@buildfurther: 
+		Condition: Construct
+		TotalCap: 8
+	ExternalCondition@Deliverfurther:
+		Condition: DeliveredResources
+		TotalCap: 8
+	Targetable@buildfurther: 
+		TargetTypes: Buildable
+		RequiresCondition: DeliveredResources > Construct && (8 - Construct) > 0
+	Targetable@deliverresources: 
+		TargetTypes: Deliverable
+		RequiresCondition: 8 > DeliveredResources
+	WithIdleOverlay@base1:
+		Sequence: make1
+		RequiresCondition: Construct > 2 && Construct < 3
+	WithIdleOverlay@base2:
+		Sequence: make2
+		RequiresCondition: Construct >= 3 && Construct < 4
+	WithIdleOverlay@base3:
+		Sequence: make3
+		RequiresCondition: Construct >= 4 && Construct < 5
+	WithIdleOverlay@base4:
+		Sequence: make4
+		RequiresCondition: Construct >= 5 && Construct < 6
+	WithIdleOverlay@base5:
+		Sequence: make5
+		RequiresCondition: Construct >= 6 && Construct < 7
+	WithIdleOverlay@base6:
+		Sequence: make6
+		RequiresCondition: Construct >= 7
+	WithRangeCircle:
+		Range: 8c0
+		
+TRIBU.scaff:
+	Inherits: ^1x1SITE
+	Inherits@Hitshape: ^1x1Shape
+	Armor:
+		Type: HeavyBuilding
+	RenderSprites:
+		PlayerPalette: raplayer
+		Image: tribu
+	CustomSellValue:
+		Value: 750
+	Valued:
+		Cost: 1500
+	Tooltip:
+		Name: Construction Site (Counterweight Trebuchet)
+	Buildable:
+		Description: The Counterweight Trebuchet is a type of siege engine \nmost frequently used to outrange other siege weapons.\n  Strong vs all Ground units\n  Cannot target Aircraft\n  Requires 3 Peasants\n\n
+		BuildPaletteOrder: 90
+		Prerequisites: anycastle
+		Queue: MMilitary.Nod
+		BuildDurationModifier: 40
+		IconPalette: raicon
+		BuildDuration: 1300
+	Health:
+		HP: 30000
+	RevealsShroud:
+		Range: 4c0
+	WithBuildingBib:
+		HasMinibib: Yes
+	Selectable:
+		Bounds: 30,52,0,-12
+	SelectionDecorations:
+		VisualBounds: 30,52,0,-12 
+	WithSpriteBody:
+		RequiresCondition: inactive
+	DebugTransformOnCondition@Finsihed:
+		RequiresCondition: (14 - Construct) <= 0
+		IntoActor: TRIBU
+		ReadyAudio:
+	ExternalCondition@buildfurther: 
+		Condition: Construct
+		TotalCap: 14
+	ExternalCondition@Deliverfurther:
+		Condition: DeliveredResources
+		TotalCap: 14
+	Targetable@buildfurther: 
+		TargetTypes: Buildable
+		RequiresCondition: DeliveredResources > Construct && (14 - Construct) > 0
+	Targetable@deliverresources: 
+		TargetTypes: Deliverable
+		RequiresCondition: 14 > DeliveredResources
+	WithIdleOverlay@base1:
+		Sequence: make1
+		RequiresCondition: Construct > 1 && Construct < 3
+	WithIdleOverlay@base2:
+		Sequence: make2
+		RequiresCondition: Construct >= 3 && Construct < 4
+	WithIdleOverlay@base3:
+		Sequence: make3
+		RequiresCondition: Construct >= 4 && Construct < 6
+	WithIdleOverlay@base4:
+		Sequence: make4
+		RequiresCondition: Construct >= 6 && Construct < 8
+	WithIdleOverlay@base5:
+		Sequence: make5
+		RequiresCondition: Construct >= 8 && Construct < 10
+	WithIdleOverlay@base6:
+		Sequence: make6
+		RequiresCondition: Construct >= 10 && Construct < 12
 	WithIdleOverlay@base7:
 		Sequence: make7
-		RequiresCondition: Construct >= 55
+		RequiresCondition: Construct >= 12
 	WithRangeCircle:
 		Range: 12c0
 		
@@ -1800,7 +1801,7 @@ BATO.scaff:
 		PlayerPalette: raplayer
 		Image: siege4
 	CustomSellValue:
-		Value: 450
+		Value: 700
 	Valued:
 		Cost: 1400
 	Tooltip:
@@ -1808,11 +1809,11 @@ BATO.scaff:
 	Buildable:
 		Description: Because of its smaller design and light weighted missiles, \nthe ballista on top of the tower can target \neither ground or aircraft units.\n  Strong vs ground units\n  Weak vs close by units\n  Long distance\n Can target Aircraft\n  Requires 3 Peasants\n\n
 		BuildPaletteOrder: 80
-		Prerequisites: anyarmory
+		Prerequisites: anyhq
 		Queue: MMilitary.GDI
 		BuildDurationModifier: 40
 		IconPalette: raicon
-		BuildDuration: 70
+		BuildDuration: 1300
 	Health:
 		HP: 30000
 	RevealsShroud:
@@ -1826,39 +1827,39 @@ BATO.scaff:
 	WithSpriteBody:
 		RequiresCondition: inactive
 	DebugTransformOnCondition@Finsihed:
-		RequiresCondition: (55 - Construct) <= 0
+		RequiresCondition: (12 - Construct) <= 0
 		IntoActor: BATO
-		ReadyAudio: ConstructionComplete
+		ReadyAudio:
 	ExternalCondition@buildfurther: 
 		Condition: Construct
-		TotalCap: 55
+		TotalCap: 12
 	ExternalCondition@Deliverfurther:
 		Condition: DeliveredResources
-		TotalCap: 55
+		TotalCap: 12
 	Targetable@buildfurther: 
 		TargetTypes: Buildable
-		RequiresCondition: DeliveredResources > Construct && (55 - Construct) > 0
+		RequiresCondition: DeliveredResources > Construct && (12 - Construct) > 0
 	Targetable@deliverresources: 
 		TargetTypes: Deliverable
-		RequiresCondition: 55 > DeliveredResources
+		RequiresCondition: 12 > DeliveredResources
 	WithIdleOverlay@base1:
 		Sequence: make1
-		RequiresCondition: Construct > 5 && Construct < 15
+		RequiresCondition: Construct > 2 && Construct < 4
 	WithIdleOverlay@base2:
 		Sequence: make2
-		RequiresCondition: Construct >= 15 && Construct < 25
+		RequiresCondition: Construct >= 4 && Construct < 6
 	WithIdleOverlay@base3:
 		Sequence: make3
-		RequiresCondition: Construct >= 25 && Construct < 30
+		RequiresCondition: Construct >= 6 && Construct < 7
 	WithIdleOverlay@base4:
 		Sequence: make4
-		RequiresCondition: Construct >= 30 && Construct < 35
+		RequiresCondition: Construct >= 7 && Construct < 8
 	WithIdleOverlay@base5:
 		Sequence: make5
-		RequiresCondition: Construct >= 35 && Construct < 45
+		RequiresCondition: Construct >= 8 && Construct < 10
 	WithIdleOverlay@base6:
 		Sequence: make6
-		RequiresCondition: Construct >= 45
+		RequiresCondition: Construct >= 10
 	WithRangeCircle:
 		Range: 8c0
 		Color: FFFF0080
@@ -1878,7 +1879,7 @@ SAMNEW.scaff:
 		PlayerPalette: raplayer
 		Image: samnew
 	CustomSellValue:
-		Value: 225
+		Value: 325
 	Valued:
 		Cost: 650
 	Tooltip:
@@ -1890,7 +1891,7 @@ SAMNEW.scaff:
 		Queue: MMilitary.Nod
 		BuildDurationModifier: 40
 		IconPalette: raicon
-		BuildDuration: 32
+		BuildDuration: 550
 	Health:
 		HP: 20000
 	RevealsShroud:
@@ -1904,36 +1905,36 @@ SAMNEW.scaff:
 	WithSpriteBody:
 		RequiresCondition: inactive
 	DebugTransformOnCondition@Finsihed:
-		RequiresCondition: (26 - Construct) <= 0
+		RequiresCondition: (8 - Construct) <= 0
 		IntoActor: SAMNEW
-		ReadyAudio: ConstructionComplete
+		ReadyAudio:
 	ExternalCondition@buildfurther: 
 		Condition: Construct
-		TotalCap: 26
+		TotalCap: 8
 	ExternalCondition@Deliverfurther:
 		Condition: DeliveredResources
-		TotalCap: 26
+		TotalCap: 8
 	Targetable@buildfurther: 
 		TargetTypes: Buildable
-		RequiresCondition: DeliveredResources > Construct && (26 - Construct) > 0
+		RequiresCondition: DeliveredResources > Construct && (8 - Construct) > 0
 	Targetable@deliverresources: 
 		TargetTypes: Deliverable
-		RequiresCondition: 26 > DeliveredResources
+		RequiresCondition: 8 > DeliveredResources
 	WithIdleOverlay@base1:
 		Sequence: make1
-		RequiresCondition: Construct > 5 && Construct < 6
+		RequiresCondition: Construct > 2 && Construct < 3
 	WithIdleOverlay@base2:
 		Sequence: make2
-		RequiresCondition: Construct >= 6 && Construct < 12
+		RequiresCondition: Construct >= 3 && Construct < 4
 	WithIdleOverlay@base3:
 		Sequence: make3
-		RequiresCondition: Construct >= 12 && Construct < 16
+		RequiresCondition: Construct >= 4 && Construct < 5
 	WithIdleOverlay@base4:
 		Sequence: make4
-		RequiresCondition: Construct >= 16 && Construct < 20
+		RequiresCondition: Construct >= 5 && Construct < 6
 	WithIdleOverlay@base5:
 		Sequence: make5
-		RequiresCondition: Construct >= 20 && Construct < 24
+		RequiresCondition: Construct >= 6
 	WithRangeCircle@Air:
 		Range: 8c0
 		
@@ -1951,13 +1952,13 @@ TAVERN.scaff:
 		Cost: 700
 	Tooltip:
 		Name: Construction Site (Tavern)
-	Buildable:
-		IconPalette: raicon
-		BuildPaletteOrder: 0
-		Prerequisites: barracks
-		Description: Provides 3 additional haulers and 1 engineer.\n\n\n\n
-		Queue: MTech.GDI, MTech.Nod
-		BuildDuration: 45
+#	Buildable:
+#		IconPalette: raicon
+#		BuildPaletteOrder: 0
+#		Prerequisites: barracks
+#		Description: Provides 3 additional haulers and 1 engineer.\n\n\n\n
+#		Queue: MTech.GDI, MTech.Nod
+#		BuildDuration: 45
 	Health:
 		HP: 40000
 	RevealsShroud:
@@ -1972,7 +1973,7 @@ TAVERN.scaff:
 	DebugTransformOnCondition@Finsihed:
 		RequiresCondition: (52 - Construct) <= 0
 		IntoActor: TAVERN
-		ReadyAudio: ConstructionComplete
+		ReadyAudio:
 	ExternalCondition@buildfurther: 
 		Condition: Construct
 		TotalCap: 52
@@ -2018,14 +2019,14 @@ TOWNHALL.scaff:
 		Cost: 2000
 	Tooltip:
 		Name: Construction Site (Town Hall)
-	Buildable:
-		IconPalette: raicon
-		BuildPaletteOrder: 40
-		Prerequisites: anyarmory, !townhall
-		Description: Attracts citizens to your town.\nNew Peasants will spawn faster.\n\n\n
-		Queue: MBuilding.GDI, MBuilding.Nod
-		BuildDuration: 100
-		BuildLimit: 1
+#	Buildable:
+#		IconPalette: raicon
+#		BuildPaletteOrder: 40
+#		Prerequisites: anyarmory, !townhall
+#		Description: Attracts citizens to your town.\nNew Peasants will spawn faster.\n\n\n
+#		Queue: MBuilding.GDI, MBuilding.Nod
+#		BuildDuration: 100
+#		BuildLimit: 1
 	Health:
 		HP: 60000
 	RevealsShroud:
@@ -2040,7 +2041,7 @@ TOWNHALL.scaff:
 	DebugTransformOnCondition@Finsihed:
 		RequiresCondition: (80 - Construct) <= 0
 		IntoActor: TOWNHALL
-		ReadyAudio: ConstructionComplete
+		ReadyAudio:
 	ExternalCondition@buildfurther: 
 		Condition: Construct
 		TotalCap: 80
@@ -2086,14 +2087,14 @@ SCHAFOTT.scaff:
 		Cost: 1000
 	Tooltip:
 		Name: Construction Site (Scaffold)
-	Buildable:
-		IconPalette: raicon
-		BuildPaletteOrder: 35
-		Prerequisites: anyhq, !schafott
-		Description: Attracts citizens to your town.\nNew Peasants will spawn faster.\n\n\n
-		Queue: MBuilding.Nod
-		BuildDuration: 50
-		BuildLimit: 1
+#	Buildable:
+#		IconPalette: raicon
+#		BuildPaletteOrder: 35
+#		Prerequisites: anyhq, !schafott
+#		Description: Attracts citizens to your town.\nNew Peasants will spawn faster.\n\n\n
+#		Queue: MBuilding.Nod
+#		BuildDuration: 50
+#		BuildLimit: 1
 	Health:
 		HP: 40000
 	RevealsShroud:
@@ -2108,7 +2109,7 @@ SCHAFOTT.scaff:
 	DebugTransformOnCondition@Finsihed:
 		RequiresCondition: (45 - Construct) <= 0
 		IntoActor: SCHAFOTT
-		ReadyAudio: ConstructionComplete
+		ReadyAudio:
 	ExternalCondition@buildfurther: 
 		Condition: Construct
 		TotalCap: 45
@@ -2154,14 +2155,14 @@ HERBALIST.scaff:
 		Cost: 1000
 	Tooltip:
 		Name: Construction Site (Herbalist)
-	Buildable:
-		IconPalette: raicon
-		BuildPaletteOrder: 35
-		Prerequisites: anyhq, !herbalist
-		Description: Attracts citizens to your town.\nNew Peasants will spawn faster.\n\n\n
-		Queue: MBuilding.GDI
-		BuildDuration: 50
-		BuildLimit: 1
+#	Buildable:
+#		IconPalette: raicon
+#		BuildPaletteOrder: 35
+#		Prerequisites: anyhq, !herbalist
+#		Description: Attracts citizens to your town.\nNew Peasants will spawn faster.\n\n\n
+#		Queue: MBuilding.GDI
+#		BuildDuration: 50
+#		BuildLimit: 1
 	Health:
 		HP: 40000
 	RevealsShroud:
@@ -2176,7 +2177,7 @@ HERBALIST.scaff:
 	DebugTransformOnCondition@Finsihed:
 		RequiresCondition: (45 - Construct) <= 0
 		IntoActor: HERBALIST
-		ReadyAudio: ConstructionComplete
+		ReadyAudio:
 	ExternalCondition@buildfurther: 
 		Condition: Construct
 		TotalCap: 45

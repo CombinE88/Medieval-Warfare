@@ -111,7 +111,7 @@ SIEGE1:
 	Buildable:
 		IconPalette: raicon
 		BuildPaletteOrder: 20
-		Prerequisites: anyarmory
+		Prerequisites: anyhq
 		Description: The Siege Ballista is a missile weapon that launched a large projectile \nat a distant target.\n  Very strong vs Cavalry and Buildings \n  Moderate vs Infantry\n  Weak vs Aircraft\n\nTrains: 2 Peasants
 		Queue: MSiege.Nod
 	Mobile:
@@ -175,7 +175,7 @@ SIEGE2:
 	Buildable:
 		IconPalette: raicon
 		BuildPaletteOrder: 20
-		Prerequisites: anyarmory
+		Prerequisites: anyhq
 		Description: The Catapult is a ballistic device used to launch multiple projectiles \nat a great distance without the aid of explosive devices.\n  Very strong vs Infantry and Buildings\n  Moderate vs Cavalry\n  Weak vs Aircraft\n\nTrains: 2 Peasants
 		Queue: MSiege.GDI
 	Mobile:
@@ -494,7 +494,11 @@ SIEGE4:
 		ActorCount: 3
 		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 	Targetable@CombatRole:
-		TargetTypes: HeavyCavalry
+		TargetTypes: HeavyCavalry      
+	AutoTargetPriority@Counter1:
+		ValidTargets: Structure, Defenses
+		InvalidTargets: NoAutoTarget, Wall
+		Priority: 4
 		
 EHARVXL:
 	Inherits: ^Siege
@@ -538,7 +542,6 @@ EHARVXL:
 				PathingCost: 0
 			BlueTiberium: 100
 				PathingCost: 0
-			 
 	Health:
 		HP: 65000
 	RenderSprites:

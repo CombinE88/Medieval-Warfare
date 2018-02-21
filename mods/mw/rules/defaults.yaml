@@ -272,7 +272,7 @@
 ^SpriteActor:
 	BodyOrientation:
 	QuantizeFacingsFromSequence:
-	AutoSelectionSize:
+	#AutoSelectionSize:
 	RenderSprites:
 	
 ^1x1Shape:
@@ -336,18 +336,24 @@
 	AutoTarget:
 		AttackAnythingCondition: stance-attackanything
 	AutoTargetPriority@DEFAULT:
-		ValidTargets: Infantry, Vehicle, Creep, Water, Defense, Cavalry, Siege
+		ValidTargets: Infantry, Vehicle, Creep, Water, , Cavalry, Siege
 		InvalidTargets: NoAutoTarget, Wall
 		Priority: 3
-	AutoTargetPriority@ATTACKANYTHING:
-		ValidTargets: Structure
-		InvalidTargets: NoAutoTarget, Wall
-		Priority: 2
 	AutoTargetPriority@PEASANTS:
 		ValidTargets: Peasant
 		InvalidTargets: NoAutoTarget, Wall
 		Priority: 1
-
+        
+^AutoTargetDefenses:
+	AutoTargetPriority@Defenses:
+		ValidTargets: Defense
+		InvalidTargets: NoAutoTarget, Wall
+		Priority: 2
+	AutoTargetPriority@Buildings:
+		ValidTargets: Structure
+		InvalidTargets: NoAutoTarget, Wall
+		Priority: 1
+        
 ^AutoTargetAir:
 	AutoTarget:
 	AutoTargetPriority@DEFAULT:
@@ -361,10 +367,6 @@
 		ValidTargets: Infantry, Vehicle, Creep, Water, Defense, Cavalry, Siege, Air
 		InvalidTargets: NoAutoTarget, Wall
 		Priority: 3
-	AutoTargetPriority@ATTACKANYTHING:
-		ValidTargets: Structure
-		InvalidTargets: NoAutoTarget, Wall
-		Priority: 2
 	AutoTargetPriority@PEASANTS:
 		ValidTargets: Peasant
 		InvalidTargets: NoAutoTarget, Wall
@@ -931,6 +933,10 @@
 		DeathSequence: dead
 		UseDeathTypeSuffix: false
 	GivesBuildableArea:
+		AreaTypes: building
+	RequiresBuildableArea:
+		AreaTypes: building
+		Adjacent: 8
 	EmitInfantryOnSell:
 		ActorTypes: e1new,e1new,e1new,e1new
 	EngineerRepairable:
@@ -971,6 +977,7 @@
 
 ^TechBuilding:
 	Inherits: ^CivBuilding
+	Interactable:
 	Capturable:
 	CaptureNotification:
 		Notification: CivilianBuildingCaptured
@@ -989,6 +996,7 @@
 ^CivField:
 	Inherits: ^CivBuilding
 	-Selectable:
+	Interactable:
 	-SelectionDecorations:
 	Tooltip:
 		GenericName: Field
@@ -1000,6 +1008,7 @@
 ^CivFieldHusk:
 	Inherits@1: ^SpriteActor
 	AppearsOnRadar:
+	Interactable:
 	Building:
 		Dimensions: 1,1
 		Footprint: _
@@ -1018,8 +1027,12 @@
 ^Wall:
 	Inherits@1: ^SpriteActor
 	Inherits@shape: ^1x1Shape
+	Interactable:
 	CombatDebugOverlay:
 	AppearsOnRadar:
+	RequiresBuildableArea:
+		AreaTypes: building
+		Adjacent: 10
 	Building:
 		Dimensions: 1,1
 		Footprint: x
@@ -1052,6 +1065,7 @@
 
 ^Tree:
 	Inherits@1: ^SpriteActor
+	Interactable:
 	Tooltip:
 		Name: Tree
 		ShowOwnerRow: false
@@ -1083,6 +1097,7 @@
 
 ^TreeHusk:
 	Inherits@1: ^SpriteActor
+	Interactable:
 	AppearsOnRadar:
 	Building:
 		Footprint: x
@@ -1098,6 +1113,7 @@
 
 ^TibTree:
 	Inherits@1: ^SpriteActor
+	Interactable:
 	ConditionManager:
 	Tooltip:
 		Name: Blossom Tree
@@ -1120,6 +1136,7 @@
 
 ^Rock:
 	Inherits@1: ^SpriteActor
+	Interactable:
 	Tooltip:
 		Name: Rock
 		ShowOwnerRow: false
@@ -1142,6 +1159,7 @@
 
 ^CommonHuskDefaults:
 	Inherits@1: ^SpriteActor
+	Interactable:
 	Health:
 		HP: 140
 	Armor:
@@ -1186,6 +1204,7 @@
 		
 ^PropHusk:
 	Inherits@1: ^SpriteActor
+	Interactable:
 	Health:
 		HP: 14000
 	Armor:
@@ -1205,6 +1224,7 @@
 ^InteriorProp:
 	Inherits@1: ^ExistsInWorld
 	Inherits@2: ^SpriteActor
+	Interactable:
 	RevealsShroud:
 		Range: 3c0
 		Type: CenterPosition
@@ -1214,7 +1234,7 @@
 		Footprint: x
 	WithSpriteBody:
 	FrozenUnderFog:
-	AutoSelectionSize:
+	#AutoSelectionSize:
 	Health:
 		HP: 6000
 	Targetable:
@@ -1229,6 +1249,7 @@
 ^PropDoor:
 	Inherits@1: ^ExistsInWorld
 	Inherits@2: ^SpriteActor
+	Interactable:
 	RenderSprites:
 		Palette: mwcivilian
 	Building:
@@ -1236,7 +1257,7 @@
 		Footprint: x
 	WithSpriteBody:
 	FrozenUnderFog:
-	AutoSelectionSize:
+	#AutoSelectionSize:
 	Health:
 		HP: 1
 	Targetable:
@@ -1250,6 +1271,7 @@
 ^PropDoorOpen:
 	Inherits@1: ^ExistsInWorld
 	Inherits@2: ^SpriteActor
+	Interactable:
 	RenderSprites:
 		Palette: mwcivilian
 	Building:
@@ -1257,7 +1279,7 @@
 		Footprint: =
 	WithSpriteBody:
 	FrozenUnderFog:
-	AutoSelectionSize:
+	#AutoSelectionSize:
 	WithMakeAnimation:
 	HitShape:
 	EditorTilesetFilter:
@@ -1283,6 +1305,7 @@
 ^Bridge:
 	Inherits@shape: ^1x1Shape
 	AlwaysVisible:
+	Interactable:
 	Tooltip:
 		Name: Bridge
 		ShowOwnerRow: false
@@ -1301,6 +1324,7 @@
 ^Crate:
 	Inherits@1: ^SpriteActor
 	HiddenUnderFog:
+	Interactable:
 	Tooltip:
 		Name: Crate
 		GenericName: Crate
@@ -1315,6 +1339,9 @@
 	RenderRangeCircle:
 	RenderDetectionCircle:
 	-GivesBuildableArea:
+	RequiresBuildableArea:
+		AreaTypes: building
+		Adjacent: 8
 	MustBeDestroyed:
 		RequiredForShortGame: false
 	EditorTilesetFilter:
@@ -1514,6 +1541,7 @@
 	WithSpriteControlGroupDecoration:
 	Selectable:
 		Bounds: 12,17,0,-6
+		DecorationBounds: 12,17,0,-6
 	QuantizeFacingsFromSequence:
 		Sequence: stand
 	WithInfantryBody:
@@ -1770,6 +1798,7 @@
 	RevealsShroud:
 		Range: 1c0
 	-Selectable:
+	Interactable:
 	Targetable:
 		TargetTypes: Ground, Infantry, NoAutoTarget
 	Crushable:
@@ -1812,6 +1841,7 @@
 		Speed: 56
 		Crushes:
 	-Selectable:
+	Interactable:
 	Targetable:
 		TargetTypes: Ground, Infantry, Wildlife, NoAutoTarget
 	Crushable:
@@ -1844,6 +1874,7 @@
 ^DeadWildlife:
 	Inherits@1: ^SpriteActor
 	Inherits@1: ^ExistsInWorld
+	Interactable:
 	Huntable:
 	Health:
 		HP: 1000
@@ -1927,6 +1958,7 @@
 	RevealsShroud:
 		Range: 2c0
 	-Selectable:
+	Interactable:
 	Targetable:
 		TargetTypes: Ground, Infantry, Peasant
 	Crushable:
@@ -2071,6 +2103,7 @@
 		GenericVisibility: None
 		ShowOwnerRow: false
 	-Selectable:
+	Interactable:
 	Targetable:
 		TargetTypes: Ground, Infantry
 	Mobile:
@@ -2119,6 +2152,7 @@
 ^Props:
 	Inherits@1: ^ExistsInWorld
 	Inherits@2: ^SpriteActor
+	Interactable:
 	RevealsShroud:
 		Range: 3c0
 		Type: CenterPosition
@@ -2131,7 +2165,7 @@
 	FrozenUnderFog:
 	BodyOrientation:
 		QuantizedFacings: 1
-	AutoSelectionSize:
+	#AutoSelectionSize:
 	Health:
 		HP: 6000
 	Targetable:
@@ -2147,6 +2181,12 @@
 ^ConstructionSite:
 	Inherits@1: ^ExistsInWorld
 	Inherits@2: ^SpriteActor
+#	AddConditionEvery@DeliveredResources:
+#		AddCondition: DeliveredResources
+#		Delay: 25
+	AddConditionEvery@Construct:
+		AddCondition: Construct
+		Delay: 25
 	Sellable:
 	Huntable:
 	SelectionDecorations:
@@ -2186,8 +2226,8 @@
 	Targetable@Priority5:
 		TargetTypes: Priority5
 		RequiresCondition: delconpriority >= 5
-	ConstructionPriority:
-		PriorityCondition: delconpriority
+#	ConstructionPriority:
+#		PriorityCondition: delconpriority
 	Armor:
 		Type: Wood
 	Building:
@@ -2205,6 +2245,10 @@
 	FrozenUnderFog:
 	Demolishable:
 	GivesBuildableArea:
+		AreaTypes: building
+	RequiresBuildableArea:
+		AreaTypes: building
+		Adjacent: 8
 	EngineerRepairable:
 	DamageMultiplier@Level1:
 		RequiresCondition: Construct >= 10 && Construct <= 15
@@ -2246,11 +2290,11 @@
 		ConstructionCondition: Construct
 		YOffset: 0
 		XOffset: 5
-	ConstructionProgress@DeliveredResources:
-		ConstructionCondition: DeliveredResources
-		YOffset: 16
-		XOffset: 5
-		Font: Bold
+#	ConstructionProgress@DeliveredResources:
+#		ConstructionCondition: DeliveredResources
+#		YOffset: 16
+#		XOffset: 5
+#		Font: Bold
 	HitShape:
 	EditorTilesetFilter:
 		Categories: Construction Sites

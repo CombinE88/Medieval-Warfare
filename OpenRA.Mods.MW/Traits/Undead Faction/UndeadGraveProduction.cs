@@ -47,7 +47,7 @@ namespace OpenRA.Mods.MW.Traits
 
 
 
-        public override bool Produce(Actor self, ActorInfo producee, string factionVariant)
+        public override bool Produce(Actor self, ActorInfo producee, string productionType, TypeDictionary inits)
         {
             var newexit = self.Info.TraitInfos<ExitInfo>().FirstOrDefault();
             var person = producee.TraitInfo<PersonValuedInfo>();
@@ -59,7 +59,7 @@ namespace OpenRA.Mods.MW.Traits
             if (devMode != null && devMode.FastBuild)
             {
 
-                self.World.AddFrameEndTask(ww => DoProduction(self, producee, newexit, factionVariant));
+                self.World.AddFrameEndTask(ww => DoProduction(self, producee, newexit, productionType, inits));
                 Game.Sound.PlayNotification(self.World.Map.Rules, self.Owner, "Speech", info.ReadyAudio,
                     self.Owner.Faction.InternalName);
                 return true;
@@ -71,14 +71,14 @@ namespace OpenRA.Mods.MW.Traits
 
 
 
-            self.World.AddFrameEndTask(w => DoProduction(self, producee, newexit, factionVariant));
+            self.World.AddFrameEndTask(w => DoProduction(self, producee, newexit, productionType, inits));
             Game.Sound.PlayNotification(self.World.Map.Rules, self.Owner, "Speech", info.ReadyAudio,
                 self.Owner.Faction.InternalName);
 
             return true;
         }
 
-        public override void DoProduction(Actor self, ActorInfo producee, ExitInfo exitinfo, string factionVariant)
+        public override void DoProduction(Actor self, ActorInfo producee, ExitInfo exitinfo, string factionVariant, TypeDictionary init)
         {
             var exit = CPos.Zero;
             var exitLocation = CPos.Zero;
@@ -173,7 +173,7 @@ namespace OpenRA.Mods.MW.Traits
 
                                 var notifyOthers = self.World.ActorsWithTrait<INotifyOtherProduction>();
                                 foreach (var notify in notifyOthers)
-                                    notify.Trait.UnitProducedByOther(notify.Actor, self, newUnit);
+                                    notify.Trait.UnitProducedByOther(notify.Actor, self, newUnit, producee.Name);
 
                                 foreach (var t in newUnit.TraitsImplementing<INotifyBuildComplete>())
                                     t.BuildingComplete(newUnit);
@@ -211,7 +211,7 @@ namespace OpenRA.Mods.MW.Traits
 
                     var notifyOthers = self.World.ActorsWithTrait<INotifyOtherProduction>();
                     foreach (var notify in notifyOthers)
-                        notify.Trait.UnitProducedByOther(notify.Actor, self, newUnit);
+                        notify.Trait.UnitProducedByOther(notify.Actor, self, newUnit, producee.Name);
 
                     foreach (var t in newUnit.TraitsImplementing<INotifyBuildComplete>())
                         t.BuildingComplete(newUnit);

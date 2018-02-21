@@ -1,6 +1,7 @@
 ORNI:
 	Inherits: ^AttackPlane
 	Inherits@AUTOTARGET: ^AutoTargetAll
+	Inherits@AUTOTARGETDEF: ^AutoTargetDefenses
 	Valued:
 		Cost: 1200
 	Tooltip:
@@ -62,7 +63,7 @@ ORNI:
 		Interval: 2
 	PersonValued:
 		ActorCount: 1
-        ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
+		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 	Targetable@CombatRole:
 		TargetTypes: Flying
 	AutoTargetPriority@Counter1:
@@ -73,6 +74,7 @@ WARKITE:
 	Inherits: ^Helicopter
 	Inherits@EXPERIENCE: ^GainsExperience
 	Inherits@AUTOTARGET: ^AutoTargetAll
+	Inherits@AUTOTARGETDEF: ^AutoTargetDefenses
 	HitShape:
 	Valued:
 		Cost: 1000
@@ -123,7 +125,7 @@ WARKITE:
 		Actor: WARKITEKITE.Husk
 	PersonValued:
 		ActorCount: 1
-        ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
+		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 	Targetable@CombatRole:
 		TargetTypes: Flying
 	AutoTargetPriority@Counter1:
@@ -134,6 +136,7 @@ DRGNRDR:
 	Inherits: ^Helicopter
 	Inherits@EXPERIENCE: ^GainsExperience
 	Inherits@AUTOTARGET: ^AutoTargetAll
+	Inherits@AUTOTARGETDEF: ^AutoTargetDefenses
 	GrantRandomCondition:
 		RandomConditions: valida, validb
 		FallbackCondition: validb
@@ -178,7 +181,7 @@ DRGNRDR:
 		SelfReloadDelay: 20
 	SpawnActorOnDeath:
 		Actor: DRAGON.Husk
-        RequiresCondition: !valida
+		RequiresCondition: !valida
 	AutoTarget:
 	SelectionDecorations:
 		VisualBounds: 48,32
@@ -192,10 +195,10 @@ DRGNRDR:
 		Probability: 33
 		OwnerType: InternalName
 		InternalOwner: Neutral
-        RequiresCondition: valida
+		RequiresCondition: valida
 	PersonValued:
 		ActorCount: 1
-        ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
+		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 	Targetable@CombatRole:
 		TargetTypes: Flying
 
@@ -259,6 +262,7 @@ DAVINCI:
 	Inherits: ^Helicopter
 	Inherits@EXPERIENCE: ^GainsExperience
 	Inherits@AUTOTARGET: ^AutoTargetGround
+	Inherits@AUTOTARGETDEF: ^AutoTargetDefenses
 	Valued:
 		Cost: 2500
 	ThrowsShrapnel:
@@ -314,6 +318,7 @@ WRBLN:
 	Inherits: ^Helicopter
 	Inherits@EXPERIENCE: ^GainsExperience
 	Inherits@AUTOTARGET: ^AutoTargetAll
+	Inherits@AUTOTARGETDEF: ^AutoTargetDefenses
 	Valued:
 		Cost: 1700
 	Tooltip:
@@ -364,16 +369,17 @@ WRBLN:
 		VoiceSet: BalloonVoice
 	PersonValued:
 		ActorCount: 1
-        ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
+		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 	Targetable@CombatRole:
 		TargetTypes: Flying
 	AutoTargetPriority@Counter1:
 		ValidTargets: Light, Heavy, Ranged, Support, Flying, LightCavalry, RegularCavalry, Defenses
 		Priority: 4
-        
+		
 			  
 PLACEHOLDERPLANE:
 	Inherits: ^Plane
+	Interactable:
 	HitShape:
 	-AppearsOnRadar:
 	RenderSprites:
@@ -406,6 +412,7 @@ PLACEHOLDERPLANE:
 		
 PLACEHOLDERFLAMESTRIKE:
 	Inherits: ^Plane
+	Interactable:
 	HitShape:
 	-AppearsOnRadar:
 	RenderSprites:

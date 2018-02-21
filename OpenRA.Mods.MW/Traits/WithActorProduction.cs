@@ -15,6 +15,7 @@ using System.Linq;
 using OpenRA.Activities;
 using OpenRA.Mods.Common.Activities;
 using OpenRA.Mods.Common.Traits;
+using OpenRA.Primitives;
 using OpenRA.Traits;
 
 
@@ -156,7 +157,7 @@ namespace OpenRA.Mods.MW.Traits
             return false;
         }
 
-        public override bool Produce(Actor self, ActorInfo producee, string factionVariant)
+        public override bool Produce(Actor self, ActorInfo producee, string productionType, TypeDictionary inits)
         {
 
             if (self.Owner.PlayerActor.TraitOrDefault<DeveloperMode>() != null && self.Owner.PlayerActor.TraitOrDefault<DeveloperMode>().FastBuild)
@@ -164,7 +165,7 @@ namespace OpenRA.Mods.MW.Traits
 
                 var newexit2 = self.Info.TraitInfos<ExitInfo>().FirstOrDefault();
 
-                self.World.AddFrameEndTask(ww => DoProduction(self, producee, newexit2, factionVariant));
+                self.World.AddFrameEndTask(ww => DoProduction(self, producee, newexit2, productionType, inits));
                 Game.Sound.PlayNotification(self.World.Map.Rules, self.Owner, "Speech", info.ReadyAudio,
                     self.Owner.Faction.InternalName);
                 return true;
@@ -273,7 +274,7 @@ namespace OpenRA.Mods.MW.Traits
                         alreadyReached++;
                         if (alreadyReached >= Actorcount)
                         {
-                            self.World.AddFrameEndTask(ww => DoProduction(self, producee, newexit, factionVariant));
+                            self.World.AddFrameEndTask(ww => DoProduction(self, producee, newexit, productionType, inits));
                             Game.Sound.PlayNotification(self.World.Map.Rules, self.Owner, "Speech", info.ReadyAudio,
                                 self.Owner.Faction.InternalName);
                         }
@@ -349,7 +350,7 @@ namespace OpenRA.Mods.MW.Traits
                 }
             else
             {
-                self.World.AddFrameEndTask(ww => DoProduction(self, producee, newexit, factionVariant));
+                self.World.AddFrameEndTask(ww => DoProduction(self, producee, newexit, productionType, inits));
                 Game.Sound.PlayNotification(self.World.Map.Rules, self.Owner, "Speech", info.ReadyAudio,
                     self.Owner.Faction.InternalName);
             }
