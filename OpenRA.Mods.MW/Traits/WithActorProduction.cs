@@ -313,7 +313,7 @@ namespace OpenRA.Mods.MW.Traits
                             if (!actor.IsDead && actor.IsInWorld && actor.Info.HasTraitInfo<IsPeasantInfo>())
                             {
                                 var peas = actor.TraitsImplementing<IsPeasant>().FirstOrDefault();
-                                peas.setWroking();
+                                peas.SetWroking();
                             }
 
                             //what happens when actor or barracks dies
@@ -367,7 +367,7 @@ namespace OpenRA.Mods.MW.Traits
                     {
                         if (!var.IsDead && var.IsInWorld && var.Info.HasTraitInfo<IsPeasantInfo>())
                         {
-                            var.Trait<IsPeasant>().setPeasant();
+                            var.Trait<IsPeasant>().SetPeasant();
                         }
                     }
                 }

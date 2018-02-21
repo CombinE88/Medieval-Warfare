@@ -1982,7 +1982,7 @@ BowNArrowTower:
 	ValidTargets: Ground
 	Projectile: Missile
 		HorizontalRateOfTurn: 60
-		RangeLimit: 8c204
+		RangeLimit: 10c204
 		Arm: 0
 		Speed: 250
 		LaunchAngle: 46
@@ -2012,7 +2012,7 @@ BowNArrowTowerDUMMY:
 	InvalidTargets: Wall, Air
 	ValidTargets: Ground
 	Projectile: Bullet
-		RangeLimit: 9c204
+		RangeLimit: 10c204
 		LaunchAngle: 130
 		Speed: 250
 		Inaccuracy: 0c0

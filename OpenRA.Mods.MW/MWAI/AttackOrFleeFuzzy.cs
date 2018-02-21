@@ -96,7 +96,7 @@ namespace OpenRA.Mods.Common.AI
 			"then AttackOrFlee is Flee"
 		};
 
-		public static readonly AttackOrFleeFuzzy Default = new AttackOrFleeFuzzy(null, null, null);
+		//public static readonly AttackOrFleeFuzzy Default = new AttackOrFleeFuzzy(null, null, null);
 		public static readonly AttackOrFleeFuzzy Rush = new AttackOrFleeFuzzy(new[]
 		{
 			"if ((OwnHealth is Normal) " +

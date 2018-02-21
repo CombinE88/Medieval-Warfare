@@ -3,7 +3,7 @@ KINGROSS:
 	Inherits@AUTOTARGET: ^AutoTargetAll
 	Inherits@GetsPoisoned: ^GetsPoisoned
 	Inherits@ArcherDemo65: ^ArcherDemo80
-	Inherits@TornadoVunerable: ^TornadoVunerable
+
 	Inherits@Healable: ^Healable
 	Inherits@SnakeStunnable: ^SnakeSlowable
 	-Explodes@Tib:
@@ -97,7 +97,7 @@ DDLER:
 	Inherits: ^Cavalry
 	Inherits@GetsPoisoned: ^GetsPoisoned
 	Inherits@ArcherDemo65: ^ArcherDemo80
-	Inherits@TornadoVunerable: ^TornadoVunerable
+
 	Inherits@Healable: ^Healable
 	Inherits@SnakeStunnable: ^SnakeSlowable
 	-Explodes@Tib:
@@ -214,7 +214,7 @@ EMPTYROSS:
 	Inherits: ^Cavalry
 	Inherits@GetsPoisoned: ^GetsPoisoned
 	Inherits@ArcherDemo65: ^ArcherDemo80
-	Inherits@TornadoVunerable: ^TornadoVunerable
+
 	Inherits@SnakeStunnable: ^SnakeSlowable
 	GrantConditionOnDamageState@Slow:
 		Condition: Slowmotion
@@ -277,7 +277,7 @@ ROSS1:
 	Inherits@GainsExperience: ^GainsExperience
 	Inherits@GetsPoisoned: ^GetsPoisoned
 	Inherits@ArcherDemo65: ^ArcherDemo80
-	Inherits@TornadoVunerable: ^TornadoVunerable
+
 	Inherits@Healable: ^Healable
 	Inherits@SnakeStunnable: ^SnakeSlowable
 	GrantConditionOnDamageState@Slow:
@@ -339,7 +339,7 @@ ROSS2:
 	Inherits@GainsExperience: ^GainsExperience
 	Inherits@GetsPoisoned: ^GetsPoisoned
 	Inherits@ArcherDemo65: ^ArcherDemo80
-	Inherits@TornadoVunerable: ^TornadoVunerable
+
 	Inherits@Healable: ^Healable
 	Inherits@SnakeStunnable: ^SnakeSlowable
 	GrantConditionOnDamageState@Slow:
@@ -400,7 +400,7 @@ ROSS5:
 	Inherits@GainsExperience: ^GainsExperience
 	Inherits@GetsPoisoned: ^GetsPoisoned
 	Inherits@ArcherDemo65: ^ArcherDemo80
-	Inherits@TornadoVunerable: ^TornadoVunerable
+
 	Inherits@Healable: ^Healable
 	Inherits@SnakeStunnable: ^SnakeSlowable
 	GrantConditionOnDamageState@Slow:
@@ -481,7 +481,7 @@ ROSS3:
 	Inherits@GainsExperience: ^GainsExperience
 	Inherits@GetsPoisoned: ^GetsPoisoned
 	Inherits@ArcherDemo65: ^ArcherDemo80
-	Inherits@TornadoVunerable: ^TornadoVunerable
+
 	Inherits@Healable: ^Healable
 	Inherits@SnakeStunnable: ^SnakeSlowable
 	GrantConditionOnDamageState@Slow:
@@ -550,7 +550,7 @@ ROSS4:
 	Inherits@GainsExperience: ^GainsExperience
 	Inherits@GetsPoisoned: ^GetsPoisoned
 	Inherits@ArcherDemo65: ^ArcherDemo80
-	Inherits@TornadoVunerable: ^TornadoVunerable
+
 	Inherits@Healable: ^Healable
 	Inherits@SnakeStunnable: ^SnakeSlowable
 	GrantConditionOnDamageState@Slow:
@@ -621,7 +621,7 @@ ROSS4B:
 	Inherits@GainsExperience: ^GainsExperience
 	Inherits@GetsPoisoned: ^GetsPoisoned
 	Inherits@ArcherDemo65: ^ArcherDemo80
-	Inherits@TornadoVunerable: ^TornadoVunerable
+
 	Inherits@Healable: ^Healable
 	Inherits@SnakeStunnable: ^SnakeSlowable
 	GrantConditionOnDamageState@Slow:
@@ -682,7 +682,7 @@ ROSS4C:
 	Inherits@GainsExperience: ^GainsExperience
 	Inherits@GetsPoisoned: ^GetsPoisoned
 	Inherits@ArcherDemo65: ^ArcherDemo80
-	Inherits@TornadoVunerable: ^TornadoVunerable
+
 	Inherits@Healable: ^Healable
 	Inherits@SnakeStunnable: ^SnakeSlowable
 	GrantConditionOnDamageState@Slow:

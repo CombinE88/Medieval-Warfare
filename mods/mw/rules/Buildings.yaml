@@ -1071,7 +1071,7 @@ NODNUKE:
 	-WithSpriteBody:
 	GrantRandomCondition:
 		RandomConditions: valida, validb, validc, validd
-		FallbackCondition: none
+		FallbackCondition: valida
 	WithIdleOverlay@a:  
 		StartSequence: make
 		Sequence: idle
@@ -1340,6 +1340,8 @@ NODPROC:
 		VisualBounds: 48,70,0,-10
 		
 PROC:
+	Interactable:
+	AlwaysVisible:
 	Tooltip:
 		Name: Ore Refinery or Farm
 			
@@ -2262,6 +2264,7 @@ MISS:
 		
 TECH1:
 	Inherits: ^TechBuilding	
+	AutoTarget:
 	Inherits@AUTOTARGET: ^AutoTargetGround
 	Inherits@Hitshape: ^3x2Shape
 	Building:
@@ -2338,56 +2341,65 @@ TECH1.Husk:
 		Name: Mortar Station (Destroyed)
 	WithBuildingBib:
 		
-anyarmory:
+ANYARMORY:
 	AlwaysVisible:
+	Interactable:
 	Tooltip:
 		Name: Armory or Tower of Progress
 		Description: Armory or Tower of Progress
 		
 ANYREFINERY:
 	AlwaysVisible:
+	Interactable:
 	Tooltip:
 		Name: Ore refinery
 		Description: Ore refinery 
 		
 BARRACKS:
 	AlwaysVisible:
+	Interactable:
 	Tooltip:
 		Name: Infantry Production
 		Description: Infantry Production
 		
 ANYWORKSHOP:
 	AlwaysVisible:
+	Interactable:
 	Tooltip:
 		Name: Workshop
 		Description: Siege Production
 
 VEHICLEPRODUCTION:
 	AlwaysVisible:
+	Interactable:
 	Tooltip:
 		Name: Stables or School
 		Description: Stables or School
 		
 ANYPOWER:
 	AlwaysVisible:
+	Interactable:
 	Tooltip:
 		Name: Living Quaters
 		Description: Living Quarters
 
 ANYHQ:
 	AlwaysVisible:
+	Interactable:
 	Tooltip:
 		Name: Inventor, Armory, Castle or Palace
 		Description: Inventor, Armory, Castle or Palace
 		
 ANYCASTLE:
 	AlwaysVisible:
+	Interactable:
 	Tooltip:
 		Name: Castle
 		Description: Castle
 		
 SCAFFOLD:
 	AlwaysVisible:
+	Interactable:
 	Tooltip:
 		Name: saffold
 		Description: scaffold

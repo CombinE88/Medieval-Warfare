@@ -55,9 +55,6 @@
 		RequiresCondition: archerprone
 		ZOffset: 256
 		ValidStances: Ally, Enemy, Neutral
-
-^TornadoVunerable:
-#nothing
 		
 ^Healable:
 	ExternalCondition@BARRACKS:
@@ -334,7 +331,6 @@
   
 ^AutoTargetGround:
 	AutoTarget:
-		AttackAnythingCondition: stance-attackanything
 	AutoTargetPriority@DEFAULT:
 		ValidTargets: Infantry, Vehicle, Creep, Water, , Cavalry, Siege
 		InvalidTargets: NoAutoTarget, Wall
@@ -362,7 +358,6 @@
 
 ^AutoTargetAll:
 	AutoTarget:
-		AttackAnythingCondition: stance-attackanything
 	AutoTargetPriority@DEFAULT:
 		ValidTargets: Infantry, Vehicle, Creep, Water, Defense, Cavalry, Siege, Air
 		InvalidTargets: NoAutoTarget, Wall
@@ -584,21 +579,16 @@
 		Type: GroundPosition
 	AppearsOnRadar:
 		UseLocation: yes
-	Targetable@GROUND:
-		TargetTypes: Ground, Vehicle
-		RequiresCondition: !airborne
-	Targetable@AIRBORNE:
+	Targetable:
 		TargetTypes: Air
-		RequiresCondition: airborne
 	SelectionDecorations:
 	WithSpriteControlGroupDecoration:
 	Selectable:
 		Bounds: 24,24
 	Aircraft:
 		LandWhenIdle: false
-		AirborneCondition: airborne
-		CruisingCondition: cruising
 		CanHover: True
+		CruisingCondition: cruising
 	HiddenUnderFog:
 		Type: GroundPosition
 	ActorLostNotification:
@@ -961,6 +951,7 @@
 
 ^CivBuildingHusk:
 	Inherits@1: ^SpriteActor
+	Interactable:
 	AppearsOnRadar:
 	Building:
 		Dimensions: 1,1
@@ -977,7 +968,6 @@
 
 ^TechBuilding:
 	Inherits: ^CivBuilding
-	Interactable:
 	Capturable:
 	CaptureNotification:
 		Notification: CivilianBuildingCaptured
@@ -1249,7 +1239,6 @@
 ^PropDoor:
 	Inherits@1: ^ExistsInWorld
 	Inherits@2: ^SpriteActor
-	Interactable:
 	RenderSprites:
 		Palette: mwcivilian
 	Building:
@@ -1449,14 +1438,8 @@
 	Selectable:
 		Bounds: 24,24
 	Aircraft:
-		AirborneCondition: airborne
-		CruisingCondition: cruising
-	Targetable@GROUND:
-		TargetTypes: Ground, Repair, Vehicle
-		RequiresCondition: !airborne
-	Targetable@AIRBORNE:
+	Targetable:
 		TargetTypes: Air
-		RequiresCondition: airborne
 	HiddenUnderFog:
 		Type: CenterPosition
 	AttackMove:
@@ -1908,41 +1891,11 @@
 ^MWWanderer:
 	Inherits: ^MedievalInfantry
 	Inherits@AUTOTARGET: ^AutoTargetTalking
-	SelfHealing@Rotaway:
-		PercentageStep: -2
-		Step: -0
-		HealIfBelow: 110
-		Delay: 10
-		RequiresCondition: RottenKadaver
-		DamageTypes: PoisonDeath
-	SelfHealing@DDler:
-		PercentageStep: -2
-		Step: -0
-		HealIfBelow: 110
-		Delay: 10
-		RequiresCondition: DDler
-		DamageTypes: PoisonDeath
-	WithDecoration@DDlerPoison:
-		Image: debuffs
-		Sequence: poison
-		Palette: ra
-		ReferencePoint: Top, Left
-		RequiresCondition: DDler || RottenKadaver
-		ZOffset: 256
-		ValidStances: Ally, Enemy, Neutral
-	ExternalCondition@BARRACKS:
-		Condition: hospitalhealbarr
-	SelfHealing@HOSPITAL:
-		PercentageStep: 1
-		Delay: 25
-		HealIfBelow: 100
-		DamageCooldown: 125
-		RequiresCondition: hospitalheal || hospitalhealbarr
-	WithDecoration@REDCROSS:
-		Image: pips
-		Sequence: pip-heal
-		ReferencePoint: Bottom, Right
-		RequiresCondition: hospitalheal || hospitalhealbarr
+	Inherits@GetsPoisoned: ^GetsPoisoned
+	Inherits@CanTurnIntoScelett:  ^CanTurnIntoScelett
+	Inherits@ArcherDemo65: ^ArcherDemo65
+	Inherits@Healable: ^Healable
+	Inherits@SnakeStunnable: ^SnakeStunnable
 	Voiced:
 		VoiceSet: CivilianNew
 	Valued:
@@ -2002,32 +1955,11 @@
 		Weapon: WanderAttack
 		TargetStances: Ally
 		RequiresCondition: !Wander
-	ExternalCondition@Tax:
-		Condition: Tax
-	CashTrickler@PayTax:
-		Interval: 25
-		Amount: 2
-		RequiresCondition: Tax
 	SpawnActorOnDeath@SCELET:
 		DeathType: SkeletonDeath
 		Probability: 80
 		Actor: SULM1SKELET
 		OwnerType: Killer
-	ExternalCondition@SNAKES:
-		Condition: snaketrap
-	SelfHealing@SNAKES:
-		PercentageStep: -10
-		Step: -0
-		HealIfBelow: 110
-		Delay: 25
-		RequiresCondition: snaketrap
-		DamageTypes: PoisonDeath
-	SpeedMultiplier@SNAKES:
-		Modifier: 10
-		RequiresCondition: snaketrap
-	WithIdleOverlay@SNAKES:
-		Sequence: stunned
-		RequiresCondition: snaketrap
 	HitShape:
 		Type: Circle
 			Radius: 128
@@ -2069,28 +2001,13 @@
 		ReduceMoveRadiusDelay: 5
 		MinMoveDelay: 150
 		MaxMoveDelay: 750
-		RequiresCondition: Wander && !Talking && !Talkback
+		RequiresCondition: Wander
 	#AttackWander@Talking: 
 	#	WanderMoveRadius: 2
 	#	ReduceMoveRadiusDelay: 5
 	#	MinMoveDelay: 150
 	#	MaxMoveDelay: 750
 	#	RequiresCondition: Wander && (Talking || Talkback)
-	ExternalCondition@SNAKES:
-		Condition: snaketrap
-	SelfHealing@SNAKES:
-		PercentageStep: -10
-		Step: -0
-		HealIfBelow: 110
-		Delay: 25
-		RequiresCondition: snaketrap
-		DamageTypes: PoisonDeath
-	SpeedMultiplier@SNAKES:
-		Modifier: 10
-		RequiresCondition: snaketrap
-	WithIdleOverlay@SNAKES:
-		Sequence: stunned
-		RequiresCondition: snaketrap
 		
 ^MWConstructor:
 	Inherits: ^MedievalInfantry
@@ -2212,23 +2129,6 @@
 	Targetable@deliverresources: 
 		TargetTypes: Deliverable
 		RequiresCondition: 200 > DeliveredResources
-	Targetable@Priority1:
-		TargetTypes: Priority1
-		RequiresCondition: delconpriority == 1
-	Targetable@Priority2:
-		TargetTypes: Priority2
-		RequiresCondition: delconpriority == 2
-	Targetable@Priority3:
-		TargetTypes: Priority3
-		RequiresCondition: delconpriority == 3
-	Targetable@Priority4:
-		TargetTypes: Priority4
-		RequiresCondition: delconpriority == 4
-	Targetable@Priority5:
-		TargetTypes: Priority5
-		RequiresCondition: delconpriority >= 5
-#	ConstructionPriority:
-#		PriorityCondition: delconpriority
 	Armor:
 		Type: Wood
 	Building:

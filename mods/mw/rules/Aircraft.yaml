@@ -393,7 +393,6 @@ PLACEHOLDERPLANE:
 		TurnSpeed: 4
 		Speed: 303
 		Repulsable: False
-		AirborneCondition: airborne
 	Health:
 		HP: 15000
 	Armor:
@@ -426,7 +425,6 @@ PLACEHOLDERFLAMESTRIKE:
 		TurnSpeed: 4
 		Speed: 303
 		Repulsable: False
-		AirborneCondition: airborne
 		CruiseAltitude: 13c0
 		IdealSeparation: 0c512
 	Health:
@@ -446,42 +444,3 @@ PLACEHOLDERFLAMESTRIKE:
 		Name: bombs
 		Weapon: firebarrage
 		LocalOffset: 0,0,-43, 0,100,-43, 0,100,-43
-	
-DELBIR:
-	Inherits: ^Plane
-	HitShape:
-	Tooltip:
-		Name: Supply Bird
-	Valued:
-		Cost: 2000
-	Aircraft:
-		TurnSpeed: 5
-		Speed: 326
-		Repulsable: False
-		AirborneCondition: airborne
-		MaximumPitch: 36
-	RenderSprites:
-		PlayerPalette: raplayer
-	Health:
-		HP: 2500
-	Armor:
-		Type: Heavy
-	HiddenUnderFog:
-		AlwaysVisibleStances: None
-		Type: GroundPosition
-	Cargo:
-		MaxWeight: 10
-		PipCount: 10
-	DamageMultiplier@INVULNERABLE:
-		Modifier: 0
-	Contrail@2:
-		Offset: -85,-384,150
-		TrailLength: 16
-		TrailWidth:0c32
-	Contrail@3:
-		Offset: -85,384,150
-		TrailLength: 16
-		TrailWidth:0c32
-	WithIdleAnimation:
-		Sequences: active
-		Interval: 25

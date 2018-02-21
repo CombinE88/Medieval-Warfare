@@ -170,8 +170,6 @@ ORNI.Husk:
 		Offset: 43, 128, 0
 		ZOffset: -129
 	Aircraft:
-		AirborneCondition: airborne
-		CruisingCondition: cruising
 		TurnSpeed: 5
 		Speed: 149
 	FallsToEarth:
@@ -263,8 +261,6 @@ WARKITEKITE.Husk:
 		Offset: 43, 128, 0
 		ZOffset: -129
 	Aircraft:
-		AirborneCondition: airborne
-		CruisingCondition: cruising
 		TurnSpeed: 1
 		Speed: 380
 	FallsToEarth:

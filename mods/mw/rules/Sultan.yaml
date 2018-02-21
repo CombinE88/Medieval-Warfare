@@ -2235,7 +2235,7 @@ SULB2:
 	Inherits@GainsExperience: ^GainsExperience
 	Inherits@GetsPoisoned: ^GetsPoisoned
 	Inherits@ArcherDemo65: ^ArcherDemo80
-	Inherits@TornadoVunerable: ^TornadoVunerable
+
 	Inherits@Healable: ^Healable
 	Inherits@SnakeStunnable: ^SnakeSlowable
 	Valued:
@@ -2453,8 +2453,6 @@ SULM3.ManHusk:
 		Offset: 43, 128, 0
 		ZOffset: -129
 	Aircraft:
-		AirborneCondition: airborne
-		CruisingCondition: cruising
 		TurnSpeed: 1
 		Speed: 380
 	FallsToEarth:
@@ -2574,9 +2572,21 @@ SULB3.Husk:
 		Explosion: GroundHit
 		
 SULTURNXL:
-	Inherits: ^AttackPlane
+	Inherits@1: ^ExistsInWorld
+	Inherits@4: ^SpriteActor
+	Huntable:
+	DrawLineToTarget:
+	UpdatesPlayerStatistics:
+	AppearsOnRadar:
+		UseLocation: true
+	WithSpriteControlGroupDecoration:
+	Targetable:
+		TargetTypes: Air
+	HiddenUnderFog:
+		Type: CenterPosition
 	HitShape:
-	-GainsExperience:
+	EditorTilesetFilter:
+		Categories: Aircraft
 	Aircraft:
 		CruiseAltitude: 0
 		InitialFacing: 192
@@ -2591,8 +2601,6 @@ SULTURNXL:
 	Tooltip:
 		Name: Turnado
 	ConditionManager:
-	-Targetable@GROUND:
-	-Targetable@AIRBORNE:
 	WithPermanentExplosion:
 		Weapon: TornadoExplosion
 		Delay: 5
@@ -2616,7 +2624,6 @@ SULTURNXL:
 	WithDeathAnimation:
 		DeathSequencePalette: raplayer
 		UseDeathTypeSuffix: False
-	-WithFacingSpriteBody:
 	BodyOrientation:
 		QuantizedFacings: 32
 	WithSpriteBody:
@@ -2624,5 +2631,3 @@ SULTURNXL:
 	AmbientSound:
 		SoundFiles: tornado.aud
 		Delay: 10
-	-WithShadow:
-	-ActorLostNotification:

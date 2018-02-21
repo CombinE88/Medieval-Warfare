@@ -43,8 +43,6 @@ SPLIT2:
 		DockAngle: 96
 		IsDragRequired: false
 		FaceTowardsCenter: true
-	ExternalCondition@DECAY:
-		Condition: infested
 
 
 SPLIT3:
@@ -96,8 +94,6 @@ SPLIT3:
 		DockAngle: 96
 		IsDragRequired: false
 		FaceTowardsCenter: true
-	ExternalCondition@DECAY:
-		Condition: infested
 
 SPLITBLUE:
 	Inherits: ^TibTree
@@ -148,8 +144,6 @@ SPLITBLUE:
 		DockAngle: 96
 		IsDragRequired: false
 		FaceTowardsCenter: true
-	ExternalCondition@DECAY:
-		Condition: infested
 		
 SPLIT4:
 	Inherits: SPLIT3
@@ -191,8 +185,6 @@ SPLIT4:
 		DockAngle: 96
 		IsDragRequired: false
 		FaceTowardsCenter: true
-	ExternalCondition@DECAY:
-		Condition: infested
 		
 SPLIT4B:
 	Inherits: SPLIT3
@@ -234,8 +226,6 @@ SPLIT4B:
 		DockAngle: 96
 		IsDragRequired: false
 		FaceTowardsCenter: true
-	ExternalCondition@DECAY:
-		Condition: infested
 		
 SPLIT5:
 	Inherits: SPLIT3

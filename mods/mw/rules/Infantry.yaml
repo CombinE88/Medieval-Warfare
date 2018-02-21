@@ -4,7 +4,7 @@ KING:
 	Inherits@GetsPoisoned: ^GetsPoisoned
 	Inherits@CanTurnIntoScelett:  ^CanTurnIntoScelett
 	Inherits@ArcherDemo65: ^ArcherDemo65
-	Inherits@TornadoVunerable: ^TornadoVunerable
+
 	Inherits@Healable: ^Healable
 	GivesBounty:
 		Percentage: 50
@@ -95,7 +95,6 @@ KING:
 Husk.KING:
 	Inherits@1: ^ExistsInWorld
 	Inherits@3: ^SpriteActor	
-	Interactable:
 	HitShape:
 		Type: Circle
 			Radius: 128
@@ -149,7 +148,6 @@ Husk.KING:
 Husk2.KING:
 	Inherits@1: ^ExistsInWorld
 	Inherits@3: ^SpriteActor
-	Interactable:
 	HitShape:
 		Type: Circle
 			Radius: 128
@@ -206,7 +204,7 @@ ENGENEER:
 	Inherits@GetsPoisoned: ^GetsPoisoned
 	Inherits@CanTurnIntoScelett:  ^CanTurnIntoScelett
 	Inherits@ArcherDemo65: ^ArcherDemo65
-	Inherits@TornadoVunerable: ^TornadoVunerable
+
 	Inherits@Healable: ^Healable
 	Inherits@SnakeStunnable: ^SnakeStunnable
 	AutoTargetPriority@Prio5:
@@ -279,7 +277,7 @@ E1NEW:
 	Inherits@GetsPoisoned: ^GetsPoisoned
 	Inherits@CanTurnIntoScelett:  ^CanTurnIntoScelett
 	Inherits@ArcherDemo65: ^ArcherDemo65
-	Inherits@TornadoVunerable: ^TornadoVunerable
+
 	Inherits@Healable: ^Healable
 	Inherits@SnakeStunnable: ^SnakeStunnable
 	Inherits@GrimReanimatable: ^GrimReanimatable
@@ -319,7 +317,7 @@ E2NEW:
 	Inherits@GetsPoisoned: ^GetsPoisoned
 	Inherits@CanTurnIntoScelett:  ^CanTurnIntoScelett
 	Inherits@ArcherDemo65: ^ArcherDemo65
-	Inherits@TornadoVunerable: ^TornadoVunerable
+
 	Inherits@Healable: ^Healable
 	Inherits@SnakeStunnable: ^SnakeStunnable
 	Inherits@GrimReanimatable: ^GrimReanimatable
@@ -376,7 +374,7 @@ E2NEWV2:
 	Inherits@GetsPoisoned: ^GetsPoisoned
 	Inherits@CanTurnIntoScelett:  ^CanTurnIntoScelett
 	Inherits@ArcherDemo65: ^ArcherDemo65
-	Inherits@TornadoVunerable: ^TornadoVunerable
+
 	Inherits@Healable: ^Healable
 	Inherits@SnakeStunnable: ^SnakeStunnable
 	Inherits@GrimReanimatable: ^GrimReanimatable
@@ -388,7 +386,6 @@ E2NEWV2:
 	Buildable:
 		Description: Anti-Cavalry infantry.\n  Strong vs Cavalry.\n  Weak vs Infantry\n  Deals damage when trampled by Cavalry\n  Can cut down trees.\n\nTrains: 1 Peasant\n
 		IconPalette: raicon
-		Prerequisites: ~!upgradeguns2
 		BuildPaletteOrder: 20
 		Queue: MInfantry.GDI
 		#BuildDuration: 50
@@ -425,201 +422,7 @@ E2NEWV2:
 	AutoTargetPriority@Counter2:
 		ValidTargets: RegularCavalry, HeavyCavalry, Defenses
 		Priority: 4
-		
-E2NEWV2U:
-	Inherits: ^Knight
-	Inherits@AUTOTARGET: ^AutoTargetGround
-	Inherits@GainsExperience: ^GainsExperience
-	Inherits@GetsPoisoned: ^GetsPoisoned
-	Inherits@CanTurnIntoScelett:  ^CanTurnIntoScelett
-	Inherits@ArcherDemo65: ^ArcherDemo65
-	Inherits@TornadoVunerable: ^TornadoVunerable
-	Inherits@Healable: ^Healable
-	Inherits@SnakeStunnable: ^SnakeStunnable
-	Inherits@GrimReanimatable: ^GrimReanimatable
-	Valued:
-		Cost: 200
-	-Crushable:
-	Tooltip:
-		Name: Guard
-	Buildable:
-		Description: Anti-Cavalry infantry.\n  Strong vs Cavalry.\n  Weak vs Infantry\n  Deals damage when trampled by Cavalry\n  Can cut down trees.\n\nTrains: 1 Peasant\n
-		IconPalette: raicon
-		BuildPaletteOrder: 20
-		Queue: MInfantry.GDI
-		#BuildDuration: 50
-		Prerequisites: ~upgradeguns2
-	Mobile:
-		Speed: 45
-	Health:
-		HP: 8000
-	Armament:
-		Weapon: KingPike
-		Name: Secondary
-		RequiresCondition: Noammo && !Shooting
-	Armament@target:
-		Weapon: KingPikeStructure
-		Name: Secondary
-		RequiresCondition: FullAmmo && !Shooting
-	Armament@Pinning:
-		Weapon: KingPikePinning
-		Name: Secondary
-		BroadSwordPinning: FullAmmo && !Shooting
-	Armament@gun:
-		Weapon: KingPikeRanged
-		Name: Primary
-		FireDelay: 5
-		RequiresCondition: FullAmmo
-		LocalOffset: 341,20,356
-	Armament@Dummy:
-		Weapon: KingPikeRangedDummy
-		Name: Primary
-		RequiresCondition: FullAmmo
-	AmmoPool:
-		Armaments: Primary
-		Name: Gun
-		Ammo: 1
-	ReloadAmmoWhenEnabled:
-		Name: Gun
-		ReloadDelay: 62
-		ResetDelayOnEnable: True
-		RequiresCondition: !NotAttacking && !FullAmmo
-	AmmoPoolConditions:
-		ConditionFull: FullAmmo
-		ConditionEmpty: Noammo
-		AmmoPoolName: Gun
-	ExternalCondition@NotAttacking:
-		Condition: NotAttacking
-	ExternalCondition@Shooting:
-		Condition: Shooting
-	AttackFrontal:
-		Armaments: Secondary, Primary
-	Targetable@KingSword:
-		TargetTypes: KingPike
-	AutoTarget:
-		ScanRadius: 4
-		InitialStance: AttackAnything
-	RenderSprites:
-		Image: e2newv2u
-		PlayerPalette: raplayer
-	WithInfantryBody:
-		DefaultAttackSequence: attack
-		AttackSequences:
-			Primary: shoot
-			Secondary: attack
-	Armor:
-		Type: Light
-	Voiced:
-		VoiceSet: GDIPikeVoice
-	Explodes:
-		Weapon: KilledPike
-		EmptyWeapon: KilledPike
-	PersonValued:
-		ActorCount: 1
-		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
-	Targetable@CombatRole:
-		TargetTypes: Light
-	AutoTargetPriority@Counter1:
-		ValidTargets: LightCavalry, Defenses
-		Priority: 5
-	AutoTargetPriority@Counter2:
-		ValidTargets: RegularCavalry, HeavyCavalry, Defenses
-		Priority: 4
-		
-E3NEWU:
-	Inherits: ^Knight
-	Inherits@AUTOTARGET: ^AutoTargetGround
-	Inherits@GainsExperience: ^GainsExperience
-	Inherits@GetsPoisoned: ^GetsPoisoned
-	Inherits@CanTurnIntoScelett:  ^CanTurnIntoScelett
-	Inherits@ArcherDemo65: ^ArcherDemo65
-	Inherits@TornadoVunerable: ^TornadoVunerable
-	Inherits@Healable: ^Healable
-	Inherits@SnakeStunnable: ^SnakeStunnable
-	Inherits@GrimReanimatable: ^GrimReanimatable
-	Valued:
-		Cost: 125
-	Tooltip:
-		Name: Battalionist
-	Buildable:
-		Description: General-purpose infantry.\n  Strong vs Infantry\n  Weak vs Cavalry \n  Can fire 1 ranged shot when not attacking for a 15 seconds\n  Can cut down trees.\n\nTrains: 1 Peasant\n
-		IconPalette: raicon
-		BuildPaletteOrder: 10
-		Queue: MInfantry.GDI
-		#BuildDuration: 50
-		Prerequisites: ~upgradeguns1
-	Mobile:
-		Speed: 54
-		RequiresCondition: !Shooting
-	Health:
-		HP: 11500
-	Armament:
-		Weapon: BroadSword
-		Name: Secondary
-		RequiresCondition: Noammo && !Shooting
-	Armament@target:
-		Weapon: BroadSwordStructure
-		Name: Secondary
-		RequiresCondition: FullAmmo && !Shooting
-	Armament@Pinning:
-		Weapon: BroadSwordPinning
-		Name: Secondary
-		BroadSwordPinning: FullAmmo && !Shooting
-	Armament@gun:
-		Weapon: broadswordranged
-		Name: Primary
-		FireDelay: 5
-		RequiresCondition: FullAmmo
-		LocalOffset: 341,20,356
-	Armament@Dummy:
-		Weapon: BroadSwordRangedDummy
-		Name: Primary
-		RequiresCondition: FullAmmo
-	AmmoPool:
-		Armaments: Primary
-		Name: Gun
-		Ammo: 1
-	ReloadAmmoWhenEnabled:
-		Name: Gun
-		ReloadDelay: 62
-		ResetDelayOnEnable: True
-		RequiresCondition: !NotAttacking && !FullAmmo
-	AmmoPoolConditions:
-		ConditionFull: FullAmmo
-		ConditionEmpty: Noammo
-		AmmoPoolName: Gun
-	ExternalCondition@NotAttacking:
-		Condition: NotAttacking
-	ExternalCondition@Shooting:
-		Condition: Shooting
-	AttackFrontal:
-		Armaments: Secondary, Primary
-	Targetable@KingSword:
-		TargetTypes: KingSword
-	AutoTarget:
-		ScanRadius: 4
-		InitialStance: AttackAnything
-	RenderSprites:
-		Image: e3newu
-		PlayerPalette: raplayer
-	WithInfantryBody:
-		DefaultAttackSequence: attack
-		AttackSequences:
-			Primary: shoot
-			Secondary: attack
-	Armor:
-		Type: Heavy
-	Voiced:
-		VoiceSet: GDIKnightVoice
-	PersonValued:
-		ActorCount: 1
-		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
-	Targetable@CombatRole:
-		TargetTypes: Heavy
-	AutoTargetPriority@Counter:
-		ValidTargets: Light, Heavy, Ranged, Support
-		Priority: 4
-		
+
 E3NEW:
 	Inherits: ^Knight
 	Inherits@AUTOTARGET: ^AutoTargetGround
@@ -627,7 +430,7 @@ E3NEW:
 	Inherits@GetsPoisoned: ^GetsPoisoned
 	Inherits@CanTurnIntoScelett:  ^CanTurnIntoScelett
 	Inherits@ArcherDemo65: ^ArcherDemo65
-	Inherits@TornadoVunerable: ^TornadoVunerable
+
 	Inherits@Healable: ^Healable
 	Inherits@SnakeStunnable: ^SnakeStunnable
 	Inherits@GrimReanimatable: ^GrimReanimatable
@@ -641,7 +444,6 @@ E3NEW:
 		BuildPaletteOrder: 10
 		Queue: MInfantry.GDI
 		#BuildDuration: 50
-		Prerequisites: ~!upgradeguns1
 	Mobile:
 		Speed: 56
 	Health:
@@ -677,7 +479,7 @@ E3NEWV2:
 	Inherits@GetsPoisoned: ^GetsPoisoned
 	Inherits@CanTurnIntoScelett:  ^CanTurnIntoScelett
 	Inherits@ArcherDemo65: ^ArcherDemo65
-	Inherits@TornadoVunerable: ^TornadoVunerable
+
 	Inherits@Healable: ^Healable
 	Inherits@SnakeStunnable: ^SnakeStunnable
 	Inherits@GrimReanimatable: ^GrimReanimatable
@@ -728,7 +530,7 @@ E9NEW:
 	Inherits@GetsPoisoned: ^GetsPoisoned
 	Inherits@CanTurnIntoScelett:  ^CanTurnIntoScelett
 	Inherits@ArcherDemo65: ^ArcherDemo65
-	Inherits@TornadoVunerable: ^TornadoVunerable
+
 	Inherits@Healable: ^Healable
 	Inherits@SnakeStunnable: ^SnakeStunnable
 	Inherits@GrimReanimatable: ^GrimReanimatable
@@ -784,7 +586,7 @@ E4NEW:
 	Inherits@GetsPoisoned: ^GetsPoisoned
 	Inherits@CanTurnIntoScelett:  ^CanTurnIntoScelett
 	Inherits@ArcherDemo65: ^ArcherDemo65
-	Inherits@TornadoVunerable: ^TornadoVunerable
+
 	Inherits@Healable: ^Healable
 	Inherits@SnakeStunnable: ^SnakeStunnable
 	Inherits@GrimReanimatable: ^GrimReanimatable
@@ -856,7 +658,7 @@ E4NEWV2:
 	Inherits@GetsPoisoned: ^GetsPoisoned
 	Inherits@CanTurnIntoScelett:  ^CanTurnIntoScelett
 	Inherits@ArcherDemo65: ^ArcherDemo65
-	Inherits@TornadoVunerable: ^TornadoVunerable
+
 	Inherits@Healable: ^Healable
 	Inherits@SnakeStunnable: ^SnakeStunnable
 	Inherits@GrimReanimatable: ^GrimReanimatable
@@ -928,7 +730,7 @@ E5NEW:
 	Inherits@GetsPoisoned: ^GetsPoisoned
 	Inherits@CanTurnIntoScelett:  ^CanTurnIntoScelett
 	Inherits@ArcherDemo65: ^ArcherDemo65
-	Inherits@TornadoVunerable: ^TornadoVunerable
+
 	Inherits@Healable: ^Healable
 	Inherits@SnakeStunnable: ^SnakeStunnable
 	Inherits@GrimReanimatable: ^GrimReanimatable
@@ -987,7 +789,7 @@ RMBONEW:
 	Inherits@GetsPoisoned: ^GetsPoisoned
 	Inherits@CanTurnIntoScelett:  ^CanTurnIntoScelett
 	Inherits@ArcherDemo65: ^ArcherDemo65
-	Inherits@TornadoVunerable: ^TornadoVunerable
+
 	Inherits@Healable: ^Healable
 	Inherits@SnakeStunnable: ^SnakeStunnable
 	Inherits@GrimReanimatable: ^GrimReanimatable
@@ -1045,7 +847,7 @@ NEWCOMM:
 	Inherits@GetsPoisoned: ^GetsPoisoned
 	Inherits@CanTurnIntoScelett:  ^CanTurnIntoScelett
 	Inherits@ArcherDemo65: ^ArcherDemo65
-	Inherits@TornadoVunerable: ^TornadoVunerable
+
 	Inherits@Healable: ^Healable
 	Inherits@SnakeStunnable: ^SnakeSlowable
 	RevealsShroud:
@@ -1110,7 +912,7 @@ ASSASSIN:
 	Inherits@GetsPoisoned: ^GetsPoisoned
 	Inherits@CanTurnIntoScelett:  ^CanTurnIntoScelett
 	Inherits@ArcherDemo65: ^ArcherDemo65
-	Inherits@TornadoVunerable: ^TornadoVunerable
+
 	Inherits@Healable: ^Healable
 	Inherits@SnakeStunnable: ^SnakeStunnable
 	Inherits@GrimReanimatable: ^GrimReanimatable
@@ -1178,7 +980,7 @@ E8FARMER:
 	Inherits@GetsPoisoned: ^GetsPoisoned
 	Inherits@CanTurnIntoScelett:  ^CanTurnIntoScelett
 	Inherits@ArcherDemo65: ^ArcherDemo65
-	Inherits@TornadoVunerable: ^TornadoVunerable
+
 	Inherits@Healable: ^Healable
 	Inherits@SnakeStunnable: ^SnakeStunnable
 	Inherits@GrimReanimatable: ^GrimReanimatable
@@ -1253,7 +1055,7 @@ BUMMLER:
 	Inherits@GetsPoisoned: ^GetsPoisoned
 	Inherits@CanTurnIntoScelett:  ^CanTurnIntoScelett
 	Inherits@ArcherDemo65: ^ArcherDemo65
-	Inherits@TornadoVunerable: ^TornadoVunerable
+
 	Inherits@Healable: ^Healable
 	Inherits@SnakeStunnable: ^SnakeStunnable
 	Inherits@GrimReanimatable: ^GrimReanimatable
@@ -1352,17 +1154,6 @@ SIEGERUNNER:
 		DamageTypes: DefaultDeath
 	RevealsShroud:
 		Range: 2c0
-
-MWCHICK1:
-	Inherits: ^MWAnimal
-	RenderSprites:
-		Image: mwchick
-		PlayerPalette: 
-		Palette: ra
-	Tooltip:
-		Name: Chicken
-	WithInfantryBody:
-		IdleSequences: idle1	
 	  
 MWWAND1:
 	Inherits: ^MWTalker
@@ -1544,7 +1335,6 @@ MWWAND8:
 		WanderMoveRadius: 4
 		ReduceMoveRadiusDelay: 5
 		RequiresCondition: Wander
-	-CashTrickler@PayTax:
 		
 SHOPPLAYER:
 	Inherits: ^Knight
@@ -1603,7 +1393,7 @@ MWCIVCOM:
 	Inherits@GetsPoisoned: ^GetsPoisoned
 	Inherits@CanTurnIntoScelett:  ^CanTurnIntoScelett
 	Inherits@ArcherDemo65: ^ArcherDemo65
-	Inherits@TornadoVunerable: ^TornadoVunerable
+
 	Inherits@Healable: ^Healable
 	Inherits@SnakeStunnable: ^SnakeStunnable
 	Inherits@GrimReanimatable: ^GrimReanimatable
@@ -1648,7 +1438,6 @@ MWCIVCOM:
 		Type: Heavy
 	RevealsShroud:
 		Range: 6c0
-	-CashTrickler@PayTax:
 	PersonValued:
 		ActorCount: 1
 		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
@@ -1735,7 +1524,6 @@ NOBLE5:
 	WithInfantryBody:
 		DefaultAttackSequence: talking
 		IdleSequences: idle1
-	-CashTrickler@PayTax:
 	Health:
 		HP: 14000
 	ProximityExternalCondition@BUFF:
@@ -2117,9 +1905,6 @@ SPUNIT2:
 		StandSequences: stand
 		DefaultAttackSequence: shoot
 		IdleSequences: idle1, idle2, idle3, idle4, idle5, idle6
-	Armament@SWORD:
-		Weapon: WanderCommander
-		RequiresCondition: Wander
 	Armor:
 		Type: Heavy
 	Voiced:
@@ -2154,9 +1939,6 @@ SPUNIT1:
 		StandSequences: stand
 		DefaultAttackSequence: shoot
 		IdleSequences: idle1, idle2, idle3, idle4, idle5, idle6
-	Armament@SWORD:
-		Weapon: WanderCommander
-		RequiresCondition: Wander
 	Armor:
 		Type: Heavy
 	Voiced:

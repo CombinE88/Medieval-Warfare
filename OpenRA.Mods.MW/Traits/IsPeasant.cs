@@ -45,7 +45,7 @@ namespace OpenRA.Mods.MW.Traits
 
             }
         }
-        public void setWroking()
+        public void SetWroking()
         {
             if (!isWorker)
             {
@@ -55,7 +55,7 @@ namespace OpenRA.Mods.MW.Traits
                 self.Owner.PlayerActor.Trait<PlayerCivilization>().Recalculate();
             }
         }
-        public void setPeasant()
+        public void SetPeasant()
         {
             if (isWorker)
             {

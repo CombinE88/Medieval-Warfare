@@ -3,7 +3,7 @@ MCVNEW:
 	Inherits@GainsExperience: ^GainsExperience
 	Inherits@GetsPoisoned: ^GetsPoisoned
 	Inherits@ArcherDemo65: ^ArcherDemo80
-	Inherits@TornadoVunerable: ^TornadoVunerable
+
 	Inherits@SnakeStunnable: ^SnakeDamagable
 	Transforms:
 		IntoActor: factnew
@@ -101,7 +101,7 @@ SIEGE1:
 	Inherits@GainsExperience: ^GainsExperience
 	Inherits@GetsPoisoned: ^GetsPoisoned
 	Inherits@ArcherDemo65: ^ArcherDemo80
-	Inherits@TornadoVunerable: ^TornadoVunerable
+
 	Inherits@SnakeStunnable: ^SnakeDamagable
 	Inherits@AUTOTARGET: ^AutoTargetGround
 	Valued:
@@ -165,7 +165,7 @@ SIEGE2:
 	Inherits@GainsExperience: ^GainsExperience
 	Inherits@GetsPoisoned: ^GetsPoisoned
 	Inherits@ArcherDemo65: ^ArcherDemo80
-	Inherits@TornadoVunerable: ^TornadoVunerable
+
 	Inherits@SnakeStunnable: ^SnakeDamagable
 	Inherits@AUTOTARGET: ^AutoTargetGround
 	Valued:
@@ -236,7 +236,7 @@ SIEGE3:
 	Inherits@GainsExperience: ^GainsExperience
 	Inherits@GetsPoisoned: ^GetsPoisoned
 	Inherits@ArcherDemo65: ^ArcherDemo80
-	Inherits@TornadoVunerable: ^TornadoVunerable
+
 	Inherits@SnakeStunnable: ^SnakeDamagable
 	Inherits@AUTOTARGET: ^AutoTargetAll
 	ConditionManager:
@@ -372,7 +372,7 @@ SIEGE4:
 	Inherits: ^Siege
 	Inherits@GainsExperience: ^GainsExperience
 	Inherits@ArcherDemo65: ^ArcherDemo80
-	Inherits@TornadoVunerable: ^TornadoVunerable
+
 	Inherits@AUTOTARGET: ^AutoTargetGround
 	ConditionManager:
 	Cargo:
@@ -504,7 +504,7 @@ EHARVXL:
 	Inherits: ^Siege
 	Inherits@GetsPoisoned: ^GetsPoisoned
 	Inherits@ArcherDemo65: ^ArcherDemo80
-	Inherits@TornadoVunerable: ^TornadoVunerable
+
 	Inherits@SnakeStunnable: ^SnakeDamagable
 	BodyOrientation:
 		QuantizedFacings: 8
@@ -613,17 +613,11 @@ SIEGE99:
 	Inherits: ^Siege
 	Inherits@GainsExperience: ^GainsExperience
 	Inherits@GetsPoisoned: ^GetsPoisoned
-	Inherits@TornadoVunerable: ^TornadoVunerable
+
 	Valued:
 		Cost: 2000
 	Tooltip:
 		Name: Wooden Horse
-	Buildable:
-		IconPalette: raicon
-		BuildPaletteOrder: 20
-		Prerequisites: ~notavailable
-		Description: Transports infantry.
-		Queue: MSiege.Nod
 	Mobile:
 		TurnSpeed: 6
 		Speed: 45

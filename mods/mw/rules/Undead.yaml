@@ -34,7 +34,7 @@
 	Inherits: ^MedievalInfantry
 	Inherits@GainsExperience: ^GainsExperience
 	Inherits@ArcherDemo65: ^ArcherDemo65
-	Inherits@TornadoVunerable: ^TornadoVunerable
+
 	Inherits@SnakeStunnable: ^SnakeStunnable
 	Inherits@AUTOTARGET: ^AutoTargetAll
 	EditorTilesetFilter:
@@ -85,7 +85,7 @@
 ^SkeletonSpawn:
 	Inherits: ^MedievalInfantry
 	Inherits@ArcherDemo65: ^ArcherDemo65
-	Inherits@TornadoVunerable: ^TornadoVunerable
+
 	Inherits@SnakeStunnable: ^SnakeStunnable
 	Inherits@AUTOTARGET: ^AutoTargetAll
 	EditorTilesetFilter:
@@ -753,6 +753,9 @@ ZIGGURAT2:
 		
 ZIGGURAT3:
 	Inherits: ZIGGURAT1
+	-GrantConditionOnPrerequisite@SEALONE:
+	-GrantConditionOnPrerequisite@SEALTWO:
+	-GrantConditionOnPrerequisite@ZIGGUPP:
 	Inherits@Hitshape: ^4x4Shape
 	Health:
 		HP: 1000000
@@ -1504,8 +1507,6 @@ OBELISK:
 	RenderSprites:
 		PlayerPalette: raplayer
 	WithMakeAnimation:
-	ExternalCondition@ChargeObelisk:
-		Condition: ChargeObelisk
 	Valued:
 		Cost: 1300
 	Tooltip:
@@ -1657,7 +1658,7 @@ PREYCOLYTE:
 	Inherits@GetsPoisoned: ^GetsPoisoned
 	Inherits@CanTurnIntoScelett:  ^CanTurnIntoScelett
 	Inherits@ArcherDemo65: ^ArcherDemo65
-	Inherits@TornadoVunerable: ^TornadoVunerable
+
 	Inherits@Healable: ^Healable
 	Inherits@SnakeStunnable: ^SnakeStunnable
 	Inherits@GrimReanimatable: ^GrimReanimatable
@@ -1737,7 +1738,7 @@ DEADROSS:
 	Inherits@AUTOTARGET: ^AutoTargetGround
 	Inherits@GainsExperience: ^GainsExperience
 	Inherits@ArcherDemo65: ^ArcherDemo80
-	Inherits@TornadoVunerable: ^TornadoVunerable
+
 	Inherits@SnakeStunnable: ^SnakeSlowable
 	Valued:
 		Cost: 225
@@ -2057,7 +2058,7 @@ GRIM:
 	Inherits@AUTOTARGET: ^AutoTargetGround
 	Inherits@GainsExperience: ^GainsExperience
 	Inherits@ArcherDemo65: ^ArcherDemo80
-	Inherits@TornadoVunerable: ^TornadoVunerable
+
 	Inherits@SnakeStunnable: ^SnakeSlowable
 	RevealsShroud:
 		Range: 6c0
@@ -2129,7 +2130,7 @@ ACOLYTEC:
 	Inherits@GainsExperience: ^GainsExperience
 	Inherits@GetsPoisoned: ^GetsPoisoned
 	Inherits@ArcherDemo65: ^ArcherDemo65
-	Inherits@TornadoVunerable: ^TornadoVunerable
+
 	Inherits@Healable: ^Healable
 	Inherits@SnakeStunnable: ^SnakeStunnable
 	Inherits@CanTurnIntoScelett:  ^CanTurnIntoScelett
@@ -2192,7 +2193,7 @@ VAMP:
 	Inherits@GainsExperience: ^GainsExperience
 	Inherits@GetsPoisoned: ^GetsPoisoned
 	Inherits@ArcherDemo65: ^ArcherDemo65
-	Inherits@TornadoVunerable: ^TornadoVunerable
+
 	Inherits@Healable: ^Healable
 	Inherits@SnakeStunnable: ^SnakeStunnable
 	Inherits@CanTurnIntoScelett:  ^CanTurnIntoScelett
@@ -2242,7 +2243,7 @@ VAMP:
 VAMPFLYING:
 	Inherits: ^Helicopter
 	Inherits@GainsExperience: ^GainsExperience
-	Inherits@TornadoVunerable: ^TornadoVunerable
+
 	Inherits@Healable: ^Healable
 	Inherits@AUTOTARGET: ^AutoTargetAir
 	HitShape:
@@ -2327,7 +2328,7 @@ DEMONHORSE:
 	Inherits@GainsExperience: ^GainsExperience
 	Inherits@GetsPoisoned: ^GetsPoisoned
 	Inherits@ArcherDemo65: ^ArcherDemo80
-	Inherits@TornadoVunerable: ^TornadoVunerable
+
 	Inherits@Healable: ^Healable
 	Inherits@SnakeStunnable: ^SnakeSlowable
 	GrantConditionOnDamageState@Slow:
@@ -2394,7 +2395,7 @@ LICHK:
 	Inherits: ^Knight
 	Inherits@AUTOTARGET: ^AutoTargetGround
 	Inherits@AUTOTARGETDEF: ^AutoTargetDefenses
-	Inherits@TornadoVunerable: ^TornadoVunerable
+
 	Inherits@Healable: ^Healable
 	Inherits@SnakeStunnable: ^SnakeDamagable
 	RevealsShroud:
@@ -2445,8 +2446,6 @@ LICHK:
 	Aircraft:
 		CruiseAltitude: 0c256
 		LandWhenIdle: false
-		AirborneCondition: airborne
-		CruisingCondition: cruising
 		CanHover: True
 		TurnSpeed: 20
 		Speed: 56
@@ -2477,7 +2476,6 @@ PLACEHOLDERHANDATTACK:
 		TurnSpeed: 4
 		Speed: 303
 		Repulsable: False
-		AirborneCondition: airborne
 		CruiseAltitude: 3c0
 		IdealSeparation: 0c512
 	Health:
@@ -2514,7 +2512,6 @@ PLACEHOLDERCOFFIN:
 		TurnSpeed: 4
 		Speed: 303
 		Repulsable: False
-		AirborneCondition: airborne
 		CruiseAltitude: 3c0
 		IdealSeparation: 0c512
 	Health:
