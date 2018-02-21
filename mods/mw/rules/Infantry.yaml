@@ -95,6 +95,7 @@ KING:
 Husk.KING:
 	Inherits@1: ^ExistsInWorld
 	Inherits@3: ^SpriteActor	
+	Interactable:
 	HitShape:
 		Type: Circle
 			Radius: 128
@@ -148,6 +149,7 @@ Husk.KING:
 Husk2.KING:
 	Inherits@1: ^ExistsInWorld
 	Inherits@3: ^SpriteActor
+	Interactable:
 	HitShape:
 		Type: Circle
 			Radius: 128

@@ -152,6 +152,7 @@ MCVNEW2.Husk:
 		
 ORNI.Husk:
 	Inherits@1: ^SpriteActor
+	Interactable:
 	HitShape:
 	ThrowsShrapnel@Small:
 		Weapons: SmallWood2, SmallWood3
@@ -243,6 +244,7 @@ WARKITEMAN.Husk:
 	
 WARKITEKITE.Husk:
 	Inherits@1: ^SpriteActor
+	Interactable:
 	HitShape:
 	ThrowsShrapnel@Small:
 		Weapons: SmallWood2, SmallWood3
