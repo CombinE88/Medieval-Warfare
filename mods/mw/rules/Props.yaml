@@ -329,19 +329,34 @@ DRAGON.Husk:
 		Delay: 25
 	GrantRandomCondition:
 		RandomConditions: valida, validb, validc, validd, valide
-        FallbackCondition: valida
+		FallbackCondition: valida
 	SpawnActorOnDeath@Dragon:
 		Actor: DRAGONWALK
 		Probability: 100
 		OwnerType: InternalName
-        FallbackCondition: valida
+		RequiresCondition: valida
 		InternalOwner: Creeps
 	SpawnActorOnDeath@chance:
 		Actor: DRAGONDEADPLACEHOLDER
 		Probability: 100
 		OwnerType: InternalName
-        FallbackCondition: validb || validc || validd || valide
+		RequiresCondition: validb || validc || validd || valide
 		InternalOwner: Creeps
+# anti error fix
+	ExternalCondition@valida:
+		Condition: valida
+# anti error fix
+	ExternalCondition@validb:
+		Condition: validb
+# anti error fix
+	ExternalCondition@validc:
+		Condition: validc
+# anti error fix
+	ExternalCondition@validd:
+		Condition: validd
+# anti error fix
+	ExternalCondition@valide:
+		Condition: valide
 	
 DRGNEMPTY:
 	Inherits: ^Helicopter

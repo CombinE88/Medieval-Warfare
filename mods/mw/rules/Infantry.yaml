@@ -550,7 +550,7 @@ E9NEW:
 	Mobile:
 		Speed: 56
 	Health:
-		HP: 11000
+		HP: 15000
 	Armament@Ground:
 		Weapon: magefire
 		LocalOffset: 541,-50,256
@@ -1535,6 +1535,12 @@ NOBLE5:
 MWLUMBERER:
 	Inherits: ^MWConstructor
 	Inherits@SnakeStunnable: ^SnakeStunnable
+# anti error fix
+	ExternalCondition@NoFood:
+		Condition: NoFood
+# anti error fix
+	ExternalCondition@FullFood:
+		Condition: FullFood
 	RenderSprites:
 		Image: mwlumber
 	Tooltip:
@@ -1617,6 +1623,12 @@ MWLUMBERER:
 MWLUMBEREROWNED:
 	Inherits: ^MWConstructor
 	Inherits@SnakeStunnable: ^SnakeStunnable
+# anti error fix
+	ExternalCondition@NoFood:
+		Condition: NoFood
+# anti error fix
+	ExternalCondition@FullFood:
+		Condition: FullFood
 	RenderSprites:
 		Image: mwlumber
 	Tooltip:
@@ -1700,6 +1712,12 @@ MWLUMBEREROWNED:
 TRANSPORTER:
 	Inherits: ^Knight
 	Inherits@SnakeStunnable: ^SnakeStunnable
+# anti error fix
+	ExternalCondition@FullGoods:
+		Condition: FullGoods
+# anti error fix
+	ExternalCondition@EmptyGoods:
+		Condition: EmptyGoods
 	AutoTargetPriority@Prio5:
 		ValidTargets: Priority5
 		Priority: 5
@@ -1795,6 +1813,12 @@ TRANSPORTER:
 HUNTER:
 	Inherits: ^Knight
 	Inherits@SnakeStunnable: ^SnakeStunnable
+# anti error fix
+	ExternalCondition@NoFood:
+		Condition: NoFood
+# anti error fix
+	ExternalCondition@FullFood:
+		Condition: FullFood
 	RevealsShroud:
 		Range: 6c0
 	Valued:

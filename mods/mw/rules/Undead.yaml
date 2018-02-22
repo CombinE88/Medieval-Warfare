@@ -1418,6 +1418,15 @@ GSTONE1:
 	EditorTilesetFilter:
 		ExcludeTilesets: TEMPERATE, SNOW, DESERT, WINTER
 		Categories: 
+# anti error fix
+	ExternalCondition@valida:
+		Condition: valida
+# anti error fix
+	ExternalCondition@validb:
+		Condition: validb
+# anti error fix
+	ExternalCondition@validc:
+		Condition: validc
 		
 GSTONE2:
 	Inherits: ^Gravestone
@@ -1443,6 +1452,15 @@ GSTONE2:
 	EditorTilesetFilter:
 		ExcludeTilesets: TEMPERATE, SNOW, DESERT, WINTER
 		Categories: 
+# anti error fix
+	ExternalCondition@valida:
+		Condition: valida
+# anti error fix
+	ExternalCondition@validb:
+		Condition: validb
+# anti error fix
+	ExternalCondition@validc:
+		Condition: validc
 		
 GSTONE3:
 	Inherits: ^Gravestone
@@ -1468,6 +1486,15 @@ GSTONE3:
 	EditorTilesetFilter:
 		ExcludeTilesets: TEMPERATE, SNOW, DESERT, WINTER
 		Categories: 
+# anti error fix
+	ExternalCondition@valida:
+		Condition: valida
+# anti error fix
+	ExternalCondition@validb:
+		Condition: validb
+# anti error fix
+	ExternalCondition@validc:
+		Condition: validc
 		
 COFFIN:
 	Inherits: ^Gravestone
@@ -1493,6 +1520,15 @@ COFFIN:
 	EditorTilesetFilter:
 		ExcludeTilesets: TEMPERATE, SNOW, DESERT, WINTER
 		Categories: 
+# anti error fix
+	ExternalCondition@valida:
+		Condition: valida
+# anti error fix
+	ExternalCondition@validb:
+		Condition: validb
+# anti error fix
+	ExternalCondition@validc:
+		Condition: validc
 		
 #defense
 	
@@ -1658,10 +1694,12 @@ PREYCOLYTE:
 	Inherits@GetsPoisoned: ^GetsPoisoned
 	Inherits@CanTurnIntoScelett:  ^CanTurnIntoScelett
 	Inherits@ArcherDemo65: ^ArcherDemo65
-
 	Inherits@Healable: ^Healable
 	Inherits@SnakeStunnable: ^SnakeStunnable
 	Inherits@GrimReanimatable: ^GrimReanimatable
+# anti error fix
+	ExternalCondition@whisper:
+		Condition: whisper
 	Captures:
 		CaptureTypes: building
 		PlayerExperience: 50
@@ -2395,9 +2433,11 @@ LICHK:
 	Inherits: ^Knight
 	Inherits@AUTOTARGET: ^AutoTargetGround
 	Inherits@AUTOTARGETDEF: ^AutoTargetDefenses
-
 	Inherits@Healable: ^Healable
 	Inherits@SnakeStunnable: ^SnakeDamagable
+# anti error fix
+	ExternalCondition@archerprone:
+		Condition: archerprone
 	RevealsShroud:
 		Range: 9c0
 		Type: CenterPosition
@@ -2555,6 +2595,15 @@ BLOCKER1:
 		StartSequence: makec
 		Sequence: idlec
 		RequiresCondition: validc
+# anti error fix
+	ExternalCondition@valida:
+		Condition: valida
+# anti error fix
+	ExternalCondition@validb:
+		Condition: validb
+# anti error fix
+	ExternalCondition@validc:
+		Condition: validc
 		
 BLOCKER2:
 	Inherits: ^Gravestone
@@ -2579,6 +2628,15 @@ BLOCKER2:
 		StartSequence: makec
 		Sequence: idlec
 		RequiresCondition: validc
+# anti error fix
+	ExternalCondition@valida:
+		Condition: valida
+# anti error fix
+	ExternalCondition@validb:
+		Condition: validb
+# anti error fix
+	ExternalCondition@validc:
+		Condition: validc
 		
 BLOCKER3:
 	Inherits: ^Gravestone
@@ -2603,6 +2661,15 @@ BLOCKER3:
 		StartSequence: makec
 		Sequence: idlec
 		RequiresCondition: validc
+# anti error fix
+	ExternalCondition@valida:
+		Condition: valida
+# anti error fix
+	ExternalCondition@validb:
+		Condition: validb
+# anti error fix
+	ExternalCondition@validc:
+		Condition: validc
 		
 RESSURECT1:
 	Inherits: ^SkeletonSpawn

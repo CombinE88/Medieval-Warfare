@@ -18,7 +18,7 @@ namespace OpenRA.Mods.MW.Traits
     {
         ConditionManager conditionManager;
         private int tick;
-        int conditionToken = ConditionManager.InvalidConditionToken;
+        //int conditionToken = ConditionManager.InvalidConditionToken;
 
         public AddConditionEvery(Actor self, AddConditionEveryInfo info)
             : base(info)
@@ -33,7 +33,7 @@ namespace OpenRA.Mods.MW.Traits
                 if (--tick < 0)
                 {
                     conditionManager = self.Trait<ConditionManager>();
-                    conditionToken = conditionManager.GrantCondition(self, Info.AddCondition);
+                    conditionManager.GrantCondition(self, Info.AddCondition);
                     tick = Info.Delay;
                 }
             }

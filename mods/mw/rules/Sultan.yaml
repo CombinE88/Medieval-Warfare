@@ -2339,7 +2339,6 @@ PLACEHOLDERBOLTS:
 		TurnSpeed: 4
 		Speed: 303
 		Repulsable: False
-		AirborneCondition: airborne
 		CruiseAltitude: 15c0
 		IdealSeparation: 0c512
 	Health:

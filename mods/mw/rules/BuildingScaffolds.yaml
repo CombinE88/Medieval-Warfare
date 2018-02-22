@@ -413,6 +413,7 @@ ZEROPROC.scaff:
 		
 NODPROC.scaff:
 	Inherits: ZEROPROC.scaff
+	-GrantCondition@finishedbuild:
 	DebugTransformOnCondition@Finsihed:
 		RequiresCondition: (45 - Construct) <= 0
 		IntoActor: NODPROC
@@ -782,7 +783,20 @@ XLTNTUNI.scaff:
 	Inherits@Hitshape: ^2x2Shape
 	GrantRandomCondition:
 		RandomConditions: valida, validb, validc
-		FallbackCondition: none
+		FallbackCondition: valida
+# anti error fix
+	ExternalCondition@valida:
+		Condition: valida
+# anti error fix
+	ExternalCondition@validb:
+		Condition: validb
+# anti error fix
+	ExternalCondition@validc:
+		Condition: validc
+# anti error fix
+	ExternalCondition@DoNotRender:
+		Condition: DoNotRender
+	-ExternalCondition@PLACEHOLDER:
 	Building:
 		Dimensions: 2,3
 		Footprint: xx xx ==

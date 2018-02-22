@@ -1066,6 +1066,18 @@ NODNUKE:
 		DeathSequencePalette: raplayer
 		RequiresCondition: validd
 		DeathSequence: deadd
+# anti error fix
+	ExternalCondition@valida:
+		Condition: valida
+# anti error fix
+	ExternalCondition@validb:
+		Condition: validb
+# anti error fix
+	ExternalCondition@validc:
+		Condition: validc
+# anti error fix
+	ExternalCondition@validd:
+		Condition: validd
 	RenderSprites:
 		PlayerPalette: raplayer
 	-WithSpriteBody:
