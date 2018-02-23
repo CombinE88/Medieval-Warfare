@@ -2225,7 +2225,7 @@ HERBALIST.scaff:
 
         
 CSTLWLL.scaff:
-	Inherits: ^1x1SITE
+	Inherits: ^1x1SITEWALL
 	Inherits@Hitshape: ^1x1Shape
 	Armor:
 		Type: HeavyBuilding
@@ -2269,16 +2269,16 @@ CSTLWLL.scaff:
 		ReadyAudio:
 	ExternalCondition@buildfurther: 
 		Condition: Construct
-		TotalCap: 60
+		TotalCap: 35
 	ExternalCondition@Deliverfurther:
 		Condition: DeliveredResources
-		TotalCap: 60
+		TotalCap: 35
 	Targetable@buildfurther: 
 		TargetTypes: Buildable
-		RequiresCondition: DeliveredResources > Construct && (60 - Construct) > 0
+		RequiresCondition: DeliveredResources > Construct && (35 - Construct) > 0
 	Targetable@deliverresources: 
 		TargetTypes: Deliverable
-		RequiresCondition: 60 > DeliveredResources
+		RequiresCondition: 35 > DeliveredResources
 	ExternalCondition@DoNotRender:
 		Condition: DoNotRender
 	LineBuild:
