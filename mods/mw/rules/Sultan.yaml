@@ -5,9 +5,6 @@ CSTLWLLSUL:
 	RenderSprites:
 		PlayerPalette: sulwallplayer
 		Image: cstlwll
-	Buildable:
-		Queue: MMilitary.SUL
-		IconPalette: raWall
 
 SULGTW:
 	Inherits: ^MWDefense
@@ -199,30 +196,6 @@ SULGTW:
 	DamageMultiplier@static:
 		RequiresCondition: static && Construct >= 30
 		Modifier: 70  
-	ExternalCondition@buildfurther: 
-		Condition: Construct
-		TotalCap: 50
-	ExternalCondition@Deliverfurther:
-		Condition: DeliveredResources
-		TotalCap: 50
-	Targetable@buildfurtherPLUG1: 
-		TargetTypes: Buildable
-		RequiresCondition: (DeliveredResources > Construct && (20 - Construct) > 0) && archers
-	Targetable@deliverresourcesPLUG1: 
-		TargetTypes: Deliverable
-		RequiresCondition: 20 > DeliveredResources && archers
-	Targetable@buildfurtherPLUG2: 
-		TargetTypes: Buildable
-		RequiresCondition: (DeliveredResources > Construct && (50 - Construct) > 0) && djinn
-	Targetable@deliverresourcesPLUG2: 
-		TargetTypes: Deliverable
-		RequiresCondition: 50 > DeliveredResources && djinn
-	Targetable@buildfurtherPLUG3: 
-		TargetTypes: Buildable
-		RequiresCondition: (DeliveredResources > Construct && (30 - Construct) > 0) && static
-	Targetable@deliverresourcesPLUG3: 
-		TargetTypes: Deliverable
-		RequiresCondition: 30 > DeliveredResources && static 
 	GrantCondition@FinishPLUG1:
 		RequiresCondition: Construct >= 20 && archers
 		Condition: archersfinished
@@ -306,114 +279,129 @@ SULGTW:
 		Sequence: bricks0
 		Palette: mwcivilian
 		Offset: -1534,-512,0
-		RequiresCondition: (DeliveredResources - Construct) > 0 && (DeliveredResources - Construct) < 4 && (archers || djinn || static) && !archersfinished && !djinnfinished && !staticfinished
+		RequiresCondition: Construct > 0 && Construct < 4 && (archers || djinn || static) && !archersfinished && !djinnfinished && !staticfinished
 	WithIdleOverlay@bricks1:
 		Sequence: bricks1
 		Palette: mwcivilian
 		Offset: -1534,-512,0
-		RequiresCondition: (DeliveredResources - Construct) >= 4 && (DeliveredResources - Construct) < 8 && (archers || djinn || static) && !archersfinished && !djinnfinished && !staticfinished
+		RequiresCondition: Construct >= 4 && Construct < 8 && (archers || djinn || static) && !archersfinished && !djinnfinished && !staticfinished
 	WithIdleOverlay@bricks2:
 		Sequence: bricks2
 		Palette: mwcivilian
 		Offset: -1534,-512,0
-		RequiresCondition: (DeliveredResources - Construct) >= 8 && (DeliveredResources - Construct) < 12 && (archers || djinn || static) && !archersfinished && !djinnfinished && !staticfinished
+		RequiresCondition: Construct >= 8 && Construct < 12 && (archers || djinn || static) && !archersfinished && !djinnfinished && !staticfinished
 	WithIdleOverlay@bricks3:
 		Sequence: bricks3
 		Palette: mwcivilian
 		Offset: -1534,-512,0
-		RequiresCondition: (DeliveredResources - Construct) >= 12 && (DeliveredResources - Construct) < 16 && (archers || djinn || static) && !archersfinished && !djinnfinished && !staticfinished
+		RequiresCondition: Construct >= 12 && Construct < 16 && (archers || djinn || static) && !archersfinished && !djinnfinished && !staticfinished
 	WithIdleOverlay@bricks4:
 		Sequence: bricks4
 		Palette: mwcivilian
 		Offset: -1534,-512,0
-		RequiresCondition: (DeliveredResources - Construct) >= 16 && (DeliveredResources - Construct) < 20 && (archers || djinn || static) && !archersfinished && !djinnfinished && !staticfinished
+		RequiresCondition: Construct >= 16 && Construct < 20 && (archers || djinn || static) && !archersfinished && !djinnfinished && !staticfinished
 	WithIdleOverlay@bricks5:
 		Sequence: bricks5
 		Palette: mwcivilian
 		Offset: -1534,-512,0
-		RequiresCondition: (DeliveredResources - Construct) >= 20 && (DeliveredResources - Construct) < 24 && (archers || djinn || static) && !archersfinished && !djinnfinished && !staticfinished
+		RequiresCondition: Construct >= 20 && Construct < 24 && (archers || djinn || static) && !archersfinished && !djinnfinished && !staticfinished
 	WithIdleOverlay@bricks6:
 		Sequence: bricks6
 		Palette: mwcivilian
 		Offset: -1534,-512,0
-		RequiresCondition: (DeliveredResources - Construct) >= 24 && (DeliveredResources - Construct) < 28 && (archers || djinn || static) && !archersfinished && !djinnfinished && !staticfinished
+		RequiresCondition: Construct >= 24 && Construct < 28 && (archers || djinn || static) && !archersfinished && !djinnfinished && !staticfinished
 	WithIdleOverlay@bricks7:
 		Sequence: bricks7
 		Palette: mwcivilian
 		Offset: -1534,-512,0
-		RequiresCondition: (DeliveredResources - Construct) >= 28 && (DeliveredResources - Construct) < 32 && (archers || djinn || static) && !archersfinished && !djinnfinished && !staticfinished
+		RequiresCondition: Construct >= 28 && Construct < 32 && (archers || djinn || static) && !archersfinished && !djinnfinished && !staticfinished
 	WithIdleOverlay@bricks8:
 		Sequence: bricks8
 		Palette: mwcivilian
 		Offset: -1534,-512,0
-		RequiresCondition: (DeliveredResources - Construct) >= 32 && (DeliveredResources - Construct) < 36 && (archers || djinn || static) && !archersfinished && !djinnfinished && !staticfinished
+		RequiresCondition: Construct >= 32 && Construct < 36 && (archers || djinn || static) && !archersfinished && !djinnfinished && !staticfinished
 	WithIdleOverlay@bricks9:
 		Sequence: bricks9
 		Palette: mwcivilian
 		Offset: -1534,-512,0
-		RequiresCondition: (DeliveredResources - Construct) >= 36 && (DeliveredResources - Construct) < 40 && (archers || djinn || static) && !archersfinished && !djinnfinished && !staticfinished
+		RequiresCondition: Construct >= 36 && Construct < 40 && (archers || djinn || static) && !archersfinished && !djinnfinished && !staticfinished
 	WithIdleOverlay@bricks10:
 		Sequence: bricks10
 		Palette: mwcivilian
 		Offset: -1534,-512,0
-		RequiresCondition: (DeliveredResources - Construct) >= 40 && (archers || djinn || static) && !archersfinished && !djinnfinished && !staticfinished
+		RequiresCondition: Construct >= 40 && (archers || djinn || static) && !archersfinished && !djinnfinished && !staticfinished
 	WithIdleOverlay@lumnber0:
 		Sequence: lumnber0
 		Palette: mwcivilian
 		Offset: -1534,512,0
-		RequiresCondition: (DeliveredResources - Construct) >= 2 && (DeliveredResources - Construct) < 6 && (archers || djinn || static) && !archersfinished && !djinnfinished && !staticfinished
+		RequiresCondition: Construct >= 2 && Construct < 6 && (archers || djinn || static) && !archersfinished && !djinnfinished && !staticfinished
 	WithIdleOverlay@lumnber1:
 		Sequence: lumnber1
 		Palette: mwcivilian
 		Offset: -1534,512,0
-		RequiresCondition: (DeliveredResources - Construct) >= 6 && (DeliveredResources - Construct) < 10 && (archers || djinn || static) && !archersfinished && !djinnfinished && !staticfinished
+		RequiresCondition: Construct >= 6 && Construct < 10 && (archers || djinn || static) && !archersfinished && !djinnfinished && !staticfinished
 	WithIdleOverlay@lumnber2:
 		Sequence: lumnber2
 		Palette: mwcivilian
 		Offset: -1534,512,0
-		RequiresCondition: (DeliveredResources - Construct) >= 10 && (DeliveredResources - Construct) < 14 && (archers || djinn || static) && !archersfinished && !djinnfinished && !staticfinished
+		RequiresCondition: Construct >= 10 && Construct < 14 && (archers || djinn || static) && !archersfinished && !djinnfinished && !staticfinished
 	WithIdleOverlay@lumnber3:
 		Sequence: lumnber3
 		Palette: mwcivilian
 		Offset: -1534,512,0
-		RequiresCondition: (DeliveredResources - Construct) >= 14 && (DeliveredResources - Construct) < 18 && (archers || djinn || static) && !archersfinished && !djinnfinished && !staticfinished
+		RequiresCondition: Construct >= 14 && Construct < 18 && (archers || djinn || static) && !archersfinished && !djinnfinished && !staticfinished
 	WithIdleOverlay@lumnber4:
 		Sequence: lumnber4
 		Palette: mwcivilian
 		Offset: -1534,512,0
-		RequiresCondition: (DeliveredResources - Construct) >= 18 && (DeliveredResources - Construct) < 22 && (archers || djinn || static) && !archersfinished && !djinnfinished && !staticfinished
+		RequiresCondition: Construct >= 18 && Construct < 22 && (archers || djinn || static) && !archersfinished && !djinnfinished && !staticfinished
 	WithIdleOverlay@lumnber5:
 		Sequence: lumnber5
 		Palette: mwcivilian
 		Offset: -1534,512,0
-		RequiresCondition: (DeliveredResources - Construct) >= 22 && (DeliveredResources - Construct) < 26 && (archers || djinn || static) && !archersfinished && !djinnfinished && !staticfinished
+		RequiresCondition: Construct >= 22 && Construct < 26 && (archers || djinn || static) && !archersfinished && !djinnfinished && !staticfinished
 	WithIdleOverlay@lumnber6:
 		Sequence: lumnber6
 		Palette: mwcivilian
 		Offset: -1534,512,0
-		RequiresCondition: (DeliveredResources - Construct) >= 26 && (DeliveredResources - Construct) < 30 && (archers || djinn || static) && !archersfinished && !djinnfinished && !staticfinished
+		RequiresCondition: Construct >= 26 && Construct < 30 && (archers || djinn || static) && !archersfinished && !djinnfinished && !staticfinished
 	WithIdleOverlay@lumnber7:
 		Sequence: lumnber7
 		Palette: mwcivilian
 		Offset: -1534,512,0
-		RequiresCondition: (DeliveredResources - Construct) >= 30 && (DeliveredResources - Construct) < 34 && (archers || djinn || static) && !archersfinished && !djinnfinished && !staticfinished
+		RequiresCondition: Construct >= 30 && Construct < 34 && (archers || djinn || static) && !archersfinished && !djinnfinished && !staticfinished
 	WithIdleOverlay@lumnber8:
 		Sequence: lumnber8
 		Palette: mwcivilian
 		Offset: -1534,512,0
-		RequiresCondition: (DeliveredResources - Construct) >= 34 && (DeliveredResources - Construct) < 38 && (archers || djinn || static) && !archersfinished && !djinnfinished && !staticfinished
+		RequiresCondition: Construct >= 34 && Construct < 38 && (archers || djinn || static) && !archersfinished && !djinnfinished && !staticfinished
 	WithIdleOverlay@lumnber9:
 		Sequence: lumnber9
 		Palette: mwcivilian
 		Offset: -1534,512,0
-		RequiresCondition: (DeliveredResources - Construct) >= 38 && (DeliveredResources - Construct) < 42 && (archers || djinn || static) && !archersfinished && !djinnfinished && !staticfinished
+		RequiresCondition: Construct >= 38 && Construct < 42 && (archers || djinn || static) && !archersfinished && !djinnfinished && !staticfinished
 	WithIdleOverlay@lumnber10:
 		Sequence: lumnber10
 		Palette: mwcivilian
 		Offset: -1534,512,0
-		RequiresCondition: (DeliveredResources - Construct) >= 42 && (archers || djinn || static) && !archersfinished && !djinnfinished && !staticfinished
+		RequiresCondition: Construct >= 42 && (archers || djinn || static) && !archersfinished && !djinnfinished && !staticfinished
 	Targetable@CombatRole:
-		TargetTypes: Defenses		
+		TargetTypes: Defenses	
+	AddConditionEvery@Constructstatic:
+		AddCondition: Construct
+		Delay: 25	
+		RequiresCondition: Construct < 20 && archers
+	AddConditionEvery@Constructdjin:
+		AddCondition: Construct
+		Delay: 25	
+		RequiresCondition: Construct < 50 && djinn
+	AddConditionEvery@Constructtower:
+		AddCondition: Construct
+		Delay: 25	
+		RequiresCondition: Construct < 30 && static
+	ExternalCondition@placeholder:  # Anti error placeholder
+		Condition: Construct
+		TotalCap: 50
 
 SULPLUG1:
 	AlwaysVisible:
@@ -431,7 +419,7 @@ SULPLUG1:
 		Prerequisites: vehicleproduction
 		Queue: MMilitary.SUL
 		BuildDuration:25
-		BuildDurationModifier: 40
+		BuildDurationModifier: 150
 		IconPalette: raicon
 	Valued:
 		Cost: 400
@@ -454,7 +442,7 @@ SULPLUG3:
 		Prerequisites: sultow2, sultow4
 		Queue: MMilitary.SUL
 		BuildDuration:25
-		BuildDurationModifier: 40
+		BuildDurationModifier: 350
 		IconPalette: raicon
 	Valued:
 		Cost: 1000
@@ -476,7 +464,7 @@ SULPLUG4:
 		BuildPaletteOrder: 70
 		Prerequisites: vehicleproduction, sultow3
 		Queue: MMilitary.SUL
-		BuildDuration:25
+		BuildDuration: 150
 		BuildDurationModifier: 40
 		IconPalette: raicon
 	Valued:

@@ -13,7 +13,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using OpenRA.Mods.Common;
+using OpenRA.Mods.Common.AI;
 using OpenRA.Mods.Common.Traits;
+using OpenRA.Mods.MW.MWAI;
 using OpenRA.Mods.MW.Traits;
 using OpenRA.Primitives;
 
@@ -29,6 +31,10 @@ namespace OpenRA.Traits
         public readonly int AlivePeasants = 15;
         [Desc("Each Ammount in ProvidesLivingspaces reduces this time by this modifier for this faction.")]
         public readonly Dictionary<string, int> SpecialModifier = new Dictionary<string, int>();
+
+
+        [Desc("Delay (in ticks) between giving out orders to units.")]
+        public readonly int AssignRolesInterval = 20;
 
         public readonly HashSet<string> Peasants = new HashSet<string>();
 
@@ -56,6 +62,10 @@ namespace OpenRA.Traits
         public decimal PercentageModifier;
         public int DirectModifier;
 
+        int assignRolesTicks;
+        UndeadAIHAndler undeadaihandler;
+        HackyAIInfo hackyaiinfo;
+        HackyAI hackyai;
 
         public HashSet<Actor> PeasantProvider = new HashSet<Actor>();
 
@@ -73,6 +83,14 @@ namespace OpenRA.Traits
             this.info = info;
             nextchecktick += info.Delay * 25;
             basecheck += info.Delay * 25;
+
+            if (self.Owner.IsBot)
+            {
+                hackyaiinfo = self.Owner.PlayerActor.Info.TraitInfo<HackyAIInfo>();
+                hackyai = self.Owner.PlayerActor.Trait<HackyAI>();
+                undeadaihandler = new UndeadAIHAndler(self.World, hackyaiinfo, hackyai, self.Owner);
+                assignRolesTicks = hackyaiinfo.AssignRolesInterval;
+            }
         }
 
         public Actor RandomBuildingWithLivingspace() // Use a random possible buildings that can hold peasants and selects one to spawn from. The list gets updated when specific actors die or spawn
@@ -228,6 +246,36 @@ namespace OpenRA.Traits
                     Spawnapeasant();
                     ResetSpawn();
                 }
+            }
+
+
+            if (self.Owner.IsBot)
+            {
+                hackyaiinfo = self.Owner.PlayerActor.Info.TraitInfo<HackyAIInfo>();
+                hackyai = self.Owner.PlayerActor.Trait<HackyAI>();
+                undeadaihandler = new UndeadAIHAndler(self.World, hackyaiinfo, hackyai, self.Owner);
+            }
+
+            if (!self.Owner.IsBot || undeadaihandler == null || hackyai == null || hackyaiinfo == null)
+            {
+                return;
+            }
+
+            if (--assignRolesTicks <= 0)
+            {
+                assignRolesTicks = hackyaiinfo.AssignRolesInterval;
+                hackyai.number_CountPeasants = undeadaihandler.CountPeasants();
+                hackyai.number_CountPossiblePopulation = undeadaihandler.CountPossiblePopulation();
+                hackyai.number_CountPotentialFreeBeds = undeadaihandler.CountPotentialFreeBeds();
+                undeadaihandler.ManageEmptyAcolytes();
+                undeadaihandler.GiveOrdersToIdleCultists();
+                undeadaihandler.FindNewDeerstand();
+                undeadaihandler.ManageBuildrAcolytes();
+                undeadaihandler.ManageVamipres();
+                undeadaihandler.ManageFarmerAcolytes();
+                undeadaihandler.ManageDeadAcolytes();
+                undeadaihandler.CheckAllPatchesForProfit();
+                Log.Write("debug", "Kiwi roles assigned: ");
             }
         }
     }

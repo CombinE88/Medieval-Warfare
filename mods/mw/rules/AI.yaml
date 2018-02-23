@@ -1,7 +1,7 @@
 Player:
-	OlafAI@Olaf:
-		Type: olaf
-		Name: Olaf the Barbar
+	HackyAI@baron:
+		Type: baron
+		Name: Baron Hodsworth
 		MinimumExcessPower: 0
 		BuildingCommonNames:
 			ConstructionYard: factnew, ziggurat1, ziggurat2, ziggurat3
@@ -19,7 +19,7 @@ Player:
 			SiegeWorkshops: workshopgdi.scaff, workshopnod.scaff, sulfix.scaff
 			
 			Production: barrnew,handnew,stall,nodstall,sulmystic,sulbarr,barrnew.scaff,handnew.scaff,stall.scaff,nodstall.scaff,sulmystic.scaff,sulbarr.scaff, workshopnod.scaff, workshopnod, sulfix.scaff, sulfix, workshopgdi.scaff, workshopgdi, ziggurat1, ziggurat2, ziggurat3, crypt.penta, mauso.penta, tomb.penta
-			Defenses: gtwnew.scaff, gunnew.scaff, tribu.scaff, bato.scaff, sulgtw.scaff, sulgtw.ENABLER
+			Defenses: gtwnew.scaff, gunnew.scaff, tribu.scaff, bato.scaff, sulgtw.scaff, sulgtw.ENABLER, garg.penta, obelisk.penta
 
 			ImportantBuildings: castle.scaff, castle2.scaff, sulcastle.scaff, hqnewnod.scaff, armorygdi.scaff, armorynod.scaff, sulcnshmbr.scaff, schafott.scaff, sulminaret.scaff, sulhall.scaff, townhall.scaff, herbalist.scaff, hqnewgdi.scaff
 			
@@ -59,9 +59,9 @@ Player:
 			ljackb.scaff: 2
 			sullodge.scaff: 2
 			#
-			barrnew.scaff: 1
-			handnew.scaff: 1
-			sulbarr.scaff: 1
+			barrnew.scaff: 2
+			handnew.scaff: 2
+			sulbarr.scaff: 2
 			#
 			hqnewnod.scaff: 1
 			hqnewgdi.scaff: 1
@@ -82,9 +82,9 @@ Player:
 			tribu.scaff: 4
 			bato.scaff: 5
 			#
-			stall.scaff: 1
-			nodstall.scaff: 1
-			sulmystic.scaff: 1
+			stall.scaff: 2
+			nodstall.scaff: 2
+			sulmystic.scaff:2
 			#
 			workshopgdi.scaff: 1
 			workshopnod.scaff: 1

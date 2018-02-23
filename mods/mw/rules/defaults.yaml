@@ -573,6 +573,8 @@
 ^Helicopter:
 	Inherits@1: ^ExistsInWorld
 	Inherits@3: ^SpriteActor
+	FirepowerMultiplier@Overallreduction:
+		Modifier: 80
 	HitShape:
 	Huntable:
 	HiddenUnderFog:
@@ -1428,6 +1430,8 @@
 	Inherits@1: ^ExistsInWorld
 	Inherits@EXPERIENCE: ^GainsExperience
 	Inherits@4: ^SpriteActor
+	FirepowerMultiplier@Overallreduction:
+		Modifier: 80
 	Huntable:
 	DrawLineToTarget:
 	UpdatesPlayerStatistics:
@@ -1496,6 +1500,8 @@
 ^MedievalInfantry:
 	Inherits@1: ^ExistsInWorld
 	Inherits@3: ^SpriteActor
+	FirepowerMultiplier@Overallreduction:
+		Modifier: 80
 	HitShape:
 	Huntable:
 	Health:

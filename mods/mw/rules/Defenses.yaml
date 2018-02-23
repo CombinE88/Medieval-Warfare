@@ -381,14 +381,6 @@ CSTLWLL:
 		Value: 0
 	Tooltip:
 		Name: Castle Wall
-	Buildable:
-		Description: Castlewall that blocks arrows and other projectiles\n\n\n
-		BuildPaletteOrder: 50
-		BuildDuration: 500
-		Prerequisites: anyworkshop
-		Queue: MMilitary.GDI, MMilitary.Nod
-		BuildDurationModifier: 40
-		IconPalette: raicon
 	Health:
 		HP: 65000
 	Armor:

@@ -963,3 +963,76 @@ SULREF.scaff:
 	WithIdleOverlay@base6:
 		Sequence: make6
 		RequiresCondition: Construct >= 40
+        
+CSTLWLLSUL.scaff:
+	Inherits: ^1x1SITE
+	Inherits@Hitshape: ^1x1Shape
+	Armor:
+		Type: HeavyBuilding
+	RenderSprites:
+		PlayerPalette: sulwallplayer
+		Image: cstlwllsul
+	CustomSellValue:
+		Value: 0
+	Valued:
+		Cost: 350
+	Tooltip:
+		Name: Construction Site (Castle Wall)
+	Buildable:
+		Description: Castlewall that blocks arrows and other projectiles\n\n\n
+		BuildPaletteOrder: 50
+		BuildDuration: 350
+		Prerequisites: anyworkshop
+		Queue: MMilitary.SUL
+		IconPalette: raWall
+		BuildDurationModifier: 40
+	Building:
+		Dimensions: 1,1
+		Footprint: =
+		BuildSounds: brickconc.aud
+		Adjacent: 7
+	Health:
+		HP: 32000
+	RevealsShroud:
+		Range: 4c0
+	WithBuildingBib:
+		HasMinibib: Yes
+	Selectable:
+		Bounds: 24,48,0,-10
+	SelectionDecorations
+		VisualBounds: 22,48,0,-10
+	WithSpriteBody:
+		RequiresCondition: DoNotRender
+	DebugTransformOnCondition@Finsihed:
+		RequiresCondition: (35 - Construct) <= 0
+		IntoActor: CSTLWLL
+		ReadyAudio:
+	ExternalCondition@buildfurther: 
+		Condition: Construct
+		TotalCap: 60
+	ExternalCondition@Deliverfurther:
+		Condition: DeliveredResources
+		TotalCap: 60
+	Targetable@buildfurther: 
+		TargetTypes: Buildable
+		RequiresCondition: DeliveredResources > Construct && (60 - Construct) > 0
+	Targetable@deliverresources: 
+		TargetTypes: Deliverable
+		RequiresCondition: 60 > DeliveredResources
+	ExternalCondition@DoNotRender:
+		Condition: DoNotRender
+	LineBuild:
+		NodeTypes: concrete
+		Range: 8
+	LineBuildNode:
+		Types: concrete
+	Crushable:
+		CrushClasses: heavywall
+		CrushSound: sandbag2.aud
+	RequiresBuildableArea:
+		AreaTypes: building
+		Adjacent: 10
+	ScriptTriggers:
+	-ExternalCondition@PLACEHOLDER:
+	-GivesBuildableArea:
+	-RevealsShroud:

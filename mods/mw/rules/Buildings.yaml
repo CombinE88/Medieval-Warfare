@@ -450,66 +450,6 @@ MINIFACT:
 	PersonValued:
 		ActorCount: 3
 		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
-	WithFreeSpawnableActor@1:
-		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
-		SpawnActor: transporter
-		Offset: -597,469, 0
-		MoveOffset: 1,2
-		Sticky: true
-		FindRadius: 100
-		Lasso: 3c0
-		UseConverting: false
-		ReturnOnDeath: true
-	WithFreeSpawnableActor@5:
-		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
-		SpawnActor: engeneer
-		Offset: -597,469, 0
-		MoveOffset: 1,2
-		Sticky: true
-		FindRadius: 100
-		Lasso: 3c0
-		UseConverting: false
-		ReturnOnDeath: true
-	WithFreeSpawnableActor@6:
-		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
-		SpawnActor: engeneer
-		Offset: -597,469, 0
-		MoveOffset: 1,2
-		Sticky: true
-		FindRadius: 100
-		Lasso: 3c0
-		UseConverting: false
-		ReturnOnDeath: true
-	WithFreeSpawnableActor@2:
-		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
-		SpawnActor: transporter
-		Offset: -597,469, 0
-		MoveOffset: 1,2
-		Sticky: true
-		FindRadius: 100
-		Lasso: 3c0
-		UseConverting: false
-		ReturnOnDeath: true
-	WithFreeSpawnableActor@3:
-		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
-		SpawnActor: transporter
-		Offset: -597,469, 0
-		MoveOffset: 1,2
-		Sticky: true
-		FindRadius: 100
-		Lasso: 3c0
-		UseConverting: false
-		ReturnOnDeath: true
-	WithFreeSpawnableActor@4:
-		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
-		SpawnActor: transporter
-		Offset: -597,469, 0
-		MoveOffset: 1,2
-		Sticky: true
-		FindRadius: 100
-		Lasso: 3c0
-		UseConverting: false
-		ReturnOnDeath: true
 	ProximityExternalCondition@WANDERER:
 		Range: 20c0
 		ValidStances: Ally
@@ -611,6 +551,8 @@ ARMORYNOD:
 		Type: Concrete
 	WithDeathAnimation:
 		DeathSequencePalette: raplayer
+	ProvidesPrerequisite@level3:
+		Prerequisite: Level3
 	CustomSellValue:
 		Value: 650
 	Valued:

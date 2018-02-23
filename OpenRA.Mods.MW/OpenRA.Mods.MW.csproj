@@ -72,6 +72,7 @@
     <Compile Include="MWAI\AttackOrFleeFuzzy.cs" />
     <Compile Include="MWAI\MWBaseBuilder.cs" />
     <Compile Include="MWAI\OlafAI.cs" />
+    <Compile Include="MWAI\UndeadAIHAndler.cs" />
     <Compile Include="Projectiles\AthenaProjectile.cs" />
     <Compile Include="Projectiles\InstantExplode.cs" />
     <Compile Include="Traits\Activites\Instanttransforms.cs" />

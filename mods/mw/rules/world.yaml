@@ -181,10 +181,22 @@ World:
 	CustomTerrainDebugOverlay:
 	MapCreeps:
 	SpawnMapActors:
-	MapBuildRadius:
-	MapOptions:
 	MPStartLocations:
 	CreateMPPlayers:
+	MapBuildRadius:
+		AllyBuildRadiusCheckboxDisplayOrder: 4
+		BuildRadiusCheckboxDisplayOrder: 5
+		BuildRadiusCheckboxEnabled: True
+		BuildRadiusCheckboxLocked: True
+		BuildRadiusCheckboxVisible: False
+	MapOptions:
+		ShortGameCheckboxDisplayOrder: 2
+		TechLevelDropdownDisplayOrder: 2
+		GameSpeedDropdownDisplayOrder: 3
+		ShortGameCheckboxEnabled: False
+		ShortGameCheckboxVisible: False
+		TechLevelDropdownLocked: True
+		TechLevelDropdownVisible: False
 	#LuaScript:
 	#	Scripts: Peasants.lua
 	MPStartUnits@minimum:
