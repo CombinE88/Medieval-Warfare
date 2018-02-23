@@ -971,7 +971,7 @@ CSTLWLLSUL.scaff:
 		Type: HeavyBuilding
 	RenderSprites:
 		PlayerPalette: sulwallplayer
-		Image: cstlwllsul
+		Image: cstlwll
 	CustomSellValue:
 		Value: 0
 	Valued:
