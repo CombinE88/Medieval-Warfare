@@ -33,7 +33,9 @@ ORNI:
 		Type: CenterPosition
 	Armament:
 		Weapon: ornispearthrow
+		Name: primary
 		LocalOffset: 1024,0,-213
+		PauseOnCondition: !ammo
 	AttackPlane:
 		FacingTolerance: 20
 	RenderSprites:
@@ -41,10 +43,16 @@ ORNI:
 		PlayerPalette: raplayer
 	AmmoPool:
 		Ammo: 6
+		Name: primary
+		Armaments: primary
 		PipCount: 6
-		SelfReloads: true
 		ReloadCount: 2
 		SelfReloadDelay: 125
+		AmmoCondition: ammo
+	ReloadAmmoPool:
+		AmmoPool: primary
+		Delay: 125
+		Count: 2
 	WithMoveAnimation:
 		MoveSequence: move
 	SpawnActorOnDeath:
@@ -99,8 +107,10 @@ WARKITE:
 		Range: 10c0
 		Type: CenterPosition
 	Armament:
+		Name: primary
 		Weapon: warkitecrossbow
 		LocalOffset: 341,0,456
+		PauseOnCondition: !ammo
 	AttackHeli:
 		FacingTolerance: 20
 	RenderSprites:
@@ -108,10 +118,16 @@ WARKITE:
 		PlayerPalette: raplayer
 	AmmoPool:
 		Ammo: 10
+		Name: primary
+		Armaments: primary
 		PipCount: 5
-		SelfReloads: true
 		ReloadCount: 10
 		SelfReloadDelay: 200
+		AmmoCondition: ammo
+	ReloadAmmoPool:
+		AmmoPool: primary
+		Delay: 200
+		Count: 10
 	AutoTarget:
 	WithAttackAnimation:
 		AttackSequence: attack
@@ -166,11 +182,15 @@ DRGNRDR:
 		Range: 10c0
 		Type: CenterPosition
 	Armament@Ground:
+		Name: primary
 		Weapon: dragonfire
 		LocalOffset: 1024,0,-213
+		PauseOnCondition: !ammo
 	Armament@Air:
+		Name: secondary
 		Weapon: dragonfireair
 		LocalOffset: 1024,0,-213
+		PauseOnCondition: !ammo
 	AttackHeli:
 		FacingTolerance: 20
 	RenderSprites:
@@ -178,10 +198,16 @@ DRGNRDR:
 		PlayerPalette: raplayer
 	AmmoPool:
 		Ammo: 15
+		Name: primary
+		Armaments: primary, secondary
 		PipCount: 5
-		SelfReloads: true
 		ReloadCount: 2
-		SelfReloadDelay: 20
+		ReloadDelay: 20
+		AmmoCondition: ammo
+	ReloadAmmoPool:
+		AmmoPool: primary
+		Delay: 20
+		Count: 2
 	SpawnActorOnDeath:
 		Actor: DRAGON.Husk
 		RequiresCondition: !valida
@@ -346,18 +372,26 @@ WRBLN:
 		Type: CenterPosition
 	Armament:
 		Weapon: balloncrossbow
+		Name: primary
 		LocalOffset: 404,100,513, 404,-100,513
+		PauseOnCondition: !ammo
 	AttackHeli:
 		FacingTolerance: 20
 	RenderSprites:
 		Image: wrblln
 		PlayerPalette: raplayer
 	AmmoPool:
+		Name: primary
 		Ammo: 14
+		Armaments: primary, secondary
 		PipCount: 5
-		SelfReloads: true
 		ReloadCount: 10
-		SelfReloadDelay: 200
+		ReloadDelay: 200
+		AmmoCondition: ammo
+	ReloadAmmoPool:
+		AmmoPool: primary
+		Delay: 200
+		Count: 10
 	SpawnActorOnDeath:
 		Actor: WRBLN.Husk
 	AutoTarget:

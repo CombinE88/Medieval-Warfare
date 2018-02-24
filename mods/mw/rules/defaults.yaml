@@ -1304,7 +1304,7 @@
 		RequiresForceFire: yes
 		TargetTypes: Ground, Water
 	Health:
-		HP: 500
+		HP: 50000
 	SoundOnDamageTransition:
 		DamagedSounds: xplos.aud
 		DestroyedSounds: bldgncllps.aud
@@ -1526,7 +1526,7 @@
 				PathingCost: 150
 			Loot: 75
 			Beach: 80
-			Corruption: 80
+			Corruption: 75
 	SelectionDecorations:
 	WithSpriteControlGroupDecoration:
 	Selectable:
@@ -1894,15 +1894,51 @@
 			Radius: 128
 	EditorTilesetFilter:
 		Categories: Animals
+        
+^MWPeasant:
+	Inherits: ^Infantry
+	Valued:
+		Cost: 70
+	Tooltip:
+		Name: Peasant
+		GenericVisibility: None
+	Mobile:
+		Speed: 56
+		Crushes:
+	Health:
+		HP: 2500
+	RevealsShroud:
+		Range: 2c0
+	Crushable:
+		CrushSound: squish2.aud
+	WithDeathAnimation:
+		DeathTypes:
+			DefaultDeath: 1
+			RippedApartDeath: 2
+			PoisonDeath: 3
+			BallistaDeath: 4
+			BurnToDeath: 5
+		CrushedSequence: die-crushed
+		DeathSequencePalette: raplayer
+	Voiced:
+		VoiceSet: CivilianMaleVoice
+	WithInfantryBody:
+		StandSequences: stand
+	ConditionManager:
+	HitShape:
+		Type: Circle
+			Radius: 128
+	EditorTilesetFilter:
+		Categories: Peasants
  
 ^MWWanderer:
-	Inherits: ^MedievalInfantry
-	Inherits@AUTOTARGET: ^AutoTargetTalking
+	Inherits: ^MWPeasant
 	Inherits@GetsPoisoned: ^GetsPoisoned
 	Inherits@CanTurnIntoScelett:  ^CanTurnIntoScelett
 	Inherits@ArcherDemo65: ^ArcherDemo65
 	Inherits@Healable: ^Healable
 	Inherits@SnakeStunnable: ^SnakeStunnable
+	-AttackMove:
 	Voiced:
 		VoiceSet: CivilianNew
 	Valued:
@@ -1940,28 +1976,10 @@
 		MinMoveDelay: 150
 		MaxMoveDelay: 750
 		RequiresCondition: Wander
-	AttackWander: 
-		WanderMoveRadius: 1
-		ReduceMoveRadiusDelay: 5
-		MinMoveDelay: 0
-		MaxMoveDelay: 25
-		RequiresCondition: !Wander
 	WithInfantryBody:
 		StandSequences: stand
-	AutoTarget:
-		ScanRadius: 20
-		InitialStance: AttackAnything
-		RequiresCondition: !Wander
-	AttackFrontal:
-		RequiresCondition: !Wander
-	AttackMove:
-		RequiresCondition: !Wander
 	ExternalCondition@Wander:
 		Condition: Wander
-	Armament:
-		Weapon: WanderAttack
-		TargetStances: Ally
-		RequiresCondition: !Wander
 	SpawnActorOnDeath@SCELET:
 		DeathType: SkeletonDeath
 		Probability: 80
@@ -1976,45 +1994,12 @@
 		
 ^MWTalker:
 	Inherits: ^MWWanderer
-	#Targetable@TALKBACK:
-	#	TargetTypes: Talkbacks
-	#	RequiresCondition: Wander
-	#Targetable@TALKABLE:
-	#	TargetTypes: Talkable
-	#	RequiresCondition: Wander && !Talking
-	#ExternalCondition@Talker:
-	#	Condition: Talking
-	#ExternalCondition@Backtalker:
-	#	Condition: Talkback
-	#AttackFrontal:
-	#	RequiresCondition: !Wander || Talking || Talkback
-	#   AttackRequiresEnteringCell: True
-	#AttackMove:
-	#	RequiresCondition: !Wander || Talking || Talkback
-	#AutoTarget:
-	#	ScanRadius: 20
-	#	InitialStance: AttackAnything
-	#	RequiresCondition: !Wander || Talking || Talkback
-	#Armament@Talking:
-	#	Weapon: WanderTalk
-	#	TargetStances: Ally
-	#	RequiresCondition: Talking && Wander
-	#Armament@Talkback:
-	#	Weapon: WanderTalkback
-	#	TargetStances: Ally
-	#	RequiresCondition: Talkback && Wander
 	Wanders:
 		WanderMoveRadius: 2
 		ReduceMoveRadiusDelay: 5
 		MinMoveDelay: 150
 		MaxMoveDelay: 750
 		RequiresCondition: Wander
-	#AttackWander@Talking: 
-	#	WanderMoveRadius: 2
-	#	ReduceMoveRadiusDelay: 5
-	#	MinMoveDelay: 150
-	#	MaxMoveDelay: 750
-	#	RequiresCondition: Wander && (Talking || Talkback)
 		
 ^MWConstructor:
 	Inherits: ^MedievalInfantry

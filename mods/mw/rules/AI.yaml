@@ -25,11 +25,11 @@ Player:
 			
 			HarvestableTrees: t01, t02, t03, t04, t05, t06, t08, t10, t11, t12, t13, t14, t15, t16, 17, t17a, t18, t18a, t18c, tc01, tc02
 		UnitsCommonNames:
-			Mcv: mcvnew, undeadcomm, factnew, ziggurat1, ziggurat2, ziggurat3
-			ExcludeFromSquads: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, mwwand7, mwwand8, mwwand8, mwcivcom, noble1, noble2, noble3, noble4, noble5, mwconst1, mwconst2, mwconst3, mwconst4, mwconst5, mwconst6, mwconst7, mwchick1, hunter, transporter, engeneer, sulturnxl, mwlumbererowned, preycolyte, acolytec
-			ExcludeFromDefenders: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, mwwand7, mwwand8, mwwand8, mwcivcom, noble1, noble2, noble3, noble4, noble5, mwconst1, mwconst2, mwconst3, mwconst4, mwconst5, mwconst6, mwconst7, mwchick1, hunter, transporter, engeneer, sulturnxl, mwlumbererowned, preycolyte
+			Mcv: factnew, ziggurat1, ziggurat2, ziggurat3
+			ExcludeFromSquads: hunter, transporter, engeneer, sulturnxl, mwlumbererowned, preycolyte, mwcivcom
+			ExcludeFromDefenders: mwcivcom, hunter, transporter, engeneer, sulturnxl, mwlumbererowned, preycolyte
 			
-		BuildingQueues: MBuilding.Nod, MBuilding.GDI, MBuilding.SUL, MTech.Nod, MTech.GDI, MTech.SUL, MResources.Nod, MResources.GDI, MResources.SUL, MMilitary.Nod, MMilitary.GDI, MMilitary.SUL, MBuilding.ded, MMilitary.ded, MTech.ded
+		BuildingQueues: MBuilding.Nod, MBuilding.GDI, MBuilding.SUL, MTech.Nod, MTech.GDI, MTech.SUL, MResources.Nod, MResources.GDI, MResources.SUL, MMilitary.Nod, MMilitary.GDI, MMilitary.SUL, MBuilding.ded, MMilitary.ded, MResources.ded
 		UnitQueues: MVehicle.Nod, MVehicle.GDI, MVehicle.SUL, MInfantry.Nod, MInfantry.GDI, MInfantry.SUL, MSiege.Nod, MSiege.GDI, MSiege.SUL, MInfantry.ded, MSiege.ded, MVehicle.ded, MTech.ded, MBuilding.ded
 		UndeadCommonNames:
 			ZigguratLv1: ziggurat1
@@ -41,13 +41,14 @@ Player:
 			Acolytes: preycolyte
 			Cultists: acolytec
 			Crypts: crypt.penta
+			Sppool: sppool.penta
 			Buildings:
 			Defenses: garg.penta, obelisk.penta
 			Upgrades: seal1, seal2, seal3, seal4, seal5, zigg2upgrade, zigg3upgrade
 			EarlyUpgrades: seal1, seal2, zigg2upgrade
 		FarmFields: Crops, Grains, Corn
 		OrePatches: Iron, Gold#
-		AcolyteWorkerRatio: 25
+		AcolyteWorkerRatio: 33
 		BuildingLimits:
 			zeroproc.scaff: 4
 			procnew.scaff: 3
@@ -63,9 +64,7 @@ Player:
 			handnew.scaff: 2
 			sulbarr.scaff: 2
 			#
-			hqnewnod.scaff: 1
 			hqnewgdi.scaff: 1
-			armorygdi.scaff: 1
 			armorynod.scaff: 1
 			castle.scaff: 1
 			castle2.scaff: 1
@@ -115,7 +114,7 @@ Player:
 			#
 #			obelisk.penta: 4
 #			garg.penta: 4
-			sppool.penta: 1
+			sppool.penta: 2
 			crypt.penta: 10
 			mauso.penta: 2
 			libra.penta: 1
@@ -168,14 +167,14 @@ Player:
 			samnew.scaff: 5%
 			sulgtw.scaff: 10%
 			#
-			nukenew.scaff: 100%
-			sulnuke.scaff: 100%
-			nodnuke: 100%
-			nuk2new.scaff: 400%
-			sulnuk2.scaff: 400%
+			#nukenew.scaff: 100%
+			#sulnuke.scaff: 100%
+			#nodnuke: 100%
+			#nuk2new.scaff: 400%
+			#sulnuk2.scaff: 400%
 			#nodnuk2.scaff: 400%
-			nukxl.scaff: 1000%
-			xltntuni.scaff: 400%
+			#nukxl.scaff: 1000%
+			#xltntuni.scaff: 400%
 			#
 			barrnew.scaff: 200%
 			sulbarr.scaff: 200%
@@ -211,7 +210,6 @@ Player:
 			townhall.scaff: 70%
 			sulhall.scaff: 70%
 		UnitsToBuild:
-			engeneer: 200%
 			sule1: 65%
 			sule2: 65%
 			sule3: 40%
@@ -261,7 +259,7 @@ Player:
 			undead7: 100%
 			deadross: 60%
 			grim: 50%
-			acolytec: 500%
+			acolytec: 100%
 			vampflying: 10%
 			demonhorse: 100%
 			LichK: 70%
@@ -270,7 +268,6 @@ Player:
 			#
 			#
 		UnitLimits:
-			engeneer: 4
 			preycolyte: 25
 			eharvxl: 6
 			acolytec: 9

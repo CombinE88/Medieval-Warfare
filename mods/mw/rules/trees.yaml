@@ -59,6 +59,7 @@ SPLIT3:
 	SeedsResource:
 		ResourceType: Crops
 		Interval: 35
+		RequiresCondition: !SpawnCorruption
 	WithIdleAnimation:
 		Interval: 200
 	DockManager:
@@ -94,6 +95,15 @@ SPLIT3:
 		DockAngle: 96
 		IsDragRequired: false
 		FaceTowardsCenter: true
+	ExternalCondition@SpawnCorruption:
+		Condition: SpawnCorruption
+	SeedsResource@SpawnCorruption:
+		RequiresCondition: SpawnCorruption
+		ResourceType: Corruption
+		Interval: 45
+	WithColoredOverlay@SpawnCorruption:
+		Palette: disabled
+		RequiresCondition: SpawnCorruption
 
 SPLITBLUE:
 	Inherits: ^TibTree
@@ -152,6 +162,7 @@ SPLIT4:
 	SeedsResource:
 		ResourceType: Grains
 		Interval: 35
+		RequiresCondition: !SpawnCorruption
 	DockManager:
 		ExternalDocks: true
 		#DeadlockDetectionEnabled: false
@@ -185,6 +196,15 @@ SPLIT4:
 		DockAngle: 96
 		IsDragRequired: false
 		FaceTowardsCenter: true
+	ExternalCondition@SpawnCorruption:
+		Condition: SpawnCorruption
+	SeedsResource@SpawnCorruption:
+		RequiresCondition: SpawnCorruption
+		ResourceType: Corruption
+		Interval: 45
+	WithColoredOverlay@SpawnCorruption:
+		Palette: disabled
+		RequiresCondition: SpawnCorruption
 		
 SPLIT4B:
 	Inherits: SPLIT3
@@ -193,6 +213,7 @@ SPLIT4B:
 	SeedsResource:
 		ResourceType: Corn
 		Interval: 35
+		RequiresCondition: !SpawnCorruption
 	DockManager:
 		ExternalDocks: true
 		#DeadlockDetectionEnabled: false
@@ -226,6 +247,15 @@ SPLIT4B:
 		DockAngle: 96
 		IsDragRequired: false
 		FaceTowardsCenter: true
+	ExternalCondition@SpawnCorruption:
+		Condition: SpawnCorruption
+	SeedsResource@SpawnCorruption:
+		RequiresCondition: SpawnCorruption
+		ResourceType: Corruption
+		Interval: 45
+	WithColoredOverlay@SpawnCorruption:
+		Palette: disabled
+		RequiresCondition: SpawnCorruption
 		
 SPLIT5:
 	Inherits: SPLIT3
@@ -377,6 +407,8 @@ SPLIT7:
 		DockAngle: 96
 		IsDragRequired: false
 		FaceTowardsCenter: true
+	ExternalCondition@SpawnCorruption:
+		Condition: SpawnCorruption
 		
 SPLIT8:
 	Inherits: SPLIT7
@@ -456,8 +488,8 @@ SPLIT8:
 		DockOffset: -2,-2
 		WOffset: -425,510,0
 		DockAngle: 96
-		IsDragRequired: false
 		FaceTowardsCenter: true
+		IsDragRequired: false
 
 
 ROCK1:

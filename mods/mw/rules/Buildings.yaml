@@ -6,6 +6,11 @@ FACTNEW:
 		RepairStep: 3000
 		PlayerExperience: 15
 	WithMakeAnimation:
+#	GrantConditionOnDamageState@damaged:
+#		ValidDamageStates:
+#		Condition: damaged
+	ExternalCondition@never:
+		Condition: never
 	GrantConditionOnPrerequisite@4:
 		Prerequisites: vehicleproduction
 		Condition: visibilityEnabler1
@@ -31,9 +36,10 @@ FACTNEW:
 		RequiresCondition: visibilityEnabler4
 		Condition: visibility
 	WithSpriteBody:	 
+		RequiresCondition: never
 	WithIdleOverlay@Lv0:
 		Sequence: idle0
-		RequiresCondition: !visibility
+		RequiresCondition: visibility == 0
 	WithIdleOverlay@Lv1:
 		Sequence: idle1
 		RequiresCondition: visibility == 1
@@ -61,9 +67,9 @@ FACTNEW:
 	BodyOrientation:
 		QuantizedFacings: 8
 	Selectable:
-		Bounds:72,52,0,-18
+		Bounds:72,52,0,-1
 	SelectionDecorations:
-		VisualBounds:72,52,0,-18
+		VisualBounds:72,52,0,-1
 	Exit@1:
 		SpawnOffset: -426,85,0
 		ExitCell: 0,1
@@ -1813,7 +1819,7 @@ CASTLE2:
 	Selectable:
 		Bounds: 72,48,0,12
 	SelectionDecorations:
-		VisualBounds: 72,68,0,0
+		VisualBounds: 72,68,0,12
 	ProvidesRadar:
 	SupportPowerChargeBar:
 	NukePower:
@@ -1866,9 +1872,9 @@ WORKSHOPNOD:
 		Dimensions: 3,3
 		LocalCenterOffset: 0,-512,0
 	Selectable:
-		Bounds: 64,64,0,-10
+		Bounds: 64,54,0,10
 	SelectionDecorations:
-		VisualBounds: 72,48
+		VisualBounds: 64,54,0,10
 	Health:
 		HP: 60000
 	RevealsShroud:
@@ -1977,9 +1983,9 @@ WORKSHOPGDI:
 		Dimensions: 3,3
 		LocalCenterOffset: 0,-512,0
 	Selectable:
-		Bounds: 64,34,0,3
+		Bounds: 64,54,0,10
 	SelectionDecorations:
-		VisualBounds: 72,48
+		VisualBounds: 64,54,0,10
 	Health:
 		HP: 75000
 	RevealsShroud:

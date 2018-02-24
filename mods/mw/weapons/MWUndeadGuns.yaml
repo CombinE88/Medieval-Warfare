@@ -250,7 +250,7 @@ SkeletonRock:
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
 		Spread: 512
-		Damage: 8000
+		Damage: 10000
 		ValidTargets: Ground
 		InvalidTargets: Air
 		Versus:
@@ -489,7 +489,7 @@ AcolyteAttackCleaner:
 		Spread: 141
 		ValidTargets: Ground
 		InvalidTargets: Air
-		Damage: 1750
+		Damage: 1850
 		Versus:
 			Leather: 100
 			Light: 100
@@ -572,7 +572,7 @@ GrimSkytheThrow:
 		
 VampAttackGG:
 	ReloadDelay: 45
-	Range: 2c512
+	Range: 4c0
 	ValidTargets: Infantry, Cavalry, Siege
 	InvalidTargets: Air
 	Projectile: Bullet

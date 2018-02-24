@@ -2,6 +2,11 @@
 
 ^MWUndeadBuilding:
 	Inherits@1: ^BaseBuilding
+	GivesBuildableArea:
+		AreaTypes: undeadbuilding
+	RequiresBuildableArea:
+		AreaTypes: undeadbuilding
+		Adjacent: 4
 	RepairableBuilding:
 		RepairPercent: 40
 		RepairStep: 1000
@@ -21,6 +26,9 @@
 
 ^MWBasePentagram:
 	Inherits@1: ^BaseBuilding
+	RequiresBuildableArea:
+		AreaTypes: undeadbuilding
+		Adjacent: 4
 	-EmitInfantryOnSell:
 	RepairableBuilding:
 		RepairPercent: 40
@@ -80,7 +88,7 @@
 		Weapon: LeaveStuff
 		EmptyWeapon: LeaveStuff
 		Chance: 15
-    Crushable:
+	Crushable:
 		
 ^SkeletonSpawn:
 	Inherits: ^MedievalInfantry
@@ -434,7 +442,7 @@
 		Footprint: x
 		Dimensions: 1,1
 	Health:
-		HP: 15000
+		HP: 55000
 	RevealsShroud:
 		Range: 3c0
 	Selectable:
@@ -450,7 +458,7 @@
 		PercentageStep: -3
 		Step: -0
 		HealIfBelow: 110
-		Delay: 25
+		Delay: 35
 		DamageTypes: DefaultDeath
 		
 #Upgrades
@@ -504,7 +512,7 @@ SEAL1:
 	RenderSprites:
 		Image: seal1
 	Valued:
-		Cost: 700
+		Cost: 500
 	Tooltip:
 		Name: Break Seal 1
 	ProvidesPrerequisite@buildingname:
@@ -522,7 +530,7 @@ SEAL2:
 	RenderSprites:
 		Image: seal2
 	Valued:
-		Cost: 1700
+		Cost: 1000
 	Tooltip:
 		Name: Break Seal 2
 	ProvidesPrerequisite@buildingname:
@@ -541,7 +549,7 @@ SEAL3:
 	RenderSprites:
 		Image: seal3
 	Valued:
-		Cost: 2700
+		Cost: 1500
 	Tooltip:
 		Name: Break Seal 3
 	ProvidesPrerequisite@buildingname:
@@ -560,13 +568,13 @@ SEAL4:
 	RenderSprites:
 		Image: seal4
 	Valued:
-		Cost: 3700
+		Cost: 2000
 	Tooltip:
 		Name: Break Seal 4
 	ProvidesPrerequisite@buildingname:
 	Buildable:
 		IconPalette: raicon
-		Prerequisites: ziggurat2, seal3
+		Prerequisites: ziggurat2, seal3, libra
 		BuildPaletteOrder: 40
 		Description: Unlocks tomb, Grim Reaper and ziggurat level 2\n\n\n
 		Queue: MResources.ded
@@ -579,7 +587,7 @@ SEAL5:
 	RenderSprites:
 		Image: seal5
 	Valued:
-		Cost: 4000
+		Cost: 2500
 	Tooltip:
 		Name: Break the Forgotten Seal
 	ProvidesPrerequisite@buildingname:
@@ -596,6 +604,8 @@ SEAL5:
 ZIGGURAT1:
 	Inherits: ^MWUndeadBuilding
 	Inherits@Hitshape: ^2x2Shape
+	GivesBuildableArea:
+		AreaTypes: undeadbuilding
 	RepairableBuilding:
 		RepairPercent: 40
 		RepairStep: 3000
@@ -841,8 +851,8 @@ OBELISK.penta:
 	UndeadBuilder:
 		SpawnActor: obelisk
 		SpawnOffset: 1,1
-		SummoningTime: 150
-		Cost: 1300
+		SummoningTime: 55
+		Cost: 1000
 		
 GARG.penta:
 	Inherits: ^Smallpenta
@@ -868,7 +878,7 @@ GARG.penta:
 	UndeadBuilder:
 		SpawnActor: garg
 		SpawnOffset: 1,1
-		SummoningTime: 75
+		SummoningTime: 35
 		Cost: 500
 		
 	   
@@ -890,16 +900,22 @@ SPPOOL.penta:
 	UndeadBuilder:
 		SpawnActor: sppool
 		SpawnOffset: 1,1
-		SummoningTime: 75 #100
-		Cost: 700
+		SummoningTime: 25 #100
+		Cost: 300
 	Buildable:
 		IconPalette: raicon
 		BuildPaletteOrder: 30
-		Description: Summons an Essence pool.\n  Stores some Essence\n  Grants the obelisk the ability to collect essence by converting battlefield loot.
+		Description: Summons an Essence pool.\n Makes sorrounding scarecrows spawn corruption instead.\n Stores some Essence\n  Grants the obelisk the ability to collect essence by converting battlefield loot.
 		Queue: MBuilding.ded
 		BuildDuration: 10
-		
-		# Summon Barracks
+	WithRangeCircle:
+		Type: sspool
+		Range: 7c0
+		Color: FFFFFF80
+		UsePlayerColor: True
+	RequiresBuildableArea:
+		AreaTypes: undeadbuilding
+		Adjacent: 8
 		
 CRYPT.penta:
 	Inherits: ^Mediumpenta
@@ -929,8 +945,8 @@ CRYPT.penta:
 	UndeadBuilder:
 		SpawnActor: crypt
 		SpawnOffset: 1,1
-		SummoningTime: 112 #150
-		Cost: 1500
+		SummoningTime: 55 #150
+		Cost: 850
 		
 MAUSO.penta:
 	Inherits: ^Mediumpenta
@@ -956,8 +972,8 @@ MAUSO.penta:
 	UndeadBuilder:
 		SpawnActor: mauso
 		SpawnOffset: 1,1
-		SummoningTime: 150 #200
-		Cost: 2000
+		SummoningTime: 110 #200
+		Cost: 1500
 		
 LIBRA.penta:
 	Inherits: ^Mediumpenta
@@ -983,8 +999,8 @@ LIBRA.penta:
 	UndeadBuilder:
 		SpawnActor: LIBRA
 		SpawnOffset: 1,1
-		SummoningTime: 185 # 250
-		Cost: 1500
+		SummoningTime: 60 # 250
+		Cost: 1000
 		
 TOMB.penta:
 	Inherits: ^Largepenta
@@ -1010,8 +1026,8 @@ TOMB.penta:
 	UndeadBuilder:
 		SpawnActor: TOMB
 		SpawnOffset: 1,1
-		SummoningTime: 225 # 300
-		Cost: 2000
+		SummoningTime: 110 # 300
+		Cost: 1700
 		
 HELLGATE.penta:
 	Inherits: ^Largepenta
@@ -1085,7 +1101,7 @@ SPPOOL:
 		PlayerPalette: raplayer
 	WithSpriteBody:
 	Valued:
-		Cost: 1000
+		Cost: 300
 	Tooltip:
 		Name: Essence pool
 	Building:
@@ -1109,6 +1125,16 @@ SPPOOL:
 		PipCount: 10
 		Capacity: 1500
 	ProvidesPrerequisite@buildingname:
+	ProximityExternalCondition@CORRUPTION:
+		Range: 7c0
+		ValidStances: Ally, Neutral, Enemy
+		Condition: SpawnCorruption
+	WithRangeCircle:
+		Type: sspool
+		Range: 7c0
+		Color: FFFFFF80
+		UsePlayerColor: True
+	-GivesBuildableArea:
 		
   
 CRYPT:
@@ -1124,7 +1150,7 @@ CRYPT:
 		PlayerPalette: raplayer
 	WithSpriteBody:
 	Valued:
-		Cost: 1500
+		Cost: 850
 	Tooltip:
 		Name: Crypt
 	Building:
@@ -1185,7 +1211,7 @@ MAUSO:
 		PlayerPalette: raplayer
 	WithSpriteBody:
 	Valued:
-		Cost: 2000
+		Cost: 1500
 	Tooltip:
 		Name: Tomb
 	Building:
@@ -1267,7 +1293,7 @@ LIBRA:
 		PlayerPalette: raplayer
 	WithSpriteBody:
 	Valued:
-		Cost: 1500
+		Cost: 1000
 	Tooltip:
 		Name: Library
 	Building:
@@ -1324,7 +1350,7 @@ TOMB:
 		PlayerPalette: raplayer
 	WithSpriteBody:
 	Valued:
-		Cost: 2000
+		Cost: 1700
 	Tooltip:
 		Name: Mausoleum
 	Building:
@@ -1544,7 +1570,7 @@ OBELISK:
 		PlayerPalette: raplayer
 	WithMakeAnimation:
 	Valued:
-		Cost: 1300
+		Cost: 1000
 	Tooltip:
 		Name: Obelisk
 	Building:
@@ -1718,7 +1744,7 @@ PREYCOLYTE:
 	Mobile:
 		Speed: 65
 	Health:
-		HP: 20000
+		HP: 30000
 	AttackFrontal:
 	AutoTarget:
 		ScanRadius: 10
@@ -1740,7 +1766,7 @@ PREYCOLYTE:
 	AcolytePrey: 
 		TargetActors: split3, split4, split4b, split2, splitblue, split5, splitdead, split7, split8
 		PreyLoopSequence: prey
-		leechinterval: 45
+		leechinterval: 40
 		SelfEnabledCondition: whisper
 		Voice: Harvest
 		ResourceTypesPreres:
@@ -1752,11 +1778,11 @@ PREYCOLYTE:
 			Guns: NONE
 			Wood: NONE
 			Lumber: NONE
-			Corruption: ziggurat2
+			Corruption: NONE
 	AcolytePreyBuild: 
 		TargetActors: crypt.penta, sppool.penta, mauso.penta, hellgate.penta, tomb.penta, libra.penta, obelisk.penta, garg.penta
 		PreyLoopSequence: prey
-		Buildinterval: 20
+		Buildinterval: 18
 		Buildpower: 1
 		SelfEnabledCondition: whisper
 		Voice: Build
@@ -2101,7 +2127,7 @@ GRIM:
 	RevealsShroud:
 		Range: 6c0
 	Valued:
-		Cost: 900
+		Cost: 850
 	Tooltip:
 		Name: Grim Reaper
 	Mobile:
@@ -2223,7 +2249,6 @@ ACOLYTEC:
 		ValidTargets: Light, Ranged, LightCavalry, Support, Flying
 		Priority: 4
 	Selectable:
-		Priority: 9
 		
 VAMP:
 	Inherits: ^Knight
@@ -2281,7 +2306,6 @@ VAMP:
 VAMPFLYING:
 	Inherits: ^Helicopter
 	Inherits@GainsExperience: ^GainsExperience
-
 	Inherits@Healable: ^Healable
 	Inherits@AUTOTARGET: ^AutoTargetAir
 	HitShape:
@@ -2308,7 +2332,6 @@ VAMPFLYING:
 		Prerequisites: seal3
 		Description: \n  Strong vs Infantry and cavalry\n  Can transform flying\n  Leeches life\n  Transformed: can attack Aircrafts
 		Queue: MVehicle.ded
-		BuildDuration: 900
 	Health:
 		HP: 23000
 	Armor:
@@ -2337,7 +2360,14 @@ VAMPFLYING:
 		Facing: 96
 	Targetable@CombatRole:
 		TargetTypes: Flying
-		
+	GrantConditionOnBotOwner@instanttransform:
+		Bots: baron
+		Condition: BotTransformHandler
+	DebugTransformOnCondition@Finsihed:
+		RequiresCondition: BotTransformHandler
+		IntoActor: vamp
+		ReadyAudio:
+        
 VAMPMAN.Husk:
 	Inherits: ^HelicopterHusk
 	ConditionManager:
@@ -2376,7 +2406,7 @@ DEMONHORSE:
 		RequiresCondition: Slowmotion
 		Modifier: 70
 	Valued:
-		Cost: 550
+		Cost: 650
 	Tooltip:
 		Name: Demon Knight
 	Buildable:
@@ -2384,7 +2414,6 @@ DEMONHORSE:
 		BuildPaletteOrder: 10
 		Description: Fast, medium Cavalry.\n  Strong vs Cavalry and Buildings\n  Weak vs Infantry\n\n
 		Queue: MVehicle.ded
-		BuildDuration: 800
 	Mobile:
 		SharesCell: false
 		Crushes: crate, infantry
@@ -2393,7 +2422,7 @@ DEMONHORSE:
 	RevealsShroud:
 		Range: 7c0
 	Health:
-		HP: 40000
+		HP: 45000
 	Armament:
 		Weapon: SuperiorPikeCavalry
 	AttackFrontal:
@@ -2451,7 +2480,7 @@ LICHK:
 		BuildPaletteOrder: 30
 		Prerequisites: seal5
 		Queue: MVehicle.ded
-		BuildDuration: 1200
+		BuildDuration: 1500
 	-Mobile:
 	Health:
 		HP: 35000

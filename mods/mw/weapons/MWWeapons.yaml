@@ -1844,7 +1844,7 @@ DragonFire:
 		Spread: 210
 		ValidTargets: Ground
 		InvalidTargets: Air
-		Damage: 1500
+		Damage: 1700
 		Falloff: 100, 70, 60, 50, 18, 7, 0
 		Versus:
 			Leather: 75
@@ -1863,18 +1863,18 @@ DragonFire:
 		ValidTargets: Ground
 		InvalidTargets: Air
 		Delay: 20
-		Damage: 600
+		Damage: 750
 		Falloff: 100, 70, 60, 50, 18, 7, 0
 		Versus:
 			Leather: 100
 			Light: 75
 			Heavy: 60
-			Concrete: 70
+			Concrete: 90
 			Knight: 35
 			LightCavalry: 100
 			MediumCavalry: 100
 			HeavyCavalry: 75
-			HeavyBuilding: 65
+			HeavyBuilding: 75
 			Spectral: 200
 		DamageTypes: Prone50Percent, TriggerProne, BurnToDeath
 	Warhead@1Eff: CreateEffect

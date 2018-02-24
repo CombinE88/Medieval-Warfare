@@ -57,6 +57,9 @@ namespace OpenRA.Mods.MW.MWAI
 
                     if (preserv != null && preserv.HasTraitInfo<ProvidesLivingspaceInfo>())
                         potentialpop += preserv.TraitInfo<ProvidesLivingspaceInfo>().Ammount;
+
+                    if (hous != null && hous.Info.HasTraitInfo<ProvidesLivingspaceInfo>())
+                        potentialpop += hous.Info.TraitInfo<ProvidesLivingspaceInfo>().Ammount;
                 }
             }
             return potentialpop;
@@ -303,8 +306,6 @@ namespace OpenRA.Mods.MW.MWAI
                     }
                 }
             }
-            hackyAI.AcolyteBuilder = AcolyteBuilder;
-            hackyAI.AcolyteHarvester = AcolyteHarvester;
         }
 
         public void CheckAllPatchesForProfit()
@@ -343,6 +344,7 @@ namespace OpenRA.Mods.MW.MWAI
                     {
                         //BotDebug("AI: acolyte " + dock.Reserver + " released from duty");
                         dock.Reserver.CancelActivity();
+                        //hackyAI.QueueOrder(new Order("Stop", dock.Reserver, Target.Invalid, false));
                     }
 
                     AllowedNumber++;

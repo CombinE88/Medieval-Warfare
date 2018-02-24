@@ -264,18 +264,26 @@ namespace OpenRA.Traits
             if (--assignRolesTicks <= 0)
             {
                 assignRolesTicks = hackyaiinfo.AssignRolesInterval;
+
                 hackyai.number_CountPeasants = undeadaihandler.CountPeasants();
                 hackyai.number_CountPossiblePopulation = undeadaihandler.CountPossiblePopulation();
                 hackyai.number_CountPotentialFreeBeds = undeadaihandler.CountPotentialFreeBeds();
-                undeadaihandler.ManageEmptyAcolytes();
-                undeadaihandler.GiveOrdersToIdleCultists();
-                undeadaihandler.FindNewDeerstand();
-                undeadaihandler.ManageBuildrAcolytes();
-                undeadaihandler.ManageVamipres();
-                undeadaihandler.ManageFarmerAcolytes();
-                undeadaihandler.ManageDeadAcolytes();
-                undeadaihandler.CheckAllPatchesForProfit();
-                Log.Write("debug", "Kiwi roles assigned: ");
+
+                if (self.Owner.Faction.InternalName == "ded")
+                {
+                    undeadaihandler.ManageEmptyAcolytes();
+                    //undeadaihandler.GiveOrdersToIdleCultists();
+                    //undeadaihandler.FindNewDeerstand();
+                    undeadaihandler.ManageBuildrAcolytes();
+                    //undeadaihandler.ManageVamipres();
+                    undeadaihandler.ManageFarmerAcolytes();
+                    undeadaihandler.ManageDeadAcolytes();
+                    undeadaihandler.CheckAllPatchesForProfit();
+                }
+
+
+                hackyai.AcolyteBuilder = undeadaihandler.AcolyteBuilder;
+                hackyai.AcolyteHarvester = undeadaihandler.AcolyteHarvester;
             }
         }
     }

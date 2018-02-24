@@ -1,6 +1,6 @@
 Metadata:
 	Title: Medieval Warfare
-	Version: playtest2302201801
+	Version: playtest2402201801
 
 PackageFormats: Mix
 
@@ -50,7 +50,7 @@ Packages:
 
 MapFolders:
 	mw|maps: System
-	~^maps/mw/release-20171014: User
+	~^maps/mw/git-20cf00c: User
 
 Rules:
 	mw|rules/AI.yaml

@@ -907,7 +907,7 @@ NEWCOMM:
 
 ASSASSIN:
 	Inherits: ^Knight
-	Inherits@AUTOTARGET: ^AutoTargetAir
+	Inherits@AUTOTARGET: ^AutoTargetAll
 	Inherits@GainsExperience: ^GainsExperience
 	Inherits@GetsPoisoned: ^GetsPoisoned
 	Inherits@CanTurnIntoScelett:  ^CanTurnIntoScelett
@@ -963,7 +963,7 @@ ASSASSIN:
 			Secondary: fireattack
 			Primary: knifeattack
 	AutoTarget:
-		InitialStance: ReturnFire
+		InitialStance: HoldFire
 		InitialStanceAI: ReturnFire
 	Armor:
 		Type: Leather
