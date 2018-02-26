@@ -2,6 +2,7 @@
 using System.Linq;
 using OpenRA.Mods.Common;
 using OpenRA.Mods.Common.Traits;
+using OpenRA.Mods.MW.Effects;
 using OpenRA.Primitives;
 using OpenRA.Traits;
 
@@ -28,6 +29,12 @@ namespace OpenRA.Mods.MW.Traits
 
         public readonly int Cost = 1000;
 
+        public readonly bool Selfbuilds = false;
+
+        public readonly int SelfBuildSteps = 1;
+
+        public readonly int SelfBuildDelay = 25;
+
         public object Create(ActorInitializer init) { return new UndeadBuilder(this); }
     }
 
@@ -41,11 +48,14 @@ namespace OpenRA.Mods.MW.Traits
         public int PayPerTick;
         private DeveloperMode devMode;
 
+        private int selfBuildCounter;
+
         public UndeadBuilder(UndeadBuilderInfo info)
         {
             this.info = info;
             decaycounter = info.DecayTime;
             PayPerTick = info.Cost / info.SummoningTime;
+            selfBuildCounter = info.SelfBuildDelay;
         }
 
 
@@ -69,50 +79,69 @@ namespace OpenRA.Mods.MW.Traits
             {
                 replaceSelf(self);
             }
+
+            if (info.Selfbuilds)
+            {
+                if (selfBuildCounter-- <= 0)
+                {
+                    selfBuildCounter = info.SelfBuildDelay;
+                if (self.Owner.PlayerActor.Trait<PlayerResources>().TakeCash(PayPerTick, true))
+                    {
+                        hassummoningcount += 1;
+                        var floattest = PayPerTick.ToString();
+                        floattest = "- " + floattest + " Essence";
+                        if (self.Owner.IsAlliedWith(self.World.RenderPlayer))
+                            self.World.AddFrameEndTask(w => w.Add(new FloatingTextBackwards(self.CenterPosition,
+                                self.Owner.Color.RGB, floattest, 30)));
+                    }
+                
+            }
         }
 
-        public void replaceSelf(Actor self)
+    }
+
+    public void replaceSelf(Actor self)
+    {
+
+        self.World.AddFrameEndTask(w =>
         {
+            if (self.IsDead)
+                return;
 
-            self.World.AddFrameEndTask(w =>
+            var selected = w.Selection.Contains(self);
+            var controlgroup = w.Selection.GetControlGroupForActor(self);
+
+
+            var init = new TypeDictionary
             {
-                if (self.IsDead)
-                    return;
-
-                var selected = w.Selection.Contains(self);
-                var controlgroup = w.Selection.GetControlGroupForActor(self);
-
-
-                var init = new TypeDictionary
-                {
                     new LocationInit(self.Location + info.SpawnOffset),
                     new CenterPositionInit(self.CenterPosition),
                     new OwnerInit(self.Owner),
-                };
+            };
 
-                if (info.SkipMakeAnims)
-                    init.Add(new SkipMakeAnimsInit());
+            if (info.SkipMakeAnims)
+                init.Add(new SkipMakeAnimsInit());
 
-                var health = self.TraitOrDefault<Health>();
-                if (health != null && info.ForceHealthPercentage)
-                {
-                    var newHP = (health.HP * 100) / health.MaxHP;
-                    init.Add(new HealthInit(newHP));
-                }
+            var health = self.TraitOrDefault<Health>();
+            if (health != null && info.ForceHealthPercentage)
+            {
+                var newHP = (health.HP * 100) / health.MaxHP;
+                init.Add(new HealthInit(newHP));
+            }
 
-                var a = w.CreateActor(info.SpawnActor, init);
+            var a = w.CreateActor(info.SpawnActor, init);
 
-                if (selected)
-                    w.Selection.Add(w, a);
-                if (controlgroup.HasValue)
-                    w.Selection.AddToControlGroup(a, controlgroup.Value);
+            if (selected)
+                w.Selection.Add(w, a);
+            if (controlgroup.HasValue)
+                w.Selection.AddToControlGroup(a, controlgroup.Value);
 
-                Game.Sound.PlayNotification(self.World.Map.Rules, self.Owner, "Speech", info.ReadyAudio,
-                    self.Owner.Faction.InternalName);
+            Game.Sound.PlayNotification(self.World.Map.Rules, self.Owner, "Speech", info.ReadyAudio,
+                self.Owner.Faction.InternalName);
 
-                self.Dispose();
-            });
-        }
+            self.Dispose();
+        });
     }
+}
 
 }

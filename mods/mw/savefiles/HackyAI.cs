@@ -53,7 +53,6 @@ namespace OpenRA.Mods.Common.AI
 			public readonly HashSet<string> ConstructionYard = new HashSet<string>();
 			public readonly HashSet<string> Farms = new HashSet<string>();
 			public readonly HashSet<string> Refineries = new HashSet<string>();
-			public readonly HashSet<string> LumberShacks = new HashSet<string>();
 			public readonly HashSet<string> Defenses = new HashSet<string>();
 			public readonly HashSet<string> Houses = new HashSet<string>();
 			public readonly HashSet<string> Production = new HashSet<string>();
@@ -82,6 +81,7 @@ namespace OpenRA.Mods.Common.AI
 			public readonly HashSet<string> Upgrades = new HashSet<string>();
 			public readonly HashSet<string> EarlyUpgrades = new HashSet<string>();
 			public readonly HashSet<string> FlyingVampire = new HashSet<string>();
+			public readonly HashSet<string> Gravestones = new HashSet<string>();
 		}
 
 		// MW extra Stuff
@@ -100,7 +100,7 @@ namespace OpenRA.Mods.Common.AI
 		public readonly int MinimumPeasants = 4;
 
 		[Desc("Minimum number of peasants and free beds the AI should try to maintain before building other buildings.")]
-		public readonly int Population = 6;
+		public readonly int Population = 14;
 
 		[Desc("From 100% how many Acolytes are concideret as worker.")]
 		public readonly int AcolyteWorkerRatio = 30;
@@ -325,7 +325,7 @@ namespace OpenRA.Mods.Common.AI
 		public object Create(ActorInitializer init) { return new HackyAI(this, init); }
 	}
 
-	public enum BuildingType { Building, Defense, Refinery, Farm, Important, Regular, Hunter, Lumber, Undead, Sppool}
+	public enum BuildingType { Building, Defense, Refinery, Farm, Important, Regular, Hunter, Undead, Sppool }
 
 	public sealed class HackyAI : ITick, IBot, INotifyDamage
 	{
@@ -589,8 +589,8 @@ namespace OpenRA.Mods.Common.AI
 		public bool HasMinimumFarm()
 		{
 			// Require at least one Farms, unless we can't build it.
-			return CountBuildingByCommonName(Info.BuildingCommonNames.Farms, Player) > 0 ||
-				CountBuildingByCommonName(Info.BuildingCommonNames.Farms, Player) == 0 ||
+			return CountBuildingByCommonName(Info.BuildingCommonNames.Farms, Player) > 1 ||
+				CountBuildingByCommonName(Info.BuildingCommonNames.Refineries, Player) > 0 ||
 				CountBuildingByCommonName(Info.BuildingCommonNames.ConstructionYard, Player) == 0;
 		}
 
@@ -603,7 +603,8 @@ namespace OpenRA.Mods.Common.AI
 		public bool HasAdequateFarm()
 		{
 			// Require at least two Farms, unless we have no possible Peasants (can't build it)
-			return CountBuildingByCommonName(Info.BuildingCommonNames.Farms, Player) >= 2;
+			return (CountBuildingByCommonName(Info.BuildingCommonNames.Farms, Player) >= 3 ||
+				CountBuildingByCommonName(Info.BuildingCommonNames.Refineries, Player) > 1);
 		}
 
 		public bool HasAdequateBarracks()
@@ -679,16 +680,17 @@ namespace OpenRA.Mods.Common.AI
 				case BuildingType.Defense:
 
 					// Defend our own harvestoperations
-					var closestEnemy = World.FindActorsInCircle(World.Map.CenterOfCell(defenseCenter), new WDist(1024 * Info.MaxBaseRadius))
-					.Where(a => !a.Disposed && a.Owner == Player && (Info.BuildingCommonNames.Farms.Contains((a.Info.Name + ".scaff").ToLower()) || Info.BuildingCommonNames.Refineries.Contains((a.Info.Name + ".scaff").ToLower())))
+					var resourceBuildings = World.FindActorsInCircle(World.Map.CenterOfCell(defenseCenter), new WDist(Info.MaxBaseRadius * 2))
+					.Where(a => !a.Disposed && a.Owner == Player && (Info.BuildingCommonNames.Farms.Contains((a.Info.Name)) || Info.BuildingCommonNames.Refineries.Contains((a.Info.Name))))
 					.Shuffle(Random);
 
-					var targetCell = (closestEnemy.Any() && closestEnemy != null) ? closestEnemy.First().Location : baseCenter;
+					var targetCell = (resourceBuildings.Any() && resourceBuildings != null) ? resourceBuildings.Random(Player.World.SharedRandom).Location : baseCenter;
+
 					return findPos(baseCenter, targetCell, Info.MinBaseRadius, Info.MaxBaseRadius);
 
 				case BuildingType.Refinery:
 					// Try and place the refinery near a resource field
-					var nearbyResources = Map.FindTilesInAnnulus(baseCenter, Info.MinBaseRadius, Info.MaxBaseRadius)
+					var nearbyResources = Map.FindTilesInAnnulus(baseCenter, Info.MinBaseRadius, Info.MaxBaseRadius * 2)
 						.Where(a => OreResourceTypeIndices.Get(Map.GetTerrainIndex(a)))
 						.Shuffle(Random).Take(Info.MaxResourceCellsToCheck);
 
@@ -721,12 +723,12 @@ namespace OpenRA.Mods.Common.AI
 
 				case BuildingType.Sppool:
 
-					var closestscare = World.FindActorsInCircle(World.Map.CenterOfCell(defenseCenter), new WDist(1024 * Info.MaxBaseRadius))
-					.Where(a => Info.UndeadCommonNames.PrayableCrops.Contains(a.Info.Name) && (a.CenterPosition - Player.World.Map.CenterOfCell(initialBaseCenter)).LengthSquared < 14*1024)
+					var closestscare = World.FindActorsInCircle(World.Map.CenterOfCell(defenseCenter), new WDist(Info.MaxBaseRadius * 2))
+					.Where(a => Info.UndeadCommonNames.PrayableCrops.Contains(a.Info.Name))
 					.Shuffle(Random);
 
-					return closestscare.Any() ? closestscare.First().Location : findPos(baseCenter, baseCenter, Info.MinBaseRadius, Info.MaxBaseRadius);
-			
+					return findPos(baseCenter, closestscare.Any() ? closestscare.Random(Player.World.SharedRandom).Location : baseCenter, 0, 24);
+
 				case BuildingType.Important:
 
 					return findPos(baseCenter, baseCenter, Info.MinBaseRadius, Info.InnerBuildRadiusEnd);
@@ -737,7 +739,7 @@ namespace OpenRA.Mods.Common.AI
 
 				case BuildingType.Hunter:
 
-					var closeDeerStands = World.FindActorsInCircle(World.Map.CenterOfCell(defenseCenter), new WDist(1024 * 30))
+					var closeDeerStands = World.FindActorsInCircle(World.Map.CenterOfCell(defenseCenter), new WDist(Info.MaxBaseRadius * 2))
 						.Where(a => !a.Disposed && Info.BuildingCommonNames.DeerStands.Contains(a.Info.Name.ToLower()))
 						.Shuffle(Random);
 
@@ -747,39 +749,11 @@ namespace OpenRA.Mods.Common.AI
 					return findPos(baseCenter, targetstand, Info.OuterRadiusEnd, Info.MaxBaseRadius);
 
 				case BuildingType.Building:
+
 					return findPos(baseCenter, baseCenter, Info.MinBaseRadius, distanceToBaseIsImportant ? Info.MaxBaseRadius : Map.Grid.MaximumTileSearchRange);
 
-				case BuildingType.Lumber:
-
-					var findATree = World.FindActorsInCircle(World.Map.CenterOfCell(defenseCenter), new WDist(1024 * (Info.MaxBaseRadius)))
-						.Where(a => !a.Disposed && Info.BuildingCommonNames.HarvestableTrees.Contains(a.Info.Name.ToLower()))
-						.Shuffle(Random);
-
-					var closeTrees = (findATree.Any() && findATree.First() != null) ?
-						World.FindActorsInCircle(World.Map.CenterOfCell(findATree.First().Location), new WDist(1024 * (7)))
-							.Where(a => !a.Disposed && Info.BuildingCommonNames.HarvestableTrees.Contains(a.Info.Name.ToLower()))
-							:
-							World.FindActorsInCircle(World.Map.CenterOfCell(baseCenter), new WDist(1024 * (10)))
-							.Where(a => !a.Disposed && Info.BuildingCommonNames.HarvestableTrees.Contains(a.Info.Name.ToLower()));
-
-
-
-					var perfectposition = CPos.Zero;
-					if (closeTrees.Any())
-					{
-						int middleX = 0;
-						int middleY = 0;
-						foreach (var tree in closeTrees)
-						{
-							middleX += tree.Location.X;
-							middleY += tree.Location.X;
-						}
-						perfectposition = new CPos(middleX / closeTrees.Count(), middleY / closeTrees.Count());
-
-					}
-
-					return findPos(baseCenter, perfectposition != CPos.Zero ? perfectposition : baseCenter, Info.OuterRadiusEnd, Info.MaxBaseRadius);
 				case BuildingType.Undead:
+
 					return findPos(baseCenter, baseCenter, Info.MinBaseRadius, 50);
 			}
 

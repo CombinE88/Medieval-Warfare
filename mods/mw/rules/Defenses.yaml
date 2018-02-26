@@ -78,6 +78,9 @@ GTWNEW:
 		Range: 0c512, 3c0
 	Targetable@CombatRole:
 		TargetTypes: Defenses
+	AutoTargetPriority@Counter1:
+		ValidTargets: Light, Heavy, LightCavalry, Support, Ranged
+		Priority: 4
 		
 WTW:
 	Inherits: ^MWDefense
@@ -252,6 +255,9 @@ TRIBU:
 		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4 
 	Targetable@CombatRole:
 		TargetTypes: Defenses
+	AutoTargetPriority@Counter1:
+		ValidTargets: LightCavalry, RegularCavalry, HeavyCavalry, Support
+		Priority: 4
 		
 BATO:
 	Inherits: ^MWDefense
@@ -322,6 +328,9 @@ BATO:
 		Type: AGCircle
 		Range: 8c0
 		Color: FFFF0080
+	AutoTargetPriority@Counter1:
+		ValidTargets: LightCavalry, RegularCavalry, HeavyCavalry, Support
+		Priority: 4
 		
 GUNNEW:
 	Inherits: ^MWDefense
@@ -371,6 +380,9 @@ GUNNEW:
 		Range: 0c512, 3c0
 	Targetable@CombatRole:
 		TargetTypes: Defenses
+	AutoTargetPriority@Counter1:
+		ValidTargets: LightCavalry, RegularCavalry, HeavyCavalry, Support
+		Priority: 4
 		
 CSTLWLL:
 	Inherits: ^Wall

@@ -37,6 +37,8 @@
 	Targetable:
 		TargetTypes: Ground, C4, Structure, Pentagram
 	-Sellable:
+	UndeadBuilder:
+		Selfbuilds: true
 
 ^Skeleton:  
 	Inherits: ^MedievalInfantry
@@ -191,9 +193,9 @@
 	RevealsShroud:
 		Range: 4c0
 	Selectable:
-		Bounds: 60,60,0,0
+		Bounds: 96,56,0,0
 	SelectionDecorations:
-		VisualBounds: 60,60,0,0
+		VisualBounds: 96,56,0,0
 	UndeadBuilder:
 		SpawnOffset: 1,1
 		SummoningTime: 100
@@ -262,9 +264,9 @@
 	RevealsShroud:
 		Range: 4c0
 	Selectable:
-		Bounds: 40,40,0,0
+		Bounds: 72,36,0,0
 	SelectionDecorations:
-		VisualBounds: 40,40,0,0
+		VisualBounds: 72,36,0,0
 	UndeadBuilder:
 		SpawnOffset: 1,1
 		SummoningTime: 100
@@ -333,9 +335,9 @@
 	RevealsShroud:
 		Range: 4c0
 	Selectable:
-		Bounds: 80,80,0,0
+		Bounds: 120,72,0,0
 	SelectionDecorations:
-		VisualBounds: 80,80,0,0
+		VisualBounds: 120,72,0,0
 	UndeadBuilder:
 		SpawnOffset: 1,1
 		SummoningTime: 100
@@ -851,7 +853,7 @@ OBELISK.penta:
 	UndeadBuilder:
 		SpawnActor: obelisk
 		SpawnOffset: 1,1
-		SummoningTime: 55
+		SummoningTime: 75
 		Cost: 1000
 		
 GARG.penta:
@@ -878,7 +880,7 @@ GARG.penta:
 	UndeadBuilder:
 		SpawnActor: garg
 		SpawnOffset: 1,1
-		SummoningTime: 35
+		SummoningTime: 55
 		Cost: 500
 		
 	   
@@ -900,7 +902,7 @@ SPPOOL.penta:
 	UndeadBuilder:
 		SpawnActor: sppool
 		SpawnOffset: 1,1
-		SummoningTime: 25 #100
+		SummoningTime: 45 #100
 		Cost: 300
 	Buildable:
 		IconPalette: raicon
@@ -945,7 +947,7 @@ CRYPT.penta:
 	UndeadBuilder:
 		SpawnActor: crypt
 		SpawnOffset: 1,1
-		SummoningTime: 55 #150
+		SummoningTime: 75 #150
 		Cost: 850
 		
 MAUSO.penta:
@@ -972,7 +974,7 @@ MAUSO.penta:
 	UndeadBuilder:
 		SpawnActor: mauso
 		SpawnOffset: 1,1
-		SummoningTime: 110 #200
+		SummoningTime: 135 #200
 		Cost: 1500
 		
 LIBRA.penta:
@@ -999,7 +1001,7 @@ LIBRA.penta:
 	UndeadBuilder:
 		SpawnActor: LIBRA
 		SpawnOffset: 1,1
-		SummoningTime: 60 # 250
+		SummoningTime: 75 # 250
 		Cost: 1000
 		
 TOMB.penta:
@@ -1026,7 +1028,7 @@ TOMB.penta:
 	UndeadBuilder:
 		SpawnActor: TOMB
 		SpawnOffset: 1,1
-		SummoningTime: 110 # 300
+		SummoningTime: 135 # 300
 		Cost: 1700
 		
 HELLGATE.penta:
@@ -1046,7 +1048,7 @@ HELLGATE.penta:
 	UndeadBuilder:
 		SpawnActor: hellgate
 		SpawnOffset: 1,1
-		SummoningTime: 260 # 300
+		SummoningTime: 155 # 300
 		Cost: 2000
         
 GRAFENCE:
@@ -1192,7 +1194,7 @@ CRYPT:
 	ProvidesPrerequisite@buildingname:
 	CritterSpawner:
 		Actors: gstone1, gstone2, gstone3
-		AliveMax: 3
+		AliveMax: 2
 		TicksMin: 250
 		TicksMax: 500
 		RadiusMin: 2
@@ -1362,9 +1364,9 @@ TOMB:
 	RevealsShroud:
 		Range: 4c0
 	Selectable:
-		Bounds: 72,48
+		Bounds: 72,50,0,-5
 	SelectionDecorations:
-		VisualBounds: 72,64,0,-16
+		VisualBounds: 72,50,0,-5
 	WithBuildingBib:
 	WithMakeAnimation:
 	ShakeOnCreate:
@@ -1766,7 +1768,7 @@ PREYCOLYTE:
 	AcolytePrey: 
 		TargetActors: split3, split4, split4b, split2, splitblue, split5, splitdead, split7, split8
 		PreyLoopSequence: prey
-		leechinterval: 40
+		leechinterval: 50
 		SelfEnabledCondition: whisper
 		Voice: Harvest
 		ResourceTypesPreres:

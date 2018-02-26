@@ -54,7 +54,7 @@ tc04:
 		TilesetOverrides:
 			JUNGLE: TEMPERAT			INTERIOR: TEMPERAT
 	idle: maple4
-		Length: *
+#		Length: *
 		Tick: 120
 		Offset: 4,-5
 	damaged-idle:
@@ -78,7 +78,7 @@ tc05:
 		TilesetOverrides:
 			JUNGLE: TEMPERAT			INTERIOR: TEMPERAT
 	idle: maple2
-		Length: *
+#		Length: *
 		Tick: 120
 		Offset: 3,7 
 	damaged-idle:
@@ -121,7 +121,7 @@ tc02:
 		TilesetOverrides:
 			JUNGLE: TEMPERAT			INTERIOR: TEMPERAT
 	idle: maple3
-		Length: *
+#		Length: *
 		Tick: 120
 		Offset: 2,7 
 
@@ -143,7 +143,7 @@ tc01:
 		TilesetOverrides:
 			JUNGLE: TEMPERAT			INTERIOR: TEMPERAT
 	idle: maple1
-		Length: *
+#		Length: *
 		Tick:120
 		Offset: 4,2 
 
@@ -165,7 +165,7 @@ t18:
 		TilesetOverrides:
 			INTERIOR: TEMPERAT
 	idle: destree1.des
-		Length: *
+#		Length: *
 		Tick: 120
 		Offset: -4,7 
 		
@@ -175,7 +175,7 @@ t18a:
 		TilesetOverrides:
 			INTERIOR: TEMPERAT
 	idle: destree2.des
-		Length: *
+#		Length: *
 		Tick: 120
 		Offset: 0,-3
 		
@@ -185,7 +185,7 @@ t18b:
 		TilesetOverrides:
 			INTERIOR: TEMPERAT
 	idle: destree3.des
-		Length: *
+#		Length: *
 		Tick: 120
 		Offset: -3,-7
 		
@@ -195,7 +195,7 @@ t18c:
 		TilesetOverrides:
 			INTERIOR: TEMPERAT
 	idle: destree4.des
-		Length: *
+#		Length: *
 		Tick: 120
 		Offset: 4,0 
 
@@ -218,7 +218,7 @@ t17a:
 		TilesetOverrides:
 			JUNGLE: TEMPERAT			INTERIOR: TEMPERAT
 	idle: tree9
-		Length: *
+#		Length: *
 		Tick:120
 		Offset: -3,-7 
 
@@ -228,7 +228,7 @@ t17:
 		TilesetOverrides:
 			JUNGLE: TEMPERAT			INTERIOR: TEMPERAT
 	idle: tree8
-		Length: *
+#		Length: *
 		Tick:120
 		Offset: 2,2 
 
@@ -250,7 +250,7 @@ t16:
 		TilesetOverrides:
 			JUNGLE: TEMPERAT			INTERIOR: TEMPERAT
 	idle: tree7
-		Length: *
+#		Length: *
 		Tick:120
 		Offset: 2,-2 
 
@@ -272,7 +272,7 @@ t15:
 		TilesetOverrides:
 			JUNGLE: TEMPERAT			INTERIOR: TEMPERAT
 	idle: tree6
-		Length: *
+#		Length: *
 		Tick:120
 		Offset: -2,2 
 
@@ -294,7 +294,7 @@ t14:
 		TilesetOverrides:
 			JUNGLE: TEMPERAT			INTERIOR: TEMPERAT
 	idle: tree5
-		Length: *
+#		Length: *
 		Tick:120
 		Offset: -4,0 
 
@@ -316,7 +316,7 @@ t13:
 		TilesetOverrides:
 			JUNGLE: TEMPERAT			INTERIOR: TEMPERAT
 	idle: tree4
-		Length: *
+#		Length: *
 		Tick:120
 		Offset: -4,1		
 
@@ -338,7 +338,7 @@ t12:
 		TilesetOverrides:
 			JUNGLE: TEMPERAT			INTERIOR: TEMPERAT
 	idle: tree3
-		Length: *
+#		Length: *
 		Tick:120
 		Offset: 3,-2 
 
@@ -360,7 +360,7 @@ t11:
 		TilesetOverrides:
 			JUNGLE: TEMPERAT			INTERIOR: TEMPERAT
 	idle: tree2
-		Length: *
+#		Length: *
 		Tick:120
 		Offset: -2,-5
 
@@ -382,7 +382,7 @@ t10:
 		TilesetOverrides:
 			JUNGLE: TEMPERAT			INTERIOR: TEMPERAT
 	idle: tree1
-		Length: *
+#		Length: *
 		Tick:120
 		Offset: 4,2 
 
@@ -421,7 +421,7 @@ t08:
 	Defaults:
 		UseTilesetExtension: true
 	idle: tree10
-		Length: *
+#		Length: *
 		Tick:120
 		Offset: -2,2
 
@@ -443,7 +443,7 @@ t07:
 		TilesetOverrides:
 			JUNGLE: TEMPERAT			INTERIOR: TEMPERAT
 	idle: tree11
-		Length: *
+#		Length: *
 		Tick:120
 		Offset: -5,4 
 
@@ -465,7 +465,7 @@ t06b:
 		TilesetOverrides:
 			JUNGLE: TEMPERAT			INTERIOR: TEMPERAT
 	idle: tanne7
-		Length: *
+#		Length: *
 		Tick:120
 		Offset: 5,-9		
 t06a:
@@ -474,7 +474,7 @@ t06a:
 		TilesetOverrides:
 			JUNGLE: TEMPERAT			INTERIOR: TEMPERAT
 	idle: tanne6
-		Length: *
+#		Length: *
 		Tick:120
 		Offset: 0,-8 
 
@@ -484,7 +484,7 @@ t06:
 		TilesetOverrides:
 			JUNGLE: TEMPERAT			INTERIOR: TEMPERAT
 	idle: tanne5
-		Length: *
+#		Length: *
 		Tick:120
 		Offset: 3,5 
 
@@ -506,7 +506,7 @@ t05:
 		TilesetOverrides:
 			JUNGLE: TEMPERAT			INTERIOR: TEMPERAT
 	idle: tanne4
-		Length: *
+#		Length: *
 		Tick:120
 		Offset: -2,-5 
 
@@ -547,7 +547,7 @@ t03:
 		TilesetOverrides:
 			JUNGLE: TEMPERAT			INTERIOR: TEMPERAT
 	idle: tanne3
-		Length: *
+#		Length: *
 		Tick:120
 		Offset: 4,0 
 
@@ -569,7 +569,7 @@ t02:
 		TilesetOverrides:
 			JUNGLE: TEMPERAT			INTERIOR: TEMPERAT
 	idle: tanne2
-		Length: *
+#		Length: *
 		Tick:120
 		Offset: -4,-6
 
@@ -591,7 +591,7 @@ t01:
 		TilesetOverrides:
 			JUNGLE: TEMPERAT			INTERIOR: TEMPERAT
 	idle: tanne1
-		Length: *
+#		Length: *
 		Tick:120
 		Offset: 0,4 
 
@@ -929,12 +929,12 @@ v19.husk:
 	idle: v19
 		Start: 28
 	fire-start: flmspt
-		Length: *
+#		Length: *
 		Offset: 7,-15
 		ZOffset: 1
 	fire-loop: flmspt
 		Start: 50
-		Length: *
+#		Length: *
 		Offset: 7,-15
 		ZOffset: 1
 

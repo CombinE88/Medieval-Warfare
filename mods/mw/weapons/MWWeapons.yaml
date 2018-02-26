@@ -98,7 +98,7 @@ OrniSpearThrow:
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
 		Spread: 141
-		Damage: 3000
+		Damage: 2900
 		ValidTargets: Air, Ground
 		Versus:
 			Leather: 25
@@ -509,7 +509,7 @@ PikeCavalry:
 		Speed: 1c382
 	Warhead@1Dam: SpreadDamage
 		Spread: 75
-		Damage: 2050
+		Damage: 3050
 		ValidTargets: Ground, Trees
 		InvalidTargets: Air
 		Versus:
@@ -535,7 +535,7 @@ PikeAxe:
 		Speed: 1c682
 	Warhead@1Dam: SpreadDamage
 		Spread: 452
-		Damage: 2950
+		Damage: 4950
 		ValidTargets: Ground, Trees
 		InvalidTargets: Air
 		ValidStances: Enemy, Neutral
@@ -566,7 +566,7 @@ MammothPike:
 		ValidTargets: Cavalry, Trees, Structure
 		InvalidTargets: Air
 		Spread: 180
-		Damage: 4300
+		Damage: 4500
 		ValidStances: Enemy, Neutral 
 		Versus:
 			Leather: 35
@@ -1611,7 +1611,7 @@ SpearThrow:
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
 		Spread: 141
-		Damage: 1800
+		Damage: 1950
 		ValidTargets: Ground
 		InvalidTargets: Air
 		Versus:
@@ -1988,20 +1988,20 @@ BowNArrowTower:
 		LaunchAngle: 46
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
-		Spread: 25
+		Spread: 256
 		InvalidTargets: Wall, Air
 		ValidTargets: Ground
-		Damage: 1800
+		Damage: 2600
 		Versus:
 			Leather: 100
 			Light: 75
-			Heavy: 55
+			Heavy: 65
 			Concrete: 15
 			Knight: 15
-			LightCavalry: 80
-			MediumCavalry: 35
-			HeavyCavalry: 15
-			HeavyBuilding: 45
+			LightCavalry: 60
+			MediumCavalry: 30
+			HeavyCavalry: 12
+			HeavyBuilding: 35
 			Spectral: 15
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath 
 		
@@ -2310,7 +2310,7 @@ TribuchetBoulder:
 StationBalistaAG:
 	ReloadDelay: 45
 	Range: 8c0
-	MinRange: 2c896
+	MinRange: 1c0
 	Report: Balista01.aud
 	TargetActorCenter: true
 	ValidTargets: Ground
@@ -2323,20 +2323,20 @@ StationBalistaAG:
 		Image: siegearrow
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
-		Spread: 683
+		Spread: 483
 		Damage: 4750
 		ValidTargets: Ground
 		InvalidTargets: Air
 		Versus:
-			None: 50
-			Leather: 50
-			Light: 55
-			Heavy: 65
+			None: 65
+			Leather: 65
+			Light: 75
+			Heavy: 75
 			Concrete: 25
 			Knight: 60
 			LightCavalry: 100
-			MediumCavalry: 100
-			HeavyCavalry: 100
+			MediumCavalry: 125
+			HeavyCavalry: 150
 			HeavyBuilding: 100
 			Spectral: 35
 		DamageTypes: Prone50Percent, TriggerProne, BallistaDeath
@@ -3669,28 +3669,28 @@ BowNArrowHunter:
 	InvalidTargets: Wall, Air
 	ValidTargets: Wildlife
 	Projectile: Missile
-		HorizontalRateOfTurn: 255
-		RangeLimit: 11c0
+		HorizontalRateOfTurn: 455
+		RangeLimit: 12c0
 		Arm: 0
-		Speed: 280
+		Speed: 300
 		LaunchAngle: 46
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
 		Spread: 25
 		InvalidTargets: Wall, Air
 		ValidTargets: Wildlife
-		Damage: 3000
+		Damage: 2500
 		Versus:
 			Leather: 100
-			Light: 75
-			Heavy: 55
-			Concrete: 15
-			Knight: 15
-			LightCavalry: 80
-			MediumCavalry: 35
-			HeavyCavalry: 15
-			HeavyBuilding: 45
-			Spectral: 15
+			Light: 100
+			Heavy: 100
+			Concrete: 100
+			Knight: 100
+			LightCavalry: 100
+			MediumCavalry: 100
+			HeavyCavalry: 100
+			HeavyBuilding: 100
+			Spectral: 100
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
 
 BowNArrowHunterDUMMY:

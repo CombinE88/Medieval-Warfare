@@ -25,9 +25,9 @@ SULNUKE.scaff:
 		Range: 4c0
 	WithBuildingBib:
 	Selectable:
-		Bounds: 48,40,0,9
+		Bounds: 48,40,0,-4
 	SelectionDecorations:
-		VisualBounds: 48,53,0,-4
+		VisualBounds: 48,40,0,-4
 	WithSpriteBody:
 		RequiresCondition: inactive
 	DebugTransformOnCondition@Finsihed:
@@ -96,9 +96,9 @@ SULLODGE.scaff:
 		Range: 4c0
 	WithBuildingBib:
 	Selectable:
-		Bounds: 48,46,0,-9
+		Bounds: 48,52,0,-14
 	SelectionDecorations:
-		VisualBounds: 48,46,0,-9
+		VisualBounds: 48,52,0,-14
 	WithSpriteBody:
 		RequiresCondition: inactive
 	DebugTransformOnCondition@Finsihed:
@@ -169,9 +169,9 @@ SULMILL.scaff:
 		Range: 4c0
 	WithBuildingBib:
 	Selectable:
-		Bounds: 48,70,0,5
+		Bounds: 48,76,0,-2
 	SelectionDecorations:
-		VisualBounds: 48,70,0,5
+		VisualBounds: 48,76,0,-2
 	WithSpriteBody:
 		RequiresCondition: inactive
 	DebugTransformOnCondition@Finsihed:
@@ -234,9 +234,9 @@ SULNUK2.scaff:
 		Range: 4c0
 	WithBuildingBib:
 	Selectable:
-		Bounds:72,48,0,9
+		Bounds:72,60,0,-9
 	SelectionDecorations:
-		VisualBounds: 72,53,0,-4
+		VisualBounds: 72,60,0,-9
 	WithSpriteBody:
 		RequiresCondition: inactive
 	DebugTransformOnCondition@Finsihed:
@@ -301,9 +301,9 @@ SULBARR.scaff:
 		Range: 4c0
 	WithBuildingBib:
 	Selectable:
-		Bounds:72,48,0,9
+		Bounds:72,53,0,0
 	SelectionDecorations:
-		VisualBounds: 72,53,0,-4
+		VisualBounds: 72,53,0,0
 	WithSpriteBody:
 		RequiresCondition: inactive
 	DebugTransformOnCondition@Finsihed:
@@ -369,9 +369,9 @@ SULMYSTIC.scaff:
 		Range: 4c0
 	WithBuildingBib:
 	Selectable:
-		Bounds:72,48,0,9
+		Bounds:72,72,0,-12
 	SelectionDecorations:
-		VisualBounds: 72,53,0,-4
+		VisualBounds: 72,72,0,-12
 	WithSpriteBody:
 		RequiresCondition: inactive
 	DebugTransformOnCondition@Finsihed:
@@ -440,9 +440,9 @@ SULCASTLE.scaff:
 		Range: 4c0
 	WithBuildingBib:
 	Selectable:
-		Bounds: 72,48,0,12
+		Bounds: 72,94,0,-30
 	SelectionDecorations:
-		VisualBounds: 72,68,0,0
+		VisualBounds: 72,94,0,-30
 	WithSpriteBody:
 		RequiresCondition: inactive
 	DebugTransformOnCondition@Finsihed:
@@ -507,9 +507,9 @@ SULFIX.scaff:
 		Range: 4c0
 	WithBuildingBib:
 	Selectable:
-		Bounds: 64,64,0,-10
+		Bounds: 64,64,0,-14
 	SelectionDecorations:
-		VisualBounds: 72,48
+		VisualBounds: 64,64,0,-14
 	WithSpriteBody:
 		RequiresCondition: inactive
 	DebugTransformOnCondition@Finsihed:
@@ -640,9 +640,9 @@ SULARRAY.scaff:
 		Range: 4c0
 	WithBuildingBib:
 	Selectable:
-		Bounds: 72,48
+		Bounds: 72,72,0,-2
 	SelectionDecorations:
-		VisualBounds: 72,64,0,-16
+		VisualBounds: 72,72,0,-2
 	WithSpriteBody:
 		RequiresCondition: inactive
 	DebugTransformOnCondition@Finsihed:
@@ -708,9 +708,9 @@ SULHALL.scaff:
 		Range: 4c0
 	WithBuildingBib:
 	Selectable:
-		Bounds: 72,48
+		Bounds: 72,80,0,-2
 	SelectionDecorations:
-		VisualBounds: 72,64,0,-16
+		VisualBounds: 72,80,0,-2
 	WithSpriteBody:
 		RequiresCondition: inactive
 	DebugTransformOnCondition@Finsihed:
@@ -846,9 +846,9 @@ SULCNSHMBR.scaff:
 		Range: 4c0
 	WithBuildingBib:
 	Selectable:
-		Bounds: 72,48
+		Bounds:72,60,0,-6
 	SelectionDecorations:
-		VisualBounds: 72,64,0,-16
+		VisualBounds: 72,60,0,-6
 	WithSpriteBody:
 		RequiresCondition: inactive
 	DebugTransformOnCondition@Finsihed:
@@ -924,9 +924,9 @@ SULREF.scaff:
 		Range: 4c0
 	WithBuildingBib:
 	Selectable:
-		Bounds: 72,56,0,12
+		Bounds: 73,72,0,0
 	SelectionDecorations:
-		VisualBounds: 72,56,0,12
+		VisualBounds: 73,72,0,0
 	WithSpriteBody:
 		RequiresCondition: inactive
 	DebugTransformOnCondition@Finsihed:

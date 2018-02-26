@@ -6,13 +6,12 @@ Player:
 		BuildingCommonNames:
 			ConstructionYard: factnew, ziggurat1, ziggurat2, ziggurat3
 			
-			Farms: zeroproc.scaff, sulmill.scaff, nodproc.scaff
-			Refineries: sulref.scaff, procnew.scaff
+			Farms: zeroproc.scaff, sulmill.scaff, nodproc.scaff, zeroproc, sulmill, nodproc
+			Refineries: sulref.scaff, procnew.scaff, sulref, procnew
 			Hunter: sullodge.scaff, lodge.scaff
 			DeerStands: split7, split8
-			LumberShacks: ljackb.scaff
 			
-			Houses: xltntuni.scaff, nodnuke, nukenew.scaff, nuk2new.scaff, nodnuk2.scaff, sulnuke.scaff, sulnuk2.scaff, nukxl.scaff
+			Houses: xltntuni.scaff, nodnuke.scaff, nukenew.scaff, nuk2new.scaff, nodnuk2.scaff, sulnuke.scaff, sulnuk2.scaff, nukxl.scaff
 			
 			Barracks: barrnew.scaff,handnew.scaff,sulbarr.scaff
 			Stable: stall.scaff,nodstall.scaff,sulmystic.scaff
@@ -41,11 +40,12 @@ Player:
 			Acolytes: preycolyte
 			Cultists: acolytec
 			Crypts: crypt.penta
-			Sppool: sppool.penta
+			Sppool: sppool.penta, sppool
 			Buildings:
 			Defenses: garg.penta, obelisk.penta
 			Upgrades: seal1, seal2, seal3, seal4, seal5, zigg2upgrade, zigg3upgrade
 			EarlyUpgrades: seal1, seal2, zigg2upgrade
+			Gravestones: gstone1, gstone2, gstone3, coffin, obelisk, garg, blocker1, blocker2, blocker3
 		FarmFields: Crops, Grains, Corn
 		OrePatches: Iron, Gold#
 		AcolyteWorkerRatio: 33
@@ -115,7 +115,7 @@ Player:
 #			obelisk.penta: 4
 #			garg.penta: 4
 			sppool.penta: 2
-			crypt.penta: 10
+#			crypt.penta: 10
 			mauso.penta: 2
 			libra.penta: 1
 			tomb.penta: 2
@@ -138,7 +138,7 @@ Player:
 #			obelisk.penta: 10%
 #			garg.penta: 20%
 			sppool.penta: 100%
-			crypt.penta: 200%
+#			crypt.penta: 200%
 			mauso.penta: 50%
 			libra.penta: 50%
 			tomb.penta: 50%
@@ -532,3 +532,11 @@ Player:
 				TargetMetric: Value
 				CheckRadius: 2c0
 				
+	HackyAI@king:
+	Inherits: HackyAI@baron
+		Type: king
+		Name: King Dardanus    
+	HackyAI@king:
+	Inherits: HackyAI@baron
+		Type: sultan
+		Name: Sultan il-Nuredin       

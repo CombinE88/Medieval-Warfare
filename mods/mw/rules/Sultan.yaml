@@ -392,9 +392,9 @@ SULLODGE:
 	Targetable@Lodge:
 		TargetTypes: HunterLodge
 	Selectable:
-		Bounds: 48,46,0,-9
+		Bounds: 48,52,0,-14
 	SelectionDecorations:
-		VisualBounds: 48,46,0,-9
+		VisualBounds: 48,52,0,-14
 	WithFreeSpawnableActor@Hunter:
 		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 		SpawnActor: hunter
@@ -451,9 +451,9 @@ SULHALL:
 	WithBuildingBib:
 	ProvidesPrerequisite@buildingname:
 	Selectable:
-		Bounds: 72,48
+		Bounds: 72,80,0,-2
 	SelectionDecorations:
-		VisualBounds: 72,64,0,-16
+		VisualBounds: 72,80,0,-2
 	ThrowsShrapnel@LARGE:
 		Weapons: LargeStone1, LargeStone1, LargeStone1, LargeStone1
 		Pieces: 1, 2
@@ -531,51 +531,15 @@ SULARRAY:
 	WithBuildingBib:
 	ProvidesPrerequisite@buildingname:
 	Selectable:
-		Bounds: 72,48
+		Bounds: 72,72,0,-2
 	SelectionDecorations:
-		VisualBounds: 72,64,0,-16
+		VisualBounds: 72,72,0,-2
 	ThrowsShrapnel@LARGE:
 		Weapons: LargeWood1, LargeWood1, LargeStone1, LargeStone1
 		Pieces: 1, 2
 		Range: 1c0, 5c0
 	Targetable@Tavern:
 		TargetTypes: Material
-	WithFreeSpawnableActor@1:
-		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
-		SpawnActor: transporter
-		Offset: 384,298, 0
-		MoveOffset: 1,2
-		Lasso: 3c0
-		FindRadius: 100
-		Sticky: true
-		ReturnOnDeath: true
-	WithFreeSpawnableActor@2:
-		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
-		SpawnActor: transporter
-		Offset: 384,298, 0
-		MoveOffset: 1,2
-		FindRadius: 100
-		Lasso: 3c0
-		Sticky: true
-		ReturnOnDeath: true
-	WithFreeSpawnableActor@3:
-		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
-		SpawnActor: transporter
-		Offset: 384,298, 0
-		MoveOffset: 1,2
-		Sticky: true
-		FindRadius: 100
-		Lasso: 3c0
-		ReturnOnDeath: true
-	WithFreeSpawnableActor@4:
-		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
-		SpawnActor: engeneer
-		Offset: 384,298, 0
-		MoveOffset: 1,2
-		Sticky: true
-		FindRadius: 100
-		Lasso: 3c0
-		ReturnOnDeath: true
 	BaseProvider:
 		Cooldown: 25
 		Range: 8c0
@@ -609,9 +573,9 @@ SULNUK2:
 		Range: 4c0
 	WithBuildingBib:
 	Selectable:
-		Bounds:72,48,0,9
+		Bounds:72,60,0,-9
 	SelectionDecorations:
-		VisualBounds: 72,53,0,-4
+		VisualBounds: 72,60,0,-9
 	SpawnActorOnDeath@Farmer1:
 		Actor: e1new
 		Probability: 33
@@ -678,9 +642,9 @@ SULNUKE:
 		Range: 4c0
 	WithBuildingBib:
 	Selectable:
-		Bounds: 48,40,0,9
+		Bounds: 48,40,0,-4
 	SelectionDecorations:
-		VisualBounds: 48,53,0,-4
+		VisualBounds: 48,40,0,-4
 	SpawnActorOnDeath@Farmer1:
 		Actor: e1new
 		Probability: 33
@@ -753,9 +717,9 @@ SULBARR:
 	ProductionBar:
 	ProvidesPrerequisite@buildingname:
 	Selectable:
-		Bounds:72,48,0,9
+		Bounds:72,53,0,0
 	SelectionDecorations:
-		VisualBounds: 72,53,0,-4
+		VisualBounds: 72,53,0,0
 	ThrowsShrapnel@LARGE:
 		Weapons: SDebrWeapon1, SDebrWeapon2, SDebrWeapon3
 		Pieces: 1, 2
@@ -810,9 +774,9 @@ SULMYSTIC:
 	ProductionBar:
 	ProvidesPrerequisite@buildingname:
 	Selectable:
-		Bounds:72,48,0,9
+		Bounds:72,72,0,-12
 	SelectionDecorations:
-		VisualBounds: 72,53,0,-4
+		VisualBounds: 72,72,0,-12
 	ThrowsShrapnel@LARGE:
 		Weapons: SDebrWeapon1, SDebrWeapon2, SDebrWeapon3
 		Pieces: 1, 2
@@ -852,9 +816,9 @@ SULCASTLE:
 		Range: 5c0
 	WithBuildingBib:
 	Selectable:
-		Bounds: 72,48,0,12
+		Bounds: 72,94,0,-30
 	SelectionDecorations:
-		VisualBounds: 72,68,0,0
+		VisualBounds: 72,94,0,-30
 	ThrowsShrapnel@LARGE:
 		Weapons: LargeWood1, LargeWood1, LargeStone1, LargeStone1
 		Pieces: 1, 2
@@ -1086,9 +1050,9 @@ SULMILL:
 		Value: 200
 	ProvidesPrerequisite@buildingname:
 	Selectable:
-		Bounds: 48,70,0,5
+		Bounds: 48,76,0,-2
 	SelectionDecorations:
-		VisualBounds: 48,70,0,5
+		VisualBounds: 48,76,0,-2
 	ThrowsShrapnel@LARGE:
 		Weapons: DebrUtility1, DebrUtility2, DebrUtility3
 		Pieces: 1, 2
@@ -1154,9 +1118,9 @@ SULFIX:
 		Dimensions: 3,3
 		LocalCenterOffset: 0,-512,0
 	Selectable:
-		Bounds: 64,64,0,-10
+		Bounds: 64,64,0,-14
 	SelectionDecorations:
-		VisualBounds: 72,48
+		VisualBounds: 64,64,0,-14
 	Health:
 		HP: 70000
 	RevealsShroud:
@@ -1267,9 +1231,9 @@ SULCNSHMBR:
 		Range: 4c0
 	WithBuildingBib:
 	Selectable:
-		Bounds:72,48,0,9
+		Bounds:72,60,0,-6
 	SelectionDecorations:
-		VisualBounds: 72,53,0,-4
+		VisualBounds: 72,60,0,-6
 	ThrowsShrapnel@LARGE:
 		Weapons: DebrUtility1, DebrUtility2, DebrUtility3
 		Pieces: 2, 3
@@ -1314,7 +1278,9 @@ SULREF:
 		PipCount: 10
 		Capacity: 2000
 	Selectable:
-		Bounds: 72,56,0,12
+		Bounds: 73,72,0,0
+	SelectionDecorations:
+		VisualBounds: 73,72,0,0
 	CustomSellValue:
 		Value: 500
 	FreeActor@1:
@@ -1325,8 +1291,6 @@ SULREF:
 		Prerequisite: proc
 	ProvidesPrerequisite@anyref:
 		Prerequisite: anyrefinery
-	SelectionDecorations:
-		VisualBounds: 73,72
 	ProvidesPrerequisite@buildingname:
 	ThrowsShrapnel@LARGE:
 		Weapons: LargeWood1, LargeStone1, DebrUtility1, DebrUtility2, DebrUtility3
@@ -1957,7 +1921,6 @@ SULB0:
 		Type: HeavyCavalry
 	Selectable:
 		Bounds: 26,26,0,-13
-		DecorationBounds: 26,26,0,-13
 	SelectionDecorations:
 		VisualBounds: 26,26,0,-13
 	Targetable:
@@ -2075,7 +2038,6 @@ SULB1:
 		Type: LightCavalry
 	Selectable:
 		Bounds: 35,35,0,-6
-		DecorationBounds: 35,35,0,-6
 	Targetable:
 		TargetTypes: Ground, Siege
 	SpawnActorOnDeath:
@@ -2161,7 +2123,6 @@ SULB2:
 		Type: MediumCavalry
 	Selectable:
 		Bounds: 35,35,0,-6
-		DecorationBounds:35,35,0,-6
 	Targetable:
 		TargetTypes: Ground, Siege
 	SpawnActorOnDeath:
@@ -2422,8 +2383,9 @@ SULB3:
 	WithMoveAnimation: 
 		MoveSequence: move
 	SelectionDecorations:
-		VisualBounds: 48,48
-		DecorationBounds: 48,48
+		VisualBounds: 40,40,0,0
+	Selectable:
+		Bounds:40,40,0,0
 	SpawnActorOnDeath@1:
 		Actor: SULB3.Husk
 	PersonValued:
@@ -2486,7 +2448,6 @@ SULTURNXL:
 	WithPermanentExplosion:
 		Weapon: TornadoExplosion
 		Delay: 5
-	Selectable:
 	RevealsShroud:
 		Range: 5c0
 		Type: CenterPosition
@@ -2500,7 +2461,6 @@ SULTURNXL:
 		DamageTypes: DefaultDeath
 	Selectable:
 		Bounds: 72,96,0,-48
-		DecorationBounds:72,96,0,-48
 	SelectionDecorations:
 		RenderSelectionBars: false
 		VisualBounds: 72,96,0,-48

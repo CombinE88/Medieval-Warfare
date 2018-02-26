@@ -282,10 +282,9 @@ SIEGE3:
 	Armor:
 		Type: HeavyCavalry
 	Selectable:
-		Bounds: 42,54,0,-8
-		DecorationBounds:42,54,0,-8
+		Bounds: 42,62,0,-12
 	SelectionDecorations:
-		VisualBounds: 42,54,0,-8
+		VisualBounds: 42,62,0,-12
 	Targetable:
 		TargetTypes: Ground, Siege
 	SpawnActorOnDeath:
@@ -416,7 +415,6 @@ SIEGE4:
 		Type: HeavyCavalry
 	Selectable:
 		Bounds: 42,38,0,-8
-		DecorationBounds: 42,38,0,-8
 	SelectionDecorations:
 		VisualBounds: 42,38,0,-8
 	AttackFrontal:
@@ -568,11 +566,10 @@ EHARVXL:
 		SearchFromProcRadius: 25
 		SearchFromOrderRadius: 15
 	Selectable:
-		Bounds: 36,36,0,0
-		DecorationBounds:36,36,0,0
+		Bounds: 30,30,0,-5
 		Priority: 7
 	SelectionDecorations:
-		VisualBounds: 36,36,0,0
+		VisualBounds: 30,30,0,-5
 	PersonValued:
 		ActorCount: 1
 		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
@@ -607,9 +604,8 @@ PLANEWAGEN:
 		Type: MediumCavalry
 	Selectable:
 		Bounds: 35,35,0,-6
-		DecorationBounds: 35,35,0,-6
 	SelectionDecorations:
-		VisualBounds: 36,36
+		VisualBounds: 35,35,0,-6
 	Targetable:
 		TargetTypes: Ground, Siege
 	Voiced:
@@ -647,10 +643,7 @@ SIEGE99:
 		Type: HeavyCavalry
 	Selectable:
 		Bounds: 42,42,0,0
-		DecorationBounds:  42,42,0,0
-		Priority: 5
 	SelectionDecorations:
-		RenderSelectionBars: false
 		VisualBounds: 42,42,0,0
 	Targetable:
 		TargetTypes: Ground, Siege

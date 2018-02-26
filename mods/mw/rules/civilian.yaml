@@ -595,7 +595,7 @@ DEER01:
 		Actor: DEER01.Husk
 		OwnerType: Killer
 		SkipMakeAnimations: False
-        HuntTypes: Wildlife
+		HuntTypes: Wildlife
 		
 DEER01.Husk:
 	Inherits: ^DeadWildlife
@@ -625,7 +625,7 @@ DEER02:
 		Actor: DEER02.Husk
 		OwnerType: Killer
 		SkipMakeAnimations: False
-        HuntTypes: Wildlife
+		HuntTypes: Wildlife
 		
 DEER02.Husk:
 	Inherits: ^DeadWildlife
@@ -639,8 +639,8 @@ DEER02.Husk:
 	WithFacingSpriteBody:
 		StartSequence: die1
 		Sequence: body
-    LootableBody: 
-        LootTypes: DeadWildlife
+	LootableBody: 
+		LootTypes: DeadWildlife
 
 DEER03:
 	Inherits: ^MWWildlife
@@ -655,7 +655,7 @@ DEER03:
 		Actor: DEER03.Husk
 		OwnerType: Killer
 		SkipMakeAnimations: False
-        HuntTypes: Wildlife
+		HuntTypes: Wildlife
 		
 DEER03.Husk:
 	Inherits: ^DeadWildlife
@@ -669,8 +669,8 @@ DEER03.Husk:
 	WithFacingSpriteBody:
 		StartSequence: die1
 		Sequence: body
-    LootableBody: 
-        LootTypes: DeadWildlife
+	LootableBody: 
+		LootTypes: DeadWildlife
 
 DEER03A:
 	Inherits: ^MWWildlife
@@ -685,7 +685,7 @@ DEER03A:
 		Actor: DEER03A.Husk
 		OwnerType: Killer
 		SkipMakeAnimations: False
-        HuntTypes: Wildlife
+		HuntTypes: Wildlife
 		
 DEER03A.Husk:
 	Inherits: ^DeadWildlife
@@ -699,6 +699,6 @@ DEER03A.Husk:
 	WithFacingSpriteBody:
 		StartSequence: die1
 		Sequence: body
-    LootableBody: 
-        LootTypes: DeadWildlife
+	LootableBody: 
+		LootTypes: DeadWildlife
 

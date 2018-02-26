@@ -174,24 +174,20 @@ namespace OpenRA.Mods.MW.Traits
             return null;
         }
 
-        void BouncingActor(Actor self) // set the actor back to its origin when going to far
+        bool DistanceGreaterAs(Actor a, Actor b, WDist dist)
         {
-            if (respawnActor != null && !respawnActor.IsDead && respawnActor.IsInWorld && info.Sticky &&
-            respawnActor.Info.Name == info.SpawnActor && !self.IsDead &&
-            self.IsInWorld)
-            {
-                if ((respawnActor.CenterPosition - self.CenterPosition).LengthSquared >= info.ForceLasso.LengthSquared) // force the movement
-                {
+            return (a.CenterPosition - b.CenterPosition).LengthSquared >= dist.LengthSquared;
+        }
 
-                    respawnActor.CancelActivity();
-                    respawnActor.QueueActivity(respawnActor.TraitOrDefault<IMove>().MoveTo(self.Location + info.MoveOffset, 2));
-                }
-                else if (idlecount <= 0 && (respawnActor.CenterPosition - self.CenterPosition).LengthSquared >= info.Lasso.LengthSquared) // queue the movement for later
-                {
-                    respawnActor.QueueActivity(respawnActor.TraitOrDefault<IMove>().MoveTo(self.Location + info.MoveOffset, 2));
-                }
+        void ForceBouncingActor(Actor self) // set the actor back to its origin when going to far
+        {
+            respawnActor.CancelActivity();
+            respawnActor.QueueActivity(respawnActor.TraitOrDefault<IMove>().MoveTo(self.Location + info.MoveOffset, 2));
+        }
 
-            }
+        void BounceLassoo(Actor self)
+        {
+            respawnActor.QueueActivity(respawnActor.TraitOrDefault<IMove>().MoveTo(self.Location + info.MoveOffset, 2));
         }
 
         void ITick.Tick(Actor self)
@@ -199,21 +195,28 @@ namespace OpenRA.Mods.MW.Traits
             if (IsTraitDisabled)
                 return;
 
-            if (respawnActor != null && !respawnActor.IsDead && respawnActor.IsInWorld && respawnActor.IsIdle && idlecount > -10)
+
+
+            if (respawnActor != null && !respawnActor.IsDead && respawnActor.IsInWorld)
             {
-                idlecount--;
+                if (info.Sticky)
+                {
+                    if (respawnActor.IsIdle && idlecount-- <= 0)
+                    {
+                        if (DistanceGreaterAs(respawnActor, self, info.Lasso))
+                            BounceLassoo(respawnActor);
+                        idlecount = 25;
+                    }
+                    else if (!respawnActor.IsIdle && idlecount != 25)
+                    {
+                        idlecount = 25;
+
+                    }
+                    if (DistanceGreaterAs(respawnActor, self, Info.ForceLasso))
+                        ForceBouncingActor(self);
+                }
             }
-            else if (respawnActor != null && !respawnActor.IsDead && respawnActor.IsInWorld && !respawnActor.IsIdle)
-            {
-                idlecount = 75;
-            }
-
-            BouncingActor(self);
-
-            if (respawnActor == null || !respawnActor.IsInWorld || respawnActor.IsDead)
-                ticker--;
-
-            if (ticker < 1)
+            else if (ticker-- <= 0)
             {
                 SpawnNewActor(self);
             }

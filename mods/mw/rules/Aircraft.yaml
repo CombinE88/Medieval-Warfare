@@ -131,8 +131,6 @@ WARKITE:
 	AutoTarget:
 	WithAttackAnimation:
 		AttackSequence: attack
-	SelectionDecorations:
-		VisualBounds: 48,32
 	Voiced:
 		VoiceSet: VehicleVoice
 	SpawnActorOnDeath@1:
@@ -147,6 +145,10 @@ WARKITE:
 	AutoTargetPriority@Counter1:
 		ValidTargets: Light, Heavy, Ranged, Support, Flying, LightCavalry
 		Priority: 4
+	SelectionDecorations:
+		VisualBounds: 26,26,0,-5
+	Selectable:
+		Bounds:26,26,0,-5
 	  
 DRGNRDR:
 	Inherits: ^Helicopter
@@ -213,7 +215,9 @@ DRGNRDR:
 		RequiresCondition: !valida
 	AutoTarget:
 	SelectionDecorations:
-		VisualBounds: 48,32
+		VisualBounds: 40,40,0,0
+	Selectable:
+		Bounds:40,40,0,0
 	Explodes:
 		Weapon: DragonFlame
 		EmptyWeapon: DragonFlame
@@ -320,6 +324,10 @@ DAVINCI:
 	Armament:
 		Weapon: thopterbomb
 		LocalOffset: 1024,0,-213
+	SelectionDecorations:
+		VisualBounds: 40,36,0,-4
+	Selectable:
+		Bounds:40,36,0,-4
 	AttackHeli:
 		FacingTolerance: 20
 	RenderSprites:
@@ -330,8 +338,6 @@ DAVINCI:
 	AutoTarget:
 		ScanRadius: 5
 		InitialStance: AttackAnything
-	SelectionDecorations:
-		VisualBounds: 36,36
 	Explodes:
 		Weapon: DragonFlame
 		EmptyWeapon: DragonFlame
@@ -401,7 +407,9 @@ WRBLN:
 	WithAttackAnimation:
 		AttackSequence: attack
 	SelectionDecorations:
-		VisualBounds: 48,48,0,-24
+		VisualBounds: 40,52,0,-24
+	Selectable:
+		Bounds:40,52,0,-24
 	Voiced:
 		VoiceSet: BalloonVoice
 	PersonValued:

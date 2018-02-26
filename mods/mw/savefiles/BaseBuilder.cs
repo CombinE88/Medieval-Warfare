@@ -97,7 +97,7 @@ namespace OpenRA.Mods.Common.AI
 			if (--waitTicks > 0)
 				return;
 
-			playerBuildings = world.ActorsHavingTrait<Building>().Where(a => a.Owner == player).ToArray();
+			playerBuildings = world.ActorsHavingTrait<Building>().Where(a => a.Owner == player && !ai.Info.UndeadCommonNames.Gravestones.Contains(a.Info.Name)).ToArray();
 
 			var active = false;
 			foreach (var queue in ai.FindQueues(category))
@@ -147,8 +147,6 @@ namespace OpenRA.Mods.Common.AI
 					type = BuildingType.Regular;
 				else if (ai.Info.BuildingCommonNames.Hunter.Contains(world.Map.Rules.Actors[currentBuilding.Item].Name.ToLower()))
 					type = BuildingType.Hunter;
-				else if (ai.Info.BuildingCommonNames.LumberShacks.Contains(world.Map.Rules.Actors[currentBuilding.Item].Name.ToLower()))
-					type = BuildingType.Lumber;
 				else if (ai.Player.Faction.InternalName == "ded")
 					type = BuildingType.Undead;
 
@@ -226,6 +224,8 @@ namespace OpenRA.Mods.Common.AI
 						HackyAI.BotDebug("AI: {0} decided to build {1}: Priority override (low population) Population: " + population, queue.Actor.Owner, houses.Name);
 						return houses;
 					}
+					if (houses == null && population < ai.Info.MinimumPeasants)
+						return null;
 				}
 
 				// Next is to build up a strong economy
@@ -286,16 +286,10 @@ namespace OpenRA.Mods.Common.AI
 				{
 					var name = frac.Key;
 
-					if (!ai.HasMinimumFarm() && ai.Info.BuildingCommonNames.Defenses.Contains(name))
+					if (!ai.HasAdequateFarm() && (!ai.Info.BuildingCommonNames.Houses.Contains(name) || !ai.Info.BuildingCommonNames.Hunter.Contains(name)) && (!ai.Info.BuildingCommonNames.Hunter.Contains(name) || ai.Player.Faction.InternalName == "nod"))
 						continue;
 
-					if (!ai.HasMinimumFarm() && ai.Info.BuildingCommonNames.Defenses.Contains(name))
-						continue;
-
-					if (!ai.Info.BuildingCommonNames.Houses.Contains(name) && population < ai.Info.Population+5)
-						continue;
-
-					if ((ai.Info.BuildingCommonNames.Houses.Contains(name) && population<40))
+					if ((ai.Info.BuildingCommonNames.Houses.Contains(name) && population > 40))
 						continue;
 
 					// Can we build this structure?
@@ -334,7 +328,10 @@ namespace OpenRA.Mods.Common.AI
 				var pentagrams = ai.CountPenagrams();
 				var builder = ai.AcolyteBuilder.Count();
 
-				if (ai.HasAdequateCrypts() * 3 < playerBuildings.Count() && !(pentagrams * 5 > builder))
+				if (pentagrams > 1)
+					return null;
+
+				if ((ai.HasAdequateCrypts() * 3) < playerBuildings.Count())
 				{
 					var crypt = GetProducibleBuilding(ai.Info.UndeadCommonNames.Crypts, buildableThings);
 					if (crypt != null)
@@ -349,11 +346,14 @@ namespace OpenRA.Mods.Common.AI
 				{
 					var name = frac.Key;
 
-					if ((pentagrams * 5 > builder && !ai.Info.UndeadCommonNames.EarlyUpgrades.Contains(name)) || ai.Info.UndeadCommonNames.Crypts.Contains(name))
-						continue;
+					//if (!ai.Info.UndeadCommonNames.EarlyUpgrades.Contains(name) && ai.Info.BuildingLimits.ContainsKey(name))
+					//	continue;
 
 					// Can we build this structure?
 					if (!buildableThings.Any(b => b.Name == name))
+						continue;
+
+					if (ai.HasAdequateCrypts() * 3 >= playerBuildings.Count() && ai.Info.UndeadCommonNames.Crypts.Contains(name))
 						continue;
 
 					// Do we want to build this structure?
@@ -366,6 +366,8 @@ namespace OpenRA.Mods.Common.AI
 
 					var actor = world.Map.Rules.Actors[name];
 
+					//if (ai.Info.UndeadCommonNames.Crypts.Contains(name) && ai.HasAdequateCrypts() * 3 >= playerBuildings.Count())
+					//	continue;
 
 					// Lets build this
 					HackyAI.BotDebug("{0} decided to build {1}: Desired is {2} ({3} / {4}); current is {5} / {4}",

@@ -491,7 +491,7 @@ ROSS3:
 	Buildable:
 		IconPalette: raicon
 		BuildPaletteOrder: 30
-		Description: Strong mounted Archer.\n  Strong vs Infantry, Aircrafts and Buildings and Spectral Units\n  Has long range, very fast\n  Can detect cloaked units\n  Can attack Aircraft\n\nTrains: 1 Peasant\n\n
+		Description: Strong mounted Archer.\n  Strong vs Infantry, Aircrafts and Buildings and Spectral Units\n  Has long range, very fast\n  Can detect cloaked units\n\nTrains: 1 Peasant\n\n
 		Prerequisites: anycastle
 		Queue:  MVehicle.Nod
 		#BuildDuration: 450
@@ -506,9 +506,9 @@ ROSS3:
 	Armament:
 		Weapon: longbownarrow
 		LocalOffset: 0,0,500
-	Armament@Air:
-		Weapon: longbownarrowair
-		LocalOffset: 0,0,500
+#	Armament@Air:
+#		Weapon: longbownarrowair
+#		LocalOffset: 0,0,500
 	AttackFrontal:
 		FacingTolerance: 10
 	AutoTarget:
