@@ -1781,6 +1781,7 @@ PREYCOLYTE:
 			Wood: NONE
 			Lumber: NONE
 			Corruption: NONE
+			Goods: NONE
 	AcolytePreyBuild: 
 		TargetActors: crypt.penta, sppool.penta, mauso.penta, hellgate.penta, tomb.penta, libra.penta, obelisk.penta, garg.penta
 		PreyLoopSequence: prey

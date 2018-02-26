@@ -7,6 +7,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenRA.Mods.Common", "engine\OpenRA.Mods.Common\OpenRA.Mods.Common.csproj", "{FE6C8CC0-2F07-442A-B29F-17617B3B7FC6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenRA.Mods.MW", "OpenRA.Mods.MW\OpenRA.Mods.MW.csproj", "{6DEEE499-98E5-4977-AAAE-CEAE165F17CF}"
+	ProjectSection(ProjectDependencies) = postProject
+		{0DFB103F-2962-400F-8C6D-E2C28CCBA633} = {0DFB103F-2962-400F-8C6D-E2C28CCBA633}
+		{FE6C8CC0-2F07-442A-B29F-17617B3B7FC6} = {FE6C8CC0-2F07-442A-B29F-17617B3B7FC6}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenRA.Mods.Cnc", "engine\OpenRA.Mods.Cnc\OpenRA.Mods.Cnc.csproj", "{2881135D-4D62-493E-8F83-5EEE92CCC6BE}"
 EndProject

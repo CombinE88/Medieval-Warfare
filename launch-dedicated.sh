@@ -24,7 +24,7 @@ if [ "${INCLUDE_DEFAULT_MODS}" = "True" ]; then
 	MOD_SEARCH_PATHS="${MOD_SEARCH_PATHS},./mods"
 fi
 
-NAME="${Name:-"Medieval Warfare | Playtest"}"
+NAME="${Name:-"Dedicated Server"}"
 LAUNCH_MOD="${Mod:-"${MOD_ID}"}"
 LISTEN_PORT="${ListenPort:-"1234"}"
 EXTERNAL_PORT="${ExternalPort:-"1234"}"

@@ -86,8 +86,8 @@ namespace OpenRA.Traits
 
             if (self.Owner.IsBot)
             {
-                hackyaiinfo = self.Owner.PlayerActor.Info.TraitInfo<HackyAIInfo>();
-                hackyai = self.Owner.PlayerActor.Trait<HackyAI>();
+                hackyaiinfo = self.Owner.PlayerActor.Info.TraitInfos<HackyAIInfo>().Where(a => a.Type == self.Owner.BotType).First();
+                hackyai = self.Owner.PlayerActor.TraitsImplementing<HackyAI>().Where(a => a.Info.Type == self.Owner.BotType).First();
                 undeadaihandler = new UndeadAIHAndler(self.World, hackyaiinfo, hackyai, self.Owner);
                 assignRolesTicks = hackyaiinfo.AssignRolesInterval;
             }
@@ -251,8 +251,8 @@ namespace OpenRA.Traits
 
             if (self.Owner.IsBot)
             {
-                hackyaiinfo = self.Owner.PlayerActor.Info.TraitInfo<HackyAIInfo>();
-                hackyai = self.Owner.PlayerActor.Trait<HackyAI>();
+                hackyaiinfo = self.Owner.PlayerActor.Info.TraitInfos<HackyAIInfo>().Where(a => a.Type == self.Owner.BotType).First();
+                hackyai = self.Owner.PlayerActor.TraitsImplementing<HackyAI>().Where(a => a.Info.Type == self.Owner.BotType).First();
                 undeadaihandler = new UndeadAIHAndler(self.World, hackyaiinfo, hackyai, self.Owner);
             }
 

@@ -43,10 +43,10 @@ Player:
 	GrantConditionOnPrerequisiteManager:
 	ResourceStorageWarning:
 	PlayerExperience:
-	AIHelperInfo:
+	AIHelper:
 		Cash:
-			baron: 1500
-			sultan: 3000
+			baron: 500
+			sultan: 1000
 		Peasants:
 			baron: 1
 			sultan: 2

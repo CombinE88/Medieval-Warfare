@@ -1,8 +1,10 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using OpenRA.Mods.Common.AI;
 using OpenRA.Traits;
 
-namespace OpenRA.Mods.MW.Traits.Player
+namespace OpenRA.Mods.MW.Traits
 {
     public class AIHelperInfo : ITraitInfo
     {
@@ -21,43 +23,33 @@ namespace OpenRA.Mods.MW.Traits.Player
         readonly AIHelperInfo info;
         private int _delay;
         private int _peasantdelay;
-        private bool isBot;
         private PlayerResources pr;
-        private PlayerCivilization pc;
-        private HackyAI hi;
 
         public AIHelper(Actor self, AIHelperInfo info)
         {
             this.info = info;
             _delay = info.CashDelay;
             _peasantdelay = info.PeasantDelay;
-            isBot = false;
-            pr = self.Owner.PlayerActor.Trait<PlayerResources>();
-            pc = self.Owner.PlayerActor.Trait<PlayerCivilization>();
-
-            if (self.Owner.IsBot)
-            {
-                isBot = true;
-            }
+            pr = self.Trait<PlayerResources>();
         }
 
         void ITick.Tick(Actor self)
         {
-            if (!isBot)
+            if (!self.Owner.IsBot)
                 return;
 
-            if (!info.Cash.ContainsKey(hi.Info.Type) && _delay-- <= 0)
+            if (info.Cash.ContainsKey(self.Owner.BotType) && _delay-- <= 0)
             {
-                pr.GiveResources(info.Cash[hi.Info.Type]);
+                pr.GiveResources(info.Cash[self.Owner.BotType]);
                 _delay = info.CashDelay;
             }
-            if (!info.Peasants.ContainsKey(hi.Info.Type) && _peasantdelay-- <= 0)
+            if (self.Owner.Faction.InternalName != "ded" && info.Peasants.ContainsKey(self.Owner.BotType) && _peasantdelay-- <= 0)
             {
-                for (var i = 0; i < info.Peasants[hi.Info.Type]; i++)
+                for (var i = 0; i < info.Peasants[self.Owner.BotType]; i++)
                 {
-                    pc.Spawnapeasant();
+                    self.Trait<PlayerCivilization>().Spawnapeasant();
                 }
-                _delay = info.PeasantDelay;
+                _peasantdelay = info.PeasantDelay;
             }
         }
     }

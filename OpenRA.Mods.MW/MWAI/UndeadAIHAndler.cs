@@ -65,25 +65,6 @@ namespace OpenRA.Mods.MW.MWAI
             return potentialpop;
         }
 
-        public void GiveOrdersToIdleCultists()
-        {
-            // Find idle cultist and give them orders:
-
-            var Cultists = World.ActorsHavingTrait<Mobile>().Where(a => a.Owner == Player && hackyAIInfo.UndeadCommonNames.Cultists.Contains(a.Info.Name)).ToList();
-
-
-            foreach (var cultist in Cultists)
-            {
-                if (!cultist.IsIdle)
-                    continue;
-
-                var CorruptDeerstand = FindNewDeerstand();
-
-                if (CorruptDeerstand != null)
-                    cultist.QueueActivity(new Attack(cultist, Target.FromActor(CorruptDeerstand), true, true, 100));
-            }
-        }
-
         public Actor FindNewDeerstand()
         {
             var DeerStands = World.ActorsHavingTrait<ISeedableResource>().Where(a => hackyAIInfo.UndeadCommonNames.PrayableDeerStands.Contains(a.Info.Name)).ToList();
@@ -121,27 +102,7 @@ namespace OpenRA.Mods.MW.MWAI
 
                 //TODO: Acolytes start building
                 if (preytarget != null)
-                    IdlePreyer.QueueActivity(new PreyBuild(IdlePreyer, preytarget));
-            }
-        }
-
-        public void ManageVamipres()
-        {
-
-            foreach (var vamp in hackyAI.activeUnits)
-            {
-                var transforms = vamp.TraitOrDefault<Transforms>();
-                if (transforms == null)
-                    continue;
-                var aircraft = vamp.TraitOrDefault<Aircraft>();
-                if (aircraft == null)
-                    continue;
-
-                if (!vamp.IsIdle)
-                    continue;
-
-                vamp.QueueActivity(new Transform(vamp, vamp.Info.TraitInfo<TransformsInfo>().IntoActor));
-
+                    hackyAI.QueueOrder(new Order("PreyBuild", IdlePreyer, Target.FromActor(preytarget), false));
             }
         }
 
@@ -226,7 +187,7 @@ namespace OpenRA.Mods.MW.MWAI
 
                     }
                     if (preytarget != null)
-                        IdleFarmer.QueueActivity(new Prey(IdleFarmer, preytarget));
+                        hackyAI.QueueOrder(new Order("Prey", IdleFarmer, Target.FromActor(preytarget), false));
                 }
             }
         }
@@ -343,8 +304,8 @@ namespace OpenRA.Mods.MW.MWAI
                     if (AllowedNumber >= hackyAIInfo.MAxAcolytesOnEmptyPatch && dock.Reserver.Owner == Player)
                     {
                         //BotDebug("AI: acolyte " + dock.Reserver + " released from duty");
-                        dock.Reserver.CancelActivity();
-                        //hackyAI.QueueOrder(new Order("Stop", dock.Reserver, Target.Invalid, false));
+                        //dock.Reserver.CancelActivity();
+                        hackyAI.QueueOrder(new Order("Stop", dock.Reserver, Target.Invalid, false));
                     }
 
                     AllowedNumber++;
