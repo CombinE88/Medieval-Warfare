@@ -67,7 +67,6 @@ namespace OpenRA.Mods.MW.Traits
         private int ticker;
         private Actor respawnActor = null;
         private readonly WithFreeSpawnableActorInfo info;
-        public HashSet<Actor> inuse = new HashSet<Actor>();
         private int idlecount;
 
 
@@ -80,99 +79,13 @@ namespace OpenRA.Mods.MW.Traits
             idlecount = 25;
         }
 
-        public bool FactoriesGet(Actor self, Actor actor)
+        public List<Actor> FindPeasants(Actor self)
         {
-
-            var hashsets = self.World.ActorsHavingTrait<WithActorProduction>()
-                .Where(a =>
-                {
-                    if (a.Owner != self.Owner)
-                        return false;
-                    return true;
-                }).ToHashSet();
-
-            foreach (var n in hashsets)
-            {
-                var FindTraitWithActorProduction = n.TraitsImplementing<WithActorProduction>().FirstOrDefault();
-                var hashcode = FindTraitWithActorProduction.inuse;
-
-                if (hashcode.Contains(actor))
-                {
-                    return true;
-                }
-            }
-
-            return false;
+            var validList = self.World.ActorsHavingTrait<IPositionable>()
+                .Where(a => a.Owner == self.Owner && a.Info.HasTraitInfo<IsPeasantInfo>() && info.TrainingActors.Contains(a.Info.Name) && a.Trait<IsPeasant>().isWorker == false).ToList();
+            return validList;
         }
 
-        public bool FreeSpawnable(Actor self, Actor actor)
-        {
-            var possibles = self.World.ActorsHavingTrait<WithFreeSpawnableActor>()
-                .Where(a =>
-                {
-                    if (a.Owner != self.Owner)
-                        return false;
-                    return true;
-                });
-
-            var hashsets = possibles.ToHashSet();
-
-            foreach (var n in hashsets)
-            {
-
-                var howmany = n.TraitsImplementing<WithFreeSpawnableActor>();
-
-
-                foreach (var b in howmany)
-                {
-                    if (b.inuse.Contains(actor))
-                    {
-                        return true;
-                    }
-                }
-            }
-
-            return false;
-        }
-
-        public Actor PossibleActor(Actor self, HashSet<Actor> AlreadyUsed, HashSet<string> ValidList)
-        {
-            // Find all Actors within the range, and filter thier Type and if they r taken
-            var possibles = self.World.FindActorsInCircle(self.CenterPosition, WDist.FromCells(info.FindRadius))
-                .Where(a =>
-                {
-                    if (a == self)
-                        return false;
-
-                    if (a.Owner != self.Owner)
-                        return false;
-
-                    if (FactoriesGet(self, a))
-                        return false;
-
-                    if (FreeSpawnable(self, a))
-                        return false;
-
-                    if (AlreadyUsed.Contains(a))
-                        return false;
-
-                    if (ValidList != null && ValidList.Count > 0)
-                    {
-                        if (ValidList.Contains(a.Info.Name))
-                            return true;
-                    }
-
-                    return false;
-                });
-
-            // TODO: change to smalles path
-            var closest = possibles.ClosestTo(self);
-
-            if (closest != null)
-                return closest;
-
-            return null;
-        }
 
         bool DistanceGreaterAs(Actor a, Actor b, WDist dist)
         {
@@ -196,32 +109,34 @@ namespace OpenRA.Mods.MW.Traits
                 return;
 
 
-
-            if (respawnActor != null && !respawnActor.IsDead && respawnActor.IsInWorld)
+            if (info.Sticky && idlecount-- <= 0)
             {
-                if (info.Sticky)
+                if (respawnActor != null && !respawnActor.IsDead && respawnActor.IsInWorld)
                 {
-                    if (respawnActor.IsIdle && idlecount-- <= 0)
-                    {
-                        if (DistanceGreaterAs(respawnActor, self, info.Lasso))
-                            BounceLassoo(respawnActor);
-                        idlecount = 25;
-                    }
-                    else if (!respawnActor.IsIdle && idlecount != 25)
-                    {
-                        idlecount = 25;
+                    Sticky(self);
 
-                    }
-                    if (DistanceGreaterAs(respawnActor, self, Info.ForceLasso))
-                        ForceBouncingActor(self);
                 }
+                idlecount = 25;
             }
-            else if (ticker-- <= 0)
+            else if ((respawnActor == null || respawnActor.IsDead || !respawnActor.IsInWorld) && ticker-- <= 0)
             {
                 SpawnNewActor(self);
             }
         }
 
+        void Sticky(Actor self)
+        {
+            if (DistanceGreaterAs(respawnActor, self, Info.ForceLasso))
+            {
+                ForceBouncingActor(self);
+            }
+            else if (respawnActor.IsIdle)
+            {
+                if (DistanceGreaterAs(respawnActor, self, info.Lasso))
+                    BounceLassoo(respawnActor);
+            }
+
+        }
 
         void INotifyActorDisposing.Disposing(Actor self)
         {
@@ -244,44 +159,13 @@ namespace OpenRA.Mods.MW.Traits
             }
 
         }
-
-
-        public void SpawnNewActor(Actor self)
+        public void CreateActorSpawn(Actor self)
         {
-            //basic setup of values
-            var exit = self.Location + info.MoveOffset;
-
-
-            //find produced unit cost values
-            var ValidActors = new HashSet<string>();
-            ;
-
-            var guysFound = new HashSet<Actor>();
-
-            //find enough actors
-
-            Actor actor = null;
-            PersonValuedInfo BuilderInfo = null;
-            if (self.World.Map.Rules.Actors[info.SpawnActor].HasTraitInfo<PersonValuedInfo>())
-                BuilderInfo = self.World.Map.Rules.Actors[info.SpawnActor].TraitInfo<PersonValuedInfo>();
-
-            if (BuilderInfo != null && info.UseConverting)
+            if (!self.IsDead || self.IsInWorld)
             {
-                ValidActors = BuilderInfo.ConvertingActors;
-                actor = PossibleActor(self, guysFound, ValidActors);
-            }
-            else if (info.TrainingActors.Any() && info.UseConverting)
-            {
-                ValidActors = info.TrainingActors;
-                actor = PossibleActor(self, guysFound, ValidActors);
-            }
-            else
-            {
-                if (!self.IsDead || self.IsInWorld)
+                self.World.AddFrameEndTask(w =>
                 {
-                    self.World.AddFrameEndTask(w =>
-                    {
-                        var td = new TypeDictionary
+                    var td = new TypeDictionary
                         {
                             new ParentActorInit(self),
                             new LocationInit(self.Location + info.MoveOffset),
@@ -290,35 +174,59 @@ namespace OpenRA.Mods.MW.Traits
                             new FactionInit(self.Owner.Faction.InternalName),
                             new FacingInit(0)
                         };
-                        respawnActor = w.CreateActor(info.SpawnActor, td);
-                        var moveto = respawnActor.TraitOrDefault<IMove>();
-                        respawnActor.CancelActivity();
-                        respawnActor.QueueActivity(moveto.VisualMove(respawnActor, respawnActor.CenterPosition,
-                            self.World.Map.CenterOfCell(self.Location + info.MoveOffset)));
+                    respawnActor = w.CreateActor(info.SpawnActor, td);
+                    var moveto = respawnActor.TraitOrDefault<IMove>();
+                    respawnActor.CancelActivity();
+                    respawnActor.QueueActivity(moveto.VisualMove(respawnActor, respawnActor.CenterPosition,
+                        self.World.Map.CenterOfCell(self.Location + info.MoveOffset)));
 
-                        if (respawnActor.Info.HasTraitInfo<HarvesterInfo>())
-                        {
-                            respawnActor.QueueActivity(new FindResources(respawnActor));
-                        }
-
-                        if (inuse.Contains(respawnActor))
-                            inuse.Remove(respawnActor);
-                    });
-                    ticker = info.RespawnTime;
-                    return;
-                }
+                    if (respawnActor.Info.HasTraitInfo<HarvesterInfo>())
+                    {
+                        respawnActor.QueueActivity(new FindResources(respawnActor));
+                    }
+                });
             }
-            ticker = info.RespawnTime;
-            if (actor == null)
+        }
+
+
+        public void SpawnNewActor(Actor self)
+        {
+            if (!info.UseConverting)
+            {
+                CreateActorSpawn(self);
+                ticker = info.RespawnTime;
+                return;
+            }
+
+            var owner = self.Owner;
+
+            if (!owner.PlayerActor.Info.HasTraitInfo<PlayerCivilizationInfo>())
+            {
+                throw new System.Exception("PlayerCivilization Trait not found! Player must have PlayerCivilization trait!");
+            }
+
+            if (owner.PlayerActor.Trait<PlayerCivilization>().Peasantpopulationvar < 1)
+            {
+                return;
+            }
+
+            //basic setup of values
+            var exit = self.Location + info.MoveOffset;
+            //find produced unit cost values
+            var ValidActors = FindPeasants(self);
+
+            if (!ValidActors.Any())
             {
                 ticker = 50;
                 return;
             }
+            //find enough actors
+            var actor = ValidActors.ClosestTo(self);
 
             var infiltrate = self.CenterPosition + info.Offset;
             //Actor is possible to move?
             respawnActor = actor;
-            inuse.Add(actor);
+
             var move = actor.TraitOrDefault<IMove>();
 
             if ((!actor.IsInWorld || !actor.IsDead))
@@ -351,31 +259,7 @@ namespace OpenRA.Mods.MW.Traits
                         if (StillValid(actor, self))
                             return;
 
-                        var td = new TypeDictionary
-                        {
-                            new ParentActorInit(self),
-                            new LocationInit(self.Location + info.MoveOffset),
-                            new CenterPositionInit(self.CenterPosition + info.Offset),
-                            new OwnerInit(self.Owner),
-                            new FactionInit(self.Owner.Faction.InternalName),
-                            new FacingInit(0)
-                        };
-
-
-                        self.World.AddFrameEndTask(w =>
-                        {
-                            respawnActor = w.CreateActor(info.SpawnActor, td);
-                            respawnActor.QueueActivity(move.MoveIntoWorld(respawnActor, exit));
-                            respawnActor.QueueActivity(move.MoveTo(exit, 2));
-
-                            if (respawnActor.Info.HasTraitInfo<HarvesterInfo>())
-                            {
-                                respawnActor.QueueActivity(new FindResources(respawnActor));
-                            }
-
-                            if (inuse.Contains(respawnActor))
-                                inuse.Remove(respawnActor);
-                        });
+                        CreateActorSpawn(self);
                     }));
                     //set reached units state +1 and units in movement state -1
                     actor.QueueActivity(new RemoveSelf()); //of he goes
@@ -389,8 +273,6 @@ namespace OpenRA.Mods.MW.Traits
 
             if (actor.IsInWorld && !actor.IsDead && self.IsInWorld && !self.IsDead)
             {
-                if (inuse.Contains(actor))
-                    inuse.Remove(actor);
                 return false;
             }
             return true;
@@ -400,21 +282,12 @@ namespace OpenRA.Mods.MW.Traits
         {
             if (!self.Owner.NonCombatant && self.Owner.WinState != WinState.Lost && self.Owner.PlayerActor.Info.HasTraitInfo<PlayerCivilizationInfo>())
             {
-                if (inuse.Any())
+                if (respawnActor != null && !respawnActor.IsDead && respawnActor.IsInWorld && respawnActor.Info.HasTraitInfo<IsPeasantInfo>())
                 {
-                    foreach (var var in inuse)
-                    {
-                        if (!var.IsDead && var.IsInWorld && var.Info.HasTraitInfo<IsPeasantInfo>())
-                        {
-                            var.Trait<IsPeasant>().SetPeasant();
-                        }
-                    }
+                    respawnActor.Trait<IsPeasant>().SetPeasant();
                 }
             }
         }
     }
-
-
-
 }
 

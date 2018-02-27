@@ -403,6 +403,7 @@ SULLODGE:
 		Lasso: 15
 		ForceLasso: 20
 		FindRadius: 100
+		ReturnOnDeath: true
 	WithRangeCircle:
 		Type: HunterLodge
 		UsePlayerColor: true

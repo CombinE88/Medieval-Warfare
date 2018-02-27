@@ -39,6 +39,8 @@ namespace OpenRA.Mods.MW.Traits
 
         void ITick.Tick(Actor self)
         {
+            if (IsTraitDisabled)
+                return;
 
             if (conditionManager == null)
             {

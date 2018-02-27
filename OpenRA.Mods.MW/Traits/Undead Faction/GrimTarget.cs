@@ -77,6 +77,9 @@ namespace OpenRA.Mods.MW.Traits
 
         void ITick.Tick(Actor self)
         {
+            if (!Reanimated)
+                return;
+
             if (Reanimated && Grim == null)
                 self.Kill(self);
             else if (Reanimated && Grim != null && (Grim.IsDead || !Grim.IsInWorld))

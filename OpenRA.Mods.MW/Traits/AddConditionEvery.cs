@@ -28,14 +28,14 @@ namespace OpenRA.Mods.MW.Traits
 
         public void Tick(Actor self)
         {
-            if (!IsTraitDisabled)
+            if (IsTraitDisabled)
+                return;
+
+            if (--tick < 0)
             {
-                if (--tick < 0)
-                {
-                    conditionManager = self.Trait<ConditionManager>();
-                    conditionManager.GrantCondition(self, Info.AddCondition);
-                    tick = Info.Delay;
-                }
+                conditionManager = self.Trait<ConditionManager>();
+                conditionManager.GrantCondition(self, Info.AddCondition);
+                tick = Info.Delay;
             }
         }
     }

@@ -96,7 +96,6 @@
     <Compile Include="Traits\ReloadAmmoWhenEnabled.cs" />
     <Compile Include="Traits\Render\NewWithDisguisingInfantryBodyInfo.cs" />
     <Compile Include="Traits\Render\WithInfantryBodyDisguisedUpdate.cs" />
-    <Compile Include="Traits\ResourceProvider.cs" />
     <Compile Include="Traits\ResourcePurifier.cs" />
     <Compile Include="Traits\ShakeOnCreate.cs" />
     <Compile Include="Traits\DebugTransformOnCondition.cs" />

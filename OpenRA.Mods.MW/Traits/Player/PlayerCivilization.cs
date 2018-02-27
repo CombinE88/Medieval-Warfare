@@ -86,10 +86,7 @@ namespace OpenRA.Traits
 
             if (self.Owner.IsBot)
             {
-                hackyaiinfo = self.Owner.PlayerActor.Info.TraitInfos<HackyAIInfo>().Where(a => a.Type == self.Owner.BotType).First();
-                hackyai = self.Owner.PlayerActor.TraitsImplementing<HackyAI>().Where(a => a.Info.Type == self.Owner.BotType).First();
-                undeadaihandler = new UndeadAIHAndler(self.World, hackyaiinfo, hackyai, self.Owner);
-                assignRolesTicks = hackyaiinfo.AssignRolesInterval;
+                assignRolesTicks = 25;
             }
         }
 
@@ -248,43 +245,47 @@ namespace OpenRA.Traits
                 }
             }
 
-
-            if (self.Owner.IsBot)
-            {
-                hackyaiinfo = self.Owner.PlayerActor.Info.TraitInfos<HackyAIInfo>().Where(a => a.Type == self.Owner.BotType).First();
-                hackyai = self.Owner.PlayerActor.TraitsImplementing<HackyAI>().Where(a => a.Info.Type == self.Owner.BotType).First();
-                undeadaihandler = new UndeadAIHAndler(self.World, hackyaiinfo, hackyai, self.Owner);
-            }
-
-            if (!self.Owner.IsBot || undeadaihandler == null || hackyai == null || hackyaiinfo == null)
+            if (!self.Owner.IsBot)
             {
                 return;
             }
 
             if (--assignRolesTicks <= 0)
             {
+                hackyaiinfo = self.Owner.PlayerActor.Info.TraitInfos<HackyAIInfo>().Where(a => a.Type == self.Owner.BotType).First();
+                hackyai = self.Owner.PlayerActor.TraitsImplementing<HackyAI>().Where(a => a.Info.Type == self.Owner.BotType).First();
+                undeadaihandler = new UndeadAIHAndler(self.World, hackyaiinfo, hackyai, self.Owner);
+
+                if (undeadaihandler == null || hackyai == null || hackyaiinfo == null)
+                    return;
+
                 assignRolesTicks = hackyaiinfo.AssignRolesInterval;
-
-                hackyai.number_CountPeasants = undeadaihandler.CountPeasants();
-                hackyai.number_CountPossiblePopulation = undeadaihandler.CountPossiblePopulation();
-                hackyai.number_CountPotentialFreeBeds = undeadaihandler.CountPotentialFreeBeds();
-
-                if (self.Owner.Faction.InternalName == "ded")
-                {
-                    undeadaihandler.ManageEmptyAcolytes();
-                    //undeadaihandler.GiveOrdersToIdleCultists();
-                    //undeadaihandler.FindNewDeerstand();
-                    undeadaihandler.ManageBuildrAcolytes();
-                    //undeadaihandler.ManageVamipres();
-                    undeadaihandler.ManageFarmerAcolytes();
-                    undeadaihandler.ManageDeadAcolytes();
-                    undeadaihandler.CheckAllPatchesForProfit();
-                }
-
-
-                hackyai.AcolyteBuilder = undeadaihandler.AcolyteBuilder;
-                hackyai.AcolyteHarvester = undeadaihandler.AcolyteHarvester;
+                DoStuff(self);
             }
+        }
+
+        void DoStuff(Actor self)
+        {
+            hackyai.number_CountPeasants = undeadaihandler.CountPeasants();
+            hackyai.number_CountPossiblePopulation = undeadaihandler.CountPossiblePopulation();
+            hackyai.number_CountPotentialFreeBeds = undeadaihandler.CountPotentialFreeBeds();
+
+            if (self.Owner.Faction.InternalName == "ded")
+            {
+                undeadaihandler.ManageEmptyAcolytes();
+                //undeadaihandler.GiveOrdersToIdleCultists();
+                //undeadaihandler.FindNewDeerstand();
+                undeadaihandler.ManageBuildrAcolytes();
+                //undeadaihandler.ManageVamipres();
+                undeadaihandler.ManageFarmerAcolytes();
+                undeadaihandler.ManageDeadAcolytes();
+                undeadaihandler.CheckAllPatchesForProfit();
+            }
+
+
+            hackyai.AcolyteBuilder = undeadaihandler.AcolyteBuilder;
+            hackyai.AcolyteHarvester = undeadaihandler.AcolyteHarvester;
+
         }
     }
 }

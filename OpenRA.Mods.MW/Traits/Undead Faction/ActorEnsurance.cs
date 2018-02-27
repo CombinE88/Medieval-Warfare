@@ -59,23 +59,21 @@ namespace OpenRA.Mods.MW.Traits
 
         void ITick.Tick(Actor self)
         {
-            Ticker--;
-
-            if (Ticker < 1)
+            if (Ticker-- <= 0)
             {
-                var actors = self.World.ActorMap.ActorsInBox(self.World.Map.ProjectedTopLeft, self.World.Map.ProjectedBottomRight)
-                    .Where(a => a.Info.Name == info.SpawnActor && a.Owner == self.Owner && !a.IsDead && a.IsInWorld);
-
-                if (actors.Count() < info.Maxalive)
-                {
-                    SpawnNewActor(self);
-                }
                 Ticker = info.RespawnTime;
             }
         }
 
         public void SpawnNewActor(Actor self)
         {
+
+            var actors = self.World.ActorMap.ActorsInBox(self.World.Map.ProjectedTopLeft, self.World.Map.ProjectedBottomRight)
+                .Where(a => a.Info.Name == info.SpawnActor && a.Owner == self.Owner && !a.IsDead && a.IsInWorld);
+
+            if (!(actors.Count() < info.Maxalive))
+                return;
+
             if (!self.IsDead || self.IsInWorld)
             {
                 self.World.AddFrameEndTask(w =>

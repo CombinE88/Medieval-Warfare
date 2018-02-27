@@ -19,6 +19,8 @@ namespace OpenRA.Mods.MW.Traits
         [VoiceReference]
         public readonly string Voice = "Action";
 
+        public readonly string Cursor = "preycursor";
+
         public int Buildinterval = 25;
 
         public string SelfEnabledCondition = null;
@@ -56,11 +58,8 @@ namespace OpenRA.Mods.MW.Traits
 
         public IEnumerable<IOrderTargeter> Orders
         {
-            get
-            {
-                yield return new PreyBuildOrderTargeter("PreyBuild", 5,
-              act => info.TargetActors.Contains(act.Info.Name), info.TargetActors);
-            }
+            get { yield return new PreyOrderBuildTargeter(info.Cursor); }
+
         }
 
         public Order IssueOrder(Actor self, IOrderTargeter order, Target target, bool queued)
@@ -103,31 +102,19 @@ namespace OpenRA.Mods.MW.Traits
         }
 
 
-        class PreyBuildOrderTargeter : UnitOrderTargeter
+        class PreyOrderBuildTargeter : UnitOrderTargeter
         {
-            private HashSet<String> Validnames;
-
-            public PreyBuildOrderTargeter(string order, int priority,
-                Func<Actor, bool> able, HashSet<string> ValidActors)
-                : base(order, priority, "preycursor", false, true)
-            {
-                Validnames = ValidActors;
-
-            }
+            public PreyOrderBuildTargeter(string cursor)
+                : base("PreyBuild", 6, cursor, true, false) { }
 
             public override bool CanTargetActor(Actor self, Actor target, TargetModifiers modifiers, ref string cursor)
             {
-
-                if (!self.Owner.IsAlliedWith(target.Owner) || !Validnames.Contains(target.Info.Name))
-                    return false;
-
-                cursor = self.Info.TraitInfo<AcolytePreyInfo>().Cursor;
-                return true;
+                return self.Info.TraitInfo<AcolytePreyBuildInfo>().TargetActors.Contains(target.Info.Name);
             }
 
             public override bool CanTargetFrozenActor(Actor self, FrozenActor target, TargetModifiers modifiers, ref string cursor)
             {
-                return false;
+                return self.Info.TraitInfo<AcolytePreyBuildInfo>().TargetActors.Contains(target.Info.Name);
             }
         }
 

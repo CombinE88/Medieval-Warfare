@@ -54,7 +54,10 @@ namespace OpenRA.Mods.MW.Traits
 
         void ITick.Tick(Actor self)
         {
-            if (!IsTraitDisabled && tickler-- <= 0)
+            if (IsTraitDisabled)
+                return;
+
+            if (tickler-- <= 0)
             {
                 var cells = self.World.Map.FindTilesInCircle(self.Location, info.CollectRange, true)
                     .Where(c =>

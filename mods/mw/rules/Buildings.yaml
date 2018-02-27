@@ -2734,6 +2734,7 @@ LODGE:
 		FindRadius: 100
 		Lasso: 15c0
 		ForceLasso: 20c0
+		ReturnOnDeath: true
 	WithFreeSpawnableActor@Hunter:
 		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 		SpawnActor: mwlumbererowned
