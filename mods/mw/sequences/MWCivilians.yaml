@@ -203,7 +203,7 @@ hunter:
 		Start: 180
 		Length: 11
 		Tick: 80
-	die-crushed: e1rot
+	die-crushed: newe1rot
 		Start: 16
 		Length: 4
 		Tick: 1600
@@ -220,23 +220,23 @@ mwcivll:
 		Start: 312
 		Length: 2
 		Tick: 200
-	stand: mwcivll
+	stand: 
 		Start: 146
 		Facings: 8
-	run: mwcivll
+	run: 
 		Start: 0
 		Length: 8
 		Facings: 8
 		Tick: 100
-	panic-stand: mwcivll
+	panic-stand: 
 		Start: 135
 		Facings: 8
-	panic-run: mwcivll
+	panic-run: 
 		Start: 65
 		Length: 8
 		Facings: 8
 		Tick: 100
-	die1: mwcivll
+	die1: 
 		Start: 156
 		Length: 15
 		Tick: 80
@@ -245,16 +245,16 @@ mwcivll:
 		Length: *
 		Tick: 80
 	# poision
-	die3: mwcivll
+	die3: 
 		Start: 187
 		Length: 15
 		Tick: 80
 	# ballista
-	die4: mwcivll
+	die4: 
 		Start: 203
 		Length: 11
 		Tick: 80
-	die-crushed: e1rot
+	die-crushed: newe1rot
 		Start: 16
 		Length: 4
 		Tick: 1600
@@ -278,23 +278,23 @@ mwciv1:
 		Start: 312
 		Length: 2
 		Tick: 200
-	stand: mwciv1
+	stand: 
 		Start: 146
 		Facings: 8
-	run: mwciv1
+	run: 
 		Start: 0
 		Length: 8
 		Facings: 8
 		Tick: 100
-	panic-stand: mwciv1
+	panic-stand: 
 		Start: 135
 		Facings: 8
-	panic-run: mwciv1
+	panic-run: 
 		Start: 65
 		Length: 8
 		Facings: 8
 		Tick: 100
-	die1: mwciv1
+	die1: 
 		Start: 156
 		Length: 15
 		Tick: 80
@@ -303,16 +303,16 @@ mwciv1:
 		Length: *
 		Tick: 80
 	# poision
-	die3: mwciv1
+	die3: 
 		Start: 187
 		Length: 15
 		Tick: 80
 	# ballista
-	die4: mwciv1
+	die4: 
 		Start: 203
 		Length: 11
 		Tick: 80
-	die-crushed: e1rot
+	die-crushed: newe1rot
 		Start: 16
 		Length: 4
 		Tick: 1600
@@ -365,23 +365,23 @@ mwciv2:
 		Start: 312
 		Length: 2
 		Tick: 200
-	stand: mwciv2
+	stand: 
 		Start: 146
 		Facings: 8
-	run: mwciv2
+	run: 
 		Start: 0
 		Length: 8
 		Facings: 8
 		Tick: 100
-	panic-stand: mwciv2
+	panic-stand: 
 		Start: 135
 		Facings: 8
-	panic-run: mwciv2
+	panic-run: 
 		Start: 65
 		Length: 8
 		Facings: 8
 		Tick: 100
-	die1: mwciv2
+	die1: 
 		Start: 156
 		Length: 15
 		Tick: 80
@@ -390,16 +390,16 @@ mwciv2:
 		Length: *
 		Tick: 80
 	# poision
-	die3: mwciv2
+	die3: 
 		Start: 187
 		Length: 15
 		Tick: 80
 	# ballista
-	die4: mwciv2
+	die4: 
 		Start: 203
 		Length: 11
 		Tick: 80
-	die-crushed: e1rot
+	die-crushed: newe1rot
 		Start: 16
 		Length: 4
 		Tick: 1600
@@ -452,23 +452,23 @@ mwciv3:
 		Start: 312
 		Length: 2
 		Tick: 200
-	stand: mwciv3
+	stand: 
 		Start: 146
 		Facings: 8
-	run: mwciv3
+	run: 
 		Start: 0
 		Length: 8
 		Facings: 8
 		Tick: 100
-	panic-stand: mwciv3
+	panic-stand: 
 		Start: 135
 		Facings: 8
-	panic-run: mwciv3
+	panic-run: 
 		Start: 65
 		Length: 8
 		Facings: 8
 		Tick: 100
-	die1: mwciv3
+	die1: 
 		Start: 156
 		Length: 15
 		Tick: 80
@@ -477,16 +477,16 @@ mwciv3:
 		Length: *
 		Tick: 80
 	# poision
-	die3: mwciv3
+	die3: 
 		Start: 187
 		Length: 15
 		Tick: 80
 	# ballista
-	die4: mwciv3
+	die4: 
 		Start: 203
 		Length: 11
 		Tick: 80
-	die-crushed: e1rot
+	die-crushed: newe1rot
 		Start: 16
 		Length: 4
 		Tick: 1600
@@ -540,23 +540,23 @@ mwciv4:
 		Start: 312
 		Length: 2
 		Tick: 200
-	stand: mwciv4
+	stand: 
 		Start: 146
 		Facings: 8
-	run: mwciv4
+	run: 
 		Start: 0
 		Length: 8
 		Facings: 8
 		Tick: 100
-	panic-stand: mwciv4
+	panic-stand: 
 		Start: 135
 		Facings: 8
-	panic-run: mwciv4
+	panic-run: 
 		Start: 65
 		Length: 8
 		Facings: 8
 		Tick: 100
-	die1: mwciv4
+	die1: 
 		Start: 156
 		Length: 15
 		Tick: 80
@@ -565,16 +565,16 @@ mwciv4:
 		Length: *
 		Tick: 80
 	# poision
-	die3: mwciv4
+	die3: 
 		Start: 187
 		Length: 15
 		Tick: 80
 	# ballista
-	die4: mwciv4
+	die4: 
 		Start: 203
 		Length: 11
 		Tick: 80
-	die-crushed: e1rot
+	die-crushed: newe1rot
 		Start: 16
 		Length: 4
 		Tick: 1600
@@ -627,23 +627,23 @@ mwciv5:
 		Start: 312
 		Length: 2
 		Tick: 200
-	stand: mwciv5
+	stand: 
 		Start: 146
 		Facings: 8
-	run: mwciv5
+	run: 
 		Start: 0
 		Length: 8
 		Facings: 8
 		Tick: 100
-	panic-stand: mwciv5
+	panic-stand: 
 		Start: 135
 		Facings: 8
-	panic-run: mwciv5
+	panic-run: 
 		Start: 65
 		Length: 8
 		Facings: 8
 		Tick: 100
-	die1: mwciv5
+	die1: 
 		Start: 156
 		Length: 15
 		Tick: 80
@@ -652,16 +652,16 @@ mwciv5:
 		Length: *
 		Tick: 80
 	# poision
-	die3: mwciv5
+	die3: 
 		Start: 187
 		Length: 15
 		Tick: 80
 	# ballista
-	die4: mwciv5
+	die4: 
 		Start: 203
 		Length: 11
 		Tick: 80
-	die-crushed: e1rot
+	die-crushed: newe1rot
 		Start: 16
 		Length: 4
 		Tick: 1600
@@ -714,23 +714,23 @@ mwciv6:
 		Start: 312
 		Length: 2
 		Tick: 200
-	stand: mwciv6
+	stand: 
 		Start: 146
 		Facings: 8
-	run: mwciv6
+	run: 
 		Start: 0
 		Length: 8
 		Facings: 8
 		Tick: 100
-	panic-stand: mwciv6
+	panic-stand: 
 		Start: 135
 		Facings: 8
-	panic-run: mwciv6
+	panic-run: 
 		Start: 65
 		Length: 8
 		Facings: 8
 		Tick: 100
-	die1: mwciv6
+	die1: 
 		Start: 156
 		Length: 15
 		Tick: 80
@@ -739,16 +739,16 @@ mwciv6:
 		Length: *
 		Tick: 80
 	# poision
-	die3: mwciv6
+	die3: 
 		Start: 187
 		Length: 15
 		Tick: 80
 	# ballista
-	die4: mwciv6
+	die4: 
 		Start: 203
 		Length: 11
 		Tick: 80
-	die-crushed: e1rot
+	die-crushed: newe1rot
 		Start: 16
 		Length: 4
 		Tick: 1600
@@ -835,7 +835,7 @@ nobl1:
 		Start: 203
 		Length: 11
 		Tick: 80
-	die-crushed: e1rot
+	die-crushed: newe1rot
 		Start: 16
 		Length: 4
 		Tick: 1600
@@ -920,7 +920,7 @@ nobl2:
 		Start: 203
 		Length: 11
 		Tick: 80
-	die-crushed: e1rot
+	die-crushed: newe1rot
 		Start: 16
 		Length: 4
 		Tick: 1600
@@ -1005,7 +1005,7 @@ nobl3:
 		Start: 203
 		Length: 11
 		Tick: 80
-	die-crushed: e1rot
+	die-crushed: newe1rot
 		Start: 16
 		Length: 4
 		Tick: 1600
@@ -1090,7 +1090,7 @@ nobl4:
 		Start: 203
 		Length: 11
 		Tick: 80
-	die-crushed: e1rot
+	die-crushed: newe1rot
 		Start: 16
 		Length: 4
 		Tick: 1600
@@ -1141,23 +1141,23 @@ mwciv7:
 		Start: 312
 		Length: 2
 		Tick: 200
-	stand: mwciv7
+	stand: 
 		Start: 146
 		Facings: 8
-	run: mwciv7
+	run: 
 		Start: 0
 		Length: 8
 		Facings: 8
 		Tick: 100
-	panic-stand: mwciv7
+	panic-stand: 
 		Start: 135
 		Facings: 8
-	panic-run: mwciv7
+	panic-run: 
 		Start: 65
 		Length: 8
 		Facings: 8
 		Tick: 100
-	die1: mwciv7
+	die1: 
 		Start: 156
 		Length: 15
 		Tick: 80
@@ -1166,16 +1166,16 @@ mwciv7:
 		Length: *
 		Tick: 80
 	# poision
-	die3: mwciv7
+	die3: 
 		Start: 187
 		Length: 15
 		Tick: 80
 	# ballista
-	die4: mwciv7
+	die4: 
 		Start: 203
 		Length: 11
 		Tick: 80
-	die-crushed: e1rot
+	die-crushed: newe1rot
 		Start: 16
 		Length: 4
 		Tick: 1600
@@ -1204,23 +1204,23 @@ mwciv8:
 		Start: 312
 		Length: 2
 		Tick: 200
-	stand: mwciv8
+	stand: 
 		Start: 146
 		Facings: 8
-	run: mwciv8
+	run: 
 		Start: 0
 		Length: 8
 		Facings: 8
 		Tick: 100
-	panic-stand: mwciv8
+	panic-stand: 
 		Start: 135
 		Facings: 8
-	panic-run: mwciv8
+	panic-run: 
 		Start: 65
 		Length: 8
 		Facings: 8
 		Tick: 100
-	die1: mwciv8
+	die1: 
 		Start: 156
 		Length: 15
 		Tick: 80
@@ -1229,16 +1229,16 @@ mwciv8:
 		Length: *
 		Tick: 80
 	# poision
-	die3: mwciv8
+	die3: 
 		Start: 187
 		Length: 15
 		Tick: 80
 	# ballista
-	die4: mwciv8
+	die4: 
 		Start: 203
 		Length: 11
 		Tick: 80
-	die-crushed: e1rot
+	die-crushed: newe1rot
 		Start: 16
 		Length: 4
 		Tick: 1600
@@ -1267,23 +1267,23 @@ mwciv9:
 		Start: 312
 		Length: 2
 		Tick: 200
-	stand: mwciv9
+	stand:
 		Start: 146
 		Facings: 8
-	run: mwciv9
+	run: 
 		Start: 0
 		Length: 8
 		Facings: 8
 		Tick: 100
-	panic-stand: mwciv9
+	panic-stand: 
 		Start: 135
 		Facings: 8
-	panic-run: mwciv9
+	panic-run: 
 		Start: 65
 		Length: 8
 		Facings: 8
 		Tick: 100
-	die1: mwciv9
+	die1: 
 		Start: 156
 		Length: 15
 		Tick: 80
@@ -1292,16 +1292,16 @@ mwciv9:
 		Length: *
 		Tick: 80
 	# poision
-	die3: mwciv9
+	die3: 
 		Start: 187
 		Length: 15
 		Tick: 80
 	# ballista
-	die4: mwciv9
+	die4: 
 		Start: 203
 		Length: 11
 		Tick: 80
-	die-crushed: e1rot
+	die-crushed: newe1rot
 		Start: 16
 		Length: 4
 		Tick: 1600
@@ -1375,7 +1375,7 @@ mwciv10:
 		Start: 203
 		Length: 11
 		Tick: 80
-	die-crushed: e1rot
+	die-crushed: newe1rot
 		Start: 16
 		Length: 4
 		Tick: 1600
@@ -1460,7 +1460,7 @@ mwciv11:
 		Start: 203
 		Length: 11
 		Tick: 80
-	die-crushed: e1rot
+	die-crushed: newe1rot
 		Start: 16
 		Length: 4
 		Tick: 1600
@@ -1545,7 +1545,7 @@ mwciv12:
 		Start: 203
 		Length: 11
 		Tick: 80
-	die-crushed: e1rot
+	die-crushed: newe1rot
 		Start: 16
 		Length: 4
 		Tick: 1600

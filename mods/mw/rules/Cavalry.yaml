@@ -174,7 +174,7 @@ BURNINGHORSE:
 	AttackFrontal:
 	AutoTarget:
 	RenderSprites:
-		Image: burhors
+		Image: burninghorse
 		PlayerPalette: raplayer
 	WithInfantryBody:
 		IdleSequences: stand
@@ -231,7 +231,7 @@ EMPTYROSS:
 	AttackFrontal:
 	AutoTarget:
 	RenderSprites:
-		Image: rossempty
+		Image: emptyhorse
 		PlayerPalette: raplayer
 	WithInfantryBody:
 		IdleSequences: stand

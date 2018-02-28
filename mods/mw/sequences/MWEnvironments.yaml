@@ -658,8 +658,8 @@ deerstand:
 		Start: 2
 	corputed2:
 		Start: 3
-	empty: ironore4
-		Start: 9 
+	empty: deerstand
+		Start: 0
 		
 coppermine:
 	Defaults:
@@ -773,7 +773,7 @@ mwcameltrader:
 		Start: 203
 		Length: 11
 		Tick: 80
-	die-crushed: e1rot
+	die-crushed: newe1rot
 		Start: 16
 		Length: 4
 		Tick: 1600

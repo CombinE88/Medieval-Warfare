@@ -39,7 +39,7 @@ ORNI:
 	AttackPlane:
 		FacingTolerance: 20
 	RenderSprites:
-		Image: ornito
+		Image: orni
 		PlayerPalette: raplayer
 	AmmoPool:
 		Ammo: 6
@@ -255,7 +255,7 @@ DRAGONWALK:
 	AutoTarget:
 		ScanRadius: 11
 	RenderSprites:
-		Image: drgngrnd
+		Image: dragonground
 		PlayerPalette: raplayer
 	WithInfantryBody:
 		IdleSequences: stand
@@ -384,7 +384,7 @@ WRBLN:
 	AttackHeli:
 		FacingTolerance: 20
 	RenderSprites:
-		Image: wrblln
+		Image: warballoon
 		PlayerPalette: raplayer
 	AmmoPool:
 		Name: primary

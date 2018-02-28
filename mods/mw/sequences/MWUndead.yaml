@@ -1,15 +1,15 @@
 #Buildings
 
 sppool: 
-    Inherits: ^pentagram
+	Inherits: ^pentagram
 	idle:
 		Start: 37
 	damaged-idle:
 		Start: 38
 	dead:
 		Start: 39
-        Tick: 800
-    make: 
+		Tick: 800
+	make: 
 		Length: 37
 		Tick: 140
 	bib: bib3
@@ -20,73 +20,73 @@ sppool:
 
 ziggurat1:
 	idle: 
-        Start: 25
-        Offset: 0,-24
-    damaged-idle: 
-        Start: 26
-        Offset: 0,-24
-    dead:
-        Start: 27
-        Offset: 0,-24
-        Tick: 800
-    make: 
-        Length: 25
-        Tick: 200
-        Offset: 0,-24
+		Start: 25
+		Offset: 0,-24
+	damaged-idle: 
+		Start: 26
+		Offset: 0,-24
+	dead:
+		Start: 27
+		Offset: 0,-24
+		Tick: 800
+	make: 
+		Length: 25
+		Tick: 200
+		Offset: 0,-24
 	bib: bib1
 		UseTilesetExtension: true
 		Length: *
 	icon: ziggurat1icon.shp
 		AddExtension: False
-        
+		
 ziggurat2:
 	idle: 
-        Start: 25
-        Offset: 0,-24
-    damaged-idle: 
-        Start: 26
-        Offset: 0,-24
-    dead:
-        Start: 27
-        Offset: 0,-24
-        Tick: 800
-    make: 
-        Length: 25
-        Tick: 200
-        Offset: 0,-24
+		Start: 25
+		Offset: 0,-24
+	damaged-idle: 
+		Start: 26
+		Offset: 0,-24
+	dead:
+		Start: 27
+		Offset: 0,-24
+		Tick: 800
+	make: 
+		Length: 25
+		Tick: 200
+		Offset: 0,-24
 	bib: bib1
 		UseTilesetExtension: true
 		Length: *
 	icon: ziggurat2icon.shp
-		AddExtension: False    
+		AddExtension: False	
 
 
 ziggurat3:
 	idle: 
-        Start: 25
-        Offset: 0,-24
+		Start: 25
+		Offset: 0,-24
 	active: 
-        Start: 25
-        Offset: 0,-24
-    damaged-idle: 
-        Start: 26
-        Offset: 0,-24
-    dead:
-        Start: 27
-        Offset: 0,-24
-        Tick: 800
-    make: 
-        Length: 25
-        Tick: 200
-        Offset: 0,-24
+		Start: 25
+		Offset: 0,-24
+	damaged-idle: 
+		Start: 26
+		Offset: 0,-24
+	dead:
+		Start: 27
+		Offset: 0,-24
+		Tick: 800
+	make: 
+		Length: 25
+		Tick: 200
+		Offset: 0,-24
 	bib: bib1
 		UseTilesetExtension: true
 		Length: *
 	icon: ziggurat3icon.shp
 		AddExtension: False
-        
+		
 crypt: 
-    Inherits: ^pentagram
+	Inherits: ^pentagram
 	idle:
 		Start: 0
 		Length: 15
@@ -97,8 +97,8 @@ crypt:
 		Tick: 80
 	dead:
 		Start: 30
-        Tick: 800
-    make: cryptmake
+		Tick: 800
+	make: cryptmake
 		Length: *
 		Tick: 100
 	bib: bib3
@@ -118,18 +118,18 @@ crypt:
 		Offset: -3, 17
 	icon: crypticon.shp
 		AddExtension: False
-        
-        
+		
+		
 mauso: 
-    Inherits: ^pentagram
+	Inherits: ^pentagram
 	idle:
 		Start: 23
 	damaged-idle:
 		Start: 24
 	dead:
 		Start: 25
-        Tick: 800
-    make:
+		Tick: 800
+	make:
 		Length: 23
 		Tick: 200
 	bib: bib3
@@ -137,17 +137,17 @@ mauso:
 		Length: *
 	icon: mausoicon.shp
 		AddExtension: False
-        
+		
 libra: 
-    Inherits: ^pentagram
+	Inherits: ^pentagram
 	idle:
 		Start: 25
 	damaged-idle:
 		Start: 26
 	dead:
 		Start: 27
-        Tick: 800
-    make:
+		Tick: 800
+	make:
 		Length: 25
 		Tick: 200
 	bib: bib3
@@ -155,31 +155,31 @@ libra:
 		Length: *
 	icon: libraicon.shp
 		AddExtension: False
-        
+		
 tomb: 
-    Inherits: ^pentagram
+	Inherits: ^pentagram
 	idle:
 		Start: 25
-        Offset: 0,-12
+		Offset: 0,-12
 	damaged-idle:
 		Start: 26
-        Offset: 0,-12
+		Offset: 0,-12
 	dead:
 		Start: 27
-        Tick: 800
-        Offset: 0,-12
-    make:
+		Tick: 800
+		Offset: 0,-12
+	make:
 		Length: 25
 		Tick: 200
-        Offset: 0,-12
+		Offset: 0,-12
 	bib: bib2
 		UseTilesetExtension: true
 		Length: *
 	icon: tombicon.shp
 		AddExtension: False
-        
+		
 hellgate: 
-    Inherits: ^pentagram
+	Inherits: ^pentagram
 	idle:
 		Start: 41
 		Length: 10
@@ -190,8 +190,8 @@ hellgate:
 		Tick: 80
 	dead:
 		Start: 61
-        Tick: 800
-    make: 
+		Tick: 800
+	make: 
 		Length: 41
 		Tick: 200
 	bib: bib2
@@ -199,31 +199,31 @@ hellgate:
 		Length: *
 	icon: hellgateicon.shp
 		AddExtension: False
-        
+		
 #SEALS
 
 seal1:
 	icon: seal1.shp
 		AddExtension: False 
-        
+		
 seal2:
 	icon: seal2.shp
 		AddExtension: False 
-        
+		
 seal3:
 	icon: seal3.shp
 		AddExtension: False 
-        
+		
 seal4:
 	icon: seal4.shp
 		AddExtension: False 
-        
+		
 seal5:
 	icon: seal5.shp
 		AddExtension: False 
 
-        
-        
+		
+		
 #MCV
 
 
@@ -231,34 +231,34 @@ undeadcomm:
 	idle: 
 		Start: 66
 		Facings: 8
-        Length: 7
-        Tick: 90
+		Length: 7
+		Tick: 90
 	stand: 
 		Start: 66
 		Facings: 8
-        Length: 7
+		Length: 7
 	move: 
 		Tick: 90
 		Start: 0
 		Facings: 8
-        Length: 7
-    make:
-        Tick: 90
-        Length: 36
-        Frames: 166,165,164, 163,162,161,160,159,158,157,156,155,154,153,152,151,150,149,148,147,146,145,144,143,142,141,140,139,138,137,136,135,134,133,132,131
-    die1:
-        Start: 131
-        Length: 34
-        Tick: 90
+		Length: 7
+	make:
+		Tick: 90
+		Length: 36
+		Frames: 166,165,164, 163,162,161,160,159,158,157,156,155,154,153,152,151,150,149,148,147,146,145,144,143,142,141,140,139,138,137,136,135,134,133,132,131
+	die1:
+		Start: 131
+		Length: 34
+		Tick: 90
 	icon: ziggurat1icon.shp
 		AddExtension: False
-        
+		
 #misc
 
 beacon: 
 	handaiconsmall: handaiconsmall
 		Offset: 0,-42
-        
+		
 icon:
 	handaicon: handaicon.shp
 
@@ -277,7 +277,7 @@ zombspark:
 		Start: 4
 		Length: 4
 		ZOffset: 1023
-        
+		
 bloodspark:
 	bright:
 		Length: 4
@@ -290,12 +290,12 @@ bloodspark:
 gravespawner:
 	idle:
 		Length: *
-        
+		
 
 gravespawnera:
 	idle:
 		Length: *
-        
+		
 
 gravespawnerb:
 	idle:
@@ -345,7 +345,7 @@ undead1:
 		Start: 202
 		Length: 20
 		Tick: 80
-	die-crushed: e1rot
+	die-crushed: newe1rot
 		Start: 16
 		Length: 4
 		Tick: 1600
@@ -400,7 +400,7 @@ undead2:
 		Start: 202
 		Length: 20
 		Tick: 80
-	die-crushed: e1rot
+	die-crushed: newe1rot
 		Start: 16
 		Length: 4
 		Tick: 1600
@@ -505,7 +505,7 @@ undead4:
 		Start: 202
 		Length: 20
 		Tick: 80
-	die-crushed: e1rot
+	die-crushed: newe1rot
 		Start: 16
 		Length: 4
 		Tick: 1600
@@ -514,11 +514,11 @@ undead4:
 		Length: *
 	icon: undead4icon.shp
 		AddExtension: False
-        
+		
 burningprints:
-    idle: fire4
-        Length: *
-        ZOffset: -1023
+	idle: fire4
+		Length: *
+		ZOffset: -1023
 		
 undead5:
 	make: undead5born
@@ -663,12 +663,12 @@ undead7:
 		Tick: 80
 	icon: undead7icon.shp
 		AddExtension: False
-        
+		
 coffin:
-    empty: ironore4
-		Start: 9 
-    idle: ironore4
-		Start: 9 
+	empty: coffin1
+		Start: 0
+	idle: coffin1
+		Start: 0
 	idlea: coffin1
 		Start: 22
 	makea: coffin1
@@ -693,10 +693,10 @@ coffin:
 
 		
 gstone1: 
-    empty: ironore4
-		Start: 9 
-    idle: ironore4
-		Start: 9 
+	empty: gstone1
+		Start: 0
+	idle: gstone1
+		Start: 0 
 	idlea: gstone1
 		Start: 10
 	makea: gstone1
@@ -716,10 +716,10 @@ gstone1:
 		Start: 11
 
 gstone2: 
-    empty: ironore4
-		Start: 9 
-    idle: ironore4
-		Start: 9 
+	empty: gstone4
+		Start: 0
+	idle: gstone4
+		Start: 0
 	idlea: gstone4
 		Start: 10
 	makea: gstone4
@@ -736,13 +736,13 @@ gstone2:
 		Length: 10
 		Tick: 80
 	dead: gstone4
-		Start: 11        
-    
+		Start: 11		
+	
 gstone3: 
-    empty: ironore4
-		Start: 9 
-    idle: ironore4
-		Start: 9 
+	empty: gstone7
+		Start: 0
+	idle: gstone7
+		Start: 0
 	idlea: gstone7
 		Start: 10
 	makea: gstone7
@@ -760,7 +760,7 @@ gstone3:
 		Tick: 80
 	dead: gstone7
 		Start: 11   
-    
+	
 gstonexl1: 
 	idle:
 		Start: 10
@@ -779,7 +779,7 @@ gstonexl2:
 		Start: 11
 		
 obelisk: 
-    Inherits: ^pentagram
+	Inherits: ^pentagram
 	idle:
 		Offset: 0,-5
 		Start: 0
@@ -789,30 +789,30 @@ obelisk:
 	dead:
 		Offset: 0,-5
 		Start: 2
-        Tick: 800
-    make: obeliskmake
+		Tick: 800
+	make: obeliskmake
 		Length: *
 		Tick: 200
 	icon: obeliskicon.shp
 		AddExtension: False
-        
+		
 flicker: 
 	idle:
 		Offset: 0,-10
-        Length: *
-        Tick: 40
-        BlendMode: Additive
+		Length: *
+		Tick: 40
+		BlendMode: Additive
 	make:
 		Offset: 0,-10
-        Length: *
-        Tick: 40
-        BlendMode: Additive
+		Length: *
+		Tick: 40
+		BlendMode: Additive
 	active:
 		Offset: 0,-10
-        Length: *
-        Tick: 40
-        BlendMode: Additive
-        
+		Length: *
+		Tick: 40
+		BlendMode: Additive
+		
 obeliskb: 
 	idle:
 		Offset: 0,-10
@@ -823,7 +823,7 @@ obeliskb:
 	dead:
 		Offset: 0,-10
 		Start: 2
-        
+		
 lichk:
 	stunned: sulm4
 		ZOffset: 125
@@ -833,43 +833,43 @@ lichk:
 	idle: 
 		Start: 122
 		Facings: 8
-        Offset: 0,5
+		Offset: 0,5
 	stand: 
 		Start: 122
 		Facings: 8
-        Offset: 0,5
+		Offset: 0,5
 	run: 
 		Start: 0
 		Length: 8
 		Facings: 8
 		Tick: 100
-        Offset: 0,5
+		Offset: 0,5
 	move: 
 		Start: 0
 		Length: 8
 		Facings: 8
 		Tick: 100
-        Offset: 0,5
+		Offset: 0,5
 	summon: 
 		Tick: 100
 		Start: 66
 		Length: 7
 		Facings: 8
-        Offset: 0,5
+		Offset: 0,5
 	attack: 
 		Tick: 100
 		Start: 169
 		Length: 7
 		Facings: 8
-        Offset: 0,5
+		Offset: 0,5
 	die1: 
 		Start: 133
 		Length: 22
 		Tick: 100
-        Offset: 0,5
+		Offset: 0,5
 	icon: lichkicon.shp
 		AddExtension: False
-        
+		
 deadross:
 	stand: 
 		Start: 122
@@ -897,7 +897,7 @@ deadross:
 		Length: 18
 		Tick: 80
 	make: 
-        Start: 262
+		Start: 262
 		Length: 15
 		Tick: 100
 	# Burn
@@ -906,7 +906,7 @@ deadross:
 		Tick: 80
 	icon: deadrossicon.shp
 		AddExtension: False
-        
+		
 grim:
 	stunned: sulm4
 		ZOffset: 125
@@ -959,17 +959,17 @@ grim:
 		Tick: 80
 	icon: grimicon.shp
 		AddExtension: False
-        
+		
 skytheproj:
-    idle: grim
-        Length: 32
-        Start: 349
-        Tick: 10
-        
+	idle: grim
+		Length: 32
+		Start: 349
+		Tick: 10
+		
 bloodparticle:
-    idle:
-        Length: *
-        
+	idle:
+		Length: *
+		
 vamp:
 	stunned: sulm4
 		ZOffset: 125
@@ -978,7 +978,7 @@ vamp:
 		Tick: 200
 	idle: 
 		Start: 122
-        Facings: 8
+		Facings: 8
 	idle-flying: 
 		Start: 254
 		Length: 8
@@ -991,13 +991,13 @@ vamp:
 		Tick: 80
 	stand: 
 		Start: 122
-        Facings: 8
+		Facings: 8
 	idle1:
-        Start: 190
+		Start: 190
 		Length: 8
 		Facings: 8
 		Tick: 80
-    run: 
+	run: 
 		Start: 0
 		Length: 8
 		Facings: 8
@@ -1015,17 +1015,17 @@ vamp:
 		Start: 66
 		Length: 7
 		Facings: 8
-        Tick: 80
+		Tick: 80
 	attackgclose: 
 		Start: 417
 		Length: 7
 		Facings: 8
-        Tick: 80
+		Tick: 80
 	attackair: 
 		Start: 320
 		Length: 8
 		Facings: 8
-        Tick: 80
+		Tick: 80
 	die1: 
 		Start: 131
 		Length: 16
@@ -1044,7 +1044,7 @@ vamp:
 		Start: 180
 		Length: 11
 		Tick: 80
-	die-crushed: e1rot
+	die-crushed: newe1rot
 		Start: 16
 		Length: 4
 		Tick: 1600
@@ -1054,34 +1054,34 @@ vamp:
 		Tick: 80
 	icon: vampicon.shp
 		AddExtension: False
-        
+		
 cofspawn1:
-    idle: 
-        Start: 20
-    make:
-        Length: *
-        Tick: 80
-        
+	idle: 
+		Start: 20
+	make:
+		Length: *
+		Tick: 80
+		
 cofspawn2:
-    idle: 
-        Start: 20
-    make:
-        Length: *
-        Tick: 80        
+	idle: 
+		Start: 20
+	make:
+		Length: *
+		Tick: 80		
 cofspawn3:
-    idle: 
-        Start: 20
-    make:
-        Length: *
-        Tick: 80
-        
+	idle: 
+		Start: 20
+	make:
+		Length: *
+		Tick: 80
+		
 cofspawn4:
-    idle: 
-        Start: 20
-    make:
-        Length: *
-        Tick: 80
-        
+	idle: 
+		Start: 20
+	make:
+		Length: *
+		Tick: 80
+		
 acolyte:
 	stunned: sulm4
 		ZOffset: 125
@@ -1135,7 +1135,7 @@ acolyte:
 		Start: 180
 		Length: 11
 		Tick: 80
-	die-crushed: e1rot
+	die-crushed: newe1rot
 		Start: 16
 		Length: 4
 		Tick: 1600
@@ -1168,10 +1168,10 @@ acolyteb:
 		Start: 66
 		Length: 7
 		Facings: 8
-    shootchannel:
-        Tick: 800
-        Facings: 8
-        Frames: 72,79,86,93,100,107,114,121
+	shootchannel:
+		Tick: 800
+		Facings: 8
+		Frames: 72,79,86,93,100,107,114,121
 	prey: 
 		Tick: 100
 		Start: 232
@@ -1203,7 +1203,7 @@ acolyteb:
 		Start: 180
 		Length: 11
 		Tick: 80
-	die-crushed: e1rot
+	die-crushed: newe1rot
 		Start: 16
 		Length: 4
 		Tick: 1600
@@ -1213,7 +1213,7 @@ acolyteb:
 		Tick: 80
 	icon: cultisticon.shp
 		AddExtension: False
-        
+		
 demonhorse:
 	idle1: 
 		Tick: 100
@@ -1248,22 +1248,22 @@ demonhorse:
 		Tick: 80
 	icon: demonhorseicon.shp
 		AddExtension: False
-        
+		
 garg:
-    Inherits: ^pentagram
+	Inherits: ^pentagram
 	damaged-idle: 
 		Offset: 0,-12,0
 		Facings: 32
 		ZOffset: 512
-        Start: 28
+		Start: 28
 	idle: 
 		Offset: 0,-12,0
 		Facings: 32
 		ZOffset: 512
-        Start: 28
+		Start: 28
 	overlay: 
 		Offset: 0,-12,0
-        Start: 26
+		Start: 26
 	damaged-overlay: 
 		Start: 27
 		Offset: 0,-12,0
@@ -1286,30 +1286,30 @@ garg:
 		Offset: 0,-2
 	icon: gargicon.shp
 		AddExtension: False
-        
+		
 ^pentagram:
-    pentagrams: pentas
-        Offset: -2,0
-        Length: *
-        ZOffset: -2024
-    circles: ptimers
-        Length: 21
-        ZOffset: -2024
-    pentagramm: pentam
-        Offset: -2,0
-        Length: *
-        ZOffset: -2024
-    circlem: ptimerm
-        Length: 21
-        ZOffset: -2024
-    pentagraml: pental
-        Offset: -2,0
-        Length: *
-        ZOffset: -2024
-    circlel: ptimerl
-        Length: 21
-        ZOffset: -2024
-        
+	pentagrams: pentas
+		Offset: -2,0
+		Length: *
+		ZOffset: -2024
+	circles: ptimers
+		Length: 21
+		ZOffset: -2024
+	pentagramm: pentam
+		Offset: -2,0
+		Length: *
+		ZOffset: -2024
+	circlem: ptimerm
+		Length: 21
+		ZOffset: -2024
+	pentagraml: pental
+		Offset: -2,0
+		Length: *
+		ZOffset: -2024
+	circlel: ptimerl
+		Length: 21
+		ZOffset: -2024
+		
 grafence:
 	idle: 
 		Length: 16

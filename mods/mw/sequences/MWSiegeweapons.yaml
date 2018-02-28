@@ -1,47 +1,47 @@
 
 		
-newmcv:
-	idle: medimcv
+medimcv:
+	idle: 
 		Start: 64
 		Facings: 32
-	stand: medimcv
+	stand: 
 		Start: 64
 		Facings: 32
-	run: medimcv
+	run: 
 		Tick: 100
 		Facings: 8
 		Length: 8
 	icon: mcvnewicon.shp
 		AddExtension: False
 		
-new2mcv:
-	idle: medimcv2
+medimcv2:
+	idle: 
 		Start: 64
 		Facings: 32
-	stand: medimcv2
+	stand: 
 		Start: 64
 		Facings: 32
-	run: medimcv2
+	run: 
 		Tick: 100
 		Facings: 8
 		Length: 8
 	icon: mcvnewicon.shp
 		AddExtension: False
-        
+		
 planewagen:
-	idle: planewagen
+	idle: 
 		Start: 64
 		Facings: 32
-	stand: planewagen
+	stand: 
 		Start: 64
 		Facings: 32
-	run: planewagen
+	run: 
 		Tick: 100
 		Facings: 8
 		Length: 8
 	icon: planeicon.shp
 		AddExtension: False
-        
+		
 planewagenhusk:
 	idle: 
 		Start: 64
@@ -56,40 +56,40 @@ mcvnew.destroyed:
 		Facings: 32
 		UseClassicFacingFudge: True
 		ZOffset: -512
-        
+		
 mcvnew2.destroyed:
 	idle: mcvnew2husk
 		Facings: 32
 		UseClassicFacingFudge: True
 		ZOffset: -512
-        
+		
 siege1:
-	stand: siege1
+	stand: 
 		Start: 0
 		Facings: 32
-	run: siege1
+	run: 
 		Start: 32
 		Length: 7
 		Facings: 8
 		Tick: 100
-	shoot: siege1
+	shoot: 
 		Tick: 80
 		Start: 88
 		Length: 7
 		Facings: 32
-	die1: siege1
+	die1: 
 		Start: 345
 		Length: 10
 	# Explode
-	die2: siege1
+	die2: 
 		Start: 345
 		Length: 10
 	# Fly and explode in air
-	die3: siege1
+	die3: 
 		Start: 345
 		Length: 10
 	# Fly through air squish on ground
-	die4: siege1
+	die4: 
 		Start: 345
 		Length: 10
 	# Burn
@@ -98,10 +98,10 @@ siege1:
 		Length: 18
 		Tick: 80
 	# Tib
-	die6: siege1
+	die6: 
 		Start: 345
 		Length: 10
-	die-crushed: e1rot
+	die-crushed: newe1rot
 		Start: 16
 		Length: 4
 		Tick: 1600
@@ -134,15 +134,15 @@ siege1.husk:
 
 
 siege2:
-	stand: siege2
+	stand: 
 		Start: 0
 		Facings: 32
-	run: siege2
+	run: 
 		Start: 32
 		Length: 7
 		Facings: 8
 		Tick: 100
-	shoot: siege2
+	shoot: 
 		Tick: 80
 		Start: 88
 		Length: 7
@@ -161,27 +161,27 @@ siege2.husk:
 		Facings: 32
 		
 
-siege3:
-	stand: sgtw
+sgtw:
+	stand: 
 		Start: 63
 		Facings: 32
-	idle: sgtw
+	idle: 
 		Start: 63
 		Facings: 32
-	run: sgtw
+	run: 
 		Start: 0
 		Length: 8
 		Facings: 8
 		Tick: 100
-	move: sgtw
+	move: 
 		Start: 0
 		Length: 8
 		Facings: 8
 		Tick: 100
-	shoot: sgtw
+	shoot: 
 		Start: 36
 		Facings: 32
-	top: sgtw
+	top: 
 		Start: 97
 		Facings: 32
 		ZOffset: 1024
@@ -207,21 +207,21 @@ siege3.husk:
 		Facings: 32  
 		Offset: 0,12,0
 
-siege5:
-	stand: bara
+bara:
+	stand: 
 		Start: 0
 		Facings: 32
-	run: bara
+	run: 
 		Start: 32
 		Length: 7
 		Facings: 8
 		Tick: 100
-	shoot: bara
+	shoot: 
 		Start: 88
 		Length: 7
 		Facings: 32
 		Tick: 80
-	die1: bara
+	die1: 
 		Start: 313
 		Length: 10
 		Tick: 80
@@ -238,20 +238,20 @@ siege5.husk:
 		Start: 217
 		Facings: 32  
 		
-siege4:
-    Inherits: ^scaffold
-	turretanim: batowgun
+batowgun:
+	Inherits: ^scaffold
+	turretanim: 
 		Facings: 32
 		ZOffset: 512
 		Length: 7
 		Start: 32
 		Tick: 80
 		Offset: 0,-16,0
-	damaged-idle: batowgun
+	damaged-idle: 
 		Offset: 0,-16,0
 		Facings: 32
 		ZOffset: 512
-	idle: batowgun
+	idle: 
 		Offset: 0,-16,0
 		Facings: 32
 		ZOffset: 512
@@ -279,7 +279,7 @@ siege4:
 		Offset: 0,-2
 	icon: batoicon.shp
 		AddExtension: False
-    make1: batowbasemake
+	make1: batowbasemake
 		Start: 1
 		ZOffset: -25
 		Offset: 0,-12,0
@@ -299,7 +299,7 @@ siege4:
 		Start: 9
 		ZOffset: -25
 		Offset: 0,-12,0
-    make6: batowbasemake
+	make6: batowbasemake
 		Start: 10
 		ZOffset: -25
 		Offset: 0,-12,0
@@ -315,22 +315,22 @@ davincihusk:
 	idle: davincihusk
 		
 drgnrdr:
-	idle: dragon
+	idle: 
 		Start: 0
 		Length: 7
 		Facings: 32
 		Tick: 100
-	move: dragon
+	move: 
 		Start: 0
 		Length: 7
 		Facings: 32
 		Tick: 100
-	attack: dragon
+	attack: 
 		Tick: 100
 		Start: 224
 		Length: 7
 		Facings: 32
-	die1: dragon
+	die1: 
 		Start: 449
 		Facings: 32
 	icon: ndragonicon.shp
@@ -343,23 +343,23 @@ drgnempty:
 		Facings: 32
 		Tick: 100
 		
-drgngrnd:
-	idle: dragonground
+dragonground:
+	idle: 
 		Start: 0
 		Length: 1
 		Facings: 32
 		Tick: 100
-	stand: dragonground
+	stand: 
 		Start: 0
 		Length: 1
 		Facings: 32
 		Tick: 100
-	run: dragonground
+	run: 
 		Start: 32
 		Length: 7
 		Facings: 32
 		Tick: 100
-	shoot: dragonground
+	shoot: 
 		Tick: 100
 		Start: 256
 		Length: 7
@@ -371,7 +371,7 @@ drgngrnd:
 		
 		
 drgnrdr.husk:
-	idle: dragon
+	idle: drgnrdr
 		Start: 449
 		Facings: 32
 		
@@ -380,17 +380,17 @@ wrblln.crash:
 		Start: 0
 		Facings: 32
 		
-wrblln:
-	idle: warballoon
+warballoon:
+	idle: 
 		Start: 0
 		Facings: 32
 		Offset: 0,-24,0
-	move: warballoon
+	move: 
 		Start: 0
 		Length: 7
 		Facings: 32
 		Offset: 0,-24,0
-	attack: warballoon
+	attack: 
 		Tick: 40
 		Start: 32
 		Length: 7
@@ -400,11 +400,11 @@ wrblln:
 		AddExtension: False 
 		
 warkite:
-	idle: warkite
+	idle: 
 		Start: 225
 		Facings: 32
 		Offset: 0,-4,0
-	attack: warkite
+	attack: 
 		Tick: 120
 		Start: 0
 		Length: 7
@@ -414,25 +414,25 @@ warkite:
 		AddExtension: False 
 		
 warkitehusk:
-	idle: warkitehusk
+	idle: 
 		Start: 0
 		Facings: 32
-	man: warkitehusk
+	man: 
 		Start: 0
 		Facings: 32
-	kite: warkitehusk
+	kite: 
 		Start: 32
 		Facings: 32
-	crash: warkitehusk
+	crash: 
 		Start: 64
 		Facings: 32
 		
-ornito:
-	idle: Orni
+orni:
+	idle: orni
 		Start: 225
 		Facings: 32
 		Offset: 0,-4,0
-	move: Orni
+	move: orni
 		Tick: 80
 		Start: 0
 		Length: 7
@@ -442,10 +442,10 @@ ornito:
 		AddExtension: False 
 		
 ornicrash:
-	idle: ornicrash
+	idle: 
 		Start: 0
 		Facings: 32
-	wing: ornicrash
+	wing: 
 		Start: 33
 		Facings: 32
 		
@@ -454,48 +454,52 @@ wrblln.husk:
 		Facings: 32
 		Offset: 0,-24,0
 		
-eharv:
-	idle: bggy
-		Start: 32
-		ZOffset: -1024
-		Facings: 32
-	dock: eharvnew
+eharvnew:
+	idle: 
+		Start: 149
+		Facings: 8
+	dock: 
 		Start: 238
 		Length: 10
 		ZOffset: 10
-	dock-loop: eharvnew
+	dock-loop: 
 		Start: 242
 		Length: 2
 		ZOffset: 10
-	stand: eharvnew
+	stand: 
 		Start: 149
 		Facings: 8
-	run: eharvnew
+	run: 
 		Start: 0
 		Length: 8
 		Facings: 8
 		Tick: 100
-	shoot: eharvnew
+	move: 
+		Start: 0
+		Length: 8
+		Facings: 8
+		Tick: 100
+	shoot: 
 		Tick: 120
 		Start: 66
 		Length: 10
 		Facings: 8
-	harvest: eharvnew
+	harvest: 
 		Tick: 120
 		Start: 96
 		Length: 10
 		ZOffset: 10
-	idle1: eharvnew
+	idle1: 
 		Tick: 120
 		Start: 96
 		Length: 10
 		ZOffset: 10
-	idle2: eharvnew
+	idle2: 
 		Tick: 120
 		Start: 96
 		Length: 10
 		ZOffset: 10
-	die1: eharvnew
+	die1: 
 		Start: 149
 		Facings: 8
 	# Explode
@@ -503,12 +507,12 @@ eharv:
 		Length: *
 		Tick: 80
 	# Fly and explode in air
-	die3: eharvnew
+	die3: 
 		Start: 156
 		Length: 15
 		Tick: 80
 	# Fly through air squish on ground
-	die4: eharvnew
+	die4: 
 		Start: 156
 		Length: 15
 		Tick: 80
@@ -518,11 +522,11 @@ eharv:
 		Length: 18
 		Tick: 80
 	# Tib
-	die6: eharvnew
+	die6: 
 		Start: 156
 		Length: 15
 		Tick: 80
-	die-crushed: e1rot
+	die-crushed: newe1rot
 		Start: 16
 		Length: 4
 		Tick: 1600
@@ -530,71 +534,71 @@ eharv:
 	icon: nharvicon.shp
 		AddExtension: False		
 
-eharvxl:
-	dock: eharvnewxl
+eharvnewxl:
+	dock: 
 		Start: 238
 		Length: 10
 		Tick: 80
-	dock-loop: eharvnewxl
+	dock-loop: 
 		Start: 248
 		Length: 1
 		Tick: 80
-	move: eharvnewxl
+	move: 
 		Start: 0
 		Length: 8
 		Facings: 8
 		Tick: 80
-	stand: eharvnewxl
+	stand: 
 		Start: 149
 		Facings: 8
 		Tick: 80
-	idle: eharvnewxl
+	idle: 
 		Start: 149
 		Facings: 8
 		Tick: 80
-	empty-move: eharvnewxl
+	empty-move: 
 		Start: 0
 		Length: 8
 		Facings: 8
 		Tick: 80
-	empty-idle: eharvnewxl
+	empty-idle: 
 		Start: 149
 		Facings: 8
 		Tick: 80
-	empty-harvest: eharvnewxl
+	empty-harvest: 
 		Start: 66
 		Facings: 8
 		Length: 10
 		Tick: 80
-	half-move: eharvnewxl
+	half-move: 
 		Start: 173
 		Length: 8
 		Facings: 8
 		Tick: 80
-	half-idle: eharvnewxl
+	half-idle: 
 		Frames: 173, 184, 191, 199, 207, 215, 223, 231
 		Facings: 8
 		Tick: 80
-	half-harvest: eharvnewxl
+	half-harvest: 
 		Start: 249
 		Facings: 8
 		Length: 10
 		Tick: 80
-	full-move: eharvnewxl
+	full-move: 
 		Start: 173
 		Length: 8
 		Facings: 8
 		Tick: 80
-	full-idle: eharvnewxl
+	full-idle: 
 		Frames: 173, 184, 191, 199, 207, 215, 223, 231
 		Facings: 8
 		Tick: 80
-	full-harvest: eharvnewxl
+	full-harvest: 
 		Start: 249
 		Facings: 8
 		Length: 10
 		Tick: 80  
-	die1: eharvnewxl
+	die1: 
 		Start: 157
 		Length: 15
 		Tick: 80

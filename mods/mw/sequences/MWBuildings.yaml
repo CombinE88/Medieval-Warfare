@@ -9,8 +9,8 @@ bacamp.husk:
 		Length: *
 		
 newfact:
-	idle: ironore4
-		Start: 9
+	idle: kingfact0
+		Start: 0
 	idle0: kingfact0
 		Offset: 0,-11
 	damaged-idle: kingfact0
@@ -99,8 +99,8 @@ wtentt:
 		AddExtension: False
 		
 nodfact:
-	idle: ironore4
-		Start: 9
+	idle: baronfact0
+		Start: 0
 	idle0: baronfact0
 		Offset: 0,-11
 	damaged-idle: baronfact0
@@ -160,69 +160,7 @@ nodfact:
 		Length: *
 	icon: keepicon.shp
 		AddExtension: False
-		
-missnew:
-	idle: techcenternew
-		Offset: 0,-1
-	damaged-idle: techcenternew
-		Start: 1
-		Offset: 0,-1
-	make: missmake
-		Length: *
-		Tick: 80
-		Offset: 0,-1
-	bib: mbMISS
-		UseTilesetExtension: true
-		TilesetOverrides:
-			WINTER: TEMPERAT
-			JUNGLE: TEMPERAT			INTERIOR: TEMPERAT
-		Length: *
-		Offset: 0,1
-	icon: missicnh	
-	
-tech1:
-	idle: techbuilding1
-	damaged-idle: techbuilding1
-		Start: 1
-	bib: mwbib2
-		UseTilesetExtension: true
-		Length: *
-	turret: techbuilding1turret
-		Facings: 32
-	muzzle: gunfire2
-		Length: *
-	
-tech1.husk:
-	idle: techbuilding1
-		Start: 2
-	bib: mwbib2
-		UseTilesetExtension: true
-		Length: *
-	
-bacamp:
-	idle: bacamp
-	damaged-idle: bacamp
-		Start: 1
-	make: missmake
-		Length: *
-		Tick: 80
-		Offset: 0,-1
-	bib: mbMISS
-		UseTilesetExtension: true
-		TilesetOverrides:
-			WINTER: TEMPERAT
-			JUNGLE: TEMPERAT			INTERIOR: TEMPERAT
-		Length: *	   
-	flag1start: newflag
-		Start: 0
-		Length: 9
-		Tick: 120
-		ZOffset: -1024
-	flag1: newflag
-		Start: 9
-		Length: 4
-		Tick: 120
-		ZOffset: -1024
+
 		
 hqnew:
 	Inherits: ^scaffold
@@ -266,9 +204,9 @@ hqnew:
 		
 obs:
 	Inherits: ^scaffold
-	idle: obs
+	idle: 
 		Tick: 100
-	active: obs
+	active: 
 		Length: *
 		Tick: 100
 	damaged-active: obsd
@@ -431,12 +369,12 @@ townhall:
 		
 armory:
 	Inherits: ^scaffold
-	idle: armory
+	idle: 
 		Offset: 0,-12
-	damaged-idle: armory
+	damaged-idle: 
 		Start: 1
 		Offset: 0,-12
-	dead: armory
+	dead: 
 		Start: 2
 		Tick: 800
 		Offset: 0,-12
@@ -472,12 +410,12 @@ armory:
 		
 armorygdi:
 	Inherits: ^scaffold
-	idle: armorygdi
+	idle: 
 		Offset: -2,-12
-	damaged-idle: armorygdi
+	damaged-idle: 
 		Start: 1
 		Offset: -2,-12
-	dead: armorygdi
+	dead: 
 		Start: 2
 		Tick: 800
 		Offset: -2,-12
@@ -798,22 +736,6 @@ xltnt3:
 		ZOffset: -25
 		Offset: 0,-6   
 		
-nuk5new:
-	Inherits: ^scaffold
-	idle: nukskin5
-		Start: 14
-	damaged-idle: nukskin5
-		Start: 15
-	dead: nukskin5
-		Start: 16
-		Tick: 800
-	make: nukskin5
-		Length: 14
-		Start: 1
-		Tick: 80
-	bib: mwbib3
-		UseTilesetExtension: true
-		Length: *
 		
 nukenew:
 	Inherits: ^scaffold
@@ -899,13 +821,13 @@ nukxl:
 	   
 		
 trojanhorse:
-	idle: trojanhorse
+	idle: 
 		Start: 0
 		Offset: 0,-14
-	damaged-idle: trojanhorse
+	damaged-idle: 
 		Start: 1
 		Offset: 0,-14
-	dead: trojanhorse
+	dead: 
 		Start: 2
 		Offset: 0,-14
 	make: trojanhorsemake
@@ -916,16 +838,16 @@ trojanhorse:
 
 tribu:
 	Inherits: ^scaffold
-	turretanim: tribu
+	turretanim: 
 		Facings: 32
 		Length: 9
 		Start: 32
 		Tick: 80
 		Offset: 0,-18,0
-	damaged-idle: tribu
+	damaged-idle: 
 		Facings: 32
 		Offset: 0,-18,0
-	idle: tribu
+	idle: 
 		Facings: 32
 		Offset: 0,-18,0
 	dead: tribudead
@@ -974,12 +896,12 @@ tribu:
 		
 procnew:
 	Inherits: ^scaffold
-	idle: procnew
+	idle: 
 		Offset: 2,4
-	damaged-idle: procnew
+	damaged-idle: 
 		Start: 1
 		Offset: 2,4
-	dead: procnew
+	dead: 
 		Start: 2
 		Offset: 2,4
 	make: procnewmake
@@ -1018,13 +940,13 @@ procnew:
 		
 silonew:
 	Inherits: ^scaffold
-	idle: silonew
-	damaged-idle: silonew
+	idle: 
+	damaged-idle: 
 		Start: 5
-	dead: silonew
-	stages: silonew
+	dead: 
+	stages: 
 		Length: 5
-	damaged-stages: silonew
+	damaged-stages: 
 		Start: 5
 		Length: 5
 	make: silonewmake
@@ -1052,20 +974,20 @@ silonew:
 		Start: 12
 		ZOffset: -25
 		
-silotwo:
+barn:
 	Inherits: ^scaffold
-	idle: barn
+	idle: 
 		Offset: 0,-12
-	damaged-idle: barn
+	damaged-idle: 
 		Start: 6
 		Offset: 0,-12
-	dead: barn
+	dead: 
 		Start: 12
 		Offset: 0,-12
-	stages: barn
+	stages: 
 		Length: 6
 		Offset: 0,-12
-	damaged-stages: barn
+	damaged-stages: 
 		Start: 6
 		Length: 6
 		Offset: 0,-12
@@ -1109,16 +1031,16 @@ silotwo:
 
 gtwnew:
 	Inherits: ^scaffold
-	idle: gtwnew
+	idle: 
 		Start: 11
 		Offset: 0,-12
-	damaged-idle: gtwnew
+	damaged-idle: 
 		Start: 12
 		Offset: 0,-12
-	dead: gtwnew
+	dead: 
 		Start: 15
 		Offset: 0,-12
-	make: gtwnew
+	make: 
 		Length: 10
 		Tick: 80
 		Offset: 0,-12
@@ -1140,11 +1062,11 @@ gtwnew:
 		Start: 66
 		Length: 7
 		Facings: 8 
-	idle-overlay: gtwnew
+	idle-overlay: 
 		ZOffset: 1024
 		Start: 13
 		Offset: 0,-12
-	damaged-idle-overlay: gtwnew
+	damaged-idle-overlay: 
 		ZOffset: 1024
 		Start: 14
 		Offset: 0,-12
@@ -1238,18 +1160,18 @@ gunnew:
 		Start: 9
 		ZOffset: -25
 		
-samnew:
+gtairwnew:
 	Inherits: ^scaffold
-	idle: gtairwnew
+	idle: 
 		Start: 23
 		Offset: 0,-12,0
-	damaged-idle: gtairwnew
+	damaged-idle: 
 		Start: 24
 		Offset: 0,-12,0
-	dead: gtairwnew
+	dead: 
 		Start: 25
 		Offset: 0,-12,0
-	make: gtairwnew
+	make: 
 		Length: 23
 		Tick: 80
 		Offset: 0,-12,0
@@ -1264,35 +1186,35 @@ samnew:
 	turretidle: smallaaball
 		Start: 0
 		Facings: 32
-	make1: gtairwnew
+	make1: 
 		Start: 1
 		ZOffset: -25
 		Offset: 0,-12,0
-	make2: gtairwnew
+	make2: 
 		Start: 3
 		ZOffset: -25
 		Offset: 0,-12,0
-	make3: gtairwnew
+	make3: 
 		Start: 5
 		ZOffset: -25
 		Offset: 0,-12,0
-	make4: gtairwnew
+	make4: 
 		Start: 10
 		ZOffset: -25
 		Offset: 0,-12,0
-	make5: gtairwnew
+	make5: 
 		Start: 20
 		ZOffset: -25
 		Offset: 0,-12,0
 		
 barrnew:
 	Inherits: ^scaffold
-	idle: barrnew
+	idle: 
 		Length: 30
 		Tick: 100
-	damaged-idle: barrnew
+	damaged-idle: 
 		Start: 30
-	dead: barrnew
+	dead: 
 		Start: 31
 		Tick: 800
 	make: barrnewmake
@@ -1321,7 +1243,7 @@ barrnew:
 		
 windmill:
 	Inherits: ^scaffold
-	idle: windmill
+	idle: 
 		Length: 20
 		Tick: 100
 		Offset: 0,-5
@@ -1329,7 +1251,7 @@ windmill:
 		Length: 20
 		Tick: 100
 		Offset: 0,-5
-	dead: windmill
+	dead: 
 		Tick: 800
 		Start: 21
 		Offset: 0,-5
@@ -1426,12 +1348,12 @@ ghostmill:
 	make: ironore4
 		Start: 9 
 		
-handew:
+handnew:
 	Inherits: ^scaffold
-	idle: handnew
-	damaged-idle: handnew
+	idle: 
+	damaged-idle: 
 		Start: 1
-	dead: handnew
+	dead: 
 		Start: 2
 		Tick: 800
 	make: handnewmake
@@ -1460,10 +1382,10 @@ handew:
 
 stall:
 	Inherits: ^scaffold
-	idle: stall
-	damaged-idle: stall
+	idle: 
+	damaged-idle: 
 		Start: 1
-	dead: stall
+	dead: 
 		Start: 2
 		Tick: 800
 	make: stallmake
@@ -1822,84 +1744,7 @@ cstlwll:
 			INTERIOR: TEMPERAT
 		Length: *
 		Offset: 0,-2
-		
- 
-cstlgtew:
-	Inherits: ^scaffold
-	idle: cstlgtew
-		Offset: 0,-14,0
-		Start: 0
-		Length: 8
-		Tick: 80
-		ZOffset: 512
-	open: cstlgtew
-		Offset: 0,-14,0
-		Start: 8
-		ZOffset: 512
-	damaged-idle: cstlgtewd
-		Offset: 0,-14,0
-		Start: 0
-		Length: 8
-		Tick: 80
-		ZOffset: 512
-	damaged-open: cstlgtewd
-		Start: 8
-		Offset: 0,-14,0
-		ZOffset: 512
-	dead: cstlgtewd
-		Start: 9
-		Tick: 800
-		Offset: 0,-14,0
-		ZOffset: 512
-	make: cstlgtewmake
-		Length: *
-		Tick: 80
-		Offset: 0,-14,0
-		ZOffset: 512
-	bib: mwbib2
-		UseTilesetExtension: true
-		Length: *
-		Offset: 0,-4,0
-	icon: cstlgtweicon.shp
-		AddExtension: False
-		
-cstlgtns:
-	idle: cstlgtnstop
-		Offset: 9,-14,0
-		Start: 0
-		Length: 8
-		Tick: 80
-		ZOffset: 1024
-	open: cstlgtnstop
-		Offset: 9,-14,0
-		Start: 8
-		ZOffset: 1024
-	damaged-idle: cstlgtnstopd
-		Offset: 9,-14,0
-		Start: 0
-		Length: 8
-		Tick: 80
-		ZOffset: 1024
-	damaged-open: cstlgtnstopd
-		Start: 8
-		Offset: 9,-14,0
-		ZOffset: 1024
-	dead: cstlgtnstop
-		Start: 9
-		Tick: 800
-		Offset: 9,-14,0
-		ZOffset: 1024
-	top: cstlgtns
-		Offset: 9,-14,0
-	damaged-top: cstlgtns
-		Offset: 9,-14,0
-		Start: 1
-	make: cstlgtnsmake
-		Length: *
-		Tick: 80
-		Offset: 9,-14,0
-	icon: cstlgtnsicon.shp
-		AddExtension: False
+	
 		
 wdwll:
 	idle: wdwll
@@ -2046,73 +1891,6 @@ wdwll:
 	scaffsw5: scaffoldSW
 		Start: 5
 	scaffsw6: scaffoldSW
-		Start: 6
-	bricks0: bricks
-		Start: 0
-		ZOffset: 25
-	bricks1: bricks
-		Start: 1
-		ZOffset: 25
-	bricks2: bricks
-		Start: 2
-		ZOffset: 25
-	bricks3: bricks
-		Start: 3
-		ZOffset: 25
-	bricks4: bricks
-		Start: 4
-		ZOffset: 25
-	bricks5: bricks
-		Start: 5
-		ZOffset: 25
-	bricks6: bricks
-		Start: 6
-		ZOffset: 25
-	bricks7: bricks
-		Start: 7
-		ZOffset: 25
-	bricks8: bricks
-		Start: 8
-		ZOffset: 25
-	bricks9: bricks
-		Start: 9
-		ZOffset: 25
-	bricks10: bricks
-		Start: 10
-		ZOffset: 25
-	lumnber0: lumnber
-		Start: 0
-		ZOffset: 25
-	lumnber1: lumnber
-		Start: 1
-		ZOffset: 25
-	lumnber2: lumnber
-		Start: 2
-		ZOffset: 25
-	lumnber3: lumnber
-		Start: 3
-		ZOffset: 25
-	lumnber4: lumnber
-		Start: 4
-		ZOffset: 25
-	lumnber5: lumnber
-		Start: 5
-		ZOffset: 25
-	lumnber6: lumnber
-		Start: 6
-		ZOffset: 25
-	lumnber7: lumnber
-		Start: 7
-		ZOffset: 25
-	lumnber8: lumnber
-		Start: 8
-		ZOffset: 25
-	lumnber9: lumnber
-		Start: 9
-		ZOffset: 25
-	lumnber10: lumnber
-		Start: 10
-		ZOffset: 25
 		
 lodge:
 	Inherits: ^scaffold
@@ -2223,4 +2001,70 @@ herbalist:
 	make6: herbalistmake
 		Start: 5
 		ZOffset: -25
+        
+		
+missnew:
+	idle: techcenternew
+		Offset: 0,-1
+	damaged-idle: techcenternew
+		Start: 1
+		Offset: 0,-1
+	make: missmake
+		Length: *
+		Tick: 80
+		Offset: 0,-1
+	bib: mbMISS
+		UseTilesetExtension: true
+		TilesetOverrides:
+			WINTER: TEMPERAT
+			JUNGLE: TEMPERAT
+			INTERIOR: TEMPERAT
+		Length: *
+		Offset: 0,1
+	icon: missicnh	
+	
+tech1:
+	idle: techbuilding1
+	damaged-idle: techbuilding1
+		Start: 1
+	bib: mwbib2
+		UseTilesetExtension: true
+		Length: *
+	turret: techbuilding1turret
+		Facings: 32
+	muzzle: gunfire2
+		Length: *
+	
+tech1.husk:
+	idle: techbuilding1
+		Start: 2
+	bib: mwbib2
+		UseTilesetExtension: true
+		Length: *
+	
+bacamp:
+	idle: 
+	damaged-idle: 
+		Start: 1
+	make: missmake
+		Length: *
+		Tick: 80
+		Offset: 0,-1
+	bib: mbMISS
+		UseTilesetExtension: true
+		TilesetOverrides:
+			WINTER: TEMPERAT
+			JUNGLE: TEMPERAT
+			INTERIOR: TEMPERAT
+		Length: *	   
+	flag1start: newflag
+		Start: 0
+		Length: 9
+		Tick: 120
+		ZOffset: -1024
+	flag1: newflag
+		Start: 9
+		Length: 4
+		Tick: 120
+		ZOffset: -1024
 	

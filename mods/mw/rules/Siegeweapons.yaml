@@ -33,7 +33,7 @@ MCVNEW:
 	RevealsShroud:
 		Range: 8c0
 	RenderSprites:
-		Image: new2mcv
+		Image: medimcv2
 		PlayerPalette: raplayer
 	WithInfantryBody:
 	MustBeDestroyed:
@@ -69,7 +69,7 @@ MCVNEW:
 MCV2NEW:
 	Inherits@66: MCVNEW
 	RenderSprites:
-		Image: newmcv
+		Image: medimcv
 	Transforms:
 		IntoActor: minifact
 		Offset: -1,-1
@@ -270,7 +270,7 @@ SIEGE3:
 	WithRoof:
 		Sequence: top
 	RenderSprites:
-		Image: siege3
+		Image: sgtw
 		PlayerPalette: raplayer
 	WithInfantryBody:
 		IdleSequences: stand
@@ -405,7 +405,7 @@ SIEGE4:
 			TopLeft: -412, -412
 			BottomRight: 412, 712
 	RenderSprites:
-		Image: siege5
+		Image: bara
 		PlayerPalette: raplayer
 	WithInfantryBody:
 		IdleSequences: stand
@@ -548,9 +548,10 @@ EHARVXL:
 	Health:
 		HP: 65000
 	RenderSprites:
+		Image: eharvnewxl
 		FactionImages:
-			nod: eharvxl
-			gdi: eharvxl
+			nod: eharvnew
+			gdi: eharvnew
 			sul: sulxl
 		PlayerPalette: raplayer
 	AttackFrontal:

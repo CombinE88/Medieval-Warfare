@@ -254,8 +254,8 @@ ENGENEER:
 	AttackFrontal:
 	RenderSprites:
 		FactionImages:
-			nod: engeneer
-			gdi: engeneer
+			nod: baumei
+			gdi: baumei
 			sul: sulengi
 		PlayerPalette: raplayer
 	WithInfantryBody:
@@ -293,7 +293,7 @@ E1NEW:
 		Weapon: Fork
 	AttackFrontal:
 	RenderSprites:
-		Image: e1new
+		Image: newe1
 		PlayerPalette: raplayer
 	WithInfantryBody:
 		DefaultAttackSequence: shoot
@@ -560,7 +560,7 @@ E9NEW:
 		ScanRadius: 5
 		InitialStance: AttackAnything
 	RenderSprites:
-		Image: firmag
+		Image: frmge
 		PlayerPalette: raplayer
 	WithInfantryBody:
 		DefaultAttackSequence: shoot
@@ -1133,8 +1133,8 @@ SIEGERUNNER:
 	RenderSprites:
 		RenderSprites:
 		FactionImages:
-			nod: engeneer
-			gdi: engeneer
+			nod: baumei
+			gdi: baumei
 			sul: sulengi
 		PlayerPalette: raplayer
 	WithInfantryBody:
@@ -1350,11 +1350,11 @@ SHOPPLAYER:
 		Cost: 250
 	RenderSprites:
 		PlayerPalette: raplayer
-		Image: workshoplabor
+		Image: shopworker
 		FactionImages:
-			nod: workshoplabor
-			gdi: workshoplabor
-			sul: sulshoplabor
+			nod: shopworker
+			gdi: shopworker
+			sul: sulshopworker
 	-Selectable:
 	Interactable:
 	WithInfantryBody:
@@ -1749,11 +1749,11 @@ TRANSPORTER:
 		HP: 10000
 	RenderSprites:
 		PlayerPalette: mwcivilianplayer
-		Image: transporter
+		Image: mwcivconst
 		FactionImages:
-			nod: transporter
-			gdi: transporter
-			sul: sultransporter
+			nod: mwcivconst
+			gdi: mwcivconst
+			sul: mwciv9sule
 	Armor:
 		Type: Leather
 	-Selectable:

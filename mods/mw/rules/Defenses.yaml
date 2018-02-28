@@ -155,6 +155,7 @@ SAMNEW:
 	WithDeathAnimation:
 		DeathSequencePalette: raplayer
 	RenderSprites:
+		Image: gtairwnew
 		PlayerPalette: raplayer
 	Valued:
 		Cost: 650
@@ -302,7 +303,7 @@ BATO:
 	WithIdleOverlay:
 		Sequence: overlay
 	RenderSprites:
-		Image: siege4
+		Image: batowgun
 		PlayerPalette: raplayer
 	BodyOrientation:
 		QuantizedFacings: 32

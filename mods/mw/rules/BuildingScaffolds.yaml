@@ -277,7 +277,7 @@ HANDNEW.scaff:
 		Type: Concrete
 	RenderSprites:
 		PlayerPalette: raplayer
-		Image: handew
+		Image: handnew
 	CustomSellValue:
 		Value: 450
 	Valued:
@@ -1060,7 +1060,7 @@ SILOTWO.scaff:
 		Type: Concrete
 	RenderSprites:
 		PlayerPalette: raplayer
-		Image: silotwo
+		Image: barn
 	CustomSellValue:
 		Value: 115
 	Valued:
@@ -1813,7 +1813,7 @@ BATO.scaff:
 		Type: HeavyBuilding
 	RenderSprites:
 		PlayerPalette: raplayer
-		Image: siege4
+		Image: batowgun
 	CustomSellValue:
 		Value: 700
 	Valued:
@@ -1891,7 +1891,7 @@ SAMNEW.scaff:
 		Type: Concrete
 	RenderSprites:
 		PlayerPalette: raplayer
-		Image: samnew
+		Image: gtairwnew
 	CustomSellValue:
 		Value: 325
 	Valued:

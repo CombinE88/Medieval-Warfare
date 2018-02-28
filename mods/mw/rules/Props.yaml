@@ -187,7 +187,7 @@ ORNI.Husk:
 		Range: 10c0
 		Type: CenterPosition
 	RenderSprites:
-		Image: ornito
+		Image: orni
 		PlayerPalette: raplayer
 	KillsSelf:
 		Delay: 25

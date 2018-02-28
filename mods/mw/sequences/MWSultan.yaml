@@ -1,7 +1,7 @@
 #Infantry
-sultransporter:
-	idle: ironore4
-		Start: 9 
+mwciv9sule:
+	idle: sulm4
+		Start: 0
 	stunned: sulm4
 		ZOffset: 125
 		Start: 312
@@ -23,23 +23,23 @@ sultransporter:
 		Length: 8
 		Facings: 8
 		Tick: 100
-	standempty: mwciv9sule
+	standempty: 
 		Start: 146
 		Facings: 8
-	runempty: mwciv9sule
+	runempty: 
 		Start: 0
 		Length: 8
 		Facings: 8
 		Tick: 100
-	panic-standempty: mwciv9sule
+	panic-standempty: 
 		Start: 135
 		Facings: 8
-	panic-runempty: mwciv9sule
+	panic-runempty: 
 		Start: 65
 		Length: 8
 		Facings: 8
 		Tick: 100
-	die1: mwciv9sule
+	die1: 
 		Start: 156
 		Length: 15
 		Tick: 80
@@ -48,16 +48,16 @@ sultransporter:
 		Length: *
 		Tick: 80
 	# poision
-	die3: mwciv9sule
+	die3: 
 		Start: 187
 		Length: 15
 		Tick: 80
 	# ballista
-	die4: mwciv9sule
+	die4: 
 		Start: 203
 		Length: 11
 		Tick: 80
-	die-crushed: e1rot
+	die-crushed: newe1rot
 		Start: 16
 		Length: 4
 		Tick: 1600
@@ -72,33 +72,33 @@ sulengi:
 		Start: 312
 		Length: 2
 		Tick: 200
-	stand: sulengi
+	stand: 
 		Start: 122
 		Facings: 8
-	run: sulengi
+	run: 
 		Start: 0
 		Length: 8
 		Facings: 8
 		Tick: 100
-	runfast: sulengi
+	runfast: 
 		Start: 254
 		Length: 8
 		Facings: 8
 		Tick: 100
-	shoot: sulengi
+	shoot: 
 		Tick: 150
 		Start: 66
 		Length: 7
 		Facings: 8
-	idle1: sulengi
+	idle1: 
 		Tick: 100
 		Start: 190
 		Length: 35
-	idle2: sulengi
+	idle2: 
 		Tick: 100
 		Start: 222
 		Length: 32
-	die1: sulengi
+	die1: 
 		Start: 130
 		Length: 17
 		Tick: 80
@@ -107,16 +107,16 @@ sulengi:
 		Length: *
 		Tick: 80
 	# poision
-	die3: sulengi
+	die3: 
 		Start: 163
 		Length: 15
 		Tick: 80
 	# ballista
-	die4: sulengi
+	die4: 
 		Start: 180
 		Length: 11
 		Tick: 80
-	die-crushed: e1rot
+	die-crushed: newe1rot
 		Start: 16
 		Length: 4
 		Tick: 1600
@@ -128,8 +128,8 @@ sulengi:
 		AddExtension: False
 
 sulfact:
-	idle: ironore4
-		Start: 9
+	idle: sulfact0
+		Start: 0
 	idle0: sulfact0
 		Offset: 0,-4
 	damaged-idle: sulfact0
@@ -244,7 +244,7 @@ sule1:
 		Start: 179
 		Length: 11
 		Tick: 80
-	die-crushed: e1rot
+	die-crushed: newe1rot
 		Start: 16
 		Length: 4
 		Tick: 1600
@@ -305,7 +305,7 @@ sule2:
 		Start: 179
 		Length: 11
 		Tick: 80
-	die-crushed: e1rot
+	die-crushed: newe1rot
 		Start: 16
 		Length: 4
 		Tick: 1600
@@ -361,7 +361,7 @@ sule3:
 		Start: 179
 		Length: 11
 		Tick: 80
-	die-crushed: e1rot
+	die-crushed: newe1rot
 		Start: 16
 		Length: 4
 		Tick: 1600
@@ -414,7 +414,7 @@ sule4:
 		Start: 179
 		Length: 11
 		Tick: 80
-	die-crushed: e1rot
+	die-crushed: newe1rot
 		Start: 16
 		Length: 4
 		Tick: 1600
@@ -462,7 +462,7 @@ sule5:
 		Start: 179
 		Length: 11
 		Tick: 80
-	die-crushed: e1rot
+	die-crushed: newe1rot
 		Start: 16
 		Length: 4
 		Tick: 1600
@@ -545,7 +545,7 @@ sule6:
 		Start: 180
 		Length: 11
 		Tick: 80
-	die-crushed: e1rot
+	die-crushed: newe1rot
 		Start: 16
 		Length: 4
 		Tick: 1600
@@ -599,7 +599,7 @@ sulm1:
 		Start: 179
 		Length: 11
 		Tick: 80
-	die-crushed: e1rot
+	die-crushed: newe1rot
 		Start: 16
 		Length: 4
 		Tick: 1600
@@ -655,7 +655,7 @@ sulm1skelet:
 		Start: 202
 		Length: 20
 		Tick: 80
-	die-crushed: e1rot
+	die-crushed: newe1rot
 		Start: 16
 		Length: 4
 		Tick: 1600
@@ -785,7 +785,7 @@ sulm4:
 		Start: 179
 		Length: 11
 		Tick: 80
-	die-crushed: e1rot
+	die-crushed: newe1rot
 		Start: 16
 		Length: 4
 		Tick: 1600
@@ -1451,22 +1451,22 @@ sularray:
 		Start: 7
 		ZOffset: -25
 		Offset: 0,-12
-        
+		
 sulminaret:
 	Inherits: ^scaffold
 	idle: 
 		Start: 21
-        Offset: 12,-37
+		Offset: 12,-37
 	damaged-idle: 
 		Start: 22
-        Offset: 12,-37
+		Offset: 12,-37
 	dead: 
 		Start: 23
 		Tick: 800
-        Offset: 12,-37
+		Offset: 12,-37
 	make: 
 		Length: 20
-        Offset: 12,-37
+		Offset: 12,-37
 		Tick: 80
 	icon: sulminareticon.shp
 		AddExtension: False
@@ -1482,44 +1482,44 @@ sulminaret:
 	make1: 
 		Start: 0
 		ZOffset: -25
-        Offset: 12,-37
+		Offset: 12,-37
 	make2: 
 		Start: 5
 		ZOffset: -25
-        Offset: 12,-37
+		Offset: 12,-37
 	make3: 
 		Start: 10
 		ZOffset: -25
-        Offset: 12,-37
+		Offset: 12,-37
 	make4: 
 		Start: 13
 		ZOffset: -25
-        Offset: 12,-37
+		Offset: 12,-37
 	make5: 
 		Start: 16
 		ZOffset: -25
-        Offset: 12,-37
+		Offset: 12,-37
 	make6: 
 		Start: 18
 		ZOffset: -25
-        Offset: 12,-37
-        
+		Offset: 12,-37
+		
 sulcnshmbr:
 	Inherits: ^sulscaffold
 	idle: 
 		Start: 6
-        Offset: 0,-12
+		Offset: 0,-12
 	damaged-idle: 
 		Start: 7
-        Offset: 0,-12
+		Offset: 0,-12
 	dead: 
 		Start: 8
 		Tick: 800
-        Offset: 0,-12
+		Offset: 0,-12
 	make: 
 		Length: 6
 		Tick: 80
-        Offset: 0,-12
+		Offset: 0,-12
 	bib: mwbib2
 		UseTilesetExtension: true
 		Length: *
@@ -1528,27 +1528,27 @@ sulcnshmbr:
 	make1: 
 		Start: 0
 		ZOffset: -25
-        Offset: 0,-12
+		Offset: 0,-12
 	make2: 
 		Start: 1
 		ZOffset: -25
-        Offset: 0,-12
+		Offset: 0,-12
 	make3: 
 		Start: 2
 		ZOffset: -25
-        Offset: 0,-12
+		Offset: 0,-12
 	make4: 
 		Start: 3
 		ZOffset: -25
-        Offset: 0,-12
+		Offset: 0,-12
 	make5: 
 		Start: 4
 		ZOffset: -25
-        Offset: 0,-12
+		Offset: 0,-12
 	make6: 
 		Start: 5
 		ZOffset: -25
-        Offset: 0,-12
+		Offset: 0,-12
 
 		
 #Defenses
@@ -1609,11 +1609,11 @@ sulgtw:
 		ZOffset: 125
 		Start: 14
 		Offset: 0,-12
-	archgtw: sulgtw
+	archgtw: 
 		Start: 13
 		Offset: 0, -25
 		ZOffset: 325
-	damaged-archgtw: sulgtw
+	damaged-archgtw: 
 		Start: 14
 		Offset: 0, -25
 		ZOffset: 325
@@ -2243,7 +2243,7 @@ icon:
 	sulb2iconsmall: sulb2iconsmall.shp
 	sulspballiconsmall: sulspballiconsmall.shp
 	sulturnxlicon: sulturnxlicon.shp
-    
+	
 #Civilians
 
 sulciv1:
@@ -2285,7 +2285,7 @@ sulciv1:
 		Start: 203
 		Length: 11
 		Tick: 80
-	die-crushed: e1rot
+	die-crushed: newe1rot
 		Start: 16
 		Length: 4
 		Tick: 1600
@@ -2332,7 +2332,7 @@ sulciv1:
 		Length: 34
 		Tick: 100
 		Facings: 8
-        
+		
 sulciv2:
 	stunned: sulm4
 		Start: 312
@@ -2372,7 +2372,7 @@ sulciv2:
 		Start: 203
 		Length: 11
 		Tick: 80
-	die-crushed: e1rot
+	die-crushed: newe1rot
 		Start: 16
 		Length: 4
 		Tick: 1600
@@ -2419,7 +2419,7 @@ sulciv2:
 		Length: 34
 		Tick: 100
 		Facings: 8
-        
+		
 sulciv3:
 	stunned: sulm4
 		Start: 312
@@ -2459,7 +2459,7 @@ sulciv3:
 		Start: 203
 		Length: 11
 		Tick: 80
-	die-crushed: e1rot
+	die-crushed: newe1rot
 		Start: 16
 		Length: 4
 		Tick: 1600
@@ -2506,7 +2506,7 @@ sulciv3:
 		Length: 34
 		Tick: 100
 		Facings: 8
-        
+		
 sulciv4:
 	stunned: sulm4
 		Start: 312
@@ -2546,7 +2546,7 @@ sulciv4:
 		Start: 203
 		Length: 11
 		Tick: 80
-	die-crushed: e1rot
+	die-crushed: newe1rot
 		Start: 16
 		Length: 4
 		Tick: 1600
@@ -2593,7 +2593,7 @@ sulciv4:
 		Length: 34
 		Tick: 100
 		Facings: 8
-        
+		
 sulciv5:
 	stunned: sulm4
 		Start: 312
@@ -2633,7 +2633,7 @@ sulciv5:
 		Start: 203
 		Length: 11
 		Tick: 80
-	die-crushed: e1rot
+	die-crushed: newe1rot
 		Start: 16
 		Length: 4
 		Tick: 1600
@@ -2680,7 +2680,7 @@ sulciv5:
 		Length: 34
 		Tick: 100
 		Facings: 8
-        
+		
 sulciv6:
 	stunned: sulm4
 		Start: 312
@@ -2720,7 +2720,7 @@ sulciv6:
 		Start: 203
 		Length: 11
 		Tick: 80
-	die-crushed: e1rot
+	die-crushed: newe1rot
 		Start: 16
 		Length: 4
 		Tick: 1600
@@ -2767,7 +2767,7 @@ sulciv6:
 		Length: 34
 		Tick: 100
 		Facings: 8
-        
+		
 sulciv7:
 	stunned: sulm4
 		Start: 312
@@ -2807,7 +2807,7 @@ sulciv7:
 		Start: 203
 		Length: 11
 		Tick: 80
-	die-crushed: e1rot
+	die-crushed: newe1rot
 		Start: 16
 		Length: 4
 		Tick: 1600
@@ -2854,7 +2854,7 @@ sulciv7:
 		Length: 34
 		Tick: 100
 		Facings: 8
-        
+		
 sulciv8:
 	stunned: sulm4
 		Start: 312
@@ -2894,7 +2894,7 @@ sulciv8:
 		Start: 203
 		Length: 11
 		Tick: 80
-	die-crushed: e1rot
+	die-crushed: newe1rot
 		Start: 16
 		Length: 4
 		Tick: 1600
@@ -2941,7 +2941,7 @@ sulciv8:
 		Length: 34
 		Tick: 100
 		Facings: 8
-        
+		
 sulciv9:
 	stunned: sulm4
 		Start: 312
@@ -2981,7 +2981,7 @@ sulciv9:
 		Start: 203
 		Length: 11
 		Tick: 80
-	die-crushed: e1rot
+	die-crushed: newe1rot
 		Start: 16
 		Length: 4
 		Tick: 1600
@@ -3028,7 +3028,7 @@ sulciv9:
 		Length: 34
 		Tick: 100
 		Facings: 8
-        
+		
 sulciv10:
 	stunned: sulm4
 		Start: 312
@@ -3068,7 +3068,7 @@ sulciv10:
 		Start: 203
 		Length: 11
 		Tick: 80
-	die-crushed: e1rot
+	die-crushed: newe1rot
 		Start: 16
 		Length: 4
 		Tick: 1600
@@ -3115,7 +3115,7 @@ sulciv10:
 		Length: 34
 		Tick: 100
 		Facings: 8
-        
+		
 sulciv11:
 	stunned: sulm4
 		Start: 312
@@ -3155,7 +3155,7 @@ sulciv11:
 		Start: 203
 		Length: 11
 		Tick: 80
-	die-crushed: e1rot
+	die-crushed: newe1rot
 		Start: 16
 		Length: 4
 		Tick: 1600

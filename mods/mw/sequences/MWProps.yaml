@@ -60,11 +60,11 @@ decor9:
 		Start: 1
 		
 fireplace:
-	idle: fireplace
+	idle: 
 		Start: 1
 		Length: 9 
 		Tick: 140
-	open: fireplace
+	open: 
 		Start: 10
 		Length: 28
 		Tick: 80
