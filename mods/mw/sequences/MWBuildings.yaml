@@ -1,12 +1,4 @@
-bacamp.husk:
-	idle: bacamp
-		Start: 2
-	bib: mbMISS
-		UseTilesetExtension: true
-		TilesetOverrides:
-			WINTER: TEMPERAT
-			JUNGLE: TEMPERAT			INTERIOR: TEMPERAT
-		Length: *
+
 		
 newfact:
 	idle: kingfact0
@@ -1891,6 +1883,7 @@ wdwll:
 	scaffsw5: scaffoldSW
 		Start: 5
 	scaffsw6: scaffoldSW
+		Start: 6
 		
 lodge:
 	Inherits: ^scaffold
@@ -2068,3 +2061,13 @@ bacamp:
 		Tick: 120
 		ZOffset: -1024
 	
+bacamp.husk:
+	idle: bacamp
+		Start: 2
+	bib: mbMISS
+		UseTilesetExtension: true
+		TilesetOverrides:
+			WINTER: TEMPERAT
+			JUNGLE: TEMPERAT
+			INTERIOR: TEMPERAT
+		Length: *

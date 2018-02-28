@@ -550,8 +550,8 @@ EHARVXL:
 	RenderSprites:
 		Image: eharvnewxl
 		FactionImages:
-			nod: eharvnew
-			gdi: eharvnew
+			nod: eharvnewxl
+			gdi: eharvnewxl
 			sul: sulxl
 		PlayerPalette: raplayer
 	AttackFrontal:

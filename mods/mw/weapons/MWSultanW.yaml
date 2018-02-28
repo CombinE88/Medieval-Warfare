@@ -357,12 +357,12 @@ DualSiegeBalista:
 			Leather: 100
 			Light: 80
 			Heavy: 80
-			Concrete: 80
+			Concrete: 110
 			Knight: 65
 			LightCavalry: 120
 			MediumCavalry: 90
 			HeavyCavalry: 85
-			HeavyBuilding: 100
+			HeavyBuilding: 133
 			Spectral: 40
 		DamageTypes: Prone50Percent, BallistaDeath
 	Warhead@2Eff: CreateEffect

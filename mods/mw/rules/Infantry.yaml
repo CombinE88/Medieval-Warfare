@@ -351,9 +351,6 @@ E2NEW:
 		Type: Light
 	Voiced:
 		VoiceSet: NodPikeVoice
-	Explodes:
-		Weapon: KilledPike
-		EmptyWeapon: KilledPike
 	PersonValued:
 		ActorCount: 1
 		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
@@ -537,7 +534,7 @@ E9NEW:
 	RevealsShroud:
 		Range: 6c0
 	Valued:
-		Cost: 350
+		Cost: 375
 	Tooltip:
 		Name: Fire Mage
 	Buildable:
@@ -550,7 +547,7 @@ E9NEW:
 	Mobile:
 		Speed: 56
 	Health:
-		HP: 15000
+		HP: 16000
 	Armament@Ground:
 		Weapon: magefire
 		LocalOffset: 541,-50,256
@@ -794,7 +791,7 @@ RMBONEW:
 	Inherits@SnakeStunnable: ^SnakeStunnable
 	Inherits@GrimReanimatable: ^GrimReanimatable
 	Valued:
-		Cost: 450
+		Cost: 475
 	Tooltip:
 		Name: Paladin
 	Buildable:
@@ -805,9 +802,9 @@ RMBONEW:
 		Queue: MInfantry.GDI
 		#BuildDuration: 250
 	Mobile:
-		Speed: 45
+		Speed: 40
 	Health:
-		HP: 20750
+		HP: 19000
 	Armament:
 		Weapon: paladingun
 		MuzzleSequence: muzzle

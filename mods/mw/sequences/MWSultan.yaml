@@ -942,7 +942,7 @@ sulhall:
 		Offset: 0,-12
 
 sulbarr:
-	Inherits: ^sulscaffold
+	Inherits: ^scaffold
 	idle: 
 		Start: 29
 	damaged-idle: 
@@ -975,7 +975,7 @@ sulbarr:
 		ZOffset: -25	   
 		
 sulnuke:
-	Inherits: ^sulscaffold
+	Inherits: ^scaffold
 	idle: 
 		Start: 19
 	damaged-idle: 
@@ -1011,7 +1011,7 @@ sulnuke:
 		ZOffset: -25
 		
 sulnuk2:
-	Inherits: ^sulscaffold
+	Inherits: ^scaffold
 	idle: 
 		Start: 19
 		Offset: 0,-15
@@ -1058,7 +1058,7 @@ sulnuk2:
  
 	
 sulmill:
-	Inherits: ^sulscaffold
+	Inherits: ^scaffold
 	idle: 
 		Start: 0
 		Length: 19
@@ -1104,7 +1104,7 @@ sulmill:
 		ZOffset: -25
 		
 sulmystic:
-	Inherits: ^sulscaffold
+	Inherits: ^scaffold
 	idle: 
 		Start: 29
 		Offset: 12,-24,0
@@ -1151,7 +1151,7 @@ sulmystic:
 		
 		
 sulcastle:
-	Inherits: ^sulscaffold
+	Inherits: ^scaffold
 	idle: 
 		Start: 25
 		Offset: 0,-18
@@ -1243,7 +1243,7 @@ sulcastle:
 		Offset: 0,-18
 		
 sultow1:
-	Inherits: ^sulscaffold
+	Inherits: ^scaffold
 	idle: 
 		Start: 28
 		Offset: 0, -36
@@ -1271,7 +1271,7 @@ sultow1:
 		AddExtension: False 
 		
 sultow2:
-	Inherits: ^sulscaffold
+	Inherits: ^scaffold
 	idle: 
 		Start: 28
 		Offset: 0, -36
@@ -1299,7 +1299,7 @@ sultow2:
 		AddExtension: False
 		
 sultow3:
-	Inherits: ^sulscaffold
+	Inherits: ^scaffold
 	idle: 
 		Start: 28
 		Offset: 0, -36
@@ -1327,7 +1327,7 @@ sultow3:
 		AddExtension: False
 		
 sultow4:
-	Inherits: ^sulscaffold
+	Inherits: ^scaffold
 	idle: 
 		Start: 28
 		Offset: 0, -36
@@ -1361,7 +1361,7 @@ sultow4:
 		AddExtension: False
 		
 sulfix:
-	Inherits: ^sulscaffold
+	Inherits: ^scaffold
 	idle: 
 		Start: 30
 		Offset: 0, -12
@@ -1407,7 +1407,7 @@ sulfix:
 		Offset: 0, -12
 		
 sularray:
-	Inherits: ^sulscaffold
+	Inherits: ^scaffold
 	idle: 
 		Start: 9
 		Offset: 0,-12
@@ -1505,7 +1505,7 @@ sulminaret:
 		Offset: 12,-37
 		
 sulcnshmbr:
-	Inherits: ^sulscaffold
+	Inherits: ^scaffold
 	idle: 
 		Start: 6
 		Offset: 0,-12
@@ -1554,7 +1554,7 @@ sulcnshmbr:
 #Defenses
 
 sulgtw:
-	Inherits: ^sulscaffold
+	Inherits: ^scaffold
 	idle: 
 		Start: 11
 		Offset: 0,-12
@@ -1992,208 +1992,7 @@ sulspball:
 		Length: *
 	icon: sulspballicon.shp
 		AddExtension: False		
-		
-^sulscaffold:
-	scaffn0: scaffoldN
-		Start: 0
-		ZOffset: -50
-	scaffn1: scaffoldN
-		Start: 1
-		ZOffset: -50
-	scaffn2: scaffoldN
-		Start: 2
-		ZOffset: -50
-	scaffn3: scaffoldN
-		Start: 3
-		ZOffset: -50
-	scaffn4: scaffoldN
-		Start: 4
-		ZOffset: -50
-	scaffn5: scaffoldN
-		Start: 5
-		ZOffset: -50
-	scaffn6: scaffoldN
-		Start: 6
-		ZOffset: -50
-	scaffs0: scaffoldS
-		Start: 0
-	scaffs1: scaffoldS
-		Start: 1
-	scaffs2: scaffoldS
-		Start: 2
-	scaffs3: scaffoldS
-		Start: 3
-	scaffs4: scaffoldS
-		Start: 4
-	scaffs5: scaffoldS
-		Start: 5
-	scaffs6: scaffoldS
-		Start: 6
-	scaffw0: scaffoldW
-		Start: 0
-	scaffw1: scaffoldW
-		Start: 1
-	scaffw2: scaffoldW
-		Start: 2
-	scaffw3: scaffoldW
-		Start: 3
-	scaffw4: scaffoldW
-		Start: 4
-	scaffw5: scaffoldW
-		Start: 5
-	scaffw6: scaffoldW
-		Start: 6
-	scaffe0: scaffoldE
-		Start: 0
-	scaffe1: scaffoldE
-		Start: 1
-	scaffe2: scaffoldE
-		Start: 2
-	scaffe3: scaffoldE
-		Start: 3
-	scaffe4: scaffoldE
-		Start: 4
-	scaffe5: scaffoldE
-		Start: 5
-	scaffe6: scaffoldE
-		Start: 6
-	scaffne0: scaffoldNE
-		Start: 0
-		ZOffset: -50
-	scaffne1: scaffoldNE
-		Start: 1
-		ZOffset: -50
-	scaffne2: scaffoldNE
-		Start: 2
-		ZOffset: -50
-	scaffne3: scaffoldNE
-		Start: 3
-		ZOffset: -50
-	scaffne4: scaffoldNE
-		Start: 4
-		ZOffset: -50
-	scaffne5: scaffoldNE
-		Start: 5
-		ZOffset: -50
-	scaffne6: scaffoldNE
-		Start: 6
-		ZOffset: -50
-	scaffnw0: scaffoldNW
-		Start: 0
-		ZOffset: -50
-	scaffnw1: scaffoldNW
-		Start: 1
-		ZOffset: -50
-	scaffnw2: scaffoldNW
-		Start: 2
-		ZOffset: -50
-	scaffnw3: scaffoldNW
-		Start: 3
-		ZOffset: -50
-	scaffnw4: scaffoldNW
-		Start: 4
-		ZOffset: -50
-	scaffnw5: scaffoldNW
-		Start: 5
-		ZOffset: -50
-	scaffnw6: scaffoldNW
-		Start: 6
-		ZOffset: -50
-	scaffse0: scaffoldSE
-		Start: 0
-	scaffse1: scaffoldSE
-		Start: 1
-	scaffse2: scaffoldSE
-		Start: 2
-	scaffse3: scaffoldSE
-		Start: 3
-	scaffse4: scaffoldSE
-		Start: 4
-	scaffse5: scaffoldSE
-		Start: 5
-	scaffse6: scaffoldSE
-		Start: 6
-	scaffsw0: scaffoldSW
-		Start: 0
-	scaffsw1: scaffoldSW
-		Start: 1
-	scaffsw2: scaffoldSW
-		Start: 2
-	scaffsw3: scaffoldSW
-		Start: 3
-	scaffsw4: scaffoldSW
-		Start: 4
-	scaffsw5: scaffoldSW
-		Start: 5
-	scaffsw6: scaffoldSW
-		Start: 6
-	bricks0: sulbricks
-		Start: 0
-		ZOffset: 25
-	bricks1: sulbricks
-		Start: 1
-		ZOffset: 25
-	bricks2: sulbricks
-		Start: 2
-		ZOffset: 25
-	bricks3: sulbricks
-		Start: 3
-		ZOffset: 25
-	bricks4: sulbricks
-		Start: 4
-		ZOffset: 25
-	bricks5: sulbricks
-		Start: 5
-		ZOffset: 25
-	bricks6: sulbricks
-		Start: 6
-		ZOffset: 25
-	bricks7: sulbricks
-		Start: 7
-		ZOffset: 25
-	bricks8: sulbricks
-		Start: 8
-		ZOffset: 25
-	bricks9: sulbricks
-		Start: 9
-		ZOffset: 25
-	bricks10: sulbricks
-		Start: 10
-		ZOffset: 25
-	lumnber0: sulbricks2
-		Start: 0
-		ZOffset: 25
-	lumnber1: sulbricks2
-		Start: 1
-		ZOffset: 25
-	lumnber2: sulbricks2
-		Start: 2
-		ZOffset: 25
-	lumnber3: sulbricks2
-		Start: 3
-		ZOffset: 25
-	lumnber4: sulbricks2
-		Start: 4
-		ZOffset: 25
-	lumnber5: sulbricks2
-		Start: 5
-		ZOffset: 25
-	lumnber6: sulbricks2
-		Start: 6
-		ZOffset: 25
-	lumnber7: sulbricks2
-		Start: 7
-		ZOffset: 25
-	lumnber8: sulbricks2
-		Start: 8
-		ZOffset: 25
-	lumnber9: sulbricks2
-		Start: 9
-		ZOffset: 25
-	lumnber10: sulbricks2
-		Start: 10
-		ZOffset: 25
-		
+	
 #misc
 
 smbllboltdown:	 

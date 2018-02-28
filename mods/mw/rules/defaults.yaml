@@ -505,71 +505,6 @@
 		Condition: cloak-force-disabled
 		ValidDamageStates: Critical
 
-^Vehicle:
-	Inherits@1: ^ExistsInWorld
-	Inherits@3: ^SpriteActor
-	Huntable:
-	Mobile:
-		Crushes: crate
-		TerrainSpeeds:
-			Clear: 80
-			Rough: 50
-			Road: 100
-			Tiberium: 60
-			BlueTiberium: 60
-			Crops: 75
-			Wood: 75
-			Loot: 75
-			Beach: 50
-			Corruption: 80
-		TurnSpeed: 5
-	SelectionDecorations:
-	WithSpriteControlGroupDecoration:
-	Selectable:
-		Bounds: 24,24
-	Targetable:
-		TargetTypes: Ground, Vehicle
-	Repairable:
-	Passenger:
-		CargoType: Vehicle
-	ActorLostNotification:
-	HiddenUnderFog:
-	AttackMove:
-	DrawLineToTarget:
-	WithDamageOverlay:
-	WithFacingSpriteBody:
-	Guard:
-	Guardable:
-	Tooltip:
-		GenericName: Vehicle
-	MustBeDestroyed:
-	Voiced:
-		VoiceSet: VehicleVoice
-	BodyOrientation:
-		UseClassicFacingFudge: True
-	HitShape:
-	EditorTilesetFilter:
-		Categories: Vehicle
-
-^Tank:
-	Inherits: ^Vehicle
-	Mobile:
-		Crushes: wall, crate, infantry
-		TerrainSpeeds:
-			Clear: 80
-			Rough: 70
-			Road: 100
-			Tiberium: 60
-			BlueTiberium: 60
-			Crops: 75
-			Wood: 75
-			Loot: 75
-			Beach: 70
-			Corruption: 80
-		TurnSpeed: 5
-	Tooltip:
-		GenericName: Tank
-
 ^Helicopter:
 	Inherits@1: ^ExistsInWorld
 	Inherits@3: ^SpriteActor
@@ -669,27 +604,11 @@
 	Passenger:
 		CargoType: Infantry
 	HiddenUnderFog:
-	DamagedByTerrain:
-		Terrain: Tiberium, BlueTiberium
-		Damage: 2
-		DamageInterval: 16
-		DamageTypes: TiberiumDeath
-		RequiresCondition: !hazmatsuits
-	GrantConditionOnPrerequisite@BIO:
-		Condition: hazmatsuits
-		Prerequisites: bio
-	WithDecoration@HAZMAT:
-		Image: pips
-		Sequence: pip-hazmat
-		ReferencePoint: Bottom, Right
-		RequiresCondition: hazmatsuits
 	ActorLostNotification:
 	Crushable:
 		WarnProbability: 70
 		CrushSound: squish2.aud
 	Guardable:
-	DetectCloaked:
-		Range: 2c0
 	DeathSounds@NORMAL:
 		DeathTypes: DefaultDeath, BulletDeath, SmallExplosionDeath, ExplosionDeath
 	DeathSounds@BURNED:
@@ -705,24 +624,6 @@
 			Radius: 128
 	EditorTilesetFilter:
 		Categories: Infantry
-
-^Soldier:
-	Inherits: ^Infantry
-	MustBeDestroyed:
-	Tooltip:
-		GenericName: Soldier
-	Guard:
-	AutoTarget:
-		ScanRadius: 4
-	TakeCover:
-		SpeedModifier: 60
-		DamageModifiers:
-			Prone50Percent: 50
-		DamageTriggers: TriggerProne
-		ProneOffset: 400,0,0
-	WithInfantryBody:
-		IdleSequences: idle1, idle2
-		StandSequences: stand, stand2
 
 ^CivInfantry:
 	Inherits: ^Infantry
@@ -753,70 +654,6 @@
 	EditorTilesetFilter:
 		Categories: Civilian infantry
 
-^DINO:
-	Inherits@1: ^ExistsInWorld
-	Inherits@2: ^SpriteActor
-	Huntable:
-	Health:
-		HP: 1000
-	Armor:
-		Type: Wood
-	Buildable:
-		Queue: Biolab
-		BuildPaletteOrder: 50
-		Prerequisites: ~disabled
-	Valued:
-		Cost: 1000
-	Tooltip:
-		Name: Dinosaur
-	RevealsShroud:
-		Range: 6c0
-	Mobile:
-		Crushes: crate
-		Speed: 113
-		TerrainSpeeds:
-			Clear: 90
-			Rough: 80
-			Road: 100
-			Tiberium: 70
-			BlueTiberium: 70
-			Crops: 75
-			Wood: 75
-			Loot: 75
-			Beach: 80
-			Corruption: 80
-		Voice: Move
-	SelectionDecorations:
-	WithSpriteControlGroupDecoration:
-	Selectable:
-		Bounds: 24,24
-	Targetable:
-		TargetTypes: Ground, Creep
-	HiddenUnderFog:
-	RenderSprites:
-		Palette: terrain
-	QuantizeFacingsFromSequence:
-		Sequence: stand
-	WithInfantryBody:
-		DefaultAttackSequence: attack
-	WithDeathAnimation:
-		UseDeathTypeSuffix: false
-	AutoTarget:
-		ScanRadius: 4
-	AttackMove:
-		Voice: Attack
-	AttackFrontal:
-		Voice: Attack
-	DrawLineToTarget:
-	DeathSounds:
-	Voiced:
-		VoiceSet: DinoVoice
-	HitShape:
-		Type: Circle
-			Radius: 128
-	EditorTilesetFilter:
-		Categories: Critter
-
 ^Plane:
 	Inherits@1: ^ExistsInWorld
 	Inherits@2: ^SpriteActor
@@ -838,34 +675,6 @@
 		CruiseAltitude: 2560
 	EditorTilesetFilter:
 		Categories: Aircraft
-
-^Ship:
-	Inherits@1: ^ExistsInWorld
-	Inherits@3: ^SpriteActor
-	Huntable:
-	Mobile:
-		Crushes: crate
-		TerrainSpeeds:
-			Water: 100
-	SelectionDecorations:
-	WithSpriteControlGroupDecoration:
-	Selectable:
-	Targetable:
-		TargetTypes: Ground, Water
-	HiddenUnderFog:
-	ActorLostNotification:
-	AttackMove:
-	DrawLineToTarget:
-	WithDamageOverlay:
-	Guard:
-	Guardable:
-	Tooltip:
-		GenericName: Ship
-	Voiced:
-		VoiceSet: VehicleVoice
-	HitShape:
-	EditorTilesetFilter:
-		Categories: Naval
 
 ^Building:
 	Inherits@1: ^ExistsInWorld
@@ -2340,6 +2149,7 @@
 		Offset: -512,512,0
 		RequiresCondition: Construct >= 21
 
+
 ^2x3SITE:
 	Inherits: ^ConstructionSite
 	Inherits@HitShape: ^2x3Shape
@@ -2487,7 +2297,76 @@
 		Palette: mwcivilian
 		Offset: -1224,512,0
 		RequiresCondition: Construct >= 21
-
+	WithIdleOverlay@W0:
+		Sequence: scaffw0
+		Palette: mwcivilian
+		Offset: -200,-512,0
+		RequiresCondition: Construct < 3
+	WithIdleOverlay@E0:
+		Sequence: scaffe0
+		Palette: mwcivilian
+		Offset: -200,512,0
+		RequiresCondition: Construct < 3
+	WithIdleOverlay@W1:
+		Sequence: scaffw1
+		Palette: mwcivilian
+		Offset: -200,-512,0
+		RequiresCondition: Construct >= 3 && Construct < 5
+	WithIdleOverlay@E1:
+		Sequence: scaffe1
+		Palette: mwcivilian
+		Offset: -200,512,0
+		RequiresCondition: Construct >= 3 && Construct < 5
+	WithIdleOverlay@W2:
+		Sequence: scaffw2
+		Palette: mwcivilian
+		Offset: -200,-512,0
+		RequiresCondition: Construct >= 5 && Construct < 9
+	WithIdleOverlay@E2:
+		Sequence: scaffe2
+		Palette: mwcivilian
+		Offset: -200,512,0
+		RequiresCondition: Construct >= 5 && Construct < 9
+	WithIdleOverlay@W3:
+		Sequence: scaffw3
+		Palette: mwcivilian
+		Offset: -200,-512,0
+		RequiresCondition: Construct >= 9 && Construct < 13
+	WithIdleOverlay@E3:
+		Sequence: scaffe3
+		Palette: mwcivilian
+		Offset: -200,512,0
+		RequiresCondition: Construct >= 9 && Construct < 13
+	WithIdleOverlay@W4:
+		Sequence: scaffw4
+		Palette: mwcivilian
+		Offset: -200,-512,0
+		RequiresCondition: Construct >= 13 && Construct < 17
+	WithIdleOverlay@E4:
+		Sequence: scaffe4
+		Palette: mwcivilian
+		Offset: -200,512,0
+		RequiresCondition: Construct >= 13 && Construct < 17
+	WithIdleOverlay@W5:
+		Sequence: scaffw5
+		Palette: mwcivilian
+		Offset: -200,-512,0
+		RequiresCondition: Construct >= 17 && Construct < 21
+	WithIdleOverlay@E5:
+		Sequence: scaffe5
+		Palette: mwcivilian
+		Offset: -200,512,0
+		RequiresCondition: Construct >= 17 && Construct < 21
+	WithIdleOverlay@W6:
+		Sequence: scaffw6
+		Palette: mwcivilian
+		Offset: -200,-512,0
+		RequiresCondition: Construct >= 21
+	WithIdleOverlay@E6:
+		Sequence: scaffe6
+		Palette: mwcivilian
+		Offset: -200,512,0
+		RequiresCondition: Construct >= 21
 
 ^3x2SITE:
 	Inherits: ^ConstructionSite
@@ -2636,7 +2515,77 @@
 		Palette: mwcivilian
 		Offset: -512,1024,0
 		RequiresCondition: Construct >= 21
-
+	WithIdleOverlay@N0:
+		Sequence: scaffn0
+		Palette: mwcivilian
+		Offset: 512,0,0
+		RequiresCondition: Construct < 3
+	WithIdleOverlay@S0:
+		Sequence: scaffs0
+		Palette: mwcivilian
+		Offset: -512,0,0
+		RequiresCondition: Construct < 3
+	WithIdleOverlay@N1:
+		Sequence: scaffn1
+		Palette: mwcivilian
+		Offset: 512,0,0
+		RequiresCondition: Construct >= 3 && Construct < 5
+	WithIdleOverlay@S1:
+		Sequence: scaffs1
+		Palette: mwcivilian
+		Offset: -512,0,0
+		RequiresCondition: Construct >= 3 && Construct < 5
+	WithIdleOverlay@N2:
+		Sequence: scaffn2
+		Palette: mwcivilian
+		Offset: 512,0,0
+		RequiresCondition: Construct >= 5 && Construct < 9
+	WithIdleOverlay@S2:
+		Sequence: scaffs2
+		Palette: mwcivilian
+		Offset: -512,0,0
+		RequiresCondition: Construct >= 5 && Construct < 9
+	WithIdleOverlay@N3:
+		Sequence: scaffn3
+		Palette: mwcivilian
+		Offset: 512,0,0
+		RequiresCondition: Construct >= 9 && Construct < 13
+	WithIdleOverlay@S3:
+		Sequence: scaffs3
+		Palette: mwcivilian
+		Offset: -512,0,0
+		RequiresCondition: Construct >= 9 && Construct < 13
+	WithIdleOverlay@N4:
+		Sequence: scaffn4
+		Palette: mwcivilian
+		Offset: 512,0,0
+		RequiresCondition: Construct >= 13 && Construct < 17
+	WithIdleOverlay@S4:
+		Sequence: scaffs4
+		Palette: mwcivilian
+		Offset: -512,0,0
+		RequiresCondition: Construct >= 13 && Construct < 17
+	WithIdleOverlay@N5:
+		Sequence: scaffn5
+		Palette: mwcivilian
+		Offset: 512,0,0
+		RequiresCondition: Construct >= 17 && Construct < 21
+	WithIdleOverlay@S5:
+		Sequence: scaffs5
+		Palette: mwcivilian
+		Offset: -512,0,0
+		RequiresCondition: Construct >= 17 && Construct < 21
+	WithIdleOverlay@N6:
+		Sequence: scaffn6
+		Palette: mwcivilian
+		Offset: 512,0,0
+		RequiresCondition: Construct >= 21
+	WithIdleOverlay@S6:
+		Sequence: scaffs6
+		Palette: mwcivilian
+		Offset: -512,0,0
+		RequiresCondition: Construct >= 21
+	
 ^3x3SITE:
 	Inherits: ^ConstructionSite
 	Inherits@HitShape: ^3x3Shape
@@ -2784,7 +2733,147 @@
 		Palette: mwcivilian
 		Offset: -1024,1024,0
 		RequiresCondition: Construct >= 21
-
+	WithIdleOverlay@W0:
+		Sequence: scaffw0
+		Palette: mwcivilian
+		Offset: 0,-1024,0
+		RequiresCondition: Construct < 3
+	WithIdleOverlay@E0:
+		Sequence: scaffe0
+		Palette: mwcivilian
+		Offset: 0,1024,0
+		RequiresCondition: Construct < 3
+	WithIdleOverlay@W1:
+		Sequence: scaffw1
+		Palette: mwcivilian
+		Offset: 0,-1024,0
+		RequiresCondition: Construct >= 3 && Construct < 5
+	WithIdleOverlay@E1:
+		Sequence: scaffe1
+		Palette: mwcivilian
+		Offset: 0,1024,0
+		RequiresCondition: Construct >= 3 && Construct < 5
+	WithIdleOverlay@W2:
+		Sequence: scaffw2
+		Palette: mwcivilian
+		Offset: 0,-1024,0
+		RequiresCondition: Construct >= 5 && Construct < 9
+	WithIdleOverlay@E2:
+		Sequence: scaffe2
+		Palette: mwcivilian
+		Offset: 0,1024,0
+		RequiresCondition: Construct >= 5 && Construct < 9
+	WithIdleOverlay@W3:
+		Sequence: scaffw3
+		Palette: mwcivilian
+		Offset: 0,-1024,0
+		RequiresCondition: Construct >= 9 && Construct < 13
+	WithIdleOverlay@E3:
+		Sequence: scaffe3
+		Palette: mwcivilian
+		Offset: 0,1024,0
+		RequiresCondition: Construct >= 9 && Construct < 13
+	WithIdleOverlay@W4:
+		Sequence: scaffw4
+		Palette: mwcivilian
+		Offset: 0,-1024,0
+		RequiresCondition: Construct >= 13 && Construct < 17
+	WithIdleOverlay@E4:
+		Sequence: scaffe4
+		Palette: mwcivilian
+		Offset: 0,1024,0
+		RequiresCondition: Construct >= 13 && Construct < 17
+	WithIdleOverlay@W5:
+		Sequence: scaffw5
+		Palette: mwcivilian
+		Offset: 0,-1024,0
+		RequiresCondition: Construct >= 17 && Construct < 21
+	WithIdleOverlay@E5:
+		Sequence: scaffe5
+		Palette: mwcivilian
+		Offset: 0,1024,0
+		RequiresCondition: Construct >= 17 && Construct < 21
+	WithIdleOverlay@W6:
+		Sequence: scaffw6
+		Palette: mwcivilian
+		Offset: 0,-1024,0
+		RequiresCondition: Construct >= 21
+	WithIdleOverlay@E6:
+		Sequence: scaffe6
+		Palette: mwcivilian
+		Offset: 0,1024,0
+		RequiresCondition: Construct >= 21
+	WithIdleOverlay@N0:
+		Sequence: scaffn0
+		Palette: mwcivilian
+		Offset: 1024,0,0
+		RequiresCondition: Construct < 3
+	WithIdleOverlay@S0:
+		Sequence: scaffs0
+		Palette: mwcivilian
+		Offset: -1024,0,0
+		RequiresCondition: Construct < 3
+	WithIdleOverlay@N1:
+		Sequence: scaffn1
+		Palette: mwcivilian
+		Offset: 1024,0,0
+		RequiresCondition: Construct >= 3 && Construct < 5
+	WithIdleOverlay@S1:
+		Sequence: scaffs1
+		Palette: mwcivilian
+		Offset: -1024,0,0
+		RequiresCondition: Construct >= 3 && Construct < 5
+	WithIdleOverlay@N2:
+		Sequence: scaffn2
+		Palette: mwcivilian
+		Offset: 1024,0,0
+		RequiresCondition: Construct >= 5 && Construct < 9
+	WithIdleOverlay@S2:
+		Sequence: scaffs2
+		Palette: mwcivilian
+		Offset: -1024,0,0
+		RequiresCondition: Construct >= 5 && Construct < 9
+	WithIdleOverlay@N3:
+		Sequence: scaffn3
+		Palette: mwcivilian
+		Offset: 1024,0,0
+		RequiresCondition: Construct >= 9 && Construct < 13
+	WithIdleOverlay@S3:
+		Sequence: scaffs3
+		Palette: mwcivilian
+		Offset: -1024,0,0
+		RequiresCondition: Construct >= 9 && Construct < 13
+	WithIdleOverlay@N4:
+		Sequence: scaffn4
+		Palette: mwcivilian
+		Offset: 1024,0,0
+		RequiresCondition: Construct >= 13 && Construct < 17
+	WithIdleOverlay@S4:
+		Sequence: scaffs4
+		Palette: mwcivilian
+		Offset: -1024,0,0
+		RequiresCondition: Construct >= 13 && Construct < 17
+	WithIdleOverlay@N5:
+		Sequence: scaffn5
+		Palette: mwcivilian
+		Offset: 1024,0,0
+		RequiresCondition: Construct >= 17 && Construct < 21
+	WithIdleOverlay@S5:
+		Sequence: scaffs5
+		Palette: mwcivilian
+		Offset: -1024,0,0
+		RequiresCondition: Construct >= 17 && Construct < 21
+	WithIdleOverlay@N6:
+		Sequence: scaffn6
+		Palette: mwcivilian
+		Offset: 1024,0,0
+		RequiresCondition: Construct >= 21
+	WithIdleOverlay@S6:
+		Sequence: scaffs6
+		Palette: mwcivilian
+		Offset: -1024,0,0
+		RequiresCondition: Construct >= 21
+	   
 ^4x2SITE:
 	Inherits: ^ConstructionSite
 	Inherits@HitShape: ^4x2Shape
@@ -2932,7 +3021,147 @@
 		Palette: mwcivilian
 		Offset: -512,1536,0
 		RequiresCondition: Construct >= 21
-
+	WithIdleOverlay@N0:
+		Sequence: scaffn0
+		Palette: mwcivilian
+		Offset: 512,512,0
+		RequiresCondition: Construct < 3
+	WithIdleOverlay@S0:
+		Sequence: scaffs0
+		Palette: mwcivilian
+		Offset: -512,512,0
+		RequiresCondition: Construct < 3
+	WithIdleOverlay@N1:
+		Sequence: scaffn1
+		Palette: mwcivilian
+		Offset: 512,512,0
+		RequiresCondition: Construct >= 3 && Construct < 5
+	WithIdleOverlay@S1:
+		Sequence: scaffs1
+		Palette: mwcivilian
+		Offset: -512,512,0
+		RequiresCondition: Construct >= 3 && Construct < 5
+	WithIdleOverlay@N2:
+		Sequence: scaffn2
+		Palette: mwcivilian
+		Offset: 512,512,0
+		RequiresCondition: Construct >= 5 && Construct < 9
+	WithIdleOverlay@S2:
+		Sequence: scaffs2
+		Palette: mwcivilian
+		Offset: -512,512,0
+		RequiresCondition: Construct >= 5 && Construct < 9
+	WithIdleOverlay@N3:
+		Sequence: scaffn3
+		Palette: mwcivilian
+		Offset: 512,512,0
+		RequiresCondition: Construct >= 9 && Construct < 13
+	WithIdleOverlay@S3:
+		Sequence: scaffs3
+		Palette: mwcivilian
+		Offset: -512,512,0
+		RequiresCondition: Construct >= 9 && Construct < 13
+	WithIdleOverlay@N4:
+		Sequence: scaffn4
+		Palette: mwcivilian
+		Offset: 512,512,0
+		RequiresCondition: Construct >= 13 && Construct < 17
+	WithIdleOverlay@S4:
+		Sequence: scaffs4
+		Palette: mwcivilian
+		Offset: -512,512,0
+		RequiresCondition: Construct >= 13 && Construct < 17
+	WithIdleOverlay@N5:
+		Sequence: scaffn5
+		Palette: mwcivilian
+		Offset: 512,512,0
+		RequiresCondition: Construct >= 17 && Construct < 21
+	WithIdleOverlay@S5:
+		Sequence: scaffs5
+		Palette: mwcivilian
+		Offset: -512,512,0
+		RequiresCondition: Construct >= 17 && Construct < 21
+	WithIdleOverlay@N6:
+		Sequence: scaffn6
+		Palette: mwcivilian
+		Offset: 512,512,0
+		RequiresCondition: Construct >= 21
+	WithIdleOverlay@S6:
+		Sequence: scaffs6
+		Palette: mwcivilian
+		Offset: -512,512,0
+		RequiresCondition: Construct >= 21
+	WithIdleOverlay@2N0:
+		Sequence: scaffn0
+		Palette: mwcivilian
+		Offset: 512,-512,0
+		RequiresCondition: Construct < 3
+	WithIdleOverlay@2S0:
+		Sequence: scaffs0
+		Palette: mwcivilian
+		Offset: -512,-512,0
+		RequiresCondition: Construct < 3
+	WithIdleOverlay@2N1:
+		Sequence: scaffn1
+		Palette: mwcivilian
+		Offset: 512,-512,0
+		RequiresCondition: Construct >= 3 && Construct < 5
+	WithIdleOverlay@2S1:
+		Sequence: scaffs1
+		Palette: mwcivilian
+		Offset: -512,-512,0
+		RequiresCondition: Construct >= 3 && Construct < 5
+	WithIdleOverlay@2N2:
+		Sequence: scaffn2
+		Palette: mwcivilian
+		Offset: 512,-512,0
+		RequiresCondition: Construct >= 5 && Construct < 9
+	WithIdleOverlay@2S2:
+		Sequence: scaffs2
+		Palette: mwcivilian
+		Offset: -512,-512,0
+		RequiresCondition: Construct >= 5 && Construct < 9
+	WithIdleOverlay@2N3:
+		Sequence: scaffn3
+		Palette: mwcivilian
+		Offset: 512,-512,0
+		RequiresCondition: Construct >= 9 && Construct < 13
+	WithIdleOverlay@2S3:
+		Sequence: scaffs3
+		Palette: mwcivilian
+		Offset: -512,-512,0
+		RequiresCondition: Construct >= 9 && Construct < 13
+	WithIdleOverlay@2N4:
+		Sequence: scaffn4
+		Palette: mwcivilian
+		Offset: 512,-512,0
+		RequiresCondition: Construct >= 13 && Construct < 17
+	WithIdleOverlay@2S4:
+		Sequence: scaffs4
+		Palette: mwcivilian
+		Offset: -512,-512,0
+		RequiresCondition: Construct >= 13 && Construct < 17
+	WithIdleOverlay@2N5:
+		Sequence: scaffn5
+		Palette: mwcivilian
+		Offset: 512,-512,0
+		RequiresCondition: Construct >= 17 && Construct < 21
+	WithIdleOverlay@2S5:
+		Sequence: scaffs5
+		Palette: mwcivilian
+		Offset: -512,-512,0
+		RequiresCondition: Construct >= 17 && Construct < 21
+	WithIdleOverlay@2N6:
+		Sequence: scaffn6
+		Palette: mwcivilian
+		Offset: 512,-512,0
+		RequiresCondition: Construct >= 21
+	WithIdleOverlay@2S6:
+		Sequence: scaffs6
+		Palette: mwcivilian
+		Offset: -512,-512,0
+		RequiresCondition: Construct >= 21
+	   
 ^1x1SITE:
 	Inherits: ^ConstructionSite
 	Inherits@HitShape: ^1x1Shape
@@ -3009,7 +3238,6 @@
 		Palette: mwcivilian
 		Offset: -212,212,0
 		RequiresCondition: Construct >= 21
-
         
 ^1x1SITEWALL:
 	Inherits: ^ConstructionSite
