@@ -36,7 +36,7 @@
 		PlayerExperience: 15
 	Targetable:
 		TargetTypes: Ground, C4, Structure, Pentagram
-	-Sellable:
+	Sellable:
 	UndeadBuilder:
 		Selfbuilds: true
 
@@ -1659,62 +1659,6 @@ GARG:
 		TargetTypes: Defenses
 		
 #Infantry
-
-UNDEADCOMM:
-	Inherits: ^Siege
-	Transforms:
-		IntoActor: ziggurat1
-		Offset: -1,-1
-		Facing: 126
-		TransformSounds:
-		NoTransformNotification: BuildingCannotPlaceAudio
-	Valued:
-		Cost: 5000
-	Tooltip:
-		Name: Infested Commander
-	Selectable:
-		Priority: 4
-	AttackFrontal:
-	BodyOrientation:
-		QuantizedFacings: 8
-	WithFacingSpriteBody:
-	WithMoveAnimation:
-		MoveSequence: move
-	WithMakeAnimation:
-	WithDeathAnimation:
-		DeathSequencePalette: raplayer
-		DeathTypes:
-			DefaultDeath: 1
-			RippedApartDeath: 1
-			PoisonDeath: 1
-			BallistaDeath: 1
-			BurnToDeath: 1
-			SkeletonDeath: 1
-	Mobile:
-		Crushes: crate
-		Speed: 65
-		TurnSpeed: 20
-	Health:
-		HP: 250000
-	Armor:
-		Type: Heavy
-	RevealsShroud:
-		Range: 8c0
-	RenderSprites:
-		Image: undeadcomm
-		PlayerPalette: raplayer
-	-WithInfantryBody:
-	MustBeDestroyed:
-		RequiredForShortGame: true
-	BaseBuilding:
-	SelectionDecorations:
-		VisualBounds: 36,36
-	Voiced:
-		VoiceSet: CivilianMaleVoice
-	Targetable:
-		TargetTypes: Ground, Infantry
-	Targetable@CombatRole:
-		TargetTypes: Support
 
 PREYCOLYTE:
 	Inherits: ^Knight

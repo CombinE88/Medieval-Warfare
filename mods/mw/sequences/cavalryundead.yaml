@@ -1,0 +1,259 @@
+deadross:
+	stand: 
+		Start: 122
+		Facings: 8
+	idle: 
+		Start: 122
+		Facings: 8
+	run: 
+		Start: 0
+		Length: 8
+		Facings: 8
+		Tick: 100
+	move: 
+		Start: 0
+		Length: 8
+		Facings: 8
+		Tick: 100
+	shoot: 
+		Tick: 100
+		Start: 66
+		Length: 7
+		Facings: 8
+	die1: 
+		Start: 132
+		Length: 18
+		Tick: 80
+	make: 
+		Start: 262
+		Length: 15
+		Tick: 100
+	# Burn
+	die2: burninghorserider
+		Length: *
+		Tick: 80
+	icon: deadrossicon.shp
+		AddExtension: False
+		
+demonhorse:
+	idle1: 
+		Tick: 100
+		Start: 150
+		Length: 7
+		Facings: 8
+		Offset: 0,4,0
+	stand: 
+		Start: 122
+		Facings: 8
+		Offset: 0,4,0
+	run: 
+		Start: 0
+		Length: 8
+		Facings: 8
+		Tick: 80
+		Offset: 0,4,0
+	shoot: 
+		Tick: 80
+		Start: 66
+		Length: 7
+		Facings: 8
+		Offset: 0,4,0
+	die1: 
+		Start: 132
+		Length: 18
+		Tick: 80
+		Offset: 0,4,0
+	# Burn
+	die2: burninghorserider
+		Length: *
+		Tick: 80
+	icon: demonhorseicon.shp
+		AddExtension: False
+
+
+vamp:
+
+	stunned: sulm4
+		ZOffset: 125
+		Start: 312
+		Length: 2
+		Tick: 200
+	idle: 
+		Start: 122
+		Facings: 8
+	idle-flying: 
+		Start: 254
+		Length: 8
+		Facings: 8
+		Tick: 80
+	stand-flying: 
+		Start: 254
+		Length: 8
+		Facings: 8
+		Tick: 80
+	stand: 
+		Start: 122
+		Facings: 8
+	idle1:
+		Start: 190
+		Length: 8
+		Facings: 8
+		Tick: 80
+	run: 
+		Start: 0
+		Length: 8
+		Facings: 8
+		Tick: 80
+	move: 
+		Start: 0
+		Length: 8
+		Facings: 8
+		Tick: 80
+	falling: 
+		Start: 384
+		Length: 32
+		Tick: 20
+	attackgranged: 
+		Start: 66
+		Length: 7
+		Facings: 8
+		Tick: 80
+	attackgclose: 
+		Start: 417
+		Length: 7
+		Facings: 8
+		Tick: 80
+	attackair: 
+		Start: 320
+		Length: 8
+		Facings: 8
+		Tick: 80
+	die1: 
+		Start: 131
+		Length: 16
+		Tick: 80
+	# large hit
+	die2: splatterdead
+		Length: *
+		Tick: 80
+	# poision
+	die3: 
+		Start: 163
+		Length: 15
+		Tick: 80
+	# ballista
+	die4: 
+		Start: 180
+		Length: 11
+		Tick: 80
+	die-crushed: newe1rot
+		Start: 16
+		Length: 4
+		Tick: 1600
+		ZOffset: -511
+	die5: burningman
+		Length: *
+		Tick: 80
+	icon: vampicon.shp
+		AddExtension: False
+grim:
+	stunned: sulm4
+		ZOffset: 125
+		Start: 312
+		Length: 2
+		Tick: 200
+	idle: 
+		Start: 122
+		Length: 8
+		Facings: 8
+		Tick: 80
+	stand: 
+		Start: 122
+		Length: 8
+		Facings: 8
+		Tick: 80
+	run: 
+		Start: 0
+		Length: 8
+		Facings: 8
+		Tick: 80
+	move: 
+		Start: 0
+		Length: 8
+		Facings: 8
+		Tick: 80
+	attackharvest: 
+		Tick: 80
+		Start: 66
+		Length: 7
+		Facings: 8
+	attacksummon: 
+		Tick: 80
+		Start: 186
+		Length: 8
+		Facings: 8
+	attacksummon: 
+		Tick: 80
+		Start: 186
+		Length: 8
+		Facings: 8
+	attackthrow: 
+		Tick: 80
+		Start: 293
+		Length: 7
+		Facings: 8
+	die1: 
+		Start: 250
+		Length: 20
+		Tick: 80
+	icon: grimicon.shp
+		AddExtension: False
+        
+		
+
+lichk:
+	stunned: sulm4
+		ZOffset: 125
+		Start: 312
+		Length: 2
+		Tick: 200
+	idle: 
+		Start: 122
+		Facings: 8
+		Offset: 0,5
+	stand: 
+		Start: 122
+		Facings: 8
+		Offset: 0,5
+	run: 
+		Start: 0
+		Length: 8
+		Facings: 8
+		Tick: 100
+		Offset: 0,5
+	move: 
+		Start: 0
+		Length: 8
+		Facings: 8
+		Tick: 100
+		Offset: 0,5
+	summon: 
+		Tick: 100
+		Start: 66
+		Length: 7
+		Facings: 8
+		Offset: 0,5
+	attack: 
+		Tick: 100
+		Start: 169
+		Length: 7
+		Facings: 8
+		Offset: 0,5
+	die1: 
+		Start: 133
+		Length: 22
+		Tick: 100
+		Offset: 0,5
+	icon: lichkicon.shp
+		AddExtension: False
+		

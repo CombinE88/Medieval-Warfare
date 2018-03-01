@@ -461,52 +461,7 @@ MINIFACT:
 		ValidStances: Ally
 		Condition: Wander
 
-		
-HQNEWNOD:
-	Inherits: ^MWBaseBuilding
-	Inherits@Hitshape: ^2x2Shape
-	Armor:
-		Type: Concrete
-	WithDeathAnimation:
-		DeathSequencePalette: raplayer
-	Valued:
-		Cost: 1200
-	CustomSellValue:
-		Value: 500
-	Tooltip:
-		Name: Smith
-	ProvidesPrerequisite@buildingname:
-	ProvidesPrerequisite:
-		Prerequisite: anyhq
-	ProvidesPrerequisite@3:
-		Prerequisite: Level3
-	RenderSprites:
-		Image: hqnew
-		PlayerPalette: raplayer
-	Building:
-		Footprint: xx xx ==
-		Dimensions: 2,3
-		LocalCenterOffset: 0,-512,0
-	Selectable:
-		Bounds: 48,40,0,-2
-	SelectionDecorations:
-		VisualBounds: 48,40,0,-2
-	Health:
-		HP: 70000
-	RevealsShroud:
-		Range: 10c0
-	WithBuildingBib: 
-	ThrowsShrapnel@LARGE:
-		Weapons: DebrAnvil1, DebrUtility1, DebrUtility2, DebrUtility3
-		Pieces: 1, 2
-		Range: 1c0, 5c0
-	WithFreeSpawnableActor:
-		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
-		SpawnActor: mwwand7
-		FindRadius: 100
-		Offset: 171,256, 0
-		MoveOffset: 1,2
-		
+	
 HQNEWGDI:
 	Inherits: ^MWBaseBuilding
 	Inherits@Hitshape: ^2x2Shape
@@ -770,11 +725,6 @@ NUK2NEW:
 		Ammount: 16
 		SpawnOffset: 128,811,0
 		ExitCell: 1,2
-	#WithFreeSpawnableActor@Chicken:
-	#	SpawnActor: mwchick1
-	#	Offset: 128,811,0
-	#	MoveOffset:1,2
-	#	SpawnStart: false
 		
 NUKXL:
 	Inherits: ^MWBaseBuilding
@@ -839,16 +789,6 @@ NUKXL:
 		Ammount: 30
 		SpawnOffset: 938,725,0
 		ExitCell: 2,2
-	#WithFreeSpawnableActor@Chicken:
-	#	SpawnActor: mwchick1
-	#	Offset: 938,725,0
-	#	MoveOffset:2,2
-	#	SpawnStart: false
-	#WithFreeSpawnableActor@Chicken2:
-	#	SpawnActor: mwchick1
-	#	Offset: 938,725,0
-	#	MoveOffset:2,2
-	#	SpawnStart: false
  
 NUKENEW:
 	Inherits: ^MWBaseBuilding
@@ -903,12 +843,6 @@ NUKENEW:
 		Ammount: 8
 		SpawnOffset: -384,597,0
 		ExitCell: 0,2
-	#WithFreeSpawnableActor@Chicken:
-	#	SpawnActor: mwchick1
-	#	Offset: -384,597,0
-	#	MoveOffset: 0,2
-	#	SpawnStart: false
-
 	
 XLTNT1:
 	Inherits: ^MWBaseBuilding
@@ -973,12 +907,6 @@ XLTNT1:
 		Ammount: 12
 		SpawnOffset: 256,768,0
 		ExitCell: 1,2
-	#WithFreeSpawnableActor@Chicken:
-	#	SpawnActor: mwchick1
-	#	Offset: 256,768,0
-	#	MoveOffset: 1,2
-	#	SpawnStart: false
-		
 XLTNT2:
 	Inherits: XLTNT1
 	RenderSprites:
@@ -1105,11 +1033,6 @@ NODNUKE.scaff:
 		Ammount: 4
 		SpawnOffset: 256,811,0
 		ExitCell: 1,1
-	#WithFreeSpawnableActor@Chicken:
-	#	SpawnActor: mwchick1
-	#	Offset: 256,811,0
-	#	MoveOffset: 1,1
-	#	SpawnStart: false
 	EditorTilesetFilter:
 		ExcludeTilesets: TEMPERATE, SNOW, DESERT, WINTER
 		Categories: 
@@ -2535,167 +2458,6 @@ DECOR9:
 	EditorTilesetFilter:
 		Categories: Props
 		
-TAVERN:
-	Inherits: ^MWBaseBuilding
-	Inherits@Hitshape: ^3x2Shape
-	Armor:
-		Type: Concrete
-	WithDeathAnimation:
-		DeathSequencePalette: raplayer
-	RenderSprites:
-		Image: tavern
-		PlayerPalette: raplayer
-	Valued:
-		Cost: 700
-	CustomSellValue:
-		Value: 350
-	Tooltip:
-		Name: Tavern
-	Building:
-		Footprint: xxx xxx ===
-		Dimensions: 3,3
-		LocalCenterOffset: 0,-512,0
-	Health:
-		HP: 80000
-	RevealsShroud:
-		Range: 4c0
-	WithBuildingBib:
-	ProvidesPrerequisite@buildingname:
-	Selectable:
-		Bounds: 72,72,0,-2
-	SelectionDecorations:
-		VisualBounds: 72,72,0,-2
-	ThrowsShrapnel@LARGE:
-		Weapons: LargeWood1, LargeWood1, LargeStone1, LargeStone1
-		Pieces: 1, 2
-		Range: 1c0, 5c0
-	Targetable@Tavern:
-		TargetTypes: Material
-	BaseProvider:
-		Cooldown: 25
-		Range: 7c0
-	ProximityExternalCondition@WANDERER:
-		Range: 6c0
-		ValidStances: Ally
-		Condition: Wander
-		
-TOWNHALL:
-	Inherits: ^MWBaseBuilding	
-	Inherits@Hitshape: ^3x2Shape
-	Armor:
-		Type: Concrete
-	WithDeathAnimation:
-		DeathSequencePalette: raplayer
-	RenderSprites:
-		Image: townhall
-		PlayerPalette: raplayer
-	Valued:
-		Cost: 2000
-	CustomSellValue:
-		Value: 1000
-	Tooltip:
-		Name: Town Hall
-	Building:
-		Footprint: xxx xxx ===
-		Dimensions: 3,3
-		LocalCenterOffset: 0,-512,0
-	Health:
-		HP: 100000
-	RevealsShroud:
-		Range: 4c0
-	WithBuildingBib:
-	ProvidesPrerequisite@buildingname:
-	Selectable:
-		Bounds: 72,80,0,-2
-	SelectionDecorations:
-		VisualBounds: 72,80,0,-2
-	ThrowsShrapnel@LARGE:
-		Weapons: LargeStone1, LargeStone1, LargeStone1, LargeStone1
-		Pieces: 1, 2
-		Range: 1c0, 5c0
-	WithFreeSpawnableActor@3:
-		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
-		SpawnActor: noble5
-		Offset: 213,811, 0
-		MoveOffset: 1,2
-		Sticky: true
-	IsTownhall:
-		Percent: 60
-	
-SCHAFOTT:
-	Inherits: ^MWBaseBuilding	
-	Inherits@Hitshape: ^2x2Shape
-	Armor:
-		Type: Concrete
-	WithDeathAnimation:
-		DeathSequencePalette: raplayer
-	RenderSprites:
-		Image: schafott
-		PlayerPalette: raplayer
-	Valued:
-		Cost: 1000
-	CustomSellValue:
-		Value: 500
-	Tooltip:
-		Name: Scaffold
-	Building:
-		Footprint: xx xx ==
-		Dimensions: 2,3
-		LocalCenterOffset: 0,-512,0
-	Health:
-		HP: 60000
-	RevealsShroud:
-		Range: 4c0
-	WithBuildingBib:
-	ProvidesPrerequisite@buildingname:
-	Selectable:
-		Bounds: 48,48,0,-2
-	SelectionDecorations:
-		VisualBounds: 48,48,0,-2
-	ThrowsShrapnel@LARGE:
-		Weapons: LargeStone1, LargeStone1, LargeStone1, LargeStone1
-		Pieces: 1, 2
-		Range: 1c0, 5c0
-	IsTownhall:
-		Percent: 40
-	
-HERBALIST:
-	Inherits: ^MWBaseBuilding	
-	Inherits@Hitshape: ^2x2Shape
-	Armor:
-		Type: Concrete
-	WithDeathAnimation:
-		DeathSequencePalette: raplayer
-	RenderSprites:
-		Image: herbalist
-		PlayerPalette: raplayer
-	Valued:
-		Cost: 1000
-	CustomSellValue:
-		Value: 500
-	Tooltip:
-		Name: Herbalist
-	Building:
-		Footprint: xx xx ==
-		Dimensions: 2,3
-		LocalCenterOffset: 0,-512,0
-	Health:
-		HP: 60000
-	RevealsShroud:
-		Range: 4c0
-	WithBuildingBib:
-	ProvidesPrerequisite@buildingname:
-	Selectable:
-		Bounds: 48,48,0,-2
-	SelectionDecorations:
-		VisualBounds: 48,48,0,-2
-	ThrowsShrapnel@LARGE:
-		Weapons: LargeStone1, LargeStone1, LargeStone1, LargeStone1
-		Pieces: 1, 2
-		Range: 1c0, 5c0
-	IsTownhall:
-		Percent: 40
-		
 LODGE:
 	Inherits: ^MWBaseBuilding
 	Inherits@Hitshape: ^2x1Shape
@@ -2755,49 +2517,4 @@ LODGE:
 		PipColor: Yellow
 		PipCount: 5
 		Capacity: 1000
-		
-LJACKB:
-	Inherits: ^MWBaseBuilding
-	Inherits@Hitshape: ^1x1Shape
-	Armor:
-		Type: Concrete
-	-WithDeathAnimation:
-	RenderSprites:
-		PlayerPalette: raplayer
-	Valued:
-		Cost: 450
-	CustomSellValue:
-		Value: 225
-	Tooltip:
-		Name: Lumber Shack
-	Building:
-		Footprint: x
-		Dimensions: 1,1
-	Health:
-		HP: 35000
-	RevealsShroud:
-		Range: 5c0
-	Selectable:
-		Bounds: 27,26,0,0
-	SelectionDecorations:
-		VisualBounds: 27,27,0,0
-	WithFreeSpawnableActor@3:
-		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
-		SpawnActor: mwlumbererowned
-		Offset: -0,256, 0
-		MoveOffset: 0,1
-		FindRadius: 100
-		Lasso: 17c0
-		ForceLasso: 22c0
-		ReturnOnDeath: true
-	WithRangeCircle:
-		Type: Lumberer
-		UsePlayerColor: true
-		Range: 17c0
-	LodgeActor:
-	StoresResources:
-		PipColor: Yellow
-		PipCount: 3
-		Capacity: 600
-	Targetable@Lumber:
-		TargetTypes: LumberShack
+	

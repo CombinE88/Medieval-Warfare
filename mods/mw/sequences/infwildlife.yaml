@@ -1,0 +1,131 @@
+# Animals
+deer01:
+	stand:
+		Start: 0
+		Facings: 8
+	panic-stand:
+		Start: 0
+		Facings: 8
+	run: 
+		Start: 9
+		Length: 7
+		Facings: 8
+		Tick: 80
+	panic-run: 
+		Start: 66
+		Length: 7
+		Facings: 8
+		Tick: 80
+	die1:
+		Start: 180
+		Length: 7
+		Facings: 8
+		Tick: 140
+	idle1: 
+		Start: 123
+		Length: 7
+		Facings: 8
+		Tick: 100
+	body:
+		Frames: 186, 193, 200, 207, 214, 221, 228, 235
+		Facings: 8
+		
+deer02:
+	stand:
+		Start: 0
+		Facings: 8
+	panic-stand:
+		Start: 0
+		Facings: 8
+	run: 
+		Start: 9
+		Length: 7
+		Facings: 8
+		Tick: 80
+	panic-run: 
+		Start: 66
+		Length: 7
+		Facings: 8
+		Tick: 80
+	die1:
+		Start: 237
+		Length: 7
+		Facings: 8
+		Tick: 140
+	idle1: 
+		Start: 180
+		Length: 7
+		Facings: 8
+		Tick: 100
+	idle2: 
+		Start: 123
+		Length: 7
+		Facings: 8
+		Tick: 100
+	body:
+		Frames: 243, 250, 257, 264, 271, 278, 285, 292
+		Facings: 8
+		
+deer03:
+	stand:
+		Start: 0
+		Facings: 8
+	panic-stand:
+		Start: 0
+		Facings: 8
+	run: 
+		Start: 9
+		Length: 7
+		Facings: 8
+		Tick: 80
+	panic-run: 
+		Start: 66
+		Length: 7
+		Facings: 8
+		Tick: 80
+	die1:
+		Start: 180
+		Length: 7
+		Facings: 8
+		Tick: 140
+	idle1: 
+		Start: 123
+		Length: 7
+		Facings: 8
+		Tick: 100
+	body:
+		Frames: 186, 193, 200, 207, 214, 221, 228, 235
+		Facings: 8
+		
+deer03a:
+	stand:
+		Start: 0
+		Facings: 8
+	panic-stand:
+		Start: 0
+		Facings: 8
+	run: 
+		Start: 9
+		Length: 7
+		Facings: 8
+		Tick: 80
+	panic-run: 
+		Start: 66
+		Length: 7
+		Facings: 8
+		Tick: 80
+	die1:
+		Start: 180
+		Length: 7
+		Facings: 8
+		Tick: 140
+	idle1: 
+		Start: 123
+		Length: 7
+		Facings: 8
+		Tick: 100
+	body:
+		Frames: 186, 193, 200, 207, 214, 221, 228, 235
+		Facings: 8
+
+#Humanoids		

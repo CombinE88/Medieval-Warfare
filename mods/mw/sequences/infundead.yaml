@@ -1,0 +1,494 @@
+acolyte:
+	stunned: sulm4
+		ZOffset: 125
+		Start: 312
+		Length: 2
+		Tick: 200
+	idle: 
+		Start: 122
+		Facings: 8
+	stand: 
+		Start: 122
+		Facings: 8
+	run: 
+		Start: 0
+		Length: 8
+		Facings: 8
+		Tick: 100
+	shoot: 
+		Tick: 100
+		Start: 66
+		Length: 7
+		Facings: 8
+	prey: 
+		Tick: 100
+		Start: 232
+		Length: 7
+		Facings: 8
+	idle1: 
+		Tick: 100
+		Start: 211
+		Length: 21
+	idle2: 
+		Tick: 100
+		Start: 190
+		Length: 21 
+	die1: 
+		Start: 131
+		Length: 16
+		Tick: 80
+	# large hit
+	die2: splatterdead
+		Length: *
+		Tick: 80
+	# poision
+	die3: 
+		Start: 163
+		Length: 15
+		Tick: 80
+	# ballista
+	die4: 
+		Start: 180
+		Length: 11
+		Tick: 80
+	die-crushed: newe1rot
+		Start: 16
+		Length: 4
+		Tick: 1600
+		ZOffset: -511
+	die5: burningman
+		Length: *
+		Tick: 80
+	icon: acolyteicon.shp
+		AddExtension: False
+	
+		
+
+undead1:
+	stunned: sulm4
+		ZOffset: 125
+		Start: 312
+		Length: 2
+		Tick: 200
+	idle: undead1smear
+		Start: 122
+		Facings: 8
+	stand: undead1smear
+		Start: 122
+		Facings: 8
+	run: undead1smear
+		Start: 0
+		Length: 8
+		Facings: 8
+		Tick: 100
+	make: undead1born
+		Length: *
+		Tick: 130
+	shoot: undead1smear
+		Tick: 100
+		Start: 66
+		Length: 7
+		Facings: 8
+	die1: undead1smear
+		Start: 202
+		Length: 20
+		Tick: 80
+	# large hit
+	die2: undead1smear
+		Start: 202
+		Length: 20
+		Tick: 80
+	# poision
+	die3: undead1smear
+		Start: 202
+		Length: 20
+		Tick: 80
+	# ballista
+	die4: undead1smear
+		Start: 202
+		Length: 20
+		Tick: 80
+	die-crushed: newe1rot
+		Start: 16
+		Length: 4
+		Tick: 1600
+		ZOffset: -511
+	die5: burningman
+		Length: *
+		Tick: 80
+	icon: undead1icon.shp
+		AddExtension: False
+		
+undead2:
+	stunned: sulm4
+		ZOffset: 125
+		Start: 312
+		Length: 2
+		Tick: 200
+	idle: 
+		Start: 122
+		Facings: 8
+	stand: 
+		Start: 122
+		Facings: 8
+	run: 
+		Start: 0
+		Length: 8
+		Facings: 8
+		Tick: 100
+	make: undead2born
+		Length: *
+		Tick: 130
+	shoot: 
+		Tick: 100
+		Start: 66
+		Length: 7
+		Facings: 8
+	die1: 
+		Start: 202
+		Length: 20
+		Tick: 80
+	# large hit
+	die2: 
+		Start: 202
+		Length: 20
+		Tick: 80
+	# poision
+	die3: 
+		Start: 202
+		Length: 20
+		Tick: 80
+	# ballista
+	die4: 
+		Start: 202
+		Length: 20
+		Tick: 80
+	die-crushed: newe1rot
+		Start: 16
+		Length: 4
+		Tick: 1600
+		ZOffset: -511
+	die5: burningman
+		Length: *
+		Tick: 80
+	icon: undead1icon.shp
+		AddExtension: False
+		
+undead3:
+	stunned: sulm4
+		ZOffset: 125
+		Start: 312
+		Length: 2
+		Tick: 200
+	idle: 
+		Start: 122
+		Facings: 8
+	stand: 
+		Start: 122
+		Facings: 8
+	run: 
+		Start: 0
+		Length: 8
+		Facings: 8
+		Tick: 100
+	make: undead3born
+		Length: *
+		Tick: 130
+	shoot: undead3smear
+		Tick: 100
+		Start: 66
+		Length: 7
+		Facings: 8
+	die1: 
+		Start: 132
+		Length: 21
+		Tick: 80
+	# large hit
+	die2: 
+		Start: 132
+		Length: 21
+		Tick: 80
+	# poision
+	die3: 
+		Start: 132
+		Length: 21
+		Tick: 80
+	# ballista
+	die4: 
+		Start: 132
+		Length: 21
+		Tick: 80
+	die5: burningman
+		Length: *
+		Tick: 80
+	icon: undead3icon.shp
+		AddExtension: False
+		
+undead4:
+	stunned: sulm4
+		ZOffset: 125
+		Start: 312
+		Length: 2
+		Tick: 200
+	idle: 
+		Start: 122
+		Facings: 8
+	stand: 
+		Start: 122
+		Facings: 8
+	run: 
+		Start: 0
+		Length: 8
+		Facings: 8
+		Tick: 100
+	make: undead4born
+		Length: *
+		Tick: 130
+	shoot: undead4smear
+		Tick: 100
+		Start: 66
+		Length: 7
+		Facings: 8
+	die1: 
+		Start: 202
+		Length: 20
+		Tick: 80
+	# large hit
+	die2: 
+		Start: 202
+		Length: 20
+		Tick: 80
+	# poision
+	die3: 
+		Start: 202
+		Length: 20
+		Tick: 80
+	# ballista
+	die4: 
+		Start: 202
+		Length: 20
+		Tick: 80
+	die-crushed: newe1rot
+		Start: 16
+		Length: 4
+		Tick: 1600
+		ZOffset: -511
+	die5: burningman
+		Length: *
+	icon: undead4icon.shp
+		AddExtension: False
+		
+acolyteb:
+	stunned: sulm4
+		ZOffset: 125
+		Start: 312
+		Length: 2
+		Tick: 200
+	idle: 
+		Start: 122
+		Facings: 8
+	stand: 
+		Start: 122
+		Facings: 8
+	run: 
+		Start: 0
+		Length: 8
+		Facings: 8
+		Tick: 100
+	shoot: 
+		Tick: 100
+		Start: 66
+		Length: 7
+		Facings: 8
+	shootchannel:
+		Tick: 800
+		Facings: 8
+		Frames: 72,79,86,93,100,107,114,121
+	prey: 
+		Tick: 100
+		Start: 232
+		Length: 7
+		Facings: 8
+	idle1: 
+		Tick: 100
+		Start: 211
+		Length: 21
+	idle2: 
+		Tick: 100
+		Start: 190
+		Length: 21 
+	die1: 
+		Start: 131
+		Length: 16
+		Tick: 80
+	# large hit
+	die2: splatterdead
+		Length: *
+		Tick: 80
+	# poision
+	die3: 
+		Start: 163
+		Length: 15
+		Tick: 80
+	# ballista
+	die4: 
+		Start: 180
+		Length: 11
+		Tick: 80
+	die-crushed: newe1rot
+		Start: 16
+		Length: 4
+		Tick: 1600
+		ZOffset: -511
+	die5: burningman
+		Length: *
+		Tick: 80
+	icon: cultisticon.shp
+		AddExtension: False
+	
+	
+undead5:
+	make: undead5born
+		Length: *
+		Tick: 130
+	stunned: sulm4
+		ZOffset: 125
+		Start: 312
+		Length: 2
+		Tick: 200
+	idle: 
+		Start: 122
+		Facings: 8
+	stand: 
+		Start: 122
+		Facings: 8
+	run: 
+		Start: 0
+		Length: 8
+		Facings: 8
+		Tick: 100
+	shoot: 
+		Tick: 100
+		Start: 66
+		Length: 7
+		Facings: 8
+	die1: 
+		Start: 131
+		Length: 22
+		Tick: 80
+	# large hit
+	die2: 
+		Start: 131
+		Length: 22
+		Tick: 80
+	# poision
+	die3: 
+		Start: 131
+		Length: 22
+		Tick: 80
+	# ballista
+	die4: 
+		Start: 131
+		Length: 22
+		Tick: 80
+	die-crushed: 
+		Start: 131
+		Length: 22
+		Tick: 80
+	die5: burningman
+		Length: *
+		Tick: 80
+	icon: undead5icon.shp
+		AddExtension: False
+
+undead6:
+	stunned: sulm4
+		ZOffset: 125
+		Start: 312
+		Length: 2
+		Tick: 200
+	idle: 
+		Start: 64
+		Facings: 8
+	stand: 
+		Start: 64
+		Facings: 8
+	run: 
+		Start: 0
+		Length: 8
+		Facings: 8
+		Tick: 100
+	make: undead6born
+		Length: *
+		Tick: 130
+	shoot: 
+		Tick: 70
+		Start: 95
+		Length: 14
+		Facings: 8
+	die1: 
+		Start: 74
+		Length: 21
+		Tick: 80
+	# large hit
+	die2: 
+		Start: 74
+		Length: 21
+		Tick: 80
+	# poision
+	die3: 
+		Start: 74
+		Length: 21
+		Tick: 80
+	# ballista
+	die4: 
+		Start: 74
+		Length: 21
+		Tick: 80
+	die-crushed:
+		Start: 74
+		Length: 21
+		Tick: 80
+		ZOffset: -511
+	die5: burningman
+		Length: *
+		Tick: 80
+	icon: undead6icon.shp
+		AddExtension: False
+		
+undead7:
+	stunned: sulm4
+		ZOffset: 125
+		Start: 312
+		Length: 2
+		Tick: 200
+	idle: 
+		Start: 178
+		Facings: 8
+	stand: 
+		Start: 178
+		Facings: 8
+	run: 
+		Start: 0
+		Length: 8
+		Facings: 8
+		Tick: 100
+	make: undead7born
+		Length: *
+		Tick: 130
+	shoot: 
+		Tick: 100
+		Start: 66
+		Length: 14
+		Facings: 8
+	die1: 
+		Start: 257
+		Length: 20
+		Tick: 80
+	die5: burningman
+		Length: *
+		Tick: 80
+	icon: undead7icon.shp
+		AddExtension: False
+		
+

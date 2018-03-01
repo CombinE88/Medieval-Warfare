@@ -1,0 +1,168 @@
+sgtw:
+	stand: 
+		Start: 63
+		Facings: 32
+	idle: 
+		Start: 63
+		Facings: 32
+	run: 
+		Start: 0
+		Length: 8
+		Facings: 8
+		Tick: 100
+	move: 
+		Start: 0
+		Length: 8
+		Facings: 8
+		Tick: 100
+	shoot: 
+		Start: 36
+		Facings: 32
+	top: 
+		Start: 97
+		Facings: 32
+		ZOffset: 1024
+	icon: nsiegetowericon.shp
+		AddExtension: False 
+	turretidle: e4newv2
+		Start: 122
+		Facings: 8
+	turretanim: e4newv2
+		Tick: 100
+		Start: 66
+		Length: 7
+		Facings: 8 
+		
+siege3.husk:
+	start: sgtwhusk
+		Start: 0
+		Length: 7
+		Tick: 100
+		Facings: 32
+	idle: sgtwhusk
+		Start: 217
+		Facings: 32  
+		Offset: 0,12,0
+
+orni:
+	idle: orni
+		Start: 225
+		Facings: 32
+		Offset: 0,-4,0
+	move: orni
+		Tick: 80
+		Start: 0
+		Length: 7
+		Facings: 32
+		Offset: 0,-4,0
+	icon: Orniicon.shp
+		AddExtension: False 
+		
+ornicrash:
+	idle: 
+		Start: 0
+		Facings: 32
+	wing: 
+		Start: 33
+		Facings: 32
+		
+davinci:
+	idle: davinci
+		Start: 0
+		Length: *
+		Tick: 40
+	icon: davinciicon.shp
+		AddExtension: False 
+	   
+davincihusk:
+	idle: davincihusk
+		
+drgnrdr:
+	idle: 
+		Start: 0
+		Length: 7
+		Facings: 32
+		Tick: 100
+	move: 
+		Start: 0
+		Length: 7
+		Facings: 32
+		Tick: 100
+	attack: 
+		Tick: 100
+		Start: 224
+		Length: 7
+		Facings: 32
+	die1: 
+		Start: 449
+		Facings: 32
+	icon: ndragonicon.shp
+		AddExtension: False 
+		
+siege2:
+	stand: 
+		Start: 0
+		Facings: 32
+	run: 
+		Start: 32
+		Length: 7
+		Facings: 8
+		Tick: 100
+	shoot: 
+		Tick: 80
+		Start: 88
+		Length: 7
+		Facings: 32
+	icon: ncatapulticon.shp
+		AddExtension: False	
+
+siege2.husk:
+	start: siege2husk
+		Start: 0
+		Length: 7
+		Tick: 100
+		Facings: 32
+	idle: siege2husk
+		Start: 217
+		Facings: 32
+		
+
+drgnempty:
+	idle: dragonempty
+		Start: 0
+		Length: 7
+		Facings: 32
+		Tick: 100
+		
+dragonground:
+	idle: 
+		Start: 0
+		Length: 1
+		Facings: 32
+		Tick: 100
+	stand: 
+		Start: 0
+		Length: 1
+		Facings: 32
+		Tick: 100
+	run: 
+		Start: 32
+		Length: 7
+		Facings: 32
+		Tick: 100
+	shoot: 
+		Tick: 100
+		Start: 256
+		Length: 7
+		Facings: 32
+	die1: dragongrounddead
+		Length: 15
+		Facings: 32
+		Tick: 100
+		
+		
+drgnrdr.husk:
+	idle: drgnrdr
+		Start: 449
+		Facings: 32
+		

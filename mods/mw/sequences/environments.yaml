@@ -1,0 +1,119 @@
+treechopped1: #hybrid
+	Defaults:
+		UseTilesetExtension: true
+		ZOffset: -2024
+	make: tree1anim
+		Length: *
+		Tick: 80
+	idle: tree1shop
+		Start: 0
+	damaged-idle: tree1shop
+		Start: 1
+	crippled-idle: tree1shop
+		Start: 2
+
+treechopped2:
+	Defaults:
+		UseTilesetExtension: true
+		ZOffset: -2024
+	make: tree2anim
+		Length: *
+		Tick: 80
+	idle: tree2shop
+		Start: 0
+	damaged-idle: tree2shop
+		Start: 1
+	crippled-idle: tree2shop
+		Start: 2
+	
+treechopped3:
+	Defaults:
+		UseTilesetExtension: true
+		ZOffset: -2024
+	make: tree3anim
+		Length: *
+		Tick: 80
+	idle: tree3shop
+		Start: 0
+	damaged-idle: tree3shop
+		Start: 1
+	crippled-idle: tree3shop
+		Start: 2
+		
+treechopped4:
+	Defaults:
+		UseTilesetExtension: true
+		ZOffset: -2024
+	make: tree4anim
+		Length: *
+		Tick: 80
+	idle: tree4shop
+		Start: 0
+	damaged-idle: tree4shop
+		Start: 1
+	crippled-idle: tree4shop
+		Start: 2
+
+deerstand:
+	Defaults:
+		Offset: 0,-12
+		TilesetOverrides:
+			DESERT: TEMPERAT
+			WINTER: TEMPERAT
+			JUNGLE: TEMPERAT
+			INTERIOR: TEMPERAT
+	idle: 
+		Start: 0
+	idle2: 
+		Start: 1
+	corputed1:
+		Start: 2
+	corputed2:
+		Start: 3
+	empty: deerstand
+		Start: 0
+		
+coppermine:
+	Defaults:
+		Offset: 0,-5
+		TilesetOverrides:
+			DESERT: TEMPERAT
+			INTERIOR: TEMPERAT
+	active: cropmin
+		Length: *
+		Tick: 80
+		Start: 0
+	idle: cropmin
+		Start: 0
+		
+mwlumbershack:
+	Defaults:
+		TilesetOverrides:
+			DESERT: TEMPERAT
+			INTERIOR: TEMPERAT
+	idle: mwlumbershack
+		Start: 0
+		Offset: 0,-12,0
+		
+ironmine:
+	Defaults:
+		TilesetOverrides:
+			DESERT: TEMPERAT
+			INTERIOR: TEMPERAT
+	active: iromin
+		Length: 29
+		Tick: 100
+		Start: 1
+	idle: iromin
+		Start: 0
+goldmine:
+	Defaults:
+		TilesetOverrides:
+			DESERT: TEMPERAT
+			INTERIOR: TEMPERAT
+	active: golmin
+		Length: 29
+		Tick: 100
+		Start: 1
+	idle: golmin
+		Start: 0

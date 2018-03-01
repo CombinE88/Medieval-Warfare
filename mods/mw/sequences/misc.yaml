@@ -151,6 +151,83 @@ patriot:
 	idle:
 		Facings: 32
 		ZOffset: 1023
+        
+smbllboltdown:	 
+	idle: smallaaballarrow
+		Start: 16
+		
+snakemissil:	 
+	idle: sulm4
+		Start: 288
+		Tick: 80
+		Facings: 8
+		Length: 3
+		
+sulb3feather:	 
+	idle: 
+		Facings: 32
+		
+sulb3feathersmall:	
+	idle: 
+		Facings: 32
+		
+giantrock:
+	idle: undead7
+		Start: 277
+		Length: 9
+		Tick: 30
+
+zombspark:
+	bright:
+		Length: 4
+		ZOffset: 1023
+	dim:
+		Start: 4
+		Length: 4
+		ZOffset: 1023
+		
+bloodspark:
+	bright:
+		Length: 4
+		ZOffset: 1023
+	dim:
+		Start: 4
+		Length: 4
+		ZOffset: 1023
+
+burningprints:
+	idle: fire4
+		Length: *
+		ZOffset: -1023
+		
+flicker: 
+	idle:
+		Offset: 0,-10
+		Length: *
+		Tick: 40
+		BlendMode: Additive
+	make:
+		Offset: 0,-10
+		Length: *
+		Tick: 40
+		BlendMode: Additive
+	active:
+		Offset: 0,-10
+		Length: *
+		Tick: 40
+		BlendMode: Additive
+		
+skytheproj:
+	idle: grim
+		Length: 32
+		Start: 349
+		Tick: 10
+		
+bloodparticle:
+	idle:
+		Length: *
+	
+
 
 explosion:
 	Defaults:
@@ -235,7 +312,11 @@ beacon:
 	clock: beaconclock
 		Length: *
 		Offset: 0,-42
-
+	sulspballiconstiny: sulspballiconstiny
+		Offset: 0,-42
+	handaiconsmall: handaiconsmall
+		Offset: 0,-42
+	
 select:
 	repair:
 		Start: 2
@@ -528,3 +609,5 @@ smokland:
 		Length: 32
 		Tick: 120
 		ZOffset: 1023
+        
+        

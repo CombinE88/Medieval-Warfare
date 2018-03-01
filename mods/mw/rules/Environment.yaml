@@ -110,7 +110,7 @@ FIREPLACE:
 		ValidFactions: Nod
 	GiveMcvCrateAction:
 		SelectionShares: 1
-		Units: mcvnew
+		Units: mcv2new
 	ExplodeCrateAction:
 		Weapon: LightningStrike
 	RenderSprites:

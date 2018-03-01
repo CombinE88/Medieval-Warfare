@@ -1,0 +1,155 @@
+^pentagram:
+	pentagrams: pentas
+		Offset: -2,0
+		Length: *
+		ZOffset: -2024
+	circles: ptimers
+		Length: 21
+		ZOffset: -2024
+	pentagramm: pentam
+		Offset: -2,0
+		Length: *
+		ZOffset: -2024
+	circlem: ptimerm
+		Length: 21
+		ZOffset: -2024
+	pentagraml: pental
+		Offset: -2,0
+		Length: *
+		ZOffset: -2024
+	circlel: ptimerl
+		Length: 21
+		ZOffset: -2024
+
+sppool: 
+	Inherits: ^pentagram
+	idle:
+		Start: 37
+	damaged-idle:
+		Start: 38
+	dead:
+		Start: 39
+		Tick: 800
+	make: 
+		Length: 37
+		Tick: 140
+	bib: bib3
+		UseTilesetExtension: true
+		Length: *
+	icon: sppoolicon.shp
+		AddExtension: False
+
+crypt: 
+	Inherits: ^pentagram
+	idle:
+		Start: 0
+		Length: 15
+		Tick: 80
+	damaged-idle:
+		Start: 15
+		Length: 15
+		Tick: 80
+	dead:
+		Start: 30
+		Tick: 800
+	make: cryptmake
+		Length: *
+		Tick: 100
+	bib: bib3
+		UseTilesetExtension: true
+		Length: *
+	burnloop1: burn-m
+		Start: 16
+		Length: 44
+		Tick: 80
+		ZOffset: 512
+		Offset: -22, 10
+	burnloop2: burn-m
+		Start: 16
+		Length: 44
+		Tick: 80
+		ZOffset: 512
+		Offset: -3, 17
+	icon: crypticon.shp
+		AddExtension: False
+		
+mauso: 
+	Inherits: ^pentagram
+	idle:
+		Start: 23
+	damaged-idle:
+		Start: 24
+	dead:
+		Start: 25
+		Tick: 800
+	make:
+		Length: 23
+		Tick: 200
+	bib: bib3
+		UseTilesetExtension: true
+		Length: *
+	icon: mausoicon.shp
+		AddExtension: False
+		
+libra: 
+	Inherits: ^pentagram
+	idle:
+		Start: 25
+	damaged-idle:
+		Start: 26
+	dead:
+		Start: 27
+		Tick: 800
+	make:
+		Length: 25
+		Tick: 200
+	bib: bib3
+		UseTilesetExtension: true
+		Length: *
+	icon: libraicon.shp
+		AddExtension: False
+		
+tomb: 
+	Inherits: ^pentagram
+	idle:
+		Start: 25
+		Offset: 0,-12
+	damaged-idle:
+		Start: 26
+		Offset: 0,-12
+	dead:
+		Start: 27
+		Tick: 800
+		Offset: 0,-12
+	make:
+		Length: 25
+		Tick: 200
+		Offset: 0,-12
+	bib: bib2
+		UseTilesetExtension: true
+		Length: *
+	icon: tombicon.shp
+		AddExtension: False
+		
+seal1:
+	icon: seal1.shp
+		AddExtension: False 
+		
+seal2:
+	icon: seal2.shp
+		AddExtension: False 
+		
+seal3:
+	icon: seal3.shp
+		AddExtension: False 
+		
+seal4:
+	icon: seal4.shp
+		AddExtension: False 
+		
+seal5:
+	icon: seal5.shp
+		AddExtension: False 
+
+		
+		

@@ -1,0 +1,145 @@
+ross1:
+	stand: 
+		Start: 122
+		Facings: 8
+	run: 
+		Start: 0
+		Length: 8
+		Facings: 8
+		Tick: 100
+	shoot: 
+		Tick: 100
+		Start: 66
+		Length: 7
+		Facings: 8
+	idle1: 
+		Tick: 100
+		Start: 150
+		Length: 7
+		Facings: 8
+	idle2: 
+		Tick: 100
+		Start: 206
+		Length: 7
+		Facings: 8
+	die1: 
+		Start: 132
+		Length: 18
+		Tick: 80
+	# Burn
+	die2: burninghorserider
+		Length: *
+		Tick: 80
+	icon: nlcavicon.shp
+		AddExtension: False
+		
+ross3:
+	stand: 
+		Start: 122
+		Facings: 8
+	run: 
+		Start: 0
+		Length: 8
+		Facings: 8
+		Tick: 100
+	shoot: 
+		Tick: 100
+		Start: 66
+		Length: 7
+		Facings: 8
+	idle1: 
+		Tick: 100
+		Start: 150
+		Length: 7
+		Facings: 8
+	idle2: 
+		Tick: 100
+		Start: 206
+		Length: 7
+		Facings: 8
+	die1: 
+		Start: 132
+		Length: 18
+		Tick: 80
+	# Burn
+	die2: burninghorserider
+		Length: *
+		Tick: 80
+	icon: nftankicon.shp
+		AddExtension: False
+
+ross4:
+	idle1: 
+		Tick: 100
+		Start: 182
+		Length: 7
+		Facings: 8
+		Offset: 0,4,0
+	idle1: 
+		Tick: 100
+		Start: 238
+		Length: 7
+		Facings: 8
+		Offset: 0,4,0
+	stand: 
+		Start: 122
+		Facings: 8
+		Offset: 0,4,0
+	run: 
+		Start: 0
+		Length: 8
+		Facings: 8
+		Tick: 100
+		Offset: 0,4,0
+	shoot: 
+		Tick: 100
+		Start: 66
+		Length: 7
+		Facings: 8
+		Offset: 0,4,0
+	die1: 
+		Start: 132
+		Length: 18
+		Tick: 80
+		Offset: 0,4,0
+	# Burn
+	die2: burninghorserider
+		Length: *
+		Tick: 80
+	icon: nspearicon.shp
+		AddExtension: False
+
+ross4c:
+	stand: 
+		Start: 122
+		Facings: 8
+	run: 
+		Start: 0
+		Length: 8
+		Facings: 8
+		Tick: 100
+	shoot: ross4cs
+		Tick: 100
+		Start: 66
+		Length: 7
+		Facings: 8
+	idle1: 
+		Tick: 100
+		Start: 150
+		Length: 7
+		Facings: 8
+	idle2: 
+		Tick: 100
+		Start: 206
+		Length: 7
+		Facings: 8
+	die1: 
+		Start: 132
+		Length: 18
+		Tick: 80
+	# Burn
+	die2: burninghorserider
+		Length: *
+		Tick: 80
+	icon: nsabericon.shp
+		AddExtension: False

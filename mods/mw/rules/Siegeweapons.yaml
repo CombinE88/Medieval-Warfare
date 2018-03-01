@@ -1,20 +1,11 @@
-MCVNEW:
+
+MCV2NEW:
 	Inherits: ^Siege
 	Inherits@GainsExperience: ^GainsExperience
 	Inherits@GetsPoisoned: ^GetsPoisoned
 	Inherits@ArcherDemo65: ^ArcherDemo80
-
 	Inherits@SnakeStunnable: ^SnakeDamagable
-	Transforms:
-		IntoActor: factnew
-		Offset: -1,-1
-		Facing: 160
-		TransformSounds: tentcloth.aud, brickconc.aud
-		NoTransformNotification: BuildingCannotPlaceAudio
-	Valued:
-		Cost: 5000
-	Tooltip:
-		Name: Supply wagon
+
 	Selectable:
 		Priority: 4
 	AttackFrontal:
@@ -22,19 +13,10 @@ MCVNEW:
 		Crushes: crate, infantry
 		Speed: 65
 		TurnSpeed: 3
-	Health:
-		HP: 350000
-		Shape: Capsule
-			Radius: 426
-			PointA: 0, -612
-			PointB: 0, 512
 	Armor:
 		Type: MediumCavalry
 	RevealsShroud:
 		Range: 8c0
-	RenderSprites:
-		Image: medimcv2
-		PlayerPalette: raplayer
 	WithInfantryBody:
 	MustBeDestroyed:
 		RequiredForShortGame: true
@@ -43,7 +25,7 @@ MCVNEW:
 		VisualBounds: 36,36
 		DecorationBounds: 36,36,0,0
 	SpawnActorOnDeath:
-		Actor: MCVNEW.Husk 
+		Actor: MCVNEW2.Husk 
 		OwnerType: InternalName
 		InternalOwner: Neutral
 	SpawnActorOnDeath@2:
@@ -53,23 +35,13 @@ MCVNEW:
 		InternalOwner: Neutral
 	Voiced:
 		VoiceSet: CivilianFemaleVoice
-	ProximityExternalCondition@WANDERER:
-		Range: 6c0
-		ValidStances: Ally
-		Condition: Wander
-	ProximityExternalCondition@LABORER:
-		Range: 6c0
-		ValidStances: Ally
-		Condition: Labor
 	Targetable:
 		TargetTypes: Ground, Siege, Wanderer, Laborer
 	Targetable@CombatRole:
 		TargetTypes: Support
-		
-MCV2NEW:
-	Inherits@66: MCVNEW
 	RenderSprites:
 		Image: medimcv
+		PlayerPalette: raplayer
 	Transforms:
 		IntoActor: minifact
 		Offset: -1,-1
@@ -574,44 +546,7 @@ EHARVXL:
 	PersonValued:
 		ActorCount: 1
 		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
-	
-		
-PLANEWAGEN:
-	Inherits: ^Siege
-	Cargo:
-		MaxWeight: 8
-		PipCount: 8
-		Types: Infantry, Archer
-	Valued:
-		Cost: 500
-	Tooltip:
-		Name: Construction Wagon
-	Mobile:
-		TurnSpeed: 2
-		Speed: 60
-	Health:
-		HP: 30000
-		Shape: Capsule
-			Radius: 426
-			PointA: 0, -612
-			PointB: 0, 512
-	AttackFrontal:
-	RenderSprites:
-		Image: planewagen
-		PlayerPalette: raplayer
-	WithInfantryBody:
-		IdleSequences: stand
-	Armor:
-		Type: MediumCavalry
-	Selectable:
-		Bounds: 35,35,0,-6
-	SelectionDecorations:
-		VisualBounds: 35,35,0,-6
-	Targetable:
-		TargetTypes: Ground, Siege
-	Voiced:
-		VoiceSet: CivilianFemaleVoice
-		
+
 		
 SIEGE99:
 	Inherits: ^Siege

@@ -1,0 +1,632 @@
+sulnuke:
+	Inherits: ^scaffold
+	idle: 
+		Start: 19
+	damaged-idle: 
+		Start: 20
+	dead: 
+		Start: 21
+		Tick: 800
+	make: sulnukemake
+		Length: *
+		Tick: 80
+	bib: mwbib3
+		UseTilesetExtension: true
+		Length: *
+	icon: sulnukeicon.shp
+		AddExtension: False 
+	make1: sulnukemake
+		Start: 0
+		ZOffset: -25
+	make2: sulnukemake
+		Start: 1
+		ZOffset: -25
+	make3: sulnukemake
+		Start: 2
+		ZOffset: -25
+	make4: sulnukemake
+		Start: 3
+		ZOffset: -25
+	make5: sulnukemake
+		Start: 4
+		ZOffset: -25
+	make6: sulnukemake
+		Start: 5
+		ZOffset: -25
+		
+sulnuk2:
+	Inherits: ^scaffold
+	idle: 
+		Start: 19
+		Offset: 0,-15
+	damaged-idle: 
+		Start: 20
+		Offset: 0,-15
+	dead: 
+		Start: 21
+		Tick: 800
+		Offset: 0,-15
+	make: sulnuk2make
+		Length: *
+		Tick: 80
+		Offset: 0,-15
+	bib: mwbib2
+		UseTilesetExtension: true
+		Length: *
+	icon: sulnuk2icon.shp
+		AddExtension: False 
+	make1: sulnuk2make
+		Start: 0
+		ZOffset: -25
+		Offset: 0,-15
+	make2: sulnuk2make
+		Start: 1
+		ZOffset: -25
+		Offset: 0,-15
+	make3: sulnuk2make
+		Start: 2
+		ZOffset: -25
+		Offset: 0,-15
+	make4: sulnuk2make
+		Start: 3
+		ZOffset: -25
+		Offset: 0,-15
+	make5: sulnuk2make
+		Start: 4
+		ZOffset: -25
+		Offset: 0,-15
+	make6: sulnuk2make
+		Start: 5
+		ZOffset: -25
+		Offset: 0,-15
+ 
+	
+sulmill:
+	Inherits: ^scaffold
+	idle: 
+		Start: 0
+		Length: 19
+		Offset: 12,-12,0
+		Tick: 50
+	damaged-idle: 
+		Start: 20
+		Length: 19
+		Offset: 12,-12,0
+		Tick: 50
+	dead: 
+		Start: 40
+		Tick: 800
+		Offset: 12,-12,0
+	make: sulmilmake
+		Length: *
+		Tick: 80
+		Offset: 12,-12,0
+	bib: bib3
+		UseTilesetExtension: true
+		Length: *
+	icon: sulmillicon.shp
+		AddExtension: False 
+	make1: sulmilmake
+		Offset: 12,-12,0
+		Start: 0
+		ZOffset: -25
+	make2: sulmilmake
+		Offset: 12,-12,0
+		Start: 1
+		ZOffset: -25
+	make3: sulmilmake
+		Offset: 12,-12,0
+		Start: 2
+		ZOffset: -25
+	make4: sulmilmake
+		Offset: 12,-12,0
+		Start: 3
+		ZOffset: -25
+	make5: sulmilmake
+		Offset: 12,-12,0
+		Start: 4
+		ZOffset: -25
+		
+sulref:
+	Inherits: ^scaffold
+	idle: 
+		Start: 6
+		Offset: 2,4
+	damaged-idle: 
+		Start: 7
+		Offset: 2,4
+	dead: 
+		Start: 8
+		Offset: 2,4
+	make: 
+		Length: 5
+		Tick: 80
+		Offset: 2,4
+	bib: mwbib2
+		UseTilesetExtension: true
+		Length: *
+	icon: sulreficon.shp
+		AddExtension: False
+	make1: 
+		Start: 0
+		ZOffset: -25
+		Offset: 2,4
+	make2: 
+		Start: 1
+		ZOffset: -25
+		Offset: 2,4
+	make3: 
+		Start: 2
+		ZOffset: -25
+		Offset: 2,4
+	make4: 
+		Start: 3
+		ZOffset: -25
+		Offset: 2,4
+	make5: 
+		Start: 4
+		ZOffset: -25
+		Offset: 2,4
+	make6: 
+		Start: 5
+		ZOffset: -25
+		Offset: 2,4
+
+sullodge:
+	Inherits: ^scaffold
+	idle: 
+		Start: 5
+		Offset: 0,-12
+	damaged-idle: 
+		Start: 6
+		Offset: 0,-12
+	dead: 
+		Start: 6
+		Tick: 800
+		Offset: 0,-12
+	make:
+		Length: *
+		Tick: 80
+		Offset: 0,-12
+	bib: mwbib3
+		UseTilesetExtension: true
+		Length: *
+	icon: sullodgeicon.shp
+		AddExtension: False
+	make1: 
+		Start: 1
+		ZOffset: -25
+		Offset: 0,-12
+	make2: 
+		Start: 2
+		ZOffset: -25
+		Offset: 0,-12
+	make3: 
+		Start: 3
+		ZOffset: -25
+		Offset: 0,-12
+	make4: 
+		Start: 4
+		ZOffset: -25
+		Offset: 0,-12
+
+sulbarr:
+	Inherits: ^scaffold
+	idle: 
+		Start: 29
+	damaged-idle: 
+		Start: 30
+	dead: 
+		Start: 31
+		Tick: 800
+	make: 
+		Length: 29
+		Tick: 80
+	bib: mwbib2
+		UseTilesetExtension: true
+		Length: *
+	icon: sulbarricon.shp
+		AddExtension: False 
+	make1: sulbarrmake
+		Start: 0
+		ZOffset: -25
+	make2: sulbarrmake
+		Start: 1
+		ZOffset: -25
+	make3: sulbarrmake
+		Start: 2
+		ZOffset: -25
+	make4: sulbarrmake
+		Start: 3
+		ZOffset: -25
+	make5: sulbarrmake
+		Start: 4
+		ZOffset: -25	   
+		
+sulmystic:
+	Inherits: ^scaffold
+	idle: 
+		Start: 29
+		Offset: 12,-24,0
+	damaged-idle: 
+		Start: 30
+		Offset: 12,-24,0
+	dead: 
+		Start: 31
+		Tick: 800
+		Offset: 12,-24,0
+	make: 
+		Length: 29
+		Tick: 80
+		Offset: 12,-24,0
+	bib: mwbib2
+		UseTilesetExtension: true
+		Length: *
+	icon: sulmysticicon.shp
+		AddExtension: False 
+	make1: 
+		Start: 2
+		ZOffset: -25
+		Offset: 12,-24,0
+	make2: 
+		Start: 5
+		ZOffset: -25
+		Offset: 12,-24,0
+	make3: 
+		Start: 10
+		ZOffset: -25
+		Offset: 12,-24,0
+	make4: 
+		Start: 15
+		ZOffset: -25
+		Offset: 12,-24,0
+	make5: 
+		Start: 20
+		ZOffset: -25
+		Offset: 12,-24,0
+	make6: 
+		Start: 25
+		ZOffset: -25
+		Offset: 12,-24,0
+		
+		
+sulcastle:
+	Inherits: ^scaffold
+	idle: 
+		Start: 25
+		Offset: 0,-18
+	damaged-idle: 
+		Start: 26
+		Offset: 0,-18
+	dead: 
+		Start: 27
+		Tick: 800
+		Offset: 0,-18
+	make: 
+		Length: 25
+		Tick: 80
+		Offset: 0,-18
+	bib: mwbib2
+		UseTilesetExtension: true
+		Length: *
+	icon: sulcastleicon.shp
+		AddExtension: False 
+	tower1: sultow1
+		Start: 28
+		Offset: 0, -36
+		ZOffset: -100
+	damaged-tower1: sultow1
+		Start: 29
+		Offset: 0, -36
+		ZOffset: -100
+	tower1make: sultow1
+		Length: 28
+		Tick: 80
+		Offset: 0, -36
+		ZOffset: -100
+	tower2: sultow2
+		Start: 28
+		Offset: 0, -36
+	damaged-tower2: sultow2
+		Start: 29
+		Offset: 0, -36
+	tower2make: sultow2
+		Length: 28
+		Tick: 80
+		Offset: 0, -36
+	tower3: sultow3
+		Start: 28
+		Offset: 0, -36
+	damaged-tower3: sultow3
+		Start: 29
+		Offset: 0, -36
+	tower3make: sultow3
+		Length: 28
+		Tick: 80
+		Offset: 0, -36
+	tower4: sultow4
+		Start: 28
+		Offset: 0, -36
+		ZOffset: -100
+	damaged-tower4: sultow4
+		Start: 29
+		Offset: 0, -36
+		ZOffset: -100
+	tower4make: sultow4
+		Length: 28
+		Tick: 80
+		Offset: 0, -36
+		ZOffset: -100
+	make1: sulcastlemake
+		Start: 0
+		ZOffset: -25
+		Offset: 0,-18
+	make2: sulcastlemake
+		Start: 1
+		ZOffset: -25
+		Offset: 0,-18
+	make3: sulcastlemake
+		Start: 2
+		ZOffset: -25
+		Offset: 0,-18
+	make4: sulcastlemake
+		Start: 3
+		ZOffset: -25
+		Offset: 0,-18
+	make5: sulcastlemake
+		Start: 4
+		ZOffset: -25
+		Offset: 0,-18
+	make6: sulcastlemake
+		Start: 5
+		ZOffset: -25
+		Offset: 0,-18
+		
+sultow1:
+	Inherits: ^scaffold
+	idle: 
+		Start: 28
+		Offset: 0, -36
+	damaged-idle: 
+		Start: 29
+		Offset: 0, -36
+	dead: 
+		Start: 30
+		Tick: 800
+		Offset: 0, -36
+	idle-plug:
+		Start: 28
+		Offset: 0, -36
+	damaged-idle-plug:
+		Start: 29
+		Offset: 0, -36
+	make: 
+		Length: 28
+		Tick: 80
+		Offset: 0, -36
+	bib: bib2
+		UseTilesetExtension: true
+		Length: *
+	icon: sultow1icon.shp
+		AddExtension: False 
+		
+sultow2:
+	Inherits: ^scaffold
+	idle: 
+		Start: 28
+		Offset: 0, -36
+	damaged-idle: 
+		Start: 29
+		Offset: 0, -36
+	dead: 
+		Start: 30
+		Tick: 800
+		Offset: 0, -36
+	idle-plug:
+		Start: 28
+		Offset: 0, -36
+	damaged-idle-plug:
+		Start: 29
+		Offset: 0, -36
+	make: 
+		Length: 28
+		Tick: 80
+		Offset: 0, -36
+	bib: bib2
+		UseTilesetExtension: true
+		Length: *
+	icon: sultow2icon.shp
+		AddExtension: False
+		
+sultow3:
+	Inherits: ^scaffold
+	idle: 
+		Start: 28
+		Offset: 0, -36
+	damaged-idle: 
+		Start: 29
+		Offset: 0, -36
+	dead: 
+		Start: 30
+		Tick: 800
+		Offset: 0, -36
+	idle-plug:
+		Start: 28
+		Offset: 0, -36
+	damaged-idle-plug:
+		Start: 29
+		Offset: 0, -36
+	make: 
+		Length: 28
+		Tick: 80
+		Offset: 0, -36
+	bib: bib2
+		UseTilesetExtension: true
+		Length: *
+	icon: sultow3icon.shp
+		AddExtension: False
+		
+sultow4:
+	Inherits: ^scaffold
+	idle: 
+		Start: 28
+		Offset: 0, -36
+	active: 
+		Start: 28
+		Offset: 0, -36
+	damaged-idle: 
+		Start: 29
+		Offset: 0, -36
+	damaged-idle: 
+		Start: 29
+		Offset: 0, -36
+	dead: 
+		Start: 30
+		Tick: 800
+		Offset: 0, -36
+	idle-plug:
+		Start: 28
+		Offset: 0, -36
+	damaged-idle-plug:
+		Start: 29
+		Offset: 0, -36
+	make: 
+		Length: 28
+		Tick: 80
+		Offset: 0, -36
+	bib: bib2
+		UseTilesetExtension: true
+		Length: *
+	icon: sultow4icon.shp
+		AddExtension: False
+		
+sulfix:
+	Inherits: ^scaffold
+	idle: 
+		Start: 30
+		Offset: 0, -12
+	damaged-idle: 
+		Start: 31
+		Offset: 0, -12
+	active: sulfixanim
+		Length: *
+		Tick: 100
+		Offset: 0, -12
+	damaged-active: sulfixanimd
+		Length: *
+		Tick: 100
+		Offset: 0, -12
+	dead: 
+		Tick: 800
+		Start: 32
+		Offset: 0, -12
+	make: 
+		Length: 30
+		Tick: 80
+		Offset: 0, -12
+	bib: bib2
+		UseTilesetExtension: true
+		Length: *
+	icon: sulfixicon.shp
+		AddExtension: False
+	make1: 
+		Start: 10
+		ZOffset: -25
+		Offset: 0, -12
+	make2: 
+		Start: 15
+		ZOffset: -25
+		Offset: 0, -12
+	make3: 
+		Start: 20
+		ZOffset: -25
+		Offset: 0, -12
+	make4: 
+		Start: 25
+		ZOffset: -25
+		Offset: 0, -12
+		
+sulcnshmbr:
+	Inherits: ^scaffold
+	idle: 
+		Start: 6
+		Offset: 0,-12
+	damaged-idle: 
+		Start: 7
+		Offset: 0,-12
+	dead: 
+		Start: 8
+		Tick: 800
+		Offset: 0,-12
+	make: 
+		Length: 6
+		Tick: 80
+		Offset: 0,-12
+	bib: mwbib2
+		UseTilesetExtension: true
+		Length: *
+	icon: sulcnshmbricon.shp
+		AddExtension: False 
+	make1: 
+		Start: 0
+		ZOffset: -25
+		Offset: 0,-12
+	make2: 
+		Start: 1
+		ZOffset: -25
+		Offset: 0,-12
+	make3: 
+		Start: 2
+		ZOffset: -25
+		Offset: 0,-12
+	make4: 
+		Start: 3
+		ZOffset: -25
+		Offset: 0,-12
+	make5: 
+		Start: 4
+		ZOffset: -25
+		Offset: 0,-12
+	make6: 
+		Start: 5
+		ZOffset: -25
+		Offset: 0,-12
+
+		
+silonew:
+	Inherits: ^scaffold
+	idle: 
+	damaged-idle: 
+		Start: 5
+	dead: 
+	stages: 
+		Length: 5
+	damaged-stages: 
+		Start: 5
+		Length: 5
+	make: silonewmake
+		Length: *
+		Tick: 80
+	bib: mbSILO
+		UseTilesetExtension: true
+		TilesetOverrides:
+			WINTER: TEMPERAT
+			JUNGLE: TEMPERAT
+			JUNGLE: TEMPERAT
+			INTERIOR: TEMPERAT
+		Length: *
+	icon: silonewicon.shp
+		AddExtension: False
+	make1: silonewmake
+		Start: 1
+		ZOffset: -25
+	make2: silonewmake
+		Start: 4
+		ZOffset: -25
+	make3: silonewmake
+		Start: 7
+		ZOffset: -25
+	make4: silonewmake
+		Start: 12
+		ZOffset: -25
+		

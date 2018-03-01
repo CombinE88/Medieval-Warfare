@@ -1,0 +1,347 @@
+e2new:
+
+	stunned: sulm4
+		ZOffset: 125
+		Start: 312
+		Length: 2
+		Tick: 200
+	stand: 
+		Start: 122
+		Facings: 8
+	run: 
+		Start: 0
+		Length: 8
+		Facings: 8
+		Tick: 100
+	shoot: 
+		Tick: 100
+		Start: 66
+		Length: 7
+		Facings: 8
+	idle1: 
+		Tick: 100
+		Start: 195
+		Length: 12
+	idle2: 
+		Tick: 100
+		Start: 206
+		Length: 16
+	die1: 
+		Start: 131
+		Length: 16
+		Tick: 80
+	# large hit
+	die2: splatterdead
+		Length: *
+		Tick: 80
+	# poision
+	die3: 
+		Start: 163
+		Length: 15
+		Tick: 80
+	# ballista
+	die4: 
+		Start: 180
+		Length: 11
+		Tick: 80
+	die-crushed: newe1rot
+		Start: 16
+		Length: 4
+		Tick: 1600
+		ZOffset: -511
+	die5: burningman
+		Length: *
+		Tick: 80
+	icon: ne3icon.shp
+		Offset: 0,0,0
+		AddExtension: False
+		
+
+
+
+e3new:
+	stunned: sulm4
+		ZOffset: 125
+		Start: 312
+		Length: 2
+		Tick: 200
+	stand: 
+		Start: 122
+		Facings: 8
+	run: 
+		Start: 0
+		Length: 8
+		Facings: 8
+		Tick: 100
+	shoot: e3news
+		Tick: 100
+		Start: 66
+		Length: 7
+		Facings: 8
+	idle1: 
+		Tick: 100
+		Start: 190
+		Length: 22
+	idle2: 
+		Tick: 100
+		Start: 210
+		Length: 17
+	die1: 
+		Start: 132
+		Length: 15
+		Tick: 80
+	# large hit
+	die2: splatterdead
+		Length: *
+		Tick: 80
+	# poision
+	die3: 
+		Start: 163
+		Length: 15
+		Tick: 80
+	# ballista
+	die4: 
+		Start: 180
+		Length: 11
+		Tick: 80
+	die-crushed: newe1rot
+		Start: 16
+		Length: 4
+		Tick: 1600
+		ZOffset: -511
+	die5: burningman
+		Length: *
+		Tick: 80
+	icon: ne1icona.shp
+		AddExtension: False
+        
+e4newv2:
+	stunned: sulm4
+		ZOffset: 125
+		Start: 312
+		Length: 2
+		Tick: 200
+	stand: 
+		Start: 122
+		Facings: 8
+	run: 
+		Start: 0
+		Length: 8
+		Facings: 8
+		Tick: 100
+	shoot: 
+		Tick: 100
+		Start: 66
+		Length: 7
+		Facings: 8
+	idle1: 
+		Tick: 100
+		Start: 190
+		Length: 35
+	idle2: 
+		Tick: 100
+		Start: 224
+		Length: 21
+	die1: 
+		Start: 132
+		Length: 15
+		Tick: 80
+	die2: splatterdead
+		Length: *
+		Tick: 80
+	# poision
+	die3: 
+		Start: 163
+		Length: 15
+		Tick: 80
+	# ballista
+	die4: 
+		Start: 180
+		Length: 11
+		Tick: 80
+	die-crushed: newe1rot
+		Start: 16
+		Length: 4
+		Tick: 1600
+		ZOffset: -511
+	die5: burningman
+		Length: *
+		Tick: 80
+	icon: ne2icon.shp
+		AddExtension: False
+newcomm:
+	stunned: sulm4
+		ZOffset: 125
+		Start: 312
+		Length: 2
+		Tick: 200
+	stand: 
+		Start: 122
+		Facings: 8
+	move: 
+		Start: 0
+		Length: 8
+		Facings: 8
+		Tick: 100
+	shoot: 
+		Tick: 40
+		Start: 66
+		Length: 56
+	idle: 
+		Start: 122
+		Facings: 8
+	die1: 
+		Start: 131
+		Length: 16
+		Tick: 80
+	# large hit
+	die2: splatterdead
+		Length: *
+		Tick: 80
+	# poision
+	die3: 
+		Start: 163
+		Length: 15
+		Tick: 80
+	# ballista
+	die4: 
+		Start: 180
+		Length: 11
+		Tick: 80
+	die-crushed: newe1rot
+		Start: 16
+		Length: 4
+		Tick: 1600
+		ZOffset: -511
+	die5: burningman
+		Length: *
+		Tick: 80
+	icon: juggicon.shp
+		Offset: 0,0,0
+		AddExtension: False
+	empty: sulm4
+		Tick: 1000
+		Start: 0
+
+rmbonew:
+	stunned: sulm4
+		ZOffset: 125
+		Start: 312
+		Length: 2
+		Tick: 200
+	stand: 
+		Start: 122
+		Facings: 8
+	run: 
+		Start: 0
+		Length: 8
+		Facings: 8
+		Tick: 100
+	shoot: 
+		Tick: 100
+		Start: 66
+		Length: 7
+		Facings: 8
+	idle1: 
+		Tick: 100
+		Start: 190
+		Length: 13
+	idle2: 
+		Tick: 100
+		Start: 203
+		Length: 13
+	die1: 
+		Start: 132
+		Length: 15
+		Tick: 80
+	# large hit
+	die2: splatterdead
+		Length: *
+		Tick: 80
+	# poision
+	die3: 
+		Start: 163
+		Length: 15
+		Tick: 80
+	# ballista
+	die4: 
+		Start: 179
+		Length: 11
+		Tick: 80
+	die-crushed: newe1rot
+		Start: 16
+		Length: 4
+		Tick: 1600
+		ZOffset: -511
+	die5: burningman
+		Length: *
+		Tick: 80
+	icon: nemboicon.shp
+		AddExtension: False  
+	muzzle: 
+		Start: 242
+		Offset: 0,6
+		Facings: 8
+		Length: 7
+		Tick: 100
+		ZOffset: 512
+		
+
+        
+koenig:
+	make: 
+		Start: 176
+		Length: 13
+		Tick: 80
+	stand-dead: 
+		Start: 172
+	idle: 
+		Start: 122
+		Facings: 8
+	stand: 
+		Start: 122
+		Facings: 8
+	move: 
+		Start: 0
+		Length: 8
+		Facings: 8
+		Tick: 100
+	shoot: 
+		Tick: 100
+		Start: 66
+		Length: 7
+		Facings: 8
+	idle1: 
+		Tick: 100
+		Start: 190
+		Length: 22
+	idle2: 
+		Tick: 100
+		Start: 210
+		Length: 17
+	die1: 
+		Start: 132
+		Length: 16
+		Tick: 80
+	# large hit
+	die2: 
+		Start: 132
+		Length: 16
+		Tick: 80
+	# poision
+	die3:
+		Start: 132
+		Length: 16
+		Tick: 80
+	# ballista
+	die4: 
+		Start: 132
+		Length: 16
+		Tick: 80
+	die-crushed: 
+		Start: 132
+		Length: 16
+		Tick: 80
+	icon: koenigicon.shp
+		AddExtension: False
+ 

@@ -1,0 +1,545 @@
+gtwnew:
+	Inherits: ^scaffold
+	idle: 
+		Start: 11
+		Offset: 0,-12
+	damaged-idle: 
+		Start: 12
+		Offset: 0,-12
+	dead: 
+		Start: 15
+		Offset: 0,-12
+	make: 
+		Length: 10
+		Tick: 80
+		Offset: 0,-12
+	bib: mbGTWR
+		UseTilesetExtension: true
+		TilesetOverrides:
+			WINTER: TEMPERAT
+			JUNGLE: TEMPERAT
+			JUNGLE: TEMPERAT
+			INTERIOR: TEMPERAT
+		Length: *
+		Offset: 0,-2
+	icon: gtwnewicon.shp
+		AddExtension: False
+	turretidle: e4new
+		Start: 122
+		Facings: 8
+	turretanim: e4new
+		Tick: 100
+		Start: 66
+		Length: 7
+		Facings: 8 
+	idle-overlay: 
+		ZOffset: 1024
+		Start: 13
+		Offset: 0,-12
+	damaged-idle-overlay: 
+		ZOffset: 1024
+		Start: 14
+		Offset: 0,-12
+	make1: 
+		Start: 2
+		ZOffset: -25
+		Offset: 0,-12
+	make2: 
+		Start: 3
+		ZOffset: -25
+		Offset: 0,-12
+	make3: 
+		Start: 4
+		ZOffset: -25
+		Offset: 0,-12
+	make4: 
+		Start: 5
+		ZOffset: -25
+		Offset: 0,-12
+	make5: 
+		Start: 6
+		ZOffset: -25
+		Offset: 0,-12
+	make6: 
+		Start: 7
+		ZOffset: -25
+		Offset: 0,-12
+		
+sulgtw:
+	Inherits: ^scaffold
+	idle: 
+		Start: 11
+		Offset: 0,-12
+	damaged-idle: 
+		Start: 12
+		Offset: 0,-12
+	idleupped: sulgtwbase2
+		Start: 0
+		Offset: 0,-8
+	damaged-idleupped: sulgtwbase2
+		Start: 1
+		Offset: 0,-8
+	dead: 
+		Start: 15
+		Offset: 0,-12
+	make: 
+		Length: 10
+		Tick: 80
+		Offset: 0,-12
+	bib: mbGTWR
+		UseTilesetExtension: true
+		TilesetOverrides:
+			WINTER: TEMPERAT
+			JUNGLE: TEMPERAT
+			SNOW: TEMPERAT
+			INTERIOR: TEMPERAT
+		Length: *
+		Offset: 0,-2
+	icon: sulgtwicon.shp
+		AddExtension: False
+	turretidle: sule3
+		Start: 122
+		Facings: 8
+	turretanim: sule3
+		Tick: 100
+		Start: 66
+		Length: 7
+		Facings: 8 
+	turretstatidle: sule2
+		Start: 122
+		Facings: 8
+	turretstatanim: sule2
+		Tick: 100
+		Start: 66
+		Length: 7
+		Facings: 8 
+	idle-overlay: 
+		ZOffset: 125
+		Start: 13
+		Offset: 0,-12
+	damaged-idle-overlay: 
+		ZOffset: 125
+		Start: 14
+		Offset: 0,-12
+	archgtw: 
+		Start: 13
+		Offset: 0, -25
+		ZOffset: 325
+	damaged-archgtw: 
+		Start: 14
+		Offset: 0, -25
+		ZOffset: 325
+	djingtw: sulgtwplugs
+		Start: 0
+		Offset: 0, -25
+		ZOffset: 325
+	damaged-djingtw: sulgtwplugs
+		Start: 1
+		Offset: 0, -25
+		ZOffset: 325
+	dturretidle: sulm2
+		Start: 219
+		Facings: 8
+		Length: 8
+		Tick: 100
+		ZOffset: 225
+	dturretanim: sulm2
+		Tick: 100
+		Start: 64
+		Length: 8
+		Facings: 8
+		ZOffset: 225
+	turretidle2: sule3
+		Start: 122
+		Facings: 8
+		ZOffset: 225
+	turretanim2: sule3
+		Tick: 100
+		Start: 66
+		Length: 7
+		Facings: 8 
+		ZOffset: 225
+	make1: 
+		Start: 1
+		ZOffset: -25
+		Offset: 0,-12
+	make2: 
+		Start: 2
+		ZOffset: -25
+		Offset: 0,-12
+	make3: 
+		Start: 3
+		ZOffset: -25
+		Offset: 0,-12
+	make4: 
+		Start: 5
+		ZOffset: -25
+		Offset: 0,-12
+	make5: 
+		Start: 6
+		ZOffset: -25
+		Offset: 0,-12
+	make6: 
+		Start: 8
+		ZOffset: -25
+		Offset: 0,-12
+		
+gunnew:
+	Inherits: ^scaffold
+	idle: cannontower
+		Facings: 32
+	damaged-idle: cannontower
+		Start: 33
+		Facings: 32
+	make: cannontowermake
+		Length: 10
+		Tick: 80
+	muzzle: gunfire2
+		Length: *
+	bib: mbGUN
+		UseTilesetExtension: true
+		TilesetOverrides:
+			WINTER: TEMPERAT
+			JUNGLE: TEMPERAT
+			INTERIOR: TEMPERAT
+		Length: *
+		Offset: -1,-1
+	icon: cannontowericon.shp
+		AddExtension: False
+	make1: cannontowermake
+		Start: 2
+		ZOffset: -25
+	make2: cannontowermake
+		Start: 3
+		ZOffset: -25
+	make3: cannontowermake
+		Start: 5
+		ZOffset: -25
+	make4: cannontowermake
+		Start: 6
+		ZOffset: -25
+	make5: cannontowermake
+		Start: 8
+		ZOffset: -25
+	make6: cannontowermake
+		Start: 9
+		ZOffset: -25
+		
+tribu:
+	Inherits: ^scaffold
+	turretanim: 
+		Facings: 32
+		Length: 9
+		Start: 32
+		Tick: 80
+		Offset: 0,-18,0
+	damaged-idle: 
+		Facings: 32
+		Offset: 0,-18,0
+	idle: 
+		Facings: 32
+		Offset: 0,-18,0
+	dead: tribudead
+		Tick: 800
+	make: tribumake
+		Length: *
+		Tick: 80
+		Offset: 0,-18,0
+	bib: mbGTWR
+		UseTilesetExtension: true
+		TilesetOverrides:
+			WINTER: TEMPERAT
+			JUNGLE: TEMPERAT
+			INTERIOR: TEMPERAT
+		Length: *
+		Offset: 0,-2
+	icon: tribuicon.shp
+		AddExtension: False
+	make1: tribumake
+		Start: 1
+		ZOffset: -25
+		Offset: 0,-18,0
+	make2: tribumake
+		Start: 2
+		ZOffset: -25
+		Offset: 0,-18,0
+	make3: tribumake
+		Start: 3
+		ZOffset: -25
+		Offset: 0,-18,0
+	make4: tribumake
+		Start: 4
+		ZOffset: -25
+		Offset: 0,-18,0
+	make5: tribumake
+		Start: 5
+		ZOffset: -25
+		Offset: 0,-18,0
+	make6: tribumake
+		Start: 7
+		ZOffset: -25
+		Offset: 0,-18,0
+	make7: tribumake
+		Start: 8
+		ZOffset: -25
+		Offset: 0,-18,0
+		
+batowgun:
+	Inherits: ^scaffold
+	turretanim: 
+		Facings: 32
+		ZOffset: 512
+		Length: 7
+		Start: 32
+		Tick: 80
+		Offset: 0,-16,0
+	damaged-idle: 
+		Offset: 0,-16,0
+		Facings: 32
+		ZOffset: 512
+	idle: 
+		Offset: 0,-16,0
+		Facings: 32
+		ZOffset: 512
+	overlay: batowbase
+		Offset: 0,-12,0
+	damaged-overlay: batowbase
+		Start: 1
+		Offset: 0,-12,0
+	dead: batowbase
+		Start: 2
+		Tick: 800
+		Offset: 0,-12,0
+	make: batowbasemake
+		Length: *
+		Tick: 80
+		Offset: 0,-12,0
+	bib: mbGTWR
+		UseTilesetExtension: true
+		TilesetOverrides:
+			WINTER: TEMPERAT
+			JUNGLE: TEMPERAT
+			SNOW: TEMPERAT
+			INTERIOR: TEMPERAT
+		Length: *
+		Offset: 0,-2
+	icon: batoicon.shp
+		AddExtension: False
+	make1: batowbasemake
+		Start: 1
+		ZOffset: -25
+		Offset: 0,-12,0
+	make2: batowbasemake
+		Start: 3
+		ZOffset: -25
+		Offset: 0,-12,0
+	make3: batowbasemake
+		Start: 5
+		ZOffset: -25
+		Offset: 0,-12,0
+	make4: batowbasemake
+		Start: 7
+		ZOffset: -25
+		Offset: 0,-12,0
+	make5: batowbasemake
+		Start: 9
+		ZOffset: -25
+		Offset: 0,-12,0
+	make6: batowbasemake
+		Start: 10
+		ZOffset: -25
+		Offset: 0,-12,0
+gtairwnew:
+	Inherits: ^scaffold
+	idle: 
+		Start: 23
+		Offset: 0,-12,0
+	damaged-idle: 
+		Start: 24
+		Offset: 0,-12,0
+	dead: 
+		Start: 25
+		Offset: 0,-12,0
+	make: 
+		Length: 23
+		Tick: 80
+		Offset: 0,-12,0
+	bib: mbSILO
+		UseTilesetExtension: true
+		TilesetOverrides:
+			WINTER: TEMPERAT
+			JUNGLE: TEMPERAT
+			INTERIOR: TEMPERAT
+		Length: *
+	icon: aaballicon.shp
+		AddExtension: False
+	turretidle: smallaaball
+		Start: 0
+		Facings: 32
+	make1: 
+		Start: 1
+		ZOffset: -25
+		Offset: 0,-12,0
+	make2: 
+		Start: 3
+		ZOffset: -25
+		Offset: 0,-12,0
+	make3: 
+		Start: 5
+		ZOffset: -25
+		Offset: 0,-12,0
+	make4: 
+		Start: 10
+		ZOffset: -25
+		Offset: 0,-12,0
+	make5: 
+		Start: 20
+		ZOffset: -25
+		Offset: 0,-12,0
+		
+cstlwll:
+	Inherits: ^scaffold
+	idle: cstlwll
+		Length: 16
+		Offset: 0,-12,0
+	scratched-idle: cstlwll
+		Start: 17
+		Length: 16
+		Offset: 0,-12,0
+	damaged-idle: cstlwll
+		Start: 34
+		Length: 16
+		Offset: 0,-12,0
+	icon: cstlwllicon.shp
+		AddExtension: False
+	bib: mbGTWR
+		UseTilesetExtension: true
+		TilesetOverrides:
+			WINTER: TEMPERAT
+			JUNGLE: TEMPERAT
+			JUNGLE: TEMPERAT
+			INTERIOR: TEMPERAT
+		Length: *
+		Offset: 0,-2
+	
+		
+wdwll:
+	idle: wdwll
+		Length: 16
+	scratched-idle: wdwll
+		Start: 17
+		Length: 16
+	damaged-idle: wdwll
+		Start: 34
+		Length: 16
+	icon: wdwllicon.shp
+		AddExtension: False
+		
+sulplug1:
+	idle: sulgtw
+		Start: 13
+		Offset: 0, -24
+	damaged-idle: sulgtw
+		Start: 14
+		Offset: 0, -24
+	icon: sulgtwplugsicon.shp
+		Start: 0
+		AddExtension: False 
+		
+sulplug2:
+	idle: sulgtwplugs
+		Start: 0
+		Offset: 0, -24
+	damaged-idle: sulgtwplugs
+		Start: 1
+		Offset: 0, -24
+	icon: sulgtwplugsicon.shp
+		Start: 1
+		AddExtension: False 
+		
+sulplug3:
+	idle: sulgtwplugs
+		Start: 2
+		Offset: 0, -24
+	damaged-idle: sulgtwplugs
+		Start: 3
+		Offset: 0, -24
+	icon: sulgtwplugsicon.shp
+		Start: 2
+		AddExtension: False 
+		
+sulplug4:
+	idle: sulgtwbase2
+		Start: 0
+	damaged-idle: sulgtwbase2
+		Start: 1
+	icon: sulgtwplugsicon.shp
+		Start: 3
+		AddExtension: False 
+		
+
+garg:
+	Inherits: ^pentagram
+	damaged-idle: 
+		Offset: 0,-12,0
+		Facings: 32
+		ZOffset: 512
+		Start: 28
+	idle: 
+		Offset: 0,-12,0
+		Facings: 32
+		ZOffset: 512
+		Start: 28
+	overlay: 
+		Offset: 0,-12,0
+		Start: 26
+	damaged-overlay: 
+		Start: 27
+		Offset: 0,-12,0
+	dead: 
+		Start: 61
+		Tick: 800
+		Offset: 0,-12,0
+	make: 
+		Length: 25
+		Tick: 80
+		Offset: 0,-12,0
+	bib: mbGTWR
+		UseTilesetExtension: true
+		TilesetOverrides:
+			WINTER: TEMPERAT
+			JUNGLE: TEMPERAT
+			SNOW: TEMPERAT
+			INTERIOR: TEMPERAT
+		Length: *
+		Offset: 0,-2
+	icon: gargicon.shp
+		AddExtension: False
+		
+grafence:
+	idle: 
+		Length: 16
+		Offset: 0,-12,0
+	damaged-idle: 
+		Start: 16
+		Length: 16
+		Offset: 0,-12,0
+	icon: grafenceicon.shp
+		AddExtension: False
+obelisk: 
+	Inherits: ^pentagram
+	idle:
+		Offset: 0,-5
+		Start: 0
+	damaged-idle:
+		Offset: 0,-5
+		Length: 1
+	dead:
+		Offset: 0,-5
+		Start: 2
+		Tick: 800
+	make: obeliskmake
+		Length: *
+		Tick: 200
+	icon: obeliskicon.shp
+		AddExtension: False

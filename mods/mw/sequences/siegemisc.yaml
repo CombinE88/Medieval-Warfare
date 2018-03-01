@@ -1,0 +1,98 @@
+eharvnewxl:
+	dock: 
+		Start: 238
+		Length: 10
+		Tick: 80
+	dock-loop: 
+		Start: 248
+		Length: 1
+		Tick: 80
+	move: 
+		Start: 0
+		Length: 8
+		Facings: 8
+		Tick: 80
+	stand: 
+		Start: 149
+		Facings: 8
+		Tick: 80
+	idle: 
+		Start: 149
+		Facings: 8
+		Tick: 80
+	empty-move: 
+		Start: 0
+		Length: 8
+		Facings: 8
+		Tick: 80
+	empty-idle: 
+		Start: 149
+		Facings: 8
+		Tick: 80
+	empty-harvest: 
+		Start: 66
+		Facings: 8
+		Length: 10
+		Tick: 80
+	half-move: 
+		Start: 173
+		Length: 8
+		Facings: 8
+		Tick: 80
+	half-idle: 
+		Frames: 173, 184, 191, 199, 207, 215, 223, 231
+		Facings: 8
+		Tick: 80
+	half-harvest: 
+		Start: 249
+		Facings: 8
+		Length: 10
+		Tick: 80
+	full-move: 
+		Start: 173
+		Length: 8
+		Facings: 8
+		Tick: 80
+	full-idle: 
+		Frames: 173, 184, 191, 199, 207, 215, 223, 231
+		Facings: 8
+		Tick: 80
+	full-harvest: 
+		Start: 249
+		Facings: 8
+		Length: 10
+		Tick: 80  
+	die1: 
+		Start: 157
+		Length: 15
+		Tick: 80
+	icon: nharvicon.shp
+		AddExtension: False  
+medimcv2:
+	idle: 
+		Start: 64
+		Facings: 32
+	stand: 
+		Start: 64
+		Facings: 32
+	run: 
+		Tick: 100
+		Facings: 8
+		Length: 8
+	icon: mcvnewicon.shp
+		AddExtension: False
+		
+planewagenhusk:
+	idle: 
+		Start: 64
+		Facings: 32
+	stand: 
+		Start: 64
+		Facings: 32
+
+mcvnew2.destroyed:
+	idle: mcvnew2husk
+		Facings: 32
+		UseClassicFacingFudge: True
+		ZOffset: -512
+		

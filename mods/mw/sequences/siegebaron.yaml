@@ -1,0 +1,160 @@
+siege1:
+	stand: 
+		Start: 0
+		Facings: 32
+	run: 
+		Start: 32
+		Length: 7
+		Facings: 8
+		Tick: 100
+	shoot: 
+		Tick: 80
+		Start: 88
+		Length: 7
+		Facings: 32
+	die1: 
+		Start: 345
+		Length: 10
+	# Explode
+	die2: 
+		Start: 345
+		Length: 10
+	# Fly and explode in air
+	die3: 
+		Start: 345
+		Length: 10
+	# Fly through air squish on ground
+	die4: 
+		Start: 345
+		Length: 10
+	# Burn
+	die5: e1
+		Start: 418
+		Length: 18
+		Tick: 80
+	# Tib
+	die6: 
+		Start: 345
+		Length: 10
+	die-crushed: newe1rot
+		Start: 16
+		Length: 4
+		Tick: 1600
+		ZOffset: -511
+	icon: nballistaicon.shp
+		AddExtension: False  
+
+siege1.husk:
+	start: siege1husk
+		Start: 0
+		Tick: 100
+		Length: 7
+		Facings: 32
+	idle: siege1husk
+		Start: 217
+		Facings: 32		
+
+
+warkite:
+	idle: 
+		Start: 225
+		Facings: 32
+		Offset: 0,-4,0
+	attack: 
+		Tick: 120
+		Start: 0
+		Length: 7
+		Facings: 32
+		Offset: 0,-4,0
+	icon: warkiteicon.shp
+		AddExtension: False 
+		
+warkitehusk:
+	idle: 
+		Start: 0
+		Facings: 32
+	man: 
+		Start: 0
+		Facings: 32
+	kite: 
+		Start: 32
+		Facings: 32
+	crash: 
+		Start: 64
+		Facings: 32
+		
+warballoon:
+	idle: 
+		Start: 0
+		Facings: 32
+		Offset: 0,-24,0
+	move: 
+		Start: 0
+		Length: 7
+		Facings: 32
+		Offset: 0,-24,0
+	attack: 
+		Tick: 40
+		Start: 32
+		Length: 7
+		Facings: 32
+		Offset: 0,-24,0
+	icon: nwarballicon.shp
+		AddExtension: False 
+		
+wrblln.husk:
+	idle: warballonbottom
+		Facings: 32
+		Offset: 0,-24,0
+        
+wrblln.crash:
+	idle: warballonhusk
+		Start: 0
+		Facings: 32
+        
+bara:
+	stand: 
+		Start: 0
+		Facings: 32
+	run: 
+		Start: 32
+		Length: 7
+		Facings: 8
+		Tick: 100
+	shoot: 
+		Start: 88
+		Length: 7
+		Facings: 32
+		Tick: 80
+	die1: 
+		Start: 313
+		Length: 10
+		Tick: 80
+	icon: nbaramicon.shp
+		AddExtension: False 
+		
+siege5.husk:
+	start: barahusk
+		Start: 0
+		Length: 7
+		Tick: 100
+		Facings: 32
+	idle: barahusk
+		Start: 217
+		Facings: 32  
+		
+
+newhorse:
+	idle: 
+		Start: 63
+		Facings: 32
+	stand: 
+		Start: 63
+		Facings: 32
+	die1: trojanhorse
+		Start: 2
+		Offset: 0,-14
+	icon: trojanicon.shp
+		AddExtension: False
+
+

@@ -1773,9 +1773,10 @@ Templates:
 			8: Clear
 	Template@188:
 		Id: 188
-		Images: a10cr.tem
+		Images: strangecrash.shp
 		Size: 4,2
 		Categories: Debris
+		Palette: staticterrain
 		Tiles:
 			1: Tree
 			2: Tree

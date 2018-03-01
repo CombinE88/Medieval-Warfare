@@ -1,0 +1,158 @@
+ross2:
+	stand: 
+		Start: 122
+		Facings: 8
+	run: 
+		Start: 0
+		Length: 8
+		Facings: 8
+		Tick: 100
+	shoot: ross2s
+		Tick: 100
+		Start: 66
+		Length: 7
+		Facings: 8
+	idle1: 
+		Tick: 100
+		Start: 150
+		Length: 7
+		Facings: 8
+	idle2: 
+		Tick: 100
+		Start: 206
+		Length: 7
+		Facings: 8
+	die1: 
+		Start: 132
+		Length: 18
+		Tick: 80
+	# Burn
+	die2: burninghorserider
+		Length: *
+		Tick: 80
+	icon: nmcavicon.shp
+		AddExtension: False
+		
+kingross:
+	stand: 
+		Start: 122
+		Facings: 8
+	run: 
+		Start: 0
+		Length: 8
+		Facings: 8
+		Tick: 100
+	shoot: 
+		Tick: 100
+		Start: 66
+		Length: 7
+		Facings: 8
+	shoot2: 
+		Tick: 100
+		Start: 262
+		Length: 7
+		Facings: 8
+	idle1: 
+		Tick: 100
+		Start: 150
+		Length: 7
+		Facings: 8
+	idle2: 
+		Tick: 100
+		Start: 206
+		Length: 7
+		Facings: 8
+	die1: 
+		Start: 132
+		Length: 18
+		Tick: 80
+	# Burn
+	die2: burninghorserider
+		Length: *
+		Tick: 80
+	icon: koenigicon.shp
+		AddExtension: False
+
+ross5:
+	Defaults:
+		Offset: 0,-10,0
+	stand: 
+		Start: 122
+		Facings: 8
+	run: 
+		Start: 0
+		Length: 8
+		Facings: 8
+		Tick: 100
+	stab: 
+		Tick: 100
+		Start: 66
+		Length: 7
+		Facings: 8
+	shoot: 
+		Tick: 100
+		Start: 259
+		Length: 14
+		Facings: 8
+	shootground: 
+		Tick: 100
+		Start: 373
+		Length: 14
+		Facings: 8
+	idle1: 
+		Tick: 100
+		Start: 146
+		Length: 7
+		Facings: 8
+	idle2: 
+		Tick: 100
+		Start: 202
+		Length: 7
+		Facings: 8
+	die1: 
+		Start: 131
+		Length: 15
+		Tick: 80
+	# Burn
+	die2: burninghorserider
+		Length: *
+		Tick: 80
+		Offset: 0,0,0
+	icon: nhcavicon.shp
+		Offset: 0,0,0
+		AddExtension: False		
+
+ross4b:
+	stand: 
+		Start: 122
+		Facings: 8
+	run: 
+		Start: 0
+		Length: 8
+		Facings: 8
+		Tick: 100
+	shoot: 
+		Tick: 100
+		Start: 66
+		Length: 7
+		Facings: 8
+	idle1: 
+		Tick: 100
+		Start: 149
+		Length: 7
+		Facings: 8
+	idle1: 
+		Tick: 100
+		Start: 205
+		Length: 7
+		Facings: 8
+	die1: 
+		Start: 132
+		Length: 18
+		Tick: 80
+	# Burn
+	die2: burninghorserider
+		Length: *
+		Tick: 80
+	icon: nflailicon.shp
+		AddExtension: False

@@ -1,0 +1,155 @@
+cofspawn1:
+	idle: 
+		Start: 20
+	make:
+		Length: *
+		Tick: 80
+		
+cofspawn2:
+	idle: 
+		Start: 20
+	make:
+		Length: *
+		Tick: 80		
+cofspawn3:
+	idle: 
+		Start: 20
+	make:
+		Length: *
+		Tick: 80
+		
+cofspawn4:
+	idle: 
+		Start: 20
+	make:
+		Length: *
+		Tick: 80
+		
+coffin:
+	empty: coffin1
+		Start: 0
+	idle: coffin1
+		Start: 0
+	idlea: coffin1
+		Start: 22
+	makea: coffin1
+		Length: 22
+		Tick: 200
+	deada: coffin1
+		Start: 23
+	idleb:  coffin2
+		Start: 22
+	makeb: coffin2
+		Length: 22
+		Tick: 200
+	deadb: coffin2
+		Start: 23
+	idlec: coffin3
+		Start: 22
+	makec: coffin3
+		Length: 22
+		Tick: 200
+	deadc: coffin3
+		Start: 23
+
+		
+gstone1: 
+	empty: gstone1
+		Start: 0
+	idle: gstone1
+		Start: 0 
+	idlea: gstone1
+		Start: 10
+	makea: gstone1
+		Length: 10
+		Tick: 80
+	idleb: gstone2
+		Start: 10
+	makeb: gstone2
+		Length: 10
+		Tick: 80
+	idlec: gstone3
+		Start: 10
+	makec: gstone3
+		Length: 10
+		Tick: 80
+	dead:
+		Start: 11
+
+gstone2: 
+	empty: gstone4
+		Start: 0
+	idle: gstone4
+		Start: 0
+	idlea: gstone4
+		Start: 10
+	makea: gstone4
+		Length: 10
+		Tick: 80
+	idleb: gstone5
+		Start: 10
+	makeb: gstone5
+		Length: 10
+		Tick: 80
+	idlec: gstone6
+		Start: 10
+	makec: gstone6
+		Length: 10
+		Tick: 80
+	dead: gstone4
+		Start: 11		
+	
+gstone3: 
+	empty: gstone7
+		Start: 0
+	idle: gstone7
+		Start: 0
+	idlea: gstone7
+		Start: 10
+	makea: gstone7
+		Length: 10
+		Tick: 80
+	idleb: gstone8
+		Start: 10
+	makeb: gstone8
+		Length: 10
+		Tick: 80
+	idlec: gstone9
+		Start: 10
+	makec: gstone9
+		Length: 10
+		Tick: 80
+	dead: gstone7
+		Start: 11   
+	
+gstonexl1: 
+	idle:
+		Start: 10
+	make:
+		Length: 10
+		Tick: 80
+	dead:
+		Start: 11		
+gstonexl2: 
+	idle:
+		Start: 10
+	make:
+		Length: 10
+		Tick: 80
+	dead:
+		Start: 11
+gravespawner:
+	idle:
+		Length: *
+		
+
+gravespawnera:
+	idle:
+		Length: *
+		
+
+gravespawnerb:
+	idle:
+		Length: *
+
+

@@ -405,9 +405,6 @@ E2NEWV2:
 		Type: Light
 	Voiced:
 		VoiceSet: GDIPikeVoice
-	Explodes:
-		Weapon: KilledPike
-		EmptyWeapon: KilledPike
 	PersonValued:
 		ActorCount: 1
 		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
@@ -519,7 +516,7 @@ E3NEWV2:
 		Priority: 4
 		
 		
-E9NEW:
+FRMGE:
 	Inherits: ^Knight
 	Inherits@AUTOTARGET: ^AutoTargetGround
 	Inherits@AUTOTARGETDEF: ^AutoTargetDefenses
@@ -719,63 +716,7 @@ E4NEWV2:
 		ValidTargets: Light, Ranged, LightCavalry, Support, Flying
 		Priority: 4
 		
-		
-E5NEW:
-	Inherits: ^Knight
-	Inherits@AUTOTARGET: ^AutoTargetGround
-	Inherits@GainsExperience: ^GainsExperience
-	Inherits@GetsPoisoned: ^GetsPoisoned
-	Inherits@CanTurnIntoScelett:  ^CanTurnIntoScelett
-	Inherits@ArcherDemo65: ^ArcherDemo65
-
-	Inherits@Healable: ^Healable
-	Inherits@SnakeStunnable: ^SnakeStunnable
-	Inherits@GrimReanimatable: ^GrimReanimatable
-	RevealsShroud:
-		Range: 8c0
-
-	DetectCloaked:
-		Range: 2c0
-	Valued:
-		Cost: 400
-	Tooltip:
-		Name: Marksman
-#	Buildable:
-#		Description: Advanced general-purpose infantry.\n  Strong vs all Ground units\n  Detects cloaked units\n  Cannot attack Aircraft anymore!\n\nTrains: 1 Peasant\n
-#		IconPalette: raicon
-#		BuildPaletteOrder: 50
-#		Prerequisites: anyhq
-#		Queue: MInfantry.Nod, MInfantry.Horse
-#		#BuildDuration: 300
-	Mobile:
-		Speed: 56
-	Health:
-		HP: 12000
-	Armament:
-		Weapon: crossbow
-		LocalOffset: 341,0,456
-	AttackFrontal:
-	AutoTarget:
-		ScanRadius: 5
-		InitialStance: AttackAnything
-	RenderSprites:
-		Image: e5new
-		PlayerPalette: raplayer
-	WithInfantryBody:
-		DefaultAttackSequence: shoot
-	Armor:
-		Type: Light
-	Voiced:
-		VoiceSet: NodCrossVoice
-	PersonValued:
-		ActorCount: 1
-		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
-	Targetable@CombatRole:
-		TargetTypes: Ranged
-	AutoTargetPriority@Counter1:
-		ValidTargets: Light, Ranged, LightCavalry, Support
-		Priority: 4
-
+	
 RMBONEW:
 	Inherits: ^Knight
 	RevealsShroud:
@@ -1546,7 +1487,7 @@ MWLUMBERER:
 		HP: 10000
 	RevealsShroud:
 		Range: 7c0
-	WithFacingSpriteBody:
+#	WithFacingSpriteBody:
 	WithInfantryBody:
 		RequiresCondition: NoFood
 		AttackSequences:
@@ -1634,7 +1575,7 @@ MWLUMBEREROWNED:
 		HP: 10000
 	RevealsShroud:
 		Range: 7c0
-	WithFacingSpriteBody:
+#	WithFacingSpriteBody:
 	WithInfantryBody:
 		RequiresCondition: NoFood
 		AttackSequences:
@@ -1705,107 +1646,7 @@ MWLUMBEREROWNED:
 	PersonValued:
 		ActorCount: 1
 		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
-		
-TRANSPORTER:
-	Inherits: ^Knight
-	Inherits@SnakeStunnable: ^SnakeStunnable
-# anti error fix
-	ExternalCondition@FullGoods:
-		Condition: FullGoods
-# anti error fix
-	ExternalCondition@EmptyGoods:
-		Condition: EmptyGoods
-	AutoTargetPriority@Prio5:
-		ValidTargets: Priority5
-		Priority: 5
-	AutoTargetPriority@Prio4:
-		ValidTargets: Priority4
-		Priority: 4
-	AutoTargetPriority@Prio3:
-		ValidTargets: Priority3
-		Priority: 3
-	AutoTargetPriority@Prio2:
-		ValidTargets: Priority2
-		Priority: 2
-	AutoTargetPriority@Prio1:
-		ValidTargets: Priority1
-		Priority: 1
-	AutoTargetPriority@Prio0:
-		ValidTargets: Structure
-		Priority: 0
-	-Explodes@Tib:
-	RevealsShroud:
-		Range: 4c0
-	Valued:
-		Cost: 250
-	Tooltip:
-		Name: Hauler
-	Mobile:
-		Speed: 66
-	Health:
-		HP: 10000
-	RenderSprites:
-		PlayerPalette: mwcivilianplayer
-		Image: mwcivconst
-		FactionImages:
-			nod: mwcivconst
-			gdi: mwcivconst
-			sul: mwciv9sule
-	Armor:
-		Type: Leather
-	-Selectable:
-	Interactable:
-	Targetable:
-		TargetTypes: Ground, Infantry
-	WithDeathAnimation:
-		DeathSequencePalette: mwcivilianplayer
-	AutoTarget:
-		ScanRadius: 19
-		InitialStance: AttackAnything
-	AttackFrontal:
-		Armaments: primary, secondary, tairt
-		IgnoresVisibility: true	
-	AttackMove:
-	ExternalCondition@Loading:
-		Condition: Loading
-	WithFacingSpriteBody:
-	WithInfantryBody:
-		MoveSequence: run
-		StandSequences: stand
-		RequiresCondition: !EmptyGoods
-	WithInfantryBody@Empty:
-		MoveSequence: runempty
-		StandSequences: standempty
-		RequiresCondition: EmptyGoods
-	Armament@Unload:
-		Weapon: LaborourUnload
-		Name: primary
-		TargetStances: Neutral, Ally
-		RequiresCondition: !EmptyGoods
-	Armament@Load:
-		Weapon: LaborourLoad
-		Name: secondary
-		TargetStances: Neutral, Ally
-		RequiresCondition: !FullGoods
-	AmmoPool:
-		Armaments: primary
-		Name: Goods
-		Ammo: 3
-		InitialAmmo: 0
-		PipCount: 2
-	AmmoPoolConditions:
-		ConditionFull: FullGoods
-		ConditionEmpty: EmptyGoods
-		AmmoPoolName: Goods
-	ReloadAmmoWhenEnabled:
-		Name: Goods
-		ReloadDelay: 10
-		ResetDelayOnEnable: false
-		RequiresCondition: Loading
-	PersonValued:
-		ActorCount: 1
-		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
-		
+	
 		
 HUNTER:
 	Inherits: ^Knight
@@ -1904,71 +1745,3 @@ HUNTER:
 		LootTypes: DeadWildlife
 		SearchDistance: 15c0
         
-        
-SPUNIT2:
-	Inherits: ^Knight
-	Inherits@AUTOTARGET: ^AutoTargetGround
-	Valued:
-		Cost: 2500
-	Tooltip:
-		Name: Hero
-	Mobile:
-		Speed: 56
-	Health:
-		HP: 35000
-	AttackFrontal:
-	AutoTarget:
-		ScanRadius: 4
-		InitialStance: AttackAnything
-	RenderSprites:
-		PlayerPalette: raplayer
-	WithInfantryBody:
-		StandSequences: stand
-		DefaultAttackSequence: shoot
-		IdleSequences: idle1, idle2, idle3, idle4, idle5, idle6
-	Armor:
-		Type: Heavy
-	Voiced:
-		VoiceSet: GDIKnightVoice
-	PersonValued:
-		ActorCount: 0
-		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
-	Targetable@CombatRole:
-		TargetTypes: Heavy
-	AutoTargetPriority@Counter:
-		ValidTargets: Light, Heavy, Ranged, Support
-		Priority: 4
-        
-SPUNIT1:
-	Inherits: ^Knight
-	Inherits@AUTOTARGET: ^AutoTargetGround
-	Valued:
-		Cost: 2500
-	Tooltip:
-		Name: Hero
-	Mobile:
-		Speed: 56
-	Health:
-		HP: 35000
-	AttackFrontal:
-	AutoTarget:
-		ScanRadius: 4
-		InitialStance: AttackAnything
-	RenderSprites:
-		PlayerPalette: raplayer
-	WithInfantryBody:
-		StandSequences: stand
-		DefaultAttackSequence: shoot
-		IdleSequences: idle1, idle2, idle3, idle4, idle5, idle6
-	Armor:
-		Type: Heavy
-	Voiced:
-		VoiceSet: GDIKnightVoice
-	PersonValued:
-		ActorCount: 0
-		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
-	Targetable@CombatRole:
-		TargetTypes: Heavy
-	AutoTargetPriority@Counter:
-		ValidTargets: Light, Heavy, Ranged, Support
-		Priority: 4

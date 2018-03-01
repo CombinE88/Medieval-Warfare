@@ -1,0 +1,63 @@
+emptyhorse:
+	stand: 
+		Start: 122
+		Facings: 8
+	run: 
+		Start: 0
+		Length: 8
+		Facings: 8
+		Tick: 100
+	panic-run: 
+		Start: 0
+		Length: 8
+		Facings: 8
+		Tick: 100
+	panic-stand: 
+		Start: 122
+		Facings: 8
+	shoot: 
+		Tick: 100
+		Start: 66
+		Length: 7
+		Facings: 8
+	die1: 
+		Start: 132
+		Length: 18
+		Tick: 80
+	# Burn
+	die2: burninghorse
+		Start: 76
+		Length: 14
+		Tick: 80
+	icon: nsabericon.shp
+		AddExtension: False
+	
+burninghorse:
+	stand: 
+		Start: 66
+		Facings: 8
+	run: 
+		Start: 0
+		Length: 8
+		Facings: 8
+		Tick: 100 
+	panic-stand: 
+		Start: 66
+		Facings: 8
+	panic-run: 
+		Start: 0
+		Length: 8
+		Facings: 8
+		Tick: 100 
+	die1: 
+		Start: 76
+		Length: 14
+		Tick: 80
+	# Burn
+	die2: 
+		Start: 76
+		Length: 14
+		Tick: 80
+	icon: koenigicon.shp
+		AddExtension: False	   
+		

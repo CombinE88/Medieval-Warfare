@@ -1,0 +1,300 @@
+#SiegeWeapons
+
+sulxl:
+	dock: 
+		Start: 238
+		Length: 10
+		Tick: 80
+	dock-loop: 
+		Start: 248
+		Length: 1
+		Tick: 80
+	move: 
+		Start: 0
+		Length: 8
+		Facings: 8
+		Tick: 80
+	stand: 
+		Start: 149
+		Facings: 8
+		Tick: 80
+	idle: 
+		Start: 149
+		Facings: 8
+		Tick: 80
+	empty-move:  
+		Start: 0
+		Length: 8
+		Facings: 8
+		Tick: 80
+	empty-idle:  
+		Start: 149
+		Facings: 8
+		Tick: 80
+	empty-harvest:  
+		Start: 66
+		Facings: 8
+		Length: 10
+		Tick: 80
+	half-move:  
+		Start: 173
+		Length: 8
+		Facings: 8
+		Tick: 80
+	half-idle:  
+		Frames: 173, 184, 191, 199, 207, 215, 223, 231
+		Facings: 8
+		Tick: 80
+	half-harvest:  
+		Start: 249
+		Facings: 8
+		Length: 10
+		Tick: 80
+	full-move:  
+		Start: 173
+		Length: 8
+		Facings: 8
+		Tick: 80
+	full-idle:  
+		Frames: 173, 184, 191, 199, 207, 215, 223, 231
+		Facings: 8
+		Tick: 80
+	full-harvest:  
+		Start: 249
+		Facings: 8
+		Length: 10
+		Tick: 80  
+	die1:  
+		Start: 157
+		Length: 15
+		Tick: 80
+	icon: sulxlicon.shp
+		AddExtension: False  
+
+sulb0:
+	stand: 
+		Start: 0
+		Facings: 32
+	run: 
+		Start: 88
+		Length: 7
+		Facings: 32
+		Tick: 100
+	die: 
+		Start: 312
+		Tick: 100
+		Length: 12
+	icon: sulb0icon.shp
+		AddExtension: False 
+	turretidle: sule3
+		Start: 122
+		Facings: 8
+	turretanim: sule3
+		Tick: 100
+		Start: 66
+		Length: 7
+		Facings: 8 
+
+sulb1:
+	stand: 
+		Start: 0
+		Facings: 32
+	run: 
+		Start: 32
+		Length: 7
+		Facings: 8
+		Tick: 100
+	shoot: 
+		Tick: 80
+		Start: 88
+		Length: 7
+		Facings: 32
+	die1: sulb1husk
+		Start: 0
+		Tick: 100
+		Length: 7
+		Facings: 32
+	# Explode
+	die2: sulb1husk
+		Start: 0
+		Tick: 100
+		Length: 7
+		Facings: 32
+	# Fly and explode in air
+	die3: sulb1husk
+		Start: 0
+		Tick: 100
+		Length: 7
+		Facings: 32
+	# Fly through air squish on ground
+	die4: sulb1husk
+		Start: 0
+		Tick: 100
+		Length: 7
+		Facings: 32
+	# Burn
+	die5: sulb1husk
+		Start: 0
+		Tick: 100
+		Length: 7
+		Facings: 32
+	# Tib
+	die6: sulb1husk
+		Start: 0
+		Tick: 100
+		Length: 7
+		Facings: 32
+	icon: sulb1icon.shp
+		AddExtension: False 
+
+sulb1.husk:
+	start: sulb1husk
+		Start: 0
+		Tick: 100
+		Length: 7
+		Facings: 32
+	idle: sulb1husk
+		Start: 225
+		Facings: 32		
+		
+sulb2:
+	stand: 
+		Start: 0
+		Facings: 32
+	run: 
+		Start: 32
+		Length: 7
+		Facings: 8
+		Tick: 100
+	shoot: 
+		Tick: 80
+		Start: 88
+		Length: 7
+		Facings: 32
+	die1: sulb2husk
+		Start: 0
+		Tick: 100
+		Length: 7
+		Facings: 32
+	# Explode
+	die2: sulb2husk
+		Start: 0
+		Tick: 100
+		Length: 7
+		Facings: 32
+	# Fly and explode in air
+	die3: sulb2husk
+		Start: 0
+		Tick: 100
+		Length: 7
+		Facings: 32
+	# Fly through air squish on ground
+	die4: sulb2husk
+		Start: 0
+		Tick: 100
+		Length: 7
+		Facings: 32
+	# Burn
+	die5: sulb2husk
+		Start: 0
+		Tick: 100
+		Length: 7
+		Facings: 32
+	# Tib
+	die6: sulb2husk
+		Start: 0
+		Tick: 100
+		Length: 7
+		Facings: 32
+	icon: sulb2icon.shp
+		AddExtension: False 
+
+sulb2.husk:
+	start: sulb2husk
+		Start: 0
+		Tick: 100
+		Length: 7
+		Facings: 32
+	idle: sulb2husk
+		Start: 225
+		Facings: 32  
+
+sulb3:
+	idle: 
+		Start: 0
+		Length: 7
+		Facings: 32
+		Tick: 100
+	move: 
+		Start: 0
+		Length: 7
+		Facings: 32
+		Tick: 60
+	attack: 
+		Tick: 80
+		Start: 225
+		Length: 7
+		Facings: 32
+	icon: sulb3icon.shp
+		AddExtension: False 
+
+sulb3.husk:
+	idle: sulb3
+		Start: 449
+		Facings: 32		 
+
+sulspball:
+	turretanim:
+		Start: 32
+		Facings: 32
+		Length: 7
+		Tick: 80
+	turret:
+		Start: 32
+		Facings: 32
+		Length: 7
+		Tick: 80
+	idle: 
+		Start: 0
+		Facings: 32
+	damaged-idle: sulspballd
+		Start: 0
+		Facings: 32
+	dead: sulspballd
+		Tick: 800
+		Start: 289
+	make: sulspballmake
+		Length: *
+		Tick: 80
+	bib: mbSILO
+		UseTilesetExtension: true
+		TilesetOverrides:
+			WINTER: TEMPERAT
+			JUNGLE: TEMPERAT
+			SNOW: TEMPERAT
+			INTERIOR: TEMPERAT
+		Length: *
+	icon: sulspballicon.shp
+		AddExtension: False		
+	
+#misc
+sulturnxl:
+	make: sulturn
+		Start: 0
+		Length: 40
+		Tick: 100
+		Offset: 30, -52
+		ZOffset: 2024
+	idle: sulturn
+		Start: 40
+		Length: 130
+		Tick: 100
+		Offset: 30, -52
+		ZOffset: 2024
+	die: sulturn
+		Start: 180
+		Length: 30
+		Tick: 100
+		Offset: 30, -52
+		ZOffset: 2024
+		

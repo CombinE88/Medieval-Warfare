@@ -610,11 +610,6 @@ SULNUK2:
 		Ammount: 25
 		SpawnOffset: -469,853,0
 		ExitCell: 1,2
-	#WithFreeSpawnableActor@Chicken2:
-	#	SpawnActor: mwchick1
-	#	Offset: -469,853,0
-	#	MoveOffset:1,2
-	#	SpawnStart: false
  
 SULNUKE:
 	Inherits: ^MWBaseBuilding
@@ -669,10 +664,6 @@ SULNUKE:
 		Ammount: 10
 		SpawnOffset: 0,426,0
 		ExitCell: 1,2
-	#WithFreeSpawnableActor@Chicken2:
-	#	SpawnActor: mwchick1
-	#	MoveOffset:1,2
-	#	SpawnStart: false
 		
 SULBARR:
 	Inherits: ^MWBaseBuilding

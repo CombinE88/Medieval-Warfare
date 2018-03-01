@@ -76,19 +76,36 @@ Rules:
 	mw|rules/Undead.yaml
 
 Sequences:
-	mw|sequences/MWInfantry.yaml
-	mw|sequences/MWCivilians.yaml
-	mw|sequences/MWCavalry.yaml
-	mw|sequences/MWSiegeweapons.yaml
-	mw|sequences/MWBuildings.yaml
-	mw|sequences/MWSultan.yaml
-	mw|sequences/MWUndead.yaml
-	mw|sequences/MWEnvironments.yaml
-	mw|sequences/MWResources.yaml
-	mw|sequences/decorations.yaml
+	mw|sequences/builking.yaml
+	mw|sequences/builbaron.yaml
+	mw|sequences/builsultan.yaml
+	mw|sequences/builundead.yaml
+	mw|sequences/buildefense.yaml
+	mw|sequences/builmisc.yaml
+	mw|sequences/infcivilianpeasants.yaml
+	mw|sequences/infking.yaml
+	mw|sequences/infbaron.yaml
+	mw|sequences/infsultan.yaml
+	mw|sequences/infundead.yaml
+	mw|sequences/infmisc.yaml
+	mw|sequences/infwildlife.yaml
+	mw|sequences/cavalryking.yaml
+	mw|sequences/cavalrybaron.yaml
+	mw|sequences/cavalrysultan.yaml
+	mw|sequences/cavalryundead.yaml
+	mw|sequences/cavalrymisc.yaml
+	mw|sequences/siegeking.yaml
+	mw|sequences/siegebaron.yaml
+	mw|sequences/siegesultan.yaml
+	mw|sequences/siegeundead.yaml
+	mw|sequences/siegemisc.yaml
+	mw|sequences/resources.yaml
 	mw|sequences/misc.yaml
-	mw|sequences/MWmisc.yaml
-	mw|sequences/MWProps.yaml
+	mw|sequences/misc2.yaml
+	mw|sequences/environments.yaml
+	mw|sequences/decorations.yaml
+	mw|sequences/props.yaml
+	mw|sequences/interior.yaml
 
 TileSets:
 	mw|tilesets/desert.yaml

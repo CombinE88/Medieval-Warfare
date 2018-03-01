@@ -1,0 +1,637 @@
+^scaffold:
+	scaffn0: scaffoldN
+		Start: 0
+		ZOffset: -50
+	scaffn1: scaffoldN
+		Start: 1
+		ZOffset: -50
+	scaffn2: scaffoldN
+		Start: 2
+		ZOffset: -50
+	scaffn3: scaffoldN
+		Start: 3
+		ZOffset: -50
+	scaffn4: scaffoldN
+		Start: 4
+		ZOffset: -50
+	scaffn5: scaffoldN
+		Start: 5
+		ZOffset: -50
+	scaffn6: scaffoldN
+		Start: 6
+		ZOffset: -50
+	scaffs0: scaffoldS
+		Start: 0
+	scaffs1: scaffoldS
+		Start: 1
+	scaffs2: scaffoldS
+		Start: 2
+	scaffs3: scaffoldS
+		Start: 3
+	scaffs4: scaffoldS
+		Start: 4
+	scaffs5: scaffoldS
+		Start: 5
+	scaffs6: scaffoldS
+		Start: 6
+	scaffw0: scaffoldW
+		Start: 0
+	scaffw1: scaffoldW
+		Start: 1
+	scaffw2: scaffoldW
+		Start: 2
+	scaffw3: scaffoldW
+		Start: 3
+	scaffw4: scaffoldW
+		Start: 4
+	scaffw5: scaffoldW
+		Start: 5
+	scaffw6: scaffoldW
+		Start: 6
+	scaffe0: scaffoldE
+		Start: 0
+	scaffe1: scaffoldE
+		Start: 1
+	scaffe2: scaffoldE
+		Start: 2
+	scaffe3: scaffoldE
+		Start: 3
+	scaffe4: scaffoldE
+		Start: 4
+	scaffe5: scaffoldE
+		Start: 5
+	scaffe6: scaffoldE
+		Start: 6
+	scaffne0: scaffoldNE
+		Start: 0
+		ZOffset: -50
+	scaffne1: scaffoldNE
+		Start: 1
+		ZOffset: -50
+	scaffne2: scaffoldNE
+		Start: 2
+		ZOffset: -50
+	scaffne3: scaffoldNE
+		Start: 3
+		ZOffset: -50
+	scaffne4: scaffoldNE
+		Start: 4
+		ZOffset: -50
+	scaffne5: scaffoldNE
+		Start: 5
+		ZOffset: -50
+	scaffne6: scaffoldNE
+		Start: 6
+		ZOffset: -50
+	scaffnw0: scaffoldNW
+		Start: 0
+		ZOffset: -50
+	scaffnw1: scaffoldNW
+		Start: 1
+		ZOffset: -50
+	scaffnw2: scaffoldNW
+		Start: 2
+		ZOffset: -50
+	scaffnw3: scaffoldNW
+		Start: 3
+		ZOffset: -50
+	scaffnw4: scaffoldNW
+		Start: 4
+		ZOffset: -50
+	scaffnw5: scaffoldNW
+		Start: 5
+		ZOffset: -50
+	scaffnw6: scaffoldNW
+		Start: 6
+		ZOffset: -50
+	scaffse0: scaffoldSE
+		Start: 0
+	scaffse1: scaffoldSE
+		Start: 1
+	scaffse2: scaffoldSE
+		Start: 2
+	scaffse3: scaffoldSE
+		Start: 3
+	scaffse4: scaffoldSE
+		Start: 4
+	scaffse5: scaffoldSE
+		Start: 5
+	scaffse6: scaffoldSE
+		Start: 6
+	scaffsw0: scaffoldSW
+		Start: 0
+	scaffsw1: scaffoldSW
+		Start: 1
+	scaffsw2: scaffoldSW
+		Start: 2
+	scaffsw3: scaffoldSW
+		Start: 3
+	scaffsw4: scaffoldSW
+		Start: 4
+	scaffsw5: scaffoldSW
+		Start: 5
+	scaffsw6: scaffoldSW
+		Start: 6
+		
+lodge:
+	Inherits: ^scaffold
+	idle: 
+		Start: 5
+		Offset: 0,-12
+	damaged-idle: 
+		Start: 6
+		Offset: 0,-12
+	dead: 
+		Start: 6
+		Tick: 800
+		Offset: 0,-12
+	make:
+		Length: *
+		Tick: 80
+		Offset: 0,-12
+	bib: bib3
+		UseTilesetExtension: true
+		Length: *
+	icon: lodgeicon.shp
+		AddExtension: False
+	make1: 
+		Start: 1
+		ZOffset: -25
+		Offset: 0,-12
+	make2: 
+		Start: 2
+		ZOffset: -25
+		Offset: 0,-12
+	make3: 
+		Start: 3
+		ZOffset: -25
+		Offset: 0,-12
+	make4: 
+		Start: 4
+		ZOffset: -25
+		Offset: 0,-12
+		
+		
+procnew:
+	Inherits: ^scaffold
+	idle: 
+		Offset: 2,4
+	damaged-idle: 
+		Start: 1
+		Offset: 2,4
+	dead: 
+		Start: 2
+		Offset: 2,4
+	make: procnewmake
+		Length: *
+		Tick: 80
+		Offset: 2,4
+	bib: mwbib2
+		UseTilesetExtension: true
+		Length: *
+	icon: refnewicon.shp
+		AddExtension: False
+	make1: procnewmake
+		Start: 0
+		ZOffset: -25
+		Offset: 2,4
+	make2: procnewmake
+		Start: 1
+		ZOffset: -25
+		Offset: 2,4
+	make3: procnewmake
+		Start: 2
+		ZOffset: -25
+		Offset: 2,4
+	make4: procnewmake
+		Start: 3
+		ZOffset: -25
+		Offset: 2,4
+	make5: procnewmake
+		Start: 4
+		ZOffset: -25
+		Offset: 2,4
+	make6: procnewmake
+		Start: 5
+		ZOffset: -25
+		Offset: 2,4
+		
+wtentt:
+	idle: 
+		Start: 0
+	damaged-idle: 
+		Start: 1
+	dead: 
+		Start: 2
+		Tick: 800
+	flag1start: newflag
+		Start: 0
+		Length: 9
+		Tick: 120
+		ZOffset: -1024
+	flag1: newflag
+		Start: 9
+		Length: 4
+		Tick: 120
+		ZOffset: -1024
+	make: wtenttmake
+		Length: *
+		Tick: 120
+	bib: bib2
+		UseTilesetExtension: true
+		Length: *
+	icon: keepicon.shp
+		AddExtension: False
+		
+newfact:
+	idle: kingfact0
+		Start: 0
+	idle0: kingfact0
+		Offset: 0,-11
+	damaged-idle: kingfact0
+		Offset: 0,-11
+		Start: 1
+	idle1: kingfact1
+		Offset: 0,-11
+		Start: 0
+	damaged-idle1: kingfact1
+		Offset: 0,-11
+		Start: 1
+	idle2: kingfact2
+		Offset: 0,-11
+		Start: 0
+		Length: 14
+		Tick: 150
+	damaged-idle2: kingfact2
+		Offset: 0,-11
+		Start: 14
+		Length: 14
+		Tick: 150
+	idle3: kingfact3
+		Offset: 0, -12
+		Start: 0
+		Length: 14
+		Tick: 150
+	damaged-idle3: kingfact3
+		Offset: 0, -12
+		Start: 14
+		Length: 14
+		Tick: 150
+	idle4: newfact2
+		Start: 0
+		Offset: 0, -12
+	damaged-idle4: newfact2
+		Start: 1
+		Offset: 0, -12
+	dead: newfact
+		Start: 2
+		Tick: 800
+	flag1start: newflag
+		Start: 0
+		Length: 9
+		Tick: 120
+		ZOffset: -1024
+	flag1: newflag
+		Start: 9
+		Length: 4
+		Tick: 120
+		ZOffset: -1024
+	make: kingfact0make
+		Length: *
+		Tick: 120
+		Offset: 0, -15
+	bib: mwbib2
+		UseTilesetExtension: true
+		Length: *
+	icon: keepicon.shp
+		AddExtension: False
+		
+nodfact:
+	idle: baronfact0
+		Start: 0
+	idle0: baronfact0
+		Offset: 0,-11
+	damaged-idle: baronfact0
+		Offset: 0,-11
+		Start: 1
+	idle1: baronfact1
+		Offset: 0,-11
+		Start: 0
+	damaged-idle1: baronfact1
+		Offset: 0,-11
+		Start: 1
+	idle2: baronfact2
+		Offset: 0,-11
+		Start: 0
+		Length: 14
+		Tick: 150
+	damaged-idle2: baronfact2
+		Offset: 0,-11
+		Start: 14
+		Length: 14
+		Tick: 150
+	idle3: baronfact3
+		Offset: 0, -12
+		Start: 0
+		Length: 14
+		Tick: 150
+	damaged-idle3: baronfact3
+		Offset: 0, -12
+		Start: 14
+		Length: 14
+		Tick: 150
+	idle4: nodfact
+		Start: 0
+		Offset: 0, -12
+	damaged-idle4: nodfact
+		Start: 1
+		Offset: 0, -12
+	dead: newfact
+		Start: 2
+		Tick: 800
+	flag1start: newflag
+		Start: 0
+		Length: 9
+		Tick: 120
+		ZOffset: -1024
+	flag1: newflag
+		Start: 9
+		Length: 4
+		Tick: 120
+		ZOffset: -1024
+	make: baronfact0make
+		Offset: 0,-11
+		Length: *
+		Tick: 120
+	bib: mwbib2
+		UseTilesetExtension: true
+		Length: *
+	icon: keepicon.shp
+		AddExtension: False
+
+		
+sulfact:
+	idle: sulfact0
+		Start: 0
+	idle0: sulfact0
+		Offset: 0,-4
+	damaged-idle: sulfact0
+		Offset: 0,-4
+		Start: 1
+	idle1: sulfact1
+		Offset: 0,-4
+		Start: 0
+	damaged-idle1: sulfact1
+		Offset: 0,-4
+		Start: 1
+	idle2: sulfact2
+		Offset: 0,-4
+		Start: 0
+		Length: 14
+		Tick: 150
+	damaged-idle2: sulfact2
+		Offset: 0,-4
+		Start: 14
+		Length: 14
+		Tick: 150
+	idle3: sulfact3
+		Offset: 0, -12
+		Start: 0
+		Length: 14
+		Tick: 150
+	damaged-idle3: sulfact3
+		Offset: 0, -12
+		Start: 14
+		Length: 14
+		Tick: 150
+	idle4: sulfactpalette
+		Start: 0
+		Offset: 0, -12
+	damaged-idle4: sulfactpalette
+		Start: 1
+		Offset: 0, -12
+	dead: newfact
+		Start: 2
+		Tick: 800
+	flag1start: newflag
+		Start: 0
+		Length: 9
+		Tick: 120
+		ZOffset: -1024
+	flag1: newflag
+		Start: 9
+		Length: 4
+		Tick: 120
+		ZOffset: -1024
+	make: sulfact0make
+		Offset: 0,-4
+		Length: *
+		Tick: 120
+	bib: mwbib2
+		UseTilesetExtension: true
+		Length: *
+	icon: keepicon.shp
+		AddExtension: False
+
+
+ziggurat1:
+	idle: 
+		Start: 25
+		Offset: 0,-24
+	damaged-idle: 
+		Start: 26
+		Offset: 0,-24
+	dead:
+		Start: 27
+		Offset: 0,-24
+		Tick: 800
+	make: 
+		Length: 25
+		Tick: 200
+		Offset: 0,-24
+	bib: bib1
+		UseTilesetExtension: true
+		Length: *
+	icon: ziggurat1icon.shp
+		AddExtension: False
+		
+ziggurat2:
+	idle: 
+		Start: 25
+		Offset: 0,-24
+	damaged-idle: 
+		Start: 26
+		Offset: 0,-24
+	dead:
+		Start: 27
+		Offset: 0,-24
+		Tick: 800
+	make: 
+		Length: 25
+		Tick: 200
+		Offset: 0,-24
+	bib: bib1
+		UseTilesetExtension: true
+		Length: *
+	icon: ziggurat2icon.shp
+		AddExtension: False	
+
+
+ziggurat3:
+	idle: 
+		Start: 25
+		Offset: 0,-24
+	active: 
+		Start: 25
+		Offset: 0,-24
+	damaged-idle: 
+		Start: 26
+		Offset: 0,-24
+	dead:
+		Start: 27
+		Offset: 0,-24
+		Tick: 800
+	make: 
+		Length: 25
+		Tick: 200
+		Offset: 0,-24
+	bib: bib1
+		UseTilesetExtension: true
+		Length: *
+	icon: ziggurat3icon.shp
+		AddExtension: False
+		
+barn:
+	Inherits: ^scaffold
+	idle: 
+		Offset: 0,-12
+	damaged-idle: 
+		Start: 6
+		Offset: 0,-12
+	dead: 
+		Start: 12
+		Offset: 0,-12
+	stages: 
+		Length: 6
+		Offset: 0,-12
+	damaged-stages: 
+		Start: 6
+		Length: 6
+		Offset: 0,-12
+	make: barnmake
+		Length: *
+		Tick: 80
+		Offset: 0,-12
+	bib: mbSILO
+		UseTilesetExtension: true
+		TilesetOverrides:
+			WINTER: TEMPERAT
+			JUNGLE: TEMPERAT
+			INTERIOR: TEMPERAT
+		Length: *
+	icon: barnicon.shp
+		AddExtension: False
+	make1: barnmake
+		Start: 0
+		ZOffset: -25
+		Offset: 0,-12
+	make2: barnmake
+		Start: 1
+		ZOffset: -25
+		Offset: 0,-12
+	make3: barnmake
+		Start: 2
+		ZOffset: -25
+		Offset: 0,-12
+	make4: barnmake
+		Start: 3
+		ZOffset: -25
+		Offset: 0,-12
+	make5: barnmake
+		Start: 4
+		ZOffset: -25
+		Offset: 0,-12
+	make6: barnmake
+		Start: 5
+		ZOffset: -25
+		Offset: 0,-12
+		
+
+missnew:
+	idle: techcenternew
+		Offset: 0,-1
+	damaged-idle: techcenternew
+		Start: 1
+		Offset: 0,-1
+	make: missmake
+		Length: *
+		Tick: 80
+		Offset: 0,-1
+	bib: mbMISS
+		UseTilesetExtension: true
+		TilesetOverrides:
+			WINTER: TEMPERAT
+			JUNGLE: TEMPERAT
+			INTERIOR: TEMPERAT
+		Length: *
+		Offset: 0,1
+	icon: missicnh	
+	
+tech1:
+	idle: techbuilding1
+	damaged-idle: techbuilding1
+		Start: 1
+	bib: mwbib2
+		UseTilesetExtension: true
+		Length: *
+	turret: techbuilding1turret
+		Facings: 32
+	muzzle: gunfire2
+		Length: *
+	
+tech1.husk:
+	idle: techbuilding1
+		Start: 2
+	bib: mwbib2
+		UseTilesetExtension: true
+		Length: *
+	
+bacamp:
+	idle: 
+	damaged-idle: 
+		Start: 1
+	make: missmake
+		Length: *
+		Tick: 80
+		Offset: 0,-1
+	bib: mbMISS
+		UseTilesetExtension: true
+		TilesetOverrides:
+			WINTER: TEMPERAT
+			JUNGLE: TEMPERAT
+			INTERIOR: TEMPERAT
+		Length: *	   
+	flag1start: newflag
+		Start: 0
+		Length: 9
+		Tick: 120
+		ZOffset: -1024
+	flag1: newflag
+		Start: 9
+		Length: 4
+		Tick: 120
+		ZOffset: -1024
+	
+bacamp.husk:
+	idle: bacamp
+		Start: 2
+	bib: mbMISS
+		UseTilesetExtension: true
+		TilesetOverrides:
+			WINTER: TEMPERAT
+			JUNGLE: TEMPERAT
+			INTERIOR: TEMPERAT
+		Length: *
+        
+
+		
