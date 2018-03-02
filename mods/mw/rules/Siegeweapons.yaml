@@ -40,7 +40,7 @@ MCV2NEW:
 	Targetable@CombatRole:
 		TargetTypes: Support
 	RenderSprites:
-		Image: medimcv
+		Image: medimcv2
 		PlayerPalette: raplayer
 	Transforms:
 		IntoActor: minifact
