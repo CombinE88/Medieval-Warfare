@@ -61,6 +61,7 @@ namespace OpenRA.Mods.MW.Traits
         {
             if (Ticker-- <= 0)
             {
+                SpawnNewActor(self);
                 Ticker = info.RespawnTime;
             }
         }
@@ -71,10 +72,10 @@ namespace OpenRA.Mods.MW.Traits
             var actors = self.World.ActorMap.ActorsInBox(self.World.Map.ProjectedTopLeft, self.World.Map.ProjectedBottomRight)
                 .Where(a => a.Info.Name == info.SpawnActor && a.Owner == self.Owner && !a.IsDead && a.IsInWorld);
 
-            if (!(actors.Count() < info.Maxalive))
+            if ((actors.Count() >= info.Maxalive))
                 return;
 
-            if (!self.IsDead || self.IsInWorld)
+            if (!self.IsDead && self.IsInWorld)
             {
                 self.World.AddFrameEndTask(w =>
                 {

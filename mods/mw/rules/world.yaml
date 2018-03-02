@@ -193,8 +193,8 @@ World:
 		ShortGameCheckboxDisplayOrder: 2
 		TechLevelDropdownDisplayOrder: 2
 		GameSpeedDropdownDisplayOrder: 3
-		ShortGameCheckboxEnabled: False
-		ShortGameCheckboxVisible: False
+		ShortGameCheckboxEnabled: True
+		ShortGameCheckboxVisible: True
 		TechLevelDropdownLocked: True
 		TechLevelDropdownVisible: False
 	#LuaScript:
