@@ -248,7 +248,7 @@ ENGENEER:
 	Health:
 		HP: 8000
 	Armament@Build:
-		Weapon: BuildConstruction
+		Weapon: Repair
 		TargetStances: Ally
 		ForceTargetStances: None
 	AttackFrontal:

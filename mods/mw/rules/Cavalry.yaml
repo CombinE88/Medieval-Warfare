@@ -254,13 +254,6 @@ EMPTYROSS:
 	ScaredyCat:
 	Voiced:
 		VoiceSet: GenericHorseOnly
-	Capturable:
-		CaptureThreshold: 101
-		AllowAllies: true
-		Type: horse
-	TransformOnCapture:
-		ForceHealthPercentage: 100
-		IntoActor: kingross
 	
 ROSS1:
 	Inherits: ^Cavalry

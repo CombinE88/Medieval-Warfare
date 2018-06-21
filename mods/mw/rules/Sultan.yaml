@@ -2410,14 +2410,11 @@ SULB3.Husk:
 SULTURNXL:
 	Inherits@1: ^ExistsInWorld
 	Inherits@4: ^SpriteActor
-	Huntable:
 	DrawLineToTarget:
 	UpdatesPlayerStatistics:
 	AppearsOnRadar:
 		UseLocation: true
 	WithSpriteControlGroupDecoration:
-	Targetable:
-		TargetTypes: Air
 	HiddenUnderFog:
 		Type: CenterPosition
 	HitShape:
@@ -2452,10 +2449,10 @@ SULTURNXL:
 		DamageCooldown: 0
 		DamageTypes: DefaultDeath
 	Selectable:
-		Bounds: 72,96,0,-48
+		Bounds: 72,106,0,-58
 	SelectionDecorations:
-		RenderSelectionBars: false
-		VisualBounds: 72,96,0,-48
+		VisualBounds: 72,106,0,-58
+		RenderSelectionBars: False
 	WithDeathAnimation:
 		DeathSequencePalette: raplayer
 		UseDeathTypeSuffix: False

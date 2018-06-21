@@ -403,7 +403,7 @@ HQNEWGDI.scaff:
 		BuildPaletteOrder: 80
 		Prerequisites: proc
 		Queue: MBuilding.GDI
-		Description: Unlocks higher-tech units and buildings.\n\n\n\n
+		Description: Unlocks higher-tech units and buildings.\nUnlocks Support Powers.\n\n\n
 		BuildDuration: 600
 	Health:
 		HP: 17000

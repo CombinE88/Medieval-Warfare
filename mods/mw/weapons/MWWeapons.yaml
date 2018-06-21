@@ -276,7 +276,7 @@ Repair:
 		Speed: 1c682
 	Warhead@1Dam: SpreadDamage
 		Spread: 213
-		Damage: -760
+		Damage: -360
 		ValidTargets: Siege
 		InvalidTargets: Air
 		

@@ -1053,6 +1053,9 @@ HELLGATE.penta:
         
 GRAFENCE:
 	Inherits: ^Wall
+	RequiresBuildableArea:
+		AreaTypes: undeadbuilding
+		Adjacent: 8
 	Inherits@Hitshape: ^1x1Shape
 	Valued:
 		Cost: 200
@@ -1992,7 +1995,7 @@ UNDEAD6:
 		Name: Skeleton (Giant)
 	Mobile:
 		SharesCell: false
-		Speed: 45
+		Speed: 40
 	-Crushable:
 	Targetable:
 		TargetTypes: Ground, Cavalry
@@ -2036,10 +2039,12 @@ UNDEAD7:
 		TargetTypes: Ground, Cavalry
 	Mobile:
 		SharesCell: false
-		Speed: 45
+		Speed: 40
 	Health:
 		HP: 50000
 	-Crushable:
+	AutoTarget:
+		ScanRadius: 12
 	Armament:
 		Weapon: SkeletonRock
 		FireDelay: 30

@@ -16,6 +16,13 @@ Player:
 	PlayerStatistics:
 	FrozenActorLayer:
 	PlaceBeacon:
+	LobbyPrerequisiteCheckbox@GLOBALFACTUNDEPLOY:
+		ID: factundeploy
+		Label: Redeployable Supply wagons
+		Description: Allow undeploying  Resource Outpost.
+		Enabled: False
+		DisplayOrder: 6
+		Prerequisites: global-factundeploy
 	PlayerCivilization:
 		Delay: 8
 		AlivePeasants: 10

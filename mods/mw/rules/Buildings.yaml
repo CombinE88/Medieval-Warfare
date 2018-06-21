@@ -305,6 +305,15 @@ MINIFACT:
 	Exit@1:
 		SpawnOffset: -426,85,0
 		ExitCell: 0,1
+	Transforms:
+		IntoActor: mcv2new
+		Offset: 1,1
+		Facing: 160
+		RequiresCondition: factundeploy
+		TransformSounds: tentcloth.aud
+	GrantConditionOnPrerequisite@GLOBALFACTUNDEPLOY:
+		Condition: factundeploy
+		Prerequisites: global-factundeploy
 	RenderSprites:
 		Image: wtentt
 		PlayerPalette: raplayer
@@ -502,6 +511,29 @@ HQNEWGDI:
 		Range: 1c0, 5c0
 	WithIdleAnimation:
 		Interval: 750
+	AirstrikePower:
+		Icon: firestorm
+		ChargeInterval: 6250
+		SquadOffset	-236,236,0
+		SquadSize: 3
+		QuantizedFacings: 8
+		Description: Pulverizing Fire Storm
+		LongDesc: Discription.
+		EndChargeSpeechNotification: NewAirstrike
+		SelectTargetSpeechNotification: SelectTarget
+		InsufficientPowerSpeechNotification: InsufficientPower
+		IncomingSpeechNotification: NewAirstrikeAnnounce
+		UnitType: placeholderflamestrike
+		DisplayBeacon: True
+		BeaconPoster: firestormbeacon
+		BeaconPosterPalette: beaconposter
+		DisplayRadarPing: True
+		CameraActor: camera
+		ArrowSequence: arrow
+		ClockSequence: clock
+		CircleSequence: circles
+		OrderName: ArrowsPowerInfoOrder
+	SupportPowerChargeBar:  
 		
 ARMORYNOD:
 	Inherits: ^MWBaseBuilding

@@ -117,7 +117,7 @@ MCVNEW2.Husk:
 		Image: mcvnew2.destroyed
 		PlayerPalette: raplayer
 	Burns:
-		Interval: 8
+		Interval: 3
 		
 ORNI.Husk:
 	Inherits@1: ^SpriteActor

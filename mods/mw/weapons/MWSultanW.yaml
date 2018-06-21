@@ -970,8 +970,8 @@ SulGTSpearThrowAir:
 TornadoExplosion:
 	ValidTargets: Air, Ground
 	Warhead@Tonrado: SpreadDamage
-		Spread: 1536
-		Damage: 1000
+		Spread: 1736
+		Damage: 1500
 		ValidTargets: Air, Ground
 		Versus:
 			Leather: 100

@@ -979,7 +979,7 @@
 	Husk:
 		AllowedTerrain: Clear, Rough, Road, Tiberium, BlueTiberium, Beach
 	Burns:
-		Interval: 6
+		Interval: 2
 	Targetable:
 		RequiresForceFire: yes
 		TargetTypes: Ground, Husk
@@ -1382,6 +1382,8 @@
 	Crushable:
 	AutoTarget:
 		ScanRadius: 4
+		MinimumScanTimeInterval: 20
+		MaximumScanTimeInterval: 30
 	WithInfantryBody:
 		IdleSequences: idle1, idle2
 		StandSequences: stand
@@ -1427,6 +1429,8 @@
 	Guard:
 	AutoTarget:
 		ScanRadius: 7
+		MinimumScanTimeInterval: 20
+		MaximumScanTimeInterval: 30
 	WithInfantryBody:
 		IdleSequences: idle1, idle2
 		StandSequences: stand
@@ -1490,6 +1494,8 @@
 	Guard:
 	AutoTarget:
 		ScanRadius: 7
+		MinimumScanTimeInterval: 20
+		MaximumScanTimeInterval: 30
 	WithInfantryBody:
 		IdleSequences: stand
 		StandSequences: stand

@@ -91,7 +91,7 @@ planewagenhusk:
 		Facings: 32
 
 mcvnew2.destroyed:
-	idle: mcvnew2husk
+	idle: mcvnewhusk
 		Facings: 32
 		UseClassicFacingFudge: True
 		ZOffset: -512
