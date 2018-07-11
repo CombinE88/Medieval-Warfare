@@ -326,7 +326,7 @@ namespace OpenRA.Mods.MW.MWAI
 				var buildableThings = queue.BuildableItems();
 
 				var pentagrams = ai.CountPenagrams();
-				var builder = ai.AcolyteBuilder.Count();
+				//var builder = ai.AcolyteBuilder.Count();
 
 				if (pentagrams > 1)
 					return null;
