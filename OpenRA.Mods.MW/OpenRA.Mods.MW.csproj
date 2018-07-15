@@ -47,7 +47,7 @@
     <Compile Include="MWAI\AttackOrFleeFuzzy.cs" />
     <Compile Include="MWAI\BaseBuilder.cs" />
     <Compile Include="MWAI\DummyAI.cs" />
-    <Compile Include="MWAI\HackyAI.cs" />
+    <Compile Include="MWAI\HackyMWAI.cs" />
     <Compile Include="MWAI\Squad.cs" />
     <Compile Include="MWAI\StateMachine.cs" />
     <Compile Include="MWAI\States\AirStates.cs" />

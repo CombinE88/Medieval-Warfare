@@ -22,7 +22,7 @@ namespace OpenRA.Mods.MW.MWAI
 	{
 		readonly string category;
 
-		readonly HackyAI ai;
+		readonly HackyMWAI ai;
 		readonly World world;
 		readonly Player player;
 		readonly PlayerResources playerResources;
@@ -44,7 +44,7 @@ namespace OpenRA.Mods.MW.MWAI
 
 		Water waterState = Water.NotChecked;
 
-		public BaseBuilder(HackyAI ai, string category, Player p, PlayerResources pr)
+		public BaseBuilder(HackyMWAI ai, string category, Player p, PlayerResources pr)
 		{
 			this.ai = ai;
 			world = p.World;
@@ -153,7 +153,7 @@ namespace OpenRA.Mods.MW.MWAI
 				var location = ai.ChooseBuildLocation(currentBuilding.Item, true, type);
 				if (location == null)
 				{
-					HackyAI.BotDebug("AI: {0} has nowhere to place {1}".F(player, currentBuilding.Item));
+					HackyMWAI.BotDebug("AI: {0} has nowhere to place {1}".F(player, currentBuilding.Item));
 					ai.QueueOrder(Order.CancelProduction(queue.Actor, currentBuilding.Item, 1));
 					failCount += failCount;
 
@@ -221,7 +221,7 @@ namespace OpenRA.Mods.MW.MWAI
 				{
 					if (houses != null)
 					{
-						HackyAI.BotDebug("AI: {0} decided to build {1}: Priority override (low population) Population: " + population, queue.Actor.Owner, houses.Name);
+						HackyMWAI.BotDebug("AI: {0} decided to build {1}: Priority override (low population) Population: " + population, queue.Actor.Owner, houses.Name);
 						return houses;
 					}
 					if (houses == null && population < ai.Info.MinimumPeasants)
@@ -234,13 +234,13 @@ namespace OpenRA.Mods.MW.MWAI
 					var farm = GetProducibleBuilding(ai.Info.BuildingCommonNames.Farms, buildableThings);
 					if (farm != null && population > ai.Info.MinimumPeasants)
 					{
-						HackyAI.BotDebug("AI: {0} decided to build {1}: Priority override (refinery)", queue.Actor.Owner, farm.Name);
+						HackyMWAI.BotDebug("AI: {0} decided to build {1}: Priority override (refinery)", queue.Actor.Owner, farm.Name);
 						return farm;
 					}
 
 					if ((houses != null && farm != null) && population < ai.Info.Population)
 					{
-						HackyAI.BotDebug("AI: {0} decided to build {1}: Priority override (low population) Population: " + population, queue.Actor.Owner, houses.Name);
+						HackyMWAI.BotDebug("AI: {0} decided to build {1}: Priority override (low population) Population: " + population, queue.Actor.Owner, houses.Name);
 						return houses;
 					}
 				}
@@ -251,13 +251,13 @@ namespace OpenRA.Mods.MW.MWAI
 					var production = GetProducibleBuilding(ai.Info.BuildingCommonNames.Production, buildableThings);
 					if (production != null && population >= ai.Info.Population)
 					{
-						HackyAI.BotDebug("AI: {0} decided to build {1}: Priority override (production)", queue.Actor.Owner, production.Name);
+						HackyMWAI.BotDebug("AI: {0} decided to build {1}: Priority override (production)", queue.Actor.Owner, production.Name);
 						return production;
 					}
 
 					if (houses != null && production != null && population < ai.Info.Population)
 					{
-						HackyAI.BotDebug("{0} decided to build {1}: Priority override (would be low power)", queue.Actor.Owner, houses.Name);
+						HackyMWAI.BotDebug("{0} decided to build {1}: Priority override (would be low power)", queue.Actor.Owner, houses.Name);
 						return houses;
 					}
 				}
@@ -270,13 +270,13 @@ namespace OpenRA.Mods.MW.MWAI
 					var navalproduction = GetProducibleBuilding(ai.Info.BuildingCommonNames.NavalProduction, buildableThings);
 					if (navalproduction != null && population >= ai.Info.Population)
 					{
-						HackyAI.BotDebug("AI: {0} decided to build {1}: Priority override (navalproduction)", queue.Actor.Owner, navalproduction.Name);
+						HackyMWAI.BotDebug("AI: {0} decided to build {1}: Priority override (navalproduction)", queue.Actor.Owner, navalproduction.Name);
 						return navalproduction;
 					}
 
 					if (houses != null && navalproduction != null && population < ai.Info.Population)
 					{
-						HackyAI.BotDebug("{0} decided to build {1}: Priority override (would be low power)", queue.Actor.Owner, houses.Name);
+						HackyMWAI.BotDebug("{0} decided to build {1}: Priority override (would be low power)", queue.Actor.Owner, houses.Name);
 						return houses;
 					}
 				}
@@ -312,13 +312,13 @@ namespace OpenRA.Mods.MW.MWAI
 					var actor = world.Map.Rules.Actors[name];
 
 					// Lets build this
-					HackyAI.BotDebug("{0} decided to build {1}: Desired is {2} ({3} / {4}); current is {5} / {4}",
+					HackyMWAI.BotDebug("{0} decided to build {1}: Desired is {2} ({3} / {4}); current is {5} / {4}",
 						queue.Actor.Owner, name, frac.Value, frac.Value * playerBuildings.Length, playerBuildings.Length, count);
 					return actor;
 				}
 
 				// Too spammy to keep enabled all the time, but very useful when debugging specific issues.
-				// HackyAI.BotDebug("{0} couldn't decide what to build for queue {1}.", queue.Actor.Owner, queue.Info.Group);
+				// HackyMWAI.BotDebug("{0} couldn't decide what to build for queue {1}.", queue.Actor.Owner, queue.Info.Group);
 				return null;
 			}
 			else
@@ -336,7 +336,7 @@ namespace OpenRA.Mods.MW.MWAI
 					var crypt = GetProducibleBuilding(ai.Info.UndeadCommonNames.Crypts, buildableThings);
 					if (crypt != null)
 					{
-						HackyAI.BotDebug("AI: {0} decided to build {1}: Priority override (production)", queue.Actor.Owner, crypt.Name);
+						HackyMWAI.BotDebug("AI: {0} decided to build {1}: Priority override (production)", queue.Actor.Owner, crypt.Name);
 						return crypt;
 					}
 				}
@@ -370,12 +370,12 @@ namespace OpenRA.Mods.MW.MWAI
 					//	continue;
 
 					// Lets build this
-					HackyAI.BotDebug("{0} decided to build {1}: Desired is {2} ({3} / {4}); current is {5} / {4}",
+					HackyMWAI.BotDebug("{0} decided to build {1}: Desired is {2} ({3} / {4}); current is {5} / {4}",
 						queue.Actor.Owner, name, frac.Value, frac.Value * playerBuildings.Length, playerBuildings.Length, count);
 					return actor;
 				}
 				// Too spammy to keep enabled all the time, but very useful when debugging specific issues.
-				// HackyAI.BotDebug("{0} couldn't decide what to build for queue {1}.", queue.Actor.Owner, queue.Info.Group);
+				// HackyMWAI.BotDebug("{0} couldn't decide what to build for queue {1}.", queue.Actor.Owner, queue.Info.Group);
 				return null;
 			}
 		}
