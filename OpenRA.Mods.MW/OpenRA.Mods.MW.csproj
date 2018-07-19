@@ -11,15 +11,13 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
     <DebugSymbols>true</DebugSymbols>
-    <OutputPath>bin\Debug\</OutputPath>
+    <DebugType>full</DebugType>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <PlatformTarget>x86</PlatformTarget>
     <ErrorReport>prompt</ErrorReport>
+    <OutputPath>bin\Debug\</OutputPath>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
-    <DebugType>full</DebugType>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-    <WarningLevel>4</WarningLevel>
-    <Optimize>false</Optimize>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
     <DebugSymbols>true</DebugSymbols>
@@ -31,26 +29,33 @@
     <ErrorReport>prompt</ErrorReport>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
     <Optimize>true</Optimize>
-    <WarningLevel>4</WarningLevel>
-    <RunCodeAnalysis>true</RunCodeAnalysis>
-    <CodeAnalysisIgnoreGeneratedCode>true</CodeAnalysisIgnoreGeneratedCode>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="FuzzyLogicLibrary">
-      <HintPath>..\engine\thirdparty\download\FuzzyLogicLibrary.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Drawing" />
-    <Reference Include="Eluant">
-      <HintPath>..\engine\thirdparty\download\Eluant.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
+      <Reference Include="FuzzyLogicLibrary, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\engine\thirdparty\download\FuzzyLogicLibrary.dll</HintPath>
+      </Reference>
+      <Reference Include="System" />
+      <Reference Include="System.Core" />
+      <Reference Include="System.Drawing" />
+      <Reference Include="Eluant">
+        <HintPath>..\engine\thirdparty\download\Eluant.dll</HintPath>
+        <Private>False</Private>
+      </Reference>
   </ItemGroup>
-  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
     <Compile Include="Activities\FallDown.cs" />
+    <Compile Include="MWAI\AttackOrFleeFuzzy.cs" />
+    <Compile Include="MWAI\BaseBuilder.cs" />
+    <Compile Include="MWAI\DummyAI.cs" />
+    <Compile Include="MWAI\HackyAI.cs" />
+    <Compile Include="MWAI\Squad.cs" />
+    <Compile Include="MWAI\StateMachine.cs" />
+    <Compile Include="MWAI\States\AirStates.cs" />
+    <Compile Include="MWAI\States\GroundStates.cs" />
+    <Compile Include="MWAI\States\NavyStates.cs" />
+    <Compile Include="MWAI\States\ProtectionStates.cs" />
+    <Compile Include="MWAI\States\StateBase.cs" />
+    <Compile Include="MWAI\SupportPowerDecision.cs" />
     <Compile Include="MWAI\UndeadAIHAndler.cs" />
     <Compile Include="Projectiles\AthenaProjectile.cs" />
     <Compile Include="Projectiles\InstantExplode.cs" />
@@ -137,30 +142,33 @@
     <Compile Include="Widgets\Logic\Ingame\NewCashCounterLogic.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\engine\OpenRA.Game\OpenRA.Game.csproj">
-      <Project>{0dfb103f-2962-400f-8c6d-e2c28ccba633}</Project>
-      <Name>OpenRA.Game</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\engine\OpenRA.Mods.Cnc\OpenRA.Mods.Cnc.csproj">
-      <Project>{2881135d-4d62-493e-8f83-5eee92ccc6be}</Project>
-      <Name>OpenRA.Mods.Cnc</Name>
-    </ProjectReference>
     <ProjectReference Include="..\engine\OpenRA.Mods.Common\OpenRA.Mods.Common.csproj">
-      <Project>{fe6c8cc0-2f07-442a-b29f-17617b3b7fc6}</Project>
+      <Project>{FE6C8CC0-2F07-442A-B29F-17617B3B7FC6}</Project>
       <Name>OpenRA.Mods.Common</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\engine\OpenRA.Game\OpenRA.Game.csproj">
+      <Project>{0DFB103F-2962-400F-8C6D-E2C28CCBA633}</Project>
+      <Name>OpenRA.Game</Name>
+      <Private>False</Private>
     </ProjectReference>
   </ItemGroup>
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
-       Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
-  </Target>
-  <Target Name="AfterBuild">
-  </Target>
-  -->
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Target Name="AfterBuild">
     <MakeDir Directories="$(SolutionDir)mods/mw/" />
     <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(SolutionDir)mods/mw/" />
+    <!--
+        We need to copy OpenRA.Mods.Cnc.pdb (not `.dll.pdb`). This is only necessary on Windows.
+        Mono outputs a `.dll.mdb` so we can just append `.mdb` directly.
+    -->
     <Copy SourceFiles="$(TargetDir)$(TargetName).pdb" DestinationFolder="$(SolutionDir)mods/mw/" Condition="Exists('$(TargetDir)$(TargetName).pdb')" />
     <Copy SourceFiles="$(TargetPath).mdb" DestinationFolder="$(SolutionDir)mods/mw/" Condition="Exists('$(TargetPath).mdb')" />
+    <!-- Uncomment these lines when debugging or adding to this target
+    <Message Text="DEBUG OS:                     $(OS)"/>
+    <Message Text="DEBUG SolutionDir:            $(SolutionDir)"/>
+    <Message Text="DEBUG TargetPath:             $(TargetPath)"/>
+    <Message Text="DEBUG TargetDir:              $(TargetDir)"/>
+    <Message Text="DEBUG TargetName:             $(TargetName)"/>
+	-->
   </Target>
 </Project>
