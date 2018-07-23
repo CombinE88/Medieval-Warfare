@@ -257,6 +257,7 @@ ENGENEER:
 			nod: baumei
 			gdi: baumei
 			sul: sulengi
+		Image: baumei
 		PlayerPalette: raplayer
 	WithInfantryBody:
 		DefaultAttackSequence: shoot
