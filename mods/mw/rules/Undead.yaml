@@ -1610,7 +1610,8 @@ OBELISK:
 	GrantConditionOnPrerequisite:
 		Condition: Sppollbuild
 		Prerequisites: sppool
-		
+	EmitInfantryOnSell:
+		ActorTypes: preycolyte,undead1
 GARG:
 	Inherits: ^MWDefense
 	Inherits@AUTOTARGET: ^AutoTargetGround
@@ -1660,7 +1661,8 @@ GARG:
 		DeathSequencePalette: raplayer 
 	Targetable@CombatRole:
 		TargetTypes: Defenses
-		
+	EmitInfantryOnSell:
+		ActorTypes: undead1,undead1
 #Infantry
 
 PREYCOLYTE:
