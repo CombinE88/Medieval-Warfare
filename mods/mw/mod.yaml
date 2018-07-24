@@ -64,7 +64,6 @@ Rules:
 	mw|rules/civilian.yaml
 	mw|rules/civilian-desert.yaml
 	mw|rules/Environment.yaml
-	mw|rules/palettes.yaml
 	mw|rules/Props.yaml
 	mw|rules/trees.yaml
 	mw|rules/undeadbuildings.yaml
@@ -133,7 +132,7 @@ TileSets:
 Weapons:
 	mw|weapons/MWWeaponsmisc.yaml
 	mw|weapons/MWWeaponsclose.yaml
-	mw|weapons/MWWeaponsmisc.yaml
+	mw|weapons/MWWeaponsranged.yaml
 	mw|weapons/MWSultanW.yaml
 	mw|weapons/MWUndeadGuns.yaml
 	mw|weapons/MWcampain-weapons.yaml

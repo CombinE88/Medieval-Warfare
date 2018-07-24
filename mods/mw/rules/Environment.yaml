@@ -1261,3 +1261,77 @@ IPAINTINGD:
 	RenderSprites:
 		PlayerPalette: raplayer
 		Palette: 
+        
+CSTACK01:
+	Inherits: ^Crate
+	RenderSprites:
+		Palette: mwcivilian
+	GiveCashCrateAction:
+		Amount: 50
+		UseCashTick: true
+		SelectionShares: 100
+	Tooltip:
+		Name: Treasure
+		ShowOwnerRow: false
+	Health:
+		HP: 1
+	HitShape:
+	EditorTilesetFilter:
+		RequireTilesets: INTERIOR
+		Categories: Interior Props
+CSTACK02:
+	Inherits: CSTACK01
+	GiveCashCrateAction:
+		Amount: 50
+CSTACK03:
+	Inherits: CSTACK01
+	GiveCashCrateAction:
+		Amount: 150
+CSTACK04:
+	Inherits: CSTACK01
+	GiveCashCrateAction:
+		Amount: 150
+CSTACK05:
+	Inherits: CSTACK01
+	GiveCashCrateAction:
+		Amount: 150
+CSTACK06:
+	Inherits: CSTACK01
+	GiveCashCrateAction:
+		Amount: 500
+CSTACK07:
+	Inherits: CSTACK01
+	GiveCashCrateAction:
+		Amount: 500
+CSTACK08:
+	Inherits: CSTACK01
+	GiveCashCrateAction:
+		Amount: 500
+CSTACK09:
+	Inherits: CSTACK01
+	GiveCashCrateAction:
+		Amount: 750
+CSTACK10:
+	Inherits: CSTACK01
+	GiveCashCrateAction:
+		Amount: 750
+CSTACK11:
+	Inherits: CSTACK01
+	GiveCashCrateAction:
+		Amount: 750
+CSTACK12:
+	Inherits: CSTACK01
+	GiveCashCrateAction:
+		Amount: 1250
+CSTACK13:
+	Inherits: CSTACK01
+	GiveCashCrateAction:
+		Amount: 300
+CSTACK14:
+	Inherits: CSTACK01
+	GiveCashCrateAction:
+		Amount: 350
+CSTACK15:
+	Inherits: CSTACK01
+	GiveCashCrateAction:
+		Amount: 350
