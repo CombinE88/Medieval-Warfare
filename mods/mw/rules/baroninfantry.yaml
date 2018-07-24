@@ -1,0 +1,300 @@
+E2NEW:
+	Inherits: ^Knight
+	Inherits@AUTOTARGET: ^AutoTargetGround
+	Inherits@AUTOTARGETDEF: ^AutoTargetDefenses
+	Inherits@GainsExperience: ^GainsExperience
+	Inherits@GetsPoisoned: ^GetsPoisoned
+	Inherits@CanTurnIntoScelett:  ^CanTurnIntoScelett
+	Inherits@ArcherDemo65: ^ArcherDemo65
+
+	Inherits@Healable: ^Healable
+	Inherits@SnakeStunnable: ^SnakeStunnable
+	Inherits@GrimReanimatable: ^GrimReanimatable
+	Valued:
+		Cost: 200
+	-Crushable:
+	Tooltip:
+		Name: Pike Guard
+	Buildable:
+		Description: Anti-Cavalry infantry.\n  Strong vs Cavalry.\n  Weak vs Infantry\n  Deals damage when trampled by Cavalry\n  Can cut down trees.\n\nTrains: 1 Peasant\n
+		IconPalette: raicon
+		BuildPaletteOrder: 20
+		Queue:  MInfantry.Nod, MInfantry.Horse
+		#BuildDuration: 50
+	Mobile:
+		Speed: 45
+	Health:
+		HP: 10000
+	Armament:
+		Weapon: pike
+	AttackFrontal:
+	AutoTarget:
+		ScanRadius: 4
+		InitialStance: AttackAnything
+	RenderSprites:
+		Image: e2new
+		PlayerPalette: raplayer
+	WithInfantryBody:
+		DefaultAttackSequence: shoot
+	Armor:
+		Type: Light
+	Voiced:
+		VoiceSet: NodPikeVoice
+	PersonValued:
+		ActorCount: 1
+		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
+	Targetable@CombatRole:
+		TargetTypes: Light
+	AutoTargetPriority@Counter1:
+		ValidTargets: LightCavalry, Defenses
+		Priority: 5
+	AutoTargetPriority@Counter2:
+		ValidTargets: RegularCavalry, HeavyCavalry, Defenses
+		Priority: 4
+		
+E3NEWV2:
+	Inherits: ^Knight
+	Inherits@AUTOTARGET: ^AutoTargetGround
+	Inherits@GainsExperience: ^GainsExperience
+	Inherits@GetsPoisoned: ^GetsPoisoned
+	Inherits@CanTurnIntoScelett:  ^CanTurnIntoScelett
+	Inherits@ArcherDemo65: ^ArcherDemo65
+
+	Inherits@Healable: ^Healable
+	Inherits@SnakeStunnable: ^SnakeStunnable
+	Inherits@GrimReanimatable: ^GrimReanimatable
+	Valued:
+		Cost: 100
+	Tooltip:
+		Name: Footman
+	Buildable:
+		Description: General-purpose infantry.\n  Strong vs Infantry\n  Weak vs Cavalry \nCan cut down trees.\n\nTrains: 1 Peasant\n
+		IconPalette: raicon
+		BuildPaletteOrder: 10
+		Queue: MInfantry.Nod, MInfantry.Horse
+		#BuildDuration: 50
+	Mobile:
+		Speed: 56
+	Health:
+		HP: 14000
+	Armament:
+		Weapon: BroadSwordBaron
+	AttackFrontal:
+	AutoTarget:
+		ScanRadius: 4
+		InitialStance: AttackAnything
+	RenderSprites:
+		Image: e3newv2
+		PlayerPalette: raplayer
+	WithInfantryBody:
+		DefaultAttackSequence: shoot
+	Armor:
+		Type: Heavy
+	Voiced:
+		VoiceSet: NodKnightVoice
+	PersonValued:
+		ActorCount: 1
+		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
+	Targetable@CombatRole:
+		TargetTypes: Heavy
+	AutoTargetPriority@Counter:
+		ValidTargets: Light, Heavy, Ranged, Support
+		Priority: 4
+
+FRMGE:
+	Inherits: ^Knight
+	Inherits@AUTOTARGET: ^AutoTargetGround
+	Inherits@AUTOTARGETDEF: ^AutoTargetDefenses
+	Inherits@GainsExperience: ^GainsExperience
+	Inherits@GetsPoisoned: ^GetsPoisoned
+	Inherits@CanTurnIntoScelett:  ^CanTurnIntoScelett
+	Inherits@ArcherDemo65: ^ArcherDemo65
+
+	Inherits@Healable: ^Healable
+	Inherits@SnakeStunnable: ^SnakeStunnable
+	Inherits@GrimReanimatable: ^GrimReanimatable
+	RevealsShroud:
+		Range: 6c0
+	Valued:
+		Cost: 375
+	Tooltip:
+		Name: Fire Mage
+	Buildable:
+		Description: Advanced Anti-infantry unit.\n  Strong vs Infantry, Buildings and Spectral Units\n  Weak vs Cavalry\n  Detects cloaked units\n  Cannot attack Aircraft anymore!\n\nTrains: 1 Peasant\n
+		IconPalette: raicon
+		BuildPaletteOrder: 40
+		Prerequisites: anyhq
+		Queue: MInfantry.Nod, MInfantry.Horse
+		#BuildDuration: 250
+	Mobile:
+		Speed: 56
+	Health:
+		HP: 16000
+	Armament@Ground:
+		Weapon: magefire
+		LocalOffset: 541,-50,256
+		FireDelay: 3
+	AttackFrontal:
+	AutoTarget:
+		ScanRadius: 5
+		InitialStance: AttackAnything
+	RenderSprites:
+		Image: frmge
+		PlayerPalette: raplayer
+	WithInfantryBody:
+		DefaultAttackSequence: shoot
+	Armor:
+		Type: Leather
+	DetectCloaked:
+		Range: 2c0
+	Voiced:
+		VoiceSet: NodMageVoice
+	PersonValued:
+		ActorCount: 1
+		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
+	Targetable@CombatRole:
+		TargetTypes: Ranged
+	AutoTargetPriority@Counter1:
+		ValidTargets: Light, Heavy, Ranged, Spectral, Defenses
+		Priority: 4
+
+E4NEW:
+	Inherits: ^Knight
+	Inherits@AUTOTARGET: ^AutoTargetAll
+	Inherits@GainsExperience: ^GainsExperience
+	Inherits@GetsPoisoned: ^GetsPoisoned
+	Inherits@CanTurnIntoScelett:  ^CanTurnIntoScelett
+	Inherits@ArcherDemo65: ^ArcherDemo65
+
+	Inherits@Healable: ^Healable
+	Inherits@SnakeStunnable: ^SnakeStunnable
+	Inherits@GrimReanimatable: ^GrimReanimatable
+	RevealsShroud:
+		Range: 6c0
+	Valued:
+		Cost: 200
+	Tooltip:
+		Name: Archer
+	Buildable:
+		Description: Advanced Anti-infantry unit.\n  Strong vs Light Infantry\n  Weak vs Cavalry and heavy Infantry\n  Detects cloaked units\n  Can attack Aircraft\n  Slows targets under fire\nTrains: 1 Peasant
+		IconPalette: raicon
+		BuildPaletteOrder: 30
+		Queue: MInfantry.Nod, MInfantry.Horse
+		#BuildDuration: 50
+	Mobile:
+		Speed: 60
+	Health:
+		HP: 8000
+	Armament:
+		Weapon: bownarrow
+		LocalOffset: 341,20,356
+		Name: Primary
+	Armament@DUMMY:
+		Weapon: BowNArrowDUMMY
+		LocalOffset: 341,20,356
+		Name: Primary
+	Armament@Air:
+		Weapon: bownarrowair
+		LocalOffset: 341,20,356
+		Name: Primary
+	Armament@Debuffapply:
+		Weapon: BowNArrowDebuff
+		LocalOffset: 341,20,356
+		Name: Secondary
+	AttackFrontal:
+		Armaments: Primary, Secondary
+	AutoTarget:
+		ScanRadius: 8
+		InitialStance: AttackAnything
+	RenderSprites:
+		Image: e4new
+		PlayerPalette: raplayer
+	WithInfantryBody:
+ 		AttackSequences:
+			Primary: shoot
+	Armor:
+		Type: Leather
+	DetectCloaked:
+		Range: 2c0
+	Passenger:
+		CargoType: Archer
+	Voiced:
+		VoiceSet: NodArcherVoice
+	PersonValued:
+		ActorCount: 1
+		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
+	Targetable@CombatRole:
+		TargetTypes: Ranged
+	AutoTargetPriority@Counter1:
+		ValidTargets: Light, Ranged, LightCavalry, Support, Flying
+		Priority: 4
+
+ASSASSIN:
+	Inherits: ^Knight
+	Inherits@AUTOTARGET: ^AutoTargetAll
+	Inherits@GainsExperience: ^GainsExperience
+	Inherits@GetsPoisoned: ^GetsPoisoned
+	Inherits@CanTurnIntoScelett:  ^CanTurnIntoScelett
+	Inherits@ArcherDemo65: ^ArcherDemo65
+
+	Inherits@Healable: ^Healable
+	Inherits@SnakeStunnable: ^SnakeStunnable
+	Inherits@GrimReanimatable: ^GrimReanimatable
+	RevealsShroud:
+		Range: 6c0
+	DetectCloaked:
+		Range: 2c0
+	Cloak:
+		-UpgradeTypes:
+		InitialDelay: 90
+		CloakDelay: 90
+
+	Valued:
+		Cost: 600
+	Tooltip:
+		Name: Assassin
+	Buildable:
+		Description: Mid/Long-range knifethrowing infantry that can cloak.\nHas weak armor. Can be spotted by some infantry and defense structures.\n  Strong vs Cavalry, Infantry and Spectral Units\n  Sets buildings on fire.\n  Detects cloaked units\n  Can attack Aircraft\n\nTrains: 1 Peasant\n
+		IconPalette: raicon
+		BuildPaletteOrder: 60
+		Queue: MInfantry.Nod, MInfantry.Horse
+		Prerequisites: anycastle
+		#BuildDuration: 300
+	Mobile:
+		Speed: 66
+	Health:
+		HP: 12000
+	Armament@dagger:
+		Name: Primary
+		Weapon: dagger
+		LocalOffset: 241,80,356
+	Armament@daggerair:
+		Name: Primary
+		Weapon: daggerair
+		LocalOffset: 241,80,356
+	Armament@fire:
+		Name: Secondary
+		Weapon: SetFire
+		LocalOffset: 241,80,356
+	AttackFrontal:
+		Armaments: Primary, Secondary
+	RenderSprites:
+		Image: thief
+		PlayerPalette: raplayer
+	WithInfantryBody:
+		DefaultAttackSequence: attack
+		AttackSequences:
+			Secondary: fireattack
+			Primary: knifeattack
+	AutoTarget:
+		InitialStance: HoldFire
+		InitialStanceAI: ReturnFire
+	Armor:
+		Type: Leather
+	Voiced:
+		VoiceSet: AssasinVoice
+	PersonValued:
+		ActorCount: 1
+		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
+	Targetable@CombatRole:
+		TargetTypes: Light

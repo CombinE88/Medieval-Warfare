@@ -1,0 +1,711 @@
+		
+ARMORYNOD:
+	Inherits: ^MWBaseBuilding
+	Inherits@Hitshape: ^2x2Shape
+	ProvidesPrerequisite:
+		Prerequisite: anyhq
+	Armor:
+		Type: Concrete
+	WithDeathAnimation:
+		DeathSequencePalette: raplayer
+	ProvidesPrerequisite@level3:
+		Prerequisite: Level3
+	CustomSellValue:
+		Value: 650
+	Valued:
+		Cost: 1300
+	Tooltip:
+		Name: Armory
+	ProvidesPrerequisite@buildingname:
+	RenderSprites:
+		Image: armory
+		PlayerPalette: raplayer
+	Building:
+		Footprint: xx xx ==
+		Dimensions: 2,3
+		LocalCenterOffset: 0,-512,0
+	Selectable:
+		Bounds: 48,58,0,-5
+	SelectionDecorations:
+		VisualBounds: 48,58,0,-5
+	WithSpriteBody:
+		PauseAnimationWhenDisabled: true
+	Health:
+		HP: 90000
+	RevealsShroud:
+		Range: 5c0
+	WithBuildingBib:
+	RenderDetectionCircle:
+	DetectCloaked:
+		Range: 5c0
+	AirstrikePower:
+		Icon: cadaver
+		ChargeInterval: 6250
+		SquadOffset	-206,206,0
+		SquadSize: 2
+		QuantizedFacings: 8
+		Description: Throw plague corpse
+		LongDesc: Deploy poisonous corpes infecting everything surrounding.
+		EndChargeSpeechNotification: NewAirstrike
+		SelectTargetSpeechNotification: SelectTarget
+		InsufficientPowerSpeechNotification: InsufficientPower
+		IncomingSpeechNotification: NewAirstrikeAnnounce
+		UnitType: placeholderplane
+		DisplayBeacon: True
+		BeaconPoster: cadaver
+		BeaconPosterPalette: beaconposter
+		DisplayRadarPing: True
+		CameraActor: camera
+		ArrowSequence: arrow
+		ClockSequence: clock
+		CircleSequence: circles
+		OrderName: CorpsePowerInfoOrder
+		CameraRemoveDelay: 75
+	SupportPowerChargeBar:  
+	ThrowsShrapnel@LARGE:
+		Weapons: LargeWood1, LargeWood1, LargeStone1, LargeStone1
+		Pieces: 1, 2
+		Range: 1c0, 5c0
+	WithFreeSpawnableActor:
+		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
+		SpawnActor: mwcivcom
+		Offset: 0,469, 0
+		MoveOffset: 1,2
+		FindRadius: 100
+	ProximityExternalCondition@HEAL:
+		Range: 5c0
+		ValidStances: Ally
+		Condition: hospitalhealbarr
+	WithRangeCircle: 
+		ValidStances: Ally, Neutral
+		Range: 5c0
+	
+XLTNT1:
+	Inherits: ^MWBaseBuilding
+	Inherits@Hitshape: ^2x2Shape
+	Armor:
+		Type: Concrete
+	WithDeathAnimation:
+		DeathSequencePalette: raplayer
+	RenderSprites:
+		PlayerPalette: raplayer
+	Valued:
+		Cost: 600
+	CustomSellValue:
+		Value: 300
+	Tooltip:
+		Name: Large Tent
+	ProvidesPrerequisite:
+		Prerequisite: anypower
+	Building:
+		Footprint: xx xx ==
+		Dimensions: 2,3
+		LocalCenterOffset: 0,-512,0
+	Health:
+		HP: 70000
+	RevealsShroud:
+		Range: 4c0
+	WithBuildingBib:
+	Selectable:
+		Bounds: 48,48,0,-2
+	SelectionDecorations:
+		VisualBounds: 48,48,0,-2
+	SpawnActorOnDeath@Farmer1:
+		Actor: e1new
+		Probability: 33
+		OwnerType: InternalName
+		InternalOwner: Creeps
+	SpawnActorOnDeath@Farmer2:
+		Actor: e1new
+		Probability: 33
+		OwnerType: InternalName
+		InternalOwner: Creeps
+	SpawnActorOnDeath@Farmer3:
+		Actor: e1new
+		Probability: 33
+		OwnerType: InternalName
+		InternalOwner: Creeps
+	SpawnActorOnDeath@Farmer4:
+		Actor: e1new
+		Probability: 33
+		OwnerType: InternalName
+		InternalOwner: Creeps
+	SpawnActorOnDeath@Farmer5:
+		Actor: e1new
+		Probability: 33
+		OwnerType: InternalName
+		InternalOwner: Creeps
+	ThrowsShrapnel@LARGE:
+		Weapons: DebrFurniture1, DebrFurniture2, DebrFurniture3, DebrFurniture4
+		Pieces: 1, 2
+		Range: 1c0, 5c0
+	ProvidesLivingspace:
+		Ammount: 12
+		SpawnOffset: 256,768,0
+		ExitCell: 1,2
+XLTNT2:
+	Inherits: XLTNT1
+	RenderSprites:
+		Image: xltnt2
+		
+XLTNT3:
+	Inherits: XLTNT1
+	RenderSprites:
+		Image: xltnt3
+				
+XLTNTUNI:
+	Inherits: XLTNT1
+	RenderSprites:
+		Image: xltnt3
+	ProvidesLivingspace:
+		Ammount: 12
+		SpawnOffset: 256,768,0
+		ExitCell: 1,2
+ 
+NODNUKE.scaff:
+	Inherits: ^MWBaseBuilding
+	Inherits@Hitshape: ^2x1Shape
+	Armor:
+		Type: Concrete
+	WithDeathAnimation:
+		DeathSequencePalette: raplayer
+		RequiresCondition: valida
+	WithDeathAnimation@B:
+		DeathSequencePalette: raplayer
+		RequiresCondition: validb
+		DeathSequence: deadb
+	WithDeathAnimation@C:
+		DeathSequencePalette: raplayer
+		RequiresCondition: validc
+		DeathSequence: deadc
+	WithDeathAnimation@D:
+		DeathSequencePalette: raplayer
+		RequiresCondition: validd
+		DeathSequence: deadd
+# anti error fix
+	ExternalCondition@valida:
+		Condition: valida
+# anti error fix
+	ExternalCondition@validb:
+		Condition: validb
+# anti error fix
+	ExternalCondition@validc:
+		Condition: validc
+# anti error fix
+	ExternalCondition@validd:
+		Condition: validd
+	RenderSprites:
+		PlayerPalette: raplayer
+		Image: nodnuke
+	-WithSpriteBody:
+	GrantRandomCondition:
+		RandomConditions: valida, validb, validc, validd
+		FallbackCondition: valida
+	WithIdleOverlay@a:  
+		StartSequence: make
+		Sequence: idle
+		RequiresCondition: valida
+	WithIdleOverlay@b:  
+		StartSequence: makeb
+		Sequence: idleb
+		RequiresCondition: validb
+	WithIdleOverlay@c:  
+		StartSequence: makec
+		Sequence: idlec
+		RequiresCondition: validc
+	WithIdleOverlay@d:  
+		StartSequence: maked
+		Sequence: idled
+		RequiresCondition: validd
+	Buildable:
+		IconPalette: raicon
+		BuildPaletteOrder: 10
+		Prerequisites: factnew
+		Description: Generates livingspace. Livingspace increases over time by generating peasants.\nCan hold up to 3 peasants, spawntime depends on number of shacks and large huts.\nA tent can be plopped down instant.\n\n\n
+		Queue: MBuilding.Nod
+		BuildDuration: 150
+	Valued:
+		Cost: 350
+	CustomSellValue:
+		Value: 125
+	Tooltip:
+		Name: Tent
+	ProvidesPrerequisite:
+		Prerequisite: anypower
+	Building:
+		Footprint: xx ==
+		Dimensions: 2,2
+		LocalCenterOffset: 0,-512,0
+		BuildSounds: tentcloth.aud
+	Health:
+		HP: 35000
+	RevealsShroud:
+		Range: 4c0
+	WithBuildingBib:
+	Selectable:
+		Bounds: 40,26,0,-6
+	SelectionDecorations:
+		VisualBounds: 40,26,0,-6
+	SpawnActorOnDeath@Farmer1:
+		Actor: e1new
+		Probability: 33
+		OwnerType: InternalName
+		InternalOwner: Creeps
+	SpawnActorOnDeath@Farmer2:
+		Actor: e1new
+		Probability: 33
+		OwnerType: InternalName
+		InternalOwner: Creeps
+	SpawnActorOnDeath@Farmer3:
+		Actor: e1new
+		Probability: 33
+		OwnerType: InternalName
+		InternalOwner: Creeps
+	ThrowsShrapnel@LARGE:
+		Weapons: DebrFurniture1, DebrFurniture2, DebrFurniture3, DebrFurniture4
+		Pieces: 2, 3
+		Range: 1c0, 5c0
+	ProvidesLivingspace:
+		Ammount: 4
+		SpawnOffset: 256,811,0
+		ExitCell: 1,1
+	EditorTilesetFilter:
+		ExcludeTilesets: TEMPERATE, SNOW, DESERT, WINTER
+		Categories: 
+        
+NODNUKE:
+	Inherits: NODNUKE.scaff
+	RenderSprites:
+		PlayerPalette: raplayer
+		Image: nodnuke
+	-Buildable:
+	
+NTENT1:
+	Inherits: ^MWBaseBuilding
+	Inherits@Hitshape: ^2x1Shape
+	Armor:
+		Type: Concrete
+	WithDeathAnimation:
+		DeathSequencePalette: raplayer
+		DeathSequence: dead
+	RenderSprites:
+		PlayerPalette: raplayer
+		Image: nodnuke
+	WithSpriteBody:
+		Sequence: idle
+		StartSequence: make
+	Valued:
+		Cost: 350
+	CustomSellValue:
+		Value: 125
+	Tooltip:
+		Name: Tent
+	ProvidesPrerequisite:
+		Prerequisite: anypower
+	Building:
+		Footprint: xx ==
+		Dimensions: 2,2
+		LocalCenterOffset: 0,-512,0
+	Health:
+		HP: 35000
+	RevealsShroud:
+		Range: 4c0
+	WithBuildingBib:
+	Selectable:
+		Bounds: 40,26,0,-6
+	SelectionDecorations:
+		VisualBounds: 40,26,0,-6
+	ThrowsShrapnel@LARGE:
+		Weapons: DebrFurniture1, DebrFurniture2, DebrFurniture3, DebrFurniture4
+		Pieces: 2, 3
+		Range: 1c0, 5c0
+	ProvidesLivingspace:
+		Ammount: 4
+		SpawnOffset: 256,811,0
+		ExitCell: 1,1
+		
+NTENT2:
+	Inherits: NTENT1
+	RenderSprites:
+		PlayerPalette: raplayer
+		Image: nodnuke
+	WithDeathAnimation:
+		DeathSequencePalette: raplayer
+		DeathSequence: deadb
+	WithSpriteBody:
+		Sequence: idleb
+		StartSequence: makeb		
+NTENT3:
+	Inherits: NTENT1
+	RenderSprites:
+		PlayerPalette: raplayer
+		Image: nodnuke
+	WithDeathAnimation:
+		DeathSequencePalette: raplayer
+		DeathSequence: deadc
+	WithSpriteBody:
+		Sequence: idlec
+		StartSequence: makec	  
+NTENT4:
+	Inherits: NTENT1
+	RenderSprites:
+		PlayerPalette: raplayer
+		Image: nodnuke
+	WithDeathAnimation:
+		DeathSequencePalette: raplayer
+		DeathSequence: deadd
+	WithSpriteBody:
+		Sequence: idled
+		StartSequence: maked
+ 		
+NODPROC:
+	Inherits: ZEROPROC
+	RenderSprites:
+		Image: nodmill
+	Building:
+		Footprint: __ xx xx ==
+		Dimensions: 2,4
+		LocalCenterOffset: 0,-512,0
+	Valued:
+		Cost: 1500
+	CustomSellValue:
+		Value: 400
+	WithFreeSpawnableActor@1:
+		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
+		SpawnActor: e8farmer
+		Offset: 368,1067, 0
+		MoveOffset: 1,3
+		RespawnTime: 750
+		FindRadius: 100
+	WithFreeSpawnableActor@2:
+		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
+		SpawnActor: e8farmer
+		Offset: 368,1067, 0
+		MoveOffset: 1,3
+		RespawnTime: 750
+		FindRadius: 100
+	WithFreeSpawnableActor@3:
+		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
+		SpawnActor: e8farmer
+		Offset: 368,1067, 0
+		MoveOffset: 1,3
+		RespawnTime: 750
+		FindRadius: 100
+	Selectable:
+		Bounds: 48,70,0,-8
+	SelectionDecorations:
+		VisualBounds: 48,70,0,-8
+
+HANDNEW:
+	Inherits: ^MWBaseBuilding
+	Inherits@Hitshape: ^2x2Shape
+	Armor:
+		Type: Concrete
+	WithDeathAnimation:
+		DeathSequencePalette: raplayer
+	RenderSprites:
+		Image: handnew
+		PlayerPalette: raplayer
+	Valued:
+		Cost: 900
+	CustomSellValue:
+		Value: 450
+	Tooltip:
+		Name: Barracks
+	ProvidesPrerequisite:
+		Prerequisite: barracks
+	Building:
+		Footprint: __ xx xx ==
+		Dimensions: 2,4
+		LocalCenterOffset: 0,-512,0
+	Health:
+		HP: 65000
+	RevealsShroud:
+		Range: 5c0
+	WithBuildingBib:
+	RallyPoint:
+	Exit@1:
+		SpawnOffset: 426,938,0
+		ExitCell: 1,2
+	WithActorProduction:
+		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
+		FindRadius: 60
+		Produces:  MInfantry.Nod
+	ProductionQueue@2:
+		Type: MInfantry.Nod
+		Group: Infantry
+		RequireOwner: false
+		LowPowerSlowdown: 3
+		Factions: nod
+		ReadyAudio:
+	ProductionBar:
+	ProvidesPrerequisite@buildingname:
+	Selectable:
+		Bounds: 48,66,0,-5
+	SelectionDecorations:
+		VisualBounds: 48,66,0,-5
+	ThrowsShrapnel@LARGE:
+		Weapons: SDebrWeapon1, SDebrWeapon2, SDebrWeapon3
+		Pieces: 1, 2
+		Range: 1c0, 5c0
+	Refinery:
+		DockAngle: 72
+		DockOffset: 0,3
+		TickRate: 15
+
+NODSTALL:
+	Inherits: ^MWBaseBuilding
+	Inherits@Hitshape: ^4x2Shape
+	Armor:
+		Type: Concrete
+	WithDeathAnimation:
+		DeathSequencePalette: raplayer
+	RenderSprites:
+		Image: nodstall
+		PlayerPalette: raplayer
+	Valued:
+		Cost: 1750
+	CustomSellValue:
+		Value: 875
+	Tooltip:
+		Name: Stables
+	Building:
+		Footprint: xxxx xx=x ====
+		Dimensions: 4,3
+		LocalCenterOffset: 0,-512,0
+	Health:
+		HP: 86000
+	RevealsShroud:
+		Range: 4c0
+	WithBuildingBib:
+	RallyPoint:
+	Exit@1:
+		SpawnOffset: 540,540,0
+		ExitCell: 2,2
+	WithActorProduction:
+		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
+		FindRadius: 60
+		Produces: MVehicle.Nod
+	ProductionQueue@2:
+		Type: MVehicle.Nod
+		Group: Vehicle
+		Factions: nod
+		RequireOwner: false
+		LowPowerSlowdown: 3
+		ReadyAudio:
+	ProductionBar:
+	ProvidesPrerequisite@buildingname:
+	ProvidesPrerequisite:
+		Prerequisite: vehicleproduction
+	Selectable:
+		Bounds: 96,64,0,-4
+	SelectionDecorations:
+		VisualBounds: 96,64,0,-4
+	WithIdleOverlay@1:
+		StartSequence: flag1start
+		Sequence: flag1
+		Offset: 256,2506,0
+	SpawnActorOnDeath@Ross1:
+		Actor: emptyross
+		Probability: 33
+		OwnerType: InternalName
+		InternalOwner: Neutral
+	SpawnActorOnDeath@Ross2:
+		Actor: emptyross
+		Probability: 33
+		OwnerType: InternalName
+		InternalOwner: Neutral
+	SpawnActorOnDeath@Ross3:
+		Actor: emptyross
+		Probability: 33
+		OwnerType: InternalName
+		InternalOwner: Neutral
+	SpawnActorOnDeath@Ross4:
+		Actor: emptyross
+		Probability: 33
+		OwnerType: InternalName
+		InternalOwner: Neutral
+	ThrowsShrapnel@LARGE:
+		Weapons: LargeWood1, LargeWood1, LargeStone1, LargeStone1
+		Pieces: 1, 2
+		Range: 1c0, 5c0
+	Refinery:
+		DockAngle: 72
+		DockOffset: 1,2
+		TickRate: 15
+
+CASTLE:
+	Inherits: ^MWBaseBuilding
+	Inherits@Hitshape: ^3x2Shape
+	Armor:
+		Type: Concrete
+	WithDeathAnimation:
+		DeathSequencePalette: raplayer
+	RenderSprites:
+		Image: castle
+		PlayerPalette: raplayer
+	Valued:
+		Cost: 2500
+	CustomSellValue:
+		Value: 1250
+	Tooltip:
+		Name: Castle
+	Building:
+		Footprint: ___ xxx xxx ===
+		Dimensions: 3,4
+		LocalCenterOffset: 0,-512,0
+	Health:
+		HP: 200000
+	RevealsShroud:
+		Range: 6c0
+	WithBuildingBib:
+	ProvidesPrerequisite:
+		Prerequisite: anyhq
+	ProvidesPrerequisite@2:
+		Prerequisite: anycastle
+	ProvidesPrerequisite@3:
+		Prerequisite: Level4
+	ProvidesPrerequisite@buildingname:
+	Selectable:
+		Bounds: 72,78,0,-9
+	SelectionDecorations:
+		VisualBounds: 72,78,0,-9
+	ProvidesRadar:
+	NukePower:
+		Icon: cannonstrike
+		Cursor: nuke
+		ChargeInterval: 9000
+		Description: Cannon Strike
+		LongDesc: Launch long range cannonboulder off your casle.\nApplies heavy damage over a large area.\n\n\n\n
+		EndChargeSpeechNotification: NodcannonReady
+		SelectTargetSpeechNotification: SelectTarget
+		InsufficientPowerSpeechNotification: InsufficientPower
+		LaunchSpeechNotification: 
+		IncomingSpeechNotification: NodcannonApproach
+		BeginChargeSpeechNotification: 
+		MissileWeapon: cannonstrike
+		DisplayBeacon: True
+		BeaconPoster: cannonbeacon
+		BeaconPosterPalette: beaconposter
+		DisplayRadarPing: True
+		CameraRange: 10c0
+		ArrowSequence: arrow
+		ClockSequence: clock
+		CircleSequence: circles
+		OrderName: CannonPowerInfoOrder
+		ActivationSequence: active
+	SupportPowerChargeBar:
+	ThrowsShrapnel@LARGE:
+		Weapons: LargeWood1, LargeWood1, LargeStone1, LargeStone1
+		Pieces: 1, 2
+		Range: 1c0, 5c0
+
+WORKSHOPNOD:
+	Inherits: ^MWBaseBuilding
+	Inherits@Hitshape: ^3x2Shape
+	WithDeathAnimation:
+		DeathSequencePalette: raplayer
+	Armor:
+		Type: HeavyBuilding
+	RenderSprites:
+		Image: nodfix
+		PlayerPalette: raplayer
+	Valued:
+		Cost: 1400
+	CustomSellValue:
+		Value: 700
+	Tooltip:
+		Name: Siege Workshop
+	Building:
+		Footprint: xxx =xx ===
+		Dimensions: 3,3
+		LocalCenterOffset: 0,-512,0
+	Selectable:
+		Bounds: 64,64,0,-14
+	SelectionDecorations:
+		VisualBounds: 64,64,0,-14
+	Health:
+		HP: 60000
+	RevealsShroud:
+		Range: 5c0
+	WithBuildingBib:
+	ProvidesPrerequisite@buildingname: 
+	RallyPoint:
+	Exit@1:
+		SpawnOffset: 325,512,0
+		ExitCell: 1,2
+	WithActorProduction:
+		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
+		FindRadius: 60
+		Produces: MSiege.Nod
+	ProductionQueue@2:
+		Type: MSiege.Nod
+		Group: Aircraft
+		Factions: nod
+		RequireOwner: false
+		LowPowerSlowdown: 3
+	ProductionBar:
+	ProduceActorPower:
+		Icon: trojan
+		ChargeInterval: 7000
+		Actors: siege99
+		Type: MSiege.Nod
+		Description: Wooden Horse \n\n\n\n
+		LongDesc: Wooden horse constructed to provide large bundles of infantry, seemingly never ending.\n  - Flamewh33l
+		SelectTargetSpeechNotification: SelectTarget
+		InsufficientPowerSpeechNotification: InsufficientPower
+		DisplayBeacon: False
+		DisplayRadarPing: False
+		ArrowSequence: arrow
+		ClockSequence: clock
+		CircleSequence: circles
+		OrderName: TrojanPowerInfoOrder
+		EndChargeSpeechNotification: StrangeReady
+		RequiresCondition: Enabled && !disable
+	SupportPowerChargeBar:
+	GrantConditionOnPrerequisite:
+		Condition: Enabled
+		Prerequisites: anyhq
+	GrantConditionOnPrerequisite@Horse:
+		Condition: disable
+		Prerequisites: siege99
+	WithIdleAnimation:
+		Interval: 360
+	ProvidesPrerequisite@2:
+		Prerequisite: anyworkshop
+	ThrowsShrapnel@LARGE:
+		Weapons: LargeWood1, SmallWood1, LargeStone1, SmallWood2
+		Pieces: 1, 2
+		Range: 1c0, 5c0
+	ProximityExternalCondition@LABORER:
+		Range: 3c0
+		ValidStances: Ally
+		Condition: Labor
+	Targetable:
+		TargetTypes: Ground, C4, Structure, Wanderer, Laborer
+	Refinery:
+		DockAngle: 72
+		DockOffset: 1,2
+		TickRate: 15
+	WithFreeSpawnableActor@LABOUR1:
+		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
+		SpawnActor: shopplayer
+		Offset: 325,512,0
+		MoveOffset: 1,3
+		Sticky: true
+		Lasso: 3c0
+		ForceLasso: 5c0
+		ReturnOnDeath: true
+	WithFreeSpawnableActor@LABOUR2:
+		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
+		SpawnActor: shopplayer
+		Offset: 325,512,0
+		MoveOffset: 1,3
+		Sticky: true
+		Lasso: 3c0
+		ForceLasso: 5c0
+		ReturnOnDeath: true
+	WithRangeCircle:
+		Type: Workshop
+		Range: 4c0
+		Color: b50909

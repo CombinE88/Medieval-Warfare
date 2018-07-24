@@ -1,0 +1,85 @@
+HOOD:
+	Inherits: ^Knight
+	Inherits@AUTOTARGET: ^AutoTargetAll
+	Inherits@Healable: ^Healable
+	RevealsShroud:
+		Range: 9c0
+	Valued:
+		Cost: 4500
+	Tooltip:
+		Name: Robin Hood
+	Mobile:
+		Speed: 76
+		Voice: Move
+	Guard:
+		Voice: Move
+	Health:
+		HP: 33000
+	Armament:
+		Weapon: HoodArrow
+		LocalOffset: 341,20,356
+		Name: Primary
+	Armament@DUMMY:
+		Weapon: HoodArrowDUMMY
+		LocalOffset: 341,20,356
+		Name: Primary
+	Armament@Air:
+		Weapon: HoodArrowAir
+		LocalOffset: 341,20,356
+		Name: Primary
+	Armament@AntiStructure:
+		Weapon: HoodFireArrow
+		LocalOffset: 341,20,356
+		Name: Primary
+	Armament@AntiStructure2:
+		Weapon: HoodFireArrowDummy
+		LocalOffset: 341,20,356
+		Name: Primary
+	Armament@AntiStructure3:
+		Weapon: HoodFireArrowDummy
+		LocalOffset: 341,20,356
+		Name: Primary
+	Armament@AntiStructure4:
+		Weapon: HoodFireArrowDummy
+		LocalOffset: 341,20,356
+		Name: Primary
+	Armament@AntiStructure5:
+		Weapon: HoodFireArrowDummy
+		LocalOffset: 341,20,356
+		Name: Primary
+	AttackFrontal:
+		Armaments: Primary, Secondary
+		Voice: Attack
+	AutoTarget:
+		ScanRadius: 9
+		InitialStance: AttackAnything
+	RenderSprites:
+		Image: hood
+		PlayerPalette: raplayer
+	WithInfantryBody:
+ 		AttackSequences:
+			Primary: shoot
+	Armor:
+		Type: Leather
+	DetectCloaked:
+		Range: 5c0
+	Passenger:
+		CargoType: Archer
+		Voice: Move
+	Targetable@CombatRole:
+		TargetTypes: Ranged
+	AutoTargetPriority@Counter1:
+		ValidTargets: Light, Ranged, LightCavalry, Support, Flying
+		Priority: 4
+	AnnounceOnKill:
+	Voiced:
+		VoiceSet: CommandoVoice
+	AttackMove:
+		Voice: Attack
+	-Crushable:
+	SelfHealing@AlwaysHeals:
+		Delay: 20
+		Step: 250
+		HealIfBelow: 75
+		DamageCooldown: 200 
+	MustBeDestroyed:

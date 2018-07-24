@@ -1,0 +1,463 @@
+
+^MWUndeadBuilding:
+	Inherits@1: ^BaseBuilding
+	GivesBuildableArea:
+		AreaTypes: undeadbuilding
+	RequiresBuildableArea:
+		AreaTypes: undeadbuilding
+		Adjacent: 4
+	RepairableBuilding:
+		RepairPercent: 40
+		RepairStep: 1000
+		PlayerExperience: 15
+	ThrowsShrapnel@SMALL:
+		Weapons: SmallWood1, SmallWood2, SmallWood3, SmallStone1, SmallStone2
+		Pieces: 2, 4
+		Range: 0c512, 3c0
+	Targetable:
+		TargetTypes: Ground, C4, Structure, Wanderer
+	ProximityExternalCondition@WANDERER:
+		Range: 6c0
+		ValidStances: Ally
+		Condition: Wander
+	EmitInfantryOnSell:
+		ActorTypes: undead1, undead3, undead5, preycolyte
+
+^MWBasePentagram:
+	Inherits@1: ^BaseBuilding
+	RequiresBuildableArea:
+		AreaTypes: undeadbuilding
+		Adjacent: 4
+	-EmitInfantryOnSell:
+	RepairableBuilding:
+		RepairPercent: 40
+		RepairStep: 1000
+		PlayerExperience: 15
+	Targetable:
+		TargetTypes: Ground, C4, Structure, Pentagram
+	Sellable:
+	UndeadBuilder:
+		Selfbuilds: true
+
+^Skeleton:  
+	Inherits: ^MedievalInfantry
+	Inherits@GainsExperience: ^GainsExperience
+	Inherits@ArcherDemo65: ^ArcherDemo65
+
+	Inherits@SnakeStunnable: ^SnakeStunnable
+	Inherits@AUTOTARGET: ^AutoTargetAll
+	EditorTilesetFilter:
+		Categories: Undead
+	WithSpriteBody:
+		RequiresCondition: makeanim
+	WithDeathAnimation:
+		DeathSequencePalette: raplayer
+		DeathTypes:
+			DefaultDeath: 1
+			RippedApartDeath: 1
+			PoisonDeath: 1
+			BallistaDeath: 1
+			BurnToDeath: 1
+			SkeletonDeath: 1
+		CrushedSequence: die1
+	Targetable:
+		TargetTypes: Ground, Infantry
+	MustBeDestroyed:
+	Tooltip:
+		GenericName: Soldier
+	Guard:
+	WithMakeAnimation:
+		Condition: makeanim
+		Sequence: make
+	WithInfantryBody:
+		RequiresCondition: !makeanim
+		DefaultAttackSequence: shoot
+	SpeedMultiplier:
+		Modifier: 0
+		RequiresCondition: makeanim
+	Armor:
+		Type: Heavy
+	AutoTarget:
+		ScanRadius: 5
+		InitialStance: AttackAnything
+	Voiced:
+		VoiceSet: SkeletonVoice
+	RangeMultiplier:
+		Modifier: 0
+		RequiresCondition: snaketrap
+	Explodes@Tib:
+		Weapon: LeaveStuff
+		EmptyWeapon: LeaveStuff
+		Chance: 15
+	Crushable:
+		
+^SkeletonSpawn:
+	Inherits: ^MedievalInfantry
+	Inherits@ArcherDemo65: ^ArcherDemo65
+
+	Inherits@SnakeStunnable: ^SnakeStunnable
+	Inherits@AUTOTARGET: ^AutoTargetAll
+	EditorTilesetFilter:
+		Categories: Undead
+	WithDeathAnimation:
+		DeathSequencePalette: raplayer
+		DeathTypes:
+			DefaultDeath: 1
+			RippedApartDeath: 1
+			PoisonDeath: 1
+			BallistaDeath: 1
+			BurnToDeath: 1
+			SkeletonDeath: 1
+		CrushedSequence: die1
+	Targetable:
+		TargetTypes: Ground, Infantry
+	MustBeDestroyed:
+	Tooltip:
+		GenericName: Soldier
+	Guard:
+	WithInfantryBody:
+		DefaultAttackSequence: shoot
+	Armor:
+		Type: Heavy
+	AutoTarget:
+		ScanRadius: 5
+		InitialStance: AttackAnything
+	Voiced:
+		VoiceSet: SkeletonVoice
+	ExternalCondition@SNAKES:
+		Condition: snaketrap
+	SelfHealing@SNAKES:
+		Step: -1000
+		HealIfBelow: 110
+		Delay: 25
+		RequiresCondition: snaketrap
+		DamageTypes: PoisonDeath
+	SelfHealing@SNAKES2:
+		PercentageStep: -8
+		Step: -0
+		HealIfBelow: 110
+		Delay: 25
+		RequiresCondition: snaketrap >= 2
+		DamageTypes: PoisonDeath
+	SelfHealing@SNAKES3:
+		PercentageStep: -8
+		Step: -0
+		HealIfBelow: 110
+		Delay: 25
+		RequiresCondition: snaketrap >= 3
+		DamageTypes: PoisonDeath
+	SelfHealing@SNAKES4:
+		PercentageStep: -8
+		Step: -0
+		HealIfBelow: 110
+		Delay: 25
+		RequiresCondition: snaketrap >= 4
+		DamageTypes: PoisonDeath	 
+	SpeedMultiplier@SNAKES:
+		Modifier: 0
+		RequiresCondition: snaketrap
+	WithIdleOverlay@SNAKES:
+		Sequence: stunned
+		RequiresCondition: snaketrap
+	RangeMultiplier:
+		Modifier: 0
+		RequiresCondition: snaketrap
+	AttackWander: 
+		WanderMoveRadius: 3
+		ReduceMoveRadiusDelay: 5
+		MinMoveDelay: 0
+		MaxMoveDelay: 50
+	
+
+^Mediumpenta:
+	Inherits: ^MWBasePentagram
+	Inherits@Hitshape: ^2x2Shape
+	Armor:
+		Type: Concrete
+	RenderSprites:
+		Palette: undead
+		PlayerPalette: undeadplayer
+	-WithDeathAnimation:
+	-WithSpriteBody:
+	Tooltip:
+		Name: Spawner
+	Building:
+		Footprint: _==_ =xx= =xx= _==_
+		Dimensions: 4,4
+		Adjacent: 4
+		RequiresBaseProvider: false
+	-GivesBuildableArea:
+	Health:
+		HP: 50000
+	RevealsShroud:
+		Range: 4c0
+	Selectable:
+		Bounds: 96,56,0,0
+	SelectionDecorations:
+		VisualBounds: 96,56,0,0
+	UndeadBuilder:
+		SpawnOffset: 1,1
+		SummoningTime: 100
+	WithUndeadBuilderOverlay: 
+		Sequence: circlem
+		Palette: undeadalpha
+		IsPlayerPalette: True
+	WithIdleOverlay:
+		Sequence: pentagramm
+		Palette: undeadalpha
+		IsPlayerPalette: True
+	DockManager:
+		ExternalDocks: true
+		#DeadlockDetectionEnabled: false
+	Dock@leftup: 
+		DockOffset: 0,1
+		WOffset: -468,-298,0
+		DockAngle: 32
+		IsDragRequired: false
+		FaceTowardsCenter: true
+	Dock@up: 
+		DockOffset: 2,0
+		WOffset: -42,383,0
+		DockAngle: 223
+		IsDragRequired: false
+		FaceTowardsCenter: true
+	Dock@right: 
+		DockOffset: 3,1
+		WOffset: 468,553,0
+		DockAngle: 159
+		IsDragRequired: false
+		FaceTowardsCenter: true
+	Dock@down: 
+		DockOffset: 2,3
+		WOffset: -86,-468,0
+		DockAngle: 96
+		IsDragRequired: false
+		FaceTowardsCenter: true
+	Dock@leftdown: 
+		DockOffset: 0,2
+		WOffset: -425,170,0
+		DockAngle: 96
+		IsDragRequired: false
+		FaceTowardsCenter: true
+		
+^Smallpenta:
+	Inherits: ^MWBasePentagram
+	Inherits@Hitshape: ^1x1Shape
+	Armor:
+		Type: Concrete
+	RenderSprites:
+		Palette: undead
+		PlayerPalette: undeadplayer
+	-WithDeathAnimation:
+	-WithSpriteBody:
+	Tooltip:
+		Name: Spawner
+	Building:
+		Footprint: _=_ =x= _=_ 
+		Dimensions: 3,3
+		Adjacent: 4
+		RequiresBaseProvider: false
+	-GivesBuildableArea:
+	Health:
+		HP: 50000
+	RevealsShroud:
+		Range: 4c0
+	Selectable:
+		Bounds: 72,36,0,0
+	SelectionDecorations:
+		VisualBounds: 72,36,0,0
+	UndeadBuilder:
+		SpawnOffset: 1,1
+		SummoningTime: 100
+	WithUndeadBuilderOverlay: 
+		Sequence: circles
+		Palette: undeadalpha
+		IsPlayerPalette: True
+	WithIdleOverlay:
+		Sequence: pentagrams
+		Palette: undeadalpha
+		IsPlayerPalette: True
+	DockManager:
+		ExternalDocks: true
+		#DeadlockDetectionEnabled: false
+	Dock@up: 
+		DockOffset: 1,0
+		WOffset: 383,170,0
+		DockAngle: 32
+		IsDragRequired: false
+		FaceTowardsCenter: true
+	Dock@right: 
+		DockOffset: 2,1
+		WOffset: 425,0,0
+		DockAngle: 223
+		IsDragRequired: false
+		FaceTowardsCenter: true
+	Dock@down: 
+		DockOffset: 1,2
+		WOffset: 340,-170,0
+		DockAngle: 159
+		IsDragRequired: false
+		FaceTowardsCenter: true
+	Dock@leftdown: 
+		DockOffset: 0,2
+		WOffset: -425,-510,0
+		DockAngle: 96
+		IsDragRequired: false
+		FaceTowardsCenter: true
+	Dock@leftup: 
+		DockOffset: 0,0
+		WOffset: -425,510,0
+		DockAngle: 96
+		IsDragRequired: false
+		FaceTowardsCenter: true
+		
+^Largepenta:
+	Inherits: ^MWBasePentagram
+	Inherits@Hitshape: ^3x3Shape
+	Armor:
+		Type: Concrete
+	RenderSprites:
+		Palette: undead
+		PlayerPalette: undeadplayer
+	-WithDeathAnimation:
+	-WithSpriteBody:
+	Tooltip:
+		Name: Spawner
+	Building:
+		Footprint: _===_ =xxx= =xxx= =xxx= _===_ 
+		Dimensions: 5,5
+		Adjacent: 4
+		RequiresBaseProvider: false
+	-GivesBuildableArea:
+	Health:
+		HP: 50000
+	RevealsShroud:
+		Range: 4c0
+	Selectable:
+		Bounds: 120,72,0,0
+	SelectionDecorations:
+		VisualBounds: 120,72,0,0
+	UndeadBuilder:
+		SpawnOffset: 1,1
+		SummoningTime: 100
+	WithUndeadBuilderOverlay: 
+		Sequence: circlel
+		Palette: undeadalpha
+		IsPlayerPalette: True
+	WithIdleOverlay:
+		Sequence: pentagraml
+		Palette: undeadalpha
+		IsPlayerPalette: True
+	DockManager:
+		ExternalDocks: true
+		#DeadlockDetectionEnabled: false
+	Dock@up: 
+		DockOffset: 3,0
+		WOffset: -468,510,0
+		DockAngle: 32
+		IsDragRequired: false
+		FaceTowardsCenter: true
+	Dock@right: 
+		DockOffset: 4,2
+		WOffset: 420,0,0
+		DockAngle: 223
+		IsDragRequired: false
+		FaceTowardsCenter: true
+	Dock@down: 
+		DockOffset: 3,4
+		WOffset: -425,-553,0
+		DockAngle: 159
+		IsDragRequired: false
+		FaceTowardsCenter: true
+	Dock@leftdown: 
+		DockOffset: 0,3
+		WOffset: -425,-170,0
+		DockAngle: 96
+		IsDragRequired: false
+		FaceTowardsCenter: true
+	Dock@leftup: 
+		DockOffset: 0,1
+		WOffset: -425,85,0
+		DockAngle: 96
+		IsDragRequired: false
+		FaceTowardsCenter: true
+
+^Gravestone:
+	Inherits: ^MWUndeadBuilding
+	Inherits@Hitshape: ^1x1Shape
+	-ActorLostNotification:
+	-RepairableBuilding:
+	EditorTilesetFilter:
+		ExcludeTilesets: TEMPERATE, SNOW, DESERT, WINTER
+		Categories: 
+	ShakeOnCreate:
+	Armor:
+		Type: Concrete
+	-WithDeathAnimation:
+	RenderSprites:
+		PlayerPalette: raplayer
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Gravestone
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+	Health:
+		HP: 25000
+	RevealsShroud:
+		Range: 4c0
+	Selectable:
+		Bounds: 28,28,0,-4
+	SelectionDecorations:
+		VisualBounds: 28,28,0,-4
+	MustBeDestroyed:
+		RequiredForShortGame: false
+	-Sellable:
+	ThrowsShrapnel@SMALL:
+		Weapons: SmallStone1, SmallStone2, LargeStone1
+		Pieces: 2, 4
+		Range: 0c512, 3c0
+	ProvidesLivingspace:
+		Ammount: 1
+		
+^CoffinAmbush:
+	Inherits: ^MWUndeadBuilding
+	Inherits@Hitshape: ^1x1Shape
+	EditorTilesetFilter:
+		Categories:
+	ShakeOnCreate:
+	-RepairableBuilding:
+	-ActorLostNotification:
+	Armor:
+		Type: Concrete
+	-WithDeathAnimation:
+	WithMakeAnimation:
+	RenderSprites:
+		PlayerPalette: raplayer
+	Valued:
+		Cost: 250
+	Tooltip:
+		Name: Coffin
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+	Health:
+		HP: 55000
+	RevealsShroud:
+		Range: 3c0
+	Selectable:
+		Bounds: 28,28,0,-4
+	SelectionDecorations:
+		VisualBounds: 28,28,0,-4
+	MustBeDestroyed:
+		RequiredForShortGame: false
+	-Sellable:
+	ThrowsShrapnel@SMALL:
+		Weapons: SmallWood1, SmallWood2, SmallWood3
+	SelfHealing@Killsslef:
+		PercentageStep: -3
+		Step: -0
+		HealIfBelow: 110
+		Delay: 35
+		DamageTypes: DefaultDeath
