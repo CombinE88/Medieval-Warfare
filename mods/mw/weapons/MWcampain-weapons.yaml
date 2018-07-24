@@ -1,0 +1,279 @@
+HoodArrow:
+	ReloadDelay: 45
+	Range: 8c0
+	MinRange: 0c512
+	Report: arrow01.aud, arrow02.aud, arrow02.aud
+	InvalidTargets: Wall, Air, Structure
+	ValidTargets: Ground
+	Projectile: Missile
+		HorizontalRateOfTurn: 100
+		VerticalRateOfTurn: 100
+		RangeLimit: 12c204
+		Arm: 0
+		Speed: 290
+		LaunchAngle: 55
+		Palette: ra
+		Inaccuracy: 0c0
+	Warhead@1Dam: SpreadDamage
+		Spread: 50
+		InvalidTargets: Wall, Air, Structure
+		ValidTargets: Ground
+		Damage: 25000
+		Versus:
+			Leather: 300
+			Light: 300
+			Heavy: 300
+			Concrete: 7
+			Knight: 15
+			LightCavalry: 80
+			MediumCavalry: 40
+			HeavyCavalry: 25
+			HeavyBuilding: 15
+			Spectral: 50
+		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+
+HoodArrowDUMMY:
+	ReloadDelay: 45
+	Range: 8c0
+	MinRange: 0c512
+	InvalidTargets: Wall, Air, Structure
+	ValidTargets: Ground
+	Projectile: Bullet
+		RangeLimit:  12c204
+		LaunchAngle: 80
+		Speed: 340
+		Inaccuracy: 0c0
+		ContrailLength: 20
+		ContrailWidth: 10
+		ContrailDelay: 0
+		ContrailUsePlayerColor : true
+		Image: e4arrow
+		Palette: ra
+	Warhead@1Dam: SpreadDamage
+		Spread: 25
+		InvalidTargets: Wall, Air, Structure
+		ValidTargets: Ground
+		Damage: 0
+		Versus:
+			Leather: 0
+			Light: 0
+			Heavy: 0
+			Concrete: 0
+			Knight: 0
+			LightCavalry: 0
+			MediumCavalry: 0
+			HeavyCavalry: 0
+			HeavyBuilding: 0
+			Spectral: 0
+		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+        
+HoodArrowAir:
+	ReloadDelay: 38
+	Range: 9c512
+	MinRange: 0c0
+	Report: arrow01.aud, arrow02.aud, arrow02.aud
+	InvalidTargets: Wall, Ground
+	ValidTargets: Air
+	Projectile: Missile
+		HorizontalRateOfTurn: 60
+		RangeLimit: 14c204
+		Arm: 0
+		Speed: 400
+		LaunchAngle: 46
+		Inaccuracy: 0c0
+		ContrailLength: 20
+		ContrailWidth: 10
+		ContrailDelay: 0
+		ContrailUsePlayerColor : true
+		Image: e4arrow
+		Palette: ra
+	Warhead@1Dam: SpreadDamage
+		Spread: 141
+		InvalidTargets: Wall, Ground
+		ValidTargets: Air
+		Damage: 22000
+		Versus:
+			Leather: 100
+			Light: 100
+			Heavy: 90
+			Concrete: 15
+			Knight: 15
+			LightCavalry: 80
+			MediumCavalry: 55
+			HeavyCavalry: 35
+			HeavyBuilding: 45
+		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+        
+HoodFireArrow:
+	ReloadDelay: 45
+	Range: 8c0
+	MinRange: 0c512
+	ValidTargets: Structure
+	TargetActorCenter: true
+	Report: arrow01.aud, arrow02.aud, arrow02.aud
+	InvalidTargets: Wall, Air
+	Projectile: Bullet
+		Speed: 290
+		Blockable: false
+		LaunchAngle: 140
+		Inaccuracy: 0c512
+		Image: firearrow
+		Palette: ra
+		ContrailLength: 20
+		ContrailWidth: 10
+		ContrailDelay: 0
+		ContrailUsePlayerColor : true
+	Warhead@1Dam: SpreadDamage
+		Spread: 210
+		InvalidTargets: Wall, Air
+		Damage: 1500
+		ValidTargets: Ground
+		Falloff: 100, 70, 60, 50, 18, 7, 0
+		Versus:
+			None: 100
+			Leather: 100
+			Light: 100
+			Heavy: 100
+			Concrete: 125
+			Knight: 55
+			LightCavalry: 75
+			MediumCavalry: 25
+			HeavyCavalry: 25
+			HeavyBuilding: 125
+			Spectral: 90
+		DamageTypes: Prone50Percent, TriggerProne, BurnToDeath
+	Warhead@2Dam: SpreadDamage
+		Spread: 210
+		ValidTargets: Ground
+		InvalidTargets: Wall, Air
+		Delay: 10
+		Damage: 750
+		Falloff: 100, 70, 60, 50, 18, 7, 0
+		Versus:
+			None: 100
+			Leather: 100
+			Light: 100
+			Heavy: 100
+			Concrete: 125
+			Knight: 55
+			LightCavalry: 75
+			MediumCavalry: 25
+			HeavyCavalry: 25
+			HeavyBuilding: 125
+			Spectral: 90
+		DamageTypes: Prone50Percent, TriggerProne, BurnToDeath
+	Warhead@3Dam: SpreadDamage
+		Spread: 210
+		ValidTargets: Ground
+		InvalidTargets: Wall, Air
+		Delay: 20
+		Damage: 600
+		Falloff: 100, 70, 60, 50, 18, 7, 0
+		Versus:
+			None: 100
+			Leather: 100
+			Light: 100
+			Heavy: 100
+			Concrete: 125
+			Knight: 55
+			LightCavalry: 75
+			MediumCavalry: 25
+			HeavyCavalry: 25
+			HeavyBuilding: 125
+			Spectral: 90
+		DamageTypes: Prone50Percent, TriggerProne, BurnToDeath
+	Warhead@1Eff: CreateEffect
+		Explosions: fire2	
+	Warhead@2Eff: CreateEffect
+		Explosions: fire3   
+		Delay: 12
+	Warhead@3Eff: CreateEffect
+		Explosions: fire3   
+		Delay: 24
+        
+        
+HoodFireArrowDummy:
+	ReloadDelay: 45
+	Range: 8c0
+	MinRange: 0c512
+	ValidTargets: Structure
+	TargetActorCenter: true
+	InvalidTargets: Wall, Air
+	Projectile: Bullet
+		Speed: 290
+		Blockable: false
+		LaunchAngle: 140
+		Inaccuracy: 2c228
+		Image: firearrow
+		Palette: ra
+		ContrailLength: 20
+		ContrailWidth: 10
+		ContrailDelay: 0
+		ContrailUsePlayerColor : true
+	Warhead@1Dam: SpreadDamage
+		Spread: 210
+		InvalidTargets: Wall, Air
+		Damage: 1500
+		ValidTargets: Ground
+		Falloff: 100, 70, 60, 50, 18, 7, 0
+		Versus:
+			None: 100
+			Leather: 100
+			Light: 100
+			Heavy: 100
+			Concrete: 125
+			Knight: 55
+			LightCavalry: 75
+			MediumCavalry: 25
+			HeavyCavalry: 25
+			HeavyBuilding: 125
+			Spectral: 90
+		DamageTypes: Prone50Percent, TriggerProne, BurnToDeath
+	Warhead@2Dam: SpreadDamage
+		Spread: 210
+		ValidTargets: Ground
+		InvalidTargets: Wall, Air
+		Delay: 10
+		Damage: 750
+		Falloff: 100, 70, 60, 50, 18, 7, 0
+		Versus:
+			None: 100
+			Leather: 100
+			Light: 100
+			Heavy: 100
+			Concrete: 125
+			Knight: 55
+			LightCavalry: 75
+			MediumCavalry: 25
+			HeavyCavalry: 25
+			HeavyBuilding: 125
+			Spectral: 90
+		DamageTypes: Prone50Percent, TriggerProne, BurnToDeath
+	Warhead@3Dam: SpreadDamage
+		Spread: 210
+		ValidTargets: Ground
+		InvalidTargets: Wall, Air
+		Delay: 20
+		Damage: 600
+		Falloff: 100, 70, 60, 50, 18, 7, 0
+		Versus:
+			None: 100
+			Leather: 100
+			Light: 100
+			Heavy: 100
+			Concrete: 125
+			Knight: 55
+			LightCavalry: 75
+			MediumCavalry: 25
+			HeavyCavalry: 25
+			HeavyBuilding: 125
+			Spectral: 90
+		DamageTypes: Prone50Percent, TriggerProne, BurnToDeath
+	Warhead@1Eff: CreateEffect
+		Explosions: fire2	
+	Warhead@2Eff: CreateEffect
+		Explosions: fire3   
+		Delay: 12
+	Warhead@3Eff: CreateEffect
+		Explosions: fire3   
+		Delay: 24

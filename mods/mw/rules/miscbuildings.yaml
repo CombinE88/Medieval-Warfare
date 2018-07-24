@@ -1,0 +1,1128 @@
+FACTNEW:
+	Inherits: ^MWBaseBuilding
+	Inherits@Hitshape: ^3x2Shape
+	RepairableBuilding:
+		RepairPercent: 40
+		RepairStep: 3000
+		PlayerExperience: 15
+	WithMakeAnimation:
+#	GrantConditionOnDamageState@damaged:
+#		ValidDamageStates:
+#		Condition: damaged
+	ExternalCondition@never:
+		Condition: never
+	GrantConditionOnPrerequisite@4:
+		Prerequisites: vehicleproduction
+		Condition: visibilityEnabler1
+	GrantConditionOnPrerequisite@1:
+		Prerequisites: barracks
+		Condition: visibilityEnabler2
+	GrantConditionOnPrerequisite@2:
+		Prerequisites: Level3
+		Condition: visibilityEnabler3
+	GrantConditionOnPrerequisite@3:
+		Prerequisites: Level4
+		Condition: visibilityEnabler4
+	GrantPermanentCondition@1:
+		RequiresCondition: visibilityEnabler1
+		Condition: visibility
+	GrantPermanentCondition@2:
+		RequiresCondition: visibilityEnabler2
+		Condition: visibility
+	GrantPermanentCondition@3:
+		RequiresCondition: visibilityEnabler3
+		Condition: visibility
+	GrantPermanentCondition@4:
+		RequiresCondition: visibilityEnabler4
+		Condition: visibility
+	WithSpriteBody:	 
+		RequiresCondition: never
+	WithIdleOverlay@Lv0:
+		Sequence: idle0
+		RequiresCondition: visibility == 0
+	WithIdleOverlay@Lv1:
+		Sequence: idle1
+		RequiresCondition: visibility == 1
+	WithIdleOverlay@Lv2:
+		Sequence: idle2
+		RequiresCondition: visibility == 2
+	WithIdleOverlay@Lv3:
+		Sequence: idle3
+		RequiresCondition: visibility == 3
+	WithIdleOverlay@Lv4:
+		Sequence: idle4
+		RequiresCondition: visibility == 4
+	DamageMultiplier@KEEPLEVEL1:
+		RequiresCondition: visibility == 1
+		Modifier: 95
+	DamageMultiplier@KEEPLEVEL2:
+		RequiresCondition: visibility == 2
+		Modifier: 90
+	DamageMultiplier@KEEPLEVEL3:
+		RequiresCondition: visibility == 3
+		Modifier: 80
+	DamageMultiplier@KEEPLEVEL4:
+		RequiresCondition: visibility == 4
+		Modifier: 60
+	BodyOrientation:
+		QuantizedFacings: 8
+	Selectable:
+		Bounds:72,72,0,-7
+	SelectionDecorations:
+		VisualBounds:72,72,0,-7
+	Exit@1:
+		SpawnOffset: -426,85,0
+		ExitCell: 0,1
+	RenderSprites:
+		FactionImages:
+			nod: nodfact
+			gdi: newfact
+			sul: sulfact
+		PlayerPalette: raplayer
+	Valued:
+		Cost: 2000
+	CustomSellValue:
+		Value: 1000
+	Tooltip:
+		Name: Keep
+	Building:
+		Footprint: xxx xxx ===
+		Dimensions: 3,3
+		LocalCenterOffset: 0,-512,0
+	Health:
+		HP: 500000
+	Armor:
+		Type: Concrete
+	RevealsShroud:
+		Range: 10c0
+	WithBuildingBib:
+	Production:
+		Produces: MBuilding.GDI, MBuilding.Nod, MTech.GDI, MTech.Nod, MBuilding.SUL, MTech.SUL, MResources.GDI, MResources.Nod,MMilitary.GDI, MMilitary.Nod,MResources.SUL, MMilitary.SUL
+	ProductionQueue@GDIMBuilding:
+		Type: MBuilding.GDI
+		Factions: gdi
+		Group: Building
+		LowPowerSlowdown: 2
+		QueuedAudio: Building
+		ReadyAudio: ConstructionComplete
+	ProductionQueue@NodMBuilding:
+		Type: MBuilding.Nod
+		Factions: nod
+		Group: Building
+		LowPowerSlowdown: 2
+		QueuedAudio: Building
+		ReadyAudio: ConstructionComplete
+	ProductionQueue@GDIMDefence:
+		Type: MTech.GDI
+		Factions: gdi
+		Group: Tech
+		LowPowerSlowdown: 2
+		QueuedAudio: Building
+		ReadyAudio: ConstructionComplete
+	ProductionQueue@NodMDefence:
+		Type: MTech.Nod
+		Factions: nod
+		Group: Tech
+		LowPowerSlowdown: 2
+		QueuedAudio: Building
+		ReadyAudio: ConstructionComplete
+	ProductionQueue@SULBuilding:
+		Type: MBuilding.SUL
+		Factions: sul
+		Group: Building
+		LowPowerSlowdown: 2
+		QueuedAudio: Building
+		ReadyAudio: ConstructionComplete
+	ProductionQueue@SULDefense:
+		Type: MTech.SUL
+		Factions: sul
+		Group: Tech
+		LowPowerSlowdown: 2
+		QueuedAudio: Building
+		ReadyAudio: ConstructionComplete
+	ProductionQueue@GDIMResources:
+		Type: MResources.GDI
+		Factions: gdi
+		Group: Building2
+		LowPowerSlowdown: 2
+		QueuedAudio: Building
+		ReadyAudio: ConstructionComplete
+	ProductionQueue@NodMResources:
+		Type: MResources.Nod
+		Factions: nod
+		Group: Building2
+		LowPowerSlowdown: 2
+		QueuedAudio: Building
+		ReadyAudio: ConstructionComplete
+	ProductionQueue@GDIMMilitary:
+		Type: MMilitary.GDI
+		Factions: gdi
+		Group: Building3
+		LowPowerSlowdown: 2
+		QueuedAudio: Building
+		ReadyAudio: ConstructionComplete
+	ProductionQueue@NodMMilitary:
+		Type: MMilitary.Nod
+		Factions: nod
+		Group: Building3
+		LowPowerSlowdown: 2
+		QueuedAudio: Building
+		ReadyAudio: ConstructionComplete
+	ProductionQueue@SULBuilding2:
+		Type: MResources.SUL
+		Factions: sul
+		Group: Building2
+		LowPowerSlowdown: 2
+		QueuedAudio: Building
+		ReadyAudio: ConstructionComplete
+	ProductionQueue@SULBuilding3:
+		Type: MMilitary.SUL
+		Factions: sul
+		Group: Building3
+		LowPowerSlowdown: 2
+		QueuedAudio: Building
+		ReadyAudio: ConstructionComplete
+	BaseBuilding:
+	ProductionBar@BuildingGDI:
+		ProductionType: MBuilding.GDI
+	ProductionBar@BuildingNod:
+		ProductionType: MBuilding.Nod
+	ProductionBar@DefGDI:
+		ProductionType: MTech.GDI
+	ProductionBar@DefNod:
+		ProductionType: MTech.Nod
+	ProductionBar@BuildingSUL:
+		ProductionType: MBuilding.SUL
+	ProductionBar@DefSUL:
+		ProductionType: MTech.SUL
+	ProductionBar@BuildingGDI2:
+		ProductionType: MResources.GDI
+	ProductionBar@BuildingNod2:
+		ProductionType: MResources.Nod
+	ProductionBar@BuildingSUL2:
+		ProductionType: MResources.SUL
+	ProductionBar@BuildingGDI3:
+		ProductionType: MMilitary.GDI
+	ProductionBar@BuildingNod3:
+		ProductionType: MMilitary.Nod
+	ProductionBar@BuildingSUL3:
+		ProductionType: MMilitary.SUL
+	BaseProvider:
+		Cooldown: 25
+		Range: 16c0
+	ProvidesPrerequisite@buildingname:		
+	WithDeathAnimation:
+		DeathSequencePalette: raplayer
+	ThrowsShrapnel@LARGE:
+		Weapons: LargeWood1, LargeStone1, DebrUtility1, DebrUtility2, DebrUtility3
+		Pieces: 1, 2
+		Range: 1c0, 5c0
+	Targetable:
+		TargetTypes: Ground, C4, Structure, Wanderer, Laborer, BaseCenter, Material
+	ProvidesRadar:
+	ProvidesLivingspace:
+		Ammount: 8
+		SpawnOffset: -213,554,0
+		ExitCell: 1,2
+	StoresResources:
+		PipColor: Yellow
+		PipCount: 10
+		Capacity: 4000
+	ProximityExternalCondition@WANDERER:
+		Range: 20c0
+		ValidStances: Ally
+		Condition: Wander
+
+
+FACTNEW.GDI:
+	Inherits: FACTNEW
+	RenderSprites:
+		Image: newfact
+	Buildable:
+		Queue: MResources.Nod, MResources.GDI, MResources.Sul, MResources.ded
+		BuildPaletteOrder: 1000
+		Prerequisites: ~disabled
+		ForceFaction: gdi
+		IconPalette: raicon
+		Description: Constructs your village
+	Tooltip:
+		Name: Construction Yard (GDI)
+	ThrowsShrapnel@LARGE:
+		Weapons: LargeWood1, LargeStone1, DebrUtility1, DebrUtility2, DebrUtility3
+		Pieces: 1, 2
+		Range: 1c0, 5c0
+
+FACTNEW.NOD:
+	Inherits: FACTNEW
+	RenderSprites:
+		Image: newfact
+	Buildable:
+		Queue: MResources.Nod, MResources.GDI, MResources.Sul, MResources.ded
+		BuildPaletteOrder: 1001
+		Prerequisites: ~disabled
+		ForceFaction: nod
+		IconPalette: raicon
+		Description: Constructs your village
+	Tooltip:
+		Name: Construction Yard (Nod)
+	ThrowsShrapnel@LARGE:
+		Weapons: LargeWood1, LargeStone1, DebrUtility1, DebrUtility2, DebrUtility3
+		Pieces: 1, 2
+		Range: 1c0, 5c0
+		
+FACTNEW.SUL:
+	Inherits: FACTNEW
+	RenderSprites:
+		Image: newfact
+	Buildable:
+		Queue: MResources.Nod, MResources.GDI, MResources.Sul, MResources.ded
+		BuildPaletteOrder: 1002
+		Prerequisites: ~disabled
+		ForceFaction: sul
+		IconPalette: raicon
+		Description: Constructs your village
+	Tooltip:
+		Name: Construction Yard (Sultan)
+	ThrowsShrapnel@LARGE:
+		Weapons: LargeWood1, LargeStone1, DebrUtility1, DebrUtility2, DebrUtility3
+		Pieces: 1, 2
+		Range: 1c0, 5c0
+		
+		
+MINIFACT:
+	Inherits: ^MWBaseBuilding
+	Inherits@Hitshape: ^3x2Shape
+	ProvidesPrerequisite@FACTNEW:
+		Prerequisite: factnew
+	WithMakeAnimation:
+	WithSpriteBody:	 
+	BodyOrientation:
+		QuantizedFacings: 8
+	Selectable:
+		Bounds:72,56,0,0
+	SelectionDecorations:
+		VisualBounds: 72,56,0,0
+	Exit@1:
+		SpawnOffset: -426,85,0
+		ExitCell: 0,1
+	Transforms:
+		IntoActor: mcv2new
+		Offset: 1,1
+		Facing: 160
+		RequiresCondition: factundeploy
+		TransformSounds: tentcloth.aud
+	GrantConditionOnPrerequisite@GLOBALFACTUNDEPLOY:
+		Condition: factundeploy
+		Prerequisites: global-factundeploy
+	RenderSprites:
+		Image: wtentt
+		PlayerPalette: raplayer
+	Valued:
+		Cost: 2000
+	CustomSellValue:
+		Value: 1000
+	Tooltip:
+		Name: Resource Outpost
+	Building:
+		Footprint: xxx xxx ===
+		Dimensions: 3,3
+		LocalCenterOffset: 0,-512,0
+	Health:
+		HP: 200000
+	Armor:
+		Type: Concrete
+	RevealsShroud:
+		Range: 7c0
+	WithBuildingBib:
+	Production:
+		Produces: MBuilding.GDI, MBuilding.Nod, MTech.GDI, MTech.Nod, MBuilding.SUL, MTech.SUL, MResources.GDI, MResources.Nod,MMilitary.GDI, MMilitary.Nod,MResources.SUL, MMilitary.SUL
+	ProductionQueue@GDIMBuilding:
+		Type: MBuilding.GDI
+		Factions: gdi
+		Group: Building
+		LowPowerSlowdown: 2
+		QueuedAudio: Building
+		ReadyAudio: ConstructionComplete
+	ProductionQueue@NodMBuilding:
+		Type: MBuilding.Nod
+		Factions: nod
+		Group: Building
+		LowPowerSlowdown: 2
+		QueuedAudio: Building
+		ReadyAudio: ConstructionComplete
+	ProductionQueue@GDIMDefence:
+		Type: MTech.GDI
+		Factions: gdi
+		Group: Tech
+		LowPowerSlowdown: 2
+		QueuedAudio: Building
+		ReadyAudio: ConstructionComplete
+	ProductionQueue@NodMDefence:
+		Type: MTech.Nod
+		Factions: nod
+		Group: Tech
+		LowPowerSlowdown: 2
+		QueuedAudio: Building
+		ReadyAudio: ConstructionComplete
+	ProductionQueue@SULBuilding:
+		Type: MBuilding.SUL
+		Factions: sul
+		Group: Building
+		LowPowerSlowdown: 2
+		QueuedAudio: Building
+		ReadyAudio: ConstructionComplete
+	ProductionQueue@SULDefense:
+		Type: MTech.SUL
+		Factions: sul
+		Group: Tech
+		LowPowerSlowdown: 2
+		QueuedAudio: Building
+		ReadyAudio: ConstructionComplete
+	ProductionQueue@GDIMResources:
+		Type: MResources.GDI
+		Factions: gdi
+		Group: Building2
+		LowPowerSlowdown: 2
+		QueuedAudio: Building
+		ReadyAudio: ConstructionComplete
+	ProductionQueue@NodMResources:
+		Type: MResources.Nod
+		Factions: nod
+		Group: Building2
+		LowPowerSlowdown: 2
+		QueuedAudio: Building
+		ReadyAudio: ConstructionComplete
+	ProductionQueue@GDIMMilitary:
+		Type: MMilitary.GDI
+		Factions: gdi
+		Group: Building3
+		LowPowerSlowdown: 2
+		QueuedAudio: Building
+		ReadyAudio: ConstructionComplete
+	ProductionQueue@NodMMilitary:
+		Type: MMilitary.Nod
+		Factions: nod
+		Group: Building3
+		LowPowerSlowdown: 2
+		QueuedAudio: Building
+		ReadyAudio: ConstructionComplete
+	ProductionQueue@SULBuilding2:
+		Type: MResources.SUL
+		Factions: sul
+		Group: Building2
+		LowPowerSlowdown: 2
+		QueuedAudio: Building
+		ReadyAudio: ConstructionComplete
+	ProductionQueue@SULBuilding3:
+		Type: MMilitary.SUL
+		Factions: sul
+		Group: Building3
+		LowPowerSlowdown: 2
+		QueuedAudio: Building
+		ReadyAudio: ConstructionComplete
+	BaseBuilding:
+	ProductionBar@BuildingGDI:
+		ProductionType: MBuilding.GDI
+	ProductionBar@BuildingNod:
+		ProductionType: MBuilding.Nod
+	ProductionBar@DefGDI:
+		ProductionType: MTech.GDI
+	ProductionBar@DefNod:
+		ProductionType: MTech.Nod
+	ProductionBar@BuildingSUL:
+		ProductionType: MBuilding.SUL
+	ProductionBar@DefSUL:
+		ProductionType: MTech.SUL
+	ProductionBar@BuildingGDI2:
+		ProductionType: MResources.GDI
+	ProductionBar@BuildingNod2:
+		ProductionType: MResources.Nod
+	ProductionBar@BuildingSUL2:
+		ProductionType: MResources.SUL
+	ProductionBar@BuildingGDI3:
+		ProductionType: MMilitary.GDI
+	ProductionBar@BuildingNod3:
+		ProductionType: MMilitary.Nod
+	ProductionBar@BuildingSUL3:
+		ProductionType: MMilitary.SUL
+	BaseProvider:
+		Cooldown: 25
+		Range: 13c0
+	ProvidesPrerequisite@buildingname:		
+	WithDeathAnimation:
+		DeathSequencePalette: raplayer
+	ThrowsShrapnel@LARGE:
+		Weapons: LargeWood1, LargeStone1, DebrUtility1, DebrUtility2, DebrUtility3
+		Pieces: 1, 2
+		Range: 1c0, 5c0
+	ProximityExternalCondition@LABORER:
+		Range: 3c0
+		ValidStances: Ally
+		Condition: Labor
+	Targetable:
+		TargetTypes: Ground, C4, Structure, Wanderer, Laborer, BaseCenter, Material
+	ProvidesRadar:
+	PersonValued:
+		ActorCount: 3
+		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
+	ProximityExternalCondition@WANDERER:
+		Range: 20c0
+		ValidStances: Ally
+		Condition: Wander
+		
+PROC:
+	Interactable:
+	AlwaysVisible:
+	Tooltip:
+		Name: Ore Refinery or Farm
+			
+PROCNEW:
+	Inherits: ^MWBaseBuilding
+	HitShape:
+		Type: Rectangle
+			TopLeft: -1536, -512
+			BottomRight: 1536, 853
+	HitShape@TOP:
+		Type: Rectangle
+			TopLeft: -512, -1450
+			BottomRight: 896, -512
+	Armor:
+		Type: Concrete
+	WithDeathAnimation:
+		DeathSequencePalette: raplayer
+	RenderSprites:
+		PlayerPalette: raplayer
+	ProvidesPrerequisite@anyref:
+		Prerequisite: anyrefinery
+	Valued:
+		Cost: 1500
+	Tooltip:
+		Name: Ore Refinery
+	Building:
+		Footprint: _x_ xxx xx= ===
+		Dimensions: 3,4
+		LocalCenterOffset: 0,-512,0
+	Health:
+		HP: 150000
+	RevealsShroud:
+		Range: 6c0
+	WithBuildingBib:
+	Refinery:
+		DockAngle: 72
+		DockOffset: 2,2
+		TickRate: 4
+	StoresResources:
+		PipColor: Yellow
+		PipCount: 10
+		Capacity: 2000
+	Selectable:
+		Bounds: 72,56,0,-2
+	SelectionDecorations:
+		VisualBounds: 72,56,0,-2
+	CustomSellValue:
+		Value: 500
+	FreeActor@1:
+		Actor: eharvxl
+		SpawnOffset: 1,2
+		Facing: 64
+	ProvidesPrerequisite:
+		Prerequisite: proc
+	ProvidesPrerequisite@buildingname:
+	ThrowsShrapnel@LARGE:
+		Weapons: LargeWood1, LargeStone1, DebrUtility1, DebrUtility2, DebrUtility3
+		Pieces: 1, 2
+		Range: 1c0, 5c0
+
+SILONEW:
+	Inherits: ^MWBaseBuilding
+	Inherits@Hitshape: ^2x2Shape
+	Armor:
+		Type: HeavyBuilding
+	Valued:
+		Cost: 300
+	CustomSellValue:
+		Value: 150
+	Tooltip:
+		Name: Smelter
+	Building:
+		Footprint: _x xx
+		Dimensions: 2,2
+	-GivesBuildableArea:
+	Health:
+		HP: 40000
+	RevealsShroud:
+		Range: 4c0
+	WithBuildingBib:
+		HasMinibib: Yes
+	WithDeathAnimation:
+		DeathSequencePalette: raplayer
+	RenderSprites:
+		Image: silonew
+		PlayerPalette: raplayer
+	WithSpriteBody:
+	#AutoSelectionSize:
+	WithSiloAnimation:
+	StoresResources:
+		PipCount: 10
+		PipColor: Green
+		Capacity: 2000
+	-EmitInfantryOnSell:
+	MustBeDestroyed:
+		RequiredForShortGame: false
+	SelectionDecorations:
+		VisualBounds: 50,50,0,2 
+	Selectable:
+		Bounds: 50,50,0,2
+SILOTWO:
+	Inherits: ^MWBaseBuilding
+	Inherits@Hitshape: ^2x2Shape
+	Armor:
+		Type: HeavyBuilding
+	Valued:
+		Cost: 350
+	CustomSellValue:
+		Value: 175
+	Tooltip:
+		Name: Barn
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+	-GivesBuildableArea:
+	Health:
+		HP: 50000
+	RevealsShroud:
+		Range: 4c0
+	WithBuildingBib:
+		HasMinibib: Yes
+	WithDeathAnimation:
+		DeathSequencePalette: raplayer
+	RenderSprites:
+		Image: barn
+		PlayerPalette: raplayer
+	WithSpriteBody:
+	#AutoSelectionSize:
+	WithSiloAnimation:
+	StoresResources:
+		PipCount: 10
+		PipColor: Green
+		Capacity: 2250
+	-EmitInfantryOnSell:
+	MustBeDestroyed:
+		RequiredForShortGame: false
+	SelectionDecorations:
+		VisualBounds: 50,50,0,-4 
+	Selectable:
+		Bounds: 50,50,0,-4 
+ 
+HOSP: 
+	Inherits: ^TechBuilding
+	Inherits@Hitshape: ^2x2Shape
+	Selectable:
+		Priority: 0
+	Tooltip:
+		Name: Hospital
+	SpawnActorOnDeath:
+		Actor: HOSP.Husk
+		OwnerType: InternalName
+		InternalOwner: Neutral
+	RenderSprites:
+		Image: hospnew
+		PlayerPalette: raplayer
+	ProximityExternalCondition@HEAL:
+		Range: 10c0
+		ValidStances: Ally
+		Condition: hospitalheal
+	WithRangeCircle: 
+		ValidStances: Ally, Neutral
+		Range: 10c0
+	Health:
+		HP: 250000
+	Production:
+		Produces: MHosp.Medi
+	ProductionQueue:
+		Type: MHosp.Medi
+		Group: none
+		RequireOwner: false
+		LowPowerSlowdown: 3
+	ProduceActorPower:
+		Icon: ddicon
+		ChargeInterval: 6250
+		Actors: ddler
+		Type: MHosp.Medi
+		Description: Deathdealer
+		LongDesc: Send a Deathdealer to the battlefield, infecting all nearby enemy ground troops.
+		SelectTargetSpeechNotification: 
+		InsufficientPowerSpeechNotification: InsufficientPower
+		DisplayBeacon: False
+		DisplayRadarPing: False
+		ArrowSequence: arrow
+		ClockSequence: clock
+		CircleSequence: circles
+		OrderName: DeathdealerPowerInfoOrder
+		EndChargeSpeechNotification: 
+		IncomingSpeechNotification: 
+	Exit@1:
+		SpawnOffset: -213,-426,0
+		ExitCell: 1,2
+	Exit@2:
+		SpawnOffset: -213,-426,0
+		ExitCell: 0,2
+	Exit@3:
+		SpawnOffset: -213,-426,0
+		ExitCell: 2,1
+	Exit@4:
+		SpawnOffset: -213,-426,0
+		ExitCell: -1,1
+	Exit@5:
+		SpawnOffset: -213,-426,0
+		ExitCell: 1,-1
+		
+
+HOSP.Husk:
+	Inherits:^TechBuilding
+	Inherits@Hitshape: ^2x2Shape
+	Targetable:
+		RequiresForceFire: yes
+	-Selectable:
+	Interactable:
+	RenderSprites:
+		Image: hospnew.husk
+		PlayerPalette: raplayer
+	TransformOnCapture:
+		ForceHealthPercentage: 25
+		IntoActor: hosp
+	Capturable:
+		AllowAllies: True
+		CaptureThreshold: 101
+	CaptureNotification:
+		Notification: CivilianBuildingCaptured
+	Health:
+		HP: 125000
+	Tooltip:
+		Name: Hospital (Destroyed)
+		
+
+V19:
+	Inherits: ^TechBuilding
+	Inherits@Hitshape: ^1x1Shape
+	CashTrickler:
+	RenderSprites:
+		Image: V19new
+		PlayerPalette: raplayer
+	Tooltip:
+		Name: Gold Deposit
+	Health:
+		HP: 100000
+	SpawnActorOnDeath:
+		Actor: V19.Husk
+		OwnerType: InternalName
+		InternalOwner: Neutral
+	Targetable@Disguise:
+		TargetTypes: Disguise
+
+V19.Husk:
+	Inherits:^TechBuilding
+	Inherits@Hitshape: ^1x1Shape
+	Targetable:
+		RequiresForceFire: yes
+	-Selectable:
+	Interactable:
+	Capturable:
+		AllowAllies: True
+	CaptureNotification:
+		Notification: CivilianBuildingCaptured
+	TransformOnCapture:
+		IntoActor: v19
+		CaptureThreshold: 101
+		ForceHealthPercentage: 25
+	RenderSprites:
+		Image: V19new.husk
+		PlayerPalette: raplayer
+	Tooltip:
+		Name: Gold Deposit (worn out)
+	Health:
+		HP: 50000
+		
+MISS:
+	Inherits: ^TechBuilding	
+	Inherits@Hitshape: ^3x2Shape
+	Building:
+		Footprint: xxx xxx ===
+		Dimensions: 3,3
+		LocalCenterOffset: 0,-512,0
+	RenderSprites:
+		Image: missnew
+		PlayerPalette: raplayer
+	Capturable:
+	Tooltip:
+		Name: Observation Post
+	RevealsShroud:
+		Range: 29c0
+	Health:
+		HP: 250000
+	RepairableBuilding:
+	EngineerRepairable:
+	CaptureNotification:
+		Notification: CivilianBuildingCaptured
+	ThrowsShrapnel@LARGE:
+		Weapons: LargeWood1, LargeWood1, LargeStone1, LargeStone1
+		Pieces: 1, 2
+		Range: 1c0, 5c0
+		
+TECH1:
+	Inherits: ^TechBuilding	
+	AutoTarget:
+	Inherits@AUTOTARGET: ^AutoTargetGround
+	Inherits@Hitshape: ^3x2Shape
+	Building:
+		Footprint: xxx xxx ===
+		Dimensions: 3,3
+		LocalCenterOffset: 0,-512,0
+	RenderSprites:
+		Image: tech1
+		PlayerPalette: raplayer
+	Capturable:
+	Tooltip:
+		Name: Mortar Station
+	RevealsShroud:
+		Range: 12c0
+	Health:
+		HP: 300000
+	RepairableBuilding:
+	EngineerRepairable:
+	CaptureNotification:
+		Notification: CivilianBuildingCaptured
+	ThrowsShrapnel@LARGE:
+		Weapons: LargeWood1, LargeWood1, LargeStone1, LargeStone1
+		Pieces: 1, 2
+		Range: 1c0, 5c0
+	SpawnActorOnDeath:
+		Actor: TECH1.Husk
+		OwnerType: InternalName
+		InternalOwner: Neutral
+	Targetable@CombatRole:
+		TargetTypes: Defenses
+	AttackTurreted:
+	Armament:
+		Weapon: SiegeBoulderTech
+		LocalOffset: 618,0,310
+		Turret: primary
+		MuzzleSequence: muzzle
+	WithSpriteTurret: 
+		Sequence: turret
+		Turret: primary
+	Turreted:
+		Turret: primary
+		TurnSpeed: 5
+		Offset: 1425,567,0
+	WithMuzzleOverlay:
+	AutoTarget:
+	RenderRangeCircle:
+	WithBuildingBib:
+		
+TECH1.Husk:
+	Inherits:^TechBuilding
+	Inherits@Hitshape: ^3x2Shape
+	Building:
+		Footprint: xxx xxx ===
+		Dimensions: 3,3
+		LocalCenterOffset: 0,-512,0
+	Targetable:
+		RequiresForceFire: yes
+	-Selectable:
+	Interactable:
+	RenderSprites:
+		Image: tech1.husk
+		PlayerPalette: raplayer
+	TransformOnCapture:
+		ForceHealthPercentage: 25
+		IntoActor: tech1
+	Capturable:
+		AllowAllies: True
+		CaptureThreshold: 101
+	CaptureNotification:
+		Notification: CivilianBuildingCaptured
+	Health:
+		HP: 300000
+	Tooltip:
+		Name: Mortar Station (Destroyed)
+	WithBuildingBib:
+		
+ANYARMORY:
+	AlwaysVisible:
+	Interactable:
+	Tooltip:
+		Name: Armory or Tower of Progress
+		Description: Armory or Tower of Progress
+		
+ANYREFINERY:
+	AlwaysVisible:
+	Interactable:
+	Tooltip:
+		Name: Ore refinery
+		Description: Ore refinery 
+		
+BARRACKS:
+	AlwaysVisible:
+	Interactable:
+	Tooltip:
+		Name: Infantry Production
+		Description: Infantry Production
+		
+ANYWORKSHOP:
+	AlwaysVisible:
+	Interactable:
+	Tooltip:
+		Name: Workshop
+		Description: Siege Production
+
+VEHICLEPRODUCTION:
+	AlwaysVisible:
+	Interactable:
+	Tooltip:
+		Name: Stables or School
+		Description: Stables or School
+		
+ANYPOWER:
+	AlwaysVisible:
+	Interactable:
+	Tooltip:
+		Name: Living Quaters
+		Description: Living Quarters
+
+ANYHQ:
+	AlwaysVisible:
+	Interactable:
+	Tooltip:
+		Name: Inventor, Armory, Castle or Palace
+		Description: Inventor, Armory, Castle or Palace
+		
+ANYCASTLE:
+	AlwaysVisible:
+	Interactable:
+	Tooltip:
+		Name: Castle
+		Description: Castle
+		
+SCAFFOLD:
+	AlwaysVisible:
+	Interactable:
+	Tooltip:
+		Name: saffold
+		Description: scaffold
+	ProvidesPrerequisite@buildingname:
+
+DECOR1:
+ 	Inherits: ^CivBuilding
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+	Tooltip:
+		Name: Barrel
+	RenderSprites:
+		Image: decor1
+		Palette: ra
+	Health:
+		HP: 5000
+	Targetable@Disguise:
+		TargetTypes: Disguise
+	EditorTilesetFilter:
+		Categories: Props
+		
+DECOR2:
+ 	Inherits: ^CivBuilding
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+	Tooltip:
+		Name: Barrels   
+	RenderSprites:
+		Image: decor2
+		Palette: ra
+	Health:
+		HP: 5000
+	Targetable@Disguise:
+		TargetTypes: Disguise
+	EditorTilesetFilter:
+		Categories: Props
+		
+DECOR3:
+ 	Inherits: ^CivBuilding
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+	Tooltip:
+		Name: Anvil   
+	RenderSprites:
+		Image: decor3
+		Palette: ra
+	Health:
+		HP: 20000
+	Targetable@Disguise:
+		TargetTypes: Disguise
+	EditorTilesetFilter:
+		Categories: Props
+		
+DECOR4:
+ 	Inherits: ^CivBuilding
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+	Tooltip:
+		Name: Kart	
+	RenderSprites:
+		Image: decor4
+		Palette: ra
+	Health:
+		HP: 5000
+	Targetable@Disguise:
+		TargetTypes: Disguise
+	EditorTilesetFilter:
+		Categories: Props
+		
+DECOR5:
+ 	Inherits: ^CivBuilding
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+	Tooltip:
+		Name: Karts	
+	RenderSprites:
+		Image: decor5
+		Palette: ra
+	Health:
+		HP: 10000
+	Targetable@Disguise:
+		TargetTypes: Disguise
+	EditorTilesetFilter:
+		Categories: Props
+		
+DECOR6:
+ 	Inherits: ^CivBuilding
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+	Tooltip:
+		Name: Target	
+	RenderSprites:
+		Image: decor6
+		Palette: ra
+	Health:
+		HP: 5000
+	Targetable@Disguise:
+		TargetTypes: Disguise
+	EditorTilesetFilter:
+		Categories: Props
+		
+DECOR7:
+ 	Inherits: ^CivBuilding
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+	Tooltip:
+		Name: Target   
+	RenderSprites:
+		Image: decor7
+		Palette: ra
+	Health:
+		HP: 5000
+	Targetable@Disguise:
+		TargetTypes: Disguise
+	EditorTilesetFilter:
+		Categories: Props
+		
+DECOR8:
+ 	Inherits: ^CivBuilding
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+	Tooltip:
+		Name: Smelter	
+	RenderSprites:
+		Image: decor8
+		Palette: ra
+	Health:
+		HP: 13000
+	Targetable@Disguise:
+		TargetTypes: Disguise
+	EditorTilesetFilter:
+		Categories: Props
+		
+DECOR9:
+ 	Inherits: ^CivBuilding
+	Building:
+		Footprint: xx xx ==
+		Dimensions: 2,3
+		LocalCenterOffset: 0,-512,0
+	Tooltip:
+		Name: Stand   
+	RenderSprites:
+		Image: decor9
+		Palette: ra
+	Health:
+		HP: 10000
+	Targetable@Disguise:
+		TargetTypes: Disguise
+	EditorTilesetFilter:
+		Categories: Props
+		
+LODGE:
+	Inherits: ^MWBaseBuilding
+	Inherits@Hitshape: ^2x1Shape
+	Armor:
+		Type: Concrete
+	WithDeathAnimation:
+		DeathSequencePalette: raplayer
+	RenderSprites:
+		PlayerPalette: raplayer
+	Valued:
+		Cost: 700
+	CustomSellValue:
+		Value: 350
+	Tooltip:
+		Name: Forester Lodge
+	Building:
+		Footprint: xx ==
+		Dimensions: 2,2
+		LocalCenterOffset: 0,-512,0
+	Health:
+		HP: 50000
+	RevealsShroud:
+		Range: 7c0
+	WithBuildingBib:
+	Targetable@Lodge:
+		TargetTypes: HunterLodge
+	Selectable:
+		Bounds: 48,55,0,-14
+	SelectionDecorations:
+		VisualBounds: 48,55,0,-14
+	WithFreeSpawnableActor@Lumber:
+		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
+		SpawnActor: hunter
+		Offset: -256,768, 0
+		MoveOffset: 0,1
+		FindRadius: 100
+		Lasso: 15c0
+		ForceLasso: 20c0
+		ReturnOnDeath: true
+	WithFreeSpawnableActor@Hunter:
+		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
+		SpawnActor: mwlumbererowned
+		Offset: -256,768, 0
+		MoveOffset: 0,1
+		FindRadius: 100
+		Lasso: 17c0
+		ForceLasso: 22c0
+		ReturnOnDeath: true
+	Targetable@Lumber:
+		TargetTypes: LumberShack
+	WithRangeCircle:
+		Type: HunterLodge
+		UsePlayerColor: true
+		Range: 17c0
+	LodgeActor:
+	StoresResources:
+		PipColor: Yellow
+		PipCount: 5
+		Capacity: 1000
+	

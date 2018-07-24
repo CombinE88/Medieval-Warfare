@@ -1,4 +1,4 @@
-#region Copyright & License Information
+﻿#region Copyright & License Information
 /*
  * Copyright 2007-2018 The OpenRA Developers (see AUTHORS)
  * This file is part of OpenRA, which is free software. It is made
@@ -13,13 +13,15 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using OpenRA.Mods.Common;
 using OpenRA.Mods.Common.Activities;
+using OpenRA.Mods.Common.AI;
 using OpenRA.Mods.Common.Pathfinder;
 using OpenRA.Mods.Common.Traits;
 using OpenRA.Support;
 using OpenRA.Traits;
 
-namespace OpenRA.Mods.Common.AI
+namespace OpenRA.Mods.MW.MWAI
 {
 	class CaptureTarget<TInfoType> where TInfoType : class, ITraitInfoInterface
 	{
@@ -38,7 +40,7 @@ namespace OpenRA.Mods.Common.AI
 		}
 	}
 
-	public sealed class HackyAIInfo : IBotInfo, ITraitInfo
+	public sealed class HackyMWAIInfo : IBotInfo, ITraitInfo
 	{
 		public class UnitCategories
 		{
@@ -322,15 +324,15 @@ namespace OpenRA.Mods.Common.AI
 
 		string IBotInfo.Name { get { return Name; } }
 
-		public object Create(ActorInitializer init) { return new HackyAI(this, init); }
+		public object Create(ActorInitializer init) { return new HackyMWAI(this, init); }
 	}
 
 	public enum BuildingType { Building, Defense, Refinery, Farm, Important, Regular, Hunter, Undead, Sppool }
 
-	public sealed class HackyAI : ITick, IBot, INotifyDamage
+	public sealed class HackyMWAI : ITick, IBot, INotifyDamage
 	{
 		public MersenneTwister Random { get; private set; }
-		public readonly HackyAIInfo Info;
+		public readonly HackyMWAIInfo Info;
 
 		public CPos GetRandomBaseCenter()
 		{
@@ -397,7 +399,7 @@ namespace OpenRA.Mods.Common.AI
 
 		readonly Queue<Order> orders = new Queue<Order>();
 
-		public HackyAI(HackyAIInfo info, ActorInitializer init)
+		public HackyMWAI(HackyMWAIInfo info, ActorInitializer init)
 		{
 			Info = info;
 			World = init.World;
@@ -936,13 +938,13 @@ namespace OpenRA.Mods.Common.AI
 				return;
 
 			var capturesCapturers = capturers.Where(a => a.Info.HasTraitInfo<CapturesInfo>());
-			var externalCapturers = capturers.Except(capturesCapturers).Where(a => a.Info.HasTraitInfo<ExternalCapturesInfo>());
+			//var externalCapturers = capturers.Except(capturesCapturers).Where(a => a.Info.HasTraitInfo<ExternalCapturesInfo>());
 
 			foreach (var capturer in capturesCapturers)
 				QueueCaptureOrderFor(capturer, GetCapturerTargetClosestToOrDefault(capturer, capturableTargetOptions));
 
-			foreach (var capturer in externalCapturers)
-				QueueCaptureOrderFor(capturer, GetCapturerTargetClosestToOrDefault(capturer, externalCapturableTargetOptions));
+			//foreach (var capturer in externalCapturers)
+			//	QueueCaptureOrderFor(capturer, GetCapturerTargetClosestToOrDefault(capturer, externalCapturableTargetOptions));
 		}
 
 		void QueueCaptureOrderFor<TTargetType>(Actor capturer, CaptureTarget<TTargetType> target) where TTargetType : class, ITraitInfoInterface
@@ -1009,9 +1011,9 @@ namespace OpenRA.Mods.Common.AI
 						continue;
 				}
 
-				var para = harvester.TraitOrDefault<Parachutable>();
-				if (para != null && para.IsInAir)
-					continue;
+				//var para = harvester.TraitOrDefault<Parachutable>();
+				//if (para != null && para.IsInAir)
+				//	continue;
 
 				// Tell the idle harvester to quit slacking:
 				var newSafeResourcePatch = FindNextResource(harvester, harv);

@@ -1,0 +1,58 @@
+  
+^AutoTargetGround:
+	AutoTarget:
+	AutoTargetPriority@DEFAULT:
+		ValidTargets: Infantry, Vehicle, Creep, Water, , Cavalry, Siege
+		InvalidTargets: NoAutoTarget, Wall
+		Priority: 3
+	AutoTargetPriority@PEASANTS:
+		ValidTargets: Peasant
+		InvalidTargets: NoAutoTarget, Wall
+		Priority: 1
+        
+^AutoTargetDefenses:
+	AutoTargetPriority@Defenses:
+		ValidTargets: Defense
+		InvalidTargets: NoAutoTarget, Wall
+		Priority: 2
+	AutoTargetPriority@Buildings:
+		ValidTargets: Structure
+		InvalidTargets: NoAutoTarget, Wall
+		Priority: 1
+        
+^AutoTargetAir:
+	AutoTarget:
+	AutoTargetPriority@DEFAULT:
+		ValidTargets: Air
+		InvalidTargets: NoAutoTarget, Wall
+
+^AutoTargetAll:
+	AutoTarget:
+	AutoTargetPriority@DEFAULT:
+		ValidTargets: Infantry, Vehicle, Creep, Water, Defense, Cavalry, Siege, Air
+		InvalidTargets: NoAutoTarget, Wall
+		Priority: 3
+	AutoTargetPriority@PEASANTS:
+		ValidTargets: Peasant
+		InvalidTargets: NoAutoTarget, Wall
+		Priority: 1
+		
+^AutoTargetTalking:
+	AutoTarget:
+		AttackAnythingCondition: stance-attackanything
+	AutoTargetPriority@DEFAULT:
+		RequiresCondition: !stance-attackanything
+		ValidTargets: Talkbacks, Talkable
+	AutoTargetPriority@ATTACKANYTHING:
+		RequiresCondition: stance-attackanything
+		ValidTargets: Talkbacks, Talkable
+		
+^AutoTargetGrowntrees:
+	AutoTarget:
+		AttackAnythingCondition: stance-attackanything
+	AutoTargetPriority@DEFAULT:
+		RequiresCondition: !stance-attackanything
+		ValidTargets: ChoppableTree, Choptree, LumberShack
+	AutoTargetPriority@ATTACKANYTHING:
+		RequiresCondition: stance-attackanything
+		ValidTargets: ChoppableTree, Choptree, LumberShack

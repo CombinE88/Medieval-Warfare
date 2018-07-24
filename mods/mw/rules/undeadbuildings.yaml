@@ -1,0 +1,1198 @@
+ZIGG2UPGRADE:
+	AlwaysVisible:
+	Interactable:
+	ConditionManager:
+	RenderSprites:
+		Image: ziggurat2
+	Valued:
+		Cost: 1200
+	Tooltip:
+		Name: Upgrade Ziggurat to Level 2
+	ProvidesPrerequisite@buildingname:
+	Buildable:
+		IconPalette: raicon
+		BuildPaletteOrder: 60
+		Prerequisites: seal1, seal2
+		Description: Grants access to advanced summoning methods.\n  Grants possiblility to convert Iron and Gold into Essence\n\n
+		Queue: MResources.ded
+		BuildLimit: 1
+		BuildDuration: 1000
+		
+
+ZIGG3UPGRADE:
+	AlwaysVisible:
+	Interactable:
+	ConditionManager:
+	RenderSprites:
+		Image: ziggurat3
+	Valued:
+		Cost: 2000
+	Tooltip:
+		Name: Upgrade Ziggurat to Level 3
+	ProvidesPrerequisite@buildingname:
+	Buildable:
+		IconPalette: raicon
+		BuildPaletteOrder: 70
+		Prerequisites: seal3, seal4
+		Description: Grants access to most advanced summoning methods.\n  Accesses Superpowers \n\n
+		Queue: MResources.ded
+		BuildLimit: 1
+		BuildDuration: 1500
+		
+		
+SEAL1:
+	AlwaysVisible:
+	Interactable:
+	ConditionManager:
+	RenderSprites:
+		Image: seal1
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Break Seal 1
+	ProvidesPrerequisite@buildingname:
+	Buildable:
+		IconPalette: raicon
+		BuildPaletteOrder: 10
+		Description: Unlocks crypt and seal 2\n\n\n
+		Queue: MResources.ded
+		BuildLimit: 1
+		
+SEAL2:
+	AlwaysVisible:
+	Interactable:
+	ConditionManager:
+	RenderSprites:
+		Image: seal2
+	Valued:
+		Cost: 1000
+	Tooltip:
+		Name: Break Seal 2
+	ProvidesPrerequisite@buildingname:
+	Buildable:
+		IconPalette: raicon
+		BuildPaletteOrder: 20
+		Prerequisites: seal1
+		Description: Unlocks mausoleum and ziggurat level 2\n\n\n
+		Queue: MResources.ded
+		BuildLimit: 1
+		
+SEAL3:
+	AlwaysVisible:
+	Interactable:
+	ConditionManager:
+	RenderSprites:
+		Image: seal3
+	Valued:
+		Cost: 1500
+	Tooltip:
+		Name: Break Seal 3
+	ProvidesPrerequisite@buildingname:
+	Buildable:
+		IconPalette: raicon
+		BuildPaletteOrder: 30
+		Prerequisites: ziggurat2
+		Description: Unlocks Beserker, Vampire and seal 4\n\n\n
+		Queue: MResources.ded
+		BuildLimit: 1
+		
+SEAL4:
+	AlwaysVisible:
+	Interactable:
+	ConditionManager:
+	RenderSprites:
+		Image: seal4
+	Valued:
+		Cost: 2000
+	Tooltip:
+		Name: Break Seal 4
+	ProvidesPrerequisite@buildingname:
+	Buildable:
+		IconPalette: raicon
+		Prerequisites: ziggurat2, seal3, libra
+		BuildPaletteOrder: 40
+		Description: Unlocks tomb, Grim Reaper and ziggurat level 2\n\n\n
+		Queue: MResources.ded
+		BuildLimit: 1
+		
+SEAL5:
+	AlwaysVisible:
+	Interactable:
+	ConditionManager:
+	RenderSprites:
+		Image: seal5
+	Valued:
+		Cost: 2500
+	Tooltip:
+		Name: Break the Forgotten Seal
+	ProvidesPrerequisite@buildingname:
+	Buildable:
+		IconPalette: raicon
+		Prerequisites: ziggurat3
+		BuildPaletteOrder: 50
+		Description: Unlocks Lich\n\n\n
+		Queue: MResources.ded
+		BuildLimit: 1
+		BuildDuration: 2000
+#Buildings
+
+ZIGGURAT1:
+	Inherits: ^MWUndeadBuilding
+	Inherits@Hitshape: ^2x2Shape
+	GivesBuildableArea:
+		AreaTypes: undeadbuilding
+	RepairableBuilding:
+		RepairPercent: 40
+		RepairStep: 3000
+		PlayerExperience: 15
+	WithMakeAnimation:
+	ShakeOnCreate:
+		Time: 120
+	WithSpriteBody:	 
+	Selectable:
+		Bounds:48,48,0,-12
+	SelectionDecorations:
+		VisualBounds: 48,48,0,-12
+	Exit:
+		SpawnOffset: 0,0,0
+		ExitCell: 2,3
+	RallyPoint:
+	RenderSprites:
+		PlayerPalette: raplayer
+	Valued:
+		Cost: 5000
+	CustomSellValue:
+		Value: 2500
+	Tooltip:
+		Name: Ziggurat Lv1
+	Building:
+		Footprint: ==== =xx= =xx= ====
+		Dimensions: 4,4
+		LocalCenterOffset: 0,-512,0
+	Health:
+		HP: 400000
+	Armor:
+		Type: Concrete
+	RevealsShroud:
+		Range: 10c0
+	WithBuildingBib:
+	Production:
+		Produces: MBuilding.ded, MResources.ded, MMilitary.ded
+	ProductionQueue@DeadMBuilding:
+		Type: MBuilding.ded
+		Factions: ded
+		Group: Building
+		LowPowerSlowdown: 2
+		ReadyAudio:
+		QueuedAudio: Building
+	ProductionQueue@DeadMDefence:
+		Type: MResources.ded
+		Factions: ded
+		Group: Building2
+		LowPowerSlowdown: 2
+		QueuedAudio: Building
+		ReadyAudio:
+	ProductionQueue@DeadMMilitary:
+		Type: MMilitary.ded
+		Factions: ded
+		Group: Building3
+		LowPowerSlowdown: 2 
+		ReadyAudio:
+		QueuedAudio: Building
+	BaseBuilding:
+	ProductionBar@Buildingded:
+		ProductionType: MBuilding.ded
+	ProductionBar@Defded:
+		ProductionType: MResources.ded
+	ProductionBar@Buildingded3:
+		ProductionType: MMilitary.ded
+	ProvidesPrerequisite@buildingname:	
+	ProvidesPrerequisite@zig1:
+		Prerequisite: ziggurat1
+	WithDeathAnimation:
+		DeathSequencePalette: raplayer
+	ThrowsShrapnel@LARGE:
+		Weapons: LargeStone1, LargeStone1, DebrUtility1, DebrUtility2, DebrUtility3
+		Pieces: 1, 2
+		Range: 1c0, 5c0
+	Targetable:
+		TargetTypes: Ground, C4, Structure, Wanderer, BaseCenter
+	ProvidesRadar:
+	TransformOnCondition:
+		IntoActor: ziggurat2
+		SkipMakeAnims: false
+		RequiresCondition: hassealone && hassealtwo && zigup
+		ReadyAudio: 
+	GrantConditionOnPrerequisite@SEALONE:
+		Condition: hassealone
+		Prerequisites: seal1
+	GrantConditionOnPrerequisite@SEALTWO:
+		Condition: hassealtwo
+		Prerequisites: seal2
+	GrantConditionOnPrerequisite@ZIGGUPP:
+		Condition: zigup 
+		Prerequisites: zigg2upgrade
+	ActorEnsurance:
+		SpawnActor: preycolyte
+		Maxalive: 3
+		Offset: 0,0,0
+		MoveOffset: 2,3
+	StoresResources:
+		PipColor: Red
+		PipCount: 10
+		Capacity: 500
+	Buildable:
+		Queue: MResources.Nod, MResources.GDI, MResources.Sul, MResources.ded
+		BuildPaletteOrder: 1003
+		Prerequisites: ~disabled
+		ForceFaction: ded
+		IconPalette: raicon
+		Description: Constructs your graveyard
+		
+
+ZIGGURAT2:
+	Inherits: ZIGGURAT1
+	Inherits@Hitshape: ^3x3Shape
+	Health:
+		HP: 600000
+	Building:
+		Footprint: =xx= xxxx =xx= ====
+		Dimensions: 4,4
+		LocalCenterOffset: 0,-512,0
+	RenderSprites:
+		PlayerPalette: raplayer
+		Image: ziggurat2
+	Selectable:
+		Bounds: 72,78,0,-18
+	SelectionDecorations:
+		VisualBounds: 72,78,0,-18
+	TransformOnCondition:
+		IntoActor: ziggurat3
+		SkipMakeAnims: false
+		RequiresCondition: hassealthree && hassealfour && zigup3
+		ReadyAudio: 
+	GrantConditionOnPrerequisite@SEALONE:
+		Condition: hassealthree
+		Prerequisites: seal3
+	GrantConditionOnPrerequisite@SEALTWO:
+		Condition: hassealfour
+		Prerequisites: seal4
+	GrantConditionOnPrerequisite@ZIGGUPP:
+		Condition: zigup3 
+		Prerequisites: zigg3upgrade
+	Exit:
+		SpawnOffset: 128,856,0
+		ExitCell: 2,3
+	ProvidesPrerequisite@buildingname:	
+	ProvidesPrerequisite@zig1:
+		Prerequisite: ziggurat1
+	ProvidesPrerequisite@zig2:
+		Prerequisite: ziggurat2
+	Tooltip:
+		Name: Ziggurat Lv2
+	ActorEnsurance:
+		SpawnActor: preycolyte
+		Maxalive: 6
+		Offset: 128,856,0
+		MoveOffset: 2,3
+		
+ZIGGURAT3:
+	Inherits: ZIGGURAT1
+	-GrantConditionOnPrerequisite@SEALONE:
+	-GrantConditionOnPrerequisite@SEALTWO:
+	-GrantConditionOnPrerequisite@ZIGGUPP:
+	Inherits@Hitshape: ^4x4Shape
+	Health:
+		HP: 1000000
+	Building:
+		Footprint:  =xx= xxxx xxxx ====
+		Dimensions: 4,4
+		LocalCenterOffset: 0,-512,0
+	RenderSprites:
+		PlayerPalette: raplayer
+		Image: ziggurat3
+	Selectable:
+		Bounds:110,110,0,-20
+	SelectionDecorations:
+		VisualBounds: 110,110,0,-20
+	-TransformOnCondition:
+	Exit:
+		SpawnOffset: 510,1024,0
+		ExitCell: 2,3
+	ProvidesPrerequisite@buildingname:	
+	ProvidesPrerequisite@zig1:
+		Prerequisite: ziggurat1
+	ProvidesPrerequisite@zig2:
+		Prerequisite: ziggurat2
+	ProvidesPrerequisite@zig3:
+		Prerequisite: ziggurat3
+	Tooltip:
+		Name: Ziggurat Final
+	ActorEnsurance:
+		SpawnActor: preycolyte
+		Maxalive: 10
+		Offset: 510,1024,0
+		MoveOffset: 2,3
+	NukePower:
+		Icon: graveicon
+		Cursor: nuke
+		ChargeInterval: 9000
+		Description: Spawn a graveyard
+		LongDesc: none
+		EndChargeSpeechNotification: NodcannonReady
+		SelectTargetSpeechNotification: SelectTarget
+		InsufficientPowerSpeechNotification: InsufficientPower
+		LaunchSpeechNotification: 
+		IncomingSpeechNotification: 
+		BeginChargeSpeechNotification: 
+		MissileWeapon: RealDeath
+		DisplayBeacon: True
+		BeaconPoster: gravebeacon
+		BeaconPosterPalette: beaconposter
+		DisplayRadarPing: True
+		CameraRange: 10c0
+		ArrowSequence: arrow
+		ClockSequence: clock
+		CircleSequence: circles
+		OrderName: GraveyardPowerInfoOrder
+		CameraSpawnAdvance: 5
+		CameraRemoveDelay: 25
+		BeaconRemoveAdvance: 0
+		FlightDelay: 10
+	SupportPowerChargeBar:
+	
+
+OBELISK.penta:
+	Inherits: ^Smallpenta
+	RenderSprites:
+		Image: obelisk
+		Palette: undead
+		PlayerPalette: undeadalpha
+	Valued:
+		Cost: 0 #1300
+	Tooltip:
+		Name: Summoning (Obelisk)
+	Buildable:
+		IconPalette: raicon
+		BuildPaletteOrder: 70
+		Description: Summons a defensive statue attacking with lightning.\n  Strong vs all\n  Weak vs Siege weapons\n  can target Aircraft\n  Transforms battlefield loot to essence, requires Essence pool
+		Prerequisites: seal3
+		Queue: MMilitary.ded
+		BuildDuration: 10
+	Health:
+		HP: 35000
+	RevealsShroud:
+		Range: 4c0
+	UndeadBuilder:
+		SpawnActor: obelisk
+		SpawnOffset: 1,1
+		SummoningTime: 75
+		Cost: 1000
+		
+GARG.penta:
+	Inherits: ^Smallpenta
+	RenderSprites:
+		Image: garg
+		Palette: undead
+		PlayerPalette: undeadalpha
+	Valued:
+		Cost: 0 #500
+	Tooltip:
+		Name: Summoning (GARGOYLE)
+	Buildable:
+		IconPalette: raicon
+		BuildPaletteOrder: 60
+		Description: Summons a defensive statue attacking with fire.\n  Strong vs Infantry, Light Cavalry\n  Weak vs Siege weapons and Heavy Cavalry \n\n 
+		Prerequisites: seal1
+		Queue: MMilitary.ded
+		BuildDuration: 10
+	Health:
+		HP: 25000
+	RevealsShroud:
+		Range: 4c0
+	UndeadBuilder:
+		SpawnActor: garg
+		SpawnOffset: 1,1
+		SummoningTime: 55
+		Cost: 500
+		
+	   
+		
+SPPOOL.penta:
+	Inherits: ^Mediumpenta
+	RenderSprites:
+		Image: sppool
+		Palette: undead
+		PlayerPalette: undeadalpha
+	Valued:
+		Cost: 0 #700
+	Tooltip:
+		Name: Summoning (Essence pool)
+	Health:
+		HP: 50000
+	RevealsShroud:
+		Range: 4c0
+	UndeadBuilder:
+		SpawnActor: sppool
+		SpawnOffset: 1,1
+		SummoningTime: 45 #100
+		Cost: 300
+	Buildable:
+		IconPalette: raicon
+		BuildPaletteOrder: 30
+		Description: Summons an Essence pool.\n Makes sorrounding scarecrows spawn corruption instead.\n Stores some Essence\n  Grants the obelisk the ability to collect essence by converting battlefield loot.
+		Queue: MBuilding.ded
+		BuildDuration: 10
+	WithRangeCircle:
+		Type: sspool
+		Range: 7c0
+		Color: FFFFFF80
+		UsePlayerColor: True
+	RequiresBuildableArea:
+		AreaTypes: undeadbuilding
+		Adjacent: 8
+		
+CRYPT.penta:
+	Inherits: ^Mediumpenta
+	RenderSprites:
+		Image: crypt
+		Palette: undead
+		PlayerPalette: undeadalpha
+	Valued:
+		Cost: 0 # 1500
+	Tooltip:
+		Name: Summoning (Crypt)
+	Buildable:
+		IconPalette: raicon
+		BuildPaletteOrder: 10
+		Prerequisites: seal1
+		Description: Summons a Crypt.\n  Crypt summons basic skeletons\n  Increases the number of possible skeletons over time\n  Summons up to 3 gravestones each giving grave space\n 
+		Queue: MMilitary.ded
+		BuildDuration: 10
+	Health:
+		HP: 50000
+	RevealsShroud:
+		Range: 4c0
+	Selectable:
+		Bounds: 60,60,0,0
+	SelectionDecorations:
+		VisualBounds: 60,60,0,0
+	UndeadBuilder:
+		SpawnActor: crypt
+		SpawnOffset: 1,1
+		SummoningTime: 75 #150
+		Cost: 850
+		
+MAUSO.penta:
+	Inherits: ^Mediumpenta
+	RenderSprites:
+		Image: mauso
+		Palette: undead
+		PlayerPalette: undeadalpha
+	Valued:
+		Cost: 0 # 2000
+	Tooltip:
+		Name: Summoning (Tomb)
+	Buildable:
+		IconPalette: raicon
+		BuildPaletteOrder: 30
+		Description: Summons a Tomb.\n  Tomb summons advanced skeletons\n  Increases the number of possible skeletons over time\n  Summons up to 2 coffins each giving grave space\n 
+		Prerequisites: seal4
+		Queue: MMilitary.ded
+		BuildDuration: 10
+	Health:
+		HP: 50000
+	RevealsShroud:
+		Range: 4c0
+	UndeadBuilder:
+		SpawnActor: mauso
+		SpawnOffset: 1,1
+		SummoningTime: 135 #200
+		Cost: 1500
+		
+LIBRA.penta:
+	Inherits: ^Mediumpenta
+	RenderSprites:
+		Image: libra
+		Palette: undead
+		PlayerPalette: undeadalpha
+	Valued:
+		Cost: 0 #1500
+	Tooltip:
+		Name: Summoning (Library)
+	Buildable:
+		IconPalette: raicon
+		BuildPaletteOrder: 40
+		Description: Summons a Library.\n  Library grants access to Supportpowers\n 
+		Prerequisites: ziggurat2
+		Queue: MMilitary.ded
+		BuildDuration: 10
+	Health:
+		HP: 50000
+	RevealsShroud:
+		Range: 4c0
+	UndeadBuilder:
+		SpawnActor: LIBRA
+		SpawnOffset: 1,1
+		SummoningTime: 75 # 250
+		Cost: 1000
+		
+TOMB.penta:
+	Inherits: ^Largepenta
+	RenderSprites:
+		Image: tomb
+		Palette: undead
+		PlayerPalette: undeadalpha
+	Valued:
+		Cost: 0 #2000
+	Tooltip:
+		Name: Summoning (Mausoleum)
+	Buildable:
+		IconPalette: raicon
+		BuildPaletteOrder: 20
+		Description: Summons a Mausoleum.\n  Mausoleum trains advanced no skeletal units\n\n 
+		Prerequisites: seal2
+		Queue: MMilitary.ded
+		BuildDuration: 10
+	Health:
+		HP: 100000
+	RevealsShroud:
+		Range: 4c0
+	UndeadBuilder:
+		SpawnActor: TOMB
+		SpawnOffset: 1,1
+		SummoningTime: 135 # 300
+		Cost: 1700
+		
+HELLGATE.penta:
+	Inherits: ^Largepenta
+	RenderSprites:
+		Image: hellgate
+		Palette: undead
+		PlayerPalette: undeadalpha
+	Valued:
+		Cost: 0 #2000
+	Tooltip:
+		Name: Summoning (Hellgate)
+	Health:
+		HP: 100000
+	RevealsShroud:
+		Range: 4c0
+	UndeadBuilder:
+		SpawnActor: hellgate
+		SpawnOffset: 1,1
+		SummoningTime: 155 # 300
+		Cost: 2000
+        
+GRAFENCE:
+	Inherits: ^Wall
+	RequiresBuildableArea:
+		AreaTypes: undeadbuilding
+		Adjacent: 8
+	Inherits@Hitshape: ^1x1Shape
+	Valued:
+		Cost: 200
+	CustomSellValue:
+		Value: 0
+	Tooltip:
+		Name: Graveyard-Fence
+	Buildable:
+		Description: Once to hold of the dead, now to hold of the living!\n\n\n
+		BuildPaletteOrder: 50
+		BuildDuration: 350
+		Prerequisites: seal2
+		Queue: MMilitary.ded
+		BuildDurationModifier: 40
+		IconPalette: raicon
+	Health:
+		HP: 45000
+	Armor:
+		Type: Concrete
+	Building:
+	RenderSprites:
+		PlayerPalette: raplayer
+		-Palette:
+	SoundOnDamageTransition:
+		DestroyedSounds: crumble.aud
+	LineBuild:
+		NodeTypes: gravefence
+	LineBuildNode:
+		Types: gravefence
+	WithWallSpriteBody:
+		Type: gravefence
+	Crushable:
+		CrushClasses: heavywall
+		
+# Buildings Summoned
+
+		
+SPPOOL:
+	Inherits: ^MWUndeadBuilding
+	Inherits@Hitshape: ^2x2Shape
+	EditorTilesetFilter:
+		Categories: Undead
+	Armor:
+		Type: Concrete
+	WithDeathAnimation:
+		DeathSequencePalette: raplayer
+	RenderSprites:
+		PlayerPalette: raplayer
+	WithSpriteBody:
+	Valued:
+		Cost: 300
+	Tooltip:
+		Name: Essence pool
+	Building:
+		Footprint: xx xx ==
+		Dimensions: 2,3
+		LocalCenterOffset: 0,-512,0
+	Health:
+		HP: 30000
+	RevealsShroud:
+		Range: 4c0
+	Selectable:
+		Bounds: 48,48,0,0
+	SelectionDecorations:
+		VisualBounds: 48,48,0,0
+	WithBuildingBib:
+	WithMakeAnimation:
+	ShakeOnCreate:
+		Time: 85
+	StoresResources:
+		PipColor: Red
+		PipCount: 10
+		Capacity: 1500
+	ProvidesPrerequisite@buildingname:
+	ProximityExternalCondition@CORRUPTION:
+		Range: 7c0
+		ValidStances: Ally, Neutral, Enemy
+		Condition: SpawnCorruption
+	WithRangeCircle:
+		Type: sspool
+		Range: 7c0
+		Color: FFFFFF80
+		UsePlayerColor: True
+	-GivesBuildableArea:
+		
+  
+CRYPT:
+	Inherits: ^MWUndeadBuilding
+	Inherits@Hitshape: ^2x2Shape
+	EditorTilesetFilter:
+		Categories: Undead
+	Armor:
+		Type: Concrete
+	WithDeathAnimation:
+		DeathSequencePalette: raplayer
+	RenderSprites:
+		PlayerPalette: raplayer
+	WithSpriteBody:
+	Valued:
+		Cost: 850
+	Tooltip:
+		Name: Crypt
+	Building:
+		Footprint: xx xx ==
+		Dimensions: 2,3
+		LocalCenterOffset: 0,-512,0
+	Health:
+		HP: 50000
+	RevealsShroud:
+		Range: 6c0
+	Selectable:
+		Bounds: 48,48,0,0
+	SelectionDecorations:
+		VisualBounds: 48,48,0,0
+	WithBuildingBib:
+	WithMakeAnimation:
+	ShakeOnCreate:
+		Time: 50
+	WithIdleOverlay@one:
+		Sequence: burnloop1
+		Palette: terrain
+	WithIdleOverlay@two:
+		Sequence: burnloop2
+		Palette: terrain
+	Exit:
+		SpawnOffset: -298,638,0
+		ExitCell: 0,2
+	RallyPoint:
+	UndeadGraveProduction:
+		Produces: MInfantry.ded
+	ProductionQueue:
+		Type: MInfantry.ded
+		Group: Infantry
+		RequireOwner: false
+		LowPowerSlowdown: 3
+		Factions: ded
+		ReadyAudio:
+	ProductionBar:
+	ProvidesPrerequisite@buildingname:
+	CritterSpawner:
+		Actors: gstone1, gstone2, gstone3
+		AliveMax: 2
+		TicksMin: 250
+		TicksMax: 500
+		RadiusMin: 2
+		RadiusMax: 3
+		
+MAUSO:
+	Inherits: ^MWUndeadBuilding
+	Inherits@Hitshape: ^2x2Shape
+	EditorTilesetFilter:
+		Categories: Undead
+	Armor:
+		Type: Concrete
+	WithDeathAnimation:
+		DeathSequencePalette: raplayer
+	RenderSprites:
+		PlayerPalette: raplayer
+	WithSpriteBody:
+	Valued:
+		Cost: 1500
+	Tooltip:
+		Name: Tomb
+	Building:
+		Footprint: xx xx ==
+		Dimensions: 2,3
+		LocalCenterOffset: 0,-512,0
+	Health:
+		HP: 80000
+	RevealsShroud:
+		Range: 4c0
+	Selectable:
+		Bounds: 50,50,0,-2
+	SelectionDecorations:
+		VisualBounds: 50,50,0,-2
+	WithBuildingBib:
+	WithMakeAnimation:
+	ShakeOnCreate:
+		Time: 85
+	Exit:
+		SpawnOffset: 0,1105,0
+		ExitCell: 0,2
+	Exit@2:
+		SpawnOffset: 0,1105,0
+		ExitCell: 1,2
+	RallyPoint:
+	CritterSpawner:
+		Actors: coffin
+		AliveMax: 2
+		TicksMin: 250
+		TicksMax: 500
+		RadiusMin: 2
+		RadiusMax: 3
+	UndeadGraveProduction:
+		Produces: MSiege.ded
+	ProductionQueue:
+		Type: MSiege.ded
+		Group: Aircraft
+		RequireOwner: false
+		LowPowerSlowdown: 3
+		Factions: ded
+		ReadyAudio:
+	ProductionBar:
+	ProvidesPrerequisite@buildingname:
+	AirstrikePower:
+		Icon: coffinicon
+		ChargeInterval: 5250
+		SquadOffset	-236,236,0
+		SquadSize: 1
+		QuantizedFacings: 8
+		Description: Ambush from below
+		LongDesc: Discription.
+		EndChargeSpeechNotification: NewAirstrike
+		SelectTargetSpeechNotification: SelectTarget
+		InsufficientPowerSpeechNotification: InsufficientPower
+		IncomingSpeechNotification: NewAirstrikeAnnounce
+		UnitType: placeholdercoffin
+		DisplayBeacon: True
+		BeaconPoster: coffinbeacon
+		BeaconPosterPalette: beaconposter
+		DisplayRadarPing: True
+		CameraActor: camera
+		ArrowSequence: arrow
+		ClockSequence: clock
+		CircleSequence: circles
+		OrderName: BelowCoffinPowerInfoOrder
+	SupportPowerChargeBar:
+
+		
+LIBRA:
+	Inherits: ^MWUndeadBuilding
+	Inherits@Hitshape: ^2x2Shape
+	EditorTilesetFilter:
+		Categories: Undead
+	Armor:
+		Type: Concrete
+	WithDeathAnimation:
+		DeathSequencePalette: raplayer
+	RenderSprites:
+		PlayerPalette: raplayer
+	WithSpriteBody:
+	Valued:
+		Cost: 1000
+	Tooltip:
+		Name: Library
+	Building:
+		Footprint: xx xx ==
+		Dimensions: 2,3
+		LocalCenterOffset: 0,-512,0
+	Health:
+		HP: 120000
+	RevealsShroud:
+		Range: 4c0
+	Selectable:
+		Bounds: 50,50,0,-2
+	SelectionDecorations:
+		VisualBounds: 50,50,0,-2
+	WithBuildingBib:
+	WithMakeAnimation:
+	ShakeOnCreate:
+		Time: 85
+	ProvidesPrerequisite@buildingname:
+	AirstrikePower:
+		Icon: handaicon
+		ChargeInterval: 5250
+		SquadOffset	-236,236,0
+		SquadSize: 3
+		QuantizedFacings: 8
+		Description: Attack from below
+		LongDesc: Discription.
+		EndChargeSpeechNotification: NewAirstrike
+		SelectTargetSpeechNotification: SelectTarget
+		InsufficientPowerSpeechNotification: InsufficientPower
+		IncomingSpeechNotification: NewAirstrikeAnnounce
+		UnitType: placeholderhandattack
+		DisplayBeacon: True
+		BeaconPoster: handaiconsmall
+		BeaconPosterPalette: beaconposter
+		DisplayRadarPing: True
+		CameraActor: camera
+		ArrowSequence: arrow
+		ClockSequence: clock
+		CircleSequence: circles
+		OrderName: HandsBelowPowerInfoOrder
+	SupportPowerChargeBar:
+		
+TOMB:
+	Inherits: ^MWUndeadBuilding
+	Inherits@Hitshape: ^3x2Shape
+	EditorTilesetFilter:
+		Categories: Undead
+	Armor:
+		Type: Concrete
+	WithDeathAnimation:
+		DeathSequencePalette: raplayer
+	RenderSprites:
+		PlayerPalette: raplayer
+	WithSpriteBody:
+	Valued:
+		Cost: 1700
+	Tooltip:
+		Name: Mausoleum
+	Building:
+		Footprint: xxx xxx ===
+		Dimensions: 3,3
+		LocalCenterOffset: 0,-512,0
+	Health:
+		HP: 150000
+	RevealsShroud:
+		Range: 4c0
+	Selectable:
+		Bounds: 72,50,0,-5
+	SelectionDecorations:
+		VisualBounds: 72,50,0,-5
+	WithBuildingBib:
+	WithMakeAnimation:
+	ShakeOnCreate:
+		Time: 85
+	Exit:
+		SpawnOffset: -595,338,0
+		ExitCell: 0,2
+	RallyPoint:
+	ProvidesPrerequisite@buildingname:
+	Production:
+		Produces: MVehicle.ded
+	ProductionQueue:
+		Type: MVehicle.ded
+		Group: Vehicle
+		RequireOwner: false
+		LowPowerSlowdown: 3
+		Factions: ded
+		ReadyAudio:
+	ProductionBar:
+	ProvidesPrerequisite@buildingname:
+		
+HELLGATE:
+	Inherits: ^MWUndeadBuilding
+	Inherits@Hitshape: ^2x2Shape
+	EditorTilesetFilter:
+		Categories: Undead
+	Armor:
+		Type: Concrete
+	WithDeathAnimation:
+		DeathSequencePalette: raplayer
+	RenderSprites:
+		PlayerPalette: raplayer
+	WithSpriteBody
+	Valued:
+		Cost: 2000
+	Tooltip:
+		Name: Hellgate
+	Building:
+		Footprint: xxx xxx ===
+		Dimensions: 3,3
+		LocalCenterOffset: 0,-512,0
+	Health:
+		HP: 120000
+	RevealsShroud:
+		Range: 4c0
+	Selectable:
+		Bounds: 72,52,0,-4
+	SelectionDecorations:
+		VisualBounds: 72,52,0,-4
+	WithBuildingBib:
+	WithMakeAnimation:
+	ShakeOnCreate:
+		Time: 150
+	ProvidesPrerequisite@buildingname:
+		
+GSTONE1:
+	Inherits: ^Gravestone
+	WithSpriteBody:
+		Sequence: empty
+	GrantRandomCondition:
+		RandomConditions: valida, validb, validc
+		FallbackCondition: valida
+	WithIdleOverlay@a:  
+		StartSequence: makea
+		Sequence: idlea
+		RequiresCondition: valida
+	WithIdleOverlay@b:  
+		StartSequence: makeb
+		Sequence: idleb
+		RequiresCondition: validb
+	WithIdleOverlay@c:  
+		StartSequence: makec
+		Sequence: idlec
+		RequiresCondition: validc
+	ProvidesLivingspace:
+		Ammount: 3
+	EditorTilesetFilter:
+		ExcludeTilesets: TEMPERATE, SNOW, DESERT, WINTER
+		Categories: 
+# anti error fix
+	ExternalCondition@valida:
+		Condition: valida
+# anti error fix
+	ExternalCondition@validb:
+		Condition: validb
+# anti error fix
+	ExternalCondition@validc:
+		Condition: validc
+		
+GSTONE2:
+	Inherits: ^Gravestone
+	WithSpriteBody:
+		Sequence: empty
+	GrantRandomCondition:
+		RandomConditions: valida, validb, validc
+		FallbackCondition: valida
+	WithIdleOverlay@a:  
+		StartSequence: makea
+		Sequence: idlea
+		RequiresCondition: valida
+	WithIdleOverlay@b:  
+		StartSequence: makeb
+		Sequence: idleb
+		RequiresCondition: validb
+	WithIdleOverlay@c:  
+		StartSequence: makec
+		Sequence: idlec
+		RequiresCondition: validc
+	ProvidesLivingspace:
+		Ammount: 3
+	EditorTilesetFilter:
+		ExcludeTilesets: TEMPERATE, SNOW, DESERT, WINTER
+		Categories: 
+# anti error fix
+	ExternalCondition@valida:
+		Condition: valida
+# anti error fix
+	ExternalCondition@validb:
+		Condition: validb
+# anti error fix
+	ExternalCondition@validc:
+		Condition: validc
+		
+GSTONE3:
+	Inherits: ^Gravestone
+	WithSpriteBody:
+		Sequence: empty
+	GrantRandomCondition:
+		RandomConditions: valida, validb, validc
+		FallbackCondition: valida
+	WithIdleOverlay@a:  
+		StartSequence: makea
+		Sequence: idlea
+		RequiresCondition: valida
+	WithIdleOverlay@b:  
+		StartSequence: makeb
+		Sequence: idleb
+		RequiresCondition: validb
+	WithIdleOverlay@c:  
+		StartSequence: makec
+		Sequence: idlec
+		RequiresCondition: validc
+	ProvidesLivingspace:
+		Ammount: 3
+	EditorTilesetFilter:
+		ExcludeTilesets: TEMPERATE, SNOW, DESERT, WINTER
+		Categories: 
+# anti error fix
+	ExternalCondition@valida:
+		Condition: valida
+# anti error fix
+	ExternalCondition@validb:
+		Condition: validb
+# anti error fix
+	ExternalCondition@validc:
+		Condition: validc
+		
+COFFIN:
+	Inherits: ^Gravestone
+	WithSpriteBody:
+		Sequence: empty
+	GrantRandomCondition:
+		RandomConditions: valida, validb, validc
+		FallbackCondition: valida
+	WithIdleOverlay@a:  
+		StartSequence: makea
+		Sequence: idlea
+		RequiresCondition: valida
+	WithIdleOverlay@b:  
+		StartSequence: makeb
+		Sequence: idleb
+		RequiresCondition: validb
+	WithIdleOverlay@c:  
+		StartSequence: makec
+		Sequence: idlec
+		RequiresCondition: validc
+	ProvidesLivingspace:
+		Ammount: 5
+	EditorTilesetFilter:
+		ExcludeTilesets: TEMPERATE, SNOW, DESERT, WINTER
+		Categories: 
+# anti error fix
+	ExternalCondition@valida:
+		Condition: valida
+# anti error fix
+	ExternalCondition@validb:
+		Condition: validb
+# anti error fix
+	ExternalCondition@validc:
+		Condition: validc
+		
+#defense
+	
+OBELISK:
+	Inherits: ^MWDefense
+	Inherits@Hitshape: ^1x1Shape
+	Inherits@AUTOTARGET: ^AutoTargetAll
+	Armor:
+		Type: Concrete
+	WithDeathAnimation:
+		DeathSequencePalette: raplayer
+	RenderSprites:
+		PlayerPalette: raplayer
+	WithMakeAnimation:
+	Valued:
+		Cost: 1000
+	Tooltip:
+		Name: Obelisk
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+	AutoTarget:
+	Health:
+		HP: 60000
+	RevealsShroud:
+		Range: 10c0
+	Selectable:
+		Bounds: 28,48,0,-8
+	SelectionDecorations:
+		VisualBounds: 28,48,0,-8
+	AttackOmni:
+	BodyOrientation:
+		QuantizedFacings: 8
+	DetectCloaked:
+		Range: 3c0
+	Armament@VisualA: 
+		Weapon: ObeliskLight
+		LocalOffset: 0,0,1312
+	ThrowsShrapnel@SMALL:
+		Weapons: SmallStone1, SmallStone2, LargeStone1
+		Pieces: 2, 3
+		Range: 0c512, 3c0
+	GarbageCollector:
+    	ResourcesNames: Loot
+    	CollectRange: 9
+    	RequiresCondition: Sppollbuild
+    	Weapon: SummonEffect
+	GrantConditionOnPrerequisite:
+		Condition: Sppollbuild
+		Prerequisites: sppool
+	EmitInfantryOnSell:
+		ActorTypes: preycolyte,undead1
+GARG:
+	Inherits: ^MWDefense
+	Inherits@AUTOTARGET: ^AutoTargetGround
+	Inherits@Hitshape: ^1x1Shape
+	WithMakeAnimation:
+	EditorTilesetFilter:
+		Categories: Defense
+	Valued:
+		Cost: 500
+	CustomSellValue:
+		Value: 250
+	Tooltip:
+		Name: Gargoyle
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+	Health:
+		HP: 35000
+	RevealsShroud:
+		Range: 8c0
+	WithBuildingBib:
+		HasMinibib: Yes
+	Armament@1:
+		Weapon: GargAttack
+		LocalOffset: 512,0,1148
+	DetectCloaked:
+		Range: 3c0
+	Armor:
+		Type: Concrete
+	Selectable:
+		Bounds: 30,40,0,-12
+	SelectionDecorations:
+		VisualBounds: 30,40,0,-12 
+	WithIdleOverlay:
+		Sequence: overlay
+	RenderSprites:
+		Image: garg
+		PlayerPalette: raplayer
+	BodyOrientation:
+		QuantizedFacings: 32
+	WithEmbeddedTurretSpriteBody:
+	-WithSpriteBody:
+	AttackTurreted:
+	Turreted:
+		TurnSpeed: 4
+	WithDeathAnimation:
+		DeathSequencePalette: raplayer 
+	Targetable@CombatRole:
+		TargetTypes: Defenses
+	EmitInfantryOnSell:
+		ActorTypes: undead1,undead1

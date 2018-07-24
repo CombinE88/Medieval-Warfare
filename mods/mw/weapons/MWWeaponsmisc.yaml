@@ -1,0 +1,1572 @@
+		
+SmokeySpawner:   
+	ReloadDelay: 85
+	MinRange: 0
+	Range: 0c712
+	Projectile: Bullet
+		Speed: 100
+		ValidTargets: none
+	Warhead@1Eff: CreateEffect
+		Explosions: smokey
+		ImpactSounds: tnkfire2.aud, tnkfire3.aud, tnkfire4.aud, tnkfire6.aud
+	Warhead@2Dam: SpreadDamage
+		Spread: 256
+		Damage: 1800
+		Versus:
+			Leather: 100
+			Light: 90
+			Heavy: 85
+			Concrete: 100
+			Knight: 50
+			LightCavalry: 100
+			MediumCavalry: 100
+			HeavyCavalry: 100
+			HeavyBuilding: 100
+			Spectral: 75
+		DamageTypes: Prone50Percent, TriggerProne, RippedApartDeath		
+			
+
+none:
+	Report: ramgun2.aud
+	ValidTargets: none
+	ReloadDelay: 10000
+	Range: 0
+	Projectile: Bullet
+		Speed: 1c682
+	Warhead@1Dam: SpreadDamage
+		Spread: 0
+		Damage: 0
+		ValidTargets: none
+		Versus:
+			Leather: 0
+			Light: 0
+			Heavy: 0
+			Concrete: 0
+			Knight: 0
+			LightCavalry: 0
+			MediumCavalry: 0
+			HeavyCavalry: 0
+			Spectral: 15
+		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+		
+WanderAttack:
+	ValidTargets: Wanderer
+	ReloadDelay: 1
+	Range: 2c0
+	Projectile: Bullet
+		Speed: 1c682
+	Warhead@1Dam: SpreadDamage
+		Spread: 0
+		Damage: 1
+		ValidTargets: Wanderer
+		Versus:
+			Leather: 100
+			Light: 100
+			Heavy: 100
+			Concrete: 100
+			Knight: 100
+			LightCavalry: 100
+			MediumCavalry: 100
+			HeavyCavalry: 100
+			Spectral: 25
+		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+		
+WanderTalk:
+	ValidTargets: Talkable
+	ReloadDelay: 65
+	Range: 1c0
+	Projectile: InstantHit
+	Warhead@Talking: GrantSingletonCondition
+		Range: 0c512
+		Duration: 70
+		Condition: Talkback
+		ValidStances: Ally
+		
+WanderTalkback:
+	ValidTargets: Talkbacks
+	ReloadDelay: 65
+	Range: 1c0
+	Projectile: InstantHit
+	Warhead@Talking: GrantSingletonCondition
+		Range: 0c512
+		Duration: 1
+		Condition: none
+		ValidStances: Ally
+
+		
+WanderAttackWorkshop:
+	ValidTargets: Laborer
+	ReloadDelay: 1
+	Range: 2c0
+	Projectile: Bullet
+		Speed: 1c682
+	Warhead@1Dam: SpreadDamage
+		Spread: 0
+		Damage: 1
+		ValidTargets: Laborer
+		Versus:
+			Leather: 100
+			Light: 100
+			Heavy: 100
+			Concrete: 100
+			Knight: 100
+			LightCavalry: 100
+			MediumCavalry: 100
+			HeavyCavalry: 100
+		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+
+		
+WanderCommander:
+	ReloadDelay: 45
+	Range: 1c800
+	ValidTargets: Ground
+	InvalidTargets: Air
+	Report: Sword02.aud, Sword03.aud, Sword04.aud, Sword06.aud, Sword07.aud
+	Projectile: Bullet
+		Speed: 1c382
+	Warhead@1Dam: SpreadDamage
+		ValidTargets: Ground
+		InvalidTargets: Air
+		Spread: 80
+		Damage: 2800
+		Versus:
+			Leather: 100
+			Light: 90
+			Heavy: 80
+			Knight: 65
+			HeavyBuilding: 80
+			Concrete: 60
+			LightCavalry: 90
+			MediumCavalry: 65
+			HeavyCavalry: 55
+		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+
+Repair:
+	ReloadDelay: 20
+	Range: 1c800
+	Report: repair01.aud
+	ValidTargets: Siege
+	InvalidTargets: Air
+	Projectile: Bullet
+		Speed: 1c682
+	Warhead@1Dam: SpreadDamage
+		Spread: 213
+		Damage: -360
+		ValidTargets: Siege
+		InvalidTargets: Air
+
+SetFire:
+	ReloadDelay: 110
+	Range: 1c800
+	ValidTargets: Structure
+	Report: flamer2.aud
+	Projectile: Bullet
+		Speed: 1c682
+		Inaccuracy: 0c256
+	Warhead@1Dam: SpreadDamage
+		Spread: 512
+		Delay: 5
+		Damage: 3000
+		ValidTargets: Structure
+		InvalidTargets: Infantry
+		Versus:
+			Concrete: 100
+			HeavyBuilding: 100
+		DamageTypes: Prone50Percent, TriggerProne, BurnToDeath 
+	Warhead@2Dam: SpreadDamage
+		Spread: 512
+		Damage: 2000
+		Delay: 15
+		ValidTargets: Structure
+		InvalidTargets: Infantry
+		Versus:
+			Concrete: 100
+			HeavyBuilding: 100
+		DamageTypes: Prone50Percent, TriggerProne, BurnToDeath 
+	Warhead@3Dam: SpreadDamage
+		Spread: 512
+		Damage: 1700
+		Delay: 27
+		ValidTargets: Structure
+		InvalidTargets: Infantry
+		Versus:
+			Concrete: 100
+			HeavyBuilding: 100
+		DamageTypes: Prone50Percent, TriggerProne, BurnToDeath 
+	Warhead@4Dam: SpreadDamage
+		Spread: 512
+		Damage: 1500
+		Delay: 39
+		ValidTargets: Structure
+		InvalidTargets: Infantry
+		Versus:
+			Concrete: 100
+			HeavyBuilding: 100
+		DamageTypes: Prone50Percent, TriggerProne, BurnToDeath 
+	Warhead@1Eff: CreateEffect
+		Explosions: fire1
+	Warhead@2Eff: CreateEffect
+		Explosions: fire2
+		Delay: 15
+	Warhead@3Eff: CreateEffect
+		Explosions: fire3
+		Delay: 27
+	Warhead@4Eff: CreateEffect
+		Explosions: fire4
+		Delay: 39
+
+ThopterBomb:
+	ReloadDelay: 35
+	Range: 1c0
+	MinRange: 0c0
+	InvalidTargets: Air
+	TargetActorCenter: true
+	ValidTargets: Ground
+	Projectile: Bullet
+		Speed: 250
+		Blockable: false
+		LaunchAngle: 46
+		Inaccuracy: 0c232
+		Image: flamespit
+		Palette: ra
+	Warhead@1Dam: SpreadDamage
+		Spread: 512
+		ValidTargets: Ground
+		InvalidTargets: Air
+		Damage: 8000
+		Falloff: 100, 70, 60, 50, 18, 7, 0
+		Versus:
+			Leather: 75
+			Light: 65
+			Heavy: 45
+			Concrete: 100
+			Knight: 40
+			LightCavalry: 100
+			MediumCavalry: 100
+			HeavyCavalry: 75
+			HeavyBuilding: 75
+			Spectral: 200
+		DamageTypes: Prone50Percent, TriggerProne, BurnToDeath
+	Warhead@2Smu: LeaveSmudge
+		SmudgeType: Scorch
+		InvalidTargets: Vehicle, Structure, Wall
+	Warhead@5Eff: CreateEffect
+		Explosions: big_napalm
+		ImpactSounds: flamer2.aud
+
+ 
+FireArrowBarrage:
+	ReloadDelay: 100
+	Range: 512c0
+	Burst: 5
+	BurstDelay: 0
+	MinRange: 0c0
+	Report: arrow01.aud, arrow02.aud, arrow02.aud
+	Projectile: Bullet
+		Speed: 250
+		Blockable: false
+		LaunchAngle: 196
+		Inaccuracy: 2c0
+		Image: firearrow
+		Palette: ra
+	Warhead@1Dam: SpreadDamage
+		Spread: 752
+		InvalidTargets: Wall
+		Damage: 2250
+		ValidTargets: Ground
+		Versus:
+			None: 100
+			Leather: 100
+			Light: 100
+			Heavy: 100
+			Concrete: 50
+			Knight: 250
+			LightCavalry: 100
+			MediumCavalry: 100
+			HeavyCavalry: 100
+			HeavyBuilding: 150
+			Spectral: 100
+		DamageTypes: Prone50Percent, TriggerProne, BurnToDeath
+	Warhead@2Dam: SpreadDamage
+		Spread: 712
+		ValidTargets: Ground
+		InvalidTargets: Wall
+		Delay: 10
+		Damage: 400
+		Versus:
+			None: 100
+			Leather: 100
+			Light: 100
+			Heavy: 100
+			Concrete: 50
+			Knight: 250
+			LightCavalry: 100
+			MediumCavalry: 100
+			HeavyCavalry: 100
+			HeavyBuilding: 150
+			Spectral: 100
+		DamageTypes: Prone50Percent, TriggerProne, BurnToDeath
+	Warhead@3Dam: SpreadDamage
+		Spread: 450
+		ValidTargets: Ground
+		InvalidTargets: Wall
+		Delay: 20
+		Damage: 375
+		Versus:
+			None: 100
+			Leather: 100
+			Light: 100
+			Heavy: 100
+			Concrete: 50
+			Knight: 250
+			LightCavalry: 100
+			MediumCavalry: 100
+			HeavyCavalry: 100
+			HeavyBuilding: 150
+			Spectral: 100
+		DamageTypes: Prone50Percent, TriggerProne, BurnToDeath
+	Warhead@1Eff: CreateEffect
+		Explosions: fire2	
+	Warhead@2Eff: CreateEffect
+		Explosions: fire3   
+		Delay: 12
+	Warhead@3Eff: CreateEffect
+		Explosions: fire3   
+		Delay: 24
+	Warhead@2Smu: LeaveSmudge
+		SmudgeType: Scorch
+		InvalidTargets: Vehicle, Structure, Wall
+
+FireBarrage:
+	ReloadDelay: 2
+	Range: 4c510
+	Burst: 2
+	BurstDelay: 5
+	MinRange: 0c0
+	ValidTargets: Ground
+	InvalidTargets: Wall
+	Projectile: Bullet
+		Speed: 250
+		Blockable: false
+		LaunchAngle: 96
+		Inaccuracy: 0c515
+		Image: firearrow
+		Palette: ra
+	Warhead@1Dam: SpreadDamage
+		Spread: 752
+		InvalidTargets: Wall
+		Damage: 2250
+		ValidTargets: Ground
+		Versus:
+			None: 100
+			Leather: 100
+			Light: 100
+			Heavy: 100
+			Concrete: 50
+			Knight: 250
+			LightCavalry: 100
+			MediumCavalry: 100
+			HeavyCavalry: 100
+			HeavyBuilding: 150
+			Spectral: 100
+		DamageTypes: Prone50Percent, TriggerProne, BurnToDeath
+	Warhead@2Dam: SpreadDamage
+		Spread: 712
+		ValidTargets: Ground
+		InvalidTargets: Wall
+		Delay: 10
+		Damage: 400
+		Versus:
+			None: 100
+			Leather: 100
+			Light: 100
+			Heavy: 100
+			Concrete: 50
+			Knight: 250
+			LightCavalry: 100
+			MediumCavalry: 100
+			HeavyCavalry: 100
+			HeavyBuilding: 150
+		DamageTypes: Prone50Percent, TriggerProne, BurnToDeath
+	Warhead@3Dam: SpreadDamage
+		Spread: 450
+		ValidTargets: Ground
+		InvalidTargets: Wall
+		Delay: 20
+		Damage: 375
+		Versus:
+			None: 100
+			Leather: 100
+			Light: 100
+			Heavy: 100
+			Concrete: 50
+			Knight: 250
+			LightCavalry: 100
+			MediumCavalry: 100
+			HeavyCavalry: 100
+			HeavyBuilding: 150
+			Spectral: 100
+		DamageTypes: Prone50Percent, TriggerProne, BurnToDeath
+	Warhead@1Eff: CreateEffect
+		Explosions: fire2	
+	Warhead@2Eff: CreateEffect
+		Explosions: fire3   
+		Delay: 12
+	Warhead@3Eff: CreateEffect
+		Explosions: fire3   
+		Delay: 24
+	Warhead@2Smu: LeaveSmudge
+		SmudgeType: Scorch
+		InvalidTargets: Vehicle, Structure, Wall
+		
+RottenKadaver:
+	ReloadDelay: 100
+	Range: 1c0
+	Burst: 2
+	BurstDelay: 2
+	InvalidTargets: Wall
+	Projectile: Bullet
+		Arm: 0
+		Blockable: false
+		Inaccuracy: 1c120
+		Speed: 141
+	Warhead@rotten1: HealthPercentageDamage
+		Delay: 25
+		Spread: 2c215
+		Damage: 10
+		InvalidTargets: Wall, Structure, Air
+		ValidTargets: Ground
+		Versus:
+			Leather: 100
+			Light: 100
+			Heavy: 100
+			Concrete: 100
+			Knight: 100
+			HeavyBuilding: 100
+			LightCavalry: 100
+			MediumCavalry: 100
+			HeavyCavalry: 100
+			Spectral: 50
+		DamageTypes: PoisonDeath 
+	Warhead@rotten2: HealthPercentageDamage
+		Delay: 75
+		Spread: 2c215
+		Damage: 10
+		InvalidTargets: Wall, Structure, Air
+		ValidTargets: Ground
+		Versus:
+			Leather: 100
+			Light: 100
+			Heavy: 100
+			Concrete: 100
+			Knight: 100
+			HeavyBuilding: 100
+			LightCavalry: 100
+			MediumCavalry: 100
+			HeavyCavalry: 100
+			Spectral: 50
+		DamageTypes: PoisonDeath, KadaverDeath 
+	Warhead@rotten3: HealthPercentageDamage
+		Delay: 125
+		Spread: 2c215
+		Damage: 10
+		InvalidTargets: Wall, Structure, Air
+		ValidTargets: Ground
+		Versus:
+			Leather: 100
+			Light: 100
+			Heavy: 100
+			Concrete: 100
+			Knight: 100
+			HeavyBuilding: 100
+			LightCavalry: 100
+			MediumCavalry: 100
+			HeavyCavalry: 100
+			Spectral: 50
+		DamageTypes: PoisonDeath, KadaverDeath 
+	Warhead@rotten4: HealthPercentageDamage
+		Delay: 175
+		Spread: 2c215
+		Damage: 10
+		InvalidTargets: Wall, Structure, Air
+		ValidTargets: Ground
+		Versus:
+			Leather: 100
+			Light: 100
+			Heavy: 100
+			Concrete: 100
+			Knight: 100
+			HeavyBuilding: 100
+			LightCavalry: 100
+			MediumCavalry: 100
+			HeavyCavalry: 100
+			Spectral: 50
+		DamageTypes: PoisonDeath, KadaverDeath 
+	Warhead@rotten5: HealthPercentageDamage
+		Delay: 225
+		Spread: 2c215
+		Damage: 10
+		InvalidTargets: Wall, Structure, Air
+		ValidTargets: Ground
+		Versus:
+			Leather: 100
+			Light: 100
+			Heavy: 100
+			Concrete: 100
+			Knight: 100
+			HeavyBuilding: 100
+			LightCavalry: 100
+			MediumCavalry: 100
+			HeavyCavalry: 100
+			Spectral: 50
+		DamageTypes: PoisonDeath, KadaverDeath 
+	Warhead@rotten6: HealthPercentageDamage
+		Delay: 275
+		Spread: 2c215
+		Damage: 10
+		InvalidTargets: Wall, Structure, Air
+		ValidTargets: Ground
+		Versus:
+			Leather: 100
+			Light: 100
+			Heavy: 100
+			Concrete: 100
+			Knight: 100
+			HeavyBuilding: 100
+			LightCavalry: 100
+			MediumCavalry: 100
+			HeavyCavalry: 100
+			Spectral: 50
+		DamageTypes: PoisonDeath, KadaverDeath 
+	Warhead@rotten7: HealthPercentageDamage
+		Delay: 325
+		Spread: 2c215
+		Damage: 10
+		InvalidTargets: Wall, Structure, Air
+		ValidTargets: Ground
+		Versus:
+			Leather: 100
+			Light: 100
+			Heavy: 100
+			Concrete: 100
+			Knight: 100
+			HeavyBuilding: 100
+			LightCavalry: 100
+			MediumCavalry: 100
+			HeavyCavalry: 100
+			Spectral: 50
+		DamageTypes: PoisonDeath, KadaverDeath 
+	Warhead@rotten8: HealthPercentageDamage
+		Delay: 375
+		Spread: 2c215
+		Damage: 10
+		InvalidTargets: Wall, Structure, Air
+		ValidTargets: Ground
+		Versus:
+			Leather: 100
+			Light: 100
+			Heavy: 100
+			Concrete: 100
+			Knight: 100
+			HeavyBuilding: 100
+			LightCavalry: 100
+			MediumCavalry: 100
+			HeavyCavalry: 100
+			Spectral: 50
+		DamageTypes: PoisonDeath, KadaverDeath 
+	Warhead@rotten9: HealthPercentageDamage
+		Delay: 425
+		Spread: 2c215
+		Damage: 10
+		InvalidTargets: Wall, Structure, Air
+		ValidTargets: Ground
+		Versus:
+			Leather: 100
+			Light: 100
+			Heavy: 100
+			Concrete: 100
+			Knight: 100
+			HeavyBuilding: 100
+			LightCavalry: 100
+			MediumCavalry: 100
+			HeavyCavalry: 100
+			Spectral: 50
+		DamageTypes: PoisonDeath, KadaverDeath 
+	Warhead@rotten10: HealthPercentageDamage
+		Delay: 475
+		Spread: 2c215
+		Damage: 10
+		InvalidTargets: Wall, Structure, Air
+		ValidTargets: Ground
+		Versus:
+			Leather: 100
+			Light: 100
+			Heavy: 100
+			Concrete: 100
+			Knight: 100
+			HeavyBuilding: 100
+			LightCavalry: 100
+			MediumCavalry: 100
+			HeavyCavalry: 100
+			Spectral: 50
+		DamageTypes: PoisonDeath, KadaverDeath 
+	Warhead@1Dam: SpreadDamage
+		Spread: 1c0
+		Damage: 6000
+		Delay: 10
+		Versus:
+			None: 200
+			Leather: 200
+			Light: 180
+			Heavy: 170
+			Knight: 500
+			Concrete: 300
+			HeavyBuilding: 300
+			LightCavalry: 150
+			MediumCavalry: 200
+			HeavyCavalry: 250
+			Spectral: 300
+		DamageTypes: Prone50Percent, RippedApartDeath				   
+	Warhead@1Eff: CreateEffect
+		Explosions: deadk1,deadk2,deadk3
+		ExplosionPalette : ra
+	Warhead@2Eff: CreateEffect
+		Explosions: rottk1,rottk2,rottk3
+		Delay: 16
+		ExplosionPalette : ra
+	Warhead@SMO1: CreateEffect
+		Delay: 10
+		Explosions: kadavsmoke1
+		ImpactSounds: tnkfire2.aud, tnkfire3.aud, tnkfire4.aud, tnkfire6.aud
+	Warhead@2Smu: LeaveSmudge
+		Delay: 13
+		SmudgeType: Crater
+		InvalidTargets: Vehicle, Structure, Wall, Husk, Trees, Creep
+		
+		
+SingleDeadKadaver:
+	ReloadDelay: 100
+	Range: 1c0
+	InvalidTargets: Wall
+	Projectile: InstantHit
+	Warhead@rotten1: HealthPercentageDamage
+		Delay: 25
+		Spread: 2c215
+		Damage: 8
+		InvalidTargets: Wall, Structure, Air
+		ValidTargets: Ground
+		Versus:
+			Leather: 100
+			Light: 100
+			Heavy: 100
+			Concrete: 100
+			Knight: 100
+			HeavyBuilding: 100
+			LightCavalry: 100
+			MediumCavalry: 100
+			HeavyCavalry: 100
+			Spectral: 50
+		DamageTypes: PoisonDeath, KadaverDeath 
+	Warhead@rotten2: HealthPercentageDamage
+		Delay: 75
+		Spread: 2c215
+		Damage: 8
+		InvalidTargets: Wall, Structure, Air
+		ValidTargets: Ground
+		Versus:
+			Leather: 100
+			Light: 100
+			Heavy: 100
+			Concrete: 100
+			Knight: 100
+			HeavyBuilding: 100
+			LightCavalry: 100
+			MediumCavalry: 100
+			HeavyCavalry: 100
+			Spectral: 50
+		DamageTypes: PoisonDeath, KadaverDeath 
+	Warhead@rotten3: HealthPercentageDamage
+		Delay: 125
+		Spread: 2c215
+		Damage: 8
+		InvalidTargets: Wall, Structure, Air
+		ValidTargets: Ground
+		Versus:
+			Leather: 100
+			Light: 100
+			Heavy: 100
+			Concrete: 100
+			Knight: 100
+			HeavyBuilding: 100
+			LightCavalry: 100
+			MediumCavalry: 100
+			HeavyCavalry: 100
+			Spectral: 50
+		DamageTypes: PoisonDeath, KadaverDeath 
+	Warhead@rotten4: HealthPercentageDamage
+		Delay: 175
+		Spread: 2c215
+		Damage: 8
+		InvalidTargets: Wall, Structure, Air
+		ValidTargets: Ground
+		Versus:
+			Leather: 100
+			Light: 100
+			Heavy: 100
+			Concrete: 100
+			Knight: 100
+			HeavyBuilding: 100
+			LightCavalry: 100
+			MediumCavalry: 100
+			HeavyCavalry: 100
+			Spectral: 50
+		DamageTypes: PoisonDeath, KadaverDeath 
+	Warhead@rotten5: HealthPercentageDamage
+		Delay: 225
+		Spread: 2c215
+		Damage: 8
+		InvalidTargets: Wall, Structure, Air
+		ValidTargets: Ground
+		Versus:
+			Leather: 100
+			Light: 100
+			Heavy: 100
+			Concrete: 100
+			Knight: 100
+			HeavyBuilding: 100
+			LightCavalry: 100
+			MediumCavalry: 100
+			HeavyCavalry: 100
+			Spectral: 50
+		DamageTypes: PoisonDeath, KadaverDeath 
+	Warhead@rotten6: HealthPercentageDamage
+		Delay: 275
+		Spread: 2c215
+		Damage: 8
+		InvalidTargets: Wall, Structure, Air
+		ValidTargets: Ground
+		Versus:
+			Leather: 100
+			Light: 100
+			Heavy: 100
+			Concrete: 100
+			Knight: 100
+			HeavyBuilding: 100
+			LightCavalry: 100
+			MediumCavalry: 100
+			HeavyCavalry: 100
+			Spectral: 50
+		DamageTypes: PoisonDeath, KadaverDeath 
+	Warhead@rotten7: HealthPercentageDamage
+		Delay: 325
+		Spread: 2c215
+		Damage: 8
+		InvalidTargets: Wall, Structure, Air
+		ValidTargets: Ground
+		Versus:
+			Leather: 100
+			Light: 100
+			Heavy: 100
+			Concrete: 100
+			Knight: 100
+			HeavyBuilding: 100
+			LightCavalry: 100
+			MediumCavalry: 100
+			HeavyCavalry: 100
+			Spectral: 50
+		DamageTypes: PoisonDeath, KadaverDeath 
+	Warhead@rotten8: HealthPercentageDamage
+		Delay: 375
+		Spread: 2c215
+		Damage: 8
+		InvalidTargets: Wall, Structure, Air
+		ValidTargets: Ground
+		Versus:
+			Leather: 100
+			Light: 100
+			Heavy: 100
+			Concrete: 100
+			Knight: 100
+			HeavyBuilding: 100
+			LightCavalry: 100
+			MediumCavalry: 100
+			HeavyCavalry: 100
+			Spectral: 50
+		DamageTypes: PoisonDeath, KadaverDeath 		
+	Warhead@rotten9: HealthPercentageDamage
+		Delay: 425
+		Spread: 2c215
+		Damage: 8
+		InvalidTargets: Wall, Structure, Air
+		ValidTargets: Ground
+		Versus:
+			Leather: 100
+			Light: 100
+			Heavy: 100
+			Concrete: 100
+			Knight: 100
+			HeavyBuilding: 100
+			LightCavalry: 100
+			MediumCavalry: 100
+			HeavyCavalry: 100
+			Spectral: 50
+		DamageTypes: PoisonDeath, KadaverDeath 	
+	Warhead@2Eff: CreateEffect
+		Explosions: rottk1,rottk2,rottk3
+		Delay: 10
+		ExplosionPalette : ra
+		
+		
+CannonStrike:
+	ValidTargets: Ground, Air
+	Report: quadcannonmono.aud
+	Warhead@1Dam_impact: SpreadDamage
+		Spread: 1c0
+		Damage: 15000
+		Delay: 10
+		Falloff: 1000, 368, 135, 50, 18, 7, 0
+		ValidTargets: Ground, Air
+		Versus:
+			None: 100
+			Leather: 100
+			Light: 60
+			Heavy: 50
+			Knight: 50
+			Concrete: 100
+			LightCavalry: 100
+			MediumCavalry: 100
+			HeavyCavalry: 100
+			Spectral: 250
+		DamageTypes: Prone50Percent, RippedApartDeath
+	Warhead@2Eff_impact: CreateEffect
+		Explosions: cannonsboulder
+	Warhead@Sound1: CreateEffect
+		ImpactSounds: xplos.aud
+		Delay: 8
+	Warhead@Sound2: CreateEffect
+		ImpactSounds: xplos.aud
+		Delay: 18
+	Warhead@Sound3: CreateEffect
+		ImpactSounds: xplos.aud
+		Delay: 20
+	Warhead@Sound4: CreateEffect
+		ImpactSounds: xplos.aud
+		Delay: 24
+	Warhead@Sound5: CreateEffect
+		ImpactSounds: xplos.aud
+		Delay: 26
+	Warhead@Sound6: CreateEffect
+		ImpactSounds: xplos.aud
+		Delay: 32
+	Warhead@Sound7: CreateEffect
+		ImpactSounds: xplos.aud
+		Delay: 38
+	Warhead@Sound8: CreateEffect
+		ImpactSounds: xplos.aud
+		Delay: 42
+	Warhead@3Dam_areanukea: SpreadDamage
+		Spread: 2c800
+		Damage: 10000
+		Falloff: 1000, 368, 135, 50, 18, 7, 0
+		Delay: 20
+		ValidTargets: Ground, Air
+		Versus:
+			None: 100
+			Leather: 100
+			Light: 60
+			Heavy: 50
+			Knight: 50
+			Concrete: 100
+			LightCavalry: 100
+			MediumCavalry: 100
+			HeavyCavalry: 100
+			Spectral: 250
+		DamageTypes: TriggerProne, RippedApartDeath
+	Warhead@4Res_areanukea: DestroyResource
+		Size: 2
+		Delay: 20
+	Warhead@5Smu_areanukea: LeaveSmudge
+		SmudgeType: Scorch
+		InvalidTargets: Vehicle, Structure, Wall
+		Size: 2
+		Delay: 20
+	Warhead@7Dam_areanukeb: SpreadDamage
+		Spread: 3c768
+		Damage: 5000
+		Falloff: 1000, 368, 135, 50, 18, 7, 0
+		Delay: 28
+		ValidTargets: Ground, Air
+		Versus:
+			None: 100
+			Leather: 100
+			Light: 60
+			Heavy: 50
+			Knight: 50
+			Concrete: 100
+			LightCavalry: 100
+			MediumCavalry: 100
+			HeavyCavalry: 100
+			Spectral: 250
+		DamageTypes: TriggerProne, RippedApartDeath
+	Warhead@10Dam_areanukec: SpreadDamage
+		Spread: 5c0
+		Damage: 2000
+		Falloff: 1000, 368, 135, 50, 18, 7, 0
+		Delay: 36
+		ValidTargets: Ground, Air
+		Versus:
+			None: 100
+			Leather: 100
+			Light: 60
+			Heavy: 50
+			Knight: 50
+			Concrete: 100
+			LightCavalry: 100
+			MediumCavalry: 100
+			HeavyCavalry: 100
+			Spectral: 250
+		DamageTypes: TriggerProne, RippedApartDeath
+		
+		
+LightningStrike:
+	ValidTargets: Ground, Air
+	Report: weathercharge.aud
+	Warhead@Sound0: CreateEffect
+		ImpactSounds: Thunder.aud
+		Delay: 48
+	Warhead@Sound1: CreateEffect
+		ImpactSounds: lightning1.aud
+		Explosions: smalllight1
+		Delay: 68
+	Warhead@Sound2: CreateEffect
+		ImpactSounds: lightning1.aud
+		Explosions: smalllight2
+		Delay: 78
+	Warhead@Sound3: CreateEffect
+		ImpactSounds: lightning1.aud
+		Explosions: smalllight3
+		Delay: 88
+	Warhead@Sound4: CreateEffect
+		Explosions: largelight1
+		ImpactSounds: lightning2.aud
+		Delay: 0
+	Warhead@1Dam_impact: SpreadDamage
+		Range: 0, 1c1, 2c1, 2c800
+		Damage: 10000
+		Falloff: 1000, 1000, 250, 100
+		ValidTargets: Ground, Air, Trees
+		Delay: 0
+		DamageTypes: Prone50Percent, RippedApartDeath
+	Warhead@2Smu_impact: LeaveSmudge
+		SmudgeType: Scorch
+		InvalidTargets: Vehicle, Structure, Wall, Husk, Creep
+		Delay: 0
+	Warhead@3Smu_area: LeaveSmudge
+		SmudgeType: Scorch
+		InvalidTargets: Vehicle, Structure, Wall, Husk, Creep
+		Size: 1
+		Delay: 3
+	Warhead@4Res_area2: DestroyResource
+		Size: 2
+		Delay: 6
+	Warhead@5Smu_area2: LeaveSmudge
+		SmudgeType: Scorch
+		InvalidTargets: Vehicle, Structure, Wall, Husk, Creep
+		Size: 2,1
+		Delay: 6
+
+DragonFlame:
+	Warhead@1Dam: SpreadDamage
+		DamageTypes: ExplosionDeath
+	Warhead@2Eff: CreateEffect
+		Explosions: med_napalm
+		
+DragonDecay:
+	Warhead@1Dam: SpreadDamage
+		DamageTypes: ExplosionDeath
+	Warhead@2Eff: CreateEffect
+		Explosions: dragonrot
+		ImpactSounds: tnkfire6.aud
+		ExplosionPalette : ra
+		
+Balloonpop:
+	Warhead@1Dam: SpreadDamage
+		DamageTypes: ExplosionDeath
+	Warhead@2Eff: CreateEffect
+		Explosions: balloonpop
+		ImpactSounds: balloon01.aud
+		ExplosionPalette : ra
+
+GroundHit:
+	Warhead@1Dam: SpreadDamage
+		DamageTypes: ExplosionDeath
+	Warhead@2Eff: CreateEffect
+		Explosions: smokey
+		ImpactSounds: tnkfire2.aud, tnkfire3.aud, tnkfire4.aud, tnkfire6.aud
+	Warhead@4Smu: LeaveSmudge
+		SmudgeType: Scorch
+		InvalidTargets: Siege, Structure, Wall
+		
+HuskExplosion:
+	Warhead@1Dam: SpreadDamage
+		DamageTypes: ExplosionDeath
+	Warhead@2Eff: CreateEffect
+		Explosions: smokey
+		ImpactSounds: WoodExplMed.aud, WoodExplMed2.aud, WoodExplsmall.aud, WoodExplsmall2.aud
+	Warhead@4Smu: LeaveSmudge
+		SmudgeType: Scorch
+		InvalidTargets: Siege, Structure, Wall
+
+		
+^Debris:
+	Range: 5c0
+	ValidTargets: Ground
+	InvalidTargets: Air
+	Projectile: Bullet
+		Speed: 94, 148
+		LaunchAngle: 80, 192
+		Image: trmr1
+		Palette: ra
+		Shadow: true
+		Blockable: false
+		BounceCount: 2
+		BounceRangeModifier: 33
+	Warhead@1Dam: SpreadDamage
+		Spread: 200
+		Falloff: 100, 100, 0
+		Damage: 300
+		ValidTargets: Ground
+		InvalidTargets: Air
+		Versus:
+			None: 100
+			Leather: 85
+			Light: 75
+			Heavy: 65
+			Knight: 50
+			Concrete: 30
+			LightCavalry: 60
+			MediumCavalry: 40
+			HeavyCavalry: 25
+			Spectral: 15
+		DamageTypes: Prone100Percent, TriggerProne, DefaultDeath
+	Warhead@2Eff: CreateEffect
+		Explosions: smokey
+		ImpactSounds: tnkfire2.aud, tnkfire3.aud, tnkfire4.aud, tnkfire6.aud
+	Warhead@4Smu: LeaveSmudge
+		SmudgeType: Scorch
+		InvalidTargets: Siege, Structure, Wall
+		
+Demolish:
+	Inherits: LargeStone1
+	Burst: 3
+		
+SmallWood1:
+	Inherits: ^Debris
+	Projectile: Bullet
+		Image: trmr1
+		
+SmallWood2:
+	Inherits: ^Debris
+	Projectile: Bullet
+		Image: trmr2
+				
+SmallWood3:
+	Inherits: ^Debris
+	Projectile: Bullet
+		Image: trmr3
+		
+SmallStone1:
+	Inherits: ^Debris
+	Projectile: Bullet
+		Image: trmr4
+				
+SmallStone2:
+	Inherits: ^Debris
+	Projectile: Bullet
+		Image: trmr5
+		
+LargeWood1:
+	Inherits: ^Debris
+	Projectile: Bullet
+		Image: trmr6
+		
+LargeStone1:
+	Inherits: ^Debris
+	Projectile: Bullet
+		Image: trmr7
+		
+DebrFurniture1:
+	Inherits: ^Debris
+	Projectile: Bullet
+		Image: trmr8
+				
+DebrFurniture2:
+	Inherits: ^Debris
+	Projectile: Bullet
+		Image: trmr9
+		
+DebrFurniture3:
+	Inherits: ^Debris
+	Projectile: Bullet
+		Image: trmr10  
+		
+DebrFurniture4:
+	Inherits: ^Debris
+	Projectile: Bullet
+		Image: trmr11
+		
+DebrAnvil1:
+	Inherits: ^Debris
+	Projectile: Bullet
+		Image: trmr12	
+
+DebrUtility1:
+	Inherits: ^Debris
+	Projectile: Bullet
+		Image: trmr13
+		
+DebrUtility2:
+	Inherits: ^Debris
+	Projectile: Bullet
+		Image: trmr14
+				
+DebrUtility3:
+	Inherits: ^Debris
+	Projectile: Bullet
+		Image: trmr15
+		
+SDebrWeapon1:
+	Inherits: ^Debris
+	Projectile: Bullet
+		Image: trmr16
+		
+SDebrWeapon2:
+	Inherits: ^Debris
+	Projectile: Bullet
+		Image: trmr17
+		
+SDebrWeapon3:
+	Inherits: ^Debris
+	Projectile: Bullet
+		Image: trmr18	  
+
+Dragonbite:
+	ReloadDelay: 30
+	Range: 1c0
+	Report: dinoatk1.aud
+	Projectile: Bullet
+		Speed: 1c682
+	Warhead@1Dam: SpreadDamage
+		Spread: 213
+		Damage: 3500
+		Versus:
+			None: 100
+			Leather: 100
+			Light: 100
+			Heavy: 100
+			Spectral: 60
+			Knight: 100
+			Concrete: 100
+			LightCavalry: 90
+			MediumCavalry: 80
+			HeavyCavalry: 50
+		DamageTypes: Prone50Percent, TriggerProne, RippedApartDeath
+
+
+LeaveStuff:
+	Warhead@1Res: CreateResource
+		AddsResourceType: Guns
+		Size: 0,0
+		
+LeaveWoodXL:
+	Warhead@1Res: CreateResource
+		AddsResourceType: Wood
+		Size: 3,0
+		
+LeaveWoodM:
+	Warhead@1Res: CreateResource
+		AddsResourceType: Wood
+		Size: 1,0
+		
+LeaveWoodL:
+	Warhead@1Res: CreateResource
+		AddsResourceType: Wood
+		Size: 2,0
+		
+LeaveWoodS:
+	Warhead@1Res: CreateResource
+		AddsResourceType: Wood
+		Size: 0,0
+		
+KilledPike:
+	ValidTargets: Cavalry
+	Warhead@1Dam: SpreadDamage
+		Spread: 0c356
+		Damage: 15000
+		ValidTargets: Cavalry
+		Versus:
+			None: 0
+			Leather: 0
+			Light: 0
+			Heavy: 0
+			Knight: 0
+			Concrete: 0
+			LightCavalry: 100
+			MediumCavalry: 100
+			HeavyCavalry: 133
+			Spectral: 0
+		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+ 
+# Hunter
+
+BowNArrowHunter:
+	ReloadDelay: 37
+	Range: 7c0
+	MinRange: 1c512
+	Report: arrow01.aud, arrow02.aud, arrow02.aud
+	InvalidTargets: Wall, Air
+	ValidTargets: Wildlife
+	Projectile: Missile
+		HorizontalRateOfTurn: 455
+		RangeLimit: 12c0
+		Arm: 0
+		Speed: 300
+		LaunchAngle: 46
+		Palette: ra
+	Warhead@1Dam: SpreadDamage
+		Spread: 25
+		InvalidTargets: Wall, Air
+		ValidTargets: Wildlife
+		Damage: 2500
+		Versus:
+			Leather: 100
+			Light: 100
+			Heavy: 100
+			Concrete: 100
+			Knight: 100
+			LightCavalry: 100
+			MediumCavalry: 100
+			HeavyCavalry: 100
+			HeavyBuilding: 100
+			Spectral: 100
+		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+
+BowNArrowHunterDUMMY:
+	ReloadDelay: 37
+	Range: 7c0
+	MinRange: 1c512
+	InvalidTargets: Wall, Air
+	ValidTargets: Wildlife
+	Projectile: Bullet
+		RangeLimit: 9c204
+		LaunchAngle: 130
+		Speed: 290
+		Inaccuracy: 0c0
+		ContrailLength: 20
+		ContrailWidth: 10
+		ContrailDelay: 0
+		ContrailUsePlayerColor : true
+		Image: e4arrow
+		Palette: ra
+	Warhead@1Dam: SpreadDamage
+		Spread: 25
+		InvalidTargets: Wall, Air
+		ValidTargets: Wildlife
+		Damage: 0
+		Versus:
+			Leather: 0
+			Light: 0
+			Heavy: 0
+			Concrete: 0
+			Knight: 0
+			LightCavalry: 0
+			MediumCavalry: 0
+			HeavyCavalry: 0
+			HeavyBuilding: 0
+			Spectral: 0
+		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+		
+HunterGather:
+	ValidTargets: Deaddeer
+	InvalidTargets: Air
+	ReloadDelay: 20
+	Range: 1c800
+	Projectile: Bullet
+		Speed: 1c682
+	Warhead@GrantMonez: GrantSelfCondition
+		Duration: 30
+		Condition: DeerHunter
+		ValidStances: Ally
+		AffectsParent: true
+		InvalidTargets: Air
+		ValidTargets: Deaddeer, Hunterer
+	Warhead@1Dam: SpreadDamage
+		Spread: 25
+		InvalidTargets: Air
+		ValidTargets: Deaddeer
+		Damage: 100
+		Versus:
+			Leather: 100
+			Light: 100
+			Heavy: 100
+			Concrete: 100
+			Knight: 100
+			LightCavalry: 100
+			MediumCavalry: 100
+			HeavyCavalry: 100
+			HeavyBuilding: 100
+			Spectral: 100
+		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+		
+HunterUnload:
+	ValidTargets: HunterLodge
+	InvalidTargets: Air
+	ReloadDelay: 20
+	Range: 1c800
+	Projectile: Bullet
+		Speed: 1c682
+	Warhead@GrantMonez: CashTick
+		Ammount: 65
+		ValidStances: Ally
+		AffectsParent: true
+		InvalidTargets: Air
+		ValidTargets: HunterLodge, Hunterer
+	Warhead@1Dam: SpreadDamage
+		Spread: 25
+		InvalidTargets: Wall, Air
+		ValidTargets: Wildlife
+		Damage: 0
+		Versus:
+			Leather: 0
+			Light: 0
+			Heavy: 0
+			Concrete: 0
+			Knight: 0
+			LightCavalry: 0
+			MediumCavalry: 0
+			HeavyCavalry: 0
+			HeavyBuilding: 0
+			Spectral: 0
+		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+		
+		
+# Hunter
+
+#LumberJackAxe
+
+
+LumberJackAxe:
+	ReloadDelay: 25
+	Range: 1c800
+	InvalidTargets: Wall
+	Report: chop1.aud, chop2.aud, chop3.aud
+	ValidTargets: ChoppableTree
+	Projectile: Bullet
+		Speed: 1c682
+	Warhead@1Dam: SpreadDamage
+		Spread: 75
+		Damage: 2000
+		ValidTargets: ChoppableTree
+		Versus:
+			Leather: 100
+			Light: 100
+			Heavy: 100
+			Concrete: 100
+			Knight: 100
+			LightCavalry: 100
+			MediumCavalry: 100
+			HeavyCavalry: 100
+		DamageTypes: Prone50Percent, TriggerProne, LumberDead
+
+		
+LumbererGather:
+	ReloadDelay: 25
+	Range: 1c800
+	Report: chop1.aud, chop2.aud, chop3.aud
+	ValidTargets: Choptree
+	InvalidTargets: Air
+	Projectile: Bullet
+		Speed: 1c682
+	Warhead@GrantMonez: GrantSelfCondition
+		Duration: 30
+		Condition: DeerHunter
+		ValidStances: Ally
+		AffectsParent: true
+		InvalidTargets: Air
+		ValidTargets: Choptree, LLumber
+	Warhead@1Dam: SpreadDamage
+		Spread: 25
+		InvalidTargets: Air
+		ValidTargets: Choptree
+		Damage: 500
+		Versus:
+			Leather: 100
+			Light: 100
+			Heavy: 100
+			Concrete: 100
+			Knight: 100
+			LightCavalry: 100
+			MediumCavalry: 100
+			HeavyCavalry: 100
+			HeavyBuilding: 100
+			Spectral: 100
+		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+		
+		
+LumberGrantLootAttack:
+	ValidTargets: LumberShack
+	ReloadDelay: 18
+	Report: saw01.aud, saw02.aud, saw03.aud
+	Range: 1c712
+	Projectile: InstantHit
+	Warhead@Trade: GrantExternalCondition
+		ValidTargets: LumberShack
+		Range: 1c512
+		Duration: 250
+		Condition: BuildingLoot
+		ValidStances: Enemy, Neutral, Ally
+	Warhead@1Dam: SpreadDamage
+		Spread: 25
+		InvalidTargets: Wall, Air
+		ValidTargets: Wildlife
+		Damage: 0
+		Versus:
+			Leather: 0
+			Light: 0
+			Heavy: 0
+			Concrete: 0
+			Knight: 0
+			LightCavalry: 0
+			MediumCavalry: 0
+			HeavyCavalry: 0
+			HeavyBuilding: 0
+			Spectral: 0
+		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+		
+LumberGrantLootPlayer:
+	ValidTargets: LumberShack
+	ReloadDelay: 18
+	Report: saw01.aud, saw02.aud, saw03.aud
+	Range: 1c712
+	Projectile: InstantHit
+	Warhead@GrantMonez: CashTick
+		Ammount: 30
+		ValidStances: Ally
+		AffectsParent: true
+		InvalidTargets: Air
+		ValidTargets: LumberShack, LLumber
+	Warhead@1Dam: SpreadDamage
+		Spread: 25
+		InvalidTargets: Wall, Air
+		ValidTargets: LumberShack
+		Damage: 0
+		Versus:
+			Leather: 0
+			Light: 0
+			Heavy: 0
+			Concrete: 0
+			Knight: 0
+			LightCavalry: 0
+			MediumCavalry: 0
+			HeavyCavalry: 0
+			HeavyBuilding: 0
+			Spectral: 0
+		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+		
+#-------------------------
+
+
+		
+BuildConstruction:
+	ValidTargets: Buildable
+	InvalidTargets: Air
+	ReloadDelay: 25
+	Range: 1c800
+	Report: repair01.aud
+	Projectile: InstantHit
+	Warhead@Grant: GrantSingletonCondition
+		Range: 265
+		Duration: 0
+		Condition: Construct
+		ValidStances: Ally
+		ValidTargets: Buildable
+	Warhead@1Dam: SpreadDamage
+		Spread: 65
+		InvalidTargets: Wall, Air
+		ValidTargets: Wildlife
+		Damage: 0
+		Versus:
+			Leather: 0
+			Light: 0
+			Heavy: 0
+			Concrete: 0
+			Knight: 0
+			LightCavalry: 0
+			MediumCavalry: 0
+			HeavyCavalry: 0
+			HeavyBuilding: 0
+			Spectral: 0
+		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+
+LaborourUnload:
+	ValidTargets: Deliverable
+	InvalidTargets: Air
+	ReloadDelay: 10
+	Range: 1c800
+	Projectile: InstantHit
+	Warhead@Talking: GrantSingletonCondition
+		Range: 265
+		Duration: 0
+		Condition: DeliveredResources
+		ValidStances: Ally
+		ValidTargets: Deliverable
+	Warhead@1Dam: SpreadDamage
+		Spread: 65
+		InvalidTargets: Wall, Air
+		ValidTargets: Wildlife
+		Damage: 0
+		Versus:
+			Leather: 0
+			Light: 0
+			Heavy: 0
+			Concrete: 0
+			Knight: 0
+			LightCavalry: 0
+			MediumCavalry: 0
+			HeavyCavalry: 0
+			HeavyBuilding: 0
+			Spectral: 0
+		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+
+		
+LaborourLoad:
+	ValidTargets: Material
+	InvalidTargets: Air
+	ReloadDelay: 10
+	Range: 1c800
+	Projectile: InstantHit
+	Warhead@Un: GrantSelfCondition
+		Duration: 12
+		Condition: Loading
+		ValidStances: Ally
+		AffectsParent: true
+		InvalidTargets: Air
+		ValidTargets: Infantry, Ground, Material
+	Warhead@1Dam: SpreadDamage
+		Spread: 25
+		InvalidTargets: Wall, Air
+		ValidTargets: Wildlife
+		Damage: 0
+		Versus:
+			Leather: 0
+			Light: 0
+			Heavy: 0
+			Concrete: 0
+			Knight: 0
+			LightCavalry: 0
+			MediumCavalry: 0
+			HeavyCavalry: 0
+			HeavyBuilding: 0
+			Spectral: 0
+		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+		

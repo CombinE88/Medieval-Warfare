@@ -1,5 +1,5 @@
 Player:
-	HackyAI@baron:
+	HackyMWAI@baron:
 		Type: king
 		Name: King Dardanus (Easy)  
 		MinimumExcessPower: 0
@@ -532,7 +532,7 @@ Player:
 				TargetMetric: Value
 				CheckRadius: 2c0
 				
-	HackyAI@king: 
+	HackyMWAI@king: 
 		Type: baron
 		Name: Baron Hodsworth (Medium) 
 		MinimumExcessPower: 0
@@ -1064,7 +1064,7 @@ Player:
  				Attractiveness: 1
 				TargetMetric: Value
 				CheckRadius: 2c0
-	HackyAI@sultan:
+	HackyMWAI@sultan:
 		Type: sultan
 		Name: Sultan il-Nuredin (Hard)  
 		MinimumExcessPower: 0

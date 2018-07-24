@@ -1,0 +1,585 @@
+
+SULE1:
+	Inherits: ^Knight
+	Inherits@AUTOTARGET: ^AutoTargetGround
+	Inherits@GainsExperience: ^GainsExperience
+	Inherits@GetsPoisoned: ^GetsPoisoned
+	Inherits@CanTurnIntoScelett:  ^CanTurnIntoScelett
+	Inherits@ArcherDemo65: ^ArcherDemo65
+	Inherits@Healable: ^Healable
+	Inherits@SnakeStunnable: ^SnakeStunnable
+	Inherits@GrimReanimatable: ^GrimReanimatable
+	Valued:
+		Cost: 75
+	Tooltip:
+		Name: Mubarizun
+	Buildable:
+		Description: General-purpose infantry.\n  Strong vs Infantry\n  Weak vs Everything\n  Can cut down trees.\n\nTrains: 1 Peasant\n
+		IconPalette: raicon
+		BuildPaletteOrder: 10
+		Queue: MInfantry.SUL
+		#BuildDuration: 50
+	Mobile:
+		Speed: 85
+	Health:
+		HP: 9500
+	Armament:
+		Weapon: SulSword
+	AttackFrontal:
+	AutoTarget:
+		ScanRadius: 4
+		InitialStance: AttackAnything
+	RenderSprites:
+		PlayerPalette: raplayer
+	WithInfantryBody:
+		DefaultAttackSequence: shoot
+	Armor:
+		Type: Leather
+	PersonValued:
+		ActorCount: 1
+		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
+	Voiced:
+		VoiceSet: RashudinVoice
+	Targetable@CombatRole:
+		TargetTypes: Light
+	AutoTargetPriority@Counter:
+		ValidTargets: Light, Heavy, Ranged, Support
+		Priority: 4
+		
+SULE2:
+	Inherits: ^Knight
+	Inherits@AUTOTARGET: ^AutoTargetGround
+	Inherits@AUTOTARGETDEF: ^AutoTargetDefenses
+	Inherits@GainsExperience: ^GainsExperience
+	Inherits@GetsPoisoned: ^GetsPoisoned
+	Inherits@CanTurnIntoScelett:  ^CanTurnIntoScelett
+	Inherits@ArcherDemo65: ^ArcherDemo65
+	Inherits@Healable: ^Healable
+	Inherits@SnakeStunnable: ^SnakeStunnable
+	Inherits@GrimReanimatable: ^GrimReanimatable
+	Valued:
+		Cost: 300
+	Tooltip:
+		Name: Rashidun Champion
+	-Crushable:
+	Buildable:
+		Description: Anti-Cavalry infantry.\n  Strong vs Cavalry.\n  Moderate vs Infantry\n  Deals damage when trampled by Cavalry\n  Can cut down trees.\n\nTrains: 1 Peasant\n
+		IconPalette: raicon
+		BuildPaletteOrder: 30
+		Queue: MInfantry.SUL
+		Prerequisites: anyhq
+		#BuildDuration: 75
+	Mobile:
+		Speed: 56
+	Health:
+		HP: 17500
+	Armament@Primary:
+		Name: Primary
+		Weapon: PikeAC
+	Armament@Secondary:
+		Name: Secondary
+		Weapon: BroadSwordAE
+	AttackFrontal:
+		Armaments: Primary, Secondary	
+	AutoTarget:
+		ScanRadius: 4
+		InitialStance: AttackAnything
+	RenderSprites:
+		PlayerPalette: raplayer
+	WithInfantryBody:
+		DefaultAttackSequence: shoot
+		AttackSequences:
+			Secondary: shootae
+			Primary: shoot
+	Armor:
+		Type: Heavy
+	Explodes:
+		Weapon: KilledPike
+		EmptyWeapon: KilledPike
+	PersonValued:
+		ActorCount: 1
+		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
+	Voiced:
+		VoiceSet: RashudinVoice
+	Targetable@CombatRole:
+		TargetTypes: Heavy
+		
+SULE3:
+	Inherits: ^Knight
+	Inherits@AUTOTARGET: ^AutoTargetAll
+	Inherits@GainsExperience: ^GainsExperience
+	Inherits@GetsPoisoned: ^GetsPoisoned
+	Inherits@CanTurnIntoScelett:  ^CanTurnIntoScelett
+	Inherits@ArcherDemo65: ^ArcherDemo65
+	Inherits@Healable: ^Healable
+	Inherits@SnakeStunnable: ^SnakeStunnable
+	Inherits@GrimReanimatable: ^GrimReanimatable
+	RevealsShroud:
+		Range: 6c0
+	Valued:
+		Cost: 250
+	Tooltip:
+		Name: Bedouin
+	Buildable:
+		Description: Advanced Anti-infantry unit.\n  Strong vs Light Infantry\n  Weak vs Cavalry and heavy Infantry\n  Detects cloaked units\n  Can attack Aircrafts\n  Slows targets under fire\nTrains: 1 Peasant
+		IconPalette: raicon
+		BuildPaletteOrder: 20
+		Queue: MInfantry.SUL
+		#BuildDuration: 75
+	Mobile:
+		Speed: 60
+	Health:
+		HP: 8000
+	Armament:
+		Weapon: BedouinBow
+		LocalOffset: 341,20,356
+		Name: Primary
+	Armament@DUMMY:
+		Weapon: BedouinBowDUMMY
+		LocalOffset: 341,20,356
+		Name: Primary
+	Armament@Air:
+		Weapon: BedouinBowAir
+		LocalOffset: 341,20,356
+		Name: Primary
+	Armament@Debuffapply:
+		Weapon: BedouinBowNArrowDebuff
+		LocalOffset: 341,20,356
+		Name: Secondary
+	AttackFrontal:
+		Armaments: Primary, Secondary
+	WithInfantryBody:
+ 		AttackSequences:
+			Primary: shoot
+	AutoTarget:
+		ScanRadius: 8
+		InitialStance: AttackAnything
+	RenderSprites:
+		PlayerPalette: raplayer
+	Armor:
+		Type: Leather
+	DetectCloaked:
+		Range: 2c0
+	Passenger:
+		CargoType: Archer
+	Crushable:
+		WarnProbability: 55
+	PersonValued:
+		ActorCount: 1
+		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
+	Voiced:
+		VoiceSet: BedouinVoice
+	Targetable@CombatRole:
+		TargetTypes: Ranged
+	AutoTargetPriority@Counter1:
+		ValidTargets: Light, Ranged, LightCavalry, Support, Flying
+		Priority: 4
+		
+SULE4:
+	Inherits: ^Knight
+	Inherits@AUTOTARGET: ^AutoTargetGround
+	Inherits@AUTOTARGETDEF: ^AutoTargetDefenses
+	Inherits@GainsExperience: ^GainsExperience
+	Inherits@GetsPoisoned: ^GetsPoisoned
+	Inherits@CanTurnIntoScelett:  ^CanTurnIntoScelett
+	Inherits@ArcherDemo65: ^ArcherDemo65
+	Inherits@Healable: ^Healable
+	Inherits@SnakeStunnable: ^SnakeSlowable
+	Inherits@GrimReanimatable: ^GrimReanimatable
+	Valued:
+		Cost: 450
+	Tooltip:
+		Name: Palace Guard
+	Buildable:
+		Description: Heavy Anti-Cavalry infantry that are able to regenerate their health if not in combat.\n  Superb vs Cavalry.\n  Moderate vs Infantry\n  Cannot be trampled by Cavalry\n  Can cut down trees.\n\nTrains: 1 Peasant\n
+		IconPalette: raicon
+		BuildPaletteOrder: 30
+		Queue: MInfantry.SUL
+		Prerequisites: sultow1
+		#BuildDuration: 250
+	Mobile:
+		Speed: 55
+	Health:
+		HP: 25000
+	Armament@Primary:
+		Weapon: SuperioirPike
+	AttackFrontal:  
+	AutoTarget:
+		ScanRadius: 4
+		InitialStance: AttackAnything
+	RenderSprites:
+		PlayerPalette: raplayer
+	WithInfantryBody:
+		DefaultAttackSequence: shoot
+	Armor:
+		Type: Heavy
+	-Crushable:
+	SelfHealing@HealsConst:
+		PercentageStep: 3
+		HealIfBelow: 100
+		Delay: 25
+		DamageCooldown: 100
+	PersonValued:
+		ActorCount: 1
+		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
+	Voiced:
+		VoiceSet: GardVoice
+	Targetable@CombatRole:
+		TargetTypes: Heavy
+	AutoTargetPriority@Counter:
+		ValidTargets: RegularCavalry, LightCavalry, HeavyCavalry, Support, Defenses
+		Priority: 4
+		
+SULE5:
+	Inherits: ^Knight
+	Inherits@AUTOTARGET: ^AutoTargetGround
+	Inherits@GainsExperience: ^GainsExperience
+	Inherits@GetsPoisoned: ^GetsPoisoned
+	Inherits@CanTurnIntoScelett:  ^CanTurnIntoScelett
+	Inherits@ArcherDemo65: ^ArcherDemo65
+	Inherits@Healable: ^Healable
+	Inherits@SnakeStunnable: ^SnakeSlowable
+	Inherits@GrimReanimatable: ^GrimReanimatable
+	RevealsShroud:
+		Range: 9c0
+	Valued:
+		Cost: 900
+	Tooltip:
+		Name: Scimitar 
+	Buildable:
+		Description: Elite Infantry that is hard to hit when its moving.\n  Strong vs Infantry, Cavalry\n  Moderate vs Buildings\n  Detects cloaked units\n\nTrains: 1 Peasant\n
+		IconPalette: raicon
+		BuildPaletteOrder: 40
+		Prerequisites: sultow1, sultow4, anyhq
+		Queue: MInfantry.SUL
+		#BuildDuration: 450
+	Mobile:
+		Speed: 175
+	Health:
+		HP: 19000
+	Armament:
+		Weapon: ScimitarDuals
+		Name: primary
+	AttackFrontal:
+	AutoTarget:
+		ScanRadius: 4
+		InitialStance: AttackAnything
+	RenderSprites:
+		PlayerPalette: raplayer
+	WithInfantryBody:
+		DefaultAttackSequence: shoot
+	Armor:
+		Type: Light
+	DetectCloaked:
+		Range: 2c0
+	GrantConditionOnMovement@Runfast:
+		Condition: Runfast
+	DamageMultiplier@Runfast:
+		Modifier: 75
+		RequiresCondition: Runfast
+	Crushable:
+		WarnProbability: 75
+	PersonValued:
+		ActorCount: 1
+		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
+	Targetable@CombatRole:
+		TargetTypes: Light
+	AutoTargetPriority@Counter1:
+		ValidTargets: Light, Ranged, LightCavalry, Support, RegularCavalry, Heavy
+		Priority: 4
+		
+		
+SULE6:
+	Inherits: ^Knight
+	Inherits@GetsPoisoned: ^GetsPoisoned
+	Inherits@CanTurnIntoScelett:  ^CanTurnIntoScelett
+	Inherits@ArcherDemo65: ^ArcherDemo65
+	Inherits@Healable: ^Healable
+	Inherits@SnakeStunnable: ^SnakeStunnable
+	Inherits@GrimReanimatable: ^GrimReanimatable
+	BodyOrientation:
+		QuantizedFacings: 8
+	QuantizeFacingsFromSequence:
+		Sequence: stand
+	Buildable:
+		Description: Gathers grains and Crops and Corn.\nDelivers to a windmill.\nCan collect chopped wood, lumber and goods\n\nTrains: 1 Peasant\n
+		IconPalette: raicon
+		BuildPaletteOrder: 40
+		Queue: MInfantry.SUL
+		#BuildDuration: 150
+	WithFacingSpriteBody:
+		Sequence: idle
+		RequiresCondition: !MoveAnim
+	WithHarvestAnimation:
+		HarvestSequence: harvest
+		PrefixByFullness: empty-, full-
+	WithDockingAnimation:
+	GrantConditionOnMovement:
+		Condition: MoveAnim
+	WithInfantryBody:
+		MoveSequence: move
+		StandSequences: idle
+		RequiresCondition: MoveAnim
+	Valued:
+		Cost: 250
+	Tooltip:
+		Name: Farmer
+	Mobile:
+		Speed: 70
+		TerrainSpeeds:
+			Crops: 100
+				PathingCost: 0
+			Wood: 100
+				PathingCost: 0
+	Health:
+		HP: 10000
+	RenderSprites:
+		PlayerPalette: raplayer
+	AttackFrontal:
+	Armor:
+		Type: Heavy	
+	Harvester:
+		DeliveryBuildings: zeroproc, sulmill, nodproc
+		Resources: Crops, Grains, Wood, Goods, Lumber, Corn
+		PipCount: 2
+		Capacity: 7
+		BaleLoadDelay: 30
+		BaleUnloadDelay: 5
+		SearchFromProcRadius: 25
+		SearchFromOrderRadius: 15
+		MaxUnloadQueue: 10
+	Selectable:
+		Bounds: 14,26,0,-6
+		Priority: 7
+	SelectionDecorations:
+		VisualBounds: 14,26,0,-6 
+	-Crushable:
+	PersonValued:
+		ActorCount: 1
+		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
+	Voiced:
+		VoiceSet: FarmerVoice
+
+
+# Mystics
+
+SULM1:
+	Inherits: ^Knight
+	Inherits@AUTOTARGET: ^AutoTargetGround
+	Inherits@GainsExperience: ^GainsExperience
+	Inherits@GetsPoisoned: ^GetsPoisoned
+	Inherits@CanTurnIntoScelett:  ^CanTurnIntoScelett
+	Inherits@ArcherDemo65: ^ArcherDemo65
+	Inherits@Healable: ^Healable
+	Inherits@SnakeStunnable: ^SnakeStunnable
+	Inherits@GrimReanimatable: ^GrimReanimatable
+	RevealsShroud:
+		Range: 6c0
+	Valued:
+		Cost: 400
+	Tooltip:
+		Name: Apprentice
+	Buildable:
+		Description: Anti-infantry unit.\n  Strong vs Infantry\n  Weak vs Cavalry, Buildings\n  Detects cloaked units\n  Can spawn skeletons upon death infantry\n\nTrains: 1 Peasant\n
+		IconPalette: raicon
+		BuildPaletteOrder: 10
+		Queue: MVehicle.SUL
+		#BuildDuration: 200
+	Mobile:
+		Speed: 66
+	Health:
+		HP: 19000
+	Armament@Ground:
+		Weapon: ApprenticeFire
+	AttackFrontal:
+	AutoTarget:
+		ScanRadius: 5
+		InitialStance: AttackAnything
+	RenderSprites:
+		PlayerPalette: raplayer
+	WithInfantryBody:
+		DefaultAttackSequence: shoot
+	Armor:
+		Type: Leather
+	DetectCloaked:
+		Range: 2c0
+	Crushable:
+		WarnProbability: 95
+	PersonValued:
+		ActorCount: 1
+		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
+	Targetable@CombatRole:
+		TargetTypes: Light
+	AutoTargetPriority@Counter1:
+		ValidTargets: Light, Ranged, LightCavalry, Support, Heavy, Spectral
+		Priority: 4
+
+		
+SULM1SKELET:
+	Inherits: ^Knight
+	Inherits@ArcherDemo65: ^ArcherDemo65
+	Inherits@SnakeStunnable: ^SnakeStunnable
+	Inherits@AUTOTARGET: ^AutoTargetGround
+	Valued:
+		Cost: 25
+	RevealsShroud:
+		Range: 2c0
+	Tooltip:
+		Name: Skeleton
+	Mobile:
+		Speed: 75
+	Health:
+		HP: 8000
+	Armament:
+		Weapon: broadsword
+	AttackFrontal:
+	AutoTarget:
+		ScanRadius: 4
+		InitialStance: AttackAnything
+	RenderSprites:
+		PlayerPalette: raplayer
+	-WithInfantryBody:
+	WithFacingSpriteBody:
+		StartSequence: make
+		Sequence: idle
+	WithMoveAnimation: 
+		MoveSequence: move
+	WithAttackAnimation:
+		AttackSequence: shoot
+	-Selectable:
+	Interactable:
+	SelfHealing@Killsslef:
+		PercentageStep: -2
+		Step: -0
+		HealIfBelow: 110
+		Delay: 25
+		DamageTypes: DefaultDeath
+	Armor:
+		Type: Heavy
+	WithDeathAnimation:
+		DeathTypes:
+			DefaultDeath: 1
+			RippedApartDeath: 1
+			PoisonDeath: 1
+			BallistaDeath: 1
+			BurnToDeath: 1
+			SkeletonDeath: 1
+		CrushedSequence: die1
+	-Explodes@Tib:
+	AttackWander: 
+		WanderMoveRadius: 3
+		ReduceMoveRadiusDelay: 5
+		MinMoveDelay: 0
+		MaxMoveDelay: 50
+	Targetable:
+		TargetTypes: Ground, Infantry, Skeleton
+	Voiced:
+		VoiceSet: SkeletonVoice
+	Targetable@CombatRole:
+		TargetTypes: Light
+		
+SULM2:
+	Inherits: ^Knight
+	Inherits@AUTOTARGET: ^AutoTargetGround
+	Inherits@AUTOTARGETDEF: ^AutoTargetDefenses
+	Inherits@GainsExperience: ^GainsExperience
+	Inherits@ArcherDemo65: ^ArcherDemo65
+	Inherits@SnakeStunnable: ^SnakeSlowable
+	RevealsShroud:
+		Range: 6c0
+	Valued:
+		Cost: 1460
+	Tooltip:
+		Name: Djinn
+	Buildable:
+		Description: Advanced Multi-Role unit.\n  Can only be hurt by magical or fire weaponary.\n  Moderate vs Everything\n  Weak vs Buildings\n  Detects cloaked units at a very large area\n  Can only attack ground targets\n\nConsumes: 2 Peasants\n
+		IconPalette: raicon
+		Prerequisites: sultow2, sultow4, anyhq
+		BuildPaletteOrder: 70
+		Queue: MVehicle.SUL
+		#BuildDuration: 600
+	Mobile:
+		Speed: 66
+	-Crushable:
+	Health:
+		HP: 21000
+	Armament@Ground:
+		Weapon: DjinElectro
+		LocalOffset: 141,75,352
+		FireDelay: 17
+	AttackFrontal:
+	AutoTarget:
+		ScanRadius: 5
+		InitialStance: AttackAnything
+	RenderSprites:
+		PlayerPalette: sultanplayer
+	WithDeathAnimation:
+		DeathSequencePalette: sultanplayer
+	WithInfantryBody:
+		DefaultAttackSequence: shoot
+		IdleSequences: idle
+		MinIdleDelay: 0
+		MaxIdleDelay: 0
+	Armor:
+		Type: Spectral
+	DetectCloaked:
+		Range: 4c0
+	Voiced:
+		VoiceSet: DjinVoice
+	PersonValued:
+		ActorCount: 2
+		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
+	Targetable@CombatRole:
+		TargetTypes: Spectral
+	
+SULM4:
+	Inherits: ^Knight
+	Inherits@AUTOTARGET: ^AutoTargetGround
+	Inherits@GainsExperience: ^GainsExperience
+	Inherits@GetsPoisoned: ^GetsPoisoned
+	Inherits@CanTurnIntoScelett:  ^CanTurnIntoScelett
+	Inherits@ArcherDemo65: ^ArcherDemo65
+	Inherits@Healable: ^Healable
+	Inherits@SnakeStunnable: ^SnakeStunnable
+	Inherits@GrimReanimatable: ^GrimReanimatable
+	RevealsShroud:
+		Range: 7c0
+	Valued:
+		Cost: 600
+	Tooltip:
+		Name: Rattlemystic
+	Buildable:
+		Description: Advanced Anti-infantry unit.\n  Strong vs Infantry\n  Cannot attack Buildings\n  Detects cloaked units\n  Can stun Infantry with summoned snakes\n  Can slow down Cavalry with summoned snakes\n\nTrains: 1 Peasant\n
+		IconPalette: raicon
+		BuildPaletteOrder: 60
+		Queue: MVehicle.SUL
+		Prerequisites: sultow2, anyhq
+		#BuildDuration: 300
+	Mobile:
+		Speed: 66
+	Health:
+		HP: 10000
+	Armament@Ground:
+		Weapon: Snakes
+	AttackFrontal:
+	AutoTarget:
+		ScanRadius: 7
+		InitialStance: AttackAnything
+	RenderSprites:
+		PlayerPalette: raplayer
+	WithInfantryBody:
+		DefaultAttackSequence: shoot
+	Armor:
+		Type: Leather
+	DetectCloaked:
+		Range: 2c0
+	Crushable:
+		WarnProbability: 95
+	PersonValued:
+		ActorCount: 1
+		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
+	Targetable@CombatRole:
+		TargetTypes: Light
+	AutoTargetPriority@Counter1:
+		ValidTargets: Light, Ranged, LightCavalry, Support, Heavy
+		Priority: 4

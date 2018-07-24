@@ -1,0 +1,257 @@
+^GetsPoisoned:
+	ExternalCondition@ROTTEN:
+		Condition: RottenKadaver
+	ExternalCondition@DDler:
+		Condition: DDler
+	SelfHealing@DDler:
+		PercentageStep: -2
+		Step: -0
+		HealIfBelow: 110
+		Delay: 10
+		RequiresCondition: DDler || RottenKadaver
+		DamageTypes: PoisonDeath
+	WithDecoration@DDlerPoison:
+		Image: debuffs
+		Sequence: poison
+		Palette: ra
+		ReferencePoint: Top, Left
+		RequiresCondition: DDler || RottenKadaver
+		ZOffset: 256
+		ValidStances: Ally, Enemy, Neutral
+
+^CanTurnIntoScelett:
+	SpawnActorOnDeath@SCELET:
+		DeathType: SkeletonDeath
+		Probability: 33
+		Actor: SULM1SKELET
+		OwnerType: Killer
+		
+^ArcherDemo65:
+	ExternalCondition@PRONE:
+		Condition: archerprone
+	SpeedMultiplier@PRONE:
+		Modifier: 65
+		RequiresCondition: archerprone
+	WithDecoration@PRONE:
+		Image: debuffs
+		Sequence: slowed
+		Palette: ra
+		ReferencePoint: Top, Left
+		RequiresCondition: archerprone
+		ZOffset: 256
+		ValidStances: Ally, Enemy, Neutral
+		
+^ArcherDemo80:
+	ExternalCondition@PRONE:
+		Condition: archerprone
+	SpeedMultiplier@PRONE:
+		Modifier: 80
+		RequiresCondition: archerprone
+	WithDecoration@PRONE:
+		Image: debuffs
+		Sequence: slowed
+		Palette: ra
+		ReferencePoint: Top, Left
+		RequiresCondition: archerprone
+		ZOffset: 256
+		ValidStances: Ally, Enemy, Neutral
+		
+^Healable:
+	ExternalCondition@BARRACKS:
+		Condition: hospitalhealbarr
+	ExternalCondition@HOSPITAL:
+		Condition: hospitalheal
+	SelfHealing@HOSPITAL:
+		PercentageStep: 1
+		Delay: 25
+		HealIfBelow: 100
+		DamageCooldown: 125
+		RequiresCondition: hospitalheal || hospitalhealbarr
+	WithDecoration@REDCROSS:
+		Image: pips
+		Sequence: pip-heal
+		ReferencePoint: Bottom, Right
+		RequiresCondition: hospitalheal || hospitalhealbarr
+		
+^RoyalMotivatable: # obsolete
+	ExternalCondition@ROYAL:
+		Condition: KingIsNear
+	WithDecoration@Crown:
+		Image: pips
+		Sequence: pip-crown
+		ReferencePoint: Top, Left
+		RequiresCondition: KingIsNear
+	DamageMultiplier@Crown:
+		RequiresCondition: KingIsNear
+		Modifier: 80
+	FirepowerMultiplier@Crown:
+		RequiresCondition: KingIsNear
+		Modifier: 120
+	ReloadDelayMultiplier:
+		RequiresCondition: KingIsNear
+		Modifier: 120
+		
+^SnakeStunnable:
+	ExternalCondition@SNAKES:
+		Condition: snaketrap
+	WithDecoration@SNAKES:
+		Image: debuffs
+		Sequence: immobile
+		Palette: ra
+		ReferencePoint: Top, Left
+		RequiresCondition: snaketrap
+		ZOffset: 256
+		ValidStances: Ally, Enemy, Neutral
+	WithDecoration@SNAKESPoison:
+		Image: debuffs
+		Sequence: poison
+		Palette: ra
+		ReferencePoint: Top, Left
+		RequiresCondition: snaketrap
+		ZOffset: 256
+		ValidStances: Ally, Enemy, Neutral
+	SelfHealing@SNAKES:
+		Step: -1000
+		HealIfBelow: 110
+		Delay: 25
+		RequiresCondition: snaketrap
+		DamageTypes: PoisonDeath
+	SelfHealing@SNAKES2:
+		PercentageStep: -8
+		Step: -0
+		HealIfBelow: 110
+		Delay: 25
+		RequiresCondition: snaketrap >= 2
+		DamageTypes: PoisonDeath
+	SelfHealing@SNAKES3:
+		PercentageStep: -8
+		Step: -0
+		HealIfBelow: 110
+		Delay: 25
+		RequiresCondition: snaketrap >= 3
+		DamageTypes: PoisonDeath
+	SelfHealing@SNAKES4:
+		PercentageStep: -8
+		Step: -0
+		HealIfBelow: 110
+		Delay: 25
+		RequiresCondition: snaketrap >= 4
+		DamageTypes: PoisonDeath	 
+	SpeedMultiplier@SNAKES:
+		Modifier: 10
+		RequiresCondition: snaketrap
+	WithIdleOverlay@SNAKES:
+		Sequence: stunned
+		RequiresCondition: snaketrap
+	RangeMultiplier@SNAKES:
+		Modifier: 10
+		RequiresCondition: snaketrap
+		
+^SnakeSlowable:
+	ExternalCondition@SNAKES:
+		Condition: snaketrap
+	WithDecoration@SNAKES:
+		Image: debuffs
+		Sequence: slowed
+		Palette: ra
+		ReferencePoint: Top, Left
+		RequiresCondition: snaketrap || archerprone
+		ZOffset: 256
+		ValidStances: Ally, Enemy, Neutral
+	WithDecoration@SNAKESPoison:
+		Image: debuffs
+		Sequence: poison
+		Palette: ra
+		ReferencePoint: Top, Left
+		RequiresCondition: snaketrap
+		ZOffset: 256
+		ValidStances: Ally, Enemy, Neutral
+	SelfHealing@SNAKES:
+		PercentageStep: -8
+		Step: -0
+		HealIfBelow: 110
+		Delay: 25
+		RequiresCondition: snaketrap >= 1
+		DamageTypes: PoisonDeath
+	SelfHealing@SNAKES2:
+		PercentageStep: -8
+		Step: -0
+		HealIfBelow: 110
+		Delay: 25
+		RequiresCondition: snaketrap >= 2
+		DamageTypes: PoisonDeath
+	SelfHealing@SNAKES3:
+		PercentageStep: -8
+		Step: -0
+		HealIfBelow: 110
+		Delay: 25
+		RequiresCondition: snaketrap >= 3
+		DamageTypes: PoisonDeath
+	SelfHealing@SNAKES4:
+		PercentageStep: -8
+		Step: -0
+		HealIfBelow: 110
+		Delay: 25
+		RequiresCondition: snaketrap >= 4
+		DamageTypes: PoisonDeath
+	SpeedMultiplier@SNAKES:
+		Modifier: 40
+		RequiresCondition: snaketrap
+		
+		
+^SnakeDamagable:
+	ExternalCondition@SNAKES:
+		Condition: snaketrap
+	WithDecoration@SNAKES:
+		Image: debuffs
+		Sequence: slowed
+		Palette: ra
+		ReferencePoint: Top, Left
+		RequiresCondition: snaketrap || archerprone
+		ZOffset: 256
+		ValidStances: Ally, Enemy, Neutral
+	WithDecoration@SNAKESPoison:
+		Image: debuffs
+		Sequence: poison
+		Palette: ra
+		ReferencePoint: Top, Left
+		RequiresCondition: snaketrap
+		ZOffset: 256
+		ValidStances: Ally, Enemy, Neutral
+	SelfHealing@SNAKES:
+		PercentageStep: -8
+		Step: -0
+		HealIfBelow: 110
+		Delay: 25
+		RequiresCondition: snaketrap >= 1
+		DamageTypes: PoisonDeath
+	SelfHealing@SNAKES2:
+		PercentageStep: -8
+		Step: -0
+		HealIfBelow: 110
+		Delay: 25
+		RequiresCondition: snaketrap >= 2
+		DamageTypes: PoisonDeath
+	SelfHealing@SNAKES3:
+		PercentageStep: -8
+		Step: -0
+		HealIfBelow: 110
+		Delay: 25
+		RequiresCondition: snaketrap >= 3
+		DamageTypes: PoisonDeath
+	SelfHealing@SNAKES4:
+		PercentageStep: -8
+		Step: -0
+		HealIfBelow: 110
+		Delay: 25
+		RequiresCondition: snaketrap >= 4
+		DamageTypes: PoisonDeath
+
+^GrimReanimatable:
+	GrimTarget:
+		Palette: disabled
+		DamageMultiplier: 133
+		FirePowerMultiplier: 77
+		SpeedMultiplier: 77
+		GivesExpMultiplier: 10
+		GrantCondition: grimactive

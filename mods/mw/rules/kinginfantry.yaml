@@ -1,0 +1,498 @@
+KING:
+	Inherits: ^Knight
+	Inherits@AUTOTARGET: ^AutoTargetAll
+	Inherits@GetsPoisoned: ^GetsPoisoned
+	Inherits@CanTurnIntoScelett:  ^CanTurnIntoScelett
+	Inherits@ArcherDemo65: ^ArcherDemo65
+
+	Inherits@Healable: ^Healable
+	GivesBounty:
+		Percentage: 50
+	MustBeDestroyed:
+		RequiredForShortGame: true
+	Valued:
+		Cost: 2000
+	Tooltip:
+		Name: Your Highness
+	Buildable:
+		IconPalette: raicon
+		BuildPaletteOrder: 1000
+		Prerequisites: !king
+		Description: The ruler over your Kingdom!\n  Very strong against Infantry and Cavalry\n  cannot attack Buildings\n  detects cloaked units\n\n\n
+		Queue: MInfantry.Castle
+		BuildLimit: 1
+	Mobile:
+		Speed: 55
+		Voice: Move
+	Guard:
+		Voice: Move
+	Passenger:
+		PipType: Red
+		Voice: Move
+	Health:
+		HP: 35000
+	Armament:
+		Weapon: kingssword
+	AutoTarget:
+		ScanRadius: 4
+		InitialStance: AttackAnything
+	RenderSprites:
+		Image: koenig
+		PlayerPalette: raplayer
+	-WithInfantryBody:
+	WithFacingSpriteBody:
+		StartSequence: make
+		Sequence: idle
+	WithMoveAnimation: 
+		MoveSequence: move
+	WithAttackAnimation:
+		AttackSequence: shoot
+	Armor:
+		Type: Knight
+	AttackFrontal:
+		Voice: Attack
+	AttackMove:
+		Voice: Attack
+	AnnounceOnBuild:
+	AnnounceOnKill:
+	Voiced:
+		VoiceSet: CommandoVoice
+	SpawnActorOnDeath@1:
+		DeathType: DefaultDeath
+		Probability: 100
+		Actor: Husk.KING
+	SpawnActorOnDeath@2:
+		DeathType: RippedApartDeath
+		Probability: 100
+		Actor: Husk.KING
+	SpawnActorOnDeath@3:
+		DeathType: PoisonDeath
+		Probability: 100
+		Actor: Husk.KING
+	SpawnActorOnDeath@4:
+		DeathType: BallistaDeath
+		Probability: 100
+		Actor: Husk.KING
+	SpawnActorOnDeath@5:
+		DeathType: BurnToDeath
+		Probability: 100
+		Actor: Husk.KING
+	-WithDeathAnimation:
+	SelfHealing@AlwaysHeals:
+		Delay: 10
+		Step: 500
+		HealIfBelow: 110
+		DamageCooldown: 200 
+	DetectCloaked:
+		Range: 3c0
+	Captures:
+		CaptureTypes: horse
+		PlayerExperience: 200
+		Sabotage: False
+		Voice: Attack
+	-Crushable:
+
+Husk.KING:
+	Inherits@1: ^ExistsInWorld
+	Inherits@3: ^SpriteActor	
+	HitShape:
+		Type: Circle
+			Radius: 128
+	Tooltip:
+		Name: Surrendered
+	RenderSprites:
+		Image: koenig
+		PlayerPalette: raplayer
+	WithSpriteBody:
+		StartSequence: die1
+		Sequence: stand-dead
+	SelfHealing@EndOfSurrender:
+		Step: -100
+		HealIfBelow: 110
+		Delay: 25
+		DamageTypes: KingSurrender
+	Health:
+		HP: 6000
+		Shape: Circle
+			Radius: 128
+	Armor:
+		Type: None
+	RevealsShroud:
+		Range: 2c0
+	Mobile:
+		Speed: 0
+		Crushes: crate
+		SharesCell: true
+		TerrainSpeeds:
+			Clear: 1
+			Rough: 1
+			Road: 1
+			Tiberium: 1
+			BlueTiberium: 1
+			Beach: 1
+	SelectionDecorations:
+	WithSpriteControlGroupDecoration:
+	Selectable:
+		Priority: 8
+		Bounds: 12,17,0,-6
+	QuantizeFacingsFromSequence:
+		Sequence: stand-dead
+	HiddenUnderFog:
+	SpawnActorOnDeath:
+		Actor: KING
+		DeathType: KingSurrender
+		SkipMakeAnimations: false
+	ProvidesPrerequisite:
+		Prerequisite: king  
+		
+Husk2.KING:
+	Inherits@1: ^ExistsInWorld
+	Inherits@3: ^SpriteActor
+	HitShape:
+		Type: Circle
+			Radius: 128
+	Tooltip:
+		Name: Preparing
+	RenderSprites:
+		Image: koenig
+		PlayerPalette: raplayer
+	WithSpriteBody:
+		StartSequence: die1
+		Sequence: stand-dead
+	SelfHealing@EndOfSurrender:
+		Step: -100
+		HealIfBelow: 110
+		Delay: 25
+		DamageTypes: KingSurrender
+	Health:
+		HP: 15000
+		Shape: Circle
+			Radius: 128
+	Armor:
+		Type: None
+	RevealsShroud:
+		Range: 2c0
+	Mobile:
+		Speed: 0
+		Crushes: crate
+		SharesCell: true
+		TerrainSpeeds:
+			Clear: 1
+			Rough: 1
+			Road: 1
+			Tiberium: 1
+			BlueTiberium: 1
+			Beach: 1
+	SelectionDecorations:
+	WithSpriteControlGroupDecoration:
+	Selectable:
+		Priority: 8
+		Bounds: 12,17,0,-6
+	QuantizeFacingsFromSequence:
+		Sequence: stand-dead
+	HiddenUnderFog:
+	SpawnActorOnDeath:
+		Actor: KING
+		DeathType: KingSurrender
+		SkipMakeAnimations: false
+	ProvidesPrerequisite:
+		Prerequisite: king 
+
+E2NEWV2:
+	Inherits: ^Knight
+	Inherits@AUTOTARGET: ^AutoTargetGround
+	Inherits@AUTOTARGETDEF: ^AutoTargetDefenses
+	Inherits@GainsExperience: ^GainsExperience
+	Inherits@GetsPoisoned: ^GetsPoisoned
+	Inherits@CanTurnIntoScelett:  ^CanTurnIntoScelett
+	Inherits@ArcherDemo65: ^ArcherDemo65
+
+	Inherits@Healable: ^Healable
+	Inherits@SnakeStunnable: ^SnakeStunnable
+	Inherits@GrimReanimatable: ^GrimReanimatable
+	Valued:
+		Cost: 200
+	-Crushable:
+	Tooltip:
+		Name: Halberd Guard
+	Buildable:
+		Description: Anti-Cavalry infantry.\n  Strong vs Cavalry.\n  Weak vs Infantry\n  Deals damage when trampled by Cavalry\n  Can cut down trees.\n\nTrains: 1 Peasant\n
+		IconPalette: raicon
+		BuildPaletteOrder: 20
+		Queue: MInfantry.GDI
+		#BuildDuration: 50
+	Mobile:
+		Speed: 45
+	Health:
+		HP: 10000
+	Armament:
+		Weapon: pikespread
+	AttackFrontal:
+	AutoTarget:
+		ScanRadius: 4
+		InitialStance: AttackAnything
+	RenderSprites:
+		Image: e2newv2
+		PlayerPalette: raplayer
+	WithInfantryBody:
+		DefaultAttackSequence: shoot
+	Armor:
+		Type: Light
+	Voiced:
+		VoiceSet: GDIPikeVoice
+	PersonValued:
+		ActorCount: 1
+		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
+	Targetable@CombatRole:
+		TargetTypes: Light
+	AutoTargetPriority@Counter1:
+		ValidTargets: LightCavalry, Defenses
+		Priority: 5
+	AutoTargetPriority@Counter2:
+		ValidTargets: RegularCavalry, HeavyCavalry, Defenses
+		Priority: 4
+E3NEW:
+	Inherits: ^Knight
+	Inherits@AUTOTARGET: ^AutoTargetGround
+	Inherits@GainsExperience: ^GainsExperience
+	Inherits@GetsPoisoned: ^GetsPoisoned
+	Inherits@CanTurnIntoScelett:  ^CanTurnIntoScelett
+	Inherits@ArcherDemo65: ^ArcherDemo65
+
+	Inherits@Healable: ^Healable
+	Inherits@SnakeStunnable: ^SnakeStunnable
+	Inherits@GrimReanimatable: ^GrimReanimatable
+	Valued:
+		Cost: 100
+	Tooltip:
+		Name: Knight
+	Buildable:
+		Description: General-purpose infantry.\n  Strong vs Infantry\n  Weak vs Cavalry \n  Can cut down trees.\n\nTrains: 1 Peasant\n
+		IconPalette: raicon
+		BuildPaletteOrder: 10
+		Queue: MInfantry.GDI
+		#BuildDuration: 50
+	Mobile:
+		Speed: 56
+	Health:
+		HP: 11500
+	Armament:
+		Weapon: BroadSwordBaron
+	AttackFrontal:
+	AutoTarget:
+		ScanRadius: 4
+		InitialStance: AttackAnything
+	RenderSprites:
+		Image: e3new
+		PlayerPalette: raplayer
+	WithInfantryBody:
+		DefaultAttackSequence: shoot
+	Armor:
+		Type: Heavy
+	Voiced:
+		VoiceSet: GDIKnightVoice
+	PersonValued:
+		ActorCount: 1
+		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
+	Targetable@CombatRole:
+		TargetTypes: Heavy
+	AutoTargetPriority@Counter:
+		ValidTargets: Light, Heavy, Ranged, Support
+		Priority: 4
+
+E4NEWV2:
+	Inherits: ^Knight
+	Inherits@AUTOTARGET: ^AutoTargetAll
+	Inherits@GainsExperience: ^GainsExperience
+	Inherits@GetsPoisoned: ^GetsPoisoned
+	Inherits@CanTurnIntoScelett:  ^CanTurnIntoScelett
+	Inherits@ArcherDemo65: ^ArcherDemo65
+
+	Inherits@Healable: ^Healable
+	Inherits@SnakeStunnable: ^SnakeStunnable
+	Inherits@GrimReanimatable: ^GrimReanimatable
+	RevealsShroud:
+		Range: 6c0
+	Valued:
+		Cost: 200
+	Tooltip:
+		Name: Archer
+	Buildable:
+		Description: Advanced Anti-infantry unit.\n  Strong vs Light Infantry\n  Weak vs Cavalry and heavy Infantry\n  Detects cloaked units\n  Can attack Aircraft\n  Slows targets under fire\nTrains: 1 Peasant
+		IconPalette: raicon
+		BuildPaletteOrder: 30
+		Queue: MInfantry.GDI
+		#BuildDuration: 50
+	Mobile:
+		Speed: 60
+	Health:
+		HP: 8000
+	Armament:
+		Weapon: bownarrow
+		LocalOffset: 341,20,356
+		Name: Primary
+	Armament@DUMMY:
+		Weapon: BowNArrowDUMMY
+		LocalOffset: 341,20,356
+		Name: Primary
+	Armament@Air:
+		Weapon: bownarrowair
+		LocalOffset: 341,20,356
+		Name: Primary
+	Armament@Debuffapply:
+		Weapon: BowNArrowDebuff
+		LocalOffset: 341,20,356
+		Name: Secondary
+	AttackFrontal:
+		Armaments: Primary, Secondary
+	WithInfantryBody:
+ 		AttackSequences:
+			Primary: shoot
+	AutoTarget:
+		ScanRadius: 8
+		InitialStance: AttackAnything
+	RenderSprites:
+		Image: e4newv2
+		PlayerPalette: raplayer
+	Armor:
+		Type: Leather
+	DetectCloaked:
+		Range: 2c0
+	Passenger:
+		CargoType: Archer
+	Voiced:
+		VoiceSet: GDIArcherVoice
+	PersonValued:
+		ActorCount: 1
+		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
+	Targetable@CombatRole:
+		TargetTypes: Ranged
+	AutoTargetPriority@Counter1:
+		ValidTargets: Light, Ranged, LightCavalry, Support, Flying
+		Priority: 4
+
+RMBONEW:
+	Inherits: ^Knight
+	RevealsShroud:
+		Range: 9c0
+	Inherits@AUTOTARGET: ^AutoTargetGround
+	Inherits@AUTOTARGETDEF: ^AutoTargetDefenses
+	Inherits@GainsExperience: ^GainsExperience
+	Inherits@GetsPoisoned: ^GetsPoisoned
+	Inherits@CanTurnIntoScelett:  ^CanTurnIntoScelett
+	Inherits@ArcherDemo65: ^ArcherDemo65
+
+	Inherits@Healable: ^Healable
+	Inherits@SnakeStunnable: ^SnakeStunnable
+	Inherits@GrimReanimatable: ^GrimReanimatable
+	Valued:
+		Cost: 475
+	Tooltip:
+		Name: Paladin
+	Buildable:
+		Description: Elite Infantry\n Strong vs Infantry, Buildings and Spectral Units.\n\nTrains: 1 Peasant\n\n
+		IconPalette: raicon
+		BuildPaletteOrder: 40
+		Prerequisites: anyhq
+		Queue: MInfantry.GDI
+		#BuildDuration: 250
+	Mobile:
+		Speed: 40
+	Health:
+		HP: 19000
+	Armament:
+		Weapon: paladingun
+		MuzzleSequence: muzzle
+		LocalOffset: 0,0,356
+	Armament@visual:
+		Weapon: paladingunvisual
+		LocalOffset: 0,0,356
+		MuzzleSequence: muzzle
+	AttackFrontal:
+	AutoTarget:
+		ScanRadius: 4
+		InitialStance: AttackAnything
+	RenderSprites:
+		Image: rmbonew
+		PlayerPalette: raplayer
+	WithInfantryBody:
+		DefaultAttackSequence: shoot
+	Armor:
+		Type: Heavy
+	WithMuzzleOverlay:
+ 	Voiced:
+		VoiceSet: PaladinVoice
+	PersonValued:
+		ActorCount: 1
+		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
+	Targetable@CombatRole:
+		TargetTypes: Ranged, Heavy
+	AutoTargetPriority@Counter1:
+		ValidTargets: Light, Ranged, LightCavalry, Support, RegularCavalry, Heavy, Spectral
+		Priority: 4
+
+NEWCOMM:
+	Inherits: ^Knight
+	Inherits@AUTOTARGET: ^AutoTargetGround
+	Inherits@AUTOTARGETDEF: ^AutoTargetDefenses
+	Inherits@GainsExperience: ^GainsExperience
+	Inherits@GetsPoisoned: ^GetsPoisoned
+	Inherits@CanTurnIntoScelett:  ^CanTurnIntoScelett
+	Inherits@ArcherDemo65: ^ArcherDemo65
+
+	Inherits@Healable: ^Healable
+	Inherits@SnakeStunnable: ^SnakeSlowable
+	RevealsShroud:
+		Range: 9c0
+	Valued:
+		Cost: 2000
+	Tooltip:
+		Name: Juggernaut
+	Buildable:
+		Description: Juggernaut Infantry \n Very Strong vs Infantry, Buildings and Spectral Units\n  Can only slightly be harmed by Arrows. \nCan cut down trees.\n\nTrains: 1 Peasant\n
+		IconPalette: raicon
+		BuildPaletteOrder: 50
+		Prerequisites: anycastle, anyhq
+		Queue: MInfantry.GDI
+		#BuildDuration: 700
+	Mobile:
+		Speed: 50
+		RequiresCondition: !Swinging
+	Health:
+		HP: 39000
+	Armament@1:
+		Weapon: sledgehammer
+	AttackFrontal:
+		Armaments: primary
+	AutoTarget:
+		ScanRadius: 4
+		InitialStance: AttackAnything
+	RenderSprites:
+		Image: newcomm
+		PlayerPalette: raplayer
+	-WithInfantryBody:
+	WithFacingSpriteBody:
+		Sequence: idle
+	WithMoveAnimation: 
+		MoveSequence: move
+	WithAttackAnimation:
+		AttackSequence: shoot
+	Armor:
+		Type: Knight
+	Voiced:
+		VoiceSet: JuggernautVoice 
+	AnnounceOnBuild:
+	AnnounceOnKill:
+	-Crushable:
+	PersonValued:
+		ActorCount: 1
+		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
+	Targetable@CombatRole:
+		TargetTypes: Heavy
+	AutoTargetPriority@Counter1:
+		ValidTargets: Light, Ranged, Support, Heavy, Spectral, Defenses
+		Priority: 4
+	Targetable@Paralyze:
+		TargetTypes: Juggernaut
+	ExternalCondition@Juggernaut:
+		Condition: Swinging

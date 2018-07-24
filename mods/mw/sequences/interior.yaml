@@ -609,3 +609,48 @@ tsbulbtest:
 		-DepthSprite:
 		ZRamp: 1
 	
+cstack01:
+	idle: coinstacks
+		Start: 0
+cstack02:
+	idle: coinstacks
+		Start: 1
+cstack03:
+	idle: coinstacks
+		Start: 2
+cstack04:
+	idle: coinstacks
+		Start: 3
+cstack05:
+	idle: coinstacks
+		Start: 4
+cstack06:
+	idle: coinstacks
+		Start: 5
+cstack07:
+	idle: coinstacks
+		Start: 6
+cstack08:
+	idle: coinstacks
+		Start: 7
+cstack09:
+	idle: coinstacks
+		Start: 8
+cstack10:
+	idle: coinstacks
+		Start: 9
+cstack11:
+	idle: coinstacks
+		Start: 10
+cstack12:
+	idle: coinstacks
+		Start: 11
+cstack13:
+	idle: coinstacks
+		Start: 12
+cstack14:
+	idle: coinstacks
+		Start: 13
+cstack15:
+	idle: coinstacks
+		Start: 14

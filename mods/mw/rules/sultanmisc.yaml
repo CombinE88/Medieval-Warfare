@@ -1,0 +1,587 @@
+
+# Siegeweapons
+
+SULB0:
+	Inherits: ^Siege
+	Inherits@AUTOTARGET: ^AutoTargetAll
+	Inherits@GainsExperience: ^GainsExperience
+	Inherits@GetsPoisoned: ^GetsPoisoned
+	Inherits@ArcherDemo65: ^ArcherDemo80
+	Inherits@Healable: ^Healable
+	Inherits@SnakeStunnable: ^SnakeSlowable
+	Valued:
+		Cost: 725
+	Tooltip:
+		Name: War Elephant
+	Buildable:
+		IconPalette: raicon
+		BuildPaletteOrder: 15
+		Description: Equipped with 2 Archers.\n  Very strong vs Light Infantry and Aircrafts \n  Moderate vs Cavalry\n  Weak vs Buildings\n\nTrains: 2 Peasants\n
+		Queue: MSiege.SUL
+	Mobile:
+		TurnSpeed: 2
+		Speed: 60
+		Crushes: crate, infantry
+	Health:
+		HP: 75000
+	AutoTarget:
+		ScanRadius: 7
+	RenderSprites:
+		PlayerPalette: raplayer
+	WithInfantryBody:
+		IdleSequences: stand
+		DefaultAttackSequence: shoot
+	Armor:
+		Type: HeavyCavalry
+	Selectable:
+		Bounds: 26,26,0,-13
+	SelectionDecorations:
+		VisualBounds: 26,26,0,-13
+	Targetable:
+		TargetTypes: Ground, Cavalry
+	AttackTurreted:
+	-ThrowsShrapnel@SMALL:
+	WithDeathAnimation:
+		DeathSequencePalette: raplayer
+		UseDeathTypeSuffix: False
+	WithSpriteTurret@1: 
+		Sequence: turretidle
+		AimSequence: turretanim
+		Turret: primary
+	WithSpriteTurret@2: 
+		Sequence: turretidle
+		AimSequence: turretanim
+		Turret: secondary
+	Turreted@1:
+		Turret: primary
+		TurnSpeed: 100
+		Offset: 70,-0,800
+	Turreted@2:
+		Turret: secondary
+		TurnSpeed: 100
+		Offset: -170,0,800
+	Armament@1:
+		Weapon: BowNArrowSiegeTower
+		LocalOffset: 0,0,427
+		Turret: primary
+	Armament@2:
+		Weapon: BowNArrowSiegeTower
+		LocalOffset: 0,0,427
+		Turret: secondary
+		FireDelay: 10
+	Armament@1DUMMY:
+		Weapon: BowNArrowSiegeTowerDUMMY
+		LocalOffset: 0,0,427
+		Turret: primary
+	Armament@2DUMMY:
+		Weapon: BowNArrowSiegeTowerDUMMY
+		LocalOffset: 0,0,427
+		Turret: secondary
+		FireDelay: 10	
+	Armament@1@Air:
+		Weapon: BowNArrowSiegeTowerAIR
+		LocalOffset: 0,0,427
+		Turret: primary
+	Armament@2Air:
+		Weapon: BowNArrowSiegeTowerAIR
+		LocalOffset: 0,0,427
+		Turret: secondary
+		FireDelay: 10
+	Voiced:
+		VoiceSet: ElephantVoice
+	PersonValued:
+		ActorCount: 2
+		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
+	SelfHealing@HOSPITAL:
+		PercentageStep: 1
+		Delay: 25
+		HealIfBelow: 100
+		DamageCooldown: 125
+		RequiresCondition: hospitalheal || hospitalhealbarr
+	WithDecoration@REDCROSS:
+		Image: pips
+		Sequence: pip-heal
+		ReferencePoint: Bottom, Right
+		RequiresCondition: hospitalheal || hospitalhealbarr
+	Targetable@CombatRole:
+		TargetTypes: HeavyCavalry
+	AutoTargetPriority@Counter1:
+		ValidTargets: Light, Ranged, LightCavalry, Support, Flying
+		Priority: 4
+		
+SULB1:
+	Inherits: ^Siege
+	Inherits@AUTOTARGET: ^AutoTargetGround
+	Inherits@AUTOTARGETDEF: ^AutoTargetDefenses
+	Inherits@GainsExperience: ^GainsExperience
+	Inherits@GetsPoisoned: ^GetsPoisoned
+	Inherits@ArcherDemo65: ^ArcherDemo80
+	Inherits@Healable: ^Healable
+	Inherits@SnakeStunnable: ^SnakeSlowable
+	Valued:
+		Cost: 1300
+	Tooltip:
+		Name: Dual Siege Ballista
+	Buildable:
+		IconPalette: raicon
+		BuildPaletteOrder: 20
+		Prerequisites: sultow3
+		Description: The Siege Ballista is a missile weapon that launches two large projectile \nat a distant target.\n  Very strong vs Cavalry and Buildings \n  Moderate vs Infantry\n  Weak vs Aircraft\n\nTrains: 2 Peasants\n
+		Queue: MSiege.SUL
+	Mobile:
+		TurnSpeed: 2
+		Speed: 60
+	Health:
+		HP: 9000
+		Shape: Capsule
+			Radius: 526
+			PointA: 0, -412
+			PointB: 0, 212
+	Armament:
+		Weapon: DualSiegeBalista
+		LocalOffset: 712,0,100
+	AttackFrontal:
+	AutoTarget:
+		ScanRadius: 11
+	RenderSprites:
+		PlayerPalette: raplayer
+	WithInfantryBody:
+		IdleSequences: stand
+		DefaultAttackSequence: shoot
+	Armor:
+		Type: LightCavalry
+	Selectable:
+		Bounds: 35,35,0,-6
+	Targetable:
+		TargetTypes: Ground, Siege
+	SpawnActorOnDeath:
+		Actor: SULB1.Husk
+	SpawnActorOnDeath@1:
+		Actor: SIEGERUNNER
+		Probability: 50
+	SpawnActorOnDeath@2:
+		Actor: SIEGERUNNER
+		Probability: 50
+	PersonValued:
+		ActorCount: 2
+		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
+	Targetable@CombatRole:
+		TargetTypes: Support
+
+		
+SULB1.Husk:
+	Inherits: ^MedievalHusk
+	Tooltip:
+		Name: Dual Siege Ballista (Destroyed)
+	RenderSprites:
+		PlayerPalette: raplayer
+		Image: sulb1.husk
+	ThrowsShrapnel@SMALL:
+		Weapons: SmallWood1, SmallWood2, SmallWood3, LargeWood1
+		Pieces: 1, 3
+		Range: 0c512, 3c0
+	WithFacingSpriteBody:
+		StartSequence: start
+		Sequence: idle
+		
+SULB2:
+	Inherits: ^Siege
+	Inherits@AUTOTARGET: ^AutoTargetGround
+	Inherits@AUTOTARGETDEF: ^AutoTargetDefenses
+	Inherits@GainsExperience: ^GainsExperience
+	Inherits@GetsPoisoned: ^GetsPoisoned
+	Inherits@ArcherDemo65: ^ArcherDemo80
+
+	Inherits@Healable: ^Healable
+	Inherits@SnakeStunnable: ^SnakeSlowable
+	Valued:
+		Cost: 2500
+	Tooltip:
+		Name: Siege Mortar
+	Mobile:
+		TurnSpeed: 2
+		Speed: 45
+	Health:
+		HP: 14000
+		Shape: Capsule
+			Radius: 526
+			PointA: 0, -412
+			PointB: 0, 212
+	Armament@1:
+		Weapon: MortarBoulder
+		LocalOffset: 612,0,600
+	Armament@2:
+		Weapon: MortarBoulder
+		LocalOffset: 612,0,600
+	Armament@3:
+		Weapon: MortarBoulder
+		LocalOffset: 612,0,600
+	Armament@4:
+		Weapon: MortarBoulder
+		LocalOffset: 612,0,600
+	Armament@5:
+		Weapon: MortarBoulder
+		LocalOffset: 612,0,600
+	Armament@6:
+		Weapon: MortarBoulder
+		LocalOffset: 612,0,600
+	AttackFrontal:
+	AutoTarget:
+		ScanRadius: 14
+	RenderSprites:
+		PlayerPalette: raplayer
+	WithInfantryBody:
+		IdleSequences: stand
+		DefaultAttackSequence: shoot
+	Armor:
+		Type: MediumCavalry
+	Selectable:
+		Bounds: 35,35,0,-6
+	Targetable:
+		TargetTypes: Ground, Siege
+	SpawnActorOnDeath:
+		Actor: SULB2.Husk
+	SpawnActorOnDeath@1:
+		Actor: SIEGERUNNER
+		Probability: 50
+	SpawnActorOnDeath@2:
+		Actor: SIEGERUNNER
+		Probability: 50
+	SpawnActorOnDeath@3:
+		Actor: SIEGERUNNER
+		Probability: 50
+	PersonValued:
+		ActorCount: 0
+		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
+	Targetable@CombatRole:
+		TargetTypes: Support
+	AutoTargetPriority@Counter1:
+		ValidTargets: Light, Heavy, Ranged, Support, LightCavalry, Defenses
+		Priority: 4
+		
+SULB2.Husk:
+	Inherits: ^MedievalHusk
+	Tooltip:
+		Name: Siege Mortar (Destroyed)
+	RenderSprites:
+		PlayerPalette: raplayer
+		Image: sulb2.husk
+	ThrowsShrapnel@SMALL:
+		Weapons: SmallWood1, SmallWood2, SmallWood3, LargeWood1
+		Pieces: 1, 3
+		Range: 0c512, 3c0
+	WithFacingSpriteBody:
+		StartSequence: start
+		Sequence: idle
+
+#Aircraft
+
+PLACEHOLDERBOLTS:
+	Inherits: ^Plane
+	Interactable:
+	HitShape:
+	-AppearsOnRadar:
+	RenderSprites:
+		Image: placeholder
+		Palette: empty
+	Tooltip:
+		Name:
+	Valued:
+		Cost: 2000
+	Aircraft:
+		TurnSpeed: 4
+		Speed: 303
+		Repulsable: False
+		CruiseAltitude: 15c0
+		IdealSeparation: 0c512
+	Health:
+		HP: 15000
+	Armor:
+		Type: Heavy
+	AttackBomber:
+		Armaments: gun, bombs
+		Guns: gun
+		Bombs: bombs
+	Armament@GUNS:
+		Name: gun
+		Weapon: SpearBarrage
+		LocalOffset: 0,0,-43, 0,100,-43, 0,100,-43
+	WithMuzzleOverlay:
+	Armament@BOMBS:
+		Name: bombs
+		Weapon: SpearBarrage
+		LocalOffset: 0,0,-43, 0,100,-43, 0,100,-43
+
+
+		
+SULM3:
+	Inherits: ^Helicopter
+	Inherits@GainsExperience: ^GainsExperience
+	Inherits@AUTOTARGET: ^AutoTargetGround
+	Inherits@AUTOTARGETDEF: ^AutoTargetDefenses
+	Valued:
+		Cost: 1000
+	Tooltip:
+		Name: Warlock
+	Buildable:
+		Description: Man on a flying carpet.\n  Strong vs Ground Units\n  Weak vs Aircraft\n  Cannot attack Aircrafts!!\n\nTrains: 1 Peasant\n
+		BuildPaletteOrder: 40
+		Prerequisites: anyhq
+		Queue: MVehicle.SUL
+		BuildDurationModifier: 40
+		IconPalette: raicon
+	Aircraft:
+		InitialFacing: 224
+		TurnSpeed: 10
+		Speed: 138
+		IdealSeparation: 0c812
+	Health:
+		HP: 8000
+	Armor:
+		Type: LightCavalry
+	RevealsShroud:
+		Range: 8c0
+		Type: CenterPosition
+	Armament:
+		Weapon: CarpetBomber
+		LocalOffset: 341,0,456
+	AttackHeli:
+		FacingTolerance: 20
+	RenderSprites:
+		PlayerPalette: raplayer
+	AutoTarget:
+	WithAttackAnimation:
+		AttackSequence: attack
+	WithMoveAnimation: 
+		MoveSequence: run
+	SelectionDecorations:
+		VisualBounds: 24,24
+		DecorationBounds: 24,24
+	SpawnActorOnDeath@1:
+		Actor: SULM3.Husk
+	SpawnActorOnDeath@2:
+		Actor: SULM3.ManHusk
+	PersonValued:
+		ActorCount: 1
+		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
+	Targetable@CombatRole:
+		TargetTypes: Flying
+	AutoTargetPriority@Counter1:
+		ValidTargets: Light, Heavy, Ranged, Support, LightCavalry, Defenses
+		Priority: 4
+
+		
+SULM3.Husk:
+	Inherits: ^HelicopterHusk
+	ConditionManager:
+	Tooltip:
+		Name: Dude
+	WithFacingSpriteBody:
+		Sequence: idle	
+	Aircraft:
+		TurnSpeed: 4
+		Speed: 156
+	RevealsShroud:
+		Range: 4c0
+		Type: CenterPosition
+	RenderSprites:
+		Image: sulm3.manhusk  
+		PlayerPalette: raplayer
+	FallsToEarth:
+		Spins: True
+		Moves: False
+		Explosion: GroundHit
+	
+SULM3.ManHusk:
+	Inherits@1: ^SpriteActor
+	Interactable:
+	HitShape:
+	Health:
+		HP: 280
+	Armor:
+		Type: Heavy
+	HiddenUnderFog:
+		Type: GroundPosition
+	ScriptTriggers:
+	WithFacingSpriteBody:
+		Sequence: idle
+	WithShadow:
+		Offset: 43, 128, 0
+		ZOffset: -129
+	Aircraft:
+		TurnSpeed: 1
+		Speed: 380
+	FallsToEarth:
+		Spins: True
+		Moves: True
+		Velocity: 26
+		Explosion: GroundHit
+	Tooltip:
+		Name: Kite out of controle
+	RevealsShroud:
+		Range: 1c0
+		Type: CenterPosition
+	RenderSprites:
+		Image: sulm3.husk
+		PlayerPalette: raplayer
+	KillsSelf:
+		Delay: 40
+	Explodes:
+		Weapon: GroundHit
+		EmptyWeapon: GroundHit
+		
+SULB3:
+	Inherits: ^Helicopter
+	Inherits@GainsExperience: ^GainsExperience
+	Inherits@AUTOTARGET: ^AutoTargetAll
+	Inherits@AUTOTARGETDEF: ^AutoTargetDefenses
+	Valued:
+		Cost: 2000
+	Tooltip:
+		Name: Giant Roc
+	Buildable:
+		Description: Giant Roc which throws razor sharp feathers at the enemy.\n  Strong vs Ground Units and Aircraft\n\nTrains: no Peasant\n\n
+		BuildPaletteOrder: 100
+		Prerequisites: sultow3, sultow4, anyhq
+		Queue: MSiege.SUL
+		BuildDurationModifier: 40
+		IconPalette: raicon
+	Aircraft:
+		InitialFacing: 224
+		TurnSpeed: 10
+		Speed: 100
+		IdealSeparation: 1c125
+	Health:
+		HP: 22500
+	Armor:
+		Type: LightCavalry
+	RevealsShroud:
+		Range: 8c0
+		Type: CenterPosition
+	Armament@1:
+		Weapon: SonicRaptor
+		LocalOffset: 641,925,456
+		FireDelay: 3
+	Armament@2:
+		Weapon: SonicRaptorSoundLess
+		LocalOffset: 441,724,356
+		FireDelay: 3
+		Name: secondary
+	Armament@3:
+		Weapon: SonicRaptorSoundLess
+		LocalOffset: 341,534,256
+		FireDelay: 3
+		Name: secondary
+	Armament@4:
+		Weapon: SonicRaptorSoundLess
+		LocalOffset: 641,-925,456
+		FireDelay: 3
+		Name: secondary
+	Armament@5:
+		Weapon: SonicRaptorSoundLess
+		LocalOffset: 441,-724,356
+		FireDelay: 3
+		Name: secondary
+	Armament@6:
+		Weapon: SonicRaptorSoundLess
+		LocalOffset: 341,-534,256
+		FireDelay: 3
+		Name: secondary
+	AttackHeli:
+		FacingTolerance: 20
+	RenderSprites:
+		PlayerPalette: raplayer
+	AutoTarget:
+	WithAttackAnimation:
+		AttackSequence: attack
+	WithMoveAnimation: 
+		MoveSequence: move
+	SelectionDecorations:
+		VisualBounds: 40,40,0,0
+	Selectable:
+		Bounds:40,40,0,0
+	SpawnActorOnDeath@1:
+		Actor: SULB3.Husk
+	PersonValued:
+		ActorCount: 0
+		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
+	Targetable@CombatRole:
+		TargetTypes: Flying
+		
+SULB3.Husk:
+	Inherits: ^HelicopterHusk
+	ConditionManager:
+	Tooltip:
+		Name: Dude
+	WithFacingSpriteBody:
+		Sequence: idle	
+	Aircraft:
+		TurnSpeed: 4
+		Speed: 156
+	RevealsShroud:
+		Range: 4c0
+		Type: CenterPosition
+	RenderSprites:
+		Image: sulb3.husk  
+		PlayerPalette: raplayer
+	FallsToEarth:
+		Spins: True
+		Moves: False
+		Explosion: GroundHit
+		
+SULTURNXL:
+	Inherits@1: ^ExistsInWorld
+	Inherits@4: ^SpriteActor
+	DrawLineToTarget:
+	UpdatesPlayerStatistics:
+	AppearsOnRadar:
+		UseLocation: true
+	WithSpriteControlGroupDecoration:
+	HiddenUnderFog:
+		Type: CenterPosition
+	HitShape:
+	EditorTilesetFilter:
+		Categories: Aircraft
+	Aircraft:
+		CruiseAltitude: 0
+		InitialFacing: 192
+		TurnSpeed: 5
+		Speed: 25
+		RepulsionSpeed: 20
+		MaximumPitch: 56
+	Health:
+		HP: 10000
+	AttackPlane:
+		FacingTolerance: 20
+	Tooltip:
+		Name: Turnado
+	ConditionManager:
+	WithPermanentExplosion:
+		Weapon: TornadoExplosion
+		Delay: 5
+	RevealsShroud:
+		Range: 5c0
+		Type: CenterPosition
+	RenderSprites:
+		PlayerPalette: raplayer
+	SelfHealing@KILLSELF:
+		PercentageStep: -5
+		Delay: 30
+		HealIfBelow: 101
+		DamageCooldown: 0
+		DamageTypes: DefaultDeath
+	Selectable:
+		Bounds: 72,106,0,-58
+	SelectionDecorations:
+		VisualBounds: 72,106,0,-58
+		RenderSelectionBars: False
+	WithDeathAnimation:
+		DeathSequencePalette: raplayer
+		UseDeathTypeSuffix: False
+	BodyOrientation:
+		QuantizedFacings: 32
+	WithSpriteBody:
+		StartSequence: make
+	AmbientSound:
+		SoundFiles: tornado.aud
+		Delay: 10

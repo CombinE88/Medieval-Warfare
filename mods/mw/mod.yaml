@@ -47,33 +47,48 @@ Packages:
 	mw|bits/Trees
 	mw|bits/Trees/Anim
 	mw|bits/interior
+	mw|bits/campain
 
 MapFolders:
 	mw|maps: System
 	~^maps/mw/release-20180218: User
 
 Rules:
+	mw|rules/defaults.yaml
+	mw|rules/defaultcombatsystem.yaml
+	mw|rules/defaultscaffoldmagic.yaml
+	mw|rules/defaultsunitstati.yaml
+	mw|rules/palettes.yaml
 	mw|rules/AI.yaml
-	mw|rules/Aircraft.yaml
-	mw|rules/Buildings.yaml
-	mw|rules/BuildingScaffolds.yaml
-	mw|rules/Cavalry.yaml
+	mw|rules/campain-units.yaml
 	mw|rules/civilian.yaml
 	mw|rules/civilian-desert.yaml
-	mw|rules/defaults.yaml
-	mw|rules/Defenses.yaml
 	mw|rules/Environment.yaml
-	mw|rules/Infantry.yaml
-	mw|rules/misc.yaml
-	mw|rules/palettes.yaml
-	mw|rules/player.yaml
 	mw|rules/Props.yaml
-	mw|rules/Siegeweapons.yaml
 	mw|rules/trees.yaml
+	mw|rules/undeadbuildings.yaml
+	mw|rules/undeadefaults.yaml
+	mw|rules/undeadunits.yaml
+	mw|rules/sultanbuildings.yaml
+	mw|rules/sultaninfantry.yaml
+	mw|rules/sultanmisc.yaml
+	mw|rules/sultanscaffolds1.yaml
+	mw|rules/misc.yaml
+	mw|rules/miscbuildings.yaml
+	mw|rules/miscinfantry.yaml
+	mw|rules/miscscaffolds.yaml
+	mw|rules/kingbuildings.yaml
+	mw|rules/kinginfantry.yaml
+	mw|rules/kingscaffolds.yaml
+	mw|rules/baronbuildings.yaml
+	mw|rules/baroninfantry.yaml
+	mw|rules/baronscaffolds.yaml
+	mw|rules/allaircraft.yaml
+	mw|rules/allcavalry.yaml
+	mw|rules/alldefenses.yaml
+	mw|rules/allsiegeweapons.yaml
 	mw|rules/world.yaml
-	mw|rules/Sultan.yaml
-	mw|rules/SultanScaffolds.yaml
-	mw|rules/Undead.yaml
+	mw|rules/player.yaml
 
 Sequences:
 	mw|sequences/builking.yaml
@@ -115,9 +130,12 @@ TileSets:
 	mw|tilesets/interior.yaml
 
 Weapons:
-	mw|weapons/MWWeapons.yaml
+	mw|weapons/MWWeaponsmisc.yaml
+	mw|weapons/MWWeaponsclose.yaml
+	mw|weapons/MWWeaponsranged.yaml
 	mw|weapons/MWSultanW.yaml
 	mw|weapons/MWUndeadGuns.yaml
+	mw|weapons/MWcampain-weapons.yaml
 
 Cursors:
 	mw|cursors.yaml

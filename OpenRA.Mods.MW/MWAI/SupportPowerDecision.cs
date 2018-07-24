@@ -111,7 +111,7 @@ namespace OpenRA.Mods.MW.MWAI
 			return answer;
 		}
 
-		public int GetNextScanTime(HackyAI ai) { return ai.Random.Next(MinimumScanTimeInterval, MaximumScanTimeInterval); }
+		public int GetNextScanTime(HackyMWAI ai) { return ai.Random.Next(MinimumScanTimeInterval, MaximumScanTimeInterval); }
 
 		/// <summary>Makes up part of a decision, describing how to evaluate a target.</summary>
 		public class Consideration

@@ -14,15 +14,15 @@ namespace OpenRA.Mods.MW.MWAI
     {
         public readonly World World;
         public Player Player { get; private set; }
-        public HackyAIInfo hackyAIInfo;
-        public HackyAI hackyAI;
+        public HackyMWAIInfo hackyAIInfo;
+        public HackyMWAI hackyAI;
 
         // Undead variables
 
         public HashSet<Actor> AcolyteBuilder = new HashSet<Actor>();
         public HashSet<Actor> AcolyteHarvester = new HashSet<Actor>();
 
-        public UndeadAIHAndler(World w, HackyAIInfo hackinfo, HackyAI hai, Player player)
+        public UndeadAIHAndler(World w, HackyMWAIInfo hackinfo, HackyMWAI hai, Player player)
         {
             World = w;
             hackyAIInfo = hackinfo;
