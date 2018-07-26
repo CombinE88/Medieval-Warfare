@@ -325,7 +325,7 @@ CSTLWLL:
 	Inherits: ^Wall
 	Inherits@Hitshape: ^1x1Shape
 	Valued:
-		Cost: 350
+		Cost: 0
 	CustomSellValue:
 		Value: 0
 	Tooltip:
@@ -338,6 +338,7 @@ CSTLWLL:
 	Building:
 	RenderSprites:
 		PlayerPalette: raplayer
+		Image: frtwll
 		-Palette:
 	SoundOnDamageTransition:
 		DestroyedSounds: crumble.aud
@@ -353,6 +354,7 @@ CSTLWLL:
 WDWLL:
 	Inherits: ^Wall
 	Inherits@Hitshape: ^1x1Shape
+	Building:
 	Valued:
 		Cost: 150
 	CustomSellValue:
@@ -362,7 +364,7 @@ WDWLL:
 	Buildable:
 		Description: Palisades. Nothing else.\n\n\n
 		BuildPaletteOrder: 40
-		Queue: MMilitary.GDI, MMilitary.Nod, MMilitary.SUL
+		Queue: Building4.GDI, Building4.Nod, Building4.SUL
 		BuildDurationModifier: 40
 		IconPalette: raicon
 	Health:
@@ -384,3 +386,111 @@ WDWLL:
 	Building:
 		Adjacent: 12
 		BuildSounds: shovel.aud
+		
+		
+# test
+
+CSTLGTEW:
+	Inherits: ^MWGate
+	Inherits@Hitshape: ^3x1Shape
+	Building:
+	WithDeathAnimation:
+		DeathSequencePalette: raplayer
+	RenderSprites:
+		PlayerPalette: raplayer
+	Gate:
+		Adjacent: 7
+	WithGateSpriteBody:
+		WallConnections: -1,0, 3,0
+		Type: concrete
+		OpenSequence: open
+	LineBuildNode:
+		Types: concrete
+		Connections: -1,0, 3,0
+	Valued:
+		Cost: 1500
+	Tooltip:
+		Name: Castle Gate
+	Health:
+		HP: 200000
+		Shape: Rectangle
+			TopLeft: -1436,-412
+			BottomRight: 1436, 412
+	RevealsShroud:
+		Range: 5c0
+	WithBuildingBib:
+	BodyOrientation:
+		QuantizedFacings: 1
+	Armor:
+		Type: Concrete 
+	Selectable:
+		Bounds: 72,48,0,-21
+	SelectionDecorations:
+		VisualBounds: 72,48,0,-21
+	ThrowsShrapnel@SMALL:
+		Weapons: SmallStone1, SmallStone2, LargeStone1
+		Pieces: 5, 7
+		Range: 0c512, 3c0
+	Building:
+		Dimensions: 3,1
+		Footprint: xxx
+		Adjacent: 7
+		
+CSTLGTNS: 
+	Inherits: ^MWGate
+	Inherits@Hitshape: ^1x3Shape
+	WithDeathAnimation:
+		DeathSequencePalette: raplayer
+	RenderSprites:
+		PlayerPalette: raplayer
+	Gate:
+		Adjacent: 7
+	Valued:
+		Cost: 1500
+	Tooltip:
+		Name: Castle Gate
+	Health:
+		HP: 200000
+		Shape: Rectangle
+			TopLeft: -456,-1436
+			BottomRight: 456, 1436
+	RevealsShroud:
+		Range: 5c0
+	BodyOrientation:
+		QuantizedFacings: 1
+	Armor:
+		Type: Concrete 
+	ThrowsShrapnel@SMALL:
+		Weapons: SmallStone1, SmallStone2, LargeStone1
+		Pieces: 5, 7
+		Range: 0c512, 3c0 
+	Selectable:
+		Bounds: 28,94,3,-12
+	SelectionDecorations:
+		VisualBounds: 28,94,3,-12
+	Gate:
+		Adjacent: 7
+	WithGateSpriteBody:
+		WallConnections: 0,3, 0,-1
+		Type: concrete
+		OpenSequence: open
+	LineBuildNode:
+		Types: concrete
+		Connections: 0,3, 0,-1
+	WithIdleOverlay:
+		Sequence: top
+	Building:
+		Dimensions: 1,3
+		Footprint: x x x
+		Adjacent: 7
+		
+SULGTNS: 
+	Inherits: CSTLGTNS
+	RenderSprites:
+		PlayerPalette: sultanplayer
+		Image: sulgtns
+SULGTEW: 
+	Inherits: CSTLGTEW
+	RenderSprites:
+		PlayerPalette: sultanplayer
+		Image: sulgtew

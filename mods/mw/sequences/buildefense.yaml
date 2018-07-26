@@ -421,6 +421,52 @@ cstlwll:
 			INTERIOR: TEMPERAT
 		Length: *
 		Offset: 0,-2
+        
+frtwll:
+	Inherits: ^scaffold
+	idle: frtwll
+		Length: 16
+		Offset: 0,-12,0
+	scratched-idle: frtwlld
+		Length: 16
+		Offset: 0,-12,0
+	damaged-idle: frtwlle
+		Length: 16
+		Offset: 0,-12,0
+	icon: cstlwllicon.shp
+		AddExtension: False
+	bib: mbGTWR
+		UseTilesetExtension: true
+		TilesetOverrides:
+			WINTER: TEMPERAT
+			JUNGLE: TEMPERAT
+			JUNGLE: TEMPERAT
+			INTERIOR: TEMPERAT
+		Length: *
+		Offset: 0,-2
+        
+sulwll:
+	Inherits: ^scaffold
+	idle: sulwll
+		Length: 16
+		Offset: 0,-12,0
+	scratched-idle: sulwlld
+		Length: 16
+		Offset: 0,-12,0
+	damaged-idle: sulwlle
+		Length: 16
+		Offset: 0,-12,0
+	icon: cstlwllicon.shp
+		AddExtension: False
+	bib: mbGTWR
+		UseTilesetExtension: true
+		TilesetOverrides:
+			WINTER: TEMPERAT
+			JUNGLE: TEMPERAT
+			JUNGLE: TEMPERAT
+			INTERIOR: TEMPERAT
+		Length: *
+		Offset: 0,-2
 	
 		
 wdwll:
@@ -542,4 +588,237 @@ obelisk:
 		Length: *
 		Tick: 200
 	icon: obeliskicon.shp
+		AddExtension: False
+
+# test
+
+cstlgtew:
+	Inherits: ^scaffold
+	idle: cstlgtew
+		Offset: 0,-24,0
+		Start: 0
+		Length: 8
+		Tick: 80
+		ZOffset: 512
+	open: cstlgtew
+		Offset: 0,-24,0
+		Start: 8
+		ZOffset: 512
+	damaged-idle: cstlgtewd
+		Offset: 0,-24,0
+		Start: 0
+		Length: 8
+		Tick: 80
+		ZOffset: 512
+	damaged-open: cstlgtewd
+		Start: 8
+		Offset: 0,-24,0
+		ZOffset: 512
+	dead: cstlgtewe
+		Tick: 800
+		Offset: 0,-24,0
+		ZOffset: 512
+	make1: cstlgtewmake
+		Start: 0
+		ZOffset: -25
+		Offset: 0,-30
+	make2: cstlgtewmake
+		Start: 1
+		ZOffset: -25
+		Offset: 0,-30
+	make3: cstlgtewmake
+		Start: 2
+		ZOffset: -25
+		Offset: 0,-30
+	make4: cstlgtewmake
+		Start: 3
+		ZOffset: -25
+		Offset: 0,-30
+	make5: cstlgtewmake
+		Start: 4
+		ZOffset: -25
+		Offset: 0,-30
+	make6: cstlgtewmake
+		Start: 5
+		ZOffset: -25
+		Offset: 0,-30
+	bib: bib2
+		UseTilesetExtension: true
+		Length: *
+		Offset: 0,-4,0
+	icon: cstlgtweicon.shp
+		AddExtension: False
+		
+cstlgtns:
+	Inherits: ^scaffold
+	idle: cstlgtnstop
+		Offset: 0,-18,0
+		Start: 0
+		Length: 8
+		Tick: 80
+		ZOffset: 1024
+	open: cstlgtnstop
+		Offset: 0,-18,0
+		Start: 8
+		ZOffset: 1024
+	damaged-idle: cstlgtnstopd
+		Offset: 0,-18,0
+		Start: 0
+		Length: 8
+		Tick: 80
+		ZOffset: 1024
+	damaged-open: cstlgtnstopd
+		Start: 8
+		Offset: 0,-18,0
+		ZOffset: 1024
+	dead: cstlgtnstop
+		Start: 0
+		Tick: 800
+		Offset: 0,-18,0
+		ZOffset: 1024
+	top: cstlgtns
+		Offset: 0,-22,0
+	damaged-top: cstlgtnsd
+		Offset: 0,-22,0
+	make1: cstlgtnsmake
+		Start: 0
+		ZOffset: -25
+		Offset: 0,-18
+	make2: cstlgtnsmake
+		Start: 1
+		ZOffset: -25
+		Offset: 0,-18
+	make3: cstlgtnsmake
+		Start: 2
+		ZOffset: -25
+		Offset: 0,-18
+	make4: cstlgtnsmake
+		Start: 3
+		ZOffset: -25
+		Offset: 0,-18
+	make5: cstlgtnsmake
+		Start: 4
+		ZOffset: -25
+		Offset: 0,-18
+	make6: cstlgtnsmake
+		Start: 5
+		ZOffset: -25
+		Offset: 0,-18
+	icon: cstlgtnsicon.shp
+		AddExtension: False
+        
+
+sulgtew:
+	Inherits: ^scaffold
+	idle: sulgtew
+		Offset: 0,-24,0
+		Start: 0
+		Length: 8
+		Tick: 80
+		ZOffset: 512
+	open: sulgtew
+		Offset: 0,-24,0
+		Start: 8
+		ZOffset: 512
+	damaged-idle: sulgtewd
+		Offset: 0,-24,0
+		Start: 0
+		Length: 8
+		Tick: 80
+		ZOffset: 512
+	damaged-open: sulgtewd
+		Start: 8
+		Offset: 0,-24,0
+		ZOffset: 512
+	dead: sulgtewe
+		Tick: 800
+		Offset: 0,-24,0
+		ZOffset: 512
+	make1: sulgtewmake
+		Start: 0
+		ZOffset: -25
+		Offset: 0,-30
+	make2: sulgtewmake
+		Start: 1
+		ZOffset: -25
+		Offset: 0,-30
+	make3: sulgtewmake
+		Start: 2
+		ZOffset: -25
+		Offset: 0,-30
+	make4: sulgtewmake
+		Start: 3
+		ZOffset: -25
+		Offset: 0,-30
+	make5: sulgtewmake
+		Start: 4
+		ZOffset: -25
+		Offset: 0,-30
+	make6: sulgtewmake
+		Start: 5
+		ZOffset: -25
+		Offset: 0,-30
+	bib: bib2
+		UseTilesetExtension: true
+		Length: *
+		Offset: 0,-4,0
+	icon: cstlgtweicon.shp
+		AddExtension: False
+		
+sulgtns:
+	Inherits: ^scaffold
+	idle: sulgtnstop
+		Offset: 0,-18,0
+		Start: 0
+		Length: 8
+		Tick: 80
+		ZOffset: 1024
+	open: sulgtnstop
+		Offset: 0,-18,0
+		Start: 8
+		ZOffset: 1024
+	damaged-idle: sulgtnstopd
+		Offset: 0,-18,0
+		Start: 0
+		Length: 8
+		Tick: 80
+		ZOffset: 1024
+	damaged-open: sulgtnstopd
+		Start: 8
+		Offset: 0,-18,0
+		ZOffset: 1024
+	dead: sulgtnstop
+		Start: 0
+		Tick: 800
+		Offset: 0,-18,0
+		ZOffset: 1024
+	top: sulgtns
+		Offset: 0,-22,0
+	damaged-top: sulgtnsd
+		Offset: 0,-22,0
+	make1: sulgtnsmake
+		Start: 0
+		ZOffset: -25
+		Offset: 0,-18
+	make2: sulgtnsmake
+		Start: 1
+		ZOffset: -25
+		Offset: 0,-18
+	make3: sulgtnsmake
+		Start: 2
+		ZOffset: -25
+		Offset: 0,-18
+	make4: sulgtnsmake
+		Start: 3
+		ZOffset: -25
+		Offset: 0,-18
+	make5: sulgtnsmake
+		Start: 4
+		ZOffset: -25
+		Offset: 0,-18
+	make6: sulgtnsmake
+		Start: 5
+		ZOffset: -25
+		Offset: 0,-18
+	icon: cstlgtnsicon.shp
 		AddExtension: False

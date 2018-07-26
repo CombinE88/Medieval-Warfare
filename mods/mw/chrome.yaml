@@ -574,6 +574,9 @@ production-icons: chromeMW.png
 	tech: 384,264,24,24
 	tech-disabled: 384,288,24,24
 	tech-alert: 384,312,24,24
+	building4: 408,264,24,24
+	building4-disabled: 408,288,24,24
+	building4-alert: 408,312,24,24
 
 order-icons: chromeMW.png
 	options: 120,0,24,24

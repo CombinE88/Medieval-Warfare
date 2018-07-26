@@ -435,20 +435,20 @@ CSTLWLL.scaff:
 	CustomSellValue:
 		Value: 0
 	Valued:
-		Cost: 350
+		Cost: 550
 	Tooltip:
 		Name: Construction Site (Castle Wall)
 	Buildable:
 		Description: Castlewall that blocks arrows and other projectiles\n\n\n
 		BuildPaletteOrder: 50
-		BuildDuration: 350
+		BuildDuration: 550
 		Prerequisites: anyworkshop
-		Queue: MMilitary.GDI, MMilitary.Nod
+		Queue: Building4.GDI, Building4.Nod
 		BuildDurationModifier: 40
 		IconPalette: raicon
 	Building:
 		Dimensions: 1,1
-		Footprint: =
+		Footprint: x
 		BuildSounds: brickconc.aud
 		Adjacent: 7
 	Health:
@@ -496,4 +496,209 @@ CSTLWLL.scaff:
 	-ExternalCondition@PLACEHOLDER:
 	-GivesBuildableArea:
 	-RevealsShroud:
+    
+    
+CSTLGTNS.scaff:
+	Inherits: ^1x4SITE
+	Inherits@Hitshape: ^1x3Shape
+	Armor:
+		Type: HeavyBuilding
+	RenderSprites:
+		PlayerPalette: raplayer
+		Image: cstlgtns
+	CustomSellValue:
+		Value: 450
+	Valued:
+		Cost: 750
+	Tooltip:
+		Name: Construction Site (Castle Gate)
+	Buildable:
+		Description: Operated gate that opens for allied units.\nUnarmed\n\n\n
+		BuildPaletteOrder: 70
+		Prerequisites: anyworkshop
+		Queue: Building4.GDI, Building4.Nod
+		BuildDuration: 750
+		BuildDurationModifier: 40
+		IconPalette: raicon
+	Building:
+		Dimensions: 1,3
+		Footprint: x x x
+		Adjacent: 7
+	Health:
+		HP: 100000
+	RevealsShroud:
+		Range: 5c0
+	Selectable:
+		Bounds: 28,94,3,-12
+	SelectionDecorations:
+		VisualBounds: 28,94,3,-12
+	WithSpriteBody:
+		RequiresCondition: DoNotRender
+	DebugTransformOnCondition@Finsihed:
+		RequiresCondition: (75 - Construct) <= 0
+		IntoActor: cstlgtns
+		ReadyAudio:
+	ExternalCondition@buildfurther: 
+		Condition: Construct
+		TotalCap: 75
+	ExternalCondition@Deliverfurther:
+		Condition: DeliveredResources
+		TotalCap: 75
+	Targetable@buildfurther: 
+		TargetTypes: Buildable
+		RequiresCondition: DeliveredResources > Construct && (75 - Construct) > 0
+	Targetable@deliverresources: 
+		TargetTypes: Deliverable
+		RequiresCondition: 75 > DeliveredResources
+	WithIdleOverlay@base1:
+		Sequence: make1
+		RequiresCondition: Construct > 10 && Construct < 30
+	WithIdleOverlay@base2:
+		Sequence: make2
+		RequiresCondition: Construct >= 30 && Construct < 40
+	WithIdleOverlay@base3:
+		Sequence: make3
+		RequiresCondition: Construct >= 40 && Construct < 50
+	WithIdleOverlay@base4:
+		Sequence: make4
+		RequiresCondition: Construct >= 50 && Construct < 60
+	WithIdleOverlay@base5:
+		Sequence: make5
+		RequiresCondition: Construct >= 60 && Construct < 70
+	WithIdleOverlay@base6:
+		Sequence: make6
+		RequiresCondition: Construct >= 70
+	ExternalCondition@DoNotRender:
+		Condition: DoNotRender
+	LineBuildNode:
+		Types: concrete
+		Connections: 0,3, 0,0
+	RequiresBuildableArea:
+		AreaTypes: building
+		Adjacent: 10
+	ScriptTriggers:
+	-ExternalCondition@PLACEHOLDER:
+	-GivesBuildableArea:
+	-RevealsShroud:
+    
+CSTLGTEW.scaff:
+	Inherits: ^3x2SITE
+	Inherits@Hitshape: ^1x3Shape
+	Armor:
+		Type: HeavyBuilding
+	RenderSprites:
+		PlayerPalette: raplayer
+		Image: cstlgtew
+	CustomSellValue:
+		Value: 450
+	Valued:
+		Cost: 750
+	Tooltip:
+		Name: Construction Site (Castle Gate)
+	Buildable:
+		Description:Operated gate that opens for allied units.\nUnarmed\n\n\n
+		BuildPaletteOrder: 80
+		Prerequisites: anyworkshop
+		Queue: Building4.GDI, Building4.Nod
+		BuildDuration: 750
+		BuildDurationModifier: 40
+		IconPalette: raicon
+	Building:
+		Dimensions: 3,1
+		Footprint: x x x
+		Adjacent: 7
+		LocalCenterOffset: 0,256,0
+	Health:
+		HP: 100000
+	RevealsShroud:
+		Range: 5c0
+	Selectable:
+		Bounds: 72,48,0,-21
+	SelectionDecorations:
+		VisualBounds: 72,48,0,-21
+	WithSpriteBody:
+		RequiresCondition: DoNotRender
+	DebugTransformOnCondition@Finsihed:
+		RequiresCondition: (75 - Construct) <= 0
+		IntoActor: cstlgtew
+		ReadyAudio:
+	ExternalCondition@buildfurther: 
+		Condition: Construct
+		TotalCap: 75
+	ExternalCondition@Deliverfurther:
+		Condition: DeliveredResources
+		TotalCap: 75
+	Targetable@buildfurther: 
+		TargetTypes: Buildable
+		RequiresCondition: DeliveredResources > Construct && (75 - Construct) > 0
+	Targetable@deliverresources: 
+		TargetTypes: Deliverable
+		RequiresCondition: 75 > DeliveredResources
+	WithIdleOverlay@base1:
+		Sequence: make1
+		RequiresCondition: Construct > 10 && Construct < 30
+	WithIdleOverlay@base2:
+		Sequence: make2
+		RequiresCondition: Construct >= 30 && Construct < 40
+	WithIdleOverlay@base3:
+		Sequence: make3
+		RequiresCondition: Construct >= 40 && Construct < 50
+	WithIdleOverlay@base4:
+		Sequence: make4
+		RequiresCondition: Construct >= 50 && Construct < 60
+	WithIdleOverlay@base5:
+		Sequence: make5
+		RequiresCondition: Construct >= 60 && Construct < 70
+	WithIdleOverlay@base6:
+		Sequence: make6
+		RequiresCondition: Construct >= 70
+	ExternalCondition@DoNotRender:
+		Condition: DoNotRender
+	LineBuildNode:
+		Types: concrete
+		Connections: 0,0, 3,0
+	RequiresBuildableArea:
+		AreaTypes: building
+		Adjacent: 10
+	ScriptTriggers:
+	-ExternalCondition@PLACEHOLDER:
+	-GivesBuildableArea:
+	-RevealsShroud:
+  
+  
+SULGTNS.scaff:
+	Inherits: CSTLGTNS.scaff
+	RenderSprites:
+		PlayerPalette: sultanplayer
+		Image: sulgtns
+	Buildable:
+		Description:Operated gate that opens for allied units.\nUnarmed\n\n\n
+		BuildPaletteOrder: 80
+		Prerequisites: anyworkshop
+		Queue: Building4.SUL
+		BuildDuration: 1540
+		BuildDurationModifier: 40
+		IconPalette: raicon
+	DebugTransformOnCondition@Finsihed:
+		RequiresCondition: (75 - Construct) <= 0
+		IntoActor: sulgtns
+		ReadyAudio:
+    
+SULGTEW.scaff:
+	Inherits: CSTLGTEW.scaff
+	RenderSprites:
+		PlayerPalette: sultanplayer
+		Image: sulgtew
+	Buildable:
+		Description:Operated gate that opens for allied units.\nUnarmed\n\n\n
+		BuildPaletteOrder: 80
+		Prerequisites: anyworkshop
+		Queue: Building4.SUL
+		BuildDuration: 1540
+		BuildDurationModifier: 40
+		IconPalette: raicon
+	DebugTransformOnCondition@Finsihed:
+		RequiresCondition: (75 - Construct) <= 0
+		IntoActor: sulgtew
+		ReadyAudio:
   

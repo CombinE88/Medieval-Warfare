@@ -70,7 +70,22 @@
 		Type: Rectangle
 			TopLeft: -2048, -2048
 			BottomRight: 2048, 2048  
+            
 
+^1x3Shape:
+	HitShape:
+		UseTargetableCellsOffsets: true
+		Type: Rectangle
+			TopLeft: -1536, -512
+			BottomRight: 1536, 512
+            
+
+^3x1Shape:
+	HitShape:
+		UseTargetableCellsOffsets: true
+		Type: Rectangle
+			TopLeft: -512, -1536
+			BottomRight: 512, 1536
 	
 ^GainsExperience:
 	GainsExperience:
@@ -884,6 +899,15 @@
 	HitShape:
 	EditorTilesetFilter:
 		Categories: Wall
+	RequiresBuildableArea:
+		AreaTypes: building
+		Adjacent: 10
+	Building:
+		Dimensions: 1,1
+		Footprint: x
+		BuildSounds:
+		Adjacent: 7
+		TerrainTypes: Clear,Road
 
 ^MedievalHusk:
 	Inherits@1: ^SpriteActor

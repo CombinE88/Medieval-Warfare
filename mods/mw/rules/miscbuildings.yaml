@@ -97,7 +97,7 @@ FACTNEW:
 		Range: 10c0
 	WithBuildingBib:
 	Production:
-		Produces: MBuilding.GDI, MBuilding.Nod, MTech.GDI, MTech.Nod, MBuilding.SUL, MTech.SUL, MResources.GDI, MResources.Nod,MMilitary.GDI, MMilitary.Nod,MResources.SUL, MMilitary.SUL
+		Produces: MBuilding.GDI, MBuilding.Nod, MTech.GDI, MTech.Nod, MBuilding.SUL, MTech.SUL, MResources.GDI, MResources.Nod,MMilitary.GDI, MMilitary.Nod,MResources.SUL, MMilitary.SUL, Building4.SUL, Building4.Nod, Building4.GDI
 	ProductionQueue@GDIMBuilding:
 		Type: MBuilding.GDI
 		Factions: gdi
@@ -182,6 +182,27 @@ FACTNEW:
 		LowPowerSlowdown: 2
 		QueuedAudio: Building
 		ReadyAudio: ConstructionComplete
+	ProductionQueue@SULBuilding4:
+		Type: Building4.SUL
+		Factions: sul
+		Group: Building4
+		LowPowerSlowdown: 2
+		QueuedAudio: Building
+		ReadyAudio: ConstructionComplete
+	ProductionQueue@GDIBuilding4:
+		Type: Building4.GDI
+		Factions: gdi
+		Group: Building4
+		LowPowerSlowdown: 2
+		QueuedAudio: Building
+		ReadyAudio: ConstructionComplete
+	ProductionQueue@NodBuilding4:
+		Type: Building4.Nod
+		Factions: nod
+		Group: Building4
+		LowPowerSlowdown: 2
+		QueuedAudio: Building
+		ReadyAudio: ConstructionComplete
 	BaseBuilding:
 	ProductionBar@BuildingGDI:
 		ProductionType: MBuilding.GDI
@@ -207,6 +228,12 @@ FACTNEW:
 		ProductionType: MMilitary.Nod
 	ProductionBar@BuildingSUL3:
 		ProductionType: MMilitary.SUL
+	ProductionBar@BuildingGDI4:
+		ProductionType: Building4.GDI
+	ProductionBar@BuildingNod4:
+		ProductionType: Building4.Nod
+	ProductionBar@BuildingSUL4:
+		ProductionType: Building4.SUL
 	BaseProvider:
 		Cooldown: 25
 		Range: 16c0
@@ -335,7 +362,7 @@ MINIFACT:
 		Range: 7c0
 	WithBuildingBib:
 	Production:
-		Produces: MBuilding.GDI, MBuilding.Nod, MTech.GDI, MTech.Nod, MBuilding.SUL, MTech.SUL, MResources.GDI, MResources.Nod,MMilitary.GDI, MMilitary.Nod,MResources.SUL, MMilitary.SUL
+		Produces: MBuilding.GDI, MBuilding.Nod, MTech.GDI, MTech.Nod, MBuilding.SUL, MTech.SUL, MResources.GDI, MResources.Nod,MMilitary.GDI, MMilitary.Nod,MResources.SUL, MMilitary.SUL, Building4.SUL, Building4.Nod, Building4.GDI
 	ProductionQueue@GDIMBuilding:
 		Type: MBuilding.GDI
 		Factions: gdi
@@ -420,6 +447,27 @@ MINIFACT:
 		LowPowerSlowdown: 2
 		QueuedAudio: Building
 		ReadyAudio: ConstructionComplete
+	ProductionQueue@SULBuilding4:
+		Type: Building4.SUL
+		Factions: sul
+		Group: Building4
+		LowPowerSlowdown: 2
+		QueuedAudio: Building
+		ReadyAudio: ConstructionComplete
+	ProductionQueue@GDIBuilding4:
+		Type: Building4.GDI
+		Factions: gdi
+		Group: Building4
+		LowPowerSlowdown: 2
+		QueuedAudio: Building
+		ReadyAudio: ConstructionComplete
+	ProductionQueue@NodBuilding4:
+		Type: Building4.Nod
+		Factions: nod
+		Group: Building4
+		LowPowerSlowdown: 2
+		QueuedAudio: Building
+		ReadyAudio: ConstructionComplete
 	BaseBuilding:
 	ProductionBar@BuildingGDI:
 		ProductionType: MBuilding.GDI
@@ -445,6 +493,12 @@ MINIFACT:
 		ProductionType: MMilitary.Nod
 	ProductionBar@BuildingSUL3:
 		ProductionType: MMilitary.SUL
+	ProductionBar@BuildingGDI4:
+		ProductionType: Building4.GDI
+	ProductionBar@BuildingNod4:
+		ProductionType: Building4.Nod
+	ProductionBar@BuildingSUL4:
+		ProductionType: Building4.SUL
 	BaseProvider:
 		Cooldown: 25
 		Range: 13c0

@@ -729,19 +729,6 @@ DEMONHORSE:
 		Bounds: 26,34,0,-6
 	SelectionDecorations:
 		VisualBounds: 26,34,0,-6
-	LeavesTrails@left:
-		Image: burningprints
-		MovingInterval: 6
-		Offsets: 0,130,0
-		Type: CenterPosition
-		TerrainTypes: Clear, Rough, Road, DirtRoad, Ground, Tiberium, BlueTiberium, Crops, Loot, Wood
-	LeavesTrails@right:
-		Image: burningprints
-		MovingInterval: 6
-		StartDelay: 3
-		Offsets: 0,-130,0
-		Type: CenterPosition
-		TerrainTypes: Clear, Rough, Road, DirtRoad, Ground, Tiberium, BlueTiberium, Crops, Loot, Wood
 	Targetable@CombatRole:
 		TargetTypes: RegularCavalry
 	AutoTargetPriority@Counter1:

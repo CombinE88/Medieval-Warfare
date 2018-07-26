@@ -2,8 +2,8 @@
 CSTLWLLSUL:
 	Inherits: CSTLWLL
 	RenderSprites:
-		PlayerPalette: sulwallplayer
-		Image: cstlwll
+		PlayerPalette: sultanplayer
+		Image: sulwll
 
 SULGTW:
 	Inherits: ^MWDefense

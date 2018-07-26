@@ -177,7 +177,7 @@ ZIGGURAT1:
 		Range: 10c0
 	WithBuildingBib:
 	Production:
-		Produces: MBuilding.ded, MResources.ded, MMilitary.ded
+		Produces: MBuilding.ded, MResources.ded, MMilitary.ded, Building4.ded
 	ProductionQueue@DeadMBuilding:
 		Type: MBuilding.ded
 		Factions: ded
@@ -199,6 +199,13 @@ ZIGGURAT1:
 		LowPowerSlowdown: 2 
 		ReadyAudio:
 		QueuedAudio: Building
+	ProductionQueue@DeadFortification:
+		Type: Building4.ded
+		Factions: ded
+		Group: Building4
+		LowPowerSlowdown: 2 
+		ReadyAudio:
+		QueuedAudio: Building
 	BaseBuilding:
 	ProductionBar@Buildingded:
 		ProductionType: MBuilding.ded
@@ -206,6 +213,8 @@ ZIGGURAT1:
 		ProductionType: MResources.ded
 	ProductionBar@Buildingded3:
 		ProductionType: MMilitary.ded
+	ProductionBar@Buildingded4:
+		ProductionType: Building4.ded
 	ProvidesPrerequisite@buildingname:	
 	ProvidesPrerequisite@zig1:
 		Prerequisite: ziggurat1
@@ -601,7 +610,7 @@ GRAFENCE:
 		BuildPaletteOrder: 50
 		BuildDuration: 350
 		Prerequisites: seal2
-		Queue: MMilitary.ded
+		Queue: Building4.ded
 		BuildDurationModifier: 40
 		IconPalette: raicon
 	Health:

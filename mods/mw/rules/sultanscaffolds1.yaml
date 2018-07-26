@@ -971,24 +971,24 @@ CSTLWLLSUL.scaff:
 		Type: HeavyBuilding
 	RenderSprites:
 		PlayerPalette: sulwallplayer
-		Image: cstlwll
+		Image: sulwll
 	CustomSellValue:
 		Value: 0
 	Valued:
-		Cost: 350
+		Cost: 550
 	Tooltip:
 		Name: Construction Site (Castle Wall)
 	Buildable:
 		Description: Castlewall that blocks arrows and other projectiles\n\n\n
 		BuildPaletteOrder: 50
-		BuildDuration: 350
+		BuildDuration: 550
 		Prerequisites: anyworkshop
-		Queue: MMilitary.SUL
+		Queue: Building4.SUL
 		IconPalette: raWall
 		BuildDurationModifier: 40
 	Building:
 		Dimensions: 1,1
-		Footprint: =
+		Footprint: x
 		BuildSounds: brickconc.aud
 		Adjacent: 7
 	Health:

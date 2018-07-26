@@ -861,11 +861,25 @@ Container@PLAYER_WIDGETS:
 						ProductionTypeButton@BUILDING3:
 							X: PARENT_RIGHT - 150
 							Y: ((200 - 20) / 5) * 1 + 6
-							Width: 150
+							Width: 110
 							Height: ((200 - 10) / 5)
 							TooltipText: Military Buildings
 							TooltipContainer: TOOLTIP_CONTAINER
 							ProductionGroup: Building3
+							Key: ProductionTypeDefense
+							Children:
+								Image@ICON:
+									X: PARENT_RIGHT / 2 -12
+									Y: 6
+									ImageCollection: production-icons
+						ProductionTypeButton@BUILDING4:
+							X: PARENT_RIGHT - 40
+							Y: ((200 - 20) / 5) * 1 + 6
+							Width: 40
+							Height: ((200 - 10) / 5)
+							TooltipText: Military Fortifications
+							TooltipContainer: TOOLTIP_CONTAINER
+							ProductionGroup: Building4
 							Key: ProductionTypeDefense
 							Children:
 								Image@ICON:
