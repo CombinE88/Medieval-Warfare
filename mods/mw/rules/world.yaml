@@ -210,56 +210,9 @@ World:
 		Factions: ded
 		SupportActors: preycolyte,preycolyte, preycolyte
 		BaseActor: ziggurat1
-	MPStartUnits@dead:
-		Class: medieval2
-		ClassName: Normal Start
-		Factions: ded
-		BaseActor: ziggurat1
-		SupportActors: preycolyte,preycolyte, preycolyte, preycolyte
-		InnerSupportRadius: 4
-		OuterSupportRadius: 5
-	MPStartUnits@2:
-		Class: medieval3
-		ClassName: Well Populated
-		Factions: ded
-		BaseActor: ziggurat1
-		SupportActors: preycolyte,preycolyte, preycolyte ,preycolyte, preycolyte
-		InnerSupportRadius: 4
-		OuterSupportRadius: 5
-	MPStartUnits@3:
-		Class: medieval4
-		ClassName: Over Populated
-		Factions: ded
-		BaseActor: ziggurat1
-		SupportActors: preycolyte,preycolyte, preycolyte ,preycolyte, preycolyte ,preycolyte, preycolyte
-		InnerSupportRadius: 4
-		OuterSupportRadius: 5
-	MPStartUnits@medium:
-		Class: medieval2
-		ClassName: Quick Start
-		Factions: gdi, nod, sul
-		BaseActor: factnew
-		SupportActors: mwwand1,mwwand2,mwwand3,mwwand4,mwwand5
-		InnerSupportRadius: 4
-		OuterSupportRadius: 5
-	MPStartUnits@bunch:
-		Class: medieval3
-		ClassName: Well Populated
-		Factions: gdi, nod, sul
-		BaseActor: factnew
-		SupportActors: mwwand1,mwwand2,mwwand3,mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12,mwwand1,mwwand2,mwwand3
-		InnerSupportRadius: 4
-		OuterSupportRadius: 5
-	MPStartUnits@maximum:
-		Class: medieval4
-		ClassName: Over Populated
-		Factions: gdi, nod, sul
-		BaseActor: factnew
-		SupportActors: mwwand1,mwwand2,mwwand3,mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12,mwwand1,mwwand2,mwwand3, mwwand5, mwwand6, mwwand10, mwwand11
-		InnerSupportRadius: 4
-		OuterSupportRadius: 5
 	SpawnMPUnits:
-		StartingUnitsClass: medieval2
+		StartingUnitsClass: medieval
+		DropdownLocked: True
 	CrateSpawner:
 		Minimum: 0
 		Maximum: 2

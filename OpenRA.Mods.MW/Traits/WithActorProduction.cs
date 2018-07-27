@@ -107,121 +107,121 @@ namespace OpenRA.Mods.MW.Traits
             }
 
 
-            if (owner.PlayerActor.Trait<PlayerCivilization>().Peasantpopulationvar < neededPop)
+            if (owner.PlayerActor.Trait<PlayerCivilization>().FreePopulation < neededPop)
             {
                 return false;
             }
 
-            var validpeasants = FindPeasants(self, producee);
+            //var validpeasants = FindPeasants(self, producee);
 
-            if (validpeasants.Count() < neededPop)
-            {
-                return false;
-            }
+            //if (validpeasants.Count() < neededPop)
+            //{
+            //    return false;
+            //}
 
-            var alreadyReached = 0;
+            //var alreadyReached = 0;
 
-            //find exit cell and spawn locations
+            ////find exit cell and spawn locations
             var newexit = self.Info.TraitInfos<ExitInfo>().FirstOrDefault();
 
             owner.World.AddFrameEndTask(w =>
             {
-                self.World.AddFrameEndTask(ww => DoProduction(self, producee, newexit, productionType, inits));
-                Game.Sound.PlayNotification(self.World.Map.Rules, self.Owner, "Speech", info.ReadyAudio,
-                    self.Owner.Faction.InternalName);
+            self.World.AddFrameEndTask(ww => DoProduction(self, producee, newexit, productionType, inits));
+            Game.Sound.PlayNotification(self.World.Map.Rules, self.Owner, "Speech", info.ReadyAudio,
+                   self.Owner.Faction.InternalName);
             });
 
 
-            //foreach (var actor in validpeasants)
-            for (var i = 0; i < neededPop; i++)
-            {
-                var actor = validpeasants[i];
+            ////foreach (var actor in validpeasants)
+            //for (var i = 0; i < neededPop; i++)
+            //{
+            //    var actor = validpeasants[i];
 
-                alreadyReached++;
-                if (!actor.IsDead && actor.IsInWorld && actor.Info.HasTraitInfo<IsPeasantInfo>())
-                {
-                    var peas = actor.TraitsImplementing<IsPeasant>().FirstOrDefault();
-                    peas.SetWroking();
-                }
-                //}));
-                //set reached units state +1 and units in movement state -1
-                var destination = actor.Owner.PlayerActor.Trait<PlayerCivilization>().PeasantProvider.Any() ? actor.Owner.PlayerActor.Trait<PlayerCivilization>().PeasantProvider.ClosestTo(actor) : null;
-                if (destination == null)
-                {
-                    actor.CancelActivity();
-                    actor.QueueActivity(new RemoveSelf());
-                    if (inuse.Contains(actor))
-                    {
-                        inuse.Remove(actor);
-                    }
-                }
-                // actor.QueueActivity(new RemoveSelf()); //of he goes
-                else
-                {
-                    inuse.Add(actor);
-                    var move = actor.TraitOrDefault<IMove>();
+            //    alreadyReached++;
+            //    if (!actor.IsDead && actor.IsInWorld && actor.Info.HasTraitInfo<IsPeasantInfo>())
+            //    {
+            //        var peas = actor.TraitsImplementing<IsPeasant>().FirstOrDefault();
+            //        peas.SetWroking();
+            //    }
+            //    //}));
+            //    //set reached units state +1 and units in movement state -1
+            //    var destination = actor.Owner.PlayerActor.Trait<PlayerCivilization>().PeasantProvider.Any() ? actor.Owner.PlayerActor.Trait<PlayerCivilization>().PeasantProvider.ClosestTo(actor) : null;
+            //    if (destination == null)
+            //    {
+            //        actor.CancelActivity();
+            //        actor.QueueActivity(new RemoveSelf());
+            //        if (inuse.Contains(actor))
+            //        {
+            //            inuse.Remove(actor);
+            //        }
+            //    }
+            //    // actor.QueueActivity(new RemoveSelf()); //of he goes
+            //    else
+            //    {
+            //        inuse.Add(actor);
+            //        var move = actor.TraitOrDefault<IMove>();
 
-                    var exitinfo = destination.Info.TraitInfo<ProvidesLivingspaceInfo>();
-                    var exitcell = destination.Location + exitinfo.ExitCell;
-                    var spawn = destination.CenterPosition + exitinfo.SpawnOffset;
+            //        var exitinfo = destination.Info.TraitInfo<ProvidesLivingspaceInfo>();
+            //        var exitcell = destination.Location + exitinfo.ExitCell;
+            //        var spawn = destination.CenterPosition + exitinfo.SpawnOffset;
 
-                    self.Owner.PlayerActor.Trait<PlayerCivilization>().SpawnStoredPeasant();
-                    //beginn movement
-                    actor.CancelActivity();
+            //        self.Owner.PlayerActor.Trait<PlayerCivilization>().SpawnStoredPeasant();
+            //        //beginn movement
+            //        actor.CancelActivity();
 
-                    if (!info.GoDirect)
-                    {
-                        actor.QueueActivity(move.MoveTo(exitcell, 5));
-                    }
-                    //what happens when actor or barracks dies
-                    actor.QueueActivity(new CallFunc(() =>
-                    {
+            //        if (!info.GoDirect)
+            //        {
+            //            actor.QueueActivity(move.MoveTo(exitcell, 5));
+            //        }
+            //        //what happens when actor or barracks dies
+            //        actor.QueueActivity(new CallFunc(() =>
+            //        {
 
-                        if (StillValid(actor, self))
-                        {
-                            return;
-                        }
-                        //if not died continue and recalculate ow position
+            //            if (StillValid(actor, self))
+            //            {
+            //                return;
+            //            }
+            //            //if not died continue and recalculate ow position
 
-                        //visually enter the building
-                        var selfposition = actor.CenterPosition;
-                        //actor.QueueActivity(move.MoveIntoWorld(actor,exit));
-                        if (!info.GoDirect)
-                        {
-                            actor.QueueActivity(move.VisualMove(actor, selfposition, spawn));
-                        }
-                        actor.QueueActivity(new CallFunc(() =>
-                        {
-                            if (StillValid(actor, self))
-                                return;
-                            //if dead before finished
-                            actor.QueueActivity(new RemoveSelf());
-                            if (inuse.Contains(actor))
-                            {
-                                inuse.Remove(actor);
-                            }
-                        }));
-                    }));
-                }
+            //            //visually enter the building
+            //            var selfposition = actor.CenterPosition;
+            //            //actor.QueueActivity(move.MoveIntoWorld(actor,exit));
+            //            if (!info.GoDirect)
+            //            {
+            //                actor.QueueActivity(move.VisualMove(actor, selfposition, spawn));
+            //            }
+            //            actor.QueueActivity(new CallFunc(() =>
+            //            {
+            //                if (StillValid(actor, self))
+            //                    return;
+            //                //if dead before finished
+            //                actor.QueueActivity(new RemoveSelf());
+            //                if (inuse.Contains(actor))
+            //                {
+            //                    inuse.Remove(actor);
+            //                }
+            //            }));
+            //        }));
+            //    }
 
-                /*        void INotifyRemovedFromWorld.RemovedFromWorld(Actor self)
-                        {
-                            if (!self.Owner.NonCombatant && self.Owner.WinState != WinState.Lost && self.Owner.PlayerActor.Info.HasTraitInfo<PlayerCivilizationInfo>())
-                            {
-                                if (inuse.Any())
-                                {
-                                    foreach (var var in inuse)
-                                    {
-                                        if (!var.IsDead && var.IsInWorld && var.Info.HasTraitInfo<IsPeasantInfo>())
-                                        {
-                                            var.Trait<IsPeasant>().SetPeasant();
-                                        }
-                                    }
-                                }
-                            }
-                        }*/
+            //    /*        void INotifyRemovedFromWorld.RemovedFromWorld(Actor self)
+            //            {
+            //                if (!self.Owner.NonCombatant && self.Owner.WinState != WinState.Lost && self.Owner.PlayerActor.Info.HasTraitInfo<PlayerCivilizationInfo>())
+            //                {
+            //                    if (inuse.Any())
+            //                    {
+            //                        foreach (var var in inuse)
+            //                        {
+            //                            if (!var.IsDead && var.IsInWorld && var.Info.HasTraitInfo<IsPeasantInfo>())
+            //                            {
+            //                                var.Trait<IsPeasant>().SetPeasant();
+            //                            }
+            //                        }
+            //                    }
+            //                }
+            //            }*/
 
-            }
+            //}
             return true;
         }
     }

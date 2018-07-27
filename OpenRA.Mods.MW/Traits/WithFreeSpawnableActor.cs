@@ -62,7 +62,7 @@ namespace OpenRA.Mods.MW.Traits
         public override object Create(ActorInitializer init) { return new WithFreeSpawnableActor(init, this); }
     }
 
-    class WithFreeSpawnableActor : ConditionalTrait<WithFreeSpawnableActorInfo>, ITick, INotifyActorDisposing, INotifyRemovedFromWorld
+    class WithFreeSpawnableActor : ConditionalTrait<WithFreeSpawnableActorInfo>, ITick, INotifyActorDisposing
     {
         private int ticker;
         private Actor respawnActor = null;
@@ -79,12 +79,12 @@ namespace OpenRA.Mods.MW.Traits
             idlecount = 25;
         }
 
-        public List<Actor> FindPeasants(Actor self)
-        {
-            var validList = self.World.ActorsHavingTrait<IPositionable>()
-                .Where(a => a.Owner == self.Owner && a.Info.HasTraitInfo<IsPeasantInfo>() && info.TrainingActors.Contains(a.Info.Name) && a.Trait<IsPeasant>().isWorker == false).ToList();
-            return validList;
-        }
+        //public List<Actor> FindPeasants(Actor self)
+        //{
+        //    var validList = self.World.ActorsHavingTrait<IPositionable>()
+        //        .Where(a => a.Owner == self.Owner && a.Info.HasTraitInfo<IsPeasantInfo>() && info.TrainingActors.Contains(a.Info.Name) && a.Trait<IsPeasant>().isWorker == false).ToList();
+        //    return validList;
+        //}
 
 
         bool DistanceGreaterAs(Actor a, Actor b, WDist dist)
@@ -191,7 +191,7 @@ namespace OpenRA.Mods.MW.Traits
 
         public void SpawnNewActor(Actor self)
         {
-            if (!info.UseConverting)
+            if (!self.World.Map.Rules.Actors[Info.SpawnActor].HasTraitInfo<PersonValuedInfo>())
             {
                 CreateActorSpawn(self);
                 ticker = info.RespawnTime;
@@ -205,89 +205,89 @@ namespace OpenRA.Mods.MW.Traits
                 throw new System.Exception("PlayerCivilization Trait not found! Player must have PlayerCivilization trait!");
             }
 
-            if (owner.PlayerActor.Trait<PlayerCivilization>().Peasantpopulationvar < 1)
-            {
-                return;
-            }
-
-            //basic setup of values
-            var exit = self.Location + info.MoveOffset;
-            //find produced unit cost values
-            var ValidActors = FindPeasants(self);
-
-            if (!ValidActors.Any())
+            if (owner.PlayerActor.Trait<PlayerCivilization>().FreePopulation < self.World.Map.Rules.Actors[Info.SpawnActor].TraitInfo<PersonValuedInfo>().ActorCount)
             {
                 ticker = 50;
                 return;
             }
+
+            ////basic setup of values
+            //var exit = self.Location + info.MoveOffset;
+            ////find produced unit cost values
+            //var ValidActors = FindPeasants(self);
+
+            //if (!ValidActors.Any())
+            //{
+            //    ticker = 50;
+            //    return;
+            //}
             //find enough actors
-            var actor = ValidActors.ClosestTo(self);
+            //var actor = ValidActors.ClosestTo(self);
 
-            var infiltrate = self.CenterPosition + info.Offset;
-            //Actor is possible to move?
-            respawnActor = actor;
+            //var infiltrate = self.CenterPosition + info.Offset;
+            ////Actor is possible to move?
+            //respawnActor = actor;
 
-            var move = actor.TraitOrDefault<IMove>();
+            //var move = actor.TraitOrDefault<IMove>();
 
-            if ((!actor.IsInWorld || !actor.IsDead))
-            {
-                self.Owner.PlayerActor.Trait<PlayerCivilization>().SpawnStoredPeasant();
-                //beginn movement
-                actor.CancelActivity();
-                actor.QueueActivity(move.MoveTo(exit, 5));
+            //if ((!actor.IsInWorld || !actor.IsDead))
+            //{
+            //    self.Owner.PlayerActor.Trait<PlayerCivilization>().SpawnStoredPeasant();
+            //    //beginn movement
+            //    actor.CancelActivity();
+            //    actor.QueueActivity(move.MoveTo(exit, 5));
 
-                if (!actor.IsDead && actor.IsInWorld && actor.Info.HasTraitInfo<IsPeasantInfo>())
-                {
-                    var peas = actor.TraitsImplementing<IsPeasant>().FirstOrDefault();
-                    peas.SetWroking();
-                }
+            //    if (!actor.IsDead && actor.IsInWorld && actor.Info.HasTraitInfo<IsPeasantInfo>())
+            //    {
+            //        var peas = actor.TraitsImplementing<IsPeasant>().FirstOrDefault();
+            //        peas.SetWroking();
+            //    }
 
-                //what happens when actor or barracks dies
-                actor.QueueActivity(new CallFunc(() =>
-                {
+            //    //what happens when actor or barracks dies
+            //    actor.QueueActivity(new CallFunc(() =>
+            //    {
 
-                    if (StillValid(actor, self))
-                        return;
+            //        if (StillValid(actor, self))
+            //            return;
 
-                    //if not died continue and recalculate ow position
-                    //visually enter the building
-                    var selfposition = actor.CenterPosition;
-                    actor.QueueActivity(move.VisualMove(actor, selfposition, infiltrate));
-                    //if dead before finished
-                    actor.QueueActivity(new CallFunc(() =>
-                    {
-                        if (StillValid(actor, self))
-                            return;
-
-                        CreateActorSpawn(self);
-                    }));
-                    //set reached units state +1 and units in movement state -1
-                    actor.QueueActivity(new RemoveSelf()); //of he goes
-                }));
-            }
+            //        //if not died continue and recalculate ow position
+            //        //visually enter the building
+            //        var selfposition = actor.CenterPosition;
+            //        actor.QueueActivity(move.VisualMove(actor, selfposition, infiltrate));
+            //        //if dead before finished
+            //        actor.QueueActivity(new CallFunc(() =>
+            //        {
+            //            if (StillValid(actor, self))
+            //                return;
+                  CreateActorSpawn(self);
+            //        }));
+            //        //set reached units state +1 and units in movement state -1
+            //        actor.QueueActivity(new RemoveSelf()); //of he goes
+            //    }));
+            //}
         }
 
 
-        public bool StillValid(Actor actor, Actor self)
-        {
+        //public bool StillValid(Actor actor, Actor self)
+        //{
 
-            if (actor.IsInWorld && !actor.IsDead && self.IsInWorld && !self.IsDead)
-            {
-                return false;
-            }
-            return true;
-        }
+        //    if (actor.IsInWorld && !actor.IsDead && self.IsInWorld && !self.IsDead)
+        //    {
+        //        return false;
+        //    }
+        //    return true;
+        //}
 
-        void INotifyRemovedFromWorld.RemovedFromWorld(Actor self)
-        {
-            if (!self.Owner.NonCombatant && self.Owner.WinState != WinState.Lost && self.Owner.PlayerActor.Info.HasTraitInfo<PlayerCivilizationInfo>())
-            {
-                if (respawnActor != null && !respawnActor.IsDead && respawnActor.IsInWorld && respawnActor.Info.HasTraitInfo<IsPeasantInfo>())
-                {
-                    respawnActor.Trait<IsPeasant>().SetPeasant();
-                }
-            }
-        }
+        //void INotifyRemovedFromWorld.RemovedFromWorld(Actor self)
+        //{
+        //    if (!self.Owner.NonCombatant && self.Owner.WinState != WinState.Lost && self.Owner.PlayerActor.Info.HasTraitInfo<PlayerCivilizationInfo>())
+        //    {
+        //        if (respawnActor != null && !respawnActor.IsDead && respawnActor.IsInWorld && respawnActor.Info.HasTraitInfo<IsPeasantInfo>())
+        //        {
+        //            respawnActor.Trait<IsPeasant>().SetPeasant();
+        //        }
+        //    }
+        //}
     }
 }
 

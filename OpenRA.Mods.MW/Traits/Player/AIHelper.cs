@@ -43,14 +43,14 @@ namespace OpenRA.Mods.MW.Traits
                 pr.GiveResources(info.Cash[self.Owner.BotType]);
                 _delay = info.CashDelay;
             }
-            if (self.Owner.Faction.InternalName != "ded" && info.Peasants.ContainsKey(self.Owner.BotType) && _peasantdelay-- <= 0)
-            {
-                for (var i = 0; i < info.Peasants[self.Owner.BotType]; i++)
-                {
-                    self.Trait<PlayerCivilization>().Spawnapeasant();
-                }
-                _peasantdelay = info.PeasantDelay;
-            }
+            //if (self.Owner.Faction.InternalName != "ded" && info.Peasants.ContainsKey(self.Owner.BotType) && _peasantdelay-- <= 0)
+            //{
+            //    for (var i = 0; i < info.Peasants[self.Owner.BotType]; i++)
+            //    {
+            //        self.Trait<PlayerCivilization>().Spawnapeasant();
+            //    }
+            //    _peasantdelay = info.PeasantDelay;
+            //}
         }
     }
 }

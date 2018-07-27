@@ -303,7 +303,7 @@ MWWAND1:
 	WithInfantryBody:
 		DefaultAttackSequence: talking
 		IdleSequences: idle1, idle2, idle3, idle4, idle5, idle6, idle7, idle8
-	IsPeasant:
+#	IsPeasant:
 		
 MWWAND2:
 	Inherits: ^MWTalker
@@ -319,7 +319,7 @@ MWWAND2:
 	WithInfantryBody:
 		DefaultAttackSequence: talking
 		IdleSequences: idle1, idle2, idle3, idle4, idle5, idle6, idle7, idle8
-	IsPeasant:
+#	IsPeasant:
 	
 		
 MWWAND3:
@@ -336,7 +336,7 @@ MWWAND3:
 	WithInfantryBody:
 		DefaultAttackSequence: talking
 		IdleSequences: idle1, idle2, idle3, idle4, idle5, idle6, idle7, idle8
-	IsPeasant:
+#	IsPeasant:
 		
 MWWAND4:
 	Inherits: ^MWTalker
@@ -352,7 +352,7 @@ MWWAND4:
 	WithInfantryBody:
 		DefaultAttackSequence: talking
 		IdleSequences: idle1, idle2, idle3, idle4, idle5, idle6, idle7, idle8
-	IsPeasant:
+#	IsPeasant:
 		
 MWWAND5:
 	Inherits: ^MWTalker
@@ -368,7 +368,7 @@ MWWAND5:
 	WithInfantryBody:
 		DefaultAttackSequence: talking
 		IdleSequences: idle1, idle2, idle3, idle4, idle5, idle6, idle7, idle8
-	IsPeasant:
+#	IsPeasant:
 		
 MWWAND6:
 	Inherits: ^MWTalker
@@ -384,7 +384,7 @@ MWWAND6:
 	WithInfantryBody:
 		DefaultAttackSequence: talking
 		IdleSequences: idle1, idle2, idle3, idle4, idle5, idle6, idle7, idle8
-	IsPeasant:
+#	IsPeasant:
 		
 MWWAND10:
 	Inherits: ^MWTalker
@@ -400,7 +400,7 @@ MWWAND10:
 	WithInfantryBody:
 		DefaultAttackSequence: talking
 		IdleSequences: idle1, idle2, idle3, idle4, idle5, idle6, idle7, idle8
-	IsPeasant:
+#	IsPeasant:
 		
 MWWAND11:
 	Inherits: ^MWTalker
@@ -416,7 +416,7 @@ MWWAND11:
 	WithInfantryBody:
 		DefaultAttackSequence: talking
 		IdleSequences: idle1, idle2, idle3, idle4, idle5, idle6, idle7, idle8
-	IsPeasant:
+#	IsPeasant:
 		
 MWWAND12:
 	Inherits: ^MWTalker
@@ -432,7 +432,7 @@ MWWAND12:
 	WithInfantryBody:
 		DefaultAttackSequence: talking
 		IdleSequences: idle1, idle2, idle3, idle4, idle5, idle6, idle7, idle8
-	IsPeasant:
+#	IsPeasant:
 				
 MWWAND7:
 	Inherits: ^MWWanderer
@@ -590,7 +590,7 @@ NOBLE1:
 	WithInfantryBody:
 		DefaultAttackSequence: talking
 		IdleSequences: idle1, idle2, idle3, idle4, idle5, idle6, idle7, idle8
-	IsPeasant:
+#	IsPeasant:
 		
 NOBLE2:
 	Inherits: ^MWTalker
@@ -607,7 +607,7 @@ NOBLE2:
 	WithInfantryBody:
 		DefaultAttackSequence: talking
 		IdleSequences: idle1, idle2, idle3, idle4, idle5, idle6, idle7, idle8
-	IsPeasant:
+#	IsPeasant:
 		
 NOBLE3:
 	Inherits: ^MWTalker
@@ -623,7 +623,7 @@ NOBLE3:
 	WithInfantryBody:
 		DefaultAttackSequence: talking
 		IdleSequences: idle1, idle2, idle3, idle4, idle5, idle6, idle7, idle8
-	IsPeasant:
+#	IsPeasant:
 		
 NOBLE4:
 	Inherits: ^MWTalker
@@ -639,7 +639,7 @@ NOBLE4:
 	WithInfantryBody:
 		DefaultAttackSequence: talking
 		IdleSequences: idle1, idle2, idle3, idle4, idle5, idle6, idle7, idle8
-	IsPeasant:
+#	IsPeasant:
 		
 NOBLE5:
 	Inherits: ^MWTalker

@@ -283,6 +283,66 @@ tribu:
 		Start: 8
 		ZOffset: -25
 		Offset: 0,-18,0
+        
+sigtrib:
+	Inherits: ^scaffold
+	turretanim: 
+		Facings: 32
+		Length: 9
+		Start: 32
+		Tick: 80
+		Offset: 0,-18,0
+	damaged-idle: 
+		Facings: 32
+		Offset: 0,-18,0
+	idle: 
+		Facings: 32
+		Offset: 0,-18,0
+	dead: tribudead
+		Tick: 800
+	make: sigtribmake
+		Length: *
+		Tick: 80
+		Offset: 0,-18,0
+	bib: mbGTWR
+		UseTilesetExtension: true
+		TilesetOverrides:
+			WINTER: TEMPERAT
+			JUNGLE: TEMPERAT
+			INTERIOR: TEMPERAT
+		Length: *
+		Offset: 0,-2
+	icon: sigtribicon.shp
+		AddExtension: False
+	make1: sigtribmake
+		Start: 0
+		ZOffset: -25
+		Offset: 0,-18,0
+	make2: sigtribmake
+		Start: 4
+		ZOffset: -25
+		Offset: 0,-18,0
+	make3: sigtribmake
+		Start: 8
+		ZOffset: -25
+		Offset: 0,-18,0
+	make4: sigtribmake
+		Start: 11
+		ZOffset: -25
+		Offset: 0,-18,0
+	make5: sigtribmake
+		Start: 15
+		ZOffset: -25
+		Offset: 0,-18,0
+	make6: sigtribmake
+		Start: 18
+		ZOffset: -25
+		Offset: 0,-18,0
+	make7: sigtribmake
+		Start: 19
+		ZOffset: -25
+		Offset: 0,-18,0
+        
 		
 batowgun:
 	Inherits: ^scaffold

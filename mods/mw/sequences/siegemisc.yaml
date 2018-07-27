@@ -93,7 +93,7 @@ mobtrib:
 		Tick: 100
 		Facings: 8
 		Length: 8
-	icon: tribuicon.shp
+	icon: sigtribicon.shp
 		AddExtension: False
 		
 planewagenhusk:

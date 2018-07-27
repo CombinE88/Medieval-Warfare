@@ -56,6 +56,3 @@ Player:
 		Cash:
 			baron: 500
 			sultan: 1000
-		Peasants:
-			baron: 1
-			sultan: 2

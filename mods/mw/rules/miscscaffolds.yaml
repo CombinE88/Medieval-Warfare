@@ -574,7 +574,7 @@ CSTLGTNS.scaff:
 		Condition: DoNotRender
 	LineBuildNode:
 		Types: concrete
-		Connections: 0,3, 0,0
+		Connections: 0,-1, 0,1
 	RequiresBuildableArea:
 		AreaTypes: building
 		Adjacent: 10
@@ -659,7 +659,7 @@ CSTLGTEW.scaff:
 		Condition: DoNotRender
 	LineBuildNode:
 		Types: concrete
-		Connections: 0,0, 3,0
+		Connections: -1,0, 1,0
 	RequiresBuildableArea:
 		AreaTypes: building
 		Adjacent: 10
@@ -812,7 +812,6 @@ DEDWALL.scaff:
   
   
 DEDGATE.scaff:
-
 	Inherits: ^ConstructionSite
 	Inherits@Hitshape: ^3x1Shape
 	RenderSprites:
@@ -902,7 +901,7 @@ DEDGATE.scaff:
 		Condition: DoNotRender
 	LineBuildNode:
 		Types: concrete
-		Connections: 0,3, 0,0
+		Connections: -1,0, 1,0
 	ScriptTriggers:
 	-GivesBuildableArea:
 	-ExternalCondition@PLACEHOLDER:
@@ -999,7 +998,7 @@ DEDGATENS.scaff:
 		Condition: DoNotRender
 	LineBuildNode:
 		Types: concrete
-		Connections: 0,3, 0,-1
+		Connections: 0,-1, 0,1
 	ScriptTriggers:
 	-GivesBuildableArea:
 	-ExternalCondition@PLACEHOLDER:

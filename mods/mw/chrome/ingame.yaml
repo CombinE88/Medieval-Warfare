@@ -611,29 +611,29 @@ Container@PLAYER_WIDGETS:
 							Align: Left
 							Font: Bold
 							Text: {0}
-						LabelWithTooltip@FULLPOP:
-							Logic: IngameFullPopulationCounterLogic
-							Y: 75
-							X: 15
-							Width: PARENT_RIGHT
-							Height: 0
-							Align: Left
-							Font: Bold
-							Text: Sum Population: {0}
-						LabelWithTooltip@POP:
-							Logic: IngamePopulationCounterLogic
-							Y: 35
-							X: 15
-							Width: PARENT_RIGHT
-							Height: 0
-							Align: Left
-							Font: Bold
-							Text: {0}
-							TextColor: 2ECC71
-							ContrastColorDark: 12512D
+#						LabelWithTooltip@FULLPOP:
+#							Logic: IngameFullPopulationCounterLogic
+#							Y: 75
+#							X: 15
+#							Width: PARENT_RIGHT
+#							Height: 0
+#							Align: Left
+#							Font: Bold
+#							Text: Sum Population: {0}
+#						LabelWithTooltip@POP:
+#							Logic: IngamePopulationCounterLogic
+#							Y: 35
+#							X: 15
+#							Width: PARENT_RIGHT
+#							Height: 0
+#							Align: Left
+#							Font: Bold
+#							Text: {0}
+#							TextColor: 2ECC71
+#							ContrastColorDark: 12512D
 						LabelWithTooltip@USEDPOP:
 							Logic: IngameUsedPopulationCounterLogic
-							Y: 55
+							Y: 35
 							X: 15
 							Width: PARENT_RIGHT
 							Height: 0
@@ -644,7 +644,7 @@ Container@PLAYER_WIDGETS:
 							ContrastColorDark: 482722
 						LabelWithTooltip@MAXPOP:
 							Logic: IngameMaxPopulationCounterLogic
-							Y: 95
+							Y: 55
 							X: 15
 							Width: PARENT_RIGHT
 							Height: 0
@@ -772,22 +772,22 @@ Container@PLAYER_WIDGETS:
 									Width: PARENT_RIGHT-2
 									Height: PARENT_BOTTOM-2
 									Skippable: false
-		Background@POWERBAR_PANEL:
-			Logic: IngamePeasantSpawnBarLogic
-			X: 290
-			Y: WINDOW_BOTTOM - 218
-			Width: WINDOW_RIGHT - 290
-			Height: 20
-			Background:
-			Children: panel-black
-				ResourceBar@POWERBAR:
-					X: 6
-					Y: 5
-					Width: PARENT_RIGHT-6
-					Height: PARENT_BOTTOM-5
-					TooltipContainer: TOOLTIP_CONTAINER
-					TooltipTemplate: SIMPLE_TOOLTIP
-					IndicatorImage: indicator-left
+#		Background@POWERBAR_PANEL:
+#			Logic: IngamePeasantSpawnBarLogic
+#			X: 290
+#			Y: WINDOW_BOTTOM - 218
+#			Width: WINDOW_RIGHT - 290
+#			Height: 20
+#			Background:
+#			Children: panel-black
+#				ResourceBar@POWERBAR:
+#					X: 6
+#					Y: 5
+#					Width: PARENT_RIGHT-6
+#					Height: PARENT_BOTTOM-5
+#					TooltipContainer: TOOLTIP_CONTAINER
+#					TooltipTemplate: SIMPLE_TOOLTIP
+#					IndicatorImage: indicator-left
 		Background@SIDEBAR_BACKGROUND2:
 			Logic: MenuButtonsChromeLogic
 			X: 290

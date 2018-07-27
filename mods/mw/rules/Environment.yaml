@@ -108,8 +108,15 @@ FIREPLACE:
 	GiveMcvCrateAction:
 		SelectionShares: 1
 		Units: mcv2new
-	ExplodeCrateAction:
-		Weapon: LightningStrike
+		ValidFactions: GDI, Nod, Sultan
+	GiveMcvCrateAction@ded:
+		SelectionShares: 10
+		Units: undead6
+		ValidFactions: ded
+	GiveMcvCrateAction@ded2:
+		SelectionShares: 10
+		Units: undead7
+		ValidFactions: ded
 	RenderSprites:
 		Image: fireplace
 		Palette: ra

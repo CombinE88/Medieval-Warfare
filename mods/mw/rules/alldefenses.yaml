@@ -416,7 +416,7 @@ CSTLGTEW:
 		OpenSequence: open
 	LineBuildNode:
 		Types: concrete
-		Connections: -1,0, 3,0
+		Connections: -1,0, 1,0
 	Valued:
 		Cost: 1500
 	Tooltip:
@@ -481,12 +481,12 @@ CSTLGTNS:
 	Gate:
 		Adjacent: 7
 	WithGateSpriteBody:
-		WallConnections: 0,3, 0,-1
+		WallConnections: 0,-1, 0,3
 		Type: concrete
 		OpenSequence: open
 	LineBuildNode:
 		Types: concrete
-		Connections: 0,3, 0,-1
+		Connections: 0,1, 0,-1
 	WithIdleOverlay:
 		Sequence: top
 	Building:
@@ -549,7 +549,7 @@ SIEGETRIBU:
 	SelectionDecorations:
 		VisualBounds: 30,52,0,-12 
 	RenderSprites:
-		Image: tribu
+		Image: sigtrib
 		PlayerPalette: raplayer
 	BodyOrientation:
 		QuantizedFacings: 32
@@ -596,7 +596,7 @@ SIEGETRIBU.scaff:
 		Type: HeavyBuilding
 	RenderSprites:
 		PlayerPalette: raplayer
-		Image: tribu
+		Image: sigtrib
 	CustomSellValue:
 		Value: 750
 	Valued:
