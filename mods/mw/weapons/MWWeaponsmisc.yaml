@@ -1,30 +1,4 @@
-		
-SmokeySpawner:   
-	ReloadDelay: 85
-	MinRange: 0
-	Range: 0c712
-	Projectile: Bullet
-		Speed: 100
-		ValidTargets: none
-	Warhead@1Eff: CreateEffect
-		Explosions: smokey
-		ImpactSounds: tnkfire2.aud, tnkfire3.aud, tnkfire4.aud, tnkfire6.aud
-	Warhead@2Dam: SpreadDamage
-		Spread: 256
-		Damage: 1800
-		Versus:
-			Leather: 100
-			Light: 90
-			Heavy: 85
-			Concrete: 100
-			Knight: 50
-			LightCavalry: 100
-			MediumCavalry: 100
-			HeavyCavalry: 100
-			HeavyBuilding: 100
-			Spectral: 75
-		DamageTypes: Prone50Percent, TriggerProne, RippedApartDeath		
-			
+
 
 none:
 	Report: ramgun2.aud
@@ -1569,4 +1543,3 @@ LaborourLoad:
 			HeavyBuilding: 0
 			Spectral: 0
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
-		

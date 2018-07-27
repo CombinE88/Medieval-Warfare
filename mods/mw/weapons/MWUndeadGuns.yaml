@@ -552,7 +552,7 @@ GrimSkytheThrow:
 		Palette: grimprojalpha
 	Warhead@1Dam: SpreadDamage
 		Spread: 65
-		Damage: 4000
+		Damage: 6500
 		ValidTargets: Ground
 		InvalidTargets: Air
 		Versus:
@@ -1177,6 +1177,23 @@ CorruptionSpawner:
 		Condition: SpawnCorruption
         
 SummonEffect:
+	Warhead@SpawnEffect: CreateEffect
+		Explosions: summoning
+		ExplosionPalette : grimspawnalpha
+
+		
+GrimReaper:
+	InvalidTargets: Wall, Air
+	ValidTargets: Soul, Souls
+	ReloadDelay: 55
+	Range: 6c512
+	Projectile: Bullet
+		Speed: 1c682
+	Warhead@1Dam: SpreadDamage
+		Spread: 12
+		ValidTargets: Soul, Souls
+		Damage: 1000
+		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
 	Warhead@SpawnEffect: CreateEffect
 		Explosions: summoning
 		ExplosionPalette : grimspawnalpha

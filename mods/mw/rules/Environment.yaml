@@ -91,9 +91,6 @@ FIREPLACE:
 	GiveUnitCrateAction@2:
 		Units: e3new, e3new, e3new, e3new
 		ValidFactions: GDI
-	GiveUnitCrateAction@3:
-		Units: dragonwalk
-		Owner: Creeps
 	GiveUnitCrateAction@4:
 		Units: e2new, e2new
 		ValidFactions: Nod

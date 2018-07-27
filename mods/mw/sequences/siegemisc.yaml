@@ -81,6 +81,20 @@ medimcv2:
 		Length: 8
 	icon: mcvnewicon.shp
 		AddExtension: False
+
+mobtrib:
+	idle: 
+		Start: 64
+		Facings: 32
+	stand: 
+		Start: 64
+		Facings: 32
+	run: 
+		Tick: 100
+		Facings: 8
+		Length: 8
+	icon: tribuicon.shp
+		AddExtension: False
 		
 planewagenhusk:
 	idle: 

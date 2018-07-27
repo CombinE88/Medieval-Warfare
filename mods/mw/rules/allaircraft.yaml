@@ -175,7 +175,7 @@ DRGNRDR:
 	Aircraft:
 		InitialFacing: 224
 		TurnSpeed: 10
-		Speed: 100
+		Speed: 90
 	Health:
 		HP: 19000
 	Armor:
@@ -199,7 +199,7 @@ DRGNRDR:
 		Image: drgnrdr
 		PlayerPalette: raplayer
 	AmmoPool:
-		Ammo: 15
+		Ammo: 12
 		Name: primary
 		Armaments: primary, secondary
 		PipCount: 5
@@ -208,7 +208,7 @@ DRGNRDR:
 		AmmoCondition: ammo
 	ReloadAmmoPool:
 		AmmoPool: primary
-		Delay: 20
+		Delay: 25
 		Count: 2
 	SpawnActorOnDeath:
 		Actor: DRAGON.Husk

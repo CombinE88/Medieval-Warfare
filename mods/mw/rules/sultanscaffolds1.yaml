@@ -986,6 +986,8 @@ CSTLWLLSUL.scaff:
 		Queue: Building4.SUL
 		IconPalette: raWall
 		BuildDurationModifier: 40
+		RequiresBaseProvider: false
+	-GivesBuildableArea:
 	Building:
 		Dimensions: 1,1
 		Footprint: x
@@ -1034,5 +1036,4 @@ CSTLWLLSUL.scaff:
 		Adjacent: 10
 	ScriptTriggers:
 	-ExternalCondition@PLACEHOLDER:
-	-GivesBuildableArea:
 	-RevealsShroud:

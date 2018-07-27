@@ -333,6 +333,7 @@ UNDEAD6:
 	Mobile:
 		SharesCell: false
 		Speed: 40
+		Crushes: wall, heavywall, crate, infantry
 	-Crushable:
 	Targetable:
 		TargetTypes: Ground, Cavalry
@@ -353,7 +354,7 @@ UNDEAD6:
 	Buildable:
 		IconPalette: raicon
 		BuildPaletteOrder: 10
-		Description: Skeletal siegeunit\n  Strong vs all\n  Very slow\n  Very strong
+		Description: Skeletal siegeunit\n  Strong vs all\n  Very slow\n  Very strong\n  Can crush walls
 		Queue: MSiege.ded
 	PersonValued:
 		ActorCount: 3
@@ -411,7 +412,6 @@ GRIM:
 	Inherits@AUTOTARGET: ^AutoTargetGround
 	Inherits@GainsExperience: ^GainsExperience
 	Inherits@ArcherDemo65: ^ArcherDemo80
-
 	Inherits@SnakeStunnable: ^SnakeSlowable
 	RevealsShroud:
 		Range: 6c0
@@ -443,6 +443,10 @@ GRIM:
 		LocalOffset: 141,75,352
 		FireDelay: 5
 		name: primary
+	Armament@Reap:
+		Weapon: GrimReaper
+		name: primary
+		TargetStances: Enemy, Neutral, Ally
 	AttackFrontal:
 		Armaments: primary
 	AutoTarget:
@@ -476,6 +480,10 @@ GRIM:
 	GrimReanimation:
 	Targetable@CombatRole:
 		TargetTypes: Spectral
+	AutoTargetPriority@PreferHarvesting:
+		ValidTargets: Souls, Soul
+		InvalidTargets: NoAutoTarget, Wall
+		Priority: 4
 		
 ACOLYTEC:
 	Inherits: ^Knight
@@ -1376,3 +1384,80 @@ CFFPLACE1C:
 		Ammount: 5
 	EditorTilesetFilter:
 		Categories: Undead
+
+        
+SOUL:
+	Inherits@1: ^ExistsInWorld
+	Inherits@3: ^SpriteActor
+	HitShape:
+	AppearsOnRadar:
+		UseLocation: yes
+	Targetable:
+		TargetTypes: Soul
+	WithSpriteBody:
+	EditorTilesetFilter:
+		Categories: Undead
+	Tooltip:
+		Name: Soul 
+	RenderSprites:
+		PlayerPalette: grimalphaplayer
+		Palette: Fracture 
+	Health:
+		HP: 50
+	SelfHealing@Killsslef:
+		PercentageStep: -51
+		Step: -0
+		HealIfBelow: 110
+		Delay: 125
+		DamageTypes: Vanish
+	InvisibleToLiving:
+		Factions: Undead
+	Interactable:
+	ConditionManager:
+	Immobile:
+		OccupiesSpace: false
+	HiddenUnderFog:
+		Type: CenterPosition
+	GivesBounty:
+		Percentage: 100
+	Valued:
+		Cost: 127
+		DeathTypes: DefaultDeath
+        
+SOULS:
+	Inherits@1: ^ExistsInWorld
+	Inherits@3: ^SpriteActor
+	HitShape:
+	AppearsOnRadar:
+		UseLocation: yes
+	Targetable:
+		TargetTypes: Souls
+	WithSpriteBody:
+	EditorTilesetFilter:
+		Categories: Undead
+	Tooltip:
+		Name: Small Soul
+	RenderSprites:
+		PlayerPalette: grimalphaplayer
+		Palette: Fracture
+	Health:
+		HP: 50
+	SelfHealing@Killsslef:
+		PercentageStep: -51
+		Step: -0
+		HealIfBelow: 110
+		Delay: 125
+		DamageTypes: Vanish
+	InvisibleToLiving:
+		Factions: Undead
+	Interactable:
+	ConditionManager:
+	Immobile:
+		OccupiesSpace: false
+	HiddenUnderFog:
+		Type: CenterPosition
+	GivesBounty:
+		Percentage: 100
+		DeathTypes: DefaultDeath
+	Valued:
+		Cost: 70

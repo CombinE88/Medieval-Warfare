@@ -491,12 +491,51 @@ GunlanceGround:
 		ContrailWidth: 20
 		ContrailDelay: 0
 		ContrailUsePlayerColor : true
-	Warhead@2SmokeySpaner: FireShrapnel
-		Weapon: SmokeySpawner
-		AimChance: 0
-		AllowDirectHit: true
-		AimTargetStances: Neutral
-		Amount: 4
+		Inaccuracy: 0c726
+	Warhead@2Dam: SpreadDamage
+		Spread: 256
+		Damage: 1800
+		Versus:
+			Leather: 100
+			Light: 90
+			Heavy: 85
+			Concrete: 100
+			Knight: 50
+			LightCavalry: 100
+			MediumCavalry: 100
+			HeavyCavalry: 100
+			HeavyBuilding: 100
+			Spectral: 75
+		DamageTypes: Prone50Percent, TriggerProne, RippedApartDeath	
+	Warhead@1Eff: CreateEffect
+		Explosions: smokey
+		ImpactSounds: tnkfire2.aud, tnkfire3.aud, tnkfire4.aud, tnkfire6.aud
+		
+GunlanceGroundDUMMY:
+	ReloadDelay: 75
+	Range: 4c0
+	ValidTargets: Infantry, Ground
+	InvalidTargets: Wall, Structure, Air, Cavalry
+	Projectile:Bullet
+		Speed: 1c682
+		Inaccuracy: 0c726
+	Warhead@2Dam: SpreadDamage
+		Spread: 256
+		Damage: 1800
+		Versus:
+			Leather: 100
+			Light: 90
+			Heavy: 85
+			Concrete: 100
+			Knight: 50
+			LightCavalry: 100
+			MediumCavalry: 100
+			HeavyCavalry: 100
+			HeavyBuilding: 100
+			Spectral: 75
+		DamageTypes: Prone50Percent, TriggerProne, RippedApartDeath	
+	Warhead@1Eff: CreateEffect
+		Explosions: smokey
 
 			
 OrniSpearThrow:
@@ -960,8 +999,8 @@ LongBowNArrowAir:
 		ImpactSounds: xplos.aud
  
 DragonFire:
-	ReloadDelay: 2
-	Range: 4c0
+	ReloadDelay: 4
+	Range: 3c512
 	MinRange: 0c512
 	ValidTargets: Ground
 	TargetActorCenter: true
@@ -1026,8 +1065,8 @@ DragonFire:
 		ImpactSounds: xplos.aud
 		
 DragonFireAir:
-	ReloadDelay: 5
-	Range: 5c0
+	ReloadDelay: 6
+	Range: 4c512
 	MinRange: 0c512
 	ValidTargets: Air
 	InvalidTargets: Ground
@@ -1400,7 +1439,50 @@ TribuchetBoulder:
 	Warhead@2Smu: LeaveSmudge
 		SmudgeType: Crater
 		InvalidTargets: Vehicle, Structure, Wall, Husk, Trees, Creep
+		
+HighTribuchetBoulder:
+	ReloadDelay: 110
+	ValidTargets: Structure, Wall
+	TargetActorCenter: true
+	InvalidTargets: Air
+	Range: 15c0
+	MinRange: 4c0
+	Report: siege01.aud
+	Projectile: Bullet
+		Speed: 250
+		Blockable: false
+		LaunchAngle: 106
+		Inaccuracy: 0c512
+		Image: tribuboulder
+		ContrailLength: 6
+		Palette: ra
+	Warhead@1Dam: SpreadDamage
+		Spread: 112
+		Damage: 15000
+		ValidTargets: Ground
+		InvalidTargets: Air
+		Falloff: 100, 70, 60, 50, 18, 7, 0
+		Versus:
+			None: 100
+			Leather: 100
+			Light: 100
+			Heavy: 100
+			Concrete: 100
+			Knight: 100
+			LightCavalry: 100
+			MediumCavalry: 100
+			HeavyCavalry: 100
+			HeavyBuilding: 100
+			Spectral: 100
+		DamageTypes: Prone50Percent, TriggerProne, BallistaDeath
+	Warhead@2Eff: CreateEffect
+		Explosions: smokey
+		ImpactSounds: tnkfire6.aud
+	Warhead@2Smu: LeaveSmudge
+		SmudgeType: Crater
+		InvalidTargets: Vehicle, Structure, Wall, Husk, Trees, Creep
 
+        
 StationBalistaAG:
 	ReloadDelay: 45
 	Range: 8c0

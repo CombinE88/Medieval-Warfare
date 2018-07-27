@@ -491,4 +491,12 @@ undead7:
 	icon: undead7icon.shp
 		AddExtension: False
 		
+soul:
+	idle:
+		Length: *
+		Tick: 120
+souls:
+	idle:
+		Length: *
+		Tick: 120
 

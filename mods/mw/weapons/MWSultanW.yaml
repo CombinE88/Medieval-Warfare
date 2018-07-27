@@ -910,6 +910,7 @@ SulGTSpearThrow:
 		ContrailUsePlayerColor : true
 		Image: spear
 		Palette: ra
+		Blockable: false
 	Warhead@1Dam: SpreadDamage
 		Spread: 141
 		Damage: 2500
@@ -950,6 +951,7 @@ SulGTSpearThrowAir:
 		ContrailUsePlayerColor : true
 		Image: spear
 		Palette: ra
+		Blockable: false
 	Warhead@1Dam: SpreadDamage
 		Spread: 141
 		Damage: 3100

@@ -331,7 +331,7 @@ CSTLWLL:
 	Tooltip:
 		Name: Castle Wall
 	Health:
-		HP: 65000
+		HP: 265000
 	Armor:
 		Type: Concrete
 	BlocksProjectiles:
@@ -350,6 +350,16 @@ CSTLWLL:
 		Type: concrete
 	Crushable:
 		CrushClasses: heavywall
+        
+DEDWALL:
+	Inherits: CSTLWLL
+	Tooltip:
+		Name: Bone Wall
+	Health:
+		HP: 215000
+	RenderSprites:
+		PlayerPalette: raplayer
+		Image: dedwall
 		
 WDWLL:
 	Inherits: ^Wall
@@ -412,7 +422,7 @@ CSTLGTEW:
 	Tooltip:
 		Name: Castle Gate
 	Health:
-		HP: 200000
+		HP: 350000
 		Shape: Rectangle
 			TopLeft: -1436,-412
 			BottomRight: 1436, 412
@@ -450,7 +460,7 @@ CSTLGTNS:
 	Tooltip:
 		Name: Castle Gate
 	Health:
-		HP: 200000
+		HP: 350000
 		Shape: Rectangle
 			TopLeft: -456,-1436
 			BottomRight: 456, 1436
@@ -494,3 +504,155 @@ SULGTEW:
 	RenderSprites:
 		PlayerPalette: sultanplayer
 		Image: sulgtew
+        
+        
+DEDGATE: 
+	Inherits: CSTLGTEW
+	RenderSprites:
+		Image: dedgate
+DEDGATENS: 
+	Inherits: CSTLGTNS
+	RenderSprites:
+		Image: dedgatens
+	-WithIdleOverlay:
+    
+SIEGETRIBU:
+	Inherits: ^MWDefense
+	Inherits@Hitshape: ^1x1Shape
+	Valued:
+		Cost: 1700
+	CustomSellValue:
+		Value: 950
+	Tooltip:
+		Name: Long Range Counterweight Trebuchet
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+	Health:
+		HP: 40000
+		Shape: Rectangle
+			TopLeft: -456, -656
+			BottomRight: 456, 456
+	Armor:
+		Type: Concrete
+	RevealsShroud:
+		Range: 4c0
+	WithBuildingBib:
+		HasMinibib: Yes
+	Armament:
+		Weapon: HighTribuchetBoulder
+		LocalOffset: 0,0,2124
+	DetectCloaked:
+		Range: 3c0
+	Selectable:
+		Bounds: 30,52,0,-12
+	SelectionDecorations:
+		VisualBounds: 30,52,0,-12 
+	RenderSprites:
+		Image: tribu
+		PlayerPalette: raplayer
+	BodyOrientation:
+		QuantizedFacings: 32
+	WithAttackAnimation:
+		AttackSequence: turretanim
+	WithEmbeddedTurretSpriteBody:
+	-WithSpriteBody:
+	AttackTurreted:
+	Turreted:
+		TurnSpeed: 2
+	WithDeathAnimation:
+		DeathSequencePalette: raplayer 
+	ThrowsShrapnel@SMALL:
+		Weapons: SmallWood1, SmallWood2, SmallWood3, LargeWood1, LargeWood1, LargeWood1
+		Pieces: 2, 4
+		Range: 0c512, 3c0
+	PersonValued:
+		ActorCount: 3
+		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4 
+	Targetable@CombatRole:
+		TargetTypes: Defenses
+	AutoTargetPriority@Counter1:
+		ValidTargets: LightCavalry, RegularCavalry, HeavyCavalry, Support
+		Priority: 3
+	WithRangeCircle:
+		Type: Tribu
+		UsePlayerColor: true
+		Range: 14c0
+	AutoTarget:
+	AutoTargetPriority@Higher:
+		ValidTargets: Wall
+		InvalidTargets: NoAutoTarget
+		Priority: 2
+	AutoTargetPriority@DEFAULT:
+		ValidTargets: Structure
+		InvalidTargets: NoAutoTarget
+		Priority: 1
+        
+
+SIEGETRIBU.scaff:
+	Inherits: ^1x1SITE
+	Inherits@Hitshape: ^1x1Shape
+	Armor:
+		Type: HeavyBuilding
+	RenderSprites:
+		PlayerPalette: raplayer
+		Image: tribu
+	CustomSellValue:
+		Value: 750
+	Valued:
+		Cost: 1500
+	Tooltip:
+		Name: Construction Site (Long Range Counterweight Trebuchet)
+	Health:
+		HP: 30000
+	RevealsShroud:
+		Range: 4c0
+	WithBuildingBib:
+		HasMinibib: Yes
+	Selectable:
+		Bounds: 30,52,0,-12
+	SelectionDecorations:
+		VisualBounds: 30,52,0,-12 
+	WithSpriteBody:
+		RequiresCondition: inactive
+	DebugTransformOnCondition@Finsihed:
+		RequiresCondition: (14 - Construct) <= 0
+		IntoActor: SIEGETRIBU
+		ReadyAudio:
+	ExternalCondition@buildfurther: 
+		Condition: Construct
+		TotalCap: 14
+	ExternalCondition@Deliverfurther:
+		Condition: DeliveredResources
+		TotalCap: 14
+	Targetable@buildfurther: 
+		TargetTypes: Buildable
+		RequiresCondition: DeliveredResources > Construct && (14 - Construct) > 0
+	Targetable@deliverresources: 
+		TargetTypes: Deliverable
+		RequiresCondition: 14 > DeliveredResources
+	WithIdleOverlay@base1:
+		Sequence: make1
+		RequiresCondition: Construct > 1 && Construct < 3
+	WithIdleOverlay@base2:
+		Sequence: make2
+		RequiresCondition: Construct >= 3 && Construct < 4
+	WithIdleOverlay@base3:
+		Sequence: make3
+		RequiresCondition: Construct >= 4 && Construct < 6
+	WithIdleOverlay@base4:
+		Sequence: make4
+		RequiresCondition: Construct >= 6 && Construct < 8
+	WithIdleOverlay@base5:
+		Sequence: make5
+		RequiresCondition: Construct >= 8 && Construct < 10
+	WithIdleOverlay@base6:
+		Sequence: make6
+		RequiresCondition: Construct >= 10 && Construct < 12
+	WithIdleOverlay@base7:
+		Sequence: make7
+		RequiresCondition: Construct >= 12
+	WithRangeCircle:
+		Type: Tribu
+		UsePlayerColor: true
+		Range: 14c0

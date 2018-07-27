@@ -9,6 +9,8 @@ Player:
 	PowerManager:
 	AllyRepair:
 	PlayerResources:
+		SelectableCash: 5000, 7500, 10000, 20000
+		DefaultCash: 7500
 	DeveloperMode:
 	BaseAttackNotifier:
 	AcolyteAttackNotifier:

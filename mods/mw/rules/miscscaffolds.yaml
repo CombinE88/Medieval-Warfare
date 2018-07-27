@@ -451,6 +451,7 @@ CSTLWLL.scaff:
 		Footprint: x
 		BuildSounds: brickconc.aud
 		Adjacent: 7
+		RequiresBaseProvider: false
 	Health:
 		HP: 32000
 	RevealsShroud:
@@ -524,6 +525,7 @@ CSTLGTNS.scaff:
 		Dimensions: 1,3
 		Footprint: x x x
 		Adjacent: 7
+		RequiresBaseProvider: false
 	Health:
 		HP: 100000
 	RevealsShroud:
@@ -583,7 +585,7 @@ CSTLGTNS.scaff:
     
 CSTLGTEW.scaff:
 	Inherits: ^3x2SITE
-	Inherits@Hitshape: ^1x3Shape
+	Inherits@Hitshape: ^3x1Shape
 	Armor:
 		Type: HeavyBuilding
 	RenderSprites:
@@ -608,6 +610,7 @@ CSTLGTEW.scaff:
 		Footprint: x x x
 		Adjacent: 7
 		LocalCenterOffset: 0,256,0
+		RequiresBaseProvider: false
 	Health:
 		HP: 100000
 	RevealsShroud:
@@ -701,4 +704,304 @@ SULGTEW.scaff:
 		RequiresCondition: (75 - Construct) <= 0
 		IntoActor: sulgtew
 		ReadyAudio:
+        
+DEDWALL.scaff:
+	Inherits: ^ConstructionSite
+	Inherits@Hitshape: ^1x1Shape
+	Armor:
+		Type: HeavyBuilding
+	RenderSprites:
+		PlayerPalette: raplayer
+		Image: dedwall
+	CustomSellValue:
+		Value: 0
+	Valued:
+		Cost: 550
+	Tooltip:
+		Name: Bone Wall
+	Buildable:
+		Description: Bone wall that blocks arrows and other projectiles\n\n\n
+		BuildPaletteOrder: 50
+		BuildDuration: 550
+		Prerequisites: libra
+		Queue: Building4.ded
+		BuildDurationModifier: 40
+		IconPalette: raicon
+	Building:
+		Dimensions: 1,1
+		Footprint: x
+		BuildSounds: brickconc.aud
+		Adjacent: 7
+		RequiresBaseProvider: false
+	Health:
+		HP: 32000
+	RevealsShroud:
+		Range: 4c0
+	WithBuildingBib:
+		HasMinibib: Yes
+	Selectable:
+		Bounds: 24,48,0,-10
+	SelectionDecorations
+		VisualBounds: 22,48,0,-10
+	WithSpriteBody:
+		RequiresCondition: DoNotRender
+	DebugTransformOnCondition@Finsihed:
+		RequiresCondition: (35 - Construct) <= 0
+		IntoActor: DEDWALL
+		ReadyAudio:
+	ExternalCondition@buildfurther: 
+		Condition: Construct
+		TotalCap: 35
+	ExternalCondition@Deliverfurther:
+		Condition: DeliveredResources
+		TotalCap: 35
+	Targetable@buildfurther: 
+		TargetTypes: Buildable
+		RequiresCondition: DeliveredResources > Construct && (35 - Construct) > 0
+	Targetable@deliverresources: 
+		TargetTypes: Deliverable
+		RequiresCondition: 35 > DeliveredResources
+	ExternalCondition@DoNotRender:
+		Condition: DoNotRender
+	LineBuild:
+		NodeTypes: concrete
+		Range: 8
+	LineBuildNode:
+		Types: concrete
+	Crushable:
+		CrushClasses: heavywall
+		CrushSound: sandbag2.aud
+	RequiresBuildableArea:
+		AreaTypes: undeadbuilding
+		Adjacent: 8
+	ScriptTriggers:
+	-GivesBuildableArea:
+	-ExternalCondition@PLACEHOLDER:
+	-RevealsShroud:
+	WithIdleOverlay@base1:
+		Sequence: make1
+		RequiresCondition: Construct < 4
+	WithIdleOverlay@base2:
+		Sequence: make2
+		RequiresCondition: Construct >= 4 && Construct < 6
+	WithIdleOverlay@base3:
+		Sequence: make3
+		RequiresCondition: Construct >= 6 && Construct < 8
+	WithIdleOverlay@base4:
+		Sequence: make4
+		RequiresCondition: Construct >= 8 && Construct < 12
+	WithIdleOverlay@base5:
+		Sequence: make5
+		RequiresCondition: Construct >= 12 && Construct < 18
+	WithIdleOverlay@base6:
+		Sequence: make6
+		RequiresCondition: Construct >= 18 && Construct < 22
+	WithIdleOverlay@base7:
+		Sequence: make7
+		RequiresCondition: Construct >= 22 && Construct < 26
+	WithIdleOverlay@base8:
+		Sequence: make8
+		RequiresCondition: Construct >= 26 && Construct < 30
+	WithIdleOverlay@base9:
+		Sequence: make9
+		RequiresCondition: Construct >= 30 && Construct < 34
+	WithIdleOverlay@base10:
+		Sequence: make10
+		RequiresCondition: Construct >= 34
+        
+  
+  
+DEDGATE.scaff:
+
+	Inherits: ^ConstructionSite
+	Inherits@Hitshape: ^3x1Shape
+	RenderSprites:
+		Image: dedgate
+		PlayerPalette: raplayer
+	Buildable:
+		Description:Operated gate that opens for allied units.\nUnarmed\n\n\n
+		BuildPaletteOrder: 80
+		Prerequisites: libra
+		Queue: Building4.ded
+		BuildDuration: 1540
+		BuildDurationModifier: 40
+		IconPalette: raicon
+	DebugTransformOnCondition@Finsihed:
+		RequiresCondition: (75 - Construct) <= 0
+		IntoActor: dedgate
+		ReadyAudio:
+	RequiresBuildableArea:
+		AreaTypes: undeadbuilding
+		Adjacent: 8
+	Armor:
+		Type: HeavyBuilding
+	CustomSellValue:
+		Value: 450
+	Valued:
+		Cost: 750
+	Tooltip:
+		Name: Bone Gate
+	Building:
+		Dimensions: 3,1
+		Footprint: x x x
+		Adjacent: 7
+		RequiresBaseProvider: false
+	Health:
+		HP: 100000
+	RevealsShroud:
+		Range: 5c0
+	Selectable:
+		Bounds: 28,94,3,-12
+	SelectionDecorations:
+		VisualBounds: 28,94,3,-12
+	WithSpriteBody:
+		RequiresCondition: DoNotRender
+	ExternalCondition@buildfurther: 
+		Condition: Construct
+		TotalCap: 75
+	ExternalCondition@Deliverfurther:
+		Condition: DeliveredResources
+		TotalCap: 75
+	Targetable@buildfurther: 
+		TargetTypes: Buildable
+		RequiresCondition: DeliveredResources > Construct && (75 - Construct) > 0
+	Targetable@deliverresources: 
+		TargetTypes: Deliverable
+		RequiresCondition: 75 > DeliveredResources
+	WithIdleOverlay@base1:
+		Sequence: make1
+		RequiresCondition: Construct < 5
+	WithIdleOverlay@base2:
+		Sequence: make2
+		RequiresCondition: Construct >= 5 && Construct < 10
+	WithIdleOverlay@base3:
+		Sequence: make3
+		RequiresCondition: Construct >= 10 && Construct < 20
+	WithIdleOverlay@base4:
+		Sequence: make4
+		RequiresCondition: Construct >= 20 && Construct < 28
+	WithIdleOverlay@base5:
+		Sequence: make5
+		RequiresCondition: Construct >= 28 && Construct < 35
+	WithIdleOverlay@base6:
+		Sequence: make6
+		RequiresCondition: Construct >= 35 && Construct < 43
+	WithIdleOverlay@base7:
+		Sequence: make7
+		RequiresCondition: Construct >= 43 && Construct < 50
+	WithIdleOverlay@base8:
+		Sequence: make8
+		RequiresCondition: Construct >= 50 && Construct < 65
+	WithIdleOverlay@base9:
+		Sequence: make9
+		RequiresCondition: Construct >= 65 && Construct < 70
+	WithIdleOverlay@base10:
+		Sequence: make10
+		RequiresCondition: Construct >= 70
+	ExternalCondition@DoNotRender:
+		Condition: DoNotRender
+	LineBuildNode:
+		Types: concrete
+		Connections: 0,3, 0,0
+	ScriptTriggers:
+	-GivesBuildableArea:
+	-ExternalCondition@PLACEHOLDER:
+	-RevealsShroud:
+
+    
+DEDGATENS.scaff:
+	Inherits: ^ConstructionSite
+	Inherits@Hitshape: ^1x3Shape
+	RenderSprites:
+		Image: dedgatens
+		PlayerPalette: raplayer
+	Buildable:
+		Description:Operated gate that opens for allied units.\nUnarmed\n\n\n
+		BuildPaletteOrder: 80
+		Prerequisites: libra
+		Queue: Building4.ded
+		BuildDuration: 1540
+		BuildDurationModifier: 40
+		IconPalette: raicon
+	DebugTransformOnCondition@Finsihed:
+		RequiresCondition: (75 - Construct) <= 0
+		IntoActor: dedgatens
+		ReadyAudio:
+	RequiresBuildableArea:
+		AreaTypes: undeadbuilding
+		Adjacent: 8
+	Armor:
+		Type: HeavyBuilding
+	CustomSellValue:
+		Value: 450
+	Valued:
+		Cost: 750
+	Tooltip:
+		Name: Bone Gate
+	Building:
+		Dimensions: 1,3
+		Footprint: x x x
+		Adjacent: 7
+		RequiresBaseProvider: false
+	Health:
+		HP: 100000
+	RevealsShroud:
+		Range: 5c0
+	Selectable:
+		Bounds: 28,94,3,-12
+	SelectionDecorations:
+		VisualBounds: 28,94,3,-12
+	WithSpriteBody:
+		RequiresCondition: DoNotRender
+	ExternalCondition@buildfurther: 
+		Condition: Construct
+		TotalCap: 75
+	ExternalCondition@Deliverfurther:
+		Condition: DeliveredResources
+		TotalCap: 75
+	Targetable@buildfurther: 
+		TargetTypes: Buildable
+		RequiresCondition: DeliveredResources > Construct && (75 - Construct) > 0
+	Targetable@deliverresources: 
+		TargetTypes: Deliverable
+		RequiresCondition: 75 > DeliveredResources
+	WithIdleOverlay@base1:
+		Sequence: make1
+		RequiresCondition: Construct < 5
+	WithIdleOverlay@base2:
+		Sequence: make2
+		RequiresCondition: Construct >= 5 && Construct < 10
+	WithIdleOverlay@base3:
+		Sequence: make3
+		RequiresCondition: Construct >= 10 && Construct < 20
+	WithIdleOverlay@base4:
+		Sequence: make4
+		RequiresCondition: Construct >= 20 && Construct < 28
+	WithIdleOverlay@base5:
+		Sequence: make5
+		RequiresCondition: Construct >= 28 && Construct < 35
+	WithIdleOverlay@base6:
+		Sequence: make6
+		RequiresCondition: Construct >= 35 && Construct < 43
+	WithIdleOverlay@base7:
+		Sequence: make7
+		RequiresCondition: Construct >= 43 && Construct < 50
+	WithIdleOverlay@base8:
+		Sequence: make8
+		RequiresCondition: Construct >= 50 && Construct < 65
+	WithIdleOverlay@base9:
+		Sequence: make9
+		RequiresCondition: Construct >= 65 && Construct < 70
+	WithIdleOverlay@base10:
+		Sequence: make10
+		RequiresCondition: Construct >= 70
+	ExternalCondition@DoNotRender:
+		Condition: DoNotRender
+	LineBuildNode:
+		Types: concrete
+		Connections: 0,3, 0,-1
+	ScriptTriggers:
+	-GivesBuildableArea:
+	-ExternalCondition@PLACEHOLDER:
+	-RevealsShroud:
   

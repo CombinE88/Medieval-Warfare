@@ -16,12 +16,12 @@ SULB0:
 	Buildable:
 		IconPalette: raicon
 		BuildPaletteOrder: 15
-		Description: Equipped with 2 Archers.\n  Very strong vs Light Infantry and Aircrafts \n  Moderate vs Cavalry\n  Weak vs Buildings\n\nTrains: 2 Peasants\n
+		Description: Equipped with 2 Archers.\n  Very strong vs Light Infantry and Aircrafts \n  Moderate vs Cavalry\n  Weak vs Buildings\n\nTrains: 2 Peasants\n  Can crush walls
 		Queue: MSiege.SUL
 	Mobile:
 		TurnSpeed: 2
 		Speed: 60
-		Crushes: crate, infantry
+		Crushes: wall, heavywall, crate, infantry
 	Health:
 		HP: 75000
 	AutoTarget:

@@ -1116,6 +1116,36 @@
 			Radius: 128
 	EditorTilesetFilter:
 		Categories: Infantry
+	SpawnActorOnDeath@Soul:
+		DeathType: DefaultDeath
+		Probability: 55
+		Actor: souls
+		OwnerType: InternalName
+		InternalOwner: Neutral
+	SpawnActorOnDeath@Soul1:
+		DeathType: RippedApartDeath
+		Probability: 100
+		Actor: souls
+		OwnerType: InternalName
+		InternalOwner: Neutral
+	SpawnActorOnDeath@Soul2:
+		DeathType: PoisonDeath
+		Probability: 60
+		Actor: souls
+		OwnerType: InternalName
+		InternalOwner: Neutral
+	SpawnActorOnDeath@Soul3:
+		DeathType: BallistaDeath
+		Probability: 80
+		Actor: souls
+		OwnerType: InternalName
+		InternalOwner: Neutral
+	SpawnActorOnDeath@Soul4:
+		DeathType: BallistaDeath
+		Probability: 90
+		Actor: souls
+		OwnerType: InternalName
+		InternalOwner: BurnToDeath
 
 ^Cavalry:
 	Inherits: ^MedievalInfantry
@@ -1189,6 +1219,36 @@
 		Chance: 25
 	EditorTilesetFilter:
 		Categories: Cavalry
+	SpawnActorOnDeath@Soul:
+		DeathType: DefaultDeath
+		Probability: 55
+		Actor: soul
+		OwnerType: InternalName
+		InternalOwner: Neutral
+	SpawnActorOnDeath@Soul1:
+		DeathType: RippedApartDeath
+		Probability: 100
+		Actor: soul
+		OwnerType: InternalName
+		InternalOwner: Neutral
+	SpawnActorOnDeath@Soul2:
+		DeathType: PoisonDeath
+		Probability: 60
+		Actor: soul
+		OwnerType: InternalName
+		InternalOwner: Neutral
+	SpawnActorOnDeath@Soul3:
+		DeathType: BallistaDeath
+		Probability: 80
+		Actor: soul
+		OwnerType: InternalName
+		InternalOwner: Neutral
+	SpawnActorOnDeath@Soul4:
+		DeathType: BallistaDeath
+		Probability: 90
+		Actor: soul
+		OwnerType: InternalName
+		InternalOwner: BurnToDeath
 
 		
 ^Siege:
@@ -1223,6 +1283,36 @@
 		Chance: 25
 	EditorTilesetFilter:
 		Categories: Siegeengines
+	SpawnActorOnDeath@Soul:
+		DeathType: DefaultDeath
+		Probability: 55
+		Actor: soul
+		OwnerType: InternalName
+		InternalOwner: Neutral
+	SpawnActorOnDeath@Soul1:
+		DeathType: RippedApartDeath
+		Probability: 100
+		Actor: soul
+		OwnerType: InternalName
+		InternalOwner: Neutral
+	SpawnActorOnDeath@Soul2:
+		DeathType: PoisonDeath
+		Probability: 60
+		Actor: soul
+		OwnerType: InternalName
+		InternalOwner: Neutral
+	SpawnActorOnDeath@Soul3:
+		DeathType: BallistaDeath
+		Probability: 80
+		Actor: soul
+		OwnerType: InternalName
+		InternalOwner: Neutral
+	SpawnActorOnDeath@Soul4:
+		DeathType: BallistaDeath
+		Probability: 90
+		Actor: soul
+		OwnerType: InternalName
+		InternalOwner: BurnToDeath
 		
 ^MWCiv:
 	Inherits: ^Infantry

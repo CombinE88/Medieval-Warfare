@@ -794,6 +794,9 @@ SULCASTLE:
 		Name: Palace
 	ProvidesPrerequisite:
 		Prerequisite: anyhq
+	ProvidesPrerequisite@anycastle:
+		RequiresPrerequisites: Level4
+		Prerequisite: anycastle
 	ProvidesPrerequisite@3:
 		Prerequisite: Level3
 	ProvidesPrerequisite@buildingname:
@@ -1229,7 +1232,9 @@ SULCNSHMBR:
 		Weapons: DebrUtility1, DebrUtility2, DebrUtility3
 		Pieces: 2, 3
 		Range: 1c0, 5c0
-	ResourcePurifier:
+	CashTrickler:
+		Interval: 25
+		Amount: 5
 	
 SULREF:
 	Inherits: ^MWBaseBuilding
