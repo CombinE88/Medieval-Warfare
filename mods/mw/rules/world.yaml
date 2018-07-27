@@ -150,7 +150,7 @@
 		TerrainType: Corruption
 		Sequences: corrupt1,corrupt2,corrupt3,corrupt4,corrupt5,corrupt6,corrupt7,corrupt8,corrupt9
 		MaxDensity: 1
-		ValuePerUnit: 20
+		ValuePerUnit: 24
 		AllowedTerrainTypes: Clear,Road
 		AllowUnderActors: true
    
