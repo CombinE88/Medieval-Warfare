@@ -32,8 +32,8 @@
 		Delay: 75
 		DamageTypes: DefaultDeath
 	WithPermanentInjury:
-        TriggeringDamageStage: Critical
-        InjuredSequencePrefix: crippled-
+		TriggeringDamageStage: Critical
+		InjuredSequencePrefix: crippled-
 	WithMakeAnimation:
 
 ChoppedtreeN1: #hybrid
@@ -42,14 +42,14 @@ ChoppedtreeN1: #hybrid
 		Image: treechopped1
 	LootableBody: 
 		LootTypes: ChopTree
-        
+		
 ChoppedtreeN2:
 	Inherits: ^ChoppedTree
 	RenderSprites:
 		Image: treechopped2
 	LootableBody: 
 		LootTypes: ChopTree
-        
+		
 ChoppedtreeN3:
 	Inherits: ^ChoppedTree
 	RenderSprites:
@@ -61,14 +61,14 @@ ChoppedtreeN3:
 		LootTypes: ChopTree
 	EditorTilesetFilter:
 		ExcludeTilesets: DESERT
-        
+		
 ChoppedtreeN3A:
 	Inherits: ^ChoppedTree
 	RenderSprites:
 		Image: treechopped3
 	LootableBody: 
 		LootTypes: ChopTree
-        
+		
 ChoppedtreeN4:
 	Inherits: ^ChoppedTree
 	RenderSprites:
@@ -221,7 +221,7 @@ bulbbr:
 		Dimensions: 1,1
 		Footprint: _	
 	-Targetable:
-        
+		
 FIREPIT:
 	Inherits: ^InteriorProp
 	RenderSprites:
@@ -230,7 +230,7 @@ FIREPIT:
 		Sequence: burnloop
 		Palette: effect
 	-Targetable:
-        
+		
 FIRETORCH:
 	Inherits: ^InteriorProp
 	RenderSprites:
@@ -239,7 +239,7 @@ FIRETORCH:
 		Sequence: burnloop
 		Palette: effect
 	-Targetable:
-    
+	
 
 FIRETORCHN:
 	Inherits: ^InteriorProp
@@ -251,7 +251,7 @@ FIRETORCHN:
 	-Targetable:
 	Building:
 		Dimensions: 1,1
-		Footprint: _	    
+		Footprint: _		
 FIRETORCHNW:
 	Inherits: ^InteriorProp
 	RenderSprites:
@@ -329,7 +329,7 @@ FIRETORCHNE:
 	Building:
 		Dimensions: 1,1
 		Footprint: _	
-    
+	
 STOOL1:
 	Inherits: ^InteriorProp
 	RenderSprites:
@@ -450,7 +450,7 @@ DEADSTOOL8:
 	Inherits: ^PropHusk
 	RenderSprites:
 		Palette: mwcivilian
-        
+		
 BARRELMW1:
 	Inherits: ^InteriorProp
 	RenderSprites:
@@ -616,7 +616,7 @@ DEADBARRELMW11:
 	Inherits: ^PropHusk
 	RenderSprites:
 		Palette: mwcivilian
-        
+		
 TABLE1:
 	Inherits: ^InteriorProp
 	RenderSprites:
@@ -625,7 +625,7 @@ TABLE1:
 		Actor: DEADTABLE1
 	SoundOnDamageTransition:
 		DestroyedSounds: WoodExplsmall.aud, WoodExplsmall2.aud
-        
+		
 DEADTABLE1:
 	Inherits: ^PropHusk
 	RenderSprites:
@@ -638,7 +638,7 @@ TABLE2:
 		Actor: DEADTABLE2
 	SoundOnDamageTransition:
 		DestroyedSounds: WoodExplsmall.aud, WoodExplsmall2.aud
-        
+		
 DEADTABLE2:
 	Inherits: ^PropHusk
 	RenderSprites:
@@ -651,7 +651,7 @@ TABLE3:
 		Actor: DEADTABLE3
 	SoundOnDamageTransition:
 		DestroyedSounds: WoodExplsmall.aud, WoodExplsmall2.aud
-        
+		
 DEADTABLE3:
 	Inherits: ^PropHusk
 	RenderSprites:
@@ -667,7 +667,7 @@ TABLE4:
 		Footprint: x x	
 	SoundOnDamageTransition:
 		DestroyedSounds: WoodExplsmall.aud, WoodExplsmall2.aud
-        
+		
 DEADTABLE4:
 	Inherits: ^PropHusk
 	RenderSprites:
@@ -675,7 +675,7 @@ DEADTABLE4:
 	Building:
 		Dimensions: 1,2
 		Footprint: _ _	
-        
+		
 TABLE5:
 	Inherits: ^InteriorProp
 	RenderSprites:
@@ -687,7 +687,7 @@ TABLE5:
 		Footprint: xx	
 	SoundOnDamageTransition:
 		DestroyedSounds: WoodExplsmall.aud, WoodExplsmall2.aud
-        
+		
 DEADTABLE5:
 	Inherits: ^PropHusk
 	RenderSprites:
@@ -695,8 +695,8 @@ DEADTABLE5:
 	Building:
 		Dimensions: 2,1
 		Footprint: _ _	
-        
-        
+		
+		
 IDOORNORTH:
 	Inherits: ^PropDoor
 	RenderSprites:
@@ -707,7 +707,7 @@ IDOORNORTH:
 	Tooltip:
 		Name: Door
 		ShowOwnerRow: false
-        
+		
 IDOORNORTHOPEN:
 	Inherits: ^PropDoorOpen
 	RenderSprites:
@@ -725,7 +725,7 @@ IDOORSOUTH:
 	Tooltip:
 		Name: Door
 		ShowOwnerRow: false
-        
+		
 IDOORSOUTHOPEN:
 	Inherits: ^PropDoorOpen
 	RenderSprites:
@@ -733,7 +733,7 @@ IDOORSOUTHOPEN:
 	Tooltip:
 		Name: Door
 		ShowOwnerRow: false
-        
+		
 IDOORWEST:
 	Inherits: ^PropDoor
 	RenderSprites:
@@ -744,7 +744,7 @@ IDOORWEST:
 	Tooltip:
 		Name: Door
 		ShowOwnerRow: false
-        
+		
 IDOORWESTOPEN:
 	Inherits: ^PropDoorOpen
 	RenderSprites:
@@ -762,7 +762,7 @@ IDOOREAST:
 	Tooltip:
 		Name: Door
 		ShowOwnerRow: false
-        
+		
 IDOOREASTOPEN:
 	Inherits: ^PropDoorOpen
 	RenderSprites:
@@ -770,7 +770,7 @@ IDOOREASTOPEN:
 	Tooltip:
 		Name: Door
 		ShowOwnerRow: false
-        
+		
 IDOORIRON:
 	Inherits: ^PropDoor
 	RenderSprites:
@@ -784,7 +784,7 @@ IDOORIRON:
 	Building:
 		Dimensions: 2,2
 		Footprint: == xx	
-        
+		
 IDOORIRONOPEN:
 	Inherits: ^PropDoorOpen
 	RenderSprites:
@@ -795,8 +795,8 @@ IDOORIRONOPEN:
 	Building:
 		Dimensions: 2,2
 		Footprint: == ==	
-        
-        
+		
+		
 IDOORSNORTH:
 	Inherits: ^PropDoor
 	RenderSprites:
@@ -807,7 +807,7 @@ IDOORSNORTH:
 	Tooltip:
 		Name: Door
 		ShowOwnerRow: false
-        
+		
 IDOORSNORTHOPEN:
 	Inherits: ^PropDoorOpen
 	RenderSprites:
@@ -825,7 +825,7 @@ IDOORSSOUTH:
 	Tooltip:
 		Name: Door
 		ShowOwnerRow: false
-        
+		
 IDOORSSOUTHOPEN:
 	Inherits: ^PropDoorOpen
 	RenderSprites:
@@ -833,7 +833,7 @@ IDOORSSOUTHOPEN:
 	Tooltip:
 		Name: Door
 		ShowOwnerRow: false
-        
+		
 IDOORSWEST:
 	Inherits: ^PropDoor
 	RenderSprites:
@@ -844,7 +844,7 @@ IDOORSWEST:
 	Tooltip:
 		Name: Door
 		ShowOwnerRow: false
-        
+		
 IDOORSWESTOPEN:
 	Inherits: ^PropDoorOpen
 	RenderSprites:
@@ -862,7 +862,7 @@ IDOORSEAST:
 	Tooltip:
 		Name: Door
 		ShowOwnerRow: false
-        
+		
 IDOORSEASTOPEN:
 	Inherits: ^PropDoorOpen
 	RenderSprites:
@@ -870,8 +870,8 @@ IDOORSEASTOPEN:
 	Tooltip:
 		Name: Door
 		ShowOwnerRow: false
-        
-        
+		
+		
 
 IDOORBARS:
 	Inherits: ^PropDoor
@@ -883,7 +883,7 @@ IDOORBARS:
 	Tooltip:
 		Name: Door
 		ShowOwnerRow: false
-        
+		
 IDOORBARSOPEN:
 	Inherits: ^PropDoorOpen
 	RenderSprites:
@@ -891,8 +891,8 @@ IDOORBARSOPEN:
 	Tooltip:
 		Name: Door
 		ShowOwnerRow: false
-        	
-        
+			
+		
 SWITCHA:
 	Inherits: ^InteriorProp
 	RenderSprites:
@@ -905,7 +905,7 @@ SWITCHA:
 		DestroyedSounds: crank1.wav
 	Health:
 		HP: 1
-        
+		
 SWITCHPULLEDA:
 	Inherits: ^PropHusk
 	WithMakeAnimation:
@@ -924,7 +924,7 @@ SWITCHB:
 		HP: 1
 	SoundOnDamageTransition:
 		DestroyedSounds: crank1.wav
-        
+		
 SWITCHPULLEDB:
 	Inherits: ^PropHusk
 	WithMakeAnimation:
@@ -943,7 +943,7 @@ SWITCHC:
 		HP: 1
 	SoundOnDamageTransition:
 		DestroyedSounds: crank1.wav
-        
+		
 SWITCHPULLEDC:
 	Inherits: ^PropHusk
 	WithMakeAnimation:
@@ -962,7 +962,7 @@ SWITCHD:
 		HP: 1
 	SoundOnDamageTransition:
 		DestroyedSounds: crank1.wav
-        
+		
 SWITCHPULLEDD:
 	Inherits: ^PropHusk
 	WithMakeAnimation:
@@ -1013,7 +1013,7 @@ IBOOKD:
 		Footprint: x_	
 	SoundOnDamageTransition:
 		DestroyedSounds: WoodExplsmall.aud, WoodExplsmall2.aud
-        
+		
 IBOOKDEAD:
 	Inherits: ^PropHusk
 	RenderSprites:
@@ -1021,7 +1021,7 @@ IBOOKDEAD:
 	Building:
 		Dimensions: 1,2
 		Footprint: = _	
-        
+		
 IBANNERA:
 	Inherits: ^InteriorProp
 	RenderSprites:
@@ -1066,7 +1066,7 @@ IBANNERE:
 	Building:
 		Dimensions: 1,2
 		Footprint: __	
-        
+		
 
 OBJECTIVEA:
 	Inherits: ^InteriorProp
@@ -1136,7 +1136,7 @@ CRACKWALLH:
 		HP: 100
 	SoundOnDamageTransition:
 		DestroyedSounds: collapsebricks.aud
-        
+		
 
 ICHESTAHEAL:
 	Inherits: ^Crate
@@ -1164,7 +1164,7 @@ ICHESTAHEAL:
 	EditorTilesetFilter:
 		RequireTilesets: INTERIOR
 		Categories: Interior Props
-        
+		
 ICHESTDEADA:
 	Inherits: ^PropHusk
 	WithMakeAnimation:
@@ -1195,7 +1195,7 @@ ICHESTBHEAL:
 	EditorTilesetFilter:
 		RequireTilesets: INTERIOR
 		Categories: Interior Props
-        
+		
 ICHESTDEADB:
 	Inherits: ^PropHusk
 	WithMakeAnimation:
@@ -1226,14 +1226,14 @@ ICHESTCHEAL:
 	EditorTilesetFilter:
 		RequireTilesets: INTERIOR
 		Categories: Interior Props
-        
+		
 ICHESTDEADC:
 	Inherits: ^PropHusk
 	WithMakeAnimation:
 	RenderSprites:
 		PlayerPalette: raplayer
 		Palette: 
-        
+		
 IPAINTINGA:
 	Inherits: ^PropHusk
 	WithMakeAnimation:
@@ -1258,7 +1258,7 @@ IPAINTINGD:
 	RenderSprites:
 		PlayerPalette: raplayer
 		Palette: 
-        
+		
 CSTACK01:
 	Inherits: ^Crate
 	RenderSprites:

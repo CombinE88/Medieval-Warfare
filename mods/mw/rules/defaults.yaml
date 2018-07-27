@@ -1141,11 +1141,11 @@
 		OwnerType: InternalName
 		InternalOwner: Neutral
 	SpawnActorOnDeath@Soul4:
-		DeathType: BallistaDeath
+		DeathType: BurnToDeath
 		Probability: 90
 		Actor: souls
 		OwnerType: InternalName
-		InternalOwner: BurnToDeath
+		InternalOwner: Neutral
 
 ^Cavalry:
 	Inherits: ^MedievalInfantry
@@ -1244,11 +1244,11 @@
 		OwnerType: InternalName
 		InternalOwner: Neutral
 	SpawnActorOnDeath@Soul4:
-		DeathType: BallistaDeath
+		DeathType: BurnToDeath
 		Probability: 90
 		Actor: soul
 		OwnerType: InternalName
-		InternalOwner: BurnToDeath
+		InternalOwner: Neutral
 
 		
 ^Siege:
@@ -1308,11 +1308,11 @@
 		OwnerType: InternalName
 		InternalOwner: Neutral
 	SpawnActorOnDeath@Soul4:
-		DeathType: BallistaDeath
+		DeathType: BurnToDeath
 		Probability: 90
 		Actor: soul
 		OwnerType: InternalName
-		InternalOwner: BurnToDeath
+		InternalOwner: Neutral
 		
 ^MWCiv:
 	Inherits: ^Infantry

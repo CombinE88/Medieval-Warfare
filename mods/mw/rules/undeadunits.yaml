@@ -1408,7 +1408,7 @@ SOUL:
 		PercentageStep: -51
 		Step: -0
 		HealIfBelow: 110
-		Delay: 125
+		Delay: 600
 		DamageTypes: Vanish
 	InvisibleToLiving:
 		Factions: Undead
@@ -1446,7 +1446,7 @@ SOULS:
 		PercentageStep: -51
 		Step: -0
 		HealIfBelow: 110
-		Delay: 125
+		Delay: 400
 		DamageTypes: Vanish
 	InvisibleToLiving:
 		Factions: Undead
