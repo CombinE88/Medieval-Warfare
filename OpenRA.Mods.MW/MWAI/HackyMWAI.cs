@@ -67,6 +67,7 @@ namespace OpenRA.Mods.MW.MWAI
 			public readonly HashSet<string> HarvestableTrees = new HashSet<string>();
 			public readonly HashSet<string> NavalProduction = new HashSet<string>();
 		}
+
 		public class UndeadCategories
 		{
 			public readonly HashSet<string> ZigguratLv1 = new HashSet<string>();
@@ -86,11 +87,8 @@ namespace OpenRA.Mods.MW.MWAI
 			public readonly HashSet<string> Gravestones = new HashSet<string>();
 		}
 
-		// MW extra Stuff
-
 		[FieldLoader.LoadUsing("LoadUndeadCommonNames", true)]
 		public readonly UndeadCategories UndeadCommonNames;
-
 
 		[Desc("ResourceTypes used for Farm placing.")]
 		public readonly HashSet<string> FarmFields = new HashSet<string>();
@@ -310,6 +308,7 @@ namespace OpenRA.Mods.MW.MWAI
 			var categories = yaml.Nodes.First(n => n.Key == "UndeadCommonNames");
 			return FieldLoader.Load<UndeadCategories>(categories.Value);
 		}
+
 		static object LoadDecisions(MiniYaml yaml)
 		{
 			var ret = new List<SupportPowerDecision>();
@@ -340,7 +339,7 @@ namespace OpenRA.Mods.MW.MWAI
 				Info.BuildingCommonNames.ConstructionYard.Contains(a.Info.Name))
 				.RandomOrDefault(Random);
 
-			return randomConstructionYard != null ? randomConstructionYard.Location : initialBaseCenter;
+			return randomConstructionYard != null ? randomConstructionYard.Location : InitialBaseCenter;
 		}
 
 		public bool IsEnabled;
@@ -353,13 +352,11 @@ namespace OpenRA.Mods.MW.MWAI
 		readonly IPathFinder pathfinder;
 
 		// MW Related
-
-		public int number_CountPeasants;
-		public int number_CountPossiblePopulation;
-		public int number_CountPotentialFreeBeds;
+		public int NumberCountPeasants;
+		public int NumberCountPossiblePopulation;
+		public int NumberCountPotentialFreeBeds;
 
 		// Undead variables
-
 		public HashSet<Actor> AcolyteBuilder = new HashSet<Actor>();
 		public HashSet<Actor> AcolyteHarvester = new HashSet<Actor>();
 
@@ -368,26 +365,26 @@ namespace OpenRA.Mods.MW.MWAI
 		Dictionary<SupportPowerInstance, int> waitingPowers = new Dictionary<SupportPowerInstance, int>();
 		Dictionary<string, SupportPowerDecision> powerDecisions = new Dictionary<string, SupportPowerDecision>();
 
-		public CPos initialBaseCenter;
+		public CPos InitialBaseCenter;
 		SupportPowerManager supportPowerMngr;
 		PlayerResources playerResource;
 		FrozenActorLayer frozenLayer;
 		int ticks;
 
 		BitArray resourceTypeIndices;
-		BitArray OreResourceTypeIndices;
+		BitArray oreResourceTypeIndices;
 
 		List<BaseBuilder> builders = new List<BaseBuilder>();
 
 		List<Actor> unitsHangingAroundTheBase = new List<Actor>();
 
-		// Units that the ai already knows about. Any unit not on this list needs to be given a role.
-		public List<Actor> activeUnits = new List<Actor>();
+		private List<Actor> activeUnits = new List<Actor>();
 
-		public const int FeedbackTime = 30; // ticks; = a bit over 1s. must be >= netlag.
+		// ticks; = a bit over 1s. must be >= netlag.
+		private const int FeedbackTime = 30;
 
 		public readonly World World;
-		public Map Map { get { return World.Map; } }
+		private Map Map { get { return World.Map; } }
 		IBotInfo IBot.Info { get { return Info; } }
 
 		int rushTicks;
@@ -467,12 +464,12 @@ namespace OpenRA.Mods.MW.MWAI
 				}
 			}
 
-			OreResourceTypeIndices = new BitArray(tileset.TerrainInfo.Length); // Big enough
+			oreResourceTypeIndices = new BitArray(tileset.TerrainInfo.Length); // Big enough
 			foreach (var t in Map.Rules.Actors["world"].TraitInfos<ResourceTypeInfo>())
 			{
 				if (Info.OrePatches.Contains(t.Type))
 				{
-					OreResourceTypeIndices.Set(tileset.GetTerrainIndex(t.TerrainType), true);
+					oreResourceTypeIndices.Set(tileset.GetTerrainIndex(t.TerrainType), true);
 				}
 			}
 		}
@@ -544,11 +541,12 @@ namespace OpenRA.Mods.MW.MWAI
 			return World.ActorsHavingTrait<IPositionable>().Count(a => a.Owner == owner && a.Info.Name == unit);
 		}
 
-
 		int CountBuildingByCommonName(HashSet<string> buildings, Player owner)
 		{
 			return World.ActorsHavingTrait<Building>()
-				.Count(a => a.Owner == owner && (buildings.Contains(a.Info.Name) || buildings.Contains(a.Info.Name.Replace(".scaff", string.Empty)) || buildings.Contains(a.Info.Name + (".scaff"))));
+				.Count(a => a.Owner == owner && (buildings.Contains(a.Info.Name) ||
+				                                 buildings.Contains(a.Info.Name.Replace(".scaff", string.Empty)) ||
+				                                 buildings.Contains(a.Info.Name + ".scaff")));
 		}
 
 		public ActorInfo GetInfoByCommonName(HashSet<string> names, Player owner)
@@ -571,23 +569,26 @@ namespace OpenRA.Mods.MW.MWAI
 		int CountUndeadBuildingByCommonName(HashSet<string> buildings, Player owner)
 		{
 			return World.ActorsHavingTrait<Building>()
-				.Count(a => a.Owner == owner && (buildings.Contains(a.Info.Name) || buildings.Contains(a.Info.Name.Replace(".penta", string.Empty)) || buildings.Contains(a.Info.Name + (".penta"))));
+				.Count(a => a.Owner == owner && (buildings.Contains(a.Info.Name) ||
+				                                 buildings.Contains(a.Info.Name.Replace(".penta", string.Empty)) ||
+				                                 buildings.Contains(a.Info.Name + ".penta")));
 		}
 
 		public int CountPeasants()
 		{
-			return number_CountPeasants;
+			return NumberCountPeasants;
 		}
 
 		public int CountPossiblePopulation()
 		{
-			return number_CountPossiblePopulation;
+			return NumberCountPossiblePopulation;
 		}
 
 		public int CountPotentialFreeBeds()
 		{
-			return number_CountPotentialFreeBeds;
+			return NumberCountPotentialFreeBeds;
 		}
+
 		public bool HasMinimumFarm()
 		{
 			// Require at least one Farms, unless we can't build it.
@@ -605,8 +606,8 @@ namespace OpenRA.Mods.MW.MWAI
 		public bool HasAdequateFarm()
 		{
 			// Require at least two Farms, unless we have no possible Peasants (can't build it)
-			return (CountBuildingByCommonName(Info.BuildingCommonNames.Farms, Player) >= 3 ||
-				CountBuildingByCommonName(Info.BuildingCommonNames.Refineries, Player) > 1);
+			return CountBuildingByCommonName(Info.BuildingCommonNames.Farms, Player) >= 3 ||
+			       CountBuildingByCommonName(Info.BuildingCommonNames.Refineries, Player) > 1;
 		}
 
 		public bool HasAdequateBarracks()
@@ -614,7 +615,6 @@ namespace OpenRA.Mods.MW.MWAI
 			// Require at least two Farms, unless we have no possible Peasants (can't build it)
 			return CountBuildingByCommonName(Info.BuildingCommonNames.Barracks, Player) > 0;
 		}
-
 
 		public bool HasAdequateFact()
 		{
@@ -682,9 +682,12 @@ namespace OpenRA.Mods.MW.MWAI
 				case BuildingType.Defense:
 
 					// Defend our own harvestoperations
-					var resourceBuildings = World.FindActorsInCircle(World.Map.CenterOfCell(defenseCenter), new WDist(Info.MaxBaseRadius * 2))
-					.Where(a => !a.Disposed && a.Owner == Player && (Info.BuildingCommonNames.Farms.Contains((a.Info.Name)) || Info.BuildingCommonNames.Refineries.Contains((a.Info.Name))))
-					.Shuffle(Random);
+					var resourceBuildings = World.FindActorsInCircle(World.Map.CenterOfCell(defenseCenter),
+							new WDist(Info.MaxBaseRadius * 2))
+						.Where(a => !a.Disposed && a.Owner == Player &&
+						            (Info.BuildingCommonNames.Farms.Contains(a.Info.Name) ||
+						             Info.BuildingCommonNames.Refineries.Contains(a.Info.Name)))
+						.Shuffle(Random);
 
 					var targetCell = (resourceBuildings.Any() && resourceBuildings != null) ? resourceBuildings.Random(Player.World.SharedRandom).Location : baseCenter;
 
@@ -693,7 +696,7 @@ namespace OpenRA.Mods.MW.MWAI
 				case BuildingType.Refinery:
 					// Try and place the refinery near a resource field
 					var nearbyResources = Map.FindTilesInAnnulus(baseCenter, Info.MinBaseRadius, Info.MaxBaseRadius * 2)
-						.Where(a => OreResourceTypeIndices.Get(Map.GetTerrainIndex(a)))
+						.Where(a => oreResourceTypeIndices.Get(Map.GetTerrainIndex(a)))
 						.Shuffle(Random).Take(Info.MaxResourceCellsToCheck);
 
 					foreach (var r in nearbyResources)
@@ -938,13 +941,9 @@ namespace OpenRA.Mods.MW.MWAI
 				return;
 
 			var capturesCapturers = capturers.Where(a => a.Info.HasTraitInfo<CapturesInfo>());
-			//var externalCapturers = capturers.Except(capturesCapturers).Where(a => a.Info.HasTraitInfo<ExternalCapturesInfo>());
 
 			foreach (var capturer in capturesCapturers)
 				QueueCaptureOrderFor(capturer, GetCapturerTargetClosestToOrDefault(capturer, capturableTargetOptions));
-
-			//foreach (var capturer in externalCapturers)
-			//	QueueCaptureOrderFor(capturer, GetCapturerTargetClosestToOrDefault(capturer, externalCapturableTargetOptions));
 		}
 
 		void QueueCaptureOrderFor<TTargetType>(Actor capturer, CaptureTarget<TTargetType> target) where TTargetType : class, ITraitInfoInterface
@@ -1010,10 +1009,6 @@ namespace OpenRA.Mods.MW.MWAI
 					if (!harv.LastSearchFailed || act.NextActivity == null || act.NextActivity.GetType() != typeof(FindResources))
 						continue;
 				}
-
-				//var para = harvester.TraitOrDefault<Parachutable>();
-				//if (para != null && para.IsInAir)
-				//	continue;
 
 				// Tell the idle harvester to quit slacking:
 				var newSafeResourcePatch = FindNextResource(harvester, harv);
@@ -1167,7 +1162,7 @@ namespace OpenRA.Mods.MW.MWAI
 			if (mcv == null)
 				return;
 
-			initialBaseCenter = mcv.Location;
+			InitialBaseCenter = mcv.Location;
 			defenseCenter = mcv.Location;
 		}
 

@@ -224,6 +224,7 @@ namespace OpenRA.Mods.MW.MWAI
 						HackyMWAI.BotDebug("AI: {0} decided to build {1}: Priority override (low population) Population: " + population, queue.Actor.Owner, houses.Name);
 						return houses;
 					}
+
 					if (houses == null && population < ai.Info.MinimumPeasants)
 						return null;
 				}
@@ -285,11 +286,13 @@ namespace OpenRA.Mods.MW.MWAI
 				foreach (var frac in ai.Info.BuildingFractions.Shuffle(ai.Random))
 				{
 					var name = frac.Key;
+					var names = ai.Info.BuildingCommonNames;
+					var hunter = names.Hunter;
 
-					if (!ai.HasAdequateFarm() && (!ai.Info.BuildingCommonNames.Houses.Contains(name) || !ai.Info.BuildingCommonNames.Hunter.Contains(name)) && (!ai.Info.BuildingCommonNames.Hunter.Contains(name) || ai.Player.Faction.InternalName == "nod"))
+					if (!ai.HasAdequateFarm() && (!names.Houses.Contains(name) || !hunter.Contains(name)) && (!hunter.Contains(name) || ai.Player.Faction.InternalName == "nod"))
 						continue;
 
-					if ((ai.Info.BuildingCommonNames.Houses.Contains(name) && population > 40))
+					if (names.Houses.Contains(name) && population > 40)
 						continue;
 
 					// Can we build this structure?
@@ -326,7 +329,6 @@ namespace OpenRA.Mods.MW.MWAI
 				var buildableThings = queue.BuildableItems();
 
 				var pentagrams = ai.CountPenagrams();
-				//var builder = ai.AcolyteBuilder.Count();
 
 				if (pentagrams > 1)
 					return null;
@@ -346,9 +348,6 @@ namespace OpenRA.Mods.MW.MWAI
 				{
 					var name = frac.Key;
 
-					//if (!ai.Info.UndeadCommonNames.EarlyUpgrades.Contains(name) && ai.Info.BuildingLimits.ContainsKey(name))
-					//	continue;
-
 					// Can we build this structure?
 					if (!buildableThings.Any(b => b.Name == name))
 						continue;
@@ -366,14 +365,12 @@ namespace OpenRA.Mods.MW.MWAI
 
 					var actor = world.Map.Rules.Actors[name];
 
-					//if (ai.Info.UndeadCommonNames.Crypts.Contains(name) && ai.HasAdequateCrypts() * 3 >= playerBuildings.Count())
-					//	continue;
-
 					// Lets build this
 					HackyMWAI.BotDebug("{0} decided to build {1}: Desired is {2} ({3} / {4}); current is {5} / {4}",
 						queue.Actor.Owner, name, frac.Value, frac.Value * playerBuildings.Length, playerBuildings.Length, count);
 					return actor;
 				}
+
 				// Too spammy to keep enabled all the time, but very useful when debugging specific issues.
 				// HackyMWAI.BotDebug("{0} couldn't decide what to build for queue {1}.", queue.Actor.Owner, queue.Info.Group);
 				return null;

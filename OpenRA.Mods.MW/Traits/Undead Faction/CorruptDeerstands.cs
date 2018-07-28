@@ -54,7 +54,6 @@ namespace OpenRA.Mods.MW.Traits
             }
 
             self.QueueActivity(new Attack(self, Target.FromActor(order.TargetActor), true, true, 100));
-
         }
 
         public string VoicePhraseForOrder(Actor self, Order order)
@@ -77,7 +76,5 @@ namespace OpenRA.Mods.MW.Traits
                 return self.Info.TraitInfo<CorruptDeerstandInfo>().TargetActors.Contains(target.Info.Name);
             }
         }
-
-
     }
 }

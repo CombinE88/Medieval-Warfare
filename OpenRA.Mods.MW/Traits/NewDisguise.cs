@@ -13,12 +13,10 @@ using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
-using OpenRA.Graphics;
 using OpenRA.Mods.Common.Orders;
 using OpenRA.Mods.Common.Traits;
 using OpenRA.Mods.Common.Traits.Render;
 using OpenRA.Traits;
-using OpenRA;
 
 namespace OpenRA.Mods.MW.Traits
 {
@@ -86,7 +84,9 @@ namespace OpenRA.Mods.MW.Traits
         public readonly int ResetTime = 150;
 
         [Desc("Triggers which cause the actor to drop it's disguise. Possible values: None, Attack, Damaged.")]
-        public readonly RevealDisguiseType RevealDisguiseOn = RevealDisguiseType.Damage | RevealDisguiseType.Attack | RevealDisguiseType.Unload | RevealDisguiseType.Infiltrate | RevealDisguiseType.Demolish | RevealDisguiseType.Dock;
+        public readonly RevealDisguiseType RevealDisguiseOn =
+            RevealDisguiseType.Damage | RevealDisguiseType.Attack | RevealDisguiseType.Unload |
+            RevealDisguiseType.Infiltrate | RevealDisguiseType.Demolish | RevealDisguiseType.Dock;
 
         public object Create(ActorInitializer init) { return new NewDisguise(init.Self, this); }
     }
@@ -103,11 +103,11 @@ namespace OpenRA.Mods.MW.Traits
         readonly Actor self;
         readonly NewDisguiseInfo info;
 
-        private int CargoNow;
-        private int CargoBefore;
+        private int cargoNow;
+        private int cargoBefore;
         public int Timer;
         public int ChargeTime;
-        public bool cannotdsguise;
+        public bool Cannotdsguise;
 
         public Actor Target;
 
@@ -125,13 +125,13 @@ namespace OpenRA.Mods.MW.Traits
             conditionManager = self.TraitOrDefault<ConditionManager>();
             if (self.Info.HasTraitInfo<CargoInfo>())
             {
-                CargoNow = self.TraitsImplementing<Cargo>().FirstOrDefault().PassengerCount;
-                CargoBefore = self.TraitsImplementing<Cargo>().FirstOrDefault().PassengerCount;
+                cargoNow = self.TraitsImplementing<Cargo>().FirstOrDefault().PassengerCount;
+                cargoBefore = self.TraitsImplementing<Cargo>().FirstOrDefault().PassengerCount;
             }
+
             Timer = info.ResetTime;
             ChargeTime = info.ResetTime;
-            cannotdsguise = true;
-
+            Cannotdsguise = true;
         }
 
         public IEnumerable<IOrderTargeter> Orders
@@ -147,7 +147,6 @@ namespace OpenRA.Mods.MW.Traits
 
         public Order IssueOrder(Actor self, IOrderTargeter order, Target target, bool queued)
         {
-
             if (order.OrderID == "Disguise")
             {
                 return new Order(order.OrderID, self, target, queued) { }; // TargetActor = target.Actor };
@@ -181,7 +180,7 @@ namespace OpenRA.Mods.MW.Traits
 
         public void DisguiseAs(Actor target)
         {
-            if (cannotdsguise || target == null)
+            if (Cannotdsguise || target == null)
             {
                 var oldDisguiseSetting = Disguised;
                 var oldEffectiveOwner = AsPlayer;
@@ -204,18 +203,16 @@ namespace OpenRA.Mods.MW.Traits
                         AsPlayer = tooltip.Owner;
                         AsTooltipInfo = tooltip.TooltipInfo;
                     }
+
                     Timer = info.ResetTime;
-                    cannotdsguise = false;
+                    Cannotdsguise = false;
                 }
                 else
                 {
-
                     AsTooltipInfo = null;
                     AsPlayer = null;
                     AsSprite = null;
-
                 }
-
 
                 HandleDisguise(oldEffectiveOwner, oldDisguiseSetting);
             }
@@ -254,7 +251,7 @@ namespace OpenRA.Mods.MW.Traits
         {
             if (info.RevealDisguiseOn.HasFlag(RevealDisguiseType.Attack))
             {
-                cannotdsguise = false;
+                Cannotdsguise = false;
                 Timer = info.ResetTime;
                 DisguiseAs(null);
                 Target = self;
@@ -265,39 +262,39 @@ namespace OpenRA.Mods.MW.Traits
         {
             if (info.RevealDisguiseOn.HasFlag(RevealDisguiseType.Damage) && e.Damage.Value > 0)
             {
-                cannotdsguise = false;
+                Cannotdsguise = false;
                 Timer = info.ResetTime;
                 DisguiseAs(null);
                 Target = self;
             }
         }
 
-
-
         void ITick.Tick(Actor self)
         {
             if (!self.IsDead && self.IsInWorld && self.Info.HasTraitInfo<CargoInfo>())
             {
-                CargoNow = self.TraitsImplementing<Cargo>().FirstOrDefault().PassengerCount;
-                if (CargoBefore > CargoNow)
+                cargoNow = self.TraitsImplementing<Cargo>().FirstOrDefault().PassengerCount;
+                if (cargoBefore > cargoNow)
                 {
                     if (info.RevealDisguiseOn.HasFlag(RevealDisguiseType.Unload))
                     {
-                        cannotdsguise = false;
+                        Cannotdsguise = false;
                         Timer = info.ResetTime;
                         DisguiseAs(null);
                         Target = self;
                     }
                 }
-                CargoBefore = self.TraitsImplementing<Cargo>().FirstOrDefault().PassengerCount;
+
+                cargoBefore = self.TraitsImplementing<Cargo>().FirstOrDefault().PassengerCount;
             }
+
             if (Timer > 0)
             {
                 Timer--;
             }
             else
             {
-                cannotdsguise = true;
+                Cannotdsguise = true;
             }
         }
     }

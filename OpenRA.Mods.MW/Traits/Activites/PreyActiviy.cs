@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using OpenRA.Activities;
@@ -13,27 +12,26 @@ using OpenRA.Traits;
 
 namespace OpenRA.Mods.MW.Activities
 {
-
     // Assumes you have Minelayer on that unit
     public class PreyActivity : Activity, ITechTreePrerequisiteInfo
     {
         readonly AcolytePreyInfo info;
         readonly WithSpriteBody wsb;
 
-        public Actor dockactor;
+        private Actor dockactor;
         private bool lockfacing;
         bool playanim;
         private bool endqueueonce;
-        private Dock _d;
+        private Dock d;
 
         private int ticks;
         private ResourceLayer resLayer;
 
-        private ConditionManager ConditionManager;
+        private ConditionManager conditionManager;
         private int token;
         private string condtion;
 
-        private Dictionary<string, string> ResourceTypesPreres;
+        private Dictionary<string, string> resourceTypesPreres;
 
         public PreyActivity(Actor self, Actor dockact, bool facingDock, Dock d)
         {
@@ -42,17 +40,16 @@ namespace OpenRA.Mods.MW.Activities
             dockactor = dockact;
             lockfacing = facingDock;
             playanim = true;
-            _d = d;
+            this.d = d;
 
-            ticks = self.Info.TraitInfo<AcolytePreyInfo>().leechinterval;
+            ticks = self.Info.TraitInfo<AcolytePreyInfo>().Leechinterval;
             resLayer = self.World.WorldActor.Trait<ResourceLayer>();
 
-            ConditionManager = self.Trait<ConditionManager>();
+            conditionManager = self.Trait<ConditionManager>();
             token = ConditionManager.InvalidConditionToken;
             condtion = self.Info.TraitInfo<AcolytePreyInfo>().SelfEnabledCondition;
 
-            ResourceTypesPreres = self.Info.TraitInfo<AcolytePreyInfo>().ResourceTypesPreres;
-
+            resourceTypesPreres = self.Info.TraitInfo<AcolytePreyInfo>().ResourceTypesPreres;
         }
 
         public override Activity Tick(Actor self)
@@ -63,7 +60,7 @@ namespace OpenRA.Mods.MW.Activities
                 playanim = true;
                 if (condtion != null && token != ConditionManager.InvalidConditionToken)
                 {
-                    token = ConditionManager.RevokeCondition(self, token);
+                    token = conditionManager.RevokeCondition(self, token);
                     token = ConditionManager.InvalidConditionToken;
                 }
 
@@ -78,11 +75,11 @@ namespace OpenRA.Mods.MW.Activities
                             .SetPosition(self, self.World.Map.CellContaining(self.CenterPosition));
                     }));
                 }
+
                 if (ChildActivity == null)
                 {
                     return NextActivity;
                 }
-
             }
 
             if (ChildActivity != null)
@@ -95,7 +92,7 @@ namespace OpenRA.Mods.MW.Activities
             {
                 playanim = false;
                 endqueueonce = true;
-                QueueChild(self.Trait<IMove>().VisualMove(self, self.CenterPosition, _d.CenterPosition));
+                QueueChild(self.Trait<IMove>().VisualMove(self, self.CenterPosition, d.CenterPosition));
                 QueueChild(new CallFunc(() =>
                {
                    var facing = self.Trait<IFacing>();
@@ -107,38 +104,38 @@ namespace OpenRA.Mods.MW.Activities
                                : facing.Facing;
                        facing.Facing = desiredFacing;
                    }
+
                    wsb.PlayCustomAnimationRepeating(self, info.PreySequence);
                    if (condtion != null)
-                       token = ConditionManager.GrantCondition(self, condtion);
+                       token = conditionManager.GrantCondition(self, condtion);
                }));
             }
 
             if (self.Info.TraitInfo<AcolytePreyInfo>().LeechesResources && --ticks <= 0)
             {
                 var amm = Leech(self);
-                ticks = self.Info.TraitInfo<AcolytePreyInfo>().leechinterval + amm;
+                ticks = self.Info.TraitInfo<AcolytePreyInfo>().Leechinterval + amm;
             }
-
 
             return this;
         }
 
         public int Leech(Actor self)
         {
-            var ValidRes = new HashSet<string>();
+            var validRes = new HashSet<string>();
 
-            foreach (var restype in ResourceTypesPreres)
+            foreach (var restype in resourceTypesPreres)
             {
                 var hash = new List<string>();
                 hash.Add(restype.Value);
 
                 if (restype.Value == "NONE")
                 {
-                    ValidRes.Add(restype.Key);
+                    validRes.Add(restype.Key);
                 }
                 else if (self.Owner.PlayerActor.TraitOrDefault<TechTree>().HasPrerequisites(hash))
                 {
-                    ValidRes.Add(restype.Key);
+                    validRes.Add(restype.Key);
                 }
             }
 
@@ -152,7 +149,7 @@ namespace OpenRA.Mods.MW.Activities
                         return false;
                     if (resLayer.GetResourceDensity(c) == 0)
                         return false;
-                    if (ValidRes.Contains(resLayer.GetResource(c).Info.Type))
+                    if (validRes.Contains(resLayer.GetResource(c).Info.Type))
                         return true;
 
                     return false;
@@ -167,7 +164,6 @@ namespace OpenRA.Mods.MW.Activities
 
                 if ((self.Owner.PlayerActor.Trait<PlayerResources>().Resources + ammount) <= self.Owner.PlayerActor.Trait<PlayerResources>().ResourceCapacity)
                 {
-
                     var playerResources = self.Owner.PlayerActor.Trait<PlayerResources>();
                     playerResources.GiveResources(ammount);
 
@@ -181,6 +177,7 @@ namespace OpenRA.Mods.MW.Activities
                             self.World.AddFrameEndTask(w => w.Add(new FloatingText(self.CenterPosition,
                                 self.Owner.Color.RGB, floattest, 30)));
                     }
+
                     resLayer.Harvest(cell);
                     if (resLayer.GetResourceDensity(cell) <= 0)
                         resLayer.Destroy(cell);
@@ -188,9 +185,9 @@ namespace OpenRA.Mods.MW.Activities
                     return ammount;
                 }
             }
+
             return 0;
         }
-
 
         public static IEnumerable<CPos> RandomWalk(CPos p, MersenneTwister r)
         {

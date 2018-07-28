@@ -77,16 +77,16 @@ namespace OpenRA.Mods.MW.Traits.Render
         }
     }
 
-    public class WithUndeadBuilderOverlay : PausableConditionalTrait<WithUndeadBuilderOverlayInfo>, INotifyDamageStateChanged, INotifyBuildComplete, INotifySold, INotifyTransform, ITick
+    public class WithUndeadBuilderOverlay : PausableConditionalTrait<WithUndeadBuilderOverlayInfo>,
+        INotifyDamageStateChanged, INotifyBuildComplete, INotifySold, INotifyTransform, ITick
     {
         readonly Animation overlay;
         bool buildComplete;
 
-
         private AnimationWithOffset anim;
         private int animationlength;
         private int anomationframe;
-        private UndeadBuilder UD;
+        private UndeadBuilder uBuilder;
 
         public WithUndeadBuilderOverlay(Actor self, WithUndeadBuilderOverlayInfo info)
             : base(info)
@@ -94,7 +94,7 @@ namespace OpenRA.Mods.MW.Traits.Render
             var rs = self.Trait<RenderSprites>();
             var body = self.Trait<BodyOrientation>();
 
-            UD = self.TraitsImplementing<UndeadBuilder>().FirstOrDefault();
+            uBuilder = self.TraitsImplementing<UndeadBuilder>().FirstOrDefault();
 
             buildComplete = !self.Info.HasTraitInfo<BuildingInfo>(); // always render instantly for units
 
@@ -137,7 +137,7 @@ namespace OpenRA.Mods.MW.Traits.Render
 
         void ITick.Tick(Actor self)
         {
-            float bruch = UD.hassummoningcount * 100 / UD.info.SummoningTime;
+            float bruch = uBuilder.Hassummoningcount * 100 / uBuilder.Info.SummoningTime;
             anomationframe = (int)(animationlength * bruch) / 100;
         }
     }

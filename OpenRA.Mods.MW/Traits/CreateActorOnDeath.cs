@@ -10,11 +10,10 @@
 #endregion
 
 using System.Linq;
-using OpenRA.Mods.Common.Warheads;
-using OpenRA.Primitives;
-using OpenRA.Traits;
 using OpenRA.Mods.Common;
 using OpenRA.Mods.Common.Traits;
+using OpenRA.Primitives;
+using OpenRA.Traits;
 
 namespace OpenRA.Mods.MW.Traits
 {

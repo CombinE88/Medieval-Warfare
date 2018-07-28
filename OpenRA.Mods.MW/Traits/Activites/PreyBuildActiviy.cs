@@ -1,5 +1,4 @@
-﻿
-using System.Linq;
+﻿using System.Linq;
 using OpenRA.Activities;
 using OpenRA.Mods.Common.Traits;
 using OpenRA.Mods.Common.Traits.Render;
@@ -9,7 +8,6 @@ using OpenRA.Traits;
 
 namespace OpenRA.Mods.MW.Activities
 {
-
     // Assumes you have Minelayer on that unit
     public class PreyBuildActivity : Activity
     {
@@ -20,16 +18,16 @@ namespace OpenRA.Mods.MW.Activities
         private bool lockfacing;
         bool playanim;
         private bool endqueueonce;
-        private Dock _d;
+        private Dock d;
 
         private int ticks;
-        private UndeadBuilder UndeadBuilder;
+        private UndeadBuilder undeadBuilder;
 
-        private ConditionManager ConditionManager;
+        private ConditionManager conditionManager;
         private int token;
         private string condtion;
 
-        private PlayerResources PR;
+        private PlayerResources pr;
 
         public PreyBuildActivity(Actor self, Actor dockact, bool facingDock, Dock d)
         {
@@ -38,16 +36,15 @@ namespace OpenRA.Mods.MW.Activities
             dockactor = dockact;
             lockfacing = facingDock;
             playanim = true;
-            _d = d;
+            this.d = d;
 
             ticks = self.Info.TraitInfo<AcolytePreyBuildInfo>().Buildinterval;
-            UndeadBuilder = dockactor.TraitsImplementing<UndeadBuilder>().FirstOrDefault();
+            undeadBuilder = dockactor.TraitsImplementing<UndeadBuilder>().FirstOrDefault();
 
-            ConditionManager = self.Trait<ConditionManager>();
+            conditionManager = self.Trait<ConditionManager>();
             token = ConditionManager.InvalidConditionToken;
             condtion = self.Info.TraitInfo<AcolytePreyBuildInfo>().SelfEnabledCondition;
-            PR = self.Owner.PlayerActor.Trait<PlayerResources>();
-
+            pr = self.Owner.PlayerActor.Trait<PlayerResources>();
         }
 
         public override Activity Tick(Actor self)
@@ -58,7 +55,7 @@ namespace OpenRA.Mods.MW.Activities
                 playanim = true;
                 if (condtion != null && token != ConditionManager.InvalidConditionToken)
                 {
-                    token = ConditionManager.RevokeCondition(self, token);
+                    token = conditionManager.RevokeCondition(self, token);
                     token = ConditionManager.InvalidConditionToken;
                 }
 
@@ -73,11 +70,11 @@ namespace OpenRA.Mods.MW.Activities
                             .SetPosition(self, self.World.Map.CellContaining(self.CenterPosition));
                     }));
                 }
+
                 if (ChildActivity == null)
                 {
                     return NextActivity;
                 }
-
             }
 
             if (ChildActivity != null)
@@ -90,7 +87,7 @@ namespace OpenRA.Mods.MW.Activities
             {
                 playanim = false;
                 endqueueonce = true;
-                QueueChild(self.Trait<IMove>().VisualMove(self, self.CenterPosition, _d.CenterPosition));
+                QueueChild(self.Trait<IMove>().VisualMove(self, self.CenterPosition, d.CenterPosition));
                 QueueChild(new CallFunc(() =>
                {
                    var facing = self.Trait<IFacing>();
@@ -102,49 +99,37 @@ namespace OpenRA.Mods.MW.Activities
                                : facing.Facing;
                        facing.Facing = desiredFacing;
                    }
+
                    wsb.PlayCustomAnimationRepeating(self, info.PreySequence);
                    if (condtion != null)
-                       token = ConditionManager.GrantCondition(self, condtion);
+                       token = conditionManager.GrantCondition(self, condtion);
                }));
             }
 
             BuildPrey(self);
-
 
             return this;
         }
 
         void BuildPrey(Actor self)
         {
-            if (UndeadBuilder.hassummoningcount >= UndeadBuilder.info.SummoningTime)
-            {
+            if (undeadBuilder.Hassummoningcount >= undeadBuilder.Info.SummoningTime)
                 Cancel(self, true);
-            }
-            else if (UndeadBuilder != null && --ticks <= 0)
+            else if (undeadBuilder != null && --ticks <= 0)
             {
-
                 ticks = self.Info.TraitInfo<AcolytePreyBuildInfo>().Buildinterval;
-                if (PR.TakeCash(UndeadBuilder.PayPerTick, true))
+                if (pr.TakeCash(undeadBuilder.PayPerTick, true))
                 {
-                    UndeadBuilder.hassummoningcount += 1;
-                    var floattest = UndeadBuilder.PayPerTick.ToString();
+                    undeadBuilder.Hassummoningcount += 1;
+                    var floattest = undeadBuilder.PayPerTick.ToString();
                     floattest = "- " + floattest + " Essence";
                     if (self.Owner.IsAlliedWith(self.World.RenderPlayer))
                         self.World.AddFrameEndTask(w => w.Add(new FloatingTextBackwards(self.CenterPosition,
                             self.Owner.Color.RGB, floattest, 30)));
-
                 }
             }
-            else if (dockactor == null)
-            {
+            else if (dockactor == null || dockactor.IsDead || !dockactor.IsInWorld)
                 Cancel(self, true);
-            }
-            else if (dockactor.IsDead || !dockactor.IsInWorld)
-            {
-                Cancel(self, true);
-            }
-
         }
-
     }
 }

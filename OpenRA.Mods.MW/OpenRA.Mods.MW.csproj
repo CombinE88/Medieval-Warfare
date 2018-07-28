@@ -31,16 +31,16 @@
     <Optimize>true</Optimize>
   </PropertyGroup>
   <ItemGroup>
-      <Reference Include="FuzzyLogicLibrary, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null">
-        <HintPath>..\engine\thirdparty\download\FuzzyLogicLibrary.dll</HintPath>
-      </Reference>
-      <Reference Include="System" />
-      <Reference Include="System.Core" />
-      <Reference Include="System.Drawing" />
-      <Reference Include="Eluant">
-        <HintPath>..\engine\thirdparty\download\Eluant.dll</HintPath>
-        <Private>False</Private>
-      </Reference>
+    <Reference Include="FuzzyLogicLibrary, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\engine\thirdparty\download\FuzzyLogicLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="Eluant">
+      <HintPath>..\engine\thirdparty\download\Eluant.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Activities\FallDown.cs" />
@@ -60,7 +60,7 @@
     <Compile Include="Projectiles\AthenaProjectile.cs" />
     <Compile Include="Projectiles\InstantExplode.cs" />
     <Compile Include="Traits\Activites\Instanttransforms.cs" />
-    <Compile Include="Traits\Activites\PreyActiviyBuild.cs" />
+    <Compile Include="Traits\Activites\PreyBuildActiviy.cs" />
     <Compile Include="Traits\Activites\PreyBuild.cs" />
     <Compile Include="Traits\Activites\Prey.cs" />
     <Compile Include="Traits\Activites\PreyActiviy.cs" />

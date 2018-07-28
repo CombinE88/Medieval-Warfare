@@ -12,7 +12,7 @@ namespace OpenRA.Mods.MW.Traits
     {
         readonly Actor self;
 
-        public bool isWorker;
+        public bool IsWorker;
 
         public IsPeasant(Actor self)
         {
@@ -32,7 +32,7 @@ namespace OpenRA.Mods.MW.Traits
         {
             if (!self.Owner.NonCombatant && self.Owner.WinState != WinState.Lost && self.Owner.PlayerActor.Info.HasTraitInfo<PlayerCivilizationInfo>())
             {
-                if (isWorker)
+                if (IsWorker)
                 {
                     self.Owner.PlayerActor.Trait<PlayerCivilization>().WorkerPopulationvar -= 1;
                     self.Owner.PlayerActor.Trait<PlayerCivilization>().Recalculate();
@@ -42,27 +42,28 @@ namespace OpenRA.Mods.MW.Traits
                     self.Owner.PlayerActor.Trait<PlayerCivilization>().Peasantpopulationvar -= 1;
                     self.Owner.PlayerActor.Trait<PlayerCivilization>().Recalculate();
                 }
-
             }
         }
+
         public void SetWroking()
         {
-            if (!isWorker)
+            if (!IsWorker)
             {
-                isWorker = true;
+                IsWorker = true;
                 self.Owner.PlayerActor.Trait<PlayerCivilization>().WorkerPopulationvar += 1;
                 self.Owner.PlayerActor.Trait<PlayerCivilization>().Peasantpopulationvar -= 1;
                 self.Owner.PlayerActor.Trait<PlayerCivilization>().Recalculate();
             }
         }
+
         public void SetPeasant()
         {
-            if (isWorker)
+            if (IsWorker)
             {
                 self.Owner.PlayerActor.Trait<PlayerCivilization>().WorkerPopulationvar -= 1;
                 self.Owner.PlayerActor.Trait<PlayerCivilization>().Peasantpopulationvar += 1;
                 self.Owner.PlayerActor.Trait<PlayerCivilization>().Recalculate();
-                isWorker = false;
+                IsWorker = false;
             }
         }
     }

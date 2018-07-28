@@ -41,7 +41,6 @@ namespace OpenRA.Mods.MW.Traits
 
         int lastAttackTime;
 
-
         public AcolyteAttackNotifier(Actor self, AcolyteAttackNotifierInfo info)
         {
             radarPings = self.World.WorldActor.TraitOrDefault<RadarPings>();

@@ -47,13 +47,11 @@ namespace OpenRA.Mods.MW.Warheads
                         return false;
                     });
 
-
             if (actors.Any())
             {
                 var a = actors.ClosestTo(target.CenterPosition);
                 if (IsValidAgainst(a, firedBy))
                 {
-
                     var external = a.TraitsImplementing<ExternalCondition>()
                         .FirstOrDefault(t => t.Info.Condition == Condition && t.CanGrantCondition(a, firedBy));
 

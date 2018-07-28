@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using OpenRA.Mods.Common.Orders;
 using OpenRA.Mods.MW.Activities;
 using OpenRA.Traits;
@@ -8,7 +7,6 @@ namespace OpenRA.Mods.MW.Traits
 {
     class AcolytePreyBuildInfo : ITraitInfo
     {
-
         [Desc("Prey Animation when docking.")]
         [SequenceReference]
         public readonly string PreySequence = "prey";
@@ -21,9 +19,9 @@ namespace OpenRA.Mods.MW.Traits
 
         public readonly string Cursor = "preycursor";
 
-        public int Buildinterval = 25;
+        public readonly int Buildinterval = 25;
 
-        public string SelfEnabledCondition = null;
+        public readonly string SelfEnabledCondition = null;
 
         public object Create(ActorInitializer init) { return new AcolytePreyBuild(this); }
     }
@@ -31,10 +29,9 @@ namespace OpenRA.Mods.MW.Traits
     class AcolytePreyBuild : IIssueOrder, IResolveOrder, IOrderVoice, ITick
     {
         readonly AcolytePreyBuildInfo info;
-        public Actor forceactor;
-        public bool SmartPrey;
-        public int smarPreyWait;
-
+        private Actor forceactor;
+        private bool smartPrey;
+        private int smarPreyWait;
 
         public AcolytePreyBuild(AcolytePreyBuildInfo info)
         {
@@ -44,7 +41,7 @@ namespace OpenRA.Mods.MW.Traits
 
         void ITick.Tick(Actor self)
         {
-            if (SmartPrey && self.IsIdle)
+            if (smartPrey && self.IsIdle)
             {
                 --smarPreyWait;
                 if (smarPreyWait <= 0)
@@ -55,11 +52,9 @@ namespace OpenRA.Mods.MW.Traits
             }
         }
 
-
         public IEnumerable<IOrderTargeter> Orders
         {
             get { yield return new PreyOrderBuildTargeter(info.Cursor); }
-
         }
 
         public Order IssueOrder(Actor self, IOrderTargeter order, Target target, bool queued)
@@ -74,12 +69,12 @@ namespace OpenRA.Mods.MW.Traits
 
         public void ResolveOrder(Actor self, Order order)
         {
-
             if (order.OrderString == "Stop" || order.OrderString == "Move")
             {
                 // Turn off idle smarts to obey the stop/move:
-                SmartPrey = false;
+                smartPrey = false;
             }
+
             if (order.OrderString != "PreyBuild")
             {
                 return;
@@ -89,18 +84,14 @@ namespace OpenRA.Mods.MW.Traits
                 self.CancelActivity();
 
             forceactor = order.TargetActor;
-            SmartPrey = true;
+            smartPrey = true;
             self.QueueActivity(new PreyBuild(self, forceactor));
-
-
-
         }
 
         public string VoicePhraseForOrder(Actor self, Order order)
         {
             return order.OrderString == "PreyBuild" ? info.Voice : null;
         }
-
 
         class PreyOrderBuildTargeter : UnitOrderTargeter
         {
@@ -117,7 +108,5 @@ namespace OpenRA.Mods.MW.Traits
                 return self.Info.TraitInfo<AcolytePreyBuildInfo>().TargetActors.Contains(target.Info.Name);
             }
         }
-
-
     }
 }

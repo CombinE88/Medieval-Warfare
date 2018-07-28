@@ -5,7 +5,6 @@ namespace OpenRA.Mods.MW.Traits
 {
     public class IsTownhallInfo : ConditionalTraitInfo
     {
-
         [Desc("Number in Percent 0-100 How much the total spawnrate will be reduced.")]
         public readonly int Percent = 50;
 
@@ -14,22 +13,22 @@ namespace OpenRA.Mods.MW.Traits
 
     public class IsTownhall : ConditionalTrait<IsTownhallInfo>, INotifyCreated, INotifyRemovedFromWorld
     {
-        PlayerCivilization PlayerCiv;
-        bool Enabled = false;
+        PlayerCivilization playerCiv;
+        bool enabled;
 
         public IsTownhall(Actor self, IsTownhallInfo info) : base(info)
         {
-            PlayerCiv = self.Owner.PlayerActor.Trait<PlayerCivilization>();
+            playerCiv = self.Owner.PlayerActor.Trait<PlayerCivilization>();
         }
 
         void INotifyCreated.Created(Actor self)
         {
             if (!self.Owner.NonCombatant && self.Owner.WinState != WinState.Lost && self.Owner.PlayerActor.Info.HasTraitInfo<PlayerCivilizationInfo>())
             {
-                if (!IsTraitDisabled && !Enabled)
+                if (!IsTraitDisabled && !enabled)
                 {
-                    PlayerCiv.PercentageModifier += Info.Percent;
-                    Enabled = true;
+                    playerCiv.PercentageModifier += Info.Percent;
+                    enabled = true;
                 }
             }
         }
@@ -38,29 +37,29 @@ namespace OpenRA.Mods.MW.Traits
         {
             if (!self.Owner.NonCombatant && self.Owner.WinState != WinState.Lost && self.Owner.PlayerActor.Info.HasTraitInfo<PlayerCivilizationInfo>())
             {
-                if (!IsTraitDisabled && Enabled)
+                if (!IsTraitDisabled && enabled)
                 {
-                    PlayerCiv.PercentageModifier -= Info.Percent;
-                    Enabled = false;
+                    playerCiv.PercentageModifier -= Info.Percent;
+                    enabled = false;
                 }
             }
         }
 
         protected override void TraitEnabled(Actor self)
         {
-            if (!IsTraitDisabled && !Enabled)
+            if (!IsTraitDisabled && !enabled)
             {
-                PlayerCiv.PercentageModifier += Info.Percent;
-                Enabled = true;
+                playerCiv.PercentageModifier += Info.Percent;
+                enabled = true;
             }
         }
 
         protected override void TraitDisabled(Actor self)
         {
-            if (!IsTraitDisabled && Enabled)
+            if (!IsTraitDisabled && enabled)
             {
-                PlayerCiv.PercentageModifier -= Info.Percent;
-                Enabled = false;
+                playerCiv.PercentageModifier -= Info.Percent;
+                enabled = false;
             }
         }
     }

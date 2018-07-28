@@ -9,19 +9,15 @@
  */
 #endregion
 
-
 using System;
-using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
-using OpenRA.Activities;
 using OpenRA.Mods.Common;
 using OpenRA.Mods.Common.Activities;
 using OpenRA.Mods.Common.Traits;
 using OpenRA.Mods.Common.Traits.Render;
 using OpenRA.Primitives;
 using OpenRA.Traits;
-
 
 namespace OpenRA.Mods.MW.Traits
 {
@@ -45,31 +41,24 @@ namespace OpenRA.Mods.MW.Traits
             this.info = info;
         }
 
-
-
         public override bool Produce(Actor self, ActorInfo producee, string productionType, TypeDictionary inits)
         {
             var newexit = self.Info.TraitInfos<ExitInfo>().FirstOrDefault();
             var person = producee.TraitInfo<PersonValuedInfo>();
             var numb = person.ActorCount;
 
-
             var devMode = self.Owner.PlayerActor.TraitOrDefault<DeveloperMode>();
 
             if (devMode != null && devMode.FastBuild)
             {
-
                 self.World.AddFrameEndTask(ww => DoProduction(self, producee, newexit, productionType, inits));
                 Game.Sound.PlayNotification(self.World.Map.Rules, self.Owner, "Speech", info.ReadyAudio,
                     self.Owner.Faction.InternalName);
                 return true;
             }
 
-
             if (!producee.HasTraitInfo<PersonValuedInfo>() || self.Owner.PlayerActor.Trait<PlayerCivilization>().FreePopulation < numb)
                 return false;
-
-
 
             self.World.AddFrameEndTask(w => DoProduction(self, producee, newexit, productionType, inits));
             Game.Sound.PlayNotification(self.World.Map.Rules, self.Owner, "Speech", info.ReadyAudio,
@@ -98,7 +87,6 @@ namespace OpenRA.Mods.MW.Traits
                 exit = self.Location + exitinfo.ExitCell;
                 var spawn = self.CenterPosition + exitinfo.SpawnOffset;
                 var to = self.World.Map.CenterOfCell(exit);
-
 
                 if (producee.HasTraitInfo<IPositionableInfo>())
                 {
@@ -178,11 +166,8 @@ namespace OpenRA.Mods.MW.Traits
                                 foreach (var t in newUnit.TraitsImplementing<INotifyBuildComplete>())
                                     t.BuildingComplete(newUnit);
                             });
-
                         }
                     }
-
-
                 }
                 else
                 {
@@ -200,9 +185,9 @@ namespace OpenRA.Mods.MW.Traits
                                 newUnit.QueueActivity(new AttackMoveActivity(
                                     newUnit, move.MoveTo(exitLocation, 1)));
                             });
-
                         }
                     }
+
                     newUnit.SetTargetLine(target, rp.Value != null ? Color.Red : Color.Green, false);
 
                     if (!self.IsDead)
@@ -218,6 +203,5 @@ namespace OpenRA.Mods.MW.Traits
                 }
             });
         }
-
     }
 }

@@ -40,10 +40,9 @@ namespace OpenRA.Mods.MW.Traits
 
     public class UndeadBuilder : ITick
     {
-        public UndeadBuilderInfo info;
-
-        public int hassummoningcount;
-        public int decaycounter;
+        public UndeadBuilderInfo Info;
+        public int Hassummoningcount;
+        private int decaycounter;
 
         public int PayPerTick;
         private DeveloperMode devMode;
@@ -52,60 +51,56 @@ namespace OpenRA.Mods.MW.Traits
 
         public UndeadBuilder(UndeadBuilderInfo info)
         {
-            this.info = info;
+            this.Info = info;
             decaycounter = info.DecayTime;
             PayPerTick = info.Cost / info.SummoningTime;
             selfBuildCounter = info.SelfBuildDelay;
         }
 
-
         void ITick.Tick(Actor self)
         {
-            if (info.SummoningDecay)
+            if (Info.SummoningDecay)
             {
                 decaycounter--;
-                if (decaycounter <= 0 & hassummoningcount > 0)
+                if (decaycounter <= 0 & Hassummoningcount > 0)
                 {
-                    hassummoningcount--;
-                    decaycounter = info.DecayTime;
+                    Hassummoningcount--;
+                    decaycounter = Info.DecayTime;
                 }
             }
 
-            if (hassummoningcount >= info.SummoningTime)
-                replaceSelf(self);
+            if (Hassummoningcount >= Info.SummoningTime)
+                ReplaceSelf(self);
 
             devMode = self.Owner.PlayerActor.TraitOrDefault<DeveloperMode>();
             if (devMode != null && devMode.FastBuild)
             {
-                replaceSelf(self);
+                ReplaceSelf(self);
             }
 
-            if (!info.Selfbuilds)
+            if (!Info.Selfbuilds)
                 return;
 
-            if (info.Selfbuilds)
+            if (Info.Selfbuilds)
             {
                 if (selfBuildCounter-- <= 0)
                 {
-                    selfBuildCounter = info.SelfBuildDelay;
+                    selfBuildCounter = Info.SelfBuildDelay;
                     if (self.Owner.PlayerActor.Trait<PlayerResources>().TakeCash(PayPerTick, true))
                     {
-                        hassummoningcount += 1;
+                        Hassummoningcount += 1;
                         var floattest = PayPerTick.ToString();
                         floattest = "- " + floattest + " Essence";
                         if (self.Owner.IsAlliedWith(self.World.RenderPlayer))
                             self.World.AddFrameEndTask(w => w.Add(new FloatingTextBackwards(self.CenterPosition,
                                 self.Owner.Color.RGB, floattest, 30)));
                     }
-
                 }
             }
-
         }
 
-        public void replaceSelf(Actor self)
+        public void ReplaceSelf(Actor self)
         {
-
             self.World.AddFrameEndTask(w =>
             {
                 if (self.IsDead)
@@ -114,37 +109,35 @@ namespace OpenRA.Mods.MW.Traits
                 var selected = w.Selection.Contains(self);
                 var controlgroup = w.Selection.GetControlGroupForActor(self);
 
-
                 var init = new TypeDictionary
                 {
-                    new LocationInit(self.Location + info.SpawnOffset),
+                    new LocationInit(self.Location + Info.SpawnOffset),
                     new CenterPositionInit(self.CenterPosition),
                     new OwnerInit(self.Owner),
                 };
 
-                if (info.SkipMakeAnims)
+                if (Info.SkipMakeAnims)
                     init.Add(new SkipMakeAnimsInit());
 
                 var health = self.TraitOrDefault<Health>();
-                if (health != null && info.ForceHealthPercentage)
+                if (health != null && Info.ForceHealthPercentage)
                 {
                     var newHP = (health.HP * 100) / health.MaxHP;
                     init.Add(new HealthInit(newHP));
                 }
 
-                var a = w.CreateActor(info.SpawnActor, init);
+                var a = w.CreateActor(Info.SpawnActor, init);
 
                 if (selected)
                     w.Selection.Add(w, a);
                 if (controlgroup.HasValue)
                     w.Selection.AddToControlGroup(a, controlgroup.Value);
 
-                Game.Sound.PlayNotification(self.World.Map.Rules, self.Owner, "Speech", info.ReadyAudio,
+                Game.Sound.PlayNotification(self.World.Map.Rules, self.Owner, "Speech", Info.ReadyAudio,
                     self.Owner.Faction.InternalName);
 
                 self.Dispose();
             });
         }
     }
-
 }

@@ -36,7 +36,6 @@ namespace OpenRA.Mods.MW.Traits.Render
 
         public static object LoadWeaponSequences(MiniYaml yaml)
         {
-
             return yaml.ToDictionary().ContainsKey("AttackSequences")
                 ? yaml.ToDictionary()["AttackSequences"].ToDictionary(my => FieldLoader.GetValue<string>("(value)", my.Value))
                 : new Dictionary<string, string>();
@@ -62,7 +61,7 @@ namespace OpenRA.Mods.MW.Traits.Render
         int idleDelay;
         AnimationState state;
         IRenderInfantrySequenceModifier rsm;
-        public AnimationWithOffset animwo;
+        public AnimationWithOffset Animwo;
 
         bool IsModifyingSequence { get { return rsm != null && rsm.IsModifyingSequence; } }
         bool wasModifying;
@@ -73,8 +72,8 @@ namespace OpenRA.Mods.MW.Traits.Render
             var rs = init.Self.Trait<RenderSprites>();
 
             DefaultAnimation = new Animation(init.World, rs.GetImage(init.Self), RenderSprites.MakeFacingFunc(init.Self));
-            animwo = new AnimationWithOffset(DefaultAnimation, null, () => IsTraitDisabled);
-            rs.Add(animwo);
+            Animwo = new AnimationWithOffset(DefaultAnimation, null, () => IsTraitDisabled);
+            rs.Add(Animwo);
             PlayStandAnimation(init.Self);
 
             state = AnimationState.Waiting;
@@ -135,7 +134,12 @@ namespace OpenRA.Mods.MW.Traits.Render
 
         void INotifyAttack.Attacking(Actor self, Target target, Armament a, Barrel barrel) { }
 
-        public virtual void Tick(Actor self)
+        void ITick.Tick(Actor self)
+        {
+            TickInner(self);
+        }
+
+        protected virtual void TickInner(Actor self)
         {
             if (rsm != null)
             {
@@ -160,7 +164,7 @@ namespace OpenRA.Mods.MW.Traits.Render
             dirty = false;
         }
 
-        public void TickIdle(Actor self)
+        void INotifyIdle.TickIdle(Actor self)
         {
             if (state != AnimationState.Idle && state != AnimationState.IdleAnimating && state != AnimationState.Attacking)
             {

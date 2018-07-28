@@ -46,6 +46,7 @@ namespace OpenRA.Mods.MW.Widgets
                 addprioritybutton.OnClick = () => PerformOrderOnSelection(a => new Order("AddPrio", a, false));
                 addprioritybutton.OnKeyPress = ki => { stopHighlighted = 2; addprioritybutton.OnClick(); };
             }
+
             var removeprioritybutton = widget.GetOrNull<ButtonWidget>("REM_PRIO");
             if (removeprioritybutton != null)
             {
@@ -55,27 +56,25 @@ namespace OpenRA.Mods.MW.Widgets
                     UpdateStateIfNecessary();
                     return priorityisdisabled;
                 };
+
                 removeprioritybutton.IsHighlighted = () => stopHighlighted > 0;
                 removeprioritybutton.OnClick = () => PerformOrderOnSelection(a => new Order("RemPrio", a, false));
                 removeprioritybutton.OnKeyPress = ki => { stopHighlighted = 2; removeprioritybutton.OnClick(); };
-
             }
         }
 
         void UpdateStateIfNecessary()
         {
-
             selectedActors = world.Selection.Actors
                 .Where(a => a.Owner == world.LocalPlayer && a.IsInWorld && a.Info.HasTraitInfo<ConstructionPriorityInfo>())
                 .ToArray();
 
             priorityisdisabled = !selectedActors.Any(a => a.Info.HasTraitInfo<ConstructionPriorityInfo>());
-
         }
 
-        void BindButtonIcon(ButtonWidget button)
+        void BindButtonIcon(ButtonWidget b)
         {
-            button.Get<ImageWidget>("ICON").GetImageName = () => button.IsDisabled() ? button.Get<ImageWidget>("ICON").ImageName + "-disabled" : button.Get<ImageWidget>("ICON").ImageName;
+            b.Get<ImageWidget>("ICON").GetImageName = () => b.IsDisabled() ? b.Get<ImageWidget>("ICON").ImageName + "-disabled" : b.Get<ImageWidget>("ICON").ImageName;
         }
 
         void PerformOrderOnSelection(Func<Actor, Order> f)

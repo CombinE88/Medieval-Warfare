@@ -8,16 +8,6 @@
  * information, see COPYING.
  */
 #endregion
-#region Copyright & License Information
-/*
- * Copyright 2007-2017 The OpenRA Developers (see AUTHORS)
- * This file is part of OpenRA, which is free software. It is made
- * available to you under the terms of the GNU General Public License
- * as published by the Free Software Foundation, either version 3 of
- * the License, or (at your option) any later version. For more
- * information, see COPYING.
- */
-#endregion
 
 using System;
 using System.Collections.Generic;
@@ -66,39 +56,36 @@ namespace OpenRA.Mods.MW.Traits
         CPos lastLocation; // in case this is a mobile dock.
         int ticks;
 
-
-        public bool CantAccesDock(Actor client, Dock Dock)
+        public bool CantAccesDock(Actor client, Dock dock)
         {
-            if (client != null && Dock != null)
+            if (client != null && dock != null)
             {
-
                 List<CPos> path;
 
                 using (var thePath = PathSearch.FromPoint(client.World, client.Info.TraitInfo<MobileInfo>(),
-                    client, client.Location, Dock.Location, true))
+                    client, client.Location, dock.Location, true))
                     path = client.World.WorldActor.Trait<IPathFinder>().FindPath(thePath);
 
-                if (path.Count <= 0 && (client.Location - Dock.Location).LengthSquared > new CVec(1, 1).LengthSquared)
-                {
+                if (path.Count <= 0 && (client.Location - dock.Location).LengthSquared > new CVec(1, 1).LengthSquared)
                     return false;
-                }
+
                 return true;
             }
-            return false;
 
+            return false;
         }
 
-        public bool CanReachPosition(Actor Unit, Dock Position)
+        public bool CanReachPosition(Actor unit, Dock position)
         {
             List<CPos> path;
 
-            using (var thePath = PathSearch.FromPoint(Unit.World, Unit.Info.TraitInfo<MobileInfo>(),
-                Unit, Unit.Location, Position.Location, true))
-                path = Unit.World.WorldActor.Trait<IPathFinder>().FindPath(thePath);
+            using (var thePath = PathSearch.FromPoint(unit.World, unit.Info.TraitInfo<MobileInfo>(),
+                unit, unit.Location, position.Location, true))
+                path = unit.World.WorldActor.Trait<IPathFinder>().FindPath(thePath);
 
             if (path.Count > 0)
                 return true;
-            if (path.Count <= 0 && (Unit.CenterPosition - Position.CenterPosition).LengthSquared <= WDist.FromCells(1).LengthSquared)
+            if (path.Count <= 0 && (unit.CenterPosition - position.CenterPosition).LengthSquared <= WDist.FromCells(1).LengthSquared)
                 return true;
 
             return false;
@@ -112,7 +99,7 @@ namespace OpenRA.Mods.MW.Traits
 
             // sort the dock traits by their Order trait.
             var t0 = host.TraitsImplementing<Dock>().ToList();
-            t0.Sort(delegate (Dock a, Dock b) { return a.Info.Order - b.Info.Order; });
+            t0.Sort(delegate(Dock a, Dock b) { return a.Info.Order - b.Info.Order; });
             var t1 = t0.Where(d => !d.Info.WaitingPlace).ToList();
             var t2 = t0.Where(d => d.Info.WaitingPlace).ToList();
             allDocks = t0.ToArray();

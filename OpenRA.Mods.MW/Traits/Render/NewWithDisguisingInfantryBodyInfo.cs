@@ -20,7 +20,7 @@ namespace OpenRA.Mods.MW.Traits.Render
         public override object Create(ActorInitializer init) { return new NewWithDisguisingInfantryBody(init, this); }
     }
 
-    class NewWithDisguisingInfantryBody : WithInfantryBodyDisguisedUpdate
+    class NewWithDisguisingInfantryBody : WithInfantryBodyDisguisedUpdate, ITick
     {
         readonly NewWithDisguisingInfantryBodyInfo info;
         readonly NewDisguise disguise;
@@ -35,7 +35,7 @@ namespace OpenRA.Mods.MW.Traits.Render
             intendedSprite = disguise.AsSprite;
         }
 
-        public override void Tick(Actor self)
+        void ITick.Tick(Actor self)
         {
             if (disguise.AsSprite != intendedSprite)
             {
@@ -44,15 +44,15 @@ namespace OpenRA.Mods.MW.Traits.Render
                 if (sequence != null)
                     DefaultAnimation.ChangeImage(intendedSprite ?? rs.GetImage(self), sequence);
 
-                var Tar = disguise.Target;
-                rs.Remove(animwo);
-                animwo = new AnimationWithOffset(DefaultAnimation, null, () => IsTraitDisabled);
-                rs.Add(animwo, Tar.Info.TraitInfo<RenderSpritesInfo>().Palette, Tar.Info.TraitInfo<RenderSpritesInfo>().Palette == null);
+                var tar = disguise.Target;
+                rs.Remove(Animwo);
+                Animwo = new AnimationWithOffset(DefaultAnimation, null, () => IsTraitDisabled);
+                rs.Add(Animwo, tar.Info.TraitInfo<RenderSpritesInfo>().Palette, tar.Info.TraitInfo<RenderSpritesInfo>().Palette == null);
 
                 rs.UpdatePalette();
             }
 
-            base.Tick(self);
+            TickInner(self);
         }
     }
 }

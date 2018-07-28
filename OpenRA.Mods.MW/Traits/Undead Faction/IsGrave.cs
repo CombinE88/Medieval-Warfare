@@ -7,7 +7,6 @@ namespace OpenRA.Mods.MW.Traits
     [Desc("Is Unit a Grave (adds a count of x to the PlayerCivilisation Peasantpopulation).")]
     public class IsGraveInfo : ITraitInfo
     {
-
         public readonly int Value = 1;
 
         public object Create(ActorInitializer init) { return new IsGrave(init.Self, this); }

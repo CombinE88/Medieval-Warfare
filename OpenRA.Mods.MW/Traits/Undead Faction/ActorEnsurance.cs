@@ -9,20 +9,17 @@
  */
 #endregion
 
-
 using System.Linq;
 using OpenRA.Mods.Common;
 using OpenRA.Mods.Common.Traits;
 using OpenRA.Primitives;
 using OpenRA.Traits;
 
-
 namespace OpenRA.Mods.MW.Traits
 {
     [Desc("A actor has to enter the building before the unit spawns.")]
     public class ActorEnsuranceInfo : ITraitInfo
     {
-
         [Desc("Actortype to be spawned.")]
         public readonly string SpawnActor;
 
@@ -44,35 +41,31 @@ namespace OpenRA.Mods.MW.Traits
 
     class ActorEnsurance : ITick
     {
-        private int Ticker;
         private readonly ActorEnsuranceInfo info;
-
-
+        private int ticker;
 
         public ActorEnsurance(ActorEnsuranceInfo info)
         {
             this.info = info;
 
-            Ticker = info.StartDelay;
+            ticker = info.StartDelay;
         }
-
 
         void ITick.Tick(Actor self)
         {
-            if (Ticker-- <= 0)
+            if (ticker-- <= 0)
             {
                 SpawnNewActor(self);
-                Ticker = info.RespawnTime;
+                ticker = info.RespawnTime;
             }
         }
 
         public void SpawnNewActor(Actor self)
         {
-
             var actors = self.World.ActorMap.ActorsInBox(self.World.Map.ProjectedTopLeft, self.World.Map.ProjectedBottomRight)
                 .Where(a => a.Info.Name == info.SpawnActor && a.Owner == self.Owner && !a.IsDead && a.IsInWorld);
 
-            if ((actors.Count() >= info.Maxalive))
+            if (actors.Count() >= info.Maxalive)
                 return;
 
             if (!self.IsDead && self.IsInWorld)
@@ -98,4 +91,3 @@ namespace OpenRA.Mods.MW.Traits
         }
     }
 }
-

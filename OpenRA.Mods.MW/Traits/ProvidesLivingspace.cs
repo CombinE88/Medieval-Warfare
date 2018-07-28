@@ -27,23 +27,22 @@ namespace OpenRA.Mods.MW.Traits
         public readonly CVec ExitCell = CVec.Zero;
 
         public object Create(ActorInitializer init) { return new ProvidesLivingspace(init, this); }
-
     }
 
     public class ProvidesLivingspace : INotifyCreated, INotifyRemovedFromWorld
     {
-        readonly ProvidesLivingspaceInfo Info;
+        readonly ProvidesLivingspaceInfo info;
 
         public ProvidesLivingspace(ActorInitializer init, ProvidesLivingspaceInfo providesLivingspaceInfo)
         {
-            this.Info = providesLivingspaceInfo;
+            this.info = providesLivingspaceInfo;
         }
 
         void INotifyCreated.Created(Actor self)
         {
             if (!self.Owner.NonCombatant && self.Owner.WinState != WinState.Lost && self.Owner.PlayerActor.Info.HasTraitInfo<PlayerCivilizationInfo>())
             {
-                self.Owner.PlayerActor.Trait<PlayerCivilization>().MaxLivingspacevar += Info.Ammount;
+                self.Owner.PlayerActor.Trait<PlayerCivilization>().MaxLivingspacevar += info.Ammount;
                 self.Owner.PlayerActor.Trait<PlayerCivilization>().Recalculate();
                 self.Owner.PlayerActor.Trait<PlayerCivilization>().PeasantProvider.Add(self);
             }
@@ -53,7 +52,7 @@ namespace OpenRA.Mods.MW.Traits
         {
             if (!self.Owner.NonCombatant && self.Owner.WinState != WinState.Lost && self.Owner.PlayerActor.Info.HasTraitInfo<PlayerCivilizationInfo>())
             {
-                self.Owner.PlayerActor.Trait<PlayerCivilization>().MaxLivingspacevar -= Info.Ammount;
+                self.Owner.PlayerActor.Trait<PlayerCivilization>().MaxLivingspacevar -= info.Ammount;
                 self.Owner.PlayerActor.Trait<PlayerCivilization>().Recalculate();
                 self.Owner.PlayerActor.Trait<PlayerCivilization>().PeasantProvider.Remove(self);
             }

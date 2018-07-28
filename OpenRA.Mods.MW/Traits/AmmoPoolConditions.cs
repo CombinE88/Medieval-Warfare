@@ -1,8 +1,6 @@
-﻿using OpenRA.Mods.Common.Traits;
+﻿using System.Linq;
+using OpenRA.Mods.Common.Traits;
 using OpenRA.Traits;
-using System.Linq;
-
-
 
 namespace OpenRA.Mods.MW.Traits
 {
@@ -16,7 +14,6 @@ namespace OpenRA.Mods.MW.Traits
 
     public class AmmoPoolConditions : ConditionalTrait<AmmoPoolConditionsInfo>, ITick
     {
-
         public AmmoPoolConditions(Actor self, AmmoPoolConditionsInfo info)
             : base(info) { }
 
@@ -44,7 +41,6 @@ namespace OpenRA.Mods.MW.Traits
 
             if (conditionManager == null)
             {
-                //Log.Write("debug", "Terminate");
                 return;
             }
 

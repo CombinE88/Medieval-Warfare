@@ -13,7 +13,6 @@ using OpenRA.Mods.Common.Widgets;
 using OpenRA.Traits;
 using OpenRA.Widgets;
 
-
 namespace OpenRA.Mods.MW.Widgets.Logic
 {
     public class IngameMaxPopulationCounterLogic : ChromeLogic
@@ -21,7 +20,7 @@ namespace OpenRA.Mods.MW.Widgets.Logic
         readonly Player player;
         readonly string cashLabel;
 
-        public int displayResources;
+        int displayResources;
         string displayLabel;
         int displaymaxbeds = 0;
 
@@ -38,12 +37,10 @@ namespace OpenRA.Mods.MW.Widgets.Logic
 
             displayResources = player.PlayerActor.Trait<PlayerCivilization>().FreePopulation > 0 ? player.PlayerActor.Trait<PlayerCivilization>().FreePopulation : 0;
             displaymaxbeds = player.PlayerActor.Trait<PlayerCivilization>().MaxLivingspacevar;
-
         }
 
         public override void Tick()
         {
-
             displayResources = player.PlayerActor.Trait<PlayerCivilization>().FreePopulation > 0 ? player.PlayerActor.Trait<PlayerCivilization>().FreePopulation : 0;
             displaymaxbeds = player.PlayerActor.Trait<PlayerCivilization>().MaxLivingspacevar;
 

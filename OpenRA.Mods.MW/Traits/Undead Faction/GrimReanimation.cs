@@ -1,10 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using OpenRA.Mods.Common;
-using OpenRA.Mods.Common.Traits;
-using OpenRA.Mods.Common.Traits.Render;
-using OpenRA.Primitives;
-using OpenRA.Traits;
+﻿using OpenRA.Traits;
 
 namespace OpenRA.Mods.MW.Traits
 {
@@ -16,13 +10,10 @@ namespace OpenRA.Mods.MW.Traits
 
     public class GrimReanimation : ITick
     {
-        public GrimReanimationInfo info;
-
         public Actor Actor;
 
         public GrimReanimation(Actor self, GrimReanimationInfo info)
         {
-            this.info = info;
             Actor = null;
         }
 

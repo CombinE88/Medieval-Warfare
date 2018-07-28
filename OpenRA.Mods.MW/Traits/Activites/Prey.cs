@@ -27,7 +27,7 @@ namespace OpenRA.Mods.MW.Activities
 
         readonly HashSet<string> preyBuildings;
 
-        public Actor target;
+        private Actor target;
 
         public Prey(Actor self, Actor who)
         {
@@ -35,10 +35,9 @@ namespace OpenRA.Mods.MW.Activities
             preyBuildings = info.TargetActors;
 
             target = who;
-
         }
 
-        public IEnumerable<Actor> getPentas(Actor self)
+        public IEnumerable<Actor> GetPentas(Actor self)
         {
             return self.World.ActorsHavingTrait<DockManager>()
                 .Where(a => preyBuildings.Contains(a.Info.Name));
@@ -51,7 +50,7 @@ namespace OpenRA.Mods.MW.Activities
 
             if (target == null || target.IsDead || target.Disposed || !target.Trait<DockManager>().HasFreeServiceDock(self))
             {
-                var pentas = getPentas(self);
+                var pentas = GetPentas(self);
                 var dockablePentas = pentas.Where(p => p.Trait<DockManager>().HasFreeServiceDock(self));
                 if (dockablePentas.Any())
                     target = dockablePentas.ClosestTo(self);

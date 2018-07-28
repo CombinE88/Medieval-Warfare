@@ -9,7 +9,6 @@
  */
 #endregion
 
-using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
@@ -24,7 +23,6 @@ namespace OpenRA.Mods.MW.Traits.Render
     [Desc("Displays a text overlay relative to the selection box.")]
     public class ConstructionProgressInfo : ConditionalTraitInfo
     {
-
         [Desc("Image used for this Prioritysettings. Defaults to the actor's type.")]
 
         [PaletteReference]
@@ -68,9 +66,9 @@ namespace OpenRA.Mods.MW.Traits.Render
     public class ConstructionProgress : ConditionalTrait<ConstructionProgressInfo>, IRender, IRenderAboveShroudWhenSelected, IObservesVariables
     {
         readonly SpriteFont font;
-        Color color;
-        public int priority;
         readonly IDecorationBounds[] decorationBounds;
+        Color color;
+        private int priority;
 
         protected readonly Animation LeftAnim;
         protected readonly Animation RightAnim;
@@ -78,9 +76,7 @@ namespace OpenRA.Mods.MW.Traits.Render
         public int Progress;
         public int Resources;
 
-
         public WPos Location;
-
 
         public ConstructionProgress(Actor self, ConstructionProgressInfo info)
             : base(info)
@@ -89,7 +85,6 @@ namespace OpenRA.Mods.MW.Traits.Render
             color = Info.UsePlayerColor ? self.Owner.Color.RGB : Info.Color;
             decorationBounds = self.TraitsImplementing<IDecorationBounds>().ToArray();
         }
-
 
         public new virtual IEnumerable<VariableObserver> GetVariableObservers()
         {
@@ -105,11 +100,13 @@ namespace OpenRA.Mods.MW.Traits.Render
             var priorityvar = 0;
             var conmax = 0;
             var cnontraits = self.TraitsImplementing<ExternalCondition>();
+
             foreach (var n in cnontraits)
             {
                 if (n.Info.Condition == Info.ConstructionCondition.Expression)
                     conmax += n.Info.TotalCap;
             }
+
             foreach (var n in conditions)
             {
                 if (n.Key == Info.ConstructionCondition.Expression)
@@ -117,28 +114,23 @@ namespace OpenRA.Mods.MW.Traits.Render
             }
 
             priority = (priorityvar * 100) / conmax;
-
-
-            //Log.Write("debug","Max:" + conmax + ". Has: " + priorityvar + " " + Info.ConstructionCondition.Expression);
         }
 
         public virtual bool ShouldRender(Actor self) { return true; }
 
         IEnumerable<IRenderable> IRender.Render(Actor self, WorldRenderer wr)
         {
-
             if (!Info.RequiresSelection)
-            {
                 return RenderInner(self, wr);
-            }
+
             return SpriteRenderable.None;
         }
+
         IEnumerable<IRenderable> IRenderAboveShroudWhenSelected.RenderAboveShroud(Actor self, WorldRenderer wr)
         {
             if (!Info.RequiresSelection)
-            {
                 return RenderInner(self, wr);
-            }
+
             return SpriteRenderable.None;
         }
 
@@ -146,30 +138,6 @@ namespace OpenRA.Mods.MW.Traits.Render
 
         IEnumerable<IRenderable> RenderInner(Actor self, WorldRenderer wr)
         {
-            /*
-            if (IsTraitDisabled || self.IsDead || !self.IsInWorld)
-                return Enumerable.Empty<IRenderable>();
-
-            if (self.World.RenderPlayer != null)
-            {
-                if (self.Owner != self.World.RenderPlayer)
-                    return Enumerable.Empty<IRenderable>();
-            }
-
-            if (!ShouldRender(self) || self.World.FogObscures(self))
-                return Enumerable.Empty<IRenderable>();
-
-            var bounds = decorationBounds.Select(b => b.DecorationBounds(self, wr)).FirstOrDefault(b => !b.IsEmpty);
-            var halfSize = font.Measure("100 %") / 2;
-
-            var boundsOffset = new int2(bounds.Left + bounds.Right / 2, bounds.Top + bounds.Bottom) / 2;
-            var sizeOffset = new int2(halfSize.X, halfSize.Y);
-            boundsOffset += new int2(Info.XOffset, -(bounds.Height / 3) + Info.YOffset);
-
-            var screenPos = wr.ScreenPxPosition(self.CenterPosition) + boundsOffset;
-            var Rend = new IRenderable[] { new TextRenderable(font, wr.ProjectedPosition(screenPos), Info.ZOffset, color, priority + " %") };
-            return Rend;*/
-
             var bounds = decorationBounds.Select(b => b.DecorationBounds(self, wr)).FirstOrDefault(b => !b.IsEmpty);
             var spaceBuffer = (int)(10 / wr.Viewport.Zoom);
             var effectPos = wr.ProjectedPosition(new int2((bounds.Left + bounds.Right) / 2 + Info.XOffset, (bounds.Top + bounds.Bottom) / 2 + Info.YOffset - spaceBuffer));

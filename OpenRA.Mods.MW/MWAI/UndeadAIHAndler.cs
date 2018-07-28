@@ -9,27 +9,24 @@ using OpenRA.Traits;
 
 namespace OpenRA.Mods.MW.MWAI
 {
-
     public class UndeadAIHAndler
     {
-        public readonly World World;
-        public Player Player { get; private set; }
-        public HackyMWAIInfo hackyAIInfo;
-        public HackyMWAI hackyAI;
+        private readonly World world;
+        private Player Player { get; set; }
+        private HackyMWAIInfo hackyAIInfo;
+        private HackyMWAI hackyAI;
 
         // Undead variables
-
         public HashSet<Actor> AcolyteBuilder = new HashSet<Actor>();
         public HashSet<Actor> AcolyteHarvester = new HashSet<Actor>();
 
         public UndeadAIHAndler(World w, HackyMWAIInfo hackinfo, HackyMWAI hai, Player player)
         {
-            World = w;
+            world = w;
             hackyAIInfo = hackinfo;
             hackyAI = hai;
-            Player = player;
+            this.Player = player;
         }
-
 
         public int CountPeasants()
         {
@@ -41,10 +38,9 @@ namespace OpenRA.Mods.MW.MWAI
             return Player.PlayerActor.Trait<PlayerCivilization>().FreePopulation + Player.PlayerActor.Trait<PlayerCivilization>().Peasantpopulationvar;
         }
 
-
         public int CountPotentialFreeBeds()
         {
-            var housactors = World.ActorsHavingTrait<Building>()
+            var housactors = world.ActorsHavingTrait<Building>()
                 .Where(a => a.Owner == Player && hackyAIInfo.BuildingCommonNames.Houses.Contains(a.Info.Name));
 
             var potentialpop = 0;
@@ -62,47 +58,52 @@ namespace OpenRA.Mods.MW.MWAI
                         potentialpop += hous.Info.TraitInfo<ProvidesLivingspaceInfo>().Ammount;
                 }
             }
+
             return potentialpop;
         }
 
         public Actor FindNewDeerstand()
         {
-            var DeerStands = World.ActorsHavingTrait<ISeedableResource>().Where(a => hackyAIInfo.UndeadCommonNames.PrayableDeerStands.Contains(a.Info.Name)).ToList();
+            var deerStands = world.ActorsHavingTrait<ISeedableResource>().Where(a => hackyAIInfo.UndeadCommonNames.PrayableDeerStands.Contains(a.Info.Name)).ToList();
 
-            if (!DeerStands.Any())
+            if (!deerStands.Any())
                 return null;
 
-            var ClosestDeerStands = DeerStands.OrderBy(a => (a.CenterPosition - Player.World.Map.CenterOfCell(hackyAI.initialBaseCenter)).LengthSquared);
+            var closestDeerStands = deerStands.OrderBy(a => (a.CenterPosition - Player.World.Map.CenterOfCell(hackyAI.InitialBaseCenter)).LengthSquared);
 
-            foreach (var stand in ClosestDeerStands)
+            foreach (var stand in closestDeerStands)
             {
-                var prayer = World.FindActorsInCircle(stand.CenterPosition, WDist.FromCells(4)).Where(a => a.Owner == Player && hackyAIInfo.UndeadCommonNames.PrayableDeerStands.Contains(a.Info.Name)).Count();
+                var prayer = world.FindActorsInCircle(stand.CenterPosition, WDist.FromCells(4)).Where(a =>
+                {
+                    return a.Owner == Player && hackyAIInfo.UndeadCommonNames.PrayableDeerStands.Contains(a.Info.Name);
+                }).Count();
 
                 if (prayer >= 3)
                     continue;
 
                 return stand;
             }
+
             return null;
         }
 
         public void ManageBuildrAcolytes()
         {
-            var pentagrams = World.ActorsHavingTrait<Building>().Where(a => a.Owner == Player && a.Info.Name.Contains(".penta"));
+            var pentagrams = world.ActorsHavingTrait<Building>().Where(a => a.Owner == Player && a.Info.Name.Contains(".penta"));
 
             if (AcolyteBuilder.Any() && pentagrams.Any())
             {
-                var BuilderDoNothing = AcolyteBuilder.Where(a => a.IsIdle); //getting an Idle Farmer Acolyte
+                var builderDoNothing = AcolyteBuilder.Where(a => a.IsIdle);
 
-                if (!BuilderDoNothing.Any())
+                if (!builderDoNothing.Any())
                     return;
 
                 var preytarget = pentagrams.First();
-                var IdlePreyer = BuilderDoNothing.First();
+                var idlePreyer = builderDoNothing.First();
 
-                //TODO: Acolytes start building
+                // TODO: Acolytes start building
                 if (preytarget != null)
-                    hackyAI.QueueOrder(new Order("PreyBuild", IdlePreyer, Target.FromActor(preytarget), false));
+                    hackyAI.QueueOrder(new Order("PreyBuild", idlePreyer, Target.FromActor(preytarget), false));
             }
         }
 
@@ -110,91 +111,98 @@ namespace OpenRA.Mods.MW.MWAI
         {
             if (AcolyteHarvester.Any())
             {
-                var FarmerDoNothing = AcolyteHarvester.Where(a => a.IsIdle); //getting an Idle Farmer Acolyte
+                var farmerDoNothing = AcolyteHarvester.Where(a => a.IsIdle);
 
-                if (!FarmerDoNothing.Any())
+                if (!farmerDoNothing.Any())
                     return;
 
-                var IdleFarmer = FarmerDoNothing.First();
+                var idleFarmer = farmerDoNothing.First();
 
-                var ZigguratLv2 = World.ActorsHavingTrait<Building>().Where(a => a.Owner == Player && (hackyAIInfo.UndeadCommonNames.ZigguratLv3.Contains(a.Info.Name) || hackyAIInfo.UndeadCommonNames.ZigguratLv2.Contains(a.Info.Name)));
-                var FarmFields = World.ActorsHavingTrait<ISeedableResource>().Where(a => (hackyAIInfo.UndeadCommonNames.PrayableCrops.Contains(a.Info.Name))).ToHashSet();
-                var IronFields = World.ActorsHavingTrait<ISeedableResource>().Where(a => (hackyAIInfo.UndeadCommonNames.PrayableIron.Contains(a.Info.Name)));
-                var DeerStands = World.ActorsHavingTrait<ISeedableResource>().Where(a => (hackyAIInfo.UndeadCommonNames.PrayableDeerStands.Contains(a.Info.Name)));
+                var zigguratLv2 = world.ActorsHavingTrait<Building>().Where(a =>
+                {
+                    if (a.Owner != Player)
+                        return false;
 
+                    var names = hackyAIInfo.UndeadCommonNames;
+                    return names.ZigguratLv3.Contains(a.Info.Name) || names.ZigguratLv2.Contains(a.Info.Name);
+                });
+                var farmFields = world.ActorsHavingTrait<ISeedableResource>().Where(a => hackyAIInfo.UndeadCommonNames.PrayableCrops.Contains(a.Info.Name)).ToHashSet();
+                var ironFields = world.ActorsHavingTrait<ISeedableResource>().Where(a => hackyAIInfo.UndeadCommonNames.PrayableIron.Contains(a.Info.Name));
+                var deerStands = world.ActorsHavingTrait<ISeedableResource>().Where(a => hackyAIInfo.UndeadCommonNames.PrayableDeerStands.Contains(a.Info.Name));
 
-
-                if (ZigguratLv2 != null && ZigguratLv2.Any())
-                    foreach (var aco in IronFields)
+                if (zigguratLv2 != null && zigguratLv2.Any())
+                    foreach (var aco in ironFields)
                     {
-                        FarmFields.Add(aco);
+                        farmFields.Add(aco);
                     }
 
-                foreach (var stand in DeerStands)
+                foreach (var stand in deerStands)
                 {
                     foreach (var seed in stand.TraitsImplementing<ISeedableResource>())
                     {
                         if (seed.IsTraitEnabled())
                         {
-                            FarmFields.Add(stand);
+                            farmFields.Add(stand);
                         }
                     }
                 }
 
                 // Sort the fields
-                if (FarmFields != null && FarmFields.Any())
+                if (farmFields != null && farmFields.Any())
                 {
-                    var fields = FarmFields.ToList(); // get list of closest possible Fields
-                    var closestfields = fields.OrderBy(a => (hackyAIInfo.UndeadCommonNames.PrayableIron.Contains(a.Info.Name) ? ((a.CenterPosition - Player.World.Map.CenterOfCell(hackyAI.initialBaseCenter)).LengthSquared) / 2 : (a.CenterPosition - Player.World.Map.CenterOfCell(hackyAI.initialBaseCenter)).LengthSquared));
+                    var fields = farmFields.ToList(); // get list of closest possible Fields
+                    var closestfields = fields.OrderBy(a =>
+                    {
+                        var center = Player.World.Map.CenterOfCell(hackyAI.InitialBaseCenter);
+                        if (hackyAIInfo.UndeadCommonNames.PrayableIron.Contains(a.Info.Name))
+                            return (a.CenterPosition - center).LengthSquared;
+
+                        return (a.CenterPosition - center).LengthSquared;
+                    });
 
                     Actor preytarget = null;
 
                     foreach (var scarecrow in closestfields)
                     {
-
                         var surroundingEnemies = Player.World.FindActorsInCircle(scarecrow.CenterPosition, hackyAIInfo.AcolytePrayProximity)
                             .Count(e => e.Info.HasTraitInfo<BuildingInfo>() && Player.Stances[e.Owner] == Stance.Enemy);
 
                         if (surroundingEnemies > 0)
                             continue;
 
-                        var OccupyCount = 0;
-
+                        var occupyCount = 0;
 
                         // Do we have enough resources around to prey?
-
                         var reslay = Player.World.WorldActor.Trait<ResourceLayer>();
                         var getResourceArroundit = Player.World.Map.FindTilesInCircle(scarecrow.Location, 4, true).Where(c => reslay.GetResourceDensity(c) > 0);
-                        var NumberOfFullCells = getResourceArroundit.Count();
+                        var numberOfFullCells = getResourceArroundit.Count();
 
-                        if (NumberOfFullCells < hackyAIInfo.MinimumResourceFields) // We want atleast 5 cells filled with resources
+                        if (numberOfFullCells < hackyAIInfo.MinimumResourceFields) // We want atleast 5 cells filled with resources
                             continue;
 
                         // Get the occupy count
                         foreach (var dock in scarecrow.TraitsImplementing<Dock>())
                         {
-                            if (dock.IsBlocked || dock.Reserver != null || !dock.CanAccessDock(IdleFarmer))
-                                OccupyCount++;
+                            if (dock.IsBlocked || dock.Reserver != null || !dock.CanAccessDock(idleFarmer))
+                                occupyCount++;
                         }
 
-
-                        if (OccupyCount < 5)
+                        if (occupyCount < 5)
                         {
                             preytarget = scarecrow;
 
                             break;
                         }
-
                     }
+
                     if (preytarget != null)
-                        hackyAI.QueueOrder(new Order("Prey", IdleFarmer, Target.FromActor(preytarget), false));
+                        hackyAI.QueueOrder(new Order("Prey", idleFarmer, Target.FromActor(preytarget), false));
                 }
             }
         }
 
         public void ManageDeadAcolytes()
         {
-
             var deseasedActors = new HashSet<Actor>();
 
             foreach (var aco in AcolyteBuilder)
@@ -202,6 +210,7 @@ namespace OpenRA.Mods.MW.MWAI
                 if (aco.IsDead || !aco.IsInWorld)
                     deseasedActors.Add(aco);
             }
+
             foreach (var aco in AcolyteHarvester)
             {
                 if (aco.IsDead || !aco.IsInWorld)
@@ -216,21 +225,21 @@ namespace OpenRA.Mods.MW.MWAI
                     AcolyteBuilder.Remove(aco);
             }
         }
+
         public void ManageEmptyAcolytes()
         {
-
-            var ListedAcolytes = 0;
-
-            ListedAcolytes = AcolyteBuilder.Count() + AcolyteHarvester.Count();
-
-            var findAcolytes = Player.World.ActorsHavingTrait<AcolytePrey>().Where(a => a.Owner == Player && !AcolyteBuilder.Contains(a) && !AcolyteHarvester.Contains(a)).ToHashSet();
-
-            if (ListedAcolytes == 0 && findAcolytes.Any())
+            var listedAcolytes = 0;
+            listedAcolytes = AcolyteBuilder.Count() + AcolyteHarvester.Count();
+            var findAcolytes = Player.World.ActorsHavingTrait<AcolytePrey>().Where(a =>
             {
-                //AcolyteWorkerRatio
-                var PotentialWorkerNumber = (int)(decimal)(findAcolytes.Count() * hackyAIInfo.AcolyteWorkerRatio) / 100;
+                return a.Owner == Player && !AcolyteBuilder.Contains(a) && !AcolyteHarvester.Contains(a);
+            }).ToHashSet();
 
-                for (int i = 1; i <= PotentialWorkerNumber; i++)
+            if (listedAcolytes == 0 && findAcolytes.Any())
+            {
+                var potentialWorkerNumber = (int)(decimal)(findAcolytes.Count() * hackyAIInfo.AcolyteWorkerRatio) / 100;
+
+                for (int i = 1; i <= potentialWorkerNumber; i++)
                 {
                     var lyte = findAcolytes.First();
                     if (lyte != null && !lyte.IsDead && lyte.IsInWorld)
@@ -239,6 +248,7 @@ namespace OpenRA.Mods.MW.MWAI
                         findAcolytes.Remove(lyte);
                     }
                 }
+
                 if (findAcolytes.Any())
                 {
                     foreach (var aco in findAcolytes)
@@ -248,13 +258,12 @@ namespace OpenRA.Mods.MW.MWAI
                     }
                 }
             }
-            else if (ListedAcolytes > 0 && findAcolytes.Any())
+            else if (listedAcolytes > 0 && findAcolytes.Any())
             {
                 foreach (var aco in findAcolytes)
                 {
                     if (aco != null && !aco.IsDead && aco.IsInWorld)
                     {
-
                         var calculatedratio = (int)(decimal)(100 / (AcolyteBuilder.Count() + AcolyteHarvester.Count())) * AcolyteBuilder.Count();
                         if (calculatedratio >= hackyAIInfo.AcolyteWorkerRatio)
                         {
@@ -272,46 +281,39 @@ namespace OpenRA.Mods.MW.MWAI
         public void CheckAllPatchesForProfit()
         {
             // Find Empty Patches and retreat Acolytes from them:
-
-            var FarmFields = World.ActorsHavingTrait<ISeedableResource>().Where(a => (hackyAIInfo.UndeadCommonNames.PrayableCrops.Contains(a.Info.Name) || hackyAIInfo.UndeadCommonNames.PrayableIron.Contains(a.Info.Name) || hackyAIInfo.UndeadCommonNames.PrayableDeerStands.Contains(a.Info.Name))).ToHashSet();
+            var farmFields = world.ActorsHavingTrait<ISeedableResource>().Where(a =>
+                hackyAIInfo.UndeadCommonNames.PrayableCrops.Contains(a.Info.Name) ||
+                hackyAIInfo.UndeadCommonNames.PrayableIron.Contains(a.Info.Name) ||
+                hackyAIInfo.UndeadCommonNames.PrayableDeerStands.Contains(a.Info.Name)).ToHashSet();
             var reslay = Player.World.WorldActor.Trait<ResourceLayer>();
 
-            foreach (var crow in FarmFields)
+            foreach (var crow in farmFields)
             {
-
                 var doihavepreyers = crow.TraitsImplementing<Dock>().Where(d => d.Reserver != null && d.Reserver.Owner == Player);
 
                 if (doihavepreyers.Count() <= hackyAIInfo.MAxAcolytesOnEmptyPatch)
-                {
-
                     continue;
-                }
-                //BotDebug("AI: Non adequate ammount of acolytes at " + crow.Location + " found, with " + doihavepreyers.Count() + " acolytes");
-
 
                 var getResourceArroundit = Player.World.Map.FindTilesInCircle(crow.Location, 4, true).Where(c => reslay.GetResourceDensity(c) > 0).Count();
 
-                if (getResourceArroundit >= hackyAIInfo.MinimumResourceFields) // We want atleast MinimumResourceFields cells filled with resources
+                // We want atleast MinimumResourceFields cells filled with resources
+                if (getResourceArroundit >= hackyAIInfo.MinimumResourceFields)
                 {
-                    //BotDebug("AI: Enough Cells Found at " + crow.Location + " with " + getResourceArroundit + " cells full resources");
                     continue;
                 }
 
-                var AllowedNumber = 0;
+                var allowedNumber = 0;
 
                 foreach (var dock in crow.TraitsImplementing<Dock>().Where(d => d.Reserver != null))
                 {
-                    if (AllowedNumber >= hackyAIInfo.MAxAcolytesOnEmptyPatch && dock.Reserver.Owner == Player)
+                    if (allowedNumber >= hackyAIInfo.MAxAcolytesOnEmptyPatch && dock.Reserver.Owner == Player)
                     {
-                        //BotDebug("AI: acolyte " + dock.Reserver + " released from duty");
-                        //dock.Reserver.CancelActivity();
                         hackyAI.QueueOrder(new Order("Stop", dock.Reserver, Target.Invalid, false));
                     }
 
-                    AllowedNumber++;
+                    allowedNumber++;
                 }
             }
         }
-
     }
 }

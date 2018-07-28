@@ -30,12 +30,11 @@ namespace OpenRA.Mods.MW.Traits.Render
         {
             var should = ndg.ChargeTime;
             var has = ndg.Timer;
-            value = !ndg.cannotdsguise ? 1 - (float)has / should : 0;
+            value = !ndg.Cannotdsguise ? 1 - (float)has / should : 0;
         }
 
         float ISelectionBar.GetValue()
         {
-
             if (!self.Owner.IsAlliedWith(self.World.RenderPlayer))
                 return 0;
 
@@ -44,6 +43,5 @@ namespace OpenRA.Mods.MW.Traits.Render
 
         Color ISelectionBar.GetColor() { return info.Color; }
         bool ISelectionBar.DisplayWhenEmpty { get { return false; } }
-
     }
 }

@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Drawing;
-using System.Linq;
 using OpenRA.Graphics;
 using OpenRA.Mods.Common;
 using OpenRA.Mods.Common.Traits;
-using OpenRA.Mods.Common.Traits.Render;
 using OpenRA.Primitives;
 using OpenRA.Traits;
 
@@ -18,7 +15,7 @@ namespace OpenRA.Mods.MW.Traits
         public readonly string GrantCondition = null;
 
         [Desc("Max distance in Cells wich the puppet can go")]
-        public readonly int maxDistance = 5;
+        public readonly int MaxDistance = 5;
 
         public readonly int DamageMultiplier = 100;
         public readonly int FirePowerMultiplier = 100;
@@ -34,29 +31,26 @@ namespace OpenRA.Mods.MW.Traits
 
     public class GrimTarget : ITick, INotifyKilled, INotifyCreated, ISpeedModifier, IGivesExperienceModifier, IFirepowerModifier, IDamageModifier, IRenderModifier
     {
-        public GrimTargetInfo info;
-        //private Actor self;
+        private GrimTargetInfo info;
         ConditionManager conditionManager;
         int token = ConditionManager.InvalidConditionToken;
 
-        public Actor Grim;
-        public bool Reanimated;
+        private Actor grim;
+        private bool reanimated;
 
         public GrimTarget(Actor self, GrimTargetInfo info)
         {
             this.info = info;
-            //this.self = self;
-
         }
 
-        int ISpeedModifier.GetSpeedModifier() { return !Reanimated ? 100 : info.SpeedMultiplier; }
-        int IGivesExperienceModifier.GetGivesExperienceModifier() { return !Reanimated ? 100 : info.GivesExpMultiplier; }
-        int IFirepowerModifier.GetFirepowerModifier() { return !Reanimated ? 100 : info.FirePowerMultiplier; }
-        int IDamageModifier.GetDamageModifier(Actor attacker, Damage damage) { return !Reanimated ? 100 : info.DamageMultiplier; }
+        int ISpeedModifier.GetSpeedModifier() { return !reanimated ? 100 : info.SpeedMultiplier; }
+        int IGivesExperienceModifier.GetGivesExperienceModifier() { return !reanimated ? 100 : info.GivesExpMultiplier; }
+        int IFirepowerModifier.GetFirepowerModifier() { return !reanimated ? 100 : info.FirePowerMultiplier; }
+        int IDamageModifier.GetDamageModifier(Actor attacker, Damage damage) { return !reanimated ? 100 : info.DamageMultiplier; }
 
         public IEnumerable<IRenderable> ModifyRender(Actor self, WorldRenderer wr, IEnumerable<IRenderable> r)
         {
-            if (!Reanimated)
+            if (!reanimated)
                 return r;
 
             return ModifiedRender(self, wr, r);
@@ -77,22 +71,21 @@ namespace OpenRA.Mods.MW.Traits
 
         void ITick.Tick(Actor self)
         {
-            if (!Reanimated)
+            if (!reanimated)
                 return;
 
-            if (Reanimated && Grim == null)
+            if (reanimated && grim == null)
                 self.Kill(self);
-            else if (Reanimated && Grim != null && (Grim.IsDead || !Grim.IsInWorld))
+            else if (reanimated && grim != null && (grim.IsDead || !grim.IsInWorld))
                 self.Kill(self);
         }
 
         public void Killed(Actor self, AttackInfo e)
         {
-
-            if (!Reanimated && e.Attacker.Info.HasTraitInfo<GrimReanimationInfo>() && e.Attacker.IsInWorld && !e.Attacker.IsDead)
+            if (!reanimated && e.Attacker.Info.HasTraitInfo<GrimReanimationInfo>() && e.Attacker.IsInWorld && !e.Attacker.IsDead)
             {
-                var GrimTrait = e.Attacker.Trait<GrimReanimation>();
-                if (GrimTrait.Actor == null)
+                var grimTrait = e.Attacker.Trait<GrimReanimation>();
+                if (grimTrait.Actor == null)
                 {
                     var unit = self.World.CreateActor(true, self.Info.Name, new TypeDictionary
                     {
@@ -100,16 +93,16 @@ namespace OpenRA.Mods.MW.Traits
                         new OwnerInit(e.Attacker.Owner),
                         new FacingInit(self.Trait<IFacing>().Facing)
                     });
-                    unit.Trait<GrimTarget>().Reanimated = true;
-                    unit.Trait<GrimTarget>().Grim = e.Attacker;
-                    GrimTrait.Actor = unit;
+                    unit.Trait<GrimTarget>().reanimated = true;
+                    unit.Trait<GrimTarget>().grim = e.Attacker;
+                    grimTrait.Actor = unit;
                 }
             }
         }
 
         public void GrantCondition(Actor self)
         {
-            if (Reanimated && self.IsInWorld && !self.IsDead)
+            if (reanimated && self.IsInWorld && !self.IsDead)
             {
                 token = conditionManager.GrantCondition(self, info.GrantCondition);
             }
@@ -118,21 +111,20 @@ namespace OpenRA.Mods.MW.Traits
         void INotifyCreated.Created(Actor self)
         {
             conditionManager = self.TraitOrDefault<ConditionManager>();
-            if (Reanimated && token == ConditionManager.InvalidConditionToken && conditionManager != null)
+            if (reanimated && token == ConditionManager.InvalidConditionToken && conditionManager != null)
             {
                 GrantCondition(self);
             }
 
-            if (Reanimated && Grim != null && Grim.IsInWorld && !Grim.IsDead && self.Info.HasTraitInfo<IMoveInfo>())
+            if (reanimated && grim != null && grim.IsInWorld && !grim.IsDead && self.Info.HasTraitInfo<IMoveInfo>())
             {
-                if (!self.IsDead && self.IsInWorld && (self.Location - Grim.Location).LengthSquared >
-                    WDist.FromCells(info.maxDistance).LengthSquared)
+                if (!self.IsDead && self.IsInWorld && (self.Location - grim.Location).LengthSquared >
+                    WDist.FromCells(info.MaxDistance).LengthSquared)
                 {
                     self.CancelActivity();
-                    self.QueueActivity(self.Trait<IMove>().MoveTo(Grim.Location, 2));
+                    self.QueueActivity(self.Trait<IMove>().MoveTo(grim.Location, 2));
                 }
             }
-
         }
 
         IEnumerable<Rectangle> IRenderModifier.ModifyScreenBounds(Actor self, WorldRenderer wr, IEnumerable<Rectangle> bounds)

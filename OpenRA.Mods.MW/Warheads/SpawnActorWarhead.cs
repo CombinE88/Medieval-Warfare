@@ -10,13 +10,13 @@
 
 using System.Collections.Generic;
 using System.Linq;
-using OpenRA.Mods.MW.Activities;
+using OpenRA.Mods.Common;
 using OpenRA.Mods.Common.Activities;
 using OpenRA.Mods.Common.Traits;
+using OpenRA.Mods.MW.Activities;
 using OpenRA.Primitives;
-using OpenRA.Traits;
-using OpenRA.Mods.Common;
 using OpenRA.Support;
+using OpenRA.Traits;
 
 namespace OpenRA.Mods.MW.Warheads
 {
@@ -62,8 +62,6 @@ namespace OpenRA.Mods.MW.Warheads
 
                 if (firedBy.World.Map.Rules.Actors[a].HasTraitInfo<BuildingInfo>())
                 {
-
-
                     var blng = firedBy.World.Map.Rules.Actors[a].TraitInfo<BuildingInfo>();
                     var cellone = RandomWalk(firedBy.World.Map.CellContaining(target.CenterPosition), firedBy.World.SharedRandom)
                         .Take(Range)
@@ -81,16 +79,10 @@ namespace OpenRA.Mods.MW.Warheads
                     }
 
                     building = true;
-
-
                 }
-
-
-
 
                 if (!building)
                 {
-
                     var unit = firedBy.World.CreateActor(false, a.ToLowerInvariant(), td);
 
                     while (cell.MoveNext())

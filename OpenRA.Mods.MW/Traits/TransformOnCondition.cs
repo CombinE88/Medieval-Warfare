@@ -1,7 +1,5 @@
-﻿using System;
-using System.Linq;
+﻿using System.Linq;
 using OpenRA.Mods.Common;
-using OpenRA.Mods.Common.Activities;
 using OpenRA.Mods.Common.Traits;
 using OpenRA.Primitives;
 using OpenRA.Traits;
@@ -18,7 +16,7 @@ namespace OpenRA.Mods.MW.Traits
         public readonly bool SkipMakeAnims = true;
         public readonly CVec Offset = CVec.Zero;
         public readonly int Facing = -1;
-        public string[] Sounds = { };
+        public readonly string[] Sounds = { };
         public readonly bool ForceHealthPercentage = true;
 
         public override object Create(ActorInitializer init) { return new TransformOnCondition(init, this); }
@@ -36,8 +34,6 @@ namespace OpenRA.Mods.MW.Traits
         int facong;
         TypeDictionary init;
 
-
-
         public TransformOnCondition(ActorInitializer init, TransformOnConditionInfo info)
             : base(info)
         {
@@ -47,7 +43,6 @@ namespace OpenRA.Mods.MW.Traits
 
         void ITick.Tick(Actor self)
         {
-
             var devMode = self.Owner.PlayerActor.TraitOrDefault<DeveloperMode>();
 
             if (!IsTraitDisabled || (devMode != null && devMode.FastBuild))
@@ -74,13 +69,13 @@ namespace OpenRA.Mods.MW.Traits
                     if (face != null && info.Facing < 0)
                         facong = face.Facing;
                 }
+
                 init = new TypeDictionary
                     {
                     new LocationInit(self.Location + info.Offset),
                     new OwnerInit(self.Owner),
                     new FacingInit(facong),
                     };
-
 
                 if (info.SkipMakeAnims)
                     init.Add(new SkipMakeAnimsInit());
@@ -97,14 +92,10 @@ namespace OpenRA.Mods.MW.Traits
                 if (cargo != null)
                     init.Add(new RuntimeCargoInit(cargo.Passengers.ToArray()));
 
-
                 Game.Sound.PlayNotification(self.World.Map.Rules, self.Owner, "Speech", info.ReadyAudio,
                     self.Owner.Faction.InternalName);
 
-
                 self.Dispose();
-
-
             }
         }
 
@@ -113,14 +104,12 @@ namespace OpenRA.Mods.MW.Traits
             if (enabled)
                 self.World.AddFrameEndTask(w =>
                 {
-
                     var a = w.CreateActor(info.IntoActor, init);
 
                     if (selected)
                         w.Selection.Add(w, a);
                     if (controlgroup.HasValue)
                         w.Selection.AddToControlGroup(a, controlgroup.Value);
-
                 });
         }
     }

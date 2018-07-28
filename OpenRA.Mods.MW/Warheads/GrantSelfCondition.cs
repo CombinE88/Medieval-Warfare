@@ -12,8 +12,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using OpenRA.Mods.Common.Traits;
-using OpenRA.Traits;
 using OpenRA.Mods.Common.Warheads;
+using OpenRA.Traits;
 
 namespace OpenRA.Mods.MW.Warheads
 {
@@ -30,22 +30,14 @@ namespace OpenRA.Mods.MW.Warheads
         {
             if (!firedBy.IsDead && firedBy.IsInWorld)
             {
-                //Log.Write("debug", "GrantSelfConditionWarhead ::: DoImpact");
-
                 if (!IsValidAgainst(firedBy, firedBy) && !firedBy.IsDead && firedBy.IsInWorld)
-                {
-                    //Log.Write("debug", "GrantSelfConditionWarhead ::: !IsValidAgainst");
                     return;
-                }
 
                 var external = firedBy.TraitsImplementing<ExternalCondition>()
                     .FirstOrDefault(t => t.Info.Condition == Condition && t.CanGrantCondition(firedBy, firedBy));
 
                 if (external != null && !firedBy.IsDead && firedBy.IsInWorld)
-                {
-                    //Log.Write("debug", "GrantSelfConditionWarhead ::: external");
                     external.GrantCondition(firedBy, firedBy, Duration);
-                }
             }
         }
     }

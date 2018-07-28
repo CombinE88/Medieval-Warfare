@@ -5,7 +5,6 @@ namespace OpenRA.Mods.MW.Traits
 {
     public class DirectSpawnModifierInfo : ConditionalTraitInfo
     {
-
         [Desc("Number in ticks wich reduce spawntime.")]
         public readonly int Ticks = 25;
 
@@ -14,22 +13,22 @@ namespace OpenRA.Mods.MW.Traits
 
     public class DirectSpawnModifier : ConditionalTrait<DirectSpawnModifierInfo>, INotifyCreated, INotifyRemovedFromWorld
     {
-        PlayerCivilization PlayerCiv;
-        bool Enabled = false;
+        PlayerCivilization playerCiv;
+        bool enabled = false;
 
         public DirectSpawnModifier(Actor self, DirectSpawnModifierInfo info) : base(info)
         {
-            PlayerCiv = self.Owner.PlayerActor.Trait<PlayerCivilization>();
+            playerCiv = self.Owner.PlayerActor.Trait<PlayerCivilization>();
         }
 
         protected override void Created(Actor self)
         {
             if (!self.Owner.NonCombatant && self.Owner.WinState != WinState.Lost && self.Owner.PlayerActor.Info.HasTraitInfo<PlayerCivilizationInfo>())
             {
-                if (!IsTraitDisabled && !Enabled)
+                if (!IsTraitDisabled && !enabled)
                 {
-                    PlayerCiv.DirectModifier += Info.Ticks;
-                    Enabled = true;
+                    playerCiv.DirectModifier += Info.Ticks;
+                    enabled = true;
                 }
             }
         }
@@ -38,29 +37,29 @@ namespace OpenRA.Mods.MW.Traits
         {
             if (!self.Owner.NonCombatant && self.Owner.WinState != WinState.Lost && self.Owner.PlayerActor.Info.HasTraitInfo<PlayerCivilizationInfo>())
             {
-                if (!IsTraitDisabled && Enabled)
+                if (!IsTraitDisabled && enabled)
                 {
-                    PlayerCiv.DirectModifier -= Info.Ticks;
-                    Enabled = false;
+                    playerCiv.DirectModifier -= Info.Ticks;
+                    enabled = false;
                 }
             }
         }
 
         protected override void TraitEnabled(Actor self)
         {
-            if (!IsTraitDisabled && !Enabled)
+            if (!IsTraitDisabled && !enabled)
             {
-                PlayerCiv.DirectModifier += Info.Ticks;
-                Enabled = true;
+                playerCiv.DirectModifier += Info.Ticks;
+                enabled = true;
             }
         }
 
         protected override void TraitDisabled(Actor self)
         {
-            if (!IsTraitDisabled && Enabled)
+            if (!IsTraitDisabled && enabled)
             {
-                PlayerCiv.DirectModifier -= Info.Ticks;
-                Enabled = false;
+                playerCiv.DirectModifier -= Info.Ticks;
+                enabled = false;
             }
         }
     }

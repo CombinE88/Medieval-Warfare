@@ -11,14 +11,12 @@ namespace OpenRA.Mods.MW.Traits
         public readonly string AddCondition = null;
 
         public override object Create(ActorInitializer init) { return new AddConditionEvery(init.Self, this); }
-
     }
 
     class AddConditionEvery : ConditionalTrait<AddConditionEveryInfo>, ITick
     {
         ConditionManager conditionManager;
         private int tick;
-        //int conditionToken = ConditionManager.InvalidConditionToken;
 
         public AddConditionEvery(Actor self, AddConditionEveryInfo info)
             : base(info)
@@ -26,7 +24,7 @@ namespace OpenRA.Mods.MW.Traits
             tick = Info.Delay;
         }
 
-        public void Tick(Actor self)
+        void ITick.Tick(Actor self)
         {
             if (IsTraitDisabled)
                 return;

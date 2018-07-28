@@ -1,13 +1,10 @@
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using System.Security.Cryptography;
-using OpenRA.Primitives;
-using OpenRA.Traits;
 using OpenRA.Mods.Common;
-using OpenRA.Mods.Common.Effects;
 using OpenRA.Mods.Common.Pathfinder;
 using OpenRA.Mods.Common.Traits;
+using OpenRA.Primitives;
+using OpenRA.Traits;
 
 namespace OpenRA.Mods.MW.Traits
 {
@@ -61,23 +58,24 @@ namespace OpenRA.Mods.MW.Traits
             var cells = self.World.Map.FindTilesInAnnulus(self.Location, info.RadiusMin.Length, info.RadiusMax.Length)
                 .Where(a =>
                 {
-                    if (self.World.Map.Rules.Actors[Info.Actors.First()].HasTraitInfo<IPositionableInfo>())
+                    var actor = self.World.Map.Rules.Actors[Info.Actors.First()];
+                    if (actor.HasTraitInfo<IPositionableInfo>())
                     {
-                        var ip = self.World.Map.Rules.Actors[Info.Actors.First()].TraitInfo<IPositionableInfo>();
+                        var ip = actor.TraitInfo<IPositionableInfo>();
                         if (ip.CanEnterCell(self.World, null, a))
                             return true;
                     }
-
-                    else if (self.World.Map.Rules.Actors[Info.Actors.First()].HasTraitInfo<BuildingInfo>())
+                    else if (actor.HasTraitInfo<BuildingInfo>())
                     {
-                        var ip2 = self.World.Map.Rules.Actors[Info.Actors.First()].TraitInfo<BuildingInfo>();
+                        var ip2 = actor.TraitInfo<BuildingInfo>();
                         if (self.World.CanPlaceBuilding(Info.Actors.First(), ip2, a, null))
                             return true;
                     }
-                    else if (!self.World.Map.Rules.Actors[Info.Actors.First()].HasTraitInfo<BuildingInfo>() && !self.World.Map.Rules.Actors[Info.Actors.First()].HasTraitInfo<IPositionableInfo>())
+                    else if (!actor.HasTraitInfo<BuildingInfo>() && !actor.HasTraitInfo<IPositionableInfo>())
                     {
                         return true;
                     }
+
                     return false;
                 });
 
@@ -96,29 +94,27 @@ namespace OpenRA.Mods.MW.Traits
                     forbiddenCells.Add(cell);
                 }
 
-
             HashSet<CPos> checkcells = new HashSet<CPos>();
 
             if (cells != null && cells.Any())
             {
                 foreach (var cell in cells)
                 {
-
                     List<CPos> path;
 
-                    using (var ThePath = PathSearch.FromPoint(self.World,
+                    using (var thePath = PathSearch.FromPoint(self.World,
                         self.World.Map.Rules.Actors["e4new"].TraitInfo<MobileInfo>(),
                         self, self.Location, cell, true))
-                        path = self.World.WorldActor.Trait<IPathFinder>().FindPath(ThePath);
+                        path = self.World.WorldActor.Trait<IPathFinder>().FindPath(thePath);
                     if (info.RadiusMax.Length < path.Count || path.Count == 0)
                     {
                         forbiddenCells.Add(cell);
                     }
                     else
                         checkcells.Add(cell);
-
                 }
             }
+
             if (checkcells != null && checkcells.Any())
             {
                 foreach (var cell in cells)
@@ -127,22 +123,19 @@ namespace OpenRA.Mods.MW.Traits
                         forbiddenCells.Add(cell);
                 }
             }
-
-
         }
 
         void SpawnStuff(Actor self)
         {
             self.World.AddFrameEndTask(w =>
             {
-                var cells = self.World.Map.FindTilesInAnnulus(self.Location, info.RadiusMin.Length, info.RadiusMax.Length)
-                    .Where(c =>
-                    {
-                        if (info.CheckReachability && forbiddenCells.Contains(c))
-                            return false;
+                var cells = self.World.Map.FindTilesInAnnulus(self.Location, info.RadiusMin.Length, info.RadiusMax.Length).Where(c =>
+                {
+                    if (info.CheckReachability && forbiddenCells.Contains(c))
+                        return false;
 
-                        return true;
-                    });
+                    return true;
+                });
                 var actor = info.Actors[self.World.SharedRandom.Next(0, info.Actors.Length)].ToLowerInvariant();
                 IPositionableInfo ip = null;
                 BuildingInfo ip2 = null;
@@ -154,13 +147,11 @@ namespace OpenRA.Mods.MW.Traits
                     ip = self.World.Map.Rules.Actors[actor].TraitInfo<IPositionableInfo>();
                     validCells = cells.Where(c => ip.CanEnterCell(self.World, null, c));
                 }
-
                 else if (self.World.Map.Rules.Actors[actor].HasTraitInfo<BuildingInfo>())
                 {
                     ip2 = self.World.Map.Rules.Actors[actor].TraitInfo<BuildingInfo>();
                     validCells = cells.Where(c => self.World.CanPlaceBuilding(actor, ip2, c, null));
                 }
-
 
                 if (validCells != null && !validCells.Any())
                     return;

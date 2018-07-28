@@ -11,8 +11,8 @@
 
 using System.Collections.Generic;
 using OpenRA.Mods.Common.Effects;
-using OpenRA.Traits;
 using OpenRA.Mods.Common.Warheads;
+using OpenRA.Traits;
 
 namespace OpenRA.Mods.MW.Warheads
 {
@@ -39,11 +39,7 @@ namespace OpenRA.Mods.MW.Warheads
                     if (firedBy.Owner.IsAlliedWith(firedBy.World.RenderPlayer))
                         firedBy.World.AddFrameEndTask(w => w.Add(new FloatingText(firedBy.CenterPosition, firedBy.Owner.Color.RGB, FloatingText.FormatCashTick(Ammount), 30)));
                 }
-
-                //Log.Write("debug", "GrantSelfConditionWarhead ::: DoImpact");
             }
-
-
         }
     }
 }

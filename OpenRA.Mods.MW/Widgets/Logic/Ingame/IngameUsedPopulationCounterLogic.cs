@@ -15,7 +15,6 @@ using OpenRA.Mods.Common.Widgets;
 using OpenRA.Traits;
 using OpenRA.Widgets;
 
-
 namespace OpenRA.Mods.MW.Widgets.Logic
 {
     public class IngameUsedPopulationCounterLogic : ChromeLogic
@@ -46,8 +45,6 @@ namespace OpenRA.Mods.MW.Widgets.Logic
 
         public override void Tick()
         {
-
-
             if (nextCashTickTime > 0)
                 nextCashTickTime--;
 

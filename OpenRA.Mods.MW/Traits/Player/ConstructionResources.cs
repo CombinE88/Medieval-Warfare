@@ -19,17 +19,14 @@ namespace OpenRA.Mods.MW.Traits
         public object Create(ActorInitializer init) { return new ConstructionResources(init.Self); }
     }
 
-
     public class ConstructionResources : ITick
     {
-
         private int tickrate;
         public int Stored;
 
         public ConstructionResources(Actor self)
         {
         }
-
 
         void ITick.Tick(Actor self)
         {

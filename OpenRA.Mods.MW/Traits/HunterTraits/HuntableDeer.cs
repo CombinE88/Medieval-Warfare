@@ -7,7 +7,6 @@ using OpenRA.Traits;
 
 namespace OpenRA.Mods.MW.Traits
 {
-
     [Desc("How much the unit is worth in Peasants.")]
     public class HuntableDeerInfo : ITraitInfo
     {
@@ -59,7 +58,6 @@ namespace OpenRA.Mods.MW.Traits
 
         public void Killed(Actor self, AttackInfo e)
         {
-
             if (!enabled)
                 return;
 
@@ -110,7 +108,6 @@ namespace OpenRA.Mods.MW.Traits
 
                 if (e.Attacker != null && e.Attacker.IsInWorld && !e.Attacker.IsDead && unit.TraitsImplementing<LootableBody>().Any())
                     unit.TraitsImplementing<LootableBody>().FirstOrDefault().Hunter = e.Attacker;
-
             });
         }
     }

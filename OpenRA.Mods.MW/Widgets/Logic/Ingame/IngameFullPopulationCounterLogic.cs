@@ -14,7 +14,6 @@ using OpenRA.Mods.Common.Widgets;
 using OpenRA.Traits;
 using OpenRA.Widgets;
 
-
 namespace OpenRA.Mods.MW.Widgets.Logic
 {
     public class IngameFullPopulationCounterLogic : ChromeLogic
@@ -24,7 +23,6 @@ namespace OpenRA.Mods.MW.Widgets.Logic
 
         readonly Player player;
         readonly string cashLabel;
-
 
         int nextCashTickTime = 0;
         int displayResources;
@@ -40,13 +38,10 @@ namespace OpenRA.Mods.MW.Widgets.Logic
             displayLabel = cashLabel.F(displayResources);
 
             pop.GetText = () => displayLabel;
-
         }
 
         public override void Tick()
         {
-
-
             if (nextCashTickTime > 0)
                 nextCashTickTime--;
 

@@ -1,8 +1,7 @@
-﻿using OpenRA.Traits;
-using OpenRA.Mods.Common.Traits;
+﻿using System.Linq;
 using OpenRA.GameRules;
-using System;
-using System.Linq;
+using OpenRA.Mods.Common.Traits;
+using OpenRA.Traits;
 
 namespace OpenRA.Mods.MW.Traits
 {
@@ -28,6 +27,7 @@ namespace OpenRA.Mods.MW.Traits
         public WeaponInfo EmptyWeaponInfo { get; private set; }
 
         public override object Create(ActorInitializer init) { return new WithPermanentExplosion(this, init.Self); }
+
         public override void RulesetLoaded(Ruleset rules, ActorInfo ai)
         {
             if (!string.IsNullOrEmpty(Weapon))
@@ -45,23 +45,24 @@ namespace OpenRA.Mods.MW.Traits
             base.RulesetLoaded(rules, ai);
         }
     }
+
     public class WithPermanentExplosion : ConditionalTrait<WithPermanentExplosionInfo>, INotifyCreated, ITick
     {
         BuildingInfo buildingInfo;
-        private int _delay;
+        private int delay;
 
         public WithPermanentExplosion(WithPermanentExplosionInfo info, Actor self)
             : base(info)
         {
-            _delay = Info.Delay;
+            delay = Info.Delay;
         }
 
         void ITick.Tick(Actor self)
         {
             if (!IsTraitDisabled)
-                _delay--;
+                delay--;
 
-            if (_delay <= 0)
+            if (delay <= 0)
                 ExplosionHappaning(self);
         }
 
@@ -72,7 +73,7 @@ namespace OpenRA.Mods.MW.Traits
 
         public void ExplosionHappaning(Actor self)
         {
-            _delay = Info.Delay;
+            delay = Info.Delay;
 
             if (self.World.SharedRandom.Next(100) > Info.Chance)
             {
@@ -98,6 +99,5 @@ namespace OpenRA.Mods.MW.Traits
             // Use .FromPos since this actor is killed. Cannot use Target.FromActor
             weapon.Impact(Target.FromPos(self.CenterPosition), self, Enumerable.Empty<int>());
         }
-
     }
 }

@@ -11,7 +11,6 @@ namespace OpenRA.Mods.MW.Traits
     [Desc("Is Unit a Peasant (adds a count of 1 to the PlayerCivilisation).")]
     public class BuildUpSoundInfo : ITraitInfo
     {
-
         public readonly string StartSound = null;
 
         public readonly string LoopSound = null;
@@ -25,7 +24,7 @@ namespace OpenRA.Mods.MW.Traits
 
     public class BuildUpSound : INotifyCreated, ITick, INotifyRemovedFromWorld, INotifyDeployComplete, INotifySold, INotifyBuildComplete
     {
-        public BuildUpSoundInfo info;
+        private BuildUpSoundInfo info;
         private bool isitend;
         private int remove;
         private bool disable;
@@ -38,15 +37,14 @@ namespace OpenRA.Mods.MW.Traits
             this.info = info;
             isitend = false;
             remove = info.Time;
-
         }
+
         void INotifyCreated.Created(Actor self)
         {
             isitend = false;
             currentSound = Game.Sound.Play(SoundType.World, info.StartSound, self.CenterPosition);
             currentSounds.Add(currentSound);
         }
-
 
         void StopSound()
         {
@@ -63,12 +61,14 @@ namespace OpenRA.Mods.MW.Traits
         {
             if (remove > 0)
                 remove--;
+
             if (currentSound.Complete && !isitend && remove > 0)
             {
                 isitend = true;
                 currentSound = Game.Sound.PlayLooped(SoundType.World, info.LoopSound, self.CenterPosition);
                 currentSounds.Add(currentSound);
             }
+
             if (!disable && remove <= 0)
             {
                 disable = true;

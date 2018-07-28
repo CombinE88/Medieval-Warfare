@@ -1,8 +1,6 @@
-﻿
-using System;
+﻿using System;
 using OpenRA.Mods.Common.Effects;
 using OpenRA.Traits;
-
 
 namespace OpenRA.Mods.MW.Traits
 {
@@ -21,22 +19,20 @@ namespace OpenRA.Mods.MW.Traits
     {
         private readonly ResourcePurifierInfo info;
         private PlayerResources playerResources;
-        private int Resources;
-        private int ResourcesTickBefore;
-
-
+        private int resources;
+        private int resourcesTickBefore;
 
         public ResourcePurifier(Actor self, ResourcePurifierInfo info)
         {
             this.info = info;
             playerResources = self.Owner.PlayerActor.Trait<PlayerResources>();
-            Resources = playerResources.Resources;
-            ResourcesTickBefore = playerResources.Resources;
+            resources = playerResources.Resources;
+            resourcesTickBefore = playerResources.Resources;
         }
 
-        public void GiveCash(Actor self, int CashGrant)
+        public void GiveCash(Actor self, int cashGrant)
         {
-            var temp = (int)Math.Ceiling((CashGrant * info.Percentage) / 100.0);
+            var temp = (int)Math.Ceiling((cashGrant * info.Percentage) / 100.0);
             playerResources.GiveResources(temp);
 
             if (info.ShowTicks && temp > 0)
@@ -44,21 +40,19 @@ namespace OpenRA.Mods.MW.Traits
                 if (self.Owner.IsAlliedWith(self.World.RenderPlayer))
                     self.World.AddFrameEndTask(w => w.Add(new FloatingText(self.CenterPosition, self.Owner.Color.RGB, FloatingText.FormatCashTick(temp), 30)));
             }
-
         }
 
         void ITick.Tick(Actor self)
         {
-            Resources = playerResources.Resources;
-            var CashGrant = Resources - ResourcesTickBefore;
+            resources = playerResources.Resources;
+            var cashGrant = resources - resourcesTickBefore;
 
-            if (CashGrant > 0)
+            if (cashGrant > 0)
             {
-                GiveCash(self, CashGrant);
+                GiveCash(self, cashGrant);
             }
 
-            ResourcesTickBefore = playerResources.Resources;
+            resourcesTickBefore = playerResources.Resources;
         }
-
     }
 }

@@ -17,7 +17,6 @@ namespace OpenRA.Mods.MW.Traits
 
     public class PersonValued : INotifyCreated, INotifyRemovedFromWorld
     {
-
         private PersonValuedInfo info;
 
         public PersonValued(Actor self, PersonValuedInfo info)

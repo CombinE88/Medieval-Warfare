@@ -8,7 +8,6 @@ namespace OpenRA.Mods.MW.Traits
 {
     class AcolytePreyInfo : ConditionalTraitInfo
     {
-
         [Desc("Prey Animation when docking.")]
         [SequenceReference]
         public readonly string PreySequence = "prey";
@@ -21,11 +20,11 @@ namespace OpenRA.Mods.MW.Traits
 
         public readonly string Cursor = "preycursor";
 
-        public bool LeechesResources = true;
+        public readonly bool LeechesResources = true;
 
-        public int leechinterval = 100;
+        public readonly int Leechinterval = 100;
 
-        public string SelfEnabledCondition = null;
+        public readonly string SelfEnabledCondition = null;
 
         [Desc("Resource Type / Prerequisites. NONE for none")]
         public readonly Dictionary<string, string> ResourceTypesPreres = new Dictionary<string, string>();
@@ -36,7 +35,7 @@ namespace OpenRA.Mods.MW.Traits
     class AcolytePrey : ConditionalTrait<AcolytePreyInfo>, IIssueOrder, IResolveOrder, IOrderVoice
     {
         readonly AcolytePreyInfo info;
-        public Actor forceactor;
+        private Actor forceactor;
 
         public AcolytePrey(AcolytePreyInfo info) : base(info)
         {
@@ -69,7 +68,6 @@ namespace OpenRA.Mods.MW.Traits
             forceactor = order.TargetActor;
 
             self.QueueActivity(new Prey(self, forceactor));
-
         }
 
         public string VoicePhraseForOrder(Actor self, Order order)
@@ -92,7 +90,5 @@ namespace OpenRA.Mods.MW.Traits
                 return self.Info.TraitInfo<AcolytePreyInfo>().TargetActors.Contains(target.Info.Name);
             }
         }
-
-
     }
 }

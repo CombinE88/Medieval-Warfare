@@ -48,7 +48,6 @@ namespace OpenRA.Mods.MW.Warheads
 
         public override void DoImpact(Target target, Actor firedBy, IEnumerable<int> damageModifiers)
         {
-
             if (!IsValidImpact(target.CenterPosition, firedBy))
                 return;
 

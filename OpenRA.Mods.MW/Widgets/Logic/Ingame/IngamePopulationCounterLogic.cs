@@ -9,11 +9,6 @@
  */
 #endregion
 
-using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading;
 using OpenRA.Mods.Common.Widgets;
 using OpenRA.Traits;
 using OpenRA.Widgets;
@@ -28,11 +23,8 @@ namespace OpenRA.Mods.MW.Widgets.Logic
         readonly Player player;
         readonly string cashLabel;
 
-
-
         int displayResources;
         string displayLabel;
-
 
         [ObjectCreator.UseCtor]
         public IngamePopulationCounterLogic(Widget widget, World world)
@@ -47,8 +39,6 @@ namespace OpenRA.Mods.MW.Widgets.Logic
             pop.GetText = () => displayLabel;
 
             displayResources = player.PlayerActor.Trait<PlayerCivilization>().Peasantpopulationvar;
-
-
         }
 
         public override void Tick()

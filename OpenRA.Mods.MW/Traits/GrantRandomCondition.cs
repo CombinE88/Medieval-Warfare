@@ -9,7 +9,6 @@
  */
 #endregion
 
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using OpenRA.Mods.Common.Traits;
@@ -34,7 +33,7 @@ namespace OpenRA.Mods.MW.Traits
     {
         ConditionManager conditionManager;
         int conditionToken = ConditionManager.InvalidConditionToken;
-        private string PickedCondition;
+        private string pickedCondition;
 
         public GrantRandomCondition(GrantRandomConditionInfo info)
             : base(info) { }
@@ -44,19 +43,20 @@ namespace OpenRA.Mods.MW.Traits
             conditionManager = self.Trait<ConditionManager>();
             if (Info.RandomConditions.Count == 0)
             {
-                PickedCondition = Info.FallbackCondition;
+                pickedCondition = Info.FallbackCondition;
             }
             else
             {
-                PickedCondition = Info.RandomConditions.ElementAt(self.World.SharedRandom.Next(Info.RandomConditions.Count));
+                pickedCondition = Info.RandomConditions.ElementAt(self.World.SharedRandom.Next(Info.RandomConditions.Count));
             }
+
             base.Created(self);
         }
 
         protected override void TraitEnabled(Actor self)
         {
             if (conditionToken == ConditionManager.InvalidConditionToken)
-                conditionToken = conditionManager.GrantCondition(self, PickedCondition);
+                conditionToken = conditionManager.GrantCondition(self, pickedCondition);
         }
 
         protected override void TraitDisabled(Actor self)

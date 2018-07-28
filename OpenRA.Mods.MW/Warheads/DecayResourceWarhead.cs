@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using OpenRA.Traits;
 using OpenRA.Mods.Common.Traits;
 using OpenRA.Mods.Common.Warheads;
+using OpenRA.Traits;
 
 namespace OpenRA.Mods.MW.Warheads
 {
@@ -23,7 +23,6 @@ namespace OpenRA.Mods.MW.Warheads
 
             var minRange = (Size.Length > 1 && Size[1] > 0) ? Size[1] : 0;
             var allCells = world.Map.FindTilesInAnnulus(targetTile, minRange, Size[0]);
-
 
             foreach (var cell in allCells)
             {

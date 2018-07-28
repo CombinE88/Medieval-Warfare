@@ -26,7 +26,6 @@ namespace OpenRA.Mods.MW.Activities
             var air = client.TraitOrDefault<Aircraft>();
             if (air != null)
             {
-
                 var angle = dock.Info.DockAngle;
                 if (angle < 0)
                     angle = client.Info.TraitInfo<AircraftInfo>().InitialFacing;
@@ -50,7 +49,6 @@ namespace OpenRA.Mods.MW.Activities
             var air = client.TraitOrDefault<Aircraft>();
             if (air != null)
             {
-
                 // Don't make helis do attack move, it will waste ammo.
                 return client.Trait<IMove>().MoveTo(rp.Location, 2);
             }

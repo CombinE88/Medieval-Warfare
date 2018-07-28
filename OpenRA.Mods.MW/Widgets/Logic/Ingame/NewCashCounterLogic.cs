@@ -89,7 +89,6 @@ namespace OpenRA.Mods.MW.Widgets.Logic
                 displayLabel = "Gold: " + cashLabel.F(displayResources);
             else
                 displayLabel = "Essence: " + cashLabel.F(displayResources);
-
         }
     }
 }

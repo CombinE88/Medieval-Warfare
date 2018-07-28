@@ -31,7 +31,6 @@ namespace OpenRA.Mods.MW.Traits
         int conditionToken = ConditionManager.InvalidConditionToken;
         bool enabled = false;
 
-
         public GrantPermanentCondition(GrantPermanentConditionInfo info)
             : base(info) { }
 

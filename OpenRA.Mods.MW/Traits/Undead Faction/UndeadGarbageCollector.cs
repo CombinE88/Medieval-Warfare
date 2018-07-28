@@ -9,13 +9,12 @@ namespace OpenRA.Mods.MW.Traits
 {
     class GarbageCollectorInfo : ConditionalTraitInfo
     {
-
         [Desc("Wich Resource can be collected.")]
         public readonly HashSet<string> ResourcesNames = new HashSet<string>();
 
-        public int CollectInterval = 250;
+        public readonly int CollectInterval = 250;
 
-        public int CollectRange = 10;
+        public readonly int CollectRange = 10;
 
         [WeaponReference, FieldLoader.Require, Desc("Default weapon to use for explosion Effect")]
         public readonly string Weapon = null;
@@ -30,7 +29,6 @@ namespace OpenRA.Mods.MW.Traits
 
             base.RulesetLoaded(rules, ai);
         }
-
     }
 
     class GarbageCollector : ConditionalTrait<GarbageCollectorInfo>, ITick, INotifyCreated
@@ -43,14 +41,12 @@ namespace OpenRA.Mods.MW.Traits
         {
             this.info = info;
             tickler = info.CollectInterval;
-
         }
 
         void INotifyCreated.Created(Actor self)
         {
             resLayer = self.World.WorldActor.Trait<ResourceLayer>();
         }
-
 
         void ITick.Tick(Actor self)
         {
@@ -69,22 +65,16 @@ namespace OpenRA.Mods.MW.Traits
                         return false;
                     });
 
-                CPos ZapRandom = CPos.Zero;
+                var zapRandom = CPos.Zero;
 
                 if (cells != null && cells.Any() && cells.Count() > 1)
-                {
-                    //ZapRandom = cells.ElementAt(self.World.SharedRandom.Next(cells.Count()));
-                    ZapRandom = cells.MinByOrDefault(c => (self.Location - c).LengthSquared);
-                }
-
+                    zapRandom = cells.MinByOrDefault(c => (self.Location - c).LengthSquared);
                 else if (cells != null && cells.Any() && cells.Count() == 1)
-                {
-                    ZapRandom = cells.First();
-                }
+                    zapRandom = cells.First();
 
-                if (ZapRandom != CPos.Zero)
+                if (zapRandom != CPos.Zero)
                 {
-                    var ammount = resLayer.GetResource(ZapRandom).Info.ValuePerUnit;
+                    var ammount = resLayer.GetResource(zapRandom).Info.ValuePerUnit;
                     var playerResources = self.Owner.PlayerActor.Trait<PlayerResources>();
 
                     playerResources.GiveResources(ammount);
@@ -99,12 +89,10 @@ namespace OpenRA.Mods.MW.Traits
                             self.World.AddFrameEndTask(w => w.Add(new FloatingText(self.CenterPosition,
                                 self.Owner.Color.RGB, floattest, 30)));
                     }
-                    resLayer.Harvest(ZapRandom);
-                    if (resLayer.GetResourceDensity(ZapRandom) <= 0)
-                    {
-                        resLayer.Destroy(ZapRandom);
-                    }
 
+                    resLayer.Harvest(zapRandom);
+                    if (resLayer.GetResourceDensity(zapRandom) <= 0)
+                        resLayer.Destroy(zapRandom);
 
                     var weapon = Info.WeaponInfo;
                     if (weapon == null)
@@ -113,10 +101,9 @@ namespace OpenRA.Mods.MW.Traits
                     if (weapon.Report != null && weapon.Report.Any())
                         Game.Sound.Play(SoundType.World, weapon.Report.Random(self.World.SharedRandom), self.CenterPosition);
 
-                    weapon.Impact(Target.FromPos(self.World.Map.CenterOfCell(ZapRandom)), self, Enumerable.Empty<int>());
+                    weapon.Impact(Target.FromPos(self.World.Map.CenterOfCell(zapRandom)), self, Enumerable.Empty<int>());
 
                     tickler = info.CollectInterval;
-
                 }
             }
         }
