@@ -1414,8 +1414,6 @@ SOUL:
 		Factions: Undead
 	Interactable:
 	ConditionManager:
-	Immobile:
-		OccupiesSpace: false
 	HiddenUnderFog:
 		Type: CenterPosition
 	GivesBounty:
@@ -1423,6 +1421,20 @@ SOUL:
 	Valued:
 		Cost: 127
 		DeathTypes: DefaultDeath
+	Mobile:
+		Speed: 56
+		SharesCell: true
+		TerrainSpeeds:
+			Clear: 1
+			Rough: 1
+			Road: 1
+			Tiberium: 1
+			BlueTiberium: 1
+			Crops: 1
+			Wood: 1
+			Loot: 1
+			Beach: 1
+			Corruption: 1
         
 SOULS:
 	Inherits@1: ^ExistsInWorld
@@ -1452,8 +1464,6 @@ SOULS:
 		Factions: Undead
 	Interactable:
 	ConditionManager:
-	Immobile:
-		OccupiesSpace: false
 	HiddenUnderFog:
 		Type: CenterPosition
 	GivesBounty:
@@ -1461,3 +1471,17 @@ SOULS:
 		DeathTypes: DefaultDeath
 	Valued:
 		Cost: 70
+	Mobile:
+		Speed: 56
+		SharesCell: true
+		TerrainSpeeds:
+			Clear: 1
+			Rough: 1
+			Road: 1
+			Tiberium: 1
+			BlueTiberium: 1
+			Crops: 1
+			Wood: 1
+			Loot: 1
+			Beach: 1
+			Corruption: 1

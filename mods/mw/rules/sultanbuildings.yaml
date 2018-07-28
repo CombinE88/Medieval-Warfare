@@ -1185,6 +1185,7 @@ SULFIX:
 		Lasso: 3c0
 		ForceLasso: 5c0
 		ReturnOnDeath: true
+		RespawnTime: 750
 	WithFreeSpawnableActor@LABOUR2:
 		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 		SpawnActor: shopplayer
@@ -1194,6 +1195,7 @@ SULFIX:
 		Lasso: 3c0
 		ForceLasso: 5c0
 		ReturnOnDeath: true
+		RespawnTime: 750
 	WithRangeCircle:
 		Type: Workshop
 		Range: 4c0
