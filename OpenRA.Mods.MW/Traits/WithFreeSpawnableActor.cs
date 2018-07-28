@@ -194,7 +194,10 @@ namespace OpenRA.Mods.MW.Traits
                     .Actors[Info.SpawnActor].TraitInfo<PersonValuedInfo>().ActorCount)
             {
                 ticker = 50;
+                return;
             }
+
+            CreateActorSpawn(self);
         }
     }
 }
