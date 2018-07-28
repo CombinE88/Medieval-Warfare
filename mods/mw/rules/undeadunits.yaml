@@ -24,11 +24,11 @@ PREYCOLYTE:
 		BuildPaletteOrder: 10
 		Description: \n   Can pray at scarecrows, mines and deerstands to convert essence\n  Can pray at pentagrams to and spend essence to summon structures\n  Ziggurat needs to be upgraded to level 2 to convert Iron and Gold into Essence.
 		Queue: MBuilding.ded
-		BuildDuration: 600 
+		BuildDuration: 450 
 	Tooltip:
 		Name: Acolyte
 	Mobile:
-		Speed: 65
+		Speed: 70
 	Health:
 		HP: 30000
 	AttackFrontal:
@@ -52,7 +52,7 @@ PREYCOLYTE:
 	AcolytePrey: 
 		TargetActors: split3, split4, split4b, split2, splitblue, split5, splitdead, split7, split8
 		PreyLoopSequence: prey
-		leechinterval: 50
+		Leechinterval: 50 
 		SelfEnabledCondition: whisper
 		Voice: Harvest
 		ResourceTypesPreres:

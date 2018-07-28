@@ -1300,7 +1300,7 @@ HunterUnload:
 	Projectile: Bullet
 		Speed: 1c682
 	Warhead@GrantMonez: CashTick
-		Ammount: 65
+		Ammount: 45
 		ValidStances: Ally
 		AffectsParent: true
 		InvalidTargets: Air
@@ -1424,7 +1424,7 @@ LumberGrantLootPlayer:
 	Range: 1c712
 	Projectile: InstantHit
 	Warhead@GrantMonez: CashTick
-		Ammount: 30
+		Ammount: 22
 		ValidStances: Ally
 		AffectsParent: true
 		InvalidTargets: Air
