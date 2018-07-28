@@ -31,10 +31,16 @@ namespace OpenRA.Mods.MW.Traits
         IEnumerable<IRenderable> IRenderModifier.ModifyRender(Actor self, WorldRenderer wr, IEnumerable<IRenderable> r)
         {
             var player = self.World.RenderPlayer;
-            var devMode = player.PlayerActor.TraitOrDefault<DeveloperMode>();
 
-            if (player != null && (info.Factions.Contains(player.Faction.Name) || player.NonCombatant || player.IsAlliedWith(self.Owner) || devMode.DisableShroud))
-                return r;
+            if (player != null)
+            {
+                var playerfaction = player.Faction;
+
+                if (info.Factions.Contains(playerfaction.Name) || player.WinState != WinState.Undefined || player.Spectating || self.Owner == player)
+                {
+                    return r;
+                }
+            }
 
             return SpriteRenderable.None;
         }
