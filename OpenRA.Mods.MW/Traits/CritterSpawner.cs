@@ -145,7 +145,7 @@ namespace OpenRA.Mods.MW.Traits
                 if (self.World.Map.Rules.Actors[actor].HasTraitInfo<MobileInfo>())
                 {
                     ip = self.World.Map.Rules.Actors[actor].TraitInfo<MobileInfo>();
-                    validCells = cells.Where(c => ip.(self.World, self.World.Map.Rules.Actors[actor], c, null));
+                    validCells = cells.Where(c => ip.CanEnterCell(self.World, null, c));
                 }
                 else if (self.World.Map.Rules.Actors[actor].HasTraitInfo<BuildingInfo>())
                 {
