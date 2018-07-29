@@ -550,6 +550,7 @@ GrimSkytheThrow:
 		Inaccuracy: 0c0
 		Image: skytheproj
 		Palette: grimprojalpha
+		Blockable: false
 	Warhead@1Dam: SpreadDamage
 		Spread: 65
 		Damage: 5200
@@ -635,11 +636,12 @@ VampAttackAA:
 		RangeLimit: 10c0
 		Arm: 0
 		Speed: 1c0
+		Blockable: false
 	Warhead@1Dam: SpreadDamage
 		Spread: 215
 		ValidTargets: Air
 		InvalidTargets: Ground
-		Damage: 3300
+		Damage: 4300
 		Versus:
 			Leather: 100
 			Light: 100
@@ -672,10 +674,11 @@ BackFlyingBlood:
 		Inaccuracy: 0c0
 		Image: bloodparticle
 		Palette: vamprojalpha
+		Blockable: false
 	Warhead@1Dam: SpreadDamage
 		Spread: 141
 		ValidTargets:  Air, Ground
-		Damage: -600
+		Damage: -900
 		AffectsParent: true
 		Versus:
 			Leather: 100

@@ -193,10 +193,10 @@ namespace OpenRA.Mods.MW.Traits
             if (owner.PlayerActor.Trait<PlayerCivilization>().FreePopulation < self.World.Map.Rules
                     .Actors[Info.SpawnActor].TraitInfo<PersonValuedInfo>().ActorCount)
             {
-                ticker = info.RespawnTime;
+                ticker = 50;
                 return;
             }
-
+            ticker = info.RespawnTime;
             CreateActorSpawn(self);
         }
     }

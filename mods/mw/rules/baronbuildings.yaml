@@ -140,7 +140,7 @@ XLTNT1:
 		Pieces: 1, 2
 		Range: 1c0, 5c0
 	ProvidesLivingspace:
-		Ammount: 12
+		Ammount: 9
 		SpawnOffset: 256,768,0
 		ExitCell: 1,2
 XLTNT2:
@@ -158,7 +158,7 @@ XLTNTUNI:
 	RenderSprites:
 		Image: xltnt3
 	ProvidesLivingspace:
-		Ammount: 12
+		Ammount: 9
 		SpawnOffset: 256,768,0
 		ExitCell: 1,2
  
@@ -320,7 +320,7 @@ NTENT1:
 		Pieces: 2, 3
 		Range: 1c0, 5c0
 	ProvidesLivingspace:
-		Ammount: 4
+		Ammount: 3
 		SpawnOffset: 256,811,0
 		ExitCell: 1,1
 		

@@ -52,7 +52,7 @@ PREYCOLYTE:
 	AcolytePrey: 
 		TargetActors: split3, split4, split4b, split2, splitblue, split5, splitdead, split7, split8
 		PreyLoopSequence: prey
-		Leechinterval: 50 
+		Leechinterval: 45 
 		SelfEnabledCondition: whisper
 		Voice: Harvest
 		ResourceTypesPreres:
@@ -630,7 +630,7 @@ VAMPFLYING:
 		Description: \n  Strong vs Infantry and cavalry\n  Can transform flying\n  Leeches life\n  Transformed: can attack Aircrafts
 		Queue: MVehicle.ded
 	Health:
-		HP: 23000
+		HP: 32000
 	Armor:
 		Type: Leather
 	RevealsShroud:

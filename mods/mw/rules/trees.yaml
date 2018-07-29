@@ -201,7 +201,7 @@ SPLIT4:
 	SeedsResource@SpawnCorruption:
 		RequiresCondition: SpawnCorruption
 		ResourceType: Corruption
-		Interval: 45
+		Interval: 38
 	WithColoredOverlay@SpawnCorruption:
 		Palette: disabled
 		RequiresCondition: SpawnCorruption
@@ -252,7 +252,7 @@ SPLIT4B:
 	SeedsResource@SpawnCorruption:
 		RequiresCondition: SpawnCorruption
 		ResourceType: Corruption
-		Interval: 45
+		Interval: 38
 	WithColoredOverlay@SpawnCorruption:
 		Palette: disabled
 		RequiresCondition: SpawnCorruption
@@ -345,6 +345,7 @@ SPLIT7:
 		Sequence: corputed1
 		RequiresCondition: SpawnCorruption
 	ExternalCondition@Corruption:
+		SourceCap: 1
 		Condition: SpawnCorruption
 	CritterSpawner:
 		RequiresCondition: !SpawnCorruption
@@ -358,19 +359,19 @@ SPLIT7:
 	SeedsResource:
 		RequiresCondition: SpawnCorruption == 1
 		ResourceType: Corruption
-		Interval: 110
+		Interval: 70
 	SeedsResource@2:
 		RequiresCondition: SpawnCorruption == 2
 		ResourceType: Corruption
-		Interval: 90
+		Interval: 60
 	SeedsResource@3:
 		RequiresCondition: SpawnCorruption == 3
 		ResourceType: Corruption
-		Interval: 75
+		Interval: 50
 	SeedsResource@4:
 		RequiresCondition: SpawnCorruption >= 4
 		ResourceType: Corruption
-		Interval: 55
+		Interval: 35
 	Targetable:
 		TargetTypes: Trees, Corrupt
 	DockManager:

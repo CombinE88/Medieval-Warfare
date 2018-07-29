@@ -207,7 +207,7 @@ XLTNTUNI.scaff:
 		BuildPaletteOrder: 20
 		Prerequisites: anyhq
 		Queue: MBuilding.Nod
-		Description: Provides more livingspace. Livingspace increases over time by generating peasants.\nCan hold up to 12 peasants, spawntime depends on number of shacks and large huts. \ncheaper than the standard Shack.\n\n\n\n
+		Description: Provides more livingspace. Livingspace increases over time by generating peasants.\nCan hold up to 9 peasants, spawntime depends on number of shacks and large huts. \ncheaper than the standard Shack.\n\n\n\n
 		BuildDuration: 300
 	Health:
 		HP: 17500

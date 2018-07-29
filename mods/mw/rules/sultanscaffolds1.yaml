@@ -16,7 +16,7 @@ SULNUKE.scaff:
 		IconPalette: raicon
 		BuildPaletteOrder: 10
 		Prerequisites: factnew
-		Description: Generates livingspace. Livingspace increases over time by generating peasants\nCan hold up to 10 peasants, spawntime depends on number of shacks and large huts  
+		Description: Generates livingspace. Livingspace increases over time by generating peasants\nCan hold up to 7 peasants, spawntime depends on number of shacks and large huts  
 		Queue: MBuilding.SUL
 		BuildDuration: 300
 	Health:
@@ -226,7 +226,7 @@ SULNUK2.scaff:
 		BuildPaletteOrder: 20
 		Prerequisites: anyhq
 		Queue: MBuilding.SUL
-		Description: Provides more livingspace. Livingspace increases over time by generating peasants.\nCan hold up to 25 peasants, spawntime depends on number of shacks and large huts. \ncheaper than the standard Shack.\n\n\n\n
+		Description: Provides more livingspace. Livingspace increases over time by generating peasants.\nCan hold up to 18 peasants, spawntime depends on number of shacks and large huts. \ncheaper than the standard Shack.\n\n\n\n
 		BuildDuration: 500
 	Health:
 		HP: 50000

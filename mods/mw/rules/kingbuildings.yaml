@@ -200,7 +200,7 @@ NUK2NEW:
 		Pieces: 1, 2
 		Range: 1c0, 5c0
 	ProvidesLivingspace:
-		Ammount: 16
+		Ammount: 11
 		SpawnOffset: 128,811,0
 		ExitCell: 1,2
 		
@@ -264,7 +264,7 @@ NUKXL:
 		Pieces: 1, 2
 		Range: 1c0, 5c0
 	ProvidesLivingspace:
-		Ammount: 30
+		Ammount: 20
 		SpawnOffset: 938,725,0
 		ExitCell: 2,2
  
@@ -318,7 +318,7 @@ NUKENEW:
 		Pieces: 2, 3
 		Range: 1c0, 5c0
 	ProvidesLivingspace:
-		Ammount: 8
+		Ammount: 6
 		SpawnOffset: -384,597,0
 		ExitCell: 0,2
 
