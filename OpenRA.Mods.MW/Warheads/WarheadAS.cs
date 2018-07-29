@@ -79,7 +79,7 @@ namespace OpenRA.Mods.MW.Warheads
                     validImpact = true;
                     break;
                 case ImpactType.Air:
-                    validImpact = IsValidTarget(new string[] { "Air" });
+                    validImpact = IsValidTarget(new BitSet<TargetableType>("Air"));
                     break;
                 case ImpactType.Ground:
                     var tileInfo = world.Map.GetTerrainInfo(targetTile);

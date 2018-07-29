@@ -45,7 +45,7 @@ ARMORYNOD:
 		SquadSize: 2
 		QuantizedFacings: 8
 		Description: Throw plague corpse
-		LongDesc: Deploy poisonous corpes infecting everything surrounding.
+		LongDesc: Launches by offscreen tribuchet rotting corpses at selected area. units who wander near will be poisoned by proximity 
 		EndChargeSpeechNotification: NewAirstrike
 		SelectTargetSpeechNotification: SelectTarget
 		InsufficientPowerSpeechNotification: InsufficientPower
@@ -651,7 +651,7 @@ WORKSHOPNOD:
 		Actors: siege99
 		Type: MSiege.Nod
 		Description: Wooden Horse \n\n\n\n
-		LongDesc: Wooden horse constructed to provide large bundles of infantry, seemingly never ending.\n  - Flamewh33l
+		LongDesc: Constructed at the Siege Workshop and designed for infiltration of fifteen soldiers. unarmed special ability: can disguise itself with trees and resource points
 		SelectTargetSpeechNotification: SelectTarget
 		InsufficientPowerSpeechNotification: InsufficientPower
 		DisplayBeacon: False

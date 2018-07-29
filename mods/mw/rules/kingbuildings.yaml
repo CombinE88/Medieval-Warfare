@@ -45,7 +45,7 @@ HQNEWGDI:
 		SquadSize: 3
 		QuantizedFacings: 8
 		Description: Pulverizing Fire Storm
-		LongDesc: Discription.
+		LongDesc: Launches offscreen flaming arrows at targeted location. the fire lingers for a while to deal damage overtime
 		EndChargeSpeechNotification: NewAirstrike
 		SelectTargetSpeechNotification: SelectTarget
 		InsufficientPowerSpeechNotification: InsufficientPower
@@ -578,7 +578,7 @@ CASTLE2:
 		Cursor: ioncannon
 		ChargeInterval: 6750
 		Description: Weather control
-		LongDesc: Initiate an Lightning strike.\nApplies instant damage to a small area.\n\n\n\n
+		LongDesc: Fires a direct bolt of electricity at targeted location. 
 		EndChargeSpeechNotification: LightningReady
 		SelectTargetSpeechNotification: SelectTarget
 		InsufficientPowerSpeechNotification: InsufficientPower
@@ -653,7 +653,7 @@ WORKSHOPGDI:
 		Actors: davinci
 		Type: MSiege.GDI
 		Description: Strange Aircraft
-		LongDesc: The Engineers have developed some verey strange prototype for battletest.
+		LongDesc: Produces a controllable ground-attack aircraft at the Siege Workshop. strong vs Infantry, Buildings. weak vs Cavalry, Aircraft
 		SelectTargetSpeechNotification: SelectTarget
 		InsufficientPowerSpeechNotification: InsufficientPower
 		DisplayBeacon: False

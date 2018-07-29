@@ -53,7 +53,7 @@ namespace OpenRA.Mods.MW.Traits
                 self.CancelActivity();
             }
 
-            self.QueueActivity(new Attack(self, Target.FromActor(order.TargetActor), true, true, 100));
+            self.QueueActivity(new Attack(self, Target.FromActor(order.Target.Actor), true, true, 100));
         }
 
         public string VoicePhraseForOrder(Actor self, Order order)

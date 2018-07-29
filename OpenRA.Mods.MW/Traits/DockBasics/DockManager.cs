@@ -62,7 +62,7 @@ namespace OpenRA.Mods.MW.Traits
             {
                 List<CPos> path;
 
-                using (var thePath = PathSearch.FromPoint(client.World, client.Info.TraitInfo<MobileInfo>(),
+                using (var thePath = PathSearch.FromPoint(client.World, client.Info.TraitInfo<MobileInfo>().LocomotorInfo,
                     client, client.Location, dock.Location, true))
                     path = client.World.WorldActor.Trait<IPathFinder>().FindPath(thePath);
 
@@ -79,7 +79,7 @@ namespace OpenRA.Mods.MW.Traits
         {
             List<CPos> path;
 
-            using (var thePath = PathSearch.FromPoint(unit.World, unit.Info.TraitInfo<MobileInfo>(),
+            using (var thePath = PathSearch.FromPoint(unit.World, unit.Info.TraitInfo<MobileInfo>().LocomotorInfo,
                 unit, unit.Location, position.Location, true))
                 path = unit.World.WorldActor.Trait<IPathFinder>().FindPath(thePath);
 

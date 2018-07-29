@@ -795,7 +795,6 @@ SULCASTLE:
 	ProvidesPrerequisite:
 		Prerequisite: anyhq
 	ProvidesPrerequisite@anycastle:
-		RequiresPrerequisites: Level4
 		Prerequisite: anycastle
 	ProvidesPrerequisite@3:
 		Prerequisite: Level3
@@ -881,8 +880,8 @@ SULCASTLE:
 		SquadOffset	-236,236,0
 		SquadSize: 3
 		QuantizedFacings: 8
-		Description: Pulverizing Spear Storm (placeholder)
-		LongDesc: A barrage of spears falling from the sky. Can hit Aircrafts.
+		Description: Pulverizing Spear Storm
+		LongDesc: Modified ballistas fire offscreen at the targeted location. the bolts piercing through all armour types and strike Airbourne targets
 		EndChargeSpeechNotification: NewAirstrike
 		SelectTargetSpeechNotification: SelectTarget
 		InsufficientPowerSpeechNotification: InsufficientPower
@@ -911,7 +910,7 @@ SULCASTLE:
 		ChargeInterval: 10500
 		Actor: sulturnxl
 		LifeTime: 2000
-		Description: Tornado\n\n\n\n
+		Description: Summons a tornado that can be controlled by you. 
 		LongDesc: Devastating!
 		SelectTargetSpeechNotification: SelectTarget
 		InsufficientPowerSpeechNotification: InsufficientPower
@@ -1005,6 +1004,8 @@ SULTOW4:
 	ProvidesPrerequisite@buildingname:
 	ProvidesPrerequisite@3:
 		Prerequisite: Level4
+	ProvidesPrerequisite@anycastle:
+		Prerequisite: anycastle
 	Buildable:
 		IconPalette: raicon
 		BuildPaletteOrder: 70
@@ -1160,7 +1161,7 @@ SULFIX:
 		ChargeInterval: 5750
 		Actors: sulb2
 		Type: MSiege.SUL
-		Description: Siege Mortar
+		Description: built at the Siege Workshop with a powerful pepperpot cannon designed to destroy buildings that're close together. strong vs Buildings, Infantry. weak vs Cavalry, Aircraft
 		LongDesc: Our final siege weapon is ready for combat.
 		SelectTargetSpeechNotification: SelectTarget
 		InsufficientPowerSpeechNotification: InsufficientPower

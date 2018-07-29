@@ -16,6 +16,7 @@ using System.Linq;
 using OpenRA.Mods.Common.Orders;
 using OpenRA.Mods.Common.Traits;
 using OpenRA.Mods.Common.Traits.Render;
+using OpenRA.Primitives;
 using OpenRA.Traits;
 
 namespace OpenRA.Mods.MW.Traits
@@ -138,7 +139,8 @@ namespace OpenRA.Mods.MW.Traits
         {
             get
             {
-                yield return new TargetTypeOrderTargeter(new HashSet<string> { "Disguise" }, "Disguise", 7, "ability", true, true)
+                yield return new TargetTypeOrderTargeter(new BitSet<TargetableType>("Disguise" ), "Disguise", 7, "ability", true, true)
+                //yield return new TargetTypeOrderTargeter(new BitSet<TargetableType>("DetonateAttack"), "DetonateAttack", 5, "attack", true, false) { ForceAttack = false };
                 {
                     ForceAttack = false
                 };
@@ -159,7 +161,7 @@ namespace OpenRA.Mods.MW.Traits
         {
             if (order.OrderString == "Disguise")
             {
-                var target = order.TargetActor != self && order.TargetActor.IsInWorld ? order.TargetActor : null;
+                var target = order.Target.Actor != self && order.Target.Actor.IsInWorld ? order.Target.Actor : null;
                 DisguiseAs(target);
                 Target = target;
             }

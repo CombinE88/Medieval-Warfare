@@ -1,5 +1,6 @@
 ﻿using System;
 using OpenRA.Mods.Common.Effects;
+using OpenRA.Mods.Common.Traits;
 using OpenRA.Traits;
 
 namespace OpenRA.Mods.MW.Traits

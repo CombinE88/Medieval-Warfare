@@ -651,29 +651,6 @@ Container@PLAYER_WIDGETS:
 							Align: Left
 							Font: Bold
 							Text: {0}
-				Container@SUPPORT_POWERS:
-					Logic: SupportPowerBinLogic
-					X: PARENT_RIGHT - 13 - 72 - 35
-					Y: 20
-					Children:
-						Container@PALETTE_BACKGROUND:
-							Children:
-								Background@ICON_TEMPLATE:
-									Width: 72
-									Height: 58
-									ClickThrough: false
-									Background: panel-gray
-						SupportPowers@SUPPORT_PALETTE:
-							X: 4
-							Y: 4
-							TooltipContainer: TOOLTIP_CONTAINER
-							ReadyText: Ready
-							HoldText: On Hold
-							ClockSequence: old
-							IconCount: 20
-							IconMargin: 8	
-							HotkeyPrefix: SupportPower		
-							HotkeyCount: 6
 		Background@SIDEBAR_BACKGROUND:
 			Logic: MenuButtonsChromeLogic
 			X: 2
@@ -962,6 +939,37 @@ Container@PLAYER_WIDGETS:
 					Y: 10
 					Width: WINDOW_RIGHT - 580 - 20 - 150
 					Height: 12
+		Background@SIDEBAR_BACKGROUND5:
+			Logic: MenuButtonsChromeLogic
+			X: 290
+			Y: WINDOW_BOTTOM - 300
+			Width: 260
+			Height: 64
+			Background: panel-black
+			Children:
+				Container@SUPPORT_POWERS:
+					Logic: SupportPowersWidget
+					X: 0
+					Y: 0
+					Children:
+						Container@PALETTE_BACKGROUND:
+							Children:
+								Background@ICON_TEMPLATE:
+									Width: 64
+									Height: 48
+									ClickThrough: false
+									Background: panel-gray
+						SupportPowers@SUPPORT_PALETTE:
+							X: 4
+							Y: 4
+							TooltipContainer: TOOLTIP_CONTAINER
+							ReadyText: Ready
+							HoldText: On Hold
+							ClockSequence: old
+							IconCount: 20
+							IconMargin: 8	
+							HotkeyPrefix: SupportPower		
+							HotkeyCount: 6
 				
 
 		

@@ -13,7 +13,7 @@ using OpenRA.Traits;
 namespace OpenRA.Mods.MW.Activities
 {
     // Assumes you have Minelayer on that unit
-    public class PreyActivity : Activity, ITechTreePrerequisiteInfo
+    public class PreyActivity : Activity
     {
         readonly AcolytePreyInfo info;
         readonly WithSpriteBody wsb;

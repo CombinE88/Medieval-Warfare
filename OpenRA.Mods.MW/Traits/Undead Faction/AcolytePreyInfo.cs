@@ -65,7 +65,7 @@ namespace OpenRA.Mods.MW.Traits
             if (!order.Queued)
                 self.CancelActivity();
 
-            forceactor = order.TargetActor;
+            forceactor = order.Target.Actor;
 
             self.QueueActivity(new Prey(self, forceactor));
         }

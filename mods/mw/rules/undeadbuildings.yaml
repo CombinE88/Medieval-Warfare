@@ -347,7 +347,7 @@ ZIGGURAT3:
 		Cursor: nuke
 		ChargeInterval: 9000
 		Description: Spawn a graveyard
-		LongDesc: none
+		LongDesc: Targeted location will be filled with powerful hands pulling anyone back down to hell, after they're done: gravestones will begin to appear reducing buildspace and providing mild reconnaissance
 		EndChargeSpeechNotification: NodcannonReady
 		SelectTargetSpeechNotification: SelectTarget
 		InsufficientPowerSpeechNotification: InsufficientPower
@@ -808,7 +808,7 @@ MAUSO:
 		SquadOffset	-236,236,0
 		SquadSize: 1
 		QuantizedFacings: 8
-		Description: Ambush from below
+		Description: Summons a horde of skeletal hands at selected location to begin pulling everything down to hell
 		LongDesc: Discription.
 		EndChargeSpeechNotification: NewAirstrike
 		SelectTargetSpeechNotification: SelectTarget
@@ -867,7 +867,7 @@ LIBRA:
 		SquadSize: 3
 		QuantizedFacings: 8
 		Description: Attack from below
-		LongDesc: Discription.
+		LongDesc: Launches four coffins at targeted location and will begin to produce uncontrollable sword, spear and bow skeletons for a short period of time. the skeletons will die off after a short period
 		EndChargeSpeechNotification: NewAirstrike
 		SelectTargetSpeechNotification: SelectTarget
 		InsufficientPowerSpeechNotification: InsufficientPower

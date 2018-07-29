@@ -68,7 +68,7 @@ namespace OpenRA.Mods.MW.Traits
                     else if (actor.HasTraitInfo<BuildingInfo>())
                     {
                         var ip2 = actor.TraitInfo<BuildingInfo>();
-                        if (self.World.CanPlaceBuilding(Info.Actors.First(), ip2, a, null))
+                        if (self.World.CanPlaceBuilding(a, self.World.Map.Rules.Actors[Info.Actors.First()], ip2, null))
                             return true;
                     }
                     else if (!actor.HasTraitInfo<BuildingInfo>() && !actor.HasTraitInfo<IPositionableInfo>())
@@ -103,7 +103,7 @@ namespace OpenRA.Mods.MW.Traits
                     List<CPos> path;
 
                     using (var thePath = PathSearch.FromPoint(self.World,
-                        self.World.Map.Rules.Actors["e4new"].TraitInfo<MobileInfo>(),
+                        self.World.Map.Rules.Actors["e4new"].TraitInfo<MobileInfo>().LocomotorInfo,
                         self, self.Location, cell, true))
                         path = self.World.WorldActor.Trait<IPathFinder>().FindPath(thePath);
                     if (info.RadiusMax.Length < path.Count || path.Count == 0)
@@ -142,15 +142,15 @@ namespace OpenRA.Mods.MW.Traits
 
                 IEnumerable<CPos> validCells = null;
 
-                if (self.World.Map.Rules.Actors[actor].HasTraitInfo<IPositionableInfo>())
+                if (self.World.Map.Rules.Actors[actor].HasTraitInfo<MobileInfo>())
                 {
-                    ip = self.World.Map.Rules.Actors[actor].TraitInfo<IPositionableInfo>();
-                    validCells = cells.Where(c => ip.CanEnterCell(self.World, null, c));
+                    ip = self.World.Map.Rules.Actors[actor].TraitInfo<MobileInfo>();
+                    validCells = cells.Where(c => ip.(self.World, self.World.Map.Rules.Actors[actor], c, null));
                 }
                 else if (self.World.Map.Rules.Actors[actor].HasTraitInfo<BuildingInfo>())
                 {
                     ip2 = self.World.Map.Rules.Actors[actor].TraitInfo<BuildingInfo>();
-                    validCells = cells.Where(c => self.World.CanPlaceBuilding(actor, ip2, c, null));
+                    validCells = cells.Where(c => self.World.CanPlaceBuilding(c, self.World.Map.Rules.Actors[actor], ip2 , null));
                 }
 
                 if (validCells != null && !validCells.Any())

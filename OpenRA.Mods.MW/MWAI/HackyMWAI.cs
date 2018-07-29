@@ -374,6 +374,9 @@ namespace OpenRA.Mods.MW.MWAI
 		BitArray resourceTypeIndices;
 		BitArray oreResourceTypeIndices;
 
+		//AIHarvesterManager harvManager;
+		//AISupportPowerManager supportPowerManager;
+
 		List<BaseBuilder> builders = new List<BaseBuilder>();
 
 		List<Actor> unitsHangingAroundTheBase = new List<Actor>();
@@ -646,7 +649,8 @@ namespace OpenRA.Mods.MW.MWAI
 		CPos defenseCenter;
 		public CPos? ChooseBuildLocation(string actorType, bool distanceToBaseIsImportant, BuildingType type)
 		{
-			var bi = Map.Rules.Actors[actorType].TraitInfoOrDefault<BuildingInfo>();
+			var ai = Map.Rules.Actors[actorType];
+			var bi = ai.TraitInfoOrDefault<BuildingInfo>();
 			if (bi == null)
 				return null;
 
@@ -663,10 +667,10 @@ namespace OpenRA.Mods.MW.MWAI
 
 				foreach (var cell in cells)
 				{
-					if (!World.CanPlaceBuilding(actorType, bi, cell, null))
+					if (!World.CanPlaceBuilding(cell, ai, bi, null))
 						continue;
 
-					if (distanceToBaseIsImportant && !bi.IsCloseEnoughToBase(World, Player, actorType, cell))
+					if (distanceToBaseIsImportant && !bi.IsCloseEnoughToBase(World, Player, ai, cell))
 						continue;
 
 					return cell;
@@ -850,8 +854,6 @@ namespace OpenRA.Mods.MW.MWAI
 			if (--assignRolesTicks <= 0)
 			{
 				assignRolesTicks = Info.AssignRolesInterval;
-				if (resLayer != null && !resLayer.IsResourceLayerEmpty)
-					GiveOrdersToIdleHarvesters();
 				FindNewUnits(self);
 				InitializeBase(self, true);
 			}
@@ -968,55 +970,6 @@ namespace OpenRA.Mods.MW.MWAI
 			return targets.MinByOrDefault(target => (target.Actor.CenterPosition - capturer.CenterPosition).LengthSquared);
 		}
 
-		CPos FindNextResource(Actor actor, Harvester harv)
-		{
-			var mobileInfo = actor.Info.TraitInfo<MobileInfo>();
-			var passable = (uint)mobileInfo.GetMovementClass(World.Map.Rules.TileSet);
-
-			Func<CPos, bool> isValidResource = cell =>
-				domainIndex.IsPassable(actor.Location, cell, mobileInfo, passable) &&
-				harv.CanHarvestCell(actor, cell) &&
-				claimLayer.CanClaimCell(actor, cell);
-
-			var path = pathfinder.FindPath(
-				PathSearch.Search(World, mobileInfo, actor, true, isValidResource)
-					.WithCustomCost(loc => World.FindActorsInCircle(World.Map.CenterOfCell(loc), Info.HarvesterEnemyAvoidanceRadius)
-						.Where(u => !u.IsDead && actor.Owner.Stances[u.Owner] == Stance.Enemy)
-						.Sum(u => Math.Max(WDist.Zero.Length, Info.HarvesterEnemyAvoidanceRadius.Length - (World.Map.CenterOfCell(loc) - u.CenterPosition).Length)))
-					.FromPoint(actor.Location));
-
-			if (path.Count == 0)
-				return CPos.Zero;
-
-			return path[0];
-		}
-
-		void GiveOrdersToIdleHarvesters()
-		{
-			// Find idle harvesters and give them orders:
-			foreach (var harvester in activeUnits)
-			{
-				var harv = harvester.TraitOrDefault<Harvester>();
-				if (harv == null)
-					continue;
-
-				if (!harv.IsEmpty)
-					continue;
-
-				if (!harvester.IsIdle)
-				{
-					var act = harvester.CurrentActivity;
-					if (!harv.LastSearchFailed || act.NextActivity == null || act.NextActivity.GetType() != typeof(FindResources))
-						continue;
-				}
-
-				// Tell the idle harvester to quit slacking:
-				var newSafeResourcePatch = FindNextResource(harvester, harv);
-				BotDebug("AI: Harvester {0} is idle. Ordering to {1} in search for new resources.".F(harvester, newSafeResourcePatch));
-				QueueOrder(new Order("Harvest", harvester, Target.FromCell(World, newSafeResourcePatch), false));
-			}
-		}
-
 		void FindNewUnits(Actor self)
 		{
 			var newUnits = self.World.ActorsHavingTrait<IPositionable>()
@@ -1025,12 +978,9 @@ namespace OpenRA.Mods.MW.MWAI
 
 			foreach (var a in newUnits)
 			{
-				if (a.Info.HasTraitInfo<HarvesterInfo>())
-					QueueOrder(new Order("Harvest", a, false));
-				else
-					unitsHangingAroundTheBase.Add(a);
+                unitsHangingAroundTheBase.Add(a);
 
-				if (a.Info.HasTraitInfo<AircraftInfo>() && a.Info.HasTraitInfo<AttackBaseInfo>())
+                if (a.Info.HasTraitInfo<AircraftInfo>() && a.Info.HasTraitInfo<AttackBaseInfo>())
 				{
 					var air = GetSquadOfType(SquadType.Air);
 					if (air == null)
@@ -1120,12 +1070,12 @@ namespace OpenRA.Mods.MW.MWAI
 			}
 		}
 
-		bool IsRallyPointValid(CPos x, BuildingInfo info)
-		{
-			return info != null && World.IsCellBuildable(x, info);
-		}
+        bool IsRallyPointValid(CPos x, BuildingInfo info)
+        {
+            return info != null && World.IsCellBuildable(x, null, info);
+        }
 
-		void SetRallyPointsForNewProductionBuildings(Actor self)
+        void SetRallyPointsForNewProductionBuildings(Actor self)
 		{
 			foreach (var rp in self.World.ActorsWithTrait<RallyPoint>())
 			{
