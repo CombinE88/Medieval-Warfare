@@ -15,7 +15,6 @@ V20:
 		RequireTilesets: DESERT
 	Tooltip:
 		Name: Sala's House
-
 V20.Husk:
 	Inherits: ^CivBuildingHusk
 	Building:
@@ -25,7 +24,6 @@ V20.Husk:
 		RequireTilesets: DESERT
 	Tooltip:
 		Name: Sala's House (Destroyed)
-
 V21:
 	Inherits: ^CivBuilding
 	HitShape:
@@ -48,7 +46,6 @@ V21:
 		RequireTilesets: DESERT
 	Tooltip:
 		Name: Abdul's House
-
 V21.Husk:
 	Inherits: ^CivBuildingHusk
 	Building:
@@ -58,7 +55,6 @@ V21.Husk:
 		RequireTilesets: DESERT
 	Tooltip:
 		Name: Abdul's House (Destroyed)
-
 V22:
 	Inherits: ^CivBuilding
 	Inherits@shape: ^2x1Shape
@@ -71,7 +67,6 @@ V22:
 		RequireTilesets: DESERT
 	Tooltip:
 		Name: Pablo's Wicked Pub
-
 V22.Husk:
 	Inherits: ^CivBuildingHusk
 	Building:
@@ -81,7 +76,6 @@ V22.Husk:
 		RequireTilesets: DESERT
 	Tooltip:
 		Name: Pablo's Wicked Pub (Destroyed)
-
 V23:
 	Inherits: ^CivBuilding
 	SpawnActorOnDeath:
@@ -90,14 +84,12 @@ V23:
 		RequireTilesets: DESERT
 	Tooltip:
 		Name: Village Well
-
 V23.Husk:
 	Inherits: ^CivBuildingHusk
 	EditorTilesetFilter:
 		RequireTilesets: DESERT
 	Tooltip:
 		Name: Village Well (Destroyed)
-
 V24:
 	Inherits: ^CivBuilding
 	HitShape:
@@ -115,7 +107,6 @@ V24:
 		RequireTilesets: DESERT
 	Tooltip:
 		Name: Camel Trader
-
 V24.Husk:
 	Inherits: ^CivBuildingHusk
 	Building:
@@ -125,7 +116,6 @@ V24.Husk:
 		RequireTilesets: DESERT
 	Tooltip:
 		Name: Camel Trader (Destroyed)
-
 V25:
 	Inherits: ^CivBuilding
 	HitShape:
@@ -143,7 +133,6 @@ V25:
 		Actor: V25.Husk
 	EditorTilesetFilter:
 		RequireTilesets: DESERT
-
 V25.Husk:
 	Inherits: ^CivBuildingHusk
 	Building:
@@ -153,7 +142,6 @@ V25.Husk:
 		Name: Church (Destroyed)
 	EditorTilesetFilter:
 		RequireTilesets: DESERT
-
 V26:
 	Inherits: ^CivBuilding
 	Inherits@shape: ^2x1Shape
@@ -166,7 +154,6 @@ V26:
 		RequireTilesets: DESERT
 	Tooltip:
 		Name: Ali's House
-
 V26.Husk:
 	Inherits: ^CivBuildingHusk
 	Building:
@@ -176,7 +163,6 @@ V26.Husk:
 		RequireTilesets: DESERT
 	Tooltip:
 		Name: Ali's House (Destroyed)
-
 V27:
 	Inherits: ^CivBuilding
 	SpawnActorOnDeath:
@@ -185,14 +171,12 @@ V27:
 		RequireTilesets: DESERT
 	Tooltip:
 		Name: Trader Ted's
-
 V27.Husk:
 	Inherits: ^CivBuildingHusk
 	EditorTilesetFilter:
 		RequireTilesets: DESERT
 	Tooltip:
 		Name: Trader Ted's (Destroyed)
-
 V28:
 	Inherits: ^CivBuilding
 	SpawnActorOnDeath:
@@ -201,14 +185,12 @@ V28:
 		RequireTilesets: DESERT
 	Tooltip:
 		Name: Menelik's House
-
 V28.Husk:
 	Inherits: ^CivBuildingHusk
 	EditorTilesetFilter:
 		RequireTilesets: DESERT
 	Tooltip:
 		Name: Menelik's House (Destroyed)
-
 V29:
 	Inherits: ^CivBuilding
 	SpawnActorOnDeath:
@@ -217,14 +199,12 @@ V29:
 		RequireTilesets: DESERT
 	Tooltip:
 		Name: Prestor John's House
-
 V29.Husk:
 	Inherits: ^CivBuildingHusk
 	EditorTilesetFilter:
 		RequireTilesets: DESERT
 	Tooltip:
 		Name: Prestor John's House (Destroyed)
-
 V30:
 	Inherits: ^CivBuilding
 	Inherits@shape: ^2x1Shape
@@ -237,7 +217,6 @@ V30:
 		RequireTilesets: DESERT
 	Tooltip:
 		Name: Village Well
-
 V30.Husk:
 	Inherits: ^CivBuildingHusk
 	Building:
@@ -247,7 +226,6 @@ V30.Husk:
 		RequireTilesets: DESERT
 	Tooltip:
 		Name: Village Well (Destroyed)
-
 V31:
 	Inherits: ^CivBuilding
 	Inherits@shape: ^2x1Shape
@@ -260,7 +238,6 @@ V31:
 		RequireTilesets: DESERT
 	Tooltip:
 		Name: Witch Doctor's Hut
-
 V31.Husk:
 	Inherits: ^CivBuildingHusk
 	Building:
@@ -270,7 +247,6 @@ V31.Husk:
 		RequireTilesets: DESERT
 	Tooltip:
 		Name: Witch Doctor's Hut (Destroyed)
-
 V32:
 	Inherits: ^CivBuilding
 	Inherits@shape: ^2x1Shape
@@ -283,7 +259,6 @@ V32:
 		RequireTilesets: DESERT
 	Tooltip:
 		Name: Rikitikitembo's Hut
-
 V32.Husk:
 	Inherits: ^CivBuildingHusk
 	Building:
@@ -293,7 +268,6 @@ V32.Husk:
 		RequireTilesets: DESERT
 	Tooltip:
 		Name: Rikitikitembo's Hut (Destroyed)
-
 V33:
 	Inherits: ^CivBuilding
 	Inherits@shape: ^2x1Shape
@@ -306,7 +280,6 @@ V33:
 		RequireTilesets: DESERT
 	Tooltip:
 		Name: Roarke's Hut
-
 V33.Husk:
 	Inherits: ^CivBuildingHusk
 	Building:
@@ -316,7 +289,6 @@ V33.Husk:
 		RequireTilesets: DESERT
 	Tooltip:
 		Name: Roarke's Hut (Destroyed)
-
 V34:
 	Inherits: ^CivBuilding
 	SpawnActorOnDeath:
@@ -325,14 +297,12 @@ V34:
 		RequireTilesets: DESERT
 	Tooltip:
 		Name: Mubasa's Hut
-
 V34.Husk:
 	Inherits: ^CivBuildingHusk
 	EditorTilesetFilter:
 		RequireTilesets: DESERT
 	Tooltip:
 		Name: Mubasa's Hut (Destroyed)
-
 V35:
 	Inherits: ^CivBuilding
 	SpawnActorOnDeath:
@@ -341,14 +311,12 @@ V35:
 		RequireTilesets: DESERT
 	Tooltip:
 		Name: Aksum's Hut
-
 V35.Husk:
 	Inherits: ^CivBuildingHusk
 	EditorTilesetFilter:
 		RequireTilesets: DESERT
 	Tooltip:
 		Name: Aksum's Hut (Destroyed)
-
 V36:
 	Inherits: ^CivBuilding
 	SpawnActorOnDeath:
@@ -357,14 +325,12 @@ V36:
 		RequireTilesets: DESERT
 	Tooltip:
 		Name: Mambo's Hut
-
 V36.Husk:
 	Inherits: ^CivBuildingHusk
 	EditorTilesetFilter:
 		RequireTilesets: DESERT
 	Tooltip:
 		Name: Mambo's Hut (Destroyed)
-
 V37:
 	Inherits: ^CivBuilding
 	HitShape:
@@ -382,7 +348,6 @@ V37:
 		RequireTilesets: DESERT
 	Tooltip:
 		Name: The Studio
-
 V37.Husk:
 	Inherits: ^CivBuildingHusk
 	Building:

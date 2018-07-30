@@ -3,7 +3,6 @@ KINGROSS:
 	Inherits@AUTOTARGET: ^AutoTargetAll
 	Inherits@GetsPoisoned: ^GetsPoisoned
 	Inherits@ArcherDemo65: ^ArcherDemo80
-
 	Inherits@Healable: ^Healable
 	Inherits@SnakeStunnable: ^SnakeSlowable
 	-Explodes@Tib:
@@ -84,12 +83,10 @@ KINGROSS:
 		Range: 3c0
 	Targetable@CombatRole:
 		TargetTypes: HeavyCavalry
-
 DDLER:
 	Inherits: ^Cavalry
 	Inherits@GetsPoisoned: ^GetsPoisoned
 	Inherits@ArcherDemo65: ^ArcherDemo80
-
 	Inherits@Healable: ^Healable
 	Inherits@SnakeStunnable: ^SnakeSlowable
 	-Explodes@Tib:
@@ -153,8 +150,6 @@ DDLER:
 		Priority: 9
 	Voiced:
 		VoiceSet: DeathdealerVoice
-	
-
 BURNINGHORSE:
 	Inherits: ^Cavalry
 	-Explodes@Tib:
@@ -201,12 +196,10 @@ BURNINGHORSE:
 	-Targetable:
 	Voiced:
 		VoiceSet: GenericHorseOnly
-
 EMPTYROSS:
 	Inherits: ^Cavalry
 	Inherits@GetsPoisoned: ^GetsPoisoned
 	Inherits@ArcherDemo65: ^ArcherDemo80
-
 	Inherits@SnakeStunnable: ^SnakeSlowable
 	GrantConditionOnDamageState@Slow:
 		Condition: Slowmotion
@@ -254,7 +247,6 @@ EMPTYROSS:
 	ScaredyCat:
 	Voiced:
 		VoiceSet: GenericHorseOnly
-	
 ROSS1:
 	Inherits: ^Cavalry
 	Inherits@AUTOTARGET: ^AutoTargetGround
@@ -262,7 +254,6 @@ ROSS1:
 	Inherits@GainsExperience: ^GainsExperience
 	Inherits@GetsPoisoned: ^GetsPoisoned
 	Inherits@ArcherDemo65: ^ArcherDemo80
-
 	Inherits@Healable: ^Healable
 	Inherits@SnakeStunnable: ^SnakeSlowable
 	GrantConditionOnDamageState@Slow:
@@ -316,7 +307,6 @@ ROSS1:
 	AutoTargetPriority@Counter1:
 		ValidTargets: LightCavalry, RegularCavalry, HeavyCavalry, Support, Defenses
 		Priority: 4
-
 ROSS2:
 	Inherits: ^Cavalry
 	Inherits@AUTOTARGET: ^AutoTargetGround
@@ -324,7 +314,6 @@ ROSS2:
 	Inherits@GainsExperience: ^GainsExperience
 	Inherits@GetsPoisoned: ^GetsPoisoned
 	Inherits@ArcherDemo65: ^ArcherDemo80
-
 	Inherits@Healable: ^Healable
 	Inherits@SnakeStunnable: ^SnakeSlowable
 	GrantConditionOnDamageState@Slow:
@@ -376,8 +365,6 @@ ROSS2:
 	AutoTargetPriority@Counter1:
 		ValidTargets: LightCavalry, RegularCavalry, HeavyCavalry, Support, Defenses
 		Priority: 4
-
-
 ROSS5:
 	Inherits: ^Cavalry
 	Inherits@AUTOTARGET: ^AutoTargetAll
@@ -385,7 +372,6 @@ ROSS5:
 	Inherits@GainsExperience: ^GainsExperience
 	Inherits@GetsPoisoned: ^GetsPoisoned
 	Inherits@ArcherDemo65: ^ArcherDemo80
-
 	Inherits@Healable: ^Healable
 	Inherits@SnakeStunnable: ^SnakeSlowable
 	GrantConditionOnDamageState@Slow:
@@ -439,7 +425,6 @@ ROSS5:
 		Weapon: GunlanceGroundDUMMY 
 		Name: Tertiary
 		LocalOffset: 800,0,300
-       
 	AttackFrontal:
 		Armaments: Primary, Secondary, Tertiary
 	AutoTarget:
@@ -471,7 +456,6 @@ ROSS5:
 		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 	Targetable@CombatRole:
 		TargetTypes: HeavyCavalry
-
 ROSS3:
 	Inherits: ^Cavalry
 	Inherits@AUTOTARGET: ^AutoTargetAll
@@ -479,7 +463,6 @@ ROSS3:
 	Inherits@GainsExperience: ^GainsExperience
 	Inherits@GetsPoisoned: ^GetsPoisoned
 	Inherits@ArcherDemo65: ^ArcherDemo80
-
 	Inherits@Healable: ^Healable
 	Inherits@SnakeStunnable: ^SnakeSlowable
 	GrantConditionOnDamageState@Slow:
@@ -512,9 +495,6 @@ ROSS3:
 	Armament:
 		Weapon: longbownarrow
 		LocalOffset: 0,0,500
-#	Armament@Air:
-#		Weapon: longbownarrowair
-#		LocalOffset: 0,0,500
 	AttackFrontal:
 		FacingTolerance: 10
 	AutoTarget:
@@ -539,8 +519,6 @@ ROSS3:
 	AutoTargetPriority@Counter1:
 		ValidTargets: Light, Heavy, Ranged, Flying, LightCavalry, Support, Spectral, Defenses
 		Priority: 4
-
-
 ROSS4:
 	Inherits: ^Cavalry
 	Inherits@AUTOTARGET: ^AutoTargetAll
@@ -548,7 +526,6 @@ ROSS4:
 	Inherits@GainsExperience: ^GainsExperience
 	Inherits@GetsPoisoned: ^GetsPoisoned
 	Inherits@ArcherDemo65: ^ArcherDemo80
-
 	Inherits@Healable: ^Healable
 	Inherits@SnakeStunnable: ^SnakeSlowable
 	GrantConditionOnDamageState@Slow:
@@ -611,15 +588,12 @@ ROSS4:
 	AutoTargetPriority@Counter1:
 		ValidTargets: HeavyCavalry, RegularCavalry, LightCavalry, Flying, Support, Defenses
 		Priority: 4
-   
-
 ROSS4B:
 	Inherits: ^Cavalry
 	Inherits@AUTOTARGET: ^AutoTargetGround
 	Inherits@GainsExperience: ^GainsExperience
 	Inherits@GetsPoisoned: ^GetsPoisoned
 	Inherits@ArcherDemo65: ^ArcherDemo80
-
 	Inherits@Healable: ^Healable
 	Inherits@SnakeStunnable: ^SnakeSlowable
 	GrantConditionOnDamageState@Slow:
@@ -672,15 +646,12 @@ ROSS4B:
 	AutoTargetPriority@Counter1:
 		ValidTargets: Light, Heavy, LightCavalry, Support, Ranged
 		Priority: 4
-	
-		
 ROSS4C:
 	Inherits: ^Cavalry
 	Inherits@AUTOTARGET: ^AutoTargetGround
 	Inherits@GainsExperience: ^GainsExperience
 	Inherits@GetsPoisoned: ^GetsPoisoned
 	Inherits@ArcherDemo65: ^ArcherDemo80
-
 	Inherits@Healable: ^Healable
 	Inherits@SnakeStunnable: ^SnakeSlowable
 	GrantConditionOnDamageState@Slow:
@@ -733,4 +704,3 @@ ROSS4C:
 	AutoTargetPriority@Counter1:
 		ValidTargets: Light, Heavy, LightCavalry, Support, Ranged
 		Priority: 4
-		

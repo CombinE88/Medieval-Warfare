@@ -6,9 +6,6 @@ FACTNEW:
 		RepairStep: 3000
 		PlayerExperience: 15
 	WithMakeAnimation:
-#	GrantConditionOnDamageState@damaged:
-#		ValidDamageStates:
-#		Condition: damaged
 	ExternalCondition@never:
 		Condition: never
 	GrantConditionOnPrerequisite@4:
@@ -259,8 +256,6 @@ FACTNEW:
 		Range: 20c0
 		ValidStances: Ally
 		Condition: Wander
-
-
 FACTNEW.GDI:
 	Inherits: FACTNEW
 	RenderSprites:
@@ -278,7 +273,6 @@ FACTNEW.GDI:
 		Weapons: LargeWood1, LargeStone1, DebrUtility1, DebrUtility2, DebrUtility3
 		Pieces: 1, 2
 		Range: 1c0, 5c0
-
 FACTNEW.NOD:
 	Inherits: FACTNEW
 	RenderSprites:
@@ -296,7 +290,6 @@ FACTNEW.NOD:
 		Weapons: LargeWood1, LargeStone1, DebrUtility1, DebrUtility2, DebrUtility3
 		Pieces: 1, 2
 		Range: 1c0, 5c0
-		
 FACTNEW.SUL:
 	Inherits: FACTNEW
 	RenderSprites:
@@ -314,8 +307,6 @@ FACTNEW.SUL:
 		Weapons: LargeWood1, LargeStone1, DebrUtility1, DebrUtility2, DebrUtility3
 		Pieces: 1, 2
 		Range: 1c0, 5c0
-		
-		
 MINIFACT:
 	Inherits: ^MWBaseBuilding
 	Inherits@Hitshape: ^3x2Shape
@@ -523,13 +514,11 @@ MINIFACT:
 		Range: 20c0
 		ValidStances: Ally
 		Condition: Wander
-		
 PROC:
 	Interactable:
 	AlwaysVisible:
 	Tooltip:
 		Name: Ore Refinery or Farm
-			
 PROCNEW:
 	Inherits: ^MWBaseBuilding
 	HitShape:
@@ -586,7 +575,6 @@ PROCNEW:
 		Weapons: LargeWood1, LargeStone1, DebrUtility1, DebrUtility2, DebrUtility3
 		Pieces: 1, 2
 		Range: 1c0, 5c0
-
 SILONEW:
 	Inherits: ^MWBaseBuilding
 	Inherits@Hitshape: ^2x2Shape
@@ -667,7 +655,6 @@ SILOTWO:
 		VisualBounds: 50,50,0,-4 
 	Selectable:
 		Bounds: 50,50,0,-4 
- 
 HOSP: 
 	Inherits: ^TechBuilding
 	Inherits@Hitshape: ^2x2Shape
@@ -730,8 +717,6 @@ HOSP:
 	Exit@5:
 		SpawnOffset: -213,-426,0
 		ExitCell: 1,-1
-		
-
 HOSP.Husk:
 	Inherits:^TechBuilding
 	Inherits@Hitshape: ^2x2Shape
@@ -754,8 +739,6 @@ HOSP.Husk:
 		HP: 125000
 	Tooltip:
 		Name: Hospital (Destroyed)
-		
-
 V19:
 	Inherits: ^TechBuilding
 	Inherits@Hitshape: ^1x1Shape
@@ -773,7 +756,6 @@ V19:
 		InternalOwner: Neutral
 	Targetable@Disguise:
 		TargetTypes: Disguise
-
 V19.Husk:
 	Inherits:^TechBuilding
 	Inherits@Hitshape: ^1x1Shape
@@ -796,7 +778,6 @@ V19.Husk:
 		Name: Gold Deposit (worn out)
 	Health:
 		HP: 50000
-		
 MISS:
 	Inherits: ^TechBuilding	
 	Inherits@Hitshape: ^3x2Shape
@@ -822,7 +803,6 @@ MISS:
 		Weapons: LargeWood1, LargeWood1, LargeStone1, LargeStone1
 		Pieces: 1, 2
 		Range: 1c0, 5c0
-		
 TECH1:
 	Inherits: ^TechBuilding	
 	AutoTarget:
@@ -873,7 +853,6 @@ TECH1:
 	AutoTarget:
 	RenderRangeCircle:
 	WithBuildingBib:
-		
 TECH1.Husk:
 	Inherits:^TechBuilding
 	Inherits@Hitshape: ^3x2Shape
@@ -901,63 +880,54 @@ TECH1.Husk:
 	Tooltip:
 		Name: Mortar Station (Destroyed)
 	WithBuildingBib:
-		
 ANYARMORY:
 	AlwaysVisible:
 	Interactable:
 	Tooltip:
 		Name: Armory or Tower of Progress
 		Description: Armory or Tower of Progress
-		
 ANYREFINERY:
 	AlwaysVisible:
 	Interactable:
 	Tooltip:
 		Name: Ore refinery
 		Description: Ore refinery 
-		
 BARRACKS:
 	AlwaysVisible:
 	Interactable:
 	Tooltip:
 		Name: Infantry Production
 		Description: Infantry Production
-		
 ANYWORKSHOP:
 	AlwaysVisible:
 	Interactable:
 	Tooltip:
 		Name: Workshop
 		Description: Siege Production
-
 VEHICLEPRODUCTION:
 	AlwaysVisible:
 	Interactable:
 	Tooltip:
 		Name: Stables or School
 		Description: Stables or School
-		
 ANYPOWER:
 	AlwaysVisible:
 	Interactable:
 	Tooltip:
 		Name: Living Quaters
 		Description: Living Quarters
-
 ANYHQ:
 	AlwaysVisible:
 	Interactable:
 	Tooltip:
 		Name: Inventor, Armory, Castle or Palace
 		Description: Inventor, Armory, Castle or Palace
-		
 ANYCASTLE:
 	AlwaysVisible:
 	Interactable:
 	Tooltip:
 		Name: Castle
 		Description: Castle
-		
 SCAFFOLD:
 	AlwaysVisible:
 	Interactable:
@@ -965,7 +935,6 @@ SCAFFOLD:
 		Name: saffold
 		Description: scaffold
 	ProvidesPrerequisite@buildingname:
-
 DECOR1:
  	Inherits: ^CivBuilding
 	Building:
@@ -982,7 +951,6 @@ DECOR1:
 		TargetTypes: Disguise
 	EditorTilesetFilter:
 		Categories: Props
-		
 DECOR2:
  	Inherits: ^CivBuilding
 	Building:
@@ -999,7 +967,6 @@ DECOR2:
 		TargetTypes: Disguise
 	EditorTilesetFilter:
 		Categories: Props
-		
 DECOR3:
  	Inherits: ^CivBuilding
 	Building:
@@ -1016,7 +983,6 @@ DECOR3:
 		TargetTypes: Disguise
 	EditorTilesetFilter:
 		Categories: Props
-		
 DECOR4:
  	Inherits: ^CivBuilding
 	Building:
@@ -1033,7 +999,6 @@ DECOR4:
 		TargetTypes: Disguise
 	EditorTilesetFilter:
 		Categories: Props
-		
 DECOR5:
  	Inherits: ^CivBuilding
 	Building:
@@ -1050,7 +1015,6 @@ DECOR5:
 		TargetTypes: Disguise
 	EditorTilesetFilter:
 		Categories: Props
-		
 DECOR6:
  	Inherits: ^CivBuilding
 	Building:
@@ -1067,7 +1031,6 @@ DECOR6:
 		TargetTypes: Disguise
 	EditorTilesetFilter:
 		Categories: Props
-		
 DECOR7:
  	Inherits: ^CivBuilding
 	Building:
@@ -1084,7 +1047,6 @@ DECOR7:
 		TargetTypes: Disguise
 	EditorTilesetFilter:
 		Categories: Props
-		
 DECOR8:
  	Inherits: ^CivBuilding
 	Building:
@@ -1101,7 +1063,6 @@ DECOR8:
 		TargetTypes: Disguise
 	EditorTilesetFilter:
 		Categories: Props
-		
 DECOR9:
  	Inherits: ^CivBuilding
 	Building:
@@ -1119,7 +1080,6 @@ DECOR9:
 		TargetTypes: Disguise
 	EditorTilesetFilter:
 		Categories: Props
-		
 LODGE:
 	Inherits: ^MWBaseBuilding
 	Inherits@Hitshape: ^2x1Shape
@@ -1179,4 +1139,3 @@ LODGE:
 		PipColor: Yellow
 		PipCount: 5
 		Capacity: 1000
-	

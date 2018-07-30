@@ -1,5 +1,12 @@
-Player:
+^BasePlayer:
 	AlwaysVisible:
+	Shroud:
+
+EditorPlayer:
+	Inherits: ^BasePlayer
+
+Player:
+	Inherits: ^BasePlayer
 	PlaceBuilding:
 	TechTree:
 	SupportPowerManager:
@@ -15,9 +22,6 @@ Player:
 	BaseAttackNotifier:
 	AcolyteAttackNotifier:
 	Shroud:
-	PlayerStatistics:
-	FrozenActorLayer:
-	PlaceBeacon:
 	LobbyPrerequisiteCheckbox@GLOBALFACTUNDEPLOY:
 		ID: factundeploy
 		Label: Redeployable Supply wagons
@@ -25,6 +29,9 @@ Player:
 		Enabled: False
 		DisplayOrder: 6
 		Prerequisites: global-factundeploy
+	PlayerStatistics:
+	FrozenActorLayer:
+	PlaceBeacon:
 	PlayerCivilization:
 		Delay: 8
 		AlivePeasants: 10
@@ -33,22 +40,6 @@ Player:
 			nod: 50
 		TownHalls: townhall, sulhall
 		Peasants: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
-	ProvidesTechPrerequisite@all:
-		Name: No Extra Worker
-		Prerequisites:
-		Id: unrestricted
-	ProvidesTechPrerequisite@nosuper:
-		Name: 2 Extra Worker
-		Prerequisites: 2extra
-		Id: nopowers
-	ProvidesTechPrerequisite@medium:
-		Name: 3 Extra Worker
-		Prerequisites: 3extra
-		Id: medium
-	ProvidesTechPrerequisite@low:
-		Name: 5 Extra Worker
-		Prerequisites: 5extra
-		Id: low
 	GrantConditionOnPrerequisiteManager:
 	ResourceStorageWarning:
 	PlayerExperience:

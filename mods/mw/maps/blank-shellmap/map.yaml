@@ -24,7 +24,7 @@ Players:
 		Faction: Random
 
 Actors:
-    Actor01: menu
+	Actor01: menu
 		Owner: Neutral
 		Location: 13,8
 

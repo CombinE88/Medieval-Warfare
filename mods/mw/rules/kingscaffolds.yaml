@@ -64,7 +64,6 @@ NUKENEW.scaff:
 	WithIdleOverlay@base6:
 		Sequence: make6
 		RequiresCondition: Construct >= 12
-
 NUKXL.scaff:
 	Inherits: ^3x2SITE
 	Inherits@Hitshape: ^3x2Shape
@@ -132,7 +131,6 @@ NUKXL.scaff:
 	WithIdleOverlay@base6:
 		Sequence: make6
 		RequiresCondition: Construct >= 30
-
 ZEROPROC.scaff:
 	Inherits: ^2x3SITE
 	Inherits@Hitshape: ^2x2Shape
@@ -207,7 +205,6 @@ ZEROPROC.scaff:
 		DockAngle: 1
 		DockOffset: 1,1
 		TickRate: 1
-
 HQNEWGDI.scaff:
 	Inherits: ^2x2SITE
 	Inherits@Hitshape: ^2x2Shape
@@ -277,7 +274,6 @@ HQNEWGDI.scaff:
 	WithIdleOverlay@base7:
 		Sequence: make7
 		RequiresCondition: Construct >= 32
-
 ARMORYGDI.scaff:
 	Inherits: ^2x2SITE
 	Inherits@Hitshape: ^2x2Shape
@@ -292,13 +288,6 @@ ARMORYGDI.scaff:
 		Cost: 1750
 	Tooltip:
 		Name: Construction Site (Armory)
-#	Buildable:
-#		IconPalette: raicon
-#		BuildPaletteOrder: 20
-#		Prerequisites: anyhq
-#		Queue: MTech.GDI
-#		Description: Unlocks Support Powers.\nHeals Cavalry and Infantry.\n\n\n\n
-#		BuildDuration: 87
 	Health:
 		HP: 22500
 	RevealsShroud:
@@ -341,7 +330,6 @@ ARMORYGDI.scaff:
 	WithIdleOverlay@base5:
 		Sequence: make5
 		RequiresCondition: Construct >= 80
-
 NUK2NEW.scaff:
 	Inherits: ^2x2SITE
 	Inherits@Hitshape: ^2x2Shape
@@ -402,7 +390,6 @@ NUK2NEW.scaff:
 	WithIdleOverlay@base4:
 		Sequence: make4
 		RequiresCondition: Construct >= 20
-
 BARRNEW.scaff:
 	Inherits: ^2x2SITE
 	Inherits@Hitshape: ^2x2Shape
@@ -466,7 +453,6 @@ BARRNEW.scaff:
 	WithIdleOverlay@base5:
 		Sequence: make5
 		RequiresCondition: Construct >= 20
-
 STALL.scaff:
 	Inherits: ^3x2SITE
 	Inherits@Hitshape: ^3x2Shape
@@ -533,7 +519,6 @@ STALL.scaff:
 	WithIdleOverlay@base6:
 		Sequence: make6
 		RequiresCondition: Construct >= 55
-
 CASTLE2.scaff:
 	Inherits: ^3x3SITE
 	Inherits@Hitshape: ^3x2Shape
@@ -604,7 +589,6 @@ CASTLE2.scaff:
 	WithIdleOverlay@base6:
 		Sequence: make6
 		RequiresCondition: Construct >= 55
-
 WORKSHOPGDI.scaff:
 	Inherits: ^3x2SITE
 	Inherits@Hitshape: ^3x2Shape
@@ -669,7 +653,6 @@ WORKSHOPGDI.scaff:
 		Type: Workshop
 		Range: 4c0
 		Color: b50909
-
 BATO.scaff:
 	Inherits: ^1x1SITE
 	Inherits@Hitshape: ^1x1Shape

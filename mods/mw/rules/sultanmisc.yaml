@@ -1,6 +1,4 @@
-
 # Siegeweapons
-
 SULB0:
 	Inherits: ^Siege
 	Inherits@AUTOTARGET: ^AutoTargetAll
@@ -108,7 +106,6 @@ SULB0:
 	AutoTargetPriority@Counter1:
 		ValidTargets: Light, Ranged, LightCavalry, Support, Flying
 		Priority: 4
-		
 SULB1:
 	Inherits: ^Siege
 	Inherits@AUTOTARGET: ^AutoTargetGround
@@ -167,8 +164,6 @@ SULB1:
 		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 	Targetable@CombatRole:
 		TargetTypes: Support
-
-		
 SULB1.Husk:
 	Inherits: ^MedievalHusk
 	Tooltip:
@@ -183,7 +178,6 @@ SULB1.Husk:
 	WithFacingSpriteBody:
 		StartSequence: start
 		Sequence: idle
-		
 SULB2:
 	Inherits: ^Siege
 	Inherits@AUTOTARGET: ^AutoTargetGround
@@ -191,7 +185,6 @@ SULB2:
 	Inherits@GainsExperience: ^GainsExperience
 	Inherits@GetsPoisoned: ^GetsPoisoned
 	Inherits@ArcherDemo65: ^ArcherDemo80
-
 	Inherits@Healable: ^Healable
 	Inherits@SnakeStunnable: ^SnakeSlowable
 	Valued:
@@ -258,7 +251,6 @@ SULB2:
 	AutoTargetPriority@Counter1:
 		ValidTargets: Light, Heavy, Ranged, Support, LightCavalry, Defenses
 		Priority: 4
-		
 SULB2.Husk:
 	Inherits: ^MedievalHusk
 	Tooltip:
@@ -273,9 +265,7 @@ SULB2.Husk:
 	WithFacingSpriteBody:
 		StartSequence: start
 		Sequence: idle
-
 #Aircraft
-
 PLACEHOLDERBOLTS:
 	Inherits: ^Plane
 	Interactable:
@@ -311,9 +301,6 @@ PLACEHOLDERBOLTS:
 		Name: bombs
 		Weapon: SpearBarrage
 		LocalOffset: 0,0,-43, 0,100,-43, 0,100,-43
-
-
-		
 SULM3:
 	Inherits: ^Helicopter
 	Inherits@GainsExperience: ^GainsExperience
@@ -369,8 +356,6 @@ SULM3:
 	AutoTargetPriority@Counter1:
 		ValidTargets: Light, Heavy, Ranged, Support, LightCavalry, Defenses
 		Priority: 4
-
-		
 SULM3.Husk:
 	Inherits: ^HelicopterHusk
 	ConditionManager:
@@ -391,7 +376,6 @@ SULM3.Husk:
 		Spins: True
 		Moves: False
 		Explosion: GroundHit
-	
 SULM3.ManHusk:
 	Inherits@1: ^SpriteActor
 	Interactable:
@@ -429,7 +413,6 @@ SULM3.ManHusk:
 	Explodes:
 		Weapon: GroundHit
 		EmptyWeapon: GroundHit
-		
 SULB3:
 	Inherits: ^Helicopter
 	Inherits@GainsExperience: ^GainsExperience
@@ -507,7 +490,6 @@ SULB3:
 		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 	Targetable@CombatRole:
 		TargetTypes: Flying
-		
 SULB3.Husk:
 	Inherits: ^HelicopterHusk
 	ConditionManager:
@@ -528,7 +510,6 @@ SULB3.Husk:
 		Spins: True
 		Moves: False
 		Explosion: GroundHit
-		
 SULTURNXL:
 	Inherits@1: ^ExistsInWorld
 	Inherits@4: ^SpriteActor

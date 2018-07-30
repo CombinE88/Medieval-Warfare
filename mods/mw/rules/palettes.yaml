@@ -168,7 +168,6 @@
 		Name: menu
 		Filename: flag.pal
 		AllowModifiers: False
-		
 	PaletteFromFile@UNDEAD:
 		Name: undead
 		Filename: Medieval_Undead.pal
@@ -234,4 +233,3 @@
 		Name: alphagreyalpha
 		BasePalette: fire
 		Alpha: 0.5
-        

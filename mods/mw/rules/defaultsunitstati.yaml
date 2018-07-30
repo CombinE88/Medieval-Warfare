@@ -18,14 +18,12 @@
 		RequiresCondition: DDler || RottenKadaver
 		ZOffset: 256
 		ValidStances: Ally, Enemy, Neutral
-
 ^CanTurnIntoScelett:
 	SpawnActorOnDeath@SCELET:
 		DeathType: SkeletonDeath
 		Probability: 33
 		Actor: SULM1SKELET
 		OwnerType: Killer
-		
 ^ArcherDemo65:
 	ExternalCondition@PRONE:
 		Condition: archerprone
@@ -40,7 +38,6 @@
 		RequiresCondition: archerprone
 		ZOffset: 256
 		ValidStances: Ally, Enemy, Neutral
-		
 ^ArcherDemo80:
 	ExternalCondition@PRONE:
 		Condition: archerprone
@@ -55,7 +52,6 @@
 		RequiresCondition: archerprone
 		ZOffset: 256
 		ValidStances: Ally, Enemy, Neutral
-		
 ^Healable:
 	ExternalCondition@BARRACKS:
 		Condition: hospitalhealbarr
@@ -72,7 +68,6 @@
 		Sequence: pip-heal
 		ReferencePoint: Bottom, Right
 		RequiresCondition: hospitalheal || hospitalhealbarr
-		
 ^RoyalMotivatable: # obsolete
 	ExternalCondition@ROYAL:
 		Condition: KingIsNear
@@ -90,7 +85,6 @@
 	ReloadDelayMultiplier:
 		RequiresCondition: KingIsNear
 		Modifier: 120
-		
 ^SnakeStunnable:
 	ExternalCondition@SNAKES:
 		Condition: snaketrap
@@ -146,7 +140,6 @@
 	RangeMultiplier@SNAKES:
 		Modifier: 10
 		RequiresCondition: snaketrap
-		
 ^SnakeSlowable:
 	ExternalCondition@SNAKES:
 		Condition: snaketrap
@@ -197,8 +190,6 @@
 	SpeedMultiplier@SNAKES:
 		Modifier: 40
 		RequiresCondition: snaketrap
-		
-		
 ^SnakeDamagable:
 	ExternalCondition@SNAKES:
 		Condition: snaketrap
@@ -246,7 +237,6 @@
 		Delay: 25
 		RequiresCondition: snaketrap >= 4
 		DamageTypes: PoisonDeath
-
 ^GrimReanimatable:
 	GrimTarget:
 		Palette: disabled

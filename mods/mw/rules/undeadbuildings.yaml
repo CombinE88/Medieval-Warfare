@@ -17,8 +17,6 @@ ZIGG2UPGRADE:
 		Queue: MResources.ded
 		BuildLimit: 1
 		BuildDuration: 1000
-		
-
 ZIGG3UPGRADE:
 	AlwaysVisible:
 	Interactable:
@@ -38,8 +36,6 @@ ZIGG3UPGRADE:
 		Queue: MResources.ded
 		BuildLimit: 1
 		BuildDuration: 1500
-		
-		
 SEAL1:
 	AlwaysVisible:
 	Interactable:
@@ -57,7 +53,6 @@ SEAL1:
 		Description: Unlocks crypt and seal 2\n\n\n
 		Queue: MResources.ded
 		BuildLimit: 1
-		
 SEAL2:
 	AlwaysVisible:
 	Interactable:
@@ -76,7 +71,6 @@ SEAL2:
 		Description: Unlocks mausoleum and ziggurat level 2\n\n\n
 		Queue: MResources.ded
 		BuildLimit: 1
-		
 SEAL3:
 	AlwaysVisible:
 	Interactable:
@@ -95,7 +89,6 @@ SEAL3:
 		Description: Unlocks Beserker, Vampire and seal 4\n\n\n
 		Queue: MResources.ded
 		BuildLimit: 1
-		
 SEAL4:
 	AlwaysVisible:
 	Interactable:
@@ -114,7 +107,6 @@ SEAL4:
 		Description: Unlocks tomb, Grim Reaper and ziggurat level 2\n\n\n
 		Queue: MResources.ded
 		BuildLimit: 1
-		
 SEAL5:
 	AlwaysVisible:
 	Interactable:
@@ -135,7 +127,6 @@ SEAL5:
 		BuildLimit: 1
 		BuildDuration: 2000
 #Buildings
-
 ZIGGURAT1:
 	Inherits: ^MWUndeadBuilding
 	Inherits@Hitshape: ^2x2Shape
@@ -257,8 +248,6 @@ ZIGGURAT1:
 		ForceFaction: ded
 		IconPalette: raicon
 		Description: Constructs your graveyard
-		
-
 ZIGGURAT2:
 	Inherits: ZIGGURAT1
 	Inherits@Hitshape: ^3x3Shape
@@ -304,7 +293,6 @@ ZIGGURAT2:
 		Maxalive: 6
 		Offset: 128,856,0
 		MoveOffset: 2,3
-		
 ZIGGURAT3:
 	Inherits: ZIGGURAT1
 	-GrantConditionOnPrerequisite@SEALONE:
@@ -369,8 +357,6 @@ ZIGGURAT3:
 		BeaconRemoveAdvance: 0
 		FlightDelay: 10
 	SupportPowerChargeBar:
-	
-
 OBELISK.penta:
 	Inherits: ^Smallpenta
 	RenderSprites:
@@ -378,7 +364,7 @@ OBELISK.penta:
 		Palette: undead
 		PlayerPalette: undeadalpha
 	Valued:
-		Cost: 0 #1300
+		Cost: 0
 	Tooltip:
 		Name: Summoning (Obelisk)
 	Buildable:
@@ -397,7 +383,6 @@ OBELISK.penta:
 		SpawnOffset: 1,1
 		SummoningTime: 75
 		Cost: 1000
-		
 GARG.penta:
 	Inherits: ^Smallpenta
 	RenderSprites:
@@ -405,7 +390,7 @@ GARG.penta:
 		Palette: undead
 		PlayerPalette: undeadalpha
 	Valued:
-		Cost: 0 #500
+		Cost: 0
 	Tooltip:
 		Name: Summoning (GARGOYLE)
 	Buildable:
@@ -424,9 +409,6 @@ GARG.penta:
 		SpawnOffset: 1,1
 		SummoningTime: 55
 		Cost: 500
-		
-	   
-		
 SPPOOL.penta:
 	Inherits: ^Mediumpenta
 	RenderSprites:
@@ -434,7 +416,7 @@ SPPOOL.penta:
 		Palette: undead
 		PlayerPalette: undeadalpha
 	Valued:
-		Cost: 0 #700
+		Cost: 0
 	Tooltip:
 		Name: Summoning (Essence pool)
 	Health:
@@ -444,7 +426,7 @@ SPPOOL.penta:
 	UndeadBuilder:
 		SpawnActor: sppool
 		SpawnOffset: 1,1
-		SummoningTime: 45 #100
+		SummoningTime: 45
 		Cost: 300
 	Buildable:
 		IconPalette: raicon
@@ -460,7 +442,6 @@ SPPOOL.penta:
 	RequiresBuildableArea:
 		AreaTypes: undeadbuilding
 		Adjacent: 8
-		
 CRYPT.penta:
 	Inherits: ^Mediumpenta
 	RenderSprites:
@@ -468,7 +449,7 @@ CRYPT.penta:
 		Palette: undead
 		PlayerPalette: undeadalpha
 	Valued:
-		Cost: 0 # 1500
+		Cost: 0
 	Tooltip:
 		Name: Summoning (Crypt)
 	Buildable:
@@ -489,9 +470,8 @@ CRYPT.penta:
 	UndeadBuilder:
 		SpawnActor: crypt
 		SpawnOffset: 1,1
-		SummoningTime: 75 #150
+		SummoningTime: 75
 		Cost: 850
-		
 MAUSO.penta:
 	Inherits: ^Mediumpenta
 	RenderSprites:
@@ -499,7 +479,7 @@ MAUSO.penta:
 		Palette: undead
 		PlayerPalette: undeadalpha
 	Valued:
-		Cost: 0 # 2000
+		Cost: 0
 	Tooltip:
 		Name: Summoning (Tomb)
 	Buildable:
@@ -516,9 +496,8 @@ MAUSO.penta:
 	UndeadBuilder:
 		SpawnActor: mauso
 		SpawnOffset: 1,1
-		SummoningTime: 135 #200
+		SummoningTime: 135
 		Cost: 1500
-		
 LIBRA.penta:
 	Inherits: ^Mediumpenta
 	RenderSprites:
@@ -526,7 +505,7 @@ LIBRA.penta:
 		Palette: undead
 		PlayerPalette: undeadalpha
 	Valued:
-		Cost: 0 #1500
+		Cost: 0
 	Tooltip:
 		Name: Summoning (Library)
 	Buildable:
@@ -543,9 +522,8 @@ LIBRA.penta:
 	UndeadBuilder:
 		SpawnActor: LIBRA
 		SpawnOffset: 1,1
-		SummoningTime: 75 # 250
+		SummoningTime: 75
 		Cost: 1000
-		
 TOMB.penta:
 	Inherits: ^Largepenta
 	RenderSprites:
@@ -553,7 +531,7 @@ TOMB.penta:
 		Palette: undead
 		PlayerPalette: undeadalpha
 	Valued:
-		Cost: 0 #2000
+		Cost: 0
 	Tooltip:
 		Name: Summoning (Mausoleum)
 	Buildable:
@@ -570,9 +548,8 @@ TOMB.penta:
 	UndeadBuilder:
 		SpawnActor: TOMB
 		SpawnOffset: 1,1
-		SummoningTime: 135 # 300
+		SummoningTime: 135
 		Cost: 1700
-		
 HELLGATE.penta:
 	Inherits: ^Largepenta
 	RenderSprites:
@@ -580,7 +557,7 @@ HELLGATE.penta:
 		Palette: undead
 		PlayerPalette: undeadalpha
 	Valued:
-		Cost: 0 #2000
+		Cost: 0
 	Tooltip:
 		Name: Summoning (Hellgate)
 	Health:
@@ -590,9 +567,8 @@ HELLGATE.penta:
 	UndeadBuilder:
 		SpawnActor: hellgate
 		SpawnOffset: 1,1
-		SummoningTime: 155 # 300
+		SummoningTime: 155
 		Cost: 2000
-        
 GRAFENCE:
 	Inherits: ^Wall
 	RequiresBuildableArea:
@@ -631,10 +607,6 @@ GRAFENCE:
 		Type: gravefence
 	Crushable:
 		CrushClasses: heavywall
-		
-# Buildings Summoned
-
-		
 SPPOOL:
 	Inherits: ^MWUndeadBuilding
 	Inherits@Hitshape: ^2x2Shape
@@ -682,8 +654,6 @@ SPPOOL:
 		Color: FFFFFF80
 		UsePlayerColor: True
 	-GivesBuildableArea:
-		
-  
 CRYPT:
 	Inherits: ^MWUndeadBuilding
 	Inherits@Hitshape: ^2x2Shape
@@ -744,7 +714,6 @@ CRYPT:
 		TicksMax: 500
 		RadiusMin: 2
 		RadiusMax: 3
-		
 MAUSO:
 	Inherits: ^MWUndeadBuilding
 	Inherits@Hitshape: ^2x2Shape
@@ -825,8 +794,6 @@ MAUSO:
 		CircleSequence: circles
 		OrderName: BelowCoffinPowerInfoOrder
 	SupportPowerChargeBar:
-
-		
 LIBRA:
 	Inherits: ^MWUndeadBuilding
 	Inherits@Hitshape: ^2x2Shape
@@ -883,7 +850,6 @@ LIBRA:
 		CircleSequence: circles
 		OrderName: HandsBelowPowerInfoOrder
 	SupportPowerChargeBar:
-		
 TOMB:
 	Inherits: ^MWUndeadBuilding
 	Inherits@Hitshape: ^3x2Shape
@@ -932,7 +898,6 @@ TOMB:
 		ReadyAudio:
 	ProductionBar:
 	ProvidesPrerequisite@buildingname:
-		
 HELLGATE:
 	Inherits: ^MWUndeadBuilding
 	Inherits@Hitshape: ^2x2Shape
@@ -966,7 +931,6 @@ HELLGATE:
 	ShakeOnCreate:
 		Time: 150
 	ProvidesPrerequisite@buildingname:
-		
 GSTONE1:
 	Inherits: ^Gravestone
 	WithSpriteBody:
@@ -991,16 +955,15 @@ GSTONE1:
 	EditorTilesetFilter:
 		ExcludeTilesets: TEMPERATE, SNOW, DESERT, WINTER
 		Categories: 
-# anti error fix
+	#anti error fix
 	ExternalCondition@valida:
 		Condition: valida
-# anti error fix
+	#anti error fix
 	ExternalCondition@validb:
 		Condition: validb
-# anti error fix
+	#anti error fix
 	ExternalCondition@validc:
 		Condition: validc
-		
 GSTONE2:
 	Inherits: ^Gravestone
 	WithSpriteBody:
@@ -1025,16 +988,15 @@ GSTONE2:
 	EditorTilesetFilter:
 		ExcludeTilesets: TEMPERATE, SNOW, DESERT, WINTER
 		Categories: 
-# anti error fix
+	#anti error fix
 	ExternalCondition@valida:
 		Condition: valida
-# anti error fix
+	#anti error fix
 	ExternalCondition@validb:
 		Condition: validb
-# anti error fix
+	#anti error fix
 	ExternalCondition@validc:
 		Condition: validc
-		
 GSTONE3:
 	Inherits: ^Gravestone
 	WithSpriteBody:
@@ -1059,16 +1021,15 @@ GSTONE3:
 	EditorTilesetFilter:
 		ExcludeTilesets: TEMPERATE, SNOW, DESERT, WINTER
 		Categories: 
-# anti error fix
+	#anti error fix
 	ExternalCondition@valida:
 		Condition: valida
-# anti error fix
+	#anti error fix
 	ExternalCondition@validb:
 		Condition: validb
-# anti error fix
+	#anti error fix
 	ExternalCondition@validc:
 		Condition: validc
-		
 COFFIN:
 	Inherits: ^Gravestone
 	WithSpriteBody:
@@ -1093,18 +1054,15 @@ COFFIN:
 	EditorTilesetFilter:
 		ExcludeTilesets: TEMPERATE, SNOW, DESERT, WINTER
 		Categories: 
-# anti error fix
+	#anti error fix
 	ExternalCondition@valida:
 		Condition: valida
-# anti error fix
+	#anti error fix
 	ExternalCondition@validb:
 		Condition: validb
-# anti error fix
+	#anti error fix
 	ExternalCondition@validc:
 		Condition: validc
-		
-#defense
-	
 OBELISK:
 	Inherits: ^MWDefense
 	Inherits@Hitshape: ^1x1Shape

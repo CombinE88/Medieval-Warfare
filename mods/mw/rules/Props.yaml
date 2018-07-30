@@ -6,7 +6,6 @@ PROP1:
 	WithIdleOverlay:
 		Sequence: burnloop
 		Palette: effect
-		
 PROP2:
 	Inherits: ^Props
 	RenderSprites:
@@ -16,37 +15,31 @@ PROP2:
 		Weapons: SmallWood1, SmallWood2, SmallWood3, SmallStone1, SmallStone2
 		Pieces: 0, 2
 		Range: 0c512, 3c0
-		
 PROP3:
 	Inherits: ^Props
 	RenderSprites:
 		Image: prop3
 		Palette: mwcivilian
-		
 PROP4:
 	Inherits: ^Props
 	RenderSprites:
 		Image: prop4
 		Palette: mwcivilian
-		
 PROP5:
 	Inherits: ^Props
 	RenderSprites:
 		Image: prop5
 		Palette: mwcivilian
-		
 PROP6:
 	Inherits: ^Props
 	RenderSprites:
 		Image: prop6
 		Palette: mwcivilian
-		
 PROP7:
 	Inherits: ^Props
 	RenderSprites:
 		Image: prop7
 		Palette: mwcivilian
-		
 SIEGE4.Husk:
 	Inherits: ^MedievalHusk
 	Tooltip:
@@ -61,7 +54,6 @@ SIEGE4.Husk:
 	WithFacingSpriteBody:
 		StartSequence: start
 		Sequence: idle
-		
 SIEGE3.Husk:
 	Inherits: ^MedievalHusk
 	Tooltip:
@@ -76,7 +68,6 @@ SIEGE3.Husk:
 	WithFacingSpriteBody:
 		StartSequence: start
 		Sequence: idle
-		
 SIEGE2.Husk:
 	Inherits: ^MedievalHusk
 	Tooltip:
@@ -91,7 +82,6 @@ SIEGE2.Husk:
 	WithFacingSpriteBody:
 		StartSequence: start
 		Sequence: idle
-		
 SIEGE1.Husk:
 	Inherits: ^MedievalHusk
 	Tooltip:
@@ -106,7 +96,6 @@ SIEGE1.Husk:
 	WithFacingSpriteBody:
 		StartSequence: start
 		Sequence: idle
-	
 MCVNEW2.Husk:
 	Inherits: ^Husk
 	Tooltip:
@@ -118,7 +107,6 @@ MCVNEW2.Husk:
 		PlayerPalette: raplayer
 	Burns:
 		Interval: 3
-		
 ORNI.Husk:
 	Inherits@1: ^SpriteActor
 	Interactable:
@@ -165,7 +153,6 @@ ORNI.Husk:
 	Explodes:
 		Weapon: GroundHit
 		EmptyWeapon: GroundHit
-		
 ORNICRASH.Husk:
 	Inherits: ^MedievalHusk
 	Tooltip:
@@ -187,7 +174,6 @@ ORNICRASH.Husk:
 		MaxThrowRange: 2c512
 		MaxThrowAngle: 360
 		urnSpeed: 35
-		
 WARKITEMAN.Husk:
 	Inherits: ^HelicopterHusk
 	ConditionManager:
@@ -208,7 +194,6 @@ WARKITEMAN.Husk:
 		Spins: True
 		Moves: False
 		Explosion: GroundHit
-	
 WARKITEKITE.Husk:
 	Inherits@1: ^SpriteActor
 	Interactable:
@@ -252,7 +237,6 @@ WARKITEKITE.Husk:
 	Explodes:
 		Weapon: GroundHit
 		EmptyWeapon: GroundHit
-		
 WARKITECRASH.Husk:
 	Inherits: ^MedievalHusk
 	Tooltip:
@@ -262,7 +246,6 @@ WARKITECRASH.Husk:
 		Image: warkitehusk
 	WithFacingSpriteBody:
 		Sequence: crash
-		
 DRAGONDEADPLACEHOLDER:
 	Immobile:
 		OccupiesSpace: false
@@ -275,7 +258,6 @@ DRAGONDEADPLACEHOLDER:
 		Range: 1c0
 		ValidStances: Ally, Neutral
 		Condition: DragonGroundDead
-		
 DRAGON.Husk:
 	Inherits: ^HelicopterHusk
 	ConditionManager:
@@ -311,22 +293,21 @@ DRAGON.Husk:
 		OwnerType: InternalName
 		RequiresCondition: validb || validc || validd || valide
 		InternalOwner: Creeps
-# anti error fix
+	#anti error fix
 	ExternalCondition@valida:
 		Condition: valida
-# anti error fix
+	#anti error fix
 	ExternalCondition@validb:
 		Condition: validb
-# anti error fix
+	#anti error fix
 	ExternalCondition@validc:
 		Condition: validc
-# anti error fix
+	#anti error fix
 	ExternalCondition@validd:
 		Condition: validd
-# anti error fix
+	#anti error fix
 	ExternalCondition@valide:
 		Condition: valide
-	
 DRGNEMPTY:
 	Inherits: ^Helicopter
 	Valued:
@@ -353,7 +334,6 @@ DRGNEMPTY:
 		Weapon: DragonFlame
 		EmptyWeapon: DragonFlame
 	FlyAwayOnIdle:
-		
 DAVINCI.Husk:
 	Inherits: ^HelicopterHusk
 	ThrowsShrapnel:
@@ -379,7 +359,6 @@ DAVINCI.Husk:
 		Delay: 25
 	SpawnActorOnDeath:
 		Actor: DAVINCICRASH.Husk
-		
 DAVINCICRASH.Husk:
 	Inherits: ^MedievalHusk
 	RenderSprites:
@@ -387,7 +366,6 @@ DAVINCICRASH.Husk:
 		Image: davincihusk
 	Tooltip:
 		Name: Strange Aircraft (Destroyed)   
-		
 WRBLN.Crash:
 	Inherits: ^MedievalHusk
 	RenderSprites:
@@ -399,7 +377,6 @@ WRBLN.Crash:
 		Weapons: SmallWood2, SmallWood3, SmallWood3, LargeWood1
 		Pieces: 1, 3
 		Range: 1c512, 3c0
-	
 WRBLN.Husk:
 	Inherits: ^HelicopterHusk
 	ThrowsShrapnel:

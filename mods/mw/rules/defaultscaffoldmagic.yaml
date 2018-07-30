@@ -1,9 +1,6 @@
 ^ConstructionSite:
 	Inherits@1: ^ExistsInWorld
 	Inherits@2: ^SpriteActor
-#	AddConditionEvery@DeliveredResources:
-#		AddCondition: DeliveredResources
-#		Delay: 25
 	AddConditionEvery@Construct:
 		AddCondition: Construct
 		Delay: 25
@@ -93,15 +90,9 @@
 		ConstructionCondition: Construct
 		YOffset: 0
 		XOffset: 5
-#	ConstructionProgress@DeliveredResources:
-#		ConstructionCondition: DeliveredResources
-#		YOffset: 16
-#		XOffset: 5
-#		Font: Bold
 	HitShape:
 	EditorTilesetFilter:
 		Categories: Construction Sites
-
 ^2x2SITE:
 	Inherits: ^ConstructionSite
 	Inherits@HitShape: ^2x2Shape
@@ -249,8 +240,6 @@
 		Palette: mwcivilian
 		Offset: -512,512,0
 		RequiresCondition: Construct >= 21
-
-
 ^2x3SITE:
 	Inherits: ^ConstructionSite
 	Inherits@HitShape: ^2x3Shape
@@ -468,7 +457,6 @@
 		Palette: mwcivilian
 		Offset: -200,512,0
 		RequiresCondition: Construct >= 21
-
 ^3x2SITE:
 	Inherits: ^ConstructionSite
 	Inherits@HitShape: ^3x2Shape
@@ -686,7 +674,6 @@
 		Palette: mwcivilian
 		Offset: -512,0,0
 		RequiresCondition: Construct >= 21
-	
 ^3x3SITE:
 	Inherits: ^ConstructionSite
 	Inherits@HitShape: ^3x3Shape
@@ -974,7 +961,6 @@
 		Palette: mwcivilian
 		Offset: -1024,0,0
 		RequiresCondition: Construct >= 21
-	   
 ^4x2SITE:
 	Inherits: ^ConstructionSite
 	Inherits@HitShape: ^4x2Shape
@@ -1262,7 +1248,6 @@
 		Palette: mwcivilian
 		Offset: -512,-512,0
 		RequiresCondition: Construct >= 21
-	   
 ^1x1SITE:
 	Inherits: ^ConstructionSite
 	Inherits@HitShape: ^1x1Shape
@@ -1339,7 +1324,6 @@
 		Palette: mwcivilian
 		Offset: -212,212,0
 		RequiresCondition: Construct >= 21
-        
 ^1x1SITEWALL:
 	Inherits: ^ConstructionSite
 	Inherits@HitShape: ^1x1Shape
@@ -1416,8 +1400,6 @@
 		Palette: mwcivilian
 		Offset: -0,0,0
 		RequiresCondition: Construct >= 21
-        
-        
 ^1x4SITE:
 	Inherits: ^ConstructionSite
 	Inherits@HitShape: ^2x3Shape

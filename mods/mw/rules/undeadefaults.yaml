@@ -1,4 +1,3 @@
-
 ^MWUndeadBuilding:
 	Inherits@1: ^BaseBuilding
 	GivesBuildableArea:
@@ -22,7 +21,6 @@
 		Condition: Wander
 	EmitInfantryOnSell:
 		ActorTypes: undead1, undead3, undead5, preycolyte
-
 ^MWBasePentagram:
 	Inherits@1: ^BaseBuilding
 	RequiresBuildableArea:
@@ -38,12 +36,10 @@
 	Sellable:
 	UndeadBuilder:
 		Selfbuilds: true
-
 ^Skeleton:  
 	Inherits: ^MedievalInfantry
 	Inherits@GainsExperience: ^GainsExperience
 	Inherits@ArcherDemo65: ^ArcherDemo65
-
 	Inherits@SnakeStunnable: ^SnakeStunnable
 	Inherits@AUTOTARGET: ^AutoTargetAll
 	EditorTilesetFilter:
@@ -90,11 +86,9 @@
 		EmptyWeapon: LeaveStuff
 		Chance: 15
 	Crushable:
-		
 ^SkeletonSpawn:
 	Inherits: ^MedievalInfantry
 	Inherits@ArcherDemo65: ^ArcherDemo65
-
 	Inherits@SnakeStunnable: ^SnakeStunnable
 	Inherits@AUTOTARGET: ^AutoTargetAll
 	EditorTilesetFilter:
@@ -167,8 +161,6 @@
 		ReduceMoveRadiusDelay: 5
 		MinMoveDelay: 0
 		MaxMoveDelay: 50
-	
-
 ^Mediumpenta:
 	Inherits: ^MWBasePentagram
 	Inherits@Hitshape: ^2x2Shape
@@ -239,7 +231,6 @@
 		DockAngle: 96
 		IsDragRequired: false
 		FaceTowardsCenter: true
-		
 ^Smallpenta:
 	Inherits: ^MWBasePentagram
 	Inherits@Hitshape: ^1x1Shape
@@ -310,7 +301,6 @@
 		DockAngle: 96
 		IsDragRequired: false
 		FaceTowardsCenter: true
-		
 ^Largepenta:
 	Inherits: ^MWBasePentagram
 	Inherits@Hitshape: ^3x3Shape
@@ -381,7 +371,6 @@
 		DockAngle: 96
 		IsDragRequired: false
 		FaceTowardsCenter: true
-
 ^Gravestone:
 	Inherits: ^MWUndeadBuilding
 	Inherits@Hitshape: ^1x1Shape
@@ -420,7 +409,6 @@
 		Range: 0c512, 3c0
 	ProvidesLivingspace:
 		Ammount: 1
-		
 ^CoffinAmbush:
 	Inherits: ^MWUndeadBuilding
 	Inherits@Hitshape: ^1x1Shape

@@ -1,4 +1,3 @@
-
 SULE1:
 	Inherits: ^Knight
 	Inherits@AUTOTARGET: ^AutoTargetGround
@@ -45,7 +44,6 @@ SULE1:
 	AutoTargetPriority@Counter:
 		ValidTargets: Light, Heavy, Ranged, Support
 		Priority: 4
-		
 SULE2:
 	Inherits: ^Knight
 	Inherits@AUTOTARGET: ^AutoTargetGround
@@ -103,7 +101,6 @@ SULE2:
 		VoiceSet: RashudinVoice
 	Targetable@CombatRole:
 		TargetTypes: Heavy
-		
 SULE3:
 	Inherits: ^Knight
 	Inherits@AUTOTARGET: ^AutoTargetAll
@@ -174,7 +171,6 @@ SULE3:
 	AutoTargetPriority@Counter1:
 		ValidTargets: Light, Ranged, LightCavalry, Support, Flying
 		Priority: 4
-		
 SULE4:
 	Inherits: ^Knight
 	Inherits@AUTOTARGET: ^AutoTargetGround
@@ -229,7 +225,6 @@ SULE4:
 	AutoTargetPriority@Counter:
 		ValidTargets: RegularCavalry, LightCavalry, HeavyCavalry, Support, Defenses
 		Priority: 4
-		
 SULE5:
 	Inherits: ^Knight
 	Inherits@AUTOTARGET: ^AutoTargetGround
@@ -287,8 +282,6 @@ SULE5:
 	AutoTargetPriority@Counter1:
 		ValidTargets: Light, Ranged, LightCavalry, Support, RegularCavalry, Heavy
 		Priority: 4
-		
-		
 SULE6:
 	Inherits: ^Knight
 	Inherits@GetsPoisoned: ^GetsPoisoned
@@ -359,10 +352,7 @@ SULE6:
 		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 	Voiced:
 		VoiceSet: FarmerVoice
-
-
 # Mystics
-
 SULM1:
 	Inherits: ^Knight
 	Inherits@AUTOTARGET: ^AutoTargetGround
@@ -413,8 +403,6 @@ SULM1:
 	AutoTargetPriority@Counter1:
 		ValidTargets: Light, Ranged, LightCavalry, Support, Heavy, Spectral
 		Priority: 4
-
-		
 SULM1SKELET:
 	Inherits: ^Knight
 	Inherits@ArcherDemo65: ^ArcherDemo65
@@ -477,7 +465,6 @@ SULM1SKELET:
 		VoiceSet: SkeletonVoice
 	Targetable@CombatRole:
 		TargetTypes: Light
-		
 SULM2:
 	Inherits: ^Knight
 	Inherits@AUTOTARGET: ^AutoTargetGround
@@ -531,7 +518,6 @@ SULM2:
 		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 	Targetable@CombatRole:
 		TargetTypes: Spectral
-	
 SULM4:
 	Inherits: ^Knight
 	Inherits@AUTOTARGET: ^AutoTargetGround

@@ -1,4 +1,3 @@
-
 HANDNEW.scaff:
 	Inherits: ^2x3SITE
 	Inherits@Hitshape: ^2x2Shape
@@ -66,7 +65,6 @@ HANDNEW.scaff:
 	WithIdleOverlay@base5:
 		Sequence: make5
 		RequiresCondition: Construct >= 24
-
 NODPROC.scaff:
 	Inherits: ZEROPROC.scaff
 	-GrantCondition@finishedbuild:
@@ -103,7 +101,6 @@ NODPROC.scaff:
 		Bounds: 48,70,0,-8
 	SelectionDecorations:
 		VisualBounds: 48,70,0,-8
-
 ARMORYNOD.scaff:
 	Inherits: ^2x2SITE
 	Inherits@Hitshape: ^2x2Shape
@@ -167,23 +164,22 @@ ARMORYNOD.scaff:
 	WithIdleOverlay@base5:
 		Sequence: make5
 		RequiresCondition: Construct >= 35
-
 XLTNTUNI.scaff:
 	Inherits: ^ConstructionSite
 	Inherits@Hitshape: ^2x2Shape
 	GrantRandomCondition:
 		RandomConditions: valida, validb, validc
 		FallbackCondition: valida
-# anti error fix
+	#anti error fix
 	ExternalCondition@valida:
 		Condition: valida
-# anti error fix
+	#anti error fix
 	ExternalCondition@validb:
 		Condition: validb
-# anti error fix
+	#anti error fix
 	ExternalCondition@validc:
 		Condition: validc
-# anti error fix
+	#anti error fix
 	ExternalCondition@DoNotRender:
 		Condition: DoNotRender
 	-ExternalCondition@PLACEHOLDER:
@@ -294,7 +290,6 @@ XLTNTUNI.scaff:
 	WithIdleOverlay@base6b:
 		Sequence: make6b
 		RequiresCondition: Construct >= 16 && validc
-
 NODSTALL.scaff:
 	Inherits: ^4x2SITE
 	Inherits@Hitshape: ^4x2Shape
@@ -361,7 +356,6 @@ NODSTALL.scaff:
 	WithIdleOverlay@base6:
 		Sequence: make6
 		RequiresCondition: Construct >= 50
-		
 CASTLE.scaff:
 	Inherits: ^3x3SITE
 	Inherits@Hitshape: ^3x2Shape
@@ -432,7 +426,6 @@ CASTLE.scaff:
 	WithIdleOverlay@base6:
 		Sequence: make6
 		RequiresCondition: Construct >= 70
-
 WORKSHOPNOD.scaff:
 	Inherits: ^3x2SITE
 	Inherits@Hitshape: ^3x2Shape
@@ -497,7 +490,6 @@ WORKSHOPNOD.scaff:
 		Type: Workshop
 		Range: 4c0
 		Color: b50909
-
 TRIBU.scaff:
 	Inherits: ^1x1SITE
 	Inherits@Hitshape: ^1x1Shape
@@ -571,7 +563,6 @@ TRIBU.scaff:
 		RequiresCondition: Construct >= 12
 	WithRangeCircle:
 		Range: 12c0
-
 SAMNEW.scaff:
 	Inherits: ^2x2SITE
 	Inherits@Hitshape: ^2x1Shape

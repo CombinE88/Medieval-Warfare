@@ -1,11 +1,9 @@
-
 MCV2NEW:
 	Inherits: ^Siege
 	Inherits@GainsExperience: ^GainsExperience
 	Inherits@GetsPoisoned: ^GetsPoisoned
 	Inherits@ArcherDemo65: ^ArcherDemo80
 	Inherits@SnakeStunnable: ^SnakeDamagable
-
 	Selectable:
 		Priority: 4
 	AttackFrontal:
@@ -68,9 +66,6 @@ MCV2NEW:
 		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 	Targetable@CombatRole:
 		TargetTypes: Support
-        
-        
-
 MOBTRIB:
 	Inherits: ^Siege
 	Inherits@GetsPoisoned: ^GetsPoisoned
@@ -132,13 +127,11 @@ MOBTRIB:
 		Type: Tribu
 		UsePlayerColor: true
 		Range: 14c0
-
 SIEGE1:
 	Inherits: ^Siege
 	Inherits@GainsExperience: ^GainsExperience
 	Inherits@GetsPoisoned: ^GetsPoisoned
 	Inherits@ArcherDemo65: ^ArcherDemo80
-
 	Inherits@SnakeStunnable: ^SnakeDamagable
 	Inherits@AUTOTARGET: ^AutoTargetGround
 	Valued:
@@ -195,15 +188,11 @@ SIEGE1:
 	AutoTargetPriority@Counter1:
 		ValidTargets: HeavyCavalry, RegularCavalry, LightCavalry, Support, Defenses
 		Priority: 4
-
-
-
 SIEGE2:
 	Inherits: ^Siege
 	Inherits@GainsExperience: ^GainsExperience
 	Inherits@GetsPoisoned: ^GetsPoisoned
 	Inherits@ArcherDemo65: ^ArcherDemo80
-
 	Inherits@SnakeStunnable: ^SnakeDamagable
 	Inherits@AUTOTARGET: ^AutoTargetGround
 	Valued:
@@ -269,13 +258,11 @@ SIEGE2:
 	AutoTargetPriority@Counter1:
 		ValidTargets: Light, Heavy, Ranged, Support, LightCavalry, Defenses
 		Priority: 4
-
 SIEGE3:
 	Inherits: ^Siege
 	Inherits@GainsExperience: ^GainsExperience
 	Inherits@GetsPoisoned: ^GetsPoisoned
 	Inherits@ArcherDemo65: ^ArcherDemo80
-
 	Inherits@SnakeStunnable: ^SnakeDamagable
 	Inherits@AUTOTARGET: ^AutoTargetAll
 	ConditionManager:
@@ -406,12 +393,10 @@ SIEGE3:
 	AutoTargetPriority@Counter1:
 		ValidTargets: Light, Ranged, Support, LightCavalry, Flying
 		Priority: 4
-
 SIEGE4:
 	Inherits: ^Siege
 	Inherits@GainsExperience: ^GainsExperience
 	Inherits@ArcherDemo65: ^ArcherDemo80
-
 	Inherits@AUTOTARGET: ^AutoTargetGround
 	ConditionManager:
 	Cargo:
@@ -538,12 +523,10 @@ SIEGE4:
 		ValidTargets: Structure, Defenses
 		InvalidTargets: NoAutoTarget, Wall
 		Priority: 4
-		
 EHARVXL:
 	Inherits: ^Siege
 	Inherits@GetsPoisoned: ^GetsPoisoned
 	Inherits@ArcherDemo65: ^ArcherDemo80
-
 	Inherits@SnakeStunnable: ^SnakeDamagable
 	BodyOrientation:
 		QuantizedFacings: 8
@@ -610,13 +593,10 @@ EHARVXL:
 	PersonValued:
 		ActorCount: 1
 		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
-
-		
 SIEGE99:
 	Inherits: ^Siege
 	Inherits@GainsExperience: ^GainsExperience
 	Inherits@GetsPoisoned: ^GetsPoisoned
-
 	Valued:
 		Cost: 2000
 	Tooltip:

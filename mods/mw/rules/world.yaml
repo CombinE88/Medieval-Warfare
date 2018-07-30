@@ -153,8 +153,6 @@
 		ValuePerUnit: 24
 		AllowedTerrainTypes: Clear,Road
 		AllowUnderActors: true
-   
-
 World:
 	Inherits: ^BaseWorld
 	ChatCommands:
@@ -182,6 +180,7 @@ World:
 	MapCreeps:
 	SpawnMapActors:
 	MPStartLocations:
+		SeparateTeamSpawnsCheckboxDisplayOrder: 6
 	CreateMPPlayers:
 	MapBuildRadius:
 		AllyBuildRadiusCheckboxDisplayOrder: 4
@@ -197,8 +196,6 @@ World:
 		ShortGameCheckboxVisible: True
 		TechLevelDropdownLocked: True
 		TechLevelDropdownVisible: False
-	#LuaScript:
-	#	Scripts: Peasants.lua
 	MPStartUnits@minimum:
 		Class: medieval
 		ClassName: Supply Wagon Only
@@ -228,7 +225,6 @@ World:
 	RadarPings:
 	LoadWidgetAtGameStart:
 		ShellmapRoot: MENU_BACKGROUND
-
 EditorWorld:
 	Inherits: ^BaseWorld
 	EditorActorLayer:

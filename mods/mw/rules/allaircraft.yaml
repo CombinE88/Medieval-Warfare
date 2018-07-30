@@ -77,7 +77,6 @@ ORNI:
 	AutoTargetPriority@Counter1:
 		ValidTargets: HeavyCavalry, RegularCavalry, LightCavalry, Support, Flying, Defenses
 		Priority: 4
-	
 WARKITE:
 	Inherits: ^Helicopter
 	Inherits@EXPERIENCE: ^GainsExperience
@@ -149,7 +148,6 @@ WARKITE:
 		VisualBounds: 26,26,0,-5
 	Selectable:
 		Bounds:26,26,0,-5
-	  
 DRGNRDR:
 	Inherits: ^Helicopter
 	Inherits@EXPERIENCE: ^GainsExperience
@@ -158,7 +156,7 @@ DRGNRDR:
 	GrantRandomCondition:
 		RandomConditions: valida, validb
 		FallbackCondition: validb
-# anti error fix
+	# anti error fix
 	ExternalCondition@valida:
 		Condition: valida
 	Valued:
@@ -234,8 +232,6 @@ DRGNRDR:
 		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 	Targetable@CombatRole:
 		TargetTypes: Flying
-
-		
 DRAGONWALK:
 	Inherits: ^Siege
 	Inherits@AUTOTARGET: ^AutoTargetGround
@@ -290,7 +286,6 @@ DRAGONWALK:
 		WanderMoveRadius: 3
 		MinMoveDelay: 50
 		MaxMoveDelay: 750
-	
 DAVINCI:
 	Inherits: ^Helicopter
 	Inherits@EXPERIENCE: ^GainsExperience
@@ -348,7 +343,6 @@ DAVINCI:
 		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 	Targetable@CombatRole:
 		TargetTypes: Flying
-	   
 WRBLN:
 	Inherits: ^Helicopter
 	Inherits@EXPERIENCE: ^GainsExperience
@@ -420,8 +414,6 @@ WRBLN:
 	AutoTargetPriority@Counter1:
 		ValidTargets: Light, Heavy, Ranged, Support, Flying, LightCavalry, RegularCavalry, Defenses
 		Priority: 4
-		
-			  
 PLACEHOLDERPLANE:
 	Inherits: ^Plane
 	Interactable:
@@ -453,7 +445,6 @@ PLACEHOLDERPLANE:
 	Armament@BOMBS:
 		Name: bombs
 		Weapon: none
-		
 PLACEHOLDERFLAMESTRIKE:
 	Inherits: ^Plane
 	Interactable:

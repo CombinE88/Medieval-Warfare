@@ -4,7 +4,6 @@ KING:
 	Inherits@GetsPoisoned: ^GetsPoisoned
 	Inherits@CanTurnIntoScelett:  ^CanTurnIntoScelett
 	Inherits@ArcherDemo65: ^ArcherDemo65
-
 	Inherits@Healable: ^Healable
 	GivesBounty:
 		Percentage: 50
@@ -91,7 +90,6 @@ KING:
 		Sabotage: False
 		Voice: Attack
 	-Crushable:
-
 Husk.KING:
 	Inherits@1: ^ExistsInWorld
 	Inherits@3: ^SpriteActor	
@@ -144,7 +142,6 @@ Husk.KING:
 		SkipMakeAnimations: false
 	ProvidesPrerequisite:
 		Prerequisite: king  
-		
 Husk2.KING:
 	Inherits@1: ^ExistsInWorld
 	Inherits@3: ^SpriteActor
@@ -197,7 +194,6 @@ Husk2.KING:
 		SkipMakeAnimations: false
 	ProvidesPrerequisite:
 		Prerequisite: king 
-
 E2NEWV2:
 	Inherits: ^Knight
 	Inherits@AUTOTARGET: ^AutoTargetGround
@@ -206,7 +202,6 @@ E2NEWV2:
 	Inherits@GetsPoisoned: ^GetsPoisoned
 	Inherits@CanTurnIntoScelett:  ^CanTurnIntoScelett
 	Inherits@ArcherDemo65: ^ArcherDemo65
-
 	Inherits@Healable: ^Healable
 	Inherits@SnakeStunnable: ^SnakeStunnable
 	Inherits@GrimReanimatable: ^GrimReanimatable
@@ -258,7 +253,6 @@ E3NEW:
 	Inherits@GetsPoisoned: ^GetsPoisoned
 	Inherits@CanTurnIntoScelett:  ^CanTurnIntoScelett
 	Inherits@ArcherDemo65: ^ArcherDemo65
-
 	Inherits@Healable: ^Healable
 	Inherits@SnakeStunnable: ^SnakeStunnable
 	Inherits@GrimReanimatable: ^GrimReanimatable
@@ -299,7 +293,6 @@ E3NEW:
 	AutoTargetPriority@Counter:
 		ValidTargets: Light, Heavy, Ranged, Support
 		Priority: 4
-
 E4NEWV2:
 	Inherits: ^Knight
 	Inherits@AUTOTARGET: ^AutoTargetAll
@@ -307,7 +300,6 @@ E4NEWV2:
 	Inherits@GetsPoisoned: ^GetsPoisoned
 	Inherits@CanTurnIntoScelett:  ^CanTurnIntoScelett
 	Inherits@ArcherDemo65: ^ArcherDemo65
-
 	Inherits@Healable: ^Healable
 	Inherits@SnakeStunnable: ^SnakeStunnable
 	Inherits@GrimReanimatable: ^GrimReanimatable
@@ -370,7 +362,6 @@ E4NEWV2:
 	AutoTargetPriority@Counter1:
 		ValidTargets: Light, Ranged, LightCavalry, Support, Flying
 		Priority: 4
-
 RMBONEW:
 	Inherits: ^Knight
 	RevealsShroud:
@@ -381,7 +372,6 @@ RMBONEW:
 	Inherits@GetsPoisoned: ^GetsPoisoned
 	Inherits@CanTurnIntoScelett:  ^CanTurnIntoScelett
 	Inherits@ArcherDemo65: ^ArcherDemo65
-
 	Inherits@Healable: ^Healable
 	Inherits@SnakeStunnable: ^SnakeStunnable
 	Inherits@GrimReanimatable: ^GrimReanimatable
@@ -430,7 +420,6 @@ RMBONEW:
 	AutoTargetPriority@Counter1:
 		ValidTargets: Light, Ranged, LightCavalry, Support, RegularCavalry, Heavy, Spectral
 		Priority: 4
-
 NEWCOMM:
 	Inherits: ^Knight
 	Inherits@AUTOTARGET: ^AutoTargetGround
@@ -439,7 +428,6 @@ NEWCOMM:
 	Inherits@GetsPoisoned: ^GetsPoisoned
 	Inherits@CanTurnIntoScelett:  ^CanTurnIntoScelett
 	Inherits@ArcherDemo65: ^ArcherDemo65
-
 	Inherits@Healable: ^Healable
 	Inherits@SnakeStunnable: ^SnakeSlowable
 	RevealsShroud:

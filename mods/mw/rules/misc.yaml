@@ -1,8 +1,6 @@
 CRATE.plain:
 	Inherits: ^Crate
 	ScriptTriggers:
-
-
 mpspawn:
 	EditorOnlyTooltip:
 	Interactable:
@@ -16,7 +14,6 @@ mpspawn:
 		QuantizedFacings: 1
 	EditorTilesetFilter:
 		Categories: Spawn and Marker
-
 waypoint:
 	Interactable:
 	EditorOnlyTooltip:
@@ -30,13 +27,11 @@ waypoint:
 		QuantizedFacings: 1
 	EditorTilesetFilter:
 		Categories: Spawn and Marker
-
 ^fact.colorpicker:
 	Inherits: FACTNEW
 	RenderSprites:
 		Image: newfact
 		Palette: colorpicker
-
 CAMERA:
 	Interactable:
 	EditorOnlyTooltip:
@@ -53,7 +48,6 @@ CAMERA:
 		Type: CenterPosition
 	EditorTilesetFilter:
 		Categories: Spawn and Marker
-
 CAMERA.small:
 	Interactable:
 	EditorOnlyTooltip:
@@ -71,7 +65,6 @@ CAMERA.small:
 		Type: CenterPosition
 	EditorTilesetFilter:
 		Categories: Spawn and Marker
-        
 FLARE:
 	Interactable:
 	Immobile:
@@ -92,7 +85,6 @@ FLARE:
 	BodyOrientation:
 		QuantizedFacings: 1
 	#AutoSelectionSize:
-    
 MENU:
 	Interactable:
 	Immobile:

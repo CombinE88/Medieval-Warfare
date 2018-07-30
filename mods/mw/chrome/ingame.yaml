@@ -449,48 +449,7 @@ Container@PLAYER_WIDGETS:
 							X: 5
 							Y: 5
 							ImageCollection: command-icons
-							ImageName: queue-orders
-#				Background@PRIORITY_BAR:
-#					Logic: ConstructionPriorityLogic
-#					X: 0
-#					Y: PARENT_BOTTOM - 34 - 34
-#					Background: command-button
-#					Width: 36
-#					Height: 34 + 34
-#					Children:
-#						Button@ADD_PRIO:
-#							Key: Plus
-#							X: 1
-#							Y: 0
-#							Width: 34
-#							Height: 34
-#							Background: command-button
-#							DisableKeySound: true
-#							TooltipText: Add Priority, the building will build and delivered first.
-#							TooltipContainer: TOOLTIP_CONTAINER
-#							Children:
-#								Image@ICON:
-#									X: 5
-#									Y: 5
-#									ImageCollection: prioritybuttons
-#									ImageName: up_arrow
-#						Button@REM_PRIO:
-#							Key: Minus
-#							X: 1
-#							Y: 34
-#							Width: 34
-#							Height: 34
-#							Background: command-button
-#							DisableKeySound: true
-#							TooltipText: Remove Priority, the building will build and delivered last.
-#							TooltipContainer: TOOLTIP_CONTAINER
-#							Children:
-#								Image@ICON:
-#									X: 5
-#									Y: 5
-#									ImageCollection: prioritybuttons
-#									ImageName: down_arrow
-									
+							ImageName: queue-orders								
 		Background@COMMAND_BAR:
 			Logic: StanceSelectorLogic
 			X: 5
@@ -611,26 +570,6 @@ Container@PLAYER_WIDGETS:
 							Align: Left
 							Font: Bold
 							Text: {0}
-#						LabelWithTooltip@FULLPOP:
-#							Logic: IngameFullPopulationCounterLogic
-#							Y: 75
-#							X: 15
-#							Width: PARENT_RIGHT
-#							Height: 0
-#							Align: Left
-#							Font: Bold
-#							Text: Sum Population: {0}
-#						LabelWithTooltip@POP:
-#							Logic: IngamePopulationCounterLogic
-#							Y: 35
-#							X: 15
-#							Width: PARENT_RIGHT
-#							Height: 0
-#							Align: Left
-#							Font: Bold
-#							Text: {0}
-#							TextColor: 2ECC71
-#							ContrastColorDark: 12512D
 						LabelWithTooltip@USEDPOP:
 							Logic: IngameUsedPopulationCounterLogic
 							Y: 35
@@ -749,22 +688,6 @@ Container@PLAYER_WIDGETS:
 									Width: PARENT_RIGHT-2
 									Height: PARENT_BOTTOM-2
 									Skippable: false
-#		Background@POWERBAR_PANEL:
-#			Logic: IngamePeasantSpawnBarLogic
-#			X: 290
-#			Y: WINDOW_BOTTOM - 218
-#			Width: WINDOW_RIGHT - 290
-#			Height: 20
-#			Background:
-#			Children: panel-black
-#				ResourceBar@POWERBAR:
-#					X: 6
-#					Y: 5
-#					Width: PARENT_RIGHT-6
-#					Height: PARENT_BOTTOM-5
-#					TooltipContainer: TOOLTIP_CONTAINER
-#					TooltipTemplate: SIMPLE_TOOLTIP
-#					IndicatorImage: indicator-left
 		Background@SIDEBAR_BACKGROUND2:
 			Logic: MenuButtonsChromeLogic
 			X: 290
@@ -807,34 +730,6 @@ Container@PLAYER_WIDGETS:
 									X: PARENT_RIGHT / 2 -12
 									Y: 6
 									ImageCollection: production-icons
-#						ProductionTypeButton@BUILDING3:
-#							X: PARENT_RIGHT - 150 
-#							Y: ((200 - 20) / 5) * 1 + 6
-#							Width: 75
-#							Height: ((200 - 10) / 5)
-#							TooltipText: Military Buildings
-#							TooltipContainer: TOOLTIP_CONTAINER
-#							ProductionGroup: Building3
-#							Key: ProductionTypeNaval
-#							Children:
-#								Image@ICON:
-#									X: PARENT_RIGHT / 2 -12
-#									Y: 6
-#									ImageCollection: production-icons
-#						ProductionTypeButton@DEFENCE:
-#							X: PARENT_RIGHT - 150 + 75
-#							Y: ((200 - 20) / 5) * 1 + 6
-#							Width: 75
-#							Height: ((200 - 10) / 5)
-#							TooltipText: Technology Buildings
-#							TooltipContainer: TOOLTIP_CONTAINER
-#							ProductionGroup: Tech
-#							Key: ProductionTypeDefense
-#							Children:
-#								Image@ICON:
-#									X: PARENT_RIGHT / 2 -12
-#									Y: 6
-#									ImageCollection: production-icons
 						ProductionTypeButton@BUILDING3:
 							X: PARENT_RIGHT - 150
 							Y: ((200 - 20) / 5) * 1 + 6

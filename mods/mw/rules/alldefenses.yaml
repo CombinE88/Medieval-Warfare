@@ -81,8 +81,6 @@ GTWNEW:
 	AutoTargetPriority@Counter1:
 		ValidTargets: Light, Heavy, LightCavalry, Support, Ranged
 		Priority: 4
-
-
 SAMNEW:
 	Inherits: ^MWDefense
 	Inherits@AUTOTARGET: ^AutoTargetAir
@@ -135,7 +133,6 @@ SAMNEW:
 	PersonValued:
 		ActorCount: 2
 		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
-
 TRIBU:
 	Inherits: ^MWDefense
 	Inherits@AUTOTARGET: ^AutoTargetGround
@@ -195,7 +192,6 @@ TRIBU:
 	AutoTargetPriority@Counter1:
 		ValidTargets: LightCavalry, RegularCavalry, HeavyCavalry, Support
 		Priority: 4
-		
 BATO:
 	Inherits: ^MWDefense
 	Inherits@AUTOTARGET: ^AutoTargetAll
@@ -268,7 +264,6 @@ BATO:
 	AutoTargetPriority@Counter1:
 		ValidTargets: LightCavalry, RegularCavalry, HeavyCavalry, Support
 		Priority: 4
-		
 GUNNEW:
 	Inherits: ^MWDefense
 	Inherits@AUTOTARGET: ^AutoTargetGround
@@ -320,7 +315,6 @@ GUNNEW:
 	AutoTargetPriority@Counter1:
 		ValidTargets: LightCavalry, RegularCavalry, HeavyCavalry, Support
 		Priority: 4
-		
 CSTLWLL:
 	Inherits: ^Wall
 	Inherits@Hitshape: ^1x1Shape
@@ -350,7 +344,6 @@ CSTLWLL:
 		Type: concrete
 	Crushable:
 		CrushClasses: heavywall
-        
 DEDWALL:
 	Inherits: CSTLWLL
 	Tooltip:
@@ -360,7 +353,6 @@ DEDWALL:
 	RenderSprites:
 		PlayerPalette: raplayer
 		Image: dedwall
-		
 WDWLL:
 	Inherits: ^Wall
 	Inherits@Hitshape: ^1x1Shape
@@ -396,10 +388,7 @@ WDWLL:
 	Building:
 		Adjacent: 12
 		BuildSounds: shovel.aud
-		
-		
-# test
-
+#test
 CSTLGTEW:
 	Inherits: ^MWGate
 	Inherits@Hitshape: ^3x1Shape
@@ -449,7 +438,6 @@ CSTLGTEW:
 		TargetTypes: Ground, Wall
 	EditorTilesetFilter:
 		Categories: Wall
-		
 CSTLGTNS: 
 	Inherits: ^MWGate
 	Inherits@Hitshape: ^1x3Shape
@@ -501,7 +489,6 @@ CSTLGTNS:
 		TargetTypes: Ground, Wall
 	EditorTilesetFilter:
 		Categories: Wall
-		
 SULGTNS: 
 	Inherits: CSTLGTNS
 	RenderSprites:
@@ -512,8 +499,6 @@ SULGTEW:
 	RenderSprites:
 		PlayerPalette: sultanplayer
 		Image: sulgtew
-        
-        
 DEDGATE: 
 	Inherits: CSTLGTEW
 	RenderSprites:
@@ -523,7 +508,6 @@ DEDGATENS:
 	RenderSprites:
 		Image: dedgatens
 	-WithIdleOverlay:
-    
 SIEGETRIBU:
 	Inherits: ^MWDefense
 	Inherits@Hitshape: ^1x1Shape
@@ -595,8 +579,6 @@ SIEGETRIBU:
 		ValidTargets: Structure
 		InvalidTargets: NoAutoTarget
 		Priority: 1
-        
-
 SIEGETRIBU.scaff:
 	Inherits: ^1x1SITE
 	Inherits@Hitshape: ^1x1Shape

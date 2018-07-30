@@ -1,4 +1,3 @@
-
 LODGE.scaff:
 	Inherits: ^2x2SITE
 	Inherits@Hitshape: ^2x1Shape
@@ -67,7 +66,6 @@ LODGE.scaff:
 		Type: HunterLodge
 		UsePlayerColor: true
 		Range: 17c0
-
 PROCNEW.scaff:
 	Inherits: ^3x3SITE
 	HitShape:
@@ -145,7 +143,6 @@ PROCNEW.scaff:
 	WithIdleOverlay@base6:
 		Sequence: make6
 		RequiresCondition: Construct >= 40
-
 SILONEW.scaff:
 	Inherits: ^2x2SITE
 	Inherits@Hitshape: ^2x2Shape
@@ -210,8 +207,6 @@ SILONEW.scaff:
 	WithIdleOverlay@base4:
 		Sequence: make4
 		RequiresCondition: Construct >= 7
-		
-				
 SILOTWO.scaff:
 	Inherits: ^2x2SITE
 	Inherits@Hitshape: ^2x2Shape
@@ -282,7 +277,6 @@ SILOTWO.scaff:
 	WithIdleOverlay@base6:
 		Sequence: make6
 		RequiresCondition: Construct >= 8
-
 GTWNEW.scaff:
 	Inherits: ^1x1SITE
 	Inherits@Hitshape: ^1x1Shape
@@ -352,7 +346,6 @@ GTWNEW.scaff:
 		RequiresCondition: Construct >= 7
 	WithRangeCircle:
 		Range: 8c512
-		
 GUNNEW.scaff:
 	Inherits: ^1x1SITE
 	Inherits@Hitshape: ^1x1Shape
@@ -423,7 +416,6 @@ GUNNEW.scaff:
 		RequiresCondition: Construct >= 7
 	WithRangeCircle:
 		Range: 8c0
-      
 CSTLWLL.scaff:
 	Inherits: ^1x1SITEWALL
 	Inherits@Hitshape: ^1x1Shape
@@ -497,8 +489,6 @@ CSTLWLL.scaff:
 	-ExternalCondition@PLACEHOLDER:
 	-GivesBuildableArea:
 	-RevealsShroud:
-    
-    
 CSTLGTNS.scaff:
 	Inherits: ^1x4SITE
 	Inherits@Hitshape: ^1x3Shape
@@ -582,7 +572,6 @@ CSTLGTNS.scaff:
 	-ExternalCondition@PLACEHOLDER:
 	-GivesBuildableArea:
 	-RevealsShroud:
-    
 CSTLGTEW.scaff:
 	Inherits: ^3x2SITE
 	Inherits@Hitshape: ^3x1Shape
@@ -667,8 +656,6 @@ CSTLGTEW.scaff:
 	-ExternalCondition@PLACEHOLDER:
 	-GivesBuildableArea:
 	-RevealsShroud:
-  
-  
 SULGTNS.scaff:
 	Inherits: CSTLGTNS.scaff
 	RenderSprites:
@@ -686,7 +673,6 @@ SULGTNS.scaff:
 		RequiresCondition: (75 - Construct) <= 0
 		IntoActor: sulgtns
 		ReadyAudio:
-    
 SULGTEW.scaff:
 	Inherits: CSTLGTEW.scaff
 	RenderSprites:
@@ -704,7 +690,6 @@ SULGTEW.scaff:
 		RequiresCondition: (75 - Construct) <= 0
 		IntoActor: sulgtew
 		ReadyAudio:
-        
 DEDWALL.scaff:
 	Inherits: ^ConstructionSite
 	Inherits@Hitshape: ^1x1Shape
@@ -808,9 +793,6 @@ DEDWALL.scaff:
 	WithIdleOverlay@base10:
 		Sequence: make10
 		RequiresCondition: Construct >= 34
-        
-  
-  
 DEDGATE.scaff:
 	Inherits: ^ConstructionSite
 	Inherits@Hitshape: ^3x1Shape
@@ -906,8 +888,6 @@ DEDGATE.scaff:
 	-GivesBuildableArea:
 	-ExternalCondition@PLACEHOLDER:
 	-RevealsShroud:
-
-    
 DEDGATENS.scaff:
 	Inherits: ^ConstructionSite
 	Inherits@Hitshape: ^1x3Shape
@@ -1003,4 +983,3 @@ DEDGATENS.scaff:
 	-GivesBuildableArea:
 	-ExternalCondition@PLACEHOLDER:
 	-RevealsShroud:
-  

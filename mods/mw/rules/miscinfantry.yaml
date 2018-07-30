@@ -1,10 +1,8 @@
-
 ENGENEER:
 	Inherits: ^Knight
 	Inherits@GetsPoisoned: ^GetsPoisoned
 	Inherits@CanTurnIntoScelett:  ^CanTurnIntoScelett
 	Inherits@ArcherDemo65: ^ArcherDemo65
-
 	Inherits@Healable: ^Healable
 	Inherits@SnakeStunnable: ^SnakeStunnable
 	AutoTargetPriority@Prio5:
@@ -77,7 +75,6 @@ E1NEW:
 	Inherits@GetsPoisoned: ^GetsPoisoned
 	Inherits@CanTurnIntoScelett:  ^CanTurnIntoScelett
 	Inherits@ArcherDemo65: ^ArcherDemo65
-
 	Inherits@Healable: ^Healable
 	Inherits@SnakeStunnable: ^SnakeStunnable
 	Inherits@GrimReanimatable: ^GrimReanimatable
@@ -108,13 +105,11 @@ E1NEW:
 		MaxMoveDelay: 250
 	Targetable@CombatRole:
 		TargetTypes: Light
-		
 E8FARMER:
 	Inherits: ^Knight
 	Inherits@GetsPoisoned: ^GetsPoisoned
 	Inherits@CanTurnIntoScelett:  ^CanTurnIntoScelett
 	Inherits@ArcherDemo65: ^ArcherDemo65
-
 	Inherits@Healable: ^Healable
 	Inherits@SnakeStunnable: ^SnakeStunnable
 	Inherits@GrimReanimatable: ^GrimReanimatable
@@ -182,14 +177,12 @@ E8FARMER:
 	Voiced:
 		VoiceSet: FarmerVoice
 		Volume: 3
-
 BUMMLER:
 	Inherits: ^Knight
 	Inherits@GainsExperience: ^GainsExperience
 	Inherits@GetsPoisoned: ^GetsPoisoned
 	Inherits@CanTurnIntoScelett:  ^CanTurnIntoScelett
 	Inherits@ArcherDemo65: ^ArcherDemo65
-
 	Inherits@Healable: ^Healable
 	Inherits@SnakeStunnable: ^SnakeStunnable
 	Inherits@GrimReanimatable: ^GrimReanimatable
@@ -248,7 +241,6 @@ BUMMLER:
 		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 	Voiced:
 		VoiceSet: LooterVoice
-		
 SIEGERUNNER:
 	Inherits: ^Knight
 	Valued:
@@ -288,7 +280,6 @@ SIEGERUNNER:
 		DamageTypes: DefaultDeath
 	RevealsShroud:
 		Range: 2c0
-
 MWWAND1:
 	Inherits: ^MWTalker
 	Inherits@SnakeStunnable: ^SnakeStunnable
@@ -303,8 +294,7 @@ MWWAND1:
 	WithInfantryBody:
 		DefaultAttackSequence: talking
 		IdleSequences: idle1, idle2, idle3, idle4, idle5, idle6, idle7, idle8
-#	IsPeasant:
-		
+	#IsPeasant:
 MWWAND2:
 	Inherits: ^MWTalker
 	Inherits@SnakeStunnable: ^SnakeStunnable
@@ -319,9 +309,7 @@ MWWAND2:
 	WithInfantryBody:
 		DefaultAttackSequence: talking
 		IdleSequences: idle1, idle2, idle3, idle4, idle5, idle6, idle7, idle8
-#	IsPeasant:
-	
-		
+	#IsPeasant:
 MWWAND3:
 	Inherits: ^MWTalker
 	Inherits@SnakeStunnable: ^SnakeStunnable
@@ -336,8 +324,7 @@ MWWAND3:
 	WithInfantryBody:
 		DefaultAttackSequence: talking
 		IdleSequences: idle1, idle2, idle3, idle4, idle5, idle6, idle7, idle8
-#	IsPeasant:
-		
+	#IsPeasant:
 MWWAND4:
 	Inherits: ^MWTalker
 	Inherits@SnakeStunnable: ^SnakeStunnable
@@ -352,8 +339,7 @@ MWWAND4:
 	WithInfantryBody:
 		DefaultAttackSequence: talking
 		IdleSequences: idle1, idle2, idle3, idle4, idle5, idle6, idle7, idle8
-#	IsPeasant:
-		
+	#IsPeasant:
 MWWAND5:
 	Inherits: ^MWTalker
 	Inherits@SnakeStunnable: ^SnakeStunnable
@@ -368,8 +354,7 @@ MWWAND5:
 	WithInfantryBody:
 		DefaultAttackSequence: talking
 		IdleSequences: idle1, idle2, idle3, idle4, idle5, idle6, idle7, idle8
-#	IsPeasant:
-		
+	#IsPeasant:
 MWWAND6:
 	Inherits: ^MWTalker
 	Inherits@SnakeStunnable: ^SnakeStunnable
@@ -384,8 +369,7 @@ MWWAND6:
 	WithInfantryBody:
 		DefaultAttackSequence: talking
 		IdleSequences: idle1, idle2, idle3, idle4, idle5, idle6, idle7, idle8
-#	IsPeasant:
-		
+	#IsPeasant:
 MWWAND10:
 	Inherits: ^MWTalker
 	Inherits@SnakeStunnable: ^SnakeStunnable
@@ -400,8 +384,7 @@ MWWAND10:
 	WithInfantryBody:
 		DefaultAttackSequence: talking
 		IdleSequences: idle1, idle2, idle3, idle4, idle5, idle6, idle7, idle8
-#	IsPeasant:
-		
+	#IsPeasant:
 MWWAND11:
 	Inherits: ^MWTalker
 	Inherits@SnakeStunnable: ^SnakeStunnable
@@ -416,8 +399,7 @@ MWWAND11:
 	WithInfantryBody:
 		DefaultAttackSequence: talking
 		IdleSequences: idle1, idle2, idle3, idle4, idle5, idle6, idle7, idle8
-#	IsPeasant:
-		
+	#IsPeasant:
 MWWAND12:
 	Inherits: ^MWTalker
 	Inherits@SnakeStunnable: ^SnakeStunnable
@@ -432,8 +414,7 @@ MWWAND12:
 	WithInfantryBody:
 		DefaultAttackSequence: talking
 		IdleSequences: idle1, idle2, idle3, idle4, idle5, idle6, idle7, idle8
-#	IsPeasant:
-				
+	#IsPeasant:
 MWWAND7:
 	Inherits: ^MWWanderer
 	Inherits@SnakeStunnable: ^SnakeStunnable
@@ -451,7 +432,6 @@ MWWAND7:
 	Tooltip:
 		Name: Blacksmith
 		GenericVisibility: None
-		
 MWWAND8:
 	Inherits: ^MWWanderer
 	Inherits@SnakeStunnable: ^SnakeStunnable
@@ -469,7 +449,6 @@ MWWAND8:
 		WanderMoveRadius: 4
 		ReduceMoveRadiusDelay: 5
 		RequiresCondition: Wander
-		
 SHOPPLAYER:
 	Inherits: ^Knight
 	Inherits@SnakeStunnable: ^SnakeStunnable
@@ -517,9 +496,6 @@ SHOPPLAYER:
 	PersonValued:
 		ActorCount: 1
 		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
-
-
-		
 MWCIVCOM:
 	Inherits: ^MWWanderer
 	Inherits@AUTOTARGET: ^AutoTargetGround
@@ -527,7 +503,6 @@ MWCIVCOM:
 	Inherits@GetsPoisoned: ^GetsPoisoned
 	Inherits@CanTurnIntoScelett:  ^CanTurnIntoScelett
 	Inherits@ArcherDemo65: ^ArcherDemo65
-
 	Inherits@Healable: ^Healable
 	Inherits@SnakeStunnable: ^SnakeStunnable
 	Inherits@GrimReanimatable: ^GrimReanimatable
@@ -575,7 +550,6 @@ MWCIVCOM:
 	PersonValued:
 		ActorCount: 1
 		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
-		
 NOBLE1:
 	Inherits: ^MWTalker
 	Inherits@SnakeStunnable: ^SnakeStunnable
@@ -590,8 +564,7 @@ NOBLE1:
 	WithInfantryBody:
 		DefaultAttackSequence: talking
 		IdleSequences: idle1, idle2, idle3, idle4, idle5, idle6, idle7, idle8
-#	IsPeasant:
-		
+	#IsPeasant:
 NOBLE2:
 	Inherits: ^MWTalker
 	Inherits@SnakeStunnable: ^SnakeStunnable
@@ -607,8 +580,7 @@ NOBLE2:
 	WithInfantryBody:
 		DefaultAttackSequence: talking
 		IdleSequences: idle1, idle2, idle3, idle4, idle5, idle6, idle7, idle8
-#	IsPeasant:
-		
+	#IsPeasant:
 NOBLE3:
 	Inherits: ^MWTalker
 	Inherits@SnakeStunnable: ^SnakeStunnable
@@ -623,8 +595,7 @@ NOBLE3:
 	WithInfantryBody:
 		DefaultAttackSequence: talking
 		IdleSequences: idle1, idle2, idle3, idle4, idle5, idle6, idle7, idle8
-#	IsPeasant:
-		
+	#IsPeasant:
 NOBLE4:
 	Inherits: ^MWTalker
 	Inherits@SnakeStunnable: ^SnakeStunnable
@@ -639,8 +610,7 @@ NOBLE4:
 	WithInfantryBody:
 		DefaultAttackSequence: talking
 		IdleSequences: idle1, idle2, idle3, idle4, idle5, idle6, idle7, idle8
-#	IsPeasant:
-		
+	#IsPeasant:
 NOBLE5:
 	Inherits: ^MWTalker
 	Inherits@SnakeStunnable: ^SnakeStunnable
@@ -664,15 +634,13 @@ NOBLE5:
 		Range: 3c0
 		ValidStances: Ally
 		Condition: Tax
-		
-
 MWLUMBERER:
 	Inherits: ^MWConstructor
 	Inherits@SnakeStunnable: ^SnakeStunnable
-# anti error fix
+	#anti error fix
 	ExternalCondition@NoFood:
 		Condition: NoFood
-# anti error fix
+	#anti error fix
 	ExternalCondition@FullFood:
 		Condition: FullFood
 	RenderSprites:
@@ -683,7 +651,6 @@ MWLUMBERER:
 		HP: 10000
 	RevealsShroud:
 		Range: 7c0
-#	WithFacingSpriteBody:
 	WithInfantryBody:
 		RequiresCondition: NoFood
 		AttackSequences:
@@ -752,15 +719,13 @@ MWLUMBERER:
 	PersonValued:
 		ActorCount: 0
 		ConvertingActors: 
-		
-		
 MWLUMBEREROWNED:
 	Inherits: ^MWConstructor
 	Inherits@SnakeStunnable: ^SnakeStunnable
-# anti error fix
+	#anti error fix
 	ExternalCondition@NoFood:
 		Condition: NoFood
-# anti error fix
+	#anti error fix
 	ExternalCondition@FullFood:
 		Condition: FullFood
 	RenderSprites:
@@ -771,7 +736,6 @@ MWLUMBEREROWNED:
 		HP: 10000
 	RevealsShroud:
 		Range: 7c0
-#	WithFacingSpriteBody:
 	WithInfantryBody:
 		RequiresCondition: NoFood
 		AttackSequences:
@@ -842,15 +806,13 @@ MWLUMBEREROWNED:
 	PersonValued:
 		ActorCount: 1
 		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
-	
-		
 HUNTER:
 	Inherits: ^Knight
 	Inherits@SnakeStunnable: ^SnakeStunnable
-# anti error fix
+	#anti error fix
 	ExternalCondition@NoFood:
 		Condition: NoFood
-# anti error fix
+	#anti error fix
 	ExternalCondition@FullFood:
 		Condition: FullFood
 	RevealsShroud:

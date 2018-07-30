@@ -64,7 +64,6 @@ SULNUKE.scaff:
 	WithIdleOverlay@base6:
 		Sequence: make6
 		RequiresCondition: Construct >= 16
-
 SULLODGE.scaff:
 	Inherits: ^2x2SITE
 	Inherits@Hitshape: ^2x2Shape
@@ -133,7 +132,6 @@ SULLODGE.scaff:
 		Type: HunterLodge
 		UsePlayerColor: true
 		Range: 17c0
-		
 SULMILL.scaff:
 	Inherits: ^2x3SITE
 	Inherits@Hitshape: ^2x2Shape
@@ -205,8 +203,6 @@ SULMILL.scaff:
 	WithIdleOverlay@base5:
 		Sequence: make5
 		RequiresCondition: Construct >= 36
-
-
 SULNUK2.scaff:
 	Inherits: ^3x2SITE
 	Inherits@Hitshape: ^3x2Shape
@@ -273,7 +269,6 @@ SULNUK2.scaff:
 	WithIdleOverlay@base6:
 		Sequence: make6
 		RequiresCondition: Construct >= 26
-
 SULBARR.scaff:
 	Inherits: ^3x2SITE
 	Inherits@Hitshape: ^3x2Shape
@@ -337,7 +332,6 @@ SULBARR.scaff:
 	WithIdleOverlay@base5:
 		Sequence: make5
 		RequiresCondition: Construct >= 27
-		
 SULMYSTIC.scaff:
 	Inherits: ^3x3SITE
 	Inherits@Hitshape: ^3x2Shape
@@ -408,7 +402,6 @@ SULMYSTIC.scaff:
 	WithIdleOverlay@base6:
 		Sequence: make6
 		RequiresCondition: Construct >= 42
-		
 SULCASTLE.scaff:
 	Inherits: ^3x3SITE
 	Inherits@Hitshape: ^3x3Shape
@@ -479,7 +472,6 @@ SULCASTLE.scaff:
 	WithIdleOverlay@base6:
 		Sequence: make6
 		RequiresCondition: Construct >= 33
-
 SULFIX.scaff:
 	Inherits: ^3x2SITE
 	Inherits@Hitshape: ^3x2Shape
@@ -544,7 +536,6 @@ SULFIX.scaff:
 		Type: Workshop
 		Range: 4c0
 		Color: b50909
-		
 SULGTW.scaff:
 	Inherits: ^1x1SITE
 	Inherits@Hitshape: ^1x1Shape
@@ -612,7 +603,6 @@ SULGTW.scaff:
 		RequiresCondition: Construct >= 7
 	WithRangeCircle:
 		Range: 8c512
-
 SULARRAY.scaff:
 	Inherits: ^3x2SITE
 	Inherits@Hitshape: ^3x2Shape
@@ -627,13 +617,6 @@ SULARRAY.scaff:
 		Cost: 700
 	Tooltip:
 		Name: Construction Site (Material Storage)
-#	Buildable:
-#		IconPalette: raicon
-#		BuildPaletteOrder: 0
-#		Prerequisites: barracks
-#		Description: Provides 3 additional haulers and 1 engineer.\n\n\n\n
-#		Queue: MTech.SUL
-#		BuildDuration: 45
 	Health:
 		HP: 40000
 	RevealsShroud:
@@ -679,7 +662,6 @@ SULARRAY.scaff:
 	WithIdleOverlay@base6:
 		Sequence: make6
 		RequiresCondition: Construct >= 45
-		
 SULHALL.scaff:
 	Inherits: ^3x2SITE
 	Inherits@Hitshape: ^3x2Shape
@@ -694,14 +676,6 @@ SULHALL.scaff:
 		Cost: 2000
 	Tooltip:
 		Name: Construction Site (Town Hall)
-#	Buildable:
-#		IconPalette: raicon
-#		BuildPaletteOrder: 30
-#		Prerequisites: anyhq, !sulhall
-#		Description: Attracts citizens to your town.\nNew Peasants will spawn faster.\n\n\n
-#		Queue: MBuilding.SUL
-#		BuildDuration: 100
-#		BuildLimit: 1
 	Health:
 		HP: 60000
 	RevealsShroud:
@@ -747,7 +721,6 @@ SULHALL.scaff:
 	WithIdleOverlay@base6:
 		Sequence: make6
 		RequiresCondition: Construct >= 75
-		
 SULMINARET.scaff:
 	Inherits: ^1x1SITE
 	Inherits@Hitshape: ^1x1Shape
@@ -762,14 +735,6 @@ SULMINARET.scaff:
 		Cost: 1200
 	Tooltip:
 		Name: Construction Site (Minaret)
-#	Buildable:
-#		IconPalette: raicon
-#		BuildPaletteOrder: 25
-#		Prerequisites: anyhq, !sulminaret
-#		Description: Attracts citizens to your town.\nNew Peasants will spawn faster.\n\n\n
-#		Queue: MBuilding.SUL
-#		BuildDuration: 60
-#		BuildLimit: 1
 	Health:
 		HP: 30000
 	RevealsShroud:
@@ -816,8 +781,6 @@ SULMINARET.scaff:
 	WithIdleOverlay@base6:
 		Sequence: make6
 		RequiresCondition: Construct >= 40
-		
-		
 SULCNSHMBR.scaff:
 	Inherits: ^3x2SITE
 	Inherits@Hitshape: ^3x2Shape
@@ -885,7 +848,6 @@ SULCNSHMBR.scaff:
 	WithIdleOverlay@base6:
 		Sequence: make6
 		RequiresCondition: Construct >= 26
-		
 SULREF.scaff:
 	Inherits: ^3x3SITE
 	HitShape:
@@ -963,7 +925,6 @@ SULREF.scaff:
 	WithIdleOverlay@base6:
 		Sequence: make6
 		RequiresCondition: Construct >= 40
-        
 CSTLWLLSUL.scaff:
 	Inherits: ^1x1SITEWALL
 	Inherits@Hitshape: ^1x1Shape

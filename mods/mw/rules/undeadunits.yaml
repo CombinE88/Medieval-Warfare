@@ -1,5 +1,4 @@
 #Infantry
-
 PREYCOLYTE:
 	Inherits: ^Knight
 	Inherits@GainsExperience: ^GainsExperience
@@ -9,7 +8,7 @@ PREYCOLYTE:
 	Inherits@Healable: ^Healable
 	Inherits@SnakeStunnable: ^SnakeStunnable
 	Inherits@GrimReanimatable: ^GrimReanimatable
-# anti error fix
+	#anti error fix
 	ExternalCondition@whisper:
 		Condition: whisper
 	Captures:
@@ -83,13 +82,11 @@ PREYCOLYTE:
 		Volume: 3
 	Targetable@CombatRole:
 		TargetTypes: Light
-		
 DEADROSS:
 	Inherits: ^Cavalry
 	Inherits@AUTOTARGET: ^AutoTargetGround
 	Inherits@GainsExperience: ^GainsExperience
 	Inherits@ArcherDemo65: ^ArcherDemo80
-
 	Inherits@SnakeStunnable: ^SnakeSlowable
 	Valued:
 		Cost: 225
@@ -143,7 +140,6 @@ DEADROSS:
 	AutoTargetPriority@Counter1:
 		ValidTargets: HeavyCavalry, RegularCavalry, LightCavalry, Flying, Support
 		Priority: 4
-		
 UNDEAD1:
 	Inherits: ^Skeleton
 	Valued:
@@ -177,7 +173,6 @@ UNDEAD1:
 	AutoTargetPriority@Counter1:
 		ValidTargets: Light, Ranged, LightCavalry, Support, Heavy
 		Priority: 4
-		
 UNDEAD2:
 	Inherits: ^Skeleton
 	Valued:
@@ -205,8 +200,6 @@ UNDEAD2:
 	AutoTargetPriority@Counter1:
 		ValidTargets: Light, Ranged, LightCavalry, Support, Heavy
 		Priority: 4
-		
-		
 UNDEAD3:
 	Inherits: ^Skeleton
 	Inherits@AUTOTARGETDEF: ^AutoTargetDefenses
@@ -244,7 +237,6 @@ UNDEAD3:
 	AutoTargetPriority@Counter2:
 		ValidTargets: RegularCavalry, HeavyCavalry, Defenses
 		Priority: 4
-	
 UNDEAD4:
 	Inherits: ^Skeleton
 	Inherits@AUTOTARGETDEF: ^AutoTargetDefenses
@@ -277,7 +269,6 @@ UNDEAD4:
 		BuildDuration: 800
 	Targetable@CombatRole:
 		TargetTypes: Heavy
-		
 UNDEAD5:
 	Inherits: ^Skeleton
 	Valued:
@@ -320,7 +311,6 @@ UNDEAD5:
 	AutoTargetPriority@Counter1:
 		ValidTargets: Light, Ranged, LightCavalry, Support, Flying
 		Priority: 4
-		
 UNDEAD6:
 	Inherits: ^Skeleton
 	Inherits@AUTOTARGETDEF: ^AutoTargetDefenses
@@ -363,7 +353,6 @@ UNDEAD6:
 		Modifier: 77
 	Targetable@CombatRole:
 		TargetTypes: HeavyCavalry
-		
 UNDEAD7:
 	Inherits: ^Skeleton
 	Inherits@AUTOTARGETDEF: ^AutoTargetDefenses
@@ -406,7 +395,6 @@ UNDEAD7:
 		ActorCount: 3
 	Targetable@CombatRole:
 		TargetTypes: HeavyCavalry
-		
 GRIM:
 	Inherits: ^Knight
 	Inherits@AUTOTARGET: ^AutoTargetGround
@@ -484,14 +472,12 @@ GRIM:
 		ValidTargets: Souls, Soul
 		InvalidTargets: NoAutoTarget, Wall
 		Priority: 4
-		
 ACOLYTEC:
 	Inherits: ^Knight
 	Inherits@AUTOTARGET: ^AutoTargetAll
 	Inherits@GainsExperience: ^GainsExperience
 	Inherits@GetsPoisoned: ^GetsPoisoned
 	Inherits@ArcherDemo65: ^ArcherDemo65
-
 	Inherits@Healable: ^Healable
 	Inherits@SnakeStunnable: ^SnakeStunnable
 	Inherits@CanTurnIntoScelett:  ^CanTurnIntoScelett
@@ -546,14 +532,12 @@ ACOLYTEC:
 		ValidTargets: Light, Ranged, LightCavalry, Support, Flying
 		Priority: 4
 	Selectable:
-		
 VAMP:
 	Inherits: ^Knight
 	Inherits@AUTOTARGET: ^AutoTargetGround
 	Inherits@GainsExperience: ^GainsExperience
 	Inherits@GetsPoisoned: ^GetsPoisoned
 	Inherits@ArcherDemo65: ^ArcherDemo65
-
 	Inherits@Healable: ^Healable
 	Inherits@SnakeStunnable: ^SnakeStunnable
 	Inherits@CanTurnIntoScelett:  ^CanTurnIntoScelett
@@ -599,7 +583,6 @@ VAMP:
 	AutoTargetPriority@Counter1:
 		ValidTargets: Light, Ranged, LightCavalry, Support
 		Priority: 4
-		
 VAMPFLYING:
 	Inherits: ^Helicopter
 	Inherits@GainsExperience: ^GainsExperience
@@ -664,7 +647,6 @@ VAMPFLYING:
 		RequiresCondition: BotTransformHandler
 		IntoActor: vamp
 		ReadyAudio:
-        
 VAMPMAN.Husk:
 	Inherits: ^HelicopterHusk
 	ConditionManager:
@@ -685,7 +667,6 @@ VAMPMAN.Husk:
 		Spins: True
 		Moves: False
 		Explosion: GroundHit
-		
 DEMONHORSE:
 	Inherits: ^Cavalry
 	Inherits@AUTOTARGET: ^AutoTargetGround
@@ -693,7 +674,6 @@ DEMONHORSE:
 	Inherits@GainsExperience: ^GainsExperience
 	Inherits@GetsPoisoned: ^GetsPoisoned
 	Inherits@ArcherDemo65: ^ArcherDemo80
-
 	Inherits@Healable: ^Healable
 	Inherits@SnakeStunnable: ^SnakeSlowable
 	GrantConditionOnDamageState@Slow:
@@ -748,7 +728,7 @@ LICHK:
 	Inherits@AUTOTARGETDEF: ^AutoTargetDefenses
 	Inherits@Healable: ^Healable
 	Inherits@SnakeStunnable: ^SnakeDamagable
-# anti error fix
+	#anti error fix
 	ExternalCondition@archerprone:
 		Condition: archerprone
 	RevealsShroud:
@@ -812,7 +792,6 @@ LICHK:
 		VisualBounds: 26,30,0,-5
 	Targetable@CombatRole:
 		TargetTypes: Spectral
-		
 PLACEHOLDERHANDATTACK:
 	Inherits: ^Plane
 	Interactable:
@@ -848,7 +827,6 @@ PLACEHOLDERHANDATTACK:
 		Name: bombs
 		Weapon: FromBelow
 		LocalOffset: 0,0,-43, 0,100,-43, 0,100,-43
-		
 PLACEHOLDERCOFFIN:
 	Inherits: ^Plane
 	Interactable:
@@ -884,7 +862,6 @@ PLACEHOLDERCOFFIN:
 		Name: bombs
 		InitialAmmo: 1
 		Ammo: 1
-		
 BLOCKER1:
 	Inherits: ^Gravestone
 	Valued:
@@ -908,16 +885,15 @@ BLOCKER1:
 		StartSequence: makec
 		Sequence: idlec
 		RequiresCondition: validc
-# anti error fix
+	#anti error fix
 	ExternalCondition@valida:
 		Condition: valida
-# anti error fix
+	#anti error fix
 	ExternalCondition@validb:
 		Condition: validb
-# anti error fix
+	#anti error fix
 	ExternalCondition@validc:
 		Condition: validc
-		
 BLOCKER2:
 	Inherits: ^Gravestone
 	Valued:
@@ -941,16 +917,15 @@ BLOCKER2:
 		StartSequence: makec
 		Sequence: idlec
 		RequiresCondition: validc
-# anti error fix
+	#anti error fix
 	ExternalCondition@valida:
 		Condition: valida
-# anti error fix
+	#anti error fix
 	ExternalCondition@validb:
 		Condition: validb
-# anti error fix
+	#anti error fix
 	ExternalCondition@validc:
 		Condition: validc
-		
 BLOCKER3:
 	Inherits: ^Gravestone
 	Valued:
@@ -974,16 +949,15 @@ BLOCKER3:
 		StartSequence: makec
 		Sequence: idlec
 		RequiresCondition: validc
-# anti error fix
+	#anti error fix
 	ExternalCondition@valida:
 		Condition: valida
-# anti error fix
+	#anti error fix
 	ExternalCondition@validb:
 		Condition: validb
-# anti error fix
+	#anti error fix
 	ExternalCondition@validc:
 		Condition: validc
-		
 RESSURECT1:
 	Inherits: ^SkeletonSpawn
 	Valued:
@@ -1014,7 +988,6 @@ RESSURECT1:
 		ScanRadius: 10
 	Targetable@CombatRole:
 		TargetTypes: Light
-		
 RESSURECT2:
 	Inherits: ^SkeletonSpawn
 	Valued:
@@ -1045,8 +1018,6 @@ RESSURECT2:
 		ScanRadius: 10
 	Targetable@CombatRole:
 		TargetTypes: Light
-
-		
 RESSURECT3:
 	Inherits: ^SkeletonSpawn
 	Inherits@AUTOTARGETDEF: ^AutoTargetDefenses
@@ -1088,7 +1059,6 @@ RESSURECT3:
 	AutoTargetPriority@Counter2:
 		ValidTargets: RegularCavalry, HeavyCavalry, Defenses
 		Priority: 4
-	
 RESSURECT4:
 	Inherits: ^SkeletonSpawn
 	Valued:
@@ -1133,8 +1103,6 @@ RESSURECT4:
 		ScanRadius: 10
 	Targetable@CombatRole:
 		TargetTypes: Light
-
-		
 SPLITDEAD:
 	Inherits: ^TibTree
 	Tooltip:
@@ -1187,20 +1155,14 @@ SPLITDEAD:
 	#AutoSelectionSize:
 	InvisibleToLiving:
 		Factions: Undead
-		
-		
 COFRESSURECT1:
 	Inherits: RESSURECT1
-	
 COFRESSURECT2:
 	Inherits: RESSURECT2
-	
 COFRESSURECT3:
 	Inherits: RESSURECT3
-	
 COFRESSURECT4:
 	Inherits: RESSURECT4 
-		
 COFSPAWN1:
 	Inherits: ^CoffinAmbush
 	WithSpriteBody:
@@ -1212,7 +1174,6 @@ COFSPAWN1:
 		MoveOffset: 0,1
 		RespawnTime: 200
 		StartDelay: 50
-		
 COFSPAWN2:
 	Inherits: ^CoffinAmbush
 	WithSpriteBody:
@@ -1224,7 +1185,6 @@ COFSPAWN2:
 		MoveOffset: 0,1
 		RespawnTime: 125
 		StartDelay: 50
-		
 COFSPAWN3:
 	Inherits: ^CoffinAmbush
 	WithSpriteBody:
@@ -1236,7 +1196,6 @@ COFSPAWN3:
 		MoveOffset: 1,0
 		RespawnTime: 125
 		StartDelay: 50
-		
 COFSPAWN4:
 	Inherits: ^CoffinAmbush
 	WithSpriteBody:
@@ -1248,7 +1207,6 @@ COFSPAWN4:
 		MoveOffset: -1,0
 		RespawnTime: 125
 		StartDelay: 50
-		
 GSPLACE1A:
 	Inherits: ^Gravestone
 	WithSpriteBody:
@@ -1282,7 +1240,6 @@ GSPLACE1C:
 		Categories: Undead
 	RenderSprites:
 		Image: gstone1
-        
 GSPLACE2A:
 	Inherits: ^Gravestone
 	WithSpriteBody: 
@@ -1349,8 +1306,6 @@ GSPLACE3C:
 		Categories: Undead
 	RenderSprites:
 		Image: gstone3
-        
-		
 CFFPLACE1A:
 	Inherits: ^Gravestone
 	RenderSprites:
@@ -1384,8 +1339,6 @@ CFFPLACE1C:
 		Ammount: 5
 	EditorTilesetFilter:
 		Categories: Undead
-
-        
 SOUL:
 	Inherits@1: ^ExistsInWorld
 	Inherits@3: ^SpriteActor
@@ -1435,7 +1388,6 @@ SOUL:
 			Loot: 1
 			Beach: 1
 			Corruption: 1
-        
 SOULS:
 	Inherits@1: ^ExistsInWorld
 	Inherits@3: ^SpriteActor

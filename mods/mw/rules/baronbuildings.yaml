@@ -1,4 +1,3 @@
-		
 ARMORYNOD:
 	Inherits: ^MWBaseBuilding
 	Inherits@Hitshape: ^2x2Shape
@@ -79,7 +78,6 @@ ARMORYNOD:
 	WithRangeCircle: 
 		ValidStances: Ally, Neutral
 		Range: 5c0
-	
 XLTNT1:
 	Inherits: ^MWBaseBuilding
 	Inherits@Hitshape: ^2x2Shape
@@ -147,12 +145,10 @@ XLTNT2:
 	Inherits: XLTNT1
 	RenderSprites:
 		Image: xltnt2
-		
 XLTNT3:
 	Inherits: XLTNT1
 	RenderSprites:
 		Image: xltnt3
-				
 XLTNTUNI:
 	Inherits: XLTNT1
 	RenderSprites:
@@ -161,7 +157,6 @@ XLTNTUNI:
 		Ammount: 9
 		SpawnOffset: 256,768,0
 		ExitCell: 1,2
- 
 NODNUKE.scaff:
 	Inherits: ^MWBaseBuilding
 	Inherits@Hitshape: ^2x1Shape
@@ -182,16 +177,16 @@ NODNUKE.scaff:
 		DeathSequencePalette: raplayer
 		RequiresCondition: validd
 		DeathSequence: deadd
-# anti error fix
+	#anti error fix
 	ExternalCondition@valida:
 		Condition: valida
-# anti error fix
+	#anti error fix
 	ExternalCondition@validb:
 		Condition: validb
-# anti error fix
+	#anti error fix
 	ExternalCondition@validc:
 		Condition: validc
-# anti error fix
+	#anti error fix
 	ExternalCondition@validd:
 		Condition: validd
 	RenderSprites:
@@ -272,14 +267,12 @@ NODNUKE.scaff:
 	EditorTilesetFilter:
 		ExcludeTilesets: TEMPERATE, SNOW, DESERT, WINTER
 		Categories: 
-        
 NODNUKE:
 	Inherits: NODNUKE.scaff
 	RenderSprites:
 		PlayerPalette: raplayer
 		Image: nodnuke
 	-Buildable:
-	
 NTENT1:
 	Inherits: ^MWBaseBuilding
 	Inherits@Hitshape: ^2x1Shape
@@ -323,7 +316,6 @@ NTENT1:
 		Ammount: 3
 		SpawnOffset: 256,811,0
 		ExitCell: 1,1
-		
 NTENT2:
 	Inherits: NTENT1
 	RenderSprites:
@@ -357,7 +349,6 @@ NTENT4:
 	WithSpriteBody:
 		Sequence: idled
 		StartSequence: maked
- 		
 NODPROC:
 	Inherits: ZEROPROC
 	RenderSprites:
@@ -395,7 +386,6 @@ NODPROC:
 		Bounds: 48,70,0,-8
 	SelectionDecorations:
 		VisualBounds: 48,70,0,-8
-
 HANDNEW:
 	Inherits: ^MWBaseBuilding
 	Inherits@Hitshape: ^2x2Shape
@@ -452,7 +442,6 @@ HANDNEW:
 		DockAngle: 72
 		DockOffset: 0,3
 		TickRate: 15
-
 NODSTALL:
 	Inherits: ^MWBaseBuilding
 	Inherits@Hitshape: ^4x2Shape
@@ -533,7 +522,6 @@ NODSTALL:
 		DockAngle: 72
 		DockOffset: 1,2
 		TickRate: 15
-
 CASTLE:
 	Inherits: ^MWBaseBuilding
 	Inherits@Hitshape: ^3x2Shape
@@ -599,7 +587,6 @@ CASTLE:
 		Weapons: LargeWood1, LargeWood1, LargeStone1, LargeStone1
 		Pieces: 1, 2
 		Range: 1c0, 5c0
-
 WORKSHOPNOD:
 	Inherits: ^MWBaseBuilding
 	Inherits@Hitshape: ^3x2Shape

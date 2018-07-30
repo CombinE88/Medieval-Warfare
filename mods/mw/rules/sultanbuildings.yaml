@@ -1,10 +1,8 @@
-
 CSTLWLLSUL:
 	Inherits: CSTLWLL
 	RenderSprites:
 		PlayerPalette: sultanplayer
 		Image: sulwll
-
 SULGTW:
 	Inherits: ^MWDefense
 	Inherits@AUTOTARGET: ^AutoTargetAll
@@ -291,7 +289,6 @@ SULGTW:
 	ExternalCondition@placeholder:  # Anti error placeholder
 		Condition: Construct
 		TotalCap: 50
-
 SULPLUG1:
 	AlwaysVisible:
 	Interactable:
@@ -314,7 +311,6 @@ SULPLUG1:
 		Cost: 400
 	Plug:
 		Type: sulgtw.archers
-		
 SULPLUG3:
 	AlwaysVisible:
 	Interactable:
@@ -337,7 +333,6 @@ SULPLUG3:
 		Cost: 1000
 	Plug:
 		Type: sulgtw.djinn
-		
 SULPLUG4:
 	AlwaysVisible:
 	Interactable:
@@ -360,10 +355,7 @@ SULPLUG4:
 		Cost: 400
 	Plug:
 		Type: sulgtw.static
-
-		
 #Buildings		
-
 SULLODGE:
 	Inherits: ^MWBaseBuilding
 	Inherits@Hitshape: ^2x1Shape
@@ -423,7 +415,6 @@ SULLODGE:
 		ReturnOnDeath: true
 	Targetable@Lumber:
 		TargetTypes: LumberShack
-
 SULHALL:
 	Inherits: ^MWBaseBuilding
 	Inherits@Hitshape: ^3x2Shape
@@ -467,7 +458,6 @@ SULHALL:
 		FindRadius: 100
 	IsTownhall:
 		Percent: 60
-	
 SULMINARET:
 	Inherits: ^MWBaseBuilding
 	Inherits@Hitshape: ^1x1Shape
@@ -503,7 +493,6 @@ SULMINARET:
 		Range: 1c0, 5c0
 	IsTownhall:
 		Percent: 40
-		
 SULARRAY:
 	Inherits: ^MWBaseBuilding
 	Inherits@Hitshape: ^3x2Shape
@@ -543,7 +532,6 @@ SULARRAY:
 	BaseProvider:
 		Cooldown: 25
 		Range: 8c0
-		
 SULNUK2:
 	Inherits: ^MWBaseBuilding
 	Inherits@Hitshape: ^2x2Shape
@@ -609,7 +597,6 @@ SULNUK2:
 		Ammount: 18
 		SpawnOffset: -469,853,0
 		ExitCell: 1,2
- 
 SULNUKE:
 	Inherits: ^MWBaseBuilding
 	Inherits@Hitshape: ^2x2Shape
@@ -663,7 +650,6 @@ SULNUKE:
 		Ammount: 7
 		SpawnOffset: 0,426,0
 		ExitCell: 1,2
-		
 SULBARR:
 	Inherits: ^MWBaseBuilding
 	Inherits@Hitshape: ^3x2Shape
@@ -719,7 +705,6 @@ SULBARR:
 		DockAngle: 72
 		DockOffset: 0,2
 		TickRate: 15
-		
 SULMYSTIC:
 	Inherits: ^MWBaseBuilding
 	Inherits@Hitshape: ^3x2Shape
@@ -776,7 +761,6 @@ SULMYSTIC:
 		DockAngle: 72
 		DockOffset: 0,2
 		TickRate: 15
-		
 SULCASTLE:
 	Inherits: ^MWBaseBuilding
 	Inherits@Hitshape: ^3x3Shape
@@ -927,7 +911,6 @@ SULCASTLE:
 		IncomingSpeechNotification: 
 		IncomingSound: 
 		RequiresCondition: Tower4build
-		
 SULTOW1:
 	AlwaysVisible:
 	Interactable:
@@ -947,8 +930,6 @@ SULTOW1:
 		Queue: MBuilding.SUL
 		BuildLimit: 1
 		BuildDuration: 1200
-	
-		
 SULTOW2:
 	AlwaysVisible:
 	Interactable:
@@ -968,7 +949,6 @@ SULTOW2:
 		Queue: MBuilding.SUL
 		BuildLimit: 1
 		BuildDuration: 1400
-		
 SULTOW3:
 	AlwaysVisible:
 	Interactable:
@@ -990,7 +970,6 @@ SULTOW3:
 		Queue: MBuilding.SUL
 		BuildLimit: 1
 		BuildDuration: 1300
-		
 SULTOW4:
 	AlwaysVisible:
 	Interactable:
@@ -1014,7 +993,6 @@ SULTOW4:
 		Queue: MBuilding.SUL
 		BuildLimit: 1
 		BuildDuration: 2500
-		
 SULMILL:
 	Inherits: ^MWBaseBuilding
 	Inherits@Hitshape: ^2x2Shape
@@ -1092,7 +1070,6 @@ SULMILL:
 		MoveOffset: 0,2
 		RespawnTime: 750
 		FindRadius: 100
-
 SULFIX:
 	Inherits: ^MWBaseBuilding
 	Inherits@Hitshape: ^3x2Shape
@@ -1201,7 +1178,6 @@ SULFIX:
 		Type: Workshop
 		Range: 4c0
 		Color: b50909
-		
 SULCNSHMBR:
 	Inherits: ^MWBaseBuilding
 	Inherits@Hitshape: ^3x2Shape
@@ -1238,7 +1214,6 @@ SULCNSHMBR:
 	CashTrickler:
 		Interval: 25
 		Amount: 5
-	
 SULREF:
 	Inherits: ^MWBaseBuilding
 	HitShape:
@@ -1295,4 +1270,3 @@ SULREF:
 		Weapons: LargeWood1, LargeStone1, DebrUtility1, DebrUtility2, DebrUtility3
 		Pieces: 1, 2
 		Range: 1c0, 5c0
-	

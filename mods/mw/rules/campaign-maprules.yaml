@@ -13,7 +13,6 @@ World:
 	MapOptions:
 		ShortGameLocked: True
 		ShortGameEnabled: False
-
 Player:
 	-ConquestVictoryConditions:
 	MissionObjectives:

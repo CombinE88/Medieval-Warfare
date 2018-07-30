@@ -1,4 +1,3 @@
-  
 ^AutoTargetGround:
 	AutoTarget:
 	AutoTargetPriority@DEFAULT:
@@ -9,7 +8,6 @@
 		ValidTargets: Peasant
 		InvalidTargets: NoAutoTarget, Wall
 		Priority: 1
-        
 ^AutoTargetDefenses:
 	AutoTargetPriority@Defenses:
 		ValidTargets: Defense
@@ -19,13 +17,11 @@
 		ValidTargets: Structure
 		InvalidTargets: NoAutoTarget, Wall
 		Priority: 1
-        
 ^AutoTargetAir:
 	AutoTarget:
 	AutoTargetPriority@DEFAULT:
 		ValidTargets: Air
 		InvalidTargets: NoAutoTarget, Wall
-
 ^AutoTargetAll:
 	AutoTarget:
 	AutoTargetPriority@DEFAULT:
@@ -36,7 +32,6 @@
 		ValidTargets: Peasant
 		InvalidTargets: NoAutoTarget, Wall
 		Priority: 1
-		
 ^AutoTargetTalking:
 	AutoTarget:
 		AttackAnythingCondition: stance-attackanything
@@ -46,7 +41,6 @@
 	AutoTargetPriority@ATTACKANYTHING:
 		RequiresCondition: stance-attackanything
 		ValidTargets: Talkbacks, Talkable
-		
 ^AutoTargetGrowntrees:
 	AutoTarget:
 		AttackAnythingCondition: stance-attackanything

@@ -43,8 +43,6 @@ SPLIT2:
 		DockAngle: 96
 		IsDragRequired: false
 		FaceTowardsCenter: true
-
-
 SPLIT3:
 	Inherits: ^TibTree
 	RenderSprites:
@@ -104,7 +102,6 @@ SPLIT3:
 	WithColoredOverlay@SpawnCorruption:
 		Palette: disabled
 		RequiresCondition: SpawnCorruption
-
 SPLITBLUE:
 	Inherits: ^TibTree
 	RenderSprites:
@@ -154,7 +151,6 @@ SPLITBLUE:
 		DockAngle: 96
 		IsDragRequired: false
 		FaceTowardsCenter: true
-		
 SPLIT4:
 	Inherits: SPLIT3
 	Tooltip:
@@ -205,7 +201,6 @@ SPLIT4:
 	WithColoredOverlay@SpawnCorruption:
 		Palette: disabled
 		RequiresCondition: SpawnCorruption
-		
 SPLIT4B:
 	Inherits: SPLIT3
 	Tooltip:
@@ -256,7 +251,6 @@ SPLIT4B:
 	WithColoredOverlay@SpawnCorruption:
 		Palette: disabled
 		RequiresCondition: SpawnCorruption
-		
 SPLIT5:
 	Inherits: SPLIT3
 	HitShape:
@@ -326,7 +320,6 @@ SPLIT5:
 		DockAngle: 96
 		IsDragRequired: false
 		FaceTowardsCenter: true
-		
 SPLIT7:
 	Inherits: SPLIT3
 	RenderSprites:
@@ -410,7 +403,6 @@ SPLIT7:
 		FaceTowardsCenter: true
 	ExternalCondition@SpawnCorruption:
 		Condition: SpawnCorruption
-		
 SPLIT8:
 	Inherits: SPLIT7
 	RenderSprites:
@@ -491,46 +483,37 @@ SPLIT8:
 		DockAngle: 96
 		FaceTowardsCenter: true
 		IsDragRequired: false
-
-
 ROCK1:
 	Inherits: ^Rock
 	Building:
 		Footprint: __ xx
-
 ROCK2:
 	Inherits: ^Rock
 	Building:
 		Footprint: xx_
 		Dimensions: 3,1
-
 ROCK3:
 	Inherits: ^Rock
-
 ROCK4:
 	Inherits: ^Rock
 	Building:
 		Footprint: x
 		Dimensions: 1,1
-
 ROCK5:
 	Inherits: ^Rock
 	Building:
 		Footprint: x_
 		Dimensions: 2,1
-
 ROCK6:
 	Inherits: ^Rock
 	Building:
 		Footprint: ___ xxx
 		Dimensions: 3,2
-
 ROCK7:
 	Inherits: ^Rock
 	Building:
 		Footprint: xxxx
 		Dimensions: 4,1
-
 T01:
 	Inherits: ^Tree
 	EditorTilesetFilter:
@@ -542,7 +525,6 @@ T01:
 		HuntTypes: TreeToChop
 	Targetable@Choppable:
 		TargetTypes: ChoppableTree
-
 T02:
 	Inherits: ^Tree
 	EditorTilesetFilter:
@@ -554,9 +536,6 @@ T02:
 		HuntTypes: TreeToChop
 	Targetable@Choppable:
 		TargetTypes: ChoppableTree
-		
-
-
 T03:
 	Inherits: ^Tree
 	EditorTilesetFilter:
@@ -568,14 +547,10 @@ T03:
 		HuntTypes: TreeToChop
 	Targetable@Choppable:
 		TargetTypes: ChoppableTree
-
-
 T04:
 	Inherits: ^Tree
 	EditorTilesetFilter:
 		RequireTilesets: DESERT
-
-
 T05:
 	Inherits: ^Tree
 	EditorTilesetFilter:
@@ -587,7 +562,6 @@ T05:
 		HuntTypes: TreeToChop
 	Targetable@Choppable:
 		TargetTypes: ChoppableTree
-
 T06:
 	Inherits: ^Tree
 	EditorTilesetFilter:
@@ -599,22 +573,18 @@ T06:
 		HuntTypes: TreeToChop
 	Targetable@Choppable:
 		TargetTypes: ChoppableTree
-		
 T06A:
 	Inherits: ^Tree
 	EditorTilesetFilter:
 		ExcludeTilesets: DESERT
-		
 T06B:
 	Inherits: ^Tree
 	EditorTilesetFilter:
 		ExcludeTilesets: DESERT
-
 T07:
 	Inherits: ^Tree
 	EditorTilesetFilter:
 		ExcludeTilesets: DESERT
-
 T08:
 	Inherits: ^Tree
 	HuntableDeer@LootableTree:
@@ -624,14 +594,10 @@ T08:
 		HuntTypes: TreeToChop
 	Targetable@Choppable:
 		TargetTypes: ChoppableTree
-
-
 T09:
 	Inherits: ^Tree
 	EditorTilesetFilter:
 		RequireTilesets: DESERT
-
-
 T10:
 	Inherits: ^Tree
 	EditorTilesetFilter:
@@ -643,7 +609,6 @@ T10:
 		HuntTypes: TreeToChop
 	Targetable@Choppable:
 		TargetTypes: ChoppableTree
-		
 T11:
 	Inherits: ^Tree
 	EditorTilesetFilter:
@@ -666,7 +631,6 @@ T12:
 		HuntTypes: TreeToChop
 	Targetable@Choppable:
 		TargetTypes: ChoppableTree
-
 T13:
 	Inherits: ^Tree
 	EditorTilesetFilter:
@@ -678,8 +642,6 @@ T13:
 		HuntTypes: TreeToChop
 	Targetable@Choppable:
 		TargetTypes: ChoppableTree
-
-
 T14:
 	Inherits: ^Tree
 	EditorTilesetFilter:
@@ -691,7 +653,6 @@ T14:
 		HuntTypes: TreeToChop
 	Targetable@Choppable:
 		TargetTypes: ChoppableTree
-
 T15:
 	Inherits: ^Tree
 	EditorTilesetFilter:
@@ -703,8 +664,6 @@ T15:
 		HuntTypes: TreeToChop
 	Targetable@Choppable:
 		TargetTypes: ChoppableTree
-
-
 T16:
 	Inherits: ^Tree
 	EditorTilesetFilter:
@@ -716,7 +675,6 @@ T16:
 		HuntTypes: TreeToChop
 	Targetable@Choppable:
 		TargetTypes: ChoppableTree
-
 T17:
 	Inherits: ^Tree
 	EditorTilesetFilter:
@@ -728,7 +686,6 @@ T17:
 		HuntTypes: TreeToChop
 	Targetable@Choppable:
 		TargetTypes: ChoppableTree
-
 T17A:
 	Inherits: ^Tree
 	EditorTilesetFilter:
@@ -777,9 +734,6 @@ T18C:
 		HuntTypes: TreeToChop
 	Targetable@Choppable:
 		TargetTypes: ChoppableTree
-
-
-
 TC01:
 	Inherits: ^Tree
 	Building:
@@ -794,7 +748,6 @@ TC01:
 		HuntTypes: TreeToChop
 	Targetable@Choppable:
 		TargetTypes: ChoppableTree
-
 TC02:
 	Inherits: ^Tree
 	Building:
@@ -809,7 +762,6 @@ TC02:
 		HuntTypes: TreeToChop
 	Targetable@Choppable:
 		TargetTypes: ChoppableTree
-
 TC03:
 	Inherits: ^Tree
 	Building:
@@ -820,7 +772,6 @@ TC03:
 	Explodes@Tib:
 		Weapon: LeaveWoodXL
 		EmptyWeapon: LeaveWoodXL
-
 TC04:
 	Inherits: ^Tree
 	Building:
@@ -831,7 +782,6 @@ TC04:
 	Explodes@Tib:
 		Weapon: LeaveWoodXL
 		EmptyWeapon: LeaveWoodXL
-
 TC05:
 	Inherits: ^Tree
 	Building:

@@ -61,7 +61,6 @@ HQNEWGDI:
 		CircleSequence: circles
 		OrderName: ArrowsPowerInfoOrder
 	SupportPowerChargeBar:  
-
 ARMORYGDI:
 	Inherits: ^MWBaseBuilding
 	Inherits@Hitshape: ^2x2Shape
@@ -139,7 +138,6 @@ ARMORYGDI:
 	WithRangeCircle: 
 		ValidStances: Ally, Neutral
 		Range: 5c0
-		
 NUK2NEW:
 	Inherits: ^MWBaseBuilding
 	Inherits@Hitshape: ^2x2Shape
@@ -203,7 +201,6 @@ NUK2NEW:
 		Ammount: 11
 		SpawnOffset: 128,811,0
 		ExitCell: 1,2
-		
 NUKXL:
 	Inherits: ^MWBaseBuilding
 	Inherits@Hitshape: ^3x2Shape
@@ -267,7 +264,6 @@ NUKXL:
 		Ammount: 20
 		SpawnOffset: 938,725,0
 		ExitCell: 2,2
- 
 NUKENEW:
 	Inherits: ^MWBaseBuilding
 	Inherits@Hitshape: ^2x2Shape
@@ -321,7 +317,6 @@ NUKENEW:
 		Ammount: 6
 		SpawnOffset: -384,597,0
 		ExitCell: 0,2
-
 ZEROPROC:
 	Inherits: ^MWBaseBuilding
 	Inherits@Hitshape: ^2x2Shape
@@ -395,7 +390,6 @@ ZEROPROC:
 		Bounds: 48,70,0,-10
 	SelectionDecorations:
 		VisualBounds: 48,70,0,-10
-
 BARRNEW:
 	Inherits: ^MWBaseBuilding
 	Inherits@Hitshape: ^2x2Shape
@@ -454,7 +448,6 @@ BARRNEW:
 		DockAngle: 72
 		DockOffset: 0,2
 		TickRate: 15
-
 STALL:
 	Inherits: ^MWBaseBuilding
 	Inherits@Hitshape: ^3x2Shape
@@ -534,7 +527,6 @@ STALL:
 		DockAngle: 72
 		DockOffset: 1,2
 		TickRate: 15
-
 CASTLE2:
 	Inherits: ^MWBaseBuilding
 	Inherits@Hitshape: ^3x2Shape
@@ -601,7 +593,6 @@ CASTLE2:
 		Weapons: LargeWood1, LargeWood1, LargeStone1, LargeStone1
 		Pieces: 1, 2
 		Range: 1c0, 5c0
-
 WORKSHOPGDI:
 	Inherits: ^MWBaseBuilding
 	Inherits@Hitshape: ^3x2Shape
