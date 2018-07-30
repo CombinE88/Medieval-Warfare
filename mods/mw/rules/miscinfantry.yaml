@@ -142,11 +142,7 @@ E8FARMER:
 		Name: Farmer
 	Mobile:
 		Speed: 60
-		TerrainSpeeds:
-			Crops: 100
-				PathingCost: 0
-			Wood: 100
-				PathingCost: 0
+		Locomotor: farmer
 	Health:
 		HP: 11000
 	RenderSprites:

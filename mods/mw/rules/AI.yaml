@@ -40,7 +40,7 @@ Player:
 			EarlyUpgrades: seal1, seal2, zigg2upgrade
 			Gravestones: gstone1, gstone2, gstone3, coffin, obelisk, garg, blocker1, blocker2, blocker3
 		FarmFields: Crops, Grains, Corn
-		OrePatches: Iron, Gold#
+		OrePatches: Iron, Gold
 		AcolyteWorkerRatio: 33
 		BuildingLimits:
 			zeroproc.scaff: 4
@@ -55,7 +55,6 @@ Player:
 			barrnew.scaff: 2
 			handnew.scaff: 2
 			sulbarr.scaff: 2
-			#
 			hqnewgdi.scaff: 1
 			armorynod.scaff: 1
 			castle.scaff: 1
@@ -65,49 +64,24 @@ Player:
 			sultow2: 1
 			sultow3: 1
 			sultow4: 1
-			#
 			gtwnew.scaff: 3
 			gunnew.scaff: 3
 			samnew.scaff: 3
 			sulgtw.scaff: 3
 			tribu.scaff: 4
 			bato.scaff: 5
-			#
 			stall.scaff: 2
 			nodstall.scaff: 2
 			sulmystic.scaff:2
-			#
 			workshopgdi.scaff: 1
 			workshopnod.scaff: 1
 			sulfix.scaff: 1
-			#
-			#nukenew.scaff: 4
-			#sulnuke.scaff: 4
-			#nodnuke: 8
-			#
-			#nuk2new.scaff: 4
-			#sulnuk2.scaff: 7
-			#nodnuk2.scaff: 4
-			#xltntuni.scaff: 4
-			#xltnt1: 5
-			#xltnt2: 5
-			#xltnt3: 5
-			#
-			#nukxl.scaff: 3
-			#
 			schafott.scaff: 1
 			herbalist.scaff: 1
 			sulminaret.scaff: 1
 			townhall.scaff: 1
 			sulhall.scaff: 1
-			#
-			# Undead Stuff
-			#
-			#
-			#obelisk.penta: 4
-			#garg.penta: 4
 			sppool.penta: 2
-			#crypt.penta: 10
 			mauso.penta: 2
 			libra.penta: 1
 			tomb.penta: 2
@@ -118,19 +92,8 @@ Player:
 			seal5: 1
 			zigg2upgrade: 1
 			zigg3upgrade: 1
-			#
-			# Undead Stuff
-			#
-			#
 		BuildingFractions:
-			#
-			# Undead Stuff
-			#
-			#
-			#obelisk.penta: 10%
-			#garg.penta: 20%
 			sppool.penta: 100%
-			#crypt.penta: 200%
 			mauso.penta: 50%
 			libra.penta: 50%
 			tomb.penta: 50%
@@ -141,10 +104,6 @@ Player:
 			seal5: 100%
 			zigg2upgrade: 600%
 			zigg3upgrade: 600%
-			#
-			# Undead Stuff
-			#
-			#
 			lodge.scaff: 200%
 			ljackb.scaff: 200%
 			sullodge.scaff: 200%
@@ -153,25 +112,13 @@ Player:
 			sulmill.scaff: 200%
 			nodproc.scaff: 200%
 			sulcnshmbr.scaff: 500%
-			#
 			gtwnew.scaff: 10%
 			gunnew.scaff: 10%
 			samnew.scaff: 5%
 			sulgtw.scaff: 10%
-			#
-			#nukenew.scaff: 100%
-			#sulnuke.scaff: 100%
-			#nodnuke: 100%
-			#nuk2new.scaff: 400%
-			#sulnuk2.scaff: 400%
-			#nodnuk2.scaff: 400%
-			#nukxl.scaff: 1000%
-			#xltntuni.scaff: 400%
-			#
 			barrnew.scaff: 200%
 			sulbarr.scaff: 200%
 			handnew.scaff: 200%
-			#
 			hqnewnod.scaff: 50%
 			hqnewgdi.scaff: 50%
 			armorygdi.scaff: 50%
@@ -180,22 +127,17 @@ Player:
 			sultow2: 50%
 			sultow3: 50%
 			sultow4: 50%
-			#
 			stall.scaff: 50%
 			sulmystic.scaff: 50%
 			nodstall.scaff: 200%
-			#
 			tribu.scaff: 50%
 			bato.scaff: 50%
-			#
 			castle2.scaff: 50%
 			castle.scaff: 50%
 			sulcastle.scaff: 50%
-			#
 			workshopgdi.scaff: 50%
 			workshopnod.scaff: 50%
 			sulfix.scaff: 50%
-			#
 			schafott.scaff: 70%
 			herbalist.scaff: 70%
 			sulminaret.scaff: 70%
@@ -238,10 +180,6 @@ Player:
 			wrbln: 10%
 			newcomm: 50%
 			rmbonew: 50%
-			#
-			# Undead Stuff
-			#
-			#
 			preycolyte: 500%
 			undead1: 100%
 			undead5: 100%
@@ -255,274 +193,233 @@ Player:
 			vampflying: 10%
 			demonhorse: 100%
 			LichK: 70%
-			#
-			# Undead Stuff
-			#
-			#
 		UnitLimits:
 			preycolyte: 25
 			eharvxl: 6
 			acolytec: 9
 		SquadSize: 15
-		SupportPowerDecision@Airstrike:
-			OrderName: CorpsePowerInfoOrder
-			MinimumAttractiveness: 2000
-			Consideration@1:
-				Against: Enemy
-				Types: Vehicle, Infantry
-				Attractiveness: 3
-				TargetMetric: Value
-				CheckRadius: 2c0
-			Consideration@2:
-				Against: Ally
-				Types: Ground, Water
-				Attractiveness: -20
- 				TargetMetric: Value
- 				CheckRadius: 2c0
- 			Consideration@3:
- 				Against: Enemy
- 				Types: Structure
- 				Attractiveness: 1
-				TargetMetric: Value
-				CheckRadius: 2c0
-		SupportPowerDecision@FireArrows:
-			OrderName: ArrowsPowerInfoOrder
-			MinimumAttractiveness: 2000
-			Consideration@1:
-				Against: Enemy
-				Types: Vehicle, Infantry
-				Attractiveness: 3
-				TargetMetric: Value
-				CheckRadius: 2c0
-			Consideration@2:
-				Against: Ally
-				Types: Ground, Water
-				Attractiveness: -20
- 				TargetMetric: Value
- 				CheckRadius: 2c0
- 			Consideration@3:
- 				Against: Enemy
- 				Types: Structure
- 				Attractiveness: 1
-				TargetMetric: Value
-				CheckRadius: 2c0
-		SupportPowerDecision@Thopter:
-			OrderName: StrangePowerInfoOrder
-			MinimumAttractiveness: 100
-			Consideration@1:
-				Against: Enemy
-				Types: Structure
-				Attractiveness: 3
-				TargetMetric: Value
-				CheckRadius: 2c0
-			Consideration@2:
-				Against: Ally
-				Types: Ground, Water
-				Attractiveness: -20
- 				TargetMetric: Value
- 				CheckRadius: 2c0
- 			Consideration@3:
- 				Against: Enemy
- 				Types: Structure
- 				Attractiveness: 1
-				TargetMetric: Value
-				CheckRadius: 2c0
-		SupportPowerDecision@WoodHorse:
-			OrderName: TrojanPowerInfoOrder
-			MinimumAttractiveness: 100
-			Consideration@1:
-				Against: Enemy
-				Types: Structure
-				Attractiveness: 3
-				TargetMetric: Value
-				CheckRadius: 2c0
-			Consideration@2:
-				Against: Ally
-				Types: Ground, Water
-				Attractiveness: -20
- 				TargetMetric: Value
- 				CheckRadius: 2c0
- 			Consideration@3:
- 				Against: Enemy
- 				Types: Structure
- 				Attractiveness: 1
-				TargetMetric: Value
-				CheckRadius: 2c0
-		SupportPowerDecision@IonCannonPower:
-			OrderName: LightningPowerInfoOrder
-			MinimumAttractiveness: 1000
-			FineScanRadius: 2
-			Consideration@1:
-				Against: Enemy
-				Types: Air, Tank, Vehicle, Infantry, Water
-				Attractiveness: 4
-				TargetMetric: Value
-				CheckRadius: 2c0
-			Consideration@2:
-				Against: Enemy
-				Types: Structure
-				Attractiveness: 3
-				TargetMetric: Value
-				CheckRadius: 2c0
-			Consideration@3:
-				Against: Ally
-				Types: Ground, Water
-				Attractiveness: -20
- 				TargetMetric: Value
- 				CheckRadius: 2c0
- 			Consideration@4:
- 				Against: Enemy
- 				Types: Structure
- 				Attractiveness: 1
-				TargetMetric: Value
-				CheckRadius: 3c0
-		SupportPowerDecision@NukePower:
-			OrderName: CannonPowerInfoOrder
-			MinimumAttractiveness: 3000
-			Consideration@1:
-				Against: Enemy
-				Types: Structure
-				Attractiveness: 3
-				TargetMetric: Value
-				CheckRadius: 2c0
-			Consideration@2:
-				Against: Ally
-				Types: Ground, Water
-				Attractiveness: -20
- 				TargetMetric: Value
- 				CheckRadius: 2c0
- 			Consideration@3:
- 				Against: Enemy
- 				Types: Structure
- 				Attractiveness: 1
-				TargetMetric: Value
-				CheckRadius: 7c0
-		SupportPowerDecision@Spear:
-			OrderName: SpearsPowerInfoOrder
-			MinimumAttractiveness: 2000
-			Consideration@1:
-				Against: Enemy
-				Types: Vehicle, Infantry
-				Attractiveness: 3
-				TargetMetric: Value
-				CheckRadius: 2c0
-			Consideration@2:
-				Against: Ally
-				Types: Ground, Water
-				Attractiveness: -20
- 				TargetMetric: Value
- 				CheckRadius: 2c0
- 			Consideration@3:
- 				Against: Enemy
- 				Types: Structure
- 				Attractiveness: 1
-				TargetMetric: Value
-				CheckRadius: 2c0
-		SupportPowerDecision@Mortar:
-			OrderName: MortarInfoOrder
-			MinimumAttractiveness: 100
-			Consideration@1:
-				Against: Enemy
-				Types: Structure
-				Attractiveness: 3
-				TargetMetric: Value
-				CheckRadius: 2c0
-			Consideration@2:
-				Against: Ally
-				Types: Ground, Water
-				Attractiveness: -20
- 				TargetMetric: Value
- 				CheckRadius: 2c0
- 			Consideration@3:
- 				Against: Enemy
- 				Types: Structure
- 				Attractiveness: 1
-				TargetMetric: Value
-				CheckRadius: 2c0
-		SupportPowerDecision@Tornado:
-			OrderName: TornadoPowerInfoOrder
-			MinimumAttractiveness: 3000
-			Consideration@1:
-				Against: Enemy
-				Types: Structure
-				Attractiveness: 3
-				TargetMetric: Value
-				CheckRadius: 2c0
-			Consideration@2:
-				Against: Ally
-				Types: Ground, Water
-				Attractiveness: -20
- 				TargetMetric: Value
- 				CheckRadius: 2c0
- 			Consideration@3:
- 				Against: Enemy
- 				Types: Structure
- 				Attractiveness: 1
-				TargetMetric: Value
-				CheckRadius: 7c0
-		SupportPowerDecision@Graveyard:
-			OrderName: GraveyardPowerInfoOrder
-			MinimumAttractiveness: 3000
-			Consideration@1:
-				Against: Enemy
-				Types: Vehicle, Infantry
-				Attractiveness: 3
-				TargetMetric: Value
-				CheckRadius: 2c0
-			Consideration@2:
-				Against: Ally
-				Types: Ground, Water
-				Attractiveness: -20
- 				TargetMetric: Value
- 				CheckRadius: 2c0
- 			Consideration@3:
- 				Against: Enemy
- 				Types: Structure
- 				Attractiveness: 1
-				TargetMetric: Value
-				CheckRadius: 7c0
-		SupportPowerDecision@HandsFromBelow:
-			OrderName: HandsBelowPowerInfoOrder
-			MinimumAttractiveness: 2000
-			Consideration@1:
-				Against: Enemy
-				Types: Vehicle, Infantry
-				Attractiveness: 3
-				TargetMetric: Value
-				CheckRadius: 2c0
-			Consideration@2:
-				Against: Ally
-				Types: Ground, Water
-				Attractiveness: -20
- 				TargetMetric: Value
- 				CheckRadius: 2c0
- 			Consideration@3:
- 				Against: Enemy
- 				Types: Structure
- 				Attractiveness: 1
-				TargetMetric: Value
-				CheckRadius: 2c0
-		SupportPowerDecision@AmbushCoffins:
-			OrderName: BelowCoffinPowerInfoOrder
-			MinimumAttractiveness: 500
-			Consideration@1:
-				Against: Enemy
-				Types: Structure
-				Attractiveness: 3
-				TargetMetric: Value
-				CheckRadius: 2c0
-			Consideration@2:
-				Against: Ally
-				Types: Ground, Water
-				Attractiveness: -20
- 				TargetMetric: Value
- 				CheckRadius: 2c0
- 			Consideration@3:
- 				Against: Enemy
- 				Types: Structure
- 				Attractiveness: 1
-				TargetMetric: Value
-				CheckRadius: 2c0
+		SupportPowerDecisions:
+			Airstrike:
+				OrderName: CorpsePowerInfoOrder
+				MinimumAttractiveness: 2000
+				Consideration@1:
+					Against: Enemy
+					Types: Vehicle, Infantry
+					Attractiveness: 3
+					TargetMetric: Value
+					CheckRadius: 2c0
+				Consideration@2:
+					Against: Ally
+					Types: Ground, Water
+					Attractiveness: -20
+					TargetMetric: Value
+					CheckRadius: 2c0
+				Consideration@3:
+					Against: Enemy
+			Airstrike@FireArrows:
+				OrderName: ArrowsPowerInfoOrder
+				MinimumAttractiveness: 2000
+				Consideration@1:
+					Against: Enemy
+					Types: Vehicle, Infantry
+					Attractiveness: 3
+					TargetMetric: Value
+					CheckRadius: 2c0
+				Consideration@2:
+					Against: Ally
+					Types: Ground, Water
+					Attractiveness: -20
+					TargetMetric: Value
+					CheckRadius: 2c0
+				Consideration@3:
+					Against: Enemy
+			Airstrike@SpearsPower:
+				OrderName: SpearsPowerInfoOrder
+				MinimumAttractiveness: 2000
+				Consideration@1:
+					Against: Enemy
+					Types: Vehicle, Infantry
+					Attractiveness: 3
+					TargetMetric: Value
+					CheckRadius: 2c0
+				Consideration@2:
+					Against: Ally
+					Types: Ground, Water
+					Attractiveness: -20
+					TargetMetric: Value
+					CheckRadius: 2c0
+				Consideration@3:
+					Against: Enemy
+			Airstrike@GraveyardPower:
+				OrderName: GraveyardPowerInfoOrder
+				MinimumAttractiveness: 2000
+				Consideration@1:
+					Against: Enemy
+					Types: Vehicle, Infantry
+					Attractiveness: 3
+					TargetMetric: Value
+					CheckRadius: 2c0
+				Consideration@2:
+					Against: Ally
+					Types: Ground, Water
+					Attractiveness: -20
+					TargetMetric: Value
+					CheckRadius: 2c0
+				Consideration@3:
+					Against: Enemy
+			Airstrike@HandsBelowPower:
+				OrderName: HandsBelowPowerInfoOrder
+				MinimumAttractiveness: 2000
+				Consideration@1:
+					Against: Enemy
+					Types: Vehicle, Infantry
+					Attractiveness: 3
+					TargetMetric: Value
+					CheckRadius: 2c0
+				Consideration@2:
+					Against: Ally
+					Types: Ground, Water
+					Attractiveness: -20
+					TargetMetric: Value
+					CheckRadius: 2c0
+				Consideration@3:
+					Against: Enemy
+			Airstrike@BelowCoffinPower:
+				OrderName: BelowCoffinPowerInfoOrder
+				MinimumAttractiveness: 2000
+				Consideration@1:
+					Against: Enemy
+					Types: Structure
+					Attractiveness: 3
+					TargetMetric: Value
+					CheckRadius: 2c0
+				Consideration@2:
+					Against: Ally
+					Types: Ground, Water
+					Attractiveness: -20
+					TargetMetric: Value
+					CheckRadius: 2c0
+				Consideration@3:
+					Against: Enemy
+			Airstrike@BelowCoffinPower:
+				OrderName: BelowCoffinPowerInfoOrder
+				MinimumAttractiveness: 2000
+				Consideration@1:
+					Against: Enemy
+					Types: Structure
+					Attractiveness: 3
+					TargetMetric: Value
+					CheckRadius: 2c0
+				Consideration@2:
+					Against: Ally
+					Types: Ground, Water
+					Attractiveness: -20
+					TargetMetric: Value
+					CheckRadius: 2c0
+				Consideration@3:
+					Against: Enemy
+			Airstrike@StrangePowerInfoOrder:
+				OrderName: StrangePowerInfoOrder
+				MinimumAttractiveness: 2000
+				Consideration@1:
+					Against: Enemy
+					Types: Structure
+					Attractiveness: 3
+					TargetMetric: Value
+					CheckRadius: 2c0
+				Consideration@2:
+					Against: Ally
+					Types: Ground, Water
+					Attractiveness: -20
+					TargetMetric: Value
+					CheckRadius: 2c0
+				Consideration@3:
+					Against: Enemy
+			Airstrike@TrojanPowerInfoOrder:
+				OrderName: TrojanPowerInfoOrder
+				MinimumAttractiveness: 2000
+				Consideration@1:
+					Against: Enemy
+					Types: Structure
+					Attractiveness: 3
+					TargetMetric: Value
+					CheckRadius: 2c0
+				Consideration@2:
+					Against: Ally
+					Types: Ground, Water
+					Attractiveness: -20
+					TargetMetric: Value
+					CheckRadius: 2c0
+				Consideration@3:
+					Against: Enemy
+			Airstrike@LightningPowerInfoOrder:
+				OrderName: LightningPowerInfoOrder
+				MinimumAttractiveness: 2000
+				Consideration@1:
+					Against: Enemy
+					Types: Vehicle, Infantry
+					Attractiveness: 3
+					TargetMetric: Value
+					CheckRadius: 2c0
+				Consideration@2:
+					Against: Ally
+					Types: Ground, Water
+					Attractiveness: -20
+					TargetMetric: Value
+					CheckRadius: 2c0
+				Consideration@3:
+					Against: Enemy
+			Airstrike@CannonPowerInfoOrder:
+				OrderName: CannonPowerInfoOrder
+				MinimumAttractiveness: 2000
+				Consideration@1:
+					Against: Enemy
+					Types: Structure
+					Attractiveness: 3
+					TargetMetric: Value
+					CheckRadius: 2c0
+				Consideration@2:
+					Against: Ally
+					Types: Ground, Water
+					Attractiveness: -20
+					TargetMetric: Value
+					CheckRadius: 2c0
+				Consideration@3:
+					Against: Enemy
+			Airstrike@MortarInfoOrder:
+				OrderName: MortarInfoOrder
+				MinimumAttractiveness: 2000
+				Consideration@1:
+					Against: Enemy
+					Types: Structure
+					Attractiveness: 3
+					TargetMetric: Value
+					CheckRadius: 2c0
+				Consideration@2:
+					Against: Ally
+					Types: Ground, Water
+					Attractiveness: -20
+					TargetMetric: Value
+					CheckRadius: 2c0
+				Consideration@3:
+					Against: Enemy
+			Airstrike@TornadoPowerInfoOrder:
+				OrderName: TornadoPowerInfoOrder
+				MinimumAttractiveness: 2000
+				Consideration@1:
+					Against: Enemy
+					Types: Structure
+					Attractiveness: 3
+					TargetMetric: Value
+					CheckRadius: 2c0
+				Consideration@2:
+					Against: Ally
+					Types: Ground, Water
+					Attractiveness: -20
+					TargetMetric: Value
+					CheckRadius: 2c0
+				Consideration@3:
+					Against: Enemy
 	HackyMWAI@king: 
 		Type: baron
 		Name: Baron Hodsworth (Medium) 
@@ -576,11 +473,9 @@ Player:
 			lodge.scaff: 2
 			ljackb.scaff: 2
 			sullodge.scaff: 2
-			#
 			barrnew.scaff: 2
 			handnew.scaff: 2
 			sulbarr.scaff: 2
-			#
 			hqnewgdi.scaff: 1
 			armorynod.scaff: 1
 			castle.scaff: 1
@@ -590,49 +485,24 @@ Player:
 			sultow2: 1
 			sultow3: 1
 			sultow4: 1
-			#
 			gtwnew.scaff: 3
 			gunnew.scaff: 3
 			samnew.scaff: 3
 			sulgtw.scaff: 3
 			tribu.scaff: 4
 			bato.scaff: 5
-			#
 			stall.scaff: 2
 			nodstall.scaff: 2
 			sulmystic.scaff:2
-			#
 			workshopgdi.scaff: 1
 			workshopnod.scaff: 1
 			sulfix.scaff: 1
-			#
-			#nukenew.scaff: 4
-			#sulnuke.scaff: 4
-			#nodnuke: 8
-			#
-			#nuk2new.scaff: 4
-			#sulnuk2.scaff: 7
-			#nodnuk2.scaff: 4
-			#xltntuni.scaff: 4
-			#xltnt1: 5
-			#xltnt2: 5
-			#xltnt3: 5
-			#
-			#nukxl.scaff: 3
-			#
 			schafott.scaff: 1
 			herbalist.scaff: 1
 			sulminaret.scaff: 1
 			townhall.scaff: 1
 			sulhall.scaff: 1
-			#
-			# Undead Stuff
-			#
-			#
-			#obelisk.penta: 4
-			#garg.penta: 4
 			sppool.penta: 2
-			#crypt.penta: 10
 			mauso.penta: 2
 			libra.penta: 1
 			tomb.penta: 2
@@ -643,19 +513,8 @@ Player:
 			seal5: 1
 			zigg2upgrade: 1
 			zigg3upgrade: 1
-			#
-			# Undead Stuff
-			#
-			#
 		BuildingFractions:
-			#
-			# Undead Stuff
-			#
-			#
-			#obelisk.penta: 10%
-			#garg.penta: 20%
 			sppool.penta: 100%
-			#crypt.penta: 200%
 			mauso.penta: 50%
 			libra.penta: 50%
 			tomb.penta: 50%
@@ -666,10 +525,6 @@ Player:
 			seal5: 100%
 			zigg2upgrade: 600%
 			zigg3upgrade: 600%
-			#
-			# Undead Stuff
-			#
-			#
 			lodge.scaff: 200%
 			ljackb.scaff: 200%
 			sullodge.scaff: 200%
@@ -678,25 +533,13 @@ Player:
 			sulmill.scaff: 200%
 			nodproc.scaff: 200%
 			sulcnshmbr.scaff: 500%
-			#
 			gtwnew.scaff: 10%
 			gunnew.scaff: 10%
 			samnew.scaff: 5%
 			sulgtw.scaff: 10%
-			#
-			#nukenew.scaff: 100%
-			#sulnuke.scaff: 100%
-			#nodnuke: 100%
-			#nuk2new.scaff: 400%
-			#sulnuk2.scaff: 400%
-			#nodnuk2.scaff: 400%
-			#nukxl.scaff: 1000%
-			#xltntuni.scaff: 400%
-			#
 			barrnew.scaff: 200%
 			sulbarr.scaff: 200%
 			handnew.scaff: 200%
-			#
 			hqnewnod.scaff: 50%
 			hqnewgdi.scaff: 50%
 			armorygdi.scaff: 50%
@@ -705,22 +548,17 @@ Player:
 			sultow2: 50%
 			sultow3: 50%
 			sultow4: 50%
-			#
 			stall.scaff: 50%
 			sulmystic.scaff: 50%
 			nodstall.scaff: 200%
-			#
 			tribu.scaff: 50%
 			bato.scaff: 50%
-			#
 			castle2.scaff: 50%
 			castle.scaff: 50%
 			sulcastle.scaff: 50%
-			#
 			workshopgdi.scaff: 50%
 			workshopnod.scaff: 50%
 			sulfix.scaff: 50%
-			#
 			schafott.scaff: 70%
 			herbalist.scaff: 70%
 			sulminaret.scaff: 70%
@@ -763,10 +601,6 @@ Player:
 			wrbln: 10%
 			newcomm: 50%
 			rmbonew: 50%
-			#
-			# Undead Stuff
-			#
-			#
 			preycolyte: 500%
 			undead1: 100%
 			undead5: 100%
@@ -780,274 +614,233 @@ Player:
 			vampflying: 10%
 			demonhorse: 100%
 			LichK: 70%
-			#
-			# Undead Stuff
-			#
-			#
 		UnitLimits:
 			preycolyte: 25
 			eharvxl: 6
 			acolytec: 9
 		SquadSize: 15
-		SupportPowerDecision@Airstrike:
-			OrderName: CorpsePowerInfoOrder
-			MinimumAttractiveness: 2000
-			Consideration@1:
-				Against: Enemy
-				Types: Vehicle, Infantry
-				Attractiveness: 3
-				TargetMetric: Value
-				CheckRadius: 2c0
-			Consideration@2:
-				Against: Ally
-				Types: Ground, Water
-				Attractiveness: -20
- 				TargetMetric: Value
- 				CheckRadius: 2c0
- 			Consideration@3:
- 				Against: Enemy
- 				Types: Structure
- 				Attractiveness: 1
-				TargetMetric: Value
-				CheckRadius: 2c0
-		SupportPowerDecision@FireArrows:
-			OrderName: ArrowsPowerInfoOrder
-			MinimumAttractiveness: 2000
-			Consideration@1:
-				Against: Enemy
-				Types: Vehicle, Infantry
-				Attractiveness: 3
-				TargetMetric: Value
-				CheckRadius: 2c0
-			Consideration@2:
-				Against: Ally
-				Types: Ground, Water
-				Attractiveness: -20
- 				TargetMetric: Value
- 				CheckRadius: 2c0
- 			Consideration@3:
- 				Against: Enemy
- 				Types: Structure
- 				Attractiveness: 1
-				TargetMetric: Value
-				CheckRadius: 2c0
-		SupportPowerDecision@Thopter:
-			OrderName: StrangePowerInfoOrder
-			MinimumAttractiveness: 100
-			Consideration@1:
-				Against: Enemy
-				Types: Structure
-				Attractiveness: 3
-				TargetMetric: Value
-				CheckRadius: 2c0
-			Consideration@2:
-				Against: Ally
-				Types: Ground, Water
-				Attractiveness: -20
- 				TargetMetric: Value
- 				CheckRadius: 2c0
- 			Consideration@3:
- 				Against: Enemy
- 				Types: Structure
- 				Attractiveness: 1
-				TargetMetric: Value
-				CheckRadius: 2c0
-		SupportPowerDecision@WoodHorse:
-			OrderName: TrojanPowerInfoOrder
-			MinimumAttractiveness: 100
-			Consideration@1:
-				Against: Enemy
-				Types: Structure
-				Attractiveness: 3
-				TargetMetric: Value
-				CheckRadius: 2c0
-			Consideration@2:
-				Against: Ally
-				Types: Ground, Water
-				Attractiveness: -20
- 				TargetMetric: Value
- 				CheckRadius: 2c0
- 			Consideration@3:
- 				Against: Enemy
- 				Types: Structure
- 				Attractiveness: 1
-				TargetMetric: Value
-				CheckRadius: 2c0
-		SupportPowerDecision@IonCannonPower:
-			OrderName: LightningPowerInfoOrder
-			MinimumAttractiveness: 1000
-			FineScanRadius: 2
-			Consideration@1:
-				Against: Enemy
-				Types: Air, Tank, Vehicle, Infantry, Water
-				Attractiveness: 4
-				TargetMetric: Value
-				CheckRadius: 2c0
-			Consideration@2:
-				Against: Enemy
-				Types: Structure
-				Attractiveness: 3
-				TargetMetric: Value
-				CheckRadius: 2c0
-			Consideration@3:
-				Against: Ally
-				Types: Ground, Water
-				Attractiveness: -20
- 				TargetMetric: Value
- 				CheckRadius: 2c0
- 			Consideration@4:
- 				Against: Enemy
- 				Types: Structure
- 				Attractiveness: 1
-				TargetMetric: Value
-				CheckRadius: 3c0
-		SupportPowerDecision@NukePower:
-			OrderName: CannonPowerInfoOrder
-			MinimumAttractiveness: 3000
-			Consideration@1:
-				Against: Enemy
-				Types: Structure
-				Attractiveness: 3
-				TargetMetric: Value
-				CheckRadius: 2c0
-			Consideration@2:
-				Against: Ally
-				Types: Ground, Water
-				Attractiveness: -20
- 				TargetMetric: Value
- 				CheckRadius: 2c0
- 			Consideration@3:
- 				Against: Enemy
- 				Types: Structure
- 				Attractiveness: 1
-				TargetMetric: Value
-				CheckRadius: 7c0
-		SupportPowerDecision@Spear:
-			OrderName: SpearsPowerInfoOrder
-			MinimumAttractiveness: 2000
-			Consideration@1:
-				Against: Enemy
-				Types: Vehicle, Infantry
-				Attractiveness: 3
-				TargetMetric: Value
-				CheckRadius: 2c0
-			Consideration@2:
-				Against: Ally
-				Types: Ground, Water
-				Attractiveness: -20
- 				TargetMetric: Value
- 				CheckRadius: 2c0
- 			Consideration@3:
- 				Against: Enemy
- 				Types: Structure
- 				Attractiveness: 1
-				TargetMetric: Value
-				CheckRadius: 2c0
-		SupportPowerDecision@Mortar:
-			OrderName: MortarInfoOrder
-			MinimumAttractiveness: 100
-			Consideration@1:
-				Against: Enemy
-				Types: Structure
-				Attractiveness: 3
-				TargetMetric: Value
-				CheckRadius: 2c0
-			Consideration@2:
-				Against: Ally
-				Types: Ground, Water
-				Attractiveness: -20
- 				TargetMetric: Value
- 				CheckRadius: 2c0
- 			Consideration@3:
- 				Against: Enemy
- 				Types: Structure
- 				Attractiveness: 1
-				TargetMetric: Value
-				CheckRadius: 2c0
-		SupportPowerDecision@Tornado:
-			OrderName: TornadoPowerInfoOrder
-			MinimumAttractiveness: 3000
-			Consideration@1:
-				Against: Enemy
-				Types: Structure
-				Attractiveness: 3
-				TargetMetric: Value
-				CheckRadius: 2c0
-			Consideration@2:
-				Against: Ally
-				Types: Ground, Water
-				Attractiveness: -20
- 				TargetMetric: Value
- 				CheckRadius: 2c0
- 			Consideration@3:
- 				Against: Enemy
- 				Types: Structure
- 				Attractiveness: 1
-				TargetMetric: Value
-				CheckRadius: 7c0
-		SupportPowerDecision@Graveyard:
-			OrderName: GraveyardPowerInfoOrder
-			MinimumAttractiveness: 3000
-			Consideration@1:
-				Against: Enemy
-				Types: Vehicle, Infantry
-				Attractiveness: 3
-				TargetMetric: Value
-				CheckRadius: 2c0
-			Consideration@2:
-				Against: Ally
-				Types: Ground, Water
-				Attractiveness: -20
- 				TargetMetric: Value
- 				CheckRadius: 2c0
- 			Consideration@3:
- 				Against: Enemy
- 				Types: Structure
- 				Attractiveness: 1
-				TargetMetric: Value
-				CheckRadius: 7c0
-		SupportPowerDecision@HandsFromBelow:
-			OrderName: HandsBelowPowerInfoOrder
-			MinimumAttractiveness: 2000
-			Consideration@1:
-				Against: Enemy
-				Types: Vehicle, Infantry
-				Attractiveness: 3
-				TargetMetric: Value
-				CheckRadius: 2c0
-			Consideration@2:
-				Against: Ally
-				Types: Ground, Water
-				Attractiveness: -20
- 				TargetMetric: Value
- 				CheckRadius: 2c0
- 			Consideration@3:
- 				Against: Enemy
- 				Types: Structure
- 				Attractiveness: 1
-				TargetMetric: Value
-				CheckRadius: 2c0
-		SupportPowerDecision@AmbushCoffins:
-			OrderName: BelowCoffinPowerInfoOrder
-			MinimumAttractiveness: 500
-			Consideration@1:
-				Against: Enemy
-				Types: Structure
-				Attractiveness: 3
-				TargetMetric: Value
-				CheckRadius: 2c0
-			Consideration@2:
-				Against: Ally
-				Types: Ground, Water
-				Attractiveness: -20
- 				TargetMetric: Value
- 				CheckRadius: 2c0
- 			Consideration@3:
- 				Against: Enemy
- 				Types: Structure
- 				Attractiveness: 1
-				TargetMetric: Value
-				CheckRadius: 2c0
+		SupportPowerDecisions:
+			Airstrike:
+				OrderName: CorpsePowerInfoOrder
+				MinimumAttractiveness: 2000
+				Consideration@1:
+					Against: Enemy
+					Types: Vehicle, Infantry
+					Attractiveness: 3
+					TargetMetric: Value
+					CheckRadius: 2c0
+				Consideration@2:
+					Against: Ally
+					Types: Ground, Water
+					Attractiveness: -20
+					TargetMetric: Value
+					CheckRadius: 2c0
+				Consideration@3:
+					Against: Enemy
+			Airstrike@FireArrows:
+				OrderName: ArrowsPowerInfoOrder
+				MinimumAttractiveness: 2000
+				Consideration@1:
+					Against: Enemy
+					Types: Vehicle, Infantry
+					Attractiveness: 3
+					TargetMetric: Value
+					CheckRadius: 2c0
+				Consideration@2:
+					Against: Ally
+					Types: Ground, Water
+					Attractiveness: -20
+					TargetMetric: Value
+					CheckRadius: 2c0
+				Consideration@3:
+					Against: Enemy
+			Airstrike@SpearsPower:
+				OrderName: SpearsPowerInfoOrder
+				MinimumAttractiveness: 2000
+				Consideration@1:
+					Against: Enemy
+					Types: Vehicle, Infantry
+					Attractiveness: 3
+					TargetMetric: Value
+					CheckRadius: 2c0
+				Consideration@2:
+					Against: Ally
+					Types: Ground, Water
+					Attractiveness: -20
+					TargetMetric: Value
+					CheckRadius: 2c0
+				Consideration@3:
+					Against: Enemy
+			Airstrike@GraveyardPower:
+				OrderName: GraveyardPowerInfoOrder
+				MinimumAttractiveness: 2000
+				Consideration@1:
+					Against: Enemy
+					Types: Vehicle, Infantry
+					Attractiveness: 3
+					TargetMetric: Value
+					CheckRadius: 2c0
+				Consideration@2:
+					Against: Ally
+					Types: Ground, Water
+					Attractiveness: -20
+					TargetMetric: Value
+					CheckRadius: 2c0
+				Consideration@3:
+					Against: Enemy
+			Airstrike@HandsBelowPower:
+				OrderName: HandsBelowPowerInfoOrder
+				MinimumAttractiveness: 2000
+				Consideration@1:
+					Against: Enemy
+					Types: Vehicle, Infantry
+					Attractiveness: 3
+					TargetMetric: Value
+					CheckRadius: 2c0
+				Consideration@2:
+					Against: Ally
+					Types: Ground, Water
+					Attractiveness: -20
+					TargetMetric: Value
+					CheckRadius: 2c0
+				Consideration@3:
+					Against: Enemy
+			Airstrike@BelowCoffinPower:
+				OrderName: BelowCoffinPowerInfoOrder
+				MinimumAttractiveness: 2000
+				Consideration@1:
+					Against: Enemy
+					Types: Structure
+					Attractiveness: 3
+					TargetMetric: Value
+					CheckRadius: 2c0
+				Consideration@2:
+					Against: Ally
+					Types: Ground, Water
+					Attractiveness: -20
+					TargetMetric: Value
+					CheckRadius: 2c0
+				Consideration@3:
+					Against: Enemy
+			Airstrike@BelowCoffinPower:
+				OrderName: BelowCoffinPowerInfoOrder
+				MinimumAttractiveness: 2000
+				Consideration@1:
+					Against: Enemy
+					Types: Structure
+					Attractiveness: 3
+					TargetMetric: Value
+					CheckRadius: 2c0
+				Consideration@2:
+					Against: Ally
+					Types: Ground, Water
+					Attractiveness: -20
+					TargetMetric: Value
+					CheckRadius: 2c0
+				Consideration@3:
+					Against: Enemy
+			Airstrike@StrangePowerInfoOrder:
+				OrderName: StrangePowerInfoOrder
+				MinimumAttractiveness: 2000
+				Consideration@1:
+					Against: Enemy
+					Types: Structure
+					Attractiveness: 3
+					TargetMetric: Value
+					CheckRadius: 2c0
+				Consideration@2:
+					Against: Ally
+					Types: Ground, Water
+					Attractiveness: -20
+					TargetMetric: Value
+					CheckRadius: 2c0
+				Consideration@3:
+					Against: Enemy
+			Airstrike@TrojanPowerInfoOrder:
+				OrderName: TrojanPowerInfoOrder
+				MinimumAttractiveness: 2000
+				Consideration@1:
+					Against: Enemy
+					Types: Structure
+					Attractiveness: 3
+					TargetMetric: Value
+					CheckRadius: 2c0
+				Consideration@2:
+					Against: Ally
+					Types: Ground, Water
+					Attractiveness: -20
+					TargetMetric: Value
+					CheckRadius: 2c0
+				Consideration@3:
+					Against: Enemy
+			Airstrike@LightningPowerInfoOrder:
+				OrderName: LightningPowerInfoOrder
+				MinimumAttractiveness: 2000
+				Consideration@1:
+					Against: Enemy
+					Types: Vehicle, Infantry
+					Attractiveness: 3
+					TargetMetric: Value
+					CheckRadius: 2c0
+				Consideration@2:
+					Against: Ally
+					Types: Ground, Water
+					Attractiveness: -20
+					TargetMetric: Value
+					CheckRadius: 2c0
+				Consideration@3:
+					Against: Enemy
+			Airstrike@CannonPowerInfoOrder:
+				OrderName: CannonPowerInfoOrder
+				MinimumAttractiveness: 2000
+				Consideration@1:
+					Against: Enemy
+					Types: Structure
+					Attractiveness: 3
+					TargetMetric: Value
+					CheckRadius: 2c0
+				Consideration@2:
+					Against: Ally
+					Types: Ground, Water
+					Attractiveness: -20
+					TargetMetric: Value
+					CheckRadius: 2c0
+				Consideration@3:
+					Against: Enemy
+			Airstrike@MortarInfoOrder:
+				OrderName: MortarInfoOrder
+				MinimumAttractiveness: 2000
+				Consideration@1:
+					Against: Enemy
+					Types: Structure
+					Attractiveness: 3
+					TargetMetric: Value
+					CheckRadius: 2c0
+				Consideration@2:
+					Against: Ally
+					Types: Ground, Water
+					Attractiveness: -20
+					TargetMetric: Value
+					CheckRadius: 2c0
+				Consideration@3:
+					Against: Enemy
+			Airstrike@TornadoPowerInfoOrder:
+				OrderName: TornadoPowerInfoOrder
+				MinimumAttractiveness: 2000
+				Consideration@1:
+					Against: Enemy
+					Types: Structure
+					Attractiveness: 3
+					TargetMetric: Value
+					CheckRadius: 2c0
+				Consideration@2:
+					Against: Ally
+					Types: Ground, Water
+					Attractiveness: -20
+					TargetMetric: Value
+					CheckRadius: 2c0
+				Consideration@3:
+					Against: Enemy
 	HackyMWAI@sultan:
 		Type: sultan
 		Name: Sultan il-Nuredin (Hard)  
@@ -1101,11 +894,9 @@ Player:
 			lodge.scaff: 2
 			ljackb.scaff: 2
 			sullodge.scaff: 2
-			#
 			barrnew.scaff: 2
 			handnew.scaff: 2
 			sulbarr.scaff: 2
-			#
 			hqnewgdi.scaff: 1
 			armorynod.scaff: 1
 			castle.scaff: 1
@@ -1115,49 +906,24 @@ Player:
 			sultow2: 1
 			sultow3: 1
 			sultow4: 1
-			#
 			gtwnew.scaff: 3
 			gunnew.scaff: 3
 			samnew.scaff: 3
 			sulgtw.scaff: 3
 			tribu.scaff: 4
 			bato.scaff: 5
-			#
 			stall.scaff: 2
 			nodstall.scaff: 2
 			sulmystic.scaff:2
-			#
 			workshopgdi.scaff: 1
 			workshopnod.scaff: 1
 			sulfix.scaff: 1
-			#
-			#nukenew.scaff: 4
-			#sulnuke.scaff: 4
-			#nodnuke: 8
-			#
-			#nuk2new.scaff: 4
-			#sulnuk2.scaff: 7
-			#nodnuk2.scaff: 4
-			#xltntuni.scaff: 4
-			#xltnt1: 5
-			#xltnt2: 5
-			#xltnt3: 5
-			#
-			#nukxl.scaff: 3
-			#
 			schafott.scaff: 1
 			herbalist.scaff: 1
 			sulminaret.scaff: 1
 			townhall.scaff: 1
 			sulhall.scaff: 1
-			#
-			# Undead Stuff
-			#
-			#
-			#obelisk.penta: 4
-			#garg.penta: 4
 			sppool.penta: 2
-			#crypt.penta: 10
 			mauso.penta: 2
 			libra.penta: 1
 			tomb.penta: 2
@@ -1168,19 +934,8 @@ Player:
 			seal5: 1
 			zigg2upgrade: 1
 			zigg3upgrade: 1
-			#
-			# Undead Stuff
-			#
-			#
 		BuildingFractions:
-			#
-			# Undead Stuff
-			#
-			#
-			#obelisk.penta: 10%
-			#garg.penta: 20%
 			sppool.penta: 100%
-			#crypt.penta: 200%
 			mauso.penta: 50%
 			libra.penta: 50%
 			tomb.penta: 50%
@@ -1191,10 +946,6 @@ Player:
 			seal5: 100%
 			zigg2upgrade: 600%
 			zigg3upgrade: 600%
-			#
-			# Undead Stuff
-			#
-			#
 			lodge.scaff: 200%
 			ljackb.scaff: 200%
 			sullodge.scaff: 200%
@@ -1203,25 +954,13 @@ Player:
 			sulmill.scaff: 200%
 			nodproc.scaff: 200%
 			sulcnshmbr.scaff: 500%
-			#
 			gtwnew.scaff: 10%
 			gunnew.scaff: 10%
 			samnew.scaff: 5%
 			sulgtw.scaff: 10%
-			#
-			#nukenew.scaff: 100%
-			#sulnuke.scaff: 100%
-			#nodnuke: 100%
-			#nuk2new.scaff: 400%
-			#sulnuk2.scaff: 400%
-			#nodnuk2.scaff: 400%
-			#nukxl.scaff: 1000%
-			#xltntuni.scaff: 400%
-			#
 			barrnew.scaff: 200%
 			sulbarr.scaff: 200%
 			handnew.scaff: 200%
-			#
 			hqnewnod.scaff: 50%
 			hqnewgdi.scaff: 50%
 			armorygdi.scaff: 50%
@@ -1230,22 +969,17 @@ Player:
 			sultow2: 50%
 			sultow3: 50%
 			sultow4: 50%
-			#
 			stall.scaff: 50%
 			sulmystic.scaff: 50%
 			nodstall.scaff: 200%
-			#
 			tribu.scaff: 50%
 			bato.scaff: 50%
-			#
 			castle2.scaff: 50%
 			castle.scaff: 50%
 			sulcastle.scaff: 50%
-			#
 			workshopgdi.scaff: 50%
 			workshopnod.scaff: 50%
 			sulfix.scaff: 50%
-			#
 			schafott.scaff: 70%
 			herbalist.scaff: 70%
 			sulminaret.scaff: 70%
@@ -1288,10 +1022,6 @@ Player:
 			wrbln: 10%
 			newcomm: 50%
 			rmbonew: 50%
-			#
-			# Undead Stuff
-			#
-			#
 			preycolyte: 500%
 			undead1: 100%
 			undead5: 100%
@@ -1305,271 +1035,230 @@ Player:
 			vampflying: 10%
 			demonhorse: 100%
 			LichK: 70%
-			#
-			# Undead Stuff
-			#
-			#
 		UnitLimits:
 			preycolyte: 25
 			eharvxl: 6
 			acolytec: 9
 		SquadSize: 15
-		SupportPowerDecision@Airstrike:
-			OrderName: CorpsePowerInfoOrder
-			MinimumAttractiveness: 2000
-			Consideration@1:
-				Against: Enemy
-				Types: Vehicle, Infantry
-				Attractiveness: 3
-				TargetMetric: Value
-				CheckRadius: 2c0
-			Consideration@2:
-				Against: Ally
-				Types: Ground, Water
-				Attractiveness: -20
- 				TargetMetric: Value
- 				CheckRadius: 2c0
- 			Consideration@3:
- 				Against: Enemy
- 				Types: Structure
- 				Attractiveness: 1
-				TargetMetric: Value
-				CheckRadius: 2c0
-		SupportPowerDecision@FireArrows:
-			OrderName: ArrowsPowerInfoOrder
-			MinimumAttractiveness: 2000
-			Consideration@1:
-				Against: Enemy
-				Types: Vehicle, Infantry
-				Attractiveness: 3
-				TargetMetric: Value
-				CheckRadius: 2c0
-			Consideration@2:
-				Against: Ally
-				Types: Ground, Water
-				Attractiveness: -20
- 				TargetMetric: Value
- 				CheckRadius: 2c0
- 			Consideration@3:
- 				Against: Enemy
- 				Types: Structure
- 				Attractiveness: 1
-				TargetMetric: Value
-				CheckRadius: 2c0
-		SupportPowerDecision@Thopter:
-			OrderName: StrangePowerInfoOrder
-			MinimumAttractiveness: 100
-			Consideration@1:
-				Against: Enemy
-				Types: Structure
-				Attractiveness: 3
-				TargetMetric: Value
-				CheckRadius: 2c0
-			Consideration@2:
-				Against: Ally
-				Types: Ground, Water
-				Attractiveness: -20
- 				TargetMetric: Value
- 				CheckRadius: 2c0
- 			Consideration@3:
- 				Against: Enemy
- 				Types: Structure
- 				Attractiveness: 1
-				TargetMetric: Value
-				CheckRadius: 2c0
-		SupportPowerDecision@WoodHorse:
-			OrderName: TrojanPowerInfoOrder
-			MinimumAttractiveness: 100
-			Consideration@1:
-				Against: Enemy
-				Types: Structure
-				Attractiveness: 3
-				TargetMetric: Value
-				CheckRadius: 2c0
-			Consideration@2:
-				Against: Ally
-				Types: Ground, Water
-				Attractiveness: -20
- 				TargetMetric: Value
- 				CheckRadius: 2c0
- 			Consideration@3:
- 				Against: Enemy
- 				Types: Structure
- 				Attractiveness: 1
-				TargetMetric: Value
-				CheckRadius: 2c0
-		SupportPowerDecision@IonCannonPower:
-			OrderName: LightningPowerInfoOrder
-			MinimumAttractiveness: 1000
-			FineScanRadius: 2
-			Consideration@1:
-				Against: Enemy
-				Types: Air, Tank, Vehicle, Infantry, Water
-				Attractiveness: 4
-				TargetMetric: Value
-				CheckRadius: 2c0
-			Consideration@2:
-				Against: Enemy
-				Types: Structure
-				Attractiveness: 3
-				TargetMetric: Value
-				CheckRadius: 2c0
-			Consideration@3:
-				Against: Ally
-				Types: Ground, Water
-				Attractiveness: -20
- 				TargetMetric: Value
- 				CheckRadius: 2c0
- 			Consideration@4:
- 				Against: Enemy
- 				Types: Structure
- 				Attractiveness: 1
-				TargetMetric: Value
-				CheckRadius: 3c0
-		SupportPowerDecision@NukePower:
-			OrderName: CannonPowerInfoOrder
-			MinimumAttractiveness: 3000
-			Consideration@1:
-				Against: Enemy
-				Types: Structure
-				Attractiveness: 3
-				TargetMetric: Value
-				CheckRadius: 2c0
-			Consideration@2:
-				Against: Ally
-				Types: Ground, Water
-				Attractiveness: -20
- 				TargetMetric: Value
- 				CheckRadius: 2c0
- 			Consideration@3:
- 				Against: Enemy
- 				Types: Structure
- 				Attractiveness: 1
-				TargetMetric: Value
-				CheckRadius: 7c0
-		SupportPowerDecision@Spear:
-			OrderName: SpearsPowerInfoOrder
-			MinimumAttractiveness: 2000
-			Consideration@1:
-				Against: Enemy
-				Types: Vehicle, Infantry
-				Attractiveness: 3
-				TargetMetric: Value
-				CheckRadius: 2c0
-			Consideration@2:
-				Against: Ally
-				Types: Ground, Water
-				Attractiveness: -20
- 				TargetMetric: Value
- 				CheckRadius: 2c0
- 			Consideration@3:
- 				Against: Enemy
- 				Types: Structure
- 				Attractiveness: 1
-				TargetMetric: Value
-				CheckRadius: 2c0
-		SupportPowerDecision@Mortar:
-			OrderName: MortarInfoOrder
-			MinimumAttractiveness: 100
-			Consideration@1:
-				Against: Enemy
-				Types: Structure
-				Attractiveness: 3
-				TargetMetric: Value
-				CheckRadius: 2c0
-			Consideration@2:
-				Against: Ally
-				Types: Ground, Water
-				Attractiveness: -20
- 				TargetMetric: Value
- 				CheckRadius: 2c0
- 			Consideration@3:
- 				Against: Enemy
- 				Types: Structure
- 				Attractiveness: 1
-				TargetMetric: Value
-				CheckRadius: 2c0
-		SupportPowerDecision@Tornado:
-			OrderName: TornadoPowerInfoOrder
-			MinimumAttractiveness: 3000
-			Consideration@1:
-				Against: Enemy
-				Types: Structure
-				Attractiveness: 3
-				TargetMetric: Value
-				CheckRadius: 2c0
-			Consideration@2:
-				Against: Ally
-				Types: Ground, Water
-				Attractiveness: -20
- 				TargetMetric: Value
- 				CheckRadius: 2c0
- 			Consideration@3:
- 				Against: Enemy
- 				Types: Structure
- 				Attractiveness: 1
-				TargetMetric: Value
-				CheckRadius: 7c0
-		SupportPowerDecision@Graveyard:
-			OrderName: GraveyardPowerInfoOrder
-			MinimumAttractiveness: 3000
-			Consideration@1:
-				Against: Enemy
-				Types: Vehicle, Infantry
-				Attractiveness: 3
-				TargetMetric: Value
-				CheckRadius: 2c0
-			Consideration@2:
-				Against: Ally
-				Types: Ground, Water
-				Attractiveness: -20
- 				TargetMetric: Value
- 				CheckRadius: 2c0
- 			Consideration@3:
- 				Against: Enemy
- 				Types: Structure
- 				Attractiveness: 1
-				TargetMetric: Value
-				CheckRadius: 7c0
-		SupportPowerDecision@HandsFromBelow:
-			OrderName: HandsBelowPowerInfoOrder
-			MinimumAttractiveness: 2000
-			Consideration@1:
-				Against: Enemy
-				Types: Vehicle, Infantry
-				Attractiveness: 3
-				TargetMetric: Value
-				CheckRadius: 2c0
-			Consideration@2:
-				Against: Ally
-				Types: Ground, Water
-				Attractiveness: -20
- 				TargetMetric: Value
- 				CheckRadius: 2c0
- 			Consideration@3:
- 				Against: Enemy
- 				Types: Structure
- 				Attractiveness: 1
-				TargetMetric: Value
-				CheckRadius: 2c0
-		SupportPowerDecision@AmbushCoffins:
-			OrderName: BelowCoffinPowerInfoOrder
-			MinimumAttractiveness: 500
-			Consideration@1:
-				Against: Enemy
-				Types: Structure
-				Attractiveness: 3
-				TargetMetric: Value
-				CheckRadius: 2c0
-			Consideration@2:
-				Against: Ally
-				Types: Ground, Water
-				Attractiveness: -20
- 				TargetMetric: Value
- 				CheckRadius: 2c0
- 			Consideration@3:
- 				Against: Enemy
- 				Types: Structure
- 				Attractiveness: 1
-				TargetMetric: Value
-				CheckRadius: 2c0   
+		SupportPowerDecisions:
+			Airstrike:
+				OrderName: CorpsePowerInfoOrder
+				MinimumAttractiveness: 2000
+				Consideration@1:
+					Against: Enemy
+					Types: Vehicle, Infantry
+					Attractiveness: 3
+					TargetMetric: Value
+					CheckRadius: 2c0
+				Consideration@2:
+					Against: Ally
+					Types: Ground, Water
+					Attractiveness: -20
+					TargetMetric: Value
+					CheckRadius: 2c0
+				Consideration@3:
+					Against: Enemy
+			Airstrike@FireArrows:
+				OrderName: ArrowsPowerInfoOrder
+				MinimumAttractiveness: 2000
+				Consideration@1:
+					Against: Enemy
+					Types: Vehicle, Infantry
+					Attractiveness: 3
+					TargetMetric: Value
+					CheckRadius: 2c0
+				Consideration@2:
+					Against: Ally
+					Types: Ground, Water
+					Attractiveness: -20
+					TargetMetric: Value
+					CheckRadius: 2c0
+				Consideration@3:
+					Against: Enemy
+			Airstrike@SpearsPower:
+				OrderName: SpearsPowerInfoOrder
+				MinimumAttractiveness: 2000
+				Consideration@1:
+					Against: Enemy
+					Types: Vehicle, Infantry
+					Attractiveness: 3
+					TargetMetric: Value
+					CheckRadius: 2c0
+				Consideration@2:
+					Against: Ally
+					Types: Ground, Water
+					Attractiveness: -20
+					TargetMetric: Value
+					CheckRadius: 2c0
+				Consideration@3:
+					Against: Enemy
+			Airstrike@GraveyardPower:
+				OrderName: GraveyardPowerInfoOrder
+				MinimumAttractiveness: 2000
+				Consideration@1:
+					Against: Enemy
+					Types: Vehicle, Infantry
+					Attractiveness: 3
+					TargetMetric: Value
+					CheckRadius: 2c0
+				Consideration@2:
+					Against: Ally
+					Types: Ground, Water
+					Attractiveness: -20
+					TargetMetric: Value
+					CheckRadius: 2c0
+				Consideration@3:
+					Against: Enemy
+			Airstrike@HandsBelowPower:
+				OrderName: HandsBelowPowerInfoOrder
+				MinimumAttractiveness: 2000
+				Consideration@1:
+					Against: Enemy
+					Types: Vehicle, Infantry
+					Attractiveness: 3
+					TargetMetric: Value
+					CheckRadius: 2c0
+				Consideration@2:
+					Against: Ally
+					Types: Ground, Water
+					Attractiveness: -20
+					TargetMetric: Value
+					CheckRadius: 2c0
+				Consideration@3:
+					Against: Enemy
+			Airstrike@BelowCoffinPower:
+				OrderName: BelowCoffinPowerInfoOrder
+				MinimumAttractiveness: 2000
+				Consideration@1:
+					Against: Enemy
+					Types: Structure
+					Attractiveness: 3
+					TargetMetric: Value
+					CheckRadius: 2c0
+				Consideration@2:
+					Against: Ally
+					Types: Ground, Water
+					Attractiveness: -20
+					TargetMetric: Value
+					CheckRadius: 2c0
+				Consideration@3:
+					Against: Enemy
+			Airstrike@BelowCoffinPower:
+				OrderName: BelowCoffinPowerInfoOrder
+				MinimumAttractiveness: 2000
+				Consideration@1:
+					Against: Enemy
+					Types: Structure
+					Attractiveness: 3
+					TargetMetric: Value
+					CheckRadius: 2c0
+				Consideration@2:
+					Against: Ally
+					Types: Ground, Water
+					Attractiveness: -20
+					TargetMetric: Value
+					CheckRadius: 2c0
+				Consideration@3:
+					Against: Enemy
+			Airstrike@StrangePowerInfoOrder:
+				OrderName: StrangePowerInfoOrder
+				MinimumAttractiveness: 2000
+				Consideration@1:
+					Against: Enemy
+					Types: Structure
+					Attractiveness: 3
+					TargetMetric: Value
+					CheckRadius: 2c0
+				Consideration@2:
+					Against: Ally
+					Types: Ground, Water
+					Attractiveness: -20
+					TargetMetric: Value
+					CheckRadius: 2c0
+				Consideration@3:
+					Against: Enemy
+			Airstrike@TrojanPowerInfoOrder:
+				OrderName: TrojanPowerInfoOrder
+				MinimumAttractiveness: 2000
+				Consideration@1:
+					Against: Enemy
+					Types: Structure
+					Attractiveness: 3
+					TargetMetric: Value
+					CheckRadius: 2c0
+				Consideration@2:
+					Against: Ally
+					Types: Ground, Water
+					Attractiveness: -20
+					TargetMetric: Value
+					CheckRadius: 2c0
+				Consideration@3:
+					Against: Enemy
+			Airstrike@LightningPowerInfoOrder:
+				OrderName: LightningPowerInfoOrder
+				MinimumAttractiveness: 2000
+				Consideration@1:
+					Against: Enemy
+					Types: Vehicle, Infantry
+					Attractiveness: 3
+					TargetMetric: Value
+					CheckRadius: 2c0
+				Consideration@2:
+					Against: Ally
+					Types: Ground, Water
+					Attractiveness: -20
+					TargetMetric: Value
+					CheckRadius: 2c0
+				Consideration@3:
+					Against: Enemy
+			Airstrike@CannonPowerInfoOrder:
+				OrderName: CannonPowerInfoOrder
+				MinimumAttractiveness: 2000
+				Consideration@1:
+					Against: Enemy
+					Types: Structure
+					Attractiveness: 3
+					TargetMetric: Value
+					CheckRadius: 2c0
+				Consideration@2:
+					Against: Ally
+					Types: Ground, Water
+					Attractiveness: -20
+					TargetMetric: Value
+					CheckRadius: 2c0
+				Consideration@3:
+					Against: Enemy
+			Airstrike@MortarInfoOrder:
+				OrderName: MortarInfoOrder
+				MinimumAttractiveness: 2000
+				Consideration@1:
+					Against: Enemy
+					Types: Structure
+					Attractiveness: 3
+					TargetMetric: Value
+					CheckRadius: 2c0
+				Consideration@2:
+					Against: Ally
+					Types: Ground, Water
+					Attractiveness: -20
+					TargetMetric: Value
+					CheckRadius: 2c0
+				Consideration@3:
+					Against: Enemy
+			Airstrike@TornadoPowerInfoOrder:
+				OrderName: TornadoPowerInfoOrder
+				MinimumAttractiveness: 2000
+				Consideration@1:
+					Against: Enemy
+					Types: Structure
+					Attractiveness: 3
+					TargetMetric: Value
+					CheckRadius: 2c0
+				Consideration@2:
+					Against: Ally
+					Types: Ground, Water
+					Attractiveness: -20
+					TargetMetric: Value
+					CheckRadius: 2c0
+				Consideration@3:
+					Against: Enemy

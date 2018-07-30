@@ -81,8 +81,6 @@ e8farmer:
 	icon: farmericon.shp
 		Offset: 0,0,0
 		AddExtension: False
-		
-
 hunter:
 	Defaults:
 		UseTilesetExtension: true
@@ -138,9 +136,6 @@ hunter:
 		Length: *
 		Tick: 80
 		UseTilesetExtension: false
-
-
-
 mwlumber:
 	stunned: sulm4
 		ZOffset: 125
@@ -204,8 +199,6 @@ mwlumber:
 		Tick: 120
 	idle: sulm4
 		Start: 0 
-        
-        
 bummler:
 	stunned: sulm4
 		ZOffset: 125
@@ -263,7 +256,6 @@ bummler:
 	icon: bummlericon.shp
 		Offset: 0,0,0
 		AddExtension: False
-		
 baumei:
 	stunned: sulm4
 		ZOffset: 125
@@ -324,8 +316,6 @@ baumei:
 		Tick: 80
 	icon: ne5icon.shp
 		AddExtension: False		
-		
-
 newe1:
 	stunned: sulm4
 		ZOffset: 125
@@ -381,7 +371,6 @@ newe1:
 		Tick: 80
 	icon: ne1icon.shp
 		AddExtension: False
-		
 mwcivcom:
 	stunned: sulm4
 		ZOffset: 125
@@ -462,7 +451,6 @@ mwcivcom:
 		Start: 345
 		Length: 38
 		Tick: 100
-           
 shopworker:
 	stunned: sulm4
 		ZOffset: 125
@@ -532,7 +520,6 @@ shopworker:
 	die5: burningman
 		Length: *
 		Tick: 80
-		
 sulshopworker:
 	stunned: sulm4
 		ZOffset: 125
@@ -602,7 +589,6 @@ sulshopworker:
 	die5: burningman
 		Length: *
 		Tick: 80
-		
 deathdealer:
 	stand: 
 		Start: 122
@@ -645,7 +631,6 @@ deathdealer:
 		Tick: 80
 	icon: ne1icon.shp
 		AddExtension: False
- 
 hood:
 	stunned: sulm4
 		ZOffset: 125

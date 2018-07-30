@@ -19,14 +19,14 @@
 		Range: 6c0
 		ValidStances: Ally
 		Condition: Wander
-	EmitInfantryOnSell:
+	SpawnActorsOnSell:
 		ActorTypes: undead1, undead3, undead5, preycolyte
 ^MWBasePentagram:
 	Inherits@1: ^BaseBuilding
 	RequiresBuildableArea:
 		AreaTypes: undeadbuilding
 		Adjacent: 4
-	-EmitInfantryOnSell:
+	-SpawnActorsOnSell:
 	RepairableBuilding:
 		RepairPercent: 40
 		RepairStep: 1000

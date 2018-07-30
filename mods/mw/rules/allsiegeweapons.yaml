@@ -8,7 +8,6 @@ MCV2NEW:
 		Priority: 4
 	AttackFrontal:
 	Mobile:
-		Crushes: crate, infantry
 		Speed: 65
 		TurnSpeed: 3
 	Armor:
@@ -75,7 +74,7 @@ MOBTRIB:
 		Priority: 4
 	AttackFrontal:
 	Mobile:
-		Crushes: crate
+
 		Speed: 50
 		TurnSpeed: 3
 	Armor:
@@ -281,10 +280,9 @@ SIEGE3:
 		Description: The Siege Tower is a specialized siege engine, \nconstructed to protect assailants while approaching the defensive walls of a fortification .\n  Crushes Walls and Infantry\n  Transports up to 6 men\n  Very strong vs Infantry and Aircraft\n  Weak vs Cavalry\n  Can attack Aircraft\n\nTrains: 3 Peasants\n  Can crush walls
 		Queue: MSiege.GDI
 	Mobile:
-		Crushes: wall, heavywall, crate, infantry
 		Speed: 55
-		SharesCell: false
 		TurnSpeed: 5
+		Locomotor: heavysiege
 	Health:
 		HP: 100000
 		Shape: Rectangle
@@ -416,10 +414,9 @@ SIEGE4:
 		Description: The battering ram is a siege engine that is designed \nto break open the masonry walls of fortifications.\n  Crushes Walls, Cavalry and Infantry\n  Transports up to 8 men\n  Gets faster with each passenger up to 220%\n  Very strong vs Buildings \n  Weak vs Cavalry, Infantry \n  Can only attack Buildings\n\nTrains: 3 Peasants\n  Can crush walls
 		Queue: MSiege.Nod
 	Mobile:
-		Crushes: wall, heavywall, crate, infantry, cavalry
 		Speed: 30
-		SharesCell: false
 		TurnSpeed: 4
+		Locomotor: heavysiege
 	Health:
 		HP: 150000
 		Shape: Rectangle
@@ -558,12 +555,7 @@ EHARVXL:
 	Mobile:
 		TurnSpeed: 5
 		Speed: 85
-		SharesCell: false
-		TerrainSpeeds:
-			Tiberium: 100
-				PathingCost: 0
-			BlueTiberium: 100
-				PathingCost: 0
+		Locomotor: farmer
 	Health:
 		HP: 65000
 	RenderSprites:

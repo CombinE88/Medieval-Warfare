@@ -81,7 +81,6 @@ medimcv2:
 		Length: 8
 	icon: mcvnewicon.shp
 		AddExtension: False
-
 mobtrib:
 	idle: 
 		Start: 64
@@ -95,7 +94,6 @@ mobtrib:
 		Length: 8
 	icon: sigtribicon.shp
 		AddExtension: False
-		
 planewagenhusk:
 	idle: 
 		Start: 64
@@ -103,10 +101,8 @@ planewagenhusk:
 	stand: 
 		Start: 64
 		Facings: 32
-
 mcvnew2.destroyed:
 	idle: mcvnewhusk
 		Facings: 32
 		UseClassicFacingFudge: True
 		ZOffset: -512
-		

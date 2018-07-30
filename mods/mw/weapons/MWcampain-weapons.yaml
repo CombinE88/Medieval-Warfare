@@ -31,7 +31,6 @@ HoodArrow:
 			HeavyBuilding: 15
 			Spectral: 50
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
-
 HoodArrowDUMMY:
 	ReloadDelay: 45
 	Range: 8c0
@@ -66,7 +65,6 @@ HoodArrowDUMMY:
 			HeavyBuilding: 0
 			Spectral: 0
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
-        
 HoodArrowAir:
 	ReloadDelay: 38
 	Range: 9c512
@@ -103,7 +101,6 @@ HoodArrowAir:
 			HeavyCavalry: 35
 			HeavyBuilding: 45
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
-        
 HoodFireArrow:
 	ReloadDelay: 45
 	Range: 8c0
@@ -190,8 +187,6 @@ HoodFireArrow:
 	Warhead@3Eff: CreateEffect
 		Explosions: fire3   
 		Delay: 24
-        
-        
 HoodFireArrowDummy:
 	ReloadDelay: 45
 	Range: 8c0

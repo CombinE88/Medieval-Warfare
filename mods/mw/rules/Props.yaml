@@ -278,7 +278,7 @@ DRAGON.Husk:
 		Explosion: DragonDecay
 	KillsSelf@2:
 		Delay: 25
-	GrantRandomCondition:
+	CombinEGrantRandomCondition:
 		RandomConditions: valida, validb, validc, validd, valide
 		FallbackCondition: valida
 	SpawnActorOnDeath@Dragon:

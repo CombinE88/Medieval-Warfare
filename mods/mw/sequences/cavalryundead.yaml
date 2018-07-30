@@ -34,7 +34,6 @@ deadross:
 		Tick: 80
 	icon: deadrossicon.shp
 		AddExtension: False
-		
 demonhorse:
 	idle1: 
 		Tick: 100
@@ -69,10 +68,7 @@ demonhorse:
 		Tick: 80
 	icon: demonhorseicon.shp
 		AddExtension: False
-
-
 vamp:
-
 	stunned: sulm4
 		ZOffset: 125
 		Start: 312
@@ -208,9 +204,6 @@ grim:
 		Tick: 80
 	icon: grimicon.shp
 		AddExtension: False
-        
-		
-
 lichk:
 	stunned: sulm4
 		ZOffset: 125
@@ -256,4 +249,3 @@ lichk:
 		Offset: 0,5
 	icon: lichkicon.shp
 		AddExtension: False
-		

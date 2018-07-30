@@ -23,7 +23,6 @@ SulSword:
 			HeavyCavalry: 20
 			Spectral: 15
 		DamageTypes: Prone50Percent, DefaultDeath
-		
 PikeAC:
 	ReloadDelay: 50
 	Range: 2c512
@@ -49,7 +48,6 @@ PikeAC:
 			HeavyCavalry: 120
 			Spectral: 10
 		DamageTypes: Prone50Percent, DefaultDeath
-		
 BroadSwordAE:
 	ReloadDelay: 35
 	Range: 1c512
@@ -75,7 +73,6 @@ BroadSwordAE:
 			HeavyCavalry: 20
 			Spectral: 15
 		DamageTypes: Prone50Percent, DefaultDeath
-		
 ScimitarDuals:
 	ReloadDelay: 22
 	Range: 1c512
@@ -101,7 +98,6 @@ ScimitarDuals:
 			HeavyCavalry: 60
 			Spectral: 45
 		DamageTypes: Prone50Percent, DefaultDeath
-		
 SuperioirPike:
 	ReloadDelay: 50
 	Range: 2c512
@@ -127,7 +123,6 @@ SuperioirPike:
 			HeavyCavalry: 120
 			Spectral: 15
 		DamageTypes: Prone50Percent, DefaultDeath
-		
 ApprenticeFire:
 	ReloadDelay: 75
 	Range: 6c0
@@ -251,7 +246,6 @@ ApprenticeFire:
 		Explosions: burninglarge
 		ImpactSounds: flamer2.aud
 		Delay: 6
-		
 DjinElectro:
 	ReloadDelay: 55
 	Range: 5c512
@@ -277,7 +271,6 @@ DjinElectro:
 			HeavyCavalry: 100
 			HeavyBuilding: 100
 		DamageTypes: Prone50Percent, RippedApartDeath
-		
 DjinElectroAir:
 	ReloadDelay: 65
 	Range: 9c0
@@ -303,7 +296,6 @@ DjinElectroAir:
 			HeavyCavalry: 100
 			HeavyBuilding: 100
 		DamageTypes: Prone50Percent, RippedApartDeath
-		  
 DjinElectroGround:
 	ReloadDelay: 50
 	Range: 9c0
@@ -329,13 +321,12 @@ DjinElectroGround:
 			HeavyCavalry: 100
 			HeavyBuilding: 100
 		DamageTypes: Prone50Percent, RippedApartDeath
-		
 DualSiegeBalista:
 	ReloadDelay: 85
 	Range: 11c0
 	MinRange: 2c896
 	Burst: 2
-	BurstDelay: 45
+	BurstDelays: 45
 	ValidTargets: Ground
 	InvalidTargets: Air
 	Report: Balista01.aud
@@ -370,7 +361,6 @@ DualSiegeBalista:
 	Warhead@2Smu: LeaveSmudge
 		SmudgeType: Scorch
 		InvalidTargets: Vehicle, Structure, Wall, Husk, Trees, Creep
-		
 SuperSiegeBallista:
 	ReloadDelay: 500
 	Range: 22c0
@@ -410,7 +400,6 @@ SuperSiegeBallista:
 	Warhead@2Eff: CreateEffect
 		Explosions: smokey
 		ImpactSounds: tnkfire2.aud, tnkfire3.aud, tnkfire4.aud, tnkfire6.aud
-		
 MortarBoulder:
 	ReloadDelay: 140
 	Range: 15c0
@@ -449,12 +438,11 @@ MortarBoulder:
 	Warhead@3Eff: CreateEffect
 		Explosions: smokey
 		ImpactSounds: tnkfire2.aud, tnkfire3.aud, tnkfire4.aud, tnkfire6.aud
-		
 SpearBarrage:
 	ReloadDelay: 4
 	Range: 3c0
 	Burst: 2
-	BurstDelay: 3
+	BurstDelays: 3
 	MinRange: 0c0
 	ValidTargets: Ground, Air
 	InvalidTargets: Wall
@@ -486,7 +474,6 @@ SpearBarrage:
 	Warhead@2Eff: CreateEffect
 		Explosions: smokey
 		ImpactSounds: tnkfire2.aud, tnkfire3.aud, tnkfire4.aud, tnkfire6.aud
-		
 CarpetBomber:
 	ReloadDelay: 41
 	Range: 4c0
@@ -524,8 +511,6 @@ CarpetBomber:
 	Warhead@5Eff: CreateEffect
 		Explosions: med_napalm
 		ImpactSounds: flamer2.aud
-		
-
 SonicRaptor:
 	ReloadDelay: 45
 	Range: 7c0
@@ -561,7 +546,6 @@ SonicRaptor:
 		DamageTypes: Prone50Percent, DefaultDeath
 	Warhead@5Eff: CreateEffect
 		ImpactSounds: Sword02.aud, Sword03.aud, Sword04.aud, Sword06.aud, Sword07.aud
-		
 SonicRaptorSoundLess:
 	ReloadDelay: 45
 	Range: 7c0
@@ -595,8 +579,6 @@ SonicRaptorSoundLess:
 		DamageTypes: Prone50Percent, DefaultDeath
 	Warhead@5Eff: CreateEffect
 		ImpactSounds: Sword02.aud, Sword03.aud, Sword04.aud, Sword06.aud, Sword07.aud
-		
-
 Snakes:
 	ReloadDelay: 85
 	Range: 5c512
@@ -618,7 +600,6 @@ Snakes:
 		ValidTargets: Ground
 		Damage: 0
 		DamageTypes: Prone50Percent, PoisonDeath
-		
 SnakesSmall:
 	ReloadDelay: 85
 	Range: 7c0
@@ -656,7 +637,6 @@ SnakesSmall:
 			HeavyBuilding: 100
 			Spectral: 200
 		DamageTypes: Prone50Percent, PoisonDeath
-		
 BedouinBowNArrowDebuff:
 	ReloadDelay: 10
 	Range: 7c0
@@ -689,7 +669,6 @@ BedouinBowNArrowDebuff:
 		ValidStances: Enemy, Neutral, Ally
 		InvalidTargets: Wall, Air
 		ValidTargets: Ground
-		
 BedouinBow:
 	ReloadDelay: 45
 	Range: 7c0
@@ -721,7 +700,6 @@ BedouinBow:
 			HeavyBuilding: 15
 			Spectral: 15
 		DamageTypes: Prone50Percent, DefaultDeath
-		
 BedouinBowDUMMY:
 	ReloadDelay: 45
 	Range: 7c0
@@ -756,7 +734,6 @@ BedouinBowDUMMY:
 			HeavyBuilding: 0
 			Spectral: 0
 		DamageTypes: Prone50Percent, DefaultDeath
-		
 BedouinBowAir:
 	ReloadDelay: 45
 	Range: 8c0
@@ -793,7 +770,6 @@ BedouinBowAir:
 			HeavyCavalry: 35
 			HeavyBuilding: 45
 		DamageTypes: Prone50Percent, DefaultDeath
-		
 BedouinBowTowerUnblock:
 	ReloadDelay: 25
 	Range: 8c0
@@ -826,7 +802,6 @@ BedouinBowTowerUnblock:
 			HeavyBuilding: 40
 			Spectral: 15
 		DamageTypes: Prone50Percent, DefaultDeath  
-		
 BedouinBowTowerUnblockDUMMY:
 	ReloadDelay: 25
 	Range: 8c0
@@ -862,7 +837,6 @@ BedouinBowTowerUnblockDUMMY:
 			HeavyBuilding: 0
 			Spectral: 0
 		DamageTypes: Prone50Percent, DefaultDeath 
-		
 TowerPike:
 	ReloadDelay: 40
 	Range: 2c512
@@ -887,13 +861,12 @@ TowerPike:
 			HeavyCavalry: 120
 			Spectral: 15
 		DamageTypes: Prone50Percent, DefaultDeath
-		
 SulGTSpearThrow:
 	ReloadDelay: 50
 	Range: 8c512
 	MinRange: 0c0
 	Burst: 2
-	BurstDelay: 10
+	BurstDelays: 10
 	Report: throw01.aud
 	ValidTargets: Ground
 	InvalidTargets: Air
@@ -928,13 +901,12 @@ SulGTSpearThrow:
 			HeavyBuilding: 100
 			Spectral: 15
 		DamageTypes: Prone50Percent, DefaultDeath	 
-
 SulGTSpearThrowAir:
 	ReloadDelay: 50
 	Range: 10c0
 	MinRange: 0c0
 	Burst: 2
-	BurstDelay: 10
+	BurstDelays: 10
 	Report: throw01.aud
 	ValidTargets: Air
 	InvalidTargets: Ground
@@ -968,7 +940,6 @@ SulGTSpearThrowAir:
 			HeavyCavalry: 100
 			HeavyBuilding: 100
 		DamageTypes: Prone50Percent, DefaultDeath 
-		
 TornadoExplosion:
 	ValidTargets: Air, Ground
 	Warhead@Tonrado: SpreadDamage
@@ -990,4 +961,3 @@ TornadoExplosion:
 		Size: 1
 		Amount: 1
 		ResourceTypes: Crops, Grain, Corn, Loot, Wood, Goods, Lumber
-		

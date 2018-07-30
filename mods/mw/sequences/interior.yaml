@@ -1,4 +1,3 @@
-        
 stool1:
 	idle: stoolmw
 		Start: 0
@@ -47,7 +46,6 @@ stool8:
 deadstool8:
 	idle: stoolmw
 		Start: 15
-        
 table1:
 	idle: tableroundmw
 		Start: 0
@@ -101,8 +99,6 @@ ichestdeadc:
 	idle: ichestc
 		Start: 9
 		make: *
-        
-        
 ipaintinga:
 	idle: ipainting
 		Start: 0
@@ -115,95 +111,72 @@ ipaintingc:
 ipaintingd:
 	idle: ipainting
 		Start: 3
-        
 barrelmw1:
 	idle: barrelmw
 		Start: 0
 deadbarrelmw1:
 	idle: barrelmw
-
 		Start: 11
 barrelmw2:
 	idle: barrelmw
-
 		Start: 1
 deadbarrelmw2:
 	idle: barrelmw
-
 		Start: 12
 barrelmw3:
 	idle: barrelmw
-
 		Start: 2
 deadbarrelmw3:
 	idle: barrelmw
-
 		Start: 13
 barrelmw4:
 	idle: barrelmw
-
 		Start: 3
 deadbarrelmw4:
 	idle: barrelmw
-
 		Start: 14
 barrelmw5:
 	idle: barrelmw
-
 		Start: 4
 deadbarrelmw5:
 	idle: barrelmw
-
 		Start: 15
 barrelmw6:
 	idle: barrelmw
-
 		Start: 5
 deadbarrelmw6:
 	idle: barrelmw
-
 		Start: 16
 barrelmw7:
 	idle: barrelmw
-
 		Start: 6
 deadbarrelmw7:
 	idle: barrelmw
-
 		Start: 17
 barrelmw8:
 	idle: barrelmw
-
 		Start: 7
 deadbarrelmw8:
 	idle: barrelmw
-
 		Start: 18
 barrelmw9:
 	idle: barrelmw
-
 		Start: 9
 deadbarrelmw9:
 	idle: barrelmw
-
 		Start: 19
 barrelmw10:
 	idle: barrelmw
-
 		Start: 10
 deadbarrelmw10:
 	idle: barrelmw
-
 		Start: 20
 barrelmw11:
 	idle: barrelmw
-
 		Start: 11
 deadbarrelmw11:
 	idle: barrelmw
-
 		Start: 21
-        
 idoornorth:
 	idle: idoorn
 idoornorthopen:
@@ -250,7 +223,6 @@ idooreastopen:
 		Tick: 150
 		Offset: -6, -12
 		ZOffset: -1025
-        
 idoorsnorth:
 	idle: idoorns
 		Offset: -11,0
@@ -303,7 +275,6 @@ idoorseastopen:
 		Tick: 150
 		Offset: -1, -12
 		ZOffset: -1025
-        
 idooriron:
 	idle: idoorgate
 		ZOffset: 1025
@@ -314,7 +285,6 @@ idoorironopen:
 		Length: *
 		Tick: 150
 		ZOffset: 1025
-        
 idoorbars:
 	idle: idoorbarsdoor
 		Offset: -11,6
@@ -328,8 +298,6 @@ idoorbarsopen:
 		Length: *
 		Tick: 150
 		ZOffset: -1025
-        
-
 switcha:
 	idle: iswitcha
 switchpulleda:
@@ -362,7 +330,6 @@ switchpulledd:
 	make: iswitchd
 		Length: *
 		Tick: 150
-        
 ibooka:
 	idle: ibooks
 		Start: 0
@@ -378,7 +345,6 @@ ibookd:
 ibookdead:
 	idle: ibooks
 		Start: 4
-        
 ibannera:
 	idle: ibanner
 		Start: 0
@@ -394,7 +360,6 @@ ibannerd:
 ibannere:
 	idle: ibanner
 		Start: 4
-
 objectivea:
 	idle: imissionobjective
 		Start: 0   
@@ -417,8 +382,6 @@ crackwall:
 crackwallh:
 	idle: 
 		ZOffset: 102  
-        
-        
 firepit:
 	idle:
 	burnloop: burn-m
@@ -427,7 +390,6 @@ firepit:
 		Tick: 80
 		ZOffset: 512
 		Offset: 0, -6
-        
 firetorch:
 	idle:
 	burnloop: burn-s
@@ -436,8 +398,6 @@ firetorch:
 		Tick: 80
 		ZOffset: 512
 		Offset: 0, -10
-        
-
 firetorchn:
 	idle: firetorche
 		Start: 0
@@ -518,7 +478,6 @@ firetorchse:
 		Tick: 80
 		ZOffset: 1512
 		Offset: 7, 3
-        
 bulb:
 	idle: 
 		Length: *
@@ -528,7 +487,6 @@ bulb:
 		-DepthSprite:
 		ZRamp: 1 
 		ZOffset: -10480 
-        
 bulbl:
 	idle: 
 		Length: *
@@ -601,14 +559,12 @@ bulbbl:
 		-DepthSprite:
 		ZRamp: 1 
 		ZOffset: -10480 
-        
 tsbulbtest:
 	idle: 
 		BlendMode: DoubleMultiplicative
 		UseTilesetCode: false
 		-DepthSprite:
 		ZRamp: 1
-	
 cstack01:
 	idle: coinstacks
 		Start: 0

@@ -180,6 +180,12 @@ Container@OBSERVER_WIDGETS:
 					Y: 9
 					Width: PARENT_RIGHT-18
 					Height: PARENT_BOTTOM-18
+				VqaPlayer@PLAYER:
+					X: 1
+					Y: 1
+					Width: PARENT_RIGHT - 2
+					Height: PARENT_BOTTOM - 2
+					Skippable: false
 		Background@SIDEBAR_BACKGROUND3:
 			Logic: MenuButtonsChromeLogic
 			X: WINDOW_RIGHT - 290
@@ -834,37 +840,16 @@ Container@PLAYER_WIDGETS:
 					Y: 10
 					Width: WINDOW_RIGHT - 580 - 20 - 150
 					Height: 12
-		Background@SIDEBAR_BACKGROUND5:
-			Logic: MenuButtonsChromeLogic
+		HorizontalSupportPowers@VERTICAL_SUPPORT_PALETTE:
 			X: 290
-			Y: WINDOW_BOTTOM - 300
-			Width: 260
-			Height: 64
-			Background: panel-black
-			Children:
-				Container@SUPPORT_POWERS:
-					Logic: SupportPowersWidget
-					X: 0
-					Y: 0
-					Children:
-						Container@PALETTE_BACKGROUND:
-							Children:
-								Background@ICON_TEMPLATE:
-									Width: 64
-									Height: 48
-									ClickThrough: false
-									Background: panel-gray
-						SupportPowers@SUPPORT_PALETTE:
-							X: 4
-							Y: 4
-							TooltipContainer: TOOLTIP_CONTAINER
-							ReadyText: Ready
-							HoldText: On Hold
-							ClockSequence: old
-							IconCount: 20
-							IconMargin: 8	
-							HotkeyPrefix: SupportPower		
-							HotkeyCount: 6
+			Y: WINDOW_BOTTOM - 280
+			IconSize: 64, 4
+			IconSpriteOffset: -1, -1
+			TooltipContainer: TOOLTIP_CONTAINER
+			ReadyText: Ready
+			HoldText: On Hold
+			HotkeyPrefix: SupportPower
+			HotkeyCount: 6
 				
 
 		

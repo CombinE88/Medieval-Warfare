@@ -12,6 +12,145 @@
 		FogVariants: typea, typeb, typec, typed
 		OverrideFullShroud: full
 		OverrideFullFog: full
+	Locomotor@FOOT:
+		Name: foot
+		Crushes: crate
+		SharesCell: true
+		TerrainSpeeds:
+			Clear: 90
+			Rough: 80
+			Road: 100
+			Tiberium: 60
+				PathingCost: 350
+			BlueTiberium: 60
+				PathingCost: 350
+			Crops: 75
+				PathingCost: 300
+			Wood: 75
+				PathingCost: 300
+			Loot: 75
+			Beach: 80
+			Corruption: 80
+	Locomotor@Farmer:
+		Name: farmer
+		Crushes: crate
+		SharesCell: true
+		TerrainSpeeds:
+			Clear: 90
+			Rough: 80
+			Road: 100
+			Tiberium: 90
+			BlueTiberium: 90
+			Crops: 90
+			Wood: 90
+			Loot: 90
+			Beach: 80
+			Corruption: 80
+	Locomotor@CAVALRYLIGHT:
+		Name: lightcavalry
+		Crushes: crate
+		TerrainSpeeds:
+			Clear: 100
+			Rough: 80
+			Road: 100
+			Tiberium: 60
+				PathingCost: 350
+			BlueTiberium: 60
+				PathingCost: 350
+			Crops: 75
+				PathingCost: 300
+			Wood: 75
+				PathingCost: 300
+			Loot: 75
+			Beach: 80
+			Corruption: 80
+	Locomotor@CAVALRYHEAVY:
+		Name: heavycavalry
+		Crushes: crate, infantry
+		TerrainSpeeds:
+			Clear: 80
+			Rough: 70
+			Road: 100
+			Tiberium: 60
+				PathingCost: 350
+			BlueTiberium: 60
+				PathingCost: 350
+			Crops: 75
+				PathingCost: 300
+			Wood: 75
+				PathingCost: 300
+			Loot: 75
+			Beach: 80
+			Corruption: 80
+	Locomotor@SIEGELIGHT:
+		Name: lightsiege
+		Crushes: crate
+		TerrainSpeeds:
+			Clear: 70
+			Rough: 60
+			Road: 100
+			Tiberium: 60
+				PathingCost: 350
+			BlueTiberium: 60
+				PathingCost: 350
+			Crops: 75
+				PathingCost: 300
+			Wood: 75
+				PathingCost: 300
+			Loot: 75
+			Beach: 80
+			Corruption: 80
+	Locomotor@SIEGEHEAVY:
+		Name: heavysiege
+		Crushes: crate, wall, heavywall, infantry
+		TerrainSpeeds:
+			Clear: 70
+			Rough: 60
+			Road: 100
+			Tiberium: 60
+				PathingCost: 350
+			BlueTiberium: 60
+				PathingCost: 350
+			Crops: 75
+				PathingCost: 300
+			Wood: 75
+				PathingCost: 300
+			Loot: 75
+			Beach: 80
+			Corruption: 80
+	Locomotor@SPECTRAL:
+		Name: spectral
+		Crushes: crate
+		SharesCell: true
+		TerrainSpeeds:
+			Clear: 100
+			Rough: 100
+			Road: 100
+			Tiberium: 100
+			BlueTiberium: 100
+			Crops: 100
+			Wood: 100
+			Loot: 100
+			Beach: 100
+			Rock: 100
+			River: 100
+			Water: 100
+	Locomotor@IMMOBILE:
+		Name: immobile
+		SharesCell: true
+		TerrainSpeeds:
+			Clear: 1
+			Rough: 1
+			Road: 1
+			Tiberium: 1
+			BlueTiberium: 1
+			Crops: 1
+			Wood: 1
+			Loot: 1
+			Beach: 1
+			Rock: 1
+			River: 1
+			Water: 1
 	Faction@Random:
 		Name: Any
 		InternalName: Random

@@ -117,8 +117,6 @@ e3newv2:
 		Tick: 80
 	icon: ne1icon.shp
 		AddExtension: False
-
-		
 e4new:
 	stunned: sulm4
 		ZOffset: 125
@@ -173,7 +171,6 @@ e4new:
 		Tick: 80
 	icon: ne2icona.shp
 		AddExtension: False
-		
 frmge:
 	stunned: sulm4
 		ZOffset: 125
@@ -230,7 +227,6 @@ frmge:
 	icon: nfrmgicon.shp
 		Offset: 0,0,0
 		AddExtension: False
-
 thief:
 	stunned: sulm4
 		ZOffset: 125
@@ -296,4 +292,3 @@ thief:
 		Tick: 80
 	icon: nstnkicon.shp
 		AddExtension: False
-	

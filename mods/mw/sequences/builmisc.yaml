@@ -132,7 +132,6 @@
 		Start: 5
 	scaffsw6: scaffoldSW
 		Start: 6
-		
 lodge:
 	Inherits: ^scaffold
 	idle: 
@@ -170,8 +169,6 @@ lodge:
 		Start: 4
 		ZOffset: -25
 		Offset: 0,-12
-		
-		
 procnew:
 	Inherits: ^scaffold
 	idle: 
@@ -215,7 +212,6 @@ procnew:
 		Start: 5
 		ZOffset: -25
 		Offset: 2,4
-		
 wtentt:
 	idle: 
 		Start: 0
@@ -242,7 +238,6 @@ wtentt:
 		Length: *
 	icon: keepicon.shp
 		AddExtension: False
-		
 newfact:
 	idle: kingfact0
 		Start: 0
@@ -305,7 +300,6 @@ newfact:
 		Length: *
 	icon: keepicon.shp
 		AddExtension: False
-		
 nodfact:
 	idle: baronfact0
 		Start: 0
@@ -368,8 +362,6 @@ nodfact:
 		Length: *
 	icon: keepicon.shp
 		AddExtension: False
-
-		
 sulfact:
 	idle: sulfact0
 		Start: 0
@@ -432,8 +424,6 @@ sulfact:
 		Length: *
 	icon: keepicon.shp
 		AddExtension: False
-
-
 ziggurat1:
 	idle: 
 		Start: 25
@@ -454,7 +444,6 @@ ziggurat1:
 		Length: *
 	icon: ziggurat1icon.shp
 		AddExtension: False
-		
 ziggurat2:
 	idle: 
 		Start: 25
@@ -475,8 +464,6 @@ ziggurat2:
 		Length: *
 	icon: ziggurat2icon.shp
 		AddExtension: False	
-
-
 ziggurat3:
 	idle: 
 		Start: 25
@@ -500,7 +487,6 @@ ziggurat3:
 		Length: *
 	icon: ziggurat3icon.shp
 		AddExtension: False
-		
 barn:
 	Inherits: ^scaffold
 	idle: 
@@ -555,8 +541,6 @@ barn:
 		Start: 5
 		ZOffset: -25
 		Offset: 0,-12
-		
-
 missnew:
 	idle: techcenternew
 		Offset: 0,-1
@@ -576,7 +560,6 @@ missnew:
 		Length: *
 		Offset: 0,1
 	icon: missicnh	
-	
 tech1:
 	idle: techbuilding1
 	damaged-idle: techbuilding1
@@ -588,14 +571,12 @@ tech1:
 		Facings: 32
 	muzzle: gunfire2
 		Length: *
-	
 tech1.husk:
 	idle: techbuilding1
 		Start: 2
 	bib: mwbib2
 		UseTilesetExtension: true
 		Length: *
-	
 bacamp:
 	idle: 
 	damaged-idle: 
@@ -621,7 +602,6 @@ bacamp:
 		Length: 4
 		Tick: 120
 		ZOffset: -1024
-	
 bacamp.husk:
 	idle: bacamp
 		Start: 2
@@ -632,6 +612,3 @@ bacamp.husk:
 			JUNGLE: TEMPERAT
 			INTERIOR: TEMPERAT
 		Length: *
-		
-
-		

@@ -4,7 +4,6 @@ cofspawn1:
 	make:
 		Length: *
 		Tick: 80
-		
 cofspawn2:
 	idle: 
 		Start: 20
@@ -17,14 +16,12 @@ cofspawn3:
 	make:
 		Length: *
 		Tick: 80
-		
 cofspawn4:
 	idle: 
 		Start: 20
 	make:
 		Length: *
 		Tick: 80
-		
 coffin:
 	empty: coffin1
 		Start: 0
@@ -51,8 +48,6 @@ coffin:
 		Tick: 200
 	deadc: coffin3
 		Start: 23
-
-		
 gstone1: 
 	empty: gstone1
 		Start: 0
@@ -75,7 +70,6 @@ gstone1:
 		Tick: 80
 	dead:
 		Start: 11
-
 gstone2: 
 	empty: gstone4
 		Start: 0
@@ -98,7 +92,6 @@ gstone2:
 		Tick: 80
 	dead: gstone4
 		Start: 11		
-	
 gstone3: 
 	empty: gstone7
 		Start: 0
@@ -121,7 +114,6 @@ gstone3:
 		Tick: 80
 	dead: gstone7
 		Start: 11   
-	
 gstonexl1: 
 	idle:
 		Start: 10
@@ -141,15 +133,9 @@ gstonexl2:
 gravespawner:
 	idle:
 		Length: *
-		
-
 gravespawnera:
 	idle:
 		Length: *
-		
-
 gravespawnerb:
 	idle:
 		Length: *
-
-

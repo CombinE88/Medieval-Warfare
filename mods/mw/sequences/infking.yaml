@@ -54,10 +54,6 @@ e2new:
 	icon: ne3icon.shp
 		Offset: 0,0,0
 		AddExtension: False
-		
-
-
-
 e3new:
 	stunned: sulm4
 		ZOffset: 125
@@ -113,7 +109,6 @@ e3new:
 		Tick: 80
 	icon: ne1icona.shp
 		AddExtension: False
-        
 e4newv2:
 	stunned: sulm4
 		ZOffset: 125
@@ -221,7 +216,6 @@ newcomm:
 	empty: sulm4
 		Tick: 1000
 		Start: 0
-
 rmbonew:
 	stunned: sulm4
 		ZOffset: 125
@@ -284,9 +278,6 @@ rmbonew:
 		Length: 7
 		Tick: 100
 		ZOffset: 512
-		
-
-        
 koenig:
 	make: 
 		Start: 176
@@ -343,4 +334,3 @@ koenig:
 		Tick: 80
 	icon: koenigicon.shp
 		AddExtension: False
- 

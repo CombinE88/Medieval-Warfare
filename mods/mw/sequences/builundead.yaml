@@ -20,7 +20,6 @@
 	circlel: ptimerl
 		Length: 21
 		ZOffset: -2024
-
 sppool: 
 	Inherits: ^pentagram
 	idle:
@@ -38,7 +37,6 @@ sppool:
 		Length: *
 	icon: sppoolicon.shp
 		AddExtension: False
-
 crypt: 
 	Inherits: ^pentagram
 	idle:
@@ -72,7 +70,6 @@ crypt:
 		Offset: -3, 17
 	icon: crypticon.shp
 		AddExtension: False
-		
 mauso: 
 	Inherits: ^pentagram
 	idle:
@@ -90,7 +87,6 @@ mauso:
 		Length: *
 	icon: mausoicon.shp
 		AddExtension: False
-		
 libra: 
 	Inherits: ^pentagram
 	idle:
@@ -108,7 +104,6 @@ libra:
 		Length: *
 	icon: libraicon.shp
 		AddExtension: False
-		
 tomb: 
 	Inherits: ^pentagram
 	idle:
@@ -130,26 +125,18 @@ tomb:
 		Length: *
 	icon: tombicon.shp
 		AddExtension: False
-		
 seal1:
 	icon: seal1.shp
 		AddExtension: False 
-		
 seal2:
 	icon: seal2.shp
 		AddExtension: False 
-		
 seal3:
 	icon: seal3.shp
 		AddExtension: False 
-		
 seal4:
 	icon: seal4.shp
 		AddExtension: False 
-		
 seal5:
 	icon: seal5.shp
 		AddExtension: False 
-
-		
-		

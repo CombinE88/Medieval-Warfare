@@ -33,7 +33,6 @@ sulnuke:
 	make6: sulnukemake
 		Start: 5
 		ZOffset: -25
-		
 sulnuk2:
 	Inherits: ^scaffold
 	idle: 
@@ -79,8 +78,6 @@ sulnuk2:
 		Start: 5
 		ZOffset: -25
 		Offset: 0,-15
- 
-	
 sulmill:
 	Inherits: ^scaffold
 	idle: 
@@ -126,7 +123,6 @@ sulmill:
 		Offset: 12,-12,0
 		Start: 4
 		ZOffset: -25
-		
 sulref:
 	Inherits: ^scaffold
 	idle: 
@@ -171,7 +167,6 @@ sulref:
 		Start: 5
 		ZOffset: -25
 		Offset: 2,4
-
 sullodge:
 	Inherits: ^scaffold
 	idle: 
@@ -209,7 +204,6 @@ sullodge:
 		Start: 4
 		ZOffset: -25
 		Offset: 0,-12
-
 sulbarr:
 	Inherits: ^scaffold
 	idle: 
@@ -242,7 +236,6 @@ sulbarr:
 	make5: sulbarrmake
 		Start: 4
 		ZOffset: -25	   
-		
 sulmystic:
 	Inherits: ^scaffold
 	idle: 
@@ -288,8 +281,6 @@ sulmystic:
 		Start: 25
 		ZOffset: -25
 		Offset: 12,-24,0
-		
-		
 sulcastle:
 	Inherits: ^scaffold
 	idle: 
@@ -381,7 +372,6 @@ sulcastle:
 		Start: 5
 		ZOffset: -25
 		Offset: 0,-18
-		
 sultow1:
 	Inherits: ^scaffold
 	idle: 
@@ -409,7 +399,6 @@ sultow1:
 		Length: *
 	icon: sultow1icon.shp
 		AddExtension: False 
-		
 sultow2:
 	Inherits: ^scaffold
 	idle: 
@@ -437,7 +426,6 @@ sultow2:
 		Length: *
 	icon: sultow2icon.shp
 		AddExtension: False
-		
 sultow3:
 	Inherits: ^scaffold
 	idle: 
@@ -465,7 +453,6 @@ sultow3:
 		Length: *
 	icon: sultow3icon.shp
 		AddExtension: False
-		
 sultow4:
 	Inherits: ^scaffold
 	idle: 
@@ -499,7 +486,6 @@ sultow4:
 		Length: *
 	icon: sultow4icon.shp
 		AddExtension: False
-		
 sulfix:
 	Inherits: ^scaffold
 	idle: 
@@ -545,7 +531,6 @@ sulfix:
 		Start: 25
 		ZOffset: -25
 		Offset: 0, -12
-		
 sulcnshmbr:
 	Inherits: ^scaffold
 	idle: 
@@ -591,8 +576,6 @@ sulcnshmbr:
 		Start: 5
 		ZOffset: -25
 		Offset: 0,-12
-
-		
 silonew:
 	Inherits: ^scaffold
 	idle: 
@@ -629,4 +612,3 @@ silonew:
 	make4: silonewmake
 		Start: 12
 		ZOffset: -25
-		

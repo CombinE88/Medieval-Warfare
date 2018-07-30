@@ -1,4 +1,3 @@
-		
 Fork:
 	ReloadDelay: 35
 	Range: 1c800
@@ -49,10 +48,6 @@ Pike:
 			HeavyCavalry: 120
 			Spectral: 10
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
-		
-		
-# PikeGuard --------------------
-
 KingPike:
 	ReloadDelay: 50
 	Range: 2c800
@@ -85,7 +80,6 @@ KingPike:
 		AffectsParent: true
 		ValidTargets: KingPike
 		InvalidTargets: Air
-		
 KingPikeStructure:
 	ReloadDelay: 50
 	Range: 2c800
@@ -118,7 +112,6 @@ KingPikeStructure:
 		AffectsParent: true
 		ValidTargets: KingPike
 		InvalidTargets: Air
-		
 KingPikeRanged:
 	ReloadDelay: 375
 	Range: 4c512
@@ -137,7 +130,6 @@ KingPikeRanged:
 		ValidTargets: Cavalry 
 		InvalidTargets: Air, Wall, Structure
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
-		
 KingPikeRangedDummy:
 	ReloadDelay: 375
 	Range: 4c512
@@ -161,7 +153,6 @@ KingPikeRangedDummy:
 			HeavyCavalry: 120
 			Spectral: 10
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
-		
 KingPikePinning:
 	ReloadDelay: 375
 	Range: 4c512
@@ -188,9 +179,6 @@ KingPikePinning:
 		AffectsParent: true
 		ValidTargets: KingPike
 		InvalidTargets: Air
-
-# -----------------------
-		
 PikeSpread:
 	ReloadDelay: 65
 	Range: 2c800
@@ -217,7 +205,6 @@ PikeSpread:
 			HeavyCavalry: 120
 			Spectral: 10
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
-		
 PikeCavalry:
 	ReloadDelay: 30
 	Range: 1c800
@@ -243,7 +230,6 @@ PikeCavalry:
 			HeavyCavalry: 100
 			Spectral: 15
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
-		
 PikeAxe:
 	ReloadDelay: 40
 	Range: 1c800
@@ -270,12 +256,11 @@ PikeAxe:
 			HeavyCavalry: 125
 			Spectral: 15
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath		
-
 MammothPike:
 	ReloadDelay: 45
 	Range: 1c800
 	Burst: 2
-	BurstDelay: 20
+	BurstDelays: 20
 	ValidTargets: Cavalry, Trees, Structure
 	InvalidTargets: Air
 	Report: Sword02.aud, Sword03.aud, Sword04.aud, Sword06.aud, Sword07.aud
@@ -299,7 +284,6 @@ MammothPike:
 			HeavyCavalry: 100
 			Spectral: 65
 		DamageTypes: Prone50Percent, TriggerProne, RippedApartDeath
-
 BroadSword:
 	ReloadDelay: 35
 	Range: 1c800
@@ -332,7 +316,6 @@ BroadSword:
 		AffectsParent: true
 		ValidTargets: KingSword
 		InvalidTargets: Air
-		
 BroadSwordStructure:
 	ReloadDelay: 35
 	Range: 1c800
@@ -365,7 +348,6 @@ BroadSwordStructure:
 		AffectsParent: true
 		ValidTargets: KingSword
 		InvalidTargets: Air
-		
 BroadSwordBaron:
 	ReloadDelay: 35
 	Range: 1c800
@@ -391,7 +373,6 @@ BroadSwordBaron:
 			HeavyCavalry: 10
 			Spectral: 15
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
-		
 BroadSwordRanged:
 	ReloadDelay: 375
 	Range: 4c0
@@ -410,7 +391,6 @@ BroadSwordRanged:
 		ValidTargets: Ground
 		InvalidTargets: Air, Wall, Structure
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
-		
 BroadSwordRangedDummy:
 	ReloadDelay: 375
 	Range: 4c0
@@ -434,7 +414,6 @@ BroadSwordRangedDummy:
 			HeavyCavalry: 10
 			Spectral: 33
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
-		
 BroadSwordPinning:
 	ReloadDelay: 375
 	Range: 4c0
@@ -461,11 +440,10 @@ BroadSwordPinning:
 		AffectsParent: true
 		ValidTargets: KingSword
 		InvalidTargets: Air
-		
 BroadSwordMongol:
 	ReloadDelay: 35
 	Burst: 2
-	BurstDelay: 10
+	BurstDelays: 10
 	Range: 1c800
 	Report: Sword02.aud, Sword03.aud, Sword04.aud, Sword06.aud, Sword07.aud
 	ValidTargets: Ground, Trees
@@ -489,7 +467,6 @@ BroadSwordMongol:
 			HeavyCavalry: 25
 			Spectral: 15
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
-
 KingsSword:
 	ReloadDelay: 60
 	Range: 1c800
@@ -515,7 +492,6 @@ KingsSword:
 			MediumCavalry: 75
 			HeavyCavalry: 65
 		DamageTypes: Prone50Percent, TriggerProne, RippedApartDeath
-
 Claymore:
 	ReloadDelay: 45
 	Range: 1c800
@@ -541,7 +517,6 @@ Claymore:
 			MediumCavalry: 45
 			HeavyCavalry: 35
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath	   
-
 Sledgehammer:
 	ReloadDelay: 60
 	Range: 1c800
@@ -625,13 +600,12 @@ Sledgehammer:
 			Spectral: 200
 		DamageTypes: Prone50Percent, TriggerProne, RippedApartDeath  
 		ValidStances: Enemy, Neutral 
-
 Mace:
 	ReloadDelay: 45
 	InvalidTargets: Wall, Air
 	Range: 2c0
 	Burst: 3
-	BurstDelay: 15
+	BurstDelays: 15
 	Report: Sword02.aud, Sword03.aud, Sword04.aud, Sword06.aud, Sword07.aud
 	ValidTargets: Ground
 	Projectile: Bullet
@@ -653,7 +627,6 @@ Mace:
 			HeavyBuilding: 10
 			Spectral: 15
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
-
 Battering:
 	ReloadDelay: 160
 	Range: 1c800

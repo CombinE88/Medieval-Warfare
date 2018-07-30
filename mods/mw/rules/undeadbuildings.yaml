@@ -935,7 +935,7 @@ GSTONE1:
 	Inherits: ^Gravestone
 	WithSpriteBody:
 		Sequence: empty
-	GrantRandomCondition:
+	CombinEGrantRandomCondition:
 		RandomConditions: valida, validb, validc
 		FallbackCondition: valida
 	WithIdleOverlay@a:  
@@ -968,7 +968,7 @@ GSTONE2:
 	Inherits: ^Gravestone
 	WithSpriteBody:
 		Sequence: empty
-	GrantRandomCondition:
+	CombinEGrantRandomCondition:
 		RandomConditions: valida, validb, validc
 		FallbackCondition: valida
 	WithIdleOverlay@a:  
@@ -1001,7 +1001,7 @@ GSTONE3:
 	Inherits: ^Gravestone
 	WithSpriteBody:
 		Sequence: empty
-	GrantRandomCondition:
+	CombinEGrantRandomCondition:
 		RandomConditions: valida, validb, validc
 		FallbackCondition: valida
 	WithIdleOverlay@a:  
@@ -1034,7 +1034,7 @@ COFFIN:
 	Inherits: ^Gravestone
 	WithSpriteBody:
 		Sequence: empty
-	GrantRandomCondition:
+	CombinEGrantRandomCondition:
 		RandomConditions: valida, validb, validc
 		FallbackCondition: valida
 	WithIdleOverlay@a:  
@@ -1110,7 +1110,7 @@ OBELISK:
 	GrantConditionOnPrerequisite:
 		Condition: Sppollbuild
 		Prerequisites: sppool
-	EmitInfantryOnSell:
+	SpawnActorsOnSell:
 		ActorTypes: preycolyte,undead1
 GARG:
 	Inherits: ^MWDefense
@@ -1161,5 +1161,5 @@ GARG:
 		DeathSequencePalette: raplayer 
 	Targetable@CombatRole:
 		TargetTypes: Defenses
-	EmitInfantryOnSell:
+	SpawnActorsOnSell:
 		ActorTypes: undead1,undead1

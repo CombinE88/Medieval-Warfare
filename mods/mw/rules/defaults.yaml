@@ -245,23 +245,7 @@
 	RevealsShroud:
 		Range: 5c0
 	Mobile:
-		Crushes: crate
-		SharesCell: true
-		TerrainSpeeds:
-			Clear: 90
-			Rough: 80
-			Road: 100
-			Tiberium: 60
-				PathingCost: 350
-			BlueTiberium: 60
-				PathingCost: 350
-			Crops: 75
-				PathingCost: 300
-			Wood: 75
-				PathingCost: 300
-			Loot: 75
-			Beach: 80
-			Corruption: 80
+		Locomotor: foot
 	SelectionDecorations:
 	WithSpriteControlGroupDecoration:
 	Selectable:
@@ -315,7 +299,7 @@
 		GenericVisibility: None
 	Mobile:
 		Speed: 56
-		Crushes:
+		Locomotor: foot
 	Health:
 		HP: 25
 	RevealsShroud:
@@ -416,7 +400,7 @@
 	RequiresBuildableArea:
 		AreaTypes: building
 		Adjacent: 8
-	EmitInfantryOnSell:
+	SpawnActorsOnSell:
 		ActorTypes: e1new,e1new,e1new,e1new
 	EngineerRepairable:
 	Sellable:
@@ -939,7 +923,7 @@
 		Categories: Aircraft
 ^MWBaseBuilding:
 	Inherits@1: ^BaseBuilding
-	EmitInfantryOnSell:
+	SpawnActorsOnSell:
 		ActorTypes: engeneer,e1new
 	RepairableBuilding:
 		RepairPercent: 40
@@ -953,7 +937,7 @@
 		TargetTypes: Ground, C4, Structure, Wanderer
 ^MWDefense:
 	Inherits@1: ^Defense
-	EmitInfantryOnSell:
+	SpawnActorsOnSell:
 		ActorTypes: engeneer,e1new
 	RepairableBuilding:
 		RepairPercent: 40
@@ -980,23 +964,7 @@
 	RevealsShroud:
 		Range: 5c0
 	Mobile:
-		Crushes: crate
-		SharesCell: true
-		TerrainSpeeds:
-			Clear: 90
-			Rough: 80
-			Road: 100
-			Tiberium: 60
-				PathingCost: 150
-			BlueTiberium: 60
-				PathingCost: 150
-			Crops: 75
-				PathingCost: 150
-			Wood: 75
-				PathingCost: 150
-			Loot: 75
-			Beach: 80
-			Corruption: 75
+		Locomotor: foot
 	SelectionDecorations:
 	WithSpriteControlGroupDecoration:
 	Selectable:
@@ -1038,6 +1006,8 @@
 	MustBeDestroyed:
 	Tooltip:
 		GenericName: Soldier
+	Mobile:
+		Locomotor: foot
 	Guard:
 	Crushable:
 	AutoTarget:
@@ -1112,6 +1082,8 @@
 			BallistaDeath: 1
 			BurnToDeath: 2
 	MustBeDestroyed:
+	Mobile:
+		Locomotor: lightcavalry
 	Health:
 	Tooltip:
 		GenericName: Cavalry
@@ -1209,6 +1181,8 @@
 	Tooltip:
 		GenericName: Generic siege engine
 	Guard:
+	Mobile:
+		Locomotor: lightsiege
 	AutoTarget:
 		ScanRadius: 7
 		MinimumScanTimeInterval: 20
@@ -1272,7 +1246,7 @@
 		GenericVisibility: None
 	Mobile:
 		Speed: 56
-		Crushes:
+
 	Health:
 		HP: 2500
 	RevealsShroud:
@@ -1343,7 +1317,7 @@
 	ScaredyCat:
 	Mobile:
 		Speed: 56
-		Crushes:
+
 	Health:
 		HP: 2500
 	RevealsShroud:
@@ -1389,7 +1363,7 @@
 		Range: 0c0
 	Mobile:
 		Speed: 56
-		Crushes:
+
 	-Selectable:
 	Interactable:
 	Targetable:
@@ -1461,7 +1435,7 @@
 		GenericVisibility: None
 	Mobile:
 		Speed: 56
-		Crushes:
+
 	Health:
 		HP: 2500
 	RevealsShroud:
@@ -1505,7 +1479,7 @@
 		ShowOwnerRow: false
 	Mobile:
 		Speed: 56
-		Crushes:
+
 	Health:
 		HP: 7000
 	RevealsShroud:
@@ -1571,7 +1545,7 @@
 		TargetTypes: Ground, Infantry
 	Mobile:
 		Speed: 46
-		Crushes:
+
 	Health:
 		HP: 5000
 	RevealsShroud:

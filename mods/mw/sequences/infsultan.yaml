@@ -61,7 +61,6 @@ sule1:
 		Tick: 80
 	icon: sule1icon.shp
 		AddExtension: False
-		
 sule2:
 	stunned: sulm4
 		ZOffset: 125
@@ -122,7 +121,6 @@ sule2:
 		Tick: 80
 	icon: sule2icon.shp
 		AddExtension: False
-		
 sule3:
 	stunned: sulm4
 		ZOffset: 125
@@ -178,7 +176,6 @@ sule3:
 		Tick: 80
 	icon: sule3icon.shp
 		AddExtension: False
-		
 sule4:
 	stunned: sulm4
 		ZOffset: 125
@@ -231,7 +228,6 @@ sule4:
 		Tick: 80
 	icon: sule4icon.shp
 		AddExtension: False
-		
 sule5:
 	stunned: sulm4
 		ZOffset: 125
@@ -279,7 +275,6 @@ sule5:
 		Tick: 80
 	icon: sule5icon.shp
 		AddExtension: False
-		
 sule6:
 	stunned: sulm4
 		ZOffset: 125
@@ -363,7 +358,6 @@ sule6:
 	icon: farmericon.shp
 		Offset: 0,0,0
 		AddExtension: False
-		
 sulengi:
 	stunned: sulm4
 		ZOffset: 125
@@ -424,4 +418,3 @@ sulengi:
 		Tick: 80
 	icon: ne5icon.shp
 		AddExtension: False
-

@@ -1,5 +1,3 @@
-#SiegeWeapons
-
 sulxl:
 	dock: 
 		Start: 238
@@ -70,7 +68,6 @@ sulxl:
 		Tick: 80
 	icon: sulxlicon.shp
 		AddExtension: False  
-
 sulb0:
 	stand: 
 		Start: 0
@@ -94,7 +91,6 @@ sulb0:
 		Start: 66
 		Length: 7
 		Facings: 8 
-
 sulb1:
 	stand: 
 		Start: 0
@@ -114,7 +110,6 @@ sulb1:
 		Tick: 100
 		Length: 7
 		Facings: 32
-	# Explode
 	die2: sulb1husk
 		Start: 0
 		Tick: 100
@@ -146,7 +141,6 @@ sulb1:
 		Facings: 32
 	icon: sulb1icon.shp
 		AddExtension: False 
-
 sulb1.husk:
 	start: sulb1husk
 		Start: 0
@@ -156,7 +150,6 @@ sulb1.husk:
 	idle: sulb1husk
 		Start: 225
 		Facings: 32		
-		
 sulb2:
 	stand: 
 		Start: 0
@@ -208,7 +201,6 @@ sulb2:
 		Facings: 32
 	icon: sulb2icon.shp
 		AddExtension: False 
-
 sulb2.husk:
 	start: sulb2husk
 		Start: 0
@@ -218,7 +210,6 @@ sulb2.husk:
 	idle: sulb2husk
 		Start: 225
 		Facings: 32  
-
 sulb3:
 	idle: 
 		Start: 0
@@ -237,12 +228,10 @@ sulb3:
 		Facings: 32
 	icon: sulb3icon.shp
 		AddExtension: False 
-
 sulb3.husk:
 	idle: sulb3
 		Start: 449
 		Facings: 32		 
-
 sulspball:
 	turretanim:
 		Start: 32
@@ -276,7 +265,6 @@ sulspball:
 		Length: *
 	icon: sulspballicon.shp
 		AddExtension: False		
-	
 #misc
 sulturnxl:
 	make: sulturn
@@ -297,4 +285,3 @@ sulturnxl:
 		Tick: 100
 		Offset: 30, -52
 		ZOffset: 2024
-		

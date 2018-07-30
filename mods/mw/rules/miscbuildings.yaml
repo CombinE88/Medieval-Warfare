@@ -608,7 +608,7 @@ SILONEW:
 		PipCount: 10
 		PipColor: Green
 		Capacity: 2000
-	-EmitInfantryOnSell:
+	-SpawnActorsOnSell:
 	MustBeDestroyed:
 		RequiredForShortGame: false
 	SelectionDecorations:
@@ -648,7 +648,7 @@ SILOTWO:
 		PipCount: 10
 		PipColor: Green
 		Capacity: 2250
-	-EmitInfantryOnSell:
+	-SpawnActorsOnSell:
 	MustBeDestroyed:
 		RequiredForShortGame: false
 	SelectionDecorations:

@@ -65,7 +65,6 @@ nodnuke:
 		Start: 0
 		Tick: 80
 		Offset: 0,-12
-		
 xltnt1:
 	Inherits: ^scaffold
 	idle: 
@@ -160,7 +159,6 @@ xltnt1:
 		Start: 6
 		ZOffset: -25
 		Offset: 0,-6
-
 xltnt2:
 	Inherits: ^scaffold
 	idle: 
@@ -207,7 +205,6 @@ xltnt2:
 		Start: 5
 		ZOffset: -25
 		Offset: 0,-6
-		
 xltnt3:
 	Inherits: ^scaffold
 	idle: 
@@ -254,9 +251,6 @@ xltnt3:
 		Start: 5
 		ZOffset: -25
 		Offset: 0,-6   
-		
-		
-		
 nodmill:
 	Inherits: ^scaffold
 	idle: nodmillv2
@@ -304,7 +298,6 @@ nodmill:
 		Start: 5
 		ZOffset: -25
 		Offset: 12,-12
-		
 handnew:
 	Inherits: ^scaffold
 	idle: 
@@ -336,7 +329,6 @@ handnew:
 	make5: handnewmake
 		Start: 25
 		ZOffset: -25
-
 nodstall:
 	Inherits: ^scaffold
 	idle: nodstable
@@ -391,8 +383,6 @@ nodstall:
 		Offset: 0,-6,0
 		Start: 28
 		ZOffset: -25
-		
-		
 nodfix:
 	Inherits: ^scaffold
 	idle: 
@@ -439,7 +429,6 @@ nodfix:
 		Start: 20
 		ZOffset: -25
 		Offset: 0, -12
-		
 armory:
 	Inherits: ^scaffold
 	idle: 
@@ -480,7 +469,6 @@ armory:
 		Start: 25
 		ZOffset: -25
 		Offset: 0,-12
-		
 castle:
 	Inherits: ^scaffold
 	idle: castle
@@ -533,4 +521,3 @@ castle:
 		Offset: 0,-12,0
 		Start: 5
 		ZOffset: -25
-

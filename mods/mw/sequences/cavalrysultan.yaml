@@ -50,7 +50,6 @@ sulm1:
 		Tick: 80
 	icon: sulm1icon.shp
 		AddExtension: False
-		
 sulm1skelet:
 	stunned: sulm4
 		ZOffset: 125
@@ -104,7 +103,6 @@ sulm1skelet:
 	die5: burningman
 		Length: *
 		Tick: 80
-		
 sulm2:
 	stunned: sulm4
 		ZOffset: 125
@@ -160,7 +158,6 @@ sulm2:
 		Tick: 60
 	icon: sulm2icon.shp
 		AddExtension: False
-		
 sulm3:
 	stunned: sulm4
 		ZOffset: 125
@@ -180,7 +177,6 @@ sulm3:
 		Facings: 32
 	icon: sulm3icon.shp
 		AddExtension: False
-		
 sulm4:
 	stunned: sulm4
 		ZOffset: 125
@@ -236,17 +232,14 @@ sulm4:
 		Tick: 80
 	icon: sulm4icon.shp
 		AddExtension: False
-		
 sulm3.husk:
 	idle: sulm3
 		Start: 0
 		Facings: 32
-
 sulm3.manhusk: 
 	idle: sulm3
 		Start: 322
 		Facings: 31
-		
 sulm3grenade: 
 	idle: sulm3
 		Start: 353

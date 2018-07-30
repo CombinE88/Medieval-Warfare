@@ -64,7 +64,6 @@ gtwnew:
 		Start: 7
 		ZOffset: -25
 		Offset: 0,-12
-		
 sulgtw:
 	Inherits: ^scaffold
 	idle: 
@@ -183,7 +182,6 @@ sulgtw:
 		Start: 8
 		ZOffset: -25
 		Offset: 0,-12
-		
 gunnew:
 	Inherits: ^scaffold
 	idle: cannontower
@@ -224,7 +222,6 @@ gunnew:
 	make6: cannontowermake
 		Start: 9
 		ZOffset: -25
-		
 tribu:
 	Inherits: ^scaffold
 	turretanim: 
@@ -283,7 +280,6 @@ tribu:
 		Start: 8
 		ZOffset: -25
 		Offset: 0,-18,0
-        
 sigtrib:
 	Inherits: ^scaffold
 	turretanim: 
@@ -342,8 +338,6 @@ sigtrib:
 		Start: 19
 		ZOffset: -25
 		Offset: 0,-18,0
-        
-		
 batowgun:
 	Inherits: ^scaffold
 	turretanim: 
@@ -456,7 +450,6 @@ gtairwnew:
 		Start: 20
 		ZOffset: -25
 		Offset: 0,-12,0
-		
 cstlwll:
 	Inherits: ^scaffold
 	idle: cstlwll
@@ -481,7 +474,6 @@ cstlwll:
 			INTERIOR: TEMPERAT
 		Length: *
 		Offset: 0,-2
-        
 frtwll:
 	Inherits: ^scaffold
 	idle: frtwll
@@ -504,7 +496,6 @@ frtwll:
 			INTERIOR: TEMPERAT
 		Length: *
 		Offset: 0,-2
-        
 sulwll:
 	Inherits: ^scaffold
 	idle: sulwll
@@ -527,8 +518,6 @@ sulwll:
 			INTERIOR: TEMPERAT
 		Length: *
 		Offset: 0,-2
-	
-		
 wdwll:
 	idle: wdwll
 		Length: 16
@@ -540,7 +529,6 @@ wdwll:
 		Length: 16
 	icon: wdwllicon.shp
 		AddExtension: False
-		
 sulplug1:
 	idle: sulgtw
 		Start: 13
@@ -551,7 +539,6 @@ sulplug1:
 	icon: sulgtwplugsicon.shp
 		Start: 0
 		AddExtension: False 
-		
 sulplug2:
 	idle: sulgtwplugs
 		Start: 0
@@ -562,7 +549,6 @@ sulplug2:
 	icon: sulgtwplugsicon.shp
 		Start: 1
 		AddExtension: False 
-		
 sulplug3:
 	idle: sulgtwplugs
 		Start: 2
@@ -573,7 +559,6 @@ sulplug3:
 	icon: sulgtwplugsicon.shp
 		Start: 2
 		AddExtension: False 
-		
 sulplug4:
 	idle: sulgtwbase2
 		Start: 0
@@ -582,8 +567,6 @@ sulplug4:
 	icon: sulgtwplugsicon.shp
 		Start: 3
 		AddExtension: False 
-		
-
 garg:
 	Inherits: ^pentagram
 	damaged-idle: 
@@ -621,7 +604,6 @@ garg:
 		Offset: 0,-2
 	icon: gargicon.shp
 		AddExtension: False
-		
 grafence:
 	idle: 
 		Length: 16
@@ -649,9 +631,6 @@ obelisk:
 		Tick: 200
 	icon: obeliskicon.shp
 		AddExtension: False
-
-# test
-
 cstlgtew:
 	Inherits: ^scaffold
 	idle: cstlgtew
@@ -708,7 +687,6 @@ cstlgtew:
 		Offset: 0,-4,0
 	icon: cstlgtweicon.shp
 		AddExtension: False
-		
 cstlgtns:
 	Inherits: ^scaffold
 	idle: cstlgtnstop
@@ -766,8 +744,6 @@ cstlgtns:
 		Offset: 0,-18
 	icon: cstlgtnsicon.shp
 		AddExtension: False
-        
-
 sulgtew:
 	Inherits: ^scaffold
 	idle: sulgtew
@@ -824,7 +800,6 @@ sulgtew:
 		Offset: 0,-4,0
 	icon: cstlgtweicon.shp
 		AddExtension: False
-		
 sulgtns:
 	Inherits: ^scaffold
 	idle: sulgtnstop
@@ -882,7 +857,6 @@ sulgtns:
 		Offset: 0,-18
 	icon: cstlgtnsicon.shp
 		AddExtension: False
-        
 dedwall:
 	Inherits: ^scaffold
 	idle: dedwall
@@ -945,7 +919,6 @@ dedwall:
 		Start: 9
 		ZOffset: -25
 		Offset: 0,-12
-        
 dedgate:
 	Inherits: ^scaffold
 	idle: dedgate
@@ -1018,7 +991,6 @@ dedgate:
 		Offset: 0,-4,0
 	icon: dedgateicon.shp
 		AddExtension: False
-		
 dedgatens:
 	Inherits: ^scaffold
 	idle: dedgatens

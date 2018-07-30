@@ -84,7 +84,7 @@
     <Compile Include="Traits\DockBasics\DockClient.cs" />
     <Compile Include="Traits\DockBasics\DockManager.cs" />
     <Compile Include="Traits\DockBasics\DockUtils.cs" />
-    <Compile Include="Traits\GrantRandomCondition.cs" />
+    <Compile Include="Traits\CombinEGrantRandomCondition.cs" />
     <Compile Include="Traits\HunterTraits\HuntableDeer.cs" />
     <Compile Include="Traits\HunterTraits\DeerHunter.cs" />
     <Compile Include="Traits\HunterTraits\LodgeActor.cs" />
@@ -140,6 +140,9 @@
     <Compile Include="Widgets\Logic\Ingame\IngamePopulationCounterLogic.cs" />
     <Compile Include="Widgets\Logic\Ingame\IngameUsedPopulationCounterLogic.cs" />
     <Compile Include="Widgets\Logic\Ingame\NewCashCounterLogic.cs" />
+    <Compile Include="Widgets\Logic\HorizontalSupportPowerBinLogic.cs" />
+    <Compile Include="Widgets\Logic\HorizontalSupportPowersWidget.cs" />
+    <Compile Include="Widgets\Logic\SupportPowerTooltipLogic.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\engine\OpenRA.Mods.Common\OpenRA.Mods.Common.csproj">

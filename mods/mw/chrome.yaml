@@ -24,7 +24,6 @@ logos: chrome.png
 thanks: thanksto.png
 	thankv: 4,27,308,160
 
-
 paperframe: chromeMW.png
 	background: 240,120,48,48
 	border-r: 288,120,24,48
@@ -500,6 +499,12 @@ lobby-bits: chrome.png
 	kick: 386,115,11,11
 	protected: 403,97,10,13
 	protected-disabled: 403,113,10,13
+
+lobby-bits: cncchrome.png    
+	admin-registered: 448,112,16,16
+	admin-anonymous: 464,112,16,16
+	player-registered: 480,112,16,16
+	player-anonymous: 496,112,16,16
 
 checkbox-bits: chrome.png
 	checked: 272,32,16,16

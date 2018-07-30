@@ -21,8 +21,7 @@ KINGROSS:
 	Guard:
 		Voice: Move
 	Mobile:
-		SharesCell: false
-		Crushes: crate, infantry
+		Locomotor: heavycavalry
 		TurnSpeed: 7
 		Speed: 110
 		Voice: Move
@@ -100,7 +99,6 @@ DDLER:
 		Prerequisites: ~disabled
 		Queue: MInfantry.Nod,  MInfantry.GDI, MHosp.Medi
 	Mobile:
-		SharesCell: false
 		TurnSpeed: 12
 		Speed: 55
 	RevealsShroud:
@@ -274,8 +272,7 @@ ROSS1:
 		Queue: MVehicle.Nod
 		#BuildDuration: 250
 	Mobile:
-		SharesCell: false
-		Crushes: crate, infantry
+		Locomotor: heavycavalry
 		TurnSpeed: 8
 		Speed: 110
 	RevealsShroud:
@@ -334,8 +331,7 @@ ROSS2:
 		Queue: MVehicle.GDI
 		#BuildDuration: 300
 	Mobile:
-		SharesCell: false
-		Crushes: crate, infantry
+		Locomotor: heavycavalry
 		TurnSpeed: 6
 		Speed: 95
 	Health:
@@ -392,8 +388,7 @@ ROSS5:
 		Queue: MVehicle.GDI
 		#BuildDuration: 1000
 	Mobile:
-		SharesCell: false
-		Crushes: crate, infantry
+		Locomotor: heavycavalry
 		TurnSpeed: 4
 		Speed: 80
 	Health:
@@ -485,7 +480,6 @@ ROSS3:
 		Queue:  MVehicle.Nod
 		#BuildDuration: 450
 	Mobile:
-		SharesCell: false
 		TurnSpeed: 12
 		Speed: 99
 	RevealsShroud:
@@ -545,16 +539,8 @@ ROSS4:
 		Queue:  MVehicle.Nod
 		#BuildDuration: 150
 	Mobile:
-		SharesCell: false
 		TurnSpeed: 12
 		Speed: 213
-		TerrainSpeeds:
-			Clear: 70
-			Rough: 35
-			Road: 100
-			Tiberium: 35
-			BlueTiberium: 35
-			Beach: 35
 	RevealsShroud:
 		Range: 8c0
 	Health:
@@ -615,7 +601,6 @@ ROSS4B:
 	RevealsShroud:
 		Range: 8c0
 	Mobile:
-		SharesCell: false
 		TurnSpeed: 12
 		Speed: 156
 	Health:
@@ -673,7 +658,6 @@ ROSS4C:
 	RevealsShroud:
 		Range: 8c0
 	Mobile:
-		SharesCell: false
 		TurnSpeed: 12
 		Speed: 170
 	Health:

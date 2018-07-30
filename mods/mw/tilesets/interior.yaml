@@ -1,8 +1,6 @@
 General:
 	Name: Interior
 	Id: INTERIOR
-	Palette: temperat.pal
-	Palette@3: newMWPalette.pal
 	EditorTemplateOrder: Floor, Wall, Openings, Sewer, Paneling, Crypt, Tiled Ground
 	HeightDebugColors: 880000
 	SheetSize: 1024

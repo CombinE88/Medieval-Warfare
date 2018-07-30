@@ -3,7 +3,6 @@ prioarrow:
 		Start: 1
 	Right: prioarrow
 		Start: 0
-
 hospnew:
 	idle: hospnew
 	damaged-idle: hospnew
@@ -29,7 +28,6 @@ hospnew.husk:
 			JUNGLE: TEMPERAT
 			INTERIOR: TEMPERAT
 		Length: *
-	
 v19new:
 	idle: oilnew
 		Length: 28
@@ -38,13 +36,11 @@ v19new:
 		Start: 28
 		Length: 26
 		Tick: 120
-
 v19new.husk:
 	idle: oilnew
 		Start: 54
 		Length: 7
 		Tick: 170
-		
 explosion:
 	cannonsboulder: cannonstrikeboulder
 		Offset: 0,-60,0
@@ -139,52 +135,40 @@ explosion:
 		Length: 23
 		Start: 270
 		Tick: 40
-
 spear:	  
 	idle: ross4
 		Start: 150
 		Facings: 32
-  
 flamespit:	  
 	idle: spitflame
 		Facings: 32
-		
 siegearrow:	 
 	idle: siege1
 		Start: 313
 		Facings: 32
-	
 siegeboulder:	  
 	idle: boulder
-
 cantowboulder:	  
 	idle: cannonboulder
-	
 tribuboulder:	  
 	idle: largeboulder
-	
 smbllbolt:	 
 	idle: smallaaballarrow
 		Facings: 32
-
 e4arrow:	  
 	idle: arrow
 		Facings: 32
-
 firearrow:	  
 	idle: arrow
 		Start: 33
 		Facings: 32		
-		
 assassarrow:	  
 	idle: thief
 		Start: 267
 		Facings: 32
-		
 pips:
 	pip-crown: pip-crown
 		Length: *
-
 beacon:
 	cadaver: corpseiconsmall
 		Length: 9
@@ -219,7 +203,6 @@ icon:
 	sulb2iconsmall: sulb2iconsmall.shp
 	sulspballiconsmall: sulspballiconsmall.shp
 	sulturnxlicon: sulturnxlicon.shp
-	    
 placeholder:
 	idle: ironore4
 		Start: 9 
@@ -227,31 +210,26 @@ placeholder:
 		Start: 9 
 	down: ironore4
 		Start: 9 
-		
 cannonstrike:
 	 up: ironore4
 		Start: 9 
 	down: ironore4
 		Start: 9 
-		
 lightningstrike:
 	 up: ironore4
 		Start: 9 
 	down: ironore4
 		Start: 9  
-		
 realdeath:
 	 up: ironore4
 		Start: 9 
 	down: ironore4
 		Start: 9
-
 selectioncircle:
 	active: selectioncircle
 		ZOffset: 1
 	idle: selectioncircle
 		Start: 1
-
 litning:
 	bright:
 		Length: 4
@@ -260,8 +238,6 @@ litning:
 		Start: 4
 		Length: 4
 		ZOffset: 1023
-        
-		
 trmr1: 
 	idle: trmrwood
 		Length: 20

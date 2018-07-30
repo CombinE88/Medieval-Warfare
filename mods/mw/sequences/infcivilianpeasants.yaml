@@ -1,4 +1,3 @@
-		
 mwcivll:
 	stunned: sulm4
 		Start: 312
@@ -56,7 +55,6 @@ mwcivll:
 		Length: 34
 		Tick: 100
 		Facings: 8
-		
 mwciv1:
 	stunned: sulm4
 		Start: 312
@@ -143,7 +141,6 @@ mwciv1:
 		Length: 34
 		Tick: 100
 		Facings: 8
-		
 mwciv2:
 	stunned: sulm4
 		Start: 312
@@ -230,7 +227,6 @@ mwciv2:
 		Length: 34
 		Tick: 100
 		Facings: 8
-		
 mwciv3:
 	stunned: sulm4
 		Start: 312
@@ -317,8 +313,6 @@ mwciv3:
 		Length: 34
 		Tick: 100
 		Facings: 8
-		
-		
 mwciv4:
 	stunned: sulm4
 		Start: 312
@@ -405,7 +399,6 @@ mwciv4:
 		Length: 34
 		Tick: 100
 		Facings: 8
-		
 mwciv5:
 	stunned: sulm4
 		Start: 312
@@ -492,7 +485,6 @@ mwciv5:
 		Length: 34
 		Tick: 100
 		Facings: 8
-		
 mwciv6:
 	stunned: sulm4
 		Start: 312
@@ -579,7 +571,6 @@ mwciv6:
 		Length: 34
 		Tick: 100
 		Facings: 8
-		
 nobl1:
 	stunned: sulm4
 		Start: 312
@@ -664,7 +655,6 @@ nobl1:
 		Length: 34
 		Tick: 100
 		Facings: 8
-		
 nobl2:
 	stunned: sulm4
 		Start: 312
@@ -749,7 +739,6 @@ nobl2:
 		Length: 34
 		Tick: 100
 		Facings: 8
-		
 nobl3:
 	stunned: sulm4
 		Start: 312
@@ -834,7 +823,6 @@ nobl3:
 		Length: 34
 		Tick: 100
 		Facings: 8
-		
 nobl4:
 	stunned: sulm4
 		Start: 312
@@ -919,7 +907,6 @@ nobl4:
 		Length: 34
 		Tick: 100
 		Facings: 8
-		
 mwciv7:
 	stunned: sulm4
 		Start: 312
@@ -982,7 +969,6 @@ mwciv7:
 		Length: 16
 		Facings: 8
 		Tick: 100
-		
 mwciv8:
 	stunned: sulm4
 		Start: 312
@@ -1045,7 +1031,6 @@ mwciv8:
 		Start: 349
 		Length: 15
 		Tick: 100
-		
 mwciv9:
 	stunned: sulm4
 		Start: 312
@@ -1119,7 +1104,6 @@ mwciv9:
 		Start: 514
 		Length: 58
 		Tick: 60
-		
 mwciv10:
 	stunned: sulm4
 		Start: 312
@@ -1204,7 +1188,6 @@ mwciv10:
 		Length: 34
 		Tick: 100
 		Facings: 8
-		
 mwciv11:
 	stunned: sulm4
 		Start: 312
@@ -1289,7 +1272,6 @@ mwciv11:
 		Length: 34
 		Tick: 100
 		Facings: 8
-		
 mwciv12:
 	stunned: sulm4
 		Start: 312
@@ -1374,7 +1356,6 @@ mwciv12:
 		Length: 34
 		Tick: 100
 		Facings: 8
-
 sulciv1:
 	stunned: sulm4
 		Start: 312
@@ -1461,7 +1442,6 @@ sulciv1:
 		Length: 34
 		Tick: 100
 		Facings: 8
-		
 sulciv2:
 	stunned: sulm4
 		Start: 312
@@ -1548,7 +1528,6 @@ sulciv2:
 		Length: 34
 		Tick: 100
 		Facings: 8
-		
 sulciv3:
 	stunned: sulm4
 		Start: 312
@@ -1635,7 +1614,6 @@ sulciv3:
 		Length: 34
 		Tick: 100
 		Facings: 8
-		
 sulciv4:
 	stunned: sulm4
 		Start: 312
@@ -1722,7 +1700,6 @@ sulciv4:
 		Length: 34
 		Tick: 100
 		Facings: 8
-		
 sulciv5:
 	stunned: sulm4
 		Start: 312
@@ -1809,7 +1786,6 @@ sulciv5:
 		Length: 34
 		Tick: 100
 		Facings: 8
-		
 sulciv6:
 	stunned: sulm4
 		Start: 312
@@ -1896,7 +1872,6 @@ sulciv6:
 		Length: 34
 		Tick: 100
 		Facings: 8
-		
 sulciv7:
 	stunned: sulm4
 		Start: 312
@@ -1983,7 +1958,6 @@ sulciv7:
 		Length: 34
 		Tick: 100
 		Facings: 8
-		
 sulciv8:
 	stunned: sulm4
 		Start: 312
@@ -2070,7 +2044,6 @@ sulciv8:
 		Length: 34
 		Tick: 100
 		Facings: 8
-		
 sulciv9:
 	stunned: sulm4
 		Start: 312
@@ -2157,7 +2130,6 @@ sulciv9:
 		Length: 34
 		Tick: 100
 		Facings: 8
-		
 sulciv10:
 	stunned: sulm4
 		Start: 312
@@ -2244,7 +2216,6 @@ sulciv10:
 		Length: 34
 		Tick: 100
 		Facings: 8
-		
 sulciv11:
 	stunned: sulm4
 		Start: 312

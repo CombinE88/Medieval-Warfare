@@ -33,7 +33,6 @@ nukenew:
 	make6: nukenewmake
 		Start: 5
 		ZOffset: -25
-		
 nuk2new:
 	Inherits: ^scaffold
 	idle:
@@ -63,7 +62,6 @@ nuk2new:
 	make4: nuk2newmake
 		Start: 5
 		ZOffset: -25
-		
 nukxl:
 	Inherits: ^scaffold
 	idle: 
@@ -109,8 +107,6 @@ nukxl:
 		Start: 5
 		ZOffset: -25
 		Offset: 0,-12
-	   
-		
 windmill:
 	Inherits: ^scaffold
 	idle: 
@@ -158,7 +154,6 @@ windmill:
 		Start: 5
 		ZOffset: -25
 		Offset: 0,-5
-		
 barrnew:
 	Inherits: ^scaffold
 	idle: 
@@ -192,7 +187,6 @@ barrnew:
 	make5: barrnewmake
 		Start: 25
 		ZOffset: -25
-		
 stall:
 	Inherits: ^scaffold
 	idle: 
@@ -234,7 +228,6 @@ stall:
 	make6: stallmake
 		Start: 28
 		ZOffset: -25
-
 gdifix:
 	Inherits: ^scaffold
 	idle: 
@@ -284,7 +277,6 @@ gdifix:
 		Start: 30
 		ZOffset: -25
 		Offset: 0, -12
-		
 obs:
 	Inherits: ^scaffold
 	idle: 
@@ -329,7 +321,6 @@ obs:
 	make7: obsmake
 		Start: 6
 		ZOffset: -25
-		
 castle2:
 	Inherits: ^scaffold
 	idle: castle2
@@ -382,4 +373,3 @@ castle2:
 		Offset: 0,-12,0
 		Start: 5
 		ZOffset: -25
-

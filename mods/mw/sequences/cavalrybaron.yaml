@@ -32,7 +32,6 @@ ross1:
 		Tick: 80
 	icon: nlcavicon.shp
 		AddExtension: False
-		
 ross3:
 	stand: 
 		Start: 122
@@ -67,7 +66,6 @@ ross3:
 		Tick: 80
 	icon: nftankicon.shp
 		AddExtension: False
-
 ross4:
 	idle1: 
 		Tick: 100
@@ -108,7 +106,6 @@ ross4:
 		Tick: 80
 	icon: nspearicon.shp
 		AddExtension: False
-
 ross4c:
 	stand: 
 		Start: 122

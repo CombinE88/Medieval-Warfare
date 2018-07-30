@@ -32,7 +32,6 @@ sgtw:
 		Start: 66
 		Length: 7
 		Facings: 8 
-		
 siege3.husk:
 	start: sgtwhusk
 		Start: 0
@@ -43,7 +42,6 @@ siege3.husk:
 		Start: 217
 		Facings: 32  
 		Offset: 0,12,0
-
 orni:
 	idle: orni
 		Start: 225
@@ -57,7 +55,6 @@ orni:
 		Offset: 0,-4,0
 	icon: Orniicon.shp
 		AddExtension: False 
-		
 ornicrash:
 	idle: 
 		Start: 0
@@ -65,7 +62,6 @@ ornicrash:
 	wing: 
 		Start: 33
 		Facings: 32
-		
 davinci:
 	idle: davinci
 		Start: 0
@@ -73,10 +69,8 @@ davinci:
 		Tick: 40
 	icon: davinciicon.shp
 		AddExtension: False 
-	   
 davincihusk:
 	idle: davincihusk
-		
 drgnrdr:
 	idle: 
 		Start: 0
@@ -98,7 +92,6 @@ drgnrdr:
 		Facings: 32
 	icon: ndragonicon.shp
 		AddExtension: False 
-		
 siege2:
 	stand: 
 		Start: 0
@@ -115,7 +108,6 @@ siege2:
 		Facings: 32
 	icon: ncatapulticon.shp
 		AddExtension: False	
-
 siege2.husk:
 	start: siege2husk
 		Start: 0
@@ -125,15 +117,12 @@ siege2.husk:
 	idle: siege2husk
 		Start: 217
 		Facings: 32
-		
-
 drgnempty:
 	idle: dragonempty
 		Start: 0
 		Length: 7
 		Facings: 32
 		Tick: 100
-		
 dragonground:
 	idle: 
 		Start: 0
@@ -159,10 +148,7 @@ dragonground:
 		Length: 15
 		Facings: 32
 		Tick: 100
-		
-		
 drgnrdr.husk:
 	idle: drgnrdr
 		Start: 449
 		Facings: 32
-		

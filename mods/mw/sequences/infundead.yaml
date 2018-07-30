@@ -61,9 +61,6 @@ acolyte:
 		Tick: 80
 	icon: acolyteicon.shp
 		AddExtension: False
-	
-		
-
 undead1:
 	stunned: sulm4
 		ZOffset: 125
@@ -118,7 +115,6 @@ undead1:
 		Tick: 80
 	icon: undead1icon.shp
 		AddExtension: False
-		
 undead2:
 	stunned: sulm4
 		ZOffset: 125
@@ -173,7 +169,6 @@ undead2:
 		Tick: 80
 	icon: undead1icon.shp
 		AddExtension: False
-		
 undead3:
 	stunned: sulm4
 		ZOffset: 125
@@ -223,7 +218,6 @@ undead3:
 		Tick: 80
 	icon: undead3icon.shp
 		AddExtension: False
-		
 undead4:
 	stunned: sulm4
 		ZOffset: 125
@@ -277,7 +271,6 @@ undead4:
 		Length: *
 	icon: undead4icon.shp
 		AddExtension: False
-		
 acolyteb:
 	stunned: sulm4
 		ZOffset: 125
@@ -345,8 +338,6 @@ acolyteb:
 		Tick: 80
 	icon: cultisticon.shp
 		AddExtension: False
-	
-	
 undead5:
 	make: undead5born
 		Length: *
@@ -400,7 +391,6 @@ undead5:
 		Tick: 80
 	icon: undead5icon.shp
 		AddExtension: False
-
 undead6:
 	stunned: sulm4
 		ZOffset: 125
@@ -455,7 +445,6 @@ undead6:
 		Tick: 80
 	icon: undead6icon.shp
 		AddExtension: False
-		
 undead7:
 	stunned: sulm4
 		ZOffset: 125
@@ -490,7 +479,6 @@ undead7:
 		Tick: 80
 	icon: undead7icon.shp
 		AddExtension: False
-		
 soul:
 	idle:
 		Length: *
@@ -499,4 +487,3 @@ souls:
 	idle:
 		Length: *
 		Tick: 120
-

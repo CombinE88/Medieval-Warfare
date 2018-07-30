@@ -193,7 +193,7 @@ NODNUKE.scaff:
 		PlayerPalette: raplayer
 		Image: nodnuke
 	-WithSpriteBody:
-	GrantRandomCondition:
+	CombinEGrantRandomCondition:
 		RandomConditions: valida, validb, validc, validd
 		FallbackCondition: valida
 	WithIdleOverlay@a:  

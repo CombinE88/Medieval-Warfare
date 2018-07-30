@@ -119,15 +119,7 @@ Husk.KING:
 		Range: 2c0
 	Mobile:
 		Speed: 0
-		Crushes: crate
-		SharesCell: true
-		TerrainSpeeds:
-			Clear: 1
-			Rough: 1
-			Road: 1
-			Tiberium: 1
-			BlueTiberium: 1
-			Beach: 1
+		Locomotor: immobile
 	SelectionDecorations:
 	WithSpriteControlGroupDecoration:
 	Selectable:
@@ -171,15 +163,7 @@ Husk2.KING:
 		Range: 2c0
 	Mobile:
 		Speed: 0
-		Crushes: crate
-		SharesCell: true
-		TerrainSpeeds:
-			Clear: 1
-			Rough: 1
-			Road: 1
-			Tiberium: 1
-			BlueTiberium: 1
-			Beach: 1
+		Locomotor: immobile
 	SelectionDecorations:
 	WithSpriteControlGroupDecoration:
 	Selectable:

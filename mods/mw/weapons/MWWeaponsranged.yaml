@@ -1,4 +1,3 @@
-
 BowNArrowDebuff:
 	ReloadDelay: 10
 	Range: 6c0
@@ -31,7 +30,6 @@ BowNArrowDebuff:
 		ValidStances: Enemy, Neutral, Ally
 		InvalidTargets: Wall, Air
 		ValidTargets: Ground
-		
 BowNArrow:
 	ReloadDelay: 45
 	Range: 6c0
@@ -64,7 +62,6 @@ BowNArrow:
 			HeavyBuilding: 15
 			Spectral: 15
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
-
 BowNArrowDUMMY:
 	ReloadDelay: 45
 	Range: 6c0
@@ -99,7 +96,6 @@ BowNArrowDUMMY:
 			HeavyBuilding: 0
 			Spectral: 0
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
-		
 BowNArrowAir:
 	ReloadDelay: 45
 	Range: 7c512
@@ -137,12 +133,11 @@ BowNArrowAir:
 			HeavyCavalry: 35
 			HeavyBuilding: 45
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
-
 MageFire:
 	ReloadDelay: 60
 	Range: 4c0
 	Burst: 5
-	BurstDelay: 3
+	BurstDelays: 3
 	MinRange: 0c512
 	Report: flamer2.aud
 	ValidTargets: Ground
@@ -179,12 +174,11 @@ MageFire:
 	Warhead@5Eff: CreateEffect
 		Explosions: small_napalm
 		ImpactSounds: xplos.aud
-		
 MageFireAir:
 	ReloadDelay: 45
 	Range: 6c0
 	Burst: 3
-	BurstDelay: 5
+	BurstDelays: 5
 	MinRange: 0c512
 	Report: flamer2.aud
 	ValidTargets: Air
@@ -223,12 +217,11 @@ MageFireAir:
 	Warhead@5Eff: CreateEffect
 		Explosions: small_napalm
 		ImpactSounds: xplos.aud
-		
 MageFireSiegeTower:
 	ReloadDelay: 55
 	Range: 7c0
 	Burst: 5
-	BurstDelay: 3
+	BurstDelays: 3
 	MinRange: 0c512
 	Report: flamer2.aud
 	ValidTargets: Ground, Air
@@ -262,8 +255,6 @@ MageFireSiegeTower:
 	Warhead@5Eff: CreateEffect
 		Explosions: small_napalm
 		ImpactSounds: xplos.aud
-	
-		
 BowNArrowSiegeTower:
 	ReloadDelay: 45
 	Range: 6c0
@@ -294,7 +285,6 @@ BowNArrowSiegeTower:
 			HeavyCavalry: 35
 			HeavyBuilding: 25
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath  
-		
 BowNArrowSiegeTowerAIR:
 	ReloadDelay: 45
 	Range: 10c0
@@ -331,7 +321,6 @@ BowNArrowSiegeTowerAIR:
 			HeavyCavalry: 35
 			HeavyBuilding: 25
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath 
-
 BowNArrowSiegeTowerDUMMY:
 	ReloadDelay: 45
 	Range: 6c0
@@ -366,13 +355,12 @@ BowNArrowSiegeTowerDUMMY:
 			HeavyBuilding: 0
 			Spectral: 0
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
-		
 SpearThrow:
 	ReloadDelay: 50
 	Range: 3c512
 	MinRange: 0c0
 	Burst: 2
-	BurstDelay: 10
+	BurstDelays: 10
 	Report: throw01.aud
 	ValidTargets: Ground
 	InvalidTargets: Air
@@ -406,13 +394,12 @@ SpearThrow:
 			HeavyBuilding: 100
 			Spectral: 15
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath	 
-
 SpearThrowAir:
 	ReloadDelay: 50
 	Range: 6c0
 	MinRange: 0c0
 	Burst: 2
-	BurstDelay: 10
+	BurstDelays: 10
 	Report: throw01.aud
 	ValidTargets: Air
 	InvalidTargets: Ground
@@ -445,7 +432,6 @@ SpearThrowAir:
 			HeavyCavalry: 100
 			HeavyBuilding: 100
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath  
-
 GunlanceAir:
 	ReloadDelay: 45
 	Range: 7c0
@@ -478,7 +464,6 @@ GunlanceAir:
 			HeavyBuilding: 100
 			Spectral: 75
 		DamageTypes: Prone50Percent, TriggerProne, RippedApartDeath	
-		
 GunlanceGround:
 	ReloadDelay: 75
 	Range: 4c0
@@ -510,7 +495,6 @@ GunlanceGround:
 	Warhead@1Eff: CreateEffect
 		Explosions: smokey
 		ImpactSounds: tnkfire2.aud, tnkfire3.aud, tnkfire4.aud, tnkfire6.aud
-		
 GunlanceGroundDUMMY:
 	ReloadDelay: 75
 	Range: 4c0
@@ -536,8 +520,6 @@ GunlanceGroundDUMMY:
 		DamageTypes: Prone50Percent, TriggerProne, RippedApartDeath	
 	Warhead@1Eff: CreateEffect
 		Explosions: smokey
-
-			
 OrniSpearThrow:
 	ReloadDelay: 8
 	Range: 6c0
@@ -574,7 +556,6 @@ OrniSpearThrow:
 			HeavyBuilding: 100
 			Spectral: 15
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath  
-		
 WarkiteCrossbow:
 	ReloadDelay: 30
 	Range: 4c0
@@ -612,7 +593,6 @@ WarkiteCrossbow:
 			Concrete: 35   
 			Spectral: 15
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath 
-		
 MammothDagger:
 	ReloadDelay: 45
 	Range: 6c0
@@ -650,7 +630,6 @@ MammothDagger:
 			HeavyCavalry: 50
 			Spectral: 15
 		DamageTypes: Prone50Percent, TriggerProne, PoisonDeath 
-
 DaggerMongol:
 	ReloadDelay: 45
 	Range: 4c0
@@ -688,7 +667,6 @@ DaggerMongol:
 			HeavyCavalry: 50
 			Spectral: 15
 		DamageTypes: Prone50Percent, TriggerProne, PoisonDeath 
-
 paladingun:
 	ReloadDelay: 70
 	Range: 3c512
@@ -713,7 +691,6 @@ paladingun:
 			MediumCavalry: 55
 			HeavyCavalry: 35
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath	 
-		
 paladingunvisual:
 	ReloadDelay: 70
 	Range: 3c512
@@ -743,7 +720,6 @@ paladingunvisual:
 			MediumCavalry: 0
 			HeavyCavalry: 0
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath	 
-
 Dagger:
 	ReloadDelay: 60
 	Range: 3c512
@@ -786,8 +762,6 @@ Dagger:
 		Duration: 250
 		Condition: RottenKadaver
 		ValidStances: Enemy, Neutral, Ally
-		
-		
 DaggerAir:
 	ReloadDelay: 60
 	Range: 5c512
@@ -824,7 +798,6 @@ DaggerAir:
 			HeavyCavalry: 75
 			Spectral: 250
 		DamageTypes: Prone50Percent, TriggerProne, PoisonDeath 
-		
 DaggerSiegeTower:
 	ReloadDelay: 60
 	Range: 7c0
@@ -865,13 +838,12 @@ DaggerSiegeTower:
 		Range: 0c512
 		Duration: 200
 		Condition: RottenKadaver
-
 LongBowNArrow:
 	ReloadDelay: 100
 	Range: 8c512
 	MinRange: 0c512
 	Burst: 4
-	BurstDelay: 1
+	BurstDelays: 1
 	ValidTargets: Ground
 	TargetActorCenter: true
 	Report: arrow01.aud, arrow02.aud, arrow02.aud
@@ -954,13 +926,12 @@ LongBowNArrow:
 	Warhead@3Eff: CreateEffect
 		Explosions: fire3   
 		Delay: 24
-		
 LongBowNArrowAir:
 	ReloadDelay: 50
 	Range: 8c512
 	MinRange: 0c512
 	Burst: 4
-	BurstDelay: 4
+	BurstDelays: 4
 	ValidTargets: Air
 	InvalidTargets: Ground
 	Report: arrow01.aud, arrow02.aud, arrow02.aud
@@ -997,7 +968,6 @@ LongBowNArrowAir:
 	Warhead@1Eff: CreateEffect
 		Explosions: small_napalm	
 		ImpactSounds: xplos.aud
- 
 DragonFire:
 	ReloadDelay: 4
 	Range: 3c512
@@ -1063,7 +1033,6 @@ DragonFire:
 	Warhead@5Eff: CreateEffect
 		Explosions: small_napalm
 		ImpactSounds: xplos.aud
-		
 DragonFireAir:
 	ReloadDelay: 6
 	Range: 4c512
@@ -1103,7 +1072,6 @@ DragonFireAir:
 	Warhead@5Eff: CreateEffect
 		Explosions: small_napalm
 		ImpactSounds: xplos.aud
-
 BowNArrowTower:
 	ReloadDelay: 25
 	Range: 8c512
@@ -1136,7 +1104,6 @@ BowNArrowTower:
 			HeavyBuilding: 35
 			Spectral: 15
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath 
-		
 BowNArrowTowerDUMMY:
 	ReloadDelay: 25
 	Range: 8c512
@@ -1171,7 +1138,6 @@ BowNArrowTowerDUMMY:
 			HeavyBuilding: 0
 			Spectral: 0
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
-		
 BowNArrowTowerUnblock:
 	ReloadDelay: 25
 	Range: 7c0
@@ -1205,7 +1171,6 @@ BowNArrowTowerUnblock:
 			HeavyBuilding: 40
 			Spectral: 15
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath  
-
 BowNArrowTowerUnblockDUMMY:
 	ReloadDelay: 25
 	Range: 7c0
@@ -1241,8 +1206,6 @@ BowNArrowTowerUnblockDUMMY:
 			HeavyBuilding: 0
 			Spectral: 0
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath 
-
-   
 CannonBoulder:
 	ReloadDelay: 40
 	Range: 8c0
@@ -1279,7 +1242,6 @@ CannonBoulder:
 	Warhead@3Eff: CreateEffect
 		Explosions: smokey
 		ImpactSounds: tnkfire2.aud, tnkfire3.aud, tnkfire4.aud, tnkfire6.aud
-		
 SiegeBoulderTech:
 	ReloadDelay: 60
 	Range: 15c0
@@ -1318,7 +1280,6 @@ SiegeBoulderTech:
 	Warhead@3Eff: CreateEffect
 		Explosions: smokey
 		ImpactSounds: tnkfire2.aud, tnkfire3.aud, tnkfire4.aud, tnkfire6.aud
- 
 SiegeBalista:
 	ReloadDelay: 65
 	Range: 11c0
@@ -1357,7 +1318,6 @@ SiegeBalista:
 	Warhead@2Smu: LeaveSmudge
 		SmudgeType: Scorch
 		InvalidTargets: Vehicle, Structure, Wall, Husk, Trees, Creep
-		
 SiegeBoulder:
 	ReloadDelay: 100
 	Range: 12c0
@@ -1396,8 +1356,6 @@ SiegeBoulder:
 	Warhead@2Smu: LeaveSmudge
 		SmudgeType: Crater
 		InvalidTargets: Vehicle, Structure, Wall, Husk, Trees, Creep
-		
-		
 TribuchetBoulder:
 	ReloadDelay: 90
 	ValidTargets: Ground
@@ -1439,7 +1397,6 @@ TribuchetBoulder:
 	Warhead@2Smu: LeaveSmudge
 		SmudgeType: Crater
 		InvalidTargets: Vehicle, Structure, Wall, Husk, Trees, Creep
-		
 HighTribuchetBoulder:
 	ReloadDelay: 110
 	ValidTargets: Structure, Wall
@@ -1481,8 +1438,6 @@ HighTribuchetBoulder:
 	Warhead@2Smu: LeaveSmudge
 		SmudgeType: Crater
 		InvalidTargets: Vehicle, Structure, Wall, Husk, Trees, Creep
-
-        
 StationBalistaAG:
 	ReloadDelay: 45
 	Range: 8c0
@@ -1518,8 +1473,6 @@ StationBalistaAG:
 		DamageTypes: Prone50Percent, TriggerProne, BallistaDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: smokey
-	 
-		
 StationBalistaAA:
 	ReloadDelay: 45
 	Range: 10c0
@@ -1556,7 +1509,6 @@ StationBalistaAA:
 		DamageTypes: Prone50Percent, TriggerProne, BallistaDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: smokey
-		
 SamBallista:
 	ReloadDelay: 25
 	Range: 10c0
@@ -1593,7 +1545,6 @@ SamBallista:
 		DamageTypes: Prone50Percent, TriggerProne, BallistaDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: smokey
-
 KingCrossbow:
 	ReloadDelay: 70
 	Range: 6c0
@@ -1631,7 +1582,6 @@ KingCrossbow:
 			Concrete: 35   
 			Spectral: 100
 		DamageTypes: Prone50Percent, TriggerProne, RippedApartDeath  
-		
 KingCrossbowAir:
 	ReloadDelay: 70
 	Range: 7c0
@@ -1668,7 +1618,6 @@ KingCrossbowAir:
 			HeavyBuilding: 50
 			Concrete: 35   
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath  
-
 KingsSwordMounted:
 	ReloadDelay: 60
 	Range: 1c800
@@ -1694,7 +1643,6 @@ KingsSwordMounted:
 			HeavyCavalry: 65
 			Spectral: 100
 		DamageTypes: Prone50Percent, TriggerProne, RippedApartDeath
-		
 Crossbow:
 	ReloadDelay: 70
 	Range: 6c512
@@ -1732,7 +1680,6 @@ Crossbow:
 			Concrete: 6   
 			Spectral: 20
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath   
-		
 CrossbowAir:
 	ReloadDelay: 45
 	Range: 5c0
@@ -1769,9 +1716,6 @@ CrossbowAir:
 			HeavyBuilding: 50
 			Concrete: 35   
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath   
-		
-
-
 CrossbowSiegeTower:
 	ReloadDelay: 65
 	Range: 7c0
@@ -1808,12 +1752,11 @@ CrossbowSiegeTower:
 			HeavyBuilding: 50
 			Concrete: 35   
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath		  
-		
 BallonCrossbow:
 	ReloadDelay: 20
 	Range: 4c0
 	Burst: 2
-	BurstDelay: 0
+	BurstDelays: 0
 	MinRange: 0c512
 	Report: crossbow01.aud
 	InvalidTargets: Wall

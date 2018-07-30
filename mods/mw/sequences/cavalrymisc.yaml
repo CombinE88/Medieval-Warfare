@@ -31,7 +31,6 @@ emptyhorse:
 		Tick: 80
 	icon: nsabericon.shp
 		AddExtension: False
-	
 burninghorse:
 	stand: 
 		Start: 66
@@ -60,4 +59,3 @@ burninghorse:
 		Tick: 80
 	icon: koenigicon.shp
 		AddExtension: False	   
-		

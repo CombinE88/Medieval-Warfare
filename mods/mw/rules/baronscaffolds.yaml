@@ -167,7 +167,7 @@ ARMORYNOD.scaff:
 XLTNTUNI.scaff:
 	Inherits: ^ConstructionSite
 	Inherits@Hitshape: ^2x2Shape
-	GrantRandomCondition:
+	CombinEGrantRandomCondition:
 		RandomConditions: valida, validb, validc
 		FallbackCondition: valida
 	#anti error fix

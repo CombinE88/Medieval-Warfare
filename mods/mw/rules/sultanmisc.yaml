@@ -19,7 +19,7 @@ SULB0:
 	Mobile:
 		TurnSpeed: 2
 		Speed: 60
-		Crushes: wall, heavywall, crate, infantry
+		Locomotor: heavysiege
 	Health:
 		HP: 75000
 	AutoTarget:

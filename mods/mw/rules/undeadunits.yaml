@@ -95,7 +95,6 @@ DEADROSS:
 	Tooltip:
 		Name: Skeleton Rider (Saber)
 	Mobile:
-		SharesCell: false
 		TurnSpeed: 12
 		Speed: 125
 	Health:
@@ -321,9 +320,8 @@ UNDEAD6:
 	Tooltip:
 		Name: Skeleton (Giant)
 	Mobile:
-		SharesCell: false
+		Locomotor: heavysiege
 		Speed: 40
-		Crushes: wall, heavywall, crate, infantry
 	-Crushable:
 	Targetable:
 		TargetTypes: Ground, Cavalry
@@ -365,7 +363,7 @@ UNDEAD7:
 	Targetable:
 		TargetTypes: Ground, Cavalry
 	Mobile:
-		SharesCell: false
+		Locomotor: lightsiege
 		Speed: 40
 	Health:
 		HP: 50000
@@ -408,21 +406,8 @@ GRIM:
 	Tooltip:
 		Name: Grim Reaper
 	Mobile:
+		Locomotor: spectral
 		Speed: 37
-		Crushes:
-		TerrainSpeeds:
-			Clear: 100
-			Rough: 100
-			Road: 100
-			Tiberium: 100
-			BlueTiberium: 100
-			Crops: 100
-			Wood: 100
-			Loot: 100
-			Beach: 100
-			Rock: 100
-			River: 100
-			Water: 100
 	-Crushable:
 	Health:
 		HP: 18500
@@ -692,8 +677,7 @@ DEMONHORSE:
 		Description: Fast, medium Cavalry.\n  Strong vs Cavalry and Buildings\n  Weak vs Infantry\n\n
 		Queue: MVehicle.ded
 	Mobile:
-		SharesCell: false
-		Crushes: crate, infantry
+		Locomotor: heavycavalry
 		TurnSpeed: 8
 		Speed: 100
 	RevealsShroud:
@@ -870,7 +854,7 @@ BLOCKER1:
 		Image: gstone1
 	WithSpriteBody:
 		Sequence: empty
-	GrantRandomCondition:
+	CombinEGrantRandomCondition:
 		RandomConditions: valida, validb, validc
 		FallbackCondition: valida
 	WithIdleOverlay@a:  
@@ -902,7 +886,7 @@ BLOCKER2:
 		Image: gstone2
 	WithSpriteBody:
 		Sequence: empty
-	GrantRandomCondition:
+	CombinEGrantRandomCondition:
 		RandomConditions: valida, validb, validc
 		FallbackCondition: valida
 	WithIdleOverlay@a:  
@@ -934,7 +918,7 @@ BLOCKER3:
 		Image: gstone3
 	WithSpriteBody:
 		Sequence: empty
-	GrantRandomCondition:
+	CombinEGrantRandomCondition:
 		RandomConditions: valida, validb, validc
 		FallbackCondition: valida
 	WithIdleOverlay@a:  
@@ -1374,20 +1358,9 @@ SOUL:
 	Valued:
 		Cost: 127
 		DeathTypes: DefaultDeath
-	Mobile:
-		Speed: 56
-		SharesCell: true
-		TerrainSpeeds:
-			Clear: 1
-			Rough: 1
-			Road: 1
-			Tiberium: 1
-			BlueTiberium: 1
-			Crops: 1
-			Wood: 1
-			Loot: 1
-			Beach: 1
-			Corruption: 1
+	Aircraft:
+		LandWhenIdle: false
+		CanHover: True
 SOULS:
 	Inherits@1: ^ExistsInWorld
 	Inherits@3: ^SpriteActor
@@ -1423,17 +1396,6 @@ SOULS:
 		DeathTypes: DefaultDeath
 	Valued:
 		Cost: 70
-	Mobile:
-		Speed: 56
-		SharesCell: true
-		TerrainSpeeds:
-			Clear: 1
-			Rough: 1
-			Road: 1
-			Tiberium: 1
-			BlueTiberium: 1
-			Crops: 1
-			Wood: 1
-			Loot: 1
-			Beach: 1
-			Corruption: 1
+	Aircraft:
+		LandWhenIdle: false
+		CanHover: True

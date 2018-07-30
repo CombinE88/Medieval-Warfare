@@ -32,7 +32,6 @@ ross2:
 		Tick: 80
 	icon: nmcavicon.shp
 		AddExtension: False
-		
 kingross:
 	stand: 
 		Start: 122
@@ -72,7 +71,6 @@ kingross:
 		Tick: 80
 	icon: koenigicon.shp
 		AddExtension: False
-
 ross5:
 	Defaults:
 		Offset: 0,-10,0
@@ -121,7 +119,6 @@ ross5:
 	icon: nhcavicon.shp
 		Offset: 0,0,0
 		AddExtension: False		
-
 ross4b:
 	stand: 
 		Start: 122

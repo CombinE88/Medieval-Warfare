@@ -1,8 +1,6 @@
 General:
 	Name: Temperate
 	Id: TEMPERAT
-	Palette: temperat.pal
-	Palette@2: temperatRA.pal
 	EditorTemplateOrder: Terrain, Debris, Road, Cliffs, Water Cliffs, Beach, RA1 Beach, River, Bridge
 	HeightDebugColors: AA0000
 	SheetSize: 1024
