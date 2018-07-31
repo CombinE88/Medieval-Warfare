@@ -5,6 +5,7 @@ ENGENEER:
 	Inherits@ArcherDemo65: ^ArcherDemo65
 	Inherits@Healable: ^Healable
 	Inherits@SnakeStunnable: ^SnakeStunnable
+	Inherits@Cursable: ^Cursed
 	AutoTargetPriority@Prio5:
 		ValidTargets: Priority5
 		Priority: 5
@@ -78,6 +79,7 @@ E1NEW:
 	Inherits@Healable: ^Healable
 	Inherits@SnakeStunnable: ^SnakeStunnable
 	Inherits@GrimReanimatable: ^GrimReanimatable
+	Inherits@Cursable: ^Cursed
 	Valued:
 		Cost: 100
 	Tooltip:
@@ -113,6 +115,7 @@ E8FARMER:
 	Inherits@Healable: ^Healable
 	Inherits@SnakeStunnable: ^SnakeStunnable
 	Inherits@GrimReanimatable: ^GrimReanimatable
+	Inherits@Cursable: ^Cursed
 	BodyOrientation:
 		QuantizedFacings: 8
 	QuantizeFacingsFromSequence:
@@ -182,6 +185,7 @@ BUMMLER:
 	Inherits@Healable: ^Healable
 	Inherits@SnakeStunnable: ^SnakeStunnable
 	Inherits@GrimReanimatable: ^GrimReanimatable
+	Inherits@Cursable: ^Cursed
 	BodyOrientation:
 		QuantizedFacings: 8
 	QuantizeFacingsFromSequence:
@@ -448,6 +452,7 @@ MWWAND8:
 SHOPPLAYER:
 	Inherits: ^Knight
 	Inherits@SnakeStunnable: ^SnakeStunnable
+	Inherits@Cursable: ^Cursed
 	AutoTargetPriority@Prio0:
 		ValidTargets: Structure, Infantry, Vehicle, Creep, Water, Defense, Cavalry, Siege, Air
 		Priority: 1
@@ -502,6 +507,7 @@ MWCIVCOM:
 	Inherits@Healable: ^Healable
 	Inherits@SnakeStunnable: ^SnakeStunnable
 	Inherits@GrimReanimatable: ^GrimReanimatable
+	Inherits@Cursable: ^Cursed
 	Tooltip:
 		Name: Commander
 		GenericVisibility: None
@@ -633,6 +639,7 @@ NOBLE5:
 MWLUMBERER:
 	Inherits: ^MWConstructor
 	Inherits@SnakeStunnable: ^SnakeStunnable
+	Inherits@Cursable: ^Cursed
 	#anti error fix
 	ExternalCondition@NoFood:
 		Condition: NoFood
@@ -718,6 +725,7 @@ MWLUMBERER:
 MWLUMBEREROWNED:
 	Inherits: ^MWConstructor
 	Inherits@SnakeStunnable: ^SnakeStunnable
+	Inherits@Cursable: ^Cursed
 	#anti error fix
 	ExternalCondition@NoFood:
 		Condition: NoFood
@@ -805,6 +813,7 @@ MWLUMBEREROWNED:
 HUNTER:
 	Inherits: ^Knight
 	Inherits@SnakeStunnable: ^SnakeStunnable
+	Inherits@Cursable: ^Cursed
 	#anti error fix
 	ExternalCondition@NoFood:
 		Condition: NoFood

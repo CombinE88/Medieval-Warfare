@@ -8,6 +8,7 @@ SULE1:
 	Inherits@Healable: ^Healable
 	Inherits@SnakeStunnable: ^SnakeStunnable
 	Inherits@GrimReanimatable: ^GrimReanimatable
+	Inherits@Cursable: ^Cursed
 	Valued:
 		Cost: 75
 	Tooltip:
@@ -55,6 +56,7 @@ SULE2:
 	Inherits@Healable: ^Healable
 	Inherits@SnakeStunnable: ^SnakeStunnable
 	Inherits@GrimReanimatable: ^GrimReanimatable
+	Inherits@Cursable: ^Cursed
 	Valued:
 		Cost: 300
 	Tooltip:
@@ -111,6 +113,7 @@ SULE3:
 	Inherits@Healable: ^Healable
 	Inherits@SnakeStunnable: ^SnakeStunnable
 	Inherits@GrimReanimatable: ^GrimReanimatable
+	Inherits@Cursable: ^Cursed
 	RevealsShroud:
 		Range: 6c0
 	Valued:
@@ -182,6 +185,7 @@ SULE4:
 	Inherits@Healable: ^Healable
 	Inherits@SnakeStunnable: ^SnakeSlowable
 	Inherits@GrimReanimatable: ^GrimReanimatable
+	Inherits@Cursable: ^Cursed
 	Valued:
 		Cost: 450
 	Tooltip:
@@ -235,6 +239,7 @@ SULE5:
 	Inherits@Healable: ^Healable
 	Inherits@SnakeStunnable: ^SnakeSlowable
 	Inherits@GrimReanimatable: ^GrimReanimatable
+	Inherits@Cursable: ^Cursed
 	RevealsShroud:
 		Range: 9c0
 	Valued:
@@ -290,6 +295,7 @@ SULE6:
 	Inherits@Healable: ^Healable
 	Inherits@SnakeStunnable: ^SnakeStunnable
 	Inherits@GrimReanimatable: ^GrimReanimatable
+	Inherits@Cursable: ^Cursed
 	BodyOrientation:
 		QuantizedFacings: 8
 	QuantizeFacingsFromSequence:
@@ -358,6 +364,7 @@ SULM1:
 	Inherits@Healable: ^Healable
 	Inherits@SnakeStunnable: ^SnakeStunnable
 	Inherits@GrimReanimatable: ^GrimReanimatable
+	Inherits@Cursable: ^Cursed
 	RevealsShroud:
 		Range: 6c0
 	Valued:
@@ -523,6 +530,7 @@ SULM4:
 	Inherits@Healable: ^Healable
 	Inherits@SnakeStunnable: ^SnakeStunnable
 	Inherits@GrimReanimatable: ^GrimReanimatable
+	Inherits@Cursable: ^Cursed
 	RevealsShroud:
 		Range: 7c0
 	Valued:

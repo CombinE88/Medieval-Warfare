@@ -245,3 +245,56 @@
 		SpeedMultiplier: 77
 		GivesExpMultiplier: 10
 		GrantCondition: grimactive
+^Cursed:
+	ExternalCondition@Cursed:
+		Condition: cursed
+		SourceCap: 1
+	WithDecoration@Cursed:
+		Image: debuffs2
+		Sequence: cursed
+		Palette: ra
+		ReferencePoint: Top, Center
+		RequiresCondition: cursed
+		ZOffset: 256
+		ValidStances: Ally, Enemy, Neutral
+	SelfHealing@Cursed:
+		PercentageStep: -2
+		Step: -0
+		HealIfBelow: 110
+		Delay: 25
+		RequiresCondition: cursed
+		DamageTypes: PoisonDeath
+	SpawnActorOnCurse@UNDEAD:
+		SpawnRandomActors: undead1, undead2, undead3, undead5
+		RequiresCondition: cursed
+	Targetable@Cursed:
+		TargetTypes: Cursed
+		RequiresCondition: cursed
+	Targetable@Cursable:
+		TargetTypes: Cursable
+		RequiresCondition: !cursed
+^GainPerZigurrat:
+	GrantConditionOnPrerequisite@ziggurat2:
+		Prerequisites: ziggurat2
+		Condition: zigguratleve2
+	GrantConditionOnPrerequisite@ziggurat3:
+		Prerequisites: ziggurat3
+		Condition: zigguratleve3
+	DamageMultiplier@Zigurrat2:
+		Modifier: 90
+		RequiresCondition: zigguratleve2
+	DamageMultiplier@Zigurrat3:
+		Modifier: 80
+		RequiresCondition: zigguratleve3
+	FirepowerMultiplier@Zigurrat2:
+		Modifier: 110
+		RequiresCondition: zigguratleve2
+	FirepowerMultiplier@Zigurrat3:
+		Modifier: 120
+		RequiresCondition: zigguratleve3
+	ReloadDelayMultiplier@Zigurrat2:
+		Modifier: 90
+		RequiresCondition: zigguratleve2
+	ReloadDelayMultiplier@Zigurrat3:
+		Modifier: 80
+		RequiresCondition: zigguratleve3

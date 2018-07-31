@@ -88,6 +88,7 @@ DDLER:
 	Inherits@ArcherDemo65: ^ArcherDemo80
 	Inherits@Healable: ^Healable
 	Inherits@SnakeStunnable: ^SnakeSlowable
+	Inherits@Cursable: ^Cursed
 	-Explodes@Tib:
 	Valued:
 		Cost: 1300
@@ -254,6 +255,7 @@ ROSS1:
 	Inherits@ArcherDemo65: ^ArcherDemo80
 	Inherits@Healable: ^Healable
 	Inherits@SnakeStunnable: ^SnakeSlowable
+	Inherits@Cursable: ^Cursed
 	GrantConditionOnDamageState@Slow:
 		Condition: Slowmotion
 		ValidDamageStates: Heavy, Critical 
@@ -313,6 +315,7 @@ ROSS2:
 	Inherits@ArcherDemo65: ^ArcherDemo80
 	Inherits@Healable: ^Healable
 	Inherits@SnakeStunnable: ^SnakeSlowable
+	Inherits@Cursable: ^Cursed
 	GrantConditionOnDamageState@Slow:
 		Condition: Slowmotion
 		ValidDamageStates: Heavy, Critical 
@@ -370,6 +373,7 @@ ROSS5:
 	Inherits@ArcherDemo65: ^ArcherDemo80
 	Inherits@Healable: ^Healable
 	Inherits@SnakeStunnable: ^SnakeSlowable
+	Inherits@Cursable: ^Cursed
 	GrantConditionOnDamageState@Slow:
 		Condition: Slowmotion
 		ValidDamageStates: Heavy, Critical 
@@ -460,6 +464,7 @@ ROSS3:
 	Inherits@ArcherDemo65: ^ArcherDemo80
 	Inherits@Healable: ^Healable
 	Inherits@SnakeStunnable: ^SnakeSlowable
+	Inherits@Cursable: ^Cursed
 	GrantConditionOnDamageState@Slow:
 		Condition: Slowmotion
 		ValidDamageStates: Heavy, Critical 
@@ -522,6 +527,7 @@ ROSS4:
 	Inherits@ArcherDemo65: ^ArcherDemo80
 	Inherits@Healable: ^Healable
 	Inherits@SnakeStunnable: ^SnakeSlowable
+	Inherits@Cursable: ^Cursed
 	GrantConditionOnDamageState@Slow:
 		Condition: Slowmotion
 		ValidDamageStates: Heavy, Critical  
@@ -582,6 +588,7 @@ ROSS4B:
 	Inherits@ArcherDemo65: ^ArcherDemo80
 	Inherits@Healable: ^Healable
 	Inherits@SnakeStunnable: ^SnakeSlowable
+	Inherits@Cursable: ^Cursed
 	GrantConditionOnDamageState@Slow:
 		Condition: Slowmotion
 		ValidDamageStates: Heavy, Critical 
@@ -639,6 +646,7 @@ ROSS4C:
 	Inherits@ArcherDemo65: ^ArcherDemo80
 	Inherits@Healable: ^Healable
 	Inherits@SnakeStunnable: ^SnakeSlowable
+	Inherits@Cursable: ^Cursed
 	GrantConditionOnDamageState@Slow:
 		Condition: Slowmotion
 		ValidDamageStates: Heavy, Critical 

@@ -9,6 +9,10 @@ debuffs:
 		Start: 3
 	reanimated: debuffs
 		Start: 4
+debuffs2:
+	cursed: debuffs2
+		Start: 0
+		Offset: 0,-10
 upgradeguns1:	
 	icon: guns1.shp
 		AddExtension: False

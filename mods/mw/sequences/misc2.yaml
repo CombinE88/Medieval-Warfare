@@ -135,6 +135,10 @@ explosion:
 		Length: 23
 		Start: 270
 		Tick: 40
+	circleeffect: circleeffect
+		Start: 0
+		Length:*
+		Tick: 30
 spear:	  
 	idle: ross4
 		Start: 150

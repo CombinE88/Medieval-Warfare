@@ -352,19 +352,7 @@ SPLIT7:
 	SeedsResource:
 		RequiresCondition: SpawnCorruption == 1
 		ResourceType: Corruption
-		Interval: 70
-	SeedsResource@2:
-		RequiresCondition: SpawnCorruption == 2
-		ResourceType: Corruption
-		Interval: 60
-	SeedsResource@3:
-		RequiresCondition: SpawnCorruption == 3
-		ResourceType: Corruption
-		Interval: 50
-	SeedsResource@4:
-		RequiresCondition: SpawnCorruption >= 4
-		ResourceType: Corruption
-		Interval: 35
+		Interval: 40
 	Targetable:
 		TargetTypes: Trees, Corrupt
 	DockManager:
@@ -433,18 +421,6 @@ SPLIT8:
 		RadiusMax: 10
 	SeedsResource:
 		RequiresCondition: SpawnCorruption == 1
-		ResourceType: Corruption
-		Interval: 90
-	SeedsResource@2:
-		RequiresCondition: SpawnCorruption == 2
-		ResourceType: Corruption
-		Interval: 75
-	SeedsResource@3:
-		RequiresCondition: SpawnCorruption == 3
-		ResourceType: Corruption
-		Interval: 55
-	SeedsResource@4:
-		RequiresCondition: SpawnCorruption >= 4
 		ResourceType: Corruption
 		Interval: 35
 	Targetable:

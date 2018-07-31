@@ -840,10 +840,10 @@ Container@PLAYER_WIDGETS:
 					Y: 10
 					Width: WINDOW_RIGHT - 580 - 20 - 150
 					Height: 12
-		HorizontalSupportPowers@VERTICAL_SUPPORT_PALETTE:
-			X: 290
-			Y: WINDOW_BOTTOM - 280
-			IconSize: 64, 4
+		SupportPowers@SUPPORT_PALETTE:
+			X: 5
+			Y: 5
+			IconSize: 64, 48
 			IconSpriteOffset: -1, -1
 			TooltipContainer: TOOLTIP_CONTAINER
 			ReadyText: Ready

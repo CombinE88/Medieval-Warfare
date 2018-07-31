@@ -342,54 +342,30 @@ AcolyteGiantHand:
 	Warhead@2Rubble: CreateEffect
 		ImpactSounds: rubble.aud
 AcolyteSpawnHelper:
-	ReloadDelay: 150
-	Range: 8c0
+	ReloadDelay: 84
+	Range: 9c0
 	MinRange: 0
-	InvalidTargets: Air
-	ValidTargets: Ground
-	Projectile: GravityBomb
-		Velocity: 10,0,0
-	Warhead@1Snakes: FireShrapnel
-		Weapon: AcolyteSpawnSkeletonA
-		InvalidTargets: Air
-		ValidTargets: Ground
-		AimChance: 100
-		AllowDirectHit: true
-		AimTargetStances: Enemy, Neutral
-		Amount: 1
-	Warhead@2Snakes: FireShrapnel
-		Delay: 3
-		Weapon: AcolyteSpawnSkeletonB
-		InvalidTargets: Air
-		ValidTargets: Ground
-		AimChance: 100
-		AllowDirectHit: true
-		AimTargetStances: Enemy, Neutral
-		Amount: 1
-	Warhead@3Snakes: FireShrapnel
-		Delay: 6
-		Weapon: AcolyteSpawnSkeletonC
-		InvalidTargets: Air
-		ValidTargets: Ground
-		AimChance: 100
-		AllowDirectHit: true
-		AimTargetStances: Enemy, Neutral
-		Amount: 1
-	Warhead@4Snakes: FireShrapnel
-		Delay: 9
-		Weapon: AcolyteSpawnSkeletonD
-		InvalidTargets: Air
-		ValidTargets: Ground
-		AimChance: 100
-		AllowDirectHit: true
-		AimTargetStances: Enemy, Neutral
-		Amount: 1
+	InvalidTargets: Air, Cursed, Wall, Structure, Siege
+	ValidTargets: Ground, Cursable
+	Projectile: Bullet
+		Speed: 1c382
+	Warhead@Curse: CurseOnHit
+		Range: 2c0
+		Duration: 250
+		InvalidTargets: Air, Wall, Structure, Siege
+		ValidTargets: Ground, Cursable
+		ValidStances: Enemy, Neutral
+		Condition: cursed
 	Warhead@2Dam: SpreadDamage
-		Spread: 20
-		InvalidTargets: Air
-		ValidTargets: Ground
-		Damage: 0
+		Spread: 2c0
+		InvalidTargets: Air, Cursed, Wall, Structure, Siege
+		ValidTargets: Ground, Cursable
+		Damage: 1
 		DamageTypes: Prone50Percent, TriggerProne, RippedApartDeath, SpawnSoul
+	Warhead@SpawnEffect: CreateEffect
+		Explosions: circleeffect
+		ExplosionPalette : grimspawnalpha
+        
 AcolyteSpawnSkeletonA:
 	ValidTargets: Ground
 	InvalidTargets: Air, Structure, Infantry, Siege, Cavalry, Wall
@@ -604,8 +580,8 @@ VampAttackGBuilding:
 			Spectral: 25
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath, SpawnSoul
 VampAttackAA:
-	ReloadDelay: 45
-	Range: 7c0
+	ReloadDelay: 40
+	Range: 7c512
 	ValidTargets: Air
 	InvalidTargets: Ground
 	Projectile: Missile
@@ -618,18 +594,18 @@ VampAttackAA:
 		Spread: 215
 		ValidTargets: Air
 		InvalidTargets: Ground
-		Damage: 4300
+		Damage: 4500
 		Versus:
 			Leather: 100
 			Light: 100
 			Heavy: 100
-			Concrete: 35
+			Concrete: 100
 			Knight: 100
 			LightCavalry: 100
 			MediumCavalry: 100
 			HeavyCavalry: 100
-			HeavyBuilding: 45
-			Spectral: 70
+			HeavyBuilding: 100
+			Spectral: 100
 		DamageTypes: Prone50Percent, TriggerProne, RippedApartDeath, SpawnSoul
 	Warhead@2Backfire: BackFireShrapnel
 		Weapon: BackFlyingBlood
@@ -793,7 +769,7 @@ GargAttack:
 		Spread: 210
 		ValidTargets: Ground
 		InvalidTargets: Air
-		Damage: 800
+		Damage: 1450
 		Falloff: 100, 70, 60, 50, 18, 7, 0
 		Versus:
 			None: 100

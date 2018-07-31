@@ -69,8 +69,12 @@
     <Compile Include="Traits\AddConditionEvery.cs" />
     <Compile Include="Traits\GrantPermanentCondition.cs" />
     <Compile Include="Traits\Player\AIHelper.cs" />
+    <Compile Include="Traits\Render\UndeadGiantSpawnerChargeBar.cs" />
     <Compile Include="Traits\Undead Faction\AcolytePreyBuildInfo.cs" />
     <Compile Include="Traits\Undead Faction\AcolytePreyInfo.cs" />
+    <Compile Include="Traits\Undead Faction\SpawnActorOnCurse.cs" />
+    <Compile Include="Traits\Undead Faction\UndeadGiantSpawner.cs" />
+    <Compile Include="Traits\Undead Faction\UndeadCryptProduction.cs" />
     <Compile Include="Traits\WithPermanentExplosion.cs" />
     <Compile Include="Traits\Construction\AddPrioTargeter.cs" />
     <Compile Include="Traits\Construction\ConstructionPriority.cs" />
@@ -126,6 +130,7 @@
     <Compile Include="Warheads\FireClusterWarhead.cs" />
     <Compile Include="Warheads\FireFragmentWarhead.cs" />
     <Compile Include="Warheads\FireShrapnelWarhead.cs" />
+    <Compile Include="Warheads\CurseOnHit.cs" />
     <Compile Include="Warheads\GrantSingletonConditionWarhead.cs" />
     <Compile Include="Warheads\GrantSelfCondition.cs" />
     <Compile Include="Warheads\RemoveExternalCondition.cs" />
@@ -140,9 +145,6 @@
     <Compile Include="Widgets\Logic\Ingame\IngamePopulationCounterLogic.cs" />
     <Compile Include="Widgets\Logic\Ingame\IngameUsedPopulationCounterLogic.cs" />
     <Compile Include="Widgets\Logic\Ingame\NewCashCounterLogic.cs" />
-    <Compile Include="Widgets\Logic\HorizontalSupportPowerBinLogic.cs" />
-    <Compile Include="Widgets\Logic\HorizontalSupportPowersWidget.cs" />
-    <Compile Include="Widgets\Logic\SupportPowerTooltipLogic.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\engine\OpenRA.Mods.Common\OpenRA.Mods.Common.csproj">

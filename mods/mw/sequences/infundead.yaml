@@ -445,6 +445,47 @@ undead6:
 		Tick: 80
 	icon: undead6icon.shp
 		AddExtension: False
+	transforms: undead6deploy
+		Length: 34
+		Tick: 130
+undead6deployed:
+	stunned: sulm4
+		ZOffset: 125
+		Start: 312
+		Length: 2
+		Tick: 200
+	idle: undead6deploy
+		Start: 33
+	make: undead6deploy
+		Length: 34
+		Tick: 130
+	die1: undead6
+		Start: 74
+		Length: 21
+		Tick: 80
+	# large hit
+	die2: undead6
+		Start: 74
+		Length: 21
+		Tick: 80
+	# poision
+	die3: undead6
+		Start: 74
+		Length: 21
+		Tick: 80
+	# ballista
+	die4: undead6
+		Start: 74
+		Length: 21
+		Tick: 80
+	die-crushed: undead6
+		Start: 74
+		Length: 21
+		Tick: 80
+		ZOffset: -511
+	die5: burningman
+		Length: *
+		Tick: 80
 undead7:
 	stunned: sulm4
 		ZOffset: 125

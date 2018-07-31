@@ -696,7 +696,7 @@ CRYPT:
 		SpawnOffset: -298,638,0
 		ExitCell: 0,2
 	RallyPoint:
-	UndeadGraveProduction:
+	UndeadCtryptProduction:
 		Produces: MInfantry.ded
 	ProductionQueue:
 		Type: MInfantry.ded

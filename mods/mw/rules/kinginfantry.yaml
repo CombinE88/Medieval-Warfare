@@ -5,6 +5,7 @@ KING:
 	Inherits@CanTurnIntoScelett:  ^CanTurnIntoScelett
 	Inherits@ArcherDemo65: ^ArcherDemo65
 	Inherits@Healable: ^Healable
+	Inherits@Cursable: ^Cursed
 	GivesBounty:
 		Percentage: 50
 	MustBeDestroyed:
@@ -189,6 +190,7 @@ E2NEWV2:
 	Inherits@Healable: ^Healable
 	Inherits@SnakeStunnable: ^SnakeStunnable
 	Inherits@GrimReanimatable: ^GrimReanimatable
+	Inherits@Cursable: ^Cursed
 	Valued:
 		Cost: 200
 	-Crushable:
@@ -240,6 +242,7 @@ E3NEW:
 	Inherits@Healable: ^Healable
 	Inherits@SnakeStunnable: ^SnakeStunnable
 	Inherits@GrimReanimatable: ^GrimReanimatable
+	Inherits@Cursable: ^Cursed
 	Valued:
 		Cost: 100
 	Tooltip:
@@ -287,6 +290,7 @@ E4NEWV2:
 	Inherits@Healable: ^Healable
 	Inherits@SnakeStunnable: ^SnakeStunnable
 	Inherits@GrimReanimatable: ^GrimReanimatable
+	Inherits@Cursable: ^Cursed
 	RevealsShroud:
 		Range: 6c0
 	Valued:
@@ -359,6 +363,7 @@ RMBONEW:
 	Inherits@Healable: ^Healable
 	Inherits@SnakeStunnable: ^SnakeStunnable
 	Inherits@GrimReanimatable: ^GrimReanimatable
+	Inherits@Cursable: ^Cursed
 	Valued:
 		Cost: 475
 	Tooltip:
@@ -414,6 +419,7 @@ NEWCOMM:
 	Inherits@ArcherDemo65: ^ArcherDemo65
 	Inherits@Healable: ^Healable
 	Inherits@SnakeStunnable: ^SnakeSlowable
+	Inherits@Cursable: ^Cursed
 	RevealsShroud:
 		Range: 9c0
 	Valued:

@@ -8,6 +8,7 @@ PREYCOLYTE:
 	Inherits@Healable: ^Healable
 	Inherits@SnakeStunnable: ^SnakeStunnable
 	Inherits@GrimReanimatable: ^GrimReanimatable
+	Inherits@Cursable: ^Cursed
 	#anti error fix
 	ExternalCondition@whisper:
 		Condition: whisper
@@ -141,6 +142,7 @@ DEADROSS:
 		Priority: 4
 UNDEAD1:
 	Inherits: ^Skeleton
+	Inherits: ^GainPerZigurrat
 	Valued:
 		Cost: 35
 	RevealsShroud:
@@ -174,6 +176,7 @@ UNDEAD1:
 		Priority: 4
 UNDEAD2:
 	Inherits: ^Skeleton
+	Inherits: ^GainPerZigurrat
 	Valued:
 		Cost: 50
 	RevealsShroud:
@@ -202,6 +205,7 @@ UNDEAD2:
 UNDEAD3:
 	Inherits: ^Skeleton
 	Inherits@AUTOTARGETDEF: ^AutoTargetDefenses
+	Inherits: ^GainPerZigurrat
 	Valued:
 		Cost: 50
 	RevealsShroud:
@@ -239,6 +243,7 @@ UNDEAD3:
 UNDEAD4:
 	Inherits: ^Skeleton
 	Inherits@AUTOTARGETDEF: ^AutoTargetDefenses
+	Inherits: ^GainPerZigurrat
 	Valued:
 		Cost: 370
 	RevealsShroud:
@@ -270,6 +275,7 @@ UNDEAD4:
 		TargetTypes: Heavy
 UNDEAD5:
 	Inherits: ^Skeleton
+	Inherits: ^GainPerZigurrat
 	Valued:
 		Cost: 75
 	RevealsShroud:
@@ -351,6 +357,67 @@ UNDEAD6:
 		Modifier: 77
 	Targetable@CombatRole:
 		TargetTypes: HeavyCavalry
+	SkipTransforms:
+		IntoActor: undead6deployed
+		Offset: 0,0
+		Facing: 160
+		NoTransformNotification: BuildingCannotPlaceAudio
+		SkipUndoAnimation: true
+UNDEAD6DEPLOYED:
+	Inherits: ^BaseBuilding
+	Inherits@Hitshape: ^1x1Shape
+	UndeadGiantSpawner:
+	UndeadGiantSpawnerChargeBar:
+	Valued:
+		Cost: 1000
+	RevealsShroud:
+		Range: 6c0
+	Tooltip:
+		Name: Skeleton (Giant)
+	Targetable:
+		TargetTypes: Ground, Cavalry
+	Health:
+		HP: 90250
+	RenderSprites:
+		PlayerPalette: raplayer
+		Image: undead6deployed
+	Armor:
+		Type: HeavyCavalry
+	Selectable:
+		Bounds: 24,24,0,-6
+	SelectionDecorations:
+		VisualBounds: 24,24,0,-6
+	PersonValued:
+		ActorCount: 3
+	Targetable@CombatRole:
+		TargetTypes: HeavyCavalry
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+	-Sellable:
+	WithDeathAnimation:
+		DeathSequencePalette: raplayer 
+		DeathTypes:
+			DefaultDeath: 1
+			RippedApartDeath: 2
+			PoisonDeath: 3
+			BallistaDeath: 4
+			BurnToDeath: 5
+			SkeletonDeath: 5
+	-SpawnActorsOnSell:
+	RallyPoint:
+	-GivesBuildableArea:
+	-EngineerRepairable:
+	-Capturable:
+	Building:
+		Dimensions: 1,1
+		Footprint: x
+	Transforms:
+		IntoActor: undead6
+		Offset: 0,0
+		Facing: 160
+		NoTransformNotification: BuildingCannotPlaceAudio
+	WithMakeAnimation:
 UNDEAD7:
 	Inherits: ^Skeleton
 	Inherits@AUTOTARGETDEF: ^AutoTargetDefenses
@@ -466,6 +533,7 @@ ACOLYTEC:
 	Inherits@Healable: ^Healable
 	Inherits@SnakeStunnable: ^SnakeStunnable
 	Inherits@CanTurnIntoScelett:  ^CanTurnIntoScelett
+	Inherits@Cursable: ^Cursed
 	Valued:
 		Cost: 700
 	-Crushable:
@@ -526,6 +594,7 @@ VAMP:
 	Inherits@Healable: ^Healable
 	Inherits@SnakeStunnable: ^SnakeStunnable
 	Inherits@CanTurnIntoScelett:  ^CanTurnIntoScelett
+	Inherits@Cursable: ^Cursed
 	Valued:
 		Cost: 750
 	-Crushable:
@@ -661,6 +730,7 @@ DEMONHORSE:
 	Inherits@ArcherDemo65: ^ArcherDemo80
 	Inherits@Healable: ^Healable
 	Inherits@SnakeStunnable: ^SnakeSlowable
+	Inherits@Cursable: ^Cursed
 	GrantConditionOnDamageState@Slow:
 		Condition: Slowmotion
 		ValidDamageStates: Heavy, Critical 
@@ -737,6 +807,7 @@ LICHK:
 	AttackFrontal:
 	AutoTarget:
 		InitialStance: AttackAnything
+		ScanRadius: 9
 	RenderSprites:
 		PlayerPalette: raplayer
 	HiddenUnderFog:
@@ -944,6 +1015,7 @@ BLOCKER3:
 		Condition: validc
 RESSURECT1:
 	Inherits: ^SkeletonSpawn
+	Inherits: ^GainPerZigurrat
 	Valued:
 		Cost: 0
 	RevealsShroud:
@@ -974,6 +1046,7 @@ RESSURECT1:
 		TargetTypes: Light
 RESSURECT2:
 	Inherits: ^SkeletonSpawn
+	Inherits: ^GainPerZigurrat
 	Valued:
 		Cost: 0
 	RevealsShroud:
@@ -1004,6 +1077,7 @@ RESSURECT2:
 		TargetTypes: Light
 RESSURECT3:
 	Inherits: ^SkeletonSpawn
+	Inherits: ^GainPerZigurrat
 	Inherits@AUTOTARGETDEF: ^AutoTargetDefenses
 	Valued:
 		Cost: 0
@@ -1045,6 +1119,7 @@ RESSURECT3:
 		Priority: 4
 RESSURECT4:
 	Inherits: ^SkeletonSpawn
+	Inherits: ^GainPerZigurrat
 	Valued:
 		Cost: 0
 	RevealsShroud:
