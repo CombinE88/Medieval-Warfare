@@ -159,7 +159,7 @@ E8FARMER:
 		Resources: Crops, Grains, Wood, Goods, Lumber, Corn
 		PipCount: 2
 		Capacity: 6
-		BaleLoadDelay: 25
+		BaleLoadDelay: 20
 		BaleUnloadDelay: 5
 		SearchFromProcRadius: 25
 		SearchFromOrderRadius: 15

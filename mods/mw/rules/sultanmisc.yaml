@@ -28,7 +28,6 @@ SULB0:
 		PlayerPalette: raplayer
 	WithInfantryBody:
 		IdleSequences: stand
-		DefaultAttackSequence: shoot
 	Armor:
 		Type: HeavyCavalry
 	Selectable:
@@ -37,6 +36,7 @@ SULB0:
 	Targetable:
 		TargetTypes: Ground, Cavalry
 	AttackTurreted:
+		Armaments: primary, secondary, primarydummy, secondarydummy, primaryair, secondaryair
 	-ThrowsShrapnel@SMALL:
 	WithDeathAnimation:
 		DeathSequencePalette: raplayer
@@ -53,6 +53,7 @@ SULB0:
 	WithTurretAttackAnimation@2:
 		Turret: secondary
 		Sequence: shoot
+		Delay: 10
 	Turreted@1:
 		Turret: primary
 		TurnSpeed: 100
@@ -65,29 +66,51 @@ SULB0:
 		Weapon: BowNArrowSiegeTower
 		LocalOffset: 0,0,427
 		Turret: primary
+		Name: primary
 	Armament@2:
 		Weapon: BowNArrowSiegeTower
 		LocalOffset: 0,0,427
 		Turret: secondary
 		FireDelay: 10
+		Name: secondary
 	Armament@1DUMMY:
 		Weapon: BowNArrowSiegeTowerDUMMY
 		LocalOffset: 0,0,427
 		Turret: primary
+		Name: primarydummy
 	Armament@2DUMMY:
 		Weapon: BowNArrowSiegeTowerDUMMY
 		LocalOffset: 0,0,427
 		Turret: secondary
 		FireDelay: 10	
+		Name: secondarydummy
 	Armament@1@Air:
 		Weapon: BowNArrowSiegeTowerAIR
 		LocalOffset: 0,0,427
 		Turret: primary
+		Name: primaryair
 	Armament@2Air:
 		Weapon: BowNArrowSiegeTowerAIR
 		LocalOffset: 0,0,427
 		Turret: secondary
 		FireDelay: 10
+		Name: secondaryair
+	WithTurretAttackAnimation@1:
+		Turret: primary
+		Sequence: shoot
+		Armament: primary
+	WithTurretAttackAnimation@2:
+		Turret: secondary
+		Sequence: shoot
+		Armament: secondary
+	WithTurretAttackAnimation@air1:
+		Turret: primary
+		Sequence: shoot
+		Armament: primaryair
+	WithTurretAttackAnimation@air2:
+		Turret: secondary
+		Sequence: shoot
+		Armament: secondaryair
 	Voiced:
 		VoiceSet: ElephantVoice
 	PersonValued:

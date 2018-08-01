@@ -108,8 +108,9 @@ BowNArrowMarksman:
 		Arm: 0
 		Speed: 400
 		Palette: ra
+		CloseEnough: 0c500
 	Warhead@1Dam: SpreadDamage
-		Spread: 25
+		Spread: 45
 		InvalidTargets: Wall, Air
 		ValidTargets: Ground
 		Damage: 2000
@@ -214,6 +215,7 @@ BowNArrowAirMarksman:
 		ContrailUsePlayerColor : true
 		Image: e4arrow
 		Palette: ra
+		CloseEnough: 0c500
 	Warhead@1Dam: SpreadDamage
 		Spread: 141
 		InvalidTargets: Wall, Ground

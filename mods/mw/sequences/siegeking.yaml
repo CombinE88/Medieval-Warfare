@@ -27,7 +27,7 @@ sgtw:
 	turretidle: e4newv2
 		Start: 122
 		Facings: 8
-	turretanim: e4newv2
+	shoot: e4newv2
 		Tick: 100
 		Start: 66
 		Length: 7

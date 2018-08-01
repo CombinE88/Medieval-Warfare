@@ -32,25 +32,29 @@ SULGTW:
 		LocalOffset: 0,0,427
 		Turret: primary
 		RequiresCondition: !static
+		Name: primary
 	Armament@2:
 		Weapon: bownarrowtower
 		LocalOffset: 0,0,427
 		Turret: secondary
 		RequiresCondition: !static
 		FireDelay: 6
+		Name: secondary
 	Armament@1DUMMY:
 		Weapon: BowNArrowTowerDUMMY
 		LocalOffset: 0,0,427
 		Turret: primary
 		RequiresCondition: !static
+		Name: primarydummy
 	Armament@2DUMMY:
 		Weapon: BowNArrowTowerDUMMY
 		LocalOffset: 0,0,427
 		Turret: secondary
 		RequiresCondition: !static
 		FireDelay: 6
+		Name: secondarydummy
 	AttackTurreted:
-		Armaments: primary, secondary, turr1, turr2
+		Armaments: primary, secondary, 1archers, 2archers, primarydummy, secondarydummy, 1archersdummy, 2archersdummy, djinn, primaryspear, secondaryspear, primaryspearair, secondaryspearair
 	BodyOrientation:
 		QuantizedFacings: 8
 	DetectCloaked:
@@ -59,16 +63,19 @@ SULGTW:
 		Sequence: turretidle
 		Turret: primary
 		RequiresCondition: !static
-	WithTurretAttackAnimation@1:
-		Turret: primary
-		Sequence: shoot
 	WithSpriteTurret@2: 
 		Sequence: turretidle
 		Turret: secondary
 		RequiresCondition: !static
+	WithTurretAttackAnimation@1:
+		Turret: primary
+		Sequence: shoot
+		Armament: primary
 	WithTurretAttackAnimation@2:
 		Turret: secondary
 		Sequence: shoot
+		Armament: secondary
+		Delay: 6
 	Turreted@1:
 		Turret: primary
 		TurnSpeed: 100
@@ -97,24 +104,27 @@ SULGTW:
 		RequiresCondition: archers && Construct >= 20
 	WithSpriteTurret@1archers: 
 		Sequence: turretidle2
-		Turret: turr1
+		Turret: 1archers
 		RequiresCondition: archers && Construct >= 20
 	WithTurretAttackAnimation@1archers:
-		Turret: turr1
+		Turret: 1archers
 		Sequence: shoot
+		Armament: 1archers
 	WithSpriteTurret@2archers: 
 		Sequence: turretidle2
-		Turret: turr2
+		Turret: 2archers
 		RequiresCondition: archers && Construct >= 20
 	WithTurretAttackAnimation@2archers:
-		Turret: turr2
+		Turret: 2archers
 		Sequence: shoot
+		Armament: 2archers
+		Delay: 18
 	Turreted@1archers:
-		Turret: turr1
+		Turret: 1archers
 		TurnSpeed: 100
 		Offset: -170,-170,850
 	Turreted@2archers:
-		Turret: turr2
+		Turret: 2archers
 		TurnSpeed: 100
 		Offset: 170,170,850
 	Armament@1archers:
@@ -123,24 +133,28 @@ SULGTW:
 		Turret: turr1
 		RequiresCondition: archers && Construct >= 20
 		FireDelay: 12
+		Name: 1archers
 	Armament@2archers:
 		Weapon: bownarrowtower
 		LocalOffset: 0,0,427
-		Turret: turr2
+		Turret: 2archers
 		RequiresCondition: archers && Construct >= 20
 		FireDelay: 18
+		Name: 2archers
 	Armament@1DUMMYarchers:
 		Weapon: BowNArrowTowerDUMMY
 		LocalOffset: 0,0,427
 		Turret: turr1
 		RequiresCondition: archers && Construct >= 20
 		FireDelay: 12
+		Name: 1archersdummy
 	Armament@2DUMMYarchers:
 		Weapon: BowNArrowTowerDUMMY
 		LocalOffset: 0,0,427
 		Turret: turr2
 		RequiresCondition: archers && Construct >= 20
 		FireDelay: 18
+		Name: 2archersdummy
 	WithIdleOverlay@djinn:
 		Sequence: djingtw
 		Offset: 0, 0, 0
@@ -152,6 +166,7 @@ SULGTW:
 	WithTurretAttackAnimation@djinn:
 		Turret: turr3
 		Sequence: shoot
+		Armament: djinn
 	Turreted@djinn:
 		Turret: turr3
 		TurnSpeed: 100
@@ -161,6 +176,7 @@ SULGTW:
 		LocalOffset: 141,75,352
 		Turret: turr3
 		RequiresCondition: djinn && Construct >= 50
+		Name: djinn
 	WithSpriteBody:
 		RequiresCondition: !staticfinished
 	WithIdleOverlay@static:
@@ -171,23 +187,27 @@ SULGTW:
 		LocalOffset: 0,0,427
 		Turret: primary1
 		RequiresCondition: static && Construct >= 30
+		Name: primaryspear
 	Armament@static2:
 		Weapon: SulGTSpearThrow
 		LocalOffset: 0,0,427
 		Turret: secondary1
 		FireDelay: 25
 		RequiresCondition: static && Construct >= 30
+		Name: secondaryspear
 	Armament@static1AIR:
 		Weapon: SulGTSpearThrowAir
 		LocalOffset: 0,0,427
 		Turret: primary1
 		RequiresCondition: static && Construct >= 30
+		Name: primaryspearair
 	Armament@static2AIR:
 		Weapon: SulGTSpearThrowAir
 		LocalOffset: 0,0,427
 		Turret: secondary1
 		FireDelay: 25
 		RequiresCondition: static && Construct >= 30
+		Name: secondaryspearair
 	Turreted@1a:
 		Turret: primary1
 		TurnSpeed: 100

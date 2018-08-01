@@ -25,6 +25,7 @@ GTWNEW:
 		HasMinibib: Yes
 	WithIdleOverlay:
 	AttackTurreted:
+		Armaments: primary, secondary, primarydummy, secondarydummy
 	BodyOrientation:
 		QuantizedFacings: 8
 	DetectCloaked:
@@ -33,16 +34,19 @@ GTWNEW:
 		Weapon: bownarrowtower
 		LocalOffset: 0,0,427
 		Turret: primary
+		Name: primary
 	Armament@ONEDUMMY:
 		Weapon: BowNArrowTowerDUMMY
 		LocalOffset: 0,0,427
 		Turret: primary
+		Name: primarydummy
 	WithSpriteTurret@SPRITURRONE: 
 		Sequence: turretidle
 		Turret: primary
-	WithTurretAttackAnimation@1:
+	WithTurretAttackAnimation@SPRITURRONE:
 		Turret: primary
 		Sequence: shoot
+		Armament: primary
 	Turreted@TURRONE:
 		Turret: primary
 		TurnSpeed: 100
@@ -52,17 +56,21 @@ GTWNEW:
 		LocalOffset: 0,0,427
 		Turret: secondary
 		FireDelay: 12
+		Name: secondary
 	Armament@TWODUMMY:
 		Weapon: BowNArrowTowerDUMMY
 		LocalOffset: 0,0,427
 		Turret: secondary
 		FireDelay: 12
+		Name: secondarydummy
 	WithSpriteTurret@SPRITURRTWO: 
 		Sequence: turretidle
 		Turret: secondary
-	WithTurretAttackAnimation@2:
+	WithTurretAttackAnimation@SPRITURRTWO:
 		Turret: secondary
+		Armament: secondary
 		Sequence: shoot
+		Delay: 12
 	Turreted@TURRTWO:
 		Turret: secondary
 		TurnSpeed: 100
@@ -162,7 +170,7 @@ TRIBU:
 		PlayerPalette: raplayer
 	BodyOrientation:
 		QuantizedFacings: 32
-	WithTurretAttackAnimation:
+	WithAttackAnimation:
 		Sequence: shoot
 	WithEmbeddedTurretSpriteBody:
 	-WithSpriteBody:
@@ -228,8 +236,10 @@ BATO:
 		QuantizedFacings: 32
 	WithAttackAnimation@1:
 		Armament: primary
+		Sequence: shoot
 	WithAttackAnimation@2:
 		Armament: secondary
+		Sequence: shoot
 	WithEmbeddedTurretSpriteBody:
 	-WithSpriteBody:
 	AttackTurreted:
@@ -511,7 +521,7 @@ SIEGETRIBU:
 		PlayerPalette: raplayer
 	BodyOrientation:
 		QuantizedFacings: 32
-	WithTurretAttackAnimation:
+	WithAttackAnimation:
 		Sequence: shoot
 	WithEmbeddedTurretSpriteBody:
 	-WithSpriteBody:

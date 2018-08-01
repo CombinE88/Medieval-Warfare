@@ -292,24 +292,44 @@ SIEGE3:
 		Actor: SIEGERUNNER
 		Probability: 50
 	AttackTurreted:
+		Armaments: primary, secondary, tritiary, primarydummy, secondarydummy, tritiarydummy, primaryair, secondaryair, tritiaryair
 	WithSpriteTurret@1: 
 		Sequence: turretidle
 		Turret: primary
-	WithTurretAttackAnimation@1:
-		Turret: primary
-		Sequence: shoot
 	WithSpriteTurret@2: 
 		Sequence: turretidle
 		Turret: secondary
-	WithTurretAttackAnimation@2:
-		Turret: secondary
-		Sequence: shoot
 	WithSpriteTurret@3: 
 		Sequence: turretidle
 		Turret: tritiary
+	WithTurretAttackAnimation@1:
+		Turret: primary
+		Sequence: shoot
+		Armament: primary
+	WithTurretAttackAnimation@2:
+		Turret: secondary
+		Armament: secondary
+		Sequence: shoot
+		Delay: 15
 	WithTurretAttackAnimation@3:
 		Turret: tritiary
+		Armament: tritiary
 		Sequence: shoot
+		Delay: 30
+	WithTurretAttackAnimation@air1:
+		Turret: primary
+		Sequence: shoot
+		Armament: primaryair
+	WithTurretAttackAnimation@air2:
+		Turret: secondary
+		Armament: secondaryair
+		Sequence: shoot
+		Delay: 15
+	WithTurretAttackAnimation@air3:
+		Turret: tritiary
+		Armament: tritiaryair
+		Sequence: shoot
+		Delay: 30
 	Turreted@1:
 		Turret: primary
 		TurnSpeed: 100
@@ -326,44 +346,53 @@ SIEGE3:
 		Weapon: BowNArrowSiegeTower
 		LocalOffset: 0,0,427
 		Turret: primary
+		Name: primary
 	Armament@2:
 		Weapon: BowNArrowSiegeTower
 		LocalOffset: 0,0,427
 		Turret: secondary
 		FireDelay: 15
+		Name: secondary
 	Armament@3:
 		Weapon: BowNArrowSiegeTower
 		LocalOffset: 0,0,427
 		Turret: tritiary
 		FireDelay: 30
+		Name: tritiary
 	Armament@1DUMMY:
 		Weapon: BowNArrowSiegeTowerDUMMY
 		LocalOffset: 0,0,427
 		Turret: primary
+		Name: primarydummy
 	Armament@2DUMMY:
 		Weapon: BowNArrowSiegeTowerDUMMY
 		LocalOffset: 0,0,427
 		Turret: secondary
 		FireDelay: 15
+		Name: secondarydummy
 	Armament@3DUMMY:
 		Weapon: BowNArrowSiegeTowerDUMMY
 		LocalOffset: 0,0,427
 		Turret: tritiary
 		FireDelay: 30
+		Name: tritiarydummy
 	Armament@1AIR:
 		Weapon: BowNArrowSiegeTowerAIR
 		LocalOffset: 0,0,427
 		Turret: primary
+		Name: primaryair
 	Armament@2AIR:
 		Weapon: BowNArrowSiegeTowerAIR
 		LocalOffset: 0,0,427
 		Turret: secondary
 		FireDelay: 15
+		Name: secondaryair
 	Armament@3AIR:
 		Weapon: BowNArrowSiegeTowerAIR
 		LocalOffset: 0,0,427
 		Turret: tritiary
 		FireDelay: 30
+		Name: tritiaryair
 	PersonValued:
 		ActorCount: 3
 		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
@@ -549,7 +578,7 @@ EHARVXL:
 		Resources: Iron, Gold
 		PipCount: 7
 		Capacity: 20
-		BaleLoadDelay: 28
+		BaleLoadDelay: 24
 		BaleUnloadDelay: 3
 		SearchFromProcRadius: 25
 		SearchFromOrderRadius: 15

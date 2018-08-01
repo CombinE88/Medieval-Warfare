@@ -27,7 +27,7 @@ gtwnew:
 	turretidle: e4new
 		Start: 122
 		Facings: 8
-	turretanim: e4new
+	shoot: e4new
 		Tick: 100
 		Start: 66
 		Length: 7
@@ -99,7 +99,7 @@ sulgtw:
 	turretidle: sule3
 		Start: 122
 		Facings: 8
-	turretanim: sule3
+	shoot: sule3
 		Tick: 100
 		Start: 66
 		Length: 7
@@ -224,7 +224,7 @@ gunnew:
 		ZOffset: -25
 tribu:
 	Inherits: ^scaffold
-	turretanim: 
+	shoot: 
 		Facings: 32
 		Length: 9
 		Start: 32
@@ -282,7 +282,7 @@ tribu:
 		Offset: 0,-18,0
 sigtrib:
 	Inherits: ^scaffold
-	turretanim: 
+	shoot: 
 		Facings: 32
 		Length: 9
 		Start: 32
@@ -340,7 +340,7 @@ sigtrib:
 		Offset: 0,-18,0
 batowgun:
 	Inherits: ^scaffold
-	turretanim: 
+	shoot: 
 		Facings: 32
 		ZOffset: 512
 		Length: 7

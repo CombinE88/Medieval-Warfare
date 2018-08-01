@@ -86,7 +86,7 @@ sulb0:
 	turretidle: sule3
 		Start: 122
 		Facings: 8
-	turretanim: sule3
+	shoot: sule3
 		Tick: 100
 		Start: 66
 		Length: 7
@@ -226,6 +226,11 @@ sulb3:
 		Start: 225
 		Length: 7
 		Facings: 32
+	shoot: 
+		Tick: 80
+		Start: 225
+		Length: 7
+		Facings: 32
 	icon: sulb3icon.shp
 		AddExtension: False 
 sulb3.husk:
@@ -233,7 +238,7 @@ sulb3.husk:
 		Start: 449
 		Facings: 32		 
 sulspball:
-	turretanim:
+	shoot:
 		Start: 32
 		Facings: 32
 		Length: 7

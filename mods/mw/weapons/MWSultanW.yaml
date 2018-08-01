@@ -856,7 +856,6 @@ SulGTSpearThrow:
 	ReloadDelay: 50
 	Range: 8c512
 	MinRange: 0c0
-	Burst: 2
 	BurstDelays: 10
 	Report: throw01.aud
 	ValidTargets: Ground
@@ -876,7 +875,7 @@ SulGTSpearThrow:
 		Blockable: false
 	Warhead@1Dam: SpreadDamage
 		Spread: 141
-		Damage: 2500
+		Damage: 3000
 		ValidTargets: Ground
 		InvalidTargets: Air
 		Versus:
