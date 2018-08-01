@@ -18,31 +18,26 @@ SPLIT2:
 		WOffset: 383,170,0
 		DockAngle: 32
 		IsDragRequired: false
-		FaceTowardsCenter: true
 	Dock@right: 
 		DockOffset: 2,0
 		WOffset: 425,0,0
 		DockAngle: 223
 		IsDragRequired: false
-		FaceTowardsCenter: true
 	Dock@down: 
 		DockOffset: 0,2
 		WOffset: 340,-170,0
 		DockAngle: 159
 		IsDragRequired: false
-		FaceTowardsCenter: true
 	Dock@leftdown: 
 		DockOffset: -2,2
 		WOffset: -425,-510,0
 		DockAngle: 96
 		IsDragRequired: false
-		FaceTowardsCenter: true
 	Dock@leftup: 
 		DockOffset: -2,-2
 		WOffset: -425,510,0
 		DockAngle: 96
 		IsDragRequired: false
-		FaceTowardsCenter: true
 SPLIT3:
 	Inherits: ^TibTree
 	RenderSprites:
@@ -68,31 +63,26 @@ SPLIT3:
 		WOffset: 383,170,0
 		DockAngle: 32
 		IsDragRequired: false
-		FaceTowardsCenter: true
 	Dock@right: 
 		DockOffset: 2,0
 		WOffset: 425,0,0
 		DockAngle: 223
 		IsDragRequired: false
-		FaceTowardsCenter: true
 	Dock@down: 
 		DockOffset: 0,2
 		WOffset: 340,-170,0
 		DockAngle: 159
 		IsDragRequired: false
-		FaceTowardsCenter: true
 	Dock@leftdown: 
 		DockOffset: -2,2
 		WOffset: -425,-510,0
 		DockAngle: 96
 		IsDragRequired: false
-		FaceTowardsCenter: true
 	Dock@leftup: 
 		DockOffset: -2,-2
 		WOffset: -425,510,0
 		DockAngle: 96
 		IsDragRequired: false
-		FaceTowardsCenter: true
 	ExternalCondition@SpawnCorruption:
 		Condition: SpawnCorruption
 	SeedsResource@SpawnCorruption:
@@ -126,31 +116,26 @@ SPLITBLUE:
 		WOffset: 383,170,0
 		DockAngle: 32
 		IsDragRequired: false
-		FaceTowardsCenter: true
 	Dock@right: 
 		DockOffset: 2,0
 		WOffset: 425,0,0
 		DockAngle: 223
 		IsDragRequired: false
-		FaceTowardsCenter: true
 	Dock@down: 
 		DockOffset: 0,2
 		WOffset: 340,-170,0
 		DockAngle: 159
 		IsDragRequired: false
-		FaceTowardsCenter: true
 	Dock@leftdown: 
 		DockOffset: -2,2
 		WOffset: -425,-510,0
 		DockAngle: 96
 		IsDragRequired: false
-		FaceTowardsCenter: true
 	Dock@leftup: 
 		DockOffset: -2,-2
 		WOffset: -425,510,0
 		DockAngle: 96
 		IsDragRequired: false
-		FaceTowardsCenter: true
 SPLIT4:
 	Inherits: SPLIT3
 	Tooltip:
@@ -167,31 +152,26 @@ SPLIT4:
 		WOffset: 383,170,0
 		DockAngle: 32
 		IsDragRequired: false
-		FaceTowardsCenter: true
 	Dock@right: 
 		DockOffset: 2,0
 		WOffset: 425,0,0
 		DockAngle: 223
 		IsDragRequired: false
-		FaceTowardsCenter: true
 	Dock@down: 
 		DockOffset: 0,2
 		WOffset: 340,-170,0
 		DockAngle: 159
 		IsDragRequired: false
-		FaceTowardsCenter: true
 	Dock@leftdown: 
 		DockOffset: -2,2
 		WOffset: -425,-510,0
 		DockAngle: 96
 		IsDragRequired: false
-		FaceTowardsCenter: true
 	Dock@leftup: 
 		DockOffset: -2,-2
 		WOffset: -425,510,0
 		DockAngle: 96
 		IsDragRequired: false
-		FaceTowardsCenter: true
 	ExternalCondition@SpawnCorruption:
 		Condition: SpawnCorruption
 	SeedsResource@SpawnCorruption:
@@ -217,31 +197,26 @@ SPLIT4B:
 		WOffset: 383,170,0
 		DockAngle: 32
 		IsDragRequired: false
-		FaceTowardsCenter: true
 	Dock@right: 
 		DockOffset: 2,0
 		WOffset: 425,0,0
 		DockAngle: 223
 		IsDragRequired: false
-		FaceTowardsCenter: true
 	Dock@down: 
 		DockOffset: 0,2
 		WOffset: 340,-170,0
 		DockAngle: 159
 		IsDragRequired: false
-		FaceTowardsCenter: true
 	Dock@leftdown: 
 		DockOffset: -2,2
 		WOffset: -425,-510,0
 		DockAngle: 96
 		IsDragRequired: false
-		FaceTowardsCenter: true
 	Dock@leftup: 
 		DockOffset: -2,-2
 		WOffset: -425,510,0
 		DockAngle: 96
 		IsDragRequired: false
-		FaceTowardsCenter: true
 	ExternalCondition@SpawnCorruption:
 		Condition: SpawnCorruption
 	SeedsResource@SpawnCorruption:
@@ -295,31 +270,26 @@ SPLIT5:
 		WOffset: 383,170,0
 		DockAngle: 32
 		IsDragRequired: false
-		FaceTowardsCenter: true
 	Dock@right: 
 		DockOffset: 2,0
 		WOffset: 425,0,0
 		DockAngle: 223
 		IsDragRequired: false
-		FaceTowardsCenter: true
 	Dock@down: 
 		DockOffset: 0,2
 		WOffset: 340,-170,0
 		DockAngle: 159
 		IsDragRequired: false
-		FaceTowardsCenter: true
 	Dock@leftdown: 
 		DockOffset: -2,2
 		WOffset: -425,-510,0
 		DockAngle: 96
 		IsDragRequired: false
-		FaceTowardsCenter: true
 	Dock@leftup: 
 		DockOffset: -2,-2
 		WOffset: -425,510,0
 		DockAngle: 96
 		IsDragRequired: false
-		FaceTowardsCenter: true
 SPLIT7:
 	Inherits: SPLIT3
 	RenderSprites:
@@ -357,38 +327,33 @@ SPLIT7:
 		TargetTypes: Trees, Corrupt
 	DockManager:
 		ExternalDocks: true
-		RequiresCondition: SpawnCorruption
+		#RequiresCondition: SpawnCorruption
 		#DeadlockDetectionEnabled: false
 	Dock@up: 
 		DockOffset: 0,-2
 		WOffset: 383,170,0
 		DockAngle: 32
 		IsDragRequired: false
-		FaceTowardsCenter: true
 	Dock@right: 
 		DockOffset: 2,0
 		WOffset: 425,0,0
 		DockAngle: 223
 		IsDragRequired: false
-		FaceTowardsCenter: true
 	Dock@down: 
 		DockOffset: 0,2
 		WOffset: 340,-170,0
 		DockAngle: 159
 		IsDragRequired: false
-		FaceTowardsCenter: true
 	Dock@leftdown: 
 		DockOffset: -2,2
 		WOffset: -425,-510,0
 		DockAngle: 96
 		IsDragRequired: false
-		FaceTowardsCenter: true
 	Dock@leftup: 
 		DockOffset: -2,-2
 		WOffset: -425,510,0
 		DockAngle: 96
 		IsDragRequired: false
-		FaceTowardsCenter: true
 	ExternalCondition@SpawnCorruption:
 		Condition: SpawnCorruption
 SPLIT8:
@@ -427,37 +392,32 @@ SPLIT8:
 		TargetTypes: Trees, Corrupt
 	DockManager:
 		ExternalDocks: true
-		RequiresCondition: SpawnCorruption
+		#RequiresCondition: SpawnCorruption
 		#DeadlockDetectionEnabled: false
 	Dock@up: 
 		DockOffset: 0,-2
 		WOffset: 383,170,0
 		DockAngle: 32
 		IsDragRequired: false
-		FaceTowardsCenter: true
 	Dock@right: 
 		DockOffset: 2,0
 		WOffset: 425,0,0
 		DockAngle: 223
 		IsDragRequired: false
-		FaceTowardsCenter: true
 	Dock@down: 
 		DockOffset: 0,2
 		WOffset: 340,-170,0
 		DockAngle: 159
 		IsDragRequired: false
-		FaceTowardsCenter: true
 	Dock@leftdown: 
 		DockOffset: -2,2
 		WOffset: -425,-510,0
 		DockAngle: 96
 		IsDragRequired: false
-		FaceTowardsCenter: true
 	Dock@leftup: 
 		DockOffset: -2,-2
 		WOffset: -425,510,0
 		DockAngle: 96
-		FaceTowardsCenter: true
 		IsDragRequired: false
 ROCK1:
 	Inherits: ^Rock

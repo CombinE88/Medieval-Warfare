@@ -198,6 +198,7 @@ Player:
 			eharvxl: 6
 			acolytec: 9
 		SquadSize: 15
+		SupportPowerDecisions:
 			Airstrike:
 				OrderName: CorpsePowerInfoOrder
 				MinimumAttractiveness: 2000
@@ -618,6 +619,7 @@ Player:
 			eharvxl: 6
 			acolytec: 9
 		SquadSize: 15
+		SupportPowerDecisions:
 			Airstrike:
 				OrderName: CorpsePowerInfoOrder
 				MinimumAttractiveness: 2000
@@ -1038,6 +1040,7 @@ Player:
 			eharvxl: 6
 			acolytec: 9
 		SquadSize: 15
+		SupportPowerDecisions:
 			Airstrike:
 				OrderName: CorpsePowerInfoOrder
 				MinimumAttractiveness: 2000

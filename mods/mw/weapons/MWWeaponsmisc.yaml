@@ -384,7 +384,6 @@ RottenKadaver:
 	BurstDelays: 2
 	InvalidTargets: Wall
 	Projectile: Bullet
-		Arm: 0
 		Blockable: false
 		Inaccuracy: 1c120
 		Speed: 141
@@ -1146,7 +1145,6 @@ BowNArrowHunter:
 		RangeLimit: 12c0
 		Arm: 0
 		Speed: 300
-		LaunchAngle: 46
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
 		Spread: 25
@@ -1172,7 +1170,6 @@ BowNArrowHunterDUMMY:
 	InvalidTargets: Wall, Air
 	ValidTargets: Wildlife
 	Projectile: Bullet
-		RangeLimit: 9c204
 		LaunchAngle: 130
 		Speed: 290
 		Inaccuracy: 0c0

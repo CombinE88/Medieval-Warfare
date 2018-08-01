@@ -26,7 +26,6 @@ HQNEWGDI:
 	Selectable:
 		Bounds: 48,52,0,0
 	SelectionDecorations:
-		VisualBounds: 48,52,0,0
 	Health:
 		HP: 70000
 	RevealsShroud:
@@ -41,7 +40,7 @@ HQNEWGDI:
 	AirstrikePower:
 		Icon: firestorm
 		ChargeInterval: 6250
-		SquadOffset	-236,236,0
+		SquadOffset:	-236,236,0
 		SquadSize: 3
 		QuantizedFacings: 8
 		Description: Pulverizing Fire Storm
@@ -87,9 +86,7 @@ ARMORYGDI:
 	Selectable:
 		Bounds: 48,58,0,0
 	SelectionDecorations:
-		VisualBounds: 48,58,0,0
 	WithSpriteBody:
-		PauseAnimationWhenDisabled: true
 	Health:
 		HP: 90000
 	RevealsShroud:
@@ -101,7 +98,7 @@ ARMORYGDI:
 	AirstrikePower:
 		Icon: firestorm
 		ChargeInterval: 6250
-		SquadOffset	-236,236,0
+		SquadOffset: -236,236,0
 		SquadSize: 3
 		QuantizedFacings: 8
 		Description: Pulverizing Fire Storm
@@ -167,7 +164,6 @@ NUK2NEW:
 	Selectable:
 		Bounds: 48,48,0,0
 	SelectionDecorations:
-		VisualBounds: 48,48,0,0
 	SpawnActorOnDeath@Farmer1:
 		Actor: e1new
 		Probability: 33
@@ -230,7 +226,6 @@ NUKXL:
 	Selectable:
 		Bounds: 72,58,0,-2
 	SelectionDecorations:
-		VisualBounds: 72,58,0,-2
 	SpawnActorOnDeath@Farmer1:
 		Actor: e1new
 		Probability: 33
@@ -293,7 +288,6 @@ NUKENEW:
 	Selectable:
 		Bounds: 48,49,0,-2
 	SelectionDecorations:
-		VisualBounds: 48,49,0,-2
 	SpawnActorOnDeath@Farmer1:
 		Actor: e1new
 		Probability: 33
@@ -348,7 +342,6 @@ ZEROPROC:
 	Selectable:
 		Bounds: 48,70,0,-8
 	SelectionDecorations:
-		VisualBounds: 48,70,0,-8
 	ThrowsShrapnel@LARGE:
 		Weapons: DebrUtility1, DebrUtility2, DebrUtility3
 		Pieces: 1, 2
@@ -389,7 +382,6 @@ ZEROPROC:
 	Selectable:
 		Bounds: 48,70,0,-10
 	SelectionDecorations:
-		VisualBounds: 48,70,0,-10
 BARRNEW:
 	Inherits: ^MWBaseBuilding
 	Inherits@Hitshape: ^2x2Shape
@@ -430,7 +422,6 @@ BARRNEW:
 	ProductionQueue@1:
 		Type: MInfantry.GDI
 		Group: Infantry
-		RequireOwner: false
 		LowPowerSlowdown: 3
 		Factions: gdi
 		ReadyAudio:
@@ -439,7 +430,6 @@ BARRNEW:
 	Selectable:
 		Bounds: 48,46,0,-2
 	SelectionDecorations:
-		VisualBounds: 48,46,0,-2
 	ThrowsShrapnel@LARGE:
 		Weapons: SDebrWeapon1, SDebrWeapon2, SDebrWeapon3
 		Pieces: 1, 2
@@ -488,7 +478,6 @@ STALL:
 		Type: MVehicle.GDI
 		Factions: gdi
 		Group: Vehicle
-		RequireOwner: false
 		LowPowerSlowdown: 3
 		ReadyAudio:
 	ProductionBar:
@@ -498,7 +487,6 @@ STALL:
 	Selectable:
 		Bounds: 72,62, 0, -6
 	SelectionDecorations:
-		VisualBounds: 72,62, 0, -6
 	SpawnActorOnDeath@Ross1:
 		Actor: emptyross
 		Probability: 33
@@ -562,7 +550,6 @@ CASTLE2:
 	Selectable:
 		Bounds: 72,84,0,-15
 	SelectionDecorations:
-		VisualBounds: 72,84,0,-15
 	ProvidesRadar:
 	SupportPowerChargeBar:
 	NukePower:
@@ -616,7 +603,6 @@ WORKSHOPGDI:
 	Selectable:
 		Bounds: 64,64,0,-14
 	SelectionDecorations:
-		VisualBounds: 64,64,0,-14
 	Health:
 		HP: 75000
 	RevealsShroud:
@@ -635,7 +621,6 @@ WORKSHOPGDI:
 		Type: MSiege.GDI
 		Group: Aircraft
 		Factions: gdi
-		RequireOwner: false
 		LowPowerSlowdown: 3
 	ProductionBar:
 	ProduceActorPower:

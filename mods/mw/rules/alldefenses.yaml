@@ -19,9 +19,6 @@ GTWNEW:
 		Dimensions: 1,1
 	Health:
 		HP: 40000
-		Shape: Rectangle
-			TopLeft: -456, -456
-			BottomRight: 456, 456
 	RevealsShroud:
 		Range: 7c0
 	WithBuildingBib:
@@ -42,7 +39,6 @@ GTWNEW:
 		Turret: primary
 	WithSpriteTurret@SPRITURRONE: 
 		Sequence: turretidle
-		AimSequence: turretanim
 		Turret: primary
 	Turreted@TURRONE:
 		Turret: primary
@@ -60,7 +56,6 @@ GTWNEW:
 		FireDelay: 12
 	WithSpriteTurret@SPRITURRTWO: 
 		Sequence: turretidle
-		AimSequence: turretanim
 		Turret: secondary
 	Turreted@TURRTWO:
 		Turret: secondary
@@ -71,7 +66,6 @@ GTWNEW:
 	Selectable:
 		Bounds: 24,48,0,-10
 	SelectionDecorations
-		VisualBounds: 22,48,0,-10
 	ThrowsShrapnel@SMALL:
 		Weapons: SmallWood1, SmallWood2, SmallWood3, LargeWood1
 		Pieces: 2, 3
@@ -102,9 +96,6 @@ SAMNEW:
 		Dimensions: 2,1
 	Health:
 		HP: 40000
-		Shape: Rectangle
-			TopLeft: -724,-656
-			BottomRight: 724, 412
 	RevealsShroud:
 		Range: 8c0
 	WithBuildingBib:
@@ -118,7 +109,6 @@ SAMNEW:
 		QuantizedFacings: 8
 	WithSpriteTurret@1: 
 		Sequence: turretidle
-		AimSequence: turretanim
 		Turret: primary
 	Turreted@1:
 		Turret: primary
@@ -127,7 +117,6 @@ SAMNEW:
 	Armor:
 		Type: Concrete 
 	SelectionDecorations:
-		VisualBounds: 50,50,0,-10
 	Selectable:
 		Bounds: 50,50,0,-10
 	PersonValued:
@@ -148,9 +137,6 @@ TRIBU:
 		Dimensions: 1,1
 	Health:
 		HP: 60000
-		Shape: Rectangle
-			TopLeft: -456, -656
-			BottomRight: 456, 456
 	Armor:
 		Type: Concrete
 	RevealsShroud:
@@ -165,14 +151,12 @@ TRIBU:
 	Selectable:
 		Bounds: 30,52,0,-12
 	SelectionDecorations:
-		VisualBounds: 30,52,0,-12 
 	RenderSprites:
 		Image: tribu
 		PlayerPalette: raplayer
 	BodyOrientation:
 		QuantizedFacings: 32
 	WithAttackAnimation:
-		AttackSequence: turretanim
 	WithEmbeddedTurretSpriteBody:
 	-WithSpriteBody:
 	AttackTurreted:
@@ -209,9 +193,6 @@ BATO:
 		Dimensions: 1,1
 	Health:
 		HP: 60000
-		Shape: Rectangle
-			TopLeft: -456, -412
-			BottomRight: 456, 524
 	RevealsShroud:
 		Range: 8c0
 	WithBuildingBib:
@@ -231,7 +212,6 @@ BATO:
 	Selectable:
 		Bounds: 30,40,0,-12
 	SelectionDecorations:
-		VisualBounds: 30,40,0,-12 
 	WithIdleOverlay:
 		Sequence: overlay
 	RenderSprites:
@@ -240,10 +220,8 @@ BATO:
 	BodyOrientation:
 		QuantizedFacings: 32
 	WithAttackAnimation@1:
-		AttackSequence: turretanim
 		Armament: primary
 	WithAttackAnimation@2:
-		AttackSequence: turretanim
 		Armament: secondary
 	WithEmbeddedTurretSpriteBody:
 	-WithSpriteBody:
@@ -305,7 +283,6 @@ GUNNEW:
 	Selectable:
 		Bounds: 25,25,0,0
 	SelectionDecorations:
-		VisualBounds: 25,25,0,0 
 	ThrowsShrapnel@SMALL:
 		Weapons: SmallStone1, SmallStone2, LargeStone1
 		Pieces: 2, 3
@@ -386,7 +363,6 @@ WDWLL:
 	Crushable:
 		CrushClasses: wall
 	Building:
-		Adjacent: 12
 		BuildSounds: shovel.aud
 #test
 CSTLGTEW:
@@ -398,7 +374,6 @@ CSTLGTEW:
 	RenderSprites:
 		PlayerPalette: raplayer
 	Gate:
-		Adjacent: 7
 	WithGateSpriteBody:
 		WallConnections: -1,0, 3,0
 		Type: concrete
@@ -412,9 +387,6 @@ CSTLGTEW:
 		Name: Castle Gate
 	Health:
 		HP: 350000
-		Shape: Rectangle
-			TopLeft: -1436,-412
-			BottomRight: 1436, 412
 	RevealsShroud:
 		Range: 5c0
 	WithBuildingBib:
@@ -425,7 +397,6 @@ CSTLGTEW:
 	Selectable:
 		Bounds: 72,48,0,-21
 	SelectionDecorations:
-		VisualBounds: 72,48,0,-21
 	ThrowsShrapnel@SMALL:
 		Weapons: SmallStone1, SmallStone2, LargeStone1
 		Pieces: 5, 7
@@ -433,7 +404,6 @@ CSTLGTEW:
 	Building:
 		Dimensions: 3,1
 		Footprint: xxx
-		Adjacent: 7
 	Targetable:
 		TargetTypes: Ground, Wall
 	EditorTilesetFilter:
@@ -446,16 +416,12 @@ CSTLGTNS:
 	RenderSprites:
 		PlayerPalette: raplayer
 	Gate:
-		Adjacent: 7
 	Valued:
 		Cost: 1500
 	Tooltip:
 		Name: Castle Gate
 	Health:
 		HP: 350000
-		Shape: Rectangle
-			TopLeft: -456,-1436
-			BottomRight: 456, 1436
 	RevealsShroud:
 		Range: 5c0
 	BodyOrientation:
@@ -469,9 +435,7 @@ CSTLGTNS:
 	Selectable:
 		Bounds: 28,94,3,-12
 	SelectionDecorations:
-		VisualBounds: 28,94,3,-12
 	Gate:
-		Adjacent: 7
 	WithGateSpriteBody:
 		WallConnections: 0,-1, 0,3
 		Type: concrete
@@ -484,7 +448,6 @@ CSTLGTNS:
 	Building:
 		Dimensions: 1,3
 		Footprint: x x x
-		Adjacent: 7
 	Targetable:
 		TargetTypes: Ground, Wall
 	EditorTilesetFilter:
@@ -522,9 +485,6 @@ SIEGETRIBU:
 		Dimensions: 1,1
 	Health:
 		HP: 40000
-		Shape: Rectangle
-			TopLeft: -456, -656
-			BottomRight: 456, 456
 	Armor:
 		Type: Concrete
 	RevealsShroud:
@@ -539,14 +499,12 @@ SIEGETRIBU:
 	Selectable:
 		Bounds: 30,52,0,-12
 	SelectionDecorations:
-		VisualBounds: 30,52,0,-12 
 	RenderSprites:
 		Image: sigtrib
 		PlayerPalette: raplayer
 	BodyOrientation:
 		QuantizedFacings: 32
 	WithAttackAnimation:
-		AttackSequence: turretanim
 	WithEmbeddedTurretSpriteBody:
 	-WithSpriteBody:
 	AttackTurreted:
@@ -602,7 +560,6 @@ SIEGETRIBU.scaff:
 	Selectable:
 		Bounds: 30,52,0,-12
 	SelectionDecorations:
-		VisualBounds: 30,52,0,-12 
 	WithSpriteBody:
 		RequiresCondition: inactive
 	DebugTransformOnCondition@Finsihed:

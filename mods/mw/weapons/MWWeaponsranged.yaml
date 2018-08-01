@@ -43,7 +43,6 @@ BowNArrow:
 		RangeLimit: 8c204
 		Arm: 0
 		Speed: 200
-		LaunchAngle: 46
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
 		Spread: 25
@@ -69,7 +68,6 @@ BowNArrowDUMMY:
 	InvalidTargets: Wall, Air
 	ValidTargets: Ground
 	Projectile: Bullet
-		RangeLimit: 9c204
 		LaunchAngle: 130
 		Speed: 250
 		Inaccuracy: 0c0
@@ -109,7 +107,6 @@ BowNArrowMarksman:
 		RangeLimit: 8c204
 		Arm: 0
 		Speed: 400
-		LaunchAngle: 50
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
 		Spread: 25
@@ -135,7 +132,6 @@ BowNArrowDUMMYMarksman:
 	InvalidTargets: Wall, Air
 	ValidTargets: Ground
 	Projectile: Bullet
-		RangeLimit: 9c204
 		LaunchAngle: 50
 		Speed: 350
 		Inaccuracy: 0c0
@@ -175,7 +171,6 @@ BowNArrowAir:
 		RangeLimit: 12c204
 		Arm: 0
 		Speed: 350
-		LaunchAngle: 46
 		Inaccuracy: 0c0
 		ContrailLength: 20
 		ContrailWidth: 10
@@ -212,7 +207,6 @@ BowNArrowAirMarksman:
 		RangeLimit: 12c204
 		Arm: 0
 		Speed: 450
-		LaunchAngle: 46
 		Inaccuracy: 0c0
 		ContrailLength: 20
 		ContrailWidth: 10
@@ -291,7 +285,6 @@ MageFireAir:
 		RangeLimit: 8c204
 		Arm: 0
 		Speed: 350
-		LaunchAngle: 46
 		Inaccuracy: 0c0
 		ContrailLength: 4
 		Image: flamespit
@@ -370,7 +363,6 @@ BowNArrowSiegeTower:
 		RangeLimit: 8c204
 		Arm: 0
 		Speed: 200
-		LaunchAngle: 46
 		Inaccuracy: 0c0
 	Warhead@1Dam: SpreadDamage
 		Spread: 141
@@ -400,7 +392,6 @@ BowNArrowSiegeTowerAIR:
 		RangeLimit: 15c0
 		Arm: 0
 		Speed: 250
-		LaunchAngle: 46
 		Inaccuracy: 0c0
 		ContrailLength: 20
 		ContrailWidth: 10
@@ -431,7 +422,6 @@ BowNArrowSiegeTowerDUMMY:
 	InvalidTargets: Wall, Air
 	ValidTargets: Ground
 	Projectile: Bullet
-		RangeLimit: 9c204
 		LaunchAngle: 130
 		Speed: 250
 		Inaccuracy: 0c0
@@ -472,7 +462,6 @@ SpearThrow:
 		RangeLimit: 5c204
 		Arm: 0
 		Speed: 200
-		LaunchAngle: 46
 		Inaccuracy: 0c0
 		ContrailLength: 10
 		ContrailWidth: 15
@@ -511,7 +500,6 @@ SpearThrowAir:
 		RangeLimit: 9c204
 		Arm: 0
 		Speed: 300
-		LaunchAngle: 46
 		Inaccuracy: 0c0
 		ContrailLength: 10
 		ContrailWidth: 15
@@ -635,7 +623,6 @@ OrniSpearThrow:
 		RangeLimit: 10c0
 		Arm: 0
 		Speed: 350
-		LaunchAngle: 46
 		Inaccuracy: 0c0
 		ContrailLength: 10
 		ContrailWidth: 15
@@ -671,7 +658,6 @@ WarkiteCrossbow:
 		RangeLimit: 8c204
 		Arm: 0
 		Speed: 350
-		LaunchAngle: 46
 		Inaccuracy: 0c0
 		ContrailLength: 20
 		ContrailWidth: 10
@@ -708,7 +694,6 @@ MammothDagger:
 		RangeLimit: 8c204
 		Arm: 0
 		Speed: 350
-		LaunchAngle: 46
 		Inaccuracy: 0c0
 		ContrailLength: 5
 		ContrailWidth: 20
@@ -745,7 +730,6 @@ DaggerMongol:
 		RangeLimit: 8c204
 		Arm: 0
 		Speed: 350
-		LaunchAngle: 46
 		Inaccuracy: 0c0
 		ContrailLength: 5
 		ContrailWidth: 20
@@ -835,7 +819,6 @@ Dagger:
 		RangeLimit: 8c204
 		Arm: 0
 		Speed: 250
-		LaunchAngle: 46
 		Inaccuracy: 0c0
 		ContrailLength: 5
 		ContrailWidth: 20
@@ -876,7 +859,6 @@ DaggerAir:
 		RangeLimit: 8c204
 		Arm: 0
 		Speed: 350
-		LaunchAngle: 46
 		Inaccuracy: 0c0
 		ContrailLength: 5
 		ContrailWidth: 20
@@ -913,7 +895,6 @@ DaggerSiegeTower:
 		RangeLimit: 8c204
 		Arm: 0
 		Speed: 350
-		LaunchAngle: 46
 		Inaccuracy: 0c0
 		ContrailLength: 5
 		ContrailWidth: 20
@@ -1043,7 +1024,6 @@ LongBowNArrowAir:
 		RangeLimit: 12c204
 		Arm: 0
 		Speed: 425
-		LaunchAngle: 46
 		Inaccuracy: 0c0
 		ContrailLength: 20
 		ContrailWidth: 10
@@ -1147,7 +1127,6 @@ DragonFireAir:
 		RangeLimit: 7c204
 		Arm: 0
 		Speed: 350
-		LaunchAngle: 46
 		Inaccuracy: 0c0
 		ContrailLength: 4
 		Image: flamespit
@@ -1188,7 +1167,6 @@ BowNArrowTower:
 		RangeLimit: 10c204
 		Arm: 0
 		Speed: 250
-		LaunchAngle: 46
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
 		Spread: 256
@@ -1214,7 +1192,6 @@ BowNArrowTowerDUMMY:
 	InvalidTargets: Wall, Air
 	ValidTargets: Ground
 	Projectile: Bullet
-		RangeLimit: 10c204
 		LaunchAngle: 130
 		Speed: 250
 		Inaccuracy: 0c0
@@ -1255,7 +1232,6 @@ BowNArrowTowerUnblock:
 		Arm: 0
 		Blockable: false
 		Speed: 200
-		LaunchAngle: 46
 		Inaccuracy: 0c0
 	Warhead@1Dam: SpreadDamage
 		Spread: 302
@@ -1281,7 +1257,6 @@ BowNArrowTowerUnblockDUMMY:
 	InvalidTargets: Wall, Air
 	ValidTargets: Ground
 	Projectile: Bullet
-		RangeLimit: 9c204
 		LaunchAngle: 130
 		Blockable: false
 		Speed: 250
@@ -1588,7 +1563,6 @@ StationBalistaAA:
 		RangeLimit: 14c204
 		Arm: 0
 		Speed: 350
-		LaunchAngle: 46
 		Inaccuracy: 0c0
 		ContrailLength: 4
 		Image: siegearrow
@@ -1624,7 +1598,6 @@ SamBallista:
 		RangeLimit: 14c204
 		Arm: 5
 		Speed: 350
-		LaunchAngle: 88
 		Inaccuracy: 0c0
 		ContrailLength: 4
 		Image: smbllbolt
@@ -1660,7 +1633,6 @@ KingCrossbow:
 		RangeLimit: 8c204
 		Arm: 0
 		Speed: 250
-		LaunchAngle: 46
 		Inaccuracy: 0c0
 		ContrailLength: 20
 		ContrailWidth: 10
@@ -1697,7 +1669,6 @@ KingCrossbowAir:
 		RangeLimit: 8c204
 		Arm: 0
 		Speed: 350
-		LaunchAngle: 46
 		Inaccuracy: 0c0
 		ContrailLength: 20
 		ContrailWidth: 10
@@ -1758,7 +1729,6 @@ Crossbow:
 		RangeLimit: 8c204
 		Arm: 0
 		Speed: 350
-		LaunchAngle: 46
 		Inaccuracy: 0c0
 		ContrailLength: 20
 		ContrailWidth: 10
@@ -1795,7 +1765,6 @@ CrossbowAir:
 		RangeLimit: 8c204
 		Arm: 0
 		Speed: 350
-		LaunchAngle: 46
 		Inaccuracy: 0c0
 		ContrailLength: 20
 		ContrailWidth: 10
@@ -1831,7 +1800,6 @@ CrossbowSiegeTower:
 		RangeLimit: 8c204
 		Arm: 0
 		Speed: 350
-		LaunchAngle: 46
 		Inaccuracy: 0c0
 		ContrailLength: 20
 		ContrailWidth: 10
@@ -1869,7 +1837,6 @@ BallonCrossbow:
 		RangeLimit: 8c204
 		Arm: 0
 		Speed: 350
-		LaunchAngle: 46
 		Inaccuracy: 0c0
 		ContrailLength: 20
 		ContrailWidth: 10

@@ -34,7 +34,6 @@ SULB0:
 	Selectable:
 		Bounds: 26,26,0,-13
 	SelectionDecorations:
-		VisualBounds: 26,26,0,-13
 	Targetable:
 		TargetTypes: Ground, Cavalry
 	AttackTurreted:
@@ -44,11 +43,9 @@ SULB0:
 		UseDeathTypeSuffix: False
 	WithSpriteTurret@1: 
 		Sequence: turretidle
-		AimSequence: turretanim
 		Turret: primary
 	WithSpriteTurret@2: 
 		Sequence: turretidle
-		AimSequence: turretanim
 		Turret: secondary
 	Turreted@1:
 		Turret: primary
@@ -130,10 +127,6 @@ SULB1:
 		Speed: 60
 	Health:
 		HP: 9000
-		Shape: Capsule
-			Radius: 526
-			PointA: 0, -412
-			PointB: 0, 212
 	Armament:
 		Weapon: DualSiegeBalista
 		LocalOffset: 712,0,100
@@ -196,10 +189,6 @@ SULB2:
 		Speed: 45
 	Health:
 		HP: 14000
-		Shape: Capsule
-			Radius: 526
-			PointA: 0, -412
-			PointB: 0, 212
 	Armament@1:
 		Weapon: MortarBoulder
 		LocalOffset: 612,0,600
@@ -290,8 +279,6 @@ PLACEHOLDERBOLTS:
 		Type: Heavy
 	AttackBomber:
 		Armaments: gun, bombs
-		Guns: gun
-		Bombs: bombs
 	Armament@GUNS:
 		Name: gun
 		Weapon: SpearBarrage
@@ -338,12 +325,9 @@ SULM3:
 		PlayerPalette: raplayer
 	AutoTarget:
 	WithAttackAnimation:
-		AttackSequence: attack
 	WithMoveAnimation: 
 		MoveSequence: run
 	SelectionDecorations:
-		VisualBounds: 24,24
-		DecorationBounds: 24,24
 	SpawnActorOnDeath@1:
 		Actor: SULM3.Husk
 	SpawnActorOnDeath@2:
@@ -476,11 +460,9 @@ SULB3:
 		PlayerPalette: raplayer
 	AutoTarget:
 	WithAttackAnimation:
-		AttackSequence: attack
 	WithMoveAnimation: 
 		MoveSequence: move
 	SelectionDecorations:
-		VisualBounds: 40,40,0,0
 	Selectable:
 		Bounds:40,40,0,0
 	SpawnActorOnDeath@1:
@@ -554,7 +536,6 @@ SULTURNXL:
 	Selectable:
 		Bounds: 72,106,0,-58
 	SelectionDecorations:
-		VisualBounds: 72,106,0,-58
 		RenderSelectionBars: False
 	WithDeathAnimation:
 		DeathSequencePalette: raplayer

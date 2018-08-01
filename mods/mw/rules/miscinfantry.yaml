@@ -168,7 +168,6 @@ E8FARMER:
 		Bounds: 14,26,0,-6
 		Priority: 7
 	SelectionDecorations:
-		VisualBounds: 14,26,0,-6 
 	-Crushable:
 	PersonValued:
 		ActorCount: 1
@@ -235,7 +234,6 @@ BUMMLER:
 		Bounds: 14,26,0,-6
 		Priority: 7
 	SelectionDecorations:
-		VisualBounds: 14,26,0,-6 
 	PersonValued:
 		ActorCount: 1
 		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
@@ -257,7 +255,6 @@ SIEGERUNNER:
 		HP: 5000
 	AttackFrontal:
 	RenderSprites:
-		RenderSprites:
 		FactionImages:
 			nod: baumei
 			gdi: baumei
@@ -542,7 +539,6 @@ MWCIVCOM:
 	AttackFrontal:
 		RequiresCondition: Wander || !Wander
 	AttackMove:
-		RequiresCondition: Wander || !Wander
 	Health:
 		HP: 30000
 	Armor:
@@ -681,20 +677,17 @@ MWLUMBERER:
 	Armament@Huntdeer:
 		Weapon: LumberJackAxe
 		Name: primary
-		IgnoresVisibility: true
 		RequiresCondition: (FullFood) == 0
 		TargetStances: Ally, Neutral
 	Armament@GatherDeer:
 		Weapon: LumbererGather
 		Name: primary
 		TargetStances: Ally, Neutral
-		IgnoresVisibility: true
 		RequiresCondition: !FullFood
 	Armament@Unload:
 		Weapon: LumberGrantLootAttack
 		Name: tairt
 		TargetStances: Ally, Neutral
-		IgnoresVisibility: true
 		RequiresCondition: !NoFood
 	CashTrickler@LotDeer:
 		Interval: 25
@@ -769,20 +762,17 @@ MWLUMBEREROWNED:
 	Armament@Huntdeer:
 		Weapon: LumberJackAxe
 		Name: primary
-		IgnoresVisibility: true
 		RequiresCondition: (FullFood + LootingDeer) == 0
 		TargetStances: Ally, Neutral
 	Armament@GatherDeer:
 		Weapon: LumbererGather
 		Name: primary
 		TargetStances: Ally, Neutral
-		IgnoresVisibility: true
 		RequiresCondition: !FullFood
 	Armament@Unload:
 		Weapon: LumberGrantLootPlayer
 		Name: tairt
 		TargetStances: Ally, Neutral
-		IgnoresVisibility: true
 		RequiresCondition: !NoFood
 	CashTrickler@LotDeer:
 		Interval: 25
@@ -862,24 +852,20 @@ HUNTER:
 	Armament@Huntdeer:
 		Weapon: BowNArrowHunter
 		Name: primary
-		IgnoresVisibility: true
 		RequiresCondition: (FullFood + LootingDeer) == 0
 	Armament@HuntdeerDummy:
 		Weapon: BowNArrowHunterDUMMY
 		Name: secondary
-		IgnoresVisibility: true
 		RequiresCondition: (FullFood + LootingDeer) == 0
 	Armament@GatherDeer:
 		Weapon: HunterGather
 		Name: primary
 		TargetStances: Ally, Neutral
-		IgnoresVisibility: true
 		RequiresCondition: !FullFood
 	Armament@Unload:
 		Weapon: HunterUnload
 		Name: tairt
 		TargetStances: Ally, Neutral
-		IgnoresVisibility: true
 		RequiresCondition: !NoFood
 	CashTrickler@LotDeer:
 		Interval: 25

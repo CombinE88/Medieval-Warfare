@@ -11,7 +11,6 @@ HoodArrow:
 		RangeLimit: 12c204
 		Arm: 0
 		Speed: 290
-		LaunchAngle: 55
 		Palette: ra
 		Inaccuracy: 0c0
 	Warhead@1Dam: SpreadDamage
@@ -38,7 +37,6 @@ HoodArrowDUMMY:
 	InvalidTargets: Wall, Air, Structure
 	ValidTargets: Ground
 	Projectile: Bullet
-		RangeLimit:  12c204
 		LaunchAngle: 80
 		Speed: 340
 		Inaccuracy: 0c0
@@ -77,7 +75,6 @@ HoodArrowAir:
 		RangeLimit: 14c204
 		Arm: 0
 		Speed: 400
-		LaunchAngle: 46
 		Inaccuracy: 0c0
 		ContrailLength: 20
 		ContrailWidth: 10

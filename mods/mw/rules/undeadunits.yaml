@@ -51,7 +51,6 @@ PREYCOLYTE:
 	DockClient:
 	AcolytePrey: 
 		TargetActors: split3, split4, split4b, split2, splitblue, split5, splitdead, split7, split8
-		PreyLoopSequence: prey
 		Leechinterval: 45 
 		SelfEnabledCondition: whisper
 		Voice: Harvest
@@ -68,9 +67,7 @@ PREYCOLYTE:
 			Goods: NONE
 	AcolytePreyBuild: 
 		TargetActors: crypt.penta, sppool.penta, mauso.penta, hellgate.penta, tomb.penta, libra.penta, obelisk.penta, garg.penta
-		PreyLoopSequence: prey
 		Buildinterval: 18
-		Buildpower: 1
 		SelfEnabledCondition: whisper
 		Voice: Build
 	AmbientSound:
@@ -126,7 +123,6 @@ DEADROSS:
 	Selectable:
 		Bounds: 26,34,0,-6
 	SelectionDecorations:
-		VisualBounds: 26,34,0,-6
 	WithMakeAnimation:
 		Condition: makeanim
 		Sequence: make
@@ -344,7 +340,6 @@ UNDEAD6:
 	Selectable:
 		Bounds: 14,24,0,-12
 	SelectionDecorations:
-		VisualBounds: 14,24,0,-12
 	Buildable:
 		IconPalette: raicon
 		BuildPaletteOrder: 10
@@ -386,7 +381,6 @@ UNDEAD6DEPLOYED:
 	Selectable:
 		Bounds: 24,24,0,-6
 	SelectionDecorations:
-		VisualBounds: 24,24,0,-6
 	PersonValued:
 		ActorCount: 3
 	Targetable@CombatRole:
@@ -449,7 +443,6 @@ UNDEAD7:
 	Selectable:
 		Bounds: 14,24,0,-12
 	SelectionDecorations:
-		VisualBounds: 14,24,0,-12
 	Buildable:
 		IconPalette: raicon
 		BuildPaletteOrder: 20
@@ -482,10 +475,10 @@ GRIM:
 		Weapon: GrimSkytheThrow
 		LocalOffset: 141,75,352
 		FireDelay: 5
-		name: primary
+		Name: primary
 	Armament@Reap:
 		Weapon: GrimReaper
-		name: primary
+		Name: primary
 		TargetStances: Enemy, Neutral, Ally
 	AttackFrontal:
 		Armaments: primary
@@ -646,7 +639,6 @@ VAMPFLYING:
 	WithFacingSpriteBody:
 		Sequence: stand-flying
 	WithAttackAnimation: 
-		AttackSequence: attackair
 	Valued:
 		Cost: 750
 	Tooltip:
@@ -684,7 +676,6 @@ VAMPFLYING:
 		PlayerPalette: raplayer
 	AutoTarget:
 	SelectionDecorations:
-		VisualBounds: 28,28,0,-12
 	Selectable:
 		Bounds: 28,28,0,-12
 	SpawnActorOnDeath@1:
@@ -770,7 +761,6 @@ DEMONHORSE:
 	Selectable:
 		Bounds: 26,34,0,-6
 	SelectionDecorations:
-		VisualBounds: 26,34,0,-6
 	Targetable@CombatRole:
 		TargetTypes: RegularCavalry
 	AutoTargetPriority@Counter1:
@@ -844,7 +834,6 @@ LICHK:
 	Selectable:
 		Bounds: 26,30,0,-5
 	SelectionDecorations:
-		VisualBounds: 26,30,0,-5
 	Targetable@CombatRole:
 		TargetTypes: Spectral
 PLACEHOLDERHANDATTACK:
@@ -871,8 +860,6 @@ PLACEHOLDERHANDATTACK:
 		Type: Heavy
 	AttackBomber:
 		Armaments: gun, bombs
-		Guns: gun
-		Bombs: bombs
 	Armament@GUNS:
 		Name: gun
 		Weapon: FromBelow
@@ -906,10 +893,8 @@ PLACEHOLDERCOFFIN:
 		Type: Heavy
 	AttackBomber:
 		Armaments: bombs
-		Bombs: bombs
 	WithMuzzleOverlay:
 	Armament@BOMBS:
-		AmmoPoolName: bombs
 		Name: bombs
 		Weapon: CoffinAmbush
 		LocalOffset: 0,0,-43, 0,100,-43, 0,100,-43
@@ -1186,31 +1171,26 @@ SPLITDEAD:
 		WOffset: 383,170,0
 		DockAngle: 32
 		IsDragRequired: false
-		FaceTowardsCenter: true
 	Dock@right: 
 		DockOffset: 2,0
 		WOffset: 425,0,0
 		DockAngle: 223
 		IsDragRequired: false
-		FaceTowardsCenter: true
 	Dock@down: 
 		DockOffset: 0,2
 		WOffset: 340,-170,0
 		DockAngle: 159
 		IsDragRequired: false
-		FaceTowardsCenter: true
 	Dock@leftdown: 
 		DockOffset: -2,2
 		WOffset: -425,-510,0
 		DockAngle: 96
 		IsDragRequired: false
-		FaceTowardsCenter: true
 	Dock@leftup: 
 		DockOffset: -2,-2
 		WOffset: -425,510,0
 		DockAngle: 96
 		IsDragRequired: false
-		FaceTowardsCenter: true
 	#AutoSelectionSize:
 	InvisibleToLiving:
 		Factions: Undead
@@ -1432,7 +1412,6 @@ SOUL:
 		Percentage: 100
 	Valued:
 		Cost: 127
-		DeathTypes: DefaultDeath
 	Aircraft:
 		LandWhenIdle: false
 		CanHover: True

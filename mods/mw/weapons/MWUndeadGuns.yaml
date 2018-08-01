@@ -136,7 +136,6 @@ SkeletonBowNArrow:
 		RangeLimit: 8c204
 		Arm: 0
 		Speed: 200
-		LaunchAngle: 46
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
 		Spread: 25
@@ -162,7 +161,6 @@ SkeletonBowNArrowDUMMY:
 	InvalidTargets: Wall, Air
 	ValidTargets: Ground
 	Projectile: Bullet
-		RangeLimit: 9c204
 		LaunchAngle: 130
 		Speed: 250
 		Inaccuracy: 0c0
@@ -201,7 +199,6 @@ SkeletonBowNArrowAir:
 		RangeLimit: 12c204
 		Arm: 0
 		Speed: 350
-		LaunchAngle: 46
 		Inaccuracy: 0c0
 		ContrailLength: 20
 		ContrailWidth: 10
@@ -234,7 +231,6 @@ SkeletonRock:
 	TargetActorCenter: true
 	ValidTargets: Ground
 	Projectile: Bullet
-		RangeLimit: 9c204
 		LaunchAngle: 180
 		Speed: 150
 		Inaccuracy: 0c0
@@ -621,7 +617,6 @@ BackFlyingBlood:
 		RangeLimit: 15c204
 		Arm: 0
 		Speed: 150
-		LaunchAngle: 46
 		Inaccuracy: 0c0
 		Image: bloodparticle
 		Palette: vamprojalpha

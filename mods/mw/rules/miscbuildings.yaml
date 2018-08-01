@@ -66,7 +66,6 @@ FACTNEW:
 	Selectable:
 		Bounds:72,72,0,-7
 	SelectionDecorations:
-		VisualBounds:72,72,0,-7
 	Exit@1:
 		SpawnOffset: -426,85,0
 		ExitCell: 0,1
@@ -319,7 +318,6 @@ MINIFACT:
 	Selectable:
 		Bounds:72,56,0,0
 	SelectionDecorations:
-		VisualBounds: 72,56,0,0
 	Exit@1:
 		SpawnOffset: -426,85,0
 		ExitCell: 0,1
@@ -561,7 +559,6 @@ PROCNEW:
 	Selectable:
 		Bounds: 72,56,0,-2
 	SelectionDecorations:
-		VisualBounds: 72,56,0,-2
 	CustomSellValue:
 		Value: 500
 	FreeActor@1:
@@ -612,7 +609,6 @@ SILONEW:
 	MustBeDestroyed:
 		RequiredForShortGame: false
 	SelectionDecorations:
-		VisualBounds: 50,50,0,2 
 	Selectable:
 		Bounds: 50,50,0,2
 SILOTWO:
@@ -652,7 +648,6 @@ SILOTWO:
 	MustBeDestroyed:
 		RequiredForShortGame: false
 	SelectionDecorations:
-		VisualBounds: 50,50,0,-4 
 	Selectable:
 		Bounds: 50,50,0,-4 
 HOSP: 
@@ -683,7 +678,6 @@ HOSP:
 	ProductionQueue:
 		Type: MHosp.Medi
 		Group: none
-		RequireOwner: false
 		LowPowerSlowdown: 3
 	ProduceActorPower:
 		Icon: ddicon
@@ -731,7 +725,6 @@ HOSP.Husk:
 		ForceHealthPercentage: 25
 		IntoActor: hosp
 	Capturable:
-		AllowAllies: True
 		CaptureThreshold: 101
 	CaptureNotification:
 		Notification: CivilianBuildingCaptured
@@ -764,12 +757,10 @@ V19.Husk:
 	-Selectable:
 	Interactable:
 	Capturable:
-		AllowAllies: True
 	CaptureNotification:
 		Notification: CivilianBuildingCaptured
 	TransformOnCapture:
 		IntoActor: v19
-		CaptureThreshold: 101
 		ForceHealthPercentage: 25
 	RenderSprites:
 		Image: V19new.husk
@@ -871,7 +862,6 @@ TECH1.Husk:
 		ForceHealthPercentage: 25
 		IntoActor: tech1
 	Capturable:
-		AllowAllies: True
 		CaptureThreshold: 101
 	CaptureNotification:
 		Notification: CivilianBuildingCaptured
@@ -885,55 +875,46 @@ ANYARMORY:
 	Interactable:
 	Tooltip:
 		Name: Armory or Tower of Progress
-		Description: Armory or Tower of Progress
 ANYREFINERY:
 	AlwaysVisible:
 	Interactable:
 	Tooltip:
 		Name: Ore refinery
-		Description: Ore refinery 
 BARRACKS:
 	AlwaysVisible:
 	Interactable:
 	Tooltip:
 		Name: Infantry Production
-		Description: Infantry Production
 ANYWORKSHOP:
 	AlwaysVisible:
 	Interactable:
 	Tooltip:
 		Name: Workshop
-		Description: Siege Production
 VEHICLEPRODUCTION:
 	AlwaysVisible:
 	Interactable:
 	Tooltip:
 		Name: Stables or School
-		Description: Stables or School
 ANYPOWER:
 	AlwaysVisible:
 	Interactable:
 	Tooltip:
 		Name: Living Quaters
-		Description: Living Quarters
 ANYHQ:
 	AlwaysVisible:
 	Interactable:
 	Tooltip:
 		Name: Inventor, Armory, Castle or Palace
-		Description: Inventor, Armory, Castle or Palace
 ANYCASTLE:
 	AlwaysVisible:
 	Interactable:
 	Tooltip:
 		Name: Castle
-		Description: Castle
 SCAFFOLD:
 	AlwaysVisible:
 	Interactable:
 	Tooltip:
 		Name: saffold
-		Description: scaffold
 	ProvidesPrerequisite@buildingname:
 DECOR1:
  	Inherits: ^CivBuilding
@@ -1109,7 +1090,6 @@ LODGE:
 	Selectable:
 		Bounds: 48,55,0,-14
 	SelectionDecorations:
-		VisualBounds: 48,55,0,-14
 	WithFreeSpawnableActor@Lumber:
 		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 		SpawnActor: hunter

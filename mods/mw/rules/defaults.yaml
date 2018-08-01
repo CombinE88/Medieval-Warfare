@@ -632,7 +632,6 @@
 		RequiresForceFire: yes
 		TargetTypes: Ground, Husk
 	Capturable:
-		Type: husk
 		CaptureThreshold: 100
 	WithColoredOverlay@IDISABLE:
 		Palette: disabled
@@ -831,8 +830,6 @@
 	WithGateSpriteBody:
 		OpenSequence: open
 	Gate:
-		Adjacent: 7
-		TerrainTypes: Clear, Rough, Road
 		BlocksProjectilesHeight: 640
 	HitShape:
 	EditorTilesetFilter:
@@ -971,7 +968,7 @@
 	AttackMove:
 	DrawLineToTarget:
 	HiddenUnderFog:
-		CrushSound: squish2.aud
+    
 	Guardable:
 	DeathSounds@NORMAL:
 		DeathTypes: DefaultDeath
@@ -1014,7 +1011,6 @@
 		StandSequences: stand
 	Passenger:
 		CargoType: Infantry
-		GrantUpgrades: batteringupgrade
 	Voiced:
 		VoiceSet: GenericVoice
 	Explodes@Tib:
@@ -1092,9 +1088,7 @@
 		StandSequences: stand
 	Selectable:
 		Bounds: 26,34,0,-6
-		DecorationBounds: 26,34,0,-6
 	SelectionDecorations:
-		VisualBounds: 26,34,0,-6
 	SpawnActorOnDeath@1:
 		DeathType: DefaultDeath
 		Probability: 10
@@ -1169,7 +1163,6 @@
 ^Siege:
 	Inherits: ^MedievalInfantry
 	Mobile:
-		SharesCell: false
 	Targetable:
 		TargetTypes: Ground, Siege, Disguise
 	MustBeDestroyed:
@@ -1187,7 +1180,6 @@
 		StandSequences: stand
 	Selectable:
 		Bounds: 35,35,0,-6 
-		DecorationBounds: 35,35,0,-6 
 	Voiced:
 		VoiceSet: SiegeVoice
 	ThrowsShrapnel@SMALL:

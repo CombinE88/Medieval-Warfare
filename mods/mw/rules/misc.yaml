@@ -3,8 +3,8 @@ CRATE.plain:
 	ScriptTriggers:
 mpspawn:
 	EditorOnlyTooltip:
-	Interactable:
 		Name: (multiplayer player starting point)
+	Interactable:
 	AlwaysVisible:
 	Immobile:
 		OccupiesSpace: false

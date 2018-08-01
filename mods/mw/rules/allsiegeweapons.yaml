@@ -19,8 +19,6 @@ MCV2NEW:
 		RequiredForShortGame: true
 	BaseBuilding:
 	SelectionDecorations:
-		VisualBounds: 36,36
-		DecorationBounds: 36,36,0,0
 	SpawnActorOnDeath:
 		Actor: MCVNEW2.Husk 
 		OwnerType: InternalName
@@ -56,10 +54,6 @@ MCV2NEW:
 		Queue: MSiege.GDI, MSiege.Nod, MSiege.SUL
 	Health:
 		HP: 120000
-		Shape: Capsule
-			Radius: 426
-			PointA: 0, -612
-			PointB: 0, 512
 	PersonValued:
 		ActorCount: 3
 		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
@@ -86,7 +80,6 @@ MOBTRIB:
 	BaseBuilding:
 	Selectable:
 		Bounds: 35,35,0,-6
-		DecorationBounds: 35,35,0,-6
 	Voiced:
 		VoiceSet: CivilianFemaleVoice
 	Targetable:
@@ -113,10 +106,6 @@ MOBTRIB:
 		Prerequisites: anycastle
 	Health:
 		HP: 20000
-		Shape: Capsule
-			Radius: 426
-			PointA: 0, -612
-			PointB: 0, 512
 	PersonValued:
 		ActorCount: 3
 		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
@@ -148,10 +137,6 @@ SIEGE1:
 		Speed: 60
 	Health:
 		HP: 10000
-		Shape: Capsule
-			Radius: 526
-			PointA: 0, -412
-			PointB: 0, 212
 	Armament:
 		Weapon: siegebalista
 		LocalOffset: 712,0,100
@@ -168,7 +153,6 @@ SIEGE1:
 		Type: LightCavalry
 	Selectable:
 		Bounds: 35,35,0,-6
-		DecorationBounds: 35,35,0,-6
 	Targetable:
 		TargetTypes: Ground, Siege
 	SpawnActorOnDeath:
@@ -209,10 +193,6 @@ SIEGE2:
 		TurnSpeed: 4
 	Health:
 		HP: 12000
-		Shape: Capsule
-			Radius: 526
-			PointA: 0, -412
-			PointB: 0, 212
 	Armament:
 		LocalOffset: 0,0,500
 		Weapon: siegeboulder
@@ -238,7 +218,6 @@ SIEGE2:
 		Type: LightCavalry
 	Selectable:
 		Bounds: 35,35,0,-6
-		DecorationBounds:  35,35,0,-6
 	Targetable:
 		TargetTypes: Ground, Siege
 	SpawnActorOnDeath:
@@ -285,9 +264,6 @@ SIEGE3:
 		Locomotor: heavysiege
 	Health:
 		HP: 100000
-		Shape: Rectangle
-			TopLeft: -512, -512
-			BottomRight: 512, 512
 	WithRoof:
 		Sequence: top
 	RenderSprites:
@@ -305,7 +281,6 @@ SIEGE3:
 	Selectable:
 		Bounds: 42,62,0,-12
 	SelectionDecorations:
-		VisualBounds: 42,62,0,-12
 	Targetable:
 		TargetTypes: Ground, Siege
 	SpawnActorOnDeath:
@@ -319,15 +294,12 @@ SIEGE3:
 	AttackTurreted:
 	WithSpriteTurret@1: 
 		Sequence: turretidle
-		AimSequence: turretanim
 		Turret: primary
 	WithSpriteTurret@2: 
 		Sequence: turretidle
-		AimSequence: turretanim
 		Turret: secondary
 	WithSpriteTurret@3: 
 		Sequence: turretidle
-		AimSequence: turretanim
 		Turret: tritiary
 	Turreted@1:
 		Turret: primary
@@ -419,9 +391,6 @@ SIEGE4:
 		Locomotor: heavysiege
 	Health:
 		HP: 150000
-		Shape: Rectangle
-			TopLeft: -412, -412
-			BottomRight: 412, 712
 	RenderSprites:
 		Image: bara
 		PlayerPalette: raplayer
@@ -434,7 +403,6 @@ SIEGE4:
 	Selectable:
 		Bounds: 42,38,0,-8
 	SelectionDecorations:
-		VisualBounds: 42,38,0,-8
 	AttackFrontal:
 	Targetable:
 		TargetTypes: Ground, Siege
@@ -581,7 +549,6 @@ EHARVXL:
 		Bounds: 30,30,0,-5
 		Priority: 7
 	SelectionDecorations:
-		VisualBounds: 30,30,0,-5
 	PersonValued:
 		ActorCount: 1
 		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
@@ -600,9 +567,6 @@ SIEGE99:
 		Name: Wooden Horse
 	Health:
 		HP: 70000
-		Shape: Rectangle
-			TopLeft: -265,-265
-			BottomRight: 265, 265
 	AttackFrontal:
 	RenderSprites:
 		Image: newhorse
@@ -616,7 +580,6 @@ SIEGE99:
 	Selectable:
 		Bounds: 42,42,0,0
 	SelectionDecorations:
-		VisualBounds: 42,42,0,0
 	Targetable:
 		TargetTypes: Ground, Siege
 	Cargo:

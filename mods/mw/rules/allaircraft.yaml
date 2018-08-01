@@ -47,7 +47,6 @@ ORNI:
 		Armaments: primary
 		PipCount: 6
 		ReloadCount: 2
-		SelfReloadDelay: 125
 		AmmoCondition: ammo
 	ReloadAmmoPool:
 		AmmoPool: primary
@@ -58,12 +57,9 @@ ORNI:
 	SpawnActorOnDeath:
 		Actor: ORNI.Husk
 	AutoTarget:
-		TargetWhenIdle: false
-		TargetWhenDamaged: false
 		EnableStances: false
 	ReturnOnIdle:
 	SelectionDecorations:
-		VisualBounds: 48,32
 	Voiced:
 		VoiceSet: VehicleVoice
 	SmokeTrailWhenDamaged:
@@ -121,7 +117,6 @@ WARKITE:
 		Armaments: primary
 		PipCount: 5
 		ReloadCount: 10
-		SelfReloadDelay: 200
 		AmmoCondition: ammo
 	ReloadAmmoPool:
 		AmmoPool: primary
@@ -129,7 +124,6 @@ WARKITE:
 		Count: 10
 	AutoTarget:
 	WithAttackAnimation:
-		AttackSequence: attack
 	Voiced:
 		VoiceSet: VehicleVoice
 	SpawnActorOnDeath@1:
@@ -145,7 +139,6 @@ WARKITE:
 		ValidTargets: Light, Heavy, Ranged, Support, Flying, LightCavalry
 		Priority: 4
 	SelectionDecorations:
-		VisualBounds: 26,26,0,-5
 	Selectable:
 		Bounds:26,26,0,-5
 DRGNRDR:
@@ -213,7 +206,6 @@ DRGNRDR:
 		RequiresCondition: !valida
 	AutoTarget:
 	SelectionDecorations:
-		VisualBounds: 40,40,0,0
 	Selectable:
 		Bounds:40,40,0,0
 	Explodes:
@@ -320,7 +312,6 @@ DAVINCI:
 		Weapon: thopterbomb
 		LocalOffset: 1024,0,-213
 	SelectionDecorations:
-		VisualBounds: 40,36,0,-4
 	Selectable:
 		Bounds:40,36,0,-4
 	AttackHeli:
@@ -399,9 +390,7 @@ WRBLN:
 		Weapon: Balloonpop
 		EmptyWeapon: Balloonpop
 	WithAttackAnimation:
-		AttackSequence: attack
 	SelectionDecorations:
-		VisualBounds: 40,52,0,-24
 	Selectable:
 		Bounds:40,52,0,-24
 	Voiced:
@@ -436,8 +425,6 @@ PLACEHOLDERPLANE:
 		Type: Heavy
 	AttackBomber:
 		Armaments: gun, bombs
-		Guns: gun
-		Bombs: bombs
 	Armament@GUNS:
 		Name: gun
 		Weapon: rottenkadaver
@@ -469,8 +456,6 @@ PLACEHOLDERFLAMESTRIKE:
 		Type: Heavy
 	AttackBomber:
 		Armaments: gun, bombs
-		Guns: gun
-		Bombs: bombs
 	Armament@GUNS:
 		Name: gun
 		Weapon: firebarrage

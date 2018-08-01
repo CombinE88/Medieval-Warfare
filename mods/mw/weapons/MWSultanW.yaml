@@ -370,9 +370,6 @@ SuperSiegeBallista:
 	ValidTargets: Ground
 	InvalidTargets: Air
 	Projectile: Bullet
-		HorizontalRateOfTurn: 60
-		RangeLimit: 14c204
-		Arm: 5
 		Speed: 250
 		LaunchAngle: 140
 		Inaccuracy: 3c012
@@ -611,7 +608,6 @@ SnakesSmall:
 		RangeLimit: 8c0
 		Arm: 0
 		Speed: 100
-		LaunchAngle: 46
 		Inaccuracy: 0c0
 		Image: snakemissil
 		Palette: ra
@@ -681,7 +677,6 @@ BedouinBow:
 		RangeLimit: 10c204
 		Arm: 0
 		Speed: 200
-		LaunchAngle: 46
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
 		Spread: 25
@@ -707,7 +702,6 @@ BedouinBowDUMMY:
 	InvalidTargets: Wall, Air
 	ValidTargets: Ground
 	Projectile: Bullet
-		RangeLimit: 9c204
 		LaunchAngle: 130
 		Speed: 250
 		Inaccuracy: 0c0
@@ -746,7 +740,6 @@ BedouinBowAir:
 		RangeLimit: 10c204
 		Arm: 0
 		Speed: 350
-		LaunchAngle: 46
 		Inaccuracy: 0c0
 		ContrailLength: 20
 		ContrailWidth: 10
@@ -783,7 +776,6 @@ BedouinBowTowerUnblock:
 		Arm: 0
 		Blockable: false
 		Speed: 200
-		LaunchAngle: 46
 		Inaccuracy: 0c0
 	Warhead@1Dam: SpreadDamage
 		Spread: 302
@@ -809,7 +801,6 @@ BedouinBowTowerUnblockDUMMY:
 	InvalidTargets: Wall, Air
 	ValidTargets: Ground
 	Projectile: Bullet
-		RangeLimit: 9c204
 		LaunchAngle: 130
 		Blockable: false
 		Speed: 250
@@ -875,7 +866,6 @@ SulGTSpearThrow:
 		RangeLimit: 10c204
 		Arm: 0
 		Speed: 200
-		LaunchAngle: 46
 		Inaccuracy: 0c0
 		ContrailLength: 10
 		ContrailWidth: 15
@@ -915,7 +905,6 @@ SulGTSpearThrowAir:
 		RangeLimit: 13c204
 		Arm: 0
 		Speed: 300
-		LaunchAngle: 46
 		Inaccuracy: 0c0
 		ContrailLength: 10
 		ContrailWidth: 15

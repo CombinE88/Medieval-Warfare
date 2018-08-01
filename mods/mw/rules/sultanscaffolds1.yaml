@@ -27,7 +27,6 @@ SULNUKE.scaff:
 	Selectable:
 		Bounds: 48,40,0,-4
 	SelectionDecorations:
-		VisualBounds: 48,40,0,-4
 	WithSpriteBody:
 		RequiresCondition: inactive
 	DebugTransformOnCondition@Finsihed:
@@ -88,7 +87,6 @@ SULLODGE.scaff:
 		Description: A hunter will start searching for deer from this building aswell as a lumberer will gather wood.\nGood for early resource management\n\n
 		Queue: MResources.SUL
 		BuildDuration: 425
-		Adjacent: 10
 	Health:
 		HP: 10000
 	RevealsShroud:
@@ -97,7 +95,6 @@ SULLODGE.scaff:
 	Selectable:
 		Bounds: 48,52,0,-14
 	SelectionDecorations:
-		VisualBounds: 48,52,0,-14
 	WithSpriteBody:
 		RequiresCondition: inactive
 	DebugTransformOnCondition@Finsihed:
@@ -169,7 +166,6 @@ SULMILL.scaff:
 	Selectable:
 		Bounds: 48,76,0,-2
 	SelectionDecorations:
-		VisualBounds: 48,76,0,-2
 	WithSpriteBody:
 		RequiresCondition: inactive
 	DebugTransformOnCondition@Finsihed:
@@ -232,7 +228,6 @@ SULNUK2.scaff:
 	Selectable:
 		Bounds:72,60,0,-9
 	SelectionDecorations:
-		VisualBounds: 72,60,0,-9
 	WithSpriteBody:
 		RequiresCondition: inactive
 	DebugTransformOnCondition@Finsihed:
@@ -298,7 +293,6 @@ SULBARR.scaff:
 	Selectable:
 		Bounds:72,53,0,0
 	SelectionDecorations:
-		VisualBounds: 72,53,0,0
 	WithSpriteBody:
 		RequiresCondition: inactive
 	DebugTransformOnCondition@Finsihed:
@@ -365,7 +359,6 @@ SULMYSTIC.scaff:
 	Selectable:
 		Bounds:72,72,0,-12
 	SelectionDecorations:
-		VisualBounds: 72,72,0,-12
 	WithSpriteBody:
 		RequiresCondition: inactive
 	DebugTransformOnCondition@Finsihed:
@@ -435,7 +428,6 @@ SULCASTLE.scaff:
 	Selectable:
 		Bounds: 72,94,0,-30
 	SelectionDecorations:
-		VisualBounds: 72,94,0,-30
 	WithSpriteBody:
 		RequiresCondition: inactive
 	DebugTransformOnCondition@Finsihed:
@@ -501,7 +493,6 @@ SULFIX.scaff:
 	Selectable:
 		Bounds: 64,64,0,-14
 	SelectionDecorations:
-		VisualBounds: 64,64,0,-14
 	WithSpriteBody:
 		RequiresCondition: inactive
 	DebugTransformOnCondition@Finsihed:
@@ -557,7 +548,6 @@ SULGTW.scaff:
 	Selectable:
 		Bounds: 24,48,0,-10
 	SelectionDecorations
-		VisualBounds: 22,48,0,-10
 	WithSpriteBody:
 		RequiresCondition: inactive
 	Buildable:
@@ -625,7 +615,6 @@ SULARRAY.scaff:
 	Selectable:
 		Bounds: 72,72,0,-2
 	SelectionDecorations:
-		VisualBounds: 72,72,0,-2
 	WithSpriteBody:
 		RequiresCondition: inactive
 	DebugTransformOnCondition@Finsihed:
@@ -684,7 +673,6 @@ SULHALL.scaff:
 	Selectable:
 		Bounds: 72,80,0,-2
 	SelectionDecorations:
-		VisualBounds: 72,80,0,-2
 	WithSpriteBody:
 		RequiresCondition: inactive
 	DebugTransformOnCondition@Finsihed:
@@ -744,7 +732,6 @@ SULMINARET.scaff:
 	Selectable:
 		Bounds: 28,96,0,-40
 	SelectionDecorations:
-		VisualBounds: 28,96,0,-40
 	WithSpriteBody:
 		RequiresCondition: inactive
 	DebugTransformOnCondition@Finsihed:
@@ -811,7 +798,6 @@ SULCNSHMBR.scaff:
 	Selectable:
 		Bounds:72,60,0,-6
 	SelectionDecorations:
-		VisualBounds: 72,60,0,-6
 	WithSpriteBody:
 		RequiresCondition: inactive
 	DebugTransformOnCondition@Finsihed:
@@ -888,7 +874,6 @@ SULREF.scaff:
 	Selectable:
 		Bounds: 73,72,0,0
 	SelectionDecorations:
-		VisualBounds: 73,72,0,0
 	WithSpriteBody:
 		RequiresCondition: inactive
 	DebugTransformOnCondition@Finsihed:
@@ -947,13 +932,11 @@ CSTLWLLSUL.scaff:
 		Queue: Building4.SUL
 		IconPalette: raWall
 		BuildDurationModifier: 40
-		RequiresBaseProvider: false
 	-GivesBuildableArea:
 	Building:
 		Dimensions: 1,1
 		Footprint: x
 		BuildSounds: brickconc.aud
-		Adjacent: 7
 	Health:
 		HP: 32000
 	RevealsShroud:
@@ -963,7 +946,6 @@ CSTLWLLSUL.scaff:
 	Selectable:
 		Bounds: 24,48,0,-10
 	SelectionDecorations
-		VisualBounds: 22,48,0,-10
 	WithSpriteBody:
 		RequiresCondition: DoNotRender
 	DebugTransformOnCondition@Finsihed:

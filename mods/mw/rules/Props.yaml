@@ -173,7 +173,7 @@ ORNICRASH.Husk:
 		MinThrowRange: 0c512
 		MaxThrowRange: 2c512
 		MaxThrowAngle: 360
-		urnSpeed: 35
+		TurnSpeed: 35
 WARKITEMAN.Husk:
 	Inherits: ^HelicopterHusk
 	ConditionManager:
@@ -329,7 +329,6 @@ DRGNEMPTY:
 		Image: drgnempty
 		PlayerPalette: raplayer
 	SelectionDecorations:
-		VisualBounds: 48,32
 	Explodes:
 		Weapon: DragonFlame
 		EmptyWeapon: DragonFlame

@@ -57,12 +57,10 @@ SULGTW:
 		Range: 3c0
 	WithSpriteTurret@1: 
 		Sequence: turretidle
-		AimSequence: turretanim
 		Turret: primary
 		RequiresCondition: !static
 	WithSpriteTurret@2: 
 		Sequence: turretidle
-		AimSequence: turretanim
 		Turret: secondary
 		RequiresCondition: !static
 	Turreted@1:
@@ -78,7 +76,6 @@ SULGTW:
 	Selectable:
 		Bounds: 24,48,0,-10
 	SelectionDecorations
-		VisualBounds: 22,48,0,-10
 	ThrowsShrapnel@SMALL:
 		Weapons: SmallStone1, SmallStone2, LargeStone1
 		Pieces: 2, 3
@@ -94,24 +91,20 @@ SULGTW:
 		RequiresCondition: archers && Construct >= 20
 	WithSpriteTurret@1archers: 
 		Sequence: turretidle2
-		AimSequence: turretanim2
 		Turret: turr1
 		RequiresCondition: archers && Construct >= 20
 	WithSpriteTurret@2archers: 
 		Sequence: turretidle2
-		AimSequence: turretanim2
 		Turret: turr2
 		RequiresCondition: archers && Construct >= 20
 	Turreted@1archers:
 		Turret: turr1
 		TurnSpeed: 100
 		Offset: -170,-170,850
-		RequiresCondition: archers && Construct >= 20
 	Turreted@2archers:
 		Turret: turr2
 		TurnSpeed: 100
 		Offset: 170,170,850
-		RequiresCondition: archers && Construct >= 20
 	Armament@1archers:
 		Weapon: bownarrowtower
 		LocalOffset: 0,0,427
@@ -142,14 +135,12 @@ SULGTW:
 		RequiresCondition: djinn && Construct >= 50
 	WithSpriteTurret@djinn: 
 		Sequence: dturretidle
-		AimSequence: dturretanim
 		Turret: turr3
 		RequiresCondition: djinn && Construct >= 50
 	Turreted@djinn:
 		Turret: turr3
 		TurnSpeed: 100
 		Offset: 0,0,900
-		RequiresCondition: djinn && Construct >= 50
 	Armament@djinn:
 		Weapon: DjinElectroGround
 		LocalOffset: 141,75,352
@@ -385,7 +376,6 @@ SULLODGE:
 	Selectable:
 		Bounds: 48,52,0,-14
 	SelectionDecorations:
-		VisualBounds: 48,52,0,-14
 	WithFreeSpawnableActor@Hunter:
 		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 		SpawnActor: hunter
@@ -444,7 +434,6 @@ SULHALL:
 	Selectable:
 		Bounds: 72,80,0,-2
 	SelectionDecorations:
-		VisualBounds: 72,80,0,-2
 	ThrowsShrapnel@LARGE:
 		Weapons: LargeStone1, LargeStone1, LargeStone1, LargeStone1
 		Pieces: 1, 2
@@ -486,7 +475,6 @@ SULMINARET:
 	Selectable:
 		Bounds: 28,96,0,-40
 	SelectionDecorations:
-		VisualBounds: 28,96,0,-40
 	ThrowsShrapnel@LARGE:
 		Weapons: LargeStone1, LargeStone1, LargeStone1, LargeStone1
 		Pieces: 1, 2
@@ -522,7 +510,6 @@ SULARRAY:
 	Selectable:
 		Bounds: 72,72,0,-2
 	SelectionDecorations:
-		VisualBounds: 72,72,0,-2
 	ThrowsShrapnel@LARGE:
 		Weapons: LargeWood1, LargeWood1, LargeStone1, LargeStone1
 		Pieces: 1, 2
@@ -563,7 +550,6 @@ SULNUK2:
 	Selectable:
 		Bounds:72,60,0,-9
 	SelectionDecorations:
-		VisualBounds: 72,60,0,-9
 	SpawnActorOnDeath@Farmer1:
 		Actor: e1new
 		Probability: 33
@@ -626,7 +612,6 @@ SULNUKE:
 	Selectable:
 		Bounds: 48,40,0,-4
 	SelectionDecorations:
-		VisualBounds: 48,40,0,-4
 	SpawnActorOnDeath@Farmer1:
 		Actor: e1new
 		Probability: 33
@@ -687,7 +672,6 @@ SULBARR:
 	ProductionQueue@1:
 		Type: MInfantry.SUL
 		Group: Infantry
-		RequireOwner: false
 		LowPowerSlowdown: 3
 		Factions: sul
 		ReadyAudio:
@@ -696,7 +680,6 @@ SULBARR:
 	Selectable:
 		Bounds:72,53,0,0
 	SelectionDecorations:
-		VisualBounds: 72,53,0,0
 	ThrowsShrapnel@LARGE:
 		Weapons: SDebrWeapon1, SDebrWeapon2, SDebrWeapon3
 		Pieces: 1, 2
@@ -743,7 +726,6 @@ SULMYSTIC:
 	ProductionQueue@1:
 		Type: MVehicle.SUL
 		Group: Vehicle
-		RequireOwner: false
 		LowPowerSlowdown: 3
 		Factions: sul
 		ReadyAudio:
@@ -752,7 +734,6 @@ SULMYSTIC:
 	Selectable:
 		Bounds:72,72,0,-12
 	SelectionDecorations:
-		VisualBounds: 72,72,0,-12
 	ThrowsShrapnel@LARGE:
 		Weapons: SDebrWeapon1, SDebrWeapon2, SDebrWeapon3
 		Pieces: 1, 2
@@ -795,7 +776,6 @@ SULCASTLE:
 	Selectable:
 		Bounds: 72,94,0,-30
 	SelectionDecorations:
-		VisualBounds: 72,94,0,-30
 	ThrowsShrapnel@LARGE:
 		Weapons: LargeWood1, LargeWood1, LargeStone1, LargeStone1
 		Pieces: 1, 2
@@ -861,7 +841,7 @@ SULCASTLE:
 		RequiresCondition: Tower1build
 		Icon: sulspballiconsmall
 		ChargeInterval: 5250
-		SquadOffset	-236,236,0
+		SquadOffset:	-236,236,0
 		SquadSize: 3
 		QuantizedFacings: 8
 		Description: Pulverizing Spear Storm
@@ -902,7 +882,6 @@ SULCASTLE:
 		BeaconPoster: trojanbeacon
 		BeaconPosterPalette: beaconposter
 		DisplayRadarPing: True
-		CameraActor: camera
 		ArrowSequence: arrow
 		ClockSequence: clock
 		CircleSequence: circles
@@ -1025,7 +1004,6 @@ SULMILL:
 	Selectable:
 		Bounds: 48,76,0,-2
 	SelectionDecorations:
-		VisualBounds: 48,76,0,-2
 	ThrowsShrapnel@LARGE:
 		Weapons: DebrUtility1, DebrUtility2, DebrUtility3
 		Pieces: 1, 2
@@ -1092,7 +1070,6 @@ SULFIX:
 	Selectable:
 		Bounds: 64,64,0,-14
 	SelectionDecorations:
-		VisualBounds: 64,64,0,-14
 	Health:
 		HP: 70000
 	RevealsShroud:
@@ -1111,7 +1088,6 @@ SULFIX:
 		Type: MSiege.SUL
 		Group: Aircraft
 		Factions: sul
-		RequireOwner: false
 		LowPowerSlowdown: 3
 		ReadyAudio:
 	ProductionBar:
@@ -1206,7 +1182,6 @@ SULCNSHMBR:
 	Selectable:
 		Bounds:72,60,0,-6
 	SelectionDecorations:
-		VisualBounds: 72,60,0,-6
 	ThrowsShrapnel@LARGE:
 		Weapons: DebrUtility1, DebrUtility2, DebrUtility3
 		Pieces: 2, 3
@@ -1254,7 +1229,6 @@ SULREF:
 	Selectable:
 		Bounds: 73,72,0,0
 	SelectionDecorations:
-		VisualBounds: 73,72,0,0
 	CustomSellValue:
 		Value: 500
 	FreeActor@1:

@@ -33,7 +33,6 @@
 	Building:
 		Dimensions: 1,1
 		Footprint: x
-		Adjacent: 10
 		RequiresBaseProvider: true
 		BuildSounds: shovel.aud
 		TerrainTypes: Clear,Road

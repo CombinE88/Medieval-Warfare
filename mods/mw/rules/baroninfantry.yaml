@@ -241,7 +241,6 @@ ASSASSIN:
 	DetectCloaked:
 		Range: 2c0
 	Cloak:
-		-UpgradeTypes:
 		InitialDelay: 90
 		CloakDelay: 90
 	Valued:

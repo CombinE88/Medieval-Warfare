@@ -176,7 +176,6 @@
 	Building:
 		Footprint: _==_ =xx= =xx= _==_
 		Dimensions: 4,4
-		Adjacent: 4
 		RequiresBaseProvider: false
 	-GivesBuildableArea:
 	Health:
@@ -186,7 +185,6 @@
 	Selectable:
 		Bounds: 96,56,0,0
 	SelectionDecorations:
-		VisualBounds: 96,56,0,0
 	UndeadBuilder:
 		SpawnOffset: 1,1
 		SummoningTime: 100
@@ -206,31 +204,26 @@
 		WOffset: -468,-298,0
 		DockAngle: 32
 		IsDragRequired: false
-		FaceTowardsCenter: true
 	Dock@up: 
 		DockOffset: 2,0
 		WOffset: -42,383,0
 		DockAngle: 223
 		IsDragRequired: false
-		FaceTowardsCenter: true
 	Dock@right: 
 		DockOffset: 3,1
 		WOffset: 468,553,0
 		DockAngle: 159
 		IsDragRequired: false
-		FaceTowardsCenter: true
 	Dock@down: 
 		DockOffset: 2,3
 		WOffset: -86,-468,0
 		DockAngle: 96
 		IsDragRequired: false
-		FaceTowardsCenter: true
 	Dock@leftdown: 
 		DockOffset: 0,2
 		WOffset: -425,170,0
 		DockAngle: 96
 		IsDragRequired: false
-		FaceTowardsCenter: true
 ^Smallpenta:
 	Inherits: ^MWBasePentagram
 	Inherits@Hitshape: ^1x1Shape
@@ -246,7 +239,6 @@
 	Building:
 		Footprint: _=_ =x= _=_ 
 		Dimensions: 3,3
-		Adjacent: 4
 		RequiresBaseProvider: false
 	-GivesBuildableArea:
 	Health:
@@ -256,7 +248,6 @@
 	Selectable:
 		Bounds: 72,36,0,0
 	SelectionDecorations:
-		VisualBounds: 72,36,0,0
 	UndeadBuilder:
 		SpawnOffset: 1,1
 		SummoningTime: 100
@@ -276,31 +267,26 @@
 		WOffset: 383,170,0
 		DockAngle: 32
 		IsDragRequired: false
-		FaceTowardsCenter: true
 	Dock@right: 
 		DockOffset: 2,1
 		WOffset: 425,0,0
 		DockAngle: 223
 		IsDragRequired: false
-		FaceTowardsCenter: true
 	Dock@down: 
 		DockOffset: 1,2
 		WOffset: 340,-170,0
 		DockAngle: 159
 		IsDragRequired: false
-		FaceTowardsCenter: true
 	Dock@leftdown: 
 		DockOffset: 0,2
 		WOffset: -425,-510,0
 		DockAngle: 96
 		IsDragRequired: false
-		FaceTowardsCenter: true
 	Dock@leftup: 
 		DockOffset: 0,0
 		WOffset: -425,510,0
 		DockAngle: 96
 		IsDragRequired: false
-		FaceTowardsCenter: true
 ^Largepenta:
 	Inherits: ^MWBasePentagram
 	Inherits@Hitshape: ^3x3Shape
@@ -316,7 +302,6 @@
 	Building:
 		Footprint: _===_ =xxx= =xxx= =xxx= _===_ 
 		Dimensions: 5,5
-		Adjacent: 4
 		RequiresBaseProvider: false
 	-GivesBuildableArea:
 	Health:
@@ -326,7 +311,6 @@
 	Selectable:
 		Bounds: 120,72,0,0
 	SelectionDecorations:
-		VisualBounds: 120,72,0,0
 	UndeadBuilder:
 		SpawnOffset: 1,1
 		SummoningTime: 100
@@ -346,31 +330,26 @@
 		WOffset: -468,510,0
 		DockAngle: 32
 		IsDragRequired: false
-		FaceTowardsCenter: true
 	Dock@right: 
 		DockOffset: 4,2
 		WOffset: 420,0,0
 		DockAngle: 223
 		IsDragRequired: false
-		FaceTowardsCenter: true
 	Dock@down: 
 		DockOffset: 3,4
 		WOffset: -425,-553,0
 		DockAngle: 159
 		IsDragRequired: false
-		FaceTowardsCenter: true
 	Dock@leftdown: 
 		DockOffset: 0,3
 		WOffset: -425,-170,0
 		DockAngle: 96
 		IsDragRequired: false
-		FaceTowardsCenter: true
 	Dock@leftup: 
 		DockOffset: 0,1
 		WOffset: -425,85,0
 		DockAngle: 96
 		IsDragRequired: false
-		FaceTowardsCenter: true
 ^Gravestone:
 	Inherits: ^MWUndeadBuilding
 	Inherits@Hitshape: ^1x1Shape
@@ -399,7 +378,6 @@
 	Selectable:
 		Bounds: 28,28,0,-4
 	SelectionDecorations:
-		VisualBounds: 28,28,0,-4
 	MustBeDestroyed:
 		RequiredForShortGame: false
 	-Sellable:
@@ -437,7 +415,6 @@
 	Selectable:
 		Bounds: 28,28,0,-4
 	SelectionDecorations:
-		VisualBounds: 28,28,0,-4
 	MustBeDestroyed:
 		RequiredForShortGame: false
 	-Sellable:

@@ -27,7 +27,6 @@ NUKENEW.scaff:
 	Selectable:
 		Bounds: 48,49,0,-2
 	SelectionDecorations:
-		VisualBounds: 48,49,0,-2
 	WithSpriteBody:
 		RequiresCondition: inactive
 	DebugTransformOnCondition@Finsihed:
@@ -79,7 +78,6 @@ NUKXL.scaff:
 	Tooltip:
 		Name: Construction Site (Extra Large Hut)
 	Buildable:
-		Buildable:
 		IconPalette: raicon
 		BuildPaletteOrder: 30
 		Prerequisites: anycastle
@@ -94,7 +92,6 @@ NUKXL.scaff:
 	Selectable:
 		Bounds: 72,58,0,-2
 	SelectionDecorations:
-		VisualBounds: 72,58,0,-2
 	WithSpriteBody:
 		RequiresCondition: inactive
 	DebugTransformOnCondition@Finsihed:
@@ -164,7 +161,6 @@ ZEROPROC.scaff:
 	Selectable:
 		Bounds: 48,70,0,-8
 	SelectionDecorations:
-		VisualBounds: 48,70,0,-8
 	WithSpriteBody:
 		RequiresCondition: inactive
 	GrantCondition@finishedbuild: # test
@@ -234,7 +230,6 @@ HQNEWGDI.scaff:
 	Selectable:
 		Bounds: 48,52,0,0
 	SelectionDecorations:
-		VisualBounds: 48,52,0,0
 	WithSpriteBody:
 		RequiresCondition: inactive
 	DebugTransformOnCondition@Finsihed:
@@ -296,7 +291,6 @@ ARMORYGDI.scaff:
 	Selectable:
 		Bounds: 48,58,0,0
 	SelectionDecorations:
-		VisualBounds: 48,58,0,0
 	WithSpriteBody:
 		RequiresCondition: inactive
 	DebugTransformOnCondition@Finsihed:
@@ -359,7 +353,6 @@ NUK2NEW.scaff:
 	Selectable:
 		Bounds: 48,48,0,0
 	SelectionDecorations:
-		VisualBounds: 48,48,0,0
 	WithSpriteBody:
 		RequiresCondition: inactive
 	DebugTransformOnCondition@Finsihed:
@@ -419,7 +412,6 @@ BARRNEW.scaff:
 	Selectable:
 		Bounds: 48,46,0,-2
 	SelectionDecorations:
-		VisualBounds: 48,46,0,-2
 	WithSpriteBody:
 		RequiresCondition: inactive
 	DebugTransformOnCondition@Finsihed:
@@ -482,7 +474,6 @@ STALL.scaff:
 	Selectable:
 		Bounds: 72,62, 0, -6
 	SelectionDecorations:
-		VisualBounds: 72,62, 0, -6
 	WithSpriteBody:
 		RequiresCondition: inactive
 	DebugTransformOnCondition@Finsihed:
@@ -552,7 +543,6 @@ CASTLE2.scaff:
 	Selectable:
 		Bounds: 72,84,0,-15
 	SelectionDecorations:
-		VisualBounds: 72,84,0,-15
 	WithSpriteBody:
 		RequiresCondition: inactive
 	DebugTransformOnCondition@Finsihed:
@@ -618,7 +608,6 @@ WORKSHOPGDI.scaff:
 	Selectable:
 		Bounds: 64,64,0,-14
 	SelectionDecorations:
-		VisualBounds: 64,64,0,-14
 	WithSpriteBody:
 		RequiresCondition: inactive
 	DebugTransformOnCondition@Finsihed:
@@ -684,7 +673,6 @@ BATO.scaff:
 	Selectable:
 		Bounds: 30,40,0,-12
 	SelectionDecorations:
-		VisualBounds: 30,40,0,-12 
 	WithSpriteBody:
 		RequiresCondition: inactive
 	DebugTransformOnCondition@Finsihed:

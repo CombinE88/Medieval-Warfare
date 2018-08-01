@@ -62,7 +62,6 @@ KINGROSS:
 	Selectable:
 		Bounds: 26,34,0,-6
 	SelectionDecorations:
-		VisualBounds: 26,34,0,-6
 	Voiced:
 		VoiceSet: CommandoVoice
 	ProximityExternalCondition@HEAL:
@@ -115,14 +114,12 @@ DDLER:
 		Image: deathdealer
 		PlayerPalette: raplayer
 	WithInfantryBody:
-		WithInfantryBody:
 		IdleSequences: idle1
 	Armor:
 		Type: LightCavalry
 	Selectable:
 		Bounds: 26,34,0,-6
 	SelectionDecorations:
-		VisualBounds: 26,34,0,-6
 	WithDeathAnimation:
 		DeathTypes:
 			DefaultDeath: 1
@@ -233,7 +230,6 @@ EMPTYROSS:
 	Selectable:
 		Bounds: 26,34,0,-6
 	SelectionDecorations:
-		VisualBounds: 26,34,0,-6
 	Wanders:
 		WanderMoveRadius: 5
 		MinMoveDelay: 50
@@ -297,7 +293,6 @@ ROSS1:
 	Selectable:
 		Bounds: 26,34,0,-6
 	SelectionDecorations:
-		VisualBounds: 26,34,0,-6
 	PersonValued:
 		ActorCount: 1
 		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
@@ -355,7 +350,6 @@ ROSS2:
 	Selectable:
 		Bounds: 26,34,0,-6
 	SelectionDecorations:
-		VisualBounds: 26,34,0,-6	
 	PersonValued:
 		ActorCount: 1
 		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
@@ -397,10 +391,6 @@ ROSS5:
 		Speed: 80
 	Health:
 		HP: 75000
-		Shape: Capsule
-			Radius: 356
-			PointA: 0, -352
-			PointB: 0, 352
 	Armament@Ground:
 		Weapon: mammothpike
 		Name: Primary
@@ -443,7 +433,6 @@ ROSS5:
 	Selectable:
 		Bounds: 26,34,0,-6
 	SelectionDecorations:
-		VisualBounds: 26,34,0,-6  
 	SelfHealing@Mammothtank:
 		Delay: 10
 		HealIfBelow: 50
@@ -509,7 +498,6 @@ ROSS3:
 	Selectable:
 		Bounds: 26,34,0,-6
 	SelectionDecorations:
-		VisualBounds: 26,34,0,-6
 	PersonValued:
 		ActorCount: 1
 		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
@@ -571,7 +559,6 @@ ROSS4:
 	Selectable:
 		Bounds: 26,34,0,-6
 	SelectionDecorations:
-		VisualBounds: 26,34,0,-6
 	PersonValued:
 		ActorCount: 1
 		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
@@ -629,7 +616,6 @@ ROSS4B:
 	Selectable:
 		Bounds: 26,34,0,-6
 	SelectionDecorations:
-		VisualBounds: 26,34,0,-6
 	PersonValued:
 		ActorCount: 1
 		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
@@ -687,7 +673,6 @@ ROSS4C:
 	Selectable:
 		Bounds: 26,34,0,-6
 	SelectionDecorations:
-		VisualBounds: 26,34,0,-6
 	PersonValued:
 		ActorCount: 1
 		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4

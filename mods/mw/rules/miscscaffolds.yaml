@@ -21,7 +21,6 @@ LODGE.scaff:
 		BuildPaletteOrder: 10
 		Description: A hunter will start searching for deer from this building aswell as a lumberer will gather wood.\nGood for early resource management\n\n
 		Queue: MResources.GDI, MResources.Nod
-		Adjacent: 10
 		BuildDuration: 350
 	Health:
 		HP: 10000
@@ -31,7 +30,6 @@ LODGE.scaff:
 	Selectable:
 		Bounds: 48,55,0,-14
 	SelectionDecorations:
-		VisualBounds: 48,55,0,-14
 	WithSpriteBody:
 		RequiresCondition: inactive
 	DebugTransformOnCondition@Finsihed:
@@ -106,7 +104,6 @@ PROCNEW.scaff:
 	Selectable:
 		Bounds: 72,56,0,-2
 	SelectionDecorations:
-		VisualBounds: 72,56,0,-2
 	WithSpriteBody:
 		RequiresCondition: inactive
 	DebugTransformOnCondition@Finsihed:
@@ -174,7 +171,6 @@ SILONEW.scaff:
 	WithBuildingBib:
 		HasMinibib: Yes
 	SelectionDecorations:
-		VisualBounds: 50,50,0,2 
 	Selectable:
 		Bounds: 50,50,0,2
 	WithSpriteBody:
@@ -238,7 +234,6 @@ SILOTWO.scaff:
 	WithBuildingBib:
 		HasMinibib: Yes
 	SelectionDecorations:
-		VisualBounds: 50,50,0,-4 
 	Selectable:
 		Bounds: 50,50,0,-4 
 	WithSpriteBody:
@@ -307,7 +302,6 @@ GTWNEW.scaff:
 	Selectable:
 		Bounds: 24,48,0,-10
 	SelectionDecorations
-		VisualBounds: 22,48,0,-10
 	WithSpriteBody:
 		RequiresCondition: inactive
 	DebugTransformOnCondition@Finsihed:
@@ -377,7 +371,6 @@ GUNNEW.scaff:
 	Selectable:
 		Bounds: 25,25,0,0
 	SelectionDecorations:
-		VisualBounds: 25,25,0,0 
 	WithSpriteBody:
 		RequiresCondition: inactive
 	DebugTransformOnCondition@Finsihed:
@@ -442,7 +435,6 @@ CSTLWLL.scaff:
 		Dimensions: 1,1
 		Footprint: x
 		BuildSounds: brickconc.aud
-		Adjacent: 7
 		RequiresBaseProvider: false
 	Health:
 		HP: 32000
@@ -453,7 +445,6 @@ CSTLWLL.scaff:
 	Selectable:
 		Bounds: 24,48,0,-10
 	SelectionDecorations
-		VisualBounds: 22,48,0,-10
 	WithSpriteBody:
 		RequiresCondition: DoNotRender
 	DebugTransformOnCondition@Finsihed:
@@ -514,7 +505,6 @@ CSTLGTNS.scaff:
 	Building:
 		Dimensions: 1,3
 		Footprint: x x x
-		Adjacent: 7
 		RequiresBaseProvider: false
 	Health:
 		HP: 100000
@@ -523,7 +513,6 @@ CSTLGTNS.scaff:
 	Selectable:
 		Bounds: 28,94,3,-12
 	SelectionDecorations:
-		VisualBounds: 28,94,3,-12
 	WithSpriteBody:
 		RequiresCondition: DoNotRender
 	DebugTransformOnCondition@Finsihed:
@@ -597,7 +586,6 @@ CSTLGTEW.scaff:
 	Building:
 		Dimensions: 3,1
 		Footprint: x x x
-		Adjacent: 7
 		LocalCenterOffset: 0,256,0
 		RequiresBaseProvider: false
 	Health:
@@ -607,7 +595,6 @@ CSTLGTEW.scaff:
 	Selectable:
 		Bounds: 72,48,0,-21
 	SelectionDecorations:
-		VisualBounds: 72,48,0,-21
 	WithSpriteBody:
 		RequiresCondition: DoNotRender
 	DebugTransformOnCondition@Finsihed:
@@ -716,7 +703,6 @@ DEDWALL.scaff:
 		Dimensions: 1,1
 		Footprint: x
 		BuildSounds: brickconc.aud
-		Adjacent: 7
 		RequiresBaseProvider: false
 	Health:
 		HP: 32000
@@ -727,7 +713,6 @@ DEDWALL.scaff:
 	Selectable:
 		Bounds: 24,48,0,-10
 	SelectionDecorations
-		VisualBounds: 22,48,0,-10
 	WithSpriteBody:
 		RequiresCondition: DoNotRender
 	DebugTransformOnCondition@Finsihed:
@@ -825,7 +810,6 @@ DEDGATE.scaff:
 	Building:
 		Dimensions: 3,1
 		Footprint: x x x
-		Adjacent: 7
 		RequiresBaseProvider: false
 	Health:
 		HP: 100000
@@ -834,7 +818,6 @@ DEDGATE.scaff:
 	Selectable:
 		Bounds: 28,94,3,-12
 	SelectionDecorations:
-		VisualBounds: 28,94,3,-12
 	WithSpriteBody:
 		RequiresCondition: DoNotRender
 	ExternalCondition@buildfurther: 
@@ -920,7 +903,6 @@ DEDGATENS.scaff:
 	Building:
 		Dimensions: 1,3
 		Footprint: x x x
-		Adjacent: 7
 		RequiresBaseProvider: false
 	Health:
 		HP: 100000
@@ -929,7 +911,6 @@ DEDGATENS.scaff:
 	Selectable:
 		Bounds: 28,94,3,-12
 	SelectionDecorations:
-		VisualBounds: 28,94,3,-12
 	WithSpriteBody:
 		RequiresCondition: DoNotRender
 	ExternalCondition@buildfurther: 

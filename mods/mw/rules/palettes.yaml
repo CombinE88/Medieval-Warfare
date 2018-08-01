@@ -112,7 +112,6 @@
 		A: 180
 	ShroudPalette@shroud:
 		Name: shroud
-		Type: Shroud
 	ShroudPalette@fog:
 		Name: fog
 		Fog: true
@@ -212,7 +211,6 @@
 		ExcludeTilesets: INTERIOR
 	FlashPaletteEffect:
 		ExcludePalettes: raplayer, ra, raicon, grain, mwcivilian, mwnobles, sul, sultanplayer, grimalpha, grimprojalpha, undeadalpha, undeadplayer, undead
-		ExcludeTilesets: INTERIOR
 	PaletteFromFile@Menu:
 		Name: menu
 		Filename: flag.pal

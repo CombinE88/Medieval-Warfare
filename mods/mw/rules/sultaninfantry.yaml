@@ -346,7 +346,6 @@ SULE6:
 		Bounds: 14,26,0,-6
 		Priority: 7
 	SelectionDecorations:
-		VisualBounds: 14,26,0,-6 
 	-Crushable:
 	PersonValued:
 		ActorCount: 1
@@ -435,7 +434,6 @@ SULM1SKELET:
 	WithMoveAnimation: 
 		MoveSequence: move
 	WithAttackAnimation:
-		AttackSequence: shoot
 	-Selectable:
 	Interactable:
 	SelfHealing@Killsslef:
