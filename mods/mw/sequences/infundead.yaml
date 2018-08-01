@@ -459,6 +459,10 @@ undead6deployed:
 	make: undead6deploy
 		Length: 34
 		Tick: 130
+	dead: undead6
+		Start: 74
+		Length: 21
+		Tick: 80
 	die1: undead6
 		Start: 74
 		Length: 21

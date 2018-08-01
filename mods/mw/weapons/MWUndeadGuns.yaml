@@ -346,14 +346,14 @@ AcolyteSpawnHelper:
 	Projectile: Bullet
 		Speed: 1c382
 	Warhead@Curse: CurseOnHit
-		Range: 2c0
-		Duration: 250
+		Range: 1c256
+		Duration: 350
 		InvalidTargets: Air, Wall, Structure, Siege
 		ValidTargets: Ground, Cursable
 		ValidStances: Enemy, Neutral
 		Condition: cursed
 	Warhead@2Dam: SpreadDamage
-		Spread: 2c0
+		Spread: 1c256
 		InvalidTargets: Air, Cursed, Wall, Structure, Siege
 		ValidTargets: Ground, Cursable
 		Damage: 1

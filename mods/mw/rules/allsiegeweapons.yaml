@@ -263,7 +263,7 @@ SIEGE3:
 		TurnSpeed: 5
 		Locomotor: heavysiege
 	Health:
-		HP: 100000
+		HP: 62000
 	WithRoof:
 		Sequence: top
 	RenderSprites:
@@ -295,12 +295,21 @@ SIEGE3:
 	WithSpriteTurret@1: 
 		Sequence: turretidle
 		Turret: primary
+	WithTurretAttackAnimation@1:
+		Turret: primary
+		Sequence: shoot
 	WithSpriteTurret@2: 
 		Sequence: turretidle
 		Turret: secondary
+	WithTurretAttackAnimation@2:
+		Turret: secondary
+		Sequence: shoot
 	WithSpriteTurret@3: 
 		Sequence: turretidle
 		Turret: tritiary
+	WithTurretAttackAnimation@3:
+		Turret: tritiary
+		Sequence: shoot
 	Turreted@1:
 		Turret: primary
 		TurnSpeed: 100

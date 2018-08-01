@@ -40,6 +40,9 @@ GTWNEW:
 	WithSpriteTurret@SPRITURRONE: 
 		Sequence: turretidle
 		Turret: primary
+	WithTurretAttackAnimation@1:
+		Turret: primary
+		Sequence: shoot
 	Turreted@TURRONE:
 		Turret: primary
 		TurnSpeed: 100
@@ -57,6 +60,9 @@ GTWNEW:
 	WithSpriteTurret@SPRITURRTWO: 
 		Sequence: turretidle
 		Turret: secondary
+	WithTurretAttackAnimation@2:
+		Turret: secondary
+		Sequence: shoot
 	Turreted@TURRTWO:
 		Turret: secondary
 		TurnSpeed: 100

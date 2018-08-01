@@ -451,6 +451,9 @@
 		ShowOwnerRow: True
 	EditorTilesetFilter:
 		Categories: Tech building
+	OwnerLostAction:
+		Action: ChangeOwner
+		DeathTypes: DefaultDeath
 ^CivField:
 	Inherits: ^CivBuilding
 	-Selectable:
@@ -517,6 +520,9 @@
 		HP: 10000
 	EditorTilesetFilter:
 		Categories: Wall
+	OwnerLostAction:
+		Action: ChangeOwner
+		DeathTypes: DefaultDeath
 ^Tree:
 	Inherits@1: ^SpriteActor
 	Interactable:
@@ -842,6 +848,9 @@
 		Footprint: x
 		BuildSounds:
 		TerrainTypes: Clear,Road
+	OwnerLostAction:
+		Action: Kill
+		DeathTypes: DefaultDeath
 ^MedievalHusk:
 	Inherits@1: ^SpriteActor
 	Interactable:
@@ -928,6 +937,9 @@
 		Range: 0c512, 3c0
 	Targetable:
 		TargetTypes: Ground, C4, Structure, Wanderer
+	OwnerLostAction:
+		Action: Kill
+		DeathTypes: DefaultDeath
 ^MWDefense:
 	Inherits@1: ^Defense
 	SpawnActorsOnSell:
@@ -944,6 +956,9 @@
 		Categories: Defense
 	Targetable@Defense: 
 		TargetTypes: Defense
+	OwnerLostAction:
+		Action: Kill
+		DeathTypes: DefaultDeath
 ^MedievalInfantry:
 	Inherits@1: ^ExistsInWorld
 	Inherits@3: ^SpriteActor
@@ -968,7 +983,6 @@
 	AttackMove:
 	DrawLineToTarget:
 	HiddenUnderFog:
-    
 	Guardable:
 	DeathSounds@NORMAL:
 		DeathTypes: DefaultDeath
@@ -1058,6 +1072,9 @@
 		Actor: souls
 		OwnerType: InternalName
 		InternalOwner: Neutral
+	OwnerLostAction:
+		Action: Kill
+		DeathTypes: DefaultDeath
 ^Cavalry:
 	Inherits: ^MedievalInfantry
 	Voiced:
@@ -1160,6 +1177,9 @@
 		Actor: soul
 		OwnerType: InternalName
 		InternalOwner: Neutral
+	OwnerLostAction:
+		Action: Kill
+		DeathTypes: DefaultDeath
 ^Siege:
 	Inherits: ^MedievalInfantry
 	Mobile:
@@ -1222,6 +1242,9 @@
 		Actor: soul
 		OwnerType: InternalName
 		InternalOwner: Neutral
+	OwnerLostAction:
+		Action: Kill
+		DeathTypes: DefaultDeath
 ^MWCiv:
 	Inherits: ^Infantry
 	Targetable@Ignore:
@@ -1281,6 +1304,9 @@
 			Radius: 128
 	EditorTilesetFilter:
 		Categories: Civilian infantry
+	OwnerLostAction:
+		Action: Kill
+		DeathTypes: DefaultDeath
 ^MWAnimal:
 	Inherits: ^MedievalInfantry
 	SelfHealing@Rotaway:
@@ -1448,6 +1474,9 @@
 			Radius: 128
 	EditorTilesetFilter:
 		Categories: Peasants
+	OwnerLostAction:
+		Action: Kill
+		DeathTypes: DefaultDeath
 ^MWWanderer:
 	Inherits: ^MWPeasant
 	Inherits@GetsPoisoned: ^GetsPoisoned

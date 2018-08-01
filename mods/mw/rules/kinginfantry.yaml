@@ -449,6 +449,7 @@ NEWCOMM:
 	WithMoveAnimation: 
 		MoveSequence: move
 	WithAttackAnimation:
+		Sequence: shoot
 	Armor:
 		Type: Knight
 	Voiced:

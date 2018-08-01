@@ -21,7 +21,7 @@ SULB0:
 		Speed: 60
 		Locomotor: heavysiege
 	Health:
-		HP: 75000
+		HP: 60000
 	AutoTarget:
 		ScanRadius: 7
 	RenderSprites:
@@ -44,9 +44,15 @@ SULB0:
 	WithSpriteTurret@1: 
 		Sequence: turretidle
 		Turret: primary
+	WithTurretAttackAnimation@1:
+		Turret: primary
+		Sequence: shoot
 	WithSpriteTurret@2: 
 		Sequence: turretidle
 		Turret: secondary
+	WithTurretAttackAnimation@2:
+		Turret: secondary
+		Sequence: shoot
 	Turreted@1:
 		Turret: primary
 		TurnSpeed: 100
@@ -460,6 +466,7 @@ SULB3:
 		PlayerPalette: raplayer
 	AutoTarget:
 	WithAttackAnimation:
+		Sequence: shoot
 	WithMoveAnimation: 
 		MoveSequence: move
 	SelectionDecorations:

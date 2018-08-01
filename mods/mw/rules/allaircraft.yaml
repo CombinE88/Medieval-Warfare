@@ -168,9 +168,9 @@ DRGNRDR:
 		TurnSpeed: 10
 		Speed: 90
 	Health:
-		HP: 19000
+		HP: 21000
 	Armor:
-		Type: LightCavalry
+		Type: MediumCavalry
 	RevealsShroud:
 		Range: 10c0
 		Type: CenterPosition

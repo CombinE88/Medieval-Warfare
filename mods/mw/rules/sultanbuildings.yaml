@@ -59,10 +59,16 @@ SULGTW:
 		Sequence: turretidle
 		Turret: primary
 		RequiresCondition: !static
+	WithTurretAttackAnimation@1:
+		Turret: primary
+		Sequence: shoot
 	WithSpriteTurret@2: 
 		Sequence: turretidle
 		Turret: secondary
 		RequiresCondition: !static
+	WithTurretAttackAnimation@2:
+		Turret: secondary
+		Sequence: shoot
 	Turreted@1:
 		Turret: primary
 		TurnSpeed: 100
@@ -93,10 +99,16 @@ SULGTW:
 		Sequence: turretidle2
 		Turret: turr1
 		RequiresCondition: archers && Construct >= 20
+	WithTurretAttackAnimation@1archers:
+		Turret: turr1
+		Sequence: shoot
 	WithSpriteTurret@2archers: 
 		Sequence: turretidle2
 		Turret: turr2
 		RequiresCondition: archers && Construct >= 20
+	WithTurretAttackAnimation@2archers:
+		Turret: turr2
+		Sequence: shoot
 	Turreted@1archers:
 		Turret: turr1
 		TurnSpeed: 100
@@ -137,6 +149,9 @@ SULGTW:
 		Sequence: dturretidle
 		Turret: turr3
 		RequiresCondition: djinn && Construct >= 50
+	WithTurretAttackAnimation@djinn:
+		Turret: turr3
+		Sequence: shoot
 	Turreted@djinn:
 		Turret: turr3
 		TurnSpeed: 100
