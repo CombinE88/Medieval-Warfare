@@ -331,6 +331,7 @@ SULM3:
 		PlayerPalette: raplayer
 	AutoTarget:
 	WithAttackAnimation:
+		Sequence: shoot
 	WithMoveAnimation: 
 		MoveSequence: run
 	SelectionDecorations:

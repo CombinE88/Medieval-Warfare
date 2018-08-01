@@ -532,7 +532,6 @@ EHARVXL:
 	Mobile:
 		TurnSpeed: 5
 		Speed: 85
-		Locomotor: farmer
 	Health:
 		HP: 65000
 	RenderSprites:
@@ -550,7 +549,7 @@ EHARVXL:
 		Resources: Iron, Gold
 		PipCount: 7
 		Capacity: 20
-		BaleLoadDelay: 12
+		BaleLoadDelay: 28
 		BaleUnloadDelay: 3
 		SearchFromProcRadius: 25
 		SearchFromOrderRadius: 15

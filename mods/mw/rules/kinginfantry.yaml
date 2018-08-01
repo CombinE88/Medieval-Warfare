@@ -46,6 +46,7 @@ KING:
 	WithMoveAnimation: 
 		MoveSequence: move
 	WithAttackAnimation:
+		Sequence: shoot
 	Armor:
 		Type: Knight
 	AttackFrontal:

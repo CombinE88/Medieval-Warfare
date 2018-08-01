@@ -124,6 +124,7 @@ WARKITE:
 		Count: 10
 	AutoTarget:
 	WithAttackAnimation:
+		Sequence: shoot
 	Voiced:
 		VoiceSet: VehicleVoice
 	SpawnActorOnDeath@1:
@@ -170,7 +171,7 @@ DRGNRDR:
 	Health:
 		HP: 21000
 	Armor:
-		Type: MediumCavalry
+		Type: LightCavalry
 	RevealsShroud:
 		Range: 10c0
 		Type: CenterPosition
@@ -390,6 +391,7 @@ WRBLN:
 		Weapon: Balloonpop
 		EmptyWeapon: Balloonpop
 	WithAttackAnimation:
+		Sequence: shoot
 	SelectionDecorations:
 	Selectable:
 		Bounds:40,52,0,-24

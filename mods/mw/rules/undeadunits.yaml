@@ -639,6 +639,7 @@ VAMPFLYING:
 	WithFacingSpriteBody:
 		Sequence: stand-flying
 	WithAttackAnimation: 
+		Sequence: shoot
 	Valued:
 		Cost: 750
 	Tooltip:

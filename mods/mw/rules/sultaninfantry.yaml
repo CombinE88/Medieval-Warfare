@@ -434,6 +434,7 @@ SULM1SKELET:
 	WithMoveAnimation: 
 		MoveSequence: move
 	WithAttackAnimation:
+		Sequence: shoot
 	-Selectable:
 	Interactable:
 	SelfHealing@Killsslef:

@@ -162,7 +162,8 @@ TRIBU:
 		PlayerPalette: raplayer
 	BodyOrientation:
 		QuantizedFacings: 32
-	WithAttackAnimation:
+	WithTurretAttackAnimation:
+		Sequence: shoot
 	WithEmbeddedTurretSpriteBody:
 	-WithSpriteBody:
 	AttackTurreted:
@@ -510,7 +511,8 @@ SIEGETRIBU:
 		PlayerPalette: raplayer
 	BodyOrientation:
 		QuantizedFacings: 32
-	WithAttackAnimation:
+	WithTurretAttackAnimation:
+		Sequence: shoot
 	WithEmbeddedTurretSpriteBody:
 	-WithSpriteBody:
 	AttackTurreted:

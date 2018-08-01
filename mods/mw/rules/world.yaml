@@ -175,7 +175,7 @@
 	ResourceType@green-tib:
 		Sequences: iron1,iron2,iron3,iron4,iron5,iron6,iron7,iron8,iron9,iron10,iron11,iron12
 		Palette: ra
-		MaxDensity: 12
+		MaxDensity: 24
 		PipColor: Red
 		TerrainType: Tiberium
 		Name: Iron
@@ -191,7 +191,7 @@
 		PipColor: Yellow
 		Name: Gold
 		Sequences: gold1,gold2,gold3,gold4,gold5,gold6,gold7,gold8,gold9,gold10
-		MaxDensity: 12
+		MaxDensity: 24
 		ValuePerUnit: 40
 		AllowedTerrainTypes: Clear,Road
 		AllowUnderActors: true
@@ -201,7 +201,7 @@
 		Palette: grain
 		TerrainType: Crops
 		Sequences: crop1,crop2,crop3,crop4,crop5,crop6,crop7,crop8,crop9,crop10,crop11
-		MaxDensity: 12
+		MaxDensity: 16
 		ValuePerUnit: 16
 		Name: Crops
 		Type: Crops
@@ -213,7 +213,7 @@
 		Palette: grain
 		TerrainType: Crops
 		Sequences: grain1,grain2,grain3,grain4,grain5,grain6,grain7
-		MaxDensity: 12
+		MaxDensity: 16
 		ValuePerUnit: 16
 		Name: Grain
 		Type: Grains
@@ -225,7 +225,7 @@
 		Palette: grain
 		TerrainType: Crops
 		Sequences: corn1,corn2,corn3,corn4,corn5,corn6,corn7,corn8,corn9,corn10,corn11
-		MaxDensity: 12
+		MaxDensity: 16
 		ValuePerUnit: 16
 		Name: Corn
 		Type: Corn
