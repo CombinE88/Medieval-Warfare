@@ -345,12 +345,7 @@ namespace OpenRA.Mods.MW.MWAI
 		public bool IsEnabled;
 		public List<Squad> Squads = new List<Squad>();
 		public Player Player { get; private set; }
-
-		readonly DomainIndex domainIndex;
-		readonly ResourceLayer resLayer;
-		readonly ResourceClaimLayer claimLayer;
-		readonly IPathFinder pathfinder;
-
+        
 		// MW Related
 		public int NumberCountPeasants;
 		public int NumberCountPossiblePopulation;

@@ -382,7 +382,6 @@
 ^BaseBuilding:
 	Inherits: ^Building
 	Building:
-		Adjacent: 10
 		RequiresBaseProvider: true
 		BuildSounds: tentcloth.aud, brickconc.aud
 		TerrainTypes: Clear,Road
@@ -494,7 +493,6 @@
 		Dimensions: 1,1
 		Footprint: x
 		BuildSounds: brickconc.aud
-		Adjacent: 7
 		TerrainTypes: Clear,Road
 	Targetable:
 		TargetTypes: Ground, Wall
@@ -635,7 +633,6 @@
 		TargetTypes: Ground, Husk
 	Capturable:
 		Type: husk
-		AllowAllies: yes
 		CaptureThreshold: 100
 	WithColoredOverlay@IDISABLE:
 		Palette: disabled
@@ -847,7 +844,6 @@
 		Dimensions: 1,1
 		Footprint: x
 		BuildSounds:
-		Adjacent: 7
 		TerrainTypes: Clear,Road
 ^MedievalHusk:
 	Inherits@1: ^SpriteActor
@@ -975,7 +971,6 @@
 	AttackMove:
 	DrawLineToTarget:
 	HiddenUnderFog:
-		WarnProbability: 40
 		CrushSound: squish2.aud
 	Guardable:
 	DeathSounds@NORMAL:
