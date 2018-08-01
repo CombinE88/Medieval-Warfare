@@ -14,9 +14,6 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using OpenRA.Mods.Common;
-using OpenRA.Mods.Common.Activities;
-using OpenRA.Mods.Common.AI;
-using OpenRA.Mods.Common.Pathfinder;
 using OpenRA.Mods.Common.Traits;
 using OpenRA.Support;
 using OpenRA.Traits;
@@ -401,11 +398,6 @@ namespace OpenRA.Mods.MW.MWAI
 
 			if (World.Type == WorldType.Editor)
 				return;
-
-			domainIndex = World.WorldActor.Trait<DomainIndex>();
-			resLayer = World.WorldActor.TraitOrDefault<ResourceLayer>();
-			claimLayer = World.WorldActor.TraitOrDefault<ResourceClaimLayer>();
-			pathfinder = World.WorldActor.Trait<IPathFinder>();
 
 			isEnemyUnit = unit =>
 				Player.Stances[unit.Owner] == Stance.Enemy
