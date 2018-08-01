@@ -22,32 +22,33 @@ namespace OpenRA.Mods.MW.Traits
     public class UndeadGiantSpawner : ITick
     {
         private UndeadGiantSpawnerInfo info;
-        public bool canspawn;
-        public int countdown;
+        public bool Canspawn;
+        public int Countdown;
         public UndeadGiantSpawner(Actor self, UndeadGiantSpawnerInfo info)
         {
             this.info = info;
-            countdown = info.Cooldown;
+            Countdown = info.Cooldown;
         }
 
         void ITick.Tick(Actor self)
         {
-            if (countdown-- > 0)
+            if (Countdown-- > 0)
             {
-                if (canspawn == true)
+                if (Canspawn == true)
                 {
-                    canspawn = false;
+                    Canspawn = false;
                 }
             }
-            else if (canspawn == false)
+            else if (Canspawn == false)
             {
-                canspawn = true;
+                Canspawn = true;
             }
         }
-        public void reset()
+
+        public void Reset()
         {
-            countdown = info.Cooldown;
-            canspawn = false;
+            Countdown = info.Cooldown;
+            Canspawn = false;
         }
     }
 }

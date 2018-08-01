@@ -50,7 +50,7 @@ namespace OpenRA.Mods.MW.Warheads
 
             if (actors.Any())
             {
-                foreach(var actor in actors)
+                foreach (var actor in actors)
                 {
                     if (actor.Info.HasTraitInfo<SpawnActorOnCurseInfo>())
                     {

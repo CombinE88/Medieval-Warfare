@@ -69,7 +69,6 @@ namespace OpenRA.Mods.MW.Traits
                 new OwnerInit(Cusserplayer)
             };
 
-
             foreach (var modifier in self.TraitsImplementing<IDeathActorInitModifier>())
                 modifier.ModifyDeathActorInit(self, td);
 

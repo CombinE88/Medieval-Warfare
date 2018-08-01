@@ -56,7 +56,7 @@ namespace OpenRA.Mods.MW.Traits
             faction = init.Contains<FactionInit>() ? init.Get<FactionInit, string>() : init.Self.Owner.Faction.InternalName;
         }
 
-        public void Killed(Actor self, AttackInfo e)
+        void INotifyKilled.Killed(Actor self, AttackInfo e)
         {
             if (!enabled)
                 return;

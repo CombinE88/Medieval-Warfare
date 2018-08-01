@@ -374,8 +374,8 @@ namespace OpenRA.Mods.MW.MWAI
 		BitArray resourceTypeIndices;
 		BitArray oreResourceTypeIndices;
 
-		//AIHarvesterManager harvManager;
-		//AISupportPowerManager supportPowerManager;
+		////AIHarvesterManager harvManager;
+		////AISupportPowerManager supportPowerManager;
 
 		List<BaseBuilder> builders = new List<BaseBuilder>();
 
@@ -1318,7 +1318,7 @@ namespace OpenRA.Mods.MW.MWAI
 				QueueOrder(Order.StartProduction(queue.Actor, name, 1));
 		}
 
-		public void Damaged(Actor self, AttackInfo e)
+		void INotifyDamage.Damaged(Actor self, AttackInfo e)
 		{
 			if (!IsEnabled || e.Attacker == null)
 				return;

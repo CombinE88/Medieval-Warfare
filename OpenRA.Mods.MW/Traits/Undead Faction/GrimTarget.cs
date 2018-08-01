@@ -29,7 +29,7 @@ namespace OpenRA.Mods.MW.Traits
         public object Create(ActorInitializer init) { return new GrimTarget(init.Self, this); }
     }
 
-    public class GrimTarget : ITick, INotifyKilled, INotifyCreated, ISpeedModifier, IGivesExperienceModifier, IFirepowerModifier, IDamageModifier, IRenderModifier
+    public class GrimTarget : ITick, INotifyCreated, ISpeedModifier, IGivesExperienceModifier, IFirepowerModifier, IDamageModifier
     {
         private GrimTargetInfo info;
         ConditionManager conditionManager;
@@ -125,11 +125,6 @@ namespace OpenRA.Mods.MW.Traits
                     self.QueueActivity(self.Trait<IMove>().MoveTo(grim.Location, 2));
                 }
             }
-        }
-
-        IEnumerable<Rectangle> IRenderModifier.ModifyScreenBounds(Actor self, WorldRenderer wr, IEnumerable<Rectangle> bounds)
-        {
-            return bounds;
         }
     }
 }

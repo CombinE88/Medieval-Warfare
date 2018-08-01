@@ -65,7 +65,7 @@ namespace OpenRA.Mods.MW.Warheads
                     var blng = firedBy.World.Map.Rules.Actors[a].TraitInfo<BuildingInfo>();
                     var cellone = RandomWalk(firedBy.World.Map.CellContaining(target.CenterPosition), firedBy.World.SharedRandom)
                         .Take(Range)
-                        .SkipWhile(p => !firedBy.World.CanPlaceBuilding(p , firedBy.World.Map.Rules.Actors[a], blng, null))
+                        .SkipWhile(p => !firedBy.World.CanPlaceBuilding(p, firedBy.World.Map.Rules.Actors[a], blng, null))
 
                         .Cast<CPos?>().FirstOrDefault();
 

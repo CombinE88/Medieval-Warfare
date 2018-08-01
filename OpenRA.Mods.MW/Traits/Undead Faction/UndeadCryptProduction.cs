@@ -131,13 +131,14 @@ namespace OpenRA.Mods.MW.Traits
                 var validreplacespawner = self.World.ActorsHavingTrait<UndeadGiantSpawner>()
                     .Where(a =>
                     {
-                        return (a.Owner == self.Owner && a.TraitOrDefault<UndeadGiantSpawner>().canspawn);
+                        return a.Owner == self.Owner && a.TraitOrDefault<UndeadGiantSpawner>().Canspawn;
                     });
                 if (validreplacespawner.Any())
                 {
                     respawner = validreplacespawner.Random(self.World.SharedRandom);
                     exit = respawner.Location + new CVec(respawner.Info.TraitInfo<UndeadGiantSpawnerInfo>().Exit.X, respawner.Info.TraitInfo<UndeadGiantSpawnerInfo>().Exit.Y);
-                    spawn = respawner.CenterPosition + new WVec(respawner.Info.TraitInfo<UndeadGiantSpawnerInfo>().SpawnOffset.X, respawner.Info.TraitInfo<UndeadGiantSpawnerInfo>().SpawnOffset.Y, respawner.Info.TraitInfo<UndeadGiantSpawnerInfo>().SpawnOffset.Z);
+                    spawn = respawner.CenterPosition + new WVec(respawner.Info.TraitInfo<UndeadGiantSpawnerInfo>()
+                        .SpawnOffset.X, respawner.Info.TraitInfo<UndeadGiantSpawnerInfo>().SpawnOffset.Y, respawner.Info.TraitInfo<UndeadGiantSpawnerInfo>().SpawnOffset.Z);
                     exitLocation = respawner.TraitOrDefault<RallyPoint>().Location;
                 }
 
@@ -152,7 +153,6 @@ namespace OpenRA.Mods.MW.Traits
 
             self.World.AddFrameEndTask(w =>
             {
-
                 var newUnit = self.World.CreateActor(producee.Name, td);
 
                 if (newUnit.Info.HasTraitInfo<WithMakeAnimationInfo>() && respawner == self)
@@ -239,7 +239,7 @@ namespace OpenRA.Mods.MW.Traits
                     foreach (var t in newUnit.TraitsImplementing<INotifyBuildComplete>())
                         t.BuildingComplete(newUnit);
 
-                    respawner.TraitOrDefault<UndeadGiantSpawner>().reset();
+                    respawner.TraitOrDefault<UndeadGiantSpawner>().Reset();
                 }
             });
         }

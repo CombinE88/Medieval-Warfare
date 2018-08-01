@@ -150,7 +150,7 @@ namespace OpenRA.Mods.MW.Traits
                 else if (self.World.Map.Rules.Actors[actor].HasTraitInfo<BuildingInfo>())
                 {
                     ip2 = self.World.Map.Rules.Actors[actor].TraitInfo<BuildingInfo>();
-                    validCells = cells.Where(c => self.World.CanPlaceBuilding(c, self.World.Map.Rules.Actors[actor], ip2 , null));
+                    validCells = cells.Where(c => self.World.CanPlaceBuilding(c, self.World.Map.Rules.Actors[actor], ip2, null));
                 }
 
                 if (validCells != null && !validCells.Any())

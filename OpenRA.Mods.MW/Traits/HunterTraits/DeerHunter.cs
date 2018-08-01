@@ -242,7 +242,7 @@ namespace OpenRA.Mods.MW.Traits
             }
         }
 
-        public void Killed(Actor self, AttackInfo e)
+        void INotifyKilled.Killed(Actor self, AttackInfo e)
         {
             if (DeerLoot != null && !DeerLoot.IsDead && DeerLoot.IsInWorld)
                 DeerLoot.Trait<LootableBody>().Hunter = null;

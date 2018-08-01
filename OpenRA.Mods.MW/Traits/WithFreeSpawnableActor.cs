@@ -186,8 +186,7 @@ namespace OpenRA.Mods.MW.Traits
 
             if (!owner.PlayerActor.Info.HasTraitInfo<PlayerCivilizationInfo>())
             {
-                throw new System.Exception(
-                    "PlayerCivilization Trait not found! Player must have PlayerCivilization trait!");
+                throw new System.Exception("PlayerCivilization Trait not found! Player must have PlayerCivilization trait!");
             }
 
             if (owner.PlayerActor.Trait<PlayerCivilization>().FreePopulation < self.World.Map.Rules
@@ -196,6 +195,7 @@ namespace OpenRA.Mods.MW.Traits
                 ticker = 50;
                 return;
             }
+
             ticker = info.RespawnTime;
             CreateActorSpawn(self);
         }

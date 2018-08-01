@@ -29,8 +29,8 @@ namespace OpenRA.Mods.MW.Traits.Render
         void ITick.Tick(Actor self)
         {
             var should = 100;
-            var has = ndg.countdown;
-            value = has>0 ? 1 - (float)has / should : 0;
+            var has = ndg.Countdown;
+            value = has > 0 ? 1 - (float)has / should : 0;
         }
 
         float ISelectionBar.GetValue()

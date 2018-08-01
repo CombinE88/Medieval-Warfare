@@ -54,7 +54,6 @@ namespace OpenRA.Mods.MW.MWAI
         }
     }
 
-
     class NavyUnitsIdleState : NavyStateBase, IState
     {
         public void Activate(Squad owner) { }

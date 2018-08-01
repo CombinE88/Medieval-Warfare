@@ -9,6 +9,7 @@
  */
 #endregion
 
+using System;
 using System.Drawing;
 using OpenRA.Mods.Common.Traits;
 using OpenRA.Mods.MW.Traits;
@@ -48,7 +49,7 @@ namespace OpenRA.Mods.MW.Traits
             lastAttackTime = -info.NotifyInterval * 25;
         }
 
-        public void Damaged(Actor self, AttackInfo e)
+        void INotifyDamage.Damaged(Actor self, AttackInfo e)
         {
             // Don't track self-damage
             if (e.Attacker != null && e.Attacker.Owner == self.Owner)

@@ -139,8 +139,7 @@ namespace OpenRA.Mods.MW.Traits
         {
             get
             {
-                yield return new TargetTypeOrderTargeter(new BitSet<TargetableType>("Disguise" ), "Disguise", 7, "ability", true, true)
-                //yield return new TargetTypeOrderTargeter(new BitSet<TargetableType>("DetonateAttack"), "DetonateAttack", 5, "attack", true, false) { ForceAttack = false };
+                yield return new TargetTypeOrderTargeter(new BitSet<TargetableType>("Disguise"), "Disguise", 7, "ability", true, true)
                 {
                     ForceAttack = false
                 };
