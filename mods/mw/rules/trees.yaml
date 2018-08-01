@@ -352,7 +352,7 @@ SPLIT7:
 	SeedsResource:
 		RequiresCondition: SpawnCorruption == 1
 		ResourceType: Corruption
-		Interval: 40
+		Interval: 65
 	Targetable:
 		TargetTypes: Trees, Corrupt
 	DockManager:
@@ -422,7 +422,7 @@ SPLIT8:
 	SeedsResource:
 		RequiresCondition: SpawnCorruption == 1
 		ResourceType: Corruption
-		Interval: 35
+		Interval: 55
 	Targetable:
 		TargetTypes: Trees, Corrupt
 	DockManager:

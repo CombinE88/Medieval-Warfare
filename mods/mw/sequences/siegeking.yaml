@@ -72,22 +72,22 @@ davinci:
 davincihusk:
 	idle: davincihusk
 drgnrdr:
-	idle: 
+	idle: drgnc
 		Start: 0
 		Length: 7
 		Facings: 32
 		Tick: 100
-	move: 
+	move: drgnc
 		Start: 0
 		Length: 7
 		Facings: 32
 		Tick: 100
-	attack: 
+	attack: drgnc
 		Tick: 100
 		Start: 224
 		Length: 7
 		Facings: 32
-	die1: 
+	die1: drgnc
 		Start: 449
 		Facings: 32
 	icon: ndragonicon.shp
@@ -117,38 +117,38 @@ siege2.husk:
 	idle: siege2husk
 		Start: 217
 		Facings: 32
-drgnempty:
-	idle: dragonempty
+drgnempty: 
+	idle: drgnc
 		Start: 0
 		Length: 7
 		Facings: 32
 		Tick: 100
 dragonground:
-	idle: 
+	idle: drgngrndc
 		Start: 0
 		Length: 1
 		Facings: 32
 		Tick: 100
-	stand: 
+	stand: drgngrndc
 		Start: 0
 		Length: 1
 		Facings: 32
 		Tick: 100
-	run: 
+	run: drgngrndc
 		Start: 32
 		Length: 7
 		Facings: 32
 		Tick: 100
-	shoot: 
+	shoot: drgngrndc
 		Tick: 100
 		Start: 256
 		Length: 7
 		Facings: 32
-	die1: dragongrounddead
+	die1: drgngrnddiec
 		Length: 15
 		Facings: 32
 		Tick: 100
 drgnrdr.husk:
-	idle: drgnrdr
+	idle: drgnc
 		Start: 449
 		Facings: 32

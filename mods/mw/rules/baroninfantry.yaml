@@ -171,7 +171,7 @@ E4NEW:
 	Valued:
 		Cost: 200
 	Tooltip:
-		Name: Archer
+		Name: Marksman
 	Buildable:
 		Description: Advanced Anti-infantry unit.\n  Strong vs Light Infantry\n  Weak vs Cavalry and heavy Infantry\n  Detects cloaked units\n  Can attack Aircraft\n  Slows targets under fire\nTrains: 1 Peasant
 		IconPalette: raicon
@@ -183,16 +183,16 @@ E4NEW:
 	Health:
 		HP: 8000
 	Armament:
-		Weapon: bownarrow
-		LocalOffset: 341,20,356
+		Weapon: bownarrowMarksman
+		LocalOffset: 341,0,456
 		Name: Primary
 	Armament@DUMMY:
-		Weapon: BowNArrowDUMMY
-		LocalOffset: 341,20,356
+		Weapon: BowNArrowDUMMYMarksman
+		LocalOffset: 341,0,456
 		Name: Primary
 	Armament@Air:
-		Weapon: bownarrowair
-		LocalOffset: 341,20,356
+		Weapon: bownarrowairMarksman
+		LocalOffset: 341,0,456
 		Name: Primary
 	Armament@Debuffapply:
 		Weapon: BowNArrowDebuff
@@ -204,7 +204,7 @@ E4NEW:
 		ScanRadius: 8
 		InitialStance: AttackAnything
 	RenderSprites:
-		Image: e4new
+		Image: e5new
 		PlayerPalette: raplayer
 	WithInfantryBody:
  		AttackSequences:
@@ -216,7 +216,7 @@ E4NEW:
 	Passenger:
 		CargoType: Archer
 	Voiced:
-		VoiceSet: NodArcherVoice
+		VoiceSet: NodCrossVoice
 	PersonValued:
 		ActorCount: 1
 		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4

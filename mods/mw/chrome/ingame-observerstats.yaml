@@ -6,9 +6,9 @@ Background@INGAME_OBSERVERSTATS_BG:
 		StatisticsCombatKey: StatisticsCombat
 		StatisticsGraphKey: StatisticsGraph
 	X: (WINDOW_RIGHT - WIDTH) / 2
-	Y: (WINDOW_BOTTOM - HEIGHT) / 2
+	Y: (WINDOW_BOTTOM - 400
 	Width: 1005
-	Height: 500
+	Height: 350
 	Children:
 		Background@BACKGROUND:
 			Width: PARENT_RIGHT

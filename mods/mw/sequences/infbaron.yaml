@@ -117,6 +117,61 @@ e3newv2:
 		Tick: 80
 	icon: ne1icon.shp
 		AddExtension: False
+e5new:
+	stunned: sulm4
+		ZOffset: 125
+		Start: 312
+		Length: 2
+		Tick: 200
+	stand: e5new
+		Start: 149
+		Facings: 8
+	run: e5new
+		Start: 0
+		Length: 8
+		Facings: 8
+		Tick: 100
+	shoot: e5new
+		Tick: 120
+		Start: 66
+		Length: 10
+		Facings: 8
+	idle1: e5new
+		Tick: 100
+		Start: 215
+		Length: 21
+	idle2: e5new
+		Tick: 100
+		Start: 215
+		Length: 21
+	die1: e5new
+		Start: 155
+		Length: 17
+		Tick: 80
+	# large hit
+	die2: splatterdead
+		Length: *
+		Tick: 80
+	# poision
+	die3: e5new
+		Start: 188
+		Length: 15
+		Tick: 80
+	# ballista
+	die4: e5new
+		Start: 205
+		Length: 10
+		Tick: 80
+	die-crushed: e1rot
+		Start: 16
+		Length: 4
+		Tick: 1600
+		ZOffset: -511
+	die5: burningman
+		Length: *
+		Tick: 80
+	icon: ne4icon.shp
+		AddExtension: False
 e4new:
 	stunned: sulm4
 		ZOffset: 125

@@ -96,6 +96,72 @@ BowNArrowDUMMY:
 			HeavyBuilding: 0
 			Spectral: 0
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+BowNArrowMarksman:
+	ReloadDelay: 45
+	Range: 6c0
+	MinRange: 0c512
+	Report: crossbow01.aud
+	InvalidTargets: Wall, Air
+	ValidTargets: Ground
+	Projectile: Missile
+		HorizontalRateOfTurn: 90
+		VerticalRateOfTurn: 90
+		RangeLimit: 8c204
+		Arm: 0
+		Speed: 400
+		LaunchAngle: 50
+		Palette: ra
+	Warhead@1Dam: SpreadDamage
+		Spread: 25
+		InvalidTargets: Wall, Air
+		ValidTargets: Ground
+		Damage: 2000
+		Versus:
+			Leather: 100
+			Light: 75
+			Heavy: 55
+			Concrete: 7
+			Knight: 15
+			LightCavalry: 80
+			MediumCavalry: 40
+			HeavyCavalry: 25
+			HeavyBuilding: 15
+			Spectral: 15
+		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+BowNArrowDUMMYMarksman:
+	ReloadDelay: 45
+	Range: 6c0
+	MinRange: 0c512
+	InvalidTargets: Wall, Air
+	ValidTargets: Ground
+	Projectile: Bullet
+		RangeLimit: 9c204
+		LaunchAngle: 50
+		Speed: 350
+		Inaccuracy: 0c0
+		ContrailLength: 20
+		ContrailWidth: 10
+		ContrailDelay: 0
+		ContrailUsePlayerColor : true
+		Image: e4arrow
+		Palette: ra
+	Warhead@1Dam: SpreadDamage
+		Spread: 25
+		InvalidTargets: Wall, Air
+		ValidTargets: Ground
+		Damage: 0
+		Versus:
+			Leather: 0
+			Light: 0
+			Heavy: 0
+			Concrete: 0
+			Knight: 0
+			LightCavalry: 0
+			MediumCavalry: 0
+			HeavyCavalry: 0
+			HeavyBuilding: 0
+			Spectral: 0
+		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
 BowNArrowAir:
 	ReloadDelay: 45
 	Range: 7c512
@@ -109,6 +175,43 @@ BowNArrowAir:
 		RangeLimit: 12c204
 		Arm: 0
 		Speed: 350
+		LaunchAngle: 46
+		Inaccuracy: 0c0
+		ContrailLength: 20
+		ContrailWidth: 10
+		ContrailDelay: 0
+		ContrailUsePlayerColor : true
+		Image: e4arrow
+		Palette: ra
+	Warhead@1Dam: SpreadDamage
+		Spread: 141
+		InvalidTargets: Wall, Ground
+		ValidTargets: Air
+		Damage: 1900
+		Versus:
+			Leather: 100
+			Light: 100
+			Heavy: 90
+			Concrete: 15
+			Knight: 15
+			LightCavalry: 80
+			MediumCavalry: 55
+			HeavyCavalry: 35
+			HeavyBuilding: 45
+		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+BowNArrowAirMarksman:
+	ReloadDelay: 45
+	Range: 7c512
+	MinRange: 0c0
+	Report: crossbow01.aud
+	InvalidTargets: Wall, Ground
+	ValidTargets: Air
+	Projectile: Missile
+		HorizontalRateOfTurn: 70
+		VerticalRateOfTurn: 70
+		RangeLimit: 12c204
+		Arm: 0
+		Speed: 450
 		LaunchAngle: 46
 		Inaccuracy: 0c0
 		ContrailLength: 20
