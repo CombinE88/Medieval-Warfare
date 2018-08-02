@@ -175,6 +175,11 @@ sulm3:
 		Start: 32
 		Length: 7
 		Facings: 32
+	shoot: 
+		Tick: 80
+		Start: 32
+		Length: 7
+		Facings: 32
 	icon: sulm3icon.shp
 		AddExtension: False
 sulm4:

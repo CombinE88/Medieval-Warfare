@@ -656,10 +656,9 @@ WarkiteCrossbow:
 	ValidTargets: Air, Ground
 	Projectile: Missile
 		HorizontalRateOfTurn: 150
-		VerticalRateOfTurn: 150
 		RangeLimit: 8c204
 		Arm: 0
-		Speed: 350
+		Speed: 300
 		Inaccuracy: 0c0
 		ContrailLength: 20
 		ContrailWidth: 10
@@ -668,7 +667,7 @@ WarkiteCrossbow:
 		Image: e4arrow
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
-		Spread: 356
+		Spread: 64
 		InvalidTargets: Wall
 		ValidTargets: Air, Ground
 		Damage: 3000
@@ -677,12 +676,12 @@ WarkiteCrossbow:
 			Light: 500
 			Heavy: 460
 			Knight: 125
-			LightCavalry: 75
-			MediumCavalry: 25
-			HeavyCavalry: 25
-			HeavyBuilding: 50
-			Concrete: 35   
-			Spectral: 15
+			LightCavalry: 275
+			MediumCavalry: 100
+			HeavyCavalry: 100
+			HeavyBuilding: 100
+			Concrete: 100   
+			Spectral: 100
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath 
 MammothDagger:
 	ReloadDelay: 45
@@ -1836,7 +1835,6 @@ BallonCrossbow:
 	ValidTargets: Air, Ground
 	Projectile: Missile
 		HorizontalRateOfTurn: 150
-		VerticalRateOfTurn: 150
 		RangeLimit: 8c204
 		Arm: 0
 		Speed: 350
