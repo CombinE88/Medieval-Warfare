@@ -286,10 +286,10 @@ beacon:
 	handaiconsmall: handaiconsmall
 		Offset: 0,-42
 select:
-	repair:
+	repair: towerrep
 		Start: 2
-allyrepair:
-	repair:
+allyrepair: 
+	repair: towerrep
 		Length: *
 		Tick: 160
 		ZOffset: 2047

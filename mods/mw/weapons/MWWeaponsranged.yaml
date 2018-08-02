@@ -648,14 +648,15 @@ OrniSpearThrow:
 			Spectral: 15
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath  
 WarkiteCrossbow:
-	ReloadDelay: 30
-	Range: 4c0
+	ReloadDelay: 130
+	Range: 5c0
 	MinRange: 0c512
 	Report: crossbow01.aud
 	InvalidTargets: Wall
 	ValidTargets: Air, Ground
 	Projectile: Missile
 		HorizontalRateOfTurn: 150
+		VerticalRateOfTurn: 150
 		RangeLimit: 8c204
 		Arm: 0
 		Speed: 350
@@ -670,12 +671,12 @@ WarkiteCrossbow:
 		Spread: 356
 		InvalidTargets: Wall
 		ValidTargets: Air, Ground
-		Damage: 2000
+		Damage: 3000
 		Versus:
-			Leather: 100
-			Light: 100
-			Heavy: 90
-			Knight: 45
+			Leather: 500
+			Light: 500
+			Heavy: 460
+			Knight: 125
 			LightCavalry: 75
 			MediumCavalry: 25
 			HeavyCavalry: 25
@@ -1835,6 +1836,7 @@ BallonCrossbow:
 	ValidTargets: Air, Ground
 	Projectile: Missile
 		HorizontalRateOfTurn: 150
+		VerticalRateOfTurn: 150
 		RangeLimit: 8c204
 		Arm: 0
 		Speed: 350

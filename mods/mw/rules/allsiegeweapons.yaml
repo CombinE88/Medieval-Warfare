@@ -172,9 +172,6 @@ SIEGE1:
 		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 	Targetable@CombatRole:
 		TargetTypes: Support
-	AutoTargetPriority@Counter1:
-		ValidTargets: HeavyCavalry, RegularCavalry, LightCavalry, Support, Defenses
-		Priority: 4
 SIEGE2:
 	Inherits: ^Siege
 	Inherits@GainsExperience: ^GainsExperience
@@ -237,9 +234,6 @@ SIEGE2:
 		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 	Targetable@CombatRole:
 		TargetTypes: Support
-	AutoTargetPriority@Counter1:
-		ValidTargets: Light, Heavy, Ranged, Support, LightCavalry, Defenses
-		Priority: 4
 SIEGE3:
 	Inherits: ^Siege
 	Inherits@GainsExperience: ^GainsExperience
@@ -252,6 +246,7 @@ SIEGE3:
 		MaxWeight: 6
 		PipCount: 6
 		Types: Archer, Infantry
+		EjectOnDeath: True
 	Valued:
 		Cost: 800
 	Tooltip:
@@ -402,9 +397,6 @@ SIEGE3:
 		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 	Targetable@CombatRole:
 		TargetTypes: HeavyCavalry
-	AutoTargetPriority@Counter1:
-		ValidTargets: Light, Ranged, Support, LightCavalry, Flying
-		Priority: 4
 SIEGE4:
 	Inherits: ^Siege
 	Inherits@GainsExperience: ^GainsExperience
@@ -526,10 +518,6 @@ SIEGE4:
 		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 	Targetable@CombatRole:
 		TargetTypes: HeavyCavalry      
-	AutoTargetPriority@Counter1:
-		ValidTargets: Structure, Defenses
-		InvalidTargets: NoAutoTarget, Wall
-		Priority: 4
 EHARVXL:
 	Inherits: ^Siege
 	Inherits@GetsPoisoned: ^GetsPoisoned

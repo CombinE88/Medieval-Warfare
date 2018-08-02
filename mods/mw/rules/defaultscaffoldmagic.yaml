@@ -92,6 +92,9 @@
 	HitShape:
 	EditorTilesetFilter:
 		Categories: Construction Sites
+	OwnerLostAction:
+		Action: Kill
+		DeathTypes: DefaultDeath
 ^2x2SITE:
 	Inherits: ^ConstructionSite
 	Inherits@HitShape: ^2x2Shape

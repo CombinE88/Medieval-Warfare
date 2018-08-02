@@ -86,9 +86,6 @@ GTWNEW:
 		Range: 0c512, 3c0
 	Targetable@CombatRole:
 		TargetTypes: Defenses
-	AutoTargetPriority@Counter1:
-		ValidTargets: Light, Heavy, LightCavalry, Support, Ranged
-		Priority: 4
 SAMNEW:
 	Inherits: ^MWDefense
 	Inherits@AUTOTARGET: ^AutoTargetAir
@@ -189,9 +186,6 @@ TRIBU:
 		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4 
 	Targetable@CombatRole:
 		TargetTypes: Defenses
-	AutoTargetPriority@Counter1:
-		ValidTargets: LightCavalry, RegularCavalry, HeavyCavalry, Support
-		Priority: 4
 BATO:
 	Inherits: ^MWDefense
 	Inherits@AUTOTARGET: ^AutoTargetAll
@@ -257,9 +251,6 @@ BATO:
 		Type: AGCircle
 		Range: 8c0
 		Color: FFFF0080
-	AutoTargetPriority@Counter1:
-		ValidTargets: LightCavalry, RegularCavalry, HeavyCavalry, Support
-		Priority: 4
 GUNNEW:
 	Inherits: ^MWDefense
 	Inherits@AUTOTARGET: ^AutoTargetGround
@@ -307,9 +298,6 @@ GUNNEW:
 		Range: 0c512, 3c0
 	Targetable@CombatRole:
 		TargetTypes: Defenses
-	AutoTargetPriority@Counter1:
-		ValidTargets: LightCavalry, RegularCavalry, HeavyCavalry, Support
-		Priority: 4
 CSTLWLL:
 	Inherits: ^Wall
 	Inherits@Hitshape: ^1x1Shape
@@ -541,9 +529,6 @@ SIEGETRIBU:
 		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4 
 	Targetable@CombatRole:
 		TargetTypes: Defenses
-	AutoTargetPriority@Counter1:
-		ValidTargets: LightCavalry, RegularCavalry, HeavyCavalry, Support
-		Priority: 3
 	WithRangeCircle:
 		Type: Tribu
 		UsePlayerColor: true

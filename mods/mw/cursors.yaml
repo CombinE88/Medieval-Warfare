@@ -100,10 +100,10 @@ Cursors:
 		deploy:
 			Start: 11
 			Length: 7
-		repair:
+		repair: allrepair
 			Start: 32
 			Length: 12
-		repair-blocked:
+		repair-blocked: allrepair
 			Start: 124
 			Length: 1
 	newcursorsell.shp: newcursorsell

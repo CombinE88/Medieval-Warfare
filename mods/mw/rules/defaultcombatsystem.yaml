@@ -1,7 +1,7 @@
 ^AutoTargetGround:
 	AutoTarget:
 	AutoTargetPriority@DEFAULT:
-		ValidTargets: Infantry, Vehicle, Creep, Water, , Cavalry, Siege
+		ValidTargets: Infantry, Vehicle, Creep, Water, Defense , Cavalry, Siege
 		InvalidTargets: NoAutoTarget, Wall
 		Priority: 3
 	AutoTargetPriority@PEASANTS:

@@ -9,6 +9,12 @@
 		RepairPercent: 40
 		RepairStep: 1000
 		PlayerExperience: 15
+	WithBuildingRepairDecoration:
+		Image: allyrepair
+		Sequence: repair
+		ReferencePoint: Center
+		Palette: player
+		IsPlayerPalette: True
 	ThrowsShrapnel@SMALL:
 		Weapons: SmallWood1, SmallWood2, SmallWood3, SmallStone1, SmallStone2
 		Pieces: 2, 4
@@ -31,6 +37,12 @@
 		RepairPercent: 40
 		RepairStep: 1000
 		PlayerExperience: 15
+	WithBuildingRepairDecoration:
+		Image: allyrepair
+		Sequence: repair
+		ReferencePoint: Center
+		Palette: player
+		IsPlayerPalette: True
 	Targetable:
 		TargetTypes: Ground, C4, Structure, Pentagram
 	Sellable:
@@ -355,6 +367,7 @@
 	Inherits@Hitshape: ^1x1Shape
 	-ActorLostNotification:
 	-RepairableBuilding:
+	-WithBuildingRepairDecoration:
 	EditorTilesetFilter:
 		ExcludeTilesets: TEMPERATE, SNOW, DESERT, WINTER
 		Categories: 
@@ -394,6 +407,7 @@
 		Categories:
 	ShakeOnCreate:
 	-RepairableBuilding:
+	-WithBuildingRepairDecoration:
 	-ActorLostNotification:
 	Armor:
 		Type: Concrete

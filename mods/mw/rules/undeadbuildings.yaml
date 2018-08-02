@@ -136,6 +136,12 @@ ZIGGURAT1:
 		RepairPercent: 40
 		RepairStep: 3000
 		PlayerExperience: 15
+	WithBuildingRepairDecoration:
+		Image: allyrepair
+		Sequence: repair
+		ReferencePoint: Center
+		Palette: player
+		IsPlayerPalette: True
 	WithMakeAnimation:
 	ShakeOnCreate:
 		Time: 120

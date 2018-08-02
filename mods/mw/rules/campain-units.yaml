@@ -68,9 +68,6 @@ HOOD:
 		Voice: Move
 	Targetable@CombatRole:
 		TargetTypes: Ranged
-	AutoTargetPriority@Counter1:
-		ValidTargets: Light, Ranged, LightCavalry, Support, Flying
-		Priority: 4
 	AnnounceOnKill:
 	Voiced:
 		VoiceSet: CommandoVoice

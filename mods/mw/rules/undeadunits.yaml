@@ -133,9 +133,6 @@ DEADROSS:
 		RequiresCondition: makeanim
 	Targetable@CombatRole:
 		TargetTypes: LightCavalry
-	AutoTargetPriority@Counter1:
-		ValidTargets: HeavyCavalry, RegularCavalry, LightCavalry, Flying, Support
-		Priority: 4
 UNDEAD1:
 	Inherits: ^Skeleton
 	Inherits: ^GainPerZigurrat
@@ -167,9 +164,6 @@ UNDEAD1:
 		Type: Heavy
 	Targetable@CombatRole:
 		TargetTypes: Light
-	AutoTargetPriority@Counter1:
-		ValidTargets: Light, Ranged, LightCavalry, Support, Heavy
-		Priority: 4
 UNDEAD2:
 	Inherits: ^Skeleton
 	Inherits: ^GainPerZigurrat
@@ -195,9 +189,6 @@ UNDEAD2:
 		Type: Heavy
 	Targetable@CombatRole:
 		TargetTypes: Light
-	AutoTargetPriority@Counter1:
-		ValidTargets: Light, Ranged, LightCavalry, Support, Heavy
-		Priority: 4
 UNDEAD3:
 	Inherits: ^Skeleton
 	Inherits@AUTOTARGETDEF: ^AutoTargetDefenses
@@ -230,12 +221,6 @@ UNDEAD3:
 	-Crushable:
 	Targetable@CombatRole:
 		TargetTypes: Light
-	AutoTargetPriority@Counter1:
-		ValidTargets: LightCavalry, Defenses
-		Priority: 5
-	AutoTargetPriority@Counter2:
-		ValidTargets: RegularCavalry, HeavyCavalry, Defenses
-		Priority: 4
 UNDEAD4:
 	Inherits: ^Skeleton
 	Inherits@AUTOTARGETDEF: ^AutoTargetDefenses
@@ -309,9 +294,6 @@ UNDEAD5:
 		BuildDuration: 500
 	Targetable@CombatRole:
 		TargetTypes: Ranged
-	AutoTargetPriority@Counter1:
-		ValidTargets: Light, Ranged, LightCavalry, Support, Flying
-		Priority: 4
 UNDEAD6:
 	Inherits: ^Skeleton
 	Inherits@AUTOTARGETDEF: ^AutoTargetDefenses
@@ -574,9 +556,6 @@ ACOLYTEC:
 		TargetActors: split7, split8
 	Targetable@CombatRole:
 		TargetTypes: Ranged
-	AutoTargetPriority@Counter1:
-		ValidTargets: Light, Ranged, LightCavalry, Support, Flying
-		Priority: 4
 	Selectable:
 VAMP:
 	Inherits: ^Knight
@@ -627,9 +606,6 @@ VAMP:
 		IntoActor: vampflying
 	Targetable@CombatRole:
 		TargetTypes: Ranged, Heavy
-	AutoTargetPriority@Counter1:
-		ValidTargets: Light, Ranged, LightCavalry, Support
-		Priority: 4
 VAMPFLYING:
 	Inherits: ^Helicopter
 	Inherits@GainsExperience: ^GainsExperience
@@ -764,9 +740,6 @@ DEMONHORSE:
 	SelectionDecorations:
 	Targetable@CombatRole:
 		TargetTypes: RegularCavalry
-	AutoTargetPriority@Counter1:
-		ValidTargets: LightCavalry, RegularCavalry, HeavyCavalry, Support, Defenses
-		Priority: 4
 LICHK:
 	Inherits: ^Knight
 	Inherits@AUTOTARGET: ^AutoTargetGround
@@ -1097,12 +1070,6 @@ RESSURECT3:
 		ScanRadius: 10
 	Targetable@CombatRole:
 		TargetTypes: Light
-	AutoTargetPriority@Counter1:
-		ValidTargets: LightCavalry, Defenses
-		Priority: 5
-	AutoTargetPriority@Counter2:
-		ValidTargets: RegularCavalry, HeavyCavalry, Defenses
-		Priority: 4
 RESSURECT4:
 	Inherits: ^SkeletonSpawn
 	Inherits: ^GainPerZigurrat

@@ -298,9 +298,6 @@ ROSS1:
 		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 	Targetable@CombatRole:
 		TargetTypes: RegularCavalry
-	AutoTargetPriority@Counter1:
-		ValidTargets: LightCavalry, RegularCavalry, HeavyCavalry, Support, Defenses
-		Priority: 4
 ROSS2:
 	Inherits: ^Cavalry
 	Inherits@AUTOTARGET: ^AutoTargetGround
@@ -355,9 +352,6 @@ ROSS2:
 		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 	Targetable@CombatRole:
 		TargetTypes: RegularCavalry
-	AutoTargetPriority@Counter1:
-		ValidTargets: LightCavalry, RegularCavalry, HeavyCavalry, Support, Defenses
-		Priority: 4
 ROSS5:
 	Inherits: ^Cavalry
 	Inherits@AUTOTARGET: ^AutoTargetAll
@@ -503,9 +497,6 @@ ROSS3:
 		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 	Targetable@CombatRole:
 		TargetTypes: RegularCavalry
-	AutoTargetPriority@Counter1:
-		ValidTargets: Light, Heavy, Ranged, Flying, LightCavalry, Support, Spectral, Defenses
-		Priority: 4
 ROSS4:
 	Inherits: ^Cavalry
 	Inherits@AUTOTARGET: ^AutoTargetAll
@@ -564,9 +555,6 @@ ROSS4:
 		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 	Targetable@CombatRole:
 		TargetTypes: LightCavalry
-	AutoTargetPriority@Counter1:
-		ValidTargets: HeavyCavalry, RegularCavalry, LightCavalry, Flying, Support, Defenses
-		Priority: 4
 ROSS4B:
 	Inherits: ^Cavalry
 	Inherits@AUTOTARGET: ^AutoTargetGround
@@ -620,10 +608,6 @@ ROSS4B:
 		ActorCount: 1
 		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 	Targetable@CombatRole:
-		TargetTypes: LightCavalry
-	AutoTargetPriority@Counter1:
-		ValidTargets: Light, Heavy, LightCavalry, Support, Ranged
-		Priority: 4
 ROSS4C:
 	Inherits: ^Cavalry
 	Inherits@AUTOTARGET: ^AutoTargetGround
@@ -678,6 +662,3 @@ ROSS4C:
 		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 	Targetable@CombatRole:
 		TargetTypes: LightCavalry
-	AutoTargetPriority@Counter1:
-		ValidTargets: Light, Heavy, LightCavalry, Support, Ranged
-		Priority: 4

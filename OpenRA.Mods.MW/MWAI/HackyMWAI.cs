@@ -342,9 +342,9 @@ namespace OpenRA.Mods.MW.MWAI
 		public bool IsEnabled;
 		public List<Squad> Squads = new List<Squad>();
 		public Player Player { get; private set; }
-        
-		// MW Related
-		public int NumberCountPeasants;
+
+        // MW Related
+        public int NumberCountPeasants;
 		public int NumberCountPossiblePopulation;
 		public int NumberCountPotentialFreeBeds;
 

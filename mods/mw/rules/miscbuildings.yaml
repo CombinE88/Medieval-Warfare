@@ -5,6 +5,12 @@ FACTNEW:
 		RepairPercent: 40
 		RepairStep: 3000
 		PlayerExperience: 15
+	WithBuildingRepairDecoration:
+		Image: allyrepair
+		Sequence: repair
+		ReferencePoint: Center
+		Palette: player
+		IsPlayerPalette: True
 	WithMakeAnimation:
 	ExternalCondition@never:
 		Condition: never
@@ -788,6 +794,12 @@ MISS:
 		HP: 250000
 	RepairableBuilding:
 	EngineerRepairable:
+	WithBuildingRepairDecoration:
+		Image: allyrepair
+		Sequence: repair
+		ReferencePoint: Center
+		Palette: player
+		IsPlayerPalette: True
 	CaptureNotification:
 		Notification: CivilianBuildingCaptured
 	ThrowsShrapnel@LARGE:
@@ -814,6 +826,12 @@ TECH1:
 	Health:
 		HP: 300000
 	RepairableBuilding:
+	WithBuildingRepairDecoration:
+		Image: allyrepair
+		Sequence: repair
+		ReferencePoint: Center
+		Palette: player
+		IsPlayerPalette: True
 	EngineerRepairable:
 	CaptureNotification:
 		Notification: CivilianBuildingCaptured

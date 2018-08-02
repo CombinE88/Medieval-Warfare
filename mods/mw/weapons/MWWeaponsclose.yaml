@@ -194,9 +194,9 @@ PikeSpread:
 		InvalidTargets: Air
 		ValidStances: Enemy, Neutral  
 		Versus:
-			Leather: 20
-			Light: 20
-			Heavy: 30
+			Leather: 15
+			Light: 15
+			Heavy: 25
 			Concrete: 85
 			HeavyBuilding: 100
 			Knight: 30

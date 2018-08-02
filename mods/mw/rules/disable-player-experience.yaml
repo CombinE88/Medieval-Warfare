@@ -4,9 +4,21 @@
 ^BaseBuilding:
 	RepairableBuilding:
 		PlayerExperience: 0
+	WithBuildingRepairDecoration:
+		Image: allyrepair
+		Sequence: repair
+		ReferencePoint: Center
+		Palette: player
+		IsPlayerPalette: True
 ^TechBuilding:
 	RepairableBuilding:
 		PlayerExperience: 0
+	WithBuildingRepairDecoration:
+		Image: allyrepair
+		Sequence: repair
+		ReferencePoint: Center
+		Palette: player
+		IsPlayerPalette: True
 E6:
 	Captures:
 		PlayerExperience: 0

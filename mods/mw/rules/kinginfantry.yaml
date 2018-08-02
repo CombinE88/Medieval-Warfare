@@ -222,12 +222,6 @@ E2NEWV2:
 		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 	Targetable@CombatRole:
 		TargetTypes: Light
-	AutoTargetPriority@Counter1:
-		ValidTargets: LightCavalry, Defenses
-		Priority: 5
-	AutoTargetPriority@Counter2:
-		ValidTargets: RegularCavalry, HeavyCavalry, Defenses
-		Priority: 4
 E3NEW:
 	Inherits: ^Knight
 	Inherits@AUTOTARGET: ^AutoTargetGround
@@ -343,9 +337,6 @@ E4NEWV2:
 		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 	Targetable@CombatRole:
 		TargetTypes: Ranged
-	AutoTargetPriority@Counter1:
-		ValidTargets: Light, Ranged, LightCavalry, Support, Flying
-		Priority: 4
 RMBONEW:
 	Inherits: ^Knight
 	RevealsShroud:
@@ -402,9 +393,6 @@ RMBONEW:
 		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 	Targetable@CombatRole:
 		TargetTypes: Ranged, Heavy
-	AutoTargetPriority@Counter1:
-		ValidTargets: Light, Ranged, LightCavalry, Support, RegularCavalry, Heavy, Spectral
-		Priority: 4
 NEWCOMM:
 	Inherits: ^Knight
 	Inherits@AUTOTARGET: ^AutoTargetGround
@@ -463,9 +451,6 @@ NEWCOMM:
 		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 	Targetable@CombatRole:
 		TargetTypes: Heavy
-	AutoTargetPriority@Counter1:
-		ValidTargets: Light, Ranged, Support, Heavy, Spectral, Defenses
-		Priority: 4
 	Targetable@Paralyze:
 		TargetTypes: Juggernaut
 	ExternalCondition@Juggernaut:

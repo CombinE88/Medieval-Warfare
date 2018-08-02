@@ -29,6 +29,9 @@ namespace OpenRA.Mods.MW.Traits
         [Desc("Resource Type / Prerequisites. NONE for none")]
         public readonly Dictionary<string, string> ResourceTypesPreres = new Dictionary<string, string>();
 
+        [Desc("Resource Type / Prerequisites. NONE for none")]
+        public readonly Dictionary<string, int> ResourceExtraTimes = new Dictionary<string, int>();
+
         public override object Create(ActorInitializer init) { return new AcolytePrey(this); }
     }
 

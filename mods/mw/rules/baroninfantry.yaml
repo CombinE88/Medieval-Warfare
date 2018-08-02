@@ -45,12 +45,6 @@ E2NEW:
 		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 	Targetable@CombatRole:
 		TargetTypes: Light
-	AutoTargetPriority@Counter1:
-		ValidTargets: LightCavalry, Defenses
-		Priority: 5
-	AutoTargetPriority@Counter2:
-		ValidTargets: RegularCavalry, HeavyCavalry, Defenses
-		Priority: 4
 E3NEWV2:
 	Inherits: ^Knight
 	Inherits@AUTOTARGET: ^AutoTargetGround
@@ -152,9 +146,6 @@ FRMGE:
 		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 	Targetable@CombatRole:
 		TargetTypes: Ranged
-	AutoTargetPriority@Counter1:
-		ValidTargets: Light, Heavy, Ranged, Spectral, Defenses
-		Priority: 4
 E4NEW:
 	Inherits: ^Knight
 	Inherits@AUTOTARGET: ^AutoTargetAll
@@ -222,9 +213,6 @@ E4NEW:
 		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 	Targetable@CombatRole:
 		TargetTypes: Ranged
-	AutoTargetPriority@Counter1:
-		ValidTargets: Light, Ranged, LightCavalry, Support, Flying
-		Priority: 4
 ASSASSIN:
 	Inherits: ^Knight
 	Inherits@AUTOTARGET: ^AutoTargetAll

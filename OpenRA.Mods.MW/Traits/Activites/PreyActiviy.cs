@@ -32,6 +32,7 @@ namespace OpenRA.Mods.MW.Activities
         private string condtion;
 
         private Dictionary<string, string> resourceTypesPreres;
+        private Dictionary<string, int> resourceExtraTimes;
 
         public PreyActivity(Actor self, Actor dockact, bool facingDock, Dock d)
         {
@@ -50,6 +51,7 @@ namespace OpenRA.Mods.MW.Activities
             condtion = self.Info.TraitInfo<AcolytePreyInfo>().SelfEnabledCondition;
 
             resourceTypesPreres = self.Info.TraitInfo<AcolytePreyInfo>().ResourceTypesPreres;
+            resourceExtraTimes = self.Info.TraitInfo<AcolytePreyInfo>().ResourceExtraTimes;
         }
 
         public override Activity Tick(Actor self)
@@ -160,7 +162,7 @@ namespace OpenRA.Mods.MW.Activities
             if (cell != CPos.Zero && resLayer.GetResourceDensity(cell) > 0)
             {
                 var type = resLayer.GetResource(cell);
-                var ammount = type.Info.ValuePerUnit;
+                var ammount = type.Info.ValuePerUnit + ReturnExtraTime(type);
 
                 if ((self.Owner.PlayerActor.Trait<PlayerResources>().Resources + ammount) <= self.Owner.PlayerActor.Trait<PlayerResources>().ResourceCapacity)
                 {
@@ -186,6 +188,14 @@ namespace OpenRA.Mods.MW.Activities
                 }
             }
 
+            return 0;
+        }
+
+        public int ReturnExtraTime(ResourceType restype)
+        {
+            foreach (var type in resourceExtraTimes)
+                if (restype.Info.Name == type.Key)
+                    return type.Value;
             return 0;
         }
 
