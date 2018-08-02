@@ -27,11 +27,12 @@ waypoint:
 		QuantizedFacings: 1
 	EditorTilesetFilter:
 		Categories: Spawn and Marker
-^fact.colorpicker:
+fact.colorpicker:
 	Inherits: FACTNEW
 	RenderSprites:
 		Image: newfact
 		Palette: colorpicker
+	-EditorTilesetFilter:
 CAMERA:
 	Interactable:
 	EditorOnlyTooltip:
