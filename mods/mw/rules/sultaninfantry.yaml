@@ -336,8 +336,8 @@ SULE6:
 		DeliveryBuildings: zeroproc, sulmill, nodproc
 		Resources: Crops, Grains, Wood, Goods, Lumber, Corn
 		PipCount: 2
-		Capacity: 7
-		BaleLoadDelay: 30
+		Capacity: 5
+		BaleLoadDelay: 25
 		BaleUnloadDelay: 5
 		SearchFromProcRadius: 25
 		SearchFromOrderRadius: 15

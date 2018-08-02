@@ -44,7 +44,7 @@ v19new.husk:
 explosion:
 	cannonsboulder: cannonstrikeboulder
 		Offset: 0,-60,0
-		Tick: 50
+		Tick: 120
 	smokey: smokey
 	deadk1: deadbody01
 		Length: 26
@@ -325,3 +325,35 @@ trmr18:
 		Length: 20
 		Start: 40
 		Tick: 20
+feathera: 
+	idle: airbornedebris
+		Length: 12
+		Start: 0
+		Tick: 100
+featherb: 
+	idle: airbornedebris
+		Length: 12
+		Start: 13
+		Tick: 100
+featherc: 
+	idle: airbornedebris
+		Length: 13
+		Start: 26
+		Tick: 100
+featherd: 
+	idle: airbornedebris
+		Length: 13
+		Start: 40
+		Tick: 100
+flygearsa: 
+	idle: airbornedebris
+		Length: 14
+		Start: 55
+		Tick: 40
+		Offset: 0,4
+flygearsb: 
+	idle: airbornedebris
+		Length: 14
+		Start: 70
+		Tick: 40
+		Offset: 0,4

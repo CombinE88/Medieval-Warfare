@@ -246,23 +246,11 @@ WARKITECRASH.Husk:
 		Image: warkitehusk
 	WithFacingSpriteBody:
 		Sequence: crash
-DRAGONDEADPLACEHOLDER:
-	Immobile:
-		OccupiesSpace: false
-	HiddenUnderFog:
-		Type: CenterPosition
-	ConditionManager:
-	KillsSelf:
-		Delay: 5
-	ProximityExternalCondition@INSTANT:
-		Range: 1c0
-		ValidStances: Ally, Neutral
-		Condition: DragonGroundDead
 DRAGON.Husk:
 	Inherits: ^HelicopterHusk
 	ConditionManager:
 	Tooltip:
-		Name: Dragon Rider (Falling)
+		Name: Clockwork Dragon (Falling)
 	Aircraft:
 		TurnSpeed: 4
 		Speed: 186
@@ -278,36 +266,15 @@ DRAGON.Husk:
 		Explosion: DragonDecay
 	KillsSelf@2:
 		Delay: 25
-	CombinEGrantRandomCondition:
-		RandomConditions: valida, validb, validc, validd, valide
-		FallbackCondition: valida
 	SpawnActorOnDeath@Dragon:
 		Actor: DRAGONWALK
-		Probability: 100
+		Probability: 25
 		OwnerType: InternalName
-		RequiresCondition: valida
 		InternalOwner: Creeps
-	SpawnActorOnDeath@chance:
-		Actor: DRAGONDEADPLACEHOLDER
-		Probability: 100
-		OwnerType: InternalName
-		RequiresCondition: validb || validc || validd || valide
-		InternalOwner: Creeps
-	#anti error fix
-	ExternalCondition@valida:
-		Condition: valida
-	#anti error fix
-	ExternalCondition@validb:
-		Condition: validb
-	#anti error fix
-	ExternalCondition@validc:
-		Condition: validc
-	#anti error fix
-	ExternalCondition@validd:
-		Condition: validd
-	#anti error fix
-	ExternalCondition@valide:
-		Condition: valide
+	ThrowsShrapnel@Gears:
+		Weapons: FDebrClocka, FDebrClockb
+		Pieces: 1, 3
+		Range: 0c512, 3c0
 DRGNEMPTY:
 	Inherits: ^Helicopter
 	Valued:
@@ -333,6 +300,10 @@ DRGNEMPTY:
 		Weapon: DragonFlame
 		EmptyWeapon: DragonFlame
 	FlyAwayOnIdle:
+	ThrowsShrapnel@Gears:
+		Weapons: FDebrClocka, FDebrClockb
+		Pieces: 3, 5
+		Range: 0c512, 3c0
 DAVINCI.Husk:
 	Inherits: ^HelicopterHusk
 	ThrowsShrapnel:
@@ -358,6 +329,10 @@ DAVINCI.Husk:
 		Delay: 25
 	SpawnActorOnDeath:
 		Actor: DAVINCICRASH.Husk
+	ThrowsShrapnel@Gears:
+		Weapons: FDebrClocka, FDebrClockb
+		Pieces: 3, 5
+		Range: 0c512, 3c0
 DAVINCICRASH.Husk:
 	Inherits: ^MedievalHusk
 	RenderSprites:

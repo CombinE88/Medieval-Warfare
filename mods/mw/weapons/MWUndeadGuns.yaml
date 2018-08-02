@@ -342,20 +342,20 @@ AcolyteSpawnHelper:
 	Range: 9c0
 	MinRange: 0
 	InvalidTargets: Air, Cursed, Wall, Structure, Siege
-	ValidTargets: Ground, Cursable
+	ValidTargets: Cursable
 	Projectile: Bullet
 		Speed: 1c382
 	Warhead@Curse: CurseOnHit
 		Range: 1c256
 		Duration: 350
 		InvalidTargets: Air, Wall, Structure, Siege
-		ValidTargets: Ground, Cursable
+		ValidTargets: Cursable
 		ValidStances: Enemy, Neutral
 		Condition: cursed
 	Warhead@2Dam: SpreadDamage
 		Spread: 1c256
 		InvalidTargets: Air, Cursed, Wall, Structure, Siege
-		ValidTargets: Ground, Cursable
+		ValidTargets: Cursable
 		Damage: 1
 		DamageTypes: Prone50Percent, TriggerProne, RippedApartDeath, SpawnSoul
 	Warhead@SpawnEffect: CreateEffect

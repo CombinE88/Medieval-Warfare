@@ -95,7 +95,7 @@ BowNArrowDUMMY:
 			Spectral: 0
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
 BowNArrowMarksman:
-	ReloadDelay: 45
+	ReloadDelay: 50
 	Range: 6c0
 	MinRange: 0c512
 	Report: crossbow01.aud
@@ -104,25 +104,24 @@ BowNArrowMarksman:
 	Projectile: Missile
 		HorizontalRateOfTurn: 90
 		VerticalRateOfTurn: 90
-		RangeLimit: 8c204
+		RangeLimit: 9c204
 		Arm: 0
-		Speed: 400
+		Speed: 200
 		Palette: ra
-		CloseEnough: 0c500
 	Warhead@1Dam: SpreadDamage
 		Spread: 45
 		InvalidTargets: Wall, Air
 		ValidTargets: Ground
-		Damage: 2000
+		Damage: 2400
 		Versus:
 			Leather: 100
-			Light: 75
-			Heavy: 55
+			Light: 80
+			Heavy: 65
 			Concrete: 7
 			Knight: 15
 			LightCavalry: 80
-			MediumCavalry: 40
-			HeavyCavalry: 25
+			MediumCavalry: 50
+			HeavyCavalry: 35
 			HeavyBuilding: 15
 			Spectral: 15
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
@@ -196,7 +195,7 @@ BowNArrowAir:
 			HeavyBuilding: 45
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
 BowNArrowAirMarksman:
-	ReloadDelay: 45
+	ReloadDelay: 50
 	Range: 7c512
 	MinRange: 0c0
 	Report: crossbow01.aud
@@ -220,7 +219,7 @@ BowNArrowAirMarksman:
 		Spread: 141
 		InvalidTargets: Wall, Ground
 		ValidTargets: Air
-		Damage: 1900
+		Damage: 2200
 		Versus:
 			Leather: 100
 			Light: 100
@@ -811,7 +810,7 @@ paladingunvisual:
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath	 
 Dagger:
 	ReloadDelay: 60
-	Range: 3c512
+	Range: 5c512
 	InvalidTargets: Wall
 	Report: throw01.aud
 	InvalidTargets: Wall, Structure, Air
@@ -1448,12 +1447,12 @@ TribuchetBoulder:
 		Speed: 250
 		Blockable: false
 		LaunchAngle: 106
-		Inaccuracy: 0c512
+		Inaccuracy: 1c512
 		Image: tribuboulder
 		ContrailLength: 6
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
-		Spread: 112
+		Spread: 128
 		Damage: 20000
 		ValidTargets: Ground
 		InvalidTargets: Air

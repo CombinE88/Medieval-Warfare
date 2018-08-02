@@ -57,7 +57,7 @@ warkite:
 		Start: 225
 		Facings: 32
 		Offset: 0,-4,0
-	attack: 
+	shoot: 
 		Tick: 120
 		Start: 0
 		Length: 7
@@ -88,7 +88,7 @@ warballoon:
 		Length: 7
 		Facings: 32
 		Offset: 0,-24,0
-	attack: 
+	shoot: 
 		Tick: 40
 		Start: 32
 		Length: 7

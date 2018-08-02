@@ -570,6 +570,7 @@ CASTLE:
 		ClockSequence: clock
 		CircleSequence: circles
 		OrderName: CannonPowerInfoOrder
+	WithNukeLaunchAnimation:
 	SupportPowerChargeBar:
 	ThrowsShrapnel@LARGE:
 		Weapons: LargeWood1, LargeWood1, LargeStone1, LargeStone1

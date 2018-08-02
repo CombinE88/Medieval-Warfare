@@ -129,7 +129,7 @@ SetFire:
 	Warhead@1Dam: SpreadDamage
 		Spread: 512
 		Delay: 5
-		Damage: 3000
+		Damage: 5000
 		ValidTargets: Structure
 		InvalidTargets: Infantry
 		Versus:
@@ -138,7 +138,7 @@ SetFire:
 		DamageTypes: Prone50Percent, TriggerProne, BurnToDeath 
 	Warhead@2Dam: SpreadDamage
 		Spread: 512
-		Damage: 2000
+		Damage: 4000
 		Delay: 15
 		ValidTargets: Structure
 		InvalidTargets: Infantry
@@ -148,7 +148,7 @@ SetFire:
 		DamageTypes: Prone50Percent, TriggerProne, BurnToDeath 
 	Warhead@3Dam: SpreadDamage
 		Spread: 512
-		Damage: 1700
+		Damage: 2000
 		Delay: 27
 		ValidTargets: Structure
 		InvalidTargets: Infantry
@@ -999,6 +999,34 @@ HuskExplosion:
 	Warhead@4Smu: LeaveSmudge
 		SmudgeType: Scorch
 		InvalidTargets: Siege, Structure, Wall
+^FeatherDebris:
+	Range: 2c0
+	ValidTargets: Ground
+	InvalidTargets: Air
+	Projectile: Bullet
+		Speed: 20, 40
+		LaunchAngle: 80, 192
+		Palette: ra
+		Shadow: true
+		Blockable: false
+	Warhead@1Dam: SpreadDamage
+		Spread: 200
+		Falloff: 100, 100, 0
+		Damage: 0
+		ValidTargets: Ground
+		InvalidTargets: Air
+		Versus:
+			None: 100
+			Leather: 85
+			Light: 75
+			Heavy: 65
+			Knight: 50
+			Concrete: 30
+			LightCavalry: 60
+			MediumCavalry: 40
+			HeavyCavalry: 25
+			Spectral: 15
+		DamageTypes: Prone100Percent, TriggerProne, DefaultDeath
 Demolish:
 	Inherits: LargeStone1
 	Burst: 3
@@ -1074,6 +1102,30 @@ SDebrWeapon3:
 	Inherits: ^Debris
 	Projectile: Bullet
 		Image: trmr18	  
+FDebrfeathera:
+	Inherits: ^FeatherDebris
+	Projectile: Bullet
+		Image: feathera
+FDebrfeatherb:
+	Inherits: ^FeatherDebris
+	Projectile: Bullet
+		Image: featherb
+FDebrfeatherc:
+	Inherits: ^FeatherDebris
+	Projectile: Bullet
+		Image: featherc
+FDebrfeatherd:
+	Inherits: ^FeatherDebris
+	Projectile: Bullet
+		Image: featherd
+FDebrClocka:
+	Inherits: ^Debris
+	Projectile: Bullet
+		Image: flygearsa
+FDebrClockb:
+	Inherits: ^Debris
+	Projectile: Bullet
+		Image: flygearsb
 Dragonbite:
 	ReloadDelay: 30
 	Range: 1c0

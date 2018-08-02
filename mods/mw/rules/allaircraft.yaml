@@ -73,6 +73,10 @@ ORNI:
 	AutoTargetPriority@Counter1:
 		ValidTargets: HeavyCavalry, RegularCavalry, LightCavalry, Support, Flying, Defenses
 		Priority: 4
+	ThrowsShrapnel@SMALL:
+		Weapons: SmallWood1, SmallWood2, SmallWood3
+		Pieces: 1, 2
+		Range: 0c512, 3c0
 WARKITE:
 	Inherits: ^Helicopter
 	Inherits@EXPERIENCE: ^GainsExperience
@@ -99,7 +103,7 @@ WARKITE:
 	Armor:
 		Type: LightCavalry
 	RevealsShroud:
-		Range: 10c0
+		Range: 14c0
 		Type: CenterPosition
 	Armament:
 		Name: primary
@@ -156,7 +160,7 @@ DRGNRDR:
 	Valued:
 		Cost: 2000
 	Tooltip:
-		Name: Dragon Rider
+		Name: Clockwork Dragon
 	Buildable:
 		Description: The Dragon Rider is a legendary creature, \ntypically scaled or fire-spewing and with serpentine, \nreptilian or avian traits mounted and controlled by a Tamer.\n  Strong vs Infantry, Buildings and Aircraft\n  Moderate vs Cavalry\n  Can attack Aircraft\n\nTrains: 1 Peasant\n
 		BuildPaletteOrder: 100
@@ -191,7 +195,7 @@ DRGNRDR:
 		Image: drgnrdr
 		PlayerPalette: raplayer
 	AmmoPool:
-		Ammo: 12
+		Ammo: 14
 		Name: primary
 		Armaments: primary, secondary
 		PipCount: 5
@@ -200,7 +204,7 @@ DRGNRDR:
 		AmmoCondition: ammo
 	ReloadAmmoPool:
 		AmmoPool: primary
-		Delay: 25
+		Delay: 21
 		Count: 2
 	SpawnActorOnDeath:
 		Actor: DRAGON.Husk
@@ -216,15 +220,17 @@ DRGNRDR:
 		VoiceSet: DragonVoice
 	SpawnActorOnDeath@Prime:
 		Actor: DRGNEMPTY
-		Probability: 33
 		OwnerType: InternalName
 		InternalOwner: Neutral
 		RequiresCondition: valida && !validb
 	PersonValued:
-		ActorCount: 1
-		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
+		ActorCount: 2
 	Targetable@CombatRole:
 		TargetTypes: Flying
+	ThrowsShrapnel@Gears:
+		Weapons: FDebrClocka, FDebrClockb
+		Pieces: 3, 5
+		Range: 0c512, 3c0
 DRAGONWALK:
 	Inherits: ^Siege
 	Inherits@AUTOTARGET: ^AutoTargetGround
@@ -279,6 +285,10 @@ DRAGONWALK:
 		WanderMoveRadius: 3
 		MinMoveDelay: 50
 		MaxMoveDelay: 750
+	ThrowsShrapnel@Gears:
+		Weapons: FDebrClocka, FDebrClockb
+		Pieces: 3, 5
+		Range: 0c512, 3c0
 DAVINCI:
 	Inherits: ^Helicopter
 	Inherits@EXPERIENCE: ^GainsExperience
@@ -286,10 +296,6 @@ DAVINCI:
 	Inherits@AUTOTARGETDEF: ^AutoTargetDefenses
 	Valued:
 		Cost: 2500
-	ThrowsShrapnel:
-		Weapons: SmallWood2, SmallWood3
-		Pieces: 2, 5
-		Range: 1c512, 3c0
 	Tooltip:
 		Name: Strange Aircraft
 	Aircraft:
@@ -335,6 +341,14 @@ DAVINCI:
 		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 	Targetable@CombatRole:
 		TargetTypes: Flying
+	ThrowsShrapnel@Gears:
+		Weapons: FDebrClocka, FDebrClockb
+		Pieces: 2, 4
+		Range: 0c512, 3c0
+	ThrowsShrapnel@SMALL:
+		Weapons: SmallWood1, SmallWood2, SmallWood3
+		Pieces: 2, 5
+		Range: 0c512, 3c0
 WRBLN:
 	Inherits: ^Helicopter
 	Inherits@EXPERIENCE: ^GainsExperience
@@ -405,6 +419,10 @@ WRBLN:
 	AutoTargetPriority@Counter1:
 		ValidTargets: Light, Heavy, Ranged, Support, Flying, LightCavalry, RegularCavalry, Defenses
 		Priority: 4
+	ThrowsShrapnel@SMALL:
+		Weapons: SmallWood1, SmallWood2, SmallWood3
+		Pieces: 2, 5
+		Range: 0c512, 3c0
 PLACEHOLDERPLANE:
 	Inherits: ^Plane
 	Interactable:

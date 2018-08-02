@@ -160,6 +160,7 @@ TRIBU:
 	Armament:
 		Weapon: tribuchetboulder
 		LocalOffset: 0,0,2124
+		FireDelay: 5
 	DetectCloaked:
 		Range: 3c0
 	Selectable:
@@ -511,6 +512,7 @@ SIEGETRIBU:
 	Armament:
 		Weapon: HighTribuchetBoulder
 		LocalOffset: 0,0,2124
+		FireDelay: 5
 	DetectCloaked:
 		Range: 3c0
 	Selectable:

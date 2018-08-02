@@ -576,10 +576,11 @@ CASTLE2:
 		CircleSequence: circles
 		OrderName: LightningPowerInfoOrder
 		FlightDelay: 10
+	WithNukeLaunchAnimation:
 	ThrowsShrapnel@LARGE:
 		Weapons: LargeWood1, LargeWood1, LargeStone1, LargeStone1
 		Pieces: 1, 2
-		Range: 1c0, 5c0
+		Range: 1c0, 10c0
 WORKSHOPGDI:
 	Inherits: ^MWBaseBuilding
 	Inherits@Hitshape: ^3x2Shape

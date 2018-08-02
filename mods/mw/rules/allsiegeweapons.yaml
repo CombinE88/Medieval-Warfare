@@ -59,6 +59,10 @@ MCV2NEW:
 		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 	Targetable@CombatRole:
 		TargetTypes: Support
+	WithRangeCircle:
+		Type: Buildradius
+		UsePlayerColor: true
+		Range: 13c0
 MOBTRIB:
 	Inherits: ^Siege
 	Inherits@GetsPoisoned: ^GetsPoisoned

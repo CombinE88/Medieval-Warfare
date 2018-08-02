@@ -181,7 +181,7 @@ E4NEW:
 	Mobile:
 		Speed: 60
 	Health:
-		HP: 8000
+		HP: 7500
 	Armament:
 		Weapon: bownarrowMarksman
 		LocalOffset: 341,0,456

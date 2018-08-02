@@ -503,6 +503,10 @@ SULB3:
 		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 	Targetable@CombatRole:
 		TargetTypes: Flying
+	ThrowsShrapnel@Gears:
+		Weapons: FDebrfeathera, FDebrfeatherb, FDebrfeatherc, FDebrfeatherd
+		Pieces: 2, 4
+		Range: 0c512, 3c0
 SULB3.Husk:
 	Inherits: ^HelicopterHusk
 	ConditionManager:
