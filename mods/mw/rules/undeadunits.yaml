@@ -615,7 +615,7 @@ VAMPFLYING:
 	WithFacingSpriteBody:
 		Sequence: stand-flying
 	WithAttackAnimation: 
-		Sequence: shoot
+		Sequence: attackair
 	Valued:
 		Cost: 750
 	Tooltip:
@@ -765,7 +765,7 @@ LICHK:
 		BuildDuration: 1500
 	-Mobile:
 	Health:
-		HP: 35000
+		HP: 33000
 	Armament@1:
 		Weapon: AcolyteSpawnHelper
 	AttackFrontal:

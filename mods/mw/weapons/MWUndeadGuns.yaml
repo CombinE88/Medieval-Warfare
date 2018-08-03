@@ -338,8 +338,8 @@ AcolyteGiantHand:
 	Warhead@2Rubble: CreateEffect
 		ImpactSounds: rubble.aud
 AcolyteSpawnHelper:
-	ReloadDelay: 84
-	Range: 9c0
+	ReloadDelay: 145
+	Range: 7c0
 	MinRange: 0
 	InvalidTargets: Air, Cursed, Wall, Structure, Siege
 	ValidTargets: Cursable
