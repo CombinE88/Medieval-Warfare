@@ -247,7 +247,7 @@ ApprenticeFire:
 		ImpactSounds: flamer2.aud
 		Delay: 6
 DjinElectro:
-	ReloadDelay: 55
+	ReloadDelay: 52
 	Range: 5c512
 	ValidTargets: Ground
 	InvalidTargets: Air
@@ -255,7 +255,7 @@ DjinElectro:
 	Projectile: TeslaZap
 	Warhead@1Dam: SpreadDamage
 		Spread: 42
-		Damage: 6000
+		Damage: 5500
 		ValidTargets: Ground
 		InvalidTargets: Air
 		Versus:
@@ -527,7 +527,7 @@ SonicRaptor:
 		ContrailUsePlayerColor : true
 	Warhead@1Dam: SpreadDamage
 		Spread: 256
-		Damage: 1900
+		Damage: 2200
 		ValidTargets: Ground, Air
 		Versus:
 			Leather: 100
@@ -560,19 +560,19 @@ SonicRaptorSoundLess:
 		ContrailUsePlayerColor : true
 	Warhead@1Dam: SpreadDamage
 		Spread: 375
-		Damage: 1900
+		Damage: 2200
 		ValidTargets: Ground, Air
 		Versus:
 			Leather: 100
-			Light: 90
-			Heavy: 80
+			Light: 95
+			Heavy: 85
 			Concrete: 65
-			Knight: 25
-			LightCavalry: 60
-			MediumCavalry: 50
-			HeavyCavalry: 40
+			Knight: 45
+			LightCavalry: 70
+			MediumCavalry: 60
+			HeavyCavalry: 50
 			HeavyBuilding: 75
-			Spectral: 20
+			Spectral: 30
 		DamageTypes: Prone50Percent, DefaultDeath
 	Warhead@5Eff: CreateEffect
 		ImpactSounds: Sword02.aud, Sword03.aud, Sword04.aud, Sword06.aud, Sword07.aud

@@ -113,16 +113,16 @@ WARKITE:
 		Image: warkite
 		PlayerPalette: raplayer
 	AmmoPool:
-		Ammo: 10
+		Ammo: 4
 		Name: primary
 		Armaments: primary
-		PipCount: 5
-		ReloadCount: 10
+		PipCount: 4
+		ReloadCount: 4
 		AmmoCondition: ammo
 	ReloadAmmoPool:
 		AmmoPool: primary
-		Delay: 200
-		Count: 10
+		Delay: 240
+		Count: 4
 	AutoTarget:
 	WithAttackAnimation:
 		Sequence: shoot

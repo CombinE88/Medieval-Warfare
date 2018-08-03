@@ -3,7 +3,7 @@ MCV2NEW:
 	Inherits@GainsExperience: ^GainsExperience
 	Inherits@GetsPoisoned: ^GetsPoisoned
 	Inherits@ArcherDemo65: ^ArcherDemo80
-	Inherits@SnakeStunnable: ^SnakeDamagable
+	Inherits@SnakeStunnable: ^SnakeDamagableSiege
 	Selectable:
 		Priority: 4
 	AttackFrontal:
@@ -67,7 +67,7 @@ MOBTRIB:
 	Inherits: ^Siege
 	Inherits@GetsPoisoned: ^GetsPoisoned
 	Inherits@ArcherDemo65: ^ArcherDemo80
-	Inherits@SnakeStunnable: ^SnakeDamagable
+	Inherits@SnakeStunnable: ^SnakeDamagableSiege
 	Selectable:
 		Priority: 4
 	AttackFrontal:
@@ -124,7 +124,7 @@ SIEGE1:
 	Inherits@GainsExperience: ^GainsExperience
 	Inherits@GetsPoisoned: ^GetsPoisoned
 	Inherits@ArcherDemo65: ^ArcherDemo80
-	Inherits@SnakeStunnable: ^SnakeDamagable
+	Inherits@SnakeStunnable: ^SnakeDamagableSiege
 	Inherits@AUTOTARGET: ^AutoTargetGround
 	Valued:
 		Cost: 950
@@ -177,7 +177,7 @@ SIEGE2:
 	Inherits@GainsExperience: ^GainsExperience
 	Inherits@GetsPoisoned: ^GetsPoisoned
 	Inherits@ArcherDemo65: ^ArcherDemo80
-	Inherits@SnakeStunnable: ^SnakeDamagable
+	Inherits@SnakeStunnable: ^SnakeDamagableSiege
 	Inherits@AUTOTARGET: ^AutoTargetGround
 	Valued:
 		Cost: 1200
@@ -239,7 +239,7 @@ SIEGE3:
 	Inherits@GainsExperience: ^GainsExperience
 	Inherits@GetsPoisoned: ^GetsPoisoned
 	Inherits@ArcherDemo65: ^ArcherDemo80
-	Inherits@SnakeStunnable: ^SnakeDamagable
+	Inherits@SnakeStunnable: ^SnakeDamagableSiege
 	Inherits@AUTOTARGET: ^AutoTargetAll
 	ConditionManager:
 	Cargo:
@@ -522,7 +522,7 @@ EHARVXL:
 	Inherits: ^Siege
 	Inherits@GetsPoisoned: ^GetsPoisoned
 	Inherits@ArcherDemo65: ^ArcherDemo80
-	Inherits@SnakeStunnable: ^SnakeDamagable
+	Inherits@SnakeStunnable: ^SnakeDamagableSiege
 	BodyOrientation:
 		QuantizedFacings: 8
 	QuantizeFacingsFromSequence:

@@ -355,7 +355,7 @@ SULM3:
 	SpawnActorOnDeath@1:
 		Actor: SULM3.Husk
 	SpawnActorOnDeath@2:
-		Actor: SULM3.ManHusk
+		Actor: SULM3.manhusk
 	PersonValued:
 		ActorCount: 1
 		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
@@ -381,7 +381,7 @@ SULM3.Husk:
 		Spins: True
 		Moves: False
 		Explosion: GroundHit
-SULM3.ManHusk:
+SULM3.manhusk:
 	Inherits@1: ^SpriteActor
 	Interactable:
 	HitShape:
@@ -413,11 +413,6 @@ SULM3.ManHusk:
 	RenderSprites:
 		Image: sulm3.husk
 		PlayerPalette: raplayer
-	KillsSelf:
-		Delay: 40
-	Explodes:
-		Weapon: GroundHit
-		EmptyWeapon: GroundHit
 SULB3:
 	Inherits: ^Helicopter
 	Inherits@GainsExperience: ^GainsExperience

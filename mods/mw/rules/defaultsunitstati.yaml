@@ -217,21 +217,68 @@
 		RequiresCondition: snaketrap >= 1
 		DamageTypes: PoisonDeath
 	SelfHealing@SNAKES2:
-		PercentageStep: -8
+		PercentageStep: -5
 		Step: -0
 		HealIfBelow: 110
 		Delay: 25
 		RequiresCondition: snaketrap >= 2
 		DamageTypes: PoisonDeath
 	SelfHealing@SNAKES3:
-		PercentageStep: -8
+		PercentageStep: -3
 		Step: -0
 		HealIfBelow: 110
 		Delay: 25
 		RequiresCondition: snaketrap >= 3
 		DamageTypes: PoisonDeath
 	SelfHealing@SNAKES4:
-		PercentageStep: -8
+		PercentageStep: -2
+		Step: -0
+		HealIfBelow: 110
+		Delay: 25
+		RequiresCondition: snaketrap >= 4
+		DamageTypes: PoisonDeath
+^SnakeDamagableSiege:
+	ExternalCondition@SNAKES:
+		Condition: snaketrap
+	WithDecoration@SNAKES:
+		Image: debuffs
+		Sequence: slowed
+		Palette: ra
+		ReferencePoint: Top, Left
+		RequiresCondition: snaketrap || archerprone
+		ZOffset: 256
+		ValidStances: Ally, Enemy, Neutral
+	WithDecoration@SNAKESPoison:
+		Image: debuffs
+		Sequence: poison
+		Palette: ra
+		ReferencePoint: Top, Left
+		RequiresCondition: snaketrap
+		ZOffset: 256
+		ValidStances: Ally, Enemy, Neutral
+	SelfHealing@SNAKES:
+		PercentageStep: -3
+		Step: -0
+		HealIfBelow: 110
+		Delay: 25
+		RequiresCondition: snaketrap >= 1
+		DamageTypes: PoisonDeath
+	SelfHealing@SNAKES2:
+		PercentageStep: -2
+		Step: -0
+		HealIfBelow: 110
+		Delay: 25
+		RequiresCondition: snaketrap >= 2
+		DamageTypes: PoisonDeath
+	SelfHealing@SNAKES3:
+		PercentageStep: -1
+		Step: -0
+		HealIfBelow: 110
+		Delay: 25
+		RequiresCondition: snaketrap >= 3
+		DamageTypes: PoisonDeath
+	SelfHealing@SNAKES4:
+		PercentageStep: -1
 		Step: -0
 		HealIfBelow: 110
 		Delay: 25

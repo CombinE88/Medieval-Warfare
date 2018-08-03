@@ -648,7 +648,7 @@ OrniSpearThrow:
 			Spectral: 15
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath  
 WarkiteCrossbow:
-	ReloadDelay: 130
+	ReloadDelay: 40
 	Range: 5c0
 	MinRange: 0c512
 	Report: crossbow01.aud
@@ -667,19 +667,19 @@ WarkiteCrossbow:
 		Image: e4arrow
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
-		Spread: 64
+		Spread: 125
 		InvalidTargets: Wall
 		ValidTargets: Air, Ground
 		Damage: 3000
 		Versus:
-			Leather: 500
-			Light: 500
-			Heavy: 460
+			Leather: 400
+			Light: 300
+			Heavy: 360
 			Knight: 125
-			LightCavalry: 275
-			MediumCavalry: 100
+			LightCavalry: 125
+			MediumCavalry: 115
 			HeavyCavalry: 100
-			HeavyBuilding: 100
+			HeavyBuilding: 75
 			Concrete: 100   
 			Spectral: 100
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath 
@@ -809,7 +809,7 @@ paladingunvisual:
 			HeavyCavalry: 0
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath	 
 Dagger:
-	ReloadDelay: 60
+	ReloadDelay: 120
 	Range: 5c512
 	InvalidTargets: Wall
 	Report: throw01.aud
@@ -829,7 +829,7 @@ Dagger:
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
 		Spread: 51
-		Damage: 7500
+		Damage: 15500
 		InvalidTargets: Wall, Structure, Air
 		ValidTargets: Ground
 		Versus:
@@ -842,7 +842,7 @@ Dagger:
 			LightCavalry: 100
 			MediumCavalry: 90
 			HeavyCavalry: 75
-			Spectral: 250
+			Spectral: 100
 		DamageTypes: Prone50Percent, TriggerProne, PoisonDeath 
 	Warhead@rotten: GrantSingletonCondition
 		Range: 0c512
@@ -850,8 +850,10 @@ Dagger:
 		Condition: RottenKadaver
 		ValidStances: Enemy, Neutral, Ally
 DaggerAir:
-	ReloadDelay: 60
-	Range: 5c512
+	ReloadDelay: 85
+	Range: 7c512
+	Burst: 3
+	BurstDelays: 2
 	Report: throw01.aud
 	InvalidTargets: Wall, Structure, Ground
 	ValidTargets: Air

@@ -518,7 +518,7 @@ Claymore:
 			HeavyCavalry: 35
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath	   
 Sledgehammer:
-	ReloadDelay: 60
+	ReloadDelay: 75
 	Range: 1c800
 	ValidTargets: Ground, Trees, Juggernaut
 	InvalidTargets: Air
@@ -544,7 +544,7 @@ Sledgehammer:
 		Delay: 10
 		ValidTargets: Ground, Trees
 		InvalidTargets: Air
-		Spread: 725
+		Spread: 625
 		Damage: 3000
 		Falloff: 100, 100, 100, 100, 50, 25, 0
 		Versus:
@@ -564,7 +564,7 @@ Sledgehammer:
 		Delay: 30
 		ValidTargets: Ground, Trees
 		InvalidTargets: Air
-		Spread: 725
+		Spread: 625
 		Damage: 3000
 		Falloff: 100, 100, 100, 100, 50, 25, 0
 		Versus:
@@ -584,7 +584,7 @@ Sledgehammer:
 		Delay: 50
 		ValidTargets: Ground, Trees
 		InvalidTargets: Air
-		Spread: 725
+		Spread: 625
 		Damage: 3000
 		Falloff: 100, 100, 100, 100, 50, 25, 0
 		Versus:

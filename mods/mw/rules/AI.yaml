@@ -80,7 +80,6 @@ Player:
 			herbalist.scaff: 1
 			sulminaret.scaff: 1
 			townhall.scaff: 1
-			sulhall.scaff: 1
 			sppool.penta: 2
 			mauso.penta: 2
 			libra.penta: 1
@@ -142,7 +141,6 @@ Player:
 			herbalist.scaff: 70%
 			sulminaret.scaff: 70%
 			townhall.scaff: 70%
-			sulhall.scaff: 70%
 		UnitsToBuild:
 			sule1: 65%
 			sule2: 65%
@@ -562,7 +560,6 @@ Player:
 			herbalist.scaff: 70%
 			sulminaret.scaff: 70%
 			townhall.scaff: 70%
-			sulhall.scaff: 70%
 		UnitsToBuild:
 			sule1: 65%
 			sule2: 65%
@@ -982,7 +979,6 @@ Player:
 			herbalist.scaff: 70%
 			sulminaret.scaff: 70%
 			townhall.scaff: 70%
-			sulhall.scaff: 70%
 		UnitsToBuild:
 			sule1: 65%
 			sule2: 65%

@@ -467,21 +467,21 @@ SULM2:
 	RevealsShroud:
 		Range: 6c0
 	Valued:
-		Cost: 1460
+		Cost: 1100
 	Tooltip:
-		Name: Djinn
+		Name: Efreet
 	Buildable:
 		Description: Advanced Multi-Role unit.\n  Can only be hurt by magical or fire weaponary.\n  Moderate vs Everything\n  Weak vs Buildings\n  Detects cloaked units at a very large area\n  Can only attack ground targets\n\nConsumes: 2 Peasants\n
 		IconPalette: raicon
-		Prerequisites: sultow2, sultow4, anyhq
-		BuildPaletteOrder: 70
+		Prerequisites: sultow2, anyhq
+		BuildPaletteOrder: 60
 		Queue: MVehicle.SUL
 		#BuildDuration: 600
 	Mobile:
 		Speed: 66
 	-Crushable:
 	Health:
-		HP: 21000
+		HP: 19000
 	Armament@Ground:
 		Weapon: DjinElectro
 		LocalOffset: 141,75,352
@@ -524,20 +524,20 @@ SULM4:
 	RevealsShroud:
 		Range: 7c0
 	Valued:
-		Cost: 600
+		Cost: 1300
 	Tooltip:
 		Name: Rattlemystic
 	Buildable:
 		Description: Advanced Anti-infantry unit.\n  Strong vs Infantry\n  Cannot attack Buildings\n  Detects cloaked units\n  Can stun Infantry with summoned snakes\n  Can slow down Cavalry with summoned snakes\n\nTrains: 1 Peasant\n
 		IconPalette: raicon
-		BuildPaletteOrder: 60
+		BuildPaletteOrder: 70
 		Queue: MVehicle.SUL
-		Prerequisites: sultow2, anyhq
+		Prerequisites: sultow2, sultow4, anyhq
 		#BuildDuration: 300
 	Mobile:
 		Speed: 66
 	Health:
-		HP: 10000
+		HP: 18000
 	Armament@Ground:
 		Weapon: Snakes
 	AttackFrontal:
