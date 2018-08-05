@@ -1131,10 +1131,7 @@ SPLITDEAD:
 		Type: CenterPosition
 	Targetable:
 		TargetTypes: Trees
-	ExternalCondition@preyable:
-		Condition: preyable
 	ValidPreyTarget:
-		RequiresCondition: preyable
 	DockManager:
 		ExternalDocks: true
 		#DeadlockDetectionEnabled: false

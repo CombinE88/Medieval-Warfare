@@ -72,7 +72,7 @@ ARMORYNOD:
 	ProximityExternalCondition@HEAL:
 		Range: 5c0
 		ValidStances: Ally
-		Condition: hospitalhealbarr
+		Condition: hospitalheal
 	WithRangeCircle: 
 		ValidStances: Ally, Neutral
 		Range: 5c0

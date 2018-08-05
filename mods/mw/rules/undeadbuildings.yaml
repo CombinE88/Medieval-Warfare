@@ -589,7 +589,6 @@ DEDREF.penta:
 		Width: 65
 		Actors: split2, split3, splitblue, split4, split4b, split5, splitdead, split7, split8
 		Distance: 8c0
-		Condition: preyable
 		Angle: 175
 		PlacementOnly: true
 		Transparency: 140
@@ -973,7 +972,6 @@ DEDREF:
 		Width: 65
 		Actors: split2, split3, splitblue, split4, split4b, split5, splitdead, split7, split8
 		Distance: 8c0
-		Condition: preyable
 		Angle: 175
 		Transparency: 140
 	WithFreeSpawnableActor@1:

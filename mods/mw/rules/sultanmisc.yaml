@@ -121,12 +121,12 @@ SULB0:
 		Delay: 25
 		HealIfBelow: 100
 		DamageCooldown: 125
-		RequiresCondition: hospitalheal || hospitalhealbarr
+		RequiresCondition: hospitalheal
 	WithDecoration@REDCROSS:
 		Image: pips
 		Sequence: pip-heal
 		ReferencePoint: Bottom, Right
-		RequiresCondition: hospitalheal || hospitalhealbarr
+		RequiresCondition: hospitalheal
 	Targetable@CombatRole:
 		TargetTypes: HeavyCavalry
 SULB1:

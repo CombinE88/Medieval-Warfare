@@ -8,14 +8,14 @@
 		Step: -0
 		HealIfBelow: 110
 		Delay: 10
-		RequiresCondition: (DDler || RottenKadaver) && !hospitalhealbarr
+		RequiresCondition: DDler || RottenKadaver
 		DamageTypes: PoisonDeath
 	WithDecoration@DDlerPoison:
 		Image: debuffs
 		Sequence: poison
 		Palette: ra
 		ReferencePoint: Top, Left
-		RequiresCondition: (DDler || RottenKadaver) && !hospitalhealbarr
+		RequiresCondition: DDler || RottenKadaver
 		ZOffset: 256
 		ValidStances: Ally, Enemy, Neutral
 ^CanTurnIntoScelett:
@@ -53,8 +53,6 @@
 		ZOffset: 256
 		ValidStances: Ally, Enemy, Neutral
 ^Healable:
-	ExternalCondition@BARRACKS:
-		Condition: hospitalhealbarr
 	ExternalCondition@HOSPITAL:
 		Condition: hospitalheal
 	SelfHealing@HOSPITAL:
@@ -62,12 +60,12 @@
 		Delay: 25
 		HealIfBelow: 100
 		DamageCooldown: 125
-		RequiresCondition: hospitalheal || hospitalhealbarr
+		RequiresCondition: hospitalheal
 	WithDecoration@REDCROSS:
 		Image: pips
 		Sequence: pip-heal
 		ReferencePoint: Bottom, Right
-		RequiresCondition: hospitalheal || hospitalhealbarr
+		RequiresCondition: hospitalheal
 ^RoyalMotivatable: # obsolete
 	ExternalCondition@ROYAL:
 		Condition: KingIsNear
