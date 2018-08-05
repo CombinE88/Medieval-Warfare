@@ -22,7 +22,7 @@ SkeletonPike:
 			MediumCavalry: 125
 			HeavyCavalry: 120
 			Spectral: 10
-		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath, SpawnSoul
+		DamageTypes: DefaultDeath, SpawnSoul
 SkeletonBroadSword:
 	ReloadDelay: 35
 	Range: 1c800
@@ -47,7 +47,7 @@ SkeletonBroadSword:
 			MediumCavalry: 10
 			HeavyCavalry: 10
 			Spectral: 10
-		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath, SpawnSoul
+		DamageTypes: DefaultDeath, SpawnSoul
 SkeletonClub:
 	ReloadDelay: 35
 	Range: 1c800
@@ -72,7 +72,7 @@ SkeletonClub:
 			MediumCavalry: 10
 			HeavyCavalry: 10
 			Spectral: 10
-		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath, SpawnSoul
+		DamageTypes: DefaultDeath, SpawnSoul
 SkeletonGiant:
 	ReloadDelay: 55
 	Range: 1c800
@@ -98,7 +98,7 @@ SkeletonGiant:
 			MediumCavalry: 100
 			HeavyCavalry: 100
 			Spectral: 55
-		DamageTypes: Prone50Percent, TriggerProne, RippedApartDeath, SpawnSoul
+		DamageTypes: RippedApartDeath, SpawnSoul
 SkeletonAxe:
 	ReloadDelay: 45
 	Range: 1c800
@@ -123,7 +123,7 @@ SkeletonAxe:
 			MediumCavalry: 50
 			HeavyCavalry: 35
 			Spectral: 25
-		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath, SpawnSoul
+		DamageTypes: DefaultDeath, SpawnSoul
 SkeletonBowNArrow:
 	ReloadDelay: 45
 	Range: 5c0
@@ -153,7 +153,7 @@ SkeletonBowNArrow:
 			HeavyCavalry: 15
 			HeavyBuilding: 45
 			Spectral: 10
-		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath, SpawnSoul
+		DamageTypes: DefaultDeath, SpawnSoul
 SkeletonBowNArrowDUMMY:
 	ReloadDelay: 45
 	Range: 5c0
@@ -186,7 +186,7 @@ SkeletonBowNArrowDUMMY:
 			HeavyCavalry: 0
 			HeavyBuilding: 0
 			Spectral: 0
-		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath, SpawnSoul
+		DamageTypes: DefaultDeath, SpawnSoul
 SkeletonBowNArrowAir:
 	ReloadDelay: 45
 	Range: 8c512
@@ -221,7 +221,7 @@ SkeletonBowNArrowAir:
 			MediumCavalry: 55
 			HeavyCavalry: 35
 			HeavyBuilding: 45
-		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath, SpawnSoul
+		DamageTypes: DefaultDeath, SpawnSoul
 SkeletonRock:
 	ReloadDelay: 80
 	Range: 12c0
@@ -253,7 +253,7 @@ SkeletonRock:
 			HeavyCavalry: 85
 			HeavyBuilding: 100
 			Spectral: 45
-		DamageTypes: Prone50Percent, TriggerProne, BallistaDeath, SpawnSoul
+		DamageTypes: BallistaDeath, SpawnSoul
 	Warhead@2Eff: CreateEffect
 		ImpactSounds: dirtexplosion.aud
 		ExplosionPalette : ra
@@ -289,7 +289,7 @@ ObeliskGraveCleaner:
 			MediumCavalry: 100
 			HeavyCavalry: 100
 			HeavyBuilding: 100
-		DamageTypes: Prone50Percent, TriggerProne, RippedApartDeath, SpawnSoul
+		DamageTypes: RippedApartDeath, SpawnSoul
 AcolytePrey:
 	ValidTargets: Preyable
 	ReloadDelay: 20
@@ -327,7 +327,7 @@ AcolyteGiantHand:
 			HeavyCavalry: 100
 			HeavyBuilding: 100
 			Spectral: 100
-		DamageTypes: Prone50Percent, TriggerProne, RippedApartDeath, SpawnSoul
+		DamageTypes: RippedApartDeath, SpawnSoul
 	Warhead@5hand: CreateEffect
 		Explosions: gianthand 
 		ExplosionPalette : ra
@@ -357,7 +357,7 @@ AcolyteSpawnHelper:
 		InvalidTargets: Air, Cursed, Wall, Structure, Siege
 		ValidTargets: Cursable
 		Damage: 1
-		DamageTypes: Prone50Percent, TriggerProne, RippedApartDeath, SpawnSoul
+		DamageTypes: RippedApartDeath, SpawnSoul
 	Warhead@SpawnEffect: CreateEffect
 		Explosions: circleeffect
 		ExplosionPalette : grimspawnalpha
@@ -456,7 +456,7 @@ AcolyteAttackCleaner:
 			HeavyCavalry: 50
 			HeavyBuilding: 50
 			Spectral: 80
-		DamageTypes: Prone50Percent, TriggerProne, RippedApartDeath, SpawnSoul
+		DamageTypes: RippedApartDeath, SpawnSoul
 AcolyteAttackCleanerAIR:
 	ReloadDelay: 65
 	Range: 8c0
@@ -486,7 +486,7 @@ AcolyteAttackCleanerAIR:
 			MediumCavalry: 70
 			HeavyCavalry: 50
 			HeavyBuilding: 50
-		DamageTypes: Prone50Percent, TriggerProne, RippedApartDeath, SpawnSoul
+		DamageTypes: RippedApartDeath, SpawnSoul
 GrimSkytheThrow:
 	ReloadDelay: 35
 	Range: 6c0
@@ -519,7 +519,7 @@ GrimSkytheThrow:
 			HeavyCavalry: 65
 			HeavyBuilding: 45
 			Spectral: 70
-		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath, SpawnSoul
+		DamageTypes: DefaultDeath, SpawnSoul
 	Warhead@1Eff: CreateEffect
 		ImpactSounds: Sword02.aud, Sword03.aud, Sword04.aud, Sword06.aud, Sword07.aud
 VampAttackGG:
@@ -545,7 +545,7 @@ VampAttackGG:
 			HeavyCavalry: 100
 			HeavyBuilding: 45
 			Spectral: 80
-		DamageTypes: Prone50Percent, TriggerProne, RippedApartDeath, SpawnSoul
+		DamageTypes: RippedApartDeath, SpawnSoul
 	Warhead@2Backfire: BackFireShrapnel
 		Weapon: BackFlyingBlood
 		ValidTargets: Ground
@@ -574,7 +574,7 @@ VampAttackGBuilding:
 			HeavyCavalry: 100
 			HeavyBuilding: 45
 			Spectral: 25
-		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath, SpawnSoul
+		DamageTypes: DefaultDeath, SpawnSoul
 VampAttackAA:
 	ReloadDelay: 40
 	Range: 7c512
@@ -602,7 +602,7 @@ VampAttackAA:
 			HeavyCavalry: 100
 			HeavyBuilding: 100
 			Spectral: 100
-		DamageTypes: Prone50Percent, TriggerProne, RippedApartDeath, SpawnSoul
+		DamageTypes: RippedApartDeath, SpawnSoul
 	Warhead@2Backfire: BackFireShrapnel
 		Weapon: BackFlyingBlood
 		ValidTargets: Air
@@ -636,7 +636,7 @@ BackFlyingBlood:
 			MediumCavalry: 100
 			HeavyCavalry: 100
 			HeavyBuilding: 100
-		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath, SpawnSoul
+		DamageTypes: DefaultDeath, SpawnSoul
 SuperiorPikeCavalry:
 	ReloadDelay: 35
 	Range: 1c800
@@ -661,7 +661,7 @@ SuperiorPikeCavalry:
 			MediumCavalry: 150
 			HeavyCavalry: 100
 			Spectral: 15
-		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath, SpawnSoul
+		DamageTypes: DefaultDeath, SpawnSoul
 FromBelow:
 	ReloadDelay: 4
 	Range: 3c200
@@ -692,7 +692,7 @@ FromBelow:
 			HeavyCavalry: 100
 			HeavyBuilding: 150
 			Spectral: 100
-		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath, SpawnSoul
+		DamageTypes: DefaultDeath, SpawnSoul
 	Warhead@2Dam: SpreadDamage
 		Spread: 712
 		ValidTargets: Ground
@@ -710,7 +710,7 @@ FromBelow:
 			MediumCavalry: 100
 			HeavyCavalry: 100
 			HeavyBuilding: 150
-		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath, SpawnSoul
+		DamageTypes: DefaultDeath, SpawnSoul
 	Warhead@3Dam: SpreadDamage
 		Spread: 450
 		ValidTargets: Ground
@@ -729,7 +729,7 @@ FromBelow:
 			HeavyCavalry: 100
 			HeavyBuilding: 150
 			Spectral: 100
-		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath, SpawnSoul
+		DamageTypes: DefaultDeath, SpawnSoul
 	Warhead@1Eff: CreateEffect
 		Explosions: handa1, handa2, handa3, handa4
 		ExplosionPalette : ra
@@ -778,7 +778,7 @@ GargAttack:
 			HeavyCavalry: 35
 			HeavyBuilding: 125
 			Spectral: 120
-		DamageTypes: Prone50Percent, TriggerProne, BurnToDeath, SpawnSoul
+		DamageTypes: BurnToDeath, SpawnSoul
 	Warhead@2Smu: LeaveSmudge
 		SmudgeType: Scorch
 		InvalidTargets: Vehicle, Structure, Wall
@@ -824,7 +824,7 @@ ObeliskLight:
 			MediumCavalry: 100
 			HeavyCavalry: 100
 			HeavyBuilding: 100
-		DamageTypes: Prone50Percent, TriggerProne, RippedApartDeath, SpawnSoul
+		DamageTypes: RippedApartDeath, SpawnSoul
 RealDeath:
 	ValidTargets: Ground, Air
 	Warhead@1Eff_impact: CreateEffect
@@ -914,7 +914,7 @@ RDHand:
 			HeavyCavalry: 100
 			HeavyBuilding: 150
 			Spectral: 100
-		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath, SpawnSoul
+		DamageTypes: DefaultDeath, SpawnSoul
 	Warhead@2Dam: SpreadDamage
 		Spread: 452
 		ValidTargets: Ground
@@ -932,7 +932,7 @@ RDHand:
 			MediumCavalry: 100
 			HeavyCavalry: 100
 			HeavyBuilding: 150
-		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath, SpawnSoul
+		DamageTypes: DefaultDeath, SpawnSoul
 	Warhead@3Dam: SpreadDamage
 		Spread: 452
 		ValidTargets: Ground
@@ -951,7 +951,7 @@ RDHand:
 			HeavyCavalry: 100
 			HeavyBuilding: 150
 			Spectral: 100
-		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath, SpawnSoul
+		DamageTypes: DefaultDeath, SpawnSoul
 	Warhead@1Eff: CreateEffect
 		Explosions: handa1, handa2, handa3, handa4
 		ExplosionPalette : ra
@@ -1122,7 +1122,7 @@ GrimReaper:
 		Spread: 12
 		ValidTargets: Soul, Souls
 		Damage: 1000
-		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+		DamageTypes: DefaultDeath
 	Warhead@SpawnEffect: CreateEffect
 		Explosions: summoning
 		ExplosionPalette : grimspawnalpha

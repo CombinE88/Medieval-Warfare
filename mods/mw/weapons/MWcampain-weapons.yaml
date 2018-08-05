@@ -29,7 +29,7 @@ HoodArrow:
 			HeavyCavalry: 25
 			HeavyBuilding: 15
 			Spectral: 50
-		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+		DamageTypes: DefaultDeath
 HoodArrowDUMMY:
 	ReloadDelay: 45
 	Range: 8c0
@@ -62,7 +62,7 @@ HoodArrowDUMMY:
 			HeavyCavalry: 0
 			HeavyBuilding: 0
 			Spectral: 0
-		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+		DamageTypes: DefaultDeath
 HoodArrowAir:
 	ReloadDelay: 38
 	Range: 9c512
@@ -97,7 +97,7 @@ HoodArrowAir:
 			MediumCavalry: 55
 			HeavyCavalry: 35
 			HeavyBuilding: 45
-		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+		DamageTypes: DefaultDeath
 HoodFireArrow:
 	ReloadDelay: 45
 	Range: 8c0
@@ -135,7 +135,7 @@ HoodFireArrow:
 			HeavyCavalry: 25
 			HeavyBuilding: 125
 			Spectral: 90
-		DamageTypes: Prone50Percent, TriggerProne, BurnToDeath
+		DamageTypes: BurnToDeath
 	Warhead@2Dam: SpreadDamage
 		Spread: 210
 		ValidTargets: Ground
@@ -155,7 +155,7 @@ HoodFireArrow:
 			HeavyCavalry: 25
 			HeavyBuilding: 125
 			Spectral: 90
-		DamageTypes: Prone50Percent, TriggerProne, BurnToDeath
+		DamageTypes: BurnToDeath
 	Warhead@3Dam: SpreadDamage
 		Spread: 210
 		ValidTargets: Ground
@@ -175,7 +175,7 @@ HoodFireArrow:
 			HeavyCavalry: 25
 			HeavyBuilding: 125
 			Spectral: 90
-		DamageTypes: Prone50Percent, TriggerProne, BurnToDeath
+		DamageTypes: BurnToDeath
 	Warhead@1Eff: CreateEffect
 		Explosions: fire2	
 	Warhead@2Eff: CreateEffect
@@ -220,7 +220,7 @@ HoodFireArrowDummy:
 			HeavyCavalry: 25
 			HeavyBuilding: 125
 			Spectral: 90
-		DamageTypes: Prone50Percent, TriggerProne, BurnToDeath
+		DamageTypes: BurnToDeath
 	Warhead@2Dam: SpreadDamage
 		Spread: 210
 		ValidTargets: Ground
@@ -240,7 +240,7 @@ HoodFireArrowDummy:
 			HeavyCavalry: 25
 			HeavyBuilding: 125
 			Spectral: 90
-		DamageTypes: Prone50Percent, TriggerProne, BurnToDeath
+		DamageTypes: BurnToDeath
 	Warhead@3Dam: SpreadDamage
 		Spread: 210
 		ValidTargets: Ground
@@ -260,7 +260,7 @@ HoodFireArrowDummy:
 			HeavyCavalry: 25
 			HeavyBuilding: 125
 			Spectral: 90
-		DamageTypes: Prone50Percent, TriggerProne, BurnToDeath
+		DamageTypes: BurnToDeath
 	Warhead@1Eff: CreateEffect
 		Explosions: fire2	
 	Warhead@2Eff: CreateEffect

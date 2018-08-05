@@ -1,6 +1,6 @@
 Tree:
 	Voices:
-		Die: treefell
+		Default: treefell
 
 GenericVoice:
 	Variants:
@@ -9,10 +9,10 @@ GenericVoice:
 	Voices:
 		Select: await1,ready,report1,yessir1
 		Action: ackno,affirm1,noprob,ritaway,roger,ugotit
-		Die: nuyell1,nuyell4,nuyell5,nuyell6
-		Burned: yell1
-		Zapped: nuyell3
-		Poisoned: nuyell12
+		Default: mwdefdeath01, mwdefdeath02, mwdefdeath03, mwdefdeath04
+		Burned: mwbrundeath01, mwbrundeath02, mwbrundeath03
+		Zapped: mwbrundeath01, mwbrundeath02, mwbrundeath03
+		Poisoned: mwpoisdeath01, mwpoisdeath02
 	DisableVariants: Die, Burned, Zapped, Poisoned
 
 VehicleVoice:
@@ -28,29 +28,29 @@ CivilianMaleVoice:
 	Voices:
 		Select: guyyeah1
 		Action: guyokay1
-		Die: nuyell1,nuyell4,nuyell5,nuyell6
-		Burned: yell1
-		Zapped: nuyell3
-		Poisoned: nuyell12
+		Default: mwdefdeath01, mwdefdeath02, mwdefdeath03, mwdefdeath04
+		Burned: mwbrundeath01, mwbrundeath02, mwbrundeath03
+		Zapped: mwbrundeath01, mwbrundeath02, mwbrundeath03
+		Poisoned: mwpoisdeath01, mwpoisdeath02
 
 CivilianFemaleVoice:
 	Voices:
 		Select: girlyeah
 		Action: girlokay
-		Die: nuyell1,nuyell4,nuyell5,nuyell6
-		Burned: yell1
-		Zapped: nuyell3
-		Poisoned: nuyell12
+		Default: mwdefdeath01, mwdefdeath02, mwdefdeath03, mwdefdeath04
+		Burned: mwbrundeath01, mwbrundeath02, mwbrundeath03
+		Zapped: mwbrundeath01, mwbrundeath02, mwbrundeath03
+		Poisoned: mwpoisdeath01, mwpoisdeath02
 
 MoebiusVoice:
 	Voices:
 		Select: mcomnd1,mhello1,myes1,mhmmm1,mthanks1
 		Move: myesyes1,mplan3,mtiber1,mcourse1
 		Action: myesyes1,mplan3,mtiber1,mcourse1
-		Die: nuyell1,nuyell4,nuyell5,nuyell6
-		Burned: yell1
-		Zapped: nuyell3
-		Poisoned: nuyell12
+		Default: mwdefdeath01, mwdefdeath02, mwdefdeath03, mwdefdeath04
+		Burned: mwbrundeath01, mwbrundeath02, mwbrundeath03
+		Zapped: mwbrundeath01, mwbrundeath02, mwbrundeath03
+		Poisoned: mwpoisdeath01, mwpoisdeath02
 
 CommandoVoice:
 	Voices:
@@ -58,7 +58,7 @@ CommandoVoice:
 		Move: cmon1,onit1,gotit1
 		Attack: onit1,gotit1,noprblm1
 		Demolish: bombit1
-		Die: ramyell1
+		Default: ramyell1
 		Burned: ramyell1
 		Zapped: ramyell1
 		Poisoned: ramyell1
@@ -70,7 +70,7 @@ DinoVoice:
 		Select: dinoyes
 		Move: dinomout
 		Attack: dinoatk1
-		Die: dinodie1
+		Default: dinodie1
 		Burned: dinodie1
 		Zapped: dinodie1
 		Poisoned: dinodie1
@@ -86,7 +86,7 @@ SiegeVoice:
 	Voices:
 		Select: guyyeah1
 		Action: guyokay1
-		Die: WoodExplMed,WoodExplsmall2,WoodExplMed,WoodExplMed2
+		Default: WoodExplMed,WoodExplsmall2,WoodExplMed,WoodExplMed2
 		Burned: WoodExplMed,WoodExplsmall2,WoodExplMed,WoodExplMed2
 		Zapped: WoodExplMed,WoodExplsmall2,WoodExplMed,WoodExplMed2
 		Poisoned: WoodExplMed,WoodExplsmall2,WoodExplMed,WoodExplMed2
@@ -99,7 +99,7 @@ DjinVoice:
 	Voices:
 		Select: sul_djinn_order1,sul_djinn_order2,sul_djinn_order3,sul_djinn_order4
 		Action: sul_djinn_select1,sul_djinn_select2,sul_djinn_select3,sul_djinn_select4
-		Die: djindie
+		Default: djindie
 		Burned: djindie
 		Zapped: djindie
 		Poisoned: djindie
@@ -108,7 +108,7 @@ ElephantVoice:
 	Voices:
 		Select: guyyeah1
 		Action: guyokay1
-		Die: elephantdead
+		Default: elephantdead
 		Burned: elephantdead
 		Zapped: elephantdead
 		Poisoned: elephantdead
@@ -121,10 +121,10 @@ CivilianNew:
 	Voices:
 		Select: guyyeah1
 		Action: guyokay1
-		Die: nuyell1,nuyell4,nuyell5,nuyell6
-		Burned: yell1
-		Zapped: nuyell3
-		Poisoned: nuyell12
+		Default: mwdefdeath01, mwdefdeath02, mwdefdeath03, mwdefdeath04
+		Burned: mwbrundeath01, mwbrundeath02, mwbrundeath03
+		Zapped: mwbrundeath01, mwbrundeath02, mwbrundeath03
+		Poisoned: mwpoisdeath01, mwpoisdeath02
 		
 GDIArcherVoice:
 	DefaultVariant: .aud
@@ -134,10 +134,10 @@ GDIArcherVoice:
 	Voices:
 		Select: gdi_archer_select1,gdi_archer_select2,gdi_archer_select3,gdi_archer_select5
 		Action: gdi_archer_order1,gdi_archer_order2,gdi_archer_order3,gdi_archer_order4
-		Die: nuyell1,nuyell4,nuyell5,nuyell6
-		Burned: yell1
-		Zapped: nuyell3
-		Poisoned: nuyell12
+		Default: mwdefdeath01, mwdefdeath02, mwdefdeath03, mwdefdeath04
+		Burned: mwbrundeath01, mwbrundeath02, mwbrundeath03
+		Zapped: mwbrundeath01, mwbrundeath02, mwbrundeath03
+		Poisoned: mwpoisdeath01, mwpoisdeath02
 
 NodArcherVoice:
 	DefaultVariant: .aud
@@ -147,10 +147,10 @@ NodArcherVoice:
 	Voices:
 		Select: nod_archer_select1,nod_archer_select2,nod_archer_select3,nod_archer_select4
 		Action: nod_archer_order1,nod_archer_order2,nod_archer_order3,nod_archer_order4
-		Die: nuyell1,nuyell4,nuyell5,nuyell6
-		Burned: yell1
-		Zapped: nuyell3
-		Poisoned: nuyell12
+		Default: mwdefdeath01, mwdefdeath02, mwdefdeath03, mwdefdeath04
+		Burned: mwbrundeath01, mwbrundeath02, mwbrundeath03
+		Zapped: mwbrundeath01, mwbrundeath02, mwbrundeath03
+		Poisoned: mwpoisdeath01, mwpoisdeath02
  
 GDIKnightVoice:
 	DefaultVariant: .aud
@@ -160,10 +160,10 @@ GDIKnightVoice:
 	Voices:
 		Select: gdi_knight_select1,gdi_knight_select2,gdi_knight_select3,gdi_knight_select4
 		Action: gdi_knight_order1,gdi_knight_order2,gdi_knight_order3,gdi_knight_order4
-		Die: nuyell1,nuyell4,nuyell5,nuyell6
-		Burned: yell1
-		Zapped: nuyell3
-		Poisoned: nuyell12
+		Default: mwdefdeath01, mwdefdeath02, mwdefdeath03, mwdefdeath04
+		Burned: mwbrundeath01, mwbrundeath02, mwbrundeath03
+		Zapped: mwbrundeath01, mwbrundeath02, mwbrundeath03
+		Poisoned: mwpoisdeath01, mwpoisdeath02
  
 NodKnightVoice:
 	DefaultVariant: .aud
@@ -173,10 +173,10 @@ NodKnightVoice:
 	Voices:
 		Select: nod_knight_select1,nod_knight_select2,nod_knight_select3,nod_knight_select4
 		Action: nod_knight_order1,nod_knight_order2,nod_knight_order3,nod_knight_order4
-		Die: nuyell1,nuyell4,nuyell5,nuyell6
-		Burned: yell1
-		Zapped: nuyell3
-		Poisoned: nuyell12
+		Default: mwdefdeath01, mwdefdeath02, mwdefdeath03, mwdefdeath04
+		Burned: mwbrundeath01, mwbrundeath02, mwbrundeath03
+		Zapped: mwbrundeath01, mwbrundeath02, mwbrundeath03
+		Poisoned: mwpoisdeath01, mwpoisdeath02
 
 GDIPikeVoice:
 	DefaultVariant: .aud
@@ -186,10 +186,10 @@ GDIPikeVoice:
 	Voices:
 		Select: gdi_pike_select1,gdi_pike_select2,gdi_pike_select3,gdi_pike_select4
 		Action: gdi_pike_order1,gdi_pike_order2,gdi_pike_order3,gdi_pike_order4
-		Die: nuyell1,nuyell4,nuyell5,nuyell6
-		Burned: yell1
-		Zapped: nuyell3
-		Poisoned: nuyell12
+		Default: mwdefdeath01, mwdefdeath02, mwdefdeath03, mwdefdeath04
+		Burned: mwbrundeath01, mwbrundeath02, mwbrundeath03
+		Zapped: mwbrundeath01, mwbrundeath02, mwbrundeath03
+		Poisoned: mwpoisdeath01, mwpoisdeath02
 		
 NodPikeVoice:
 	DefaultVariant: .aud
@@ -199,10 +199,10 @@ NodPikeVoice:
 	Voices:
 		Select: nod_pike_select1,nod_pike_select2,nod_pike_select3,nod_pike_select4
 		Action: nod_pike_order1,nod_pike_order2,nod_pike_order3,nod_pike_order4
-		Die: nuyell1,nuyell4,nuyell5,nuyell6
-		Burned: yell1
-		Zapped: nuyell3
-		Poisoned: nuyell12
+		Default: mwdefdeath01, mwdefdeath02, mwdefdeath03, mwdefdeath04
+		Burned: mwbrundeath01, mwbrundeath02, mwbrundeath03
+		Zapped: mwbrundeath01, mwbrundeath02, mwbrundeath03
+		Poisoned: mwpoisdeath01, mwpoisdeath02
 		
 NodMageVoice:
 	DefaultVariant: .aud
@@ -212,10 +212,10 @@ NodMageVoice:
 	Voices:
 		Select: nod_mage_select1,nod_mage_select2,nod_mage_select3,nod_mage_select4
 		Action: nod_mage_order1,nod_mage_order2,nod_mage_order3,nod_mage_order4
-		Die: nuyell1,nuyell4,nuyell5,nuyell6
-		Burned: yell1
-		Zapped: nuyell3
-		Poisoned: nuyell12
+		Default: mwdefdeath01, mwdefdeath02, mwdefdeath03, mwdefdeath04
+		Burned: mwbrundeath01, mwbrundeath02, mwbrundeath03
+		Zapped: mwbrundeath01, mwbrundeath02, mwbrundeath03
+		Poisoned: mwpoisdeath01, mwpoisdeath02
 		
 NodCrossVoice:
 	DefaultVariant: .aud
@@ -225,10 +225,10 @@ NodCrossVoice:
 	Voices:
 		Select: nod_crossbow_select1,nod_crossbow_select2,nod_crossbow_select3,nod_crossbow_select4
 		Action: nod_crossbow_order1,nod_crossbow_order2,nod_crossbow_order3,nod_crossbow_order4
-		Die: nuyell1,nuyell4,nuyell5,nuyell6
-		Burned: yell1
-		Zapped: nuyell3
-		Poisoned: nuyell12
+		Default: mwdefdeath01, mwdefdeath02, mwdefdeath03, mwdefdeath04
+		Burned: mwbrundeath01, mwbrundeath02, mwbrundeath03
+		Zapped: mwbrundeath01, mwbrundeath02, mwbrundeath03
+		Poisoned: mwpoisdeath01, mwpoisdeath02
 		
 		
 GenericHorseVoice:
@@ -239,7 +239,7 @@ GenericHorseVoice:
 	Voices:
 		Select: 25-i000,25-i002,25-i004,25-i006,25-i012
 		Action: 25-i0016,25-i018,25-i022,25-i024,25-i026,25-i014
-		Die: horsedead03,horsedead02
+		Default: horsedead03,horsedead02
 		Burned: horsedead03,horsedead02
 		Zapped: horsedead03,horsedead02
 		Poisoned: horsedead03,horsedead02
@@ -252,7 +252,7 @@ GenericHorseOnly:
 	Voices:
 		Select: await1,ready,report1,yessir1
 		Action: ackno,affirm1,noprob,ritaway,roger,ugotit
-		Die: horsedead01
+		Default: horsedead01
 		Burned: horsedead01
 		Zapped: horsedead01
 		Poisoned: horsedead01
@@ -265,10 +265,10 @@ AssasinVoice:
 	Voices:
 		Select: syeah1,swhat1
 		Action: sokay1,smout1,saffirm1
-		Die: nuyell1,nuyell4,nuyell5,nuyell6
-		Burned: yell1
-		Zapped: nuyell3
-		Poisoned: nuyell12
+		Default: mwdefdeath01, mwdefdeath02, mwdefdeath03, mwdefdeath04
+		Burned: mwbrundeath01, mwbrundeath02, mwbrundeath03
+		Zapped: mwbrundeath01, mwbrundeath02, mwbrundeath03
+		Poisoned: mwpoisdeath01, mwpoisdeath02
 		
 DeathdealerVoice:
 	DefaultVariant: .aud
@@ -278,10 +278,10 @@ DeathdealerVoice:
 	Voices:
 		Select: 13-i000,13-i002,13-i004
 		Action: 13-i006,13-i012,13-i014,13-i016
-		Die: nuyell1,nuyell4,nuyell5,nuyell6
-		Burned: yell1
-		Zapped: nuyell3
-		Poisoned: nuyell12
+		Default: mwdefdeath01, mwdefdeath02, mwdefdeath03, mwdefdeath04
+		Burned: mwbrundeath01, mwbrundeath02, mwbrundeath03
+		Zapped: mwbrundeath01, mwbrundeath02, mwbrundeath03
+		Poisoned: mwpoisdeath01, mwpoisdeath02
 		Build: 13-i010
 		
 EngineerVoice:
@@ -292,10 +292,10 @@ EngineerVoice:
 	Voices:
 		Select: engineer_select1,engineer_select2,engineer_select3
 		Action: engineer_order1,engineer_order2,engineer_order3,engineer_order4
-		Die: nuyell1,nuyell4,nuyell5,nuyell6
-		Burned: yell1
-		Zapped: nuyell3
-		Poisoned: nuyell12
+		Default: mwdefdeath01, mwdefdeath02, mwdefdeath03, mwdefdeath04
+		Burned: mwbrundeath01, mwbrundeath02, mwbrundeath03
+		Zapped: mwbrundeath01, mwbrundeath02, mwbrundeath03
+		Poisoned: mwpoisdeath01, mwpoisdeath02
 		
 HeavyCavalVoice:
 	DefaultVariant: .aud
@@ -305,7 +305,7 @@ HeavyCavalVoice:
 	Voices:
 		Select: 14-i000,14-i002,14-i004
 		Action: 14-i008,14-i010,14-i012,14-i016
-		Die: horsedead02, horsedead03
+		Default: horsedead02, horsedead03
 		Burned: horsedead02, horsedead03
 		Zapped: horsedead02, horsedead03
 		Poisoned: horsedead02, horsedead03
@@ -318,10 +318,10 @@ PaladinVoice:
 	Voices:
 		Select: gdi_paladin_select1,gdi_paladin_select2,gdi_paladin_select3,gdi_paladin_select4
 		Action: gdi_paladin_order1,gdi_paladin_order2,gdi_paladin_order3,gdi_paladin_order4
-		Die: nuyell1,nuyell4,nuyell5,nuyell6
-		Burned: yell1
-		Zapped: nuyell3
-		Poisoned: nuyell12
+		Default: mwdefdeath01, mwdefdeath02, mwdefdeath03, mwdefdeath04
+		Burned: mwbrundeath01, mwbrundeath02, mwbrundeath03
+		Zapped: mwbrundeath01, mwbrundeath02, mwbrundeath03
+		Poisoned: mwpoisdeath01, mwpoisdeath02
 		
 JuggernautVoice:
 	DefaultVariant: .aud
@@ -331,7 +331,7 @@ JuggernautVoice:
 	Voices:
 		Select: jugg-i005,jugg-i006,jugg-i007
 		Action: jugg-i000,jugg-i001,jugg-i002
-		Die: jugg-i020
+		Default: jugg-i020
 		Burned: jugg-i020
 		Zapped: jugg-i020
 		Poisoned: jugg-i020
@@ -346,7 +346,7 @@ DragonVoice:
 	Voices:
 		Select: DragonSpeech02,DragonSpeech03
 		Action: DragonSpeech01
-		Die: dinoyes
+		Default: dinoyes
 		Burned: dinodie1
 		Zapped: dinoatk1
 		Poisoned: dinodie1
@@ -368,10 +368,10 @@ FarmerVoice:
 	Voices:
 		Action: all_farmer_order1,all_farmer_order2,all_farmer_order3,all_farmer_order4
 		Select: all_farmer_select1,all_farmer_select2,all_farmer_select3,all_farmer_select4
-		Die: nuyell1,nuyell4,nuyell5,nuyell6
-		Burned: yell1
-		Zapped: nuyell3
-		Poisoned: nuyell12
+		Default: mwdefdeath01, mwdefdeath02, mwdefdeath03, mwdefdeath04
+		Burned: mwbrundeath01, mwbrundeath02, mwbrundeath03
+		Zapped: mwbrundeath01, mwbrundeath02, mwbrundeath03
+		Poisoned: mwpoisdeath01, mwpoisdeath02
         
 LooterVoice:
 	DefaultVariant: .aud
@@ -381,10 +381,10 @@ LooterVoice:
 	Voices:
 		Action: all_looter_order1,all_looter_order2,all_looter_order3,all_looter_order4
 		Select: all_looter_select1,all_looter_select2,all_looter_select3,all_looter_select4
-		Die: nuyell1,nuyell4,nuyell5,nuyell6
-		Burned: yell1
-		Zapped: nuyell3
-		Poisoned: nuyell12
+		Default: mwdefdeath01, mwdefdeath02, mwdefdeath03, mwdefdeath04
+		Burned: mwbrundeath01, mwbrundeath02, mwbrundeath03
+		Zapped: mwbrundeath01, mwbrundeath02, mwbrundeath03
+		Poisoned: mwpoisdeath01, mwpoisdeath02
 
 
         
@@ -396,10 +396,10 @@ GardVoice:
 	Voices:
 		Action: sul_Gard_order1,sul_Gard_order2,sul_Gard_order3,sul_Gard_order4
 		Select: sul_Gard_select1,sul_Gard_select2,sul_Gard_select3,sul_Gard_select4
-		Die: nuyell1,nuyell4,nuyell5,nuyell6
-		Burned: yell1
-		Zapped: nuyell3
-		Poisoned: nuyell12
+		Default: mwdefdeath01, mwdefdeath02, mwdefdeath03, mwdefdeath04
+		Burned: mwbrundeath01, mwbrundeath02, mwbrundeath03
+		Zapped: mwbrundeath01, mwbrundeath02, mwbrundeath03
+		Poisoned: mwpoisdeath01, mwpoisdeath02
         
 MubarizunVoice:
 	DefaultVariant: .aud
@@ -409,10 +409,10 @@ MubarizunVoice:
 	Voices:
 		Action: sul_Mubarizun_order1,sul_Mubarizun_order2,sul_Mubarizun_order3,sul_Mubarizun_order4
 		Select: sul_Mubarizun_select1,sul_Mubarizun_select2,sul_Mubarizun_select3,sul_Mubarizun_select4
-		Die: nuyell1,nuyell4,nuyell5,nuyell6
-		Burned: yell1
-		Zapped: nuyell3
-		Poisoned: nuyell12
+		Default: mwdefdeath01, mwdefdeath02, mwdefdeath03, mwdefdeath04
+		Burned: mwbrundeath01, mwbrundeath02, mwbrundeath03
+		Zapped: mwbrundeath01, mwbrundeath02, mwbrundeath03
+		Poisoned: mwpoisdeath01, mwpoisdeath02
         
 RashudinVoice:
 	DefaultVariant: .aud
@@ -422,10 +422,10 @@ RashudinVoice:
 	Voices:
 		Action: sul_rashudin_order1,sul_rashudin_order2,sul_rashudin_order3,sul_rashudin_order4
 		Select: sul_rashudin_select1,sul_rashudin_select2,sul_rashudin_select3,sul_rashudin_select4
-		Die: nuyell1,nuyell4,nuyell5,nuyell6
-		Burned: yell1
-		Zapped: nuyell3
-		Poisoned: nuyell12
+		Default: mwdefdeath01, mwdefdeath02, mwdefdeath03, mwdefdeath04
+		Burned: mwbrundeath01, mwbrundeath02, mwbrundeath03
+		Zapped: mwbrundeath01, mwbrundeath02, mwbrundeath03
+		Poisoned: mwpoisdeath01, mwpoisdeath02
         
 BedouinVoice:
 	DefaultVariant: .aud
@@ -435,10 +435,10 @@ BedouinVoice:
 	Voices:
 		Action: sul_Bedouin_order1,sul_Bedouin_order2,sul_Bedouin_order3,sul_Bedouin_order4
 		Select: sul_Bedouin_select1,sul_Bedouin_select2,sul_Bedouin_select3,sul_Bedouin_select4
-		Die: nuyell1,nuyell4,nuyell5,nuyell6
-		Burned: yell1
-		Zapped: nuyell3
-		Poisoned: nuyell12
+		Default: mwdefdeath01, mwdefdeath02, mwdefdeath03, mwdefdeath04
+		Burned: mwbrundeath01, mwbrundeath02, mwbrundeath03
+		Zapped: mwbrundeath01, mwbrundeath02, mwbrundeath03
+		Poisoned: mwpoisdeath01, mwpoisdeath02
         
 SkeletonVoice:
 	DefaultVariant: .aud
@@ -448,7 +448,7 @@ SkeletonVoice:
 	Voices:
 		Action:
 		Select:
-		Die: skeletondie
+		Default: skeletondie
 		Burned: skeletondie
 		Zapped: skeletondie
 		Poisoned: skeletondie
@@ -460,7 +460,7 @@ AcolyteVoice:
 		Select: acov1,acov2,acov3
 		Harvest: acov1c,acov2c
 		Build: acov1b,acov2b
-		Die: nuyell1,nuyell4,nuyell5,nuyell6
-		Burned: yell1
-		Zapped: nuyell3
-		Poisoned: nuyell12
+		Default: mwdefdeath01, mwdefdeath02, mwdefdeath03, mwdefdeath04
+		Burned: mwbrundeath01, mwbrundeath02, mwbrundeath03
+		Zapped: mwbrundeath01, mwbrundeath02, mwbrundeath03
+		Poisoned: mwpoisdeath01, mwpoisdeath02

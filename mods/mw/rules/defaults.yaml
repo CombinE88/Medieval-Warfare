@@ -273,13 +273,14 @@
 		CrushSound: squish2.aud
 	Guardable:
 	DeathSounds@NORMAL:
+		Voice: Default
 		DeathTypes: DefaultDeath, BulletDeath, SmallExplosionDeath, ExplosionDeath
 	DeathSounds@BURNED:
 		Voice: Burned
 		DeathTypes: FireDeath
 	DeathSounds@POISONED:
 		Voice: Poisoned
-		DeathTypes: TiberiumDeath
+		DeathTypes: PoisonDeath, KadaverDeath
 	Voiced:
 		VoiceSet: GenericVoice
 	HitShape:
@@ -562,7 +563,6 @@
 		Categories: Tree
 	Voiced:
 		VoiceSet: Tree
-	DeathSounds:
 ^TreeHusk:
 	Inherits@1: ^SpriteActor
 	Interactable:
@@ -1005,20 +1005,6 @@
 	DrawLineToTarget:
 	HiddenUnderFog:
 	Guardable:
-	DeathSounds@NORMAL:
-		DeathTypes: DefaultDeath
-	DeathSounds@HEAVY:
-		Voice: Zapped
-		DeathTypes: RippedApartDeath, BallistaDeath
-	DeathSounds@POISONED:
-		Voice: Poisoned
-		DeathTypes: PoisonDeath
-	DeathSounds@POISONED:
-		Voice: Poisoned
-		DeathTypes: KadaverDeath
-	DeathSounds@BURNED:
-		Voice: Burned
-		DeathTypes: BurnToDeath
 ^Knight:  
 	Inherits: ^MedievalInfantry
 	WithDeathAnimation:
@@ -1050,8 +1036,6 @@
 		StandSequences: stand
 	Passenger:
 		CargoType: Infantry
-	Voiced:
-		VoiceSet: GenericVoice
 	Explodes@Tib:
 		Weapon: LeaveStuff
 		EmptyWeapon: LeaveStuff
@@ -1069,13 +1053,13 @@
 		Categories: Infantry
 	SpawnActorOnDeath@Soul:
 		DeathType: DefaultDeath
-		Probability: 55
+		Probability: 85
 		Actor: souls
 		OwnerType: InternalName
 		InternalOwner: Neutral
 	SpawnActorOnDeath@Soul1:
 		DeathType: RippedApartDeath
-		Probability: 100
+		Probability: 60
 		Actor: souls
 		OwnerType: InternalName
 		InternalOwner: Neutral
@@ -1087,23 +1071,35 @@
 		InternalOwner: Neutral
 	SpawnActorOnDeath@Soul3:
 		DeathType: BallistaDeath
-		Probability: 80
+		Probability: 70
 		Actor: souls
 		OwnerType: InternalName
 		InternalOwner: Neutral
 	SpawnActorOnDeath@Soul4:
 		DeathType: BurnToDeath
-		Probability: 90
+		Probability: 50
 		Actor: souls
 		OwnerType: InternalName
 		InternalOwner: Neutral
 	OwnerLostAction:
 		Action: Kill
 		DeathTypes: DefaultDeath
+	DeathSounds@NORMAL:
+		Voice: Default
+		DeathTypes: DefaultDeath, BallistaDeath
+	DeathSounds@HEAVY:
+		Voice: Zapped
+		DeathTypes: RippedApartDeath
+	DeathSounds@POISONED:
+		Voice: Poisoned
+		DeathTypes: PoisonDeath, KadaverDeath
+	DeathSounds@BURNED:
+		Voice: Burned
+		DeathTypes: BurnToDeath
+	Voiced:
+		VoiceSet: GenericVoice
 ^Cavalry:
 	Inherits: ^MedievalInfantry
-	Voiced:
-		VoiceSet: GenericHorseVoice
 	Targetable:
 		TargetTypes: Ground, Cavalry
 	WithDeathAnimation:
@@ -1163,10 +1159,19 @@
 		OwnerType: InternalName
 		InternalOwner: Neutral
 	DeathSounds@NORMAL:
-		DeathTypes: DefaultDeath, RippedApartDeath, BallistaDeath, PoisonDeath, BurnToDeath
-	-DeathSounds@HEAVY:
-	-DeathSounds@POISONED:
-	-DeathSounds@BURNED:
+		Voice: Default
+		DeathTypes: DefaultDeath, BallistaDeath
+	DeathSounds@HEAVY:
+		Voice: Zapped
+		DeathTypes: RippedApartDeath
+	DeathSounds@POISONED:
+		Voice: Poisoned
+		DeathTypes: PoisonDeath, KadaverDeath
+	DeathSounds@BURNED:
+		Voice: Burned
+		DeathTypes: BurnToDeath
+	Voiced:
+		VoiceSet: GenericHorseVoice
 	Explodes@Tib:
 		Weapon: LeaveStuff
 		EmptyWeapon: LeaveStuff
@@ -1426,10 +1431,6 @@
 		MinMoveDelay: 150
 		MaxMoveDelay: 1050
 	CrateAction:
-	-DeathSounds@NORMAL:
-	-DeathSounds@HEAVY:
-	-DeathSounds@POISONED:
-	-DeathSounds@BURNED:
 	HitShape:
 		Type: Circle
 			Radius: 128
@@ -1631,6 +1632,18 @@
 			Radius: 128
 	EditorTilesetFilter:
 		Categories: Infantry
+	DeathSounds@NORMAL:
+		Voice: Default
+		DeathTypes: DefaultDeath, BallistaDeath
+	DeathSounds@HEAVY:
+		Voice: Zapped
+		DeathTypes: RippedApartDeath, BallistaDeath
+	DeathSounds@POISONED:
+		Voice: Poisoned
+		DeathTypes: PoisonDeath, KadaverDeath
+	DeathSounds@BURNED:
+		Voice: Burned
+		DeathTypes: BurnToDeath
 ^Props:
 	Inherits@1: ^ExistsInWorld
 	Inherits@2: ^SpriteActor

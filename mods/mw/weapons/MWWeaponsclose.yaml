@@ -22,7 +22,7 @@ Fork:
 			MediumCavalry: 50
 			HeavyCavalry: 40
 			Spectral: 15
-		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+		DamageTypes: DefaultDeath
 Pike:
 	ReloadDelay: 50
 	Range: 2c800
@@ -47,7 +47,7 @@ Pike:
 			MediumCavalry: 125
 			HeavyCavalry: 120
 			Spectral: 10
-		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+		DamageTypes: DefaultDeath
 KingPike:
 	ReloadDelay: 50
 	Range: 2c800
@@ -72,7 +72,7 @@ KingPike:
 			MediumCavalry: 125
 			HeavyCavalry: 120
 			Spectral: 10
-		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+		DamageTypes: DefaultDeath
 	Warhead@RemoveCannon: GrantSelfCondition
 		Duration: 375
 		Condition: NotAttacking
@@ -104,7 +104,7 @@ KingPikeStructure:
 			MediumCavalry: 125
 			HeavyCavalry: 120
 			Spectral: 10
-		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+		DamageTypes: DefaultDeath
 	Warhead@RemoveCannon: GrantSelfCondition
 		Duration: 375
 		Condition: NotAttacking
@@ -129,7 +129,7 @@ KingPikeRanged:
 		Damage: 0
 		ValidTargets: Cavalry 
 		InvalidTargets: Air, Wall, Structure
-		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+		DamageTypes: DefaultDeath
 KingPikeRangedDummy:
 	ReloadDelay: 375
 	Range: 4c512
@@ -152,7 +152,7 @@ KingPikeRangedDummy:
 			MediumCavalry: 125
 			HeavyCavalry: 120
 			Spectral: 10
-		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+		DamageTypes: DefaultDeath
 KingPikePinning:
 	ReloadDelay: 375
 	Range: 4c512
@@ -204,7 +204,7 @@ PikeSpread:
 			MediumCavalry: 125
 			HeavyCavalry: 120
 			Spectral: 10
-		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+		DamageTypes: DefaultDeath
 PikeCavalry:
 	ReloadDelay: 30
 	Range: 1c800
@@ -229,7 +229,7 @@ PikeCavalry:
 			MediumCavalry: 150
 			HeavyCavalry: 100
 			Spectral: 15
-		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+		DamageTypes: DefaultDeath
 PikeAxe:
 	ReloadDelay: 40
 	Range: 1c800
@@ -255,7 +255,7 @@ PikeAxe:
 			MediumCavalry: 125
 			HeavyCavalry: 125
 			Spectral: 15
-		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath		
+		DamageTypes: DefaultDeath		
 MammothPike:
 	ReloadDelay: 45
 	Range: 1c800
@@ -283,7 +283,7 @@ MammothPike:
 			MediumCavalry: 100
 			HeavyCavalry: 100
 			Spectral: 65
-		DamageTypes: Prone50Percent, TriggerProne, RippedApartDeath
+		DamageTypes: RippedApartDeath
 BroadSword:
 	ReloadDelay: 35
 	Range: 1c800
@@ -308,7 +308,7 @@ BroadSword:
 			MediumCavalry: 10
 			HeavyCavalry: 10
 			Spectral: 15
-		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+		DamageTypes: DefaultDeath
 	Warhead@RemoveCannon: GrantSelfCondition
 		Duration: 375
 		Condition: NotAttacking
@@ -340,7 +340,7 @@ BroadSwordStructure:
 			MediumCavalry: 10
 			HeavyCavalry: 10
 			Spectral: 15
-		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+		DamageTypes: DefaultDeath
 	Warhead@RemoveCannon: GrantSelfCondition
 		Duration: 375
 		Condition: NotAttacking
@@ -372,7 +372,7 @@ BroadSwordBaron:
 			MediumCavalry: 10
 			HeavyCavalry: 10
 			Spectral: 15
-		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+		DamageTypes: DefaultDeath
 BroadSwordRanged:
 	ReloadDelay: 375
 	Range: 4c0
@@ -390,7 +390,7 @@ BroadSwordRanged:
 		Damage: 0
 		ValidTargets: Ground
 		InvalidTargets: Air, Wall, Structure
-		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+		DamageTypes: DefaultDeath
 BroadSwordRangedDummy:
 	ReloadDelay: 375
 	Range: 4c0
@@ -413,7 +413,7 @@ BroadSwordRangedDummy:
 			MediumCavalry: 10
 			HeavyCavalry: 10
 			Spectral: 33
-		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+		DamageTypes: DefaultDeath
 BroadSwordPinning:
 	ReloadDelay: 375
 	Range: 4c0
@@ -466,7 +466,7 @@ BroadSwordMongol:
 			MediumCavalry: 50
 			HeavyCavalry: 25
 			Spectral: 15
-		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+		DamageTypes: DefaultDeath
 KingsSword:
 	ReloadDelay: 60
 	Range: 1c800
@@ -491,7 +491,7 @@ KingsSword:
 			LightCavalry: 95
 			MediumCavalry: 75
 			HeavyCavalry: 65
-		DamageTypes: Prone50Percent, TriggerProne, RippedApartDeath
+		DamageTypes: RippedApartDeath
 Claymore:
 	ReloadDelay: 45
 	Range: 1c800
@@ -516,7 +516,7 @@ Claymore:
 			LightCavalry: 55
 			MediumCavalry: 45
 			HeavyCavalry: 35
-		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath	   
+		DamageTypes: DefaultDeath	   
 Sledgehammer:
 	ReloadDelay: 75
 	Range: 1c800
@@ -558,7 +558,7 @@ Sledgehammer:
 			MediumCavalry: 45
 			HeavyCavalry: 35
 			Spectral: 200
-		DamageTypes: Prone50Percent, TriggerProne, RippedApartDeath	   
+		DamageTypes: RippedApartDeath	   
 		ValidStances: Enemy, Neutral	   
 	Warhead@2Dam: SpreadDamage
 		Delay: 30
@@ -578,7 +578,7 @@ Sledgehammer:
 			MediumCavalry: 45
 			HeavyCavalry: 35
 			Spectral: 200
-		DamageTypes: Prone50Percent, TriggerProne, RippedApartDeath  
+		DamageTypes: RippedApartDeath  
 		ValidStances: Enemy, Neutral  
 	Warhead@3Dam: SpreadDamage
 		Delay: 50
@@ -598,7 +598,7 @@ Sledgehammer:
 			MediumCavalry: 45
 			HeavyCavalry: 35
 			Spectral: 200
-		DamageTypes: Prone50Percent, TriggerProne, RippedApartDeath  
+		DamageTypes: RippedApartDeath  
 		ValidStances: Enemy, Neutral 
 Mace:
 	ReloadDelay: 45
@@ -626,7 +626,7 @@ Mace:
 			HeavyCavalry: 10
 			HeavyBuilding: 10
 			Spectral: 15
-		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+		DamageTypes: DefaultDeath
 Battering:
 	ReloadDelay: 160
 	Range: 1c800

@@ -22,7 +22,7 @@ BowNArrowDebuff:
 			HeavyCavalry: 0
 			HeavyBuilding: 0
 			Spectral: 0
-		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+		DamageTypes: DefaultDeath
 	Warhead@rotten: GrantSingletonCondition
 		Range: 265
 		Duration: 25
@@ -60,7 +60,7 @@ BowNArrow:
 			HeavyCavalry: 25
 			HeavyBuilding: 15
 			Spectral: 15
-		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+		DamageTypes: DefaultDeath
 BowNArrowDUMMY:
 	ReloadDelay: 45
 	Range: 6c0
@@ -93,7 +93,7 @@ BowNArrowDUMMY:
 			HeavyCavalry: 0
 			HeavyBuilding: 0
 			Spectral: 0
-		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+		DamageTypes: DefaultDeath
 BowNArrowMarksman:
 	ReloadDelay: 50
 	Range: 6c0
@@ -124,7 +124,7 @@ BowNArrowMarksman:
 			HeavyCavalry: 35
 			HeavyBuilding: 15
 			Spectral: 15
-		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+		DamageTypes: DefaultDeath
 BowNArrowDUMMYMarksman:
 	ReloadDelay: 45
 	Range: 6c0
@@ -157,7 +157,7 @@ BowNArrowDUMMYMarksman:
 			HeavyCavalry: 0
 			HeavyBuilding: 0
 			Spectral: 0
-		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+		DamageTypes: DefaultDeath
 BowNArrowAir:
 	ReloadDelay: 45
 	Range: 7c512
@@ -193,7 +193,7 @@ BowNArrowAir:
 			MediumCavalry: 55
 			HeavyCavalry: 35
 			HeavyBuilding: 45
-		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+		DamageTypes: DefaultDeath
 BowNArrowAirMarksman:
 	ReloadDelay: 50
 	Range: 7c512
@@ -230,7 +230,7 @@ BowNArrowAirMarksman:
 			MediumCavalry: 55
 			HeavyCavalry: 35
 			HeavyBuilding: 45
-		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+		DamageTypes: DefaultDeath
 MageFire:
 	ReloadDelay: 60
 	Range: 4c0
@@ -265,7 +265,7 @@ MageFire:
 			HeavyCavalry: 35
 			HeavyBuilding: 125
 			Spectral: 120
-		DamageTypes: Prone50Percent, TriggerProne, BurnToDeath
+		DamageTypes: BurnToDeath
 	Warhead@2Smu: LeaveSmudge
 		SmudgeType: Scorch
 		InvalidTargets: Vehicle, Structure, Wall
@@ -307,7 +307,7 @@ MageFireAir:
 			MediumCavalry: 45
 			HeavyCavalry: 35
 			HeavyBuilding: 125
-		DamageTypes: Prone50Percent, TriggerProne, BurnToDeath
+		DamageTypes: BurnToDeath
 	Warhead@2Smu: LeaveSmudge
 		SmudgeType: Scorch
 		InvalidTargets: Vehicle, Structure, Wall
@@ -345,7 +345,7 @@ MageFireSiegeTower:
 			MediumCavalry: 45
 			HeavyCavalry: 35
 			HeavyBuilding: 125
-		DamageTypes: Prone50Percent, TriggerProne, BurnToDeath
+		DamageTypes: BurnToDeath
 	Warhead@2Smu: LeaveSmudge
 		SmudgeType: Scorch
 		InvalidTargets: Vehicle, Structure, Wall
@@ -380,7 +380,7 @@ BowNArrowSiegeTower:
 			MediumCavalry: 55
 			HeavyCavalry: 35
 			HeavyBuilding: 25
-		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath  
+		DamageTypes: DefaultDeath  
 BowNArrowSiegeTowerAIR:
 	ReloadDelay: 45
 	Range: 10c0
@@ -415,7 +415,7 @@ BowNArrowSiegeTowerAIR:
 			MediumCavalry: 55
 			HeavyCavalry: 35
 			HeavyBuilding: 25
-		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath 
+		DamageTypes: DefaultDeath 
 BowNArrowSiegeTowerDUMMY:
 	ReloadDelay: 45
 	Range: 6c0
@@ -448,7 +448,7 @@ BowNArrowSiegeTowerDUMMY:
 			HeavyCavalry: 0
 			HeavyBuilding: 0
 			Spectral: 0
-		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+		DamageTypes: DefaultDeath
 SpearThrow:
 	ReloadDelay: 50
 	Range: 3c512
@@ -486,7 +486,7 @@ SpearThrow:
 			HeavyCavalry: 100
 			HeavyBuilding: 100
 			Spectral: 15
-		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath	 
+		DamageTypes: DefaultDeath	 
 SpearThrowAir:
 	ReloadDelay: 50
 	Range: 6c0
@@ -523,7 +523,7 @@ SpearThrowAir:
 			MediumCavalry: 100
 			HeavyCavalry: 100
 			HeavyBuilding: 100
-		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath  
+		DamageTypes: DefaultDeath  
 GunlanceAir:
 	ReloadDelay: 45
 	Range: 7c0
@@ -555,7 +555,7 @@ GunlanceAir:
 			HeavyCavalry: 100
 			HeavyBuilding: 100
 			Spectral: 75
-		DamageTypes: Prone50Percent, TriggerProne, RippedApartDeath	
+		DamageTypes: RippedApartDeath	
 GunlanceGround:
 	ReloadDelay: 75
 	Range: 4c0
@@ -583,7 +583,7 @@ GunlanceGround:
 			HeavyCavalry: 100
 			HeavyBuilding: 100
 			Spectral: 75
-		DamageTypes: Prone50Percent, TriggerProne, RippedApartDeath	
+		DamageTypes: RippedApartDeath	
 	Warhead@1Eff: CreateEffect
 		Explosions: smokey
 		ImpactSounds: tnkfire2.aud, tnkfire3.aud, tnkfire4.aud, tnkfire6.aud
@@ -609,7 +609,7 @@ GunlanceGroundDUMMY:
 			HeavyCavalry: 100
 			HeavyBuilding: 100
 			Spectral: 75
-		DamageTypes: Prone50Percent, TriggerProne, RippedApartDeath	
+		DamageTypes: RippedApartDeath	
 	Warhead@1Eff: CreateEffect
 		Explosions: smokey
 OrniSpearThrowAir:
@@ -648,7 +648,7 @@ OrniSpearThrowAir:
 			HeavyCavalry: 75
 			HeavyBuilding: 100
 			Spectral: 15
-		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath  
+		DamageTypes: DefaultDeath  
 OrniSpearBomb:
 	ReloadDelay: 3
 	Range: 2c512
@@ -676,7 +676,7 @@ OrniSpearBomb:
 			HeavyCavalry: 115
 			HeavyBuilding: 100
 			Spectral: 35
-		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath  
+		DamageTypes: DefaultDeath  
 	Warhead@1Eff: CreateEffect
 		Explosions: spearstick	
 		ExplosionPalette : ra
@@ -715,7 +715,7 @@ WarkiteCrossbow:
 			HeavyBuilding: 75
 			Concrete: 100   
 			Spectral: 100
-		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath 
+		DamageTypes: DefaultDeath 
 MammothDagger:
 	ReloadDelay: 45
 	Range: 6c0
@@ -751,7 +751,7 @@ MammothDagger:
 			MediumCavalry: 90
 			HeavyCavalry: 50
 			Spectral: 15
-		DamageTypes: Prone50Percent, TriggerProne, PoisonDeath 
+		DamageTypes: PoisonDeath 
 DaggerMongol:
 	ReloadDelay: 45
 	Range: 4c0
@@ -787,7 +787,7 @@ DaggerMongol:
 			MediumCavalry: 90
 			HeavyCavalry: 50
 			Spectral: 15
-		DamageTypes: Prone50Percent, TriggerProne, PoisonDeath 
+		DamageTypes: PoisonDeath 
 paladingun:
 	ReloadDelay: 70
 	Range: 3c512
@@ -811,7 +811,7 @@ paladingun:
 			LightCavalry: 75
 			MediumCavalry: 55
 			HeavyCavalry: 35
-		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath	 
+		DamageTypes: DefaultDeath	 
 paladingunvisual:
 	ReloadDelay: 70
 	Range: 3c512
@@ -840,7 +840,7 @@ paladingunvisual:
 			LightCavalry: 0
 			MediumCavalry: 0
 			HeavyCavalry: 0
-		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath	 
+		DamageTypes: DefaultDeath	 
 Dagger:
 	ReloadDelay: 120
 	Range: 5c512
@@ -876,7 +876,7 @@ Dagger:
 			MediumCavalry: 90
 			HeavyCavalry: 75
 			Spectral: 100
-		DamageTypes: Prone50Percent, TriggerProne, PoisonDeath 
+		DamageTypes: PoisonDeath 
 	Warhead@rotten: GrantSingletonCondition
 		Range: 0c512
 		Duration: 250
@@ -918,7 +918,7 @@ DaggerAir:
 			MediumCavalry: 90
 			HeavyCavalry: 75
 			Spectral: 250
-		DamageTypes: Prone50Percent, TriggerProne, PoisonDeath 
+		DamageTypes: PoisonDeath 
 DaggerSiegeTower:
 	ReloadDelay: 60
 	Range: 7c0
@@ -953,7 +953,7 @@ DaggerSiegeTower:
 			LightCavalry: 100
 			MediumCavalry: 90
 			HeavyCavalry: 75
-		DamageTypes: Prone50Percent, TriggerProne, PoisonDeath 
+		DamageTypes: PoisonDeath 
 	Warhead@rotten: GrantSingletonCondition
 		Range: 0c512
 		Duration: 200
@@ -997,7 +997,7 @@ LongBowNArrow:
 			HeavyCavalry: 25
 			HeavyBuilding: 125
 			Spectral: 90
-		DamageTypes: Prone50Percent, TriggerProne, BurnToDeath
+		DamageTypes: BurnToDeath
 	Warhead@2Dam: SpreadDamage
 		Spread: 210
 		ValidTargets: Ground
@@ -1017,7 +1017,7 @@ LongBowNArrow:
 			HeavyCavalry: 25
 			HeavyBuilding: 125
 			Spectral: 90
-		DamageTypes: Prone50Percent, TriggerProne, BurnToDeath
+		DamageTypes: BurnToDeath
 	Warhead@3Dam: SpreadDamage
 		Spread: 210
 		ValidTargets: Ground
@@ -1037,7 +1037,7 @@ LongBowNArrow:
 			HeavyCavalry: 25
 			HeavyBuilding: 125
 			Spectral: 90
-		DamageTypes: Prone50Percent, TriggerProne, BurnToDeath
+		DamageTypes: BurnToDeath
 	Warhead@1Eff: CreateEffect
 		Explosions: fire2	
 	Warhead@2Eff: CreateEffect
@@ -1083,12 +1083,12 @@ LongBowNArrowAir:
 			MediumCavalry: 25
 			HeavyCavalry: 25
 			HeavyBuilding: 125
-		DamageTypes: Prone50Percent, TriggerProne, BurnToDeath
+		DamageTypes: BurnToDeath
 	Warhead@1Eff: CreateEffect
 		Explosions: small_napalm	
 		ImpactSounds: xplos.aud
 DragonFire:
-	ReloadDelay: 4
+	ReloadDelay: 3
 	Range: 3c512
 	MinRange: 0c512
 	ValidTargets: Ground
@@ -1118,7 +1118,7 @@ DragonFire:
 			HeavyCavalry: 75
 			HeavyBuilding: 65
 			Spectral: 200
-		DamageTypes: Prone50Percent, TriggerProne, BurnToDeath
+		DamageTypes: BurnToDeath
 	Warhead@3Dam: SpreadDamage
 		Spread: 210
 		ValidTargets: Ground
@@ -1137,7 +1137,7 @@ DragonFire:
 			HeavyCavalry: 75
 			HeavyBuilding: 75
 			Spectral: 200
-		DamageTypes: Prone50Percent, TriggerProne, BurnToDeath
+		DamageTypes: BurnToDeath
 	Warhead@1Eff: CreateEffect
 		Explosions: fire2	
 	Warhead@2Eff: CreateEffect
@@ -1183,7 +1183,7 @@ DragonFireAir:
 			MediumCavalry: 100
 			HeavyCavalry: 75
 			HeavyBuilding: 75
-		DamageTypes: Prone50Percent, TriggerProne, BurnToDeath
+		DamageTypes: BurnToDeath
 	Warhead@2Smu: LeaveSmudge
 		SmudgeType: Scorch
 		InvalidTargets: Vehicle, Structure, Wall
@@ -1220,7 +1220,7 @@ BowNArrowTower:
 			HeavyCavalry: 12
 			HeavyBuilding: 35
 			Spectral: 15
-		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath 
+		DamageTypes: DefaultDeath 
 BowNArrowTowerDUMMY:
 	ReloadDelay: 25
 	Range: 8c512
@@ -1253,7 +1253,7 @@ BowNArrowTowerDUMMY:
 			HeavyCavalry: 0
 			HeavyBuilding: 0
 			Spectral: 0
-		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+		DamageTypes: DefaultDeath
 BowNArrowTowerUnblock:
 	ReloadDelay: 25
 	Range: 7c0
@@ -1285,7 +1285,7 @@ BowNArrowTowerUnblock:
 			HeavyCavalry: 20
 			HeavyBuilding: 40
 			Spectral: 15
-		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath  
+		DamageTypes: DefaultDeath  
 BowNArrowTowerUnblockDUMMY:
 	ReloadDelay: 25
 	Range: 7c0
@@ -1319,7 +1319,7 @@ BowNArrowTowerUnblockDUMMY:
 			HeavyCavalry: 0
 			HeavyBuilding: 0
 			Spectral: 0
-		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath 
+		DamageTypes: DefaultDeath 
 CannonBoulder:
 	ReloadDelay: 40
 	Range: 8c0
@@ -1349,7 +1349,7 @@ CannonBoulder:
 			HeavyCavalry: 100
 			HeavyBuilding: 45
 			Spectral: 75
-		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+		DamageTypes: DefaultDeath
 	Warhead@2Smu: LeaveSmudge
 		SmudgeType: Crater
 		InvalidTargets: Vehicle, Structure, Wall, Husk, Trees, Creep
@@ -1387,7 +1387,7 @@ SiegeBoulderTech:
 			HeavyCavalry: 100
 			HeavyBuilding: 45
 			Spectral: 75
-		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+		DamageTypes: DefaultDeath
 	Warhead@2Smu: LeaveSmudge
 		SmudgeType: Crater
 		InvalidTargets: Vehicle, Structure, Wall, Husk, Trees, Creep
@@ -1426,7 +1426,7 @@ SiegeBalista:
 			HeavyCavalry: 85
 			HeavyBuilding: 100
 			Spectral: 35
-		DamageTypes: Prone50Percent, TriggerProne, BallistaDeath
+		DamageTypes: BallistaDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: smokey
 	Warhead@2Smu: LeaveSmudge
@@ -1464,7 +1464,7 @@ SiegeBoulder:
 			HeavyCavalry: 80
 			HeavyBuilding: 200
 			Spectral: 75
-		DamageTypes: Prone50Percent, TriggerProne, BallistaDeath
+		DamageTypes: BallistaDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: smokey
 	Warhead@2Smu: LeaveSmudge
@@ -1504,7 +1504,7 @@ TribuchetBoulder:
 			HeavyCavalry: 100
 			HeavyBuilding: 75
 			Spectral: 35
-		DamageTypes: Prone50Percent, TriggerProne, BallistaDeath
+		DamageTypes: BallistaDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: smokey
 		ImpactSounds: tnkfire6.aud
@@ -1545,7 +1545,7 @@ HighTribuchetBoulder:
 			HeavyCavalry: 100
 			HeavyBuilding: 100
 			Spectral: 100
-		DamageTypes: Prone50Percent, TriggerProne, BallistaDeath
+		DamageTypes: BallistaDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: smokey
 		ImpactSounds: tnkfire6.aud
@@ -1584,7 +1584,7 @@ StationBalistaAG:
 			HeavyCavalry: 150
 			HeavyBuilding: 100
 			Spectral: 35
-		DamageTypes: Prone50Percent, TriggerProne, BallistaDeath
+		DamageTypes: BallistaDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: smokey
 StationBalistaAA:
@@ -1619,7 +1619,7 @@ StationBalistaAA:
 			MediumCavalry: 75
 			HeavyCavalry: 75
 			HeavyBuilding: 100
-		DamageTypes: Prone50Percent, TriggerProne, BallistaDeath
+		DamageTypes: BallistaDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: smokey
 SamBallista:
@@ -1654,7 +1654,7 @@ SamBallista:
 			MediumCavalry: 100
 			HeavyCavalry: 100
 			HeavyBuilding: 100
-		DamageTypes: Prone50Percent, TriggerProne, BallistaDeath
+		DamageTypes: BallistaDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: smokey
 KingCrossbow:
@@ -1692,7 +1692,7 @@ KingCrossbow:
 			HeavyBuilding: 50
 			Concrete: 35   
 			Spectral: 100
-		DamageTypes: Prone50Percent, TriggerProne, RippedApartDeath  
+		DamageTypes: RippedApartDeath  
 KingCrossbowAir:
 	ReloadDelay: 70
 	Range: 7c0
@@ -1727,7 +1727,7 @@ KingCrossbowAir:
 			HeavyCavalry: 50
 			HeavyBuilding: 50
 			Concrete: 35   
-		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath  
+		DamageTypes: DefaultDeath  
 KingsSwordMounted:
 	ReloadDelay: 60
 	Range: 1c800
@@ -1752,7 +1752,7 @@ KingsSwordMounted:
 			MediumCavalry: 75
 			HeavyCavalry: 65
 			Spectral: 100
-		DamageTypes: Prone50Percent, TriggerProne, RippedApartDeath
+		DamageTypes: RippedApartDeath
 Crossbow:
 	ReloadDelay: 70
 	Range: 6c512
@@ -1788,7 +1788,7 @@ Crossbow:
 			HeavyBuilding: 15
 			Concrete: 6   
 			Spectral: 20
-		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath   
+		DamageTypes: DefaultDeath   
 CrossbowAir:
 	ReloadDelay: 45
 	Range: 5c0
@@ -1823,7 +1823,7 @@ CrossbowAir:
 			HeavyCavalry: 50
 			HeavyBuilding: 50
 			Concrete: 35   
-		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath   
+		DamageTypes: DefaultDeath   
 CrossbowSiegeTower:
 	ReloadDelay: 65
 	Range: 7c0
@@ -1858,7 +1858,7 @@ CrossbowSiegeTower:
 			HeavyCavalry: 50
 			HeavyBuilding: 50
 			Concrete: 35   
-		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath		  
+		DamageTypes: DefaultDeath		  
 BallonCrossbow:
 	ReloadDelay: 20
 	Range: 4c0
@@ -1896,4 +1896,4 @@ BallonCrossbow:
 			HeavyBuilding: 75
 			Concrete: 50   
 			Spectral: 20
-		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath		  
+		DamageTypes: DefaultDeath		  

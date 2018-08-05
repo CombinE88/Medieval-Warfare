@@ -194,7 +194,7 @@ DRGNRDR:
 		Image: drgnrdr
 		PlayerPalette: raplayer
 	AmmoPool:
-		Ammo: 14
+		Ammo: 16
 		Name: primary
 		Armaments: primary, secondary
 		PipCount: 5
@@ -203,7 +203,7 @@ DRGNRDR:
 		AmmoCondition: ammo
 	ReloadAmmoPool:
 		AmmoPool: primary
-		Delay: 21
+		Delay: 20
 		Count: 2
 	SpawnActorOnDeath:
 		Actor: DRAGON.Husk

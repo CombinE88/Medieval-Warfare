@@ -19,7 +19,7 @@ none:
 			MediumCavalry: 0
 			HeavyCavalry: 0
 			Spectral: 15
-		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+		DamageTypes: DefaultDeath
 WanderAttack:
 	ValidTargets: Wanderer
 	ReloadDelay: 1
@@ -40,7 +40,7 @@ WanderAttack:
 			MediumCavalry: 100
 			HeavyCavalry: 100
 			Spectral: 25
-		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+		DamageTypes: DefaultDeath
 WanderTalk:
 	ValidTargets: Talkable
 	ReloadDelay: 65
@@ -80,7 +80,7 @@ WanderAttackWorkshop:
 			LightCavalry: 100
 			MediumCavalry: 100
 			HeavyCavalry: 100
-		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+		DamageTypes: DefaultDeath
 WanderCommander:
 	ReloadDelay: 45
 	Range: 1c800
@@ -104,7 +104,7 @@ WanderCommander:
 			LightCavalry: 90
 			MediumCavalry: 65
 			HeavyCavalry: 55
-		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+		DamageTypes: DefaultDeath
 Repair:
 	ReloadDelay: 20
 	Range: 1c800
@@ -135,7 +135,7 @@ SetFire:
 		Versus:
 			Concrete: 100
 			HeavyBuilding: 100
-		DamageTypes: Prone50Percent, TriggerProne, BurnToDeath 
+		DamageTypes: BurnToDeath 
 	Warhead@2Dam: SpreadDamage
 		Spread: 512
 		Damage: 4000
@@ -145,7 +145,7 @@ SetFire:
 		Versus:
 			Concrete: 100
 			HeavyBuilding: 100
-		DamageTypes: Prone50Percent, TriggerProne, BurnToDeath 
+		DamageTypes: BurnToDeath 
 	Warhead@3Dam: SpreadDamage
 		Spread: 512
 		Damage: 2000
@@ -155,7 +155,7 @@ SetFire:
 		Versus:
 			Concrete: 100
 			HeavyBuilding: 100
-		DamageTypes: Prone50Percent, TriggerProne, BurnToDeath 
+		DamageTypes: BurnToDeath 
 	Warhead@4Dam: SpreadDamage
 		Spread: 512
 		Damage: 1500
@@ -165,7 +165,7 @@ SetFire:
 		Versus:
 			Concrete: 100
 			HeavyBuilding: 100
-		DamageTypes: Prone50Percent, TriggerProne, BurnToDeath 
+		DamageTypes: BurnToDeath 
 	Warhead@1Eff: CreateEffect
 		Explosions: fire1
 	Warhead@2Eff: CreateEffect
@@ -208,7 +208,7 @@ ThopterBomb:
 			HeavyCavalry: 75
 			HeavyBuilding: 75
 			Spectral: 200
-		DamageTypes: Prone50Percent, TriggerProne, BurnToDeath
+		DamageTypes: BurnToDeath
 	Warhead@2Smu: LeaveSmudge
 		SmudgeType: Scorch
 		InvalidTargets: Vehicle, Structure, Wall
@@ -246,7 +246,7 @@ FireArrowBarrage:
 			HeavyCavalry: 100
 			HeavyBuilding: 150
 			Spectral: 100
-		DamageTypes: Prone50Percent, TriggerProne, BurnToDeath
+		DamageTypes: BurnToDeath
 	Warhead@2Dam: SpreadDamage
 		Spread: 712
 		ValidTargets: Ground
@@ -265,7 +265,7 @@ FireArrowBarrage:
 			HeavyCavalry: 100
 			HeavyBuilding: 150
 			Spectral: 100
-		DamageTypes: Prone50Percent, TriggerProne, BurnToDeath
+		DamageTypes: BurnToDeath
 	Warhead@3Dam: SpreadDamage
 		Spread: 450
 		ValidTargets: Ground
@@ -284,7 +284,7 @@ FireArrowBarrage:
 			HeavyCavalry: 100
 			HeavyBuilding: 150
 			Spectral: 100
-		DamageTypes: Prone50Percent, TriggerProne, BurnToDeath
+		DamageTypes: BurnToDeath
 	Warhead@1Eff: CreateEffect
 		Explosions: fire2	
 	Warhead@2Eff: CreateEffect
@@ -328,7 +328,7 @@ FireBarrage:
 			HeavyCavalry: 100
 			HeavyBuilding: 150
 			Spectral: 100
-		DamageTypes: Prone50Percent, TriggerProne, BurnToDeath
+		DamageTypes: BurnToDeath
 	Warhead@2Dam: SpreadDamage
 		Spread: 712
 		ValidTargets: Ground
@@ -346,7 +346,7 @@ FireBarrage:
 			MediumCavalry: 100
 			HeavyCavalry: 100
 			HeavyBuilding: 150
-		DamageTypes: Prone50Percent, TriggerProne, BurnToDeath
+		DamageTypes: BurnToDeath
 	Warhead@3Dam: SpreadDamage
 		Spread: 450
 		ValidTargets: Ground
@@ -365,7 +365,7 @@ FireBarrage:
 			HeavyCavalry: 100
 			HeavyBuilding: 150
 			Spectral: 100
-		DamageTypes: Prone50Percent, TriggerProne, BurnToDeath
+		DamageTypes: BurnToDeath
 	Warhead@1Eff: CreateEffect
 		Explosions: fire2	
 	Warhead@2Eff: CreateEffect
@@ -1146,7 +1146,7 @@ Dragonbite:
 			LightCavalry: 90
 			MediumCavalry: 80
 			HeavyCavalry: 50
-		DamageTypes: Prone50Percent, TriggerProne, RippedApartDeath
+		DamageTypes: RippedApartDeath
 LeaveStuff:
 	Warhead@1Res: CreateResource
 		AddsResourceType: Guns
@@ -1184,7 +1184,7 @@ KilledPike:
 			MediumCavalry: 100
 			HeavyCavalry: 133
 			Spectral: 0
-		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+		DamageTypes: DefaultDeath
 BowNArrowHunter:
 	ReloadDelay: 37
 	Range: 7c0
@@ -1214,7 +1214,7 @@ BowNArrowHunter:
 			HeavyCavalry: 100
 			HeavyBuilding: 100
 			Spectral: 100
-		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+		DamageTypes: DefaultDeath
 BowNArrowHunterDUMMY:
 	ReloadDelay: 37
 	Range: 7c0
@@ -1247,7 +1247,7 @@ BowNArrowHunterDUMMY:
 			HeavyCavalry: 0
 			HeavyBuilding: 0
 			Spectral: 0
-		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+		DamageTypes: DefaultDeath
 HunterGather:
 	ValidTargets: Deaddeer
 	InvalidTargets: Air
@@ -1278,7 +1278,7 @@ HunterGather:
 			HeavyCavalry: 100
 			HeavyBuilding: 100
 			Spectral: 100
-		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+		DamageTypes: DefaultDeath
 HunterUnload:
 	ValidTargets: HunterLodge
 	InvalidTargets: Air
@@ -1308,7 +1308,7 @@ HunterUnload:
 			HeavyCavalry: 0
 			HeavyBuilding: 0
 			Spectral: 0
-		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+		DamageTypes: DefaultDeath
 LumberJackAxe:
 	ReloadDelay: 25
 	Range: 1c800
@@ -1330,7 +1330,7 @@ LumberJackAxe:
 			LightCavalry: 100
 			MediumCavalry: 100
 			HeavyCavalry: 100
-		DamageTypes: Prone50Percent, TriggerProne, LumberDead
+		DamageTypes: LumberDead
 LumbererGather:
 	ReloadDelay: 25
 	Range: 1c800
@@ -1362,7 +1362,7 @@ LumbererGather:
 			HeavyCavalry: 100
 			HeavyBuilding: 100
 			Spectral: 100
-		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+		DamageTypes: DefaultDeath
 LumberGrantLootAttack:
 	ValidTargets: LumberShack
 	ReloadDelay: 18
@@ -1391,7 +1391,7 @@ LumberGrantLootAttack:
 			HeavyCavalry: 0
 			HeavyBuilding: 0
 			Spectral: 0
-		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+		DamageTypes: DefaultDeath
 LumberGrantLootPlayer:
 	ValidTargets: LumberShack
 	ReloadDelay: 18
@@ -1420,7 +1420,7 @@ LumberGrantLootPlayer:
 			HeavyCavalry: 0
 			HeavyBuilding: 0
 			Spectral: 0
-		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+		DamageTypes: DefaultDeath
 BuildConstruction:
 	ValidTargets: Buildable
 	InvalidTargets: Air
@@ -1450,7 +1450,7 @@ BuildConstruction:
 			HeavyCavalry: 0
 			HeavyBuilding: 0
 			Spectral: 0
-		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+		DamageTypes: DefaultDeath
 LaborourUnload:
 	ValidTargets: Deliverable
 	InvalidTargets: Air
@@ -1479,7 +1479,7 @@ LaborourUnload:
 			HeavyCavalry: 0
 			HeavyBuilding: 0
 			Spectral: 0
-		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+		DamageTypes: DefaultDeath
 LaborourLoad:
 	ValidTargets: Material
 	InvalidTargets: Air
@@ -1509,4 +1509,4 @@ LaborourLoad:
 			HeavyCavalry: 0
 			HeavyBuilding: 0
 			Spectral: 0
-		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+		DamageTypes: DefaultDeath
