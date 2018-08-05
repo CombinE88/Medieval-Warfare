@@ -344,7 +344,6 @@ World:
 		Class: medieval
 		ClassName: Supply Wagon Only
 		Factions: ded
-		SupportActors: preycolyte,preycolyte, preycolyte
 		BaseActor: ziggurat1
 	SpawnMPUnits:
 		StartingUnitsClass: medieval

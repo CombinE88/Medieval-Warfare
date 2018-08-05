@@ -231,6 +231,8 @@ ASSASSIN:
 	Cloak:
 		InitialDelay: 90
 		CloakDelay: 90
+		CloakSound: mwcloaksound.aud
+		UncloakSound: mwuncloaksound.aud
 	Valued:
 		Cost: 600
 	Tooltip:
@@ -250,14 +252,17 @@ ASSASSIN:
 		Name: Primary
 		Weapon: dagger
 		LocalOffset: 241,80,356
+		FireDelay: 2
 	Armament@daggerair:
 		Name: Primary
 		Weapon: daggerair
 		LocalOffset: 241,80,356
+		FireDelay: 2
 	Armament@fire:
 		Name: Secondary
 		Weapon: SetFire
 		LocalOffset: 241,80,356
+		FireDelay: 2
 	AttackFrontal:
 		Armaments: Primary, Secondary
 	RenderSprites:

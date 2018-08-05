@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using OpenRA.Mods.Common.Orders;
 using OpenRA.Mods.Common.Traits;
 using OpenRA.Mods.MW.Activities;
@@ -29,7 +30,7 @@ namespace OpenRA.Mods.MW.Traits
         [Desc("Resource Type / Prerequisites. NONE for none")]
         public readonly Dictionary<string, string> ResourceTypesPreres = new Dictionary<string, string>();
 
-        [Desc("Resource Type / Prerequisites. NONE for none")]
+        [Desc("Resource Type / Extra time in tick wich is needed to gather this resource type")]
         public readonly Dictionary<string, int> ResourceExtraTimes = new Dictionary<string, int>();
 
         public override object Create(ActorInitializer init) { return new AcolytePrey(this); }
@@ -85,12 +86,23 @@ namespace OpenRA.Mods.MW.Traits
 
             public override bool CanTargetActor(Actor self, Actor target, TargetModifiers modifiers, ref string cursor)
             {
-                return self.Info.TraitInfo<AcolytePreyInfo>().TargetActors.Contains(target.Info.Name);
+                var trait = self.Info.TraitInfo<AcolytePreyInfo>();
+                if (!trait.TargetActors.Contains(target.Info.Name))
+                    return false;
+                if (target.Info.HasTraitInfo<ValidPreyTargetInfo>() && !target.TraitOrDefault<ValidPreyTarget>().Actors.Any())
+                    return false;
+                return true;
             }
 
             public override bool CanTargetFrozenActor(Actor self, FrozenActor target, TargetModifiers modifiers, ref string cursor)
             {
-                return self.Info.TraitInfo<AcolytePreyInfo>().TargetActors.Contains(target.Info.Name);
+                var trait = self.Info.TraitInfo<AcolytePreyInfo>();
+                if (!trait.TargetActors.Contains(target.Info.Name))
+                    return false;
+                if (target.Info.HasTraitInfo<ValidPreyTargetInfo>() && !target.Actor.TraitOrDefault<ValidPreyTarget>().Actors.Any())
+                    return false;
+
+                return true;
             }
         }
     }

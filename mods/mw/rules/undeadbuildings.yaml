@@ -52,6 +52,7 @@ SEAL1:
 		BuildPaletteOrder: 10
 		Description: Unlocks crypt and seal 2\n\n\n
 		Queue: MResources.ded
+		Prerequisites: sppool
 		BuildLimit: 1
 SEAL2:
 	AlwaysVisible:
@@ -67,7 +68,7 @@ SEAL2:
 	Buildable:
 		IconPalette: raicon
 		BuildPaletteOrder: 20
-		Prerequisites: seal1
+		Prerequisites: seal1, dedref
 		Description: Unlocks mausoleum and ziggurat level 2\n\n\n
 		Queue: MResources.ded
 		BuildLimit: 1
@@ -176,28 +177,24 @@ ZIGGURAT1:
 		Produces: MBuilding.ded, MResources.ded, MMilitary.ded, Building4.ded
 	ProductionQueue@DeadMBuilding:
 		Type: MBuilding.ded
-		Factions: ded
 		Group: Building
 		LowPowerSlowdown: 2
 		ReadyAudio:
 		QueuedAudio: Building
 	ProductionQueue@DeadMDefence:
 		Type: MResources.ded
-		Factions: ded
 		Group: Building2
 		LowPowerSlowdown: 2
 		QueuedAudio: Building
 		ReadyAudio:
 	ProductionQueue@DeadMMilitary:
 		Type: MMilitary.ded
-		Factions: ded
 		Group: Building3
 		LowPowerSlowdown: 2 
 		ReadyAudio:
 		QueuedAudio: Building
 	ProductionQueue@DeadFortification:
 		Type: Building4.ded
-		Factions: ded
 		Group: Building4
 		LowPowerSlowdown: 2 
 		ReadyAudio:
@@ -237,11 +234,6 @@ ZIGGURAT1:
 	GrantConditionOnPrerequisite@ZIGGUPP:
 		Condition: zigup 
 		Prerequisites: zigg2upgrade
-	ActorEnsurance:
-		SpawnActor: preycolyte
-		Maxalive: 3
-		Offset: 0,0,0
-		MoveOffset: 2,3
 	StoresResources:
 		PipColor: Red
 		PipCount: 10
@@ -292,11 +284,6 @@ ZIGGURAT2:
 		Prerequisite: ziggurat2
 	Tooltip:
 		Name: Ziggurat Lv2
-	ActorEnsurance:
-		SpawnActor: preycolyte
-		Maxalive: 6
-		Offset: 128,856,0
-		MoveOffset: 2,3
 ZIGGURAT3:
 	Inherits: ZIGGURAT1
 	-GrantConditionOnPrerequisite@SEALONE:
@@ -328,11 +315,6 @@ ZIGGURAT3:
 		Prerequisite: ziggurat3
 	Tooltip:
 		Name: Ziggurat Final
-	ActorEnsurance:
-		SpawnActor: preycolyte
-		Maxalive: 10
-		Offset: 510,1024,0
-		MoveOffset: 2,3
 	NukePower:
 		Icon: graveicon
 		Cursor: nuke
@@ -434,14 +416,9 @@ SPPOOL.penta:
 	Buildable:
 		IconPalette: raicon
 		BuildPaletteOrder: 30
-		Description: Summons an Essence pool.\n Makes sorrounding scarecrows spawn corruption instead.\n Stores some Essence\n  Grants the obelisk the ability to collect essence by converting battlefield loot.
+		Description: Summons an Essence pool.\n Stores some Essence\n  Grants the obelisk the ability to collect essence by converting battlefield loot.
 		Queue: MBuilding.ded
 		BuildDuration: 10
-	WithRangeCircle:
-		Type: sspool
-		Range: 7c0
-		Color: FFFFFF80
-		UsePlayerColor: True
 	RequiresBuildableArea:
 		AreaTypes: undeadbuilding
 		Adjacent: 8
@@ -571,6 +548,51 @@ HELLGATE.penta:
 		SpawnOffset: 1,1
 		SummoningTime: 155
 		Cost: 2000
+DEDREF.penta:
+	Inherits: ^Mediumpenta
+	RenderSprites:
+		Image: dedref
+		Palette: undead
+		PlayerPalette: undeadalpha
+	Valued:
+		Cost: 0
+	Tooltip:
+		Name: Summoning (Orepolis)
+	Buildable:
+		IconPalette: raicon
+		BuildPaletteOrder: 35
+		Prerequisites: sppool
+		Description: Summons a Orepolis.\n  Orepolis Convert resource patches into harvestable areas.\n Spawns 2 Acolytes wich will then automaticly harvest resources nearby.\n 
+		Queue: MBuilding.ded
+		BuildDuration: 10
+	Health:
+		HP: 50000
+	RevealsShroud:
+		Range: 4c0
+	SelectionDecorations:
+	UndeadBuilder:
+		SpawnActor: dedref
+		SpawnOffset: 1,1
+		SummoningTime: 110
+		Cost: 2100
+	RequiresBuildableArea:
+		AreaTypes: undeadbuilding
+		Adjacent: 8
+	ExternalCondition@DoNotRender:
+		Condition: DoNotRender
+	WithSpriteBody:
+		RequiresCondition: DoNotRender
+	RenderActorArc:
+		UsePlayerColor: true
+		Offset: 0,0,2048
+		TargetOffset: 0,0,512
+		Width: 65
+		Actors: split2, split3, splitblue, split4, split4b, split5, splitdead, split7, split8
+		Distance: 8c0
+		Condition: preyable
+		Angle: 175
+		PlacementOnly: true
+		Transparency: 140
 GRAFENCE:
 	Inherits: ^Wall
 	RequiresBuildableArea:
@@ -645,15 +667,6 @@ SPPOOL:
 		PipCount: 10
 		Capacity: 1500
 	ProvidesPrerequisite@buildingname:
-	ProximityExternalCondition@CORRUPTION:
-		Range: 7c0
-		ValidStances: Ally, Neutral, Enemy
-		Condition: SpawnCorruption
-	WithRangeCircle:
-		Type: sspool
-		Range: 7c0
-		Color: FFFFFF80
-		UsePlayerColor: True
 	-GivesBuildableArea:
 CRYPT:
 	Inherits: ^MWUndeadBuilding
@@ -702,7 +715,6 @@ CRYPT:
 		Type: MInfantry.ded
 		Group: Infantry
 		LowPowerSlowdown: 3
-		Factions: ded
 		ReadyAudio:
 	ProductionBar:
 	ProvidesPrerequisite@buildingname:
@@ -764,7 +776,6 @@ MAUSO:
 		Type: MSiege.ded
 		Group: Aircraft
 		LowPowerSlowdown: 3
-		Factions: ded
 		ReadyAudio:
 	ProductionBar:
 	ProvidesPrerequisite@buildingname:
@@ -888,7 +899,6 @@ TOMB:
 		Type: MVehicle.ded
 		Group: Vehicle
 		LowPowerSlowdown: 3
-		Factions: ded
 		ReadyAudio:
 	ProductionBar:
 	ProvidesPrerequisite@buildingname:
@@ -924,6 +934,66 @@ HELLGATE:
 	ShakeOnCreate:
 		Time: 150
 	ProvidesPrerequisite@buildingname:
+DEDREF:
+	Inherits: ^MWUndeadBuilding
+	Inherits@Hitshape: ^2x2Shape
+	EditorTilesetFilter:
+		Categories: Undead
+	Armor:
+		Type: Concrete
+	WithDeathAnimation:
+		DeathSequencePalette: raplayer
+	RenderSprites:
+		PlayerPalette: raplayer
+	WithSpriteBody:
+	Valued:
+		Cost: 2100
+	Tooltip:
+		Name: Orepolis
+	Building:
+		Footprint: xx xx ==
+		Dimensions: 2,3
+		LocalCenterOffset: 0,-512,0
+	Health:
+		HP: 90000
+	RevealsShroud:
+		Range: 6c0
+	Selectable:
+		Bounds: 50,72,0,-12
+	SelectionDecorations:
+	WithBuildingBib:
+	WithMakeAnimation:
+	ShakeOnCreate:
+		Time: 30
+	ProvidesPrerequisite@buildingname:
+	RenderActorArc:
+		UsePlayerColor: true
+		Offset: 0,0,2048
+		TargetOffset: 0,0,512
+		Width: 65
+		Actors: split2, split3, splitblue, split4, split4b, split5, splitdead, split7, split8
+		Distance: 8c0
+		Condition: preyable
+		Angle: 175
+		Transparency: 140
+	WithFreeSpawnableActor@1:
+		SpawnActor: preycolyte
+		Offset: 384,896, 0
+		MoveOffset: 1,2
+		RespawnTime: 750
+		FindRadius: 100
+	WithFreeSpawnableActor@2:
+		SpawnActor: preycolyte
+		Offset: 384,896, 0
+		MoveOffset: 1,2
+		RespawnTime: 750
+		FindRadius: 100
+	CustomSellValue:
+		Value: 450
+	ProximityExternalCondition@CORRUPTION:
+		Range: 8c0
+		ValidStances: Ally, Neutral, Enemy
+		Condition: SpawnCorruption
 GSTONE1:
 	Inherits: ^Gravestone
 	WithSpriteBody:

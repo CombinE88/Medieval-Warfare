@@ -60,6 +60,7 @@
     <Compile Include="Projectiles\AthenaProjectile.cs" />
     <Compile Include="Projectiles\InstantExplode.cs" />
     <Compile Include="Traits\Activites\Instanttransforms.cs" />
+    <Compile Include="Traits\Activites\FindPrey.cs" />
     <Compile Include="Traits\Activites\PreyBuildActiviy.cs" />
     <Compile Include="Traits\Activites\PreyBuild.cs" />
     <Compile Include="Traits\Activites\Prey.cs" />
@@ -68,10 +69,13 @@
     <Compile Include="Traits\Activites\ActivityInterfaces.cs" />
     <Compile Include="Traits\AddConditionEvery.cs" />
     <Compile Include="Traits\GrantPermanentCondition.cs" />
+    <Compile Include="Traits\Graphics\ArcRenderable.cs" />
     <Compile Include="Traits\Player\AIHelper.cs" />
     <Compile Include="Traits\Render\UndeadGiantSpawnerChargeBar.cs" />
     <Compile Include="Traits\Undead Faction\AcolytePreyBuildInfo.cs" />
     <Compile Include="Traits\Undead Faction\AcolytePreyInfo.cs" />
+    <Compile Include="Traits\Render\RenderActorArc.cs" />
+    <Compile Include="Traits\Undead Faction\ValidPreyTarget.cs" />
     <Compile Include="Traits\Undead Faction\SpawnActorOnCurse.cs" />
     <Compile Include="Traits\Undead Faction\UndeadGiantSpawner.cs" />
     <Compile Include="Traits\Undead Faction\UndeadCryptProduction.cs" />

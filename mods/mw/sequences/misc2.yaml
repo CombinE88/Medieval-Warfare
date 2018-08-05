@@ -139,10 +139,14 @@ explosion:
 		Start: 0
 		Length:*
 		Tick: 30
+	spearstick: ross4
+		Start: 166
+		Tick: 800
+		Length: 1
 spear:	  
 	idle: ross4
 		Start: 150
-		Facings: 32
+		Facings: 32  
 flamespit:	  
 	idle: spitflame
 		Facings: 32
@@ -193,20 +197,19 @@ beacon:
 	coffinbeacon: coffinbeacon
 		Offset: 0,-42
 icon:
-	ddicon: ddicon.shp
-	cadaver: corpseicon.shp
-		Start:6
-	cannonstrike: cannonstriceicon.shp
-	lightning: lightninicon.shp
-	trojan: trojanicon.shp
-	firestorm: firestormicon.shp
-	strangedavinci: davinciiconpower.shp
-	graveicon: graveicon.shp
-	coffinicon: coffinicon.shp
-	handaicon: handaicon.shp
-	sulb2iconsmall: sulb2iconsmall.shp
-	sulspballiconsmall: sulspballiconsmall.shp
-	sulturnxlicon: sulturnxlicon.shp
+	ddicon: spddicon.shp
+	cadaver: sppesticon.shp
+	cannonstrike: spcanonicon.shp
+	lightning: splightningicon.shp
+	trojan: sphorseicon.shp
+	firestorm: spfireicon.shp
+	strangedavinci: spstrangeicon.shp
+	graveicon: spgraveicon.shp
+	coffinicon: spcoffinsicon.shp
+	handaicon: spdragicon.shp
+	sulb2iconsmall: spgrapeicon.shp
+	sulspballiconsmall: spbarrageicon.shp
+	sulturnxlicon: sptornicon.shp
 placeholder:
 	idle: ironore4
 		Start: 9 

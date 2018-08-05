@@ -257,6 +257,7 @@
 			DefaultDeath: 1
 			RippedApartDeath: 1
 			PoisonDeath: 1
+			KadaverDeath: 1
 			BallistaDeath: 1
 			BurnToDeath: 1
 			SkeletonDeath: 1
@@ -1012,6 +1013,9 @@
 	DeathSounds@POISONED:
 		Voice: Poisoned
 		DeathTypes: PoisonDeath
+	DeathSounds@POISONED:
+		Voice: Poisoned
+		DeathTypes: KadaverDeath
 	DeathSounds@BURNED:
 		Voice: Burned
 		DeathTypes: BurnToDeath
@@ -1023,6 +1027,7 @@
 			DefaultDeath: 1
 			RippedApartDeath: 2
 			PoisonDeath: 3
+			KadaverDeath: 3
 			BallistaDeath: 4
 			BurnToDeath: 5
 			SkeletonDeath: 5
@@ -1054,8 +1059,8 @@
 	Explodes@Kadaver:
 		Weapon: SingleDeadKadaver
 		EmptyWeapon: SingleDeadKadaver
-		Chance: 50
-		LoadedChance: 50
+		Chance: 25
+		LoadedChance: 25
 		DeathTypes: KadaverDeath
 	HitShape:
 		Type: Circle
@@ -1107,6 +1112,7 @@
 			DefaultDeath: 1
 			RippedApartDeath: 1
 			PoisonDeath: 1
+			KadaverDeath: 1
 			BallistaDeath: 1
 			BurnToDeath: 2
 	MustBeDestroyed:
@@ -1292,6 +1298,7 @@
 			DefaultDeath: 1
 			RippedApartDeath: 2
 			PoisonDeath: 3
+			KadaverDeath: 3
 			BallistaDeath: 4
 			BurnToDeath: 5
 		CrushedSequence: die-crushed
@@ -1335,7 +1342,7 @@
 		HealIfBelow: 110
 		Delay: 10
 		RequiresCondition: RottenKadaver
-		DamageTypes: PoisonDeath
+		DamageTypes: KadaverDeath
 	SelfHealing@HOSPITAL:
 		PercentageStep: 1
 		Delay: 25
@@ -1368,6 +1375,7 @@
 			PoisonDeath: 1
 			BallistaDeath: 1
 			BurnToDeath: 1
+			KadaverDeath: 1
 		CrushedSequence: die1
 		DeathSequencePalette: raplayer
 	Wanders:
@@ -1480,6 +1488,7 @@
 			DefaultDeath: 1
 			RippedApartDeath: 2
 			PoisonDeath: 3
+			KadaverDeath: 3
 			BallistaDeath: 4
 			BurnToDeath: 5
 		CrushedSequence: die-crushed
@@ -1531,6 +1540,7 @@
 			DefaultDeath: 1
 			RippedApartDeath: 2
 			PoisonDeath: 3
+			KadaverDeath: 3
 			BallistaDeath: 4
 			BurnToDeath: 5
 			SkeletonDeath: 5
@@ -1593,6 +1603,7 @@
 			DefaultDeath: 1
 			RippedApartDeath: 2
 			PoisonDeath: 3
+			KadaverDeath: 3
 			BallistaDeath: 4
 			BurnToDeath: 5
 		CrushedSequence: die-crushed

@@ -27,6 +27,9 @@
 		Condition: Wander
 	SpawnActorsOnSell:
 		ActorTypes: undead1, undead3, undead5, preycolyte
+	OwnerLostAction:
+		Action: Kill
+		DeathTypes: DefaultDeath
 ^MWBasePentagram:
 	Inherits@1: ^BaseBuilding
 	RequiresBuildableArea:
@@ -48,6 +51,9 @@
 	Sellable:
 	UndeadBuilder:
 		Selfbuilds: true
+	OwnerLostAction:
+		Action: Kill
+		DeathTypes: DefaultDeath
 ^Skeleton:  
 	Inherits: ^MedievalInfantry
 	Inherits@GainsExperience: ^GainsExperience
@@ -98,6 +104,9 @@
 		EmptyWeapon: LeaveStuff
 		Chance: 15
 	Crushable:
+	OwnerLostAction:
+		Action: Kill
+		DeathTypes: DefaultDeath
 ^SkeletonSpawn:
 	Inherits: ^MedievalInfantry
 	Inherits@ArcherDemo65: ^ArcherDemo65
@@ -173,6 +182,9 @@
 		ReduceMoveRadiusDelay: 5
 		MinMoveDelay: 0
 		MaxMoveDelay: 50
+	OwnerLostAction:
+		Action: Kill
+		DeathTypes: DefaultDeath
 ^Mediumpenta:
 	Inherits: ^MWBasePentagram
 	Inherits@Hitshape: ^2x2Shape

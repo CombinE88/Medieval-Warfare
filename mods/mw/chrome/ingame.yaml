@@ -840,20 +840,38 @@ Container@PLAYER_WIDGETS:
 					Y: 10
 					Width: WINDOW_RIGHT - 580 - 20 - 150
 					Height: 12
-		SupportPowers@SUPPORT_PALETTE:
-			X: 5
-			Y: 5
-			IconSize: 64, 48
-			IconSpriteOffset: -1, -1
-			TooltipContainer: TOOLTIP_CONTAINER
-			ReadyText: Ready
-			HoldText: On Hold
-			HotkeyPrefix: SupportPower
-			HotkeyCount: 6
-				
-
-		
-
+		Container@SUPPORT_POWERS:
+			Logic: SupportPowerBinLogic
+			X: 290
+			Y: WINDOW_BOTTOM - 280
+			Children:
+				Container@PALETTE_BACKGROUND:
+					Children:
+						Background@ICON_TEMPLATE
+							Width: 100
+							Height: 80
+							Background: castlearc
+							ClickThrough: true
+				SupportPowers@SUPPORT_PALETTE:
+					IconSpriteOffset: 0,0
+					TooltipContainer: TOOLTIP_CONTAINER
+					ReadyText: Ready
+					HoldText: On Hold
+					HotkeyPrefix: SupportPower
+					HotkeyCount: 6
+					ClockSequence: supportclock
+					Horizontal: true
+					IconSize: 100, 80
+					IconMargin: 0
+				Container@PALETTE_FOREGROUND:
+					Children:
+						Background@ICON_TEMPLATE
+							Width: 100
+							Height: 80
+							Background: castlearcframe
+							ClickThrough: true
+					
+					
 Background@FMVPLAYER:
 	Width: WINDOW_RIGHT
 	Height: WINDOW_BOTTOM

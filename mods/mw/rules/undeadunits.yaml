@@ -66,7 +66,7 @@ PREYCOLYTE:
 			Corruption: NONE
 			Goods: NONE
 	AcolytePreyBuild: 
-		TargetActors: crypt.penta, sppool.penta, mauso.penta, hellgate.penta, tomb.penta, libra.penta, obelisk.penta, garg.penta
+		TargetActors: crypt.penta, sppool.penta, mauso.penta, hellgate.penta, tomb.penta, libra.penta, obelisk.penta, garg.penta, dedref.penta
 		Buildinterval: 18
 		SelfEnabledCondition: whisper
 		Voice: Build
@@ -1131,6 +1131,10 @@ SPLITDEAD:
 		Type: CenterPosition
 	Targetable:
 		TargetTypes: Trees
+	ExternalCondition@preyable:
+		Condition: preyable
+	ValidPreyTarget:
+		RequiresCondition: preyable
 	DockManager:
 		ExternalDocks: true
 		#DeadlockDetectionEnabled: false

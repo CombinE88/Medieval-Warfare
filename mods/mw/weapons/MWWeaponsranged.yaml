@@ -612,12 +612,13 @@ GunlanceGroundDUMMY:
 		DamageTypes: Prone50Percent, TriggerProne, RippedApartDeath	
 	Warhead@1Eff: CreateEffect
 		Explosions: smokey
-OrniSpearThrow:
+OrniSpearThrowAir:
 	ReloadDelay: 8
-	Range: 6c0
+	Range: 7c0
 	MinRange: 2c0
 	Report: throw01.aud
-	ValidTargets: Air, Ground
+	ValidTargets: Air
+	InvalidTargets: Ground
 	Projectile: Missile
 		HorizontalRateOfTurn: 60
 		VerticalRateOfTurn: 10
@@ -633,8 +634,9 @@ OrniSpearThrow:
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
 		Spread: 141
-		Damage: 2900
-		ValidTargets: Air, Ground
+		Damage: 1650
+		ValidTargets: Air
+		InvalidTargets: Ground
 		Versus:
 			Leather: 25
 			Light: 25
@@ -647,6 +649,37 @@ OrniSpearThrow:
 			HeavyBuilding: 100
 			Spectral: 15
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath  
+OrniSpearBomb:
+	ReloadDelay: 3
+	Range: 2c512
+	MinRange: 0c0
+	Report: throw01.aud
+	ValidTargets: Ground
+	InvalidTargets: Air
+	Projectile: GravityBomb
+		Image: spear
+		Palette: ra
+		Acceleration: 0,0,-5
+	Warhead@1Dam: SpreadDamage
+		Spread: 256
+		Damage: 2600
+		ValidTargets: Ground
+		InvalidTargets: Air
+		Versus:
+			Leather: 45
+			Light: 45
+			Heavy: 45
+			Knight: 35
+			Concrete: 65
+			LightCavalry: 150
+			MediumCavalry: 125
+			HeavyCavalry: 115
+			HeavyBuilding: 100
+			Spectral: 35
+		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath  
+	Warhead@1Eff: CreateEffect
+		Explosions: spearstick	
+		ExplosionPalette : ra
 WarkiteCrossbow:
 	ReloadDelay: 40
 	Range: 5c0

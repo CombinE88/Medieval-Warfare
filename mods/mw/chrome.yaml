@@ -45,7 +45,13 @@ castleframe: chromeMW.png
 	corner-tr: 312,4,24,20
 	corner-bl: 216,72,24,12
 	corner-br: 312,72,24,12
-	
+
+castlearc: chromeMW.png
+	background: 356,96,100,80
+    
+castlearcframe: chromeMW.png
+	background: 356,176,100,80
+    
 castleframenocolum: chromeMW.png
 	background: 240,24,72,48
 	border-r: 328,24,8,48

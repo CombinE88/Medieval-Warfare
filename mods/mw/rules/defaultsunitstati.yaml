@@ -8,14 +8,14 @@
 		Step: -0
 		HealIfBelow: 110
 		Delay: 10
-		RequiresCondition: DDler || RottenKadaver
+		RequiresCondition: (DDler || RottenKadaver) && !hospitalhealbarr
 		DamageTypes: PoisonDeath
 	WithDecoration@DDlerPoison:
 		Image: debuffs
 		Sequence: poison
 		Palette: ra
 		ReferencePoint: Top, Left
-		RequiresCondition: DDler || RottenKadaver
+		RequiresCondition: (DDler || RottenKadaver) && !hospitalhealbarr
 		ZOffset: 256
 		ValidStances: Ally, Enemy, Neutral
 ^CanTurnIntoScelett:

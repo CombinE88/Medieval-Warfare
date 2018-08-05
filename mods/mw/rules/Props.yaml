@@ -185,7 +185,7 @@ WARKITEMAN.Husk:
 		TurnSpeed: 4
 		Speed: 156
 	RevealsShroud:
-		Range: 10c0
+		Range: 2c0
 		Type: CenterPosition
 	RenderSprites:
 		Image: warkitehusk  

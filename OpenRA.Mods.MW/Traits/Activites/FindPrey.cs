@@ -12,7 +12,6 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
-using OpenRA;
 using OpenRA.Activities;
 using OpenRA.Mods.Common.Activities;
 using OpenRA.Mods.Common.Traits;
@@ -21,7 +20,7 @@ using OpenRA.Traits;
 
 namespace OpenRA.Mods.MW.Activities
 {
-    public class Prey : Activity, IDockActivity
+    public class FindPrey : Activity, IDockActivity
     {
         readonly AcolytePreyInfo info;
 
@@ -29,12 +28,10 @@ namespace OpenRA.Mods.MW.Activities
 
         private Actor target;
 
-        public Prey(Actor self, Actor who)
+        public FindPrey(Actor self)
         {
             info = self.Info.TraitInfo<AcolytePreyInfo>();
             preyBuildings = info.TargetActors;
-
-            target = who;
         }
 
         public IEnumerable<Actor> GetPentas(Actor self)
@@ -47,23 +44,25 @@ namespace OpenRA.Mods.MW.Activities
                 a.TraitOrDefault<ValidPreyTarget>().Actors.Any())));
         }
 
+        Actor FindDock(Actor self)
+        {
+            var pentas = GetPentas(self);
+            var dockablePentas = pentas
+                .Where(p => p.Trait<DockManager>().HasFreeServiceDock(self));
+            if (dockablePentas.Any())
+                return dockablePentas.ClosestTo(self);
+            else if (pentas.Any())
+                return pentas.ClosestTo(self);
+            else
+                return null;
+        }
+
         public override Activity Tick(Actor self)
         {
             if (IsCanceled)
                 return NextActivity;
 
-            if (target == null || target.IsDead || target.Disposed || preyBuildings.Contains(target.Info.Name) || !target.Trait<DockManager>().HasFreeServiceDock(self))
-            {
-                var pentas = GetPentas(self);
-                var dockablePentas = pentas
-                    .Where(p => p.Trait<DockManager>().HasFreeServiceDock(self));
-                if (dockablePentas.Any())
-                    target = dockablePentas.ClosestTo(self);
-                else if (pentas.Any())
-                    target = pentas.ClosestTo(self);
-                else
-                    target = null;
-            }
+            target = FindDock(self);
 
             if (target == null)
             {

@@ -125,6 +125,26 @@ tomb:
 		Length: *
 	icon: tombicon.shp
 		AddExtension: False
+dedref: 
+	Inherits: ^pentagram
+	idle:
+		Offset: 0,-12
+	damaged-idle:
+		Start: 1
+		Offset: 0,-12
+	dead:
+		Start: 2
+		Tick: 800
+		Offset: 0,-12
+	make: dedrefmake
+		Length: *
+		Tick: 60
+		Offset: 0,-12
+	bib: bib3
+		UseTilesetExtension: true
+		Length: *
+	icon: dedreficon.shp
+		AddExtension: False
 seal1:
 	icon: seal1.shp
 		AddExtension: False 

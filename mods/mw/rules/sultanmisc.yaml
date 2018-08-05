@@ -382,37 +382,25 @@ SULM3.Husk:
 		Moves: False
 		Explosion: GroundHit
 SULM3.manhusk:
-	Inherits@1: ^SpriteActor
-	Interactable:
-	HitShape:
-	Health:
-		HP: 280
-	Armor:
-		Type: Heavy
-	HiddenUnderFog:
-		Type: GroundPosition
-	ScriptTriggers:
-	WithFacingSpriteBody:
-		Sequence: idle
-	WithShadow:
-		Offset: 43, 128, 0
-		ZOffset: -129
-	Aircraft:
-		TurnSpeed: 1
-		Speed: 380
-	FallsToEarth:
-		Spins: True
-		Moves: True
-		Velocity: 26
-		Explosion: GroundHit
+	Inherits: ^HelicopterHusk
+	ConditionManager:
 	Tooltip:
-		Name: Kite out of controle
+		Name: Dude
+	WithFacingSpriteBody:
+		Sequence: man
+	Aircraft:
+		TurnSpeed: 4
+		Speed: 156
 	RevealsShroud:
-		Range: 1c0
+		Range: 2c0
 		Type: CenterPosition
 	RenderSprites:
 		Image: sulm3.husk
 		PlayerPalette: raplayer
+	FallsToEarth:
+		Spins: True
+		Moves: False
+		Explosion: GroundHit
 SULB3:
 	Inherits: ^Helicopter
 	Inherits@GainsExperience: ^GainsExperience

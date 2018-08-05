@@ -10,6 +10,7 @@ SPLIT2:
 		Image: ironmine
 		PlayerPalette: raplayer
 		Palette: ra
+	ValidPreyTarget:
 	DockManager:
 		ExternalDocks: true
 		#DeadlockDetectionEnabled: false
@@ -55,6 +56,7 @@ SPLIT3:
 		RequiresCondition: !SpawnCorruption
 	WithIdleAnimation:
 		Interval: 200
+	ValidPreyTarget:
 	DockManager:
 		ExternalDocks: true
 		#DeadlockDetectionEnabled: false
@@ -108,6 +110,7 @@ SPLITBLUE:
 		Image: goldmine
 		PlayerPalette: raplayer
 		Palette: ra
+	ValidPreyTarget:
 	DockManager:
 		ExternalDocks: true
 		#DeadlockDetectionEnabled: false
@@ -144,6 +147,7 @@ SPLIT4:
 		ResourceType: Grains
 		Interval: 30
 		RequiresCondition: !SpawnCorruption
+	ValidPreyTarget:
 	DockManager:
 		ExternalDocks: true
 		#DeadlockDetectionEnabled: false
@@ -185,6 +189,7 @@ SPLIT4B:
 	Inherits: SPLIT3
 	Tooltip:
 		Name: Scarecrow (Corn)
+	ValidPreyTarget:
 	SeedsResource:
 		ResourceType: Corn
 		Interval: 30
@@ -262,6 +267,7 @@ SPLIT5:
 		ResourceType: Lumber
 		Interval: 40
 		MaxRange: 4
+	ValidPreyTarget:
 	DockManager:
 		ExternalDocks: true
 		#DeadlockDetectionEnabled: false
@@ -325,6 +331,7 @@ SPLIT7:
 		Interval: 65
 	Targetable:
 		TargetTypes: Trees, Corrupt
+	ValidPreyTarget:
 	DockManager:
 		ExternalDocks: true
 		#RequiresCondition: SpawnCorruption
@@ -390,6 +397,7 @@ SPLIT8:
 		Interval: 55
 	Targetable:
 		TargetTypes: Trees, Corrupt
+	ValidPreyTarget:
 	DockManager:
 		ExternalDocks: true
 		#RequiresCondition: SpawnCorruption

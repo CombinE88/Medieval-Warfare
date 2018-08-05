@@ -54,9 +54,16 @@ namespace OpenRA.Mods.MW.Activities
             resourceExtraTimes = self.Info.TraitInfo<AcolytePreyInfo>().ResourceExtraTimes;
         }
 
+        bool CancleActivity()
+        {
+            if (dockactor.Info.HasTraitInfo<ValidPreyTargetInfo>() && !dockactor.TraitOrDefault<ValidPreyTarget>().Actors.Any())
+                return true;
+            return false;
+        }
+
         public override Activity Tick(Actor self)
         {
-            if (IsCanceled)
+            if (IsCanceled || CancleActivity())
             {
                 wsb.PlayCustomAnimationRepeating(self, wsb.Info.Sequence);
                 playanim = true;

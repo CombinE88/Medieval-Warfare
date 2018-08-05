@@ -32,7 +32,12 @@ ORNI:
 		Range: 10c0
 		Type: CenterPosition
 	Armament:
-		Weapon: ornispearthrow
+		Weapon: OrniSpearThrowAir
+		Name: primary
+		LocalOffset: 1024,0,-213
+		PauseOnCondition: !ammo
+	Armament@bomb:
+		Weapon: OrniSpearBomb
 		Name: primary
 		LocalOffset: 1024,0,-213
 		PauseOnCondition: !ammo
@@ -42,16 +47,16 @@ ORNI:
 		Image: orni
 		PlayerPalette: raplayer
 	AmmoPool:
-		Ammo: 6
+		Ammo: 12
 		Name: primary
 		Armaments: primary
 		PipCount: 6
-		ReloadCount: 2
+		ReloadCount: 4
 		AmmoCondition: ammo
 	ReloadAmmoPool:
 		AmmoPool: primary
 		Delay: 125
-		Count: 2
+		Count: 4
 	WithMoveAnimation:
 		MoveSequence: move
 	SpawnActorOnDeath:

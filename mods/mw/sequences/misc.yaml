@@ -358,6 +358,8 @@ clock:
 		Length: *
 	old: hclock
 		Length: *
+	supportclock: supportclock
+		Length: *
 pips:
 	pip-empty:
 	pip-green:

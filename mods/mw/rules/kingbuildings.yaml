@@ -60,6 +60,13 @@ HQNEWGDI:
 		CircleSequence: circles
 		OrderName: ArrowsPowerInfoOrder
 	SupportPowerChargeBar:  
+	ProximityExternalCondition@HEAL:
+		Range: 5c0
+		ValidStances: Ally
+		Condition: hospitalhealbarr
+	WithRangeCircle: 
+		ValidStances: Ally, Neutral
+		Range: 5c0
 ARMORYGDI:
 	Inherits: ^MWBaseBuilding
 	Inherits@Hitshape: ^2x2Shape

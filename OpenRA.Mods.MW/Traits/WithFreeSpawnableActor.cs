@@ -9,12 +9,14 @@
  */
 #endregion
 
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using OpenRA.Activities;
 using OpenRA.Mods.Common;
 using OpenRA.Mods.Common.Activities;
 using OpenRA.Mods.Common.Traits;
+using OpenRA.Mods.MW.Activities;
 using OpenRA.Primitives;
 using OpenRA.Traits;
 
@@ -60,12 +62,13 @@ namespace OpenRA.Mods.MW.Traits
         public override object Create(ActorInitializer init) { return new WithFreeSpawnableActor(init, this); }
     }
 
-    class WithFreeSpawnableActor : ConditionalTrait<WithFreeSpawnableActorInfo>, ITick, INotifyActorDisposing
+    class WithFreeSpawnableActor : ConditionalTrait<WithFreeSpawnableActorInfo>, ITick, INotifyActorDisposing, INotifyBuildComplete
     {
         private readonly WithFreeSpawnableActorInfo info;
         private int ticker;
         private Actor respawnActor = null;
         private int idlecount;
+        private bool bk = true;
 
         public WithFreeSpawnableActor(ActorInitializer init, WithFreeSpawnableActorInfo info) : base(info)
         {
@@ -93,7 +96,7 @@ namespace OpenRA.Mods.MW.Traits
 
         void ITick.Tick(Actor self)
         {
-            if (IsTraitDisabled)
+            if (IsTraitDisabled || bk)
                 return;
 
             if (info.Sticky && idlecount-- <= 0)
@@ -157,17 +160,26 @@ namespace OpenRA.Mods.MW.Traits
                             new CenterPositionInit(self.CenterPosition + info.Offset),
                             new OwnerInit(self.Owner),
                             new FactionInit(self.Owner.Faction.InternalName),
-                            new FacingInit(0)
+                            new FacingInit(0),
                         };
                     respawnActor = w.CreateActor(info.SpawnActor, td);
-                    var moveto = respawnActor.TraitOrDefault<IMove>();
-                    respawnActor.CancelActivity();
-                    respawnActor.QueueActivity(moveto.VisualMove(respawnActor, respawnActor.CenterPosition,
-                        self.World.Map.CenterOfCell(self.Location + info.MoveOffset)));
-
-                    if (respawnActor.Info.HasTraitInfo<HarvesterInfo>())
+                    if (respawnActor.Info.HasTraitInfo<IMoveInfo>())
                     {
-                        respawnActor.QueueActivity(new FindResources(respawnActor));
+                        var moveto = respawnActor.TraitOrDefault<IMove>();
+
+                        respawnActor.CancelActivity();
+                        respawnActor.QueueActivity(moveto.VisualMove(respawnActor, respawnActor.CenterPosition,
+                            self.World.Map.CenterOfCell(self.Location + info.MoveOffset)));
+
+                        if (respawnActor.Info.HasTraitInfo<HarvesterInfo>())
+                        {
+                            respawnActor.QueueActivity(new FindResources(respawnActor));
+                        }
+
+                        if (respawnActor.Info.HasTraitInfo<AcolytePreyInfo>())
+                        {
+                            respawnActor.QueueActivity(new FindPrey(respawnActor));
+                        }
                     }
                 });
             }
@@ -198,6 +210,11 @@ namespace OpenRA.Mods.MW.Traits
 
             ticker = info.RespawnTime;
             CreateActorSpawn(self);
+        }
+
+        void INotifyBuildComplete.BuildingComplete(Actor self)
+        {
+            bk = false;
         }
     }
 }
