@@ -96,7 +96,6 @@ namespace OpenRA.Mods.MW.Traits
         readonly Actor self;
 
         List<Actor> arcvalids = new List<Actor>();
-        List<int> arcconditions = new List<int>();
 
         public RenderActorArc(Actor self, RenderActorArcInfo info) : base(info)
         {
