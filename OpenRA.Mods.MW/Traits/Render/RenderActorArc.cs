@@ -78,12 +78,13 @@ namespace OpenRA.Mods.MW.Traits
                 if (CellDistanceBetweenCenterpositions(a.CenterPosition, centerPosition) <= CellLengthOfDistance(Distance))
                     return true;
 
-                var cell = w.Map.FindTilesInCircle(w.Map.CellContaining(centerPosition), CellLengthOfDistance(ExtraSearchDistance))
-                    .Where(c => w.WorldActor.Trait<ResourceLayer>().GetResourceDensity(c) > 0 && w.WorldActor.Trait<ResourceLayer>().GetRenderedResource(c) != null)
-                    .MinByOrDefault(c => (w.Map.CellContaining(centerPosition) - c).LengthSquared);
+                var cells = w.Map.FindTilesInCircle(w.Map.CellContaining(centerPosition), CellLengthOfDistance(ExtraSearchDistance))
+                    .Where(c => w.WorldActor.Trait<ResourceLayer>().GetResourceDensity(c) > 0 && w.WorldActor.Trait<ResourceLayer>().GetRenderedResource(c) != null);
 
-                if (cell != null)
+                if (cells.Any())
                 {
+                    var cell = cells.MinByOrDefault(c => (w.Map.CellContaining(centerPosition) - c).LengthSquared);
+
                     var extradistance = CellDistanceBetweenCenterpositions(w.Map.CenterOfCell(cell), a.CenterPosition);
 
                     if (CellDistanceBetweenCenterpositions(a.CenterPosition, centerPosition) <= CellLengthOfDistance(Distance) + extradistance)
@@ -146,13 +147,14 @@ namespace OpenRA.Mods.MW.Traits
                 if (CellDistanceBetweenCenterpositions(a.CenterPosition, self.CenterPosition) <= (CellLengthOfDistance(Info.Distance) + 1))
                     return true;
 
-                var cell = self.World.Map.FindTilesInCircle(self.World.Map.CellContaining(self.CenterPosition), CellLengthOfDistance(Info.ExtraSearchDistance))
+                var cells = self.World.Map.FindTilesInCircle(self.World.Map.CellContaining(self.CenterPosition), CellLengthOfDistance(Info.ExtraSearchDistance))
                     .Where(c => self.World.WorldActor.Trait<ResourceLayer>().GetResourceDensity(c) > 0
-                    && self.World.WorldActor.Trait<ResourceLayer>().GetRenderedResource(c) != null)
-                    .MinByOrDefault(c => (self.World.Map.CellContaining(self.CenterPosition) - c).LengthSquared);
+                    && self.World.WorldActor.Trait<ResourceLayer>().GetRenderedResource(c) != null);
 
-                if (cell != null)
+                if (cells.Any())
                 {
+                    var cell = cells.MinByOrDefault(c => (self.World.Map.CellContaining(self.CenterPosition) - c).LengthSquared);
+
                     var extradistance = CellDistanceBetweenCenterpositions(self.World.Map.CenterOfCell(cell), a.CenterPosition);
                     var alloweddistance = CellLengthOfDistance(Info.Distance) + extradistance + 1;
                     var distbetweenselfandfound = CellDistanceBetweenCenterpositions(a.CenterPosition, self.CenterPosition);
