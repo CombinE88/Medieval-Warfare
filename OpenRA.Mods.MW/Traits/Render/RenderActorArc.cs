@@ -116,21 +116,19 @@ namespace OpenRA.Mods.MW.Traits
             return (int)Math.Round(w1.Length / 1024.0);
         }
 
-        public override object Create(ActorInitializer init) { return new RenderActorArc(init.Self, this); }
+        public override object Create(ActorInitializer init) { return new RenderActorArc(this); }
     }
 
     public class RenderActorArc
         : ConditionalTrait<RenderActorArcInfo>, INotifyRemovedFromWorld, IRenderAboveShroud, INotifyBuildComplete, INotifySold, INotifyActorDisposing, INotifyCreated
     {
         readonly RenderActorArcInfo info;
-        readonly Actor self;
 
         List<Actor> arcvalids = new List<Actor>();
 
-        public RenderActorArc(Actor self, RenderActorArcInfo info) : base(info)
+        public RenderActorArc(RenderActorArcInfo info) : base(info)
         {
             this.info = info;
-            this.self = self;
         }
 
         public List<Actor> FindActorsAround(Actor self)
