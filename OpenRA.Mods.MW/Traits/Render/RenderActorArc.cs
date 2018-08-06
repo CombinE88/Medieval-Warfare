@@ -16,7 +16,7 @@ using System.Linq;
 using OpenRA.Graphics;
 using OpenRA.Mods.Common.Traits;
 using OpenRA.Mods.MW.Graphics;
-using OpenRA.Mods.MW.Traits;
+using OpenRA.Support;
 using OpenRA.Traits;
 
 namespace OpenRA.Mods.MW.Traits
@@ -55,7 +55,10 @@ namespace OpenRA.Mods.MW.Traits
         public readonly int ZOffset = 0;
 
         [Desc("How far is the distance to find actors")]
-        public readonly WDist Distance = new WDist(0);
+        public readonly WDist Distance = new WDist(5);
+
+        [Desc("How far is the extrea to find actors out of range wich need a range bonus")]
+        public readonly WDist ExtraSearchDistance = new WDist(5);
 
         [Desc("Stances of players which will be able to see the circle.",
             "Valid values are combinations of `None`, `Ally`, `Enemy` and `Neutral`.")]
@@ -63,14 +66,29 @@ namespace OpenRA.Mods.MW.Traits
 
         public IEnumerable<IRenderable> Render(WorldRenderer wr, World w, ActorInfo ai, WPos centerPosition)
         {
-            var findactors = w.FindActorsInCircle(centerPosition, Distance)
+            var findactors = w.FindActorsInCircle(centerPosition, Distance + ExtraSearchDistance)
             .Where(a =>
             {
                 if (a.IsDead || !a.IsInWorld)
                     return false;
 
-                if (Actors.Contains(a.Info.Name))
+                if (!Actors.Contains(a.Info.Name))
+                    return false;
+
+                if (CellDistanceBetweenCenterpositions(a.CenterPosition, centerPosition) <= CellLengthOfDistance(Distance))
                     return true;
+
+                var cell = w.Map.FindTilesInCircle(w.Map.CellContaining(centerPosition), CellLengthOfDistance(ExtraSearchDistance))
+                    .Where(c => w.WorldActor.Trait<ResourceLayer>().GetResourceDensity(c) > 0 && w.WorldActor.Trait<ResourceLayer>().GetRenderedResource(c) != null)
+                    .MinByOrDefault(c => (w.Map.CellContaining(centerPosition) - c).LengthSquared);
+
+                if (cell != null)
+                {
+                    var extradistance = CellDistanceBetweenCenterpositions(w.Map.CenterOfCell(cell), a.CenterPosition);
+
+                    if (CellDistanceBetweenCenterpositions(a.CenterPosition, centerPosition) <= CellLengthOfDistance(Distance) + extradistance)
+                        return true;
+                }
 
                 return false;
             }).ToList();
@@ -87,10 +105,21 @@ namespace OpenRA.Mods.MW.Traits
             }
         }
 
+        public int CellDistanceBetweenCenterpositions(WPos c1, WPos c2)
+        {
+            return (int)Math.Round((c1 - c2).Length / 1024.0);
+        }
+
+        public int CellLengthOfDistance(WDist w1)
+        {
+            return (int)Math.Round(w1.Length / 1024.0);
+        }
+
         public override object Create(ActorInitializer init) { return new RenderActorArc(init.Self, this); }
     }
 
-    public class RenderActorArc : ConditionalTrait<RenderActorArcInfo>, INotifyRemovedFromWorld, IRenderAboveShroud, INotifyBuildComplete, INotifySold, INotifyActorDisposing
+    public class RenderActorArc
+        : ConditionalTrait<RenderActorArcInfo>, INotifyRemovedFromWorld, IRenderAboveShroud, INotifyBuildComplete, INotifySold, INotifyActorDisposing, INotifyCreated
     {
         readonly RenderActorArcInfo info;
         readonly Actor self;
@@ -105,24 +134,73 @@ namespace OpenRA.Mods.MW.Traits
 
         public List<Actor> FindActorsAround(Actor self)
         {
-            return self.World.FindActorsInCircle(self.CenterPosition, info.Distance)
+            return self.World.FindActorsInCircle(self.CenterPosition, info.Distance + Info.ExtraSearchDistance)
             .Where(a =>
             {
                 if (a.IsDead || !a.IsInWorld)
                     return false;
 
-                if (Info.Actors.Contains(a.Info.Name))
+                if (!Info.Actors.Contains(a.Info.Name))
+                    return false;
+
+                if (CellDistanceBetweenCenterpositions(a.CenterPosition, self.CenterPosition) <= (CellLengthOfDistance(Info.Distance) + 1))
                     return true;
+
+                var cell = self.World.Map.FindTilesInCircle(self.World.Map.CellContaining(self.CenterPosition), CellLengthOfDistance(Info.ExtraSearchDistance))
+                    .Where(c => self.World.WorldActor.Trait<ResourceLayer>().GetResourceDensity(c) > 0
+                    && self.World.WorldActor.Trait<ResourceLayer>().GetRenderedResource(c) != null)
+                    .MinByOrDefault(c => (self.World.Map.CellContaining(self.CenterPosition) - c).LengthSquared);
+
+                if (cell != null)
+                {
+                    var extradistance = CellDistanceBetweenCenterpositions(self.World.Map.CenterOfCell(cell), a.CenterPosition);
+                    var alloweddistance = CellLengthOfDistance(Info.Distance) + extradistance + 1;
+                    var distbetweenselfandfound = CellDistanceBetweenCenterpositions(a.CenterPosition, self.CenterPosition);
+
+                    if (distbetweenselfandfound <= alloweddistance)
+                        return true;
+                }
 
                 return false;
             }).ToList();
+        }
+
+        public static IEnumerable<CPos> RandomWalk(CPos p, MersenneTwister r)
+        {
+            for (;;)
+            {
+                var dx = r.Next(-1, 2);
+                var dy = r.Next(-1, 2);
+
+                if (dx == 0 && dy == 0)
+                    continue;
+
+                p += new CVec(dx, dy);
+                yield return p;
+            }
+        }
+
+        public int CellDistanceBetweenCenterpositions(WPos c1, WPos c2)
+        {
+            return (int)Math.Round((c1 - c2).Length / 1024.0);
+        }
+
+        public int CellLengthOfDistance(WDist w1)
+        {
+            return (int)Math.Round(w1.Length / 1024.0);
+        }
+
+        void INotifyCreated.Created(Actor self)
+        {
+            if (Info.PlacementOnly)
+                return;
+            arcvalids = FindActorsAround(self);
         }
 
         void INotifyBuildComplete.BuildingComplete(Actor self)
         {
             if (Info.PlacementOnly)
                 return;
-            arcvalids = FindActorsAround(self);
 
             if (arcvalids.Any())
             {
@@ -134,18 +212,9 @@ namespace OpenRA.Mods.MW.Traits
             }
         }
 
-        bool Visible
-        {
-            get
-            {
-                var p = self.World.RenderPlayer;
-                return p == null || Info.ValidStances.HasStance(self.Owner.Stances[p]) || (p.Spectating && !p.NonCombatant);
-            }
-        }
-
         IEnumerable<IRenderable> IRenderAboveShroud.RenderAboveShroud(Actor self, WorldRenderer wr)
         {
-            if (IsTraitDisabled || Info.PlacementOnly)
+            if (IsTraitDisabled || Info.PlacementOnly || !self.Owner.IsAlliedWith(self.World.RenderPlayer))
                 yield break;
 
             var color = Color.FromArgb(info.Transparency, info.UsePlayerColor ? self.Owner.Color.RGB : info.Color);

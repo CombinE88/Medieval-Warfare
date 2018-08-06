@@ -350,7 +350,7 @@ MINIFACT:
 		Dimensions: 3,3
 		LocalCenterOffset: 0,-512,0
 	Health:
-		HP: 200000
+		HP: 390000
 	Armor:
 		Type: Concrete
 	RevealsShroud:

@@ -663,10 +663,10 @@ SuperiorPikeCavalry:
 			Spectral: 15
 		DamageTypes: DefaultDeath, SpawnSoul
 FromBelow:
-	ReloadDelay: 4
+	ReloadDelay: 6
 	Range: 3c200
 	Burst: 4
-	BurstDelays: 1
+	BurstDelays: 3
 	MinRange: 0c0
 	ValidTargets: Ground
 	InvalidTargets: Wall

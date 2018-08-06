@@ -387,7 +387,7 @@ SULM3.manhusk:
 	Tooltip:
 		Name: Dude
 	WithFacingSpriteBody:
-		Sequence: man
+		Sequence: idle
 	Aircraft:
 		TurnSpeed: 4
 		Speed: 156

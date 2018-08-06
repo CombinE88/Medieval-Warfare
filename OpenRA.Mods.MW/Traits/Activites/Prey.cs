@@ -44,7 +44,7 @@ namespace OpenRA.Mods.MW.Activities
                 preyBuildings.Contains(a.Info.Name)
                 && (!a.Info.HasTraitInfo<ValidPreyTargetInfo>() ||
                 (a.Info.HasTraitInfo<ValidPreyTargetInfo>() &&
-                a.TraitOrDefault<ValidPreyTarget>().Actors.Any())));
+                a.TraitOrDefault<ValidPreyTarget>().Actors.Any(c => c.Owner == self.Owner))));
         }
 
         public override Activity Tick(Actor self)
@@ -52,7 +52,7 @@ namespace OpenRA.Mods.MW.Activities
             if (IsCanceled)
                 return NextActivity;
 
-            if (target == null || target.IsDead || target.Disposed || preyBuildings.Contains(target.Info.Name) || !target.Trait<DockManager>().HasFreeServiceDock(self))
+            if (target == null || target.IsDead || target.Disposed || !preyBuildings.Contains(target.Info.Name) || !target.Trait<DockManager>().HasFreeServiceDock(self))
             {
                 var pentas = GetPentas(self);
                 var dockablePentas = pentas

@@ -354,7 +354,7 @@ UNDEAD6DEPLOYED:
 	Targetable:
 		TargetTypes: Ground, Cavalry
 	Health:
-		HP: 120000
+		HP: 80250
 	RenderSprites:
 		PlayerPalette: raplayer
 		Image: undead6deployed

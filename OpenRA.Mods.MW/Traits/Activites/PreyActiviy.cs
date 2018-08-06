@@ -54,16 +54,16 @@ namespace OpenRA.Mods.MW.Activities
             resourceExtraTimes = self.Info.TraitInfo<AcolytePreyInfo>().ResourceExtraTimes;
         }
 
-        bool CancleActivity()
+        bool CancleActivity(Actor self)
         {
-            if (dockactor.Info.HasTraitInfo<ValidPreyTargetInfo>() && !dockactor.TraitOrDefault<ValidPreyTarget>().Actors.Any())
+            if (dockactor.Info.HasTraitInfo<ValidPreyTargetInfo>() && !dockactor.TraitOrDefault<ValidPreyTarget>().Actors.Any(c => c.Owner == self.Owner))
                 return true;
             return false;
         }
 
         public override Activity Tick(Actor self)
         {
-            if (IsCanceled || CancleActivity())
+            if (IsCanceled || CancleActivity(self))
             {
                 wsb.PlayCustomAnimationRepeating(self, wsb.Info.Sequence);
                 playanim = true;
@@ -204,21 +204,6 @@ namespace OpenRA.Mods.MW.Activities
                 if (restype.Info.Name == type.Key)
                     return type.Value;
             return 0;
-        }
-
-        public static IEnumerable<CPos> RandomWalk(CPos p, MersenneTwister r)
-        {
-            for (;;)
-            {
-                var dx = r.Next(-1, 2);
-                var dy = r.Next(-1, 2);
-
-                if (dx == 0 && dy == 0)
-                    continue;
-
-                p += new CVec(dx, dy);
-                yield return p;
-            }
         }
 
         public object Create(ActorInitializer init)
