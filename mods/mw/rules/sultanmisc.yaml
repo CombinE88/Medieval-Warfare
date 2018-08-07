@@ -115,7 +115,6 @@ SULB0:
 		VoiceSet: ElephantVoice
 	PersonValued:
 		ActorCount: 2
-		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 	SelfHealing@HOSPITAL:
 		PercentageStep: 1
 		Delay: 25
@@ -180,7 +179,6 @@ SULB1:
 		Probability: 50
 	PersonValued:
 		ActorCount: 2
-		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 	Targetable@CombatRole:
 		TargetTypes: Support
 SULB1.Husk:
@@ -260,7 +258,6 @@ SULB2:
 		Probability: 50
 	PersonValued:
 		ActorCount: 0
-		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 	Targetable@CombatRole:
 		TargetTypes: Support
 SULB2.Husk:
@@ -358,29 +355,43 @@ SULM3:
 		Actor: SULM3.manhusk
 	PersonValued:
 		ActorCount: 1
-		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 	Targetable@CombatRole:
 		TargetTypes: Flying
 SULM3.Husk:
-	Inherits: ^HelicopterHusk
-	ConditionManager:
-	Tooltip:
-		Name: Dude
+	Inherits@1: ^SpriteActor
+	Interactable:
+	HitShape:
+	Health:
+		HP: 280
+	Armor:
+		Type: Heavy
+	HiddenUnderFog:
+		Type: GroundPosition
+	ScriptTriggers:
 	WithFacingSpriteBody:
-		Sequence: idle	
+		Sequence: idle
+	WithShadow:
+		Offset: 43, 128, 0
+		ZOffset: -129
 	Aircraft:
-		TurnSpeed: 4
-		Speed: 156
-	RevealsShroud:
-		Range: 4c0
-		Type: CenterPosition
-	RenderSprites:
-		Image: sulm3.manhusk  
-		PlayerPalette: raplayer
+		TurnSpeed: 1
+		Speed: 380
 	FallsToEarth:
 		Spins: True
-		Moves: False
+		Moves: True
+		Velocity: 26
 		Explosion: GroundHit
+	Tooltip:
+		Name: Carpet out of controle
+	RevealsShroud:
+		Range: 1c0
+		Type: CenterPosition
+	RenderSprites:
+		Image: sulm3.husk  
+		PlayerPalette: raplayer
+	Explodes:
+		Weapon: GroundHit
+		EmptyWeapon: GroundHit
 SULM3.manhusk:
 	Inherits: ^HelicopterHusk
 	ConditionManager:
@@ -395,7 +406,7 @@ SULM3.manhusk:
 		Range: 2c0
 		Type: CenterPosition
 	RenderSprites:
-		Image: sulm3.husk
+		Image: sulm3.manhusk
 		PlayerPalette: raplayer
 	FallsToEarth:
 		Spins: True
@@ -474,7 +485,6 @@ SULB3:
 		Actor: SULB3.Husk
 	PersonValued:
 		ActorCount: 0
-		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 	Targetable@CombatRole:
 		TargetTypes: Flying
 	ThrowsShrapnel@Gears:

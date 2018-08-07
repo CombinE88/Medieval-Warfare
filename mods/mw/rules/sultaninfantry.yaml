@@ -37,7 +37,6 @@ SULE1:
 		Type: Leather
 	PersonValued:
 		ActorCount: 1
-		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 	Voiced:
 		VoiceSet: RashudinVoice
 	Targetable@CombatRole:
@@ -98,7 +97,6 @@ SULE2:
 		EmptyWeapon: KilledPike
 	PersonValued:
 		ActorCount: 1
-		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 	Voiced:
 		VoiceSet: RashudinVoice
 	Targetable@CombatRole:
@@ -166,7 +164,6 @@ SULE3:
 		WarnProbability: 55
 	PersonValued:
 		ActorCount: 1
-		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 	Voiced:
 		VoiceSet: BedouinVoice
 	Targetable@CombatRole:
@@ -218,7 +215,6 @@ SULE4:
 		DamageCooldown: 100
 	PersonValued:
 		ActorCount: 1
-		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 	Voiced:
 		VoiceSet: GardVoice
 	Targetable@CombatRole:
@@ -278,7 +274,6 @@ SULE5:
 		WarnProbability: 75
 	PersonValued:
 		ActorCount: 1
-		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 	Targetable@CombatRole:
 		TargetTypes: Light
 SULE6:
@@ -343,7 +338,6 @@ SULE6:
 	-Crushable:
 	PersonValued:
 		ActorCount: 1
-		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 	Voiced:
 		VoiceSet: FarmerVoice
 # Mystics
@@ -392,7 +386,6 @@ SULM1:
 		WarnProbability: 95
 	PersonValued:
 		ActorCount: 1
-		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 	Targetable@CombatRole:
 		TargetTypes: Light
 SULM1SKELET:
@@ -507,7 +500,6 @@ SULM2:
 		VoiceSet: DjinVoice
 	PersonValued:
 		ActorCount: 2
-		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 	Targetable@CombatRole:
 		TargetTypes: Spectral
 SULM4:
@@ -556,6 +548,5 @@ SULM4:
 		WarnProbability: 95
 	PersonValued:
 		ActorCount: 1
-		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 	Targetable@CombatRole:
 		TargetTypes: Light

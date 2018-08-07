@@ -56,7 +56,6 @@ MCV2NEW:
 		HP: 120000
 	PersonValued:
 		ActorCount: 3
-		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 	Targetable@CombatRole:
 		TargetTypes: Support
 	WithRangeCircle:
@@ -112,7 +111,6 @@ MOBTRIB:
 		HP: 20000
 	PersonValued:
 		ActorCount: 3
-		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 	Targetable@CombatRole:
 		TargetTypes: Support
 	WithRangeCircle:
@@ -169,7 +167,6 @@ SIEGE1:
 		Probability: 50
 	PersonValued:
 		ActorCount: 2
-		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 	Targetable@CombatRole:
 		TargetTypes: Support
 SIEGE2:
@@ -231,7 +228,6 @@ SIEGE2:
 		Probability: 50
 	PersonValued:
 		ActorCount: 2
-		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 	Targetable@CombatRole:
 		TargetTypes: Support
 SIEGE3:
@@ -394,7 +390,6 @@ SIEGE3:
 		Name: tritiaryair
 	PersonValued:
 		ActorCount: 3
-		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 	Targetable@CombatRole:
 		TargetTypes: HeavyCavalry
 SIEGE4:
@@ -515,7 +510,6 @@ SIEGE4:
 		Probability: 33
 	PersonValued:
 		ActorCount: 3
-		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 	Targetable@CombatRole:
 		TargetTypes: HeavyCavalry      
 EHARVXL:
@@ -580,7 +574,6 @@ EHARVXL:
 	SelectionDecorations:
 	PersonValued:
 		ActorCount: 1
-		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 SIEGE99:
 	Inherits: ^Siege
 	Inherits@GainsExperience: ^GainsExperience
@@ -619,7 +612,6 @@ SIEGE99:
 		EjectOnDeath: True
 	PersonValued:
 		ActorCount: 0
-		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 	NewDisguise:
 	DisguiseChargeBar: 
 	Targetable@CombatRole:

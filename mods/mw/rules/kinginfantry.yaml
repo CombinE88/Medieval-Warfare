@@ -219,7 +219,6 @@ E2NEWV2:
 		VoiceSet: GDIPikeVoice
 	PersonValued:
 		ActorCount: 1
-		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 	Targetable@CombatRole:
 		TargetTypes: Light
 E3NEW:
@@ -264,7 +263,6 @@ E3NEW:
 		VoiceSet: GDIKnightVoice
 	PersonValued:
 		ActorCount: 1
-		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 	Targetable@CombatRole:
 		TargetTypes: Heavy
 	AutoTargetPriority@Counter:
@@ -334,7 +332,6 @@ E4NEWV2:
 		VoiceSet: GDIArcherVoice
 	PersonValued:
 		ActorCount: 1
-		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 	Targetable@CombatRole:
 		TargetTypes: Ranged
 RMBONEW:
@@ -390,7 +387,6 @@ RMBONEW:
 		VoiceSet: PaladinVoice
 	PersonValued:
 		ActorCount: 1
-		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 	Targetable@CombatRole:
 		TargetTypes: Ranged, Heavy
 NEWCOMM:
@@ -448,7 +444,6 @@ NEWCOMM:
 	-Crushable:
 	PersonValued:
 		ActorCount: 1
-		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 	Targetable@CombatRole:
 		TargetTypes: Heavy
 	Targetable@Paralyze:

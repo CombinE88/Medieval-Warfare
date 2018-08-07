@@ -90,7 +90,7 @@ SPLIT3:
 	SeedsResource@SpawnCorruption:
 		RequiresCondition: SpawnCorruption
 		ResourceType: Corruption
-		Interval: 45
+		Interval: 29 
 	WithColoredOverlay@SpawnCorruption:
 		Palette: disabled
 		RequiresCondition: SpawnCorruption
@@ -181,7 +181,7 @@ SPLIT4:
 	SeedsResource@SpawnCorruption:
 		RequiresCondition: SpawnCorruption
 		ResourceType: Corruption
-		Interval: 38
+		Interval: 29 
 	WithColoredOverlay@SpawnCorruption:
 		Palette: disabled
 		RequiresCondition: SpawnCorruption
@@ -227,7 +227,7 @@ SPLIT4B:
 	SeedsResource@SpawnCorruption:
 		RequiresCondition: SpawnCorruption
 		ResourceType: Corruption
-		Interval: 38
+		Interval: 29 
 	WithColoredOverlay@SpawnCorruption:
 		Palette: disabled
 		RequiresCondition: SpawnCorruption

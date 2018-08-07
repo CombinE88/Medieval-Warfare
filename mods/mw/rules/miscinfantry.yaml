@@ -69,7 +69,6 @@ ENGENEER:
 		VoiceSet: EngineerVoice
 	PersonValued:
 		ActorCount: 1
-		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 E1NEW:
 	Inherits: ^Knight
 	Inherits@AUTOTARGET: ^AutoTargetGround
@@ -171,7 +170,6 @@ E8FARMER:
 	-Crushable:
 	PersonValued:
 		ActorCount: 1
-		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 	Voiced:
 		VoiceSet: FarmerVoice
 		Volume: 3
@@ -236,7 +234,6 @@ BUMMLER:
 	SelectionDecorations:
 	PersonValued:
 		ActorCount: 1
-		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 	Voiced:
 		VoiceSet: LooterVoice
 SIEGERUNNER:
@@ -493,7 +490,6 @@ SHOPPLAYER:
 		MaxMoveDelay: 300
 	PersonValued:
 		ActorCount: 1
-		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 MWCIVCOM:
 	Inherits: ^MWWanderer
 	Inherits@AUTOTARGET: ^AutoTargetGround
@@ -547,7 +543,6 @@ MWCIVCOM:
 		Range: 6c0
 	PersonValued:
 		ActorCount: 1
-		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 NOBLE1:
 	Inherits: ^MWTalker
 	Inherits@SnakeStunnable: ^SnakeStunnable
@@ -799,7 +794,6 @@ MWLUMBEREROWNED:
 		SearchDistance: 17c0
 	PersonValued:
 		ActorCount: 1
-		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 HUNTER:
 	Inherits: ^Knight
 	Inherits@SnakeStunnable: ^SnakeStunnable

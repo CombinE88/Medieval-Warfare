@@ -79,7 +79,9 @@ namespace OpenRA.Mods.MW.Traits
                     return true;
 
                 var cells = w.Map.FindTilesInCircle(w.Map.CellContaining(centerPosition), CellLengthOfDistance(ExtraSearchDistance))
-                    .Where(c => w.WorldActor.Trait<ResourceLayer>().GetResourceDensity(c) > 0 && w.WorldActor.Trait<ResourceLayer>().GetRenderedResource(c) != null);
+                    .Where(c => w.WorldActor.Trait<ResourceLayer>().GetResourceDensity(c) > 0 && w.WorldActor.Trait<ResourceLayer>().GetRenderedResource(c) != null)
+                    .Where(ce => ce.X <= Math.Max(w.Map.CellContaining(centerPosition).X, a.Location.X) && ce.X >= Math.Min(w.Map.CellContaining(centerPosition).X, a.Location.X)
+                    && ce.Y <= Math.Max(w.Map.CellContaining(centerPosition).Y, a.Location.Y) && ce.Y >= Math.Min(w.Map.CellContaining(centerPosition).Y, a.Location.Y));
 
                 if (cells.Any())
                 {
@@ -147,7 +149,9 @@ namespace OpenRA.Mods.MW.Traits
 
                 var cells = self.World.Map.FindTilesInCircle(self.World.Map.CellContaining(self.CenterPosition), CellLengthOfDistance(Info.ExtraSearchDistance))
                     .Where(c => self.World.WorldActor.Trait<ResourceLayer>().GetResourceDensity(c) > 0
-                    && self.World.WorldActor.Trait<ResourceLayer>().GetRenderedResource(c) != null);
+                    && self.World.WorldActor.Trait<ResourceLayer>().GetRenderedResource(c) != null)
+                    .Where(ce => ce.X <= Math.Max(self.Location.X, a.Location.X) && ce.X >= Math.Min(self.Location.X, a.Location.X)
+                    && ce.Y <= Math.Max(self.Location.Y, a.Location.Y) && ce.Y >= Math.Min(self.Location.Y, a.Location.Y));
 
                 if (cells.Any())
                 {

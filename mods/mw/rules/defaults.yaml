@@ -1351,9 +1351,9 @@
 	SelfHealing@HOSPITAL:
 		PercentageStep: 1
 		Delay: 25
-		HealIfBelow: 100
+		HealIfBelow: 100s
 		DamageCooldown: 125
-		RequiresCondition: hospitalheal || hospitalhealbarr
+		RequiresCondition: hospitalheal
 	Valued:
 		Cost: 50
 	Tooltip:

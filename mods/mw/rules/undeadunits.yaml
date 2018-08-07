@@ -234,7 +234,7 @@ UNDEAD4:
 	Mobile:
 		Speed: 50
 	Health:
-		HP: 35000
+		HP: 32000
 	Armament:
 		Weapon: SkeletonAxe
 	Armor:

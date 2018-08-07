@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.Drawing;
 using OpenRA.Graphics;
 using OpenRA.Mods.Common;
 using OpenRA.Mods.Common.Traits;
@@ -29,7 +28,7 @@ namespace OpenRA.Mods.MW.Traits
         public object Create(ActorInitializer init) { return new GrimTarget(init.Self, this); }
     }
 
-    public class GrimTarget : ITick, INotifyCreated, ISpeedModifier, IGivesExperienceModifier, IFirepowerModifier, IDamageModifier
+    public class GrimTarget : ITick, INotifyCreated, ISpeedModifier, IGivesExperienceModifier, IFirepowerModifier, IDamageModifier, INotifyKilled
     {
         private GrimTargetInfo info;
         ConditionManager conditionManager;

@@ -419,9 +419,6 @@ SPPOOL.penta:
 		Description: Summons an Essence pool.\n Stores some Essence\n  Grants the obelisk the ability to collect essence by converting battlefield loot.
 		Queue: MBuilding.ded
 		BuildDuration: 10
-	RequiresBuildableArea:
-		AreaTypes: undeadbuilding
-		Adjacent: 8
 CRYPT.penta:
 	Inherits: ^Mediumpenta
 	RenderSprites:
@@ -667,7 +664,6 @@ SPPOOL:
 		PipCount: 10
 		Capacity: 1500
 	ProvidesPrerequisite@buildingname:
-	-GivesBuildableArea:
 CRYPT:
 	Inherits: ^MWUndeadBuilding
 	Inherits@Hitshape: ^2x2Shape
@@ -994,6 +990,7 @@ DEDREF:
 		Range: 8c0
 		ValidStances: Ally, Neutral, Enemy
 		Condition: SpawnCorruption
+	-GivesBuildableArea:
 GSTONE1:
 	Inherits: ^Gravestone
 	WithSpriteBody:
@@ -1014,7 +1011,7 @@ GSTONE1:
 		Sequence: idlec
 		RequiresCondition: validc
 	ProvidesLivingspace:
-		Ammount: 3
+		Ammount: 4
 	EditorTilesetFilter:
 		ExcludeTilesets: TEMPERATE, SNOW, DESERT, WINTER
 		Categories: 
@@ -1047,7 +1044,7 @@ GSTONE2:
 		Sequence: idlec
 		RequiresCondition: validc
 	ProvidesLivingspace:
-		Ammount: 3
+		Ammount: 4
 	EditorTilesetFilter:
 		ExcludeTilesets: TEMPERATE, SNOW, DESERT, WINTER
 		Categories: 
@@ -1080,7 +1077,7 @@ GSTONE3:
 		Sequence: idlec
 		RequiresCondition: validc
 	ProvidesLivingspace:
-		Ammount: 3
+		Ammount: 4
 	EditorTilesetFilter:
 		ExcludeTilesets: TEMPERATE, SNOW, DESERT, WINTER
 		Categories: 
@@ -1113,7 +1110,7 @@ COFFIN:
 		Sequence: idlec
 		RequiresCondition: validc
 	ProvidesLivingspace:
-		Ammount: 5
+		Ammount: 7
 	EditorTilesetFilter:
 		ExcludeTilesets: TEMPERATE, SNOW, DESERT, WINTER
 		Categories: 

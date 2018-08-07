@@ -109,7 +109,7 @@ SkeletonAxe:
 		Speed: 1c382
 	Warhead@1Dam: SpreadDamage
 		Spread: 25
-		Damage: 3000
+		Damage: 2800
 		ValidTargets: Ground, Trees
 		InvalidTargets: Air
 		Versus:
@@ -118,7 +118,7 @@ SkeletonAxe:
 			Heavy: 75
 			HeavyBuilding: 50
 			Concrete: 40
-			Knight: 50
+			Knight: 25
 			LightCavalry: 60
 			MediumCavalry: 50
 			HeavyCavalry: 35
@@ -505,20 +505,20 @@ GrimSkytheThrow:
 		Blockable: false
 	Warhead@1Dam: SpreadDamage
 		Spread: 65
-		Damage: 5200
+		Damage: 4800
 		ValidTargets: Ground
 		InvalidTargets: Air
 		Versus:
 			Leather: 100
 			Light: 100
 			Heavy: 100
-			Knight: 50
+			Knight: 35
 			Concrete: 25
-			LightCavalry: 90
-			MediumCavalry: 75
-			HeavyCavalry: 65
-			HeavyBuilding: 45
-			Spectral: 70
+			LightCavalry: 80
+			MediumCavalry: 65
+			HeavyCavalry: 55
+			HeavyBuilding: 35
+			Spectral: 60
 		DamageTypes: DefaultDeath, SpawnSoul
 	Warhead@1Eff: CreateEffect
 		ImpactSounds: Sword02.aud, Sword03.aud, Sword04.aud, Sword06.aud, Sword07.aud

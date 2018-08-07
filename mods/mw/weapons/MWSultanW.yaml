@@ -854,7 +854,7 @@ TowerPike:
 		DamageTypes: Prone50Percent, DefaultDeath
 SulGTSpearThrow:
 	ReloadDelay: 50
-	Range: 8c512
+	Range: 7c0
 	MinRange: 0c0
 	BurstDelays: 10
 	Report: throw01.aud
@@ -892,7 +892,7 @@ SulGTSpearThrow:
 		DamageTypes: Prone50Percent, DefaultDeath	 
 SulGTSpearThrowAir:
 	ReloadDelay: 50
-	Range: 10c0
+	Range: 9c0
 	MinRange: 0c0
 	Burst: 2
 	BurstDelays: 10

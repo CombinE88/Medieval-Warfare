@@ -1192,7 +1192,7 @@ DragonFireAir:
 		ImpactSounds: xplos.aud
 BowNArrowTower:
 	ReloadDelay: 25
-	Range: 8c512
+	Range: 7c0
 	MinRange: 0c0
 	Report: arrow01.aud, arrow02.aud, arrow02.aud
 	InvalidTargets: Wall, Air
@@ -1223,7 +1223,7 @@ BowNArrowTower:
 		DamageTypes: DefaultDeath 
 BowNArrowTowerDUMMY:
 	ReloadDelay: 25
-	Range: 8c512
+	Range: 7c0
 	MinRange: 0c0
 	InvalidTargets: Wall, Air
 	ValidTargets: Ground
@@ -1322,7 +1322,7 @@ BowNArrowTowerUnblockDUMMY:
 		DamageTypes: DefaultDeath 
 CannonBoulder:
 	ReloadDelay: 40
-	Range: 8c0
+	Range: 7c0
 	Report: tnkfire2.aud, tnkfire3.aud, tnkfire4.aud, tnkfire6.aud
 	ValidTargets: Ground
 	TargetActorCenter: true

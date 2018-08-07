@@ -132,7 +132,6 @@ SAMNEW:
 		Bounds: 50,50,0,-10
 	PersonValued:
 		ActorCount: 2
-		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 TRIBU:
 	Inherits: ^MWDefense
 	Inherits@AUTOTARGET: ^AutoTargetGround
@@ -244,7 +243,6 @@ BATO:
 		DeathSequencePalette: raplayer 
 	PersonValued:
 		ActorCount: 3
-		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 	Targetable@CombatRole:
 		TargetTypes: Defenses
 	WithRangeCircle:
