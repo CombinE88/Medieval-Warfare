@@ -243,8 +243,8 @@ sulm3.husk:
 		Facings: 32
 sulm3.manhusk: 
 	idle: sulm3
-		Start: 322
-		Facings: 31
+		Start: 321
+		Facings: 32
 sulm3grenade: 
 	idle: sulm3
 		Start: 353

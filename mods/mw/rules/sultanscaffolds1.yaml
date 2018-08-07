@@ -592,7 +592,7 @@ SULGTW.scaff:
 		Sequence: make6
 		RequiresCondition: Construct >= 7
 	WithRangeCircle:
-		Range: 8c512
+		Range: 7c0
 SULARRAY.scaff:
 	Inherits: ^3x2SITE
 	Inherits@Hitshape: ^3x2Shape

@@ -339,7 +339,7 @@ GTWNEW.scaff:
 		Sequence: make6
 		RequiresCondition: Construct >= 7
 	WithRangeCircle:
-		Range: 8c512
+		Range: 7c0
 GUNNEW.scaff:
 	Inherits: ^1x1SITE
 	Inherits@Hitshape: ^1x1Shape
@@ -408,7 +408,7 @@ GUNNEW.scaff:
 		Sequence: make6
 		RequiresCondition: Construct >= 7
 	WithRangeCircle:
-		Range: 8c0
+		Range: 7c0
 CSTLWLL.scaff:
 	Inherits: ^1x1SITEWALL
 	Inherits@Hitshape: ^1x1Shape
