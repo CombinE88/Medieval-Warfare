@@ -75,8 +75,7 @@ namespace OpenRA.Mods.MW.Activities
                 return new Wait(20);
             }
 
-            target.Trait<DockManager>().ReserveDock(target, self, this);
-            self.SetTargetLine(Target.FromCell(self.World, target.Location), Color.Green);
+            self.QueueActivity(new Prey(self, target));
 
             return NextActivity;
         }
