@@ -53,7 +53,6 @@ SPLIT3:
 	SeedsResource:
 		ResourceType: Crops
 		Interval: 30
-		RequiresCondition: !SpawnCorruption
 	WithIdleAnimation:
 		Interval: 200
 	ValidPreyTarget:
@@ -85,15 +84,6 @@ SPLIT3:
 		WOffset: -425,510,0
 		DockAngle: 96
 		IsDragRequired: false
-	ExternalCondition@SpawnCorruption:
-		Condition: SpawnCorruption
-	SeedsResource@SpawnCorruption:
-		RequiresCondition: SpawnCorruption
-		ResourceType: Corruption
-		Interval: 29 
-	WithColoredOverlay@SpawnCorruption:
-		Palette: disabled
-		RequiresCondition: SpawnCorruption
 SPLITBLUE:
 	Inherits: ^TibTree
 	RenderSprites:
@@ -146,7 +136,6 @@ SPLIT4:
 	SeedsResource:
 		ResourceType: Grains
 		Interval: 30
-		RequiresCondition: !SpawnCorruption
 	ValidPreyTarget:
 	DockManager:
 		ExternalDocks: true
@@ -176,15 +165,6 @@ SPLIT4:
 		WOffset: -425,510,0
 		DockAngle: 96
 		IsDragRequired: false
-	ExternalCondition@SpawnCorruption:
-		Condition: SpawnCorruption
-	SeedsResource@SpawnCorruption:
-		RequiresCondition: SpawnCorruption
-		ResourceType: Corruption
-		Interval: 29 
-	WithColoredOverlay@SpawnCorruption:
-		Palette: disabled
-		RequiresCondition: SpawnCorruption
 SPLIT4B:
 	Inherits: SPLIT3
 	Tooltip:
@@ -193,7 +173,6 @@ SPLIT4B:
 	SeedsResource:
 		ResourceType: Corn
 		Interval: 30
-		RequiresCondition: !SpawnCorruption
 	DockManager:
 		ExternalDocks: true
 		#DeadlockDetectionEnabled: false
@@ -222,15 +201,6 @@ SPLIT4B:
 		WOffset: -425,510,0
 		DockAngle: 96
 		IsDragRequired: false
-	ExternalCondition@SpawnCorruption:
-		Condition: SpawnCorruption
-	SeedsResource@SpawnCorruption:
-		RequiresCondition: SpawnCorruption
-		ResourceType: Corruption
-		Interval: 29 
-	WithColoredOverlay@SpawnCorruption:
-		Palette: disabled
-		RequiresCondition: SpawnCorruption
 SPLIT5:
 	Inherits: SPLIT3
 	HitShape:
@@ -332,6 +302,7 @@ SPLIT7:
 	Targetable:
 		TargetTypes: Trees, Corrupt
 	ValidPreyTarget:
+		GrantCondition: SpawnCorruption
 	DockManager:
 		ExternalDocks: true
 		#RequiresCondition: SpawnCorruption
@@ -398,6 +369,7 @@ SPLIT8:
 	Targetable:
 		TargetTypes: Trees, Corrupt
 	ValidPreyTarget:
+		GrantCondition: SpawnCorruption
 	DockManager:
 		ExternalDocks: true
 		#RequiresCondition: SpawnCorruption
@@ -469,6 +441,12 @@ T01:
 		HuntTypes: TreeToChop
 	Targetable@Choppable:
 		TargetTypes: ChoppableTree
+	ExternalCondition@Corrupt:
+		Condition: Corrupted
+		SourceCap: 1
+	WithColoredOverlay@Corrupt:
+		Palette: disabled
+		RequiresCondition: Corrupted
 T02:
 	Inherits: ^Tree
 	EditorTilesetFilter:
@@ -480,6 +458,12 @@ T02:
 		HuntTypes: TreeToChop
 	Targetable@Choppable:
 		TargetTypes: ChoppableTree
+	ExternalCondition@Corrupt:
+		Condition: Corrupted
+		SourceCap: 1
+	WithColoredOverlay@Corrupt:
+		Palette: disabled
+		RequiresCondition: Corrupted
 T03:
 	Inherits: ^Tree
 	EditorTilesetFilter:
@@ -491,6 +475,12 @@ T03:
 		HuntTypes: TreeToChop
 	Targetable@Choppable:
 		TargetTypes: ChoppableTree
+	ExternalCondition@Corrupt:
+		Condition: Corrupted
+		SourceCap: 1
+	WithColoredOverlay@Corrupt:
+		Palette: disabled
+		RequiresCondition: Corrupted
 T04:
 	Inherits: ^Tree
 	EditorTilesetFilter:
@@ -506,6 +496,12 @@ T05:
 		HuntTypes: TreeToChop
 	Targetable@Choppable:
 		TargetTypes: ChoppableTree
+	ExternalCondition@Corrupt:
+		Condition: Corrupted
+		SourceCap: 1
+	WithColoredOverlay@Corrupt:
+		Palette: disabled
+		RequiresCondition: Corrupted
 T06:
 	Inherits: ^Tree
 	EditorTilesetFilter:
@@ -517,6 +513,12 @@ T06:
 		HuntTypes: TreeToChop
 	Targetable@Choppable:
 		TargetTypes: ChoppableTree
+	ExternalCondition@Corrupt:
+		Condition: Corrupted
+		SourceCap: 1
+	WithColoredOverlay@Corrupt:
+		Palette: disabled
+		RequiresCondition: Corrupted
 T06A:
 	Inherits: ^Tree
 	EditorTilesetFilter:
@@ -538,6 +540,12 @@ T08:
 		HuntTypes: TreeToChop
 	Targetable@Choppable:
 		TargetTypes: ChoppableTree
+	ExternalCondition@Corrupt:
+		Condition: Corrupted
+		SourceCap: 1
+	WithColoredOverlay@Corrupt:
+		Palette: disabled
+		RequiresCondition: Corrupted
 T09:
 	Inherits: ^Tree
 	EditorTilesetFilter:
@@ -553,6 +561,12 @@ T10:
 		HuntTypes: TreeToChop
 	Targetable@Choppable:
 		TargetTypes: ChoppableTree
+	ExternalCondition@Corrupt:
+		Condition: Corrupted
+		SourceCap: 1
+	WithColoredOverlay@Corrupt:
+		Palette: disabled
+		RequiresCondition: Corrupted
 T11:
 	Inherits: ^Tree
 	EditorTilesetFilter:
@@ -564,6 +578,12 @@ T11:
 		HuntTypes: TreeToChop
 	Targetable@Choppable:
 		TargetTypes: ChoppableTree
+	ExternalCondition@Corrupt:
+		Condition: Corrupted
+		SourceCap: 1
+	WithColoredOverlay@Corrupt:
+		Palette: disabled
+		RequiresCondition: Corrupted
 T12:
 	Inherits: ^Tree
 	EditorTilesetFilter:
@@ -575,6 +595,12 @@ T12:
 		HuntTypes: TreeToChop
 	Targetable@Choppable:
 		TargetTypes: ChoppableTree
+	ExternalCondition@Corrupt:
+		Condition: Corrupted
+		SourceCap: 1
+	WithColoredOverlay@Corrupt:
+		Palette: disabled
+		RequiresCondition: Corrupted
 T13:
 	Inherits: ^Tree
 	EditorTilesetFilter:
@@ -586,6 +612,12 @@ T13:
 		HuntTypes: TreeToChop
 	Targetable@Choppable:
 		TargetTypes: ChoppableTree
+	ExternalCondition@Corrupt:
+		Condition: Corrupted
+		SourceCap: 1
+	WithColoredOverlay@Corrupt:
+		Palette: disabled
+		RequiresCondition: Corrupted
 T14:
 	Inherits: ^Tree
 	EditorTilesetFilter:
@@ -597,6 +629,12 @@ T14:
 		HuntTypes: TreeToChop
 	Targetable@Choppable:
 		TargetTypes: ChoppableTree
+	ExternalCondition@Corrupt:
+		Condition: Corrupted
+		SourceCap: 1
+	WithColoredOverlay@Corrupt:
+		Palette: disabled
+		RequiresCondition: Corrupted
 T15:
 	Inherits: ^Tree
 	EditorTilesetFilter:
@@ -608,6 +646,12 @@ T15:
 		HuntTypes: TreeToChop
 	Targetable@Choppable:
 		TargetTypes: ChoppableTree
+	ExternalCondition@Corrupt:
+		Condition: Corrupted
+		SourceCap: 1
+	WithColoredOverlay@Corrupt:
+		Palette: disabled
+		RequiresCondition: Corrupted
 T16:
 	Inherits: ^Tree
 	EditorTilesetFilter:
@@ -619,6 +663,12 @@ T16:
 		HuntTypes: TreeToChop
 	Targetable@Choppable:
 		TargetTypes: ChoppableTree
+	ExternalCondition@Corrupt:
+		Condition: Corrupted
+		SourceCap: 1
+	WithColoredOverlay@Corrupt:
+		Palette: disabled
+		RequiresCondition: Corrupted
 T17:
 	Inherits: ^Tree
 	EditorTilesetFilter:
@@ -630,6 +680,12 @@ T17:
 		HuntTypes: TreeToChop
 	Targetable@Choppable:
 		TargetTypes: ChoppableTree
+	ExternalCondition@Corrupt:
+		Condition: Corrupted
+		SourceCap: 1
+	WithColoredOverlay@Corrupt:
+		Palette: disabled
+		RequiresCondition: Corrupted
 T17A:
 	Inherits: ^Tree
 	EditorTilesetFilter:
@@ -641,6 +697,12 @@ T17A:
 		HuntTypes: TreeToChop
 	Targetable@Choppable:
 		TargetTypes: ChoppableTree
+	ExternalCondition@Corrupt:
+		Condition: Corrupted
+		SourceCap: 1
+	WithColoredOverlay@Corrupt:
+		Palette: disabled
+		RequiresCondition: Corrupted
 T18:
 	Inherits: ^Tree
 	EditorTilesetFilter:
@@ -652,6 +714,12 @@ T18:
 		HuntTypes: TreeToChop
 	Targetable@Choppable:
 		TargetTypes: ChoppableTree
+	ExternalCondition@Corrupt:
+		Condition: Corrupted
+		SourceCap: 1
+	WithColoredOverlay@Corrupt:
+		Palette: disabled
+		RequiresCondition: Corrupted
 T18A:
 	Inherits: ^Tree
 	EditorTilesetFilter:
@@ -663,6 +731,12 @@ T18A:
 		HuntTypes: TreeToChop
 	Targetable@Choppable:
 		TargetTypes: ChoppableTree
+	ExternalCondition@Corrupt:
+		Condition: Corrupted
+		SourceCap: 1
+	WithColoredOverlay@Corrupt:
+		Palette: disabled
+		RequiresCondition: Corrupted
 T18B:
 	Inherits: ^Tree
 	EditorTilesetFilter:
@@ -678,6 +752,12 @@ T18C:
 		HuntTypes: TreeToChop
 	Targetable@Choppable:
 		TargetTypes: ChoppableTree
+	ExternalCondition@Corrupt:
+		Condition: Corrupted
+		SourceCap: 1
+	WithColoredOverlay@Corrupt:
+		Palette: disabled
+		RequiresCondition: Corrupted
 TC01:
 	Inherits: ^Tree
 	Building:
@@ -692,6 +772,12 @@ TC01:
 		HuntTypes: TreeToChop
 	Targetable@Choppable:
 		TargetTypes: ChoppableTree
+	ExternalCondition@Corrupt:
+		Condition: Corrupted
+		SourceCap: 1
+	WithColoredOverlay@Corrupt:
+		Palette: disabled
+		RequiresCondition: Corrupted
 TC02:
 	Inherits: ^Tree
 	Building:
@@ -706,6 +792,12 @@ TC02:
 		HuntTypes: TreeToChop
 	Targetable@Choppable:
 		TargetTypes: ChoppableTree
+	ExternalCondition@Corrupt:
+		Condition: Corrupted
+		SourceCap: 1
+	WithColoredOverlay@Corrupt:
+		Palette: disabled
+		RequiresCondition: Corrupted
 TC03:
 	Inherits: ^Tree
 	Building:

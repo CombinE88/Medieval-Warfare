@@ -416,9 +416,13 @@ SPPOOL.penta:
 	Buildable:
 		IconPalette: raicon
 		BuildPaletteOrder: 30
-		Description: Summons an Essence pool.\n Stores some Essence\n  Grants the obelisk the ability to collect essence by converting battlefield loot.
+		Description: Summons an Essence pool.\n Stores some Essence.\n Can leech essence out of trees.\n  Grants the obelisk the ability to collect essence by converting battlefield loot.
 		Queue: MBuilding.ded
 		BuildDuration: 10
+	WithRangeCircle:
+		Type: TreesHarvest
+		Range: 12c0
+		UsePlayerColor: true
 CRYPT.penta:
 	Inherits: ^Mediumpenta
 	RenderSprites:
@@ -658,12 +662,39 @@ SPPOOL:
 	WithBuildingBib:
 	WithMakeAnimation:
 	ShakeOnCreate:
-		Time: 85
+		Time: 55
 	StoresResources:
 		PipColor: Red
 		PipCount: 10
 		Capacity: 1500
 	ProvidesPrerequisite@buildingname:
+	AutoTarget:
+		InitialStance: AttackAnything
+	AutoTargetPriority@DEFAULT:
+		ValidTargets: Choptree
+		Priority: 2
+	AutoTargetPriority@PEASANTS:
+		ValidTargets: ChoppableTree
+		Priority: 1
+	BodyOrientation:
+		QuantizedFacings: 4
+	AttackTurreted:
+		IgnoresVisibility: true	
+	Armament@Leech:
+		Weapon: EssenceChopper
+		TargetStances: Ally, Neutral
+	Armament@GatherLeech:
+		Weapon: EssenceLeecher
+		TargetStances: Ally, Neutral
+		Name: secondary
+	WithRangeCircle:
+		Type: TreesHarvest
+		Range: 12c0
+		UsePlayerColor: true
+	Turreted:
+		Offset: 0,0,1025
+	Targetable@sppool:
+		TargetTypes: sppool
 CRYPT:
 	Inherits: ^MWUndeadBuilding
 	Inherits@Hitshape: ^2x2Shape
@@ -751,7 +782,7 @@ MAUSO:
 	WithBuildingBib:
 	WithMakeAnimation:
 	ShakeOnCreate:
-		Time: 85
+		Time: 55
 	Exit:
 		SpawnOffset: 0,1105,0
 		ExitCell: 0,2
@@ -828,7 +859,7 @@ LIBRA:
 	WithBuildingBib:
 	WithMakeAnimation:
 	ShakeOnCreate:
-		Time: 85
+		Time: 55
 	ProvidesPrerequisite@buildingname:
 	AirstrikePower:
 		Icon: handaicon
@@ -883,7 +914,7 @@ TOMB:
 	WithBuildingBib:
 	WithMakeAnimation:
 	ShakeOnCreate:
-		Time: 85
+		Time: 55
 	Exit:
 		SpawnOffset: -595,338,0
 		ExitCell: 0,2

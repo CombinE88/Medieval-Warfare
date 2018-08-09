@@ -1,5 +1,6 @@
 ^ChoppedTree:
 	Inherits@1: ^SpriteActor
+	ConditionManager:
 	Interactable:
 	Tooltip:
 		Name: Tree(Chopped)
@@ -17,7 +18,13 @@
 	Armor:
 		Type: Wood
 	Targetable:
-		TargetTypes: Trees, NoAutoTarget, Choptree
+		TargetTypes: Trees, NoAutoTarget
+	Targetable@Chopable:
+		TargetTypes: Choptree
+		RequiresCondition: !Corrupted
+	Targetable@Corrupted:
+		TargetTypes: ChoptreeCorrupt
+		RequiresCondition: Corrupted
 	HiddenUnderShroud:
 	ScriptTriggers:
 	Health:
@@ -35,6 +42,12 @@
 		TriggeringDamageStage: Critical
 		InjuredSequencePrefix: crippled-
 	WithMakeAnimation:
+	ExternalCondition@Corrupt:
+		Condition: Corrupted
+		SourceCap: 1
+	WithColoredOverlay@Corrupt:
+		Palette: disabled
+		RequiresCondition: Corrupted
 ChoppedtreeN1: #hybrid
 	Inherits: ^ChoppedTree
 	RenderSprites:

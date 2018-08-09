@@ -79,7 +79,7 @@ namespace OpenRA.Mods.MW.Traits
                 self.Kill(self);
         }
 
-        public void Killed(Actor self, AttackInfo e)
+        void INotifyKilled.Killed(Actor self, AttackInfo e)
         {
             if (!reanimated && e.Attacker.Info.HasTraitInfo<GrimReanimationInfo>() && e.Attacker.IsInWorld && !e.Attacker.IsDead)
             {

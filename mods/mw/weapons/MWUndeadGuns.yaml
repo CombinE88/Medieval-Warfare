@@ -1126,3 +1126,73 @@ GrimReaper:
 	Warhead@SpawnEffect: CreateEffect
 		Explosions: summoning
 		ExplosionPalette : grimspawnalpha
+EssenceChopper:
+	ReloadDelay: 25
+	Range: 12c0
+	InvalidTargets: Air
+	ValidTargets: ChoppableTree
+	Projectile: TeslaZap
+		Image: zombspark   
+		Palette: projectilealpha
+		Duration: 150
+	Warhead@1Dam: SpreadDamage
+		Spread: 256
+		Damage: 2000
+		InvalidTargets: Air
+		ValidTargets: ChoppableTree
+		Versus:
+			Leather: 100
+			Light: 100
+			Heavy: 100
+			Concrete: 100
+			Knight: 100
+			LightCavalry: 100
+			MediumCavalry: 100
+			HeavyCavalry: 100
+			HeavyBuilding: 100
+			Spectral: 100
+		DamageTypes: LumberDead
+	Warhead@Trade: GrantExternalCondition
+		ValidTargets: ChoppableTree
+		Range: 1c0
+		Duration: 250
+		Condition: Corrupted
+		ValidStances: Enemy, Neutral, Ally
+EssenceLeecher:
+	ReloadDelay: 150
+	Range: 12c0
+	InvalidTargets: Air
+	ValidTargets: Choptree, ChoptreeCorrupt
+	Projectile: TeslaZap
+		Image: zombspark   
+		Palette: projectilealpha
+		Duration: 150
+	Warhead@1Dam: SpreadDamage
+		Spread: 256
+		Damage: 500
+		InvalidTargets: Air
+		ValidTargets: Choptree, ChoptreeCorrupt
+		Versus:
+			Leather: 100
+			Light: 100
+			Heavy: 100
+			Concrete: 100
+			Knight: 100
+			LightCavalry: 100
+			MediumCavalry: 100
+			HeavyCavalry: 100
+			HeavyBuilding: 100
+			Spectral: 100
+		DamageTypes: DefaultDeath
+	Warhead@Trade: GrantExternalCondition
+		ValidTargets: Choptree, ChoptreeCorrupt
+		Range: 1c0
+		Duration: 250
+		Condition: Corrupted
+		ValidStances: Enemy, Neutral, Ally
+	Warhead@GrantMonez: CashTick
+		Ammount: 45
+		ValidStances: Ally
+		AffectsParent: true
+		InvalidTargets: Air
+		ValidTargets: sppool

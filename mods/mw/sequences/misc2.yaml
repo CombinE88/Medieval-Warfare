@@ -156,6 +156,11 @@ siegearrow:
 		Facings: 32
 siegeboulder:	  
 	idle: boulder
+essence:	  
+	idle: essence
+		Facings: 32
+		Length: 7
+		Tick: 100
 cantowboulder:	  
 	idle: cannonboulder
 tribuboulder:	  

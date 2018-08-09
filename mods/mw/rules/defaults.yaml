@@ -536,6 +536,7 @@
 ^Tree:
 	Inherits@1: ^SpriteActor
 	Interactable:
+	ConditionManager:
 	Tooltip:
 		Name: Tree
 		ShowOwnerRow: false

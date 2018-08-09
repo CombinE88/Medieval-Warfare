@@ -211,7 +211,7 @@ namespace OpenRA.Mods.MW.Traits
                 foreach (var act in arcvalids)
                 {
                     if (act.Info.HasTraitInfo<ValidPreyTargetInfo>())
-                        act.TraitOrDefault<ValidPreyTarget>().Actors.Add(self);
+                        act.TraitOrDefault<ValidPreyTarget>().AddSelf(self);
                 }
             }
         }
@@ -240,7 +240,7 @@ namespace OpenRA.Mods.MW.Traits
             foreach (var act in arcvalids)
             {
                 if (act.Info.HasTraitInfo<ValidPreyTargetInfo>() && act.TraitOrDefault<ValidPreyTarget>().Actors.Contains(self))
-                    act.TraitOrDefault<ValidPreyTarget>().Actors.Remove(self);
+                    act.TraitOrDefault<ValidPreyTarget>().RemoveSelf(self);
             }
         }
 

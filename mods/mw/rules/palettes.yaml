@@ -247,6 +247,10 @@
 		Name: grimprojalpha
 		BasePalette: mwcivilian
 		Alpha: 0.8
+	PaletteFromPaletteWithAlpha@GRIMPROJECTILE2:
+		Name: projectilealpha
+		BasePalette: raicon
+		Alpha: 0.4
 	PaletteFromPaletteWithAlpha@VAMPPROJECT:
 		Name: vamprojalpha
 		BasePalette: ra
