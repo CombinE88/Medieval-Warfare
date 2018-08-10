@@ -296,13 +296,16 @@ SPLIT7:
 		RadiusMin: 5
 		RadiusMax: 8
 	SeedsResource:
-		RequiresCondition: SpawnCorruption == 1
+		RequiresCondition: SpawnCorruption
 		ResourceType: Corruption
-		Interval: 65
+		Interval: 40
 	Targetable:
 		TargetTypes: Trees, Corrupt
 	ValidPreyTarget:
 		GrantCondition: SpawnCorruption
+	WithColoredOverlay@Corrupt:
+		Palette: disabled
+		RequiresCondition: SpawnCorruption
 	DockManager:
 		ExternalDocks: true
 		#RequiresCondition: SpawnCorruption
@@ -363,13 +366,16 @@ SPLIT8:
 		RadiusMin: 5
 		RadiusMax: 10
 	SeedsResource:
-		RequiresCondition: SpawnCorruption == 1
+		RequiresCondition: SpawnCorruption
 		ResourceType: Corruption
-		Interval: 55
+		Interval: 25
 	Targetable:
 		TargetTypes: Trees, Corrupt
 	ValidPreyTarget:
 		GrantCondition: SpawnCorruption
+	WithColoredOverlay@Corrupt:
+		Palette: disabled
+		RequiresCondition: SpawnCorruption
 	DockManager:
 		ExternalDocks: true
 		#RequiresCondition: SpawnCorruption

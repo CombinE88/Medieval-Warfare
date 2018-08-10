@@ -190,6 +190,10 @@
 		Name: alphaeight
 		BasePalette: ra
 		Alpha: 0.7
+	PaletteFromPaletteWithAlpha@50ALPHA:
+		Name: alphahalf
+		BasePalette: ra
+		Alpha: 0.5
 	PlayerColorPalette@RA:
 		BasePalette: ra
 		BaseName: raplayer

@@ -73,7 +73,7 @@ namespace OpenRA.Mods.MW.Activities
             }
 
             target.Trait<DockManager>().ReserveDock(target, self, this);
-            self.SetTargetLine(Target.FromCell(self.World, target.Location), Color.Green);
+            self.SetTargetLine(Target.FromCell(self.World, self.World.Map.CellContaining(target.CenterPosition)), Color.Green);
             SmartPrey = true;
 
             return NextActivity;

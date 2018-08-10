@@ -285,10 +285,10 @@
 		Name: Corruption
 		PipColor: Red
 		ResourceType: 10
-		Palette: alphagrey
+		Palette: alphahalf
 		TerrainType: Corruption
-		Sequences: corrupt1,corrupt2,corrupt3,corrupt4,corrupt5,corrupt6,corrupt7,corrupt8,corrupt9
-		MaxDensity: 1
+		Sequences: corrupt1,corrupt2,corrupt3,corrupt4,corrupt5,corrupt6,corrupt7,corrupt8,corrupt9,corrupt10
+		MaxDensity: 4
 		ValuePerUnit: 24
 		AllowedTerrainTypes: Clear,Road
 		AllowUnderActors: true

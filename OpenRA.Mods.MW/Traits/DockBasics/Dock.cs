@@ -72,7 +72,7 @@ namespace OpenRA.Mods.MW.Traits
         public void CheckObstacle()
         {
             foreach (var a in self.World.ActorMap.GetActorsAt(Location))
-                if (a != self && (a.TraitOrDefault<Mobile>() == null))
+                if (a != self && a.TraitOrDefault<Mobile>() == null)
                 {
                     IsBlocked = true;
                     return;

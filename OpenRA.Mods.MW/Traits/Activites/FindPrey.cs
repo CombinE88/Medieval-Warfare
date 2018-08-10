@@ -20,7 +20,7 @@ using OpenRA.Traits;
 
 namespace OpenRA.Mods.MW.Activities
 {
-    public class FindPrey : Activity, IDockActivity
+    public class FindPrey : Activity
     {
         readonly AcolytePreyInfo info;
 
@@ -78,26 +78,6 @@ namespace OpenRA.Mods.MW.Activities
             self.QueueActivity(new Prey(self, target));
 
             return NextActivity;
-        }
-
-        Activity IDockActivity.ApproachDockActivities(Actor host, Actor client, Dock dock)
-        {
-            return DockUtils.GenericApproachDockActivities(host, client, dock, this, true);
-        }
-
-        Activity IDockActivity.DockActivities(Actor host, Actor client, Dock dock)
-        {
-            return ActivityUtils.SequenceActivities(new PreyActivity(client, host, true, dock));
-        }
-
-        Activity IDockActivity.ActivitiesAfterDockDone(Actor host, Actor client, Dock dock)
-        {
-            return null;
-        }
-
-        Activity IDockActivity.ActivitiesOnDockFail(Actor client)
-        {
-            return null;
         }
     }
 }

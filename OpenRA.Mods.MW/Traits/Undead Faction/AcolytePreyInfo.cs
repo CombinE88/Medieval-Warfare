@@ -82,7 +82,7 @@ namespace OpenRA.Mods.MW.Traits
         class PreyOrderTargeter : UnitOrderTargeter
         {
             public PreyOrderTargeter(string cursor)
-                : base("Prey", 6, cursor, true, false) { }
+                : base("Prey", 6, cursor, true, true) { }
 
             public override bool CanTargetActor(Actor self, Actor target, TargetModifiers modifiers, ref string cursor)
             {

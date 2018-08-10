@@ -423,6 +423,17 @@ SPPOOL.penta:
 		Type: TreesHarvest
 		Range: 12c0
 		UsePlayerColor: true
+	RenderActorArc:
+		UsePlayerColor: true
+		Offset: 0,0,2048
+		TargetOffset: 0,0,512
+		Width: 45
+		Actors: split7, split8
+		Distance: 12c0
+		ExtraSearchDistance: 0
+		Angle: 155
+		PlacementOnly: true
+		Transparency: 140
 CRYPT.penta:
 	Inherits: ^Mediumpenta
 	RenderSprites:
@@ -574,7 +585,7 @@ DEDREF.penta:
 	UndeadBuilder:
 		SpawnActor: dedref
 		SpawnOffset: 1,1
-		SummoningTime: 110
+		SummoningTime: 90
 		Cost: 2100
 	RequiresBuildableArea:
 		AreaTypes: undeadbuilding
@@ -588,7 +599,7 @@ DEDREF.penta:
 		Offset: 0,0,2048
 		TargetOffset: 0,0,512
 		Width: 65
-		Actors: split2, split3, splitblue, split4, split4b, split5, splitdead, split7, split8
+		Actors: split2, split3, splitblue, split4, split4b, split5, splitdead
 		Distance: 3c0
 		ExtraSearchDistance: 8c0
 		Angle: 175
@@ -695,6 +706,16 @@ SPPOOL:
 		Offset: 0,0,1025
 	Targetable@sppool:
 		TargetTypes: sppool
+	RenderActorArc:
+		UsePlayerColor: true
+		Offset: 0,0,2048
+		TargetOffset: 0,0,512
+		Width: 45
+		Actors: split7, split8
+		Distance: 12c0
+		ExtraSearchDistance: 0
+		Angle: 155
+		Transparency: 140
 CRYPT:
 	Inherits: ^MWUndeadBuilding
 	Inherits@Hitshape: ^2x2Shape
@@ -998,7 +1019,7 @@ DEDREF:
 		Offset: 0,0,2048
 		TargetOffset: 0,0,512
 		Width: 65
-		Actors: split2, split3, splitblue, split4, split4b, split5, splitdead, split7, split8
+		Actors: split2, split3, splitblue, split4, split4b, split5, splitdead
 		Distance: 3c0
 		ExtraSearchDistance: 8c0
 		Angle: 175
@@ -1017,10 +1038,6 @@ DEDREF:
 		FindRadius: 100
 	CustomSellValue:
 		Value: 450
-	ProximityExternalCondition@CORRUPTION:
-		Range: 8c0
-		ValidStances: Ally, Neutral, Enemy
-		Condition: SpawnCorruption
 	-GivesBuildableArea:
 GSTONE1:
 	Inherits: ^Gravestone

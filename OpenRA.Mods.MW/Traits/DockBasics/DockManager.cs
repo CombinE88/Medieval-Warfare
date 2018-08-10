@@ -14,7 +14,6 @@ using System.Collections.Generic;
 using System.Linq;
 using OpenRA.Activities;
 using OpenRA.Mods.Common.Activities;
-using OpenRA.Mods.Common.Pathfinder;
 using OpenRA.Mods.Common.Traits;
 using OpenRA.Mods.MW.Activities;
 using OpenRA.Traits;
@@ -56,41 +55,6 @@ namespace OpenRA.Mods.MW.Traits
         CPos lastLocation; // in case this is a mobile dock.
         int ticks;
 
-        public bool CantAccesDock(Actor client, Dock dock)
-        {
-            if (client != null && dock != null)
-            {
-                List<CPos> path;
-
-                using (var thePath = PathSearch.FromPoint(client.World, client.Info.TraitInfo<MobileInfo>().LocomotorInfo,
-                    client, client.Location, dock.Location, true))
-                    path = client.World.WorldActor.Trait<IPathFinder>().FindPath(thePath);
-
-                if (path.Count <= 0 && (client.Location - dock.Location).LengthSquared > new CVec(1, 1).LengthSquared)
-                    return false;
-
-                return true;
-            }
-
-            return false;
-        }
-
-        public bool CanReachPosition(Actor unit, Dock position)
-        {
-            List<CPos> path;
-
-            using (var thePath = PathSearch.FromPoint(unit.World, unit.Info.TraitInfo<MobileInfo>().LocomotorInfo,
-                unit, unit.Location, position.Location, true))
-                path = unit.World.WorldActor.Trait<IPathFinder>().FindPath(thePath);
-
-            if (path.Count > 0)
-                return true;
-            if (path.Count <= 0 && (unit.CenterPosition - position.CenterPosition).LengthSquared <= WDist.FromCells(1).LengthSquared)
-                return true;
-
-            return false;
-        }
-
         public DockManager(ActorInitializer init, DockManagerInfo info)
         {
             host = init.Self;
@@ -117,9 +81,9 @@ namespace OpenRA.Mods.MW.Traits
 
             foreach (var d in serviceDocks)
             {
-                if (d.Reserver == null && CanReachPosition(client, d))
+                if (d.Reserver == null)
                     return true;
-                if (d.Reserver == client && CanReachPosition(client, d))
+                if (d.Reserver == client)
                     return true;
             }
 
@@ -430,7 +394,7 @@ namespace OpenRA.Mods.MW.Traits
             while (queue.Count > 0)
             {
                 // find the first available slot in the service docks.
-                var serviceDock = serviceDocks.FirstOrDefault(d => d.Reserver == null && !d.IsBlocked && !d.IsBlocked && CantAccesDock(client, d));
+                var serviceDock = serviceDocks.FirstOrDefault(d => d.Reserver == null && !d.IsBlocked);
                 if (serviceDock == null)
                     break;
                 var head = NearestClient(host, serviceDock, queue);

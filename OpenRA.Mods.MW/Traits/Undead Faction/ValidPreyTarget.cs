@@ -15,7 +15,7 @@ namespace OpenRA.Mods.MW.Traits
         public object Create(ActorInitializer init) { return new ValidPreyTarget(init.Self, this); }
     }
 
-    public class ValidPreyTarget
+    public class ValidPreyTarget : INotifyCreated
     {
         public HashSet<Actor> Actors = new HashSet<Actor>();
         ConditionManager conman;
@@ -26,24 +26,33 @@ namespace OpenRA.Mods.MW.Traits
 
         public ValidPreyTarget(Actor self, ValidPreyTargetInfo info)
         {
-            conman = self.TraitOrDefault<ConditionManager>();
             this.info = info;
             this.self = self;
         }
 
+        void INotifyCreated.Created(Actor self)
+        {
+            conman = self.TraitOrDefault<ConditionManager>();
+        }
+
         public void AddSelf(Actor actor)
         {
-            if (info.GrantCondition != null && token == ConditionManager.InvalidConditionToken)
+            if (actor != null && !actor.IsDead && actor.IsInWorld)
             {
-                token = conman.GrantCondition(self, info.GrantCondition);
-            }
+                if (info.GrantCondition != null && token == ConditionManager.InvalidConditionToken)
+                {
+                    token = conman.GrantCondition(self, info.GrantCondition);
+                }
 
-            Actors.Add(actor);
+                Actors.Add(actor);
+            }
         }
 
         public void RemoveSelf(Actor actor)
         {
-            Actors.Remove(actor);
+            if (Actors.Any() && Actors.Contains(actor))
+                Actors.Remove(actor);
+
             if (info.GrantCondition != null && !Actors.Any() && token != ConditionManager.InvalidConditionToken)
             {
                 conman.RevokeCondition(self, token);
