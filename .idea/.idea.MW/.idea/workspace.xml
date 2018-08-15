@@ -1,0 +1,498 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="118aab16-acd3-41ef-b769-aca36dfb4bd5" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="-1283874771">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.open.time.0" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="cs" value="6" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="C#" value="6" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="cs" value="8" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="C#" value="8" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/OpenRA.Mods.MW/Traits/Undead Faction/AcolytePreyInfo.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="44" column="29" selection-start-line="44" selection-start-column="29" selection-end-line="44" selection-end-column="29" />
+              <folding>
+                <marker date="1534335260711" expanded="false" signature="6:172" ph="..." />
+                <marker date="1534335260711" expanded="true" signature="205:3755" ph="{...}" />
+                <marker date="1534335260711" expanded="true" signature="256:1301" ph="{...}" />
+                <marker date="1534335260711" expanded="true" signature="1401:3753" ph="{...}" />
+                <marker date="1534335260711" expanded="true" signature="1509:1559" ph="{...}" />
+                <marker date="1534335260711" expanded="true" signature="1610:1699" ph="{...}" />
+                <marker date="1534335260711" expanded="true" signature="1794:2041" ph="{...}" />
+                <marker date="1534335260711" expanded="true" signature="1845:2005" ph="{...}" />
+                <marker date="1534335260711" expanded="true" signature="2100:2371" ph="{...}" />
+                <marker date="1534335260711" expanded="true" signature="2439:2527" ph="{...}" />
+                <marker date="1534335260711" expanded="true" signature="2580:3747" ph="{...}" />
+                <marker date="1534335260711" expanded="true" signature="2821:3209" ph="{...}" />
+                <marker date="1534335260711" expanded="true" signature="3342:3737" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/OpenRA.Mods.MW/Traits/Undead Faction/AcolytePreyBuildInfo.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="574">
+              <caret line="86" column="41" selection-start-line="86" selection-start-column="41" selection-end-line="86" selection-end-column="41" />
+              <folding>
+                <marker date="1534335299098" expanded="false" signature="6:120" ph="..." />
+                <marker date="1534335299098" expanded="true" signature="153:3474" ph="{...}" />
+                <marker date="1534335299098" expanded="true" signature="199:815" ph="{...}" />
+                <marker date="1534335299098" expanded="true" signature="892:3472" ph="{...}" />
+                <marker date="1534335299098" expanded="true" signature="1068:1149" ph="{...}" />
+                <marker date="1534335299098" expanded="true" signature="1186:1489" ph="{...}" />
+                <marker date="1534335299098" expanded="true" signature="1238:1479" ph="{...}" />
+                <marker date="1534335299098" expanded="true" signature="1323:1465" ph="{...}" />
+                <marker date="1534335299098" expanded="true" signature="1540:1634" ph="{...}" />
+                <marker date="1534335299098" expanded="true" signature="1729:1981" ph="{...}" />
+                <marker date="1534335299098" expanded="true" signature="1785:1945" ph="{...}" />
+                <marker date="1534335299098" expanded="true" signature="2040:2581" ph="{...}" />
+                <marker date="1534335299098" expanded="true" signature="2126:2252" ph="{...}" />
+                <marker date="1534335299098" expanded="true" signature="2303:2355" ph="{...}" />
+                <marker date="1534335299098" expanded="true" signature="2649:2742" ph="{...}" />
+                <marker date="1534335299098" expanded="true" signature="2800:3466" ph="{...}" />
+                <marker date="1534335299098" expanded="true" signature="3051:3187" ph="{...}" />
+                <marker date="1534335299098" expanded="true" signature="3320:3456" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/OpenRA.Mods.MW/Traits/Activites/PreyBuild.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="52" column="13" lean-forward="true" selection-start-line="52" selection-start-column="13" selection-end-line="52" selection-end-column="13" />
+              <folding>
+                <marker date="1533909257505" expanded="false" signature="0:415" ph="Copyright &amp; License Information" />
+                <marker date="1533909257505" expanded="true" signature="40:404" ph="/* Copyright 2007-2017 The OpenRA Developers (see AUTHORS) ... */" />
+                <marker date="1533909257505" expanded="false" signature="423:650" ph="..." />
+                <marker date="1533909257505" expanded="true" signature="687:3679" ph="{...}" />
+                <marker date="1533909257505" expanded="true" signature="742:3677" ph="{...}" />
+                <marker date="1533909257505" expanded="true" signature="944:1102" ph="{...}" />
+                <marker date="1533909257505" expanded="true" signature="1159:1333" ph="{...}" />
+                <marker date="1533909257505" expanded="true" signature="1384:2556" ph="{...}" />
+                <marker date="1533909257505" expanded="true" signature="1585:2015" ph="{...}" />
+                <marker date="1533909257505" expanded="true" signature="2048:2143" ph="{...}" />
+                <marker date="1533909257505" expanded="true" signature="2215:2280" ph="{...}" />
+                <marker date="1533909257505" expanded="true" signature="2648:2760" ph="{...}" />
+                <marker date="1533909257505" expanded="true" signature="2844:2966" ph="{...}" />
+                <marker date="1533909257505" expanded="true" signature="3059:3104" ph="{...}" />
+                <marker date="1533909257505" expanded="true" signature="3171:3216" ph="{...}" />
+                <marker date="1533909257505" expanded="true" signature="3301:3370" ph="{...}" />
+                <marker date="1533909257505" expanded="true" signature="3447:3516" ph="{...}" />
+                <marker date="1533909257505" expanded="true" signature="3602:3671" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/engine/OpenRA.Game/Actor.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="204" column="20" selection-start-line="204" selection-start-column="20" selection-end-line="204" selection-end-column="20" />
+              <folding>
+                <marker date="1534073168496" expanded="false" signature="0:415" ph="Copyright &amp; License Information" />
+                <marker date="1534073168496" expanded="true" signature="40:404" ph="/* Copyright 2007-2018 The OpenRA Developers (see AUTHORS) ... */" />
+                <marker date="1534073168496" expanded="false" signature="423:665" ph="..." />
+                <marker date="1534073168496" expanded="true" signature="683:12247" ph="{...}" />
+                <marker date="1534073168496" expanded="true" signature="841:12245" ph="{...}" />
+                <marker date="1534073168496" expanded="true" signature="871:1103" ph="{...}" />
+                <marker date="1534073168496" expanded="true" signature="1927:2157" ph="{...}" />
+                <marker date="1534073168496" expanded="true" signature="1938:2153" ph="{...}" />
+                <marker date="1534073168496" expanded="true" signature="2646:5079" ph="{...}" />
+                <marker date="1534073168496" expanded="true" signature="2855:3443" ph="{...}" />
+                <marker date="1534073168496" expanded="true" signature="3127:3438" ph="{...}" />
+                <marker date="1534073168496" expanded="true" signature="3175:3351" ph="/* Some traits rely on properties provided by IOccupySpace in their initialization, ... */" />
+                <marker date="1534073168496" expanded="true" signature="3448:3769" ph="/* PERF: Cache all these traits as soon as the actor is created. This is a fairly cheap one-off cost per ... */" />
+                <marker date="1534073168496" expanded="true" signature="4390:4982" ph="{...}" />
+                <marker date="1534073168496" expanded="true" signature="4400:4745" ph="/* Caching this in a AddFrameEndTask, because trait construction order might cause problems if done directly at c ... */" />
+                <marker date="1534073168496" expanded="true" signature="5101:5327" ph="{...}" />
+                <marker date="1534073168496" expanded="true" signature="5387:5589" ph="{...}" />
+                <marker date="1534073168496" expanded="true" signature="5647:6286" ph="{...}" />
+                <marker date="1534073168496" expanded="true" signature="5655:6161" ph="/* PERF: Avoid LINQ. ... */" />
+                <marker date="1534073168496" expanded="true" signature="6350:6509" ph="{...}" />
+                <marker date="1534073168496" expanded="true" signature="6560:6752" ph="{...}" />
+                <marker date="1534073168496" expanded="true" signature="6802:6975" ph="{...}" />
+                <marker date="1534073168496" expanded="true" signature="6841:6943" ph="{...}" />
+                <marker date="1534073168496" expanded="true" signature="7040:7118" ph="{...}" />
+                <marker date="1534073168496" expanded="true" signature="7170:7308" ph="{...}" />
+                <marker date="1534073168496" expanded="true" signature="7340:7451" ph="{...}" />
+                <marker date="1534073168496" expanded="true" signature="7488:7520" ph="{...}" />
+                <marker date="1534073168496" expanded="true" signature="7563:7630" ph="{...}" />
+                <marker date="1534073168496" expanded="true" signature="7665:7709" ph="{...}" />
+                <marker date="1534073168496" expanded="true" signature="7746:7895" ph="{...}" />
+                <marker date="1534073168496" expanded="true" signature="7918:7966" ph="{...}" />
+                <marker date="1534073168496" expanded="true" signature="7998:8055" ph="{...}" />
+                <marker date="1534073168496" expanded="true" signature="8104:8162" ph="{...}" />
+                <marker date="1534073168496" expanded="true" signature="8200:8250" ph="{...}" />
+                <marker date="1534073168496" expanded="true" signature="8275:8629" ph="{...}" />
+                <marker date="1534073168496" expanded="true" signature="8309:8623" ph="{...}" />
+                <marker date="1534073168496" expanded="true" signature="8700:8766" ph="{...}" />
+                <marker date="1534073168496" expanded="true" signature="8770:8931" ph="/// Change the actors owner without queuing a FrameEndTask. ... " />
+                <marker date="1534073168496" expanded="true" signature="8978:9389" ph="{...}" />
+                <marker date="1534073168496" expanded="true" signature="9428:9556" ph="{...}" />
+                <marker date="1534073168496" expanded="true" signature="9616:9728" ph="{...}" />
+                <marker date="1534073168496" expanded="true" signature="9826:9927" ph="{...}" />
+                <marker date="1534073168496" expanded="true" signature="9977:10194" ph="{...}" />
+                <marker date="1534073168496" expanded="true" signature="10247:10457" ph="{...}" />
+                <marker date="1534073168496" expanded="true" signature="10514:10762" ph="{...}" />
+                <marker date="1534073168496" expanded="true" signature="10807:10997" ph="{...}" />
+                <marker date="1534073168496" expanded="true" signature="11050:11407" ph="{...}" />
+                <marker date="1534073168496" expanded="false" signature="11411:12242" ph="Scripting interface" />
+                <marker date="1534073168496" expanded="true" signature="11532:11646" ph="{...}" />
+                <marker date="1534073168496" expanded="true" signature="11709:11832" ph="{...}" />
+                <marker date="1534073168496" expanded="true" signature="11909:12037" ph="{...}" />
+                <marker date="1534073168496" expanded="true" signature="12085:12126" ph="{...}" />
+                <marker date="1534073168496" expanded="true" signature="12172:12228" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/OpenRA.Mods.MW/Traits/Undead Faction/AcolytePreyInfo.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/OpenRA.Mods.MW/Traits/Activites/PreyBuild.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/OpenRA.Mods.MW/Traits/Undead Faction/AcolytePreyBuildInfo.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/engine/OpenRA.Game/Actor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/OpenRA.Mods.MW/Traits/Undead Faction/UndeadBuilder.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/OpenRA.Mods.MW/Traits/Undead Faction/AcolytePreyInfo.cs" />
+        <option value="$PROJECT_DIR$/OpenRA.Mods.MW/Traits/Undead Faction/AcolytePreyBuildInfo.cs" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="334" />
+    <option name="y" value="163" />
+    <option name="width" value="854" />
+    <option name="height" value="1019" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="SolutionExplorer" proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="FileSystemExplorer" />
+      <pane id="SolutionExplorer">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="MW" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="MW" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="OpenRA.Mods.MW" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="MW" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="OpenRA.Mods.MW" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Traits" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="MW" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="OpenRA.Mods.MW" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Traits" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Undead Faction" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+        <option name="show-all-files" value="false" />
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Rider.DefaultBreakpoints.AreToggled" value="true" />
+    <property name="Rider.ProjectViewActivator.IsNotFirstRun" value="true" />
+    <property name="SearchEverywhereHistoryKey" value="prey&#9;null&#9;null" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="Default" type="DotNetProject" factoryName=".NET Project">
+      <option name="EXE_PATH" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="PROJECT_PATH" value="" />
+      <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
+      <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
+      <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
+      <option name="PROJECT_KIND" value="None" />
+      <option name="PROJECT_TFM" value="" />
+      <method v="2">
+        <option name="Build" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="334" y="163" width="854" height="1019" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Favorites" side_tool="true" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.51511335" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="NuGet" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Unit Tests" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info active="true" anchor="bottom" id="Build" visible="true" weight="0.3322034" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Errors In Solution" />
+      <window_info anchor="right" id="Unit Tests Coverage" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" suspend="NONE" type="DotNet Exception Breakpoints">
+          <properties exception="System.Threading.ThreadAbortException" displayValue="System.Threading.ThreadAbortException" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/OpenRA.Mods.MW/Traits/Undead Faction/UndeadBuilder.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
+          <folding>
+            <marker date="1532893742893" expanded="false" signature="6:187" ph="..." />
+            <marker date="1532893742893" expanded="true" signature="220:4526" ph="{...}" />
+            <marker date="1532893742893" expanded="true" signature="349:1083" ph="{...}" />
+            <marker date="1532893742893" expanded="true" signature="1123:4524" ph="{...}" />
+            <marker date="1532893742893" expanded="true" signature="1404:1606" ph="{...}" />
+            <marker date="1532893742893" expanded="true" signature="1643:3087" ph="{...}" />
+            <marker date="1532893742893" expanded="true" signature="1690:1941" ph="{...}" />
+            <marker date="1532893742893" expanded="true" signature="1799:1927" ph="{...}" />
+            <marker date="1532893742893" expanded="true" signature="2167:2230" ph="{...}" />
+            <marker date="1532893742893" expanded="true" signature="2323:3077" ph="{...}" />
+            <marker date="1532893742893" expanded="true" signature="2382:3063" ph="{...}" />
+            <marker date="1532893742893" expanded="true" signature="2560:3045" ph="{...}" />
+            <marker date="1532893742893" expanded="true" signature="3132:4518" ph="{...}" />
+            <marker date="1532893742893" expanded="true" signature="3186:4506" ph="{...}" />
+            <marker date="1532893742893" expanded="true" signature="3463:3666" ph="{...}" />
+            <marker date="1532893742893" expanded="true" signature="3890:4045" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OpenRA.Mods.MW/Traits/Undead Faction/AcolytePreyInfo.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="44" column="29" selection-start-line="44" selection-start-column="29" selection-end-line="44" selection-end-column="29" />
+          <folding>
+            <marker date="1534335260711" expanded="false" signature="6:172" ph="..." />
+            <marker date="1534335260711" expanded="true" signature="205:3755" ph="{...}" />
+            <marker date="1534335260711" expanded="true" signature="256:1301" ph="{...}" />
+            <marker date="1534335260711" expanded="true" signature="1401:3753" ph="{...}" />
+            <marker date="1534335260711" expanded="true" signature="1509:1559" ph="{...}" />
+            <marker date="1534335260711" expanded="true" signature="1610:1699" ph="{...}" />
+            <marker date="1534335260711" expanded="true" signature="1794:2041" ph="{...}" />
+            <marker date="1534335260711" expanded="true" signature="1845:2005" ph="{...}" />
+            <marker date="1534335260711" expanded="true" signature="2100:2371" ph="{...}" />
+            <marker date="1534335260711" expanded="true" signature="2439:2527" ph="{...}" />
+            <marker date="1534335260711" expanded="true" signature="2580:3747" ph="{...}" />
+            <marker date="1534335260711" expanded="true" signature="2821:3209" ph="{...}" />
+            <marker date="1534335260711" expanded="true" signature="3342:3737" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/engine/OpenRA.Game/Actor.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="204" column="20" selection-start-line="204" selection-start-column="20" selection-end-line="204" selection-end-column="20" />
+          <folding>
+            <marker date="1534073168496" expanded="false" signature="0:415" ph="Copyright &amp; License Information" />
+            <marker date="1534073168496" expanded="true" signature="40:404" ph="/* Copyright 2007-2018 The OpenRA Developers (see AUTHORS) ... */" />
+            <marker date="1534073168496" expanded="false" signature="423:665" ph="..." />
+            <marker date="1534073168496" expanded="true" signature="683:12247" ph="{...}" />
+            <marker date="1534073168496" expanded="true" signature="841:12245" ph="{...}" />
+            <marker date="1534073168496" expanded="true" signature="871:1103" ph="{...}" />
+            <marker date="1534073168496" expanded="true" signature="1927:2157" ph="{...}" />
+            <marker date="1534073168496" expanded="true" signature="1938:2153" ph="{...}" />
+            <marker date="1534073168496" expanded="true" signature="2646:5079" ph="{...}" />
+            <marker date="1534073168496" expanded="true" signature="2855:3443" ph="{...}" />
+            <marker date="1534073168496" expanded="true" signature="3127:3438" ph="{...}" />
+            <marker date="1534073168496" expanded="true" signature="3175:3351" ph="/* Some traits rely on properties provided by IOccupySpace in their initialization, ... */" />
+            <marker date="1534073168496" expanded="true" signature="3448:3769" ph="/* PERF: Cache all these traits as soon as the actor is created. This is a fairly cheap one-off cost per ... */" />
+            <marker date="1534073168496" expanded="true" signature="4390:4982" ph="{...}" />
+            <marker date="1534073168496" expanded="true" signature="4400:4745" ph="/* Caching this in a AddFrameEndTask, because trait construction order might cause problems if done directly at c ... */" />
+            <marker date="1534073168496" expanded="true" signature="5101:5327" ph="{...}" />
+            <marker date="1534073168496" expanded="true" signature="5387:5589" ph="{...}" />
+            <marker date="1534073168496" expanded="true" signature="5647:6286" ph="{...}" />
+            <marker date="1534073168496" expanded="true" signature="5655:6161" ph="/* PERF: Avoid LINQ. ... */" />
+            <marker date="1534073168496" expanded="true" signature="6350:6509" ph="{...}" />
+            <marker date="1534073168496" expanded="true" signature="6560:6752" ph="{...}" />
+            <marker date="1534073168496" expanded="true" signature="6802:6975" ph="{...}" />
+            <marker date="1534073168496" expanded="true" signature="6841:6943" ph="{...}" />
+            <marker date="1534073168496" expanded="true" signature="7040:7118" ph="{...}" />
+            <marker date="1534073168496" expanded="true" signature="7170:7308" ph="{...}" />
+            <marker date="1534073168496" expanded="true" signature="7340:7451" ph="{...}" />
+            <marker date="1534073168496" expanded="true" signature="7488:7520" ph="{...}" />
+            <marker date="1534073168496" expanded="true" signature="7563:7630" ph="{...}" />
+            <marker date="1534073168496" expanded="true" signature="7665:7709" ph="{...}" />
+            <marker date="1534073168496" expanded="true" signature="7746:7895" ph="{...}" />
+            <marker date="1534073168496" expanded="true" signature="7918:7966" ph="{...}" />
+            <marker date="1534073168496" expanded="true" signature="7998:8055" ph="{...}" />
+            <marker date="1534073168496" expanded="true" signature="8104:8162" ph="{...}" />
+            <marker date="1534073168496" expanded="true" signature="8200:8250" ph="{...}" />
+            <marker date="1534073168496" expanded="true" signature="8275:8629" ph="{...}" />
+            <marker date="1534073168496" expanded="true" signature="8309:8623" ph="{...}" />
+            <marker date="1534073168496" expanded="true" signature="8700:8766" ph="{...}" />
+            <marker date="1534073168496" expanded="true" signature="8770:8931" ph="/// Change the actors owner without queuing a FrameEndTask. ... " />
+            <marker date="1534073168496" expanded="true" signature="8978:9389" ph="{...}" />
+            <marker date="1534073168496" expanded="true" signature="9428:9556" ph="{...}" />
+            <marker date="1534073168496" expanded="true" signature="9616:9728" ph="{...}" />
+            <marker date="1534073168496" expanded="true" signature="9826:9927" ph="{...}" />
+            <marker date="1534073168496" expanded="true" signature="9977:10194" ph="{...}" />
+            <marker date="1534073168496" expanded="true" signature="10247:10457" ph="{...}" />
+            <marker date="1534073168496" expanded="true" signature="10514:10762" ph="{...}" />
+            <marker date="1534073168496" expanded="true" signature="10807:10997" ph="{...}" />
+            <marker date="1534073168496" expanded="true" signature="11050:11407" ph="{...}" />
+            <marker date="1534073168496" expanded="false" signature="11411:12242" ph="Scripting interface" />
+            <marker date="1534073168496" expanded="true" signature="11532:11646" ph="{...}" />
+            <marker date="1534073168496" expanded="true" signature="11709:11832" ph="{...}" />
+            <marker date="1534073168496" expanded="true" signature="11909:12037" ph="{...}" />
+            <marker date="1534073168496" expanded="true" signature="12085:12126" ph="{...}" />
+            <marker date="1534073168496" expanded="true" signature="12172:12228" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OpenRA.Mods.MW/Traits/Undead Faction/AcolytePreyBuildInfo.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="574">
+          <caret line="86" column="41" selection-start-line="86" selection-start-column="41" selection-end-line="86" selection-end-column="41" />
+          <folding>
+            <marker date="1534335299098" expanded="false" signature="6:120" ph="..." />
+            <marker date="1534335299098" expanded="true" signature="153:3474" ph="{...}" />
+            <marker date="1534335299098" expanded="true" signature="199:815" ph="{...}" />
+            <marker date="1534335299098" expanded="true" signature="892:3472" ph="{...}" />
+            <marker date="1534335299098" expanded="true" signature="1068:1149" ph="{...}" />
+            <marker date="1534335299098" expanded="true" signature="1186:1489" ph="{...}" />
+            <marker date="1534335299098" expanded="true" signature="1238:1479" ph="{...}" />
+            <marker date="1534335299098" expanded="true" signature="1323:1465" ph="{...}" />
+            <marker date="1534335299098" expanded="true" signature="1540:1634" ph="{...}" />
+            <marker date="1534335299098" expanded="true" signature="1729:1981" ph="{...}" />
+            <marker date="1534335299098" expanded="true" signature="1785:1945" ph="{...}" />
+            <marker date="1534335299098" expanded="true" signature="2040:2581" ph="{...}" />
+            <marker date="1534335299098" expanded="true" signature="2126:2252" ph="{...}" />
+            <marker date="1534335299098" expanded="true" signature="2303:2355" ph="{...}" />
+            <marker date="1534335299098" expanded="true" signature="2649:2742" ph="{...}" />
+            <marker date="1534335299098" expanded="true" signature="2800:3466" ph="{...}" />
+            <marker date="1534335299098" expanded="true" signature="3051:3187" ph="{...}" />
+            <marker date="1534335299098" expanded="true" signature="3320:3456" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OpenRA.Mods.MW/Traits/Activites/PreyBuild.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="52" column="13" lean-forward="true" selection-start-line="52" selection-start-column="13" selection-end-line="52" selection-end-column="13" />
+          <folding>
+            <marker date="1533909257505" expanded="false" signature="0:415" ph="Copyright &amp; License Information" />
+            <marker date="1533909257505" expanded="true" signature="40:404" ph="/* Copyright 2007-2017 The OpenRA Developers (see AUTHORS) ... */" />
+            <marker date="1533909257505" expanded="false" signature="423:650" ph="..." />
+            <marker date="1533909257505" expanded="true" signature="687:3679" ph="{...}" />
+            <marker date="1533909257505" expanded="true" signature="742:3677" ph="{...}" />
+            <marker date="1533909257505" expanded="true" signature="944:1102" ph="{...}" />
+            <marker date="1533909257505" expanded="true" signature="1159:1333" ph="{...}" />
+            <marker date="1533909257505" expanded="true" signature="1384:2556" ph="{...}" />
+            <marker date="1533909257505" expanded="true" signature="1585:2015" ph="{...}" />
+            <marker date="1533909257505" expanded="true" signature="2048:2143" ph="{...}" />
+            <marker date="1533909257505" expanded="true" signature="2215:2280" ph="{...}" />
+            <marker date="1533909257505" expanded="true" signature="2648:2760" ph="{...}" />
+            <marker date="1533909257505" expanded="true" signature="2844:2966" ph="{...}" />
+            <marker date="1533909257505" expanded="true" signature="3059:3104" ph="{...}" />
+            <marker date="1533909257505" expanded="true" signature="3171:3216" ph="{...}" />
+            <marker date="1533909257505" expanded="true" signature="3301:3370" ph="{...}" />
+            <marker date="1533909257505" expanded="true" signature="3447:3516" ph="{...}" />
+            <marker date="1533909257505" expanded="true" signature="3602:3671" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

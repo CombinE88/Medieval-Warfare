@@ -29,7 +29,6 @@ namespace OpenRA.Mods.MW.Traits
     class AcolytePreyBuild : IIssueOrder, IResolveOrder, IOrderVoice, ITick
     {
         readonly AcolytePreyBuildInfo info;
-        private Actor forceactor;
         private bool smartPrey;
         private int smarPreyWait;
 
@@ -83,7 +82,7 @@ namespace OpenRA.Mods.MW.Traits
             if (!order.Queued)
                 self.CancelActivity();
 
-            forceactor = order.Target.Actor;
+            var forceactor = order.Target.Actor;
             smartPrey = true;
             self.QueueActivity(new PreyBuild(self, forceactor));
         }

@@ -651,9 +651,9 @@ BATO.scaff:
 		PlayerPalette: raplayer
 		Image: batowgun
 	CustomSellValue:
-		Value: 700
+		Value: 1400
 	Valued:
-		Cost: 1400
+		Cost: 2800
 	Tooltip:
 		Name: Construction Site (Tower with Ballista)
 	Buildable:
@@ -663,7 +663,7 @@ BATO.scaff:
 		Queue: MMilitary.GDI
 		BuildDurationModifier: 40
 		IconPalette: raicon
-		BuildDuration: 1300
+		BuildDuration: 2600
 	Health:
 		HP: 30000
 	RevealsShroud:

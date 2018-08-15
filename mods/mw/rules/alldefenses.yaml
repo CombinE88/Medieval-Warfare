@@ -9,9 +9,9 @@ GTWNEW:
 	RenderSprites:
 		PlayerPalette: raplayer
 	Valued:
-		Cost: 600
+		Cost: 1200
 	CustomSellValue:
-		Value: 300
+		Value: 600
 	Tooltip:
 		Name: Guard Tower
 	Building:
@@ -97,9 +97,9 @@ SAMNEW:
 		Image: gtairwnew
 		PlayerPalette: raplayer
 	Valued:
-		Cost: 650
+		Cost: 1300
 	CustomSellValue:
-		Value: 325
+		Value: 650
 	Tooltip:
 		Name: Anti-Aircraft Ballista
 	Building:
@@ -192,9 +192,9 @@ BATO:
 	EditorTilesetFilter:
 		Categories: Defense
 	Valued:
-		Cost: 1400
+		Cost: 2800
 	CustomSellValue:
-		Value: 700
+		Value: 1400
 	Tooltip:
 		Name: Tower with Ballista
 	Building:
@@ -254,9 +254,9 @@ GUNNEW:
 	Inherits@AUTOTARGET: ^AutoTargetGround
 	Inherits@Hitshape: ^1x1Shape
 	Valued:
-		Cost: 700
+		Cost: 1400
 	CustomSellValue:
-		Value: 350
+		Value: 700
 	Tooltip:
 		Name: Gunpowder Cannon
 	Building:

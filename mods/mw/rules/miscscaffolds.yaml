@@ -281,9 +281,9 @@ GTWNEW.scaff:
 		PlayerPalette: raplayer
 		Image: gtwnew
 	CustomSellValue:
-		Value: 300
+		Value: 600
 	Valued:
-		Cost: 600
+		Cost: 1200
 	Tooltip:
 		Name: Construction Site ( Guard Tower)
 	Buildable:
@@ -292,7 +292,7 @@ GTWNEW.scaff:
 		Queue: MMilitary.GDI, MMilitary.Nod
 		BuildDurationModifier: 60
 		IconPalette: raicon
-		BuildDuration: 500
+		BuildDuration: 1000
 	Health:
 		HP: 20000
 	RevealsShroud:
@@ -349,9 +349,9 @@ GUNNEW.scaff:
 		PlayerPalette: raplayer
 		Image: gunnew
 	CustomSellValue:
-		Value: 350
+		Value: 700
 	Valued:
-		Cost: 700
+		Cost: 1400
 	Tooltip:
 		Name: Construction Site (Gunpowder Cannon)
 	Buildable:
@@ -361,7 +361,7 @@ GUNNEW.scaff:
 		Queue: MMilitary.GDI, MMilitary.Nod
 		IconPalette: raicon
 		BuildDurationModifier: 40
-		BuildDuration: 600
+		BuildDuration: 1200
 	Health:
 		HP: 20000
 	RevealsShroud:
@@ -576,7 +576,7 @@ CSTLGTEW.scaff:
 	Tooltip:
 		Name: Construction Site (Castle Gate)
 	Buildable:
-		Description:Operated gate that opens for allied units.\nUnarmed\n\n\n
+		Description: Operated gate that opens for allied units.\nUnarmed\n\n\n
 		BuildPaletteOrder: 80
 		Prerequisites: anyworkshop
 		Queue: Building4.GDI, Building4.Nod

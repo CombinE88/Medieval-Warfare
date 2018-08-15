@@ -32,7 +32,7 @@ E2NEW:
 		ScanRadius: 4
 		InitialStance: AttackAnything
 	RenderSprites:
-		Image: e2new
+		Image: e2new_d
 		PlayerPalette: raplayer
 	WithInfantryBody:
 		DefaultAttackSequence: shoot
@@ -225,12 +225,12 @@ ASSASSIN:
 	DetectCloaked:
 		Range: 2c0
 	Cloak:
-		InitialDelay: 90
-		CloakDelay: 90
+		InitialDelay: 110
+		CloakDelay: 110
 		CloakSound: mwcloaksound.aud
 		UncloakSound: mwuncloaksound.aud
 	Valued:
-		Cost: 600
+		Cost: 800
 	Tooltip:
 		Name: Assassin
 	Buildable:
@@ -243,7 +243,7 @@ ASSASSIN:
 	Mobile:
 		Speed: 66
 	Health:
-		HP: 12000
+		HP: 7500
 	Armament@dagger:
 		Name: Primary
 		Weapon: dagger

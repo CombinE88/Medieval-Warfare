@@ -828,7 +828,6 @@ CSTLWLLSUL.scaff:
 		HasMinibib: Yes
 	Selectable:
 		Bounds: 24,48,0,-10
-	SelectionDecorations
 	WithSpriteBody:
 		RequiresCondition: DoNotRender
 	DebugTransformOnCondition@Finsihed:

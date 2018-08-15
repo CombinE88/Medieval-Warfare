@@ -39,7 +39,6 @@ namespace OpenRA.Mods.MW.Traits
     class AcolytePrey : ConditionalTrait<AcolytePreyInfo>, IIssueOrder, IResolveOrder, IOrderVoice
     {
         readonly AcolytePreyInfo info;
-        private Actor forceactor;
 
         public AcolytePrey(AcolytePreyInfo info) : base(info)
         {
@@ -69,7 +68,7 @@ namespace OpenRA.Mods.MW.Traits
             if (!order.Queued)
                 self.CancelActivity();
 
-            forceactor = order.Target.Actor;
+            var forceactor = order.Target.Actor;
 
             self.QueueActivity(new Prey(self, forceactor));
         }

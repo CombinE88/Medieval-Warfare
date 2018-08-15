@@ -842,7 +842,7 @@ paladingunvisual:
 			HeavyCavalry: 0
 		DamageTypes: DefaultDeath	 
 Dagger:
-	ReloadDelay: 120
+	ReloadDelay: 150
 	Range: 5c512
 	InvalidTargets: Wall
 	Report: throw01.aud
@@ -862,7 +862,7 @@ Dagger:
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
 		Spread: 51
-		Damage: 15500
+		Damage: 14000
 		InvalidTargets: Wall, Structure, Air
 		ValidTargets: Ground
 		Versus:

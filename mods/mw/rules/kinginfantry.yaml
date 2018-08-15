@@ -209,7 +209,7 @@ E2NEWV2:
 		ScanRadius: 4
 		InitialStance: AttackAnything
 	RenderSprites:
-		Image: e2newv2
+		Image: e2newv2_d
 		PlayerPalette: raplayer
 	WithInfantryBody:
 		DefaultAttackSequence: shoot

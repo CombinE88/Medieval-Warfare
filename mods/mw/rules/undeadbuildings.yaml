@@ -367,7 +367,7 @@ OBELISK.penta:
 		SpawnActor: obelisk
 		SpawnOffset: 1,1
 		SummoningTime: 75
-		Cost: 1000
+		Cost: 2500
 GARG.penta:
 	Inherits: ^Smallpenta
 	RenderSprites:
@@ -393,7 +393,7 @@ GARG.penta:
 		SpawnActor: garg
 		SpawnOffset: 1,1
 		SummoningTime: 55
-		Cost: 500
+		Cost: 1100
 SPPOOL.penta:
 	Inherits: ^Mediumpenta
 	RenderSprites:
@@ -1038,7 +1038,6 @@ DEDREF:
 		FindRadius: 100
 	CustomSellValue:
 		Value: 450
-	-GivesBuildableArea:
 GSTONE1:
 	Inherits: ^Gravestone
 	WithSpriteBody:
@@ -1183,7 +1182,7 @@ OBELISK:
 		PlayerPalette: raplayer
 	WithMakeAnimation:
 	Valued:
-		Cost: 1000
+		Cost: 2500
 	Tooltip:
 		Name: Obelisk
 	Building:
@@ -1227,9 +1226,9 @@ GARG:
 	EditorTilesetFilter:
 		Categories: Defense
 	Valued:
-		Cost: 500
+		Cost: 1100
 	CustomSellValue:
-		Value: 250
+		Value: 550
 	Tooltip:
 		Name: Gargoyle
 	Building:

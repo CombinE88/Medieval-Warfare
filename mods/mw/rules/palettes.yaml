@@ -288,3 +288,6 @@
 		Name: alphagreyalpha
 		BasePalette: fire
 		Alpha: 0.5
+	RotationPaletteEffect@defaultRAwater:
+		Palettes: raterrain
+		ExcludeTilesets: DESERT

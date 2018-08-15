@@ -492,9 +492,9 @@ TRIBU.scaff:
 		PlayerPalette: raplayer
 		Image: tribu
 	CustomSellValue:
-		Value: 750
+		Value: 1500
 	Valued:
-		Cost: 1500
+		Cost: 3000
 	Tooltip:
 		Name: Construction Site (Counterweight Trebuchet)
 	Buildable:
@@ -504,7 +504,7 @@ TRIBU.scaff:
 		Queue: MMilitary.Nod
 		BuildDurationModifier: 40
 		IconPalette: raicon
-		BuildDuration: 1300
+		BuildDuration: 2600
 	Health:
 		HP: 30000
 	RevealsShroud:
@@ -567,9 +567,9 @@ SAMNEW.scaff:
 		PlayerPalette: raplayer
 		Image: gtairwnew
 	CustomSellValue:
-		Value: 325
+		Value: 650
 	Valued:
-		Cost: 650
+		Cost: 1300
 	Tooltip:
 		Name: Construction Site (Anti-Aircraft Ballista)
 	Buildable:
@@ -579,7 +579,7 @@ SAMNEW.scaff:
 		Queue: MMilitary.Nod
 		BuildDurationModifier: 40
 		IconPalette: raicon
-		BuildDuration: 550
+		BuildDuration: 1100
 	Health:
 		HP: 20000
 	RevealsShroud:

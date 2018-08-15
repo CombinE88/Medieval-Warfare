@@ -418,6 +418,385 @@ Container@EDITOR_WORLD_ROOT:
 											X: 4
 											Y: 4
 											Visible: true
+		Container@SCULPTS_WIDGETS:
+			Logic: SculptDesignerLogic
+			X: WINDOW_RIGHT - 255
+			Y: 278
+			Width: 250
+			Height: WINDOW_BOTTOM - 370
+			ClickThrough: false
+			Children:
+				Container@SCULPTS_BG:
+					Width: PARENT_RIGHT
+					Height: PARENT_BOTTOM
+					Children:
+						Background:
+							Width: 61
+							Height: 90
+							Background: panel-black
+							Children:
+								Label@CORNERS_LABEL:
+									Width: PARENT_RIGHT - 5
+									Height: 5
+									Y: 10
+									Text: Corners:
+									Align: Right
+									Font: TinyBold
+								Label@RADIUS_LABEL:
+									Width: PARENT_RIGHT - 5
+									Height: 5
+									Y: 40
+									Text: Raduis:
+									Align: Right
+									Font: TinyBold
+								Label@ROTATION_LABEL:
+									Width: PARENT_RIGHT - 5
+									Height: 5
+									Y: 70
+									Text: Rotation:
+									Align: Right
+									Font: TinyBold
+						Background:
+							Width: 189
+							Height: 90
+							X: 61
+							Background: panel-gray
+							Children:
+								Slider@CORNERS_SLIDER:
+									X: PARENT_RIGHT - WIDTH - 5
+									Y: 5
+									Width: PARENT_RIGHT - 10
+									Height: 20
+									Ticks: 10
+									MinimumValue: 2
+									MaximumValue: 10
+									Value: 2
+								Slider@RADIUS_SLIDER:
+									X: PARENT_RIGHT - WIDTH - 5
+									Y: 35
+									Width: PARENT_RIGHT - 10
+									Height: 20
+									Ticks: 10
+									Value: 1
+									MinimumValue: 1
+									MaximumValue: 50
+								Slider@ROTATION_SLIDER:
+									X: PARENT_RIGHT - WIDTH - 5
+									Y: 65
+									Width: PARENT_RIGHT - 10
+									Height: 20
+									Ticks: 18
+									Value: 0
+									MinimumValue: -180
+									MaximumValue: 180
+				Background@bg:
+					Width: PARENT_RIGHT
+					Height: PARENT_BOTTOM - 360
+					X: 1
+					Y: 170
+					Background: panel-black
+					Children:
+						ScrollPanel@SCULPTS_LIST:
+							Width: PARENT_RIGHT
+							Height: PARENT_BOTTOM
+							Children:
+								ScrollItem@SCULPTS_TEMPLATE:
+									Visible: false
+									Height: 20
+									Width: PARENT_RIGHT - 35
+									TooltipContainer: TOOLTIP_CONTAINER
+									TooltipTemplate: SIMPLE_TOOLTIP
+									IgnoreChildMouseOver: true
+									Children:
+										Label@SCULPT_LABEL:
+											Height: PARENT_BOTTOM
+											Width: PARENT_RIGHT
+											Visible: true
+											Contrast: true
+											ContrastColorDark: 000000
+											ContrastColorLight: ffffff
+											#Shadow: true
+				Button@CENTER_BUTTON:
+					Width: 62
+					Height: 25
+					X: PARENT_RIGHT - WIDTH
+					Y: 90
+					Text: Center
+					Font: Bold
+				Button@CENTERX_BUTTON:
+					Width: 31
+					Height: 25
+					X: PARENT_RIGHT - 62 - 62
+					Y: 90
+					Text: X
+					Font: Bold
+				Button@CENTERY_BUTTON:
+					Width: 31
+					Height: 25
+					X: PARENT_RIGHT - WIDTH - 62
+					Y: 90
+					Text: Y
+					Font: Bold
+				Button@CREATE_BUTTON:
+					Width: 62
+					Height: 25
+					X: 0
+					Y: 90
+					Text: Create
+					Font: Bold
+				Button@DELETE_BUTTON:
+					Width: 62
+					Height: 25
+					X: 62
+					Y: 90
+					Text: Delete
+					Font: Bold
+				Background@POSITION_X:
+					Width: 250
+					Height: 25
+					X: 0
+					Y: 115
+					Background: panel-gray
+					Children:
+						Background@POSTIONTEXT_X:
+							Width: 25
+							Height: 25
+							X: 62
+							Y: 0
+							Background: panel-black
+							Children:
+								Label@X_LABEL:
+									Width: PARENT_RIGHT - 5
+									Height: 5
+									Y: 10
+									Text: X
+									Align: Right
+									Font: TinyBold
+						Background@POSTIONTEXT_Y:
+							Width: 25
+							Height: 25
+							X: (PARENT_RIGHT - 62) / 2 + 50 + 12
+							Y: 0
+							Background: panel-black
+							Children:
+								Label@Y_LABEL:
+									Width: PARENT_RIGHT - 5
+									Height: 5
+									Y: 10
+									Text: Y
+									Align: Right
+									Font: TinyBold
+						TextField@X_TEXTFIELD:
+							Width: (PARENT_RIGHT -62 - 50) / 2
+							Height: 25
+							X: 62 + 25
+							Y: 0
+							Type: Integer
+						TextField@Y_TEXTFIELD:
+							Width: (PARENT_RIGHT -62 - 50) / 2
+							Height: 25
+							X: 62 + 50 + (PARENT_RIGHT -62 - 50) / 2
+							Y: 0
+							Type: Integer
+						Button@CLONE_BUTTON:
+							Width: 62
+							Height: 25
+							X: 0
+							Y: 0
+							Text: Clone
+							Font: Bold
+				Background@QUICK_MOVE_SHAPES:
+					Width: 250
+					Height: 30
+					X: 0
+					Y: 140
+					Background: panel-gray
+					Children:
+						Button@SHAPE_X_5_NEGATIVE:
+							Width: 40
+							Height: 30
+							X: 0
+							Y: 0
+							Text: X--
+							Font: Bold
+						Button@SHAPE_X_1_NEGATIVE:
+							Width: 22
+							Height: 30
+							X: 40
+							Y: 0
+							Text: X-
+							Font: Bold
+						Button@SHAPE_X_1_POSITIVE:
+							Width: 22
+							Height: 30
+							X: 64
+							Y: 0
+							Text: X+
+							Font: Bold
+						Button@SHAPE_X_5_POSITIVE:
+							Width: 40
+							Height: 30
+							X: 86
+							Y: 0
+							Text: X++
+							Font: Bold
+						Button@SHAPE_Y_5_NEGATIVE:
+							Width: 40
+							Height: 30
+							X: 124
+							Y: 0
+							Text: Y--
+							Font: Bold
+						Button@SHAPE_Y_1_NEGATIVE:
+							Width: 22
+							Height: 30
+							X: 164
+							Y: 0
+							Text: Y-
+							Font: Bold
+						Button@SHAPE_Y_1_POSITIVE:
+							Width: 22
+							Height: 30
+							X: 188
+							Y: 0
+							Text: Y+
+							Font: Bold
+						Button@SHAPE_Y_5_POSITIVE:
+							Width: 40
+							Height: 30
+							X: 210
+							Y: 0
+							Text: Y++
+							Font: Bold
+				Container@SCULPTS_SLICER_BG:
+					Width: PARENT_RIGHT
+					Height: PARENT_BOTTOM
+					Children:
+						Background:
+							Width: 61
+							Height: 90
+							Y: PARENT_BOTTOM - 190
+							Background: panel-black
+							Children:
+								Label@SLICER_LABEL:
+									Width: PARENT_RIGHT - 5
+									Height: 5
+									Y: 10
+									Text: Slices:
+									Align: Right
+									Font: TinyBold
+								Label@SLICER_RADIUS_LABEL:
+									Width: PARENT_RIGHT - 5
+									Height: 5
+									Y: 40
+									Text: Distance:
+									Align: Right
+									Font: TinyBold
+								Label@SCLICER_ROTATION_LABEL:
+									Width: PARENT_RIGHT - 5
+									Height: 5
+									Y: 70
+									Text: Rotation:
+									Align: Right
+									Font: TinyBold	
+						Background:
+							Width: 189
+							Height: 90
+							X: 61
+							Y: PARENT_BOTTOM - 190
+							Background: panel-gray
+							Children:
+								Slider@SCLICER_SLIDER:
+									X: PARENT_RIGHT - WIDTH - 5
+									Y: 5
+									Width: PARENT_RIGHT - 10
+									Height: 20
+									Ticks: 16
+									MinimumValue: 1
+									MaximumValue: 16
+									Value: 1
+								Slider@SCLICER_RADIUS_SLIDER:
+									X: PARENT_RIGHT - WIDTH - 5
+									Y: 35
+									Width: PARENT_RIGHT - 10
+									Height: 20
+									Ticks: 10
+									Value: 0
+									MinimumValue: 0
+									MaximumValue: 100
+								Slider@SCLICER_ROTATION_SLIDER:
+									X: PARENT_RIGHT - WIDTH - 5
+									Y: 65
+									Width: PARENT_RIGHT - 10
+									Height: 20
+									Ticks: 18
+									Value: 0
+									MinimumValue: -180
+									MaximumValue: 180
+				Container@MIXER_TAB:
+					X: 5
+					Y: PARENT_BOTTOM - HEIGHT - 25
+					Width: PARENT_RIGHT - 10
+					Height: 70
+					Children:
+						Background@HUEBG:
+							Background: panel-black
+							X: 0
+							Y: 0
+							Width: PARENT_RIGHT
+							Height: PARENT_BOTTOM
+							Children:
+								HueSlider@HUE:
+									X: 2
+									Y: 2
+									Width: PARENT_RIGHT - 4
+									Height: PARENT_BOTTOM - 4
+									Ticks: 5
+						Background@MIXERBG:
+							Background: panel-black
+							X: 0
+							Y: 22
+							Width: PARENT_RIGHT
+							Height: PARENT_BOTTOM
+							Children:
+								ColorMixer@MIXER:
+									X: 2
+									Y: 2
+									Width: PARENT_RIGHT - 4
+									Height: PARENT_BOTTOM - 4
+				Container@SCULPTS_SLICER_BG:
+					Width: PARENT_RIGHT
+					Height: PARENT_BOTTOM
+					Children:
+						Background:
+							Width: 61
+							Height: 25
+							Y: PARENT_BOTTOM
+							Background: panel-black
+							Children:
+								Label@SLICER_LABEL:
+									Width: PARENT_RIGHT - 5
+									Height: 5
+									Y: 10
+									Text: Alpha:
+									Align: Right
+									Font: TinyBold	
+						Background:
+							Width: 189
+							Height: 25
+							X: 61
+							Y: PARENT_BOTTOM 
+							Background: panel-gray
+							Children:
+								Slider@TRANSPARENCY_SLIDER:
+									X: PARENT_RIGHT - WIDTH - 5
+									Y: 5
+									Width: PARENT_RIGHT - 10
+									Height: 20
+									Ticks: 5
+									MinimumValue: 0
+									MaximumValue: 255
+									
 		Container@MAP_EDITOR_TAB_CONTAINER:
 			Logic: MapEditorTabsLogic
 			X: WINDOW_RIGHT - 255
@@ -427,21 +806,27 @@ Container@EDITOR_WORLD_ROOT:
 			ClickThrough: false
 			Children:
 				Button@TILES_TAB:
-					Width: 81
+					Width: 62
 					Height: 25
 					Text: Tiles
 					Font: Bold
 				Button@OVERLAYS_TAB:
-					X: 80
-					Width: 90
+					X: 62
+					Width: 62
 					Height: 25
 					Text: Overlays
 					Font: Bold
 				Button@ACTORS_TAB:
-					X: 169
-					Width: 81
+					X: 124
+					Width: 62
 					Height: 25
 					Text: Actors
+					Font: Bold
+				Button@SCULPTS_TAB:
+					X: 186
+					Width: 62
+					Height: 25
+					Text: Shapes
 					Font: Bold
 		Button@GRID_BUTTON:
 			X: WINDOW_RIGHT - 500
@@ -454,8 +839,19 @@ Container@EDITOR_WORLD_ROOT:
 			TooltipTemplate: BUTTON_TOOLTIP
 			TooltipText: Toggle the terrain grid
 			TooltipContainer: TOOLTIP_CONTAINER
+		Button@LOCK_BUTTON:
+			X: WINDOW_RIGHT - 590 - 25
+			Y: 5
+			Width: 100
+			Height: 25
+			Text: Buildable
+			Font: Bold
+			Key: f1
+			TooltipTemplate: BUTTON_TOOLTIP
+			TooltipText: Toggle unbiuldable cells
+			TooltipContainer: TOOLTIP_CONTAINER
 		Label@ZOOM_LABEL:
-			X: WINDOW_RIGHT - 580 - 55
+			X: WINDOW_RIGHT - 580 - 55 - 100 - 20
 			Y: 5
 			Width: 50
 			Height: 25
@@ -464,7 +860,7 @@ Container@EDITOR_WORLD_ROOT:
 			Font: Bold
 			Contrast: true
 		DropDownButton@ZOOM_BUTTON:
-			X: WINDOW_RIGHT - 580
+			X: WINDOW_RIGHT - 680 - 20
 			Y: 5
 			Width: 70
 			Height: 25
@@ -516,3 +912,4 @@ ScrollPanel@ACTOR_CATEGORY_FILTER_PANEL:
 			Width: PARENT_RIGHT - 29
 			Height: 22
 			Visible: false
+
