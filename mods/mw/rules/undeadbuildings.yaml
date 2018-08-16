@@ -144,8 +144,6 @@ ZIGGURAT1:
 		Palette: player
 		IsPlayerPalette: True
 	WithMakeAnimation:
-	ShakeOnCreate:
-		Time: 120
 	WithSpriteBody:	 
 	Selectable:
 		Bounds:48,48,0,-12

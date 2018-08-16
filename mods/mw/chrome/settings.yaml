@@ -204,6 +204,23 @@ Container@SETTINGS_PANEL:
 									Y: 6
 									Width: PARENT_RIGHT - 35
 									Height: PARENT_BOTTOM - 12
+						Label@SCALE:
+							Text: Scale:
+							X: 15
+							Y: 225
+						Label@SCALEDESCRIPT:
+							Text: Change the size of infantry-sprites.
+							X: 65
+							Y: 245
+						Slider@INF_SCALE:
+							X: 65
+							Y: 215
+							Width: 145 + 70
+							Height: 24
+							Ticks: 10
+							MinimumValue: 1
+							MaximumValue: 2
+							Value: 1
 						Label@STATUS_BARS:
 							X: 310
 							Y: 255

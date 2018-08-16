@@ -1100,6 +1100,7 @@
 	Voiced:
 		VoiceSet: GenericVoice
 	RenderSprites:
+		OptionsScale: true
 ^Cavalry:
 	Inherits: ^MedievalInfantry
 	Targetable:
@@ -1479,7 +1480,6 @@
 		GenericVisibility: None
 	Mobile:
 		Speed: 56
-
 	Health:
 		HP: 2500
 	RevealsShroud:
@@ -1509,6 +1509,8 @@
 	OwnerLostAction:
 		Action: Kill
 		DeathTypes: DefaultDeath
+	RenderSprites:
+		OptionsScale: true
 ^MWWanderer:
 	Inherits: ^MWPeasant
 	Inherits@GetsPoisoned: ^GetsPoisoned
@@ -1527,7 +1529,6 @@
 		ShowOwnerRow: false
 	Mobile:
 		Speed: 56
-
 	Health:
 		HP: 7000
 	RevealsShroud:

@@ -317,7 +317,7 @@ UNDEAD6:
 	AttackFrontal:
 	RenderSprites:
 		PlayerPalette: raplayer
-		Scale: 1.5
+    OptionsScale: false
 	Armor:
 		Type: HeavyCavalry
 	Selectable:
@@ -421,7 +421,7 @@ UNDEAD7:
 	AttackFrontal:
 	RenderSprites:
 		PlayerPalette: raplayer
-		Scale: 1.5
+    OptionsScale: false
 	Armor:
 		Type: HeavyCavalry
 	Selectable:

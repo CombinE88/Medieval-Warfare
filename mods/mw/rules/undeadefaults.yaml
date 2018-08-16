@@ -107,6 +107,8 @@
 	OwnerLostAction:
 		Action: Kill
 		DeathTypes: DefaultDeath
+	RenderSprites:
+    OptionsScale: false
 ^SkeletonSpawn:
 	Inherits: ^MedievalInfantry
 	Inherits@ArcherDemo65: ^ArcherDemo65
@@ -185,6 +187,8 @@
 	OwnerLostAction:
 		Action: Kill
 		DeathTypes: DefaultDeath
+	RenderSprites:
+    OptionsScale: false
 ^Mediumpenta:
 	Inherits: ^MWBasePentagram
 	Inherits@Hitshape: ^2x2Shape
