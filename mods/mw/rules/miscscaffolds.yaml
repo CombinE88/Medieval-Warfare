@@ -367,7 +367,7 @@ CSTLWLL.scaff:
 		Description: Castlewall that blocks arrows and other projectiles\n\n\n
 		BuildPaletteOrder: 50
 		BuildDuration: 550
-		Prerequisites: anyworkshop, ~castlewall
+		Prerequisites: anyworkshop, ~global-castlewall
 		Queue: Building4.GDI, Building4.Nod
 		BuildDurationModifier: 40
 		IconPalette: raicon
@@ -426,7 +426,7 @@ CSTLGTNS.scaff:
 	Buildable:
 		Description: Operated gate that opens for allied units.\nUnarmed\n\n\n
 		BuildPaletteOrder: 70
-		Prerequisites: anyworkshop, ~castlewall
+		Prerequisites: anyworkshop, ~global-castlewall
 		Queue: Building4.GDI, Building4.Nod
 		BuildDuration: 750
 		BuildDurationModifier: 40
@@ -497,7 +497,7 @@ CSTLGTEW.scaff:
 	Buildable:
 		Description: Operated gate that opens for allied units.\nUnarmed\n\n\n
 		BuildPaletteOrder: 80
-		Prerequisites: anyworkshop, ~castlewall
+		Prerequisites: anyworkshop, ~global-castlewall
 		Queue: Building4.GDI, Building4.Nod
 		BuildDuration: 750
 		BuildDurationModifier: 40
@@ -560,7 +560,7 @@ SULGTNS.scaff:
 	Buildable:
 		Description:Operated gate that opens for allied units.\nUnarmed\n\n\n
 		BuildPaletteOrder: 80
-		Prerequisites: anyworkshop, ~castlewall
+		Prerequisites: anyworkshop, ~global-castlewall
 		Queue: Building4.SUL
 		BuildDuration: 1540
 		BuildDurationModifier: 40
@@ -579,7 +579,7 @@ SULGTEW.scaff:
 	Buildable:
 		Description:Operated gate that opens for allied units.\nUnarmed\n\n\n
 		BuildPaletteOrder: 80
-		Prerequisites: anyworkshop, ~castlewall
+		Prerequisites: anyworkshop, ~global-castlewall
 		Queue: Building4.SUL
 		BuildDuration: 1540
 		BuildDurationModifier: 40
@@ -608,7 +608,7 @@ DEDWALL.scaff:
 		Description: Bone wall that blocks arrows and other projectiles\n\n\n
 		BuildPaletteOrder: 50
 		BuildDuration: 550
-		Prerequisites: libra, ~castlewall
+		Prerequisites: libra, ~global-castlewall
 		Queue: Building4.ded
 		BuildDurationModifier: 40
 		IconPalette: raicon
@@ -689,7 +689,7 @@ DEDGATE.scaff:
 	Buildable:
 		Description:Operated gate that opens for allied units.\nUnarmed\n\n\n
 		BuildPaletteOrder: 80
-		Prerequisites: libra, ~castlewall
+		Prerequisites: libra, ~global-castlewall
 		Queue: Building4.ded
 		BuildDuration: 1540
 		BuildDurationModifier: 40
@@ -772,7 +772,7 @@ DEDGATENS.scaff:
 	Buildable:
 		Description: Operated gate that opens for allied units.\nUnarmed\n\n\n
 		BuildPaletteOrder: 80
-		Prerequisites: libra, ~castlewall
+		Prerequisites: libra, ~global-castlewall
 		Queue: Building4.ded
 		BuildDuration: 1540
 		BuildDurationModifier: 40

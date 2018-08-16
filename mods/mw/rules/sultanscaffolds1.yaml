@@ -691,7 +691,7 @@ CSTLWLLSUL.scaff:
 		Description: Castlewall that blocks arrows and other projectiles\n\n\n
 		BuildPaletteOrder: 50
 		BuildDuration: 550
-		Prerequisites: anyworkshop, ~castlewall
+		Prerequisites: anyworkshop, ~global-castlewall
 		Queue: Building4.SUL
 		IconPalette: raWall
 		BuildDurationModifier: 40

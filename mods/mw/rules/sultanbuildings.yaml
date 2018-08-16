@@ -315,6 +315,15 @@ SULGTW:
 	ExternalCondition@placeholder:  # Anti error placeholder
 		Condition: Construct
 		TotalCap: 50
+	ExternalCondition@placeholderarchersOverlay:  # Anti error placeholder
+		Condition: archersOverlay
+		TotalCap: 50
+	ExternalCondition@placeholderdjinnOverlay:  # Anti error placeholder
+		Condition: djinnOverlay
+		TotalCap: 50
+	ExternalCondition@placeholderstaticOverlay:  # Anti error placeholder
+		Condition: staticOverlay
+		TotalCap: 50
 	ConstructionProgress@Constructstatic:
 		FullCapacity: 25
 		ConstructionCondition: archersOverlay

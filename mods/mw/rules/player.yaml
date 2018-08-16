@@ -30,7 +30,7 @@ Player:
 		DisplayOrder: 6
 		Prerequisites: global-factundeploy
 	LobbyPrerequisiteCheckbox@SIEGEMODE:
-		ID: siegemode
+		ID: castlewall
 		Label: Castlesiege
 		Description: Enables castlewalls and -gates aswell as a long-range-tribuchet..
 		Enabled: False
