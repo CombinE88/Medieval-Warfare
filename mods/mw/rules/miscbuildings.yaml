@@ -922,6 +922,11 @@ ANYHQ:
 	Interactable:
 	Tooltip:
 		Name: Inventor, Armory, Castle or Palace
+CASTLEWALL:
+	AlwaysVisible:
+	Interactable:
+	Tooltip:
+		Name: Lobby Options: Siege
 ANYCASTLE:
 	AlwaysVisible:
 	Interactable:
