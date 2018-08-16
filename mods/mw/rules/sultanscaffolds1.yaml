@@ -30,21 +30,11 @@ SULNUKE.scaff:
 	WithSpriteBody:
 		RequiresCondition: inactive
 	DebugTransformOnCondition@Finsihed:
-		RequiresCondition: (18 - Construct) <= 0
+		RequiresCondition: (Construct >= 18)
 		IntoActor: SULNUKE
-		ReadyAudio:
-	ExternalCondition@buildfurther: 
-		Condition: Construct
-		TotalCap: 18
-	ExternalCondition@Deliverfurther:
-		Condition: DeliveredResources
-		TotalCap: 18
-	Targetable@buildfurther: 
-		TargetTypes: Buildable
-		RequiresCondition: DeliveredResources > Construct && (18 - Construct) > 0
-	Targetable@deliverresources: 
-		TargetTypes: Deliverable
-		RequiresCondition: 18 > DeliveredResources
+		ReadyAudio:	
+	ConstructionProgress@Construct:
+		FullCapacity: 18
 	WithIdleOverlay@base1:
 		Sequence: make1
 		RequiresCondition: Construct > 3 && Construct < 5
@@ -98,21 +88,11 @@ SULLODGE.scaff:
 	WithSpriteBody:
 		RequiresCondition: inactive
 	DebugTransformOnCondition@Finsihed:
-		RequiresCondition: (25 - Construct) <= 0
+		RequiresCondition: (Construct >= 25)
 		IntoActor: SULLODGE
-		ReadyAudio:
-	ExternalCondition@buildfurther: 
-		Condition: Construct
-		TotalCap: 25
-	ExternalCondition@Deliverfurther:
-		Condition: DeliveredResources
-		TotalCap: 25
-	Targetable@buildfurther: 
-		TargetTypes: Buildable
-		RequiresCondition: DeliveredResources > Construct && (25 - Construct) > 0
-	Targetable@deliverresources: 
-		TargetTypes: Deliverable
-		RequiresCondition: 25 > DeliveredResources
+		ReadyAudio:	
+	ConstructionProgress@Construct:
+		FullCapacity: 25
 	WithIdleOverlay@base1:
 		Sequence: make1
 		RequiresCondition: Construct >= 5 && Construct < 10
@@ -169,21 +149,11 @@ SULMILL.scaff:
 	WithSpriteBody:
 		RequiresCondition: inactive
 	DebugTransformOnCondition@Finsihed:
-		RequiresCondition: (42 - Construct) <= 0
+		RequiresCondition: (Construct >= 42)
 		IntoActor: SULMILL
-		ReadyAudio:
-	ExternalCondition@buildfurther: 
-		Condition: Construct
-		TotalCap: 42
-	ExternalCondition@Deliverfurther:
-		Condition: DeliveredResources
-		TotalCap: 42
-	Targetable@buildfurther: 
-		TargetTypes: Buildable
-		RequiresCondition: DeliveredResources > Construct && (42 - Construct) > 0
-	Targetable@deliverresources: 
-		TargetTypes: Deliverable
-		RequiresCondition: 42 > DeliveredResources
+		ReadyAudio:	
+	ConstructionProgress@Construct:
+		FullCapacity: 42
 	WithIdleOverlay@base1:
 		Sequence: make1
 		RequiresCondition: Construct > 5 && Construct < 10
@@ -231,21 +201,11 @@ SULNUK2.scaff:
 	WithSpriteBody:
 		RequiresCondition: inactive
 	DebugTransformOnCondition@Finsihed:
-		RequiresCondition: (30 - Construct) <= 0
+		RequiresCondition: (Construct >= 30)
 		IntoActor: SULNUK2
-		ReadyAudio:
-	ExternalCondition@buildfurther: 
-		Condition: Construct
-		TotalCap: 30
-	ExternalCondition@Deliverfurther:
-		Condition: DeliveredResources
-		TotalCap: 30
-	Targetable@buildfurther: 
-		TargetTypes: Buildable
-		RequiresCondition: DeliveredResources > Construct && (30 - Construct) > 0
-	Targetable@deliverresources: 
-		TargetTypes: Deliverable
-		RequiresCondition: 30 > DeliveredResources
+		ReadyAudio:	
+	ConstructionProgress@Construct:
+		FullCapacity: 30
 	WithIdleOverlay@base1:
 		Sequence: make1
 		RequiresCondition: Construct > 3 && Construct < 6
@@ -296,21 +256,11 @@ SULBARR.scaff:
 	WithSpriteBody:
 		RequiresCondition: inactive
 	DebugTransformOnCondition@Finsihed:
-		RequiresCondition: (30 - Construct) <= 0
+		RequiresCondition: (Construct >= 30)
 		IntoActor: SULBARR
-		ReadyAudio:
-	ExternalCondition@buildfurther: 
-		Condition: Construct
-		TotalCap: 30
-	ExternalCondition@Deliverfurther:
-		Condition: DeliveredResources
-		TotalCap: 30
-	Targetable@buildfurther: 
-		TargetTypes: Buildable
-		RequiresCondition: DeliveredResources > Construct && (30 - Construct) > 0
-	Targetable@deliverresources: 
-		TargetTypes: Deliverable
-		RequiresCondition: 30 > DeliveredResources
+		ReadyAudio:	
+	ConstructionProgress@Construct:
+		FullCapacity: 30
 	WithIdleOverlay@base1:
 		Sequence: make1
 		RequiresCondition: Construct > 6 && Construct < 10
@@ -362,21 +312,11 @@ SULMYSTIC.scaff:
 	WithSpriteBody:
 		RequiresCondition: inactive
 	DebugTransformOnCondition@Finsihed:
-		RequiresCondition: (45 - Construct) <= 0
+		RequiresCondition: (Construct >= 45)
 		IntoActor: SULMYSTIC
-		ReadyAudio:
-	ExternalCondition@buildfurther: 
-		Condition: Construct
-		TotalCap: 45
-	ExternalCondition@Deliverfurther:
-		Condition: DeliveredResources
-		TotalCap: 45
-	Targetable@buildfurther: 
-		TargetTypes: Buildable
-		RequiresCondition: DeliveredResources > Construct && (45 - Construct) > 0
-	Targetable@deliverresources: 
-		TargetTypes: Deliverable
-		RequiresCondition: 45 > DeliveredResources
+		ReadyAudio:	
+	ConstructionProgress@Construct:
+		FullCapacity: 45
 	WithIdleOverlay@base1:
 		Sequence: make1
 		RequiresCondition: Construct > 5 && Construct < 15
@@ -431,21 +371,11 @@ SULCASTLE.scaff:
 	WithSpriteBody:
 		RequiresCondition: inactive
 	DebugTransformOnCondition@Finsihed:
-		RequiresCondition: (36 - Construct) <= 0
+		RequiresCondition: (Construct >= 36)
 		IntoActor: SULCASTLE
-		ReadyAudio:
-	ExternalCondition@buildfurther: 
-		Condition: Construct
-		TotalCap: 36
-	ExternalCondition@Deliverfurther:
-		Condition: DeliveredResources
-		TotalCap: 36
-	Targetable@buildfurther: 
-		TargetTypes: Buildable
-		RequiresCondition: DeliveredResources > Construct && (36 - Construct) > 0
-	Targetable@deliverresources: 
-		TargetTypes: Deliverable
-		RequiresCondition: 36 > DeliveredResources
+		ReadyAudio:	
+	ConstructionProgress@Construct:
+		FullCapacity: 36
 	WithIdleOverlay@base1:
 		Sequence: make1
 		RequiresCondition: Construct > 5 && Construct < 12
@@ -496,21 +426,11 @@ SULFIX.scaff:
 	WithSpriteBody:
 		RequiresCondition: inactive
 	DebugTransformOnCondition@Finsihed:
-		RequiresCondition: (36 - Construct) <= 0
+		RequiresCondition: (Construct >= 36)
 		IntoActor: SULFIX
-		ReadyAudio:
-	ExternalCondition@buildfurther: 
-		Condition: Construct
-		TotalCap: 36
-	ExternalCondition@Deliverfurther:
-		Condition: DeliveredResources
-		TotalCap: 36
-	Targetable@buildfurther: 
-		TargetTypes: Buildable
-		RequiresCondition: DeliveredResources > Construct && (36 - Construct) > 0
-	Targetable@deliverresources: 
-		TargetTypes: Deliverable
-		RequiresCondition: 36 > DeliveredResources
+		ReadyAudio:	
+	ConstructionProgress@Construct:
+		FullCapacity: 36
 	WithIdleOverlay@base1:
 		Sequence: make1
 		RequiresCondition: Construct > 7 && Construct < 15
@@ -536,9 +456,9 @@ SULGTW.scaff:
 		PlayerPalette: sultanplayer
 		Image: sulgtw
 	CustomSellValue:
-		Value: 275
+		Value: 550
 	Valued:
-		Cost: 550
+		Cost: 1100
 	Tooltip:
 		Name: Construction Site (Mosaic Guard Tower)
 	Health:
@@ -547,7 +467,7 @@ SULGTW.scaff:
 		Range: 4c0
 	Selectable:
 		Bounds: 24,48,0,-10
-	SelectionDecorations
+	SelectionDecorations:
 	WithSpriteBody:
 		RequiresCondition: inactive
 	Buildable:
@@ -556,23 +476,13 @@ SULGTW.scaff:
 		Queue: MMilitary.SUL
 		BuildDurationModifier: 40
 		IconPalette: raicon
-		BuildDuration: 450
+		BuildDuration: 900
 	DebugTransformOnCondition@Finsihed:
-		RequiresCondition: (9 - Construct) <= 0
+		RequiresCondition: (Construct >= 9)
 		IntoActor: SULGTW
-		ReadyAudio:
-	ExternalCondition@buildfurther: 
-		Condition: Construct
-		TotalCap: 9
-	ExternalCondition@Deliverfurther:
-		Condition: DeliveredResources
-		TotalCap: 9
-	Targetable@buildfurther: 
-		TargetTypes: Buildable
-		RequiresCondition: DeliveredResources > Construct && (9 - Construct) > 0
-	Targetable@deliverresources: 
-		TargetTypes: Deliverable
-		RequiresCondition: 9 > DeliveredResources
+		ReadyAudio:	
+	ConstructionProgress@Construct:
+		FullCapacity: 9
 	WithIdleOverlay@base1:
 		Sequence: make1
 		RequiresCondition: Construct > 2 && Construct < 3
@@ -618,21 +528,11 @@ SULARRAY.scaff:
 	WithSpriteBody:
 		RequiresCondition: inactive
 	DebugTransformOnCondition@Finsihed:
-		RequiresCondition: (52 - Construct) <= 0
+		RequiresCondition: (Construct >= 52)
 		IntoActor: SULARRAY
-		ReadyAudio:
-	ExternalCondition@buildfurther: 
-		Condition: Construct
-		TotalCap: 52
-	ExternalCondition@Deliverfurther:
-		Condition: DeliveredResources
-		TotalCap: 52
-	Targetable@buildfurther: 
-		TargetTypes: Buildable
-		RequiresCondition: DeliveredResources > Construct && (52 - Construct) > 0
-	Targetable@deliverresources: 
-		TargetTypes: Deliverable
-		RequiresCondition: 52 > DeliveredResources
+		ReadyAudio:	
+	ConstructionProgress@Construct:
+		FullCapacity: 52
 	WithIdleOverlay@base1:
 		Sequence: make1
 		RequiresCondition: Construct > 5 && Construct < 15
@@ -684,21 +584,11 @@ SULCNSHMBR.scaff:
 	WithSpriteBody:
 		RequiresCondition: inactive
 	DebugTransformOnCondition@Finsihed:
-		RequiresCondition: (30 - Construct) <= 0
+		RequiresCondition: (Construct >= 30)
 		IntoActor: SULCNSHMBR
-		ReadyAudio:
-	ExternalCondition@buildfurther: 
-		Condition: Construct
-		TotalCap: 30
-	ExternalCondition@Deliverfurther:
-		Condition: DeliveredResources
-		TotalCap: 30
-	Targetable@buildfurther: 
-		TargetTypes: Buildable
-		RequiresCondition: DeliveredResources > Construct && (30 - Construct) > 0
-	Targetable@deliverresources: 
-		TargetTypes: Deliverable
-		RequiresCondition: 30 > DeliveredResources
+		ReadyAudio:	
+	ConstructionProgress@Construct:
+		FullCapacity: 30
 	WithIdleOverlay@base1:
 		Sequence: make1
 		RequiresCondition: Construct > 5 && Construct < 9
@@ -760,21 +650,11 @@ SULREF.scaff:
 	WithSpriteBody:
 		RequiresCondition: inactive
 	DebugTransformOnCondition@Finsihed:
-		RequiresCondition: (45 - Construct) <= 0
+		RequiresCondition: (Construct >= 45)
 		IntoActor: SULREF
-		ReadyAudio:
-	ExternalCondition@buildfurther: 
-		Condition: Construct
-		TotalCap: 45
-	ExternalCondition@Deliverfurther:
-		Condition: DeliveredResources
-		TotalCap: 45
-	Targetable@buildfurther: 
-		TargetTypes: Buildable
-		RequiresCondition: DeliveredResources > Construct && (45 - Construct) > 0
-	Targetable@deliverresources: 
-		TargetTypes: Deliverable
-		RequiresCondition: 45 > DeliveredResources
+		ReadyAudio:	
+	ConstructionProgress@Construct:
+		FullCapacity: 45
 	WithIdleOverlay@base1:
 		Sequence: make1
 		RequiresCondition: Construct > 5 && Construct < 12
@@ -832,21 +712,11 @@ CSTLWLLSUL.scaff:
 	WithSpriteBody:
 		RequiresCondition: DoNotRender
 	DebugTransformOnCondition@Finsihed:
-		RequiresCondition: (35 - Construct) <= 0
+		RequiresCondition: (Construct >= 35)
 		IntoActor: cstlwllsul
 		ReadyAudio:
-	ExternalCondition@buildfurther: 
-		Condition: Construct
-		TotalCap: 35
-	ExternalCondition@Deliverfurther:
-		Condition: DeliveredResources
-		TotalCap: 35
-	Targetable@buildfurther: 
-		TargetTypes: Buildable
-		RequiresCondition: DeliveredResources > Construct && (35 - Construct) > 0
-	Targetable@deliverresources: 
-		TargetTypes: Deliverable
-		RequiresCondition: 35 > DeliveredResources
+	ConstructionProgress@Construct:
+		FullCapacity: 35
 	ExternalCondition@DoNotRender:
 		Condition: DoNotRender
 	LineBuild:

@@ -864,6 +864,7 @@
             <e p="RepairsBridges.cs" t="Include" />
             <e p="Replaceable.cs" t="Include" />
             <e p="Replacement.cs" t="Include" />
+            <e p="ResourcePurifier.cs" t="Include" />
             <e p="RevealOnDeath.cs" t="Include" />
             <e p="RevealOnFire.cs" t="Include" />
             <e p="RevealsShroud.cs" t="Include" />
@@ -1265,10 +1266,7 @@
           <e p="AmmoPoolConditions.cs" t="Include" />
           <e p="CombinEGrantRandomCondition.cs" t="Include" />
           <e p="Construction" t="Include">
-            <e p="AddPrioTargeter.cs" t="Include" />
-            <e p="ConstructionPriority.cs" t="Include" />
             <e p="ConstructionProgress.cs" t="Include" />
-            <e p="RemPrioTargeter.cs" t="Include" />
           </e>
           <e p="CreateActorOnDeath.cs" t="Include" />
           <e p="CritterSpawner.cs" t="Include" />
@@ -1312,7 +1310,6 @@
             <e p="UndeadGiantSpawnerChargeBar.cs" t="Include" />
             <e p="WithInfantryBodyDisguisedUpdate.cs" t="Include" />
           </e>
-          <e p="ResourcePurifier.cs" t="Include" />
           <e p="ShakeOnCreate.cs" t="Include" />
           <e p="TransformOnCondition.cs" t="Include" />
           <e p="Undead Faction" t="Include">
@@ -1359,7 +1356,6 @@
         <e p="Widgets" t="Include">
           <e p="Logic" t="Include">
             <e p="Ingame" t="Include">
-              <e p="ConstructionPriorityLogic.cs" t="Include" />
               <e p="IngameFullPopulationCounterLogic.cs" t="Include" />
               <e p="IngameMaxPopulationCounterLogic.cs" t="Include" />
               <e p="IngamePeasantSpawnBarLogic.cs" t="Include" />

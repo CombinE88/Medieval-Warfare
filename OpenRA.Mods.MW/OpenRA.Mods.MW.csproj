@@ -80,10 +80,7 @@
     <Compile Include="Traits\Undead Faction\UndeadGiantSpawner.cs" />
     <Compile Include="Traits\Undead Faction\UndeadCryptProduction.cs" />
     <Compile Include="Traits\WithPermanentExplosion.cs" />
-    <Compile Include="Traits\Construction\AddPrioTargeter.cs" />
-    <Compile Include="Traits\Construction\ConstructionPriority.cs" />
     <Compile Include="Traits\Construction\ConstructionProgress.cs" />
-    <Compile Include="Traits\Construction\RemPrioTargeter.cs" />
     <Compile Include="Traits\CreateActorOnDeath.cs" />
     <Compile Include="Traits\CritterSpawner.cs" />
     <Compile Include="Traits\DirectSpawnModifier.cs" />
@@ -109,7 +106,6 @@
     <Compile Include="Traits\ReloadAmmoWhenEnabled.cs" />
     <Compile Include="Traits\Render\NewWithDisguisingInfantryBodyInfo.cs" />
     <Compile Include="Traits\Render\WithInfantryBodyDisguisedUpdate.cs" />
-    <Compile Include="Traits\ResourcePurifier.cs" />
     <Compile Include="Traits\ShakeOnCreate.cs" />
     <Compile Include="Traits\DebugTransformOnCondition.cs" />
     <Compile Include="Traits\TransformOnCondition.cs" />
@@ -142,7 +138,6 @@
     <Compile Include="Warheads\SpawnActorWarhead.cs" />
     <Compile Include="Warheads\WarheadAS.cs" />
     <Compile Include="Warheads\PromotionWarhead.cs" />
-    <Compile Include="Widgets\Logic\Ingame\ConstructionPriorityLogic.cs" />
     <Compile Include="Widgets\Logic\Ingame\IngameFullPopulationCounterLogic.cs" />
     <Compile Include="Widgets\Logic\Ingame\IngameMaxPopulationCounterLogic.cs" />
     <Compile Include="Widgets\Logic\Ingame\IngamePeasantSpawnBarLogic.cs" />

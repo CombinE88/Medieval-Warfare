@@ -33,21 +33,11 @@ LODGE.scaff:
 	WithSpriteBody:
 		RequiresCondition: inactive
 	DebugTransformOnCondition@Finsihed:
-		RequiresCondition: (21 - Construct) <= 0
+		RequiresCondition: (Construct >= 21)
 		IntoActor: LODGE
 		ReadyAudio:
-	ExternalCondition@buildfurther: 
-		Condition: Construct
-		TotalCap: 21
-	ExternalCondition@Deliverfurther:
-		Condition: DeliveredResources
-		TotalCap: 21
-	Targetable@buildfurther: 
-		TargetTypes: Buildable
-		RequiresCondition: DeliveredResources > Construct && (21 - Construct) > 0
-	Targetable@deliverresources: 
-		TargetTypes: Deliverable
-		RequiresCondition:21 > DeliveredResources
+	ConstructionProgress@Construct:
+		FullCapacity: 21
 	WithIdleOverlay@base1:
 		Sequence: make1
 		RequiresCondition: Construct >= 1 && Construct < 6
@@ -107,21 +97,11 @@ PROCNEW.scaff:
 	WithSpriteBody:
 		RequiresCondition: inactive
 	DebugTransformOnCondition@Finsihed:
-		RequiresCondition: (45 - Construct) <= 0
+		RequiresCondition: (Construct >= 45)
 		IntoActor: PROCNEW
 		ReadyAudio:
-	ExternalCondition@buildfurther: 
-		Condition: Construct
-		TotalCap: 45
-	ExternalCondition@Deliverfurther:
-		Condition: DeliveredResources
-		TotalCap: 45
-	Targetable@buildfurther: 
-		TargetTypes: Buildable
-		RequiresCondition: DeliveredResources > Construct && (45 - Construct) > 0
-	Targetable@deliverresources: 
-		TargetTypes: Deliverable
-		RequiresCondition: 45 > DeliveredResources
+	ConstructionProgress@Construct:
+		FullCapacity: 45
 	WithIdleOverlay@base1:
 		Sequence: make1
 		RequiresCondition: Construct > 5 && Construct < 15
@@ -176,21 +156,11 @@ SILONEW.scaff:
 	WithSpriteBody:
 		RequiresCondition: inactive
 	DebugTransformOnCondition@Finsihed:
-		RequiresCondition: (9 - Construct) <= 0
+		RequiresCondition: (Construct >= 9)
 		IntoActor: SILONEW
 		ReadyAudio:
-	ExternalCondition@buildfurther: 
-		Condition: Construct
-		TotalCap: 9
-	ExternalCondition@Deliverfurther:
-		Condition: DeliveredResources
-		TotalCap: 9
-	Targetable@buildfurther: 
-		TargetTypes: Buildable
-		RequiresCondition: DeliveredResources > Construct && (9 - Construct) > 0
-	Targetable@deliverresources: 
-		TargetTypes: Deliverable
-		RequiresCondition: 9 > DeliveredResources
+	ConstructionProgress@Construct:
+		FullCapacity: 9
 	WithIdleOverlay@base1:
 		Sequence: make1
 		RequiresCondition: Construct > 1 && Construct < 3
@@ -239,21 +209,11 @@ SILOTWO.scaff:
 	WithSpriteBody:
 		RequiresCondition: inactive
 	DebugTransformOnCondition@Finsihed:
-		RequiresCondition: (9 - Construct) <= 0
+		RequiresCondition: (Construct >= 9)
 		IntoActor: SILOTWO
 		ReadyAudio:
-	ExternalCondition@buildfurther: 
-		Condition: Construct
-		TotalCap: 9
-	ExternalCondition@Deliverfurther:
-		Condition: DeliveredResources
-		TotalCap: 9
-	Targetable@buildfurther: 
-		TargetTypes: Buildable
-		RequiresCondition: DeliveredResources > Construct && (9 - Construct) > 0
-	Targetable@deliverresources: 
-		TargetTypes: Deliverable
-		RequiresCondition: 9 > DeliveredResources
+	ConstructionProgress@Construct:
+		FullCapacity: 9
 	WithIdleOverlay@base1:
 		Sequence: make1
 		RequiresCondition: Construct > 2 && Construct < 4
@@ -301,25 +261,15 @@ GTWNEW.scaff:
 		HasMinibib: Yes
 	Selectable:
 		Bounds: 24,48,0,-10
-	SelectionDecorations
+	SelectionDecorations:
 	WithSpriteBody:
 		RequiresCondition: inactive
 	DebugTransformOnCondition@Finsihed:
-		RequiresCondition: (8 - Construct) <= 0
+		RequiresCondition: (Construct >= 8)
 		IntoActor: GTWNEW
 		ReadyAudio:
-	ExternalCondition@buildfurther: 
-		Condition: Construct
-		TotalCap: 8
-	ExternalCondition@Deliverfurther:
-		Condition: DeliveredResources
-		TotalCap: 8
-	Targetable@buildfurther: 
-		TargetTypes: Buildable
-		RequiresCondition: DeliveredResources > Construct && (8 - Construct) > 0
-	Targetable@deliverresources: 
-		TargetTypes: Deliverable
-		RequiresCondition: 8 > DeliveredResources
+	ConstructionProgress@Construct:
+		FullCapacity: 8
 	WithIdleOverlay@base1:
 		Sequence: make1
 		RequiresCondition: Construct > 1 && Construct < 3
@@ -374,21 +324,11 @@ GUNNEW.scaff:
 	WithSpriteBody:
 		RequiresCondition: inactive
 	DebugTransformOnCondition@Finsihed:
-		RequiresCondition: (8 - Construct) <= 0
+		RequiresCondition: (Construct >= 8)
 		IntoActor: GUNNEW
 		ReadyAudio:
-	ExternalCondition@buildfurther: 
-		Condition: Construct
-		TotalCap: 8
-	ExternalCondition@Deliverfurther:
-		Condition: DeliveredResources
-		TotalCap: 8
-	Targetable@buildfurther: 
-		TargetTypes: Buildable
-		RequiresCondition: DeliveredResources > Construct && (8 - Construct) > 0
-	Targetable@deliverresources: 
-		TargetTypes: Deliverable
-		RequiresCondition: 8 > DeliveredResources
+	ConstructionProgress@Construct:
+		FullCapacity: 8
 	WithIdleOverlay@base1:
 		Sequence: make1
 		RequiresCondition: Construct > 2 && Construct < 3
@@ -447,21 +387,11 @@ CSTLWLL.scaff:
 	WithSpriteBody:
 		RequiresCondition: DoNotRender
 	DebugTransformOnCondition@Finsihed:
-		RequiresCondition: (35 - Construct) <= 0
+		RequiresCondition: (Construct >= 35)
 		IntoActor: CSTLWLL
-		ReadyAudio:
-	ExternalCondition@buildfurther: 
-		Condition: Construct
-		TotalCap: 35
-	ExternalCondition@Deliverfurther:
-		Condition: DeliveredResources
-		TotalCap: 35
-	Targetable@buildfurther: 
-		TargetTypes: Buildable
-		RequiresCondition: DeliveredResources > Construct && (35 - Construct) > 0
-	Targetable@deliverresources: 
-		TargetTypes: Deliverable
-		RequiresCondition: 35 > DeliveredResources
+		ReadyAudio:	
+	ConstructionProgress@Construct:
+		FullCapacity: 35
 	ExternalCondition@DoNotRender:
 		Condition: DoNotRender
 	LineBuild:
@@ -515,21 +445,11 @@ CSTLGTNS.scaff:
 	WithSpriteBody:
 		RequiresCondition: DoNotRender
 	DebugTransformOnCondition@Finsihed:
-		RequiresCondition: (75 - Construct) <= 0
+		RequiresCondition: (Construct >= 75)
 		IntoActor: cstlgtns
 		ReadyAudio:
-	ExternalCondition@buildfurther: 
-		Condition: Construct
-		TotalCap: 75
-	ExternalCondition@Deliverfurther:
-		Condition: DeliveredResources
-		TotalCap: 75
-	Targetable@buildfurther: 
-		TargetTypes: Buildable
-		RequiresCondition: DeliveredResources > Construct && (75 - Construct) > 0
-	Targetable@deliverresources: 
-		TargetTypes: Deliverable
-		RequiresCondition: 75 > DeliveredResources
+	ConstructionProgress@Construct:
+		FullCapacity: 75
 	WithIdleOverlay@base1:
 		Sequence: make1
 		RequiresCondition: Construct > 10 && Construct < 30
@@ -597,21 +517,11 @@ CSTLGTEW.scaff:
 	WithSpriteBody:
 		RequiresCondition: DoNotRender
 	DebugTransformOnCondition@Finsihed:
-		RequiresCondition: (75 - Construct) <= 0
+		RequiresCondition: (Construct >= 75)
 		IntoActor: cstlgtew
 		ReadyAudio:
-	ExternalCondition@buildfurther: 
-		Condition: Construct
-		TotalCap: 75
-	ExternalCondition@Deliverfurther:
-		Condition: DeliveredResources
-		TotalCap: 75
-	Targetable@buildfurther: 
-		TargetTypes: Buildable
-		RequiresCondition: DeliveredResources > Construct && (75 - Construct) > 0
-	Targetable@deliverresources: 
-		TargetTypes: Deliverable
-		RequiresCondition: 75 > DeliveredResources
+	ConstructionProgress@Construct:
+		FullCapacity: 75
 	WithIdleOverlay@base1:
 		Sequence: make1
 		RequiresCondition: Construct > 10 && Construct < 30
@@ -656,9 +566,11 @@ SULGTNS.scaff:
 		BuildDurationModifier: 40
 		IconPalette: raicon
 	DebugTransformOnCondition@Finsihed:
-		RequiresCondition: (75 - Construct) <= 0
+		RequiresCondition: (Construct >= 75)
 		IntoActor: sulgtns
 		ReadyAudio:
+	ConstructionProgress@Construct:
+		FullCapacity: 75
 SULGTEW.scaff:
 	Inherits: CSTLGTEW.scaff
 	RenderSprites:
@@ -673,9 +585,11 @@ SULGTEW.scaff:
 		BuildDurationModifier: 40
 		IconPalette: raicon
 	DebugTransformOnCondition@Finsihed:
-		RequiresCondition: (75 - Construct) <= 0
+		RequiresCondition: (Construct >= 75)
 		IntoActor: sulgtew
 		ReadyAudio:
+	ConstructionProgress@Construct:
+		FullCapacity: 75
 DEDWALL.scaff:
 	Inherits: ^ConstructionSite
 	Inherits@Hitshape: ^1x1Shape
@@ -714,21 +628,11 @@ DEDWALL.scaff:
 	WithSpriteBody:
 		RequiresCondition: DoNotRender
 	DebugTransformOnCondition@Finsihed:
-		RequiresCondition: (35 - Construct) <= 0
+		RequiresCondition: (Construct >= 35)
 		IntoActor: DEDWALL
-		ReadyAudio:
-	ExternalCondition@buildfurther: 
-		Condition: Construct
-		TotalCap: 35
-	ExternalCondition@Deliverfurther:
-		Condition: DeliveredResources
-		TotalCap: 35
-	Targetable@buildfurther: 
-		TargetTypes: Buildable
-		RequiresCondition: DeliveredResources > Construct && (35 - Construct) > 0
-	Targetable@deliverresources: 
-		TargetTypes: Deliverable
-		RequiresCondition: 35 > DeliveredResources
+		ReadyAudio:	
+	ConstructionProgress@Construct:
+		FullCapacity: 35
 	ExternalCondition@DoNotRender:
 		Condition: DoNotRender
 	LineBuild:
@@ -745,7 +649,7 @@ DEDWALL.scaff:
 	ScriptTriggers:
 	-GivesBuildableArea:
 	-ExternalCondition@PLACEHOLDER:
-	-RevealsShroud:
+	-RevealsShroud:	
 	WithIdleOverlay@base1:
 		Sequence: make1
 		RequiresCondition: Construct < 4
@@ -791,9 +695,11 @@ DEDGATE.scaff:
 		BuildDurationModifier: 40
 		IconPalette: raicon
 	DebugTransformOnCondition@Finsihed:
-		RequiresCondition: (75 - Construct) <= 0
+		RequiresCondition: (Construct >= 75)
 		IntoActor: dedgate
 		ReadyAudio:
+	ConstructionProgress@Construct:
+		FullCapacity: 75
 	RequiresBuildableArea:
 		AreaTypes: undeadbuilding
 		Adjacent: 8
@@ -818,18 +724,6 @@ DEDGATE.scaff:
 	SelectionDecorations:
 	WithSpriteBody:
 		RequiresCondition: DoNotRender
-	ExternalCondition@buildfurther: 
-		Condition: Construct
-		TotalCap: 75
-	ExternalCondition@Deliverfurther:
-		Condition: DeliveredResources
-		TotalCap: 75
-	Targetable@buildfurther: 
-		TargetTypes: Buildable
-		RequiresCondition: DeliveredResources > Construct && (75 - Construct) > 0
-	Targetable@deliverresources: 
-		TargetTypes: Deliverable
-		RequiresCondition: 75 > DeliveredResources
 	WithIdleOverlay@base1:
 		Sequence: make1
 		RequiresCondition: Construct < 5
@@ -876,7 +770,7 @@ DEDGATENS.scaff:
 		Image: dedgatens
 		PlayerPalette: raplayer
 	Buildable:
-		Description:Operated gate that opens for allied units.\nUnarmed\n\n\n
+		Description: Operated gate that opens for allied units.\nUnarmed\n\n\n
 		BuildPaletteOrder: 80
 		Prerequisites: libra, ~castlewall
 		Queue: Building4.ded
@@ -884,9 +778,11 @@ DEDGATENS.scaff:
 		BuildDurationModifier: 40
 		IconPalette: raicon
 	DebugTransformOnCondition@Finsihed:
-		RequiresCondition: (75 - Construct) <= 0
+		RequiresCondition: (Construct >= 75)
 		IntoActor: dedgatens
 		ReadyAudio:
+	ConstructionProgress@Construct:
+		FullCapacity: 75
 	RequiresBuildableArea:
 		AreaTypes: undeadbuilding
 		Adjacent: 8
@@ -911,18 +807,6 @@ DEDGATENS.scaff:
 	SelectionDecorations:
 	WithSpriteBody:
 		RequiresCondition: DoNotRender
-	ExternalCondition@buildfurther: 
-		Condition: Construct
-		TotalCap: 75
-	ExternalCondition@Deliverfurther:
-		Condition: DeliveredResources
-		TotalCap: 75
-	Targetable@buildfurther: 
-		TargetTypes: Buildable
-		RequiresCondition: DeliveredResources > Construct && (75 - Construct) > 0
-	Targetable@deliverresources: 
-		TargetTypes: Deliverable
-		RequiresCondition: 75 > DeliveredResources
 	WithIdleOverlay@base1:
 		Sequence: make1
 		RequiresCondition: Construct < 5

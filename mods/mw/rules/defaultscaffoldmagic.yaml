@@ -4,6 +4,9 @@
 	AddConditionEvery@Construct:
 		AddCondition: Construct
 		Delay: 25
+	ExternalCondition@ConstructPlaceholder:
+		Condition: Construct
+		TotalCap: 100
 	Sellable:
 	Huntable:
 	SelectionDecorations:
@@ -13,21 +16,9 @@
 	Targetable:
 		TargetTypes: Ground, C4, Structure
 	#the number indicates how long it takes to construct in this example its 200
-	ExternalCondition@buildfurther: 
-		Condition: Construct
-		TotalCap: 200
-	ExternalCondition@Deliverfurther:
-		Condition: DeliveredResources
-		TotalCap: 200
 	ExternalCondition@PLACEHOLDER:
 		Condition: inactive
 		TotalCap: 1
-	Targetable@buildfurther: 
-		TargetTypes: Buildable
-		RequiresCondition: DeliveredResources > Construct && (200 - Construct) > 0
-	Targetable@deliverresources: 
-		TargetTypes: Deliverable
-		RequiresCondition: 200 > DeliveredResources
 	Armor:
 		Type: Wood
 	Building:
@@ -89,6 +80,7 @@
 		ConstructionCondition: Construct
 		YOffset: 0
 		XOffset: 5
+		FullCapacity: 25
 	HitShape:
 	EditorTilesetFilter:
 		Categories: Construction Sites

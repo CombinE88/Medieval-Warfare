@@ -1,4 +1,5 @@
 ﻿#region Copyright & License Information
+
 /*
  * Copyright 2007-2017 The OpenRA Developers (see AUTHORS)
  * This file is part of OpenRA, which is free software. It is made
@@ -7,11 +8,14 @@
  * the License, or (at your option) any later version. For more
  * information, see COPYING.
  */
+
 #endregion
 
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using OpenRA.Graphics;
 using OpenRA.Mods.Common.Graphics;
 using OpenRA.Mods.Common.Traits;
@@ -23,12 +27,10 @@ namespace OpenRA.Mods.MW.Traits.Render
     [Desc("Displays a text overlay relative to the selection box.")]
     public class ConstructionProgressInfo : ConditionalTraitInfo
     {
-        [Desc("Image used for this Prioritysettings. Defaults to the actor's type.")]
-
-        [PaletteReference]
+        [Desc("Image used for this Prioritysettings. Defaults to the actor's type.")] [PaletteReference]
         public readonly string Palette = "ra";
 
-        public readonly int Resourceprocess = 30;
+        public readonly int FullCapacity = 25;
 
         public readonly string Font = "BigBold";
 
@@ -52,7 +54,10 @@ namespace OpenRA.Mods.MW.Traits.Render
 
         public readonly string PriorityCondition = null;
 
-        public override object Create(ActorInitializer init) { return new ConstructionProgress(init.Self, this); }
+        public override object Create(ActorInitializer init)
+        {
+            return new ConstructionProgress(init.Self, this);
+        }
 
         public override void RulesetLoaded(Ruleset rules, ActorInfo ai)
         {
@@ -63,20 +68,17 @@ namespace OpenRA.Mods.MW.Traits.Render
         }
     }
 
-    public class ConstructionProgress : ConditionalTrait<ConstructionProgressInfo>, IRender, IRenderAboveShroudWhenSelected, IObservesVariables
+    public class ConstructionProgress : ConditionalTrait<ConstructionProgressInfo>, IRender, IRenderAboveShroudWhenSelected, ITick
     {
         readonly SpriteFont font;
         readonly IDecorationBounds[] decorationBounds;
         Color color;
-        private int priority;
+        private int maxdureation;
+        private int timer = 0;
+        private int priority = 0;
 
         protected readonly Animation LeftAnim;
         protected readonly Animation RightAnim;
-
-        public int Progress;
-        public int Resources;
-
-        public WPos Location;
 
         public ConstructionProgress(Actor self, ConstructionProgressInfo info)
             : base(info)
@@ -86,40 +88,34 @@ namespace OpenRA.Mods.MW.Traits.Render
             decorationBounds = self.TraitsImplementing<IDecorationBounds>().ToArray();
         }
 
-        public new virtual IEnumerable<VariableObserver> GetVariableObservers()
+        protected override void Created(Actor self)
         {
-            if (Info.ConstructionCondition != null)
-                yield return new VariableObserver(ConditionsChanged, Info.ConstructionCondition.Variables);
+            if (self.Info.HasTraitInfo<AddConditionEveryInfo>())
+            {
+                var conadds = 0;
+                var traits = self.TraitsImplementing<AddConditionEvery>().Where(c => c.Info.AddCondition == Info.ConstructionCondition.Expression);
+                foreach (var trait in traits)
+                {
+                    conadds += trait.Info.Delay;
+                }
+
+                if (traits.Count() != 0 && conadds != 0)
+                    conadds = (int)Math.Round((double)conadds / traits.Count());
+
+                maxdureation = Info.FullCapacity * conadds;
+            }
         }
 
-        void ConditionsChanged(Actor self, IReadOnlyDictionary<string, int> conditions)
+        public virtual bool ShouldRender(Actor self)
         {
-            if (!conditions.ContainsKey(Info.ConstructionCondition.Expression))
-                return;
-
-            var priorityvar = 0;
-            var conmax = 0;
-            var cnontraits = self.TraitsImplementing<ExternalCondition>();
-
-            foreach (var n in cnontraits)
-            {
-                if (n.Info.Condition == Info.ConstructionCondition.Expression)
-                    conmax += n.Info.TotalCap;
-            }
-
-            foreach (var n in conditions)
-            {
-                if (n.Key == Info.ConstructionCondition.Expression)
-                    priorityvar += n.Value;
-            }
-
-            priority = (priorityvar * 100) / conmax;
+            return true;
         }
-
-        public virtual bool ShouldRender(Actor self) { return true; }
 
         IEnumerable<IRenderable> IRender.Render(Actor self, WorldRenderer wr)
         {
+            if (IsTraitDisabled)
+                return SpriteRenderable.None;
+
             if (!Info.RequiresSelection)
                 return RenderInner(self, wr);
 
@@ -128,13 +124,19 @@ namespace OpenRA.Mods.MW.Traits.Render
 
         IEnumerable<IRenderable> IRenderAboveShroudWhenSelected.RenderAboveShroud(Actor self, WorldRenderer wr)
         {
+            if (IsTraitDisabled)
+                return SpriteRenderable.None;
+
             if (!Info.RequiresSelection)
                 return RenderInner(self, wr);
 
             return SpriteRenderable.None;
         }
 
-        bool IRenderAboveShroudWhenSelected.SpatiallyPartitionable { get { return false; } }
+        bool IRenderAboveShroudWhenSelected.SpatiallyPartitionable
+        {
+            get { return false; }
+        }
 
         IEnumerable<IRenderable> RenderInner(Actor self, WorldRenderer wr)
         {
@@ -142,12 +144,23 @@ namespace OpenRA.Mods.MW.Traits.Render
             var spaceBuffer = (int)(10 / wr.Viewport.Zoom);
             var effectPos = wr.ProjectedPosition(new int2((bounds.Left + bounds.Right) / 2 + Info.XOffset, (bounds.Top + bounds.Bottom) / 2 + Info.YOffset - spaceBuffer));
 
-            return new IRenderable[] { new TextRenderable(font, effectPos, Info.ZOffset, color, priority + "%") };
+            return new IRenderable[]
+            {
+                new TextRenderable(font, effectPos, Info.ZOffset, color, priority + "%")
+            };
         }
 
         IEnumerable<Rectangle> IRender.ScreenBounds(Actor self, WorldRenderer wr)
         {
             yield break;
+        }
+
+        void ITick.Tick(Actor self)
+        {
+            if (IsTraitDisabled)
+                return;
+
+            priority = timer++ >= maxdureation ? 100 : (int)Math.Round((double)100 / maxdureation * (timer != 0 ? timer : 1));
         }
     }
 }

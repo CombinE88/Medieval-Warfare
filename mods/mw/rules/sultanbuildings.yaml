@@ -12,9 +12,9 @@ SULGTW:
 	RenderSprites:
 		PlayerPalette: sultanplayer
 	Valued:
-		Cost: 550
+		Cost: 1100
 	CustomSellValue:
-		Value: 275
+		Value: 550
 	Tooltip:
 		Name: Mosaic Guard Tower
 	Building:
@@ -88,7 +88,7 @@ SULGTW:
 		Type: HeavyBuilding 
 	Selectable:
 		Bounds: 24,48,0,-10
-	SelectionDecorations
+	SelectionDecorations:
 	ThrowsShrapnel@SMALL:
 		Weapons: SmallStone1, SmallStone2, LargeStone1
 		Pieces: 2, 3
@@ -315,6 +315,36 @@ SULGTW:
 	ExternalCondition@placeholder:  # Anti error placeholder
 		Condition: Construct
 		TotalCap: 50
+	ConstructionProgress@Constructstatic:
+		FullCapacity: 25
+		ConstructionCondition: archersOverlay
+		RequiresCondition: archersOverlay < 20 && archers
+		YOffset: 0
+		XOffset: 5
+	ConstructionProgress@Constructdjin:
+		FullCapacity: 50
+		ConstructionCondition: djinnOverlay
+		RequiresCondition: djinnOverlay < 50 && djinn
+		YOffset: 0
+		XOffset: 5
+	ConstructionProgress@Constructtower:
+		FullCapacity: 30
+		ConstructionCondition: staticOverlay
+		RequiresCondition: staticOverlay < 30 && static
+		YOffset: 0
+		XOffset: 5
+	AddConditionEvery@ConstructstaticOverlay:
+		AddCondition: archersOverlay
+		Delay: 25	
+		RequiresCondition: archersOverlay < 20 && archers
+	AddConditionEvery@ConstructdjinOverlay:
+		AddCondition: djinnOverlay
+		Delay: 25	
+		RequiresCondition: djinnOverlay < 50 && djinn
+	AddConditionEvery@ConstructtowerOverlay:
+		AddCondition: staticOverlay
+		Delay: 25	
+		RequiresCondition: staticOverlay < 30 && static
 SULPLUG1:
 	AlwaysVisible:
 	Interactable:
@@ -331,10 +361,10 @@ SULPLUG1:
 		Prerequisites: vehicleproduction
 		Queue: MMilitary.SUL
 		BuildDuration:25
-		BuildDurationModifier: 150
+		BuildDurationModifier: 400
 		IconPalette: raicon
 	Valued:
-		Cost: 400
+		Cost: 800
 	Plug:
 		Type: sulgtw.archers
 SULPLUG3:
@@ -353,10 +383,10 @@ SULPLUG3:
 		Prerequisites: sultow2, sultow4
 		Queue: MMilitary.SUL
 		BuildDuration:25
-		BuildDurationModifier: 350
+		BuildDurationModifier: 700
 		IconPalette: raicon
 	Valued:
-		Cost: 1000
+		Cost: 1500
 	Plug:
 		Type: sulgtw.djinn
 SULPLUG4:
@@ -374,11 +404,11 @@ SULPLUG4:
 		BuildPaletteOrder: 70
 		Prerequisites: vehicleproduction, sultow3
 		Queue: MMilitary.SUL
-		BuildDuration: 150
+		BuildDuration: 400
 		BuildDurationModifier: 40
 		IconPalette: raicon
 	Valued:
-		Cost: 400
+		Cost: 800
 	Plug:
 		Type: sulgtw.static
 #Buildings		
@@ -1145,9 +1175,8 @@ SULCNSHMBR:
 		Weapons: DebrUtility1, DebrUtility2, DebrUtility3
 		Pieces: 2, 3
 		Range: 1c0, 5c0
-	CashTrickler:
-		Interval: 25
-		Amount: 5
+	ResourcePurifier:
+		Percentage: 5
 SULREF:
 	Inherits: ^MWBaseBuilding
 	HitShape:

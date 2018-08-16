@@ -108,7 +108,7 @@
 		Action: Kill
 		DeathTypes: DefaultDeath
 	RenderSprites:
-    OptionsScale: false
+		OptionsScale: true
 ^SkeletonSpawn:
 	Inherits: ^MedievalInfantry
 	Inherits@ArcherDemo65: ^ArcherDemo65
@@ -188,7 +188,7 @@
 		Action: Kill
 		DeathTypes: DefaultDeath
 	RenderSprites:
-    OptionsScale: false
+		OptionsScale: true
 ^Mediumpenta:
 	Inherits: ^MWBasePentagram
 	Inherits@Hitshape: ^2x2Shape

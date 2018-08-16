@@ -547,7 +547,6 @@ NOBLE2:
 	RenderSprites:
 		Image: nobl2
 		PlayerPalette: 
-		PlayerPalette: 
 		Palette: mwnobles
 		FactionImages:
 			nod: nobl2

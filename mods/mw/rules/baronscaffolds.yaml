@@ -34,21 +34,11 @@ HANDNEW.scaff:
 	WithSpriteBody:
 		RequiresCondition: inactive
 	DebugTransformOnCondition@Finsihed:
-		RequiresCondition: (27 - Construct) <= 0
+		RequiresCondition: (Construct >= 27)
 		IntoActor: HANDNEW
 		ReadyAudio:
-	ExternalCondition@buildfurther: 
-		Condition: Construct
-		TotalCap: 27
-	ExternalCondition@Deliverfurther:
-		Condition: DeliveredResources
-		TotalCap: 27
-	Targetable@buildfurther: 
-		TargetTypes: Buildable
-		RequiresCondition: DeliveredResources > Construct && (27 - Construct) > 0
-	Targetable@deliverresources: 
-		TargetTypes: Deliverable
-		RequiresCondition: 27 > DeliveredResources
+	ConstructionProgress@Construct:
+		FullCapacity: 27
 	WithIdleOverlay@base1:
 		Sequence: make1
 		RequiresCondition: Construct > 10 && Construct < 14
@@ -68,9 +58,11 @@ NODPROC.scaff:
 	Inherits: ZEROPROC.scaff
 	-GrantCondition@finishedbuild:
 	DebugTransformOnCondition@Finsihed:
-		RequiresCondition: (45 - Construct) <= 0
+		RequiresCondition: (Construct >= 45)
 		IntoActor: NODPROC
 		ReadyAudio:
+	ConstructionProgress@Construct:
+		FullCapacity: 45
 	RenderSprites:
 		Image: nodmill
 	Valued:
@@ -84,18 +76,6 @@ NODPROC.scaff:
 		Description: Provides basic resource gathering for Crops and Grain.\n Comes with 2 farmers.\n Can only operate up to 6 farmers at once.\n\n\n\n
 		Queue: MResources.Nod
 		BuildDuration: 750
-	ExternalCondition@buildfurther: 
-		Condition: Construct
-		TotalCap: 45
-	ExternalCondition@Deliverfurther:
-		Condition: DeliveredResources
-		TotalCap: 45
-	Targetable@buildfurther: 
-		TargetTypes: Buildable
-		RequiresCondition: DeliveredResources > Construct && (45 - Construct) > 0
-	Targetable@deliverresources: 
-		TargetTypes: Deliverable
-		RequiresCondition: 45 > DeliveredResources
 	Selectable:
 		Bounds: 48,70,0,-8
 	SelectionDecorations:
@@ -131,21 +111,11 @@ ARMORYNOD.scaff:
 	WithSpriteBody:
 		RequiresCondition: inactive
 	DebugTransformOnCondition@Finsihed:
-		RequiresCondition: (39 - Construct) <= 0
+		RequiresCondition: (Construct >= 39)
 		IntoActor: ARMORYNOD
 		ReadyAudio:
-	ExternalCondition@buildfurther: 
-		Condition: Construct
-		TotalCap: 39
-	ExternalCondition@Deliverfurther:
-		Condition: DeliveredResources
-		TotalCap: 39
-	Targetable@buildfurther: 
-		TargetTypes: Buildable
-		RequiresCondition: DeliveredResources > Construct && (39 - Construct) > 0
-	Targetable@deliverresources: 
-		TargetTypes: Deliverable
-		RequiresCondition: 39 > DeliveredResources
+	ConstructionProgress@Construct:
+		FullCapacity: 39
 	WithIdleOverlay@base1:
 		Sequence: make1
 		RequiresCondition: Construct > 5 && Construct < 12
@@ -212,14 +182,6 @@ XLTNTUNI.scaff:
 	SelectionDecorations:
 	WithSpriteBody:
 		RequiresCondition: DoNotRender
-	ExternalCondition@buildfurther: 
-		Condition: Construct
-		TotalCap: 18
-	-ExternalCondition@Deliverfurther:
-	Targetable@buildfurther: 
-		TargetTypes: Buildable
-		RequiresCondition: Construct < 18
-	-Targetable@deliverresources: 
 	DebugTransformOnCondition@typeA:
 		IntoActor: XLTNT1
 		RequiresCondition: Construct >= 18 && valida
@@ -318,21 +280,11 @@ NODSTALL.scaff:
 	WithSpriteBody:
 		RequiresCondition: inactive
 	DebugTransformOnCondition@Finsihed:
-		RequiresCondition: (53 - Construct) <= 0
+		RequiresCondition: (Construct >= 53)
 		IntoActor: NODSTALL
 		ReadyAudio:
-	ExternalCondition@buildfurther: 
-		Condition: Construct
-		TotalCap: 53
-	ExternalCondition@Deliverfurther:
-		Condition: DeliveredResources
-		TotalCap: 53
-	Targetable@buildfurther: 
-		TargetTypes: Buildable
-		RequiresCondition: DeliveredResources > Construct && (53 - Construct) > 0
-	Targetable@deliverresources: 
-		TargetTypes: Deliverable
-		RequiresCondition: 53 > DeliveredResources
+	ConstructionProgress@Construct:
+		FullCapacity: 53
 	WithIdleOverlay@base1:
 		Sequence: make1
 		RequiresCondition: Construct > 5 && Construct < 15
@@ -387,21 +339,11 @@ CASTLE.scaff:
 	WithSpriteBody:
 		RequiresCondition: inactive
 	DebugTransformOnCondition@Finsihed:
-		RequiresCondition: (75 - Construct) <= 0
+		RequiresCondition: (Construct >= 75)
 		IntoActor: CASTLE
 		ReadyAudio:
-	ExternalCondition@buildfurther: 
-		Condition: Construct
-		TotalCap: 75
-	ExternalCondition@Deliverfurther:
-		Condition: DeliveredResources
-		TotalCap: 75
-	Targetable@buildfurther: 
-		TargetTypes: Buildable
-		RequiresCondition: DeliveredResources > Construct && (75 - Construct) > 0
-	Targetable@deliverresources: 
-		TargetTypes: Deliverable
-		RequiresCondition: 75 > DeliveredResources
+	ConstructionProgress@Construct:
+		FullCapacity: 75
 	WithIdleOverlay@base1:
 		Sequence: make1
 		RequiresCondition: Construct > 5 && Construct < 15
@@ -452,21 +394,11 @@ WORKSHOPNOD.scaff:
 	WithSpriteBody:
 		RequiresCondition: inactive
 	DebugTransformOnCondition@Finsihed:
-		RequiresCondition: (42 - Construct) <= 0
+		RequiresCondition: (Construct >= 42)
 		IntoActor: WORKSHOPNOD
 		ReadyAudio:
-	ExternalCondition@buildfurther: 
-		Condition: Construct
-		TotalCap: 42
-	ExternalCondition@Deliverfurther:
-		Condition: DeliveredResources
-		TotalCap: 42
-	Targetable@buildfurther: 
-		TargetTypes: Buildable
-		RequiresCondition: DeliveredResources > Construct && (42 - Construct) > 0
-	Targetable@deliverresources: 
-		TargetTypes: Deliverable
-		RequiresCondition: 42 > DeliveredResources
+	ConstructionProgress@Construct:
+		FullCapacity: 42
 	WithIdleOverlay@base1:
 		Sequence: make1
 		RequiresCondition: Construct > 10 && Construct < 20
@@ -517,21 +449,11 @@ TRIBU.scaff:
 	WithSpriteBody:
 		RequiresCondition: inactive
 	DebugTransformOnCondition@Finsihed:
-		RequiresCondition: (14 - Construct) <= 0
+		RequiresCondition: (Construct >= 14)
 		IntoActor: TRIBU
 		ReadyAudio:
-	ExternalCondition@buildfurther: 
-		Condition: Construct
-		TotalCap: 14
-	ExternalCondition@Deliverfurther:
-		Condition: DeliveredResources
-		TotalCap: 14
-	Targetable@buildfurther: 
-		TargetTypes: Buildable
-		RequiresCondition: DeliveredResources > Construct && (14 - Construct) > 0
-	Targetable@deliverresources: 
-		TargetTypes: Deliverable
-		RequiresCondition: 14 > DeliveredResources
+	ConstructionProgress@Construct:
+		FullCapacity: 14
 	WithIdleOverlay@base1:
 		Sequence: make1
 		RequiresCondition: Construct > 1 && Construct < 3
@@ -592,21 +514,11 @@ SAMNEW.scaff:
 	WithSpriteBody:
 		RequiresCondition: inactive
 	DebugTransformOnCondition@Finsihed:
-		RequiresCondition: (8 - Construct) <= 0
+		RequiresCondition: (Construct >= 8)
 		IntoActor: SAMNEW
 		ReadyAudio:
-	ExternalCondition@buildfurther: 
-		Condition: Construct
-		TotalCap: 8
-	ExternalCondition@Deliverfurther:
-		Condition: DeliveredResources
-		TotalCap: 8
-	Targetable@buildfurther: 
-		TargetTypes: Buildable
-		RequiresCondition: DeliveredResources > Construct && (8 - Construct) > 0
-	Targetable@deliverresources: 
-		TargetTypes: Deliverable
-		RequiresCondition: 8 > DeliveredResources
+	ConstructionProgress@Construct:
+		FullCapacity: 8
 	WithIdleOverlay@base1:
 		Sequence: make1
 		RequiresCondition: Construct > 2 && Construct < 3
