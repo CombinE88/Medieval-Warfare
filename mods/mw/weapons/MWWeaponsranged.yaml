@@ -662,7 +662,7 @@ OrniSpearBomb:
 		Acceleration: 0,0,-5
 	Warhead@1Dam: SpreadDamage
 		Spread: 256
-		Damage: 2600
+		Damage: 3600
 		ValidTargets: Ground
 		InvalidTargets: Air
 		Versus:
@@ -843,7 +843,7 @@ paladingunvisual:
 		DamageTypes: DefaultDeath	 
 Dagger:
 	ReloadDelay: 150
-	Range: 5c512
+	Range: 4c512
 	InvalidTargets: Wall
 	Report: throw01.aud
 	InvalidTargets: Wall, Structure, Air
@@ -862,20 +862,20 @@ Dagger:
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
 		Spread: 51
-		Damage: 14000
+		Damage: 11000
 		InvalidTargets: Wall, Structure, Air
 		ValidTargets: Ground
 		Versus:
-			Leather: 75
-			Light: 75
+			Leather: 100
+			Light: 85
 			Heavy: 75
 			Concrete: 75
-			Knight: 45
+			Knight: 30
 			HeavyBuilding: 90
-			LightCavalry: 100
-			MediumCavalry: 90
-			HeavyCavalry: 75
-			Spectral: 100
+			LightCavalry: 50
+			MediumCavalry: 40
+			HeavyCavalry: 30
+			Spectral: 35
 		DamageTypes: PoisonDeath 
 	Warhead@rotten: GrantSingletonCondition
 		Range: 0c512
@@ -883,10 +883,10 @@ Dagger:
 		Condition: RottenKadaver
 		ValidStances: Enemy, Neutral, Ally
 DaggerAir:
-	ReloadDelay: 85
+	ReloadDelay: 105
 	Range: 7c512
-	Burst: 3
-	BurstDelays: 2
+	Burst: 2
+	BurstDelays: 3
 	Report: throw01.aud
 	InvalidTargets: Wall, Structure, Ground
 	ValidTargets: Air
@@ -915,9 +915,9 @@ DaggerAir:
 			Knight: 45
 			HeavyBuilding: 90
 			LightCavalry: 100
-			MediumCavalry: 90
-			HeavyCavalry: 75
-			Spectral: 250
+			MediumCavalry: 75
+			HeavyCavalry: 55
+			Spectral: 100
 		DamageTypes: PoisonDeath 
 DaggerSiegeTower:
 	ReloadDelay: 60
@@ -1475,7 +1475,7 @@ TribuchetBoulder:
 	ValidTargets: Ground
 	TargetActorCenter: true
 	InvalidTargets: Air
-	Range: 12c0
+	Range: 11c0
 	MinRange: 2c0
 	Report: siege01.aud
 	Projectile: Bullet

@@ -71,7 +71,6 @@ MOBTRIB:
 		Priority: 4
 	AttackFrontal:
 	Mobile:
-
 		Speed: 50
 		TurnSpeed: 3
 	Armor:
@@ -106,7 +105,7 @@ MOBTRIB:
 		BuildPaletteOrder: 90
 		Description: Deploys a tribuchet.\n  Unarmed\n\nTrains: 3 Peasants\nUndeploys in to a large ranged tribuchet.
 		Queue: MSiege.GDI, MSiege.Nod, MSiege.SUL
-		Prerequisites: anycastle
+		Prerequisites: anycastle, ~castlewall
 	Health:
 		HP: 20000
 	PersonValued:

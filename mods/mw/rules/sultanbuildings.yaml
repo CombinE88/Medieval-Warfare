@@ -982,29 +982,29 @@ SULMILL:
 	WithFreeSpawnableActor@1:
 		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 		SpawnActor: sule6
-		Offset: -512,1877, 0
-		MoveOffset: 0,2
+		Offset: -470,1365, 0
+		MoveOffset: 0,3
 		RespawnTime: 750
 		FindRadius: 100
 	WithFreeSpawnableActor@2:
 		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 		SpawnActor: sule6
-		Offset: -512,1877, 0
-		MoveOffset: 0,2
+		Offset: -470,1365, 0
+		MoveOffset: 0,3
 		RespawnTime: 750
 		FindRadius: 100
 	WithFreeSpawnableActor@3:
 		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 		SpawnActor: sule6
-		Offset: -512,1877, 0
-		MoveOffset: 0,2
+		Offset: -470,1365, 0
+		MoveOffset: 0,3
 		RespawnTime: 750
 		FindRadius: 100
 	WithFreeSpawnableActor@4:
 		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 		SpawnActor: sule6
-		Offset: -512,1877, 0
-		MoveOffset: 0,2
+		Offset: -470,1365, 0
+		MoveOffset: 0,3
 		RespawnTime: 750
 		FindRadius: 100
 SULFIX:
@@ -1093,7 +1093,7 @@ SULFIX:
 		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 		SpawnActor: shopplayer
 		Offset: 325,512,0
-		MoveOffset: 1,3
+		MoveOffset: 0,2
 		Sticky: true
 		Lasso: 3c0
 		ForceLasso: 5c0
@@ -1103,7 +1103,7 @@ SULFIX:
 		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 		SpawnActor: shopplayer
 		Offset: 325,512,0
-		MoveOffset: 1,3
+		MoveOffset: 2,2
 		Sticky: true
 		Lasso: 3c0
 		ForceLasso: 5c0

@@ -10,7 +10,7 @@ ProductionTypeMerchant: T
 	Description: Resource Tab
 	Types: Production
     
-ProductionTypeInfantry: Z
+ProductionTypeInfantry: Y
 	Description: Infantry Tab
 	Types: Production
 
@@ -20,4 +20,8 @@ ProductionTypeVehicle: U
 
 ProductionTypeAircraft: I
 	Description: Aircraft Tab
+	Types: Production
+
+ProductionTypeNaval: O
+	Description: Naval Tab 
 	Types: Production

@@ -1100,7 +1100,6 @@
 	Voiced:
 		VoiceSet: GenericVoice
 	RenderSprites:
-		Scale: 1.25
 ^Cavalry:
 	Inherits: ^MedievalInfantry
 	Targetable:

@@ -483,11 +483,6 @@ SHOPPLAYER:
 		Weapon: Repair
 		TargetStances: Ally
 		ForceTargetStances: None
-	AttackWander: 
-		WanderMoveRadius: 1
-		ReduceMoveRadiusDelay: 25
-		MinMoveDelay: 175
-		MaxMoveDelay: 300
 	PersonValued:
 		ActorCount: 1
 MWCIVCOM:
@@ -508,18 +503,6 @@ MWCIVCOM:
 	RenderSprites:
 		Image: mwcivcom
 		PlayerPalette: raplayer
-	AttackWander: 
-		WanderMoveRadius: 1
-		ReduceMoveRadiusDelay: 5
-		MinMoveDelay: 25
-		MaxMoveDelay: 25
-		RequiresCondition: !Wander
-	AttackWander@2: 
-		WanderMoveRadius: 1
-		ReduceMoveRadiusDelay: 5
-		MinMoveDelay: 150
-		MaxMoveDelay: 750
-		RequiresCondition: Wander
 	-Wanders:
 	WithInfantryBody:
 		StandSequences: stand

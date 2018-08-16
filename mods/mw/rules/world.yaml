@@ -317,6 +317,8 @@ World:
 	WarheadDebugOverlay:
 	CustomTerrainDebugOverlay:
 	MapCreeps:
+		CheckboxLocked: True
+		CheckboxVisible: False
 	SpawnMapActors:
 	MPStartLocations:
 		SeparateTeamSpawnsCheckboxDisplayOrder: 6
@@ -329,10 +331,11 @@ World:
 		BuildRadiusCheckboxVisible: False
 	MapOptions:
 		ShortGameCheckboxDisplayOrder: 2
+		ShortGameCheckboxVisible: False
+		ShortGameCheckboxLocked: True
+		ShortGameCheckboxEnabled: True
 		TechLevelDropdownDisplayOrder: 2
 		GameSpeedDropdownDisplayOrder: 3
-		ShortGameCheckboxEnabled: True
-		ShortGameCheckboxVisible: True
 		TechLevelDropdownLocked: True
 		TechLevelDropdownVisible: False
 	MPStartUnits@minimum:

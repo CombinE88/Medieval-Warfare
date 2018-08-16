@@ -672,7 +672,7 @@ WORKSHOPGDI:
 		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 		SpawnActor: shopplayer
 		Offset: 325,512,0
-		MoveOffset: 1,3
+		MoveOffset: 0,2
 		Sticky: true
 		Lasso: 3c0
 		ForceLasso: 5c0
@@ -682,7 +682,7 @@ WORKSHOPGDI:
 		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 		SpawnActor: shopplayer
 		Offset: 325,512,0
-		MoveOffset: 1,3
+		MoveOffset: 2,2
 		Sticky: true
 		Lasso: 3c0
 		ForceLasso: 5c0

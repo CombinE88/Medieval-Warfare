@@ -540,6 +540,12 @@ SIEGETRIBU:
 		ValidTargets: Structure
 		InvalidTargets: NoAutoTarget
 		Priority: 1
+	GrantConditionOnDeploy:
+		DeployedCondition: deployed
+	DebugTransformOnCondition:
+		IntoActor: siegetribu.reversescaff
+		RequiresCondition: deployed
+		ReadyAudio: 
 SIEGETRIBU.scaff:
 	Inherits: ^1x1SITE
 	Inherits@Hitshape: ^1x1Shape
@@ -606,3 +612,65 @@ SIEGETRIBU.scaff:
 		Type: Tribu
 		UsePlayerColor: true
 		Range: 14c0
+SIEGETRIBU.reversescaff:
+	Inherits: ^1x1SITE
+	Inherits@Hitshape: ^1x1Shape
+	Armor:
+		Type: HeavyBuilding
+	RenderSprites:
+		PlayerPalette: raplayer
+		Image: sigtrib
+	CustomSellValue:
+		Value: 750
+	Valued:
+		Cost: 1500
+	Tooltip:
+		Name: Construction Site (Long Range Counterweight Trebuchet)
+	Health:
+		HP: 30000
+	RevealsShroud:
+		Range: 4c0
+	WithBuildingBib:
+		HasMinibib: Yes
+	Selectable:
+		Bounds: 30,52,0,-12
+	SelectionDecorations:
+	WithSpriteBody:
+		RequiresCondition: inactive
+	DebugTransformOnCondition@Finsihed:
+		RequiresCondition: (22 - Construct) <= 0
+		IntoActor: MOBTRIB
+		ReadyAudio:
+	ExternalCondition@buildfurther: 
+		Condition: Construct
+		TotalCap: 22
+	ExternalCondition@Deliverfurther:
+		Condition: DeliveredResources
+		TotalCap: 22
+	Targetable@buildfurther: 
+		TargetTypes: Buildable
+		RequiresCondition: DeliveredResources > Construct && (22 - Construct) > 0
+	Targetable@deliverresources: 
+		TargetTypes: Deliverable
+		RequiresCondition: 22 > DeliveredResources
+	WithIdleOverlay@base1:
+		Sequence: make7
+		RequiresCondition: Construct < 3
+	WithIdleOverlay@base2:
+		Sequence: make6
+		RequiresCondition: Construct >= 3 && Construct < 7
+	WithIdleOverlay@base3:
+		Sequence: make5
+		RequiresCondition: Construct >= 7 && Construct < 10
+	WithIdleOverlay@base4:
+		Sequence: make4
+		RequiresCondition: Construct >= 10 && Construct < 15
+	WithIdleOverlay@base5:
+		Sequence: make3
+		RequiresCondition: Construct >= 15 && Construct < 17
+	WithIdleOverlay@base6:
+		Sequence: make2
+		RequiresCondition: Construct >= 17 && Construct < 20
+	WithIdleOverlay@base7:
+		Sequence: make1
+		RequiresCondition: Construct >= 22

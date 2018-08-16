@@ -758,7 +758,7 @@ Container@PLAYER_WIDGETS:
 							TooltipText: Military Fortifications
 							TooltipContainer: TOOLTIP_CONTAINER
 							ProductionGroup: Building4
-							Key: ProductionTypeDefense
+							Key: ProductionTypeNaval
 							Children:
 								Image@ICON:
 									X: PARENT_RIGHT / 2 -12

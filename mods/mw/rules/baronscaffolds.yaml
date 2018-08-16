@@ -554,7 +554,7 @@ TRIBU.scaff:
 		Sequence: make7
 		RequiresCondition: Construct >= 12
 	WithRangeCircle:
-		Range: 12c0
+		Range: 11c0
 SAMNEW.scaff:
 	Inherits: ^2x2SITE
 	Inherits@Hitshape: ^2x1Shape

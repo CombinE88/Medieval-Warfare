@@ -811,7 +811,7 @@ CSTLWLLSUL.scaff:
 		Description: Castlewall that blocks arrows and other projectiles\n\n\n
 		BuildPaletteOrder: 50
 		BuildDuration: 550
-		Prerequisites: anyworkshop
+		Prerequisites: anyworkshop, ~castlewall
 		Queue: Building4.SUL
 		IconPalette: raWall
 		BuildDurationModifier: 40
@@ -820,6 +820,7 @@ CSTLWLLSUL.scaff:
 		Dimensions: 1,1
 		Footprint: x
 		BuildSounds: brickconc.aud
+		RequiresBaseProvider: false
 	Health:
 		HP: 32000
 	RevealsShroud:

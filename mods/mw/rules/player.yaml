@@ -24,11 +24,18 @@ Player:
 	Shroud:
 	LobbyPrerequisiteCheckbox@GLOBALFACTUNDEPLOY:
 		ID: factundeploy
-		Label: Redeployable Supply wagons
-		Description: Allow undeploying  Resource Outpost.
-		Enabled: False
+		Label: Outpost Reuse
+		Description: Allow undeploying Resource Outpost.
+		Enabled: True
 		DisplayOrder: 6
 		Prerequisites: global-factundeploy
+	LobbyPrerequisiteCheckbox@SIEGEMODE:
+		ID: siegemode
+		Label: Castlesiege
+		Description: Enables castlewalls and -gates aswell as a long-range-tribuchet..
+		Enabled: False
+		DisplayOrder: 7
+		Prerequisites: global-castlewall
 	PlayerStatistics:
 	FrozenActorLayer:
 	PlaceBeacon:

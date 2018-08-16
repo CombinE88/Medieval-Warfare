@@ -226,11 +226,11 @@ ASSASSIN:
 		Range: 2c0
 	Cloak:
 		InitialDelay: 110
-		CloakDelay: 110
+		CloakDelay: 125
 		CloakSound: mwcloaksound.aud
 		UncloakSound: mwuncloaksound.aud
 	Valued:
-		Cost: 800
+		Cost: 950
 	Tooltip:
 		Name: Assassin
 	Buildable:
@@ -241,9 +241,9 @@ ASSASSIN:
 		Prerequisites: anycastle
 		#BuildDuration: 300
 	Mobile:
-		Speed: 66
+		Speed: 70
 	Health:
-		HP: 7500
+		HP: 5500
 	Armament@dagger:
 		Name: Primary
 		Weapon: dagger

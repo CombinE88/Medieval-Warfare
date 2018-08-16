@@ -491,7 +491,7 @@ GRIM:
 	Buildable:
 		IconPalette: raicon
 		BuildPaletteOrder: 30
-		Description: \n  Strong vs Infantry and cavalry\n  Very slow\n  Can go over most terrain\n  Reanimates killed enemies
+		Description: \n  Strong vs Infantry and cavalry\n  Very slow\n  Can go over most terrain\n  Reanimates killed enemies\  Detects steatlh units.
 		Prerequisites: seal4
 		Queue: MVehicle.ded
 	GrimReanimation:
@@ -501,6 +501,8 @@ GRIM:
 		ValidTargets: Souls, Soul
 		InvalidTargets: NoAutoTarget, Wall
 		Priority: 4
+	DetectCloaked:
+		Range: 4c0
 ACOLYTEC:
 	Inherits: ^Knight
 	Inherits@AUTOTARGET: ^AutoTargetAll
@@ -759,7 +761,7 @@ LICHK:
 	Tooltip:
 		Name: Lich
 	Buildable:
-		Description: \n  Cannot attack\n  Very slow\n  Can go over all terrain\n  Summons a skeletal army
+		Description: \n  Cannot attack\n  Very slow\n  Can go over all terrain\n  Summons a skeletal army\n  Detects steatlh units
 		IconPalette: raicon
 		BuildPaletteOrder: 30
 		Prerequisites: seal5
@@ -845,6 +847,8 @@ PLACEHOLDERHANDATTACK:
 		Name: bombs
 		Weapon: FromBelow
 		LocalOffset: 0,0,-43, 0,100,-43, 0,100,-43
+	DetectCloaked:
+		Range: 3c0
 PLACEHOLDERCOFFIN:
 	Inherits: ^Plane
 	Interactable:

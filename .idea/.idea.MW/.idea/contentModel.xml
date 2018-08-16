@@ -360,7 +360,6 @@
             <e p="EditorDefaultBrush.cs" t="Include" />
             <e p="EditorResourceBrush.cs" t="Include" />
             <e p="EditorTileBrush.cs" t="Include" />
-            <e p="EditorToolbarBrush.cs" t="Include" />
           </e>
           <e p="Effects" t="Include">
             <e p="Beacon.cs" t="Include" />
@@ -922,7 +921,6 @@
               <e p="DomainIndex.cs" t="Include" />
               <e p="EditorActorLayer.cs" t="Include" />
               <e p="EditorActorPreview.cs" t="Include" />
-              <e p="EditorBrushLayer.cs" t="Include" />
               <e p="EditorResourceLayer.cs" t="Include" />
               <e p="EditorSculptureLayer.cs" t="Include" />
               <e p="EditorSelectionLayer.cs" t="Include" />
@@ -1105,7 +1103,6 @@
               <e p="DisconnectWatcherLogic.cs" t="Include" />
               <e p="Editor" t="Include">
                 <e p="ActorSelectorLogic.cs" t="Include" />
-                <e p="FormToolbarLogic.cs" t="Include" />
                 <e p="LayerSelectorLogic.cs" t="Include" />
                 <e p="MapEditorLogic.cs" t="Include" />
                 <e p="MapEditorTabsLogic.cs" t="Include" />
