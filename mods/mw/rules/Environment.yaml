@@ -111,9 +111,9 @@ FIREPLACE:
 	GiveUnitCrateAction@8:
 		Units: ross4c
 		ValidFactions: Nod
-	GiveMcvCrateAction:
+	GiveMcvCrateAction@0:
 		SelectionShares: 1
-		Units: mcv2new
+		Units: suppwgnl
 		ValidFactions: GDI, Nod, Sultan
 	GiveMcvCrateAction@ded:
 		SelectionShares: 10

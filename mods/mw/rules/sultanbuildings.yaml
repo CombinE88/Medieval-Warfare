@@ -899,6 +899,7 @@ SULTOW1:
 	Tooltip:
 		Name: Tower of Knowledge
 	ProvidesPrerequisite@buildingname:
+		RequiresPrerequisites: sulcaste
 	Buildable:
 		IconPalette: raicon
 		BuildPaletteOrder: 40
@@ -918,6 +919,7 @@ SULTOW2:
 	Tooltip:
 		Name: Tower of Mystical Teachings
 	ProvidesPrerequisite@buildingname:
+		RequiresPrerequisites: sulcaste
 	Buildable:
 		IconPalette: raicon
 		BuildPaletteOrder: 50
@@ -937,6 +939,7 @@ SULTOW3:
 	Tooltip:
 		Name: Tower of Progress
 	ProvidesPrerequisite@buildingname:
+		RequiresPrerequisites: sulcaste
 	ProvidesPrerequisite:
 		Prerequisite: anyhq
 	Buildable:
@@ -958,6 +961,7 @@ SULTOW4:
 	Tooltip:
 		Name: Tower of Annihilation
 	ProvidesPrerequisite@buildingname:
+		RequiresPrerequisites: sulcaste
 	ProvidesPrerequisite@3:
 		Prerequisite: Level4
 	ProvidesPrerequisite@anycastle:

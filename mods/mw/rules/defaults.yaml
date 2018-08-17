@@ -627,7 +627,7 @@
 	Inherits@1: ^SpriteActor
 	Interactable:
 	Health:
-		HP: 140
+		HP: 1400
 	Armor:
 		Type: Light
 	HiddenUnderFog:
@@ -643,12 +643,13 @@
 	Husk:
 		AllowedTerrain: Clear, Rough, Road, Tiberium, BlueTiberium, Beach
 	Burns:
-		Interval: 2
+		Interval: 20
 	Targetable:
 		RequiresForceFire: yes
 		TargetTypes: Ground, Husk
 	Capturable:
 		CaptureThreshold: 100
+		ValidStances: Enemy, Neutral, Ally
 	WithColoredOverlay@IDISABLE:
 		Palette: disabled
 	TransformOnCapture:
@@ -1001,7 +1002,6 @@
 		Bounds: 12,17,0,-6
 	QuantizeFacingsFromSequence:
 		Sequence: stand
-	WithInfantryBody:
 	AttackMove:
 	DrawLineToTarget:
 	HiddenUnderFog:
@@ -1230,8 +1230,6 @@
 		MinimumScanTimeInterval: 20
 		MaximumScanTimeInterval: 30
 	WithInfantryBody:
-		IdleSequences: stand
-		StandSequences: stand
 	Selectable:
 		Bounds: 35,35,0,-6 
 	Voiced:

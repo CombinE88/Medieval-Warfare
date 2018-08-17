@@ -154,7 +154,7 @@
 	Faction@Random:
 		Name: Any
 		InternalName: Random
-		RandomFactionMembers: gdi, nod, sul, ded
+		RandomFactionMembers: gdi, nod, sul
 		Description: Select a random faction.
 	Faction@gdi:
 		Name: King
@@ -172,6 +172,7 @@
 		Name: Undead
 		InternalName: ded
 		Description: They were forgotton
+		Selectable: False
 	ResourceType@green-tib:
 		Sequences: iron1,iron2,iron3,iron4,iron5,iron6,iron7,iron8,iron9,iron10,iron11,iron12
 		Palette: ra
@@ -340,12 +341,12 @@ World:
 		TechLevelDropdownVisible: False
 	MPStartUnits@minimum:
 		Class: medieval
-		ClassName: Supply Wagon Only
+		ClassName: Supply Wagon
 		Factions: gdi, nod, sul
-		BaseActor: factnew
+		BaseActor: suppwgnl
 	MPStartUnits@minimumdead:
 		Class: medieval
-		ClassName: Supply Wagon Only
+		ClassName: Supply Wagon
 		Factions: ded
 		BaseActor: ziggurat1
 	SpawnMPUnits:

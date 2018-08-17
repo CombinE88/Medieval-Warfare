@@ -24,8 +24,8 @@ Player:
 	Shroud:
 	LobbyPrerequisiteCheckbox@GLOBALFACTUNDEPLOY:
 		ID: factundeploy
-		Label: Outpost Reuse
-		Description: Allow undeploying Resource Outpost.
+		Label: Undeploy Keeps
+		Description: Allow undeploying Keeps.
 		Enabled: True
 		DisplayOrder: 6
 		Prerequisites: global-factundeploy

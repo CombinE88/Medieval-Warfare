@@ -61,13 +61,13 @@ eharvnewxl:
 		Start: 249
 		Facings: 8
 		Length: 10
-		Tick: 80  
+		Tick: 80	
 	die1: 
 		Start: 157
 		Length: 15
 		Tick: 80
 	icon: nharvicon.shp
-		AddExtension: False  
+		AddExtension: False	
 medimcv2:
 	idle: 
 		Start: 64
@@ -106,3 +106,133 @@ mcvnew2.destroyed:
 		Facings: 32
 		UseClassicFacingFudge: True
 		ZOffset: -512
+^basicsuppwgn:
+	stand: allsupwgn1
+		Start: 64
+		Facings: 32
+	run: allsupwgn1
+		Tick: 100
+		Facings: 8
+		Length: 8
+	lv1stand: allsupwgn1
+		Start: 64
+		Facings: 32
+	lv1run: allsupwgn1
+		Tick: 100
+		Facings: 8
+		Length: 8
+	lv2stand: allsupwgn2
+		Start: 64
+		Facings: 32
+	lv2run: allsupwgn2
+		Tick: 100
+		Facings: 8
+		Length: 8
+	lv3stand: allsupwgn3
+		Start: 64
+		Facings: 32
+	lv3run: allsupwgn3
+		Tick: 100
+		Facings: 8
+		Length: 8
+baron.suppwgn:
+	Inherits: ^basicsuppwgn
+	lv4stand: baronsupwgn4
+		Start: 64
+		Facings: 32
+	lv4run: baronsupwgn4
+		Tick: 100
+		Facings: 8
+		Length: 8
+	lv5stand: baronsupwgn5
+		Start: 64
+		Facings: 32
+	lv5run: baronsupwgn5
+		Tick: 100
+		Facings: 8
+		Length: 8
+	icon: wagonbaronicon.shp
+		AddExtension: False
+king.suppwgn:
+	Inherits: ^basicsuppwgn
+	lv4stand: kingsupwgn4
+		Start: 64
+		Facings: 32
+	lv4run: kingsupwgn4
+		Tick: 100
+		Facings: 8
+		Length: 8
+	lv5stand: kingsupwgn5
+		Start: 64
+		Facings: 32
+	lv5run: kingsupwgn5
+		Tick: 100
+		Facings: 8
+		Length: 8
+	icon: wagonkingicon.shp
+		AddExtension: False
+sultan.suppwgn:
+	Inherits: ^basicsuppwgn
+	lv4stand: sultansupwgn4
+		Start: 64
+		Facings: 32
+	lv4run: sultansupwgn4
+		Tick: 100
+		Facings: 8
+		Length: 8
+	lv5stand: sultansupwgn5
+		Start: 64
+		Facings: 32
+	lv5run: sultansupwgn5
+		Tick: 100
+		Facings: 8
+		Length: 8
+	icon: wagonsultanicon.shp
+		AddExtension: False
+^basicsuppwgn.husk:
+	idle: allsupwgn1husk
+		Facings: 32
+	stand: allsupwgn1husk
+		Facings: 32
+	lv1idle: allsupwgn1husk
+		Facings: 32
+	lv1stand: allsupwgn1husk
+		Facings: 32
+	lv2idle: allsupwgn2husk
+		Facings: 32
+	lv2stand: allsupwgn2husk
+		Facings: 32
+	lv3idle: allsupwgn3husk
+		Facings: 32
+	lv3stand: allsupwgn3husk
+		Facings: 32
+baron.suppwgn.husk:
+	Inherits: ^basicsuppwgn.husk
+	lv4idle: baronsupwgn4husk
+		Facings: 32
+	lv4stand: baronsupwgn4husk
+		Facings: 32
+	lv5idle: baronsupwgn5husk
+		Facings: 32
+	lv5stand: baronsupwgn5husk
+		Facings: 32
+king.suppwgn.husk:
+	Inherits: ^basicsuppwgn.husk
+	lv4idle: kingsupwgn4husk
+		Facings: 32
+	lv4stand: kingsupwgn4husk
+		Facings: 32
+	lv5idle: kingsupwgn5husk
+		Facings: 32
+	lv5stand: kingsupwgn5husk
+		Facings: 32
+sultan.suppwgn.husk:
+	Inherits: ^basicsuppwgn.husk
+	lv4idle: sultansupwgn4husk
+		Facings: 32
+	lv4stand: sultansupwgn4husk
+		Facings: 32
+	lv5idle: sultansupwgn5husk
+		Facings: 32
+	lv5stand: sultansupwgn5husk
+		Facings: 32

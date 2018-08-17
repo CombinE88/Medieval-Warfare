@@ -96,17 +96,6 @@ SIEGE1.Husk:
 	WithFacingSpriteBody:
 		StartSequence: start
 		Sequence: idle
-MCVNEW2.Husk:
-	Inherits: ^Husk
-	Tooltip:
-		Name: Supply wagon (Destroyed)
-	TransformOnCapture:
-		IntoActor: mcv2new
-	RenderSprites:
-		Image: mcvnew2.destroyed
-		PlayerPalette: raplayer
-	Burns:
-		Interval: 3
 ORNI.Husk:
 	Inherits@1: ^SpriteActor
 	Interactable:

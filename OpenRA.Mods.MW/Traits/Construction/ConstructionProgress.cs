@@ -116,7 +116,7 @@ namespace OpenRA.Mods.MW.Traits.Render
             if (IsTraitDisabled)
                 return SpriteRenderable.None;
 
-            if (!Info.RequiresSelection)
+            if (!Info.RequiresSelection && wr.World.RenderPlayer != null && wr.World.RenderPlayer.IsAlliedWith(self.Owner))
                 return RenderInner(self, wr);
 
             return SpriteRenderable.None;
@@ -127,7 +127,7 @@ namespace OpenRA.Mods.MW.Traits.Render
             if (IsTraitDisabled)
                 return SpriteRenderable.None;
 
-            if (!Info.RequiresSelection)
+            if (!Info.RequiresSelection && wr.World.RenderPlayer != null && wr.World.RenderPlayer.IsAlliedWith(self.Owner))
                 return RenderInner(self, wr);
 
             return SpriteRenderable.None;

@@ -239,6 +239,8 @@ wtentt:
 	icon: keepicon.shp
 		AddExtension: False
 newfact:
+	rendernone: ironore4
+		Start: 9 
 	idle: kingfact0
 		Start: 0
 	idle0: kingfact0
@@ -291,16 +293,34 @@ newfact:
 		Length: 4
 		Tick: 120
 		ZOffset: -1024
-	make: kingfact0make
+	make0: kingfact0make
 		Length: *
 		Tick: 120
-		Offset: 0, -15
+		Offset: 0, -11
+	make1: kingfact01make
+		Length: *
+		Tick: 120
+		Offset: 0, -11
+	make2: kingfact2make
+		Length: *
+		Tick: 120
+		Offset: 0, -11
+	make3: baronkingfact3make
+		Length: *
+		Tick: 120
+		Offset: 0, -12
+	make4: kingfact4make
+		Length: *
+		Tick: 120
+		Offset: 0, -12
 	bib: mwbib2
 		UseTilesetExtension: true
 		Length: *
 	icon: keepicon.shp
 		AddExtension: False
 nodfact:
+	rendernone: ironore4
+		Start: 9 
 	idle: baronfact0
 		Start: 0
 	idle0: baronfact0
@@ -353,16 +373,34 @@ nodfact:
 		Length: 4
 		Tick: 120
 		ZOffset: -1024
-	make: baronfact0make
-		Offset: 0,-11
+	make0: baronfact0make
 		Length: *
 		Tick: 120
+		Offset: 0,-11
+	make1: baronfact01make
+		Length: *
+		Tick: 120
+		Offset: 0, -11
+	make2: baronfact2make
+		Length: *
+		Tick: 120
+		Offset: 0, -11
+	make3: baronkingfact3make
+		Length: *
+		Tick: 120
+		Offset: 0, -12
+	make4: baronfact4make
+		Length: *
+		Tick: 120
+		Offset: 0, -12
 	bib: mwbib2
 		UseTilesetExtension: true
 		Length: *
 	icon: keepicon.shp
 		AddExtension: False
 sulfact:
+	rendernone: ironore4
+		Start: 9 
 	idle: sulfact0
 		Start: 0
 	idle0: sulfact0
@@ -415,10 +453,26 @@ sulfact:
 		Length: 4
 		Tick: 120
 		ZOffset: -1024
-	make: sulfact0make
-		Offset: 0,-4
+	make0: sulfact0make
 		Length: *
 		Tick: 120
+		Offset: 0,-4
+	make1: sulfact01make
+		Length: *
+		Tick: 120
+		Offset: 0, -4
+	make2: sulfact2make
+		Length: *
+		Tick: 120
+		Offset: 0, -4
+	make3: sulfact3make
+		Length: *
+		Tick: 120
+		Offset: 0, -12
+	make4: sulfact4make
+		Length: *
+		Tick: 120
+		Offset: 0, -12
 	bib: mwbib2
 		UseTilesetExtension: true
 		Length: *
