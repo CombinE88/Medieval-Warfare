@@ -405,6 +405,26 @@ SPLIT8:
 		WOffset: -425,510,0
 		DockAngle: 96
 		IsDragRequired: false
+SPLIT9:
+	Inherits: SPLIT3
+	-SeedsResource:
+	RenderSprites:
+		Image: seagull
+		PlayerPalette: 
+		Palette: ra
+	Tooltip:
+		Name: sand bar
+	-WithIdleAnimation:
+	WithSpriteBody:
+		Sequence: idle
+	CritterSpawner:
+		CheckReachability: true
+		Actors: fish
+		AliveMax: 4
+		TicksMin: 800
+		TicksMax: 1600
+		RadiusMin: 1
+		RadiusMax: 4
 ROCK1:
 	Inherits: ^Rock
 	Building:

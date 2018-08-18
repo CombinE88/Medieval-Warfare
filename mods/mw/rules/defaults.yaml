@@ -1410,7 +1410,6 @@
 		Range: 0c0
 	Mobile:
 		Speed: 56
-
 	-Selectable:
 	Interactable:
 	Targetable:

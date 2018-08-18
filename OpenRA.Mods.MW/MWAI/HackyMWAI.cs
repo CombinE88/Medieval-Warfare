@@ -265,7 +265,7 @@ namespace OpenRA.Mods.MW.MWAI
 		// TODO Update OpenRA.Utility/Command.cs#L300 to first handle lists and also read nested ones
 		[Desc("Tells the AI how to use its support powers.")]
 		[FieldLoader.LoadUsing("LoadDecisions")]
-		public readonly List<SupportPowerDecision> PowerDecisions = new List<SupportPowerDecision>();
+		public readonly List<SupportPowerDecision> SupportPowerDecisions = new List<SupportPowerDecision>();
 
 		[Desc("Actor types that can capture other actors (via `Captures` or `ExternalCaptures`).",
 			"Leave this empty to disable capturing.")]
@@ -309,8 +309,9 @@ namespace OpenRA.Mods.MW.MWAI
 		static object LoadDecisions(MiniYaml yaml)
 		{
 			var ret = new List<SupportPowerDecision>();
-			foreach (var d in yaml.Nodes)
-				if (d.Key.Split('@')[0] == "SupportPowerDecision")
+			var decisions = yaml.Nodes.FirstOrDefault(n => n.Key == "SupportPowerDecisions");
+			if (decisions != null)
+				foreach (var d in decisions.Value.Nodes)
 					ret.Add(new SupportPowerDecision(d.Value));
 
 			return ret;
@@ -354,20 +355,17 @@ namespace OpenRA.Mods.MW.MWAI
 
 		readonly Func<Actor, bool> isEnemyUnit;
 		readonly Predicate<Actor> unitCannotBeOrdered;
-		Dictionary<SupportPowerInstance, int> waitingPowers = new Dictionary<SupportPowerInstance, int>();
-		Dictionary<string, SupportPowerDecision> powerDecisions = new Dictionary<string, SupportPowerDecision>();
-
 		public CPos InitialBaseCenter;
-		SupportPowerManager supportPowerMngr;
+
+		MWAISupportPowerManager supportPowerManager;
+
+		MWAIHarvesterManager harvManager;
+
 		PlayerResources playerResource;
-		FrozenActorLayer frozenLayer;
 		int ticks;
 
 		BitArray resourceTypeIndices;
 		BitArray oreResourceTypeIndices;
-
-		////AIHarvesterManager harvManager;
-		////AISupportPowerManager supportPowerManager;
 
 		List<BaseBuilder> builders = new List<BaseBuilder>();
 
@@ -401,13 +399,10 @@ namespace OpenRA.Mods.MW.MWAI
 
 			isEnemyUnit = unit =>
 				Player.Stances[unit.Owner] == Stance.Enemy
-					&& !unit.Info.HasTraitInfo<HuskInfo>()
-					&& unit.Info.HasTraitInfo<ITargetableInfo>();
+				&& !unit.Info.HasTraitInfo<HuskInfo>()
+				&& unit.Info.HasTraitInfo<ITargetableInfo>();
 
 			unitCannotBeOrdered = a => a.Owner != Player || a.IsDead || !a.IsInWorld;
-
-			foreach (var decision in info.PowerDecisions)
-				powerDecisions.Add(decision.OrderName, decision);
 
 			maximumCaptureTargetOptions = Math.Max(1, Info.MaximumCaptureTargetOptions);
 		}
@@ -423,9 +418,10 @@ namespace OpenRA.Mods.MW.MWAI
 		{
 			Player = p;
 			IsEnabled = true;
-			supportPowerMngr = p.PlayerActor.Trait<SupportPowerManager>();
+			supportPowerManager = new MWAISupportPowerManager(this, p);
 			playerResource = p.PlayerActor.Trait<PlayerResources>();
-			frozenLayer = p.PlayerActor.Trait<FrozenActorLayer>();
+
+			harvManager = new MWAIHarvesterManager(this, p);
 
 			foreach (var building in Info.BuildingQueues)
 				builders.Add(new BaseBuilder(this, building, p, playerResource));
@@ -772,7 +768,7 @@ namespace OpenRA.Mods.MW.MWAI
 
 			AssignRolesToIdleUnits(self);
 			SetRallyPointsForNewProductionBuildings(self);
-			TryToUseSupportPower(self);
+			supportPowerManager.TryToUseSupportPower(self);
 
 			foreach (var b in builders)
 				b.Tick();
@@ -841,6 +837,7 @@ namespace OpenRA.Mods.MW.MWAI
 			if (--assignRolesTicks <= 0)
 			{
 				assignRolesTicks = Info.AssignRolesInterval;
+				harvManager.Tick(activeUnits);
 				FindNewUnits(self);
 				InitializeBase(self, true);
 			}
@@ -1107,143 +1104,32 @@ namespace OpenRA.Mods.MW.MWAI
 		Actor FindAndDeployMcv(Actor self, bool move)
 		{
 			var mcv = self.World.Actors.FirstOrDefault(a => a.Owner == Player &&
-				Info.BuildingCommonNames.ConstructionYard.Contains(a.Info.Name));
+				Info.UnitsCommonNames.Mcv.Contains(a.Info.Name) && a.IsIdle);
 
 			if (mcv == null)
 				return null;
 
+			// Don't try to move and deploy an undeployable actor
+			var transformsInfo = mcv.Info.TraitInfoOrDefault<TransformsInfo>();
+			if (transformsInfo == null)
+				return null;
+
+			// If we lack a base, we need to make sure we don't restrict deployment of the MCV to the base!
+			var restrictToBase = Info.RestrictMCVDeploymentFallbackToBase &&
+			                     CountBuildingByCommonName(Info.BuildingCommonNames.ConstructionYard, Player) > 0;
+
+			if (move)
+			{
+				var desiredLocation = ChooseBuildLocation(transformsInfo.IntoActor, restrictToBase, BuildingType.Building);
+				if (desiredLocation == null)
+					return null;
+
+				QueueOrder(new Order("Move", mcv, Target.FromCell(World, desiredLocation.Value), true));
+			}
+
+			QueueOrder(new Order("DeployTransform", mcv, true));
+
 			return mcv;
-		}
-
-		void TryToUseSupportPower(Actor self)
-		{
-			if (supportPowerMngr == null)
-				return;
-
-			foreach (var sp in supportPowerMngr.Powers.Values)
-			{
-				if (sp.Disabled)
-					continue;
-
-				// Add power to dictionary if not in delay dictionary yet
-				if (!waitingPowers.ContainsKey(sp))
-					waitingPowers.Add(sp, 0);
-
-				if (waitingPowers[sp] > 0)
-					waitingPowers[sp]--;
-
-				// If we have recently tried and failed to find a use location for a power, then do not try again until later
-				var isDelayed = waitingPowers[sp] > 0;
-				if (sp.Ready && !isDelayed && powerDecisions.ContainsKey(sp.Info.OrderName))
-				{
-					var powerDecision = powerDecisions[sp.Info.OrderName];
-					if (powerDecision == null)
-					{
-						BotDebug("Bot Bug: FindAttackLocationToSupportPower, couldn't find powerDecision for {0}", sp.Info.OrderName);
-						continue;
-					}
-
-					var attackLocation = FindCoarseAttackLocationToSupportPower(sp);
-					if (attackLocation == null)
-					{
-						BotDebug("AI: {1} can't find suitable coarse attack location for support power {0}. Delaying rescan.", sp.Info.OrderName, Player.PlayerName);
-						waitingPowers[sp] += powerDecision.GetNextScanTime(this);
-
-						continue;
-					}
-
-					// Found a target location, check for precise target
-					attackLocation = FindFineAttackLocationToSupportPower(sp, (CPos)attackLocation);
-					if (attackLocation == null)
-					{
-						BotDebug("AI: {1} can't find suitable final attack location for support power {0}. Delaying rescan.", sp.Info.OrderName, Player.PlayerName);
-						waitingPowers[sp] += powerDecision.GetNextScanTime(this);
-
-						continue;
-					}
-
-					// Valid target found, delay by a few ticks to avoid rescanning before power fires via order
-					BotDebug("AI: {2} found new target location {0} for support power {1}.", attackLocation, sp.Info.OrderName, Player.PlayerName);
-					waitingPowers[sp] += 10;
-					QueueOrder(new Order(sp.Key, supportPowerMngr.Self, Target.FromCell(World, attackLocation.Value), false) { SuppressVisualFeedback = true });
-				}
-			}
-		}
-
-		/// <summary>Scans the map in chunks, evaluating all actors in each.</summary>
-		CPos? FindCoarseAttackLocationToSupportPower(SupportPowerInstance readyPower)
-		{
-			CPos? bestLocation = null;
-			var bestAttractiveness = 0;
-			var powerDecision = powerDecisions[readyPower.Info.OrderName];
-			if (powerDecision == null)
-			{
-				BotDebug("Bot Bug: FindAttackLocationToSupportPower, couldn't find powerDecision for {0}", readyPower.Info.OrderName);
-				return null;
-			}
-
-			var map = World.Map;
-			var checkRadius = powerDecision.CoarseScanRadius;
-			for (var i = 0; i < map.MapSize.X; i += checkRadius)
-			{
-				for (var j = 0; j < map.MapSize.Y; j += checkRadius)
-				{
-					var tl = new MPos(i, j);
-					var br = new MPos(i + checkRadius, j + checkRadius);
-					var region = new CellRegion(map.Grid.Type, tl, br);
-
-					// HACK: The AI code should not be messing with raw coordinate transformations
-					var wtl = World.Map.CenterOfCell(tl.ToCPos(map));
-					var wbr = World.Map.CenterOfCell(br.ToCPos(map));
-					var targets = World.ActorMap.ActorsInBox(wtl, wbr);
-
-					var frozenTargets = frozenLayer.FrozenActorsInRegion(region);
-					var consideredAttractiveness = powerDecision.GetAttractiveness(targets, Player) + powerDecision.GetAttractiveness(frozenTargets, Player);
-					if (consideredAttractiveness <= bestAttractiveness || consideredAttractiveness < powerDecision.MinimumAttractiveness)
-						continue;
-
-					bestAttractiveness = consideredAttractiveness;
-					bestLocation = new MPos(i, j).ToCPos(map);
-				}
-			}
-
-			return bestLocation;
-		}
-
-		/// <summary>Detail scans an area, evaluating positions.</summary>
-		CPos? FindFineAttackLocationToSupportPower(SupportPowerInstance readyPower, CPos checkPos, int extendedRange = 1)
-		{
-			CPos? bestLocation = null;
-			var bestAttractiveness = 0;
-			var powerDecision = powerDecisions[readyPower.Info.OrderName];
-			if (powerDecision == null)
-			{
-				BotDebug("Bot Bug: FindAttackLocationToSupportPower, couldn't find powerDecision for {0}", readyPower.Info.OrderName);
-				return null;
-			}
-
-			var checkRadius = powerDecision.CoarseScanRadius;
-			var fineCheck = powerDecision.FineScanRadius;
-			for (var i = 0 - extendedRange; i <= (checkRadius + extendedRange); i += fineCheck)
-			{
-				var x = checkPos.X + i;
-
-				for (var j = 0 - extendedRange; j <= (checkRadius + extendedRange); j += fineCheck)
-				{
-					var y = checkPos.Y + j;
-					var pos = World.Map.CenterOfCell(new CPos(x, y));
-					var consideredAttractiveness = 0;
-					consideredAttractiveness += powerDecision.GetAttractiveness(pos, Player, frozenLayer);
-
-					if (consideredAttractiveness <= bestAttractiveness || consideredAttractiveness < powerDecision.MinimumAttractiveness)
-						continue;
-
-					bestAttractiveness = consideredAttractiveness;
-					bestLocation = new CPos(x, y);
-				}
-			}
-
-			return bestLocation;
 		}
 
 		internal IEnumerable<ProductionQueue> FindQueues(string category)
@@ -1333,7 +1219,7 @@ namespace OpenRA.Mods.MW.MWAI
 
 			// Protected priority assets, MCVs, harvesters and buildings
 			if ((self.Info.HasTraitInfo<HarvesterInfo>() || self.Info.HasTraitInfo<BuildingInfo>() || self.Info.HasTraitInfo<BaseBuildingInfo>()) &&
-				Player.Stances[e.Attacker.Owner] == Stance.Enemy)
+			    Player.Stances[e.Attacker.Owner] == Stance.Enemy)
 			{
 				defenseCenter = e.Attacker.Location;
 				ProtectOwn(e.Attacker);

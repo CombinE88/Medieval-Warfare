@@ -261,13 +261,13 @@ MammothPike:
 	Range: 1c800
 	Burst: 2
 	BurstDelays: 20
-	ValidTargets: Cavalry, Trees, Structure
+	ValidTargets: Cavalry, Trees, Structure, Siege
 	InvalidTargets: Air
 	Report: Sword02.aud, Sword03.aud, Sword04.aud, Sword06.aud, Sword07.aud
 	Projectile: Bullet
 		Speed: 1c382
 	Warhead@1Dam: SpreadDamage
-		ValidTargets: Cavalry, Trees, Structure
+		ValidTargets: Ground
 		InvalidTargets: Air
 		Spread: 180
 		Damage: 4500

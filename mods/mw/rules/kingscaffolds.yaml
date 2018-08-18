@@ -452,7 +452,7 @@ CASTLE2.scaff:
 		IconPalette: raicon
 		BuildPaletteOrder: 90
 		Prerequisites: anyhq
-		Description: Unlocks Superweapon.\n Unlocks Assassins, Crossbows and Ballista Towers.\nCan hold up to 4 nobles.\n\n\n\n
+		Description: Unlocks Superweapon.\n Unlocks Assassins, Crossbows and Ballista Towers.\n\n\n\n
 		Queue: MBuilding.GDI
 		BuildDuration: 1000
 	Health:

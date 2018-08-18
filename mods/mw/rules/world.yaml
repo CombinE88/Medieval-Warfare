@@ -31,6 +31,26 @@
 			Loot: 75
 			Beach: 80
 			Corruption: 80
+	Locomotor@HUNTER:
+		Name: hunter
+		Crushes: crate
+		SharesCell: true
+		TerrainSpeeds:
+			Water: 80
+			Clear: 90
+			Rough: 80
+			Road: 100
+			Tiberium: 60
+				PathingCost: 350
+			BlueTiberium: 60
+				PathingCost: 350
+			Crops: 75
+				PathingCost: 300
+			Wood: 75
+				PathingCost: 300
+			Loot: 75
+			Beach: 80
+			Corruption: 80
 	Locomotor@Farmer:
 		Name: farmer
 		Crushes: crate

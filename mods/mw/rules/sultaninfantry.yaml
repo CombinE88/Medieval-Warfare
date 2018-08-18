@@ -297,17 +297,13 @@ SULE6:
 		#BuildDuration: 150
 	WithFacingSpriteBody:
 		Sequence: idle
-		RequiresCondition: !MoveAnim
 	WithHarvestAnimation:
 		HarvestSequence: harvest
 		PrefixByFullness: empty-, full-
 	WithDockingAnimation:
-	GrantConditionOnMovement:
-		Condition: MoveAnim
-	WithInfantryBody:
-		MoveSequence: move
-		StandSequences: idle
-		RequiresCondition: MoveAnim
+	-WithInfantryBody:
+	WithMoveAnimation:
+		MoveSequence: run
 	Valued:
 		Cost: 250
 	Tooltip:

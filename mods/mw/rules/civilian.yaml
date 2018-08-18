@@ -631,3 +631,53 @@ DEER03A.Husk:
 		Sequence: body
 	LootableBody: 
 		LootTypes: DeadWildlife
+FISH:
+	Inherits@1: ^Tree
+	Tooltip:
+		Name: Fish
+		ShowOwnerRow: false
+	RenderSprites:
+		Palette: mwcivilian
+	Armor:
+		Type: Leather
+	Targetable:
+		TargetTypes: Ground, Infantry, Wildlife, NoAutoTarget
+	Health:
+		HP: 10
+	HitShape:
+	EditorTilesetFilter:
+		Categories: Animals
+	HuntableDeer@Lootable:
+		Actor: FISH.Husk
+		OwnerType: Killer
+		SkipMakeAnimations: False
+		HuntTypes: Wildlife
+	-AppearsOnRadar:
+	-RadarColorFromTerrain:
+	-Voiced:
+	Building:
+		TerrainTypes: Water
+FISH.Husk:
+	Inherits@1: ^Tree
+	Tooltip:
+		Name: Fish
+		ShowOwnerRow: false
+	RenderSprites:
+		Palette: mwcivilian
+		Image: fish
+	Armor:
+		Type: Leather
+	Targetable:
+		TargetTypes: Ground, Infantry, Deaddeer, NoAutoTarget
+	Health:
+		HP: 1000
+	HitShape:
+	EditorTilesetFilter:
+		Categories:
+	LootableBody: 
+		LootTypes: DeadWildlife
+	-AppearsOnRadar:
+	-RadarColorFromTerrain:
+	-Voiced:
+	Building:
+		TerrainTypes: Water

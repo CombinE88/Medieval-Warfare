@@ -44,6 +44,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Activities\FallDown.cs" />
+    <Compile Include="MWAI\MWAIHarvesterManager.cs" />
+    <Compile Include="MWAI\MWAISupportPowerManager.cs" />
     <Compile Include="MWAI\AttackOrFleeFuzzy.cs" />
     <Compile Include="MWAI\BaseBuilder.cs" />
     <Compile Include="MWAI\DummyAI.cs" />

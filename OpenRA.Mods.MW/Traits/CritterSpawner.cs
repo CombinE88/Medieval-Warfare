@@ -25,6 +25,8 @@ namespace OpenRA.Mods.MW.Traits
 
         public readonly WDist RadiusMax = new WDist(5);
 
+        public readonly string CheckPathActor = "hunter";
+
         public readonly bool CheckReachability = false;
 
         public override object Create(ActorInitializer init) { return new CritterSpawner(init.Self, this); }
@@ -103,7 +105,7 @@ namespace OpenRA.Mods.MW.Traits
                     List<CPos> path;
 
                     using (var thePath = PathSearch.FromPoint(self.World,
-                        self.World.Map.Rules.Actors["e4new"].TraitInfo<MobileInfo>().LocomotorInfo,
+                        self.World.Map.Rules.Actors[Info.CheckPathActor.ToLowerInvariant()].TraitInfo<MobileInfo>().LocomotorInfo,
                         self, self.Location, cell, true))
                         path = self.World.WorldActor.Trait<IPathFinder>().FindPath(thePath);
                     if (info.RadiusMax.Length < path.Count || path.Count == 0)
@@ -115,7 +117,7 @@ namespace OpenRA.Mods.MW.Traits
                 }
             }
 
-            if (checkcells != null && checkcells.Any())
+            if (checkcells.Any())
             {
                 foreach (var cell in cells)
                 {

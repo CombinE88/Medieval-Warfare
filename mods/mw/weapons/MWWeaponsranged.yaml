@@ -562,7 +562,7 @@ GunlanceGround:
 	Report: gunlance.aud
 	ValidTargets: Infantry, Ground
 	InvalidTargets: Wall, Structure, Air, Cavalry
-	Projectile:Bullet
+	Projectile: Bullet
 		Speed: 1c682
 		ContrailLength: 500
 		ContrailWidth: 20
@@ -571,7 +571,7 @@ GunlanceGround:
 		Inaccuracy: 0c726
 	Warhead@2Dam: SpreadDamage
 		Spread: 256
-		Damage: 1800
+		Damage: 7200
 		Versus:
 			Leather: 100
 			Light: 90
@@ -587,31 +587,6 @@ GunlanceGround:
 	Warhead@1Eff: CreateEffect
 		Explosions: smokey
 		ImpactSounds: tnkfire2.aud, tnkfire3.aud, tnkfire4.aud, tnkfire6.aud
-GunlanceGroundDUMMY:
-	ReloadDelay: 75
-	Range: 4c0
-	ValidTargets: Infantry, Ground
-	InvalidTargets: Wall, Structure, Air, Cavalry
-	Projectile:Bullet
-		Speed: 1c682
-		Inaccuracy: 0c726
-	Warhead@2Dam: SpreadDamage
-		Spread: 256
-		Damage: 1800
-		Versus:
-			Leather: 100
-			Light: 90
-			Heavy: 85
-			Concrete: 100
-			Knight: 50
-			LightCavalry: 100
-			MediumCavalry: 100
-			HeavyCavalry: 100
-			HeavyBuilding: 100
-			Spectral: 75
-		DamageTypes: RippedApartDeath	
-	Warhead@1Eff: CreateEffect
-		Explosions: smokey
 OrniSpearThrowAir:
 	ReloadDelay: 8
 	Range: 7c0

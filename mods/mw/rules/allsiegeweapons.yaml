@@ -74,6 +74,7 @@ SUPPWGNL:
 		Body: BodyLv4
 	RenderSprites:
 		Image: king.suppwgn
+		FactionImages:
 			nod: baron.suppwgn
 			gdi: king.suppwgn
 			sul: sultan.suppwgn
@@ -611,18 +612,14 @@ EHARVXL:
 		QuantizedFacings: 8
 	QuantizeFacingsFromSequence:
 		Sequence: stand
-	WithInfantryBody:
-		IdleSequences: idle
-		MoveSequence: move
-		RequiresCondition: MoveAnim
-	GrantConditionOnMovement:
-		Condition: MoveAnim
+	-WithInfantryBody:
 	WithFacingSpriteBody:
 		Sequence: idle
-		RequiresCondition: !MoveAnim
 	WithHarvestAnimation:
 		HarvestSequence: harvest
 		PrefixByFullness: empty-, half-, full-
+	WithMoveAnimation:
+		MoveSequence: move
 	WithDockingAnimation:
 	Valued:
 		Cost: 1000

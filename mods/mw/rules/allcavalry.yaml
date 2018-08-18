@@ -394,20 +394,8 @@ ROSS5:
 		Weapon: GunlanceGround 
 		Name: Tertiary
 		LocalOffset: 800,0,300
-	Armament@GunlanceGroundDummy1:
-		Weapon: GunlanceGroundDUMMY 
-		Name: Tertiary
-		LocalOffset: 800,0,300
-	Armament@GunlanceGroundDummy2:
-		Weapon: GunlanceGroundDUMMY 
-		Name: Tertiary
-		LocalOffset: 800,0,300
-	Armament@GunlanceGroundDummy3:
-		Weapon: GunlanceGroundDUMMY 
-		Name: Tertiary
-		LocalOffset: 800,0,300
 	AttackFrontal:
-		Armaments: Primary, Secondary, Tertiary
+		Armaments: Primary, Secondary
 	AutoTarget:
 		ScanRadius: 5
 		InitialStance: AttackAnything

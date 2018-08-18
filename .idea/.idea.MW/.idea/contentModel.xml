@@ -1234,6 +1234,8 @@
           <e p="BaseBuilder.cs" t="Include" />
           <e p="DummyAI.cs" t="Include" />
           <e p="HackyMWAI.cs" t="Include" />
+          <e p="MWAIHarvesterManager.cs" t="Include" />
+          <e p="MWAISupportPowerManager.cs" t="Include" />
           <e p="Squad.cs" t="Include" />
           <e p="StateMachine.cs" t="Include" />
           <e p="States" t="Include">

@@ -357,7 +357,7 @@ SULCASTLE.scaff:
 		IconPalette: raicon
 		BuildPaletteOrder: 30
 		Prerequisites: proc
-		Description: Can unlock Superweapons.\n Can unlock advanced tech.\nCan hold up to 4 nobles.\n\n\n\n
+		Description: Can unlock Superweapons.\n Can unlock advanced tech.\n\n\n\n
 		Queue: MBuilding.SUL
 		BuildDuration: 600
 	Health:

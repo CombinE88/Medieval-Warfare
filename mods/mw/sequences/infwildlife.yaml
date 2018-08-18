@@ -123,4 +123,12 @@ deer03a:
 	body:
 		Frames: 186, 193, 200, 207, 214, 221, 228, 235
 		Facings: 8
+fish:
+	idle: 
+		Length: *
+		Tick: 100
+seagull:
+	idle: 
+		Length: *
+		Tick: 100
 #Humanoids		

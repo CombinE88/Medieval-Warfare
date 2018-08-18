@@ -317,7 +317,7 @@ sule6:
 		Length: 7
 		Facings: 8
 	full-move: 
-		Start: 0
+		Start: 190
 		Length: 8
 		Facings: 8
 		Tick: 100

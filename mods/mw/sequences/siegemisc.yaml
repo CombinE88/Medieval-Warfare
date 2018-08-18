@@ -106,7 +106,7 @@ mcvnew2.destroyed:
 		Facings: 32
 		UseClassicFacingFudge: True
 		ZOffset: -512
-^basicsuppwgn:
+^basic.suppwgn:
 	stand: allsupwgn1
 		Start: 64
 		Facings: 32
@@ -136,7 +136,7 @@ mcvnew2.destroyed:
 		Facings: 8
 		Length: 8
 baron.suppwgn:
-	Inherits: ^basicsuppwgn
+	Inherits: ^basic.suppwgn
 	lv4stand: baronsupwgn4
 		Start: 64
 		Facings: 32
@@ -154,7 +154,7 @@ baron.suppwgn:
 	icon: wagonbaronicon.shp
 		AddExtension: False
 king.suppwgn:
-	Inherits: ^basicsuppwgn
+	Inherits: ^basic.suppwgn
 	lv4stand: kingsupwgn4
 		Start: 64
 		Facings: 32
@@ -172,7 +172,7 @@ king.suppwgn:
 	icon: wagonkingicon.shp
 		AddExtension: False
 sultan.suppwgn:
-	Inherits: ^basicsuppwgn
+	Inherits: ^basic.suppwgn
 	lv4stand: sultansupwgn4
 		Start: 64
 		Facings: 32
@@ -189,7 +189,7 @@ sultan.suppwgn:
 		Length: 8
 	icon: wagonsultanicon.shp
 		AddExtension: False
-^basicsuppwgn.husk:
+^basic.suppwgn.husk:
 	idle: allsupwgn1husk
 		Facings: 32
 	stand: allsupwgn1husk
@@ -207,7 +207,7 @@ sultan.suppwgn:
 	lv3stand: allsupwgn3husk
 		Facings: 32
 baron.suppwgn.husk:
-	Inherits: ^basicsuppwgn.husk
+	Inherits: ^basic.suppwgn.husk
 	lv4idle: baronsupwgn4husk
 		Facings: 32
 	lv4stand: baronsupwgn4husk
@@ -217,7 +217,7 @@ baron.suppwgn.husk:
 	lv5stand: baronsupwgn5husk
 		Facings: 32
 king.suppwgn.husk:
-	Inherits: ^basicsuppwgn.husk
+	Inherits: ^basic.suppwgn.husk
 	lv4idle: kingsupwgn4husk
 		Facings: 32
 	lv4stand: kingsupwgn4husk
@@ -227,7 +227,7 @@ king.suppwgn.husk:
 	lv5stand: kingsupwgn5husk
 		Facings: 32
 sultan.suppwgn.husk:
-	Inherits: ^basicsuppwgn.husk
+	Inherits: ^basic.suppwgn.husk
 	lv4idle: sultansupwgn4husk
 		Facings: 32
 	lv4stand: sultansupwgn4husk

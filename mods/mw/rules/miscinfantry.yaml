@@ -127,17 +127,13 @@ E8FARMER:
 		#BuildDuration: 150
 	WithFacingSpriteBody:
 		Sequence: idle
-		RequiresCondition: !MoveAnim
 	WithHarvestAnimation:
 		HarvestSequence: harvest
 		PrefixByFullness: empty-, full-
 	WithDockingAnimation:
-	GrantConditionOnMovement:
-		Condition: MoveAnim
-	WithInfantryBody:
+	-WithInfantryBody:
+	WithMoveAnimation:
 		MoveSequence: run
-		StandSequences: idle
-		RequiresCondition: MoveAnim
 	Valued:
 		Cost: 375
 	Tooltip:
@@ -794,16 +790,31 @@ HUNTER:
 		Name: Hunter
 	Mobile:
 		Speed: 56
+		Locomotor: hunter
 	Health:
 		HP: 13000
 	RenderSprites:
 		PlayerPalette: mwcivilianplayer
+		Image: hunter
+	GrantConditionOnTerrain@OnWater:
+		Condition: onWater
+		TerrainTypes: Water
 	WithInfantryBody:
 		DefaultAttackSequence: shoot
 		AttackSequences:
 			secondary: shoot
 			primary: shoot2
 			tairt: shoot2
+		RequiresCondition: !onWater
+	WithInfantryBody@OnWater:
+		DefaultAttackSequence: waterattack
+		AttackSequences:
+			secondary: waterattack
+			primary: waterattack
+			tairt: waterattack
+		StandSequences: waterstand
+		MoveSequence: waterrun
+		RequiresCondition: onWater
 	Armor:
 		Type: Leather
 	Power:
@@ -828,11 +839,19 @@ HUNTER:
 	Armament@Huntdeer:
 		Weapon: BowNArrowHunter
 		Name: primary
-		RequiresCondition: (FullFood + LootingDeer) == 0
+		RequiresCondition: (FullFood + LootingDeer) == 0 && !onWater
 	Armament@HuntdeerDummy:
 		Weapon: BowNArrowHunterDUMMY
 		Name: secondary
-		RequiresCondition: (FullFood + LootingDeer) == 0
+		RequiresCondition: (FullFood + LootingDeer) == 0 && !onWater
+	Armament@HuntdeeronWater:
+		Weapon: BowNArrowHunterOnWater
+		Name: primary
+		RequiresCondition: (FullFood + LootingDeer) == 0 && onWater
+	Armament@HuntdeerDummyonWater:
+		Weapon: BowNArrowHunterDUMMYOnWater
+		Name: secondary
+		RequiresCondition: (FullFood + LootingDeer) == 0 && onWater
 	Armament@GatherDeer:
 		Weapon: HunterGather
 		Name: primary

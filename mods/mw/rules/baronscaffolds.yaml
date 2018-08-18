@@ -325,7 +325,7 @@ CASTLE.scaff:
 		IconPalette: raicon
 		BuildPaletteOrder: 90
 		Prerequisites: anyhq
-		Description: Unlocks Superweapon.\n Unlocks Heavy Cavalry, Knight's and Trebuchet.\nCan hold up to 4 nobles.\n\n\n\n
+		Description: Unlocks Superweapon.\n Unlocks Heavy Cavalry, Knight's and Trebuchet.\n\n\n\n
 		Queue: MBuilding.Nod
 		BuildDuration: 1250
 	Health:
