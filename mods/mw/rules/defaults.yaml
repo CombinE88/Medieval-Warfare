@@ -257,7 +257,7 @@
 			DefaultDeath: 1
 			RippedApartDeath: 1
 			PoisonDeath: 1
-			KadaverDeath: 1
+			KadarverDeath: 1
 			BallistaDeath: 1
 			BurnToDeath: 1
 			SkeletonDeath: 1
@@ -280,7 +280,7 @@
 		DeathTypes: FireDeath
 	DeathSounds@POISONED:
 		Voice: Poisoned
-		DeathTypes: PoisonDeath, KadaverDeath
+		DeathTypes: PoisonDeath, KadarverDeath
 	Voiced:
 		VoiceSet: GenericVoice
 	HitShape:
@@ -677,7 +677,7 @@
 	HitShape:
 	EditorTilesetFilter:
 		Categories: Interior Props
-		RequireTilesets: INTERIOR
+		RequireTilesets: INTERIOR, TEMPERAT
 	Tooltip:
 		GenericName: Destroyed Furniture
 	Building:
@@ -1014,7 +1014,7 @@
 			DefaultDeath: 1
 			RippedApartDeath: 2
 			PoisonDeath: 3
-			KadaverDeath: 3
+			KadarverDeath: 3
 			BallistaDeath: 4
 			BurnToDeath: 5
 			SkeletonDeath: 5
@@ -1046,7 +1046,7 @@
 		EmptyWeapon: SingleDeadKadaver
 		Chance: 25
 		LoadedChance: 25
-		DeathTypes: KadaverDeath
+		DeathTypes: KadarverDeath
 	HitShape:
 		Type: Circle
 			Radius: 128
@@ -1093,7 +1093,7 @@
 		DeathTypes: RippedApartDeath
 	DeathSounds@POISONED:
 		Voice: Poisoned
-		DeathTypes: PoisonDeath, KadaverDeath
+		DeathTypes: PoisonDeath, KadarverDeath
 	DeathSounds@BURNED:
 		Voice: Burned
 		DeathTypes: BurnToDeath
@@ -1111,7 +1111,7 @@
 			DefaultDeath: 1
 			RippedApartDeath: 1
 			PoisonDeath: 1
-			KadaverDeath: 1
+			KadarverDeath: 1
 			BallistaDeath: 1
 			BurnToDeath: 2
 	MustBeDestroyed:
@@ -1169,7 +1169,7 @@
 		DeathTypes: RippedApartDeath
 	DeathSounds@POISONED:
 		Voice: Poisoned
-		DeathTypes: PoisonDeath, KadaverDeath
+		DeathTypes: PoisonDeath, KadarverDeath
 	DeathSounds@BURNED:
 		Voice: Burned
 		DeathTypes: BurnToDeath
@@ -1304,7 +1304,7 @@
 			DefaultDeath: 1
 			RippedApartDeath: 2
 			PoisonDeath: 3
-			KadaverDeath: 3
+			KadarverDeath: 3
 			BallistaDeath: 4
 			BurnToDeath: 5
 		CrushedSequence: die-crushed
@@ -1348,7 +1348,7 @@
 		HealIfBelow: 110
 		Delay: 10
 		RequiresCondition: RottenKadaver
-		DamageTypes: KadaverDeath
+		DamageTypes: KadarverDeath
 	SelfHealing@HOSPITAL:
 		PercentageStep: 1
 		Delay: 25
@@ -1381,7 +1381,7 @@
 			PoisonDeath: 1
 			BallistaDeath: 1
 			BurnToDeath: 1
-			KadaverDeath: 1
+			KadarverDeath: 1
 		CrushedSequence: die1
 		DeathSequencePalette: raplayer
 	Wanders:
@@ -1488,7 +1488,7 @@
 			DefaultDeath: 1
 			RippedApartDeath: 2
 			PoisonDeath: 3
-			KadaverDeath: 3
+			KadarverDeath: 3
 			BallistaDeath: 4
 			BurnToDeath: 5
 		CrushedSequence: die-crushed
@@ -1541,7 +1541,7 @@
 			DefaultDeath: 1
 			RippedApartDeath: 2
 			PoisonDeath: 3
-			KadaverDeath: 3
+			KadarverDeath: 3
 			BallistaDeath: 4
 			BurnToDeath: 5
 			SkeletonDeath: 5
@@ -1604,7 +1604,7 @@
 			DefaultDeath: 1
 			RippedApartDeath: 2
 			PoisonDeath: 3
-			KadaverDeath: 3
+			KadarverDeath: 3
 			BallistaDeath: 4
 			BurnToDeath: 5
 		CrushedSequence: die-crushed
@@ -1640,7 +1640,7 @@
 		DeathTypes: RippedApartDeath, BallistaDeath
 	DeathSounds@POISONED:
 		Voice: Poisoned
-		DeathTypes: PoisonDeath, KadaverDeath
+		DeathTypes: PoisonDeath, KadarverDeath
 	DeathSounds@BURNED:
 		Voice: Burned
 		DeathTypes: BurnToDeath

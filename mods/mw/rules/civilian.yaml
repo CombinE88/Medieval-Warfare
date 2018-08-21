@@ -641,7 +641,7 @@ FISH:
 	Armor:
 		Type: Leather
 	Targetable:
-		TargetTypes: Ground, Infantry, Wildlife, NoAutoTarget
+		TargetTypes: Ground, Infantry, fish, NoAutoTarget
 	Health:
 		HP: 10
 	HitShape:

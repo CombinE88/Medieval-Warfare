@@ -854,3 +854,87 @@ TC05:
 	Explodes@Tib:
 		Weapon: LeaveWoodXL
 		EmptyWeapon: LeaveWoodXL
+DEADTREE1:
+	Inherits: ^Tree
+	RenderSprites:
+		Palette: ra
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+	Explodes@Tib:
+		Weapon: LeaveWoodXL
+		EmptyWeapon: LeaveWoodXL
+	Health:
+		HP: 25000
+	Tooltip:
+		Name: Tree (Dead)
+DEADTREE2:
+	Inherits: ^Tree
+	RenderSprites:
+		Palette: ra
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+	Explodes@Tib:
+		Weapon: LeaveWoodXL
+		EmptyWeapon: LeaveWoodXL
+	Health:
+		HP: 25000
+	Tooltip:
+		Name: Tree (Dead)
+DEADTREE3:
+	Inherits: ^Tree
+	RenderSprites:
+		Palette: ra
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+	Explodes@Tib:
+		Weapon: LeaveWoodXL
+		EmptyWeapon: LeaveWoodXL
+	Health:
+		HP: 25000
+	Tooltip:
+		Name: Tree (Dead)
+DEADTREE4:
+	Inherits: ^Tree
+	RenderSprites:
+		Palette: ra
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+	Explodes@Tib:
+		Weapon: LeaveWoodXL
+		EmptyWeapon: LeaveWoodXL
+	Health:
+		HP: 25000
+	Tooltip:
+		Name: Tree (Dead)
+DEADTREE5:
+	Inherits: ^Tree
+	RenderSprites:
+		Palette: ra
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+	Explodes@Tib:
+		Weapon: LeaveWoodXL
+		EmptyWeapon: LeaveWoodXL
+	Health:
+		HP: 25000
+	Tooltip:
+		Name: Tree (Dead)
+DEADTREE6:
+	Inherits: ^Tree
+	RenderSprites:
+		Palette: ra
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+	Explodes@Tib:
+		Weapon: LeaveWoodXL
+		EmptyWeapon: LeaveWoodXL
+	Health:
+		HP: 25000
+	Tooltip:
+		Name: Tree (Dead)

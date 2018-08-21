@@ -4,8 +4,6 @@ General:
 	EditorTemplateOrder: Floor, Wall, Openings, Sewer, Paneling, Crypt, Tiled Ground
 	HeightDebugColors: 880000
 	SheetSize: 1024
-   
-
 Terrain:
 	TerrainType@BlueTiberium:
 		Type: BlueTiberium

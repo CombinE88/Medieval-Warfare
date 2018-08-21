@@ -848,10 +848,6 @@ HUNTER:
 		Weapon: BowNArrowHunterOnWater
 		Name: primary
 		RequiresCondition: (FullFood + LootingDeer) == 0 && onWater
-	Armament@HuntdeerDummyonWater:
-		Weapon: BowNArrowHunterDUMMYOnWater
-		Name: secondary
-		RequiresCondition: (FullFood + LootingDeer) == 0 && onWater
 	Armament@GatherDeer:
 		Weapon: HunterGather
 		Name: primary

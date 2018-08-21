@@ -43,7 +43,8 @@ tc04:
 	Defaults:
 		UseTilesetExtension: true
 		TilesetOverrides:
-			JUNGLE: TEMPERAT			INTERIOR: TEMPERAT
+			JUNGLE: TEMPERAT
+			INTERIOR: TEMPERAT
 	idle: maple4
 		Tick: 120
 		Offset: 4,-5
@@ -53,7 +54,8 @@ tc04.husk:
 	Defaults: tc04
 		UseTilesetExtension: true
 		TilesetOverrides:
-			JUNGLE: TEMPERAT			INTERIOR: TEMPERAT
+			JUNGLE: TEMPERAT
+			INTERIOR: TEMPERAT
 	idle:
 		Start: 2
 	dead:
@@ -64,7 +66,8 @@ tc05:
 	Defaults:
 		UseTilesetExtension: true
 		TilesetOverrides:
-			JUNGLE: TEMPERAT			INTERIOR: TEMPERAT
+			JUNGLE: TEMPERAT
+			INTERIOR: TEMPERAT
 	idle: maple2
 		Tick: 120
 		Offset: 3,7 
@@ -74,7 +77,8 @@ tc05.husk:
 	Defaults: tc05
 		UseTilesetExtension: true
 		TilesetOverrides:
-			JUNGLE: TEMPERAT			INTERIOR: TEMPERAT
+			JUNGLE: TEMPERAT
+			INTERIOR: TEMPERAT
 	idle:
 		Start: 2
 	dead:
@@ -85,13 +89,15 @@ tc03:
 	Defaults:
 		UseTilesetExtension: true
 		TilesetOverrides:
-			JUNGLE: TEMPERAT			INTERIOR: TEMPERAT
+			JUNGLE: TEMPERAT
+			INTERIOR: TEMPERAT
 	idle:
 tc03.husk:
 	Defaults: tc03
 		UseTilesetExtension: true
 		TilesetOverrides:
-			JUNGLE: TEMPERAT			INTERIOR: TEMPERAT
+			JUNGLE: TEMPERAT
+			INTERIOR: TEMPERAT
 	idle:
 		Start: 1
 	dead:
@@ -102,7 +108,8 @@ tc02:
 	Defaults:
 		UseTilesetExtension: true
 		TilesetOverrides:
-			JUNGLE: TEMPERAT			INTERIOR: TEMPERAT
+			JUNGLE: TEMPERAT
+			INTERIOR: TEMPERAT
 	idle: maple3
 		Tick: 120
 		Offset: 2,7 
@@ -110,7 +117,8 @@ tc02.husk:
 	Defaults: tc02
 		UseTilesetExtension: true
 		TilesetOverrides:
-			JUNGLE: TEMPERAT			INTERIOR: TEMPERAT
+			JUNGLE: TEMPERAT
+			INTERIOR: TEMPERAT
 	idle:
 		Start: 1
 	dead:
@@ -121,7 +129,8 @@ tc01:
 	Defaults:
 		UseTilesetExtension: true
 		TilesetOverrides:
-			JUNGLE: TEMPERAT			INTERIOR: TEMPERAT
+			JUNGLE: TEMPERAT
+			INTERIOR: TEMPERAT
 	idle: maple1
 		Tick:120
 		Offset: 4,2 
@@ -129,7 +138,8 @@ tc01.husk:
 	Defaults: tc01
 		UseTilesetExtension: true
 		TilesetOverrides:
-			JUNGLE: TEMPERAT			INTERIOR: TEMPERAT
+			JUNGLE: TEMPERAT
+			INTERIOR: TEMPERAT
 	idle:
 		Start: 1
 	dead:
@@ -183,7 +193,8 @@ t17a:
 	Defaults:
 		UseTilesetExtension: true
 		TilesetOverrides:
-			JUNGLE: TEMPERAT			INTERIOR: TEMPERAT
+			JUNGLE: TEMPERAT
+			INTERIOR: TEMPERAT
 	idle: tree9
 		Tick:120
 		Offset: -3,-7 
@@ -191,7 +202,8 @@ t17:
 	Defaults:
 		UseTilesetExtension: true
 		TilesetOverrides:
-			JUNGLE: TEMPERAT			INTERIOR: TEMPERAT
+			JUNGLE: TEMPERAT
+			INTERIOR: TEMPERAT
 	idle: tree8
 		Tick:120
 		Offset: 2,2 
@@ -199,7 +211,8 @@ t17.husk:
 	Defaults: t17
 		UseTilesetExtension: true
 		TilesetOverrides:
-			JUNGLE: TEMPERAT			INTERIOR: TEMPERAT
+			JUNGLE: TEMPERAT
+			INTERIOR: TEMPERAT
 	idle:
 		Start: 1
 	dead:
@@ -210,7 +223,8 @@ t16:
 	Defaults:
 		UseTilesetExtension: true
 		TilesetOverrides:
-			JUNGLE: TEMPERAT			INTERIOR: TEMPERAT
+			JUNGLE: TEMPERAT
+			INTERIOR: TEMPERAT
 	idle: tree7
 		Tick:120
 		Offset: 2,-2 
@@ -218,7 +232,8 @@ t16.husk:
 	Defaults: t16
 		UseTilesetExtension: true
 		TilesetOverrides:
-			JUNGLE: TEMPERAT			INTERIOR: TEMPERAT
+			JUNGLE: TEMPERAT
+			INTERIOR: TEMPERAT
 	idle:
 		Start: 1
 	dead:
@@ -229,7 +244,8 @@ t15:
 	Defaults:
 		UseTilesetExtension: true
 		TilesetOverrides:
-			JUNGLE: TEMPERAT			INTERIOR: TEMPERAT
+			JUNGLE: TEMPERAT
+			INTERIOR: TEMPERAT
 	idle: tree6
 		Tick:120
 		Offset: -2,2 
@@ -237,7 +253,8 @@ t15.husk:
 	Defaults: t15
 		UseTilesetExtension: true
 		TilesetOverrides:
-			JUNGLE: TEMPERAT			INTERIOR: TEMPERAT
+			JUNGLE: TEMPERAT
+			INTERIOR: TEMPERAT
 	idle:
 		Start: 1
 	dead:
@@ -248,7 +265,8 @@ t14:
 	Defaults:
 		UseTilesetExtension: true
 		TilesetOverrides:
-			JUNGLE: TEMPERAT			INTERIOR: TEMPERAT
+			JUNGLE: TEMPERAT
+			INTERIOR: TEMPERAT
 	idle: tree5
 		Tick:120
 		Offset: -4,0 
@@ -256,7 +274,8 @@ t14.husk:
 	Defaults: t14
 		UseTilesetExtension: true
 		TilesetOverrides:
-			JUNGLE: TEMPERAT			INTERIOR: TEMPERAT
+			JUNGLE: TEMPERAT
+			INTERIOR: TEMPERAT
 	idle:
 		Start: 1
 	dead:
@@ -267,7 +286,8 @@ t13:
 	Defaults:
 		UseTilesetExtension: true
 		TilesetOverrides:
-			JUNGLE: TEMPERAT			INTERIOR: TEMPERAT
+			JUNGLE: TEMPERAT
+			INTERIOR: TEMPERAT
 	idle: tree4
 		Tick:120
 		Offset: -4,1		
@@ -275,7 +295,8 @@ t13.husk:
 	Defaults: t13
 		UseTilesetExtension: true
 		TilesetOverrides:
-			JUNGLE: TEMPERAT			INTERIOR: TEMPERAT
+			JUNGLE: TEMPERAT
+			INTERIOR: TEMPERAT
 	idle:
 		Start: 1
 	dead:
@@ -286,7 +307,8 @@ t12:
 	Defaults:
 		UseTilesetExtension: true
 		TilesetOverrides:
-			JUNGLE: TEMPERAT			INTERIOR: TEMPERAT
+			JUNGLE: TEMPERAT
+			INTERIOR: TEMPERAT
 	idle: tree3
 		Tick:120
 		Offset: 3,-2 
@@ -294,7 +316,8 @@ t12.husk:
 	Defaults: t12
 		UseTilesetExtension: true
 		TilesetOverrides:
-			JUNGLE: TEMPERAT			INTERIOR: TEMPERAT
+			JUNGLE: TEMPERAT
+			INTERIOR: TEMPERAT
 	idle:
 		Start: 1
 	dead:
@@ -305,7 +328,8 @@ t11:
 	Defaults:
 		UseTilesetExtension: true
 		TilesetOverrides:
-			JUNGLE: TEMPERAT			INTERIOR: TEMPERAT
+			JUNGLE: TEMPERAT
+			INTERIOR: TEMPERAT
 	idle: tree2
 		Tick:120
 		Offset: -2,-5
@@ -313,7 +337,8 @@ t11.husk:
 	Defaults: t11
 		UseTilesetExtension: true
 		TilesetOverrides:
-			JUNGLE: TEMPERAT			INTERIOR: TEMPERAT
+			JUNGLE: TEMPERAT
+			INTERIOR: TEMPERAT
 	idle:
 		Start: 1
 	dead:
@@ -324,7 +349,8 @@ t10:
 	Defaults:
 		UseTilesetExtension: true
 		TilesetOverrides:
-			JUNGLE: TEMPERAT			INTERIOR: TEMPERAT
+			JUNGLE: TEMPERAT
+			INTERIOR: TEMPERAT
 	idle: tree1
 		Tick:120
 		Offset: 4,2 
@@ -332,7 +358,8 @@ t10.husk:
 	Defaults: t10
 		UseTilesetExtension: true
 		TilesetOverrides:
-			JUNGLE: TEMPERAT			INTERIOR: TEMPERAT
+			JUNGLE: TEMPERAT
+			INTERIOR: TEMPERAT
 	idle:
 		Start: 1
 	dead:
@@ -366,7 +393,8 @@ t08.husk:
 	Defaults: t08
 		UseTilesetExtension: true
 		TilesetOverrides:
-			JUNGLE: TEMPERAT			INTERIOR: TEMPERAT
+			JUNGLE: TEMPERAT
+			INTERIOR: TEMPERAT
 	idle:
 		Start: 1
 	dead:
@@ -377,7 +405,8 @@ t07:
 	Defaults:
 		UseTilesetExtension: true
 		TilesetOverrides:
-			JUNGLE: TEMPERAT			INTERIOR: TEMPERAT
+			JUNGLE: TEMPERAT
+			INTERIOR: TEMPERAT
 	idle: tree11
 		Tick:120
 		Offset: -5,4 
@@ -385,7 +414,8 @@ t07.husk:
 	Defaults: t07
 		UseTilesetExtension: true
 		TilesetOverrides:
-			JUNGLE: TEMPERAT			INTERIOR: TEMPERAT
+			JUNGLE: TEMPERAT
+			INTERIOR: TEMPERAT
 	idle:
 		Start: 1
 	dead:
@@ -396,7 +426,8 @@ t06b:
 	Defaults:
 		UseTilesetExtension: true
 		TilesetOverrides:
-			JUNGLE: TEMPERAT			INTERIOR: TEMPERAT
+			JUNGLE: TEMPERAT
+			INTERIOR: TEMPERAT
 	idle: tanne7
 		Tick:120
 		Offset: 5,-9		
@@ -404,7 +435,8 @@ t06a:
 	Defaults:
 		UseTilesetExtension: true
 		TilesetOverrides:
-			JUNGLE: TEMPERAT			INTERIOR: TEMPERAT
+			JUNGLE: TEMPERAT
+			INTERIOR: TEMPERAT
 	idle: tanne6
 		Tick:120
 		Offset: 0,-8 
@@ -412,7 +444,8 @@ t06:
 	Defaults:
 		UseTilesetExtension: true
 		TilesetOverrides:
-			JUNGLE: TEMPERAT			INTERIOR: TEMPERAT
+			JUNGLE: TEMPERAT
+			INTERIOR: TEMPERAT
 	idle: tanne5
 		Tick:120
 		Offset: 3,5 
@@ -420,7 +453,8 @@ t06.husk:
 	Defaults: t06
 		UseTilesetExtension: true
 		TilesetOverrides:
-			JUNGLE: TEMPERAT			INTERIOR: TEMPERAT
+			JUNGLE: TEMPERAT
+			INTERIOR: TEMPERAT
 	idle:
 		Start: 1
 	dead:
@@ -431,7 +465,8 @@ t05:
 	Defaults:
 		UseTilesetExtension: true
 		TilesetOverrides:
-			JUNGLE: TEMPERAT			INTERIOR: TEMPERAT
+			JUNGLE: TEMPERAT
+			INTERIOR: TEMPERAT
 	idle: tanne4
 		Tick:120
 		Offset: -2,-5 
@@ -439,7 +474,8 @@ t05.husk:
 	Defaults: t05
 		UseTilesetExtension: true
 		TilesetOverrides:
-			JUNGLE: TEMPERAT			INTERIOR: TEMPERAT
+			JUNGLE: TEMPERAT
+			INTERIOR: TEMPERAT
 	idle:
 		Start: 1
 	dead:
@@ -467,7 +503,8 @@ t03:
 	Defaults:
 		UseTilesetExtension: true
 		TilesetOverrides:
-			JUNGLE: TEMPERAT			INTERIOR: TEMPERAT
+			JUNGLE: TEMPERAT
+			INTERIOR: TEMPERAT
 	idle: tanne3
 		Tick:120
 		Offset: 4,0 
@@ -475,7 +512,8 @@ t03.husk:
 	Defaults: t03
 		UseTilesetExtension: true
 		TilesetOverrides:
-			JUNGLE: TEMPERAT			INTERIOR: TEMPERAT
+			JUNGLE: TEMPERAT
+			INTERIOR: TEMPERAT
 	idle:
 		Start: 1
 	dead:
@@ -486,7 +524,8 @@ t02:
 	Defaults:
 		UseTilesetExtension: true
 		TilesetOverrides:
-			JUNGLE: TEMPERAT			INTERIOR: TEMPERAT
+			JUNGLE: TEMPERAT
+			INTERIOR: TEMPERAT
 	idle: tanne2
 		Tick:120
 		Offset: -4,-6
@@ -494,7 +533,8 @@ t02.husk:
 	Defaults: t02
 		UseTilesetExtension: true
 		TilesetOverrides:
-			JUNGLE: TEMPERAT			INTERIOR: TEMPERAT
+			JUNGLE: TEMPERAT
+			INTERIOR: TEMPERAT
 	idle:
 		Start: 1
 	dead:
@@ -505,7 +545,8 @@ t01:
 	Defaults:
 		UseTilesetExtension: true
 		TilesetOverrides:
-			JUNGLE: TEMPERAT			INTERIOR: TEMPERAT
+			JUNGLE: TEMPERAT
+			INTERIOR: TEMPERAT
 	idle: tanne1
 		Tick:120
 		Offset: 0,4 
@@ -513,7 +554,8 @@ t01.husk:
 	Defaults: t01
 		UseTilesetExtension: true
 		TilesetOverrides:
-			JUNGLE: TEMPERAT			INTERIOR: TEMPERAT
+			JUNGLE: TEMPERAT
+			INTERIOR: TEMPERAT
 	idle:
 		Start: 1
 	dead:
@@ -524,7 +566,8 @@ v01:
 	Defaults:
 		UseTilesetExtension: true
 		TilesetOverrides:
-			JUNGLE: TEMPERAT			INTERIOR: TEMPERAT
+			JUNGLE: TEMPERAT
+			INTERIOR: TEMPERAT
 	idle:
 	damaged-idle:
 		Start: 1
@@ -533,12 +576,14 @@ v01.husk:
 		Start: 2
 		UseTilesetExtension: true
 		TilesetOverrides:
-			JUNGLE: TEMPERAT			INTERIOR: TEMPERAT
+			JUNGLE: TEMPERAT
+			INTERIOR: TEMPERAT
 v02:
 	Defaults:
 		UseTilesetExtension: true
 		TilesetOverrides:
-			JUNGLE: TEMPERAT			INTERIOR: TEMPERAT
+			JUNGLE: TEMPERAT
+			INTERIOR: TEMPERAT
 	idle:
 	damaged-idle:
 		Start: 1
@@ -547,12 +592,14 @@ v02.husk:
 		Start: 2
 		UseTilesetExtension: true
 		TilesetOverrides:
-			JUNGLE: TEMPERAT			INTERIOR: TEMPERAT
+			JUNGLE: TEMPERAT
+			INTERIOR: TEMPERAT
 v03:
 	Defaults:
 		UseTilesetExtension: true
 		TilesetOverrides:
-			JUNGLE: TEMPERAT			INTERIOR: TEMPERAT
+			JUNGLE: TEMPERAT
+			INTERIOR: TEMPERAT
 	idle:
 	damaged-idle:
 		Start: 1
@@ -561,12 +608,14 @@ v03.husk:
 		Start: 2
 		UseTilesetExtension: true
 		TilesetOverrides:
-			JUNGLE: TEMPERAT			INTERIOR: TEMPERAT
+			JUNGLE: TEMPERAT
+			INTERIOR: TEMPERAT
 v04:
 	Defaults:
 		UseTilesetExtension: true
 		TilesetOverrides:
-			JUNGLE: TEMPERAT			INTERIOR: TEMPERAT
+			JUNGLE: TEMPERAT
+			INTERIOR: TEMPERAT
 	idle:
 	damaged-idle:
 		Start: 1
@@ -575,12 +624,14 @@ v04.husk:
 		Start: 2
 		UseTilesetExtension: true
 		TilesetOverrides:
-			JUNGLE: TEMPERAT			INTERIOR: TEMPERAT
+			JUNGLE: TEMPERAT
+			INTERIOR: TEMPERAT
 v05:
 	Defaults:
 		UseTilesetExtension: true
 		TilesetOverrides:
-			JUNGLE: TEMPERAT			INTERIOR: TEMPERAT
+			JUNGLE: TEMPERAT
+			INTERIOR: TEMPERAT
 	idle:
 	damaged-idle:
 		Start: 1
@@ -589,12 +640,14 @@ v05.husk:
 		Start: 2
 		UseTilesetExtension: true
 		TilesetOverrides:
-			JUNGLE: TEMPERAT			INTERIOR: TEMPERAT
+			JUNGLE: TEMPERAT
+			INTERIOR: TEMPERAT
 v06:
 	Defaults:
 		UseTilesetExtension: true
 		TilesetOverrides:
-			JUNGLE: TEMPERAT			INTERIOR: TEMPERAT
+			JUNGLE: TEMPERAT
+			INTERIOR: TEMPERAT
 	idle:
 	damaged-idle:
 		Start: 1
@@ -603,12 +656,14 @@ v06.husk:
 		Start: 2
 		UseTilesetExtension: true
 		TilesetOverrides:
-			JUNGLE: TEMPERAT			INTERIOR: TEMPERAT
+			JUNGLE: TEMPERAT
+			INTERIOR: TEMPERAT
 v07:
 	Defaults:
 		UseTilesetExtension: true
 		TilesetOverrides:
-			JUNGLE: TEMPERAT			INTERIOR: TEMPERAT
+			JUNGLE: TEMPERAT
+			INTERIOR: TEMPERAT
 	idle:
 	damaged-idle:
 		Start: 2
@@ -617,12 +672,14 @@ v07.husk:
 		Start: 2
 		UseTilesetExtension: true
 		TilesetOverrides:
-			JUNGLE: TEMPERAT			INTERIOR: TEMPERAT
+			JUNGLE: TEMPERAT
+			INTERIOR: TEMPERAT
 v08:
 	Defaults:
 		UseTilesetExtension: true
 		TilesetOverrides:
-			JUNGLE: TEMPERAT			INTERIOR: TEMPERAT
+			JUNGLE: TEMPERAT
+			INTERIOR: TEMPERAT
 	idle:
 	damaged-idle:
 		Start: 1
@@ -631,12 +688,14 @@ v08.husk:
 		Start: 2
 		UseTilesetExtension: true
 		TilesetOverrides:
-			JUNGLE: TEMPERAT			INTERIOR: TEMPERAT
+			JUNGLE: TEMPERAT
+			INTERIOR: TEMPERAT
 v09:
 	Defaults:
 		UseTilesetExtension: true
 		TilesetOverrides:
-			JUNGLE: TEMPERAT			INTERIOR: TEMPERAT
+			JUNGLE: TEMPERAT
+			INTERIOR: TEMPERAT
 	idle:
 	damaged-idle:
 		Start: 1
@@ -645,12 +704,14 @@ v09.husk:
 		Start: 2
 		UseTilesetExtension: true
 		TilesetOverrides:
-			JUNGLE: TEMPERAT			INTERIOR: TEMPERAT
+			JUNGLE: TEMPERAT
+			INTERIOR: TEMPERAT
 v10:
 	Defaults:
 		UseTilesetExtension: true
 		TilesetOverrides:
-			JUNGLE: TEMPERAT			INTERIOR: TEMPERAT
+			JUNGLE: TEMPERAT
+			INTERIOR: TEMPERAT
 	idle:
 	damaged-idle:
 		Start: 1
@@ -659,12 +720,14 @@ v10.husk:
 		Start: 2
 		UseTilesetExtension: true
 		TilesetOverrides:
-			JUNGLE: TEMPERAT			INTERIOR: TEMPERAT
+			JUNGLE: TEMPERAT
+			INTERIOR: TEMPERAT
 v11:
 	Defaults:
 		UseTilesetExtension: true
 		TilesetOverrides:
-			JUNGLE: TEMPERAT			INTERIOR: TEMPERAT
+			JUNGLE: TEMPERAT
+			INTERIOR: TEMPERAT
 	idle:
 	damaged-idle:
 		Start: 1
@@ -673,12 +736,14 @@ v11.husk:
 		Start: 2
 		UseTilesetExtension: true
 		TilesetOverrides:
-			JUNGLE: TEMPERAT			INTERIOR: TEMPERAT
+			JUNGLE: TEMPERAT
+			INTERIOR: TEMPERAT
 v12:
 	Defaults:
 		UseTilesetExtension: true
 		TilesetOverrides:
-			JUNGLE: TEMPERAT			INTERIOR: TEMPERAT
+			JUNGLE: TEMPERAT
+			INTERIOR: TEMPERAT
 	idle:
 		ZOffset: -512
 	damaged-idle:
@@ -690,12 +755,14 @@ v12.husk:
 		ZOffset: -512
 		UseTilesetExtension: true
 		TilesetOverrides:
-			JUNGLE: TEMPERAT			INTERIOR: TEMPERAT
+			JUNGLE: TEMPERAT
+			INTERIOR: TEMPERAT
 v13:
 	Defaults:
 		UseTilesetExtension: true
 		TilesetOverrides:
-			JUNGLE: TEMPERAT			INTERIOR: TEMPERAT
+			JUNGLE: TEMPERAT
+			INTERIOR: TEMPERAT
 	idle:
 		ZOffset: -512
 	damaged-idle:
@@ -707,12 +774,14 @@ v13.husk:
 		ZOffset: -512
 		UseTilesetExtension: true
 		TilesetOverrides:
-			JUNGLE: TEMPERAT			INTERIOR: TEMPERAT
+			JUNGLE: TEMPERAT
+			INTERIOR: TEMPERAT
 v14:
 	Defaults:
 		UseTilesetExtension: true
 		TilesetOverrides:
-			JUNGLE: TEMPERAT			INTERIOR: TEMPERAT
+			JUNGLE: TEMPERAT
+			INTERIOR: TEMPERAT
 	idle:
 		ZOffset: -512
 	damaged-idle:
@@ -724,12 +793,14 @@ v14.husk:
 		ZOffset: -512
 		UseTilesetExtension: true
 		TilesetOverrides:
-			JUNGLE: TEMPERAT			INTERIOR: TEMPERAT
+			JUNGLE: TEMPERAT
+			INTERIOR: TEMPERAT
 v15:
 	Defaults:
 		UseTilesetExtension: true
 		TilesetOverrides:
-			JUNGLE: TEMPERAT			INTERIOR: TEMPERAT
+			JUNGLE: TEMPERAT
+			INTERIOR: TEMPERAT
 	idle:
 		ZOffset: -512
 	damaged-idle:
@@ -741,12 +812,14 @@ v15.husk:
 		ZOffset: -512
 		UseTilesetExtension: true
 		TilesetOverrides:
-			JUNGLE: TEMPERAT			INTERIOR: TEMPERAT
+			JUNGLE: TEMPERAT
+			INTERIOR: TEMPERAT
 v16:
 	Defaults:
 		UseTilesetExtension: true
 		TilesetOverrides:
-			JUNGLE: TEMPERAT			INTERIOR: TEMPERAT
+			JUNGLE: TEMPERAT
+			INTERIOR: TEMPERAT
 	idle:
 		ZOffset: -512
 	damaged-idle:
@@ -758,12 +831,14 @@ v16.husk:
 		ZOffset: -512
 		UseTilesetExtension: true
 		TilesetOverrides:
-			JUNGLE: TEMPERAT			INTERIOR: TEMPERAT
+			JUNGLE: TEMPERAT
+			INTERIOR: TEMPERAT
 v17:
 	Defaults:
 		UseTilesetExtension: true
 		TilesetOverrides:
-			JUNGLE: TEMPERAT			INTERIOR: TEMPERAT
+			JUNGLE: TEMPERAT
+			INTERIOR: TEMPERAT
 	idle:
 		ZOffset: -512
 	damaged-idle:
@@ -775,12 +850,14 @@ v17.husk:
 		ZOffset: -512
 		UseTilesetExtension: true
 		TilesetOverrides:
-			JUNGLE: TEMPERAT			INTERIOR: TEMPERAT
+			JUNGLE: TEMPERAT
+			INTERIOR: TEMPERAT
 v18:
 	Defaults:
 		UseTilesetExtension: true
 		TilesetOverrides:
-			JUNGLE: TEMPERAT			INTERIOR: TEMPERAT
+			JUNGLE: TEMPERAT
+			INTERIOR: TEMPERAT
 	idle:
 		ZOffset: -512
 	damaged-idle:
@@ -792,7 +869,8 @@ v18.husk:
 		ZOffset: -512
 		UseTilesetExtension: true
 		TilesetOverrides:
-			JUNGLE: TEMPERAT			INTERIOR: TEMPERAT
+			JUNGLE: TEMPERAT
+			INTERIOR: TEMPERAT
 v19:
 	idle:
 		Length: 14
@@ -1086,3 +1164,21 @@ arco:
 arco.husk:
 	idle: arco
 		Start: 1
+deadtree1:
+	idle: deadtree
+		Start: 0
+deadtree2:
+	idle: deadtree
+		Start: 1
+deadtree3:
+	idle: deadtree
+		Start: 2
+deadtree4:
+	idle: deadtree
+		Start: 3
+deadtree5:
+	idle: deadtree
+		Start: 4
+deadtree6:
+	idle: deadtree
+		Start: 5

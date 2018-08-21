@@ -105,3 +105,72 @@ MENU:
 	BodyOrientation:
 		QuantizedFacings: 1
 	#AutoSelectionSize:
+BUBBLE:
+	ConditionManager:
+	Interactable:
+	Immobile:
+		OccupiesSpace: false
+	RevealsShroud:
+		Range: 3c0
+		Type: CenterPosition
+	RenderSprites:
+		Image: bubble
+		Palette: swamp
+	WithSpriteBody:
+	WithDeathAnimation:
+		DeathPaletteIsPlayerPalette: false
+		DeathSequencePalette: swamp
+		UseDeathTypeSuffix: false
+		FallbackSequence: die
+	HiddenUnderFog:
+		Type: CenterPosition
+	BodyOrientation:
+		QuantizedFacings: 1
+	Health:
+		HP: 10
+	SelfHealing@valida:
+		PercentageStep: -60
+		Delay: 200
+		HealIfBelow: 101
+		DamageCooldown: 0
+		RequiresCondition: valida
+		DamageTypes: default
+	SelfHealing@validb:
+		PercentageStep: -60
+		Delay: 300
+		HealIfBelow: 101
+		DamageCooldown: 0
+		RequiresCondition: validb
+		DamageTypes: default
+	SelfHealing@validc:
+		PercentageStep: -60
+		Delay: 400
+		HealIfBelow: 101
+		DamageCooldown: 0
+		RequiresCondition: validc
+		DamageTypes: default
+	SelfHealing@validd:
+		PercentageStep: -60
+		Delay: 500
+		HealIfBelow: 101
+		DamageCooldown: 0
+		RequiresCondition: validd
+		DamageTypes: default
+	EditorTilesetFilter:
+		Categories: Tree
+	CombinEGrantRandomCondition:
+		RandomConditions: valida, validb, validc, validd
+		FallbackCondition: valida
+	#anti error fix
+	ExternalCondition@valida:
+		Condition: valida
+	#anti error fix
+	ExternalCondition@validb:
+		Condition: validb
+	#anti error fix
+	ExternalCondition@validc:
+		Condition: validc
+	#anti error fix
+	ExternalCondition@validd:
+		Condition: validd
+	HitShape:

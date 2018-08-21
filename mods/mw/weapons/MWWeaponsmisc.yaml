@@ -422,7 +422,7 @@ RottenKadaver:
 			MediumCavalry: 100
 			HeavyCavalry: 100
 			Spectral: 50
-		DamageTypes: PoisonDeath, KadaverDeath 
+		DamageTypes: KadarverDeath  
 	Warhead@rotten3: HealthPercentageDamage
 		Delay: 125
 		Spread: 2c215
@@ -440,7 +440,7 @@ RottenKadaver:
 			MediumCavalry: 100
 			HeavyCavalry: 100
 			Spectral: 50
-		DamageTypes: PoisonDeath, KadaverDeath 
+		DamageTypes: KadarverDeath  
 	Warhead@rotten4: HealthPercentageDamage
 		Delay: 175
 		Spread: 2c215
@@ -458,7 +458,7 @@ RottenKadaver:
 			MediumCavalry: 100
 			HeavyCavalry: 100
 			Spectral: 50
-		DamageTypes: PoisonDeath, KadaverDeath 
+		DamageTypes: KadarverDeath  
 	Warhead@rotten5: HealthPercentageDamage
 		Delay: 225
 		Spread: 2c215
@@ -476,7 +476,7 @@ RottenKadaver:
 			MediumCavalry: 100
 			HeavyCavalry: 100
 			Spectral: 50
-		DamageTypes: PoisonDeath, KadaverDeath 
+		DamageTypes: KadarverDeath  
 	Warhead@rotten6: HealthPercentageDamage
 		Delay: 275
 		Spread: 2c215
@@ -494,7 +494,7 @@ RottenKadaver:
 			MediumCavalry: 100
 			HeavyCavalry: 100
 			Spectral: 50
-		DamageTypes: PoisonDeath, KadaverDeath 
+		DamageTypes: KadarverDeath  
 	Warhead@rotten7: HealthPercentageDamage
 		Delay: 325
 		Spread: 2c215
@@ -512,7 +512,7 @@ RottenKadaver:
 			MediumCavalry: 100
 			HeavyCavalry: 100
 			Spectral: 50
-		DamageTypes: PoisonDeath, KadaverDeath 
+		DamageTypes: KadarverDeath  
 	Warhead@rotten8: HealthPercentageDamage
 		Delay: 375
 		Spread: 2c215
@@ -530,7 +530,7 @@ RottenKadaver:
 			MediumCavalry: 100
 			HeavyCavalry: 100
 			Spectral: 50
-		DamageTypes: PoisonDeath, KadaverDeath 
+		DamageTypes: KadarverDeath  
 	Warhead@rotten9: HealthPercentageDamage
 		Delay: 425
 		Spread: 2c215
@@ -548,7 +548,7 @@ RottenKadaver:
 			MediumCavalry: 100
 			HeavyCavalry: 100
 			Spectral: 50
-		DamageTypes: PoisonDeath, KadaverDeath 
+		DamageTypes: KadarverDeath  
 	Warhead@rotten10: HealthPercentageDamage
 		Delay: 475
 		Spread: 2c215
@@ -566,7 +566,7 @@ RottenKadaver:
 			MediumCavalry: 100
 			HeavyCavalry: 100
 			Spectral: 50
-		DamageTypes: PoisonDeath, KadaverDeath 
+		DamageTypes: KadarverDeath  
 	Warhead@1Dam: SpreadDamage
 		Spread: 1c0
 		Damage: 6000
@@ -621,7 +621,7 @@ SingleDeadKadaver:
 			MediumCavalry: 100
 			HeavyCavalry: 100
 			Spectral: 50
-		DamageTypes: PoisonDeath, KadaverDeath 
+		DamageTypes: KadarverDeath  
 	Warhead@rotten2: HealthPercentageDamage
 		Delay: 75
 		Spread: 2c215
@@ -639,7 +639,7 @@ SingleDeadKadaver:
 			MediumCavalry: 100
 			HeavyCavalry: 100
 			Spectral: 50
-		DamageTypes: PoisonDeath, KadaverDeath 
+		DamageTypes: KadarverDeath  
 	Warhead@rotten3: HealthPercentageDamage
 		Delay: 125
 		Spread: 2c215
@@ -657,7 +657,7 @@ SingleDeadKadaver:
 			MediumCavalry: 100
 			HeavyCavalry: 100
 			Spectral: 50
-		DamageTypes: PoisonDeath, KadaverDeath 
+		DamageTypes: KadarverDeath  
 	Warhead@rotten4: HealthPercentageDamage
 		Delay: 175
 		Spread: 2c215
@@ -675,7 +675,7 @@ SingleDeadKadaver:
 			MediumCavalry: 100
 			HeavyCavalry: 100
 			Spectral: 50
-		DamageTypes: PoisonDeath, KadaverDeath 
+		DamageTypes: KadarverDeath  
 	Warhead@rotten5: HealthPercentageDamage
 		Delay: 225
 		Spread: 2c215
@@ -693,7 +693,7 @@ SingleDeadKadaver:
 			MediumCavalry: 100
 			HeavyCavalry: 100
 			Spectral: 50
-		DamageTypes: PoisonDeath, KadaverDeath 
+		DamageTypes: KadarverDeath  
 	Warhead@rotten6: HealthPercentageDamage
 		Delay: 275
 		Spread: 2c215
@@ -711,7 +711,7 @@ SingleDeadKadaver:
 			MediumCavalry: 100
 			HeavyCavalry: 100
 			Spectral: 50
-		DamageTypes: PoisonDeath, KadaverDeath 
+		DamageTypes: KadarverDeath  
 	Warhead@rotten7: HealthPercentageDamage
 		Delay: 325
 		Spread: 2c215
@@ -729,7 +729,7 @@ SingleDeadKadaver:
 			MediumCavalry: 100
 			HeavyCavalry: 100
 			Spectral: 50
-		DamageTypes: PoisonDeath, KadaverDeath 
+		DamageTypes: KadarverDeath  
 	Warhead@rotten8: HealthPercentageDamage
 		Delay: 375
 		Spread: 2c215
@@ -747,7 +747,7 @@ SingleDeadKadaver:
 			MediumCavalry: 100
 			HeavyCavalry: 100
 			Spectral: 50
-		DamageTypes: PoisonDeath, KadaverDeath 		
+		DamageTypes: KadarverDeath  		
 	Warhead@rotten9: HealthPercentageDamage
 		Delay: 425
 		Spread: 2c215
@@ -765,7 +765,7 @@ SingleDeadKadaver:
 			MediumCavalry: 100
 			HeavyCavalry: 100
 			Spectral: 50
-		DamageTypes: PoisonDeath, KadaverDeath 	
+		DamageTypes: KadarverDeath  	
 	Warhead@2Eff: CreateEffect
 		Explosions: rottk1,rottk2,rottk3
 		Delay: 10
@@ -1221,7 +1221,7 @@ BowNArrowHunterOnWater:
 	MinRange: 0c0
 	Report: arrow01.aud, arrow02.aud, arrow02.aud
 	InvalidTargets: Wall, Air
-	ValidTargets: Wildlife
+	ValidTargets: fish
 	Projectile: Missile
 		HorizontalRateOfTurn: 455
 		RangeLimit: 12c0
@@ -1231,7 +1231,7 @@ BowNArrowHunterOnWater:
 	Warhead@1Dam: SpreadDamage
 		Spread: 25
 		InvalidTargets: Wall, Air
-		ValidTargets: Wildlife
+		ValidTargets: fish
 		Damage: 2500
 		Versus:
 			Leather: 100

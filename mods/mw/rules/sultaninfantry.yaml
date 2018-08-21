@@ -303,7 +303,7 @@ SULE6:
 	WithDockingAnimation:
 	-WithInfantryBody:
 	WithMoveAnimation:
-		MoveSequence: run
+		MoveSequence: move
 	Valued:
 		Cost: 250
 	Tooltip:
