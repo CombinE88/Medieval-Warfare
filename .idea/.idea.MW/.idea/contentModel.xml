@@ -27,7 +27,7 @@
           <e p="FieldLoader.cs" t="Include" />
           <e p="FieldSaver.cs" t="Include" />
           <e p="FileFormats" t="Include">
-            <e p="PngLoader.cs" t="Include" />
+            <e p="Png.cs" t="Include" />
             <e p="ReplayMetadata.cs" t="Include" />
           </e>
           <e p="FileSystem" t="Include">
@@ -547,6 +547,7 @@
           </e>
           <e p="ShroudExts.cs" t="Include" />
           <e p="SpriteLoaders" t="Include">
+            <e p="PngSheetLoader.cs" t="Include" />
             <e p="ShpD2Loader.cs" t="Include" />
             <e p="ShpTDLoader.cs" t="Include" />
             <e p="ShpTSLoader.cs" t="Include" />
@@ -945,6 +946,7 @@
               <e p="PaletteFromGimpOrJascFile.cs" t="Include" />
               <e p="PaletteFromPaletteWithAlpha.cs" t="Include" />
               <e p="PaletteFromPlayerPaletteWithAlpha.cs" t="Include" />
+              <e p="PaletteFromPng.cs" t="Include" />
               <e p="PaletteFromRGBA.cs" t="Include" />
               <e p="PathFinder.cs" t="Include" />
               <e p="RadarPings.cs" t="Include" />
@@ -1050,6 +1052,8 @@
             <e p="OutputResolvedRulesCommand.cs" t="Include" />
             <e p="OutputResolvedSequencesCommand.cs" t="Include" />
             <e p="OutputResolvedWeaponsCommand.cs" t="Include" />
+            <e p="PngSheetExportMetadataCommand.cs" t="Include" />
+            <e p="PngSheetImportMetadataCommand.cs" t="Include" />
             <e p="RemapShpCommand.cs" t="Include" />
             <e p="ReplayMetadataCommand.cs" t="Include" />
             <e p="ResizeMapCommand.cs" t="Include" />
