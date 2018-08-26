@@ -209,10 +209,6 @@
 		BaseName: sulwallplayer
 		RemapIndex: 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 3
 		AllowModifiers: true
-	RotationPaletteEffect@water:
-		ExcludePalettes: effect, chrome, raplayer, ra, raicon, grain, mwcivilian, mwnobles, sul, sultanplayer, grimalpha, grimprojalpha, undeadalpha, undeadplayer, undead, swamp, swamproads, terrainmw, roadsmw, rivermw
-		RotationBase: 32
-		ExcludeTilesets: INTERIOR
 	FlashPaletteEffect:
 		ExcludePalettes: raplayer, ra, raicon, grain, mwcivilian, mwnobles, sul, sultanplayer, grimalpha, grimprojalpha, undeadalpha, undeadplayer, undead
 	PaletteFromFile@Menu:
@@ -311,6 +307,14 @@
 		Name: rivermw
 		Filename: river.png
 		Tileset: TEMPERAT
+	PaletteFromPng@watercliffsmw:
+		Name: watercliffsmw
+		Filename: watercliffs.png
+		Tileset: TEMPERAT
+	PaletteFromPng@Shores:
+		Name: shores
+		Filename: shores.png
+		Tileset: TEMPERAT
 	RotationPaletteEffect@rivermwrotation:
-		Palettes: rivermw
+		Palettes: rivermw, watercliffsmw, shoresmw
 		RotationBase: 249
