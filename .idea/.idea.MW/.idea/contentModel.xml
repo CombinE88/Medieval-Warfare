@@ -926,6 +926,7 @@
               <e p="EditorResourceLayer.cs" t="Include" />
               <e p="EditorSculptureLayer.cs" t="Include" />
               <e p="EditorSelectionLayer.cs" t="Include" />
+              <e p="EditorUndoRedoLayer.cs" t="Include" />
               <e p="ElevatedBridgeLayer.cs" t="Include" />
               <e p="ElevatedBridgePlaceholder.cs" t="Include" />
               <e p="ExitsDebugOverlayManager.cs" t="Include" />

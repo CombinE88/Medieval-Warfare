@@ -415,3 +415,4 @@ EditorWorld:
 	Sculptlayer:
 	TerrainPassableOverlay:
 		CheckOnBuilding: factnew
+	EditorUndoRedoLayer:
