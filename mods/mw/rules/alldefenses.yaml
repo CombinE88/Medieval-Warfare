@@ -22,10 +22,11 @@ GTWNEW:
 	RevealsShroud:
 		Range: 7c0
 	WithBuildingBib:
+		Palette: bibs
 		HasMinibib: Yes
 	WithIdleOverlay:
 	AttackTurreted:
-		Armaments: primary, secondary, primarydummy, secondarydummy
+		Armaments: primary, secondary
 	BodyOrientation:
 		QuantizedFacings: 8
 	DetectCloaked:
@@ -35,11 +36,7 @@ GTWNEW:
 		LocalOffset: 0,0,427
 		Turret: primary
 		Name: primary
-	Armament@ONEDUMMY:
-		Weapon: BowNArrowTowerDUMMY
-		LocalOffset: 0,0,427
-		Turret: primary
-		Name: primarydummy
+		FireDelay: 5
 	WithSpriteTurret@SPRITURRONE: 
 		Sequence: turretidle
 		Turret: primary
@@ -55,14 +52,8 @@ GTWNEW:
 		Weapon: bownarrowtower
 		LocalOffset: 0,0,427
 		Turret: secondary
-		FireDelay: 12
+		FireDelay: 17
 		Name: secondary
-	Armament@TWODUMMY:
-		Weapon: BowNArrowTowerDUMMY
-		LocalOffset: 0,0,427
-		Turret: secondary
-		FireDelay: 12
-		Name: secondarydummy
 	WithSpriteTurret@SPRITURRTWO: 
 		Sequence: turretidle
 		Turret: secondary
@@ -110,6 +101,7 @@ SAMNEW:
 	RevealsShroud:
 		Range: 8c0
 	WithBuildingBib:
+		Palette: bibs
 		HasMinibib: Yes
 	Armament@1:
 		Weapon: samballista
@@ -152,6 +144,7 @@ TRIBU:
 	RevealsShroud:
 		Range: 8c0
 	WithBuildingBib:
+		Palette: bibs
 		HasMinibib: Yes
 	Armament:
 		Weapon: tribuchetboulder
@@ -205,6 +198,7 @@ BATO:
 	RevealsShroud:
 		Range: 8c0
 	WithBuildingBib:
+		Palette: bibs
 		HasMinibib: Yes
 	Armament@1:
 		Weapon: stationbalistaag
@@ -267,6 +261,7 @@ GUNNEW:
 	RevealsShroud:
 		Range: 6c0
 	WithBuildingBib:
+		Palette: bibs
 		HasMinibib: Yes
 	Turreted:
 		TurnSpeed: 12
@@ -394,6 +389,7 @@ CSTLGTEW:
 	RevealsShroud:
 		Range: 5c0
 	WithBuildingBib:
+		Palette: bibs
 	BodyOrientation:
 		QuantizedFacings: 1
 	Armor:
@@ -494,6 +490,7 @@ SIEGETRIBU:
 	RevealsShroud:
 		Range: 4c0
 	WithBuildingBib:
+		Palette: bibs
 		HasMinibib: Yes
 	Armament:
 		Weapon: HighTribuchetBoulder
@@ -565,6 +562,7 @@ SIEGETRIBU.scaff:
 	RevealsShroud:
 		Range: 4c0
 	WithBuildingBib:
+		Palette: bibs
 		HasMinibib: Yes
 	Selectable:
 		Bounds: 30,52,0,-12
@@ -631,6 +629,7 @@ SIEGETRIBU.reversescaff:
 	RevealsShroud:
 		Range: 4c0
 	WithBuildingBib:
+		Palette: bibs
 		HasMinibib: Yes
 	Selectable:
 		Bounds: 30,52,0,-12

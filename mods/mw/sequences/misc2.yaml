@@ -171,6 +171,11 @@ smbllbolt:
 e4arrow:	  
 	idle: arrow
 		Facings: 32
+arrowbroken:	  
+	idle: arrowbroken
+		ZOffset: 1024
+		Length: 18
+		Tick: 100
 firearrow:	  
 	idle: arrow
 		Start: 33

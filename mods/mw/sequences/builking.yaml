@@ -10,9 +10,10 @@ nukenew:
 	make: nukenewmake
 		Length: *
 		Tick: 80
-	bib: bib3
-		UseTilesetExtension: true
-		Length: *
+	bib: buildingbibs.png
+		Frames: 4,5,10,11
+		Length: 4
+		AddExtension: false
 	icon: nukenewicon.shp
 		AddExtension: False
 	make1: nukenewmake
@@ -45,9 +46,10 @@ nuk2new:
 	make: nuk2newmake
 		Length: *
 		Tick: 80
-	bib: mwbib3
-		UseTilesetExtension: true
-		Length: *
+	bib: buildingbibs.png
+		Frames: 4,5,10,11
+		Length: 4
+		AddExtension: false
 	icon: nuk2newicon.shp
 		AddExtension: False
 	make1: nuk2newmake
@@ -78,9 +80,10 @@ nukxl:
 		Length: 6
 		Tick: 80
 		Offset: 0,-12
-	bib: mwbib2
-		UseTilesetExtension: true
-		Length: *
+	bib: buildingbibs.png
+		Frames: 15,16,17,21,22,23
+		Length: 6
+		AddExtension: false
 	icon: nukxlicon.shp
 		AddExtension: False
 	make1: 
@@ -125,9 +128,10 @@ windmill:
 		Length: *
 		Tick: 80
 		Offset: 0,-5
-	bib: bib3
-		UseTilesetExtension: true
-		Length: *
+	bib: buildingbibs.png
+		Frames: 4,5,10,11
+		Length: 4
+		AddExtension: false
 	icon: winmillicon.shp
 		AddExtension: False
 	make1: windmillmake
@@ -167,9 +171,10 @@ barrnew:
 	make: barrnewmake
 		Length: *
 		Tick: 80
-	bib: mwbib3
-		UseTilesetExtension: true
-		Length: *
+	bib: buildingbibs.png
+		Frames: 24,25,30,31
+		Length: 4
+		AddExtension: false
 	icon: barracksicon.shp
 		AddExtension: False
 	make1: barrnewmake
@@ -205,9 +210,10 @@ stall:
 		Start: 9
 		Length: 9
 		ZOffset: -1024
-	bib: mwbib2
-		UseTilesetExtension: true
-		Length: *
+	bib: buildingbibs.png
+		Frames: 15,16,17,21,22,23
+		Length: 6
+		AddExtension: false
 	icon: stallicon.shp
 		AddExtension: False	
 	make1: stallmake
@@ -248,9 +254,10 @@ gdifix:
 		Length: 32
 		Tick: 80
 		Offset: 0, -12
-	bib: bib2
-		UseTilesetExtension: true
-		Length: *
+	bib: buildingbibs.png
+		Frames: 12,13,14,18,19,20
+		Length: 6
+		AddExtension: false
 	icon: workshopicon.shp
 		AddExtension: False  
 	make1: 
@@ -295,9 +302,10 @@ obs:
 	make: obsmake
 		Length: *
 		Tick: 80
-	bib: mwbib3
-		UseTilesetExtension: true
-		Length: *
+	bib: buildingbibs.png
+		Frames: 24,25,30,31
+		Length: 4
+		AddExtension: false
 	icon: obsicon.shp
 		AddExtension: False
 	make1: obsmake
@@ -336,9 +344,10 @@ castle2:
 		Offset: 0,-12,0
 		Length: *
 		Tick: 80
-	bib: mwbib2
-		UseTilesetExtension: true
-		Length: *
+	bib: buildingbibs.png
+		Frames: 15,16,17,21,22,23
+		Length: 6
+		AddExtension: false
 	icon: castle2icon.shp
 		AddExtension: False 
 	active: castle2anim

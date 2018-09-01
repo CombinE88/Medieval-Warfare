@@ -171,6 +171,7 @@ ZIGGURAT1:
 	RevealsShroud:
 		Range: 10c0
 	WithBuildingBib:
+		Palette: bibs
 	Production:
 		Produces: MBuilding.ded, MResources.ded, MMilitary.ded, Building4.ded
 	ProductionQueue@DeadMBuilding:
@@ -669,6 +670,7 @@ SPPOOL:
 		Bounds: 48,48,0,0
 	SelectionDecorations:
 	WithBuildingBib:
+		Palette: bibs
 	WithMakeAnimation:
 	ShakeOnCreate:
 		Time: 55
@@ -742,6 +744,7 @@ CRYPT:
 		Bounds: 48,48,0,0
 	SelectionDecorations:
 	WithBuildingBib:
+		Palette: bibs
 	WithMakeAnimation:
 	ShakeOnCreate:
 		Time: 50
@@ -799,6 +802,7 @@ MAUSO:
 		Bounds: 50,50,0,-2
 	SelectionDecorations:
 	WithBuildingBib:
+		Palette: bibs
 	WithMakeAnimation:
 	ShakeOnCreate:
 		Time: 55
@@ -876,6 +880,7 @@ LIBRA:
 		Bounds: 50,50,0,-2
 	SelectionDecorations:
 	WithBuildingBib:
+		Palette: bibs
 	WithMakeAnimation:
 	ShakeOnCreate:
 		Time: 55
@@ -931,6 +936,7 @@ TOMB:
 		Bounds: 72,50,0,-5
 	SelectionDecorations:
 	WithBuildingBib:
+		Palette: bibs
 	WithMakeAnimation:
 	ShakeOnCreate:
 		Time: 55
@@ -976,6 +982,7 @@ HELLGATE:
 		Bounds: 72,52,0,-4
 	SelectionDecorations:
 	WithBuildingBib:
+		Palette: bibs
 	WithMakeAnimation:
 	ShakeOnCreate:
 		Time: 150
@@ -1008,6 +1015,7 @@ DEDREF:
 		Bounds: 50,72,0,-12
 	SelectionDecorations:
 	WithBuildingBib:
+		Palette: bibs
 	WithMakeAnimation:
 	ShakeOnCreate:
 		Time: 30
@@ -1237,6 +1245,7 @@ GARG:
 	RevealsShroud:
 		Range: 8c0
 	WithBuildingBib:
+		Palette: bibs
 		HasMinibib: Yes
 	Armament@1:
 		Weapon: GargAttack

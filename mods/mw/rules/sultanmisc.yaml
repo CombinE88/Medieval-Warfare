@@ -36,7 +36,7 @@ SULB0:
 	Targetable:
 		TargetTypes: Ground, Cavalry
 	AttackTurreted:
-		Armaments: primary, secondary, primarydummy, secondarydummy, primaryair, secondaryair
+		Armaments: primary, secondary, primaryair, secondaryair
 	-ThrowsShrapnel@SMALL:
 	WithDeathAnimation:
 		DeathSequencePalette: raplayer
@@ -73,17 +73,6 @@ SULB0:
 		Turret: secondary
 		FireDelay: 10
 		Name: secondary
-	Armament@1DUMMY:
-		Weapon: BowNArrowSiegeTowerDUMMY
-		LocalOffset: 0,0,427
-		Turret: primary
-		Name: primarydummy
-	Armament@2DUMMY:
-		Weapon: BowNArrowSiegeTowerDUMMY
-		LocalOffset: 0,0,427
-		Turret: secondary
-		FireDelay: 10	
-		Name: secondarydummy
 	Armament@1@Air:
 		Weapon: BowNArrowSiegeTowerAIR
 		LocalOffset: 0,0,427

@@ -174,14 +174,12 @@ E4NEW:
 		Weapon: bownarrowMarksman
 		LocalOffset: 341,0,456
 		Name: Primary
-	Armament@DUMMY:
-		Weapon: BowNArrowDUMMYMarksman
-		LocalOffset: 341,0,456
-		Name: Primary
+		FireDelay: 5
 	Armament@Air:
 		Weapon: bownarrowairMarksman
 		LocalOffset: 341,0,456
 		Name: Primary
+		FireDelay: 5
 	Armament@Debuffapply:
 		Weapon: BowNArrowDebuff
 		LocalOffset: 341,20,356

@@ -103,6 +103,7 @@ FACTNEW:
 	RevealsShroud:
 		Range: 10c0
 	WithBuildingBib:
+		Palette: bibs
 	Production:
 		Produces: MBuilding.GDI, MBuilding.Nod, MTech.GDI, MTech.Nod, MBuilding.SUL, MTech.SUL, MResources.GDI, MResources.Nod,MMilitary.GDI, MMilitary.Nod,MResources.SUL, MMilitary.SUL, Building4.SUL, Building4.Nod, Building4.GDI
 	ProductionQueue@GDIMBuilding:
@@ -362,6 +363,7 @@ PROCNEW:
 	RevealsShroud:
 		Range: 6c0
 	WithBuildingBib:
+		Palette: bibs
 	Refinery:
 		DockAngle: 72
 		DockOffset: 2,2
@@ -406,6 +408,7 @@ SILONEW:
 	RevealsShroud:
 		Range: 4c0
 	WithBuildingBib:
+		Palette: bibs
 		HasMinibib: Yes
 	WithDeathAnimation:
 		DeathSequencePalette: raplayer
@@ -445,6 +448,7 @@ SILOTWO:
 	RevealsShroud:
 		Range: 4c0
 	WithBuildingBib:
+		Palette: bibs
 		HasMinibib: Yes
 	WithDeathAnimation:
 		DeathSequencePalette: raplayer
@@ -670,6 +674,7 @@ TECH1:
 	AutoTarget:
 	RenderRangeCircle:
 	WithBuildingBib:
+		Palette: bibs
 TECH1.Husk:
 	Inherits:^TechBuilding
 	Inherits@Hitshape: ^3x2Shape
@@ -696,6 +701,7 @@ TECH1.Husk:
 	Tooltip:
 		Name: Mortar Station (Destroyed)
 	WithBuildingBib:
+		Palette: bibs
 ANYARMORY:
 	AlwaysVisible:
 	Interactable:
@@ -916,6 +922,7 @@ LODGE:
 	RevealsShroud:
 		Range: 7c0
 	WithBuildingBib:
+		Palette: bibs
 	Targetable@Lodge:
 		TargetTypes: HunterLodge
 	Selectable:

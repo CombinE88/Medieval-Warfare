@@ -148,9 +148,10 @@ lodge:
 		Length: *
 		Tick: 80
 		Offset: 0,-12
-	bib: bib3
-		UseTilesetExtension: true
-		Length: *
+	bib: buildingbibs.png
+		Frames: 4,5,10,11
+		Length: 4
+		AddExtension: false
 	icon: lodgeicon.shp
 		AddExtension: False
 	make1: 
@@ -183,9 +184,10 @@ procnew:
 		Length: *
 		Tick: 80
 		Offset: 2,4
-	bib: mwbib2
-		UseTilesetExtension: true
-		Length: *
+	bib: buildingbibs.png
+		Frames: 15,16,17,21,22,23
+		Length: 6
+		AddExtension: false
 	icon: refnewicon.shp
 		AddExtension: False
 	make1: procnewmake
@@ -233,9 +235,10 @@ wtentt:
 	make: wtenttmake
 		Length: *
 		Tick: 120
-	bib: bib2
-		UseTilesetExtension: true
-		Length: *
+	bib: buildingbibs.png
+		Frames: 12,13,14,18,19,20
+		Length: 6
+		AddExtension: false
 	icon: keepicon.shp
 		AddExtension: False
 newfact:
@@ -313,9 +316,10 @@ newfact:
 		Length: *
 		Tick: 120
 		Offset: 0, -12
-	bib: mwbib2
-		UseTilesetExtension: true
-		Length: *
+	bib: buildingbibs.png
+		Frames: 15,16,17,21,22,23
+		Length: 6
+		AddExtension: false
 	icon: keepicon.shp
 		AddExtension: False
 nodfact:
@@ -393,9 +397,10 @@ nodfact:
 		Length: *
 		Tick: 120
 		Offset: 0, -12
-	bib: mwbib2
-		UseTilesetExtension: true
-		Length: *
+	bib: buildingbibs.png
+		Frames: 15,16,17,21,22,23
+		Length: 6
+		AddExtension: false
 	icon: keepicon.shp
 		AddExtension: False
 sulfact:
@@ -473,9 +478,10 @@ sulfact:
 		Length: *
 		Tick: 120
 		Offset: 0, -12
-	bib: mwbib2
-		UseTilesetExtension: true
-		Length: *
+	bib: buildingbibs.png
+		Frames: 15,16,17,21,22,23
+		Length: 6
+		AddExtension: false
 	icon: keepicon.shp
 		AddExtension: False
 ziggurat1:
@@ -493,9 +499,10 @@ ziggurat1:
 		Length: 25
 		Tick: 200
 		Offset: 0,-24
-	bib: bib1
-		UseTilesetExtension: true
-		Length: *
+	bib: buildingbibs.png
+		Frames: 0,1,2,3,6,7,8,9
+		Length: 8
+		AddExtension: false
 	icon: ziggurat1icon.shp
 		AddExtension: False
 ziggurat2:
@@ -513,9 +520,10 @@ ziggurat2:
 		Length: 25
 		Tick: 200
 		Offset: 0,-24
-	bib: bib1
-		UseTilesetExtension: true
-		Length: *
+	bib: buildingbibs.png
+		Frames: 0,1,2,3,6,7,8,9
+		Length: 8
+		AddExtension: false
 	icon: ziggurat2icon.shp
 		AddExtension: False	
 ziggurat3:
@@ -536,9 +544,10 @@ ziggurat3:
 		Length: 25
 		Tick: 200
 		Offset: 0,-24
-	bib: bib1
-		UseTilesetExtension: true
-		Length: *
+	bib: buildingbibs.png
+		Frames: 0,1,2,3,6,7,8,9
+		Length: 8
+		AddExtension: false
 	icon: ziggurat3icon.shp
 		AddExtension: False
 barn:
@@ -562,13 +571,10 @@ barn:
 		Length: *
 		Tick: 80
 		Offset: 0,-12
-	bib: mbSILO
-		UseTilesetExtension: true
-		TilesetOverrides:
-			WINTER: TEMPERAT
-			JUNGLE: TEMPERAT
-			INTERIOR: TEMPERAT
-		Length: *
+	bib: buildingbibs.png
+		Frames: 37,38
+		AddExtension: false
+		Length: 2
 	icon: barnicon.shp
 		AddExtension: False
 	make1: barnmake
@@ -618,9 +624,10 @@ tech1:
 	idle: techbuilding1
 	damaged-idle: techbuilding1
 		Start: 1
-	bib: mwbib2
-		UseTilesetExtension: true
-		Length: *
+	bib: buildingbibs.png
+		Frames: 15,16,17,21,22,23
+		Length: 6
+		AddExtension: false
 	turret: techbuilding1turret
 		Facings: 32
 	muzzle: gunfire2
@@ -628,9 +635,10 @@ tech1:
 tech1.husk:
 	idle: techbuilding1
 		Start: 2
-	bib: mwbib2
-		UseTilesetExtension: true
-		Length: *
+	bib: buildingbibs.png
+		Frames: 15,16,17,21,22,23
+		Length: 6
+		AddExtension: false
 bacamp:
 	idle: 
 	damaged-idle: 

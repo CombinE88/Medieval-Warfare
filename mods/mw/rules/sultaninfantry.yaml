@@ -132,10 +132,6 @@ SULE3:
 		Weapon: BedouinBow
 		LocalOffset: 341,20,356
 		Name: Primary
-	Armament@DUMMY:
-		Weapon: BedouinBowDUMMY
-		LocalOffset: 341,20,356
-		Name: Primary
 	Armament@Air:
 		Weapon: BedouinBowAir
 		LocalOffset: 341,20,356

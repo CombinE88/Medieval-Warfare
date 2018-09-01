@@ -378,7 +378,7 @@ SIEGE3:
 		Actor: SIEGERUNNER
 		Probability: 50
 	AttackTurreted:
-		Armaments: primary, secondary, tritiary, primarydummy, secondarydummy, tritiarydummy, primaryair, secondaryair, tritiaryair
+		Armaments: primary, secondary, tritiary, primaryair, secondaryair, tritiaryair
 	WithSpriteTurret@1: 
 		Sequence: turretidle
 		Turret: primary
@@ -433,51 +433,36 @@ SIEGE3:
 		LocalOffset: 0,0,427
 		Turret: primary
 		Name: primary
+		FireDelay: 5
 	Armament@2:
 		Weapon: BowNArrowSiegeTower
 		LocalOffset: 0,0,427
 		Turret: secondary
-		FireDelay: 15
+		FireDelay: 20
 		Name: secondary
 	Armament@3:
 		Weapon: BowNArrowSiegeTower
 		LocalOffset: 0,0,427
 		Turret: tritiary
-		FireDelay: 30
+		FireDelay: 35
 		Name: tritiary
-	Armament@1DUMMY:
-		Weapon: BowNArrowSiegeTowerDUMMY
-		LocalOffset: 0,0,427
-		Turret: primary
-		Name: primarydummy
-	Armament@2DUMMY:
-		Weapon: BowNArrowSiegeTowerDUMMY
-		LocalOffset: 0,0,427
-		Turret: secondary
-		FireDelay: 15
-		Name: secondarydummy
-	Armament@3DUMMY:
-		Weapon: BowNArrowSiegeTowerDUMMY
-		LocalOffset: 0,0,427
-		Turret: tritiary
-		FireDelay: 30
-		Name: tritiarydummy
 	Armament@1AIR:
 		Weapon: BowNArrowSiegeTowerAIR
 		LocalOffset: 0,0,427
 		Turret: primary
 		Name: primaryair
+		FireDelay: 5
 	Armament@2AIR:
 		Weapon: BowNArrowSiegeTowerAIR
 		LocalOffset: 0,0,427
 		Turret: secondary
-		FireDelay: 15
+		FireDelay: 20
 		Name: secondaryair
 	Armament@3AIR:
 		Weapon: BowNArrowSiegeTowerAIR
 		LocalOffset: 0,0,427
 		Turret: tritiary
-		FireDelay: 30
+		FireDelay: 35
 		Name: tritiaryair
 	PersonValued:
 		ActorCount: 3

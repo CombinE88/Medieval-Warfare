@@ -10,9 +10,10 @@ sulnuke:
 	make: sulnukemake
 		Length: *
 		Tick: 80
-	bib: mwbib3
-		UseTilesetExtension: true
-		Length: *
+	bib: buildingbibs.png
+		Frames: 24,25,30,31
+		Length: 4
+		AddExtension: false
 	icon: sulnukeicon.shp
 		AddExtension: False 
 	make1: sulnukemake
@@ -49,9 +50,10 @@ sulnuk2:
 		Length: *
 		Tick: 80
 		Offset: 0,-15
-	bib: mwbib2
-		UseTilesetExtension: true
-		Length: *
+	bib: buildingbibs.png
+		Frames: 15,16,17,21,22,23
+		Length: 6
+		AddExtension: false
 	icon: sulnuk2icon.shp
 		AddExtension: False 
 	make1: sulnuk2make
@@ -98,9 +100,10 @@ sulmill:
 		Length: *
 		Tick: 80
 		Offset: 12,-12,0
-	bib: bib3
-		UseTilesetExtension: true
-		Length: *
+	bib: buildingbibs.png
+		Frames: 4,5,10,11
+		Length: 4
+		AddExtension: false
 	icon: sulmillicon.shp
 		AddExtension: False 
 	make1: sulmilmake
@@ -138,9 +141,10 @@ sulref:
 		Length: 5
 		Tick: 80
 		Offset: 2,4
-	bib: mwbib2
-		UseTilesetExtension: true
-		Length: *
+	bib: buildingbibs.png
+		Frames: 15,16,17,21,22,23
+		Length: 6
+		AddExtension: false
 	icon: sulreficon.shp
 		AddExtension: False
 	make1: 
@@ -183,9 +187,10 @@ sullodge:
 		Length: *
 		Tick: 80
 		Offset: 0,-12
-	bib: mwbib3
-		UseTilesetExtension: true
-		Length: *
+	bib: buildingbibs.png
+		Frames: 24,25,30,31
+		Length: 4
+		AddExtension: false
 	icon: sullodgeicon.shp
 		AddExtension: False
 	make1: 
@@ -216,9 +221,10 @@ sulbarr:
 	make: 
 		Length: 29
 		Tick: 80
-	bib: mwbib2
-		UseTilesetExtension: true
-		Length: *
+	bib: buildingbibs.png
+		Frames: 15,16,17,21,22,23
+		Length: 6
+		AddExtension: false
 	icon: sulbarricon.shp
 		AddExtension: False 
 	make1: sulbarrmake
@@ -252,9 +258,10 @@ sulmystic:
 		Length: 29
 		Tick: 80
 		Offset: 12,-24,0
-	bib: mwbib2
-		UseTilesetExtension: true
-		Length: *
+	bib: buildingbibs.png
+		Frames: 15,16,17,21,22,23
+		Length: 6
+		AddExtension: false
 	icon: sulmysticicon.shp
 		AddExtension: False 
 	make1: 
@@ -297,9 +304,10 @@ sulcastle:
 		Length: 25
 		Tick: 80
 		Offset: 0,-18
-	bib: mwbib2
-		UseTilesetExtension: true
-		Length: *
+	bib: buildingbibs.png
+		Frames: 15,16,17,21,22,23
+		Length: 6
+		AddExtension: false
 	icon: sulcastleicon.shp
 		AddExtension: False 
 	tower1: sultow1
@@ -394,9 +402,10 @@ sultow1:
 		Length: 28
 		Tick: 80
 		Offset: 0, -36
-	bib: bib2
-		UseTilesetExtension: true
-		Length: *
+	bib: buildingbibs.png
+		Frames: 12,13,14,18,19,20
+		Length: 6
+		AddExtension: false
 	icon: sultow1icon.shp
 		AddExtension: False 
 sultow2:
@@ -421,9 +430,10 @@ sultow2:
 		Length: 28
 		Tick: 80
 		Offset: 0, -36
-	bib: bib2
-		UseTilesetExtension: true
-		Length: *
+	bib: buildingbibs.png
+		Frames: 12,13,14,18,19,20
+		Length: 6
+		AddExtension: false
 	icon: sultow2icon.shp
 		AddExtension: False
 sultow3:
@@ -448,9 +458,10 @@ sultow3:
 		Length: 28
 		Tick: 80
 		Offset: 0, -36
-	bib: bib2
-		UseTilesetExtension: true
-		Length: *
+	bib: buildingbibs.png
+		Frames: 12,13,14,18,19,20
+		Length: 6
+		AddExtension: false
 	icon: sultow3icon.shp
 		AddExtension: False
 sultow4:
@@ -481,9 +492,10 @@ sultow4:
 		Length: 28
 		Tick: 80
 		Offset: 0, -36
-	bib: bib2
-		UseTilesetExtension: true
-		Length: *
+	bib: buildingbibs.png
+		Frames: 12,13,14,18,19,20
+		Length: 6
+		AddExtension: false
 	icon: sultow4icon.shp
 		AddExtension: False
 sulfix:
@@ -510,9 +522,10 @@ sulfix:
 		Length: 30
 		Tick: 80
 		Offset: 0, -12
-	bib: bib2
-		UseTilesetExtension: true
-		Length: *
+	bib: buildingbibs.png
+		Frames: 12,13,14,18,19,20
+		Length: 6
+		AddExtension: false
 	icon: sulfixicon.shp
 		AddExtension: False
 	make1: 
@@ -547,9 +560,10 @@ sulcnshmbr:
 		Length: 6
 		Tick: 80
 		Offset: 0,-12
-	bib: mwbib2
-		UseTilesetExtension: true
-		Length: *
+	bib: buildingbibs.png
+		Frames: 15,16,17,21,22,23
+		Length: 6
+		AddExtension: false
 	icon: sulcnshmbricon.shp
 		AddExtension: False 
 	make1: 
@@ -590,14 +604,10 @@ silonew:
 	make: silonewmake
 		Length: *
 		Tick: 80
-	bib: mbSILO
-		UseTilesetExtension: true
-		TilesetOverrides:
-			WINTER: TEMPERAT
-			JUNGLE: TEMPERAT
-			JUNGLE: TEMPERAT
-			INTERIOR: TEMPERAT
-		Length: *
+	bib: buildingbibs.png
+		Frames: 37,38
+		AddExtension: false
+		Length: 2
 	icon: silonewicon.shp
 		AddExtension: False
 	make1: silonewmake

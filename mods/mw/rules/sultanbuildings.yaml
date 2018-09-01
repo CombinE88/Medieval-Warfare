@@ -25,6 +25,7 @@ SULGTW:
 	RevealsShroud:
 		Range: 7c0
 	WithBuildingBib:
+		Palette: bibs
 		HasMinibib: Yes
 	WithIdleOverlay:
 	Armament@1:
@@ -33,28 +34,16 @@ SULGTW:
 		Turret: primary
 		RequiresCondition: !static
 		Name: primary
+		FireDelay: 5
 	Armament@2:
 		Weapon: bownarrowtower
 		LocalOffset: 0,0,427
 		Turret: secondary
 		RequiresCondition: !static
-		FireDelay: 6
+		FireDelay: 11
 		Name: secondary
-	Armament@1DUMMY:
-		Weapon: BowNArrowTowerDUMMY
-		LocalOffset: 0,0,427
-		Turret: primary
-		RequiresCondition: !static
-		Name: primarydummy
-	Armament@2DUMMY:
-		Weapon: BowNArrowTowerDUMMY
-		LocalOffset: 0,0,427
-		Turret: secondary
-		RequiresCondition: !static
-		FireDelay: 6
-		Name: secondarydummy
 	AttackTurreted:
-		Armaments: primary, secondary, 1archers, 2archers, primarydummy, secondarydummy, 1archersdummy, 2archersdummy, djinn, primaryspear, secondaryspear, primaryspearair, secondaryspearair
+		Armaments: primary, secondary, 1archers, 2archers, djinn, primaryspear, secondaryspear, primaryspearair, secondaryspearair
 	BodyOrientation:
 		QuantizedFacings: 8
 	DetectCloaked:
@@ -141,20 +130,6 @@ SULGTW:
 		RequiresCondition: archers && Construct >= 20
 		FireDelay: 18
 		Name: 2archers
-	Armament@1DUMMYarchers:
-		Weapon: BowNArrowTowerDUMMY
-		LocalOffset: 0,0,427
-		Turret: turr1
-		RequiresCondition: archers && Construct >= 20
-		FireDelay: 12
-		Name: 1archersdummy
-	Armament@2DUMMYarchers:
-		Weapon: BowNArrowTowerDUMMY
-		LocalOffset: 0,0,427
-		Turret: turr2
-		RequiresCondition: archers && Construct >= 20
-		FireDelay: 18
-		Name: 2archersdummy
 	WithIdleOverlay@djinn:
 		Sequence: djingtw
 		Offset: 0, 0, 0
@@ -445,6 +420,7 @@ SULLODGE:
 	RevealsShroud:
 		Range: 7c0
 	WithBuildingBib:
+		Palette: bibs
 	Targetable@Lodge:
 		TargetTypes: HunterLodge
 	Selectable:
@@ -504,6 +480,7 @@ SULARRAY:
 	RevealsShroud:
 		Range: 4c0
 	WithBuildingBib:
+		Palette: bibs
 	ProvidesPrerequisite@buildingname:
 	Selectable:
 		Bounds: 72,72,0,-2
@@ -545,6 +522,7 @@ SULNUK2:
 	RevealsShroud:
 		Range: 4c0
 	WithBuildingBib:
+		Palette: bibs
 	Selectable:
 		Bounds:72,60,0,-9
 	SelectionDecorations:
@@ -607,6 +585,7 @@ SULNUKE:
 	RevealsShroud:
 		Range: 4c0
 	WithBuildingBib:
+		Palette: bibs
 	Selectable:
 		Bounds: 48,40,0,-4
 	SelectionDecorations:
@@ -659,6 +638,7 @@ SULBARR:
 	RevealsShroud:
 		Range: 5c0
 	WithBuildingBib:
+		Palette: bibs
 	RallyPoint:
 	Exit:
 		SpawnOffset: 341,682,0
@@ -713,6 +693,7 @@ SULMYSTIC:
 	RevealsShroud:
 		Range: 5c0
 	WithBuildingBib:
+		Palette: bibs
 	RallyPoint:
 	Exit@1:
 		SpawnOffset: 180,1200,0
@@ -771,6 +752,7 @@ SULCASTLE:
 	RevealsShroud:
 		Range: 5c0
 	WithBuildingBib:
+		Palette: bibs
 	Selectable:
 		Bounds: 72,94,0,-30
 	SelectionDecorations:
@@ -1000,6 +982,7 @@ SULMILL:
 	RevealsShroud:
 		Range: 3c0
 	WithBuildingBib:
+		Palette: bibs
 	CustomSellValue:
 		Value: 200
 	ProvidesPrerequisite@buildingname:
@@ -1077,6 +1060,7 @@ SULFIX:
 	RevealsShroud:
 		Range: 4c0
 	WithBuildingBib:
+		Palette: bibs
 	ProvidesPrerequisite@buildingname: 
 	RallyPoint:
 	Exit@1:
@@ -1181,6 +1165,7 @@ SULCNSHMBR:
 	RevealsShroud:
 		Range: 4c0
 	WithBuildingBib:
+		Palette: bibs
 	Selectable:
 		Bounds:72,60,0,-6
 	SelectionDecorations:
@@ -1219,6 +1204,7 @@ SULREF:
 	RevealsShroud:
 		Range: 6c0
 	WithBuildingBib:
+		Palette: bibs
 	Refinery:
 		DockAngle: 72
 		DockOffset: 2,2

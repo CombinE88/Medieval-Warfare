@@ -32,9 +32,10 @@ sppool:
 	make: 
 		Length: 37
 		Tick: 140
-	bib: bib3
-		UseTilesetExtension: true
-		Length: *
+	bib: buildingbibs.png
+		Frames: 4,5,10,11
+		Length: 4
+		AddExtension: false
 	icon: sppoolicon.shp
 		AddExtension: False
 crypt: 
@@ -53,9 +54,10 @@ crypt:
 	make: cryptmake
 		Length: *
 		Tick: 100
-	bib: bib3
-		UseTilesetExtension: true
-		Length: *
+	bib: buildingbibs.png
+		Frames: 4,5,10,11
+		Length: 4
+		AddExtension: false
 	burnloop1: burn-m
 		Start: 16
 		Length: 44
@@ -82,9 +84,10 @@ mauso:
 	make:
 		Length: 23
 		Tick: 200
-	bib: bib3
-		UseTilesetExtension: true
-		Length: *
+	bib: buildingbibs.png
+		Frames: 4,5,10,11
+		Length: 4
+		AddExtension: false
 	icon: mausoicon.shp
 		AddExtension: False
 libra: 
@@ -99,9 +102,10 @@ libra:
 	make:
 		Length: 25
 		Tick: 200
-	bib: bib3
-		UseTilesetExtension: true
-		Length: *
+	bib: buildingbibs.png
+		Frames: 4,5,10,11
+		Length: 4
+		AddExtension: false
 	icon: libraicon.shp
 		AddExtension: False
 tomb: 
@@ -120,9 +124,10 @@ tomb:
 		Length: 25
 		Tick: 200
 		Offset: 0,-12
-	bib: bib2
-		UseTilesetExtension: true
-		Length: *
+	bib: buildingbibs.png
+		Frames: 12,13,14,18,19,20
+		Length: 6
+		AddExtension: false
 	icon: tombicon.shp
 		AddExtension: False
 dedref: 
@@ -140,9 +145,10 @@ dedref:
 		Length: *
 		Tick: 60
 		Offset: 0,-12
-	bib: bib3
-		UseTilesetExtension: true
-		Length: *
+	bib: buildingbibs.png
+		Frames: 4,5,10,11
+		Length: 4
+		AddExtension: false
 	icon: dedreficon.shp
 		AddExtension: False
 seal1:

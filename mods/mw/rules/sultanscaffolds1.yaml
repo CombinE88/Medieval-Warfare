@@ -24,6 +24,7 @@ SULNUKE.scaff:
 	RevealsShroud:
 		Range: 4c0
 	WithBuildingBib:
+		Palette: bibs
 	Selectable:
 		Bounds: 48,40,0,-4
 	SelectionDecorations:
@@ -82,6 +83,7 @@ SULLODGE.scaff:
 	RevealsShroud:
 		Range: 4c0
 	WithBuildingBib:
+		Palette: bibs
 	Selectable:
 		Bounds: 48,52,0,-14
 	SelectionDecorations:
@@ -143,6 +145,7 @@ SULMILL.scaff:
 	RevealsShroud:
 		Range: 4c0
 	WithBuildingBib:
+		Palette: bibs
 	Selectable:
 		Bounds: 48,76,0,-2
 	SelectionDecorations:
@@ -195,6 +198,7 @@ SULNUK2.scaff:
 	RevealsShroud:
 		Range: 4c0
 	WithBuildingBib:
+		Palette: bibs
 	Selectable:
 		Bounds:72,60,0,-9
 	SelectionDecorations:
@@ -250,6 +254,7 @@ SULBARR.scaff:
 	RevealsShroud:
 		Range: 4c0
 	WithBuildingBib:
+		Palette: bibs
 	Selectable:
 		Bounds:72,53,0,0
 	SelectionDecorations:
@@ -306,6 +311,7 @@ SULMYSTIC.scaff:
 	RevealsShroud:
 		Range: 4c0
 	WithBuildingBib:
+		Palette: bibs
 	Selectable:
 		Bounds:72,72,0,-12
 	SelectionDecorations:
@@ -365,6 +371,7 @@ SULCASTLE.scaff:
 	RevealsShroud:
 		Range: 4c0
 	WithBuildingBib:
+		Palette: bibs
 	Selectable:
 		Bounds: 72,94,0,-30
 	SelectionDecorations:
@@ -420,6 +427,7 @@ SULFIX.scaff:
 	RevealsShroud:
 		Range: 4c0
 	WithBuildingBib:
+		Palette: bibs
 	Selectable:
 		Bounds: 64,64,0,-14
 	SelectionDecorations:
@@ -522,6 +530,7 @@ SULARRAY.scaff:
 	RevealsShroud:
 		Range: 4c0
 	WithBuildingBib:
+		Palette: bibs
 	Selectable:
 		Bounds: 72,72,0,-2
 	SelectionDecorations:
@@ -578,6 +587,7 @@ SULCNSHMBR.scaff:
 	RevealsShroud:
 		Range: 4c0
 	WithBuildingBib:
+		Palette: bibs
 	Selectable:
 		Bounds:72,60,0,-6
 	SelectionDecorations:
@@ -644,6 +654,7 @@ SULREF.scaff:
 	RevealsShroud:
 		Range: 4c0
 	WithBuildingBib:
+		Palette: bibs
 	Selectable:
 		Bounds: 73,72,0,0
 	SelectionDecorations:
@@ -706,6 +717,7 @@ CSTLWLLSUL.scaff:
 	RevealsShroud:
 		Range: 4c0
 	WithBuildingBib:
+		Palette: bibs
 		HasMinibib: Yes
 	Selectable:
 		Bounds: 24,48,0,-10

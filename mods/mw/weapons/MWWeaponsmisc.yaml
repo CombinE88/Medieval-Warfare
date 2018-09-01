@@ -1192,11 +1192,15 @@ BowNArrowHunter:
 	Report: arrow01.aud, arrow02.aud, arrow02.aud
 	InvalidTargets: Wall, Air
 	ValidTargets: Wildlife
-	Projectile: Missile
-		HorizontalRateOfTurn: 455
-		RangeLimit: 12c0
-		Arm: 0
-		Speed: 300
+	Projectile: BezierBullet
+		LaunchAngle: 130
+		Speed: 290
+		Inaccuracy: 0c0
+		ContrailLength: 20
+		ContrailWidth: 10
+		ContrailDelay: 0
+		ContrailUsePlayerColor : true
+		Image: e4arrow
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
 		Spread: 25
@@ -1244,72 +1248,6 @@ BowNArrowHunterOnWater:
 			HeavyCavalry: 100
 			HeavyBuilding: 100
 			Spectral: 100
-		DamageTypes: DefaultDeath
-BowNArrowHunterDUMMY:
-	ReloadDelay: 37
-	Range: 7c0
-	MinRange: 1c512
-	InvalidTargets: Wall, Air
-	ValidTargets: Wildlife
-	Projectile: Bullet
-		LaunchAngle: 130
-		Speed: 290
-		Inaccuracy: 0c0
-		ContrailLength: 20
-		ContrailWidth: 10
-		ContrailDelay: 0
-		ContrailUsePlayerColor : true
-		Image: e4arrow
-		Palette: ra
-	Warhead@1Dam: SpreadDamage
-		Spread: 25
-		InvalidTargets: Wall, Air
-		ValidTargets: Wildlife
-		Damage: 0
-		Versus:
-			Leather: 0
-			Light: 0
-			Heavy: 0
-			Concrete: 0
-			Knight: 0
-			LightCavalry: 0
-			MediumCavalry: 0
-			HeavyCavalry: 0
-			HeavyBuilding: 0
-			Spectral: 0
-		DamageTypes: DefaultDeath
-BowNArrowHunterDUMMYOnWater:
-	ReloadDelay: 37
-	Range: 1c0
-	MinRange: 0c0
-	InvalidTargets: Wall, Air
-	ValidTargets: Wildlife
-	Projectile: Bullet
-		LaunchAngle: 130
-		Speed: 290
-		Inaccuracy: 0c0
-		ContrailLength: 20
-		ContrailWidth: 10
-		ContrailDelay: 0
-		ContrailUsePlayerColor : true
-		Image: e4arrow
-		Palette: ra
-	Warhead@1Dam: SpreadDamage
-		Spread: 25
-		InvalidTargets: Wall, Air
-		ValidTargets: Wildlife
-		Damage: 0
-		Versus:
-			Leather: 0
-			Light: 0
-			Heavy: 0
-			Concrete: 0
-			Knight: 0
-			LightCavalry: 0
-			MediumCavalry: 0
-			HeavyCavalry: 0
-			HeavyBuilding: 0
-			Spectral: 0
 		DamageTypes: DefaultDeath
 HunterGather:
 	ValidTargets: Deaddeer
@@ -1572,4 +1510,20 @@ LaborourLoad:
 			HeavyCavalry: 0
 			HeavyBuilding: 0
 			Spectral: 0
+		DamageTypes: DefaultDeath
+BrokenArrow:
+	Range: 4c0
+	ValidTargets: Ground
+	Projectile: Bullet
+		Speed: 94, 148
+		LaunchAngle: 80, 192
+		Image: arrowbroken
+		Palette: ra
+		Shadow: true
+		Blockable: false
+		Inaccuracy: 0c512
+	Warhead@1Dam: SpreadDamage
+		Spread: 1
+		Damage: 0
+		InvalidTargets: Air
 		DamageTypes: DefaultDeath

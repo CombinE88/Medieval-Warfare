@@ -60,6 +60,7 @@
     <Compile Include="MWAI\SupportPowerDecision.cs" />
     <Compile Include="MWAI\UndeadAIHAndler.cs" />
     <Compile Include="Projectiles\AthenaProjectile.cs" />
+    <Compile Include="Projectiles\BezierBullet.cs" />
     <Compile Include="Projectiles\InstantExplode.cs" />
     <Compile Include="Traits\Activites\Instanttransforms.cs" />
     <Compile Include="Traits\Activites\FindPrey.cs" />

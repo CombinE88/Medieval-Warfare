@@ -299,14 +299,12 @@ E4NEWV2:
 		Weapon: bownarrow
 		LocalOffset: 341,20,356
 		Name: Primary
-	Armament@DUMMY:
-		Weapon: BowNArrowDUMMY
-		LocalOffset: 341,20,356
-		Name: Primary
+		FireDelay: 5
 	Armament@Air:
 		Weapon: bownarrowair
 		LocalOffset: 341,20,356
 		Name: Primary
+		FireDelay: 5
 	Armament@Debuffapply:
 		Weapon: BowNArrowDebuff
 		LocalOffset: 341,20,356
@@ -428,13 +426,9 @@ NEWCOMM:
 	RenderSprites:
 		Image: newcomm
 		PlayerPalette: raplayer
-	-WithInfantryBody:
-	WithFacingSpriteBody:
-		Sequence: idle
-	WithMoveAnimation: 
+	WithInfantryBody:
+		DefaultAttackSequence: shoot
 		MoveSequence: move
-	WithAttackAnimation:
-		Sequence: shoot
 	Armor:
 		Type: Knight
 	Voiced:
@@ -445,7 +439,7 @@ NEWCOMM:
 	PersonValued:
 		ActorCount: 1
 	Targetable@CombatRole:
-		TargetTypes: Heavy
+		TargetTypes: Heavy, Juggernaut
 	Targetable@Paralyze:
 		TargetTypes: Juggernaut
 	ExternalCondition@Juggernaut:

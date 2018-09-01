@@ -1257,6 +1257,7 @@
         <e p="OpenRA.Mods.MW.csproj" t="IncludeRecursive" />
         <e p="Projectiles" t="Include">
           <e p="AthenaProjectile.cs" t="Include" />
+          <e p="BezierBullet.cs" t="Include" />
           <e p="InstantExplode.cs" t="Include" />
         </e>
         <e p="Traits" t="Include">

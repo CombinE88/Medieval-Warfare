@@ -24,6 +24,7 @@ NUKENEW.scaff:
 	RevealsShroud:
 		Range: 4c0
 	WithBuildingBib:
+		Palette: bibs
 	Selectable:
 		Bounds: 48,49,0,-2
 	SelectionDecorations:
@@ -79,6 +80,7 @@ NUKXL.scaff:
 	RevealsShroud:
 		Range: 4c0
 	WithBuildingBib:
+		Palette: bibs
 	Selectable:
 		Bounds: 72,58,0,-2
 	SelectionDecorations:
@@ -138,6 +140,7 @@ ZEROPROC.scaff:
 	RevealsShroud:
 		Range: 4c0
 	WithBuildingBib:
+		Palette: bibs
 	Selectable:
 		Bounds: 48,70,0,-8
 	SelectionDecorations:
@@ -197,6 +200,7 @@ HQNEWGDI.scaff:
 	RevealsShroud:
 		Range: 4c0
 	WithBuildingBib:
+		Palette: bibs
 	Selectable:
 		Bounds: 48,52,0,0
 	SelectionDecorations:
@@ -248,6 +252,7 @@ ARMORYGDI.scaff:
 	RevealsShroud:
 		Range: 4c0
 	WithBuildingBib:
+		Palette: bibs
 	Selectable:
 		Bounds: 48,58,0,0
 	SelectionDecorations:
@@ -300,6 +305,7 @@ NUK2NEW.scaff:
 	RevealsShroud:
 		Range: 4c0
 	WithBuildingBib:
+		Palette: bibs
 	Selectable:
 		Bounds: 48,48,0,0
 	SelectionDecorations:
@@ -349,6 +355,7 @@ BARRNEW.scaff:
 	RevealsShroud:
 		Range: 4c0
 	WithBuildingBib:
+		Palette: bibs
 	Selectable:
 		Bounds: 48,46,0,-2
 	SelectionDecorations:
@@ -401,6 +408,7 @@ STALL.scaff:
 	RevealsShroud:
 		Range: 4c0
 	WithBuildingBib:
+		Palette: bibs
 	Selectable:
 		Bounds: 72,62, 0, -6
 	SelectionDecorations:
@@ -460,6 +468,7 @@ CASTLE2.scaff:
 	RevealsShroud:
 		Range: 4c0
 	WithBuildingBib:
+		Palette: bibs
 	Selectable:
 		Bounds: 72,84,0,-15
 	SelectionDecorations:
@@ -515,6 +524,7 @@ WORKSHOPGDI.scaff:
 	RevealsShroud:
 		Range: 4c0
 	WithBuildingBib:
+		Palette: bibs
 	Selectable:
 		Bounds: 64,64,0,-14
 	SelectionDecorations:
@@ -569,6 +579,7 @@ BATO.scaff:
 	RevealsShroud:
 		Range: 4c0
 	WithBuildingBib:
+		Palette: bibs
 		HasMinibib: Yes
 	Selectable:
 		Bounds: 30,40,0,-12

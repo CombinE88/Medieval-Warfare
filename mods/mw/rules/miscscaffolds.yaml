@@ -27,6 +27,7 @@ LODGE.scaff:
 	RevealsShroud:
 		Range: 4c0
 	WithBuildingBib:
+		Palette: bibs
 	Selectable:
 		Bounds: 48,55,0,-14
 	SelectionDecorations:
@@ -91,6 +92,7 @@ PROCNEW.scaff:
 	RevealsShroud:
 		Range: 4c0
 	WithBuildingBib:
+		Palette: bibs
 	Selectable:
 		Bounds: 72,56,0,-2
 	SelectionDecorations:
@@ -149,6 +151,7 @@ SILONEW.scaff:
 	RevealsShroud:
 		Range: 4c0
 	WithBuildingBib:
+		Palette: bibs
 		HasMinibib: Yes
 	SelectionDecorations:
 	Selectable:
@@ -202,6 +205,7 @@ SILOTWO.scaff:
 	RevealsShroud:
 		Range: 4c0
 	WithBuildingBib:
+		Palette: bibs
 		HasMinibib: Yes
 	SelectionDecorations:
 	Selectable:
@@ -258,6 +262,7 @@ GTWNEW.scaff:
 	RevealsShroud:
 		Range: 4c0
 	WithBuildingBib:
+		Palette: bibs
 		HasMinibib: Yes
 	Selectable:
 		Bounds: 24,48,0,-10
@@ -317,6 +322,7 @@ GUNNEW.scaff:
 	RevealsShroud:
 		Range: 4c0
 	WithBuildingBib:
+		Palette: bibs
 		HasMinibib: Yes
 	Selectable:
 		Bounds: 25,25,0,0
@@ -381,6 +387,7 @@ CSTLWLL.scaff:
 	RevealsShroud:
 		Range: 4c0
 	WithBuildingBib:
+		Palette: bibs
 		HasMinibib: Yes
 	Selectable:
 		Bounds: 24,48,0,-10
@@ -622,6 +629,7 @@ DEDWALL.scaff:
 	RevealsShroud:
 		Range: 4c0
 	WithBuildingBib:
+		Palette: bibs
 		HasMinibib: Yes
 	Selectable:
 		Bounds: 24,48,0,-10

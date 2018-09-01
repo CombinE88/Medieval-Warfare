@@ -19,10 +19,6 @@ HOOD:
 		Weapon: HoodArrow
 		LocalOffset: 341,20,356
 		Name: Primary
-	Armament@DUMMY:
-		Weapon: HoodArrowDUMMY
-		LocalOffset: 341,20,356
-		Name: Primary
 	Armament@Air:
 		Weapon: HoodArrowAir
 		LocalOffset: 341,20,356

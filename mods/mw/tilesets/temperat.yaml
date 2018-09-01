@@ -5587,618 +5587,762 @@ Templates:
 		Tiles:
 			0: DeepSwamp
 			2: DeepSwamp
-			3: DeepSwamp	
-	Template@12493:
-		Id: 12493
+			3: DeepSwamp
+
+	Template@8761:
+		Id: 8761
 		Images: bits/terrain/swamp-roads-darker.png
 		Palette: swamproads
-		Frames: 44,45,54,55
+		Frames: 72,73,82,83
 		Size: 2,2
 		Categories: Swamp roads
 		Tiles:
-			1: Road
-			2: Swamp
-			3: Swamp
-	Template@12494:
-		Id: 12494
+			0: Road
+			2: Clear
+			3: Clear
+	Template@8762:
+		Id: 8762
 		Images: bits/terrain/swamp-roads-darker.png
 		Palette: swamproads
-		Frames: 24,25,34,35
-		Size: 2,2
+		Frames: 173,174
+		Size: 2,1
 		Categories: Swamp roads
 		Tiles:
-			0: Swamp
+			0: Clear
 			1: Road
-			2: Swamp
-			3: Swamp
-	Template@12495:
-		Id: 12495
+	Template@8763:
+		Id: 8763
 		Images: bits/terrain/swamp-roads-darker.png
 		Palette: swamproads
-		Frames: 5,15
+		Frames: 65,75
 		Size: 1,2
 		Categories: Swamp roads
 		Tiles:
-			0: Swamp
-			1: Swamp
-	Template@12496:
-		Id: 12496
+			0: Clear
+			1: Road
+	Template@8764:
+		Id: 8764
+		Images: bits/terrain/swamp-roads-darker.png
+		Palette: swamproads
+		Frames: 86,87,96,97
+		Size: 2,2
+		Categories: Swamp roads
+		Tiles:
+			0: Road
+			1: Clear
+			2: Clear
+			3: Clear
+	Template@8765:
+		Id: 8765
+		Images: bits/terrain/swamp-roads-darker.png
+		Palette: swamproads
+		Frames: 106,107,116,117,126,127,136,137
+		Size: 2,4
+		Categories: Swamp roads
+		Tiles:
+			0: Road
+			1: Clear
+			2: Road
+			3: Road
+			4: Road
+			5: Road
+			6: Road
+			7: Clear
+	Template@8766:
+		Id: 8766
+		Images: bits/terrain/swamp-roads-darker.png
+		Palette: swamproads
+		Frames: 105,115,125
+		Size: 1,3
+		Categories: Swamp roads
+		Tiles:
+			0: Road
+			1: Road
+			2: Road
+	Template@8767:
+		Id: 8767
+		Images: bits/terrain/swamp-roads-darker.png
+		Palette: swamproads
+		Frames: 9,19
+		Size: 1,2
+		Categories: Swamp roads
+		Tiles:
+			0: Road
+			1: Road
+	Template@8768:
+		Id: 8768
+		Images: bits/terrain/swamp-roads-darker.png
+		Palette: swamproads
+		Frames: 110,120
+		Size: 1,2
+		Categories: Swamp roads
+		Tiles:
+			0: Road
+			1: Road
+	Template@8769:
+		Id: 8769
+		Images: bits/terrain/swamp-roads-darker.png
+		Palette: swamproads
+		Frames: 211
+		Size: 1,1
+		Categories: Swamp roads
+		Tiles:
+			0: Road
+	Template@8770:
+		Id: 8770
+		Images: bits/terrain/swamp-roads-darker.png
+		Palette: swamproads
+		Frames: 26,27,28,29,36,37,38,39
+		Size: 4,2
+		Categories: Swamp roads
+		Tiles:
+			0: Clear
+			1: Clear
+			2: Clear
+			3: Clear
+			4: Road
+			5: Road
+			6: Road
+			7: Road
+	Template@8771:
+		Id: 8771
+		Images: bits/terrain/swamp-roads-darker.png
+		Palette: swamproads
+		Frames: 76,77,78,79
+		Size: 4,1
+		Categories: Swamp roads
+		Tiles:
+			0: Road
+			1: Road
+			2: Road
+			3: Road
+	Template@8772:
+		Id: 8772
+		Images: bits/terrain/swamp-roads-darker.png
+		Palette: swamproads
+		Frames: 88,89
+		Size: 2,1
+		Categories: Swamp roads
+		Tiles:
+			0: Road
+			1: Road
+	Template@8773:
+		Id: 8773
+		Images: bits/terrain/swamp-roads-darker.png
+		Palette: swamproads
+		Frames: 98,99
+		Size: 2,1
+		Categories: Swamp roads
+		Tiles:
+			0: Road
+			1: Road
+	Template@8774:
+		Id: 8774
+		Images: bits/terrain/swamp-roads-darker.png
+		Palette: swamproads
+		Frames: 210
+		Size: 1,1
+		Categories: Swamp roads
+		Tiles:
+			0: Road
+	Template@8775:
+		Id: 8775
+		Images: bits/terrain/swamp-roads-darker.png
+		Palette: swamproads
+		Frames: 46,47,48,49,56,57,58,59,66,67,68,69
+		Size: 4,3
+		Categories: Swamp roads
+		Tiles:
+			0: Road
+			1: Road
+			2: Clear
+			4: Clear
+			5: Road
+			6: Road
+			7: Clear
+			10: Road
+			11: Road
+	Template@8776:
+		Id: 8776
+		Images: bits/terrain/swamp-roads-darker.png
+		Palette: swamproads
+		Frames: 270,271,272,280,281,282,290,291,292
+		Size: 3,3
+		Categories: Swamp roads
+		Tiles:
+			0: Road
+			1: Clear
+			3: Road
+			4: Clear
+			5: Clear
+			6: Road
+			7: Road
+			8: Road
+	Template@8777:
+		Id: 8777
+		Images: bits/terrain/swamp-roads-darker.png
+		Palette: swamproads
+		Frames: 144,145,146,154,155,156,164,165,166
+		Size: 3,3
+		Categories: Swamp roads
+		Tiles:
+			0: Road
+			1: Road
+			2: Road
+			3: Road
+			4: Clear
+			6: Road
+	Template@8778:
+		Id: 8778
+		Images: bits/terrain/swamp-roads-darker.png
+		Palette: swamproads
+		Frames: 147,148,149,157,158,159,167,168,169
+		Size: 3,3
+		Categories: Swamp roads
+		Tiles:
+			1: Road
+			2: Clear
+			3: Clear
+			4: Road
+			5: Road
+			6: Road
+			7: Clear
+	Template@8779:
+		Id: 8779
+		Images: bits/terrain/swamp-roads-darker.png
+		Palette: swamproads
+		Frames: 6,7,8,16,17,18
+		Size: 3,2
+		Categories: Swamp roads
+		Tiles:
+			0: Road
+			1: Road
+			2: Road
+			3: Clear
+			4: Road
+			5: Clear
+	Template@8780:
+		Id: 8780
+		Images: bits/terrain/swamp-roads-darker.png
+		Palette: swamproads
+		Frames: 160,161,170,171,180,181
+		Size: 2,3
+		Categories: Swamp roads
+		Tiles:
+			0: Clear
+			1: Road
+			2: Road
+			3: Road
+			5: Road
+	Template@8781:
+		Id: 8781
+		Images: bits/terrain/swamp-roads-darker.png
+		Palette: swamproads
+		Frames: 130,131,132,140,141,142,150,151,152
+		Size: 3,3
+		Categories: Swamp roads
+		Tiles:
+			0: Clear
+			1: Road
+			2: Clear
+			3: Road
+			4: Road
+			5: Road
+			6: Clear
+			7: Road
+			8: Clear
+	Template@8782:
+		Id: 8782
 		Images: bits/terrain/swamp-roads-darker.png
 		Palette: swamproads
 		Frames: 22,23,32,33
 		Size: 2,2
 		Categories: Swamp roads
 		Tiles:
-			1: Swamp
-			2: Road
-			3: Swamp
-	Template@12497:
-		Id: 12497
-		Images: bits/terrain/swamp-roads-darker.png
-		Palette: swamproads
-		Frames: 87,88,89,97,98,99,107,108,109,117,118,119
-		Size: 3,4
-		Categories: Swamp roads
-		Tiles:
-			1: Road
-			2: Swamp
-			3: Road
-			4: Road
-			6: Road
-			7: Road
-			9: Swamp
-			10: Road
-	Template@12498:
-		Id: 12498
-		Images: bits/terrain/swamp-roads-darker.png
-		Palette: swamproads
-		Frames: 36,37,46,47,56,57
-		Size: 2,3
-		Categories: Swamp roads
-		Tiles:
 			0: Road
-			2: Road
+			1: Clear
+			2: Clear
 			3: Road
-			4: Road
-			5: Swamp
-	Template@12499:
-		Id: 12499
+	Template@8783:
+		Id: 8783
 		Images: bits/terrain/swamp-roads-darker.png
 		Palette: swamproads
-		Frames: 27,28,29,37,38,39
-		Size: 3,2
-		Categories: Swamp roads
-		Tiles:
-			0: Swamp
-			1: Road
-			2: Swamp
-			4: Road
-			5: Swamp
-	Template@12500:
-		Id: 12500
-		Images: bits/terrain/swamp-roads-darker.png
-		Palette: swamproads
-		Frames: 260,261,262,270,271,272
-		Size: 3,2
-		Categories: Swamp roads
-		Tiles:
-			1: Road
-			3: Swamp
-			4: Road
-			5: Swamp
-	Template@12501:
-		Id: 12501
-		Images: bits/terrain/swamp-roads-darker.png
-		Palette: swamproads
-		Frames: 243,244,245,246,253,254,255,256,263,264,265,266
-		Size: 4,3
-		Categories: Swamp roads
-		Tiles:
-			0: Swamp
-			1: Swamp
-			2: Swamp
-			3: Swamp
-			4: Road
-			5: Road
-			6: Road
-			7: Road
-			10: Swamp
-			11: Swamp
-	Template@12502:
-		Id: 12502
-		Images: bits/terrain/swamp-roads-darker.png
-		Palette: swamproads
-		Frames: 223,224,225,226,233,234,235,236
-		Size: 4,2
-		Categories: Swamp roads
-		Tiles:
-			0: Swamp
-			1: Rock
-			4: Road
-			5: Road
-			6: Road
-			7: Road
-	Template@12503:
-		Id: 12503
-		Images: bits/terrain/swamp-roads-darker.png
-		Palette: swamproads
-		Frames: 50,51,60,61,70,71
-		Size: 2,3
-		Categories: Swamp roads
-		Tiles:
-			1: Swamp
-			2: Road
-			3: Road
-			4: Swamp
-	Template@12504:
-		Id: 12504
-		Images: bits/terrain/swamp-roads-darker.png
-		Palette: swamproads
-		Frames: 62,63,72,73
+		Frames: 2,3,12,13
 		Size: 2,2
 		Categories: Swamp roads
 		Tiles:
-			0: Swamp
+			0: Clear
+			1: Road
 			2: Road
-			3: Road
-	Template@12505:
-		Id: 12505
+			3: Clear
+	Template@8784:
+		Id: 8784
 		Images: bits/terrain/swamp-roads-darker.png
 		Palette: swamproads
-		Frames: 273,274,275,276,283,284,285,286,293,294,295,296
-		Size: 4,3
+		Frames: 4,5,14,15
+		Size: 2,2
 		Categories: Swamp roads
 		Tiles:
 			0: Road
 			1: Road
-			2: Swamp
-			4: Swamp
-			5: Road
-			6: Road
-			7: Swamp
-			10: Wall
-			11: Road
-	Template@12506:
-		Id: 12506
+			2: Clear
+			3: Road
+	Template@8785:
+		Id: 8785
 		Images: bits/terrain/swamp-roads-darker.png
 		Palette: swamproads
-		Frames: 237,238,239,247,248,249,257,258,259
+		Frames: 24,25,34,35
+		Size: 2,2
+		Categories: Swamp roads
+		Tiles:
+			0: Clear
+			1: Road
+			2: Clear
+			3: Road
+	Template@8786:
+		Id: 8786
+		Images: bits/terrain/swamp-roads-darker.png
+		Palette: swamproads
+		Frames: 254,255,256,264,265,266,274,275,276
 		Size: 3,3
 		Categories: Swamp roads
 		Tiles:
-			1: Swamp
-			2: Road
-			3: Swamp
-			4: Wall
-			5: Road
-			6: Road
+			0: Road
+			1: Clear
+			3: Road
+			4: Road
+			5: Clear
+			6: Clear
 			7: Road
 			8: Road
-	Template@12507:
-		Id: 12507
+	Template@8787:
+		Id: 8787
 		Images: bits/terrain/swamp-roads-darker.png
 		Palette: swamproads
-		Frames: 230,231,232,240,241,242,250,251,252
+		Frames: 224,225,226,234,235,236,244,245,246
+		Size: 3,3
+		Categories: Swamp roads
+		Tiles:
+			0: Clear
+			1: Road
+			2: Road
+			3: Road
+			4: Road
+			6: Road
+			7: Clear
+	Template@8788:
+		Id: 8788
+		Images: bits/terrain/swamp-roads-darker.png
+		Palette: swamproads
+		Frames: 227,228,229,237,238,239,247,248,249
 		Size: 3,3
 		Categories: Swamp roads
 		Tiles:
 			0: Road
 			1: Road
-			2: Road
-			3: Road
+			2: Clear
+			3: Clear
 			4: Road
-			5: Swamp
-			6: Road
-			7: Swamp
-	Template@12508:
-		Id: 12508
+			5: Road
+			7: Clear
+			8: Road
+	Template@8789:
+		Id: 8789
 		Images: bits/terrain/swamp-roads-darker.png
 		Palette: swamproads
-		Frames: 200,201,202,210,211,212,220,221,222
+		Frames: 257,258,259,267,268,269,277,278,279
 		Size: 3,3
 		Categories: Swamp roads
 		Tiles:
-			0: Swamp
-			1: Road
-			2: Swamp
-			3: Swamp
+			1: Clear
+			2: Road
+			3: Clear
 			4: Road
 			5: Road
 			6: Road
-			7: Swamp
-			8: Wall
-	Template@12509:
-		Id: 12509
-		Images: bits/terrain/swamp-roads-darker.png
-		Palette: swamproads
-		Frames: 203,204,205,213,214,215
-		Size: 3,2
-		Categories: Swamp roads
-		Tiles:
-			0: Road
-			1: Road
-			2: Road
-			3: Swamp
-			4: Road
-			5: Swamp
-	Template@12510:
-		Id: 12510
-		Images: bits/terrain/swamp-roads-darker.png
-		Palette: swamproads
-		Frames: 207,208,209,217,218,219,227,228,229
-		Size: 3,3
-		Categories: Swamp roads
-		Tiles:
-			0: Swamp
-			1: Road
-			2: Swamp
-			3: Road
-			4: Road
-			5: Swamp
-			6: Swamp
 			7: Road
-			8: Wall
-	Template@12511:
-		Id: 12511
+			8: Clear
+	Template@8790:
+		Id: 8790
 		Images: bits/terrain/swamp-roads-darker.png
 		Palette: swamproads
-		Frames: 170,171,172,180,181,182,190,191,192
-		Size: 3,3
-		Categories: Swamp roads
-		Tiles:
-			0: Swamp
-			1: Road
-			2: Swamp
-			3: Road
-			4: Road
-			5: Road
-			6: Swamp
-			7: Road
-			8: Swamp
-	Template@12512:
-		Id: 12512
-		Images: bits/terrain/swamp-roads-darker.png
-		Palette: swamproads
-		Frames: 173,174,175,183,184,186,193,194,195
+		Frames: 41,42,43,51,52,53,61,62,63
 		Size: 3,3
 		Categories: Swamp roads
 		Tiles:
 			0: Road
-			1: Swamp
-			3: Road
+			1: Clear
+			3: Clear
 			4: Road
-			5: Swamp
-			6: Swamp
-			7: Road
+			5: Clear
+			7: Clear
 			8: Road
-	Template@12513:
-		Id: 12513
+	Template@8791:
+		Id: 8791
 		Images: bits/terrain/swamp-roads-darker.png
 		Palette: swamproads
-		Frames: 153,154,155,163,164,165
-		Size: 3,2
+		Frames: 202,203,212,213
+		Size: 2,2
 		Categories: Swamp roads
 		Tiles:
-			0: Rock
-			1: Road
-			2: Road
-			3: Swamp
-			4: Road
-			5: Swamp
-	Template@12514:
-		Id: 12514
-		Images: bits/terrain/swamp-roads-darker.png
-		Palette: swamproads
-		Frames: 146,147,148,156,157,158,166,167,168
-		Size: 3,3
-		Categories: Swamp roads
-		Tiles:
-			1: Swamp
+			0: Road
+			1: Clear
+			2: Clear
 			3: Road
-			4: Road
-			5: Swamp
-			6: Swamp
-			7: Road
-			8: Swamp
-	Template@12515:
-		Id: 12515
+	Template@8792:
+		Id: 8792
 		Images: bits/terrain/swamp-roads-darker.png
 		Palette: swamproads
-		Frames: 173,174,175,183,184,185,193,194,195
-		Size: 3,3
+		Frames: 200
+		Size: 1,1
 		Categories: Swamp roads
 		Tiles:
 			0: Road
-			1: Swamp
-			3: Road
-			4: Road
-			5: Swamp
-			6: Swamp
-			7: Road
-			8: Road
-	Template@12516:
-		Id: 12516
-		Images: bits/terrain/swamp-roads-darker.png
-		Palette: swamproads
-		Frames: 110,111,112,120,121,122,130,131,132
-		Size: 3,3
-		Categories: Swamp roads
-		Tiles:
-			0: Road
-			1: Swamp
-			3: Swamp
-			4: Road
-			5: Swamp
-			7: Swamp
-			8: Road
-	Template@12517:
-		Id: 12517
-		Images: bits/terrain/swamp-roads-darker.png
-		Palette: swamproads
-		Frames: 140,141,142,150,151,152,160,161,162
-		Size: 3,3
-		Categories: Swamp roads
-		Tiles:
-			0: Road
-			1: Swamp
-			3: Swamp
-			4: Road
-			5: Swamp
-			7: Swamp
-			8: Road
-	Template@12518:
-		Id: 12518
-		Images: bits/terrain/swamp-roads-darker.png
-		Palette: swamproads
-		Frames: 126,127,136,137
-		Size: 2,2
-		Categories: Swamp roads
-		Tiles:
-			1: Swamp
-			2: Swamp
-	Template@12519:
-		Id: 12519
-		Images: bits/terrain/swamp-roads-darker.png
-		Palette: swamproads
-		Frames: 128,129,138,139
-		Size: 2,2
-		Categories: Swamp roads
-		Tiles:
-			1: Swamp
-			2: Swamp
-	Template@12520:
-		Id: 12520
-		Images: bits/terrain/swamp-roads-darker.png
-		Palette: swamproads
-		Frames: 83,84,93,94
-		Size: 2,2
-		Categories: Swamp roads
-		Tiles:
-			0: Road
-			1: Swamp
-			2: Swamp
-	Template@12521:
-		Id: 12521
-		Images: bits/terrain/swamp-roads-darker.png
-		Palette: swamproads
-		Frames: 66,67,76,77
-		Size: 2,2
-		Categories: Swamp roads
-		Tiles:
-			0: Road
-			1: Swamp
-			2: Swamp
-	Template@12522:
-		Id: 12522
-		Images: bits/terrain/swamp-roads-darker.png
-		Palette: swamproads
-		Frames: 64,65,74,75
-		Size: 2,2
-		Categories: Swamp roads
-		Tiles:
-			0: Road
-			1: Swamp
-			2: Road
-	Template@12523:
-		Id: 12523
-		Images: bits/terrain/swamp-roads-darker.png
-		Palette: swamproads
-		Frames: 48,49,58,59
-		Size: 2,2
-		Categories: Swamp roads
-		Tiles:
-			1: Swamp
-			2: Swamp
-			3: Road
-	Template@12524:
-		Id: 12524
-		Images: bits/terrain/swamp-roads-darker.png
-		Palette: swamproads
-		Frames: 3,4,13,14
-		Size: 2,2
-		Categories: Swamp roads
-		Tiles:
-			1: Swamp
-			2: Road
-			3: Swamp
-	Template@12525:
-		Id: 12525
+	Template@8793:
+		Id: 8793
 		Images: bits/terrain/swamp-roads-darker.png
 		Palette: swamproads
 		Frames: 30,31,40,41
 		Size: 2,2
 		Categories: Swamp roads
 		Tiles:
-			1: Swamp
-			2: Road
-			3: Road
-	Template@12526:
-		Id: 12526
+			1: Clear
+			2: Clear
+	Template@8794:
+		Id: 8794
 		Images: bits/terrain/swamp-roads-darker.png
 		Palette: swamproads
-		Frames: 0,1,2,10,11,12,20,21,22
+		Frames: 63,64,73,74
+		Size: 2,2
+		Categories: Swamp roads
+		Tiles:
+			1: Clear
+			2: Clear
+	Template@8795:
+		Id: 8795
+		Images: bits/terrain/swamp-roads-darker.png
+		Palette: swamproads
+		Frames: 182,183,192,193
+		Size: 2,2
+		Categories: Swamp roads
+		Tiles:
+			0: Road
+			1: Clear
+			2: Clear
+	Template@8796:
+		Id: 8796
+		Images: bits/terrain/swamp-roads-darker.png
+		Palette: swamproads
+		Frames: 162,163,172,173
+		Size: 2,2
+		Categories: Swamp roads
+		Tiles:
+			0: Road
+			1: Clear
+			2: Clear
+	Template@8797:
+		Id: 8797
+		Images: bits/terrain/swamp-roads-darker.png
+		Palette: swamproads
+		Frames: 0,1,10,11
+		Size: 2,2
+		Categories: Swamp roads
+		Tiles:
+			0: Road
+			1: Clear
+			2: Road
+	Template@8798:
+		Id: 8798
+		Images: bits/terrain/swamp-roads-darker.png
+		Palette: swamproads
+		Frames: 183,184,193,194
+		Size: 2,2
+		Categories: Swamp roads
+		Tiles:
+			1: Clear
+			2: Clear
+			3: Road
+	Template@8799:
+		Id: 8799
+		Images: bits/terrain/swamp-roads-darker.png
+		Palette: swamproads
+		Frames: 44,45,54,55
+		Size: 2,2
+		Categories: Swamp roads
+		Tiles:
+			1: Clear
+			2: Road
+			3: Clear
+	Template@8800:
+		Id: 8800
+		Images: bits/terrain/swamp-roads-darker.png
+		Palette: swamproads
+		Frames: 80,81,90,91
+		Size: 2,2
+		Categories: Swamp roads
+		Tiles:
+			1: Clear
+			2: Road
+			3: Road
+	Template@8801:
+		Id: 8801
+		Images: bits/terrain/swamp-roads-darker.png
+		Palette: swamproads
+		Frames: 101,102,103,111,112,113,121,122,123
 		Size: 3,3
 		Categories: Swamp roads
 		Tiles:
-			1: Swamp
+			1: Clear
 			2: Road
-			3: Swamp
+			3: Clear
 			4: Road
 			5: Road
 			6: Road
 			7: Road
-	Template@12527:
-		Id: 12527
+	Template@8802:
+		Id: 8802
 		Images: bits/terrain/swamp-roads-darker.png
 		Palette: swamproads
-		Frames: 123,124,125,133,134,135,143,144,145
-		Size: 3,3
-		Categories: Swamp roads
-		Tiles:
-			1: Swamp
-			2: Road
-			3: Swamp
-			4: Road
-			5: Swamp
-			6: Road
-			7: Swamp
-	Template@12528:
-		Id: 12528
-		Images: bits/terrain/swamp-roads-darker.png
-		Palette: swamproads
-		Frames: 6,7,16,17
+		Frames: 204,205,214,215
 		Size: 2,2
 		Categories: Swamp roads
 		Tiles:
-			0: Swamp
-			3: Swamp
-	Template@12529:
-		Id: 12529
-		Images: bits/terrain/swamp-roads-darker.png
-		Palette: swamproads
-		Frames: 8,9,18,19
-		Size: 2,2
-		Categories: Swamp roads
-		Tiles:
-			0: Swamp
-			3: Swamp
-	Template@12530:
-		Id: 12530
-		Images: bits/terrain/swamp-roads-darker.png
-		Palette: swamproads
-		Frames: 68,69,78,79
-		Size: 2,2
-		Categories: Swamp roads
-		Tiles:
-			0: Swamp
+			0: Clear
 			1: Road
-			3: Swamp
-	Template@12531:
-		Id: 12531
+			2: Clear
+			3: Road
+	Template@8803:
+		Id: 8803
 		Images: bits/terrain/swamp-roads-darker.png
 		Palette: swamproads
-		Frames: 103,104,113,114
+		Frames: 201
+		Size: 1,1
+		Categories: Swamp roads
+		Tiles:
+			0: Road
+	Template@8804:
+		Id: 8804
+		Images: bits/terrain/swamp-roads-darker.png
+		Palette: swamproads
+		Frames: 93,94,103,104
 		Size: 2,2
 		Categories: Swamp roads
 		Tiles:
-			0: Swamp
-			1: Road
-			3: Swamp
-	Template@12532:
-		Id: 12532
+			0: Clear
+			3: Clear
+	Template@8805:
+		Id: 8805
 		Images: bits/terrain/swamp-roads-darker.png
 		Palette: swamproads
-		Frames: 105,106,115,116
+		Frames: 84,85,94,95
+		Size: 2,2
+		Categories: Swamp roads
+		Tiles:
+			0: Clear
+			3: Clear
+	Template@8806:
+		Id: 8806
+		Images: bits/terrain/swamp-roads-darker.png
+		Palette: swamproads
+		Frames: 108,109,118,119
+		Size: 2,2
+		Categories: Swamp roads
+		Tiles:
+			0: Clear
+			1: Road
+			3: Clear
+	Template@8807:
+		Id: 8807
+		Images: bits/terrain/swamp-roads-darker.png
+		Palette: swamproads
+		Frames: 175,176,185,186
+		Size: 2,2
+		Categories: Swamp roads
+		Tiles:
+			0: Clear
+			1: Road
+			3: Clear
+	Template@8808:
+		Id: 8808
+		Images: bits/terrain/swamp-roads-darker.png
+		Palette: swamproads
+		Frames: 123,124,133,134
 		Size: 2,2
 		Categories: Swamp roads
 		Tiles:
 			0: Road
 			1: Road
-			3: Swamp
-	Template@12533:
-		Id: 12533
+			3: Clear
+	Template@8809:
+		Id: 8809
 		Images: bits/terrain/swamp-roads-darker.png
 		Palette: swamproads
-		Frames: 85,86,95,96
+		Frames: 185,186,195,196
 		Size: 2,2
 		Categories: Swamp roads
 		Tiles:
 			0: Wall
 			2: Road
-			3: Swamp
-	Template@12534:
-		Id: 12534
+			3: Clear
+	Template@8810:
+		Id: 8810
 		Images: bits/terrain/swamp-roads-darker.png
 		Palette: swamproads
-		Frames: 91,92,101,102
+		Frames: 60,61,70,71
 		Size: 2,2
 		Categories: Swamp roads
 		Tiles:
-			0: Swamp
+			0: Clear
 			2: Road
-			3: Swamp
-	Template@12535:
-		Id: 12535
+			3: Clear
+	Template@8811:
+		Id: 8811
 		Images: bits/terrain/swamp-roads-darker.png
 		Palette: swamproads
-		Frames: 42,43,52,53
+		Frames: 128,129,138,139
 		Size: 2,2
 		Categories: Swamp roads
 		Tiles:
-			0: Swamp
+			0: Clear
 			2: Road
 			3: Road
-	Template@12536:
-		Id: 12536
+	Template@8812:
+		Id: 8812
 		Images: bits/terrain/swamp-roads-darker.png
 		Palette: swamproads
-		Frames: 148
+		Frames: 206,207,216,217
 		Size: 2,2
 		Categories: Swamp roads
 		Tiles:
 			0: Road
-	Template@12537:
-		Id: 12537
+			1: Clear
+			2: Clear
+			3: Road
+	Template@8813:
+		Id: 8813
 		Images: bits/terrain/swamp-roads-darker.png
 		Palette: swamproads
-		Frames: 198
+		Frames: 208,209,218,219
+		Size: 2,2
+		Categories: Swamp roads
+		Tiles:
+			0: Clear
+			1: Road
+			2: Clear
+			3: Road
+	Template@8814:
+		Id: 8814
+		Images: bits/terrain/swamp-roads-darker.png
+		Palette: swamproads
+		Frames: 220,221,230,231
+		Size: 2,2
+		Categories: Swamp roads
+		Tiles:
+			0: Clear
+			1: Road
+			2: Road
+			3: Clear
+	Template@8815:
+		Id: 8815
+		Images: bits/terrain/swamp-roads-darker.png
+		Palette: swamproads
+		Frames: 222,223,232,233
 		Size: 2,2
 		Categories: Swamp roads
 		Tiles:
 			0: Road
-	Template@12538:
-		Id: 12538
+			1: Clear
+			2: Clear
+			3: Road
+	Template@8816:
+		Id: 8816
 		Images: bits/terrain/swamp-roads-darker.png
 		Palette: swamproads
-		Frames: 288
-		Size: 2,2
+		Frames: 284,285,286,294,295,296
+		Size: 3,2
 		Categories: Swamp roads
 		Tiles:
 			0: Road
-	Template@12539:
-		Id: 12539
+			1: Road
+			2: Road
+			3: Clear
+			4: Road
+			5: Clear
+	Template@8817:
+		Id: 8817
 		Images: bits/terrain/swamp-roads-darker.png
 		Palette: swamproads
-		Frames: 289
-		Size: 2,2
+		Frames: 287,288,289,297,298,299
+		Size: 3,2
+		Categories: Swamp roads
+		Tiles:
+			0: Clear
+			1: Road
+			2: Clear
+			3: Road
+			4: Road
+			5: Road
+	Template@8818:
+		Id: 8818
+		Images: bits/terrain/swamp-roads-darker.png
+		Palette: swamproads
+		Frames: 240,241,250,251,260,261
+		Size: 2,3
 		Categories: Swamp roads
 		Tiles:
 			0: Road
-	Template@12540:
-		Id: 12540
+			1: Clear
+			2: Road
+			3: Road
+			4: Road
+			5: Clear
+	Template@8819:
+		Id: 8819
 		Images: bits/terrain/swamp-roads-darker.png
 		Palette: swamproads
-		Frames: 298
-		Size: 2,2
+		Frames: 242,243,252,253,262,263
+		Size: 2,3
+		Categories: Swamp roads
+		Tiles:
+			0: Clear
+			1: Road
+			2: Road
+			3: Road
+			4: Clear
+			5: Road
+	Template@8820:
+		Id: 8820
+		Images: bits/terrain/swamp-roads-darker.png
+		Palette: swamproads
+		Frames: 246
+		Size: 1,1
 		Categories: Swamp roads
 		Tiles:
 			0: Road
-	Template@12541:
-		Id: 12541
+	Template@8821:
+		Id: 8821
 		Images: bits/terrain/swamp-roads-darker.png
 		Palette: swamproads
-		Frames: 299
-		Size: 2,2
+		Frames: 247
+		Size: 1,1
+		Categories: Swamp roads
+		Tiles:
+			0: Road
+	Template@8822:
+		Id: 8822
+		Images: bits/terrain/swamp-roads-darker.png
+		Palette: swamproads
+		Frames: 256
+		Size: 1,1
+		Categories: Swamp roads
+		Tiles:
+			0: Road
+	Template@8823:
+		Id: 8823
+		Images: bits/terrain/swamp-roads-darker.png
+		Palette: swamproads
+		Frames: 257
+		Size: 1,1
 		Categories: Swamp roads
 		Tiles:
 			0: Road

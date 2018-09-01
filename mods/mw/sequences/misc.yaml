@@ -437,24 +437,32 @@ shroud:
 # the index that is mapped to them in maps
 scorches:
 	Defaults:
-		UseTilesetExtension: true
-		Length: *
-	sc1: sc1
-	sc2: sc2
-	sc3: sc3
-	sc4: sc4
-	sc5: sc5
-	sc6: sc6
+		AddExtension: False
+		Length: 1
+	sc1: craters.png
+		Start: 25
+	sc2: craters.png
+		Start: 26
+	sc3: craters.png
+		Start: 27
+	sc4: craters.png
+		Start: 28
+	sc5: craters.png
+		Start: 29
 craters:
 	Defaults:
-		UseTilesetExtension: true
-		Length: *
-	cr1: cr1
-	cr2: cr2
-	cr3: cr3
-	cr4: cr4
-	cr5: cr5
-	cr6: cr6
+		AddExtension: False
+		Length: 5
+	cr1: craters.png
+		Frames: 0,1,2,3,4
+	cr2: craters.png
+		Frames: 5,6,7,8,9
+	cr3: craters.png
+		Frames: 10,11,12,13,14
+	cr4: craters.png
+		Frames: 15,16,17,18,19
+	cr5: craters.png
+		Frames: 20,21,22,23,24
 smokland:
 	open:
 		Length: 60

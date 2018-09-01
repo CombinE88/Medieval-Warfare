@@ -1,4 +1,28 @@
 ^Palettes:
+	PaletteFromPng@SWAMP:
+		Name: swamp
+		Filename: swamp-darker.png
+		Tileset: TEMPERAT
+	PaletteFromPng@SWAMPROADS:
+		Name: swamproads
+		Filename: swamp-roads-darker.png
+		Tileset: TEMPERAT
+	PaletteFromPng@TERRAIN:
+		Name: terrainmw
+		Filename: terrainset.png
+		Tileset: TEMPERAT
+	PaletteFromPng@ROADS:
+		Name: roadsmw
+		Filename: roads.png
+		Tileset: TEMPERAT
+	PaletteFromPng@River:
+		Name: rivermw
+		Filename: river.png
+		Tileset: TEMPERAT
+	PaletteFromPng@watercliffsmw:
+		Name: watercliffsmw
+		Filename: watercliffs.png
+		Tileset: TEMPERAT
 	PaletteFromFile@interiorfire:
 		Name: fire
 		Filename: fireblend.pal
@@ -25,18 +49,8 @@
 	PaletteFromFile@terrain-temperat:
 		Name: terrain
 		Tileset: TEMPERAT
-		Filename: temperat.pal
-		ShadowIndex: 4
-	PaletteFromFile@terrain-interior:
-		Name: terrain
-		Tileset: INTERIOR
 		Filename: newMWPalette.pal
-		ShadowIndex: 4
-	PaletteFromFile@terrain-jungle:
-		Name: terrain
-		Tileset: JUNGLE
-		Filename: jungle.pal
-		ShadowIndex: 4
+		ShadowIndex: 1
 	PaletteFromFile@staticterrain-desert:
 		Name: staticterrain
 		Tileset: DESERT
@@ -46,11 +60,6 @@
 		Name: staticterrain
 		Tileset: WINTER
 		Filename: winter.pal
-		ShadowIndex: 4
-	PaletteFromFile@staticterrain-snow:
-		Name: staticterrain
-		Tileset: SNOW
-		Filename: snow.pal
 		ShadowIndex: 4
 	PaletteFromFile@staticterrain-temperat:
 		Name: staticterrain
@@ -287,34 +296,10 @@
 	RotationPaletteEffect@defaultRAwater:
 		Palettes: raterrain
 		ExcludeTilesets: DESERT
-	PaletteFromPng@SWAMP:
-		Name: swamp
-		Filename: swamp-darker.png
-		Tileset: TEMPERAT
-	PaletteFromPng@SWAMPROADS:
-		Name: swamproads
-		Filename: swamp-roads-darker.png
-		Tileset: TEMPERAT
-	PaletteFromPng@TERRAIN:
-		Name: terrainmw
-		Filename: terrainset.png
-		Tileset: TEMPERAT
-	PaletteFromPng@ROADS:
-		Name: roadsmw
-		Filename: roads.png
-		Tileset: TEMPERAT
-	PaletteFromPng@River:
-		Name: rivermw
-		Filename: river.png
-		Tileset: TEMPERAT
-	PaletteFromPng@watercliffsmw:
-		Name: watercliffsmw
-		Filename: watercliffs.png
-		Tileset: TEMPERAT
-	PaletteFromPng@Shores:
-		Name: shores
-		Filename: shores.png
-		Tileset: TEMPERAT
 	RotationPaletteEffect@rivermwrotation:
-		Palettes: rivermw, watercliffsmw, shoresmw
+		Palettes: rivermw, watercliffsmw
 		RotationBase: 249
+	PaletteFromPng@BuildingBibs:
+		Name: bibs
+		Filename: buildingbibs.png
+		Tileset: TEMPERAT

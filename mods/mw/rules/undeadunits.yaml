@@ -270,16 +270,14 @@ UNDEAD5:
 	Armament:
 		Weapon: SkeletonBowNArrow
 		LocalOffset: 341,20,356
+		FireDelay: 5
 	Armament@Air:
 		Name: secondary
 		Weapon: SkeletonBowNArrowAir
 		LocalOffset: 341,20,356
-	Armament@Dummy:
-		Name: tertiary
-		Weapon: SkeletonBowNArrowDUMMY
-		LocalOffset: 341,20,356
+		FireDelay: 5
 	AttackFrontal:
-		Armaments: primary, secondary, tertiary
+		Armaments: primary, secondary
 	RenderSprites:
 		PlayerPalette: raplayer
 	Armor:
@@ -1090,16 +1088,14 @@ RESSURECT4:
 	Armament:
 		Weapon: SkeletonBowNArrow
 		LocalOffset: 341,20,356
+		FireDelay: 5
 	Armament@Air:
 		Name: secondary
 		Weapon: SkeletonBowNArrowAir
 		LocalOffset: 341,20,356
-	Armament@Dummy:
-		Name: tertiary
-		Weapon: SkeletonBowNArrowDUMMY
-		LocalOffset: 341,20,356
+		FireDelay: 5
 	AttackFrontal:
-		Armaments: primary, secondary, tertiary
+		Armaments: primary, secondary
 	RenderSprites:
 		PlayerPalette: raplayer
 	Armor:

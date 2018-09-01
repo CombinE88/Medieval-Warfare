@@ -13,14 +13,9 @@ gtwnew:
 		Length: 10
 		Tick: 80
 		Offset: 0,-12
-	bib: mbGTWR
-		UseTilesetExtension: true
-		TilesetOverrides:
-			WINTER: TEMPERAT
-			JUNGLE: TEMPERAT
-			JUNGLE: TEMPERAT
-			INTERIOR: TEMPERAT
-		Length: *
+	bib: buildingbibs.png
+		Start: 36
+		AddExtension: false
 		Offset: 0,-2
 	icon: gtwnewicon.shp
 		AddExtension: False
@@ -85,14 +80,9 @@ sulgtw:
 		Length: 10
 		Tick: 80
 		Offset: 0,-12
-	bib: mbGTWR
-		UseTilesetExtension: true
-		TilesetOverrides:
-			WINTER: TEMPERAT
-			JUNGLE: TEMPERAT
-			SNOW: TEMPERAT
-			INTERIOR: TEMPERAT
-		Length: *
+	bib: buildingbibs.png
+		Start: 36
+		AddExtension: false
 		Offset: 0,-2
 	icon: sulgtwicon.shp
 		AddExtension: False
@@ -194,13 +184,9 @@ gunnew:
 		Tick: 80
 	muzzle: gunfire2
 		Length: *
-	bib: mbGUN
-		UseTilesetExtension: true
-		TilesetOverrides:
-			WINTER: TEMPERAT
-			JUNGLE: TEMPERAT
-			INTERIOR: TEMPERAT
-		Length: *
+	bib: buildingbibs.png
+		Start: 36
+		AddExtension: false
 		Offset: -1,-1
 	icon: cannontowericon.shp
 		AddExtension: False
@@ -242,13 +228,9 @@ tribu:
 		Length: *
 		Tick: 80
 		Offset: 0,-18,0
-	bib: mbGTWR
-		UseTilesetExtension: true
-		TilesetOverrides:
-			WINTER: TEMPERAT
-			JUNGLE: TEMPERAT
-			INTERIOR: TEMPERAT
-		Length: *
+	bib: buildingbibs.png
+		Start: 36
+		AddExtension: false
 		Offset: 0,-2
 	icon: tribuicon.shp
 		AddExtension: False
@@ -300,13 +282,9 @@ sigtrib:
 		Length: *
 		Tick: 80
 		Offset: 0,-18,0
-	bib: mbGTWR
-		UseTilesetExtension: true
-		TilesetOverrides:
-			WINTER: TEMPERAT
-			JUNGLE: TEMPERAT
-			INTERIOR: TEMPERAT
-		Length: *
+	bib: buildingbibs.png
+		Start: 36
+		AddExtension: false
 		Offset: 0,-2
 	icon: sigtribicon.shp
 		AddExtension: False
@@ -368,14 +346,9 @@ batowgun:
 		Length: *
 		Tick: 80
 		Offset: 0,-12,0
-	bib: mbGTWR
-		UseTilesetExtension: true
-		TilesetOverrides:
-			WINTER: TEMPERAT
-			JUNGLE: TEMPERAT
-			SNOW: TEMPERAT
-			INTERIOR: TEMPERAT
-		Length: *
+	bib: buildingbibs.png
+		Start: 36
+		AddExtension: false
 		Offset: 0,-2
 	icon: batoicon.shp
 		AddExtension: False
@@ -418,13 +391,10 @@ gtairwnew:
 		Length: 23
 		Tick: 80
 		Offset: 0,-12,0
-	bib: mbSILO
-		UseTilesetExtension: true
-		TilesetOverrides:
-			WINTER: TEMPERAT
-			JUNGLE: TEMPERAT
-			INTERIOR: TEMPERAT
-		Length: *
+	bib: buildingbibs.png
+		Frames: 37,38
+		AddExtension: false
+		Length: 2
 	icon: aaballicon.shp
 		AddExtension: False
 	turretidle: smallaaball
@@ -465,14 +435,9 @@ cstlwll:
 		Offset: 0,-12,0
 	icon: cstlwllicon.shp
 		AddExtension: False
-	bib: mbGTWR
-		UseTilesetExtension: true
-		TilesetOverrides:
-			WINTER: TEMPERAT
-			JUNGLE: TEMPERAT
-			JUNGLE: TEMPERAT
-			INTERIOR: TEMPERAT
-		Length: *
+	bib: buildingbibs.png
+		Start: 36
+		AddExtension: false
 		Offset: 0,-2
 frtwll:
 	Inherits: ^scaffold
@@ -487,14 +452,9 @@ frtwll:
 		Offset: 0,-12,0
 	icon: cstlwllicon.shp
 		AddExtension: False
-	bib: mbGTWR
-		UseTilesetExtension: true
-		TilesetOverrides:
-			WINTER: TEMPERAT
-			JUNGLE: TEMPERAT
-			JUNGLE: TEMPERAT
-			INTERIOR: TEMPERAT
-		Length: *
+	bib: buildingbibs.png
+		Start: 36
+		AddExtension: false
 		Offset: 0,-2
 sulwll:
 	Inherits: ^scaffold
@@ -509,14 +469,9 @@ sulwll:
 		Offset: 0,-12,0
 	icon: cstlwllicon.shp
 		AddExtension: False
-	bib: mbGTWR
-		UseTilesetExtension: true
-		TilesetOverrides:
-			WINTER: TEMPERAT
-			JUNGLE: TEMPERAT
-			JUNGLE: TEMPERAT
-			INTERIOR: TEMPERAT
-		Length: *
+	bib: buildingbibs.png
+		Start: 36
+		AddExtension: false
 		Offset: 0,-2
 wdwll:
 	idle: wdwll
@@ -593,14 +548,9 @@ garg:
 		Length: 25
 		Tick: 80
 		Offset: 0,-12,0
-	bib: mbGTWR
-		UseTilesetExtension: true
-		TilesetOverrides:
-			WINTER: TEMPERAT
-			JUNGLE: TEMPERAT
-			SNOW: TEMPERAT
-			INTERIOR: TEMPERAT
-		Length: *
+	bib: buildingbibs.png
+		Start: 36
+		AddExtension: false
 		Offset: 0,-2
 	icon: gargicon.shp
 		AddExtension: False
@@ -681,9 +631,10 @@ cstlgtew:
 		Start: 5
 		ZOffset: -25
 		Offset: 0,-30
-	bib: bib2
-		UseTilesetExtension: true
-		Length: *
+	bib: buildingbibs.png
+		Frames: 12,13,14,18,19,20
+		Length: 6
+		AddExtension: false
 		Offset: 0,-4,0
 	icon: cstlgtweicon.shp
 		AddExtension: False
@@ -794,9 +745,10 @@ sulgtew:
 		Start: 5
 		ZOffset: -25
 		Offset: 0,-30
-	bib: bib2
-		UseTilesetExtension: true
-		Length: *
+	bib: buildingbibs.png
+		Frames: 12,13,14,18,19,20
+		Length: 6
+		AddExtension: false
 		Offset: 0,-4,0
 	icon: cstlgtweicon.shp
 		AddExtension: False
@@ -870,14 +822,9 @@ dedwall:
 		Offset: 0,-12,0
 	icon: dedwallicon.shp
 		AddExtension: False
-	bib: mbGTWR
-		UseTilesetExtension: true
-		TilesetOverrides:
-			WINTER: TEMPERAT
-			JUNGLE: TEMPERAT
-			JUNGLE: TEMPERAT
-			INTERIOR: TEMPERAT
-		Length: *
+	bib: buildingbibs.png
+		Start: 36
+		AddExtension: false
 		Offset: 0,-2
 	make1: dedwallmake
 		Start: 0
@@ -985,9 +932,10 @@ dedgate:
 		Start: 9
 		ZOffset: -25
 		Offset: 0,-30
-	bib: bib2
-		UseTilesetExtension: true
-		Length: *
+	bib: buildingbibs.png
+		Frames: 12,13,14,18,19,20
+		Length: 6
+		AddExtension: false
 		Offset: 0,-4,0
 	icon: dedgateicon.shp
 		AddExtension: False
@@ -1057,9 +1005,10 @@ dedgatens:
 		Start: 9
 		ZOffset: -25
 		Offset: 0,-30
-	bib: bib2
-		UseTilesetExtension: true
-		Length: *
+	bib: buildingbibs.png
+		Frames: 12,13,14,18,19,20
+		Length: 6
+		AddExtension: false
 		Offset: 0,-4,0
 	icon: dedgatensicon.shp
 		AddExtension: False

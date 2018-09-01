@@ -30,7 +30,8 @@ HQNEWGDI:
 		HP: 70000
 	RevealsShroud:
 		Range: 14c0
-	WithBuildingBib: 
+	WithBuildingBib:
+		Palette: bibs 
 	ThrowsShrapnel@LARGE:
 		Weapons: DebrAnvil1, DebrUtility1, DebrUtility2, DebrUtility3
 		Pieces: 1, 2
@@ -99,6 +100,7 @@ ARMORYGDI:
 	RevealsShroud:
 		Range: 5c0
 	WithBuildingBib:
+		Palette: bibs
 	RenderDetectionCircle:
 	DetectCloaked:
 		Range: 5c0
@@ -168,6 +170,7 @@ NUK2NEW:
 	RevealsShroud:
 		Range: 4c0
 	WithBuildingBib:
+		Palette: bibs
 	Selectable:
 		Bounds: 48,48,0,0
 	SelectionDecorations:
@@ -230,6 +233,7 @@ NUKXL:
 	RevealsShroud:
 		Range: 4c0
 	WithBuildingBib:
+		Palette: bibs
 	Selectable:
 		Bounds: 72,58,0,-2
 	SelectionDecorations:
@@ -292,6 +296,7 @@ NUKENEW:
 	RevealsShroud:
 		Range: 4c0
 	WithBuildingBib:
+		Palette: bibs
 	Selectable:
 		Bounds: 48,49,0,-2
 	SelectionDecorations:
@@ -343,6 +348,7 @@ ZEROPROC:
 	RevealsShroud:
 		Range: 3c0
 	WithBuildingBib:
+		Palette: bibs
 	CustomSellValue:
 		Value: 200
 	ProvidesPrerequisite@buildingname:
@@ -415,6 +421,7 @@ BARRNEW:
 	RevealsShroud:
 		Range: 5c0
 	WithBuildingBib:
+		Palette: bibs
 	RallyPoint:
 	WithActorProduction:
 		Produces: MInfantry.GDI
@@ -472,6 +479,7 @@ STALL:
 	WithProductionDoorOverlay:
 		Sequence: build-top
 	WithBuildingBib:
+		Palette: bibs
 	RallyPoint:
 	Exit@1:
 		SpawnOffset: 554,682,0
@@ -547,6 +555,7 @@ CASTLE2:
 	RevealsShroud:
 		Range: 6c0
 	WithBuildingBib:
+		Palette: bibs
 	ProvidesPrerequisite:
 		Prerequisite: anyhq
 	ProvidesPrerequisite@buildingname:
@@ -616,6 +625,7 @@ WORKSHOPGDI:
 	RevealsShroud:
 		Range: 5c0
 	WithBuildingBib:
+		Palette: bibs
 	ProvidesPrerequisite@buildingname: 
 	RallyPoint:
 	Exit@1:

@@ -37,12 +37,15 @@ BowNArrow:
 	Report: arrow01.aud, arrow02.aud, arrow02.aud
 	InvalidTargets: Wall, Air
 	ValidTargets: Ground
-	Projectile: Missile
-		HorizontalRateOfTurn: 60
-		VerticalRateOfTurn: 60
-		RangeLimit: 8c204
-		Arm: 0
-		Speed: 200
+	Projectile: BezierBullet
+		LaunchAngle: 130
+		Speed: 250
+		Inaccuracy: 0c0
+		ContrailLength: 20
+		ContrailWidth: 10
+		ContrailDelay: 0
+		ContrailUsePlayerColor : true
+		Image: e4arrow
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
 		Spread: 25
@@ -61,39 +64,20 @@ BowNArrow:
 			HeavyBuilding: 15
 			Spectral: 15
 		DamageTypes: DefaultDeath
-BowNArrowDUMMY:
-	ReloadDelay: 45
-	Range: 6c0
-	MinRange: 0c512
-	InvalidTargets: Wall, Air
-	ValidTargets: Ground
-	Projectile: Bullet
-		LaunchAngle: 130
-		Speed: 250
-		Inaccuracy: 0c0
-		ContrailLength: 20
-		ContrailWidth: 10
-		ContrailDelay: 0
-		ContrailUsePlayerColor : true
-		Image: e4arrow
-		Palette: ra
-	Warhead@1Dam: SpreadDamage
-		Spread: 25
-		InvalidTargets: Wall, Air
-		ValidTargets: Ground
-		Damage: 0
-		Versus:
-			Leather: 0
-			Light: 0
-			Heavy: 0
-			Concrete: 0
-			Knight: 0
-			LightCavalry: 0
-			MediumCavalry: 0
-			HeavyCavalry: 0
-			HeavyBuilding: 0
-			Spectral: 0
-		DamageTypes: DefaultDeath
+	Warhead@2Broken: FireShrapnel
+		ValidTargets: HeavyCavalry, Spectral, Juggernaut, RegularCavalry, Heavy, Defenses, Structure
+		Weapon: BrokenArrow
+		ThrowWithoutTarget: true
+		AimChance: 0
+	Warhead@3Broken: CreateEffect
+		ValidTargets: HeavyCavalry, Spectral, Juggernaut, RegularCavalry, Heavy
+		ImpactSounds: arowmiss.aud
+	Warhead@NormalHit: CreateEffect
+		InvalidTargets: HeavyCavalry, Defenses, Spectral, Juggernaut, Structure, RegularCavalry, Heavy
+		ImpactSounds: arrowhit.aud
+	Warhead@4Broken: CreateEffect
+		ValidTargets: Defenses, Structure
+		ImpactSounds: arowmiss.aud
 BowNArrowMarksman:
 	ReloadDelay: 50
 	Range: 6c0
@@ -101,12 +85,15 @@ BowNArrowMarksman:
 	Report: crossbow01.aud
 	InvalidTargets: Wall, Air
 	ValidTargets: Ground
-	Projectile: Missile
-		HorizontalRateOfTurn: 90
-		VerticalRateOfTurn: 90
-		RangeLimit: 9c204
-		Arm: 0
-		Speed: 200
+	Projectile: BezierBullet
+		LaunchAngle: 50
+		Speed: 350
+		Inaccuracy: 0c0
+		ContrailLength: 20
+		ContrailWidth: 10
+		ContrailDelay: 0
+		ContrailUsePlayerColor : true
+		Image: e4arrow
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
 		Spread: 45
@@ -125,39 +112,20 @@ BowNArrowMarksman:
 			HeavyBuilding: 15
 			Spectral: 15
 		DamageTypes: DefaultDeath
-BowNArrowDUMMYMarksman:
-	ReloadDelay: 45
-	Range: 6c0
-	MinRange: 0c512
-	InvalidTargets: Wall, Air
-	ValidTargets: Ground
-	Projectile: Bullet
-		LaunchAngle: 50
-		Speed: 350
-		Inaccuracy: 0c0
-		ContrailLength: 20
-		ContrailWidth: 10
-		ContrailDelay: 0
-		ContrailUsePlayerColor : true
-		Image: e4arrow
-		Palette: ra
-	Warhead@1Dam: SpreadDamage
-		Spread: 25
-		InvalidTargets: Wall, Air
-		ValidTargets: Ground
-		Damage: 0
-		Versus:
-			Leather: 0
-			Light: 0
-			Heavy: 0
-			Concrete: 0
-			Knight: 0
-			LightCavalry: 0
-			MediumCavalry: 0
-			HeavyCavalry: 0
-			HeavyBuilding: 0
-			Spectral: 0
-		DamageTypes: DefaultDeath
+	Warhead@2Broken: FireShrapnel
+		ValidTargets: HeavyCavalry, Spectral, Juggernaut, RegularCavalry, Heavy, Defenses, Structure
+		Weapon: BrokenArrow
+		ThrowWithoutTarget: true
+		AimChance: 0
+	Warhead@3Broken: CreateEffect
+		ValidTargets: HeavyCavalry, Spectral, Juggernaut, RegularCavalry, Heavy
+		ImpactSounds: arowmiss.aud
+	Warhead@NormalHit: CreateEffect
+		InvalidTargets: HeavyCavalry, Defenses, Spectral, Juggernaut, Structure, RegularCavalry, Heavy
+		ImpactSounds: arrowhit.aud
+	Warhead@4Broken: CreateEffect
+		ValidTargets: Defenses, Structure
+		ImpactSounds: arowmiss.aud
 BowNArrowAir:
 	ReloadDelay: 45
 	Range: 7c512
@@ -359,12 +327,16 @@ BowNArrowSiegeTower:
 	Report: arrow01.aud, arrow02.aud, arrow02.aud
 	ValidTargets: Ground
 	InvalidTargets: Wall, Air
-	Projectile: Missile
-		HorizontalRateOfTurn: 60
-		RangeLimit: 8c204
-		Arm: 0
-		Speed: 200
+	Projectile: BezierBullet
+		LaunchAngle: 130
+		Speed: 250
 		Inaccuracy: 0c0
+		ContrailLength: 20
+		ContrailWidth: 10
+		ContrailDelay: 0
+		ContrailUsePlayerColor : true
+		Image: e4arrow
+		Palette: ra
 	Warhead@1Dam: SpreadDamage
 		Spread: 141
 		InvalidTargets: Wall, Air
@@ -381,6 +353,20 @@ BowNArrowSiegeTower:
 			HeavyCavalry: 35
 			HeavyBuilding: 25
 		DamageTypes: DefaultDeath  
+	Warhead@2Broken: FireShrapnel
+		ValidTargets: HeavyCavalry, Spectral, Juggernaut, RegularCavalry, Heavy, Defenses, Structure
+		Weapon: BrokenArrow
+		ThrowWithoutTarget: true
+		AimChance: 0
+	Warhead@3Broken: CreateEffect
+		ValidTargets: HeavyCavalry, Spectral, Juggernaut, RegularCavalry, Heavy
+		ImpactSounds: arowmiss.aud
+	Warhead@NormalHit: CreateEffect
+		InvalidTargets: HeavyCavalry, Defenses, Spectral, Juggernaut, Structure, RegularCavalry, Heavy
+		ImpactSounds: arrowhit.aud
+	Warhead@4Broken: CreateEffect
+		ValidTargets: Defenses, Structure
+		ImpactSounds: arowmiss.aud
 BowNArrowSiegeTowerAIR:
 	ReloadDelay: 45
 	Range: 10c0
@@ -416,39 +402,6 @@ BowNArrowSiegeTowerAIR:
 			HeavyCavalry: 35
 			HeavyBuilding: 25
 		DamageTypes: DefaultDeath 
-BowNArrowSiegeTowerDUMMY:
-	ReloadDelay: 45
-	Range: 6c0
-	MinRange: 0c0
-	InvalidTargets: Wall, Air
-	ValidTargets: Ground
-	Projectile: Bullet
-		LaunchAngle: 130
-		Speed: 250
-		Inaccuracy: 0c0
-		ContrailLength: 20
-		ContrailWidth: 10
-		ContrailDelay: 0
-		ContrailUsePlayerColor : true
-		Image: e4arrow
-		Palette: ra
-	Warhead@1Dam: SpreadDamage
-		Spread: 25
-		InvalidTargets: Wall, Air
-		ValidTargets: Ground
-		Damage: 0
-		Versus:
-			Leather: 0
-			Light: 0
-			Heavy: 0
-			Concrete: 0
-			Knight: 0
-			LightCavalry: 0
-			MediumCavalry: 0
-			HeavyCavalry: 0
-			HeavyBuilding: 0
-			Spectral: 0
-		DamageTypes: DefaultDeath
 SpearThrow:
 	ReloadDelay: 50
 	Range: 3c512
@@ -1172,12 +1125,15 @@ BowNArrowTower:
 	Report: arrow01.aud, arrow02.aud, arrow02.aud
 	InvalidTargets: Wall, Air
 	ValidTargets: Ground
-	Projectile: Missile
-		HorizontalRateOfTurn: 60
-		VerticalRateOfTurn: 60
-		RangeLimit: 10c204
-		Arm: 0
+	Projectile: BezierBullet
+		LaunchAngle: 130
 		Speed: 250
+		Inaccuracy: 0c0
+		ContrailLength: 20
+		ContrailWidth: 10
+		ContrailDelay: 0
+		ContrailUsePlayerColor : true
+		Image: e4arrow
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
 		Spread: 256
@@ -1196,14 +1152,30 @@ BowNArrowTower:
 			HeavyBuilding: 35
 			Spectral: 15
 		DamageTypes: DefaultDeath 
-BowNArrowTowerDUMMY:
+	Warhead@2Broken: FireShrapnel
+		ValidTargets: HeavyCavalry, Spectral, Juggernaut, RegularCavalry, Heavy, Defenses, Structure
+		Weapon: BrokenArrow
+		ThrowWithoutTarget: true
+		AimChance: 0
+	Warhead@3Broken: CreateEffect
+		ValidTargets: HeavyCavalry, Spectral, Juggernaut, RegularCavalry, Heavy
+		ImpactSounds: arowmiss.aud
+	Warhead@NormalHit: CreateEffect
+		InvalidTargets: HeavyCavalry, Defenses, Spectral, Juggernaut, Structure, RegularCavalry, Heavy
+		ImpactSounds: arrowhit.aud
+	Warhead@4Broken: CreateEffect
+		ValidTargets: Defenses, Structure
+		ImpactSounds: arowmiss.aud
+BowNArrowTowerUnblock:
 	ReloadDelay: 25
 	Range: 7c0
 	MinRange: 0c0
-	InvalidTargets: Wall, Air
-	ValidTargets: Ground
-	Projectile: Bullet
+	Report: arrow01.aud, arrow02.aud, arrow02.aud
+	InvalidTargets: Wall
+	ValidTargets: Ground, Air
+	Projectile: BezierBullet
 		LaunchAngle: 130
+		Blockable: false
 		Speed: 250
 		Inaccuracy: 0c0
 		ContrailLength: 20
@@ -1212,38 +1184,6 @@ BowNArrowTowerDUMMY:
 		ContrailUsePlayerColor : true
 		Image: e4arrow
 		Palette: ra
-	Warhead@1Dam: SpreadDamage
-		Spread: 25
-		InvalidTargets: Wall, Air
-		ValidTargets: Ground
-		Damage: 0
-		Versus:
-			Leather: 0
-			Light: 0
-			Heavy: 0
-			Concrete: 0
-			Knight: 0
-			LightCavalry: 0
-			MediumCavalry: 0
-			HeavyCavalry: 0
-			HeavyBuilding: 0
-			Spectral: 0
-		DamageTypes: DefaultDeath
-BowNArrowTowerUnblock:
-	ReloadDelay: 25
-	Range: 7c0
-	MinRange: 0c0
-	Report: arrow01.aud, arrow02.aud, arrow02.aud
-	InvalidTargets: Wall
-	ValidTargets: Ground, Air
-	Projectile: Missile
-		HorizontalRateOfTurn: 60
-		VerticalRateOfTurn: 60
-		RangeLimit: 10c204
-		Arm: 0
-		Blockable: false
-		Speed: 200
-		Inaccuracy: 0c0
 	Warhead@1Dam: SpreadDamage
 		Spread: 302
 		Damage: 1000
@@ -1261,40 +1201,20 @@ BowNArrowTowerUnblock:
 			HeavyBuilding: 40
 			Spectral: 15
 		DamageTypes: DefaultDeath  
-BowNArrowTowerUnblockDUMMY:
-	ReloadDelay: 25
-	Range: 7c0
-	MinRange: 0c512
-	InvalidTargets: Wall, Air
-	ValidTargets: Ground
-	Projectile: Bullet
-		LaunchAngle: 130
-		Blockable: false
-		Speed: 250
-		Inaccuracy: 0c0
-		ContrailLength: 20
-		ContrailWidth: 10
-		ContrailDelay: 0
-		ContrailUsePlayerColor : true
-		Image: e4arrow
-		Palette: ra
-	Warhead@1Dam: SpreadDamage
-		Spread: 25
-		InvalidTargets: Wall, Air
-		ValidTargets: Ground
-		Damage: 0
-		Versus:
-			Leather: 0
-			Light: 0
-			Heavy: 0
-			Concrete: 0
-			Knight: 0
-			LightCavalry: 0
-			MediumCavalry: 0
-			HeavyCavalry: 0
-			HeavyBuilding: 0
-			Spectral: 0
-		DamageTypes: DefaultDeath 
+	Warhead@2Broken: FireShrapnel
+		ValidTargets: HeavyCavalry, Spectral, Juggernaut, RegularCavalry, Heavy, Defenses, Structure
+		Weapon: BrokenArrow
+		ThrowWithoutTarget: true
+		AimChance: 0
+	Warhead@3Broken: CreateEffect
+		ValidTargets: HeavyCavalry, Spectral, Juggernaut, RegularCavalry, Heavy
+		ImpactSounds: arowmiss.aud
+	Warhead@NormalHit: CreateEffect
+		InvalidTargets: HeavyCavalry, Defenses, Spectral, Juggernaut, Structure, RegularCavalry, Heavy
+		ImpactSounds: arrowhit.aud
+	Warhead@4Broken: CreateEffect
+		ValidTargets: Defenses, Structure
+		ImpactSounds: arowmiss.aud
 CannonBoulder:
 	ReloadDelay: 40
 	Range: 7c0

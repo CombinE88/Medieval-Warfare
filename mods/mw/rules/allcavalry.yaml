@@ -462,6 +462,7 @@ ROSS3:
 	Armament:
 		Weapon: longbownarrow
 		LocalOffset: 0,0,500
+		FireDelay: 5
 	AttackFrontal:
 		FacingTolerance: 10
 	AutoTarget:
@@ -590,6 +591,7 @@ ROSS4B:
 	PersonValued:
 		ActorCount: 1
 	Targetable@CombatRole:
+		TargetTypes: LightCavalry
 ROSS4C:
 	Inherits: ^Cavalry
 	Inherits@AUTOTARGET: ^AutoTargetGround

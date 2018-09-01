@@ -15,9 +15,10 @@ nodnuke:
 		Start: 0
 		Tick: 80
 		Offset: 0,-12
-	bib: bib3
-		UseTilesetExtension: true
-		Length: *
+	bib: buildingbibs.png
+		Frames: 4,5,10,11
+		Length: 4
+		AddExtension: false
 	icon: nodnukeicon.shp
 		AddExtension: False
 	idleb: nodnukeb
@@ -82,9 +83,10 @@ xltnt1:
 		Start: 0
 		Tick: 80
 		Offset: 0,-6
-	bib: bib3
-		UseTilesetExtension: true
-		Length: *
+	bib: buildingbibs.png
+		Frames: 4,5,10,11
+		Length: 4
+		AddExtension: false
 	icon: xltnticon.shp
 		AddExtension: False
 	make1: 
@@ -176,9 +178,10 @@ xltnt2:
 		Start: 0
 		Tick: 80
 		Offset: 0,-6
-	bib: bib3
-		UseTilesetExtension: true
-		Length: *
+	bib: buildingbibs.png
+		Frames: 4,5,10,11
+		Length: 4
+		AddExtension: false
 	icon: xltnticon.shp
 		AddExtension: False
 	make1: 
@@ -222,9 +225,10 @@ xltnt3:
 		Start: 0
 		Tick: 80
 		Offset: 0,-6
-	bib: bib3
-		UseTilesetExtension: true
-		Length: *
+	bib: buildingbibs.png
+		Frames: 4,5,10,11
+		Length: 4
+		AddExtension: false
 	icon: xltnticon.shp
 		AddExtension: False
 	make1: 
@@ -269,9 +273,10 @@ nodmill:
 		Length: *
 		Tick: 80
 		Offset: 12,-12
-	bib: bib3
-		UseTilesetExtension: true
-		Length: *
+	bib: buildingbibs.png
+		Frames: 4,5,10,11
+		Length: 4
+		AddExtension: false
 	icon: nodmillicon.shp
 		AddExtension: False
 	make1: nodmillmakev2
@@ -309,9 +314,10 @@ handnew:
 	make: handnewmake
 		Length: *
 		Tick: 80
-	bib: mwbib3
-		UseTilesetExtension: true
-		Length: *
+	bib: buildingbibs.png
+		Frames: 24,25,30,31
+		Length: 4
+		AddExtension: false
 	icon: barrnodicon.shp
 		AddExtension: False
 	make1: handnewmake
@@ -344,9 +350,10 @@ nodstall:
 		Offset: 0,-6,0
 		Length: *
 		Tick: 80
-	bib: bib1
-		UseTilesetExtension: true
-		Length: *
+	bib: buildingbibs.png
+		Frames: 0,1,2,3,6,7,8,9
+		Length: 8
+		AddExtension: false
 	icon: stallnodicon.shp
 		AddExtension: False
 	flag1start: newflag
@@ -408,9 +415,10 @@ nodfix:
 		Length: 21
 		Tick: 80
 		Offset: 0, -12
-	bib: bib2
-		UseTilesetExtension: true
-		Length: *
+	bib: buildingbibs.png
+		Frames: 12,13,14,18,19,20
+		Length: 6
+		AddExtension: false
 	icon: workshopicon.shp
 		AddExtension: False  
 	make1: 
@@ -444,9 +452,10 @@ armory:
 		Length: *
 		Tick: 80
 		Offset: 0,-12
-	bib: mwbib3
-		UseTilesetExtension: true
-		Length: *
+	bib: buildingbibs.png
+		Frames: 24,25,30,31
+		Length: 4
+		AddExtension: false
 	icon: armoryicon.shp
 		AddExtension: False
 	make1: armorymake
@@ -484,9 +493,10 @@ castle:
 		Offset: 0,-12,0
 		Length: *
 		Tick: 80
-	bib: mwbib2
-		UseTilesetExtension: true
-		Length: *
+	bib: buildingbibs.png
+		Frames: 15,16,17,21,22,23
+		Length: 6
+		AddExtension: false
 	icon: castleicon.shp
 		AddExtension: False   
 	active: castleanim

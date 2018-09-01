@@ -32,6 +32,7 @@ ARMORYNOD:
 	RevealsShroud:
 		Range: 5c0
 	WithBuildingBib:
+		Palette: bibs
 	RenderDetectionCircle:
 	DetectCloaked:
 		Range: 5c0
@@ -102,6 +103,7 @@ XLTNT1:
 	RevealsShroud:
 		Range: 4c0
 	WithBuildingBib:
+		Palette: bibs
 	Selectable:
 		Bounds: 48,48,0,-2
 	SelectionDecorations:
@@ -234,6 +236,7 @@ NODNUKE.scaff:
 	RevealsShroud:
 		Range: 4c0
 	WithBuildingBib:
+		Palette: bibs
 	Selectable:
 		Bounds: 40,26,0,-6
 	SelectionDecorations:
@@ -300,6 +303,7 @@ NTENT1:
 	RevealsShroud:
 		Range: 4c0
 	WithBuildingBib:
+		Palette: bibs
 	Selectable:
 		Bounds: 40,26,0,-6
 	SelectionDecorations:
@@ -407,6 +411,7 @@ HANDNEW:
 	RevealsShroud:
 		Range: 5c0
 	WithBuildingBib:
+		Palette: bibs
 	RallyPoint:
 	Exit@1:
 		SpawnOffset: 426,938,0
@@ -459,6 +464,7 @@ NODSTALL:
 	RevealsShroud:
 		Range: 4c0
 	WithBuildingBib:
+		Palette: bibs
 	RallyPoint:
 	Exit@1:
 		SpawnOffset: 540,540,0
@@ -537,6 +543,7 @@ CASTLE:
 	RevealsShroud:
 		Range: 6c0
 	WithBuildingBib:
+		Palette: bibs
 	ProvidesPrerequisite:
 		Prerequisite: anyhq
 	ProvidesPrerequisite@2:
@@ -604,6 +611,7 @@ WORKSHOPNOD:
 	RevealsShroud:
 		Range: 5c0
 	WithBuildingBib:
+		Palette: bibs
 	ProvidesPrerequisite@buildingname: 
 	RallyPoint:
 	Exit@1:
