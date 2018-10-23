@@ -17,3 +17,5 @@ Lua-API.md
 StyleCopViolations.xml
 .DS_Store
 \.idea/\.idea\.MW/\.idea/workspace\.xml
+.idea.MW
+.idea

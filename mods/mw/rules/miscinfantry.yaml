@@ -725,7 +725,7 @@ MWLUMBEREROWNED:
 		IgnoresVisibility: true	
 	AttackMove:
 	Targetable:
-		TargetTypes: Ground, Infantry, LLumber
+		TargetTypes: Ground, Infantry, Hunterer
 	ExternalCondition@DeerHunter:
 		Condition: DeerHunter
 	ExternalCondition@LootingDeer:
@@ -772,6 +772,9 @@ MWLUMBEREROWNED:
 		SearchDistance: 17c0
 	PersonValued:
 		ActorCount: 1
+	Selectable:
+	-Interactable:
+	RejectsOrders:
 HUNTER:
 	Inherits: ^Knight
 	Inherits@SnakeStunnable: ^SnakeStunnable
@@ -819,8 +822,7 @@ HUNTER:
 		Type: Leather
 	Power:
 		Amount: 0
-	-Selectable:
-	Interactable:
+	Selectable:
 	Targetable:
 		TargetTypes: Ground, Infantry, Hunterer
 	RejectsOrders:
@@ -839,12 +841,12 @@ HUNTER:
 	Armament@Huntdeer:
 		Weapon: BowNArrowHunter
 		Name: primary
-		RequiresCondition: (FullFood + LootingDeer) == 0 && !onWater
+		RequiresCondition: (FullFood + LootingDeer) == 0
 		FireDelay: 5
 	Armament@HuntdeeronWater:
 		Weapon: BowNArrowHunterOnWater
 		Name: primary
-		RequiresCondition: (FullFood + LootingDeer) == 0 && onWater
+		RequiresCondition: (FullFood + LootingDeer) == 0
 	Armament@GatherDeer:
 		Weapon: HunterGather
 		Name: primary

@@ -58,13 +58,13 @@ crypt:
 		Frames: 4,5,10,11
 		Length: 4
 		AddExtension: false
-	burnloop1: burn-m
+	burnloop1: firel
 		Start: 16
 		Length: 44
 		Tick: 80
 		ZOffset: 512
 		Offset: -22, 10
-	burnloop2: burn-m
+	burnloop2: firel
 		Start: 16
 		Length: 44
 		Tick: 80

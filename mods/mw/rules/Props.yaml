@@ -5,7 +5,7 @@ PROP1:
 		Palette: mwcivilian
 	WithIdleOverlay:
 		Sequence: burnloop
-		Palette: effect
+		Palette: ra
 PROP2:
 	Inherits: ^Props
 	RenderSprites:

@@ -384,7 +384,7 @@ crackwallh:
 		ZOffset: 102  
 firepit:
 	idle:
-	burnloop: burn-m
+	burnloop: firem
 		Start: 16
 		Length: 44
 		Tick: 80
@@ -392,7 +392,7 @@ firepit:
 		Offset: 0, -6
 firetorch:
 	idle:
-	burnloop: burn-s
+	burnloop: fires
 		Start: 16
 		Length: 44
 		Tick: 80
@@ -402,7 +402,7 @@ firetorchn:
 	idle: firetorche
 		Start: 0
 		ZOffset: 1024
-	burnloop: burn-s
+	burnloop: fires
 		Start: 16
 		Length: 44
 		Tick: 80
@@ -412,7 +412,7 @@ firetorchnw:
 	idle: firetorche
 		Start: 1
 		ZOffset: 1024
-	burnloop: burn-s
+	burnloop: fires
 		Start: 16
 		Length: 44
 		Tick: 80
@@ -422,7 +422,7 @@ firetorchw:
 	idle: firetorche
 		Start: 2
 		ZOffset: 1024
-	burnloop: burn-s
+	burnloop: fires
 		Start: 16
 		Length: 44
 		Tick: 80
@@ -432,7 +432,7 @@ firetorchsw:
 	idle: firetorche
 		Start: 3
 		ZOffset: 1024
-	burnloop: burn-s
+	burnloop: fires
 		Start: 16
 		Length: 44
 		Tick: 80
@@ -442,7 +442,7 @@ firetorchs:
 	idle: firetorche
 		Start: 4
 		ZOffset: 1024
-	burnloop: burn-s
+	burnloop: fires
 		Start: 16
 		Length: 44
 		Tick: 80
@@ -452,7 +452,7 @@ firetorchne:
 	idle: firetorche
 		Start: 7
 		ZOffset: 1024
-	burnloop: burn-s
+	burnloop: fires
 		Start: 16
 		Length: 44
 		Tick: 80
@@ -462,7 +462,7 @@ firetorche:
 	idle: firetorche
 		Start: 6
 		ZOffset: 1024
-	burnloop: burn-s
+	burnloop: fires
 		Start: 16
 		Length: 44
 		Tick: 80
@@ -472,7 +472,7 @@ firetorchse:
 	idle: firetorche
 		Start: 5
 		ZOffset: 1024
-	burnloop: burn-s
+	burnloop: fires
 		Start: 16
 		Length: 44
 		Tick: 80

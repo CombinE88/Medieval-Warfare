@@ -458,7 +458,7 @@ Player:
 			EarlyUpgrades: seal1, seal2, zigg2upgrade
 			Gravestones: gstone1, gstone2, gstone3, coffin, obelisk, garg, blocker1, blocker2, blocker3
 		FarmFields: Crops, Grains, Corn
-		OrePatches: Iron, Gold#
+		OrePatches: Iron, Gold
 		AcolyteWorkerRatio: 33
 		BuildingLimits:
 			zeroproc.scaff: 4
@@ -877,7 +877,7 @@ Player:
 			EarlyUpgrades: seal1, seal2, zigg2upgrade
 			Gravestones: gstone1, gstone2, gstone3, coffin, obelisk, garg, blocker1, blocker2, blocker3
 		FarmFields: Crops, Grains, Corn
-		OrePatches: Iron, Gold#
+		OrePatches: Iron, Gold
 		AcolyteWorkerRatio: 33
 		BuildingLimits:
 			zeroproc.scaff: 4

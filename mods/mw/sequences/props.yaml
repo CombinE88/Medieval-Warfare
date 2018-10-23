@@ -58,7 +58,7 @@ fireplace:
 		Start: 10
 		Length: 28
 		Tick: 80
-	burnloop: burn-l
+	burnloop: firel
 		Start: 16
 		Length: 44
 		Tick: 80
@@ -70,7 +70,7 @@ prop1:
 	make:
 		Length: 59
 		Tick: 122
-	burnloop: burn-s
+	burnloop: fires
 		Start: 16
 		Length: 44
 		Tick: 80

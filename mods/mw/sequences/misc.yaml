@@ -28,11 +28,11 @@ menu:
 		Length: *
 		Tick: 200
 fire:
-	1: fire1
+	1: firel
 		Length: *
 		Offset: 0,-3
 		ZOffset: 1023
-	2: fire2
+	2: firel
 		Length: *
 		Offset: 0,-3
 		ZOffset: 1023
@@ -60,40 +60,40 @@ firesmoke:
 		ZOffset: 1023
 		Tick: 60
 burn-l:
-	idle:
+	idle: firel 
 		Length: *
 		ZOffset: 512
-	loop:
-		Start: 16
-		Length: 44
+	loop: firel
+		Start: 45
+		Length: 70
 		ZOffset: 512
-	end:
-		Start: 60
-		Length: 6
+	end: firel
+		Start: 115
+		Length: 50
 		ZOffset: 512
 burn-m:
-	idle:
+	idle: firem
 		Length: *
 		ZOffset: 512
-	loop:
-		Start: 16
-		Length: 44
+	loop: firem
+		Start: 45
+		Length: 70
 		ZOffset: 512
-	end:
-		Start: 60
-		Length: 6
+	end: firem
+		Start: 115
+		Length: 49
 		ZOffset: 512
 burn-s:
-	idle:
+	idle: fires
 		Length: *
 		ZOffset: 512
-	loop:
-		Start: 12
-		Length: 46
+	loop: fires
+		Start: 45
+		Length: 70
 		ZOffset: 512
-	end:
-		Start: 59
-		Length: 5
+	end: fires
+		Start: 115
+		Length: 50
 		ZOffset: 512
 120mm:
 	idle:

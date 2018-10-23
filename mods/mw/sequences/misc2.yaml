@@ -96,19 +96,19 @@ explosion:
 		Length: 4
 		Tick: 150
 		Offset: 0,-84,0
-	fire1: fire1
+	fire1: firel
 		Length: *
 		Offset: 0,-3
 		ZOffset: 1023
-	fire2: fire2
+	fire2: firem
 		Length: *
 		Offset: 0,-3
 		ZOffset: 1023
-	fire3: fire3
+	fire3: fires
 		Length: *
 		Offset: 0,-3
 		ZOffset: 1023
-	fire4: fire4
+	fire4: fires
 		Length: *
 		Offset: 0,-3
 		ZOffset: 1023
@@ -122,7 +122,7 @@ explosion:
 		Offset: 0,-24,0
 		Tick: 20
 		ZOffset: 1023
-	burninglarge: burn-m
+	burninglarge: firel
 		idle:
 			Length: *
 			ZOffset: 512
@@ -137,7 +137,7 @@ explosion:
 		Tick: 40
 	circleeffect: circleeffect
 		Start: 0
-		Length:*
+		Length: *
 		Tick: 30
 	spearstick: ross4
 		Start: 166

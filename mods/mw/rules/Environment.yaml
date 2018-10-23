@@ -133,7 +133,7 @@ FIREPLACE:
 		ShowOwnerRow: false
 	WithIdleOverlay:
 		Sequence: burnloop
-		Palette: terrain
+		Palette: ra
 bulb:
 	Inherits: ^Props
 	RenderSprites:
@@ -239,7 +239,7 @@ FIREPIT:
 		Palette: mwcivilian
 	WithIdleOverlay:
 		Sequence: burnloop
-		Palette: effect
+		Palette: ra
 	-Targetable:
 FIRETORCH:
 	Inherits: ^InteriorProp
@@ -247,7 +247,7 @@ FIRETORCH:
 		Palette: mwcivilian
 	WithIdleOverlay:
 		Sequence: burnloop
-		Palette: effect
+		Palette: ra
 	-Targetable:
 FIRETORCHN:
 	Inherits: ^InteriorProp
@@ -255,7 +255,7 @@ FIRETORCHN:
 		Palette: mwcivilian
 	WithIdleOverlay:
 		Sequence: burnloop
-		Palette: effect
+		Palette: ra
 	-Targetable:
 	Building:
 		Dimensions: 1,1
@@ -266,7 +266,7 @@ FIRETORCHNW:
 		Palette: mwcivilian
 	WithIdleOverlay:
 		Sequence: burnloop
-		Palette: effect
+		Palette: ra
 	-Targetable:
 	Building:
 		Dimensions: 1,1
@@ -277,7 +277,7 @@ FIRETORCHW:
 		Palette: mwcivilian
 	WithIdleOverlay:
 		Sequence: burnloop
-		Palette: effect
+		Palette: ra
 	-Targetable:
 	Building:
 		Dimensions: 1,1
@@ -288,7 +288,7 @@ FIRETORCHSW:
 		Palette: mwcivilian
 	WithIdleOverlay:
 		Sequence: burnloop
-		Palette: effect
+		Palette: ra
 	-Targetable:
 	Building:
 		Dimensions: 1,1
@@ -299,7 +299,7 @@ FIRETORCHS:
 		Palette: mwcivilian
 	WithIdleOverlay:
 		Sequence: burnloop
-		Palette: effect
+		Palette: ra
 	-Targetable:
 	Building:
 		Dimensions: 1,1
@@ -310,7 +310,7 @@ FIRETORCHSE:
 		Palette: mwcivilian
 	WithIdleOverlay:
 		Sequence: burnloop
-		Palette: effect
+		Palette: ra
 	-Targetable:
 	Building:
 		Dimensions: 1,1
@@ -321,7 +321,7 @@ FIRETORCHE:
 		Palette: mwcivilian
 	WithIdleOverlay:
 		Sequence: burnloop
-		Palette: effect
+		Palette: ra
 	-Targetable:
 	Building:
 		Dimensions: 1,1
@@ -332,7 +332,7 @@ FIRETORCHNE:
 		Palette: mwcivilian
 	WithIdleOverlay:
 		Sequence: burnloop
-		Palette: effect
+		Palette: ra
 	-Targetable:
 	Building:
 		Dimensions: 1,1
