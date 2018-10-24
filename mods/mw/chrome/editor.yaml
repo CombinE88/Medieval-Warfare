@@ -897,6 +897,7 @@ Container@EDITOR_WORLD_ROOT:
 			Align: Left
 			Font: Bold
 			Contrast: true
+		ScriptNode:
 
 ScrollPanel@ACTOR_CATEGORY_FILTER_PANEL:
 	Width: 190

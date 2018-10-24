@@ -260,6 +260,8 @@ SIEGE1:
 		ActorCount: 2
 	Targetable@CombatRole:
 		TargetTypes: Support
+	Voiced:
+		VoiceSet: SiegeBallistaVoice
 SIEGE2:
 	Inherits: ^Siege
 	Inherits@GainsExperience: ^GainsExperience
@@ -321,6 +323,8 @@ SIEGE2:
 		ActorCount: 2
 	Targetable@CombatRole:
 		TargetTypes: Support
+	Voiced:
+		VoiceSet: SiegeCatapultVoice
 SIEGE3:
 	Inherits: ^Siege
 	Inherits@GainsExperience: ^GainsExperience

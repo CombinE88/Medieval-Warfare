@@ -68,7 +68,7 @@
 	PaletteFromFile@effect:
 		Name: effect
 		Filename: newMWPalette.pal
-		ShadowIndex: 4
+		ShadowIndex: 1
 	PaletteFromRGBA@shadow:
 		Name: shadow
 		R: 0
@@ -115,7 +115,7 @@
 	PaletteFromFile@colorpicker:
 		Name: colorpicker
 		Filename: newMWPalette.pal
-		ShadowIndex: 4
+		ShadowIndex: 1
 		AllowModifiers: false
 	PlayerColorPalette:
 		BasePalette: terrain
@@ -217,7 +217,7 @@
 		Name: staticterrain
 		Tileset: INTERIOR
 		Filename: newMWPalette.pal
-		ShadowIndex: 4
+		ShadowIndex: 1
 	PaletteFromFile@TDTERRAIN:
 		Name: tdterrain
 		Filename: temperat.pal

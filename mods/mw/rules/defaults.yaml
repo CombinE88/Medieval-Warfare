@@ -393,7 +393,7 @@
 		Image: allyrepair
 		Sequence: repair
 		ReferencePoint: Center
-		Palette: player
+		Palette: raplayer
 		IsPlayerPalette: True
 	WithDeathAnimation:
 		DeathSequence: dead
@@ -452,7 +452,7 @@
 		Image: allyrepair
 		Sequence: repair
 		ReferencePoint: Center
-		Palette: player
+		Palette: raplayer
 		IsPlayerPalette: True
 	EngineerRepairable:
 	RevealsShroud:
@@ -707,6 +707,7 @@
 		RequireTilesets: INTERIOR
 	Tooltip:
 		GenericName: Furniture
+		Name: Furniture
 ^PropDoor:
 	Inherits@1: ^ExistsInWorld
 	Inherits@2: ^SpriteActor
@@ -946,7 +947,7 @@
 		Image: allyrepair
 		Sequence: repair
 		ReferencePoint: Center
-		Palette: player
+		Palette: raplayer
 		IsPlayerPalette: True
 	ThrowsShrapnel@SMALL:
 		Weapons: SmallWood1, SmallWood2, SmallWood3, SmallStone1, SmallStone2
@@ -969,7 +970,7 @@
 		Image: allyrepair
 		Sequence: repair
 		ReferencePoint: Center
-		Palette: player
+		Palette: raplayer
 		IsPlayerPalette: True
 	ThrowsShrapnel@SMALL:
 		Weapons: SmallWood1, SmallWood2, SmallWood3, SmallStone1, SmallStone2
@@ -1174,7 +1175,7 @@
 		Voice: Burned
 		DeathTypes: BurnToDeath
 	Voiced:
-		VoiceSet: GenericHorseVoice
+		VoiceSet: RegularCavalVoice
 	Explodes@Tib:
 		Weapon: LeaveStuff
 		EmptyWeapon: LeaveStuff

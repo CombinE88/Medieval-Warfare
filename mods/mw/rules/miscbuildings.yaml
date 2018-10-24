@@ -610,7 +610,7 @@ MISS:
 		Image: allyrepair
 		Sequence: repair
 		ReferencePoint: Center
-		Palette: player
+		Palette: raplayer
 		IsPlayerPalette: True
 	CaptureNotification:
 		Notification: CivilianBuildingCaptured
@@ -642,7 +642,7 @@ TECH1:
 		Image: allyrepair
 		Sequence: repair
 		ReferencePoint: Center
-		Palette: player
+		Palette: raplayer
 		IsPlayerPalette: True
 	EngineerRepairable:
 	CaptureNotification:

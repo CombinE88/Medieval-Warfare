@@ -8,7 +8,7 @@
 		Image: allyrepair
 		Sequence: repair
 		ReferencePoint: Center
-		Palette: player
+		Palette: raplayer
 		IsPlayerPalette: True
 ^TechBuilding:
 	RepairableBuilding:
@@ -17,7 +17,7 @@
 		Image: allyrepair
 		Sequence: repair
 		ReferencePoint: Center
-		Palette: player
+		Palette: raplayer
 		IsPlayerPalette: True
 E6:
 	Captures:

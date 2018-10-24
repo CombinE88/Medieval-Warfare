@@ -13,7 +13,7 @@
 		Image: allyrepair
 		Sequence: repair
 		ReferencePoint: Center
-		Palette: player
+		Palette: raplayer
 		IsPlayerPalette: True
 	ThrowsShrapnel@SMALL:
 		Weapons: SmallWood1, SmallWood2, SmallWood3, SmallStone1, SmallStone2
@@ -44,7 +44,7 @@
 		Image: allyrepair
 		Sequence: repair
 		ReferencePoint: Center
-		Palette: player
+		Palette: raplayer
 		IsPlayerPalette: True
 	Targetable:
 		TargetTypes: Ground, C4, Structure, Pentagram

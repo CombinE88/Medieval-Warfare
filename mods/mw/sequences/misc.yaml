@@ -99,19 +99,16 @@ burn-s:
 	idle:
 		ZOffset: 1023
 smoke_m:
-	idle:
+	idle: mwsmoke
 		Length: *
-		Offset: 2, -5
 		ZOffset: 512
-	loop:
-		Start: 49
-		Length: 42
-		Offset: 2, -5
+	loop: mwsmoke
+		Start: 18
+		Length: 70
 		ZOffset: 512
-	end:
-		Start: 26
-		Length: -26
-		Offset: 2, -5
+	end: mwsmoke
+		Start: 113
+		Length: 20
 		ZOffset: 512
 laserfire:
 	idle: veh-hit3
@@ -209,9 +206,9 @@ explosion:
 	piff: piff
 	piffs: piffpiff
 	chemball: chemball # Same size as small_napalm, but bright green.
-	small_napalm: napalm1 # Not used by much. Currently used for flamethrower.
-	med_napalm: napalm2 # Explosion for bomblets
-	big_napalm: napalm3 # Huge; not used. (SSM used this explosion in C&C Gold?)
+	small_napalm: flames # Not used by much. Currently used for flamethrower.
+	med_napalm: flamem # Explosion for bomblets
+	big_napalm: flamel # Huge; not used. (SSM used this explosion in C&C Gold?)
 	small_frag: veh-hit3 # The most common weapon-hit explosion. For rockets, tank shells, etc.
 	med_frag: frag1 # Fragmentation-style; quite large. (MLRS used this explosion in C&C Gold?)
 	big_frag: frag3 # Same as med_frag, except fire hangs around longer.

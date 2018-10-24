@@ -141,7 +141,7 @@ ZIGGURAT1:
 		Image: allyrepair
 		Sequence: repair
 		ReferencePoint: Center
-		Palette: player
+		Palette: raplayer
 		IsPlayerPalette: True
 	WithMakeAnimation:
 	WithSpriteBody:	 

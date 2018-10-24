@@ -406,6 +406,8 @@ World:
 	RadarPings:
 	LoadWidgetAtGameStart:
 		ShellmapRoot: MENU_BACKGROUND
+	IngameNodeScriptSystem:
+		
 EditorWorld:
 	Inherits: ^BaseWorld
 	EditorActorLayer:
@@ -416,3 +418,6 @@ EditorWorld:
 	TerrainPassableOverlay:
 		CheckOnBuilding: factnew
 	EditorUndoRedoLayer:
+	NodeSelectionLayer:
+	EditorNodeLayer:
+	LoadWidgetAtGameStart:

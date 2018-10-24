@@ -15,6 +15,15 @@ GenericVoice:
 		Poisoned: mwpoisdeath01, mwpoisdeath02
 	DisableVariants: Die, Burned, Zapped, Poisoned
 
+RegularCavalVoice:
+	Voices:
+		Select: CalvarySELECT01,CalvarySELECT02,CalvarySELECT03,CalvarySELECT04,CalvarySELECT05
+		Action: CalvaryMOVE01,CalvaryMOVE02,CalvaryMOVE03,CalvaryMOVE04,CalvaryMOVE05
+		Default: horsedead02, horsedead03
+		Burned: horsedead02, horsedead03
+		Zapped: horsedead02, horsedead03
+		Poisoned: horsedead02, horsedead03
+
 VehicleVoice:
 	Variants:
 		nod: .v00,.v02
@@ -86,6 +95,24 @@ SiegeVoice:
 	Voices:
 		Select: guyyeah1
 		Action: guyokay1
+		Default: WoodExplMed,WoodExplsmall2,WoodExplMed,WoodExplMed2
+		Burned: WoodExplMed,WoodExplsmall2,WoodExplMed,WoodExplMed2
+		Zapped: WoodExplMed,WoodExplsmall2,WoodExplMed,WoodExplMed2
+		Poisoned: WoodExplMed,WoodExplsmall2,WoodExplMed,WoodExplMed2
+
+SiegeBallistaVoice:
+	Voices:
+		Select: BallistaSELECT01,BallistaSELECT02,BallistaSELECT03,BallistaSELECT04,BallistaSELECT05
+		Action: BallistaMOVE01,BallistaMOVE02,BallistaMOVE03,BallistaMOVE04,BallistaMOVE05
+		Default: WoodExplMed,WoodExplsmall2,WoodExplMed,WoodExplMed2
+		Burned: WoodExplMed,WoodExplsmall2,WoodExplMed,WoodExplMed2
+		Zapped: WoodExplMed,WoodExplsmall2,WoodExplMed,WoodExplMed2
+		Poisoned: WoodExplMed,WoodExplsmall2,WoodExplMed,WoodExplMed2
+
+SiegeCatapultVoice:
+	Voices:
+		Select: CatapultMOVE01,CatapultMOVE02,CatapultMOVE03,CatapultMOVE04,CatapultMOVE05
+		Action: CatapultSELECT01,CatapultSELECT02,CatapultSELECT03,CatapultSELECT04,CatapultSELECT05
 		Default: WoodExplMed,WoodExplsmall2,WoodExplMed,WoodExplMed2
 		Burned: WoodExplMed,WoodExplsmall2,WoodExplMed,WoodExplMed2
 		Zapped: WoodExplMed,WoodExplsmall2,WoodExplMed,WoodExplMed2
@@ -229,20 +256,6 @@ NodCrossVoice:
 		Burned: mwbrundeath01, mwbrundeath02, mwbrundeath03
 		Zapped: mwbrundeath01, mwbrundeath02, mwbrundeath03
 		Poisoned: mwpoisdeath01, mwpoisdeath02
-		
-		
-GenericHorseVoice:
-	DefaultVariant: .aud
-	Variants:
-		nod: .aud
-		gdi: .aud
-	Voices:
-		Select: 25-i000,25-i002,25-i004,25-i006,25-i012
-		Action: 25-i0016,25-i018,25-i022,25-i024,25-i026,25-i014
-		Default: horsedead03,horsedead02
-		Burned: horsedead03,horsedead02
-		Zapped: horsedead03,horsedead02
-		Poisoned: horsedead03,horsedead02
 	
 GenericHorseOnly:
 	DefaultVariant: .aud
