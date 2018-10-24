@@ -123,11 +123,7 @@ Sequences:
 	mw|sequences/interior.yaml
 
 TileSets:
-	mw|tilesets/desert.yaml
-	mw|tilesets/winter.yaml
-	mw|tilesets/snow.yaml
 	mw|tilesets/temperat.yaml
-	mw|tilesets/interior.yaml
 
 Weapons:
 	mw|weapons/MWWeaponsmisc.yaml

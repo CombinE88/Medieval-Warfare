@@ -178,46 +178,20 @@
 	#-----
 	# Terrain Palettes
 	#-----
-	PaletteFromFile@terrain-desert:
-		Name: terrain
-		Tileset: DESERT
-		Filename: desert.pal
-		ShadowIndex: 4
-	PaletteFromFile@terrain-winter:
-		Name: terrain
-		Tileset: WINTER
-		Filename: winter.pal
-		ShadowIndex: 4
-	PaletteFromFile@terrain-snow:
-		Name: terrain
-		Tileset: SNOW
-		Filename: snow.pal
-		ShadowIndex: 4
 	PaletteFromFile@terrain-temperat:
 		Name: terrain
 		Tileset: TEMPERAT
 		Filename: newMWPalette.pal
 		ShadowIndex: 1
-	PaletteFromFile@staticterrain-desert:
-		Name: staticterrain
-		Tileset: DESERT
-		Filename: desert.pal
-		ShadowIndex: 4
-	PaletteFromFile@staticterrain-winter:
-		Name: staticterrain
-		Tileset: WINTER
-		Filename: winter.pal
-		ShadowIndex: 4
 	PaletteFromFile@staticterrain-temperat:
 		Name: staticterrain
 		Tileset: TEMPERAT
-		Filename: temperat.pal
-		ShadowIndex: 4
-	PaletteFromFile@staticterrain-interior:
-		Name: staticterrain
-		Tileset: INTERIOR
 		Filename: newMWPalette.pal
 		ShadowIndex: 1
+	PaletteFromPng@bibs-temperat:
+		Name: bibs
+		Filename: buildingbibs.png
+		Tileset: TEMPERAT
 	PaletteFromFile@TDTERRAIN:
 		Name: tdterrain
 		Filename: temperat.pal
@@ -319,7 +293,3 @@
 	RotationPaletteEffect@MW_RIVER_COLORCYCLE:
 		Palettes: rivermw, watercliffsmw
 		RotationBase: 249
-	PaletteFromPng@MW_BUILDING_BIBS:
-		Name: bibs
-		Filename: buildingbibs.png
-		Tileset: TEMPERAT

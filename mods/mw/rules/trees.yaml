@@ -824,16 +824,6 @@ TC02:
 	WithColoredOverlay@Corrupt:
 		Palette: disabled
 		RequiresCondition: Corrupted
-TC03:
-	Inherits: ^Tree
-	Building:
-		Footprint: _x_ xx_
-		Dimensions: 3,2
-	EditorTilesetFilter:
-		ExcludeTilesets: DESERT
-	Explodes@Tib:
-		Weapon: LeaveWoodXL
-		EmptyWeapon: LeaveWoodXL
 TC04:
 	Inherits: ^Tree
 	Building:
