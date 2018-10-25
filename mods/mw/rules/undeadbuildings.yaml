@@ -586,9 +586,6 @@ DEDREF.penta:
 		SpawnOffset: 1,1
 		SummoningTime: 90
 		Cost: 2100
-	RequiresBuildableArea:
-		AreaTypes: undeadbuilding
-		Adjacent: 8
 	ExternalCondition@DoNotRender:
 		Condition: DoNotRender
 	WithSpriteBody:

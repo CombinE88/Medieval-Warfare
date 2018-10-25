@@ -177,11 +177,10 @@ namespace OpenRA.Mods.MW.MWAI
 						SuppressVisualFeedback = true
 					});
 
-					foreach (var acolyte in ai.AcolyteBuilder)
+					foreach (var aco in ai.AcolyteBuilder)
 					{
-						ai.QueueOrder(new Order("Stop", acolyte, Target.Invalid, false));
+						ai.QueueOrder(new Order("Stop", aco, false));
 					}
-
 					return true;
 				}
 			}
@@ -338,6 +337,17 @@ namespace OpenRA.Mods.MW.MWAI
 				if (pentagrams > 1)
 					return null;
 
+				// Next is to build up a strong economy
+				if (!ai.HasAdequateFarm() || !ai.HasMinimumFarm())
+				{
+					var farm = GetProducibleBuilding(ai.Info.BuildingCommonNames.Farms, buildableThings);
+					if (farm != null)
+					{
+						HackyMWAI.BotDebug("AI: {0} decided to build {1}: Priority override (refinery)", queue.Actor.Owner, farm.Name);
+						return farm;
+					}
+				}
+
 				if ((ai.HasAdequateCrypts() * 3) < playerBuildings.Count())
 				{
 					var crypt = GetProducibleBuilding(ai.Info.UndeadCommonNames.Crypts, buildableThings);
@@ -352,13 +362,18 @@ namespace OpenRA.Mods.MW.MWAI
 				foreach (var frac in ai.Info.BuildingFractions.Shuffle(ai.Random))
 				{
 					var name = frac.Key;
+					var names = ai.Info.UndeadCommonNames;
 
 					// Can we build this structure?
 					if (!buildableThings.Any(b => b.Name == name))
 						continue;
 
+					if (!ai.HasAdequateFarm() && !names.Sppool.Contains(name) && !names.Acolytes.Contains(name) && !names.Acolytes.Contains(name))
+						continue;
+
 					if (ai.HasAdequateCrypts() * 3 >= playerBuildings.Count() && ai.Info.UndeadCommonNames.Crypts.Contains(name))
 						continue;
+
 
 					// Do we want to build this structure?
 					var count = playerBuildings.Count(a => a.Info.Name == name) + playerBuildings.Count(a => a.Info.Name == name.Replace(".penta", string.Empty).ToLower());

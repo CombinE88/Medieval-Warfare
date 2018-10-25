@@ -134,50 +134,25 @@ namespace OpenRA.Mods.MW.MWAI
 
         public void ManageEmptyAcolytes()
         {
-            var listedAcolytes = 0;
-            listedAcolytes = AcolyteBuilder.Count() + AcolyteHarvester.Count();
-            var findAcolytes = Player.World.ActorsHavingTrait<AcolytePrey>().Where(a =>
+            var findAcolytes = Player.World.ActorsHavingTrait<AcolytePreyBuild>().Where(a =>
             {
                 return a.Owner == Player && !AcolyteBuilder.Contains(a) && !AcolyteHarvester.Contains(a);
             }).ToHashSet();
 
-            if (listedAcolytes == 0 && findAcolytes.Any())
-            {
-                var potentialWorkerNumber = (int)(decimal)(findAcolytes.Count() * hackyAIInfo.AcolyteWorkerRatio) / 100;
-
-                for (int i = 1; i <= potentialWorkerNumber; i++)
-                {
-                    var lyte = findAcolytes.First();
-                    if (lyte != null && !lyte.IsDead && lyte.IsInWorld)
-                    {
-                        AcolyteBuilder.Add(lyte);
-                        findAcolytes.Remove(lyte);
-                    }
-                }
-
-                if (findAcolytes.Any())
-                {
-                    foreach (var aco in findAcolytes)
-                    {
-                        if (aco != null && !aco.IsDead && aco.IsInWorld)
-                            AcolyteHarvester.Add(aco);
-                    }
-                }
-            }
-            else if (listedAcolytes > 0 && findAcolytes.Any())
+            if (findAcolytes.Any())
             {
                 foreach (var aco in findAcolytes)
                 {
                     if (aco != null && !aco.IsDead && aco.IsInWorld)
                     {
-                        var calculatedratio = (int)(decimal)(100 / (AcolyteBuilder.Count() + AcolyteHarvester.Count())) * AcolyteBuilder.Count();
-                        if (calculatedratio >= hackyAIInfo.AcolyteWorkerRatio)
+                        if (AcolyteBuilder.Count >= 4)
                         {
                             AcolyteHarvester.Add(aco);
                         }
                         else
                         {
                             AcolyteBuilder.Add(aco);
+                            hackyAI.QueueOrder(new Order("Stop", aco, false));
                         }
                     }
                 }

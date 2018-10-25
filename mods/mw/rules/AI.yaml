@@ -6,7 +6,7 @@ Player:
 		BuildingCommonNames:
 			ConstructionYard: factnew, ziggurat1, ziggurat2, ziggurat3
 			Farms: zeroproc.scaff, sulmill.scaff, nodproc.scaff, zeroproc, sulmill, nodproc, dedref.penta, dedref
-			Refineries: sulref.scaff, procnew.scaff, sulref, procnew, dedref.penta, dedref
+			Refineries: sulref.scaff, procnew.scaff, sulref, procnew
 			Hunter: sullodge.scaff, lodge.scaff
 			DeerStands: split7, split8, split9
 			Houses: xltntuni.scaff, nodnuke.scaff, nukenew.scaff, nuk2new.scaff, nodnuk2.scaff, sulnuke.scaff, sulnuk2.scaff, nukxl.scaff
@@ -423,7 +423,7 @@ Player:
 		MinimumExcessPower: 0
 		BuildingCommonNames:
 			ConstructionYard: factnew, ziggurat1, ziggurat2, ziggurat3
-			Farms: zeroproc.scaff, sulmill.scaff, nodproc.scaff, zeroproc, sulmill, nodproc
+			Farms: zeroproc.scaff, sulmill.scaff, nodproc.scaff, zeroproc, sulmill, nodproc, dedref.penta, dedref
 			Refineries: sulref.scaff, procnew.scaff, sulref, procnew
 			Hunter: sullodge.scaff, lodge.scaff
 			DeerStands: split7, split8, split9
@@ -842,7 +842,7 @@ Player:
 		MinimumExcessPower: 0
 		BuildingCommonNames:
 			ConstructionYard: factnew, ziggurat1, ziggurat2, ziggurat3
-			Farms: zeroproc.scaff, sulmill.scaff, nodproc.scaff, zeroproc, sulmill, nodproc
+			Farms: zeroproc.scaff, sulmill.scaff, nodproc.scaff, zeroproc, sulmill, nodproc, dedref.penta, dedref
 			Refineries: sulref.scaff, procnew.scaff, sulref, procnew
 			Hunter: sullodge.scaff, lodge.scaff
 			DeerStands: split7, split8, split9

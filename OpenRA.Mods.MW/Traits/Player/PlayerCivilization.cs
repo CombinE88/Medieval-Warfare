@@ -60,6 +60,7 @@ namespace OpenRA.Traits
         HackyMWAI hackyai;
 
         public HashSet<Actor> PeasantProvider = new HashSet<Actor>();
+        private bool first;
 
         void INotifyCreated.Created(Actor self)
         {
@@ -100,12 +101,17 @@ namespace OpenRA.Traits
             if (!self.Owner.IsBot)
                 return;
 
-            if (--assignRolesTicks <= 0)
+            if (!first)
             {
-                hackyaiinfo = self.Owner.PlayerActor.Info.TraitInfos<HackyMWAIInfo>().Where(a => a.Type == self.Owner.BotType).First();
-                hackyai = self.Owner.PlayerActor.TraitsImplementing<HackyMWAI>().Where(a => a.Info.Type == self.Owner.BotType).First();
+                hackyaiinfo = self.Owner.PlayerActor.Info.TraitInfos<HackyMWAIInfo>().First(a => a.Type == self.Owner.BotType);
+                hackyai = self.Owner.PlayerActor.TraitsImplementing<HackyMWAI>().First(a => a.Info.Type == self.Owner.BotType);
                 undeadaihandler = new UndeadAIHAndler(self.World, hackyaiinfo, hackyai, self.Owner);
 
+                first = true;
+            }
+
+            if (--assignRolesTicks <= 0)
+            {
                 if (undeadaihandler == null || hackyai == null || hackyaiinfo == null)
                     return;
 

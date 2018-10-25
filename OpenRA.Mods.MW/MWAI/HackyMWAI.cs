@@ -1142,7 +1142,7 @@ namespace OpenRA.Mods.MW.MWAI
 		void ProductionUnits(Actor self)
 		{
 			// Stop building until economy is restored
-			if (!HasAdequateFarm() && Player.Faction.InternalName != "ded")
+			if (!HasAdequateFarm() && AcolyteHarvester.Any())
 				return;
 
 			// No construction yards - Build a new MCV
