@@ -677,7 +677,7 @@
 	HitShape:
 	EditorTilesetFilter:
 		Categories: Interior Props
-		RequireTilesets: INTERIOR, TEMPERAT
+		RequireTilesets: TEMPERAT
 	Tooltip:
 		GenericName: Destroyed Furniture
 	Building:
@@ -703,8 +703,8 @@
 		TargetTypes: Ground, Prop, NoAutoTarget
 	HitShape:
 	EditorTilesetFilter:
-		Categories: Interior Props
-		RequireTilesets: INTERIOR
+		Categories: Interior Prop Husks
+		RequireTilesets: TEMPERAT
 	Tooltip:
 		GenericName: Furniture
 		Name: Furniture
@@ -727,7 +727,7 @@
 	Selectable:
 	EditorTilesetFilter:
 		Categories: Interior Props
-		RequireTilesets: INTERIOR
+		RequireTilesets: TEMPERAT
 ^PropDoorOpen:
 	Inherits@1: ^ExistsInWorld
 	Inherits@2: ^SpriteActor
@@ -744,7 +744,7 @@
 	HitShape:
 	EditorTilesetFilter:
 		Categories: Props
-		RequireTilesets: INTERIOR
+		RequireTilesets: TEMPERAT
 ^HelicopterHusk:
 	Inherits: ^CommonHuskDefaults
 	WithShadow:

@@ -279,6 +279,10 @@
 		Name: alphabarely
 		BasePalette: ra
 		Alpha: 0.1
+	PaletteFromPaletteWithAlpha@BARLEY_ALPHA_30:
+		Name: alphabarely30
+		BasePalette: ra
+		Alpha: 0.3
 	PaletteFromFile@ALPHA_GREY:
 		Name: alphagrey
 		Filename: alpha.pal

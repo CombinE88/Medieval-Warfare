@@ -38,33 +38,34 @@ PREYCOLYTE:
 	RenderSprites:
 		Image: acolyte
 		PlayerPalette: raplayer
-	GrantConditionOnMovement:
-		Condition: MoveAnim
 	WithFacingSpriteBody:
 		Sequence: idle
-		RequiresCondition: !MoveAnim
-	WithInfantryBody:
-		RequiresCondition: MoveAnim
+	WithDockingAnimation:
+	-WithInfantryBody:
+	WithMoveAnimation:
+		MoveSequence: run
 	Armor:
 		Type: Leather
 	-Explodes@Tib:
 	DockClient:
-	AcolytePrey: 
-		TargetActors: split3, split4, split4b, split2, splitblue, split5, splitdead, split7, split8
-		Leechinterval: 45 
-		SelfEnabledCondition: whisper
-		Voice: Harvest
-		ResourceTypesPreres:
-			Crops: NONE
-			Grains: NONE
-			Corn: NONE
-			Iron: ziggurat2
-			Gold: ziggurat2
-			Guns: NONE
-			Wood: NONE
-			Lumber: NONE
-			Corruption: NONE
-			Goods: NONE
+	# --- Removed due to bugs and unbalanceability ---
+	#AcolytePrey: 
+	#	TargetActors: split3, split4, split4b, split2, splitblue, split5, splitdead, split7, split8
+	#	Leechinterval: 45 
+	#	SelfEnabledCondition: whisper
+	#	Voice: Harvest
+	#	ResourceTypesPreres:
+	#		Crops: NONE
+	#		Grains: NONE
+	#		Corn: NONE
+	#		Iron: ziggurat2
+	#		Gold: ziggurat2
+	#		Guns: NONE
+	#		Wood: NONE
+	#		Lumber: NONE
+	#		Corruption: NONE
+	#		Goods: NONE
+	# --- Removed due to bugs and unbalanceability ---
 	AcolytePreyBuild: 
 		TargetActors: crypt.penta, sppool.penta, mauso.penta, hellgate.penta, tomb.penta, libra.penta, obelisk.penta, garg.penta, dedref.penta
 		Buildinterval: 18
@@ -80,6 +81,23 @@ PREYCOLYTE:
 		Volume: 3
 	Targetable@CombatRole:
 		TargetTypes: Light
+	# --- Added due to balanceability ---
+	Harvester:
+		DeliveryBuildings: dedref
+		Resources: Crops, Grains, Wood, Goods, Lumber, Corn, Corruption
+		PipCount: 2
+		Capacity: 6
+		BaleLoadDelay: 20
+		BaleUnloadDelay: 5
+		SearchFromProcRadius: 25
+		SearchFromOrderRadius: 15
+		MaxUnloadQueue: 10
+	WithHarvestOverlay:
+		Sequence: harvover
+		Palette: Soulalpha
+	WithDockingAnimation:
+	WithHarvestAnimation:
+		HarvestSequence: harvest
 DEADROSS:
 	Inherits: ^Cavalry
 	Inherits@AUTOTARGET: ^AutoTargetGround
@@ -539,10 +557,18 @@ ACOLYTEC:
 	RenderSprites:
 		Image: acolyteb
 		PlayerPalette: raplayer
-	WithInfantryBody:
-		AttackSequences:
-			secondary: shootchannel
-			primary: shoot
+	WithFacingSpriteBody:
+		Sequence: idle
+	WithDockingAnimation:
+	-WithInfantryBody:
+	WithMoveAnimation:
+		MoveSequence: run
+	WithAttackAnimation@1:
+		Armament: primary
+		Sequence: shoot
+	WithAttackAnimation@2:
+		Armament: secondary
+		Sequence: shootchannel
 	Armor:
 		Type: Leather
 	Buildable:
@@ -557,6 +583,23 @@ ACOLYTEC:
 	Targetable@CombatRole:
 		TargetTypes: Ranged
 	Selectable:
+	# --- Added due to balanceability ---
+	Harvester:
+		DeliveryBuildings: dedref
+		Resources: Iron, Gold, Corruption
+		PipCount: 2
+		Capacity: 10
+		BaleLoadDelay: 20
+		BaleUnloadDelay: 5
+		SearchFromProcRadius: 25
+		SearchFromOrderRadius: 15
+		MaxUnloadQueue: 10
+	WithHarvestOverlay:
+		Sequence: harvover
+		Palette: Soulalpha
+	WithDockingAnimation:
+	WithHarvestAnimation:
+		HarvestSequence: harvest
 VAMP:
 	Inherits: ^Knight
 	Inherits@AUTOTARGET: ^AutoTargetGround

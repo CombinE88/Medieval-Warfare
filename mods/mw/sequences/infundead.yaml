@@ -15,14 +15,27 @@ acolyte:
 		Length: 8
 		Facings: 8
 		Tick: 100
-	shoot: 
-		Tick: 100
-		Start: 66
-		Length: 7
-		Facings: 8
 	prey: 
 		Tick: 100
 		Start: 232
+		Length: 7
+		Facings: 8
+	harvest: 
+		Start: 66
+		Length: 7
+		Facings: 8
+		Tick: 100
+	dock: 
+		Start: 190
+		Length: 3
+		Tick: 100
+	dock-loop: 
+		Start: 193
+		Length: 14
+		Tick: 100
+	shoot: 
+		Tick: 100
+		Start: 66
 		Length: 7
 		Facings: 8
 	idle1: 
@@ -61,6 +74,10 @@ acolyte:
 		Tick: 80
 	icon: acolyteicon.shp
 		AddExtension: False
+	harvover: effectcollect
+		Tick: 100
+		Length: *
+		ZOffset: 512
 undead1:
 	stunned: sulm4
 		ZOffset: 125
@@ -288,20 +305,32 @@ acolyteb:
 		Length: 8
 		Facings: 8
 		Tick: 100
-	shoot: 
-		Tick: 100
-		Start: 66
-		Length: 7
-		Facings: 8
-	shootchannel:
-		Tick: 800
-		Facings: 8
-		Frames: 72,79,86,93,100,107,114,121
 	prey: 
 		Tick: 100
 		Start: 232
 		Length: 7
 		Facings: 8
+	shoot: 
+		Tick: 100
+		Start: 66
+		Length: 7
+		Facings: 8
+	harvest: 
+		Tick: 800
+		Facings: 8
+		Frames: 72,79,86,93,100,107,114,121
+	dock-loop: 
+		Tick: 100
+		Length: 1
+		Frames: 121
+	dock: 
+		Tick: 100
+		Length: 6
+		Start: 115
+	shootchannel:
+		Tick: 800
+		Facings: 8
+		Frames: 72,79,86,93,100,107,114,121
 	idle1: 
 		Tick: 100
 		Start: 211
@@ -338,6 +367,10 @@ acolyteb:
 		Tick: 80
 	icon: cultisticon.shp
 		AddExtension: False
+	harvover: effectcollect
+		Tick: 100
+		Length: *
+		ZOffset: 512
 undead5:
 	make: undead5born
 		Length: *

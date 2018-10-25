@@ -177,6 +177,11 @@ namespace OpenRA.Mods.MW.MWAI
 						SuppressVisualFeedback = true
 					});
 
+					foreach (var acolyte in ai.AcolyteBuilder)
+					{
+						ai.QueueOrder(new Order("Stop", acolyte, Target.Invalid, false));
+					}
+
 					return true;
 				}
 			}

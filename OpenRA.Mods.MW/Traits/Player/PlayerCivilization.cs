@@ -124,9 +124,7 @@ namespace OpenRA.Traits
             {
                 undeadaihandler.ManageEmptyAcolytes();
                 undeadaihandler.ManageBuildrAcolytes();
-                undeadaihandler.ManageFarmerAcolytes();
                 undeadaihandler.ManageDeadAcolytes();
-                undeadaihandler.CheckAllPatchesForProfit();
             }
 
             hackyai.AcolyteBuilder = undeadaihandler.AcolyteBuilder;

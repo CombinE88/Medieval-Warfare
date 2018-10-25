@@ -68,6 +68,9 @@ namespace OpenRA.Mods.MW.MWAI
 			// Find idle harvesters and give them orders:
 			foreach (var harvester in activeUnits)
 			{
+				if (ai.AcolyteBuilder.Contains(harvester))
+					continue;
+
 				var harv = harvester.TraitOrDefault<Harvester>();
 				if (harv == null)
 					continue;

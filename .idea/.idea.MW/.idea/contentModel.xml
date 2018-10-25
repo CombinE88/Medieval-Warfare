@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\Toilettenmän\.Rider2018.2\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\Toilettenmän\.Rider2018.2\system\resharper-host\Local\Transient\ReSharperHost\v182\SolutionCaches\_MW.1391013496.00" t="ExcludeRecursive" />
+    <e p="C:\Users\Toilettenmän\.Rider2018.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Toilettenmän\.Rider2018.3\system\resharper-host\Local\Transient\ReSharperHost\v183\SolutionCaches\_MW.1391013496.00" t="ExcludeRecursive" />
     <e p="C:\Users\Toilettenmän\Documents\Medieval-Warfare" t="IncludeFlat">
       <e p="engine" t="ExcludeRecursive">
         <e p="OpenRA.Game" t="IncludeRecursive">
@@ -612,7 +612,6 @@
               <e p="RallyPoint.cs" t="Include" />
               <e p="Refinery.cs" t="Include" />
               <e p="RepairableBuilding.cs" t="Include" />
-              <e p="RepairsUnits.cs" t="Include" />
               <e p="RequiresBuildableArea.cs" t="Include" />
               <e p="Reservable.cs" t="Include" />
             </e>
@@ -863,6 +862,7 @@
             <e p="Repairable.cs" t="Include" />
             <e p="RepairableNear.cs" t="Include" />
             <e p="RepairsBridges.cs" t="Include" />
+            <e p="RepairsUnits.cs" t="Include" />
             <e p="Replaceable.cs" t="Include" />
             <e p="Replacement.cs" t="Include" />
             <e p="ResourcePurifier.cs" t="Include" />
@@ -1001,24 +1001,26 @@
                 <e p="SplitGateFromBuilding.cs" t="Include" />
                 <e p="WarnAboutInfiltrateForTypes.cs" t="Include" />
               </e>
-              <e p="AddShakeToBridge.cs" t="Include" />
-              <e p="ChangeIntensityToDuration.cs" t="Include" />
-              <e p="DefineGroundCorpseDefault.cs" t="Include" />
-              <e p="DefineLocomotors.cs" t="Include" />
-              <e p="DefineOwnerLostAction.cs" t="Include" />
-              <e p="DefineSoundDefaults.cs" t="Include" />
-              <e p="DefineSquadExcludeHarvester.cs" t="Include" />
-              <e p="IgnoreAbstractActors.cs" t="Include" />
-              <e p="MoveHackyAISupportPowerDecisions.cs" t="Include" />
-              <e p="RemoveCanUndeployFromGrantConditionOnDeploy.cs" t="Include" />
-              <e p="RemovePaletteFromCurrentTileset.cs" t="Include" />
-              <e p="RemoveTerrainTypeIsWaterFlag.cs" t="Include" />
-              <e p="RemoveWeaponScanRadius.cs" t="Include" />
-              <e p="RemoveWithReloadingSpriteTurret.cs" t="Include" />
-              <e p="RenameEmitInfantryOnSell.cs" t="Include" />
-              <e p="RenameWormSpawner.cs" t="Include" />
-              <e p="SplitAimAnimations.cs" t="Include" />
-              <e p="SplitRepairDecoration.cs" t="Include" />
+              <e p="20180307" t="Include">
+                <e p="AddShakeToBridge.cs" t="Include" />
+                <e p="ChangeIntensityToDuration.cs" t="Include" />
+                <e p="DefineGroundCorpseDefault.cs" t="Include" />
+                <e p="DefineLocomotors.cs" t="Include" />
+                <e p="DefineOwnerLostAction.cs" t="Include" />
+                <e p="DefineSoundDefaults.cs" t="Include" />
+                <e p="DefineSquadExcludeHarvester.cs" t="Include" />
+                <e p="IgnoreAbstractActors.cs" t="Include" />
+                <e p="MoveHackyAISupportPowerDecisions.cs" t="Include" />
+                <e p="RemoveCanUndeployFromGrantConditionOnDeploy.cs" t="Include" />
+                <e p="RemovePaletteFromCurrentTileset.cs" t="Include" />
+                <e p="RemoveTerrainTypeIsWaterFlag.cs" t="Include" />
+                <e p="RemoveWeaponScanRadius.cs" t="Include" />
+                <e p="RemoveWithReloadingSpriteTurret.cs" t="Include" />
+                <e p="RenameEmitInfantryOnSell.cs" t="Include" />
+                <e p="RenameWormSpawner.cs" t="Include" />
+                <e p="SplitAimAnimations.cs" t="Include" />
+                <e p="SplitRepairDecoration.cs" t="Include" />
+              </e>
             </e>
             <e p="UpdatePath.cs" t="Include" />
             <e p="UpdateRule.cs" t="Include" />
@@ -1211,6 +1213,68 @@
             <e p="RadarWidget.cs" t="Include" />
             <e p="ResourceBarWidget.cs" t="Include" />
             <e p="RGBASpriteWidget.cs" t="Include" />
+            <e p="ScriptNodes" t="Include">
+              <e p="AdvancedTextFieldWidget.cs" t="Include" />
+              <e p="Connections.cs" t="Include" />
+              <e p="EditorNodeBrushes" t="Include">
+                <e p="EditorNodeBrush.cs" t="Include" />
+              </e>
+              <e p="EditorNodeLayer.cs" t="Include" />
+              <e p="IngameNodeScriptSystem.cs" t="Include" />
+              <e p="Library" t="Include">
+                <e p="NodeLibrary.cs" t="Include" />
+              </e>
+              <e p="NodeEditorBackgroundWidget.cs" t="Include" />
+              <e p="NodeEditorNodeScreenWidget.cs" t="Include" />
+              <e p="NodeEditorTraits" t="Include">
+                <e p="NodeSelectionLayer.cs" t="Include" />
+              </e>
+              <e p="ShowWidgetsButton.cs" t="Include" />
+              <e p="SingleNodes" t="Include">
+                <e p="ActorNodes" t="Include">
+                  <e p="ActorNodeCreateActor.cs" t="Include" />
+                  <e p="ActorNodeQueueAbility.cs" t="Include" />
+                  <e p="GetActorInformationsNode.cs" t="Include" />
+                </e>
+                <e p="Arithmetics" t="Include">
+                  <e p="ArithmecCompareNode.cs" t="Include" />
+                  <e p="ArithmeticBasicNode.cs" t="Include" />
+                  <e p="ArithmeticMathNode.cs" t="Include" />
+                  <e p="DoRepeatingNode.cs" t="Include" />
+                  <e p="GetCountNode.cs" t="Include" />
+                </e>
+                <e p="BasicNodeWidget.cs" t="Include" />
+                <e p="FunctionNodes" t="Include">
+                  <e p="FunctionCreateEffectNode.cs" t="Include" />
+                  <e p="FunctionNodeReinforcements.cs" t="Include" />
+                </e>
+                <e p="Group" t="Include">
+                  <e p="FilterActorListByNode.cs" t="Include" />
+                  <e p="GroupActorGroup.cs" t="Include" />
+                  <e p="GroupFindActors.cs" t="Include" />
+                  <e p="GroupPlayerGroup.cs" t="Include" />
+                </e>
+                <e p="InfoNodes" t="Include">
+                  <e p="MapInfoActorInfoNode.cs" t="Include" />
+                  <e p="MapInfoActorsonMap.cs" t="Include" />
+                  <e p="MapInfoNode.cs" t="Include" />
+                </e>
+                <e p="NodeWidget.cs" t="Include" />
+                <e p="ScriptNodeWidget.cs" t="Include" />
+                <e p="TriggerNodes" t="Include">
+                  <e p="TriggerNodeCreateTimer.cs" t="Include" />
+                  <e p="TriggerNodeOnEnteredFootPrint.cs" t="Include" />
+                  <e p="TriggerNodeOnEnteredRange.cs" t="Include" />
+                  <e p="TriggerNodeTick.cs" t="Include" />
+                  <e p="TriggerNodeWorldLoaded.cs" t="Include" />
+                  <e p="TriggerOnIdle.cs" t="Include" />
+                  <e p="TriggerOnKilled.cs" t="Include" />
+                </e>
+                <e p="UiNodes" t="Include">
+                  <e p="UiNodeUiSettings.cs" t="Include" />
+                </e>
+              </e>
+            </e>
             <e p="ScrollItemWidget.cs" t="Include" />
             <e p="ScrollPanelWidget.cs" t="Include" />
             <e p="SliderWidget.cs" t="Include" />
@@ -1371,6 +1435,7 @@
               <e p="IngameUsedPopulationCounterLogic.cs" t="Include" />
               <e p="NewCashCounterLogic.cs" t="Include" />
             </e>
+            <e p="NewProductionTooltipsLogic.cs" t="Include" />
           </e>
         </e>
       </e>

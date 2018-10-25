@@ -111,8 +111,8 @@ SiegeBallistaVoice:
 
 SiegeCatapultVoice:
 	Voices:
-		Select: CatapultMOVE01,CatapultMOVE02,CatapultMOVE03,CatapultMOVE04,CatapultMOVE05
-		Action: CatapultSELECT01,CatapultSELECT02,CatapultSELECT03,CatapultSELECT04,CatapultSELECT05
+		Select: CatapultSELECT01,CatapultSELECT02,CatapultSELECT03,CatapultSELECT04,CatapultSELECT05
+		Action: CatapultMOVE01,CatapultMOVE02,CatapultMOVE03,CatapultMOVE04,CatapultMOVE05
 		Default: WoodExplMed,WoodExplsmall2,WoodExplMed,WoodExplMed2
 		Burned: WoodExplMed,WoodExplsmall2,WoodExplMed,WoodExplMed2
 		Zapped: WoodExplMed,WoodExplsmall2,WoodExplMed,WoodExplMed2

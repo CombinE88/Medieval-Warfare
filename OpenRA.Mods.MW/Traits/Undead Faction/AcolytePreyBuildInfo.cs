@@ -1,15 +1,19 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using OpenRA.Mods.Common.Orders;
+using OpenRA.Mods.Common.Traits.Render;
 using OpenRA.Mods.MW.Activities;
 using OpenRA.Traits;
 
 namespace OpenRA.Mods.MW.Traits
 {
-    class AcolytePreyBuildInfo : ITraitInfo
+    class AcolytePreyBuildInfo : ITraitInfo, IRulesetLoaded
     {
         [Desc("Prey Animation when docking.")]
         [SequenceReference]
         public readonly string PreySequence = "prey";
+
+        [Desc("Which sprite body to modify.")] public readonly string Body = "body";
 
         public readonly HashSet<string> TargetActors = new HashSet<string>();
 
@@ -24,6 +28,13 @@ namespace OpenRA.Mods.MW.Traits
         public readonly string SelfEnabledCondition = null;
 
         public object Create(ActorInitializer init) { return new AcolytePreyBuild(this); }
+
+        public void RulesetLoaded(Ruleset rules, ActorInfo ai)
+        {
+            var matches = ai.TraitInfos<WithSpriteBodyInfo>().Count(w => w.Name == Body);
+            if (matches != 1)
+                throw new YamlException("WithMoveAnimation needs exactly one sprite body with matching name.");
+        }
     }
 
     class AcolytePreyBuild : IIssueOrder, IResolveOrder, IOrderVoice, ITick

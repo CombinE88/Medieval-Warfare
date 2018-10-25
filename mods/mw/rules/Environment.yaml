@@ -139,7 +139,7 @@ bulb:
 	RenderSprites:
 		Palette: fire
 	EditorTilesetFilter:
-		RequireTilesets: INTERIOR
+		RequireTilesets: TEMPERAT
 		Categories: Enviroment lightning
 	Building:
 		Dimensions: 1,1
@@ -150,7 +150,7 @@ bulbr:
 	RenderSprites:
 		Palette: fire
 	EditorTilesetFilter:
-		RequireTilesets: INTERIOR
+		RequireTilesets: TEMPERAT
 		Categories: Enviroment lightning
 	Building:
 		Dimensions: 1,1
@@ -161,7 +161,7 @@ bulbl:
 	RenderSprites:
 		Palette: fire
 	EditorTilesetFilter:
-		RequireTilesets: INTERIOR
+		RequireTilesets: TEMPERAT
 		Categories: Enviroment lightning
 	Building:
 		Dimensions: 1,1
@@ -172,7 +172,7 @@ bulbt:
 	RenderSprites:
 		Palette: fire
 	EditorTilesetFilter:
-		RequireTilesets: INTERIOR
+		RequireTilesets: TEMPERAT
 		Categories: Enviroment lightning
 	Building:
 		Dimensions: 1,1
@@ -183,7 +183,7 @@ bulbb:
 	RenderSprites:
 		Palette: fire
 	EditorTilesetFilter:
-		RequireTilesets: INTERIOR
+		RequireTilesets: TEMPERAT
 		Categories: Enviroment lightning
 	Building:
 		Dimensions: 1,1
@@ -194,7 +194,7 @@ bulbtl:
 	RenderSprites:
 		Palette: fire
 	EditorTilesetFilter:
-		RequireTilesets: INTERIOR
+		RequireTilesets: TEMPERAT
 		Categories: Enviroment lightning
 	Building:
 		Dimensions: 1,1
@@ -205,7 +205,7 @@ bulbtr:
 	RenderSprites:
 		Palette: fire
 	EditorTilesetFilter:
-		RequireTilesets: INTERIOR
+		RequireTilesets: TEMPERAT
 		Categories: Enviroment lightning
 	Building:
 		Dimensions: 1,1
@@ -216,7 +216,7 @@ bulbbl:
 	RenderSprites:
 		Palette: fire
 	EditorTilesetFilter:
-		RequireTilesets: INTERIOR
+		RequireTilesets: TEMPERAT
 		Categories: Enviroment lightning
 	Building:
 		Dimensions: 1,1
@@ -227,7 +227,7 @@ bulbbr:
 	RenderSprites:
 		Palette: fire
 	EditorTilesetFilter:
-		RequireTilesets: INTERIOR
+		RequireTilesets: TEMPERAT
 		Categories: Enviroment lightning
 	Building:
 		Dimensions: 1,1
@@ -1042,7 +1042,7 @@ OBJECTIVEA:
 	RenderSprites:
 		Palette: mwcivilian
 	EditorTilesetFilter:
-		RequireTilesets: INTERIOR
+		RequireTilesets: TEMPERAT
 		Categories: Interior Objectives
 	Building:
 		Dimensions: 1,1
@@ -1053,7 +1053,7 @@ OBJECTIVEB:
 	RenderSprites:
 		Palette: mwcivilian
 	EditorTilesetFilter:
-		RequireTilesets: INTERIOR
+		RequireTilesets: TEMPERAT
 		Categories: Interior Objectives
 	Building:
 		Dimensions: 1,1
@@ -1064,7 +1064,7 @@ OBJECTIVEC:
 	RenderSprites:
 		Palette: mwcivilian
 	EditorTilesetFilter:
-		RequireTilesets: INTERIOR
+		RequireTilesets: TEMPERAT
 		Categories: Interior Objectives
 	Building:
 		Dimensions: 1,1
@@ -1075,7 +1075,7 @@ OBJECTIVED:
 	RenderSprites:
 		Palette: mwcivilian
 	EditorTilesetFilter:
-		RequireTilesets: INTERIOR
+		RequireTilesets: TEMPERAT
 		Categories: Interior Objectives
 	Building:
 		Dimensions: 1,1
@@ -1086,7 +1086,7 @@ CRACKWALL:
 	RenderSprites:
 		Palette: mwcivilian
 	EditorTilesetFilter:
-		RequireTilesets: INTERIOR
+		RequireTilesets: TEMPERAT
 		Categories: Interior Objectives
 	Targetable:
 	Health:
@@ -1098,7 +1098,7 @@ CRACKWALLH:
 	RenderSprites:
 		Palette: mwcivilian
 	EditorTilesetFilter:
-		RequireTilesets: INTERIOR
+		RequireTilesets: TEMPERAT
 		Categories: Interior Objectives
 	Targetable:
 	Health:
@@ -1125,7 +1125,7 @@ ICHESTAHEAL:
 		ShowOwnerRow: false
 	HitShape:
 	EditorTilesetFilter:
-		RequireTilesets: INTERIOR
+		RequireTilesets: TEMPERAT
 		Categories: Interior Props
 ICHESTDEADA:
 	Inherits: ^PropHusk
@@ -1155,7 +1155,7 @@ ICHESTBHEAL:
 		ShowOwnerRow: false
 	HitShape:
 	EditorTilesetFilter:
-		RequireTilesets: INTERIOR
+		RequireTilesets: TEMPERAT
 		Categories: Interior Props
 ICHESTDEADB:
 	Inherits: ^PropHusk
@@ -1185,7 +1185,7 @@ ICHESTCHEAL:
 		ShowOwnerRow: false
 	HitShape:
 	EditorTilesetFilter:
-		RequireTilesets: INTERIOR
+		RequireTilesets: TEMPERAT
 		Categories: Interior Props
 ICHESTDEADC:
 	Inherits: ^PropHusk
@@ -1232,7 +1232,7 @@ CSTACK01:
 		HP: 1
 	HitShape:
 	EditorTilesetFilter:
-		RequireTilesets: INTERIOR
+		RequireTilesets: TEMPERAT
 		Categories: Interior Props
 CSTACK02:
 	Inherits: CSTACK01

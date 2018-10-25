@@ -148,7 +148,7 @@ E8FARMER:
 		PlayerPalette: raplayer
 	AttackFrontal:
 	Armor:
-		Type: Heavy	 
+		Type: Heavy
 	Harvester:
 		DeliveryBuildings: zeroproc, sulmill, nodproc
 		Resources: Crops, Grains, Wood, Goods, Lumber, Corn

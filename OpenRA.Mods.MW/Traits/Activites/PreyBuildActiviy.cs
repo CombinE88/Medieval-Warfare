@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System.Drawing;
+using System.Linq;
 using OpenRA.Activities;
 using OpenRA.Mods.Common.Traits;
 using OpenRA.Mods.Common.Traits.Render;
@@ -32,7 +33,7 @@ namespace OpenRA.Mods.MW.Activities
         public PreyBuildActivity(Actor self, Actor dockact, bool facingDock, Dock d)
         {
             info = self.Info.TraitInfo<AcolytePreyBuildInfo>();
-            wsb = self.Trait<WithSpriteBody>();
+            wsb = self.TraitsImplementing<WithSpriteBody>().Single(w => w.Info.Name == info.Body);
             dockactor = dockact;
             lockfacing = facingDock;
             playanim = true;
@@ -51,7 +52,10 @@ namespace OpenRA.Mods.MW.Activities
         {
             if (IsCanceled)
             {
-                wsb.PlayCustomAnimationRepeating(self, wsb.Info.Sequence);
+                if (self.Trait<WithHarvestAnimation>() != null)
+                    self.Trait<WithHarvestAnimation>().ChangeNot = false;
+
+                wsb.DefaultAnimation.ReplaceAnim(wsb.Info.Sequence);
                 playanim = true;
                 if (condtion != null && token != ConditionManager.InvalidConditionToken)
                 {
@@ -99,6 +103,9 @@ namespace OpenRA.Mods.MW.Activities
                                : facing.Facing;
                        facing.Facing = desiredFacing;
                    }
+
+                   if (self.Trait<WithHarvestAnimation>() != null)
+                       self.Trait<WithHarvestAnimation>().ChangeNot = true;
 
                    wsb.PlayCustomAnimationRepeating(self, info.PreySequence);
                    if (condtion != null)

@@ -193,7 +193,7 @@
 	Faction@Random:
 		Name: Any
 		InternalName: Random
-		RandomFactionMembers: gdi, nod, sul
+		RandomFactionMembers: gdi, nod, sul, ded
 		Description: Select a random faction.
 	Faction@gdi:
 		Name: King
@@ -210,8 +210,8 @@
 	Faction@ded:
 		Name: Undead
 		InternalName: ded
-		Description: They were forgotton
-		Selectable: False
+		Description: They were forgotton (Forgotten)
+		#Selectable: False
 	ResourceType@green-tib:
 		Sequences: iron1,iron2,iron3,iron4,iron5,iron6,iron7,iron8,iron9,iron10,iron11,iron12
 		Palette: ra

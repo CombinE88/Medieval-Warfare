@@ -604,6 +604,10 @@ DEDREF.penta:
 		Angle: 175
 		PlacementOnly: true
 		Transparency: 140
+	Refinery:
+		DockAngle: 1
+		DockOffset: 1,1
+		TickRate: 1
 GRAFENCE:
 	Inherits: ^Wall
 	RequiresBuildableArea:
@@ -1044,6 +1048,14 @@ DEDREF:
 		FindRadius: 100
 	CustomSellValue:
 		Value: 450
+	Refinery:
+		DockAngle: 72
+		DockOffset: 1,2
+		TickRate: 5
+	StoresResources:
+		PipColor: Red
+		PipCount: 10
+		Capacity: 500
 GSTONE1:
 	Inherits: ^Gravestone
 	WithSpriteBody:
