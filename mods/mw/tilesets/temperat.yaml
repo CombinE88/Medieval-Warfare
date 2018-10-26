@@ -1337,6 +1337,7 @@ Templates:
 			2: Road
 			3: Road
 			4: Road
+			5: Clear
 			6: Road
 			7: Clear
 	Template@1140:
@@ -3753,7 +3754,7 @@ Templates:
 			0: Wall
 	Template@1599:
 		Id: 1599
-		Images: Colum.shp
+		Images: colum.shp
 		Size: 1,1
 		Categories: Wall
 		Palette: mwcivilian

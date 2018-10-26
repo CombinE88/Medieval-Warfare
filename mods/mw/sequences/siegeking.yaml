@@ -53,7 +53,7 @@ orni:
 		Length: 7
 		Facings: 32
 		Offset: 0,-4,0
-	icon: Orniicon.shp
+	icon: orniicon.shp
 		AddExtension: False 
 ornicrash:
 	idle: 
