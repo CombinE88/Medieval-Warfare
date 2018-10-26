@@ -181,6 +181,7 @@ namespace OpenRA.Mods.MW.MWAI
 					{
 						ai.QueueOrder(new Order("Stop", aco, false));
 					}
+
 					return true;
 				}
 			}
@@ -373,7 +374,6 @@ namespace OpenRA.Mods.MW.MWAI
 
 					if (ai.HasAdequateCrypts() * 3 >= playerBuildings.Count() && ai.Info.UndeadCommonNames.Crypts.Contains(name))
 						continue;
-
 
 					// Do we want to build this structure?
 					var count = playerBuildings.Count(a => a.Info.Name == name) + playerBuildings.Count(a => a.Info.Name == name.Replace(".penta", string.Empty).ToLower());

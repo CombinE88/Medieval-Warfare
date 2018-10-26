@@ -131,11 +131,15 @@ SkeletonBowNArrow:
 	Report: arrow01.aud, arrow02.aud, arrow02.aud
 	InvalidTargets: Wall, Air
 	ValidTargets: Ground
-	Projectile: Missile
-		HorizontalRateOfTurn: 60
-		RangeLimit: 8c204
-		Arm: 0
-		Speed: 200
+	Projectile: BezierBullet
+		LaunchAngle: 130
+		Speed: 250
+		Inaccuracy: 0c0
+		ContrailLength: 20
+		ContrailWidth: 10
+		ContrailDelay: 0
+		ContrailUsePlayerColor : true
+		Image: e4arrow
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
 		Spread: 25

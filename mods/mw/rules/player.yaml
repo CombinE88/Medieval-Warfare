@@ -51,5 +51,5 @@ Player:
 	PlayerExperience:
 	AIHelper:
 		Cash:
-			baron: 1000
-			sultan: 2000
+			baron: 700
+			sultan: 1200

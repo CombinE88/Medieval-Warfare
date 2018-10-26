@@ -422,17 +422,6 @@ SPPOOL.penta:
 		Type: TreesHarvest
 		Range: 12c0
 		UsePlayerColor: true
-	RenderActorArc:
-		UsePlayerColor: true
-		Offset: 0,0,2048
-		TargetOffset: 0,0,512
-		Width: 45
-		Actors: split7, split8
-		Distance: 12c0
-		ExtraSearchDistance: 0
-		Angle: 155
-		PlacementOnly: true
-		Transparency: 140
 CRYPT.penta:
 	Inherits: ^Mediumpenta
 	RenderSprites:
@@ -594,11 +583,11 @@ DEDREF.penta:
 		UsePlayerColor: true
 		Offset: 0,0,2048
 		TargetOffset: 0,0,512
-		Width: 65
-		Actors: split2, split3, splitblue, split4, split4b, split5, splitdead
-		Distance: 3c0
-		ExtraSearchDistance: 8c0
-		Angle: 175
+		Width: 45
+		Actors: split7, split8
+		Distance: 12c0
+		ExtraSearchDistance: 0
+		Angle: 155
 		PlacementOnly: true
 		Transparency: 140
 	Refinery:
@@ -707,16 +696,6 @@ SPPOOL:
 		Offset: 0,0,1025
 	Targetable@sppool:
 		TargetTypes: sppool
-	RenderActorArc:
-		UsePlayerColor: true
-		Offset: 0,0,2048
-		TargetOffset: 0,0,512
-		Width: 45
-		Actors: split7, split8
-		Distance: 12c0
-		ExtraSearchDistance: 0
-		Angle: 155
-		Transparency: 140
 CRYPT:
 	Inherits: ^MWUndeadBuilding
 	Inherits@Hitshape: ^2x2Shape
@@ -1025,11 +1004,11 @@ DEDREF:
 		UsePlayerColor: true
 		Offset: 0,0,2048
 		TargetOffset: 0,0,512
-		Width: 65
-		Actors: split2, split3, splitblue, split4, split4b, split5, splitdead
-		Distance: 3c0
-		ExtraSearchDistance: 8c0
-		Angle: 175
+		Width: 45
+		Actors: split7, split8
+		Distance: 12c0
+		ExtraSearchDistance: 0
+		Angle: 155
 		Transparency: 140
 	WithFreeSpawnableActor@1:
 		SpawnActor: preycolyte

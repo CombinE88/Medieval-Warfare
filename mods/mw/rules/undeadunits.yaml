@@ -541,13 +541,9 @@ ACOLYTEC:
 		Name: primary
 		LocalOffset: 127,-128,638
 		FireDelay: 14
-	Armament@Corrupt:
-		Weapon: CorruptionSpawner
-		Name: secondary
-		LocalOffset: 127,-128,638 
 	Armament@AIR:
 		Weapon: AcolyteAttackCleanerAIR
-		Name: primary
+		Name: secondary
 		LocalOffset: 127,-128,638
 		FireDelay: 14
 	AttackFrontal:
@@ -568,7 +564,7 @@ ACOLYTEC:
 		Sequence: shoot
 	WithAttackAnimation@2:
 		Armament: secondary
-		Sequence: shootchannel
+		Sequence: shoot
 	Armor:
 		Type: Leather
 	Buildable:

@@ -10,35 +10,6 @@ SPLIT2:
 		Image: ironmine
 		PlayerPalette: raplayer
 		Palette: ra
-	ValidPreyTarget:
-	DockManager:
-		ExternalDocks: true
-		#DeadlockDetectionEnabled: false
-	Dock@up: 
-		DockOffset: 0,-2
-		WOffset: 383,170,0
-		DockAngle: 32
-		IsDragRequired: false
-	Dock@right: 
-		DockOffset: 2,0
-		WOffset: 425,0,0
-		DockAngle: 223
-		IsDragRequired: false
-	Dock@down: 
-		DockOffset: 0,2
-		WOffset: 340,-170,0
-		DockAngle: 159
-		IsDragRequired: false
-	Dock@leftdown: 
-		DockOffset: -2,2
-		WOffset: -425,-510,0
-		DockAngle: 96
-		IsDragRequired: false
-	Dock@leftup: 
-		DockOffset: -2,-2
-		WOffset: -425,510,0
-		DockAngle: 96
-		IsDragRequired: false
 SPLIT3:
 	Inherits: ^TibTree
 	RenderSprites:
@@ -55,35 +26,6 @@ SPLIT3:
 		Interval: 30
 	WithIdleAnimation:
 		Interval: 200
-	ValidPreyTarget:
-	DockManager:
-		ExternalDocks: true
-		#DeadlockDetectionEnabled: false
-	Dock@up: 
-		DockOffset: 0,-2
-		WOffset: 383,170,0
-		DockAngle: 32
-		IsDragRequired: false
-	Dock@right: 
-		DockOffset: 2,0
-		WOffset: 425,0,0
-		DockAngle: 223
-		IsDragRequired: false
-	Dock@down: 
-		DockOffset: 0,2
-		WOffset: 340,-170,0
-		DockAngle: 159
-		IsDragRequired: false
-	Dock@leftdown: 
-		DockOffset: -2,2
-		WOffset: -425,-510,0
-		DockAngle: 96
-		IsDragRequired: false
-	Dock@leftup: 
-		DockOffset: -2,-2
-		WOffset: -425,510,0
-		DockAngle: 96
-		IsDragRequired: false
 SPLITBLUE:
 	Inherits: ^TibTree
 	RenderSprites:
@@ -100,35 +42,6 @@ SPLITBLUE:
 		Image: goldmine
 		PlayerPalette: raplayer
 		Palette: ra
-	ValidPreyTarget:
-	DockManager:
-		ExternalDocks: true
-		#DeadlockDetectionEnabled: false
-	Dock@up: 
-		DockOffset: 0,-2
-		WOffset: 383,170,0
-		DockAngle: 32
-		IsDragRequired: false
-	Dock@right: 
-		DockOffset: 2,0
-		WOffset: 425,0,0
-		DockAngle: 223
-		IsDragRequired: false
-	Dock@down: 
-		DockOffset: 0,2
-		WOffset: 340,-170,0
-		DockAngle: 159
-		IsDragRequired: false
-	Dock@leftdown: 
-		DockOffset: -2,2
-		WOffset: -425,-510,0
-		DockAngle: 96
-		IsDragRequired: false
-	Dock@leftup: 
-		DockOffset: -2,-2
-		WOffset: -425,510,0
-		DockAngle: 96
-		IsDragRequired: false
 SPLIT4:
 	Inherits: SPLIT3
 	Tooltip:
@@ -136,71 +49,13 @@ SPLIT4:
 	SeedsResource:
 		ResourceType: Grains
 		Interval: 30
-	ValidPreyTarget:
-	DockManager:
-		ExternalDocks: true
-		#DeadlockDetectionEnabled: false
-	Dock@up: 
-		DockOffset: 0,-2
-		WOffset: 383,170,0
-		DockAngle: 32
-		IsDragRequired: false
-	Dock@right: 
-		DockOffset: 2,0
-		WOffset: 425,0,0
-		DockAngle: 223
-		IsDragRequired: false
-	Dock@down: 
-		DockOffset: 0,2
-		WOffset: 340,-170,0
-		DockAngle: 159
-		IsDragRequired: false
-	Dock@leftdown: 
-		DockOffset: -2,2
-		WOffset: -425,-510,0
-		DockAngle: 96
-		IsDragRequired: false
-	Dock@leftup: 
-		DockOffset: -2,-2
-		WOffset: -425,510,0
-		DockAngle: 96
-		IsDragRequired: false
 SPLIT4B:
 	Inherits: SPLIT3
 	Tooltip:
 		Name: Scarecrow (Corn)
-	ValidPreyTarget:
 	SeedsResource:
 		ResourceType: Corn
 		Interval: 30
-	DockManager:
-		ExternalDocks: true
-		#DeadlockDetectionEnabled: false
-	Dock@up: 
-		DockOffset: 0,-2
-		WOffset: 383,170,0
-		DockAngle: 32
-		IsDragRequired: false
-	Dock@right: 
-		DockOffset: 2,0
-		WOffset: 425,0,0
-		DockAngle: 223
-		IsDragRequired: false
-	Dock@down: 
-		DockOffset: 0,2
-		WOffset: 340,-170,0
-		DockAngle: 159
-		IsDragRequired: false
-	Dock@leftdown: 
-		DockOffset: -2,2
-		WOffset: -425,-510,0
-		DockAngle: 96
-		IsDragRequired: false
-	Dock@leftup: 
-		DockOffset: -2,-2
-		WOffset: -425,510,0
-		DockAngle: 96
-		IsDragRequired: false
 SPLIT5:
 	Inherits: SPLIT3
 	HitShape:
@@ -237,35 +92,6 @@ SPLIT5:
 		ResourceType: Lumber
 		Interval: 40
 		MaxRange: 4
-	ValidPreyTarget:
-	DockManager:
-		ExternalDocks: true
-		#DeadlockDetectionEnabled: false
-	Dock@up: 
-		DockOffset: 0,-2
-		WOffset: 383,170,0
-		DockAngle: 32
-		IsDragRequired: false
-	Dock@right: 
-		DockOffset: 2,0
-		WOffset: 425,0,0
-		DockAngle: 223
-		IsDragRequired: false
-	Dock@down: 
-		DockOffset: 0,2
-		WOffset: 340,-170,0
-		DockAngle: 159
-		IsDragRequired: false
-	Dock@leftdown: 
-		DockOffset: -2,2
-		WOffset: -425,-510,0
-		DockAngle: 96
-		IsDragRequired: false
-	Dock@leftup: 
-		DockOffset: -2,-2
-		WOffset: -425,510,0
-		DockAngle: 96
-		IsDragRequired: false
 SPLIT7:
 	Inherits: SPLIT3
 	RenderSprites:
@@ -298,7 +124,7 @@ SPLIT7:
 	SeedsResource:
 		RequiresCondition: SpawnCorruption
 		ResourceType: Corruption
-		Interval: 40
+		Interval: 60
 	Targetable:
 		TargetTypes: Trees, Corrupt
 	ValidPreyTarget:
@@ -306,35 +132,6 @@ SPLIT7:
 	WithColoredOverlay@Corrupt:
 		Palette: disabled
 		RequiresCondition: SpawnCorruption
-	DockManager:
-		ExternalDocks: true
-		#RequiresCondition: SpawnCorruption
-		#DeadlockDetectionEnabled: false
-	Dock@up: 
-		DockOffset: 0,-2
-		WOffset: 383,170,0
-		DockAngle: 32
-		IsDragRequired: false
-	Dock@right: 
-		DockOffset: 2,0
-		WOffset: 425,0,0
-		DockAngle: 223
-		IsDragRequired: false
-	Dock@down: 
-		DockOffset: 0,2
-		WOffset: 340,-170,0
-		DockAngle: 159
-		IsDragRequired: false
-	Dock@leftdown: 
-		DockOffset: -2,2
-		WOffset: -425,-510,0
-		DockAngle: 96
-		IsDragRequired: false
-	Dock@leftup: 
-		DockOffset: -2,-2
-		WOffset: -425,510,0
-		DockAngle: 96
-		IsDragRequired: false
 	ExternalCondition@SpawnCorruption:
 		Condition: SpawnCorruption
 SPLIT8:
@@ -368,7 +165,7 @@ SPLIT8:
 	SeedsResource:
 		RequiresCondition: SpawnCorruption
 		ResourceType: Corruption
-		Interval: 25
+		Interval: 45
 	Targetable:
 		TargetTypes: Trees, Corrupt
 	ValidPreyTarget:
@@ -376,35 +173,6 @@ SPLIT8:
 	WithColoredOverlay@Corrupt:
 		Palette: disabled
 		RequiresCondition: SpawnCorruption
-	DockManager:
-		ExternalDocks: true
-		#RequiresCondition: SpawnCorruption
-		#DeadlockDetectionEnabled: false
-	Dock@up: 
-		DockOffset: 0,-2
-		WOffset: 383,170,0
-		DockAngle: 32
-		IsDragRequired: false
-	Dock@right: 
-		DockOffset: 2,0
-		WOffset: 425,0,0
-		DockAngle: 223
-		IsDragRequired: false
-	Dock@down: 
-		DockOffset: 0,2
-		WOffset: 340,-170,0
-		DockAngle: 159
-		IsDragRequired: false
-	Dock@leftdown: 
-		DockOffset: -2,2
-		WOffset: -425,-510,0
-		DockAngle: 96
-		IsDragRequired: false
-	Dock@leftup: 
-		DockOffset: -2,-2
-		WOffset: -425,510,0
-		DockAngle: 96
-		IsDragRequired: false
 SPLIT9:
 	Inherits: SPLIT3
 	-SeedsResource:
