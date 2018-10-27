@@ -120,6 +120,9 @@ Cursors:
 		nuke:
 			Start: 62
 			Length: 12
+		nuke-blocked:
+			Start: 62
+			Length: 12
 		ioncannon:
 			Start: 62
 			Length: 12

@@ -431,7 +431,6 @@ t06b:
 	idle: tanne7
 		Tick:120
 		Offset: 5,-9
-		Length: *
 t06a:
 	Defaults:
 		UseTilesetExtension: true

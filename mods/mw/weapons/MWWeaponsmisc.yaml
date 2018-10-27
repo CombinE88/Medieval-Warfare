@@ -770,6 +770,56 @@ SingleDeadKadaver:
 		Explosions: rottk1,rottk2,rottk3
 		Delay: 10
 		ExplosionPalette : ra
+SuperCannons:
+	ReloadDelay: 200
+	Range: 165c0
+	Burst: 4
+	BurstDelays: 20
+	ValidTargets: Ground
+	InvalidTargets: Structure, Cavalry, Infantry, Wall, Air
+	Report: steriocannon01.wav, steriocannon02.wav, steriocannon03.wav, steriocannon04.wav, steriocannon05.wav
+	Projectile: Bullet
+		Speed: 256
+		Blockable: false
+		LaunchAngle: 110
+		Inaccuracy: 10c512
+		Image: cantowboulder
+		Shadow: true
+		Palette: ra
+		ContrailLength: 20
+		ContrailUsePlayerColor: true
+		ContrailWidth: 0c125
+	Warhead@1Dam_impact: SpreadDamage
+		Spread: 1c512
+		Damage: 2500
+		Delay: 0
+		ValidTargets: Ground, Structure, Cavalry, Infantry, Wall
+		InvalidTargets: Air
+		Falloff: 1000, 368, 135, 50, 18, 7, 0
+		Versus:
+			None: 100
+			Leather: 100
+			Light: 60
+			Heavy: 50
+			Knight: 50
+			Concrete: 100
+			LightCavalry: 100
+			MediumCavalry: 100
+			HeavyCavalry: 100
+			Spectral: 250
+		DamageTypes: RippedApartDeath
+	Warhead@2Smu: LeaveSmudge
+		SmudgeType: Crater
+		InvalidTargets: Cavalry, Structure, Wall, Husk, Trees, Creep
+	Warhead@3Eff: CreateEffect
+		Explosions: big_napalm
+		ImpactSounds: xplobig6.aud
+		ValidTargets: Ground, Structure, Cavalry, Infantry, Wall
+		InvalidTargets: Air
+	Warhead@4Res_area4: DestroyResource
+		Size: 1
+	Warhead@Shake5: ShakeGround
+		Intensity: 3
 CannonStrike:
 	ValidTargets: Ground, Air
 	Report: quadcannonmono.aud

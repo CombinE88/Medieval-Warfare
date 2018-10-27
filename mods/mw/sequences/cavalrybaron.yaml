@@ -115,7 +115,7 @@ ross4c:
 		Length: 8
 		Facings: 8
 		Tick: 100
-	shoot: ross4cs
+	shoot:
 		Tick: 100
 		Start: 66
 		Length: 7

@@ -246,12 +246,16 @@ explosion:
 		Length:*
 		Tick: 100
 rank:
-	rank-veteran-1:
-	rank-veteran-2:
+	rank-veteran-1: mwranks.png
+		AddExtension: false
+	rank-veteran-2: mwranks.png
+		AddExtension: false
 		Start: 1
-	rank-veteran-3:
+	rank-veteran-3: mwranks.png
+		AddExtension: false
 		Start: 2
-	rank-elite:
+	rank-elite: mwranks.png
+		AddExtension: false
 		Start: 3
 rallypoint:
 	flag: newflag

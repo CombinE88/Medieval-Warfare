@@ -1324,6 +1324,9 @@
           <e p="BezierBullet.cs" t="Include" />
           <e p="InstantExplode.cs" t="Include" />
         </e>
+        <e p="Render" t="Include">
+          <e p="OverlayPlayerColorPalette.cs" t="Include" />
+        </e>
         <e p="Traits" t="Include">
           <e p="Activites" t="Include">
             <e p="ActivityInterfaces.cs" t="Include" />
@@ -1362,6 +1365,7 @@
           </e>
           <e p="IsPeasant.cs" t="Include" />
           <e p="IsTownhall.cs" t="Include" />
+          <e p="MWAttackOrderPower.cs" t="Include" />
           <e p="NewDisguise.cs" t="Include" />
           <e p="Orders" t="Include">
             <e p="AlwaysTrueOrderTargeter.cs" t="Include" />

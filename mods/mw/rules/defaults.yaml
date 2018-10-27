@@ -231,6 +231,9 @@
 		UseClassicFacingFudge: True
 	EditorTilesetFilter:
 		Categories: Aircraft
+	OwnerLostAction:
+		Action: Kill
+		DeathTypes: DefaultDeath
 ^Infantry:
 	Inherits@1: ^ExistsInWorld
 	Inherits@3: ^SpriteActor
@@ -337,6 +340,9 @@
 		CruiseAltitude: 2560
 	EditorTilesetFilter:
 		Categories: Aircraft
+	OwnerLostAction:
+		Action: Kill
+		DeathTypes: DefaultDeath
 ^Building:
 	Inherits@1: ^ExistsInWorld
 	Inherits@2: ^SpriteActor
@@ -935,6 +941,9 @@
 	HitShape:
 	EditorTilesetFilter:
 		Categories: Aircraft
+	OwnerLostAction:
+		Action: ChangeOwner
+		DeathTypes: DefaultDeath
 ^MWBaseBuilding:
 	Inherits@1: ^BaseBuilding
 	SpawnActorsOnSell:

@@ -7,7 +7,7 @@ ross2:
 		Length: 8
 		Facings: 8
 		Tick: 100
-	shoot: ross2s
+	shoot:
 		Tick: 100
 		Start: 66
 		Length: 7

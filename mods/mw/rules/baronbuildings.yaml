@@ -555,19 +555,103 @@ CASTLE:
 		Bounds: 72,78,0,-9
 	SelectionDecorations:
 	ProvidesRadar:
-	NukePower:
+	#NukePower:
+	#	Icon: cannonstrike
+	#	Cursor: nuke
+	#	ChargeInterval: 9000
+	#	Description: Cannon Strike
+	#	LongDesc: Launch long range cannonboulder off your casle.\nApplies heavy damage over a large area.\n\n\n\n
+	#	EndChargeSpeechNotification: NodcannonReady
+	#	SelectTargetSpeechNotification: SelectTarget
+	#	InsufficientPowerSpeechNotification: InsufficientPower
+	#	LaunchSpeechNotification: 
+	#	IncomingSpeechNotification: NodcannonApproach
+	#	BeginChargeSpeechNotification: 
+	#	MissileWeapon: cannonstrike
+	#	DisplayBeacon: True
+	#	BeaconPoster: cannonbeacon
+	#	BeaconPosterPalette: beaconposter
+	#	DisplayRadarPing: True
+	#	CameraRange: 10c0
+	#	ArrowSequence: arrow
+	#	ClockSequence: clock
+	#	CircleSequence: circles
+	#	OrderName: CannonPowerInfoOrder
+	WithNukeLaunchAnimation:
+	SupportPowerChargeBar:
+	BodyOrientation:
+		QuantizedFacings: 1
+	ThrowsShrapnel@LARGE:
+		Weapons: LargeWood1, LargeWood1, LargeStone1, LargeStone1
+		Pieces: 1, 2
+		Range: 1c0, 5c0
+	AttackTurreted:
+		Turrets: first, second, third, fourth
+		Armaments: first, second, third, fourth
+	WithSpriteTurret@First:
+		Sequence: turret
+		Turret: first
+	Turreted@first:
+		Turret: first
+		TurnSpeed: 3
+		InitialFacing: 224
+		Offset: 854,-624,1024
+	Armament@first:
+		Name: first
+		Weapon: SuperCannons
+		Turret: first
+		LocalOffset: 256,0,512
+	WithSpriteTurret@second:
+		Sequence: turret
+		Turret: second
+	Turreted@second:
+		Turret: second
+		TurnSpeed: 3
+		InitialFacing: 224
+		Offset: -900,-894,1024
+	Armament@second:
+		Name: second
+		Weapon: SuperCannons
+		Turret: second
+		LocalOffset: 256,0,512
+		FireDelay: 5
+	WithSpriteTurret@third:
+		Sequence: turret
+		Turret: third
+	Turreted@third:
+		Turret: third
+		TurnSpeed: 3
+		InitialFacing: 224
+		Offset: -1124,604,1024
+	Armament@third:
+		Name: third
+		Weapon: SuperCannons
+		Turret: third
+		LocalOffset: 256,0,512
+		FireDelay: 10
+	WithSpriteTurret@fourth:
+		Sequence: turret
+		Turret: fourth
+	Turreted@fourth:
+		Turret: fourth
+		TurnSpeed: 3
+		InitialFacing: 224
+		Offset: 624,874,1024
+	Armament@fourth:
+		Name: fourth
+		Weapon: SuperCannons
+		Turret: fourth
+		LocalOffset: 256,0,512
+		FireDelay: 15
+	MwAttackOrderPower:
 		Icon: cannonstrike
 		Cursor: nuke
-		ChargeInterval: 9000
+		ChargeInterval: 3375
 		Description: Cannon Strike
 		LongDesc: Launch long range cannonboulder off your casle.\nApplies heavy damage over a large area.\n\n\n\n
 		EndChargeSpeechNotification: NodcannonReady
 		SelectTargetSpeechNotification: SelectTarget
-		InsufficientPowerSpeechNotification: InsufficientPower
-		LaunchSpeechNotification: 
-		IncomingSpeechNotification: NodcannonApproach
-		BeginChargeSpeechNotification: 
-		MissileWeapon: cannonstrike
+		OrderName: CannonPowerInfoOrder
 		DisplayBeacon: True
 		BeaconPoster: cannonbeacon
 		BeaconPosterPalette: beaconposter
@@ -576,13 +660,10 @@ CASTLE:
 		ArrowSequence: arrow
 		ClockSequence: clock
 		CircleSequence: circles
-		OrderName: CannonPowerInfoOrder
-	WithNukeLaunchAnimation:
-	SupportPowerChargeBar:
-	ThrowsShrapnel@LARGE:
-		Weapons: LargeWood1, LargeWood1, LargeStone1, LargeStone1
-		Pieces: 1, 2
-		Range: 1c0, 5c0
+		CameraRemoveDelay: 200
+		CameraSpawnAdvance: 150
+	RejectsOrders: 
+		Except: Sell, Repair, Stop
 WORKSHOPNOD:
 	Inherits: ^MWBaseBuilding
 	Inherits@Hitshape: ^3x2Shape

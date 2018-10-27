@@ -507,6 +507,8 @@ castle:
 		Offset: 0,-12,0
 		Length: *
 		Tick: 80
+	turret: techbuilding1turret
+		Facings: 32
 	make1: castlemake
 		Offset: 0,-12,0
 		Start: 0

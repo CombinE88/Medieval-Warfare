@@ -19,8 +19,8 @@ Player:
 			HarvestableTrees: t01, t02, t03, t04, t05, t06, t08, t10, t11, t12, t13, t14, t15, t16, 17, t17a, t18, t18a, t18c, tc01, tc02
 		UnitsCommonNames:
 			Mcv: suppwgnl, ziggurat1, ziggurat2, ziggurat3
-			ExcludeFromSquads: hunter, transporter, engeneer, sulturnxl, mwlumbererowned, preycolyte, mwcivcom, eharvxl, e8farmer, sule6, shopplayer, suppwgnl
-			ExcludeFromDefenders: mwcivcom, hunter, transporter, engeneer, sulturnxl, mwlumbererowned, preycolyte, eharvxl, e8farmer, sule6, shopplayer, suppwgnl
+			ExcludeFromSquads: hunter, transporter, engeneer, sulturnxl, mwlumbererowned, preycolyte, mwcivcom, eharvxl, e8farmer, sule6, shopplayer, suppwgnl, acolytec
+			ExcludeFromDefenders: mwcivcom, hunter, transporter, engeneer, sulturnxl, mwlumbererowned, preycolyte, eharvxl, e8farmer, sule6, shopplayer, suppwgnl, acolytec
 		BuildingQueues: MBuilding.Nod, MBuilding.GDI, MBuilding.SUL, MTech.Nod, MTech.GDI, MTech.SUL, MResources.Nod, MResources.GDI, MResources.SUL, MMilitary.Nod, MMilitary.GDI, MMilitary.SUL, MBuilding.ded, MMilitary.ded, MResources.ded
 		UnitQueues: MVehicle.Nod, MVehicle.GDI, MVehicle.SUL, MInfantry.Nod, MInfantry.GDI, MInfantry.SUL, MSiege.Nod, MSiege.GDI, MSiege.SUL, MInfantry.ded, MSiege.ded, MVehicle.ded, MTech.ded, MBuilding.ded
 		UndeadCommonNames:
@@ -31,7 +31,7 @@ Player:
 			PrayableIron: split2, splitblue
 			PrayableDeerStands: split7, split8
 			Acolytes: preycolyte
-			Cultists: acolytec
+			Cultists: 
 			Crypts: crypt.penta
 			Sppool: sppool.penta, sppool
 			Buildings:
@@ -437,8 +437,8 @@ Player:
 			HarvestableTrees: t01, t02, t03, t04, t05, t06, t08, t10, t11, t12, t13, t14, t15, t16, 17, t17a, t18, t18a, t18c, tc01, tc02
 		UnitsCommonNames:
 			Mcv: suppwgnl, ziggurat1, ziggurat2, ziggurat3
-			ExcludeFromSquads: hunter, transporter, engeneer, sulturnxl, mwlumbererowned, preycolyte, mwcivcom, eharvxl, e8farmer, sule6, shopplayer, suppwgnl
-			ExcludeFromDefenders: mwcivcom, hunter, transporter, engeneer, sulturnxl, mwlumbererowned, preycolyte, eharvxl, e8farmer, sule6, shopplayer, suppwgnl
+			ExcludeFromSquads: hunter, transporter, engeneer, sulturnxl, mwlumbererowned, preycolyte, mwcivcom, eharvxl, e8farmer, sule6, shopplayer, suppwgnl, acolytec
+			ExcludeFromDefenders: mwcivcom, hunter, transporter, engeneer, sulturnxl, mwlumbererowned, preycolyte, eharvxl, e8farmer, sule6, shopplayer, suppwgnl, acolytec
 		BuildingQueues: MBuilding.Nod, MBuilding.GDI, MBuilding.SUL, MTech.Nod, MTech.GDI, MTech.SUL, MResources.Nod, MResources.GDI, MResources.SUL, MMilitary.Nod, MMilitary.GDI, MMilitary.SUL, MBuilding.ded, MMilitary.ded, MResources.ded
 		UnitQueues: MVehicle.Nod, MVehicle.GDI, MVehicle.SUL, MInfantry.Nod, MInfantry.GDI, MInfantry.SUL, MSiege.Nod, MSiege.GDI, MSiege.SUL, MInfantry.ded, MSiege.ded, MVehicle.ded, MTech.ded, MBuilding.ded
 		UndeadCommonNames:
@@ -449,7 +449,7 @@ Player:
 			PrayableIron: split2, splitblue
 			PrayableDeerStands: split7, split8
 			Acolytes: preycolyte
-			Cultists: acolytec
+			Cultists: 
 			Crypts: crypt.penta
 			Sppool: sppool.penta, sppool
 			Buildings:
@@ -856,8 +856,8 @@ Player:
 			HarvestableTrees: t01, t02, t03, t04, t05, t06, t08, t10, t11, t12, t13, t14, t15, t16, 17, t17a, t18, t18a, t18c, tc01, tc02
 		UnitsCommonNames:
 			Mcv: suppwgnl, ziggurat1, ziggurat2, ziggurat3
-			ExcludeFromSquads: hunter, transporter, engeneer, sulturnxl, mwlumbererowned, preycolyte, mwcivcom, eharvxl, e8farmer, sule6, shopplayer, suppwgnl
-			ExcludeFromDefenders: mwcivcom, hunter, transporter, engeneer, sulturnxl, mwlumbererowned, preycolyte, eharvxl, e8farmer, sule6, shopplayer, suppwgnl
+			ExcludeFromSquads: hunter, transporter, engeneer, sulturnxl, mwlumbererowned, preycolyte, mwcivcom, eharvxl, e8farmer, sule6, shopplayer, suppwgnl, acolytec
+			ExcludeFromDefenders: mwcivcom, hunter, transporter, engeneer, sulturnxl, mwlumbererowned, preycolyte, eharvxl, e8farmer, sule6, shopplayer, suppwgnl, acolytec
 		BuildingQueues: MBuilding.Nod, MBuilding.GDI, MBuilding.SUL, MTech.Nod, MTech.GDI, MTech.SUL, MResources.Nod, MResources.GDI, MResources.SUL, MMilitary.Nod, MMilitary.GDI, MMilitary.SUL, MBuilding.ded, MMilitary.ded, MResources.ded
 		UnitQueues: MVehicle.Nod, MVehicle.GDI, MVehicle.SUL, MInfantry.Nod, MInfantry.GDI, MInfantry.SUL, MSiege.Nod, MSiege.GDI, MSiege.SUL, MInfantry.ded, MSiege.ded, MVehicle.ded, MTech.ded, MBuilding.ded
 		UndeadCommonNames:
@@ -868,7 +868,7 @@ Player:
 			PrayableIron: split2, splitblue
 			PrayableDeerStands: split7, split8
 			Acolytes: preycolyte
-			Cultists: acolytec
+			Cultists: 
 			Crypts: crypt.penta
 			Sppool: sppool.penta, sppool
 			Buildings:
