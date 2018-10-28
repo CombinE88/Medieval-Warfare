@@ -1,18 +1,20 @@
 HoodArrow:
 	ReloadDelay: 45
-	Range: 8c0
+	Range: 5c0
 	MinRange: 0c512
 	Report: arrow01.aud, arrow02.aud, arrow02.aud
 	InvalidTargets: Wall, Air, Structure
 	ValidTargets: Ground
-	Projectile: Missile
-		HorizontalRateOfTurn: 100
-		VerticalRateOfTurn: 100
-		RangeLimit: 12c204
-		Arm: 0
-		Speed: 290
-		Palette: ra
+	Projectile: BezierBullet
+		LaunchAngle: 130
+		Speed: 250
 		Inaccuracy: 0c0
+		ContrailLength: 20
+		ContrailWidth: 10
+		ContrailDelay: 0
+		ContrailUsePlayerColor : true
+		Image: e4arrow
+		Palette: ra
 	Warhead@1Dam: SpreadDamage
 		Spread: 50
 		InvalidTargets: Wall, Air, Structure
@@ -30,42 +32,9 @@ HoodArrow:
 			HeavyBuilding: 15
 			Spectral: 50
 		DamageTypes: DefaultDeath
-HoodArrowDUMMY:
-	ReloadDelay: 45
-	Range: 8c0
-	MinRange: 0c512
-	InvalidTargets: Wall, Air, Structure
-	ValidTargets: Ground
-	Projectile: Bullet
-		LaunchAngle: 80
-		Speed: 340
-		Inaccuracy: 0c0
-		ContrailLength: 20
-		ContrailWidth: 10
-		ContrailDelay: 0
-		ContrailUsePlayerColor : true
-		Image: e4arrow
-		Palette: ra
-	Warhead@1Dam: SpreadDamage
-		Spread: 25
-		InvalidTargets: Wall, Air, Structure
-		ValidTargets: Ground
-		Damage: 0
-		Versus:
-			Leather: 0
-			Light: 0
-			Heavy: 0
-			Concrete: 0
-			Knight: 0
-			LightCavalry: 0
-			MediumCavalry: 0
-			HeavyCavalry: 0
-			HeavyBuilding: 0
-			Spectral: 0
-		DamageTypes: DefaultDeath
 HoodArrowAir:
 	ReloadDelay: 38
-	Range: 9c512
+	Range: 6c512
 	MinRange: 0c0
 	Report: arrow01.aud, arrow02.aud, arrow02.aud
 	InvalidTargets: Wall, Ground
@@ -100,7 +69,7 @@ HoodArrowAir:
 		DamageTypes: DefaultDeath
 HoodFireArrow:
 	ReloadDelay: 45
-	Range: 8c0
+	Range: 5c0
 	MinRange: 0c512
 	ValidTargets: Structure
 	TargetActorCenter: true
@@ -186,7 +155,7 @@ HoodFireArrow:
 		Delay: 24
 HoodFireArrowDummy:
 	ReloadDelay: 45
-	Range: 8c0
+	Range: 5c0
 	MinRange: 0c512
 	ValidTargets: Structure
 	TargetActorCenter: true

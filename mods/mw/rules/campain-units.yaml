@@ -47,7 +47,6 @@ HOOD:
 		Armaments: Primary, Secondary
 		Voice: Attack
 	AutoTarget:
-		ScanRadius: 9
 		InitialStance: AttackAnything
 	RenderSprites:
 		Image: hood

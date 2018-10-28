@@ -423,8 +423,6 @@ PLACEHOLDERPLANE:
 	RenderSprites:
 		Image: placeholder
 		Palette: empty
-	Tooltip:
-		Name:
 	Valued:
 		Cost: 2000
 	Aircraft:
@@ -452,8 +450,6 @@ PLACEHOLDERFLAMESTRIKE:
 	RenderSprites:
 		Image: placeholder
 		Palette: empty
-	Tooltip:
-		Name:
 	Valued:
 		Cost: 2000
 	Aircraft:

@@ -62,7 +62,6 @@ Rules:
 	mw|rules/AI.yaml
 	mw|rules/campain-units.yaml
 	mw|rules/civilian.yaml
-	mw|rules/civilian-desert.yaml
 	mw|rules/Environment.yaml
 	mw|rules/Props.yaml
 	mw|rules/trees.yaml
