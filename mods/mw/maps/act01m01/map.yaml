@@ -38,11 +38,6 @@ Players:
 		Color: F3A760
 		Allies: King, King2
 		Enemies: Baron
-	PlayerReference@Multi0:
-		Name: Multi0
-		Playable: True
-		Faction: Random
-		Enemies: Creeps
 Actors:
 	Actor0: split9
 		Owner: Neutral
@@ -209,9 +204,6 @@ Actors:
 	Actor69: wdwll
 		Owner: Neutral
 		Location: 1,4
-	Actor71: mpspawn
-		Owner: King
-		Location: 2,31
 	Actor76: hood
 		Owner: King
 		Location: 2,31
