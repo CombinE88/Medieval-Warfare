@@ -957,7 +957,7 @@ Templates:
 		Tiles:
 			0: Rock
 			1: Rock
-			2: Clear
+			2: Rock
 	Template@85:
 		Id: 85
 		Images: bits/terrain/watercliffs.png

@@ -1,0 +1,1255 @@
+MapFormat: 11
+RequiresMod: mw
+Title: Act I Mission 3
+Author: CombinE
+Tileset: TEMPERAT
+MapSize: 54,66
+Bounds: 1,1,52,64
+Visibility: MissionSelector
+Categories: Conquest
+Players:
+	PlayerReference@Neutral:
+		Name: Neutral
+		OwnsWorld: True
+		NonCombatant: True
+		Faction: Random
+	PlayerReference@Baron:
+		Name: Baron
+		Faction: nod
+		Color: FE1100
+		Allies: Baron
+		Enemies: King, King2, Creeps
+	PlayerReference@King:
+		Name: King
+		AllowBots: False
+		Playable: True
+		Required: True
+		LockFaction: True
+		Faction: gdi
+		LockColor: True
+		Color: F5D378
+		LockSpawn: True
+		LockTeam: True
+		Allies: King, King2, Creeps
+		Enemies: Baron
+	PlayerReference@King2:
+		Name: King2
+		Faction: gdi
+		Color: F3A760
+		Allies: King, King2
+		Enemies: Baron, Creeps
+	PlayerReference@Creeps:
+		Name: Creeps
+		NonCombatant: True
+		Faction: Random
+		Color: 30732D
+		Enemies: King, King2, Baron
+Actors:
+	Actor0: t16
+		Owner: Neutral
+		Location: 51,65
+	Actor1: t17a
+		Owner: Neutral
+		Location: 48,65
+	Actor2: t15
+		Owner: Neutral
+		Location: 44,64
+	Actor4: t08
+		Owner: Neutral
+		Location: 32,63
+	Actor5: t07
+		Owner: Neutral
+		Location: 33,61
+	Actor6: tc04
+		Owner: Neutral
+		Location: 25,62
+	Actor7: t05
+		Owner: Neutral
+		Location: 14,59
+	Actor8: tc02
+		Owner: Neutral
+		Location: 10,56
+	Actor9: t16
+		Owner: Neutral
+		Location: 11,64
+	Actor10: t17
+		Owner: Neutral
+		Location: 22,58
+	Actor11: t16
+		Owner: Neutral
+		Location: 32,53
+	Actor17: t17
+		Owner: Neutral
+		Location: 33,49
+	Actor18: split7
+		Owner: Neutral
+		Location: 32,49
+	Actor19: split4
+		Owner: Neutral
+		Location: 36,56
+	Actor20: t14
+		Owner: Neutral
+		Location: 30,49
+	Actor21: t16
+		Owner: Neutral
+		Location: 28,48
+	Actor22: t11
+		Owner: Neutral
+		Location: 28,51
+	Actor23: wdwll
+		Owner: King
+		Location: 39,57
+	Actor24: wdwll
+		Owner: King
+		Location: 39,56
+	Actor25: wdwll
+		Owner: King
+		Location: 39,55
+	Actor26: wdwll
+		Owner: King
+		Location: 39,53
+	Actor27: wdwll
+		Owner: King
+		Location: 39,54
+	Actor28: wdwll
+		Owner: King
+		Location: 39,58
+	Actor29: wdwll
+		Owner: King
+		Location: 40,51
+	Actor30: wdwll
+		Owner: King
+		Location: 41,51
+	Actor31: wdwll
+		Owner: King
+		Location: 42,51
+	Actor32: wdwll
+		Owner: King
+		Location: 42,50
+	Actor33: wdwll
+		Owner: King
+		Location: 42,49
+	Actor34: wdwll
+		Owner: King
+		Location: 42,48
+	Actor35: wdwll
+		Owner: King
+		Location: 42,47
+	Actor36: wdwll
+		Owner: King
+		Location: 42,46
+	Actor37: wdwll
+		Owner: King
+		Location: 49,45
+	Actor38: wdwll
+		Owner: King
+		Location: 50,45
+	Actor39: wdwll
+		Owner: King
+		Location: 51,45
+	Actor40: wdwll
+		Owner: King
+		Location: 52,45
+	Actor41: wdwll
+		Owner: King
+		Location: 44,45
+	Actor42: wdwll
+		Owner: King
+		Location: 43,45
+	Actor43: wdwll
+		Owner: King
+		Location: 42,45
+	Actor44: wdwll
+		Owner: King
+		Location: 39,61
+	Actor45: wdwll
+		Owner: King
+		Location: 39,62
+	Actor47: wdwll
+		Owner: King
+		Location: 40,62
+	Actor48: wdwll
+		Owner: King
+		Location: 41,62
+	Actor51: e3new
+		Owner: King
+		Location: 45,44
+		SubCell: 3
+		Facing: 92
+	Actor52: e3new
+		Owner: King
+		Location: 48,44
+		SubCell: 3
+		Facing: 92
+	Actor49: e3new
+		Owner: King
+		Location: 39,51
+		SubCell: 3
+		Facing: 92
+	Actor50: e3new
+		Owner: King
+		Location: 38,54
+		SubCell: 3
+		Facing: 92
+	Actor53: e4newv2
+		Owner: King
+		Location: 40,54
+		SubCell: 3
+		Facing: 92
+	Actor54: e4newv2
+		Owner: King
+		Location: 40,54
+		SubCell: 1
+		Facing: 92
+	Actor55: e4newv2
+		Owner: King
+		Location: 49,46
+		SubCell: 3
+		Facing: 92
+	Actor56: e4newv2
+		Owner: King
+		Location: 44,46
+		SubCell: 3
+		Facing: 92
+	Actor57: e4newv2
+		Owner: King
+		Location: 40,61
+		SubCell: 3
+		Facing: 92
+	Actor58: e3new
+		Owner: King
+		Location: 39,60
+		SubCell: 3
+		Facing: 92
+	Actor59: t11
+		Owner: Neutral
+		Location: 35,46
+	Actor60: t10
+		Owner: Neutral
+		Location: 31,45
+	Actor61: t13
+		Owner: Neutral
+		Location: 35,43
+	Actor62: t16
+		Owner: Neutral
+		Location: 33,43
+	Actor63: t17
+		Owner: Neutral
+		Location: 29,45
+	Actor64: t03
+		Owner: Neutral
+		Location: 23,49
+	Actor65: t02
+		Owner: Neutral
+		Location: 25,48
+	Actor66: t06b
+		Owner: Neutral
+		Location: 24,47
+	Actor67: t02
+		Owner: Neutral
+		Location: 20,47
+	Actor68: t06a
+		Owner: Neutral
+		Location: 18,47
+	Actor69: t06
+		Owner: Neutral
+		Location: 14,47
+	Actor70: t01
+		Owner: Neutral
+		Location: 16,45
+	Actor71: t06
+		Owner: Neutral
+		Location: 11,45
+	Actor72: t05
+		Owner: Neutral
+		Location: 4,44
+	Actor73: t06
+		Owner: Neutral
+		Location: 22,44
+	Actor74: t03
+		Owner: Neutral
+		Location: 18,43
+	Actor75: suppwgnl
+		Owner: King
+		Location: 46,56
+		Facing: 25
+	Actor76: gtwnew
+		Owner: Baron
+		Location: 27,24
+		TurretFacing: 92
+	Actor77: gtwnew
+		Owner: Baron
+		Location: 32,23
+		TurretFacing: 92
+	Actor78: nodproc
+		Owner: Baron
+		Location: 28,6
+	Actor79: handnew
+		Owner: Baron
+		Location: 28,17
+	Actor80: handnew
+		Owner: Baron
+		Location: 40,9
+	Actor81: xltnt3
+		Owner: Baron
+		Location: 37,8
+	Actor82: xltnt1
+		Owner: Baron
+		Location: 27,11
+	Actor83: xltnt2
+		Owner: Baron
+		Location: 31,18
+	Actor84: ntent1
+		Owner: Baron
+		Location: 34,9
+	Actor85: ntent2
+		Owner: Baron
+		Location: 31,4
+	Actor86: ntent3
+		Owner: Baron
+		Location: 33,6
+	Actor87: ntent4
+		Owner: Baron
+		Location: 30,11
+	Actor88: armorynod
+		Owner: Baron
+		Location: 35,13
+	Actor89: nodstall
+		Owner: Baron
+		Location: 40,18
+	Actor90: ntent3
+		Owner: Baron
+		Location: 42,15
+	Actor92: ntent2
+		Owner: Baron
+		Location: 39,14
+	Actor91: ntent1
+		Owner: Baron
+		Location: 43,12
+	Actor93: ntent2
+		Owner: Baron
+		Location: 25,16
+	Actor94: ntent3
+		Owner: Baron
+		Location: 26,21
+	Actor95: wdwll
+		Owner: Baron
+		Location: 39,22
+	Actor96: wdwll
+		Owner: Baron
+		Location: 38,22
+	Actor97: wdwll
+		Owner: Baron
+		Location: 38,21
+	Actor98: wdwll
+		Owner: Baron
+		Location: 38,20
+	Actor108: wdwll
+		Owner: Baron
+		Location: 35,20
+	Actor100: wdwll
+		Owner: Baron
+		Location: 35,19
+	Actor109: wdwll
+		Owner: Baron
+		Location: 35,18
+	Actor110: wdwll
+		Owner: Baron
+		Location: 35,17
+	Actor111: wdwll
+		Owner: Baron
+		Location: 34,17
+	Actor112: t10
+		Owner: Neutral
+		Location: 48,12
+	Actor113: t11
+		Owner: Neutral
+		Location: 44,7
+	Actor114: t15
+		Owner: Neutral
+		Location: 46,9
+	Actor115: t14
+		Owner: Neutral
+		Location: 50,8
+	Actor116: tc01
+		Owner: Neutral
+		Location: 48,4
+	Actor117: t13
+		Owner: Neutral
+		Location: 46,4
+	Actor118: t11
+		Owner: Neutral
+		Location: 41,3
+	Actor119: t10
+		Owner: Neutral
+		Location: 51,14
+	Actor120: t16
+		Owner: Neutral
+		Location: 51,10
+	Actor121: t17
+		Owner: Neutral
+		Location: 47,7
+	Actor122: t17a
+		Owner: Neutral
+		Location: 42,5
+	Actor123: t15
+		Owner: Neutral
+		Location: 52,6
+	Actor124: t16
+		Owner: Neutral
+		Location: 26,14
+	Actor125: t17a
+		Owner: Neutral
+		Location: 25,25
+	Actor127: t07
+		Owner: Neutral
+		Location: 40,29
+	Actor126: t08
+		Owner: Neutral
+		Location: 44,23
+	Actor128: t07
+		Owner: Neutral
+		Location: 46,22
+	Actor129: t07
+		Owner: Neutral
+		Location: 30,31
+	Actor130: t08
+		Owner: Neutral
+		Location: 46,17
+	Actor131: t03
+		Owner: Neutral
+		Location: 21,9
+	Actor132: t01
+		Owner: Neutral
+		Location: 21,13
+	Actor133: t03
+		Owner: Neutral
+		Location: 23,11
+	Actor134: t06
+		Owner: Neutral
+		Location: 22,17
+	Actor135: t05
+		Owner: Neutral
+		Location: 23,20
+	Actor136: t06b
+		Owner: Neutral
+		Location: 21,20
+	Actor137: t06a
+		Owner: Neutral
+		Location: 21,16
+	Actor138: ntent2
+		Owner: Baron
+		Location: 42,28
+	Actor139: ntent1
+		Owner: Baron
+		Location: 47,25
+	Actor140: ntent3
+		Owner: Baron
+		Location: 47,29
+	Actor141: wdwll
+		Owner: Baron
+		Location: 41,32
+	Actor142: wdwll
+		Owner: Baron
+		Location: 42,32
+	Actor143: wdwll
+		Owner: Baron
+		Location: 43,32
+	Actor145: wdwll
+		Owner: Baron
+		Location: 40,32
+	Actor146: wdwll
+		Owner: Baron
+		Location: 40,31
+	Actor144: wdwll
+		Owner: Baron
+		Location: 44,32
+	Actor152: wdwll
+		Owner: Baron
+		Location: 50,30
+	Actor153: wdwll
+		Owner: Baron
+		Location: 51,30
+	Actor154: wdwll
+		Owner: Baron
+		Location: 51,29
+	Actor155: wdwll
+		Owner: Baron
+		Location: 51,28
+	Actor156: wdwll
+		Owner: Baron
+		Location: 51,27
+	Actor157: wdwll
+		Owner: Baron
+		Location: 51,26
+	Actor158: wdwll
+		Owner: Baron
+		Location: 51,25
+	Actor148: wdwll
+		Owner: Baron
+		Location: 51,24
+	Actor149: wdwll
+		Owner: Baron
+		Location: 50,24
+	Actor150: e3newv2
+		Owner: Baron
+		Location: 48,31
+		SubCell: 3
+		Facing: 92
+	Actor151: e3newv2
+		Owner: Baron
+		Location: 46,32
+		SubCell: 3
+		Facing: 92
+	Actor159: e3newv2
+		Owner: Baron
+		Location: 50,31
+		SubCell: 3
+		Facing: 92
+	Actor160: e4new
+		Owner: Baron
+		Location: 50,29
+		SubCell: 3
+		Facing: 92
+	Actor161: e4new
+		Owner: Baron
+		Location: 50,29
+		SubCell: 1
+		Facing: 92
+	Actor162: e4new
+		Owner: Baron
+		Location: 45,31
+		SubCell: 3
+		Facing: 92
+	Actor163: e4new
+		Owner: Baron
+		Location: 45,31
+		SubCell: 1
+		Facing: 92
+	Actor164: frmge
+		Owner: Baron
+		Location: 45,28
+		SubCell: 3
+		Facing: 92
+	Actor165: frmge
+		Owner: Baron
+		Location: 48,27
+		SubCell: 3
+		Facing: 92
+	Actor166: e4new
+		Owner: Baron
+		Location: 46,26
+		SubCell: 3
+		Facing: 92
+	Actor167: e4new
+		Owner: Baron
+		Location: 46,26
+		SubCell: 1
+		Facing: 92
+	Actor168: e4new
+		Owner: Baron
+		Location: 42,30
+		SubCell: 3
+		Facing: 92
+	Actor169: frmge
+		Owner: Baron
+		Location: 39,21
+		SubCell: 3
+		Facing: 92
+	Actor170: frmge
+		Owner: Baron
+		Location: 34,19
+		SubCell: 3
+		Facing: 92
+	Actor171: e4new
+		Owner: Baron
+		Location: 40,22
+		SubCell: 3
+		Facing: 92
+	Actor172: e4new
+		Owner: Baron
+		Location: 40,22
+		SubCell: 1
+		Facing: 92
+	Actor173: e4new
+		Owner: Baron
+		Location: 34,20
+		SubCell: 3
+		Facing: 92
+	Actor174: e4new
+		Owner: Baron
+		Location: 34,20
+		SubCell: 1
+		Facing: 92
+	Actor175: e3newv2
+		Owner: Baron
+		Location: 38,23
+		SubCell: 3
+		Facing: 92
+	Actor176: e3newv2
+		Owner: Baron
+		Location: 38,23
+		SubCell: 1
+		Facing: 92
+	Actor177: e3newv2
+		Owner: Baron
+		Location: 36,21
+		SubCell: 3
+		Facing: 92
+	Actor178: e3newv2
+		Owner: Baron
+		Location: 36,21
+		SubCell: 1
+		Facing: 92
+	Actor179: e4new
+		Owner: Baron
+		Location: 31,24
+		SubCell: 3
+		Facing: 92
+	Actor180: e4new
+		Owner: Baron
+		Location: 30,24
+		SubCell: 3
+		Facing: 92
+	Actor181: e4new
+		Owner: Baron
+		Location: 26,24
+		SubCell: 3
+		Facing: 92
+	Actor182: e4new
+		Owner: Baron
+		Location: 33,22
+		SubCell: 3
+		Facing: 92
+	Actor183: e3newv2
+		Owner: Baron
+		Location: 29,15
+		SubCell: 3
+		Facing: 92
+	Actor184: e3newv2
+		Owner: Baron
+		Location: 33,12
+		SubCell: 3
+		Facing: 92
+	Actor185: e3newv2
+		Owner: Baron
+		Location: 32,9
+		SubCell: 3
+		Facing: 92
+	Actor186: e3newv2
+		Owner: Baron
+		Location: 37,11
+		SubCell: 3
+		Facing: 92
+	Actor187: e3newv2
+		Owner: Baron
+		Location: 39,16
+		SubCell: 3
+		Facing: 92
+	Actor188: e3newv2
+		Owner: Baron
+		Location: 42,13
+		SubCell: 3
+		Facing: 92
+	Actor189: e3newv2
+		Owner: Baron
+		Location: 44,14
+		SubCell: 3
+		Facing: 92
+	Actor190: e3newv2
+		Owner: Baron
+		Location: 41,8
+		SubCell: 3
+		Facing: 92
+	Actor191: e3newv2
+		Owner: Baron
+		Location: 31,6
+		SubCell: 3
+		Facing: 92
+	Actor192: e4new
+		Owner: Baron
+		Location: 31,8
+		SubCell: 3
+		Facing: 92
+	Actor193: e4new
+		Owner: Baron
+		Location: 28,11
+		SubCell: 1
+		Facing: 92
+	Actor194: e4new
+		Owner: Baron
+		Location: 27,15
+		SubCell: 3
+		Facing: 92
+	Actor195: e4new
+		Owner: Baron
+		Location: 38,12
+		SubCell: 3
+		Facing: 92
+	Actor196: e4new
+		Owner: Baron
+		Location: 36,7
+		SubCell: 3
+		Facing: 92
+	Actor197: e4new
+		Owner: Baron
+		Location: 41,7
+		SubCell: 3
+		Facing: 92
+	Actor198: e4new
+		Owner: Baron
+		Location: 41,14
+		SubCell: 3
+		Facing: 92
+	Actor199: e4new
+		Owner: Baron
+		Location: 43,17
+		SubCell: 3
+		Facing: 92
+	Actor200: e4new
+		Owner: Baron
+		Location: 29,21
+		SubCell: 3
+		Facing: 92
+	Actor201: e3newv2
+		Owner: Baron
+		Location: 30,21
+		SubCell: 3
+		Facing: 92
+Nodes:
+	MapInfoNode@ND01: MapInfoNode
+		Pos: -720,-191
+		Out@Con1:
+			ConnectionType: Integer
+			Num: 135
+	TriggerWorldLoaded@ND02: TriggerWorldLoaded
+		Pos: -717,35
+		Out@Con1:
+			ConnectionType: Exec
+	TriggerCreateTimer@ND03: TriggerCreateTimer
+		Pos: -323,-106
+		Out@Con1:
+			ConnectionType: TimerConnection
+		Out@Con2:
+			ConnectionType: Exec
+		In@Con1:
+			ConnectionType: Integer
+			Node@ND01: Con1
+		In@Con2:
+			ConnectionType: Repeatable
+		In@Con3:
+			ConnectionType: Exec
+			Node@ND02: Con1
+	TriggerCreateTimer@ND04: TriggerCreateTimer
+		Pos: 260,-55
+		Out@Con1:
+			ConnectionType: TimerConnection
+		Out@Con2:
+			ConnectionType: Exec
+		In@Con1:
+			ConnectionType: Integer
+			Node@ND05: Con1
+		In@Con2:
+			ConnectionType: Repeatable
+			Node@ND05: Con2
+		In@Con3:
+			ConnectionType: Exec
+			Node@ND03: Con2
+	MapInfoNode@ND05: MapInfoNode
+		Pos: -84,-270
+		Out@Con1:
+			ConnectionType: Integer
+			Num: 45
+		Out@Con2:
+			ConnectionType: Repeatable
+	Reinforcements@ND06: Reinforcements
+		Pos: 808,-377
+		Out@Con1:
+			ConnectionType: ActorList
+		Out@Con2:
+			ConnectionType: Exec
+		In@Con1:
+			ConnectionType: Player
+			Node@ND07: Con1
+		In@Con2:
+			ConnectionType: ActorInfoArray
+			Node@ND09: Con1
+		In@Con3:
+			ConnectionType: CellPath
+			Node@ND07: Con2
+		In@Con4:
+			ConnectionType: Integer
+		In@Con5:
+			ConnectionType: Exec
+			Node@ND04: Con2
+	MapInfoNode@ND07: MapInfoNode
+		Pos: 277,-464
+		Out@Con1:
+			ConnectionType: Player
+			Player: Baron
+		Out@Con2:
+			ConnectionType: CellPath
+			Cells: 43,28|43,30
+	MapInfoActorInfoNode@ND08: MapInfoActorInfoNode
+		Pos: 273,-687
+		Out@Con1:
+			ConnectionType: ActorInfo
+			ActorInfo: e2new
+	GroupActorInfoGroup@ND09: GroupActorInfoGroup
+		Pos: 549,-676
+		Out@Con1:
+			ConnectionType: ActorInfoArray
+		In@Con1:
+			ConnectionType: ActorInfo
+			Node@ND08: Con1
+		In@Con2:
+			ConnectionType: ActorInfo
+			Node@ND08: Con1
+		In@Con3:
+			ConnectionType: ActorInfo
+			Node@ND08: Con1
+		In@Con4:
+			ConnectionType: ActorInfo
+	ActorQueueHunt@ND10: ActorQueueHunt
+		Pos: 1150,-381
+		In@Con1:
+			ConnectionType: Actor
+		In@Con2:
+			ConnectionType: ActorList
+			Node@ND06: Con1
+		In@Con3:
+			ConnectionType: Repeatable
+		In@Con4:
+			ConnectionType: Exec
+			Node@ND06: Con2
+	TriggerCreateTimer@ND11: TriggerCreateTimer
+		Pos: 284,-994
+		Out@Con1:
+			ConnectionType: TimerConnection
+		Out@Con2:
+			ConnectionType: Exec
+		In@Con1:
+			ConnectionType: Integer
+			Node@ND05: Con1
+		In@Con2:
+			ConnectionType: Repeatable
+			Node@ND05: Con2
+		In@Con3:
+			ConnectionType: Exec
+			Node@ND03: Con2
+	Reinforcements@ND12: Reinforcements
+		Pos: 832,-1316
+		Out@Con1:
+			ConnectionType: ActorList
+		Out@Con2:
+			ConnectionType: Exec
+		In@Con1:
+			ConnectionType: Player
+			Node@ND13: Con1
+		In@Con2:
+			ConnectionType: ActorInfoArray
+			Node@ND16: Con1
+		In@Con3:
+			ConnectionType: CellPath
+			Node@ND13: Con2
+		In@Con4:
+			ConnectionType: Integer
+		In@Con5:
+			ConnectionType: Exec
+			Node@ND11: Con2
+	MapInfoNode@ND13: MapInfoNode
+		Pos: 301,-1403
+		Out@Con1:
+			ConnectionType: Player
+			Player: Baron
+		Out@Con2:
+			ConnectionType: CellPath
+			Cells: 47,29|47,32
+	ActorQueueHunt@ND14: ActorQueueHunt
+		Pos: 1174,-1320
+		In@Con1:
+			ConnectionType: Actor
+		In@Con2:
+			ConnectionType: ActorList
+			Node@ND12: Con1
+		In@Con3:
+			ConnectionType: Repeatable
+		In@Con4:
+			ConnectionType: Exec
+			Node@ND12: Con2
+	MapInfoActorInfoNode@ND15: MapInfoActorInfoNode
+		Pos: 297,-1626
+		Out@Con1:
+			ConnectionType: ActorInfo
+			ActorInfo: e3newv2
+	GroupActorInfoGroup@ND16: GroupActorInfoGroup
+		Pos: 573,-1615
+		Out@Con1:
+			ConnectionType: ActorInfoArray
+		In@Con1:
+			ConnectionType: ActorInfo
+			Node@ND15: Con1
+		In@Con2:
+			ConnectionType: ActorInfo
+			Node@ND15: Con1
+		In@Con3:
+			ConnectionType: ActorInfo
+			Node@ND15: Con1
+		In@Con4:
+			ConnectionType: ActorInfo
+	TriggerCreateTimer@ND17: TriggerCreateTimer
+		Pos: 261,483
+		Out@Con1:
+			ConnectionType: TimerConnection
+		Out@Con2:
+			ConnectionType: Exec
+		In@Con1:
+			ConnectionType: Integer
+			Node@ND05: Con1
+		In@Con2:
+			ConnectionType: Repeatable
+			Node@ND05: Con2
+		In@Con3:
+			ConnectionType: Exec
+			Node@ND03: Con2
+	Reinforcements@ND18: Reinforcements
+		Pos: 939,386
+		Out@Con1:
+			ConnectionType: ActorList
+		Out@Con2:
+			ConnectionType: Exec
+		In@Con1:
+			ConnectionType: Player
+			Node@ND19: Con1
+		In@Con2:
+			ConnectionType: ActorInfoArray
+			Node@ND22: Con1
+		In@Con3:
+			ConnectionType: CellPath
+			Node@ND19: Con2
+		In@Con4:
+			ConnectionType: Integer
+		In@Con5:
+			ConnectionType: Exec
+			Node@ND17: Con2
+	MapInfoNode@ND19: MapInfoNode
+		Pos: 278,236
+		Out@Con1:
+			ConnectionType: Player
+			Player: Baron
+		Out@Con2:
+			ConnectionType: CellPath
+			Cells: 47,25|49,28
+	ActorQueueHunt@ND20: ActorQueueHunt
+		Pos: 1221,414
+		In@Con1:
+			ConnectionType: Actor
+		In@Con2:
+			ConnectionType: ActorList
+			Node@ND18: Con1
+		In@Con3:
+			ConnectionType: Repeatable
+		In@Con4:
+			ConnectionType: Exec
+			Node@ND18: Con2
+	MapInfoActorInfoNode@ND21: MapInfoActorInfoNode
+		Pos: 477,123
+		Out@Con1:
+			ConnectionType: ActorInfo
+			ActorInfo: e4new
+	GroupActorInfoGroup@ND22: GroupActorInfoGroup
+		Pos: 700,260
+		Out@Con1:
+			ConnectionType: ActorInfoArray
+		In@Con1:
+			ConnectionType: ActorInfo
+			Node@ND21: Con1
+		In@Con2:
+			ConnectionType: ActorInfo
+			Node@ND21: Con1
+		In@Con3:
+			ConnectionType: ActorInfo
+			Node@ND21: Con1
+		In@Con4:
+			ConnectionType: ActorInfo
+	TriggerOnKilled@ND23: TriggerOnKilled
+		Pos: 921,-931
+		Out@Con1:
+			ConnectionType: Exec
+		In@Con1:
+			ConnectionType: Actor
+			Node@ND24: Con1
+		In@Con2:
+			ConnectionType: Exec
+			Node@ND02: Con1
+	MapInfoActorReference@ND24: MapInfoActorReference
+		Pos: 632,-936
+		Out@Con1:
+			ConnectionType: Actor
+			Actor: Actor140
+		Out@Con2:
+			ConnectionType: ActorList
+			Actors: Actor140
+	TimerStop@ND25: TimerStop
+		Pos: 1195,-938
+		In@Con1:
+			ConnectionType: TimerConnection
+			Node@ND11: Con1
+		In@Con2:
+			ConnectionType: Exec
+			Node@ND23: Con1
+	TriggerOnKilled@ND26: TriggerOnKilled
+		Pos: 1119,-1
+		Out@Con1:
+			ConnectionType: Exec
+		In@Con1:
+			ConnectionType: Actor
+			Node@ND27: Con1
+		In@Con2:
+			ConnectionType: Exec
+			Node@ND02: Con1
+	MapInfoActorReference@ND27: MapInfoActorReference
+		Pos: 830,-6
+		Out@Con1:
+			ConnectionType: Actor
+			Actor: Actor138
+		Out@Con2:
+			ConnectionType: ActorList
+			Actors: Actor138
+	TimerStop@ND28: TimerStop
+		Pos: 1393,-8
+		In@Con1:
+			ConnectionType: TimerConnection
+			Node@ND04: Con1
+		In@Con2:
+			ConnectionType: Exec
+			Node@ND26: Con1
+	TriggerOnKilled@ND29: TriggerOnKilled
+		Pos: 1006,770
+		Out@Con1:
+			ConnectionType: Exec
+		In@Con1:
+			ConnectionType: Actor
+			Node@ND30: Con1
+		In@Con2:
+			ConnectionType: Exec
+			Node@ND02: Con1
+	MapInfoActorReference@ND30: MapInfoActorReference
+		Pos: 717,765
+		Out@Con1:
+			ConnectionType: Actor
+			Actor: Actor139
+		Out@Con2:
+			ConnectionType: ActorList
+			Actors: Actor139
+	TimerStop@ND31: TimerStop
+		Pos: 1280,763
+		In@Con1:
+			ConnectionType: TimerConnection
+			Node@ND17: Con1
+		In@Con2:
+			ConnectionType: Exec
+			Node@ND29: Con1
+	TriggerCreateTimer@ND32: TriggerCreateTimer
+		Pos: 2286,-93
+		Out@Con1:
+			ConnectionType: TimerConnection
+		Out@Con2:
+			ConnectionType: Exec
+		In@Con1:
+			ConnectionType: Integer
+			Node@ND33: Con1
+		In@Con2:
+			ConnectionType: Repeatable
+			Node@ND33: Con2
+		In@Con3:
+			ConnectionType: Exec
+			Node@ND03: Con2
+	MapInfoNode@ND33: MapInfoNode
+		Pos: 1905,-271
+		Out@Con1:
+			ConnectionType: Integer
+			Num: 80
+		Out@Con2:
+			ConnectionType: Repeatable
+	Reinforcements@ND34: Reinforcements
+		Pos: 2947,-426
+		Out@Con1:
+			ConnectionType: ActorList
+		Out@Con2:
+			ConnectionType: Exec
+		In@Con1:
+			ConnectionType: Player
+			Node@ND35: Con1
+		In@Con2:
+			ConnectionType: ActorInfoArray
+			Node@ND39: Con1
+		In@Con3:
+			ConnectionType: CellPath
+			Node@ND35: Con2
+		In@Con4:
+			ConnectionType: Integer
+		In@Con5:
+			ConnectionType: Exec
+			Node@ND32: Con2
+	MapInfoNode@ND35: MapInfoNode
+		Pos: 2234,-520
+		Out@Con1:
+			ConnectionType: Player
+			Player: Baron
+		Out@Con2:
+			ConnectionType: CellPath
+			Cells: 29,19|30,20|31,16
+		Out@Con3:
+			ConnectionType: Repeatable
+		Out@Con4:
+			ConnectionType: Location
+			Location: 6,51
+	ActorQueueAttackMoveActivity@ND36: ActorQueueAttackMoveActivity
+		Pos: 3215,-591
+		In@Con1:
+			ConnectionType: Actor
+		In@Con2:
+			ConnectionType: ActorList
+			Node@ND34: Con1
+		In@Con3:
+			ConnectionType: Location
+			Node@ND35: Con4
+		In@Con4:
+			ConnectionType: Exec
+			Node@ND34: Con2
+	ActorQueueHunt@ND37: ActorQueueHunt
+		Pos: 3452,-261
+		In@Con1:
+			ConnectionType: Actor
+		In@Con2:
+			ConnectionType: ActorList
+			Node@ND34: Con1
+		In@Con3:
+			ConnectionType: Repeatable
+			Node@ND35: Con3
+		In@Con4:
+			ConnectionType: Exec
+			Node@ND34: Con2
+	MapInfoActorInfoNode@ND38: MapInfoActorInfoNode
+		Pos: 2230,-1112
+		Out@Con1:
+			ConnectionType: ActorInfo
+			ActorInfo: frmge
+	GroupActorInfoGroup@ND39: GroupActorInfoGroup
+		Pos: 2625,-819
+		Out@Con1:
+			ConnectionType: ActorInfoArray
+		In@Con1:
+			ConnectionType: ActorInfo
+			Node@ND38: Con1
+		In@Con2:
+			ConnectionType: ActorInfo
+			Node@ND40: Con1
+		In@Con3:
+			ConnectionType: ActorInfo
+			Node@ND40: Con1
+		In@Con4:
+			ConnectionType: ActorInfo
+			Node@ND41: Con1
+		In@Con5:
+			ConnectionType: ActorInfo
+			Node@ND38: Con1
+		In@Con6:
+			ConnectionType: ActorInfo
+			Node@ND41: Con1
+		In@Con7:
+			ConnectionType: ActorInfo
+			Node@ND45: Con1
+		In@Con8:
+			ConnectionType: ActorInfo
+			Node@ND45: Con1
+		In@Con9:
+			ConnectionType: ActorInfo
+			Node@ND45: Con1
+		In@Con10:
+			ConnectionType: ActorInfo
+	MapInfoActorInfoNode@ND40: MapInfoActorInfoNode
+		Pos: 2232,-927
+		Out@Con1:
+			ConnectionType: ActorInfo
+			ActorInfo: e3newv2
+	MapInfoActorInfoNode@ND41: MapInfoActorInfoNode
+		Pos: 2232,-738
+		Out@Con1:
+			ConnectionType: ActorInfo
+			ActorInfo: e4new
+	TriggerOnKilled@ND42: TriggerOnKilled
+		Pos: 2901,101
+		Out@Con1:
+			ConnectionType: Exec
+		In@Con1:
+			ConnectionType: Actor
+			Node@ND43: Con1
+		In@Con2:
+			ConnectionType: Exec
+			Node@ND02: Con1
+	MapInfoActorReference@ND43: MapInfoActorReference
+		Pos: 2588,97
+		Out@Con1:
+			ConnectionType: Actor
+			Actor: Actor79
+		Out@Con2:
+			ConnectionType: ActorList
+			Actors: Actor79
+	TimerStop@ND44: TimerStop
+		Pos: 3241,77
+		In@Con1:
+			ConnectionType: TimerConnection
+			Node@ND32: Con1
+		In@Con2:
+			ConnectionType: Exec
+			Node@ND42: Con1
+	MapInfoActorInfoNode@ND45: MapInfoActorInfoNode
+		Pos: 2025,-739
+		Out@Con1:
+			ConnectionType: ActorInfo
+			ActorInfo: e2new
+Rules: mw|rules/campaign-maprules.yaml
+	Player:
+		PlayerResources:
+			DefaultCash: 3000
+	ENGENEER:
+		Buildable:
+			Prerequisites: ~disabled
+	BUMMLER:
+		Buildable:
+			Prerequisites: ~disabled
+	RMBONEW:
+		Buildable:
+			Prerequisites: ~disabled
+	NEWCOMM:
+		Buildable:
+			Prerequisites: ~disabled
+	NUKXL.scaff:
+		Buildable:
+			Prerequisites: ~disabled
+	CASTLE2.scaff:
+		Buildable:
+			Prerequisites: ~disabled
+	WORKSHOPGDI.scaff:
+		Buildable:
+			Prerequisites: ~disabled
+	BATO.scaff:
+		Buildable:
+			Prerequisites: ~disabled
+	PROCNEW.scaff:
+		Buildable:
+			Prerequisites: ~disabled
+	SILONEW.scaff:
+		Buildable:
+			Prerequisites: ~disabled
+	SILOTWO.scaff:
+		Buildable:
+			Prerequisites: ~disabled
+	GUNNEW.scaff:
+		Buildable:
+			Prerequisites: ~disabled
+	ROSS5:
+		Buildable:
+			Prerequisites: ~disabled

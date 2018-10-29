@@ -18,7 +18,7 @@ Players:
 		Faction: nod
 		Color: FE1100
 		Allies: Baron
-		Enemies: King, King2
+		Enemies: King, King2, Creeps
 	PlayerReference@King:
 		Name: King
 		AllowBots: False
@@ -31,13 +31,19 @@ Players:
 		LockSpawn: True
 		LockTeam: True
 		Allies: King, King2
-		Enemies: Baron
+		Enemies: Baron, Creeps
 	PlayerReference@King2:
 		Name: King2
 		Faction: gdi
 		Color: F3A760
 		Allies: King, King2
-		Enemies: Baron
+		Enemies: Baron, Creeps
+	PlayerReference@Creeps:
+		Name: Creeps
+		NonCombatant: True
+		Color: 30732D
+		Faction: Random
+		Enemies: King, King2, Baron
 Actors:
 	Actor0: split9
 		Owner: Neutral

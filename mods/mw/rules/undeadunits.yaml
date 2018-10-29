@@ -22,7 +22,7 @@ PREYCOLYTE:
 	Buildable:
 		IconPalette: raicon
 		BuildPaletteOrder: 10
-		Description: \n   Can pray at scarecrows, mines and deerstands to convert essence\n  Can pray at pentagrams to and spend essence to summon structures\n  Ziggurat needs to be upgraded to level 2 to convert Iron and Gold into Essence.
+		Description: \n   Can harvest Crops and Corruption, turning those into essence at ac Orepolis\n  Can pray at pentagrams to and spend essence to summon structures.
 		Queue: MBuilding.ded
 		BuildDuration: 450 
 	Tooltip:
@@ -568,7 +568,7 @@ ACOLYTEC:
 	Armor:
 		Type: Leather
 	Buildable:
-		Description: Can corrupt deerstands to spawn corruption, wich is harvetable by Acolytes \n  Strong vs Infantry and cavalry\n  Can attack Aircraft
+		Description: \n   Can harvest Iron, Gold and Corruption, turning those into essence at ac Orepolis\n  Strong vs Infantry and cavalry\n  Can attack Aircraft
 		IconPalette: raicon
 		Prerequisites: libra
 		BuildPaletteOrder: 10
