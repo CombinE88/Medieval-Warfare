@@ -779,10 +779,10 @@ SuperCannons:
 	InvalidTargets: Structure, Cavalry, Infantry, Wall, Air
 	Report: steriocannon01.wav, steriocannon02.wav, steriocannon03.wav, steriocannon04.wav, steriocannon05.wav
 	Projectile: Bullet
-		Speed: 256
+		Speed: 89
 		Blockable: false
 		LaunchAngle: 110
-		Inaccuracy: 10c512
+		Inaccuracy: 8c125
 		Image: cantowboulder
 		Shadow: true
 		Palette: ra

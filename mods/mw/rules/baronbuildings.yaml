@@ -634,7 +634,7 @@ CASTLE:
 		Turret: fourth
 	Turreted@fourth:
 		Turret: fourth
-		TurnSpeed: 3
+		TurnSpeed: 1
 		InitialFacing: 224
 		Offset: 624,874,1024
 	Armament@fourth:
@@ -646,12 +646,13 @@ CASTLE:
 	MwAttackOrderPower:
 		Icon: cannonstrike
 		Cursor: nuke
-		ChargeInterval: 3375
+		ChargeInterval: 9000
 		Description: Cannon Strike
 		LongDesc: Launch long range cannonboulder off your casle.\nApplies heavy damage over a large area.\n\n\n\n
 		EndChargeSpeechNotification: NodcannonReady
 		SelectTargetSpeechNotification: SelectTarget
 		OrderName: CannonPowerInfoOrder
+		IncomingSpeechNotification: NodcannonApproach
 		DisplayBeacon: True
 		BeaconPoster: cannonbeacon
 		BeaconPosterPalette: beaconposter
