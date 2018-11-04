@@ -1244,6 +1244,9 @@
                   <e p="GetCountNode.cs" t="Include" />
                 </e>
                 <e p="BasicNodeWidget.cs" t="Include" />
+                <e p="ConditionNodes" t="Include">
+                  <e p="CheckConditionLogic.cs" t="Include" />
+                </e>
                 <e p="FunctionNodes" t="Include">
                   <e p="FunctionCreateEffectNode.cs" t="Include" />
                   <e p="FunctionNodeReinforcements.cs" t="Include" />
@@ -1271,6 +1274,8 @@
                   <e p="TriggerOnKilled.cs" t="Include" />
                 </e>
                 <e p="UiNodes" t="Include">
+                  <e p="GlobalLightningNode.cs" t="Include" />
+                  <e p="SetCameraPositionNode.cs" t="Include" />
                   <e p="UiNodeUiSettings.cs" t="Include" />
                 </e>
               </e>

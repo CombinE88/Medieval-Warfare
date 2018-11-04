@@ -725,7 +725,7 @@ MWLUMBEREROWNED:
 		IgnoresVisibility: true	
 	AttackMove:
 	Targetable:
-		TargetTypes: Ground, Infantry, Hunterer
+		TargetTypes: Ground, Infantry, Hunterer, LLumber
 	ExternalCondition@DeerHunter:
 		Condition: DeerHunter
 	ExternalCondition@LootingDeer:

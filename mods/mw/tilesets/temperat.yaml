@@ -5,6 +5,10 @@ General:
 	HeightDebugColors: AA0000
 	SheetSize: 1024
 Terrain:
+	TerrainType@ClearNoSmudges:
+		Type: ClearNoSmudges
+		TargetTypes: Ground
+		Color: 000000
 	TerrainType@Beach:
 		Type: Beach
 		TargetTypes: Ground
@@ -191,6 +195,16 @@ Templates:
 			33: Clear
 			34: Clear
 			35: Clear
+	Template@2555:
+		Id: 2555
+		Images: bits/interior/shadow.png
+		Palette: terrainmw
+		Frames: 6
+		Size: 1,1
+		PickAny: True
+		Categories: Terrain
+		Tiles:
+			0: ClearNoSmudges
 	Template@0:
 		Images: bits/terrain/terrainset.png
 		Palette: terrainmw

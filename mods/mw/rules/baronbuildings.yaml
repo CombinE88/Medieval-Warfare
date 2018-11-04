@@ -661,8 +661,8 @@ CASTLE:
 		ArrowSequence: arrow
 		ClockSequence: clock
 		CircleSequence: circles
-		CameraRemoveDelay: 200
-		CameraSpawnAdvance: 150
+		CameraRemoveDelay: 400
+		CameraSpawnAdvance: 50
 	RejectsOrders: 
 		Except: Sell, Repair, Stop
 WORKSHOPNOD:
