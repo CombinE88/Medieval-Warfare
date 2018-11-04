@@ -478,6 +478,97 @@ firetorchse:
 		Tick: 80
 		ZOffset: 1512
 		Offset: 7, 3
+
+shadow:
+	top: shadow.png
+		AddExtension: false
+		BlendMode: DoubleMultiplicative
+		UseTilesetCode: false
+		-DepthSprite:
+		ZRamp: 1 
+		ZOffset: 2048 
+		Start: 1
+	top-end: shadow.png
+		AddExtension: false
+		BlendMode: DoubleMultiplicative
+		UseTilesetCode: false
+		-DepthSprite:
+		ZRamp: 1 
+		ZOffset: 2048 
+		Start: 3
+	left: shadow.png
+		AddExtension: false
+		BlendMode: DoubleMultiplicative
+		UseTilesetCode: false
+		-DepthSprite:
+		ZRamp: 1 
+		ZOffset: 2048 
+		Start: 4
+	left-end: shadow.png
+		AddExtension: false
+		BlendMode: DoubleMultiplicative
+		UseTilesetCode: false
+		-DepthSprite:
+		ZRamp: 1 
+		ZOffset: 2048 
+		Start: 8
+	full: shadow.png
+		AddExtension: false
+		BlendMode: DoubleMultiplicative
+		UseTilesetCode: false
+		-DepthSprite:
+		ZRamp: 1 
+		ZOffset: 2048 
+		Start: 5
+	edge-inner: shadow.png
+		AddExtension: false
+		BlendMode: DoubleMultiplicative
+		UseTilesetCode: false
+		-DepthSprite:
+		ZRamp: 1 
+		ZOffset: 2048 
+		Start: 0
+	edge-outer: shadow.png
+		AddExtension: false
+		BlendMode: DoubleMultiplicative
+		UseTilesetCode: false
+		-DepthSprite:
+		ZRamp: 1 
+		ZOffset: 2048 
+		Start: 12
+	edge-large-left: shadow.png
+		AddExtension: false
+		BlendMode: DoubleMultiplicative
+		UseTilesetCode: false
+		-DepthSprite:
+		ZRamp: 1
+		ZOffset: 2048 
+		Start: 13
+	edge-large-top: shadow.png
+		AddExtension: false
+		BlendMode: DoubleMultiplicative
+		UseTilesetCode: false
+		-DepthSprite:
+		ZRamp: 1 
+		ZOffset: 2048 
+		Start: 11
+	edge-block-left: shadow.png
+		AddExtension: false
+		BlendMode: DoubleMultiplicative
+		UseTilesetCode: false
+		-DepthSprite:
+		ZRamp: 1
+		ZOffset: 2048 
+		Start: 14
+	edge-block-top: shadow.png
+		AddExtension: false
+		BlendMode: DoubleMultiplicative
+		UseTilesetCode: false
+		-DepthSprite:
+		ZRamp: 1 
+		ZOffset: 2048 
+		Start: 15
+
 bulb:
 	idle: 
 		Length: *

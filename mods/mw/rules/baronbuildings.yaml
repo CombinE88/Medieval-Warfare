@@ -593,7 +593,7 @@ CASTLE:
 		Turret: first
 	Turreted@first:
 		Turret: first
-		TurnSpeed: 3
+		TurnSpeed: 1
 		InitialFacing: 224
 		Offset: 854,-624,1024
 	Armament@first:
@@ -606,7 +606,7 @@ CASTLE:
 		Turret: second
 	Turreted@second:
 		Turret: second
-		TurnSpeed: 3
+		TurnSpeed: 1
 		InitialFacing: 224
 		Offset: -900,-894,1024
 	Armament@second:
@@ -620,7 +620,7 @@ CASTLE:
 		Turret: third
 	Turreted@third:
 		Turret: third
-		TurnSpeed: 3
+		TurnSpeed: 1
 		InitialFacing: 224
 		Offset: -1124,604,1024
 	Armament@third:

@@ -1290,3 +1290,179 @@ CSTACK15:
 	Inherits: CSTACK01
 	GiveCashCrateAction:
 		Amount: 350
+shadowtop:
+	RenderSprites:
+		Palette: fire
+		Image: shadow
+	Immobile:
+		OccupiesSpace: false
+	WithSpriteBody:
+		Sequence: top
+	EditorTilesetFilter:
+		RequireTilesets: TEMPERAT
+		Categories: Enviroment lightning
+	HiddenUnderFog:
+		Type: CenterPosition
+	BodyOrientation:
+		QuantizedFacings: 1
+	Interactable:
+shadowtopend:
+	RenderSprites:
+		Palette: fire
+		Image: shadow
+	Immobile:
+		OccupiesSpace: false
+	WithSpriteBody:
+		Sequence: top-end
+	EditorTilesetFilter:
+		RequireTilesets: TEMPERAT
+		Categories: Enviroment lightning
+	HiddenUnderFog:
+		Type: CenterPosition
+	BodyOrientation:
+		QuantizedFacings: 1
+	Interactable:
+shadowleft:
+	RenderSprites:
+		Palette: fire
+		Image: shadow
+	Immobile:
+		OccupiesSpace: false
+	WithSpriteBody:
+		Sequence: left
+	EditorTilesetFilter:
+		RequireTilesets: TEMPERAT
+		Categories: Enviroment lightning
+	HiddenUnderFog:
+		Type: CenterPosition
+	BodyOrientation:
+		QuantizedFacings: 1
+	Interactable:
+shadowleftend:
+	RenderSprites:
+		Palette: fire
+		Image: shadow
+	Immobile:
+		OccupiesSpace: false
+	WithSpriteBody:
+		Sequence: left-end
+	EditorTilesetFilter:
+		RequireTilesets: TEMPERAT
+		Categories: Enviroment lightning
+	HiddenUnderFog:
+		Type: CenterPosition
+	BodyOrientation:
+		QuantizedFacings: 1
+	Interactable:
+shadowfull:
+	RenderSprites:
+		Palette: fire
+		Image: shadow
+	Immobile:
+		OccupiesSpace: false
+	WithSpriteBody:
+		Sequence: full
+	EditorTilesetFilter:
+		RequireTilesets: TEMPERAT
+		Categories: Enviroment lightning
+	HiddenUnderFog:
+		Type: CenterPosition
+	BodyOrientation:
+		QuantizedFacings: 1
+	Interactable:
+shadowedgeinner:
+	RenderSprites:
+		Palette: fire
+		Image: shadow
+	Immobile:
+		OccupiesSpace: false
+	WithSpriteBody:
+		Sequence: edge-inner
+	EditorTilesetFilter:
+		RequireTilesets: TEMPERAT
+		Categories: Enviroment lightning
+	HiddenUnderFog:
+		Type: CenterPosition
+	BodyOrientation:
+		QuantizedFacings: 1
+	Interactable:
+shadowedgeouter:
+	RenderSprites:
+		Palette: fire
+		Image: shadow
+	Immobile:
+		OccupiesSpace: false
+	WithSpriteBody:
+		Sequence: edge-outer
+	EditorTilesetFilter:
+		RequireTilesets: TEMPERAT
+		Categories: Enviroment lightning
+	HiddenUnderFog:
+		Type: CenterPosition
+	BodyOrientation:
+		QuantizedFacings: 1
+	Interactable:
+shadowlargetop:
+	RenderSprites:
+		Palette: fire
+		Image: shadow
+	Immobile:
+		OccupiesSpace: false
+	WithSpriteBody:
+		Sequence: edge-large-top
+	EditorTilesetFilter:
+		RequireTilesets: TEMPERAT
+		Categories: Enviroment lightning
+	HiddenUnderFog:
+		Type: CenterPosition
+	BodyOrientation:
+		QuantizedFacings: 1
+	Interactable:
+shadowblocktop:
+	RenderSprites:
+		Palette: fire
+		Image: shadow
+	Immobile:
+		OccupiesSpace: false
+	WithSpriteBody:
+		Sequence: edge-block-top
+	EditorTilesetFilter:
+		RequireTilesets: TEMPERAT
+		Categories: Enviroment lightning
+	HiddenUnderFog:
+		Type: CenterPosition
+	BodyOrientation:
+		QuantizedFacings: 1
+	Interactable:
+shadowlargeleft:
+	RenderSprites:
+		Palette: fire
+		Image: shadow
+	Immobile:
+		OccupiesSpace: false
+	WithSpriteBody:
+		Sequence: edge-large-left
+	EditorTilesetFilter:
+		RequireTilesets: TEMPERAT
+		Categories: Enviroment lightning
+	HiddenUnderFog:
+		Type: CenterPosition
+	BodyOrientation:
+		QuantizedFacings: 1
+	Interactable:
+shadowblockleft:
+	RenderSprites:
+		Palette: fire
+		Image: shadow
+	Immobile:
+		OccupiesSpace: false
+	WithSpriteBody:
+		Sequence: edge-block-left
+	EditorTilesetFilter:
+		RequireTilesets: TEMPERAT
+		Categories: Enviroment lightning
+	HiddenUnderFog:
+		Type: CenterPosition
+	BodyOrientation:
+		QuantizedFacings: 1
+	Interactable:
