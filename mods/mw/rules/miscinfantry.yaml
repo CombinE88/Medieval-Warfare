@@ -24,8 +24,7 @@ ENGENEER:
 	AutoTargetPriority@Prio0:
 		ValidTargets: Structure, Infantry, Vehicle, Creep, Water, Defense, Cavalry, Siege, Air
 		Priority: 0
-	Passenger:
-		PipType: Yellow
+	-Passenger:
 	Valued:
 		Cost: 250
 	Tooltip:
@@ -45,7 +44,7 @@ ENGENEER:
 		PlayerExperience: 50
 		SabotageHPRemoval: 10
 	Health:
-		HP: 8000
+		HP: 6000
 	Armament@Build:
 		Weapon: Repair
 		TargetStances: Ally

@@ -521,7 +521,7 @@ Nodes:
 		In@Con2:
 			ConnectionType: Exec
 			Node@ND02: Con2
-	UIFailObjective@ND14: UIFailObjective
+	UiFailObjective@ND14: UiFailObjective
 		Pos: 1135,-155
 		In@Con1:
 			ConnectionType: Objective

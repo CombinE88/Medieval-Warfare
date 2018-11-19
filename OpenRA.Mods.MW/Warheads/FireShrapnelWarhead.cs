@@ -162,13 +162,13 @@ namespace OpenRA.Mods.MW.Warheads
                     Facing = (shrapnelTarget.CenterPosition - target.CenterPosition).Yaw.Facing,
 
                     DamageModifiers = !firedBy.IsDead ? firedBy.TraitsImplementing<IFirepowerModifier>()
-                        .Select(a => a.GetFirepowerModifier()).ToArray() : new int[0],
+                        .Select(a => a.GetFirepowerModifier()).ToArray() : new int[]{1},
 
                     InaccuracyModifiers = !firedBy.IsDead ? firedBy.TraitsImplementing<IInaccuracyModifier>()
-                        .Select(a => a.GetInaccuracyModifier()).ToArray() : new int[0],
+                        .Select(a => a.GetInaccuracyModifier()).ToArray() : new int[]{1},
 
                     RangeModifiers = !firedBy.IsDead ? firedBy.TraitsImplementing<IRangeModifier>()
-                        .Select(a => a.GetRangeModifier()).ToArray() : new int[0],
+                        .Select(a => a.GetRangeModifier()).ToArray() : new int[]{1},
 
                     Source = target.CenterPosition,
                     SourceActor = firedBy,

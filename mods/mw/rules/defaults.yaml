@@ -1226,7 +1226,6 @@
 		DeathTypes: DefaultDeath
 ^Siege:
 	Inherits: ^MedievalInfantry
-	Mobile:
 	Targetable:
 		TargetTypes: Ground, Siege, Disguise
 	MustBeDestroyed:
