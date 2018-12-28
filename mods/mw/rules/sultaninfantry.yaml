@@ -380,6 +380,8 @@ SULM1:
 		ActorCount: 1
 	Targetable@CombatRole:
 		TargetTypes: Light
+	Voiced:
+		VoiceSet: ApprenticeVoice
 SULM1SKELET:
 	Inherits: ^Knight
 	Inherits@ArcherDemo65: ^ArcherDemo65
@@ -542,3 +544,5 @@ SULM4:
 		ActorCount: 1
 	Targetable@CombatRole:
 		TargetTypes: Light
+	Voiced:
+		VoiceSet: RattleVoice

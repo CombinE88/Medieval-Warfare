@@ -144,7 +144,7 @@ namespace OpenRA.Mods.MW.Projectiles
 			{
 				var inaccuracy = Common.Util.ApplyPercentageModifiers(info.Inaccuracy.Length, args.InaccuracyModifiers);
 				var range = Common.Util.ApplyPercentageModifiers(args.Weapon.Range.Length, args.RangeModifiers);
-				var maxOffset = inaccuracy * (target - pos).Length / range;
+				var maxOffset = inaccuracy * (target - pos).Length / (range > 0 ? range : 1);
 				target += WVec.FromPDF(world.SharedRandom, 2) * maxOffset / 1024;
 			}
 
@@ -152,7 +152,7 @@ namespace OpenRA.Mods.MW.Projectiles
 				target += new WVec(WDist.Zero, WDist.Zero, info.AirburstAltitude);
 
 			facing = (target - pos).Yaw.Facing;
-			length = Math.Max((target - pos).Length / speed.Length, 1);
+			length = Math.Max((target - pos).Length / (speed.Length > 0 ? speed.Length : 1), 1);
 
 			if (!string.IsNullOrEmpty(info.Image))
 			{
@@ -176,7 +176,7 @@ namespace OpenRA.Mods.MW.Projectiles
 
 		int GetEffectiveFacing()
 		{
-			var at = (float)ticks / (length - 1);
+			var at = (float)ticks / (length - 1 > 0 ? length - 1 : 1) ;
 			var attitude = angle.Tan() * (1 - 2 * at) / (4 * 1024);
 
 			var u = (facing % 128) / 128f;
@@ -229,7 +229,7 @@ namespace OpenRA.Mods.MW.Projectiles
 				target += (pos - source) * info.BounceRangeModifier / 100;
 				var dat = world.Map.DistanceAboveTerrain(target);
 				target += new WVec(0, 0, -dat.Length);
-				length = Math.Max((target - pos).Length / speed.Length, 1);
+				length = Math.Max((target - pos).Length / (speed.Length > 0 ? speed.Length : 1), 1);
 				ticks = 0;
 				source = pos;
 				remainingBounces--;

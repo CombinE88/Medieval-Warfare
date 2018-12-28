@@ -477,3 +477,23 @@ AcolyteVoice:
 		Burned: mwbrundeath01, mwbrundeath02, mwbrundeath03
 		Zapped: mwbrundeath01, mwbrundeath02, mwbrundeath03
 		Poisoned: mwpoisdeath01, mwpoisdeath02
+        
+RattleVoice:
+	DefaultVariant: .aud
+	Voices:
+		Action: Rattlemystic_MOVE01,Rattlemystic_MOVE02,Rattlemystic_MOVE03,Rattlemystic_MOVE04
+		Select: Rattlemystic_SELECT01,Rattlemystic_SELECT02,Rattlemystic_SELECT03,Rattlemystic_SELECT04
+		Default: mwdefdeath01, mwdefdeath02, mwdefdeath03, mwdefdeath04
+		Burned: mwbrundeath01, mwbrundeath02, mwbrundeath03
+		Zapped: mwbrundeath01, mwbrundeath02, mwbrundeath03
+		Poisoned: mwpoisdeath01, mwpoisdeath02
+        
+ApprenticeVoice:
+	DefaultVariant: .aud
+	Voices:
+		Action: Apprentice_MOVE01,Apprentice_MOVE02,Apprentice_MOVE03,Apprentice_MOVE04
+		Select: Apprentice_SELECT01,Apprentice_SELECT02,Apprentice_SELECT03,Apprentice_SELECT04
+		Default: mwdefdeath01, mwdefdeath02, mwdefdeath03, mwdefdeath04
+		Burned: mwbrundeath01, mwbrundeath02, mwbrundeath03
+		Zapped: mwbrundeath01, mwbrundeath02, mwbrundeath03
+		Poisoned: mwpoisdeath01, mwpoisdeath02

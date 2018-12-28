@@ -5,7 +5,6 @@ Author: CombinE
 Tileset: TEMPERAT
 MapSize: 38,44
 Bounds: 1,1,36,42
-Visibility: MissionSelector
 Categories: Conquest
 Players:
 	PlayerReference@Neutral:

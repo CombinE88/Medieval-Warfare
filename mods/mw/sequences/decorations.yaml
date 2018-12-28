@@ -49,8 +49,10 @@ tc04:
 		Tick: 120
 		Offset: 4,-5
 		Length: *
-	damaged-idle:
-		Start: 1
+	damaged-idle: maple4
+		Tick: 120
+		Offset: 4,-5
+		Length: *
 tc04.husk:
 	Defaults: tc04
 		UseTilesetExtension: true
@@ -62,7 +64,7 @@ tc04.husk:
 	dead:
 		Start: 2
 		Length: 8
-		Tick:120
+		Tick: 120
 tc05:
 	Defaults:
 		UseTilesetExtension: true
@@ -73,8 +75,10 @@ tc05:
 		Tick: 120
 		Offset: 3,7 
 		Length: *
-	damaged-idle:
-		Start: 1
+	damaged-idle: maple2
+		Tick: 120
+		Offset: 3,7 
+		Length: *
 tc05.husk:
 	Defaults: tc05
 		UseTilesetExtension: true
