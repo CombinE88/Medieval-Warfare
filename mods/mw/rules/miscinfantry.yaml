@@ -187,7 +187,8 @@ BUMMLER:
 		IconPalette: raicon
 		BuildPaletteOrder: 120
 		Queue: MInfantry.GDI, MInfantry.Nod, ~disabled, MInfantry.SUL
-		#BuildDuration: 350
+		#BuildDuration: 350		
+		Prerequisites: ~global-battlefieldloot
 	WithFacingSpriteBody:
 		Sequence: idle
 		RequiresCondition: !MoveAnim

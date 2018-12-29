@@ -85,9 +85,9 @@ namespace OpenRA.Mods.MW.MWAI
 						continue;
 				}
 
-				var para = harvester.TraitOrDefault<Parachutable>();
-				if (para != null && para.IsInAir)
-					continue;
+				// var para = harvester.TraitOrDefault<Parachutable>();
+				// if (para != null && para.IsInAir)
+				// 	continue;
 
 				// Tell the idle harvester to quit slacking:
 				var newSafeResourcePatch = FindNextResource(harvester, harv);

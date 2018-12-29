@@ -28,3 +28,5 @@ Player:
 	PlayerResources:
 		DefaultCashDropdownLocked: True
 		DefaultCash: 5000
+	LobbyPrerequisiteCheckbox@BATTLEFIELDLOOT:
+		Enabled: false

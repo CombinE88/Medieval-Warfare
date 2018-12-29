@@ -231,6 +231,7 @@ DRGNRDR:
 DRAGONWALK:
 	Inherits: ^Siege
 	Inherits@AUTOTARGET: ^AutoTargetGround
+	-GrantConditionOnPrerequisite@BattlefieldLoot:
 	-Explodes@Tib:
 	Valued:
 		Cost: 2500

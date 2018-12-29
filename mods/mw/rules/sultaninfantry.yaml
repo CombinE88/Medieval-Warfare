@@ -432,6 +432,7 @@ SULM1SKELET:
 			BurnToDeath: 1
 			SkeletonDeath: 1
 		CrushedSequence: die1
+	-GrantConditionOnPrerequisite@BattlefieldLoot:
 	-Explodes@Tib:
 	AttackWander: 
 		WanderMoveRadius: 3

@@ -1250,6 +1250,7 @@
                 <e p="FunctionNodes" t="Include">
                   <e p="FunctionCreateEffectNode.cs" t="Include" />
                   <e p="FunctionNodeReinforcements.cs" t="Include" />
+                  <e p="TimedExecutionNode.cs" t="Include" />
                 </e>
                 <e p="Group" t="Include">
                   <e p="FilterActorListByNode.cs" t="Include" />

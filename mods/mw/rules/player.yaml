@@ -36,6 +36,14 @@ Player:
 		Enabled: False
 		DisplayOrder: 7
 		Prerequisites: global-castlewall
+	LobbyPrerequisiteCheckbox@BATTLEFIELDLOOT:
+		ID: battlefieldloot
+		Label: Battlefield Loot
+		Description: Units drop Loot when they die.
+		Enabled: True
+		DisplayOrder: 6
+		Prerequisites: global-battlefieldloot
+		Visible: false
 	PlayerStatistics:
 	FrozenActorLayer:
 	PlaceBeacon:

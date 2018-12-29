@@ -46,6 +46,7 @@ PREYCOLYTE:
 		MoveSequence: run
 	Armor:
 		Type: Leather
+	-GrantConditionOnPrerequisite@BattlefieldLoot:
 	-Explodes@Tib:
 	DockClient:
 	# --- Removed due to bugs and unbalanceability ---

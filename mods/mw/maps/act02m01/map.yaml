@@ -5,6 +5,7 @@ Author: CombinE
 Tileset: TEMPERAT
 MapSize: 38,44
 Bounds: 1,1,36,42
+Visibility: MissionSelector
 Categories: Conquest
 Players:
 	PlayerReference@Neutral:
@@ -47,9 +48,6 @@ Actors:
 	Actor0: crackwallh
 		Owner: Neutral
 		Location: 15,38
-	Actor1: shadowleft
-		Owner: Neutral
-		Location: 7,38
 	Actor2: shadowleft
 		Owner: Neutral
 		Location: 7,37
@@ -59,9 +57,6 @@ Actors:
 	Actor4: shadowleft
 		Owner: Neutral
 		Location: 7,35
-	Actor5: shadowleft
-		Owner: Neutral
-		Location: 7,39
 	Actor6: shadowtopend
 		Owner: Neutral
 		Location: 9,37
@@ -155,9 +150,6 @@ Actors:
 	Actor38: idooriron
 		Owner: Neutral
 		Location: 17,33
-	Actor39: barrelmw7
-		Owner: Neutral
-		Location: 7,39
 	Actor40: barrelmw10
 		Owner: Neutral
 		Location: 8,38
@@ -206,18 +198,6 @@ Actors:
 	Actor55: shadowfull
 		Owner: Neutral
 		Location: 16,27
-	Actor56: shadowfull
-		Owner: Neutral
-		Location: 16,25
-	Actor57: shadowfull
-		Owner: Neutral
-		Location: 17,25
-	Actor58: shadowfull
-		Owner: Neutral
-		Location: 18,25
-	Actor59: shadowfull
-		Owner: Neutral
-		Location: 19,25
 	Actor61: shadowfull
 		Owner: Neutral
 		Location: 22,26
@@ -395,9 +375,6 @@ Actors:
 	Actor127: shadowedgeouter
 		Owner: Neutral
 		Location: 29,27
-	Actor128: shadowtop
-		Owner: Neutral
-		Location: 28,27
 	Actor129: shadowtop
 		Owner: Neutral
 		Location: 27,27
@@ -512,15 +489,6 @@ Actors:
 	Actor169: shadowedgeouter
 		Owner: Neutral
 		Location: 20,26
-	Actor170: shadowtop
-		Owner: Neutral
-		Location: 19,26
-	Actor172: shadowtop
-		Owner: Neutral
-		Location: 18,26
-	Actor171: shadowedgeinner
-		Owner: Neutral
-		Location: 17,26
 	Actor173: shadowleft
 		Owner: Neutral
 		Location: 17,28
@@ -563,9 +531,6 @@ Actors:
 	Actor188: shadowleft
 		Owner: Neutral
 		Location: 20,20
-	Actor189: shadowleft
-		Owner: Neutral
-		Location: 20,19
 	Actor190: shadowedgeinner
 		Owner: Neutral
 		Location: 20,18
@@ -620,12 +585,6 @@ Actors:
 	Actor207: barrelmw8
 		Owner: Neutral
 		Location: 16,26
-	Actor208: barrelmw9
-		Owner: Neutral
-		Location: 17,25
-	Actor209: barrelmw10
-		Owner: Neutral
-		Location: 19,26
 	Actor210: barrelmw1
 		Owner: Neutral
 		Location: 19,28
@@ -984,9 +943,108 @@ Actors:
 	Actor304: switchpulledc
 		Owner: Baron
 		Location: 28,25
+	Actor309: shadowtop
+		Owner: Neutral
+		Location: 28,27
+	Actor311: shadowleft
+		Owner: Neutral
+		Location: 20,19
+	Actor305: shadowedgeouter
+		Owner: Neutral
+		Location: 7,38
+	Actor306: shadowleftend
+		Owner: Neutral
+		Location: 7,39
+	Actor307: shadowtop
+		Owner: Neutral
+		Location: 6,38
+	Actor308: shadowtop
+		Owner: Neutral
+		Location: 5,38
+	Actor310: shadowtop
+		Owner: Neutral
+		Location: 4,38
+	Actor312: shadowtop
+		Owner: Neutral
+		Location: 3,38
+	Actor313: shadowtop
+		Owner: Neutral
+		Location: 2,38
+	Actor314: shadowtop
+		Owner: Neutral
+		Location: 1,38
+	Actor315: shadowtop
+		Owner: Neutral
+		Location: 0,38
+	Actor316: idoorwest
+		Owner: Neutral
+		Location: 6,38
+	Actor317: ibannera
+		Owner: Baron
+		Location: 12,36
+	Actor318: ibannere
+		Owner: Baron
+		Location: 9,32
+	Actor319: ibannere
+		Owner: Baron
+		Location: 6,32
+	Actor320: ibannere
+		Owner: Baron
+		Location: 11,30
+	Actor321: ibannere
+		Owner: Baron
+		Location: 4,30
+	Actor322: ibannerd
+		Owner: Baron
+		Location: 25,24
+	Actor323: ibannerd
+		Owner: Baron
+		Location: 23,24
+	Actor324: ibannerb
+		Owner: Baron
+		Location: 20,16
+	Actor325: ibannerb
+		Owner: Baron
+		Location: 27,16
+	Actor326: ibannera
+		Owner: Baron
+		Location: 25,15
+	Actor327: ibannera
+		Owner: Baron
+		Location: 22,15
+	Actor328: barrelmw9
+		Owner: Baron
+		Location: 16,11
+	Actor330: ipaintinga
+		Owner: Baron
+		Location: 8,26
+	Actor329: shadowleft
+		Owner: Neutral
+		Location: 17,26
+	Actor331: shadowedgeinner
+		Owner: Neutral
+		Location: 17,25
+	Actor332: shadowblockleft
+		Owner: Neutral
+		Location: 27,31
+	Actor334: shadowblockleft
+		Owner: Neutral
+		Location: 19,25
+	Actor335: shadowtopend
+		Owner: Neutral
+		Location: 19,26
+	Actor333: shadowlargeleft
+		Owner: Neutral
+		Location: 18,25
+	Actor336: shadowedgeouter
+		Owner: Neutral
+		Location: 18,25
+	Actor337: shadowfull
+		Owner: Neutral
+		Location: 16,25
 Nodes:
 	TriggerOnKilled@ND02: TriggerOnKilled
-		Pos: -383,-15
+		Pos: -354,1
 		Out@Con1:
 			ConnectionType: Exec
 		In@Con1:
@@ -996,7 +1054,7 @@ Nodes:
 			ConnectionType: Exec
 			Node@ND05: Con1
 	MapInfoActorReference@ND04: MapInfoActorReference
-		Pos: -737,-56
+		Pos: -753,-59
 		Out@Con1:
 			ConnectionType: Actor
 			Actor: Actor303
@@ -1004,11 +1062,11 @@ Nodes:
 			ConnectionType: ActorList
 			Actors: Actor303
 	TriggerWorldLoaded@ND05: TriggerWorldLoaded
-		Pos: -748,190
+		Pos: -801,190
 		Out@Con1:
 			ConnectionType: Exec
 	MapInfoActorReference@ND06: MapInfoActorReference
-		Pos: -131,-209
+		Pos: -122,-247
 		Out@Con1:
 			ConnectionType: Actor
 			Actor: Actor38
@@ -1027,6 +1085,48 @@ Nodes:
 		In@Con3:
 			ConnectionType: Exec
 			Node@ND02: Con1
+	TriggerOnKilled@ND08: TriggerOnKilled
+		Pos: -258,548
+		Out@Con1:
+			ConnectionType: Exec
+		In@Con1:
+			ConnectionType: Actor
+			Node@ND09: Con1
+		In@Con2:
+			ConnectionType: Exec
+			Node@ND12: Con1
+	MapInfoActorReference@ND09: MapInfoActorReference
+		Pos: -657,488
+		Out@Con1:
+			ConnectionType: Actor
+			Actor: Actor304
+		Out@Con2:
+			ConnectionType: ActorList
+			Actors: Actor304
+	MapInfoActorReference@ND10: MapInfoActorReference
+		Pos: -26,300
+		Out@Con1:
+			ConnectionType: Actor
+			Actor: Actor214
+		Out@Con2:
+			ConnectionType: ActorList
+			Actors: Actor214,Actor213
+	ActorKill@ND11: ActorKill
+		Pos: 242,471
+		Out@Con1:
+			ConnectionType: Exec
+		In@Con1:
+			ConnectionType: Actor
+		In@Con2:
+			ConnectionType: ActorList
+			Node@ND10: Con2
+		In@Con3:
+			ConnectionType: Exec
+			Node@ND08: Con1
+	TriggerWorldLoaded@ND12: TriggerWorldLoaded
+		Pos: -705,737
+		Out@Con1:
+			ConnectionType: Exec
 Rules: mw|rules/campaign-maprules.yaml
 	Player:
 		PlayerResources:

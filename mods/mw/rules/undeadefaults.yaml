@@ -99,10 +99,14 @@
 	RangeMultiplier:
 		Modifier: 0
 		RequiresCondition: snaketrap
+	GrantConditionOnPrerequisite@BattlefieldLoot:
+		Condition: leaveStuffCon
+		Prerequisites: global-battlefieldloot
 	Explodes@Tib:
 		Weapon: LeaveStuff
 		EmptyWeapon: LeaveStuff
 		Chance: 15
+		RequiresCondition: leaveStuffCon
 	Crushable:
 	OwnerLostAction:
 		Action: Kill

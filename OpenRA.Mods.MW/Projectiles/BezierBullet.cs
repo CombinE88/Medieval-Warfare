@@ -176,7 +176,7 @@ namespace OpenRA.Mods.MW.Projectiles
 
 		int GetEffectiveFacing()
 		{
-			var at = (float)ticks / (length - 1 > 0 ? length - 1 : 1) ;
+			var at = (float)ticks / (length - 1 > 0 ? length - 1 : 1);
 			var attitude = angle.Tan() * (1 - 2 * at) / (4 * 1024);
 
 			var u = (facing % 128) / 128f;

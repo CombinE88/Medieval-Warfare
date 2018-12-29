@@ -52,8 +52,8 @@ namespace OpenRA.Mods.MW.Activities
         {
             if (IsCanceled)
             {
-                if (self.Trait<WithHarvestAnimation>() != null)
-                    self.Trait<WithHarvestAnimation>().ChangeNot = false;
+                //// if (self.Trait<WithHarvestAnimation>() != null)
+                ////    self.Trait<WithHarvestAnimation>().ChangeNot = false;
 
                 wsb.DefaultAnimation.ReplaceAnim(wsb.Info.Sequence);
                 playanim = true;
@@ -104,8 +104,8 @@ namespace OpenRA.Mods.MW.Activities
                        facing.Facing = desiredFacing;
                    }
 
-                   if (self.Trait<WithHarvestAnimation>() != null)
-                       self.Trait<WithHarvestAnimation>().ChangeNot = true;
+                   //// if (self.Trait<WithHarvestAnimation>() != null)
+                   ////     self.Trait<WithHarvestAnimation>().ChangeNot = true;
 
                    wsb.PlayCustomAnimationRepeating(self, info.PreySequence);
                    if (condtion != null)

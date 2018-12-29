@@ -6,6 +6,7 @@ Tileset: TEMPERAT
 MapSize: 66,66
 Bounds: 1,1,64,64
 Categories: Conquest
+Visibility: MissionSelector
 Players:
 	PlayerReference@Neutral:
 		Name: Neutral

@@ -1047,10 +1047,14 @@
 		StandSequences: stand
 	Passenger:
 		CargoType: Infantry
+	GrantConditionOnPrerequisite@BattlefieldLoot:
+		Condition: leaveStuffCon
+		Prerequisites: global-battlefieldloot
 	Explodes@Tib:
 		Weapon: LeaveStuff
 		EmptyWeapon: LeaveStuff
 		Chance: 25
+		RequiresCondition: leaveStuffCon
 	Explodes@Kadaver:
 		Weapon: SingleDeadKadaver
 		EmptyWeapon: SingleDeadKadaver
@@ -1185,10 +1189,14 @@
 		DeathTypes: BurnToDeath
 	Voiced:
 		VoiceSet: RegularCavalVoice
+	GrantConditionOnPrerequisite@BattlefieldLoot:
+		Condition: leaveStuffCon
+		Prerequisites: global-battlefieldloot
 	Explodes@Tib:
 		Weapon: LeaveStuff
 		EmptyWeapon: LeaveStuff
 		Chance: 25
+		RequiresCondition: leaveStuffCon
 	EditorTilesetFilter:
 		Categories: Cavalry
 	SpawnActorOnDeath@Soul:
@@ -1247,10 +1255,14 @@
 		Weapons: SmallWood1, SmallWood2, SmallWood3
 		Pieces: 0, 2
 		Range: 0c512, 3c0
+	GrantConditionOnPrerequisite@BattlefieldLoot:
+		Condition: leaveStuffCon
+		Prerequisites: global-battlefieldloot
 	Explodes@Tib:
 		Weapon: LeaveStuff
 		EmptyWeapon: LeaveStuff
 		Chance: 25
+		RequiresCondition: leaveStuffCon
 	EditorTilesetFilter:
 		Categories: Siegeengines
 	SpawnActorOnDeath@Soul:

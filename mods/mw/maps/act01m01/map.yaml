@@ -41,8 +41,8 @@ Players:
 	PlayerReference@Creeps:
 		Name: Creeps
 		NonCombatant: True
-		Color: 30732D
 		Faction: Random
+		Color: 30732D
 		Enemies: King, King2, Baron
 Actors:
 	Actor0: split9
@@ -403,7 +403,7 @@ Actors:
 		Facing: 92
 Nodes:
 	TriggerWorldLoaded@ND01: TriggerWorldLoaded
-		Pos: -712,-155
+		Pos: -951,-178
 		Out@Con1:
 			ConnectionType: Exec
 	TriggerCreateTimer@ND02: TriggerCreateTimer
@@ -558,15 +558,18 @@ Nodes:
 			Node@ND18: Con2
 		In@Con3:
 			ConnectionType: Exec
-			Node@ND01: Con1
+			Node@ND56: Con1
 	MapInfoNode@ND18: MapInfoNode
-		Pos: -373,416
+		Pos: -729,397
 		Out@Con1:
 			ConnectionType: String
 			String: Mission
 		Out@Con2:
 			ConnectionType: String
 			String: Your commander must survive!
+		Out@Con3:
+			ConnectionType: Integer
+			Num: 100
 	MapInfoNode@ND19: MapInfoNode
 		Pos: 749,100
 		Out@Con1:
@@ -855,4 +858,33 @@ Nodes:
 		In@Con4:
 			ConnectionType: Exec
 			Node@ND07: Con1
+	SetCameraPosition@ND54: SetCameraPosition
+		Pos: -584,52
+		In@Con1:
+			ConnectionType: Player
+			Node@ND55: Con1
+		In@Con2:
+			ConnectionType: Location
+			Node@ND55: Con2
+		In@Con3:
+			ConnectionType: Exec
+			Node@ND01: Con1
+	MapInfoNode@ND55: MapInfoNode
+		Pos: -979,75
+		Out@Con1:
+			ConnectionType: Player
+			Player: King
+		Out@Con2:
+			ConnectionType: Location
+			Location: 2,31
+	TimedExecution@ND56: TimedExecution
+		Pos: -374,467
+		Out@Con1:
+			ConnectionType: Exec
+		In@Con1:
+			ConnectionType: Integer
+			Node@ND18: Con3
+		In@Con2:
+			ConnectionType: Exec
+			Node@ND01: Con1
 Rules: mw|rules/campaign-maprules.yaml

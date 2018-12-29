@@ -5,6 +5,7 @@ KINGROSS:
 	Inherits@ArcherDemo65: ^ArcherDemo80
 	Inherits@Healable: ^Healable
 	Inherits@SnakeStunnable: ^SnakeSlowable
+	-GrantConditionOnPrerequisite@BattlefieldLoot:
 	-Explodes@Tib:
 	GrantConditionOnDamageState@Slow:
 		Condition: Slowmotion
@@ -88,6 +89,7 @@ DDLER:
 	Inherits@Healable: ^Healable
 	Inherits@SnakeStunnable: ^SnakeSlowable
 	Inherits@Cursable: ^Cursed
+	-GrantConditionOnPrerequisite@BattlefieldLoot:
 	-Explodes@Tib:
 	Valued:
 		Cost: 1300
@@ -148,6 +150,7 @@ DDLER:
 		VoiceSet: DeathdealerVoice
 BURNINGHORSE:
 	Inherits: ^Cavalry
+	-GrantConditionOnPrerequisite@BattlefieldLoot:
 	-Explodes@Tib:
 	Valued:
 		Cost: 0
@@ -203,6 +206,7 @@ EMPTYROSS:
 	SpeedMultiplier:
 		RequiresCondition: Slowmotion
 		Modifier: 70
+	-GrantConditionOnPrerequisite@BattlefieldLoot:
 	-Explodes@Tib:
 	Valued:
 		Cost: 0

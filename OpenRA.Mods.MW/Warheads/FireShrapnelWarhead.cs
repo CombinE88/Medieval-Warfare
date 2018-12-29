@@ -1,4 +1,5 @@
 #region Copyright & License Information
+
 /*
  * Copyright 2015- OpenRA.Mods.AS Developers (see AUTHORS)
  * This file is a part of a third-party plugin for OpenRA, which is
@@ -6,6 +7,7 @@
  * GNU General Public License as published by the Free Software
  * Foundation. For more information, see COPYING.
  */
+
 #endregion
 
 using System.Collections.Generic;
@@ -22,12 +24,10 @@ namespace OpenRA.Mods.MW.Warheads
 {
     public class FireShrapnelWarhead : WarheadAS, IRulesetLoaded<WeaponInfo>
     {
-        [WeaponReference, FieldLoader.Require]
-        [Desc("Has to be defined in weapons.yaml as well.")]
+        [WeaponReference, FieldLoader.Require] [Desc("Has to be defined in weapons.yaml as well.")]
         public readonly string Weapon = null;
 
-        [Desc("Amount of shrapnels thrown.")]
-        public readonly int[] Amount = { 1 };
+        [Desc("Amount of shrapnels thrown.")] public readonly int[] Amount = { 1 };
 
         [Desc("The percentage of aiming this shrapnel to a suitable target actor.")]
         public readonly int AimChance = 0;
@@ -126,15 +126,15 @@ namespace OpenRA.Mods.MW.Warheads
 
             var availableTargetActors = firedBy.World.FindActorsInCircle(target.CenterPosition, weapon.Range)
                 .Where(x => (AllowDirectHit || !directActors.Contains(x))
-                    && weapon.IsValidAgainst(Target.FromActor(x), firedBy.World, firedBy)
-                    && AimTargetStances.HasStance(firedBy.Owner.Stances[x.Owner]))
+                            && weapon.IsValidAgainst(Target.FromActor(x), firedBy.World, firedBy)
+                            && AimTargetStances.HasStance(firedBy.Owner.Stances[x.Owner]))
                 .Shuffle(firedBy.World.SharedRandom);
 
             var targetActor = availableTargetActors.GetEnumerator();
 
             var amount = Amount.Length == 2
-                    ? firedBy.World.SharedRandom.Next(Amount[0], Amount[1])
-                    : Amount[0];
+                ? firedBy.World.SharedRandom.Next(Amount[0], Amount[1])
+                : Amount[0];
 
             for (var i = 0; i < amount; i++)
             {
@@ -161,14 +161,20 @@ namespace OpenRA.Mods.MW.Warheads
                     Weapon = weapon,
                     Facing = (shrapnelTarget.CenterPosition - target.CenterPosition).Yaw.Facing,
 
-                    DamageModifiers = !firedBy.IsDead ? firedBy.TraitsImplementing<IFirepowerModifier>()
-                        .Select(a => a.GetFirepowerModifier()).ToArray() : new int[]{1},
+                    DamageModifiers = !firedBy.IsDead
+                        ? firedBy.TraitsImplementing<IFirepowerModifier>()
+                            .Select(a => a.GetFirepowerModifier()).ToArray()
+                        : new int[] { 1 },
 
-                    InaccuracyModifiers = !firedBy.IsDead ? firedBy.TraitsImplementing<IInaccuracyModifier>()
-                        .Select(a => a.GetInaccuracyModifier()).ToArray() : new int[]{1},
+                    InaccuracyModifiers = !firedBy.IsDead
+                        ? firedBy.TraitsImplementing<IInaccuracyModifier>()
+                            .Select(a => a.GetInaccuracyModifier()).ToArray()
+                        : new int[] { 1 },
 
-                    RangeModifiers = !firedBy.IsDead ? firedBy.TraitsImplementing<IRangeModifier>()
-                        .Select(a => a.GetRangeModifier()).ToArray() : new int[]{1},
+                    RangeModifiers = !firedBy.IsDead
+                        ? firedBy.TraitsImplementing<IRangeModifier>()
+                            .Select(a => a.GetRangeModifier()).ToArray()
+                        : new int[] { 1 },
 
                     Source = target.CenterPosition,
                     SourceActor = firedBy,
