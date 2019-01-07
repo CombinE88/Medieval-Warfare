@@ -195,6 +195,7 @@ Player:
 			preycolyte: 16
 			eharvxl: 6
 			acolytec: 9
+			vampflying: 4
 		SquadSize: 15
 			Airstrike:
 				OrderName: CorpsePowerInfoOrder
@@ -614,6 +615,7 @@ Player:
 			preycolyte: 16
 			eharvxl: 6
 			acolytec: 9
+			vampflying: 4
 		SquadSize: 15
 			Airstrike:
 				OrderName: CorpsePowerInfoOrder
@@ -1033,6 +1035,7 @@ Player:
 			preycolyte: 16
 			eharvxl: 6
 			acolytec: 9
+			vampflying: 4
 		SquadSize: 15
 			Airstrike:
 				OrderName: CorpsePowerInfoOrder

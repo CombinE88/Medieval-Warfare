@@ -1062,7 +1062,7 @@ Nodes:
 			ConnectionType: ActorList
 			Actors: Actor303
 	TriggerWorldLoaded@ND05: TriggerWorldLoaded
-		Pos: -801,190
+		Pos: -1048,188
 		Out@Con1:
 			ConnectionType: Exec
 	MapInfoActorReference@ND06: MapInfoActorReference
@@ -1127,6 +1127,123 @@ Nodes:
 		Pos: -705,737
 		Out@Con1:
 			ConnectionType: Exec
+	TriggerOnEnteredFootprint@ND14: TriggerOnEnteredFootprint
+		Pos: 733,-197
+		Out@Con1:
+			ConnectionType: Exec
+		In@Con1:
+			ConnectionType: PlayerGroup
+			Node@ND16: Con1
+		In@Con2:
+			ConnectionType: CellArray
+			Node@ND15: Con3
+		In@Con3:
+			ConnectionType: Repeatable
+	MapInfoNode@ND15: MapInfoNode
+		Pos: 191,-402
+		Out@Con1:
+			ConnectionType: Player
+			Player: King
+		Out@Con3:
+			ConnectionType: CellArray
+			Cells: 25,21|25,22|26,22|27,22|27,21|27,20|26,20|25,20
+	GroupPlayerGroup@ND16: GroupPlayerGroup
+		Pos: 476,-395
+		Out@Con1:
+			ConnectionType: PlayerGroup
+		In@Con1:
+			ConnectionType: Player
+			Node@ND15: Con1
+		In@Con2:
+			ConnectionType: Player
+	MapInfoActorReference@ND17: MapInfoActorReference
+		Pos: 998,-324
+		Out@Con1:
+			ConnectionType: Actor
+			Actor: Actor250
+		Out@Con2:
+			ConnectionType: ActorList
+			Actors: Actor250
+	ActorKill@ND18: ActorKill
+		Pos: 1270,-100
+		Out@Con1:
+			ConnectionType: Exec
+		In@Con1:
+			ConnectionType: Actor
+			Node@ND17: Con1
+		In@Con2:
+			ConnectionType: ActorList
+		In@Con3:
+			ConnectionType: Exec
+			Node@ND14: Con1
+	UiTextMessage@ND19: UiTextMessage
+		Pos: 1701,-322
+		Out@Con1:
+			ConnectionType: Exec
+		In@Con1:
+			ConnectionType: String
+			Node@ND20: Con1
+		In@Con2:
+			ConnectionType: String
+			Node@ND20: Con2
+		In@Con3:
+			ConnectionType: Exec
+			Node@ND18: Con1
+	MapInfoNode@ND20: MapInfoNode
+		Pos: 1329,-395
+		Out@Con1:
+			ConnectionType: String
+			String: Mission
+		Out@Con2:
+			ConnectionType: String
+			String: Objective retrieved!
+		Out@Con3:
+			ConnectionType: Integer
+			Num: 100
+	TimedExecution@ND21: TimedExecution
+		Pos: 2015,-317
+		Out@Con1:
+			ConnectionType: Exec
+		In@Con1:
+			ConnectionType: Integer
+			Node@ND20: Con3
+		In@Con2:
+			ConnectionType: Exec
+			Node@ND19: Con1
+	UiCompleteObjective@ND22: UiCompleteObjective
+		Pos: 2364,-260
+		Out@Con1:
+			ConnectionType: Exec
+		In@Con1:
+			ConnectionType: Objective
+			Node@ND23: Con1
+		In@Con2:
+			ConnectionType: Exec
+			Node@ND21: Con1
+	UiNewObjective@ND23: UiNewObjective
+		Pos: -623,202
+		Item: Primary
+		Out@Con1:
+			ConnectionType: Objective
+		In@Con1:
+			ConnectionType: String
+			Node@ND25: Con2
+		In@Con2:
+			ConnectionType: Exec
+			Node@ND05: Con1
+		In@Con3:
+			ConnectionType: Player
+			Node@ND25: Con1
+		In@Con4:
+			ConnectionType: PlayerGroup
+	MapInfoNode@ND25: MapInfoNode
+		Pos: -1046,377
+		Out@Con1:
+			ConnectionType: Player
+			Player: King
+		Out@Con2:
+			ConnectionType: String
+			String: Find the letter!
 Rules: mw|rules/campaign-maprules.yaml
 	Player:
 		PlayerResources:

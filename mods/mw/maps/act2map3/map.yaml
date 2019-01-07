@@ -1,0 +1,128 @@
+MapFormat: 11
+RequiresMod: mw
+Title: act2map3
+Author: CombinE
+Tileset: TEMPERAT
+MapSize: 34,166
+Bounds: 1,1,32,164
+Visibility: MissionSelector
+Categories: Conquest
+Players:
+	PlayerReference@Neutral:
+		Name: Neutral
+		OwnsWorld: True
+		NonCombatant: True
+		Faction: Random
+	PlayerReference@Creeps:
+		Name: Creeps
+		NonCombatant: True
+		Faction: Random
+Actors:
+	Actor0: tc02
+		Owner: Neutral
+		Location: 7,136
+	Actor1: tc01
+		Owner: Neutral
+		Location: 17,108
+	Actor2: tc04
+		Owner: Neutral
+		Location: 27,97
+	Actor3: tc05
+		Owner: Neutral
+		Location: 6,70
+	Actor4: t14
+		Owner: Neutral
+		Location: 11,29
+	Actor5: t11
+		Owner: Neutral
+		Location: 15,30
+	Actor6: t07
+		Owner: Neutral
+		Location: 18,26
+	Actor7: t02
+		Owner: Neutral
+		Location: 23,156
+	Actor8: t03
+		Owner: Neutral
+		Location: 23,150
+	Actor9: t06
+		Owner: Neutral
+		Location: 29,149
+	Actor10: t01
+		Owner: Neutral
+		Location: 27,139
+	Actor11: t02
+		Owner: Neutral
+		Location: 26,137
+	Actor12: t06b
+		Owner: Neutral
+		Location: 27,138
+	Actor13: t02
+		Owner: Neutral
+		Location: 24,141
+	Actor14: t01
+		Owner: Neutral
+		Location: 24,133
+	Actor15: t06
+		Owner: Neutral
+		Location: 27,145
+	Actor16: t05
+		Owner: Neutral
+		Location: 29,142
+	Actor17: t03
+		Owner: Neutral
+		Location: 29,133
+	Actor18: t05
+		Owner: Neutral
+		Location: 28,128
+	Actor19: t01
+		Owner: Neutral
+		Location: 29,124
+	Actor20: t06a
+		Owner: Neutral
+		Location: 30,122
+	Actor21: t06b
+		Owner: Neutral
+		Location: 31,127
+	Actor22: t02
+		Owner: Neutral
+		Location: 31,135
+	Actor23: t03
+		Owner: Neutral
+		Location: 32,139
+	Actor24: t05
+		Owner: Neutral
+		Location: 30,145
+	Actor25: t06
+		Owner: Neutral
+		Location: 27,154
+	Actor26: t01
+		Owner: Neutral
+		Location: 32,156
+	Actor27: t02
+		Owner: Neutral
+		Location: 31,152
+	Actor28: t05
+		Owner: Neutral
+		Location: 27,158
+	Actor29: t06
+		Owner: Neutral
+		Location: 24,153
+	Actor30: t06a
+		Owner: Neutral
+		Location: 23,146
+	Actor31: t06b
+		Owner: Neutral
+		Location: 22,139
+	Actor32: t17
+		Owner: Neutral
+		Location: 25,25
+	Actor33: t17a
+		Owner: Neutral
+		Location: 26,28
+	Actor34: t16
+		Owner: Neutral
+		Location: 26,32
+	Actor35: t14
+		Owner: Neutral
+		Location: 30,29

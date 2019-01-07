@@ -306,6 +306,35 @@ Container@PLAYER_WIDGETS:
 		LogicKeyListener@CONTROLGROUP_KEYHANDLER:
 			Logic: ControlGroupLogic
 		LogicTicker@SIDEBAR_TICKER:
+		Container@TEXTCHOISE:
+			Logic: TextChoiceLogic
+			X: WINDOW_RIGHT / 2 - 400
+			Y: WINDOW_BOTTOM / 2 - 300 - 100
+			Width: 800
+			Height: 600
+			Children:
+				Background@CHOICEBACKGROUND:
+					Logic: MenuButtonsChromeLogic
+					X: 0
+					Y: 0
+					Width: PARENT_RIGHT
+					Height: PARENT_BOTTOM
+					Background: panel-black
+					Children:
+						Background@TEXTBACKGROUND:
+							X: 15
+							Y: 15
+							Width: PARENT_RIGHT - 30
+							Height: PARENT_BOTTOM - 15 - 25 - 30
+							Background: paperframe
+						Label@TEXT:
+							X: 30
+							Y: 30
+							Width: PARENT_RIGHT - 60
+							Height: PARENT_BOTTOM - 15 - 25 - 60
+							Align: Left
+							Font: Bold
+							Text: {0}
 		Background@COMMAND_BAR:
 			Logic: CommandBarLogic
 			X: 5

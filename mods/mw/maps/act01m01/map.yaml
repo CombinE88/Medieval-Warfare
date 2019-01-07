@@ -521,14 +521,6 @@ Nodes:
 		In@Con2:
 			ConnectionType: Exec
 			Node@ND02: Con2
-	UiFailObjective@ND14: UiFailObjective
-		Pos: 1135,-155
-		In@Con1:
-			ConnectionType: Objective
-			Node@ND03: Con1
-		In@Con2:
-			ConnectionType: Exec
-			Node@ND13: Con1
 	UiTextMessage@ND15: UiTextMessage
 		Pos: 36,149
 		In@Con1:
@@ -590,7 +582,7 @@ Nodes:
 			ConnectionType: Exec
 			Node@ND13: Con1
 	MapInfoActorInfoNode@ND22: MapInfoActorInfoNode
-		Pos: 537,-875
+		Pos: 465,-1307
 		Out@Con1:
 			ConnectionType: ActorInfo
 			ActorInfo: e3new
@@ -615,7 +607,7 @@ Nodes:
 			ConnectionType: Exec
 			Node@ND07: Con1
 	MapInfoNode@ND24: MapInfoNode
-		Pos: 776,-1151
+		Pos: 831,-1324
 		Out@Con1:
 			ConnectionType: Player
 			Player: King
@@ -647,7 +639,7 @@ Nodes:
 			ConnectionType: Exec
 			Node@ND07: Con1
 	GroupActorInfoGroup@ND28: GroupActorInfoGroup
-		Pos: 781,-866
+		Pos: 830,-1065
 		Out@Con1:
 			ConnectionType: ActorInfoArray
 		In@Con1:
@@ -666,6 +658,21 @@ Nodes:
 			ConnectionType: ActorInfo
 			Node@ND22: Con1
 		In@Con6:
+			ConnectionType: ActorInfo
+			Node@ND57: Con1
+		In@Con7:
+			ConnectionType: ActorInfo
+			Node@ND57: Con1
+		In@Con8:
+			ConnectionType: ActorInfo
+			Node@ND57: Con1
+		In@Con9:
+			ConnectionType: ActorInfo
+			Node@ND57: Con1
+		In@Con10:
+			ConnectionType: ActorInfo
+			Node@ND58: Con1
+		In@Con11:
 			ConnectionType: ActorInfo
 	TriggerOnKilled@ND29: TriggerOnKilled
 		Pos: 1981,-451
@@ -887,4 +894,31 @@ Nodes:
 		In@Con2:
 			ConnectionType: Exec
 			Node@ND01: Con1
+	MapInfoActorInfoNode@ND57: MapInfoActorInfoNode
+		Pos: 468,-1114
+		Out@Con1:
+			ConnectionType: ActorInfo
+			ActorInfo: e2newv2
+	MapInfoActorInfoNode@ND58: MapInfoActorInfoNode
+		Pos: 465,-922
+		Out@Con1:
+			ConnectionType: ActorInfo
+			ActorInfo: siege3
 Rules: mw|rules/campaign-maprules.yaml
+	World:
+		WeatherOverlay:
+			WindTick: 150, 550
+			UseSquares: false
+			ScatterDirection: 0, 0
+			Gravity: 8.00, 12.00
+			SwingOffset: 0, 0
+			SwingSpeed: 0, 0
+			SwingAmplitude: 0, 0
+			ParticleColors: 304074, 28386C, 202C60, 182C54
+			LineTailAlphaValue: 150
+			ParticleSize: 1, 1
+		GlobalLightingPaletteEffect:
+			Red: 0.85
+			Green: 0.85
+			Blue: 0.85
+			Ambient: 0.68

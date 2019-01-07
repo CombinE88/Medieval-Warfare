@@ -842,7 +842,7 @@ Actors:
 		Location: 23,4
 Nodes:
 	TriggerWorldLoaded@ND01: TriggerWorldLoaded
-		Pos: -790,8
+		Pos: -1140,3
 		Out@Con1:
 			ConnectionType: Exec
 	TriggerCreateTimer@ND02: TriggerCreateTimer
@@ -1362,6 +1362,25 @@ Nodes:
 		Out@Con2:
 			ConnectionType: ActorList
 			Actors: Actor159,Actor156,Actor155,Actor157,Actor160,Actor168,Actor165,Actor167,Actor169,Actor170,Actor171,Actor172,Actor174,Actor173,Actor176,Actor175,Actor177,Actor98,Actor178,Actor179,Actor181,Actor180,Actor115,Actor197,Actor121,Actor198,Actor191,Actor192,Actor193,Actor122,Actor119,Actor182,Actor194,Actor114,Actor109,Actor199,Actor195,Actor196,Actor189,Actor190,Actor117,Actor120,Actor200,Actor116,Actor118,Actor188,Actor187,Actor186
+	SetCameraPosition@ND100: SetCameraPosition
+		Pos: -841,450
+		In@Con1:
+			ConnectionType: Player
+			Node@ND101: Con2
+		In@Con2:
+			ConnectionType: Location
+			Node@ND101: Con1
+		In@Con3:
+			ConnectionType: Exec
+			Node@ND01: Con1
+	MapInfoNode@ND101: MapInfoNode
+		Pos: -1236,439
+		Out@Con1:
+			ConnectionType: Location
+			Location: 18,35
+		Out@Con2:
+			ConnectionType: Player
+			Player: King
 Rules: mw|rules/campaign-maprules.yaml
 	Player:
 		PlayerResources:

@@ -202,6 +202,26 @@ grim:
 		Start: 250
 		Length: 20
 		Tick: 80
+	die2: 
+		Start: 250
+		Length: 20
+		Tick: 80
+	die3: 
+		Start: 250
+		Length: 20
+		Tick: 80
+	die4: 
+		Start: 250
+		Length: 20
+		Tick: 80
+	die-crushed: 
+		Start: 250
+		Length: 20
+		Tick: 80
+	die5: 
+		Start: 250
+		Length: 20
+		Tick: 80
 	icon: grimicon.shp
 		AddExtension: False
 lichk:

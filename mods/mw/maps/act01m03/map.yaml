@@ -1370,7 +1370,7 @@ Nodes:
 			ConnectionType: Exec
 			Node@ND02: Con1
 	MapInfoActorReference@ND27: MapInfoActorReference
-		Pos: 830,-6
+		Pos: 846,4
 		Out@Con1:
 			ConnectionType: Actor
 			Actor: Actor138
@@ -1716,11 +1716,11 @@ Nodes:
 			ConnectionType: ActorList
 			Actors: Actor76
 	TriggerWorldLoaded@ND62: TriggerWorldLoaded
-		Pos: 483,1652
+		Pos: 391,1648
 		Out@Con1:
 			ConnectionType: Exec
 	TriggerCreateTimer@ND63: TriggerCreateTimer
-		Pos: 1228,1558
+		Pos: 1202,1553
 		Out@Con1:
 			ConnectionType: TimerConnection
 		Out@Con2:
@@ -1756,9 +1756,9 @@ Nodes:
 			Node@ND64: Con3
 		In@Con3:
 			ConnectionType: Exec
-			Node@ND63: Con2
+			Node@ND147: Con1
 	UiNewObjective@ND66: UiNewObjective
-		Pos: 1526,1736
+		Pos: 1597,1740
 		Item: Primary
 		Out@Con1:
 			ConnectionType: Objective
@@ -1767,7 +1767,7 @@ Nodes:
 			Node@ND67: Con1
 		In@Con2:
 			ConnectionType: Exec
-			Node@ND63: Con2
+			Node@ND147: Con1
 		In@Con3:
 			ConnectionType: Player
 			Node@ND67: Con2
@@ -1828,10 +1828,10 @@ Nodes:
 		In@Con4:
 			ConnectionType: PlayerGroup
 	MapInfoNode@ND72: MapInfoNode
-		Pos: 1043,2162
+		Pos: 1064,2132
 		Out@Con1:
 			ConnectionType: String
-			String: Explore the nearby area,
+			String: Build and defed your base.
 		Out@Con2:
 			ConnectionType: Player
 			Player: King
@@ -1943,15 +1943,15 @@ Nodes:
 			ConnectionType: Exec
 			Node@ND80: Con1
 	MapInfoNode@ND83: MapInfoNode
-		Pos: 235,1794
+		Pos: 141,1796
 		Out@Con2:
 			ConnectionType: String
 			String: Objective
 		Out@Con3:
 			ConnectionType: String
-			String: Explore the sorrounding area
+			String: Build up a small outpost and get familiar with the area,
 	UiTextMessage@ND84: UiTextMessage
-		Pos: 754,1777
+		Pos: 631,1791
 		Out@Con1:
 			ConnectionType: Exec
 		In@Con1:
@@ -2570,6 +2570,54 @@ Nodes:
 		In@Con3:
 			ConnectionType: Repeatable
 			Node@ND133: Con4
+	MapInfoNode@ND144: MapInfoNode
+		Pos: 217,1380
+		Out@Con1:
+			ConnectionType: Location
+			Location: 46,56
+		Out@Con2:
+			ConnectionType: Player
+			Player: King
+	SetCameraPosition@ND145: SetCameraPosition
+		Pos: 911,1553
+		In@Con1:
+			ConnectionType: Player
+			Node@ND144: Con2
+		In@Con2:
+			ConnectionType: Location
+			Node@ND144: Con1
+		In@Con3:
+			ConnectionType: Exec
+			Node@ND84: Con1
+	MapInfoNode@ND146: MapInfoNode
+		Pos: 241,2094
+		Out@Con1:
+			ConnectionType: Player
+			Player: King
+		Out@Con2:
+			ConnectionType: CellArray
+			Cells: 52,34|51,34|51,35|50,35|49,35|48,35|47,35|46,35|45,35|44,35|43,35|42,35|41,35|40,35|39,35|38,35|38,34|37,34|37,33|37,32|37,35|39,34|40,34|41,34|42,34|43,34|44,34|45,34|46,34|47,34|48,34|49,34|50,34|52,33|53,33|51,33|52,35|38,33|38,32|24,57|24,56|24,55|24,54|24,53|24,52|24,51|24,50|24,49|25,49|26,49|26,48|24,58|25,58|25,59|26,59|27,59|27,60|28,60|28,61|29,61|29,62|30,62|28,62|27,61|26,61|26,60|25,60|24,59|23,58|23,57|23,56|23,55|23,54|23,53|23,52|23,51|23,50|23,49|23,48|28,63|28,64|29,64|29,63|30,64|30,63|26,47|26,46|26,45|26,44|26,43|25,48|25,47|25,46|25,45|26,42|26,41|26,40|26,39|26,38|26,37|26,36|26,35|26,34|26,33|25,33|25,34|25,35|25,36|25,37|25,38|25,39|25,40|25,41|25,42|25,43|25,44|27,33|28,33|28,32|29,32|30,32|31,32|31,31|32,31|33,31|34,31|35,31|36,31|36,32|37,31|35,30|34,30|30,31|32,30|33,30|31,30|29,31|28,31|27,32|26,32
+	TriggerOnEnteredFootprint@ND147: TriggerOnEnteredFootprint
+		Pos: 782,2108
+		Out@Con1:
+			ConnectionType: Exec
+		In@Con1:
+			ConnectionType: PlayerGroup
+			Node@ND148: Con1
+		In@Con2:
+			ConnectionType: CellArray
+			Node@ND146: Con2
+		In@Con3:
+			ConnectionType: Repeatable
+	GroupPlayerGroup@ND148: GroupPlayerGroup
+		Pos: 514,2066
+		Out@Con1:
+			ConnectionType: PlayerGroup
+		In@Con1:
+			ConnectionType: Player
+			Node@ND146: Con1
+		In@Con2:
+			ConnectionType: Player
 Rules: mw|rules/campaign-maprules.yaml
 	Player:
 		PlayerResources:
