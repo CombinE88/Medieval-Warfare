@@ -1163,10 +1163,12 @@ SPLITDEAD:
 		Image: flicker
 		PlayerPalette: grimalphaplayer
 		Palette: Fracture
+	-FrozenUnderFog:
 	-Building:
 	Immobile:
 		OccupiesSpace: false
-	FrozenUnderFog:
+	HiddenUnderFog:
+		Type: CenterPosition
 	Targetable:
 		TargetTypes: Trees
 	ValidPreyTarget:
