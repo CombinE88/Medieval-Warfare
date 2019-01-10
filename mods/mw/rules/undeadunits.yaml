@@ -1164,7 +1164,6 @@ SPLITDEAD:
 		PlayerPalette: grimalphaplayer
 		Palette: Fracture
 	-Building:
-	-HiddenUnderShroud:
 	Immobile:
 		OccupiesSpace: false
 	HiddenUnderFog:
