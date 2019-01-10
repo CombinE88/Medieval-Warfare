@@ -1166,8 +1166,7 @@ SPLITDEAD:
 	-Building:
 	Immobile:
 		OccupiesSpace: false
-	HiddenUnderFog:
-		Type: CenterPosition
+	FrozenUnderFog:
 	Targetable:
 		TargetTypes: Trees
 	ValidPreyTarget:
