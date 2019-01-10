@@ -559,7 +559,7 @@
 		Type: Wood
 	Targetable:
 		TargetTypes: Trees, NoAutoTarget
-	HiddenUnderShroud:
+	FrozenUnderFog:
 	ScriptTriggers:
 	Health:
 		HP: 50000
@@ -601,7 +601,7 @@
 	AppearsOnRadar:
 	RadarColorFromTerrain:
 		Terrain: Tiberium
-	HiddenUnderShroud:
+	FrozenUnderFog:
 	WithMakeAnimation:
 	Targetable:
 		TargetTypes: Trees, Disguise

@@ -31,16 +31,15 @@
     <Optimize>true</Optimize>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Eluant, Version=1.0.5867.35197, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\engine\thirdparty\download\Eluant.dll</HintPath>
+    </Reference>
     <Reference Include="FuzzyLogicLibrary, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null">
       <HintPath>..\engine\thirdparty\download\FuzzyLogicLibrary.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
-    <Reference Include="Eluant">
-      <HintPath>..\engine\thirdparty\download\Eluant.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Activities\FallDown.cs" />
