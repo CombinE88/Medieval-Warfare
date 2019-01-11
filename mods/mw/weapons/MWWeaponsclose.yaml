@@ -544,9 +544,9 @@ Sledgehammer:
 		Delay: 10
 		ValidTargets: Ground, Trees
 		InvalidTargets: Air
-		Spread: 625
+		Spread: 525
 		Damage: 3000
-		Falloff: 100, 100, 100, 100, 50, 25, 0
+		Falloff: 100, 100, 100, 100, 0, 0, 0
 		Versus:
 			Leather: 150
 			Light: 125
@@ -564,9 +564,9 @@ Sledgehammer:
 		Delay: 30
 		ValidTargets: Ground, Trees
 		InvalidTargets: Air
-		Spread: 625
+		Spread: 525
 		Damage: 3000
-		Falloff: 100, 100, 100, 100, 50, 25, 0
+		Falloff: 100, 100, 100, 100, 0, 0, 0
 		Versus:
 			Leather: 150
 			Light: 125
@@ -584,9 +584,9 @@ Sledgehammer:
 		Delay: 50
 		ValidTargets: Ground, Trees
 		InvalidTargets: Air
-		Spread: 625
+		Spread: 525
 		Damage: 3000
-		Falloff: 100, 100, 100, 100, 50, 25, 0
+		Falloff: 100, 100, 100, 100, 0, 0, 0
 		Versus:
 			Leather: 150
 			Light: 125

@@ -415,7 +415,7 @@ NEWCOMM:
 		Speed: 50
 		RequiresCondition: !Swinging
 	Health:
-		HP: 36000
+		HP: 33000
 	Armament@1:
 		Weapon: sledgehammer
 	AttackFrontal:

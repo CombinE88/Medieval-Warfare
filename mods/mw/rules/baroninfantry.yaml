@@ -228,7 +228,7 @@ ASSASSIN:
 		CloakSound: mwcloaksound.aud
 		UncloakSound: mwuncloaksound.aud
 	Valued:
-		Cost: 950
+		Cost: 650
 	Tooltip:
 		Name: Assassin
 	Buildable:
@@ -239,9 +239,9 @@ ASSASSIN:
 		Prerequisites: anycastle
 		#BuildDuration: 300
 	Mobile:
-		Speed: 70
+		Speed: 75
 	Health:
-		HP: 5500
+		HP: 6500
 	Armament@dagger:
 		Name: Primary
 		Weapon: dagger

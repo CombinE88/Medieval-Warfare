@@ -1169,6 +1169,7 @@ SPLITDEAD:
 		OccupiesSpace: false
 	HiddenUnderFog:
 		Type: CenterPosition
+	Interactable:
 	Targetable:
 		TargetTypes: Trees
 	ValidPreyTarget:

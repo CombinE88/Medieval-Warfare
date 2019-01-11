@@ -280,7 +280,7 @@ ROSS1:
 	RevealsShroud:
 		Range: 7c0
 	Health:
-		HP: 34000
+		HP: 37400
 	Armament:
 		Weapon: pikecavalry
 	AttackFrontal:
@@ -333,7 +333,7 @@ ROSS2:
 		TurnSpeed: 6
 		Speed: 95
 	Health:
-		HP: 45000
+		HP: 49500
 	Armament:
 		Weapon: pikeaxe
 	AttackFrontal:
@@ -386,7 +386,7 @@ ROSS5:
 		TurnSpeed: 4
 		Speed: 80
 	Health:
-		HP: 75000
+		HP: 79000
 	Armament@Ground:
 		Weapon: mammothpike
 		Name: Primary
@@ -462,7 +462,7 @@ ROSS3:
 	RevealsShroud:
 		Range: 8c0
 	Health:
-		HP: 21000
+		HP: 27000
 	Armament:
 		Weapon: longbownarrow
 		LocalOffset: 0,0,500
@@ -514,11 +514,11 @@ ROSS4:
 		#BuildDuration: 150
 	Mobile:
 		TurnSpeed: 12
-		Speed: 213
+		Speed: 190
 	RevealsShroud:
 		Range: 8c0
 	Health:
-		HP: 18000
+		HP: 22000
 	Armament:
 		Weapon: spearthrow
 		LocalOffset: 0,0,700
@@ -574,7 +574,7 @@ ROSS4B:
 		TurnSpeed: 12
 		Speed: 156
 	Health:
-		HP: 20000
+		HP: 25000
 	Armament:
 		Weapon: mace
 		LocalOffset: 0,0,0
@@ -627,7 +627,7 @@ ROSS4C:
 		TurnSpeed: 12
 		Speed: 170
 	Health:
-		HP: 12000
+		HP: 17000
 	Armament:
 		Weapon: mace
 		LocalOffset: 0,0,0
