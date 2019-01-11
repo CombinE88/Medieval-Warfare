@@ -379,7 +379,7 @@ CSTLGTEW:
 		OpenSequence: open
 	LineBuildNode:
 		Types: concrete
-		Connections: -1,0, 1,0
+		Connections: -1,0, 3,0
 	Valued:
 		Cost: 1500
 	Tooltip:
@@ -388,8 +388,6 @@ CSTLGTEW:
 		HP: 350000
 	RevealsShroud:
 		Range: 5c0
-	WithBuildingBib:
-		Palette: bibs
 	BodyOrientation:
 		QuantizedFacings: 1
 	Armor:
@@ -442,7 +440,7 @@ CSTLGTNS:
 		OpenSequence: open
 	LineBuildNode:
 		Types: concrete
-		Connections: 0,1, 0,-1
+		Connections: 0,-1, 0,3
 	WithIdleOverlay:
 		Sequence: top
 	Building:

@@ -2059,6 +2059,29 @@ Templates:
 			5: Tree
 			6: Tree
 			7: Tree
+	Template@189:
+		Id: 189
+		Images: bits/terrain/terrainset.png
+		Palette: terrainmw
+		Frames: 284,285,294,295
+		Size: 2,2
+		Categories: Debris
+		Tiles:
+			0: Rock
+			1: Rock
+			2: Clear
+			3: Rock
+	Template@190:
+		Id: 190
+		Images: bits/terrain/terrainset.png
+		Palette: terrainmw
+		Frames: 286,287,296,297
+		Size: 2,2
+		Categories: Debris
+		Tiles:
+			0: Rock
+			1: Clear
+			2: Rock
 	Template@203:
 		Id: 203
 		Images: bits/terrain/shores.png
