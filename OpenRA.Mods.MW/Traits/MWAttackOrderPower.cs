@@ -117,16 +117,16 @@ namespace OpenRa.Mods.MW.Traits
 
         void INotifyBurstComplete.FiredBurst(Actor self, Target target, Armament a)
         {
-            if (!callStop)
+            if (!callStop && self.Owner == self.World.LocalPlayer)
             {
-                self.World.IssueOrder(new Order("Stop", self, false));
+                self.World.IssueOrder(new Order("StopFire", self, false));
                 callStop = true;
             }
         }
 
         void IResolveOrder.ResolveOrder(Actor self, Order order)
         {
-            if (order.OrderString == "Stop")
+            if (order.OrderString == "StopFire")
                 self.CancelActivity();
         }
     }
