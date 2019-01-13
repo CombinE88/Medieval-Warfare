@@ -170,7 +170,7 @@ DRGNRDR:
 		TurnSpeed: 10
 		Speed: 90
 	Health:
-		HP: 21000
+		HP: 19000
 	Armor:
 		Type: LightCavalry
 	RevealsShroud:

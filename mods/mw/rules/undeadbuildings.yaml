@@ -376,7 +376,7 @@ GARG.penta:
 	Valued:
 		Cost: 0
 	Tooltip:
-		Name: Summoning (GARGOYLE)
+		Name: Summoning (Gargoyle)
 	Buildable:
 		IconPalette: raicon
 		BuildPaletteOrder: 60

@@ -571,7 +571,7 @@ CASTLE2:
 	NukePower:
 		Icon: lightning
 		Cursor: ioncannon
-		ChargeInterval: 6750
+		ChargeInterval: 7000
 		Description: Weather control
 		LongDesc: Fires a direct bolt of electricity at targeted location. 
 		EndChargeSpeechNotification: LightningReady

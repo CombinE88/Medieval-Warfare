@@ -520,7 +520,7 @@ VampAttackGG:
 		Spread: 141
 		ValidTargets: Ground
 		InvalidTargets: Air
-		Damage: 2200
+		Damage: 4200
 		Versus:
 			Leather: 100
 			Light: 100
@@ -577,7 +577,7 @@ VampAttackAA:
 		Spread: 215
 		ValidTargets: Air
 		InvalidTargets: Ground
-		Damage: 4500
+		Damage: 6500
 		Versus:
 			Leather: 100
 			Light: 100
@@ -611,7 +611,7 @@ BackFlyingBlood:
 	Warhead@1Dam: SpreadDamage
 		Spread: 141
 		ValidTargets:  Air, Ground
-		Damage: -900
+		Damage: -2000
 		AffectsParent: true
 		Versus:
 			Leather: 100

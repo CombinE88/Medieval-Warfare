@@ -615,7 +615,7 @@ VAMP:
 	Mobile:
 		Speed: 65
 	Health:
-		HP: 23000
+		HP: 30000
 	Armament@Leech:
 		Weapon: VampAttackGG
 		Name: primary
@@ -678,7 +678,7 @@ VAMPFLYING:
 	Health:
 		HP: 32000
 	Armor:
-		Type: Leather
+		Type: Heavy
 	RevealsShroud:
 		Range: 10c0
 		Type: CenterPosition
