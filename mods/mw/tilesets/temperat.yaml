@@ -2082,6 +2082,42 @@ Templates:
 			0: Rock
 			1: Clear
 			2: Rock
+	Template@191:
+		Id: 191
+		Images: bits/terrain/terrainset.png
+		Palette: terrainmw
+		Frames: 288
+		Size: 2,2
+		Categories: Debris
+		Tiles:
+			0: Rock
+	Template@192:
+		Id: 192
+		Images: bits/terrain/terrainset.png
+		Palette: terrainmw
+		Frames: 289
+		Size: 2,2
+		Categories: Debris
+		Tiles:
+			0: Rock
+	Template@193:
+		Id: 193
+		Images: bits/terrain/terrainset.png
+		Palette: terrainmw
+		Frames: 298
+		Size: 2,2
+		Categories: Debris
+		Tiles:
+			0: Rock
+	Template@194:
+		Id: 194
+		Images: bits/terrain/terrainset.png
+		Palette: terrainmw
+		Frames: 299
+		Size: 2,2
+		Categories: Debris
+		Tiles:
+			0: Rock
 	Template@203:
 		Id: 203
 		Images: bits/terrain/shores.png
