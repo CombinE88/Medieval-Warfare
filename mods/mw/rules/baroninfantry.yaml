@@ -241,7 +241,7 @@ ASSASSIN:
 	Mobile:
 		Speed: 75
 	Health:
-		HP: 6500
+		HP: 7500
 	Armament@dagger:
 		Name: Primary
 		Weapon: dagger

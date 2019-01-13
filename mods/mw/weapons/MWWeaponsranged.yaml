@@ -790,7 +790,7 @@ Dagger:
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
 		Spread: 51
-		Damage: 11000
+		Damage: 21000
 		InvalidTargets: Wall, Structure, Air
 		ValidTargets: Ground
 		Versus:
@@ -832,7 +832,7 @@ DaggerAir:
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
 		Spread: 51
-		Damage: 2000
+		Damage: 3000
 		InvalidTargets: Wall, Structure, Ground
 		ValidTargets: Air
 		Versus:

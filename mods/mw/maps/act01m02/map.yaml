@@ -1,6 +1,6 @@
 MapFormat: 11
 RequiresMod: mw
-Title: Act I Mission 2
+Title: Act I Mission 2 Defense of the Village
 Author: CombinE
 Tileset: TEMPERAT
 MapSize: 46,46
@@ -123,9 +123,6 @@ Actors:
 	Actor29: wdwll
 		Owner: King
 		Location: 23,31
-	Actor30: t15
-		Owner: Neutral
-		Location: 24,31
 	Actor31: tc01
 		Owner: Neutral
 		Location: 12,31
@@ -840,9 +837,14 @@ Actors:
 	Actor263: split7
 		Owner: Neutral
 		Location: 23,4
+	Actor264: hood
+		Owner: King
+		Location: 17,34
+		SubCell: 3
+		Facing: 92
 Nodes:
 	TriggerWorldLoaded@ND01: TriggerWorldLoaded
-		Pos: -1140,3
+		Pos: -1452,-3
 		Out@Con1:
 			ConnectionType: Exec
 	TriggerCreateTimer@ND02: TriggerCreateTimer
@@ -861,7 +863,7 @@ Nodes:
 			ConnectionType: Exec
 			Node@ND01: Con1
 	MapInfoNode@ND03: MapInfoNode
-		Pos: -796,-318
+		Pos: -705,-325
 		Out@Con1:
 			ConnectionType: Integer
 			Num: 45
@@ -1025,13 +1027,16 @@ Nodes:
 		In@Con3:
 			ConnectionType: Repeatable
 	MapInfoNode@ND19: MapInfoNode
-		Pos: -1236,-616
+		Pos: -1385,-598
 		Out@Con1:
 			ConnectionType: Player
 			Player: King
 		Out@Con2:
 			ConnectionType: CellArray
 			Cells: 32,18|31,18|31,17|30,17|32,17|33,17|33,18|34,18|35,18|36,18|37,18|38,18|39,18|40,18|41,18|41,19|42,19|43,19|44,19|45,19|45,17|43,18|42,18|37,17|36,17|35,17|34,17|38,17|39,17|40,17|41,17|42,17|43,17|44,17|45,18|44,18|29,12|29,13|29,14|29,11|29,10|29,9|30,14|30,13|30,12|30,11|30,10|30,9|30,8|30,7|29,7|29,8|29,6|29,5|30,6|30,5|30,4|31,5|32,5|32,4|32,3|31,4|29,4|32,2|31,2|31,1|32,1|32,0|31,0|31,3|29,15|29,16|29,17|30,16|30,15|31,16
+		Out@Con3:
+			ConnectionType: String
+			String: Darbentis must survive!
 	GroupPlayerGroup@ND20: GroupPlayerGroup
 		Pos: -978,-703
 		Out@Con1:
@@ -1381,6 +1386,62 @@ Nodes:
 		Out@Con2:
 			ConnectionType: Player
 			Player: King
+	UiNewObjective@ND102: UiNewObjective
+		Pos: -1047,-349
+		Item: Primary
+		Out@Con1:
+			ConnectionType: Objective
+		In@Con1:
+			ConnectionType: String
+			Node@ND19: Con3
+		In@Con2:
+			ConnectionType: Exec
+			Node@ND01: Con1
+		In@Con3:
+			ConnectionType: Player
+			Node@ND19: Con1
+		In@Con4:
+			ConnectionType: PlayerGroup
+	TriggerOnKilled@ND103: TriggerOnKilled
+		Pos: -1052,-25
+		Out@Con1:
+			ConnectionType: Exec
+		In@Con1:
+			ConnectionType: Actor
+			Node@ND104: Con1
+		In@Con2:
+			ConnectionType: ActorList
+		In@Con3:
+			ConnectionType: Exec
+			Node@ND01: Con1
+	MapInfoActorReference@ND104: MapInfoActorReference
+		Pos: -1445,-313
+		Out@Con1:
+			ConnectionType: Actor
+			Actor: Actor264
+		Out@Con2:
+			ConnectionType: ActorList
+			Actors: Actor264
+	UiFailObjective@ND105: UiFailObjective
+		Pos: -785,2
+		Out@Con1:
+			ConnectionType: Exec
+		In@Con1:
+			ConnectionType: Objective
+			Node@ND102: Con1
+		In@Con2:
+			ConnectionType: Exec
+			Node@ND103: Con1
+	UiCompleteObjective@ND106: UiCompleteObjective
+		Pos: 3292,28
+		Out@Con1:
+			ConnectionType: Exec
+		In@Con1:
+			ConnectionType: Objective
+			Node@ND102: Con1
+		In@Con2:
+			ConnectionType: Exec
+			Node@ND83: Con1
 Rules: mw|rules/campaign-maprules.yaml
 	Player:
 		PlayerResources:
@@ -1395,3 +1456,9 @@ Rules: mw|rules/campaign-maprules.yaml
 		-Buildable:
 	NEWCOMM:
 		-Buildable:
+	World:
+		MissionData:
+			Briefing: The watchmen of the recently retaken village have been keeping vigilance for almost 3 days until suddenly: a breakthrough. Off the coast of the hillside range spans swords, spears, bows and sticks with jewels on them. An army that had sieged the village and took control have come back to take what belongs to them! Darbentis with a new rallied spirit for battle: calls to arms every man who can pick up a weapon and attack as he readies them for bloodshed against these barbaric invaders.\n\n The village had survived… barely. But that’s not to say with the number of villagers who took a severe death toll. But with the great sacrifice of so many villagers that needlessly died all to protect the land their own: came at a great abundance of relief as the name of the warrior had came about. These fallen dead of warriors were under the strict orders of High Ranking Military Strategist “Olfenheider” and one of the most loyalist henchmen of the ignorant Baron Hodsworth of Noddingen.
+	HOOD:
+		Tooltip:
+			Name: Darbentis

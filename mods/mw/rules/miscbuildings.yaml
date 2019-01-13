@@ -620,7 +620,6 @@ MISS:
 		Range: 1c0, 5c0
 TECH1:
 	Inherits: ^TechBuilding	
-	AutoTarget:
 	Inherits@AUTOTARGET: ^AutoTargetGround
 	Inherits@Hitshape: ^3x2Shape
 	Building:

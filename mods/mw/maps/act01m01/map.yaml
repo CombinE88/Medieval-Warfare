@@ -465,7 +465,7 @@ Nodes:
 			String: Reach the village!
 		Out@Con4:
 			ConnectionType: String
-			String: The Commander must survive!
+			String: Darbentis must survive!
 	TriggerOnEnteredFootprint@ND07: TriggerOnEnteredFootprint
 		Pos: 754,-477
 		Out@Con1:
@@ -921,7 +921,9 @@ Rules: mw|rules/campaign-maprules.yaml
 			Red: 0.85
 			Green: 0.85
 			Blue: 0.85
-			Ambient: 0.68	
+			Ambient: 0.68
 		MissionData:
 			Briefing: The terror of war has been on the horizon for almost a millenia, the King’s people lay petrified of the concerning threat of an all out crusade. But from whom?\n\n The King was then sent a messenger that there was an old gentleman by the name of “Wallace” who is too old and hagged to make the journey to Gabriel Dardanis’ castle; baring news that could narrow down just what is instigating these acts that has terrorised the King’s land.\n Gabriel, having received this message:\n\n sends out his most newest recruit to his Holy Trinity of Swords: Darbentis, to go seek this gentleman within a defective Hamlet by the lakeside that has already been swept off it’s feet from this unknown force, to see if the rumours that he could be facing a war that’ll ravage the world.
-			
+	HOOD:
+		Tooltip:
+			Name: Darbentis

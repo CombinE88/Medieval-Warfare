@@ -48,6 +48,7 @@ HOOD:
 		Voice: Attack
 	AutoTarget:
 		InitialStance: AttackAnything
+		ScanRadius: 5
 	RenderSprites:
 		Image: hood
 		PlayerPalette: raplayer

@@ -761,7 +761,7 @@ DEMONHORSE:
 	RevealsShroud:
 		Range: 7c0
 	Health:
-		HP: 45000
+		HP: 49500
 	Armament:
 		Weapon: SuperiorPikeCavalry
 	AttackFrontal:

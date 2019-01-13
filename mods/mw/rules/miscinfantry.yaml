@@ -840,12 +840,12 @@ HUNTER:
 		Condition: UnloadDeer
 	Armament@Huntdeer:
 		Weapon: BowNArrowHunter
-		Name: primary
+		Name: secondary
 		RequiresCondition: (FullFood + LootingDeer) == 0
 		FireDelay: 5
 	Armament@HuntdeeronWater:
 		Weapon: BowNArrowHunterOnWater
-		Name: primary
+		Name: secondary
 		RequiresCondition: (FullFood + LootingDeer) == 0
 	Armament@GatherDeer:
 		Weapon: HunterGather

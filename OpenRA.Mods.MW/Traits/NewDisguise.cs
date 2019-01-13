@@ -161,8 +161,11 @@ namespace OpenRA.Mods.MW.Traits
             if (order.OrderString == "Disguise")
             {
                 var target = order.Target.Actor != self && order.Target.Actor.IsInWorld ? order.Target.Actor : null;
-                DisguiseAs(target);
-                Target = target;
+                if (target != null)
+                {
+                    DisguiseAs(target);
+                    Target = target;
+                }
             }
         }
 

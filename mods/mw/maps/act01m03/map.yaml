@@ -1,6 +1,6 @@
 MapFormat: 11
 RequiresMod: mw
-Title: Act I Mission 3
+Title: Act I Mission 3 Conquest of the Hillside
 Author: CombinE
 Tileset: TEMPERAT
 MapSize: 54,66
@@ -2661,3 +2661,6 @@ Rules: mw|rules/campaign-maprules.yaml
 	ROSS5:
 		Buildable:
 			Prerequisites: ~disabled
+	World:
+		MissionData:
+			Briefing: Olfenheider’s tricks to win a war are very unorthodox, but there is always flaws behind it: his anger. He controls a total of five settlements within the Hillside fortress of his. If these settlements were to “turn coats” on him to aid the battle towards him: his frustration of our victory will make it so he will rue the day he even tried to attack the King’s precious lands that rightfully belong to Gabriel Dardanis I!
