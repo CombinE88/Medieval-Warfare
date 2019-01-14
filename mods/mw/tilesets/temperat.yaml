@@ -104,6 +104,10 @@ Terrain:
 		TargetTypes: Ground
 		RestrictPlayerColor: true
 		Color: 284436
+	TerrainType@RoughGround:
+		Type: RoughGround
+		TargetTypes: Ground
+		Color: 44543C
 Templates:
 	Template@255:
 		Id: 255
@@ -2154,6 +2158,31 @@ Templates:
 		Categories: Debris
 		Tiles:
 			0: Rock
+	Template@199:
+		Id: 199
+		Images: bits/terrain/terrainextras.png
+		Palette: terrainmw
+		PickAny: true
+		Frames: 0,1,2,3,4,5,6,7,10,11,12,13,14,15,16,17
+		Size: 1,1
+		Categories: Debris
+		Tiles:
+			0: RoughGround
+			1: RoughGround
+			2: RoughGround
+			3: RoughGround
+			4: RoughGround
+			5: RoughGround
+			6: RoughGround
+			7: RoughGround
+			8: RoughGround
+			9: RoughGround
+			10: RoughGround
+			11: RoughGround
+			12: RoughGround
+			13: RoughGround
+			14: RoughGround
+			15: RoughGround
 	Template@203:
 		Id: 203
 		Images: bits/terrain/shores.png

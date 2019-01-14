@@ -34,6 +34,8 @@
 			Swamp: 90
 			DeepSwamp: 50
 				PathingCost: 200
+			RoughGround: 70			
+				PathingCost: 130
 	Locomotor@HUNTER:
 		Name: hunter
 		Crushes: crate
@@ -57,6 +59,8 @@
 			Swamp: 90
 			DeepSwamp: 50
 				PathingCost: 200
+			RoughGround: 90			
+				PathingCost: 110
 	Locomotor@Farmer:
 		Name: farmer
 		Crushes: crate
@@ -75,6 +79,8 @@
 			Swamp: 90
 			DeepSwamp: 50
 				PathingCost: 200
+			RoughGround: 90			
+				PathingCost: 110
 	Locomotor@CAVALRYLIGHT:
 		Name: lightcavalry
 		Crushes: crate
@@ -172,6 +178,7 @@
 			Water: 100
 			Swamp: 100
 			DeepSwamp: 100
+			RoughGround: 100	
 	Locomotor@IMMOBILE:
 		Name: immobile
 		SharesCell: true
@@ -190,6 +197,7 @@
 			Water: 1
 			Swamp: 1
 			DeepSwamp: 1
+			RoughGround: 1	
 	Faction@Random:
 		Name: Any
 		InternalName: Random

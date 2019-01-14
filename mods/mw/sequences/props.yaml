@@ -48,7 +48,24 @@ decor8:
 decor9:
 	idle: deco3
 	damaged-idle: deco3
+		Start: 1	
+decorprops:
+	idle: props
+		Start: 0
+	idle1: props
+		Start: 0
+	idle2: props
 		Start: 1
+	idle3: props
+		Start: 2
+	idle4: props
+		Start: 3
+	idle5: props
+		Start: 4
+	idle6: props
+		Start: 5
+	idle7: props
+		Start: 6
 fireplace:
 	idle: 
 		Start: 1

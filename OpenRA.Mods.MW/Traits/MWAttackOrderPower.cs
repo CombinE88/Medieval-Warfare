@@ -56,7 +56,6 @@ namespace OpenRa.Mods.MW.Traits
     {
         readonly MwAttackOrderPowerInfo info;
         AttackBase attack;
-        private bool callStop;
 
         public MwAttackOrderPower(Actor self, MwAttackOrderPowerInfo info)
             : base(self, info)
@@ -73,7 +72,6 @@ namespace OpenRa.Mods.MW.Traits
         public override void Activate(Actor self, Order order, SupportPowerManager manager)
         {
             base.Activate(self, order, manager);
-            callStop = false;
             attack.AttackTarget(Target.FromCell(self.World, order.TargetLocation), false, false, true);
 
             if (info.CameraRange != WDist.Zero)
