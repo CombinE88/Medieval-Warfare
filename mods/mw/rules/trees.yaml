@@ -612,6 +612,34 @@ TC05:
 	Explodes@Tib:
 		Weapon: LeaveWoodXL
 		EmptyWeapon: LeaveWoodXL
+SHRUB1:
+	Inherits: ^Tree
+	Building:
+		Footprint: =
+		Dimensions: 1,1
+	EditorTilesetFilter:
+		ExcludeTilesets: DESERT
+SHRUB2:
+	Inherits: ^Tree
+	Building:
+		Footprint: =
+		Dimensions: 1,1
+	EditorTilesetFilter:
+		ExcludeTilesets: DESERT
+SHRUB3:
+	Inherits: ^Tree
+	Building:
+		Footprint: =
+		Dimensions: 1,1
+	EditorTilesetFilter:
+		ExcludeTilesets: DESERT
+SHRUB4:
+	Inherits: ^Tree
+	Building:
+		Footprint: =
+		Dimensions: 1,1
+	EditorTilesetFilter:
+		ExcludeTilesets: DESERT
 DEADTREE1:
 	Inherits: ^Tree
 	RenderSprites:

@@ -744,14 +744,14 @@ GargAttack:
 		Speed: 350
 		Blockable: false
 		LaunchAngle: 46
-		Inaccuracy: 0c788
+		Inaccuracy: 0c988
 		Image: flamespit
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
-		Spread: 210
+		Spread: 320
 		ValidTargets: Ground
 		InvalidTargets: Air
-		Damage: 1450
+		Damage: 1950
 		Falloff: 100, 70, 60, 50, 18, 7, 0
 		Versus:
 			None: 100
@@ -800,11 +800,11 @@ ObeliskLight:
 	Warhead@1Dam: SpreadDamage
 		Spread: 141
 		ValidTargets: Ground, Air
-		Damage: 2000
+		Damage: 2500
 		Versus:
-			Leather: 100
-			Light: 100
-			Heavy: 100
+			Leather: 300
+			Light: 250
+			Heavy: 200
 			Concrete: 100
 			Knight: 100
 			LightCavalry: 100
@@ -887,7 +887,7 @@ RDHand:
 	Warhead@1Dam: SpreadDamage
 		Spread: 452
 		InvalidTargets: Wall
-		Damage: 2500
+		Damage: 3300
 		ValidTargets: Ground
 		Versus:
 			None: 100
@@ -907,7 +907,7 @@ RDHand:
 		ValidTargets: Ground
 		InvalidTargets: Wall
 		Delay: 20
-		Damage: 2500
+		Damage: 3300
 		Versus:
 			None: 100
 			Leather: 100
@@ -925,7 +925,7 @@ RDHand:
 		ValidTargets: Ground
 		InvalidTargets: Wall
 		Delay: 40
-		Damage: 2500
+		Damage: 3300
 		Versus:
 			None: 100
 			Leather: 100

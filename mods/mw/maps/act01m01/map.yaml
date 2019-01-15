@@ -401,6 +401,30 @@ Actors:
 		Location: 6,4
 		SubCell: 3
 		Facing: 92
+	Actor119: decor10
+		Owner: Neutral
+		Location: 29,4
+	Actor120: decor14
+		Owner: Neutral
+		Location: 21,9
+	Actor121: decor11
+		Owner: Neutral
+		Location: 25,5
+	Actor122: decor12
+		Owner: Neutral
+		Location: 30,8
+	Actor123: decor6
+		Owner: Neutral
+		Location: 10,7
+	Actor124: prop1
+		Owner: Neutral
+		Location: 5,6
+	Actor125: prop1
+		Owner: Neutral
+		Location: 27,10
+	Actor126: prop1
+		Owner: Neutral
+		Location: 22,5
 Nodes:
 	TriggerWorldLoaded@ND01: TriggerWorldLoaded
 		Pos: -951,-178
@@ -510,6 +534,7 @@ Nodes:
 			Actor: Actor76
 		Out@Con2:
 			ConnectionType: ActorList
+			Actor: Actor76
 			Actors: Actor76
 	TriggerOnKilled@ND13: TriggerOnKilled
 		Pos: 787,-142
@@ -691,6 +716,7 @@ Nodes:
 			Actor: Actor90
 		Out@Con2:
 			ConnectionType: ActorList
+			Actor: Actor90
 			Actors: Actor90
 	MapInfoActorReference@ND32: MapInfoActorReference
 		Pos: 1468,470
@@ -699,6 +725,7 @@ Nodes:
 			Actor: Actor94
 		Out@Con2:
 			ConnectionType: ActorList
+			Actor: Actor94
 			Actors: Actor94
 	MapInfoActorReference@ND33: MapInfoActorReference
 		Pos: 1467,-6
@@ -707,6 +734,7 @@ Nodes:
 			Actor: Actor93
 		Out@Con2:
 			ConnectionType: ActorList
+			Actor: Actor93
 			Actors: Actor93
 	MapInfoActorReference@ND34: MapInfoActorReference
 		Pos: 1470,-242
@@ -715,6 +743,7 @@ Nodes:
 			Actor: Actor92
 		Out@Con2:
 			ConnectionType: ActorList
+			Actor: Actor92
 			Actors: Actor92
 	TriggerOnKilled@ND39: TriggerOnKilled
 		Pos: 1991,-204
@@ -843,6 +872,7 @@ Nodes:
 			Actor: Actor113
 		Out@Con2:
 			ConnectionType: ActorList
+			Actor: Actor113
 			Actors: Actor113
 	MapInfoActorReference@ND52: MapInfoActorReference
 		Pos: 2136,-1110

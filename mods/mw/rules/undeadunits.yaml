@@ -178,7 +178,7 @@ UNDEAD1:
 		BuildPaletteOrder: 10
 		Description: \n  Strong vs Infantry\n  Weak vs Cavalry \n  Can cut down trees.
 		Queue: MInfantry.ded
-		BuildDuration: 300
+		BuildDuration: 250
 	Armor:
 		Type: Heavy
 	Targetable@CombatRole:
@@ -236,7 +236,7 @@ UNDEAD3:
 		BuildPaletteOrder: 20
 		Description: \n  Strong vs Cavalry.\n  Weak vs Infantry\n  Deals damage when trampled by Cavalry\n  Can cut down trees.
 		Queue: MInfantry.ded
-		BuildDuration: 400
+		BuildDuration: 250
 	-Crushable:
 	Targetable@CombatRole:
 		TargetTypes: Light
@@ -270,7 +270,7 @@ UNDEAD4:
 		Description: \n  Strong vs all\n  Weak vs Aircrafts
 		Prerequisites: seal3
 		Queue: MInfantry.ded
-		BuildDuration: 800
+		BuildDuration: 500
 	Targetable@CombatRole:
 		TargetTypes: Heavy
 UNDEAD5:
@@ -308,7 +308,7 @@ UNDEAD5:
 		BuildPaletteOrder: 30
 		Description: \n  Strong vs Light Infantry\n  Weak vs Cavalry and heavy Infantry\n  Detects cloaked units\n  Can attack Aircraft\n  Slows targets under fire
 		Queue: MInfantry.ded
-		BuildDuration: 500
+		BuildDuration: 300
 	Targetable@CombatRole:
 		TargetTypes: Ranged
 UNDEAD6:
@@ -327,7 +327,7 @@ UNDEAD6:
 	Targetable:
 		TargetTypes: Ground, Cavalry
 	Health:
-		HP: 70250
+		HP: 60250
 	Armament:
 		Weapon: SkeletonGiant
 		FireDelay: 9
@@ -426,7 +426,7 @@ UNDEAD7:
 		Locomotor: lightsiege
 		Speed: 40
 	Health:
-		HP: 50000
+		HP: 45000
 	-Crushable:
 	AutoTarget:
 		ScanRadius: 12
@@ -469,7 +469,7 @@ GRIM:
 		Speed: 37
 	-Crushable:
 	Health:
-		HP: 18500
+		HP: 19500
 	Armament@Ground:
 		Weapon: GrimSkytheThrow
 		LocalOffset: 141,75,352

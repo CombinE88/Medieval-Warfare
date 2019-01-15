@@ -589,3 +589,39 @@ deadtree5:
 deadtree6:
 	idle: deadtree
 		Start: 5
+shrub1:
+	Defaults:
+		UseTilesetExtension: true
+		TilesetOverrides:
+			JUNGLE: TEMPERAT
+			INTERIOR: TEMPERAT
+	idle: shrub1
+		Tick: 240
+		Offset: -2,-5 
+shrub2:
+	Defaults:
+		UseTilesetExtension: true
+		TilesetOverrides:
+			JUNGLE: TEMPERAT
+			INTERIOR: TEMPERAT
+	idle: shrub2
+		Tick: 240
+		Offset: -2,-5 
+shrub3:
+	Defaults:
+		UseTilesetExtension: true
+		TilesetOverrides:
+			JUNGLE: TEMPERAT
+			INTERIOR: TEMPERAT
+	idle: shrub3
+		Tick: 240
+		Offset: -2,-5 
+shrub4:
+	Defaults:
+		UseTilesetExtension: true
+		TilesetOverrides:
+			JUNGLE: TEMPERAT
+			INTERIOR: TEMPERAT
+	idle: shrub4
+		Tick: 240
+		Offset: -2,-5 

@@ -716,9 +716,6 @@ Actors:
 	Actor204: shadowfull
 		Owner: Neutral
 		Location: 38,3
-	Actor208: shadowtopend
-		Owner: Neutral
-		Location: 37,4
 	Actor211: shadowfull
 		Owner: Neutral
 		Location: 39,3
@@ -731,15 +728,9 @@ Actors:
 	Actor214: shadowfull
 		Owner: Neutral
 		Location: 39,0
-	Actor202: shadowblockleft
-		Owner: Neutral
-		Location: 37,3
 	Actor209: shadowfull
 		Owner: Neutral
 		Location: 34,3
-	Actor216: shadowblocktop
-		Owner: Neutral
-		Location: 35,3
 	Actor217: shadowtop
 		Owner: Neutral
 		Location: 34,4
@@ -776,15 +767,6 @@ Actors:
 	Actor229: shadowtopend
 		Owner: Neutral
 		Location: 33,4
-	Actor219: shadowedgeouter
-		Owner: Neutral
-		Location: 36,4
-	Actor215: shadowleftend
-		Owner: Neutral
-		Location: 36,3
-	Actor230: shadowlargeleft
-		Owner: Neutral
-		Location: 36,3
 	Actor210: idoorsnorth
 		Owner: Neutral
 		Location: 35,2
@@ -1077,6 +1059,21 @@ Actors:
 		Location: 14,25
 		SubCell: 3
 		Facing: 92
+	Actor305: shadowfull
+		Owner: Neutral
+		Location: 37,3
+	Actor306: shadowfull
+		Owner: Neutral
+		Location: 36,3
+	Actor307: shadowfull
+		Owner: Neutral
+		Location: 35,3
+	Actor308: shadowtop
+		Owner: Neutral
+		Location: 36,4
+	Actor309: shadowtop
+		Owner: Neutral
+		Location: 37,4
 Nodes:
 	MapInfoNode@ND01: MapInfoNode
 		Pos: -720,-191
@@ -1350,6 +1347,7 @@ Nodes:
 			Actor: Actor140
 		Out@Con2:
 			ConnectionType: ActorList
+			Actor: Actor140
 			Actors: Actor140
 	TimerStop@ND25: TimerStop
 		Pos: 1195,-938
@@ -1376,6 +1374,7 @@ Nodes:
 			Actor: Actor138
 		Out@Con2:
 			ConnectionType: ActorList
+			Actor: Actor138
 			Actors: Actor138
 	TimerStop@ND28: TimerStop
 		Pos: 1393,-8
@@ -1402,6 +1401,7 @@ Nodes:
 			Actor: Actor139
 		Out@Con2:
 			ConnectionType: ActorList
+			Actor: Actor139
 			Actors: Actor139
 	TimerStop@ND31: TimerStop
 		Pos: 1280,763
@@ -1557,6 +1557,7 @@ Nodes:
 			Actor: Actor79
 		Out@Con2:
 			ConnectionType: ActorList
+			Actor: Actor79
 			Actors: Actor79
 	TimerStop@ND44: TimerStop
 		Pos: 3241,77
@@ -1578,6 +1579,7 @@ Nodes:
 			Actor: Actor77
 		Out@Con2:
 			ConnectionType: ActorList
+			Actor: Actor77
 			Actors: Actor77
 	TriggerOnKilled@ND47: TriggerOnKilled
 		Pos: 3045,887
@@ -1714,6 +1716,7 @@ Nodes:
 			Actor: Actor76
 		Out@Con2:
 			ConnectionType: ActorList
+			Actor: Actor76
 			Actors: Actor76
 	TriggerWorldLoaded@ND62: TriggerWorldLoaded
 		Pos: 391,1648
@@ -2356,6 +2359,7 @@ Nodes:
 			Actor: Actor80
 		Out@Con2:
 			ConnectionType: ActorList
+			Actor: Actor80
 			Actors: Actor80
 	TimerStop@ND124: TimerStop
 		Pos: 5093,192
@@ -2548,6 +2552,7 @@ Nodes:
 			Actor: Actor89
 		Out@Con2:
 			ConnectionType: ActorList
+			Actor: Actor89
 			Actors: Actor89
 	TimerStop@ND142: TimerStop
 		Pos: 6279,2207

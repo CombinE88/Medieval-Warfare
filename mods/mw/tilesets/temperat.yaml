@@ -2091,7 +2091,7 @@ Templates:
 		Images: bits/terrain/terrainset.png
 		Palette: terrainmw
 		Frames: 288
-		Size: 2,2
+		Size: 1,1
 		Categories: Debris
 		Tiles:
 			0: Rock
@@ -2100,7 +2100,7 @@ Templates:
 		Images: bits/terrain/terrainset.png
 		Palette: terrainmw
 		Frames: 289
-		Size: 2,2
+		Size: 1,1
 		Categories: Debris
 		Tiles:
 			0: Rock
@@ -2109,7 +2109,7 @@ Templates:
 		Images: bits/terrain/terrainset.png
 		Palette: terrainmw
 		Frames: 298
-		Size: 2,2
+		Size: 1,1
 		Categories: Debris
 		Tiles:
 			0: Rock
@@ -2118,7 +2118,7 @@ Templates:
 		Images: bits/terrain/terrainset.png
 		Palette: terrainmw
 		Frames: 299
-		Size: 2,2
+		Size: 1,1
 		Categories: Debris
 		Tiles:
 			0: Rock
@@ -2127,7 +2127,7 @@ Templates:
 		Images: bits/terrain/terrainset.png
 		Palette: terrainmw
 		Frames: 279
-		Size: 2,2
+		Size: 1,1
 		Categories: Debris
 		Tiles:
 			0: Rock
@@ -2136,7 +2136,7 @@ Templates:
 		Images: bits/terrain/terrainset.png
 		Palette: terrainmw
 		Frames: 269
-		Size: 2,2
+		Size: 1,1
 		Categories: Debris
 		Tiles:
 			0: Rock
@@ -2145,7 +2145,7 @@ Templates:
 		Images: bits/terrain/terrainset.png
 		Palette: terrainmw
 		Frames: 259
-		Size: 2,2
+		Size: 1,1
 		Categories: Debris
 		Tiles:
 			0: Rock
@@ -2154,10 +2154,32 @@ Templates:
 		Images: bits/terrain/terrainset.png
 		Palette: terrainmw
 		Frames: 249
-		Size: 2,2
+		Size: 1,1
 		Categories: Debris
 		Tiles:
 			0: Rock
+	Template@1981:
+		Id: 1981
+		Images: bits/terrain/terrainextras.png
+		Palette: terrainmw
+		Frames: 40,41
+		Size: 2,1
+		Categories: Debris
+		Tiles:
+			0: Rock
+			1: Rock
+	Template@1982:
+		Id: 1982
+		Images: bits/terrain/terrainextras.png
+		Palette: terrainmw
+		Frames: 50,51,60,61
+		Size: 2,2
+		Categories: Debris
+		Tiles:
+			0: Clear
+			1: Rock
+			2: Rock
+			3: Rock
 	Template@199:
 		Id: 199
 		Images: bits/terrain/terrainextras.png
@@ -2329,6 +2351,78 @@ Templates:
 			3: Clear
 			4: Clear
 			5: Clear
+	Template@19914:
+		Id: 19914
+		Images: bits/terrain/terrainextras.png
+		Palette: terrainmw
+		Frames: 74
+		Size: 1,1
+		Categories: Debris
+		Tiles:
+			0: Rock
+	Template@19915:
+		Id: 19915
+		Images: bits/terrain/terrainextras.png
+		Palette: terrainmw
+		Frames: 75
+		Size: 1,1
+		Categories: Debris
+		Tiles:
+			0: Rock
+	Template@19916:
+		Id: 19916
+		Images: bits/terrain/terrainextras.png
+		Palette: terrainmw
+		Frames: 70,71
+		Size: 2,1
+		Categories: Debris
+		Tiles:
+			0: Rock
+			1: Rock
+	Template@19917:
+		Id: 19917
+		Images: bits/terrain/terrainextras.png
+		Palette: terrainmw
+		Frames: 84,85
+		Size: 2,1
+		Categories: Debris
+		Tiles:
+			0: Rock
+			1: Rock
+	Template@19918:
+		Id: 19918
+		Images: bits/terrain/terrainextras.png
+		Palette: terrainmw
+		Frames: 76,86
+		Size: 1,2
+		Categories: Debris
+		Tiles:
+			0: Rock
+			1: Rock
+	Template@19919:
+		Id: 19919
+		Images: bits/terrain/terrainextras.png
+		Palette: terrainmw
+		Frames: 72,73,82,83
+		Size: 2,2
+		Categories: Debris
+		Tiles:
+			0: Clear
+			1: Rock
+			2: Rock
+			3: Rock
+	Template@19920:
+		Id: 19920
+		Images: bits/terrain/terrainextras.png
+		Palette: terrainmw
+		Frames: 80,81,90,91
+		Size: 2,2
+		Categories: Debris
+		Tiles:
+			0: Clear
+			1: Rock
+			2: Rock
+			3: Rock
 	 Template@203:
 		Id: 203
 		Images: bits/terrain/shores.png
