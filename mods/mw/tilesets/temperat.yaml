@@ -2048,6 +2048,26 @@ Templates:
 			3: Road
 			4: River
 			5: River
+	Template@1621:
+		Id: 1621
+		Images: bits/terrain/watercliffs.png
+		Palette: rivermw
+		Frames: 189,199
+		Size: 1,2
+		Categories: River
+		Tiles:
+			0: Clear
+			1: Clear
+	Template@1622:
+		Id: 1622
+		Images: bits/terrain/watercliffs.png
+		Palette: rivermw
+		Frames: 208,209
+		Size: 2,1
+		Categories: River
+		Tiles:
+			0: Clear
+			1: Clear
 	Template@188:
 		Id: 188
 		Images: bits/terrain/terrainset.png
@@ -2073,8 +2093,8 @@ Templates:
 		Tiles:
 			0: Rock
 			1: Rock
-			2: Clear
-			3: Rock
+			2: Rock
+			3: Clear
 	Template@190:
 		Id: 190
 		Images: bits/terrain/terrainset.png
@@ -2423,6 +2443,39 @@ Templates:
 			1: Rock
 			2: Rock
 			3: Rock
+	Template@19921:
+		Id: 19921
+		Images: bits/terrain/terrainextras.png
+		Palette: terrainmw
+		Frames: 8,9,18,19
+		Size: 2,2
+		Categories: Debris
+		Tiles:
+			0: Rock
+			1: Clear
+			2: Rock
+			3: Rock
+	Template@19922:
+		Id: 19922
+		Images: bits/terrain/terrainextras.png
+		Palette: terrainmw
+		Frames: 77,78,87,88
+		Size: 2,2
+		Categories: Debris
+		Tiles:
+			0: Rock
+			2: Rock
+			3: Rock
+	Template@19923:
+		Id: 19923
+		Images: bits/terrain/terrainextras.png
+		Palette: terrainmw
+		Frames: 97,98
+		Size: 2,1
+		Categories: Debris
+		Tiles:
+			0: Rock
+			1: Rock
 	 Template@203:
 		Id: 203
 		Images: bits/terrain/shores.png

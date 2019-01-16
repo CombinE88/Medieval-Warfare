@@ -54,9 +54,6 @@ Actors:
 	Actor2: tc04
 		Owner: Neutral
 		Location: 27,97
-	Actor3: tc05
-		Owner: Neutral
-		Location: 6,70
 	Actor4: t14
 		Owner: Neutral
 		Location: 11,29
@@ -1273,6 +1270,166 @@ Actors:
 		Owner: Baron
 		Location: 13,6
 		Facing: 148
+	Actor343: shrub1
+		Owner: Neutral
+		Location: 19,160
+	Actor344: shrub2
+		Owner: Neutral
+		Location: 16,162
+	Actor345: shrub3
+		Owner: Neutral
+		Location: 9,161
+	Actor346: shrub4
+		Owner: Neutral
+		Location: 16,157
+	Actor347: shrub4
+		Owner: Neutral
+		Location: 19,140
+	Actor348: shrub4
+		Owner: Neutral
+		Location: 22,143
+	Actor349: shrub2
+		Owner: Neutral
+		Location: 18,145
+	Actor350: shrub3
+		Owner: Neutral
+		Location: 14,144
+	Actor351: shrub3
+		Owner: Neutral
+		Location: 27,116
+	Actor352: shrub4
+		Owner: Neutral
+		Location: 27,113
+	Actor353: shrub1
+		Owner: Neutral
+		Location: 25,109
+	Actor354: shrub2
+		Owner: Neutral
+		Location: 24,113
+	Actor355: shrub2
+		Owner: Neutral
+		Location: 29,110
+	Actor356: shrub3
+		Owner: Neutral
+		Location: 21,90
+	Actor357: shrub4
+		Owner: Neutral
+		Location: 20,87
+	Actor358: shrub2
+		Owner: Neutral
+		Location: 22,84
+	Actor359: shrub1
+		Owner: Neutral
+		Location: 21,82
+	Actor360: shrub3
+		Owner: Neutral
+		Location: 26,38
+	Actor362: shrub3
+		Owner: Neutral
+		Location: 22,41
+	Actor361: shrub4
+		Owner: Neutral
+		Location: 19,34
+	Actor363: t07
+		Owner: Neutral
+		Location: 6,72
+	Actor364: t07
+		Owner: Neutral
+		Location: 18,74
+	Actor365: t08
+		Owner: Neutral
+		Location: 27,72
+	Actor366: t11
+		Owner: Neutral
+		Location: 9,44
+	Actor367: t08
+		Owner: Neutral
+		Location: 7,42
+	Actor368: procnew
+		Owner: Baron
+		Location: 26,9
+	Actor369: ntent1
+		Owner: Baron
+		Location: 24,67
+	Actor370: deadtable1
+		Owner: Neutral
+		Location: 25,73
+	Actor371: deadbarrelmw11
+		Owner: Neutral
+		Location: 19,76
+	Actor372: deadbarrelmw4
+		Owner: Neutral
+		Location: 17,75
+	Actor373: deadbarrelmw2
+		Owner: Neutral
+		Location: 20,72
+	Actor374: deadstool6
+		Owner: Neutral
+		Location: 23,76
+	Actor375: deadbarrelmw8
+		Owner: Neutral
+		Location: 16,77
+	Actor376: deadstool8
+		Owner: Neutral
+		Location: 24,78
+	Actor377: ichestdeadb
+		Owner: Neutral
+		Location: 27,73
+	Actor378: ichestdeadc
+		Owner: Neutral
+		Location: 18,71
+	Actor379: deadtable3
+		Owner: Neutral
+		Location: 19,75
+	Actor380: deadstool2
+		Owner: Neutral
+		Location: 21,72
+	Actor381: deadstool7
+		Owner: Neutral
+		Location: 16,73
+	Actor382: gsplace3c
+		Owner: Neutral
+		Location: 30,56
+	Actor383: deer03
+		Owner: Neutral
+		Location: 27,111
+		SubCell: 3
+		Facing: 92
+	Actor384: deer03a
+		Owner: Neutral
+		Location: 27,114
+		SubCell: 3
+		Facing: 92
+	Actor385: deer01
+		Owner: Neutral
+		Location: 22,87
+		SubCell: 3
+		Facing: 92
+	Actor386: deer01
+		Owner: Neutral
+		Location: 23,82
+		SubCell: 3
+		Facing: 92
+	Actor387: deer02
+		Owner: Neutral
+		Location: 21,84
+		SubCell: 3
+		Facing: 92
+	Actor388: deer02
+		Owner: Neutral
+		Location: 19,59
+		SubCell: 3
+		Facing: 92
+	Actor389: deer02
+		Owner: Neutral
+		Location: 17,52
+		SubCell: 3
+		Facing: 92
+	Actor390: deer01
+		Owner: Neutral
+		Location: 25,53
+		SubCell: 3
+		Facing: 92
 Nodes:
 	TriggerWorldLoaded@ND01: TriggerWorldLoaded
 		Pos: -699,-54
@@ -1718,7 +1875,7 @@ Nodes:
 			Actor: Actor130
 		Out@Con2:
 			ConnectionType: ActorList
-			Actors: Actor130,Actor137,Actor131,Actor132,Actor64,Actor65,Actor129,Actor135,Actor136,Actor133,Actor134,Actor139,Actor138,Actor140,Actor142,Actor141,Actor143,Actor144,Actor147,Actor148,Actor152,Actor151,Actor150,Actor149,Actor70,Actor146,Actor145,Actor69,Actor153,Actor154,Actor161,Actor168,Actor67,Actor155,Actor68,Actor162,Actor66,Actor157,Actor163,Actor164,Actor166,Actor167,Actor158,Actor160,Actor159,Actor169,Actor171,Actor170,Actor172,Actor173,Actor178,Actor179,Actor182,Actor181,Actor177,Actor176,Actor174,Actor180,Actor230,Actor231,Actor232,Actor233,Actor228,Actor227,Actor229,Actor337,Actor338,Actor317,Actor315,Actor318,Actor321,Actor316,Actor319,Actor320,Actor333,Actor336,Actor335,Actor334,Actor322,Actor323,Actor324,Actor325,Actor326,Actor330,Actor327,Actor331,Actor328,Actor329,Actor293,Actor294,Actor297,Actor291,Actor292,Actor295,Actor280,Actor298,Actor296,Actor339,Actor187,Actor340,Actor283,Actor284,Actor285,Actor286,Actor188,Actor189,Actor190,Actor282,Actor305,Actor306,Actor314,Actor313,Actor191,Actor186,Actor183,Actor312,Actor303,Actor311,Actor304,Actor342,Actor184,Actor301,Actor302,Actor309,Actor310,Actor308,Actor307,Actor185,Actor299,Actor300,Actor341,Actor254,Actor332,Actor281,Actor289,Actor290,Actor288,Actor287
+			Actors: Actor130,Actor137,Actor131,Actor132,Actor64,Actor65,Actor129,Actor135,Actor136,Actor133,Actor134,Actor139,Actor138,Actor140,Actor142,Actor141,Actor143,Actor144,Actor147,Actor148,Actor152,Actor151,Actor150,Actor149,Actor70,Actor146,Actor145,Actor69,Actor153,Actor154,Actor161,Actor168,Actor67,Actor155,Actor68,Actor162,Actor66,Actor157,Actor163,Actor164,Actor166,Actor167,Actor158,Actor160,Actor159,Actor169,Actor171,Actor170,Actor172,Actor173,Actor178,Actor179,Actor182,Actor181,Actor177,Actor176,Actor174,Actor180,Actor230,Actor231,Actor232,Actor233,Actor228,Actor227,Actor229,Actor337,Actor338,Actor317,Actor315,Actor318,Actor321,Actor316,Actor319,Actor320,Actor333,Actor336,Actor335,Actor334,Actor322,Actor323,Actor324,Actor325,Actor326,Actor330,Actor327,Actor331,Actor328,Actor329,Actor293,Actor294,Actor297,Actor291,Actor292,Actor295,Actor280,Actor298,Actor296,Actor339,Actor187,Actor340,Actor283,Actor284,Actor285,Actor286,Actor188,Actor189,Actor190,Actor282,Actor305,Actor306,Actor314,Actor313,Actor191,Actor186,Actor183,Actor312,Actor303,Actor311,Actor304,Actor342,Actor184,Actor301,Actor302,Actor309,Actor310,Actor308,Actor307,Actor185,Actor299,Actor300,Actor341,Actor332,Actor281,Actor289,Actor290,Actor288,Actor287,Actor368,Actor369
 	UiCompleteObjective@ND44: UiCompleteObjective
 		Pos: 1916,775
 		Out@Con1:
@@ -1867,7 +2024,7 @@ Nodes:
 			ConnectionType: Integer
 			Num: 75
 	TriggerOnEnteredFootprint@ND74: TriggerOnEnteredFootprint
-		Pos: 2813,600
+		Pos: 2820,611
 		Out@Con1:
 			ConnectionType: Exec
 		In@Con1:
@@ -1875,6 +2032,7 @@ Nodes:
 			Node@ND76: Con1
 		In@Con2:
 			ConnectionType: CellArray
+			Node@ND75: Con4
 		In@Con3:
 			ConnectionType: Repeatable
 	MapInfoNode@ND75: MapInfoNode
@@ -1882,6 +2040,9 @@ Nodes:
 		Out@Con1:
 			ConnectionType: Player
 			Player: King2
+		Out@Con4:
+			ConnectionType: CellArray
+			Cells: 33,4|32,4|31,4|30,4|29,4|28,4|27,4|26,4|25,4|24,4|23,4|22,4|21,4|20,4|19,4|18,4|17,4|16,4|15,4|14,4|13,4|12,4|11,4|10,4|9,4|8,4|7,4|6,4|5,4|4,4|3,4|2,4|1,4|0,4|0,3|1,3|2,3|3,3|4,3|5,3|6,3|7,3|8,3|9,3|10,3|11,3|12,3|13,3|14,3|15,3|16,3|17,3|18,3|19,3|20,3|21,3|22,3|23,3|24,3|25,3|26,3|27,3|28,3|29,3|30,3|31,3|32,3|33,3|33,2|32,2|31,2|30,2|29,2|28,2|27,2|26,2|25,2|23,2|22,2|21,2|20,2|19,2|18,2|17,2|16,2|15,2|14,2|13,2|12,2|11,2|9,2|8,2|7,2|6,2|5,2|4,2|3,2|2,2|1,2|0,2|0,1|1,1|2,1|3,1|5,1|6,1|7,1|8,1|9,1|10,1|11,1|12,1|13,1|14,1|15,1|16,1|17,1|18,1|19,1|20,1|21,1|22,1|23,1|24,1|25,1|26,1|27,1|28,1|29,1|30,1|31,1|32,1|33,1|33,0|32,0|31,0|30,0|29,0|28,0|27,0|26,0|25,0|24,0|23,0|22,0|21,0|20,0|19,0|18,0|17,0|16,0|15,0|14,0|13,0|12,0|11,0|10,0|9,0|8,0|7,0|6,0|5,0|4,0|3,0|2,0|1,0|0,0|4,1|10,2|24,2
 	GroupPlayerGroup@ND76: GroupPlayerGroup
 		Pos: 2545,615
 		Out@Con1:
@@ -1911,16 +2072,6 @@ Nodes:
 		In@Con2:
 			ConnectionType: Exec
 			Node@ND74: Con1
-	UiFailObjective@ND79: UiFailObjective
-		Pos: 1444,344
-		Out@Con1:
-			ConnectionType: Exec
-		In@Con1:
-			ConnectionType: Objective
-			Node@ND39: Con1
-		In@Con2:
-			ConnectionType: Exec
-			Node@ND80: Con1
 	TriggerOnKilled@ND80: TriggerOnKilled
 		Pos: 1214,121
 		Out@Con1:
@@ -1940,6 +2091,7 @@ Nodes:
 			Actor: Actor102
 		Out@Con2:
 			ConnectionType: ActorList
+			Actor: Actor102
 			Actors: Actor102
 	MapInfoActorInfoNode@ND83: MapInfoActorInfoNode
 		Pos: 1013,-410
