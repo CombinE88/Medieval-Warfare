@@ -1,0 +1,210 @@
+SIEGE2:
+	Inherits: ^Siege
+	Inherits@GainsExperience: ^GainsExperience
+	Inherits@GetsPoisoned: ^GetsPoisoned
+	Inherits@ArcherDemo65: ^ArcherDemo80
+	Inherits@SnakeStunnable: ^SnakeDamagableSiege
+	Inherits@AUTOTARGET: ^AutoTargetGround
+	Valued:
+		Cost: 1200
+	Tooltip:
+		Name: Siege Catapult
+	Buildable:
+		IconPalette: raicon
+		BuildPaletteOrder: 20
+		Prerequisites: anyhq
+		Description: The Catapult is a ballistic device used to launch multiple projectiles \nat a great distance without the aid of explosive devices.\n  Very strong vs Infantry and Buildings\n  Moderate vs Cavalry\n  Weak vs Aircraft\n\nTrains: 2 Peasants
+		Queue: MSiege.GDI
+	Mobile:
+		Speed: 60
+		TurnSpeed: 4
+	Health:
+		HP: 12000
+	Armament:
+		LocalOffset: 0,0,500
+		Weapon: siegeboulder
+	Armament@1:
+		LocalOffset: 0,0,500
+		Weapon: siegeboulder
+	Armament@2:
+		LocalOffset: 0,0,500
+		Weapon: siegeboulder
+	Armament@3:
+		LocalOffset: 0,0,500
+		Weapon: siegeboulder
+	AttackFrontal:
+	AutoTarget:
+		ScanRadius: 12
+	RenderSprites:
+		Image: siege2
+		PlayerPalette: raplayer
+	WithInfantryBody:
+		IdleSequences: stand
+		DefaultAttackSequence: shoot
+	Armor:
+		Type: LightCavalry
+	Selectable:
+		Bounds: 35,35,0,-6
+	Targetable:
+		TargetTypes: Ground, Siege
+	SpawnActorOnDeath:
+		Actor: SIEGE2.Husk
+	SpawnActorOnDeath@1:
+		Actor: SIEGERUNNER
+		Probability: 50
+	SpawnActorOnDeath@2:
+		Actor: SIEGERUNNER
+		Probability: 50
+	PersonValued:
+		ActorCount: 2
+	Targetable@CombatRole:
+		TargetTypes: Support
+	Voiced:
+		VoiceSet: SiegeCatapultVoice
+SIEGE3:
+	Inherits: ^Siege
+	Inherits@GainsExperience: ^GainsExperience
+	Inherits@GetsPoisoned: ^GetsPoisoned
+	Inherits@ArcherDemo65: ^ArcherDemo80
+	Inherits@SnakeStunnable: ^SnakeDamagableSiege
+	Inherits@AUTOTARGET: ^AutoTargetAll
+	ConditionManager:
+	Cargo:
+		MaxWeight: 6
+		PipCount: 6
+		Types: Archer, Infantry
+		EjectOnDeath: True
+	Valued:
+		Cost: 800
+	Tooltip:
+		Name: Siege Tower
+	Buildable:
+		IconPalette: raicon
+		BuildPaletteOrder: 20
+		Prerequisites: barracks
+		Description: The Siege Tower is a specialized siege engine, \nconstructed to protect assailants while approaching the defensive walls of a fortification .\n  Crushes Walls and Infantry\n  Transports up to 6 men\n  Very strong vs Infantry and Aircraft\n  Weak vs Cavalry\n  Can attack Aircraft\n\nTrains: 3 Peasants\n  Can crush walls
+		Queue: MSiege.GDI
+	Mobile:
+		Speed: 55
+		TurnSpeed: 5
+		Locomotor: heavysiege
+	Health:
+		HP: 62000
+	WithRoof:
+		Sequence: top
+	RenderSprites:
+		Image: sgtw
+		PlayerPalette: raplayer
+	WithInfantryBody:
+		IdleSequences: stand
+	BodyOrientation:
+		QuantizedFacings: 32
+	AutoTarget:
+		ScanRadius: 7
+		InitialStance: AttackAnything
+	Armor:
+		Type: HeavyCavalry
+	Selectable:
+		Bounds: 42,62,0,-12
+	SelectionDecorations:
+	Targetable:
+		TargetTypes: Ground, Siege
+	SpawnActorOnDeath:
+		Actor: SIEGE3.Husk
+	SpawnActorOnDeath@1:
+		Actor: SIEGERUNNER
+		Probability: 50
+	SpawnActorOnDeath@2:
+		Actor: SIEGERUNNER
+		Probability: 50
+	AttackTurreted:
+		Armaments: primary, secondary, tritiary, primaryair, secondaryair, tritiaryair
+	WithSpriteTurret@1: 
+		Sequence: turretidle
+		Turret: primary
+	WithSpriteTurret@2: 
+		Sequence: turretidle
+		Turret: secondary
+	WithSpriteTurret@3: 
+		Sequence: turretidle
+		Turret: tritiary
+	WithTurretAttackAnimation@1:
+		Turret: primary
+		Sequence: shoot
+		Armament: primary
+	WithTurretAttackAnimation@2:
+		Turret: secondary
+		Armament: secondary
+		Sequence: shoot
+		Delay: 15
+	WithTurretAttackAnimation@3:
+		Turret: tritiary
+		Armament: tritiary
+		Sequence: shoot
+		Delay: 30
+	WithTurretAttackAnimation@air1:
+		Turret: primary
+		Sequence: shoot
+		Armament: primaryair
+	WithTurretAttackAnimation@air2:
+		Turret: secondary
+		Armament: secondaryair
+		Sequence: shoot
+		Delay: 15
+	WithTurretAttackAnimation@air3:
+		Turret: tritiary
+		Armament: tritiaryair
+		Sequence: shoot
+		Delay: 30
+	Turreted@1:
+		Turret: primary
+		TurnSpeed: 100
+		Offset: 150,-150,950
+	Turreted@2:
+		Turret: secondary
+		TurnSpeed: 100
+		Offset: -150,0,950
+	Turreted@3:
+		Turret: tritiary
+		TurnSpeed: 100
+		Offset: 150,150,950
+	Armament@1:
+		Weapon: BowNArrowSiegeTower
+		LocalOffset: 0,0,427
+		Turret: primary
+		Name: primary
+		FireDelay: 5
+	Armament@2:
+		Weapon: BowNArrowSiegeTower
+		LocalOffset: 0,0,427
+		Turret: secondary
+		FireDelay: 20
+		Name: secondary
+	Armament@3:
+		Weapon: BowNArrowSiegeTower
+		LocalOffset: 0,0,427
+		Turret: tritiary
+		FireDelay: 35
+		Name: tritiary
+	Armament@1AIR:
+		Weapon: BowNArrowSiegeTowerAIR
+		LocalOffset: 0,0,427
+		Turret: primary
+		Name: primaryair
+		FireDelay: 5
+	Armament@2AIR:
+		Weapon: BowNArrowSiegeTowerAIR
+		LocalOffset: 0,0,427
+		Turret: secondary
+		FireDelay: 20
+		Name: secondaryair
+	Armament@3AIR:
+		Weapon: BowNArrowSiegeTowerAIR
+		LocalOffset: 0,0,427
+		Turret: tritiary
+		FireDelay: 35
+		Name: tritiaryair
+	PersonValued:
+		ActorCount: 3
+	Targetable@CombatRole:
+		TargetTypes: HeavyCavalry

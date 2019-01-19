@@ -320,26 +320,26 @@
 		RequiresCondition: !cursed
 ^GainPerZigurrat:
 	GrantConditionOnPrerequisite@ziggurat2:
-		Prerequisites: ziggurat2
+		Prerequisites: ziggurat2, !ziggurat3
 		Condition: zigguratleve2
 	GrantConditionOnPrerequisite@ziggurat3:
 		Prerequisites: ziggurat3
 		Condition: zigguratleve3
 	DamageMultiplier@Zigurrat2:
-		Modifier: 90
-		RequiresCondition: zigguratleve2
+		Modifier: 93
+		RequiresCondition: zigguratleve2 && !zigguratleve3
 	DamageMultiplier@Zigurrat3:
-		Modifier: 80
+		Modifier: 85
 		RequiresCondition: zigguratleve3
 	FirepowerMultiplier@Zigurrat2:
-		Modifier: 110
-		RequiresCondition: zigguratleve2
+		Modifier: 105
+		RequiresCondition: zigguratleve2 && !zigguratleve3
 	FirepowerMultiplier@Zigurrat3:
-		Modifier: 120
+		Modifier: 115
 		RequiresCondition: zigguratleve3
 	ReloadDelayMultiplier@Zigurrat2:
-		Modifier: 90
-		RequiresCondition: zigguratleve2
+		Modifier: 93
+		RequiresCondition: zigguratleve2 && !zigguratleve3
 	ReloadDelayMultiplier@Zigurrat3:
-		Modifier: 80
+		Modifier: 85
 		RequiresCondition: zigguratleve3

@@ -121,7 +121,7 @@ Repair:
 SetFire:
 	ReloadDelay: 110
 	Range: 1c800
-	ValidTargets: Structure
+	ValidTargets: Structure, Lever
 	Report: flamer2.aud
 	Projectile: Bullet
 		Speed: 1c682
@@ -130,7 +130,7 @@ SetFire:
 		Spread: 512
 		Delay: 5
 		Damage: 5000
-		ValidTargets: Structure
+		ValidTargets: Structure, Lever
 		InvalidTargets: Infantry
 		Versus:
 			Concrete: 100
@@ -140,7 +140,7 @@ SetFire:
 		Spread: 512
 		Damage: 4000
 		Delay: 15
-		ValidTargets: Structure
+		ValidTargets: Structure, Lever
 		InvalidTargets: Infantry
 		Versus:
 			Concrete: 100
@@ -150,7 +150,7 @@ SetFire:
 		Spread: 512
 		Damage: 2000
 		Delay: 27
-		ValidTargets: Structure
+		ValidTargets: Structure, Lever
 		InvalidTargets: Infantry
 		Versus:
 			Concrete: 100
@@ -160,7 +160,7 @@ SetFire:
 		Spread: 512
 		Damage: 1500
 		Delay: 39
-		ValidTargets: Structure
+		ValidTargets: Structure, Lever
 		InvalidTargets: Infantry
 		Versus:
 			Concrete: 100

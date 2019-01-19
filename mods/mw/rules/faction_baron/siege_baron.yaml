@@ -1,0 +1,216 @@
+SIEGE1:
+	Inherits: ^Siege
+	Inherits@GainsExperience: ^GainsExperience
+	Inherits@GetsPoisoned: ^GetsPoisoned
+	Inherits@ArcherDemo65: ^ArcherDemo80
+	Inherits@SnakeStunnable: ^SnakeDamagableSiege
+	Inherits@AUTOTARGET: ^AutoTargetGround
+	Valued:
+		Cost: 950
+	Tooltip:
+		Name: Siege Ballista
+	Buildable:
+		IconPalette: raicon
+		BuildPaletteOrder: 20
+		Prerequisites: anyhq
+		Description: The Siege Ballista is a missile weapon that launched a large projectile \nat a distant target.\n  Very strong vs Cavalry and Buildings \n  Moderate vs Infantry\n  Weak vs Aircraft\n\nTrains: 2 Peasants
+		Queue: MSiege.Nod
+	Mobile:
+		TurnSpeed: 4
+		Speed: 60
+	Health:
+		HP: 10000
+	Armament:
+		Weapon: siegebalista
+		LocalOffset: 712,0,100
+	AttackFrontal:
+	AutoTarget:
+		ScanRadius: 11
+	RenderSprites:
+		Image: siege1
+		PlayerPalette: raplayer
+	WithInfantryBody:
+		IdleSequences: stand
+		DefaultAttackSequence: shoot
+	Armor:
+		Type: LightCavalry
+	Selectable:
+		Bounds: 35,35,0,-6
+	Targetable:
+		TargetTypes: Ground, Siege
+	SpawnActorOnDeath:
+		Actor: SIEGE1.Husk
+	SpawnActorOnDeath@1:
+		Actor: SIEGERUNNER
+		Probability: 50
+	SpawnActorOnDeath@2:
+		Actor: SIEGERUNNER
+		Probability: 50
+	PersonValued:
+		ActorCount: 2
+	Targetable@CombatRole:
+		TargetTypes: Support
+	Voiced:
+		VoiceSet: SiegeBallistaVoice
+SIEGE4:
+	Inherits: ^Siege
+	Inherits@GainsExperience: ^GainsExperience
+	Inherits@ArcherDemo65: ^ArcherDemo80
+	Inherits@AUTOTARGET: ^AutoTargetGround
+	ConditionManager:
+	Cargo:
+		MaxWeight: 8
+		PipCount: 8
+		Types: Infantry, Archer
+		EjectOnDeath: True
+		LoadedCondition: batteringupgrade
+	Valued:
+		Cost: 650
+	Tooltip:
+		Name: Battering Ram
+	Buildable:
+		IconPalette: raicon
+		BuildPaletteOrder: 20
+		Prerequisites: barracks
+		Description: The battering ram is a siege engine that is designed \nto break open the masonry walls of fortifications.\n  Crushes Walls, Cavalry and Infantry\n  Transports up to 8 men\n  Gets faster with each passenger up to 220%\n  Very strong vs Buildings \n  Weak vs Cavalry, Infantry \n  Can only attack Buildings\n\nTrains: 3 Peasants\n  Can crush walls
+		Queue: MSiege.Nod
+	Mobile:
+		Speed: 30
+		TurnSpeed: 4
+		Locomotor: heavysiege
+	Health:
+		HP: 150000
+	RenderSprites:
+		Image: bara
+		PlayerPalette: raplayer
+	WithInfantryBody:
+		IdleSequences: stand
+		MoveSequence: run
+		DefaultAttackSequence: shoot
+	Armor:
+		Type: HeavyCavalry
+	Selectable:
+		Bounds: 42,38,0,-8
+	SelectionDecorations:
+	AttackFrontal:
+	Targetable:
+		TargetTypes: Ground, Siege
+	AutoTarget:
+		ScanRadius: 7
+		InitialStance: AttackAnything
+	Armament:
+		Weapon: battering
+	SpeedMultiplier:
+		RequiresCondition: batteringupgrade == 1
+		Modifier: 110
+	SpeedMultiplier@1:
+		RequiresCondition: batteringupgrade == 2
+		Modifier: 120
+	SpeedMultiplier@2:
+		RequiresCondition: batteringupgrade == 3
+		Modifier: 130
+	SpeedMultiplier@3:
+		RequiresCondition: batteringupgrade == 4
+		Modifier: 140
+	SpeedMultiplier@4:
+		RequiresCondition: batteringupgrade == 5
+		Modifier: 160
+	SpeedMultiplier@5:
+		RequiresCondition: batteringupgrade == 6
+		Modifier: 180
+	SpeedMultiplier@6:
+		RequiresCondition: batteringupgrade == 7
+		Modifier: 200
+	SpeedMultiplier@7:
+		RequiresCondition: batteringupgrade == 8
+		Modifier: 220
+	ReloadDelayMultiplier@1:
+		RequiresCondition: batteringupgrade == 1
+		Modifier: 94
+	ReloadDelayMultiplier@2:
+		RequiresCondition: batteringupgrade == 2
+		Modifier: 82 
+	ReloadDelayMultiplier@3:
+		RequiresCondition: batteringupgrade == 3
+		Modifier: 76
+	ReloadDelayMultiplier@4:
+		RequiresCondition: batteringupgrade == 4
+		Modifier: 70
+	ReloadDelayMultiplier@5:
+		RequiresCondition: batteringupgrade == 5
+		Modifier: 64
+	ReloadDelayMultiplier@6:
+		RequiresCondition: batteringupgrade == 6
+		Modifier: 58
+	ReloadDelayMultiplier@7:
+		RequiresCondition: batteringupgrade == 7
+		Modifier: 52	 
+	ReloadDelayMultiplier@8:
+		RequiresCondition: batteringupgrade == 8
+		Modifier: 46 
+	SpawnActorOnDeath:
+		Actor: SIEGE4.Husk
+	SpawnActorOnDeath@1:
+		Actor: SIEGERUNNER
+		Probability: 33
+	SpawnActorOnDeath@2:
+		Actor: SIEGERUNNER
+		Probability: 33
+	SpawnActorOnDeath@3:
+		Actor: SIEGERUNNER
+		Probability: 33
+	SpawnActorOnDeath@4:
+		Actor: SIEGERUNNER
+		Probability: 33
+	SpawnActorOnDeath@5:
+		Actor: SIEGERUNNER
+		Probability: 33
+	SpawnActorOnDeath@6:
+		Actor: SIEGERUNNER
+		Probability: 33
+	PersonValued:
+		ActorCount: 3
+	Targetable@CombatRole:
+		TargetTypes: HeavyCavalry      
+SIEGE99:
+	Inherits: ^Siege
+	Inherits@GainsExperience: ^GainsExperience
+	Inherits@GetsPoisoned: ^GetsPoisoned
+	Valued:
+		Cost: 2000
+	Tooltip:
+		Name: Wooden Horse
+	Mobile:
+		TurnSpeed: 6
+		Speed: 45
+	NewDisguiseTooltip:
+		Name: Wooden Horse
+	Health:
+		HP: 70000
+	AttackFrontal:
+	RenderSprites:
+		Image: newhorse
+		PlayerPalette: raplayer
+	NewWithDisguisingInfantryBody:
+		MoveSequence: idle
+		StandSequences: idle
+	-WithInfantryBody:
+	Armor:
+		Type: HeavyCavalry
+	Selectable:
+		Bounds: 42,42,0,0
+	SelectionDecorations:
+	Targetable:
+		TargetTypes: Ground, Siege
+	Cargo:
+		MaxWeight: 15
+		PipCount: 15
+		InitialUnits: e3newv2,e3newv2,e3newv2,e3newv2,e3newv2,e2new,e2new,e2new,e2new,e2new,e4new,e4new,e4new,e4new,e4new
+		Types: Infantry, Archer
+		EjectOnDeath: True
+	PersonValued:
+		ActorCount: 0
+	NewDisguise:
+	DisguiseChargeBar: 
+	Targetable@CombatRole:
+		TargetTypes: Support

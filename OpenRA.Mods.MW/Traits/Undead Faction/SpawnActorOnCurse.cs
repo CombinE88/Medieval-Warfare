@@ -75,7 +75,7 @@ namespace OpenRA.Mods.MW.Traits
             if (Info.SkipMakeAnimations)
 				td.Add(new SkipMakeAnimsInit());
 
-                self.World.AddFrameEndTask(w => w.CreateActor(info.SpawnRandomActors[self.World.SharedRandom.Next(0, info.SpawnRandomActors.Length)].ToLowerInvariant(), td));
+                self.World.AddFrameEndTask(w => w.CreateActor(info.SpawnRandomActors[w.SharedRandom.Next(0, info.SpawnRandomActors.Length)].ToLowerInvariant(), td));
 		}
 	}
 }

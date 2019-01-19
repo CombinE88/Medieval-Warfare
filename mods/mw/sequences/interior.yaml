@@ -161,19 +161,19 @@ deadbarrelmw8:
 		Start: 18
 barrelmw9:
 	idle: barrelmw
-		Start: 9
+		Start: 8
 deadbarrelmw9:
 	idle: barrelmw
 		Start: 19
 barrelmw10:
 	idle: barrelmw
-		Start: 10
+		Start: 9
 deadbarrelmw10:
 	idle: barrelmw
 		Start: 20
 barrelmw11:
 	idle: barrelmw
-		Start: 11
+		Start: 10
 deadbarrelmw11:
 	idle: barrelmw
 		Start: 21
@@ -385,16 +385,16 @@ crackwallh:
 firepit:
 	idle:
 	burnloop: firem
-		Start: 16
-		Length: 44
+		Start: 20
+		Length: 40
 		Tick: 80
 		ZOffset: 512
 		Offset: 0, -6
 firetorch:
 	idle:
 	burnloop: fires
-		Start: 16
-		Length: 44
+		Start: 20
+		Length: 40
 		Tick: 80
 		ZOffset: 512
 		Offset: 0, -10
@@ -403,8 +403,8 @@ firetorchn:
 		Start: 0
 		ZOffset: 1024
 	burnloop: fires
-		Start: 16
-		Length: 44
+		Start: 20
+		Length: 40
 		Tick: 80
 		ZOffset: 1512
 		Offset: 0, -5
@@ -413,8 +413,8 @@ firetorchnw:
 		Start: 1
 		ZOffset: 1024
 	burnloop: fires
-		Start: 16
-		Length: 44
+		Start: 20
+		Length: 40
 		Tick: 80
 		ZOffset: 1512
 		Offset: -6, -8
@@ -423,8 +423,8 @@ firetorchw:
 		Start: 2
 		ZOffset: 1024
 	burnloop: fires
-		Start: 16
-		Length: 44
+		Start: 20
+		Length: 40
 		Tick: 80
 		ZOffset: 1512
 		Offset: -8, -6
@@ -433,8 +433,8 @@ firetorchsw:
 		Start: 3
 		ZOffset: 1024
 	burnloop: fires
-		Start: 16
-		Length: 44
+		Start: 20
+		Length: 40
 		Tick: 80
 		ZOffset: 1512
 		Offset: -7, 3
@@ -443,8 +443,8 @@ firetorchs:
 		Start: 4
 		ZOffset: 1024
 	burnloop: fires
-		Start: 16
-		Length: 44
+		Start: 20
+		Length: 40
 		Tick: 80
 		ZOffset: 1512
 		Offset: 0, 4
@@ -453,8 +453,8 @@ firetorchne:
 		Start: 7
 		ZOffset: 1024
 	burnloop: fires
-		Start: 16
-		Length: 44
+		Start: 20
+		Length: 40
 		Tick: 80
 		ZOffset: 1512
 		Offset: 6, -8
@@ -463,8 +463,8 @@ firetorche:
 		Start: 6
 		ZOffset: 1024
 	burnloop: fires
-		Start: 16
-		Length: 44
+		Start: 20
+		Length: 40
 		Tick: 80
 		ZOffset: 1512
 		Offset: 8, -6
@@ -473,8 +473,8 @@ firetorchse:
 		Start: 5
 		ZOffset: 1024
 	burnloop: fires
-		Start: 16
-		Length: 44
+		Start: 20
+		Length: 40
 		Tick: 80
 		ZOffset: 1512
 		Offset: 7, 3

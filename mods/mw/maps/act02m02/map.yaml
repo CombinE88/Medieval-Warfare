@@ -72,15 +72,6 @@ Actors:
 	Actor9: t06
 		Owner: Neutral
 		Location: 29,149
-	Actor10: t01
-		Owner: Neutral
-		Location: 27,139
-	Actor11: t02
-		Owner: Neutral
-		Location: 26,137
-	Actor12: t06b
-		Owner: Neutral
-		Location: 27,138
 	Actor13: t02
 		Owner: Neutral
 		Location: 24,141
@@ -108,12 +99,6 @@ Actors:
 	Actor21: t06b
 		Owner: Neutral
 		Location: 31,127
-	Actor22: t02
-		Owner: Neutral
-		Location: 31,135
-	Actor23: t03
-		Owner: Neutral
-		Location: 32,139
 	Actor24: t05
 		Owner: Neutral
 		Location: 30,145
@@ -258,9 +243,6 @@ Actors:
 	Actor76: wdwll
 		Owner: Baron
 		Location: 25,104
-	Actor77: wdwll
-		Owner: Baron
-		Location: 25,103
 	Actor78: wdwll
 		Owner: Baron
 		Location: 16,96
@@ -1430,6 +1412,30 @@ Actors:
 		Location: 25,53
 		SubCell: 3
 		Facing: 92
+	Actor391: t02
+		Owner: Neutral
+		Location: 31,132
+	Actor392: t03
+		Owner: Neutral
+		Location: 32,140
+	Actor393: t06a
+		Owner: Neutral
+		Location: 26,139
+	Actor394: t06b
+		Owner: Neutral
+		Location: 30,136
+	Actor395: t02
+		Owner: Neutral
+		Location: 29,139
+	Actor396: shrub4
+		Owner: Neutral
+		Location: 25,44
+	Actor397: shrub2
+		Owner: Neutral
+		Location: 21,45
+	Actor398: tc05
+		Owner: Neutral
+		Location: 27,41
 Nodes:
 	TriggerWorldLoaded@ND01: TriggerWorldLoaded
 		Pos: -699,-54
@@ -1501,7 +1507,7 @@ Nodes:
 			Player: King
 		Out@Con2:
 			ConnectionType: CellPath
-			Cells: 11,164|11,160|12,159|12,156|12,149|15,149|16,147|16,142|17,140|16,139|16,135
+			Cells: 32,137|19,134
 		Out@Con3:
 			ConnectionType: String
 			String: Mission
@@ -1679,7 +1685,7 @@ Nodes:
 			Player: King
 		Out@Con2:
 			ConnectionType: CellPath
-			Cells: 11,164|11,160|12,159|12,156|12,149|15,149|16,147|16,142|17,140|16,139|16,133|20,129|20,123|17,120|17,115|18,114|20,114|21,113|21,101
+			Cells: 32,104|28,104|25,103|21,101
 		Out@Con3:
 			ConnectionType: String
 			String: Mission

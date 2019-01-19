@@ -2050,24 +2050,142 @@ Templates:
 			5: River
 	Template@1621:
 		Id: 1621
-		Images: bits/terrain/watercliffs.png
+		Images: bits/terrain/bridges2.png
 		Palette: rivermw
-		Frames: 189,199
-		Size: 1,2
+		Frames: 60,61,62,63,64,70,71,72,73,74,80,81,82,83,84
+		Size: 5,3
 		Categories: River
 		Tiles:
 			0: Clear
-			1: Clear
+			1: Road
+			2: Rock
+			3: Clear
+			4: Rock
+			5: Rock
+			6: Rock
+			7: Road
+			8: River
+			9: River
+			10: River
+			11: River
+			12: Rock
+			13: Road
+			14: Clear
 	Template@1622:
 		Id: 1622
-		Images: bits/terrain/watercliffs.png
+		Images: bits/terrain/bridges2.png
 		Palette: rivermw
-		Frames: 208,209
-		Size: 2,1
+		Frames: 0,1,2,3,4,10,11,12,13,14,20,21,22,23,24
+		Size: 5,3
 		Categories: River
 		Tiles:
 			0: Clear
-			1: Clear
+			1: Road
+			2: Rock
+			3: Clear
+			4: Rock
+			5: Rock
+			6: Rock
+			7: RoughGround
+			8: River
+			9: River
+			10: River
+			11: River
+			12: Rock
+			13: Road
+			14: Clear
+	Template@1623:
+		Id: 1623
+		Images: bits/terrain/bridges2.png
+		Palette: rivermw
+		Frames: 30,31,32,33,34,40,41,42,43,44,50,51,52,53,54
+		Size: 5,3
+		Categories: River
+		Tiles:
+			0: Clear
+			1: Road
+			2: Rock
+			3: Clear
+			4: Rock
+			5: Rock
+			6: Rock
+			7: River
+			8: River
+			9: River
+			10: River
+			11: River
+			12: Rock
+			13: Road
+			14: Clear
+	Template@1624:
+		Id: 1624
+		Images: bits/terrain/bridges2.png
+		Palette: rivermw
+		Frames: 65,66,67,68,69,75,76,77,78,79,85,86,87,88,89
+		Size: 5,3
+		Categories: River
+		Tiles:
+			0: Rock
+			1: Rock
+			2: Rock
+			3: Road
+			4: Clear
+			5: River
+			6: River
+			7: Road
+			8: Rock
+			9: Rock
+			10: Clear
+			11: Road
+			12: Rock
+			13: River
+			14: River
+	Template@1625:
+		Id: 1625
+		Images: bits/terrain/bridges2.png
+		Palette: rivermw
+		Frames: 35,36,37,38,39,45,46,47,48,49,55,56,57,58,59
+		Size: 5,3
+		Categories: River
+		Tiles:
+			0: Rock
+			1: Rock
+			2: Rock
+			3: Road
+			4: Clear
+			5: River
+			6: River
+			7: RoughGround
+			8: Rock
+			9: Rock
+			10: Clear
+			11: Road
+			12: Rock
+			13: River
+			14: River
+	Template@1626:
+		Id: 1626
+		Images: bits/terrain/bridges2.png
+		Palette: rivermw
+		Frames: 5,6,7,8,9,15,16,17,18,19,25,26,27,28,29
+		Size: 5,3
+		Categories: River
+		Tiles:
+			0: Rock
+			1: Rock
+			2: Rock
+			3: Road
+			4: Clear
+			5: River
+			6: River
+			7: River
+			8: Rock
+			9: Rock
+			10: Clear
+			11: Road
+			12: Rock
+			13: River
+			14: River
 	Template@188:
 		Id: 188
 		Images: bits/terrain/terrainset.png

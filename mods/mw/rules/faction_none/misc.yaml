@@ -174,3 +174,48 @@ BUBBLE:
 	ExternalCondition@validd:
 		Condition: validd
 	HitShape:
+BRIDGE1:
+	Inherits: ^Bridge
+	Bridge:
+		Template: 1621
+		DamagedTemplate: 1622
+		DestroyedTemplate: 1623
+	Building:
+		Footprint: _____ _____ _____
+		Dimensions: 5,3
+	FreeActor@north:
+		Actor: bridgehut
+		SpawnOffset: 1,-1
+	FreeActor@south:
+		Actor: bridgehut
+		SpawnOffset: 3,2
+	Interactable:
+		Bounds: 120,72
+BRIDGE2:
+	Inherits: ^Bridge
+	Bridge:
+		Template: 1624
+		DamagedTemplate: 1625
+		DestroyedTemplate: 1626
+	Building:
+		Footprint: _____ _____ _____
+		Dimensions: 5,3
+	FreeActor@north:
+		Actor: bridgehut
+		SpawnOffset: 3,-1
+	FreeActor@south:
+		Actor: bridgehut
+		SpawnOffset: 1,2
+	Interactable:
+		Bounds: 120,72
+BRIDGEHUT:
+	AlwaysVisible:
+	Building:
+		Footprint: __ __
+		Dimensions: 2,2
+	Selectable:
+		Bounds: 48,48
+		Priority: 2
+	LegacyBridgeHut:
+	Targetable:
+		TargetTypes: BridgeHut, C4

@@ -682,10 +682,12 @@
 	WithSpriteBody:
 	HitShape:
 	EditorTilesetFilter:
-		Categories: Interior Props
+		Categories: Interior Props Husks
 		RequireTilesets: TEMPERAT
 	Tooltip:
 		GenericName: Destroyed Furniture
+		Name: Destroyed Furniture
+		ShowOwnerRow: false
 	Building:
 		Dimensions: 1,1
 		Footprint: =
@@ -709,11 +711,12 @@
 		TargetTypes: Ground, Prop, NoAutoTarget
 	HitShape:
 	EditorTilesetFilter:
-		Categories: Interior Prop Husks
+		Categories: Interior Props
 		RequireTilesets: TEMPERAT
 	Tooltip:
 		GenericName: Furniture
 		Name: Furniture
+		ShowOwnerRow: false
 ^PropDoor:
 	Inherits@1: ^ExistsInWorld
 	Inherits@2: ^SpriteActor
@@ -734,6 +737,10 @@
 	EditorTilesetFilter:
 		Categories: Interior Props
 		RequireTilesets: TEMPERAT
+	Tooltip:
+		GenericName: Door
+		Name: Door
+		ShowOwnerRow: false
 ^PropDoorOpen:
 	Inherits@1: ^ExistsInWorld
 	Inherits@2: ^SpriteActor
@@ -749,8 +756,12 @@
 	WithMakeAnimation:
 	HitShape:
 	EditorTilesetFilter:
-		Categories: Props
+		Categories: Interior Props Husks
 		RequireTilesets: TEMPERAT
+	Tooltip:
+		GenericName: Door
+		Name: Door
+		ShowOwnerRow: false
 ^HelicopterHusk:
 	Inherits: ^CommonHuskDefaults
 	WithShadow:
@@ -769,21 +780,27 @@
 ^Bridge:
 	Inherits@shape: ^1x1Shape
 	AlwaysVisible:
-	Interactable:
 	Tooltip:
 		Name: Bridge
 		ShowOwnerRow: false
 	Targetable:
-		RequiresForceFire: yes
-		TargetTypes: Ground, Water
+		TargetTypes: Ground, Water, Bridge
+		RequiresForceFire: true
+	Building:
+		Footprint: ____ ____ ____
+		Dimensions: 4,3
 	Health:
-		HP: 50000
-	SoundOnDamageTransition:
-		DamagedSounds: xplos.aud
-		DestroyedSounds: bldgncllps.aud
+		HP: 100000
+	Armor:
+		Type: Concrete
 	ScriptTriggers:
 	BodyOrientation:
 		QuantizedFacings: 1
+	Interactable:
+		Bounds: 96,72
+	ShakeOnDeath:
+		Duration: 15
+		Intensity: 6
 ^Crate:
 	Inherits@1: ^SpriteActor
 	HiddenUnderFog:

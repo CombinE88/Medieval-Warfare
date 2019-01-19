@@ -348,10 +348,14 @@ STOOL1:
 		ShowOwnerRow: false
 	SoundOnDamageTransition:
 		DestroyedSounds: WoodExplsmall.aud, WoodExplsmall2.aud
+	Tooltip:
+		Name: Chair
 DEADSTOOL1:
 	Inherits: ^PropHusk
 	RenderSprites:
 		Palette: mwcivilian
+	Tooltip:
+		Name: Remains (Chair)
 STOOL2:
 	Inherits: ^InteriorProp
 	RenderSprites:
@@ -363,10 +367,14 @@ STOOL2:
 		ShowOwnerRow: false
 	SoundOnDamageTransition:
 		DestroyedSounds: WoodExplsmall.aud, WoodExplsmall2.aud
+	Tooltip:
+		Name: Chair
 DEADSTOOL2:
 	Inherits: ^PropHusk
 	RenderSprites:
 		Palette: mwcivilian
+	Tooltip:
+		Name: Remains (Chair)
 STOOL3:
 	Inherits: ^InteriorProp
 	RenderSprites:
@@ -378,10 +386,14 @@ STOOL3:
 		ShowOwnerRow: false
 	SoundOnDamageTransition:
 		DestroyedSounds: WoodExplsmall.aud, WoodExplsmall2.aud
+	Tooltip:
+		Name: Chair
 DEADSTOOL3:
 	Inherits: ^PropHusk
 	RenderSprites:
 		Palette: mwcivilian
+	Tooltip:
+		Name: Remains (Chair)
 STOOL4:
 	Inherits: ^InteriorProp
 	RenderSprites:
@@ -393,10 +405,14 @@ STOOL4:
 		ShowOwnerRow: false
 	SoundOnDamageTransition:
 		DestroyedSounds: WoodExplsmall.aud, WoodExplsmall2.aud
+	Tooltip:
+		Name: Chair
 DEADSTOOL4:
 	Inherits: ^PropHusk
 	RenderSprites:
 		Palette: mwcivilian
+	Tooltip:
+		Name: Remains (Chair)
 STOOL5:
 	Inherits: ^InteriorProp
 	RenderSprites:
@@ -408,10 +424,14 @@ STOOL5:
 		ShowOwnerRow: false
 	SoundOnDamageTransition:
 		DestroyedSounds: WoodExplsmall.aud, WoodExplsmall2.aud
+	Tooltip:
+		Name: Chair
 DEADSTOOL5:
 	Inherits: ^PropHusk
 	RenderSprites:
 		Palette: mwcivilian
+	Tooltip:
+		Name: Remains (Chair)
 STOOL6:
 	Inherits: ^InteriorProp
 	RenderSprites:
@@ -423,10 +443,14 @@ STOOL6:
 		ShowOwnerRow: false
 	SoundOnDamageTransition:
 		DestroyedSounds: WoodExplsmall.aud, WoodExplsmall2.aud
+	Tooltip:
+		Name: Chair
 DEADSTOOL6:
 	Inherits: ^PropHusk
 	RenderSprites:
 		Palette: mwcivilian
+	Tooltip:
+		Name: Remains (Chair)
 STOOL7:
 	Inherits: ^InteriorProp
 	RenderSprites:
@@ -438,10 +462,14 @@ STOOL7:
 		ShowOwnerRow: false
 	SoundOnDamageTransition:
 		DestroyedSounds: WoodExplsmall.aud, WoodExplsmall2.aud
+	Tooltip:
+		Name: Chair
 DEADSTOOL7:
 	Inherits: ^PropHusk
 	RenderSprites:
 		Palette: mwcivilian
+	Tooltip:
+		Name: Remains (Chair)
 STOOL8:
 	Inherits: ^InteriorProp
 	RenderSprites:
@@ -450,13 +478,16 @@ STOOL8:
 		Actor: DEADSTOOL8
 	Tooltip:
 		Name: Wooden Chair
-		ShowOwnerRow: false
 	SoundOnDamageTransition:
 		DestroyedSounds: WoodExplsmall.aud, WoodExplsmall2.aud
+	Tooltip:
+		Name: Chair
 DEADSTOOL8:
 	Inherits: ^PropHusk
 	RenderSprites:
 		Palette: mwcivilian
+	Tooltip:
+		Name: Remains (Chair)
 BARRELMW1:
 	Inherits: ^InteriorProp
 	RenderSprites:
@@ -465,13 +496,14 @@ BARRELMW1:
 		Actor: DEADBARRELMW1
 	Tooltip:
 		Name: Barrel
-		ShowOwnerRow: false
 	SoundOnDamageTransition:
 		DestroyedSounds: WoodExplsmall.aud, WoodExplsmall2.aud
 DEADBARRELMW1:
 	Inherits: ^PropHusk
 	RenderSprites:
 		Palette: mwcivilian
+	Tooltip:
+		Name: Remains (Barrels)
 BARRELMW2:
 	Inherits: ^InteriorProp
 	RenderSprites:
@@ -480,13 +512,14 @@ BARRELMW2:
 		Actor: DEADBARRELMW2
 	Tooltip:
 		Name: Barrel
-		ShowOwnerRow: false
 	SoundOnDamageTransition:
 		DestroyedSounds: WoodExplsmall.aud, WoodExplsmall2.aud
 DEADBARRELMW2:
 	Inherits: ^PropHusk
 	RenderSprites:
 		Palette: mwcivilian
+	Tooltip:
+		Name: Remains (Barrels)
 BARRELMW3:
 	Inherits: ^InteriorProp
 	RenderSprites:
@@ -495,13 +528,14 @@ BARRELMW3:
 		Actor: DEADBARRELMW3
 	Tooltip:
 		Name: Barrel
-		ShowOwnerRow: false
 	SoundOnDamageTransition:
 		DestroyedSounds: WoodExplsmall.aud, WoodExplsmall2.aud
 DEADBARRELMW3:
 	Inherits: ^PropHusk
 	RenderSprites:
 		Palette: mwcivilian
+	Tooltip:
+		Name: Remains (Barrels)
 BARRELMW4:
 	Inherits: ^InteriorProp
 	RenderSprites:
@@ -510,13 +544,14 @@ BARRELMW4:
 		Actor: DEADBARRELMW4
 	Tooltip:
 		Name: Barrel
-		ShowOwnerRow: false
 	SoundOnDamageTransition:
 		DestroyedSounds: WoodExplsmall.aud, WoodExplsmall2.aud
 DEADBARRELMW4:
 	Inherits: ^PropHusk
 	RenderSprites:
 		Palette: mwcivilian
+	Tooltip:
+		Name: Remains (Barrels)
 BARRELMW5:
 	Inherits: ^InteriorProp
 	RenderSprites:
@@ -525,13 +560,14 @@ BARRELMW5:
 		Actor: DEADBARRELMW5
 	Tooltip:
 		Name: Barrel
-		ShowOwnerRow: false
 	SoundOnDamageTransition:
 		DestroyedSounds: WoodExplsmall.aud, WoodExplsmall2.aud
 DEADBARRELMW5:
 	Inherits: ^PropHusk
 	RenderSprites:
 		Palette: mwcivilian
+	Tooltip:
+		Name: Remains (Barrels)
 BARRELMW6:
 	Inherits: ^InteriorProp
 	RenderSprites:
@@ -540,13 +576,14 @@ BARRELMW6:
 		Actor: DEADBARRELMW6
 	Tooltip:
 		Name: Barrel
-		ShowOwnerRow: false
 	SoundOnDamageTransition:
 		DestroyedSounds: WoodExplsmall.aud, WoodExplsmall2.aud
 DEADBARRELMW6:
 	Inherits: ^PropHusk
 	RenderSprites:
 		Palette: mwcivilian
+	Tooltip:
+		Name: Remains (Barrels)
 BARRELMW7:
 	Inherits: ^InteriorProp
 	RenderSprites:
@@ -555,13 +592,14 @@ BARRELMW7:
 		Actor: DEADBARRELMW7
 	Tooltip:
 		Name: Barrel
-		ShowOwnerRow: false
 	SoundOnDamageTransition:
 		DestroyedSounds: WoodExplsmall.aud, WoodExplsmall2.aud
 DEADBARRELMW7:
 	Inherits: ^PropHusk
 	RenderSprites:
 		Palette: mwcivilian
+	Tooltip:
+		Name: Remains (Barrels)
 BARRELMW8:
 	Inherits: ^InteriorProp
 	RenderSprites:
@@ -570,13 +608,14 @@ BARRELMW8:
 		Actor: DEADBARRELMW8
 	Tooltip:
 		Name: Barrel
-		ShowOwnerRow: false
 	SoundOnDamageTransition:
 		DestroyedSounds: WoodExplsmall.aud, WoodExplsmall2.aud
 DEADBARRELMW8:
 	Inherits: ^PropHusk
 	RenderSprites:
 		Palette: mwcivilian
+	Tooltip:
+		Name: Remains (Barrels)
 BARRELMW9:
 	Inherits: ^InteriorProp
 	RenderSprites:
@@ -585,13 +624,14 @@ BARRELMW9:
 		Actor: DEADBARRELMW9
 	Tooltip:
 		Name: Barrel
-		ShowOwnerRow: false
 	SoundOnDamageTransition:
 		DestroyedSounds: WoodExplsmall.aud, WoodExplsmall2.aud
 DEADBARRELMW9:
 	Inherits: ^PropHusk
 	RenderSprites:
 		Palette: mwcivilian
+	Tooltip:
+		Name: Remains (Barrels)
 BARRELMW10:
 	Inherits: ^InteriorProp
 	RenderSprites:
@@ -600,13 +640,14 @@ BARRELMW10:
 		Actor: DEADBARRELMW10
 	Tooltip:
 		Name: Barrel
-		ShowOwnerRow: false
 	SoundOnDamageTransition:
 		DestroyedSounds: WoodExplsmall.aud, WoodExplsmall2.aud
 DEADBARRELMW10:
 	Inherits: ^PropHusk
 	RenderSprites:
 		Palette: mwcivilian
+	Tooltip:
+		Name: Remains (Barrels)
 BARRELMW11:
 	Inherits: ^InteriorProp
 	RenderSprites:
@@ -615,13 +656,14 @@ BARRELMW11:
 		Actor: DEADBARRELMW11
 	Tooltip:
 		Name: Barrel
-		ShowOwnerRow: false
 	SoundOnDamageTransition:
 		DestroyedSounds: WoodExplsmall.aud, WoodExplsmall2.aud
 DEADBARRELMW11:
 	Inherits: ^PropHusk
 	RenderSprites:
 		Palette: mwcivilian
+	Tooltip:
+		Name: Remains (Barrels)
 TABLE1:
 	Inherits: ^InteriorProp
 	RenderSprites:
@@ -630,10 +672,14 @@ TABLE1:
 		Actor: DEADTABLE1
 	SoundOnDamageTransition:
 		DestroyedSounds: WoodExplsmall.aud, WoodExplsmall2.aud
+	Tooltip:
+		Name: Table
 DEADTABLE1:
 	Inherits: ^PropHusk
 	RenderSprites:
 		Palette: mwcivilian
+	Tooltip:
+		Name: Remains (Table)
 TABLE2:
 	Inherits: ^InteriorProp
 	RenderSprites:
@@ -642,10 +688,14 @@ TABLE2:
 		Actor: DEADTABLE2
 	SoundOnDamageTransition:
 		DestroyedSounds: WoodExplsmall.aud, WoodExplsmall2.aud
+	Tooltip:
+		Name: Table
 DEADTABLE2:
 	Inherits: ^PropHusk
 	RenderSprites:
 		Palette: mwcivilian
+	Tooltip:
+		Name: Remains (Table)
 TABLE3:
 	Inherits: ^InteriorProp
 	RenderSprites:
@@ -654,10 +704,14 @@ TABLE3:
 		Actor: DEADTABLE3
 	SoundOnDamageTransition:
 		DestroyedSounds: WoodExplsmall.aud, WoodExplsmall2.aud
+	Tooltip:
+		Name: Table
 DEADTABLE3:
 	Inherits: ^PropHusk
 	RenderSprites:
 		Palette: mwcivilian
+	Tooltip:
+		Name: Remains (Table)
 TABLE4:
 	Inherits: ^InteriorProp
 	RenderSprites:
@@ -669,6 +723,8 @@ TABLE4:
 		Footprint: x x	
 	SoundOnDamageTransition:
 		DestroyedSounds: WoodExplsmall.aud, WoodExplsmall2.aud
+	Tooltip:
+		Name: Table
 DEADTABLE4:
 	Inherits: ^PropHusk
 	RenderSprites:
@@ -676,6 +732,8 @@ DEADTABLE4:
 	Building:
 		Dimensions: 1,2
 		Footprint: _ _	
+	Tooltip:
+		Name: Remains (Table)
 TABLE5:
 	Inherits: ^InteriorProp
 	RenderSprites:
@@ -687,6 +745,8 @@ TABLE5:
 		Footprint: xx	
 	SoundOnDamageTransition:
 		DestroyedSounds: WoodExplsmall.aud, WoodExplsmall2.aud
+	Tooltip:
+		Name: Table
 DEADTABLE5:
 	Inherits: ^PropHusk
 	RenderSprites:
@@ -694,6 +754,8 @@ DEADTABLE5:
 	Building:
 		Dimensions: 2,1
 		Footprint: _ _	
+	Tooltip:
+		Name: Remains (Table)
 IDOORNORTH:
 	Inherits: ^PropDoor
 	RenderSprites:
@@ -703,14 +765,12 @@ IDOORNORTH:
 		SkipMakeAnimations: false
 	Tooltip:
 		Name: Door
-		ShowOwnerRow: false
 IDOORNORTHOPEN:
 	Inherits: ^PropDoorOpen
 	RenderSprites:
 		Palette: mwcivilian
 	Tooltip:
 		Name: Door
-		ShowOwnerRow: false
 IDOORSOUTH:
 	Inherits: ^PropDoor
 	RenderSprites:
@@ -720,14 +780,12 @@ IDOORSOUTH:
 		SkipMakeAnimations: false
 	Tooltip:
 		Name: Door
-		ShowOwnerRow: false
 IDOORSOUTHOPEN:
 	Inherits: ^PropDoorOpen
 	RenderSprites:
 		Palette: mwcivilian
 	Tooltip:
 		Name: Door
-		ShowOwnerRow: false
 IDOORWEST:
 	Inherits: ^PropDoor
 	RenderSprites:
@@ -737,14 +795,12 @@ IDOORWEST:
 		SkipMakeAnimations: false
 	Tooltip:
 		Name: Door
-		ShowOwnerRow: false
 IDOORWESTOPEN:
 	Inherits: ^PropDoorOpen
 	RenderSprites:
 		Palette: mwcivilian
 	Tooltip:
 		Name: Door
-		ShowOwnerRow: false
 IDOOREAST:
 	Inherits: ^PropDoor
 	RenderSprites:
@@ -754,14 +810,12 @@ IDOOREAST:
 		SkipMakeAnimations: false
 	Tooltip:
 		Name: Door
-		ShowOwnerRow: false
 IDOOREASTOPEN:
 	Inherits: ^PropDoorOpen
 	RenderSprites:
 		Palette: mwcivilian
 	Tooltip:
 		Name: Door
-		ShowOwnerRow: false
 IDOORIRON:
 	Inherits: ^PropDoor
 	RenderSprites:
@@ -771,7 +825,6 @@ IDOORIRON:
 		SkipMakeAnimations: false
 	Tooltip:
 		Name: Door
-		ShowOwnerRow: false
 	Building:
 		Dimensions: 2,2
 		Footprint: == xx	
@@ -781,7 +834,6 @@ IDOORIRONOPEN:
 		Palette: mwcivilian
 	Tooltip:
 		Name: Door
-		ShowOwnerRow: false
 	Building:
 		Dimensions: 2,2
 		Footprint: == ==	
@@ -794,14 +846,12 @@ IDOORSNORTH:
 		SkipMakeAnimations: false
 	Tooltip:
 		Name: Door
-		ShowOwnerRow: false
 IDOORSNORTHOPEN:
 	Inherits: ^PropDoorOpen
 	RenderSprites:
 		Palette: mwcivilian
 	Tooltip:
 		Name: Door
-		ShowOwnerRow: false
 IDOORSSOUTH:
 	Inherits: ^PropDoor
 	RenderSprites:
@@ -811,14 +861,12 @@ IDOORSSOUTH:
 		SkipMakeAnimations: false
 	Tooltip:
 		Name: Door
-		ShowOwnerRow: false
 IDOORSSOUTHOPEN:
 	Inherits: ^PropDoorOpen
 	RenderSprites:
 		Palette: mwcivilian
 	Tooltip:
 		Name: Door
-		ShowOwnerRow: false
 IDOORSWEST:
 	Inherits: ^PropDoor
 	RenderSprites:
@@ -828,14 +876,12 @@ IDOORSWEST:
 		SkipMakeAnimations: false
 	Tooltip:
 		Name: Door
-		ShowOwnerRow: false
 IDOORSWESTOPEN:
 	Inherits: ^PropDoorOpen
 	RenderSprites:
 		Palette: mwcivilian
 	Tooltip:
 		Name: Door
-		ShowOwnerRow: false
 IDOORSEAST:
 	Inherits: ^PropDoor
 	RenderSprites:
@@ -845,14 +891,12 @@ IDOORSEAST:
 		SkipMakeAnimations: false
 	Tooltip:
 		Name: Door
-		ShowOwnerRow: false
 IDOORSEASTOPEN:
 	Inherits: ^PropDoorOpen
 	RenderSprites:
 		Palette: mwcivilian
 	Tooltip:
 		Name: Door
-		ShowOwnerRow: false
 IDOORBARS:
 	Inherits: ^PropDoor
 	RenderSprites:
@@ -862,14 +906,12 @@ IDOORBARS:
 		SkipMakeAnimations: false
 	Tooltip:
 		Name: Door
-		ShowOwnerRow: false
 IDOORBARSOPEN:
 	Inherits: ^PropDoorOpen
 	RenderSprites:
 		Palette: mwcivilian
 	Tooltip:
 		Name: Door
-		ShowOwnerRow: false
 SWITCHA:
 	Inherits: ^InteriorProp
 	RenderSprites:
@@ -882,12 +924,18 @@ SWITCHA:
 		DestroyedSounds: crank1.wav
 	Health:
 		HP: 1
+	Tooltip:
+		Name: Lever
+	Targetable:
+		TargetTypes: Lever
 SWITCHPULLEDA:
 	Inherits: ^PropHusk
 	WithMakeAnimation:
 	RenderSprites:
 		PlayerPalette: raplayer
 		Palette: 
+	Tooltip:
+		Name: Lever (Pulled)
 SWITCHB:
 	Inherits: ^InteriorProp
 	RenderSprites:
@@ -900,12 +948,18 @@ SWITCHB:
 		HP: 1
 	SoundOnDamageTransition:
 		DestroyedSounds: crank1.wav
+	Tooltip:
+		Name: Lever
+	Targetable:
+		TargetTypes: Lever
 SWITCHPULLEDB:
 	Inherits: ^PropHusk
 	WithMakeAnimation:
 	RenderSprites:
 		PlayerPalette: raplayer
 		Palette: 
+	Tooltip:
+		Name: Lever (Pulled)
 SWITCHC:
 	Inherits: ^InteriorProp
 	RenderSprites:
@@ -918,12 +972,18 @@ SWITCHC:
 		HP: 1
 	SoundOnDamageTransition:
 		DestroyedSounds: crank1.wav
+	Tooltip:
+		Name: Lever
+	Targetable:
+		TargetTypes: Lever
 SWITCHPULLEDC:
 	Inherits: ^PropHusk
 	WithMakeAnimation:
 	RenderSprites:
 		PlayerPalette: raplayer
 		Palette: 
+	Tooltip:
+		Name: Lever (Pulled)
 SWITCHD:
 	Inherits: ^InteriorProp
 	RenderSprites:
@@ -936,12 +996,16 @@ SWITCHD:
 		HP: 1
 	SoundOnDamageTransition:
 		DestroyedSounds: crank1.wav
+	Tooltip:
+		Name: Lever
 SWITCHPULLEDD:
 	Inherits: ^PropHusk
 	WithMakeAnimation:
 	RenderSprites:
 		PlayerPalette: raplayer
 		Palette: 
+	Tooltip:
+		Name: Lever (Pulled)
 IBOOKA:
 	Inherits: ^InteriorProp
 	RenderSprites:
@@ -953,6 +1017,8 @@ IBOOKA:
 		Footprint: x_	
 	SoundOnDamageTransition:
 		DestroyedSounds: WoodExplsmall.aud, WoodExplsmall2.aud
+	Tooltip:
+		Name: Bookshelf
 IBOOKB:
 	Inherits: ^InteriorProp
 	RenderSprites:
@@ -964,6 +1030,8 @@ IBOOKB:
 		Footprint: x_	
 	SoundOnDamageTransition:
 		DestroyedSounds: WoodExplsmall.aud, WoodExplsmall2.aud
+	Tooltip:
+		Name: Bookshelf
 IBOOKC:
 	Inherits: ^InteriorProp
 	RenderSprites:
@@ -975,6 +1043,8 @@ IBOOKC:
 		Footprint: x_	
 	SoundOnDamageTransition:
 		DestroyedSounds: WoodExplsmall.aud, WoodExplsmall2.aud
+	Tooltip:
+		Name: Bookshelf
 IBOOKD:
 	Inherits: ^InteriorProp
 	RenderSprites:
@@ -986,6 +1056,8 @@ IBOOKD:
 		Footprint: x_	
 	SoundOnDamageTransition:
 		DestroyedSounds: WoodExplsmall.aud, WoodExplsmall2.aud
+	Tooltip:
+		Name: Bookshelf
 IBOOKDEAD:
 	Inherits: ^PropHusk
 	RenderSprites:
@@ -993,6 +1065,8 @@ IBOOKDEAD:
 	Building:
 		Dimensions: 1,2
 		Footprint: = _	
+	Tooltip:
+		Name: Remains (Bookshelf)
 IBANNERA:
 	Inherits: ^InteriorProp
 	RenderSprites:
@@ -1003,6 +1077,8 @@ IBANNERA:
 		Footprint: __	
 	SoundOnDamageTransition:
 		DestroyedSounds: WoodExplsmall.aud, WoodExplsmall2.aud
+	Tooltip:
+		Name: Banner
 IBANNERB:
 	Inherits: ^InteriorProp
 	RenderSprites:
@@ -1013,6 +1089,8 @@ IBANNERB:
 		Footprint: __	
 	SoundOnDamageTransition:
 		DestroyedSounds: WoodExplsmall.aud, WoodExplsmall2.aud
+	Tooltip:
+		Name: Banner
 IBANNERC:
 	Inherits: ^InteriorProp
 	RenderSprites:
@@ -1021,6 +1099,8 @@ IBANNERC:
 	Building:
 		Dimensions: 1,2
 		Footprint: __	
+	Tooltip:
+		Name: Banner
 IBANNERD:
 	Inherits: ^InteriorProp
 	RenderSprites:
@@ -1029,6 +1109,8 @@ IBANNERD:
 	Building:
 		Dimensions: 1,2
 		Footprint: __	
+	Tooltip:
+		Name: Banner
 IBANNERE:
 	Inherits: ^InteriorProp
 	RenderSprites:
@@ -1037,6 +1119,8 @@ IBANNERE:
 	Building:
 		Dimensions: 1,2
 		Footprint: __	
+	Tooltip:
+		Name: Banner
 OBJECTIVEA:
 	Inherits: ^InteriorProp
 	RenderSprites:
@@ -1048,6 +1132,8 @@ OBJECTIVEA:
 		Dimensions: 1,1
 		Footprint: _	
 	-Targetable:
+	Tooltip:
+		Name: Mission Objective
 OBJECTIVEB:
 	Inherits: ^InteriorProp
 	RenderSprites:
@@ -1059,6 +1145,8 @@ OBJECTIVEB:
 		Dimensions: 1,1
 		Footprint: _	
 	-Targetable:
+	Tooltip:
+		Name: Mission Objective
 OBJECTIVEC:
 	Inherits: ^InteriorProp
 	RenderSprites:
@@ -1070,6 +1158,8 @@ OBJECTIVEC:
 		Dimensions: 1,1
 		Footprint: _	
 	-Targetable:
+	Tooltip:
+		Name: Mission Objective
 OBJECTIVED:
 	Inherits: ^InteriorProp
 	RenderSprites:
@@ -1081,6 +1171,8 @@ OBJECTIVED:
 		Dimensions: 1,1
 		Footprint: _	
 	-Targetable:
+	Tooltip:
+		Name: Mission Objective
 CRACKWALL:
 	Inherits: ^InteriorProp
 	RenderSprites:
@@ -1093,6 +1185,8 @@ CRACKWALL:
 		HP: 100
 	SoundOnDamageTransition:
 		DestroyedSounds: collapsebricks.aud
+	Tooltip:
+		Name: Suspicious looking wall
 CRACKWALLH:
 	Inherits: ^InteriorProp
 	RenderSprites:
@@ -1105,6 +1199,8 @@ CRACKWALLH:
 		HP: 100
 	SoundOnDamageTransition:
 		DestroyedSounds: collapsebricks.aud
+	Tooltip:
+		Name: Suspicious looking wall
 ICHESTAHEAL:
 	Inherits: ^Crate
 	RenderSprites:
@@ -1122,7 +1218,6 @@ ICHESTAHEAL:
 		SelectionShares: 100
 	Tooltip:
 		Name: Chest
-		ShowOwnerRow: false
 	HitShape:
 	EditorTilesetFilter:
 		RequireTilesets: TEMPERAT
@@ -1133,6 +1228,8 @@ ICHESTDEADA:
 	RenderSprites:
 		PlayerPalette: raplayer
 		Palette:
+	Tooltip:
+		Name: Remains (Chest)
 ICHESTBHEAL:
 	Inherits: ^Crate
 	RenderSprites:
@@ -1152,7 +1249,6 @@ ICHESTBHEAL:
 		SelectionShares: 10
 	Tooltip:
 		Name: Chest
-		ShowOwnerRow: false
 	HitShape:
 	EditorTilesetFilter:
 		RequireTilesets: TEMPERAT
@@ -1163,6 +1259,8 @@ ICHESTDEADB:
 	RenderSprites:
 		PlayerPalette: raplayer
 		Palette: 
+	Tooltip:
+		Name: Remains (Chest)
 ICHESTCHEAL:
 	Inherits: ^Crate
 	RenderSprites:
@@ -1182,7 +1280,6 @@ ICHESTCHEAL:
 		SelectionShares: 10
 	Tooltip:
 		Name: Chest
-		ShowOwnerRow: false
 	HitShape:
 	EditorTilesetFilter:
 		RequireTilesets: TEMPERAT
@@ -1193,30 +1290,52 @@ ICHESTDEADC:
 	RenderSprites:
 		PlayerPalette: raplayer
 		Palette: 
+	Tooltip:
+		Name: Remains (Chest)
 IPAINTINGA:
 	Inherits: ^PropHusk
 	WithMakeAnimation:
 	RenderSprites:
 		PlayerPalette: raplayer
 		Palette: 
+	Tooltip:
+		Name: Painting
+	EditorTilesetFilter:
+		RequireTilesets: TEMPERAT
+		Categories: Interior Props
 IPAINTINGB:
 	Inherits: ^PropHusk
 	WithMakeAnimation:
 	RenderSprites:
 		PlayerPalette: raplayer
 		Palette: 
+	Tooltip:
+		Name: Painting
+	EditorTilesetFilter:
+		RequireTilesets: TEMPERAT
+		Categories: Interior Props
 IPAINTINGC:
 	Inherits: ^PropHusk
 	WithMakeAnimation:
 	RenderSprites:
 		PlayerPalette: raplayer
 		Palette: 
+	Tooltip:
+		Name: Painting
+	EditorTilesetFilter:
+		RequireTilesets: TEMPERAT
+		Categories: Interior Props
 IPAINTINGD:
 	Inherits: ^PropHusk
 	WithMakeAnimation:
 	RenderSprites:
 		PlayerPalette: raplayer
 		Palette: 
+	Tooltip:
+		Name: Painting
+	EditorTilesetFilter:
+		RequireTilesets: TEMPERAT
+		Categories: Interior Props
 CSTACK01:
 	Inherits: ^Crate
 	RenderSprites:

@@ -245,15 +245,15 @@ UNDEAD4:
 	Inherits@AUTOTARGETDEF: ^AutoTargetDefenses
 	Inherits: ^GainPerZigurrat
 	Valued:
-		Cost: 370
+		Cost: 400
 	RevealsShroud:
 		Range: 6c0
 	Tooltip:
 		Name: Skeleton (Berserker)
 	Mobile:
-		Speed: 50
+		Speed: 45
 	Health:
-		HP: 32000
+		HP: 28000
 	Armament:
 		Weapon: SkeletonAxe
 	Armor:
@@ -1421,7 +1421,7 @@ SOUL:
 	GivesBounty:
 		Percentage: 100
 	Valued:
-		Cost: 127
+		Cost: 70
 	Aircraft:
 		LandWhenIdle: false
 		CanHover: True
@@ -1459,7 +1459,7 @@ SOULS:
 		Percentage: 100
 		DeathTypes: DefaultDeath
 	Valued:
-		Cost: 70
+		Cost: 35
 	Aircraft:
 		LandWhenIdle: false
 		CanHover: True

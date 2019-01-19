@@ -1,0 +1,164 @@
+DDLER:
+	Inherits: ^Cavalry
+	Inherits@GetsPoisoned: ^GetsPoisoned
+	Inherits@ArcherDemo65: ^ArcherDemo80
+	Inherits@Healable: ^Healable
+	Inherits@SnakeStunnable: ^SnakeSlowable
+	Inherits@Cursable: ^Cursed
+	-GrantConditionOnPrerequisite@BattlefieldLoot:
+	-Explodes@Tib:
+	Valued:
+		Cost: 1300
+	Tooltip:
+		Name: Deathdealer
+	Buildable:
+		IconPalette: raicon
+		BuildPaletteOrder: 1000
+		Prerequisites: ~disabled
+		Queue: MInfantry.Nod,  MInfantry.GDI, MHosp.Medi
+	Mobile:
+		TurnSpeed: 12
+		Speed: 55
+	RevealsShroud:
+		Range: 3c0
+	Health:
+		HP: 16000
+	Armament:
+		Weapon: none
+	AttackFrontal:
+	AutoTarget:
+		ScanRadius: 0
+	RenderSprites:
+		Image: deathdealer
+		PlayerPalette: raplayer
+	WithInfantryBody:
+		IdleSequences: idle1
+	Armor:
+		Type: LightCavalry
+	Selectable:
+		Bounds: 26,34,0,-6
+	SelectionDecorations:
+	WithDeathAnimation:
+		DeathTypes:
+			DefaultDeath: 1
+			RippedApartDeath: 2
+			PoisonDeath: 3
+			BallistaDeath: 4
+			BurnToDeath: 5
+	ProximityExternalCondition@DEATH:
+		Range: 2c0
+		ValidStances: Enemy
+		Condition: DDler
+	WithRangeCircle:
+		Type: Dead
+		Visible: Always
+		Range: 2c0
+	Targetable@Deathdealer:
+		TargetTypes: NoAutoTarget
+	-SpawnActorOnDeath@1:
+	-SpawnActorOnDeath@2:
+	-SpawnActorOnDeath@3:
+	-SpawnActorOnDeath@4:
+	-SpawnActorOnDeath@5:
+	Selectable:
+		Priority: 9
+	Voiced:
+		VoiceSet: DeathdealerVoice
+BURNINGHORSE:
+	Inherits: ^Cavalry
+	-GrantConditionOnPrerequisite@BattlefieldLoot:
+	-Explodes@Tib:
+	Valued:
+		Cost: 0
+	Tooltip:
+		Name: Horse
+	Mobile:
+		TurnSpeed: 100
+		Speed: 60
+	RevealsShroud:
+		Range: 2c0
+	Health:
+		HP: 5000
+	Armament:
+		Weapon: none
+	AttackFrontal:
+	AutoTarget:
+	RenderSprites:
+		Image: burninghorse
+		PlayerPalette: raplayer
+	WithInfantryBody:
+		IdleSequences: stand
+	Armor:
+		Type: LightCavalry
+	-Selectable:
+	Interactable:
+	Wanders:
+		WanderMoveRadius: 5
+		MinMoveDelay: 0
+		MaxMoveDelay: 0
+	-SpawnActorOnDeath@1:
+	-SpawnActorOnDeath@2:
+	-SpawnActorOnDeath@3:
+	-SpawnActorOnDeath@4:
+	-SpawnActorOnDeath@5:
+	ScaredyCat:
+		AttackPanicChance: 100
+	SelfHealing@BURNING:
+		Step: -1000
+		HealIfBelow: 110
+		Delay: 10
+		DamageTypes: BurnToDeath
+	-Targetable:
+	Voiced:
+		VoiceSet: GenericHorseOnly
+EMPTYROSS:
+	Inherits: ^Cavalry
+	Inherits@GetsPoisoned: ^GetsPoisoned
+	Inherits@ArcherDemo65: ^ArcherDemo80
+	Inherits@SnakeStunnable: ^SnakeSlowable
+	GrantConditionOnDamageState@Slow:
+		Condition: Slowmotion
+		ValidDamageStates: Heavy, Critical 
+	SpeedMultiplier:
+		RequiresCondition: Slowmotion
+		Modifier: 70
+	-GrantConditionOnPrerequisite@BattlefieldLoot:
+	-Explodes@Tib:
+	Valued:
+		Cost: 0
+	Tooltip:
+		Name: Horse
+	Mobile:
+		TurnSpeed: 20
+		Speed: 60
+	RevealsShroud:
+		Range: 7c0
+	Health:
+		HP: 7500
+	Armament:
+		Weapon: none
+	AttackFrontal:
+	AutoTarget:
+	RenderSprites:
+		Image: emptyhorse
+		PlayerPalette: raplayer
+	WithInfantryBody:
+		IdleSequences: stand
+		DefaultAttackSequence: shoot
+	Armor:
+		Type: LightCavalry
+	Selectable:
+		Bounds: 26,34,0,-6
+	SelectionDecorations:
+	Wanders:
+		WanderMoveRadius: 5
+		MinMoveDelay: 50
+		MaxMoveDelay: 250
+	-SpawnActorOnDeath@1:
+	-SpawnActorOnDeath@2:
+	-SpawnActorOnDeath@3:
+	-SpawnActorOnDeath@4:
+	-SpawnActorOnDeath@5:
+	ScaredyCat:
+	Voiced:
+		VoiceSet: GenericHorseOnly

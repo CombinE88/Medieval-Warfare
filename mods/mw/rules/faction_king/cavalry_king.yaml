@@ -1,0 +1,263 @@
+KINGROSS:
+	Inherits: ^Cavalry
+	Inherits@AUTOTARGET: ^AutoTargetAll
+	Inherits@GetsPoisoned: ^GetsPoisoned
+	Inherits@ArcherDemo65: ^ArcherDemo80
+	Inherits@Healable: ^Healable
+	Inherits@SnakeStunnable: ^SnakeSlowable
+	-GrantConditionOnPrerequisite@BattlefieldLoot:
+	-Explodes@Tib:
+	GrantConditionOnDamageState@Slow:
+		Condition: Slowmotion
+		ValidDamageStates: Heavy, Critical 
+	SpeedMultiplier:
+		RequiresCondition: Slowmotion
+		Modifier: 85
+	Valued:
+		Cost: 2500
+	Tooltip:
+		Name: Your Highness
+	MustBeDestroyed:
+		RequiredForShortGame: true
+	Guard:
+		Voice: Move
+	Mobile:
+		Locomotor: heavycavalry
+		TurnSpeed: 7
+		Speed: 110
+		Voice: Move
+	RevealsShroud:
+		Range: 7c0
+	Health:
+		HP: 65000
+	Armament:
+		Weapon: kingcrossbow
+		Name: Primary
+		LocalOffset: 0,0,500
+	Armament@Air:
+		Weapon: kingcrossbowair
+		LocalOffset: 0,0,500
+		Name: Primary
+	Armament@Ground:
+		Weapon: KingsSwordMounted
+		Name: Secondary
+		LocalOffset: 0,0,500
+	AttackFrontal:
+		Armaments: Primary, Secondary
+		Voice: Attack
+	AttackMove:
+		Voice: Attack
+	AutoTarget:
+		ScanRadius: 6
+		InitialStance: AttackAnything
+	RenderSprites:
+		Image: kingross
+		PlayerPalette: raplayer
+	WithInfantryBody:
+		DefaultAttackSequence: shoot2
+		AttackSequences:
+			Secondary: shoot2
+			Primary: shoot
+	Armor:
+		Type: Knight
+	Selectable:
+		Bounds: 26,34,0,-6
+	SelectionDecorations:
+	Voiced:
+		VoiceSet: CommandoVoice
+	ProximityExternalCondition@HEAL:
+		Range: 9c0
+		ValidStances: Ally
+		Condition: KingIsNear
+	SelfHealing@AlwaysHeals:
+		Delay: 10
+		Step: 500
+		HealIfBelow: 160
+		DamageCooldown: 200 
+	AnnounceOnBuild:
+	AnnounceOnKill:
+	ProvidesPrerequisite:
+		Prerequisite: king  
+	DetectCloaked:
+		Range: 3c0
+	Targetable@CombatRole:
+		TargetTypes: HeavyCavalry
+ROSS2:
+	Inherits: ^Cavalry
+	Inherits@AUTOTARGET: ^AutoTargetGround
+	Inherits@AUTOTARGETDEF: ^AutoTargetDefenses
+	Inherits@GainsExperience: ^GainsExperience
+	Inherits@GetsPoisoned: ^GetsPoisoned
+	Inherits@ArcherDemo65: ^ArcherDemo80
+	Inherits@Healable: ^Healable
+	Inherits@SnakeStunnable: ^SnakeSlowable
+	Inherits@Cursable: ^Cursed
+	GrantConditionOnDamageState@Slow:
+		Condition: Slowmotion
+		ValidDamageStates: Heavy, Critical 
+	SpeedMultiplier:
+		RequiresCondition: Slowmotion
+		Modifier: 70
+	Valued:
+		Cost: 600
+	Tooltip:
+		Name: Medium cavalry
+	Buildable:
+		IconPalette: raicon
+		BuildPaletteOrder: 20
+		Prerequisites: anyhq
+		Description: Slow, medium Cavalry.\n  Strong vs Cavalry and Buildings\n  Weak vs Infantry\n\nTrains: 1 Peasant\n\n
+		Queue: MVehicle.GDI
+		#BuildDuration: 300
+	Mobile:
+		Locomotor: heavycavalry
+		TurnSpeed: 6
+		Speed: 95
+	Health:
+		HP: 49500
+	Armament:
+		Weapon: pikeaxe
+	AttackFrontal:
+	AutoTarget:
+		ScanRadius: 4
+		InitialStance: AttackAnything
+	RenderSprites:
+		Image: ross2
+		PlayerPalette: raplayer
+	WithInfantryBody:
+		DefaultAttackSequence: shoot
+	Armor:
+		Type: MediumCavalry
+	Selectable:
+		Bounds: 26,34,0,-6
+	SelectionDecorations:
+	PersonValued:
+		ActorCount: 1
+	Targetable@CombatRole:
+		TargetTypes: RegularCavalry
+ROSS5:
+	Inherits: ^Cavalry
+	Inherits@AUTOTARGET: ^AutoTargetAll
+	Inherits@AUTOTARGETDEF: ^AutoTargetDefenses
+	Inherits@GainsExperience: ^GainsExperience
+	Inherits@GetsPoisoned: ^GetsPoisoned
+	Inherits@ArcherDemo65: ^ArcherDemo80
+	Inherits@Healable: ^Healable
+	Inherits@SnakeStunnable: ^SnakeSlowable
+	Inherits@Cursable: ^Cursed
+	GrantConditionOnDamageState@Slow:
+		Condition: Slowmotion
+		ValidDamageStates: Heavy, Critical 
+	SpeedMultiplier:
+		RequiresCondition: Slowmotion
+		Modifier: 70
+	Valued:
+		Cost: 1400
+	Tooltip:
+		Name: Heavy cavalry
+	Buildable:
+		IconPalette: raicon
+		BuildPaletteOrder: 30
+		Prerequisites: anycastle
+		Description: Heavily armored and very slow.\n  Strong vs Everything (+Spectral Units)\n  Weak vs Long-ranged weapons\n  Can attack Aircraft\n\nTrains: 2 Peasant\n\n
+		Queue: MVehicle.GDI
+		#BuildDuration: 1000
+	Mobile:
+		Locomotor: heavycavalry
+		TurnSpeed: 4
+		Speed: 80
+	Health:
+		HP: 79000
+	Armament@Ground:
+		Weapon: mammothpike
+		Name: Primary
+	Armament@GunlanceAir:
+		Weapon: GunlanceAir 
+		Name: Secondary
+		LocalOffset: 700,0,700
+	Armament@GunlanceGround:
+		Weapon: GunlanceGround 
+		Name: Tertiary
+		LocalOffset: 800,0,300
+	AttackFrontal:
+		Armaments: Primary, Secondary, Tertiary
+	AutoTarget:
+		ScanRadius: 5
+		InitialStance: AttackAnything
+	RenderSprites:
+		Image: ross5
+		PlayerPalette: raplayer
+	WithInfantryBody:
+		DefaultAttackSequence: stab
+		AttackSequences:
+			Secondary: shoot
+			Primary: stab
+			Tertiary: shootground
+	Armor:
+		Type: HeavyCavalry
+	Selectable:
+		Bounds: 26,34,0,-6
+	SelectionDecorations:
+	SelfHealing@Mammothtank:
+		Delay: 10
+		HealIfBelow: 50
+		DamageCooldown: 200 
+	Voiced:
+		VoiceSet: HeavyCavalVoice
+	PersonValued:
+		ActorCount: 2
+	Targetable@CombatRole:
+		TargetTypes: HeavyCavalry
+ROSS4B:
+	Inherits: ^Cavalry
+	Inherits@AUTOTARGET: ^AutoTargetGround
+	Inherits@GainsExperience: ^GainsExperience
+	Inherits@GetsPoisoned: ^GetsPoisoned
+	Inherits@ArcherDemo65: ^ArcherDemo80
+	Inherits@Healable: ^Healable
+	Inherits@SnakeStunnable: ^SnakeSlowable
+	Inherits@Cursable: ^Cursed
+	GrantConditionOnDamageState@Slow:
+		Condition: Slowmotion
+		ValidDamageStates: Heavy, Critical 
+	SpeedMultiplier:
+		RequiresCondition: Slowmotion
+		Modifier: 70
+	Valued:
+		Cost: 300
+	Tooltip:
+		Name: Scout (Flail)
+	Buildable:
+		Description: Fast scout and anti-infantry cavalry.\n  Very strong vs Infantry. Can harm Spectral Units\n  Weak vs Cavalry\n\nTrains: 1 Peasant\n\n
+		IconPalette: raicon
+		BuildPaletteOrder: 5
+		Queue: MVehicle.GDI
+		#BuildDuration: 150
+	RevealsShroud:
+		Range: 8c0
+	Mobile:
+		TurnSpeed: 12
+		Speed: 156
+	Health:
+		HP: 25000
+	Armament:
+		Weapon: mace
+		LocalOffset: 0,0,0
+	AttackFrontal:
+	AutoTarget:
+		ScanRadius: 4
+		InitialStance: AttackAnything
+	RenderSprites:
+		Image: ross4b
+		PlayerPalette: raplayer
+	WithInfantryBody:
+		DefaultAttackSequence: shoot
+	Armor:
+		Type: LightCavalry
+	Selectable:
+		Bounds: 26,34,0,-6
+	SelectionDecorations:
+	PersonValued:
+		ActorCount: 1
+	Targetable@CombatRole:
+		TargetTypes: LightCavalry

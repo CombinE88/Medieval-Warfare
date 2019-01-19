@@ -2,7 +2,7 @@ SkeletonPike:
 	ReloadDelay: 50
 	Range: 2c800
 	Report: Sword02.aud, Sword03.aud, Sword04.aud, Sword06.aud, Sword07.aud
-	ValidTargets: Ground, Trees
+	ValidTargets: Ground, Trees, Lever
 	InvalidTargets: Air
 	Projectile: Bullet
 		Speed: 1c382
@@ -27,14 +27,14 @@ SkeletonBroadSword:
 	ReloadDelay: 35
 	Range: 1c800
 	Report: Sword02.aud, Sword03.aud, Sword04.aud, Sword06.aud, Sword07.aud
-	ValidTargets: Ground, Trees
+	ValidTargets: Ground, Trees, Lever
 	InvalidTargets: Air
 	Projectile: Bullet
 		Speed: 1c382
 	Warhead@1Dam: SpreadDamage
 		Spread: 25
 		Damage: 1150
-		ValidTargets: Ground, Trees
+		ValidTargets: Ground, Trees, Lever
 		InvalidTargets: Air
 		Versus:
 			Leather: 100
@@ -52,14 +52,14 @@ SkeletonClub:
 	ReloadDelay: 35
 	Range: 1c800
 	Report: Sword02.aud, Sword03.aud, Sword04.aud, Sword06.aud, Sword07.aud
-	ValidTargets: Ground, Trees
+	ValidTargets: Ground, Trees, Lever
 	InvalidTargets: Air
 	Projectile: Bullet
 		Speed: 1c382
 	Warhead@1Dam: SpreadDamage
 		Spread: 25
 		Damage: 1400
-		ValidTargets: Ground, Trees
+		ValidTargets: Ground, Trees, Lever
 		InvalidTargets: Air
 		Versus:
 			Leather: 100
@@ -77,7 +77,7 @@ SkeletonGiant:
 	ReloadDelay: 55
 	Range: 1c800
 	Report: battering01.aud
-	ValidTargets: Ground, Trees
+	ValidTargets: Ground, Trees, Lever
 	InvalidTargets: Air
 	Projectile: Bullet
 		Speed: 1c382
@@ -85,7 +85,7 @@ SkeletonGiant:
 		Delay: 5
 		Spread: 256
 		Damage: 8000
-		ValidTargets: Ground, Trees
+		ValidTargets: Ground, Trees, Lever
 		InvalidTargets: Air
 		Versus:
 			Leather: 100
@@ -103,14 +103,14 @@ SkeletonAxe:
 	ReloadDelay: 45
 	Range: 1c800
 	Report: Sword02.aud, Sword03.aud, Sword04.aud, Sword06.aud, Sword07.aud
-	ValidTargets: Ground, Trees
+	ValidTargets: Ground, Trees, Lever
 	InvalidTargets: Air
 	Projectile: Bullet
 		Speed: 1c382
 	Warhead@1Dam: SpreadDamage
 		Spread: 25
 		Damage: 2800
-		ValidTargets: Ground, Trees
+		ValidTargets: Ground, Trees, Lever
 		InvalidTargets: Air
 		Versus:
 			Leather: 100
@@ -510,14 +510,14 @@ GrimSkytheThrow:
 	Warhead@1Eff: CreateEffect
 		ImpactSounds: Sword02.aud, Sword03.aud, Sword04.aud, Sword06.aud, Sword07.aud
 VampAttackGG:
-	ReloadDelay: 45
-	Range: 4c0
+	ReloadDelay: 55
+	Range: 3c512
 	ValidTargets: Infantry, Cavalry, Siege
 	InvalidTargets: Air
 	Projectile: Bullet
 		Speed: 1c382
 	Warhead@1Dam: SpreadDamage
-		Spread: 141
+		Spread: 56
 		ValidTargets: Ground
 		InvalidTargets: Air
 		Damage: 4200
@@ -541,14 +541,14 @@ VampAttackGBuilding:
 	ReloadDelay: 35
 	Range: 1c800
 	Report: Sword02.aud, Sword03.aud, Sword04.aud, Sword06.aud, Sword07.aud
-	ValidTargets: Structure, Trees
+	ValidTargets: Structure, Trees, Lever
 	InvalidTargets: Air
 	Projectile: Bullet
 		Speed: 1c382
 	Warhead@1Dam: SpreadDamage
 		Spread: 25
 		Damage: 2000
-		ValidTargets: Structure, Trees
+		ValidTargets: Structure, Trees, Lever
 		InvalidTargets: Air
 		Versus:
 			Leather: 100
@@ -609,9 +609,9 @@ BackFlyingBlood:
 		Palette: vamprojalpha
 		Blockable: false
 	Warhead@1Dam: SpreadDamage
-		Spread: 141
+		Spread: 16
 		ValidTargets:  Air, Ground
-		Damage: -2000
+		Damage: -1800
 		AffectsParent: true
 		Versus:
 			Leather: 100
@@ -628,14 +628,14 @@ SuperiorPikeCavalry:
 	ReloadDelay: 35
 	Range: 1c800
 	Report: Sword02.aud, Sword03.aud, Sword04.aud, Sword06.aud, Sword07.aud
-	ValidTargets: Ground, Trees
+	ValidTargets: Ground, Trees, Lever
 	InvalidTargets: Air
 	Projectile: Bullet
 		Speed: 1c382
 	Warhead@1Dam: SpreadDamage
 		Spread: 75
 		Damage: 2500
-		ValidTargets: Ground, Trees
+		ValidTargets: Ground, Trees, Lever
 		InvalidTargets: Air
 		Versus:
 			Leather: 25

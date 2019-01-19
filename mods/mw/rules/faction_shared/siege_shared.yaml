@@ -1,0 +1,268 @@
+SUPPWGNL:
+	Inherits: ^Siege
+	Inherits@GainsExperience: ^GainsExperience
+	Inherits@GetsPoisoned: ^GetsPoisoned
+	Inherits@ArcherDemo65: ^ArcherDemo80
+	Inherits@SnakeStunnable: ^SnakeDamagableSiege
+	Selectable:
+		Priority: 4
+	AttackFrontal:
+	Mobile:
+		Speed: 65
+		TurnSpeed: 3
+	Armor:
+		Type: MediumCavalry
+	RevealsShroud:
+		Range: 8c0
+	MustBeDestroyed:
+		RequiredForShortGame: true
+	BaseBuilding:
+	SelectionDecorations:
+	Voiced:
+		VoiceSet: CivilianFemaleVoice
+	Targetable:
+		TargetTypes: Ground, Siege, Wanderer, Laborer
+	Targetable@CombatRole:
+		TargetTypes: Support
+	GrantConditionOnPrerequisite@4:
+		Prerequisites: vehicleproduction
+		Condition: visibility
+	GrantConditionOnPrerequisite@1:
+		Prerequisites: barracks
+		Condition: visibility
+	GrantConditionOnPrerequisite@2:
+		Prerequisites: Level3
+		Condition: visibility
+	GrantConditionOnPrerequisite@3:
+		Prerequisites: Level4
+		Condition: visibility
+	-WithInfantryBody:
+	WithFacingSpriteBody@Level0:
+		Sequence: lv1stand
+		RequiresCondition: visibility == 0
+		Name: BodyLv0
+	WithFacingSpriteBody@Level1:
+		Sequence: lv2stand
+		RequiresCondition: visibility == 1
+		Name: BodyLv1
+	WithFacingSpriteBody@Level2:
+		Sequence: lv3stand
+		RequiresCondition: visibility == 2
+		Name: BodyLv2
+	WithFacingSpriteBody@Level3:
+		Sequence: lv4stand
+		RequiresCondition: visibility == 3
+		Name: BodyLv3
+	WithFacingSpriteBody@Level4:
+		Sequence: lv5stand
+		RequiresCondition: visibility == 4
+		Name: BodyLv4
+	WithMoveAnimation@Level0:
+		MoveSequence: lv1run
+		Body: BodyLv0
+	WithMoveAnimation@Level1:
+		MoveSequence: lv2run
+		Body: BodyLv1
+	WithMoveAnimation@Level2:
+		MoveSequence: lv3run
+		Body: BodyLv2
+	WithMoveAnimation@Level3:
+		MoveSequence: lv4run
+		Body: BodyLv3
+	WithMoveAnimation@Level4:
+		MoveSequence: lv5run
+		Body: BodyLv4
+	RenderSprites:
+		Image: king.suppwgn
+		FactionImages:
+			nod: baron.suppwgn
+			gdi: king.suppwgn
+			sul: sultan.suppwgn
+		PlayerPalette: raplayer
+	Transforms:
+		IntoActor: factnew
+		Offset: -1,-1
+		Facing: 160
+		TransformSounds: tentcloth.aud, brickconc.aud
+		NoTransformNotification: BuildingCannotPlaceAudio
+	Valued:
+		Cost: 4000
+	Tooltip:
+		Name: Supply wagon
+	Buildable:
+		IconPalette: raicon
+		BuildPaletteOrder: 100
+		Description: Deploys into another Keep.\n  Unarmed\n\nTrains: 3 Peasants\n
+		Queue: MSiege.GDI, MSiege.Nod, MSiege.SUL
+	SpawnActorOnDeath:
+		Actor: SUPPWGNL.Husk 
+	Health:
+		HP: 120000
+	PersonValued:
+		ActorCount: 3
+	Targetable@CombatRole:
+		TargetTypes: Support
+	WithRangeCircle:
+		Type: Buildradius
+		UsePlayerColor: true
+		Range: 14c512
+SUPPWGNL.Husk:
+	Inherits: ^Husk
+	ConditionManager:
+	Tooltip:
+		Name: Supply wagon (Destroyed)
+	TransformOnCapture:
+		IntoActor: suppwgnl
+	-WithFacingSpriteBody:
+	GrantConditionOnPrerequisite@4:
+		Prerequisites: vehicleproduction
+		Condition: visibility
+	GrantConditionOnPrerequisite@1:
+		Prerequisites: barracks
+		Condition: visibility
+	GrantConditionOnPrerequisite@2:
+		Prerequisites: Level3
+		Condition: visibility
+	GrantConditionOnPrerequisite@3:
+		Prerequisites: Level4
+		Condition: visibility
+	WithFacingSpriteBody@Level0:
+		Sequence: lv1stand
+		RequiresCondition: visibility == 0
+		Name: BodyLV0
+	WithFacingSpriteBody@Level1:
+		Sequence: lv2stand
+		RequiresCondition: visibility == 1
+		Name: BodyLV1
+	WithFacingSpriteBody@Level2:
+		Sequence: lv3stand
+		RequiresCondition: visibility == 2
+		Name: BodyLV2
+	WithFacingSpriteBody@Level3:
+		Sequence: lv4stand
+		RequiresCondition: visibility == 3
+		Name: BodyLV3
+	WithFacingSpriteBody@Level4:
+		Sequence: lv5stand
+		RequiresCondition: visibility == 4
+		Name: BodyLV4
+	RenderSprites:
+		Image: king.suppwgn.husk
+			nod: baron.suppwgn.husk
+			gdi: king.suppwgn.husk
+			sul: sultan.suppwgn.husk
+		PlayerPalette: raplayer
+	Health:
+		HP: 3500
+MOBTRIB:
+	Inherits: ^Siege
+	Inherits@GetsPoisoned: ^GetsPoisoned
+	Inherits@ArcherDemo65: ^ArcherDemo80
+	Inherits@SnakeStunnable: ^SnakeDamagableSiege
+	Selectable:
+		Priority: 4
+	AttackFrontal:
+	Mobile:
+		Speed: 50
+		TurnSpeed: 3
+	Armor:
+		Type: LightCavalry
+	RevealsShroud:
+		Range: 4c0
+	WithInfantryBody:
+	MustBeDestroyed:
+	BaseBuilding:
+	Selectable:
+		Bounds: 35,35,0,-6
+	Voiced:
+		VoiceSet: CivilianFemaleVoice
+	Targetable:
+		TargetTypes: Ground, Siege, Wanderer, Laborer
+	Targetable@CombatRole:
+		TargetTypes: Support
+	RenderSprites:
+		Image: mobtrib
+		PlayerPalette: raplayer
+	Transforms:
+		IntoActor: siegetribu.scaff
+		Facing: 160
+		TransformSounds: brickconc.aud
+		NoTransformNotification: BuildingCannotPlaceAudio
+	Valued:
+		Cost: 1700
+	Tooltip:
+		Name: Mobile Tribuchet
+	Buildable:
+		IconPalette: raicon
+		BuildPaletteOrder: 90
+		Description: Deploys a tribuchet.\n  Unarmed\n\nTrains: 3 Peasants\nUndeploys in to a large ranged tribuchet.
+		Queue: MSiege.GDI, MSiege.Nod, MSiege.SUL
+		Prerequisites: anycastle, ~global-castlewall
+	Health:
+		HP: 20000
+	PersonValued:
+		ActorCount: 3
+	Targetable@CombatRole:
+		TargetTypes: Support
+	WithRangeCircle:
+		Type: Tribu
+		UsePlayerColor: true
+		Range: 14c0
+EHARVXL:
+	Inherits: ^Siege
+	Inherits@GetsPoisoned: ^GetsPoisoned
+	Inherits@ArcherDemo65: ^ArcherDemo80
+	Inherits@SnakeStunnable: ^SnakeDamagableSiege
+	BodyOrientation:
+		QuantizedFacings: 8
+	QuantizeFacingsFromSequence:
+		Sequence: stand
+	-WithInfantryBody:
+	WithFacingSpriteBody:
+		Sequence: idle
+	WithHarvestAnimation:
+		HarvestSequence: harvest
+		PrefixByFullness: empty-, half-, full-
+	WithMoveAnimation:
+		MoveSequence: move
+	WithDockingAnimation:
+	Valued:
+		Cost: 1000
+	Tooltip:
+		Name: Harvester
+	Buildable:
+		IconPalette: raicon
+		BuildPaletteOrder: 0
+		Description: Collects iron and gold ore.\n  Unarmed\n\nTrains: 1 Peasant
+		Queue: MSiege.GDI, MSiege.Nod, MSiege.SUL
+		Prerequisites: anyrefinery
+	Mobile:
+		TurnSpeed: 5
+		Speed: 85
+	Health:
+		HP: 65000
+	RenderSprites:
+		Image: eharvnewxl
+		FactionImages:
+			nod: eharvnewxl
+			gdi: eharvnewxl
+			sul: sulxl
+		PlayerPalette: raplayer
+	AttackFrontal:
+	Armor:
+		Type: MediumCavalry	   
+	Harvester:
+		DeliveryBuildings: procnew, sulref
+		Resources: Iron, Gold
+		PipCount: 7
+		Capacity: 20
+		BaleLoadDelay: 24
+		BaleUnloadDelay: 3
+		SearchFromProcRadius: 25
+		SearchFromOrderRadius: 15
+	Selectable:
+		Bounds: 30,30,0,-5
+		Priority: 7
+	SelectionDecorations:
+	PersonValued:
+		ActorCount: 1

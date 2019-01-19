@@ -1,0 +1,272 @@
+
+DECOR1:
+ 	Inherits: ^CivBuilding
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+	Tooltip:
+		Name: Barrel
+	RenderSprites:
+		Image: decor1
+		Palette: ra
+	Health:
+		HP: 5000
+	Targetable@Disguise:
+		TargetTypes: Disguise
+	EditorTilesetFilter:
+		Categories: Props
+DECOR2:
+ 	Inherits: ^CivBuilding
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+	Tooltip:
+		Name: Barrels   
+	RenderSprites:
+		Image: decor2
+		Palette: ra
+	Health:
+		HP: 5000
+	Targetable@Disguise:
+		TargetTypes: Disguise
+	EditorTilesetFilter:
+		Categories: Props
+DECOR3:
+ 	Inherits: ^CivBuilding
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+	Tooltip:
+		Name: Anvil   
+	RenderSprites:
+		Image: decor3
+		Palette: ra
+	Health:
+		HP: 20000
+	Targetable@Disguise:
+		TargetTypes: Disguise
+	EditorTilesetFilter:
+		Categories: Props
+DECOR4:
+ 	Inherits: ^CivBuilding
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+	Tooltip:
+		Name: Kart	
+	RenderSprites:
+		Image: decor4
+		Palette: ra
+	Health:
+		HP: 5000
+	Targetable@Disguise:
+		TargetTypes: Disguise
+	EditorTilesetFilter:
+		Categories: Props
+DECOR5:
+ 	Inherits: ^CivBuilding
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+	Tooltip:
+		Name: Karts	
+	RenderSprites:
+		Image: decor5
+		Palette: ra
+	Health:
+		HP: 10000
+	Targetable@Disguise:
+		TargetTypes: Disguise
+	EditorTilesetFilter:
+		Categories: Props
+DECOR6:
+ 	Inherits: ^CivBuilding
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+	Tooltip:
+		Name: Target	
+	RenderSprites:
+		Image: decor6
+		Palette: ra
+	Health:
+		HP: 5000
+	Targetable@Disguise:
+		TargetTypes: Disguise
+	EditorTilesetFilter:
+		Categories: Props
+DECOR7:
+ 	Inherits: ^CivBuilding
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+	Tooltip:
+		Name: Target   
+	RenderSprites:
+		Image: decor7
+		Palette: ra
+	Health:
+		HP: 5000
+	Targetable@Disguise:
+		TargetTypes: Disguise
+	EditorTilesetFilter:
+		Categories: Props
+DECOR8:
+ 	Inherits: ^CivBuilding
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+	Tooltip:
+		Name: Smelter	
+	RenderSprites:
+		Image: decor8
+		Palette: ra
+	Health:
+		HP: 13000
+	Targetable@Disguise:
+		TargetTypes: Disguise
+	EditorTilesetFilter:
+		Categories: Props
+DECOR9:
+ 	Inherits: ^CivBuilding
+	Building:
+		Footprint: xx xx ==
+		Dimensions: 2,3
+		LocalCenterOffset: 0,-512,0
+	Tooltip:
+		Name: Stand   
+	RenderSprites:
+		Image: decor9
+		Palette: ra
+	Health:
+		HP: 10000
+	Targetable@Disguise:
+		TargetTypes: Disguise
+	EditorTilesetFilter:
+		Categories: Props
+DECOR10:
+ 	Inherits: ^CivBuilding
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+	Tooltip:
+		Name: Wagon
+	RenderSprites:
+		Image: decorprops
+		Palette: ra
+	WithSpriteBody:
+		Sequence: idle1
+	Health:
+		HP: 5000
+	Targetable@Disguise:
+		TargetTypes: Disguise
+	EditorTilesetFilter:
+		Categories: Props
+DECOR11:
+ 	Inherits: ^CivBuilding
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+	Tooltip:
+		Name: Storages
+	RenderSprites:
+		Image: decorprops
+		Palette: ra
+	WithSpriteBody:
+		Sequence: idle2
+	Health:
+		HP: 5000
+	Targetable@Disguise:
+		TargetTypes: Disguise
+	EditorTilesetFilter:
+		Categories: Props
+DECOR12:
+ 	Inherits: ^CivBuilding
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+	Tooltip:
+		Name: Storages
+	RenderSprites:
+		Image: decorprops
+		Palette: ra
+	WithSpriteBody:
+		Sequence: idle3
+	Health:
+		HP: 5000
+	Targetable@Disguise:
+		TargetTypes: Disguise
+	EditorTilesetFilter:
+		Categories: Props
+DECOR13:
+ 	Inherits: ^CivBuilding
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+	Tooltip:
+		Name: Storages
+	RenderSprites:
+		Image: decorprops
+		Palette: ra
+	WithSpriteBody:
+		Sequence: idle4
+	Health:
+		HP: 5000
+	Targetable@Disguise:
+		TargetTypes: Disguise
+	EditorTilesetFilter:
+		Categories: Props
+DECOR14:
+ 	Inherits: ^CivBuilding
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+	Tooltip:
+		Name: Storages
+	RenderSprites:
+		Image: decorprops
+		Palette: ra
+	WithSpriteBody:
+		Sequence: idle5
+	Health:
+		HP: 5000
+	Targetable@Disguise:
+		TargetTypes: Disguise
+	EditorTilesetFilter:
+		Categories: Props
+DECOR15:
+ 	Inherits: ^CivBuilding
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+	Tooltip:
+		Name: Storages
+	RenderSprites:
+		Image: decorprops
+		Palette: ra
+	WithSpriteBody:
+		Sequence: idle6
+	Health:
+		HP: 5000
+	Targetable@Disguise:
+		TargetTypes: Disguise
+	EditorTilesetFilter:
+		Categories: Props
+DECOR16:
+ 	Inherits: ^CivBuilding
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+	Tooltip:
+		Name: Storages
+	RenderSprites:
+		Image: decorprops
+		Palette: ra
+	WithSpriteBody:
+		Sequence: idle7
+	Health:
+		HP: 5000
+	Targetable@Disguise:
+		TargetTypes: Disguise
+	EditorTilesetFilter:
+		Categories: Props

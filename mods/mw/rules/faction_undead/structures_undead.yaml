@@ -414,9 +414,9 @@ SPPOOL.penta:
 		Cost: 300
 	Buildable:
 		IconPalette: raicon
-		BuildPaletteOrder: 30
+		BuildPaletteOrder: 100
 		Description: Summons an Essence pool.\n Stores some Essence.\n Can leech essence out of trees.\n  Grants the obelisk the ability to collect essence by converting battlefield loot.
-		Queue: MBuilding.ded
+		Queue: MResources.ded
 		BuildDuration: 10
 	WithRangeCircle:
 		Type: TreesHarvest
@@ -560,10 +560,10 @@ DEDREF.penta:
 		Name: Summoning (Orepolis)
 	Buildable:
 		IconPalette: raicon
-		BuildPaletteOrder: 35
+		BuildPaletteOrder: 110
 		Prerequisites: sppool
 		Description: Summons a Orepolis.\n  Orepolis Convert resource patches into harvestable areas.\n Spawns 2 Acolytes wich will then automaticly harvest resources nearby.\n 
-		Queue: MBuilding.ded
+		Queue: MResources.ded
 		BuildDuration: 10
 	Health:
 		HP: 50000

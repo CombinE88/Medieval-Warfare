@@ -1,0 +1,162 @@
+WARKITE:
+	Inherits: ^Helicopter
+	Inherits@EXPERIENCE: ^GainsExperience
+	Inherits@AUTOTARGET: ^AutoTargetAll
+	Inherits@AUTOTARGETDEF: ^AutoTargetDefenses
+	HitShape:
+	Valued:
+		Cost: 1000
+	Tooltip:
+		Name: WarKite
+	Buildable:
+		Description: The Warkite is a manned heavier-than-air craft with wing surfaces \nthat react against the air to create lift and drag.\n  Strong vs Infantry\n  Weak vs Cavalry and Buildings\n  Moderate vs Aircraft\n  Can attack Aircraft\n\nTrains: 1 Peasant\n
+		BuildPaletteOrder: 40
+		Prerequisites: anyhq
+		Queue: MSiege.Nod
+		BuildDurationModifier: 40
+		IconPalette: raicon
+	Aircraft:
+		InitialFacing: 224
+		TurnSpeed: 10
+		Speed: 158
+	Health:
+		HP: 9000
+	Armor:
+		Type: LightCavalry
+	RevealsShroud:
+		Range: 14c0
+		Type: CenterPosition
+	Armament:
+		Name: primary
+		Weapon: warkitecrossbow
+		LocalOffset: 341,0,456
+		PauseOnCondition: !ammo
+	AttackHeli:
+		FacingTolerance: 20
+	RenderSprites:
+		Image: warkite
+		PlayerPalette: raplayer
+	AmmoPool:
+		Ammo: 4
+		Name: primary
+		Armaments: primary
+		PipCount: 4
+		ReloadCount: 4
+		AmmoCondition: ammo
+	ReloadAmmoPool:
+		AmmoPool: primary
+		Delay: 240
+		Count: 4
+	AutoTarget:
+	WithAttackAnimation:
+		Sequence: shoot
+	Voiced:
+		VoiceSet: VehicleVoice
+	SpawnActorOnDeath@1:
+		Actor: WARKITEMAN.Husk
+	SpawnActorOnDeath@2:
+		Actor: WARKITEKITE.Husk
+	PersonValued:
+		ActorCount: 1
+	Targetable@CombatRole:
+		TargetTypes: Flying
+	SelectionDecorations:
+	Selectable:
+		Bounds:26,26,0,-5
+WRBLN:
+	Inherits: ^Helicopter
+	Inherits@EXPERIENCE: ^GainsExperience
+	Inherits@AUTOTARGET: ^AutoTargetAll
+	Inherits@AUTOTARGETDEF: ^AutoTargetDefenses
+	Valued:
+		Cost: 1700
+	Tooltip:
+		Name: War Balloon
+	Buildable:
+		Description: The War Balloon is a lighter than air aircraft consisting\n of a bag, called an envelope, which contains heated air. A Soldier with a double barreled crossbow stands at the front.\n  Strong vs Infantry and Aircraft\n  Moderate vs Cavalry and Buildings\n  Can attack Aircraft\n\nTrains: 1 Peasant\n
+		BuildPaletteOrder: 100
+		Prerequisites: anycastle
+		Queue: MSiege.Nod
+		BuildDurationModifier: 40
+		IconPalette: raicon
+	Aircraft:
+		InitialFacing: 224
+		TurnSpeed: 5
+		Speed: 70
+	Health:
+		HP: 29000
+	Armor:
+		Type: LightCavalry
+	RevealsShroud:
+		Range: 10c0
+		Type: CenterPosition
+	Armament:
+		Weapon: balloncrossbow
+		Name: primary
+		LocalOffset: 404,100,513, 404,-100,513
+		PauseOnCondition: !ammo
+	AttackHeli:
+		FacingTolerance: 20
+	RenderSprites:
+		Image: warballoon
+		PlayerPalette: raplayer
+	AmmoPool:
+		Name: primary
+		Ammo: 14
+		Armaments: primary, secondary
+		PipCount: 5
+		ReloadCount: 10
+		ReloadDelay: 200
+		AmmoCondition: ammo
+	ReloadAmmoPool:
+		AmmoPool: primary
+		Delay: 200
+		Count: 10
+	SpawnActorOnDeath:
+		Actor: WRBLN.Husk
+	AutoTarget:
+	Explodes:
+		Weapon: Balloonpop
+		EmptyWeapon: Balloonpop
+	WithAttackAnimation:
+		Sequence: shoot
+	SelectionDecorations:
+	Selectable:
+		Bounds:40,52,0,-24
+	Voiced:
+		VoiceSet: BalloonVoice
+	PersonValued:
+		ActorCount: 1
+	Targetable@CombatRole:
+		TargetTypes: Flying
+	ThrowsShrapnel@SMALL:
+		Weapons: SmallWood1, SmallWood2, SmallWood3
+		Pieces: 2, 5
+		Range: 0c512, 3c0
+PLACEHOLDERPLANE:
+	Inherits: ^Plane
+	Interactable:
+	HitShape:
+	-AppearsOnRadar:
+	RenderSprites:
+		Image: placeholder
+		Palette: empty
+	Valued:
+		Cost: 2000
+	Aircraft:
+		TurnSpeed: 4
+		Speed: 303
+		Repulsable: False
+	Health:
+		HP: 15000
+	Armor:
+		Type: Heavy
+	AttackBomber:
+		Armaments: gun, bombs
+	Armament@GUNS:
+		Name: gun
+		Weapon: rottenkadaver
+	WithMuzzleOverlay:
+	Armament@BOMBS:
+		Name: bombs
+		Weapon: none

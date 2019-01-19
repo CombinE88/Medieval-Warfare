@@ -1272,9 +1272,9 @@ SiegeBoulderTech:
 		ValidTargets: Ground
 		InvalidTargets: Air
 		Versus:
-			Leather: 20
-			Light: 20
-			Heavy: 20
+			Leather: 33
+			Light: 33
+			Heavy: 33
 			Concrete: 35
 			Knight: 65
 			LightCavalry: 100

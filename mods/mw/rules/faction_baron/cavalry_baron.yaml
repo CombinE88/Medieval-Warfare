@@ -1,0 +1,224 @@
+ROSS1:
+	Inherits: ^Cavalry
+	Inherits@AUTOTARGET: ^AutoTargetGround
+	Inherits@AUTOTARGETDEF: ^AutoTargetDefenses
+	Inherits@GainsExperience: ^GainsExperience
+	Inherits@GetsPoisoned: ^GetsPoisoned
+	Inherits@ArcherDemo65: ^ArcherDemo80
+	Inherits@Healable: ^Healable
+	Inherits@SnakeStunnable: ^SnakeSlowable
+	Inherits@Cursable: ^Cursed
+	GrantConditionOnDamageState@Slow:
+		Condition: Slowmotion
+		ValidDamageStates: Heavy, Critical 
+	SpeedMultiplier:
+		RequiresCondition: Slowmotion
+		Modifier: 70
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Light cavalry
+	Buildable:
+		IconPalette: raicon
+		BuildPaletteOrder: 20
+		Prerequisites: anyhq
+		Description: Fast, light Cavalry.\n  Strong vs Cavalry and Buildings\n  Weak vs Infantry\n\nTrains: 1 Peasant\n\n
+		Queue: MVehicle.Nod
+		#BuildDuration: 250
+	Mobile:
+		Locomotor: heavycavalry
+		TurnSpeed: 8
+		Speed: 110
+	RevealsShroud:
+		Range: 7c0
+	Health:
+		HP: 37400
+	Armament:
+		Weapon: pikecavalry
+	AttackFrontal:
+	AutoTarget:
+		ScanRadius: 4
+		InitialStance: AttackAnything
+	RenderSprites:
+		Image: ross1
+		PlayerPalette: raplayer
+	WithInfantryBody:
+		DefaultAttackSequence: shoot
+	Armor:
+		Type: MediumCavalry
+	Selectable:
+		Bounds: 26,34,0,-6
+	SelectionDecorations:
+	PersonValued:
+		ActorCount: 1
+	Targetable@CombatRole:
+		TargetTypes: RegularCavalry
+ROSS3:
+	Inherits: ^Cavalry
+	Inherits@AUTOTARGET: ^AutoTargetAll
+	Inherits@AUTOTARGETDEF: ^AutoTargetDefenses
+	Inherits@GainsExperience: ^GainsExperience
+	Inherits@GetsPoisoned: ^GetsPoisoned
+	Inherits@ArcherDemo65: ^ArcherDemo80
+	Inherits@Healable: ^Healable
+	Inherits@SnakeStunnable: ^SnakeSlowable
+	Inherits@Cursable: ^Cursed
+	GrantConditionOnDamageState@Slow:
+		Condition: Slowmotion
+		ValidDamageStates: Heavy, Critical 
+	SpeedMultiplier:
+		RequiresCondition: Slowmotion
+		Modifier: 70
+	DetectCloaked:
+		Range: 2c0
+	Valued:
+		Cost: 950
+	Tooltip:
+		Name: Raiding Squad (fire Arrows)
+	Buildable:
+		IconPalette: raicon
+		BuildPaletteOrder: 30
+		Description: Strong mounted Archer.\n  Strong vs Infantry, Aircrafts and Buildings and Spectral Units\n  Has long range, very fast\n  Can detect cloaked units\n\nTrains: 1 Peasant\n\n
+		Prerequisites: anycastle
+		Queue:  MVehicle.Nod
+		#BuildDuration: 450
+	Mobile:
+		TurnSpeed: 12
+		Speed: 99
+	RevealsShroud:
+		Range: 8c0
+	Health:
+		HP: 27000
+	Armament:
+		Weapon: longbownarrow
+		LocalOffset: 0,0,500
+		FireDelay: 5
+	AttackFrontal:
+		FacingTolerance: 10
+	AutoTarget:
+		ScanRadius: 6
+		InitialStance: AttackAnything
+	RenderSprites:
+		Image: ross3
+		PlayerPalette: raplayer
+	WithInfantryBody:
+		DefaultAttackSequence: shoot
+	Armor:
+		Type: MediumCavalry
+	Selectable:
+		Bounds: 26,34,0,-6
+	SelectionDecorations:
+	PersonValued:
+		ActorCount: 1
+	Targetable@CombatRole:
+		TargetTypes: RegularCavalry
+ROSS4:
+	Inherits: ^Cavalry
+	Inherits@AUTOTARGET: ^AutoTargetAll
+	Inherits@AUTOTARGETDEF: ^AutoTargetDefenses
+	Inherits@GainsExperience: ^GainsExperience
+	Inherits@GetsPoisoned: ^GetsPoisoned
+	Inherits@ArcherDemo65: ^ArcherDemo80
+	Inherits@Healable: ^Healable
+	Inherits@SnakeStunnable: ^SnakeSlowable
+	Inherits@Cursable: ^Cursed
+	GrantConditionOnDamageState@Slow:
+		Condition: Slowmotion
+		ValidDamageStates: Heavy, Critical  
+	SpeedMultiplier:
+		RequiresCondition: Slowmotion
+		Modifier: 70
+	Valued:
+		Cost: 350
+	Tooltip:
+		Name: Javelin Cavalry
+	Buildable:
+		IconPalette: raicon
+		BuildPaletteOrder: 10
+		Description: Fast scout cavalry, armed with spears.\n  Very weak vs Infantry!\n  Strong vs Cavalry, Buildings and light Aircraft\n  Can attack Aircraft\n\nTrains: 1 Peasant\n\n
+		Queue:  MVehicle.Nod
+		#BuildDuration: 150
+	Mobile:
+		TurnSpeed: 12
+		Speed: 190
+	RevealsShroud:
+		Range: 8c0
+	Health:
+		HP: 22000
+	Armament:
+		Weapon: spearthrow
+		LocalOffset: 0,0,700
+	Armament@Air:
+		Weapon: spearthrowair
+		LocalOffset: 0,0,700
+	AttackFrontal:
+	AutoTarget:
+		ScanRadius: 5
+		InitialStance: AttackAnything
+	RenderSprites:
+		Image: ross4
+		PlayerPalette: raplayer
+	WithInfantryBody:
+		DefaultAttackSequence: shoot
+	Armor:
+		Type: LightCavalry
+	Selectable:
+		Bounds: 26,34,0,-6
+	SelectionDecorations:
+	PersonValued:
+		ActorCount: 1
+	Targetable@CombatRole:
+		TargetTypes: LightCavalry
+ROSS4C:
+	Inherits: ^Cavalry
+	Inherits@AUTOTARGET: ^AutoTargetGround
+	Inherits@GainsExperience: ^GainsExperience
+	Inherits@GetsPoisoned: ^GetsPoisoned
+	Inherits@ArcherDemo65: ^ArcherDemo80
+	Inherits@Healable: ^Healable
+	Inherits@SnakeStunnable: ^SnakeSlowable
+	Inherits@Cursable: ^Cursed
+	GrantConditionOnDamageState@Slow:
+		Condition: Slowmotion
+		ValidDamageStates: Heavy, Critical 
+	SpeedMultiplier:
+		RequiresCondition: Slowmotion
+		Modifier: 70
+	Valued:
+		Cost: 300
+	Tooltip:
+		Name: Hussar
+	Buildable:
+		Description: Fast scout and anti-infantry cavalry.\n  Very strong vs Infantry\n  Weak vs Cavalry\n\nTrains: 1 Peasant\n\n
+		IconPalette: raicon
+		BuildPaletteOrder: 5
+		Queue: MVehicle.Nod
+		#BuildDuration: 150
+	RevealsShroud:
+		Range: 8c0
+	Mobile:
+		TurnSpeed: 12
+		Speed: 170
+	Health:
+		HP: 17000
+	Armament:
+		Weapon: mace
+		LocalOffset: 0,0,0
+	AttackFrontal:
+	AutoTarget:
+		ScanRadius: 4
+		InitialStance: AttackAnything
+	RenderSprites:
+		Image: ross4c
+		PlayerPalette: raplayer
+	WithInfantryBody:
+		DefaultAttackSequence: shoot
+	Armor:
+		Type: LightCavalry
+	Selectable:
+		Bounds: 26,34,0,-6
+	SelectionDecorations:
+	PersonValued:
+		ActorCount: 1
+	Targetable@CombatRole:
+		TargetTypes: LightCavalry

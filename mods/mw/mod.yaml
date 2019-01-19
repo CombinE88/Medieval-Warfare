@@ -61,34 +61,46 @@ Rules:
 	mw|rules/palettes.yaml
 	mw|rules/AI.yaml
 	mw|rules/campain-units.yaml
-	mw|rules/civilian.yaml
-	mw|rules/Environment.yaml
-	mw|rules/Props.yaml
-	mw|rules/trees.yaml
-	mw|rules/undeadbuildings.yaml
-	mw|rules/undeadefaults.yaml
-	mw|rules/undeadunits.yaml
-	mw|rules/sultanbuildings.yaml
-	mw|rules/sultaninfantry.yaml
-	mw|rules/sultanmisc.yaml
-	mw|rules/sultanscaffolds1.yaml
-	mw|rules/misc.yaml
-	mw|rules/miscbuildings.yaml
-	mw|rules/miscinfantry.yaml
-	mw|rules/miscscaffolds.yaml
-	mw|rules/kingbuildings.yaml
-	mw|rules/kinginfantry.yaml
-	mw|rules/kingscaffolds.yaml
-	mw|rules/baronbuildings.yaml
-	mw|rules/baroninfantry.yaml
-	mw|rules/baronscaffolds.yaml
-	mw|rules/allaircraft.yaml
-	mw|rules/allcavalry.yaml
-	mw|rules/alldefenses.yaml
-	mw|rules/allsiegeweapons.yaml
 	mw|rules/world.yaml
 	mw|rules/player.yaml
 
+	mw|rules/faction_baron/aircraft_baron.yaml
+	mw|rules/faction_baron/cavalry_baron.yaml
+	mw|rules/faction_baron/defense_baron.yaml
+	mw|rules/faction_baron/infantry_baron.yaml
+	mw|rules/faction_baron/scaffolds_baron.yaml
+	mw|rules/faction_baron/siege_baron.yaml
+	mw|rules/faction_baron/structures_baron.yaml
+
+	mw|rules/faction_king/aircraft_king.yaml
+	mw|rules/faction_king/cavalry_king.yaml
+	mw|rules/faction_king/defense_king.yaml
+	mw|rules/faction_king/infantry_king.yaml
+	mw|rules/faction_king/scaffolds_king.yaml
+	mw|rules/faction_king/siege_king.yaml
+	mw|rules/faction_king/structures_king.yaml
+
+	mw|rules/faction_sultan/infantry_sultan.yaml
+	mw|rules/faction_sultan/misc_sultan.yaml
+	mw|rules/faction_sultan/scaffolds_sultan.yaml
+	mw|rules/faction_sultan/structures_sultan.yaml
+
+	mw|rules/faction_undead/defaults_undead.yaml
+	mw|rules/faction_undead/structures_undead.yaml
+	mw|rules/faction_undead/units_undead.yaml
+
+	mw|rules/faction_shared/defense_shared.yaml
+	mw|rules/faction_shared/infantry_shared.yaml
+	mw|rules/faction_shared/scaffolds_shared.yaml
+	mw|rules/faction_shared/siege_shared.yaml
+	mw|rules/faction_shared/structures_shared.yaml
+
+	mw|rules/faction_none/civilian.yaml
+	mw|rules/faction_none/decorations.yaml
+	mw|rules/faction_none/environment.yaml
+	mw|rules/faction_none/misc.yaml
+	mw|rules/faction_none/props.yaml
+	mw|rules/faction_none/trees.yaml
 Sequences:
 	mw|sequences/builking.yaml
 	mw|sequences/builbaron.yaml

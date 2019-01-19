@@ -1,16 +1,14 @@
 Fork:
 	ReloadDelay: 35
 	Range: 1c800
-	InvalidTargets: Wall
 	Report: Sword01.aud
-	InvalidTargets: Air
+	InvalidTargets: Air, Wall
 	Projectile: Bullet
 		Speed: 1c682
 	Warhead@1Dam: SpreadDamage
 		Spread: 75
 		Damage: 1000
-		InvalidTargets: Wall
-		InvalidTargets: Air
+		InvalidTargets: Air, Wall
 		Versus:
 			Leather: 100
 			Light: 80
@@ -27,14 +25,14 @@ Pike:
 	ReloadDelay: 50
 	Range: 2c800
 	Report: Sword02.aud, Sword03.aud, Sword04.aud, Sword06.aud, Sword07.aud
-	ValidTargets: Ground, Trees
+	ValidTargets: Ground, Trees, Lever
 	InvalidTargets: Air
 	Projectile: Bullet
 		Speed: 1c382
 	Warhead@1Dam: SpreadDamage
 		Spread: 15
 		Damage: 3500
-		ValidTargets: Ground, Trees
+		ValidTargets: Ground, Trees, Lever
 		InvalidTargets: Air
 		Versus:
 			Leather: 20
@@ -52,14 +50,14 @@ KingPike:
 	ReloadDelay: 50
 	Range: 2c800
 	Report: Sword02.aud, Sword03.aud, Sword04.aud, Sword06.aud, Sword07.aud
-	ValidTargets: Ground, Trees
+	ValidTargets: Ground, Trees, Lever
 	InvalidTargets: Air
 	Projectile: Bullet
 		Speed: 1c382
 	Warhead@1Dam: SpreadDamage
 		Spread: 15
 		Damage: 3000
-		ValidTargets: Ground, Trees
+		ValidTargets: Ground, Trees, Lever
 		InvalidTargets: Air
 		Versus:
 			Leather: 20
@@ -84,14 +82,14 @@ KingPikeStructure:
 	ReloadDelay: 50
 	Range: 2c800
 	Report: Sword02.aud, Sword03.aud, Sword04.aud, Sword06.aud, Sword07.aud
-	ValidTargets: Ground
+	ValidTargets: Ground, Lever
 	InvalidTargets: Air, Cavalry
 	Projectile: Bullet
 		Speed: 1c382
 	Warhead@1Dam: SpreadDamage
 		Spread: 15
 		Damage: 3000
-		ValidTargets: Ground, Trees
+		ValidTargets: Ground, Trees, Lever
 		InvalidTargets: Air, Cavalry
 		Versus:
 			Leather: 20
@@ -116,7 +114,7 @@ KingPikeRanged:
 	ReloadDelay: 375
 	Range: 4c512
 	Report: pistolking2.aud
-	ValidTargets: Cavalry
+	ValidTargets: Cavalry, Lever
 	InvalidTargets: Air, Wall, Structure
 	Projectile: Bullet
 		Speed: 1c000
@@ -133,7 +131,7 @@ KingPikeRanged:
 KingPikeRangedDummy:
 	ReloadDelay: 375
 	Range: 4c512
-	ValidTargets: Cavalry
+	ValidTargets: Cavalry, Lever
 	InvalidTargets: Air, Wall, Structure
 	Projectile: InstantHit
 	Warhead@1Dam: SpreadDamage
@@ -183,14 +181,14 @@ PikeSpread:
 	ReloadDelay: 65
 	Range: 2c800
 	Report: Sword02.aud, Sword03.aud, Sword04.aud, Sword06.aud, Sword07.aud
-	ValidTargets: Ground, Trees
+	ValidTargets: Ground, Trees, Lever
 	InvalidTargets: Air
 	Projectile: Bullet
 		Speed: 1c382
 	Warhead@1Dam: SpreadDamage
 		Spread: 375
 		Damage: 4000
-		ValidTargets: Ground, Trees
+		ValidTargets: Ground, Trees, Lever
 		InvalidTargets: Air
 		ValidStances: Enemy, Neutral  
 		Versus:
@@ -209,14 +207,14 @@ PikeCavalry:
 	ReloadDelay: 30
 	Range: 1c800
 	Report: Sword02.aud, Sword03.aud, Sword04.aud, Sword06.aud, Sword07.aud
-	ValidTargets: Ground, Trees
+	ValidTargets: Ground, Trees, Lever
 	InvalidTargets: Air
 	Projectile: Bullet
 		Speed: 1c382
 	Warhead@1Dam: SpreadDamage
 		Spread: 75
 		Damage: 3050
-		ValidTargets: Ground, Trees
+		ValidTargets: Ground, Trees, Lever
 		InvalidTargets: Air
 		Versus:
 			Leather: 25
@@ -234,14 +232,14 @@ PikeAxe:
 	ReloadDelay: 40
 	Range: 1c800
 	Report: Sword02.aud, Sword03.aud, Sword04.aud, Sword06.aud, Sword07.aud
-	ValidTargets: Ground, Trees
+	ValidTargets: Ground, Trees, Lever
 	InvalidTargets: Air
 	Projectile: Bullet
 		Speed: 1c682
 	Warhead@1Dam: SpreadDamage
 		Spread: 452
 		Damage: 4950
-		ValidTargets: Ground, Trees
+		ValidTargets: Ground, Trees, Lever
 		InvalidTargets: Air
 		ValidStances: Enemy, Neutral
 		Versus:
@@ -261,13 +259,13 @@ MammothPike:
 	Range: 1c800
 	Burst: 2
 	BurstDelays: 20
-	ValidTargets: Cavalry, Trees, Structure, Siege
+	ValidTargets: Cavalry, Trees, Structure, Siege, Lever
 	InvalidTargets: Air
 	Report: Sword02.aud, Sword03.aud, Sword04.aud, Sword06.aud, Sword07.aud
 	Projectile: Bullet
 		Speed: 1c382
 	Warhead@1Dam: SpreadDamage
-		ValidTargets: Ground
+		ValidTargets: Ground, Lever
 		InvalidTargets: Air
 		Spread: 180
 		Damage: 4500
@@ -288,14 +286,14 @@ BroadSword:
 	ReloadDelay: 35
 	Range: 1c800
 	Report: Sword02.aud, Sword03.aud, Sword04.aud, Sword06.aud, Sword07.aud
-	ValidTargets: Ground, Trees
+	ValidTargets: Ground, Trees, Lever
 	InvalidTargets: Air
 	Projectile: Bullet
 		Speed: 1c382
 	Warhead@1Dam: SpreadDamage
 		Spread: 25
 		Damage: 1150
-		ValidTargets: Ground, Trees
+		ValidTargets: Ground, Trees, Lever
 		InvalidTargets: Air
 		Versus:
 			Leather: 100
@@ -320,14 +318,14 @@ BroadSwordStructure:
 	ReloadDelay: 35
 	Range: 1c800
 	Report: Sword02.aud, Sword03.aud, Sword04.aud, Sword06.aud, Sword07.aud
-	ValidTargets: Structure, Wall
+	ValidTargets: Structure, Wall, Lever
 	InvalidTargets: Air
 	Projectile: Bullet
 		Speed: 1c382
 	Warhead@1Dam: SpreadDamage
 		Spread: 25
 		Damage: 1150
-		ValidTargets: Structure, Wall
+		ValidTargets: Structure, Wall, Lever
 		InvalidTargets: Air
 		Versus:
 			Leather: 100
@@ -352,14 +350,14 @@ BroadSwordBaron:
 	ReloadDelay: 35
 	Range: 1c800
 	Report: Sword02.aud, Sword03.aud, Sword04.aud, Sword06.aud, Sword07.aud
-	ValidTargets: Ground, Trees
+	ValidTargets: Ground, Trees, Lever
 	InvalidTargets: Air
 	Projectile: Bullet
 		Speed: 1c382
 	Warhead@1Dam: SpreadDamage
 		Spread: 25
 		Damage: 1250
-		ValidTargets: Ground, Trees
+		ValidTargets: Ground, Trees, Lever
 		InvalidTargets: Air
 		Versus:
 			Leather: 100
@@ -377,7 +375,7 @@ BroadSwordRanged:
 	ReloadDelay: 375
 	Range: 4c0
 	Report: pistolking2.aud
-	ValidTargets: Ground
+	ValidTargets: Ground, Lever
 	InvalidTargets: Air, Wall, Structure
 	Projectile: Bullet
 		Speed: 1c000
@@ -388,19 +386,19 @@ BroadSwordRanged:
 	Warhead@1Dam: SpreadDamage
 		Spread: 0
 		Damage: 0
-		ValidTargets: Ground
+		ValidTargets: Ground, Lever
 		InvalidTargets: Air, Wall, Structure
 		DamageTypes: DefaultDeath
 BroadSwordRangedDummy:
 	ReloadDelay: 375
 	Range: 4c0
-	ValidTargets: Ground
+	ValidTargets: Ground, Lever
 	InvalidTargets: Air, Wall, Structure
 	Projectile: InstantHit
 	Warhead@1Dam: SpreadDamage
 		Spread: 75
 		Damage: 5000
-		ValidTargets: Ground
+		ValidTargets: Ground, Lever
 		InvalidTargets: Air, Wall, Structure
 		Versus:
 			Leather: 100
@@ -417,13 +415,13 @@ BroadSwordRangedDummy:
 BroadSwordPinning:
 	ReloadDelay: 375
 	Range: 4c0
-	ValidTargets: Ground
+	ValidTargets: Ground, Lever
 	InvalidTargets: Air, Wall, Structure
 	Projectile: InstantHit
 	Warhead@1Dam: SpreadDamage
 		Spread: 0
 		Damage: 0
-		ValidTargets: Ground
+		ValidTargets: Ground, Lever
 		InvalidTargets: Air, Wall, Structure
 		DamageTypes: DefaultDeath
 	Warhead@Paralyze: GrantSelfCondition
@@ -446,14 +444,14 @@ BroadSwordMongol:
 	BurstDelays: 10
 	Range: 1c800
 	Report: Sword02.aud, Sword03.aud, Sword04.aud, Sword06.aud, Sword07.aud
-	ValidTargets: Ground, Trees
+	ValidTargets: Ground, Trees, Lever
 	InvalidTargets: Air
 	Projectile: Bullet
 		Speed: 1c382
 	Warhead@1Dam: SpreadDamage
 		Spread: 25
 		Damage: 850
-		ValidTargets: Ground, Trees
+		ValidTargets: Ground, Trees, Lever
 		InvalidTargets: Air
 		Versus:
 			Leather: 100
@@ -471,14 +469,14 @@ KingsSword:
 	ReloadDelay: 60
 	Range: 1c800
 	Report: Sword02.aud, Sword03.aud, Sword04.aud, Sword06.aud, Sword07.aud
-	ValidTargets: Ground
+	ValidTargets: Ground, Lever
 	InvalidTargets: Wall, Structure, Air
 	Projectile: Bullet
 		Speed: 1c382
 	Warhead@1Dam: SpreadDamage
 		Spread: 356
 		Damage: 4000
-		ValidTargets: Ground
+		ValidTargets: Ground, Lever
 		InvalidTargets: Wall, Structure, Air
 		Versus:
 			Leather: 100
@@ -496,12 +494,12 @@ Claymore:
 	ReloadDelay: 45
 	Range: 1c800
 	Report: Sword02.aud, Sword03.aud, Sword04.aud, Sword06.aud, Sword07.aud
-	ValidTargets: Ground, Trees
+	ValidTargets: Ground, Trees, Lever
 	InvalidTargets: Air
 	Projectile: Bullet
 		Speed: 1c382
 	Warhead@1Dam: SpreadDamage
-		ValidTargets: Ground, Trees
+		ValidTargets: Ground, Trees, Lever
 		InvalidTargets: Air
 		Spread: 51
 		Damage: 3000
@@ -520,7 +518,7 @@ Claymore:
 Sledgehammer:
 	ReloadDelay: 75
 	Range: 1c800
-	ValidTargets: Ground, Trees, Juggernaut
+	ValidTargets: Ground, Trees, Juggernaut, Lever
 	InvalidTargets: Air
 	Report: jugg-attack.aud
 	Projectile: GravityBomb
@@ -530,7 +528,7 @@ Sledgehammer:
 		ValidStances: Ally
 		AffectsParent: true
 		InvalidTargets: Air
-		ValidTargets: Juggernaut
+		ValidTargets: Juggernaut, Lever
 	Warhead@1Eff: CreateEffect
 		ImpactSounds: Sword02.aud, Sword03.aud, Sword04.aud, Sword06.aud, Sword07.aud
 		Delay: 10
@@ -542,11 +540,11 @@ Sledgehammer:
 		Delay: 50
 	Warhead@1Dam: SpreadDamage
 		Delay: 10
-		ValidTargets: Ground, Trees
+		ValidTargets: Ground, Trees, Lever
 		InvalidTargets: Air
 		Spread: 525
-		Damage: 3000
-		Falloff: 100, 100, 100, 100, 0, 0, 0
+		Damage: 3200
+		Falloff: 100, 100, 100, 100, 100, 100, 0
 		Versus:
 			Leather: 150
 			Light: 125
@@ -562,11 +560,11 @@ Sledgehammer:
 		ValidStances: Enemy, Neutral	   
 	Warhead@2Dam: SpreadDamage
 		Delay: 30
-		ValidTargets: Ground, Trees
+		ValidTargets: Ground, Trees, Lever
 		InvalidTargets: Air
 		Spread: 525
-		Damage: 3000
-		Falloff: 100, 100, 100, 100, 0, 0, 0
+		Damage: 3200
+		Falloff: 100, 100, 100, 100, 100, 100, 0
 		Versus:
 			Leather: 150
 			Light: 125
@@ -582,11 +580,11 @@ Sledgehammer:
 		ValidStances: Enemy, Neutral  
 	Warhead@3Dam: SpreadDamage
 		Delay: 50
-		ValidTargets: Ground, Trees
+		ValidTargets: Ground, Trees, Lever
 		InvalidTargets: Air
 		Spread: 525
-		Damage: 3000
-		Falloff: 100, 100, 100, 100, 0, 0, 0
+		Damage: 3200
+		Falloff: 100, 100, 100, 100, 100, 100, 0
 		Versus:
 			Leather: 150
 			Light: 125
@@ -607,13 +605,13 @@ Mace:
 	Burst: 3
 	BurstDelays: 15
 	Report: Sword02.aud, Sword03.aud, Sword04.aud, Sword06.aud, Sword07.aud
-	ValidTargets: Ground
+	ValidTargets: Ground, Lever
 	Projectile: Bullet
 		Speed: 1c382
 	Warhead@1Dam: SpreadDamage
 		Spread: 105
 		InvalidTargets: Wall, Air
-		ValidTargets: Ground
+		ValidTargets: Ground, Lever
 		Damage: 2550
 		Versus:
 			Leather: 250
@@ -631,7 +629,7 @@ Battering:
 	ReloadDelay: 160
 	Range: 1c800
 	Report: battering01.aud
-	ValidTargets: Structure, Wall, Siege
+	ValidTargets: Structure, Wall, Siege, Lever
 	Projectile: Bullet
 		Speed: 1c682
 	Warhead@1Dam: SpreadDamage
@@ -648,4 +646,4 @@ Battering:
 			MediumCavalry: 100
 			HeavyCavalry: 100
 			HeavyBuilding: 200
-		ValidTargets: Structure, Wall, Siege
+		ValidTargets: Structure, Wall, Siege, Lever

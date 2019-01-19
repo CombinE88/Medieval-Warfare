@@ -1,0 +1,65 @@
+BATO:
+	Inherits: ^MWDefense
+	Inherits@AUTOTARGET: ^AutoTargetAll
+	Inherits@Hitshape: ^1x1Shape
+	EditorTilesetFilter:
+		Categories: Defense
+	Valued:
+		Cost: 2800
+	CustomSellValue:
+		Value: 1400
+	Tooltip:
+		Name: Tower with Ballista
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+	Health:
+		HP: 60000
+	RevealsShroud:
+		Range: 8c0
+	WithBuildingBib:
+		Palette: bibs
+		HasMinibib: Yes
+	Armament@1:
+		Weapon: stationbalistaag
+		LocalOffset: 356,0,809
+		Name: secondary
+	Armament@2:
+		Weapon: stationbalistaaa
+		LocalOffset: 356,0,809
+		Name: primary
+	DetectCloaked:
+		Range: 3c0
+	Armor:
+		Type: Concrete
+	Selectable:
+		Bounds: 30,40,0,-12
+	SelectionDecorations:
+	WithIdleOverlay:
+		Sequence: overlay
+	RenderSprites:
+		Image: batowgun
+		PlayerPalette: raplayer
+	BodyOrientation:
+		QuantizedFacings: 32
+	WithAttackAnimation@1:
+		Armament: primary
+		Sequence: shoot
+	WithAttackAnimation@2:
+		Armament: secondary
+		Sequence: shoot
+	WithEmbeddedTurretSpriteBody:
+	-WithSpriteBody:
+	AttackTurreted:
+	Turreted:
+		TurnSpeed: 2
+	WithDeathAnimation:
+		DeathSequencePalette: raplayer 
+	PersonValued:
+		ActorCount: 3
+	Targetable@CombatRole:
+		TargetTypes: Defenses
+	WithRangeCircle:
+		Type: AGCircle
+		Range: 8c0
+		Color: FFFF0080

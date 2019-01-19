@@ -1,0 +1,101 @@
+SAMNEW:
+	Inherits: ^MWDefense
+	Inherits@AUTOTARGET: ^AutoTargetAir
+	Inherits@Hitshape: ^2x1Shape
+	-RenderDetectionCircle:
+	WithDeathAnimation:
+		DeathSequencePalette: raplayer
+	RenderSprites:
+		Image: gtairwnew
+		PlayerPalette: raplayer
+	Valued:
+		Cost: 1300
+	CustomSellValue:
+		Value: 650
+	Tooltip:
+		Name: Anti-Aircraft Ballista
+	Building:
+		Footprint: xx
+		Dimensions: 2,1
+	Health:
+		HP: 40000
+	RevealsShroud:
+		Range: 8c0
+	WithBuildingBib:
+		Palette: bibs
+		HasMinibib: Yes
+	Armament@1:
+		Weapon: samballista
+		LocalOffset: 200,0,227
+		Turret: primary
+	AttackTurreted:
+	BodyOrientation:
+		QuantizedFacings: 8
+	WithSpriteTurret@1: 
+		Sequence: turretidle
+		Turret: primary
+	Turreted@1:
+		Turret: primary
+		TurnSpeed: 100
+		Offset: 0,0,932
+	Armor:
+		Type: Concrete 
+	SelectionDecorations:
+	Selectable:
+		Bounds: 50,50,0,-10
+	PersonValued:
+		ActorCount: 2
+TRIBU:
+	Inherits: ^MWDefense
+	Inherits@AUTOTARGET: ^AutoTargetGround
+	Inherits@Hitshape: ^1x1Shape
+	Valued:
+		Cost: 1100
+	CustomSellValue:
+		Value: 550
+	Tooltip:
+		Name: Counterweight Trebuchet
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+	Health:
+		HP: 60000
+	Armor:
+		Type: Concrete
+	RevealsShroud:
+		Range: 8c0
+	WithBuildingBib:
+		Palette: bibs
+		HasMinibib: Yes
+	Armament:
+		Weapon: tribuchetboulder
+		LocalOffset: 0,0,2124
+		FireDelay: 5
+	DetectCloaked:
+		Range: 3c0
+	Selectable:
+		Bounds: 30,52,0,-12
+	SelectionDecorations:
+	RenderSprites:
+		Image: tribu
+		PlayerPalette: raplayer
+	BodyOrientation:
+		QuantizedFacings: 32
+	WithAttackAnimation:
+		Sequence: shoot
+	WithEmbeddedTurretSpriteBody:
+	-WithSpriteBody:
+	AttackTurreted:
+	Turreted:
+		TurnSpeed: 2
+	WithDeathAnimation:
+		DeathSequencePalette: raplayer 
+	ThrowsShrapnel@SMALL:
+		Weapons: SmallWood1, SmallWood2, SmallWood3, LargeWood1, LargeWood1, LargeWood1
+		Pieces: 2, 4
+		Range: 0c512, 3c0
+	PersonValued:
+		ActorCount: 3
+		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4 
+	Targetable@CombatRole:
+		TargetTypes: Defenses
