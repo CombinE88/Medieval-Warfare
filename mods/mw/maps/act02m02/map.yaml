@@ -2097,7 +2097,6 @@ Nodes:
 			Actor: Actor102
 		Out@Con2:
 			ConnectionType: ActorList
-			Actor: Actor102
 			Actors: Actor102
 	MapInfoActorInfoNode@ND83: MapInfoActorInfoNode
 		Pos: 1013,-410
