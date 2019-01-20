@@ -937,12 +937,6 @@ Actors:
 		Location: 17,42
 		SubCell: 1
 		Facing: 92
-	Actor303: switchpulledd
-		Owner: Baron
-		Location: 9,30
-	Actor304: switchpulledc
-		Owner: Baron
-		Location: 28,25
 	Actor309: shadowtop
 		Owner: Neutral
 		Location: 28,27
@@ -1042,41 +1036,37 @@ Actors:
 	Actor337: shadowfull
 		Owner: Neutral
 		Location: 16,25
+	Actor338: switchd
+		Owner: Baron
+		Location: 9,30
+	Actor339: switchc
+		Owner: Baron
+		Location: 28,25
 Nodes:
 	TriggerOnKilled@ND02: TriggerOnKilled
-		Pos: -354,1
+		Pos: -443,-186
 		Out@Con1:
 			ConnectionType: Exec
 		In@Con1:
 			ConnectionType: Actor
-			Node@ND04: Con1
+			Node@ND29: Con1
 		In@Con2:
 			ConnectionType: Exec
 			Node@ND05: Con1
-	MapInfoActorReference@ND04: MapInfoActorReference
-		Pos: -753,-59
-		Out@Con1:
-			ConnectionType: Actor
-			Actor: Actor303
-		Out@Con2:
-			ConnectionType: ActorList
-			Actor: Actor303
-			Actors: Actor303
 	TriggerWorldLoaded@ND05: TriggerWorldLoaded
 		Pos: -1048,188
 		Out@Con1:
 			ConnectionType: Exec
 	MapInfoActorReference@ND06: MapInfoActorReference
-		Pos: -122,-247
+		Pos: -445,-425
 		Out@Con1:
 			ConnectionType: Actor
 			Actor: Actor38
 		Out@Con2:
 			ConnectionType: ActorList
-			Actor: Actor38
 			Actors: Actor38
 	ActorKill@ND07: ActorKill
-		Pos: 146,-76
+		Pos: -199,-423
 		Out@Con1:
 			ConnectionType: Exec
 		In@Con1:
@@ -1088,26 +1078,17 @@ Nodes:
 			ConnectionType: Exec
 			Node@ND02: Con1
 	TriggerOnKilled@ND08: TriggerOnKilled
-		Pos: -258,548
+		Pos: -321,839
 		Out@Con1:
 			ConnectionType: Exec
 		In@Con1:
 			ConnectionType: Actor
-			Node@ND09: Con1
+			Node@ND30: Con1
 		In@Con2:
 			ConnectionType: Exec
 			Node@ND12: Con1
-	MapInfoActorReference@ND09: MapInfoActorReference
-		Pos: -657,488
-		Out@Con1:
-			ConnectionType: Actor
-			Actor: Actor304
-		Out@Con2:
-			ConnectionType: ActorList
-			Actor: Actor304
-			Actors: Actor304
 	MapInfoActorReference@ND10: MapInfoActorReference
-		Pos: -26,300
+		Pos: -321,604
 		Out@Con1:
 			ConnectionType: Actor
 			Actor: Actor214
@@ -1115,7 +1096,7 @@ Nodes:
 			ConnectionType: ActorList
 			Actors: Actor214,Actor213
 	ActorKill@ND11: ActorKill
-		Pos: 242,471
+		Pos: -66,840
 		Out@Con1:
 			ConnectionType: Exec
 		In@Con1:
@@ -1127,11 +1108,11 @@ Nodes:
 			ConnectionType: Exec
 			Node@ND08: Con1
 	TriggerWorldLoaded@ND12: TriggerWorldLoaded
-		Pos: -705,737
+		Pos: -587,1084
 		Out@Con1:
 			ConnectionType: Exec
 	TriggerOnEnteredFootprint@ND14: TriggerOnEnteredFootprint
-		Pos: 733,-197
+		Pos: 708,-170
 		Out@Con1:
 			ConnectionType: Exec
 		In@Con1:
@@ -1143,7 +1124,7 @@ Nodes:
 		In@Con3:
 			ConnectionType: Repeatable
 	MapInfoNode@ND15: MapInfoNode
-		Pos: 191,-402
+		Pos: 220,-399
 		Out@Con1:
 			ConnectionType: Player
 			Player: King
@@ -1160,16 +1141,15 @@ Nodes:
 		In@Con2:
 			ConnectionType: Player
 	MapInfoActorReference@ND17: MapInfoActorReference
-		Pos: 998,-324
+		Pos: 708,-412
 		Out@Con1:
 			ConnectionType: Actor
 			Actor: Actor250
 		Out@Con2:
 			ConnectionType: ActorList
-			Actor: Actor250
 			Actors: Actor250
 	ActorKill@ND18: ActorKill
-		Pos: 1270,-100
+		Pos: 967,-168
 		Out@Con1:
 			ConnectionType: Exec
 		In@Con1:
@@ -1181,7 +1161,7 @@ Nodes:
 			ConnectionType: Exec
 			Node@ND14: Con1
 	UiTextMessage@ND19: UiTextMessage
-		Pos: 1701,-322
+		Pos: 1229,-439
 		Out@Con1:
 			ConnectionType: Exec
 		In@Con1:
@@ -1194,7 +1174,7 @@ Nodes:
 			ConnectionType: Exec
 			Node@ND18: Con1
 	MapInfoNode@ND20: MapInfoNode
-		Pos: 1329,-395
+		Pos: 963,-440
 		Out@Con1:
 			ConnectionType: String
 			String: Mission
@@ -1205,7 +1185,7 @@ Nodes:
 			ConnectionType: Integer
 			Num: 100
 	TimedExecution@ND21: TimedExecution
-		Pos: 2015,-317
+		Pos: 1463,-170
 		Out@Con1:
 			ConnectionType: Exec
 		In@Con1:
@@ -1215,7 +1195,7 @@ Nodes:
 			ConnectionType: Exec
 			Node@ND19: Con1
 	UiCompleteObjective@ND22: UiCompleteObjective
-		Pos: 2364,-260
+		Pos: 1722,-172
 		Out@Con1:
 			ConnectionType: Exec
 		In@Con1:
@@ -1225,7 +1205,7 @@ Nodes:
 			ConnectionType: Exec
 			Node@ND21: Con1
 	UiNewObjective@ND23: UiNewObjective
-		Pos: -623,202
+		Pos: -652,194
 		Item: Primary
 		Out@Con1:
 			ConnectionType: Objective
@@ -1247,8 +1227,93 @@ Nodes:
 			Player: King
 		Out@Con2:
 			ConnectionType: String
-			String: Find the letter!
+			String: Find the Informations!
+	TriggerOnAllKilled@ND26: TriggerOnAllKilled
+		Pos: 86,336
+		Out@Con1:
+			ConnectionType: Exec
+		In@Con1:
+			ConnectionType: ActorList
+			Node@ND27: Con2
+		In@Con2:
+			ConnectionType: Repeatable
+		In@Con3:
+			ConnectionType: Exec
+			Node@ND05: Con1
+	MapInfoActorReference@ND27: MapInfoActorReference
+		Pos: -178,334
+		Out@Con1:
+			ConnectionType: Actor
+			Actor: Actor296
+		Out@Con2:
+			ConnectionType: ActorList
+			Actors: Actor296,Actor300,Actor297,Actor298,Actor301,Actor302,Actor299,Actor295
+	UiFailObjective@ND28: UiFailObjective
+		Pos: 353,336
+		Out@Con1:
+			ConnectionType: Exec
+		In@Con1:
+			ConnectionType: Objective
+			Node@ND23: Con1
+		In@Con2:
+			ConnectionType: Exec
+			Node@ND26: Con1
+	MapInfoActorReference@ND29: MapInfoActorReference
+		Pos: -714,-192
+		Out@Con1:
+			ConnectionType: Actor
+			Actor: Actor338
+		Out@Con2:
+			ConnectionType: ActorList
+			Actors: Actor338
+	MapInfoActorReference@ND30: MapInfoActorReference
+		Pos: -584,835
+		Out@Con1:
+			ConnectionType: Actor
+			Actor: Actor339
+		Out@Con2:
+			ConnectionType: ActorList
+			Actors: Actor339
 Rules: mw|rules/campaign-maprules.yaml
 	Player:
 		PlayerResources:
 			DefaultCash: 0
+	RMBONEW:
+		Health:
+			HP: 26000
+		Armament:
+			Weapon: paladingun
+			MuzzleSequence: muzzle
+			LocalOffset: 0,0,356
+		Armament@visual:
+			Weapon: paladingunvisual
+			LocalOffset: 0,0,356
+			MuzzleSequence: muzzle
+		Armament@Lever:
+			Weapon: PULLLEVER
+		RevealsShroud:
+			Range: 5c0
+Weapons:
+	PULLLEVER:
+		ReloadDelay: 65
+		Range: 1c512
+		ValidTargets: Lever
+		Projectile: Bullet
+			Speed: 1c382
+		Warhead@1Dam: SpreadDamage
+			Spread: 375
+			Damage: 10000
+			ValidTargets: Lever
+			ValidStances: Enemy, Neutral
+			Versus:
+				Leather: 100
+				Light: 100
+				Heavy: 100
+				Concrete: 100
+				HeavyBuilding: 100
+				Knight: 100
+				LightCavalry: 100
+				MediumCavalry: 100
+				HeavyCavalry: 100
+				Spectral: 100
+			DamageTypes: DefaultDeath

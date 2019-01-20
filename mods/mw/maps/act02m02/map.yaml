@@ -1,6 +1,6 @@
 MapFormat: 11
 RequiresMod: mw
-Title: act2map3
+Title: Act II Mission 2
 Author: CombinE
 Tileset: TEMPERAT
 MapSize: 34,166
@@ -147,9 +147,6 @@ Actors:
 	Actor41: t03
 		Owner: Neutral
 		Location: 26,85
-	Actor42: t05
-		Owner: Neutral
-		Location: 28,88
 	Actor43: t06
 		Owner: Neutral
 		Location: 27,90
@@ -1578,12 +1575,12 @@ Nodes:
 			ConnectionType: Exec
 			Node@ND01: Con1
 	MapInfoNode@ND14: MapInfoNode
-		Pos: -688,148
+		Pos: -594,193
 		Out@Con1:
 			ConnectionType: Integer
 			Num: 5
 	MapInfoNode@ND16: MapInfoNode
-		Pos: -41,366
+		Pos: -302,464
 		Out@Con3:
 			ConnectionType: String
 			String: Mission
@@ -1591,7 +1588,7 @@ Nodes:
 			ConnectionType: String
 			String: Clear the path ahead from all enemies! The Convoy will arrive in 10 Minutes
 	UiTextMessage@ND18: UiTextMessage
-		Pos: 191,375
+		Pos: 4,313
 		Out@Con1:
 			ConnectionType: Exec
 		In@Con1:
@@ -1604,7 +1601,7 @@ Nodes:
 			ConnectionType: Exec
 			Node@ND13: Con1
 	TriggerOnAllKilled@ND21: TriggerOnAllKilled
-		Pos: 1350,-159
+		Pos: 1342,-102
 		Out@Con1:
 			ConnectionType: Exec
 		In@Con1:
@@ -1636,7 +1633,7 @@ Nodes:
 			ConnectionType: Exec
 			Node@ND21: Con1
 	GroupActorInfoGroup@ND23: GroupActorInfoGroup
-		Pos: 1344,-561
+		Pos: 1345,-580
 		Out@Con1:
 			ConnectionType: ActorInfoArray
 		In@Con1:
@@ -1815,7 +1812,7 @@ Nodes:
 			ConnectionType: ActorList
 			Actors: Actor230,Actor231,Actor232,Actor233,Actor229,Actor228,Actor227,Actor182,Actor178,Actor179,Actor181,Actor176,Actor177,Actor180,Actor174,Actor172,Actor173,Actor169,Actor170,Actor171
 	MapInfoNode@ND38: MapInfoNode
-		Pos: 612,299
+		Pos: 20,856
 		Out@Con3:
 			ConnectionType: String
 			String: The Commander must survive!
@@ -1823,7 +1820,7 @@ Nodes:
 			ConnectionType: Player
 			Player: King
 	UiNewObjective@ND39: UiNewObjective
-		Pos: 898,304
+		Pos: 357,885
 		Item: Primary
 		Out@Con1:
 			ConnectionType: Objective
@@ -1839,7 +1836,7 @@ Nodes:
 		In@Con4:
 			ConnectionType: PlayerGroup
 	MapInfoNode@ND40: MapInfoNode
-		Pos: 268,665
+		Pos: 2,581
 		Out@Con3:
 			ConnectionType: String
 			String: Clear the path ahead from all enemies! The Convoy will arrive in 10 Minutes
@@ -1847,7 +1844,7 @@ Nodes:
 			ConnectionType: Player
 			Player: King
 	UiNewObjective@ND41: UiNewObjective
-		Pos: 611,639
+		Pos: 356,572
 		Item: Primary
 		Out@Con1:
 			ConnectionType: Objective
@@ -1863,7 +1860,7 @@ Nodes:
 		In@Con4:
 			ConnectionType: PlayerGroup
 	TriggerOnAllKilled@ND42: TriggerOnAllKilled
-		Pos: 1288,673
+		Pos: 1331,764
 		Out@Con1:
 			ConnectionType: Exec
 		In@Con1:
@@ -1875,7 +1872,7 @@ Nodes:
 			ConnectionType: Exec
 			Node@ND18: Con1
 	MapInfoActorReference@ND43: MapInfoActorReference
-		Pos: 891,638
+		Pos: 966,553
 		Out@Con1:
 			ConnectionType: Actor
 			Actor: Actor130
@@ -1883,7 +1880,7 @@ Nodes:
 			ConnectionType: ActorList
 			Actors: Actor130,Actor137,Actor131,Actor132,Actor64,Actor65,Actor129,Actor135,Actor136,Actor133,Actor134,Actor139,Actor138,Actor140,Actor142,Actor141,Actor143,Actor144,Actor147,Actor148,Actor152,Actor151,Actor150,Actor149,Actor70,Actor146,Actor145,Actor69,Actor153,Actor154,Actor161,Actor168,Actor67,Actor155,Actor68,Actor162,Actor66,Actor157,Actor163,Actor164,Actor166,Actor167,Actor158,Actor160,Actor159,Actor169,Actor171,Actor170,Actor172,Actor173,Actor178,Actor179,Actor182,Actor181,Actor177,Actor176,Actor174,Actor180,Actor230,Actor231,Actor232,Actor233,Actor228,Actor227,Actor229,Actor337,Actor338,Actor317,Actor315,Actor318,Actor321,Actor316,Actor319,Actor320,Actor333,Actor336,Actor335,Actor334,Actor322,Actor323,Actor324,Actor325,Actor326,Actor330,Actor327,Actor331,Actor328,Actor329,Actor293,Actor294,Actor297,Actor291,Actor292,Actor295,Actor280,Actor298,Actor296,Actor339,Actor187,Actor340,Actor283,Actor284,Actor285,Actor286,Actor188,Actor189,Actor190,Actor282,Actor305,Actor306,Actor314,Actor313,Actor191,Actor186,Actor183,Actor312,Actor303,Actor311,Actor304,Actor342,Actor184,Actor301,Actor302,Actor309,Actor310,Actor308,Actor307,Actor185,Actor299,Actor300,Actor341,Actor332,Actor281,Actor289,Actor290,Actor288,Actor287,Actor368,Actor369
 	UiCompleteObjective@ND44: UiCompleteObjective
-		Pos: 1916,775
+		Pos: 1578,761
 		Out@Con1:
 			ConnectionType: Exec
 		In@Con1:
@@ -1893,7 +1890,7 @@ Nodes:
 			ConnectionType: Exec
 			Node@ND42: Con1
 	TriggerCreateTimer@ND51: TriggerCreateTimer
-		Pos: 1901,145
+		Pos: 1841,222
 		Out@Con1:
 			ConnectionType: TimerConnection
 		Out@Con2:
@@ -1907,49 +1904,15 @@ Nodes:
 			ConnectionType: Exec
 			Node@ND18: Con1
 	MapInfoNode@ND52: MapInfoNode
-		Pos: 1627,132
+		Pos: 1574,129
 		Out@Con1:
 			ConnectionType: Integer
 			Num: 600
-		Out@Con2:
-			ConnectionType: Integer
-			Num: 0
 		Out@Con3:
 			ConnectionType: Integer
-			Num: 25
-	CountNode@ND55: CountNode
-		Pos: 1570,591
-		Methode: All
-		Out@Con1:
-			ConnectionType: Integer
-		In@Con1:
-			ConnectionType: Universal
-			Node@ND68: Con2
-	CheckCondition@ND56: CheckCondition
-		Pos: 2217,227
-		Methode: True
-		Out@Con1:
-			ConnectionType: Exec
-		Out@Con2:
-			ConnectionType: Exec
-		In@Con1:
-			ConnectionType: Exec
-			Node@ND51: Con2
-		In@Con2:
-			ConnectionType: Condition
-			Node@ND57: Con1
-	CompareNumber@ND57: CompareNumber
-		Pos: 1906,453
-		Out@Con1:
-			ConnectionType: Condition
-		In@Con1:
-			ConnectionType: Integer
-			Node@ND52: Con2
-		In@Con2:
-			ConnectionType: Integer
-			Node@ND55: Con1
+			Num: 10
 	Reinforcements@ND59: Reinforcements
-		Pos: 3566,329
+		Pos: 3571,123
 		Out@Con1:
 			ConnectionType: ActorList
 		Out@Con2:
@@ -1962,7 +1925,7 @@ Nodes:
 			Node@ND60: Con1
 		In@Con3:
 			ConnectionType: CellPath
-			Node@ND65: Con5
+			Node@ND65: Con6
 		In@Con4:
 			ConnectionType: Integer
 			Node@ND73: Con1
@@ -1985,7 +1948,7 @@ Nodes:
 		In@Con19:
 			ConnectionType: ActorInfo
 	UiTextMessage@ND61: UiTextMessage
-		Pos: 3552,53
+		Pos: 3542,-190
 		Out@Con1:
 			ConnectionType: Exec
 		In@Con1:
@@ -1998,7 +1961,7 @@ Nodes:
 			ConnectionType: Exec
 			Node@ND87: Con1
 	MapInfoActorInfoNode@ND62: MapInfoActorInfoNode
-		Pos: 2875,92
+		Pos: 2945,121
 		Out@Con1:
 			ConnectionType: ActorInfo
 			ActorInfo: suppwgnl
@@ -2012,25 +1975,17 @@ Nodes:
 			String: Mission
 		Out@Con4:
 			ConnectionType: String
-			String: Route Clear, Protect the caravan!
-		Out@Con5:
+			String: Protect the caravan!
+		Out@Con6:
 			ConnectionType: CellPath
-			Cells: 11,164|11,160|12,159|12,150|13,149|15,149|16,147|16,142|17,140|16,139|16,133|20,129|20,123|17,120|17,115|19,114|20,114|21,113|21,99|17,95|17,89|18,87|17,86|17,85|18,84|18,79|19,78|21,78|22,76|22,66|22,64|23,62|22,60|18,56|18,53|24,47|24,38|24,25|23,24|23,18|21,16|18,16|16,14|16,10|18,8|19,8|21,6|21,1
-	MapInfoActorReference@ND68: MapInfoActorReference
-		Pos: 896,888
-		Out@Con1:
-			ConnectionType: Actor
-			Actor: Actor132
-		Out@Con2:
-			ConnectionType: ActorList
-			Actors: Actor132,Actor131,Actor129,Actor135,Actor136,Actor134,Actor65,Actor133,Actor64,Actor130,Actor137
+			Cells: 11,164|22,74|21,1
 	MapInfoNode@ND73: MapInfoNode
 		Pos: 3208,429
 		Out@Con1:
 			ConnectionType: Integer
 			Num: 75
 	TriggerOnEnteredFootprint@ND74: TriggerOnEnteredFootprint
-		Pos: 2820,611
+		Pos: 2798,713
 		Out@Con1:
 			ConnectionType: Exec
 		In@Con1:
@@ -2042,7 +1997,7 @@ Nodes:
 		In@Con3:
 			ConnectionType: Repeatable
 	MapInfoNode@ND75: MapInfoNode
-		Pos: 2314,690
+		Pos: 2253,770
 		Out@Con1:
 			ConnectionType: Player
 			Player: King2
@@ -2050,7 +2005,7 @@ Nodes:
 			ConnectionType: CellArray
 			Cells: 33,4|32,4|31,4|30,4|29,4|28,4|27,4|26,4|25,4|24,4|23,4|22,4|21,4|20,4|19,4|18,4|17,4|16,4|15,4|14,4|13,4|12,4|11,4|10,4|9,4|8,4|7,4|6,4|5,4|4,4|3,4|2,4|1,4|0,4|0,3|1,3|2,3|3,3|4,3|5,3|6,3|7,3|8,3|9,3|10,3|11,3|12,3|13,3|14,3|15,3|16,3|17,3|18,3|19,3|20,3|21,3|22,3|23,3|24,3|25,3|26,3|27,3|28,3|29,3|30,3|31,3|32,3|33,3|33,2|32,2|31,2|30,2|29,2|28,2|27,2|26,2|25,2|23,2|22,2|21,2|20,2|19,2|18,2|17,2|16,2|15,2|14,2|13,2|12,2|11,2|9,2|8,2|7,2|6,2|5,2|4,2|3,2|2,2|1,2|0,2|0,1|1,1|2,1|3,1|5,1|6,1|7,1|8,1|9,1|10,1|11,1|12,1|13,1|14,1|15,1|16,1|17,1|18,1|19,1|20,1|21,1|22,1|23,1|24,1|25,1|26,1|27,1|28,1|29,1|30,1|31,1|32,1|33,1|33,0|32,0|31,0|30,0|29,0|28,0|27,0|26,0|25,0|24,0|23,0|22,0|21,0|20,0|19,0|18,0|17,0|16,0|15,0|14,0|13,0|12,0|11,0|10,0|9,0|8,0|7,0|6,0|5,0|4,0|3,0|2,0|1,0|0,0|4,1|10,2|24,2
 	GroupPlayerGroup@ND76: GroupPlayerGroup
-		Pos: 2545,615
+		Pos: 2537,715
 		Out@Con1:
 			ConnectionType: PlayerGroup
 		In@Con1:
@@ -2059,27 +2014,17 @@ Nodes:
 		In@Con2:
 			ConnectionType: Player
 	UiCompleteObjective@ND77: UiCompleteObjective
-		Pos: 3191,685
+		Pos: 3273,956
 		Out@Con1:
 			ConnectionType: Exec
 		In@Con1:
 			ConnectionType: Objective
-			Node@ND41: Con1
-		In@Con2:
-			ConnectionType: Exec
-			Node@ND74: Con1
-	UiCompleteObjective@ND78: UiCompleteObjective
-		Pos: 3464,693
-		Out@Con1:
-			ConnectionType: Exec
-		In@Con1:
-			ConnectionType: Objective
-			Node@ND39: Con1
+			Node@ND91: Con1
 		In@Con2:
 			ConnectionType: Exec
 			Node@ND74: Con1
 	TriggerOnKilled@ND80: TriggerOnKilled
-		Pos: 1214,121
+		Pos: 1331,218
 		Out@Con1:
 			ConnectionType: Exec
 		In@Con1:
@@ -2091,7 +2036,7 @@ Nodes:
 			ConnectionType: Exec
 			Node@ND01: Con1
 	MapInfoActorReference@ND82: MapInfoActorReference
-		Pos: 773,66
+		Pos: 952,202
 		Out@Con1:
 			ConnectionType: Actor
 			Actor: Actor102
@@ -2109,7 +2054,7 @@ Nodes:
 			ConnectionType: ActorInfo
 			ActorInfo: rmbonew
 	TimedExecution@ND86: TimedExecution
-		Pos: 2219,463
+		Pos: 2192,479
 		Out@Con1:
 			ConnectionType: Exec
 		In@Con1:
@@ -2117,19 +2062,354 @@ Nodes:
 			Node@ND52: Con3
 		In@Con2:
 			ConnectionType: Exec
-			Node@ND44: Con1
+			Node@ND90: Con1
 	ArithmeticsOr@ND87: ArithmeticsOr
-		Pos: 2626,305
+		Pos: 2480,114
 		Out@Con1:
 			ConnectionType: Exec
 		In@Con1:
 			ConnectionType: Exec
-			Node@ND56: Con1
+			Node@ND51: Con2
 		In@Con2:
 			ConnectionType: Exec
 			Node@ND86: Con1
 		In@Con3:
 			ConnectionType: Repeatable
+	TriggerOnAllKilled@ND88: TriggerOnAllKilled
+		Pos: 3848,127
+		Out@Con1:
+			ConnectionType: Exec
+		In@Con1:
+			ConnectionType: ActorList
+			Node@ND59: Con1
+		In@Con2:
+			ConnectionType: Repeatable
+		In@Con3:
+			ConnectionType: Exec
+			Node@ND59: Con2
+	SetCondition@ND89: SetCondition
+		Pos: 3491,528
+		Methode: True
+		Out@Con1:
+			ConnectionType: Condition
+		In@Con1:
+			ConnectionType: Exec
+			Node@ND90: Con1
+	TriggerOnAllKilled@ND90: TriggerOnAllKilled
+		Pos: 1328,494
+		Out@Con1:
+			ConnectionType: Exec
+		In@Con1:
+			ConnectionType: ActorList
+			Node@ND43: Con2
+		In@Con2:
+			ConnectionType: Repeatable
+		In@Con3:
+			ConnectionType: Exec
+			Node@ND01: Con1
+	UiNewObjective@ND91: UiNewObjective
+		Pos: 2929,375
+		Item: Primary
+		Out@Con1:
+			ConnectionType: Objective
+		In@Con1:
+			ConnectionType: String
+			Node@ND92: Con3
+		In@Con2:
+			ConnectionType: Exec
+			Node@ND98: Con1
+		In@Con3:
+			ConnectionType: Player
+			Node@ND92: Con4
+		In@Con4:
+			ConnectionType: PlayerGroup
+	MapInfoNode@ND92: MapInfoNode
+		Pos: 2699,301
+		Out@Con3:
+			ConnectionType: String
+			String: At least 1 Supply wagon must reach the end!
+		Out@Con4:
+			ConnectionType: Player
+			Player: King
+	UiCompleteObjective@ND93: UiCompleteObjective
+		Pos: 3275,722
+		Out@Con1:
+			ConnectionType: Exec
+		In@Con1:
+			ConnectionType: Objective
+			Node@ND39: Con1
+		In@Con2:
+			ConnectionType: Exec
+			Node@ND74: Con1
+	UiFailObjective@ND94: UiFailObjective
+		Pos: 4138,156
+		Out@Con1:
+			ConnectionType: Exec
+		In@Con1:
+			ConnectionType: Objective
+			Node@ND91: Con1
+		In@Con2:
+			ConnectionType: Exec
+			Node@ND88: Con1
+	UiFailObjective@ND95: UiFailObjective
+		Pos: 1575,360
+		Out@Con1:
+			ConnectionType: Exec
+		In@Con1:
+			ConnectionType: Objective
+			Node@ND39: Con1
+		In@Con2:
+			ConnectionType: Exec
+			Node@ND80: Con1
+	CheckCondition@ND96: CheckCondition
+		Pos: 4061,448
+		Methode: True
+		Out@Con1:
+			ConnectionType: Exec
+		Out@Con2:
+			ConnectionType: Exec
+		In@Con1:
+			ConnectionType: Exec
+			Node@ND88: Con1
+		In@Con2:
+			ConnectionType: Condition
+			Node@ND89: Con1
+	UiFailObjective@ND97: UiFailObjective
+		Pos: 4366,457
+		Out@Con1:
+			ConnectionType: Exec
+		In@Con1:
+			ConnectionType: Objective
+			Node@ND41: Con1
+		In@Con2:
+			ConnectionType: Exec
+			Node@ND96: Con2
+	ArithmeticsOr@ND98: ArithmeticsOr
+		Pos: 2480,379
+		Out@Con1:
+			ConnectionType: Exec
+		In@Con1:
+			ConnectionType: Exec
+			Node@ND51: Con2
+		In@Con2:
+			ConnectionType: Exec
+			Node@ND86: Con1
+		In@Con3:
+			ConnectionType: Repeatable
+	UiTextMessage@ND99: UiTextMessage
+		Pos: 2550,1173
+		Out@Con1:
+			ConnectionType: Exec
+		In@Con1:
+			ConnectionType: String
+			Node@ND100: Con3
+		In@Con2:
+			ConnectionType: String
+			Node@ND100: Con4
+		In@Con3:
+			ConnectionType: Exec
+			Node@ND113: Con2
+	MapInfoNode@ND100: MapInfoNode
+		Pos: 2321,1175
+		Out@Con3:
+			ConnectionType: String
+			String: Mission
+		Out@Con4:
+			ConnectionType: String
+			String: The Convoy will arrive in 5 Minutes
+	TriggerCreateTimer@ND101: TriggerCreateTimer
+		Pos: 1773,1171
+		Out@Con1:
+			ConnectionType: TimerConnection
+		Out@Con2:
+			ConnectionType: Exec
+		In@Con1:
+			ConnectionType: Integer
+			Node@ND102: Con1
+		In@Con2:
+			ConnectionType: Repeatable
+		In@Con3:
+			ConnectionType: Exec
+			Node@ND18: Con1
+	MapInfoNode@ND102: MapInfoNode
+		Pos: 1464,1167
+		Out@Con1:
+			ConnectionType: Integer
+			Num: 300
+		Out@Con4:
+			ConnectionType: Integer
+			Num: 180
+		Out@Con5:
+			ConnectionType: Integer
+			Num: 60
+		Out@Con6:
+			ConnectionType: Integer
+			Num: 30
+	TriggerCreateTimer@ND103: TriggerCreateTimer
+		Pos: 1769,1450
+		Out@Con1:
+			ConnectionType: TimerConnection
+		Out@Con2:
+			ConnectionType: Exec
+		In@Con1:
+			ConnectionType: Integer
+			Node@ND102: Con4
+		In@Con2:
+			ConnectionType: Repeatable
+		In@Con3:
+			ConnectionType: Exec
+			Node@ND18: Con1
+	TriggerCreateTimer@ND104: TriggerCreateTimer
+		Pos: 1772,1726
+		Out@Con1:
+			ConnectionType: TimerConnection
+		Out@Con2:
+			ConnectionType: Exec
+		In@Con1:
+			ConnectionType: Integer
+			Node@ND102: Con5
+		In@Con2:
+			ConnectionType: Repeatable
+		In@Con3:
+			ConnectionType: Exec
+			Node@ND18: Con1
+	UiTextMessage@ND105: UiTextMessage
+		Pos: 2557,1465
+		Out@Con1:
+			ConnectionType: Exec
+		In@Con1:
+			ConnectionType: String
+			Node@ND106: Con3
+		In@Con2:
+			ConnectionType: String
+			Node@ND106: Con4
+		In@Con3:
+			ConnectionType: Exec
+			Node@ND114: Con2
+	MapInfoNode@ND106: MapInfoNode
+		Pos: 2326,1466
+		Out@Con3:
+			ConnectionType: String
+			String: Mission
+		Out@Con4:
+			ConnectionType: String
+			String: The Convoy will arrive in 3 Minutes
+	UiTextMessage@ND107: UiTextMessage
+		Pos: 2559,1751
+		Out@Con1:
+			ConnectionType: Exec
+		In@Con1:
+			ConnectionType: String
+			Node@ND108: Con3
+		In@Con2:
+			ConnectionType: String
+			Node@ND108: Con4
+		In@Con3:
+			ConnectionType: Exec
+			Node@ND115: Con2
+	MapInfoNode@ND108: MapInfoNode
+		Pos: 2323,1750
+		Out@Con3:
+			ConnectionType: String
+			String: Mission
+		Out@Con4:
+			ConnectionType: String
+			String: The Convoy will arrive in 1 Minute
+	TriggerCreateTimer@ND109: TriggerCreateTimer
+		Pos: 1771,2010
+		Out@Con1:
+			ConnectionType: TimerConnection
+		Out@Con2:
+			ConnectionType: Exec
+		In@Con1:
+			ConnectionType: Integer
+			Node@ND102: Con6
+		In@Con2:
+			ConnectionType: Repeatable
+		In@Con3:
+			ConnectionType: Exec
+			Node@ND18: Con1
+	UiTextMessage@ND110: UiTextMessage
+		Pos: 2559,2040
+		Out@Con1:
+			ConnectionType: Exec
+		In@Con1:
+			ConnectionType: String
+			Node@ND111: Con3
+		In@Con2:
+			ConnectionType: String
+			Node@ND111: Con4
+		In@Con3:
+			ConnectionType: Exec
+			Node@ND116: Con2
+	MapInfoNode@ND111: MapInfoNode
+		Pos: 2330,2037
+		Out@Con3:
+			ConnectionType: String
+			String: Mission
+		Out@Con4:
+			ConnectionType: String
+			String: The Convoy will arrive in 30 Seconds!
+	SetCondition@ND112: SetCondition
+		Pos: 1772,976
+		Methode: True
+		Out@Con1:
+			ConnectionType: Condition
+		In@Con1:
+			ConnectionType: Exec
+			Node@ND90: Con1
+	CheckCondition@ND113: CheckCondition
+		Pos: 2095,1179
+		Methode: True
+		Out@Con1:
+			ConnectionType: Exec
+		Out@Con2:
+			ConnectionType: Exec
+		In@Con1:
+			ConnectionType: Exec
+			Node@ND101: Con2
+		In@Con2:
+			ConnectionType: Condition
+			Node@ND112: Con1
+	CheckCondition@ND114: CheckCondition
+		Pos: 2083,1464
+		Methode: True
+		Out@Con1:
+			ConnectionType: Exec
+		Out@Con2:
+			ConnectionType: Exec
+		In@Con1:
+			ConnectionType: Exec
+			Node@ND103: Con2
+		In@Con2:
+			ConnectionType: Condition
+			Node@ND112: Con1
+	CheckCondition@ND115: CheckCondition
+		Pos: 2091,1748
+		Methode: True
+		Out@Con1:
+			ConnectionType: Exec
+		Out@Con2:
+			ConnectionType: Exec
+		In@Con1:
+			ConnectionType: Exec
+			Node@ND104: Con2
+		In@Con2:
+			ConnectionType: Condition
+			Node@ND112: Con1
+	CheckCondition@ND116: CheckCondition
+		Pos: 2093,2038
+		Methode: True
+		Out@Con1:
+			ConnectionType: Exec
+		Out@Con2:
+			ConnectionType: Exec
+		In@Con1:
+			ConnectionType: Exec
+			Node@ND109: Con2
+		In@Con2:
+			ConnectionType: Condition
+			Node@ND112: Con1
 Rules: mw|rules/campaign-maprules.yaml
 	World:
 		ResourceType@green-tib:
