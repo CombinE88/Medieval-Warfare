@@ -2246,7 +2246,7 @@ Nodes:
 			ConnectionType: Integer
 			Num: 30
 	TriggerCreateTimer@ND103: TriggerCreateTimer
-		Pos: 1769,1450
+		Pos: 2363,1446
 		Out@Con1:
 			ConnectionType: TimerConnection
 		Out@Con2:
@@ -2258,9 +2258,9 @@ Nodes:
 			ConnectionType: Repeatable
 		In@Con3:
 			ConnectionType: Exec
-			Node@ND18: Con1
+			Node@ND113: Con2
 	TriggerCreateTimer@ND104: TriggerCreateTimer
-		Pos: 1772,1726
+		Pos: 2949,1721
 		Out@Con1:
 			ConnectionType: TimerConnection
 		Out@Con2:
@@ -2272,9 +2272,9 @@ Nodes:
 			ConnectionType: Repeatable
 		In@Con3:
 			ConnectionType: Exec
-			Node@ND18: Con1
+			Node@ND114: Con2
 	UiTextMessage@ND105: UiTextMessage
-		Pos: 2557,1465
+		Pos: 3151,1461
 		Out@Con1:
 			ConnectionType: Exec
 		In@Con1:
@@ -2287,7 +2287,7 @@ Nodes:
 			ConnectionType: Exec
 			Node@ND114: Con2
 	MapInfoNode@ND106: MapInfoNode
-		Pos: 2326,1466
+		Pos: 2920,1462
 		Out@Con3:
 			ConnectionType: String
 			String: Mission
@@ -2295,7 +2295,7 @@ Nodes:
 			ConnectionType: String
 			String: The Convoy will arrive in 3 Minutes
 	UiTextMessage@ND107: UiTextMessage
-		Pos: 2559,1751
+		Pos: 3736,1746
 		Out@Con1:
 			ConnectionType: Exec
 		In@Con1:
@@ -2308,7 +2308,7 @@ Nodes:
 			ConnectionType: Exec
 			Node@ND115: Con2
 	MapInfoNode@ND108: MapInfoNode
-		Pos: 2323,1750
+		Pos: 3500,1745
 		Out@Con3:
 			ConnectionType: String
 			String: Mission
@@ -2316,7 +2316,7 @@ Nodes:
 			ConnectionType: String
 			String: The Convoy will arrive in 1 Minute
 	TriggerCreateTimer@ND109: TriggerCreateTimer
-		Pos: 1771,2010
+		Pos: 3499,2011
 		Out@Con1:
 			ConnectionType: TimerConnection
 		Out@Con2:
@@ -2328,9 +2328,9 @@ Nodes:
 			ConnectionType: Repeatable
 		In@Con3:
 			ConnectionType: Exec
-			Node@ND18: Con1
+			Node@ND115: Con2
 	UiTextMessage@ND110: UiTextMessage
-		Pos: 2559,2040
+		Pos: 4287,2041
 		Out@Con1:
 			ConnectionType: Exec
 		In@Con1:
@@ -2343,7 +2343,7 @@ Nodes:
 			ConnectionType: Exec
 			Node@ND116: Con2
 	MapInfoNode@ND111: MapInfoNode
-		Pos: 2330,2037
+		Pos: 4058,2038
 		Out@Con3:
 			ConnectionType: String
 			String: Mission
@@ -2372,7 +2372,7 @@ Nodes:
 			ConnectionType: Condition
 			Node@ND112: Con1
 	CheckCondition@ND114: CheckCondition
-		Pos: 2083,1464
+		Pos: 2677,1460
 		Methode: True
 		Out@Con1:
 			ConnectionType: Exec
@@ -2385,7 +2385,7 @@ Nodes:
 			ConnectionType: Condition
 			Node@ND112: Con1
 	CheckCondition@ND115: CheckCondition
-		Pos: 2091,1748
+		Pos: 3268,1743
 		Methode: True
 		Out@Con1:
 			ConnectionType: Exec
@@ -2398,7 +2398,7 @@ Nodes:
 			ConnectionType: Condition
 			Node@ND112: Con1
 	CheckCondition@ND116: CheckCondition
-		Pos: 2093,2038
+		Pos: 3821,2039
 		Methode: True
 		Out@Con1:
 			ConnectionType: Exec

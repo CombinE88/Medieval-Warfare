@@ -713,9 +713,6 @@ Actors:
 	Actor199: t14
 		Owner: King2
 		Location: 57,15
-	Actor197: tc02
-		Owner: King2
-		Location: 28,47
 	Actor200: barrnew
 		Owner: King2
 		Location: 24,39
@@ -1105,34 +1102,6 @@ Actors:
 		Location: 31,28
 		SubCell: 3
 		Facing: 92
-	Actor286: ross2
-		Owner: King
-		Location: 35,63
-		Facing: 11
-	Actor287: ross2
-		Owner: King
-		Location: 35,62
-		Facing: 12
-	Actor288: e3new
-		Owner: King
-		Location: 36,61
-		SubCell: 3
-		Facing: 92
-	Actor289: e3new
-		Owner: King
-		Location: 36,61
-		SubCell: 1
-		Facing: 92
-	Actor290: e3new
-		Owner: King
-		Location: 34,61
-		SubCell: 3
-		Facing: 92
-	Actor291: e3new
-		Owner: King
-		Location: 34,61
-		SubCell: 1
-		Facing: 92
 	Actor292: e3new
 		Owner: King
 		Location: 34,62
@@ -1152,7 +1121,7 @@ Actors:
 		Owner: King
 		Location: 36,62
 		SubCell: 1
-		Facing: 92
+		Facing: 93
 	Actor296: rmbonew
 		Owner: King
 		Location: 36,63
@@ -1171,26 +1140,6 @@ Actors:
 	Actor299: rmbonew
 		Owner: King
 		Location: 34,63
-		SubCell: 1
-		Facing: 92
-	Actor300: rmbonew
-		Owner: King
-		Location: 36,64
-		SubCell: 3
-		Facing: 92
-	Actor301: rmbonew
-		Owner: King
-		Location: 36,64
-		SubCell: 1
-		Facing: 92
-	Actor302: rmbonew
-		Owner: King
-		Location: 34,64
-		SubCell: 3
-		Facing: 92
-	Actor303: rmbonew
-		Owner: King
-		Location: 34,64
 		SubCell: 1
 		Facing: 92
 	Actor304: newcomm
@@ -1218,24 +1167,27 @@ Actors:
 		Location: 34,58
 		SubCell: 1
 		Facing: 92
-	Actor309: e2newv2
+	Actor313: tc02
+		Owner: King2
+		Location: 28,47
+	Actor287: e3new
 		Owner: King
-		Location: 34,59
+		Location: 36,59
 		SubCell: 3
 		Facing: 92
-	Actor310: e2newv2
+	Actor288: e3new
 		Owner: King
-		Location: 34,59
+		Location: 36,59
 		SubCell: 1
 		Facing: 92
-	Actor311: e2newv2
+	Actor289: e3new
 		Owner: King
-		Location: 36,59
+		Location: 34,59
 		SubCell: 3
 		Facing: 92
-	Actor312: e2newv2
+	Actor290: e3new
 		Owner: King
-		Location: 36,59
+		Location: 34,59
 		SubCell: 1
 		Facing: 92
 Nodes:
@@ -1243,7 +1195,7 @@ Nodes:
 		Pos: -558,-352
 		Out@Con1:
 			ConnectionType: ActorInfo
-			ActorInfo: e3new
+			ActorInfo: e3newv2
 	MapInfoActorInfoNode@ND02: MapInfoActorInfoNode
 		Pos: -558,-156
 		Out@Con1:
@@ -1285,7 +1237,7 @@ Nodes:
 			ConnectionType: ActorInfo
 			ActorInfo: ross4
 	StrikeGroup 1@ND10: GroupActorInfoGroup
-		Pos: -9,-132
+		Pos: 199,-280
 		Out@Con1:
 			ConnectionType: ActorInfoArray
 		In@Con1:
@@ -1320,8 +1272,59 @@ Nodes:
 			Node@ND03: Con1
 		In@Con24:
 			ConnectionType: ActorInfo
+			Node@ND01: Con1
+		In@Con25:
+			ConnectionType: ActorInfo
+			Node@ND01: Con1
+		In@Con26:
+			ConnectionType: ActorInfo
+			Node@ND01: Con1
+		In@Con27:
+			ConnectionType: ActorInfo
+			Node@ND02: Con1
+		In@Con28:
+			ConnectionType: ActorInfo
+			Node@ND02: Con1
+		In@Con29:
+			ConnectionType: ActorInfo
+			Node@ND02: Con1
+		In@Con30:
+			ConnectionType: ActorInfo
+			Node@ND08: Con1
+		In@Con31:
+			ConnectionType: ActorInfo
+			Node@ND08: Con1
+		In@Con32:
+			ConnectionType: ActorInfo
+			Node@ND08: Con1
+		In@Con33:
+			ConnectionType: ActorInfo
+			Node@ND03: Con1
+		In@Con34:
+			ConnectionType: ActorInfo
+			Node@ND03: Con1
+		In@Con35:
+			ConnectionType: ActorInfo
+			Node@ND03: Con1
+		In@Con36:
+			ConnectionType: ActorInfo
+			Node@ND03: Con1
+		In@Con37:
+			ConnectionType: ActorInfo
+			Node@ND03: Con1
+		In@Con38:
+			ConnectionType: ActorInfo
+			Node@ND01: Con1
+		In@Con39:
+			ConnectionType: ActorInfo
+			Node@ND01: Con1
+		In@Con40:
+			ConnectionType: ActorInfo
+			Node@ND01: Con1
+		In@Con41:
+			ConnectionType: ActorInfo
 	Strike Group 2@ND11: GroupActorInfoGroup
-		Pos: -11,414
+		Pos: -8,760
 		Out@Con1:
 			ConnectionType: ActorInfoArray
 		In@Con1:
@@ -1344,8 +1347,44 @@ Nodes:
 			Node@ND07: Con1
 		In@Con30:
 			ConnectionType: ActorInfo
+			Node@ND07: Con1
+		In@Con31:
+			ConnectionType: ActorInfo
+			Node@ND07: Con1
+		In@Con32:
+			ConnectionType: ActorInfo
+			Node@ND09: Con1
+		In@Con33:
+			ConnectionType: ActorInfo
+			Node@ND09: Con1
+		In@Con34:
+			ConnectionType: ActorInfo
+			Node@ND04: Con1
+		In@Con35:
+			ConnectionType: ActorInfo
+			Node@ND04: Con1
+		In@Con36:
+			ConnectionType: ActorInfo
+			Node@ND01: Con1
+		In@Con37:
+			ConnectionType: ActorInfo
+			Node@ND01: Con1
+		In@Con38:
+			ConnectionType: ActorInfo
+			Node@ND01: Con1
+		In@Con39:
+			ConnectionType: ActorInfo
+			Node@ND01: Con1
+		In@Con40:
+			ConnectionType: ActorInfo
+			Node@ND01: Con1
+		In@Con41:
+			ConnectionType: ActorInfo
+			Node@ND01: Con1
+		In@Con42:
+			ConnectionType: ActorInfo
 	Strike Group 3@ND12: GroupActorInfoGroup
-		Pos: -8,821
+		Pos: 215,1603
 		Out@Con1:
 			ConnectionType: ActorInfoArray
 		In@Con1:
@@ -1380,3 +1419,1682 @@ Nodes:
 			Node@ND06: Con1
 		In@Con11:
 			ConnectionType: ActorInfo
+			Node@ND01: Con1
+		In@Con12:
+			ConnectionType: ActorInfo
+			Node@ND01: Con1
+		In@Con13:
+			ConnectionType: ActorInfo
+			Node@ND01: Con1
+		In@Con14:
+			ConnectionType: ActorInfo
+		In@Con16:
+			ConnectionType: ActorInfo
+			Node@ND01: Con1
+		In@Con17:
+			ConnectionType: ActorInfo
+			Node@ND03: Con1
+		In@Con20:
+			ConnectionType: ActorInfo
+			Node@ND03: Con1
+		In@Con21:
+			ConnectionType: ActorInfo
+			Node@ND07: Con1
+		In@Con22:
+			ConnectionType: ActorInfo
+			Node@ND07: Con1
+	TriggerWorldLoaded@ND13: TriggerWorldLoaded
+		Pos: -73,-475
+		Out@Con1:
+			ConnectionType: Exec
+	MapInfoNode@ND14: MapInfoNode
+		Pos: 574,-759
+		Out@Con1:
+			ConnectionType: Location
+			Location: 35,60
+		Out@Con2:
+			ConnectionType: Player
+			Player: King
+	SetCameraPosition@ND15: SetCameraPosition
+		Pos: 827,-758
+		In@Con1:
+			ConnectionType: Player
+			Node@ND14: Con2
+		In@Con2:
+			ConnectionType: Location
+			Node@ND14: Con1
+		In@Con3:
+			ConnectionType: Exec
+			Node@ND13: Con1
+	TriggerCreateTimer@ND16: TriggerCreateTimer
+		Pos: 502,-485
+		Out@Con1:
+			ConnectionType: TimerConnection
+		Out@Con2:
+			ConnectionType: Exec
+		In@Con1:
+			ConnectionType: Integer
+			Node@ND17: Con1
+		In@Con2:
+			ConnectionType: Repeatable
+		In@Con3:
+			ConnectionType: Exec
+			Node@ND13: Con1
+	MapInfoNode@ND17: MapInfoNode
+		Pos: 226,-487
+		Out@Con1:
+			ConnectionType: Integer
+			Num: 60
+	MapInfoNode@ND18: MapInfoNode
+		Pos: 1197,-617
+		Out@Con1:
+			ConnectionType: Player
+			Player: Baron
+		Out@Con2:
+			ConnectionType: CellPath
+			Cells: 64,1|57,8|51,8
+		Out@Con3:
+			ConnectionType: Repeatable
+		Out@Con4:
+			ConnectionType: Integer
+			Num: 3
+	Reinforcements@ND19: Reinforcements
+		Pos: 1464,-616
+		Out@Con1:
+			ConnectionType: ActorList
+		Out@Con2:
+			ConnectionType: Exec
+		In@Con1:
+			ConnectionType: Player
+			Node@ND18: Con1
+		In@Con2:
+			ConnectionType: ActorInfoArray
+			Node@ND10: Con1
+		In@Con3:
+			ConnectionType: CellPath
+			Node@ND18: Con2
+		In@Con4:
+			ConnectionType: Integer
+			Node@ND18: Con4
+		In@Con5:
+			ConnectionType: Exec
+			Node@ND16: Con2
+	ActorQueueHunt@ND20: ActorQueueHunt
+		Pos: 1737,-613
+		Out@Con1:
+			ConnectionType: Exec
+		In@Con1:
+			ConnectionType: Actor
+		In@Con2:
+			ConnectionType: ActorList
+			Node@ND19: Con1
+		In@Con3:
+			ConnectionType: Repeatable
+			Node@ND18: Con3
+		In@Con4:
+			ConnectionType: Exec
+			Node@ND19: Con2
+	MapInfoNode@ND21: MapInfoNode
+		Pos: 1196,-208
+		Out@Con1:
+			ConnectionType: Player
+			Player: Baron
+		Out@Con2:
+			ConnectionType: CellPath
+			Cells: 24,1|24,6|17,10
+		Out@Con3:
+			ConnectionType: Repeatable
+		Out@Con4:
+			ConnectionType: Integer
+			Num: 3
+	Reinforcements@ND22: Reinforcements
+		Pos: 1463,-207
+		Out@Con1:
+			ConnectionType: ActorList
+		Out@Con2:
+			ConnectionType: Exec
+		In@Con1:
+			ConnectionType: Player
+			Node@ND21: Con1
+		In@Con2:
+			ConnectionType: ActorInfoArray
+			Node@ND10: Con1
+		In@Con3:
+			ConnectionType: CellPath
+			Node@ND21: Con2
+		In@Con4:
+			ConnectionType: Integer
+			Node@ND21: Con4
+		In@Con5:
+			ConnectionType: Exec
+			Node@ND16: Con2
+	ActorQueueHunt@ND23: ActorQueueHunt
+		Pos: 1752,-211
+		Out@Con1:
+			ConnectionType: Exec
+		In@Con1:
+			ConnectionType: Actor
+		In@Con2:
+			ConnectionType: ActorList
+			Node@ND22: Con1
+		In@Con3:
+			ConnectionType: Repeatable
+			Node@ND21: Con3
+		In@Con4:
+			ConnectionType: Exec
+			Node@ND22: Con2
+	MapInfoNode@ND24: MapInfoNode
+		Pos: 1202,205
+		Out@Con1:
+			ConnectionType: Player
+			Player: Baron
+		Out@Con2:
+			ConnectionType: CellPath
+			Cells: 1,57|6,57|8,55
+		Out@Con3:
+			ConnectionType: Repeatable
+		Out@Con4:
+			ConnectionType: Integer
+			Num: 3
+	Reinforcements@ND25: Reinforcements
+		Pos: 1469,206
+		Out@Con1:
+			ConnectionType: ActorList
+		Out@Con2:
+			ConnectionType: Exec
+		In@Con1:
+			ConnectionType: Player
+			Node@ND24: Con1
+		In@Con2:
+			ConnectionType: ActorInfoArray
+			Node@ND10: Con1
+		In@Con3:
+			ConnectionType: CellPath
+			Node@ND24: Con2
+		In@Con4:
+			ConnectionType: Integer
+			Node@ND24: Con4
+		In@Con5:
+			ConnectionType: Exec
+			Node@ND16: Con2
+	ActorQueueHunt@ND26: ActorQueueHunt
+		Pos: 1742,209
+		Out@Con1:
+			ConnectionType: Exec
+		In@Con1:
+			ConnectionType: Actor
+		In@Con2:
+			ConnectionType: ActorList
+			Node@ND25: Con1
+		In@Con3:
+			ConnectionType: Repeatable
+			Node@ND24: Con3
+		In@Con4:
+			ConnectionType: Exec
+			Node@ND25: Con2
+	MapInfoNode@ND27: MapInfoNode
+		Pos: 1197,649
+		Out@Con1:
+			ConnectionType: Player
+			Player: Baron
+		Out@Con2:
+			ConnectionType: CellPath
+			Cells: 63,63|58,58
+		Out@Con3:
+			ConnectionType: Repeatable
+		Out@Con4:
+			ConnectionType: Integer
+			Num: 3
+	Reinforcements@ND28: Reinforcements
+		Pos: 1464,650
+		Out@Con1:
+			ConnectionType: ActorList
+		Out@Con2:
+			ConnectionType: Exec
+		In@Con1:
+			ConnectionType: Player
+			Node@ND27: Con1
+		In@Con2:
+			ConnectionType: ActorInfoArray
+			Node@ND10: Con1
+		In@Con3:
+			ConnectionType: CellPath
+			Node@ND27: Con2
+		In@Con4:
+			ConnectionType: Integer
+			Node@ND27: Con4
+		In@Con5:
+			ConnectionType: Exec
+			Node@ND16: Con2
+	ActorQueueHunt@ND29: ActorQueueHunt
+		Pos: 1737,653
+		Out@Con1:
+			ConnectionType: Exec
+		In@Con1:
+			ConnectionType: Actor
+		In@Con2:
+			ConnectionType: ActorList
+			Node@ND28: Con1
+		In@Con3:
+			ConnectionType: Repeatable
+			Node@ND27: Con3
+		In@Con4:
+			ConnectionType: Exec
+			Node@ND28: Con2
+	ArithmeticsAnd@ND30: ArithmeticsAnd
+		Pos: 2551,-322
+		Out@Con1:
+			ConnectionType: Exec
+		In@Con1:
+			ConnectionType: Exec
+			Node@ND31: Con1
+		In@Con2:
+			ConnectionType: Exec
+			Node@ND32: Con1
+		In@Con3:
+			ConnectionType: Repeatable
+	TriggerOnAllKilled@ND31: TriggerOnAllKilled
+		Pos: 1985,-610
+		Out@Con1:
+			ConnectionType: Exec
+		In@Con1:
+			ConnectionType: ActorList
+			Node@ND19: Con1
+		In@Con2:
+			ConnectionType: Repeatable
+		In@Con3:
+			ConnectionType: Exec
+			Node@ND19: Con2
+	TriggerOnAllKilled@ND32: TriggerOnAllKilled
+		Pos: 1991,-214
+		Out@Con1:
+			ConnectionType: Exec
+		In@Con1:
+			ConnectionType: ActorList
+			Node@ND22: Con1
+		In@Con2:
+			ConnectionType: Repeatable
+		In@Con3:
+			ConnectionType: Exec
+			Node@ND22: Con2
+	TriggerOnAllKilled@ND33: TriggerOnAllKilled
+		Pos: 1985,214
+		Out@Con1:
+			ConnectionType: Exec
+		In@Con1:
+			ConnectionType: ActorList
+			Node@ND25: Con1
+		In@Con2:
+			ConnectionType: Repeatable
+		In@Con3:
+			ConnectionType: Exec
+			Node@ND25: Con2
+	TriggerOnAllKilled@ND34: TriggerOnAllKilled
+		Pos: 1993,655
+		Out@Con1:
+			ConnectionType: Exec
+		In@Con1:
+			ConnectionType: ActorList
+			Node@ND28: Con1
+		In@Con2:
+			ConnectionType: Repeatable
+		In@Con3:
+			ConnectionType: Exec
+			Node@ND28: Con2
+	ArithmeticsAnd@ND36: ArithmeticsAnd
+		Pos: 2552,-38
+		Out@Con1:
+			ConnectionType: Exec
+		In@Con1:
+			ConnectionType: Exec
+			Node@ND33: Con1
+		In@Con2:
+			ConnectionType: Exec
+			Node@ND34: Con1
+		In@Con3:
+			ConnectionType: Repeatable
+	ArithmeticsAnd@ND38: ArithmeticsAnd
+		Pos: 2859,-156
+		Out@Con1:
+			ConnectionType: Exec
+		In@Con1:
+			ConnectionType: Exec
+			Node@ND30: Con1
+		In@Con2:
+			ConnectionType: Exec
+			Node@ND36: Con1
+		In@Con3:
+			ConnectionType: Repeatable
+	TriggerCreateTimer@ND39: TriggerCreateTimer
+		Pos: 3307,-217
+		Out@Con1:
+			ConnectionType: TimerConnection
+		Out@Con2:
+			ConnectionType: Exec
+		In@Con1:
+			ConnectionType: Integer
+			Node@ND40: Con1
+		In@Con2:
+			ConnectionType: Repeatable
+		In@Con3:
+			ConnectionType: Exec
+			Node@ND38: Con1
+	MapInfoNode@ND40: MapInfoNode
+		Pos: 3031,-357
+		Out@Con1:
+			ConnectionType: Integer
+			Num: 45
+	MapInfoNode@ND41: MapInfoNode
+		Pos: 3615,-563
+		Out@Con1:
+			ConnectionType: Player
+			Player: Baron
+		Out@Con2:
+			ConnectionType: CellPath
+			Cells: 24,1|24,6
+		Out@Con3:
+			ConnectionType: Repeatable
+	Reinforcements@ND42: Reinforcements
+		Pos: 3902,-559
+		Out@Con1:
+			ConnectionType: ActorList
+		Out@Con2:
+			ConnectionType: Exec
+		In@Con1:
+			ConnectionType: Player
+			Node@ND41: Con1
+		In@Con2:
+			ConnectionType: ActorInfoArray
+			Node@ND11: Con1
+		In@Con3:
+			ConnectionType: CellPath
+			Node@ND41: Con2
+		In@Con4:
+			ConnectionType: Integer
+		In@Con5:
+			ConnectionType: Exec
+			Node@ND39: Con2
+	ActorQueueHunt@ND43: ActorQueueHunt
+		Pos: 4155,-559
+		Out@Con1:
+			ConnectionType: Exec
+		In@Con1:
+			ConnectionType: Actor
+		In@Con2:
+			ConnectionType: ActorList
+			Node@ND42: Con1
+		In@Con3:
+			ConnectionType: Repeatable
+			Node@ND41: Con3
+		In@Con4:
+			ConnectionType: Exec
+			Node@ND42: Con2
+	TriggerOnAllKilled@ND44: TriggerOnAllKilled
+		Pos: 4403,-556
+		Out@Con1:
+			ConnectionType: Exec
+		In@Con1:
+			ConnectionType: ActorList
+			Node@ND42: Con1
+		In@Con2:
+			ConnectionType: Repeatable
+		In@Con3:
+			ConnectionType: Exec
+			Node@ND42: Con2
+	MapInfoNode@ND45: MapInfoNode
+		Pos: 3615,-208
+		Out@Con1:
+			ConnectionType: Player
+			Player: Baron
+		Out@Con2:
+			ConnectionType: CellPath
+			Cells: 63,63|57,57
+		Out@Con3:
+			ConnectionType: Repeatable
+	Reinforcements@ND46: Reinforcements
+		Pos: 3902,-204
+		Out@Con1:
+			ConnectionType: ActorList
+		Out@Con2:
+			ConnectionType: Exec
+		In@Con1:
+			ConnectionType: Player
+			Node@ND45: Con1
+		In@Con2:
+			ConnectionType: ActorInfoArray
+			Node@ND11: Con1
+		In@Con3:
+			ConnectionType: CellPath
+			Node@ND45: Con2
+		In@Con4:
+			ConnectionType: Integer
+		In@Con5:
+			ConnectionType: Exec
+			Node@ND39: Con2
+	ActorQueueHunt@ND47: ActorQueueHunt
+		Pos: 4155,-204
+		Out@Con1:
+			ConnectionType: Exec
+		In@Con1:
+			ConnectionType: Actor
+		In@Con2:
+			ConnectionType: ActorList
+			Node@ND46: Con1
+		In@Con3:
+			ConnectionType: Repeatable
+			Node@ND45: Con3
+		In@Con4:
+			ConnectionType: Exec
+			Node@ND46: Con2
+	TriggerOnAllKilled@ND48: TriggerOnAllKilled
+		Pos: 4403,-201
+		Out@Con1:
+			ConnectionType: Exec
+		In@Con1:
+			ConnectionType: ActorList
+			Node@ND46: Con1
+		In@Con2:
+			ConnectionType: Repeatable
+		In@Con3:
+			ConnectionType: Exec
+			Node@ND46: Con2
+	MapInfoNode@ND49: MapInfoNode
+		Pos: 3625,173
+		Out@Con1:
+			ConnectionType: Player
+			Player: Baron
+		Out@Con2:
+			ConnectionType: CellPath
+			Cells: 64,1|57,8
+		Out@Con3:
+			ConnectionType: Repeatable
+	Reinforcements@ND50: Reinforcements
+		Pos: 3912,177
+		Out@Con1:
+			ConnectionType: ActorList
+		Out@Con2:
+			ConnectionType: Exec
+		In@Con1:
+			ConnectionType: Player
+			Node@ND49: Con1
+		In@Con2:
+			ConnectionType: ActorInfoArray
+			Node@ND11: Con1
+		In@Con3:
+			ConnectionType: CellPath
+			Node@ND49: Con2
+		In@Con4:
+			ConnectionType: Integer
+		In@Con5:
+			ConnectionType: Exec
+			Node@ND39: Con2
+	ActorQueueHunt@ND51: ActorQueueHunt
+		Pos: 4165,177
+		Out@Con1:
+			ConnectionType: Exec
+		In@Con1:
+			ConnectionType: Actor
+		In@Con2:
+			ConnectionType: ActorList
+			Node@ND50: Con1
+		In@Con3:
+			ConnectionType: Repeatable
+			Node@ND49: Con3
+		In@Con4:
+			ConnectionType: Exec
+			Node@ND50: Con2
+	TriggerOnAllKilled@ND52: TriggerOnAllKilled
+		Pos: 4413,180
+		Out@Con1:
+			ConnectionType: Exec
+		In@Con1:
+			ConnectionType: ActorList
+			Node@ND50: Con1
+		In@Con2:
+			ConnectionType: Repeatable
+		In@Con3:
+			ConnectionType: Exec
+			Node@ND50: Con2
+	MapInfoNode@ND53: MapInfoNode
+		Pos: 3627,547
+		Out@Con1:
+			ConnectionType: Player
+			Player: Baron
+		Out@Con2:
+			ConnectionType: CellPath
+			Cells: 1,57|7,57
+		Out@Con3:
+			ConnectionType: Repeatable
+	Reinforcements@ND54: Reinforcements
+		Pos: 3914,551
+		Out@Con1:
+			ConnectionType: ActorList
+		Out@Con2:
+			ConnectionType: Exec
+		In@Con1:
+			ConnectionType: Player
+			Node@ND53: Con1
+		In@Con2:
+			ConnectionType: ActorInfoArray
+			Node@ND11: Con1
+		In@Con3:
+			ConnectionType: CellPath
+			Node@ND53: Con2
+		In@Con4:
+			ConnectionType: Integer
+		In@Con5:
+			ConnectionType: Exec
+			Node@ND39: Con2
+	ActorQueueHunt@ND55: ActorQueueHunt
+		Pos: 4167,551
+		Out@Con1:
+			ConnectionType: Exec
+		In@Con1:
+			ConnectionType: Actor
+		In@Con2:
+			ConnectionType: ActorList
+			Node@ND54: Con1
+		In@Con3:
+			ConnectionType: Repeatable
+			Node@ND53: Con3
+		In@Con4:
+			ConnectionType: Exec
+			Node@ND54: Con2
+	TriggerOnAllKilled@ND56: TriggerOnAllKilled
+		Pos: 4415,554
+		Out@Con1:
+			ConnectionType: Exec
+		In@Con1:
+			ConnectionType: ActorList
+			Node@ND54: Con1
+		In@Con2:
+			ConnectionType: Repeatable
+		In@Con3:
+			ConnectionType: Exec
+			Node@ND54: Con2
+	MapInfoNode@ND57: MapInfoNode
+		Pos: 5800,678
+		Out@Con1:
+			ConnectionType: Player
+			Player: Baron
+		Out@Con2:
+			ConnectionType: CellPath
+			Cells: 63,63|60,60
+		Out@Con3:
+			ConnectionType: Repeatable
+	Reinforcements@ND58: Reinforcements
+		Pos: 6076,668
+		Out@Con1:
+			ConnectionType: ActorList
+		Out@Con2:
+			ConnectionType: Exec
+		In@Con1:
+			ConnectionType: Player
+			Node@ND57: Con1
+		In@Con2:
+			ConnectionType: ActorInfoArray
+			Node@ND12: Con1
+		In@Con3:
+			ConnectionType: CellPath
+			Node@ND57: Con2
+		In@Con4:
+			ConnectionType: Integer
+		In@Con5:
+			ConnectionType: Exec
+			Node@ND76: Con2
+	ActorQueueHunt@ND59: ActorQueueHunt
+		Pos: 6338,671
+		Out@Con1:
+			ConnectionType: Exec
+		In@Con1:
+			ConnectionType: Actor
+		In@Con2:
+			ConnectionType: ActorList
+			Node@ND58: Con1
+		In@Con3:
+			ConnectionType: Repeatable
+			Node@ND57: Con3
+		In@Con4:
+			ConnectionType: Exec
+			Node@ND58: Con2
+	TriggerOnAllKilled@ND60: TriggerOnAllKilled
+		Pos: 6594,673
+		Out@Con1:
+			ConnectionType: Exec
+		In@Con1:
+			ConnectionType: ActorList
+			Node@ND58: Con1
+		In@Con2:
+			ConnectionType: Repeatable
+		In@Con3:
+			ConnectionType: Exec
+			Node@ND58: Con2
+	Reinforcements@ND61: Reinforcements
+		Pos: 6070,224
+		Out@Con1:
+			ConnectionType: ActorList
+		Out@Con2:
+			ConnectionType: Exec
+		In@Con1:
+			ConnectionType: Player
+			Node@ND64: Con1
+		In@Con2:
+			ConnectionType: ActorInfoArray
+			Node@ND12: Con1
+		In@Con3:
+			ConnectionType: CellPath
+			Node@ND64: Con2
+		In@Con4:
+			ConnectionType: Integer
+		In@Con5:
+			ConnectionType: Exec
+			Node@ND76: Con2
+	ActorQueueHunt@ND62: ActorQueueHunt
+		Pos: 6343,227
+		Out@Con1:
+			ConnectionType: Exec
+		In@Con1:
+			ConnectionType: Actor
+		In@Con2:
+			ConnectionType: ActorList
+			Node@ND61: Con1
+		In@Con3:
+			ConnectionType: Repeatable
+			Node@ND64: Con3
+		In@Con4:
+			ConnectionType: Exec
+			Node@ND61: Con2
+	TriggerOnAllKilled@ND63: TriggerOnAllKilled
+		Pos: 6586,232
+		Out@Con1:
+			ConnectionType: Exec
+		In@Con1:
+			ConnectionType: ActorList
+			Node@ND61: Con1
+		In@Con2:
+			ConnectionType: Repeatable
+		In@Con3:
+			ConnectionType: Exec
+			Node@ND61: Con2
+	MapInfoNode@ND64: MapInfoNode
+		Pos: 5803,223
+		Out@Con1:
+			ConnectionType: Player
+			Player: Baron
+		Out@Con2:
+			ConnectionType: CellPath
+			Cells: 1,57|6,57
+		Out@Con3:
+			ConnectionType: Repeatable
+	MapInfoNode@ND65: MapInfoNode
+		Pos: 5797,-190
+		Out@Con1:
+			ConnectionType: Player
+			Player: Baron
+		Out@Con2:
+			ConnectionType: CellPath
+			Cells: 24,1|24,4
+		Out@Con3:
+			ConnectionType: Repeatable
+	Reinforcements@ND66: Reinforcements
+		Pos: 6064,-189
+		Out@Con1:
+			ConnectionType: ActorList
+		Out@Con2:
+			ConnectionType: Exec
+		In@Con1:
+			ConnectionType: Player
+			Node@ND65: Con1
+		In@Con2:
+			ConnectionType: ActorInfoArray
+			Node@ND12: Con1
+		In@Con3:
+			ConnectionType: CellPath
+			Node@ND65: Con2
+		In@Con4:
+			ConnectionType: Integer
+		In@Con5:
+			ConnectionType: Exec
+			Node@ND76: Con2
+	ActorQueueHunt@ND67: ActorQueueHunt
+		Pos: 6353,-193
+		Out@Con1:
+			ConnectionType: Exec
+		In@Con1:
+			ConnectionType: Actor
+		In@Con2:
+			ConnectionType: ActorList
+			Node@ND66: Con1
+		In@Con3:
+			ConnectionType: Repeatable
+			Node@ND65: Con3
+		In@Con4:
+			ConnectionType: Exec
+			Node@ND66: Con2
+	TriggerOnAllKilled@ND68: TriggerOnAllKilled
+		Pos: 6592,-196
+		Out@Con1:
+			ConnectionType: Exec
+		In@Con1:
+			ConnectionType: ActorList
+			Node@ND66: Con1
+		In@Con2:
+			ConnectionType: Repeatable
+		In@Con3:
+			ConnectionType: Exec
+			Node@ND66: Con2
+	MapInfoNode@ND69: MapInfoNode
+		Pos: 5798,-599
+		Out@Con1:
+			ConnectionType: Player
+			Player: Baron
+		Out@Con2:
+			ConnectionType: CellPath
+			Cells: 64,1|61,4
+		Out@Con3:
+			ConnectionType: Repeatable
+	Reinforcements@ND70: Reinforcements
+		Pos: 6065,-598
+		Out@Con1:
+			ConnectionType: ActorList
+		Out@Con2:
+			ConnectionType: Exec
+		In@Con1:
+			ConnectionType: Player
+			Node@ND69: Con1
+		In@Con2:
+			ConnectionType: ActorInfoArray
+			Node@ND12: Con1
+		In@Con3:
+			ConnectionType: CellPath
+			Node@ND69: Con2
+		In@Con4:
+			ConnectionType: Integer
+		In@Con5:
+			ConnectionType: Exec
+			Node@ND76: Con2
+	ActorQueueHunt@ND71: ActorQueueHunt
+		Pos: 6338,-595
+		Out@Con1:
+			ConnectionType: Exec
+		In@Con1:
+			ConnectionType: Actor
+		In@Con2:
+			ConnectionType: ActorList
+			Node@ND70: Con1
+		In@Con3:
+			ConnectionType: Repeatable
+			Node@ND69: Con3
+		In@Con4:
+			ConnectionType: Exec
+			Node@ND70: Con2
+	TriggerOnAllKilled@ND72: TriggerOnAllKilled
+		Pos: 6586,-592
+		Out@Con1:
+			ConnectionType: Exec
+		In@Con1:
+			ConnectionType: ActorList
+			Node@ND70: Con1
+		In@Con2:
+			ConnectionType: Repeatable
+		In@Con3:
+			ConnectionType: Exec
+			Node@ND70: Con2
+	ArithmeticsAnd@ND73: ArithmeticsAnd
+		Pos: 4795,-243
+		Out@Con1:
+			ConnectionType: Exec
+		In@Con1:
+			ConnectionType: Exec
+			Node@ND44: Con1
+		In@Con2:
+			ConnectionType: Exec
+			Node@ND48: Con1
+		In@Con3:
+			ConnectionType: Repeatable
+	ArithmeticsAnd@ND74: ArithmeticsAnd
+		Pos: 4796,41
+		Out@Con1:
+			ConnectionType: Exec
+		In@Con1:
+			ConnectionType: Exec
+			Node@ND52: Con1
+		In@Con2:
+			ConnectionType: Exec
+			Node@ND56: Con1
+		In@Con3:
+			ConnectionType: Repeatable
+	ArithmeticsAnd@ND75: ArithmeticsAnd
+		Pos: 5103,-77
+		Out@Con1:
+			ConnectionType: Exec
+		In@Con1:
+			ConnectionType: Exec
+			Node@ND73: Con1
+		In@Con2:
+			ConnectionType: Exec
+			Node@ND74: Con1
+		In@Con3:
+			ConnectionType: Repeatable
+	TriggerCreateTimer@ND76: TriggerCreateTimer
+		Pos: 5460,-207
+		Out@Con1:
+			ConnectionType: TimerConnection
+		Out@Con2:
+			ConnectionType: Exec
+		In@Con1:
+			ConnectionType: Integer
+			Node@ND77: Con1
+		In@Con2:
+			ConnectionType: Repeatable
+		In@Con3:
+			ConnectionType: Exec
+			Node@ND75: Con1
+	MapInfoNode@ND77: MapInfoNode
+		Pos: 5184,-347
+		Out@Con1:
+			ConnectionType: Integer
+			Num: 45
+	TimedExecution@ND78: TimedExecution
+		Pos: 826,-988
+		Out@Con1:
+			ConnectionType: Exec
+		In@Con1:
+			ConnectionType: Integer
+			Node@ND79: Con1
+		In@Con2:
+			ConnectionType: Exec
+			Node@ND13: Con1
+	MapInfoNode@ND79: MapInfoNode
+		Pos: 577,-988
+		Out@Con1:
+			ConnectionType: Integer
+			Num: 125
+	TriggerOnKilled@ND80: TriggerOnKilled
+		Pos: 431,-1329
+		Out@Con1:
+			ConnectionType: Exec
+		In@Con1:
+			ConnectionType: Actor
+			Node@ND81: Con1
+		In@Con2:
+			ConnectionType: ActorList
+		In@Con3:
+			ConnectionType: Exec
+			Node@ND13: Con1
+	MapInfoActorReference@ND81: MapInfoActorReference
+		Pos: 83,-1327
+		Out@Con1:
+			ConnectionType: Actor
+			Actor: Actor304
+		Out@Con2:
+			ConnectionType: ActorList
+			Actors: Actor304
+	UiNewObjective@ND82: UiNewObjective
+		Pos: 428,-1629
+		Item: Primary
+		Out@Con1:
+			ConnectionType: Objective
+		In@Con1:
+			ConnectionType: String
+			Node@ND84: Con1
+		In@Con2:
+			ConnectionType: Exec
+			Node@ND13: Con1
+		In@Con3:
+			ConnectionType: Player
+			Node@ND84: Con2
+		In@Con4:
+			ConnectionType: PlayerGroup
+	UiFailObjective@ND83: UiFailObjective
+		Pos: 697,-1627
+		Out@Con1:
+			ConnectionType: Exec
+		In@Con1:
+			ConnectionType: Objective
+			Node@ND82: Con1
+		In@Con2:
+			ConnectionType: Exec
+			Node@ND80: Con1
+	MapInfoNode@ND84: MapInfoNode
+		Pos: 78,-1631
+		Out@Con1:
+			ConnectionType: String
+			String: Your Commander must survive!
+		Out@Con2:
+			ConnectionType: Player
+			Player: King
+	MapInfoNode@ND87: MapInfoNode
+		Pos: 827,-1269
+		Out@Con1:
+			ConnectionType: String
+			String: Mission
+		Out@Con2:
+			ConnectionType: String
+			String: The King's generals decided to aquire this position as preperation for the upcoming battle.
+	UiTextMessage@ND88: UiTextMessage
+		Pos: 1077,-1270
+		Out@Con1:
+			ConnectionType: Exec
+		In@Con1:
+			ConnectionType: String
+			Node@ND87: Con1
+		In@Con2:
+			ConnectionType: String
+			Node@ND87: Con2
+		In@Con3:
+			ConnectionType: Exec
+			Node@ND78: Con1
+	MapInfoNode@ND89: MapInfoNode
+		Pos: 1079,-1515
+		Out@Con1:
+			ConnectionType: Integer
+			Num: 250
+	TimedExecution@ND90: TimedExecution
+		Pos: 1342,-1270
+		Out@Con1:
+			ConnectionType: Exec
+		In@Con1:
+			ConnectionType: Integer
+			Node@ND89: Con1
+		In@Con2:
+			ConnectionType: Exec
+			Node@ND88: Con1
+	MapInfoNode@ND91: MapInfoNode
+		Pos: 1342,-1517
+		Out@Con1:
+			ConnectionType: String
+			String: Mission
+		Out@Con2:
+			ConnectionType: String
+			String: Your objective is to help defend this location and wipe out all incoming attackers.
+	UiTextMessage@ND92: UiTextMessage
+		Pos: 1596,-1268
+		Out@Con1:
+			ConnectionType: Exec
+		In@Con1:
+			ConnectionType: String
+			Node@ND91: Con1
+		In@Con2:
+			ConnectionType: String
+			Node@ND91: Con2
+		In@Con3:
+			ConnectionType: Exec
+			Node@ND90: Con1
+	UiNewObjective@ND93: UiNewObjective
+		Pos: 1602,-1571
+		Item: Primary
+		Out@Con1:
+			ConnectionType: Objective
+		In@Con1:
+			ConnectionType: String
+			Node@ND94: Con1
+		In@Con2:
+			ConnectionType: Exec
+			Node@ND90: Con1
+		In@Con3:
+			ConnectionType: Player
+			Node@ND94: Con2
+		In@Con4:
+			ConnectionType: PlayerGroup
+	MapInfoNode@ND94: MapInfoNode
+		Pos: 1344,-1757
+		Out@Con1:
+			ConnectionType: String
+			String: Hold stand against all incoming attacks!
+		Out@Con2:
+			ConnectionType: Player
+			Player: King
+	MapInfoActorReference@ND95: MapInfoActorReference
+		Pos: 1600,-1836
+		Out@Con1:
+			ConnectionType: Actor
+			Actor: Actor203
+		Out@Con2:
+			ConnectionType: ActorList
+			Actors: Actor203,Actor204,Actor208,Actor107,Actor205,Actor113,Actor206,Actor112,Actor111,Actor201,Actor40,Actor202,Actor271,Actor200,Actor272
+	TriggerOnAllKilled@ND96: TriggerOnAllKilled
+		Pos: 1926,-1836
+		Out@Con1:
+			ConnectionType: Exec
+		In@Con1:
+			ConnectionType: ActorList
+			Node@ND95: Con2
+		In@Con2:
+			ConnectionType: Repeatable
+		In@Con3:
+			ConnectionType: Exec
+			Node@ND13: Con1
+	UiFailObjective@ND97: UiFailObjective
+		Pos: 2197,-1574
+		Out@Con1:
+			ConnectionType: Exec
+		In@Con1:
+			ConnectionType: Objective
+			Node@ND93: Con1
+		In@Con2:
+			ConnectionType: Exec
+			Node@ND96: Con1
+	UiCompleteObjective@ND98: UiCompleteObjective
+		Pos: 7975,-440
+		Out@Con1:
+			ConnectionType: Exec
+		In@Con1:
+			ConnectionType: Objective
+			Node@ND82: Con1
+		In@Con2:
+			ConnectionType: Exec
+			Node@ND100: Con1
+	UiCompleteObjective@ND99: UiCompleteObjective
+		Pos: 7974,-190
+		Out@Con1:
+			ConnectionType: Exec
+		In@Con1:
+			ConnectionType: Objective
+			Node@ND93: Con1
+		In@Con2:
+			ConnectionType: Exec
+			Node@ND100: Con1
+	TimedExecution@ND100: TimedExecution
+		Pos: 7724,-191
+		Out@Con1:
+			ConnectionType: Exec
+		In@Con1:
+			ConnectionType: Integer
+			Node@ND101: Con1
+		In@Con2:
+			ConnectionType: Exec
+			Node@ND104: Con1
+	MapInfoNode@ND101: MapInfoNode
+		Pos: 7237,-448
+		Out@Con1:
+			ConnectionType: Integer
+			Num: 125
+	ArithmeticsAnd@ND102: ArithmeticsAnd
+		Pos: 6943,-198
+		Out@Con1:
+			ConnectionType: Exec
+		In@Con1:
+			ConnectionType: Exec
+			Node@ND72: Con1
+		In@Con2:
+			ConnectionType: Exec
+			Node@ND68: Con1
+		In@Con3:
+			ConnectionType: Repeatable
+	ArithmeticsAnd@ND103: ArithmeticsAnd
+		Pos: 6944,229
+		Out@Con1:
+			ConnectionType: Exec
+		In@Con1:
+			ConnectionType: Exec
+			Node@ND63: Con1
+		In@Con2:
+			ConnectionType: Exec
+			Node@ND60: Con1
+		In@Con3:
+			ConnectionType: Repeatable
+	ArithmeticsAnd@ND104: ArithmeticsAnd
+		Pos: 7237,-197
+		Out@Con1:
+			ConnectionType: Exec
+		In@Con1:
+			ConnectionType: Exec
+			Node@ND102: Con1
+		In@Con2:
+			ConnectionType: Exec
+			Node@ND103: Con1
+		In@Con3:
+			ConnectionType: Repeatable
+	UiTextMessage@ND105: UiTextMessage
+		Pos: 7726,84
+		Out@Con1:
+			ConnectionType: Exec
+		In@Con1:
+			ConnectionType: String
+			Node@ND106: Con1
+		In@Con2:
+			ConnectionType: String
+			Node@ND106: Con2
+		In@Con3:
+			ConnectionType: Exec
+			Node@ND104: Con1
+	MapInfoNode@ND106: MapInfoNode
+		Pos: 7238,84
+		Out@Con1:
+			ConnectionType: String
+			String: Mission
+		Out@Con2:
+			ConnectionType: String
+			String: We did it! Preperation for the upcoming siege will now begin!
+	UiTextMessage@ND107: UiTextMessage
+		Pos: 1300,1345
+		Out@Con1:
+			ConnectionType: Exec
+		In@Con1:
+			ConnectionType: String
+			Node@ND108: Con1
+		In@Con2:
+			ConnectionType: String
+			Node@ND108: Con2
+		In@Con3:
+			ConnectionType: Exec
+			Node@ND109: Con1
+	MapInfoNode@ND108: MapInfoNode
+		Pos: 1034,1107
+		Out@Con1:
+			ConnectionType: String
+			String: Scouts
+		Out@Con2:
+			ConnectionType: String
+			String: We spotted a large army heading this direction!
+	TimedExecution@ND109: TimedExecution
+		Pos: 1033,1345
+		Out@Con1:
+			ConnectionType: Exec
+		In@Con1:
+			ConnectionType: Integer
+			Node@ND110: Con1
+		In@Con2:
+			ConnectionType: Exec
+			Node@ND13: Con1
+	MapInfoNode@ND110: MapInfoNode
+		Pos: 764,1339
+		Out@Con1:
+			ConnectionType: Integer
+			Num: 750
+	UiTextMessage@ND111: UiTextMessage
+		Pos: 3570,1454
+		Out@Con1:
+			ConnectionType: Exec
+		In@Con1:
+			ConnectionType: String
+			Node@ND112: Con1
+		In@Con2:
+			ConnectionType: String
+			Node@ND112: Con2
+		In@Con3:
+			ConnectionType: Exec
+			Node@ND113: Con1
+	MapInfoNode@ND112: MapInfoNode
+		Pos: 3304,1216
+		Out@Con1:
+			ConnectionType: String
+			String: Scouts
+		Out@Con2:
+			ConnectionType: String
+			String: We spotted a huge mounted army heading this direction!
+	TimedExecution@ND113: TimedExecution
+		Pos: 3303,1454
+		Out@Con1:
+			ConnectionType: Exec
+		In@Con1:
+			ConnectionType: Integer
+			Node@ND114: Con1
+		In@Con2:
+			ConnectionType: Exec
+			Node@ND38: Con1
+	MapInfoNode@ND114: MapInfoNode
+		Pos: 3034,1448
+		Out@Con1:
+			ConnectionType: Integer
+			Num: 750
+	UiTextMessage@ND115: UiTextMessage
+		Pos: 5783,1156
+		Out@Con1:
+			ConnectionType: Exec
+		In@Con1:
+			ConnectionType: String
+			Node@ND116: Con1
+		In@Con2:
+			ConnectionType: String
+			Node@ND116: Con2
+		In@Con3:
+			ConnectionType: Exec
+			Node@ND117: Con1
+	MapInfoNode@ND116: MapInfoNode
+		Pos: 5517,918
+		Out@Con1:
+			ConnectionType: String
+			String: Scouts
+		Out@Con2:
+			ConnectionType: String
+			String: We spotted a gigantic siege army heading this direction!
+	TimedExecution@ND117: TimedExecution
+		Pos: 5516,1156
+		Out@Con1:
+			ConnectionType: Exec
+		In@Con1:
+			ConnectionType: Integer
+			Node@ND118: Con1
+		In@Con2:
+			ConnectionType: Exec
+			Node@ND75: Con1
+	MapInfoNode@ND118: MapInfoNode
+		Pos: 5247,1150
+		Out@Con1:
+			ConnectionType: Integer
+			Num: 750
+	MapInfoNode@ND119: MapInfoNode
+		Pos: 2618,699
+		Out@Con1:
+			ConnectionType: Player
+			Player: King
+		Out@Con2:
+			ConnectionType: CellPath
+			Cells: 24,40|24,41|28,42
+		Out@Con3:
+			ConnectionType: Repeatable
+		Out@Con4:
+			ConnectionType: Integer
+			Num: 1
+	Reinforcements@ND120: Reinforcements
+		Pos: 3224,849
+		Out@Con1:
+			ConnectionType: ActorList
+		Out@Con2:
+			ConnectionType: Exec
+		In@Con1:
+			ConnectionType: Player
+			Node@ND119: Con1
+		In@Con2:
+			ConnectionType: ActorInfoArray
+			Node@ND126: Con1
+		In@Con3:
+			ConnectionType: CellPath
+			Node@ND119: Con2
+		In@Con4:
+			ConnectionType: Integer
+			Node@ND119: Con4
+		In@Con5:
+			ConnectionType: Exec
+			Node@ND131: Con2
+	MapInfoActorInfoNode@ND123: MapInfoActorInfoNode
+		Pos: 2359,286
+		Out@Con1:
+			ConnectionType: ActorInfo
+			ActorInfo: e3new
+	MapInfoActorInfoNode@ND124: MapInfoActorInfoNode
+		Pos: 2359,483
+		Out@Con1:
+			ConnectionType: ActorInfo
+			ActorInfo: e4newv2
+	MapInfoActorInfoNode@ND125: MapInfoActorInfoNode
+		Pos: 2359,686
+		Out@Con1:
+			ConnectionType: ActorInfo
+			ActorInfo: e2newv2
+	GroupActorInfoGroup@ND126: GroupActorInfoGroup
+		Pos: 2624,285
+		Out@Con1:
+			ConnectionType: ActorInfoArray
+		In@Con1:
+			ConnectionType: ActorInfo
+			Node@ND123: Con1
+		In@Con2:
+			ConnectionType: ActorInfo
+			Node@ND123: Con1
+		In@Con3:
+			ConnectionType: ActorInfo
+			Node@ND124: Con1
+		In@Con4:
+			ConnectionType: ActorInfo
+			Node@ND124: Con1
+		In@Con5:
+			ConnectionType: ActorInfo
+			Node@ND125: Con1
+		In@Con6:
+			ConnectionType: ActorInfo
+			Node@ND125: Con1
+		In@Con7:
+			ConnectionType: ActorInfo
+	UiTextMessage@ND127: UiTextMessage
+		Pos: 3193,285
+		Out@Con1:
+			ConnectionType: Exec
+		In@Con1:
+			ConnectionType: String
+			Node@ND128: Con1
+		In@Con2:
+			ConnectionType: String
+			Node@ND128: Con2
+		In@Con3:
+			ConnectionType: Exec
+			Node@ND38: Con1
+	MapInfoNode@ND128: MapInfoNode
+		Pos: 2914,284
+		Out@Con1:
+			ConnectionType: String
+			String: King
+		Out@Con2:
+			ConnectionType: String
+			String: We trained some soldiers to help defend! Use them wisely.
+	IsAlive@ND129: IsAlive
+		Pos: 2624,1008
+		Out@Con1:
+			ConnectionType: Condition
+		In@Con1:
+			ConnectionType: Actor
+			Node@ND130: Con1
+	MapInfoActorReference@ND130: MapInfoActorReference
+		Pos: 2354,1009
+		Out@Con1:
+			ConnectionType: Actor
+			Actor: Actor200
+		Out@Con2:
+			ConnectionType: ActorList
+			Actors: Actor200
+	CheckCondition@ND131: CheckCondition
+		Pos: 2921,962
+		Methode: True
+		Out@Con1:
+			ConnectionType: Exec
+		Out@Con2:
+			ConnectionType: Exec
+		In@Con1:
+			ConnectionType: Exec
+			Node@ND38: Con1
+		In@Con2:
+			ConnectionType: Condition
+			Node@ND129: Con1
+	IsAlive@ND135: IsAlive
+		Pos: 2038,1700
+		Out@Con1:
+			ConnectionType: Condition
+		In@Con1:
+			ConnectionType: Actor
+			Node@ND138: Con1
+	CheckCondition@ND136: CheckCondition
+		Pos: 2304,1703
+		Methode: True
+		Out@Con1:
+			ConnectionType: Exec
+		Out@Con2:
+			ConnectionType: Exec
+		In@Con1:
+			ConnectionType: Exec
+			Node@ND38: Con1
+		In@Con2:
+			ConnectionType: Condition
+			Node@ND135: Con1
+	Reinforcements@ND137: Reinforcements
+		Pos: 2569,1392
+		Out@Con1:
+			ConnectionType: ActorList
+		Out@Con2:
+			ConnectionType: Exec
+		In@Con1:
+			ConnectionType: Player
+			Node@ND139: Con1
+		In@Con2:
+			ConnectionType: ActorInfoArray
+			Node@ND126: Con1
+		In@Con3:
+			ConnectionType: CellPath
+			Node@ND139: Con2
+		In@Con4:
+			ConnectionType: Integer
+			Node@ND139: Con4
+		In@Con5:
+			ConnectionType: Exec
+			Node@ND136: Con2
+	MapInfoActorReference@ND138: MapInfoActorReference
+		Pos: 1784,1702
+		Out@Con1:
+			ConnectionType: Actor
+			Actor: Actor201
+		Out@Con2:
+			ConnectionType: ActorList
+			Actors: Actor201
+	MapInfoNode@ND139: MapInfoNode
+		Pos: 2303,1393
+		Out@Con1:
+			ConnectionType: Player
+			Player: King
+		Out@Con2:
+			ConnectionType: CellPath
+			Cells: 39,29|39,32
+		Out@Con3:
+			ConnectionType: Repeatable
+		Out@Con4:
+			ConnectionType: Integer
+			Num: 1
+	IsAlive@ND140: IsAlive
+		Pos: 2043,2268
+		Out@Con1:
+			ConnectionType: Condition
+		In@Con1:
+			ConnectionType: Actor
+			Node@ND143: Con1
+	CheckCondition@ND141: CheckCondition
+		Pos: 2309,2271
+		Methode: True
+		Out@Con1:
+			ConnectionType: Exec
+		Out@Con2:
+			ConnectionType: Exec
+		In@Con1:
+			ConnectionType: Exec
+			Node@ND38: Con1
+		In@Con2:
+			ConnectionType: Condition
+			Node@ND140: Con1
+	Reinforcements@ND142: Reinforcements
+		Pos: 2574,1960
+		Out@Con1:
+			ConnectionType: ActorList
+		Out@Con2:
+			ConnectionType: Exec
+		In@Con1:
+			ConnectionType: Player
+			Node@ND144: Con1
+		In@Con2:
+			ConnectionType: ActorInfoArray
+			Node@ND126: Con1
+		In@Con3:
+			ConnectionType: CellPath
+			Node@ND144: Con2
+		In@Con4:
+			ConnectionType: Integer
+			Node@ND144: Con4
+		In@Con5:
+			ConnectionType: Exec
+			Node@ND141: Con2
+	MapInfoActorReference@ND143: MapInfoActorReference
+		Pos: 1789,2270
+		Out@Con1:
+			ConnectionType: Actor
+			Actor: Actor202
+		Out@Con2:
+			ConnectionType: ActorList
+			Actors: Actor202
+	MapInfoNode@ND144: MapInfoNode
+		Pos: 2308,1961
+		Out@Con1:
+			ConnectionType: Player
+			Player: King
+		Out@Con2:
+			ConnectionType: CellPath
+			Cells: 25,29|25,31|31,31
+		Out@Con3:
+			ConnectionType: Repeatable
+		Out@Con4:
+			ConnectionType: Integer
+			Num: 1
+	MapInfoNode@ND145: MapInfoNode
+		Pos: 4949,1839
+		Out@Con1:
+			ConnectionType: Player
+			Player: King
+		Out@Con2:
+			ConnectionType: CellPath
+			Cells: 38,40|39,42|40,42
+		Out@Con3:
+			ConnectionType: Repeatable
+		Out@Con4:
+			ConnectionType: Integer
+			Num: 1
+	Reinforcements@ND146: Reinforcements
+		Pos: 5555,1989
+		Out@Con1:
+			ConnectionType: ActorList
+		Out@Con2:
+			ConnectionType: Exec
+		In@Con1:
+			ConnectionType: Player
+			Node@ND145: Con1
+		In@Con2:
+			ConnectionType: ActorInfoArray
+			Node@ND152: Con1
+		In@Con3:
+			ConnectionType: CellPath
+			Node@ND145: Con2
+		In@Con4:
+			ConnectionType: Integer
+			Node@ND145: Con4
+		In@Con5:
+			ConnectionType: Exec
+			Node@ND149: Con2
+	IsAlive@ND148: IsAlive
+		Pos: 4955,2148
+		Out@Con1:
+			ConnectionType: Condition
+		In@Con1:
+			ConnectionType: Actor
+			Node@ND155: Con1
+	CheckCondition@ND149: CheckCondition
+		Pos: 5258,2110
+		Methode: True
+		Out@Con1:
+			ConnectionType: Exec
+		Out@Con2:
+			ConnectionType: Exec
+		In@Con1:
+			ConnectionType: Exec
+			Node@ND75: Con1
+		In@Con2:
+			ConnectionType: Condition
+			Node@ND148: Con1
+	MapInfoActorInfoNode@ND150: MapInfoActorInfoNode
+		Pos: 4690,1426
+		Out@Con1:
+			ConnectionType: ActorInfo
+			ActorInfo: ross4b
+	MapInfoActorInfoNode@ND151: MapInfoActorInfoNode
+		Pos: 4690,1623
+		Out@Con1:
+			ConnectionType: ActorInfo
+			ActorInfo: ross2
+	GroupActorInfoGroup@ND152: GroupActorInfoGroup
+		Pos: 4955,1425
+		Out@Con1:
+			ConnectionType: ActorInfoArray
+		In@Con1:
+			ConnectionType: ActorInfo
+			Node@ND150: Con1
+		In@Con8:
+			ConnectionType: ActorInfo
+			Node@ND150: Con1
+		In@Con9:
+			ConnectionType: ActorInfo
+			Node@ND151: Con1
+		In@Con10:
+			ConnectionType: ActorInfo
+			Node@ND151: Con1
+		In@Con11:
+			ConnectionType: ActorInfo
+	UiTextMessage@ND153: UiTextMessage
+		Pos: 5529,1431
+		Out@Con1:
+			ConnectionType: Exec
+		In@Con1:
+			ConnectionType: String
+			Node@ND154: Con1
+		In@Con2:
+			ConnectionType: String
+			Node@ND154: Con2
+		In@Con3:
+			ConnectionType: Exec
+			Node@ND75: Con1
+	MapInfoNode@ND154: MapInfoNode
+		Pos: 5245,1424
+		Out@Con1:
+			ConnectionType: String
+			String: King
+		Out@Con2:
+			ConnectionType: String
+			String: We trained some cavalry to help defend! Use them wisely.
+	MapInfoActorReference@ND155: MapInfoActorReference
+		Pos: 4685,2149
+		Out@Con1:
+			ConnectionType: Actor
+			Actor: Actor203
+		Out@Con2:
+			ConnectionType: ActorList
+			Actors: Actor203
+	MapInfoNode@ND156: MapInfoNode
+		Pos: 4957,2393
+		Out@Con1:
+			ConnectionType: Player
+			Player: King
+		Out@Con2:
+			ConnectionType: CellPath
+			Cells: 34,40|34,42|32,43
+		Out@Con3:
+			ConnectionType: Repeatable
+		Out@Con4:
+			ConnectionType: Integer
+			Num: 1
+	Reinforcements@ND157: Reinforcements
+		Pos: 5568,2586
+		Out@Con1:
+			ConnectionType: ActorList
+		Out@Con2:
+			ConnectionType: Exec
+		In@Con1:
+			ConnectionType: Player
+			Node@ND156: Con1
+		In@Con2:
+			ConnectionType: ActorInfoArray
+			Node@ND152: Con1
+		In@Con3:
+			ConnectionType: CellPath
+			Node@ND156: Con2
+		In@Con4:
+			ConnectionType: Integer
+			Node@ND156: Con4
+		In@Con5:
+			ConnectionType: Exec
+			Node@ND159: Con2
+	IsAlive@ND158: IsAlive
+		Pos: 4963,2702
+		Out@Con1:
+			ConnectionType: Condition
+		In@Con1:
+			ConnectionType: Actor
+			Node@ND160: Con1
+	CheckCondition@ND159: CheckCondition
+		Pos: 5258,2698
+		Methode: True
+		Out@Con1:
+			ConnectionType: Exec
+		Out@Con2:
+			ConnectionType: Exec
+		In@Con1:
+			ConnectionType: Exec
+			Node@ND75: Con1
+		In@Con2:
+			ConnectionType: Condition
+			Node@ND158: Con1
+	MapInfoActorReference@ND160: MapInfoActorReference
+		Pos: 4693,2703
+		Out@Con1:
+			ConnectionType: Actor
+			Actor: Actor204
+		Out@Con2:
+			ConnectionType: ActorList
+			Actors: Actor204
+Rules: mw|rules/campaign-maprules.yaml
+	Player:
+		PlayerResources:
+			DefaultCash: 3000

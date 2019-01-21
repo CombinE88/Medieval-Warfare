@@ -1274,6 +1274,25 @@ Nodes:
 		Out@Con2:
 			ConnectionType: ActorList
 			Actors: Actor339
+	MapInfoNode@ND31: MapInfoNode
+		Pos: -404,72
+		Out@Con1:
+			ConnectionType: Player
+			Player: King
+		Out@Con2:
+			ConnectionType: Location
+			Location: 17,41
+	SetCameraPosition@ND32: SetCameraPosition
+		Pos: -106,14
+		In@Con1:
+			ConnectionType: Player
+			Node@ND31: Con1
+		In@Con2:
+			ConnectionType: Location
+			Node@ND31: Con2
+		In@Con3:
+			ConnectionType: Exec
+			Node@ND05: Con1
 Rules: mw|rules/campaign-maprules.yaml
 	Player:
 		PlayerResources:
