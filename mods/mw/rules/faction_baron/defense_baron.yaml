@@ -1,3 +1,51 @@
+GUNNEW:
+	Inherits: ^MWDefense
+	Inherits@AUTOTARGET: ^AutoTargetGround
+	Inherits@Hitshape: ^1x1Shape
+	Valued:
+		Cost: 1400
+	CustomSellValue:
+		Value: 700
+	Tooltip:
+		Name: Gunpowder Cannon
+	Building:
+	Health:
+		HP: 40000
+	Armor:
+		Type: HeavyBuilding
+	RevealsShroud:
+		Range: 6c0
+	WithBuildingBib:
+		Palette: bibs
+		HasMinibib: Yes
+	Turreted:
+		TurnSpeed: 12
+		InitialFacing: 56
+	-WithSpriteBody:
+	WithEmbeddedTurretSpriteBody:
+	Armament:
+		Weapon: cannonboulder
+		LocalOffset: 512,0,212
+		MuzzleSequence: muzzle
+	AttackTurreted:
+	WithMuzzleOverlay:
+	-WithDeathAnimation:
+	RenderSprites:
+		Image: gunnew
+		PlayerPalette: raplayer
+	DetectCloaked:
+		Range: 3c0
+	BodyOrientation:
+		QuantizedFacings: 32
+	Selectable:
+		Bounds: 25,25,0,0
+	SelectionDecorations:
+	ThrowsShrapnel@SMALL:
+		Weapons: SmallStone1, SmallStone2, LargeStone1
+		Pieces: 2, 3
+		Range: 0c512, 3c0
+	Targetable@CombatRole:
+		TargetTypes: Defenses
 SAMNEW:
 	Inherits: ^MWDefense
 	Inherits@AUTOTARGET: ^AutoTargetAir

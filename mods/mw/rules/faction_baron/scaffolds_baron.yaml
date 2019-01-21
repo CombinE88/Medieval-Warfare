@@ -1,3 +1,62 @@
+GUNNEW.scaff:
+	Inherits: ^1x1SITE
+	Inherits@Hitshape: ^1x1Shape
+	Armor:
+		Type: HeavyBuilding
+	RenderSprites:
+		PlayerPalette: raplayer
+		Image: gunnew
+	CustomSellValue:
+		Value: 700
+	Valued:
+		Cost: 1300
+	Tooltip:
+		Name: Construction Site (Gunpowder Cannon)
+	Buildable:
+		Description: The early Cannon uses gunpowder to throw a large boulder. \nIt's most effectively used against large targets.\n  Strong vs Cavalry and Spectral Units\n  Weak vs Infantry\n\n
+		BuildPaletteOrder: 60
+		Queue: MMilitary.Nod
+		IconPalette: raicon
+		BuildDurationModifier: 60
+		BuildDuration: 1000
+	Health:
+		HP: 20000
+	RevealsShroud:
+		Range: 4c0
+	WithBuildingBib:
+		Palette: bibs
+		HasMinibib: Yes
+	Selectable:
+		Bounds: 25,25,0,0
+	SelectionDecorations:
+	WithSpriteBody:
+		RequiresCondition: inactive
+	DebugTransformOnCondition@Finsihed:
+		RequiresCondition: (Construct >= 8)
+		IntoActor: GUNNEW
+		ReadyAudio:
+	ConstructionProgress@Construct:
+		FullCapacity: 8
+	WithIdleOverlay@base1:
+		Sequence: make1
+		RequiresCondition: Construct > 2 && Construct < 3
+	WithIdleOverlay@base2:
+		Sequence: make2
+		RequiresCondition: Construct >= 3 && Construct < 4
+	WithIdleOverlay@base3:
+		Sequence: make3
+		RequiresCondition: Construct >= 4 && Construct < 5
+	WithIdleOverlay@base4:
+		Sequence: make4
+		RequiresCondition: Construct >= 5 && Construct < 6
+	WithIdleOverlay@base5:
+		Sequence: make5
+		RequiresCondition: Construct >= 6 && Construct < 7
+	WithIdleOverlay@base6:
+		Sequence: make6
+		RequiresCondition: Construct >= 7
+	WithRangeCircle:
+		Range: 7c0
 HANDNEW.scaff:
 	Inherits: ^2x3SITE
 	Inherits@Hitshape: ^2x2Shape
@@ -543,4 +602,4 @@ SAMNEW.scaff:
 		Sequence: make5
 		RequiresCondition: Construct >= 6
 	WithRangeCircle@Air:
-		Range: 8c0
+		Range: 10c0

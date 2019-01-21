@@ -1,3 +1,82 @@
+GTWNEW:
+	Inherits: ^MWDefense
+	Inherits@AUTOTARGET: ^AutoTargetGround
+	Inherits@Hitshape: ^1x1Shape
+	EditorTilesetFilter:
+		Categories: Defense
+	WithDeathAnimation:
+		DeathSequencePalette: raplayer
+	RenderSprites:
+		PlayerPalette: raplayer
+	Valued:
+		Cost: 1200
+	CustomSellValue:
+		Value: 600
+	Tooltip:
+		Name: Guard Tower
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+	Health:
+		HP: 40000
+	RevealsShroud:
+		Range: 7c0
+	WithBuildingBib:
+		Palette: bibs
+		HasMinibib: Yes
+	WithIdleOverlay:
+	AttackTurreted:
+		Armaments: primary, secondary
+	BodyOrientation:
+		QuantizedFacings: 8
+	DetectCloaked:
+		Range: 3c0
+	Armament@ARMONE:
+		Weapon: bownarrowtower
+		LocalOffset: 0,0,427
+		Turret: primary
+		Name: primary
+		FireDelay: 5
+	WithSpriteTurret@SPRITURRONE: 
+		Sequence: turretidle
+		Turret: primary
+	WithTurretAttackAnimation@SPRITURRONE:
+		Turret: primary
+		Sequence: shoot
+		Armament: primary
+	Turreted@TURRONE:
+		Turret: primary
+		TurnSpeed: 100
+		Offset: -170,-170,500
+	Armament@ARMTWO:
+		Weapon: bownarrowtower
+		LocalOffset: 0,0,427
+		Turret: secondary
+		FireDelay: 17
+		Name: secondary
+	WithSpriteTurret@SPRITURRTWO: 
+		Sequence: turretidle
+		Turret: secondary
+	WithTurretAttackAnimation@SPRITURRTWO:
+		Turret: secondary
+		Armament: secondary
+		Sequence: shoot
+		Delay: 12
+	Turreted@TURRTWO:
+		Turret: secondary
+		TurnSpeed: 100
+		Offset: 170,170,500
+	Armor:
+		Type: HeavyBuilding 
+	Selectable:
+		Bounds: 24,48,0,-10
+	SelectionDecorations:
+	ThrowsShrapnel@SMALL:
+		Weapons: SmallWood1, SmallWood2, SmallWood3, LargeWood1
+		Pieces: 2, 3
+		Range: 0c512, 3c0
+	Targetable@CombatRole:
+		TargetTypes: Defenses
 BATO:
 	Inherits: ^MWDefense
 	Inherits@AUTOTARGET: ^AutoTargetAll

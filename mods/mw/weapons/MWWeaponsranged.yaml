@@ -1136,7 +1136,7 @@ BowNArrowTower:
 		Image: e4arrow
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
-		Spread: 256
+		Spread: 126
 		InvalidTargets: Wall, Air
 		ValidTargets: Ground
 		Damage: 2600
@@ -1145,10 +1145,10 @@ BowNArrowTower:
 			Light: 75
 			Heavy: 65
 			Concrete: 15
-			Knight: 15
-			LightCavalry: 60
-			MediumCavalry: 30
-			HeavyCavalry: 12
+			Knight: 25
+			LightCavalry: 70
+			MediumCavalry: 45
+			HeavyCavalry: 25
 			HeavyBuilding: 35
 			Spectral: 15
 		DamageTypes: DefaultDeath 
@@ -1229,21 +1229,21 @@ CannonBoulder:
 		LaunchAngle: 86
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
-		Spread: 128
-		Damage: 9500
+		Spread: 256
+		Damage: 8500
 		ValidTargets: Ground
 		InvalidTargets: Air
 		Versus:
-			Leather: 20
-			Light: 20
-			Heavy: 20
-			Concrete: 35
-			Knight: 65
+			Leather: 50
+			Light: 40
+			Heavy: 30
+			Concrete: 20
+			Knight: 35
 			LightCavalry: 100
 			MediumCavalry: 100
 			HeavyCavalry: 100
-			HeavyBuilding: 45
-			Spectral: 75
+			HeavyBuilding: 40
+			Spectral: 20
 		DamageTypes: DefaultDeath
 	Warhead@2Smu: LeaveSmudge
 		SmudgeType: Crater
@@ -1449,7 +1449,7 @@ HighTribuchetBoulder:
 		InvalidTargets: Vehicle, Structure, Wall, Husk, Trees, Creep
 StationBalistaAG:
 	ReloadDelay: 45
-	Range: 8c0
+	Range: 7c0
 	MinRange: 1c0
 	Report: Balista01.aud
 	TargetActorCenter: true
@@ -1484,7 +1484,7 @@ StationBalistaAG:
 		Explosions: smokey
 StationBalistaAA:
 	ReloadDelay: 45
-	Range: 10c0
+	Range: 8c0
 	MinRange: 1c512
 	Report: Balista01.aud
 	ValidTargets: Air
@@ -1534,8 +1534,8 @@ SamBallista:
 		Image: smbllbolt
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
-		Spread: 512
-		Damage: 3825
+		Spread: 415
+		Damage: 4000
 		ValidTargets: Air
 		InvalidTargets: Ground
 		Versus:
