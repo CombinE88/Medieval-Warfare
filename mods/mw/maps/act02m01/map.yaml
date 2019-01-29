@@ -18,9 +18,9 @@ Players:
 		Faction: nod
 		Color: FE1100
 		Allies: Baron
-		Enemies: King, King2, Creeps
-	PlayerReference@King:
-		Name: King
+		Enemies: HumanP, King, Creeps
+	PlayerReference@HumanP:
+		Name: HumanP
 		AllowBots: False
 		Playable: True
 		Required: True
@@ -30,20 +30,20 @@ Players:
 		Color: F5D378
 		LockSpawn: True
 		LockTeam: True
-		Allies: King, King2
+		Allies: HumanP, King
 		Enemies: Baron, Creeps
-	PlayerReference@King2:
-		Name: King2
+	PlayerReference@King:
+		Name: King
 		Faction: gdi
 		Color: F3A760
-		Allies: King, King2
+		Allies: HumanP, King
 		Enemies: Baron, Creeps
 	PlayerReference@Creeps:
 		Name: Creeps
 		NonCombatant: True
 		Faction: Random
 		Color: 30732D
-		Enemies: King, King2, Baron
+		Enemies: HumanP, King, Baron
 Actors:
 	Actor0: crackwallh
 		Owner: Neutral
@@ -898,42 +898,32 @@ Actors:
 		SubCell: 3
 		Facing: 92
 	Actor295: rmbonew
-		Owner: King
+		Owner: HumanP
 		Location: 18,41
 		SubCell: 3
 		Facing: 92
 	Actor296: rmbonew
-		Owner: King
+		Owner: HumanP
 		Location: 18,41
 		SubCell: 1
 		Facing: 92
 	Actor297: rmbonew
-		Owner: King
+		Owner: HumanP
 		Location: 17,41
 		SubCell: 3
 		Facing: 92
 	Actor298: rmbonew
-		Owner: King
+		Owner: HumanP
 		Location: 17,41
 		SubCell: 1
 		Facing: 92
-	Actor299: rmbonew
-		Owner: King
-		Location: 18,42
-		SubCell: 3
-		Facing: 92
 	Actor300: rmbonew
-		Owner: King
+		Owner: HumanP
 		Location: 18,42
 		SubCell: 1
 		Facing: 92
-	Actor301: rmbonew
-		Owner: King
-		Location: 17,42
-		SubCell: 3
-		Facing: 92
 	Actor302: rmbonew
-		Owner: King
+		Owner: HumanP
 		Location: 17,42
 		SubCell: 1
 		Facing: 92
@@ -1042,6 +1032,71 @@ Actors:
 	Actor339: switchc
 		Owner: Baron
 		Location: 28,25
+	Actor340: e3newv2
+		Owner: Baron
+		Location: 30,16
+		SubCell: 3
+		Facing: 92
+	Actor341: e3newv2
+		Owner: Baron
+		Location: 30,16
+		SubCell: 1
+		Facing: 92
+	Actor342: e4new
+		Owner: Baron
+		Location: 31,16
+		SubCell: 3
+		Facing: 92
+	Actor343: e4new
+		Owner: Baron
+		Location: 31,16
+		SubCell: 1
+		Facing: 92
+	Actor344: e2new
+		Owner: Baron
+		Location: 18,27
+		SubCell: 3
+		Facing: 92
+	Actor345: e2new
+		Owner: Baron
+		Location: 18,27
+		SubCell: 1
+		Facing: 92
+	Actor346: e2new
+		Owner: Baron
+		Location: 17,27
+		SubCell: 3
+		Facing: 92
+	Actor347: e2new
+		Owner: Baron
+		Location: 17,27
+		SubCell: 1
+		Facing: 92
+	Actor348: e4new
+		Owner: Baron
+		Location: 18,26
+		SubCell: 3
+		Facing: 92
+	Actor349: e4new
+		Owner: Baron
+		Location: 17,26
+		SubCell: 3
+		Facing: 92
+	Actor350: e3new
+		Owner: HumanP
+		Location: 18,40
+		SubCell: 3
+		Facing: 92
+	Actor351: e3new
+		Owner: HumanP
+		Location: 17,40
+		SubCell: 3
+		Facing: 92
+	Actor352: bargen
+		Owner: Baron
+		Location: 22,20
+		SubCell: 3
+		Facing: 85
 Nodes:
 	TriggerOnKilled@ND02: TriggerOnKilled
 		Pos: -443,-186
@@ -1064,6 +1119,7 @@ Nodes:
 			Actor: Actor38
 		Out@Con2:
 			ConnectionType: ActorList
+			Actor: Actor38
 			Actors: Actor38
 	ActorKill@ND07: ActorKill
 		Pos: -199,-423
@@ -1124,10 +1180,10 @@ Nodes:
 		In@Con3:
 			ConnectionType: Repeatable
 	MapInfoNode@ND15: MapInfoNode
-		Pos: 220,-399
+		Pos: 225,-394
 		Out@Con1:
 			ConnectionType: Player
-			Player: King
+			Player: HumanP
 		Out@Con3:
 			ConnectionType: CellArray
 			Cells: 25,21|25,22|26,22|27,22|27,21|27,20|26,20|25,20
@@ -1147,6 +1203,7 @@ Nodes:
 			Actor: Actor250
 		Out@Con2:
 			ConnectionType: ActorList
+			Actor: Actor250
 			Actors: Actor250
 	ActorKill@ND18: ActorKill
 		Pos: 967,-168
@@ -1224,7 +1281,7 @@ Nodes:
 		Pos: -1046,377
 		Out@Con1:
 			ConnectionType: Player
-			Player: King
+			Player: HumanP
 		Out@Con2:
 			ConnectionType: String
 			String: Find the Informations!
@@ -1234,20 +1291,12 @@ Nodes:
 			ConnectionType: Exec
 		In@Con1:
 			ConnectionType: ActorList
-			Node@ND27: Con2
+			Node@ND39: Con2
 		In@Con2:
 			ConnectionType: Repeatable
 		In@Con3:
 			ConnectionType: Exec
 			Node@ND05: Con1
-	MapInfoActorReference@ND27: MapInfoActorReference
-		Pos: -178,334
-		Out@Con1:
-			ConnectionType: Actor
-			Actor: Actor296
-		Out@Con2:
-			ConnectionType: ActorList
-			Actors: Actor296,Actor300,Actor297,Actor298,Actor301,Actor302,Actor299,Actor295
 	UiFailObjective@ND28: UiFailObjective
 		Pos: 353,336
 		Out@Con1:
@@ -1265,6 +1314,7 @@ Nodes:
 			Actor: Actor338
 		Out@Con2:
 			ConnectionType: ActorList
+			Actor: Actor338
 			Actors: Actor338
 	MapInfoActorReference@ND30: MapInfoActorReference
 		Pos: -584,835
@@ -1273,12 +1323,13 @@ Nodes:
 			Actor: Actor339
 		Out@Con2:
 			ConnectionType: ActorList
+			Actor: Actor339
 			Actors: Actor339
 	MapInfoNode@ND31: MapInfoNode
 		Pos: -404,72
 		Out@Con1:
 			ConnectionType: Player
-			Player: King
+			Player: HumanP
 		Out@Con2:
 			ConnectionType: Location
 			Location: 17,41
@@ -1293,6 +1344,70 @@ Nodes:
 		In@Con3:
 			ConnectionType: Exec
 			Node@ND05: Con1
+	MapInfoActorReference@ND33: MapInfoActorReference
+		Pos: -450,-693
+		Out@Con1:
+			ConnectionType: Actor
+			Actor: Actor344
+		Out@Con2:
+			ConnectionType: ActorList
+			Actors: Actor344,Actor345,Actor349,Actor348,Actor346,Actor347
+	MapInfoNode@ND34: MapInfoNode
+		Pos: -449,-861
+		Out@Con1:
+			ConnectionType: Location
+			Location: 17,37
+	ActorQueueAttackMoveActivity@ND35: ActorQueueAttackMoveActivity
+		Pos: -179,-758
+		Out@Con1:
+			ConnectionType: Exec
+		In@Con1:
+			ConnectionType: Actor
+		In@Con2:
+			ConnectionType: ActorList
+			Node@ND33: Con2
+		In@Con3:
+			ConnectionType: Location
+			Node@ND34: Con1
+		In@Con4:
+			ConnectionType: Exec
+			Node@ND02: Con1
+	MapInfoActorReference@ND36: MapInfoActorReference
+		Pos: 214,869
+		Out@Con1:
+			ConnectionType: Actor
+			Actor: Actor342
+		Out@Con2:
+			ConnectionType: ActorList
+			Actors: Actor342,Actor343,Actor340,Actor341
+	MapInfoNode@ND37: MapInfoNode
+		Pos: 215,701
+		Out@Con1:
+			ConnectionType: Location
+			Location: 30,25
+	ActorQueueAttackMoveActivity@ND38: ActorQueueAttackMoveActivity
+		Pos: 485,804
+		Out@Con1:
+			ConnectionType: Exec
+		In@Con1:
+			ConnectionType: Actor
+		In@Con2:
+			ConnectionType: ActorList
+			Node@ND36: Con2
+		In@Con3:
+			ConnectionType: Location
+			Node@ND37: Con1
+		In@Con4:
+			ConnectionType: Exec
+			Node@ND08: Con1
+	MapInfoActorReference@ND39: MapInfoActorReference
+		Pos: -223,314
+		Out@Con1:
+			ConnectionType: Actor
+			Actor: Actor300
+		Out@Con2:
+			ConnectionType: ActorList
+			Actors: Actor300,Actor302,Actor297,Actor296,Actor295,Actor298,Actor350,Actor351
 Rules: mw|rules/campaign-maprules.yaml
 	Player:
 		PlayerResources:

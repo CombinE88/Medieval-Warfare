@@ -18,9 +18,9 @@ Players:
 		Faction: nod
 		Color: FE1100
 		Allies: Baron
-		Enemies: King, King2, Creeps
-	PlayerReference@King:
-		Name: King
+		Enemies: HumanP, King, Creeps
+	PlayerReference@HumanP:
+		Name: HumanP
 		AllowBots: False
 		Playable: True
 		Required: True
@@ -30,26 +30,26 @@ Players:
 		Color: F5D378
 		LockSpawn: True
 		LockTeam: True
-		Allies: King, King2, Creeps
+		Allies: HumanP, King, Creeps
 		Enemies: Baron
-	PlayerReference@King2:
-		Name: King2
+	PlayerReference@King:
+		Name: King
 		Faction: gdi
 		Color: F3A760
-		Allies: King, King2
+		Allies: HumanP, King
 		Enemies: Baron, Creeps
 	PlayerReference@Creeps:
 		Name: Creeps
 		NonCombatant: True
 		Faction: Random
 		Color: 30732D
-		Enemies: King, King2, Baron
+		Enemies: HumanP, King, Baron
 Actors:
 	Actor36: prop6
-		Owner: King
+		Owner: HumanP
 		Location: 17,31
 	Actor37: prop7
-		Owner: King
+		Owner: HumanP
 		Location: 18,30
 	Actor6: t15
 		Owner: Neutral
@@ -88,28 +88,28 @@ Actors:
 		Owner: Neutral
 		Location: 42,27
 	Actor18: wdwll
-		Owner: King
+		Owner: HumanP
 		Location: 13,30
 	Actor19: wdwll
-		Owner: King
+		Owner: HumanP
 		Location: 14,30
 	Actor20: wdwll
-		Owner: King
+		Owner: HumanP
 		Location: 15,30
 	Actor21: wdwll
-		Owner: King
+		Owner: HumanP
 		Location: 16,30
 	Actor22: wdwll
-		Owner: King
+		Owner: HumanP
 		Location: 20,30
 	Actor23: wdwll
-		Owner: King
+		Owner: HumanP
 		Location: 21,30
 	Actor24: wdwll
-		Owner: King
+		Owner: HumanP
 		Location: 22,30
 	Actor25: wdwll
-		Owner: King
+		Owner: HumanP
 		Location: 23,30
 	Actor26: t11
 		Owner: Neutral
@@ -121,7 +121,7 @@ Actors:
 		Owner: Neutral
 		Location: 32,30
 	Actor29: wdwll
-		Owner: King
+		Owner: HumanP
 		Location: 23,31
 	Actor31: tc01
 		Owner: Neutral
@@ -130,79 +130,79 @@ Actors:
 		Owner: Neutral
 		Location: 41,32
 	Actor33: wdwll
-		Owner: King
+		Owner: HumanP
 		Location: 13,33
 	Actor34: decor9
-		Owner: King
+		Owner: HumanP
 		Location: 21,33
 	Actor35: wdwll
-		Owner: King
+		Owner: HumanP
 		Location: 23,33
 	Actor38: zeroproc
-		Owner: King
+		Owner: HumanP
 		Location: 38,32
 	Actor39: wdwll
-		Owner: King
+		Owner: HumanP
 		Location: 13,34
 	Actor40: barrelmw4
-		Owner: King
+		Owner: HumanP
 		Location: 22,34
 	Actor41: wdwll
-		Owner: King
+		Owner: HumanP
 		Location: 23,34
 	Actor46: nukenew
-		Owner: King
+		Owner: HumanP
 		Location: 32,34
 	Actor47: wdwll
-		Owner: King
+		Owner: HumanP
 		Location: 13,35
 	Actor48: wdwll
-		Owner: King
+		Owner: HumanP
 		Location: 23,35
 	Actor49: decor8
-		Owner: King
+		Owner: HumanP
 		Location: 18,36
 	Actor50: wdwll
-		Owner: King
+		Owner: HumanP
 		Location: 23,36
 	Actor51: nukxl
-		Owner: King
+		Owner: HumanP
 		Location: 36,36
 	Actor52: nuk2new
-		Owner: King
+		Owner: HumanP
 		Location: 40,36
 	Actor53: decor7
-		Owner: King
+		Owner: HumanP
 		Location: 12,37
 	Actor54: barrnew
-		Owner: King
+		Owner: HumanP
 		Location: 15,37
 	Actor55: lodge
-		Owner: King
+		Owner: HumanP
 		Location: 21,37
 	Actor56: wdwll
-		Owner: King
+		Owner: HumanP
 		Location: 23,37
 	Actor57: t13
 		Owner: Neutral
 		Location: 25,37
 	Actor58: decor7
-		Owner: King
+		Owner: HumanP
 		Location: 11,38
 	Actor59: barrelmw7
-		Owner: King
+		Owner: HumanP
 		Location: 19,38
 	Actor60: wdwll
-		Owner: King
+		Owner: HumanP
 		Location: 23,38
 	Actor61: t08
 		Owner: Neutral
 		Location: 28,38
 	Actor62: wdwll
-		Owner: King
+		Owner: HumanP
 		Location: 23,39
 	Actor63: decor3
-		Owner: King
+		Owner: HumanP
 		Location: 12,40
 	Actor64: t12
 		Owner: Neutral
@@ -211,10 +211,10 @@ Actors:
 		Owner: Neutral
 		Location: 29,40
 	Actor66: nukenew
-		Owner: King
+		Owner: HumanP
 		Location: 35,40
 	Actor67: decor6
-		Owner: King
+		Owner: HumanP
 		Location: 16,41
 	Actor68: split9
 		Owner: Neutral
@@ -298,7 +298,7 @@ Actors:
 		Owner: Neutral
 		Location: 23,8
 	Actor96: gtwnew
-		Owner: King
+		Owner: HumanP
 		Location: 21,31
 		TurretFacing: 92
 	Actor98: gtwnew
@@ -336,54 +336,54 @@ Actors:
 		Owner: Baron
 		Location: 36,3
 	Actor139: ibannerb
-		Owner: King
+		Owner: HumanP
 		Location: 15,30
 	Actor140: ibannerb
-		Owner: King
+		Owner: HumanP
 		Location: 22,30
 	Actor141: prop1
-		Owner: King
+		Owner: HumanP
 		Location: 16,30
 	Actor142: prop1
-		Owner: King
+		Owner: HumanP
 		Location: 13,35
 	Actor143: e3new
-		Owner: King
+		Owner: HumanP
 		Location: 21,29
 		SubCell: 3
 		Facing: 92
 	Actor144: e3new
-		Owner: King
+		Owner: HumanP
 		Location: 17,29
 		SubCell: 3
 		Facing: 92
 	Actor145: e4newv2
-		Owner: King
+		Owner: HumanP
 		Location: 20,31
 		SubCell: 3
 		Facing: 92
 	Actor146: e4newv2
-		Owner: King
+		Owner: HumanP
 		Location: 20,31
 		SubCell: 1
 		Facing: 92
 	Actor147: e4newv2
-		Owner: King
+		Owner: HumanP
 		Location: 16,31
 		SubCell: 3
 		Facing: 92
 	Actor148: e4newv2
-		Owner: King
+		Owner: HumanP
 		Location: 12,34
 		SubCell: 3
 		Facing: 92
 	Actor149: e4newv2
-		Owner: King
+		Owner: HumanP
 		Location: 12,35
 		SubCell: 3
 		Facing: 92
 	Actor150: e3new
-		Owner: King
+		Owner: HumanP
 		Location: 10,34
 		SubCell: 3
 		Facing: 92
@@ -633,32 +633,32 @@ Actors:
 		SubCell: 3
 		Facing: 92
 	Actor209: mwwand2
-		Owner: King2
+		Owner: King
 		Location: 35,34
 		SubCell: 3
 		Facing: 92
 	Actor210: mwwand5
-		Owner: King2
+		Owner: King
 		Location: 33,37
 		SubCell: 3
 		Facing: 92
 	Actor211: mwwand2
-		Owner: King2
+		Owner: King
 		Location: 37,40
 		SubCell: 3
 		Facing: 92
 	Actor212: mwwand1
-		Owner: King2
+		Owner: King
 		Location: 41,39
 		SubCell: 3
 		Facing: 92
 	Actor213: mwwand12
-		Owner: King2
+		Owner: King
 		Location: 43,37
 		SubCell: 3
 		Facing: 92
 	Actor214: mwwand11
-		Owner: King2
+		Owner: King
 		Location: 40,36
 		SubCell: 1
 		Facing: 92
@@ -837,11 +837,6 @@ Actors:
 	Actor263: split7
 		Owner: Neutral
 		Location: 23,4
-	Actor264: hood
-		Owner: King
-		Location: 17,34
-		SubCell: 3
-		Facing: 92
 	Actor265: decor6
 		Owner: Neutral
 		Location: 22,36
@@ -863,6 +858,16 @@ Actors:
 	Actor271: decor14
 		Owner: Neutral
 		Location: 36,34
+	Actor264: darb
+		Owner: HumanP
+		Location: 17,34
+		SubCell: 3
+		Facing: 92
+	Actor272: bargen
+		Owner: Baron
+		Location: 37,10
+		SubCell: 3
+		Facing: 92
 Nodes:
 	TriggerWorldLoaded@ND01: TriggerWorldLoaded
 		Pos: -1452,-3
@@ -1052,7 +1057,7 @@ Nodes:
 		Pos: -1385,-598
 		Out@Con1:
 			ConnectionType: Player
-			Player: King
+			Player: HumanP
 		Out@Con2:
 			ConnectionType: CellArray
 			Cells: 32,18|31,18|31,17|30,17|32,17|33,17|33,18|34,18|35,18|36,18|37,18|38,18|39,18|40,18|41,18|41,19|42,19|43,19|44,19|45,19|45,17|43,18|42,18|37,17|36,17|35,17|34,17|38,17|39,17|40,17|41,17|42,17|43,17|44,17|45,18|44,18|29,12|29,13|29,14|29,11|29,10|29,9|30,14|30,13|30,12|30,11|30,10|30,9|30,8|30,7|29,7|29,8|29,6|29,5|30,6|30,5|30,4|31,5|32,5|32,4|32,3|31,4|29,4|32,2|31,2|31,1|32,1|32,0|31,0|31,3|29,15|29,16|29,17|30,16|30,15|31,16
@@ -1092,7 +1097,7 @@ Nodes:
 		Pos: 903,163
 		Out@Con1:
 			ConnectionType: Player
-			Player: King
+			Player: HumanP
 		Out@Con4:
 			ConnectionType: String
 			String: Mission
@@ -1165,7 +1170,7 @@ Nodes:
 		Pos: 1537,408
 		Out@Con1:
 			ConnectionType: Player
-			Player: King
+			Player: HumanP
 		Out@Con4:
 			ConnectionType: String
 			String: Mission
@@ -1407,7 +1412,7 @@ Nodes:
 			Location: 18,35
 		Out@Con2:
 			ConnectionType: Player
-			Player: King
+			Player: HumanP
 	UiNewObjective@ND102: UiNewObjective
 		Pos: -1047,-349
 		Item: Primary
@@ -1481,7 +1486,7 @@ Rules: mw|rules/campaign-maprules.yaml
 		-Buildable:
 	World:
 		MissionData:
-			Briefing: The watchmen of the recently retaken village have been keeping vigilance for almost 3 days until suddenly: a breakthrough. Off the coast of the hillside range spans swords, spears, bows and sticks with jewels on them. An army that had sieged the village and took control have come back to take what belongs to them! Darbentis with a new rallied spirit for battle: calls to arms every man who can pick up a weapon and attack as he readies them for bloodshed against these barbaric invaders.\n\n The village had survived… barely. But that’s not to say with the number of villagers who took a severe death toll. But with the great sacrifice of so many villagers that needlessly died all to protect the land their own: came at a great abundance of relief as the name of the warrior had came about. These fallen dead of warriors were under the strict orders of High Ranking Military Strategist “Olfenheider” and one of the most loyalist henchmen of the ignorant Baron Hodsworth of Noddingen.
+			Briefing: The watchmen of the recently retaken village have been keeping vigilance for almost 3 days until suddenly: a breakthrough. Off the coast of the hillside range spans swords, spears, bows and sticks with jewels on them. An army that had sieged the village and took control have come back to take what belongs to them! Darbentis with a new rallied spirit for battle: calls to arms every man who can pick up a weapon and attack as he readies them for bloodshed against these barbaric invaders.\n\n The village had survived… barely. But that’s not to say with the number of villagers who took a severe death toll. But with the great sacrifice of so many villagers that needlessly died all to protect the land their own: came at a great abundance of relief as the name of the warrior had came about. These fallen dead of warriors were under the strict orders of High King Military Strategist “Olfenheider” and one of the most loyalist henchmen of the ignorant Baron Hodsworth of Noddingen.
 	HOOD:
 		Tooltip:
 			Name: Darbentis

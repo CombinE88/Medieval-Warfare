@@ -60,6 +60,10 @@
 		Name: firealpha
 		BasePalette: fire
 		Alpha: 0.5
+	PaletteFromPaletteWithAlpha@firealpha3:
+		Name: firealpha2
+		BasePalette: fire
+		Alpha: 1
 	PaletteFromFile@chrome:
 		Name: chrome
 		Filename: temperat.pal

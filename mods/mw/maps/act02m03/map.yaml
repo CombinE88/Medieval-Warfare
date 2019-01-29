@@ -18,9 +18,9 @@ Players:
 		Faction: nod
 		Color: FE1100
 		Allies: Baron
-		Enemies: King, King2, Creeps
-	PlayerReference@King:
-		Name: King
+		Enemies: HumanP, King, Creeps
+	PlayerReference@HumanP:
+		Name: HumanP
 		AllowBots: False
 		Playable: True
 		Required: True
@@ -30,131 +30,131 @@ Players:
 		Color: F5D378
 		LockSpawn: True
 		LockTeam: True
-		Allies: King, King2
+		Allies: HumanP, King
 		Enemies: Baron, Creeps
-	PlayerReference@King2:
-		Name: King2
+	PlayerReference@King:
+		Name: King
 		Faction: gdi
 		Color: F3A760
-		Allies: King, King2
+		Allies: HumanP, King
 		Enemies: Baron, Creeps
 	PlayerReference@Creeps:
 		Name: Creeps
 		NonCombatant: True
 		Faction: Random
 		Color: 30732D
-		Enemies: King, King2, Baron
+		Enemies: HumanP, King, Baron
 Actors:
 	Actor0: gtwnew
-		Owner: King2
+		Owner: King
 		Location: 52,28
 		TurretFacing: 92
 	Actor1: gtwnew
-		Owner: King2
+		Owner: King
 		Location: 48,23
 		TurretFacing: 92
 	Actor2: gtwnew
-		Owner: King2
+		Owner: King
 		Location: 51,46
 		TurretFacing: 92
 	Actor3: gtwnew
-		Owner: King2
+		Owner: King
 		Location: 21,45
 		TurretFacing: 92
 	Actor4: gtwnew
-		Owner: King2
+		Owner: King
 		Location: 19,37
 		TurretFacing: 92
 	Actor5: gtwnew
-		Owner: King2
+		Owner: King
 		Location: 24,19
 		TurretFacing: 92
 	Actor6: gtwnew
-		Owner: King2
+		Owner: King
 		Location: 31,16
 		TurretFacing: 92
 	Actor7: wdwll
-		Owner: King2
+		Owner: King
 		Location: 32,16
 	Actor8: wdwll
-		Owner: King2
+		Owner: King
 		Location: 32,15
 	Actor9: wdwll
-		Owner: King2
+		Owner: King
 		Location: 32,17
 	Actor10: wdwll
-		Owner: King2
+		Owner: King
 		Location: 32,18
 	Actor12: wdwll
-		Owner: King2
+		Owner: King
 		Location: 23,20
 	Actor13: wdwll
-		Owner: King2
+		Owner: King
 		Location: 23,21
 	Actor18: wdwll
-		Owner: King2
+		Owner: King
 		Location: 46,22
 	Actor19: wdwll
-		Owner: King2
+		Owner: King
 		Location: 46,23
 	Actor20: wdwll
-		Owner: King2
+		Owner: King
 		Location: 46,24
 	Actor23: wdwll
-		Owner: King2
+		Owner: King
 		Location: 53,29
 	Actor24: wdwll
-		Owner: King2
+		Owner: King
 		Location: 53,30
 	Actor25: wdwll
-		Owner: King2
+		Owner: King
 		Location: 52,30
 	Actor26: wdwll
-		Owner: King2
+		Owner: King
 		Location: 51,30
 	Actor29: wdwll
-		Owner: King2
+		Owner: King
 		Location: 20,46
 	Actor30: wdwll
-		Owner: King2
+		Owner: King
 		Location: 19,46
 	Actor31: wdwll
-		Owner: King2
+		Owner: King
 		Location: 19,45
 	Actor32: wdwll
-		Owner: King2
+		Owner: King
 		Location: 19,44
 	Actor33: wdwll
-		Owner: King2
+		Owner: King
 		Location: 19,43
 	Actor36: wdwll
-		Owner: King2
+		Owner: King
 		Location: 18,38
 	Actor37: wdwll
-		Owner: King2
+		Owner: King
 		Location: 18,39
 	Actor38: wdwll
-		Owner: King2
+		Owner: King
 		Location: 19,39
 	Actor39: wdwll
-		Owner: King2
+		Owner: King
 		Location: 20,39
 	Actor34: bato
-		Owner: King2
+		Owner: King
 		Location: 26,26
 		TurretFacing: 92
 	Actor35: bato
-		Owner: King2
+		Owner: King
 		Location: 43,30
 		TurretFacing: 92
 	Actor40: hqnewgdi
-		Owner: King2
+		Owner: King
 		Location: 28,27
 	Actor41: zeroproc
-		Owner: King2
+		Owner: King
 		Location: 54,40
 	Actor42: zeroproc
-		Owner: King2
+		Owner: King
 		Location: 58,36
 	Actor43: split4b
 		Owner: Neutral
@@ -343,46 +343,46 @@ Actors:
 		Owner: Neutral
 		Location: 47,5
 	Actor107: nukxl
-		Owner: King2
+		Owner: King
 		Location: 29,34
 	Actor109: nukenew
-		Owner: King2
+		Owner: King
 		Location: 59,32
 	Actor110: nukenew
-		Owner: King2
+		Owner: King
 		Location: 56,29
 	Actor111: nuk2new
-		Owner: King2
+		Owner: King
 		Location: 45,31
 	Actor112: nuk2new
-		Owner: King2
+		Owner: King
 		Location: 46,35
 	Actor113: nuk2new
-		Owner: King2
+		Owner: King
 		Location: 42,34
 	Actor114: nukenew
-		Owner: King2
+		Owner: King
 		Location: 39,6
 	Actor115: nukenew
-		Owner: King2
+		Owner: King
 		Location: 35,4
 	Actor116: nukenew
-		Owner: King2
+		Owner: King
 		Location: 35,8
 	Actor117: procnew
-		Owner: King2
+		Owner: King
 		Location: 42,7
 	Actor118: silonew
-		Owner: King2
+		Owner: King
 		Location: 41,4
 	Actor119: lodge
-		Owner: King2
+		Owner: King
 		Location: 12,20
 	Actor120: lodge
-		Owner: King2
+		Owner: King
 		Location: 9,17
 	Actor121: nukenew
-		Owner: King2
+		Owner: King
 		Location: 13,15
 	Actor122: prop2
 		Owner: Neutral
@@ -498,247 +498,247 @@ Actors:
 		SubCell: 3
 		Facing: 92
 	Actor151: e3new
-		Owner: King2
+		Owner: King
 		Location: 52,31
 		SubCell: 3
 		Facing: 92
 	Actor152: e3new
-		Owner: King2
+		Owner: King
 		Location: 52,31
 		SubCell: 1
 		Facing: 92
 	Actor153: e3new
-		Owner: King2
+		Owner: King
 		Location: 45,23
 		SubCell: 3
 		Facing: 92
 	Actor154: e3new
-		Owner: King2
+		Owner: King
 		Location: 45,23
 		SubCell: 1
 		Facing: 92
 	Actor155: e4newv2
-		Owner: King2
+		Owner: King
 		Location: 47,23
 		SubCell: 3
 		Facing: 92
 	Actor156: e4newv2
-		Owner: King2
+		Owner: King
 		Location: 47,24
 		SubCell: 3
 		Facing: 92
 	Actor157: e4newv2
-		Owner: King2
+		Owner: King
 		Location: 52,29
 		SubCell: 3
 		Facing: 92
 	Actor158: e4newv2
-		Owner: King2
+		Owner: King
 		Location: 51,29
 		SubCell: 3
 		Facing: 92
 	Actor159: e4newv2
-		Owner: King2
+		Owner: King
 		Location: 24,20
 		SubCell: 3
 		Facing: 92
 	Actor160: e4newv2
-		Owner: King2
+		Owner: King
 		Location: 24,21
 		SubCell: 3
 		Facing: 92
 	Actor161: e4newv2
-		Owner: King2
+		Owner: King
 		Location: 31,17
 		SubCell: 3
 		Facing: 92
 	Actor162: e4newv2
-		Owner: King2
+		Owner: King
 		Location: 31,18
 		SubCell: 3
 		Facing: 92
 	Actor163: e3new
-		Owner: King2
+		Owner: King
 		Location: 33,17
 		SubCell: 3
 		Facing: 92
 	Actor164: e3new
-		Owner: King2
+		Owner: King
 		Location: 33,17
 		SubCell: 1
 		Facing: 92
 	Actor165: e3new
-		Owner: King2
+		Owner: King
 		Location: 22,21
 		SubCell: 3
 		Facing: 92
 	Actor166: e3new
-		Owner: King2
+		Owner: King
 		Location: 22,21
 		SubCell: 1
 		Facing: 92
 	Actor167: e3new
-		Owner: King2
+		Owner: King
 		Location: 17,40
 		SubCell: 3
 		Facing: 92
 	Actor168: e3new
-		Owner: King2
+		Owner: King
 		Location: 17,40
 		SubCell: 1
 		Facing: 92
 	Actor169: e3new
-		Owner: King2
+		Owner: King
 		Location: 18,45
 		SubCell: 3
 		Facing: 92
 	Actor170: e3new
-		Owner: King2
+		Owner: King
 		Location: 18,45
 		SubCell: 1
 		Facing: 92
 	Actor171: e4newv2
-		Owner: King2
+		Owner: King
 		Location: 20,44
 		SubCell: 3
 		Facing: 92
 	Actor172: e4newv2
-		Owner: King2
+		Owner: King
 		Location: 20,45
 		SubCell: 3
 		Facing: 92
 	Actor173: e4newv2
-		Owner: King2
+		Owner: King
 		Location: 19,38
 		SubCell: 3
 		Facing: 92
 	Actor174: e4newv2
-		Owner: King2
+		Owner: King
 		Location: 20,38
 		SubCell: 3
 		Facing: 92
 	Actor175: e2newv2
-		Owner: King2
+		Owner: King
 		Location: 46,29
 		SubCell: 3
 		Facing: 92
 	Actor176: e2newv2
-		Owner: King2
+		Owner: King
 		Location: 46,29
 		SubCell: 1
 		Facing: 92
 	Actor177: e2newv2
-		Owner: King2
+		Owner: King
 		Location: 44,27
 		SubCell: 3
 		Facing: 92
 	Actor178: e2newv2
-		Owner: King2
+		Owner: King
 		Location: 44,27
 		SubCell: 1
 		Facing: 92
 	Actor179: e2newv2
-		Owner: King2
+		Owner: King
 		Location: 28,25
 		SubCell: 3
 		Facing: 92
 	Actor180: e2newv2
-		Owner: King2
+		Owner: King
 		Location: 28,25
 		SubCell: 1
 		Facing: 92
 	Actor181: e2newv2
-		Owner: King2
+		Owner: King
 		Location: 25,25
 		SubCell: 3
 		Facing: 92
 	Actor182: e2newv2
-		Owner: King2
+		Owner: King
 		Location: 25,25
 		SubCell: 1
 		Facing: 92
 	Actor183: e2newv2
-		Owner: King2
+		Owner: King
 		Location: 23,42
 		SubCell: 3
 		Facing: 92
 	Actor184: e2newv2
-		Owner: King2
+		Owner: King
 		Location: 23,42
 		SubCell: 1
 		Facing: 92
 	Actor185: e2newv2
-		Owner: King2
+		Owner: King
 		Location: 22,38
 		SubCell: 3
 		Facing: 92
 	Actor186: e2newv2
-		Owner: King2
+		Owner: King
 		Location: 22,38
 		SubCell: 1
 		Facing: 92
 	Actor187: t11
-		Owner: King2
+		Owner: King
 		Location: 41,58
 	Actor188: t12
-		Owner: King2
+		Owner: King
 		Location: 29,62
 	Actor189: t16
-		Owner: King2
+		Owner: King
 		Location: 24,59
 	Actor190: t14
-		Owner: King2
+		Owner: King
 		Location: 43,53
 	Actor191: t08
-		Owner: King2
+		Owner: King
 		Location: 38,55
 	Actor192: t07
-		Owner: King2
+		Owner: King
 		Location: 22,63
 	Actor193: t07
-		Owner: King2
+		Owner: King
 		Location: 16,55
 	Actor194: t08
-		Owner: King2
+		Owner: King
 		Location: 3,61
 	Actor195: t10
-		Owner: King2
+		Owner: King
 		Location: 10,3
 	Actor196: t11
-		Owner: King2
+		Owner: King
 		Location: 6,6
 	Actor198: t16
-		Owner: King2
+		Owner: King
 		Location: 58,10
 	Actor199: t14
-		Owner: King2
+		Owner: King
 		Location: 57,15
 	Actor200: barrnew
-		Owner: King2
+		Owner: King
 		Location: 24,39
 	Actor201: barrnew
-		Owner: King2
+		Owner: King
 		Location: 39,28
 	Actor202: barrnew
-		Owner: King2
+		Owner: King
 		Location: 25,28
 	Actor203: stall
-		Owner: King2
+		Owner: King
 		Location: 37,39
 	Actor204: stall
-		Owner: King2
+		Owner: King
 		Location: 33,39
 	Actor205: workshopgdi
-		Owner: King2
+		Owner: King
 		Location: 35,31
 	Actor206: workshopgdi
-		Owner: King2
+		Owner: King
 		Location: 42,39
 	Actor207: silotwo
-		Owner: King2
+		Owner: King
 		Location: 59,29
 	Actor208: factnew.gdi
-		Owner: King2
+		Owner: King
 		Location: 35,35
 	Actor209: t07
 		Owner: Neutral
@@ -762,433 +762,418 @@ Actors:
 		Owner: Neutral
 		Location: 31,25
 	Actor216: e3new
-		Owner: King2
+		Owner: King
 		Location: 45,11
 		SubCell: 3
 		Facing: 92
 	Actor217: e3new
-		Owner: King2
+		Owner: King
 		Location: 34,5
 		SubCell: 3
 		Facing: 92
 	Actor218: e3new
-		Owner: King2
+		Owner: King
 		Location: 34,9
 		SubCell: 3
 		Facing: 92
 	Actor219: e4newv2
-		Owner: King2
+		Owner: King
 		Location: 36,7
 		SubCell: 3
 		Facing: 92
 	Actor220: e4newv2
-		Owner: King2
+		Owner: King
 		Location: 43,11
 		SubCell: 3
 		Facing: 92
 	Actor221: e3new
-		Owner: King2
+		Owner: King
 		Location: 58,27
 		SubCell: 3
 		Facing: 92
 	Actor222: e3new
-		Owner: King2
+		Owner: King
 		Location: 57,27
 		SubCell: 3
 		Facing: 92
 	Actor223: e4newv2
-		Owner: King2
+		Owner: King
 		Location: 58,28
 		SubCell: 3
 		Facing: 92
 	Actor224: e4newv2
-		Owner: King2
+		Owner: King
 		Location: 49,47
 		SubCell: 3
 		Facing: 92
 	Actor225: e4newv2
-		Owner: King2
+		Owner: King
 		Location: 48,47
 		SubCell: 3
 		Facing: 92
 	Actor226: e4newv2
-		Owner: King2
+		Owner: King
 		Location: 47,49
 		SubCell: 3
 		Facing: 92
 	Actor227: e3new
-		Owner: King2
+		Owner: King
 		Location: 53,46
 		SubCell: 3
 		Facing: 92
 	Actor228: e3new
-		Owner: King2
+		Owner: King
 		Location: 53,46
 		SubCell: 1
 		Facing: 92
 	Actor229: e3new
-		Owner: King2
+		Owner: King
 		Location: 55,52
 		SubCell: 3
 		Facing: 92
 	Actor230: e4newv2
-		Owner: King2
+		Owner: King
 		Location: 55,51
 		SubCell: 3
 		Facing: 92
 	Actor231: rmbonew
-		Owner: King2
+		Owner: King
 		Location: 46,30
 		SubCell: 3
 		Facing: 92
 	Actor232: rmbonew
-		Owner: King2
+		Owner: King
 		Location: 43,27
 		SubCell: 3
 		Facing: 92
 	Actor233: rmbonew
-		Owner: King2
+		Owner: King
 		Location: 29,25
 		SubCell: 3
 		Facing: 92
 	Actor234: rmbonew
-		Owner: King2
+		Owner: King
 		Location: 24,25
 		SubCell: 3
 		Facing: 92
 	Actor235: rmbonew
-		Owner: King2
+		Owner: King
 		Location: 22,37
 		SubCell: 3
 		Facing: 92
 	Actor236: rmbonew
-		Owner: King2
+		Owner: King
 		Location: 23,43
 		SubCell: 3
 		Facing: 92
 	Actor237: e3new
-		Owner: King2
+		Owner: King
 		Location: 15,19
 		SubCell: 3
 		Facing: 92
 	Actor238: e3new
-		Owner: King2
+		Owner: King
 		Location: 12,15
 		SubCell: 3
 		Facing: 92
 	Actor239: e3new
-		Owner: King2
+		Owner: King
 		Location: 11,15
 		SubCell: 3
 		Facing: 92
 	Actor240: e4newv2
-		Owner: King2
+		Owner: King
 		Location: 12,16
 		SubCell: 3
 		Facing: 92
 	Actor241: e4newv2
-		Owner: King2
+		Owner: King
 		Location: 15,19
 		SubCell: 1
 		Facing: 92
 	Actor242: ross5
-		Owner: King2
+		Owner: King
 		Location: 33,35
 		Facing: 41
 	Actor243: ross5
-		Owner: King2
+		Owner: King
 		Location: 39,35
 		Facing: -21
 	Actor244: ross2
-		Owner: King2
+		Owner: King
 		Location: 45,43
 		Facing: 151
 	Actor245: e3new
-		Owner: King2
+		Owner: King
 		Location: 45,44
 		SubCell: 3
 		Facing: 92
 	Actor246: e3new
-		Owner: King2
+		Owner: King
 		Location: 45,44
 		SubCell: 1
 		Facing: 92
 	Actor247: e3new
-		Owner: King2
+		Owner: King
 		Location: 46,43
 		SubCell: 3
 		Facing: 92
 	Actor248: e3new
-		Owner: King2
+		Owner: King
 		Location: 46,43
 		SubCell: 1
 		Facing: 92
 	Actor249: rmbonew
-		Owner: King2
+		Owner: King
 		Location: 44,43
 		SubCell: 3
 		Facing: 92
 	Actor250: rmbonew
-		Owner: King2
+		Owner: King
 		Location: 44,43
 		SubCell: 1
 		Facing: 92
 	Actor251: rmbonew
-		Owner: King2
+		Owner: King
 		Location: 45,42
 		SubCell: 3
 		Facing: 92
 	Actor252: rmbonew
-		Owner: King2
+		Owner: King
 		Location: 45,42
 		SubCell: 1
 		Facing: 92
 	Actor253: ross2
-		Owner: King2
+		Owner: King
 		Location: 28,31
 		Facing: 244
 	Actor254: ross2
-		Owner: King2
+		Owner: King
 		Location: 29,39
 		Facing: 72
 	Actor255: e3new
-		Owner: King2
+		Owner: King
 		Location: 28,40
 		SubCell: 3
 		Facing: 92
 	Actor256: e3new
-		Owner: King2
+		Owner: King
 		Location: 28,40
 		SubCell: 1
 		Facing: 92
 	Actor258: e3new
-		Owner: King2
+		Owner: King
 		Location: 28,38
 		SubCell: 1
 		Facing: 92
 	Actor260: rmbonew
-		Owner: King2
+		Owner: King
 		Location: 29,38
 		SubCell: 3
 		Facing: 92
 	Actor261: rmbonew
-		Owner: King2
+		Owner: King
 		Location: 29,38
 		SubCell: 1
 		Facing: 92
 	Actor257: e3new
-		Owner: King2
+		Owner: King
 		Location: 28,38
 		SubCell: 2
 		Facing: 92
 	Actor259: rmbonew
-		Owner: King2
+		Owner: King
 		Location: 29,40
 		SubCell: 3
 		Facing: 92
 	Actor262: rmbonew
-		Owner: King2
+		Owner: King
 		Location: 29,40
 		SubCell: 1
 		Facing: 92
 	Actor263: rmbonew
-		Owner: King2
+		Owner: King
 		Location: 27,31
 		SubCell: 3
 		Facing: 92
 	Actor264: rmbonew
-		Owner: King2
+		Owner: King
 		Location: 27,31
 		SubCell: 1
 		Facing: 92
 	Actor265: rmbonew
-		Owner: King2
+		Owner: King
 		Location: 29,31
 		SubCell: 3
 		Facing: 92
 	Actor266: rmbonew
-		Owner: King2
+		Owner: King
 		Location: 29,31
 		SubCell: 1
 		Facing: 92
 	Actor267: e3new
-		Owner: King2
+		Owner: King
 		Location: 29,30
 		SubCell: 3
 		Facing: 92
 	Actor268: e3new
-		Owner: King2
+		Owner: King
 		Location: 29,30
 		SubCell: 1
 		Facing: 92
 	Actor269: e3new
-		Owner: King2
+		Owner: King
 		Location: 27,30
 		SubCell: 3
 		Facing: 92
 	Actor270: e3new
-		Owner: King2
+		Owner: King
 		Location: 27,30
 		SubCell: 1
 		Facing: 92
 	Actor272: nuk2new
-		Owner: King2
+		Owner: King
 		Location: 35,43
 	Actor271: nuk2new
-		Owner: King2
-		Location: 25,32
-	Actor273: c1
-		Owner: King2
-		Location: 46,34
-		SubCell: 3
-		Facing: 92
-	Actor274: c2
-		Owner: King2
-		Location: 47,38
-		SubCell: 3
-		Facing: 92
-	Actor275: c4
-		Owner: King2
-		Location: 44,37
-		SubCell: 3
-		Facing: 92
-	Actor276: c5
-		Owner: King2
-		Location: 42,33
-		SubCell: 3
-		Facing: 92
-	Actor277: c6
-		Owner: King2
-		Location: 38,37
-		SubCell: 3
-		Facing: 92
-	Actor278: c7
-		Owner: King2
-		Location: 37,43
-		SubCell: 3
-		Facing: 92
-	Actor279: c8
-		Owner: King2
-		Location: 32,38
-		SubCell: 3
-		Facing: 92
-	Actor280: c9
-		Owner: King2
-		Location: 27,35
-		SubCell: 3
-		Facing: 92
-	Actor281: c10
-		Owner: King2
-		Location: 29,33
-		SubCell: 3
-		Facing: 92
-	Actor282: mwciv1
-		Owner: King2
-		Location: 34,30
-		SubCell: 3
-		Facing: 92
-	Actor283: mwciv2
-		Owner: King2
-		Location: 38,28
-		SubCell: 3
-		Facing: 92
-	Actor284: mwciv3
-		Owner: King2
-		Location: 24,29
-		SubCell: 3
-		Facing: 92
-	Actor285: mwciv4
-		Owner: King2
-		Location: 31,28
-		SubCell: 3
-		Facing: 92
-	Actor292: e3new
 		Owner: King
+		Location: 25,32
+	Actor292: e3new
+		Owner: HumanP
 		Location: 34,62
 		SubCell: 3
 		Facing: 92
 	Actor293: e3new
-		Owner: King
+		Owner: HumanP
 		Location: 34,62
 		SubCell: 1
 		Facing: 92
 	Actor294: e3new
-		Owner: King
+		Owner: HumanP
 		Location: 36,62
 		SubCell: 3
 		Facing: 92
 	Actor295: e3new
-		Owner: King
+		Owner: HumanP
 		Location: 36,62
 		SubCell: 1
 		Facing: 93
 	Actor296: rmbonew
-		Owner: King
+		Owner: HumanP
 		Location: 36,63
 		SubCell: 3
 		Facing: 92
 	Actor297: rmbonew
-		Owner: King
+		Owner: HumanP
 		Location: 36,63
 		SubCell: 1
 		Facing: 92
 	Actor298: rmbonew
-		Owner: King
+		Owner: HumanP
 		Location: 34,63
 		SubCell: 3
 		Facing: 92
 	Actor299: rmbonew
-		Owner: King
+		Owner: HumanP
 		Location: 34,63
 		SubCell: 1
 		Facing: 92
-	Actor304: newcomm
-		Owner: King
+	Actor304: sele
+		Owner: HumanP
 		Location: 35,59
 		SubCell: 3
 		Facing: 92
 	Actor305: e2newv2
-		Owner: King
+		Owner: HumanP
 		Location: 36,58
 		SubCell: 3
 		Facing: 92
 	Actor306: e2newv2
-		Owner: King
+		Owner: HumanP
 		Location: 36,58
 		SubCell: 1
 		Facing: 92
 	Actor307: e2newv2
-		Owner: King
+		Owner: HumanP
 		Location: 34,58
 		SubCell: 3
 		Facing: 92
 	Actor308: e2newv2
-		Owner: King
+		Owner: HumanP
 		Location: 34,58
 		SubCell: 1
 		Facing: 92
 	Actor313: tc02
-		Owner: King2
+		Owner: King
 		Location: 28,47
 	Actor287: e3new
-		Owner: King
+		Owner: HumanP
 		Location: 36,59
 		SubCell: 3
 		Facing: 92
 	Actor288: e3new
-		Owner: King
+		Owner: HumanP
 		Location: 36,59
 		SubCell: 1
 		Facing: 92
 	Actor289: e3new
-		Owner: King
+		Owner: HumanP
 		Location: 34,59
 		SubCell: 3
 		Facing: 92
 	Actor290: e3new
-		Owner: King
+		Owner: HumanP
 		Location: 34,59
 		SubCell: 1
+		Facing: 92
+	Actor278: mwwand1
+		Owner: King
+		Location: 42,33
+		SubCell: 3
+		Facing: 92
+	Actor279: mwwand1
+		Owner: King
+		Location: 32,38
+		SubCell: 3
+		Facing: 92
+	Actor280: mwwand3
+		Owner: King
+		Location: 28,34
+		SubCell: 3
+		Facing: 92
+	Actor281: mwwand3
+		Owner: King
+		Location: 46,40
+		SubCell: 3
+		Facing: 92
+	Actor282: mwwand4
+		Owner: King
+		Location: 43,37
+		SubCell: 3
+		Facing: 92
+	Actor283: mwwand4
+		Owner: King
+		Location: 31,43
+		SubCell: 3
+		Facing: 92
+	Actor284: mwwand5
+		Owner: King
+		Location: 26,36
+		SubCell: 3
+		Facing: 92
+	Actor285: mwwand6
+		Owner: King
+		Location: 44,32
+		SubCell: 3
+		Facing: 92
+	Actor286: mwwand10
+		Owner: King
+		Location: 31,28
+		SubCell: 3
+		Facing: 92
+	Actor291: mwwand11
+		Owner: King
+		Location: 24,31
+		SubCell: 3
 		Facing: 92
 Nodes:
 	MapInfoActorInfoNode@ND01: MapInfoActorInfoNode
@@ -1454,7 +1439,7 @@ Nodes:
 			Location: 35,60
 		Out@Con2:
 			ConnectionType: Player
-			Player: King
+			Player: HumanP
 	SetCameraPosition@ND15: SetCameraPosition
 		Pos: 827,-758
 		In@Con1:
@@ -2363,7 +2348,7 @@ Nodes:
 			String: Your Commander must survive!
 		Out@Con2:
 			ConnectionType: Player
-			Player: King
+			Player: HumanP
 	MapInfoNode@ND87: MapInfoNode
 		Pos: 827,-1269
 		Out@Con1:
@@ -2371,7 +2356,7 @@ Nodes:
 			String: Mission
 		Out@Con2:
 			ConnectionType: String
-			String: The King's generals decided to aquire this position as preperation for the upcoming battle.
+			String: The HumanP's generals decided to aquire this position as preperation for the upcoming battle.
 	UiTextMessage@ND88: UiTextMessage
 		Pos: 1077,-1270
 		Out@Con1:
@@ -2444,7 +2429,7 @@ Nodes:
 			String: Hold stand against all incoming attacks!
 		Out@Con2:
 			ConnectionType: Player
-			Player: King
+			Player: HumanP
 	MapInfoActorReference@ND95: MapInfoActorReference
 		Pos: 1600,-1836
 		Out@Con1:
@@ -2679,7 +2664,7 @@ Nodes:
 		Pos: 2618,699
 		Out@Con1:
 			ConnectionType: Player
-			Player: King
+			Player: HumanP
 		Out@Con2:
 			ConnectionType: CellPath
 			Cells: 24,40|24,41|28,42
@@ -2708,7 +2693,7 @@ Nodes:
 			Node@ND119: Con4
 		In@Con5:
 			ConnectionType: Exec
-			Node@ND131: Con2
+			Node@ND131: Con1
 	MapInfoActorInfoNode@ND123: MapInfoActorInfoNode
 		Pos: 2359,286
 		Out@Con1:
@@ -2765,7 +2750,7 @@ Nodes:
 		Pos: 2914,284
 		Out@Con1:
 			ConnectionType: String
-			String: King
+			String: HumanP
 		Out@Con2:
 			ConnectionType: String
 			String: We trained some soldiers to help defend! Use them wisely.
@@ -2837,7 +2822,7 @@ Nodes:
 			Node@ND139: Con4
 		In@Con5:
 			ConnectionType: Exec
-			Node@ND136: Con2
+			Node@ND136: Con1
 	MapInfoActorReference@ND138: MapInfoActorReference
 		Pos: 1784,1702
 		Out@Con1:
@@ -2850,7 +2835,7 @@ Nodes:
 		Pos: 2303,1393
 		Out@Con1:
 			ConnectionType: Player
-			Player: King
+			Player: HumanP
 		Out@Con2:
 			ConnectionType: CellPath
 			Cells: 39,29|39,32
@@ -2899,7 +2884,7 @@ Nodes:
 			Node@ND144: Con4
 		In@Con5:
 			ConnectionType: Exec
-			Node@ND141: Con2
+			Node@ND141: Con1
 	MapInfoActorReference@ND143: MapInfoActorReference
 		Pos: 1789,2270
 		Out@Con1:
@@ -2912,7 +2897,7 @@ Nodes:
 		Pos: 2308,1961
 		Out@Con1:
 			ConnectionType: Player
-			Player: King
+			Player: HumanP
 		Out@Con2:
 			ConnectionType: CellPath
 			Cells: 25,29|25,31|31,31
@@ -2925,7 +2910,7 @@ Nodes:
 		Pos: 4949,1839
 		Out@Con1:
 			ConnectionType: Player
-			Player: King
+			Player: HumanP
 		Out@Con2:
 			ConnectionType: CellPath
 			Cells: 38,40|39,42|40,42
@@ -2954,7 +2939,7 @@ Nodes:
 			Node@ND145: Con4
 		In@Con5:
 			ConnectionType: Exec
-			Node@ND149: Con2
+			Node@ND149: Con1
 	IsAlive@ND148: IsAlive
 		Pos: 4955,2148
 		Out@Con1:
@@ -3020,7 +3005,7 @@ Nodes:
 		Pos: 5245,1424
 		Out@Con1:
 			ConnectionType: String
-			String: King
+			String: HumanP
 		Out@Con2:
 			ConnectionType: String
 			String: We trained some cavalry to help defend! Use them wisely.
@@ -3036,7 +3021,7 @@ Nodes:
 		Pos: 4957,2393
 		Out@Con1:
 			ConnectionType: Player
-			Player: King
+			Player: HumanP
 		Out@Con2:
 			ConnectionType: CellPath
 			Cells: 34,40|34,42|32,43
@@ -3065,7 +3050,7 @@ Nodes:
 			Node@ND156: Con4
 		In@Con5:
 			ConnectionType: Exec
-			Node@ND159: Con2
+			Node@ND159: Con1
 	IsAlive@ND158: IsAlive
 		Pos: 4963,2702
 		Out@Con1:
@@ -3097,4 +3082,4 @@ Nodes:
 Rules: mw|rules/campaign-maprules.yaml
 	Player:
 		PlayerResources:
-			DefaultCash: 3000
+			DefaultCash: 0

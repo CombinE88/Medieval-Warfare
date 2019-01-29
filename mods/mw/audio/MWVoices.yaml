@@ -74,6 +74,18 @@ CommandoVoice:
 		Build: rokroll1
 		Kill: keepem1,laugh1,lefty1,tuffguy1
 
+FemCommandoVoice:
+	Voices:
+		Select: yeah2,yes2,yo2
+		Move: cmon2,onit2,gotit2
+		Attack: onit2,gotit2,noprblm2
+		Demolish: bombit2
+		Default: tandeth2
+		Burned: tandeth2
+		Zapped: tandeth2
+		Poisoned: tandeth2
+		Build: rokroll2
+		Kill: keepem2,laugh2,lefty2,tuffguy2
 DinoVoice:
 	Voices:
 		Select: dinoyes

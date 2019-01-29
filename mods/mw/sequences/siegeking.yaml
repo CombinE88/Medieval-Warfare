@@ -1,9 +1,9 @@
 sgtw:
 	stand: 
-		Start: 63
+		Start: 64
 		Facings: 32
 	idle: 
-		Start: 63
+		Start: 64
 		Facings: 32
 	run: 
 		Start: 0

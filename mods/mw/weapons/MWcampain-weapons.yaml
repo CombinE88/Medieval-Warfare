@@ -146,12 +146,12 @@ HoodFireArrow:
 			Spectral: 90
 		DamageTypes: BurnToDeath
 	Warhead@1Eff: CreateEffect
-		Explosions: fire2	
+		Explosions: fire2
 	Warhead@2Eff: CreateEffect
-		Explosions: fire3   
+		Explosions: fire3
 		Delay: 12
 	Warhead@3Eff: CreateEffect
-		Explosions: fire3   
+		Explosions: fire3
 		Delay: 24
 HoodFireArrowDummy:
 	ReloadDelay: 45
@@ -231,10 +231,80 @@ HoodFireArrowDummy:
 			Spectral: 90
 		DamageTypes: BurnToDeath
 	Warhead@1Eff: CreateEffect
-		Explosions: fire2	
+		Explosions: fire2
 	Warhead@2Eff: CreateEffect
-		Explosions: fire3   
+		Explosions: fire3
 		Delay: 12
 	Warhead@3Eff: CreateEffect
-		Explosions: fire3   
+		Explosions: fire3
 		Delay: 24
+DarbentisCannon:
+	ReloadDelay: 45
+	Range: 5c0
+	Report: tnkfire2.aud, tnkfire3.aud, tnkfire4.aud, tnkfire6.aud
+	ValidTargets: Ground
+	TargetActorCenter: true
+	InvalidTargets: Air
+	Projectile: BezierBullet
+		Image: cantowboulder
+		Speed: 240
+		Blockable: true
+		LaunchAngle: 25
+		Palette: ra
+		Inaccuracy: 0c512
+		ContrailLength: 10
+		ContrailWidth: 35
+		ContrailDelay: 0
+		ContrailUsePlayerColor : true
+	Warhead@1Dam: SpreadDamage
+		Spread: 156
+		Damage: 25000
+		ValidTargets: Ground
+		InvalidTargets: Air
+		Versus:
+			Leather: 300
+			Light: 300
+			Heavy: 300
+			Concrete: 25
+			Knight: 15
+			LightCavalry: 80
+			MediumCavalry: 40
+			HeavyCavalry: 25
+			HeavyBuilding: 25
+			Spectral: 50
+		DamageTypes: Prone50Percent, DefaultDeath
+	Warhead@2Smu: LeaveSmudge
+		SmudgeType: Crater
+		InvalidTargets: Vehicle, Structure, Wall, Husk, Trees, Creep
+	Warhead@3Eff: CreateEffect
+		Explosions: smokey
+		ImpactSounds: tnkfire2.aud, tnkfire3.aud, tnkfire4.aud, tnkfire6.aud
+selenaGuns:
+	ReloadDelay: 22
+	Range: 4c512
+	ValidTargets: Ground, Trees
+	InvalidTargets: Air
+	Report: palashotgun.aud
+	Projectile: BezierBullet
+		Speed: 1c000
+		ContrailLength: 100
+		ContrailWidth: 20
+		ContrailDelay: 0
+		ContrailUsePlayerColor : true
+	Warhead@1Dam: SpreadDamage
+		ValidTargets: Ground, Trees
+		InvalidTargets: Air
+		Spread: 65
+		Damage: 10000
+		Versus:
+			Leather: 100
+			Light: 90
+			Heavy: 80
+			Concrete: 15
+			Spectral: 70
+			HeavyBuilding: 25
+			Knight: 40
+			LightCavalry: 75
+			MediumCavalry: 45
+			HeavyCavalry: 15
+		DamageTypes: DefaultDeath

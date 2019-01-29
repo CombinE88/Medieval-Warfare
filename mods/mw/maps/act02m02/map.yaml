@@ -18,9 +18,9 @@ Players:
 		Faction: nod
 		Color: FE1100
 		Allies: Baron
-		Enemies: King, King2, Creeps
-	PlayerReference@King:
-		Name: King
+		Enemies: HumanP, King, Creeps
+	PlayerReference@HumanP:
+		Name: HumanP
 		AllowBots: False
 		Playable: True
 		Required: True
@@ -30,20 +30,20 @@ Players:
 		Color: F5D378
 		LockSpawn: True
 		LockTeam: True
-		Allies: King, King2
+		Allies: HumanP, King
 		Enemies: Baron, Creeps
-	PlayerReference@King2:
-		Name: King2
+	PlayerReference@King:
+		Name: King
 		Faction: gdi
 		Color: F3A760
-		Allies: King, King2
+		Allies: HumanP, King
 		Enemies: Baron, Creeps
 	PlayerReference@Creeps:
 		Name: Creeps
 		NonCombatant: True
 		Faction: Random
 		Color: 30732D
-		Enemies: King, King2, Baron
+		Enemies: HumanP, King, Baron
 Actors:
 	Actor0: tc02
 		Owner: Neutral
@@ -312,88 +312,88 @@ Actors:
 	Actor101: prop6
 		Owner: Baron
 		Location: 17,133
-	Actor102: newcomm
-		Owner: King
+	Actor102: sele
+		Owner: HumanP
 		Location: 12,156
 		SubCell: 3
 		Facing: 246
 	Actor103: rmbonew
-		Owner: King
+		Owner: HumanP
 		Location: 13,157
 		SubCell: 3
 		Facing: 92
 	Actor105: rmbonew
-		Owner: King
+		Owner: HumanP
 		Location: 13,159
 		SubCell: 3
 		Facing: 92
 	Actor106: rmbonew
-		Owner: King
+		Owner: HumanP
 		Location: 11,157
 		SubCell: 3
 		Facing: 92
 	Actor108: rmbonew
-		Owner: King
+		Owner: HumanP
 		Location: 11,159
 		SubCell: 3
 		Facing: 92
 	Actor110: e4newv2
-		Owner: King
+		Owner: HumanP
 		Location: 13,160
 		SubCell: 1
 		Facing: 92
 	Actor112: e4newv2
-		Owner: King
+		Owner: HumanP
 		Location: 10,160
 		SubCell: 1
 		Facing: 92
 	Actor113: e4newv2
-		Owner: King
+		Owner: HumanP
 		Location: 10,160
 		SubCell: 2
 		Facing: 92
 	Actor114: e4newv2
-		Owner: King
+		Owner: HumanP
 		Location: 13,160
 		SubCell: 2
 		Facing: 92
 	Actor115: e2newv2
-		Owner: King
+		Owner: HumanP
 		Location: 14,156
 		SubCell: 3
 		Facing: 92
 	Actor116: e2newv2
-		Owner: King
+		Owner: HumanP
 		Location: 10,156
 		SubCell: 3
 		Facing: 92
 	Actor117: e2newv2
-		Owner: King
+		Owner: HumanP
 		Location: 10,156
 		SubCell: 1
 		Facing: 92
 	Actor118: e2newv2
-		Owner: King
+		Owner: HumanP
 		Location: 14,156
 		SubCell: 1
 		Facing: 92
 	Actor119: e3new
-		Owner: King
+		Owner: HumanP
 		Location: 12,155
 		SubCell: 3
 		Facing: 92
 	Actor120: e3new
-		Owner: King
+		Owner: HumanP
 		Location: 12,155
 		SubCell: 1
 		Facing: 92
 	Actor121: e3new
-		Owner: King
+		Owner: HumanP
 		Location: 11,155
 		SubCell: 3
 		Facing: 92
 	Actor123: e3new
-		Owner: King
+		Owner: HumanP
 		Location: 13,155
 		SubCell: 3
 		Facing: 92
@@ -1433,6 +1433,11 @@ Actors:
 	Actor398: tc05
 		Owner: Neutral
 		Location: 27,41
+	Actor399: bargen
+		Owner: Baron
+		Location: 21,7
+		SubCell: 3
+		Facing: 114
 Nodes:
 	TriggerWorldLoaded@ND01: TriggerWorldLoaded
 		Pos: -699,-54
@@ -1453,7 +1458,7 @@ Nodes:
 		Pos: -698,-327
 		Out@Con1:
 			ConnectionType: Player
-			Player: King
+			Player: HumanP
 		Out@Con2:
 			ConnectionType: Location
 			Location: 12,156
@@ -1501,7 +1506,7 @@ Nodes:
 		Pos: 344,-909
 		Out@Con1:
 			ConnectionType: Player
-			Player: King
+			Player: HumanP
 		Out@Con2:
 			ConnectionType: CellPath
 			Cells: 32,137|19,134
@@ -1679,7 +1684,7 @@ Nodes:
 		Pos: 1342,-888
 		Out@Con1:
 			ConnectionType: Player
-			Player: King
+			Player: HumanP
 		Out@Con2:
 			ConnectionType: CellPath
 			Cells: 32,104|28,104|25,103|21,101
@@ -1793,7 +1798,7 @@ Nodes:
 		Pos: 2337,-940
 		Out@Con1:
 			ConnectionType: Player
-			Player: King
+			Player: HumanP
 		Out@Con3:
 			ConnectionType: String
 			String: Mission
@@ -1818,7 +1823,7 @@ Nodes:
 			String: The Commander must survive!
 		Out@Con4:
 			ConnectionType: Player
-			Player: King
+			Player: HumanP
 	UiNewObjective@ND39: UiNewObjective
 		Pos: 357,885
 		Item: Primary
@@ -1842,7 +1847,7 @@ Nodes:
 			String: Clear the path ahead from all enemies! The Convoy will arrive in 10 Minutes
 		Out@Con4:
 			ConnectionType: Player
-			Player: King
+			Player: HumanP
 	UiNewObjective@ND41: UiNewObjective
 		Pos: 356,572
 		Item: Primary
@@ -1969,7 +1974,7 @@ Nodes:
 		Pos: 3253,-203
 		Out@Con1:
 			ConnectionType: Player
-			Player: King2
+			Player: King
 		Out@Con3:
 			ConnectionType: String
 			String: Mission
@@ -2000,7 +2005,7 @@ Nodes:
 		Pos: 2253,770
 		Out@Con1:
 			ConnectionType: Player
-			Player: King2
+			Player: King
 		Out@Con4:
 			ConnectionType: CellArray
 			Cells: 33,4|32,4|31,4|30,4|29,4|28,4|27,4|26,4|25,4|24,4|23,4|22,4|21,4|20,4|19,4|18,4|17,4|16,4|15,4|14,4|13,4|12,4|11,4|10,4|9,4|8,4|7,4|6,4|5,4|4,4|3,4|2,4|1,4|0,4|0,3|1,3|2,3|3,3|4,3|5,3|6,3|7,3|8,3|9,3|10,3|11,3|12,3|13,3|14,3|15,3|16,3|17,3|18,3|19,3|20,3|21,3|22,3|23,3|24,3|25,3|26,3|27,3|28,3|29,3|30,3|31,3|32,3|33,3|33,2|32,2|31,2|30,2|29,2|28,2|27,2|26,2|25,2|23,2|22,2|21,2|20,2|19,2|18,2|17,2|16,2|15,2|14,2|13,2|12,2|11,2|9,2|8,2|7,2|6,2|5,2|4,2|3,2|2,2|1,2|0,2|0,1|1,1|2,1|3,1|5,1|6,1|7,1|8,1|9,1|10,1|11,1|12,1|13,1|14,1|15,1|16,1|17,1|18,1|19,1|20,1|21,1|22,1|23,1|24,1|25,1|26,1|27,1|28,1|29,1|30,1|31,1|32,1|33,1|33,0|32,0|31,0|30,0|29,0|28,0|27,0|26,0|25,0|24,0|23,0|22,0|21,0|20,0|19,0|18,0|17,0|16,0|15,0|14,0|13,0|12,0|11,0|10,0|9,0|8,0|7,0|6,0|5,0|4,0|3,0|2,0|1,0|0,0|4,1|10,2|24,2
@@ -2042,6 +2047,7 @@ Nodes:
 			Actor: Actor102
 		Out@Con2:
 			ConnectionType: ActorList
+			Actor: Actor102
 			Actors: Actor102
 	MapInfoActorInfoNode@ND83: MapInfoActorInfoNode
 		Pos: 1013,-410
@@ -2130,7 +2136,7 @@ Nodes:
 			String: At least 1 Supply wagon must reach the end!
 		Out@Con4:
 			ConnectionType: Player
-			Player: King
+			Player: HumanP
 	UiCompleteObjective@ND93: UiCompleteObjective
 		Pos: 3275,722
 		Out@Con1:

@@ -18,9 +18,9 @@ Players:
 		Faction: nod
 		Color: FE1100
 		Allies: Baron
-		Enemies: King, King2, Creeps
-	PlayerReference@King:
-		Name: King
+		Enemies: HumanP, King, Creeps
+	PlayerReference@HumanP:
+		Name: HumanP
 		AllowBots: False
 		Playable: True
 		Required: True
@@ -30,20 +30,20 @@ Players:
 		Color: F5D378
 		LockSpawn: True
 		LockTeam: True
-		Allies: King, King2
+		Allies: HumanP, King
 		Enemies: Baron, Creeps
-	PlayerReference@King2:
-		Name: King2
+	PlayerReference@King:
+		Name: King
 		Faction: gdi
 		Color: F3A760
-		Allies: King, King2
+		Allies: HumanP, King
 		Enemies: Baron, Creeps
 	PlayerReference@Creeps:
 		Name: Creeps
 		NonCombatant: True
 		Faction: Random
 		Color: 30732D
-		Enemies: King, King2, Baron
+		Enemies: HumanP, King, Baron
 Actors:
 	Actor0: split9
 		Owner: Neutral
@@ -210,8 +210,8 @@ Actors:
 	Actor69: wdwll
 		Owner: Neutral
 		Location: 1,4
-	Actor76: hood
-		Owner: King
+	Actor76: darb
+		Owner: HumanP
 		Location: 2,31
 		SubCell: 3
 		Facing: 92
@@ -329,47 +329,47 @@ Actors:
 		SubCell: 3
 		Facing: 92
 	Actor102: mwwand4
-		Owner: King2
+		Owner: King
 		Location: 27,7
 		SubCell: 3
 		Facing: 92
 	Actor103: mwwand3
-		Owner: King2
+		Owner: King
 		Location: 24,5
 		SubCell: 3
 		Facing: 92
 	Actor104: mwwand12
-		Owner: King2
+		Owner: King
 		Location: 25,10
 		SubCell: 3
 		Facing: 92
 	Actor105: mwwand11
-		Owner: King2
+		Owner: King
 		Location: 20,10
 		SubCell: 3
 		Facing: 92
 	Actor106: zeroproc
-		Owner: King2
+		Owner: King
 		Location: 26,3
 	Actor107: nukxl
-		Owner: King2
+		Owner: King
 		Location: 24,7
 	Actor108: nukenew
-		Owner: King2
+		Owner: King
 		Location: 23,11
 	Actor109: nuk2new
-		Owner: King2
+		Owner: King
 		Location: 28,7
 	Actor110: nukenew
-		Owner: King2
+		Owner: King
 		Location: 20,5
 	Actor111: noble4
-		Owner: King2
+		Owner: King
 		Location: 21,7
 		SubCell: 3
 		Facing: 92
 	Actor112: mwwand11
-		Owner: King2
+		Owner: King
 		Location: 28,6
 		SubCell: 3
 		Facing: 92
@@ -483,7 +483,7 @@ Nodes:
 			Num: 4
 		Out@Con2:
 			ConnectionType: Player
-			Player: King
+			Player: HumanP
 		Out@Con3:
 			ConnectionType: String
 			String: Reach the village!
@@ -506,7 +506,7 @@ Nodes:
 		Pos: 167,-700
 		Out@Con1:
 			ConnectionType: Player
-			Player: King
+			Player: HumanP
 		Out@Con2:
 			ConnectionType: CellArray
 			Cells: 33,12|32,12|31,12|30,12|29,12|28,12|27,12|27,13|26,13|26,14|25,14|24,14|23,14|22,14|21,14|20,14|19,14|18,14|19,13|20,13|21,13|22,13|23,13|24,13|25,13|25,12|26,12|27,11|28,11|29,11|30,11|31,11|32,11|33,11|18,13|17,14
@@ -635,7 +635,7 @@ Nodes:
 		Pos: 831,-1324
 		Out@Con1:
 			ConnectionType: Player
-			Player: King
+			Player: HumanP
 		Out@Con2:
 			ConnectionType: CellPath
 			Cells: 30,32|28,32|27,31|27,24|28,22|27,21|27,10|22,10|21,9
@@ -910,7 +910,7 @@ Nodes:
 		Pos: -979,75
 		Out@Con1:
 			ConnectionType: Player
-			Player: King
+			Player: HumanP
 		Out@Con2:
 			ConnectionType: Location
 			Location: 2,31
@@ -936,6 +936,8 @@ Nodes:
 			ActorInfo: siege3
 Rules: mw|rules/campaign-maprules.yaml
 	World:
+		ResourceType@Grain-tib:
+			ValuePerUnit: 0
 		WeatherOverlay:
 			WindTick: 150, 550
 			UseSquares: false
@@ -954,6 +956,3 @@ Rules: mw|rules/campaign-maprules.yaml
 			Ambient: 0.68
 		MissionData:
 			Briefing: The terror of war has been on the horizon for almost a millenia, the King’s people lay petrified of the concerning threat of an all out crusade. But from whom?\n\n The King was then sent a messenger that there was an old gentleman by the name of “Wallace” who is too old and hagged to make the journey to Gabriel Dardanis’ castle; baring news that could narrow down just what is instigating these acts that has terrorised the King’s land.\n Gabriel, having received this message:\n\n sends out his most newest recruit to his Holy Trinity of Swords: Darbentis, to go seek this gentleman within a defective Hamlet by the lakeside that has already been swept off it’s feet from this unknown force, to see if the rumours that he could be facing a war that’ll ravage the world.
-	HOOD:
-		Tooltip:
-			Name: Darbentis

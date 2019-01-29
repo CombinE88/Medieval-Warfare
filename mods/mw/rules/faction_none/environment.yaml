@@ -1411,7 +1411,7 @@ CSTACK15:
 		Amount: 350
 shadowtop:
 	RenderSprites:
-		Palette: fire
+		Palette: firealpha2
 		Image: shadow
 	Immobile:
 		OccupiesSpace: false
@@ -1420,14 +1420,14 @@ shadowtop:
 	EditorTilesetFilter:
 		RequireTilesets: TEMPERAT
 		Categories: Enviroment lightning
-	HiddenUnderFog:
+	HiddenUnderShroud:
 		Type: CenterPosition
 	BodyOrientation:
 		QuantizedFacings: 1
 	Interactable:
 shadowtopend:
 	RenderSprites:
-		Palette: fire
+		Palette: firealpha2
 		Image: shadow
 	Immobile:
 		OccupiesSpace: false
@@ -1436,14 +1436,14 @@ shadowtopend:
 	EditorTilesetFilter:
 		RequireTilesets: TEMPERAT
 		Categories: Enviroment lightning
-	HiddenUnderFog:
+	HiddenUnderShroud:
 		Type: CenterPosition
 	BodyOrientation:
 		QuantizedFacings: 1
 	Interactable:
 shadowleft:
 	RenderSprites:
-		Palette: fire
+		Palette: firealpha2
 		Image: shadow
 	Immobile:
 		OccupiesSpace: false
@@ -1452,14 +1452,14 @@ shadowleft:
 	EditorTilesetFilter:
 		RequireTilesets: TEMPERAT
 		Categories: Enviroment lightning
-	HiddenUnderFog:
+	HiddenUnderShroud:
 		Type: CenterPosition
 	BodyOrientation:
 		QuantizedFacings: 1
 	Interactable:
 shadowleftend:
 	RenderSprites:
-		Palette: fire
+		Palette: firealpha2
 		Image: shadow
 	Immobile:
 		OccupiesSpace: false
@@ -1468,14 +1468,14 @@ shadowleftend:
 	EditorTilesetFilter:
 		RequireTilesets: TEMPERAT
 		Categories: Enviroment lightning
-	HiddenUnderFog:
+	HiddenUnderShroud:
 		Type: CenterPosition
 	BodyOrientation:
 		QuantizedFacings: 1
 	Interactable:
 shadowfull:
 	RenderSprites:
-		Palette: fire
+		Palette: firealpha2
 		Image: shadow
 	Immobile:
 		OccupiesSpace: false
@@ -1484,14 +1484,14 @@ shadowfull:
 	EditorTilesetFilter:
 		RequireTilesets: TEMPERAT
 		Categories: Enviroment lightning
-	HiddenUnderFog:
+	HiddenUnderShroud:
 		Type: CenterPosition
 	BodyOrientation:
 		QuantizedFacings: 1
 	Interactable:
 shadowedgeinner:
 	RenderSprites:
-		Palette: fire
+		Palette: firealpha2
 		Image: shadow
 	Immobile:
 		OccupiesSpace: false
@@ -1500,14 +1500,14 @@ shadowedgeinner:
 	EditorTilesetFilter:
 		RequireTilesets: TEMPERAT
 		Categories: Enviroment lightning
-	HiddenUnderFog:
+	HiddenUnderShroud:
 		Type: CenterPosition
 	BodyOrientation:
 		QuantizedFacings: 1
 	Interactable:
 shadowedgeouter:
 	RenderSprites:
-		Palette: fire
+		Palette: firealpha2
 		Image: shadow
 	Immobile:
 		OccupiesSpace: false
@@ -1516,14 +1516,14 @@ shadowedgeouter:
 	EditorTilesetFilter:
 		RequireTilesets: TEMPERAT
 		Categories: Enviroment lightning
-	HiddenUnderFog:
+	HiddenUnderShroud:
 		Type: CenterPosition
 	BodyOrientation:
 		QuantizedFacings: 1
 	Interactable:
 shadowlargetop:
 	RenderSprites:
-		Palette: fire
+		Palette: firealpha2
 		Image: shadow
 	Immobile:
 		OccupiesSpace: false
@@ -1532,14 +1532,14 @@ shadowlargetop:
 	EditorTilesetFilter:
 		RequireTilesets: TEMPERAT
 		Categories: Enviroment lightning
-	HiddenUnderFog:
+	HiddenUnderShroud:
 		Type: CenterPosition
 	BodyOrientation:
 		QuantizedFacings: 1
 	Interactable:
 shadowblocktop:
 	RenderSprites:
-		Palette: fire
+		Palette: firealpha2
 		Image: shadow
 	Immobile:
 		OccupiesSpace: false
@@ -1548,14 +1548,14 @@ shadowblocktop:
 	EditorTilesetFilter:
 		RequireTilesets: TEMPERAT
 		Categories: Enviroment lightning
-	HiddenUnderFog:
+	HiddenUnderShroud:
 		Type: CenterPosition
 	BodyOrientation:
 		QuantizedFacings: 1
 	Interactable:
 shadowlargeleft:
 	RenderSprites:
-		Palette: fire
+		Palette: firealpha2
 		Image: shadow
 	Immobile:
 		OccupiesSpace: false
@@ -1564,14 +1564,14 @@ shadowlargeleft:
 	EditorTilesetFilter:
 		RequireTilesets: TEMPERAT
 		Categories: Enviroment lightning
-	HiddenUnderFog:
+	HiddenUnderShroud:
 		Type: CenterPosition
 	BodyOrientation:
 		QuantizedFacings: 1
 	Interactable:
 shadowblockleft:
 	RenderSprites:
-		Palette: fire
+		Palette: firealpha2
 		Image: shadow
 	Immobile:
 		OccupiesSpace: false
@@ -1580,7 +1580,7 @@ shadowblockleft:
 	EditorTilesetFilter:
 		RequireTilesets: TEMPERAT
 		Categories: Enviroment lightning
-	HiddenUnderFog:
+	HiddenUnderShroud:
 		Type: CenterPosition
 	BodyOrientation:
 		QuantizedFacings: 1

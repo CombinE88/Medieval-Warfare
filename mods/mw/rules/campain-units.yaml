@@ -71,8 +71,188 @@ HOOD:
 		Voice: Attack
 	-Crushable:
 	SelfHealing@AlwaysHeals:
-		Delay: 20
-		Step: 250
+		Delay: 15
+		Step: 400
 		HealIfBelow: 75
 		DamageCooldown: 200 
 	MustBeDestroyed:
+DARB:
+	Inherits: ^Knight
+	Inherits@AUTOTARGET: ^AutoTargetAll
+	Inherits@Healable: ^Healable
+	RevealsShroud:
+		Range: 9c0
+	Valued:
+		Cost: 4000
+	Tooltip:
+		Name: Darbentis
+	Mobile:
+		Speed: 76
+		Voice: Move
+	Guard:
+		Voice: Move
+	Health:
+		HP: 40000
+	Armament:
+		Weapon: DarbentisCannon
+		LocalOffset: 126,126,356
+		Name: Primary
+	AttackFrontal:
+		Armaments: Primary
+		Voice: Attack
+	AutoTarget:
+		InitialStance: AttackAnything
+		ScanRadius: 5
+	RenderSprites:
+		Image: darb
+		PlayerPalette: raplayer
+	WithInfantryBody:
+ 		AttackSequences:
+			Primary: shoot
+	Armor:
+		Type: Leather
+	DetectCloaked:
+		Range: 5c0
+	Passenger:
+		CargoType: Archer
+		Voice: Move
+	Targetable@CombatRole:
+		TargetTypes: Ranged
+	AnnounceOnKill:
+	Voiced:
+		VoiceSet: CommandoVoice
+	AttackMove:
+		Voice: Attack
+	-Crushable:
+	SelfHealing@AlwaysHeals:
+		Delay: 15
+		Step: 400
+		HealIfBelow: 75
+		DamageCooldown: 200 
+	MustBeDestroyed:
+BARGEN:
+	Inherits: ^Knight
+	Inherits@AUTOTARGET: ^AutoTargetGround
+	Inherits@GainsExperience: ^GainsExperience
+	Inherits@GetsPoisoned: ^GetsPoisoned
+	Inherits@ArcherDemo65: ^ArcherDemo65
+	Inherits@Healable: ^Healable
+	Inherits@Cursable: ^Cursed
+	Valued:
+		Cost: 3000
+	Tooltip:
+		Name: General
+	Mobile:
+		Speed: 66
+		Voice: Move
+	Guard:
+		Voice: Move
+	Health:
+		HP: 50000
+	Armament:
+		Weapon: BroadSwordBaron
+	AttackFrontal:
+		Voice: Attack
+	AutoTarget:
+		ScanRadius: 3
+		InitialStance: AttackAnything
+	RenderSprites:
+		Image: bargen
+		PlayerPalette: raplayer
+	WithInfantryBody:
+		DefaultAttackSequence: shoot
+		IdleSequences: idle1
+	Armor:
+		Type: Heavy
+	Voiced:
+		VoiceSet: CommandoVoice
+	AttackMove:
+		Voice: Attack
+	PersonValued:
+		ActorCount: 1
+	Targetable@CombatRole:
+		TargetTypes: Heavy
+	AutoTargetPriority@Counter:
+		ValidTargets: Light, Heavy, Ranged, Support
+		Priority: 4
+	Passenger:
+		CargoType: Archer
+		Voice: Move
+SELE:
+	Inherits: ^Knight
+	Inherits@AUTOTARGET: ^AutoTargetAll
+	Inherits@Healable: ^Healable
+	RevealsShroud:
+		Range: 7c0
+	Valued:
+		Cost: 3600
+	Tooltip:
+		Name: Selena
+	Mobile:
+		Speed: 76
+		Voice: Move
+	Guard:
+		Voice: Move
+	Health:
+		HP: 36000
+	Armament@Right:
+		Weapon: selenaGuns
+		LocalOffset: -1024,126,256
+		Name: Primary
+		ReloadingCondition: PauseOnFire
+	Armament@Left:		
+		Weapon: selenaGuns
+		LocalOffset: -1024,-126,256
+		Name: Secondary
+		FireDelay: 11
+	AttackFrontal:
+		Armaments: Primary, Secondary
+		Voice: Attack
+	AutoTarget:
+		ScanRadius: 5
+		InitialStance: AttackAnything
+	RenderSprites:
+		Image: sele
+		PlayerPalette: raplayer
+	BodyOrientation:
+		QuantizedFacings: 8
+	WithFacingSpriteBody:
+		Sequence: stand
+	WithMoveAnimation:
+		MoveSequence: run
+	WithAttackAnimation@primary:
+		Armament: Primary
+		Sequence: shoot
+		Delay: 0
+	WithAttackAnimation@Secondary:
+		Armament: Secondary
+		Sequence: shoot2
+		Delay: 11
+	WithIdleAnimation@1:
+		Sequences: idle1
+		Interval: 250
+		RequiresCondition: !PauseOnFire
+	WithIdleAnimation@2:
+		Sequences: idle2
+		Interval: 360
+		RequiresCondition: !PauseOnFire
+	-WithInfantryBody:
+	Armor:
+		Type: Heavy
+	WithMuzzleOverlay:
+ 	Voiced:
+		VoiceSet: FemCommandoVoice
+	AttackMove:
+		Voice: Attack
+	PersonValued:
+		ActorCount: 1
+	Targetable@CombatRole:
+		TargetTypes: Ranged, Heavy
+	Passenger:
+		CargoType: Archer
+		Voice: Move
+	SelfHealing@AlwaysHeals:
+		Delay: 15
+		Step: 360
+		HealIfBelow: 90
+		DamageCooldown: 200
