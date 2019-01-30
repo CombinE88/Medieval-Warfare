@@ -115,7 +115,7 @@ namespace OpenRA.Mods.MW.MWAI
 
 		bool TickQueue(ProductionQueue queue)
 		{
-			var currentBuilding = queue.CurrentItem();
+			var currentBuilding = queue.Queue.FirstOrDefault();
 
 			// Waiting to build something
 			if (currentBuilding == null && failCount < ai.Info.MaximumFailedPlacementAttempts)

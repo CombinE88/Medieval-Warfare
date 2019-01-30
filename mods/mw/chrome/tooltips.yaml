@@ -85,7 +85,7 @@ Background@WORLD_TOOLTIP:
 			Font: Bold
 
 Background@PRODUCTION_TOOLTIP:
-	Logic: NewProductionTooltipLogic
+	Logic: ProductionTooltipLogic
 	Background: panel-black
 	Width: 200
 	Height: 65

@@ -273,6 +273,7 @@ Fonts:
 		Size:10
 
 Missions:
+	mw|missions.yaml
 
 MapGrid:
 	TileSize: 24,24
@@ -320,10 +321,6 @@ GameSpeeds:
 		Name: Faster (Very High Latency)
 		Timestep: 30
 		OrderLatency: 9
-	superfast:
-		Name: Super Fast(AI only)
-		Timestep: 10
-		OrderLatency: 5
 
 ColorValidator:
 

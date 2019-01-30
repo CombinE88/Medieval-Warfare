@@ -1157,7 +1157,7 @@ namespace OpenRA.Mods.MW.MWAI
 		void BuildUnit(string category, bool buildRandom)
 		{
 			// Pick a free queue
-			var queue = FindQueues(category).FirstOrDefault(q => q.CurrentItem() == null);
+			var queue = FindQueues(category).FirstOrDefault(q => q.Queue.FirstOrDefault() == null);
 			if (queue == null)
 				return;
 
@@ -1183,7 +1183,7 @@ namespace OpenRA.Mods.MW.MWAI
 
 		void BuildUnit(string category, string name)
 		{
-			var queue = FindQueues(category).FirstOrDefault(q => q.CurrentItem() == null);
+			var queue = FindQueues(category).FirstOrDefault(q => q.Queue.FirstOrDefault() == null);
 			if (queue == null)
 				return;
 

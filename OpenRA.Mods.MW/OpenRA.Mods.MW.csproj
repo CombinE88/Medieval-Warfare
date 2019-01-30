@@ -71,6 +71,8 @@
     <Compile Include="Traits\AmmoPoolConditions.cs" />
     <Compile Include="Traits\Activites\ActivityInterfaces.cs" />
     <Compile Include="Traits\AddConditionEvery.cs" />
+    <Compile Include="Traits\BuildingTraits\SelfConstructing.cs" />
+    <Compile Include="Traits\BuildingTraits\SelfConstructingProductionQueue.cs" />
     <Compile Include="Traits\MWAttackOrderPower.cs" />
     <Compile Include="Traits\GrantPermanentCondition.cs" />
     <Compile Include="Traits\Graphics\ArcRenderable.cs" />
@@ -148,7 +150,6 @@
     <Compile Include="Widgets\Logic\Ingame\IngamePopulationCounterLogic.cs" />
     <Compile Include="Widgets\Logic\Ingame\IngameUsedPopulationCounterLogic.cs" />
     <Compile Include="Widgets\Logic\Ingame\NewCashCounterLogic.cs" />
-    <Compile Include="Widgets\Logic\NewProductionTooltipsLogic.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\engine\OpenRA.Mods.Common\OpenRA.Mods.Common.csproj">
