@@ -654,6 +654,7 @@ SULBARR:
 		Factions: sul
 		ReadyAudio:
 	ProductionBar:
+		ProductionType: MInfantry.SUL
 	ProvidesPrerequisite@buildingname:
 	Selectable:
 		Bounds:72,53,0,0
@@ -709,6 +710,7 @@ SULMYSTIC:
 		Factions: sul
 		ReadyAudio:
 	ProductionBar:
+		ProductionType: MVehicle.SUL
 	ProvidesPrerequisite@buildingname:
 	Selectable:
 		Bounds:72,72,0,-12
@@ -1077,6 +1079,7 @@ SULFIX:
 		LowPowerSlowdown: 3
 		ReadyAudio:
 	ProductionBar:
+		ProductionType: MSiege.SUL
 	WithIdleAnimation:
 		Interval: 360
 	ProvidesPrerequisite@2:

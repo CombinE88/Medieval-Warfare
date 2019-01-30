@@ -60,7 +60,7 @@ namespace OpenRA.Mods.MW.Traits
         public override object Create(ActorInitializer init) { return new WithFreeSpawnableActor(init, this); }
     }
 
-    class WithFreeSpawnableActor : ConditionalTrait<WithFreeSpawnableActorInfo>, ITick, INotifyActorDisposing, INotifyBuildComplete
+    class WithFreeSpawnableActor : ConditionalTrait<WithFreeSpawnableActorInfo>, ITick, INotifyActorDisposing
     {
         private readonly WithFreeSpawnableActorInfo info;
         private int ticker;
@@ -210,9 +210,10 @@ namespace OpenRA.Mods.MW.Traits
             CreateActorSpawn(self);
         }
 
-        void INotifyBuildComplete.BuildingComplete(Actor self)
+        // TODO use conditions
+        /*void INotifyBuildComplete.BuildingComplete(Actor self)
         {
             bk = false;
-        }
+        }*/
     }
 }

@@ -122,7 +122,7 @@ namespace OpenRA.Mods.MW.Traits
     }
 
     public class RenderActorArc
-        : ConditionalTrait<RenderActorArcInfo>, INotifyRemovedFromWorld, IRenderAboveShroud, INotifyBuildComplete, INotifySold, INotifyActorDisposing, INotifyCreated
+        : ConditionalTrait<RenderActorArcInfo>, INotifyRemovedFromWorld, IRenderAboveShroud, INotifySold, INotifyActorDisposing, INotifyCreated
     {
         readonly RenderActorArcInfo info;
 
@@ -201,7 +201,8 @@ namespace OpenRA.Mods.MW.Traits
             arcvalids = FindActorsAround(self);
         }
 
-        void INotifyBuildComplete.BuildingComplete(Actor self)
+        // TODO reimplement me using conditions
+        /*void INotifyBuildComplete.BuildingComplete(Actor self)
         {
             if (Info.PlacementOnly)
                 return;
@@ -214,7 +215,7 @@ namespace OpenRA.Mods.MW.Traits
                         act.TraitOrDefault<ValidPreyTarget>().AddSelf(self);
                 }
             }
-        }
+        }*/
 
         IEnumerable<IRenderable> IRenderAboveShroud.RenderAboveShroud(Actor self, WorldRenderer wr)
         {

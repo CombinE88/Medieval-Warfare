@@ -229,7 +229,7 @@
 		VoiceSet: VehicleVoice
 	BodyOrientation:
 		UseClassicFacingFudge: True
-	EditorTilesetFilter:
+	MapEditorData:
 		Categories: Aircraft
 	OwnerLostAction:
 		Action: Kill
@@ -289,7 +289,7 @@
 	HitShape:
 		Type: Circle
 			Radius: 128
-	EditorTilesetFilter:
+	MapEditorData:
 		Categories: Infantry
 ^CivInfantry:
 	Inherits: ^Infantry
@@ -317,7 +317,7 @@
 		MinMoveDelay: 150
 		MaxMoveDelay: 750
 	ConditionManager:
-	EditorTilesetFilter:
+	MapEditorData:
 		Categories: Civilian infantry
 ^Plane:
 	Inherits@1: ^ExistsInWorld
@@ -338,7 +338,7 @@
 	RejectsOrders:
 	Aircraft:
 		CruiseAltitude: 2560
-	EditorTilesetFilter:
+	MapEditorData:
 		Categories: Aircraft
 	OwnerLostAction:
 		Action: Kill
@@ -377,7 +377,7 @@
 		GenericName: Structure
 	FrozenUnderFog:
 	Demolishable:
-	EditorTilesetFilter:
+	MapEditorData:
 		Categories: Building
 	CommandBarBlacklist:
 	AcceptsDeliveredCash:
@@ -414,7 +414,9 @@
 	EngineerRepairable:
 	Sellable:
 		SellSounds: coindrop.aud
+	CaptureManager:
 	Capturable:
+		Types: building
 	#WithMakeAnimation:
 ^CivBuilding:
 	Inherits: ^Building
@@ -427,7 +429,7 @@
 		GenericStancePrefix: false
 		ShowOwnerRow: false
 	FrozenUnderFog:
-	EditorTilesetFilter:
+	MapEditorData:
 		Categories: Civilian building
 ^CivBuildingHusk:
 	Inherits@1: ^SpriteActor
@@ -443,11 +445,13 @@
 		ShowOwnerRow: false
 	FrozenUnderFog:
 	ScriptTriggers:
-	EditorTilesetFilter:
+	MapEditorData:
 		Categories: Husk
 ^TechBuilding:
 	Inherits: ^CivBuilding
+	CaptureManager:
 	Capturable:
+		Types: building
 	CaptureNotification:
 		Notification: CivilianBuildingCaptured
 	RepairableBuilding:
@@ -465,7 +469,7 @@
 		Range: 3c0
 	Tooltip:
 		ShowOwnerRow: True
-	EditorTilesetFilter:
+	MapEditorData:
 		Categories: Tech building
 	OwnerLostAction:
 		Action: ChangeOwner
@@ -497,7 +501,7 @@
 	WithSpriteBody:
 	FrozenUnderFog:
 	ScriptTriggers:
-	EditorTilesetFilter:
+	MapEditorData:
 		Categories: Husk
 ^Wall:
 	Inherits@1: ^SpriteActor
@@ -534,7 +538,7 @@
 	ScriptTriggers:
 	Health:
 		HP: 10000
-	EditorTilesetFilter:
+	MapEditorData:
 		Categories: Wall
 	OwnerLostAction:
 		Action: ChangeOwner
@@ -566,7 +570,7 @@
 	Targetable@Disguises:
 		TargetTypes: Disguise
 	HitShape:
-	EditorTilesetFilter:
+	MapEditorData:
 		Categories: Tree
 	Voiced:
 		VoiceSet: Tree
@@ -583,7 +587,7 @@
 		ShowOwnerRow: false
 	FrozenUnderFog:
 	ScriptTriggers:
-	EditorTilesetFilter:
+	MapEditorData:
 		Categories: Tree
 ^TibTree:
 	Inherits@1: ^SpriteActor
@@ -605,7 +609,7 @@
 	WithMakeAnimation:
 	Targetable:
 		TargetTypes: Trees, Disguise
-	EditorTilesetFilter:
+	MapEditorData:
 		Categories: Resource spawn
 ^Rock:
 	Inherits@1: ^SpriteActor
@@ -624,7 +628,7 @@
 		Terrain: Tree
 	HiddenUnderShroud:
 	ScriptTriggers:
-	EditorTilesetFilter:
+	MapEditorData:
 		RequireTilesets: DESERT
 		Categories: Decoration
 	Targetable:
@@ -642,7 +646,7 @@
 	Targetable:
 		TargetTypes: Trees, NoAutoTarget
 	HitShape:
-	EditorTilesetFilter:
+	MapEditorData:
 		Categories: Husk
 ^Husk:
 	Inherits: ^CommonHuskDefaults
@@ -653,7 +657,9 @@
 	Targetable:
 		RequiresForceFire: yes
 		TargetTypes: Ground, Husk
+	CaptureManager:
 	Capturable:
+		Types: building
 		CaptureThreshold: 100
 		ValidStances: Enemy, Neutral, Ally
 	WithColoredOverlay@IDISABLE:
@@ -681,7 +687,7 @@
 	FrozenUnderFog:
 	WithSpriteBody:
 	HitShape:
-	EditorTilesetFilter:
+	MapEditorData:
 		Categories: Interior Props Husks
 		RequireTilesets: TEMPERAT
 	Tooltip:
@@ -710,7 +716,7 @@
 	Targetable:
 		TargetTypes: Ground, Prop, NoAutoTarget
 	HitShape:
-	EditorTilesetFilter:
+	MapEditorData:
 		Categories: Interior Props
 		RequireTilesets: TEMPERAT
 	Tooltip:
@@ -734,7 +740,7 @@
 		TargetTypes: Door
 	HitShape:
 	Selectable:
-	EditorTilesetFilter:
+	MapEditorData:
 		Categories: Interior Props
 		RequireTilesets: TEMPERAT
 	Tooltip:
@@ -755,7 +761,7 @@
 	#AutoSelectionSize:
 	WithMakeAnimation:
 	HitShape:
-	EditorTilesetFilter:
+	MapEditorData:
 		Categories: Interior Props Husks
 		RequireTilesets: TEMPERAT
 	Tooltip:
@@ -823,7 +829,7 @@
 		Adjacent: 8
 	MustBeDestroyed:
 		RequiredForShortGame: false
-	EditorTilesetFilter:
+	MapEditorData:
 		Categories: Defense
 	-CommandBarBlacklist:
 	-AcceptsDeliveredCash:
@@ -873,7 +879,7 @@
 	Gate:
 		BlocksProjectilesHeight: 640
 	HitShape:
-	EditorTilesetFilter:
+	MapEditorData:
 		Categories: Wall
 	RequiresBuildableArea:
 		AreaTypes: building
@@ -918,7 +924,7 @@
 	BodyOrientation:
 		UseClassicFacingFudge: True
 	HitShape:
-	EditorTilesetFilter:
+	MapEditorData:
 		Categories: Husk
 ^AttackPlane:
 	Inherits@1: ^ExistsInWorld
@@ -956,7 +962,7 @@
 	Voiced:
 		VoiceSet: GenericVoice
 	HitShape:
-	EditorTilesetFilter:
+	MapEditorData:
 		Categories: Aircraft
 	OwnerLostAction:
 		Action: ChangeOwner
@@ -1002,7 +1008,7 @@
 		Weapons: SmallWood1, SmallWood2, SmallWood3, SmallStone1, SmallStone2
 		Pieces: 2, 4
 		Range: 0c512, 3c0
-	EditorTilesetFilter:
+	MapEditorData:
 		Categories: Defense
 	Targetable@Defense: 
 		TargetTypes: Defense
@@ -1081,7 +1087,7 @@
 	HitShape:
 		Type: Circle
 			Radius: 128
-	EditorTilesetFilter:
+	MapEditorData:
 		Categories: Infantry
 	SpawnActorOnDeath@Soul:
 		DeathType: DefaultDeath
@@ -1214,7 +1220,7 @@
 		EmptyWeapon: LeaveStuff
 		Chance: 25
 		RequiresCondition: leaveStuffCon
-	EditorTilesetFilter:
+	MapEditorData:
 		Categories: Cavalry
 	SpawnActorOnDeath@Soul:
 		DeathType: DefaultDeath
@@ -1280,7 +1286,7 @@
 		EmptyWeapon: LeaveStuff
 		Chance: 25
 		RequiresCondition: leaveStuffCon
-	EditorTilesetFilter:
+	MapEditorData:
 		Categories: Siegeengines
 	SpawnActorOnDeath@Soul:
 		DeathType: DefaultDeath
@@ -1373,7 +1379,7 @@
 	HitShape:
 		Type: Circle
 			Radius: 128
-	EditorTilesetFilter:
+	MapEditorData:
 		Categories: Civilian infantry
 	OwnerLostAction:
 		Action: Kill
@@ -1436,7 +1442,7 @@
 	HitShape:
 		Type: Circle
 			Radius: 128
-	EditorTilesetFilter:
+	MapEditorData:
 		Categories: Animals
 ^MWWildlife:
 	Inherits: ^MedievalInfantry
@@ -1472,7 +1478,7 @@
 	HitShape:
 		Type: Circle
 			Radius: 128
-	EditorTilesetFilter:
+	MapEditorData:
 		Categories: Animals
 ^DeadWildlife:
 	Inherits@1: ^SpriteActor
@@ -1504,7 +1510,7 @@
 	HitShape:
 		Type: Circle
 			Radius: 128
-	EditorTilesetFilter:
+	MapEditorData:
 		Categories: Animals
 ^MWPeasant:
 	Inherits: ^Infantry
@@ -1539,7 +1545,7 @@
 	HitShape:
 		Type: Circle
 			Radius: 128
-	EditorTilesetFilter:
+	MapEditorData:
 		Categories: Peasants
 	OwnerLostAction:
 		Action: Kill
@@ -1603,7 +1609,7 @@
 	HitShape:
 		Type: Circle
 			Radius: 128
-	EditorTilesetFilter:
+	MapEditorData:
 		Categories: Peasants
 ^MWTalker:
 	Inherits: ^MWWanderer
@@ -1668,7 +1674,7 @@
 	HitShape:
 		Type: Circle
 			Radius: 128
-	EditorTilesetFilter:
+	MapEditorData:
 		Categories: Infantry
 	DeathSounds@NORMAL:
 		Voice: Default
@@ -1708,5 +1714,5 @@
 		Pieces: 0, 2
 		Range: 0c512, 3c0
 	HitShape:
-	EditorTilesetFilter:
+	MapEditorData:
 		Categories: Props

@@ -2,7 +2,7 @@ GTWNEW:
 	Inherits: ^MWDefense
 	Inherits@AUTOTARGET: ^AutoTargetGround
 	Inherits@Hitshape: ^1x1Shape
-	EditorTilesetFilter:
+	MapEditorData:
 		Categories: Defense
 	WithDeathAnimation:
 		DeathSequencePalette: raplayer
@@ -81,7 +81,7 @@ BATO:
 	Inherits: ^MWDefense
 	Inherits@AUTOTARGET: ^AutoTargetAll
 	Inherits@Hitshape: ^1x1Shape
-	EditorTilesetFilter:
+	MapEditorData:
 		Categories: Defense
 	Valued:
 		Cost: 2800

@@ -203,6 +203,7 @@ ENGENEER:
 		#BuildDuration: 75
 	Mobile:
 		Speed: 66
+	CaptureManager:
 	Captures:
 		CaptureTypes: building, husk
 		PlayerExperience: 50

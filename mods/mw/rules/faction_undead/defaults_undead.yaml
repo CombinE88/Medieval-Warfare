@@ -60,7 +60,7 @@
 	Inherits@ArcherDemo65: ^ArcherDemo65
 	Inherits@SnakeStunnable: ^SnakeStunnable
 	Inherits@AUTOTARGET: ^AutoTargetAll
-	EditorTilesetFilter:
+	MapEditorData:
 		Categories: Undead
 	WithSpriteBody:
 		RequiresCondition: makeanim
@@ -118,7 +118,7 @@
 	Inherits@ArcherDemo65: ^ArcherDemo65
 	Inherits@SnakeStunnable: ^SnakeStunnable
 	Inherits@AUTOTARGET: ^AutoTargetAll
-	EditorTilesetFilter:
+	MapEditorData:
 		Categories: Undead
 	WithDeathAnimation:
 		DeathSequencePalette: raplayer
@@ -388,7 +388,7 @@
 	-ActorLostNotification:
 	-RepairableBuilding:
 	-WithBuildingRepairDecoration:
-	EditorTilesetFilter:
+	MapEditorData:
 		ExcludeTilesets: TEMPERATE, SNOW, DESERT, WINTER
 		Categories: 
 	ShakeOnCreate:
@@ -423,7 +423,7 @@
 ^CoffinAmbush:
 	Inherits: ^MWUndeadBuilding
 	Inherits@Hitshape: ^1x1Shape
-	EditorTilesetFilter:
+	MapEditorData:
 		Categories:
 	ShakeOnCreate:
 	-RepairableBuilding:

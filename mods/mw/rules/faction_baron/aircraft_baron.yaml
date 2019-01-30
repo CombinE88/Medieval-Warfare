@@ -31,7 +31,7 @@ WARKITE:
 		Weapon: warkitecrossbow
 		LocalOffset: 341,0,456
 		PauseOnCondition: !ammo
-	AttackHeli:
+	AttackAircraft:
 		FacingTolerance: 20
 	RenderSprites:
 		Image: warkite
@@ -95,7 +95,7 @@ WRBLN:
 		Name: primary
 		LocalOffset: 404,100,513, 404,-100,513
 		PauseOnCondition: !ammo
-	AttackHeli:
+	AttackAircraft:
 		FacingTolerance: 20
 	RenderSprites:
 		Image: warballoon

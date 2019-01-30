@@ -12,7 +12,7 @@ mpspawn:
 	RenderSpritesEditorOnly:
 	BodyOrientation:
 		QuantizedFacings: 1
-	EditorTilesetFilter:
+	MapEditorData:
 		Categories: Spawn and Marker
 waypoint:
 	Interactable:
@@ -25,14 +25,14 @@ waypoint:
 	RenderSpritesEditorOnly:
 	BodyOrientation:
 		QuantizedFacings: 1
-	EditorTilesetFilter:
+	MapEditorData:
 		Categories: Spawn and Marker
 fact.colorpicker:
 	Inherits: FACTNEW
 	RenderSprites:
 		Image: newfact
 		Palette: colorpicker
-	-EditorTilesetFilter:
+	-MapEditorData:
 CAMERA:
 	Interactable:
 	EditorOnlyTooltip:
@@ -47,7 +47,7 @@ CAMERA:
 	RevealsShroud:
 		Range: 10c0
 		Type: CenterPosition
-	EditorTilesetFilter:
+	MapEditorData:
 		Categories: Spawn and Marker
 CAMERA.small:
 	Interactable:
@@ -64,7 +64,7 @@ CAMERA.small:
 	RevealsShroud:
 		Range: 6c0
 		Type: CenterPosition
-	EditorTilesetFilter:
+	MapEditorData:
 		Categories: Spawn and Marker
 FLARE:
 	Interactable:
@@ -156,7 +156,7 @@ BUBBLE:
 		DamageCooldown: 0
 		RequiresCondition: validd
 		DamageTypes: default
-	EditorTilesetFilter:
+	MapEditorData:
 		Categories: Tree
 	CombinEGrantRandomCondition:
 		RandomConditions: valida, validb, validc, validd

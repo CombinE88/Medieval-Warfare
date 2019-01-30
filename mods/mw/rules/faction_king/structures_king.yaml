@@ -440,6 +440,7 @@ BARRNEW:
 		Factions: gdi
 		ReadyAudio:
 	ProductionBar:
+		ProductionType: MInfantry.GDI
 	ProvidesPrerequisite@buildingname:
 	Selectable:
 		Bounds: 48,46,0,-2
@@ -496,6 +497,7 @@ STALL:
 		LowPowerSlowdown: 3
 		ReadyAudio:
 	ProductionBar:
+		ProductionType: MVehicle.GDI
 	ProvidesPrerequisite@buildingname:
 	ProvidesPrerequisite:
 		Prerequisite: vehicleproduction
@@ -641,6 +643,7 @@ WORKSHOPGDI:
 		Factions: gdi
 		LowPowerSlowdown: 3
 	ProductionBar:
+		ProductionType: MSiege.GDI
 	ProduceActorPower:
 		Icon: strangedavinci
 		ChargeInterval: 7000

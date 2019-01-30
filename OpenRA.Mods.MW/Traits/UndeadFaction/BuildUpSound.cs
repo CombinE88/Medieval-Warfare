@@ -22,7 +22,7 @@ namespace OpenRA.Mods.MW.Traits
         public object Create(ActorInitializer init) { return new BuildUpSound(init.Self, this); }
     }
 
-    public class BuildUpSound : INotifyCreated, ITick, INotifyRemovedFromWorld, INotifyDeployComplete, INotifySold, INotifyBuildComplete
+    public class BuildUpSound : INotifyCreated, ITick, INotifyRemovedFromWorld, INotifyDeployComplete, INotifySold
     {
         private BuildUpSoundInfo info;
         private bool isitend;
@@ -107,12 +107,13 @@ namespace OpenRA.Mods.MW.Traits
             StopSound();
         }
 
-        void INotifyBuildComplete.BuildingComplete(Actor self)
+        // TODO use conditions
+        /*void INotifyBuildComplete.BuildingComplete(Actor self)
         {
             isitend = true;
             StopSound();
             currentSound = Game.Sound.Play(SoundType.World, info.EndSound, self.CenterPosition);
             currentSounds.Add(currentSound);
-        }
+        }*/
     }
 }

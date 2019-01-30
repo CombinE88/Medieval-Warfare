@@ -30,7 +30,7 @@
 	Health:
 		HP: 150000
 	HitShape:
-	EditorTilesetFilter:
+	MapEditorData:
 		Categories: Tree
 	SelfHealing@Killsslef:
 		PercentageStep: -1
@@ -69,7 +69,7 @@ ChoppedtreeN3:
 		Dimensions: 3,2
 	LootableBody: 
 		LootTypes: ChopTree
-	EditorTilesetFilter:
+	MapEditorData:
 		ExcludeTilesets: DESERT
 ChoppedtreeN3A:
 	Inherits: ^ChoppedTree
@@ -138,7 +138,7 @@ bulb:
 	Inherits: ^Props
 	RenderSprites:
 		Palette: fire
-	EditorTilesetFilter:
+	MapEditorData:
 		RequireTilesets: TEMPERAT
 		Categories: Enviroment lightning
 	Building:
@@ -149,7 +149,7 @@ bulbr:
 	Inherits: ^Props
 	RenderSprites:
 		Palette: fire
-	EditorTilesetFilter:
+	MapEditorData:
 		RequireTilesets: TEMPERAT
 		Categories: Enviroment lightning
 	Building:
@@ -160,7 +160,7 @@ bulbl:
 	Inherits: ^Props
 	RenderSprites:
 		Palette: fire
-	EditorTilesetFilter:
+	MapEditorData:
 		RequireTilesets: TEMPERAT
 		Categories: Enviroment lightning
 	Building:
@@ -171,7 +171,7 @@ bulbt:
 	Inherits: ^Props
 	RenderSprites:
 		Palette: fire
-	EditorTilesetFilter:
+	MapEditorData:
 		RequireTilesets: TEMPERAT
 		Categories: Enviroment lightning
 	Building:
@@ -182,7 +182,7 @@ bulbb:
 	Inherits: ^Props
 	RenderSprites:
 		Palette: fire
-	EditorTilesetFilter:
+	MapEditorData:
 		RequireTilesets: TEMPERAT
 		Categories: Enviroment lightning
 	Building:
@@ -193,7 +193,7 @@ bulbtl:
 	Inherits: ^Props
 	RenderSprites:
 		Palette: fire
-	EditorTilesetFilter:
+	MapEditorData:
 		RequireTilesets: TEMPERAT
 		Categories: Enviroment lightning
 	Building:
@@ -204,7 +204,7 @@ bulbtr:
 	Inherits: ^Props
 	RenderSprites:
 		Palette: fire
-	EditorTilesetFilter:
+	MapEditorData:
 		RequireTilesets: TEMPERAT
 		Categories: Enviroment lightning
 	Building:
@@ -215,7 +215,7 @@ bulbbl:
 	Inherits: ^Props
 	RenderSprites:
 		Palette: fire
-	EditorTilesetFilter:
+	MapEditorData:
 		RequireTilesets: TEMPERAT
 		Categories: Enviroment lightning
 	Building:
@@ -226,7 +226,7 @@ bulbbr:
 	Inherits: ^Props
 	RenderSprites:
 		Palette: fire
-	EditorTilesetFilter:
+	MapEditorData:
 		RequireTilesets: TEMPERAT
 		Categories: Enviroment lightning
 	Building:
@@ -1125,7 +1125,7 @@ OBJECTIVEA:
 	Inherits: ^InteriorProp
 	RenderSprites:
 		Palette: mwcivilian
-	EditorTilesetFilter:
+	MapEditorData:
 		RequireTilesets: TEMPERAT
 		Categories: Interior Objectives
 	Building:
@@ -1138,7 +1138,7 @@ OBJECTIVEB:
 	Inherits: ^InteriorProp
 	RenderSprites:
 		Palette: mwcivilian
-	EditorTilesetFilter:
+	MapEditorData:
 		RequireTilesets: TEMPERAT
 		Categories: Interior Objectives
 	Building:
@@ -1151,7 +1151,7 @@ OBJECTIVEC:
 	Inherits: ^InteriorProp
 	RenderSprites:
 		Palette: mwcivilian
-	EditorTilesetFilter:
+	MapEditorData:
 		RequireTilesets: TEMPERAT
 		Categories: Interior Objectives
 	Building:
@@ -1164,7 +1164,7 @@ OBJECTIVED:
 	Inherits: ^InteriorProp
 	RenderSprites:
 		Palette: mwcivilian
-	EditorTilesetFilter:
+	MapEditorData:
 		RequireTilesets: TEMPERAT
 		Categories: Interior Objectives
 	Building:
@@ -1177,7 +1177,7 @@ CRACKWALL:
 	Inherits: ^InteriorProp
 	RenderSprites:
 		Palette: mwcivilian
-	EditorTilesetFilter:
+	MapEditorData:
 		RequireTilesets: TEMPERAT
 		Categories: Interior Objectives
 	Targetable:
@@ -1191,7 +1191,7 @@ CRACKWALLH:
 	Inherits: ^InteriorProp
 	RenderSprites:
 		Palette: mwcivilian
-	EditorTilesetFilter:
+	MapEditorData:
 		RequireTilesets: TEMPERAT
 		Categories: Interior Objectives
 	Targetable:
@@ -1219,7 +1219,7 @@ ICHESTAHEAL:
 	Tooltip:
 		Name: Chest
 	HitShape:
-	EditorTilesetFilter:
+	MapEditorData:
 		RequireTilesets: TEMPERAT
 		Categories: Interior Props
 ICHESTDEADA:
@@ -1250,7 +1250,7 @@ ICHESTBHEAL:
 	Tooltip:
 		Name: Chest
 	HitShape:
-	EditorTilesetFilter:
+	MapEditorData:
 		RequireTilesets: TEMPERAT
 		Categories: Interior Props
 ICHESTDEADB:
@@ -1281,7 +1281,7 @@ ICHESTCHEAL:
 	Tooltip:
 		Name: Chest
 	HitShape:
-	EditorTilesetFilter:
+	MapEditorData:
 		RequireTilesets: TEMPERAT
 		Categories: Interior Props
 ICHESTDEADC:
@@ -1300,7 +1300,7 @@ IPAINTINGA:
 		Palette: 
 	Tooltip:
 		Name: Painting
-	EditorTilesetFilter:
+	MapEditorData:
 		RequireTilesets: TEMPERAT
 		Categories: Interior Props
 IPAINTINGB:
@@ -1311,7 +1311,7 @@ IPAINTINGB:
 		Palette: 
 	Tooltip:
 		Name: Painting
-	EditorTilesetFilter:
+	MapEditorData:
 		RequireTilesets: TEMPERAT
 		Categories: Interior Props
 IPAINTINGC:
@@ -1322,7 +1322,7 @@ IPAINTINGC:
 		Palette: 
 	Tooltip:
 		Name: Painting
-	EditorTilesetFilter:
+	MapEditorData:
 		RequireTilesets: TEMPERAT
 		Categories: Interior Props
 IPAINTINGD:
@@ -1333,7 +1333,7 @@ IPAINTINGD:
 		Palette: 
 	Tooltip:
 		Name: Painting
-	EditorTilesetFilter:
+	MapEditorData:
 		RequireTilesets: TEMPERAT
 		Categories: Interior Props
 CSTACK01:
@@ -1350,7 +1350,7 @@ CSTACK01:
 	Health:
 		HP: 1
 	HitShape:
-	EditorTilesetFilter:
+	MapEditorData:
 		RequireTilesets: TEMPERAT
 		Categories: Interior Props
 CSTACK02:
@@ -1417,7 +1417,7 @@ shadowtop:
 		OccupiesSpace: false
 	WithSpriteBody:
 		Sequence: top
-	EditorTilesetFilter:
+	MapEditorData:
 		RequireTilesets: TEMPERAT
 		Categories: Enviroment lightning
 	HiddenUnderShroud:
@@ -1433,7 +1433,7 @@ shadowtopend:
 		OccupiesSpace: false
 	WithSpriteBody:
 		Sequence: top-end
-	EditorTilesetFilter:
+	MapEditorData:
 		RequireTilesets: TEMPERAT
 		Categories: Enviroment lightning
 	HiddenUnderShroud:
@@ -1449,7 +1449,7 @@ shadowleft:
 		OccupiesSpace: false
 	WithSpriteBody:
 		Sequence: left
-	EditorTilesetFilter:
+	MapEditorData:
 		RequireTilesets: TEMPERAT
 		Categories: Enviroment lightning
 	HiddenUnderShroud:
@@ -1465,7 +1465,7 @@ shadowleftend:
 		OccupiesSpace: false
 	WithSpriteBody:
 		Sequence: left-end
-	EditorTilesetFilter:
+	MapEditorData:
 		RequireTilesets: TEMPERAT
 		Categories: Enviroment lightning
 	HiddenUnderShroud:
@@ -1481,7 +1481,7 @@ shadowfull:
 		OccupiesSpace: false
 	WithSpriteBody:
 		Sequence: full
-	EditorTilesetFilter:
+	MapEditorData:
 		RequireTilesets: TEMPERAT
 		Categories: Enviroment lightning
 	HiddenUnderShroud:
@@ -1497,7 +1497,7 @@ shadowedgeinner:
 		OccupiesSpace: false
 	WithSpriteBody:
 		Sequence: edge-inner
-	EditorTilesetFilter:
+	MapEditorData:
 		RequireTilesets: TEMPERAT
 		Categories: Enviroment lightning
 	HiddenUnderShroud:
@@ -1513,7 +1513,7 @@ shadowedgeouter:
 		OccupiesSpace: false
 	WithSpriteBody:
 		Sequence: edge-outer
-	EditorTilesetFilter:
+	MapEditorData:
 		RequireTilesets: TEMPERAT
 		Categories: Enviroment lightning
 	HiddenUnderShroud:
@@ -1529,7 +1529,7 @@ shadowlargetop:
 		OccupiesSpace: false
 	WithSpriteBody:
 		Sequence: edge-large-top
-	EditorTilesetFilter:
+	MapEditorData:
 		RequireTilesets: TEMPERAT
 		Categories: Enviroment lightning
 	HiddenUnderShroud:
@@ -1545,7 +1545,7 @@ shadowblocktop:
 		OccupiesSpace: false
 	WithSpriteBody:
 		Sequence: edge-block-top
-	EditorTilesetFilter:
+	MapEditorData:
 		RequireTilesets: TEMPERAT
 		Categories: Enviroment lightning
 	HiddenUnderShroud:
@@ -1561,7 +1561,7 @@ shadowlargeleft:
 		OccupiesSpace: false
 	WithSpriteBody:
 		Sequence: edge-large-left
-	EditorTilesetFilter:
+	MapEditorData:
 		RequireTilesets: TEMPERAT
 		Categories: Enviroment lightning
 	HiddenUnderShroud:
@@ -1577,7 +1577,7 @@ shadowblockleft:
 		OccupiesSpace: false
 	WithSpriteBody:
 		Sequence: edge-block-left
-	EditorTilesetFilter:
+	MapEditorData:
 		RequireTilesets: TEMPERAT
 		Categories: Enviroment lightning
 	HiddenUnderShroud:

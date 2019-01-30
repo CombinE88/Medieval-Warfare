@@ -263,7 +263,7 @@ NODNUKE.scaff:
 		Ammount: 4
 		SpawnOffset: 256,811,0
 		ExitCell: 1,1
-	EditorTilesetFilter:
+	MapEditorData:
 		ExcludeTilesets: TEMPERATE, SNOW, DESERT, WINTER
 		Categories: 
 NODNUKE:
@@ -427,6 +427,7 @@ HANDNEW:
 		Factions: nod
 		ReadyAudio:
 	ProductionBar:
+		ProductionType: MInfantry.Nod
 	ProvidesPrerequisite@buildingname:
 	Selectable:
 		Bounds: 48,66,0,-5
@@ -480,6 +481,7 @@ NODSTALL:
 		LowPowerSlowdown: 3
 		ReadyAudio:
 	ProductionBar:
+		ProductionType: MVehicle.Nod
 	ProvidesPrerequisite@buildingname:
 	ProvidesPrerequisite:
 		Prerequisite: vehicleproduction
@@ -709,6 +711,7 @@ WORKSHOPNOD:
 		Factions: nod
 		LowPowerSlowdown: 3
 	ProductionBar:
+		ProductionType: MSiege.Nod
 	ProduceActorPower:
 		Icon: trojan
 		ChargeInterval: 7000

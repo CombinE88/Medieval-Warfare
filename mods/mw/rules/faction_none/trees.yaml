@@ -226,7 +226,7 @@ ROCK7:
 		Dimensions: 4,1
 T01:
 	Inherits: ^Tree
-	EditorTilesetFilter:
+	MapEditorData:
 		ExcludeTilesets: DESERT
 	HuntableDeer@LootableTree:
 		Actor: ChoppedtreeN4
@@ -243,7 +243,7 @@ T01:
 		RequiresCondition: Corrupted
 T02:
 	Inherits: ^Tree
-	EditorTilesetFilter:
+	MapEditorData:
 		ExcludeTilesets: DESERT
 	HuntableDeer@LootableTree:
 		Actor: ChoppedtreeN4
@@ -260,7 +260,7 @@ T02:
 		RequiresCondition: Corrupted
 T03:
 	Inherits: ^Tree
-	EditorTilesetFilter:
+	MapEditorData:
 		ExcludeTilesets: DESERT
 	HuntableDeer@LootableTree:
 		Actor: ChoppedtreeN4
@@ -277,11 +277,11 @@ T03:
 		RequiresCondition: Corrupted
 T04:
 	Inherits: ^Tree
-	EditorTilesetFilter:
+	MapEditorData:
 		RequireTilesets: DESERT
 T05:
 	Inherits: ^Tree
-	EditorTilesetFilter:
+	MapEditorData:
 		ExcludeTilesets: DESERT
 	HuntableDeer@LootableTree:
 		Actor: ChoppedtreeN4
@@ -298,7 +298,7 @@ T05:
 		RequiresCondition: Corrupted
 T06:
 	Inherits: ^Tree
-	EditorTilesetFilter:
+	MapEditorData:
 		ExcludeTilesets: DESERT
 	HuntableDeer@LootableTree:
 		Actor: ChoppedtreeN4
@@ -315,15 +315,15 @@ T06:
 		RequiresCondition: Corrupted
 T06A:
 	Inherits: ^Tree
-	EditorTilesetFilter:
+	MapEditorData:
 		ExcludeTilesets: DESERT
 T06B:
 	Inherits: ^Tree
-	EditorTilesetFilter:
+	MapEditorData:
 		ExcludeTilesets: DESERT
 T07:
 	Inherits: ^Tree
-	EditorTilesetFilter:
+	MapEditorData:
 		ExcludeTilesets: DESERT
 T08:
 	Inherits: ^Tree
@@ -342,11 +342,11 @@ T08:
 		RequiresCondition: Corrupted
 T09:
 	Inherits: ^Tree
-	EditorTilesetFilter:
+	MapEditorData:
 		RequireTilesets: DESERT
 T10:
 	Inherits: ^Tree
-	EditorTilesetFilter:
+	MapEditorData:
 		ExcludeTilesets: DESERT
 	HuntableDeer@LootableTree:
 		Actor: ChoppedtreeN1
@@ -363,7 +363,7 @@ T10:
 		RequiresCondition: Corrupted
 T11:
 	Inherits: ^Tree
-	EditorTilesetFilter:
+	MapEditorData:
 		ExcludeTilesets: DESERT
 	HuntableDeer@LootableTree:
 		Actor: ChoppedtreeN1
@@ -380,7 +380,7 @@ T11:
 		RequiresCondition: Corrupted
 T12:
 	Inherits: ^Tree
-	EditorTilesetFilter:
+	MapEditorData:
 		ExcludeTilesets: DESERT
 	HuntableDeer@LootableTree:
 		Actor: ChoppedtreeN1
@@ -397,7 +397,7 @@ T12:
 		RequiresCondition: Corrupted
 T13:
 	Inherits: ^Tree
-	EditorTilesetFilter:
+	MapEditorData:
 		ExcludeTilesets: DESERT
 	HuntableDeer@LootableTree:
 		Actor: ChoppedtreeN1
@@ -414,7 +414,7 @@ T13:
 		RequiresCondition: Corrupted
 T14:
 	Inherits: ^Tree
-	EditorTilesetFilter:
+	MapEditorData:
 		ExcludeTilesets: DESERT
 	HuntableDeer@LootableTree:
 		Actor: ChoppedtreeN1
@@ -431,7 +431,7 @@ T14:
 		RequiresCondition: Corrupted
 T15:
 	Inherits: ^Tree
-	EditorTilesetFilter:
+	MapEditorData:
 		ExcludeTilesets: DESERT
 	HuntableDeer@LootableTree:
 		Actor: ChoppedtreeN1
@@ -448,7 +448,7 @@ T15:
 		RequiresCondition: Corrupted
 T16:
 	Inherits: ^Tree
-	EditorTilesetFilter:
+	MapEditorData:
 		ExcludeTilesets: DESERT
 	HuntableDeer@LootableTree:
 		Actor: ChoppedtreeN2
@@ -465,7 +465,7 @@ T16:
 		RequiresCondition: Corrupted
 T17:
 	Inherits: ^Tree
-	EditorTilesetFilter:
+	MapEditorData:
 		ExcludeTilesets: DESERT
 	HuntableDeer@LootableTree:
 		Actor: ChoppedtreeN2
@@ -482,7 +482,7 @@ T17:
 		RequiresCondition: Corrupted
 T17A:
 	Inherits: ^Tree
-	EditorTilesetFilter:
+	MapEditorData:
 		ExcludeTilesets: DESERT
 	HuntableDeer@LootableTree:
 		Actor: ChoppedtreeN2
@@ -499,7 +499,7 @@ T17A:
 		RequiresCondition: Corrupted
 T18:
 	Inherits: ^Tree
-	EditorTilesetFilter:
+	MapEditorData:
 		RequireTilesets: DESERT
 	HuntableDeer@LootableTree:
 		Actor: ChoppedtreeN2
@@ -516,7 +516,7 @@ T18:
 		RequiresCondition: Corrupted
 T18A:
 	Inherits: ^Tree
-	EditorTilesetFilter:
+	MapEditorData:
 		RequireTilesets: DESERT
 	HuntableDeer@LootableTree:
 		Actor: ChoppedtreeN4
@@ -533,11 +533,11 @@ T18A:
 		RequiresCondition: Corrupted
 T18B:
 	Inherits: ^Tree
-	EditorTilesetFilter:
+	MapEditorData:
 		RequireTilesets: DESERT
 T18C:
 	Inherits: ^Tree
-	EditorTilesetFilter:
+	MapEditorData:
 		RequireTilesets: DESERT
 	HuntableDeer@LootableTree:
 		Actor: ChoppedtreeN3A
@@ -557,7 +557,7 @@ TC01:
 	Building:
 		Footprint: ___ xx_
 		Dimensions: 3,2
-	EditorTilesetFilter:
+	MapEditorData:
 		ExcludeTilesets: DESERT
 	HuntableDeer@LootableTree:
 		Actor: ChoppedtreeN3
@@ -577,7 +577,7 @@ TC02:
 	Building:
 		Footprint: _x_ xx_
 		Dimensions: 3,2
-	EditorTilesetFilter:
+	MapEditorData:
 		ExcludeTilesets: DESERT
 	HuntableDeer@LootableTree:
 		Actor: ChoppedtreeN3
@@ -597,7 +597,7 @@ TC04:
 	Building:
 		Footprint: ___xx xxxxx __xx_
 		Dimensions: 5,3
-	EditorTilesetFilter:
+	MapEditorData:
 		ExcludeTilesets: DESERT
 	Explodes@Tib:
 		Weapon: LeaveWoodXL
@@ -607,7 +607,7 @@ TC05:
 	Building:
 		Footprint: __x_ xxx_ __x_
 		Dimensions: 4,3
-	EditorTilesetFilter:
+	MapEditorData:
 		ExcludeTilesets: DESERT
 	Explodes@Tib:
 		Weapon: LeaveWoodXL
@@ -617,28 +617,28 @@ SHRUB1:
 	Building:
 		Footprint: =
 		Dimensions: 1,1
-	EditorTilesetFilter:
+	MapEditorData:
 		ExcludeTilesets: DESERT
 SHRUB2:
 	Inherits: ^Tree
 	Building:
 		Footprint: =
 		Dimensions: 1,1
-	EditorTilesetFilter:
+	MapEditorData:
 		ExcludeTilesets: DESERT
 SHRUB3:
 	Inherits: ^Tree
 	Building:
 		Footprint: =
 		Dimensions: 1,1
-	EditorTilesetFilter:
+	MapEditorData:
 		ExcludeTilesets: DESERT
 SHRUB4:
 	Inherits: ^Tree
 	Building:
 		Footprint: =
 		Dimensions: 1,1
-	EditorTilesetFilter:
+	MapEditorData:
 		ExcludeTilesets: DESERT
 DEADTREE1:
 	Inherits: ^Tree

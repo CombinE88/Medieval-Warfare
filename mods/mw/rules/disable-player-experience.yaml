@@ -20,6 +20,7 @@
 		Palette: raplayer
 		IsPlayerPalette: True
 E6:
+	CaptureManager:
 	Captures:
 		PlayerExperience: 0
 HPAD:

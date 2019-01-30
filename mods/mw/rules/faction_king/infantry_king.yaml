@@ -53,7 +53,8 @@ KING:
 		Voice: Attack
 	AttackMove:
 		Voice: Attack
-	AnnounceOnBuild:
+	VoiceAnnouncement:
+		Voice: Build
 	AnnounceOnKill:
 	Voiced:
 		VoiceSet: CommandoVoice
@@ -85,6 +86,7 @@ KING:
 		DamageCooldown: 200 
 	DetectCloaked:
 		Range: 3c0
+	CaptureManager:
 	Captures:
 		CaptureTypes: horse
 		PlayerExperience: 200
@@ -433,7 +435,8 @@ NEWCOMM:
 		Type: Knight
 	Voiced:
 		VoiceSet: JuggernautVoice 
-	AnnounceOnBuild:
+	VoiceAnnouncement:
+		Voice: Build
 	AnnounceOnKill:
 	-Crushable:
 	PersonValued:

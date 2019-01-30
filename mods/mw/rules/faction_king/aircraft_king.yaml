@@ -41,7 +41,7 @@ ORNI:
 		Name: primary
 		LocalOffset: 1024,0,-213
 		PauseOnCondition: !ammo
-	AttackPlane:
+	AttackAircraft:
 		FacingTolerance: 20
 	RenderSprites:
 		Image: orni
@@ -121,7 +121,7 @@ DRGNRDR:
 		Weapon: dragonfireair
 		LocalOffset: 1024,0,-213
 		PauseOnCondition: !ammo
-	AttackHeli:
+	AttackAircraft:
 		FacingTolerance: 20
 	RenderSprites:
 		Image: drgnrdr
@@ -254,7 +254,7 @@ DAVINCI:
 	SelectionDecorations:
 	Selectable:
 		Bounds:40,36,0,-4
-	AttackHeli:
+	AttackAircraft:
 		FacingTolerance: 20
 	RenderSprites:
 		Image: davinci

@@ -10,8 +10,6 @@
 #endregion
 
 using System.Collections.Generic;
-using System.Linq;
-using OpenRA.Mods.MW.MWAI;
 
 namespace OpenRA.Traits
 {
@@ -36,7 +34,7 @@ namespace OpenRA.Traits
         public object Create(ActorInitializer init) { return new PlayerCivilization(init.Self, this); }
     }
 
-    public class PlayerCivilization : ITick, INotifyCreated
+    public class PlayerCivilization : INotifyCreated
     {
         readonly PlayerCivilizationInfo info;
         public int Nextchecktick;
@@ -55,9 +53,6 @@ namespace OpenRA.Traits
         public int DirectModifier;
 
         int assignRolesTicks;
-        UndeadAIHAndler undeadaihandler;
-        HackyMWAIInfo hackyaiinfo;
-        HackyMWAI hackyai;
 
         public HashSet<Actor> PeasantProvider = new HashSet<Actor>();
         private bool first;
@@ -94,47 +89,6 @@ namespace OpenRA.Traits
                 FreePopulation = MaxLivingspacevar - (WorkerPopulationvar + Peasantpopulationvar);
             else
                 FreePopulation = MaxLivingspacevar - WorkerPopulationvar;
-        }
-
-        void ITick.Tick(Actor self)
-        {
-            if (!self.Owner.IsBot)
-                return;
-
-            if (!first)
-            {
-                hackyaiinfo = self.Owner.PlayerActor.Info.TraitInfos<HackyMWAIInfo>().First(a => a.Type == self.Owner.BotType);
-                hackyai = self.Owner.PlayerActor.TraitsImplementing<HackyMWAI>().First(a => a.Info.Type == self.Owner.BotType);
-                undeadaihandler = new UndeadAIHAndler(self.World, hackyaiinfo, hackyai, self.Owner);
-
-                first = true;
-            }
-
-            if (--assignRolesTicks <= 0)
-            {
-                if (undeadaihandler == null || hackyai == null || hackyaiinfo == null)
-                    return;
-
-                assignRolesTicks = hackyaiinfo.AssignRolesInterval;
-                DoStuff(self);
-            }
-        }
-
-        void DoStuff(Actor self)
-        {
-            hackyai.NumberCountPeasants = undeadaihandler.CountPeasants();
-            hackyai.NumberCountPossiblePopulation = undeadaihandler.CountPossiblePopulation();
-            hackyai.NumberCountPotentialFreeBeds = undeadaihandler.CountPotentialFreeBeds();
-
-            if (self.Owner.Faction.InternalName == "ded")
-            {
-                undeadaihandler.ManageEmptyAcolytes();
-                undeadaihandler.ManageBuildrAcolytes();
-                undeadaihandler.ManageDeadAcolytes();
-            }
-
-            hackyai.AcolyteBuilder = undeadaihandler.AcolyteBuilder;
-            hackyai.AcolyteHarvester = undeadaihandler.AcolyteHarvester;
         }
     }
 }

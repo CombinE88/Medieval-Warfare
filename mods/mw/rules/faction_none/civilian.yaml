@@ -72,7 +72,9 @@ HOSP.Husk:
 	TransformOnCapture:
 		ForceHealthPercentage: 25
 		IntoActor: hosp
+	CaptureManager:
 	Capturable:
+		Types: building
 		CaptureThreshold: 101
 	CaptureNotification:
 		Notification: CivilianBuildingCaptured
@@ -104,7 +106,9 @@ V19.Husk:
 		RequiresForceFire: yes
 	-Selectable:
 	Interactable:
+	CaptureManager:
 	Capturable:
+		Types: building
 	CaptureNotification:
 		Notification: CivilianBuildingCaptured
 	TransformOnCapture:
@@ -127,7 +131,9 @@ MISS:
 	RenderSprites:
 		Image: missnew
 		PlayerPalette: raplayer
+	CaptureManager:
 	Capturable:
+		Types: building
 	Tooltip:
 		Name: Observation Post
 	RevealsShroud:
@@ -159,7 +165,9 @@ TECH1:
 	RenderSprites:
 		Image: tech1
 		PlayerPalette: raplayer
+	CaptureManager:
 	Capturable:
+		Types: building
 	Tooltip:
 		Name: Mortar Station
 	RevealsShroud:
@@ -221,7 +229,9 @@ TECH1.Husk:
 	TransformOnCapture:
 		ForceHealthPercentage: 25
 		IntoActor: tech1
+	CaptureManager:
 	Capturable:
+		Types: building
 		CaptureThreshold: 101
 	CaptureNotification:
 		Notification: CivilianBuildingCaptured
@@ -475,7 +485,7 @@ FISH:
 	Health:
 		HP: 10
 	HitShape:
-	EditorTilesetFilter:
+	MapEditorData:
 		Categories: Animals
 	HuntableDeer@Lootable:
 		Actor: FISH.Husk
@@ -502,7 +512,7 @@ FISH.Husk:
 	Health:
 		HP: 1000
 	HitShape:
-	EditorTilesetFilter:
+	MapEditorData:
 		Categories:
 	LootableBody: 
 		LootTypes: DeadWildlife

@@ -179,10 +179,7 @@ namespace OpenRA.Mods.MW.Traits
 
                                 var notifyOthers = self.World.ActorsWithTrait<INotifyOtherProduction>();
                                 foreach (var notify in notifyOthers)
-                                    notify.Trait.UnitProducedByOther(notify.Actor, self, newUnit, producee.Name);
-
-                                foreach (var t in newUnit.TraitsImplementing<INotifyBuildComplete>())
-                                    t.BuildingComplete(newUnit);
+                                    notify.Trait.UnitProducedByOther(notify.Actor, self, newUnit, producee.Name, init);
                             });
                         }
                     }
@@ -214,10 +211,7 @@ namespace OpenRA.Mods.MW.Traits
 
                     var notifyOthers = self.World.ActorsWithTrait<INotifyOtherProduction>();
                     foreach (var notify in notifyOthers)
-                        notify.Trait.UnitProducedByOther(notify.Actor, self, newUnit, producee.Name);
-
-                    foreach (var t in newUnit.TraitsImplementing<INotifyBuildComplete>())
-                        t.BuildingComplete(newUnit);
+                        notify.Trait.UnitProducedByOther(notify.Actor, self, newUnit, producee.Name, init);
                 }
                 else
                 {
@@ -234,10 +228,7 @@ namespace OpenRA.Mods.MW.Traits
 
                     var notifyOthers = self.World.ActorsWithTrait<INotifyOtherProduction>();
                     foreach (var notify in notifyOthers)
-                        notify.Trait.UnitProducedByOther(notify.Actor, self, newUnit, producee.Name);
-
-                    foreach (var t in newUnit.TraitsImplementing<INotifyBuildComplete>())
-                        t.BuildingComplete(newUnit);
+                        notify.Trait.UnitProducedByOther(notify.Actor, self, newUnit, producee.Name, init);
 
                     respawner.TraitOrDefault<UndeadGiantSpawner>().Reset();
                 }

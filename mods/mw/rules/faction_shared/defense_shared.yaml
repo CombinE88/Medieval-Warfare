@@ -111,7 +111,7 @@ CSTLGTEW:
 		Footprint: xxx
 	Targetable:
 		TargetTypes: Ground, Wall
-	EditorTilesetFilter:
+	MapEditorData:
 		Categories: Wall
 CSTLGTNS: 
 	Inherits: ^MWGate
@@ -155,7 +155,7 @@ CSTLGTNS:
 		Footprint: x x x
 	Targetable:
 		TargetTypes: Ground, Wall
-	EditorTilesetFilter:
+	MapEditorData:
 		Categories: Wall
 SULGTNS: 
 	Inherits: CSTLGTNS

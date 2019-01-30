@@ -7,6 +7,7 @@
 		Filename: Medieval_Civ_palette.pal
 		ShadowIndex: 1
 		AllowModifiers: true
+		CursorPalette: true
 	PaletteFromFile@MW_NOBLES:
 		Name: mwnobles
 		Filename: Medieval_noble_palette.pal

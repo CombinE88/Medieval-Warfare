@@ -417,7 +417,7 @@ SILONEW:
 		PlayerPalette: raplayer
 	WithSpriteBody:
 	#AutoSelectionSize:
-	WithSiloAnimation:
+	WithResourceLevelSpriteBody:
 	StoresResources:
 		PipCount: 10
 		PipColor: Green
@@ -457,7 +457,7 @@ SILOTWO:
 		PlayerPalette: raplayer
 	WithSpriteBody:
 	#AutoSelectionSize:
-	WithSiloAnimation:
+	WithResourceLevelSpriteBody:
 	StoresResources:
 		PipCount: 10
 		PipColor: Green

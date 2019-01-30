@@ -25,7 +25,7 @@ Container@INGAME_ROOT:
 				LogicTicker@DISCONNECT_WATCHER:
 					Logic: DisconnectWatcherLogic
 				Label@MISSION_TEXT:
-					X: WINDOW_RIGHT/2 - 256
+					X: WINDOW_RIGHT / 2 - 256
 					Y: 22
 					Width: 512
 					Height: 25
@@ -33,28 +33,28 @@ Container@INGAME_ROOT:
 					Align: Center
 					Contrast: true
 				StrategicProgress@STRATEGIC_PROGRESS:
-					X: WINDOW_RIGHT/2
+					X: WINDOW_RIGHT / 2
 					Y: 40
 				Container@PERF_ROOT:
 				WorldInteractionController@INTERACTION_CONTROLLER:
 					Width: WINDOW_RIGHT
 					Height: WINDOW_BOTTOM
-					SelectAllKey: SelectAllUnits		
+					SelectAllKey: SelectAllUnits
 					SelectSameTypeKey: SelectUnitsByType
 				ViewportController:
 					Width: WINDOW_RIGHT
 					Height: WINDOW_BOTTOM
 					TooltipContainer: TOOLTIP_CONTAINER
-					ScrollUpKey: MapScrollUp		
-					ScrollDownKey: MapScrollDown		
-					ScrollLeftKey: MapScrollLeft		
-					ScrollRightKey: MapScrollRight		
-					JumpToTopEdgeKey: MapJumpToTopEdge		
-					JumpToBottomEdgeKey: MapJumpToBottomEdge		
-					JumpToLeftEdgeKey: MapJumpToLeftEdge		
-					JumpToRightEdgeKey: MapJumpToRightEdge		
-					BookmarkSaveKeyPrefix: MapBookmarkSave		
-					BookmarkRestoreKeyPrefix: MapBookmarkRestore		
+					ScrollUpKey: MapScrollUp
+					ScrollDownKey: MapScrollDown
+					ScrollLeftKey: MapScrollLeft
+					ScrollRightKey: MapScrollRight
+					JumpToTopEdgeKey: MapJumpToTopEdge
+					JumpToBottomEdgeKey: MapJumpToBottomEdge
+					JumpToLeftEdgeKey: MapJumpToLeftEdge
+					JumpToRightEdgeKey: MapJumpToRightEdge
+					BookmarkSaveKeyPrefix: MapBookmarkSave
+					BookmarkRestoreKeyPrefix: MapBookmarkRestore
 					BookmarkKeyCount: 4
 				Container@GAME_TIMER_BLOCK:
 					Logic: GameTimerLogic
@@ -114,6 +114,7 @@ Container@OBSERVER_WIDGETS:
 		StatisticsProductionKey: StatisticsProduction
 		StatisticsCombatKey: StatisticsCombat
 		StatisticsGraphKey: StatisticsGraph
+		StatisticsArmyGraphKey: StatisticsArmyGraph
 	Children:
 		LogicKeyListener@OBSERVER_KEY_LISTENER:
 		Background@SIDEBAR_BACKGROUND:
@@ -208,6 +209,9 @@ Container@OBSERVER_WIDGETS:
 							Y: 10 + 30
 							Width: 50
 							Height: 40
+							Key: Pause
+							TooltipText: Pause
+							TooltipContainer: TOOLTIP_CONTAINER
 							IgnoreChildMouseOver: true
 							Children:
 								Image@IMAGE_PAUSE:
@@ -222,6 +226,9 @@ Container@OBSERVER_WIDGETS:
 							Y: 10 + 30
 							Width: 50
 							Height: 40
+							Key: Pause
+							TooltipText: Play
+							TooltipContainer: TOOLTIP_CONTAINER
 							IgnoreChildMouseOver: true
 							Children:
 								Image@IMAGE_PLAY:
@@ -237,6 +244,7 @@ Container@OBSERVER_WIDGETS:
 							Width: 50
 							Height: 20
 							BaseLine: 1
+							Key: ReplaySpeedSlow
 							TooltipText: Slow speed
 							TooltipContainer: TOOLTIP_CONTAINER
 							VisualHeight: 0
@@ -248,6 +256,7 @@ Container@OBSERVER_WIDGETS:
 							Width: 50
 							Height: 20
 							BaseLine: 1
+							Key: ReplaySpeedRegular
 							TooltipText: Regular speed
 							TooltipContainer: TOOLTIP_CONTAINER
 							VisualHeight: 0
@@ -259,6 +268,7 @@ Container@OBSERVER_WIDGETS:
 							Width: 50
 							Height: 20
 							BaseLine: 1
+							Key: ReplaySpeedFast
 							TooltipText: Fast speed
 							TooltipContainer: TOOLTIP_CONTAINER
 							VisualHeight: 0
@@ -270,6 +280,7 @@ Container@OBSERVER_WIDGETS:
 							Width: 50
 							Height: 20
 							BaseLine: 1
+							Key: ReplaySpeedMax
 							TooltipText: Maximum speed
 							TooltipContainer: TOOLTIP_CONTAINER
 							VisualHeight: 0
@@ -277,6 +288,8 @@ Container@OBSERVER_WIDGETS:
 							Font: TinyBold
 				DropDownButton@SHROUD_SELECTOR:
 					Logic: ObserverShroudSelectorLogic
+						CombinedViewKey: ObserverCombinedView
+						WorldViewKey: ObserverWorldView
 					X: 20
 					Y: 25
 					Width: 230
@@ -353,7 +366,7 @@ Container@PLAYER_WIDGETS:
 					Key: AttackMove
 					DisableKeySound: true
 					TooltipText: Attack Move
-					TooltipDesc: Selected units will move to the desired location\nand attack any enemies they encounter en route.\n\nLeft-click icon then right-click on target location.
+					TooltipDesc: Selected units will move to the desired location\nand attack any enemies they encounter en route.\n\nHold {(Ctrl)} while targeting to order an Assault Move\nthat attacks any units or structures encountered en route.\n\nLeft-click icon then right-click on target location.
 					TooltipContainer: TOOLTIP_CONTAINER
 					TooltipTemplate: BUTTON_WITH_DESC_HIGHLIGHT_TOOLTIP
 					Children:
@@ -387,7 +400,7 @@ Container@PLAYER_WIDGETS:
 					Background: command-button
 					DisableKeySound: true
 					TooltipText: Force Attack
-					TooltipDesc: Selected units will attack the targeted unit or location\nignoring their default activity for the target.\n\nLeft-click icon then right-click on target.\nHold {(Ctrl)} to activate temporarily while commanding units.
+					TooltipDesc: Selected units will attack the targeted unit or location\n - Default activity for the target is suppressed\n - Allows targeting of own or ally forces\n - Long-range artillery units will always target the\n   location, ignoring units and buildings\n\nLeft-click icon then right-click on target.\nHold {(Ctrl)} to activate temporarily while commanding units.
 					TooltipContainer: TOOLTIP_CONTAINER
 					TooltipTemplate: BUTTON_WITH_DESC_HIGHLIGHT_TOOLTIP
 					Children:
@@ -402,9 +415,8 @@ Container@PLAYER_WIDGETS:
 					Width: 34
 					Height: 34
 					Background: command-button
-					DisableKeySound: true
-					DisableKeyRepeat: true
 					Key: Guard
+					DisableKeySound: true
 					TooltipText: Guard
 					TooltipDesc: Selected units will follow the targeted unit.\n\nLeft-click icon then right-click on target unit.
 					TooltipContainer: TOOLTIP_CONTAINER
@@ -419,12 +431,12 @@ Container@PLAYER_WIDGETS:
 					Y: 139
 					Width: 34
 					Height: 34
-					Key: Deploy
 					Background: command-button
-					DisableKeySound: true
+					Key: Deploy
 					DisableKeyRepeat: true
+					DisableKeySound: true
 					TooltipText: Deploy
-					TooltipDesc: Selected units will perform their default deploy activity\n - MCVs will unpack into a Construction Yard\n - Construction Yards will re-pack into a MCV\n - Transports will unload their passengers\n - Helicopters will return to base\n\nActs immediately on selected units.
+					TooltipDesc: Selected units will perform their default deploy activity\n - MCVs will unpack into a Construction Yard\n - Construction Yards will re-pack into a MCV\n - Transports will unload their passengers\n\nActs immediately on selected units.
 					TooltipContainer: TOOLTIP_CONTAINER
 					Children:
 						Image@ICON:
@@ -438,9 +450,9 @@ Container@PLAYER_WIDGETS:
 					Width: 34
 					Height: 34
 					Background: command-button
-					DisableKeySound: true
-					DisableKeyRepeat: true
 					Key: Scatter
+					DisableKeyRepeat: true
+					DisableKeySound: true
 					TooltipText: Scatter
 					TooltipDesc: Selected units will stop their current activity\nand move to a nearby location.\n\nActs immediately on selected units.
 					TooltipContainer: TOOLTIP_CONTAINER
@@ -456,10 +468,10 @@ Container@PLAYER_WIDGETS:
 					Width: 34
 					Height: 34
 					Background: command-button
-					DisableKeySound: true
-					DisableKeyRepeat: true
-					TooltipText: Stop
 					Key: Stop
+					DisableKeyRepeat: true
+					DisableKeySound: true
+					TooltipText: Stop
 					TooltipDesc: Selected units will stop their current activity.\n\nActs immediately on selected units.
 					TooltipContainer: TOOLTIP_CONTAINER
 					Children:
@@ -484,8 +496,8 @@ Container@PLAYER_WIDGETS:
 							X: 5
 							Y: 5
 							ImageCollection: command-icons
-							ImageName: queue-orders								
-		Background@COMMAND_BAR:
+							ImageName: queue-orders
+		Background@STANCE_BAR:
 			Logic: StanceSelectorLogic
 			X: 5
 			Y: WINDOW_BOTTOM - HEIGHT - 5 - 276 - 230
@@ -499,9 +511,9 @@ Container@PLAYER_WIDGETS:
 					Width: 34
 					Height: 26
 					Background: stance-button
+					Key: StanceAttackAnything
 					DisableKeyRepeat: true
 					DisableKeySound: true
-					Key: StanceAttackAnything
 					TooltipText: Attack Anything Stance
 					TooltipDesc: Set the selected units to Attack Anything stance:\n - Units will attack enemy units and structures on sight\n - Units will pursue attackers across the battlefield
 					TooltipContainer: TOOLTIP_CONTAINER

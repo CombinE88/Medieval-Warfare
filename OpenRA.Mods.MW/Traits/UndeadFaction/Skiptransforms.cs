@@ -94,9 +94,9 @@ namespace OpenRA.Mods.MW.Traits
             return null;
         }
 
-        Order IIssueDeployOrder.IssueDeployOrder(Actor self)
+        Order IIssueDeployOrder.IssueDeployOrder(Actor self, bool queued)
         {
-            return new Order("DeployTransform", self, false);
+            return new Order("DeployTransform", self, queued);
         }
 
         public void DeployTransform(bool queued)

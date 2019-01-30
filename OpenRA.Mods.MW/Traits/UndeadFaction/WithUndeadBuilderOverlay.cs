@@ -78,7 +78,7 @@ namespace OpenRA.Mods.MW.Traits.Render
     }
 
     public class WithUndeadBuilderOverlay : PausableConditionalTrait<WithUndeadBuilderOverlayInfo>,
-        INotifyDamageStateChanged, INotifyBuildComplete, INotifySold, INotifyTransform, ITick
+        INotifyDamageStateChanged, INotifySold, INotifyTransform, ITick
     {
         readonly Animation overlay;
         bool buildComplete;
@@ -111,10 +111,13 @@ namespace OpenRA.Mods.MW.Traits.Render
             animationlength = anim.Animation.CurrentSequence.Length;
         }
 
+        // TODO use conditions
+        /*
         void INotifyBuildComplete.BuildingComplete(Actor self)
         {
             buildComplete = true;
         }
+        */
 
         void INotifySold.Sold(Actor self) { }
         void INotifySold.Selling(Actor self)

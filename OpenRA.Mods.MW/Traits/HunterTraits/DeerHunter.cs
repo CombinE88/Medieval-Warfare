@@ -157,7 +157,7 @@ namespace OpenRA.Mods.MW.Traits
 
         void Attack(Actor self, Actor targetActor)
         {
-            self.QueueActivity(new Attack(self, Target.FromActor(targetActor), true, true, 100));
+            self.QueueActivity(new Attack(self, Target.FromActor(targetActor), true, true));
         }
 
         void Move(Actor self, Actor targetActor)

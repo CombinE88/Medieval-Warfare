@@ -328,7 +328,7 @@ SULM3:
 	Armament:
 		Weapon: CarpetBomber
 		LocalOffset: 341,0,456
-	AttackHeli:
+	AttackAircraft:
 		FacingTolerance: 20
 	RenderSprites:
 		PlayerPalette: raplayer
@@ -458,7 +458,7 @@ SULB3:
 		LocalOffset: 341,-534,256
 		FireDelay: 3
 		Name: secondary
-	AttackHeli:
+	AttackAircraft:
 		FacingTolerance: 20
 	RenderSprites:
 		PlayerPalette: raplayer
@@ -511,7 +511,7 @@ SULTURNXL:
 	HiddenUnderFog:
 		Type: CenterPosition
 	HitShape:
-	EditorTilesetFilter:
+	MapEditorData:
 		Categories: Aircraft
 	Aircraft:
 		CruiseAltitude: 0
@@ -522,7 +522,7 @@ SULTURNXL:
 		MaximumPitch: 56
 	Health:
 		HP: 10000
-	AttackPlane:
+	AttackAircraft:
 		FacingTolerance: 20
 	Tooltip:
 		Name: Turnado

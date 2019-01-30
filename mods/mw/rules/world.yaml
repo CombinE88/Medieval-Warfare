@@ -1,5 +1,6 @@
 ^BaseWorld:
 	AlwaysVisible:
+	TerrainRenderer:
 	Inherits: ^Palettes
 	ScreenMap:
 	ActorMap:

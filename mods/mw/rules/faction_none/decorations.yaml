@@ -13,7 +13,7 @@ DECOR1:
 		HP: 5000
 	Targetable@Disguise:
 		TargetTypes: Disguise
-	EditorTilesetFilter:
+	MapEditorData:
 		Categories: Props
 DECOR2:
  	Inherits: ^CivBuilding
@@ -29,7 +29,7 @@ DECOR2:
 		HP: 5000
 	Targetable@Disguise:
 		TargetTypes: Disguise
-	EditorTilesetFilter:
+	MapEditorData:
 		Categories: Props
 DECOR3:
  	Inherits: ^CivBuilding
@@ -45,7 +45,7 @@ DECOR3:
 		HP: 20000
 	Targetable@Disguise:
 		TargetTypes: Disguise
-	EditorTilesetFilter:
+	MapEditorData:
 		Categories: Props
 DECOR4:
  	Inherits: ^CivBuilding
@@ -61,7 +61,7 @@ DECOR4:
 		HP: 5000
 	Targetable@Disguise:
 		TargetTypes: Disguise
-	EditorTilesetFilter:
+	MapEditorData:
 		Categories: Props
 DECOR5:
  	Inherits: ^CivBuilding
@@ -77,7 +77,7 @@ DECOR5:
 		HP: 10000
 	Targetable@Disguise:
 		TargetTypes: Disguise
-	EditorTilesetFilter:
+	MapEditorData:
 		Categories: Props
 DECOR6:
  	Inherits: ^CivBuilding
@@ -93,7 +93,7 @@ DECOR6:
 		HP: 5000
 	Targetable@Disguise:
 		TargetTypes: Disguise
-	EditorTilesetFilter:
+	MapEditorData:
 		Categories: Props
 DECOR7:
  	Inherits: ^CivBuilding
@@ -109,7 +109,7 @@ DECOR7:
 		HP: 5000
 	Targetable@Disguise:
 		TargetTypes: Disguise
-	EditorTilesetFilter:
+	MapEditorData:
 		Categories: Props
 DECOR8:
  	Inherits: ^CivBuilding
@@ -125,7 +125,7 @@ DECOR8:
 		HP: 13000
 	Targetable@Disguise:
 		TargetTypes: Disguise
-	EditorTilesetFilter:
+	MapEditorData:
 		Categories: Props
 DECOR9:
  	Inherits: ^CivBuilding
@@ -142,7 +142,7 @@ DECOR9:
 		HP: 10000
 	Targetable@Disguise:
 		TargetTypes: Disguise
-	EditorTilesetFilter:
+	MapEditorData:
 		Categories: Props
 DECOR10:
  	Inherits: ^CivBuilding
@@ -160,7 +160,7 @@ DECOR10:
 		HP: 5000
 	Targetable@Disguise:
 		TargetTypes: Disguise
-	EditorTilesetFilter:
+	MapEditorData:
 		Categories: Props
 DECOR11:
  	Inherits: ^CivBuilding
@@ -178,7 +178,7 @@ DECOR11:
 		HP: 5000
 	Targetable@Disguise:
 		TargetTypes: Disguise
-	EditorTilesetFilter:
+	MapEditorData:
 		Categories: Props
 DECOR12:
  	Inherits: ^CivBuilding
@@ -196,7 +196,7 @@ DECOR12:
 		HP: 5000
 	Targetable@Disguise:
 		TargetTypes: Disguise
-	EditorTilesetFilter:
+	MapEditorData:
 		Categories: Props
 DECOR13:
  	Inherits: ^CivBuilding
@@ -214,7 +214,7 @@ DECOR13:
 		HP: 5000
 	Targetable@Disguise:
 		TargetTypes: Disguise
-	EditorTilesetFilter:
+	MapEditorData:
 		Categories: Props
 DECOR14:
  	Inherits: ^CivBuilding
@@ -232,7 +232,7 @@ DECOR14:
 		HP: 5000
 	Targetable@Disguise:
 		TargetTypes: Disguise
-	EditorTilesetFilter:
+	MapEditorData:
 		Categories: Props
 DECOR15:
  	Inherits: ^CivBuilding
@@ -250,7 +250,7 @@ DECOR15:
 		HP: 5000
 	Targetable@Disguise:
 		TargetTypes: Disguise
-	EditorTilesetFilter:
+	MapEditorData:
 		Categories: Props
 DECOR16:
  	Inherits: ^CivBuilding
@@ -268,5 +268,5 @@ DECOR16:
 		HP: 5000
 	Targetable@Disguise:
 		TargetTypes: Disguise
-	EditorTilesetFilter:
+	MapEditorData:
 		Categories: Props

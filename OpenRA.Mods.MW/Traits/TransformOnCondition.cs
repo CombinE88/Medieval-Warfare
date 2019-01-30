@@ -107,7 +107,7 @@ namespace OpenRA.Mods.MW.Traits
                     var a = w.CreateActor(info.IntoActor, init);
 
                     if (selected)
-                        w.Selection.Add(w, a);
+                        w.Selection.Add(a);
                     if (controlgroup.HasValue)
                         w.Selection.AddToControlGroup(a, controlgroup.Value);
                 });

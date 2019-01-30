@@ -635,7 +635,7 @@ GRAFENCE:
 SPPOOL:
 	Inherits: ^MWUndeadBuilding
 	Inherits@Hitshape: ^2x2Shape
-	EditorTilesetFilter:
+	MapEditorData:
 		Categories: Undead
 	Armor:
 		Type: Concrete
@@ -699,7 +699,7 @@ SPPOOL:
 CRYPT:
 	Inherits: ^MWUndeadBuilding
 	Inherits@Hitshape: ^2x2Shape
-	EditorTilesetFilter:
+	MapEditorData:
 		Categories: Undead
 	Armor:
 		Type: Concrete
@@ -746,6 +746,7 @@ CRYPT:
 		LowPowerSlowdown: 3
 		ReadyAudio:
 	ProductionBar:
+		ProductionType: MInfantry.ded
 	ProvidesPrerequisite@buildingname:
 	CritterSpawner:
 		Actors: gstone1, gstone2, gstone3
@@ -757,7 +758,7 @@ CRYPT:
 MAUSO:
 	Inherits: ^MWUndeadBuilding
 	Inherits@Hitshape: ^2x2Shape
-	EditorTilesetFilter:
+	MapEditorData:
 		Categories: Undead
 	Armor:
 		Type: Concrete
@@ -808,6 +809,7 @@ MAUSO:
 		LowPowerSlowdown: 3
 		ReadyAudio:
 	ProductionBar:
+		ProductionType: MSiege.ded
 	ProvidesPrerequisite@buildingname:
 	AirstrikePower:
 		Icon: coffinicon
@@ -835,7 +837,7 @@ MAUSO:
 LIBRA:
 	Inherits: ^MWUndeadBuilding
 	Inherits@Hitshape: ^2x2Shape
-	EditorTilesetFilter:
+	MapEditorData:
 		Categories: Undead
 	Armor:
 		Type: Concrete
@@ -891,7 +893,7 @@ LIBRA:
 TOMB:
 	Inherits: ^MWUndeadBuilding
 	Inherits@Hitshape: ^3x2Shape
-	EditorTilesetFilter:
+	MapEditorData:
 		Categories: Undead
 	Armor:
 		Type: Concrete
@@ -933,11 +935,12 @@ TOMB:
 		LowPowerSlowdown: 3
 		ReadyAudio:
 	ProductionBar:
+		ProductionType: MVehicle.ded
 	ProvidesPrerequisite@buildingname:
 HELLGATE:
 	Inherits: ^MWUndeadBuilding
 	Inherits@Hitshape: ^2x2Shape
-	EditorTilesetFilter:
+	MapEditorData:
 		Categories: Undead
 	Armor:
 		Type: Concrete
@@ -970,7 +973,7 @@ HELLGATE:
 DEDREF:
 	Inherits: ^MWUndeadBuilding
 	Inherits@Hitshape: ^2x2Shape
-	EditorTilesetFilter:
+	MapEditorData:
 		Categories: Undead
 	Armor:
 		Type: Concrete
@@ -1053,7 +1056,7 @@ GSTONE1:
 		RequiresCondition: validc
 	ProvidesLivingspace:
 		Ammount: 5
-	EditorTilesetFilter:
+	MapEditorData:
 		ExcludeTilesets: TEMPERATE, SNOW, DESERT, WINTER
 		Categories: 
 	#anti error fix
@@ -1086,7 +1089,7 @@ GSTONE2:
 		RequiresCondition: validc
 	ProvidesLivingspace:
 		Ammount: 5
-	EditorTilesetFilter:
+	MapEditorData:
 		ExcludeTilesets: TEMPERATE, SNOW, DESERT, WINTER
 		Categories: 
 	#anti error fix
@@ -1119,7 +1122,7 @@ GSTONE3:
 		RequiresCondition: validc
 	ProvidesLivingspace:
 		Ammount: 5
-	EditorTilesetFilter:
+	MapEditorData:
 		ExcludeTilesets: TEMPERATE, SNOW, DESERT, WINTER
 		Categories: 
 	#anti error fix
@@ -1152,7 +1155,7 @@ COFFIN:
 		RequiresCondition: validc
 	ProvidesLivingspace:
 		Ammount: 8
-	EditorTilesetFilter:
+	MapEditorData:
 		ExcludeTilesets: TEMPERATE, SNOW, DESERT, WINTER
 		Categories: 
 	#anti error fix
@@ -1217,7 +1220,7 @@ GARG:
 	Inherits@AUTOTARGET: ^AutoTargetGround
 	Inherits@Hitshape: ^1x1Shape
 	WithMakeAnimation:
-	EditorTilesetFilter:
+	MapEditorData:
 		Categories: Defense
 	Valued:
 		Cost: 1100

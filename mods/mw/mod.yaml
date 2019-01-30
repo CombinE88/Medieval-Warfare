@@ -1,6 +1,8 @@
 Metadata:
 	Title: Medieval Warfare
 	Version: release-20180218
+	Website: https://www.openra.net
+	WebIcon32: https://www.openra.net/images/icons/ra_32x32.png
 
 PackageFormats: Mix
 
@@ -157,6 +159,7 @@ Assemblies:
 
 ChromeLayout:
 	mw|chrome/mainmenu.yaml
+	mw|chrome/playerprofile.yaml
 	mw|chrome/multiplayer-browser.yaml
 	mw|chrome/multiplayer-browserpanels.yaml
 	mw|chrome/multiplayer-createserver.yaml

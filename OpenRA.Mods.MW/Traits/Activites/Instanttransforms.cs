@@ -59,8 +59,7 @@ namespace OpenRA.Mods.MW.Activities
 
             // Prevent deployment in bogus locations
             var transforms = self.TraitOrDefault<Transforms>();
-            var building = self.TraitOrDefault<Building>();
-            if ((transforms != null && !transforms.CanDeploy()) || (building != null && !building.Lock()))
+            if ((transforms != null && !transforms.CanDeploy()))
             {
                 Cancel(self, true);
                 return NextActivity;
@@ -138,7 +137,7 @@ namespace OpenRA.Mods.MW.Activities
                     nt.AfterTransform(a);
 
                 if (selected)
-                    w.Selection.Add(w, a);
+                    w.Selection.Add(a);
 
                 if (controlgroup.HasValue)
                     w.Selection.AddToControlGroup(a, controlgroup.Value);

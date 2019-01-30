@@ -82,7 +82,7 @@
 		XOffset: 5
 		FullCapacity: 25
 	HitShape:
-	EditorTilesetFilter:
+	MapEditorData:
 		Categories: Construction Sites
 	OwnerLostAction:
 		Action: Kill

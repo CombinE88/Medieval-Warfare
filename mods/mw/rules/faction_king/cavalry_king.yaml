@@ -74,7 +74,8 @@ KINGROSS:
 		Step: 500
 		HealIfBelow: 160
 		DamageCooldown: 200 
-	AnnounceOnBuild:
+	VoiceAnnouncement:
+		Voice: Build
 	AnnounceOnKill:
 	ProvidesPrerequisite:
 		Prerequisite: king  

@@ -50,6 +50,11 @@ namespace OpenRA.Mods.MW.Traits.BuildingTraits
 			}).ToList();
 		}
 
+		public new void BeginProduction(ProductionItem item, bool hasPriority)
+		{
+			base.BeginProduction(item, hasPriority);
+		}
+
 		public override int GetBuildTime(ActorInfo unit, BuildableInfo bi)
 		{
 			// Workaround to make above Tick receive a 0 for the production time.

@@ -12,6 +12,7 @@ PREYCOLYTE:
 	#anti error fix
 	ExternalCondition@whisper:
 		Condition: whisper
+	CaptureManager:
 	Captures:
 		CaptureTypes: building
 		PlayerExperience: 50
@@ -686,7 +687,7 @@ VAMPFLYING:
 		Weapon: VampAttackAA
 		LocalOffset: 100,0,400
 		FireDelay: 4
-	AttackHeli:
+	AttackAircraft:
 		FacingTolerance: 20
 	RenderSprites:
 		Image: vamp
@@ -1263,7 +1264,7 @@ GSPLACE1A:
 		Sequence: idlea
 	ProvidesLivingspace:
 		Ammount: 3
-	EditorTilesetFilter:
+	MapEditorData:
 		Categories: Undead
 	RenderSprites:
 		Image: gstone1
@@ -1274,7 +1275,7 @@ GSPLACE1B:
 		Sequence: idleb
 	ProvidesLivingspace:
 		Ammount: 3
-	EditorTilesetFilter:
+	MapEditorData:
 		Categories: Undead
 	RenderSprites:
 		Image: gstone1
@@ -1285,7 +1286,7 @@ GSPLACE1C:
 		Sequence: idlec
 	ProvidesLivingspace:
 		Ammount: 3
-	EditorTilesetFilter:
+	MapEditorData:
 		Categories: Undead
 	RenderSprites:
 		Image: gstone1
@@ -1296,7 +1297,7 @@ GSPLACE2A:
 		Sequence: idlea
 	ProvidesLivingspace:
 		Ammount: 3
-	EditorTilesetFilter:
+	MapEditorData:
 		Categories: Undead
 	RenderSprites:
 		Image: gstone2
@@ -1307,7 +1308,7 @@ GSPLACE2B:
 		Sequence: idleb
 	ProvidesLivingspace:
 		Ammount: 3
-	EditorTilesetFilter:
+	MapEditorData:
 		Categories: Undead
 	RenderSprites:
 		Image: gstone2
@@ -1318,7 +1319,7 @@ GSPLACE2C:
 		Sequence: idlec
 	ProvidesLivingspace:
 		Ammount: 3
-	EditorTilesetFilter:
+	MapEditorData:
 		Categories: Undead
 	RenderSprites:
 		Image: gstone2
@@ -1329,7 +1330,7 @@ GSPLACE3A:
 		Sequence: idlea
 	ProvidesLivingspace:
 		Ammount: 3
-	EditorTilesetFilter:
+	MapEditorData:
 		Categories: Undead
 	RenderSprites:
 		Image: gstone3
@@ -1340,7 +1341,7 @@ GSPLACE3B:
 		Sequence: idleb
 	ProvidesLivingspace:
 		Ammount: 3
-	EditorTilesetFilter:
+	MapEditorData:
 		Categories: Undead
 	RenderSprites:
 		Image: gstone3
@@ -1351,7 +1352,7 @@ GSPLACE3C:
 		Sequence: idlec
 	ProvidesLivingspace:
 		Ammount: 3
-	EditorTilesetFilter:
+	MapEditorData:
 		Categories: Undead
 	RenderSprites:
 		Image: gstone3
@@ -1364,7 +1365,7 @@ CFFPLACE1A:
 		Sequence: idlea
 	ProvidesLivingspace:
 		Ammount: 5
-	EditorTilesetFilter:
+	MapEditorData:
 		Categories: Undead
 CFFPLACE1B:
 	Inherits: ^Gravestone
@@ -1375,7 +1376,7 @@ CFFPLACE1B:
 		Sequence: idleb
 	ProvidesLivingspace:
 		Ammount: 5
-	EditorTilesetFilter:
+	MapEditorData:
 		Categories: Undead
 CFFPLACE1C:
 	Inherits: ^Gravestone
@@ -1386,7 +1387,7 @@ CFFPLACE1C:
 		Sequence: idlec
 	ProvidesLivingspace:
 		Ammount: 5
-	EditorTilesetFilter:
+	MapEditorData:
 		Categories: Undead
 SOUL:
 	Inherits@1: ^ExistsInWorld
@@ -1397,7 +1398,7 @@ SOUL:
 	Targetable:
 		TargetTypes: Soul
 	WithSpriteBody:
-	EditorTilesetFilter:
+	MapEditorData:
 		Categories: Undead
 	Tooltip:
 		Name: Soul 
@@ -1434,7 +1435,7 @@ SOULS:
 	Targetable:
 		TargetTypes: Souls
 	WithSpriteBody:
-	EditorTilesetFilter:
+	MapEditorData:
 		Categories: Undead
 	Tooltip:
 		Name: Small Soul
