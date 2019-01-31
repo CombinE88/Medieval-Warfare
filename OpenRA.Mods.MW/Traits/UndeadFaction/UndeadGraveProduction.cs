@@ -44,8 +44,6 @@ namespace OpenRA.Mods.MW.Traits
         public override bool Produce(Actor self, ActorInfo producee, string productionType, TypeDictionary inits)
         {
             var newexit = self.Info.TraitInfos<ExitInfo>().FirstOrDefault();
-            var person = producee.TraitInfo<PersonValuedInfo>();
-            var numb = person.ActorCount;
 
             var devMode = self.Owner.PlayerActor.TraitOrDefault<DeveloperMode>();
 
@@ -56,9 +54,6 @@ namespace OpenRA.Mods.MW.Traits
                     self.Owner.Faction.InternalName);
                 return true;
             }
-
-            if (!producee.HasTraitInfo<PersonValuedInfo>() || self.Owner.PlayerActor.Trait<PlayerCivilization>().FreePopulation < numb)
-                return false;
 
             self.World.AddFrameEndTask(w => DoProduction(self, producee, newexit, productionType, inits));
             Game.Sound.PlayNotification(self.World.Map.Rules, self.Owner, "Speech", info.ReadyAudio,

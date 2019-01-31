@@ -60,12 +60,10 @@ SPLIT5:
 	Inherits: SPLIT3
 	HitShape:
 	WithFreeSpawnableActor@Lumberer:
-		TrainingActors:
 		SpawnActor: mwlumberer
 		UseConverting: false
 		Offset: 0,512, 0
 		MoveOffset: 0,1
-		FindRadius: 100
 		Lasso: 15c0
 		ForceLasso: 20c0
 		Sticky: true

@@ -23,19 +23,19 @@ using OpenRA.Traits;
 namespace OpenRA.Mods.MW.Traits
 {
     [Desc("A actor has to enter the building before the unit spawns.")]
-    public class UndeadCtryptProductionInfo : ProductionInfo, Requires<ExitInfo>
+    public class UndeadCryptProductionInfo : ProductionInfo, Requires<ExitInfo>
     {
         public readonly string ReadyAudio = "UnitReady";
 
-        public override object Create(ActorInitializer init) { return new UndeadCtryptProduction(init, this); }
+        public override object Create(ActorInitializer init) { return new UndeadCryptProduction(init, this); }
     }
 
-    class UndeadCtryptProduction : Production
+    class UndeadCryptProduction : Production
     {
-        readonly UndeadCtryptProductionInfo info;
+        readonly UndeadCryptProductionInfo info;
         readonly Lazy<RallyPoint> rp;
 
-        public UndeadCtryptProduction(ActorInitializer init, UndeadCtryptProductionInfo info)
+        public UndeadCryptProduction(ActorInitializer init, UndeadCryptProductionInfo info)
             : base(init, info)
         {
             rp = Exts.Lazy(() => init.Self.IsDead ? null : init.Self.TraitOrDefault<RallyPoint>());
@@ -45,8 +45,6 @@ namespace OpenRA.Mods.MW.Traits
         public override bool Produce(Actor self, ActorInfo producee, string productionType, TypeDictionary inits)
         {
             var newexit = self.Info.TraitInfos<ExitInfo>().FirstOrDefault();
-            var person = producee.TraitInfo<PersonValuedInfo>();
-            var numb = person.ActorCount;
 
             var devMode = self.Owner.PlayerActor.TraitOrDefault<DeveloperMode>();
 
@@ -57,9 +55,6 @@ namespace OpenRA.Mods.MW.Traits
                     self.Owner.Faction.InternalName);
                 return true;
             }
-
-            if (!producee.HasTraitInfo<PersonValuedInfo>() || self.Owner.PlayerActor.Trait<PlayerCivilization>().FreePopulation < numb)
-                return false;
 
             self.World.AddFrameEndTask(w => DoProduction(self, producee, newexit, productionType, inits));
             Game.Sound.PlayNotification(self.World.Map.Rules, self.Owner, "Speech", info.ReadyAudio,

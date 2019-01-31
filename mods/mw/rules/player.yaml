@@ -14,6 +14,7 @@ Player:
 	MissionObjectives:
 	ConquestVictoryConditions:
 	PowerManager:
+		SpeechNotification: LowPower
 	AllyRepair:
 	PlayerResources:
 		SelectableCash: 5000, 7500, 10000, 20000
@@ -47,13 +48,6 @@ Player:
 	PlayerStatistics:
 	FrozenActorLayer:
 	PlaceBeacon:
-	PlayerCivilization:
-		Delay: 8
-		AlivePeasants: 10
-		SpawnModifier: 2
-		SpecialModifier: 
-			nod: 50
-		Peasants: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 	GrantConditionOnPrerequisiteManager:
 	ResourceStorageWarning:
 	PlayerExperience:

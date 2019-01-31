@@ -738,12 +738,12 @@ CRYPT:
 		SpawnOffset: -298,638,0
 		ExitCell: 0,2
 	RallyPoint:
-	UndeadCtryptProduction:
+	UndeadCryptProduction:
 		Produces: MInfantry.ded
 	ProductionQueue:
 		Type: MInfantry.ded
 		Group: Infantry
-		LowPowerSlowdown: 3
+		LowPowerModifier: 400
 		ReadyAudio:
 	ProductionBar:
 		ProductionType: MInfantry.ded
@@ -806,7 +806,7 @@ MAUSO:
 	ProductionQueue:
 		Type: MSiege.ded
 		Group: Aircraft
-		LowPowerSlowdown: 3
+		LowPowerModifier: 400
 		ReadyAudio:
 	ProductionBar:
 		ProductionType: MSiege.ded
@@ -1054,8 +1054,8 @@ GSTONE1:
 		StartSequence: makec
 		Sequence: idlec
 		RequiresCondition: validc
-	ProvidesLivingspace:
-		Ammount: 5
+	Power:
+		Amount: 5
 	MapEditorData:
 		ExcludeTilesets: TEMPERATE, SNOW, DESERT, WINTER
 		Categories: 
@@ -1087,8 +1087,8 @@ GSTONE2:
 		StartSequence: makec
 		Sequence: idlec
 		RequiresCondition: validc
-	ProvidesLivingspace:
-		Ammount: 5
+	Power:
+		Amount: 5
 	MapEditorData:
 		ExcludeTilesets: TEMPERATE, SNOW, DESERT, WINTER
 		Categories: 
@@ -1120,8 +1120,8 @@ GSTONE3:
 		StartSequence: makec
 		Sequence: idlec
 		RequiresCondition: validc
-	ProvidesLivingspace:
-		Ammount: 5
+	Power:
+		Amount: 5
 	MapEditorData:
 		ExcludeTilesets: TEMPERATE, SNOW, DESERT, WINTER
 		Categories: 
@@ -1153,8 +1153,8 @@ COFFIN:
 		StartSequence: makec
 		Sequence: idlec
 		RequiresCondition: validc
-	ProvidesLivingspace:
-		Ammount: 8
+	Power:
+		Amount: 8
 	MapEditorData:
 		ExcludeTilesets: TEMPERATE, SNOW, DESERT, WINTER
 		Categories: 

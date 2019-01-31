@@ -23,12 +23,6 @@ namespace OpenRA.Mods.MW.Traits
     [Desc("A actor has to enter the building before the unit spawns.")]
     public class WithFreeSpawnableActorInfo : ConditionalTraitInfo
     {
-        [Desc("Valid actortypes wich can pe used to produce/ convert.")]
-        public readonly HashSet<string> TrainingActors = new HashSet<string>();
-
-        [Desc("The range in cells where should be looked for.")]
-        public readonly int FindRadius = 15;
-
         [Desc("Actortype to be spawned.")]
         public readonly string SpawnActor;
 
@@ -53,8 +47,6 @@ namespace OpenRA.Mods.MW.Traits
         [Desc("How Far in Cells can the actor go until he is forced to instantly Return.")]
         public readonly WDist ForceLasso = WDist.FromCells(20);
 
-        public readonly bool UseConverting = true;
-
         public readonly bool ReturnOnDeath = false;
 
         public override object Create(ActorInitializer init) { return new WithFreeSpawnableActor(init, this); }
@@ -66,7 +58,6 @@ namespace OpenRA.Mods.MW.Traits
         private int ticker;
         private Actor respawnActor = null;
         private int idlecount;
-        private bool bk = true;
 
         public WithFreeSpawnableActor(ActorInitializer init, WithFreeSpawnableActorInfo info) : base(info)
         {
@@ -94,7 +85,7 @@ namespace OpenRA.Mods.MW.Traits
 
         void ITick.Tick(Actor self)
         {
-            if (IsTraitDisabled || bk)
+            if (IsTraitDisabled)
                 return;
 
             if (info.Sticky && idlecount-- <= 0)
@@ -140,8 +131,6 @@ namespace OpenRA.Mods.MW.Traits
                 };
                 respawnActor.CancelActivity();
                 respawnActor.QueueActivity(new RemoveSelf());
-                if (info.UseConverting)
-                    self.World.CreateActor(info.TrainingActors.ElementAt(self.World.SharedRandom.Next(info.TrainingActors.Count)), td);
             }
         }
 
@@ -185,35 +174,8 @@ namespace OpenRA.Mods.MW.Traits
 
         public void SpawnNewActor(Actor self)
         {
-            if (!self.World.Map.Rules.Actors[Info.SpawnActor].HasTraitInfo<PersonValuedInfo>())
-            {
-                CreateActorSpawn(self);
-                ticker = info.RespawnTime;
-                return;
-            }
-
-            var owner = self.Owner;
-
-            if (!owner.PlayerActor.Info.HasTraitInfo<PlayerCivilizationInfo>())
-            {
-                throw new System.Exception("PlayerCivilization Trait not found! Player must have PlayerCivilization trait!");
-            }
-
-            if (owner.PlayerActor.Trait<PlayerCivilization>().FreePopulation < self.World.Map.Rules
-                    .Actors[Info.SpawnActor].TraitInfo<PersonValuedInfo>().ActorCount)
-            {
-                ticker = 50;
-                return;
-            }
-
             ticker = info.RespawnTime;
             CreateActorSpawn(self);
         }
-
-        // TODO use conditions
-        /*void INotifyBuildComplete.BuildingComplete(Actor self)
-        {
-            bk = false;
-        }*/
     }
 }

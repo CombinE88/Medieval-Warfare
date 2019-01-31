@@ -154,19 +154,19 @@ lodge:
 		AddExtension: false
 	icon: lodgeicon.shp
 		AddExtension: False
-	make1: 
+	make0: 
 		Start: 1
 		ZOffset: -25
 		Offset: 0,-12
-	make2: 
+	make1: 
 		Start: 2
 		ZOffset: -25
 		Offset: 0,-12
-	make3: 
+	make2: 
 		Start: 3
 		ZOffset: -25
 		Offset: 0,-12
-	make4: 
+	make3: 
 		Start: 4
 		ZOffset: -25
 		Offset: 0,-12
@@ -190,27 +190,27 @@ procnew:
 		AddExtension: false
 	icon: refnewicon.shp
 		AddExtension: False
-	make1: procnewmake
+	make0: procnewmake
 		Start: 0
 		ZOffset: -25
 		Offset: 2,4
-	make2: procnewmake
+	make1: procnewmake
 		Start: 1
 		ZOffset: -25
 		Offset: 2,4
-	make3: procnewmake
+	make2: procnewmake
 		Start: 2
 		ZOffset: -25
 		Offset: 2,4
-	make4: procnewmake
+	make3: procnewmake
 		Start: 3
 		ZOffset: -25
 		Offset: 2,4
-	make5: procnewmake
+	make4: procnewmake
 		Start: 4
 		ZOffset: -25
 		Offset: 2,4
-	make6: procnewmake
+	make5: procnewmake
 		Start: 5
 		ZOffset: -25
 		Offset: 2,4
@@ -296,6 +296,10 @@ newfact:
 		Length: 4
 		Tick: 120
 		ZOffset: -1024
+	make: kingfact0make
+		Length: *
+		Tick: 120
+		Offset: 0, -11
 	make0: kingfact0make
 		Length: *
 		Tick: 120

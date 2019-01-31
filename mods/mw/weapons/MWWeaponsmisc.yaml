@@ -109,14 +109,14 @@ Repair:
 	ReloadDelay: 20
 	Range: 1c800
 	Report: repair01.aud
-	ValidTargets: Siege
+	ValidTargets: Repairable
 	InvalidTargets: Air
 	Projectile: Bullet
 		Speed: 1c682
 	Warhead@1Dam: SpreadDamage
 		Spread: 213
 		Damage: -360
-		ValidTargets: Siege
+		ValidTargets: Repairable
 		InvalidTargets: Air
 SetFire:
 	ReloadDelay: 110

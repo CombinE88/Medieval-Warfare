@@ -132,8 +132,8 @@ ROSS2:
 	Selectable:
 		Bounds: 26,34,0,-6
 	SelectionDecorations:
-	PersonValued:
-		ActorCount: 1
+	Power:
+		Amount: -1
 	Targetable@CombatRole:
 		TargetTypes: RegularCavalry
 ROSS5:
@@ -205,8 +205,8 @@ ROSS5:
 		DamageCooldown: 200 
 	Voiced:
 		VoiceSet: HeavyCavalVoice
-	PersonValued:
-		ActorCount: 2
+	Power:
+		Amount: -2
 	Targetable@CombatRole:
 		TargetTypes: HeavyCavalry
 ROSS4B:
@@ -258,7 +258,7 @@ ROSS4B:
 	Selectable:
 		Bounds: 26,34,0,-6
 	SelectionDecorations:
-	PersonValued:
-		ActorCount: 1
+	Power:
+		Amount: -1
 	Targetable@CombatRole:
 		TargetTypes: LightCavalry

@@ -9,6 +9,7 @@
 */
 #endregion
 
+using OpenRA.Mods.Common.Traits;
 using OpenRA.Mods.Common.Widgets;
 using OpenRA.Traits;
 using OpenRA.Widgets;
@@ -35,19 +36,19 @@ namespace OpenRA.Mods.MW.Widgets.Logic
 
             pop.GetText = () => displayLabel;
 
-            displayResources = player.PlayerActor.Trait<PlayerCivilization>().FreePopulation > 0 ? player.PlayerActor.Trait<PlayerCivilization>().FreePopulation : 0;
-            displaymaxbeds = player.PlayerActor.Trait<PlayerCivilization>().MaxLivingspacevar;
+            displayResources = player.PlayerActor.Trait<PowerManager>().PowerProvided - player.PlayerActor.Trait<PowerManager>().PowerDrained;
+            displaymaxbeds = player.PlayerActor.Trait<PowerManager>().PowerProvided;
         }
 
         public override void Tick()
         {
-            displayResources = player.PlayerActor.Trait<PlayerCivilization>().FreePopulation > 0 ? player.PlayerActor.Trait<PlayerCivilization>().FreePopulation : 0;
-            displaymaxbeds = player.PlayerActor.Trait<PlayerCivilization>().MaxLivingspacevar;
+            displayResources = player.PlayerActor.Trait<PowerManager>().PowerProvided - player.PlayerActor.Trait<PowerManager>().PowerDrained;
+            displaymaxbeds = player.PlayerActor.Trait<PowerManager>().PowerProvided;
 
             if (player.Faction.InternalName != "ded")
-                displayLabel = "Free Beds: " + cashLabel.F(displayResources + " ( " + displaymaxbeds + " )");
+                displayLabel = "Free Beds: " + cashLabel.F((displayResources >= 0 ? displayResources : 0) + " ( " + displaymaxbeds + " )");
             else
-                displayLabel = "Free Graves: " + cashLabel.F(displayResources + " ( " + displaymaxbeds + " )");
+                displayLabel = "Free Graves: " + cashLabel.F((displayResources >= 0 ? displayResources : 0) + " ( " + displaymaxbeds + " )");
         }
     }
 }

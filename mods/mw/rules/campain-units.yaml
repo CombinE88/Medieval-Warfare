@@ -168,8 +168,8 @@ BARGEN:
 		VoiceSet: CommandoVoice
 	AttackMove:
 		Voice: Attack
-	PersonValued:
-		ActorCount: 1
+	Power:
+		Amount: 1
 	Targetable@CombatRole:
 		TargetTypes: Heavy
 	AutoTargetPriority@Counter:
@@ -244,8 +244,8 @@ SELE:
 		VoiceSet: FemCommandoVoice
 	AttackMove:
 		Voice: Attack
-	PersonValued:
-		ActorCount: 1
+	Power:
+		Amount: 1
 	Targetable@CombatRole:
 		TargetTypes: Ranged, Heavy
 	Passenger:

@@ -102,8 +102,8 @@ SULB0:
 		Armament: secondaryair
 	Voiced:
 		VoiceSet: ElephantVoice
-	PersonValued:
-		ActorCount: 2
+	Power:
+		Amount: -2
 	SelfHealing@HOSPITAL:
 		PercentageStep: 1
 		Delay: 25
@@ -166,8 +166,8 @@ SULB1:
 	SpawnActorOnDeath@2:
 		Actor: SIEGERUNNER
 		Probability: 50
-	PersonValued:
-		ActorCount: 2
+	Power:
+		Amount: -2
 	Targetable@CombatRole:
 		TargetTypes: Support
 SULB1.Husk:
@@ -245,8 +245,8 @@ SULB2:
 	SpawnActorOnDeath@3:
 		Actor: SIEGERUNNER
 		Probability: 50
-	PersonValued:
-		ActorCount: 0
+	Power:
+		Amount: -4
 	Targetable@CombatRole:
 		TargetTypes: Support
 SULB2.Husk:
@@ -342,8 +342,8 @@ SULM3:
 		Actor: SULM3.Husk
 	SpawnActorOnDeath@2:
 		Actor: SULM3.manhusk
-	PersonValued:
-		ActorCount: 1
+	Power:
+		Amount: -1
 	Targetable@CombatRole:
 		TargetTypes: Flying
 SULM3.Husk:
@@ -472,8 +472,8 @@ SULB3:
 		Bounds:40,40,0,0
 	SpawnActorOnDeath@1:
 		Actor: SULB3.Husk
-	PersonValued:
-		ActorCount: 0
+	Power:
+		Amount: -0
 	Targetable@CombatRole:
 		TargetTypes: Flying
 	ThrowsShrapnel@Gears:

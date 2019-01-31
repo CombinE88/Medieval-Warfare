@@ -13,24 +13,37 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using OpenRA.Mods.Common.Traits;
+using OpenRA.Traits;
 
 namespace OpenRA.Mods.MW.Traits.BuildingTraits
 {
 	[Desc("This special production queue implements a fake AllQueued, used to instantly place self constructing buildings.")]
 	public class SelfConstructingProductionQueueInfo : ProductionQueueInfo
 	{
-		public override object Create(ActorInitializer init) { return new SelfConstructingProductionQueue(init, init.Self, this); }
+		public override object Create(ActorInitializer init) { return new SelfConstructingProductionQueue(init, init.Self.Owner.PlayerActor, this); }
 	}
 
-	public class SelfConstructingProductionQueue : ProductionQueue
+	public class SelfConstructingProductionQueue : ProductionQueue, INotifyOwnerChanged
 	{
 		private bool expectFakeProductionItemRequest;
-		private PlayerResources playerResources;
+		private new PlayerResources playerResources;
 
 		public SelfConstructingProductionQueue(ActorInitializer init, Actor playerActor,
 			SelfConstructingProductionQueueInfo info) : base(init, playerActor, info)
 		{
 			playerResources = playerActor.TraitOrDefault<PlayerResources>();
+		}
+		
+		void INotifyOwnerChanged.OnOwnerChanged(Actor self, Player oldOwner, Player newOwner)
+		{
+			ClearQueue();
+
+			playerResources = newOwner.PlayerActor.Trait<PlayerResources>();
+			developerMode = newOwner.PlayerActor.Trait<DeveloperMode>();
+
+			// Regenerate the producibles and tech tree state
+			oldOwner.PlayerActor.Trait<TechTree>().Remove(this);
+			newOwner.PlayerActor.Trait<TechTree>().Update();
 		}
 
 		public override IEnumerable<ProductionItem> AllQueued()
@@ -42,7 +55,7 @@ namespace OpenRA.Mods.MW.Traits.BuildingTraits
 				var item = new ProductionItem(this, buildableItem.Name, 0, null, null);
 
 				// Required for GetBuildTime, else the production wont be ready after below Tick().
-				expectFakeProductionItemRequest = true;
+				expectFakeProductionItemRequest =  	true;
 
 				// Tick once, so the item is done.
 				item.Tick(playerResources);

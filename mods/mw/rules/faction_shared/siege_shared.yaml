@@ -98,8 +98,8 @@ SUPPWGNL:
 		Actor: SUPPWGNL.Husk 
 	Health:
 		HP: 120000
-	PersonValued:
-		ActorCount: 3
+	Power:
+		Amount: 0
 	Targetable@CombatRole:
 		TargetTypes: Support
 	WithRangeCircle:
@@ -200,8 +200,8 @@ MOBTRIB:
 		Prerequisites: anycastle, ~global-castlewall
 	Health:
 		HP: 20000
-	PersonValued:
-		ActorCount: 3
+	Power:
+		Amount: -3
 	Targetable@CombatRole:
 		TargetTypes: Support
 	WithRangeCircle:
@@ -264,5 +264,5 @@ EHARVXL:
 		Bounds: 30,30,0,-5
 		Priority: 7
 	SelectionDecorations:
-	PersonValued:
-		ActorCount: 1
+	Power:
+		Amount: -1

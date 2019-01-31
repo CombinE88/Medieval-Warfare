@@ -46,8 +46,8 @@ SIEGE1:
 	SpawnActorOnDeath@2:
 		Actor: SIEGERUNNER
 		Probability: 50
-	PersonValued:
-		ActorCount: 2
+	Power:
+		Amount: -2
 	Targetable@CombatRole:
 		TargetTypes: Support
 	Voiced:
@@ -168,8 +168,8 @@ SIEGE4:
 	SpawnActorOnDeath@6:
 		Actor: SIEGERUNNER
 		Probability: 33
-	PersonValued:
-		ActorCount: 3
+	Power:
+		Amount: -3
 	Targetable@CombatRole:
 		TargetTypes: HeavyCavalry      
 SIEGE99:
@@ -208,8 +208,8 @@ SIEGE99:
 		InitialUnits: e3newv2,e3newv2,e3newv2,e3newv2,e3newv2,e2new,e2new,e2new,e2new,e2new,e4new,e4new,e4new,e4new,e4new
 		Types: Infantry, Archer
 		EjectOnDeath: True
-	PersonValued:
-		ActorCount: 0
+	Power:
+		Amount: -0
 	NewDisguise:
 	DisguiseChargeBar: 
 	Targetable@CombatRole:

@@ -219,8 +219,8 @@ E2NEWV2:
 		Type: Light
 	Voiced:
 		VoiceSet: GDIPikeVoice
-	PersonValued:
-		ActorCount: 1
+	Power:
+		Amount: -1
 	Targetable@CombatRole:
 		TargetTypes: Light
 E3NEW:
@@ -263,8 +263,8 @@ E3NEW:
 		Type: Heavy
 	Voiced:
 		VoiceSet: GDIKnightVoice
-	PersonValued:
-		ActorCount: 1
+	Power:
+		Amount: -1
 	Targetable@CombatRole:
 		TargetTypes: Heavy
 	AutoTargetPriority@Counter:
@@ -330,8 +330,8 @@ E4NEWV2:
 		CargoType: Archer
 	Voiced:
 		VoiceSet: GDIArcherVoice
-	PersonValued:
-		ActorCount: 1
+	Power:
+		Amount: -1
 	Targetable@CombatRole:
 		TargetTypes: Ranged
 RMBONEW:
@@ -385,8 +385,8 @@ RMBONEW:
 	WithMuzzleOverlay:
  	Voiced:
 		VoiceSet: PaladinVoice
-	PersonValued:
-		ActorCount: 1
+	Power:
+		Amount: -1
 	Targetable@CombatRole:
 		TargetTypes: Ranged, Heavy
 NEWCOMM:
@@ -439,8 +439,8 @@ NEWCOMM:
 		Voice: Build
 	AnnounceOnKill:
 	-Crushable:
-	PersonValued:
-		ActorCount: 1
+	Power:
+		Amount: -1
 	Targetable@CombatRole:
 		TargetTypes: Heavy, Juggernaut
 	Targetable@Paralyze:

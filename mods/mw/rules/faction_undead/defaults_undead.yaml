@@ -418,8 +418,8 @@
 		Weapons: SmallStone1, SmallStone2, LargeStone1
 		Pieces: 2, 4
 		Range: 0c512, 3c0
-	ProvidesLivingspace:
-		Ammount: 1
+	Power:
+		Amount: 1
 ^CoffinAmbush:
 	Inherits: ^MWUndeadBuilding
 	Inherits@Hitshape: ^1x1Shape

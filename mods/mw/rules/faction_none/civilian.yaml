@@ -26,7 +26,7 @@ HOSP:
 	ProductionQueue:
 		Type: MHosp.Medi
 		Group: none
-		LowPowerSlowdown: 3
+		LowPowerModifier: 400
 	ProduceActorPower:
 		Icon: ddicon
 		ChargeInterval: 6250

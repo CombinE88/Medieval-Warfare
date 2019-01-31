@@ -44,21 +44,31 @@ FACTNEW:
 		Sequence: idle4
 		RequiresCondition: visibility == 4
 		Name: BodyLevel4
-	WithMakeAnimation@LV0:
+	ConditionalWithMakeAnimation@LV0:
 		Sequence: make0
 		BodyNames: BodyLevel0
-	WithMakeAnimation@LV1:
+		Condition: build-incomplete
+		RequiresCondition: visibility == 0
+	ConditionalWithMakeAnimation@LV1:
 		Sequence: make1
 		BodyNames: BodyLevel1
-	WithMakeAnimation@LV2:
+		Condition: build-incomplete
+		RequiresCondition: visibility == 1
+	ConditionalWithMakeAnimation@LV2:
 		Sequence: make2
 		BodyNames: BodyLevel2
-	WithMakeAnimation@LV3:
+		Condition: build-incomplete
+		RequiresCondition: visibility == 2
+	ConditionalWithMakeAnimation@LV3:
 		Sequence: make3
 		BodyNames: BodyLevel3
-	WithMakeAnimation@LV4:
+		Condition: build-incomplete
+		RequiresCondition: visibility == 3
+	ConditionalWithMakeAnimation@LV4:
 		Sequence: make4
 		BodyNames: BodyLevel4
+		Condition: build-incomplete
+		RequiresCondition: visibility == 4
 	DamageMultiplier@KEEPLEVEL1:
 		RequiresCondition: visibility == 1
 		Modifier: 98
@@ -106,145 +116,101 @@ FACTNEW:
 		Palette: bibs
 	Production:
 		Produces: MBuilding.GDI, MBuilding.Nod, MTech.GDI, MTech.Nod, MBuilding.SUL, MTech.SUL, MResources.GDI, MResources.Nod,MMilitary.GDI, MMilitary.Nod,MResources.SUL, MMilitary.SUL, Building4.SUL, Building4.Nod, Building4.GDI
-	ProductionQueue@GDIMBuilding:
+	SelfConstructingProductionQueue@GDIMBuilding:
 		Type: MBuilding.GDI
 		Factions: gdi
 		Group: Building
-		LowPowerSlowdown: 2
 		QueuedAudio: Building
 		ReadyAudio: ConstructionComplete
 	ProductionQueue@NodMBuilding:
 		Type: MBuilding.Nod
 		Factions: nod
 		Group: Building
-		LowPowerSlowdown: 2
 		QueuedAudio: Building
 		ReadyAudio: ConstructionComplete
-	ProductionQueue@GDIMDefence:
+	SelfConstructingProductionQueue@GDIMDefence:
 		Type: MTech.GDI
 		Factions: gdi
 		Group: Tech
-		LowPowerSlowdown: 2
 		QueuedAudio: Building
 		ReadyAudio: ConstructionComplete
 	ProductionQueue@NodMDefence:
 		Type: MTech.Nod
 		Factions: nod
 		Group: Tech
-		LowPowerSlowdown: 2
 		QueuedAudio: Building
 		ReadyAudio: ConstructionComplete
 	ProductionQueue@SULBuilding:
 		Type: MBuilding.SUL
 		Factions: sul
 		Group: Building
-		LowPowerSlowdown: 2
 		QueuedAudio: Building
 		ReadyAudio: ConstructionComplete
 	ProductionQueue@SULDefense:
 		Type: MTech.SUL
 		Factions: sul
 		Group: Tech
-		LowPowerSlowdown: 2
 		QueuedAudio: Building
 		ReadyAudio: ConstructionComplete
-	ProductionQueue@GDIMResources:
+	SelfConstructingProductionQueue@GDIMResources:
 		Type: MResources.GDI
 		Factions: gdi
 		Group: Building2
-		LowPowerSlowdown: 2
 		QueuedAudio: Building
 		ReadyAudio: ConstructionComplete
 	ProductionQueue@NodMResources:
 		Type: MResources.Nod
 		Factions: nod
 		Group: Building2
-		LowPowerSlowdown: 2
 		QueuedAudio: Building
 		ReadyAudio: ConstructionComplete
-	ProductionQueue@GDIMMilitary:
+	SelfConstructingProductionQueue@GDIMMilitary:
 		Type: MMilitary.GDI
 		Factions: gdi
 		Group: Building3
-		LowPowerSlowdown: 2
 		QueuedAudio: Building
 		ReadyAudio: ConstructionComplete
 	ProductionQueue@NodMMilitary:
 		Type: MMilitary.Nod
 		Factions: nod
 		Group: Building3
-		LowPowerSlowdown: 2
 		QueuedAudio: Building
 		ReadyAudio: ConstructionComplete
 	ProductionQueue@SULBuilding2:
 		Type: MResources.SUL
 		Factions: sul
 		Group: Building2
-		LowPowerSlowdown: 2
 		QueuedAudio: Building
 		ReadyAudio: ConstructionComplete
 	ProductionQueue@SULBuilding3:
 		Type: MMilitary.SUL
 		Factions: sul
 		Group: Building3
-		LowPowerSlowdown: 2
 		QueuedAudio: Building
 		ReadyAudio: ConstructionComplete
 	ProductionQueue@SULBuilding4:
 		Type: Building4.SUL
 		Factions: sul
 		Group: Building4
-		LowPowerSlowdown: 2
 		QueuedAudio: Building
 		ReadyAudio: ConstructionComplete
-	ProductionQueue@GDIBuilding4:
+	SelfConstructingProductionQueue@GDIBuilding4:
 		Type: Building4.GDI
 		Factions: gdi
 		Group: Building4
-		LowPowerSlowdown: 2
 		QueuedAudio: Building
 		ReadyAudio: ConstructionComplete
 	ProductionQueue@NodBuilding4:
 		Type: Building4.Nod
 		Factions: nod
 		Group: Building4
-		LowPowerSlowdown: 2
 		QueuedAudio: Building
 		ReadyAudio: ConstructionComplete
 	BaseBuilding:
-	ProductionBar@BuildingGDI:
-		ProductionType: MBuilding.GDI
-	ProductionBar@BuildingNod:
-		ProductionType: MBuilding.Nod
-	ProductionBar@DefGDI:
-		ProductionType: MTech.GDI
-	ProductionBar@DefNod:
-		ProductionType: MTech.Nod
-	ProductionBar@BuildingSUL:
-		ProductionType: MBuilding.SUL
-	ProductionBar@DefSUL:
-		ProductionType: MTech.SUL
-	ProductionBar@BuildingGDI2:
-		ProductionType: MResources.GDI
-	ProductionBar@BuildingNod2:
-		ProductionType: MResources.Nod
-	ProductionBar@BuildingSUL2:
-		ProductionType: MResources.SUL
-	ProductionBar@BuildingGDI3:
-		ProductionType: MMilitary.GDI
-	ProductionBar@BuildingNod3:
-		ProductionType: MMilitary.Nod
-	ProductionBar@BuildingSUL3:
-		ProductionType: MMilitary.SUL
-	ProductionBar@BuildingGDI4:
-		ProductionType: Building4.GDI
-	ProductionBar@BuildingNod4:
-		ProductionType: Building4.Nod
-	ProductionBar@BuildingSUL4:
-		ProductionType: Building4.SUL
 	BaseProvider:
 		Cooldown: 25
 		Range: 14c0
+		RequiresCondition: !build-incomplete
 	ProvidesPrerequisite@buildingname:		
 	WithDeathAnimation:
 		DeathSequencePalette: raplayer
@@ -255,10 +221,11 @@ FACTNEW:
 	Targetable:
 		TargetTypes: Ground, C4, Structure, Wanderer, Laborer, BaseCenter, Material
 	ProvidesRadar:
-	ProvidesLivingspace:
-		Ammount: 8
-		SpawnOffset: -213,554,0
-		ExitCell: 1,2
+	Sellable:
+		RequiresCondition: !build-incomplete
+	Power:
+		Amount: 8
+		RequiresCondition: !build-incomplete
 	StoresResources:
 		PipColor: Yellow
 		PipCount: 10
@@ -274,7 +241,7 @@ FACTNEW:
 		IntoActor: suppwgnl
 		Offset: 1,1
 		Facing: 160
-		RequiresCondition: factundeploy
+		RequiresCondition: !factundeploy && !build-incomplete
 		TransformSounds: tentcloth.aud, brickconc.aud
 FACTNEW.GDI:
 	Inherits: FACTNEW
@@ -350,6 +317,7 @@ PROCNEW:
 		PlayerPalette: raplayer
 	ProvidesPrerequisite@anyref:
 		Prerequisite: anyrefinery
+		RequiresCondition: !build-incomplete
 	Valued:
 		Cost: 1500
 	Tooltip:
@@ -358,6 +326,17 @@ PROCNEW:
 		Footprint: _x_ xxx xx= ===
 		Dimensions: 3,4
 		LocalCenterOffset: 0,-512,0
+	Buildable:
+		IconPalette: raicon
+		BuildPaletteOrder: 30
+		Prerequisites: anyhq
+		Description: Processes raw ore and Gold into useable metal.\nGenerates more money than the windmill.\n\n\n\n
+		Queue: MResources.GDI, MResources.Nod
+		BuildDuration: 1500
+	SelfConstructing:
+		Condition: build-incomplete
+		Steps: 6
+		Sequence: make
 	Health:
 		HP: 150000
 	RevealsShroud:
@@ -368,10 +347,12 @@ PROCNEW:
 		DockAngle: 72
 		DockOffset: 2,2
 		TickRate: 4
+		RequiresCondition: !build-incomplete
 	StoresResources:
 		PipColor: Yellow
 		PipCount: 10
 		Capacity: 2000
+		RequiresCondition: !build-incomplete
 	Selectable:
 		Bounds: 72,56,0,-2
 	SelectionDecorations:
@@ -381,9 +362,12 @@ PROCNEW:
 		Actor: eharvxl
 		SpawnOffset: 1,2
 		Facing: 64
+		RequiresCondition: !build-incomplete
 	ProvidesPrerequisite:
 		Prerequisite: proc
+		RequiresCondition: !build-incomplete
 	ProvidesPrerequisite@buildingname:
+		RequiresCondition: !build-incomplete
 	ThrowsShrapnel@LARGE:
 		Weapons: LargeWood1, LargeStone1, DebrUtility1, DebrUtility2, DebrUtility3
 		Pieces: 1, 2
@@ -538,6 +522,16 @@ LODGE:
 		Footprint: xx ==
 		Dimensions: 2,2
 		LocalCenterOffset: 0,-512,0
+	Buildable:
+		IconPalette: raicon
+		BuildPaletteOrder: 10
+		Description: A hunter will start searching for deer from this building aswell as a lumberer will gather wood.\nGood for early resource management\n\n
+		Queue: MResources.GDI, MResources.Nod
+		BuildDuration: 700
+	SelfConstructing:
+		Condition: build-incomplete
+		Steps: 4
+		Sequence: make
 	Health:
 		HP: 50000
 	RevealsShroud:
@@ -546,35 +540,31 @@ LODGE:
 		Palette: bibs
 	Targetable@Lodge:
 		TargetTypes: HunterLodge
+		RequiresCondition: !build-incomplete
 	Selectable:
 		Bounds: 48,55,0,-14
 	SelectionDecorations:
 	WithFreeSpawnableActor@Lumber:
-		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 		SpawnActor: hunter
 		Offset: -256,768, 0
 		MoveOffset: 0,1
-		FindRadius: 100
 		Lasso: 15c0
 		ForceLasso: 20c0
 		ReturnOnDeath: true
+		RequiresCondition: !build-incomplete
 	WithFreeSpawnableActor@Hunter:
-		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 		SpawnActor: mwlumbererowned
 		Offset: -256,768, 0
 		MoveOffset: 0,1
-		FindRadius: 100
 		Lasso: 17c0
 		ForceLasso: 22c0
 		ReturnOnDeath: true
+		RequiresCondition: !build-incomplete
 	Targetable@Lumber:
 		TargetTypes: LumberShack
+		RequiresCondition: !build-incomplete
 	WithRangeCircle:
 		Type: HunterLodge
 		UsePlayerColor: true
 		Range: 17c0
 	LodgeActor:
-	StoresResources:
-		PipColor: Yellow
-		PipCount: 5
-		Capacity: 1000

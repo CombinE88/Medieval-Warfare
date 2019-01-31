@@ -126,8 +126,8 @@ DEADROSS:
 	RenderSprites:
 		Image: deadross
 		PlayerPalette: raplayer
-	PersonValued:
-		ActorCount: 1
+	Power:
+		Amount: -1
 	Buildable:
 		IconPalette: raicon
 		BuildPaletteOrder: 40
@@ -172,8 +172,8 @@ UNDEAD1:
 	RenderSprites:
 		Image: undead1
 		PlayerPalette: raplayer
-	PersonValued:
-		ActorCount: 1
+	Power:
+		Amount: -1
 	Buildable:
 		IconPalette: raicon
 		BuildPaletteOrder: 10
@@ -203,8 +203,8 @@ UNDEAD2:
 	RenderSprites:
 		Image: undead2
 		PlayerPalette: raplayer
-	PersonValued:
-		ActorCount: 1
+	Power:
+		Amount: -1
 	Armor:
 		Type: Heavy
 	Targetable@CombatRole:
@@ -230,8 +230,8 @@ UNDEAD3:
 		PlayerPalette: raplayer
 	Armor:
 		Type: Light
-	PersonValued:
-		ActorCount: 1
+	Power:
+		Amount: -1
 	Buildable:
 		IconPalette: raicon
 		BuildPaletteOrder: 20
@@ -262,8 +262,8 @@ UNDEAD4:
 	AttackFrontal:
 	RenderSprites:
 		PlayerPalette: raplayer
-	PersonValued:
-		ActorCount: 1
+	Power:
+		Amount: -1
 	-Crushable:
 	Buildable:
 		IconPalette: raicon
@@ -302,8 +302,8 @@ UNDEAD5:
 		PlayerPalette: raplayer
 	Armor:
 		Type: Leather
-	PersonValued:
-		ActorCount: 1
+	Power:
+		Amount: -1
 	Buildable:
 		IconPalette: raicon
 		BuildPaletteOrder: 30
@@ -345,8 +345,8 @@ UNDEAD6:
 		BuildPaletteOrder: 10
 		Description: Skeletal siegeunit\n  Strong vs all\n  Very slow\n  Very strong\n  Can crush walls
 		Queue: MSiege.ded
-	PersonValued:
-		ActorCount: 3
+	Power:
+		Amount: -3
 	-RangeMultiplier:
 	SpeedMultiplier@SNAKES:
 		Modifier: 77
@@ -381,8 +381,8 @@ UNDEAD6DEPLOYED:
 	Selectable:
 		Bounds: 24,24,0,-6
 	SelectionDecorations:
-	PersonValued:
-		ActorCount: 3
+	Power:
+		Amount: -3
 	Targetable@CombatRole:
 		TargetTypes: HeavyCavalry
 	Building:
@@ -449,8 +449,8 @@ UNDEAD7:
 		Description: Skeletal siegeunit\n  Strong vs all\n  Very slow\n  very strong\n  Attacks ranged
 		Prerequisites: ziggurat3
 		Queue: MSiege.ded
-	PersonValued:
-		ActorCount: 3
+	Power:
+		Amount: -3
 	Targetable@CombatRole:
 		TargetTypes: HeavyCavalry
 GRIM:
@@ -1262,8 +1262,8 @@ GSPLACE1A:
 	WithSpriteBody:
 		StartSequence: makea
 		Sequence: idlea
-	ProvidesLivingspace:
-		Ammount: 3
+	Power:
+		Amount: -3
 	MapEditorData:
 		Categories: Undead
 	RenderSprites:
@@ -1273,8 +1273,8 @@ GSPLACE1B:
 	WithSpriteBody: 
 		StartSequence: makeb
 		Sequence: idleb
-	ProvidesLivingspace:
-		Ammount: 3
+	Power:
+		Amount: -3
 	MapEditorData:
 		Categories: Undead
 	RenderSprites:
@@ -1284,8 +1284,8 @@ GSPLACE1C:
 	WithSpriteBody: 
 		StartSequence: makec
 		Sequence: idlec
-	ProvidesLivingspace:
-		Ammount: 3
+	Power:
+		Amount: -3
 	MapEditorData:
 		Categories: Undead
 	RenderSprites:
@@ -1295,8 +1295,8 @@ GSPLACE2A:
 	WithSpriteBody: 
 		StartSequence: makea
 		Sequence: idlea
-	ProvidesLivingspace:
-		Ammount: 3
+	Power:
+		Amount: -3
 	MapEditorData:
 		Categories: Undead
 	RenderSprites:
@@ -1306,8 +1306,8 @@ GSPLACE2B:
 	WithSpriteBody: 
 		StartSequence: makeb
 		Sequence: idleb
-	ProvidesLivingspace:
-		Ammount: 3
+	Power:
+		Amount: -3
 	MapEditorData:
 		Categories: Undead
 	RenderSprites:
@@ -1317,8 +1317,8 @@ GSPLACE2C:
 	WithSpriteBody: 
 		StartSequence: makec
 		Sequence: idlec
-	ProvidesLivingspace:
-		Ammount: 3
+	Power:
+		Amount: -3
 	MapEditorData:
 		Categories: Undead
 	RenderSprites:
@@ -1328,8 +1328,8 @@ GSPLACE3A:
 	WithSpriteBody: 
 		StartSequence: makea
 		Sequence: idlea
-	ProvidesLivingspace:
-		Ammount: 3
+	Power:
+		Amount: -3
 	MapEditorData:
 		Categories: Undead
 	RenderSprites:
@@ -1339,8 +1339,8 @@ GSPLACE3B:
 	WithSpriteBody: 
 		StartSequence: makeb
 		Sequence: idleb
-	ProvidesLivingspace:
-		Ammount: 3
+	Power:
+		Amount: -3
 	MapEditorData:
 		Categories: Undead
 	RenderSprites:
@@ -1350,8 +1350,8 @@ GSPLACE3C:
 	WithSpriteBody: 
 		StartSequence: makec
 		Sequence: idlec
-	ProvidesLivingspace:
-		Ammount: 3
+	Power:
+		Amount: -3
 	MapEditorData:
 		Categories: Undead
 	RenderSprites:
@@ -1363,8 +1363,8 @@ CFFPLACE1A:
 	WithSpriteBody:
 		StartSequence: makea
 		Sequence: idlea
-	ProvidesLivingspace:
-		Ammount: 5
+	Power:
+		Amount: -5
 	MapEditorData:
 		Categories: Undead
 CFFPLACE1B:
@@ -1374,8 +1374,8 @@ CFFPLACE1B:
 	WithSpriteBody:
 		StartSequence: makeb
 		Sequence: idleb
-	ProvidesLivingspace:
-		Ammount: 5
+	Power:
+		Amount: -5
 	MapEditorData:
 		Categories: Undead
 CFFPLACE1C:
@@ -1385,8 +1385,8 @@ CFFPLACE1C:
 	WithSpriteBody:
 		StartSequence: makec
 		Sequence: idlec
-	ProvidesLivingspace:
-		Ammount: 5
+	Power:
+		Amount: -5
 	MapEditorData:
 		Categories: Undead
 SOUL:

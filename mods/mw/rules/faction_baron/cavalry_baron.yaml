@@ -49,8 +49,8 @@ ROSS1:
 	Selectable:
 		Bounds: 26,34,0,-6
 	SelectionDecorations:
-	PersonValued:
-		ActorCount: 1
+	Power:
+		Amount: -1
 	Targetable@CombatRole:
 		TargetTypes: RegularCavalry
 ROSS3:
@@ -108,8 +108,8 @@ ROSS3:
 	Selectable:
 		Bounds: 26,34,0,-6
 	SelectionDecorations:
-	PersonValued:
-		ActorCount: 1
+	Power:
+		Amount: -1
 	Targetable@CombatRole:
 		TargetTypes: RegularCavalry
 ROSS4:
@@ -165,8 +165,8 @@ ROSS4:
 	Selectable:
 		Bounds: 26,34,0,-6
 	SelectionDecorations:
-	PersonValued:
-		ActorCount: 1
+	Power:
+		Amount: -1
 	Targetable@CombatRole:
 		TargetTypes: LightCavalry
 ROSS4C:
@@ -218,7 +218,7 @@ ROSS4C:
 	Selectable:
 		Bounds: 26,34,0,-6
 	SelectionDecorations:
-	PersonValued:
-		ActorCount: 1
+	Power:
+		Amount: -1
 	Targetable@CombatRole:
 		TargetTypes: LightCavalry

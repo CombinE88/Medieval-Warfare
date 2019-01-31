@@ -65,11 +65,9 @@ ARMORYNOD:
 		Pieces: 1, 2
 		Range: 1c0, 5c0
 	WithFreeSpawnableActor:
-		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 		SpawnActor: mwcivcom
 		Offset: 0,469, 0
 		MoveOffset: 1,2
-		FindRadius: 100
 	ProximityExternalCondition@HEAL:
 		Range: 5c0
 		ValidStances: Ally
@@ -136,10 +134,8 @@ XLTNT1:
 		Weapons: DebrFurniture1, DebrFurniture2, DebrFurniture3, DebrFurniture4
 		Pieces: 1, 2
 		Range: 1c0, 5c0
-	ProvidesLivingspace:
-		Ammount: 9
-		SpawnOffset: 256,768,0
-		ExitCell: 1,2
+	Power:
+		Amount: 9
 XLTNT2:
 	Inherits: XLTNT1
 	RenderSprites:
@@ -152,10 +148,8 @@ XLTNTUNI:
 	Inherits: XLTNT1
 	RenderSprites:
 		Image: xltnt3
-	ProvidesLivingspace:
-		Ammount: 9
-		SpawnOffset: 256,768,0
-		ExitCell: 1,2
+	Power:
+		Amount: 10
 NODNUKE.scaff:
 	Inherits: ^MWBaseBuilding
 	Inherits@Hitshape: ^2x1Shape
@@ -259,10 +253,8 @@ NODNUKE.scaff:
 		Weapons: DebrFurniture1, DebrFurniture2, DebrFurniture3, DebrFurniture4
 		Pieces: 2, 3
 		Range: 1c0, 5c0
-	ProvidesLivingspace:
-		Ammount: 4
-		SpawnOffset: 256,811,0
-		ExitCell: 1,1
+	Power:
+		Amount: 4
 	MapEditorData:
 		ExcludeTilesets: TEMPERATE, SNOW, DESERT, WINTER
 		Categories: 
@@ -311,10 +303,8 @@ NTENT1:
 		Weapons: DebrFurniture1, DebrFurniture2, DebrFurniture3, DebrFurniture4
 		Pieces: 2, 3
 		Range: 1c0, 5c0
-	ProvidesLivingspace:
-		Ammount: 3
-		SpawnOffset: 256,811,0
-		ExitCell: 1,1
+	Power:
+		Amount: 3
 NTENT2:
 	Inherits: NTENT1
 	RenderSprites:
@@ -361,26 +351,20 @@ NODPROC:
 	CustomSellValue:
 		Value: 400
 	WithFreeSpawnableActor@1:
-		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 		SpawnActor: e8farmer
 		Offset: 368,1067, 0
 		MoveOffset: 1,3
 		RespawnTime: 750
-		FindRadius: 100
 	WithFreeSpawnableActor@2:
-		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 		SpawnActor: e8farmer
 		Offset: 368,1067, 0
 		MoveOffset: 1,3
 		RespawnTime: 750
-		FindRadius: 100
 	WithFreeSpawnableActor@3:
-		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 		SpawnActor: e8farmer
 		Offset: 368,1067, 0
 		MoveOffset: 1,3
 		RespawnTime: 750
-		FindRadius: 100
 	Selectable:
 		Bounds: 48,70,0,-8
 	SelectionDecorations:
@@ -416,16 +400,14 @@ HANDNEW:
 	Exit@1:
 		SpawnOffset: 426,938,0
 		ExitCell: 1,2
-	WithActorProduction:
-		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
-		FindRadius: 60
+	Production:
 		Produces:  MInfantry.Nod
 	ProductionQueue@2:
 		Type: MInfantry.Nod
 		Group: Infantry
-		LowPowerSlowdown: 3
 		Factions: nod
 		ReadyAudio:
+		LowPowerModifier: 400
 	ProductionBar:
 		ProductionType: MInfantry.Nod
 	ProvidesPrerequisite@buildingname:
@@ -470,16 +452,14 @@ NODSTALL:
 	Exit@1:
 		SpawnOffset: 540,540,0
 		ExitCell: 2,2
-	WithActorProduction:
-		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
-		FindRadius: 60
+	Production:
 		Produces: MVehicle.Nod
 	ProductionQueue@2:
 		Type: MVehicle.Nod
 		Group: Vehicle
 		Factions: nod
-		LowPowerSlowdown: 3
 		ReadyAudio:
+		LowPowerModifier: 400
 	ProductionBar:
 		ProductionType: MVehicle.Nod
 	ProvidesPrerequisite@buildingname:
@@ -701,15 +681,13 @@ WORKSHOPNOD:
 	Exit@1:
 		SpawnOffset: 325,512,0
 		ExitCell: 1,2
-	WithActorProduction:
-		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
-		FindRadius: 60
+	Production:
 		Produces: MSiege.Nod
 	ProductionQueue@2:
 		Type: MSiege.Nod
 		Group: Aircraft
 		Factions: nod
-		LowPowerSlowdown: 3
+		LowPowerModifier: 400
 	ProductionBar:
 		ProductionType: MSiege.Nod
 	ProduceActorPower:
@@ -755,7 +733,6 @@ WORKSHOPNOD:
 		DockOffset: 1,2
 		TickRate: 15
 	WithFreeSpawnableActor@LABOUR1:
-		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 		SpawnActor: shopplayer
 		Offset: 325,512,0
 		MoveOffset: 0,2
@@ -765,7 +742,6 @@ WORKSHOPNOD:
 		ReturnOnDeath: true
 		RespawnTime: 750
 	WithFreeSpawnableActor@LABOUR2:
-		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 		SpawnActor: shopplayer
 		Offset: 325,512,0
 		MoveOffset: 2,2

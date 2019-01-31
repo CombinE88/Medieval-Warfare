@@ -40,8 +40,8 @@ E2NEW:
 		Type: Light
 	Voiced:
 		VoiceSet: NodPikeVoice
-	PersonValued:
-		ActorCount: 1
+	Power:
+		Amount: -1
 	Targetable@CombatRole:
 		TargetTypes: Light
 E3NEWV2:
@@ -84,8 +84,8 @@ E3NEWV2:
 		Type: Heavy
 	Voiced:
 		VoiceSet: NodKnightVoice
-	PersonValued:
-		ActorCount: 1
+	Power:
+		Amount: -1
 	Targetable@CombatRole:
 		TargetTypes: Heavy
 	AutoTargetPriority@Counter:
@@ -139,8 +139,8 @@ FRMGE:
 		Range: 2c0
 	Voiced:
 		VoiceSet: NodMageVoice
-	PersonValued:
-		ActorCount: 1
+	Power:
+		Amount: -1
 	Targetable@CombatRole:
 		TargetTypes: Ranged
 E4NEW:
@@ -203,8 +203,8 @@ E4NEW:
 		CargoType: Archer
 	Voiced:
 		VoiceSet: NodCrossVoice
-	PersonValued:
-		ActorCount: 1
+	Power:
+		Amount: -1
 	Targetable@CombatRole:
 		TargetTypes: Ranged
 ASSASSIN:
@@ -274,7 +274,7 @@ ASSASSIN:
 		Type: Leather
 	Voiced:
 		VoiceSet: AssasinVoice
-	PersonValued:
-		ActorCount: 1
+	Power:
+		Amount: -1
 	Targetable@CombatRole:
 		TargetTypes: Light

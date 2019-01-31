@@ -91,8 +91,8 @@ SAMNEW:
 	SelectionDecorations:
 	Selectable:
 		Bounds: 50,50,0,-10
-	PersonValued:
-		ActorCount: 2
+	Power:
+		Amount: -2
 TRIBU:
 	Inherits: ^MWDefense
 	Inherits@AUTOTARGET: ^AutoTargetGround
@@ -142,8 +142,8 @@ TRIBU:
 		Weapons: SmallWood1, SmallWood2, SmallWood3, LargeWood1, LargeWood1, LargeWood1
 		Pieces: 2, 4
 		Range: 0c512, 3c0
-	PersonValued:
-		ActorCount: 3
+	Power:
+		Amount: -3
 		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4 
 	Targetable@CombatRole:
 		TargetTypes: Defenses

@@ -16,12 +16,6 @@ LODGE.scaff:
 		Cost: 700
 	Tooltip:
 		Name: Construction Site (Forester Lodge)
-	Buildable:
-		IconPalette: raicon
-		BuildPaletteOrder: 10
-		Description: A hunter will start searching for deer from this building aswell as a lumberer will gather wood.\nGood for early resource management\n\n
-		Queue: MResources.GDI, MResources.Nod
-		BuildDuration: 350
 	Health:
 		HP: 10000
 	RevealsShroud:
@@ -80,13 +74,6 @@ PROCNEW.scaff:
 		Cost: 1500
 	Tooltip:
 		Name: Construction Site (Ore Refinery)
-	Buildable:
-		IconPalette: raicon
-		BuildPaletteOrder: 30
-		Prerequisites: anyhq
-		Description: Processes raw ore and Gold into useable metal.\nGenerates more money than the windmill.\n\n\n\n
-		Queue: MResources.GDI, MResources.Nod
-		BuildDuration: 750
 	Health:
 		HP: 60000
 	RevealsShroud:

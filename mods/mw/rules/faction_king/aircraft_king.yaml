@@ -70,8 +70,8 @@ ORNI:
 	SmokeTrailWhenDamaged:
 		Offset: -853,0,0
 		Interval: 2
-	PersonValued:
-		ActorCount: 1
+	Power:
+		Amount: -1
 	Targetable@CombatRole:
 		TargetTypes: Flying
 	ThrowsShrapnel@SMALL:
@@ -155,8 +155,8 @@ DRGNRDR:
 		OwnerType: InternalName
 		InternalOwner: Neutral
 		RequiresCondition: valida && !validb
-	PersonValued:
-		ActorCount: 2
+	Power:
+		Amount: -2
 	Targetable@CombatRole:
 		TargetTypes: Flying
 	ThrowsShrapnel@Gears:
@@ -269,8 +269,8 @@ DAVINCI:
 		EmptyWeapon: DragonFlame
 	Voiced:
 		VoiceSet: VehicleVoice
-	PersonValued:
-		ActorCount: 0
+	Power:
+		Amount: -0
 	Targetable@CombatRole:
 		TargetTypes: Flying
 	ThrowsShrapnel@Gears:

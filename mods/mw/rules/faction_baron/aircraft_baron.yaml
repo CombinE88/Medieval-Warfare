@@ -56,8 +56,8 @@ WARKITE:
 		Actor: WARKITEMAN.Husk
 	SpawnActorOnDeath@2:
 		Actor: WARKITEKITE.Husk
-	PersonValued:
-		ActorCount: 1
+	Power:
+		Amount: -1
 	Targetable@CombatRole:
 		TargetTypes: Flying
 	SelectionDecorations:
@@ -125,8 +125,8 @@ WRBLN:
 		Bounds:40,52,0,-24
 	Voiced:
 		VoiceSet: BalloonVoice
-	PersonValued:
-		ActorCount: 1
+	Power:
+		Amount: -1
 	Targetable@CombatRole:
 		TargetTypes: Flying
 	ThrowsShrapnel@SMALL:

@@ -11,6 +11,8 @@ SULGTW:
 		DeathSequencePalette: sultanplayer
 	RenderSprites:
 		PlayerPalette: sultanplayer
+	Power:
+		Amount: -2
 	Valued:
 		Cost: 1100
 	CustomSellValue:
@@ -427,13 +429,11 @@ SULLODGE:
 		Bounds: 48,52,0,-14
 	SelectionDecorations:
 	WithFreeSpawnableActor@Hunter:
-		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 		SpawnActor: hunter
 		Offset: -256,768, 0
 		MoveOffset: 0,1
 		Lasso: 15
 		ForceLasso: 20
-		FindRadius: 100
 		ReturnOnDeath: true
 	WithRangeCircle:
 		Type: HunterLodge
@@ -445,11 +445,9 @@ SULLODGE:
 		PipCount: 5
 		Capacity: 1000
 	WithFreeSpawnableActor@Lumber:
-		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 		SpawnActor: mwlumbererowned
 		Offset: -256,768, 0
 		MoveOffset: 0,1
-		FindRadius: 100
 		Lasso: 17c0
 		ForceLasso: 22c0
 		ReturnOnDeath: true
@@ -555,10 +553,8 @@ SULNUK2:
 		Weapons: DebrFurniture1, DebrFurniture2, DebrFurniture3, DebrFurniture4
 		Pieces: 1, 2
 		Range: 1c0, 5c0
-	ProvidesLivingspace:
-		Ammount: 18
-		SpawnOffset: -469,853,0
-		ExitCell: 1,2
+	Power:
+		Amount: 18
 SULNUKE:
 	Inherits: ^MWBaseBuilding
 	Inherits@Hitshape: ^2x2Shape
@@ -608,10 +604,8 @@ SULNUKE:
 		Weapons: DebrFurniture1, DebrFurniture2, DebrFurniture3, DebrFurniture4
 		Pieces: 2, 3
 		Range: 1c0, 5c0
-	ProvidesLivingspace:
-		Ammount: 7
-		SpawnOffset: 0,426,0
-		ExitCell: 1,2
+	Power:
+		Amount: 7
 SULBARR:
 	Inherits: ^MWBaseBuilding
 	Inherits@Hitshape: ^3x2Shape
@@ -643,14 +637,12 @@ SULBARR:
 	Exit:
 		SpawnOffset: 341,682,0
 		ExitCell: 1,2
-	WithActorProduction:
-		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
-		FindRadius: 100
+	Production:
 		Produces: MInfantry.SUL
 	ProductionQueue@1:
 		Type: MInfantry.SUL
 		Group: Infantry
-		LowPowerSlowdown: 3
+		LowPowerModifier: 400
 		Factions: sul
 		ReadyAudio:
 	ProductionBar:
@@ -699,14 +691,12 @@ SULMYSTIC:
 	Exit@1:
 		SpawnOffset: 180,1200,0
 		ExitCell: 0,2
-	WithActorProduction:
-		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
-		FindRadius: 100
+	Production:
 		Produces: MVehicle.SUL
 	ProductionQueue@1:
 		Type: MVehicle.SUL
 		Group: Vehicle
-		LowPowerSlowdown: 3
+		LowPowerModifier: 400
 		Factions: sul
 		ReadyAudio:
 	ProductionBar:
@@ -1008,33 +998,25 @@ SULMILL:
 		ValidStances: Ally
 		Condition: KillRef
 	WithFreeSpawnableActor@1:
-		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 		SpawnActor: sule6
 		Offset: -470,1365, 0
 		MoveOffset: 0,3
 		RespawnTime: 750
-		FindRadius: 100
 	WithFreeSpawnableActor@2:
-		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 		SpawnActor: sule6
 		Offset: -470,1365, 0
 		MoveOffset: 0,3
 		RespawnTime: 750
-		FindRadius: 100
 	WithFreeSpawnableActor@3:
-		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 		SpawnActor: sule6
 		Offset: -470,1365, 0
 		MoveOffset: 0,3
 		RespawnTime: 750
-		FindRadius: 100
 	WithFreeSpawnableActor@4:
-		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 		SpawnActor: sule6
 		Offset: -470,1365, 0
 		MoveOffset: 0,3
 		RespawnTime: 750
-		FindRadius: 100
 SULFIX:
 	Inherits: ^MWBaseBuilding
 	Inherits@Hitshape: ^3x2Shape
@@ -1068,15 +1050,13 @@ SULFIX:
 	Exit@1:
 		SpawnOffset: -200,200,0
 		ExitCell: 0,2
-	WithActorProduction:
-		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
-		FindRadius: 100
+	Production:
 		Produces: MSiege.SUL
 	ProductionQueue@2:
 		Type: MSiege.SUL
 		Group: Aircraft
 		Factions: sul
-		LowPowerSlowdown: 3
+		LowPowerModifier: 400
 		ReadyAudio:
 	ProductionBar:
 		ProductionType: MSiege.SUL
@@ -1120,7 +1100,6 @@ SULFIX:
 		Condition: Enabled
 		Prerequisites: sultow3, anyhq
 	WithFreeSpawnableActor@LABOUR1:
-		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 		SpawnActor: shopplayer
 		Offset: 325,512,0
 		MoveOffset: 0,2
@@ -1130,7 +1109,6 @@ SULFIX:
 		ReturnOnDeath: true
 		RespawnTime: 750
 	WithFreeSpawnableActor@LABOUR2:
-		TrainingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4
 		SpawnActor: shopplayer
 		Offset: 325,512,0
 		MoveOffset: 2,2

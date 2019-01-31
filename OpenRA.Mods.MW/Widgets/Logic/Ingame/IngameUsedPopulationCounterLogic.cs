@@ -11,6 +11,7 @@
 
 using System;
 using System.Diagnostics;
+using OpenRA.Mods.Common.Traits;
 using OpenRA.Mods.Common.Widgets;
 using OpenRA.Traits;
 using OpenRA.Widgets;
@@ -40,7 +41,7 @@ namespace OpenRA.Mods.MW.Widgets.Logic
 
             pop.GetText = () => displayLabel;
 
-            displayResources = player.PlayerActor.Trait<PlayerCivilization>().WorkerPopulationvar;
+            displayResources = player.PlayerActor.Trait<PowerManager>().PowerDrained;
         }
 
         public override void Tick()
@@ -48,7 +49,7 @@ namespace OpenRA.Mods.MW.Widgets.Logic
             if (nextCashTickTime > 0)
                 nextCashTickTime--;
 
-            var actual = player.PlayerActor.Trait<PlayerCivilization>().WorkerPopulationvar;
+            var actual = player.PlayerActor.Trait<PowerManager>().PowerDrained;
             Debug.Write(actual.ToString());
 
             var diff = Math.Abs(actual - displayResources);

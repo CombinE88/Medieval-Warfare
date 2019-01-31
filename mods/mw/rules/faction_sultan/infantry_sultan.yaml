@@ -35,8 +35,8 @@ SULE1:
 		DefaultAttackSequence: shoot
 	Armor:
 		Type: Leather
-	PersonValued:
-		ActorCount: 1
+	Power:
+		Amount: -1
 	Voiced:
 		VoiceSet: RashudinVoice
 	Targetable@CombatRole:
@@ -95,8 +95,8 @@ SULE2:
 	Explodes:
 		Weapon: KilledPike
 		EmptyWeapon: KilledPike
-	PersonValued:
-		ActorCount: 1
+	Power:
+		Amount: -1
 	Voiced:
 		VoiceSet: RashudinVoice
 	Targetable@CombatRole:
@@ -158,8 +158,8 @@ SULE3:
 		CargoType: Archer
 	Crushable:
 		WarnProbability: 55
-	PersonValued:
-		ActorCount: 1
+	Power:
+		Amount: -1
 	Voiced:
 		VoiceSet: BedouinVoice
 	Targetable@CombatRole:
@@ -209,8 +209,8 @@ SULE4:
 		HealIfBelow: 100
 		Delay: 25
 		DamageCooldown: 100
-	PersonValued:
-		ActorCount: 1
+	Power:
+		Amount: -1
 	Voiced:
 		VoiceSet: GardVoice
 	Targetable@CombatRole:
@@ -268,8 +268,8 @@ SULE5:
 		RequiresCondition: Runfast
 	Crushable:
 		WarnProbability: 75
-	PersonValued:
-		ActorCount: 1
+	Power:
+		Amount: -1
 	Targetable@CombatRole:
 		TargetTypes: Light
 SULE6:
@@ -328,8 +328,8 @@ SULE6:
 		Priority: 7
 	SelectionDecorations:
 	-Crushable:
-	PersonValued:
-		ActorCount: 1
+	Power:
+		Amount: -1
 	Voiced:
 		VoiceSet: FarmerVoice
 # Mystics
@@ -376,8 +376,8 @@ SULM1:
 		Range: 2c0
 	Crushable:
 		WarnProbability: 95
-	PersonValued:
-		ActorCount: 1
+	Power:
+		Amount: -1
 	Targetable@CombatRole:
 		TargetTypes: Light
 	Voiced:
@@ -493,8 +493,8 @@ SULM2:
 		Range: 4c0
 	Voiced:
 		VoiceSet: DjinVoice
-	PersonValued:
-		ActorCount: 2
+	Power:
+		Amount: -2
 	Targetable@CombatRole:
 		TargetTypes: Spectral
 SULM4:
@@ -541,8 +541,8 @@ SULM4:
 		Range: 2c0
 	Crushable:
 		WarnProbability: 95
-	PersonValued:
-		ActorCount: 1
+	Power:
+		Amount: -1
 	Targetable@CombatRole:
 		TargetTypes: Light
 	Voiced:

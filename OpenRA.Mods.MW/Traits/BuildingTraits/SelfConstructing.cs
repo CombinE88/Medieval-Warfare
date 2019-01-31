@@ -60,7 +60,9 @@ namespace OpenRA.Mods.MW.Traits.BuildingTraits
 		{
 			if (spawnType == SpawnType.PlaceBuilding)
 			{
-				var productionQueue = self.Owner.PlayerActor.TraitsImplementing<SelfConstructingProductionQueue>().First(q => q.AllItems().Contains(self.Info));
+				var productionActor = self.World.Actors.FirstOrDefault(a =>
+					a.Owner == self.Owner && a.TraitsImplementing<SelfConstructingProductionQueue>().Any(q => q.AllItems().Contains(self.Info)));
+				var productionQueue = productionActor.TraitsImplementing<SelfConstructingProductionQueue>().First(q => q.AllItems().Contains(self.Info));
 				var valued = self.Info.TraitInfoOrDefault<ValuedInfo>();
 				productionItem = new SelfConstructingProductionItem(productionQueue, self, valued == null ? 0 : valued.Cost, null, null);
 				productionQueue.BeginProduction(productionItem, false);

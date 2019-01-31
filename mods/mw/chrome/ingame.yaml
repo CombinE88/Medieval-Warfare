@@ -749,7 +749,7 @@ Container@PLAYER_WIDGETS:
 					Width: PARENT_RIGHT -10
 					Height: 45
 					Children:
-						ProductionTypeButton@BUILDING:
+						MWProductionTypeButton@BUILDING:
 							X: PARENT_RIGHT - 150
 							Y: 4
 							Width: 75
@@ -757,13 +757,14 @@ Container@PLAYER_WIDGETS:
 							TooltipText: Village Buildings
 							TooltipContainer: TOOLTIP_CONTAINER
 							ProductionGroup: Building
+							InstantProductionType: true
 							Key: ProductionTypeBuilding
 							Children:
 								Image@ICON:
 									X: PARENT_RIGHT / 2 -12
 									Y: 6
 									ImageCollection: production-icons
-						ProductionTypeButton@BUILDING2:
+						MWProductionTypeButton@BUILDING2:
 							X: PARENT_RIGHT - 150 + 75
 							Y: 4
 							Width: 75
@@ -771,13 +772,14 @@ Container@PLAYER_WIDGETS:
 							TooltipText: Resource Buildings
 							TooltipContainer: TOOLTIP_CONTAINER
 							ProductionGroup: Building2
+							InstantProductionType: true
 							Key: ProductionTypeMerchant
 							Children:
 								Image@ICON:
 									X: PARENT_RIGHT / 2 -12
 									Y: 6
 									ImageCollection: production-icons
-						ProductionTypeButton@BUILDING3:
+						MWProductionTypeButton@BUILDING3:
 							X: PARENT_RIGHT - 150
 							Y: ((200 - 20) / 5) * 1 + 6
 							Width: 110
@@ -785,13 +787,14 @@ Container@PLAYER_WIDGETS:
 							TooltipText: Military Buildings
 							TooltipContainer: TOOLTIP_CONTAINER
 							ProductionGroup: Building3
+							InstantProductionType: true
 							Key: ProductionTypeDefense
 							Children:
 								Image@ICON:
 									X: PARENT_RIGHT / 2 -12
 									Y: 6
 									ImageCollection: production-icons
-						ProductionTypeButton@BUILDING4:
+						MWProductionTypeButton@BUILDING4:
 							X: PARENT_RIGHT - 40
 							Y: ((200 - 20) / 5) * 1 + 6
 							Width: 40
@@ -799,13 +802,14 @@ Container@PLAYER_WIDGETS:
 							TooltipText: Military Fortifications
 							TooltipContainer: TOOLTIP_CONTAINER
 							ProductionGroup: Building4
+							InstantProductionType: true
 							Key: ProductionTypeNaval
 							Children:
 								Image@ICON:
 									X: PARENT_RIGHT / 2 -12
 									Y: 6
 									ImageCollection: production-icons
-						ProductionTypeButton@INFANTRY:
+						MWProductionTypeButton@INFANTRY:
 							X: PARENT_RIGHT - 150
 							Y: ((200 - 20) / 5) * 2 + 6
 							Width: 150
@@ -819,7 +823,7 @@ Container@PLAYER_WIDGETS:
 									X: PARENT_RIGHT / 2 -12
 									Y: 6
 									ImageCollection: production-icons
-						ProductionTypeButton@VEHICLE:
+						MWProductionTypeButton@VEHICLE:
 							X: PARENT_RIGHT - 150
 							Y: ((200 - 20) / 5) * 3 + 6
 							Width: 150
@@ -833,7 +837,7 @@ Container@PLAYER_WIDGETS:
 									X: PARENT_RIGHT / 2 -12
 									Y: 6
 									ImageCollection: production-icons
-						ProductionTypeButton@AIRCRAFT:
+						MWProductionTypeButton@AIRCRAFT:
 							X: PARENT_RIGHT - 150
 							Y: ((200 - 20) / 5) * 4 + 6
 							Width: 150
@@ -855,14 +859,14 @@ Container@PLAYER_WIDGETS:
 							Width: 66
 							Height: 50
 							Background: panel-black
-				ProductionPalette@PRODUCTION_PALETTE:
+				MWProductionPalette@PRODUCTION_PALETTE:
 					X: 10 
 					Y: 10 + 12
 					Width: WINDOW_RIGHT - 580 - 20 - 150
 					Height: 200
 					TooltipContainer: TOOLTIP_CONTAINER
 					ReadyText: Ready
-					HoldText: On Hold
+					HoldText: Paused
 					Columns: 5
 					IconSize: 100, 80
 					MinimumRows: 1
@@ -870,8 +874,8 @@ Container@PLAYER_WIDGETS:
 					IconMargin: 2,2
 					HotkeyPrefix: Production
 					HotkeyCount: 24
-				ProductionTabs@PRODUCTION_TABS:
-					Logic: ProductionTabsLogic
+				MWProductionTabs@PRODUCTION_TABS:
+					Logic: MWProductionTabsLogic
 					PaletteWidget: PRODUCTION_PALETTE
 					TypesContainer: PRODUCTION_TYPES
 					BackgroundContainer: PRODUCTION_BACKGROUND

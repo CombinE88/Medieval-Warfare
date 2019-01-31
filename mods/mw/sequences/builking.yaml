@@ -16,22 +16,22 @@ nukenew:
 		AddExtension: false
 	icon: nukenewicon.shp
 		AddExtension: False
-	make1: nukenewmake
+	make0: nukenewmake
 		Start: 0
 		ZOffset: -25
-	make2: nukenewmake
+	make1: nukenewmake
 		Start: 1
 		ZOffset: -25
-	make3: nukenewmake
+	make2: nukenewmake
 		Start: 2
 		ZOffset: -25
-	make4: nukenewmake
+	make3: nukenewmake
 		Start: 3
 		ZOffset: -25
-	make5: nukenewmake
+	make4: nukenewmake
 		Start: 4
 		ZOffset: -25
-	make6: nukenewmake
+	make5: nukenewmake
 		Start: 5
 		ZOffset: -25
 nuk2new:
@@ -52,16 +52,16 @@ nuk2new:
 		AddExtension: false
 	icon: nuk2newicon.shp
 		AddExtension: False
-	make1: nuk2newmake
+	make0: nuk2newmake
 		Start: 2
 		ZOffset: -25
-	make2: nuk2newmake
+	make1: nuk2newmake
 		Start: 3
 		ZOffset: -25
-	make3: nuk2newmake
+	make2: nuk2newmake
 		Start: 4
 		ZOffset: -25
-	make4: nuk2newmake
+	make3: nuk2newmake
 		Start: 5
 		ZOffset: -25
 nukxl:
@@ -86,27 +86,27 @@ nukxl:
 		AddExtension: false
 	icon: nukxlicon.shp
 		AddExtension: False
-	make1: 
+	make0: 
 		Start: 0
 		ZOffset: -25
 		Offset: 0,-12
-	make2: 
+	make1: 
 		Start: 1
 		ZOffset: -25
 		Offset: 0,-12
-	make3: 
+	make2: 
 		Start: 2
 		ZOffset: -25
 		Offset: 0,-12
-	make4: 
+	make3: 
 		Start: 3
 		ZOffset: -25
 		Offset: 0,-12
-	make5: 
+	make4: 
 		Start: 4
 		ZOffset: -25
 		Offset: 0,-12
-	make6: 
+	make5: 
 		Start: 5
 		ZOffset: -25
 		Offset: 0,-12
@@ -134,27 +134,27 @@ windmill:
 		AddExtension: false
 	icon: winmillicon.shp
 		AddExtension: False
-	make1: windmillmake
+	make0: windmillmake
 		Start: 0
 		ZOffset: -25
 		Offset: 0,-5
-	make2: windmillmake
+	make1: windmillmake
 		Start: 1
 		ZOffset: -25
 		Offset: 0,-5
-	make3: windmillmake
+	make2: windmillmake
 		Start: 2
 		ZOffset: -25
 		Offset: 0,-5
-	make4: windmillmake
+	make3: windmillmake
 		Start: 3
 		ZOffset: -25
 		Offset: 0,-5
-	make5: windmillmake
+	make4: windmillmake
 		Start: 4
 		ZOffset: -25
 		Offset: 0,-5
-	make6: windmillmake
+	make5: windmillmake
 		Start: 5
 		ZOffset: -25
 		Offset: 0,-5
@@ -177,19 +177,19 @@ barrnew:
 		AddExtension: false
 	icon: barracksicon.shp
 		AddExtension: False
-	make1: barrnewmake
+	make0: barrnewmake
 		Start: 5
 		ZOffset: -25
-	make2: barrnewmake
+	make1: barrnewmake
 		Start: 10
 		ZOffset: -25
-	make3: barrnewmake
+	make2: barrnewmake
 		Start: 15
 		ZOffset: -25
-	make4: barrnewmake
+	make3: barrnewmake
 		Start: 20
 		ZOffset: -25
-	make5: barrnewmake
+	make4: barrnewmake
 		Start: 25
 		ZOffset: -25
 stall:
@@ -216,22 +216,22 @@ stall:
 		AddExtension: false
 	icon: stallicon.shp
 		AddExtension: False	
-	make1: stallmake
+	make0: stallmake
 		Start: 5
 		ZOffset: -25
-	make2: stallmake
+	make1: stallmake
 		Start: 10
 		ZOffset: -25
-	make3: stallmake
+	make2: stallmake
 		Start: 15
 		ZOffset: -25
-	make4: stallmake
+	make3: stallmake
 		Start: 20
 		ZOffset: -25
-	make5: stallmake
+	make4: stallmake
 		Start: 25
 		ZOffset: -25
-	make6: stallmake
+	make5: stallmake
 		Start: 28
 		ZOffset: -25
 gdifix:
@@ -260,27 +260,27 @@ gdifix:
 		AddExtension: false
 	icon: workshopicon.shp
 		AddExtension: False  
-	make1: 
+	make0: 
 		Start: 5
 		ZOffset: -25
 		Offset: 0, -12
-	make2: 
+	make1: 
 		Start: 10
 		ZOffset: -25
 		Offset: 0, -12
-	make3: 
+	make2: 
 		Start: 15
 		ZOffset: -25
 		Offset: 0, -12
-	make4: 
+	make3: 
 		Start: 20 
 		ZOffset: -25 
 		Offset: 0, -12  
-	make5: 
+	make4: 
 		Start: 25
 		ZOffset: -25
 		Offset: 0, -12
-	make6: 
+	make5: 
 		Start: 30
 		ZOffset: -25
 		Offset: 0, -12
@@ -308,25 +308,25 @@ obs:
 		AddExtension: false
 	icon: obsicon.shp
 		AddExtension: False
-	make1: obsmake
+	make0: obsmake
 		Start: 0
 		ZOffset: -25
-	make2: obsmake
+	make1: obsmake
 		Start: 1
 		ZOffset: -25
-	make3: obsmake
+	make2: obsmake
 		Start: 2
 		ZOffset: -25
-	make4: obsmake
+	make3: obsmake
 		Start: 3
 		ZOffset: -25
-	make5: obsmake
+	make4: obsmake
 		Start: 4
 		ZOffset: -25
-	make6: obsmake
+	make5: obsmake
 		Start: 5
 		ZOffset: -25
-	make7: obsmake
+	make6: obsmake
 		Start: 6
 		ZOffset: -25
 castle2:
@@ -358,27 +358,27 @@ castle2:
 		Offset: 0,-12,0
 		Length: *
 		Tick: 80
-	make1: castle2make
+	make0: castle2make
 		Offset: 0,-12,0
 		Start: 0
 		ZOffset: -25
-	make2: castle2make
+	make1: castle2make
 		Offset: 0,-12,0
 		Start: 1
 		ZOffset: -25
-	make3: castle2make
+	make2: castle2make
 		Offset: 0,-12,0
 		Start: 2
 		ZOffset: -25
-	make4: castle2make
+	make3: castle2make
 		Offset: 0,-12,0
 		Start: 3
 		ZOffset: -25
-	make5: castle2make
+	make4: castle2make
 		Offset: 0,-12,0
 		Start: 4
 		ZOffset: -25
-	make6: castle2make
+	make5: castle2make
 		Offset: 0,-12,0
 		Start: 5
 		ZOffset: -25

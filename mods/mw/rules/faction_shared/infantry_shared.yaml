@@ -231,8 +231,8 @@ ENGENEER:
 		Type: Leather
 	Voiced:
 		VoiceSet: EngineerVoice
-	PersonValued:
-		ActorCount: 1
+	Power:
+		Amount: -1
 E1NEW:
 	Inherits: ^Knight
 	Inherits@AUTOTARGET: ^AutoTargetGround
@@ -328,8 +328,8 @@ E8FARMER:
 		Priority: 7
 	SelectionDecorations:
 	-Crushable:
-	PersonValued:
-		ActorCount: 1
+	Power:
+		Amount: -1
 	Voiced:
 		VoiceSet: FarmerVoice
 		Volume: 3
@@ -393,8 +393,8 @@ BUMMLER:
 		Bounds: 14,26,0,-6
 		Priority: 7
 	SelectionDecorations:
-	PersonValued:
-		ActorCount: 1
+	Power:
+		Amount: -1
 	Voiced:
 		VoiceSet: LooterVoice
 SIEGERUNNER:
@@ -449,7 +449,6 @@ MWWAND1:
 	WithInfantryBody:
 		DefaultAttackSequence: talking
 		IdleSequences: idle1, idle2, idle3, idle4, idle5, idle6, idle7, idle8
-	#IsPeasant:
 MWWAND2:
 	Inherits: ^MWTalker
 	Inherits@SnakeStunnable: ^SnakeStunnable
@@ -464,7 +463,6 @@ MWWAND2:
 	WithInfantryBody:
 		DefaultAttackSequence: talking
 		IdleSequences: idle1, idle2, idle3, idle4, idle5, idle6, idle7, idle8
-	#IsPeasant:
 MWWAND3:
 	Inherits: ^MWTalker
 	Inherits@SnakeStunnable: ^SnakeStunnable
@@ -479,7 +477,6 @@ MWWAND3:
 	WithInfantryBody:
 		DefaultAttackSequence: talking
 		IdleSequences: idle1, idle2, idle3, idle4, idle5, idle6, idle7, idle8
-	#IsPeasant:
 MWWAND4:
 	Inherits: ^MWTalker
 	Inherits@SnakeStunnable: ^SnakeStunnable
@@ -494,7 +491,6 @@ MWWAND4:
 	WithInfantryBody:
 		DefaultAttackSequence: talking
 		IdleSequences: idle1, idle2, idle3, idle4, idle5, idle6, idle7, idle8
-	#IsPeasant:
 MWWAND5:
 	Inherits: ^MWTalker
 	Inherits@SnakeStunnable: ^SnakeStunnable
@@ -509,7 +505,6 @@ MWWAND5:
 	WithInfantryBody:
 		DefaultAttackSequence: talking
 		IdleSequences: idle1, idle2, idle3, idle4, idle5, idle6, idle7, idle8
-	#IsPeasant:
 MWWAND6:
 	Inherits: ^MWTalker
 	Inherits@SnakeStunnable: ^SnakeStunnable
@@ -524,7 +519,6 @@ MWWAND6:
 	WithInfantryBody:
 		DefaultAttackSequence: talking
 		IdleSequences: idle1, idle2, idle3, idle4, idle5, idle6, idle7, idle8
-	#IsPeasant:
 MWWAND10:
 	Inherits: ^MWTalker
 	Inherits@SnakeStunnable: ^SnakeStunnable
@@ -539,7 +533,6 @@ MWWAND10:
 	WithInfantryBody:
 		DefaultAttackSequence: talking
 		IdleSequences: idle1, idle2, idle3, idle4, idle5, idle6, idle7, idle8
-	#IsPeasant:
 MWWAND11:
 	Inherits: ^MWTalker
 	Inherits@SnakeStunnable: ^SnakeStunnable
@@ -554,7 +547,6 @@ MWWAND11:
 	WithInfantryBody:
 		DefaultAttackSequence: talking
 		IdleSequences: idle1, idle2, idle3, idle4, idle5, idle6, idle7, idle8
-	#IsPeasant:
 MWWAND12:
 	Inherits: ^MWTalker
 	Inherits@SnakeStunnable: ^SnakeStunnable
@@ -569,7 +561,6 @@ MWWAND12:
 	WithInfantryBody:
 		DefaultAttackSequence: talking
 		IdleSequences: idle1, idle2, idle3, idle4, idle5, idle6, idle7, idle8
-	#IsPeasant:
 MWWAND7:
 	Inherits: ^MWWanderer
 	Inherits@SnakeStunnable: ^SnakeStunnable
@@ -644,8 +635,8 @@ SHOPPLAYER:
 		Weapon: Repair
 		TargetStances: Ally
 		ForceTargetStances: None
-	PersonValued:
-		ActorCount: 1
+	Power:
+		Amount: -1
 MWCIVCOM:
 	Inherits: ^MWWanderer
 	Inherits@AUTOTARGET: ^AutoTargetGround
@@ -685,8 +676,8 @@ MWCIVCOM:
 		Type: Heavy
 	RevealsShroud:
 		Range: 6c0
-	PersonValued:
-		ActorCount: 1
+	Power:
+		Amount: -1
 NOBLE1:
 	Inherits: ^MWTalker
 	Inherits@SnakeStunnable: ^SnakeStunnable
@@ -701,7 +692,6 @@ NOBLE1:
 	WithInfantryBody:
 		DefaultAttackSequence: talking
 		IdleSequences: idle1, idle2, idle3, idle4, idle5, idle6, idle7, idle8
-	#IsPeasant:
 NOBLE2:
 	Inherits: ^MWTalker
 	Inherits@SnakeStunnable: ^SnakeStunnable
@@ -716,7 +706,6 @@ NOBLE2:
 	WithInfantryBody:
 		DefaultAttackSequence: talking
 		IdleSequences: idle1, idle2, idle3, idle4, idle5, idle6, idle7, idle8
-	#IsPeasant:
 NOBLE3:
 	Inherits: ^MWTalker
 	Inherits@SnakeStunnable: ^SnakeStunnable
@@ -731,7 +720,6 @@ NOBLE3:
 	WithInfantryBody:
 		DefaultAttackSequence: talking
 		IdleSequences: idle1, idle2, idle3, idle4, idle5, idle6, idle7, idle8
-	#IsPeasant:
 NOBLE4:
 	Inherits: ^MWTalker
 	Inherits@SnakeStunnable: ^SnakeStunnable
@@ -746,7 +734,6 @@ NOBLE4:
 	WithInfantryBody:
 		DefaultAttackSequence: talking
 		IdleSequences: idle1, idle2, idle3, idle4, idle5, idle6, idle7, idle8
-	#IsPeasant:
 NOBLE5:
 	Inherits: ^MWTalker
 	Inherits@SnakeStunnable: ^SnakeStunnable
@@ -850,8 +837,8 @@ MWLUMBERER:
 		HuntTypes: TreeToChop
 		LootTypes: ChopTree
 		SearchDistance: 15c0
-	PersonValued:
-		ActorCount: 0
+	Power:
+		Amount: -0
 		ConvertingActors: 
 MWLUMBEREROWNED:
 	Inherits: ^MWConstructor
@@ -935,8 +922,8 @@ MWLUMBEREROWNED:
 		HuntTypes: TreeToChop
 		LootTypes: ChopTree
 		SearchDistance: 17c0
-	PersonValued:
-		ActorCount: 1
+	Power:
+		Amount: -1
 	Selectable:
 	-Interactable:
 	RejectsOrders:
@@ -986,7 +973,7 @@ HUNTER:
 	Armor:
 		Type: Leather
 	Power:
-		Amount: 0
+		Amount: -0
 	Selectable:
 	Targetable:
 		TargetTypes: Ground, Infantry, Hunterer
@@ -1041,8 +1028,8 @@ HUNTER:
 		ReloadDelay: 25
 		ResetDelayOnEnable: false
 		RequiresCondition: DeerHunter
-	PersonValued:
-		ActorCount: 1
+	Power:
+		Amount: -1
 		ConvertingActors: mwwand1, mwwand2, mwwand3, mwwand4, mwwand5, mwwand6, mwwand10, mwwand11, mwwand12, noble1, noble2, noble3, noble4, noble1, noble2, noble3, noble4
 	DeerHunter: 
 		HuntTypes: Wildlife

@@ -58,6 +58,7 @@
     <Compile Include="Traits\AddConditionEvery.cs" />
     <Compile Include="Traits\BuildingTraits\SelfConstructing.cs" />
     <Compile Include="Traits\BuildingTraits\SelfConstructingProductionQueue.cs" />
+    <Compile Include="Traits\ConditionalWithMakeAnimation.cs" />
     <Compile Include="Traits\MWAttackOrderPower.cs" />
     <Compile Include="Traits\GrantPermanentCondition.cs" />
     <Compile Include="Traits\Graphics\ArcRenderable.cs" />
@@ -74,7 +75,6 @@
     <Compile Include="Traits\Construction\ConstructionProgress.cs" />
     <Compile Include="Traits\CreateActorOnDeath.cs" />
     <Compile Include="Traits\CritterSpawner.cs" />
-    <Compile Include="Traits\DirectSpawnModifier.cs" />
     <Compile Include="Traits\Render\DisguiseChargeBar.cs" />
     <Compile Include="Traits\DockBasics\Dock.cs" />
     <Compile Include="Traits\DockBasics\DockClient.cs" />
@@ -85,15 +85,10 @@
     <Compile Include="Traits\HunterTraits\DeerHunter.cs" />
     <Compile Include="Traits\HunterTraits\LodgeActor.cs" />
     <Compile Include="Traits\HunterTraits\LootableBody.cs" />
-    <Compile Include="Traits\IsPeasant.cs" />
-    <Compile Include="Traits\IsTownhall.cs" />
     <Compile Include="Traits\NewDisguise.cs" />
     <Compile Include="Traits\Orders\AlwaysTrueOrderTargeter.cs" />
-    <Compile Include="Traits\PersonValued.cs" />
     <Compile Include="Traits\Player\ConstructionResources.cs" />
     <Compile Include="Traits\Player\AcolyteAttackNotifier.cs" />
-    <Compile Include="Traits\Player\PlayerCivilization.cs" />
-    <Compile Include="Traits\ProvidesLivingspace.cs" />
     <Compile Include="Traits\ReloadAmmoWhenEnabled.cs" />
     <Compile Include="Traits\Render\NewWithDisguisingInfantryBodyInfo.cs" />
     <Compile Include="Traits\Render\WithInfantryBodyDisguisedUpdate.cs" />
@@ -107,13 +102,11 @@
     <Compile Include="Traits\UndeadFaction\GrimReanimation.cs" />
     <Compile Include="Traits\UndeadFaction\GrimTarget.cs" />
     <Compile Include="Traits\UndeadFaction\InvisibleToLiving.cs" />
-    <Compile Include="Traits\UndeadFaction\IsGrave.cs" />
     <Compile Include="Traits\UndeadFaction\Skiptransforms.cs" />
     <Compile Include="Traits\UndeadFaction\UndeadBuilder.cs" />
     <Compile Include="Traits\UndeadFaction\UndeadGraveProduction.cs" />
     <Compile Include="Traits\UndeadFaction\ActorEnsurance.cs" />
     <Compile Include="Traits\UndeadFaction\WithUndeadBuilderOverlay.cs" />
-    <Compile Include="Traits\WithActorProduction.cs" />
     <Compile Include="Traits\WithFreeSpawnableActor.cs" />
     <Compile Include="Warheads\BackFireShrapnelWarhead.cs" />
     <Compile Include="Warheads\CashTickWarhead.cs" />
@@ -129,12 +122,13 @@
     <Compile Include="Warheads\SpawnActorWarhead.cs" />
     <Compile Include="Warheads\WarheadAS.cs" />
     <Compile Include="Warheads\PromotionWarhead.cs" />
-    <Compile Include="Widgets\Logic\Ingame\IngameFullPopulationCounterLogic.cs" />
     <Compile Include="Widgets\Logic\Ingame\IngameMaxPopulationCounterLogic.cs" />
-    <Compile Include="Widgets\Logic\Ingame\IngamePeasantSpawnBarLogic.cs" />
-    <Compile Include="Widgets\Logic\Ingame\IngamePopulationCounterLogic.cs" />
     <Compile Include="Widgets\Logic\Ingame\IngameUsedPopulationCounterLogic.cs" />
     <Compile Include="Widgets\Logic\Ingame\NewCashCounterLogic.cs" />
+    <Compile Include="Widgets\Logic\Ingame\MWProductionTabsLogic.cs" />
+    <Compile Include="Widgets\MWProductionPaletteWidget.cs" />
+    <Compile Include="Widgets\MWProductionTabsWidget.cs" />
+    <Compile Include="Widgets\MWProductionTypeButtonWidget.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\engine\OpenRA.Mods.Common\OpenRA.Mods.Common.csproj">

@@ -406,6 +406,7 @@
 		UseDeathTypeSuffix: false
 	GivesBuildableArea:
 		AreaTypes: building
+		RequiresCondition: !build-incomplete
 	RequiresBuildableArea:
 		AreaTypes: building
 		Adjacent: 8
@@ -990,6 +991,8 @@
 	OwnerLostAction:
 		Action: Kill
 		DeathTypes: DefaultDeath
+	RevealsShroud:
+		RequiresCondition: !build-incomplete
 ^MWDefense:
 	Inherits@1: ^Defense
 	SpawnActorsOnSell:
@@ -1259,6 +1262,12 @@
 	Inherits: ^MedievalInfantry
 	Targetable:
 		TargetTypes: Ground, Siege, Disguise
+	Targetable@Repairable:
+		TargetTypes: Repairable
+		RequiresCondition: damaged
+	GrantConditionOnDamageState@DAMAGED:
+		Condition: damaged
+		ValidDamageStates: Light, Medium, Heavy, Critical
 	MustBeDestroyed:
 	Tooltip:
 		GenericName: Generic siege engine

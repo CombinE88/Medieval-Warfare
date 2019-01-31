@@ -134,8 +134,8 @@ BATO:
 		TurnSpeed: 2
 	WithDeathAnimation:
 		DeathSequencePalette: raplayer 
-	PersonValued:
-		ActorCount: 3
+	Power:
+		Amount: -3
 	Targetable@CombatRole:
 		TargetTypes: Defenses
 	WithRangeCircle:

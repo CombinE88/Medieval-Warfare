@@ -71,13 +71,6 @@ NUKENEW.scaff:
 		Cost: 500
 	Tooltip:
 		Name: Construction Site (Small Hut)
-	Buildable:
-		IconPalette: raicon
-		BuildPaletteOrder: 10
-		Prerequisites: factnew
-		Description: Generates livingspace. Livingspace increases over time by generating peasants.\nCan hold up to 6 peasants, spawntime depends on number of shacks and large huts.\n\n\n\n
-		Queue: MBuilding.GDI
-		BuildDuration: 250
 	Health:
 		HP: 25000
 	RevealsShroud:
@@ -127,13 +120,6 @@ NUKXL.scaff:
 		Cost: 1200
 	Tooltip:
 		Name: Construction Site (Extra Large Hut)
-	Buildable:
-		IconPalette: raicon
-		BuildPaletteOrder: 30
-		Prerequisites: anycastle
-		Queue: MBuilding.GDI
-		Description: Provides more livingspace. Livingspace increases over time by generating peasants.\nCan hold up to 20 peasants. \ncheaper than the standard Shack.\n\n\n\n
-		BuildDuration: 600
 	Health:
 		HP: 60000
 	RevealsShroud:
@@ -187,13 +173,6 @@ ZEROPROC.scaff:
 		Cost: 1300
 	Tooltip:
 		Name: Construction Site (Windmill)
-	Buildable:
-		IconPalette: raicon
-		BuildPaletteOrder: 20
-		Prerequisites: anypower
-		Description: Provides basic resource gathering for Crops and Grain.\n Comes with 2 farmers.\n Can only operate up to 6 farmers at once.\n\n\n\n
-		Queue: MResources.GDI
-		BuildDuration: 650
 	Health:
 		HP: 40000
 	RevealsShroud:
@@ -247,13 +226,6 @@ HQNEWGDI.scaff:
 		Cost: 1200
 	Tooltip:
 		Name: Construction Site (Inventor)
-	Buildable:
-		IconPalette: raicon
-		BuildPaletteOrder: 80
-		Prerequisites: proc
-		Queue: MBuilding.GDI
-		Description: Unlocks higher-tech units and buildings.\nUnlocks Support Powers.\n\n\n
-		BuildDuration: 600
 	Health:
 		HP: 17000
 	RevealsShroud:
@@ -352,13 +324,6 @@ NUK2NEW.scaff:
 		Cost: 800
 	Tooltip:
 		Name: Construction Site (Large Hut)
-	Buildable:
-		IconPalette: raicon
-		BuildPaletteOrder: 20
-		Prerequisites: anyhq
-		Queue: MBuilding.GDI
-		Description: Provides more livingspace. Livingspace increases over time by generating peasants.\nCan hold up to 11 peasants, spawntime depends on number of shacks and large huts. \ncheaper than the standard Shack.\n\n\n\n
-		BuildDuration: 400
 	Health:
 		HP: 17500
 	RevealsShroud:
@@ -402,13 +367,6 @@ BARRNEW.scaff:
 		Cost: 750
 	Tooltip:
 		Name: Construction Site (Barracks)
-	Buildable:
-		IconPalette: raicon
-		BuildPaletteOrder: 10
-		Prerequisites: anypower
-		Description: Trains Infantry only\n\n\n\n
-		Queue: MMilitary.GDI
-		BuildDuration: 375
 	Health:
 		HP: 25000
 	RevealsShroud:
@@ -455,13 +413,6 @@ STALL.scaff:
 		Cost: 2000
 	Tooltip:
 		Name: Construction Site (Stables)
-	Buildable:
-		IconPalette: raicon
-		BuildPaletteOrder: 20
-		Prerequisites: proc
-		Description: Trains cavalry\n\n\n\n
-		Queue: MMilitary.GDI
-		BuildDuration: 1000
 	Health:
 		HP: 50000
 	RevealsShroud:
@@ -515,13 +466,6 @@ CASTLE2.scaff:
 		Cost: 2000
 	Tooltip:
 		Name: Construction Site (Castle)
-	Buildable:
-		IconPalette: raicon
-		BuildPaletteOrder: 90
-		Prerequisites: anyhq
-		Description: Unlocks Superweapon.\n Unlocks Assassins, Crossbows and Ballista Towers.\n\n\n\n
-		Queue: MBuilding.GDI
-		BuildDuration: 1000
 	Health:
 		HP: 90000
 	RevealsShroud:
@@ -571,13 +515,6 @@ WORKSHOPGDI.scaff:
 		Cost: 1600
 	Tooltip:
 		Name: Construction Site (Siege Workshop)
-	Buildable:
-		IconPalette: raicon
-		BuildPaletteOrder: 30
-		Prerequisites: proc
-		Description: Provides Siege weapons construction.\nEnables Supportpowers in combination with an Armory.\n\n\n
-		Queue: MMilitary.GDI
-		BuildDuration: 800
 	Health:
 		HP: 37350
 	RevealsShroud:

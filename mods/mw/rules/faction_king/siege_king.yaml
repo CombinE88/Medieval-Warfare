@@ -55,8 +55,8 @@ SIEGE2:
 	SpawnActorOnDeath@2:
 		Actor: SIEGERUNNER
 		Probability: 50
-	PersonValued:
-		ActorCount: 2
+	Power:
+		Amount: -2
 	Targetable@CombatRole:
 		TargetTypes: Support
 	Voiced:
@@ -204,7 +204,7 @@ SIEGE3:
 		Turret: tritiary
 		FireDelay: 35
 		Name: tritiaryair
-	PersonValued:
-		ActorCount: 3
+	Power:
+		Amount: -3
 	Targetable@CombatRole:
 		TargetTypes: HeavyCavalry
