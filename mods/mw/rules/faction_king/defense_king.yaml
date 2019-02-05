@@ -25,47 +25,58 @@ GTWNEW:
 		Palette: bibs
 		HasMinibib: Yes
 	WithIdleOverlay:
+		RequiresCondition: !build-incomplete
 	AttackTurreted:
 		Armaments: primary, secondary
+		RequiresCondition: !build-incomplete
 	BodyOrientation:
 		QuantizedFacings: 8
 	DetectCloaked:
 		Range: 3c0
+		RequiresCondition: !build-incomplete
 	Armament@ARMONE:
 		Weapon: bownarrowtower
 		LocalOffset: 0,0,427
 		Turret: primary
 		Name: primary
 		FireDelay: 5
+		RequiresCondition: !build-incomplete
 	WithSpriteTurret@SPRITURRONE: 
 		Sequence: turretidle
 		Turret: primary
+		RequiresCondition: !build-incomplete
 	WithTurretAttackAnimation@SPRITURRONE:
 		Turret: primary
 		Sequence: shoot
 		Armament: primary
+		RequiresCondition: !build-incomplete
 	Turreted@TURRONE:
 		Turret: primary
 		TurnSpeed: 100
 		Offset: -170,-170,500
+		RequiresCondition: !build-incomplete
 	Armament@ARMTWO:
 		Weapon: bownarrowtower
 		LocalOffset: 0,0,427
 		Turret: secondary
 		FireDelay: 17
 		Name: secondary
+		RequiresCondition: !build-incomplete
 	WithSpriteTurret@SPRITURRTWO: 
 		Sequence: turretidle
 		Turret: secondary
+		RequiresCondition: !build-incomplete
 	WithTurretAttackAnimation@SPRITURRTWO:
 		Turret: secondary
 		Armament: secondary
 		Sequence: shoot
 		Delay: 12
+		RequiresCondition: !build-incomplete
 	Turreted@TURRTWO:
 		Turret: secondary
 		TurnSpeed: 100
 		Offset: 170,170,500
+		RequiresCondition: !build-incomplete
 	Armor:
 		Type: HeavyBuilding 
 	Selectable:
@@ -77,6 +88,17 @@ GTWNEW:
 		Range: 0c512, 3c0
 	Targetable@CombatRole:
 		TargetTypes: Defenses
+	SelfConstructing:
+		Condition: build-incomplete
+		Steps: 6
+		Sequence: make
+	Buildable:
+		Description: A wooden tower, stationed with 2 archers.\n  Strong vs Infantry, Light Cavalry\n  Weak vs Siege weapons and Heavy Cavalry \n  Cannot target Aircraft\n\n
+		BuildPaletteOrder: 60
+		Queue: MMilitary.GDI
+		BuildDurationModifier: 60
+		IconPalette: raicon
+		BuildDuration: 1200
 BATO:
 	Inherits: ^MWDefense
 	Inherits@AUTOTARGET: ^AutoTargetAll
@@ -103,10 +125,12 @@ BATO:
 		Weapon: stationbalistaag
 		LocalOffset: 356,0,809
 		Name: secondary
+		RequiresCondition: !build-incomplete
 	Armament@2:
 		Weapon: stationbalistaaa
 		LocalOffset: 356,0,809
 		Name: primary
+		RequiresCondition: !build-incomplete
 	DetectCloaked:
 		Range: 3c0
 	Armor:
@@ -116,6 +140,7 @@ BATO:
 	SelectionDecorations:
 	WithIdleOverlay:
 		Sequence: overlay
+		RequiresCondition: !build-incomplete
 	RenderSprites:
 		Image: batowgun
 		PlayerPalette: raplayer
@@ -124,9 +149,11 @@ BATO:
 	WithAttackAnimation@1:
 		Armament: primary
 		Sequence: shoot
+		RequiresCondition: !build-incomplete
 	WithAttackAnimation@2:
 		Armament: secondary
 		Sequence: shoot
+		RequiresCondition: !build-incomplete
 	WithEmbeddedTurretSpriteBody:
 	-WithSpriteBody:
 	AttackTurreted:
@@ -142,3 +169,15 @@ BATO:
 		Type: AGCircle
 		Range: 8c0
 		Color: FFFF0080
+	SelfConstructing:
+		Condition: build-incomplete
+		Steps: 6
+		Sequence: make
+	Buildable:
+		Description: Because of its smaller design and light weighted missiles, \nthe ballista on top of the tower can target \neither ground or aircraft units.\n  Strong vs ground units\n  Weak vs close by units\n  Long distance\n Can target Aircraft\n  Requires 3 Peasants\n\n
+		BuildPaletteOrder: 80
+		Prerequisites: anyhq
+		Queue: MMilitary.GDI
+		BuildDurationModifier: 40
+		IconPalette: raicon
+		BuildDuration: 2800

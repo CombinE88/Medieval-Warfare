@@ -71,6 +71,15 @@ xltnt1:
 	idle: 
 		Start: 7
 		Offset: 0,-6
+	idlea: 
+		Start: 7
+		Offset: 0,-6
+	idleb: xltnt2
+		Start: 7
+		Offset: 0,-6
+	idlec: xltnt3
+		Start: 7
+		Offset: 0,-6
 	damaged-idle: 
 		Start: 8
 		Offset: 0,-6
@@ -89,75 +98,75 @@ xltnt1:
 		AddExtension: false
 	icon: xltnticon.shp
 		AddExtension: False
-	make1: 
+	make0: 
 		Start: 1
+		ZOffset: -25
+		Offset: 0,-6
+	make1: 
+		Start: 2
 		ZOffset: -25
 		Offset: 0,-6
 	make2: 
-		Start: 2
+		Start: 3
 		ZOffset: -25
 		Offset: 0,-6
 	make3: 
-		Start: 3
+		Start: 4
 		ZOffset: -25
 		Offset: 0,-6
 	make4: 
-		Start: 4
+		Start: 5
 		ZOffset: -25
 		Offset: 0,-6
 	make5: 
-		Start: 5
-		ZOffset: -25
-		Offset: 0,-6
-	make6: 
 		Start: 6
 		ZOffset: -25
 		Offset: 0,-6
-	make1a: xltnt2
+	makea0: xltnt2
 		Start: 1
 		ZOffset: -25
 		Offset: 0,-6
-	make2a: xltnt2
+	makea1: xltnt2
 		Start: 2
 		ZOffset: -25
 		Offset: 0,-6
-	make3a: xltnt2
+	makea2: xltnt2
 		Start: 3
 		ZOffset: -25
 		Offset: 0,-6
-	make4a: xltnt2
+	makea3: xltnt2
 		Start: 4
 		ZOffset: -25
 		Offset: 0,-6
-	make5a: xltnt2
+	makea4: xltnt2
 		Start: 5
 		ZOffset: -25
 		Offset: 0,-6
-	make6a: xltnt2
+	makea5: xltnt2
 		Start: 6
 		ZOffset: -25
 		Offset: 0,-6
-	make1b: xltnt3
+	makeb0: xltnt3
 		Start: 1
 		ZOffset: -25
 		Offset: 0,-6
-	make2b: xltnt3
+	makeb1: xltnt3
 		Start: 2
 		ZOffset: -25
 		Offset: 0,-6
-	make3b: xltnt3
+	makeb2: xltnt3
 		Start: 3
 		ZOffset: -25
 		Offset: 0,-6
-	make4b: xltnt3
+	makeb3: xltnt3
 		Start: 4
 		ZOffset: -25
 		Offset: 0,-6
-	make5b: xltnt3
+	makeb4: xltnt3
 		Start: 5
 		ZOffset: -25
 		Offset: 0,-6
-	make6b: xltnt3
+	makeb5: xltnt3
 		Start: 6
 		ZOffset: -25
 		Offset: 0,-6
@@ -184,23 +193,23 @@ xltnt2:
 		AddExtension: false
 	icon: xltnticon.shp
 		AddExtension: False
-	make1: 
+	make0: 
 		Start: 0
 		ZOffset: -25
 		Offset: 0,-6
-	make2: 
+	make1: 
 		Start: 1
 		ZOffset: -25
 		Offset: 0,-6
-	make3: 
+	make2: 
 		Start: 2
 		ZOffset: -25
 		Offset: 0,-6
-	make4: 
+	make3: 
 		Start: 3
 		ZOffset: -25
 		Offset: 0,-6
-	make5: 
+	make4: 
 		Start: 4
 		ZOffset: -25
 		Offset: 0,-6
@@ -231,23 +240,23 @@ xltnt3:
 		AddExtension: false
 	icon: xltnticon.shp
 		AddExtension: False
-	make1: 
+	make0: 
 		Start: 0
 		ZOffset: -25
 		Offset: 0,-6
-	make2: 
+	make1: 
 		Start: 1
 		ZOffset: -25
 		Offset: 0,-6
-	make3: 
+	make2: 
 		Start: 2
 		ZOffset: -25
 		Offset: 0,-6
-	make4: 
+	make3: 
 		Start: 3
 		ZOffset: -25
 		Offset: 0,-6
-	make5: 
+	make4: 
 		Start: 4
 		ZOffset: -25
 		Offset: 0,-6
@@ -279,27 +288,27 @@ nodmill:
 		AddExtension: false
 	icon: nodmillicon.shp
 		AddExtension: False
-	make1: nodmillmakev2
+	make0: nodmillmakev2
 		Start: 0
 		ZOffset: -25
 		Offset: 12,-12
-	make2: nodmillmakev2
+	make1: nodmillmakev2
 		Start: 1
 		ZOffset: -25
 		Offset: 12,-12
-	make3: nodmillmakev2
+	make2: nodmillmakev2
 		Start: 2
 		ZOffset: -25
 		Offset: 12,-12
-	make4: nodmillmakev2
+	make3: nodmillmakev2
 		Start: 3
 		ZOffset: -25
 		Offset: 12,-12
-	make5: nodmillmakev2
+	make4: nodmillmakev2
 		Start: 4
 		ZOffset: -25
 		Offset: 12,-12
-	make6: nodmillmakev2
+	make5: nodmillmakev2
 		Start: 5
 		ZOffset: -25
 		Offset: 12,-12
@@ -320,19 +329,19 @@ handnew:
 		AddExtension: false
 	icon: barrnodicon.shp
 		AddExtension: False
-	make1: handnewmake
+	make0: handnewmake
 		Start: 5
 		ZOffset: -25
-	make2: handnewmake
+	make1: handnewmake
 		Start: 10
 		ZOffset: -25
-	make3: handnewmake
+	make2: handnewmake
 		Start: 15
 		ZOffset: -25
-	make4: handnewmake
+	make3: handnewmake
 		Start: 20
 		ZOffset: -25
-	make5: handnewmake
+	make4: handnewmake
 		Start: 25
 		ZOffset: -25
 nodstall:
@@ -366,27 +375,27 @@ nodstall:
 		Length: 4
 		Tick: 120
 		ZOffset: -1024
-	make1: nodstablemake
+	make0: nodstablemake
 		Offset: 0,-6,0
 		Start: 5
 		ZOffset: -25
-	make2: nodstablemake
+	make1: nodstablemake
 		Offset: 0,-6,0
 		Start: 10
 		ZOffset: -25
-	make3: nodstablemake
+	make2: nodstablemake
 		Offset: 0,-6,0
 		Start: 15
 		ZOffset: -25
-	make4: nodstablemake
+	make3: nodstablemake
 		Offset: 0,-6,0
 		Start: 20
 		ZOffset: -25
-	make5: nodstablemake
+	make4: nodstablemake
 		Offset: 0,-6,0
 		Start: 25
 		ZOffset: -25
-	make6: nodstablemake
+	make5: nodstablemake
 		Offset: 0,-6,0
 		Start: 28
 		ZOffset: -25
@@ -421,19 +430,19 @@ nodfix:
 		AddExtension: false
 	icon: workshopicon.shp
 		AddExtension: False  
-	make1: 
+	make0: 
 		Start: 5
 		ZOffset: -25
 		Offset: 0, -12
-	make2: 
+	make1: 
 		Start: 10
 		ZOffset: -25
 		Offset: 0, -12
-	make3: 
+	make2: 
 		Start: 15
 		ZOffset: -25
 		Offset: 0, -12
-	make4: 
+	make3: 
 		Start: 20
 		ZOffset: -25
 		Offset: 0, -12
@@ -458,23 +467,23 @@ armory:
 		AddExtension: false
 	icon: armoryicon.shp
 		AddExtension: False
-	make1: armorymake
+	make0: armorymake
 		Start: 5
 		ZOffset: -25
 		Offset: 0,-12
-	make2: armorymake
+	make1: armorymake
 		Start: 10
 		ZOffset: -25
 		Offset: 0,-12
-	make3: armorymake
+	make2: armorymake
 		Start: 15
 		ZOffset: -25
 		Offset: 0,-12
-	make4: armorymake
+	make3: armorymake
 		Start: 20
 		ZOffset: -25
 		Offset: 0,-12
-	make5: armorymake
+	make4: armorymake
 		Start: 25
 		ZOffset: -25
 		Offset: 0,-12
@@ -509,27 +518,27 @@ castle:
 		Tick: 80
 	turret: techbuilding1turret
 		Facings: 32
-	make1: castlemake
+	make0: castlemake
 		Offset: 0,-12,0
 		Start: 0
 		ZOffset: -25
-	make2: castlemake
+	make1: castlemake
 		Offset: 0,-12,0
 		Start: 1
 		ZOffset: -25
-	make3: castlemake
+	make2: castlemake
 		Offset: 0,-12,0
 		Start: 2
 		ZOffset: -25
-	make4: castlemake
+	make3: castlemake
 		Offset: 0,-12,0
 		Start: 3
 		ZOffset: -25
-	make5: castlemake
+	make4: castlemake
 		Offset: 0,-12,0
 		Start: 4
 		ZOffset: -25
-	make6: castlemake
+	make5: castlemake
 		Offset: 0,-12,0
 		Start: 5
 		ZOffset: -25

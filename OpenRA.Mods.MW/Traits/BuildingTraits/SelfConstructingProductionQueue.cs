@@ -20,18 +20,25 @@ namespace OpenRA.Mods.MW.Traits.BuildingTraits
 	[Desc("This special production queue implements a fake AllQueued, used to instantly place self constructing buildings.")]
 	public class SelfConstructingProductionQueueInfo : ProductionQueueInfo
 	{
+		public readonly int SplitFractal = 77;
+
+		public readonly bool SingletonConstruction = false;
 		public override object Create(ActorInitializer init) { return new SelfConstructingProductionQueue(init, init.Self.Owner.PlayerActor, this); }
 	}
 
 	public class SelfConstructingProductionQueue : ProductionQueue, INotifyOwnerChanged
 	{
+		private readonly SelfConstructingProductionQueueInfo info;
 		private bool expectFakeProductionItemRequest;
 		private new PlayerResources playerResources;
+		private int maxTicker;
+		private int currentTicker;
 
 		public SelfConstructingProductionQueue(ActorInitializer init, Actor playerActor,
 			SelfConstructingProductionQueueInfo info) : base(init, playerActor, info)
 		{
 			playerResources = playerActor.TraitOrDefault<PlayerResources>();
+			this.info = info;
 		}
 		
 		void INotifyOwnerChanged.OnOwnerChanged(Actor self, Player oldOwner, Player newOwner)
@@ -90,10 +97,34 @@ namespace OpenRA.Mods.MW.Traits.BuildingTraits
 			});
 
 			if (Queue.Count > 0 && !allProductionPaused)
-				Queue[0].Tick(playerResources);
+			{
+				if (!info.SingletonConstruction)
+				{
+					maxTicker = Queue.Count * 3;
+					for (int i = 0; i < Queue.Count; i++)
+					{
+						int speed = (int) Math.Round(i + 1.0 * (Queue.Count * info.SplitFractal / 100.0));
+						speed = Math.Max(speed, 1);
+						if (currentTicker % speed == 0)
+							Queue[i].Tick(playerResources);
+					}
+
+					if (++currentTicker > maxTicker)
+						currentTicker = 1;
+				}
+				else
+				{
+					Queue[0].Tick(playerResources);
+				}
+			}
 
 			// Auto finish done items, as they are already in the world in our case!
 			Queue.FindAll(i => i.Done).ForEach(i => Queue.Remove(i));
+		}
+		
+		public virtual IEnumerable<ProductionItem> AllActuallyQueued()
+		{
+			return Queue;
 		}
 	}
 

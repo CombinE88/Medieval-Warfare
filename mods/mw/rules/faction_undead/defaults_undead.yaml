@@ -48,7 +48,7 @@
 		IsPlayerPalette: True
 	Targetable:
 		TargetTypes: Ground, C4, Structure, Pentagram
-	Sellable:
+	DeconstructSellable:
 	UndeadBuilder:
 		Selfbuilds: true
 	OwnerLostAction:
@@ -413,7 +413,7 @@
 	SelectionDecorations:
 	MustBeDestroyed:
 		RequiredForShortGame: false
-	-Sellable:
+	-DeconstructSellable:
 	ThrowsShrapnel@SMALL:
 		Weapons: SmallStone1, SmallStone2, LargeStone1
 		Pieces: 2, 4
@@ -451,7 +451,7 @@
 	SelectionDecorations:
 	MustBeDestroyed:
 		RequiredForShortGame: false
-	-Sellable:
+	-DeconstructSellable:
 	ThrowsShrapnel@SMALL:
 		Weapons: SmallWood1, SmallWood2, SmallWood3
 	SelfHealing@Killsslef:

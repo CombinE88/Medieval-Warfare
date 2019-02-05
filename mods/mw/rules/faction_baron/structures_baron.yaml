@@ -3,12 +3,14 @@ ARMORYNOD:
 	Inherits@Hitshape: ^2x2Shape
 	ProvidesPrerequisite:
 		Prerequisite: anyhq
+		RequiresCondition: !build-incomplete
 	Armor:
 		Type: Concrete
 	WithDeathAnimation:
 		DeathSequencePalette: raplayer
 	ProvidesPrerequisite@level3:
 		Prerequisite: Level3
+		RequiresCondition: !build-incomplete
 	CustomSellValue:
 		Value: 650
 	Valued:
@@ -16,6 +18,7 @@ ARMORYNOD:
 	Tooltip:
 		Name: Armory
 	ProvidesPrerequisite@buildingname:
+		RequiresCondition: !build-incomplete
 	RenderSprites:
 		Image: armory
 		PlayerPalette: raplayer
@@ -23,6 +26,17 @@ ARMORYNOD:
 		Footprint: xx xx ==
 		Dimensions: 2,3
 		LocalCenterOffset: 0,-512,0
+	Buildable:
+		IconPalette: raicon
+		BuildPaletteOrder: 80
+		Prerequisites: proc
+		Queue: MBuilding.Nod
+		Description: Unlocks Support Powers and Raiding Squad.\nHeals Cavalry and Infantry.\n\n\n\n
+		BuildDuration: 1300
+	SelfConstructing:
+		Condition: build-incomplete
+		Steps: 5
+		Sequence: make
 	Selectable:
 		Bounds: 48,58,0,-5
 	SelectionDecorations:
@@ -36,6 +50,7 @@ ARMORYNOD:
 	RenderDetectionCircle:
 	DetectCloaked:
 		Range: 5c0
+		RequiresCondition: !build-incomplete
 	AirstrikePower:
 		Icon: cadaver
 		ChargeInterval: 6250
@@ -59,19 +74,18 @@ ARMORYNOD:
 		CircleSequence: circles
 		OrderName: CorpsePowerInfoOrder
 		CameraRemoveDelay: 75
+		RequiresCondition: !build-incomplete
 	SupportPowerChargeBar:  
+		RequiresCondition: !build-incomplete
 	ThrowsShrapnel@LARGE:
 		Weapons: LargeWood1, LargeWood1, LargeStone1, LargeStone1
 		Pieces: 1, 2
 		Range: 1c0, 5c0
-	WithFreeSpawnableActor:
-		SpawnActor: mwcivcom
-		Offset: 0,469, 0
-		MoveOffset: 1,2
 	ProximityExternalCondition@HEAL:
 		Range: 5c0
 		ValidStances: Ally
 		Condition: hospitalheal
+		RequiresCondition: !build-incomplete
 	WithRangeCircle: 
 		ValidStances: Ally, Neutral
 		Range: 5c0
@@ -145,11 +159,102 @@ XLTNT3:
 	RenderSprites:
 		Image: xltnt3
 XLTNTUNI:
-	Inherits: XLTNT1
+	Inherits: ^MWBaseBuilding
+	Inherits@Hitshape: ^2x2Shape
+	Armor:
+		Type: Concrete
+	WithDeathAnimation:
+		DeathSequencePalette: raplayer
 	RenderSprites:
-		Image: xltnt3
+		PlayerPalette: raplayer
+		Image: xltnt1
+	Valued:
+		Cost: 600
+	CustomSellValue:
+		Value: 300
+	Tooltip:
+		Name: Large Tent
+	ProvidesPrerequisite:
+		Prerequisite: anypower
+	Building:
+		Footprint: xx xx ==
+		Dimensions: 2,3
+		LocalCenterOffset: 0,-512,0
+	Buildable:
+		IconPalette: raicon
+		BuildPaletteOrder: 20
+		#Prerequisites: anyhq
+		Queue: MBuilding.Nod
+		Description: Provides more livingspace. Livingspace increases over time by generating peasants.\nCan hold up to 9 peasants, spawntime depends on number of shacks and large huts. \ncheaper than the standard Shack.\n\n\n\n
+		BuildDuration: 600
+	SelfConstructing@valida:
+		Condition: build-incomplete
+		Steps: 6
+		Sequence: make
+		RequiresCondition: valida
+	SelfConstructing@validb:
+		Condition: build-incomplete
+		Steps: 6
+		Sequence: makea
+		RequiresCondition: validb
+	SelfConstructing@validc:
+		Condition: build-incomplete
+		Steps: 6
+		Sequence: makeb
+		RequiresCondition: validc
+	Health:
+		HP: 70000
+	RevealsShroud:
+		Range: 4c0
+	WithBuildingBib:
+		Palette: bibs
+	Selectable:
+		Bounds: 48,48,0,-2
+	SelectionDecorations:
+	SpawnActorOnDeath@Farmer1:
+		Actor: e1new
+		Probability: 33
+		OwnerType: InternalName
+		InternalOwner: Creeps
+	SpawnActorOnDeath@Farmer2:
+		Actor: e1new
+		Probability: 33
+		OwnerType: InternalName
+		InternalOwner: Creeps
+	SpawnActorOnDeath@Farmer3:
+		Actor: e1new
+		Probability: 33
+		OwnerType: InternalName
+		InternalOwner: Creeps
+	SpawnActorOnDeath@Farmer4:
+		Actor: e1new
+		Probability: 33
+		OwnerType: InternalName
+		InternalOwner: Creeps
+	SpawnActorOnDeath@Farmer5:
+		Actor: e1new
+		Probability: 33
+		OwnerType: InternalName
+		InternalOwner: Creeps
+	ThrowsShrapnel@LARGE:
+		Weapons: DebrFurniture1, DebrFurniture2, DebrFurniture3, DebrFurniture4
+		Pieces: 1, 2
+		Range: 1c0, 5c0
 	Power:
-		Amount: 10
+		Amount: 9
+	-WithSpriteBody:
+	CombinEGrantRandomCondition:
+		RandomConditions: valida, validb, validc
+		FallbackCondition: valida
+	WithIdleOverlay@a:  
+		Sequence: idlea
+		RequiresCondition: valida
+	WithIdleOverlay@b:  
+		Sequence: idleb
+		RequiresCondition: validb
+	WithIdleOverlay@c:  
+		Sequence: idlec
+		RequiresCondition: validc
 NODNUKE.scaff:
 	Inherits: ^MWBaseBuilding
 	Inherits@Hitshape: ^2x1Shape

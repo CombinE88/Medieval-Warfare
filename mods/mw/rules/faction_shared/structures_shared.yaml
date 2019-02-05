@@ -44,31 +44,31 @@ FACTNEW:
 		Sequence: idle4
 		RequiresCondition: visibility == 4
 		Name: BodyLevel4
-	ConditionalWithMakeAnimation@LV0:
-		Sequence: make0
-		BodyNames: BodyLevel0
-		Condition: build-incomplete
-		RequiresCondition: visibility == 0
-	ConditionalWithMakeAnimation@LV1:
-		Sequence: make1
-		BodyNames: BodyLevel1
-		Condition: build-incomplete
-		RequiresCondition: visibility == 1
-	ConditionalWithMakeAnimation@LV2:
-		Sequence: make2
-		BodyNames: BodyLevel2
-		Condition: build-incomplete
-		RequiresCondition: visibility == 2
-	ConditionalWithMakeAnimation@LV3:
-		Sequence: make3
-		BodyNames: BodyLevel3
-		Condition: build-incomplete
-		RequiresCondition: visibility == 3
-	ConditionalWithMakeAnimation@LV4:
-		Sequence: make4
-		BodyNames: BodyLevel4
-		Condition: build-incomplete
-		RequiresCondition: visibility == 4
+	#ConditionalWithMakeAnimation@LV0:
+	#	Sequence: make0
+	#	BodyNames: BodyLevel0
+	#	Condition: build-incomplete
+	#	RequiresCondition: visibility == 0
+	#ConditionalWithMakeAnimation@LV1:
+	#	Sequence: make1
+	#	BodyNames: BodyLevel1
+	#	Condition: build-incomplete
+	#	RequiresCondition: visibility == 1
+	#ConditionalWithMakeAnimation@LV2:
+	#	Sequence: make2
+	#	BodyNames: BodyLevel2
+	#	Condition: build-incomplete
+	#	RequiresCondition: visibility == 2
+	#ConditionalWithMakeAnimation@LV3:
+	#	Sequence: make3
+	#	BodyNames: BodyLevel3
+	#	Condition: build-incomplete
+	#	RequiresCondition: visibility == 3
+	#ConditionalWithMakeAnimation@LV4:
+	#	Sequence: make4
+	#	BodyNames: BodyLevel4
+	#	Condition: build-incomplete
+	#	RequiresCondition: visibility == 4
 	DamageMultiplier@KEEPLEVEL1:
 		RequiresCondition: visibility == 1
 		Modifier: 98
@@ -100,6 +100,12 @@ FACTNEW:
 		Cost: 4000
 	CustomSellValue:
 		Value: 2000
+	-DeconstructSellable:
+	#	BodyNames: BodyLevel0,BodyLevel1,BodyLevel2,BodyLevel3
+	#SelfConstructing:
+	#	Condition: build-incomplete
+	#	Steps: 5
+	#	Sequence: make
 	Tooltip:
 		Name: Keep
 	Building:
@@ -122,90 +128,105 @@ FACTNEW:
 		Group: Building
 		QueuedAudio: Building
 		ReadyAudio: ConstructionComplete
-	ProductionQueue@NodMBuilding:
+		RequiresCondition: !build-incomplete
+	SelfConstructingProductionQueue@NodMBuilding:
 		Type: MBuilding.Nod
 		Factions: nod
 		Group: Building
 		QueuedAudio: Building
 		ReadyAudio: ConstructionComplete
+		RequiresCondition: !build-incomplete
 	SelfConstructingProductionQueue@GDIMDefence:
 		Type: MTech.GDI
 		Factions: gdi
 		Group: Tech
 		QueuedAudio: Building
 		ReadyAudio: ConstructionComplete
-	ProductionQueue@NodMDefence:
+		RequiresCondition: !build-incomplete
+	SelfConstructingProductionQueue@NodMDefence:
 		Type: MTech.Nod
 		Factions: nod
 		Group: Tech
 		QueuedAudio: Building
 		ReadyAudio: ConstructionComplete
+		RequiresCondition: !build-incomplete
 	ProductionQueue@SULBuilding:
 		Type: MBuilding.SUL
 		Factions: sul
 		Group: Building
 		QueuedAudio: Building
 		ReadyAudio: ConstructionComplete
+		RequiresCondition: !build-incomplete
 	ProductionQueue@SULDefense:
 		Type: MTech.SUL
 		Factions: sul
 		Group: Tech
 		QueuedAudio: Building
 		ReadyAudio: ConstructionComplete
+		RequiresCondition: !build-incomplete
 	SelfConstructingProductionQueue@GDIMResources:
 		Type: MResources.GDI
 		Factions: gdi
 		Group: Building2
 		QueuedAudio: Building
 		ReadyAudio: ConstructionComplete
-	ProductionQueue@NodMResources:
+		RequiresCondition: !build-incomplete
+	SelfConstructingProductionQueue@NodMResources:
 		Type: MResources.Nod
 		Factions: nod
 		Group: Building2
 		QueuedAudio: Building
 		ReadyAudio: ConstructionComplete
+		RequiresCondition: !build-incomplete
 	SelfConstructingProductionQueue@GDIMMilitary:
 		Type: MMilitary.GDI
 		Factions: gdi
 		Group: Building3
 		QueuedAudio: Building
 		ReadyAudio: ConstructionComplete
-	ProductionQueue@NodMMilitary:
+		RequiresCondition: !build-incomplete
+	SelfConstructingProductionQueue@NodMMilitary:
 		Type: MMilitary.Nod
 		Factions: nod
 		Group: Building3
 		QueuedAudio: Building
 		ReadyAudio: ConstructionComplete
+		RequiresCondition: !build-incomplete
 	ProductionQueue@SULBuilding2:
 		Type: MResources.SUL
 		Factions: sul
 		Group: Building2
 		QueuedAudio: Building
 		ReadyAudio: ConstructionComplete
+		RequiresCondition: !build-incomplete
 	ProductionQueue@SULBuilding3:
 		Type: MMilitary.SUL
 		Factions: sul
 		Group: Building3
 		QueuedAudio: Building
 		ReadyAudio: ConstructionComplete
+		RequiresCondition: !build-incomplete
 	ProductionQueue@SULBuilding4:
 		Type: Building4.SUL
 		Factions: sul
 		Group: Building4
 		QueuedAudio: Building
 		ReadyAudio: ConstructionComplete
+		RequiresCondition: !build-incomplete
 	SelfConstructingProductionQueue@GDIBuilding4:
 		Type: Building4.GDI
 		Factions: gdi
 		Group: Building4
 		QueuedAudio: Building
 		ReadyAudio: ConstructionComplete
+		RequiresCondition: !build-incomplete
 	ProductionQueue@NodBuilding4:
 		Type: Building4.Nod
 		Factions: nod
 		Group: Building4
 		QueuedAudio: Building
 		ReadyAudio: ConstructionComplete
+		RequiresCondition: !build-incomplete
 	BaseBuilding:
 	BaseProvider:
 		Cooldown: 25
@@ -221,8 +242,6 @@ FACTNEW:
 	Targetable:
 		TargetTypes: Ground, C4, Structure, Wanderer, Laborer, BaseCenter, Material
 	ProvidesRadar:
-	Sellable:
-		RequiresCondition: !build-incomplete
 	Power:
 		Amount: 8
 		RequiresCondition: !build-incomplete

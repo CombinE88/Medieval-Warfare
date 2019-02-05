@@ -56,13 +56,16 @@
     <Compile Include="Traits\AmmoPoolConditions.cs" />
     <Compile Include="Traits\Activites\ActivityInterfaces.cs" />
     <Compile Include="Traits\AddConditionEvery.cs" />
+    <Compile Include="Traits\BuildingTraits\DeconstructSellable.cs" />
     <Compile Include="Traits\BuildingTraits\SelfConstructing.cs" />
     <Compile Include="Traits\BuildingTraits\SelfConstructingProductionQueue.cs" />
     <Compile Include="Traits\ConditionalWithMakeAnimation.cs" />
     <Compile Include="Traits\MWAttackOrderPower.cs" />
     <Compile Include="Traits\GrantPermanentCondition.cs" />
     <Compile Include="Traits\Graphics\ArcRenderable.cs" />
+    <Compile Include="Traits\Orders\SellOrderGenerator.cs" />
     <Compile Include="Traits\Player\AIHelper.cs" />
+    <Compile Include="Traits\Render\ConditionalWithMakeAnimation.cs" />
     <Compile Include="Traits\Render\UndeadGiantSpawnerChargeBar.cs" />
     <Compile Include="Traits\UndeadFaction\AcolytePreyBuildInfo.cs" />
     <Compile Include="Traits\UndeadFaction\AcolytePreyInfo.cs" />
@@ -108,6 +111,7 @@
     <Compile Include="Traits\UndeadFaction\ActorEnsurance.cs" />
     <Compile Include="Traits\UndeadFaction\WithUndeadBuilderOverlay.cs" />
     <Compile Include="Traits\WithFreeSpawnableActor.cs" />
+    <Compile Include="Traits\WorldTraits\MwProductionQueueFromSelection.cs" />
     <Compile Include="Warheads\BackFireShrapnelWarhead.cs" />
     <Compile Include="Warheads\CashTickWarhead.cs" />
     <Compile Include="Warheads\DecayResourceWarhead.cs" />
@@ -124,6 +128,7 @@
     <Compile Include="Warheads\PromotionWarhead.cs" />
     <Compile Include="Widgets\Logic\Ingame\IngameMaxPopulationCounterLogic.cs" />
     <Compile Include="Widgets\Logic\Ingame\IngameUsedPopulationCounterLogic.cs" />
+    <Compile Include="Widgets\Logic\Ingame\MwSellOrderButtonLogic.cs" />
     <Compile Include="Widgets\Logic\Ingame\NewCashCounterLogic.cs" />
     <Compile Include="Widgets\Logic\Ingame\MWProductionTabsLogic.cs" />
     <Compile Include="Widgets\MWProductionPaletteWidget.cs" />

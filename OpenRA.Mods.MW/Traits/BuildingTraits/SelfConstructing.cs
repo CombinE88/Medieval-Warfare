@@ -1,4 +1,5 @@
 #region Copyright & License Information
+
 /*
  * Copyright 2016-2018 The KKnD Developers (see AUTHORS)
  * This file is part of KKnD, which is free software. It is made
@@ -7,153 +8,313 @@
  * the License, or (at your option) any later version. For more
  * information, see COPYING.
  */
+
 #endregion
 
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
+using OpenRA.Graphics;
+using OpenRA.Mods.Common.Graphics;
 using OpenRA.Mods.Common.Traits;
 using OpenRA.Mods.Common.Traits.Render;
 using OpenRA.Traits;
 
 namespace OpenRA.Mods.MW.Traits.BuildingTraits
 {
-	public enum SpawnType { PlaceBuilding, Deploy, Other }
+    public enum SpawnType
+    {
+        PlaceBuilding,
+        Deploy,
+        Other
+    }
 
-	public class SelfConstructingInfo : WithMakeAnimationInfo, ITraitInfo, Requires<ConditionManagerInfo>, Requires<HealthInfo>
-	{
-		[Desc("Number of make sequences.")]
-		public readonly int Steps = 3;
+    public class SelfConstructingInfo : WithMakeAnimationInfo, ITraitInfo, Requires<ConditionManagerInfo>,
+        Requires<HealthInfo>, Requires<RenderSpritesInfo>
+    {
+        [Desc("Number of make sequences.")] public readonly int Steps = 3;
+        
+		[Desc("Apply to sprite bodies with these names.")]
+		public new readonly string[] BodyNames = { "body" };
 
-		public new object Create(ActorInitializer init) { return new SelfConstructing(init, this); }
-	}
+        public readonly string Scaffolds = "scaffolds";
 
-	public class SelfConstructing : WithMakeAnimation, ITick, INotifyRemovedFromWorld, INotifyCreated, INotifyDamageStateChanged, INotifyKilled
-	{
-		private readonly SelfConstructingInfo info;
+        public readonly bool UseScaffolds = true;
+        
+        public readonly string Font = "MediumBold";
+        
+        public readonly string SmallFont = "Regular";
+        
+        [Desc("The Z offset to apply when rendering this decoration.")]
+        public readonly int ZOffset = 12048;
 
-		private readonly WithSpriteBody wsb;
+        public readonly int[] Offset = {0, 0};
 
-		private readonly ConditionManager conditionManager;
-		private int token = ConditionManager.InvalidConditionToken;
+        [PaletteReference] public readonly string ScaffoldsPalette = "mwcivilian";
 
-		private ProductionItem productionItem;
+        public new object Create(ActorInitializer init)
+        {
+            return new SelfConstructing(init, this);
+        }
+    }
 
-		private List<int> healthSteps;
-		private Health health;
-		private int step;
-		private SpawnType spawnType;
+    public class SelfConstructing : WithMakeAnimation, ITick, INotifyRemovedFromWorld, INotifyCreated,
+        INotifyDamageStateChanged, INotifyKilled, IRender
+    {
+        private readonly SelfConstructingInfo info;
 
-		public SelfConstructing(ActorInitializer init, SelfConstructingInfo info) : base(init, info)
-		{
-			this.info = info;
-			wsb = init.Self.Trait<WithSpriteBody>();
-			conditionManager = init.Self.Trait<ConditionManager>();
+        private readonly WithSpriteBody[] wsbs;
 
-			if (!string.IsNullOrEmpty(this.info.Condition) && token == ConditionManager.InvalidConditionToken)
-				token = conditionManager.GrantCondition(init.Self, this.info.Condition);
+        private readonly ConditionManager conditionManager;
+        
+        private readonly Dictionary<CVec, int> scaffolds = new Dictionary<CVec, int>();
+        private readonly SpriteFont font;
+        private readonly SpriteFont smallFont;
+        private readonly IDecorationBounds[] decorationBounds;
+        
+        private int token = ConditionManager.InvalidConditionToken;
 
-			spawnType = init.Contains<PlaceBuildingInit>() ? SpawnType.PlaceBuilding : init.Contains<SpawnedByMapInit>() ? SpawnType.Other : SpawnType.Deploy;
-		}
+        private ProductionItem productionItem;
 
-		void INotifyCreated.Created(Actor self)
-		{
-			if (spawnType == SpawnType.PlaceBuilding)
-			{
-				var productionActor = self.World.Actors.FirstOrDefault(a =>
-					a.Owner == self.Owner && a.TraitsImplementing<SelfConstructingProductionQueue>().Any(q => q.AllItems().Contains(self.Info)));
-				var productionQueue = productionActor.TraitsImplementing<SelfConstructingProductionQueue>().First(q => q.AllItems().Contains(self.Info));
-				var valued = self.Info.TraitInfoOrDefault<ValuedInfo>();
-				productionItem = new SelfConstructingProductionItem(productionQueue, self, valued == null ? 0 : valued.Cost, null, null);
-				productionQueue.BeginProduction(productionItem, false);
+        private List<int> healthSteps;
+        private Health health;
+        private int step;
+        private SpawnType spawnType;
+        private RenderSpritesInfo RenderSprites;
+        private SelfConstructingProductionQueue queue;
 
-				health = self.Trait<Health>();
 
-				healthSteps = new List<int>();
-				for (var i = 0; i <= info.Steps; i++)
-					healthSteps.Add(health.MaxHP * (i + 1) / (info.Steps + 1));
+        public SelfConstructing(ActorInitializer init, SelfConstructingInfo info) : base(init, info)
+        {
+            this.info = info;
+            wsbs = init.Self.TraitsImplementing<WithSpriteBody>().Where(w => info.BodyNames.Contains(w.Info.Name)).ToArray();
+            conditionManager = init.Self.Trait<ConditionManager>();
+            font = Game.Renderer.Fonts[info.Font];
+            smallFont = Game.Renderer.Fonts[info.SmallFont];
+            decorationBounds = init.Self.TraitsImplementing<IDecorationBounds>().ToArray();
 
-				health.InflictDamage(self, self, new Damage(health.MaxHP - healthSteps[0]), true);
+            if (!string.IsNullOrEmpty(this.info.Condition) && token == ConditionManager.InvalidConditionToken)
+                token = conditionManager.GrantCondition(init.Self, this.info.Condition);
 
-				wsb.CancelCustomAnimation(self);
-				wsb.PlayCustomAnimationRepeating(self, info.Sequence + 0);
-			}
-			else if (spawnType == SpawnType.Deploy)
-			{
-				wsb.CancelCustomAnimation(self);
-				wsb.PlayCustomAnimation(self, "deploy", () => OnComplete(self));
-			}
-			else
-				OnComplete(self);
-		}
+            spawnType = init.Contains<PlaceBuildingInit>() ? SpawnType.PlaceBuilding :
+                init.Contains<SpawnedByMapInit>() ? SpawnType.Other : SpawnType.Deploy;
 
-		private void OnComplete(Actor self)
-		{
-			if (token != ConditionManager.InvalidConditionToken)
-				token = conditionManager.RevokeCondition(self, token);
-		}
+            var footPrintInfo = init.Self.Info.TraitInfoOrDefault<BuildingInfo>();
+            if (footPrintInfo == null)
+                return;
 
-		void ITick.Tick(Actor self)
-		{
-			if (productionItem == null)
-				return;
+            var occupiedCells = footPrintInfo.Footprint.Where(c => c.Value == FootprintCellType.Occupied)
+                .Select(kv => kv.Key).ToArray();
 
-			if (productionItem.Done)
-			{
-				productionItem.Queue.EndProduction(productionItem);
-				productionItem = null;
-				wsb.CancelCustomAnimation(self);
+            foreach (var cell in occupiedCells)
+                scaffolds.Add(cell, CheckSorroundings(occupiedCells, cell));
 
-				while (step < info.Steps)
-					health.InflictDamage(self, self, new Damage(healthSteps[step] - healthSteps[++step]), true);
+            RenderSprites = init.Self.Info.TraitInfo<RenderSpritesInfo>();
+        }
 
-				OnComplete(self);
-				return;
-			}
+        int CheckSorroundings(CVec[] cells, CVec cell)
+        {
+            var sides = 0;
+            sides |= (cells.Contains(cell + new CVec(0, -1)) ? 1 : 0) << 0;
+            sides |= (cells.Contains(cell + new CVec(-1, 0)) ? 1 : 0) << 1;
+            sides |= (cells.Contains(cell + new CVec(0, 1)) ? 1 : 0) << 2;
+            sides |= (cells.Contains(cell + new CVec(1, 0)) ? 1 : 0) << 3;
+            return sides;
+        }
 
-			var progress = Math.Max(0, Math.Min(info.Steps * (productionItem.TotalTime - productionItem.RemainingTime) / Math.Max(1, productionItem.TotalTime), info.Steps - 1));
+        IEnumerable<IRenderable> IRender.Render(Actor self, WorldRenderer worldRenderer)
+        {
+            if (token == ConditionManager.InvalidConditionToken || !info.UseScaffolds ||
+                wsbs.FirstEnabledTraitOrDefault() == null)
+                yield break;
 
-			if (progress != step)
-			{
-				while (step < progress)
-					health.InflictDamage(self, self, new Damage(healthSteps[step] - healthSteps[++step]), true);
+            foreach (var entry in scaffolds)
+            {
+                for (var i = 0; i < 4; i++)
+                {
+                    if (((entry.Value >> i) & 1) == 1)
+                        continue;
 
-				wsb.PlayCustomAnimationRepeating(self, info.Sequence + step);
-			}
-		}
+                    var sequence = self.World.Map.Rules.Sequences.GetSequence(RenderSprites.Image ?? self.Info.Name,
+                        info.Scaffolds + i);
 
-		void INotifyRemovedFromWorld.RemovedFromWorld(Actor self)
-		{
-			if (productionItem != null)
-				productionItem.Queue.EndProduction(productionItem);
-		}
+                    yield return
+                        new SpriteRenderable(
+                            sequence.GetSprite(step),
+                            self.World.Map.CenterOfCell(self.Location + entry.Key),
+                            WVec.Zero,
+                            sequence.ZOffset,
+                            worldRenderer.Palette(info.ScaffoldsPalette),
+                            1,
+                            false
+                        );
+                }
+            }
 
-		public ProductionItem TryAbort(Actor self)
-		{
-			if (productionItem == null)
-				return null;
+            var bounds = decorationBounds.Select(b => b.DecorationBounds(self, worldRenderer))
+                .FirstOrDefault(b => !b.IsEmpty);
+            var spaceBuffer = (int) (10 / worldRenderer.Viewport.Zoom);
+            var effectPos = worldRenderer.ProjectedPosition(new int2(
+                (bounds.Left + bounds.Right) / 2 + info.Offset[0],
+                (bounds.Top + bounds.Bottom) / 2 + info.Offset[1] - spaceBuffer));
+            var allQueued = queue.AllActuallyQueued().ToArray();
 
-			var item = productionItem;
+            if (worldRenderer.World.RenderPlayer != null &&
+                worldRenderer.World.RenderPlayer.IsAlliedWith(self.Owner))
+            {
+                yield return
+                    new TextRenderable(font, effectPos + new WVec(0, -350, 0), info.ZOffset, Color.White,
+                        allQueued.IndexOf(productionItem) == 0
+                            ? "Building"
+                            : allQueued.IndexOf(productionItem).ToString());
 
-			productionItem.Queue.EndProduction(productionItem);
-			productionItem = null;
-			OnComplete(self);
+                yield return
+                    new TextRenderable(
+                        smallFont,
+                        effectPos + new WVec(0, 350, 0),
+                        info.ZOffset,
+                        Color.White,
+                        (int) Math.Round(
+                            100.0 / productionItem.TotalTime *
+                            (productionItem.TotalTime - productionItem.RemainingTime), 0) + "%");
+            }
+        }
+        
+        public IEnumerable<Rectangle> ScreenBounds(Actor self, WorldRenderer wr)
+        {
+            if (!self.IsDead && self.IsInWorld && wsbs.FirstEnabledTraitOrDefault() != null)
+                return self.Trait<RenderSprites>().ScreenBounds(self, wr);
 
-			return item;
-		}
+            return new Rectangle[]{};
+        }
 
-		void INotifyDamageStateChanged.DamageStateChanged(Actor self, AttackInfo e)
-		{
-			if (productionItem == null)
-				return;
+        void INotifyCreated.Created(Actor self)
+        {
+            if (wsbs.FirstEnabledTraitOrDefault() == null)
+                return;
+            if (spawnType == SpawnType.PlaceBuilding)
+            {
+                var productionActor = self.World.Actors.FirstOrDefault(a =>
+                    a.Owner == self.Owner && a.TraitsImplementing<SelfConstructingProductionQueue>()
+                        .Any(q => q.AllItems().Contains(self.Info)));
+                queue = productionActor.TraitsImplementing<SelfConstructingProductionQueue>()
+                    .First(q => q.AllItems().Contains(self.Info));
+                var valued = self.Info.TraitInfoOrDefault<ValuedInfo>();
+                productionItem = new SelfConstructingProductionItem(queue, self,
+                    valued == null ? 0 : valued.Cost, null, null);
+                queue.BeginProduction(productionItem, false);
 
-			wsb.PlayCustomAnimationRepeating(self, info.Sequence + step);
-		}
+                health = self.Trait<Health>();
 
-		void INotifyKilled.Killed(Actor self, AttackInfo e)
-		{
-			if (productionItem != null)
-				productionItem.Queue.EndProduction(productionItem);
-		}
-	}
+                healthSteps = new List<int>();
+                for (var i = 0; i <= info.Steps; i++)
+                    healthSteps.Add(health.MaxHP * (i + 1) / (info.Steps + 1));
+
+                health.InflictDamage(self, self, new Damage(health.MaxHP - healthSteps[0]), true);
+
+                var wsb = wsbs.FirstEnabledTraitOrDefault();
+                wsb.CancelCustomAnimation(self);
+                wsb.PlayCustomAnimationRepeating(self, info.Sequence + 0);
+            }
+            else if (spawnType == SpawnType.Deploy)
+            {
+                var wsb = wsbs.FirstEnabledTraitOrDefault();
+                wsb.CancelCustomAnimation(self);
+                wsb.PlayCustomAnimation(self, "deploy", () => OnComplete(self));
+            }
+            else
+                OnComplete(self);
+        }
+
+        private void OnComplete(Actor self)
+        {
+            if (token != ConditionManager.InvalidConditionToken)
+                token = conditionManager.RevokeCondition(self, token);
+        }
+
+        void ITick.Tick(Actor self)
+        {
+            if (wsbs.FirstEnabledTraitOrDefault() == null)
+                return;
+            
+            if (productionItem == null)
+                return;
+
+            if (productionItem.Done)
+            {
+                productionItem.Queue.EndProduction(productionItem);
+                productionItem = null;
+                var wsb = wsbs.FirstEnabledTraitOrDefault();
+                wsb.CancelCustomAnimation(self);
+
+                while (step < info.Steps)
+                    health.InflictDamage(self, self, new Damage(healthSteps[step] - healthSteps[++step]), true);
+
+                OnComplete(self);
+                return;
+            }
+
+            var progress = Math.Max(0,
+                Math.Min(
+                    info.Steps * (productionItem.TotalTime - productionItem.RemainingTime) /
+                    Math.Max(1, productionItem.TotalTime), info.Steps - 1));
+
+            if (progress != step)
+            {
+                while (step < progress)
+                    health.InflictDamage(self, self, new Damage(healthSteps[step] - healthSteps[++step]), true);
+
+                var wsb = wsbs.FirstEnabledTraitOrDefault();
+                wsb.PlayCustomAnimationRepeating(self, info.Sequence + step);
+            }
+        }
+
+        void INotifyRemovedFromWorld.RemovedFromWorld(Actor self)
+        {
+            if (wsbs.FirstEnabledTraitOrDefault() == null)
+                return;
+            
+            if (productionItem != null)
+                productionItem.Queue.EndProduction(productionItem);
+        }
+
+        public ProductionItem TryAbort(Actor self)
+        {
+            if (wsbs.FirstEnabledTraitOrDefault() == null)
+                return null;
+            
+            if (productionItem == null)
+                return null;
+
+            var item = productionItem;
+
+            productionItem.Queue.EndProduction(productionItem);
+            productionItem = null;
+            OnComplete(self);
+
+            return item;
+        }
+
+        void INotifyDamageStateChanged.DamageStateChanged(Actor self, AttackInfo e)
+        {
+            if (wsbs.FirstEnabledTraitOrDefault() == null)
+                return;
+            
+            if (productionItem == null)
+                return;
+
+            var wsb = wsbs.FirstEnabledTraitOrDefault();
+            wsb.PlayCustomAnimationRepeating(self, info.Sequence + step);
+        }
+
+        void INotifyKilled.Killed(Actor self, AttackInfo e)
+        {
+            if (wsbs.FirstEnabledTraitOrDefault() == null)
+                return;
+            
+            if (productionItem != null)
+                productionItem.Queue.EndProduction(productionItem);
+        }
+    }
 }

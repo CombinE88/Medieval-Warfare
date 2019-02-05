@@ -413,8 +413,8 @@
 	SpawnActorsOnSell:
 		ActorTypes: e1new,e1new,e1new,e1new
 	EngineerRepairable:
-	Sellable:
-		SellSounds: coindrop.aud
+	DeconstructSellable:
+		Condition: !build-incomplete
 	CaptureManager:
 	Capturable:
 		Types: building
@@ -532,8 +532,7 @@
 		Palette: staticterrain
 	WithWallSpriteBody:
 	GivesExperience:
-	Sellable:
-		SellSounds: coindrop.aud
+	DeconstructSellable:
 	Guardable:
 	FrozenUnderFog:
 	ScriptTriggers:
@@ -838,7 +837,7 @@
 	Inherits@1: ^ExistsInWorld
 	Inherits@2: ^SpriteActor
 	Huntable:
-	Sellable:
+	DeconstructSellable:
 	RepairableBuilding:
 		RepairPercent: 40
 		RepairStep: 1000
@@ -993,6 +992,9 @@
 		DeathTypes: DefaultDeath
 	RevealsShroud:
 		RequiresCondition: !build-incomplete
+	RevealsShroud@inbuild:
+		Range: 1c0
+		RequiresCondition: build-incomplete
 ^MWDefense:
 	Inherits@1: ^Defense
 	SpawnActorsOnSell:

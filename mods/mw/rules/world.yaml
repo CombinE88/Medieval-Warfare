@@ -349,7 +349,7 @@ World:
 	HelpCommand:
 	ScreenShaker:
 	BuildingInfluence:
-	ProductionQueueFromSelection:
+	MwProductionQueueFromSelection:
 		ProductionTabsWidget: PRODUCTION_TABS
 	DomainIndex:
 	SmudgeLayer@SCORCH:

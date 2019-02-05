@@ -1,4 +1,14 @@
 ^scaffold:
+	scaffolds0: scaffoldN
+		Length: *
+		ZOffset: -512
+	scaffolds1: scaffoldW
+		Length: *
+	scaffolds2: scaffoldS
+		Length: *
+		ZOffset: 512
+	scaffolds3: scaffoldE
+		Length: *
 	scaffn0: scaffoldN
 		Start: 0
 		ZOffset: -50

@@ -12,13 +12,6 @@ GUNNEW.scaff:
 		Cost: 1300
 	Tooltip:
 		Name: Construction Site (Gunpowder Cannon)
-	Buildable:
-		Description: The early Cannon uses gunpowder to throw a large boulder. \nIt's most effectively used against large targets.\n  Strong vs Cavalry and Spectral Units\n  Weak vs Infantry\n\n
-		BuildPaletteOrder: 60
-		Queue: MMilitary.Nod
-		IconPalette: raicon
-		BuildDurationModifier: 60
-		BuildDuration: 1000
 	Health:
 		HP: 20000
 	RevealsShroud:
@@ -153,13 +146,6 @@ ARMORYNOD.scaff:
 		Cost: 1300
 	Tooltip:
 		Name: Construction Site (Armory)
-	Buildable:
-		IconPalette: raicon
-		BuildPaletteOrder: 80
-		Prerequisites: proc
-		Queue: MBuilding.Nod
-		Description: Unlocks Support Powers and Raiding Squad.\nHeals Cavalry and Infantry.\n\n\n\n
-		BuildDuration: 650
 	Health:
 		HP: 22500
 	RevealsShroud:
@@ -226,13 +212,6 @@ XLTNTUNI.scaff:
 		Cost: 600
 	Tooltip:
 		Name: Construction Site (Large Tent)
-	Buildable:
-		IconPalette: raicon
-		BuildPaletteOrder: 20
-		Prerequisites: anyhq
-		Queue: MBuilding.Nod
-		Description: Provides more livingspace. Livingspace increases over time by generating peasants.\nCan hold up to 9 peasants, spawntime depends on number of shacks and large huts. \ncheaper than the standard Shack.\n\n\n\n
-		BuildDuration: 300
 	Health:
 		HP: 17500
 	RevealsShroud:
@@ -494,14 +473,6 @@ TRIBU.scaff:
 		Cost: 3000
 	Tooltip:
 		Name: Construction Site (Counterweight Trebuchet)
-	Buildable:
-		Description: The Counterweight Trebuchet is a type of siege engine \nmost frequently used to outrange other siege weapons.\n  Strong vs all Ground units\n  Cannot target Aircraft\n  Requires 3 Peasants\n\n
-		BuildPaletteOrder: 90
-		Prerequisites: anycastle
-		Queue: MMilitary.Nod
-		BuildDurationModifier: 40
-		IconPalette: raicon
-		BuildDuration: 2600
 	Health:
 		HP: 30000
 	RevealsShroud:
@@ -560,14 +531,6 @@ SAMNEW.scaff:
 		Cost: 1300
 	Tooltip:
 		Name: Construction Site (Anti-Aircraft Ballista)
-	Buildable:
-		Description: Because of the 4 elastic limbs out of black wood \nthe Anti-Aircraft Ballista is designed to shoot down targets \nin the air with a very high speed missile.\n  Very strong vs Aircraft\n  Cannot target Ground units.\n  Requires 2 Peasants\n\n
-		BuildPaletteOrder: 80
-		Prerequisites: barracks
-		Queue: MMilitary.Nod
-		BuildDurationModifier: 40
-		IconPalette: raicon
-		BuildDuration: 1100
 	Health:
 		HP: 20000
 	RevealsShroud:

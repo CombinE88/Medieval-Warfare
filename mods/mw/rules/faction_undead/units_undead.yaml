@@ -388,7 +388,7 @@ UNDEAD6DEPLOYED:
 	Building:
 		Footprint: x
 		Dimensions: 1,1
-	-Sellable:
+	-DeconstructSellable:
 	WithDeathAnimation:
 		DeathSequencePalette: raplayer 
 		DeathTypes:

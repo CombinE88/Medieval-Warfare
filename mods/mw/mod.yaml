@@ -70,7 +70,6 @@ Rules:
 	mw|rules/faction_baron/cavalry_baron.yaml
 	mw|rules/faction_baron/defense_baron.yaml
 	mw|rules/faction_baron/infantry_baron.yaml
-	mw|rules/faction_baron/scaffolds_baron.yaml
 	mw|rules/faction_baron/siege_baron.yaml
 	mw|rules/faction_baron/structures_baron.yaml
 
@@ -78,14 +77,12 @@ Rules:
 	mw|rules/faction_king/cavalry_king.yaml
 	mw|rules/faction_king/defense_king.yaml
 	mw|rules/faction_king/infantry_king.yaml
-	mw|rules/faction_king/scaffolds_king.yaml
 	mw|rules/faction_king/siege_king.yaml
 	mw|rules/faction_king/structures_king.yaml
 
 	mw|rules/faction_sultan/infantry_sultan.yaml
 	mw|rules/faction_sultan/misc_sultan.yaml
 	mw|rules/faction_sultan/scaffolds_sultan.yaml
-	mw|rules/faction_sultan/structures_sultan.yaml
 
 	mw|rules/faction_undead/defaults_undead.yaml
 	mw|rules/faction_undead/structures_undead.yaml
@@ -93,7 +90,6 @@ Rules:
 
 	mw|rules/faction_shared/defense_shared.yaml
 	mw|rules/faction_shared/infantry_shared.yaml
-	mw|rules/faction_shared/scaffolds_shared.yaml
 	mw|rules/faction_shared/siege_shared.yaml
 	mw|rules/faction_shared/structures_shared.yaml
 

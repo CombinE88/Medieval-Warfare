@@ -7,7 +7,7 @@
 	ExternalCondition@ConstructPlaceholder:
 		Condition: Construct
 		TotalCap: 100
-	Sellable:
+	DeconstructSellable:
 	Huntable:
 	SelectionDecorations:
 	WithSpriteControlGroupDecoration:

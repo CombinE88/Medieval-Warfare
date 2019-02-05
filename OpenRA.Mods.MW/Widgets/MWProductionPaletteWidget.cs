@@ -464,40 +464,45 @@ namespace OpenRA.Mods.MW.Widgets
 			foreach (var icon in icons.Values)
 			{
 				var total = icon.Queued.Count;
-				var total2 = icon.ProductionQueue.AllItems().Count();
-				if (total > 0)
+				
+				var queuedItems = icon.ProductionQueue as SelfConstructingProductionQueue;
+				if (queuedItems != null)
+					total = queuedItems.AllActuallyQueued().Count();
+				
+				if (total > 0 && queuedItems == null)
 				{
 					var first = icon.Queued[0];
 					var waiting = !first.Done;
-					if (first.Done && !(icon.ProductionQueue is SelfConstructingProductionQueue))
+					if (first.Done)
 					{
 						if (ReadyTextStyle == ReadyTextStyleOptions.Solid || orderManager.LocalFrameNumber * worldRenderer.World.Timestep / 360 % 2 == 0)
 							overlayFont.DrawTextWithContrast(ReadyText, icon.Pos + readyOffset, Color.White, Color.Black, 1);
 						else if (ReadyTextStyle == ReadyTextStyleOptions.AlternatingColor)
 							overlayFont.DrawTextWithContrast(ReadyText, icon.Pos + readyOffset, ReadyTextAltColor, Color.Black, 1);
 					}
-					else if (first.Paused && !(icon.ProductionQueue is SelfConstructingProductionQueue))
+					else if (first.Paused)
 						overlayFont.DrawTextWithContrast(HoldText,
 							icon.Pos + holdOffset,
 							Color.White, Color.Black, 1);
-					else if (!waiting && DrawTime && !(icon.ProductionQueue is SelfConstructingProductionQueue))
+					else if (!waiting && DrawTime)
 						overlayFont.DrawTextWithContrast(WidgetUtils.FormatTime(first.Queue.RemainingTimeActual(first), World.Timestep),
 							icon.Pos + timeOffset,
 							Color.White, Color.Black, 1);
 
-					if (first.Infinite && !(icon.ProductionQueue is SelfConstructingProductionQueue))
+					if (first.Infinite)
 						symbolFont.DrawTextWithContrast(InfiniteSymbol,
 							icon.Pos + infiniteOffset,
 							Color.White, Color.Black, 1);
-					else if ((total > 1 || waiting) && !(icon.ProductionQueue is SelfConstructingProductionQueue))
+					else if (total > 1 || waiting)
 						overlayFont.DrawTextWithContrast(total.ToString(),
 							icon.Pos + queuedOffset,
 							Color.White, Color.Black, 1);
-					else if (total2 > 1  && icon.ProductionQueue is SelfConstructingProductionQueue)
-						overlayFont.DrawTextWithContrast((total2 - 1).ToString(),
-							icon.Pos + queuedOffset,
-							Color.White, Color.Black, 1);
 				}
+				
+				if (total > 0 && queuedItems != null)
+					overlayFont.DrawTextWithContrast((total).ToString(),
+						icon.Pos + queuedOffset,
+						Color.White, Color.Black, 1);
 			}
 		}
 

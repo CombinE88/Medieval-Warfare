@@ -35,27 +35,27 @@ gtwnew:
 		ZOffset: 1024
 		Start: 14
 		Offset: 0,-12
-	make1: 
+	make0: 
 		Start: 2
 		ZOffset: -25
 		Offset: 0,-12
-	make2: 
+	make1: 
 		Start: 3
 		ZOffset: -25
 		Offset: 0,-12
-	make3: 
+	make2: 
 		Start: 4
 		ZOffset: -25
 		Offset: 0,-12
-	make4: 
+	make3: 
 		Start: 5
 		ZOffset: -25
 		Offset: 0,-12
-	make5: 
+	make4: 
 		Start: 6
 		ZOffset: -25
 		Offset: 0,-12
-	make6: 
+	make5: 
 		Start: 7
 		ZOffset: -25
 		Offset: 0,-12
@@ -190,22 +190,22 @@ gunnew:
 		Offset: -1,-1
 	icon: cannontowericon.shp
 		AddExtension: False
-	make1: cannontowermake
+	make0: cannontowermake
 		Start: 2
 		ZOffset: -25
-	make2: cannontowermake
+	make1: cannontowermake
 		Start: 3
 		ZOffset: -25
-	make3: cannontowermake
+	make2: cannontowermake
 		Start: 5
 		ZOffset: -25
-	make4: cannontowermake
+	make3: cannontowermake
 		Start: 6
 		ZOffset: -25
-	make5: cannontowermake
+	make4: cannontowermake
 		Start: 8
 		ZOffset: -25
-	make6: cannontowermake
+	make5: cannontowermake
 		Start: 9
 		ZOffset: -25
 tribu:
@@ -234,31 +234,31 @@ tribu:
 		Offset: 0,-2
 	icon: tribuicon.shp
 		AddExtension: False
-	make1: tribumake
+	make0: tribumake
 		Start: 1
 		ZOffset: -25
 		Offset: 0,-18,0
-	make2: tribumake
+	make1: tribumake
 		Start: 2
 		ZOffset: -25
 		Offset: 0,-18,0
-	make3: tribumake
+	make2: tribumake
 		Start: 3
 		ZOffset: -25
 		Offset: 0,-18,0
-	make4: tribumake
+	make3: tribumake
 		Start: 4
 		ZOffset: -25
 		Offset: 0,-18,0
-	make5: tribumake
+	make4: tribumake
 		Start: 5
 		ZOffset: -25
 		Offset: 0,-18,0
-	make6: tribumake
+	make5: tribumake
 		Start: 7
 		ZOffset: -25
 		Offset: 0,-18,0
-	make7: tribumake
+	make6: tribumake
 		Start: 8
 		ZOffset: -25
 		Offset: 0,-18,0
@@ -352,27 +352,27 @@ batowgun:
 		Offset: 0,-2
 	icon: batoicon.shp
 		AddExtension: False
-	make1: batowbasemake
+	make0: batowbasemake
 		Start: 1
 		ZOffset: -25
 		Offset: 0,-12,0
-	make2: batowbasemake
+	make1: batowbasemake
 		Start: 3
 		ZOffset: -25
 		Offset: 0,-12,0
-	make3: batowbasemake
+	make2: batowbasemake
 		Start: 5
 		ZOffset: -25
 		Offset: 0,-12,0
-	make4: batowbasemake
+	make3: batowbasemake
 		Start: 7
 		ZOffset: -25
 		Offset: 0,-12,0
-	make5: batowbasemake
+	make4: batowbasemake
 		Start: 9
 		ZOffset: -25
 		Offset: 0,-12,0
-	make6: batowbasemake
+	make5: batowbasemake
 		Start: 10
 		ZOffset: -25
 		Offset: 0,-12,0
@@ -400,23 +400,23 @@ gtairwnew:
 	turretidle: smallaaball
 		Start: 0
 		Facings: 32
-	make1: 
+	make0: 
 		Start: 1
 		ZOffset: -25
 		Offset: 0,-12,0
-	make2: 
+	make1: 
 		Start: 3
 		ZOffset: -25
 		Offset: 0,-12,0
-	make3: 
+	make2: 
 		Start: 5
 		ZOffset: -25
 		Offset: 0,-12,0
-	make4: 
+	make3: 
 		Start: 10
 		ZOffset: -25
 		Offset: 0,-12,0
-	make5: 
+	make4: 
 		Start: 20
 		ZOffset: -25
 		Offset: 0,-12,0

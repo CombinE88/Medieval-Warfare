@@ -677,7 +677,7 @@ Container@PLAYER_WIDGETS:
 							Y: 8
 							ImageCollection: order-icons
 				Button@SELL_BUTTON:
-					Logic: SellOrderButtonLogic
+					Logic: MwSellOrderButtonLogic
 					X: 208
 					Y: 118
 					Width: 50

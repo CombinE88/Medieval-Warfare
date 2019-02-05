@@ -9,6 +9,17 @@ GUNNEW:
 	Tooltip:
 		Name: Gunpowder Cannon
 	Building:
+	Buildable:
+		Description: The early Cannon uses gunpowder to throw a large boulder. \nIt's most effectively used against large targets.\n  Strong vs Cavalry and Spectral Units\n  Weak vs Infantry\n\n
+		BuildPaletteOrder: 60
+		Queue: MMilitary.Nod
+		IconPalette: raicon
+		BuildDurationModifier: 60
+		BuildDuration: 1400
+	SelfConstructing:
+		Condition: build-incomplete
+		Steps: 6
+		Sequence: make
 	Health:
 		HP: 40000
 	Armor:
@@ -27,7 +38,9 @@ GUNNEW:
 		Weapon: cannonboulder
 		LocalOffset: 512,0,212
 		MuzzleSequence: muzzle
+		RequiresCondition: !build-incomplete
 	AttackTurreted:
+		RequiresCondition: !build-incomplete
 	WithMuzzleOverlay:
 	-WithDeathAnimation:
 	RenderSprites:
@@ -35,6 +48,7 @@ GUNNEW:
 		PlayerPalette: raplayer
 	DetectCloaked:
 		Range: 3c0
+		RequiresCondition: !build-incomplete
 	BodyOrientation:
 		QuantizedFacings: 32
 	Selectable:
@@ -65,6 +79,18 @@ SAMNEW:
 	Building:
 		Footprint: xx
 		Dimensions: 2,1
+	Buildable:
+		Description: Because of the 4 elastic limbs out of black wood \nthe Anti-Aircraft Ballista is designed to shoot down targets \nin the air with a very high speed missile.\n  Very strong vs Aircraft\n  Cannot target Ground units.\n  Requires 2 Peasants\n\n
+		BuildPaletteOrder: 80
+		Prerequisites: barracks
+		Queue: MMilitary.Nod
+		BuildDurationModifier: 40
+		IconPalette: raicon
+		BuildDuration: 1300
+	SelfConstructing:
+		Condition: build-incomplete
+		Steps: 5
+		Sequence: make
 	Health:
 		HP: 40000
 	RevealsShroud:
@@ -76,16 +102,20 @@ SAMNEW:
 		Weapon: samballista
 		LocalOffset: 200,0,227
 		Turret: primary
+		RequiresCondition: !build-incomplete
 	AttackTurreted:
+		RequiresCondition: !build-incomplete
 	BodyOrientation:
 		QuantizedFacings: 8
 	WithSpriteTurret@1: 
 		Sequence: turretidle
 		Turret: primary
+		RequiresCondition: !build-incomplete
 	Turreted@1:
 		Turret: primary
 		TurnSpeed: 100
 		Offset: 0,0,932
+		RequiresCondition: !build-incomplete
 	Armor:
 		Type: Concrete 
 	SelectionDecorations:
@@ -98,7 +128,7 @@ TRIBU:
 	Inherits@AUTOTARGET: ^AutoTargetGround
 	Inherits@Hitshape: ^1x1Shape
 	Valued:
-		Cost: 1100
+		Cost: 3000
 	CustomSellValue:
 		Value: 550
 	Tooltip:
@@ -106,6 +136,18 @@ TRIBU:
 	Building:
 		Footprint: x
 		Dimensions: 1,1
+	Buildable:
+		Description: The Counterweight Trebuchet is a type of siege engine \nmost frequently used to outrange other siege weapons.\n  Strong vs all Ground units\n  Cannot target Aircraft\n  Requires 3 Peasants\n\n
+		BuildPaletteOrder: 90
+		Prerequisites: anycastle
+		Queue: MMilitary.Nod
+		BuildDurationModifier: 40
+		IconPalette: raicon
+		BuildDuration: 3000
+	SelfConstructing:
+		Condition: build-incomplete
+		Steps: 7
+		Sequence: make
 	Health:
 		HP: 60000
 	Armor:
@@ -119,8 +161,10 @@ TRIBU:
 		Weapon: tribuchetboulder
 		LocalOffset: 0,0,2124
 		FireDelay: 5
+		RequiresCondition: !build-incomplete
 	DetectCloaked:
 		Range: 3c0
+		RequiresCondition: !build-incomplete
 	Selectable:
 		Bounds: 30,52,0,-12
 	SelectionDecorations:
@@ -131,11 +175,14 @@ TRIBU:
 		QuantizedFacings: 32
 	WithAttackAnimation:
 		Sequence: shoot
+		RequiresCondition: !build-incomplete
 	WithEmbeddedTurretSpriteBody:
 	-WithSpriteBody:
 	AttackTurreted:
+		RequiresCondition: !build-incomplete
 	Turreted:
 		TurnSpeed: 2
+		RequiresCondition: !build-incomplete
 	WithDeathAnimation:
 		DeathSequencePalette: raplayer 
 	ThrowsShrapnel@SMALL:
