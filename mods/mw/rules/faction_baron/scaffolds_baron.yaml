@@ -180,10 +180,9 @@ ARMORYNOD.scaff:
 		RequiresCondition: Construct >= 35
 XLTNTUNI.scaff:
 	Inherits: ^ConstructionSite
-	Inherits@Hitshape: ^2x2Shape
-	CombinEGrantRandomCondition:
-		RandomConditions: valida, validb, validc
-		FallbackCondition: valida
+	Inherits@Hitshape: ^2x2Shape	
+	GrantRandomCondition:
+		Conditions: valida, validb, validc
 	#anti error fix
 	ExternalCondition@valida:
 		Condition: valida

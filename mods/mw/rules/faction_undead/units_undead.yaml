@@ -927,9 +927,8 @@ BLOCKER1:
 		Image: gstone1
 	WithSpriteBody:
 		Sequence: empty
-	CombinEGrantRandomCondition:
-		RandomConditions: valida, validb, validc
-		FallbackCondition: valida
+	GrantRandomCondition:
+		Conditions: valida, validb, validc
 	WithIdleOverlay@a:  
 		StartSequence: makea
 		Sequence: idlea
@@ -959,9 +958,8 @@ BLOCKER2:
 		Image: gstone2
 	WithSpriteBody:
 		Sequence: empty
-	CombinEGrantRandomCondition:
-		RandomConditions: valida, validb, validc
-		FallbackCondition: valida
+	GrantRandomCondition:
+		Conditions: valida, validb, validc
 	WithIdleOverlay@a:  
 		StartSequence: makea
 		Sequence: idlea
@@ -991,9 +989,8 @@ BLOCKER3:
 		Image: gstone3
 	WithSpriteBody:
 		Sequence: empty
-	CombinEGrantRandomCondition:
-		RandomConditions: valida, validb, validc
-		FallbackCondition: valida
+	GrantRandomCondition:
+		Conditions: valida, validb, validc
 	WithIdleOverlay@a:  
 		StartSequence: makea
 		Sequence: idlea

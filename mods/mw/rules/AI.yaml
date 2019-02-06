@@ -9,7 +9,7 @@ Player:
 #			Refineries: sulref.scaff, procnew.scaff, sulref, procnew
 #			Hunter: sullodge.scaff, lodge.scaff
 #			DeerStands: split7, split8, split9
-#			Houses: xltntuni.scaff, nodnuke.scaff, nukenew.scaff, nuk2new.scaff, nodnuk2.scaff, sulnuke.scaff, sulnuk2.scaff, nukxl.scaff
+#			Houses: xltntuni.scaff, NODNUKE, nukenew.scaff, nuk2new.scaff, nodnuk2.scaff, sulnuke.scaff, sulnuk2.scaff, nukxl.scaff
 #			Barracks: barrnew.scaff,handnew.scaff,sulbarr.scaff
 #			Stable: stall.scaff,nodstall.scaff,sulmystic.scaff
 #			SiegeWorkshops: workshopgdi.scaff, workshopnod.scaff, sulfix.scaff
@@ -428,7 +428,7 @@ Player:
 #			Refineries: sulref.scaff, procnew.scaff, sulref, procnew
 #			Hunter: sullodge.scaff, lodge.scaff
 #			DeerStands: split7, split8, split9
-#			Houses: xltntuni.scaff, nodnuke.scaff, nukenew.scaff, nuk2new.scaff, nodnuk2.scaff, sulnuke.scaff, sulnuk2.scaff, nukxl.scaff
+#			Houses: xltntuni.scaff, NODNUKE, nukenew.scaff, nuk2new.scaff, nodnuk2.scaff, sulnuke.scaff, sulnuk2.scaff, nukxl.scaff
 #			Barracks: barrnew.scaff,handnew.scaff,sulbarr.scaff
 #			Stable: stall.scaff,nodstall.scaff,sulmystic.scaff
 #			SiegeWorkshops: workshopgdi.scaff, workshopnod.scaff, sulfix.scaff
@@ -848,7 +848,7 @@ Player:
 #			Refineries: sulref.scaff, procnew.scaff, sulref, procnew
 #			Hunter: sullodge.scaff, lodge.scaff
 #			DeerStands: split7, split8, split9
-#			Houses: xltntuni.scaff, nodnuke.scaff, nukenew.scaff, nuk2new.scaff, nodnuk2.scaff, sulnuke.scaff, sulnuk2.scaff, nukxl.scaff
+#			Houses: xltntuni.scaff, NODNUKE, nukenew.scaff, nuk2new.scaff, nodnuk2.scaff, sulnuke.scaff, sulnuk2.scaff, nukxl.scaff
 #			Barracks: barrnew.scaff,handnew.scaff,sulbarr.scaff
 #			Stable: stall.scaff,nodstall.scaff,sulmystic.scaff
 #			SiegeWorkshops: workshopgdi.scaff, workshopnod.scaff, sulfix.scaff

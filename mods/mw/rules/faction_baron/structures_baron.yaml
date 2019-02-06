@@ -186,22 +186,40 @@ XLTNTUNI:
 		#Prerequisites: anyhq
 		Queue: MBuilding.Nod
 		Description: Provides more livingspace. Livingspace increases over time by generating peasants.\nCan hold up to 9 peasants, spawntime depends on number of shacks and large huts. \ncheaper than the standard Shack.\n\n\n\n
-		BuildDuration: 600
+		BuildDuration: 300
+	-WithSpriteBody:
+	GrantRandomCondition:
+		Conditions: valida, validb, validc
+	WithSpriteBody@idlea:
+		Name: valida
+		RequiresCondition: valida
+		Sequence: idlea
+	WithSpriteBody@validb:
+		Name: validb
+		RequiresCondition: validb
+		Sequence: idleb
+	WithSpriteBody@validc:
+		Name: validc
+		RequiresCondition: validc
+		Sequence: idlec
 	SelfConstructing@valida:
 		Condition: build-incomplete
 		Steps: 6
-		Sequence: make
-		RequiresCondition: valida
+		Sequence: makea
+		BodyNames: valida
+		UseScaffolds: false
 	SelfConstructing@validb:
 		Condition: build-incomplete
 		Steps: 6
-		Sequence: makea
-		RequiresCondition: validb
+		Sequence: makeb
+		BodyNames: validb
+		UseScaffolds: false
 	SelfConstructing@validc:
 		Condition: build-incomplete
 		Steps: 6
-		Sequence: makeb
-		RequiresCondition: validc
+		Sequence: makec
+		BodyNames: validc
+		UseScaffolds: false
 	Health:
 		HP: 70000
 	RevealsShroud:
@@ -242,20 +260,7 @@ XLTNTUNI:
 		Range: 1c0, 5c0
 	Power:
 		Amount: 9
-	-WithSpriteBody:
-	CombinEGrantRandomCondition:
-		RandomConditions: valida, validb, validc
-		FallbackCondition: valida
-	WithIdleOverlay@a:  
-		Sequence: idlea
-		RequiresCondition: valida
-	WithIdleOverlay@b:  
-		Sequence: idleb
-		RequiresCondition: validb
-	WithIdleOverlay@c:  
-		Sequence: idlec
-		RequiresCondition: validc
-NODNUKE.scaff:
+NODNUKE:
 	Inherits: ^MWBaseBuilding
 	Inherits@Hitshape: ^2x1Shape
 	Armor:
@@ -275,48 +280,59 @@ NODNUKE.scaff:
 		DeathSequencePalette: raplayer
 		RequiresCondition: validd
 		DeathSequence: deadd
-	#anti error fix
-	ExternalCondition@valida:
-		Condition: valida
-	#anti error fix
-	ExternalCondition@validb:
-		Condition: validb
-	#anti error fix
-	ExternalCondition@validc:
-		Condition: validc
-	#anti error fix
-	ExternalCondition@validd:
-		Condition: validd
 	RenderSprites:
 		PlayerPalette: raplayer
 		Image: nodnuke
+	GrantRandomCondition:
+		Conditions: valida, validb, validc, validd
 	-WithSpriteBody:
-	CombinEGrantRandomCondition:
-		RandomConditions: valida, validb, validc, validd
-		FallbackCondition: valida
-	WithIdleOverlay@a:  
-		StartSequence: make
-		Sequence: idle
+	WithSpriteBody@idlea:
+		Name: valida
 		RequiresCondition: valida
-	WithIdleOverlay@b:  
-		StartSequence: makeb
-		Sequence: idleb
+		Sequence: idlea
+	WithSpriteBody@validb:
+		Name: validb
 		RequiresCondition: validb
-	WithIdleOverlay@c:  
-		StartSequence: makec
-		Sequence: idlec
+		Sequence: idleb
+	WithSpriteBody@validc:
+		Name: validc
 		RequiresCondition: validc
-	WithIdleOverlay@d:  
-		StartSequence: maked
-		Sequence: idled
+		Sequence: idlec
+	WithSpriteBody@validd:
+		Name: validd
 		RequiresCondition: validd
+		Sequence: idled
+	SelfConstructing@valida:
+		Condition: build-incomplete
+		Steps: 6
+		Sequence: makea
+		BodyNames: valida
+		UseScaffolds: false
+	SelfConstructing@validb:
+		Condition: build-incomplete
+		Steps: 6
+		Sequence: makeb
+		BodyNames: validb
+		UseScaffolds: false
+	SelfConstructing@validc:
+		Condition: build-incomplete
+		Steps: 6
+		Sequence: makec
+		BodyNames: validc
+		UseScaffolds: false
+	SelfConstructing@validd:
+		Condition: build-incomplete
+		Steps: 6
+		Sequence: maked
+		BodyNames: validb
+		UseScaffolds: false
 	Buildable:
 		IconPalette: raicon
 		BuildPaletteOrder: 10
 		Prerequisites: factnew
 		Description: Generates livingspace. Livingspace increases over time by generating peasants.\nCan hold up to 3 peasants, spawntime depends on number of shacks and large huts.\nA tent can be plopped down instant.\n\n\n
 		Queue: MBuilding.Nod
-		BuildDuration: 150
+		BuildDuration: 75
 	Valued:
 		Cost: 350
 	CustomSellValue:
@@ -362,13 +378,7 @@ NODNUKE.scaff:
 		Amount: 4
 	MapEditorData:
 		ExcludeTilesets: TEMPERATE, SNOW, DESERT, WINTER
-		Categories: 
-NODNUKE:
-	Inherits: NODNUKE.scaff
-	RenderSprites:
-		PlayerPalette: raplayer
-		Image: nodnuke
-	-Buildable:
+		Categories:
 NTENT1:
 	Inherits: ^MWBaseBuilding
 	Inherits@Hitshape: ^2x1Shape

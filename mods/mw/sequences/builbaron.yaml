@@ -3,6 +3,9 @@ nodnuke:
 	idle: 
 		Start: 12
 		Offset: 0,-12
+	idlea: 
+		Start: 12
+		Offset: 0,-12
 	damaged-idle: 
 		Start: 13
 		Offset: 0,-12
@@ -10,17 +13,42 @@ nodnuke:
 		Start: 14
 		Tick: 800
 		Offset: 0,-12
-	make: 
-		Length: 12
+	makea0: 
 		Start: 0
-		Tick: 80
 		Offset: 0,-12
-	bib: buildingbibs.png
-		Frames: 4,5,10,11
-		Length: 4
-		AddExtension: false
-	icon: nodnukeicon.shp
-		AddExtension: False
+	makea1: 
+		Start: 1
+		Offset: 0,-12
+	makea2: 
+		Start: 2
+		Offset: 0,-12
+	makea3: 
+		Start: 3
+		Offset: 0,-12
+	makea4: 
+		Start: 4
+		Offset: 0,-12
+	makea5: 
+		Start: 5
+		Offset: 0,-12
+	makea6: 
+		Start: 6
+		Offset: 0,-12
+	makea7: 
+		Start: 7
+		Offset: 0,-12
+	makea8: 
+		Start: 8
+		Offset: 0,-12
+	makea9: 
+		Start: 9
+		Offset: 0,-12
+	makea10: 
+		Start: 10
+		Offset: 0,-12
+	makea11: 
+		Start: 11
+		Offset: 0,-12
 	idleb: nodnukeb
 		Start: 12
 		Offset: 0,-12
@@ -31,10 +59,41 @@ nodnuke:
 		Start: 14
 		Tick: 800
 		Offset: 0,-12
-	makeb: nodnukeb
-		Length: 12
+	makeb0: nodnukeb
 		Start: 0
-		Tick: 80
+		Offset: 0,-12
+	makeb1: nodnukeb
+		Start: 1
+		Offset: 0,-12
+	makeb2: nodnukeb
+		Start: 2
+		Offset: 0,-12
+	makeb3: nodnukeb
+		Start: 3
+		Offset: 0,-12
+	makeb4: nodnukeb
+		Start: 4
+		Offset: 0,-12
+	makeb5: nodnukeb
+		Start: 5
+		Offset: 0,-12
+	makeb6: nodnukeb
+		Start: 6
+		Offset: 0,-12
+	makeb7: nodnukeb
+		Start: 7
+		Offset: 0,-12
+	makeb8: nodnukeb
+		Start: 8
+		Offset: 0,-12
+	makeb9: nodnukeb
+		Start: 9
+		Offset: 0,-12
+	makeb10: nodnukeb
+		Start: 19
+		Offset: 0,-12
+	makeb11: nodnukeb
+		Start: 11
 		Offset: 0,-12
 	idlec: nodnukec
 		Start: 12
@@ -46,10 +105,41 @@ nodnuke:
 		Start: 14
 		Tick: 800
 		Offset: 0,-12
-	makec: nodnukec
-		Length: 12
+	makec0: nodnukec
 		Start: 0
-		Tick: 80
+		Offset: 0,-12
+	makec1: nodnukec
+		Start: 1
+		Offset: 0,-12
+	makec2: nodnukec
+		Start: 2
+		Offset: 0,-12
+	makec3: nodnukec
+		Start: 3
+		Offset: 0,-12
+	makec4: nodnukec
+		Start: 4
+		Offset: 0,-12
+	makec5: nodnukec
+		Start: 5
+		Offset: 0,-12
+	makec6: nodnukec
+		Start: 6
+		Offset: 0,-12
+	makec7: nodnukec
+		Start: 7
+		Offset: 0,-12
+	makec8: nodnukec
+		Start: 8
+		Offset: 0,-12
+	makec9: nodnukec
+		Start: 9
+		Offset: 0,-12
+	makec10: nodnukec
+		Start: 10
+		Offset: 0,-12
+	makec11: nodnukec
+		Start: 11
 		Offset: 0,-12
 	idled: nodnuked
 		Start: 12
@@ -61,11 +151,48 @@ nodnuke:
 		Start: 14
 		Tick: 800
 		Offset: 0,-12
-	maked: nodnuked
-		Length: 12
+	maked0: nodnuked
 		Start: 0
-		Tick: 80
 		Offset: 0,-12
+	maked1: nodnuked
+		Start: 1
+		Offset: 0,-12
+	maked2: nodnuked
+		Start: 2
+		Offset: 0,-12
+	maked3: nodnuked
+		Start: 3
+		Offset: 0,-12
+	maked4: nodnuked
+		Start: 4
+		Offset: 0,-12
+	maked5: nodnuked
+		Start: 5
+		Offset: 0,-12
+	maked6: nodnuked
+		Start: 6
+		Offset: 0,-12
+	maked7: nodnuked
+		Start: 7
+		Offset: 0,-12
+	maked8: nodnuked
+		Start: 8
+		Offset: 0,-12
+	maked9: nodnuked
+		Start: 9
+		Offset: 0,-12
+	maked10: nodnuked
+		Start: 10
+		Offset: 0,-12
+	maked11: nodnuked
+		Start: 11
+		Offset: 0,-12
+	bib: buildingbibs.png
+		Frames: 4,5,10,11
+		Length: 4
+		AddExtension: false
+	icon: nodnukeicon.shp
+		AddExtension: False
 xltnt1:
 	Inherits: ^scaffold
 	idle: 
@@ -98,75 +225,75 @@ xltnt1:
 		AddExtension: false
 	icon: xltnticon.shp
 		AddExtension: False
-	make0: 
+	makea0: 
 		Start: 1
 		ZOffset: -25
 		Offset: 0,-6
-	make1: 
+	makea1: 
 		Start: 2
 		ZOffset: -25
 		Offset: 0,-6
-	make2: 
+	makea2: 
 		Start: 3
 		ZOffset: -25
 		Offset: 0,-6
-	make3: 
+	makea3: 
 		Start: 4
 		ZOffset: -25
 		Offset: 0,-6
-	make4: 
+	makea4: 
 		Start: 5
 		ZOffset: -25
 		Offset: 0,-6
-	make5: 
+	makea5: 
 		Start: 6
 		ZOffset: -25
 		Offset: 0,-6
-	makea0: xltnt2
+	makeb0: xltnt2
 		Start: 1
 		ZOffset: -25
 		Offset: 0,-6
-	makea1: xltnt2
+	makeb1: xltnt2
 		Start: 2
 		ZOffset: -25
 		Offset: 0,-6
-	makea2: xltnt2
+	makeb2: xltnt2
 		Start: 3
 		ZOffset: -25
 		Offset: 0,-6
-	makea3: xltnt2
+	makeb3: xltnt2
 		Start: 4
 		ZOffset: -25
 		Offset: 0,-6
-	makea4: xltnt2
+	makeb4: xltnt2
 		Start: 5
 		ZOffset: -25
 		Offset: 0,-6
-	makea5: xltnt2
+	makeb5: xltnt2
 		Start: 6
 		ZOffset: -25
 		Offset: 0,-6
-	makeb0: xltnt3
+	makec0: xltnt3
 		Start: 1
 		ZOffset: -25
 		Offset: 0,-6
-	makeb1: xltnt3
+	makec1: xltnt3
 		Start: 2
 		ZOffset: -25
 		Offset: 0,-6
-	makeb2: xltnt3
+	makec2: xltnt3
 		Start: 3
 		ZOffset: -25
 		Offset: 0,-6
-	makeb3: xltnt3
+	makec3: xltnt3
 		Start: 4
 		ZOffset: -25
 		Offset: 0,-6
-	makeb4: xltnt3
+	makec4: xltnt3
 		Start: 5
 		ZOffset: -25
 		Offset: 0,-6
-	makeb5: xltnt3
+	makec5: xltnt3
 		Start: 6
 		ZOffset: -25
 		Offset: 0,-6

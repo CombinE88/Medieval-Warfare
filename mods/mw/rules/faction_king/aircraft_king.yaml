@@ -83,9 +83,8 @@ DRGNRDR:
 	Inherits@EXPERIENCE: ^GainsExperience
 	Inherits@AUTOTARGET: ^AutoTargetAll
 	Inherits@AUTOTARGETDEF: ^AutoTargetDefenses
-	CombinEGrantRandomCondition:
-		RandomConditions: valida, validb
-		FallbackCondition: validb
+	GrantRandomCondition:
+		Conditions: valida, validb
 	# anti error fix
 	ExternalCondition@valida:
 		Condition: valida

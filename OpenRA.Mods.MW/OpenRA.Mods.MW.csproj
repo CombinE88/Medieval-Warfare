@@ -83,7 +83,6 @@
     <Compile Include="Traits\DockBasics\DockClient.cs" />
     <Compile Include="Traits\DockBasics\DockManager.cs" />
     <Compile Include="Traits\DockBasics\DockUtils.cs" />
-    <Compile Include="Traits\CombinEGrantRandomCondition.cs" />
     <Compile Include="Traits\HunterTraits\HuntableDeer.cs" />
     <Compile Include="Traits\HunterTraits\DeerHunter.cs" />
     <Compile Include="Traits\HunterTraits\LodgeActor.cs" />

@@ -44,7 +44,7 @@ namespace OpenRA.Mods.MW.Traits.BuildingTraits
 		private readonly DeveloperMode developerMode;
 		private readonly WithSpriteBody[] wsbs;
 
-		private SelfConstructingInfo selfConstructing;
+		private SelfConstructingInfo[] selfConstructings;
 
 		private ConditionManager conditionManager;
 		private int token = ConditionManager.InvalidConditionToken;
@@ -62,7 +62,7 @@ namespace OpenRA.Mods.MW.Traits.BuildingTraits
 
 		void INotifyCreated.Created(Actor self)
 		{
-			selfConstructing = self.Info.TraitInfo<SelfConstructingInfo>();
+			selfConstructings = self.Info.TraitInfos<SelfConstructingInfo>().Where(w => info.BodyNames.Intersect(w.BodyNames).Any()).ToArray();
 			conditionManager = self.TraitOrDefault<ConditionManager>();
 		}
 
@@ -90,9 +90,13 @@ namespace OpenRA.Mods.MW.Traits.BuildingTraits
 					self.Dispose();
 				}
 				else if (wsb != null)
-					wsb.PlayCustomAnimationRepeating(self,
-						selfConstructing.Sequence + Math.Min(sellTimer * selfConstructing.Steps / sellTimerTotal,
-							selfConstructing.Steps - 1));
+				{
+					var selfConstructing = selfConstructings.FirstEnabledTraitOrDefault();
+					if (selfConstructing != null)
+						wsb.PlayCustomAnimationRepeating(self,
+							selfConstructing.Sequence + Math.Min(sellTimer * selfConstructing.Steps / sellTimerTotal,
+								selfConstructing.Steps - 1));
+				}
 			}
 		}
 
