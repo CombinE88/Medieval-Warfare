@@ -21,6 +21,7 @@ GTWNEW:
 		HP: 40000
 	RevealsShroud:
 		Range: 7c0
+		RequiresCondition: !build-incomplete
 	WithBuildingBib:
 		Palette: bibs
 		HasMinibib: Yes
@@ -133,6 +134,7 @@ BATO:
 		RequiresCondition: !build-incomplete
 	DetectCloaked:
 		Range: 3c0
+		RequiresCondition: !build-incomplete
 	Armor:
 		Type: Concrete
 	Selectable:

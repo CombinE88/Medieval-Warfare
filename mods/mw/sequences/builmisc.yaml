@@ -591,27 +591,27 @@ barn:
 		Length: 2
 	icon: barnicon.shp
 		AddExtension: False
-	make1: barnmake
+	make0: barnmake
 		Start: 0
 		ZOffset: -25
 		Offset: 0,-12
-	make2: barnmake
+	make1: barnmake
 		Start: 1
 		ZOffset: -25
 		Offset: 0,-12
-	make3: barnmake
+	make2: barnmake
 		Start: 2
 		ZOffset: -25
 		Offset: 0,-12
-	make4: barnmake
+	make3: barnmake
 		Start: 3
 		ZOffset: -25
 		Offset: 0,-12
-	make5: barnmake
+	make4: barnmake
 		Start: 4
 		ZOffset: -25
 		Offset: 0,-12
-	make6: barnmake
+	make5: barnmake
 		Start: 5
 		ZOffset: -25
 		Offset: 0,-12

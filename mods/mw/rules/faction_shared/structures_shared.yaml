@@ -150,14 +150,14 @@ FACTNEW:
 		QueuedAudio: Building
 		ReadyAudio: ConstructionComplete
 		RequiresCondition: !build-incomplete
-	ProductionQueue@SULBuilding:
+	SelfConstructingProductionQueue@SULBuilding:
 		Type: MBuilding.SUL
 		Factions: sul
 		Group: Building
 		QueuedAudio: Building
 		ReadyAudio: ConstructionComplete
 		RequiresCondition: !build-incomplete
-	ProductionQueue@SULDefense:
+	SelfConstructingProductionQueue@SULDefense:
 		Type: MTech.SUL
 		Factions: sul
 		Group: Tech
@@ -192,21 +192,21 @@ FACTNEW:
 		QueuedAudio: Building
 		ReadyAudio: ConstructionComplete
 		RequiresCondition: !build-incomplete
-	ProductionQueue@SULBuilding2:
+	SelfConstructingProductionQueue@SULBuilding2:
 		Type: MResources.SUL
 		Factions: sul
 		Group: Building2
 		QueuedAudio: Building
 		ReadyAudio: ConstructionComplete
 		RequiresCondition: !build-incomplete
-	ProductionQueue@SULBuilding3:
+	SelfConstructingProductionQueue@SULBuilding3:
 		Type: MMilitary.SUL
 		Factions: sul
 		Group: Building3
 		QueuedAudio: Building
 		ReadyAudio: ConstructionComplete
 		RequiresCondition: !build-incomplete
-	ProductionQueue@SULBuilding4:
+	SelfConstructingProductionQueue@SULBuilding4:
 		Type: Building4.SUL
 		Factions: sul
 		Group: Building4
@@ -220,7 +220,7 @@ FACTNEW:
 		QueuedAudio: Building
 		ReadyAudio: ConstructionComplete
 		RequiresCondition: !build-incomplete
-	ProductionQueue@NodBuilding4:
+	SelfConstructingProductionQueue@NodBuilding4:
 		Type: Building4.Nod
 		Factions: nod
 		Group: Building4
@@ -232,7 +232,8 @@ FACTNEW:
 		Cooldown: 25
 		Range: 14c0
 		RequiresCondition: !build-incomplete
-	ProvidesPrerequisite@buildingname:		
+	ProvidesPrerequisite@buildingname:
+		RequiresCondition: !build-incomplete
 	WithDeathAnimation:
 		DeathSequencePalette: raplayer
 	ThrowsShrapnel@LARGE:
@@ -360,6 +361,7 @@ PROCNEW:
 		HP: 150000
 	RevealsShroud:
 		Range: 6c0
+		RequiresCondition: !build-incomplete
 	WithBuildingBib:
 		Palette: bibs
 	Refinery:
@@ -405,11 +407,23 @@ SILONEW:
 	Building:
 		Footprint: _x xx
 		Dimensions: 2,2
+	Buildable:
+		BuildPaletteOrder: 40
+		Prerequisites: proc
+		Queue: MResources.SUL
+		Description: Stores additional Resources\n\n\n\n
+		IconPalette: raicon
+		BuildDuration: 300
+	SelfConstructing:
+		Condition: build-incomplete
+		Steps: 4
+		Sequence: make
 	-GivesBuildableArea:
 	Health:
 		HP: 40000
 	RevealsShroud:
 		Range: 4c0
+		RequiresCondition: !build-incomplete
 	WithBuildingBib:
 		Palette: bibs
 		HasMinibib: Yes
@@ -445,11 +459,23 @@ SILOTWO:
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
+	Buildable:
+		BuildPaletteOrder: 40
+		Prerequisites: proc
+		Queue: MResources.GDI, MResources.Nod
+		Description: Stores additional Resources\n\n\n\n
+		IconPalette: raicon
+		BuildDuration: 300
+	SelfConstructing:
+		Condition: build-incomplete
+		Steps: 6
+		Sequence: make
 	-GivesBuildableArea:
 	Health:
 		HP: 50000
 	RevealsShroud:
 		Range: 4c0
+		RequiresCondition: !build-incomplete
 	WithBuildingBib:
 		Palette: bibs
 		HasMinibib: Yes

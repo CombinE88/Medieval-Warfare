@@ -26,6 +26,7 @@ GUNNEW:
 		Type: HeavyBuilding
 	RevealsShroud:
 		Range: 6c0
+		RequiresCondition: !build-incomplete
 	WithBuildingBib:
 		Palette: bibs
 		HasMinibib: Yes
@@ -95,6 +96,7 @@ SAMNEW:
 		HP: 40000
 	RevealsShroud:
 		Range: 8c0
+		RequiresCondition: !build-incomplete
 	WithBuildingBib:
 		Palette: bibs
 		HasMinibib: Yes
@@ -154,6 +156,7 @@ TRIBU:
 		Type: Concrete
 	RevealsShroud:
 		Range: 8c0
+		RequiresCondition: !build-incomplete
 	WithBuildingBib:
 		Palette: bibs
 		HasMinibib: Yes

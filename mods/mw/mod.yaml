@@ -58,7 +58,6 @@ MapFolders:
 Rules:
 	mw|rules/defaults.yaml
 	mw|rules/defaultcombatsystem.yaml
-	mw|rules/defaultscaffoldmagic.yaml
 	mw|rules/defaultsunitstati.yaml
 	mw|rules/palettes.yaml
 	mw|rules/AI.yaml
@@ -82,7 +81,6 @@ Rules:
 
 	mw|rules/faction_sultan/infantry_sultan.yaml
 	mw|rules/faction_sultan/misc_sultan.yaml
-	mw|rules/faction_sultan/scaffolds_sultan.yaml
 
 	mw|rules/faction_undead/defaults_undead.yaml
 	mw|rules/faction_undead/structures_undead.yaml

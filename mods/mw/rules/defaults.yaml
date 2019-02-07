@@ -414,7 +414,7 @@
 		ActorTypes: e1new,e1new,e1new,e1new
 	EngineerRepairable:
 	DeconstructSellable:
-		Condition: !build-incomplete
+		Condition: build-incomplete
 	CaptureManager:
 	Capturable:
 		Types: building

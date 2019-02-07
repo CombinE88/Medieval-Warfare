@@ -90,7 +90,7 @@ nodnuke:
 		Start: 9
 		Offset: 0,-12
 	makeb10: nodnukeb
-		Start: 19
+		Start: 10
 		Offset: 0,-12
 	makeb11: nodnukeb
 		Start: 11

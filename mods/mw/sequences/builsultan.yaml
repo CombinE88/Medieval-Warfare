@@ -16,22 +16,22 @@ sulnuke:
 		AddExtension: false
 	icon: sulnukeicon.shp
 		AddExtension: False 
-	make1: sulnukemake
+	make0: sulnukemake
 		Start: 0
 		ZOffset: -25
-	make2: sulnukemake
+	make1: sulnukemake
 		Start: 1
 		ZOffset: -25
-	make3: sulnukemake
+	make2: sulnukemake
 		Start: 2
 		ZOffset: -25
-	make4: sulnukemake
+	make3: sulnukemake
 		Start: 3
 		ZOffset: -25
-	make5: sulnukemake
+	make4: sulnukemake
 		Start: 4
 		ZOffset: -25
-	make6: sulnukemake
+	make5: sulnukemake
 		Start: 5
 		ZOffset: -25
 sulnuk2:
@@ -56,27 +56,27 @@ sulnuk2:
 		AddExtension: false
 	icon: sulnuk2icon.shp
 		AddExtension: False 
-	make1: sulnuk2make
+	make0: sulnuk2make
 		Start: 0
 		ZOffset: -25
 		Offset: 0,-15
-	make2: sulnuk2make
+	make1: sulnuk2make
 		Start: 1
 		ZOffset: -25
 		Offset: 0,-15
-	make3: sulnuk2make
+	make2: sulnuk2make
 		Start: 2
 		ZOffset: -25
 		Offset: 0,-15
-	make4: sulnuk2make
+	make3: sulnuk2make
 		Start: 3
 		ZOffset: -25
 		Offset: 0,-15
-	make5: sulnuk2make
+	make4: sulnuk2make
 		Start: 4
 		ZOffset: -25
 		Offset: 0,-15
-	make6: sulnuk2make
+	make5: sulnuk2make
 		Start: 5
 		ZOffset: -25
 		Offset: 0,-15
@@ -106,23 +106,23 @@ sulmill:
 		AddExtension: false
 	icon: sulmillicon.shp
 		AddExtension: False 
-	make1: sulmilmake
+	make0: sulmilmake
 		Offset: 12,-12,0
 		Start: 0
 		ZOffset: -25
-	make2: sulmilmake
+	make1: sulmilmake
 		Offset: 12,-12,0
 		Start: 1
 		ZOffset: -25
-	make3: sulmilmake
+	make2: sulmilmake
 		Offset: 12,-12,0
 		Start: 2
 		ZOffset: -25
-	make4: sulmilmake
+	make3: sulmilmake
 		Offset: 12,-12,0
 		Start: 3
 		ZOffset: -25
-	make5: sulmilmake
+	make4: sulmilmake
 		Offset: 12,-12,0
 		Start: 4
 		ZOffset: -25
@@ -147,27 +147,27 @@ sulref:
 		AddExtension: false
 	icon: sulreficon.shp
 		AddExtension: False
-	make1: 
+	make0: 
 		Start: 0
 		ZOffset: -25
 		Offset: 2,4
-	make2: 
+	make1: 
 		Start: 1
 		ZOffset: -25
 		Offset: 2,4
-	make3: 
+	make2: 
 		Start: 2
 		ZOffset: -25
 		Offset: 2,4
-	make4: 
+	make3: 
 		Start: 3
 		ZOffset: -25
 		Offset: 2,4
-	make5: 
+	make4: 
 		Start: 4
 		ZOffset: -25
 		Offset: 2,4
-	make6: 
+	make5: 
 		Start: 5
 		ZOffset: -25
 		Offset: 2,4
@@ -193,19 +193,19 @@ sullodge:
 		AddExtension: false
 	icon: sullodgeicon.shp
 		AddExtension: False
-	make1: 
+	make0: 
 		Start: 1
 		ZOffset: -25
 		Offset: 0,-12
-	make2: 
+	make1: 
 		Start: 2
 		ZOffset: -25
 		Offset: 0,-12
-	make3: 
+	make2: 
 		Start: 3
 		ZOffset: -25
 		Offset: 0,-12
-	make4: 
+	make3: 
 		Start: 4
 		ZOffset: -25
 		Offset: 0,-12
@@ -227,19 +227,19 @@ sulbarr:
 		AddExtension: false
 	icon: sulbarricon.shp
 		AddExtension: False 
-	make1: sulbarrmake
+	make0: sulbarrmake
 		Start: 0
 		ZOffset: -25
-	make2: sulbarrmake
+	make1: sulbarrmake
 		Start: 1
 		ZOffset: -25
-	make3: sulbarrmake
+	make2: sulbarrmake
 		Start: 2
 		ZOffset: -25
-	make4: sulbarrmake
+	make3: sulbarrmake
 		Start: 3
 		ZOffset: -25
-	make5: sulbarrmake
+	make4: sulbarrmake
 		Start: 4
 		ZOffset: -25	   
 sulmystic:
@@ -264,27 +264,27 @@ sulmystic:
 		AddExtension: false
 	icon: sulmysticicon.shp
 		AddExtension: False 
-	make1: 
+	make0: 
 		Start: 2
 		ZOffset: -25
 		Offset: 12,-24,0
-	make2: 
+	make1: 
 		Start: 5
 		ZOffset: -25
 		Offset: 12,-24,0
-	make3: 
+	make2: 
 		Start: 10
 		ZOffset: -25
 		Offset: 12,-24,0
-	make4: 
+	make3: 
 		Start: 15
 		ZOffset: -25
 		Offset: 12,-24,0
-	make5: 
+	make4: 
 		Start: 20
 		ZOffset: -25
 		Offset: 12,-24,0
-	make6: 
+	make5: 
 		Start: 25
 		ZOffset: -25
 		Offset: 12,-24,0
@@ -356,27 +356,27 @@ sulcastle:
 		Tick: 80
 		Offset: 0, -36
 		ZOffset: -100
-	make1: sulcastlemake
+	make0: sulcastlemake
 		Start: 0
 		ZOffset: -25
 		Offset: 0,-18
-	make2: sulcastlemake
+	make1: sulcastlemake
 		Start: 1
 		ZOffset: -25
 		Offset: 0,-18
-	make3: sulcastlemake
+	make2: sulcastlemake
 		Start: 2
 		ZOffset: -25
 		Offset: 0,-18
-	make4: sulcastlemake
+	make3: sulcastlemake
 		Start: 3
 		ZOffset: -25
 		Offset: 0,-18
-	make5: sulcastlemake
+	make4: sulcastlemake
 		Start: 4
 		ZOffset: -25
 		Offset: 0,-18
-	make6: sulcastlemake
+	make5: sulcastlemake
 		Start: 5
 		ZOffset: -25
 		Offset: 0,-18
@@ -528,19 +528,19 @@ sulfix:
 		AddExtension: false
 	icon: sulfixicon.shp
 		AddExtension: False
-	make1: 
+	make0: 
 		Start: 10
 		ZOffset: -25
 		Offset: 0, -12
-	make2: 
+	make1: 
 		Start: 15
 		ZOffset: -25
 		Offset: 0, -12
-	make3: 
+	make2: 
 		Start: 20
 		ZOffset: -25
 		Offset: 0, -12
-	make4: 
+	make3: 
 		Start: 25
 		ZOffset: -25
 		Offset: 0, -12
@@ -566,27 +566,27 @@ sulcnshmbr:
 		AddExtension: false
 	icon: sulcnshmbricon.shp
 		AddExtension: False 
-	make1: 
+	make0: 
 		Start: 0
 		ZOffset: -25
 		Offset: 0,-12
-	make2: 
+	make1: 
 		Start: 1
 		ZOffset: -25
 		Offset: 0,-12
-	make3: 
+	make2: 
 		Start: 2
 		ZOffset: -25
 		Offset: 0,-12
-	make4: 
+	make3: 
 		Start: 3
 		ZOffset: -25
 		Offset: 0,-12
-	make5: 
+	make4: 
 		Start: 4
 		ZOffset: -25
 		Offset: 0,-12
-	make6: 
+	make5: 
 		Start: 5
 		ZOffset: -25
 		Offset: 0,-12
@@ -610,15 +610,15 @@ silonew:
 		Length: 2
 	icon: silonewicon.shp
 		AddExtension: False
-	make1: silonewmake
+	make0: silonewmake
 		Start: 1
 		ZOffset: -25
-	make2: silonewmake
+	make1: silonewmake
 		Start: 4
 		ZOffset: -25
-	make3: silonewmake
+	make2: silonewmake
 		Start: 7
 		ZOffset: -25
-	make4: silonewmake
+	make3: silonewmake
 		Start: 12
 		ZOffset: -25

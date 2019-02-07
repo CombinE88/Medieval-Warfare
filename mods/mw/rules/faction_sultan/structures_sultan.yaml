@@ -22,6 +22,17 @@ SULGTW:
 	Building:
 		Footprint: x
 		Dimensions: 1,1
+	Buildable:
+		Description: A super guard tower, stationed with 2 archers.\n  Strong vs Infantry, Light Cavalry\n  Weak vs Siege weapons and Heavy Cavalry \n  Cannot target Aircraft\n\n\n
+		BuildPaletteOrder: 60
+		Queue: MMilitary.SUL
+		BuildDurationModifier: 40
+		IconPalette: raicon
+		BuildDuration: 900
+	SelfConstructing:
+		Condition: build-incomplete
+		Steps: 6
+		Sequence: make
 	Health:
 		HP: 60000
 	RevealsShroud:
@@ -34,22 +45,24 @@ SULGTW:
 		Weapon: bownarrowtower
 		LocalOffset: 0,0,427
 		Turret: primary
-		RequiresCondition: !static
+		RequiresCondition: !static && !build-incomplete
 		Name: primary
 		FireDelay: 5
 	Armament@2:
 		Weapon: bownarrowtower
 		LocalOffset: 0,0,427
 		Turret: secondary
-		RequiresCondition: !static
+		RequiresCondition: !static && !build-incomplete
 		FireDelay: 11
 		Name: secondary
 	AttackTurreted:
 		Armaments: primary, secondary, 1archers, 2archers, djinn, primaryspear, secondaryspear, primaryspearair, secondaryspearair
+		RequiresCondition: !build-incomplete
 	BodyOrientation:
 		QuantizedFacings: 8
 	DetectCloaked:
 		Range: 3c0
+		RequiresCondition: !build-incomplete
 	WithSpriteTurret@1: 
 		Sequence: turretidle
 		Turret: primary
@@ -57,24 +70,28 @@ SULGTW:
 	WithSpriteTurret@2: 
 		Sequence: turretidle
 		Turret: secondary
-		RequiresCondition: !static
+		RequiresCondition: !static && !build-incomplete
 	WithTurretAttackAnimation@1:
 		Turret: primary
 		Sequence: shoot
 		Armament: primary
+		RequiresCondition: !build-incomplete
 	WithTurretAttackAnimation@2:
 		Turret: secondary
 		Sequence: shoot
 		Armament: secondary
 		Delay: 6
+		RequiresCondition: !build-incomplete
 	Turreted@1:
 		Turret: primary
 		TurnSpeed: 100
 		Offset: -170,-170,500
+		RequiresCondition: !build-incomplete
 	Turreted@2:
 		Turret: secondary
 		TurnSpeed: 100
 		Offset: 170,170,500
+		RequiresCondition: !build-incomplete
 	Armor:
 		Type: HeavyBuilding 
 	Selectable:
@@ -92,54 +109,58 @@ SULGTW:
 	WithIdleOverlay@archers:
 		Sequence: archgtw
 		Offset: 0, 0, 0
-		RequiresCondition: archers && Construct >= 20
+		RequiresCondition: archers && Construct >= 20 && !build-incomplete
 	WithSpriteTurret@1archers: 
 		Sequence: turretidle2
 		Turret: 1archers
-		RequiresCondition: archers && Construct >= 20
+		RequiresCondition: archers && Construct >= 20 && !build-incomplete
 	WithTurretAttackAnimation@1archers:
 		Turret: 1archers
 		Sequence: shoot
 		Armament: 1archers
+		RequiresCondition: !build-incomplete
 	WithSpriteTurret@2archers: 
 		Sequence: turretidle2
 		Turret: 2archers
-		RequiresCondition: archers && Construct >= 20
+		RequiresCondition: archers && Construct >= 20 && !build-incomplete
 	WithTurretAttackAnimation@2archers:
 		Turret: 2archers
 		Sequence: shoot
 		Armament: 2archers
 		Delay: 18
+		RequiresCondition: !build-incomplete
 	Turreted@1archers:
 		Turret: 1archers
 		TurnSpeed: 100
 		Offset: -170,-170,850
+		RequiresCondition: !build-incomplete
 	Turreted@2archers:
 		Turret: 2archers
 		TurnSpeed: 100
 		Offset: 170,170,850
+		RequiresCondition: !build-incomplete
 	Armament@1archers:
 		Weapon: bownarrowtower
 		LocalOffset: 0,0,427
 		Turret: turr1
-		RequiresCondition: archers && Construct >= 20
+		RequiresCondition: archers && Construct >= 20 && !build-incomplete
 		FireDelay: 12
 		Name: 1archers
 	Armament@2archers:
 		Weapon: bownarrowtower
 		LocalOffset: 0,0,427
 		Turret: 2archers
-		RequiresCondition: archers && Construct >= 20
+		RequiresCondition: archers && Construct >= 20 && !build-incomplete
 		FireDelay: 18
 		Name: 2archers
 	WithIdleOverlay@djinn:
 		Sequence: djingtw
 		Offset: 0, 0, 0
-		RequiresCondition: djinn && Construct >= 50
+		RequiresCondition: djinn && Construct >= 50 && !build-incomplete
 	WithSpriteTurret@djinn: 
 		Sequence: dturretidle
 		Turret: turr3
-		RequiresCondition: djinn && Construct >= 50
+		RequiresCondition: djinn && Construct >= 50 && !build-incomplete
 	WithTurretAttackAnimation@djinn:
 		Turret: turr3
 		Sequence: shoot
@@ -152,38 +173,38 @@ SULGTW:
 		Weapon: DjinElectroGround
 		LocalOffset: 141,75,352
 		Turret: turr3
-		RequiresCondition: djinn && Construct >= 50
+		RequiresCondition: djinn && Construct >= 50 && !build-incomplete
 		Name: djinn
 	WithSpriteBody:
 		RequiresCondition: !staticfinished
 	WithIdleOverlay@static:
 		Sequence: idleupped
-		RequiresCondition: static && Construct >= 30
+		RequiresCondition: static && Construct >= 30 && !build-incomplete
 	Armament@static1:
 		Weapon: SulGTSpearThrow
 		LocalOffset: 0,0,427
 		Turret: primary1
-		RequiresCondition: static && Construct >= 30
+		RequiresCondition: static && Construct >= 30 && !build-incomplete
 		Name: primaryspear
 	Armament@static2:
 		Weapon: SulGTSpearThrow
 		LocalOffset: 0,0,427
 		Turret: secondary1
 		FireDelay: 25
-		RequiresCondition: static && Construct >= 30
+		RequiresCondition: static && Construct >= 30 && !build-incomplete
 		Name: secondaryspear
 	Armament@static1AIR:
 		Weapon: SulGTSpearThrowAir
 		LocalOffset: 0,0,427
 		Turret: primary1
-		RequiresCondition: static && Construct >= 30
+		RequiresCondition: static && Construct >= 30 && !build-incomplete
 		Name: primaryspearair
 	Armament@static2AIR:
 		Weapon: SulGTSpearThrowAir
 		LocalOffset: 0,0,427
 		Turret: secondary1
 		FireDelay: 25
-		RequiresCondition: static && Construct >= 30
+		RequiresCondition: static && Construct >= 30 && !build-incomplete
 		Name: secondaryspearair
 	Turreted@1a:
 		Turret: primary1
@@ -194,101 +215,101 @@ SULGTW:
 		TurnSpeed: 100
 		Offset: 170,170,500
 	DamageMultiplier@static:
-		RequiresCondition: static && Construct >= 30
+		RequiresCondition: static && Construct >= 30 && !build-incomplete
 		Modifier: 70  
 	GrantCondition@FinishPLUG1:
-		RequiresCondition: Construct >= 20 && archers
+		RequiresCondition: Construct >= 20 && archers && !build-incomplete
 		Condition: archersfinished
 	GrantCondition@FinishPLUG2:
-		RequiresCondition: Construct >= 50 && djinn
+		RequiresCondition: Construct >= 50 && djinn && !build-incomplete
 		Condition: djinnfinished
 	GrantCondition@FinishPLUG3:
-		RequiresCondition: Construct >= 30 && static
+		RequiresCondition: Construct >= 30 && static && !build-incomplete
 		Condition: staticfinished
 	WithIdleOverlay@NW0:
 		Sequence: scaffnw0
 		Palette: mwcivilian
 		Offset: 212,-212,0
-		RequiresCondition: Construct < 3 && (archers || djinn || static) && !archersfinished && !djinnfinished && !staticfinished
+		RequiresCondition: Construct < 3 && (archers || djinn || static) && !archersfinished && !djinnfinished && !staticfinished && !build-incomplete
 	WithIdleOverlay@SE0:
 		Sequence: scaffse0
 		Palette: mwcivilian
 		Offset: -212,212,0
-		RequiresCondition: Construct < 3 && (archers || djinn || static) && !archersfinished && !djinnfinished && !staticfinished
+		RequiresCondition: Construct < 3 && (archers || djinn || static) && !archersfinished && !djinnfinished && !staticfinished && !build-incomplete
 	WithIdleOverlay@NW1:
 		Sequence: scaffnw1
 		Palette: mwcivilian
 		Offset: 212,-212,0
-		RequiresCondition: Construct >= 3 && Construct < 5 && (archers || djinn || static) && !archersfinished && !djinnfinished && !staticfinished
+		RequiresCondition: Construct >= 3 && Construct < 5 && (archers || djinn || static) && !archersfinished && !djinnfinished && !staticfinished && !build-incomplete
 	WithIdleOverlay@SE1:
 		Sequence: scaffse1
 		Palette: mwcivilian
 		Offset: -212,212,0
-		RequiresCondition: Construct >= 3 && Construct < 5 && (archers || djinn || static) && !archersfinished && !djinnfinished && !staticfinished
+		RequiresCondition: Construct >= 3 && Construct < 5 && (archers || djinn || static) && !archersfinished && !djinnfinished && !staticfinished && !build-incomplete
 	WithIdleOverlay@NW2:
 		Sequence: scaffnw2
 		Palette: mwcivilian
 		Offset: 212,-212,0
-		RequiresCondition: Construct >= 5 && Construct < 9 && (archers || djinn || static) && !archersfinished && !djinnfinished && !staticfinished
+		RequiresCondition: Construct >= 5 && Construct < 9 && (archers || djinn || static) && !archersfinished && !djinnfinished && !staticfinished && !build-incomplete
 	WithIdleOverlay@SE2:
 		Sequence: scaffse2
 		Palette: mwcivilian
 		Offset: -212,212,0
-		RequiresCondition: Construct >= 5 && Construct < 9 && (archers || djinn || static) && !archersfinished && !djinnfinished && !staticfinished
+		RequiresCondition: Construct >= 5 && Construct < 9 && (archers || djinn || static) && !archersfinished && !djinnfinished && !staticfinished && !build-incomplete
 	WithIdleOverlay@NW3:
 		Sequence: scaffnw3
 		Palette: mwcivilian
 		Offset: 212,-212,0
-		RequiresCondition: Construct >= 9 && Construct < 13 && (archers || djinn || static) && !archersfinished && !djinnfinished && !staticfinished
+		RequiresCondition: Construct >= 9 && Construct < 13 && (archers || djinn || static) && !archersfinished && !djinnfinished && !staticfinished && !build-incomplete
 	WithIdleOverlay@SE3:
 		Sequence: scaffse3
 		Palette: mwcivilian
 		Offset: -212,212,0
-		RequiresCondition: Construct >= 9 && Construct < 13 && (archers || djinn || static) && !archersfinished && !djinnfinished && !staticfinished
+		RequiresCondition: Construct >= 9 && Construct < 13 && (archers || djinn || static) && !archersfinished && !djinnfinished && !staticfinished && !build-incomplete
 	WithIdleOverlay@NW4:
 		Sequence: scaffnw4
 		Palette: mwcivilian
 		Offset: 212,-212,0
-		RequiresCondition: Construct >= 13 && Construct < 17 && (archers || djinn || static) && !archersfinished && !djinnfinished && !staticfinished
+		RequiresCondition: Construct >= 13 && Construct < 17 && (archers || djinn || static) && !archersfinished && !djinnfinished && !staticfinished && !build-incomplete
 	WithIdleOverlay@SE4:
 		Sequence: scaffse4
 		Palette: mwcivilian
 		Offset: -212,212,0
-		RequiresCondition: Construct >= 13 && Construct < 17 && (archers || djinn || static) && !archersfinished && !djinnfinished && !staticfinished
+		RequiresCondition: Construct >= 13 && Construct < 17 && (archers || djinn || static) && !archersfinished && !djinnfinished && !staticfinished && !build-incomplete
 	WithIdleOverlay@NW5:
 		Sequence: scaffnw5
 		Palette: mwcivilian
 		Offset: 212,-212,0
-		RequiresCondition: Construct >= 17 && Construct < 21 && (archers || djinn || static) && !archersfinished && !djinnfinished && !staticfinished
+		RequiresCondition: Construct >= 17 && Construct < 21 && (archers || djinn || static) && !archersfinished && !djinnfinished && !staticfinished && !build-incomplete
 	WithIdleOverlay@SE5:
 		Sequence: scaffse5
 		Palette: mwcivilian
 		Offset: -212,212,0
-		RequiresCondition: Construct >= 17 && Construct < 21 && (archers || djinn || static) && !archersfinished && !djinnfinished && !staticfinished
+		RequiresCondition: Construct >= 17 && Construct < 21 && (archers || djinn || static) && !archersfinished && !djinnfinished && !staticfinished && !build-incomplete
 	WithIdleOverlay@NW6:
 		Sequence: scaffnw6
 		Palette: mwcivilian
 		Offset: 212,-212,0
-		RequiresCondition: Construct >= 21 && (archers || djinn || static) && !archersfinished && !djinnfinished && !staticfinished
+		RequiresCondition: Construct >= 21 && (archers || djinn || static) && !archersfinished && !djinnfinished && !staticfinished && !build-incomplete
 	WithIdleOverlay@SE6:
 		Sequence: scaffse6
 		Palette: mwcivilian
 		Offset: -212,212,0
-		RequiresCondition: Construct >= 21 && (archers || djinn || static) && !archersfinished && !djinnfinished && !staticfinished
+		RequiresCondition: Construct >= 21 && (archers || djinn || static) && !archersfinished && !djinnfinished && !staticfinished && !build-incomplete
 	Targetable@CombatRole:
 		TargetTypes: Defenses	
 	AddConditionEvery@Constructstatic:
 		AddCondition: Construct
 		Delay: 25	
-		RequiresCondition: Construct < 20 && archers
+		RequiresCondition: Construct < 20 && archers && !build-incomplete
 	AddConditionEvery@Constructdjin:
 		AddCondition: Construct
 		Delay: 25	
-		RequiresCondition: Construct < 50 && djinn
+		RequiresCondition: Construct < 50 && djinn && !build-incomplete
 	AddConditionEvery@Constructtower:
 		AddCondition: Construct
 		Delay: 25	
-		RequiresCondition: Construct < 30 && static
+		RequiresCondition: Construct < 30 && static && !build-incomplete
 	ExternalCondition@placeholder:  # Anti error placeholder
 		Condition: Construct
 		TotalCap: 50
@@ -304,33 +325,33 @@ SULGTW:
 	ConstructionProgress@Constructstatic:
 		FullCapacity: 25
 		ConstructionCondition: archersOverlay
-		RequiresCondition: archersOverlay < 20 && archers
+		RequiresCondition: archersOverlay < 20 && archers && !build-incomplete
 		YOffset: 0
 		XOffset: 5
 	ConstructionProgress@Constructdjin:
 		FullCapacity: 50
 		ConstructionCondition: djinnOverlay
-		RequiresCondition: djinnOverlay < 50 && djinn
+		RequiresCondition: djinnOverlay < 50 && djinn && !build-incomplete
 		YOffset: 0
 		XOffset: 5
 	ConstructionProgress@Constructtower:
 		FullCapacity: 30
 		ConstructionCondition: staticOverlay
-		RequiresCondition: staticOverlay < 30 && static
+		RequiresCondition: staticOverlay < 30 && static && !build-incomplete
 		YOffset: 0
 		XOffset: 5
 	AddConditionEvery@ConstructstaticOverlay:
 		AddCondition: archersOverlay
 		Delay: 25	
-		RequiresCondition: archersOverlay < 20 && archers
+		RequiresCondition: archersOverlay < 20 && archers && !build-incomplete
 	AddConditionEvery@ConstructdjinOverlay:
 		AddCondition: djinnOverlay
 		Delay: 25	
-		RequiresCondition: djinnOverlay < 50 && djinn
+		RequiresCondition: djinnOverlay < 50 && djinn && !build-incomplete
 	AddConditionEvery@ConstructtowerOverlay:
 		AddCondition: staticOverlay
 		Delay: 25	
-		RequiresCondition: staticOverlay < 30 && static
+		RequiresCondition: staticOverlay < 30 && static && !build-incomplete
 SULPLUG1:
 	AlwaysVisible:
 	Interactable:
@@ -346,7 +367,7 @@ SULPLUG1:
 		BuildPaletteOrder: 90
 		Prerequisites: vehicleproduction
 		Queue: MMilitary.SUL
-		BuildDuration:25
+		BuildDuration: 25
 		BuildDurationModifier: 400
 		IconPalette: raicon
 	Valued:
@@ -368,7 +389,7 @@ SULPLUG3:
 		BuildPaletteOrder: 80
 		Prerequisites: sultow2, sultow4
 		Queue: MMilitary.SUL
-		BuildDuration:25
+		BuildDuration: 25
 		BuildDurationModifier: 700
 		IconPalette: raicon
 	Valued:
@@ -417,10 +438,21 @@ SULLODGE:
 		Footprint: xx ==
 		Dimensions: 2,2
 		LocalCenterOffset: 0,-512,0
+	Buildable:
+		IconPalette: raicon
+		BuildPaletteOrder: 10
+		Description: A hunter will start searching for deer from this building aswell as a lumberer will gather wood.\nGood for early resource management\n\n
+		Queue: MResources.SUL
+		BuildDuration: 850
+	SelfConstructing:
+		Condition: build-incomplete
+		Steps: 4
+		Sequence: make
 	Health:
 		HP: 50000
 	RevealsShroud:
 		Range: 7c0
+		RequiresCondition: !build-incomplete
 	WithBuildingBib:
 		Palette: bibs
 	Targetable@Lodge:
@@ -435,6 +467,7 @@ SULLODGE:
 		Lasso: 15
 		ForceLasso: 20
 		ReturnOnDeath: true
+		RequiresCondition: !build-incomplete
 	WithRangeCircle:
 		Type: HunterLodge
 		UsePlayerColor: true
@@ -451,47 +484,10 @@ SULLODGE:
 		Lasso: 17c0
 		ForceLasso: 22c0
 		ReturnOnDeath: true
+		RequiresCondition: !build-incomplete
 	Targetable@Lumber:
 		TargetTypes: LumberShack
-SULARRAY:
-	Inherits: ^MWBaseBuilding
-	Inherits@Hitshape: ^3x2Shape
-	Armor:
-		Type: Concrete
-	WithDeathAnimation:
-		DeathSequencePalette: sultanplayer
-	RenderSprites:
-		Image: sularray
-		PlayerPalette: sultanplayer
-	Valued:
-		Cost: 1000
-	CustomSellValue:
-		Value: 100
-	Tooltip:
-		Name: Material Storage
-	Building:
-		Footprint: xxx xxx ===
-		Dimensions: 3,3
-		LocalCenterOffset: 0,-512,0
-	Health:
-		HP: 80000
-	RevealsShroud:
-		Range: 4c0
-	WithBuildingBib:
-		Palette: bibs
-	ProvidesPrerequisite@buildingname:
-	Selectable:
-		Bounds: 72,72,0,-2
-	SelectionDecorations:
-	ThrowsShrapnel@LARGE:
-		Weapons: LargeWood1, LargeWood1, LargeStone1, LargeStone1
-		Pieces: 1, 2
-		Range: 1c0, 5c0
-	Targetable@Tavern:
-		TargetTypes: Material
-	BaseProvider:
-		Cooldown: 25
-		Range: 8c0
+		RequiresCondition: !build-incomplete
 SULNUK2:
 	Inherits: ^MWBaseBuilding
 	Inherits@Hitshape: ^2x2Shape
@@ -509,20 +505,33 @@ SULNUK2:
 		Name: Large Hut
 	ProvidesPrerequisite:
 		Prerequisite: anypower
+		RequiresCondition: !build-incomplete
 	Building:
 		Footprint: xxx xx= ===
 		Dimensions: 3,3
 		LocalCenterOffset: 0,-512,0
+	Buildable:
+		IconPalette: raicon
+		BuildPaletteOrder: 20
+		Prerequisites: anyhq
+		Queue: MBuilding.SUL
+		Description: Provides more livingspace. Livingspace increases over time by generating peasants.\nCan hold up to 18 peasants, spawntime depends on number of shacks and large huts. \ncheaper than the standard Shack.\n\n\n\n
+		BuildDuration: 1000
+	SelfConstructing:
+		Condition: build-incomplete
+		Steps: 6
+		Sequence: make
 	CustomSellValue:
 		Value: 400
 	Health:
 		HP: 100000
 	RevealsShroud:
 		Range: 4c0
+		RequiresCondition: !build-incomplete
 	WithBuildingBib:
 		Palette: bibs
 	Selectable:
-		Bounds:72,60,0,-9
+		Bounds: 72,60,0,-9
 	SelectionDecorations:
 	SpawnActorOnDeath@Farmer1:
 		Actor: e1new
@@ -555,6 +564,7 @@ SULNUK2:
 		Range: 1c0, 5c0
 	Power:
 		Amount: 18
+		RequiresCondition: !build-incomplete
 SULNUKE:
 	Inherits: ^MWBaseBuilding
 	Inherits@Hitshape: ^2x2Shape
@@ -572,14 +582,27 @@ SULNUKE:
 		Name: Hut
 	ProvidesPrerequisite:
 		Prerequisite: anypower
+		RequiresCondition: !build-incomplete
 	Building:
 		Footprint: xx xx ==
 		Dimensions: 2,3
 		LocalCenterOffset: 0,-512,0
+	Buildable:
+		IconPalette: raicon
+		BuildPaletteOrder: 10
+		Prerequisites: factnew
+		Description: Generates livingspace. Livingspace increases over time by generating peasants\nCan hold up to 7 peasants, spawntime depends on number of shacks and large huts  
+		Queue: MBuilding.SUL
+		BuildDuration: 600
+	SelfConstructing:
+		Condition: build-incomplete
+		Steps: 6
+		Sequence: make
 	Health:
 		HP: 50000
 	RevealsShroud:
 		Range: 4c0
+		RequiresCondition: !build-incomplete
 	WithBuildingBib:
 		Palette: bibs
 	Selectable:
@@ -606,6 +629,7 @@ SULNUKE:
 		Range: 1c0, 5c0
 	Power:
 		Amount: 7
+		RequiresCondition: !build-incomplete
 SULBARR:
 	Inherits: ^MWBaseBuilding
 	Inherits@Hitshape: ^3x2Shape
@@ -623,10 +647,22 @@ SULBARR:
 		Name: Barracks
 	ProvidesPrerequisite:
 		Prerequisite: barracks
+		RequiresCondition: !build-incomplete
 	Building:
 		Footprint: xxx xxx ===
 		Dimensions: 3,3
 		LocalCenterOffset: 0,-512,0
+	Buildable:
+		IconPalette: raicon
+		BuildPaletteOrder: 10
+		Prerequisites: anypower
+		Description: Trains Infantry only\n\n\n\n
+		Queue: MMilitary.SUL
+		BuildDuration: 1000
+	SelfConstructing:
+		Condition: build-incomplete
+		Steps: 5
+		Sequence: make
 	Health:
 		HP: 65000
 	RevealsShroud:
@@ -639,15 +675,19 @@ SULBARR:
 		ExitCell: 1,2
 	Production:
 		Produces: MInfantry.SUL
+		RequiresCondition: !build-incomplete
 	ProductionQueue@1:
 		Type: MInfantry.SUL
 		Group: Infantry
 		LowPowerModifier: 400
 		Factions: sul
 		ReadyAudio:
+		RequiresCondition: !build-incomplete
 	ProductionBar:
 		ProductionType: MInfantry.SUL
+		RequiresCondition: !build-incomplete
 	ProvidesPrerequisite@buildingname:
+		RequiresCondition: !build-incomplete
 	Selectable:
 		Bounds:72,53,0,0
 	SelectionDecorations:
@@ -675,12 +715,25 @@ SULMYSTIC:
 	Tooltip:
 		Name: School of Mystic Teachings
 	ProvidesPrerequisite@buildingname:
+		RequiresCondition: !build-incomplete
 	ProvidesPrerequisite:
 		Prerequisite: vehicleproduction
+		RequiresCondition: !build-incomplete
 	Building:
 		Footprint: xx= xxx =xx
 		Dimensions: 3,3
 		LocalCenterOffset: 0,0,0
+	Buildable:
+		IconPalette: raicon
+		BuildPaletteOrder: 20
+		Prerequisites: proc
+		Description: Trains Magical and Mystical Units\n\n\n\n
+		Queue: MMilitary.SUL
+		BuildDuration: 1500
+	SelfConstructing:
+		Condition: build-incomplete
+		Steps: 6
+		Sequence: make
 	Health:
 		HP: 85000
 	RevealsShroud:
@@ -693,15 +746,19 @@ SULMYSTIC:
 		ExitCell: 0,2
 	Production:
 		Produces: MVehicle.SUL
+		RequiresCondition: !build-incomplete
 	ProductionQueue@1:
 		Type: MVehicle.SUL
 		Group: Vehicle
 		LowPowerModifier: 400
 		Factions: sul
 		ReadyAudio:
+		RequiresCondition: !build-incomplete
 	ProductionBar:
 		ProductionType: MVehicle.SUL
+		RequiresCondition: !build-incomplete
 	ProvidesPrerequisite@buildingname:
+		RequiresCondition: !build-incomplete
 	Selectable:
 		Bounds:72,72,0,-12
 	SelectionDecorations:
@@ -730,19 +787,35 @@ SULCASTLE:
 		Name: Palace
 	ProvidesPrerequisite:
 		Prerequisite: anyhq
+		RequiresCondition: !build-incomplete
 	ProvidesPrerequisite@anycastle:
 		Prerequisite: anycastle
+		RequiresCondition: !build-incomplete
 	ProvidesPrerequisite@3:
 		Prerequisite: Level3
+		RequiresCondition: !build-incomplete
 	ProvidesPrerequisite@buildingname:
+		RequiresCondition: !build-incomplete
 	Building:
 		Footprint: xxx xxx xxx ===
 		Dimensions: 3,4
 		LocalCenterOffset: 0,-512,0
+	Buildable:
+		IconPalette: raicon
+		BuildPaletteOrder: 30
+		Prerequisites: proc
+		Description: Can unlock Superweapons.\n Can unlock advanced tech.\n\n\n\n
+		Queue: MBuilding.SUL
+		BuildDuration: 600
+	SelfConstructing:
+		Condition: build-incomplete
+		Steps: 6
+		Sequence: make
 	Health:
 		HP: 85000
 	RevealsShroud:
 		Range: 5c0
+		RequiresCondition: !build-incomplete
 	WithBuildingBib:
 		Palette: bibs
 	Selectable:
@@ -755,59 +828,63 @@ SULCASTLE:
 	GrantConditionOnPrerequisite@Tower1:
 		Condition: Tower1build
 		Prerequisites: sultow1
+		RequiresCondition: !build-incomplete
 	WithIdleOverlay@Tower1:
 		StartSequence: tower1make
 		Sequence: tower1
 		Offset: 1024, 1024, 0
-		RequiresCondition: Tower1build
+		RequiresCondition: Tower1build && !build-incomplete
 	GrantConditionOnPrerequisite@Tower2:
 		Condition: Tower2build
 		Prerequisites: sultow2
+		RequiresCondition: !build-incomplete
 	WithIdleOverlay@Tower2:
 		StartSequence: tower2make
 		Sequence: tower2
 		Offset: -1124, 1024, 0
-		RequiresCondition: Tower2build
+		RequiresCondition: Tower2build && !build-incomplete
 	GrantConditionOnPrerequisite@Tower3:
 		Condition: Tower3build
 		Prerequisites: sultow3
+		RequiresCondition: !build-incomplete
 	WithIdleOverlay@Tower3:
 		StartSequence: tower3make
 		Sequence: tower3
 		Offset: -1124, -1024, 0
-		RequiresCondition: Tower3build
+		RequiresCondition: Tower3build && !build-incomplete
 	GrantConditionOnPrerequisite@Tower4:
 		Condition: Tower4build
 		Prerequisites: sultow4
+		RequiresCondition: !build-incomplete
 	WithIdleOverlay@Tower4:
 		StartSequence: tower4make
 		Sequence: tower4
 		Offset: 1024, -1024, 0
-		RequiresCondition: Tower4build
+		RequiresCondition: Tower4build && !build-incomplete
 	PowerMultiplier@1:
 		Modifier: 200
-		RequiresCondition: (Tower1build + Tower2build + Tower3build + Tower4build) == 1
+		RequiresCondition: (Tower1build + Tower2build + Tower3build + Tower4build) == 1 && !build-incomplete
 	PowerMultiplier@2:
 		Modifier: 300
-		RequiresCondition: (Tower1build + Tower2build + Tower3build + Tower4build) == 2
+		RequiresCondition: (Tower1build + Tower2build + Tower3build + Tower4build) == 2 && !build-incomplete
 	PowerMultiplier@3:
 		Modifier: 400
-		RequiresCondition: (Tower1build + Tower2build + Tower3build + Tower4build) == 3
+		RequiresCondition: (Tower1build + Tower2build + Tower3build + Tower4build) == 3 && !build-incomplete
 	PowerMultiplier@4:
 		Modifier: 500
-		RequiresCondition: (Tower1build + Tower2build + Tower3build + Tower4build) == 4
+		RequiresCondition: (Tower1build + Tower2build + Tower3build + Tower4build) == 4 && !build-incomplete
 	DamageMultiplier@1:
 		Modifier: 80
-		RequiresCondition: (Tower1build + Tower2build + Tower3build + Tower4build) == 1
+		RequiresCondition: (Tower1build + Tower2build + Tower3build + Tower4build) == 1 && !build-incomplete
 	DamageMultiplier@2:
 		Modifier: 65
-		RequiresCondition: (Tower1build + Tower2build + Tower3build + Tower4build) == 2
+		RequiresCondition: (Tower1build + Tower2build + Tower3build + Tower4build) == 2 && !build-incomplete
 	DamageMultiplier@3:
 		Modifier: 55
-		RequiresCondition: (Tower1build + Tower2build + Tower3build + Tower4build) == 3
+		RequiresCondition: (Tower1build + Tower2build + Tower3build + Tower4build) == 3 && !build-incomplete
 	DamageMultiplier@4:
 		Modifier: 33
-		RequiresCondition: (Tower1build + Tower2build + Tower3build + Tower4build) == 4
+		RequiresCondition: (Tower1build + Tower2build + Tower3build + Tower4build) == 4 && !build-incomplete
 	AirstrikePower:
 		Prerequisites: sultow1
 		RequiresCondition: Tower1build
@@ -833,11 +910,14 @@ SULCASTLE:
 		CircleSequence: circles
 		CameraRemoveDelay: 90
 		OrderName: SpearsPowerInfoOrder
+		RequiresCondition: !build-incomplete
 	SupportPowerChargeBar:
+		RequiresCondition: !build-incomplete
 	ProximityExternalCondition@HEAL:
 		Range: 5c0
 		ValidStances: Ally
 		Condition: hospitalheal
+		RequiresCondition: !build-incomplete
 	WithRangeCircle: 
 		ValidStances: Ally, Neutral
 		Range: 5c0
@@ -862,6 +942,7 @@ SULCASTLE:
 		IncomingSpeechNotification: 
 		IncomingSound: 
 		RequiresCondition: Tower4build
+		RequiresCondition: !build-incomplete
 SULTOW1:
 	AlwaysVisible:
 	Interactable:
@@ -965,19 +1046,33 @@ SULMILL:
 		Name: Windmill
 	ProvidesPrerequisite:
 		Prerequisite: proc
+		RequiresCondition: !build-incomplete
 	Building:
 		Footprint: __ xx xx ==
 		Dimensions: 2,4
 		LocalCenterOffset: 0,-512,0
+	Buildable:
+		IconPalette: raicon
+		BuildPaletteOrder: 20
+		Prerequisites: anypower
+		Description: Provides basic resource gathering for Crops and Grain.\n Comes with 3 farmers.\n Can only operate up to 6 farmers at once.\n\n\n\n
+		Queue: MResources.SUL
+		BuildDuration: 1400
+	SelfConstructing:
+		Condition: build-incomplete
+		Steps: 5
+		Sequence: make
 	Health:
 		HP: 80000
 	RevealsShroud:
 		Range: 3c0
+		RequiresCondition: !build-incomplete
 	WithBuildingBib:
 		Palette: bibs
 	CustomSellValue:
 		Value: 200
 	ProvidesPrerequisite@buildingname:
+		RequiresCondition: !build-incomplete
 	Selectable:
 		Bounds: 48,76,0,-2
 	SelectionDecorations:
@@ -993,10 +1088,6 @@ SULMILL:
 		PipColor: Yellow
 		PipCount: 5
 		Capacity: 1000
-	ProximityExternalCondition@KILL:
-		Range: 1c0
-		ValidStances: Ally
-		Condition: KillRef
 	WithFreeSpawnableActor@1:
 		SpawnActor: sule6
 		Offset: -470,1365, 0
@@ -1036,6 +1127,17 @@ SULFIX:
 		Footprint: xxx =xx ===
 		Dimensions: 3,3
 		LocalCenterOffset: 0,-512,0
+	Buildable:
+		IconPalette: raicon
+		BuildPaletteOrder: 30
+		Prerequisites: proc
+		Description: Provides Siege weapons construction.\n\n\n\n
+		Queue: MMilitary.SUL
+		BuildDuration: 600
+	SelfConstructing:
+		Condition: build-incomplete
+		Steps: 4
+		Sequence: make
 	Selectable:
 		Bounds: 64,64,0,-14
 	SelectionDecorations:
@@ -1043,27 +1145,34 @@ SULFIX:
 		HP: 70000
 	RevealsShroud:
 		Range: 4c0
+		RequiresCondition: !build-incomplete
 	WithBuildingBib:
 		Palette: bibs
 	ProvidesPrerequisite@buildingname: 
+		RequiresCondition: !build-incomplete
 	RallyPoint:
 	Exit@1:
 		SpawnOffset: -200,200,0
 		ExitCell: 0,2
 	Production:
 		Produces: MSiege.SUL
+		RequiresCondition: !build-incomplete
 	ProductionQueue@2:
 		Type: MSiege.SUL
 		Group: Aircraft
 		Factions: sul
 		LowPowerModifier: 400
 		ReadyAudio:
+		RequiresCondition: !build-incomplete
 	ProductionBar:
 		ProductionType: MSiege.SUL
+		RequiresCondition: !build-incomplete
 	WithIdleAnimation:
 		Interval: 360
+		RequiresCondition: !build-incomplete
 	ProvidesPrerequisite@2:
 		Prerequisite: anyworkshop
+		RequiresCondition: !build-incomplete
 	ThrowsShrapnel@LARGE:
 		Weapons: LargeWood1, SmallWood1, LargeStone1, SmallWood2
 		Pieces: 1, 2
@@ -1072,6 +1181,7 @@ SULFIX:
 		Range: 3c0
 		ValidStances: Ally
 		Condition: Labor
+		RequiresCondition: !build-incomplete
 	Targetable:
 		TargetTypes: Ground, C4, Structure, Wanderer, Laborer
 	Refinery:
@@ -1095,10 +1205,13 @@ SULFIX:
 		OrderName: MortarInfoOrder
 		EndChargeSpeechNotification: StrangeReady
 		RequiresCondition: Enabled
+		RequiresCondition: !build-incomplete
 	SupportPowerChargeBar: 
+		RequiresCondition: !build-incomplete
 	GrantConditionOnPrerequisite:
 		Condition: Enabled
 		Prerequisites: sultow3, anyhq
+		RequiresCondition: !build-incomplete
 	WithFreeSpawnableActor@LABOUR1:
 		SpawnActor: shopplayer
 		Offset: 325,512,0
@@ -1108,6 +1221,7 @@ SULFIX:
 		ForceLasso: 5c0
 		ReturnOnDeath: true
 		RespawnTime: 750
+		RequiresCondition: !build-incomplete
 	WithFreeSpawnableActor@LABOUR2:
 		SpawnActor: shopplayer
 		Offset: 325,512,0
@@ -1117,6 +1231,7 @@ SULFIX:
 		ForceLasso: 5c0
 		ReturnOnDeath: true
 		RespawnTime: 750
+		RequiresCondition: !build-incomplete
 	WithRangeCircle:
 		Type: Workshop
 		Range: 4c0
@@ -1141,6 +1256,18 @@ SULCNSHMBR:
 		Footprint: xxx xxx ===
 		Dimensions: 3,3
 		LocalCenterOffset: 0,-512,0
+	Buildable:
+		IconPalette: raicon
+		BuildPaletteOrder: 40
+		Prerequisites: proc
+		Description: Corn Chambers were meant to store corn for times when food was rare.\n  Generates a little bit of gold, when resources are gathered.\n  Limited to 1.\n\n
+		Queue: MResources.SUL
+		BuildDuration: 500
+		BuildLimit: 1
+	SelfConstructing:
+		Condition: build-incomplete
+		Steps: 6
+		Sequence: make
 	Health:
 		HP: 100000
 	RevealsShroud:
@@ -1148,7 +1275,7 @@ SULCNSHMBR:
 	WithBuildingBib:
 		Palette: bibs
 	Selectable:
-		Bounds:72,60,0,-6
+		Bounds: 72,60,0,-6
 	SelectionDecorations:
 	ThrowsShrapnel@LARGE:
 		Weapons: DebrUtility1, DebrUtility2, DebrUtility3
@@ -1156,6 +1283,7 @@ SULCNSHMBR:
 		Range: 1c0, 5c0
 	ResourcePurifier:
 		Percentage: 5
+		RequiresCondition: !build-incomplete
 SULREF:
 	Inherits: ^MWBaseBuilding
 	HitShape:
@@ -1180,6 +1308,17 @@ SULREF:
 		Footprint: _x_ xxx xx= ===
 		Dimensions: 3,4
 		LocalCenterOffset: 0,-512,0
+	Buildable:
+		IconPalette: raicon
+		BuildPaletteOrder: 30
+		Prerequisites: sulcastle
+		Description: Processes raw ore and Gold into useable metal.\nGenerates more money than the windmill.\n\n\n\n
+		Queue: MResources.SUL
+		BuildDuration: 1500
+	SelfConstructing:
+		Condition: build-incomplete
+		Steps: 6
+		Sequence: make
 	Health:
 		HP: 160000
 	RevealsShroud:
@@ -1203,11 +1342,15 @@ SULREF:
 		Actor: eharvxl
 		SpawnOffset: 1,2
 		Facing: 64
+		RequiresCondition: !build-incomplete
 	ProvidesPrerequisite:
 		Prerequisite: proc
+		RequiresCondition: !build-incomplete
 	ProvidesPrerequisite@anyref:
 		Prerequisite: anyrefinery
+		RequiresCondition: !build-incomplete
 	ProvidesPrerequisite@buildingname:
+		RequiresCondition: !build-incomplete
 	ThrowsShrapnel@LARGE:
 		Weapons: LargeWood1, LargeStone1, DebrUtility1, DebrUtility2, DebrUtility3
 		Pieces: 1, 2

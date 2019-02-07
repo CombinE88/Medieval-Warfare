@@ -22,10 +22,10 @@ namespace OpenRA.Mods.MW.Traits.BuildingTraits
 	public class DeconstructSellableInfo : ConditionalTraitInfo, Requires<WithSpriteBodyInfo>
 	{
 		[Desc("How long selling will take, percentual to build time.")]
-		public readonly int SellTimePercent = 50;
+		public readonly int SellTimePercent = 10;
 
 		[Desc("The percentual amount of money to refund.")]
-		public readonly int RefundPercent = 25;
+		public readonly int RefundPercent = 50;
 
 		[GrantedConditionReference]
 		[Desc("The condition to grant to self while the make animation is playing.")]
@@ -44,7 +44,7 @@ namespace OpenRA.Mods.MW.Traits.BuildingTraits
 		private readonly DeveloperMode developerMode;
 		private readonly WithSpriteBody[] wsbs;
 
-		private SelfConstructingInfo[] selfConstructings;
+		private SelfConstructing[] selfConstructings;
 
 		private ConditionManager conditionManager;
 		private int token = ConditionManager.InvalidConditionToken;
@@ -62,7 +62,7 @@ namespace OpenRA.Mods.MW.Traits.BuildingTraits
 
 		void INotifyCreated.Created(Actor self)
 		{
-			selfConstructings = self.Info.TraitInfos<SelfConstructingInfo>().Where(w => info.BodyNames.Intersect(w.BodyNames).Any()).ToArray();
+			selfConstructings = self.TraitsImplementing<SelfConstructing>().ToArray();
 			conditionManager = self.TraitOrDefault<ConditionManager>();
 		}
 
@@ -91,11 +91,11 @@ namespace OpenRA.Mods.MW.Traits.BuildingTraits
 				}
 				else if (wsb != null)
 				{
-					var selfConstructing = selfConstructings.FirstEnabledTraitOrDefault();
-					if (selfConstructing != null)
+					var selfConstructingInfo = selfConstructings.FirstOrDefault(c => c.IsActive());
+					if (selfConstructingInfo != null)
 						wsb.PlayCustomAnimationRepeating(self,
-							selfConstructing.Sequence + Math.Min(sellTimer * selfConstructing.Steps / sellTimerTotal,
-								selfConstructing.Steps - 1));
+							selfConstructingInfo.Info.Sequence + Math.Min(sellTimer * selfConstructingInfo.Info.Steps / sellTimerTotal,
+								selfConstructingInfo.Info.Steps - 1));
 				}
 			}
 		}
@@ -108,7 +108,14 @@ namespace OpenRA.Mods.MW.Traits.BuildingTraits
 			if (conditionManager != null && !string.IsNullOrEmpty(info.Condition) && token == ConditionManager.InvalidConditionToken)
 				token = conditionManager.GrantCondition(self, info.Condition);
 
-			var productionItem = self.Trait<SelfConstructing>().TryAbort(self);
+			ProductionItem productionItem = null;
+
+			if (selfConstructings.Any())
+				foreach (var selfconst in selfConstructings)
+				{
+					productionItem = selfconst.TryAbort(self);
+				}
+
 			var valued = self.Info.TraitInfoOrDefault<ValuedInfo>();
 
 			if (productionItem != null)

@@ -44,6 +44,7 @@ HQNEWGDI:
 		HP: 70000
 	RevealsShroud:
 		Range: 14c0
+		RequiresCondition: !build-incomplete
 	WithBuildingBib:
 		Palette: bibs 
 	ThrowsShrapnel@LARGE:
@@ -117,6 +118,7 @@ ARMORYGDI:
 		HP: 90000
 	RevealsShroud:
 		Range: 5c0
+		RequiresCondition: !build-incomplete
 	WithBuildingBib:
 		Palette: bibs
 	RenderDetectionCircle:
@@ -197,6 +199,7 @@ NUK2NEW:
 		HP: 70000
 	RevealsShroud:
 		Range: 4c0
+		RequiresCondition: !build-incomplete
 	WithBuildingBib:
 		Palette: bibs
 	Selectable:
@@ -271,6 +274,7 @@ NUKXL:
 		HP: 120000
 	RevealsShroud:
 		Range: 4c0
+		RequiresCondition: !build-incomplete
 	WithBuildingBib:
 		Palette: bibs
 	Selectable:
@@ -487,6 +491,7 @@ BARRNEW:
 		HP: 50000
 	RevealsShroud:
 		Range: 5c0
+		RequiresCondition: !build-incomplete
 	WithBuildingBib:
 		Palette: bibs
 	RallyPoint:
@@ -540,7 +545,7 @@ STALL:
 	Tooltip:
 		Name: Stables
 	Building:
-		Footprint: xxx xx= ===
+		Footprint: xxx xxx ===
 		Dimensions: 3,3
 		LocalCenterOffset: 0,-512,0
 	Buildable:
@@ -558,6 +563,7 @@ STALL:
 		HP: 100000
 	RevealsShroud:
 		Range: 4c0
+		RequiresCondition: !build-incomplete
 	WithProductionDoorOverlay:
 		Sequence: build-top
 		RequiresCondition: !build-incomplete
@@ -652,6 +658,7 @@ CASTLE2:
 		HP: 180000
 	RevealsShroud:
 		Range: 6c0
+		RequiresCondition: !build-incomplete
 	WithBuildingBib:
 		Palette: bibs
 	ProvidesPrerequisite:
@@ -720,7 +727,7 @@ WORKSHOPGDI:
 	Tooltip:
 		Name: Siege Workshop
 	Building:
-		Footprint: xxx xx= ===
+		Footprint: xxx xxx ===
 		Dimensions: 3,3
 		LocalCenterOffset: 0,-512,0
 	Buildable:
@@ -741,6 +748,7 @@ WORKSHOPGDI:
 		HP: 75000
 	RevealsShroud:
 		Range: 5c0
+		RequiresCondition: !build-incomplete
 	WithBuildingBib:
 		Palette: bibs
 	ProvidesPrerequisite@buildingname: 

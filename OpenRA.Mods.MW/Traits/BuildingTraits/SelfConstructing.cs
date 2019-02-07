@@ -42,6 +42,10 @@ namespace OpenRA.Mods.MW.Traits.BuildingTraits
 
         public readonly bool UseScaffolds = true;
         
+        public readonly bool ShowPercentage = true;
+        
+        public readonly bool ShowQueuePosition = true;
+        
         public readonly string Font = "MediumBold";
         
         public readonly string SmallFont = "Regular";
@@ -62,7 +66,7 @@ namespace OpenRA.Mods.MW.Traits.BuildingTraits
     public class SelfConstructing : WithMakeAnimation, ITick, INotifyRemovedFromWorld, INotifyCreated,
         INotifyDamageStateChanged, INotifyKilled, IRender
     {
-        private readonly SelfConstructingInfo info;
+        public readonly SelfConstructingInfo Info;
 
         private readonly WithSpriteBody[] wsbs;
 
@@ -87,15 +91,15 @@ namespace OpenRA.Mods.MW.Traits.BuildingTraits
 
         public SelfConstructing(ActorInitializer init, SelfConstructingInfo info) : base(init, info)
         {
-            this.info = info;
+            this.Info = info;
             wsbs = init.Self.TraitsImplementing<WithSpriteBody>().Where(w => info.BodyNames.Contains(w.Info.Name)).ToArray();
             conditionManager = init.Self.Trait<ConditionManager>();
             font = Game.Renderer.Fonts[info.Font];
             smallFont = Game.Renderer.Fonts[info.SmallFont];
             decorationBounds = init.Self.TraitsImplementing<IDecorationBounds>().ToArray();
 
-            if (!string.IsNullOrEmpty(this.info.Condition) && token == ConditionManager.InvalidConditionToken)
-                token = conditionManager.GrantCondition(init.Self, this.info.Condition);
+            if (!string.IsNullOrEmpty(this.Info.Condition) && token == ConditionManager.InvalidConditionToken)
+                token = conditionManager.GrantCondition(init.Self, this.Info.Condition);
 
             spawnType = init.Contains<PlaceBuildingInit>() ? SpawnType.PlaceBuilding :
                 init.Contains<SpawnedByMapInit>() ? SpawnType.Other : SpawnType.Deploy;
@@ -125,60 +129,69 @@ namespace OpenRA.Mods.MW.Traits.BuildingTraits
 
         IEnumerable<IRenderable> IRender.Render(Actor self, WorldRenderer worldRenderer)
         {
-            if (token == ConditionManager.InvalidConditionToken || !info.UseScaffolds ||
-                wsbs.FirstEnabledTraitOrDefault() == null)
+            if (token == ConditionManager.InvalidConditionToken || wsbs.FirstEnabledTraitOrDefault() == null)
                 yield break;
 
-            foreach (var entry in scaffolds)
-            {
-                for (var i = 0; i < 4; i++)
+            if (Info.UseScaffolds)
+                foreach (var entry in scaffolds)
                 {
-                    if (((entry.Value >> i) & 1) == 1)
-                        continue;
+                    for (var i = 0; i < 4; i++)
+                    {
+                        if (((entry.Value >> i) & 1) == 1)
+                            continue;
 
-                    var sequence = self.World.Map.Rules.Sequences.GetSequence(RenderSprites.Image ?? self.Info.Name,
-                        info.Scaffolds + i);
+                        var sequence = self.World.Map.Rules.Sequences.GetSequence(RenderSprites.Image ?? self.Info.Name,
+                            Info.Scaffolds + i);
 
-                    yield return
-                        new SpriteRenderable(
-                            sequence.GetSprite(step),
-                            self.World.Map.CenterOfCell(self.Location + entry.Key),
-                            WVec.Zero,
-                            sequence.ZOffset,
-                            worldRenderer.Palette(info.ScaffoldsPalette),
-                            1,
-                            false
-                        );
+                        yield return
+                            new SpriteRenderable(
+                                sequence.GetSprite(step),
+                                self.World.Map.CenterOfCell(self.Location + entry.Key),
+                                WVec.Zero,
+                                sequence.ZOffset,
+                                worldRenderer.Palette(Info.ScaffoldsPalette),
+                                1,
+                                false
+                            );
+                    }
                 }
-            }
 
-            var bounds = decorationBounds.Select(b => b.DecorationBounds(self, worldRenderer))
-                .FirstOrDefault(b => !b.IsEmpty);
-            var spaceBuffer = (int) (10 / worldRenderer.Viewport.Zoom);
-            var effectPos = worldRenderer.ProjectedPosition(new int2(
-                (bounds.Left + bounds.Right) / 2 + info.Offset[0],
-                (bounds.Top + bounds.Bottom) / 2 + info.Offset[1] - spaceBuffer));
-            var allQueued = queue.AllActuallyQueued().ToArray();
-
-            if (worldRenderer.World.RenderPlayer != null &&
-                worldRenderer.World.RenderPlayer.IsAlliedWith(self.Owner))
+            if (Info.ShowPercentage)
             {
-                yield return
-                    new TextRenderable(font, effectPos + new WVec(0, -350, 0), info.ZOffset, Color.White,
-                        allQueued.IndexOf(productionItem) == 0
-                            ? "Building"
-                            : allQueued.IndexOf(productionItem).ToString());
+                var bounds = decorationBounds.Select(b => b.DecorationBounds(self, worldRenderer))
+                    .FirstOrDefault(b => !b.IsEmpty);
+                var spaceBuffer = (int) (10 / worldRenderer.Viewport.Zoom);
+                var effectPos = worldRenderer.ProjectedPosition(new int2(
+                    (bounds.Left + bounds.Right) / 2 + Info.Offset[0],
+                    (bounds.Top + bounds.Bottom) / 2 + Info.Offset[1] - spaceBuffer));
+                var allQueued = queue.AllActuallyQueued().ToArray();
 
-                yield return
-                    new TextRenderable(
-                        smallFont,
-                        effectPos + new WVec(0, 350, 0),
-                        info.ZOffset,
-                        Color.White,
-                        (int) Math.Round(
-                            100.0 / productionItem.TotalTime *
-                            (productionItem.TotalTime - productionItem.RemainingTime), 0) + "%");
+                if (worldRenderer.World.RenderPlayer != null &&
+                    worldRenderer.World.RenderPlayer.IsAlliedWith(self.Owner))
+                {
+                    yield return
+                        new TextRenderable(font, effectPos + new WVec(0, -350, 0), Info.ZOffset, Color.White,
+                            allQueued.IndexOf(productionItem) == 0
+                                ? "Building"
+                                : allQueued.IndexOf(productionItem).ToString());
+                }
+
+                if (Info.ShowQueuePosition)
+                    yield return
+                        new TextRenderable(
+                            smallFont,
+                            effectPos + new WVec(0, 350, 0),
+                            Info.ZOffset,
+                            Color.White,
+                            (int) Math.Round(
+                                100.0 / productionItem.TotalTime *
+                                (productionItem.TotalTime - productionItem.RemainingTime), 0) + "%");
             }
+        }
+
+        public bool IsActive()
+        {
+            return wsbs.FirstEnabledTraitOrDefault() != null;
         }
         
         public IEnumerable<Rectangle> ScreenBounds(Actor self, WorldRenderer wr)
@@ -192,7 +205,11 @@ namespace OpenRA.Mods.MW.Traits.BuildingTraits
         void INotifyCreated.Created(Actor self)
         {
             if (wsbs.FirstEnabledTraitOrDefault() == null)
+            {
+                OnComplete(self);
                 return;
+            }
+
             if (spawnType == SpawnType.PlaceBuilding)
             {
                 var productionActor = self.World.Actors.FirstOrDefault(a =>
@@ -208,14 +225,14 @@ namespace OpenRA.Mods.MW.Traits.BuildingTraits
                 health = self.Trait<Health>();
 
                 healthSteps = new List<int>();
-                for (var i = 0; i <= info.Steps; i++)
-                    healthSteps.Add(health.MaxHP * (i + 1) / (info.Steps + 1));
+                for (var i = 0; i <= Info.Steps; i++)
+                    healthSteps.Add(health.MaxHP * (i + 1) / (Info.Steps + 1));
 
                 health.InflictDamage(self, self, new Damage(health.MaxHP - healthSteps[0]), true);
 
                 var wsb = wsbs.FirstEnabledTraitOrDefault();
                 wsb.CancelCustomAnimation(self);
-                wsb.PlayCustomAnimationRepeating(self, info.Sequence + 0);
+                wsb.PlayCustomAnimationRepeating(self, Info.Sequence + 0);
             }
             else if (spawnType == SpawnType.Deploy)
             {
@@ -248,7 +265,7 @@ namespace OpenRA.Mods.MW.Traits.BuildingTraits
                 var wsb = wsbs.FirstEnabledTraitOrDefault();
                 wsb.CancelCustomAnimation(self);
 
-                while (step < info.Steps)
+                while (step < Info.Steps)
                     health.InflictDamage(self, self, new Damage(healthSteps[step] - healthSteps[++step]), true);
 
                 OnComplete(self);
@@ -257,8 +274,8 @@ namespace OpenRA.Mods.MW.Traits.BuildingTraits
 
             var progress = Math.Max(0,
                 Math.Min(
-                    info.Steps * (productionItem.TotalTime - productionItem.RemainingTime) /
-                    Math.Max(1, productionItem.TotalTime), info.Steps - 1));
+                    Info.Steps * (productionItem.TotalTime - productionItem.RemainingTime) /
+                    Math.Max(1, productionItem.TotalTime), Info.Steps - 1));
 
             if (progress != step)
             {
@@ -266,7 +283,7 @@ namespace OpenRA.Mods.MW.Traits.BuildingTraits
                     health.InflictDamage(self, self, new Damage(healthSteps[step] - healthSteps[++step]), true);
 
                 var wsb = wsbs.FirstEnabledTraitOrDefault();
-                wsb.PlayCustomAnimationRepeating(self, info.Sequence + step);
+                wsb.PlayCustomAnimationRepeating(self, Info.Sequence + step);
             }
         }
 
@@ -305,7 +322,7 @@ namespace OpenRA.Mods.MW.Traits.BuildingTraits
                 return;
 
             var wsb = wsbs.FirstEnabledTraitOrDefault();
-            wsb.PlayCustomAnimationRepeating(self, info.Sequence + step);
+            wsb.PlayCustomAnimationRepeating(self, Info.Sequence + step);
         }
 
         void INotifyKilled.Killed(Actor self, AttackInfo e)
