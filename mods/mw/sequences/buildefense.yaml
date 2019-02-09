@@ -488,6 +488,12 @@ sulplug1:
 	idle: sulgtw
 		Start: 13
 		Offset: 0, -24
+	make0: sulgtw
+		Start: 13
+		Offset: 0, -24
+	make1: sulgtw
+		Start: 13
+		Offset: 0, -24
 	damaged-idle: sulgtw
 		Start: 14
 		Offset: 0, -24

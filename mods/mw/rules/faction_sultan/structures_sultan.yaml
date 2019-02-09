@@ -807,7 +807,21 @@ SULCASTLE:
 		Description: Can unlock Superweapons.\n Can unlock advanced tech.\n\n\n\n
 		Queue: MBuilding.SUL
 		BuildDuration: 600
-	SelfConstructing:
+	Production:
+		Produces: TechTower.sul
+	ProductionQueue@TechTower:
+		Type: TechTower.sul
+		Factions: sul
+		Group: Building
+		QueuedAudio: Building
+		ReadyAudio: ConstructionComplete
+		RequiresCondition: !build-incomplete
+	Exit@1:
+		SpawnOffset: -426,85,0
+		ExitCell: 0,1
+	ProductionBar:
+		ProductionType: TechTower.sul
+	SelfConstructing: 
 		Condition: build-incomplete
 		Steps: 6
 		Sequence: make
@@ -887,7 +901,6 @@ SULCASTLE:
 		RequiresCondition: (Tower1build + Tower2build + Tower3build + Tower4build) == 4 && !build-incomplete
 	AirstrikePower:
 		Prerequisites: sultow1
-		RequiresCondition: Tower1build
 		Icon: sulspballiconsmall
 		ChargeInterval: 5250
 		SquadOffset:	-236,236,0
@@ -910,7 +923,7 @@ SULCASTLE:
 		CircleSequence: circles
 		CameraRemoveDelay: 90
 		OrderName: SpearsPowerInfoOrder
-		RequiresCondition: !build-incomplete
+		RequiresCondition: !build-incomplete &&  Tower1build
 	SupportPowerChargeBar:
 		RequiresCondition: !build-incomplete
 	ProximityExternalCondition@HEAL:
@@ -941,8 +954,7 @@ SULCASTLE:
 		EndChargeSpeechNotification: NodcannonReady
 		IncomingSpeechNotification: 
 		IncomingSound: 
-		RequiresCondition: Tower4build
-		RequiresCondition: !build-incomplete
+		RequiresCondition: !build-incomplete &&  Tower4build
 SULTOW1:
 	AlwaysVisible:
 	Interactable:
@@ -960,7 +972,7 @@ SULTOW1:
 		BuildPaletteOrder: 40
 		Prerequisites: anyhq
 		Description: Grants access to advanced tech at the barracks.\n  Allows Supportpower I \n  Heals surrounding units.\n\n
-		Queue: MBuilding.SUL
+		Queue: TechTower.sul
 		BuildLimit: 1
 		BuildDuration: 1200
 SULTOW2:
@@ -980,7 +992,7 @@ SULTOW2:
 		BuildPaletteOrder: 50
 		Prerequisites: anyhq
 		Description: Grants access to advanced tech at the School of Mystic Teachings.\n\n\n\n
-		Queue: MBuilding.SUL
+		Queue: TechTower.sul
 		BuildLimit: 1
 		BuildDuration: 1400
 SULTOW3:
@@ -1002,7 +1014,7 @@ SULTOW3:
 		BuildPaletteOrder: 60
 		Prerequisites: anyhq
 		Description: Grants access to advanced tech and support powers at the Siege Workshop.\n\n\n\n
-		Queue: MBuilding.SUL
+		Queue: TechTower.sul
 		BuildLimit: 1
 		BuildDuration: 1300
 SULTOW4:
@@ -1026,7 +1038,7 @@ SULTOW4:
 		BuildPaletteOrder: 70
 		Prerequisites: anyhq, sultow1, sultow2, sultow3
 		Description: Grants access to superb tech and super weapons.\n\n\n\n
-		Queue: MBuilding.SUL
+		Queue: TechTower.sul
 		BuildLimit: 1
 		BuildDuration: 2500
 SULMILL:
@@ -1093,21 +1105,25 @@ SULMILL:
 		Offset: -470,1365, 0
 		MoveOffset: 0,3
 		RespawnTime: 750
+		RequiresCondition: !build-incomplete
 	WithFreeSpawnableActor@2:
 		SpawnActor: sule6
 		Offset: -470,1365, 0
 		MoveOffset: 0,3
 		RespawnTime: 750
+		RequiresCondition: !build-incomplete
 	WithFreeSpawnableActor@3:
 		SpawnActor: sule6
 		Offset: -470,1365, 0
 		MoveOffset: 0,3
 		RespawnTime: 750
+		RequiresCondition: !build-incomplete
 	WithFreeSpawnableActor@4:
 		SpawnActor: sule6
 		Offset: -470,1365, 0
 		MoveOffset: 0,3
 		RespawnTime: 750
+		RequiresCondition: !build-incomplete
 SULFIX:
 	Inherits: ^MWBaseBuilding
 	Inherits@Hitshape: ^3x2Shape
@@ -1204,8 +1220,7 @@ SULFIX:
 		CircleSequence: circles
 		OrderName: MortarInfoOrder
 		EndChargeSpeechNotification: StrangeReady
-		RequiresCondition: Enabled
-		RequiresCondition: !build-incomplete
+		RequiresCondition: !build-incomplete && Enabled
 	SupportPowerChargeBar: 
 		RequiresCondition: !build-incomplete
 	GrantConditionOnPrerequisite:

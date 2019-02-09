@@ -81,10 +81,11 @@ Rules:
 
 	mw|rules/faction_sultan/infantry_sultan.yaml
 	mw|rules/faction_sultan/misc_sultan.yaml
+	mw|rules/faction_sultan/structures_sultan.yaml
 
 	mw|rules/faction_undead/defaults_undead.yaml
-	mw|rules/faction_undead/structures_undead.yaml
 	mw|rules/faction_undead/units_undead.yaml
+	mw|rules/faction_undead/structures_undead.yaml
 
 	mw|rules/faction_shared/defense_shared.yaml
 	mw|rules/faction_shared/infantry_shared.yaml
