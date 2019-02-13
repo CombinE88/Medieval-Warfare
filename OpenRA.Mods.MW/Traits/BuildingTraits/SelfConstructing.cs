@@ -34,26 +34,26 @@ namespace OpenRA.Mods.MW.Traits.BuildingTraits
         Requires<HealthInfo>, Requires<RenderSpritesInfo>
     {
         [Desc("Number of make sequences.")] public readonly int Steps = 3;
-        
-		[Desc("Apply to sprite bodies with these names.")]
-		public new readonly string[] BodyNames = { "body" };
+
+        [Desc("Apply to sprite bodies with these names.")]
+        public new readonly string[] BodyNames = { "body" };
 
         public readonly string Scaffolds = "scaffolds";
 
         public readonly bool UseScaffolds = true;
-        
+
         public readonly bool ShowPercentage = true;
-        
+
         public readonly bool ShowQueuePosition = true;
-        
+
         public readonly string Font = "MediumBold";
-        
+
         public readonly string SmallFont = "Regular";
-        
+
         [Desc("The Z offset to apply when rendering this decoration.")]
         public readonly int ZOffset = 12048;
 
-        public readonly int[] Offset = {0, 0};
+        public readonly int[] Offset = { 0, 0 };
 
         [PaletteReference] public readonly string ScaffoldsPalette = "mwcivilian";
 
@@ -71,12 +71,12 @@ namespace OpenRA.Mods.MW.Traits.BuildingTraits
         private readonly WithSpriteBody[] wsbs;
 
         private readonly ConditionManager conditionManager;
-        
+
         private readonly Dictionary<CVec, int> scaffolds = new Dictionary<CVec, int>();
         private readonly SpriteFont font;
         private readonly SpriteFont smallFont;
         private readonly IDecorationBounds[] decorationBounds;
-        
+
         private int token = ConditionManager.InvalidConditionToken;
 
         private ProductionItem productionItem;
@@ -85,9 +85,8 @@ namespace OpenRA.Mods.MW.Traits.BuildingTraits
         private Health health;
         private int step;
         private SpawnType spawnType;
-        private RenderSpritesInfo RenderSprites;
+        private RenderSpritesInfo renderSprites;
         private SelfConstructingProductionQueue queue;
-
 
         public SelfConstructing(ActorInitializer init, SelfConstructingInfo info) : base(init, info)
         {
@@ -114,7 +113,7 @@ namespace OpenRA.Mods.MW.Traits.BuildingTraits
             foreach (var cell in occupiedCells)
                 scaffolds.Add(cell, CheckSorroundings(occupiedCells, cell));
 
-            RenderSprites = init.Self.Info.TraitInfo<RenderSpritesInfo>();
+            renderSprites = init.Self.Info.TraitInfo<RenderSpritesInfo>();
         }
 
         int CheckSorroundings(CVec[] cells, CVec cell)
@@ -140,7 +139,7 @@ namespace OpenRA.Mods.MW.Traits.BuildingTraits
                         if (((entry.Value >> i) & 1) == 1)
                             continue;
 
-                        var sequence = self.World.Map.Rules.Sequences.GetSequence(RenderSprites.Image ?? self.Info.Name,
+                        var sequence = self.World.Map.Rules.Sequences.GetSequence(renderSprites.Image ?? self.Info.Name,
                             Info.Scaffolds + i);
 
                         yield return
@@ -151,8 +150,7 @@ namespace OpenRA.Mods.MW.Traits.BuildingTraits
                                 sequence.ZOffset,
                                 worldRenderer.Palette(Info.ScaffoldsPalette),
                                 1,
-                                false
-                            );
+                                false);
                     }
                 }
 
@@ -160,7 +158,7 @@ namespace OpenRA.Mods.MW.Traits.BuildingTraits
             {
                 var bounds = decorationBounds.Select(b => b.DecorationBounds(self, worldRenderer))
                     .FirstOrDefault(b => !b.IsEmpty);
-                var spaceBuffer = (int) (10 / worldRenderer.Viewport.Zoom);
+                var spaceBuffer = (int)(10 / worldRenderer.Viewport.Zoom);
                 var effectPos = worldRenderer.ProjectedPosition(new int2(
                     (bounds.Left + bounds.Right) / 2 + Info.Offset[0],
                     (bounds.Top + bounds.Bottom) / 2 + Info.Offset[1] - spaceBuffer));
@@ -171,9 +169,7 @@ namespace OpenRA.Mods.MW.Traits.BuildingTraits
                 {
                     yield return
                         new TextRenderable(font, effectPos + new WVec(0, -350, 0), Info.ZOffset, Color.White,
-                            allQueued.IndexOf(productionItem) == 0
-                                ? "Building"
-                                : allQueued.IndexOf(productionItem).ToString());
+                            allQueued.IndexOf(productionItem) == 0 ? "Building" : allQueued.IndexOf(productionItem).ToString());
                 }
 
                 if (Info.ShowQueuePosition)
@@ -183,9 +179,7 @@ namespace OpenRA.Mods.MW.Traits.BuildingTraits
                             effectPos + new WVec(0, 350, 0),
                             Info.ZOffset,
                             Color.White,
-                            (int) Math.Round(
-                                100.0 / productionItem.TotalTime *
-                                (productionItem.TotalTime - productionItem.RemainingTime), 0) + "%");
+                            (int)Math.Round(100.0 / productionItem.TotalTime * (productionItem.TotalTime - productionItem.RemainingTime), 0) + "%");
             }
         }
 
@@ -193,13 +187,13 @@ namespace OpenRA.Mods.MW.Traits.BuildingTraits
         {
             return wsbs.FirstEnabledTraitOrDefault() != null;
         }
-        
+
         public IEnumerable<Rectangle> ScreenBounds(Actor self, WorldRenderer wr)
         {
             if (!self.IsDead && self.IsInWorld && wsbs.FirstEnabledTraitOrDefault() != null)
                 return self.Trait<RenderSprites>().ScreenBounds(self, wr);
 
-            return new Rectangle[]{};
+            return new Rectangle[] { };
         }
 
         void INotifyCreated.Created(Actor self)
@@ -254,7 +248,7 @@ namespace OpenRA.Mods.MW.Traits.BuildingTraits
         {
             if (wsbs.FirstEnabledTraitOrDefault() == null)
                 return;
-            
+
             if (productionItem == null)
                 return;
 
@@ -273,9 +267,7 @@ namespace OpenRA.Mods.MW.Traits.BuildingTraits
             }
 
             var progress = Math.Max(0,
-                Math.Min(
-                    Info.Steps * (productionItem.TotalTime - productionItem.RemainingTime) /
-                    Math.Max(1, productionItem.TotalTime), Info.Steps - 1));
+                Math.Min(Info.Steps * (productionItem.TotalTime - productionItem.RemainingTime) / Math.Max(1, productionItem.TotalTime), Info.Steps - 1));
 
             if (progress != step)
             {
@@ -291,7 +283,7 @@ namespace OpenRA.Mods.MW.Traits.BuildingTraits
         {
             if (wsbs.FirstEnabledTraitOrDefault() == null)
                 return;
-            
+
             if (productionItem != null)
                 productionItem.Queue.EndProduction(productionItem);
         }
@@ -300,7 +292,7 @@ namespace OpenRA.Mods.MW.Traits.BuildingTraits
         {
             if (wsbs.FirstEnabledTraitOrDefault() == null)
                 return null;
-            
+
             if (productionItem == null)
                 return null;
 
@@ -317,7 +309,7 @@ namespace OpenRA.Mods.MW.Traits.BuildingTraits
         {
             if (wsbs.FirstEnabledTraitOrDefault() == null)
                 return;
-            
+
             if (productionItem == null)
                 return;
 
@@ -329,7 +321,7 @@ namespace OpenRA.Mods.MW.Traits.BuildingTraits
         {
             if (wsbs.FirstEnabledTraitOrDefault() == null)
                 return;
-            
+
             if (productionItem != null)
                 productionItem.Queue.EndProduction(productionItem);
         }

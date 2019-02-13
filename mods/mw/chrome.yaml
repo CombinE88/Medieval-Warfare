@@ -588,6 +588,9 @@ production-icons: chromeMW.png
 	building4: 408,264,24,24
 	building4-disabled: 408,288,24,24
 	building4-alert: 408,312,24,24
+	upgrades: 408,264,24,24
+	upgrades-disabled: 408,288,24,24
+	upgrades-alert: 408,312,24,24
 
 order-icons: chromeMW.png
 	options: 120,0,24,24

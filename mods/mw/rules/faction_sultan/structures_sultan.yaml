@@ -109,11 +109,11 @@ SULGTW:
 	WithIdleOverlay@archers:
 		Sequence: archgtw
 		Offset: 0, 0, 0
-		RequiresCondition: archers && Construct >= 20 && !build-incomplete
+		RequiresCondition: archers && !build-incomplete
 	WithSpriteTurret@1archers: 
 		Sequence: turretidle2
 		Turret: 1archers
-		RequiresCondition: archers && Construct >= 20 && !build-incomplete
+		RequiresCondition: archers && !build-incomplete
 	WithTurretAttackAnimation@1archers:
 		Turret: 1archers
 		Sequence: shoot
@@ -122,7 +122,7 @@ SULGTW:
 	WithSpriteTurret@2archers: 
 		Sequence: turretidle2
 		Turret: 2archers
-		RequiresCondition: archers && Construct >= 20 && !build-incomplete
+		RequiresCondition: archers && !build-incomplete
 	WithTurretAttackAnimation@2archers:
 		Turret: 2archers
 		Sequence: shoot
@@ -143,24 +143,24 @@ SULGTW:
 		Weapon: bownarrowtower
 		LocalOffset: 0,0,427
 		Turret: turr1
-		RequiresCondition: archers && Construct >= 20 && !build-incomplete
+		RequiresCondition: archers && !build-incomplete
 		FireDelay: 12
 		Name: 1archers
 	Armament@2archers:
 		Weapon: bownarrowtower
 		LocalOffset: 0,0,427
 		Turret: 2archers
-		RequiresCondition: archers && Construct >= 20 && !build-incomplete
+		RequiresCondition: archers && !build-incomplete
 		FireDelay: 18
 		Name: 2archers
 	WithIdleOverlay@djinn:
 		Sequence: djingtw
 		Offset: 0, 0, 0
-		RequiresCondition: djinn && Construct >= 50 && !build-incomplete
+		RequiresCondition: djinn && !build-incomplete
 	WithSpriteTurret@djinn: 
 		Sequence: dturretidle
 		Turret: turr3
-		RequiresCondition: djinn && Construct >= 50 && !build-incomplete
+		RequiresCondition: djinn && !build-incomplete
 	WithTurretAttackAnimation@djinn:
 		Turret: turr3
 		Sequence: shoot
@@ -173,38 +173,38 @@ SULGTW:
 		Weapon: DjinElectroGround
 		LocalOffset: 141,75,352
 		Turret: turr3
-		RequiresCondition: djinn && Construct >= 50 && !build-incomplete
+		RequiresCondition: djinn && !build-incomplete
 		Name: djinn
 	WithSpriteBody:
 		RequiresCondition: !staticfinished
 	WithIdleOverlay@static:
 		Sequence: idleupped
-		RequiresCondition: static && Construct >= 30 && !build-incomplete
+		RequiresCondition: static && !build-incomplete
 	Armament@static1:
 		Weapon: SulGTSpearThrow
 		LocalOffset: 0,0,427
 		Turret: primary1
-		RequiresCondition: static && Construct >= 30 && !build-incomplete
+		RequiresCondition: static && !build-incomplete
 		Name: primaryspear
 	Armament@static2:
 		Weapon: SulGTSpearThrow
 		LocalOffset: 0,0,427
 		Turret: secondary1
 		FireDelay: 25
-		RequiresCondition: static && Construct >= 30 && !build-incomplete
+		RequiresCondition: static && !build-incomplete
 		Name: secondaryspear
 	Armament@static1AIR:
 		Weapon: SulGTSpearThrowAir
 		LocalOffset: 0,0,427
 		Turret: primary1
-		RequiresCondition: static && Construct >= 30 && !build-incomplete
+		RequiresCondition: static && !build-incomplete
 		Name: primaryspearair
 	Armament@static2AIR:
 		Weapon: SulGTSpearThrowAir
 		LocalOffset: 0,0,427
 		Turret: secondary1
 		FireDelay: 25
-		RequiresCondition: static && Construct >= 30 && !build-incomplete
+		RequiresCondition: static && !build-incomplete
 		Name: secondaryspearair
 	Turreted@1a:
 		Turret: primary1
@@ -215,209 +215,96 @@ SULGTW:
 		TurnSpeed: 100
 		Offset: 170,170,500
 	DamageMultiplier@static:
-		RequiresCondition: static && Construct >= 30 && !build-incomplete
+		RequiresCondition: static && !build-incomplete
 		Modifier: 70  
 	GrantCondition@FinishPLUG1:
-		RequiresCondition: Construct >= 20 && archers && !build-incomplete
+		RequiresCondition: archers && !build-incomplete
 		Condition: archersfinished
 	GrantCondition@FinishPLUG2:
-		RequiresCondition: Construct >= 50 && djinn && !build-incomplete
+		RequiresCondition: djinn && !build-incomplete
 		Condition: djinnfinished
 	GrantCondition@FinishPLUG3:
-		RequiresCondition: Construct >= 30 && static && !build-incomplete
+		RequiresCondition: static && !build-incomplete
 		Condition: staticfinished
-	WithIdleOverlay@NW0:
-		Sequence: scaffnw0
-		Palette: mwcivilian
-		Offset: 212,-212,0
-		RequiresCondition: Construct < 3 && (archers || djinn || static) && !archersfinished && !djinnfinished && !staticfinished && !build-incomplete
-	WithIdleOverlay@SE0:
-		Sequence: scaffse0
-		Palette: mwcivilian
-		Offset: -212,212,0
-		RequiresCondition: Construct < 3 && (archers || djinn || static) && !archersfinished && !djinnfinished && !staticfinished && !build-incomplete
-	WithIdleOverlay@NW1:
-		Sequence: scaffnw1
-		Palette: mwcivilian
-		Offset: 212,-212,0
-		RequiresCondition: Construct >= 3 && Construct < 5 && (archers || djinn || static) && !archersfinished && !djinnfinished && !staticfinished && !build-incomplete
-	WithIdleOverlay@SE1:
-		Sequence: scaffse1
-		Palette: mwcivilian
-		Offset: -212,212,0
-		RequiresCondition: Construct >= 3 && Construct < 5 && (archers || djinn || static) && !archersfinished && !djinnfinished && !staticfinished && !build-incomplete
-	WithIdleOverlay@NW2:
-		Sequence: scaffnw2
-		Palette: mwcivilian
-		Offset: 212,-212,0
-		RequiresCondition: Construct >= 5 && Construct < 9 && (archers || djinn || static) && !archersfinished && !djinnfinished && !staticfinished && !build-incomplete
-	WithIdleOverlay@SE2:
-		Sequence: scaffse2
-		Palette: mwcivilian
-		Offset: -212,212,0
-		RequiresCondition: Construct >= 5 && Construct < 9 && (archers || djinn || static) && !archersfinished && !djinnfinished && !staticfinished && !build-incomplete
-	WithIdleOverlay@NW3:
-		Sequence: scaffnw3
-		Palette: mwcivilian
-		Offset: 212,-212,0
-		RequiresCondition: Construct >= 9 && Construct < 13 && (archers || djinn || static) && !archersfinished && !djinnfinished && !staticfinished && !build-incomplete
-	WithIdleOverlay@SE3:
-		Sequence: scaffse3
-		Palette: mwcivilian
-		Offset: -212,212,0
-		RequiresCondition: Construct >= 9 && Construct < 13 && (archers || djinn || static) && !archersfinished && !djinnfinished && !staticfinished && !build-incomplete
-	WithIdleOverlay@NW4:
-		Sequence: scaffnw4
-		Palette: mwcivilian
-		Offset: 212,-212,0
-		RequiresCondition: Construct >= 13 && Construct < 17 && (archers || djinn || static) && !archersfinished && !djinnfinished && !staticfinished && !build-incomplete
-	WithIdleOverlay@SE4:
-		Sequence: scaffse4
-		Palette: mwcivilian
-		Offset: -212,212,0
-		RequiresCondition: Construct >= 13 && Construct < 17 && (archers || djinn || static) && !archersfinished && !djinnfinished && !staticfinished && !build-incomplete
-	WithIdleOverlay@NW5:
-		Sequence: scaffnw5
-		Palette: mwcivilian
-		Offset: 212,-212,0
-		RequiresCondition: Construct >= 17 && Construct < 21 && (archers || djinn || static) && !archersfinished && !djinnfinished && !staticfinished && !build-incomplete
-	WithIdleOverlay@SE5:
-		Sequence: scaffse5
-		Palette: mwcivilian
-		Offset: -212,212,0
-		RequiresCondition: Construct >= 17 && Construct < 21 && (archers || djinn || static) && !archersfinished && !djinnfinished && !staticfinished && !build-incomplete
-	WithIdleOverlay@NW6:
-		Sequence: scaffnw6
-		Palette: mwcivilian
-		Offset: 212,-212,0
-		RequiresCondition: Construct >= 21 && (archers || djinn || static) && !archersfinished && !djinnfinished && !staticfinished && !build-incomplete
-	WithIdleOverlay@SE6:
-		Sequence: scaffse6
-		Palette: mwcivilian
-		Offset: -212,212,0
-		RequiresCondition: Construct >= 21 && (archers || djinn || static) && !archersfinished && !djinnfinished && !staticfinished && !build-incomplete
 	Targetable@CombatRole:
-		TargetTypes: Defenses	
-	AddConditionEvery@Constructstatic:
-		AddCondition: Construct
-		Delay: 25	
-		RequiresCondition: Construct < 20 && archers && !build-incomplete
-	AddConditionEvery@Constructdjin:
-		AddCondition: Construct
-		Delay: 25	
-		RequiresCondition: Construct < 50 && djinn && !build-incomplete
-	AddConditionEvery@Constructtower:
-		AddCondition: Construct
-		Delay: 25	
-		RequiresCondition: Construct < 30 && static && !build-incomplete
-	ExternalCondition@placeholder:  # Anti error placeholder
-		Condition: Construct
-		TotalCap: 50
-	ExternalCondition@placeholderarchersOverlay:  # Anti error placeholder
-		Condition: archersOverlay
-		TotalCap: 50
-	ExternalCondition@placeholderdjinnOverlay:  # Anti error placeholder
-		Condition: djinnOverlay
-		TotalCap: 50
-	ExternalCondition@placeholderstaticOverlay:  # Anti error placeholder
-		Condition: staticOverlay
-		TotalCap: 50
-	ConstructionProgress@Constructstatic:
-		FullCapacity: 25
-		ConstructionCondition: archersOverlay
-		RequiresCondition: archersOverlay < 20 && archers && !build-incomplete
-		YOffset: 0
-		XOffset: 5
-	ConstructionProgress@Constructdjin:
-		FullCapacity: 50
-		ConstructionCondition: djinnOverlay
-		RequiresCondition: djinnOverlay < 50 && djinn && !build-incomplete
-		YOffset: 0
-		XOffset: 5
-	ConstructionProgress@Constructtower:
-		FullCapacity: 30
-		ConstructionCondition: staticOverlay
-		RequiresCondition: staticOverlay < 30 && static && !build-incomplete
-		YOffset: 0
-		XOffset: 5
-	AddConditionEvery@ConstructstaticOverlay:
-		AddCondition: archersOverlay
-		Delay: 25	
-		RequiresCondition: archersOverlay < 20 && archers && !build-incomplete
-	AddConditionEvery@ConstructdjinOverlay:
-		AddCondition: djinnOverlay
-		Delay: 25	
-		RequiresCondition: djinnOverlay < 50 && djinn && !build-incomplete
-	AddConditionEvery@ConstructtowerOverlay:
-		AddCondition: staticOverlay
-		Delay: 25	
-		RequiresCondition: staticOverlay < 30 && static && !build-incomplete
+		TargetTypes: Defenses
+	Production:
+		Produces: TechGTW.sul
+		RequiresCondition: !build-incomplete
+	UpgradeProductionQueue@TechTower:
+		Type: TechGTW.sul
+		Factions: sul
+		Group: Upgrades
+		QueuedAudio: Building
+		ReadyAudio: ConstructionComplete
+		RequiresCondition: !build-incomplete
+		QueueLimit: 1
 SULPLUG1:
 	AlwaysVisible:
-	Interactable:
-	Building:
-		BuildSounds: brickconc.aud
-	KillsSelf:
-		RemoveInstead: true
+	Interactable:		
+	ConditionManager:
 	RenderSprites:
 	Tooltip:
-		Name: Extra Firepower Upgrade
-	Buildable:
+		Name: Extra Firepower Upgrade	
+	UpgradeBuildable:
 		Description: Upgrades the Guard Tower with 2 additional Archers.\n  Doubles the firepower\n  Strong vs Infantry\n\n
 		BuildPaletteOrder: 90
 		Prerequisites: vehicleproduction
-		Queue: MMilitary.SUL
-		BuildDuration: 25
-		BuildDurationModifier: 400
-		IconPalette: raicon
+		Queue: TechGTW.sul
+		BuildDuration: 800
+		BuildDurationModifier: 100
+		IconPalette: raicon	
+		ConditionWhileBuild: tower1build
+		ConditionOnFinish: archers
+		BuildType: Upgrade
+		TypeRequirements:
+			Upgrade: <1
 	Valued:
 		Cost: 800
-	Plug:
-		Type: sulgtw.archers
 SULPLUG3:
 	AlwaysVisible:
 	Interactable:
-	Building:
-		BuildSounds: brickconc.aud
-	KillsSelf:
-		RemoveInstead: true
+	ConditionManager:
 	RenderSprites:
 	Tooltip:
 		Name: Mystical Firepower Upgrade
-	Buildable:
+	UpgradeBuildable:
 		Description: Upgrades the Guard Tower with 1 Djinn.\n Attacks ground units only!\n  Strong vs Everything\n\n
 		BuildPaletteOrder: 80
 		Prerequisites: sultow2, sultow4
-		Queue: MMilitary.SUL
-		BuildDuration: 25
-		BuildDurationModifier: 700
+		Queue: TechGTW.sul
+		BuildDuration: 1500
+		BuildDurationModifier: 100
 		IconPalette: raicon
+		ConditionWhileBuild: tower1build
+		ConditionOnFinish: djinn
+		BuildType: Upgrade
+		TypeRequirements:
+			Upgrade: <1
 	Valued:
 		Cost: 1500
-	Plug:
-		Type: sulgtw.djinn
 SULPLUG4:
 	AlwaysVisible:
 	Interactable:
-	Building:
-		BuildSounds: brickconc.aud
-	KillsSelf:
-		RemoveInstead: true
+	ConditionManager:
 	RenderSprites:
 	Tooltip:
 		Name: Advanced Defense Upgrade
-	Buildable:
+	UpgradeBuildable:
 		Description: Upgrades the Guard Tower with javelin defense.\n  Deals high damage to Cavalry\n  Strong vs Cavalry\n  Weak vs Infantry\n  Increases base hitpoints by 30%\n  Replaces arrows with javelines\n  Can attack Aircraft
 		BuildPaletteOrder: 70
 		Prerequisites: vehicleproduction, sultow3
-		Queue: MMilitary.SUL
-		BuildDuration: 400
-		BuildDurationModifier: 40
+		Queue: TechGTW.sul
+		BuildDuration: 800
+		BuildDurationModifier: 100
 		IconPalette: raicon
+		ConditionWhileBuild: tower1build
+		ConditionOnFinish: static
+		BuildType: Upgrade
+		TypeRequirements:
+			Upgrade: <1
 	Valued:
 		Cost: 800
-	Plug:
-		Type: sulgtw.static
 #Buildings		
 SULLODGE:
 	Inherits: ^MWBaseBuilding
@@ -809,18 +696,18 @@ SULCASTLE:
 		BuildDuration: 600
 	Production:
 		Produces: TechTower.sul
-	ProductionQueue@TechTower:
+		RequiresCondition: !build-incomplete
+	UpgradeProductionQueue@TechTower:
 		Type: TechTower.sul
 		Factions: sul
-		Group: Building
+		Group: Upgrades
 		QueuedAudio: Building
 		ReadyAudio: ConstructionComplete
 		RequiresCondition: !build-incomplete
+		QueueLimit: 4
 	Exit@1:
 		SpawnOffset: -426,85,0
 		ExitCell: 0,1
-	ProductionBar:
-		ProductionType: TechTower.sul
 	SelfConstructing: 
 		Condition: build-incomplete
 		Steps: 6
@@ -962,20 +849,79 @@ SULTOW1:
 	RenderSprites:
 		PlayerPalette: sultanplayer
 	Valued:
-		Cost: 900
+		Cost: 450
 	Tooltip:
 		Name: Tower of Knowledge
 	ProvidesPrerequisite@buildingname:
 		RequiresPrerequisites: sulcaste
-	Buildable:
+	UpgradeBuildable:
 		IconPalette: raicon
 		BuildPaletteOrder: 40
-		Prerequisites: anyhq
+		Prerequisites: barracks
 		Description: Grants access to advanced tech at the barracks.\n  Allows Supportpower I \n  Heals surrounding units.\n\n
 		Queue: TechTower.sul
 		BuildLimit: 1
-		BuildDuration: 1200
+		BuildDuration: 600
+		ConditionWhileBuild: tower1build
+		ConditionOnFinish: Tower1build
+		BuildType: tower1
+		TypeRequirements:
+			tower1: <1
 SULTOW2:
+	AlwaysVisible:
+	Interactable:
+	ConditionManager:
+	RenderSprites:
+		PlayerPalette: sultanplayer
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Tower of Mystical Teachings
+	ProvidesPrerequisite@buildingname:
+		RequiresPrerequisites: sulcaste
+	UpgradeBuildable:
+		IconPalette: raicon
+		BuildPaletteOrder: 50
+		Prerequisites: vehicleproduction
+		Description: Grants access to advanced tech at the School of Mystic Teachings.\n\n\n\n
+		Queue: TechTower.sul
+		BuildLimit: 1
+		BuildDuration: 700
+		ConditionWhileBuild: tower2build
+		ConditionOnFinish: Tower2build
+		RequiresConditionToBuild: !Tower2build
+		BuildType: tower2
+		TypeRequirements:
+			tower2: <1
+SULTOW3:
+	AlwaysVisible:
+	Interactable:
+	ConditionManager:
+	RenderSprites:
+		PlayerPalette: sultanplayer
+	Valued:
+		Cost: 550
+	Tooltip:
+		Name: Tower of Progress
+	ProvidesPrerequisite@buildingname:
+		RequiresPrerequisites: sulcaste
+	ProvidesPrerequisite:
+		Prerequisite: anyhq
+	UpgradeBuildable:
+		IconPalette: raicon
+		BuildPaletteOrder: 60
+		Prerequisites: anyworkshop
+		Description: Grants access to advanced tech and support powers at the Siege Workshop.\n\n\n\n
+		Queue: TechTower.sul
+		BuildLimit: 1
+		BuildDuration: 650
+		ConditionWhileBuild: tower3build
+		ConditionOnFinish: Tower3build
+		RequiresConditionToBuild: !Tower3build
+		BuildType: tower3
+		TypeRequirements:
+			tower3: <1
+SULTOW4:
 	AlwaysVisible:
 	Interactable:
 	ConditionManager:
@@ -984,48 +930,6 @@ SULTOW2:
 	Valued:
 		Cost: 1000
 	Tooltip:
-		Name: Tower of Mystical Teachings
-	ProvidesPrerequisite@buildingname:
-		RequiresPrerequisites: sulcaste
-	Buildable:
-		IconPalette: raicon
-		BuildPaletteOrder: 50
-		Prerequisites: anyhq
-		Description: Grants access to advanced tech at the School of Mystic Teachings.\n\n\n\n
-		Queue: TechTower.sul
-		BuildLimit: 1
-		BuildDuration: 1400
-SULTOW3:
-	AlwaysVisible:
-	Interactable:
-	ConditionManager:
-	RenderSprites:
-		PlayerPalette: sultanplayer
-	Valued:
-		Cost: 1100
-	Tooltip:
-		Name: Tower of Progress
-	ProvidesPrerequisite@buildingname:
-		RequiresPrerequisites: sulcaste
-	ProvidesPrerequisite:
-		Prerequisite: anyhq
-	Buildable:
-		IconPalette: raicon
-		BuildPaletteOrder: 60
-		Prerequisites: anyhq
-		Description: Grants access to advanced tech and support powers at the Siege Workshop.\n\n\n\n
-		Queue: TechTower.sul
-		BuildLimit: 1
-		BuildDuration: 1300
-SULTOW4:
-	AlwaysVisible:
-	Interactable:
-	ConditionManager:
-	RenderSprites:
-		PlayerPalette: sultanplayer
-	Valued:
-		Cost: 2000
-	Tooltip:
 		Name: Tower of Annihilation
 	ProvidesPrerequisite@buildingname:
 		RequiresPrerequisites: sulcaste
@@ -1033,14 +937,20 @@ SULTOW4:
 		Prerequisite: Level4
 	ProvidesPrerequisite@anycastle:
 		Prerequisite: anycastle
-	Buildable:
+	UpgradeBuildable:
 		IconPalette: raicon
 		BuildPaletteOrder: 70
 		Prerequisites: anyhq, sultow1, sultow2, sultow3
 		Description: Grants access to superb tech and super weapons.\n\n\n\n
 		Queue: TechTower.sul
 		BuildLimit: 1
-		BuildDuration: 2500
+		BuildDuration: 1250
+		ConditionWhileBuild: tower4build
+		ConditionOnFinish: Tower4build
+		RequiresConditionToBuild: !Tower4build
+		BuildType: tower4
+		TypeRequirements:
+			tower4: <1
 SULMILL:
 	Inherits: ^MWBaseBuilding
 	Inherits@Hitshape: ^2x2Shape

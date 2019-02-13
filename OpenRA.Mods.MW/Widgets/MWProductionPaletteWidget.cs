@@ -28,6 +28,7 @@ namespace OpenRA.Mods.MW.Widgets
 	public class MWProductionPaletteWidget : Widget
 	{
 		public enum ReadyTextStyleOptions { Solid, AlternatingColor, Blinking }
+
 		public readonly ReadyTextStyleOptions ReadyTextStyle = ReadyTextStyleOptions.AlternatingColor;
 		public readonly Color ReadyTextAltColor = Color.Gold;
 		public readonly int Columns = 3;
@@ -464,11 +465,11 @@ namespace OpenRA.Mods.MW.Widgets
 			foreach (var icon in icons.Values)
 			{
 				var total = icon.Queued.Count;
-				
+
 				var queuedItems = icon.ProductionQueue as SelfConstructingProductionQueue;
 				if (queuedItems != null)
 					total = queuedItems.AllActuallyQueued().Count();
-				
+
 				if (total > 0 && queuedItems == null)
 				{
 					var first = icon.Queued[0];
@@ -498,9 +499,9 @@ namespace OpenRA.Mods.MW.Widgets
 							icon.Pos + queuedOffset,
 							Color.White, Color.Black, 1);
 				}
-				
+
 				if (total > 0 && queuedItems != null)
-					overlayFont.DrawTextWithContrast((total).ToString(),
+					overlayFont.DrawTextWithContrast(total.ToString(),
 						icon.Pos + queuedOffset,
 						Color.White, Color.Black, 1);
 			}

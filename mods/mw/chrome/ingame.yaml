@@ -348,6 +348,8 @@ Container@PLAYER_WIDGETS:
 							Align: Left
 							Font: Bold
 							Text: {0}
+		ActorProductionPaletteManager@ACTOR_PRODUCTION_PALETTE:
+			Background: panel-black
 		Background@COMMAND_BAR:
 			Logic: CommandBarLogic
 			X: 5

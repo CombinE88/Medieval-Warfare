@@ -34,7 +34,7 @@ namespace OpenRA.Mods.MW.Widgets.Logic.Ingame
 				else
 					tabs.QueueGroup = button.ProductionGroup;
 
-				if(!button.InstantProductionType)
+				if (!button.InstantProductionType)
 					tabs.PickUpCompletedBuilding();
 			};
 

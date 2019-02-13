@@ -30,7 +30,7 @@ namespace OpenRA.Mods.MW.Traits.BuildingTraits
 		[GrantedConditionReference]
 		[Desc("The condition to grant to self while the make animation is playing.")]
 		public readonly string Condition = null;
-		
+
 		[Desc("Apply to sprite bodies with these names.")]
 		public readonly string[] BodyNames = { "body" };
 
@@ -93,9 +93,10 @@ namespace OpenRA.Mods.MW.Traits.BuildingTraits
 				{
 					var selfConstructingInfo = selfConstructings.FirstOrDefault(c => c.IsActive());
 					if (selfConstructingInfo != null)
-						wsb.PlayCustomAnimationRepeating(self,
-							selfConstructingInfo.Info.Sequence + Math.Min(sellTimer * selfConstructingInfo.Info.Steps / sellTimerTotal,
-								selfConstructingInfo.Info.Steps - 1));
+					{
+						var math = Math.Min(sellTimer * selfConstructingInfo.Info.Steps / sellTimerTotal, selfConstructingInfo.Info.Steps - 1);
+						wsb.PlayCustomAnimationRepeating(self, selfConstructingInfo.Info.Sequence + math);
+					}
 				}
 			}
 		}

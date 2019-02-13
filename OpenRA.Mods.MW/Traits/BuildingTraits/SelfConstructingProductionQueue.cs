@@ -40,7 +40,7 @@ namespace OpenRA.Mods.MW.Traits.BuildingTraits
 			playerResources = playerActor.TraitOrDefault<PlayerResources>();
 			this.info = info;
 		}
-		
+
 		void INotifyOwnerChanged.OnOwnerChanged(Actor self, Player oldOwner, Player newOwner)
 		{
 			ClearQueue();
@@ -103,7 +103,7 @@ namespace OpenRA.Mods.MW.Traits.BuildingTraits
 					maxTicker = Queue.Count * 3;
 					for (int i = 0; i < Queue.Count; i++)
 					{
-						int speed = (int) Math.Round(i + 1.0 * (Queue.Count * info.SplitFractal / 100.0));
+						int speed = (int)Math.Round(i + 1.0 * (Queue.Count * info.SplitFractal / 100.0));
 						speed = Math.Max(speed, 1);
 						if (currentTicker % speed == 0)
 							Queue[i].Tick(playerResources);
@@ -121,7 +121,7 @@ namespace OpenRA.Mods.MW.Traits.BuildingTraits
 			// Auto finish done items, as they are already in the world in our case!
 			Queue.FindAll(i => i.Done).ForEach(i => Queue.Remove(i));
 		}
-		
+
 		public virtual IEnumerable<ProductionItem> AllActuallyQueued()
 		{
 			return Queue;

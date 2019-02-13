@@ -59,7 +59,7 @@ namespace OpenRA.Mods.MW.Activities
 
             // Prevent deployment in bogus locations
             var transforms = self.TraitOrDefault<Transforms>();
-            if ((transforms != null && !transforms.CanDeploy()))
+            if (transforms != null && !transforms.CanDeploy())
             {
                 Cancel(self, true);
                 return NextActivity;
