@@ -41,6 +41,7 @@ SULGTW:
 		Palette: bibs
 		HasMinibib: Yes
 	WithIdleOverlay:
+		RequiresCondition: !build-incomplete
 	Armament@1:
 		Weapon: bownarrowtower
 		LocalOffset: 0,0,427
@@ -726,37 +727,33 @@ SULCASTLE:
 		Weapons: LargeWood1, LargeWood1, LargeStone1, LargeStone1
 		Pieces: 1, 2
 		Range: 1c0, 5c0
-	GrantConditionOnPrerequisite@Tower1:
-		Condition: Tower1build
-		Prerequisites: sultow1
-		RequiresCondition: !build-incomplete
+	ProvidesPrerequisite@Tower1build:
+		Prerequisite: sultow1
+		RequiresCondition: !build-incomplete && Tower1build
 	WithIdleOverlay@Tower1:
 		StartSequence: tower1make
 		Sequence: tower1
 		Offset: 1024, 1024, 0
 		RequiresCondition: Tower1build && !build-incomplete
-	GrantConditionOnPrerequisite@Tower2:
-		Condition: Tower2build
-		Prerequisites: sultow2
-		RequiresCondition: !build-incomplete
+	ProvidesPrerequisite@Tower2build:
+		Prerequisite: sultow2
+		RequiresCondition: !build-incomplete && Tower2build
 	WithIdleOverlay@Tower2:
 		StartSequence: tower2make
 		Sequence: tower2
 		Offset: -1124, 1024, 0
 		RequiresCondition: Tower2build && !build-incomplete
-	GrantConditionOnPrerequisite@Tower3:
-		Condition: Tower3build
-		Prerequisites: sultow3
-		RequiresCondition: !build-incomplete
+	ProvidesPrerequisite@Tower3build:
+		Prerequisite: sultow3
+		RequiresCondition: !build-incomplete && Tower3build
 	WithIdleOverlay@Tower3:
 		StartSequence: tower3make
 		Sequence: tower3
 		Offset: -1124, -1024, 0
 		RequiresCondition: Tower3build && !build-incomplete
-	GrantConditionOnPrerequisite@Tower4:
-		Condition: Tower4build
-		Prerequisites: sultow4
-		RequiresCondition: !build-incomplete
+	ProvidesPrerequisite@Tower4build:
+		Prerequisite: sultow4
+		RequiresCondition: !build-incomplete && Tower4build
 	WithIdleOverlay@Tower4:
 		StartSequence: tower4make
 		Sequence: tower4
@@ -889,7 +886,6 @@ SULTOW2:
 		BuildDuration: 700
 		ConditionWhileBuild: tower2build
 		ConditionOnFinish: Tower2build
-		RequiresConditionToBuild: !Tower2build
 		BuildType: tower2
 		TypeRequirements:
 			tower2: <1
@@ -917,7 +913,6 @@ SULTOW3:
 		BuildDuration: 650
 		ConditionWhileBuild: tower3build
 		ConditionOnFinish: Tower3build
-		RequiresConditionToBuild: !Tower3build
 		BuildType: tower3
 		TypeRequirements:
 			tower3: <1

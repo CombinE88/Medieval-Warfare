@@ -503,7 +503,7 @@ namespace OpenRA.Mods.MW.Widgets.ActorProductionPalette
             var displayPosition = worldRenderer.Viewport.WorldToViewPx(worldRenderer.ScreenPxPosition(factoryActor.CenterPosition));
 
             Bounds.X = displayPosition.X + (int)Math.Round(factoryActor.Trait<IDecorationBounds>()
-                                                               .DecorationBounds(factoryActor, worldRenderer).Width * worldRenderer.Viewport.Zoom) - Bounds.Width / 2;
+                                                               .DecorationBounds(factoryActor, worldRenderer).Width * 1 / worldRenderer.Viewport.Zoom);
             Bounds.Y = displayPosition.Y - Bounds.Height / 2;
         }
 
