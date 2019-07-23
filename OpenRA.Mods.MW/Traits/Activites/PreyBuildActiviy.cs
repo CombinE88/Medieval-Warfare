@@ -17,7 +17,7 @@ namespace OpenRA.Mods.MW.Activities
 
         private Actor dockactor;
         private bool lockfacing;
-        bool playanim;
+        bool canceled;
         private bool endqueueonce;
         private Dock d;
 
@@ -36,7 +36,7 @@ namespace OpenRA.Mods.MW.Activities
             wsb = self.TraitsImplementing<WithSpriteBody>().Single(w => w.Info.Name == info.Body);
             dockactor = dockact;
             lockfacing = facingDock;
-            playanim = true;
+            canceled = true;
             this.d = d;
 
             ticks = self.Info.TraitInfo<AcolytePreyBuildInfo>().Buildinterval;
@@ -56,7 +56,7 @@ namespace OpenRA.Mods.MW.Activities
                 ////    self.Trait<WithHarvestAnimation>().ChangeNot = false;
 
                 wsb.DefaultAnimation.ReplaceAnim(wsb.Info.Sequence);
-                playanim = true;
+                canceled = true;
                 if (condtion != null && token != ConditionManager.InvalidConditionToken)
                 {
                     token = conditionManager.RevokeCondition(self, token);
@@ -87,9 +87,9 @@ namespace OpenRA.Mods.MW.Activities
                 return this;
             }
 
-            if (playanim)
+            if (canceled)
             {
-                playanim = false;
+                canceled = false;
                 endqueueonce = true;
                 QueueChild(self.Trait<IMove>().VisualMove(self, self.CenterPosition, d.CenterPosition));
                 QueueChild(new CallFunc(() =>
@@ -120,14 +120,14 @@ namespace OpenRA.Mods.MW.Activities
 
         void BuildPrey(Actor self)
         {
-            if (undeadBuilder.Hassummoningcount >= undeadBuilder.Info.SummoningTime)
+            if (undeadBuilder.HasSummoningCount >= undeadBuilder.Info.SummoningTime)
                 Cancel(self, true);
             else if (undeadBuilder != null && --ticks <= 0)
             {
                 ticks = self.Info.TraitInfo<AcolytePreyBuildInfo>().Buildinterval;
                 if (pr.TakeCash(undeadBuilder.PayPerTick, true))
                 {
-                    undeadBuilder.Hassummoningcount += 1;
+                    undeadBuilder.HasSummoningCount += 1;
                     var floattest = undeadBuilder.PayPerTick.ToString();
                     floattest = "- " + floattest + " Essence";
                     if (self.Owner.IsAlliedWith(self.World.RenderPlayer))

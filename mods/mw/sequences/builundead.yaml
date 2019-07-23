@@ -20,6 +20,8 @@
 	circlel: ptimerl
 		Length: 21
 		ZOffset: -2024
+	empty: ironore4
+		Start: 9
 sppool: 
 	Inherits: ^pentagram
 	idle:
@@ -132,16 +134,19 @@ tomb:
 		AddExtension: False
 dedref: 
 	Inherits: ^pentagram
-	idle:
+	idle: dedref_n
+		Length: *
+		Tick: 100
 		Offset: 0,-12
-	damaged-idle:
-		Start: 1
+	damaged-idle: dedref_n_d
+		Length: *
+		Tick: 100
 		Offset: 0,-12
 	dead:
 		Start: 2
 		Tick: 800
 		Offset: 0,-12
-	make: dedrefmake
+	make: dedref_n_m
 		Length: *
 		Tick: 60
 		Offset: 0,-12
@@ -149,7 +154,7 @@ dedref:
 		Frames: 4,5,10,11
 		Length: 4
 		AddExtension: false
-	icon: dedreficon.shp
+	icon: dedref_n_icon.shp
 		AddExtension: False
 seal1:
 	icon: seal1.shp

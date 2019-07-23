@@ -28,7 +28,6 @@ namespace OpenRA.Mods.MW.Activities
         readonly HashSet<string> preyBuildings;
 
         Actor target;
-        public bool SmartPrey;
 
         public PreyBuild(Actor self, Actor who)
         {
@@ -74,7 +73,6 @@ namespace OpenRA.Mods.MW.Activities
 
             target.Trait<DockManager>().ReserveDock(target, self, this);
             self.SetTargetLine(Target.FromCell(self.World, self.World.Map.CellContaining(target.CenterPosition)), Color.Green);
-            SmartPrey = true;
 
             return NextActivity;
         }
@@ -97,21 +95,6 @@ namespace OpenRA.Mods.MW.Activities
         Activity IDockActivity.ActivitiesOnDockFail(Actor client)
         {
             return null;
-        }
-
-        public Activity ApproachDockActivities(Actor host, Actor client, Dock dock)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Activity DockActivities(Actor host, Actor client, Dock dock)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Activity ActivitiesAfterDockDone(Actor host, Actor client, Dock dock)
-        {
-            throw new NotImplementedException();
         }
     }
 }

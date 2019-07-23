@@ -557,12 +557,12 @@ DEDREF.penta:
 	Valued:
 		Cost: 0
 	Tooltip:
-		Name: Summoning (Orepolis)
+		Name: Summoning (Sacrifice Temple)
 	Buildable:
 		IconPalette: raicon
 		BuildPaletteOrder: 110
 		Prerequisites: sppool
-		Description: Summons a Orepolis.\n  Orepolis Convert resource patches into harvestable areas.\n Spawns 2 Acolytes wich will then automaticly harvest resources nearby.\n 
+		Description: Summons a Sacrifice Temple.\n  Sacrifice Temple Convert resources into essence.\n Spawns 2 Collector wich will then automaticly harvest resources nearby.\n 
 		Queue: MResources.ded
 		BuildDuration: 10
 	Health:
@@ -985,7 +985,7 @@ DEDREF:
 	Valued:
 		Cost: 1600
 	Tooltip:
-		Name: Orepolis
+		Name: Sacrifice Temple
 	Building:
 		Footprint: xx xx ==
 		Dimensions: 2,3
@@ -1014,13 +1014,13 @@ DEDREF:
 		Angle: 155
 		Transparency: 140
 	WithFreeSpawnableActor@1:
-		SpawnActor: preycolyte
+		SpawnActor: rescolyte
 		Offset: 384,896, 0
 		MoveOffset: 1,2
 		RespawnTime: 750
 		FindRadius: 100
 	WithFreeSpawnableActor@2:
-		SpawnActor: preycolyte
+		SpawnActor: rescolyte
 		Offset: 384,896, 0
 		MoveOffset: 1,2
 		RespawnTime: 750

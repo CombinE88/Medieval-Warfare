@@ -23,7 +23,7 @@ PREYCOLYTE:
 	Buildable:
 		IconPalette: raicon
 		BuildPaletteOrder: 10
-		Description: \n   Can harvest Crops and Corruption, turning those into essence at ac Orepolis\n  Can pray at pentagrams to and spend essence to summon structures.
+		Description: \n   Can pray at pentagrams and spend essence to summon structures faster.
 		Queue: MBuilding.ded
 		BuildDuration: 450 
 	Tooltip:
@@ -41,7 +41,6 @@ PREYCOLYTE:
 		PlayerPalette: raplayer
 	WithFacingSpriteBody:
 		Sequence: idle
-	WithDockingAnimation:
 	-WithInfantryBody:
 	WithMoveAnimation:
 		MoveSequence: run
@@ -83,23 +82,61 @@ PREYCOLYTE:
 		Volume: 3
 	Targetable@CombatRole:
 		TargetTypes: Light
-	# --- Added due to balanceability ---
+RESCOLYTE:
+	Inherits: ^Knight
+	Inherits@GetsPoisoned: ^GetsPoisoned
+	Inherits@CanTurnIntoScelett:  ^CanTurnIntoScelett
+	Inherits@ArcherDemo65: ^ArcherDemo65
+	Inherits@Healable: ^Healable
+	Inherits@SnakeStunnable: ^SnakeStunnable
+	Inherits@GrimReanimatable: ^GrimReanimatable
+	Inherits@Cursable: ^Cursed
+	BodyOrientation:
+		QuantizedFacings: 8
+	QuantizeFacingsFromSequence:
+		Sequence: stand
+	WithFacingSpriteBody:
+		Sequence: idle
+	WithHarvestAnimation:
+		HarvestSequence: harvest
+		PrefixByFullness: empty-, full-
+	WithDockingAnimation:
+	-WithInfantryBody:
+	WithMoveAnimation:
+		MoveSequence: run
+	Valued:
+		Cost: 375
+	Tooltip:
+		Name: Collector
+	Mobile:
+		Speed: 60
+		Locomotor: farmer
+	Health:
+		HP: 11000
+	RenderSprites:
+		Image: rescolyte
+		PlayerPalette: raplayer
+	AttackFrontal:
+	Armor:
+		Type: Heavy
 	Harvester:
 		DeliveryBuildings: dedref
-		Resources: Crops, Grains, Wood, Goods, Lumber, Corn, Corruption
-		PipCount: 2
-		Capacity: 6
-		BaleLoadDelay: 20
-		BaleUnloadDelay: 5
+		Resources: Crops, Grains, Wood, Goods, Lumber, Corn, Iron, Gold
+		PipCount: 4
+		Capacity: 20
+		BaleLoadDelay: 10
+		BaleUnloadDelay: 15
 		SearchFromProcRadius: 25
 		SearchFromOrderRadius: 15
 		MaxUnloadQueue: 10
-	WithHarvestOverlay:
-		Sequence: harvover
-		Palette: Soulalpha
-	WithDockingAnimation:
-	WithHarvestAnimation:
-		HarvestSequence: harvest
+	Selectable:
+		Bounds: 14,26,0,-6
+		Priority: 7
+	SelectionDecorations:
+	-Crushable:
+	Voiced:
+		VoiceSet: AcolyteVoice
+		Volume: 3
 DEADROSS:
 	Inherits: ^Cavalry
 	Inherits@AUTOTARGET: ^AutoTargetGround
@@ -557,7 +594,6 @@ ACOLYTEC:
 		PlayerPalette: raplayer
 	WithFacingSpriteBody:
 		Sequence: idle
-	WithDockingAnimation:
 	-WithInfantryBody:
 	WithMoveAnimation:
 		MoveSequence: run
@@ -570,7 +606,7 @@ ACOLYTEC:
 	Armor:
 		Type: Leather
 	Buildable:
-		Description: \n   Can harvest Iron, Gold and Corruption, turning those into essence at ac Orepolis\n  Strong vs Infantry and cavalry\n  Can attack Aircraft
+		Description: \n   Strong vs Infantry and cavalry\n  Can attack Aircraft
 		IconPalette: raicon
 		Prerequisites: libra
 		BuildPaletteOrder: 10
@@ -582,22 +618,6 @@ ACOLYTEC:
 		TargetTypes: Ranged
 	Selectable:
 	# --- Added due to balanceability ---
-	Harvester:
-		DeliveryBuildings: dedref
-		Resources: Iron, Gold, Corruption
-		PipCount: 2
-		Capacity: 10
-		BaleLoadDelay: 20
-		BaleUnloadDelay: 5
-		SearchFromProcRadius: 25
-		SearchFromOrderRadius: 15
-		MaxUnloadQueue: 10
-	WithHarvestOverlay:
-		Sequence: harvover
-		Palette: Soulalpha
-	WithDockingAnimation:
-	WithHarvestAnimation:
-		HarvestSequence: harvest
 VAMP:
 	Inherits: ^Knight
 	Inherits@AUTOTARGET: ^AutoTargetGround

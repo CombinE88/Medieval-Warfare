@@ -1,3 +1,69 @@
+rescolyte:
+	stunned: sulm4
+		ZOffset: 125
+		Start: 312
+		Length: 2
+		Tick: 200
+	idle: 
+		Start: 178
+		Facings: 8
+	stand: 
+		Start: 178
+		Facings: 8
+	run: 
+		Start: 0
+		Length: 8
+		Facings: 8
+		Tick: 100
+	harvest: 
+		Start: 66
+		Length: 14
+		Facings: 8
+		Tick: 100
+	dock: 
+		Start: 288
+		Length: 14
+		Tick: 100
+	dock-loop: 
+		Start: 302
+		Length: 1
+		Tick: 100
+	idle1: 
+		Tick: 100
+		Start: 246
+		Length: 21
+	idle2: 
+		Tick: 100
+		Start: 267
+		Length: 21 
+	die1: 
+		Start: 187
+		Length: 16
+		Tick: 80
+	# large hit
+	die2: splatterdead
+		Length: *
+		Tick: 80
+	# poision
+	die3: 
+		Start: 203
+		Length: 15
+		Tick: 80
+	# ballista
+	die4: 
+		Start: 219
+		Length: 11
+		Tick: 80
+	die-crushed: newe1rot
+		Start: 16
+		Length: 4
+		Tick: 1600
+		ZOffset: -511
+	die5: burningman
+		Length: *
+		Tick: 80
+	icon: acolyteicon.shp
+		AddExtension: False
 acolyte:
 	stunned: sulm4
 		ZOffset: 125

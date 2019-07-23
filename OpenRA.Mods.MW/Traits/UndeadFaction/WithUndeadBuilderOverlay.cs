@@ -85,7 +85,7 @@ namespace OpenRA.Mods.MW.Traits.Render
 
         private AnimationWithOffset anim;
         private int animationlength;
-        private int anomationframe;
+        private int animationFrame;
         private UndeadBuilder uBuilder;
 
         public WithUndeadBuilderOverlay(Actor self, WithUndeadBuilderOverlayInfo info)
@@ -96,14 +96,12 @@ namespace OpenRA.Mods.MW.Traits.Render
 
             uBuilder = self.TraitsImplementing<UndeadBuilder>().FirstOrDefault();
 
-            buildComplete = !self.Info.HasTraitInfo<BuildingInfo>(); // always render instantly for units
-
             overlay = new Animation(self.World, rs.GetImage(self), () => IsTraitPaused || !buildComplete);
-            overlay.PlayFetchIndex(info.Sequence, () => anomationframe);
+            overlay.PlayFetchIndex(info.Sequence, () => animationFrame);
 
             anim = new AnimationWithOffset(overlay,
                 () => body.LocalToWorld(info.Offset.Rotate(body.QuantizeOrientation(self, self.Orientation))),
-                () => IsTraitDisabled || !buildComplete,
+                () => IsTraitDisabled || uBuilder.HasSummoningCount >= uBuilder.Info.SummoningTime,
                 p => RenderUtils.ZOffsetFromCenter(self, p, 1));
 
             rs.Add(anim, info.Palette, info.IsPlayerPalette);
@@ -140,8 +138,9 @@ namespace OpenRA.Mods.MW.Traits.Render
 
         void ITick.Tick(Actor self)
         {
-            float bruch = uBuilder.Hassummoningcount * 100 / uBuilder.Info.SummoningTime;
-            anomationframe = (int)(animationlength * bruch) / 100;
+            float bruch = uBuilder.HasSummoningCount * 100 / uBuilder.Info.SummoningTime;
+            animationFrame = (int)(animationlength * bruch) / 100;
+            overlay.PlayFetchIndex(overlay.CurrentSequence.Name, () => animationFrame);
         }
     }
 }

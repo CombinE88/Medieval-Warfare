@@ -36,7 +36,10 @@ namespace OpenRA.Mods.MW.Warheads
                 ? new[] { target.Actor }
                 : firedBy.World.FindActorsInCircle(target.CenterPosition, ExtraScanRange)
                 .Where(a =>
-                    {
+                {
+                    if (a.IsDead || !a.IsInWorld)
+                        return false;
+                    
                         var activeShapes = a.TraitsImplementing<HitShape>().Where(Exts.IsTraitEnabled);
                         var directHit = activeShapes.Any(i => i.Info.Type.DistanceFromEdge(target.CenterPosition, a).LengthSquared <= Range.LengthSquared);
 
@@ -46,7 +49,8 @@ namespace OpenRA.Mods.MW.Warheads
                         }
 
                         return false;
-                    });
+                    })
+                .ToArray();
 
             if (actors.Any())
             {

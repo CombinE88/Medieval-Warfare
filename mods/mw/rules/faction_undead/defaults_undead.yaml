@@ -54,6 +54,10 @@
 	OwnerLostAction:
 		Action: Kill
 		DeathTypes: DefaultDeath
+	WithSpriteBody:
+		Sequence: empty
+	-ThrowsShrapnel@SMALL:
+
 ^Skeleton:  
 	Inherits: ^MedievalInfantry
 	Inherits@GainsExperience: ^GainsExperience
@@ -202,7 +206,6 @@
 		Palette: undead
 		PlayerPalette: undeadplayer
 	-WithDeathAnimation:
-	-WithSpriteBody:
 	Tooltip:
 		Name: Spawner
 	Building:
@@ -265,7 +268,6 @@
 		Palette: undead
 		PlayerPalette: undeadplayer
 	-WithDeathAnimation:
-	-WithSpriteBody:
 	Tooltip:
 		Name: Spawner
 	Building:
@@ -328,7 +330,6 @@
 		Palette: undead
 		PlayerPalette: undeadplayer
 	-WithDeathAnimation:
-	-WithSpriteBody:
 	Tooltip:
 		Name: Spawner
 	Building:

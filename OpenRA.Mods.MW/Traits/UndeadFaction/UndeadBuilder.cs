@@ -41,7 +41,7 @@ namespace OpenRA.Mods.MW.Traits
     public class UndeadBuilder : ITick
     {
         public UndeadBuilderInfo Info;
-        public int Hassummoningcount;
+        public int HasSummoningCount;
         private int decaycounter;
 
         public int PayPerTick;
@@ -62,14 +62,14 @@ namespace OpenRA.Mods.MW.Traits
             if (Info.SummoningDecay)
             {
                 decaycounter--;
-                if (decaycounter <= 0 & Hassummoningcount > 0)
+                if (decaycounter <= 0 & HasSummoningCount > 0)
                 {
-                    Hassummoningcount--;
+                    HasSummoningCount--;
                     decaycounter = Info.DecayTime;
                 }
             }
 
-            if (Hassummoningcount >= Info.SummoningTime)
+            if (HasSummoningCount >= Info.SummoningTime)
                 ReplaceSelf(self);
 
             devMode = self.Owner.PlayerActor.TraitOrDefault<DeveloperMode>();
@@ -88,7 +88,7 @@ namespace OpenRA.Mods.MW.Traits
                     selfBuildCounter = Info.SelfBuildDelay;
                     if (self.Owner.PlayerActor.Trait<PlayerResources>().TakeCash(PayPerTick, true))
                     {
-                        Hassummoningcount += 1;
+                        HasSummoningCount += 1;
                         var floattest = PayPerTick.ToString();
                         floattest = "- " + floattest + " Essence";
                         if (self.Owner.IsAlliedWith(self.World.RenderPlayer))
