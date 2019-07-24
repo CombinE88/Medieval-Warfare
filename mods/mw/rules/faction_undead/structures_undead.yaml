@@ -397,8 +397,8 @@ SPPOOL.penta:
 	Inherits: ^Mediumpenta
 	RenderSprites:
 		Image: sppool
-		Palette: undead
-		PlayerPalette: undeadalpha
+		Palette:
+		PlayerPalette: raplayer
 	Valued:
 		Cost: 0
 	Tooltip:
@@ -412,6 +412,7 @@ SPPOOL.penta:
 		SpawnOffset: 1,1
 		SummoningTime: 45
 		Cost: 300
+		Animations: step1, step2, step3, step4
 	Buildable:
 		IconPalette: raicon
 		BuildPaletteOrder: 100

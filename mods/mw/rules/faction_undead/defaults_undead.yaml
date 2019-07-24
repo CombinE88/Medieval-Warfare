@@ -1,5 +1,40 @@
+^UndeadBaseBuilding:
+	Inherits: ^Building
+	Building:
+		RequiresBaseProvider: true
+		BuildSounds: tentcloth.aud, brickconc.aud
+		TerrainTypes: Clear,Road
+	MustBeDestroyed:
+		RequiredForShortGame: true
+	RepairableBuilding:
+		RepairPercent: 40
+		RepairStep: 1000
+		PlayerExperience: 15
+	WithBuildingRepairDecoration:
+		Image: allyrepair
+		Sequence: repair
+		ReferencePoint: Center
+		Palette: raplayer
+		IsPlayerPalette: True
+	WithDeathAnimation:
+		DeathSequence: dead
+		UseDeathTypeSuffix: false
+	GivesBuildableArea:
+		AreaTypes: building
+		RequiresCondition: !build-incomplete
+	RequiresBuildableArea:
+		AreaTypes: building
+		Adjacent: 8
+	SpawnActorsOnSell:
+		ActorTypes: e1new,e1new,e1new,e1new
+	EngineerRepairable:
+	Sellable:
+	CaptureManager:
+	Capturable:
+		Types: building
+	#WithMakeAnimation:
 ^MWUndeadBuilding:
-	Inherits@1: ^BaseBuilding
+	Inherits@1: ^UndeadBaseBuilding
 	GivesBuildableArea:
 		AreaTypes: undeadbuilding
 	RequiresBuildableArea:
@@ -203,8 +238,7 @@
 	Armor:
 		Type: Concrete
 	RenderSprites:
-		Palette: undead
-		PlayerPalette: undeadplayer
+		PlayerPalette: raplayer
 	-WithDeathAnimation:
 	Tooltip:
 		Name: Spawner
@@ -227,10 +261,10 @@
 		Sequence: circlem
 		Palette: undeadalpha
 		IsPlayerPalette: True
-	WithIdleOverlay:
-		Sequence: pentagramm
-		Palette: undeadalpha
-		IsPlayerPalette: True
+	#WithIdleOverlay:
+	#	Sequence: pentagramm
+	#	Palette: undeadalpha
+	#	IsPlayerPalette: True
 	DockManager:
 		ExternalDocks: true
 		#DeadlockDetectionEnabled: false
@@ -414,7 +448,7 @@
 	SelectionDecorations:
 	MustBeDestroyed:
 		RequiredForShortGame: false
-	-DeconstructSellable:
+	-Sellable:
 	ThrowsShrapnel@SMALL:
 		Weapons: SmallStone1, SmallStone2, LargeStone1
 		Pieces: 2, 4
@@ -452,7 +486,7 @@
 	SelectionDecorations:
 	MustBeDestroyed:
 		RequiredForShortGame: false
-	-DeconstructSellable:
+	-Sellable:
 	ThrowsShrapnel@SMALL:
 		Weapons: SmallWood1, SmallWood2, SmallWood3
 	SelfHealing@Killsslef:

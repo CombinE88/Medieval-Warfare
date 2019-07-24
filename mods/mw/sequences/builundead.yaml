@@ -22,6 +22,78 @@
 		ZOffset: -2024
 	empty: ironore4
 		Start: 9
+ziggurat1:
+	idle: ziggurat1_n
+		Start: 25
+		Offset: 0,-24
+	damaged-idle: ziggurat1_n
+		Start: 26
+		Offset: 0,-24
+	dead: ziggurat1_n
+		Start: 27
+		Offset: 0,-24
+		Tick: 800
+	make: ziggurat1_n
+		Length: 25
+		Tick: 200
+		Offset: 0,-24
+	bib: buildingbibs.png
+		Frames: 0,1,2,3,6,7,8,9
+		Length: 8
+		AddExtension: false
+	icon: ziggurat1icon.shp
+		AddExtension: False
+ziggurat2:
+	idle: ziggurat2_n
+		Start: 60
+		Offset: 0,-24
+	damaged-idle: ziggurat2_n
+		Start: 61
+		Offset: 0,-24
+	dead: ziggurat2_n
+		Start: 62
+		Offset: 0,-24
+		Tick: 800
+	make: ziggurat2_n
+		Length: 61
+		Tick: 200
+		Offset: 0,-24
+	bib: buildingbibs.png
+		Frames: 0,1,2,3,6,7,8,9
+		Length: 8
+		AddExtension: false
+	icon: ziggurat2icon.shp
+		AddExtension: False	
+ziggurat3:
+	idle: ziggurat3_n
+		Start: 80
+		Length: 40
+		Tick: 100
+		Offset: 0,-24
+	active: ziggurat3_n
+		Start: 80
+		Length: 40
+		Tick: 100
+		Offset: 0,-24
+	damaged-idle: ziggurat3_n
+		Start: 122
+		Length: 40
+		Tick: 100
+		Offset: 0,-24
+	dead: ziggurat3_n
+		Start: 163
+		Offset: 0,-24
+		Tick: 800
+	make: ziggurat3_n
+		Length: 80
+		Tick: 200
+		Offset: 0,-24
+	bib: buildingbibs.png
+		Frames: 0,1,2,3,6,7,8,9
+		Length: 8
+		AddExtension: false
+	icon: ziggurat3icon.shp
+		AddExtension: False
 sppool: 
 	Inherits: ^pentagram
 	idle:
@@ -31,13 +103,49 @@ sppool:
 	dead:
 		Start: 39
 		Tick: 800
-	make: 
-		Length: 37
+	make: sppoolmake_n
+		Start: 41
+		Length: 25
 		Tick: 140
 	bib: buildingbibs.png
 		Frames: 4,5,10,11
 		Length: 4
 		AddExtension: false
+	step1: sppoolmake_n
+		Start: 10
+		Length: 1
+	step1-make: sppoolmake_n
+		Start: 0
+		Length: 10
+		Tick: 140
+	step2: sppoolmake_n
+		Start: 20
+		Length: 1
+	step2-make: sppoolmake_n
+		Start: 11
+		Length: 9
+		Tick: 140
+	step3: sppoolmake_n
+		Start: 30
+		Length: 1
+	step3-make: sppoolmake_n
+		Start: 21
+		Length: 9
+		Tick: 140
+	step4: sppoolmake_n
+		Start: 40
+		Length: 1
+	step4-make: sppoolmake_n
+		Start: 31
+		Length: 9
+		Tick: 140
+	step5: sppoolmake_n
+		Start: 67
+		Length: 1
+	step5-make: sppoolmake_n
+		Start: 41
+		Length: 25
+		Tick: 140
 	icon: sppoolicon.shp
 		AddExtension: False
 crypt: 

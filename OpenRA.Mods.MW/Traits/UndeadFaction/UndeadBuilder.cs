@@ -1,7 +1,10 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
+using OpenRA.Graphics;
 using OpenRA.Mods.Common;
 using OpenRA.Mods.Common.Traits;
+using OpenRA.Mods.Common.Traits.Render;
 using OpenRA.Mods.MW.Effects;
 using OpenRA.Primitives;
 using OpenRA.Traits;
@@ -9,9 +12,12 @@ using OpenRA.Traits;
 namespace OpenRA.Mods.MW.Traits
 {
     [Desc("Is Unit a Peasant (adds a count of 1 to the PlayerCivilisation).")]
-    public class UndeadBuilderInfo : ITraitInfo
+    public class UndeadBuilderInfo : ITraitInfo, IRulesetLoaded, Requires<WithSpriteBodyInfo>
     {
         public readonly string ReadyAudio = "ConstructionComplete";
+
+        [Desc("Name of the Animations shown while increasing the build. add '-make' to have the merge animation")]
+        public readonly string[] Animations = { };
 
         public readonly string SpawnActor = null;
 
@@ -35,7 +41,19 @@ namespace OpenRA.Mods.MW.Traits
 
         public readonly int SelfBuildDelay = 25;
 
-        public object Create(ActorInitializer init) { return new UndeadBuilder(this); }
+        [Desc("Which sprite body to modify.")] public readonly string Body = "body";
+
+        public object Create(ActorInitializer init)
+        {
+            return new UndeadBuilder(init, this);
+        }
+
+        public void RulesetLoaded(Ruleset rules, ActorInfo info)
+        {
+            var matches = info.TraitInfos<WithSpriteBodyInfo>().Count(w => w.Name == Body);
+            if (matches != 1)
+                throw new YamlException("WithAttackAnimation needs exactly one sprite body with matching name.");
+        }
     }
 
     public class UndeadBuilder : ITick
@@ -49,12 +67,17 @@ namespace OpenRA.Mods.MW.Traits
 
         private int selfBuildCounter;
 
-        public UndeadBuilder(UndeadBuilderInfo info)
+        private WithSpriteBody wsb;
+        private int currentAnimationFrame = -1;
+
+        public UndeadBuilder(ActorInitializer init, UndeadBuilderInfo info)
         {
             this.Info = info;
             decaycounter = info.DecayTime;
             PayPerTick = info.Cost / info.SummoningTime;
             selfBuildCounter = info.SelfBuildDelay;
+
+            wsb = init.Self.TraitsImplementing<WithSpriteBody>().Single(w => w.Info.Name == Info.Body);
         }
 
         void ITick.Tick(Actor self)
@@ -78,9 +101,6 @@ namespace OpenRA.Mods.MW.Traits
                 ReplaceSelf(self);
             }
 
-            if (!Info.Selfbuilds)
-                return;
-
             if (Info.Selfbuilds)
             {
                 if (selfBuildCounter-- <= 0)
@@ -88,7 +108,7 @@ namespace OpenRA.Mods.MW.Traits
                     selfBuildCounter = Info.SelfBuildDelay;
                     if (self.Owner.PlayerActor.Trait<PlayerResources>().TakeCash(PayPerTick, true))
                     {
-                        HasSummoningCount += 1;
+                        HasSummoningCount += +Math.Min(Info.SelfBuildSteps, Info.SummoningTime - HasSummoningCount);
                         var floattest = PayPerTick.ToString();
                         floattest = "- " + floattest + " Essence";
                         if (self.Owner.IsAlliedWith(self.World.RenderPlayer))
@@ -97,6 +117,19 @@ namespace OpenRA.Mods.MW.Traits
                     }
                 }
             }
+
+            var newFrameCounter = Info.Animations.Length * HasSummoningCount / Info.SummoningTime;
+
+            if (newFrameCounter == Info.Animations.Length)
+                return;
+
+            if (Info.Animations.Any() && newFrameCounter != currentAnimationFrame)
+            {
+                wsb.PlayCustomAnimation(self, Info.Animations[newFrameCounter] + "-make",
+                    () => { wsb.PlayCustomAnimationRepeating(self, Info.Animations[newFrameCounter]); });
+            }
+
+            currentAnimationFrame = newFrameCounter;
         }
 
         public void ReplaceSelf(Actor self)
