@@ -1,8 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.Drawing;
 using System.Linq;
 using OpenRA.Graphics;
 using OpenRA.Mods.Common;
+using OpenRA.Mods.Common.Effects;
 using OpenRA.Mods.Common.Traits;
 using OpenRA.Mods.Common.Traits.Render;
 using OpenRA.Mods.MW.Effects;
@@ -15,6 +18,10 @@ namespace OpenRA.Mods.MW.Traits
     public class UndeadBuilderInfo : ITraitInfo, IRulesetLoaded, Requires<WithSpriteBodyInfo>
     {
         public readonly string ReadyAudio = "ConstructionComplete";
+
+        public readonly string SpawnFlashAnimation = "spawnlightning";
+
+        public readonly string SpawnPaleete = "ra";
 
         [Desc("Name of the Animations shown while increasing the build. add '-make' to have the merge animation")]
         public readonly string[] Animations = { };
@@ -127,6 +134,16 @@ namespace OpenRA.Mods.MW.Traits
             {
                 wsb.PlayCustomAnimation(self, Info.Animations[newFrameCounter] + "-make",
                     () => { wsb.PlayCustomAnimationRepeating(self, Info.Animations[newFrameCounter]); });
+
+                if (newFrameCounter == 0)
+                    self.World.AddFrameEndTask(w =>
+                    {
+                        w.Add(new SpriteEffect(self.CenterPosition,
+                            self.World,
+                            Info.SpawnFlashAnimation,
+                            Info.SpawnFlashAnimation,
+                            Info.SpawnPaleete));
+                    });
             }
 
             currentAnimationFrame = newFrameCounter;

@@ -10,6 +10,7 @@
 
 #endregion
 
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
@@ -27,7 +28,7 @@ namespace OpenRA.Mods.MW.Warheads
         [WeaponReference, FieldLoader.Require] [Desc("Has to be defined in weapons.yaml as well.")]
         public readonly string Weapon = null;
 
-        [Desc("Amount of shrapnels thrown.")] public readonly int[] Amount = { 1 };
+        [Desc("Amount of shrapnels thrown.")] public readonly int[] Amount = {1};
 
         [Desc("The percentage of aiming this shrapnel to a suitable target actor.")]
         public readonly int AimChance = 0;
@@ -41,7 +42,8 @@ namespace OpenRA.Mods.MW.Warheads
         [Desc("Should the shrapnel hit the direct target?")]
         public readonly bool AllowDirectHit = false;
 
-        [Desc("Whether to consider actors in determining whether the explosion should happen. If false, only terrain will be considered.")]
+        [Desc(
+            "Whether to consider actors in determining whether the explosion should happen. If false, only terrain will be considered.")]
         public readonly bool ImpactActors = true;
 
         [Desc("Consider explosion above this altitude an air explosion.",
@@ -69,7 +71,8 @@ namespace OpenRA.Mods.MW.Warheads
             return ImpactType.Ground;
         }
 
-        private ImpactTargetType GetDirectHitTargetType(World world, CPos cell, WPos pos, Actor firedBy, bool checkTargetValidity = false)
+        private ImpactTargetType GetDirectHitTargetType(World world, CPos cell, WPos pos, Actor firedBy,
+            bool checkTargetValidity = false)
         {
             var victims = world.FindActorsOnCircle(pos, WDist.Zero);
             var invalidHit = false;
@@ -148,7 +151,8 @@ namespace OpenRA.Mods.MW.Warheads
                     var rotation = WRot.FromFacing(firedBy.World.SharedRandom.Next(1024));
                     var range = firedBy.World.SharedRandom.Next(weapon.MinRange.Length, weapon.Range.Length);
                     var targetpos = target.CenterPosition + new WVec(range, 0, 0).Rotate(rotation);
-                    var tpos = Target.FromPos(new WPos(targetpos.X, targetpos.Y, firedBy.World.Map.CenterOfCell(firedBy.World.Map.CellContaining(targetpos)).Z));
+                    var tpos = Target.FromPos(new WPos(targetpos.X, targetpos.Y,
+                        firedBy.World.Map.CenterOfCell(firedBy.World.Map.CellContaining(targetpos)).Z));
                     if (weapon.IsValidAgainst(tpos, firedBy.World, firedBy))
                         shrapnelTarget = tpos;
                 }
@@ -164,17 +168,17 @@ namespace OpenRA.Mods.MW.Warheads
                     DamageModifiers = !firedBy.IsDead
                         ? firedBy.TraitsImplementing<IFirepowerModifier>()
                             .Select(a => a.GetFirepowerModifier()).ToArray()
-                        : new int[] { 1 },
+                        : new int[] {1},
 
                     InaccuracyModifiers = !firedBy.IsDead
                         ? firedBy.TraitsImplementing<IInaccuracyModifier>()
                             .Select(a => a.GetInaccuracyModifier()).ToArray()
-                        : new int[] { 1 },
+                        : new int[] {1},
 
                     RangeModifiers = !firedBy.IsDead
                         ? firedBy.TraitsImplementing<IRangeModifier>()
                             .Select(a => a.GetRangeModifier()).ToArray()
-                        : new int[] { 1 },
+                        : new int[] {1},
 
                     Source = target.CenterPosition,
                     SourceActor = firedBy,
@@ -182,14 +186,23 @@ namespace OpenRA.Mods.MW.Warheads
                     PassiveTarget = shrapnelTarget.CenterPosition
                 };
 
-                if (args.Weapon.Projectile != null)
-                {
-                    var projectile = args.Weapon.Projectile.Create(args);
-                    if (projectile != null)
-                        firedBy.World.AddFrameEndTask(w => w.Add(projectile));
+                try
 
-                    if (args.Weapon.Report != null && args.Weapon.Report.Any())
-                        Game.Sound.Play(SoundType.World, args.Weapon.Report.Random(firedBy.World.SharedRandom), target.CenterPosition);
+                {
+                    if (args.Weapon.Projectile != null)
+                    {
+                        var projectile = args.Weapon.Projectile.Create(args);
+                        if (projectile != null)
+                            firedBy.World.AddFrameEndTask(w => w.Add(projectile));
+
+                        if (args.Weapon.Report != null && args.Weapon.Report.Any())
+                            Game.Sound.Play(SoundType.World, args.Weapon.Report.Random(firedBy.World.SharedRandom),
+                                target.CenterPosition);
+                    }
+                }
+                catch (DivideByZeroException test)
+                {
+                    throw test;
                 }
             }
         }

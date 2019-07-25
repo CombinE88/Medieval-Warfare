@@ -128,6 +128,7 @@ namespace OpenRA.Mods.MW.Traits
                     {
                         return a.Owner == self.Owner && a.TraitOrDefault<UndeadGiantSpawner>().Canspawn;
                     });
+
                 if (validreplacespawner.Any())
                 {
                     respawner = validreplacespawner.Random(self.World.SharedRandom);
@@ -135,6 +136,8 @@ namespace OpenRA.Mods.MW.Traits
                     spawn = respawner.CenterPosition + new WVec(respawner.Info.TraitInfo<UndeadGiantSpawnerInfo>()
                         .SpawnOffset.X, respawner.Info.TraitInfo<UndeadGiantSpawnerInfo>().SpawnOffset.Y, respawner.Info.TraitInfo<UndeadGiantSpawnerInfo>().SpawnOffset.Z);
                     exitLocation = respawner.TraitOrDefault<RallyPoint>().Location;
+                    
+                    td.Add(new SkipMakeAnimsInit());
                 }
 
                 td.Add(new LocationInit(exit));

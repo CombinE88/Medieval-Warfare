@@ -31,7 +31,7 @@ ZIGG3UPGRADE:
 	Buildable:
 		IconPalette: raicon
 		BuildPaletteOrder: 70
-		Prerequisites: seal3, seal4
+		Prerequisites: seal3, seal4, ~ziggurat2
 		Description: Grants access to most advanced summoning methods.\n  Accesses Superpowers \n\n
 		Queue: MResources.ded
 		BuildLimit: 1
@@ -50,8 +50,8 @@ SEAL1:
 	Buildable:
 		IconPalette: raicon
 		BuildPaletteOrder: 10
+		Queue: MBuilding.ded
 		Description: Unlocks crypt and seal 2\n\n\n
-		Queue: MResources.ded
 		Prerequisites: sppool
 		BuildLimit: 1
 SEAL2:
@@ -68,9 +68,9 @@ SEAL2:
 	Buildable:
 		IconPalette: raicon
 		BuildPaletteOrder: 20
+		Queue: MBuilding.ded
 		Prerequisites: seal1, dedref
 		Description: Unlocks mausoleum and ziggurat level 2\n\n\n
-		Queue: MResources.ded
 		BuildLimit: 1
 SEAL3:
 	AlwaysVisible:
@@ -86,9 +86,9 @@ SEAL3:
 	Buildable:
 		IconPalette: raicon
 		BuildPaletteOrder: 30
-		Prerequisites: ziggurat2
+		Prerequisites: ~ziggurat2
 		Description: Unlocks Beserker, Vampire and seal 4\n\n\n
-		Queue: MResources.ded
+		Queue: MBuilding.ded
 		BuildLimit: 1
 SEAL4:
 	AlwaysVisible:
@@ -103,10 +103,10 @@ SEAL4:
 	ProvidesPrerequisite@buildingname:
 	Buildable:
 		IconPalette: raicon
-		Prerequisites: ziggurat2, seal3, libra
+		Prerequisites: ~ziggurat2, seal3, libra
 		BuildPaletteOrder: 40
 		Description: Unlocks tomb, Grim Reaper and ziggurat level 2\n\n\n
-		Queue: MResources.ded
+		Queue: MBuilding.ded
 		BuildLimit: 1
 SEAL5:
 	AlwaysVisible:
@@ -121,10 +121,10 @@ SEAL5:
 	ProvidesPrerequisite@buildingname:
 	Buildable:
 		IconPalette: raicon
-		Prerequisites: ziggurat3
+		Prerequisites: ~ziggurat3
 		BuildPaletteOrder: 50
 		Description: Unlocks Lich\n\n\n
-		Queue: MResources.ded
+		Queue: MBuilding.ded
 		BuildLimit: 1
 		BuildDuration: 2000
 #Buildings
@@ -341,58 +341,6 @@ ZIGGURAT3:
 		BeaconRemoveAdvance: 0
 		FlightDelay: 10
 	SupportPowerChargeBar:
-OBELISK.penta:
-	Inherits: ^Smallpenta
-	RenderSprites:
-		Image: obelisk
-		Palette: undead
-		PlayerPalette: undeadalpha
-	Valued:
-		Cost: 0
-	Tooltip:
-		Name: Summoning (Obelisk)
-	Buildable:
-		IconPalette: raicon
-		BuildPaletteOrder: 70
-		Description: Summons a defensive statue attacking with lightning.\n  Strong vs all\n  Weak vs Siege weapons\n  can target Aircraft\n  Transforms battlefield loot to essence, requires Essence pool
-		Prerequisites: seal3
-		Queue: MMilitary.ded
-		BuildDuration: 10
-	Health:
-		HP: 35000
-	RevealsShroud:
-		Range: 4c0
-	UndeadBuilder:
-		SpawnActor: obelisk
-		SpawnOffset: 1,1
-		SummoningTime: 75
-		Cost: 1800
-GARG.penta:
-	Inherits: ^Smallpenta
-	RenderSprites:
-		Image: garg
-		Palette: undead
-		PlayerPalette: undeadalpha
-	Valued:
-		Cost: 0
-	Tooltip:
-		Name: Summoning (Gargoyle)
-	Buildable:
-		IconPalette: raicon
-		BuildPaletteOrder: 60
-		Description: Summons a defensive statue attacking with fire.\n  Strong vs Infantry, Light Cavalry\n  Weak vs Siege weapons and Heavy Cavalry \n\n 
-		Prerequisites: seal1
-		Queue: MMilitary.ded
-		BuildDuration: 10
-	Health:
-		HP: 25000
-	RevealsShroud:
-		Range: 4c0
-	UndeadBuilder:
-		SpawnActor: garg
-		SpawnOffset: 1,1
-		SummoningTime: 45
-		Cost: 800
 SPPOOL.penta:
 	Inherits: ^Mediumpenta
 	RenderSprites:
@@ -427,8 +375,8 @@ CRYPT.penta:
 	Inherits: ^Mediumpenta
 	RenderSprites:
 		Image: crypt
-		Palette: undead
-		PlayerPalette: undeadalpha
+		Palette:
+		PlayerPalette: raplayer
 	Valued:
 		Cost: 0
 	Tooltip:
@@ -452,12 +400,13 @@ CRYPT.penta:
 		SpawnOffset: 1,1
 		SummoningTime: 50
 		Cost: 850
+		Animations: step1, step2, step3, step4, step5, step6
 MAUSO.penta:
 	Inherits: ^Mediumpenta
 	RenderSprites:
 		Image: mauso
-		Palette: undead
-		PlayerPalette: undeadalpha
+		Palette:
+		PlayerPalette: raplayer
 	Valued:
 		Cost: 0
 	Tooltip:
@@ -466,7 +415,7 @@ MAUSO.penta:
 		IconPalette: raicon
 		BuildPaletteOrder: 30
 		Description: Summons a Tomb.\n  Tomb summons advanced skeletons\n  Increases the number of possible skeletons over time\n  Summons up to 2 coffins each giving grave space\n 
-		Prerequisites: seal4
+		Prerequisites: seal4, ~ziggurat2
 		Queue: MMilitary.ded
 		BuildDuration: 10
 	Health:
@@ -478,12 +427,13 @@ MAUSO.penta:
 		SpawnOffset: 1,1
 		SummoningTime: 100
 		Cost: 1400
+		Animations: step1, step2, step3, step4, step5, step6, step7, step8
 LIBRA.penta:
 	Inherits: ^Mediumpenta
 	RenderSprites:
 		Image: libra
-		Palette: undead
-		PlayerPalette: undeadalpha
+		Palette:
+		PlayerPalette: raplayer
 	Valued:
 		Cost: 0
 	Tooltip:
@@ -492,7 +442,7 @@ LIBRA.penta:
 		IconPalette: raicon
 		BuildPaletteOrder: 40
 		Description: Summons a Library.\n  Library grants access to Supportpowers\n 
-		Prerequisites: ziggurat2
+		Prerequisites: ~ziggurat2
 		Queue: MMilitary.ded
 		BuildDuration: 10
 	Health:
@@ -504,12 +454,13 @@ LIBRA.penta:
 		SpawnOffset: 1,1
 		SummoningTime: 60
 		Cost: 700
+		Animations: step1, step2, step3, step4, step5, step6, step7, step8
 TOMB.penta:
 	Inherits: ^Largepenta
 	RenderSprites:
 		Image: tomb
-		Palette: undead
-		PlayerPalette: undeadalpha
+		Palette:
+		PlayerPalette: raplayer
 	Valued:
 		Cost: 0
 	Tooltip:
@@ -530,12 +481,13 @@ TOMB.penta:
 		SpawnOffset: 1,1
 		SummoningTime: 115
 		Cost: 1500
+		Animations: step1, step2, step3, step4, step5, step6, step7, step8
 HELLGATE.penta:
 	Inherits: ^Largepenta
 	RenderSprites:
 		Image: hellgate
-		Palette: undead
-		PlayerPalette: undeadalpha
+		Palette:
+		PlayerPalette: raplayer
 	Valued:
 		Cost: 0
 	Tooltip:
@@ -553,8 +505,8 @@ DEDREF.penta:
 	Inherits: ^Mediumpenta
 	RenderSprites:
 		Image: dedref
-		Palette: undead
-		PlayerPalette: undeadalpha
+		Palette:
+		PlayerPalette: raplayer
 	Valued:
 		Cost: 0
 	Tooltip:
@@ -576,10 +528,7 @@ DEDREF.penta:
 		SpawnOffset: 1,1
 		SummoningTime: 75
 		Cost: 1600
-	ExternalCondition@DoNotRender:
-		Condition: DoNotRender
-	WithSpriteBody:
-		RequiresCondition: DoNotRender
+		Animations: step1, step2, step3, step4, step5
 	RenderActorArc:
 		UsePlayerColor: true
 		Offset: 0,0,2048
@@ -1175,13 +1124,14 @@ OBELISK:
 	RenderSprites:
 		PlayerPalette: raplayer
 	WithMakeAnimation:
+		Condition: build-incomplete
 	Valued:
 		Cost: 2500
 	Tooltip:
 		Name: Obelisk
 	Building:
-		Footprint: x
-		Dimensions: 1,1
+		Footprint: _=_ =x= _=_
+		Dimensions: 3,3
 	AutoTarget:
 	Health:
 		HP: 60000
@@ -1198,6 +1148,7 @@ OBELISK:
 	Armament@VisualA: 
 		Weapon: ObeliskLight
 		LocalOffset: 0,0,1312
+		RequiresCondition: !build-incomplete
 	ThrowsShrapnel@SMALL:
 		Weapons: SmallStone1, SmallStone2, LargeStone1
 		Pieces: 2, 3
@@ -1212,11 +1163,22 @@ OBELISK:
 		Prerequisites: sppool
 	SpawnActorsOnSell:
 		ActorTypes: preycolyte,undead1
+	Buildable:
+		IconPalette: raicon
+		BuildPaletteOrder: 70
+		Description: Summons a defensive statue attacking with lightning.\n  Strong vs all\n  Weak vs Siege weapons\n  can target Aircraft\n  Transforms battlefield loot to essence, requires Essence pool
+		Prerequisites: seal3, ~ziggurat2
+		Queue: MMilitary.ded
+		BuildDuration: 2500
+	RequiresBuildableArea:
+		AreaTypes: undeadbuilding
+		Adjacent: 4
 GARG:
 	Inherits: ^MWDefense
 	Inherits@AUTOTARGET: ^AutoTargetGround
 	Inherits@Hitshape: ^1x1Shape
 	WithMakeAnimation:
+		Condition: build-incomplete
 	MapEditorData:
 		Categories: Defense
 	Valued:
@@ -1226,8 +1188,8 @@ GARG:
 	Tooltip:
 		Name: Gargoyle
 	Building:
-		Footprint: x
-		Dimensions: 1,1
+		Footprint: _=_ =x= _=_
+		Dimensions: 3,3
 	Health:
 		HP: 35000
 	RevealsShroud:
@@ -1238,6 +1200,7 @@ GARG:
 	Armament@1:
 		Weapon: GargAttack
 		LocalOffset: 512,0,1148
+		RequiresCondition: !build-incomplete
 	DetectCloaked:
 		Range: 3c0
 	Armor:
@@ -1263,3 +1226,13 @@ GARG:
 		TargetTypes: Defenses
 	SpawnActorsOnSell:
 		ActorTypes: undead1,undead1
+	Buildable:
+		IconPalette: raicon
+		BuildPaletteOrder: 60
+		Description: Summons a defensive statue attacking with fire.\n  Strong vs Infantry, Light Cavalry\n  Weak vs Siege weapons and Heavy Cavalry \n\n 
+		Prerequisites: seal1
+		Queue: MMilitary.ded
+		BuildDuration: 1100
+	RequiresBuildableArea:
+		AreaTypes: undeadbuilding
+		Adjacent: 4

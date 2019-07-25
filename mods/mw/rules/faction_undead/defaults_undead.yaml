@@ -2,7 +2,7 @@
 	Inherits: ^Building
 	Building:
 		RequiresBaseProvider: true
-		BuildSounds: tentcloth.aud, brickconc.aud
+		BuildSounds: spawnflash.aud
 		TerrainTypes: Clear,Road
 	MustBeDestroyed:
 		RequiredForShortGame: true
@@ -67,6 +67,8 @@
 		DeathTypes: DefaultDeath
 ^MWBasePentagram:
 	Inherits@1: ^BaseBuilding
+	Building:
+		BuildSounds: spawnflash.aud
 	RequiresBuildableArea:
 		AreaTypes: undeadbuilding
 		Adjacent: 4
@@ -361,8 +363,7 @@
 	Armor:
 		Type: Concrete
 	RenderSprites:
-		Palette: undead
-		PlayerPalette: undeadplayer
+		PlayerPalette: raplayer
 	-WithDeathAnimation:
 	Tooltip:
 		Name: Spawner
@@ -383,10 +384,6 @@
 		SummoningTime: 100
 	WithUndeadBuilderOverlay: 
 		Sequence: circlel
-		Palette: undeadalpha
-		IsPlayerPalette: True
-	WithIdleOverlay:
-		Sequence: pentagraml
 		Palette: undeadalpha
 		IsPlayerPalette: True
 	DockManager:

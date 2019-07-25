@@ -1,9 +1,15 @@
+spawnlightning:
+	spawnlightning: spawnlightning
+		Length: *
+		Tick: 40
+		Offset: 0, -100
 ^pentagram:
 	pentagrams: pentas
 		Offset: -2,0
 		Length: *
 		ZOffset: -2024
 	circles: ptimers
+		Offset: 0,0
 		Length: 21
 		ZOffset: -2024
 	pentagramm: pentam
@@ -11,6 +17,7 @@
 		Length: *
 		ZOffset: -2024
 	circlem: ptimerm
+		Offset: 0,0
 		Length: 21
 		ZOffset: -2024
 	pentagraml: pental
@@ -18,10 +25,11 @@
 		Length: *
 		ZOffset: -2024
 	circlel: ptimerl
+		Offset: 0,0
 		Length: 21
 		ZOffset: -2024
 	empty: ironore4
-		Start: 9
+		Start: 9	
 ziggurat1:
 	idle: ziggurat1_n
 		Start: 25
@@ -106,7 +114,7 @@ sppool:
 	make: sppoolmake_n
 		Start: 41
 		Length: 25
-		Tick: 140
+		Tick: 100
 	bib: buildingbibs.png
 		Frames: 4,5,10,11
 		Length: 4
@@ -161,8 +169,9 @@ crypt:
 	dead:
 		Start: 30
 		Tick: 800
-	make: cryptmake
-		Length: *
+	make: cryptmake_n
+		Start: 71
+		Length: 9
 		Tick: 100
 	bib: buildingbibs.png
 		Frames: 4,5,10,11
@@ -180,6 +189,55 @@ crypt:
 		Tick: 80
 		ZOffset: 512
 		Offset: -3, 17
+	step1: cryptmake_n
+		Start: 10
+		Length: 1
+	step1-make: cryptmake_n
+		Start: 0
+		Length: 10
+		Tick: 140
+	step2: cryptmake_n
+		Start: 20
+		Length: 1
+	step2-make: cryptmake_n
+		Start: 11
+		Length: 9
+		Tick: 140
+	step3: cryptmake_n
+		Start: 30
+		Length: 1
+	step3-make: cryptmake_n
+		Start: 21
+		Length: 9
+		Tick: 140
+	step4: cryptmake_n
+		Start: 40
+		Length: 1
+	step4-make: cryptmake_n
+		Start: 31
+		Length: 9
+		Tick: 140
+	step5: cryptmake_n
+		Start: 50
+		Length: 1
+	step5-make: cryptmake_n
+		Start: 41
+		Length: 9
+		Tick: 140
+	step6: cryptmake_n
+		Start: 60
+		Length: 1
+	step6-make: cryptmake_n
+		Start: 51
+		Length: 9
+		Tick: 140
+	step7: cryptmake_n
+		Start: 70
+		Length: 1
+	step7-make: cryptmake_n
+		Start: 61
+		Length: 9
+		Tick: 140
 	icon: crypticon.shp
 		AddExtension: False
 mauso: 
@@ -191,9 +249,66 @@ mauso:
 	dead:
 		Start: 25
 		Tick: 800
-	make:
-		Length: 23
-		Tick: 200
+	make: tombmake_n
+		Start: 81
+		Length: 7
+		Tick: 100
+	step1: tombmake_n
+		Start: 10
+		Length: 1
+	step1-make: tombmake_n
+		Start: 0
+		Length: 10
+		Tick: 140
+	step2: tombmake_n
+		Start: 20
+		Length: 1
+	step2-make: tombmake_n
+		Start: 11
+		Length: 9
+		Tick: 140
+	step3: tombmake_n
+		Start: 30
+		Length: 1
+	step3-make: tombmake_n
+		Start: 21
+		Length: 9
+		Tick: 140
+	step4: tombmake_n
+		Start: 40
+		Length: 1
+	step4-make: tombmake_n
+		Start: 31
+		Length: 9
+		Tick: 140
+	step5: tombmake_n
+		Start: 50
+		Length: 1
+	step5-make: tombmake_n
+		Start: 41
+		Length: 9
+		Tick: 140
+	step6: tombmake_n
+		Start: 60
+		Length: 1
+	step6-make: tombmake_n
+		Start: 51
+		Length: 9
+		Tick: 140
+	step7: tombmake_n
+		Start: 70
+		Length: 1
+	step7-make: tombmake_n
+		Start: 61
+		Length: 9
+		Tick: 140
+	step8: tombmake_n
+		Start: 80
+		Length: 1
+	step8-make: tombmake_n
+		Start: 71
+		Length: 9
+		Tick: 140
 	bib: buildingbibs.png
 		Frames: 4,5,10,11
 		Length: 4
@@ -209,16 +324,75 @@ libra:
 	dead:
 		Start: 27
 		Tick: 800
-	make:
-		Length: 25
-		Tick: 200
+	make: libramake_n
+		Start: 80
+		Length: 10
+		Tick: 100
 	bib: buildingbibs.png
 		Frames: 4,5,10,11
 		Length: 4
 		AddExtension: false
+	step1: libramake_n
+		Start: 10
+		Length: 1
+	step1-make: libramake_n
+		Start: 0
+		Length: 10
+		Tick: 140
+	step2: libramake_n
+		Start: 20
+		Length: 1
+	step2-make: libramake_n
+		Start: 11
+		Length: 9
+		Tick: 140
+	step3: libramake_n
+		Start: 30
+		Length: 1
+	step3-make: libramake_n
+		Start: 21
+		Length: 9
+		Tick: 140
+	step4: libramake_n
+		Start: 40
+		Length: 1
+	step4-make: libramake_n
+		Start: 31
+		Length: 9
+		Tick: 140
+	step5: libramake_n
+		Start: 50
+		Length: 1
+	step5-make: libramake_n
+		Start: 41
+		Length: 9
+		Tick: 140
+	step6: libramake_n
+		Start: 60
+		Length: 1
+	step6-make: libramake_n
+		Start: 51
+		Length: 9
+		Tick: 140
+	step7: libramake_n
+		Start: 70
+		Length: 1
+	step7-make: libramake_n
+		Start: 61
+		Length: 9
+		Tick: 140
+	step8: libramake_n
+		Start: 80
+		Length: 1
+	step8-make: libramake_n
+		Start: 71
+		Length: 9
+		Tick: 140
 	icon: libraicon.shp
 		AddExtension: False
 tomb: 
+	Defaults:		
+		Offset: 0,-12
 	Inherits: ^pentagram
 	idle:
 		Start: 25
@@ -230,17 +404,78 @@ tomb:
 		Start: 27
 		Tick: 800
 		Offset: 0,-12
-	make:
-		Length: 25
-		Tick: 200
+	make: mausomake_n
+		Start: 81
+		Length: 9
+		Tick: 100
 		Offset: 0,-12
+	step1: mausomake_n
+		Start: 10
+		Length: 1
+	step1-make: mausomake_n
+		Start: 0
+		Length: 10
+		Tick: 140
+	step2: mausomake_n
+		Start: 20
+		Length: 1
+	step2-make: mausomake_n
+		Start: 11
+		Length: 9
+		Tick: 140
+	step3: mausomake_n
+		Start: 30
+		Length: 1
+	step3-make: mausomake_n
+		Start: 21
+		Length: 9
+		Tick: 140
+	step4: mausomake_n
+		Start: 40
+		Length: 1
+	step4-make: mausomake_n
+		Start: 31
+		Length: 9
+		Tick: 140
+	step5: mausomake_n
+		Start: 50
+		Length: 1
+	step5-make: mausomake_n
+		Start: 41
+		Length: 9
+		Tick: 140
+	step6: mausomake_n
+		Start: 60
+		Length: 1
+	step6-make: mausomake_n
+		Start: 51
+		Length: 9
+		Tick: 140
+	step7: mausomake_n
+		Start: 70
+		Length: 1
+	step7-make: mausomake_n
+		Start: 61
+		Length: 9
+		Tick: 140
+	step8: mausomake_n
+		Start: 80
+		Length: 1
+	step8-make: mausomake_n
+		Start: 71
+		Length: 9
+		Tick: 140
 	bib: buildingbibs.png
 		Frames: 12,13,14,18,19,20
 		Length: 6
 		AddExtension: false
+		Offset: 0,0
 	icon: tombicon.shp
 		AddExtension: False
+		Offset: 0,0
 dedref: 
+	Defaults:		
+		Offset: 0,-12
 	Inherits: ^pentagram
 	idle: dedref_n
 		Length: *
@@ -255,15 +490,53 @@ dedref:
 		Tick: 800
 		Offset: 0,-12
 	make: dedref_n_m
-		Length: *
-		Tick: 60
+		Start: 51
+		Length: 27
+		Tick: 100
 		Offset: 0,-12
+	step1: dedrefmake
+		Start: 10
+		Length: 1
+	step1-make: dedrefmake
+		Start: 0
+		Length: 10
+		Tick: 140
+	step2: dedrefmake
+		Start: 20
+		Length: 1
+	step2-make: dedrefmake
+		Start: 11
+		Length: 9
+		Tick: 140
+	step3: dedrefmake
+		Start: 30
+		Length: 1
+	step3-make: dedrefmake
+		Start: 21
+		Length: 9
+		Tick: 140
+	step4: dedrefmake
+		Start: 40
+		Length: 1
+	step4-make: dedrefmake
+		Start: 31
+		Length: 9
+		Tick: 140
+	step5: dedrefmake
+		Start: 50
+		Length: 1
+	step5-make: dedrefmake
+		Start: 41
+		Length: 9
+		Tick: 140
 	bib: buildingbibs.png
 		Frames: 4,5,10,11
 		Length: 4
 		AddExtension: false
+		Offset: 0,0
 	icon: dedref_n_icon.shp
 		AddExtension: False
+		Offset: 0,0
 seal1:
 	icon: seal1.shp
 		AddExtension: False 

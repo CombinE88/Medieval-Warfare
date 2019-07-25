@@ -20,12 +20,12 @@ PREYCOLYTE:
 	Valued:
 		Cost: 600
 	-Crushable:
-	Buildable:
-		IconPalette: raicon
-		BuildPaletteOrder: 10
-		Description: \n   Can pray at pentagrams and spend essence to summon structures faster.
-		Queue: MBuilding.ded
-		BuildDuration: 450 
+	#Buildable:
+	#	IconPalette: raicon
+	#	BuildPaletteOrder: 10
+	#	Description: \n   Can pray at pentagrams and spend essence to summon structures faster.
+	#	Queue: MBuilding.ded
+	#	BuildDuration: 450 
 	Tooltip:
 		Name: Acolyte
 	Mobile:
@@ -121,11 +121,11 @@ RESCOLYTE:
 		Type: Heavy
 	Harvester:
 		DeliveryBuildings: dedref
-		Resources: Crops, Grains, Wood, Goods, Lumber, Corn, Iron, Gold
+		Resources: Crops, Grains, Wood, Goods, Lumber, Corn, Iron, Gold, Corruption
 		PipCount: 4
-		Capacity: 20
-		BaleLoadDelay: 10
-		BaleUnloadDelay: 15
+		Capacity: 10
+		BaleLoadDelay: 20
+		BaleUnloadDelay: 25
 		SearchFromProcRadius: 25
 		SearchFromOrderRadius: 15
 		MaxUnloadQueue: 10
@@ -605,13 +605,13 @@ ACOLYTEC:
 		Sequence: shoot
 	Armor:
 		Type: Leather
-	Buildable:
-		Description: \n   Strong vs Infantry and cavalry\n  Can attack Aircraft
-		IconPalette: raicon
-		Prerequisites: libra
-		BuildPaletteOrder: 10
-		Queue: MBuilding.ded
-		BuildDuration: 600
+	#Buildable:
+	#	Description: \n   Strong vs Infantry and cavalry\n  Can attack Aircraft
+	#	IconPalette: raicon
+	#	Prerequisites: libra
+	#	BuildPaletteOrder: 10
+	#	Queue: MBuilding.ded
+	#	BuildDuration: 600
 	CorruptDeerstand:
 		TargetActors: split7, split8
 	Targetable@CombatRole:
