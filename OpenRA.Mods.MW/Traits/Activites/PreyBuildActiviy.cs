@@ -5,6 +5,7 @@ using OpenRA.Mods.Common.Traits;
 using OpenRA.Mods.Common.Traits.Render;
 using OpenRA.Mods.MW.Effects;
 using OpenRA.Mods.MW.Traits;
+using OpenRA.Mods.MW.Traits.UndeadFaction;
 using OpenRA.Traits;
 
 namespace OpenRA.Mods.MW.Activities

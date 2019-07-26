@@ -117,11 +117,11 @@ FIREPLACE:
 		ValidFactions: GDI, Nod, Sultan
 	GiveMcvCrateAction@ded:
 		SelectionShares: 10
-		Units: undead6
+		Units: demonhorse
 		ValidFactions: ded
 	GiveMcvCrateAction@ded2:
 		SelectionShares: 10
-		Units: undead7
+		Units: grim
 		ValidFactions: ded
 	RenderSprites:
 		Image: fireplace

@@ -17,6 +17,7 @@ using OpenRA.Mods.Common;
 using OpenRA.Mods.Common.Graphics;
 using OpenRA.Mods.Common.Traits;
 using OpenRA.Mods.Common.Traits.Render;
+using OpenRA.Mods.MW.Traits.UndeadFaction;
 using OpenRA.Traits;
 
 namespace OpenRA.Mods.MW.Traits.Render

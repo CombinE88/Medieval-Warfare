@@ -401,6 +401,7 @@ CRYPT.penta:
 		SummoningTime: 50
 		Cost: 850
 		Animations: step1, step2, step3, step4, step5, step6
+	UndeadSummonSeller:
 MAUSO.penta:
 	Inherits: ^Mediumpenta
 	RenderSprites:
@@ -1117,6 +1118,9 @@ OBELISK:
 	Inherits: ^MWDefense
 	Inherits@Hitshape: ^1x1Shape
 	Inherits@AUTOTARGET: ^AutoTargetAll
+	RequiresBuildableArea:
+		AreaTypes: undeadbuilding
+		Adjacent: 4
 	Armor:
 		Type: Concrete
 	WithDeathAnimation:
@@ -1170,13 +1174,13 @@ OBELISK:
 		Prerequisites: seal3, ~ziggurat2
 		Queue: MMilitary.ded
 		BuildDuration: 2500
-	RequiresBuildableArea:
-		AreaTypes: undeadbuilding
-		Adjacent: 4
 GARG:
 	Inherits: ^MWDefense
 	Inherits@AUTOTARGET: ^AutoTargetGround
 	Inherits@Hitshape: ^1x1Shape
+	RequiresBuildableArea:
+		AreaTypes: undeadbuilding
+		Adjacent: 4
 	WithMakeAnimation:
 		Condition: build-incomplete
 	MapEditorData:
@@ -1233,6 +1237,3 @@ GARG:
 		Prerequisites: seal1
 		Queue: MMilitary.ded
 		BuildDuration: 1100
-	RequiresBuildableArea:
-		AreaTypes: undeadbuilding
-		Adjacent: 4

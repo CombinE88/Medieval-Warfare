@@ -2,7 +2,7 @@ spawnlightning:
 	spawnlightning: spawnlightning
 		Length: *
 		Tick: 40
-		Offset: 0, -100
+		Offset: 0, -120
 ^pentagram:
 	pentagrams: pentas
 		Offset: -2,0

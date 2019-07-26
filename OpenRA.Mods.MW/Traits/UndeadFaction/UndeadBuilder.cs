@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Drawing;
 using System.Linq;
-using OpenRA.Graphics;
 using OpenRA.Mods.Common;
 using OpenRA.Mods.Common.Effects;
 using OpenRA.Mods.Common.Traits;
@@ -12,7 +8,7 @@ using OpenRA.Mods.MW.Effects;
 using OpenRA.Primitives;
 using OpenRA.Traits;
 
-namespace OpenRA.Mods.MW.Traits
+namespace OpenRA.Mods.MW.Traits.UndeadFaction
 {
     [Desc("Is Unit a Peasant (adds a count of 1 to the PlayerCivilisation).")]
     public class UndeadBuilderInfo : ITraitInfo, IRulesetLoaded, Requires<WithSpriteBodyInfo>
@@ -66,29 +62,40 @@ namespace OpenRA.Mods.MW.Traits
     public class UndeadBuilder : ITick
     {
         public UndeadBuilderInfo Info;
-        public int HasSummoningCount;
-        private int decaycounter;
-
-        public int PayPerTick;
+        public int HasSummoningCount { get; set; }
+        public int PayPerTick { get; private set; }
+        public int SelfBuildCounter { get; private set; }
+        public int CurrentAnimationFrame = -1;
         private DeveloperMode devMode;
 
-        private int selfBuildCounter;
+        private int decaycounter;
 
         private WithSpriteBody wsb;
-        private int currentAnimationFrame = -1;
+
+        public bool Cancled;
 
         public UndeadBuilder(ActorInitializer init, UndeadBuilderInfo info)
         {
             this.Info = info;
             decaycounter = info.DecayTime;
             PayPerTick = info.Cost / info.SummoningTime;
-            selfBuildCounter = info.SelfBuildDelay;
+            SelfBuildCounter = info.SelfBuildDelay;
 
             wsb = init.Self.TraitsImplementing<WithSpriteBody>().Single(w => w.Info.Name == Info.Body);
         }
 
+        public void Cancle()
+        {
+            Cancled = true;
+        }
+
         void ITick.Tick(Actor self)
         {
+            if (Cancled)
+            {
+                HasSummoningCount -= Info.SelfBuildSteps * 2;
+            }
+
             if (Info.SummoningDecay)
             {
                 decaycounter--;
@@ -110,9 +117,9 @@ namespace OpenRA.Mods.MW.Traits
 
             if (Info.Selfbuilds)
             {
-                if (selfBuildCounter-- <= 0)
+                if (SelfBuildCounter-- <= 0)
                 {
-                    selfBuildCounter = Info.SelfBuildDelay;
+                    SelfBuildCounter = Info.SelfBuildDelay;
                     if (self.Owner.PlayerActor.Trait<PlayerResources>().TakeCash(PayPerTick, true))
                     {
                         HasSummoningCount += +Math.Min(Info.SelfBuildSteps, Info.SummoningTime - HasSummoningCount);
@@ -130,7 +137,7 @@ namespace OpenRA.Mods.MW.Traits
             if (newFrameCounter == Info.Animations.Length)
                 return;
 
-            if (Info.Animations.Any() && newFrameCounter != currentAnimationFrame)
+            if (Info.Animations.Any() && newFrameCounter != CurrentAnimationFrame)
             {
                 wsb.PlayCustomAnimation(self, Info.Animations[newFrameCounter] + "-make",
                     () => { wsb.PlayCustomAnimationRepeating(self, Info.Animations[newFrameCounter]); });
@@ -146,7 +153,7 @@ namespace OpenRA.Mods.MW.Traits
                     });
             }
 
-            currentAnimationFrame = newFrameCounter;
+            CurrentAnimationFrame = newFrameCounter;
         }
 
         public void ReplaceSelf(Actor self)

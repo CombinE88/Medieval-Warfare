@@ -443,11 +443,12 @@ UNDEAD6DEPLOYED:
 	Building:
 		Dimensions: 1,1
 		Footprint: x
-	Transforms:
+	SkipTransforms:
 		IntoActor: undead6
 		Offset: 0,0
 		Facing: 160
 		NoTransformNotification: BuildingCannotPlaceAudio
+		SkipMakeAnims: true
 	WithMakeAnimation:
 UNDEAD7:
 	Inherits: ^Skeleton

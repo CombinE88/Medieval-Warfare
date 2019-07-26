@@ -70,6 +70,7 @@
     <Compile Include="Traits\UndeadFaction\AcolytePreyBuildInfo.cs" />
     <Compile Include="Traits\UndeadFaction\AcolytePreyInfo.cs" />
     <Compile Include="Traits\Render\RenderActorArc.cs" />
+    <Compile Include="Traits\UndeadFaction\UndeadSummonSeller.cs" />
     <Compile Include="Traits\UndeadFaction\ValidPreyTarget.cs" />
     <Compile Include="Traits\UndeadFaction\SpawnActorOnCurse.cs" />
     <Compile Include="Traits\UndeadFaction\UndeadGiantSpawner.cs" />
