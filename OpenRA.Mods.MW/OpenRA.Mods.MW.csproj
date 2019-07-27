@@ -70,11 +70,14 @@
     <Compile Include="Traits\UndeadFaction\AcolytePreyBuildInfo.cs" />
     <Compile Include="Traits\UndeadFaction\AcolytePreyInfo.cs" />
     <Compile Include="Traits\Render\RenderActorArc.cs" />
-    <Compile Include="Traits\UndeadFaction\UndeadSummonSeller.cs" />
+    <Compile Include="Traits\UndeadFaction\UndeadSummoningProductionQueue.cs" />
+    <Compile Include="Traits\UndeadFaction\WeatherArealProvider.cs" />
+    <Compile Include="Traits\UndeadFaction\UndeadBuilderSeller.cs" />
     <Compile Include="Traits\UndeadFaction\ValidPreyTarget.cs" />
     <Compile Include="Traits\UndeadFaction\SpawnActorOnCurse.cs" />
     <Compile Include="Traits\UndeadFaction\UndeadGiantSpawner.cs" />
     <Compile Include="Traits\UndeadFaction\UndeadCryptProduction.cs" />
+    <Compile Include="Traits\UndeadFaction\WithMovingSpriteEffect.cs" />
     <Compile Include="Traits\WithPermanentExplosion.cs" />
     <Compile Include="Traits\Construction\ConstructionProgress.cs" />
     <Compile Include="Traits\CreateActorOnDeath.cs" />
@@ -112,6 +115,7 @@
     <Compile Include="Traits\UndeadFaction\WithUndeadBuilderOverlay.cs" />
     <Compile Include="Traits\WithFreeSpawnableActor.cs" />
     <Compile Include="Traits\WorldTraits\MwProductionQueueFromSelection.cs" />
+    <Compile Include="Traits\WorldTraits\ArealWeatherSystem.cs" />
     <Compile Include="Warheads\BackFireShrapnelWarhead.cs" />
     <Compile Include="Warheads\CashTickWarhead.cs" />
     <Compile Include="Warheads\DecayResourceWarhead.cs" />

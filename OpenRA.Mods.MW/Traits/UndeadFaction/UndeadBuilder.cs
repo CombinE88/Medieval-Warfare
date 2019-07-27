@@ -93,7 +93,8 @@ namespace OpenRA.Mods.MW.Traits.UndeadFaction
         {
             if (Cancled)
             {
-                HasSummoningCount -= Info.SelfBuildSteps * 2;
+                HasSummoningCount -= Math.Min(Info.SelfBuildSteps, Info.SummoningTime - HasSummoningCount);
+                return;
             }
 
             if (Info.SummoningDecay)

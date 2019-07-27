@@ -33,6 +33,37 @@
 	Capturable:
 		Types: building
 	#WithMakeAnimation:
+^MWUndeadDefense:
+	Inherits@1: ^MWDefense
+	-SpawnActorsOnSell:
+	RequiresBuildableArea:
+		AreaTypes: undeadbuilding
+		Adjacent: 4
+	RepairableBuilding:
+		RepairPercent: 40
+		RepairStep: 1500
+		PlayerExperience: 15
+	WithBuildingRepairDecoration:
+		Image: allyrepair
+		Sequence: repair
+		ReferencePoint: Center
+		Palette: raplayer
+		IsPlayerPalette: True
+	ThrowsShrapnel@SMALL:
+		Weapons: SmallWood1, SmallWood2, SmallWood3, SmallStone1, SmallStone2
+		Pieces: 2, 4
+		Range: 0c512, 3c0
+	MapEditorData:
+		Categories: Defense
+	Targetable@Defense: 
+		TargetTypes: Defense
+	OwnerLostAction:
+		Action: Kill
+		DeathTypes: DefaultDeath
+	Building:
+		RequiresBaseProvider: false
+		BuildSounds: spawnflash.aud
+	-DeconstructSellable:
 ^MWUndeadBuilding:
 	Inherits@1: ^UndeadBaseBuilding
 	GivesBuildableArea:
@@ -67,6 +98,8 @@
 		DeathTypes: DefaultDeath
 ^MWBasePentagram:
 	Inherits@1: ^BaseBuilding
+	ShakeOnCreate:
+		Time: 25
 	Building:
 		BuildSounds: spawnflash.aud
 	RequiresBuildableArea:
@@ -85,7 +118,6 @@
 		IsPlayerPalette: True
 	Targetable:
 		TargetTypes: Ground, C4, Structure, Pentagram
-	DeconstructSellable:
 	UndeadBuilder:
 		Selfbuilds: true
 	OwnerLostAction:
@@ -94,7 +126,7 @@
 	WithSpriteBody:
 		Sequence: empty
 	-ThrowsShrapnel@SMALL:
-
+	-DeconstructSellable:
 ^Skeleton:  
 	Inherits: ^MedievalInfantry
 	Inherits@GainsExperience: ^GainsExperience
@@ -423,7 +455,6 @@
 	MapEditorData:
 		ExcludeTilesets: TEMPERATE, SNOW, DESERT, WINTER
 		Categories: 
-	ShakeOnCreate:
 	Armor:
 		Type: Concrete
 	-WithDeathAnimation:

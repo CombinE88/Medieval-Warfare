@@ -470,7 +470,7 @@ namespace OpenRA.Mods.MW.Widgets
 				if (queuedItems != null)
 					total = queuedItems.AllActuallyQueued().Count();
 
-				if (total > 0 && queuedItems == null)
+				if (total > 0 && queuedItems == null && !(icon.ProductionQueue is UndeadSummoningProductionQueue))
 				{
 					var first = icon.Queued[0];
 					var waiting = !first.Done;

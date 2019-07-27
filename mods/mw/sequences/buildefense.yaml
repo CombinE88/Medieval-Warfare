@@ -584,7 +584,7 @@ obelisk:
 		Tick: 800
 	make: obeliskmake
 		Length: *
-		Tick: 200
+		Tick: 80
 		Offset: 0,-5
 	icon: obeliskicon.shp
 		AddExtension: False

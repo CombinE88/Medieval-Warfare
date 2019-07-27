@@ -1,3 +1,18 @@
+fogcoulds:
+	Defaults:
+		AddExtension: false
+		ZOffset: 4096
+	cloud1: fogswd1.png
+	cloud2: fogswd2.png
+	cloud3: fogswd3.png
+	cloud4: fogswd4.png
+	cloud5: fogswd5.png
+	cloud6: fogswd6.png
+	cloud7: fogswd7.png
+	cloud8: fogswd8.png
+	cloud9: fogswd9.png
+	cloud10: fogswd10.png
+	cloud11: fogswd11.png
 spawnlightning:
 	spawnlightning: spawnlightning
 		Length: *
@@ -64,7 +79,7 @@ ziggurat2:
 		Tick: 800
 	make: ziggurat2_n
 		Length: 61
-		Tick: 200
+		Tick: 100
 		Offset: 0,-24
 	bib: buildingbibs.png
 		Frames: 0,1,2,3,6,7,8,9
@@ -94,7 +109,7 @@ ziggurat3:
 		Tick: 800
 	make: ziggurat3_n
 		Length: 80
-		Tick: 200
+		Tick: 100
 		Offset: 0,-24
 	bib: buildingbibs.png
 		Frames: 0,1,2,3,6,7,8,9
@@ -111,6 +126,9 @@ sppool:
 	dead:
 		Start: 39
 		Tick: 800
+	oldmake: 
+		Length: 37
+		Tick: 140
 	make: sppoolmake_n
 		Start: 41
 		Length: 25
@@ -162,6 +180,9 @@ crypt:
 		Start: 0
 		Length: 15
 		Tick: 80
+	oldmake:
+		Length: 23
+		Tick: 200
 	damaged-idle:
 		Start: 15
 		Length: 15
@@ -244,6 +265,9 @@ mauso:
 	Inherits: ^pentagram
 	idle:
 		Start: 23
+	oldmake:
+		Length: 23
+		Tick: 200
 	damaged-idle:
 		Start: 24
 	dead:
@@ -324,6 +348,9 @@ libra:
 	dead:
 		Start: 27
 		Tick: 800
+	oldmake:
+		Length: 25
+		Tick: 200
 	make: libramake_n
 		Start: 80
 		Length: 10
@@ -396,6 +423,10 @@ tomb:
 	Inherits: ^pentagram
 	idle:
 		Start: 25
+		Offset: 0,-12
+	oldmake:
+		Length: 25
+		Tick: 200
 		Offset: 0,-12
 	damaged-idle:
 		Start: 26
@@ -480,6 +511,10 @@ dedref:
 	idle: dedref_n
 		Length: *
 		Tick: 100
+		Offset: 0,-12
+	oldmake: dedrefmake
+		Length: *
+		Tick: 60
 		Offset: 0,-12
 	damaged-idle: dedref_n_d
 		Length: *

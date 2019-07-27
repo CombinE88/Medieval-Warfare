@@ -46,6 +46,7 @@ Packages:
 	mw|bits/terrain/Desert
 	mw|bits/Undead
 	mw|bits/Undead/voice
+	mw|bits/Undead/fog
 	mw|bits/Trees
 	mw|bits/Trees/Anim
 	mw|bits/interior

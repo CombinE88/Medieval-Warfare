@@ -343,6 +343,7 @@
 		AllowUnderActors: true
 World:
 	Inherits: ^BaseWorld
+	ArealWeatherSystem:
 	ChatCommands:
 	DevCommands:
 	PlayerCommands:

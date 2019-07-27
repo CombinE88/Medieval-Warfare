@@ -53,6 +53,11 @@
 	#-----
 	# Effect Palettes
 	#-----
+	PaletteFromGimpOrJascFile@fogfade:
+		Name: fogfade
+		Filename: fogfade.pal
+		Premultiply: false
+		Tilesets: TEMPERAT
 	PaletteFromFile@interiorfire:
 		Name: fire
 		Filename: fireblend.pal

@@ -14,7 +14,7 @@ ZIGG2UPGRADE:
 		BuildPaletteOrder: 60
 		Prerequisites: seal1, seal2
 		Description: Grants access to advanced summoning methods.\n  Grants possiblility to convert Iron and Gold into Essence\n\n
-		Queue: MResources.ded
+		Queue: MBuilding.ded
 		BuildLimit: 1
 		BuildDuration: 1000
 ZIGG3UPGRADE:
@@ -28,12 +28,12 @@ ZIGG3UPGRADE:
 	Tooltip:
 		Name: Upgrade Ziggurat to Level 3
 	ProvidesPrerequisite@buildingname:
-	Buildable:
+	Buildable:	
 		IconPalette: raicon
 		BuildPaletteOrder: 70
 		Prerequisites: seal3, seal4, ~ziggurat2
 		Description: Grants access to most advanced summoning methods.\n  Accesses Superpowers \n\n
-		Queue: MResources.ded
+		Queue: MBuilding.ded
 		BuildLimit: 1
 		BuildDuration: 1500
 SEAL1:
@@ -131,6 +131,14 @@ SEAL5:
 ZIGGURAT1:
 	Inherits: ^MWUndeadBuilding
 	Inherits@Hitshape: ^2x2Shape
+	WeatherArealProvider:
+		Intensity: 60,50,50,40,40,30,20,10
+	WithMovingSpriteEffect:
+		Image: fogcoulds
+		Sequences: cloud1,cloud2,cloud3,cloud4,cloud5,cloud6,cloud7,cloud8,cloud9,cloud10,cloud11
+		Palette: fogfade
+		MaximalDistance: 6c0
+		MaximumObjects: 3
 	GivesBuildableArea:
 		AreaTypes: undeadbuilding
 	RepairableBuilding:
@@ -180,13 +188,13 @@ ZIGGURAT1:
 		LowPowerSlowdown: 2
 		ReadyAudio:
 		QueuedAudio: Building
-	ProductionQueue@DeadMDefence:
+	UndeadSummoningProductionQueue@DeadMDefence:
 		Type: MResources.ded
 		Group: Building2
 		LowPowerSlowdown: 2
 		QueuedAudio: Building
 		ReadyAudio:
-	ProductionQueue@DeadMMilitary:
+	UndeadSummoningProductionQueue@DeadMMilitary:
 		Type: MMilitary.ded
 		Group: Building3
 		LowPowerSlowdown: 2 
@@ -247,6 +255,14 @@ ZIGGURAT1:
 ZIGGURAT2:
 	Inherits: ZIGGURAT1
 	Inherits@Hitshape: ^3x3Shape
+	WeatherArealProvider:
+		Intensity: 60,50,50,40,40,30,20,20,10,10
+	WithMovingSpriteEffect:
+		Image: fogcoulds
+		Sequences: cloud1,cloud2,cloud3,cloud4,cloud5,cloud6,cloud7,cloud8,cloud9,cloud10,cloud11
+		Palette: fogfade
+		MaximalDistance: 8c0
+		MaximumObjects: 4
 	Health:
 		HP: 600000
 	Building:
@@ -288,6 +304,14 @@ ZIGGURAT3:
 	-GrantConditionOnPrerequisite@SEALONE:
 	-GrantConditionOnPrerequisite@SEALTWO:
 	-GrantConditionOnPrerequisite@ZIGGUPP:
+	WeatherArealProvider:
+		Intensity: 60,60,50,50,50,40,40,30,20,20,10,10,10
+	WithMovingSpriteEffect:
+		Image: fogcoulds
+		Sequences: cloud1,cloud2,cloud3,cloud4,cloud5,cloud6,cloud7,cloud8,cloud9,cloud10,cloud11
+		Palette: fogfade
+		MaximalDistance: 10c0
+		MaximumObjects: 5
 	Inherits@Hitshape: ^4x4Shape
 	Health:
 		HP: 1000000
@@ -348,7 +372,7 @@ SPPOOL.penta:
 		Palette:
 		PlayerPalette: raplayer
 	Valued:
-		Cost: 0
+		Cost: 300
 	Tooltip:
 		Name: Summoning (Essence pool)
 	Health:
@@ -361,12 +385,13 @@ SPPOOL.penta:
 		SummoningTime: 45
 		Cost: 300
 		Animations: step1, step2, step3, step4
+	UndeadBuilderSeller:
 	Buildable:
 		IconPalette: raicon
 		BuildPaletteOrder: 100
 		Description: Summons an Essence pool.\n Stores some Essence.\n Can leech essence out of trees.\n  Grants the obelisk the ability to collect essence by converting battlefield loot.
 		Queue: MResources.ded
-		BuildDuration: 10
+		BuildDuration: 1125
 	WithRangeCircle:
 		Type: TreesHarvest
 		Range: 12c0
@@ -378,7 +403,7 @@ CRYPT.penta:
 		Palette:
 		PlayerPalette: raplayer
 	Valued:
-		Cost: 0
+		Cost: 850
 	Tooltip:
 		Name: Summoning (Crypt)
 	Buildable:
@@ -387,7 +412,7 @@ CRYPT.penta:
 		Prerequisites: seal1
 		Description: Summons a Crypt.\n  Crypt summons basic skeletons\n  Increases the number of possible skeletons over time\n  Summons up to 3 gravestones each giving grave space\n 
 		Queue: MMilitary.ded
-		BuildDuration: 10
+		BuildDuration: 1250
 	Health:
 		HP: 50000
 	RevealsShroud:
@@ -401,7 +426,7 @@ CRYPT.penta:
 		SummoningTime: 50
 		Cost: 850
 		Animations: step1, step2, step3, step4, step5, step6
-	UndeadSummonSeller:
+	UndeadBuilderSeller:
 MAUSO.penta:
 	Inherits: ^Mediumpenta
 	RenderSprites:
@@ -409,7 +434,7 @@ MAUSO.penta:
 		Palette:
 		PlayerPalette: raplayer
 	Valued:
-		Cost: 0
+		Cost: 1400
 	Tooltip:
 		Name: Summoning (Tomb)
 	Buildable:
@@ -418,7 +443,7 @@ MAUSO.penta:
 		Description: Summons a Tomb.\n  Tomb summons advanced skeletons\n  Increases the number of possible skeletons over time\n  Summons up to 2 coffins each giving grave space\n 
 		Prerequisites: seal4, ~ziggurat2
 		Queue: MMilitary.ded
-		BuildDuration: 10
+		BuildDuration: 2500
 	Health:
 		HP: 50000
 	RevealsShroud:
@@ -429,6 +454,7 @@ MAUSO.penta:
 		SummoningTime: 100
 		Cost: 1400
 		Animations: step1, step2, step3, step4, step5, step6, step7, step8
+	UndeadBuilderSeller:
 LIBRA.penta:
 	Inherits: ^Mediumpenta
 	RenderSprites:
@@ -436,7 +462,7 @@ LIBRA.penta:
 		Palette:
 		PlayerPalette: raplayer
 	Valued:
-		Cost: 0
+		Cost: 700
 	Tooltip:
 		Name: Summoning (Library)
 	Buildable:
@@ -445,7 +471,7 @@ LIBRA.penta:
 		Description: Summons a Library.\n  Library grants access to Supportpowers\n 
 		Prerequisites: ~ziggurat2
 		Queue: MMilitary.ded
-		BuildDuration: 10
+		BuildDuration: 1500
 	Health:
 		HP: 50000
 	RevealsShroud:
@@ -456,6 +482,7 @@ LIBRA.penta:
 		SummoningTime: 60
 		Cost: 700
 		Animations: step1, step2, step3, step4, step5, step6, step7, step8
+	UndeadBuilderSeller:
 TOMB.penta:
 	Inherits: ^Largepenta
 	RenderSprites:
@@ -463,7 +490,7 @@ TOMB.penta:
 		Palette:
 		PlayerPalette: raplayer
 	Valued:
-		Cost: 0
+		Cost: 1500
 	Tooltip:
 		Name: Summoning (Mausoleum)
 	Buildable:
@@ -472,7 +499,7 @@ TOMB.penta:
 		Description: Summons a Mausoleum.\n  Mausoleum trains advanced no skeletal units\n\n 
 		Prerequisites: seal2
 		Queue: MMilitary.ded
-		BuildDuration: 10
+		BuildDuration: 2875
 	Health:
 		HP: 100000
 	RevealsShroud:
@@ -483,6 +510,7 @@ TOMB.penta:
 		SummoningTime: 115
 		Cost: 1500
 		Animations: step1, step2, step3, step4, step5, step6, step7, step8
+	UndeadBuilderSeller:
 HELLGATE.penta:
 	Inherits: ^Largepenta
 	RenderSprites:
@@ -509,7 +537,7 @@ DEDREF.penta:
 		Palette:
 		PlayerPalette: raplayer
 	Valued:
-		Cost: 0
+		Cost: 1600
 	Tooltip:
 		Name: Summoning (Sacrifice Temple)
 	Buildable:
@@ -518,7 +546,7 @@ DEDREF.penta:
 		Prerequisites: sppool
 		Description: Summons a Sacrifice Temple.\n  Sacrifice Temple Convert resources into essence.\n Spawns 2 Collector wich will then automaticly harvest resources nearby.\n 
 		Queue: MResources.ded
-		BuildDuration: 10
+		BuildDuration: 1875
 	Health:
 		HP: 50000
 	RevealsShroud:
@@ -530,6 +558,7 @@ DEDREF.penta:
 		SummoningTime: 75
 		Cost: 1600
 		Animations: step1, step2, step3, step4, step5
+	UndeadBuilderSeller:
 	RenderActorArc:
 		UsePlayerColor: true
 		Offset: 0,0,2048
@@ -586,6 +615,8 @@ GRAFENCE:
 SPPOOL:
 	Inherits: ^MWUndeadBuilding
 	Inherits@Hitshape: ^2x2Shape
+	WeatherArealProvider:
+		Intensity: 50,40,30,25,20,15,10
 	MapEditorData:
 		Categories: Undead
 	Armor:
@@ -613,8 +644,8 @@ SPPOOL:
 	WithBuildingBib:
 		Palette: bibs
 	WithMakeAnimation:
-	ShakeOnCreate:
-		Time: 55
+		UndoSequence: oldmake
+	Sellable:
 	StoresResources:
 		PipColor: Red
 		PipCount: 10
@@ -650,6 +681,14 @@ SPPOOL:
 CRYPT:
 	Inherits: ^MWUndeadBuilding
 	Inherits@Hitshape: ^2x2Shape
+	WeatherArealProvider:
+		Intensity: 50,40,30,25,20,15,10
+	WithMovingSpriteEffect:
+		Image: fogcoulds
+		Sequences: cloud1,cloud2,cloud3,cloud4,cloud5,cloud6,cloud7,cloud8,cloud9,cloud10,cloud11
+		Palette: fogfade
+		MaximalDistance: 6c0
+		MaximumObjects: 2
 	MapEditorData:
 		Categories: Undead
 	Armor:
@@ -677,8 +716,8 @@ CRYPT:
 	WithBuildingBib:
 		Palette: bibs
 	WithMakeAnimation:
-	ShakeOnCreate:
-		Time: 50
+		UndoSequence: oldmake
+	Sellable:
 	WithIdleOverlay@one:
 		Sequence: burnloop1
 		Palette: terrain
@@ -709,6 +748,14 @@ CRYPT:
 MAUSO:
 	Inherits: ^MWUndeadBuilding
 	Inherits@Hitshape: ^2x2Shape
+	WeatherArealProvider:
+		Intensity: 50,40,30,25,20,15,10
+	WithMovingSpriteEffect:
+		Image: fogcoulds
+		Sequences: cloud1,cloud2,cloud3,cloud4,cloud5,cloud6,cloud7,cloud8,cloud9,cloud10,cloud11
+		Palette: fogfade
+		MaximalDistance: 7c0
+		MaximumObjects: 2
 	MapEditorData:
 		Categories: Undead
 	Armor:
@@ -736,8 +783,8 @@ MAUSO:
 	WithBuildingBib:
 		Palette: bibs
 	WithMakeAnimation:
-	ShakeOnCreate:
-		Time: 55
+		UndoSequence: oldmake
+	Sellable:
 	Exit:
 		SpawnOffset: 0,1105,0
 		ExitCell: 0,2
@@ -788,6 +835,8 @@ MAUSO:
 LIBRA:
 	Inherits: ^MWUndeadBuilding
 	Inherits@Hitshape: ^2x2Shape
+	WeatherArealProvider:
+		Intensity: 50,40,30,25,20,15,10
 	MapEditorData:
 		Categories: Undead
 	Armor:
@@ -815,8 +864,8 @@ LIBRA:
 	WithBuildingBib:
 		Palette: bibs
 	WithMakeAnimation:
-	ShakeOnCreate:
-		Time: 55
+		UndoSequence: oldmake
+	Sellable:
 	ProvidesPrerequisite@buildingname:
 	AirstrikePower:
 		Icon: handaicon
@@ -844,6 +893,14 @@ LIBRA:
 TOMB:
 	Inherits: ^MWUndeadBuilding
 	Inherits@Hitshape: ^3x2Shape
+	WeatherArealProvider:
+		Intensity: 50,40,30,25,20,15,10
+	WithMovingSpriteEffect:
+		Image: fogcoulds
+		Sequences: cloud1,cloud2,cloud3,cloud4,cloud5,cloud6,cloud7,cloud8,cloud9,cloud10,cloud11
+		Palette: fogfade
+		MaximalDistance: 7c0
+		MaximumObjects: 2
 	MapEditorData:
 		Categories: Undead
 	Armor:
@@ -871,7 +928,8 @@ TOMB:
 	WithBuildingBib:
 		Palette: bibs
 	WithMakeAnimation:
-	ShakeOnCreate:
+		UndoSequence: oldmake
+	Sellable:
 		Time: 55
 	Exit:
 		SpawnOffset: -595,338,0
@@ -918,12 +976,18 @@ HELLGATE:
 	WithBuildingBib:
 		Palette: bibs
 	WithMakeAnimation:
-	ShakeOnCreate:
-		Time: 150
 	ProvidesPrerequisite@buildingname:
 DEDREF:
 	Inherits: ^MWUndeadBuilding
 	Inherits@Hitshape: ^2x2Shape
+	WeatherArealProvider:
+		Intensity: 70,60,50,40,30,25,20,15,10
+	WithMovingSpriteEffect:
+		Image: fogcoulds
+		Sequences: cloud1,cloud2,cloud3,cloud4,cloud5,cloud6,cloud7,cloud8,cloud9,cloud10,cloud11
+		Palette: fogfade
+		MaximalDistance: 6c0
+		MaximumObjects: 2
 	MapEditorData:
 		Categories: Undead
 	Armor:
@@ -951,8 +1015,8 @@ DEDREF:
 	WithBuildingBib:
 		Palette: bibs
 	WithMakeAnimation:
-	ShakeOnCreate:
-		Time: 30
+		UndoSequence: oldmake
+	Sellable:
 	ProvidesPrerequisite@buildingname:
 	RenderActorArc:
 		UsePlayerColor: true
@@ -1115,12 +1179,9 @@ COFFIN:
 	ExternalCondition@validc:
 		Condition: validc
 OBELISK:
-	Inherits: ^MWDefense
+	Inherits: ^MWUndeadDefense
 	Inherits@Hitshape: ^1x1Shape
 	Inherits@AUTOTARGET: ^AutoTargetAll
-	RequiresBuildableArea:
-		AreaTypes: undeadbuilding
-		Adjacent: 4
 	Armor:
 		Type: Concrete
 	WithDeathAnimation:
@@ -1129,6 +1190,7 @@ OBELISK:
 		PlayerPalette: raplayer
 	WithMakeAnimation:
 		Condition: build-incomplete
+	Sellable:
 	Valued:
 		Cost: 2500
 	Tooltip:
@@ -1175,14 +1237,12 @@ OBELISK:
 		Queue: MMilitary.ded
 		BuildDuration: 2500
 GARG:
-	Inherits: ^MWDefense
+	Inherits: ^MWUndeadDefense
 	Inherits@AUTOTARGET: ^AutoTargetGround
 	Inherits@Hitshape: ^1x1Shape
-	RequiresBuildableArea:
-		AreaTypes: undeadbuilding
-		Adjacent: 4
 	WithMakeAnimation:
 		Condition: build-incomplete
+	Sellable:
 	MapEditorData:
 		Categories: Defense
 	Valued:
@@ -1198,9 +1258,6 @@ GARG:
 		HP: 35000
 	RevealsShroud:
 		Range: 8c0
-	WithBuildingBib:
-		Palette: bibs
-		HasMinibib: Yes
 	Armament@1:
 		Weapon: GargAttack
 		LocalOffset: 512,0,1148
@@ -1214,6 +1271,7 @@ GARG:
 	SelectionDecorations:
 	WithIdleOverlay:
 		Sequence: overlay
+		RequiresCondition: !build-incomplete
 	RenderSprites:
 		Image: garg
 		PlayerPalette: raplayer
