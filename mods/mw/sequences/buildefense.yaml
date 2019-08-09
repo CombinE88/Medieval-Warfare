@@ -550,9 +550,59 @@ garg:
 		Start: 61
 		Tick: 800
 		Offset: 0,-12,0
-	make: 
+	oldmake:  
 		Length: 25
 		Tick: 80
+		Offset: 0,-12,0
+	make: gargmake_n
+		Start: 50
+		Length: 10
+		Tick: 100
+		Offset: 0,-12,0
+	step1: gargmake_n
+		Start: 10
+		Length: 1
+		Offset: 0,-12,0
+	step1-make: gargmake_n
+		Start: 0
+		Length: 10
+		Tick: 100
+		Offset: 0,-12,0
+	step2: gargmake_n
+		Start: 20
+		Length: 1
+		Offset: 0,-12,0
+	step2-make: gargmake_n
+		Start: 10
+		Length: 10
+		Tick: 100
+		Offset: 0,-12,0
+	step3: gargmake_n
+		Start: 30
+		Length: 1
+		Offset: 0,-12,0
+	step3-make: gargmake_n
+		Start: 20
+		Length: 10
+		Tick: 100
+		Offset: 0,-12,0
+	step4: gargmake_n
+		Start: 40
+		Length: 1
+		Offset: 0,-12,0
+	step4-make: gargmake_n
+		Start: 30
+		Length: 10
+		Tick: 100
+		Offset: 0,-12,0
+	step5: gargmake_n
+		Start: 50
+		Length: 1
+		Offset: 0,-12,0
+	step5-make: gargmake_n
+		Start: 40
+		Length: 10
+		Tick: 100
 		Offset: 0,-12,0
 	bib: buildingbibs.png
 		Start: 36
@@ -582,10 +632,21 @@ obelisk:
 		Offset: 0,-5
 		Start: 2
 		Tick: 800
-	make: obeliskmake
+	oldmake: obeliskmake_n
 		Length: *
 		Tick: 80
 		Offset: 0,-5
+	make: obeliskmake_n
+		Start: 21
+		Length: 30
+		Tick: 100
+	step1: obeliskmake_n
+		Start: 21
+		Length: 1
+	step1-make: obeliskmake_n
+		Start: 0
+		Length: 21
+		Tick: 100
 	icon: obeliskicon.shp
 		AddExtension: False
 cstlgtew:

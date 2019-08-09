@@ -396,6 +396,70 @@ SPPOOL.penta:
 		Type: TreesHarvest
 		Range: 12c0
 		UsePlayerColor: true
+GARG.penta:
+	Inherits: ^Smallpenta
+	RenderSprites:
+		Image: garg
+		Palette:
+		PlayerPalette: raplayer
+	Valued:
+		Cost: 1100
+	Tooltip:
+		Name: Summoning (Gargoyle)
+	Health:
+		HP: 50000
+	RevealsShroud:
+		Range: 4c0
+	UndeadBuilder:
+		SpawnActor: garg
+		SpawnOffset: 1,1
+		SummoningTime: 60
+		Cost: 1100
+		Animations: step1, step2, step3, step4, step5
+	UndeadBuilderSeller:
+	Buildable:
+		IconPalette: raicon
+		BuildPaletteOrder: 60
+		Description: Summons a defensive statue attacking with fire.\n  Strong vs Infantry, Light Cavalry\n  Weak vs Siege weapons and Heavy Cavalry \n\n 
+		Prerequisites: seal1
+		Queue: MMilitary.ded
+		BuildDuration: 1100
+	WithRangeCircle:
+		Type: TreesHarvest
+		Range: 7c0
+		UsePlayerColor: true
+OBELISK.penta:
+	Inherits: ^Smallpenta
+	RenderSprites:
+		Image: obelisk
+		Palette:
+		PlayerPalette: raplayer
+	Valued:
+		Cost: 2500
+	Tooltip:
+		Name: Summoning (Obelisk)
+	Health:
+		HP: 50000
+	RevealsShroud:
+		Range: 4c0
+	UndeadBuilder:
+		SpawnActor: obelisk
+		SpawnOffset: 1,1
+		SummoningTime: 120
+		Cost: 2500
+		Animations: step1
+	UndeadBuilderSeller:
+	Buildable:
+		IconPalette: raicon
+		BuildPaletteOrder: 70
+		Description: Summons a defensive statue attacking with lightning.\n  Strong vs all\n  Weak vs Siege weapons\n  can target Aircraft\n  Transforms battlefield loot to essence, requires Essence pool
+		Prerequisites: seal3, ~ziggurat2
+		Queue: MMilitary.ded
+		BuildDuration: 2500
+	WithRangeCircle:
+		Type: TreesHarvest
+		Range: 7c0
+		UsePlayerColor: true
 CRYPT.penta:
 	Inherits: ^Mediumpenta
 	RenderSprites:
@@ -456,7 +520,7 @@ MAUSO.penta:
 		Animations: step1, step2, step3, step4, step5, step6, step7, step8
 	UndeadBuilderSeller:
 LIBRA.penta:
-	Inherits: ^Mediumpenta
+	Inherits: ^Largepenta
 	RenderSprites:
 		Image: libra
 		Palette:
@@ -481,7 +545,7 @@ LIBRA.penta:
 		SpawnOffset: 1,1
 		SummoningTime: 60
 		Cost: 700
-		Animations: step1, step2, step3, step4, step5, step6, step7, step8
+		Animations: step1, step2
 	UndeadBuilderSeller:
 TOMB.penta:
 	Inherits: ^Largepenta
@@ -531,7 +595,7 @@ HELLGATE.penta:
 		SummoningTime: 155
 		Cost: 2000
 DEDREF.penta:
-	Inherits: ^Mediumpenta
+	Inherits: ^Largepenta
 	RenderSprites:
 		Image: dedref
 		Palette:
@@ -664,12 +728,8 @@ SPPOOL:
 	AttackTurreted:
 		IgnoresVisibility: true	
 	Armament@Leech:
-		Weapon: EssenceChopper
+		Weapon: EssenceEnabler
 		TargetStances: Ally, Neutral
-	Armament@GatherLeech:
-		Weapon: EssenceLeecher
-		TargetStances: Ally, Neutral
-		Name: secondary
 	WithRangeCircle:
 		Type: TreesHarvest
 		Range: 12c0
@@ -708,7 +768,7 @@ CRYPT:
 		LocalCenterOffset: 0,-512,0
 	Health:
 		HP: 50000
-	RevealsShroud:
+	RevealsShroud: 
 		Range: 6c0
 	Selectable:
 		Bounds: 48,48,0,0
@@ -717,13 +777,16 @@ CRYPT:
 		Palette: bibs
 	WithMakeAnimation:
 		UndoSequence: oldmake
+		Condition: building
 	Sellable:
 	WithIdleOverlay@one:
 		Sequence: burnloop1
 		Palette: terrain
+		RequiresCondition: !building
 	WithIdleOverlay@two:
 		Sequence: burnloop2
 		Palette: terrain
+		RequiresCondition: !building
 	Exit:
 		SpawnOffset: -298,638,0
 		ExitCell: 0,2
@@ -834,7 +897,7 @@ MAUSO:
 	SupportPowerChargeBar:
 LIBRA:
 	Inherits: ^MWUndeadBuilding
-	Inherits@Hitshape: ^2x2Shape
+	Inherits@Hitshape: ^3x3Shape
 	WeatherArealProvider:
 		Intensity: 50,40,30,25,20,15,10
 	MapEditorData:
@@ -851,15 +914,15 @@ LIBRA:
 	Tooltip:
 		Name: Library
 	Building:
-		Footprint: xx xx ==
-		Dimensions: 2,3
+		Footprint: xxx xxx xxx ===
+		Dimensions: 3,4
 		LocalCenterOffset: 0,-512,0
 	Health:
 		HP: 120000
 	RevealsShroud:
 		Range: 4c0
 	Selectable:
-		Bounds: 50,50,0,-2
+		Bounds: 72,72,0,-14
 	SelectionDecorations:
 	WithBuildingBib:
 		Palette: bibs
@@ -870,7 +933,7 @@ LIBRA:
 	AirstrikePower:
 		Icon: handaicon
 		ChargeInterval: 5250
-		SquadOffset:	-236,236,0
+		SquadOffset: -236,236,0
 		SquadSize: 3
 		QuantizedFacings: 8
 		Description: Attack from below
@@ -979,7 +1042,7 @@ HELLGATE:
 	ProvidesPrerequisite@buildingname:
 DEDREF:
 	Inherits: ^MWUndeadBuilding
-	Inherits@Hitshape: ^2x2Shape
+	Inherits@Hitshape: ^3x2Shape
 	WeatherArealProvider:
 		Intensity: 70,60,50,40,30,25,20,15,10
 	WithMovingSpriteEffect:
@@ -1002,15 +1065,15 @@ DEDREF:
 	Tooltip:
 		Name: Sacrifice Temple
 	Building:
-		Footprint: xx xx ==
-		Dimensions: 2,3
+		Footprint: xxx xxx ===
+		Dimensions: 3,3
 		LocalCenterOffset: 0,-512,0
 	Health:
 		HP: 90000
 	RevealsShroud:
 		Range: 6c0
 	Selectable:
-		Bounds: 50,72,0,-12
+		Bounds: 72,96,0,-30
 	SelectionDecorations:
 	WithBuildingBib:
 		Palette: bibs
@@ -1196,8 +1259,8 @@ OBELISK:
 	Tooltip:
 		Name: Obelisk
 	Building:
-		Footprint: _=_ =x= _=_
-		Dimensions: 3,3
+		Footprint: x
+		Dimensions: 1,1
 	AutoTarget:
 	Health:
 		HP: 60000
@@ -1229,13 +1292,6 @@ OBELISK:
 		Prerequisites: sppool
 	SpawnActorsOnSell:
 		ActorTypes: preycolyte,undead1
-	Buildable:
-		IconPalette: raicon
-		BuildPaletteOrder: 70
-		Description: Summons a defensive statue attacking with lightning.\n  Strong vs all\n  Weak vs Siege weapons\n  can target Aircraft\n  Transforms battlefield loot to essence, requires Essence pool
-		Prerequisites: seal3, ~ziggurat2
-		Queue: MMilitary.ded
-		BuildDuration: 2500
 GARG:
 	Inherits: ^MWUndeadDefense
 	Inherits@AUTOTARGET: ^AutoTargetGround
@@ -1252,8 +1308,8 @@ GARG:
 	Tooltip:
 		Name: Gargoyle
 	Building:
-		Footprint: _=_ =x= _=_
-		Dimensions: 3,3
+		Footprint: x
+		Dimensions: 1,1
 	Health:
 		HP: 35000
 	RevealsShroud:
@@ -1288,10 +1344,3 @@ GARG:
 		TargetTypes: Defenses
 	SpawnActorsOnSell:
 		ActorTypes: undead1,undead1
-	Buildable:
-		IconPalette: raicon
-		BuildPaletteOrder: 60
-		Description: Summons a defensive statue attacking with fire.\n  Strong vs Infantry, Light Cavalry\n  Weak vs Siege weapons and Heavy Cavalry \n\n 
-		Prerequisites: seal1
-		Queue: MMilitary.ded
-		BuildDuration: 1100

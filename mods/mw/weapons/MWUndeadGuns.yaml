@@ -783,24 +783,24 @@ GrimSpawn:
 	Warhead@1Spawneffect: CreateEffect
 		Explosions: grimsummon
 ObeliskLight:
-	ReloadDelay: 65
+	ReloadDelay: 227
 	Range: 8c512
-	Burst: 4
-	BurstDelays: 10
 	Report: lightning1.aud, lightning2.aud
 	ValidTargets: Ground, Air
-	Projectile: TeslaZap
-		Image: zombspark   
-		Palette: raicon
-		DimZaps: 1
-		BrightZaps: 1
+	Projectile: LaserArc
+		SegmentLength: 0c256
+		Distortion: 600
+		Color: 008000
+		DistortionAnimation: 300
+		Radius: 4
+		Duration: 5
 	Warhead@2Smu: LeaveSmudge
 		SmudgeType: Scorch
 		InvalidTargets: Vehicle, Structure, Wall
 	Warhead@1Dam: SpreadDamage
 		Spread: 141
 		ValidTargets: Ground, Air
-		Damage: 2500
+		Damage: 10000
 		Versus:
 			Leather: 300
 			Light: 250
@@ -812,6 +812,9 @@ ObeliskLight:
 			HeavyCavalry: 100
 			HeavyBuilding: 100
 		DamageTypes: RippedApartDeath, SpawnSoul
+	Warhead@5Eff: CreateEffect
+		Explosions: obnuke
+		ExplosionPalette: fire
 RealDeath:
 	ValidTargets: Ground, Air
 	Warhead@1Eff_impact: CreateEffect
@@ -1113,52 +1116,18 @@ GrimReaper:
 	Warhead@SpawnEffect: CreateEffect
 		Explosions: summoning
 		ExplosionPalette : grimspawnalpha
-EssenceChopper:
-	ReloadDelay: 25
-	Range: 12c0
-	InvalidTargets: Air
-	ValidTargets: ChoppableTree
-	Projectile: TeslaZap
-		Image: zombspark   
-		Palette: projectilealpha
-		Duration: 25
-	Warhead@1Dam: SpreadDamage
-		Spread: 256
-		Damage: 2000
-		InvalidTargets: Air
-		ValidTargets: ChoppableTree
-		Versus:
-			Leather: 100
-			Light: 100
-			Heavy: 100
-			Concrete: 100
-			Knight: 100
-			LightCavalry: 100
-			MediumCavalry: 100
-			HeavyCavalry: 100
-			HeavyBuilding: 100
-			Spectral: 100
-		DamageTypes: LumberDead
-	Warhead@Trade: GrantExternalCondition
-		ValidTargets: ChoppableTree
-		Range: 1c0
-		Duration: 250
-		Condition: Corrupted
-		ValidStances: Enemy, Neutral, Ally
-EssenceLeecher:
+EssenceEnabler:
 	ReloadDelay: 100
 	Range: 12c0
 	InvalidTargets: Air
-	ValidTargets: Choptree, ChoptreeCorrupt
-	Projectile: TeslaZap
-		Image: zombspark   
-		Palette: projectilealpha
-		Duration: 100
+	ValidTargets: Choptree, ChoptreeCorrupt, ChoppableTree
+	Projectile: Bullet
+		Speed: 1c382
 	Warhead@1Dam: SpreadDamage
 		Spread: 256
 		Damage: 500
 		InvalidTargets: Air
-		ValidTargets: Choptree, ChoptreeCorrupt
+		ValidTargets: Choptree, ChoptreeCorrupt, ChoppableTree
 		Versus:
 			Leather: 100
 			Light: 100
@@ -1171,12 +1140,29 @@ EssenceLeecher:
 			HeavyBuilding: 100
 			Spectral: 100
 		DamageTypes: DefaultDeath
-	Warhead@Trade: GrantExternalCondition
-		ValidTargets: Choptree, ChoptreeCorrupt
-		Range: 1c0
-		Duration: 250
-		Condition: Corrupted
-		ValidStances: Enemy, Neutral, Ally
+	Warhead@2Backfire: BackFireShrapnel
+		Weapon: EssenceBouncer
+		ValidTargets: Ground
+		InvalidTargets: Air
+EssenceBouncer:
+	ReloadDelay: 45
+	Range: 8c512
+	MinRange: 0c0
+	ValidTargets: Air, Ground
+	Projectile: Missile
+		HorizontalRateOfTurn: 60
+		RangeLimit: 15c204
+		Arm: 0
+		Speed: 150
+		Inaccuracy: 0c0
+		Image: essence
+		Palette: alphahalf
+		Blockable: false
+	Warhead@1Dam: SpreadDamage
+		Spread: 16
+		ValidTargets:  Air, Ground
+		Damage: 0
+		AffectsParent: true
 	Warhead@GrantMonez: CashTick
 		Ammount: 45
 		ValidStances: Ally

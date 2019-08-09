@@ -206,6 +206,7 @@
 	Selectable:
 		Bounds: 24,24
 	Aircraft:
+		CruiseAltitude: 2560
 		LandWhenIdle: false
 		CanHover: True
 		CruisingCondition: cruising

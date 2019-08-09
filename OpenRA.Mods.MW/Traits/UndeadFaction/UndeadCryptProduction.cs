@@ -153,7 +153,7 @@ namespace OpenRA.Mods.MW.Traits
             {
                 var newUnit = self.World.CreateActor(producee.Name, td);
 
-                if (newUnit.Info.HasTraitInfo<WithMakeAnimationInfo>() && respawner == self)
+                if (newUnit.Info.HasTraitInfo<UndeadSpawnAnimationInfo>() && respawner == self)
                 {
                     var move = newUnit.TraitOrDefault<IMove>();
                     if (move != null)
@@ -163,7 +163,7 @@ namespace OpenRA.Mods.MW.Traits
                             if (exitinfo.ExitDelay > 0)
                                 newUnit.QueueActivity(new Wait(exitinfo.ExitDelay, false));
 
-                            newUnit.Trait<WithMakeAnimation>().Forward(newUnit, () =>
+                            newUnit.Trait<UndeadSpawnAnimation>().Forward(newUnit, () =>
                             {
                                 newUnit.QueueActivity(move.MoveIntoWorld(newUnit, exit));
                                 newUnit.QueueActivity(new AttackMoveActivity(
@@ -192,7 +192,7 @@ namespace OpenRA.Mods.MW.Traits
                             if (exitinfo.ExitDelay > 0)
                                 newUnit.QueueActivity(new Wait(exitinfo.ExitDelay, false));
 
-                            newUnit.Trait<WithMakeAnimation>().Forward(newUnit, () =>
+                            newUnit.Trait<UndeadSpawnAnimation>().Forward(newUnit, () =>
                             {
                                 newUnit.QueueActivity(move.MoveIntoWorld(newUnit, exit));
                                 newUnit.QueueActivity(new AttackMoveActivity(

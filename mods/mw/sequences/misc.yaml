@@ -216,6 +216,7 @@ explosion:
 	poof: art-exp1 # For UnitExplode (artillery), artillery shell hit, building explosion and GrenadierExplode
 	small_building: veh-hit1 # Used for heli-explosion in C&C Gold?
 	building: fball1
+	obnuke: obnuke
 	building_napalm: napalm2
 		FlipX: true
    	gianthand: acolytebattack

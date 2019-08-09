@@ -69,7 +69,6 @@ namespace OpenRA.Mods.MW.Traits.BuildingTraits
 		public new void BeginProduction(ProductionItem item, bool hasPriority)
 		{
 			return;
-			base.BeginProduction(item, hasPriority);
 		}
 
 		public override int GetBuildTime(ActorInfo unit, BuildableInfo bi)

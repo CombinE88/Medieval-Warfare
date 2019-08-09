@@ -128,10 +128,10 @@ sppool:
 		Tick: 800
 	oldmake: 
 		Length: 37
-		Tick: 140
+		Tick: 60
 	make: sppoolmake_n
 		Start: 41
-		Length: 25
+		Length: 34
 		Tick: 100
 	bib: buildingbibs.png
 		Frames: 4,5,10,11
@@ -182,7 +182,7 @@ crypt:
 		Tick: 80
 	oldmake:
 		Length: 23
-		Tick: 200
+		Tick: 60
 	damaged-idle:
 		Start: 15
 		Length: 15
@@ -192,7 +192,7 @@ crypt:
 		Tick: 800
 	make: cryptmake_n
 		Start: 71
-		Length: 9
+		Length: 29
 		Tick: 100
 	bib: buildingbibs.png
 		Frames: 4,5,10,11
@@ -267,7 +267,7 @@ mauso:
 		Start: 23
 	oldmake:
 		Length: 23
-		Tick: 200
+		Tick: 60
 	damaged-idle:
 		Start: 24
 	dead:
@@ -275,7 +275,7 @@ mauso:
 		Tick: 800
 	make: tombmake_n
 		Start: 81
-		Length: 7
+		Length: 23
 		Tick: 100
 	step1: tombmake_n
 		Start: 10
@@ -341,92 +341,53 @@ mauso:
 		AddExtension: False
 libra: 
 	Inherits: ^pentagram
-	idle:
-		Start: 25
-	damaged-idle:
-		Start: 26
-	dead:
-		Start: 27
-		Tick: 800
-	oldmake:
-		Length: 25
+	idle: forblib
+		Start: 0
+		Length: *
 		Tick: 200
-	make: libramake_n
-		Start: 80
-		Length: 10
+	damaged-idle: forblibdamage
+		Start: 0
+		Length: *
+		Tick: 200
+	dead: forblibdead
+		Start: 0
+		Length: *
+		Tick: 200
+	oldmake: forblibmake
+		Length: *
+		Tick: 60
+	make: forblibmake
+		Start: 108
+		Length: 42
+		Tick: 100
+	step1: forblibmake
+		Start: 33
+		Length: 1
+	step1-make: forblibmake
+		Start: 17
+		Length: 16
+		Tick: 100
+	step2: forblibmake
+		Start: 108
+		Length: 1
+	step2-make: forblibmake
+		Start: 54
+		Length: 54
 		Tick: 100
 	bib: buildingbibs.png
-		Frames: 4,5,10,11
-		Length: 4
+		Frames: 12,13,14,18,19,20
+		Length: 6
 		AddExtension: false
-	step1: libramake_n
-		Start: 10
-		Length: 1
-	step1-make: libramake_n
-		Start: 0
-		Length: 10
-		Tick: 140
-	step2: libramake_n
-		Start: 20
-		Length: 1
-	step2-make: libramake_n
-		Start: 11
-		Length: 9
-		Tick: 140
-	step3: libramake_n
-		Start: 30
-		Length: 1
-	step3-make: libramake_n
-		Start: 21
-		Length: 9
-		Tick: 140
-	step4: libramake_n
-		Start: 40
-		Length: 1
-	step4-make: libramake_n
-		Start: 31
-		Length: 9
-		Tick: 140
-	step5: libramake_n
-		Start: 50
-		Length: 1
-	step5-make: libramake_n
-		Start: 41
-		Length: 9
-		Tick: 140
-	step6: libramake_n
-		Start: 60
-		Length: 1
-	step6-make: libramake_n
-		Start: 51
-		Length: 9
-		Tick: 140
-	step7: libramake_n
-		Start: 70
-		Length: 1
-	step7-make: libramake_n
-		Start: 61
-		Length: 9
-		Tick: 140
-	step8: libramake_n
-		Start: 80
-		Length: 1
-	step8-make: libramake_n
-		Start: 71
-		Length: 9
-		Tick: 140
-	icon: libraicon.shp
+	icon: libraicon_n.shp
 		AddExtension: False
 tomb: 
-	Defaults:		
-		Offset: 0,-12
 	Inherits: ^pentagram
 	idle:
 		Start: 25
 		Offset: 0,-12
 	oldmake:
 		Length: 25
-		Tick: 200
+		Tick: 60
 		Offset: 0,-12
 	damaged-idle:
 		Start: 26
@@ -437,65 +398,81 @@ tomb:
 		Offset: 0,-12
 	make: mausomake_n
 		Start: 81
-		Length: 9
+		Length: 24
 		Tick: 100
 		Offset: 0,-12
 	step1: mausomake_n
 		Start: 10
 		Length: 1
+		Offset: 0,-12
 	step1-make: mausomake_n
 		Start: 0
 		Length: 10
 		Tick: 140
+		Offset: 0,-12
 	step2: mausomake_n
 		Start: 20
 		Length: 1
+		Offset: 0,-12
 	step2-make: mausomake_n
 		Start: 11
 		Length: 9
 		Tick: 140
+		Offset: 0,-12
 	step3: mausomake_n
 		Start: 30
 		Length: 1
+		Offset: 0,-12
 	step3-make: mausomake_n
 		Start: 21
 		Length: 9
 		Tick: 140
+		Offset: 0,-12
 	step4: mausomake_n
 		Start: 40
 		Length: 1
+		Offset: 0,-12
 	step4-make: mausomake_n
 		Start: 31
 		Length: 9
 		Tick: 140
+		Offset: 0,-12
 	step5: mausomake_n
 		Start: 50
 		Length: 1
+		Offset: 0,-12
 	step5-make: mausomake_n
 		Start: 41
 		Length: 9
 		Tick: 140
+		Offset: 0,-12
 	step6: mausomake_n
 		Start: 60
 		Length: 1
+		Offset: 0,-12
 	step6-make: mausomake_n
 		Start: 51
 		Length: 9
 		Tick: 140
+		Offset: 0,-12
 	step7: mausomake_n
 		Start: 70
 		Length: 1
+		Offset: 0,-12
 	step7-make: mausomake_n
 		Start: 61
 		Length: 9
 		Tick: 140
+		Offset: 0,-12
 	step8: mausomake_n
 		Start: 80
 		Length: 1
+		Offset: 0,-12
 	step8-make: mausomake_n
 		Start: 71
 		Length: 9
 		Tick: 140
+		Offset: 0,-12
 	bib: buildingbibs.png
 		Frames: 12,13,14,18,19,20
 		Length: 6
@@ -505,68 +482,76 @@ tomb:
 		AddExtension: False
 		Offset: 0,0
 dedref: 
-	Defaults:		
-		Offset: 0,-12
 	Inherits: ^pentagram
 	idle: dedref_n
-		Length: *
+		Length: 20
 		Tick: 100
-		Offset: 0,-12
+		Offset: 0,-36
 	oldmake: dedrefmake
 		Length: *
 		Tick: 60
-		Offset: 0,-12
+		Offset: 0,-36
 	damaged-idle: dedref_n_d
-		Length: *
+		Length: 20
 		Tick: 100
-		Offset: 0,-12
+		Offset: 0,-36
 	dead:
 		Start: 2
 		Tick: 800
-		Offset: 0,-12
+		Offset: 0,-36
 	make: dedref_n_m
 		Start: 51
-		Length: 27
+		Length: 45
 		Tick: 100
-		Offset: 0,-12
+		Offset: 0,-36
 	step1: dedrefmake
 		Start: 10
 		Length: 1
+		Offset: 0,-36
 	step1-make: dedrefmake
 		Start: 0
 		Length: 10
 		Tick: 140
+		Offset: 0,-36
 	step2: dedrefmake
 		Start: 20
 		Length: 1
+		Offset: 0,-36
 	step2-make: dedrefmake
 		Start: 11
 		Length: 9
 		Tick: 140
+		Offset: 0,-36
 	step3: dedrefmake
 		Start: 30
 		Length: 1
+		Offset: 0,-36
 	step3-make: dedrefmake
 		Start: 21
 		Length: 9
 		Tick: 140
+		Offset: 0,-36
 	step4: dedrefmake
 		Start: 40
 		Length: 1
+		Offset: 0,-36
 	step4-make: dedrefmake
 		Start: 31
 		Length: 9
 		Tick: 140
+		Offset: 0,-36
 	step5: dedrefmake
 		Start: 50
 		Length: 1
+		Offset: 0,-36
 	step5-make: dedrefmake
 		Start: 41
 		Length: 9
 		Tick: 140
+		Offset: 0,-36
 	bib: buildingbibs.png
-		Frames: 4,5,10,11
-		Length: 4
+		Frames: 12,13,14,18,19,20
+		Length: 6
 		AddExtension: false
 		Offset: 0,0
 	icon: dedref_n_icon.shp

@@ -65,6 +65,12 @@ warkite:
 		Offset: 0,-4,0
 	icon: warkiteicon.shp
 		AddExtension: False 
+spybln:
+	idle: 
+		Start: 0
+		Offset: 0,-36,0
+	icon: spyblnicon.shp
+		AddExtension: False 
 warkitehusk:
 	idle: 
 		Start: 0

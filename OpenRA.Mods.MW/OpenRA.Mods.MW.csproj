@@ -43,9 +43,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Activities\FallDown.cs" />
+    <Compile Include="Graphics\LaserRenderable.cs" />
     <Compile Include="Projectiles\AthenaProjectile.cs" />
     <Compile Include="Projectiles\BezierBullet.cs" />
     <Compile Include="Projectiles\InstantExplode.cs" />
+    <Compile Include="Projectiles\Laser.cs" />
+    <Compile Include="Projectiles\LaserArc.cs" />
     <Compile Include="Render\OverlayPlayerColorPalette.cs" />
     <Compile Include="Traits\Activites\Instanttransforms.cs" />
     <Compile Include="Traits\Activites\FindPrey.cs" />
@@ -70,6 +73,7 @@
     <Compile Include="Traits\UndeadFaction\AcolytePreyBuildInfo.cs" />
     <Compile Include="Traits\UndeadFaction\AcolytePreyInfo.cs" />
     <Compile Include="Traits\Render\RenderActorArc.cs" />
+    <Compile Include="Traits\UndeadFaction\UndeadSpawnAnimation.cs" />
     <Compile Include="Traits\UndeadFaction\UndeadSummoningProductionQueue.cs" />
     <Compile Include="Traits\UndeadFaction\WeatherArealProvider.cs" />
     <Compile Include="Traits\UndeadFaction\UndeadBuilderSeller.cs" />

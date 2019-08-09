@@ -24,7 +24,7 @@ WARKITE:
 	Armor:
 		Type: LightCavalry
 	RevealsShroud:
-		Range: 14c0
+		Range: 6c0
 		Type: CenterPosition
 	Armament:
 		Name: primary
@@ -160,3 +160,86 @@ PLACEHOLDERPLANE:
 	Armament@BOMBS:
 		Name: bombs
 		Weapon: none
+SPYBLN:
+	Inherits: ^Helicopter
+	Inherits@EXPERIENCE: ^GainsExperience
+	HitShape:
+	Valued:
+		Cost: 650
+	Tooltip:
+		Name: Spy Balloon
+	Buildable:
+		Description: The Spy Ballon is an unarmed hotair balloon.\n  Strong vs nothing\n  Weak vs all\n\nTrains: 1 Peasant\n
+		BuildPaletteOrder: 35
+		Queue: MSiege.Nod
+		BuildDurationModifier: 40
+		IconPalette: raicon
+	Aircraft:
+		Speed: 20
+		CruiseAltitude: 4096
+	Health:
+		HP: 7500
+	Armor:
+		Type: LightCavalry
+	RevealsShroud:
+		Range: 15c0
+		Type: CenterPosition
+	AttackAircraft:
+		FacingTolerance: 20
+	RenderSprites:
+		Image: spybln
+		PlayerPalette: raplayer
+	AutoTarget:
+	Voiced:
+		VoiceSet: VehicleVoice
+	SpawnActorOnDeath@1:
+		Actor: SPYBLN.Husk
+	Power:
+		Amount: -1
+	Targetable@CombatRole:
+		TargetTypes: Flying
+	SelectionDecorations:
+	Selectable:
+		Bounds: 25,68,0,-36
+SPYBLN.Husk:
+	Inherits@1: ^SpriteActor
+	Interactable:
+	HitShape:
+	ThrowsShrapnel@Small:
+		Weapons: SmallWood2, SmallWood3
+		Pieces: 1, 3
+		Range: 1c512, 3c0
+	Health:
+		HP: 280
+	Armor:
+		Type: Heavy
+	HiddenUnderFog:
+		Type: GroundPosition
+	ScriptTriggers:
+	WithFacingSpriteBody:
+	WithShadow:
+		Offset: 43, 128, 0
+		ZOffset: -129
+	Aircraft:
+		TurnSpeed: 5
+		Speed: 10
+	FallsToEarth:
+		Spins: False
+		Moves: True
+		Velocity: 15
+		Explosion: GroundHit
+	Tooltip:
+		Name: Spy Balloon
+	SmokeTrailWhenDamaged:
+		Offset: 0,-2046,0
+		Interval: 14
+		MinDamage: Undamaged
+	RevealsShroud:
+		Range: 5c0
+		Type: CenterPosition
+	RenderSprites:
+		Image: spybln
+		PlayerPalette: raplayer
+	Explodes:
+		Weapon: GroundHit
+		EmptyWeapon: GroundHit

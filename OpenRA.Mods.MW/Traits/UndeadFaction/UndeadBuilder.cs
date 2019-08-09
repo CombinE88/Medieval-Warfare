@@ -44,6 +44,8 @@ namespace OpenRA.Mods.MW.Traits.UndeadFaction
 
         public readonly int SelfBuildDelay = 25;
 
+        public readonly string SoundEffect = "spawnflash.aud";
+
         [Desc("Which sprite body to modify.")] public readonly string Body = "body";
 
         public object Create(ActorInitializer init)
@@ -151,6 +153,8 @@ namespace OpenRA.Mods.MW.Traits.UndeadFaction
                             Info.SpawnFlashAnimation,
                             Info.SpawnFlashAnimation,
                             Info.SpawnPaleete));
+                        
+                        Game.Sound.Play(SoundType.World, Info.SoundEffect, self.CenterPosition, 2);
                     });
             }
 

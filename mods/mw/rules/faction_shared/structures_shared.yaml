@@ -28,47 +28,27 @@ FACTNEW:
 		Sequence: idle0
 		RequiresCondition: visibility == 0
 		Name: BodyLevel0
+		StartSequence: make0
 	WithSpriteBody@LEVEL_1:	 
 		Sequence: idle1
 		RequiresCondition: visibility == 1
 		Name: BodyLevel1
+		StartSequence: make1
 	WithSpriteBody@LEVEL_2:	 
 		Sequence: idle2
 		RequiresCondition: visibility == 2
 		Name: BodyLevel2
+		StartSequence: make2
 	WithSpriteBody@LEVEL_3:	 
 		Sequence: idle3
 		RequiresCondition: visibility == 3
 		Name: BodyLevel3
+		StartSequence: make3
 	WithSpriteBody@LEVEL_4:	 
 		Sequence: idle4
 		RequiresCondition: visibility == 4
 		Name: BodyLevel4
-	#ConditionalWithMakeAnimation@LV0:
-	#	Sequence: make0
-	#	BodyNames: BodyLevel0
-	#	Condition: build-incomplete
-	#	RequiresCondition: visibility == 0
-	#ConditionalWithMakeAnimation@LV1:
-	#	Sequence: make1
-	#	BodyNames: BodyLevel1
-	#	Condition: build-incomplete
-	#	RequiresCondition: visibility == 1
-	#ConditionalWithMakeAnimation@LV2:
-	#	Sequence: make2
-	#	BodyNames: BodyLevel2
-	#	Condition: build-incomplete
-	#	RequiresCondition: visibility == 2
-	#ConditionalWithMakeAnimation@LV3:
-	#	Sequence: make3
-	#	BodyNames: BodyLevel3
-	#	Condition: build-incomplete
-	#	RequiresCondition: visibility == 3
-	#ConditionalWithMakeAnimation@LV4:
-	#	Sequence: make4
-	#	BodyNames: BodyLevel4
-	#	Condition: build-incomplete
-	#	RequiresCondition: visibility == 4
+		StartSequence: make4
 	DamageMultiplier@KEEPLEVEL1:
 		RequiresCondition: visibility == 1
 		Modifier: 98

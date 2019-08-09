@@ -1,4 +1,5 @@
 ﻿#region Copyright & License Information
+
 /*
  * Copyright 2017-2017 The MW Developers)
  * This file is part of Medieval Warfare, which is free software. It is made
@@ -7,6 +8,7 @@
  * the License, or (at your option) any later version. For more
  * information, see COPYING.
  */
+
 #endregion
 
 using System;
@@ -26,7 +28,10 @@ namespace OpenRA.Mods.MW.Traits
     {
         public readonly string ReadyAudio = "UnitReady";
 
-        public override object Create(ActorInitializer init) { return new UndeadGraveProduction(init, this); }
+        public override object Create(ActorInitializer init)
+        {
+            return new UndeadGraveProduction(init, this);
+        }
     }
 
     class UndeadGraveProduction : Production
@@ -62,7 +67,8 @@ namespace OpenRA.Mods.MW.Traits
             return true;
         }
 
-        public override void DoProduction(Actor self, ActorInfo producee, ExitInfo exitinfo, string factionVariant, TypeDictionary init)
+        public override void DoProduction(Actor self, ActorInfo producee, ExitInfo exitinfo, string factionVariant,
+            TypeDictionary init)
         {
             var exit = CPos.Zero;
             var exitLocation = CPos.Zero;
@@ -132,7 +138,9 @@ namespace OpenRA.Mods.MW.Traits
 
                 var newUnit = self.World.CreateActor(producee.Name, td);
 
-                if (newUnit.Info.HasTraitInfo<WithMakeAnimationInfo>())
+                var spawnAnim = newUnit.TraitOrDefault<UndeadSpawnAnimation>();
+
+                if (spawnAnim != null)
                 {
                     var move = newUnit.TraitOrDefault<IMove>();
                     if (move != null)
@@ -142,7 +150,7 @@ namespace OpenRA.Mods.MW.Traits
                             if (exitinfo.ExitDelay > 0)
                                 newUnit.QueueActivity(new Wait(exitinfo.ExitDelay, false));
 
-                            newUnit.Trait<WithMakeAnimation>().Forward(newUnit, () =>
+                            spawnAnim.Forward(newUnit, () =>
                             {
                                 newUnit.QueueActivity(move.MoveIntoWorld(newUnit, exit));
                                 newUnit.QueueActivity(new AttackMoveActivity(
@@ -171,12 +179,8 @@ namespace OpenRA.Mods.MW.Traits
                             if (exitinfo.ExitDelay > 0)
                                 newUnit.QueueActivity(new Wait(exitinfo.ExitDelay, false));
 
-                            newUnit.Trait<WithMakeAnimation>().Forward(newUnit, () =>
-                            {
-                                newUnit.QueueActivity(move.MoveIntoWorld(newUnit, exit));
-                                newUnit.QueueActivity(new AttackMoveActivity(
-                                    newUnit, move.MoveTo(exitLocation, 1)));
-                            });
+                            newUnit.QueueActivity(move.MoveIntoWorld(newUnit, exit));
+                            newUnit.QueueActivity(new AttackMoveActivity(newUnit, move.MoveTo(exitLocation, 1)));
                         }
                     }
 

@@ -180,7 +180,7 @@ DEADROSS:
 	Selectable:
 		Bounds: 26,34,0,-6
 	SelectionDecorations:
-	WithMakeAnimation:
+	UndeadSpawnAnimation:
 		Condition: makeanim
 		Sequence: make
 	SpeedMultiplier:

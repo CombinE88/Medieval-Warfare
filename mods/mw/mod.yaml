@@ -100,6 +100,7 @@ Rules:
 	mw|rules/faction_none/props.yaml
 	mw|rules/faction_none/trees.yaml
 Sequences:
+	mw|sequences/resources.yaml
 	mw|sequences/builking.yaml
 	mw|sequences/builbaron.yaml
 	mw|sequences/builsultan.yaml
@@ -123,7 +124,6 @@ Sequences:
 	mw|sequences/siegesultan.yaml
 	mw|sequences/siegeundead.yaml
 	mw|sequences/siegemisc.yaml
-	mw|sequences/resources.yaml
 	mw|sequences/misc.yaml
 	mw|sequences/misc2.yaml
 	mw|sequences/environments.yaml

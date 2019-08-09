@@ -2,7 +2,7 @@
 	Inherits: ^Building
 	Building:
 		RequiresBaseProvider: true
-		BuildSounds: spawnflash.aud
+		BuildSounds:
 		TerrainTypes: Clear,Road
 	MustBeDestroyed:
 		RequiredForShortGame: true
@@ -62,7 +62,7 @@
 		DeathTypes: DefaultDeath
 	Building:
 		RequiresBaseProvider: false
-		BuildSounds: spawnflash.aud
+		BuildSounds:
 	-DeconstructSellable:
 ^MWUndeadBuilding:
 	Inherits@1: ^UndeadBaseBuilding
@@ -101,7 +101,7 @@
 	ShakeOnCreate:
 		Time: 25
 	Building:
-		BuildSounds: spawnflash.aud
+		BuildSounds:
 	RequiresBuildableArea:
 		AreaTypes: undeadbuilding
 		Adjacent: 4
@@ -153,7 +153,7 @@
 	Tooltip:
 		GenericName: Soldier
 	Guard:
-	WithMakeAnimation:
+	UndeadSpawnAnimation:
 		Condition: makeanim
 		Sequence: make
 	WithInfantryBody:
@@ -295,46 +295,13 @@
 		Sequence: circlem
 		Palette: undeadalpha
 		IsPlayerPalette: True
-	#WithIdleOverlay:
-	#	Sequence: pentagramm
-	#	Palette: undeadalpha
-	#	IsPlayerPalette: True
-	DockManager:
-		ExternalDocks: true
-		#DeadlockDetectionEnabled: false
-	Dock@leftup: 
-		DockOffset: 0,1
-		WOffset: -468,-298,0
-		DockAngle: 32
-		IsDragRequired: false
-	Dock@up: 
-		DockOffset: 2,0
-		WOffset: -42,383,0
-		DockAngle: 223
-		IsDragRequired: false
-	Dock@right: 
-		DockOffset: 3,1
-		WOffset: 468,553,0
-		DockAngle: 159
-		IsDragRequired: false
-	Dock@down: 
-		DockOffset: 2,3
-		WOffset: -86,-468,0
-		DockAngle: 96
-		IsDragRequired: false
-	Dock@leftdown: 
-		DockOffset: 0,2
-		WOffset: -425,170,0
-		DockAngle: 96
-		IsDragRequired: false
 ^Smallpenta:
 	Inherits: ^MWBasePentagram
 	Inherits@Hitshape: ^1x1Shape
 	Armor:
 		Type: Concrete
 	RenderSprites:
-		Palette: undead
-		PlayerPalette: undeadplayer
+		PlayerPalette: raplayer
 	-WithDeathAnimation:
 	Tooltip:
 		Name: Spawner
@@ -357,38 +324,6 @@
 		Sequence: circles
 		Palette: undeadalpha
 		IsPlayerPalette: True
-	WithIdleOverlay:
-		Sequence: pentagrams
-		Palette: undeadalpha
-		IsPlayerPalette: True
-	DockManager:
-		ExternalDocks: true
-		#DeadlockDetectionEnabled: false
-	Dock@up: 
-		DockOffset: 1,0
-		WOffset: 383,170,0
-		DockAngle: 32
-		IsDragRequired: false
-	Dock@right: 
-		DockOffset: 2,1
-		WOffset: 425,0,0
-		DockAngle: 223
-		IsDragRequired: false
-	Dock@down: 
-		DockOffset: 1,2
-		WOffset: 340,-170,0
-		DockAngle: 159
-		IsDragRequired: false
-	Dock@leftdown: 
-		DockOffset: 0,2
-		WOffset: -425,-510,0
-		DockAngle: 96
-		IsDragRequired: false
-	Dock@leftup: 
-		DockOffset: 0,0
-		WOffset: -425,510,0
-		DockAngle: 96
-		IsDragRequired: false
 ^Largepenta:
 	Inherits: ^MWBasePentagram
 	Inherits@Hitshape: ^3x3Shape
@@ -418,34 +353,6 @@
 		Sequence: circlel
 		Palette: undeadalpha
 		IsPlayerPalette: True
-	DockManager:
-		ExternalDocks: true
-		#DeadlockDetectionEnabled: false
-	Dock@up: 
-		DockOffset: 3,0
-		WOffset: -468,510,0
-		DockAngle: 32
-		IsDragRequired: false
-	Dock@right: 
-		DockOffset: 4,2
-		WOffset: 420,0,0
-		DockAngle: 223
-		IsDragRequired: false
-	Dock@down: 
-		DockOffset: 3,4
-		WOffset: -425,-553,0
-		DockAngle: 159
-		IsDragRequired: false
-	Dock@leftdown: 
-		DockOffset: 0,3
-		WOffset: -425,-170,0
-		DockAngle: 96
-		IsDragRequired: false
-	Dock@leftup: 
-		DockOffset: 0,1
-		WOffset: -425,85,0
-		DockAngle: 96
-		IsDragRequired: false
 ^Gravestone:
 	Inherits: ^MWUndeadBuilding
 	Inherits@Hitshape: ^1x1Shape

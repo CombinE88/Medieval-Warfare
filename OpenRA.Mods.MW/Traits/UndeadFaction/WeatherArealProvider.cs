@@ -1,7 +1,7 @@
-using System.Collections.Generic;
+using System;
 using System.Drawing;
-using System.Linq;
-using System.Reflection;
+using System.Drawing.Imaging;
+using System.IO;
 using OpenRA.Graphics;
 using OpenRA.Mods.MW.Traits.WorldTraits;
 using OpenRA.Traits;
@@ -21,11 +21,48 @@ namespace OpenRA.Mods.MW.Traits.UndeadFaction
     public class WeatherArealProvider : INotifyRemovedFromWorld, IRenderAboveWorld
     {
         private WeatherArealProviderInfo info;
+        private static Sprite sprite;
 
         public WeatherArealProvider(ActorInitializer init, WeatherArealProviderInfo info)
         {
             init.World.WorldActor.Trait<ArealWeatherSystem>().Register(init.Self, info.Intensity);
             this.info = info;
+        }
+
+        private static Sprite GetSprite()
+        {
+            if (sprite == null)
+            {
+                var faktor = 2;
+                var durchmesser = 256 / faktor;
+                var radius = durchmesser / 2;
+                var bitmap = new Bitmap(durchmesser, durchmesser);
+
+                var mid = new int2(radius, radius);
+
+                for (int y = 0; y < bitmap.Height; y++)
+                for (int x = 0; x < bitmap.Width; x++)
+                {
+                    // 0 - 50
+                    var pixel = new int2(x, y);
+                    var alpha = Math.Min(Math.Max(0, (pixel - mid).Length * 255 / radius), 255);
+
+                    bitmap.SetPixel(x, y, Color.FromArgb((255 - alpha) / faktor, 0, 0, 0));
+                }
+
+                Sheet sheet;
+
+                using (var stream = new MemoryStream())
+                {
+                    bitmap.Save(stream, ImageFormat.Png);
+                    stream.Position = 0;
+                    sheet = new Sheet(SheetType.BGRA, stream);
+                }
+
+                sprite = new Sprite(sheet, new Rectangle(0, 0, durchmesser, durchmesser), TextureChannel.RGBA);
+            }
+
+            return sprite;
         }
 
         void INotifyRemovedFromWorld.RemovedFromWorld(Actor self)
@@ -35,21 +72,14 @@ namespace OpenRA.Mods.MW.Traits.UndeadFaction
 
         public void RenderAboveWorld(Actor self, WorldRenderer wr)
         {
-            for (int i = 0; i < info.Intensity.Length; i++)
-            {
-                var size = (i + 2) * 1024 / 2;
-                var x1 = self.CenterPosition.X - size;
-                var y1 = self.CenterPosition.Y - size;
+            var pos = wr.ScreenPxPosition(self.CenterPosition);
 
-                var x2 = self.CenterPosition.X + size;
-                var y2 = self.CenterPosition.Y + size;
-
-                var pos1 = wr.ScreenPosition(new WPos(x1, y1, 0));
-                var pos2 = wr.ScreenPosition(new WPos(x2, y2, 0));
-
-                Game.Renderer.WorldRgbaColorRenderer.FillEllipse(pos1, pos2,
-                    Color.FromArgb(50 * info.Intensity[i] / 100, 0, 0, 0));
-            }
+            Game.Renderer.WorldRgbaSpriteRenderer.DrawSprite(GetSprite(),
+                pos - new int2(info.Intensity.Length * 24 / 2, info.Intensity.Length * 24 / 2),
+                new float3(
+                    info.Intensity.Length * 24,
+                    info.Intensity.Length * 24,
+                    sprite.Size.Z));
         }
     }
 }
