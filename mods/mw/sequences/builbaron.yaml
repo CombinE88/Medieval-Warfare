@@ -3,6 +3,26 @@ nodnuke:
 	idle: 
 		Start: 12
 		Offset: 0,-12
+	make: 
+		Start: 0
+		Length: 11
+		Tick: 100
+		Offset: 0,-12
+	makeb: nodnukeb
+		Start: 0
+		Length: 11
+		Tick: 100
+		Offset: 0,-12
+	makec: nodnukec
+		Start: 0
+		Length: 11
+		Tick: 100
+		Offset: 0,-12
+	maked: nodnuked
+		Start: 0
+		Length: 11
+		Tick: 100
+		Offset: 0,-12
 	idlea: 
 		Start: 12
 		Offset: 0,-12

@@ -1,8 +1,5 @@
 using System;
-using System.Collections.Generic;
-using System.Drawing;
 using OpenRA.GameRules;
-using OpenRA.Graphics;
 
 namespace OpenRA.Mods.MW.Projectiles
 {
@@ -22,7 +19,6 @@ namespace OpenRA.Mods.MW.Projectiles
 
         protected override void CalculateOffsets(ProjectileArgs args, int numSegments, WVec direction)
         {
-            Game.AddChatLine(Color.Aqua, "", "test");
             base.CalculateOffsets(args, numSegments, direction);
 
             var length = (args.Source - args.PassiveTarget).Length;
@@ -32,8 +28,8 @@ namespace OpenRA.Mods.MW.Projectiles
             {
                 var x = i - (arraylength - 2) / 2;
                 var squared = x * x;
-                var fx = (1.0 / arraylength * 2) * -squared + arraylength;
-                var height = length * fx / arraylength / 2;
+                var fx = (1.0 / arraylength * 2) * -squared + arraylength / 2.0;
+                var height = length * fx / (arraylength - 4) / 2;
                 offsets[i] = new WPos(offsets[i].X, offsets[i].Y, offsets[i].Z + (int) Math.Round(height));
             }
         }

@@ -48,30 +48,6 @@ PREYCOLYTE:
 		Type: Leather
 	-GrantConditionOnPrerequisite@BattlefieldLoot:
 	-Explodes@Tib:
-	DockClient:
-	# --- Removed due to bugs and unbalanceability ---
-	#AcolytePrey: 
-	#	TargetActors: split3, split4, split4b, split2, splitblue, split5, splitdead, split7, split8
-	#	Leechinterval: 45 
-	#	SelfEnabledCondition: whisper
-	#	Voice: Harvest
-	#	ResourceTypesPreres:
-	#		Crops: NONE
-	#		Grains: NONE
-	#		Corn: NONE
-	#		Iron: ziggurat2
-	#		Gold: ziggurat2
-	#		Guns: NONE
-	#		Wood: NONE
-	#		Lumber: NONE
-	#		Corruption: NONE
-	#		Goods: NONE
-	# --- Removed due to bugs and unbalanceability ---
-	AcolytePreyBuild: 
-		TargetActors: crypt.penta, sppool.penta, mauso.penta, hellgate.penta, tomb.penta, libra.penta, obelisk.penta, garg.penta, dedref.penta
-		Buildinterval: 18
-		SelfEnabledCondition: whisper
-		Voice: Build
 	AmbientSound:
 		SoundFiles: pray.aud
 		RequiresCondition: whisper

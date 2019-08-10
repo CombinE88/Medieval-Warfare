@@ -213,7 +213,7 @@ TECH1:
 	WithBuildingBib:
 		Palette: bibs
 TECH1.Husk:
-	Inherits:^TechBuilding
+	Inherits: ^TechBuilding
 	Inherits@Hitshape: ^3x2Shape
 	Building:
 		Footprint: xxx xxx ===

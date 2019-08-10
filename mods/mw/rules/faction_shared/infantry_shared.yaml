@@ -188,7 +188,9 @@ ENGENEER:
 	AutoTargetPriority@Prio0:
 		ValidTargets: Structure, Infantry, Vehicle, Creep, Water, Defense, Cavalry, Siege, Air
 		Priority: 0
-	-Passenger:
+	Passenger:
+		CargoType: Infantry
+		Weight: 3
 	Valued:
 		Cost: 250
 	Tooltip:
@@ -841,7 +843,7 @@ MWLUMBERER:
 		Amount: -0
 		ConvertingActors: 
 MWLUMBEREROWNED:
-	Inherits: ^MWConstructor
+	Inherits: ^Knight
 	Inherits@SnakeStunnable: ^SnakeStunnable
 	Inherits@Cursable: ^Cursed
 	#anti error fix
@@ -856,8 +858,10 @@ MWLUMBEREROWNED:
 		Name: Lumberman
 	Health:
 		HP: 10000
+	Mobile:
+		Speed: 56
 	RevealsShroud:
-		Range: 7c0
+		Range: 4c0
 	WithInfantryBody:
 		RequiresCondition: NoFood
 		AttackSequences:
@@ -925,8 +929,8 @@ MWLUMBEREROWNED:
 	Power:
 		Amount: -1
 	Selectable:
-	-Interactable:
 	RejectsOrders:
+	-Voiced:
 HUNTER:
 	Inherits: ^Knight
 	Inherits@SnakeStunnable: ^SnakeStunnable
@@ -1035,3 +1039,4 @@ HUNTER:
 		HuntTypes: Wildlife
 		LootTypes: DeadWildlife
 		SearchDistance: 15c0
+	-Voiced:

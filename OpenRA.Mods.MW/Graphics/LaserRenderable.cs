@@ -46,7 +46,7 @@ namespace OpenRA.Mods.MW.Graphics
 			// TODO fix connectSegments - asin smoothen the edge of a break!
 			var screenWidth = wr.ScreenVector(new WVec(width, WDist.Zero, WDist.Zero))[0];
 
-			Game.Renderer.WorldRgbaColorRenderer.DrawLine(offsets.Select(offset => wr.Screen3DPosition(offset)), screenWidth, color, false);
+			Game.Renderer.WorldRgbaColorRenderer.DrawLine(offsets.Select(offset => wr.Screen3DPosition(offset)), screenWidth, color, true);
 		}
 
 		public void RenderDebugGeometry(WorldRenderer wr) { }

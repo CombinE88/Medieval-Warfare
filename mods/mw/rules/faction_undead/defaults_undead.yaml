@@ -186,6 +186,7 @@
 		DeathTypes: DefaultDeath
 	RenderSprites:
 		OptionsScale: true
+	-Voiced:
 ^SkeletonSpawn:
 	Inherits: ^MedievalInfantry
 	Inherits@ArcherDemo65: ^ArcherDemo65
@@ -266,6 +267,7 @@
 		DeathTypes: DefaultDeath
 	RenderSprites:
 		OptionsScale: true
+	-Voiced:
 ^Mediumpenta:
 	Inherits: ^MWBasePentagram
 	Inherits@Hitshape: ^2x2Shape

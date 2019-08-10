@@ -23,30 +23,36 @@ FACTNEW:
 	GrantConditionOnPrerequisite@3:
 		Prerequisites: Level4
 		Condition: visibility
-	-WithSpriteBody:
+	WithSpriteBody:
+		RequiresCondition: in-build
+	WithMakeAnimation@Make1:
+		Condition: in-build
+		Sequence: make0
+		UndoSequence: make0
+		BodyNames: BodyNames
 	WithSpriteBody@LEVEL_0:	 
 		Sequence: idle0
-		RequiresCondition: visibility == 0
+		RequiresCondition: visibility == 0 && !in-build
 		Name: BodyLevel0
 		StartSequence: make0
 	WithSpriteBody@LEVEL_1:	 
 		Sequence: idle1
-		RequiresCondition: visibility == 1
+		RequiresCondition: visibility == 1 && !in-build
 		Name: BodyLevel1
 		StartSequence: make1
 	WithSpriteBody@LEVEL_2:	 
 		Sequence: idle2
-		RequiresCondition: visibility == 2
+		RequiresCondition: visibility == 2 && !in-build
 		Name: BodyLevel2
 		StartSequence: make2
 	WithSpriteBody@LEVEL_3:	 
 		Sequence: idle3
-		RequiresCondition: visibility == 3
+		RequiresCondition: visibility == 3 && !in-build
 		Name: BodyLevel3
 		StartSequence: make3
 	WithSpriteBody@LEVEL_4:	 
 		Sequence: idle4
-		RequiresCondition: visibility == 4
+		RequiresCondition: visibility == 4 && !in-build
 		Name: BodyLevel4
 		StartSequence: make4
 	DamageMultiplier@KEEPLEVEL1:

@@ -783,8 +783,10 @@ GrimSpawn:
 	Warhead@1Spawneffect: CreateEffect
 		Explosions: grimsummon
 ObeliskLight:
-	ReloadDelay: 227
+	ReloadDelay: 64
 	Range: 8c512
+	Burst: 4
+	BurstDelays: 10
 	Report: lightning1.aud, lightning2.aud
 	ValidTargets: Ground, Air
 	Projectile: LaserArc
@@ -793,14 +795,15 @@ ObeliskLight:
 		Color: 008000
 		DistortionAnimation: 300
 		Radius: 4
-		Duration: 5
+		Duration: 10
+		Inaccuracy: 0c512
 	Warhead@2Smu: LeaveSmudge
 		SmudgeType: Scorch
 		InvalidTargets: Vehicle, Structure, Wall
 	Warhead@1Dam: SpreadDamage
-		Spread: 141
+		Spread: 0c256
 		ValidTargets: Ground, Air
-		Damage: 10000
+		Damage: 3000
 		Versus:
 			Leather: 300
 			Light: 250
